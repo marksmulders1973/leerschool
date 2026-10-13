@@ -23,13 +23,13 @@ const steps = [
       {
         q: "**Aardolie** ontstaat uit:",
         options: [
-          "Dode zee-organismen van miljoenen jaren geleden",
-          "Vulkanen",
-          "Recent afval",
-          "Dieren van afgelopen 1000 jaar"
+          "Zeeleven van miljoenen jaren geleden",
+          "Bossen van miljoenen jaren geleden",
+          "Gestold magma van miljoenen jaren oud",
+          "Dinosaurussen van miljoenen jaren geleden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — apart proces.", "Niet — duurt veel langer.", "Veel ouder."],
+        wrongHints: [null, "Uit oude bossen en moerassen ontstond steenkool. Waar kwam het materiaal voor olie vandaan?", "Magma wordt gesteente, geen olie. Welke koolstof uit levende wezens zit er in olie?", "Dat olie van dinosaurussen komt, is een hardnekkige mythe. Uit welk soort leven ontstond olie dan wel?"],
         uitlegPad: {
           stappen: [
             { titel: "Geologisch proces", tekst: "Algen + plankton zonken naar zeebodem → bedekt door sediment → druk + warmte → koolwaterstoffen. Daarom 'fossiele' brandstof. Niet hernieuwbaar in mensentijdschaal. Opraking-zorg: peak oil-debat." },
@@ -40,13 +40,13 @@ const steps = [
       {
         q: "**Groningen-gas**:",
         options: [
-          "Grootste gasveld van de EU, winning afgebouwd door aardbevingen",
-          "Een klein veld dat nauwelijks iets opleverde",
-          "Een veld waar nooit gas uit is gewonnen",
-          "Een olieveld in plaats van een gasveld"
+          "Grootste EU-gasveld, afgebouwd door aardbevingen",
+          "Grootste EU-gasveld, gesloten omdat het leeg was",
+          "Gasveld onder de Noordzee, nog volop in productie",
+          "Grootste olieveld van NL, gesloten door lekkages"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Er zit nog gas in de grond, en toch ging de kraan dicht. Wat merkten de Groningers van de gaswinning?", "Het veld ligt onder het vaste land bij Slochteren, en de winning is gestopt. Waarom?", "Het heet Groningen-gás. Waarom werd de winning stopgezet?"],
         uitlegPad: {
           stappen: [
             { titel: "Decennia NL-welvaart", tekst: "Ontdekt 1959. Financierde welvaartsstaat NL (~€450 mld over decennia). Sinds 2012 toenemende aardbevingen → huizen-schade → boze burgers → kabinet besloot productie af te bouwen. 1 okt 2023 officieel gesloten (alleen reserve-veiligheid)." },
@@ -57,13 +57,13 @@ const steps = [
       {
         q: "**Aardgas** (CH₄) is **schoner** dan steenkool omdat:",
         options: [
-          "Minder CO₂ + minder roet/zwavel per energie-eenheid",
-          "Er komt bij verbranding helemaal geen CO₂ vrij",
-          "Aardgas is een hernieuwbare brandstof",
-          "Er is geen verschil tussen beide"
+          "Minder CO₂, roet en zwavel per eenheid energie",
+          "Bij verbranding ontstaat alleen waterdamp",
+          "Aardgas bevat meer koolstof dan kolen",
+          "Het CO₂ uit aardgas wordt door planten opgenomen"
         ],
         answer: 0,
-        wrongHints: [null, "Wel CO₂.", "Tegenovergesteld.", "Wel verschil."],
+        wrongHints: [null, "Aardgas (CH₄) bevat koolstof. Wat ontstaat er als koolstof verbrandt?", "Tel de atomen: hoeveel koolstof zit er in CH₄, en hoeveel in kolen?", "Ook CO₂ uit kolen wordt door planten opgenomen. Waar zit het echte verschil bij het verbranden?"],
         uitlegPad: {
           stappen: [
             { titel: "Energie per CO₂", tekst: "Methaan-verbranding: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Per kWh ~50% minder CO₂ dan kolen. Geen roet, weinig zwavel/stikstofoxiden. Gas dus 'transitie-brandstof' tussen kolen + hernieuwbaar. Maar methaan-lek (uit pijpleidingen) is zelf zeer sterk broeikasgas (28× CO₂)." },
@@ -74,13 +74,13 @@ const steps = [
       {
         q: "**Fracking** = ?",
         options: [
-          "Water + chemicaliën onder druk in gesteente om olie/gas vrij te maken",
-          "Gewoon recht naar beneden boren zonder hulpmiddelen",
-          "Een hernieuwbare techniek om stroom op te wekken",
-          "Het schoonmaken van vervuild grondwater"
+          "Met water onder hoge druk gesteente openbreken voor gas",
+          "Schuin boren om een veld van opzij te bereiken",
+          "Stoom injecteren om stroperige olie los te maken",
+          "CO₂ onder hoge druk opslaan in een leeg gasveld"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geavanceerde techniek.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Schuin of horizontaal boren is een andere techniek. Waar komt het woord 'fracking' vandaan?", "Stoom gebruik je voor dikke olie, zoals in teerzand. Wat gebeurt er bij fracking met het gesteente zelf?", "CO₂-opslag (CCS) stopt iets terug in de grond om het klimaat te helpen. Wat haal je met fracking juist naar boven?"],
         uitlegPad: {
           stappen: [
             { titel: "VS-revolutie", tekst: "Hydraulic fracturing: water + zand + chemicaliën onder hoge druk → schalie-gesteente barst → gas/olie stroomt vrij. Maakt VS sinds 2018 grootste olie- + gasproducent. Controverse: grondwater-vervuiling, methaan-lek, aardbevingen (Oklahoma). NL: winning was conventioneel (Groningen + kleine velden); schaliegas via fracking is hier nooit toegestaan." },
@@ -92,12 +92,12 @@ const steps = [
         q: "Wereld-energie-mix 2024: fossiel + nucleair + hernieuwbaar:",
         options: [
           "~79% fossiel, ~4% kernenergie, ~14% hernieuwbaar",
-          "~50% fossiel, ~10% kernenergie, ~40% hernieuwbaar",
-          "~30% fossiel, ~20% kernenergie, ~50% hernieuwbaar",
-          "~60% fossiel, ~25% kernenergie, ~15% hernieuwbaar"
+          "~58% fossiel, ~12% kernenergie, ~27% hernieuwbaar",
+          "~34% fossiel, ~21% kernenergie, ~43% hernieuwbaar",
+          "~63% fossiel, ~23% kernenergie, ~11% hernieuwbaar"
         ],
         answer: 0,
-        wrongHints: [null, "Hernieuwbaar groeit snel, maar is nog lang niet zo groot.", "Dan zou de wereld al grotendeels van olie, gas en kolen af zijn — klopt dat?", "Kernenergie levert maar een klein deel van alle energie."],
+        wrongHints: [null, "Hernieuwbaar groeit snel, maar is het al ruim een kwart van álle energie, inclusief vervoer, verwarming en industrie?", "Dan zou de wereld al grotendeels van olie, gas en kolen af zijn. Klopt dat?", "Kernenergie levert alleen stroom, en stroom is maar een deel van alle energie. Kan het dan bijna een kwart zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Transitie nog ver", tekst: "Ondanks wind + zon-boom: fossiel domineert wereldwijd. Olie ~30%, kolen ~27%, gas ~22%. Hernieuwbaar groeit snel maar van laag aandeel. Nucleair stabiel laag (~4%). EU ~22% hernieuwbaar, NL ~17% (groeiend)." },
@@ -116,9 +116,9 @@ const steps = [
     checks: [
       {
         q: "**Goedkoopste** energiebron 2024 (per MWh):",
-        options: ["Zonnepanelen", "Kolen", "Nucleair nieuw", "Olie"],
+        options: ["Grote zonneparken", "Kolencentrales", "Nieuwe kerncentrales", "Gascentrales"],
         answer: 0,
-        wrongHints: [null, "Niet — duurder.", "Veel duurder.", "Veel duurder."],
+        wrongHints: [null, "Bij kolen betaal je voor brandstof, CO₂-rechten en een dure centrale. Welke bron heeft geen brandstofkosten?", "Nieuwe kerncentrales kosten tientallen miljarden en lopen vaak jaren vertraging op. Is die stroom dan goedkoop?", "Bij een gascentrale betaal je elke dag voor gas. Welke bron krijgt zijn 'brandstof' gratis?"],
         uitlegPad: {
           stappen: [
             { titel: "Solar-revolutie", tekst: "Sinds 2010: solar 90% goedkoper. Vandaag goedkoper dan ALLE fossiel + nucleair. Wind tweede. China bouwt zonneparken sneller dan rest wereld samen. Verandering verloopt sneller dan voorspeld 10 jaar geleden." },
@@ -129,13 +129,13 @@ const steps = [
       {
         q: "**Three Gorges Dam** (China) is:",
         options: [
-          "Grootste waterkracht-installatie wereld",
-          "Klein experimenteel project",
-          "Kolencentrale",
-          "Olie-platform"
+          "Grootste waterkrachtcentrale ter wereld",
+          "Grootste getijdencentrale ter wereld",
+          "Grootste pompcentrale voor energieopslag",
+          "Grootste drijvend zonnepark op een stuwmeer"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet."],
+        wrongHints: [null, "Een getijdencentrale gebruikt eb en vloed van de zee. Ligt de Drieklovendam aan zee of in een rivier?", "Een pompcentrale pompt water omhoog om energie op te slaan. Wat levert de Drieklovendam vooral?", "Drijvende zonneparken bestaan in China, maar dit is een dam van ruim 2 km in de Jangtse. Wat doet die met het water?"],
         uitlegPad: {
           stappen: [
             { titel: "22,5 GW capaciteit", tekst: "Yangtze-rivier, geopend 2012. Water stroomt door 32 turbines van 700 MW. Stuwdam 185 m hoog. Massief project: 1,3 mln mensen verplaatst, ecosystemen verstoord (Yangtze-dolfijn uitgestorven). Genereert ~1% China's elektriciteit." },
@@ -147,12 +147,12 @@ const steps = [
         q: "**Intermittentie** = ?",
         options: [
           "Zon en wind zijn niet altijd beschikbaar",
-          "Stroom wordt altijd constant geleverd",
-          "Het meten hoe lang een centrale draait",
+          "Stroom opslaan in accu's voor later",
+          "Centrales die af en toe stilstaan voor onderhoud",
           "Het verlies van stroom in lange kabels"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Nee — het gaat om het aanbod van stroom.", "Dat heet transportverlies."],
+        wrongHints: [null, "Opslag in accu's is juist een oplossing voor dit probleem. Wat is het probleem zelf?", "Onderhoud plan je zelf in. Waar ligt bij intermittentie de oorzaak?", "Verlies in lange kabels heet transportverlies. Over welk probleem gaat intermittentie dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Kern-uitdaging transitie", tekst: "Zon schijnt overdag. Wind waait soms wel/niet. Geen 24/7 zoals gas/kolen/kernenergie. Oplossingen: batterijen (Lithium-ion, opslag-uren), pumped hydro (water omhoog → omlaag bij vraag), waterstof (lange-termijn opslag), netwerk-koppeling (Europa: zon Spanje + wind Noordzee + waterkracht Noorwegen)." },
@@ -163,13 +163,13 @@ const steps = [
       {
         q: "**Biobrandstof** is controversieel als:",
         options: [
-          "Er bos of voedselgrond voor wordt opgeofferd",
-          "Het goedkoper is dan benzine",
-          "Het schoner verbrandt dan diesel",
+          "Er bos of voedselgrond voor verdwijnt",
+          "Het duurder is dan gewone benzine",
+          "Het van gebruikt frituurvet wordt gemaakt",
           "Het op duurzame wijze wordt geteeld"
         ],
         answer: 0,
-        wrongHints: [null, "Niet kritiek-punt.", "Voordeel.", "Voordeel."],
+        wrongHints: [null, "Een hoge prijs is vervelend, maar daar gaat de maatschappelijke discussie niet over. Waarover dan?", "Gebruikt frituurvet is afval dat opnieuw nuttig wordt. Wanneer wordt biobrandstof wél een probleem?", "Duurzaam telen is juist het doel. Wanneer gaat het mis?"],
         uitlegPad: {
           stappen: [
             { titel: "'Food vs Fuel' debat", tekst: "Brazilië teelt suikerriet voor bio-ethanol → minder ruimte voedsel + Amazone-ontbossing. Indonesië palmolie voor biodiesel → tropische ontbossing. VS-maïs voor ethanol gebruikt 40% van de maïs-oogst → voedselprijzen hoger. Argument: bio uit afval (mest, restproducten) OK, maar specifiek teelt voor fuel = problematisch." },
@@ -180,13 +180,13 @@ const steps = [
       {
         q: "**Offshore wind** (op zee) voordeel boven onshore (op land):",
         options: [
-          "Meer en constantere wind + minder bezwaren van bewoners",
+          "Meer en constantere wind, minder overlast",
           "Het is goedkoper om te bouwen en onderhouden",
-          "Op zee waait het juist minder",
-          "Er is geen verschil tussen beide"
+          "Geen vergunning nodig op open zee",
+          "Kortere kabels naar het stroomnet"
         ],
         answer: 0,
-        wrongHints: [null, "Duurder.", "Tegenovergesteld.", "Wel verschil."],
+        wrongHints: [null, "Bouwen op zee is lastig: schepen, kabels, zout water. Wordt het dan goedkoper?", "Voor elk windpark op de Noordzee zijn een vergunning en een tender nodig. Wat is er op zee wél beter?", "Een windpark op zee ligt vaak tientallen kilometers uit de kust. Zijn de kabels dan korter?"],
         uitlegPad: {
           stappen: [
             { titel: "Noordzee-bonanza", tekst: "Op zee: 20-30% hogere capaciteitsfactor (meer wind). Geen 'not in my backyard' bezwaar. Maar duurder bouwen + onderhouden. NL plant 21 GW offshore 2030, 70 GW 2050 — voldoende voor halve nationale stroom-vraag. Doggersbank-veld UK = grootste wereld in aanbouw." },
@@ -224,12 +224,12 @@ const steps = [
         q: "**1973 Oliecrisis** veroorzaakt door:",
         options: [
           "Arabische OPEC-boycot na Israël-oorlog",
-          "Schaarste reserve",
-          "Pandemie",
-          "Aardbeving"
+          "Olievelden die plots leeg raakten",
+          "Een staking in de Rotterdamse haven",
+          "De oorlog tussen Iran en Irak"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — politiek.", "Niet — dat speelde in 1973 niet.", "Niet."],
+        wrongHints: [null, "Er zat in 1973 nog genoeg olie in de grond. Waarom kwam die dan niet naar Europa?", "Een staking legt één haven stil, maar dit raakte heel Europa en de VS. Wie zat er echt achter de tekorten?", "De oorlog tussen Iran en Irak begon pas in 1980, bij de tweede oliecrisis. Wat speelde er in 1973?"],
         uitlegPad: {
           stappen: [
             { titel: "Yom Kippoer-oorlog gevolg", tekst: "Egypte + Syrië vielen Israël aan okt 1973. VS + NL + andere westerse landen steunden Israël. Arabische OPEC reageerde met boycot → olie ×4. NL: autoloze zondagen, hamsteren. Begin van energie-bewustzijn West. Versnelde isolatie-techniek + alternatieven." },
@@ -240,13 +240,13 @@ const steps = [
       {
         q: "**Oekraïne-oorlog 2022** + energie:",
         options: [
-          "EU verloor Russisch gas → energie-crisis + diversificatie versneld",
-          "Er was nauwelijks impact op de energiemarkt",
-          "De olieprijzen daalden sterk",
-          "De VS exporteerde minder gas naar Europa"
+          "Minder Russisch gas → energiecrisis in de EU",
+          "Meer Russisch gas → lagere prijzen in de EU",
+          "Minder Noors gas → energiecrisis in de EU",
+          "Minder Amerikaans gas → energiecrisis in de EU"
         ],
         answer: 0,
-        wrongHints: [null, "Sancties en dichtgedraaide gaskranen raakten een EU die ~40% van zijn gas uit Rusland haalde — kun je dan echt van 'geen impact' spreken?", "Als het grootste importblok plots op zoek moet naar dure alternatieven (LNG), gaan schaarse energieprijzen dan omhoog of omlaag?", "De VS werd juist een belangrijke LNG-leverancier voor Europa in 2022 — klopt 'minder export' dan wel?"],
+        wrongHints: [null, "Kreeg de EU na de inval en de sancties meer of minder gas uit Rusland?", "Noorwegen leverde in 2022 juist méér gas aan Europa. Welk land leverde minder?", "De VS werd in 2022 juist een grote leverancier van vloeibaar gas (LNG) aan Europa. Welk land leverde minder?"],
         uitlegPad: {
           stappen: [
             { titel: "Wake-up call afhankelijkheid", tekst: "EU was ~40% afhankelijk van Russisch gas (DE bijna 60%). Sancties tegen Rusland + Russen draaiden gas dicht → prijzen 10× hoger zomer 2022. EU haastte: LNG uit VS/Qatar, hernieuwbaar versnellen, energiebesparing. Pijnlijk maar leerzaam: energie-onafhankelijkheid is strategisch belang." },
@@ -258,7 +258,7 @@ const steps = [
         q: "Wie is **grootste olie- + gas-producent** wereld 2024?",
         options: ["VS", "Saudi-Arabië", "Rusland", "China"],
         answer: 0,
-        wrongHints: [null, "Niet meer #1.", "Niet meer #1.", "Niet — importeur."],
+        wrongHints: [null, "Saudi-Arabië pompt veel olie, maar door schalie-olie en -gas is een ander land de laatste jaren groter. Welk land?", "Rusland is een grote gasproducent, maar staat sinds de schalie-boom niet meer bovenaan. Welk land wel?", "China verbruikt enorm veel olie en gas, maar moet het meeste importeren. Wie produceert het meest?"],
         uitlegPad: {
           stappen: [
             { titel: "Shale-revolutie 2010+", tekst: "Fracking-techniek heeft VS van importeur naar exporteur veranderd. Sinds 2018 grootste olie-producent + grootste gas-producent. Saudi-Arabië #2 olie. Rusland #2 gas. VS exporteert nu LNG naar EU als alternatief voor Rusland." },
@@ -270,12 +270,12 @@ const steps = [
         q: "**Nord Stream-pijpleidingen** sept 2022:",
         options: [
           "Ze werden door sabotage opgeblazen in de Oostzee",
-          "Nord Stream 2 werd feestelijk in gebruik genomen",
-          "Ze werden doorgetrokken tot in Nederland",
-          "Ze gingen dicht voor gepland onderhoud"
+          "Ze raakten lek door een aardbeving in de Oostzee",
+          "Ze werden door de EU officieel ontmanteld",
+          "Een schip beschadigde ze per ongeluk met zijn anker"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — Nord Stream 2 is nooit in gebruik genomen.", "Niet — er werd niets bijgebouwd.", "Niet — het was geen gepland besluit."],
+        wrongHints: [null, "Seismologen maten explosies, geen natuurlijke beving. Wat gebeurde er echt?", "Er werd niets netjes afgebroken. Waarom zitten er dan grote gaten in de leidingen?", "Ankerschade speelde in 2023 bij een andere leiding. Waarom spraken onderzoekers bij Nord Stream van explosieven?"],
         uitlegPad: {
           stappen: [
             { titel: "Mysterieuze sabotage", tekst: "Nord Stream 1 (operationeel) + Nord Stream 2 (klaar maar niet geopend wegens Oekraïne-oorlog) explodeerden gelijktijdig. Vier gaten in pijp, gas in Oostzee. Onderzoeken nog lopend. Verdachten: Rusland zelf? Oekraïne? VS? Eind 2024: forse focus op Oekraïens-gerelateerde actoren in onderzoek." },
@@ -297,11 +297,11 @@ const steps = [
         options: [
           "DR Congo",
           "Australië",
-          "Saudi-Arabië",
-          "Nederland"
+          "Indonesië",
+          "Chili"
         ],
         answer: 0,
-        wrongHints: [null, "Australië produceert wat, maar lang niet het meeste.", "Niet — olie.", "Niet."],
+        wrongHints: [null, "Australië produceert wat kobalt, maar lang niet het meeste. Welk land levert ongeveer 70%?", "Indonesië is snel gegroeid, maar levert maar een klein deel. Waar komt ongeveer 70% vandaan?", "Chili is groot in koper en lithium. Welk land met veel mijnen in de Kopergordel levert het meeste kobalt?"],
         uitlegPad: {
           stappen: [
             { titel: "Ethisch debat", tekst: "DR Congo dominantie + slechte arbeidsomstandigheden in 'artisanale' mijnen (kinderen, geen veiligheid). Tesla, Apple proberen 'kobalt-vrije' batterijen (LFP-chemie). Politiek: hoe verantwoord inkopen? Mensenrechten-rapporten + supply-chain-audits versterken." },
@@ -311,9 +311,9 @@ const steps = [
       },
       {
         q: "**Zeldzame aarden** worden voor ~80%+ geproduceerd door:",
-        options: ["China", "VS", "Australië", "Wereldwijd verdeeld"],
+        options: ["China", "VS", "Australië", "Rusland"],
         answer: 0,
-        wrongHints: [null, "Veel minder.", "Heeft reserves maar produceert weinig.", "Nee — geconcentreerd."],
+        wrongHints: [null, "De VS heeft wel een grote mijn, maar laat het erts lang in een ander land verwerken. Welk land?", "Australië heeft mijnen, maar de verwerking gebeurt vooral elders. Welk land beheerst die markt?", "Rusland heeft reserves, maar produceert er weinig van. Welk land maakt bijna alle magneten voor windmolens en auto's?"],
         uitlegPad: {
           stappen: [
             { titel: "Geopolitiek wapen", tekst: "China domineert via mijnen Inner Mongolië + low-cost verwerking. Dreigde in 2010-conflict met Japan de levering te onderbreken → wereldwijde paniek. Sindsdien: VS + Australië + EU haasten zich eigen mijnen op te starten (bijv. Mountain Pass, Californië). Maar inhalen duurt jaren." },
@@ -324,13 +324,13 @@ const steps = [
       {
         q: "**Groene waterstof** wordt gemaakt door:",
         options: [
-          "Elektrolyse van water met groene stroom",
-          "Aardgas-reformatie",
-          "Olie-raffinage",
-          "Direct uit lucht"
+          "Elektrolyse van water met wind- of zonnestroom",
+          "Aardgas splitsen in waterstof en CO₂",
+          "Elektrolyse van water met stroom uit kolen",
+          "Aardgas splitsen en de CO₂ opslaan"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is grijs of blauw.", "Niet.", "Niet — geen H₂ in lucht."],
+        wrongHints: [null, "Waterstof uit aardgas zonder CO₂-opslag heet grijs. Wat maakt waterstof 'groen'?", "Elektrolyse klopt, maar waterstof met kolenstroom heet niet groen. Wat bepaalt de kleur van waterstof?", "Aardgas splitsen en de CO₂ opslaan heet blauwe waterstof. Wat maakt waterstof 'groen'?"],
         uitlegPad: {
           stappen: [
             { titel: "Echt schoon — bij hernieuwbare bron", tekst: "Elektrolyzer: 2 elektroden in water, stroom erop, water splitst in waterstof + zuurstof. Bij gebruik (in brandstofcel of verbranding): H₂ + O₂ → H₂O + energie. **Geen CO₂ als input + output schoon water**. Maar duur — alleen rendabel bij goedkope hernieuwbare stroom + opschaling." },
@@ -343,11 +343,11 @@ const steps = [
         options: [
           "Bolivia + Chili + Argentinië",
           "China + Mongolië + Rusland",
-          "Australië + Nieuw-Zeeland",
+          "Australië + Indonesië + Maleisië",
           "VS + Canada + Mexico"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Australië wel groot, maar geen 'driehoek'.", "Niet."],
+        wrongHints: [null, "China verwerkt veel lithium, maar haalt het grotendeels elders vandaan. Waar liggen grote zoutvlaktes?", "Australië delft veel lithium, maar uit gesteente, niet uit zoutvlaktes. Waar liggen de grote zoutvlaktes (salares)?", "Noord-Amerika heeft wat lithium, maar geen 'driehoek' van drie buurlanden met zoutmeren. Waar wel?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoogvlakte zout-vlaktes", tekst: "Salar de Uyuni (Bolivia), Atacama (Chili), Hombre Muerto (Argentinië). Lithium in zout-pekel, verdamping in bassins. ~55% wereld-reserves hier. China + Australië groot in productie (uit hardrock-mijnen). EV-boom → Bolivia/Chili-belang voor toekomst." },
@@ -359,7 +359,7 @@ const steps = [
         q: "Een **EV-auto** gebruikt hoeveel keer meer koper dan benzine-auto?",
         options: ["~4× meer", "Net zoveel", "Half zoveel", "10× meer"],
         answer: 0,
-        wrongHints: [null, "Niet — meer.", "Tegenovergesteld.", "Te veel."],
+        wrongHints: [null, "Een elektromotor en accu zitten vol koperdraad. Is dat evenveel als bij een benzinemotor?", "Een elektrische auto heeft juist méér bedrading. Kan het dan minder zijn?", "Het is fors meer, maar tien keer is te hoog gegrepen. Schat nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "Elektrificatie = koper-massa", tekst: "Verbrandingsauto: ~20 kg koper. EV: ~80 kg (motor-wikkelingen, batterij-cellen, kabels). EV-boom → koper-vraag explodeert. Zorg over voldoende mijnbouw-capaciteit voor 2030+. Mogelijk koper-tekort + prijspiek." },
@@ -402,7 +402,7 @@ const steps = [
           "Landbouw"
         ],
         answer: 0,
-        wrongHints: [null, "Tweede.", "Derde-vierde.", "Idem."],
+        wrongHints: [null, "Verkeer stoot veel uit, maar is niet de grootste. Welke sector heeft hoogovens, raffinaderijen en chemische fabrieken?", "Huizen en kantoren verwarmen kost veel gas, maar het is minder dan een andere sector. Welke sector met grote fabrieken stoot het meest uit?", "Landbouw stoot vooral methaan en lachgas uit, minder CO₂. Welke sector heeft de grote fabrieken?"],
         uitlegPad: {
           stappen: [
             { titel: "Tata + chemie + raffinage", tekst: "Industrie = grootste deel: Tata Steel (#1 emitter NL), Shell/Pernis-raffinaderij, chemie-cluster Zuid-NL. Moeilijkst te elektrificeren door hoge-temperatuur-processen. Vereist groene H₂ + CCS. EU emissiehandel (ETS) bestraft sterk." },
@@ -413,13 +413,13 @@ const steps = [
       {
         q: "**Netcongestie** in NL:",
         options: [
-          "Stroomnet vol — kan groei van zonnestroom + EV niet aan",
-          "Er is geen enkel probleem met het stroomnet",
-          "Het net is alleen 's nachts overbelast",
-          "Het speelt alleen op het platteland"
+          "Stroomnet zit vol door zonnepanelen en laadpalen",
+          "Stroomnet zit vol door verouderde kabels",
+          "Stroomnet zit vol door te veel kolencentrales",
+          "Er wordt te weinig stroom opgewekt in NL"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Hele dag.", "Ook stad."],
+        wrongHints: [null, "Ook in nieuwe wijken met nieuwe kabels zit het net vol. Wat vraagt er de laatste jaren veel meer van het net?", "Kolencentrales gaan juist dicht. Wat komt er overal bij op daken en parkeerplaatsen?", "Congestie betekent file. Gaat het om te weinig stroom, of om te veel stroom tegelijk door dezelfde kabels?"],
         uitlegPad: {
           stappen: [
             { titel: "Onverwacht knelpunt", tekst: "Sinds ca. 2021: bedrijven die zonneparken willen bouwen krijgen 'geen aansluiting' van netbeheerder. Stroomnet ontworpen voor centrale grote centrales, niet vele kleine bronnen + grote vraag-pieken (EV-laadstations). TenneT investeert €100 mld+ tot 2050. Sociale + economische impact (industrie kan niet uitbreiden)." },
@@ -429,9 +429,9 @@ const steps = [
       },
       {
         q: "**Verbod nieuwe benzine/diesel-auto-verkoop** EU vanaf:",
-        options: ["2035", "2025", "2050", "Geen verbod"],
+        options: ["2035", "2025", "2050", "2040"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te laat.", "Wel verbod gepland."],
+        wrongHints: [null, "In 2025 worden nog volop benzineauto's verkocht. Hoeveel jaar krijgen fabrikanten om over te stappen?", "Auto's gaan zo'n 15 jaar mee. Als de EU in 2050 klimaatneutraal wil zijn, wanneer moet de verkoop dan stoppen?", "2040 werd eerder genoemd, maar de EU koos uiteindelijk een eerder jaar. Welk jaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Akkoord 2022", tekst: "EU-deal: vanaf 2035 alleen nieuwe auto's met nul CO₂-emissie. Bestaande auto's mogen blijven rijden + tweedehands-markt blijft. Duitsland eiste uitzondering voor e-fuels (synthetische brandstof) — komt mogelijk. NL volgt EU. Autofabrikanten investeren miljarden in EV-productie." },
@@ -443,12 +443,12 @@ const steps = [
         q: "**Persoonlijke actie** met grootste klimaat-impact:",
         options: [
           "Minder vlees eten en minder vliegen",
-          "Overal LED-lampen gebruiken",
-          "Al je afval goed recyclen",
+          "LED-lampen gebruiken en stekkers uittrekken",
+          "Afval scheiden en flessen terugbrengen",
           "Plastic tasjes en rietjes vermijden"
         ],
         answer: 0,
-        wrongHints: [null, "Helpt iets maar marginaal.", "Idem.", "Idem."],
+        wrongHints: [null, "LED-lampen besparen stroom, maar verlichting is maar een klein deel van je uitstoot. Wat weegt veel zwaarder?", "Recyclen helpt, maar afval is maar een klein deel van je voetafdruk. Welke keuzes kosten veel meer CO₂?", "Een rietje weegt maar een paar gram plastic. Waar zit de grote uitstoot in je leven?"],
         uitlegPad: {
           stappen: [
             { titel: "Hieronder enorm verschil", tekst: "Onderzoek Wynes & Nicholas 2017: top-acties klimaat:\n1. Geen extra kind (~58 ton CO₂/jaar levenslang).\n2. Geen auto (2,4 ton).\n3. Vluchten vermijden (~1,6 ton per lange reis).\n4. Plantaardig dieet (0,8 ton).\nKleine acties (recyclen, LED) <0,2 ton elk. Niet óf-óf, maar grote acties zijn belangrijker dan kleine." },

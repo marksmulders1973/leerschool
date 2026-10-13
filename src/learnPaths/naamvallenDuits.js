@@ -41,7 +41,7 @@ const steps = [
         q: "Welk lidwoord hoort bij **Mann** (man)?",
         options: ["der", "die", "das", "des"],
         answer: 0,
-        wrongHints: [null, "Vrouwelijk — niet voor 'man'.", "Onzijdig — niet voor 'man'.", "Dat is geen basis-lidwoord."],
+        wrongHints: [null, "Vrouwelijk — niet voor 'man'.", "Onzijdig — niet voor 'man'.", "'Des' is het lidwoord van de genitief (2e naamval). Welk lidwoord hoort bij een mannelijk woord in de basisvorm?"],
         uitlegPad: {
           stappen: [{ titel: "der Mann", tekst: "Mann (man) is mannelijk → der." }],
           woorden: [{ woord: "der", uitleg: "mannelijk lidwoord, nominatief" }],
@@ -55,7 +55,7 @@ const steps = [
         q: "Welk lidwoord hoort bij **Mädchen** (meisje)?",
         options: ["das", "die", "der", "den"],
         answer: 0,
-        wrongHints: [null, "Klinkt logisch (meisje = vrouwelijk?), maar in het Duits bepaalt hier de uitgang -chen het geslacht. Welk geslacht hoort daarbij?", "Mannelijk — past niet.", "Naamval, geen basis-lidwoord."],
+        wrongHints: [null, "Klinkt logisch (meisje = vrouwelijk?), maar in het Duits bepaalt hier de uitgang -chen het geslacht. Welk geslacht hoort daarbij?", "'Der' is mannelijk. Waar let je op bij woorden op -chen?", "'Den' is een naamvalsvorm (accusatief mannelijk). Welk basis-lidwoord hoort bij woorden op -chen?"],
         uitlegPad: {
           stappen: [{ titel: "-chen = das", tekst: "Mädchen eindigt op -chen → onzijdig → das." }],
           woorden: [{ woord: "-chen / -lein", uitleg: "verkleinwoorden → altijd das" }],
@@ -85,7 +85,7 @@ const steps = [
         q: "Welk geslacht heeft **Zeitung** (krant)?",
         options: ["Vrouwelijk", "Mannelijk", "Onzijdig", "Meervoud"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de uitgang -ung: welk geslacht hoort daarbij?", "Kijk naar de uitgang -ung en zoek die op in het rijtje uit de uitleg.", "Het is enkelvoud."],
+        wrongHints: [null, "Kijk naar de uitgang -ung: welk geslacht hoort daarbij?", "Kijk naar de uitgang -ung en zoek die op in het rijtje uit de uitleg.", "Meervoud heeft ook 'die', maar 'Zeitung' is één krant. Welk geslacht heeft het woord in het enkelvoud?"],
         uitlegPad: {
           stappen: [{ titel: "-ung = die", tekst: "Zeitung eindigt op -ung → vrouwelijk → die." }],
           woorden: [{ woord: "-ung -heit -keit", uitleg: "vrouwelijke uitgangen" }],
@@ -97,9 +97,9 @@ const steps = [
       },
       {
         q: "Wat is het geslacht van **Häuschen** (huisje)?",
-        options: ["Onzijdig (das)", "Mannelijk (der)", "Vrouwelijk (die)", "Meervoud"],
+        options: ["Onzijdig (das)", "Mannelijk (der)", "Vrouwelijk (die)", "Meervoud (die)"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de uitgang -chen: welk geslacht hebben verkleinwoorden?", "Häuschen is een verkleinwoord. Welk lidwoord hoort bij -chen?", "Enkelvoud."],
+        wrongHints: [null, "Kijk naar de uitgang -chen: welk geslacht hebben verkleinwoorden?", "Häuschen is een verkleinwoord. Welk lidwoord hoort bij -chen?", "Een huisje is één ding, dus geen meervoud. Welk geslacht hebben woorden op -chen?"],
         uitlegPad: {
           stappen: [{ titel: "-chen = das", tekst: "Häuschen eindigt op -chen → onzijdig." }],
           woorden: [{ woord: "verkleinwoord", uitleg: "kleinere versie van iets" }],
@@ -132,7 +132,7 @@ const steps = [
         q: "Hoe zeg je \"een vrouw\" in Duits?",
         options: ["eine Frau", "ein Frau", "einer Frau", "eines Frau"],
         answer: 0,
-        wrongHints: [null, "'ein' is voor mannelijk/onzijdig.", "Dat is een naamvalsvorm, niet basis.", "Ook een naamvalsvorm."],
+        wrongHints: [null, "'ein' is voor mannelijk/onzijdig.", "'Einer' gebruik je in de datief of genitief bij vrouwelijke woorden. Welke vorm hoort bij 'een vrouw' in de basisvorm?", "'Eines' is de genitief van mannelijke en onzijdige woorden. Welke vorm hoort bij een vrouwelijk woord in de basisvorm?"],
         uitlegPad: {
           stappen: [{ titel: "eine Frau", tekst: "Frau (vrouw) is vrouwelijk → eine." }],
           woorden: [{ woord: "eine", uitleg: "onbepaald lidwoord vrouwelijk" }],
@@ -150,7 +150,7 @@ const steps = [
         q: "Hoe zeg je \"geen kind\"?",
         options: ["kein Kind", "keine Kind", "keins Kind", "keiner Kind"],
         answer: 0,
-        wrongHints: [null, "'keine' = vrouwelijk; 'Kind' is onzijdig.", "Bestaat niet zo.", "Naamvalsvorm."],
+        wrongHints: [null, "'keine' = vrouwelijk; 'Kind' is onzijdig.", "'Keins' gebruik je alleen zelfstandig ('Ich habe keins'), niet vóór een zelfstandig naamwoord. Welke vorm komt vóór 'Kind'?", "'Keiner' is een naamvalsvorm (bijvoorbeeld datief vrouwelijk). Welke vorm hoort bij een onzijdig woord in de basisvorm?"],
         uitlegPad: {
           stappen: [{ titel: "kein Kind", tekst: "Kind = onzijdig (das) → kein, niet keine." }],
           woorden: [{ woord: "kein", uitleg: "geen, volgt ein-patroon" }],
@@ -181,7 +181,7 @@ const steps = [
         q: "Hoe zeg je \"mijn moeder\" (Mutter is vrouwelijk)?",
         options: ["meine Mutter", "mein Mutter", "meines Mutter", "meinen Mutter"],
         answer: 0,
-        wrongHints: [null, "'mein' is voor mannelijk/onzijdig.", "Bestaat als naamvalsvorm, niet basis.", "Naamvalsvorm."],
+        wrongHints: [null, "'mein' is voor mannelijk/onzijdig.", "'Meines' is genitief mannelijk/onzijdig ('van mijn'). Mutter is vrouwelijk — welke uitgang krijgt mein dan?", "'Meinen' is accusatief mannelijk. Welke uitgang hoort bij een vrouwelijk woord in de basisvorm?"],
         uitlegPad: {
           stappen: [{ titel: "meine Mutter", tekst: "Mutter = vrouwelijk → meine (+e)." }],
           woorden: [{ woord: "bezittelijk", uitleg: "mijn / mein / meine" }],
@@ -195,7 +195,7 @@ const steps = [
         q: "Hoe zeg je \"mijn kind\"?",
         options: ["mein Kind", "meine Kind", "meinen Kind", "meines Kind"],
         answer: 0,
-        wrongHints: [null, "Welk geslacht heeft Kind? Krijgt dat geslacht een -e achter mein?", "Naamvalsvorm.", "Naamvalsvorm."],
+        wrongHints: [null, "Welk geslacht heeft Kind? Krijgt dat geslacht een -e achter mein?", "'Meinen' hoort bij een mannelijk woord in de accusatief. Is Kind mannelijk?", "'Meines' is genitief ('van mijn'). Staat er 'van mijn kind'?"],
         uitlegPad: {
           stappen: [{ titel: "mein Kind", tekst: "Kind = onzijdig (das) → mein (geen e)." }],
           woorden: [{ woord: "onzijdig", uitleg: "das-woorden → mein" }],
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "\"Ich gebe **dem Mann** das Buch.\" Welke naamval is 'dem Mann'?",
-        options: ["Datief (meewerkend)", "Nominatief", "Accusatief", "Genitief"],
+        options: ["Datief", "Nominatief", "Accusatief", "Genitief"],
         answer: 0,
-        wrongHints: [null, "Onderwerp is 'ich'.", "Lijdend = das Buch.", "Geen bezitsverhouding."],
+        wrongHints: [null, "Het onderwerp (nominatief) is 'ich'. Welke rol heeft 'dem Mann' dan?", "Wat wordt er gegeven? Dat is het lijdend voorwerp (accusatief). En wie krijgt het?", "De genitief zegt van wie iets is. Staat er 'van de man'?"],
         uitlegPad: {
           stappen: [{ titel: "Aan wie? = datief", tekst: "Aan WIE geef ik? → dem Mann (datief)." }],
           woorden: [{ woord: "datief", uitleg: "3e nv, meewerkend voorwerp" }],
@@ -277,7 +277,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "Wat is **acc. mannelijk** van der Mann?",
         options: ["den Mann", "der Mann", "dem Mann", "des Mann"],
         answer: 0,
-        wrongHints: [null, "Dat is nom.", "Datief.", "Genitief — Mannes met -es."],
+        wrongHints: [null, "'Der Mann' is de nominatief (onderwerp). Hoe verandert der in de accusatief?", "'Dem Mann' is de datief (meewerkend voorwerp). Welke vorm hoort bij het lijdend voorwerp?", "Genitief — Mannes met -es."],
         uitlegPad: {
           stappen: [{ titel: "Acc m: der → den", tekst: "Mannelijk verandert in acc: der wordt den." }],
           woorden: [{ woord: "accusatief", uitleg: "4e nv, lijdend voorwerp" }],
@@ -291,7 +291,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "Wat is **dat. vrouwelijk** van die Frau?",
         options: ["der Frau", "die Frau", "dem Frau", "den Frau"],
         answer: 0,
-        wrongHints: [null, "Nom + Acc.", "Mannelijk/onzijdig datief.", "Mannelijk acc. of meervoud datief."],
+        wrongHints: [null, "'Die Frau' is nominatief en accusatief. Wat wordt die in de datief?", "'Dem' is datief, maar dan voor mannelijk en onzijdig. Wat is het vrouwelijke datief-lidwoord?", "Mannelijk acc. of meervoud datief."],
         uitlegPad: {
           stappen: [{ titel: "Dat v = der", tekst: "Vrouwelijk datief: die → der." }],
           woorden: [{ woord: "datief v", uitleg: "die wordt der" }],
@@ -321,7 +321,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "\"Mit ___ Auto\" — welke vorm is goed?",
         options: ["mit dem Auto", "mit das Auto", "mit den Auto", "mit der Auto"],
         answer: 0,
-        wrongHints: [null, "Mit eist datief.", "Den is mannelijk accusatief. Welke naamval eist mit, en welk geslacht heeft Auto?", "Vrouwelijk vorm."],
+        wrongHints: [null, "'Das' is nominatief of accusatief. Welke naamval eist mit?", "Den is mannelijk accusatief. Welke naamval eist mit, en welk geslacht heeft Auto?", "'Der' is datief vrouwelijk. Is Auto vrouwelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Mit + datief", tekst: "Mit dem Auto. Mit eist altijd datief; Auto onzijdig → dem." }],
           woorden: [{ woord: "mit", uitleg: "voorzetsel + datief" }],
@@ -370,7 +370,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
           "des Vaters + dem Brief",
         ],
         answer: 0,
-        wrongHints: [null, "Wie ontvangt iets en wat wordt er gegeven? Welke naamval hoort bij elk?", "Brief is lijdend, vader is meewerkend.", "Genitief past hier niet."],
+        wrongHints: [null, "Wie ontvangt iets en wat wordt er gegeven? Welke naamval hoort bij elk?", "'Der' is hier nominatief. Zijn de vader en de brief het onderwerp van 'Er gibt'?", "'Des Vaters' betekent 'van de vader'. Gaat het om de brief ván de vader of áán de vader?"],
         uitlegPad: {
           stappen: [{ titel: "Dat + Acc samen", tekst: "Er gibt dem Vater (aan wie) den Brief (wat)." }],
           woorden: [{ woord: "geven", uitleg: "geven = dat + acc tegelijk" }],
@@ -413,7 +413,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "\"Ich sehe ___ Hund (m).\" (Ik zie de hond.)",
         options: ["den Hund", "der Hund", "dem Hund", "des Hundes"],
         answer: 0,
-        wrongHints: [null, "Dat is nom — maar 'de hond' is hier lijdend → acc.", "Datief — niet juist hier.", "Genitief — niet juist hier."],
+        wrongHints: [null, "Dat is nom — maar 'de hond' is hier lijdend → acc.", "'Dem' is datief (meewerkend voorwerp). Krijgt de hond iets, of wordt hij gezien?", "'Des Hundes' betekent 'van de hond'. Staat dat in de zin?"],
         uitlegPad: {
           stappen: [{ titel: "Lijdend = acc", tekst: "Ich sehe den Hund. Wat zie ik? den Hund → acc m." }],
           woorden: [{ woord: "lijdend voorwerp", uitleg: "wat wordt geraakt door actie" }],
@@ -441,7 +441,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "\"Ich helfe ___ Kind (o).\"",
         options: ["dem Kind", "das Kind", "den Kind", "der Kind"],
         answer: 0,
-        wrongHints: [null, "Welke naamval eist helfen? Das hoort bij een andere naamval.", "Mannelijk acc — niet juist.", "Vrouwelijk — Kind is onzijdig."],
+        wrongHints: [null, "Welke naamval eist helfen? Das hoort bij een andere naamval.", "'Den' is accusatief mannelijk. Kind is onzijdig — en welke naamval eist helfen?", "Vrouwelijk — Kind is onzijdig."],
         uitlegPad: {
           stappen: [{ titel: "Helfen + dat", tekst: "Ich helfe dem Kind. Helfen eist altijd dat." }],
           woorden: [{ woord: "datief-werkwoord", uitleg: "helfen, danken, gefallen, gehören" }],
@@ -465,18 +465,18 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
           niveaus: { basis: "für die Mutter.", simpeler: "Für + die (vrouw).", nogSimpeler: "Für + die (vrouw). → die." },
         },
       },
-      { q: "Welk lidwoord (mannelijk) verandert van NOM naar ACC?", options: ["der → den","die → die","das → das","der → die"], answer: 0, wrongHints: [null, "Vrouw blijft die in acc.", "Onzijdig blijft das in acc.", "Geen wissel naar vrouwelijk."] },
+      { q: "Welk lidwoord (mannelijk) verandert van NOM naar ACC?", options: ["der → den","der → des","der → der","der → dem"], answer: 0, wrongHints: [null, "'Des' hoort bij de genitief. Welke vorm krijgt der in de accusatief?", "Bij die en das blijft het lidwoord in de accusatief gelijk. Geldt dat ook voor der?", "'Dem' is de datief. In welke naamval staat het lijdend voorwerp?"] },
       { q: "Welk voorzetsel vraagt **altijd** datief?", options: ["mit","für","ohne","durch"], answer: 0, wrongHints: [null, "Für = accusatief.", "Ohne = accusatief.", "Durch = accusatief."] },
       { q: "_____ Buch ist interessant. (NOM, onzijdig)", options: ["Das","Der","Die","Den"], answer: 0, wrongHints: [null,"'Der' is mannelijk — Buch is onzijdig.","'Die' is vrouwelijk — Buch is onzijdig.","'Den' is mannelijk accusatief."] },
-      { q: "Ich gebe _____ Mann ein Buch. (DAT, mannelijk)", options: ["dem","den","der","das"], answer: 0, wrongHints: [null,"Niet — den = ACC mannelijk.","Niet — der = NOM mannelijk.","Niet — onzijdig."] },
-      { q: "Mein Vater fährt mit _____ Auto. (mit + DAT onzijdig)", options: ["dem","das","der","den"], answer: 0, wrongHints: [null,"Niet — das = NOM/ACC onzijdig.","Niet.","Niet."] },
-      { q: "Hoeveel naamvallen heeft het **Duits**?", options: ["4","2","3","6"], answer: 0, wrongHints: [null,"Te weinig.","Te weinig.","Zes naamvallen heeft bijvoorbeeld het Latijn — het Duits heeft er minder."] },
+      { q: "Ich gebe _____ Mann ein Buch. (DAT, mannelijk)", options: ["dem","den","der","das"], answer: 0, wrongHints: [null,"Niet — den = ACC mannelijk.","Niet — der = NOM mannelijk.","'Das' is nominatief/accusatief onzijdig. Mann is mannelijk en staat hier in de datief."] },
+      { q: "Mein Vater fährt mit _____ Auto. (mit + DAT onzijdig)", options: ["dem","das","der","den"], answer: 0, wrongHints: [null,"Niet — das = NOM/ACC onzijdig.","Der is datief vrouwelijk. Is Auto vrouwelijk?","Den is accusatief mannelijk. Welke naamval en welk geslacht heb je hier?"] },
+      { q: "Hoeveel naamvallen heeft het **Duits**?", options: ["4","2","3","6"], answer: 0, wrongHints: [null,"Te weinig — alleen al voor het onderwerp en het lijdend voorwerp heeft het Duits twee aparte naamvallen. Er zijn er meer.","Te weinig — je vergeet er een. Welke naamval gebruik je voor bezit?","Zes naamvallen heeft bijvoorbeeld het Latijn — het Duits heeft er minder."] },
       { q: "**Nominatief** = ___?", options: ["Onderwerp van de zin","Lijdend voorwerp","Meewerkend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Dat is Akkusativ.","Dat is Dativ.","Dat is Genitiv."] },
-      { q: "**Akkusativ** = ___?", options: ["Lijdend voorwerp","Onderwerp","Meewerkend","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Dativ.","Genitiv."] },
-      { q: "**Dativ** = ___?", options: ["Meewerkend voorwerp","Onderwerp","Lijdend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Genitiv."] },
-      { q: "**Genitiv** wordt vooral gebruikt voor?", options: ["Bezit","Onderwerp","Lijdend","Meewerkend"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Dativ."] },
-      { q: "Lidwoord **vrouwelijk** verandert van NOM naar ACC?", options: ["die → die","der → den","das → das","die → den"], answer: 0, wrongHints: [null,"Mannelijk.","Onzijdig.","Niet vrouwelijk."] },
-      { q: "**Mit** = welke naamval?", options: ["Dativ","Akkusativ","Nominativ","Genitiv"], answer: 0, wrongHints: [null,"für=Akk.","Nominativ is voor het onderwerp, niet na een voorzetsel.","Voor bezit, niet 'mit'."] },
+      { q: "**Akkusativ** = ___?", options: ["Lijdend voorwerp","Onderwerp van de zin","Meewerkend voorwerp","Bezit (van wie)"], answer: 0, wrongHints: [null,"Het onderwerp staat in de Nominativ. Welke functie heeft de Akkusativ?","Het meewerkend voorwerp staat in de Dativ. Welke functie heeft de Akkusativ?","Bezit geef je aan met de Genitiv. Welke functie heeft de Akkusativ?"] },
+      { q: "**Dativ** = ___?", options: ["Meewerkend voorwerp","Onderwerp van de zin","Lijdend voorwerp","Bezit (van wie)"], answer: 0, wrongHints: [null,"Het onderwerp staat in de Nominativ. Welke functie heeft de Dativ?","Het lijdend voorwerp staat in de Akkusativ. Welke functie heeft de Dativ?","Bezit geef je aan met de Genitiv. Welke functie heeft de Dativ?"] },
+      { q: "**Genitiv** wordt vooral gebruikt voor?", options: ["Bezit","Onderwerp","Lijdend","Meewerkend"], answer: 0, wrongHints: [null,"Het onderwerp staat in de Nominativ. Waarvoor gebruik je de Genitiv?","Het lijdend voorwerp staat in de Akkusativ. Waarvoor gebruik je de Genitiv?","Het meewerkend voorwerp staat in de Dativ. Waarvoor gebruik je de Genitiv?"] },
+      { q: "Lidwoord **vrouwelijk** verandert van NOM naar ACC?", options: ["die → die","die → der","die → das","die → den"], answer: 0, wrongHints: [null,"'Der' gebruik je bij vrouwelijke woorden in de datief en genitief. Is de accusatief daar één van?","Het geslacht verandert niet door de naamval. Wordt een vrouwelijk woord dan ineens onzijdig?","'Den' is het accusatief-lidwoord voor mannelijke woorden. Krijgt een vrouwelijk woord dezelfde vorm?"] },
+      { q: "**Mit** = welke naamval?", options: ["Dativ","Akkusativ","Nominativ","Genitiv"], answer: 0, wrongHints: [null,"Für vraagt de Akkusativ. Vraagt mit hetzelfde?","Nominativ is voor het onderwerp, niet na een voorzetsel.","Voor bezit, niet 'mit'."] },
       { q: "**Open vraag**: in welke naamval staat 'den' (mannelijk)?", kind: "open", acceptedAnswers: ["akkusativ", "accusatief", "acc", "akkusatief"], explanation: "Mannelijk lidwoord 'der' wordt 'den' in Akkusativ." },
       { q: "**Open vraag**: noem 1 voorzetsel dat altijd Dativ vraagt.", kind: "open", acceptedAnswers: ["mit", "von", "zu", "bei", "nach", "aus", "seit"], explanation: "Vaste Dativ-voorzetsels: mit, von, zu, bei, nach, aus, seit." },
     ],

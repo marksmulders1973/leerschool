@@ -138,9 +138,9 @@ const steps = [
       },
       {
         q: "Welke vorm is goed? — *een ___ kind* (klein)",
-        options: ["klein", "kleine", "kleins", "kleinen"],
+        options: ["klein", "kleine", "kleins", "kleintje"],
         answer: 0,
-        wrongHints: [null, "Bij 'een' + het-woord (kind = het) → geen -e.", "Kleins gebruik je alleen na 'iets' (iets kleins), niet vóór een zelfstandig naamwoord.", "Geen vorm."],
+        wrongHints: [null, "Kind is een het-woord. Wat gebeurt er na 'een' bij een het-woord met de -e van het bijvoeglijk naamwoord?", "Kleins gebruik je alleen na 'iets' (iets kleins), niet vóór een zelfstandig naamwoord.", "'Een kleintje' is zelf een zelfstandig naamwoord. Kan dat vóór 'kind' staan om het te beschrijven?"],
         uitlegPad: {
           stappen: [{ titel: "Een + het-woord = geen -e", tekst: "Kind = het-woord. Met 'een' ervoor: een klein kind (geen -e)." }],
           woorden: [{ woord: "verbuiging bn", uitleg: "regel met -e" }],
@@ -172,9 +172,9 @@ const steps = [
     checks: [
       {
         q: "Welk **bepaald** lidwoord (de of het) hoort bij **boekje**?",
-        options: ["het", "de", "een", "geen"],
+        options: ["het", "de", "een", "die"],
         answer: 0,
-        wrongHints: [null, "Boekje is een verkleinwoord. Welk lidwoord krijgen verkleinwoorden altijd?", "Een kan ook ('een boekje'), maar dat is een onbepaald lidwoord. Gevraagd is: de of het?", "Boekje heeft wel een lidwoord."],
+        wrongHints: [null, "Boekje is een verkleinwoord. Welk lidwoord krijgen verkleinwoorden altijd?", "Een kan ook ('een boekje'), maar dat is een onbepaald lidwoord. Gevraagd is: de of het?", "'Die' is een aanwijzend voornaamwoord, geen lidwoord. Gevraagd is: de of het?"],
         uitlegPad: {
           stappen: [{ titel: "Verkleinwoord = altijd 'het'", tekst: "Boekje = verkleinvorm → altijd 'het' boekje." }],
           woorden: [{ woord: "verkleinwoord", uitleg: "-je, -tje, -etje achteraan" }],
@@ -388,7 +388,7 @@ const steps = [
         q: "Welk woord is een voegwoord?",
         options: ["omdat", "groter", "tafel", "snel"],
         answer: 0,
-        wrongHints: [null, "Bijvoeglijk nw.", "Zelfstandig nw.", "Snel zegt hoe iets gaat — het verbindt niets."],
+        wrongHints: [null, "Groter zegt iets over hoe iets is: een bijvoeglijk naamwoord. Verbindt het twee zinsdelen?", "Tafel is een ding: een zelfstandig naamwoord. Kan een ding twee zinnen aan elkaar koppelen?", "Snel zegt hoe iets gaat — het verbindt niets."],
         uitlegPad: {
           stappen: [{ titel: "Omdat = vg", tekst: "Omdat verbindt twee zinnen → voegwoord." }],
           woorden: [{ woord: "voegwoord", uitleg: "verbindt zinnen of woordgroepen" }],
@@ -472,7 +472,7 @@ const steps = [
     checks: [
       {
         q: "Welke woordsoort is **mooie** in: *een mooie dag*?",
-        options: ["bijvoeglijk naamwoord", "zelfstandig nw", "bijwoord", "voornaamwoord"],
+        options: ["bijvoeglijk naamwoord", "zelfstandig naamwoord", "bijwoord", "voornaamwoord"],
         answer: 0,
         wrongHints: [null, "Mooie is geen ding/persoon, dus geen zn.", "Een bijwoord beschrijft een ww/bn, niet een zn.", "Een vnw vervangt iets — mooie vervangt niets."],
         uitlegPad: {
@@ -502,7 +502,7 @@ const steps = [
         q: "Welke woordsoort is **hen** in: *Ik zie hen*?",
         options: ["persoonlijk voornaamwoord", "bezittelijk voornaamwoord", "voorzetsel", "voegwoord"],
         answer: 0,
-        wrongHints: [null, "Bezittelijk vnw is 'hun', niet 'hen'.", "Geen voorzetsel.", "Geen voegwoord."],
+        wrongHints: [null, "Bezittelijk vnw is 'hun', niet 'hen'.", "Een voorzetsel zoals 'op' of 'met' staat vóór een ander woord. Staat 'hen' hier vóór iets?", "Een voegwoord verbindt zinnen of zinsdelen. Verbindt 'hen' hier iets?"],
         uitlegPad: {
           stappen: [{ titel: "Hen = pers. vnw", tekst: "Ik zie hen: hen vervangt personen → persoonlijk voornaamwoord." }],
           woorden: [{ woord: "hen", uitleg: "lijdend voorwerp meervoud" }],
@@ -526,7 +526,7 @@ const steps = [
           niveaus: { basis: "bijwoord (tijd).", simpeler: "Wanneer = bw.", nogSimpeler: "bw." },
         },
       },
-      { q: "Welke woordsoort is **omdat** in: *Ik blijf thuis omdat het regent*?", options: ["Voegwoord","Voorzetsel","Bijwoord","Lidwoord"], answer: 0, wrongHints: [null, "Voorzetsel staat vóór zn (op, in, onder).", "Geen bijwoord.", "De/het/een."] },
+      { q: "Welke woordsoort is **omdat** in: *Ik blijf thuis omdat het regent*?", options: ["Voegwoord","Voorzetsel","Bijwoord","Lidwoord"], answer: 0, wrongHints: [null, "Voorzetsel staat vóór zn (op, in, onder).", "Een bijwoord zegt iets over hoe, waar of wanneer. Wat doet 'omdat' met de twee zinsdelen?", "De lidwoorden zijn de, het en een. Hoort 'omdat' in dat rijtje?"] },
     ],
   },
 ];

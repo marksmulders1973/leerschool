@@ -1,0 +1,1938 @@
+[
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Los op: 2x + 7 = 19.",
+  "opties": [
+   "x = 6",
+   "x = 12",
+   "x = 13",
+   "x = 5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Los op: (x + 3)/2 = 5.",
+  "opties": [
+   "x = 7",
+   "x = 10",
+   "x = 8",
+   "x = 5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat is de discriminant van x² − 2x + 5 = 0?",
+  "opties": [
+   "−16",
+   "4",
+   "16",
+   "−4"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Los op: x² = 49.",
+  "opties": [
+   "x = 7 of x = −7",
+   "x = 7",
+   "x = −7",
+   "x = 24,5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Twee kogels: 3 kogels A + 2 kogels B = €11. 1 kogel A + 4 kogels B = €12. Kogel A = ?",
+  "opties": [
+   "€2",
+   "€3",
+   "€4",
+   "€1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Een abonnement kost €20 + €0,15 per gesprek. Hoeveel gesprekken bij budget €50?",
+  "opties": [
+   "Max 200",
+   "Max 30",
+   "Max 70",
+   "Max 100"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "algebra-vergelijkingen-havo-vwo",
+  "file": "./algebraVergelijkingenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "x² − 4 > 0. Oplossing?",
+  "opties": [
+   "x < −2 of x > 2",
+   "−2 < x < 2",
+   "x > 4",
+   "Geen oplossing"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "S",
+  "q": "In de breuk ⁵⁄₉, wat is de noemer?",
+  "opties": [
+   "9",
+   "5",
+   "Beide",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 1,
+  "soort": "K",
+  "q": "½ + ¼ = ?",
+  "opties": [
+   "¾",
+   "⅙",
+   "⅔",
+   "¼"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 2,
+  "soort": "K",
+  "q": "⅔ × ¾ = ?",
+  "opties": [
+   "½",
+   "¹⁄₂₄",
+   "¹²⁄₁₂",
+   "⅚"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 3,
+  "soort": "K",
+  "q": "⅓ + ⅙ = ?",
+  "opties": [
+   "½",
+   "⅔",
+   "⅙",
+   "⅕"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 5,
+  "soort": "K",
+  "q": "¾ ÷ ½ = ?",
+  "opties": [
+   "1½",
+   "⅜",
+   "¼",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 6,
+  "soort": "K",
+  "q": "3/4 als decimaal?",
+  "opties": [
+   "0,75",
+   "0,34",
+   "0,43",
+   "0,8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 7,
+  "soort": "K",
+  "q": "¼ + ⅛ = ?",
+  "opties": [
+   "⅜",
+   "½",
+   "⅙",
+   "⅔"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 8,
+  "soort": "K",
+  "q": "2½ + 1¼ = ?",
+  "opties": [
+   "3¾",
+   "3¼",
+   "4",
+   "4½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 10,
+  "soort": "K",
+  "q": "1 − ⅖ = ?",
+  "opties": [
+   "⅗",
+   "⅖",
+   "⅘",
+   "½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Wat is ¼ als procent?",
+  "opties": [
+   "25%",
+   "14%",
+   "40%",
+   "20%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 13,
+  "soort": "K",
+  "q": "½ × 4 = ?",
+  "opties": [
+   "2",
+   "½",
+   "¼",
+   "4½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "breuken",
+  "file": "./breuken.js",
+  "stap": 14,
+  "vraag": 14,
+  "soort": "K",
+  "q": "Welke breuk = ½?",
+  "opties": [
+   "²⁄₄",
+   "⅔",
+   "⅓",
+   "¾"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "coordinatenstelsel",
+  "file": "./coordinatenstelsel.js",
+  "stap": 12,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*In een spreadsheet (zoals Excel) heet een cel \"B5\". Welke richting geeft de letter B aan?*",
+  "opties": [
+   "Horizontaal (zoals de x-as)",
+   "Verticaal (zoals de y-as)",
+   "De diepte",
+   "De kleur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "coordinatenstelsel",
+  "file": "./coordinatenstelsel.js",
+  "stap": 13,
+  "vraag": 0,
+  "soort": "S",
+  "q": "*Wat zijn de coördinaten van de oorsprong?*",
+  "opties": [
+   "(0, 0)",
+   "(1, 0)",
+   "(0, 1)",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "coordinatenstelsel",
+  "file": "./coordinatenstelsel.js",
+  "stap": 13,
+  "vraag": 11,
+  "soort": "S",
+  "q": "Welke as is horizontaal?",
+  "opties": [
+   "x-as",
+   "y-as",
+   "z-as",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat doe je eerst bij een wiskunde-vraag?",
+  "opties": [
+   "Rustig lezen + onderstrepen",
+   "Direct rekenen",
+   "Rekenmachine pakken",
+   "Antwoord gokken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom schat je voor je rekent?",
+  "opties": [
+   "Om te checken of je antwoord redelijk is",
+   "Om sneller te zijn",
+   "Om vragen over te slaan",
+   "Niet nodig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat onderstreep je in een examenvraag als eerste?",
+  "opties": [
+   "De gegeven getallen + wat gevraagd wordt",
+   "Alle woorden",
+   "Niets",
+   "Alleen het vraagteken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "S",
+  "q": "*'Geef je antwoord in 1 decimaal'* — wat betekent 1 decimaal?",
+  "opties": [
+   "1 cijfer na de komma",
+   "1 cijfer voor de komma",
+   "Alleen 1 getal",
+   "Geen komma"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "3 + 4 × 5 = ?",
+  "opties": [
+   "23",
+   "35",
+   "27",
+   "20"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "(3 + 4) × 5 = ?",
+  "opties": [
+   "35",
+   "23",
+   "27",
+   "20"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij rekensom met haakjes: wat doe je eerst?",
+  "opties": [
+   "Wat tussen de haakjes staat",
+   "Vermenigvuldigen",
+   "Delen",
+   "Optellen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wanneer is rekenmachine NIET nodig?",
+  "opties": [
+   "Eenvoudige tafel zoals 7×8",
+   "Lange getallen",
+   "Wortels",
+   "Goniometrie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "S",
+  "q": "Wat doe je met tussenstappen in lange berekening?",
+  "opties": [
+   "Op papier opschrijven",
+   "Alleen in rekenmachine",
+   "Vergeten",
+   "Niet doen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "De DEL-knop (wissen) op een rekenmachine wist ___?",
+  "opties": [
+   "Laatst ingevoerde teken",
+   "Hele som",
+   "Geheugen",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Bij wortel-berekening op de calculator: druk je eerst √ of getal?",
+  "opties": [
+   "Dat hangt af van je model — probeer het vooraf uit",
+   "Doet er niet toe, elk model rekent het goed",
+   "Alleen getal",
+   "Alleen √"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Pythagoras geldt voor welke driehoek?",
+  "opties": [
+   "Rechthoekige",
+   "Gelijkzijdige",
+   "Stompe",
+   "Elke driehoek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Formule oppervlakte driehoek?",
+  "opties": [
+   "½ × basis × hoogte",
+   "basis × hoogte",
+   "π × r²",
+   "2(l + b)"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat doe je bij 5+ min op 1 vraag vastlopen?",
+  "opties": [
+   "Markeer + verder, later terug",
+   "Blijf zitten tot opgelost",
+   "Sla helemaal over",
+   "Gok meteen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat doe je in de laatste 5 minuten?",
+  "opties": [
+   "Antwoorden controleren",
+   "Nieuwe vraag starten",
+   "Stoppen",
+   "Speed-typen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "SK",
+  "q": "Halverwege examen moet je ongeveer ___ van vragen klaar hebben?",
+  "opties": [
+   "Helft",
+   "Kwart",
+   "Driekwart",
+   "Alles"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Tijd-strategie tijdens examen?",
+  "opties": [
+   "Makkelijke eerst + lastige markeren",
+   "Volgorde van vragen volgen",
+   "Lastige eerst",
+   "Random"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welk trigger-woord = vlakke figuren?",
+  "opties": [
+   "Oppervlakte / omtrek",
+   "Korting",
+   "Volume",
+   "Gemiddelde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Pythagoras-vraag heeft welk woord?",
+  "opties": [
+   "Rechthoekige driehoek",
+   "Cirkel",
+   "Procent",
+   "Gemiddelde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Wat reserveer je voor eindcheck?",
+  "opties": [
+   "Laatste ~5 min",
+   "Hele uur",
+   "1 min",
+   "Geen tijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Bij vastlopen op 1 vraag — wat doe je?",
+  "opties": [
+   "Markeer + ga verder, kom terug",
+   "Blijf zitten",
+   "Sla helemaal over",
+   "Stop met examen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat neem je mee naar het CSE wiskunde-examen (VMBO)?",
+  "opties": [
+   "Rekenmachine, geodriehoek en pen",
+   "Telefoon",
+   "Computer",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-wiskunde-strategie-vmbo",
+  "file": "./cseWiskundeStrategieVmbo.js",
+  "stap": 5,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Op het examen mag je geen grafische rekenmachine voor VMBO. Wat dan wel?",
+  "opties": [
+   "Wetenschappelijke rekenmachine",
+   "Helemaal niets",
+   "Telefoon-calculator",
+   "Slim horloge"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "differentieren",
+  "file": "./differentieren.js",
+  "stap": 13,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Wat is de afgeleide van f(x) = 5?",
+  "opties": [
+   "0",
+   "5",
+   "5x",
+   "1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "differentieren",
+  "file": "./differentieren.js",
+  "stap": 13,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Helling in punt is gelijk aan?",
+  "opties": [
+   "Waarde van afgeleide in dat punt",
+   "Y-waarde in dat punt",
+   "X-waarde",
+   "Som x + y"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "differentieren",
+  "file": "./differentieren.js",
+  "stap": 13,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Afgeleide van f(x) = x²+x?",
+  "opties": [
+   "2x + 1",
+   "2x",
+   "x + 1",
+   "2x²"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "differentieren",
+  "file": "./differentieren.js",
+  "stap": 13,
+  "vraag": 10,
+  "soort": "K",
+  "q": "Wat is de afgeleide van een constante (bv 7)?",
+  "opties": [
+   "0",
+   "7",
+   "1",
+   "x"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "differentieren",
+  "file": "./differentieren.js",
+  "stap": 13,
+  "vraag": 12,
+  "soort": "L2",
+  "q": "Raaklijn aan grafiek in punt heeft welke helling?",
+  "opties": [
+   "f'(x) in dat punt",
+   "y-waarde",
+   "x²",
+   "Constant"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie-havo-vwo",
+  "file": "./goniometrieHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "K",
+  "q": "sin² 30° + cos² 30° = ?",
+  "opties": [
+   "1",
+   "0,5",
+   "√2",
+   "1,5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie-havo-vwo",
+  "file": "./goniometrieHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Sinusregel-toepassing: a=8, sin A = 0,5, sin B = 0,6. b?",
+  "opties": [
+   "9,6",
+   "6,67",
+   "8",
+   "12"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie-havo-vwo",
+  "file": "./goniometrieHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Oppervlakte driehoek a=6, b=4, ingesloten hoek C=30°?",
+  "opties": [
+   "6",
+   "12",
+   "24",
+   "3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie-havo-vwo",
+  "file": "./goniometrieHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Oplos: cos x = 0 voor 0 ≤ x ≤ 2π. Antwoorden?",
+  "opties": [
+   "x = π/2 of 3π/2",
+   "x = 0 of π",
+   "Alleen x = π/2",
+   "Alleen x = 0"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klokkijken",
+  "file": "./klokkijken.js",
+  "stap": 7,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Kwart voor 8 = welke tijd?",
+  "opties": [
+   "7:45",
+   "8:15",
+   "8:45",
+   "7:15"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klokkijken",
+  "file": "./klokkijken.js",
+  "stap": 7,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Half 5 = welke tijd?",
+  "opties": [
+   "4:30",
+   "5:30",
+   "4:45",
+   "5:00"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klokkijken",
+  "file": "./klokkijken.js",
+  "stap": 7,
+  "vraag": 12,
+  "soort": "K",
+  "q": "Hoeveel seconden in 1 minuut?",
+  "opties": [
+   "60",
+   "30",
+   "100",
+   "24"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klokkijken",
+  "file": "./klokkijken.js",
+  "stap": 7,
+  "vraag": 13,
+  "soort": "K",
+  "q": "School begint om 8:30 en eindigt om 14:45. Hoe lang duurt de schooldag?",
+  "opties": [
+   "6 uur 15 min",
+   "6 uur",
+   "5 uur 45 min",
+   "7 uur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klokkijken",
+  "file": "./klokkijken.js",
+  "stap": 7,
+  "vraag": 15,
+  "soort": "K",
+  "q": "Hoe noemen we 12:00?",
+  "opties": [
+   "Middag",
+   "Middernacht",
+   "Half 1",
+   "Avond"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klokkijken",
+  "file": "./klokkijken.js",
+  "stap": 7,
+  "vraag": 16,
+  "soort": "K",
+  "q": "Hoeveel tijd zit er tussen 9:15 en 9:45?",
+  "opties": [
+   "30 min",
+   "15 min",
+   "45 min",
+   "1 uur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Los op: x · (x − 7) = 0.",
+  "opties": [
+   "x = 0 of x = 7",
+   "x = 7",
+   "x = 0",
+   "x = −7"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 10,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Los op: x² − 8x = 0.",
+  "opties": [
+   "x = 0 of x = 8",
+   "x = 8",
+   "x = 0",
+   "x = ±8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wanneer is de bal weer op de grond (h = 0)?",
+  "opties": [
+   "Bij t = 4 sec",
+   "Bij t = 5 sec",
+   "Bij t = 20 sec",
+   "Nooit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Op welke tijden is de bal op 15 m hoogte?",
+  "opties": [
+   "Bij t = 1 én t = 3 sec",
+   "Alleen bij t = 1 sec",
+   "Alleen bij t = 3 sec",
+   "Bij t = 0 én t = 4 sec"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Los op: x² = 16",
+  "opties": [
+   "x = 4 of x = −4",
+   "x = 4",
+   "x = 8",
+   "x = 256"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Los op: x² = 25",
+  "opties": [
+   "x = ±5",
+   "x = 5",
+   "x = 25",
+   "x = ±25"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Discriminant = ?",
+  "opties": [
+   "b² − 4ac",
+   "b² + 4ac",
+   "4ac",
+   "b · ac"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 10,
+  "soort": "S",
+  "q": "abc-formule lost op?",
+  "opties": [
+   "ax² + bx + c = 0",
+   "ax + b",
+   "Alleen x² = 0",
+   "2x + 1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Discriminant van x² − 5x + 6 = ?",
+  "opties": [
+   "1",
+   "49",
+   "25",
+   "6"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 14,
+  "soort": "L2K",
+  "q": "D < 0 betekent (reëel)?",
+  "opties": [
+   "Geen reële oplossingen",
+   "2 oplossingen",
+   "1 oplossing",
+   "Oneindig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 15,
+  "soort": "K",
+  "q": "Top van parabool y = (x − 2)² is op?",
+  "opties": [
+   "x=2",
+   "x=−2",
+   "x=0",
+   "x=4"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 16,
+  "soort": "L2",
+  "q": "Snijpunt parabool y = x² − 4 met x-as?",
+  "opties": [
+   "x = 2 en x = −2",
+   "x = 0",
+   "x = 4",
+   "x = ±4"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadratische-vergelijkingen",
+  "file": "./kwadratischeVergelijkingen.js",
+  "stap": 12,
+  "vraag": 17,
+  "soort": "S",
+  "q": "Parabool opent omhoog als a in ax²+bx+c is?",
+  "opties": [
+   "Positief",
+   "Negatief",
+   "Nul",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "lineaire-formules",
+  "file": "./lineaireFormules.js",
+  "stap": 16,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Bij y = ax + b: wat is b?",
+  "opties": [
+   "Snijpunt met de y-as",
+   "Helling",
+   "Aantal x-waarden",
+   "Onbekende"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen",
+  "file": "./logaritmen.js",
+  "stap": 13,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Welke uitdrukking(en) is/zijn gelijk aan log(x²·y) − log(z)?*",
+  "opties": [
+   "2·log(x) + log(y) − log(z)",
+   "log(x²·y/z)",
+   "log(x²) + log(y/z)",
+   "Alle drie de andere uitdrukkingen — ze zijn wiskundig gelijk"
+  ],
+  "answer": 3,
+  "lijst": "scan"
+ },
+ {
+  "pad": "logaritmen",
+  "file": "./logaritmen.js",
+  "stap": 13,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Wat is log(a · b) volgens eigenschap?",
+  "opties": [
+   "log(a) + log(b)",
+   "log(a) · log(b)",
+   "log(a) − log(b)",
+   "log(a/b)"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen",
+  "file": "./logaritmen.js",
+  "stap": 13,
+  "vraag": 4,
+  "soort": "K",
+  "q": "log(10) = ? (basis 10)",
+  "opties": [
+   "1",
+   "10",
+   "0",
+   "100"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen",
+  "file": "./logaritmen.js",
+  "stap": 13,
+  "vraag": 7,
+  "soort": "K",
+  "q": "log(a^n) = ?",
+  "opties": [
+   "n · log(a)",
+   "log(a)^n",
+   "log(n · a)",
+   "n + log(a)"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen",
+  "file": "./logaritmen.js",
+  "stap": 13,
+  "vraag": 8,
+  "soort": "K",
+  "q": "ln(e) = ?",
+  "opties": [
+   "1",
+   "0",
+   "e",
+   "∞"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen",
+  "file": "./logaritmen.js",
+  "stap": 13,
+  "vraag": 10,
+  "soort": "K",
+  "q": "Welke basis hoort bij ln?",
+  "opties": [
+   "e",
+   "10",
+   "2",
+   "½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "machten",
+  "file": "./machten.js",
+  "stap": 12,
+  "vraag": 4,
+  "soort": "K",
+  "q": "2³ = ?",
+  "opties": [
+   "8",
+   "6",
+   "9",
+   "5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "machten",
+  "file": "./machten.js",
+  "stap": 12,
+  "vraag": 9,
+  "soort": "K",
+  "q": "a^m · a^n = ?",
+  "opties": [
+   "a^(m+n)",
+   "a^(m·n)",
+   "a^(m−n)",
+   "2a^m"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "machten",
+  "file": "./machten.js",
+  "stap": 12,
+  "vraag": 10,
+  "soort": "K",
+  "q": "(a^m)^n = ?",
+  "opties": [
+   "a^(m·n)",
+   "a^(m+n)",
+   "a^(m−n)",
+   "m·n·a"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is volume?",
+  "opties": [
+   "Hoeveel ruimte iets inneemt",
+   "Hoe zwaar iets is",
+   "Hoe lang iets is",
+   "Hoe veel iets kost"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Volume van een kubus met ribbe 3 cm?",
+  "opties": [
+   "27 cm³",
+   "9 cm³",
+   "6 cm³",
+   "12 cm³"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Een kubus heeft hoeveel ribben?",
+  "opties": [
+   "12",
+   "8",
+   "6",
+   "4"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "K",
+  "q": "Een kubus heeft hoeveel hoekpunten?",
+  "opties": [
+   "8",
+   "6",
+   "4",
+   "12"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "K",
+  "q": "Een doos 10 × 10 × 10 cm. Volume?",
+  "opties": [
+   "1000 cm³",
+   "100 cm³",
+   "10 cm³",
+   "10.000 cm³"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 16,
+  "soort": "K",
+  "q": "Volume in liters voor 8000 cm³?",
+  "opties": [
+   "8 L",
+   "800 L",
+   "80 L",
+   "0,8 L"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 17,
+  "soort": "K",
+  "q": "Inhoud is een ander woord voor?",
+  "opties": [
+   "Volume",
+   "Lengte",
+   "Oppervlakte",
+   "Massa"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 19,
+  "soort": "K",
+  "q": "Kistje 4×4×4 cm. Volume?",
+  "opties": [
+   "64 cm³",
+   "12 cm³",
+   "16 cm³",
+   "48 cm³"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "meetkunde-bouwsels",
+  "file": "./meetkundeBouwsels.js",
+  "stap": 5,
+  "vraag": 20,
+  "soort": "K",
+  "q": "Hoeveel water past in een doos van 10 × 5 × 4 cm?",
+  "opties": [
+   "200 mL",
+   "19 mL",
+   "100 mL",
+   "2000 mL"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "negatieve-getallen",
+  "file": "./negatieveGetallen.js",
+  "stap": 9,
+  "vraag": 3,
+  "soort": "K",
+  "q": "12 − (−5) = ?",
+  "opties": [
+   "17",
+   "7",
+   "−17",
+   "−7"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "negatieve-getallen",
+  "file": "./negatieveGetallen.js",
+  "stap": 9,
+  "vraag": 16,
+  "soort": "K",
+  "q": "(−5) + 3 = ?",
+  "opties": [
+   "−2",
+   "−8",
+   "2",
+   "8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "negatieve-getallen",
+  "file": "./negatieveGetallen.js",
+  "stap": 9,
+  "vraag": 18,
+  "soort": "K",
+  "q": "3 − (−5) = ?",
+  "opties": [
+   "8",
+   "−2",
+   "2",
+   "−8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 9,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*y = sin(x − 90°) — wat doet de -90°?*",
+  "opties": [
+   "Grafiek 90° naar rechts verschoven",
+   "Grafiek 90° naar links",
+   "Grafiek omgekeerd",
+   "Grafiek hoger"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 12,
+  "vraag": 1,
+  "soort": "H",
+  "q": "*\"Trilling: y = 2·sin(360·x). x in seconden. Wat is de frequentie?\"*",
+  "opties": [
+   "1 Hz",
+   "360 Hz",
+   "2 Hz",
+   "0,001 Hz"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat is de periode van y = sin(x)?",
+  "opties": [
+   "2π",
+   "π",
+   "π/2",
+   "1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Bij y = 3sin(x) — wat is amplitude?",
+  "opties": [
+   "3",
+   "1",
+   "6",
+   "0"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Sin(0°) = ?",
+  "opties": [
+   "0",
+   "1",
+   "−1",
+   "½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Cos(0°) = ?",
+  "opties": [
+   "1",
+   "0",
+   "−1",
+   "√2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Bij y = sin(x) + 5 — wat is evenwichtslijn?",
+  "opties": [
+   "y = 5",
+   "y = 0",
+   "y = 1",
+   "x = 5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 10,
+  "soort": "K",
+  "q": "Een golf met periode 4 heeft welke frequentie?",
+  "opties": [
+   "¼",
+   "4",
+   "16",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 11,
+  "soort": "L2",
+  "q": "Amplitude = ?",
+  "opties": [
+   "Maximale uitwijking vanaf de evenwichtslijn",
+   "Tijd die één volledige trilling duurt",
+   "Aantal trillingen per seconde",
+   "Hoogte van de evenwichtslijn zelf"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "periodiek",
+  "file": "./periodiek.js",
+  "stap": 13,
+  "vraag": 13,
+  "soort": "K",
+  "q": "Bij y = sin(x), welke is maximum?",
+  "opties": [
+   "+1",
+   "+2",
+   "0",
+   "∞"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*Stelsel: y = 3x − 1 én x + y = 7. Wat doe je in stap 2 (substitutie)?*",
+  "opties": [
+   "Vul (3x − 1) in voor y in de tweede vergelijking",
+   "Vul x = 7 − y in beide vergelijkingen",
+   "Tel beide vergelijkingen op",
+   "Vermenigvuldig beide kanten met 3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Stelsel: 4x + y = 13 en 2x − y = 5. Welke methode is direct toepasbaar?*",
+  "opties": [
+   "Optellen — y heeft tegengesteld teken (+1 en -1)",
+   "Aftrekken — x heeft zelfde teken",
+   "Vermenigvuldigen met 2",
+   "Geen — eerst manipuleren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Welke methode ligt het meest voor de hand bij: y = 5x én 2x + y = 14?*",
+  "opties": [
+   "Substitutie (y is al geïsoleerd)",
+   "Eliminatie (optellen)",
+   "Eliminatie (aftrekken)",
+   "Grafisch oplossen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 12,
+  "vraag": 2,
+  "soort": "L2S",
+  "q": "*Stelsel: 2x − y = 4 en 4x − 2y = 8. Aantal oplossingen?*",
+  "opties": [
+   "Oneindig veel",
+   "Eén",
+   "Geen",
+   "Twee"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 13,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Een stelsel heeft hoeveel onbekenden?",
+  "opties": [
+   "2 of meer",
+   "1",
+   "0",
+   "Oneindig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 13,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welke methode lost stelsel op door optellen/aftrekken?",
+  "opties": [
+   "Eliminatie",
+   "Substitutie",
+   "Factorisatie",
+   "Grafiek"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 13,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Stelsel x+y=5 en x−y=1. Wat is x?",
+  "opties": [
+   "3",
+   "2",
+   "4",
+   "1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stelsels",
+  "file": "./stelsels.js",
+  "stap": 13,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Stelsel y=2x en y=x+1. Snijpunt y= ?",
+  "opties": [
+   "2",
+   "1",
+   "0",
+   "3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Bij lineaire groei is welke eigenschap constant?",
+  "opties": [
+   "Absolute toename per stap",
+   "Procentuele toename",
+   "Beide",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Lineair model voor lange-termijn-projecties is risicovol omdat:",
+  "opties": [
+   "Patronen veranderen vaak buiten data-bereik",
+   "Te complex",
+   "Geen rekenkracht",
+   "Verboden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Tabel: x:1,2,3,4 | y: 4, 8, 16, 32. Welk model?",
+  "opties": [
+   "Exponentieel met b=2",
+   "Lineair met b=4",
+   "Logistisch",
+   "Kwadratisch"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Welk wereld-fenomeen heeft exponentiële groei in 20e-21e eeuw?",
+  "opties": [
+   "Rekenkracht van computerchips",
+   "Aantal uren in een dag",
+   "Lengte van een marathon",
+   "Wereldtemperatuur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Bal omhoog gooien — hoogte als functie van tijd is:",
+  "opties": [
+   "Kwadratisch (parabool)",
+   "Lineair",
+   "Exponentieel",
+   "Logaritmisch"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Bevolking 100.000 groeit 2,5%/jaar. Aantal na 10 jaar?",
+  "opties": [
+   "~128.000",
+   "~125.000",
+   "~250.000",
+   "~10.000.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welk model past bij leerproces (oefenen)?",
+  "opties": [
+   "Logistisch",
+   "Lineair",
+   "Periodiek",
+   "Kwadratisch"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verandering-groei-havo-vwo",
+  "file": "./veranderingGroeiHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Vuistregel 70: T_v ≈ 70/p werkt voor:",
+  "opties": [
+   "Alleen kleine percentages",
+   "Alleen percentages > 50%",
+   "Alleen lineair",
+   "Niet bestaand"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

@@ -347,7 +347,7 @@ const steps = [
           "Conjunctureel = door slechte economie / recessie. Is het vertrek van bedrijven naar het buitenland tijdelijk?",
           "Conjunctureel = door een tijdelijke dip. Komen deze banen terug als de economie weer aantrekt?",
           null,
-          "Bedrijven die vertrekken = minder productie in NL. Gaat dat over de vraagkant of de aanbodkant van de economie?",
+          "Kijk naar het tweede deel. Wat doen bedrijven in de economie: vooral goederen en diensten kopen, of ze maken en verkopen?",
         ],
         explanation: "Bedrijven verplaatsen naar het buitenland = de werkgelegenheid verdwijnt structureel — dat is structurele werkloosheid (niet conjunctureel = tijdelijke recessie). Het is de aanbodkant van de economie: bedrijven produceren (bieden goederen en diensten aan) niet meer in Nederland.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41",

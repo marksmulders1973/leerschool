@@ -4,7 +4,7 @@
 
 const bron5 = {
   titel: "Bron 5 — Engelse krant juli 1936 (politieke tekening)",
-  body: "Uit een Engelse krant (juli 1936). Bij de tekening hoort de tekst: 'De weg naar de overwinning.'\n\nOp de tekening staat een stapel mensen. Op de mensen-stapel:\n• Bovenaan: 'baas van de wereld'\n• De onderste rug: 'herbewapening'\n• De stapel laffe mensen: 'Laffe democratische \"leiders\"'\n\n(De tekening toont Hitler/Nazi-Duitsland die op de schouders van laffe Westerse democratische leiders naar wereldmacht klimt — een aanklacht tegen het appeasement-beleid.)",
+  body: "Uit een Engelse krant (juli 1936). Bij de tekening hoort de tekst: 'De weg naar de overwinning.'\n\nOp de tekening staat een stapel mensen. Op de mensen-stapel:\n• Bovenaan: 'baas van de wereld'\n• De onderste rug: 'herbewapening'\n• De stapel laffe mensen: 'Laffe democratische \"leiders\"'\n\n(Op de tekening klimt Hitler over de ruggen van de mensen-stapel omhoog.)",
 };
 
 const chapters = [
@@ -29,7 +29,7 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "Actief kiesrecht = het recht om te stemmen. Hier gaat het om gekozen WORDEN.",
+          "Actief kiesrecht = het recht om te stemmen. Mochten vrouwen in 1918 al stemmen? En wat gebeurde er precies met Suze?",
           "Algemeen vrouwenkiesrecht = stemRECHT voor alle vrouwen, in NL pas in 1919. Suze werd in 1918 gekozen.",
           "Censuskiesrecht = stemmen op basis van vermogen — was juist afgeschaft.",
           null,
@@ -190,10 +190,10 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "EEG kwam pas in 1957 — voortvloeiend uit EGKS.",
+          "De EEG kwam pas in 1957. Kwam die organisatie direct na het voorstel van de Franse minister in 1950?",
           null,
-          "NAVO is een militaire alliantie, geen kolen/staal-organisatie.",
-          "VN is voor wereldvrede + diplomatie, niet voor kolen/staal.",
+          "De NAVO is een militair bondgenootschap. Ging het voorstel van de Franse minister over legers?",
+          "De VN is een wereldwijde organisatie voor vrede en diplomatie. Ging het voorstel over de hele wereld of over een paar Europese landen?",
         ],
         explanation: "EGKS (Europese Gemeenschap voor Kolen en Staal, 1951) was de directe uitwerking van het Schuman-plan. Door kolen + staal (oorlogs-grondstoffen) onder gezamenlijk toezicht te zetten, werd nieuwe oorlog tussen FR en DE bemoeilijkt. EGKS was de KIEM van de huidige EU.",
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 34",

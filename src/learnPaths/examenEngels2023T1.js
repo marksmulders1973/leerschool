@@ -5,7 +5,7 @@
 const tekst1 = {
   titel: "Tekst 1 — Traveller information (rugby fans)",
   body:
-    "RUGBY fans from the West country set to travel to Twickenham for Saturday's clash between Bath and Bristol can get the train to Paddington, despite engineering works. Services between London Paddington and the South West will make additional stops at Westbury for rugby supporters travelling by train before and after the game. **Planned signalling work will be postponed and start the following day.**",
+    "RUGBY fans from the West country set to travel to Twickenham for Saturday's clash between Bath and Bristol can get the train to Paddington, despite engineering works. Services between London Paddington and the South West will make additional stops at Westbury for rugby supporters travelling by train before and after the game. Planned signalling work will be postponed and start the following day.",
 };
 
 const tekst2 = {
@@ -212,7 +212,7 @@ const steps = [
         "Most fires in the Canadian wilderness are put out before they can cause serious damage.",
       ],
       answer: 3,
-      wrongHints: ["BC heeft al smokejumper-team — Bergen zegt zelf 'in BC'.", "Tegengesteld — Bergen zegt juist dat brandweer SUCCESVOL is (90%).", "Geen media-discussie in alinea 5.", null],
+      wrongHints: ["BC heeft al smokejumper-team — Bergen zegt zelf 'in BC'.", "Zegt Bergen iets over te laat aankomen? Lees nog eens wat hij over de 'success rate' zegt.", "Geen media-discussie in alinea 5.", null],
       explanation: "Bergen-citaat: 'our success rate of putting out fires before they get to two hectares is over 90 per cent' + 'Most fires in the wilderness get controlled before they become catastrophic.' = **meeste vuren worden geblust voordat er ernstige schade ontstaat**.",
       examenBron: BRON_LABEL(23),
       bronLink: BRON_LINK,

@@ -35,7 +35,7 @@ const steps = [
         "socialisme + pacificatie",
       ],
       answer: 0,
-      wrongHints: [null, "Pacificatie (1917) = compromis tussen liberalen+confessionelen+socialisten. Past niet bij Thorbecke 1848.", "Socialisme zou ARBEIDERS macht geven, niet 'rijke burgers'. Verkeerd.", "Geen pacificatie + geen socialisme."],
+      wrongHints: [null, "Pacificatie (1917) = compromis tussen liberalen+confessionelen+socialisten. Past niet bij Thorbecke 1848.", "Socialisme zou ARBEIDERS macht geven, niet 'rijke burgers'. Verkeerd.", "Leg beide begrippen naast 'rijke burgers meer macht' en 'fabrieken en stoommachines': past elk begrip bij Thorbecke vóór 1848?"],
       explanation: "**Liberalisme** = ideologie van Thorbecke: vrijheid + parlementair stelsel + rijke burgers (census) macht geven. **Industrialisatie** = fabrieken + stoommachines (kwam in NL vooral na 1860-1870 goed op gang). Beide passen bij Thorbecke. Pacificatie = 1917 schoolstrijd-akkoord (veel later). Socialisme = arbeidersbeweging (veel later).",
       examenBron: BRON_LABEL(1),
       bronLink: BRON_LINK,

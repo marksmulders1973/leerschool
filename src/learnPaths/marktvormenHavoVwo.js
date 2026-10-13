@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Een **prijsstijging** leidt tot:",
-        options: ["Daling Qd, stijging Qs (langs curves)", "Stijging Qd, daling Qs (langs curves)", "Daling Qd, daling Qs (langs curves)", "Qd en Qs blijven allebei gelijk"],
+        options: ["Daling Qd, stijging Qs (langs curves)", "Stijging Qd, daling Qs (langs curves)", "Daling Qd, daling Qs (langs curves)", "Stijging Qd, stijging Qs (langs curves)"],
         answer: 0,
-        wrongHints: [null, "Niet — wet van de vraag.", "Niet — wet van het aanbod.", "Niet — markten reageren."],
+        wrongHints: [null, "Koop jij meer van iets als het duurder wordt? Wat doet de gevraagde hoeveelheid dan?", "Verdient een producent meer per stuk als de prijs stijgt? Wil hij dan minder of meer verkopen?", "Kopers en verkopers reageren verschillend op een hogere prijs. Willen kopers dan ook méér?"],
         uitlegPad: {
           stappen: [{ titel: "Beweging langs curves", tekst: "Bij prijsstijging: minder vraag (mensen kopen minder), meer aanbod (producent verdient meer per stuk → produceren meer). Dit is een BEWEGING langs de curves, geen verschuiving." }],
           niveaus: { basis: "Qd ↓, Qs ↑.", simpeler: "Duur = minder kopers, meer verkopers.", nogSimpeler: "Qd↓Qs↑" },
@@ -32,9 +32,9 @@ const steps = [
       },
       {
         q: "Wat is **prijselasticiteit van insuline** voor een diabeet?",
-        options: ["Heel laag (inelastisch) — moet kopen ongeacht prijs", "Heel hoog (elastisch) — stopt snel met kopen bij hogere prijs", "Onbepaald — elasticiteit is hier niet te berekenen", "Precies 1 (proportioneel) — vraag daalt even hard als prijs stijgt"],
+        options: ["Heel laag (inelastisch)", "Heel hoog (elastisch)", "Positief (vraag stijgt mee)", "Precies 1 (proportioneel)"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel te bepalen.", "Dan zou de vraag evenredig met de prijs dalen — past dat bij een levensreddend middel?"],
+        wrongHints: [null, "Kan een diabeet stoppen met insuline als die duurder wordt? Hoe sterk reageert de vraag dan?", "Gaan diabeten méér insuline kopen omdat het duurder wordt? Welke kant op beweegt de vraag bij een prijsstijging?", "Dan zou de vraag procentueel even hard dalen als de prijs stijgt. Kan een diabeet zo makkelijk minderen?"],
         uitlegPad: {
           stappen: [{ titel: "Geen substituut, levensbelangrijk", tekst: "Insuline: geen alternatief beschikbaar voor diabetes type 1; levensreddend. Vraag daalt nauwelijks bij prijsstijging → bijna volledig inelastisch (|Ev| ≈ 0). Daarom controversieel: in VS schieten insuline-prijzen omhoog → ethisch dilemma." }],
           theorie: "Inelastische vraag → producent kan veel prijs verhogen zonder veel verkoop te verliezen → reden voor regulatie.",
@@ -45,12 +45,12 @@ const steps = [
         q: "Bij **goede oogst** in graan (overvloed aanbod), wat gebeurt met evenwicht?",
         options: [
           "Aanbod-curve schuift naar rechts → lagere prijs",
-          "Vraag-curve schuift naar rechts → hogere prijs",
-          "Beweging langs aanbodcurve",
-          "Geen verandering"
+          "Vraag-curve schuift naar links → lagere prijs",
+          "Beweging langs de aanbodcurve → lagere prijs",
+          "Aanbod-curve schuift naar links → lagere prijs"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen vraag-verandering.", "Niet — verschuiving, niet langs.", "Wel reactie."],
+        wrongHints: [null, "Willen kopers ineens minder graan, of hebben boeren meer graan te verkopen?", "Een beweging langs de curve komt door een prijsverandering. Is hier de prijs de oorzaak, of de oogst?", "Een goede oogst betekent bij elke prijs méér graan. Welke kant schuift een curve op als de hoeveelheid toeneemt?"],
         uitlegPad: {
           stappen: [{ titel: "Aanbod-shift", tekst: "Goede oogst = elke prijs nu hoger aanbod → curve naar rechts. Nieuw evenwicht: lagere P, hogere Q. Boerenparadox: goede oogst kan tot **lager inkomen** leiden als vraag inelastisch is." }],
           niveaus: { basis: "Aanbod-shift → P daalt.", simpeler: "Veel oogst = lagere prijs.", nogSimpeler: "Q↑P↓" },
@@ -58,9 +58,9 @@ const steps = [
       },
       {
         q: "Boter + margarine zijn **substituten**. Boter-prijs stijgt. Wat met margarine?",
-        options: ["Vraagcurve margarine schuift rechts → meer verkoop", "Vraagcurve margarine schuift links → minder verkoop", "Geen effect — margarine is een ander product", "Margarine verdwijnt helemaal van de markt"],
+        options: ["Vraagcurve margarine schuift rechts → meer verkoop", "Vraagcurve margarine schuift links → minder verkoop", "Geen effect — margarine is een ander product", "Aanbodcurve margarine schuift rechts → lagere prijs"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — wel effect.", "Onzin."],
+        wrongHints: [null, "Als boter duurder wordt, wat doen mensen die niet meer willen betalen? Kopen die minder margarine?", "Substituten kun je voor elkaar inwisselen. Heeft de boterprijs dan echt geen invloed op margarine?", "De duurdere boter verandert iets aan wat kópers willen. Verandert er ook iets aan de kosten van margarinemakers?"],
         uitlegPad: {
           stappen: [{ titel: "Substituten = + Ek", tekst: "Mensen schakelen over: 'boter te duur, neem margarine'. Vraag naar margarine stijgt → curve naar rechts. Klassiek voorbeeld substituten met positieve kruiselasticiteit." }],
           theorie: "Complementen werken omgekeerd: benzine-prijs ↑ → minder auto-vraag (Ek < 0).",
@@ -69,9 +69,9 @@ const steps = [
       },
       {
         q: "Bij **prijsplafond** onder evenwichtsprijs (zoals huurprijsplafond):",
-        options: ["Tekort op markt — minder aanbod dan vraag", "Overschot op markt — meer aanbod dan vraag", "Geen effect — vraag en aanbod blijven gelijk", "Evenwicht herstelt zich snel vanzelf"],
+        options: ["Tekort op markt — minder aanbod dan vraag", "Overschot op markt — meer aanbod dan vraag", "Geen effect — vraag en aanbod blijven gelijk", "Evenwicht herstelt zich vanzelf via de prijs"],
         answer: 0,
-        wrongHints: [null, "Niet — hoeveel willen kopers en verkopers bij zo'n lage prijs?", "Wel effect.", "Niet — plafond houdt prijs vast."],
+        wrongHints: [null, "Niet — hoeveel willen kopers en verkopers bij zo'n lage prijs?", "Een plafond bóven de evenwichtsprijs doet niets. Maar dit plafond ligt eronder: wat willen kopers en verkopers bij die lage prijs?", "Kan de prijs nog stijgen naar het evenwicht als de wet een maximumprijs vastzet?"],
         uitlegPad: {
           stappen: [
             { titel: "Onder evenwicht: Qd > Qs", tekst: "Met prijsplafond P_max < P*: bij die lage prijs willen veel mensen kopen (hoog Qd), weinig willen verkopen (laag Qs) → tekort. NL huurmarkt: gereguleerde sector → wachtlijsten + zwarte markt. Vrije sector hogere prijzen." },
@@ -92,7 +92,7 @@ const steps = [
         q: "Nederland heeft 5-7 grote supermarktketens. Welke marktvorm?",
         options: ["Oligopolie", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
         answer: 0,
-        wrongHints: [null, "Niet — niet veel kleinen.", "Niet — meer dan 1.", "Niet — niet zo gedifferentieerd."],
+        wrongHints: [null, "Bij volkomen concurrentie zijn er heel veel kleine aanbieders. Zijn 5-7 grote ketens 'heel veel'?", "Bij een monopolie is er maar één aanbieder. Hoeveel ketens zijn er hier?", "Bij die marktvorm zijn er véél aanbieders, elk met een eigen product. Zijn 5-7 grote ketens veel?"],
         uitlegPad: {
           stappen: [
             { titel: "Weinig grote spelers", tekst: "AH (35%), Jumbo (22%), Lidl (12%), Aldi, Plus, Coop. Hoge toetredingsdrempels: distributiecentra, lange-termijn-contracten met leveranciers. Onderlinge prijs-volgers. Typisch oligopolie." },
@@ -103,9 +103,9 @@ const steps = [
       },
       {
         q: "**Volkomen concurrentie** vereist:",
-        options: ["Veel kleine aanbieders, homogeen product, vrije toetreding", "Eén aanbieder, uniek product, geen toetreding mogelijk", "Weinig grote aanbieders die elkaars prijzen volgen", "Hoge prijzen en sterk verschillende merkproducten"],
+        options: ["Veel kleine aanbieders, homogeen product, vrije toetreding", "Eén aanbieder, uniek product, geen toetreding mogelijk", "Weinig grote aanbieders die elkaars prijzen volgen", "Veel aanbieders met elk een eigen merkproduct"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is monopolie.", "Niet — dat is oligopolie.", "Tegenovergesteld."],
+        wrongHints: [null, "Eén aanbieder en geen toetreding: is er dan nog concurrentie?", "Een paar grote bedrijven die op elkaar letten: welke marktvorm is dat? En kan één bedrijf bij volkomen concurrentie de prijs bepalen?", "Als elk bedrijf een eigen merk heeft, zijn de producten dan nog homogeen (allemaal gelijk)?"],
         uitlegPad: {
           stappen: [{ titel: "Theoretisch ideaal", tekst: "Modellen-marktvorm: prijs = marginale kosten = zeer efficiënt. In praktijk benaderen graan- en aandelenmarkten dit. Realiteit: meeste markten hebben enige imperfecties." }],
           niveaus: { basis: "Veel kleinen, identiek.", simpeler: "Veel aanbieders met zelfde product.", nogSimpeler: "Volkomen" },
@@ -113,9 +113,9 @@ const steps = [
       },
       {
         q: "**Monopolie** ontstaat vaak door:",
-        options: ["Hoge toetredingsbarrières voor nieuwe bedrijven", "Lage prijzen voor alle klanten", "Veel concurrentie tussen kleine bedrijven", "Alleen klantenloyaliteit aan een merk"],
+        options: ["Hoge toetredingsbarrières voor nieuwe bedrijven", "Lage kosten om als nieuw bedrijf te starten", "Hoge vraag naar één populair product", "Veel reclame van alle bedrijven in de markt"],
         answer: 0,
-        wrongHints: [null, "Niet — tegenovergesteld.", "Tegenovergesteld.", "Niet alleen."],
+        wrongHints: [null, "Als starten makkelijk is, komen er dan veel of weinig concurrenten bij?", "Veel vraag lokt juist nieuwe aanbieders. Wat houdt die nieuwe bedrijven dan tegen?", "Reclame maken alle bedrijven. Houdt dat nieuwe bedrijven buiten de markt?"],
         uitlegPad: {
           stappen: [{ titel: "Bescherming tegen concurrenten", tekst: "Een monopolie blijft bestaan zolang anderen niet kunnen toetreden. Diverse mechanismen: investering enorm (Boeing fabriek), wettelijk monopolie (octrooi 20 jaar), netwerkeffect (WhatsApp), of natuurlijke schaal (één spoorwegnet)." }],
           niveaus: { basis: "Hoge barrières.", simpeler: "Anderen kunnen niet erbij komen.", nogSimpeler: "Barrières" },
@@ -123,9 +123,9 @@ const steps = [
       },
       {
         q: "Een **kartel** is:",
-        options: ["Geheime prijsafspraken tussen concurrenten", "Een legaal samenwerkingsverband van bedrijven", "Eén bedrijf dat de enige aanbieder is", "Een sociale beweging van consumenten"],
+        options: ["Geheime prijsafspraken tussen concurrenten", "Een legaal samenwerkingsverband van bedrijven", "Eén bedrijf dat de enige aanbieder is", "Een fusie van twee bedrijven tot één"],
         answer: 0,
-        wrongHints: [null, "Niet — zulke afspraken zijn in de EU juist verboden.", "Niet — bij een kartel gaat het om meerdere bedrijven.", "Onzin."],
+        wrongHints: [null, "Mogen concurrenten in de EU zomaar samen afspreken wat iets kost?", "Niet — bij een kartel gaat het om meerdere bedrijven.", "Bij een fusie worden twee bedrijven één. Blijven de bedrijven in een kartel zelfstandig?"],
         uitlegPad: {
           stappen: [
             { titel: "Mededingingsautoriteit (ACM)", tekst: "EU + NL: prijsafspraken/marktverdeling tussen onafhankelijke bedrijven verboden onder mededingingsrecht. Boetes tot 10% wereldwijde omzet. Bekende boetes: liftbedrijven (€1 mld EU 2007), bierbrouwers (€273 mln NL 2007)." },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Restaurants in een grote stad: veel aanbieders met **verschillende menukaart + sfeer**. Marktvorm?",
-        options: ["Monopolistische concurrentie", "Volkomen concurrentie", "Oligopolie", "Monopolie"],
+        options: ["Monopolistische concurrentie", "Volkomen concurrentie", "Heterogeen oligopolie", "Natuurlijk monopolie"],
         answer: 0,
-        wrongHints: [null, "Niet — producten verschillen.", "Niet — niet weinig.", "Niet — veel restaurants."],
+        wrongHints: [null, "Bij deze marktvorm zijn alle producten gelijk. Is dat zo bij restaurants?", "Bij een oligopolie zijn er maar een paar aanbieders. Hoeveel restaurants telt een grote stad?", "Bij een monopolie is er één aanbieder. Hoeveel restaurants zijn er?"],
         uitlegPad: {
           stappen: [{ titel: "Veel + gedifferentieerd", tekst: "Veel restaurants (geen oligopolie of monopolie), maar elk biedt iets unieks (sushi, Italiaans, vegan). Klanten hebben merken-/keuken-voorkeur → restaurant kan iets boven gemiddelde prijs vragen. Lage toetreding (huur + vergunning)." }],
           niveaus: { basis: "Monopolistische conc.", simpeler: "Veel + gedifferentieerd.", nogSimpeler: "Monopolistisch" },
@@ -162,7 +162,7 @@ const steps = [
           "Asymmetrische informatie"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — schade, niet baat.", "Niet — andere categorie.", "Niet — gaat om kosten, niet info."],
+        wrongHints: [null, "Hebben de mensen langs de rivier voordeel of nadeel van het lozen?", "Een collectief goed is iets waarvan je niemand kunt uitsluiten, zoals een dijk. Gaat het hier om zo'n goed, of om gevolgen voor anderen?", "Weet de een hier meer dan de ander? Of krijgen buitenstaanders kosten die de fabriek niet betaalt?"],
         uitlegPad: {
           stappen: [
             { titel: "Kosten voor derden niet in prijs", tekst: "Fabriek produceert tegen privé-kosten (loon + materiaal), maar **maatschappelijke** kosten zijn hoger (visserij verlies, ziekte stroomafwaarts). Prijs op markt is TE laag → TE veel productie + vervuiling. Oplossing: heffing of regulering." },
@@ -175,12 +175,12 @@ const steps = [
         q: "Wat is een **collectief goed**?",
         options: [
           "Nationaal defensie-leger",
-          "Auto",
-          "Brood",
-          "Bioscoop-kaartje"
+          "Een rit met de stadsbus",
+          "Het gemeentelijk zwembad",
+          "Les op een openbare school"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — uitsluitbaar.", "Niet — uitsluitbaar + rivaliserend.", "Niet — uitsluitbaar (toegangsbewijs)."],
+        wrongHints: [null, "De gemeente regelt de bus wel. Maar kun je iemand zonder kaartje weigeren?", "Het zwembad is van de gemeente. Kun je mensen zonder kaartje toch buiten houden?", "De overheid betaalt de school. Maar is een plek in de klas voor iedereen tegelijk, of raakt een klas vol?"],
         uitlegPad: {
           stappen: [
             { titel: "Niet-uitsluitbaar + niet-rivaliserend", tekst: "Het leger beschermt iedereen of niemand — kan niet bepaalde inwoners uitsluiten. Mijn 'gebruik' (in leven blijven) vermindert die van mijn buren niet. Daarom moet overheid leger betalen via belasting — geen markt-oplossing." },
@@ -191,9 +191,9 @@ const steps = [
       },
       {
         q: "Tweedehands auto-handelaar verkoopt auto met verborgen gebreken. Type marktfalen?",
-        options: ["Asymmetrische informatie", "Externaliteit", "Monopolie", "Collectief goed"],
+        options: ["Asymmetrische informatie", "Negatieve externaliteit", "Marktmacht van een monopolie", "Free-rider-probleem"],
         answer: 0,
-        wrongHints: [null, "Niet — info-asymmetrie hier kern.", "Niet — geen monopolie nodig.", "Niet — het is juist een privé-transactie."],
+        wrongHints: [null, "Een externaliteit raakt een buitenstaander. Heeft hier een buitenstaander last, of de koper zelf?", "Kan de koper niet gewoon naar een andere handelaar? Waar zit het probleem dan echt?", "Een free rider profiteert zonder te betalen. Betaalt deze koper niet gewoon voor de auto?"],
         uitlegPad: {
           stappen: [
             { titel: "Akerlof 1970 (Nobel)", tekst: "Akerlof's 'The Market for Lemons': tweedehands auto-markt. Verkopers van slechte auto's ('lemons') verbergen gebreken; goede auto's halen niet hun waarde. Goede aanbieders trekken zich terug → markt 'rot van onderaf'." },
@@ -204,9 +204,9 @@ const steps = [
       },
       {
         q: "Wat is **positieve externaliteit**?",
-        options: ["Baten voor derden die niet in de prijs zitten", "Schade voor derden die niet in de prijs zit", "Een belasting die de overheid heft", "Winst die het bedrijf zelf houdt"],
+        options: ["Baten voor derden die niet in de prijs zitten", "Schade voor derden die niet in de prijs zit", "Baten voor de koper die wél in de prijs zitten", "Een subsidie die de overheid aan bedrijven geeft"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — heffing.", "Niet — winst is intern."],
+        wrongHints: [null, "Is het voor de buitenstaander voordeel of nadeel bij een 'positief' extern effect?", "De koper betaalt voor zijn eigen voordeel. Is dat dan 'extern'?", "Een subsidie kan een oplossing zijn voor een extern effect. Is het ook het effect zelf?"],
         uitlegPad: {
           stappen: [
             { titel: "Markt produceert te weinig van", tekst: "Voorbeelden: vaccinaties (kuddebescherming voor anderen), onderwijs (productievere samenleving), groene daken (verkoeling stad). Markt onderproduceert want individu krijgt niet alle baten. Oplossing: subsidie." },
@@ -218,7 +218,7 @@ const steps = [
         q: "Wat is **Pigouvian-belasting**?",
         options: ["Belasting ter hoogte van de externe schade", "Belasting op het vermogen van burgers", "Belasting op wat consumenten kopen (btw)", "Heffing op producten uit het buitenland"],
         answer: 0,
-        wrongHints: [null, "Niet — niet op vermogen.", "Niet — BTW is consumentenbelasting.", "Niet — voor handel."],
+        wrongHints: [null, "Een vermogensbelasting gaat over wat burgers bezitten. Hoorde de Pigou-belasting bij inkomensverdeling of bij marktfalen?", "Btw zit op bijna alles wat je koopt. Lost die een bepaald marktfalen op, of is het een algemene belasting?", "Een heffing op import beschermt de eigen markt. Bij welk onderwerp kwam de Pigou-belasting voor?"],
         uitlegPad: {
           stappen: [
             { titel: "Pigou 1920", tekst: "Belasting precies op activiteit met externaliteit, gelijk aan grootte schade. Voorbeeld: CO₂-heffing, accijns op sigaretten, congestieheffing in Londen. Idee: prijs reflecteert nu **maatschappelijke** kosten → markt optimaliseert correct." },
@@ -240,12 +240,12 @@ const steps = [
         q: "Wat is **progressieve belasting**?",
         options: [
           "Hogere inkomens betalen procentueel meer",
-          "Iedereen zelfde % betaalt",
-          "Hogere inkomens betalen minder",
-          "Alleen bedrijven betalen"
+          "Iedereen betaalt hetzelfde percentage",
+          "Hogere inkomens betalen procentueel minder",
+          "Iedereen betaalt hetzelfde vaste bedrag"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is vlaktaks.", "Niet — regressief, onbillijk.", "Niet — privé ook."],
+        wrongHints: [null, "Hetzelfde percentage voor iedereen heet een vlaktaks. Loopt het percentage dan op met je inkomen?", "Dan houden de hoogste inkomens procentueel méér over. Heet dat progressief of regressief?", "Een vast bedrag weegt zwaarder voor iemand met een laag inkomen. Is dat progressief?"],
         uitlegPad: {
           stappen: [
             { titel: "NL inkomstenbelasting 2024", tekst: "Schijf 1 (< €38.098): 36,97%.\nSchijf 2 (€38.098-75.518): 36,97%.\nSchijf 3 (> €75.518): 49,5%.\nHogere inkomens hogere %. Progressief = herverdeling. Tegen-vorm 'regressief' (lage inkomens hoger %) — BTW heeft regressief karakter want lage inkomens consumeren groter % van inkomen." },
@@ -255,9 +255,9 @@ const steps = [
       },
       {
         q: "**ECB** verhoogt rente. Verwacht effect:",
-        options: ["Minder lenen → minder vraag → lagere inflatie", "Meer lenen → meer vraag → minder werkloosheid", "Geen effect op lenen, vraag of prijzen", "Direct hogere prijzen in alle winkels"],
+        options: ["Minder lenen → minder vraag → lagere inflatie", "Meer lenen → meer vraag → minder werkloosheid", "Meer sparen → meer vraag → hogere inflatie", "Minder lenen → minder vraag → minder werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel effect.", "Tegenovergesteld."],
+        wrongHints: [null, "Wordt lenen goedkoper of duurder als de rente omhooggaat?", "Sparen levert meer op als de rente stijgt. Geven mensen die meer sparen dan méér of minder uit?", "Als bedrijven minder verkopen, hebben ze dan meer of minder personeel nodig?"],
         uitlegPad: {
           stappen: [
             { titel: "Klassiek anti-inflatie", tekst: "Hogere rente: hypotheek + bedrijfslening duurder → minder investering + consumptie → minder druk op prijzen → inflatie daalt. Bijwerking: werkloosheid stijgt (minder investering, ontslagen). 2022-2024 cyclus." },
@@ -267,9 +267,9 @@ const steps = [
       },
       {
         q: "**EU-Stabiliteits- en Groei Pact** zegt begrotingstekort max:",
-        options: ["3% van BBP", "10% van BBP", "1% van BBP", "Geen vaste grens"],
+        options: ["3% van BBP", "10% van BBP", "1% van BBP", "60% van BBP"],
         answer: 0,
-        wrongHints: [null, "Te hoog.", "Te laag.", "Wel een regel."],
+        wrongHints: [null, "10% zou heel ruim zijn. Het pact wil tekorten juist klein houden. Welke grens hoorde je?", "1% is niet de grens. Weet je nog welk getal bij het tekort hoort en welk bij de schuld?", "60% is de grens voor de staatsschuld. Gaat deze vraag over de schuld of over het tekort?"],
         uitlegPad: {
           stappen: [
             { titel: "3% / 60%-regel", tekst: "1997 SGP-regels: jaarlijks begrotingstekort < 3% BBP, totale staatsschuld < 60% BBP. Bij overtreding 'buitensporig tekort procedure' → boete (in praktijk nauwelijks gebruikt). Tijdens COVID + energie-crisis tijdelijk geschorst. 2024: nieuwe versie." },
@@ -281,7 +281,7 @@ const steps = [
         q: "**Keynesiaans beleid** in een recessie:",
         options: ["Overheidsuitgaven omhoog + belasting omlaag", "Bezuinigen + belasting omhoog", "Niet ingrijpen, markt herstelt zichzelf", "Rente omhoog via de centrale bank"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is austerity.", "Niet — Keynes vooral pro-interventie.", "Niet — monetair, niet fiscaal."],
+        wrongHints: [null, "Bezuinigen in een recessie: krijgen mensen en bedrijven dan meer of minder te besteden?", "Wie zei dat de markt zichzelf herstelt: Keynes of juist zijn tegenstanders?", "Een hogere rente remt lenen en uitgeven. Helpt dat in een recessie, en is dat wel begrotingsbeleid van de overheid?"],
         uitlegPad: {
           stappen: [
             { titel: "Anticyclisch fiscaal", tekst: "In recessie: privé-uitgaven dalen → overheid moet gat vullen via meer uitgaven (infrastructuur, sociale wetten) + minder belasting → consumenten houden meer over → vraag stijgt → werk-herstel. Crisis 2008-2009 + 2020-COVID: Keynesiaanse pakketten." },
@@ -292,9 +292,9 @@ const steps = [
       },
       {
         q: "**Privatisering** van energie-bedrijven sinds 1990s heeft als doel:",
-        options: ["Marktwerking → efficiëntie en lagere prijzen", "Hogere prijzen → meer winst voor de staat", "Meer ambtenaren in de energiesector", "Sluiting van energiebedrijven"],
+        options: ["Marktwerking → efficiëntie en lagere prijzen", "Schaalvoordeel → één groot bedrijf, lagere kosten", "Vaste tarieven → gelijke prijzen voor iedereen", "Meer staatsinvloed → betere leveringszekerheid"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld bedoeld.", "Tegenovergesteld.", "Onzin."],
+        wrongHints: [null, "Eén groot energiebedrijf had je juist vóór 1990. Kwamen er na de privatisering meer of minder aanbieders?", "Vaste tarieven worden door de overheid vastgezet. Laat privatiseren de prijs aan de overheid of aan de markt over?", "Privatiseren betekent: de overheid verkoopt het bedrijf. Krijgt de overheid dan meer of minder te zeggen?"],
         uitlegPad: {
           stappen: [
             { titel: "Theorie vs praktijk", tekst: "Argument: privé-bedrijven concurreren → efficiënter → lagere prijzen. Praktijk in NL: liberalisering 1998 (gas + elektriciteit). Wel keuze tussen aanbieders, maar netwerk-tarieven nog steeds gereguleerd (TenneT, Gasunie). 2022-crisis: gasprijzen schoten omhoog → kritiek op privatisering." },
@@ -313,9 +313,9 @@ const steps = [
     checks: [
       {
         q: "**Gini-coëfficiënt** van 0 betekent:",
-        options: ["Perfecte gelijkheid", "Perfecte ongelijkheid", "Recessie", "Geen meting mogelijk"],
+        options: ["Perfecte gelijkheid", "Perfecte ongelijkheid", "Geen armoede meer", "Gemiddelde ongelijkheid"],
         answer: 0,
-        wrongHints: [null, "Niet — 1.", "Niet — geen Gini-verband.", "Wel meting."],
+        wrongHints: [null, "Bij perfecte ongelijkheid heeft één persoon alles. Welk getal hoort daarbij: 0 of 1?", "De Gini meet hoe het inkomen verdeeld is, niet hoe hoog het is. Kan een land gelijk én arm zijn?", "De Gini loopt van 0 tot 1. Ligt 'gemiddeld' dan aan de rand of in het midden?"],
         uitlegPad: {
           stappen: [{ titel: "0 → 1 schaal", tekst: "Gini 0 = iedereen zelfde inkomen. Gini 1 = één persoon alles. NL ~0,30 = relatief gelijk; VS ~0,42 = meer ongelijk; Zuid-Afrika 0,63 = extreem ongelijk." }],
           niveaus: { basis: "0 = gelijkheid.", simpeler: "Hoe lager Gini, hoe gelijker.", nogSimpeler: "0" },
@@ -323,9 +323,9 @@ const steps = [
       },
       {
         q: "Een **Lorenz-curve** verder van de 45°-lijn betekent:",
-        options: ["Grotere ongelijkheid", "Meer gelijkheid", "Hoger BBP", "Lagere belasting"],
+        options: ["Grotere ongelijkheid", "Meer gelijkheid", "Hoger gemiddeld inkomen", "Kleinere Gini-coëfficiënt"],
         answer: 0,
-        wrongHints: [null, "Niet — tegenovergesteld.", "Niet — geen verband.", "Idem."],
+        wrongHints: [null, "De 45°-lijn is perfecte gelijkheid. Wat betekent het als de curve daar verder vanaf ligt?", "Een Lorenz-curve laat zien hoe het inkomen verdeeld is. Zegt hij iets over hoe hoog het is?", "De Gini meet de ruimte tussen de curve en de diagonaal. Wordt die ruimte groter of kleiner?"],
         uitlegPad: {
           stappen: [{ titel: "Verbuiging = ongelijkheid", tekst: "45°-lijn = perfecte verdeling. Lorenz-curve buigt naar onder als rijke top steeds groter % inkomen heeft. Oppervlak tussen 45°-lijn + Lorenz / oppervlak driehoek = Gini-coëfficiënt." }],
           niveaus: { basis: "Meer afstand = meer ongelijk.", simpeler: "Verre Lorenz = ongelijker.", nogSimpeler: "Ver" },
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Nederlandse Gini **na belasting + uitkeringen** is:",
-        options: ["~0,30", "~0,60", "~0,15", "~0,90"],
+        options: ["~0,30", "~0,60", "~0,15", "~0,45"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Zuid-Afrika.", "Te gelijk — onmogelijk in praktijk.", "Onmogelijk."],
+        wrongHints: [null, "0,60 is extreem ongelijk, zoals in Zuid-Afrika. Is Nederland zo ongelijk?", "Zo gelijk is geen enkel land. Hoe ver brengt herverdeling Nederland?", "Zulke cijfers zie je in landen met weinig herverdeling. Herverdeelt Nederland veel of weinig?"],
         uitlegPad: {
           stappen: [
             { titel: "Herverdeling werkt", tekst: "Bruto-inkomens Gini ~0,45 (markt). Na belasting + uitkeringen ~0,29. Welvaartsstaat reduceert ongelijkheid significant. Bij vergelijking: VS 0,42 (minder herverdeling), Denemarken 0,28 (meer), Brazilië 0,53." },
@@ -345,9 +345,9 @@ const steps = [
       },
       {
         q: "Piketty's stelling **r > g** betekent:",
-        options: ["Rendement op kapitaal > economische groei → vermogen concentreert", "Rente > groei → er volgt altijd een recessie", "Geen verband tussen kapitaal en economische groei", "Salarissen stijgen sneller dan vermogens groeien"],
+        options: ["Rendement op kapitaal > groei → vermogen concentreert", "Rendement > groei → vermogen wordt gelijker verdeeld", "Geen verband tussen kapitaal en economische groei", "Salarissen stijgen sneller dan vermogens groeien"],
         answer: 0,
-        wrongHints: [null, "Niet — onderbouwing voor ongelijkheid.", "Wel — bekend mechanisme.", "Tegenovergesteld."],
+        wrongHints: [null, "Wie hebben er kapitaal dat rendement oplevert: vooral rijke mensen of iedereen? Wordt de verdeling dan gelijker?", "De formule vergelijkt twee dingen met elkaar. Waarom zou er dan geen verband zijn?", "Staat er in de formule iets over salarissen? Wat betekenen r en g?"],
         uitlegPad: {
           stappen: [
             { titel: "'Kapitaal in de 21ste eeuw'", tekst: "Thomas Piketty, 2014: historisch r ~5% > g ~2-3%. Dus vermogen groeit sneller dan economie → bestaande vermogens groeien relatief sneller. Verklaart trend stijgende ongelijkheid sinds 1980. Veel discussie + kritiek, maar invloedrijk." },
@@ -358,9 +358,9 @@ const steps = [
       },
       {
         q: "Wat is een argument **vóór** enige ongelijkheid?",
-        options: ["Prikkels voor hard werken, ondernemen, risico nemen", "Meer sociale rust in de samenleving", "Betere gezondheid van de bevolking", "Minder eenzaamheid onder mensen"],
+        options: ["Prikkels om hard te werken en te ondernemen", "Meer sociale rust in de samenleving", "Betere gezondheid van de hele bevolking", "Minder criminaliteit in arme wijken"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — minder rust.", "Tegen — minder gezond.", "Niet relevant."],
+        wrongHints: [null, "Zorgen grote verschillen tussen arm en rijk eerder voor rust of voor onvrede?", "Onderzoek koppelt grote ongelijkheid aan méér gezondheidsproblemen. Is dit dan een argument vóór?", "Leidt meer armoede in een wijk eerder tot minder of tot meer criminaliteit?"],
         uitlegPad: {
           stappen: [
             { titel: "Incentive-argument", tekst: "Als arts en kassière hetzelfde verdienen → wie wordt arts (lange dure studie + verantwoordelijkheid)? Sommige inkomensverschillen prikkelen tot inspanning + investering. Hoeveel ongelijkheid 'gezond' is, is een normatieve discussie — daarover verschillen politieke stromingen sterk van mening." },

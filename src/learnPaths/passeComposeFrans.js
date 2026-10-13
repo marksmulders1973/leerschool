@@ -34,12 +34,12 @@ const steps = [
         q: "Wat is **passé composé**?",
         options: [
           "Voltooid tegenwoordige tijd",
-          "Tegenwoordige tijd",
-          "Toekomende tijd",
+          "Onvoltooid tegenwoordige tijd",
+          "Voltooid verleden tijd",
           "Onvoltooid verleden tijd",
         ],
         answer: 0,
-        wrongHints: [null, "Tegenwoordige tijd is présent.", "Toekomst = futur.", "Onvoltooid verleden = imparfait."],
+        wrongHints: [null, "Tegenwoordige tijd is présent.", "De voltooid verleden tijd ('ik had gegeten') is in het Frans de plus-que-parfait. Welke tijd is 'ik heb gegeten'?", "Onvoltooid verleden = imparfait."],
         uitlegPad: {
           stappen: [{ titel: "Lijkt op voltooid tegenwoordige tijd", tekst: "Passé composé = hulpwerkwoord (avoir/être) + voltooid deelwoord." }],
           woorden: [{ woord: "passé composé", uitleg: "letterlijk: samengesteld verleden" }],
@@ -51,9 +51,9 @@ const steps = [
       },
       {
         q: "Welke twee hulpwerkwoorden zijn er voor passé composé?",
-        options: ["avoir + être", "avoir + faire", "être + aller", "manger + parler"],
+        options: ["avoir + être", "avoir + faire", "être + aller", "faire + aller"],
         answer: 0,
-        wrongHints: [null, "Faire is geen hulpwerkwoord voor passé composé.", "Aller is wel een werkwoord met être, maar niet zelf een hulpwerkwoord.", "Dat zijn gewone werkwoorden."],
+        wrongHints: [null, "Faire is geen hulpwerkwoord voor passé composé.", "Aller is wel een werkwoord met être, maar niet zelf een hulpwerkwoord.", "Faire en aller zijn gewone werkwoorden; aller is zelf een être-werkwoord. Welke twee helpen bij de passé composé?"],
         uitlegPad: {
           stappen: [{ titel: "Avoir of être", tekst: "Hulpwerkwoord = avoir (hebben) OF être (zijn)." }],
           woorden: [{ woord: "hulpwerkwoord", uitleg: "= 'auxiliaire'" }],
@@ -88,7 +88,7 @@ const steps = [
         q: "Wat is het participe passé van **manger**?",
         options: ["mangé", "manger", "mangi", "mangu"],
         answer: 0,
-        wrongHints: [null, "Dat is de infinitief, niet p.p.", "Verkeerde uitgang — -i hoort bij -ir-werkwoorden.", "Verkeerde uitgang."],
+        wrongHints: [null, "Dat is de infinitief, niet p.p.", "Verkeerde uitgang — -i hoort bij -ir-werkwoorden.", "-u hoort bij -re-werkwoorden zoals vendre (vendu). Op welke letters eindigt manger?"],
         uitlegPad: {
           stappen: [{ titel: "-er → -é", tekst: "manger → vervang -er door -é: mangé." }],
           woorden: [{ woord: "groep 1", uitleg: "-er werkwoorden (meeste)" }],
@@ -102,7 +102,7 @@ const steps = [
         q: "Wat is p.p. van **finir**?",
         options: ["fini", "finu", "finé", "finis"],
         answer: 0,
-        wrongHints: [null, "Verkeerde uitgang — -u hoort bij -re-werkwoorden.", "-é is voor -er.", "Tegenwoordige tijd-vorm."],
+        wrongHints: [null, "Verkeerde uitgang — -u hoort bij -re-werkwoorden.", "-é is voor -er.", "Finis is de présent: je finis, tu finis. Welke vorm komt na j'ai?"],
         uitlegPad: {
           stappen: [{ titel: "-ir → -i", tekst: "finir → fini." }],
           woorden: [{ woord: "groep 2", uitleg: "regelmatige -ir werkwoorden" }],
@@ -149,7 +149,7 @@ const steps = [
         q: "Hoe zeg je \"Ik heb gegeten\" in het Frans?",
         options: ["J'ai mangé", "Je mange", "Je mangé", "J'avoir mangé"],
         answer: 0,
-        wrongHints: [null, "Dat is présent (ik eet).", "Mist het hulpwerkwoord.", "Avoir moet vervoegd zijn (j'ai)."],
+        wrongHints: [null, "Dat is présent (ik eet).", "Mangé kan niet alleen staan. Wat moet er tussen je en mangé?", "Avoir moet vervoegd zijn (j'ai)."],
         uitlegPad: {
           stappen: [{ titel: "j'ai + mangé", tekst: "Ik heb gegeten = J'ai mangé. Hulpww + p.p." }],
           woorden: [{ woord: "j'ai", uitleg: "= je ai, samengetrokken" }],
@@ -177,9 +177,9 @@ const steps = [
     checks: [
       {
         q: "\"Hij heeft de film gezien.\" Welk hulpwerkwoord?",
-        options: ["avoir → il a vu", "être → il est vu", "faire → il a fait", "Geen hulpwerkwoord"],
+        options: ["avoir → il a vu", "être → il est vu", "faire → il a fait", "aller → il va voir"],
         answer: 0,
-        wrongHints: [null, "Voir gaat met avoir.", "Faire is geen hulpwerkwoord.", "Passé composé heeft altijd hulpwerkwoord."],
+        wrongHints: [null, "Voir gaat met avoir.", "Il a fait betekent 'hij heeft gedaan', niet 'gezien'. En welk hulpwerkwoord staat er eigenlijk in il a fait?", "Il va voir betekent 'hij gaat zien': dat is toekomst. Welk hulpwerkwoord maakt 'heeft gezien'?"],
         uitlegPad: {
           stappen: [{ titel: "Voir → avoir", tekst: "Voir is geen DR & MRS-werkwoord → avoir. Il a vu." }],
           woorden: [{ woord: "voir", uitleg: "zien, p.p. = vu" }],
@@ -193,7 +193,7 @@ const steps = [
         q: "\"Wij hebben Parijs bezocht.\"",
         options: ["Nous avons visité Paris", "Nous sommes visité Paris", "Nous visitons Paris", "Nous a visité Paris"],
         answer: 0,
-        wrongHints: [null, "Visiter gaat met avoir, niet être.", "Dat is présent.", "Vervoeging klopt niet (a is voor il/elle)."],
+        wrongHints: [null, "Visiter gaat met avoir, niet être.", "Nous visitons is de présent (wij bezoeken), niet de voltooide tijd.", "Vervoeging klopt niet (a is voor il/elle)."],
         uitlegPad: {
           stappen: [{ titel: "Visiter → avoir", tekst: "Nous avons visité Paris. Visiter heeft object → avoir." }],
           woorden: [{ woord: "visiter", uitleg: "bezoeken, p.p. visité" }],
@@ -227,7 +227,7 @@ const steps = [
           "Je ne pas ai mangé",
         ],
         answer: 0,
-        wrongHints: [null, "Ne... pas hoort om het hulpwerkwoord; 'ne' niet weglaten.", "'pas' staat tussen avoir en p.p., niet erna.", "Verkeerde volgorde."],
+        wrongHints: [null, "Ne... pas hoort om het hulpwerkwoord; 'ne' niet weglaten.", "'pas' staat tussen avoir en p.p., niet erna.", "Ne en pas staan om het vervoegde hulpwerkwoord heen. Waar staat ai hier?"],
         uitlegPad: {
           stappen: [{ titel: "ne + hulpww + pas + p.p.", tekst: "Je n'ai pas mangé. Ne en pas rond avoir." }],
           woorden: [{ woord: "ne ... pas", uitleg: "ontkenning, omsluit hulpww" }],
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "\"Heb jij de film gezien?\" (informeel)",
-        options: ["Tu as vu le film?", "Tu vu le film?", "As tu vu le film?", "Tu es vu le film?"],
+        options: ["Tu as vu le film?", "Tu vu le film?", "Tu as voir le film?", "Tu es vu le film?"],
         answer: 0,
-        wrongHints: [null, "Mist hulpwerkwoord.", "Inversie heeft een streepje: As-tu.", "Voir gaat met avoir, niet être."],
+        wrongHints: [null, "Vu kan niet alleen staan. Wat moet er tussen tu en vu?", "Na het hulpwerkwoord komt het voltooid deelwoord, niet het hele werkwoord. Hoe luidt dat van voir?", "Voir hoort niet bij het rijtje werkwoorden met être. Welk hulpwerkwoord krijgt het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Vraagteken aan eind", tekst: "Informele vraag: Tu as vu le film? — gewone volgorde + ?" }],
           woorden: [{ woord: "informeel", uitleg: "spreektaal — geen inversie" }],
@@ -274,7 +274,7 @@ const steps = [
         q: "Hoe vervoeg je **être** in 'jullie zijn'?",
         options: ["vous êtes", "vous est", "vous sommes", "vous sont"],
         answer: 0,
-        wrongHints: [null, "Est = il/elle.", "Sommes = nous.", "Sont = ils/elles."],
+        wrongHints: [null, "Est hoort bij il/elle, niet bij vous.", "Sommes hoort bij nous, niet bij vous.", "Sont hoort bij ils/elles, niet bij vous."],
         uitlegPad: {
           stappen: [{ titel: "vous êtes", tekst: "Vervoeging être: vous êtes (jullie zijn)." }],
           woorden: [{ woord: "être", uitleg: "je suis, tu es, il est, nous sommes, vous êtes, ils sont" }],
@@ -320,7 +320,7 @@ const steps = [
         q: "\"Wij zijn vertrokken\" — partir met...?",
         options: ["être → nous sommes partis", "avoir → nous avons parti", "être → nous êtes partis", "avoir → nous sommes parti"],
         answer: 0,
-        wrongHints: [null, "Partir = être-werkwoord.", "Êtes is voor 'vous', niet 'nous'.", "Sommes hoort bij être, niet bij avoir — en bij nous komt er nog een -s achter het p.p."],
+        wrongHints: [null, "Partir is een être-werkwoord, dus avoir past hier niet.", "Êtes is voor 'vous', niet 'nous'.", "Sommes hoort bij être, niet bij avoir — en bij nous komt er nog een -s achter het p.p."],
         uitlegPad: {
           stappen: [{ titel: "Nous sommes partis", tekst: "Partir + être. Nous sommes + parti + s (mv)." }],
           woorden: [{ woord: "p.p. aanpassen", uitleg: "+s bij meervoud" }],
@@ -334,7 +334,7 @@ const steps = [
         q: "\"Hij is gevallen\" — tomber met...?",
         options: ["être → il est tombé", "avoir → il a tombé", "être → il es tombé", "avoir → il est tombé"],
         answer: 0,
-        wrongHints: [null, "Tomber = être-werkwoord.", "Es is voor 'tu', niet 'il'.", "Mengsel — het hulpwerkwoord en de vorm passen niet bij elkaar."],
+        wrongHints: [null, "Tomber is een être-werkwoord, dus avoir past hier niet.", "Es is voor 'tu', niet 'il'.", "Mengsel — het hulpwerkwoord en de vorm passen niet bij elkaar."],
         uitlegPad: {
           stappen: [{ titel: "Il est tombé", tekst: "Tomber = être-werkwoord (vallen = beweging)." }],
           woorden: [{ woord: "tomber", uitleg: "vallen, p.p. = tombé" }],
@@ -409,9 +409,9 @@ const steps = [
     checks: [
       {
         q: "Welk hulpwerkwoord bij **manger**?",
-        options: ["avoir", "être", "Beide kunnen", "Geen"],
+        options: ["avoir", "être", "Beide kunnen", "faire"],
         answer: 0,
-        wrongHints: [null, "Être hoort bij een klein groepje werkwoorden van beweging of verandering (aller, venir, naître…). Hoort manger daarbij?", "Een werkwoord heeft in de passé composé meestal één vast hulpwerkwoord. Welke groep is de grote standaardgroep?", "Passé composé heeft hulpwerkwoord."],
+        wrongHints: [null, "Être hoort bij een klein groepje werkwoorden van beweging of verandering (aller, venir, naître…). Hoort manger daarbij?", "Een werkwoord heeft in de passé composé meestal één vast hulpwerkwoord. Welke groep is de grote standaardgroep?", "Faire is een gewoon werkwoord, geen hulpwerkwoord van de passé composé. Welke twee hulpwerkwoorden ken je?"],
         uitlegPad: {
           stappen: [{ titel: "Manger → avoir", tekst: "Eten = activiteit met object → avoir." }],
           woorden: [{ woord: "lijdend voorwerp", uitleg: "wat eet je? = object" }],
@@ -423,9 +423,9 @@ const steps = [
       },
       {
         q: "Welk hulpwerkwoord bij **arriver**?",
-        options: ["être", "avoir", "Beide kunnen", "Geen"],
+        options: ["être", "avoir", "Beide kunnen", "faire"],
         answer: 0,
-        wrongHints: [null, "Arriver = beweging → être.", "Arriver hoort bij DR & MRS VANDERTRAMPP.", "Passé composé heeft altijd een hulpwerkwoord."],
+        wrongHints: [null, "Avoir is voor de meeste werkwoorden. Hoort arriver misschien bij de uitzonderingen (DR & MRS VANDERTRAMPP)?", "Een werkwoord kiest in de passé composé meestal één vast hulpwerkwoord. Welk hoort bij arriver?", "Faire is geen hulpwerkwoord van de passé composé. Welke twee hulpwerkwoorden ken je?"],
         uitlegPad: {
           stappen: [{ titel: "Arriver → être", tekst: "Aankomen = beweging → être. Je suis arrivé(e)." }],
           woorden: [{ woord: "arriver", uitleg: "aankomen, p.p. arrivé" }],
@@ -454,7 +454,7 @@ const steps = [
         q: "\"Wij hebben een film gezien.\"",
         options: ["Nous avons vu un film", "Nous sommes vu un film", "Nous voyons un film", "Nous avez vu un film"],
         answer: 0,
-        wrongHints: [null, "Voir gaat met avoir, niet être.", "Dat is présent.", "Avez = vous, niet nous."],
+        wrongHints: [null, "Voir gaat met avoir, niet être.", "Nous voyons is de présent (wij zien), niet de voltooide tijd.", "Avez = vous, niet nous."],
         uitlegPad: {
           stappen: [{ titel: "Nous avons vu un film", tekst: "Voir + avoir + p.p. vu." }],
           woorden: [{ woord: "vu", uitleg: "onregelmatig p.p. van voir" }],
@@ -468,7 +468,7 @@ const steps = [
         q: "\"Sophie is geboren in 2010.\"",
         options: ["Sophie est née en 2010", "Sophie a né en 2010", "Sophie est né en 2010", "Sophie a née en 2010"],
         answer: 0,
-        wrongHints: [null, "Naître gaat met être, niet avoir.", "Sophie is vrouwelijk → née (+e).", "Verkeerde combinatie."],
+        wrongHints: [null, "Naître gaat met être, niet avoir.", "Sophie is vrouwelijk → née (+e).", "Naître gaat met être. Hoort a bij être of bij avoir?"],
         uitlegPad: {
           stappen: [{ titel: "Naître → être + vrouw +e", tekst: "Sophie est née en 2010 (vrouw → née)." }],
           woorden: [{ woord: "naître", uitleg: "geboren worden, p.p. = né" }],
@@ -482,7 +482,7 @@ const steps = [
         q: "\"Ze (vrouwelijk meervoud) zijn aangekomen.\"",
         options: ["Elles sont arrivées", "Elles ont arrivé", "Elles sont arrivé", "Elles est arrivées"],
         answer: 0,
-        wrongHints: [null, "Arriver = être.", "Vrouwelijk mv → +es bij p.p.", "Sont, niet est, voor elles."],
+        wrongHints: [null, "Arriver is een être-werkwoord, dus ont (van avoir) past hier niet.", "Vrouwelijk mv → +es bij p.p.", "Sont, niet est, voor elles."],
         uitlegPad: {
           stappen: [{ titel: "Elles sont arrivées", tekst: "Vrouwelijk mv → +es. Onderwerp elles → sont." }],
           woorden: [{ woord: "arrivées", uitleg: "p.p. vrouwelijk mv" }],
@@ -496,7 +496,7 @@ const steps = [
         q: "\"Ik heb niet begrepen.\"",
         options: ["Je n'ai pas compris", "Je n'ai compris pas", "Je ne pas ai compris", "Je suis pas compris"],
         answer: 0,
-        wrongHints: [null, "Pas staat tussen avoir en p.p., niet erna.", "Verkeerde volgorde.", "Comprendre gaat met avoir, niet être."],
+        wrongHints: [null, "Pas staat tussen avoir en p.p., niet erna.", "Ne en pas staan om het vervoegde hulpwerkwoord heen. Waar staat ai hier?", "Comprendre gaat met avoir, niet être."],
         uitlegPad: {
           stappen: [{ titel: "Je n'ai pas compris", tekst: "Comprendre → avoir. Ne ... pas rond ai." }],
           woorden: [{ woord: "compris", uitleg: "onregelmatig p.p. van comprendre" }],
@@ -506,16 +506,16 @@ const steps = [
           niveaus: { basis: "Je n'ai pas compris.", simpeler: "Ontkenning + compris.", nogSimpeler: "n'ai pas compris." },
         },
       },
-      { q: "Welk hulpwerkwoord bij 'aller' (gaan) in passé composé?", options: ["être","avoir","faire","aller"], answer: 0, wrongHints: [null, "Niet — avoir voor meeste, maar 'aller' is être-ww.", "Niet hulpwerkwoord.", "Niet — aller is zelf het werkwoord, geen hulpwerkwoord."] },
-      { q: "Vorm de p.p. van 'manger' (eten)", options: ["mangé","mangi","mangu","mangeait"], answer: 0, wrongHints: [null, "Niet — -ir → -i.", "Niet — -re/-oir → -u.", "Dat is imparfait."] },
-      { q: "Marie est _____ (allé/allée/allés) à Paris.", options: ["allée","allé","allés","alla"], answer: 0, wrongHints: [null, "Niet — Marie is vrouw, e nodig.", "Niet — meervoud.", "Niet — dat is passé simple, geen participe passé."] },
-      { q: "**Passé composé** drukt uit?", options: ["Afgeronde actie in het verleden","Toekomst","Heden","Algemene waarheid"], answer: 0, wrongHints: [null,"Futur.","Présent.","Daarvoor gebruik je het présent."] },
-      { q: "Welk **hulpwerkwoord** gebruiken de meeste Franse werkwoorden in passé composé?", options: ["avoir","être","faire","aller"], answer: 0, wrongHints: [null,"Voor specifieke bewegings-ww.","Geen hulpwerkwoord.","Geen hulpwerkwoord."] },
-      { q: "**P.P. van 'finir'** (eindigen)?", options: ["fini","finé","finu","finit"], answer: 0, wrongHints: [null,"Voor -er-ww.","Voor -re/-oir-ww.","Présent-vorm."] },
-      { q: "**P.P. van 'voir'** (zien) — onregelmatig?", options: ["vu","vé","voyé","voir"], answer: 0, wrongHints: [null,"-er-vorm.","Niet bestaand.","Infinitief."] },
-      { q: "**P.P. van 'être'** zelf?", options: ["été","êté","étu","étri"], answer: 0, wrongHints: [null,"Op de eerste e staat een accent aigu (é), geen dakje (ê).","Niet.","Niet."] },
-      { q: "**Bij être-ww** komt overeenkomst met onderwerp. Welke -e/-s/-es?", options: ["Vrouw +e, meervoud +s, vrouw-mv +es","Geen verandering, net als bij avoir","Altijd +s, ook bij één persoon","Alleen +e, ook bij meervoud"], answer: 0, wrongHints: [null,"Bij être verandert het p.p. wél.","Kijk of het onderwerp enkelvoud is.","Wat gebeurt er bij meerdere personen?"] },
-      { q: "Welke is een **être-werkwoord**?", options: ["partir","manger","parler","finir"], answer: 0, wrongHints: [null,"Niet — manger gaat met avoir.","Niet — parler gaat met avoir.","Niet — finir gaat met avoir."] },
+      { q: "Welk hulpwerkwoord bij 'aller' (gaan) in passé composé?", options: ["être","avoir","faire","aller"], answer: 0, wrongHints: [null, "Avoir geldt voor de meeste werkwoorden. Is aller een gewoon werkwoord, of een werkwoord van beweging?", "Faire is een gewoon werkwoord ('doen'), geen hulpwerkwoord van de passé composé. Welke twee ken je?", "Niet — aller is zelf het werkwoord, geen hulpwerkwoord."] },
+      { q: "Vorm de p.p. van 'manger' (eten)", options: ["mangé","mangi","mangu","mangeait"], answer: 0, wrongHints: [null, "-i hoort bij -ir-werkwoorden zoals finir. Op welke letters eindigt manger?", "-u hoort bij -re-werkwoorden zoals vendre. Op welke letters eindigt manger?", "Mangeait is de imparfait (hij at), geen participe passé."] },
+      { q: "Marie est _____ (allé/allée/allés) à Paris.", options: ["allée","allé","allés","alla"], answer: 0, wrongHints: [null, "Allé hoort bij een man. Is Marie een man of een vrouw?", "Allés is meervoud. Over hoeveel personen gaat het?", "Niet — dat is passé simple, geen participe passé."] },
+      { q: "**Passé composé** drukt uit?", options: ["Afgeronde actie in het verleden","Plan of actie in de toekomst","Wat nu op dit moment gebeurt","Een algemene waarheid of feit"], answer: 0, wrongHints: [null,"Dat doe je met de futur. Welke tijd zit er in het woord 'passé'?","Wat nu gebeurt zeg je met de présent.","Daarvoor gebruik je het présent."] },
+      { q: "Welk **hulpwerkwoord** gebruiken de meeste Franse werkwoorden in passé composé?", options: ["avoir","être","faire","aller"], answer: 0, wrongHints: [null,"Être hoort maar bij een kleine groep werkwoorden, zoals aller en venir. Is dat 'de meeste'?","Faire is een gewoon werkwoord ('doen'). Welke twee hulpwerkwoorden ken je?","Aller is zelf een être-werkwoord, geen hulpwerkwoord. Welke twee hulpwerkwoorden ken je?"] },
+      { q: "**P.P. van 'finir'** (eindigen)?", options: ["fini","finé","finu","finit"], answer: 0, wrongHints: [null,"-é hoort bij -er-werkwoorden zoals manger. Op welke letters eindigt finir?","-u hoort bij -re-werkwoorden zoals vendre. Op welke letters eindigt finir?","Il finit is de présent: hij eindigt. Welke vorm komt na j'ai?"] },
+      { q: "**P.P. van 'voir'** (zien) — onregelmatig?", options: ["vu","vé","voyé","voir"], answer: 0, wrongHints: [null,"-é hoort bij -er-werkwoorden. Is voir een -er-werkwoord?","Voir is onregelmatig; voyé bestaat niet. Wat zeg je in 'j'ai ___ un film'?","Voir is de infinitief, de hele vorm. Welke korte vorm komt na j'ai?"] },
+      { q: "**P.P. van 'être'** zelf?", options: ["été","êté","étu","étri"], answer: 0, wrongHints: [null,"Op de eerste e staat een accent aigu (é), geen dakje (ê).","Een p.p. op -u hoort bij werkwoorden als 'voir' (vu). Is être zo'n werkwoord?","Een p.p. op -i hoort bij -ir-werkwoorden zoals 'finir' (fini). Is être een -ir-werkwoord?"] },
+      { q: "**Bij être-ww** komt overeenkomst met onderwerp. Welke -e/-s/-es?", options: ["Vrouw +e, meervoud +s, vrouw-mv +es","Vrouw +s, meervoud +e, vrouw-mv +es","Vrouw +e, meervoud +es, vrouw-mv +s","Vrouw +e, meervoud +s, vrouw-mv +s"], answer: 0, wrongHints: [null,"Denk aan 'elle est allée' en 'ils sont allés'. Welke letter krijgt een vrouw, welke het meervoud?","Bij 'ils sont allés' komt er één letter bij. En bij 'elles sont allées'?","Bij 'elles' (vrouwen, meervoud) tellen beide regels mee. Welke letters krijg je dan?"] },
+      { q: "Welke is een **être-werkwoord**?", options: ["partir","manger","parler","finir"], answer: 0, wrongHints: [null,"Manger gaat met avoir: j'ai mangé.","Parler gaat met avoir: j'ai parlé.","Finir gaat met avoir: j'ai fini."] },
       { q: "**Open vraag**: vorm de p.p. van 'parler' (spreken).", kind: "open", acceptedAnswers: ["parlé"], explanation: "-er-ww → vervang -er door -é: parlé." },
       { q: "**Open vraag**: vul aan: 'Hier, j'ai ___ un livre.' (acheter — kopen).", kind: "open", acceptedAnswers: ["acheté"], explanation: "acheter → p.p. = acheté." },
     ],

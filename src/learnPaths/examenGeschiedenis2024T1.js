@@ -117,12 +117,12 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "EGKS = Europese Gemeenschap voor Kolen en Staal — opgericht in 1951, bestond in 1947 nog niet.",
-          "Idem — EGKS bestond in 1947 niet.",
-          "NAVO opgericht in 1949 — bestond in 1947 nog niet.",
+          "EGKS = Europese Gemeenschap voor Kolen en Staal. Bekijk beide partijen in deze optie: bestonden ze in 1947 allebei al? Zoek op wanneer ze zijn opgericht.",
+          "Kijk naar het jaartal 1947. Bestonden beide partijen in deze optie toen al?",
+          "Kijk naar het jaartal 1947. Wanneer is elke partij in deze optie opgericht?",
           null,
         ],
-        explanation: "In 1947 bestonden alleen de VN (sinds 1945) en de VS als grote internationale actoren. EGKS (1951) en NAVO (1949) kwamen later. De Verenigde Staten dreigden zelfs met het stoppen van Marshallhulp aan Nederland als de strijd niet zou eindigen. Dit dwong NL uiteindelijk tot de soevereiniteitsoverdracht (1949).",
+        explanation: "Van de vier genoemde partijen bestonden in 1947 alleen de VN (sinds 1945) en de VS. EGKS (1951) en NAVO (1949) kwamen later. De Verenigde Staten dreigden zelfs met het stoppen van Marshallhulp aan Nederland als de strijd niet zou eindigen. Dit dwong NL uiteindelijk tot de soevereiniteitsoverdracht (1949).",
         examenBron: BRON(33),
         bronLink: PDF_LINK,
         voorkennisKeten: [
@@ -130,7 +130,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Tijdlijn naoorlogse instituties", tekst: "**1945**: VN opgericht.\n**1949**: NAVO opgericht.\n**1951**: EGKS (voorloper EU) opgericht.\n→ In 1947 bestonden alleen VN en VS als grote spelers." },
+            { titel: "Tijdlijn naoorlogse instituties", tekst: "**1945**: VN opgericht.\n**1949**: NAVO opgericht.\n**1951**: EGKS (voorloper EU) opgericht.\n→ Van de genoemde partijen bestonden in 1947 alleen de VN en de VS." },
             { titel: "Politionele acties Indonesië", tekst: "1947 (1e) + 1948 (2e): NL probeerde militair de controle terug te krijgen na Indonesische onafhankelijkheidsverklaring (1945). Internationaal: zwaar veroordeeld, vooral door VN-veiligheidsraad en VS." },
           ],
           woorden: [
@@ -162,8 +162,8 @@ const steps = [
         answer: 3,
         wrongHints: [
           "Capitulatie = je overgeven na een verloren oorlog. NL gaf niet militair-strikt op.",
-          "Democratisering = invoeren democratie. Hier ging het om SOEVEREINITEIT, niet om bestuursvorm.",
-          "Politionele actie = militair ingrijpen (1947+1948). Dit is wat NL DEED vóór de overdracht, niet de overdracht zelf.",
+          "Democratisering = democratie invoeren. Gaat de vraag over hoe Indonesië bestuurd werd, of over wíé het bestuur kreeg?",
+          "Politionele actie = militair ingrijpen (1947 en 1948). Is een militaire actie hetzelfde als officieel het bestuur overgeven?",
           null,
         ],
         explanation: "**Soevereiniteitsoverdracht** = officiële handeling op 27 december 1949: NL gaf het bestuur over Nederlands-Indië over aan de Republiek Indonesië. Indonesië werd vanaf dat moment internationaal erkend als zelfstandige staat. Einde van de koloniale periode.",

@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Wat is een **bit**?",
-        options: ["Eén 0 of 1", "8 bytes", "Eén teken tekst", "Een soort bestand"],
+        options: ["Eén 0 of 1", "8 bytes", "Eén teken tekst", "Eén cijfer van 0 tot 9"],
         answer: 0,
-        wrongHints: [null, "Andersom: een byte bestaat juist uit bits.", "Een teken kost meestal 1 of meer bytes, geen 1 bit.", "Te groot — een bit is de kleinste eenheid."],
+        wrongHints: [null, "Andersom: een byte bestaat juist uit bits.", "Een teken kost meestal 1 of meer bytes, geen 1 bit.", "Dat is een decimaal cijfer. Hoeveel verschillende waarden kan een bit hebben?"],
         uitlegPad: {
           stappen: [{ titel: "De kleinste eenheid", tekst: "Een **bit** (binary digit) is de allerkleinste eenheid: één **0 of 1** (stroom uit of aan). 8 bits samen = 1 **byte**. Alle data is uiteindelijk een lange rij bits." }],
           niveaus: { basis: "Een 0 of 1.", simpeler: "Bit = 0 of 1", nogSimpeler: "A." },
@@ -69,9 +69,9 @@ const steps = [
     checks: [
       {
         q: "Welke waarde heeft het hex-teken **A**?",
-        options: ["10", "1", "11", "16"],
+        options: ["10", "15", "11", "16"],
         answer: 0,
-        wrongHints: [null, "A is geen 1 — het komt ná de 9.", "Dat is B.", "16 is het grondtal; A zelf is kleiner."],
+        wrongHints: [null, "15 hoort bij F, het laatste hex-teken. Waar staat A in de rij?", "11 hoort bij het hex-teken B, niet bij A.", "16 is het grondtal; A zelf is kleiner."],
         uitlegPad: {
           stappen: [{ titel: "Na de 9 komen letters", tekst: "Hexadecimaal heeft 16 cijfers. Na 0-9 ga je verder met letters: **A = 10**, B = 11, C = 12, D = 13, E = 14, F = 15. Zo passen er 16 waarden in één teken." }],
           niveaus: { basis: "A = 10.", simpeler: "Hex A = 10", nogSimpeler: "A." },
@@ -99,12 +99,12 @@ const steps = [
       },
       {
         q: "Hoeveel kleuren kun je maken met **24-bit RGB** (1 byte per kanaal)?",
-        options: ["Ongeveer 16,7 miljoen", "256", "24", "1024"],
+        options: ["Ongeveer 16,7 miljoen", "Precies 256 kleuren", "Ongeveer 65 duizend", "Precies 768 kleuren"],
         answer: 0,
-        wrongHints: [null, "256 is het aantal waarden per kanaal, niet het totaal.", "24 is het aantal bits, niet het aantal kleuren.", "Veel te weinig — denk aan 256 × 256 × 256."],
+        wrongHints: [null, "256 is het aantal waarden per kanaal, niet het totaal.", "Dat krijg je met 16 bits. Hoeveel bits heb je hier?", "Dat is 256 + 256 + 256 — moet je de kanalen optellen of vermenigvuldigen?"],
         uitlegPad: {
           stappen: [{ titel: "256 × 256 × 256", tekst: "Elk kanaal (R, G, B) heeft 256 waarden. Alle combinaties: 256 × 256 × 256 = **16.777.216** ≈ **16,7 miljoen** kleuren. Daarom heet 24-bit kleur ook wel 'truecolor'." }],
-          niveaus: { basis: "256³ ≈ 16,7 mln.", simpeler: "24-bit = ~16,7 miljoen kleuren", nogSimpeler: "A." },
+          niveaus: { basis: "256³ ≈ 16,7 mln.", simpeler: "24-bit = ~16,7 miljoen kleuren", nogSimpeler: "Ongeveer 16,7 miljoen." },
         },
       },
     ],
@@ -118,12 +118,12 @@ const steps = [
     checks: [
       {
         q: "Een computer slaat tekst eigenlijk op als…",
-        options: ["Getallen volgens een afgesproken tekenset", "Foto's van letters", "Klanken", "Niets — letters zijn al digitaal"],
+        options: ["Getallen volgens een afgesproken tekenset", "Kleine plaatjes van iedere losse letter", "Woorden uit een ingebouwd woordenboek", "Morsecode van punten en strepen"],
         answer: 0,
-        wrongHints: [null, "Nee, geen plaatjes — er zit een getalcode achter.", "Dat is geluid, niet tekst.", "Een letter is geen 'gegeven' op zich — er is een code nodig."],
+        wrongHints: [null, "Een plaatje per letter kost veel ruimte, en hoe zoek je dan een woord? Wat slaat de computer dan wél op?", "Je kunt ook losse letters en nieuwe woorden typen. Hoe zou dat met een woordenboek gaan?", "Morse is een oude code voor telegrafie. Welke afspraak gebruikt een computer voor letters?"],
         uitlegPad: {
           stappen: [{ titel: "Teken → getal → bits", tekst: "Een tekenset (zoals ASCII of Unicode) spreekt af welk **getal** bij welk teken hoort. Dat getal wordt als bits opgeslagen. Zo wordt elke letter uiteindelijk een rij nullen en enen." }],
-          niveaus: { basis: "Getallen via een tekenset.", simpeler: "Tekst = getallen (tekenset)", nogSimpeler: "A." },
+          niveaus: { basis: "Getallen via een tekenset.", simpeler: "Tekst = getallen (tekenset)", nogSimpeler: "Getallen volgens een afgesproken tekenset." },
         },
       },
       {
@@ -138,19 +138,19 @@ const steps = [
       },
       {
         q: "Waarvoor heb je **Unicode/UTF-8** nodig in plaats van ASCII?",
-        options: ["Voor alle talen, symbolen én emoji", "Om sneller te rekenen", "Om bestanden te verkleinen", "Alleen voor hoofdletters"],
+        options: ["Voor alle talen, symbolen én emoji", "Voor opmaak zoals vet en cursief", "Voor cijfers en rekentekens", "Voor extra hoofdletters en leestekens"],
         answer: 0,
-        wrongHints: [null, "Het gaat om méér tekens, niet om rekensnelheid.", "Compressie is iets anders.", "ASCII kon hoofdletters allang aan."],
+        wrongHints: [null, "Opmaak regelt je tekstverwerker. Waar gaat een tekenset over?", "De cijfers 0-9 en tekens als + en - zitten al in ASCII.", "ASCII kon hoofdletters en leestekens allang aan."],
         uitlegPad: {
           stappen: [{ titel: "128 tekens is te weinig", tekst: "ASCII heeft maar 128 tekens — geen é, geen Chinees, geen emoji. **Unicode** geeft élk teken ter wereld een nummer, en **UTF-8** slaat dat op (1-4 bytes per teken). Daarom kun je 🙂 en 'café' gewoon typen." }],
-          niveaus: { basis: "Alle talen + emoji.", simpeler: "Unicode = alles + emoji", nogSimpeler: "A." },
+          niveaus: { basis: "Alle talen + emoji.", simpeler: "Unicode = alles + emoji", nogSimpeler: "Voor alle talen, symbolen én emoji." },
         },
       },
       {
         q: "Hoeveel **bytes** kost een gewoon ASCII-teken (bv. 'k') in **UTF-8**?",
-        options: ["1 byte", "4 bytes", "Altijd 2 bytes", "Een halve byte"],
+        options: ["1 byte", "4 bytes", "Altijd 2 bytes", "8 bytes"],
         answer: 0,
-        wrongHints: [null, "4 bytes is voor zware tekens zoals veel emoji.", "UTF-8 is juist variabel, niet altijd 2.", "Minder dan een byte kan een teken niet zijn."],
+        wrongHints: [null, "4 bytes is voor zware tekens zoals veel emoji.", "UTF-8 is juist variabel, niet altijd 2.", "8 bytes is 64 bits: veel te veel voor één simpele letter. Hoeveel bits heeft een ASCII-teken nodig?"],
         uitlegPad: {
           stappen: [{ titel: "UTF-8 is achterwaarts compatibel", tekst: "UTF-8 gebruikt **1 byte** voor de oude ASCII-tekens (a-z, 0-9, leestekens). Speciale tekens kosten meer: é → 2 bytes, veel emoji → 4 bytes. Dat 'gewone tekst = 1 byte' maakt UTF-8 compatibel met ASCII." }],
           niveaus: { basis: "1 byte.", simpeler: "ASCII-teken in UTF-8 = 1 byte", nogSimpeler: "A." },
@@ -167,9 +167,9 @@ const steps = [
     checks: [
       {
         q: "Waaruit bestaat een digitale **foto** (bitmap)?",
-        options: ["Pixels met elk een kleur", "Lijnen en wiskundige vormen", "Losse letters", "Geluidsgolven"],
+        options: ["Pixels met elk een kleur", "Lijnen en wiskundige vormen", "Tekencodes zoals in ASCII", "Losse beelden per seconde"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een vector-afbeelding, niet een bitmap.", "Letters horen bij tekst, niet bij een foto.", "Golven horen bij geluid."],
+        wrongHints: [null, "Dat is juist een vector-afbeelding, niet een bitmap.", "Zo wordt tekst opgeslagen. Hoe is een foto opgebouwd als je heel ver inzoomt?", "Dat is video: veel beelden na elkaar. Waaruit bestaat één zo'n beeld?"],
         uitlegPad: {
           stappen: [{ titel: "Raster van beeldpunten", tekst: "Een bitmap/rasterfoto is een raster van **pixels**, elk met een eigen kleur (vaak 24-bit RGB). Hoe meer pixels (hogere **resolutie**, bv. 1920×1080), hoe scherper — maar ook hoe groter het bestand." }],
           niveaus: { basis: "Pixels met kleur.", simpeler: "Foto = pixels", nogSimpeler: "A." },
@@ -177,19 +177,19 @@ const steps = [
       },
       {
         q: "Wat betekent een hogere **samplefrequentie** (Hz) bij geluid?",
-        options: ["Vaker meten per seconde → beter geluid", "Hogere toonhoogte", "Een korter bestand", "Minder kleuren"],
+        options: ["Vaker meten per seconde → beter geluid", "Hogere tonen → helderder geluid", "Meer bits per meting → preciezer geluid", "Harder afspelen → voller geluid"],
         answer: 0,
-        wrongHints: [null, "Het gaat om méétmomenten, niet direct om de toon.", "Hogere kwaliteit maakt het bestand juist groter.", "Kleuren horen bij beeld, niet bij geluid."],
+        wrongHints: [null, "De frequentie van een tóón is iets anders dan de frequentie bij het opnemen.", "Dat is de bitdiepte, een andere instelling.", "Volume heeft niets met de opname-instelling te maken."],
         uitlegPad: {
           stappen: [{ titel: "Sampling", tekst: "Bij **sampling** meet de computer de geluidsgolf heel vaak per seconde. Meer metingen (hogere **samplefrequentie**, in Hz; cd = 44.100 Hz) = nauwkeurigere weergave = beter geluid, maar een groter bestand." }],
-          niveaus: { basis: "Vaker meten = beter geluid.", simpeler: "Meer Hz = beter geluid", nogSimpeler: "A." },
+          niveaus: { basis: "Vaker meten = beter geluid.", simpeler: "Meer Hz = beter geluid", nogSimpeler: "Vaker meten per seconde → beter geluid." },
         },
       },
       {
         q: "Welk formaat gebruikt **lossy** (met verlies) compressie?",
-        options: ["JPG", "PNG", "ZIP", "Tekstbestand (.txt)"],
+        options: ["JPG", "PNG", "ZIP", "WAV"],
         answer: 0,
-        wrongHints: [null, "PNG is juist verliesvrij.", "ZIP geeft de data exact terug — verliesvrij.", "Platte tekst wordt niet 'lossy' opgeslagen."],
+        wrongHints: [null, "PNG is juist verliesvrij.", "ZIP geeft de data exact terug — verliesvrij.", "WAV slaat geluid onbewerkt op, zonder iets weg te gooien."],
         uitlegPad: {
           stappen: [{ titel: "JPG gooit details weg", tekst: "**JPG** (foto's) en MP3 (muziek) zijn **lossy**: ze gooien details weg die je nauwelijks merkt → veel kleiner bestand, maar je krijgt het origineel **niet exact** terug. **PNG** en **ZIP** zijn **lossless**: exact terug, maar minder klein." }],
           niveaus: { basis: "JPG = lossy.", simpeler: "Lossy = JPG", nogSimpeler: "JPG gooit details weg." },
@@ -197,9 +197,9 @@ const steps = [
       },
       {
         q: "Je wilt een schermafbeelding met scherpe tekst opslaan **zonder kwaliteitsverlies**. Wat kies je?",
-        options: ["PNG (lossless)", "JPG (lossy)", "MP3", "Een lagere resolutie"],
+        options: ["Opslaan als PNG", "Opslaan als JPG", "Opslaan als JPG op 100%", "Opslaan op lagere resolutie"],
         answer: 0,
-        wrongHints: [null, "JPG maakt tekstranden juist wazig (lossy-artefacten).", "MP3 is voor geluid, niet voor beeld.", "Resolutie verlagen kost juist kwaliteit."],
+        wrongHints: [null, "JPG maakt tekstranden juist wazig (lossy-artefacten).", "Ook op de hoogste stand gooit JPG een beetje informatie weg.", "Resolutie verlagen kost juist kwaliteit."],
         uitlegPad: {
           stappen: [{ titel: "Scherpe randen = lossless", tekst: "Voor schermafbeeldingen, logo's en tekst kies je **PNG** (lossless): scherpe randen blijven scherp, want de data komt exact terug. JPG is bedoeld voor foto's en maakt scherpe tekstranden korrelig/wazig." }],
           niveaus: { basis: "PNG = verliesvrij.", simpeler: "Tekst scherp houden = PNG", nogSimpeler: "A." },

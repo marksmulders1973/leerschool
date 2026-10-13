@@ -24,12 +24,12 @@ const steps = [
         q: "**Globalisering** heeft welke 4 dimensies?",
         options: [
           "Economisch, cultureel, politiek, technologisch",
-          "Lokaal, regionaal, nationaal, mondiaal",
-          "Landbouw, industrie, diensten, handel",
-          "Sport, kunst, reizen, werk"
+          "Economisch, sociaal, ecologisch, demografisch",
+          "Politiek, militair, sociaal, religieus",
+          "Technologisch, ecologisch, militair, demografisch"
         ],
         answer: 0,
-        wrongHints: [null, "Dat zijn schaalniveaus, geen dimensies van globalisering.", "Dat zijn economische sectoren — maar globalisering is meer dan economie alleen.", "Dat zijn losse voorbeelden, geen hoofdcategorieën."],
+        wrongHints: [null, "Sociaal, ecologisch en economisch zijn de drie pijlers van duurzaamheid. Welke vier dimensies noemde de les bij globalisering? Denk aan Hollywood en K-pop.", "Legers en religie verbinden landen soms, maar de les noemde ze niet als dimensie. Onder welke dimensie vallen internet en containerschepen?", "Bevolking en milieu veranderen door globalisering, maar het zijn geen dimensies uit de les. Onder welke dimensie vallen vrije handel en multinationals?"],
         uitlegPad: {
           stappen: [{ titel: "Holistische analyse", tekst: "Globalisering is breed verschijnsel met economische (handel, MNCs), culturele (Hollywood, taal), politieke (VN, EU) en technologische (internet, containers) facetten. Niet één daarvan verklaart alles." }],
           niveaus: { basis: "Eco/cult/pol/tech.", simpeler: "4 hoofdgebieden.", nogSimpeler: "4 dim" },
@@ -44,7 +44,7 @@ const steps = [
           "Stoomschip"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — 19e eeuw.", "Niet — veel later (jaren 1990).", "Niet — 19e eeuw."],
+        wrongHints: [null, "De telegraaf versnelde vanaf de 19e eeuw vooral berichten. Werden goederen daardoor goedkoper om te vervoeren?", "Internet kwam pas in de jaren 1990 op. Past dat bij de jaren 1960 uit de vraag?", "Stoomschepen voeren al in de 19e eeuw. Welke vernieuwing uit de jaren 1960 maakte het overladen van vracht veel sneller?"],
         uitlegPad: {
           stappen: [
             { titel: "Standaard maakt alles efficiënt", tekst: "Containers met standaard formaat (20-ft, 40-ft) → laden/lossen schip in uren ipv weken → kosten 90% omlaag → vandaag bijna alles in containers vervoerd. Maakte ook de exportgroei van China mogelijk." },
@@ -56,12 +56,12 @@ const steps = [
         q: "Extreme armoede wereld is sinds 1990:",
         options: [
           "Ruim gehalveerd",
-          "Verdubbeld",
+          "Licht gedaald",
           "Gelijk gebleven",
-          "Compleet verdwenen"
+          "Licht gestegen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — gedaald.", "Helaas nog niet."],
+        wrongHints: [null, "Denk aan China en India: honderden miljoenen mensen kwamen sinds 1990 uit extreme armoede. Is dat maar een kleine daling?", "Welke twee grote landen trokken sinds 1990 honderden miljoenen mensen uit armoede? Bleef het aantal dan gelijk?", "De wereldbevolking groeide flink. Groeide het aantal extreem armen mee? Denk aan de groei van China."],
         uitlegPad: {
           stappen: [
             { titel: "Grootste daling ooit", tekst: "China + India trokken honderden miljoenen uit armoede via industrialisatie + globalisering. Sub-Sahara Afrika daling minder snel. Wereldbank-cijfers (<$2,15/dag): 36% (1990) → ~9% (2024). Eén positieve kant van globalisering." },
@@ -74,12 +74,12 @@ const steps = [
         q: "Welke is een **politiek** aspect van globalisering?",
         options: [
           "Internationale organisaties",
-          "Hollywood-films",
-          "iPhone-productie keten",
-          "Internet"
+          "Hollywood-films in bioscopen wereldwijd",
+          "De productieketen van de iPhone",
+          "Internet en sociale media"
         ],
         answer: 0,
-        wrongHints: [null, "Cultureel.", "Economisch.", "Technologisch."],
+        wrongHints: [null, "Films verspreiden verhalen en smaak. Bij welke dimensie hoort dat?", "Een productieketen gaat over geld en goederen. Is dat politiek?", "Internet is een uitvinding. Bij welke dimensie hoort techniek?"],
         uitlegPad: {
           stappen: [{ titel: "Bestuur op wereldschaal", tekst: "VN (193 landen) lost conflicten op. WHO coördineert gezondheid. EU = supranationaal bestuur. Spanning: nationale soevereiniteit vs wereldwijde aanpak (klimaat vereist samenwerking, maar landen kiezen vaak eigen belang)." }],
           niveaus: { basis: "Politiek = organisaties.", simpeler: "VN, EU, NAVO.", nogSimpeler: "VN" },
@@ -88,13 +88,13 @@ const steps = [
       {
         q: "**Brexit** (2016) past bij welke trend?",
         options: [
-          "De-globalisering / anti-globalisering",
+          "De-globalisering",
           "Hyperglobalisering",
-          "Politieke integratie",
-          "Vrije handel"
+          "Re-shoring",
+          "Near-shoring"
         ],
         answer: 0,
-        wrongHints: [null, "Hyperglobalisering betekent grenzen nóg verder openstellen — deed het VK dat met Brexit, of juist het omgekeerde?", "Politieke integratie betekent dichter naar elkaar toe groeien — stapte het VK naar de EU toe, of eruit?", "Vrije handel maakt grenzen juist makkelijker — leverde het verlaten van de EU minder of méér handelsdrempels op?"],
+        wrongHints: [null, "Hyperglobalisering betekent grenzen nóg verder openstellen — deed het VK dat met Brexit, of juist het omgekeerde?", "Re-shoring is een keuze van bedrijven om fabrieken terug te halen. Brexit was een politiek besluit van een heel land: bij welke bredere trend past dat?", "Near-shoring is een bedrijf dat dichterbij gaat produceren. Was Brexit een besluit van een bedrijf of van een land?"],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar nationaal", tekst: "VK verliet EU → terug naar zelfstandige handel/regels. Symbolisch voor wereldwijde anti-globalisering-beweging: Trump (VS), Brexit (UK), Le Pen (FR), Modi-protectionisme (India). Reactie op verliezers van globalisering + verlies nationale identiteit." },
@@ -114,13 +114,13 @@ const steps = [
       {
         q: "Wat is **comparatief voordeel** (Ricardo)?",
         options: [
-          "Elk land specialiseert in wat het relatief efficiënter produceert",
-          "Het sterkste land wint altijd de handel",
-          "Landen hoeven dan geen handel meer te drijven",
-          "Elk land produceert zelf alles wat het nodig heeft"
+          "Elk land specialiseert zich in wat het relatief efficiënter produceert",
+          "Elk land specialiseert zich in wat het goedkoper maakt dan andere landen",
+          "Landen beschermen hun eigen industrie met invoerheffingen",
+          "Elk land maakt zelf zo veel mogelijk van wat het nodig heeft"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — beide kunnen winnen.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Dat is absoluut voordeel (Adam Smith). Volgens Ricardo kan ook een land dat alles duurder maakt winst halen uit handel. Hoe kan dat?", "Dat heet protectionisme. Zegt Ricardo dat landen handel moeten beperken, of juist iets anders?", "Dat heet zelfvoorziening. Welk voordeel haal je dan nog uit handel?"],
         uitlegPad: {
           stappen: [
             { titel: "Iedereen wint door specialisatie", tekst: "Ricardo's inzicht (1817): zelfs als één land in ALLES beter is, is het toch winstgevend voor beide om te specialiseren in waar comparatief voordeel groter is + te ruilen. Klassiek voorbeeld: wijn (Portugal) + textiel (Engeland)." },
@@ -131,13 +131,13 @@ const steps = [
       {
         q: "**WTO** = World Trade Organization. Doel?",
         options: [
-          "Vrije handel + handelsgeschillen beslechten",
-          "Klimaat regelen",
-          "Mensenrechten beschermen",
-          "Militair samenwerken"
+          "Vrije handel en handelsgeschillen beslechten",
+          "Eén gezamenlijke munt voor de handel tussen leden",
+          "Leningen geven aan landen met een handelstekort",
+          "Wereldprijzen voor grondstoffen zoals olie vaststellen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — VN-Klimaat.", "Niet — Mensenrechten-Raad.", "Niet — NAVO."],
+        wrongHints: [null, "Eén munt en één markt horen bij de EU (de euro). De WTO heeft 166 leden met elk hun eigen munt: wat regelt ze dan?", "Leningen aan landen in geldnood geeft het IMF. Wat regelt de WTO dan tussen haar leden?", "Olieprijzen proberen de olielanden van de OPEC te sturen. Welke afspraken maken de WTO-leden met elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1995", tekst: "WTO is supranationaal handelsforum. 166 leden onderhandelen tariefverlagingen + lossen geschillen op via rechtbank-systeem. Voorbeeld: geschil Boeing vs Airbus over subsidies (jarenlange WTO-zaak)." }],
           niveaus: { basis: "Handel + geschillen.", simpeler: "Vrije handel regelen.", nogSimpeler: "WTO = handel." },
@@ -146,13 +146,13 @@ const steps = [
       {
         q: "**Off-shoring** is:",
         options: [
-          "Productie verplaatsen naar lage-loon-land",
-          "Productie terughalen",
+          "Productie verplaatsen naar een lagelonenland",
+          "Productie terughalen naar het eigen land",
           "Productie verplaatsen naar een buurland",
-          "Belastingontwijking"
+          "Winst verplaatsen naar een belastingparadijs"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is re-shoring.", "Niet — dat is near-shoring.", "Niet — verwant maar anders."],
+        wrongHints: [null, "Terughalen naar het eigen land heet re-shoring. Wat betekent 'off' (weg, ver weg)?", "Naar een buurland verhuizen heet near-shoring ('near' = dichtbij). Wat betekent 'off'?", "Dan verhuist alleen de winst, op papier. Wat gebeurt er bij off-shoring met de fabriek?"],
         uitlegPad: {
           stappen: [
             { titel: "Naar elders verhuizen", tekst: "Veel westerse bedrijven verplaatsten productie naar China/Vietnam/Bangladesh in jaren 1990-2010 voor lagere lonen. Resultaat: industriële banen-verlies in westen, opkomst Aziatische economieën. Recent: re-shoring trend door geopolitieke risico's." },
@@ -163,13 +163,13 @@ const steps = [
       {
         q: "**G20-akkoord 2021** introduceerde:",
         options: [
-          "Globale minimum-vennootschapsbelasting 15%",
-          "Klimaatakkoord",
-          "Migratiequota",
-          "Handelsverbod China"
+          "Een wereldwijde minimumwinstbelasting van 15%",
+          "Een wereldwijde maximale invoerheffing van 15%",
+          "Een wereldwijde CO₂-heffing van 15% op vliegtickets",
+          "Een wereldwijd minimumtarief voor btw van 15%"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Parijs 2015.", "Niet — geen wereldwijd verdrag.", "Niet — bilaterale tarieven."],
+        wrongHints: [null, "Afspraken over invoerheffingen maken landen via de WTO. Welk probleem met multinationals en belastingparadijzen pakte de G20 in 2021 aan?", "Over vliegtaks maakte de G20 geen wereldafspraak. Waar verschoven multinationals hun geld naartoe, en wat deed de G20 daartegen?", "Een minimum van 15% btw is een EU-regel voor belasting op wat consumenten kopen. Welke belasting ontweken multinationals via Ierland en Bermuda?"],
         uitlegPad: {
           stappen: [
             { titel: "Eind 'race to the bottom'", tekst: "Voor 2021 verschoven MNCs winst naar belasting-paradijzen (Ierland 12,5%, Bermuda 0%). G20: 'minimum 15% wereldwijd → geen ontwijking-voordeel'. Implementatie 2024-2026 wereldwijd. Apple, Google, etc. raken voordeel kwijt." },
@@ -180,13 +180,13 @@ const steps = [
       {
         q: "Een **iPhone** wordt gemaakt via:",
         options: [
-          "Een wereldwijde toeleveringsketen",
-          "Alles wordt in de VS gemaakt",
-          "Alles wordt in China gemaakt",
-          "Alles wordt in Europa gemaakt"
+          "Ontwerp in de VS, chips uit Taiwan, assemblage in China",
+          "Ontwerp in China, chips uit de VS, assemblage in Taiwan",
+          "Ontwerp, chips en assemblage allemaal in de VS",
+          "Ontwerp in de VS, chips en assemblage in Europa"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — alleen het ontwerp komt uit de VS.", "Niet — multi-land.", "Niet."],
+        wrongHints: [null, "Apple is een Amerikaans bedrijf. Waar zit dan de afdeling die de telefoon ontwerpt?", "Lonen in de VS zijn hoog. Zou Apple daar miljoenen telefoons met de hand in elkaar laten zetten?", "Waar staan de grote assemblagefabrieken, zoals die van Foxconn: in Europa of in Azië?"],
         uitlegPad: {
           stappen: [
             { titel: "200+ leveranciers wereldwijd", tekst: "Apple ontwerp in Cupertino. TSMC (Taiwan) maakt A-chip. Foxconn (China) assembleert. Schermen Samsung (Zuid-Korea). Camera Sony (Japan). Mineralen: cobalt (Congo), lithium (Chili). Verkoop wereldwijd. Voorbeeld van extreme globalisering." },
@@ -207,12 +207,12 @@ const steps = [
         q: "Wat is **HDI**?",
         options: [
           "Een index die BBP, onderwijs en levensduur combineert",
-          "Een index die alleen het BBP per inwoner meet",
-          "Een index van het aantal soldaten per land",
-          "Een index van de olieproductie per land"
+          "Een index die het BBP per inwoner omrekent naar koopkracht",
+          "Een index die het geluk van inwoners meet met enquêtes",
+          "Een index die meet hoe ongelijk het inkomen verdeeld is"
         ],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onzin.", "Onzin."],
+        wrongHints: [null, "Koopkracht is een manier om BBP eerlijker te vergelijken. Maar de H staat voor 'Human': wat telt er nog meer mee?", "Geluk meet het World Happiness Report met vragenlijsten. Welke harde cijfers over mensen stopt de HDI erin?", "Ongelijkheid meet de Gini-coëfficiënt. De HDI kijkt naar het gemiddelde: welke drie dingen telt hij mee?"],
         uitlegPad: {
           stappen: [
             { titel: "Breder dan economie", tekst: "Ontwikkeld door VN (UNDP) als kritiek op 'BBP alleen'. Combineert BBP/capita + onderwijs-jaren + levensverwachting. Schaal 0-1. Noorwegen, Zwitserland top (~0,96). Niger laag (~0,40). Geeft completer beeld van welzijn." },
@@ -223,13 +223,13 @@ const steps = [
       {
         q: "**Resource curse** = ?",
         options: [
-          "Veel grondstoffen leidt vaak tot slechte ontwikkeling",
-          "Landen zonder grondstoffen blijven altijd arm",
-          "Grondstoffen brengen altijd welvaart",
-          "Er is geen verband tussen grondstoffen en ontwikkeling"
+          "Landen met veel grondstoffen ontwikkelen zich vaak slechter",
+          "Landen zonder grondstoffen blijven daardoor vaak arm",
+          "Grondstoffen raken op, zodat exportlanden later verarmen",
+          "Rijke landen kopen grondstoffen goedkoop op bij arme landen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet altijd waar.", "Vaak tegenovergesteld.", "Wel verband."],
+        wrongHints: [null, "Denk aan Japan of Zuid-Korea: weinig grondstoffen en toch rijk. Over welke landen gaat de 'vloek' dan?", "De vloek speelt al terwijl de olie nog stroomt, denk aan Nigeria. Wat gaat er mis met al dat geld?", "Dat is een andere verklaring, de afhankelijkheidstheorie. Bij de 'vloek' gaat het om het land zelf: wat doen corruptie en eenzijdige export?"],
         uitlegPad: {
           stappen: [
             { titel: "Vloek van overvloed", tekst: "Paradox: olie/diamanten/cobalt-rijke landen vaak armer dan grondstofschamele. Reden: corruptie (elite steelt opbrengsten), conflict (rebellengroepen vechten om mijnen), verwaarlozing onderwijs/industrie, valuta-overwaardering. Voorbeelden: Nigeria-olie, Congo-cobalt, Sierra Leone-diamanten." },
@@ -241,13 +241,13 @@ const steps = [
       {
         q: "**Zuid-Korea** is sinds 1960 economisch:",
         options: [
-          "Van arm-land tot top-15 economie wereldwijd",
-          "Gelijk gebleven",
-          "Achteruitgegaan",
-          "Altijd rijk geweest"
+          "Van arm land naar top-15-economie",
+          "Gegroeid, maar nog altijd ontwikkelingsland",
+          "Rijk geworden door export van olie en gas",
+          "Al in 1960 rijk, daarna verder gegroeid"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Onjuist — was arm."],
+        wrongHints: [null, "Zuid-Korea is nu lid van de OESO en de G20, de clubs van rijke economieën. Past 'ontwikkelingsland' daarbij?", "Heeft Zuid-Korea grote olievelden? Waar verdient het land zijn geld mee: denk aan Samsung en Hyundai.", "Hoe zag Zuid-Korea eruit vlak na de Koreaanse Oorlog (1950-1953)?"],
         uitlegPad: {
           stappen: [
             { titel: "Miracle on the Han River", tekst: "1960: BBP/capita zelfde als Ghana, Nigeria. Strategie: investeren in onderwijs, export-gerichte industrialisatie (eerst textiel, dan staal, scheepsbouw, auto's, elektronica, semiconductoren). Vandaag: Samsung, LG, Hyundai = wereld-spelers. Top-12 economie. Klassiek 'ontwikkelings-mirakel'." },
@@ -258,13 +258,13 @@ const steps = [
       {
         q: "**Microfinanciering** (Yunus, Nobel 2006):",
         options: [
-          "Kleine leningen aan armen om eigen bedrijf te starten",
-          "Internationale bankenfusies",
-          "Belastingen verlagen",
-          "Hulp-pakketten"
+          "Kleine leningen aan armen voor een eigen bedrijf",
+          "Kleine giften aan armen voor dagelijkse boodschappen",
+          "Belastingverlaging voor kleine ondernemers",
+          "Kleine subsidies van de overheid voor arme boeren"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Niet specifiek.", "Niet directe hulp."],
+        wrongHints: [null, "Een gift is noodhulp. Yunus richtte een bank op: wat doet een bank met geld?", "Belasting verlagen kan alleen de overheid. Yunus richtte een bank op: wat doet een bank met geld?", "Subsidie komt van de overheid. Yunus richtte een bank op: hoe werkt geld van een bank anders?"],
         uitlegPad: {
           stappen: [
             { titel: "Grameen Bank in Bangladesh", tekst: "Yunus ontdekte: armen kunnen geen bankleningen krijgen (geen onderpand). Microfinanciering: $50-500 leningen, vooral aan vrouwen, voor naaimachine/koe/winkel. Terugbetalings-tarief 95%+ (onderling-druk werkt). Yunus kreeg (samen met Grameen Bank) de Nobelprijs voor de Vrede 2006. Wereldwijd nu uitgerold." },
@@ -275,13 +275,13 @@ const steps = [
       {
         q: "**Volgens institutionele theorie** (Acemoglu) ligt verschil rijk/arm in:",
         options: [
-          "Het soort instituties",
-          "Klimaat alleen",
-          "Cultuur alleen",
-          "Toeval"
+          "De kwaliteit van rechtspraak en bestuur",
+          "Het klimaat en de ligging van een land",
+          "De cultuur en religie van de bevolking",
+          "De hoeveelheid grondstoffen in de bodem"
         ],
         answer: 0,
-        wrongHints: [null, "Speelt rol maar niet hoofdfactor.", "Idem.", "Niet — patronen aanwezig."],
+        wrongHints: [null, "Dat is de geografische verklaring. Noord- en Zuid-Korea hebben hetzelfde klimaat: waarom verschillen ze dan zo?", "Noord- en Zuid-Korea hebben dezelfde cultuur en geschiedenis. Waarom is het ene land dan rijk en het andere arm?", "Dan zou Nigeria rijk en Japan arm zijn. Wat verklaart volgens Acemoglu het verschil wel?"],
         uitlegPad: {
           stappen: [
             { titel: "'Why Nations Fail' 2012", tekst: "Bewijs: Noord vs Zuid Korea (zelfde volk, andere instituties → enorme welvaartskloof). Inclusieve instituties (democratie, eigendomsrecht, vrije markt, gelijke kansen) → innovatie + groei. Extractieve (elite steelt, geen rechten) → stagnatie." },
@@ -302,12 +302,12 @@ const steps = [
         q: "**Remittances** zijn:",
         options: [
           "Geld dat migranten naar familie thuis sturen",
-          "Belasting op migranten",
-          "Reiskosten",
-          "Visa-kosten"
+          "Belasting die migranten in het gastland betalen",
+          "Reiskosten die migranten voor de reis maken",
+          "Kosten voor een visum of verblijfsvergunning"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — andere kant op.", "Niet.", "Niet."],
+        wrongHints: [null, "Belasting gaat naar de overheid van het gastland. Naar wie gaat het geld bij remittances?", "Gaat het om geld vóór de reis, of om geld dat ná aankomst ergens heen gaat?", "Een visum betaal je aan een land. Bij wie komt het geld van remittances terecht?"],
         uitlegPad: {
           stappen: [
             { titel: "Belangrijk voor herkomstland", tekst: "Migrant in rijk land verdient + stuurt deel naar familie in arm land. Wereldwijd ~$650 mld/jaar — meer dan alle ontwikkelingshulp samen. Voor Tonga, Tadzjikistan = >20% BBP. Direct effect armoedebestrijding." },
@@ -319,12 +319,12 @@ const steps = [
         q: "Een **vluchteling** verschilt van **economische migrant** door:",
         options: [
           "Vlucht voor oorlog of vervolging",
-          "Komt uit Afrika",
-          "Heeft geen geld",
-          "Geen verschil"
+          "Vlucht voor armoede of werkloosheid",
+          "Komt zonder geldige papieren het land in",
+          "Blijft maar tijdelijk in het nieuwe land"
         ],
         answer: 0,
-        wrongHints: [null, "Geografisch onafhankelijk.", "Beide kunnen rijk/arm zijn.", "Wel verschil — juridisch."],
+        wrongHints: [null, "Armoede en werkloosheid zijn redenen van een economische migrant. Wat maakt iemand een vluchteling?", "Zonder papieren reizen kan elke migrant. Gaat het Vluchtelingenverdrag over papieren of over de reden van vertrek?", "Ook vluchtelingen blijven soms jaren, en arbeidsmigranten gaan soms terug. Wat is dan het echte verschil?"],
         uitlegPad: {
           stappen: [
             { titel: "Juridische bescherming", tekst: "Vluchteling = gedwongen vertrek door gevaar (oorlog, politieke vervolging, etnische zuivering). UN-Conventie 1951: landen mogen vluchtelingen NIET terugsturen naar gevaar (non-refoulement). Asiel-procedure bepaalt status. Economische migrant = vrijwillige keuze beter leven." },
@@ -341,7 +341,7 @@ const steps = [
           "Laagopgeleiden die naar rijke landen trekken"
         ],
         answer: 0,
-        wrongHints: [null, "Dat is juist het omgekeerde (brain gain).", "Dat zijn remittances.", "Het gaat juist om hoogopgeleiden."],
+        wrongHints: [null, "Terugkeren met nieuwe kennis hoort bij brain gain. Is brain drain hetzelfde, of juist het omgekeerde?", "Geld naar huis sturen heet remittances. Gaat brain drain over geld of over mensen?", "Laagopgeleide arbeidsmigratie bestaat ook. Over welke groep migranten gaat het bij brain drain? Denk aan het voorbeeld uit de les."],
         uitlegPad: {
           stappen: [
             { titel: "Talent-emigratie", tekst: "Klassiek voorbeeld: Filipijnse verpleegkundigen + dokters trekken naar VS/UK voor 5× zo hoog salaris → Filipijnen verliest gezondheidszorg-personeel. India: software-ingenieurs naar Silicon Valley. Tegenwicht: remittances + soms terugkeer met expertise (return-migrants)." },
@@ -353,7 +353,7 @@ const steps = [
         q: "Belangrijkste **Europese migratie-crisis sinds WO2** in 2022:",
         options: ["Oekraïners", "Syriërs", "Afghanen", "Venezolanen"],
         answer: 0,
-        wrongHints: [null, "Niet 2022-piek.", "Niet 2022.", "Niet — die crisis speelde vooral in Zuid-Amerika."],
+        wrongHints: [null, "De Syrische vluchtelingenstroom piekte in 2015. Welke oorlog in Europa begon in februari 2022?", "Afghanen vluchtten vooral in 2021, na de machtsovername door de Taliban. Welke oorlog in Europa begon in 2022?", "Niet — die crisis speelde vooral in Zuid-Amerika."],
         uitlegPad: {
           stappen: [
             { titel: "Massa-vlucht binnen weken", tekst: "Russische invasie 24 feb 2022 → in 6 weken 5 mln Oekraïners weg (vooral vrouwen + kinderen). Polen alleen 3 mln. EU activeerde Temporary Protection Directive → directe rechten zonder asiel-procedure. NL ~100k. Cijfer 8+ mln blijft uit huis (intern + extern verplaatst)." },
@@ -365,12 +365,12 @@ const steps = [
         q: "**Push-factor** voor migratie is bv:",
         options: [
           "Oorlog of armoede in herkomstland",
-          "Goed werk in doelland",
-          "Familie in doelland",
-          "Veiligheid in doelland"
+          "Goedbetaald werk in het doelland",
+          "Familie die al in het doelland woont",
+          "Strenge grenscontroles onderweg"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pull.", "Idem.", "Idem."],
+        wrongHints: [null, "Goed werk elders trekt je naar een land toe. Is dat duwen of trekken?", "Trekt familie je naar een land toe, of duwt het je weg?", "Grenscontroles zijn een obstakel onderweg: ze remmen migratie juist af. Waar ligt een push-factor: thuis, onderweg of in het doelland?"],
         uitlegPad: {
           stappen: [{ titel: "Push = wegduwen", tekst: "Push = redenen om TE VERTREKKEN uit herkomstland (oorlog, armoede, vervolging, klimaat). Pull = redenen NAAR doelland te komen (werk, veiligheid, familie). Migratie wordt vaak gedreven door combinatie." }],
           niveaus: { basis: "Push = wegduwen.", simpeler: "Push = nadeel thuis.", nogSimpeler: "Push" },
@@ -389,7 +389,7 @@ const steps = [
         q: "**SDG #13** is:",
         options: ["Klimaatactie", "Geen armoede", "Gendergelijkheid", "Onderwijs"],
         answer: 0,
-        wrongHints: [null, "Niet — #1.", "Niet — #5.", "Niet — #4."],
+        wrongHints: [null, "'Geen armoede' is het allereerste doel, nummer 1. Welk thema hoort bij nummer 13?", "Gendergelijkheid staat bij de eerste vijf doelen (nummer 5). Welk thema hoort bij nummer 13?", "Goed onderwijs is doel nummer 4. Welk thema hoort bij nummer 13?"],
         uitlegPad: {
           stappen: [{ titel: "Klimaat-doel", tekst: "Klimaat onder 1,5°C, klimaat-resilient samenleving, klimaatfinanciering arm-land. Helaas sterkst achterstand → emissies stijgen nog. CO₂ atmosfeer 420 ppm (vs doel onder 450). Beslissingen volgende 10 jaar cruciaal." }],
           niveaus: { basis: "#13 = klimaat.", simpeler: "Klimaatactie.", nogSimpeler: "Klimaat" },
@@ -398,13 +398,13 @@ const steps = [
       {
         q: "**SDGs** vervangen welke oudere doelen?",
         options: [
-          "Millennium Development Goals",
-          "Olympische idealen",
-          "EU-richtlijnen",
-          "WO2-akkoorden"
+          "De Millenniumdoelen uit 2000",
+          "Agenda 21 van de Rio-top (1992)",
+          "De Kyoto-doelen uit 1997",
+          "Het Brundtland-rapport uit 1987"
         ],
         answer: 0,
-        wrongHints: [null, "De SDG's gaan over armoede, klimaat en gezondheid — hebben Olympische idealen over sport daar iets mee te maken?", "De SDG's zijn wereldwijd afgesproken door alle VN-landen — passen richtlijnen van alléén de EU daarbij?", "WO2-akkoorden dateren van rond 1945 — de doelen die de SDG's vervingen liepen juist rond 2000-2015. Klopt die tijd?"],
+        wrongHints: [null, "Agenda 21 was een actieplan voor duurzaamheid zonder vaste einddatum. De SDG's volgden op doelen die in 2015 afliepen: welke?", "Het Kyotoprotocol ging alleen over de uitstoot van broeikasgassen. De SDG's gaan ook over armoede en onderwijs: welke doelen gingen daaraan vooraf?", "Het Brundtland-rapport gaf de bekende definitie van duurzame ontwikkeling, maar stelde geen doelen met een einddatum. Welke doelen liepen tot 2015?"],
         uitlegPad: {
           stappen: [
             { titel: "MDG → SDG", tekst: "MDGs (2000-2015): 8 doelen, vooral armoede + gezondheid in arme landen. Resultaten gemengd (sommige gehaald, andere niet). Vervangen 2015 door 17 SDGs: breder + voor ALLE landen (ook rijke moeten klimaat + ongelijkheid aanpakken)." },
@@ -415,13 +415,13 @@ const steps = [
       {
         q: "**Carbon Border Adjustment** (EU 2026):",
         options: [
-          "Importheffing op CO₂-intensieve goederen",
-          "Een vrijhandelsakkoord met buurlanden",
-          "Een quotum voor arbeidsmigranten",
-          "Een belasting op internetgebruik"
+          "Een heffing op import van CO₂-intensieve goederen",
+          "Een subsidie op export van groene producten",
+          "Een verbod op export van afval buiten de EU",
+          "Handel in uitstootrechten voor EU-bedrijven"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — handelsbarrière.", "Niets met migratie te maken.", "Niets met internet te maken."],
+        wrongHints: [null, "Een subsidie geeft geld aan eigen bedrijven. De CBAM legt juist een prijs op CO₂: op welke producten?", "Voor afvalexport gelden aparte regels. De CBAM gaat over de CO₂ in producten als staal en cement: welke kant gaan die op?", "Dat is het emissiehandelssysteem (ETS). De CBAM is een aanvulling daarop: voor welke producten?"],
         uitlegPad: {
           stappen: [
             { titel: "Voorkomt 'carbon leakage'", tekst: "EU-bedrijven hebben CO₂-prijs (ETS). Buiten EU vaak niet → bedrijven verhuizen → CO₂-uitstoot verplaatst (leakage). CBAM: importbelasting gelijk aan EU-CO₂-prijs voor staal, cement, aluminium etc. Druk op China/India om eigen klimaatbeleid → druk op globale klimaat-actie." },
@@ -432,13 +432,13 @@ const steps = [
       {
         q: "**Voortgang SDGs** in 2024:",
         options: [
-          "Slechts ~15% op koers",
-          "Allemaal gehaald",
-          "Niet gemeten",
-          "Geen vertraging"
+          "Ongeveer 15% op koers",
+          "Ongeveer de helft op koers",
+          "Ruim 80% op koers",
+          "Ongeveer een derde op koers"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel gemeten (VN-rapport).", "Tegenovergesteld."],
+        wrongHints: [null, "Het VN-rapport van 2024 was somber. Lag echt de helft van de doelen op schema?", "Covid, oorlogen en inflatie zetten de doelen terug. Is 80% op koers dan realistisch?", "Het VN-rapport noemde het aantal doelen op koers 'zorgwekkend klein'. Is een derde dan te veel of te weinig?"],
         uitlegPad: {
           stappen: [
             { titel: "Achterstand groot", tekst: "VN Sustainable Development Report 2024: minder dan 1/5 op koers voor 2030. COVID-pandemie + voedselcrisis + Oekraïne-oorlog + klimaatschade vertraagden. Vereist drastische versnelling laatste 6 jaar." },
@@ -449,13 +449,13 @@ const steps = [
       {
         q: "**Re-shoring** is:",
         options: [
-          "Productie terughalen naar het thuisland",
-          "Klimaat-actie",
-          "Migratie",
-          "Off-shoring uitbreiden"
+          "Productie verplaatsen naar het eigen land",
+          "Productie verplaatsen naar een land dichtbij",
+          "Productie verplaatsen naar een lagelonenland",
+          "Werk uitbesteden aan een ander bedrijf"
         ],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Tegenovergesteld."],
+        wrongHints: [null, "Dichterbij produceren, zoals in Polen in plaats van China, heet near-shoring. Waar gaat de fabriek bij re-shoring heen?", "Naar een lagelonenland verhuizen heet off-shoring. Welke kant ging het na corona juist op met chipfabrieken?", "Uitbesteden aan een ander bedrijf heet outsourcing. Re-shoring gaat over de plek van de productie: welke plek?"],
         uitlegPad: {
           stappen: [
             { titel: "Strategie-omkering", tekst: "Na decennia productie naar China → COVID-disrupties + politiek risico (Taiwan, sancties) → bedrijven herzien. Voorbeelden: chipfabrieken terug naar VS/EU (Chips Acts), auto-industrie meer in VS/Mexico; Apple spreidt productie naar India + Vietnam (minder afhankelijk van China). Trend versterkt sinds 2020." },

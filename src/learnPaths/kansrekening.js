@@ -150,17 +150,17 @@ const steps = [
       {
         q: "*Een gebeurtenis heeft kans 1. Wat betekent dat?*",
         options: [
-          "Het is zeker — gebeurt altijd",
-          "Het gebeurt nooit",
-          "50% kans",
-          "Onbepaald",
+          "Het gebeurt zeker",
+          "Het kan niet gebeuren",
+          "Het is een gok van 50%",
+          "Het gebeurt één keer",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Welke kans betekent 'zeker' — 0 of 1?",
-          "50% komt overeen met welke breuk? Niet hetzelfde als 'zeker'.",
-          "Kijk naar de schaal van 0 tot 1: aan welk uiteinde zit kans 1, en wat betekent dat uiteinde?",
+          "Dat hoort bij kans 0. Aan welk uiteinde van de schaal ligt kans 1?",
+          "Een gok van 50% hoort bij kans ½. Is 1 hetzelfde als ½?",
+          "Een kans zegt niets over het aantal keren. Waar ligt 1 op de kansschaal van 0 tot 1?",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = 1 = zeker", tekst: "Een gebeurtenis met kans 1 gebeurt altijd, 100%." }],
@@ -211,13 +211,13 @@ const steps = [
     checks: [
       {
         q: "*Wat is de kans op een getal kleiner dan 5 bij een dobbelsteen?*",
-        options: ["2/3", "5/6", "1/5", "5/12"],
+        options: ["2/3", "5/6", "1/5", "1/2"],
         answer: 0,
         wrongHints: [
           null,
           "5/6 zou kloppen als de vraag 'kleiner dan 6' was — maar wat is er anders bij 'kleiner dan 5'?",
           "1/5 — 1 op 5? Maar er zijn 6 vlakken op de dobbelsteen, niet 5.",
-          "5/12 is geen logische dobbelsteen-kans (12 is geen vlak-aantal).",
+          "Dan telde je alleen 1, 2 en 3. Hoort de 4 ook bij 'kleiner dan 5'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Tel <5", tekst: "{1, 2, 3, 4} = 4 gunstig. 4/6 = 2/3." }],
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [
           null,
           "1/8 zou betekenen één specifieke combinatie. Maar precies 2× kop kan op meer dan één volgorde — schrijf alle volgordes uit.",
-          "1/3 is geen logische kans bij munten (noemer 8).",
+          "Je deelde 2× kop door 3 worpen. Een kans is gunstige rijtjes gedeeld door álle mogelijke rijtjes: hoeveel zijn dat bij 3 worpen?",
           "Tel hoeveel manieren je precies 2× kop kunt gooien bij 3 worpen — is dat 2 of meer?",
         ],
         uitlegPad: {
@@ -289,7 +289,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is de ratio jongens:meisjes, niet kans. Kans = gunstig/totaal.",
-          "Onlogisch — 1/12 zou betekenen 1 op 12 kans, maar de klas heeft 30 leerlingen.",
+          "1/12 is de kans om één bepaalde jongen te kiezen uit alleen de jongens. Door welk totaal deel je bij deze kans?",
           "18/30 = kans op meisje, niet jongen.",
         ],
         uitlegPad: {
@@ -329,16 +329,16 @@ const steps = [
         q: "*In een kansboom: hoe bereken je de kans op een specifiek pad?*",
         options: [
           "Vermenigvuldig de kansen langs dat pad",
-          "Tel de kansen op",
-          "Trek de kansen af",
-          "Pak de grootste kans",
+          "Tel de kansen langs dat pad op",
+          "Neem de kans van de laatste tak",
+          "Neem de kleinste kans van dat pad",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Optellen hoort bij een óf-situatie (verschillende paden). Hier gaat het om één pad met takken ná elkaar — welke bewerking past daarbij?",
-          "Aftrekken hoort niet in standaard kansrekening met bomen.",
-          "De grootste kans zegt niets over een pad. Kijk hoe je de takken van één pad combineert.",
+          "De laatste tak telt pas als de eerdere takken ook gebeurd zijn. Hoe neem je die eerdere kansen mee?",
+          "De kleinste tak zegt nog niet hoe groot de kans op het hele pad is. Hoe combineer je de takken van één pad?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vermenigvuldigen langs pad", tekst: "Pad-kans = kans tak 1 × kans tak 2 × ..." }],
@@ -369,13 +369,13 @@ const steps = [
     checks: [
       {
         q: "*Wat is de kans op 2× kop bij 2 munten?*",
-        options: ["1/4", "1/2", "1/8", "2/2"],
+        options: ["1/4", "1/2", "1/8", "1/3"],
         answer: 0,
         wrongHints: [
           null,
           "1/2 is kans op kop bij ÉÉN worp. Bij twee: vermenigvuldig.",
           "1/8 zou bij 3 worpen zijn (1/2)³.",
-          "Een kans van 1 betekent zekerheid — is 2× kop bij 2 munten echt zeker?",
+          "Je telde 3 uitkomsten: 0, 1 of 2 keer kop. Zijn die even waarschijnlijk? Schrijf KK, KM, MK en MM uit.",
         ],
         uitlegPad: {
           stappen: [{ titel: "1/2 × 1/2", tekst: "Eerste worp 1/2 × tweede worp 1/2 = 1/4." }],
@@ -464,13 +464,13 @@ const steps = [
     checks: [
       {
         q: "*Bij dobbelsteen: P(2 of 4 of 6)?*",
-        options: ["1/2", "1/6", "2/6", "3/3"],
+        options: ["1/2", "1/6", "2/6", "1/3"],
         answer: 0,
         wrongHints: [
           null,
           "1/6 zou kans op één getal zijn. Hier zijn er drie uitsluitende uitkomsten.",
           "2/6 hoort bij twee uitkomsten. Tel nog eens hoeveel uitkomsten de vraag noemt.",
-          "Een kans van 1 betekent zekerheid — is een getal 2, 4 of 6 gooien bij een dobbelsteen écht zeker?",
+          "Waar komt de noemer 3 vandaan? Een dobbelsteen heeft 6 vlakken: hoeveel daarvan zijn 2, 4 of 6?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Uitsluitend optellen", tekst: "1/6 + 1/6 + 1/6 = 3/6 = 1/2." }],
@@ -505,9 +505,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is P(precies 0× kop) = (1/2)⁵. De vraag wil het complement van die kans.",
+          "Dat is P(0× kop) = (1/2)⁵. Is dat de kans die je zoekt, of juist de enige uitkomst die je níét wilt?",
           "1/2 is kans bij 1 worp. Bij 5 worpen verandert de kans op 'minstens 1'.",
-          "5/32 zou een specifieke combinatie zijn. Truc: 1 − P(0 K).",
+          "5/32 is de kans op precies 1× kop. 'Minstens 1' telt ook 2, 3, 4 en 5 keer kop mee: welke uitkomst valt erbuiten?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(geen K)", tekst: "P(0 K) = (1/2)⁵ = 1/32. Antwoord = 1 − 1/32 = 31/32." }],
@@ -538,7 +538,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet zomaar een getal — denk aan en-kans: P(A én B) = P(A) × P(B).",
+          "Waar komt de 12 vandaan? Bij twee worpen na elkaar vermenigvuldig je de kansen: wat is de kans op een zes per dobbelsteen?",
           "Optellen ipv vermenigvuldigen — bij twee onafhankelijke worpen vermenigvuldig je.",
           "Dat is kans op één 6 bij één worp.",
         ],
@@ -558,7 +558,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is kans op één rode. Voor twee: vermenigvuldig.",
-          "Optellen werkt hier niet — bij twee onafhankelijke trekkingen gebruik je vermenigvuldigen, niet optellen.",
+          "Hoe kom je aan 8? Bij twee trekkingen na elkaar vermenigvuldig je de kansen: wat geeft dat met 4/10?",
           "Controleer de kans op één rode knikker eerst goed — is die echt 1/5?",
         ],
         uitlegPad: {
@@ -577,7 +577,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is één pad (zoals KMM). Maar de ene kop kan op verschillende plekken in de rij staan — schrijf alle volgordes uit.",
-          "Bij munt-worpen zijn er altijd een macht van 2 mogelijkheden — klopt 1/3 dan als noemer?",
+          "Je deelde 1 kop door 3 worpen. Hoeveel mogelijke rijtjes van kop en munt zijn er bij 3 worpen?",
           "1/2 is de kans bij één worp — maar hoeveel paden geven precies 1× kop bij 3 worpen? Tel ze op.",
         ],
         uitlegPad: {
@@ -591,13 +591,13 @@ const steps = [
       },
       {
         q: "*Dobbelsteen: P(niet 1)?*",
-        options: ["5/6", "1/6", "5/5", "0"],
+        options: ["5/6", "1/6", "1/5", "4/6"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is de kans OP een 1. De vraag wil juist het tegenovergestelde — hoeveel vlakken zijn géén 1?",
-          "Een kans van 1 betekent zekerheid — is 'niet 1' gooien bij een dobbelsteen écht zeker?",
-          "Een kans van 0 betekent onmogelijk — kan 'niet 1' bij een dobbelsteen echt nooit voorkomen?",
+          "1/5 vergelijkt het vlak met de 1 met de vijf andere. Bij een kans deel je door álle 6 vlakken: hoeveel daarvan zijn geen 1?",
+          "Tel de vlakken die géén 1 zijn nog eens: 2, 3, 4, 5, 6. Hoeveel zijn dat?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(1)", tekst: "P(niet 1) = 1 − 1/6 = 5/6." }],
@@ -623,17 +623,17 @@ const steps = [
       {
         q: "*\"Een doos: 5 chocolade en 3 noten-bonbons. Pak willekeurig 2 zonder terugleggen. Kans dat beide chocolade zijn?\"*",
         options: [
-          "5/8 · 4/7 = 20/56 = 5/14",
+          "5/8 · 4/7 = 5/14",
           "5/8 · 5/8 = 25/64",
-          "5/8 + 4/7 = 67/56",
-          "Niet te bepalen",
+          "5/8 · 4/8 = 5/16",
+          "5/8 · 3/7 = 15/56",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat zou kloppen mét terugleggen. Maar 'zonder terugleggen': hoeveel chocolade-bonbons en hoeveel bonbons in totaal zijn er nog over na de eerste keer pakken?",
-          "Optellen in plaats van vermenigvuldigen — dit is een én-kans (eerste én tweede). Welke bewerking hoort daarbij?",
-          "Wel goed te bepalen — bekijk de eerste en de tweede trekking apart en let op wat er na de eerste trekking overblijft.",
+          "Er is één bonbon uit de doos gepakt. Zitten er dan nog steeds 8 bonbons in totaal in?",
+          "3 is het aantal noten-bonbons. Hoeveel chocolade-bonbons zijn er na de eerste keer pakken nog over?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zonder terugleggen", tekst: "Eerste: 5/8. Daarna: 4/7. Product: 5/8 × 4/7 = 20/56 = 5/14." }],
@@ -650,14 +650,14 @@ const steps = [
           "(99/100)³",
           "1 − 3/100 = 97/100",
           "3/100",
-          "100/103",
+          "(1/100)³",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Aftrekken zou kloppen als er precies 1 winnend lootje op 100 was. Hier heeft elk lootje los van de andere zijn eigen kans — dan moet je 'alle 3 verlies' vermenigvuldigen.",
           "3/100 is ongeveer de kans dat je wél wint. 'Geen prijs' betekent: alle 3 lootjes verliezen.",
-          "100/103 is geen logische berekening voor deze setup.",
+          "(1/100)³ is de kans dat alle drie de lootjes winnen. Wat is per lootje de kans dat het níét wint?",
         ],
         uitlegPad: {
           stappen: [{ titel: "(99/100)³", tekst: "Kans niet winnen per lootje: 99/100. 3× niet winnen: (99/100)³ ≈ 0,97." }],
@@ -679,7 +679,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "1/2 is een ruwe schatting maar niet exact — bereken via complement.",
+          "1/2 zou kloppen als 'minstens 2' en 'hoogstens 1' even groot waren. Tel de rijtjes met 0 en met 1 keer kop: hoeveel van de 16 zijn dat?",
           "1/4 = 4/16 is de kans op precies 1 keer kop — maar 'minstens 2' betekent 2, 3 of 4 keer kop.",
           "Dat is precies het tegenovergestelde van wat gevraagd wordt. 'Minstens 2' betekent 2 óf meer — welke uitkomsten vallen daar níét onder?",
         ],
@@ -710,14 +710,14 @@ const steps = [
           "1 − (5/6)³ = 91/216",
           "(1/6)³ = 1/216",
           "3 · 1/6 = 1/2",
-          "1/6",
+          "1 − (1/6)³ = 215/216",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat is kans op 3× zes — heel klein.",
           "Optellen werkt hier niet — gebruik het complement: bereken eerst de kans dat je géén zes gooit in alle 3 worpen.",
-          "1/6 is kans bij één worp. Bij 3 worpen verandert het.",
+          "Dat is de kans dat je níét drie keer een zes gooit. Wat is het tegenovergestelde van 'minstens één 6'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − (5/6)³", tekst: "P(geen 6 in 3 worpen) = (5/6)³. P(min. 1 zes) = 1 − (5/6)³ ≈ 0,42." }],
@@ -732,16 +732,16 @@ const steps = [
         q: "*\"Een klas heeft 30 leerlingen. P(jongen) = 12/30. Wat is P(meisje)?\"*",
         options: [
           "18/30 = 3/5",
-          "1 − 12/30 = 12/30",
+          "18/12 = 3/2",
           "12/18 = 2/3",
-          "30/12 = 5/2",
+          "11/30 ≈ 0,37",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niet helemaal goed — bereken eens wat er overblijft als je 12/30 van het geheel aftrekt.",
-          "Dat is een ratio — kans = gunstig/totaal. Tel meisjes en deel door totaal.",
-          "Onlogisch — kans kan nooit > 1.",
+          "Je deelde meisjes door jongens. Bij een kans deel je het aantal gunstige door het totaal: wat is hier het totaal?",
+          "Dat is jongens gedeeld door meisjes: een verhouding, geen kans. Door welk totaal deel je bij een kans?",
+          "Je rekende 1 − 12 = 11. Schrijf 1 eerst als breuk met noemer 30. Wat krijg je dan bij 1 − 12/30?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(jongen)", tekst: "P(meisje) = 1 − 12/30 = 18/30 = 3/5." }],
@@ -807,8 +807,8 @@ const steps = [
         wrongHints: [
           null,
           "Na de eerste blauwe ligt die knikker niet meer in de zak — hoeveel blauwe zijn er dan nog over?",
-          "Niet optellen voor 'na elkaar'-kansen.",
-          "Zonder terugleggen — totaal is 7 in tweede trekking.",
+          "Je telde de kansen op; de uitkomst is zelfs groter dan 1. Welke bewerking hoort bij 'eerst blauw én dan blauw'?",
+          "Dit zou kloppen mét terugleggen. Wat verandert er in de zak na de eerste trekking?",
         ],
         uitlegPad: {
           stappen: [{ titel: "5/8 × 4/7", tekst: "Eerst 5/8 (5 blauw op 8). Daarna 4/7 (1 blauw weg)." }],

@@ -33,7 +33,7 @@ const steps = [
         q: "Op een **v-t-grafiek** stelt de **oppervlakte onder** de curve voor:",
         options: ["Verplaatsing","Versnelling","Tijd","Snelheid"],
         answer: 0,
-        wrongHints: [null, "Niet — versnelling = helling.", "Niet — tijd is as.", "Niet — snelheid is y-waarde."],
+        wrongHints: [null, "De versnelling lees je af aan de helling van de lijn. Wat stelt v × t voor?", "De tijd staat op de x-as. Wat stelt v × t voor?", "De snelheid lees je af op de y-as. Wat stelt v × t voor?"],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte v-t = afstand", tekst: "Bij eenparige beweging: x = v·t. Op v-t-grafiek vormt v·t een **rechthoek** waarvan oppervlakte = afstand. Bij variabele v: oppervlakte onder curve = integraal van v over t = **verplaatsing**." }],
           theorie: "Toets-classics: 'gegeven v-t-diagram, hoeveel m heeft auto afgelegd?' Antwoord: oppervlakte bepalen (rechthoek, driehoek, trapezium).",
@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "Object start op rust, **a = 2 m/s²**. Snelheid na 5 s?",
-        options: ["10 m/s","2 m/s","25 m/s","Onbepaald"],
+        options: ["10 m/s","2 m/s","25 m/s","7 m/s"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is a.", "Niet — dat is verplaatsing.", "Wel bepaald."],
+        wrongHints: [null, "2 m/s² is de versnelling: zoveel snelheid komt er per seconde bij. Hoeveel seconden versnelt het object?", "25 m is de afgelegde afstand (½·a·t²). Vraagt de vraag naar afstand of naar snelheid?", "Je telde a en t op. Hoeveel snelheid komt er elke seconde bij, en hoeveel seconden zijn er?"],
         uitlegPad: {
           stappen: [{ titel: "v = v₀ + a·t", tekst: "Begin v₀ = 0. **v(t) = 0 + 2 × 5 = 10 m/s**. Eenparig versneld dus snelheid groeit lineair." }],
           niveaus: { basis: "10 m/s.", simpeler: "v=at=2·5=10", nogSimpeler: "10" },
@@ -54,7 +54,7 @@ const steps = [
         q: "Vrije val vanaf **5 m hoog** (v₀=0, g=10). Eindsnelheid bij grond?",
         options: ["10 m/s","5 m/s","20 m/s","2 m/s"],
         answer: 0,
-        wrongHints: [null, "Niet — wel groter.", "Te groot.", "Niet correct."],
+        wrongHints: [null, "Je nam de snelheid gelijk aan de hoogte. Welke formule koppelt valhoogte aan snelheid?", "Vergat je de wortel? Controleer: v² = 2·g·h, dus v = √(2·g·h).", "Hoe lang duurt de val? Gebruik h = ½·g·t² en daarna v = g·t."],
         uitlegPad: {
           stappen: [{ titel: "Tijd-loze formule", tekst: "v² = v₀² + 2g·h = 0 + 2·10·5 = 100. **v = √100 = 10 m/s** bij grond." }],
           theorie: "Of via tijd: h=½gt² → 5=5t² → t=1s → v=gt=10 m/s.",
@@ -63,9 +63,9 @@ const steps = [
       },
       {
         q: "Op **hoogste punt** van een verticaal omhoog-geworpen bal: v = ?",
-        options: ["0","Maximaal","Onbepaald","Negatief"],
+        options: ["0","Maximaal","Gelijk aan g, dus 10 m/s","Negatief"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel bepaald.", "Niet — pas ná de top beweegt de bal weer omlaag. Wat gebeurt er precies op het keerpunt?"],
+        wrongHints: [null, "Op het hoogste punt draait de bal om. Gaat hij daar het snelst?", "g is een versnelling in m/s², geen snelheid. Wat doet de bal op het keerpunt?", "Niet — pas ná de top beweegt de bal weer omlaag. Wat gebeurt er precies op het keerpunt?"],
         uitlegPad: {
           stappen: [{ titel: "Snelheid keert om", tekst: "Bal stijgt → snelheid daalt door zwaartekracht → bereikt nul precies op hoogste punt → daarna negatief (terug). Op de **top** is v = 0. Versnelling blijft wel g (-9,81 m/s²) — zwaartekracht blijft." }],
           niveaus: { basis: "0.", simpeler: "Top = v=0", nogSimpeler: "0" },
@@ -75,7 +75,7 @@ const steps = [
         q: "Snelheid in **km/h** omrekenen naar m/s — formule?",
         options: ["÷ 3,6","× 3,6","× 60","÷ 1000"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — minuten-conversie.", "Niet — m vs km, dan tijd nog."],
+        wrongHints: [null, "Is 1 km/h meer of minder dan 1 m/s? Moet het getal dus groter of kleiner worden?", "Met 60 reken je minuten om. Hoeveel seconden zitten er in een uur, en hoeveel meter in een km?", "Met ÷ 1000 reken je meters om naar km, maar de uren zet je zo niet om naar seconden. Wat gebeurt er met de tijd?"],
         uitlegPad: {
           stappen: [{ titel: "km/h ÷ 3,6 = m/s", tekst: "1 km = 1000 m, 1 h = 3600 s → 1 km/h = 1000/3600 = **1/3,6 m/s**. Dus km/h ÷ 3,6 = m/s. Omgekeerd: m/s × 3,6 = km/h.\n\nVoorbeeld: 90 km/h ÷ 3,6 = 25 m/s." }],
           theorie: "Toets-klassieker. Onthoud: 36 km/h = 10 m/s.",
@@ -93,9 +93,9 @@ const steps = [
     checks: [
       {
         q: "Welke Newton-wet luidt **F_res = m · a**?",
-        options: ["Tweede","Eerste","Derde","Geen — verkeerde formule"],
+        options: ["Tweede","Eerste","Derde","Gravitatiewet"],
         answer: 0,
-        wrongHints: [null, "Niet — die is traagheid.", "Niet — die is actie-reactie.", "Wel correct."],
+        wrongHints: [null, "De eerste wet gaat over traagheid: wat er gebeurt zonder netto kracht. Rekent deze formule met een netto kracht?", "De derde wet gaat over actie en reactie tussen twee voorwerpen. Gaat deze formule over twee voorwerpen?", "De gravitatiewet gaat over de aantrekking tussen massa's. Gaat F_res = m·a daarover?"],
         uitlegPad: {
           stappen: [{ titel: "F=ma is tweede", tekst: "**Tweede Newton-wet**: F_res = m·a. Verbindt kracht, massa, versnelling. **Eerste** = traagheid (F=0 → v constant). **Derde** = actie-reactie." }],
           niveaus: { basis: "Tweede.", simpeler: "F=ma = 2e Newton", nogSimpeler: "2e" },
@@ -103,9 +103,9 @@ const steps = [
       },
       {
         q: "Auto **1000 kg** met netto kracht **5000 N** voorwaarts. Versnelling?",
-        options: ["5 m/s²","5000 m/s²","0,2 m/s²","100 m/s²"],
+        options: ["5 m/s²","5000 m/s²","0,2 m/s²","50 m/s²"],
         answer: 0,
-        wrongHints: [null, "Niet — niet rechtstreeks kracht.", "Niet — verwisseld.", "Niet correct."],
+        wrongHints: [null, "5000 is de kracht in newton, geen versnelling. Wat doe je met de massa?", "Je deelde de massa door de kracht. Welke van de twee staat boven de deelstreep in a = F/m?", "Reken 5000 ÷ 1000 nog eens na. Hoeveel nullen vallen weg?"],
         uitlegPad: {
           stappen: [{ titel: "a = F/m", tekst: "Tweede Newton: F = m·a → **a = F/m = 5000/1000 = 5 m/s²**." }],
           niveaus: { basis: "5 m/s².", simpeler: "5000/1000 = 5", nogSimpeler: "5" },
@@ -113,9 +113,9 @@ const steps = [
       },
       {
         q: "Object **10 kg** op aarde. Zwaartekracht (gebruik g=10)?",
-        options: ["100 N","10 N","1 N","9,81 kg"],
+        options: ["100 N","10 N","1 N","100 kg"],
         answer: 0,
-        wrongHints: [null, "Niet — vermenigvuldig met g.", "Te klein.", "Niet kg — N."],
+        wrongHints: [null, "10 is de massa in kg. Wat doet g = 10 N/kg met die massa?", "Je deelde de massa door g. Moet je in F_z = m·g delen of vermenigvuldigen?", "Zwaartekracht is een kracht. In welke eenheid druk je een kracht uit?"],
         uitlegPad: {
           stappen: [{ titel: "F_z = mg", tekst: "**F_z = m × g = 10 × 10 = 100 N**. Massa blijft 10 kg (overal). Op maan: 10 × 1,62 ≈ 16 N." }],
           niveaus: { basis: "100 N.", simpeler: "10·10 = 100 N", nogSimpeler: "100" },
@@ -123,9 +123,9 @@ const steps = [
       },
       {
         q: "Je springt van een trampoline. Welke wet beschrijft dat trampoline jou omhoog duwt?",
-        options: ["Derde Newton","Eerste Newton","Tweede Newton alleen","Pythagoras"],
+        options: ["Derde Newton","Eerste Newton","Tweede Newton","Gravitatiewet"],
         answer: 0,
-        wrongHints: [null, "Niet — die gaat over evenwicht.", "Niet primair — wel meegerekend.", "Niet relevant."],
+        wrongHints: [null, "De eerste wet gaat over traagheid. Verklaart die waarom de trampoline terugduwt als jij erop drukt?", "De tweede wet rekent uit hoe snel je versnelt. Maar waarom duwt de trampoline terug als jij erop drukt?", "De gravitatiewet beschrijft de aantrekking door de aarde. Trekt die jou omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Actie = reactie", tekst: "Je duwt trampoline naar beneden (actie). Trampoline duwt jou met gelijke kracht omhoog (reactie). **Derde Newton-wet**. Beide krachten gelijk in grootte, tegengesteld, op verschillende objecten." }],
           niveaus: { basis: "Derde.", simpeler: "Actie+reactie = 3e Newton", nogSimpeler: "3e" },
@@ -135,7 +135,7 @@ const steps = [
         q: "Object op **helling van 30°**, m = 5 kg, geen wrijving. Versnelling langs helling? (g=10)",
         options: ["5 m/s²","10 m/s²","2,5 m/s²","8,7 m/s²"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen component.", "Niet — welk deel van g werkt langs de helling?", "Niet — fout component (cos)."],
+        wrongHints: [null, "Bij 10 m/s² zou het blok vallen alsof er geen helling is. Welk deel van g werkt langs de helling?", "Niet — welk deel van g werkt langs de helling?", "8,7 m/s² is g·cos 30°. Werkt het cos-deel langs de helling of loodrecht erop?"],
         uitlegPad: {
           stappen: [{ titel: "a = g·sin(α)", tekst: "Component zwaartekracht langs helling: F_// = m·g·sin(α). Versnelling: **a = g·sin(α) = 10·sin(30°) = 10·0,5 = 5 m/s²**.\n\n(Massa valt weg in formule.)" }],
           theorie: "Memo: 30° → sin=0,5, cos=0,866. 45° → beide 0,707. 60° → sin=0,866, cos=0,5.",
@@ -155,7 +155,7 @@ const steps = [
         q: "Wat is **arbeid** bij F=20 N en s=5 m in zelfde richting?",
         options: ["100 J","25 J","4 J","20 J"],
         answer: 0,
-        wrongHints: [null, "Niet — verkeerde bewerking.", "Niet — verkeerde bewerking.", "Mist factor s."],
+        wrongHints: [null, "Je telde 20 en 5 op. Welke bewerking hoort bij arbeid W = F·s?", "Je deelde 20 door 5. Wordt de arbeid kleiner als je over een langere afstand duwt?", "20 is alleen de kracht. Over welke afstand werd er geduwd?"],
         uitlegPad: {
           stappen: [{ titel: "W = F·s", tekst: "Bij parallelle F en s: **W = F · s = 20 × 5 = 100 J**." }],
           niveaus: { basis: "100 J.", simpeler: "W=F·s=20·5=100", nogSimpeler: "100" },
@@ -165,7 +165,7 @@ const steps = [
         q: "**Kinetische energie** auto 1000 kg op 20 m/s?",
         options: ["200.000 J","20.000 J","20 J","1.000.000 J"],
         answer: 0,
-        wrongHints: [null, "Mist factor.", "Mist veel.", "Te groot."],
+        wrongHints: [null, "Je rekende m·v. Waar blijven de ½ en het kwadraat uit E_k = ½·m·v²?", "Je liet de massa weg. Komt m voor in E_k = ½·m·v²?", "Reken na: ½ × 1000 × 20². Hoeveel is 20² precies?"],
         uitlegPad: {
           stappen: [{ titel: "E_k = ½mv²", tekst: "E_k = ½ × m × v² = ½ × 1000 × 20² = ½ × 1000 × 400 = **200.000 J = 200 kJ**." }],
           theorie: "Bij verdubbelen v wordt E_k 4×. Toets-favoriet: 'auto van 50 → 100 km/h hoeveel x energie meer?' → 4×.",
@@ -176,7 +176,7 @@ const steps = [
         q: "Bal 2 kg valt van 5 m hoog. **Welke snelheid bij grond** (g=10, geen luchtweerstand)?",
         options: ["10 m/s","5 m/s","20 m/s","2 m/s"],
         answer: 0,
-        wrongHints: [null, "Te klein.", "Te groot.", "Niet correct."],
+        wrongHints: [null, "Je nam de snelheid gelijk aan de hoogte. Welke formule koppelt valhoogte aan snelheid?", "Vergat je de wortel? Controleer: v² = 2·g·h, dus v = √(2·g·h).", "Hoe lang duurt de val? Gebruik h = ½·g·t² en daarna v = g·t. De massa doet er niet toe."],
         uitlegPad: {
           stappen: [
             { titel: "Energie-behoud", tekst: "E_p_boven = E_k_beneden → mgh = ½mv² → v² = 2gh = 2·10·5 = 100 → **v = 10 m/s**." },
@@ -189,7 +189,7 @@ const steps = [
         q: "Motor levert **2400 J in 60 s**. Vermogen?",
         options: ["40 W","2400 W","144.000 W","0,025 W"],
         answer: 0,
-        wrongHints: [null, "Niet — door tijd delen.", "Niet — vermenigvuldigd.", "Niet — fout-omgedraaid."],
+        wrongHints: [null, "2400 is de energie in joule. Over hoeveel seconden is die geleverd?", "Je vermenigvuldigde energie en tijd. Wordt het vermogen groter als het langer duurt?", "Je deelde de tijd door de energie. Welke van de twee staat boven de deelstreep in P = E/t?"],
         uitlegPad: {
           stappen: [{ titel: "P = W/t", tekst: "**Vermogen = energie/tijd = 2400 / 60 = 40 W**." }],
           niveaus: { basis: "40 W.", simpeler: "2400/60 = 40", nogSimpeler: "40" },
@@ -197,9 +197,9 @@ const steps = [
       },
       {
         q: "Auto verdubbelt snelheid 50→100 km/h. **Remafstand wordt**:",
-        options: ["4× zo lang","2× zo lang","Gelijk","Half zo lang"],
+        options: ["4× zo lang","2× zo lang","8× zo lang","Half zo lang"],
         answer: 0,
-        wrongHints: [null, "Niet — kwadraat.", "Tegenovergesteld.", "Niet — wel groter."],
+        wrongHints: [null, "De remafstand hangt af van de bewegingsenergie, ½·m·v². Wat gebeurt er met v² als v verdubbelt?", "Hoe hangt de remafstand af van de snelheid: met v, met v² of met v³?", "Staat een auto die harder rijdt sneller stil? Wat gebeurt er met zijn bewegingsenergie?"],
         uitlegPad: {
           stappen: [{ titel: "v² in formule", tekst: "Remafstand s = v²/(2a). Verdubbelen v → v² ×4 → **s ×4**.\n\n50 km/h vergt bv 15 m. 100 km/h vergt 60 m.\n\nDit is de reden waarom snelheidslimiet zo cruciaal is voor verkeersveiligheid." }],
           theorie: "Toets-toepassing: reactieafstand + remafstand. Reactieafstand schaalt lineair (×2), remafstand schaalt kwadratisch (×4). Samen veel langere stopafstand bij hoge snelheid.",
@@ -219,7 +219,7 @@ const steps = [
         q: "Wat is **impuls** van 500 kg-voorwerp op 10 m/s?",
         options: ["5000 kg·m/s","500 kg·m/s","50 kg·m/s","0,02 kg·m/s"],
         answer: 0,
-        wrongHints: [null, "Niet — vermenigvuldig met v.", "Niet — niet rechtstreeks.", "Niet — fout-bewerking."],
+        wrongHints: [null, "500 is de massa. Impuls is massa maal snelheid; heb je de snelheid meegenomen?", "Je deelde massa door snelheid. Wordt de impuls kleiner als iets sneller gaat?", "Je deelde de snelheid door de massa. Hoe luidt de formule voor p?"],
         uitlegPad: {
           stappen: [{ titel: "p = m·v", tekst: "**Impuls** p = m × v = 500 × 10 = **5000 kg·m/s**." }],
           niveaus: { basis: "5000 kg·m/s.", simpeler: "p=mv=500·10=5000", nogSimpeler: "5000" },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Twee karren botsen + plakken samen. Welke behoudswet **altijd**?",
-        options: ["Impuls","Kinetische energie","Beide","Geen"],
+        options: ["Impuls","Kinetische energie","Beide","Snelheid"],
         answer: 0,
-        wrongHints: [null, "Niet — bij plakken gaat er bewegingsenergie verloren aan warmte en vervorming.", "Niet — één van de twee gaat bij plastisch botsen juist verloren.", "Niet — er is wél een grootheid die bij elke botsing zonder externe kracht behouden blijft."],
+        wrongHints: [null, "Niet — bij plakken gaat er bewegingsenergie verloren aan warmte en vervorming.", "Niet — één van de twee gaat bij plastisch botsen juist verloren.", "De karren rijden na het plakken samen langzamer verder dan de botsende kar. Blijft de snelheid dan gelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Impulsbehoud universeel", tekst: "**Impulsbehoud** geldt in **elke** botsing (zonder externe kracht). Kinetische energie-behoud alleen bij **elastische** botsing. Plastische (plakken) verliest E_k aan warmte + vervorming." }],
           niveaus: { basis: "Impuls.", simpeler: "Botsing = impulsbehoud", nogSimpeler: "Impuls" },
@@ -239,7 +239,7 @@ const steps = [
         q: "Kar 4 kg, 6 m/s raakt stilstaande 2 kg, plakken samen. Snelheid na?",
         options: ["4 m/s","6 m/s","2 m/s","12 m/s"],
         answer: 0,
-        wrongHints: [null, "Te groot — massa nam toe.", "Te klein.", "Te groot."],
+        wrongHints: [null, "6 m/s is de snelheid van alleen de eerste kar. Na het plakken beweegt er meer massa; wat doet dat met de snelheid?", "Je trok de snelheden van elkaar af. Reken de totale impuls vóór uit en deel die door de totale massa erna.", "Je deelde de impuls door 2 kg. Welke massa beweegt er na het plakken?"],
         uitlegPad: {
           stappen: [
             { titel: "Impulsbehoud", tekst: "Voor: p = 4·6 + 2·0 = 24 kg·m/s. Na: p = (4+2)·v = 6v." },
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "**Airbag** in auto vermindert letsel door:",
-        options: ["Botstijd verlengen → kracht verlagen","Je massa verkleinen","Snelheid stoppen","Geen invloed"],
+        options: ["Botstijd verlengen → kracht verlagen","Massa verkleinen → kracht verlagen","Botstijd verkorten → kracht verlagen","Impuls verkleinen → kracht verlagen"],
         answer: 0,
-        wrongHints: [null, "Niet — je massa blijft gewoon gelijk.", "Niet — de snelheid wordt hoe dan ook nul; het gaat om hoe snel.", "Wel veel invloed."],
+        wrongHints: [null, "Niet — je massa blijft gewoon gelijk.", "Als je sneller tot stilstand komt, wordt de kracht op je lichaam dan kleiner of groter?", "Je snelheid gaat hoe dan ook van v naar 0. Verandert de impulsverandering dan door een airbag?"],
         uitlegPad: {
           stappen: [{ titel: "F = Δp/Δt", tekst: "**Airbag** rekt botstijd Δt op (van milliseconden naar 0,1-0,5 s). Bij vaste Δp (snelheidsverandering): grotere Δt → **kleinere F** op lichaam. Voorkomt levensgevaarlijke krachten op hoofd/borst." }],
           theorie: "Zelfde principe: kreukel-zone, helm, door je knieën zakken bij het landen na een sprong.",
@@ -261,9 +261,9 @@ const steps = [
       },
       {
         q: "Bal A 5 m/s raakt **gelijke** bal B in rust, elastisch. Na botsing:",
-        options: ["A staat stil, B 5 m/s","Beide 2,5 m/s","A 5 m/s, B 0","Beide stil"],
+        options: ["A staat stil, B 5 m/s","A en B elk 2,5 m/s","A 5 m/s terug, B blijft stil","A en B allebei stil"],
         answer: 0,
-        wrongHints: [null, "Klopt impuls maar niet energie.", "Niet — A botst wel.", "Niet — dan verdwijnt alle impuls."],
+        wrongHints: [null, "Bij 2,5 m/s elk klopt de impuls. Reken de bewegingsenergie vóór en na eens uit: is die gelijk gebleven?", "Zo kaatst een bal terug van een muur. Kan een even zware bal B blijven liggen als hij geraakt wordt?", "Als beide ballen stilstaan, is alle impuls verdwenen. Kan dat bij een botsing?"],
         uitlegPad: {
           stappen: [
             { titel: "Klassieke biljart-uitkomst", tekst: "Bij **elastische botsing van 2 gelijke massa's** met 1 in rust: bewegende stopt, stilstaande neemt alle snelheid over. Impuls + E_k beide behouden." },
@@ -285,7 +285,7 @@ const steps = [
         q: "Object eenparig versneld start v=0, na 4 s heeft v=20 m/s. **Verplaatsing**?",
         options: ["40 m","80 m","20 m","100 m"],
         answer: 0,
-        wrongHints: [null, "Niet — bereken de oppervlakte onder de v-t-grafiek (driehoek). Welke formule gebruik je daarvoor?", "Niet correct.", "Niet correct."],
+        wrongHints: [null, "Je rekende v × t, de oppervlakte van een rechthoek. Welke vorm heeft het gebied onder deze v-t-grafiek?", "20 is de eindsnelheid in m/s, geen afstand. Hoe lang heeft het object gereden?", "Hoe kom je aan 100? Teken de v-t-grafiek: het gebied eronder is een driehoek."],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte v-t-driehoek", tekst: "Op v-t-diagram is dit driehoek met basis 4 + hoogte 20. **Opp = ½·4·20 = 40 m** = verplaatsing. (Of via x=½·a·t² met a=5: ½·5·16=40 m. ✓)" }],
           niveaus: { basis: "40 m.", simpeler: "½·4·20=40", nogSimpeler: "40" },
@@ -295,7 +295,7 @@ const steps = [
         q: "Wat is **vermogen** in W bij F=100 N, v=2 m/s constant?",
         options: ["200 W","50 W","100 W","2 W"],
         answer: 0,
-        wrongHints: [null, "Niet — vermenigvuldig.", "Mist v.", "Mist F."],
+        wrongHints: [null, "Je deelde F door v. Wordt het vermogen kleiner als je sneller gaat?", "100 is alleen de kracht. Hoe snel beweegt het voorwerp?", "2 is alleen de snelheid. Hoe groot is de kracht?"],
         uitlegPad: {
           stappen: [{ titel: "P = F·v", tekst: "Bij constante snelheid: **P = F × v = 100 × 2 = 200 W**." }],
           niveaus: { basis: "200 W.", simpeler: "P=Fv=100·2=200", nogSimpeler: "200" },
@@ -303,9 +303,9 @@ const steps = [
       },
       {
         q: "**Wet van traagheid** is welke Newton-wet?",
-        options: ["Eerste","Tweede","Derde","Vierde"],
+        options: ["Eerste","Tweede","Derde","Gravitatiewet"],
         answer: 0,
-        wrongHints: [null, "Niet — F=ma.", "Niet — actie-reactie.", "Bestaat niet."],
+        wrongHints: [null, "De tweede wet is F = m·a. Gaat traagheid over wat een kracht doet, of over wat er zonder kracht gebeurt?", "De derde wet gaat over actie en reactie. Is traagheid een wisselwerking tussen twee voorwerpen?", "De gravitatiewet gaat over aantrekking tussen massa's. Gaat traagheid daarover?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste = traagheid", tekst: "**Eerste Newton-wet** = **wet van traagheid**: zonder netto kracht behoudt object snelheid (incl. richting) of blijft in rust. Tweede = F=ma. Derde = actie-reactie." }],
           niveaus: { basis: "Eerste.", simpeler: "Traagheid = 1e", nogSimpeler: "1e" },
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "Bij **klimmen 2 m hoogte** met 70 kg-persoon: arbeid? (g=10)",
-        options: ["1400 J","700 J","140 J","100 J"],
+        options: ["1400 J","700 J","140 J","14.000 J"],
         answer: 0,
-        wrongHints: [null, "Niet — wel meer.", "Niet correct.", "Niet correct."],
+        wrongHints: [null, "700 N is het gewicht van de persoon. Hoe hoog klimt hij?", "Je vermenigvuldigde de massa met de hoogte. Waar is g gebleven?", "Je hebt een nul te veel. Reken m·g·h nog eens na."],
         uitlegPad: {
           stappen: [{ titel: "Tegen zwaartekracht = mgh", tekst: "Arbeid = ΔE_p = m·g·h = 70 × 10 × 2 = **1400 J**." }],
           niveaus: { basis: "1400 J.", simpeler: "70·10·2=1400", nogSimpeler: "1400" },
@@ -323,9 +323,9 @@ const steps = [
       },
       {
         q: "Raket lanceert door gas naar beneden te stoten. Welke Newton-wet **primair**?",
-        options: ["Derde (actie-reactie)","Eerste (traagheid)","Pythagoras","Geen Newton"],
+        options: ["Derde (actie-reactie)","Eerste (traagheid)","Tweede (F = m × a)","Gravitatiewet (aantrekking)"],
         answer: 0,
-        wrongHints: [null, "Niet — traagheid speelt geen rol bij lancering.", "Niet relevant.", "Wel Newton."],
+        wrongHints: [null, "De eerste wet zegt wat er gebeurt zonder netto kracht. Verklaart die waar de duwkracht op de raket vandaan komt?", "De tweede wet rekent uit hoe snel de raket versnelt. Maar waar komt de duwkracht op de raket vandaan?", "De gravitatiewet beschrijft de aantrekking door de aarde. Trekt die de raket omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Raket = actie-reactie", tekst: "Raket duwt gas omlaag (actie) → gas duwt raket omhoog met gelijke kracht (reactie). **Derde Newton + impulsbehoud** zorgen samen voor stuwkracht. Hoe meer gasmassa × gas-snelheid eruit, hoe meer raketsnelheid omhoog." }],
           niveaus: { basis: "Derde.", simpeler: "Raket = 3e Newton", nogSimpeler: "3e" },

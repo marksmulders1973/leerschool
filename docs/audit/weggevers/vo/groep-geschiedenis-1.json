@@ -1,0 +1,1330 @@
+[
+ {
+  "pad": "gouden-eeuw-geschiedenis",
+  "file": "./goudenEeuwGeschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat betekent VOC?",
+  "opties": [
+   "Verenigde Oostindische Compagnie",
+   "Verenigde Oostzee Compagnie",
+   "Vrije Oranjes Compagnie",
+   "Vlaamse Oost Coalitie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "gouden-eeuw-geschiedenis",
+  "file": "./goudenEeuwGeschiedenis.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wie ontdekte micro-organismen met microscoop?",
+  "opties": [
+   "Antoni van Leeuwenhoek",
+   "Christiaan Huygens",
+   "Newton",
+   "Galilei"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "gouden-eeuw-geschiedenis",
+  "file": "./goudenEeuwGeschiedenis.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Waarom waren Amsterdamse huizen smal en hoog?",
+  "opties": [
+   "Belasting was op breedte",
+   "Bevel van de koning",
+   "Modetrend",
+   "Beter tegen wind"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "gouden-eeuw-geschiedenis",
+  "file": "./goudenEeuwGeschiedenis.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke landen vielen Nederland aan in 1672?",
+  "opties": [
+   "Frankrijk + Engeland + 2 bisdommen",
+   "Duitsland + Italië",
+   "Spanje + Portugal",
+   "Belgisch koninkrijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "gouden-eeuw-geschiedenis",
+  "file": "./goudenEeuwGeschiedenis.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is VOC?",
+  "opties": [
+   "Verenigde Oostindische Compagnie",
+   "Vrije Oranje-Coalitie",
+   "Verenigde Oranje Compagnie",
+   "Vereniging Olie-Centra"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "gouden-eeuw-geschiedenis",
+  "file": "./goudenEeuwGeschiedenis.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat was uniek aan VOC in 1602?",
+  "opties": [
+   "Eerste bedrijf met aandelen ter wereld",
+   "Eerste bank",
+   "Eerste museum",
+   "Eerste universiteit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat was het drieslagstelsel?",
+  "opties": [
+   "Akkerbouw met 3 delen, 1 deel braak",
+   "Belasting van 3 standen",
+   "Verdeling in 3 machten",
+   "Veeteelt met 3 soorten dieren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat waren Inclosure Acts in Engeland?",
+  "opties": [
+   "Wetten die gemeenschappelijke gronden privatiseerden",
+   "Wetten tegen kinderarbeid",
+   "Belasting op import",
+   "Wetten voor onderwijs"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Mercantilisme was:",
+  "opties": [
+   "Handelsoverschot opbouwen voor goud",
+   "Vrije markt-theorie",
+   "Communisme",
+   "Religieus economisch systeem"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom begon de industriële revolutie in Engeland en niet bv. in Frankrijk?",
+  "opties": [
+   "Samenloop van kolen, kolonies en stabiele politiek",
+   "Engelsen werkten harder dan anderen",
+   "Engeland had meer inwoners",
+   "Frans onderwijs was slechter"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "Engelse stad Manchester groeide tussen 1750-1850:",
+  "opties": [
+   "Werd zo'n 18× zo groot",
+   "Bleef gelijk",
+   "Halveerde",
+   "Verdubbelde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is het fabriekssysteem?",
+  "opties": [
+   "Productie met machines in één gebouw",
+   "Werkdag van 8 uur",
+   "Ambachtswerk thuis",
+   "Slavernij in fabrieken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat regelde 'Kinderwetje van Van Houten' (1874)?",
+  "opties": [
+   "Verbod op kinderarbeid",
+   "Leerplicht",
+   "Kinderbijslag",
+   "Adoptie-regels"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Vakbond is een organisatie die:",
+  "opties": [
+   "Arbeiders verenigt voor betere lonen",
+   "Werkgevers verenigt",
+   "Gelovigen verenigt",
+   "Politieke partijen verenigt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Meiji-restauratie (1868) in Japan:",
+  "opties": [
+   "Snelle modernisering van Japan",
+   "Boeren-revolutie in Japan",
+   "Religieuze hervorming",
+   "Oorlog tegen China"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Berlijn-Conferentie (1884-85):",
+  "opties": [
+   "Europese landen verdelen Afrika onderling",
+   "Vredesakkoord WO1",
+   "Internationale wetenschapsconferentie",
+   "Olympische Spelen-overleg"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Marx voorspelde dat de arbeiders-revolutie zou plaatsvinden in:",
+  "opties": [
+   "Geïndustrialiseerde landen zoals Engeland",
+   "Agrarisch Rusland",
+   "China",
+   "Latijns-Amerika"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is meerwaarde volgens Marx?",
+  "opties": [
+   "Waarde van het werk min het loon",
+   "Belasting op loon",
+   "Betaling voor overuren",
+   "Rente op kapitaal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "industriele-revolutie-havo-vwo",
+  "file": "./industrieleRevolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "4e industriële revolutie (sinds ~2010) wordt gekenmerkt door:",
+  "opties": [
+   "AI + robotica + biotechnologie + automatisering kenniswerk",
+   "Stoom-machine + textiel",
+   "Elektriciteit + verbrandingsmotor",
+   "Internet + PC"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Hoe heette de kolonie officieel in de 19e eeuw?",
+  "opties": [
+   "Nederlands-Indië",
+   "Indonesië",
+   "Java",
+   "Oost-Indië"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wie bedacht het Cultuurstelsel in 1830?",
+  "opties": [
+   "Johannes van den Bosch",
+   "Multatuli",
+   "Soekarno",
+   "Willem I"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is het batig slot?",
+  "opties": [
+   "Winst voor de Nederlandse staat",
+   "Cultuurstelsel-handboek",
+   "Indonesische muziek-stijl",
+   "Belasting-categorie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Ethische politiek (1901) had drie speerpunten. Welke?",
+  "opties": [
+   "Onderwijs + Irrigatie + Emigratie",
+   "Geloof + Werk + Familie",
+   "Leger + Politie + Belasting",
+   "Suiker + Koffie + Thee"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Welke organisatie startte de Indonesische nationalistische beweging in 1908?",
+  "opties": [
+   "Boedi Oetomo",
+   "PNI",
+   "VOC",
+   "KNIL"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat zijn romusha in de Japanse bezetting?",
+  "opties": [
+   "Gedwongen Indonesische dwangarbeiders",
+   "Japanse soldaten",
+   "Indonesische ambtenaren",
+   "NL-krijgsgevangenen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Welk effect had Japanse bezetting op NL-koloniale prestige?",
+  "opties": [
+   "Sterk verzwakt",
+   "Versterkt",
+   "Geen",
+   "Verdwenen volledig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wanneer erkende Nederland officieel de soevereiniteit van Indonesië?",
+  "opties": [
+   "27 december 1949",
+   "17 augustus 1945",
+   "15 augustus 2005",
+   "20 mei 1908"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2K",
+  "q": "Welk land legde internationale druk op NL om te stoppen?",
+  "opties": [
+   "Verenigde Staten",
+   "Engeland",
+   "Frankrijk",
+   "België"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Welk staatshoofd bood in 2020 excuses aan voor het Nederlandse koloniale geweld?",
+  "opties": [
+   "Willem-Alexander",
+   "Beatrix",
+   "Juliana",
+   "Wilhelmina"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kolonie-indonesie",
+  "file": "./kolonieIndonesie.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Welke beweging begon het moderne Indonesische nationalisme in 1908?",
+  "opties": [
+   "Boedi Oetomo",
+   "PNI",
+   "KNIL",
+   "VOC"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat was Pax Romana?",
+  "opties": [
+   "Een lange periode van vrede",
+   "Een Romeinse wet",
+   "Een Romeinse straf",
+   "Een Romeinse god"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is 'brood en spelen'?",
+  "opties": [
+   "Volk rustig houden met eten en spelen",
+   "Een Romeins gerecht",
+   "Een kinderspel",
+   "Een religieus feest"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de Limes?",
+  "opties": [
+   "Grens van het Romeinse Rijk",
+   "Een Romeins fort",
+   "Een wapen",
+   "Een god"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welk volk leefde in Nederland in Romeinse tijd?",
+  "opties": [
+   "Bataven en Friezen",
+   "Vikingen",
+   "Spanjaarden",
+   "Mongolen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat zijn aquaducten?",
+  "opties": [
+   "Romeinse waterleidingen",
+   "Romeinse schepen",
+   "Soort wapens",
+   "Tempels"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke volken vielen het Westromeinse Rijk binnen?",
+  "opties": [
+   "Goten, Vandalen, Hunnen, Franken",
+   "Egyptenaren",
+   "Grieken",
+   "Maya's"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welk deel van Rome bleef nog 1000 jaar bestaan?",
+  "opties": [
+   "Oostromeinse / Byzantijnse Rijk",
+   "West-Rome",
+   "Geen",
+   "Egypte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een Romaanse taal?",
+  "opties": [
+   "Taal die van het Latijn afstamt",
+   "Romaanse architectuur",
+   "Een Roman",
+   "Romeinse stijl"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "romeinen-geschiedenis",
+  "file": "./romeinenGeschiedenis.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat is MMXXVI in Romeinse cijfers?",
+  "opties": [
+   "2026",
+   "1926",
+   "2126",
+   "2226"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Wie was de Spaanse koning toen de Tachtigjarige Oorlog uitbrak?",
+  "opties": [
+   "Filips II",
+   "Karel V",
+   "Lodewijk XIV",
+   "Filips III"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat gebeurde er bij de Beeldenstorm (1566)?",
+  "opties": [
+   "Calvinisten vernielden heiligenbeelden in katholieke kerken",
+   "Een aardbeving verwoestte kerken",
+   "Spaanse soldaten plunderden steden",
+   "Een grote stormvloed"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat krijgen Leidenaars elk jaar op 3 oktober te eten?",
+  "opties": [
+   "Haring + wittebrood",
+   "Snert",
+   "Pannenkoeken",
+   "Worst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel provincies had de Republiek?",
+  "opties": [
+   "7",
+   "12",
+   "3",
+   "17"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie regeerde de Republiek?",
+  "opties": [
+   "Staten-Generaal en stadhouder",
+   "Een gekozen president",
+   "De paus",
+   "Filips II"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welk principe staat in het Plakkaat van Verlatinghe?",
+  "opties": [
+   "Bij tirannie mag het volk de koning afzweren",
+   "Belasting moet eerlijk zijn",
+   "Iedereen krijgt gratis brood",
+   "Spanjaarden moeten weg"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 9,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat gebeurde er met de Schelde door de Vrede van Münster?",
+  "opties": [
+   "Werd gesloten voor scheepvaart",
+   "Werd internationale rivier",
+   "Werd in tweeën gedeeld",
+   "Werd drooggelegd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tachtigjarige-oorlog-geschiedenis",
+  "file": "./tachtigjarigeOorlogGeschiedenis.js",
+  "stap": 9,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Welk beroemd schilderij toont de Eed bij de Vrede van Münster?",
+  "opties": [
+   "Een schilderij van Gerard ter Borch",
+   "De Nachtwacht door Rembrandt",
+   "Het Melkmeisje door Vermeer",
+   "Geen specifiek schilderij"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "*Encyclopédie* werd geredigeerd door:",
+  "opties": [
+   "Diderot + d'Alembert",
+   "Voltaire alleen",
+   "Rousseau",
+   "Newton"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Slagzin 'No taxation without representation' betekent:",
+  "opties": [
+   "Geen belasting zonder vertegenwoordiging in parlement",
+   "Iedereen mag stemmen",
+   "Geen oorlog",
+   "Geen koningen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welk land steunde de koloniën tegen Engeland?",
+  "opties": [
+   "Frankrijk",
+   "Pruisen",
+   "Rusland",
+   "Italië"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is hypocrisie in Onafhankelijkheidsverklaring?",
+  "opties": [
+   "Gelijkheid beloofd, slavernij bleef",
+   "Geen gelijkheid beloofd",
+   "Geen leger opgericht",
+   "Geen koloniën genoemd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel standen in ancien régime?",
+  "opties": [
+   "Drie",
+   "Twee",
+   "Vier",
+   "Acht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Verklaring Rechten Mens (aug 1789) afkomstig uit invloed van:",
+  "opties": [
+   "Verlichting + Amerikaans voorbeeld",
+   "Bijbel",
+   "Egyptische beschaving",
+   "Romeinse keizers"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is het motto van Franse Republiek tot vandaag?",
+  "opties": [
+   "Liberté, égalité, fraternité",
+   "Sapere aude",
+   "E pluribus unum",
+   "Deus vult"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welke gebeurtenis bracht Napoleon aan macht?",
+  "opties": [
+   "Staatsgreep 18 Brumaire 1799",
+   "Bestorming Bastille",
+   "Slag bij Waterloo",
+   "Geboorte op Corsica"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Napoleon verloor Russische veldtocht 1812 vooral door:",
+  "opties": [
+   "Winter + 'verschroeide aarde' tactiek",
+   "Verraad",
+   "Britse vloot",
+   "Ziekte alleen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat besliste Congres van Wenen 1814-15 voor NL?",
+  "opties": [
+   "Verenigd Koninkrijk der Nederlanden",
+   "Ingelijfd bij Pruisen",
+   "Bij Frankrijk",
+   "Republiek Holland"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welk document is uit 1776?",
+  "opties": [
+   "Amerikaanse Onafhankelijkheidsverklaring",
+   "Verklaring Rechten Mens (FR)",
+   "Code Napoléon",
+   "Magna Carta"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "verlichting-revoluties-havo-vwo",
+  "file": "./verlichtingRevolutiesHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is een paradox Verlichting + revoluties?",
+  "opties": [
+   "Gelijkheid beloofd, maar slavernij bleef",
+   "Iedereen kreeg direct stemrecht",
+   "Revoluties slaagden volledig",
+   "Kerk kreeg meer macht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is nationalisme?",
+  "opties": [
+   "Sterke trots in eigen volk/land",
+   "Vredesbeweging",
+   "Internationaal samenwerken",
+   "Religie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een loopgraaf?",
+  "opties": [
+   "Sloot in de grond waar soldaten schuilden",
+   "Wapen",
+   "Voertuig",
+   "Vredesplek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Was Nederland in oorlog in WO1?",
+  "opties": [
+   "Nee — neutraal",
+   "Ja — met Duitsland",
+   "Ja — met Engeland",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Welk oproer brak uit in juli 1917?",
+  "opties": [
+   "Aardappeloproer Amsterdam",
+   "Bietoproer",
+   "Broodoproer Rotterdam",
+   "Kolenoproer Den Haag"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wie vluchtte na verlies oorlog naar Doorn (NL)?",
+  "opties": [
+   "Duitse keizer Wilhelm II",
+   "Lenin",
+   "Frans Ferdinand",
+   "Hitler"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel doden ongeveer in WO1?",
+  "opties": [
+   "~17 miljoen",
+   "~1 miljoen",
+   "~50 miljoen",
+   "~100.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke rijken vielen uiteen na WO1?",
+  "opties": [
+   "Oostenrijk-Hongarije en Ottomaanse Rijk",
+   "Alleen het Russische Rijk",
+   "Alleen het Britse Rijk",
+   "Geen enkel rijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2K",
+  "q": "Welke 4 letters van MAIN-oorzaken?",
+  "opties": [
+   "Militarisme + Allianties + Imperialisme + Nationalisme",
+   "Macht + Antisemitisme + Inflatie + Naties",
+   "Marine + Atlas + Industrie + Noord-Europa",
+   "Marshall + Arabieren + Italië + Nederland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie werd vermoord op 28 juni 1914?",
+  "opties": [
+   "Aartshertog Frans Ferdinand",
+   "Keizer Wilhelm II",
+   "Tsaar Nicolaas",
+   "Hitler"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog1-geschiedenis",
+  "file": "./wereldoorlog1Geschiedenis.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een loopgraaf?",
+  "opties": [
+   "Sloot in grond voor soldaten",
+   "Wapen",
+   "Voertuig",
+   "Vredesplek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat gebeurde er in oktober 1929?",
+  "opties": [
+   "De beurs in New York crashte",
+   "Hitler werd Duits leider",
+   "WO2 begon",
+   "Nederland werd bezet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom groeide de NSDAP zo snel tussen 1928 en 1932?",
+  "opties": [
+   "Door werkloosheid + armoede zochten mensen extreme oplossingen",
+   "De regering verbood alle andere partijen",
+   "Duitsland werd binnengevallen door Frankrijk",
+   "De koning steunde Hitler"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat was de Anschluss (1938)?",
+  "opties": [
+   "Duitsland nam Oostenrijk in zonder oorlog",
+   "Een verdrag met de Sovjet-Unie",
+   "Een kamp voor politieke gevangenen",
+   "Een Duitse uitvinding"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat was appeasement-politiek?",
+  "opties": [
+   "Hitler toegevingen doen om oorlog te voorkomen",
+   "Hitler aanvallen voordat hij groter werd",
+   "Een Duits sportfeest",
+   "Het verbieden van de NSDAP"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Welke 3 oorzaken samen leidden tot WO2?",
+  "opties": [
+   "Versailles + crisis '29 + Hitler aan de macht",
+   "Atoombom + televisie + EU",
+   "Pest + kruistochten + Romeinen",
+   "Boekdrukkunst + VOC + Napoleon"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat betekent collaboratie in deze context?",
+  "opties": [
+   "Samenwerken met de vijand (bezetter)",
+   "Verzet plegen",
+   "Onderduiken",
+   "Bevrijden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat was D-Day (6 juni 1944)?",
+  "opties": [
+   "Geallieerde landing in Normandië, Frankrijk",
+   "Het einde van WO2",
+   "Het bombardement op Rotterdam",
+   "Hitlers verjaardag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Waar ging de slag bij Stalingrad over?",
+  "opties": [
+   "Een Duitse aanval in de Sovjet-Unie",
+   "Een aanval op Engeland",
+   "Een poging Nederland te bevrijden",
+   "Een atoombomtest"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat was de Hongerwinter in NL?",
+  "opties": [
+   "Een tijd van grote honger in Nederland",
+   "Een Duitse hongerstaking",
+   "Een feestdag op 5 mei",
+   "Een militair plan"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom herdenkt NL ook 15 augustus?",
+  "opties": [
+   "Einde van de oorlog in Nederlands-Indië",
+   "Hitler pleegt zelfmoord",
+   "D-Day vindt plaats",
+   "Begin van WO2"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de Holocaust?",
+  "opties": [
+   "Stelselmatige moord op ~6 miljoen joden door nazi-Duitsland",
+   "Een militair plan voor de invasie van Engeland",
+   "Een Duitse propagandafilm",
+   "Een naoorlogs herdenkingsmonument"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 8,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wanneer is de internationale Holocaust-herdenkingsdag?",
+  "opties": [
+   "27 januari (bevrijding Auschwitz, 1945)",
+   "5 mei (bevrijding NL)",
+   "4 mei (NL Dodenherdenking)",
+   "11 november (einde WO1)"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 10,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat was er eerst: Anne Frank in onderduik óf D-Day?",
+  "opties": [
+   "Anne Frank in onderduik eerst — D-Day kwam later",
+   "D-Day eerst — Anne Frank dook later onder",
+   "Tegelijk in 1944",
+   "Beide kort na de oorlog"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereldoorlog2-geschiedenis",
+  "file": "./wereldoorlog2Geschiedenis.js",
+  "stap": 10,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke drie hoofdoorzaken zorgden samen voor WO2?",
+  "opties": [
+   "Versailles-verdrag + crisis 1929 + Hitler/NSDAP",
+   "Atoombom + Pearl Harbor + Stalingrad",
+   "Holocaust + Anne Frank + Hongerwinter",
+   "VN + EU + NAVO"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

@@ -193,7 +193,7 @@ const steps = [
           null,
           "Protonen zitten vast in de kern van het atoom — bewegen niet.",
           "Neutronen hebben geen lading.",
-          "Hele atomen bewegen niet door een draad — alleen elektronen.",
+          "Hele atomen zitten vast op hun plek in het metaal. Welk deel van een atoom kan wél loskomen en bewegen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Elektronen lopen door draad", tekst: "In metalen zitten elektronen los gebonden — ze kunnen bewegen. Stroom = stroom van elektronen door een geleider." }],
@@ -206,13 +206,13 @@ const steps = [
       },
       {
         q: "Welk materiaal is een **isolator**?",
-        options: ["Plastic", "Koper", "IJzer", "Aluminium"],
+        options: ["Plastic", "Koper", "Zout water", "Potloodstift (grafiet)"],
         answer: 0,
         wrongHints: [
           null,
           "Koper is juist een goede geleider (kabels van rood-koper).",
-          "IJzer geleidt ook stroom.",
-          "Aluminium geleidt stroom (hoogspanningskabels).",
+          "Waarom mag een föhn nooit in bad vallen? Wat doet water met zout erin met stroom?",
+          "Met een potloodstreep kun je een lampje laten branden in een stroomkring. Laat grafiet stroom door of niet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Plastic = isolator", tekst: "Plastic, rubber, glas en droog hout zijn isolatoren — geen vrije elektronen, dus stroom kan er niet doorheen." }],
@@ -234,16 +234,16 @@ const steps = [
         q: "Wat moet er gebeuren om een lamp te laten branden?",
         options: [
           "De stroomkring moet gesloten zijn",
-          "De lamp moet warm zijn",
+          "De schakelaar moet open staan",
           "Er moet een isolator in zitten",
-          "De spanning moet 0 zijn",
+          "De draden moeten van koper zijn",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Lamp wordt vanzelf warm door stroom — niet andersom.",
+          "Bij een open schakelaar zit er een opening in de kring. Kan de stroom daar langs?",
           "Isolator stopt stroom juist.",
-          "Geen spanning → geen stroom → geen licht.",
+          "Ook ijzer- of aluminiumdraad geleidt stroom. Wat is écht nodig om de lamp te laten branden?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Gesloten kring nodig", tekst: "Stroom kan alleen lopen als er een COMPLETE rondgaande baan is: bron → draad → verbruiker → draad → bron. Open ergens = geen stroom." }],
@@ -258,16 +258,16 @@ const steps = [
         q: "Wat is **kortsluiting**?",
         options: [
           "Stroom gaat terug naar de bron zonder verbruiker",
-          "Een stroomkring zonder spanningsbron",
-          "Een hele lange draad",
-          "Een lamp die kapot is",
+          "Een stroomkring zonder batterij of spanningsbron",
+          "Een kring met te veel apparaten tegelijk",
+          "Een onderbroken kring door een kapotte lamp",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Zonder spanningsbron loopt er helemaal geen stroom — dus ook geen kortsluiting.",
-          "Lengte van draad heeft niets met kortsluiting te maken.",
-          "Een kapotte lamp geeft alleen open kring.",
+          "Te veel apparaten tegelijk heet overbelasting. Wat gebeurt er bij kortsluiting met de verbruiker?",
+          "Bij een kapotte lamp is de kring open en loopt er geen stroom. Is dat gevaarlijk zoals kortsluiting?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Kortsluiting = pad zonder verbruiker", tekst: "Bij kortsluiting kan stroom direct terug naar bron zonder eerst door een verbruiker. Weinig weerstand → enorme stroom → draden heet → brandgevaar." }],
@@ -337,15 +337,15 @@ const steps = [
         options: [
           "Met een ampèremeter in serie",
           "Met een voltmeter parallel",
-          "Met een thermometer",
-          "Met een liniaal",
+          "Met een ampèremeter parallel",
+          "Met een voltmeter in serie",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Voltmeter meet spanning (parallel), niet stroomsterkte.",
-          "Thermometer meet temperatuur, niet stroom.",
-          "Liniaal meet lengte, niet stroom.",
+          "Door de meter moet dezelfde stroom lopen als door de lamp. Lukt dat als hij ernaast hangt?",
+          "Een voltmeter meet spanning, geen stroomsterkte. Welke meter heb je nodig?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Ampèremeter IN serie", tekst: "Stroomsterkte meten = de meter IN de kring zetten. Alle stroom moet door de ampèremeter — dat kan alleen in serie." }],
@@ -392,8 +392,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Volt is spanning.",
-          "Watt is vermogen.",
+          "Volt is de eenheid van spanning, niet van weerstand.",
+          "Watt is de eenheid van vermogen, niet van weerstand.",
           "Newton is voor kracht (mechanica).",
         ],
         uitlegPad: {
@@ -440,13 +440,13 @@ const steps = [
     checks: [
       {
         q: "Een lamp van 100 Ω op een 12 V batterij. Wat is de stroomsterkte?",
-        options: ["0,12 A", "1.200 A", "12 A", "100 A"],
+        options: ["0,12 A", "1.200 A", "8,3 A", "1,2 A"],
         answer: 0,
         wrongHints: [
           null,
-          "Veel te veel — bij die spanning + weerstand is het minder.",
-          "Te veel — dan zou de batterij ontploffen.",
-          "Bedoel je de weerstand? Dan ja, maar de vraag is naar I.",
+          "Je vermenigvuldigde spanning en weerstand. Wordt de stroom groter of kleiner als de weerstand groter is?",
+          "Je deelde de weerstand door de spanning. Welke van de twee hoort boven de deelstreep?",
+          "Reken 12 ÷ 100 nog eens na. Waar staat de komma?",
         ],
         uitlegPad: {
           stappen: [{ titel: "I = U / R = 12/100 = 0,12 A", tekst: "Wet van Ohm omgeschreven: I = U/R. Met U=12 V en R=100 Ω → I = 12/100 = 0,12 A (= 120 mA)." }],
@@ -463,8 +463,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Plus is fout — de wet is een vermenigvuldiging.",
-          "Min is fout — vermenigvuldigen.",
+          "Kun je ampère en ohm bij elkaar optellen? Het zijn verschillende eenheden.",
+          "Ook aftrekken past niet: ampère en ohm zijn verschillende eenheden. Welke bewerking koppelt ze wel?",
           "Andersom — als je I berekent: I = U / R.",
         ],
         uitlegPad: {
@@ -506,13 +506,13 @@ const steps = [
     checks: [
       {
         q: "Wat is **gelijk** voor alle verbruikers in een **serieschakeling**?",
-        options: ["Stroomsterkte I", "Spanning U", "Weerstand R", "Niets"],
+        options: ["Stroomsterkte I", "Spanning U", "Weerstand R", "Vermogen P"],
         answer: 0,
         wrongHints: [
           null,
           "Spanning splitst juist over de verbruikers.",
           "Weerstand kan per onderdeel verschillen.",
-          "Wel degelijk iets — alle stroom gaat door één en hetzelfde pad. Wat blijft dan overal hetzelfde?",
+          "Vermogen is P = U × I. Is de spanning over elke lamp gelijk als ze verschillende weerstanden hebben?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Serie = stroom overal gelijk", tekst: "In een serieschakeling gaan alle elektronen door dezelfde baan, dus dezelfde I door elk onderdeel. Spanning verdeelt zich, stroom blijft gelijk." }],
@@ -525,13 +525,13 @@ const steps = [
       },
       {
         q: "Wat is **gelijk** voor alle verbruikers in een **parallelschakeling**?",
-        options: ["Spanning U", "Stroomsterkte I", "Weerstand R", "Niets"],
+        options: ["Spanning U", "Stroomsterkte I", "Weerstand R", "Vermogen P"],
         answer: 0,
         wrongHints: [
           null,
-          "Stroomsterkte splitst juist.",
+          "In een parallelschakeling verdeelt de stroom zich over de takken. Is die dan overal gelijk?",
           "Weerstand kan per tak verschillen.",
-          "Wel — elke tak zit rechtstreeks tussen + en − van de bron. Wat is dan voor elke tak hetzelfde?",
+          "Vermogen is P = U × I. Is de stroom door elke tak gelijk als de takken verschillende weerstanden hebben?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Parallel = spanning overal gelijk", tekst: "In een parallelschakeling heeft elke tak zijn eigen pad tussen + en −. Spanning over elke tak = bron-spanning. Stroom splitst zich." }],
@@ -546,16 +546,16 @@ const steps = [
         q: "Bij een **serieschakeling**: als 1 lamp stukgaat, wat gebeurt er met de rest?",
         options: [
           "Alle lampen gaan uit",
-          "Niks, ze blijven branden",
-          "Alleen de 2e lamp gaat uit",
-          "De batterij ontploft",
+          "De rest blijft gewoon branden",
+          "De lampen erna gaan uit, ervoor niet",
+          "De andere lampen branden feller",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Bij parallel zou dit kloppen, maar in serie...",
           "Is er in een serieschakeling nog een ander pad voor de stroom als één lamp de kring onderbreekt?",
-          "Geen ontploffing — gewoon stilstand.",
+          "Kan er nog stroom door de andere lampen lopen als de kring ergens open is?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Serie: 1 stuk = alles uit", tekst: "Stroom moet door ALLE verbruikers in serie. Eén kapot = kring onderbroken = geen stroom = alles uit." }],
@@ -581,7 +581,7 @@ const steps = [
           null,
           "Plus is fout — vermenigvuldigen.",
           "Dat is een variant op Wet van Ohm voor I, niet voor P.",
-          "Variatie kan maar net niet — let op de eenheden.",
+          "Reken de eenheden na: ohm × ampère geeft volt, geen watt. Welke twee grootheden geven samen watt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = U × I", tekst: "Vermogen P = spanning U × stroomsterkte I. Eenheid: watt (W) = V × A." }],
@@ -624,16 +624,16 @@ const steps = [
         q: "Wat doet een **aardlekschakelaar**?",
         options: [
           "Schakelt uit als er stroom weglekt naar de aarde",
-          "Filtert storingen uit de stroom",
-          "Verlaagt de spanning naar een veilig niveau",
-          "Maakt de stroom sterker voor zware apparaten",
+          "Leidt lekstroom van de metalen behuizing naar de aarde",
+          "Leidt bij blikseminslag de stroom naar de aarde",
+          "Schakelt uit als er te veel apparaten aan staan",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Geen filter — een schakelaar.",
-          "Verlaagt niet de spanning, wel kan 'ie 'm uitschakelen.",
-          "Andersom — schakelt juist uit.",
+          "Het wegleiden van stroom doet de groen-gele aardedraad zelf. Een schakelaar kan stroom alleen doorlaten of onderbreken; wanneer doet deze dat?",
+          "Tegen blikseminslag zit een bliksemafleider op het dak, geen kastje in de meterkast. Waar reageert de aardlekschakelaar dan op?",
+          "Bij te veel apparaten tegelijk slaat de zekering (groepsautomaat) door. Waar let de aardlekschakelaar op?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Aardlek schakelt uit bij lek", tekst: "Aardlekschakelaar detecteert verschil tussen ingaande en uitgaande stroom. Bij verschil ≥ 30 mA (= stroom 'lekt' weg, vaak via mens naar aarde) → schakelt binnen 30 ms uit. Redt levens." }],
@@ -648,16 +648,16 @@ const steps = [
         q: "Waarom hebben metalen apparaten een **aardingdraad**?",
         options: [
           "Bij een defect gaat stroom via de aarde weg, niet via jou",
-          "Zodat het apparaat minder stroom verbruikt",
-          "Zodat het apparaat sneller opwarmt",
-          "Om de spanning boven 230 V te brengen",
+          "Zodat het apparaat uitschakelt als het oververhit raakt",
+          "Zodat het apparaat niet kapotgaat als de spanning piekt",
+          "Als extra draad waardoor de stroom terug naar de bron loopt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Door de aardingdraad loopt normaal geen stroom — dus geen invloed op verbruik.",
-          "Hoe snel iets opwarmt hangt af van het vermogen, niet van de aarding.",
-          "De spanning blijft 230 V — waarvoor dient die extra draad dan als er iets kapotgaat?",
+          "Tegen oververhitting zit een thermische beveiliging in het apparaat zelf. Door de aardedraad loopt normaal geen stroom; wanneer dan wel?",
+          "Tegen spanningspieken gebruik je een stekkerdoos met overspanningsbeveiliging. Door de aardedraad loopt normaal geen stroom; wanneer dan wel?",
+          "Dat doet de nuldraad. Door de aardedraad loopt normaal geen stroom; wanneer dan wel?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Aarding leidt sluiting weg", tekst: "Als binnenin een apparaat een draad de metalen behuizing raakt → behuizing onder spanning. De aardingdraad leidt die stroom DIRECT weg naar de aarde → aardlek detecteert lek → schakelt uit. Zonder aarding zou JIJ de aarde-route zijn." }],
@@ -680,15 +680,15 @@ const steps = [
         options: [
           "Een apparaat van 1 kW dat 1 uur aan staat",
           "Een apparaat van 1 kW dat 1 minuut aan staat",
-          "1 kilometer per uur",
-          "1.000 watt vermogen",
+          "Een apparaat van 1 W dat 1 uur aan staat",
+          "Een apparaat van 1.000 kW dat 1 uur aan staat",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Kijk goed naar de tijd: hoe lang hoort het apparaat aan te staan?",
-          "Niets met snelheid.",
-          "Dat is 1 kW (vermogen), niet kWh (energie).",
+          "1 W is duizend keer kleiner dan 1 kW. Waar staat de k in kWh voor?",
+          "Je rekende de kilo dubbel: 1.000 kW is al een megawatt. Hoeveel watt hoort bij de k in kWh?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 kWh = 1 kW × 1 uur", tekst: "kWh is energie: vermogen (kW) maal tijd (uren). 1 kWh = apparaat van 1000 W dat 1 uur aan staat." }],
@@ -729,13 +729,13 @@ const steps = [
     checks: [
       {
         q: "Een lamp van 200 Ω op 230 V. Hoeveel stroom?",
-        options: ["1,15 A", "230 A", "0,01 A", "46 A"],
+        options: ["1,15 A", "230 A", "0,01 A", "0,87 A"],
         answer: 0,
         wrongHints: [
           null,
           "Veel te veel — gebruik de wet van Ohm: welke formule geeft de stroom bij bekende spanning en weerstand?",
-          "Te weinig — controleer.",
-          "Te veel.",
+          "Te weinig. Controleer of je de spanning door de weerstand deelt: I = U ÷ R.",
+          "Je deelde de weerstand door de spanning. Welke van de twee hoort boven de deelstreep in I = U ÷ R?",
         ],
         uitlegPad: {
           stappen: [{ titel: "I = U/R = 230/200 = 1,15 A", tekst: "Wet van Ohm: I = U/R. 230 ÷ 200 = 1,15 A." }],
@@ -748,13 +748,13 @@ const steps = [
       },
       {
         q: "Een apparaat van 1.500 W staat 4 uur aan. Hoeveel kWh?",
-        options: ["6 kWh", "375 kWh", "0,375 kWh", "60 kWh"],
+        options: ["6 kWh", "6.000 kWh", "0,375 kWh", "60 kWh"],
         answer: 0,
         wrongHints: [
           null,
-          "Te veel — zet het vermogen eerst om naar kW en reken dan pas met de tijd.",
-          "Te weinig — controleer eenheden.",
-          "Te veel.",
+          "Je rekende in wattuur. Hoeveel wattuur gaan er in één kWh?",
+          "Je deelde het vermogen door de tijd. Energie is vermogen × tijd.",
+          "Je rekende met 15 kW. Hoeveel kW is 1.500 W?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1500 W × 4 u = 6000 Wh = 6 kWh", tekst: "1500 W = 1,5 kW. 1,5 × 4 = 6 kWh. Of: 1500 × 4 = 6000 Wh = 6 kWh." }],
@@ -790,14 +790,14 @@ const steps = [
           "P = U + I",
           "U = I × R",
           "P = U × I",
-          "E = P × t",
+          "R-totaal = R₁ + R₂ (serie)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Klopt — Wet van Ohm.",
-          "Klopt — vermogen-formule.",
-          "Klopt — energie-formule.",
+          "P = U × I klopt: zo reken je vermogen uit. Zoek de formule die niet klopt.",
+          "Klopt — in een serieschakeling tel je de weerstanden op.",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = U + I is fout", tekst: "Vermogen is een vermenigvuldiging, geen optelling. P = U × I. Niet P = U + I." }],

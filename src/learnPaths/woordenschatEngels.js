@@ -53,13 +53,13 @@ const steps = [
       {
         q: "Welke leertruc helpt het meest voor woordenschat?",
         options: [
-          "Per thema + herhalen over een week",
-          "Eén keer hardop, dan klaar",
-          "Alleen vertalingen invullen",
-          "Alleen lezen zonder vertalen",
+          "Per thema leren en een week herhalen",
+          "De avond voor de toets alles leren",
+          "Elke dag een nieuwe woordenlijst leren",
+          "Elk woord tien keer overschrijven",
         ],
         answer: 0,
-        wrongHints: [null, "Eén keer is niet genoeg — herhaling werkt beter.", "Alleen invullen zonder context werkt slecht.", "Lezen helpt, maar zonder begrijpen niet."],
+        wrongHints: [null, "Op één avond leren voelt efficiënt. Maar hoeveel weet je er na een week nog van?", "Elke dag iets nieuws voelt als veel leren. Maar wat gebeurt er met de woorden van maandag als je ze daarna niet meer ziet?", "Overschrijven kost veel tijd, en je oefent alleen op die ene dag. Wat helpt om het woord volgende week nog te weten?"],
         uitlegPad: {
           stappen: [{ titel: "Twee elementen", tekst: "Thema = woorden bij elkaar (eten, kleding...). Herhalen = meerdere keren in een week (spaced repetition)." }],
           woorden: [{ woord: "spaced repetition", uitleg: "Herhalen met steeds langere tussenpozen — een van de best onderzochte leertechnieken." }],
@@ -83,15 +83,15 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **bread**?",
-        options: ["brood", "boter", "vlees", "kaas"],
+        options: ["brood", "breed", "bord", "baard"],
         answer: 0,
-        wrongHints: [null, "Boter = butter.", "Vlees = meat.", "Kaas = cheese."],
+        wrongHints: [null, "Breed = wide (een brede weg = a wide road).", "Bord = plate.", "Baard = beard — let op, bijna dezelfde letters als bread!"],
         uitlegPad: {
           stappen: [{ titel: "bread = brood", tekst: "Bread = basiswoord. Vergelijk met Duits 'Brot', Nederlands 'brood' — zelfde stam." }],
           woorden: [{ woord: "bread", uitleg: "Brood. Onderdeel van breakfast (ontbijt)." }],
           theorie: "Eten-thema kernwoorden: bread, butter, cheese, meat, fish, milk, water.",
           voorbeelden: [{ type: "zin", tekst: "I eat bread for breakfast = Ik eet brood als ontbijt." }],
-          basiskennis: [{ onderwerp: "Verwarring", uitleg: "Bread (brood) ≠ butter (boter) ≠ meat (vlees)." }],
+          basiskennis: [{ onderwerp: "Verwarring", uitleg: "Bread (brood) ≠ beard (baard) ≠ wide (breed) ≠ plate (bord)." }],
           niveaus: { basis: "Bread = brood.", simpeler: "B-r-e-a-d = brood. Onthoud: 'breakfast' = ontbijt, dat is vaak met bread.", nogSimpeler: "Brood" },
         },
       },
@@ -111,16 +111,16 @@ const steps = [
       },
       {
         q: "Wat is **fish**?",
-        options: ["vis", "vlees", "fruit", "ei"],
+        options: ["vis", "vies", "fiets", "vers"],
         answer: 0,
-        wrongHints: [null, "Vlees = meat.", "Fruit = fruit.", "Ei = egg."],
+        wrongHints: [null, "Vies = dirty.", "Fiets = bike.", "Vers = fresh."],
         uitlegPad: {
           stappen: [{ titel: "fish = vis", tekst: "Fish = vis. Klinkt bijna hetzelfde als 'vis' (alleen f→v)." }],
           woorden: [{ woord: "fish", uitleg: "Vis. Meervoud is meestal 'fish' (geen -s)." }],
           theorie: "Eet-soorten: meat (vlees), fish (vis), eggs (eieren), bread (brood), fruit (fruit).",
           voorbeelden: [{ type: "zin", tekst: "I like fish and chips = Ik hou van vis en frietjes." }],
           basiskennis: [{ onderwerp: "Geen meervoud", uitleg: "One fish, two fish — fish blijft fish (uitzondering)." }],
-          niveaus: { basis: "Fish = vis.", simpeler: "F-I-S-H = vis. Lijkt op vis. (Vlees=meat, fruit=fruit, ei=egg).", nogSimpeler: "Vis" },
+          niveaus: { basis: "Fish = vis.", simpeler: "F-I-S-H = vis. Lijkt op vis. (Vies=dirty, fiets=bike, vers=fresh).", nogSimpeler: "Vis" },
         },
       },
     ],
@@ -175,7 +175,7 @@ const steps = [
         q: "Wat is het meervoud van **foot**?",
         options: ["feet", "foots", "feets", "footes"],
         answer: 0,
-        wrongHints: [null, "Niet -s — onregelmatig.", "Niet -s.", "Niet -es."],
+        wrongHints: [null, "Foot krijgt in het meervoud geen -s: het is een onregelmatig woord, net als man – men.", "Hier staan twee meervoudsvormen in één woord. Heb je die allebei nodig?", "Foot is onregelmatig, net als tooth – teeth. Wat verandert er in het midden van het woord?"],
         uitlegPad: {
           stappen: [{ titel: "foot → feet", tekst: "Onregelmatig meervoud: oo→ee. Foot wordt feet (geen -s)." }],
           woorden: [{ woord: "feet", uitleg: "Meervoud van foot (voet). Klanksprong oo→ee." }],
@@ -187,30 +187,30 @@ const steps = [
       },
       {
         q: "Hoe zeg je **broer** in Engels?",
-        options: ["brother", "sister", "uncle", "cousin"],
+        options: ["brother", "bother", "broth", "border"],
         answer: 0,
-        wrongHints: [null, "Sister = zus.", "Uncle = oom.", "Cousin = neef/nicht."],
+        wrongHints: [null, "Bother = lastigvallen (Don't bother me!).", "Broth = bouillon (soep).", "Border = grens."],
         uitlegPad: {
           stappen: [{ titel: "broer = brother", tekst: "Brother en broer komen uit dezelfde Germaanse stam. Bro-ther / bro-er." }],
           woorden: [{ woord: "brother", uitleg: "Broer. Familie-thema." }],
           theorie: "Familie kerntermen: father (vader), mother (moeder), brother (broer), sister (zus).",
           voorbeelden: [{ type: "zin", tekst: "I have one brother = Ik heb één broer." }],
           basiskennis: [{ onderwerp: "Cousin", uitleg: "In Engels = neef én nicht (geen onderscheid)." }],
-          niveaus: { basis: "Broer = brother.", simpeler: "Bro-ther lijkt op bro-er. Sister=zus, uncle=oom, cousin=neef/nicht.", nogSimpeler: "Brother" },
+          niveaus: { basis: "Broer = brother.", simpeler: "Bro-ther lijkt op bro-er. Let op: bother=lastigvallen, broth=bouillon, border=grens.", nogSimpeler: "Brother" },
         },
       },
       {
         q: "Wat betekent **mouth**?",
-        options: ["mond", "neus", "oor", "kin"],
+        options: ["mond", "maand", "mouw", "mot"],
         answer: 0,
-        wrongHints: [null, "Neus = nose.", "Oor = ear.", "Kin = chin."],
+        wrongHints: [null, "Maand = month — lijkt erg op mouth!", "Mouw = sleeve.", "Mot = moth."],
         uitlegPad: {
           stappen: [{ titel: "mouth = mond", tekst: "Mouth (mauth) = mond. M-klank zit erin: mouth, mond, mund (Duits)." }],
           woorden: [{ woord: "mouth", uitleg: "Mond. Onderdeel van het gezicht." }],
           theorie: "Gezicht-onderdelen: eyes (ogen), nose (neus), mouth (mond), ears (oren), chin (kin).",
           voorbeelden: [{ type: "zin", tekst: "Open your mouth, please = Doe je mond open, alsjeblieft." }],
           basiskennis: [{ onderwerp: "M-klank", uitleg: "Mond/mouth/mund — Germaanse talen delen veel basis-woorden." }],
-          niveaus: { basis: "Mouth = mond.", simpeler: "Mouth begint met M, mond ook. Neus=nose, oor=ear, kin=chin.", nogSimpeler: "Mond" },
+          niveaus: { basis: "Mouth = mond.", simpeler: "Mouth begint met M, mond ook. Let op: month=maand, moth=mot, sleeve=mouw.", nogSimpeler: "Mond" },
         },
       },
     ],
@@ -225,9 +225,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **homework**?",
-        options: ["huiswerk", "klas", "leraar", "boek"],
+        options: ["huiswerk", "huishouden", "werkplaats", "thuisbasis"],
         answer: 0,
-        wrongHints: [null, "Klas = class(room).", "Leraar = teacher.", "Boek = book."],
+        wrongHints: [null, "Huishouden = housework of household — let op: house, niet home!", "Werkplaats = workshop.", "Thuisbasis = home base."],
         uitlegPad: {
           stappen: [{ titel: "home + work", tekst: "Homework = home (thuis) + work (werk) = thuiswerk = huiswerk." }],
           woorden: [{ woord: "homework", uitleg: "Huiswerk. Samengesteld woord: home + work." }],
@@ -263,16 +263,16 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **kitchen**?",
-        options: ["keuken", "badkamer", "slaapkamer", "tuin"],
+        options: ["keuken", "kip", "kussen", "kerk"],
         answer: 0,
-        wrongHints: [null, "Badkamer = bathroom.", "Slaapkamer = bedroom.", "Tuin = garden."],
+        wrongHints: [null, "Kip = chicken — lijkt op kitchen, maar is een dier!", "Kussen = cushion of pillow.", "Kerk = church."],
         uitlegPad: {
           stappen: [{ titel: "kitchen = keuken", tekst: "Kitchen / keuken — beide K-klank. Plek waar je kookt." }],
           woorden: [{ woord: "kitchen", uitleg: "Keuken. Onderdeel van een huis." }],
           theorie: "Huis-kamers: kitchen (keuken), bathroom (badkamer), bedroom (slaapkamer), living room (woonkamer).",
           voorbeelden: [{ type: "zin", tekst: "She is cooking in the kitchen = Zij is aan het koken in de keuken." }],
           basiskennis: [{ onderwerp: "-room woorden", uitleg: "Veel kamers eindigen op '-room': bathroom, bedroom, classroom." }],
-          niveaus: { basis: "Kitchen = keuken.", simpeler: "Kitchen begint met K, keuken ook. Plek om te koken. (Bathroom=badkamer).", nogSimpeler: "Keuken" },
+          niveaus: { basis: "Kitchen = keuken.", simpeler: "Kitchen begint met K, keuken ook. Plek om te koken. (Niet verwarren met chicken = kip.)", nogSimpeler: "Keuken" },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
         q: "Wat is het meervoud van **mouse**?",
         options: ["mice", "mouses", "mices", "mouse"],
         answer: 0,
-        wrongHints: [null, "Niet -s.", "Niet -s.", "Verschilt enkelvoud/mv."],
+        wrongHints: [null, "Mouse is onregelmatig, net als foot – feet. Krijgt het dan een -s?", "Hier staan twee meervoudsvormen in één woord. Heb je die allebei nodig?", "Mouse is het enkelvoud. Blijft het in het meervoud hetzelfde, zoals sheep?"],
         uitlegPad: {
           stappen: [{ titel: "mouse → mice", tekst: "Onregelmatig: mouse (1) → mice (meerdere). Klanksprong ou→i." }],
           woorden: [{ woord: "mice", uitleg: "Meervoud van mouse (muis)." }],
@@ -332,16 +332,16 @@ const steps = [
       },
       {
         q: "Hoe zeg je **werken**?",
-        options: ["work", "play", "walk", "watch"],
+        options: ["work", "word", "walk", "wake"],
         answer: 0,
-        wrongHints: [null, "Play = spelen.", "Walk = lopen.", "Watch = kijken."],
+        wrongHints: [null, "Word = woord.", "Walk = lopen.", "Wake (up) = wakker worden."],
         uitlegPad: {
           stappen: [{ titel: "werken = work", tekst: "Work (wurk) = werken. Korte W-W vergelijking." }],
           woorden: [{ woord: "to work", uitleg: "Werken. Regelmatig: work-worked-worked." }],
           theorie: "Vier W-werkwoorden lijken op elkaar: work (werken), walk (lopen), watch (kijken), wash (wassen). Lees scherp.",
           voorbeelden: [{ type: "zin", tekst: "My father works in a factory = Mijn vader werkt in een fabriek." }],
           basiskennis: [{ onderwerp: "Spel-truc", uitleg: "Work-Werken: beide W. Walk-Wandelen: beide W ook (verwarrend!)." }],
-          niveaus: { basis: "Werken = work.", simpeler: "Werken = work. Play = spelen, walk = lopen, watch = kijken.", nogSimpeler: "Work" },
+          niveaus: { basis: "Werken = work.", simpeler: "Werken = work. Word = woord, walk = lopen, wake = wakker worden.", nogSimpeler: "Work" },
         },
       },
     ],
@@ -377,7 +377,7 @@ const steps = [
         q: "Hoe schrijf je **maandag** in Engels?",
         options: ["Monday", "monday", "Mounday", "Mondag"],
         answer: 0,
-        wrongHints: [null, "Hoofdletter bij dagen!", "Spelfout.", "Geen Engels."],
+        wrongHints: [null, "Hoofdletter bij dagen!", "Mounday heeft een letter te veel. Hoe schrijf je het eerste stukje van het woord?", "Mondag lijkt op het Nederlands en het Duits. Op welke letters eindigen alle Engelse dagen?"],
         uitlegPad: {
           stappen: [{ titel: "Monday — hoofdletter", tekst: "Engelse dagen krijgen ALTIJD hoofdletter. Monday, Tuesday, Wednesday..." }],
           woorden: [{ woord: "Monday", uitleg: "Maandag. M-O-N-D-A-Y. Komt van 'Moon-day'." }],
@@ -418,13 +418,13 @@ const steps = [
     checks: [
       {
         q: "Hoe antwoord je op **How are you?**",
-        options: ["I'm fine, thank you.", "I'm 12 years old.", "My name is Sara.", "I'm from Amsterdam."],
+        options: ["I'm fine, thank you.", "I'm 12 years old.", "I'm at home now.", "I'm a student."],
         answer: 0,
-        wrongHints: [null, "Antwoord op 'How old?'.", "Antwoord op 'What's your name?'.", "Antwoord op 'Where are you from?'."],
+        wrongHints: [null, "Dit past bij 'How old are you?'. Vraagt 'How are you?' naar je leeftijd?", "Dit past bij 'Where are you?'. Vraagt de ander waar je bent?", "Dit past bij 'What do you do?'. Vraagt de ander wat je doet?"],
         uitlegPad: {
           stappen: [{ titel: "Vraag-antwoord paren", tekst: "How are you? = Hoe gaat het? → I'm fine = Het gaat goed." }],
           woorden: [{ woord: "How are you", uitleg: "Begroeting-vraag, geen echt 'hoe-vraag'. Antwoord = 'I'm fine'." }],
-          theorie: "Vraag→antwoord: How old? → age. Name? → name. Where from? → land. How are you? → fine.",
+          theorie: "Vraag→antwoord: How old? → age. Where are you? → plek. What do you do? → beroep. How are you? → fine.",
           voorbeelden: [{ type: "dialoog", tekst: "A: How are you? B: I'm fine, thank you. And you?" }],
           basiskennis: [{ onderwerp: "Standaardgesprek", uitleg: "Echt antwoord (slecht/blij/etc.) hoeft niet — beleefdheidsritueel." }],
           niveaus: { basis: "I'm fine, thank you.", simpeler: "How are you? = hoe gaat het? Standaardantwoord = I'm fine, thank you.", nogSimpeler: "I'm fine" },
@@ -461,23 +461,23 @@ const steps = [
     checks: [
       {
         q: "Welk woord is **geen** familiewoord?",
-        options: ["window", "mother", "uncle", "cousin"],
+        options: ["teacher", "aunt", "uncle", "cousin"],
         answer: 0,
-        wrongHints: [null, "Mother = moeder.", "Uncle = oom.", "Cousin = neef/nicht."],
+        wrongHints: [null, "Aunt = tante.", "Uncle = oom.", "Cousin = neef/nicht."],
         uitlegPad: {
-          stappen: [{ titel: "Welke hoort niet", tekst: "Window = raam (huis-thema). Mother/uncle/cousin = familie-woorden." }],
-          woorden: [{ woord: "window", uitleg: "Raam — onderdeel van een huis, geen familie." }],
-          theorie: "Categorie-vraag: zoek het woord dat NIET in de groep past. Hier 3 familie + 1 huis.",
+          stappen: [{ titel: "Welke hoort niet", tekst: "Teacher = leraar (school-thema). Aunt/uncle/cousin = familie-woorden." }],
+          woorden: [{ woord: "teacher", uitleg: "Leraar — wel een persoon, maar geen familie." }],
+          theorie: "Categorie-vraag: zoek het woord dat NIET in de groep past. Hier 3 familie + 1 school.",
           voorbeelden: [{ type: "groep", tekst: "Familie: father, mother, brother, sister, uncle, aunt, cousin, grandparents." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag zoekt afwijker, niet de meerderheid. Lees scherp." }],
-          niveaus: { basis: "Window = niet familie.", simpeler: "Mother (moeder), uncle (oom), cousin (neef/nicht) = familie. Window (raam) = huis.", nogSimpeler: "Window" },
+          niveaus: { basis: "Teacher = niet familie.", simpeler: "Aunt (tante), uncle (oom), cousin (neef/nicht) = familie. Teacher (leraar) = school.", nogSimpeler: "Teacher" },
         },
       },
       {
         q: "Wat betekent: *I'm wearing a red dress.*",
         options: ["Ik draag een rode jurk.", "Ik koop een rode jurk.", "Ik ben een rode jurk.", "Ik wil een rode jurk."],
         answer: 0,
-        wrongHints: [null, "Wear ≠ buy.", "Wearing ≠ I am.", "Wearing ≠ want."],
+        wrongHints: [null, "Kopen is buy. Welk werkwoord staat er in de zin?", "'Ik ben' is I am. Maar wat doet 'wearing' achter I'm?", "Willen is want. Staat dat in de zin?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woord-voor-woord", tekst: "I'm = ik ben (bezig). Wearing = dragend. A red dress = een rode jurk. Samen: 'Ik draag een rode jurk'." }],
           woorden: [{ woord: "to wear", uitleg: "Dragen (kleding). Onregelmatig: wear-wore-worn." }],
@@ -489,9 +489,9 @@ const steps = [
       },
       {
         q: "Hoe vertaal je: *My grandmother lives in a small house.*",
-        options: ["Mijn oma woont in een klein huis.", "Mijn oma werkt in een klein huis.", "Mijn moeder woont in een groot huis.", "Mijn opa heeft een klein huis."],
+        options: ["Mijn oma woont in een klein huis.", "Mijn oma werkt in een klein huis.", "Mijn oma woont in een groot huis.", "Mijn opa woont in een klein huis."],
         answer: 0,
-        wrongHints: [null, "Lives ≠ works.", "Mother ≠ grandmother. Small ≠ big.", "Has ≠ lives in."],
+        wrongHints: [null, "Lives ≠ works. Welk werkwoord staat er in de zin?", "Small ≠ big. Hoe groot is het huis?", "Grandmother ≠ grandfather. Gaat het over oma of opa?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaal stuk voor stuk", tekst: "My grandmother = mijn oma. Lives = woont. In a small house = in een klein huis." }],
           woorden: [{ woord: "grandmother", uitleg: "Oma. Grand- (groot-) + mother (moeder)." }, { woord: "lives", uitleg: "Woont (van to live)." }],
@@ -503,16 +503,16 @@ const steps = [
       },
       {
         q: "Welk woord hoort niet bij eten?",
-        options: ["scarf", "bread", "milk", "egg"],
+        options: ["scarf", "meat", "cheese", "juice"],
         answer: 0,
-        wrongHints: [null, "Bread = brood.", "Milk = melk.", "Egg = ei."],
+        wrongHints: [null, "Meat = vlees.", "Cheese = kaas.", "Juice = sap."],
         uitlegPad: {
-          stappen: [{ titel: "Welke hoort niet", tekst: "Bread (brood), milk (melk), egg (ei) = eten/drinken. Scarf (sjaal) = kleding." }],
+          stappen: [{ titel: "Welke hoort niet", tekst: "Meat (vlees), cheese (kaas), juice (sap) = eten/drinken. Scarf (sjaal) = kleding." }],
           woorden: [{ woord: "scarf", uitleg: "Sjaal — kleding-thema, geen eten." }],
           theorie: "Categorie-vraag: 3 woorden in 1 thema, 1 in ander. Welke is de afwijker?",
           voorbeelden: [{ type: "groep", tekst: "Eten: bread, butter, cheese, meat, fish, fruit, milk, water." }],
           basiskennis: [{ onderwerp: "Snelle scan", uitleg: "Loop opties langs en categoriseer: kleding/eten/dier/etc. De afwijker valt op." }],
-          niveaus: { basis: "Scarf = niet eten.", simpeler: "Bread=brood, milk=melk, egg=ei = eten/drinken. Scarf=sjaal = kleding. Afwijker = scarf.", nogSimpeler: "Scarf" },
+          niveaus: { basis: "Scarf = niet eten.", simpeler: "Meat=vlees, cheese=kaas, juice=sap = eten/drinken. Scarf=sjaal = kleding. Afwijker = scarf.", nogSimpeler: "Scarf" },
         },
       },
       {

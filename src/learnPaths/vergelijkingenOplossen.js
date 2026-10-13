@@ -52,9 +52,9 @@ const steps = [
     checks: [
       {
         q: "*Wat is een vergelijking?*",
-        options: ["Twee uitdrukkingen met een = ertussen","Een rekenstuk zonder = teken","Een tabel met getallen","Een grafiek"],
+        options: ["Twee uitdrukkingen met een = ertussen","Een rekenstuk zonder = teken","Een rij getallen met een vast verschil","Een uitdrukking met een letter erin"],
         answer: 0,
-        wrongHints: [null, "Dat is een uitdrukking. Een vergelijking heeft een = teken.", "Een tabel is geen vergelijking. Vergelijkingen hebben =.", "Een grafiek is iets anders — visuele weergave, geen vergelijking met = teken."],
+        wrongHints: [null, "Zonder =-teken heb je een uitdrukking. Wat maakt een vergelijking anders?", "Dat is een rij. Waar herken je een vergelijking aan?", "Een letter alleen maakt nog geen vergelijking: 3x + 2 is een uitdrukking. Wat mist er nog?"],
         uitlegPad: {
           stappen: [{ titel: "= teken sleutel", tekst: "Vergelijking = twee dingen aan elkaar gelijk gesteld via =. Uitdrukking = rekenstuk zonder =. Vergelijking: 3x+5=14. Uitdrukking: 3x+5." }],
           woorden: [{ woord: "uitdrukking", uitleg: "Rekenstuk. Voorbeeld: 3x+5." }, { woord: "vergelijking", uitleg: "Uitdrukking = uitdrukking. Bv. 3x+5=14." }],
@@ -84,7 +84,7 @@ const steps = [
         q: "*Wat is de oplossing van x − 5 = 8?*",
         options: ["x = 13", "x = 3", "x = -3", "x = 40"],
         answer: 0,
-        wrongHints: [null, "Te klein — wat moet je optellen om bij 8 uit te komen, na 5 ervan af?", "Te ver onder nul — denk aan: x verminderd met 5 móét bij 8 uitkomen.", "Veel te groot — vul je antwoord in en kijk of x − 5 echt 8 oplevert."],
+        wrongHints: [null, "x = 3 krijg je met 8 − 5. Vul 3 in: is 3 − 5 gelijk aan 8?", "Vul −3 in: is −3 − 5 gelijk aan 8?", "40 = 8 × 5. Vul 40 in: is 40 − 5 gelijk aan 8?"],
         uitlegPad: {
           stappen: [{ titel: "+5 beide kanten", tekst: "x − 5 = 8 → +5 → x = 13. Check: 13 − 5 = 8 ✓." }],
           woorden: [{ woord: "oplossing", uitleg: "Waarde x die vergelijking waar maakt." }],
@@ -115,7 +115,7 @@ const steps = [
     checks: [
       {
         q: "*Bij de vergelijking 8x = 24 — welke actie isoleert x?*",
-        options: ["Beide kanten delen door 8","Beide kanten aftrekken met 8","Beide kanten optellen met 8","Beide kanten vermenigvuldigen met 8"],
+        options: ["Beide kanten delen door 8","Van beide kanten 8 aftrekken","Bij beide kanten 8 optellen","Beide kanten vermenigvuldigen met 8"],
         answer: 0,
         wrongHints: [null, "8x is een vermenigvuldiging, geen optelling. Welke bewerking is de tegenhanger van keer-doen?", "Welke bewerking heft de 'keer 8' op? Optellen werkt niet bij vermenigvuldiging.", "Vermenigvuldigen maakt het groter, jij wil x alleen overhouden. Welke bewerking doet dat?"],
         uitlegPad: {
@@ -622,9 +622,9 @@ const steps = [
           niveaus: { basis: "4.", simpeler: "2x=8 → x=4.", nogSimpeler: "4" },
         },
       },
-      { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null, "Niet — aftrekken, niet optellen.", "Niet — x niet 7.", "Niet — x staat nog niet alleen; welke bewerking haalt de +7 weg?"] },
-      { q: "Los op: 3x = 21", options: ["x = 7","x = 18","x = 24","x = 63"], answer: 0, wrongHints: [null, "Niet — delen, niet aftrekken.", "Niet — optellen klopt niet.", "Niet — vermenigvuldigen klopt niet."] },
-      { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null, "Niet — vergeet +3 eerst.", "Niet.", "Niet."] },
+      { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null, "19 = 12 + 7. Vul 19 in: is 19 + 7 gelijk aan 12?", "7 is het getal dat al bij x staat. Vul x = 7 in: is 7 + 7 gelijk aan 12?", "Niet — x staat nog niet alleen; welke bewerking haalt de +7 weg?"] },
+      { q: "Los op: 3x = 21", options: ["x = 7","x = 18","x = 24","x = 63"], answer: 0, wrongHints: [null, "18 = 21 − 3: je trok af. 3x betekent 3 keer x: welke bewerking haalt die 3 weg?", "24 = 21 + 3: je telde op. Vul 24 in: is 3 · 24 gelijk aan 21?", "63 = 21 × 3: je vermenigvuldigde. Moet x kleiner of groter zijn dan 21?"] },
+      { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null, "Je trok 3 af in plaats van op te tellen. Wat moet je doen om −3 weg te werken?", "Vul x = 5 in: 2 · 5 − 3 = 7. Is dat 11?", "Vul x = 8 in: 2 · 8 − 3 = 13. Is dat 11?"] },
     ],
   },
 ];

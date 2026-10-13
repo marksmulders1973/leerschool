@@ -84,9 +84,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Tegendeel — als lonen sneller stijgen dan productiviteit, krimpt de winst.",
-          "Arbeidsjaren is geen logische maatstaf voor loonsverhoging.",
-          "Idem — arbeidsjaren is hier niet relevant.",
+          "Wat gebeurt er met de winst van de werkgever als de lonen harder stijgen dan wat een werknemer extra oplevert?",
+          "Wat zegt het aantal arbeidsjaren over hoeveel een werknemer per uur oplevert? En waar let een werkgever op als hij over loon beslist?",
+          "Verdient een werkgever meer als zijn werknemers meer jaren werken, of als ze per uur meer produceren?",
         ],
         explanation: "Een werkgever wil winst maken. Hij kan het zich permitteren om lonen te verhogen als zijn werknemers méér produceren (productiviteitstijging). Stijgt de productiviteit met 5% en de loonkosten met 3%? Dan blijft er winstmarge over. Andersom (loonstijging > productiviteit) krimpt de winst.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 8",
@@ -140,7 +140,7 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "Denivellering = verschillen GROTER worden — past niet bij hogere korting voor laag.",
+          "Denivellering = verschillen worden groter. Wat gebeurt er met het verschil tussen hoge en lage inkomens als de lage inkomens meer korting krijgen? En wie heeft daar voordeel van?",
           "Worden de verschillen tussen hoge en lage inkomens groter of kleiner als de lage inkomens er het meest op vooruitgaan?",
           "Wie krijgt hier de hoogste korting — en wie heeft daar dus het meeste voordeel van?",
           null,

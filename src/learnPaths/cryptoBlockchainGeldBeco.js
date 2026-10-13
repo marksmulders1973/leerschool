@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Waarom is een briefje van €10 echt iets waard?",
-        options: ["Omdat we met z'n allen afspreken en vertrouwen dat het 10 euro waard is", "Omdat het papier en de inkt samen 10 euro kosten", "Omdat er een klein beetje goud in het briefje zit", "Omdat de winkel het briefje zelf maakt en goedkeurt"],
+        options: ["Omdat iedereen erop vertrouwt dat het 10 euro waard is", "Omdat de bank voor elk briefje goud in de kluis bewaart", "Omdat het bedrag van 10 euro erop gedrukt staat", "Omdat het papier en de inkt veel geld kosten"],
         answer: 0,
-        wrongHints: [null, "Een briefje maken kost maar een paar cent.", "Er zit geen goud in een bankbiljet.", "Winkels maken geen geld."],
+        wrongHints: [null, "Vroeger was geld gekoppeld aan goud, nu niet meer. Waar draait het dan om?", "Iedereen kan '10' op een papiertje schrijven. Waarom is dít papiertje dan wél iets waard?", "Een briefje kost maar een paar cent om te maken. Waarom is het dan toch €10 waard?"],
         uitlegPad: {
           stappen: [{ titel: "Geld = afspraak + vertrouwen", tekst: "Geld werkt omdat iedereen erop vertrouwt dat het waarde heeft, niet door het materiaal." }],
           niveaus: {
@@ -45,9 +45,9 @@ const steps = [
     checks: [
       {
         q: "Er komt heel veel extra geld bij, maar er zijn niet meer spullen te koop. Wat gebeurt er meestal?",
-        options: ["De prijzen stijgen: alles wordt duurder", "Alles wordt goedkoper", "Er verandert helemaal niets", "Iedereen wordt er echt rijker van"],
+        options: ["De prijzen stijgen, alles wordt duurder", "De prijzen dalen, alles wordt goedkoper", "De prijzen blijven gelijk, net als eerst", "Iedereen wordt rijker en koopt meer spullen"],
         answer: 0,
-        wrongHints: [null, "Meer geld op dezelfde spullen duwt prijzen juist omhoog.", "Er gebeurt wel degelijk iets met de prijzen.", "Als alles duurder wordt, koop je per euro juist minder."],
+        wrongHints: [null, "Er komt geld bij, maar niet meer spullen. Waarom zouden winkels dan hun prijzen verlagen?", "Meer geld voor dezelfde spullen: blijft de prijs dan echt hetzelfde?", "Er zijn niet meer spullen te koop. Kan iedereen dan echt meer kopen?"],
         uitlegPad: {
           stappen: [{ titel: "Veel geld, weinig spullen → duurder", tekst: "Meer geld dat om dezelfde spullen vecht, jaagt de prijzen op. Dat is inflatie." }],
           niveaus: {
@@ -68,9 +68,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een belangrijk verschil tussen crypto (zoals Bitcoin) en het geld op je bankrekening?",
-        options: ["Crypto wordt niet door een bank/overheid beheerd, maar door een netwerk van computers", "Crypto is gemaakt van speciaal papier met een geheime code erop", "Crypto werkt alleen in Nederland en niet in andere landen", "Crypto is precies hetzelfde als sparen bij de bank"],
+        options: ["Crypto beheert geen bank, maar een netwerk van computers", "Crypto wordt beheerd door de beurs waar je het koopt", "Crypto is anoniem en kan daarom niet gestolen worden", "Crypto heeft een vaste koers die de overheid bepaalt"],
         answer: 0,
-        wrongHints: [null, "Crypto is digitaal, er is geen papieren vorm.", "Een wereldwijd netwerk kent geen landsgrenzen.", "Bij de bank is er juist wél een bank die de baas is."],
+        wrongHints: [null, "Een beurs of app is alleen de winkel waar je crypto koopt. Wie houdt de boekhouding van bitcoin bij?", "Crypto wordt geregeld gestolen, bijvoorbeeld via hacks of nep-apps. Waar zit het echte verschil met je bankrekening?", "De koers van crypto schommelt elke dag en geen overheid zet hem vast. Wie houdt de boekhouding dan bij?"],
         uitlegPad: {
           stappen: [{ titel: "Geen bank, maar een netwerk", tekst: "Crypto wordt decentraal beheerd door computers wereldwijd, niet door een bank of overheid." }],
           niveaus: {
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "Waarom is het zo moeilijk om vals te spelen met een blockchain?",
-        options: ["Heel veel computers houden dezelfde kopie bij, dus geknoei valt meteen op", "Er staat een echte bewaker naast elke computer die meekijkt", "De overheid keurt elke betaling eerst goed voordat hij doorgaat", "Je hebt er een wachtwoord van de bank voor nodig"],
+        options: ["Heel veel computers houden dezelfde kopie bij, dus geknoei valt meteen op", "Alle betalingen staan op één centrale server met zware beveiliging", "Elke betaling is versleuteld, dus niemand kan hem lezen", "Iedereen moet zich met paspoort aanmelden, dus valsspelers worden gepakt"],
         answer: 0,
-        wrongHints: [null, "Het is geen fysieke bewaking, maar heel veel kopieën.", "Juist de overheid is er níét de baas over.", "Er komt geen bank aan te pas."],
+        wrongHints: [null, "Eén server is juist kwetsbaar: wie die hackt, kan alles veranderen. Hoe zit dat bij een blockchain?", "De blockchain is juist openbaar: iedereen kan alle betalingen zien. Waarom valt geknoei dan toch op?", "Bij bitcoin hoef je je naam niet op te geven. Waarom valt geknoei dan toch op?"],
         uitlegPad: {
           stappen: [{ titel: "Veel kopieën = controle", tekst: "Omdat iedereen dezelfde kopie heeft, wijkt geknoei meteen af van de rest." }],
           niveaus: {
@@ -115,9 +115,9 @@ const steps = [
     checks: [
       {
         q: "Je raakt de geheime sleutel (seed) van je crypto kwijt. Wat gebeurt er?",
-        options: ["Je bent je crypto voorgoed kwijt; geen bank kan het terughalen", "De bank stuurt gewoon een nieuwe sleutel op", "Je belt de politie en je krijgt alles terug", "Niets aan de hand, je logt gewoon opnieuw in met je e-mail"],
+        options: ["Je crypto is voorgoed weg; niemand kan het terughalen", "Je bank boekt het na een melding binnen 30 dagen terug", "De wallet-app maakt met je pincode een nieuwe sleutel aan", "De helpdesk zet het terug na een check van je paspoort"],
         answer: 0,
-        wrongHints: [null, "Bij crypto is er juist geen bank die kan helpen.", "De politie kan een verloren sleutel niet terughalen.", "Er is geen 'wachtwoord vergeten'-knop zoals bij een website."],
+        wrongHints: [null, "Staat crypto eigenlijk bij je bank? Wie zou het dan moeten terugboeken?", "Een pincode opent alleen de app op je telefoon. Kan die de geheime sleutel opnieuw maken?", "Bij een bank bewaart een bedrijf jouw gegevens. Is er bij crypto ook zo'n centraal bedrijf dat je sleutel kent?"],
         uitlegPad: {
           stappen: [{ titel: "Geen bank = geen reset", tekst: "Zonder je sleutel kan niemand bij je crypto, en niemand kan 'm voor je herstellen." }],
           niveaus: {
@@ -139,9 +139,9 @@ const steps = [
     checks: [
       {
         q: "Iemand op internet belooft: 'Stuur mij €50 in crypto en morgen krijg je €500 terug — gegarandeerd!' Wat doe je?",
-        options: ["Niet doen — dit is vrijwel zeker oplichting", "Snel doen voordat de actie voorbij is", "Je geheime sleutel sturen zodat zij het kunnen regelen", "Juist €500 sturen, voor nog meer winst"],
+        options: ["Niet doen — dit is vrijwel zeker oplichting", "Eerst €5 proberen; als dat terugkomt, de rest sturen", "Eerst checken of het account veel volgers en reacties heeft", "Alleen doen als ze een screenshot van hun winst laten zien"],
         answer: 0,
-        wrongHints: [null, "Een gegarandeerde 10× winst in één dag bestaat niet — dat is precies het lokaas.", "Je geheime sleutel deel je NOOIT (zie de vorige stap).", "Meer sturen maakt je verlies alleen groter."],
+        wrongHints: [null, "Oplichters betalen kleine bedragen soms echt terug om vertrouwen te winnen. Bewijst dat iets?", "Volgers en reacties kun je kopen of nep maken. Kan iemand 10× winst in één dag garanderen?", "Een screenshot is zo nagemaakt. Bestaat gegarandeerd 10× winst in één dag eigenlijk?"],
         uitlegPad: {
           stappen: [{ titel: "Te mooi = oplichting", tekst: "Beloftes van snelle, gegarandeerde winst zijn een klassieke scam. Niet op ingaan." }],
           niveaus: {

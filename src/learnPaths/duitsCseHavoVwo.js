@@ -33,7 +33,7 @@ const steps = [
         q: "Tijdsduur CSE Duits **HAVO**?",
         options: ["2,5 uur","2 uur","3 uur","4 uur"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang — dat geldt ook niet voor VWO.", "Te lang."],
+        wrongHints: [null, "Dat is te kort. Weet je hoelang het examen Engels duurt? Duits is even lang.", "Drie uur is langer dan het examen bij de moderne vreemde talen, ook op vwo. Hoe lang duurt het examen Engels?", "Vier uur is veel langer dan een taalexamen. Hoe lang duurt het examen Engels?"],
         uitlegPad: {
           stappen: [{ titel: "Standaard", tekst: "**HAVO Duits CSE: 2,5 uur**. VWO: ook 2,5 uur. Bij dyslexie 30 min extra." }],
           niveaus: { basis: "2,5u.", simpeler: "HAVO=2,5u", nogSimpeler: "2,5" },
@@ -43,7 +43,7 @@ const steps = [
         q: "Hoeveel teksten ongeveer op CSE Duits?",
         options: ["~10","~3","~25","~50"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Veel te veel.", "Absurd."],
+        wrongHints: [null, "Drie teksten is weinig voor een examen van meer dan twee uur. Hoeveel teksten lees je per half uur?", "25 teksten lees je niet in de beschikbare tijd. Hoeveel minuten heb je dan per tekst?", "Vijftig teksten in één examen: hoeveel minuten heb je dan per tekst?"],
         uitlegPad: {
           stappen: [{ titel: "9-12 stuks", tekst: "Op CSE Duits HAVO: **9-12 teksten**, totaal ~3500-4500 woorden. VWO iets meer + complexer. Sommige kort (1 alinea), sommige lang (~1000 woorden)." }],
           niveaus: { basis: "~10.", simpeler: "~10 teksten", nogSimpeler: "10" },
@@ -53,7 +53,7 @@ const steps = [
         q: "Welk **leesniveau** verwacht HAVO?",
         options: ["B1","A1","B2","C1"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Niet — VWO.", "Te hoog."],
+        wrongHints: [null, "A1 is het niveau van een beginner die net een paar woorden kent. Lees je op havo al moeilijkere teksten?", "B2 is het niveau van het vwo. Ligt havo daar een stapje onder of boven?", "C1 is bijna moedertaalniveau. Wordt dat van een havist in een vreemde taal gevraagd?"],
         uitlegPad: {
           stappen: [{ titel: "B1 voor HAVO", tekst: "**HAVO Duits CSE: B1** (zelfstandig taalgebruiker, hoofdpunten begrijpen). VWO: B2 (complexe argumentatie + abstract). C1+ alleen nodig voor studie/werk." }],
           niveaus: { basis: "B1.", simpeler: "HAVO=B1", nogSimpeler: "B1" },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Welk Duits **eentalig** woordenboek?",
-        options: ["Duden","Van Dale NL-DE","Larousse","Cambridge"],
+        options: ["Duden","Van Dale NL-DE","Larousse","Dikke Van Dale"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is tweetalig.", "Niet — Frans.", "Niet — Engels."],
+        wrongHints: [null, "Van Dale NL-DE vertaalt van het Nederlands naar het Duits. Hoeveel talen staan erin?", "Larousse is wel eentalig, maar in welke taal?", "De Dikke Van Dale is wel eentalig, maar in welke taal?"],
         uitlegPad: {
           stappen: [{ titel: "Duden = standaard", tekst: "**Duden** = standaard eentalig Duits woordenboek (Duitse equivalent van Van Dale). Wahrig is alternatief. Op CSE beide toegestaan." }],
           niveaus: { basis: "Duden.", simpeler: "Eentalig = Duden", nogSimpeler: "Duden" },
@@ -73,7 +73,7 @@ const steps = [
         q: "In welk HAVO-profiel is Duits (of Frans) een **verplicht profielvak**?",
         options: ["C&M (Cultuur en Maatschappij)","N&T (Natuur en Techniek)","N&G (Natuur en Gezondheid)","E&M (Economie en Maatschappij)"],
         answer: 0,
-        wrongHints: [null, "In dit profiel zitten vooral bèta-vakken.", "In dit profiel zitten vooral bèta-vakken.", "Hier is een tweede moderne vreemde taal geen verplicht profielvak. Welk profiel draait om cultuur en talen?"],
+        wrongHints: [null, "N&T is een bèta-profiel met wiskunde B en natuurkunde. Is daar een tweede vreemde taal verplicht?", "N&G draait om biologie en scheikunde. Is daar een tweede vreemde taal verplicht?", "In E&M zijn economie en wiskunde verplicht, een tweede vreemde taal niet. Welk profiel heeft er wel een?"],
         uitlegPad: {
           stappen: [{ titel: "C&M-profiel", tekst: "**HAVO C&M (Cultuur en Maatschappij)**: Duits of Frans is een verplicht profielvak. E&M (Economie+Maatschappij): keuze. N&T (Natuur+Techniek): meestal niet. Talen-profielen kiezen vaak DU + FR." }],
           niveaus: { basis: "C&M.", simpeler: "C&M = talen", nogSimpeler: "C&M" },
@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "*Ich gehe in **die** Schule* — welke naamval?",
-        options: ["Akkusativ (beweging-richting)","Dativ (plaats)","Nominativ","Genitiv"],
+        options: ["Akkusativ (richting: waarheen)", "Dativ (plaats: waar iets is)", "Nominativ (onderwerp: wie)", "Genitiv (bezit: van wie)"],
         answer: 0,
-        wrongHints: [null, "Niet — bij plaats: *in der Schule*.", "Niet — onderwerp.", "Niet — geen bezit."],
+        wrongHints: [null, "Bij een plaats (waar?) zeg je 'in der Schule'. Gaat 'ich gehe' over waar je bent, of waarheen?", "Is 'die Schule' hier het onderwerp van de zin?", "Zegt de zin iets over van wie de school is?"],
         uitlegPad: {
           stappen: [{ titel: "Wechselpräposition + Akk = beweging", tekst: "**In** is een Wechselpräposition. Bij **beweging richting plek** → Akkusativ (*die* voor v). Bij **statisch in/op plek** → Dativ (*der*).\n\n*Ich gehe in **die** Schule* (akk — ik ga ergens **naar toe**).\n*Ich bin in **der** Schule* (dat — ik ben er **al**)." }],
           theorie: "Memo: Akk = beweging IN, Dat = al binnen. Toets-favoriet om naamval te testen.",
@@ -103,7 +103,7 @@ const steps = [
         q: "*Bekommen* betekent in Duits:",
         options: ["Krijgen","Worden","Begrijpen","Vergeten"],
         answer: 0,
-        wrongHints: [null, "Faux ami! Dat is *werden*.", "Niet — dat is verstehen.", "Niet — dat is *vergessen*."],
+        wrongHints: [null, "Je denkt misschien aan het Engelse 'become'. 'Worden' is in het Duits werden.", "Begrijpen is verstehen. Lijkt bekommen daarop?", "Vergeten is vergessen. Lijkt bekommen daarop?"],
         uitlegPad: {
           stappen: [{ titel: "Faux ami klassiek", tekst: "**Bekommen** = krijgen, ontvangen. NIET 'worden' (dat is *werden*). NL'ers verwarren dit vaak. Voorbeeld: *Ich bekomme ein Geschenk* = Ik **krijg** een cadeau (NIET 'ik word een cadeau')." }],
           theorie: "Andere faux amis: das Gymnasium (school, niet zaal), die Mappe (tas, kan map), eventuell (mogelijk).",
@@ -112,9 +112,9 @@ const steps = [
       },
       {
         q: "In bijzin met *weil* gaat werkwoord:",
-        options: ["Helemaal naar einde","Op plaats 2","Naar voren","Wisselt per zin"],
+        options: ["Naar het einde van de zin","Op de tweede plaats","Naar het begin van de zin","Direct na het onderwerp"],
         answer: 0,
-        wrongHints: [null, "Dat is hoofdzin.", "Niet — bijzin draait om.", "Niet — vaste regel."],
+        wrongHints: [null, "Op plaats 2 staat het werkwoord in een hoofdzin. Is een zin met weil een hoofdzin?", "Vooraan staat het werkwoord bij een vraag of een bevel. Is een zin met weil een vraag?", "Zo gaat het in het Engels. Hoe gaat het in een Nederlandse bijzin: '..., omdat ik ziek ben'?"],
         uitlegPad: {
           stappen: [{ titel: "Bijzin = werkwoord-eind", tekst: "Bij bijzinnen met *weil, dass, wenn, ob, obwohl, als, falls* gaat het werkwoord **helemaal naar het einde**.\n\n*Ich gehe in die Schule, **weil** ich Mathe **mag**.*\n(En niet *...weil ich mag Mathe.*)" }],
           theorie: "Toets-patroon: lange zin met bijzin → werkwoord vinden aan einde voor context.",
@@ -125,7 +125,7 @@ const steps = [
         q: "*Er sagt, er **sei** krank*. Welke modus + functie?",
         options: ["Konjunktiv I — indirecte rede","Imperatief — bevel","Futur — toekomst","Konjunktiv II — wens of hypothese"],
         answer: 0,
-        wrongHints: [null, "Niet — geen bevel.", "Niet — geen toekomst.", "Niet — Konjunktiv II zou hier *wäre* zijn; hier wordt iemands bewering doorgegeven."],
+        wrongHints: [null, "'Sei!' kan ook een bevel zijn ('Sei still!'). Maar hier staat 'Er sagt, er ...': wordt er iemand iets opgedragen?", "Futur maak je met werden + infinitief. Zie je werden in de zin?", "Konjunktiv II zou hier wäre zijn. Wat doet de zin met wat iemand zegt?"],
         uitlegPad: {
           stappen: [{ titel: "Konjunktiv I = citeren", tekst: "**Konjunktiv I** wordt gebruikt voor **indirecte rede** (vooral journalistiek). Auteur citeert bewering zonder zelf in te staan voor waarheid. *Er sei krank* = 'Hij zou ziek zijn (zo zegt hij althans)'.\n\nKonjunktiv II is voor wens/hypothese: *Wenn ich Zeit **hätte***." }],
           theorie: "Toets-patroon: bij krantenartikel-citaten kijk naar Konjunktiv I voor 'wat anderen claimden'.",
@@ -136,7 +136,7 @@ const steps = [
         q: "Voorzetsel **für** vraagt:",
         options: ["Akkusativ","Dativ","Genitiv","Geen naamval"],
         answer: 0,
-        wrongHints: [null, "Niet — für hoort bij het rijtje voorzetsels met één vaste naamval. Welke?", "Niet — für staat niet in het Dativ-rijtje (aus, bei, mit, nach, seit, von, zu).", "Wel naamval."],
+        wrongHints: [null, "Für hoort bij het rijtje voorzetsels met één vaste naamval. Staat für in het Dativ-rijtje?", "Für staat niet in het Genitiv-rijtje (wegen, trotz, während). Welk rijtje dan wel?", "Na een voorzetsel staat het zelfstandig naamwoord altijd in een naamval. Welke hoort bij für?"],
         uitlegPad: {
           stappen: [{ titel: "FUDGOB-Akkusativ-set", tekst: "**Für, durch, gegen, ohne, um, bis** vragen altijd Akkusativ. Memo: *für **mich***, *ohne **dich***, *gegen **ihn***. Geen wisseling met beweging/plaats." }],
           niveaus: { basis: "Akkusativ.", simpeler: "für = Akk", nogSimpeler: "Akk" },
@@ -155,7 +155,7 @@ const steps = [
         q: "*Trotzdem* betekent:",
         options: ["Toch","Daarom","Bovendien","Misschien"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is *deshalb*.", "Niet — *außerdem*.", "Niet — *vielleicht*."],
+        wrongHints: [null, "Niet — dat is *deshalb*.", "'Bovendien' is in het Duits *außerdem*.", "'Misschien' is in het Duits *vielleicht*."],
         uitlegPad: {
           stappen: [{ titel: "Tegenstelling-marker", tekst: "**Trotzdem / dennoch** = toch, niettemin. Signaleert dat ondanks vorige bewering iets anders volgt. Verwant: *allerdings, jedoch* (= echter)." }],
           niveaus: { basis: "Toch.", simpeler: "Trotzdem = toch", nogSimpeler: "Toch" },
@@ -165,7 +165,7 @@ const steps = [
         q: "*Sie hätte gern einen Kaffee* — welke modus + functie?",
         options: ["Konjunktiv II — hoffelijkheid","Konjunktiv I — indirecte rede","Imperatief — bevel","Indikativ — gewone mededeling"],
         answer: 0,
-        wrongHints: [null, "Niet — geen indirecte rede.", "Niet — geen bevel.", "Niet — de gewone vorm (Indikativ) zou *hat* zijn."],
+        wrongHints: [null, "Indirecte rede geeft door wat iemand zei: 'Er sagt, ...'. Wordt hier iets doorgegeven?", "Een bevel richt je tot een ander: 'Hab Geduld!'. Is dit een bevel?", "De gewone vorm (Indikativ) zou hat zijn. Waarom staat er hätte?"],
         uitlegPad: {
           stappen: [{ titel: "Hoffelijk-Konjunktiv", tekst: "*Sie **hätte** gern...* = **Konjunktiv II** voor **hoffelijkheid**. Letterlijk 'zij zou graag hebben' = beleefde manier om te vragen. Vergelijk *Ich möchte...* (ik zou willen) en *Könnten Sie...* (zou u kunnen)." }],
           theorie: "Indikativ: *Ich will einen Kaffee* (te direct). Konjunktiv II: *Ich hätte gern...* (beleefd). Verschil komt vaak terug op CSE.",
@@ -174,9 +174,9 @@ const steps = [
       },
       {
         q: "Bij **scheidbaar werkwoord** *anrufen* in hoofdzin: prefix staat:",
-        options: ["Aan het einde","Direct na werkwoord","Voor onderwerp","Wisselt per zin"],
+        options: ["Aan het einde van de zin","Direct na het werkwoord","Vooraan in de zin","Vast aan het werkwoord"],
         answer: 0,
-        wrongHints: [null, "Niet — uit elkaar.", "Niet — niet zinpositie.", "Wel regel."],
+        wrongHints: [null, "Denk aan 'ik bel je morgen op'. Staat 'op' direct na 'bel'?", "Vooraan staat meestal het onderwerp of een tijd. Waar staat 'op' in 'ik bel je morgen op'?", "In een hoofdzin gaat het voorvoegsel los van het werkwoord: 'Ich rufe ...'. Waar komt 'an' dan?"],
         uitlegPad: {
           stappen: [{ titel: "Scheidbare prefix = einde", tekst: "Bij scheidbaar werkwoord in **hoofdzin** scheidt prefix af + gaat naar einde.\n\n*Ich **rufe** meinen Freund **an**.*\n\nIn bijzin blijft hij samen: *..., dass ich meinen Freund **anrufe**.*" }],
           theorie: "Memo: hoofdzin = uit elkaar, bijzin = samen. Toets-klassieker.",
@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "Welk register is **Jugendsprache**?",
-        options: ["Informeel jongerentaal","Formele bestuurstaal","Wetenschappelijk","Standaard"],
+        options: ["Informele taal van jongeren onderling", "Formele taal van jeugdinstanties", "Eenvoudige taal voor jonge kinderen", "Nette standaardtaal (Hochdeutsch)"],
         answer: 0,
-        wrongHints: [null, "Niet — heel informeel.", "Niet relevant.", "Niet — afwijkend."],
+        wrongHints: [null, "Instanties schrijven netjes óver jongeren. Is Jugendsprache de taal van zulke officiële stukken?", "Taal die volwassenen tegen kleine kinderen spreken, is iets anders. Wie gebruikt Jugendsprache zelf?", "Standaardtaal is de nette norm. Klinkt Jugendsprache zo?"],
         uitlegPad: {
           stappen: [{ titel: "Slang", tekst: "**Jugendsprache** = jongerentaal Duits. Voorbeelden: *krass* (heftig/cool), *geil* (super), *cringe* (gênant), *abhängen* (chillen), *Bock haben* (zin hebben). Komt op CSE alleen in zeer informele context (sociale media, jongeren-interviews)." }],
           niveaus: { basis: "Jongerentaal.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "Taal van jongeren." },
@@ -195,9 +195,9 @@ const steps = [
       },
       {
         q: "*Während* kan in tekst betekenen:",
-        options: ["Tijd 'terwijl' óf tegenstelling 'daarentegen'","Alleen tijd","Alleen tegenstelling","Daarom"],
+        options: ["Tijd 'terwijl' óf tegenstelling 'daarentegen'", "Tijd 'nadat' óf tegenstelling 'daarentegen'", "Tijd 'terwijl' óf reden 'omdat'", "Tijd 'voordat' óf reden 'omdat'"],
         answer: 0,
-        wrongHints: [null, "Niet — twee betekenissen.", "Niet — twee betekenissen.", "Niet relevant."],
+        wrongHints: [null, "'Nadat' is nachdem. Lees 'Er schläft, während sie arbeitet': gebeurt dat na elkaar of tegelijk?", "Een reden geef je met weil. Lees 'Er ist reich, während sie arm ist.' Is dat een reden?", "'Voordat' is bevor, 'omdat' is weil. Gebeurt 'Er schläft, während sie arbeitet' vóór of tegelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbele betekenis", tekst: "**Während** heeft 2 betekenissen:\n• **Tijd**: *Während ich aß, klingelte das Telefon* = Terwijl ik at, ging de telefoon.\n• **Tegenstelling**: *Während die Eltern arbeiten, spielen die Kinder* = De ouders werken, **terwijl/daarentegen** de kinderen spelen.\n\nContext beslist. Toets-favoriet om beide betekenissen te testen." }],
           niveaus: { basis: "Beide.", simpeler: "Während = tijd of contrast", nogSimpeler: "Beide" },
@@ -214,7 +214,7 @@ const steps = [
     checks: [
       {
         q: "Wat staat **DACH** voor?",
-        options: ["Duitsland + Österreich + Schweiz","Duitsland + Oostenrijk + Tsjechië","Denemarken + Oostenrijk + Zwitserland","Duitsland + Andorra + Zwitserland"],
+        options: ["Duitsland + Oostenrijk + Zwitserland","Duitsland + Oostenrijk + Tsjechië","Denemarken + Oostenrijk + Zwitserland","Duitsland + Andorra + Zwitserland"],
         answer: 0,
         wrongHints: [null, "Waar staat de landcode CH voor — is dat Tsjechië?", "Het gaat om Duitstalige landen — spreekt men in Denemarken Duits?", "Is Andorra een Duitstalig land?"],
         uitlegPad: {
@@ -236,7 +236,7 @@ const steps = [
         q: "Hoeveel **officiële talen** heeft Zwitserland?",
         options: ["4","2","6","1"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Niet alleen Duits."],
+        wrongHints: [null, "Duits en Frans, en verder? Denk ook aan het zuiden (Ticino) en de bergdalen van Graubünden.", "Tel de talen die je in de verschillende delen van Zwitserland hoort. Kom je aan zes?", "In Genève spreekt men Frans, in Zürich Duits. Kan er dan maar één officiële taal zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Vier-talig", tekst: "Zwitserland heeft **4 officiële talen**: Duits (63%), Frans (23%), Italiaans (8%), Reto-Romaans (0,5%). Dit weerspiegelt regionale verschillen — kantons hebben eigen voertaal." }],
           theorie: "Toets-favoriet: 'welk land in DACH heeft 4 talen?' → Zwitserland.",
@@ -245,9 +245,9 @@ const steps = [
       },
       {
         q: "Wanneer was de **Mauerfall** (val Berlijnse Muur)?",
-        options: ["9 november 1989","9 mei 1945","3 oktober 1990","1961"],
+        options: ["9 november 1989","9 mei 1945","3 oktober 1990","13 augustus 1961"],
         answer: 0,
-        wrongHints: [null, "Niet — einde WO2.", "Hereniging.", "Bouw van muur."],
+        wrongHints: [null, "9 mei 1945 hoort bij het einde van de Tweede Wereldoorlog. Stond de Muur er toen al?", "Op 3 oktober 1990 werd Duitsland officieel herenigd. Viel de Muur daarvoor of daarna?", "Op 13 augustus 1961 werd de Muur juist gebouwd. Wanneer viel hij?"],
         uitlegPad: {
           stappen: [{ titel: "9 nov 1989", tekst: "**Mauerfall** = val Berlijnse Muur op **9 november 1989** (28 jaar na bouw 1961). Symbolisch einde Koude Oorlog. **3 oktober 1990**: formele hereniging Duitsland (Wiedervereinigung) — feestdag van Duitse Eenheid." }],
           theorie: "Toets-favoriet: data onthouden. 8/9 mei 1945 = einde WO2 in Europa. 17 juni 1953 = opstand DDR (vroegere herdenkingsdag).",
@@ -256,9 +256,9 @@ const steps = [
       },
       {
         q: "**Energiewende** verwijst naar:",
-        options: ["Overgang van fossiel/kern naar hernieuwbare energie","Stoom-revolutie 19e eeuw","Oost-uitbreiding EU","Vrouwen-emancipatie"],
+        options: ["Overstap van fossiel en kernenergie naar duurzaam", "Overstap van kolen naar meer kernenergie", "Bouw van de eerste stoommachines in Duitsland", "Privatisering van de Duitse energiebedrijven"],
         answer: 0,
-        wrongHints: [null, "Energiewende is een actueel beleid, geen historische omwenteling — past de stoommachine van 200 jaar terug daarbij?", "Dit gaat over landsgrenzen en de EU — heeft het woorddeel 'Energie' daar iets mee te maken?", "Emancipatie draait om mensen en rechten — waar wijst 'Energie' juist naartoe?"],
+        wrongHints: [null, "Duitsland heeft zijn kerncentrales juist gesloten. Past dat bij méér kernenergie?", "Energiewende is actueel beleid, geen gebeurtenis van 200 jaar geleden. Waar gaat het nu om?", "Het gaat niet om wie de bedrijven bezit. 'Wende' betekent ommekeer: waarvan naar wat?"],
         uitlegPad: {
           stappen: [{ titel: "Energie-omslag", tekst: "**Energiewende** = Duits beleid sinds 2000: overstap van fossiel + kernenergie naar **hernieuwbaar** (zon, wind, biomassa). Versneld na Fukushima 2011. **Kernuitstap 2023** voltooid: laatste 3 kerncentrales gesloten. Hot topic: kost veel, leverde nog niet alles op." }],
           theorie: "Vergelijking: FR zet juist op kern (~70%), DE op hernieuwbaar. Politiek omstreden in DACH.",
@@ -278,7 +278,7 @@ const steps = [
         q: "*Eventuell* in Duits betekent:",
         options: ["Mogelijk","Beslist","Vroeger","Hier"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Beslist is 'bestimmt'. Denk aan het Nederlandse woord dat op eventuell lijkt.", "Vroeger is 'früher'. Lijkt 'eventuell' daarop?", "Hier is in het Duits gewoon 'hier'. Denk aan het Nederlandse woord dat op 'eventuell' lijkt."],
         uitlegPad: {
           stappen: [{ titel: "Twijfel uitdrukken", tekst: "**Eventuell** = mogelijk, misschien (~50% kans). NL'ers verwarren soms met 'eventueel' (= 'als het zo uitkomt') — andere nuance. Voor 'definitief' gebruik *bestimmt, sicher, definitiv*." }],
           niveaus: { basis: "Mogelijk.", simpeler: "Eventuell = mogelijk", nogSimpeler: "Misschien." },
@@ -288,7 +288,7 @@ const steps = [
         q: "Welk **lidwoord** bij Akkusativ mannelijk?",
         options: ["den","der","dem","des"],
         answer: 0,
-        wrongHints: [null, "Niet — Nominativ.", "Niet — Dativ.", "Niet — Genitiv."],
+        wrongHints: [null, "Der is mannelijk in de Nominativ (onderwerp). Welke vorm krijgt het lijdend voorwerp?", "Dem is mannelijk in de Dativ (meewerkend voorwerp). Welke vorm hoort bij de Akkusativ?", "Des is mannelijk in de Genitiv (bezit). Welke vorm hoort bij de Akkusativ?"],
         uitlegPad: {
           stappen: [{ titel: "Akk m = den", tekst: "Akkusativ mannelijk: **den**. Tabel: *ich sehe **den** Mann*. Nom: der, Akk: den, Dat: dem, Gen: des. Bij vrouwelijk/onzijdig/mv: Akk = Nom (geen verandering)." }],
           niveaus: { basis: "den.", simpeler: "Akk m = den", nogSimpeler: "den" },
@@ -298,7 +298,7 @@ const steps = [
         q: "Welk verbinding-woord betekent **doordat**?",
         options: ["Indem","Weil","Trotzdem","Dass"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is omdat.", "Niet — toch.", "Niet — dat."],
+        wrongHints: [null, "Weil betekent 'omdat' en geeft een reden. Welk woord zegt hoe of waardoor iets gebeurt?", "Trotzdem betekent 'toch'. Welk woord zegt hoe of waardoor iets gebeurt?", "Dass betekent 'dat'. Welk woord zegt hoe of waardoor iets gebeurt?"],
         uitlegPad: {
           stappen: [{ titel: "Middel/wijze", tekst: "**Indem** = doordat, terwijl (in zin van middel). *Er lernt, **indem** er Filme schaut* = Hij leert **door** films te kijken. Verschil met **weil** (omdat = oorzaak) en **dass** (dat = inhoud)." }],
           niveaus: { basis: "Indem.", simpeler: "Doordat = indem", nogSimpeler: "Indem" },
@@ -308,7 +308,7 @@ const steps = [
         q: "Wie is huidige **Bundeskanzler** (2025)?",
         options: ["Friedrich Merz","Olaf Scholz","Angela Merkel","Helmut Kohl"],
         answer: 0,
-        wrongHints: [null, "Was tot mei 2025.", "Tot 2021.", "Van 1982 tot 1998."],
+        wrongHints: [null, "Scholz regeerde tot mei 2025. Wie nam het daarna over na de verkiezingen van februari 2025?", "Merkel stopte in 2021. Wie kwamen er na haar?", "Kohl was kanselier van 1982 tot 1998. Kan hij dan de huidige kanselier zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds mei 2025", tekst: "**Friedrich Merz** (CDU) is Bondskanselier sinds **mei 2025**, na regering-Scholz (SPD-Grüne-FDP-coalitie 2021-2025) viel. Coalitie: CDU/CSU + SPD ('Große Koalition')." }],
           theorie: "Merkel was kanselier 2005-2021 (16 jaar, langste na Kohl 16 jaar). Scholz 2021-2025.",
@@ -319,7 +319,7 @@ const steps = [
         q: "Bij **Wechselpräposition** (an/auf/in/etc) bij beweging naar plek: welke naamval?",
         options: ["Akkusativ","Dativ","Nominativ","Genitiv"],
         answer: 0,
-        wrongHints: [null, "Niet — Dat bij plaats.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "De Dativ gebruik je bij een plaats: waar is iets? Gaat het hier om waar, of waarheen?", "Een Wechselpräposition wisselt tussen twee naamvallen. Is de Nominativ daar één van?", "Een Wechselpräposition wisselt tussen twee naamvallen. Is de Genitiv daar één van?"],
         uitlegPad: {
           stappen: [{ titel: "Beweging = Akk", tekst: "Bij Wechselpräpositionen: **Akkusativ** bij beweging-richting (waar naartoe), **Dativ** bij plaats (waar). *Ich gehe **in die** Stadt* (Akk, naar toe). *Ich bin **in der** Stadt* (Dat, ben er)." }],
           niveaus: { basis: "Akkusativ.", simpeler: "Beweging = Akk", nogSimpeler: "Akk" },

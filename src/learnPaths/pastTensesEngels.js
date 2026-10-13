@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Wat is past simple van **play**?",
-        options: ["played", "plaied", "playd", "playyed"],
+        options: ["played", "plays", "has played", "playing"],
         answer: 0,
-        wrongHints: [null, "Klinker + y — verandert de y dan wel?", "+ed, niet +d.", "Geen verdubbeling."],
+        wrongHints: [null, "'Plays' is present simple (he plays). Welke vorm is verleden tijd?", "'Has played' is present perfect, met een hulpwerkwoord. Hoe ziet past simple eruit?", "'Playing' is de -ing-vorm. Welke vorm gebruik je voor een afgeronde handeling in het verleden?"],
         uitlegPad: {
           stappen: [{ titel: "play → played", tekst: "Klinker + y: gewoon +ed → played." }],
           woorden: [{ woord: "regelmatig", uitleg: "basis + -ed" }],
@@ -47,7 +47,7 @@ const steps = [
         q: "Wat is past simple van **stop**?",
         options: ["stopped", "stoped", "stopd", "stopt"],
         answer: 0,
-        wrongHints: [null, "Korte klank + één medeklinker aan het eind — wat gebeurt er dan met die medeklinker?", "+ed, niet +d.", "Geen Engelse uitgang."],
+        wrongHints: [null, "Korte klank + één medeklinker aan het eind — wat gebeurt er dan met die medeklinker?", "Alleen werkwoorden die al op -e eindigen, krijgen alleen een -d (like → liked). Eindigt stop op een -e?", "'Stopt' is Nederlands. Welke uitgang krijgt een regelmatig Engels werkwoord in de past simple?"],
         uitlegPad: {
           stappen: [{ titel: "stop → stopped", tekst: "Korte klank + medeklinker → verdubbel: stopped." }],
           woorden: [{ woord: "verdubbeling", uitleg: "extra letter bij korte klank" }],
@@ -73,9 +73,9 @@ const steps = [
     checks: [
       {
         q: "Welke is **goed**?",
-        options: ["Did you see the film?", "Did you saw the film?", "Do you see the film?", "Did you sees the film?"],
+        options: ["Did you see the film?", "Did you saw the film?", "Saw you the film?", "Did you sees the film?"],
         answer: 0,
-        wrongHints: [null, "Na did → basisvorm.", "Do is voor present, niet past.", "Geen -s na did."],
+        wrongHints: [null, "Na did komt de basisvorm, niet de verleden tijd. Welke vorm is dat?", "Zo vraag je het in het Nederlands ('Zag jij…?'). Welk hulpwerkwoord heb je in het Engels nodig?", "Na did komt de basisvorm, zonder -s. Welke vorm is dat?"],
         uitlegPad: {
           stappen: [{ titel: "Did + basisvorm", tekst: "Did you see ...? — niet 'saw'." }],
           woorden: [{ woord: "did", uitleg: "verleden tijd zit hierin" }],
@@ -89,7 +89,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["She didn't go to school.", "She didn't went to school.", "She not go to school.", "She didn't goes to school."],
         answer: 0,
-        wrongHints: [null, "Na didn't komt de basisvorm — is 'went' dat?", "Niet alleen 'not' — je hebt didn't nodig.", "Geen -s na didn't."],
+        wrongHints: [null, "Na didn't komt de basisvorm — is 'went' dat?", "Niet alleen 'not' — je hebt didn't nodig.", "Na didn't komt geen -s. Klopt 'goes' dan?"],
         uitlegPad: {
           stappen: [{ titel: "Didn't + basisvorm", tekst: "She didn't go — niet 'didn't went'." }],
           woorden: [{ woord: "didn't", uitleg: "= did not" }],
@@ -134,7 +134,7 @@ const steps = [
         q: "Wat is V3 van **see**?",
         options: ["seen", "saw", "seed", "seeing"],
         answer: 0,
-        wrongHints: [null, "Saw is V2 (past simple).", "See is onregelmatig — geen -ed.", "-ing-vorm, andere tijd."],
+        wrongHints: [null, "Saw is V2 (past simple).", "See is onregelmatig — geen -ed.", "'Seeing' is de -ing-vorm voor de continuous. Welke vorm komt na have/has?"],
         uitlegPad: {
           stappen: [{ titel: "see-saw-seen", tekst: "V1 see, V2 saw, V3 seen." }],
           woorden: [{ woord: "V3", uitleg: "past participle, gebruik na have/has" }],
@@ -208,7 +208,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["I have already eaten.", "I already eaten have.", "I have eaten yet.", "Already I have eaten."],
         answer: 0,
-        wrongHints: [null, "Kijk naar de volgorde: waar staat have ten opzichte van eaten?", "'Yet' hoort bij een vraag of ontkenning, niet bij een positieve zin.", "'Already' niet vooraan."],
+        wrongHints: [null, "Kijk naar de volgorde: waar staat have ten opzichte van eaten?", "'Yet' hoort bij een vraag of ontkenning, niet bij een positieve zin.", "'Already' staat meestal tussen have en het voltooid deelwoord. Waar staat het hier?"],
         uitlegPad: {
           stappen: [{ titel: "have + already + V3", tekst: "I have already eaten. Already tussen have en V3." }],
           woorden: [{ woord: "already", uitleg: "al, midden in de zin" }],
@@ -222,7 +222,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["Have you finished yet?", "Have yet you finished?", "Yet have you finished?", "You have yet finished?"],
         answer: 0,
-        wrongHints: [null, "Verkeerde plek.", "Niet vooraan.", "Geen vraagvolgorde."],
+        wrongHints: [null, "Waar staat 'yet' in een vraag: midden in de zin of aan het eind?", "'Yet' staat in een vraag niet vooraan. Waar dan wel?", "In een vraag staat 'have' vóór 'you'. Klopt de volgorde hier?"],
         uitlegPad: {
           stappen: [{ titel: "Yet aan eind", tekst: "Have you finished yet? — yet komt achteraan." }],
           woorden: [{ woord: "yet", uitleg: "al? / nog niet" }],
@@ -257,9 +257,9 @@ const steps = [
     checks: [
       {
         q: "Welke is goed? — *I ___ him yesterday.* (see)",
-        options: ["saw", "have seen", "see", "did see"],
+        options: ["saw", "have seen", "see", "seen"],
         answer: 0,
-        wrongHints: [null, "Perfect past niet bij 'yesterday'.", "Tegenwoordige tijd, klopt niet.", "'Did see' gebruik je alleen voor nadruk ('ik héb hem wél gezien'); de gewone vorm is V2."],
+        wrongHints: [null, "Present perfect past niet bij een afgesloten tijd als 'yesterday'. Welke tijd wel?", "'See' is present simple. Wanneer zag je hem?", "'Seen' is de 3e vorm; die gebruik je alleen na have, has of had. Welke vorm gebruik je zonder hulpwerkwoord?"],
         uitlegPad: {
           stappen: [{ titel: "Yesterday = simple", tekst: "I saw him yesterday. Vast tijdstip → simple, V2." }],
           woorden: [{ woord: "yesterday", uitleg: "vast verleden tijdstip" }],
@@ -273,7 +273,7 @@ const steps = [
         q: "Welke is goed? — *I ___ him three times so far this week.* (see)",
         options: ["have seen", "saw", "see", "have see"],
         answer: 0,
-        wrongHints: [null, "Simple past niet bij 'this week' (nog bezig).", "Tegenwoordige tijd.", "Na 'have' moet V3 = seen."],
+        wrongHints: [null, "Simple past niet bij 'this week' (nog bezig).", "'I see him three times' klinkt als een gewoonte nu. Er staat 'so far' (tot nu toe) — welke tijd hoort daarbij?", "Na 'have' moet V3 = seen."],
         uitlegPad: {
           stappen: [{ titel: "This week = perfect", tekst: "I have seen him three times this week. Week is nog bezig → perfect." }],
           woorden: [{ woord: "this week", uitleg: "open tijdsperiode, nog niet voorbij" }],
@@ -344,9 +344,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent *She's gone home*?",
-        options: ["She has gone home.", "She is going home.", "Her gone home.", "She does gone home."],
+        options: ["She has gone home.", "She is going home.", "She was going home.", "She had gone home."],
         answer: 0,
-        wrongHints: [null, "Continuous zou 'going' zijn, niet 'gone'.", "Geen geldige zin.", "Geen geldige Engelse vorm."],
+        wrongHints: [null, "Continuous zou 'going' zijn, niet 'gone'.", "De 's staat voor 'is' of 'has', nooit voor 'was'. Welke van die twee past bij 'gone'?", "'Had' kort je af als 'd (she'd gone). Waar staat de 's voor?"],
         uitlegPad: {
           stappen: [{ titel: "She's = she has", tekst: "She's gone home = She has gone home (perfect)." }],
           woorden: [{ woord: "contractie", uitleg: "'s = is OF has, kijk naar erna" }],
@@ -358,9 +358,9 @@ const steps = [
       },
       {
         q: "Wat is **haven't**?",
-        options: ["have not", "had not", "has not", "having"],
+        options: ["have not", "had not", "has not", "have no"],
         answer: 0,
-        wrongHints: [null, "Hadn't = had not.", "Hasn't = has not.", "Geen contractie."],
+        wrongHints: [null, "'Had not' trek je samen tot 'hadn't'. Welk werkwoord zit er in haven't?", "'Has not' trek je samen tot 'hasn't'. Bij welk onderwerp hoort has, en welke vorm zie je in haven't?", "'Have no' betekent 'heb geen'. Welk woord staat er voluit in haven't?"],
         uitlegPad: {
           stappen: [{ titel: "haven't = have not", tekst: "Contractie van have + not." }],
           woorden: [{ woord: "ontkenning", uitleg: "have not = haven't" }],
@@ -388,7 +388,7 @@ const steps = [
         q: "*She ___ to Spain in 2018.* (go)",
         options: ["went", "has gone", "go", "did went"],
         answer: 0,
-        wrongHints: [null, "Vast tijdstip → niet perfect.", "Tegenwoordige tijd.", "Na did → basisvorm; en vast tijdstip = simple zonder did."],
+        wrongHints: [null, "Vast tijdstip → niet perfect.", "'Go' is present. 'In 2018' ligt in het verleden — welke vorm hoort daarbij?", "Na did → basisvorm; en vast tijdstip = simple zonder did."],
         uitlegPad: {
           stappen: [{ titel: "In 2018 = simple", tekst: "She went to Spain in 2018. Jaartal → V2." }],
           woorden: [{ woord: "go-went-gone", uitleg: "V1-V2-V3" }],
@@ -416,7 +416,7 @@ const steps = [
         q: "*We ___ each other for 10 years.* (know)",
         options: ["have known", "knew", "know", "have knew"],
         answer: 0,
-        wrongHints: [null, "Simple past niet bij 'for ... years' = nu.", "Tegenwoordige tijd past niet.", "V2 past niet na have."],
+        wrongHints: [null, "Simple past niet bij 'for ... years' = nu.", "In het Nederlands zeg je 'we kennen elkaar al 10 jaar', maar het Engels gebruikt bij 'for … years' tot nu een andere tijd. Welke?", "V2 past niet na have."],
         uitlegPad: {
           stappen: [{ titel: "For + perfect", tekst: "We have known each other for 10 years. Doorlopend → perfect." }],
           woorden: [{ woord: "know-knew-known", uitleg: "V1-V2-V3 onregelmatig" }],
@@ -443,7 +443,7 @@ const steps = [
         q: "*When I was 10, I ___ a dog.* (have)",
         options: ["had", "have had", "have", "had have"],
         answer: 0,
-        wrongHints: [null, "Vast tijdstip → niet perfect.", "Tegenwoordige tijd, klopt niet.", "Geen geldige vorm."],
+        wrongHints: [null, "Vast tijdstip → niet perfect.", "'Have' is present. 'When I was 10' is verleden — welke vorm past?", "Na 'had' komt een voltooid deelwoord, geen basisvorm. En heb je hier eigenlijk een hulpwerkwoord nodig?"],
         uitlegPad: {
           stappen: [{ titel: "When I was = simple", tekst: "When I was 10, I had a dog. Vast verleden → simple, V2 = had." }],
           woorden: [{ woord: "have-had-had", uitleg: "V1-V2-V3" }],
@@ -457,7 +457,7 @@ const steps = [
         q: "*She ___ never ___ a horror film.* (watch)",
         options: ["has / watched", "did / watch", "has / watch", "does / watch"],
         answer: 0,
-        wrongHints: [null, "Bij 'never' (ervaring tot nu) gebruik je present perfect, geen did.", "Na has moet V3, niet basisvorm.", "Does is present simple."],
+        wrongHints: [null, "Bij 'never' (ervaring tot nu) gebruik je present perfect, geen did.", "Na has moet V3, niet basisvorm.", "Met 'does' maak je een zin in de present simple. Welke tijd hoort bij 'never' (tot nu toe)?"],
         uitlegPad: {
           stappen: [{ titel: "Never = perfect", tekst: "She has never watched a horror film. Never → perfect, V3 = watched." }],
           woorden: [{ woord: "never", uitleg: "nooit (ervaring)" }],
@@ -471,7 +471,7 @@ const steps = [
         q: "*I ___ my homework already. Can I go now?*",
         options: ["have finished", "has finished", "have finish", "finishing"],
         answer: 0,
-        wrongHints: [null, "I → have, niet has.", "Na have hoort V3, niet de basisvorm.", "Geen werkwoordvorm."],
+        wrongHints: [null, "I → have, niet has.", "Na have hoort V3, niet de basisvorm.", "'I finishing' mist een hulpwerkwoord. En 'already' wijst op welke tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Gevolg nu = perfect", tekst: "I have finished my homework. Can I go now? Gevolg in heden → perfect." }],
           woorden: [{ woord: "gevolg", uitleg: "actie heeft effect nu" }],
@@ -485,7 +485,7 @@ const steps = [
         q: "*Last weekend we ___ to the cinema and ___ a great film.* (go / see)",
         options: ["went / saw", "have gone / seen", "went / have seen", "have gone / saw"],
         answer: 0,
-        wrongHints: [null, "Last weekend → niet perfect.", "Bij een vast tijdstip krijgen beide werkwoorden past simple.", "Eerste klopt niet, vast tijdstip."],
+        wrongHints: [null, "Last weekend → niet perfect.", "Bij een vast tijdstip krijgen beide werkwoorden past simple.", "'Have gone' past niet bij 'last weekend', een afgesloten moment. Welke tijd krijgen beide werkwoorden?"],
         uitlegPad: {
           stappen: [{ titel: "Last weekend = simple", tekst: "Last weekend we went... and saw... Beide V2." }],
           woorden: [{ woord: "last weekend", uitleg: "gesloten tijdstip" }],
@@ -497,13 +497,13 @@ const steps = [
       },
       { q: "I _____ in London since 2020.", options: ["have lived","lived","live","am living"], answer: 0, wrongHints: [null,"Niet — 'since' triggert present perfect.","Niet — link met nu (woont er nog).","Niet — present continuous past niet bij 'since'."] },
       { q: "Welk signaalwoord hoort bij past simple, niet present perfect?", options: ["yesterday","ever","just","already"], answer: 0, wrongHints: [null, "Ever past bij present perfect.", "Just past bij present perfect.", "Already past bij present perfect."] },
-      { q: "**Past simple** van 'play'?", options: ["played","plaid","plays","playing"], answer: 0, wrongHints: [null,"Verkeerde spelling.","V1 / 3e persoon.","Continuous."] },
-      { q: "**Past continuous** vorm?", options: ["was/were + V-ing","had + V3","V2 alleen","will + V"], answer: 0, wrongHints: [null,"Past perfect.","Past simple.","Future simple."] },
-      { q: "**Past perfect** vorm?", options: ["had + V3","was + V-ing","V2","will have V3"], answer: 0, wrongHints: [null,"Past continuous.","Past simple.","Future perfect."] },
-      { q: "*'I ___ TV when the phone rang.'* — past continuous?", options: ["was watching","watched","have watched","will watch"], answer: 0, wrongHints: [null,"Past simple.","Present perfect.","Future."] },
-      { q: "*'When she arrived, the film ___ already started.'* — past perfect?", options: ["had","has","is","was"], answer: 0, wrongHints: [null,"Present perfect.","Present.","Past simple."] },
-      { q: "**Signaalwoord 'while'** past meestal bij?", options: ["Past continuous","Past simple alleen","Present perfect","Future"], answer: 0, wrongHints: [null,"Niet primair.","Anders.","Niet."] },
-      { q: "Verschil **'I lived'** vs **'I have lived'**?", options: ["Lived = afgerond verleden; have lived = link met nu","Geen verschil","Beide present","Beide future"], answer: 0, wrongHints: [null,"Wel verschil.","Niet.","Niet."] },
+      { q: "**Past simple** van 'play'?", options: ["played","had played","plays","was playing"], answer: 0, wrongHints: [null,"'Had played' is past perfect: verleden vóór verleden. Welke vorm is de gewone verleden tijd?","'Plays' is present simple (he plays). Welke vorm is verleden tijd?","'Was playing' is past continuous: bezig zijn in het verleden. Welke vorm gebruik je voor een afgeronde handeling?"] },
+      { q: "**Past continuous** vorm?", options: ["was/were + V-ing","had + V3","V2 alleen","will + V"], answer: 0, wrongHints: [null,"Zie je in deze vorm een -ing? Hoe laat je zien dat iets bezig was?","Alleen V2 geeft een gewone, afgeronde handeling. Hoe laat je zien dat iets aan de gang was?","'Will' wijst naar de toekomst. Wat heb je nodig voor 'was bezig'?"] },
+      { q: "**Past perfect** vorm?", options: ["had + V3","was + V-ing","V2","will have V3"], answer: 0, wrongHints: [null,"Een -ing-vorm laat zien dat iets bezig was. Is dat de betekenis van de past perfect?","Alleen V2 geeft een gewone, afgeronde handeling. Hoe laat je zien dat iets nóg eerder gebeurde?","'Will have' wijst naar de toekomst. Welk hulpwerkwoord heeft de past perfect?"] },
+      { q: "*'I ___ TV when the phone rang.'* — past continuous?", options: ["was watching","watched","have watched","will watch"], answer: 0, wrongHints: [null,"'Watched' is past simple: een afgeronde handeling. Was je klaar met tv-kijken toen de telefoon ging?","'Have watched' verbindt het verleden met nu. Gaat dit verhaal over nu?","'Will watch' gaat over de toekomst. Wanneer ging de telefoon?"] },
+      { q: "*'When she arrived, the film ___ already started.'* — past perfect?", options: ["had","has","is","was"], answer: 0, wrongHints: [null,"'Has started' verbindt het met nu, maar 'arrived' staat in het verleden. Welk hulpwerkwoord past daarbij?","'The film is already started' klinkt als het Nederlandse 'is begonnen'. Welk hulpwerkwoord gebruikt het Engels bij voltooide tijden?","'Was started' zou lijdende vorm zijn ('werd gestart'). Welk hulpwerkwoord hoort bij de past perfect?"] },
+      { q: "**Signaalwoord 'while'** past meestal bij?", options: ["Past continuous","Past simple alleen","Present perfect","Future"], answer: 0, wrongHints: [null,"While zet een handeling neer die toen bezig was. Past daar een afgeronde vorm bij?","Present perfect verbindt het verleden met nu. Is dat waar 'while' over gaat?","While gebruik je hier in verhalen over vroeger. Past de toekomst daarbij?"] },
+      { q: "Verschil **'I lived'** vs **'I have lived'**?", options: ["Lived = afgerond; have lived = link met nu","Lived = link met nu; have lived = afgerond","Beide verleden, geen verschil in betekenis","Lived = gewoonte; have lived = één keer"], answer: 0, wrongHints: [null,"Vergelijk 'I have lived here since 2010'. Woon je er nog?","Vergelijk 'I lived in Paris' met 'I have lived in Paris since 2020'. Woon je er nog?","Een gewoonte zeg je met 'used to'. Waar draait het verschil hier om?"] },
       { q: "**Open vraag**: past simple van 'study'?", kind: "open", acceptedAnswers: ["studied"], explanation: "study → studied (y na medeklinker → ied)." },
       { q: "**Open vraag**: vul aan 'Last year, I __ to Spain.' (go)", kind: "open", acceptedAnswers: ["went"], explanation: "go → went (onregelmatig)." },
     ],

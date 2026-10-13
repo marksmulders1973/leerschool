@@ -56,9 +56,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **rechtsvorm**?",
-        options: ["De juridische opzet van een onderneming", "De winst van een bedrijf", "Een soort belasting", "Het logo van een bedrijf"],
+        options: ["De juridische vorm waarin een bedrijf bestaat", "De vergunning die een bedrijf nodig heeft", "De inschrijving van een bedrijf bij de KvK", "De cao met regels voor het personeel"],
         answer: 0,
-        wrongHints: [null, "Winst is iets anders dan de juridische vorm.", "Belasting hángt af van de rechtsvorm, maar is het niet.", "Een logo is de huisstijl, niet de juridische opzet."],
+        wrongHints: [null, "Een vergunning heb je nodig voor bepaald werk, zoals een terras. Een rechtsvorm staat daar los van.", "Bij de KvK schrijf je je in — en dan geef je juist je rechtsvorm op. Wat is die rechtsvorm zelf?", "Een cao gaat over lonen en werktijden van personeel. Waar gaat een rechtsvorm over?"],
         uitlegPad: {
           stappen: [{ titel: "De juridische opzet", tekst: "Een rechtsvorm is de juridische 'jas' van je bedrijf: eenmanszaak, VOF, BV of NV. Die bepaalt aansprakelijkheid, belasting en oprichting." }],
           woorden: [{ woord: "rechtsvorm", uitleg: "De juridische opzet van een onderneming." }, { woord: "onderneming", uitleg: "Een bedrijf dat producten of diensten levert om winst te maken." }],
@@ -70,9 +70,9 @@ const steps = [
       },
       {
         q: "Bij welke groep ben je **privé aansprakelijk** voor de schulden?",
-        options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (rechtspersoon)", "Alleen de NV", "Bij geen enkele rechtsvorm"],
+        options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (wel een rechtspersoon)", "Alleen de NV (grote bedrijven)", "Alleen de VOF (meerdere eigenaren)"],
         answer: 0,
-        wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Er zijn wél rechtsvormen waarbij je privé risico loopt."],
+        wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Bij een VOF klopt het — maar hoe zit het met iemand die in z'n eentje een zaak heeft?"],
         uitlegPad: {
           stappen: [{ titel: "Geen rechtspersoon = privé risico", tekst: "Bij een eenmanszaak en VOF ben jij juridisch hetzelfde als het bedrijf. Schuldeisers kunnen daarom aan je privé-vermogen komen." }],
           woorden: [{ woord: "privé aansprakelijk", uitleg: "Met je eigen huis, auto en spaargeld verantwoordelijk voor de bedrijfsschulden." }, { woord: "rechtspersoon", uitleg: "Een bedrijf dat juridisch los staat van de eigenaar (BV, NV). Beschermt je privé-vermogen." }],
@@ -84,9 +84,9 @@ const steps = [
       },
       {
         q: "Welke belasting betaalt een **rechtspersoon** (BV of NV) over de winst?",
-        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW", "Geen enkele belasting"],
+        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Dividendbelasting over de winst"],
         answer: 0,
-        wrongHints: [null, "IB hoort bij eenmanszaak en VOF.", "BTW betalen alle ondernemingen — dat is geen winstbelasting.", "Een rechtspersoon betaalt juist zelf belasting."],
+        wrongHints: [null, "IB hoort bij eenmanszaak en VOF.", "BTW betalen alle ondernemingen — dat is geen winstbelasting.", "Dividendbelasting gaat over winst die aan de aandeelhouders wordt uitgekeerd. Welke belasting betaalt de BV of NV zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Aparte persoon, eigen belasting", tekst: "Omdat een BV/NV een aparte 'persoon' is, betaalt het bedrijf zelf belasting over de winst: vennootschapsbelasting (VPB)." }],
           woorden: [{ woord: "VPB", uitleg: "Vennootschapsbelasting — winstbelasting voor rechtspersonen (BV, NV)." }, { woord: "IB", uitleg: "Inkomstenbelasting — winstbelasting voor natuurlijke personen (eenmanszaak, VOF-vennoot)." }],
@@ -137,7 +137,7 @@ const steps = [
       },
       {
         q: "Twee vennoten hebben een VOF. Eén maakt een grote schuld. Wat betekent **hoofdelijk aansprakelijk**?",
-        options: ["De schuldeisers kunnen de hele schuld bij de andere vennoot halen", "Elke vennoot betaalt alleen zijn eigen helft", "Alleen het bedrijf betaalt, niet de vennoten", "De vennoten betalen niets, want het is een rechtspersoon"],
+        options: ["Schuldeisers kunnen alles bij de andere vennoot halen", "Elke vennoot betaalt alleen zijn eigen helft", "Alleen het bedrijf betaalt, niet de vennoten", "De vennoten betalen niets, want het is een rechtspersoon"],
         answer: 0,
         wrongHints: [null, "Bij hoofdelijke aansprakelijkheid is het niet netjes 'ieder zijn deel'.", "Een VOF is geen rechtspersoon, dus de vennoten betalen zelf.", "Een VOF beschermt je privé-vermogen juist niet."],
         uitlegPad: {
@@ -151,9 +151,9 @@ const steps = [
       },
       {
         q: "Waarom kiezen veel **zzp'ers** voor een eenmanszaak?",
-        options: ["Snel en goedkoop op te richten, met belastingvoordelen", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan naar de beurs kunnen", "Omdat een eenmanszaak geen belasting betaalt"],
+        options: ["Omdat het goedkoop is en belastingvoordeel geeft", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan recht hebben op een WW-uitkering", "Omdat ze dan makkelijk aandelen kunnen uitgeven"],
         answer: 0,
-        wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Naar de beurs kan alleen een NV.", "Een eenmanszaak betaalt wél belasting (IB)."],
+        wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Als zzp'er heb je meestal juist géén recht op WW. Waar zit het voordeel dan wel?", "Aandelen horen bij een BV of NV. Waar zit het voordeel van een eenmanszaak dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Lage drempel", tekst: "Een eenmanszaak richt je snel en goedkoop op: alleen inschrijven bij de KvK, geen notaris, geen startkapitaal. Plus belastingvoordelen voor starters." }],
           woorden: [{ woord: "zzp'er", uitleg: "Zelfstandige zonder personeel — werkt vaak via een eenmanszaak." }, { woord: "zelfstandigenaftrek", uitleg: "Belastingvoordeel voor ondernemers: een deel van de winst is onbelast." }],
@@ -184,9 +184,9 @@ const steps = [
     checks: [
       {
         q: "Waar staat de **B** van BV voor?",
-        options: ["Besloten — aandelen staan op naam, in een kleine kring", "Bedrijf — elk bedrijf is een BV", "Beurs — een BV staat op de beurs", "Belasting — een BV betaalt geen belasting"],
+        options: ["Besloten — aandelen op naam, kleine kring", "Bedrijf — een bedrijf dat een rechtspersoon is", "Beurs — de aandelen staan op de beurs", "Beperkt — eigenaars zijn beperkt aansprakelijk"],
         answer: 0,
-        wrongHints: [null, "Niet elk bedrijf is een BV; denk aan eenmanszaak of NV.", "Een BV kan juist NIET naar de beurs.", "Een BV betaalt wél belasting (VPB)."],
+        wrongHints: [null, "Een BV is wel een rechtspersoon, maar daar staat de B niet voor. Waar zegt de B iets over?", "Een BV kan juist NIET naar de beurs.", "Dat klopt wel voor een BV, maar daar staat de B niet voor. Welk woord is de tegenhanger van 'naamloze' vennootschap?"],
         uitlegPad: {
           stappen: [{ titel: "Besloten kring", tekst: "Besloten betekent: de aandelen staan op naam en blijven in een kleine, gesloten kring. Je verkoopt ze niet zomaar aan een vreemde." }],
           woorden: [{ woord: "besloten", uitleg: "Gesloten kring: bekend wie de aandeelhouders zijn, aandelen niet vrij verhandelbaar." }, { woord: "aandeel op naam", uitleg: "Een aandeel waarvan vastligt wie de eigenaar is." }],
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Een aandeelhouder van een BV wil zijn aandelen verkopen. Wat geldt meestal?",
-        options: ["Hij moet ze eerst aan de mede-aandeelhouders aanbieden", "Hij verkoopt ze direct op de beurs", "Hij mag ze aan een willekeurige vreemde verkopen zonder regels", "Hij mag ze nooit verkopen"],
+        options: ["Hij moet ze eerst aan de mede-aandeelhouders aanbieden", "Hij biedt ze direct te koop aan op de effectenbeurs", "Hij mag ze aan iedereen verkopen, net als bij een NV", "Hij moet ze terugverkopen aan de Kamer van Koophandel"],
         answer: 0,
-        wrongHints: [null, "Een BV staat niet op de beurs.", "Bij een BV zijn aandelen juist niet vrij verhandelbaar.", "Verkopen mag wel — maar met regels."],
+        wrongHints: [null, "Een BV staat niet op de beurs.", "Bij een NV zijn aandelen vrij verhandelbaar. Geldt dat ook voor een bésloten vennootschap?", "De KvK schrijft bedrijven in, maar koopt geen aandelen. Wie heeft er belang bij wie er nieuw bij komt?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst intern aanbieden", tekst: "Bij een BV zijn de aandelen niet vrij verhandelbaar. Vaak geldt een blokkeringsregeling: je biedt je aandelen eerst aan de mede-aandeelhouders aan." }],
           woorden: [{ woord: "blokkeringsregeling", uitleg: "Afspraak dat je aandelen eerst aan de andere aandeelhouders moet aanbieden voor je ze aan een ander verkoopt." }, { woord: "vrij verhandelbaar", uitleg: "Zomaar kunnen kopen en verkopen aan iedereen — dat is bij een BV juist NIET zo." }],
@@ -212,9 +212,9 @@ const steps = [
       },
       {
         q: "Hoeveel **minimumkapitaal** heb je nodig om een BV op te richten?",
-        options: ["Geen minimum — het mag met €0,01", "€45.000", "€100.000", "€1 miljoen"],
+        options: ["Geen minimum — het mag met €0,01", "Minimaal €45.000 op de bankrekening", "Minimaal €100.000 bij de notaris", "Minimaal €18.000 bij de oprichting"],
         answer: 0,
-        wrongHints: [null, "Dat bedrag hoort bij een ándere rechtspersoon.", "Zo'n hoog bedrag is sinds 2012 niet meer nodig voor een BV.", "Veel te hoog voor een BV."],
+        wrongHints: [null, "Dat bedrag hoort bij een ándere rechtspersoon.", "Zo'n hoog bedrag is voor een BV nooit verplicht geweest.", "€18.000 was het minimum voor een BV tot 2012. Geldt dat nu nog?"],
         uitlegPad: {
           stappen: [{ titel: "Geen minimum sinds 2012", tekst: "Sinds de invoering van de 'flex-BV' in 2012 is er geen minimumkapitaal meer. Een BV mag starten met één eurocent." }],
           woorden: [{ woord: "minimumkapitaal", uitleg: "Het bedrag dat je verplicht moet inbrengen bij de oprichting." }, { woord: "flex-BV", uitleg: "Versoepelde BV-regels sinds 2012, onder andere: geen minimumkapitaal meer." }],
@@ -250,9 +250,9 @@ const steps = [
     checks: [
       {
         q: "Waarom heet een NV een **Naamloze** Vennootschap?",
-        options: ["De naam van de aandeelhouder hoeft niet vast te liggen", "Het bedrijf hoeft geen officiële naam te hebben", "Er werkt niemand met een naam", "De eigenaar blijft altijd geheim voor de Belastingdienst"],
+        options: ["De naam van de aandeelhouder hoeft niet vast te liggen", "Het bedrijf hoeft geen officiële naam te hebben", "De aandelen staan op naam van de directeur", "De eigenaar blijft altijd geheim voor de Belastingdienst"],
         answer: 0,
-        wrongHints: [null, "Een NV heeft natuurlijk gewoon een bedrijfsnaam (Heineken NV).", "Het gaat om de aandelen, niet om het personeel.", "Het slaat op de verhandelbaarheid van aandelen, niet op belasting ontwijken."],
+        wrongHints: [null, "Een NV heeft natuurlijk gewoon een bedrijfsnaam (Heineken NV).", "Juist bij een BV staan de aandelen op naam. Wat zou 'naamloos' dan zeggen over de aandeelhouders?", "Het slaat op de verhandelbaarheid van aandelen, niet op belasting ontwijken."],
         uitlegPad: {
           stappen: [{ titel: "Naam van de aandeelhouder", tekst: "'Naamloos' slaat op de aandelen: ze kunnen aan toonder zijn. Wie het aandeel heeft, is de eigenaar — de naam hoeft niet vast te liggen." }],
           woorden: [{ woord: "aandeel aan toonder", uitleg: "Een aandeel waarbij de bezitter de eigenaar is; de naam van de eigenaar staat niet geregistreerd." }, { woord: "naamloos", uitleg: "Slaat op de aandelen: de naam van de aandeelhouder hoeft niet bekend te zijn." }],
@@ -264,9 +264,9 @@ const steps = [
       },
       {
         q: "Welk bedrijf is een typische **NV**?",
-        options: ["Een groot bedrijf als ASML", "De plaatselijke tandartspraktijk", "Een eenmanszaak van een fietsenmaker", "Een marktkraam"],
+        options: ["Een chipmaker op de beurs, zoals ASML", "Een familiebedrijf met drie aandeelhouders", "Een eenmanszaak van een fietsenmaker", "Een coöperatieve bank zoals de Rabobank"],
         answer: 0,
-        wrongHints: [null, "Een kleine praktijk is meestal een BV of eenmanszaak, niet beursgenoteerd.", "Een eenmanszaak is geen rechtspersoon met vrij verhandelbare aandelen.", "Een marktkraam is veel te klein voor een NV."],
+        wrongHints: [null, "Als de aandelen in een kleine, vaste kring blijven, welke rechtsvorm past daar dan bij?", "Een eenmanszaak is geen rechtspersoon met vrij verhandelbare aandelen.", "De Rabobank is groot, maar een coöperatie: de leden zijn eigenaar en er zijn geen vrij verhandelbare aandelen."],
         uitlegPad: {
           stappen: [{ titel: "Groot en op de beurs", tekst: "Een NV is bedoeld voor grote bedrijven die veel kapitaal ophalen, vaak via de beurs. Heineken NV en ASML zijn voorbeelden." }],
           woorden: [{ woord: "beursgenoteerd", uitleg: "Het bedrijf staat op de aandelenbeurs; iedereen kan aandelen kopen." }, { woord: "kapitaal ophalen", uitleg: "Geld verzamelen door aandelen te verkopen aan investeerders." }],
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "Wat is de belangrijkste reden om voor een **NV** te kiezen in plaats van een BV?",
-        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen belasting hoeven betalen", "Geen notaris nodig hebben", "De eigenaar privé aansprakelijk maken"],
+        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen vennootschapsbelasting hoeven betalen", "Lagere oprichtingskosten bij de notaris", "Minder regels en toezicht dan bij een BV"],
         answer: 0,
-        wrongHints: [null, "Een NV betaalt net als een BV gewoon VPB.", "Ook een NV wordt via de notaris opgericht.", "Bij een NV is de aandeelhouder juist beperkt aansprakelijk, niet privé."],
+        wrongHints: [null, "Een NV betaalt net als een BV gewoon VPB.", "Een NV oprichten is juist duurder: je hebt minimaal €45.000 kapitaal nodig. Waarom kiest een bedrijf er dan toch voor?", "Een NV heeft juist strengere regels, zeker op de beurs. Wat kan een NV wél wat een BV niet kan?"],
         uitlegPad: {
           stappen: [{ titel: "Geld ophalen bij velen", tekst: "De kracht van een NV is dat de aandelen vrij verhandelbaar zijn. Zo kun je aandelen verkopen aan een groot publiek en veel kapitaal ophalen om te groeien." }],
           woorden: [{ woord: "vrij verhandelbaar", uitleg: "Aandelen die iedereen mag kopen en verkopen, ook via de beurs." }, { woord: "kapitaal", uitleg: "Geld om mee te ondernemen en te groeien." }],
@@ -342,9 +342,9 @@ const steps = [
       },
       {
         q: "Een vriendengroep wil **samen** een bedrijfje beginnen, weinig kosten, en vertrouwt elkaar volledig. Wat past het beste?",
-        options: ["Een VOF", "Een NV met beursnotering", "Een eenmanszaak", "Een BV met €45.000 startkapitaal"],
+        options: ["Een VOF (vennootschap onder firma)", "Een stichting met de vrienden als bestuur", "Een eenmanszaak op naam van één van hen", "Een BV met de vrienden als aandeelhouders"],
         answer: 0,
-        wrongHints: [null, "Een NV met beurs is voor grote bedrijven, niet voor een vriendengroep.", "Een eenmanszaak heeft maar één eigenaar — zij willen samen.", "€45.000 startkapitaal hoort bij een NV, niet bij een BV."],
+        wrongHints: [null, "Een stichting mag geen winst uitkeren aan de mensen die erachter zitten. Past dat bij een bedrijfje?", "Een eenmanszaak heeft maar één eigenaar — zij willen samen.", "Een BV kan, maar kost notariskosten en meer administratie. Ze vertrouwen elkaar en willen weinig kosten — wat past dan?"],
         uitlegPad: {
           stappen: [{ titel: "Samen + goedkoop + vertrouwen", tekst: "Meerdere eigenaren, lage kosten, geen notaris nodig en veel onderling vertrouwen → dat past bij een VOF." }],
           woorden: [{ woord: "VOF", uitleg: "Vennootschap onder firma: 2 of meer vennoten, geen rechtspersoon, privé + hoofdelijk aansprakelijk." }],
@@ -356,7 +356,7 @@ const steps = [
       },
       {
         q: "Welk kenmerk hebben **alle vier** de rechtsvormen gemeen?",
-        options: ["Het zijn allemaal ondernemingen die winst willen maken", "Ze zijn allemaal een rechtspersoon", "Ze betalen allemaal vennootschapsbelasting", "Ze kunnen allemaal naar de beurs"],
+        options: ["Het zijn allemaal ondernemingen met winstdoel", "Ze zijn allemaal een zelfstandige rechtspersoon", "Ze betalen allemaal vennootschapsbelasting", "Ze kunnen allemaal aandelen op de beurs verkopen"],
         answer: 0,
         wrongHints: [null, "Alleen BV en NV zijn een rechtspersoon.", "Eenmanszaak en VOF betalen IB, geen VPB.", "Alleen een NV kan naar de beurs."],
         uitlegPad: {

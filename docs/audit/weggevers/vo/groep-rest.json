@@ -1,0 +1,42 @@
+[
+ {
+  "file": "./cijferendRekenen.js",
+  "pad": "",
+  "stap": -1,
+  "vraag": -1,
+  "soort": "rest",
+  "lijst": "rest"
+ },
+ {
+  "file": "./exponentieel.jsx",
+  "pad": "",
+  "stap": -1,
+  "vraag": -1,
+  "soort": "rest",
+  "lijst": "rest"
+ },
+ {
+  "file": "./onregelmatigeWerkwoordenV2Engels.js",
+  "pad": "",
+  "stap": -1,
+  "vraag": -1,
+  "soort": "rest",
+  "lijst": "rest"
+ },
+ {
+  "file": "./parabolen.js",
+  "pad": "",
+  "stap": -1,
+  "vraag": -1,
+  "soort": "rest",
+  "lijst": "rest"
+ },
+ {
+  "file": "./ruimtemeetkunde.jsx",
+  "pad": "",
+  "stap": -1,
+  "vraag": -1,
+  "soort": "rest",
+  "lijst": "rest"
+ }
+]

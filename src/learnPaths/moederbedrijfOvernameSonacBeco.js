@@ -29,9 +29,9 @@ const steps = [
     checks: [
       {
         q: "Hoe noem je het bedrijf dat eigenaar is van — en de baas over — andere, kleinere bedrijven?",
-        options: ["Moederbedrijf", "Dochteronderneming", "Voorganger", "Concurrent"],
+        options: ["Moederbedrijf", "Dochteronderneming", "Hoofdkantoor", "Zusterbedrijf"],
         answer: 0,
-        wrongHints: [null, "Dat is juist het kleinere bedrijf eronder.", "Dat is een bedrijf van vroeger dat is opgehouden.", "Dat is een bedrijf dat hetzelfde verkoopt."],
+        wrongHints: [null, "Een dochter is zelf eigendom van een ander bedrijf. Is zij hier de eigenaar?", "Een hoofdkantoor is de plek waar de leiding van één bedrijf zit. Is het ook eigenaar van andere bedrijven?", "Zusterbedrijven staan naast elkaar, onder dezelfde eigenaar. Wie staat er dan boven?"],
         uitlegPad: {
           stappen: [{ titel: "Moeder = eigenaar boven", tekst: "Het moederbedrijf bezit de dochterondernemingen en is de baas erboven." }],
           niveaus: {
@@ -51,9 +51,9 @@ const steps = [
     checks: [
       {
         q: "Een groot concern koopt een kleinere fabriek op. Hoe heet dat?",
-        options: ["Een overname", "Een faillissement", "Een staking", "Een fusie van gelijken"],
+        options: ["Een overname", "Een uitbesteding", "Een afsplitsing", "Een fusie van gelijken"],
         answer: 0,
-        wrongHints: [null, "Dat is als een bedrijf stopt omdat het geen geld meer heeft.", "Dat is als werknemers het werk neerleggen.", "Dat is als twee even grote bedrijven samengaan — hier koopt de één de ander."],
+        wrongHints: [null, "Bij uitbesteden laat een bedrijf werk doen door een ander bedrijf, zonder dat bedrijf te kopen. Wat gebeurt hier?", "Bij een afsplitsing wordt een deel van een bedrijf juist losgemaakt. Hier komt er een fabriek bij: hoe heet dat?", "Dat is als twee even grote bedrijven samengaan — hier koopt de één de ander."],
         uitlegPad: {
           stappen: [{ titel: "Opkopen = overname", tekst: "Als een bedrijf een ander bedrijf koopt, heet dat een overname." }],
           niveaus: {
@@ -79,7 +79,7 @@ const steps = [
         q: "Hoe heette de fabriek in Vuren vóórdat het Sonac werd?",
         options: ["Smits", "Vion", "Sovion", "Darling Ingredients"],
         answer: 0,
-        wrongHints: [null, "Dat was een moederbedrijf erboven, niet de oude fabrieksnaam.", "Dat was de oude naam van dat moederbedrijf — niet van de fabriek.", "Dat is het huidige moederbedrijf."],
+        wrongHints: [null, "Dat was een moederbedrijf erboven, niet de oude fabrieksnaam.", "Dat was de oude naam van dat moederbedrijf — niet van de fabriek.", "Klinkt die naam als een Nederlands familiebedrijf uit 1827? Lees nog eens hoe de fabriek begon."],
         uitlegPad: {
           stappen: [{ titel: "Voorganger fabriek = Smits", tekst: "De fabriek heette eerst Smits (Wed. P. Smits en Zoon, naar Vuren in 1965)." }],
           niveaus: {
@@ -101,9 +101,9 @@ const steps = [
     checks: [
       {
         q: "Onder welk internationaal moederbedrijf valt Sonac sinds 2014?",
-        options: ["Darling Ingredients", "Vion", "Sovion", "Smits"],
+        options: ["Darling Ingredients", "Vion Food Group", "Sovion", "Danish Crown"],
         answer: 0,
-        wrongHints: [null, "Dat was het moederbedrijf vóór 2014.", "Dat was de oude naam van dat eerdere moederbedrijf.", "Dat is juist de oude naam van de fabriek zelf."],
+        wrongHints: [null, "Dat was het moederbedrijf vóór 2014.", "Dat was de oude naam van dat eerdere moederbedrijf.", "Danish Crown is een groot Deens vleesbedrijf, maar het heeft Sonac nooit gekocht. Welk concern nam Sonac in 2014 over?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2014 → Darling Ingredients", tekst: "Sonac is sinds 2014 onderdeel van Darling Ingredients; daarvóór van Vion (eerder Sovion)." }],
           niveaus: {

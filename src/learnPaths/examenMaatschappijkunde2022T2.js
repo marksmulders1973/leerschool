@@ -5,37 +5,37 @@
 const tekst1 = {
   titel: "T1 — SP blokkeert gebied Over de Maas (granuliet-stort)",
   body:
-    "Leden van de SP hebben de toegang tot het gebied Over de Maas symbolisch geblokkeerd. De actie is bedoeld om de stort van granuliet in de zandafgraving te stoppen. Burgers die het oneens zijn met overheidsbeleid kunnen verschillende stappen zetten: een klacht indienen bij de **Nationale ombudsman** (over ambtenaren), een rechtszaak beginnen, demonstreren, een petitie organiseren of via partijen het besluit terugdraaien.",
+    "Leden van de SP hebben de toegang tot het gebied Over de Maas symbolisch geblokkeerd. De actie is bedoeld om de stort van granuliet in de zandafgraving te stoppen.",
 };
 
 const tekst3 = {
   titel: "T3 — Afspraak 'groenere' verpakkingen (Plastic Pact)",
   body:
-    "Al het plastic dat we dagelijks gebruiken, moet over vijf jaar herbruikbaar zijn. Dat is een belangrijke doelstelling waar tientallen ondertekenaars van het zogenaamde Plastic Pact zich aan binden. Bedrijven, milieuorganisaties en de overheid streven naar minder eenmalig plastic, 100% recyclebaar verpakkingsmateriaal en meer hergebruik. De doelstelling past bij een politieke stroming die DUURZAAMHEID en MILIEUBESCHERMING centraal stelt.",
+    "Al het plastic dat we dagelijks gebruiken, moet over vijf jaar herbruikbaar zijn. Dat is een belangrijke doelstelling waar tientallen ondertekenaars van het zogenaamde Plastic Pact zich aan binden. Bedrijven, milieuorganisaties en de overheid streven naar minder eenmalig plastic, 100% recyclebaar verpakkingsmateriaal en meer hergebruik.",
 };
 
 const tekst14 = {
   titel: "T14 — 228.000 beveiligingscamera's in NL — politie-gebruik",
   body:
-    "Het valt vaak helemaal niet op, maar als je eens goed om je heen kijkt op straat, zie je overal camera's. In heel Nederland zijn er zeker 228.000 beveiligingscamera's. Politie gebruikt deze camera's na een misdrijf om VERDACHTEN OP TE SPOREN (gezichten, kleding, fietsen-modellen). Daarnaast helpen camera's bij het reconstrueren van wat er precies gebeurde. Niet de afschrikking (preventie) maar de na-onderzoek-rol (opsporing) is hier de hoofdfunctie.",
+    "Het valt vaak helemaal niet op, maar als je eens goed om je heen kijkt op straat, zie je overal camera's. In heel Nederland zijn er zeker 228.000 beveiligingscamera's. Politie gebruikt deze camera's na een misdrijf om verdachten op te sporen (gezichten, kleding, fietsen-modellen). Daarnaast helpen camera's bij het reconstrueren van wat er precies gebeurde.",
 };
 
 const tekst15 = {
   titel: "T15 — Rijden onder invloed: rechter legt 2 sancties op",
   body:
-    "De rechtbank in Alkmaar heeft J.M. (47) veroordeeld voor het veroorzaken van een verkeersongeval door het rijden onder invloed en met zeer onverantwoord hoge snelheid (220 km/u). Hij kreeg een **gevangenisstraf van 3 maanden** (= hoofdstraf) en een **rijontzegging van 2 jaar** (= bijkomende straf). De officier van justitie was tevreden — de straffen kwamen overeen met zijn eis.",
+    "De rechtbank in Alkmaar heeft J.M. (47) veroordeeld voor het veroorzaken van een verkeersongeval door het rijden onder invloed en met zeer onverantwoord hoge snelheid (220 km/u). Hij kreeg een gevangenisstraf van 3 maanden en een rijontzegging van 2 jaar. De officier van justitie was tevreden — de straffen kwamen overeen met zijn eis.",
 };
 
 const tekst17 = {
-  titel: "T17 — Corona + minder woninginbraken (rationele keuze)",
+  titel: "T17 — Corona + minder woninginbraken",
   body:
-    "De pandemie heeft ook positieve effecten: het aantal woninginbraken is in 2020 fors afgenomen. Met de meeste mensen overdag thuis zijn 'lege huizen' voor inbrekers een zeldzaamheid geworden. Inbrekers berekenen kans-op-pakking + opbrengst voordat ze toeslaan; als de pakking-kans hoog is wordt het te risicovol. Een crimineel maakt dus een AFWEGING van kosten en baten.",
+    "De pandemie heeft ook positieve effecten: het aantal woninginbraken is in 2020 fors afgenomen. Met de meeste mensen overdag thuis zijn 'lege huizen' voor inbrekers een zeldzaamheid geworden.",
 };
 
 const tekst19 = {
   titel: "T19 — Project X-feest Rosmalen: politie groot aanwezig",
   body:
-    "De politie was in grote getale aanwezig in Rosmalen om een massale samenkomst van jongeren te voorkomen. Er zou via social media zijn opgeroepen tot een 'Project X-feest'. Onder de jongeren zaten ook slachtoffers van eerdere geweldsdelicten — die wilden bij de rechtszaken hun verhaal vertellen via het slachtoffer-spreekrecht.",
+    "De politie was in grote getale aanwezig in Rosmalen om een massale samenkomst van jongeren te voorkomen. Er zou via social media zijn opgeroepen tot een 'Project X-feest'.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag ${n}`;
@@ -69,7 +69,7 @@ const steps = [
         "het ministerie van Algemene Zaken",
       ],
       answer: 1,
-      wrongHints: ["Europese Commissie = EU-orgaan voor wetsvoorstellen. Niet voor NL-klachten over ambtenaren.", null, "Ministerie van Algemene Zaken = ministerie van de minister-president. Niet voor klachten — dat is een onafhankelijke functie."],
+      wrongHints: ["Europese Commissie = EU-orgaan voor wetsvoorstellen. Niet voor NL-klachten over ambtenaren.", null, "Ministerie van Algemene Zaken = ministerie van de minister-president. Kan een ministerie eerlijk oordelen over klachten over zijn eigen ambtenaren?"],
       explanation: "**Nationale ombudsman** = onafhankelijk orgaan dat klachten van burgers tegen Rijksoverheid (ministeries, Belastingdienst, UWV, politie etc.) onderzoekt. Geen rechter — wel publiek rapport + adviezen. Sinds 1982 in NL.",
       examenBron: BRON_LABEL(5),
       bronLink: BRON_LINK,
@@ -128,7 +128,7 @@ const steps = [
         "als sanctiemiddel",
       ],
       answer: 0,
-      wrongHints: [null, "Preventie = misdaad VOORKOMEN. De zichtbaarheid van camera's kan wel afschrikken, maar de hoofdfunctie is achteraf-onderzoek.", "Sancties = straffen opleggen. Doet de rechter, niet de camera."],
+      wrongHints: [null, "Preventie = misdaad VOORKOMEN. Camera's kunnen wel afschrikken. Maar wat doet de politie met de beelden nadat er een misdrijf is gepleegd?", "Sancties = straffen opleggen. Doet de rechter, niet de camera."],
       explanation: "**Opsporingsmiddel** = na een misdrijf het bewijs verzamelen + verdachten identificeren (gezichten, fietsen, kleding op de beelden). Camera's = na-onderzoek-tool. PREVENTIE = misdaad voorkomen (zichtbaarheid kan helpen). SANCTIE = straf opleggen (rechter, niet politie).",
       examenBron: BRON_LABEL(25),
       bronLink: BRON_LINK,
@@ -157,7 +157,7 @@ const steps = [
         "de hoofdstraffen en de maatregelen",
       ],
       answer: 0,
-      wrongHints: [null, "Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Is 3 maanden cel zo'n maatregel?", "Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Is een rijontzegging een maatregel, of een extra straf?"],
+      wrongHints: [null, "Bekijk beide sancties apart. Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Bij welke soort hoort de gevangenisstraf, en bij welke de rijontzegging?", "Bekijk beide sancties apart. Welke van de twee is de belangrijkste straf, en welke komt erbij? Past het woord 'maatregel' bij een van beide?"],
       explanation: "**3 categorieën sancties**: 1) HOOFDSTRAFFEN (gevangenisstraf / hechtenis / taakstraf / geldboete), 2) BIJKOMENDE STRAFFEN (ontzegging rijbevoegdheid / ontzetting uit ambt / verbeurdverklaring), 3) MAATREGELEN (TBS / schadevergoeding / onttrekking aan het verkeer). Gevangenisstraf = hoofdstraf, rijontzegging = bijkomend.",
       examenBron: BRON_LABEL(26),
       bronLink: BRON_LINK,
@@ -187,7 +187,7 @@ const steps = [
         "de rationele-keuze-theorie",
       ],
       answer: 3,
-      wrongHints: ["Aangeleerd-gedrag = misdaad leren van omgeving (vrienden, ouders). Geen verband met thuis-zijn.", "Bindingstheorie = sociale banden voorkomen criminaliteit. Hier gaat het niet om banden, maar om risico-berekening.", "Neutralisering = goedpraten van eigen misdaad ('ik moest wel'). Niet over berekening.", null],
+      wrongHints: ["Aangeleerd-gedrag = misdaad leren van omgeving (vrienden, ouders). Geen verband met thuis-zijn.", "Bindingstheorie = sociale banden voorkomen criminaliteit. Inbrekers kozen andere momenten omdat mensen thuis waren. Gaat dat over hun banden met anderen?", "Neutralisering = goedpraten van eigen misdaad ('ik moest wel'). Gaat het hier om smoesjes die inbrekers achteraf verzinnen?", null],
       explanation: "**Rationele keuze-theorie** (Becker): criminelen maken een AFWEGING van kosten/baten — pakkans + opbrengst + risico vs verwachte straf. Corona = mensen thuis = pakkans hoog = te risicovol = inbreker ziet ervan af. Inbreker berekent dus rationeel.",
       examenBron: BRON_LABEL(30),
       bronLink: BRON_LINK,

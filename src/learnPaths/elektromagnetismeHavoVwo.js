@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Twee staafmagneten met **N-pool naar N-pool** doen elkaar:",
-        options: ["Afstoten", "Aantrekken", "Niks", "Pas bij contact aantrekken"],
+        options: ["Afstoten", "Aantrekken", "Niets", "Pas bij contact aantrekken"],
         answer: 0,
-        wrongHints: [null, "Niet — gelijke polen trekken niet aan.", "Niet — er is wel een kracht.", "Niet — werkt ook op afstand."],
+        wrongHints: [null, "Probeer het met twee magneten: wat voel je als je twee dezelfde polen naar elkaar toe duwt?", "Een magneet werkt al op afstand, zoals een kompasnaald laat zien. Merk je dan niets?", "Een paperclip springt al naar een magneet toe voordat hij hem raakt. Waarom zou er pas bij contact iets gebeuren?"],
         uitlegPad: {
           stappen: [{ titel: "Gelijke polen = afstoten", tekst: "Net als positieve ladingen elkaar afstoten, doen N-N en Z-Z polen dat ook. Alleen N-Z trekt aan. Onthoud: tegenpolen trekken." }],
           niveaus: { basis: "N-N = afstoten.", simpeler: "Gelijke polen botsen tegen elkaar weg.", nogSimpeler: "Afstoten" },
@@ -32,9 +32,9 @@ const steps = [
       },
       {
         q: "Veldlijnen van een staafmagneet lopen **buiten** de magneet:",
-        options: ["Van N naar Z", "Van Z naar N", "Beide kanten op", "Geen richting"],
+        options: ["Van N naar Z", "Van Z naar N", "Van beide polen naar het midden", "Van het midden naar beide polen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is binnen de magneet.", "Niet — veldlijnen hebben een eenduidige richting.", "Niet — ze hebben wel richting."],
+        wrongHints: [null, "Een kompasnaald wijst met haar noordpool langs de veldlijn. Naar welke pool van de magneet wijst die naald buiten de magneet?", "Veldlijnen lopen van pool naar pool, niet naar het midden. Bij welke pool komen ze naar buiten?", "Veldlijnen beginnen niet in het midden van de magneet. Bij welke pool komen ze naar buiten?"],
         uitlegPad: {
           stappen: [{ titel: "Conventie: N → Z (buiten)", tekst: "Buiten een magneet lopen veldlijnen van N naar Z. Binnen lopen ze juist van Z naar N → samen sluiten ze tot een gesloten lus. Magnetische veldlijnen zijn altijd gesloten (geen 'monopolen')." }],
           theorie: "Een kompasnaald is een mini-magneet: de NOORD-zoekende pool wijst de magnetische Z-pool van de aarde aan (= geografisch noord, jaja, verwarrend).",
@@ -50,7 +50,7 @@ const steps = [
           "Er is geen veld"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — radiaal weg-veld is een elektrisch veld van punt-lading.", "Niet — veld is loodrecht op draad.", "Onjuist — stroom geeft altijd magnetisch veld."],
+        wrongHints: [null, "Rechte lijnen weg van een punt horen bij het elektrische veld van een lading. Hoe wijzen kompasjes die je rond een stroomdraad zet?", "Leg kompasjes rond de draad: wijzen ze langs de draad, of draaien ze om de draad heen?", "Ørsted zag een kompasnaald uitslaan naast een stroomdraad. Wat zegt dat over het veld?"],
         uitlegPad: {
           stappen: [{ titel: "Rechterhandregel — duim langs I", tekst: "Wijs je rechter duim in de stroom-richting; je gekromde vingers wijzen de richting van B aan (cirkels rondom de draad). Dichter bij de draad = sterker veld (B ~ 1/r)." }],
           theorie: "Ontdekt door Oersted 1820 — kompas naast draad sloeg uit toen stroom werd ingeschakeld. Eerste link tussen elektriciteit + magnetisme.",
@@ -61,7 +61,7 @@ const steps = [
         q: "Eenheid van magnetische flux Φ?",
         options: ["Weber (Wb)", "Tesla (T)", "Volt (V)", "Ampère (A)"],
         answer: 0,
-        wrongHints: [null, "Niet — tesla is B-veld, niet flux.", "Niet — V is spanning.", "Niet — A is stroom."],
+        wrongHints: [null, "Tesla is de eenheid van de veldsterkte B. Flux is B maal een oppervlak; welke eenheid hoort daarbij?", "Volt is de eenheid van (inductie)spanning. Flux is B maal een oppervlak; welke eenheid hoort daarbij?", "Ampère is de eenheid van stroomsterkte. Flux is B maal een oppervlak; welke eenheid hoort daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Φ = B · A", tekst: "Magnetische flux Φ telt 'hoeveel veldlijnen door een oppervlak gaan'. Eenheid: weber (Wb) = tesla × m². B = Φ/A → eenheid tesla = Wb/m²." }],
           theorie: "Flux is cruciaal voor inductie: een veranderende flux wekt spanning op (Faraday).",
@@ -72,12 +72,12 @@ const steps = [
         q: "Hoe versterk je het magnetisch veld in een **spoel** (geen kern-wijziging)?",
         options: [
           "Meer windingen + meer stroom",
-          "Spoel langer maken bij vaste windingen",
-          "Draad dunner maken",
-          "Spoel buiten een elektrisch veld plaatsen"
+          "Spoel langer, zelfde windingen",
+          "Spoel breder, zelfde windingen",
+          "2× windingen op 2× langere spoel"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bij vaste N: langer = veld zwakker (verdunde N/L).", "Niet — dunnere draad heeft hogere weerstand, lagere I.", "Niet — elektrisch veld doet niets voor B."],
+        wrongHints: [null, "Bij evenveel windingen over een langere spoel liggen ze verder uit elkaar. Wordt het veld dan sterker of zwakker?", "Hangt het veld binnen in een lange spoel af van hoe breed hij is? Kijk welke grootheden in de formule voor B staan.", "Tel het aantal windingen per meter: verandert dat als je beide verdubbelt? Wat betekent dat voor B?"],
         uitlegPad: {
           stappen: [{ titel: "B_spoel = μ₀·n·I", tekst: "Met n = N/L (windingen per meter). Meer N (bij vaste L) → hogere n → sterker veld. Meer I → ook sterker. Toevoegen ijzer-kern vermenigvuldigt nog eens met μ_r (kan factor 1000)." }],
           niveaus: { basis: "Meer N + meer I = sterker.", simpeler: "Veel windingen en veel stroom → sterk magneetveld.", nogSimpeler: "N + I op" },
@@ -96,12 +96,12 @@ const steps = [
         q: "Een **elektron** beweegt loodrecht door een B-veld. De Lorentzkracht is:",
         options: [
           "Maximaal en loodrecht op zowel v als B",
-          "Maximaal en parallel aan v",
-          "Nul (elektron is negatief)",
-          "Parallel aan B"
+          "Maximaal en gericht in de richting van v",
+          "Nul, omdat een elektron negatief geladen is",
+          "Maximaal en parallel aan de veldlijnen van B"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — kracht is altijd loodrecht op v.", "Niet — negatief draait richting om, maar grootte blijft.", "Niet — F staat loodrecht op B."],
+        wrongHints: [null, "Verandert een magnetisch veld de grootte van de snelheid van een deeltje, of alleen de richting?", "De lading is negatief, maar niet nul. Verandert het teken van de lading de grootte van de kracht, of de richting?", "Een deeltje dat langs de veldlijnen beweegt, voelt geen kracht. Kan de kracht dan zelf langs de veldlijnen wijzen?"],
         uitlegPad: {
           stappen: [{ titel: "F ⊥ v én F ⊥ B", tekst: "De Lorentzkracht staat altijd loodrecht op zowel snelheid als veld. Daarom verandert de kracht alleen de **richting** van het deeltje (cirkelbeweging), niet de **grootte** van v. Geen arbeid → kinetische energie blijft constant." }],
           niveaus: { basis: "F ⊥ v ⊥ B.", simpeler: "Loodrecht op alles → cirkelbeweging.", nogSimpeler: "Loodrecht" },
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Een proton met v = 2,0·10⁶ m/s, q = 1,6·10⁻¹⁹ C, in B = 0,50 T (loodrecht). Kracht?",
-        options: ["1,6·10⁻¹³ N", "1,6·10⁻⁷ N", "3,2·10⁻⁶ N", "Te weinig info"],
+        options: ["1,6·10⁻¹³ N", "1,6·10⁻⁷ N", "3,2·10⁻⁶ N", "6,4·10⁻¹³ N"],
         answer: 0,
-        wrongHints: [null, "Niet — let op machten van 10.", "Niet — controleer formule.", "Wel genoeg info."],
+        wrongHints: [null, "De macht van 10 klopt niet. Wat is 10⁻¹⁹ × 10⁶?", "Waar komt 3,2 vandaan? Vergeet B = 0,50 T niet en controleer de macht van 10.", "Je deelde door B. Wordt de kracht groter of kleiner in een zwakker veld?"],
         uitlegPad: {
           stappen: [
             { titel: "F = q·v·B", tekst: "F = 1,6·10⁻¹⁹ · 2,0·10⁶ · 0,50 = 1,6·10⁻¹³ N. Klein in absolute zin, maar het versnelt het proton (1,67·10⁻²⁷ kg) enorm: a = F/m ≈ 10¹⁴ m/s²." },
@@ -123,7 +123,7 @@ const steps = [
         q: "Een draad van 0,40 m draagt I = 3,0 A loodrecht door B = 0,20 T. F op draad?",
         options: ["0,24 N", "2,4 N", "0,024 N", "1,5 N"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer eenheden.", "Te klein.", "Niet — vermenigvuldig B, I en L; niet delen."],
+        wrongHints: [null, "Schat eerst: 0,2 × 3 = 0,6. Wordt dat groter of kleiner als je met 0,40 vermenigvuldigt?", "Reken F = B·I·L na: 0,20 × 3,0 × 0,40. Waar ging een factor 10 verloren?", "Je hebt ergens gedeeld. In F = B·I·L worden alle drie vermenigvuldigd; reken het opnieuw."],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L", tekst: "F = 0,20 · 3,0 · 0,40 = **0,24 N**. Vergeet sin(α) niet wanneer hoek niet 90° is — hier wel." }],
           theorie: "Elektromotor-rotorprincipe: spoel in B-veld, F op zijden geven koppel. Sterk veld + dikke draad (hoge I) + veel windingen = krachtige motor.",
@@ -133,13 +133,13 @@ const steps = [
       {
         q: "In een **cyclotron** beweegt een deeltje in een cirkel. De straal hangt af van:",
         options: [
-          "Massa, snelheid, lading én B-sterkte",
-          "Alleen de B-sterkte",
-          "Alleen lading + snelheid",
-          "Alleen massa"
+          "r = m·v / (q·B)",
+          "r = q·B / (m·v)",
+          "r = m·v² / (q·B)",
+          "r = m / (q·v·B)"
         ],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Onvolledig — ook andere grootheden tellen mee."],
+        wrongHints: [null, "Krijgt een zwaarder of sneller deeltje een grotere of kleinere cirkel? Past jouw formule daarbij?", "Schrijf q·v·B = m·v²/r uit en los r op. Hoeveel factoren v blijven er dan over?", "Een sneller deeltje vliegt in een wijdere boog. Moet v dan boven of onder de deelstreep staan?"],
         uitlegPad: {
           stappen: [{ titel: "r = mv/(qB)", tekst: "Lorentzkracht = centripetaal: qvB = mv²/r → **r = mv/(qB)**. Zwaarder of sneller → grotere cirkel; sterker veld of meer lading → kleinere cirkel. Massa-spectrometer scheidt isotopen via verschillende r." }],
           niveaus: { basis: "r = mv/(qB).", simpeler: "Vier grootheden bepalen r.", nogSimpeler: "Alle 4" },
@@ -149,12 +149,12 @@ const steps = [
         q: "Wanneer **draait een elektromotor om** als je een eenvoudige spoel gebruikt?",
         options: [
           "Stroom- of veldrichting omkeren",
-          "Spoel sneller laten draaien",
+          "Stroom- én veldrichting omkeren",
           "Magneten dichter bij zetten",
-          "Spoel zwaarder maken"
+          "Hogere spanning op de spoel zetten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — sneller draait door, geen omkering.", "Niet — sterker veld, geen omkering.", "Niet — massa irrelevant."],
+        wrongHints: [null, "Wat gebeurt er met de kracht als je de stroom omkeert, en wat als je daarna ook het veld omkeert?", "Magneten dichterbij maken het veld sterker en de motor krachtiger. Draait hij daardoor de andere kant op?", "Meer spanning geeft meer stroom en sneller draaien. Verandert de draairichting daardoor?"],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L — omkeren I of B → omkeren F", tekst: "Lorentzkracht-richting volgt FBI-regel. Omkeren van stroom OF veld geeft tegenovergestelde kracht → omgekeerd koppel → motor draait andere kant op. Beide omkeren: zelfde richting." }],
           niveaus: { basis: "I omkeren of B omkeren.", simpeler: "Stroom-richting of magneet-pool omdraaien.", nogSimpeler: "I of B omkeren" },
@@ -173,7 +173,7 @@ const steps = [
         q: "Een magneet ligt **stil** binnen een spoel. Inductie-stroom?",
         options: ["Nul", "Maximum", "Klein maar aanwezig", "Hangt af van magneet-grootte"],
         answer: 0,
-        wrongHints: [null, "Niet — geen flux-verandering = geen spanning.", "Niet — nul = nul.", "Maakt niet uit zonder beweging."],
+        wrongHints: [null, "Inductie ontstaat bij een veranderende flux. Verandert de flux als de magneet stil ligt?", "Ontstaat er inductie zolang er niets beweegt en de flux gelijk blijft?", "Een grote magneet geeft meer flux, maar verandert die flux als hij stil ligt?"],
         uitlegPad: {
           stappen: [{ titel: "dΦ/dt = 0 → U = 0", tekst: "Inductie vereist VERANDERING van flux. Magneet stilhouden → flux constant → geen spanning. Begin de magneet te bewegen (of spoel) → er ontstaat spanning." }],
           niveaus: { basis: "Geen verandering → nul.", simpeler: "Stilstaande magneet = er gebeurt niets.", nogSimpeler: "Nul" },
@@ -188,7 +188,7 @@ const steps = [
           "De spoel verwarmt zonder kracht"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Lenz: tegenwerken.", "Niet — er is wel een kracht.", "Niet — Lenz creëert wel een kracht."],
+        wrongHints: [null, "De wet van Lenz zegt dat de inductiestroom zijn oorzaak tegenwerkt. Werkt aantrekken het induwen tegen?", "Bij een sterke magneet kost induwen wat moeite. Waar komt die kracht vandaan?", "De spoel wordt een beetje warm, maar de stroom maakt ook een magnetisch veld. Wat doet dat veld met de magneet?"],
         uitlegPad: {
           stappen: [{ titel: "Lenz' wet — tegenwerken", tekst: "Bij duwen toe → flux groeit → inductie-stroom maakt **tegenkracht** → spoel werkt als 'magneet met gelijke pool' → afstoten. Bij wegtrekken: spoel trekt magneet terug. Lenz handhaaft energiebehoud (je moet ARBEID leveren tegen de tegenkracht in)." }],
           theorie: "Zonder Lenz' wet zou je gratis energie kunnen oogsten — fysica verbiedt dat.",
@@ -199,7 +199,7 @@ const steps = [
         q: "Een spoel heeft N = 100 windingen. Flux verandert met dΦ/dt = 0,020 Wb/s. U_ind?",
         options: ["2,0 V", "0,2 V", "20 V", "200 V"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet N niet.", "Niet — controleer rekensom.", "Te groot."],
+        wrongHints: [null, "Vermenigvuldig dΦ/dt met het aantal windingen N. Rekende je met 100?", "U = N · dΦ/dt = 100 × 0,020. Heb je de komma goed gezet?", "Rekende je met 2,0 Wb/s? Kijk nog eens naar 0,020 Wb/s."],
         uitlegPad: {
           stappen: [{ titel: "U = N · dΦ/dt", tekst: "U = 100 · 0,020 = **2,0 V** (in absolute waarde — het minteken geeft de richting aan via Lenz)." }],
           niveaus: { basis: "100 × 0,02 = 2 V.", simpeler: "Aantal windingen × snelheid van flux-verandering.", nogSimpeler: "2,0 V" },
@@ -209,12 +209,12 @@ const steps = [
         q: "De fiets-dynamo werkt op:",
         options: [
           "Inductie — wielmagneet draait langs spoel",
-          "Lorentzkracht zonder verandering",
-          "Statische elektriciteit",
-          "Batterij in dynamo"
+          "Lorentzkracht — stroom laat een magneet draaien",
+          "Wrijving — de band wrijft lading op het wiel",
+          "Batterij — er zit een accu in de dynamo"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Lorentz vereist beweging, maar inductie is het mechanisme voor spanning.", "Niet — geen wrijving-vonken.", "Niet — dynamo's hebben geen batterij."],
+        wrongHints: [null, "Stroom erin, beweging eruit: dat is een elektromotor. Wat doet een dynamo?", "Een dynamo levert een nette wisselspanning zonder vonken. Past dat bij statische lading?", "Een fietsdynamo blijft werken zolang je trapt en raakt nooit leeg. Zit er dan een accu in?"],
         uitlegPad: {
           stappen: [{ titel: "Dynamo = mini-generator", tekst: "Het wiel draait een magneet (of spoel) langs een vaste spoel (of magneet). Flux verandert continu → inductie-spanning → wisselstroom → lampje brandt. Sneller fietsen → meer flux-verandering per seconde → hogere spanning → fellere lamp." }],
           niveaus: { basis: "Inductie via bewegende magneet.", simpeler: "Wiel draait magneet, spoel voelt flux-verandering.", nogSimpeler: "Inductie" },
@@ -224,7 +224,7 @@ const steps = [
         q: "Een rechthoekige spoel (100 windingen, A = 0,020 m²) in B = 0,50 T draait met ω = 100 rad/s. U_max?",
         options: ["100 V", "1,0 V", "0,10 V", "1000 V"],
         answer: 0,
-        wrongHints: [null, "Niet — alle factoren meenemen.", "Te klein.", "Te groot — herreken."],
+        wrongHints: [null, "Je bent een factor 100 kwijt. Heb je zowel N als ω meegenomen?", "U_max = N·B·A·ω. Heb je alle vier de factoren vermenigvuldigd, ook N = 100?", "Reken N·B·A·ω stap voor stap na: 100 × 0,50 × 0,020 × 100."],
         uitlegPad: {
           stappen: [
             { titel: "U_max = N·B·A·ω", tekst: "U_max = 100 · 0,50 · 0,020 · 100 = **100 V**. Dat is de piek van de wisselspanning; effectieve waarde U_eff = U_max/√2 ≈ 71 V." },
@@ -246,7 +246,7 @@ const steps = [
         q: "Een trafo heeft N_p = 1000 en N_s = 100. Primair 230 V wissel. Secundair?",
         options: ["23 V", "2300 V", "130 V", "0 V"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is op-trafo, hier is neer-trafo.", "Niet — controleer formule.", "Niet — trafo werkt op wissel."],
+        wrongHints: [null, "De secundaire spoel heeft minder windingen dan de primaire. Wordt de spanning dan hoger of lager?", "Je trok 100 af van 230. Bij een trafo verhouden de spanningen zich als de windingen; welke verhouding hoort bij 100 : 1000?", "De primaire spoel krijgt wisselspanning, dus de flux verandert steeds. Waarom zou er dan 0 V uitkomen?"],
         uitlegPad: {
           stappen: [{ titel: "U_s/U_p = N_s/N_p", tekst: "U_s = U_p · (N_s/N_p) = 230 · (100/1000) = **23 V**. Neer-trafo voor speelgoed/elektronica." }],
           theorie: "Een GS-batterij door een trafo geeft NIETS — geen flux-verandering.",
@@ -257,7 +257,7 @@ const steps = [
         q: "Een ideale trafo: U_p·I_p = ?",
         options: ["U_s·I_s", "U_s/I_s", "N_p·I_s", "I_p²·R"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is geen vermogen.", "Niet — N_p is een aantal windingen, geen spanning.", "Niet — dat is verlies-formule."],
+        wrongHints: [null, "U_p·I_p is een vermogen in watt. Geeft U_s/I_s ook watt?", "N_p is een aantal windingen, geen spanning. Welke twee grootheden geven samen het vermogen?", "I²·R is het warmteverlies in een draad. Bij een ideale trafo gaat er niets verloren; waar is het vermogen dan gelijk aan?"],
         uitlegPad: {
           stappen: [{ titel: "Energiebehoud", tekst: "Ideale trafo verliest geen energie → P_p = P_s → U_p·I_p = U_s·I_s. Hoge spanning gaat samen met lage stroom (en omgekeerd)." }],
           niveaus: { basis: "P_p = P_s = U_s·I_s.", simpeler: "Vermogen in = vermogen uit.", nogSimpeler: "U_s·I_s" },
@@ -267,12 +267,12 @@ const steps = [
         q: "Waarom transport elektriciteit op **hoogspanning** (150-400 kV)?",
         options: [
           "Lage stroom → minder warmteverlies in draden",
-          "Hogere spanning is veiliger",
-          "Hogere spanning gaat sneller",
-          "Apparaten werken alleen op hoogspanning"
+          "Hoge spanning is veiliger voor mensen langs de lijn",
+          "Hoge spanning laat stroom sneller door de draad gaan",
+          "Zodat apparaten thuis meer vermogen krijgen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — hoog is gevaarlijker.", "Niet — elektriciteit reist altijd ~lichtsnelheid.", "Niet — apparaten gebruiken 230 V of lager."],
+        wrongHints: [null, "Is een lijn van 380.000 volt dichtbij veiliger of juist gevaarlijker dan 230 V? Waarvoor dient die hoge spanning dan?", "Hoe snel energie door de draad gaat, hangt niet van de spanning af. Wat gebeurt er wél met de stroomsterkte als de spanning omhooggaat?", "Thuis komt er gewoon 230 V uit het stopcontact. Waar gaat het om bij het transport zelf?"],
         uitlegPad: {
           stappen: [{ titel: "P_verlies = I²·R", tekst: "Bij vast vermogen P=U·I: hoger U → lagere I. Verlies in draad ~ I² → verdubbel U + halveer I → verlies wordt 4× kleiner. Daarom transporteren we op honderdduizenden volt." }],
           theorie: "Vóór wissel-stroom + transformatoren (Edison vs Tesla, jaren 1880) was gelijkstroom standaard — maar GS kan NIET getransformeerd worden, dus centrales dicht bij de gebruikers nodig. Tesla's AC-systeem won.",
@@ -283,7 +283,7 @@ const steps = [
         q: "NL-net is 230 V effectief, 50 Hz. Piek-spanning?",
         options: ["~325 V", "230 V", "460 V", "115 V"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is effectief, niet piek.", "Niet — 2× is te veel.", "Niet — dat is helft."],
+        wrongHints: [null, "230 V is de effectieve waarde. Is de piek van een sinus hoger of lager dan de effectieve waarde?", "Is de factor tussen effectief en piek precies 2? Denk aan √2.", "115 V is de helft. Kan de piek lager zijn dan de effectieve waarde?"],
         uitlegPad: {
           stappen: [{ titel: "U_max = U_eff · √2", tekst: "U_max = 230 · 1,414 ≈ **325 V**. Op een oscilloscoop zie je een sinus die heen-en-weer slingert tussen +325 en −325 V." }],
           theorie: "Daarom mag in een 230V-stopcontact het isolatie-materiaal niet bij ~325 V doorslaan.",
@@ -293,13 +293,13 @@ const steps = [
       {
         q: "Werkt een trafo op **gelijkstroom**?",
         options: [
-          "Nee",
-          "Ja, even goed als op wisselstroom",
-          "Alleen bij batterij-spanning hoger dan 100 V",
-          "Alleen bij stroom >5 A"
+          "Alleen op wisselstroom",
+          "Net zo goed op gelijk- als op wisselstroom",
+          "Op gelijkstroom, maar met een lager rendement",
+          "Op gelijkstroom, maar alleen bij hoge spanning"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — fundamenteel onmogelijk.", "Niet — spanning irrelevant.", "Niet — stroom irrelevant."],
+        wrongHints: [null, "Inductie in de secundaire spoel ontstaat door een veranderende flux. Verandert de flux bij een constante stroom?", "Het gaat niet om wat minder rendement. Wordt er bij constante stroom in de secundaire spoel wel spanning opgewekt?", "Ook een hoge gelijkspanning geeft een constante stroom. Verandert de flux in de kern dan?"],
         uitlegPad: {
           stappen: [{ titel: "Inductie vereist dΦ/dt", tekst: "GS geeft constante flux → dΦ/dt = 0 → U_ind = 0. Trafo werkt UITSLUITEND op wisselstroom. Daarom hebben we ons hele net op AC (en gebruik je gelijkrichters/adapters voor GS in apparaten)." }],
           niveaus: { basis: "Nee, vereist wisseling.", simpeler: "Stil veld = geen inductie = geen output.", nogSimpeler: "Nee" },
@@ -316,9 +316,9 @@ const steps = [
     checks: [
       {
         q: "Een **rechte stroomdraad** in B-veld is **parallel** aan B. Lorentzkracht?",
-        options: ["Nul", "BIL", "Maximaal", "Loodrecht op draad"],
+        options: ["Nul", "BIL", "½·BIL", "BIL, langs de veldlijnen"],
         answer: 0,
-        wrongHints: [null, "Niet — wat levert de formule F=BIL·sin(θ) op als de draad parallel aan het veld staat?", "Niet — geen veld-loodrechte component.", "Niet — geen kracht hier."],
+        wrongHints: [null, "Niet — wat levert de formule F=BIL·sin(θ) op als de draad parallel aan het veld staat?", "De helft van BIL hoort bij een hoek van 30° (sin 30° = 0,5). Welke hoek maken draad en veld hier?", "De Lorentzkracht staat altijd loodrecht op B. En hoe groot is sin 0°?"],
         uitlegPad: {
           stappen: [{ titel: "sin(0°) = 0", tekst: "F = B·I·L·sin(α). Bij parallel: α=0, sin(0)=0, dus F=0. Alleen het LOODRECHTE deel van B telt." }],
           niveaus: { basis: "Parallel = geen kracht.", simpeler: "Veld en stroom in dezelfde richting → geen kracht.", nogSimpeler: "Nul" },
@@ -328,7 +328,7 @@ const steps = [
         q: "Een spoel met L = 0,10 H. Stroom verandert met dI/dt = 5,0 A/s. Zelfinductie-spanning?",
         options: ["0,50 V", "5,0 V", "0,050 V", "50 V"],
         answer: 0,
-        wrongHints: [null, "Niet — dI/dt × L = ...", "Niet — controleer eenheden.", "Te groot."],
+        wrongHints: [null, "Je vergat L. Vermenigvuldig dI/dt met de zelfinductie L.", "Reken 0,10 × 5,0 nog eens na. Waar is de komma terechtgekomen?", "Je deelde dI/dt door L. Moet je delen of vermenigvuldigen in U = L · dI/dt?"],
         uitlegPad: {
           stappen: [{ titel: "U = L · dI/dt", tekst: "U = 0,10 · 5,0 = **0,50 V**. (Met minteken volgens Lenz — werkt de stroomverandering tegen.)" }],
           theorie: "Bij snel uitschakelen kan dI/dt heel groot worden → enorme spanning → vonk over schakelaar. Daarom soms 'flyback-diode' over spoelen.",
@@ -339,7 +339,7 @@ const steps = [
         q: "In een **LC-kring** met L = 1 mH en C = 100 nF, resonantie-frequentie?",
         options: ["~16 kHz", "~10 kHz", "~100 kHz", "~1 MHz"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer rekensom.", "Niet — te hoog.", "Niet — veel te hoog."],
+        wrongHints: [null, "Reken √(LC) opnieuw na: 1·10⁻³ × 100·10⁻⁹ = 1·10⁻¹⁰. Wat is de wortel daarvan?", "Je vond ω = 1/√(LC). Hoe kom je van hoekfrequentie naar frequentie in Hz?", "Controleer de voorvoegsels: m = 10⁻³ en n = 10⁻⁹. Klopt jouw product LC?"],
         uitlegPad: {
           stappen: [
             { titel: "f = 1/(2π·√(LC))", tekst: "f = 1/(2π · √(10⁻³ · 10⁻⁷)) = 1/(2π · √10⁻¹⁰) = 1/(2π · 10⁻⁵) = 10⁵/(2π) ≈ **15,9 kHz**." },
@@ -352,12 +352,12 @@ const steps = [
         q: "Wat horen tot **elektromagnetische golven**?",
         options: [
           "Radio, microgolf, zichtbaar licht en röntgen",
-          "Alleen zichtbaar licht",
-          "Alleen radio + microgolven",
-          "Radio, licht, röntgen én geluid"
+          "Zichtbaar licht, infrarood, UV en ultrageluid",
+          "Radio, microgolf, röntgen en seismische golven",
+          "Radio, zichtbaar licht, röntgen én geluid"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — radio is ook EM.", "Niet — röntgen + UV ook.", "Niet — geluid is GEEN EM (drukgolf in lucht)."],
+        wrongHints: [null, "Ultrageluid is geluid met een hoge frequentie. Is geluid een elektromagnetische golf?", "Seismische golven zijn trillingen van de aardbodem. Hebben die een stof nodig om door te reizen?", "Geluid is een trilling van luchtdeeltjes. Kan geluid door vacuüm, zoals licht wel kan?"],
         uitlegPad: {
           stappen: [{ titel: "Maxwell — alles is EM-spectrum", tekst: "Radio (~kHz-GHz), microgolf (GHz), infrarood (THz), zichtbaar licht (~500 THz), UV, röntgen, gamma — alles dezelfde fysica, verschillende frequenties. Allemaal reizen ze met c = 3·10⁸ m/s in vacuüm." }],
           basiskennis: [{ onderwerp: "Niet-EM", uitleg: "Geluid = drukgolf in materie (lucht/water/staal). Heeft medium nodig — kan niet door vacuüm. Heel anders dan EM." }],
@@ -368,7 +368,7 @@ const steps = [
         q: "Een **proton** beweegt loodrecht door B = 0,40 T met v = 4,0·10⁶ m/s. q = 1,6·10⁻¹⁹ C, m = 1,67·10⁻²⁷ kg. Cirkel-straal?",
         options: ["~0,10 m", "~0,01 m", "~1,0 m", "~1·10⁻⁴ m"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer machten.", "Niet — te groot.", "Niet — te klein."],
+        wrongHints: [null, "Reken r = m·v/(q·B) stap voor stap: wat is m·v, en wat is q·B?", "Een straal van 1 m vraagt een veel zwakker veld of een veel hogere snelheid. Controleer de machten van 10 in m·v/(q·B).", "Deel je m·v door q·B, en niet andersom? Controleer ook de macht van 10."],
         uitlegPad: {
           stappen: [
             { titel: "r = mv/(qB)", tekst: "r = (1,67·10⁻²⁷ · 4,0·10⁶) / (1,6·10⁻¹⁹ · 0,40) = 6,68·10⁻²¹ / 6,4·10⁻²⁰ ≈ **0,10 m**. Een cirkel met een straal van 10 cm (diameter 20 cm)." },

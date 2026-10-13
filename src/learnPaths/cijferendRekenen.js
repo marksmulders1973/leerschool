@@ -50,9 +50,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer is **cijferend rekenen handig**?",
-        options: ["Bij grote getallen die niet in je hoofd passen","Altijd, ook bij 5+3","Alleen bij delen","Alleen op de Doorstroomtoets"],
+        options: ["Bij grote getallen die niet in je hoofd passen","Bij kleine sommen, zodat je geen fout maakt","Bij ronde getallen zoals 300 + 400","Als je een uitkomst wilt schatten"],
         answer: 0,
-        wrongHints: [null,"Te overdreven — kleine sommen doe je in je hoofd.","Niet alleen delen — alle 4 bewerkingen kun je cijferen.","Niet alleen de toets — overal in echte rekensommen."],
+        wrongHints: [null,"Een som als 5 + 3 doe je in je hoofd sneller. Wanneer wordt opschrijven pas echt nodig?","Ronde getallen tel je makkelijk in je hoofd. Bij welke getallen raak je in je hoofd de draad kwijt?","Bij schatten rond je juist af en reken je globaal. Wanneer heb je het precieze antwoord op papier nodig?"],
         uitlegPad: {
           stappen: [{ titel: "Wanneer cijferen?", tekst: "Voor GROTE getallen die niet in je hoofd passen. 5+3 = hoofd. 487+326 = papier." }],
           woorden: [{ woord: "cijferend", uitleg: "Onder elkaar in kolommen op papier rekenen." }],
@@ -66,7 +66,7 @@ const steps = [
         q: "Bij cijferend **optellen** werk je **van** ... **naar** ...",
         options: ["Rechts naar links","Links naar rechts","Boven naar onder","Maakt niet uit"],
         answer: 0,
-        wrongHints: [null,"Andersom — eenheden gaan eerst.","Niet horizontaal — kolomsgewijs.","Het maakt wél uit — anders gaat het overschietje fout."],
+        wrongHints: [null,"Waar staan de eenheden: links of rechts? En in welke kolom ontstaat het eerste onthoudje?","Het gaat om de volgorde van de kolommen: welke kolom pak je als eerste?","Als je links begint, waar laat je dan het onthoudje van de eenheden?"],
         uitlegPad: {
           stappen: [{ titel: "Rechts begint", tekst: "Eenheden eerst (rechts), dan tientallen, dan honderdtallen. Want onthoudje gaat naar links." }],
           woorden: [{ woord: "kolommen", uitleg: "Verticale 'banen' in cijferen: eenheden, tientallen, honderden." }],
@@ -80,7 +80,7 @@ const steps = [
         q: "Bij **23 + 14** (hoofdrekenen of cijferen?) — wat is logisch?",
         options: ["Hoofdrekenen — eenvoudig","Cijferen op papier","Calculator","Maakt niks uit"],
         answer: 0,
-        wrongHints: [null,"Overkill — zo'n kleine som kun je direct in je hoofd doen.","Niet voor zo'n eenvoudige som.","Het maakt wél uit — kies de snelste manier per som."],
+        wrongHints: [null,"Opschrijven kost hier meer tijd dan het oplevert. Hoe groot zijn de getallen?","Een rekenmachine pakken duurt langer dan deze som. Kun je 20 + 10 en 3 + 4 zelf?","Het maakt wél uit — kies de snelste manier per som."],
         uitlegPad: {
           stappen: [{ titel: "Klein = hoofd", tekst: "23+14 = simpel — 30+7 = 37, of 20+10=30 + 3+4=7. Hoofdrekenen het snelst." }],
           woorden: [{ woord: "hoofdrekenen", uitleg: "Sommen oplossen zonder papier — uit je hoofd." }],
@@ -186,7 +186,7 @@ const steps = [
         options: [
           "Zodat je cijfers uit dezelfde kolom bij elkaar telt",
           "Zodat je geen onthoudje meer nodig hebt",
-          "Zodat het antwoord een rond getal wordt",
+          "Zodat je met het grootste cijfer kunt beginnen",
           "Zodat je de som niet hoeft te schatten",
         ],
         answer: 0,
@@ -245,7 +245,7 @@ const steps = [
         q: "**347 + 256** = ?",
         options: ["603","593","613","503"],
         answer: 0,
-        wrongHints: [null,"Te weinig — tel de eenheden opnieuw: hoeveel is 7 plus 6?","Te veel — heb je 1 te veel onthouden?","Veel te weinig — heb je honderdtallen niet correct gerold?"],
+        wrongHints: [null,"Kijk naar de tientallen: heb je het onthoudje van de eenheden (7 + 6) meegeteld?","Te veel — heb je 1 te veel onthouden?","Kijk naar de honderdtallen: kwam daar nog een onthoudje van de tientallen bij?"],
         uitlegPad: {
           stappen: [
             { titel: "Eenheden", tekst: "7+6=13. Schrijf 3, onthoud 1." },
@@ -263,7 +263,7 @@ const steps = [
         q: "**1248 + 567** = ?",
         options: ["1815","1715","1805","1825"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je het onthoudje overgeslagen?","Te weinig — klopt de duizendtallen-kolom?","Te veel — heb je extra onthoudje gerekend?"],
+        wrongHints: [null,"Te weinig — heb je het onthoudje overgeslagen?","Kijk naar de tientallen: 4 + 6, plus het onthoudje van de eenheden. Wat schrijf je op?","Te veel — heb je extra onthoudje gerekend?"],
         uitlegPad: {
           stappen: [
             { titel: "Werk kolom voor kolom", tekst: "8+7=15 (5,+1). 4+6+1=11 (1,+1). 2+5+1=8. 1+0=1. Antwoord 1815." },
@@ -279,7 +279,7 @@ const steps = [
         q: "**4985 + 1567** = ?",
         options: ["6552","6452","6442","5552"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je in elke kolom het onthoudje meegenomen?","Te weinig — schat globaal: hoeveel is 5000 plus 1500 ongeveer?","Veel te weinig — duizendtallen onjuist."],
+        wrongHints: [null,"Te weinig — heb je in elke kolom het onthoudje meegenomen?","Te weinig — schat globaal: hoeveel is 5000 plus 1500 ongeveer?","Kijk naar de duizendtallen: kwam daar nog een onthoudje van de honderdtallen bij?"],
         uitlegPad: {
           stappen: [
             { titel: "Stappen", tekst: "5+7=12. 8+6+1=15. 9+5+1=15. 4+1+1=6. Antwoord 6552." },
@@ -668,7 +668,7 @@ const steps = [
         q: "**632 − 184** = ?",
         options: ["448","458","568","552"],
         answer: 0,
-        wrongHints: [null,"Te veel — tel de eenheden na: hoeveel is 12 min 4 als je leent?","Veel te veel — niet correct geleend.","Te veel — heb je in elke kolom geleend waar nodig?"],
+        wrongHints: [null,"Na het lenen bij de eenheden is de 3 een 2 geworden. Heb je dat bij de tientallen gedaan?","Schat eens: 630 − 180 is ongeveer 450. Past jouw antwoord daarbij?","Heb je in een kolom het kleine cijfer van het grote afgehaald, ook als het onderste groter was?"],
         uitlegPad: {
           stappen: [
             { titel: "Lenen bij aftrekken", tekst: "Eenheden: 2−4 → leen. 12−4=8. Tientallen wordt 2 (was 3)." },
@@ -702,7 +702,7 @@ const steps = [
         q: "**4567 − 2389** = ?",
         options: ["2178","2278","2188","2168"],
         answer: 0,
-        wrongHints: [null,"Te veel — schat globaal: hoeveel is 4500 min 2400 ongeveer?","Te veel — tel de eenheden na: hoeveel houd je over als je in de eenheden-kolom leent?","Te weinig — kolom-controle nodig."],
+        wrongHints: [null,"Te veel — schat globaal: hoeveel is 4500 min 2400 ongeveer?","Te veel — tel de eenheden na: hoeveel houd je over als je in de eenheden-kolom leent?","Reken de tientallen-kolom nog eens na: wat staat daar na het lenen?"],
         uitlegPad: {
           stappen: [
             { titel: "Stappen", tekst: "7−9→leen. 17−9=8. 6−1−8→leen. 15−8=7. 5−1−3=1. 4−2=2. Antwoord 2178." },
@@ -1084,7 +1084,7 @@ const steps = [
         q: "**324 × 3** = ?",
         options: ["972","962","1062","912"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je 3×3 (honderdtallen) wel meegenomen?","Te veel — 1 te veel onthouden.","Te weinig."],
+        wrongHints: [null,"4 × 3 = 12. Heb je het onthoudje bij de tientallen opgeteld?","Te veel — heb je ergens een onthoudje te veel opgeteld?","Reken elke kolom apart na: 4 × 3, 2 × 3 en 3 × 3, met de onthoudjes."],
         uitlegPad: {
           stappen: [{ titel: "Cijfer voor cijfer × 3", tekst: "4×3=12 (2,+1). 2×3+1=7. 3×3=9. Antwoord 972." }],
           woorden: [{ woord: "vermenigvuldigen cijferend", uitleg: "Elk cijfer apart × het getal, met onthoudje." }],
@@ -1115,7 +1115,7 @@ const steps = [
         q: "**456 × 7** = ?",
         options: ["3192","3092","3292","2192"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je elk cijfer × 7 met onthoudje?","Te veel — heb je extra onthoudje gerekend?","Veel te weinig — heb je tientallen overgeslagen?"],
+        wrongHints: [null,"Te weinig — heb je bij elk cijfer × 7 het onthoudje meegeteld?","Te veel — heb je extra onthoudje gerekend?","Schat eens: 450 × 7 is ongeveer 3150. Past jouw antwoord daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Cijfer × 7", tekst: "6×7=42 (2,+4). 5×7+4=39 (9,+3). 4×7+3=31. Antwoord 3192." }],
           woorden: [{ woord: "groot product", uitleg: "Bij vermenigvuldiging met groot getal: meerdere onthoudjes mogelijk." }],
@@ -1930,7 +1930,7 @@ const steps = [
         q: "**1245 leerlingen op 3 scholen**, gelijk verdeeld. Hoeveel **per school**?",
         options: ["415","405","425","505"],
         answer: 0,
-        wrongHints: [null,"Te weinig — doe een proef: jouw antwoord keer 3 geeft niet 1245. Hoeveel keer 3 geeft wél precies 1245?","Te veel — jouw antwoord keer 3 gaat voorbij 1245.","Veel te veel — heb je × ipv ÷ gedaan?"],
+        wrongHints: [null,"Te weinig — doe een proef: jouw antwoord keer 3 geeft niet 1245. Hoeveel keer 3 geeft wél precies 1245?","Te veel — jouw antwoord keer 3 gaat voorbij 1245.","Veel te veel — doe een proef: hoeveel is jouw antwoord keer 3?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke bewerking?", tekst: "'Gelijk verdeeld' = delen. 1245 ÷ 3." },
@@ -1947,7 +1947,7 @@ const steps = [
         q: "Een fietsenstalling heeft **rij A: 47 fietsen** en **rij B: 68 fietsen**. **Verschil**?",
         options: ["21","115","20","27"],
         answer: 0,
-        wrongHints: [null,"Niet samenvoegen — 'verschil' = aftrekken.","Te weinig — controleer: 68−47.","Te veel — reken de eenheden nog eens na."],
+        wrongHints: [null,"Bij 'verschil' tel je de rijen niet samen. Hoeveel fietsen staan er in rij B méér?","Te weinig — kijk naar de eenheden: hoeveel is 8 − 7?","Te veel — reken de eenheden nog eens na."],
         uitlegPad: {
           stappen: [
             { titel: "Welke bewerking?", tekst: "'Verschil' = aftrekken. 68 − 47." },
@@ -2254,7 +2254,7 @@ const steps = [
         q: "**3456 + 2789** = ?",
         options: ["6245","6125","6345","5245"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je in elke kolom het onthoudje?","Te veel — schat globaal: hoeveel is 3500 plus 2800 ongeveer?","Veel te weinig — heb je duizendtallen correct?"],
+        wrongHints: [null,"Te weinig — heb je in elke kolom het onthoudje meegeteld?","Te veel — schat globaal: hoeveel is 3500 plus 2800 ongeveer?","Kijk naar de duizendtallen: kwam daar nog een onthoudje bij?"],
         uitlegPad: {
           stappen: [{ titel: "Cijfer", tekst: "6+9=15 (5,+1). 5+8+1=14 (4,+1). 4+7+1=12 (2,+1). 3+2+1=6. Antwoord 6245." }],
           woorden: [{ woord: "groot optellen", uitleg: "4-cijferige optellingen — onthoudjes goed bijhouden." }],
@@ -2268,7 +2268,7 @@ const steps = [
         q: "**8000 − 2547** = ?",
         options: ["5453","5553","5343","6453"],
         answer: 0,
-        wrongHints: [null,"Te veel — gebruik 7999-truc + 1.","Te weinig — controleer kolommen.","Veel te veel — heb je goed geleend?"],
+        wrongHints: [null,"Te veel — probeer de truc: 7999 − 2547, en daarna nog + 1.","Te weinig — reken elke kolom na, ook na het lenen door de nullen.","Na het lenen is de 8 een 7 geworden. Heb je dat gedaan?"],
         uitlegPad: {
           stappen: [
             { titel: "999-truc", tekst: "Bij grote 0-getallen: doe 7999−2547 (geen lenen), dan +1." },
@@ -2285,7 +2285,7 @@ const steps = [
         q: "**432 × 6** = ?",
         options: ["2592","2492","2692","2582"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je elk cijfer × 6 met onthoudje?","Te veel — extra onthoudje?","Te weinig — controleer middelste kolom."],
+        wrongHints: [null,"Kijk naar de honderdtallen: 4 × 6, en dan nog het onthoudje van de tientallen.","Te veel — heb je ergens een onthoudje te veel opgeteld?","Kijk naar de tientallen: 3 × 6, plus het onthoudje van 2 × 6."],
         uitlegPad: {
           stappen: [{ titel: "Cijfer × 6", tekst: "2×6=12 (2,+1). 3×6+1=19 (9,+1). 4×6+1=25. Antwoord 2592." }],
           woorden: [{ woord: "tafel ×6", uitleg: "6×1=6, 6×2=12, 6×3=18, 6×4=24..." }],
@@ -2316,7 +2316,7 @@ const steps = [
         q: "Een fabriek maakt **24 producten per uur**, **8 uur per dag**. **Hoeveel per dag**?",
         options: ["192","182","202","240"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer 24 × 8.","Te veel — heb je extra onthoudje?","Veel te veel — dat is 30×8."],
+        wrongHints: [null,"Te weinig — 4 × 8 = 32. Heb je de 3 onthouden en bij 2 × 8 opgeteld?","Te veel — heb je een onthoudje te veel opgeteld?","Veel te veel — dat is 30×8."],
         uitlegPad: {
           stappen: [
             { titel: "Welke bewerking?", tekst: "'Per uur, 8 uur per dag' = 24 × 8." },
@@ -2333,7 +2333,7 @@ const steps = [
         q: "**Pakjes van 12 chocoladerepen kosten € 7,80 elk**. Voor **een doos van 25 pakjes** — totaalprijs?",
         options: ["€ 195","€ 185","€ 205","€ 200"],
         answer: 0,
-        wrongHints: [null,"Te weinig — probeer de truc voor keer 25: hoe gebruik je keer 100 en dan delen?","Te veel — heb je verkeerd vermenigvuldigd?","Te veel — schat: hoeveel is 8 keer 25, en is jouw antwoord groter of kleiner dan dat zou moeten?"],
+        wrongHints: [null,"Te weinig — probeer de truc voor keer 25: hoe gebruik je keer 100 en dan delen?","Te veel — reken € 7,80 × 100 en deel dat daarna door 4.","Te veel — schat: hoeveel is 8 keer 25, en is jouw antwoord groter of kleiner dan dat zou moeten?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke bewerking?", tekst: "Per pakje €7,80, 25 pakjes = 7,80 × 25." },
@@ -2346,21 +2346,21 @@ const steps = [
           niveaus: { basis: "7,80×25=€195.", simpeler: "Truc: 7,80×25 = (7,80×100)÷4 = 780÷4 = 195. €195.", nogSimpeler: "€195" },
         },
       },
-      { q: "**456 + 287** = ?", options: ["743","733","633","843"], answer: 0, wrongHints: [null, "Niet — tel de tientallen nog eens na.", "Niet — vergeet onthouden niet.", "Niet."] },
-      { q: "**905 − 327** = ?", options: ["578","678","622","588"], answer: 0, wrongHints: [null, "Niet — lenen vergeten.", "Niet.", "Niet."] },
-      { q: "**24 × 15** = ?", options: ["360","240","36","350"], answer: 0, wrongHints: [null, "Dat is 24×10.", "Niet — vergeet 10-vouden.", "Niet — bijna."] },
-      { q: "**156 ÷ 4** = ?", options: ["39","36","42","51"], answer: 0, wrongHints: [null, "Niet — doe een proef: jouw antwoord keer 4 geeft niet 156.", "Niet — te hoog.", "Niet."] },
-      { q: "**3,5 + 2,7** = ?", options: ["6,2","5,2","6,12","5,12"], answer: 0, wrongHints: [null, "Niet — tel de tienden apart op: hoeveel is 5 tienden plus 7 tienden?", "Niet — 12 hoort niet samen.", "Niet."] },
+      { q: "**456 + 287** = ?", options: ["743","733","633","843"], answer: 0, wrongHints: [null, "Tel de tientallen nog eens na: 5 + 8, plus het onthoudje van de eenheden.", "Te weinig — heb je de onthoudjes bij de tientallen én de honderdtallen meegeteld?", "Schat eens: 450 + 300 is ongeveer 750. Past jouw antwoord daarbij?"] },
+      { q: "**905 − 327** = ?", options: ["578","678","622","588"], answer: 0, wrongHints: [null, "Na het lenen door de 0 is de 9 een 8 geworden. Heb je dat gedaan?", "Heb je in een kolom het kleine cijfer van het grote afgehaald, ook als het onderste groter was?", "Kijk naar de tientallen: na het lenen door de 0 staat daar een 9. Hoeveel is 9 − 2?"] },
+      { q: "**24 × 15** = ?", options: ["360","240","36","350"], answer: 0, wrongHints: [null, "Dat is 24 × 10. Welk deel van de 15 mist er dan nog?", "Schat eens: 24 × 15 is meer dan 24 × 10. Kan het antwoord dan zo klein zijn?", "Bijna — reken 24 × 5 precies uit en tel dat bij 24 × 10 op."] },
+      { q: "**156 ÷ 4** = ?", options: ["39","36","42","51"], answer: 0, wrongHints: [null, "Doe een proef: jouw antwoord keer 4. Komt dat op 156?", "Doe een proef: 42 × 4 = 168. Is dat meer of minder dan 156?", "Hoe vaak past 4 in 15? Reken dat nog eens na met de tafel van 4."] },
+      { q: "**3,5 + 2,7** = ?", options: ["6,2","5,2","6,12","5,12"], answer: 0, wrongHints: [null, "Tel de tienden apart op: 5 tienden plus 7 tienden. Gaat er een hele bij?", "12 tienden passen niet achter de komma. Hoeveel hele en hoeveel tienden is dat?", "Zet de komma's onder elkaar. Heb je de 10 tienden als 1 hele bij de helen opgeteld?"] },
       { q: "**8 − 3,4** = ?", options: ["4,6","5,6","3,6","4,4"], answer: 0, wrongHints: [null, "Je haalt 3,4 áf van 8 — kom je dan echt boven de 5 uit?", "Dit lijkt te weinig — heb je misschien méér dan 3,4 afgetrokken? Reken 8 − 3,4 rustig na.", "Let op de tienden: 8,0 heeft 0 tienden en er gaat 0,4 af, dus je moet lenen van de hele getallen. Hoeveel tienden hou je over?"] },
-      { q: "**0,3 × 7** = ?", options: ["2,1","21","0,21","3,7"], answer: 0, wrongHints: [null, "Niet — komma vergeten.", "Komma te ver.", "Niet."] },
-      { q: "**240 ÷ 12** = ?", options: ["20","12","24","30"], answer: 0, wrongHints: [null, "Dat is de deler.", "Te laag.", "Te hoog."] },
-      { q: "Rond af: **23,7** op een heel getal", options: ["24","23","23,7","20"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5.", "Dat is niet afgerond.", "Te ver."] },
-      { q: "Wat is **17 × 6**?", options: ["102","112","104","92"], answer: 0, wrongHints: [null, "Niet — controleer.", "Niet.", "Te laag."] },
+      { q: "**0,3 × 7** = ?", options: ["2,1","21","0,21","3,7"], answer: 0, wrongHints: [null, "3 × 7 = 21, maar je rekende met 0,3. Waar hoort de komma?", "0,3 heeft één cijfer achter de komma. Hoeveel cijfers achter de komma krijgt het antwoord?", "Je moet 0,3 keer 7 uitrekenen, niet de cijfers naast elkaar zetten."] },
+      { q: "**240 ÷ 12** = ?", options: ["20","12","24","30"], answer: 0, wrongHints: [null, "12 is het getal waar je door deelt. Hoe vaak past 12 in 240?", "Doe een proef: 24 × 12 = 288. Is dat meer of minder dan 240?", "Doe een proef: 30 × 12 = 360. Past dat bij 240?"] },
+      { q: "Rond af: **23,7** op een heel getal", options: ["24","23","23,7","20"], answer: 0, wrongHints: [null, "Kijk naar het cijfer achter de komma: rond je dan naar boven of naar beneden af?", "Dat is niet afgerond.", "20 is afgerond op tientallen. De vraag is afronden op een heel getal."] },
+      { q: "Wat is **17 × 6**?", options: ["102","112","104","92"], answer: 0, wrongHints: [null, "Heb je ergens een onthoudje te veel meegeteld?", "Hoeveel is 7 × 6? Past jouw laatste cijfer daarbij?", "Reken 10 × 6 en 7 × 6 apart uit en tel ze op."] },
       { q: "**1.234 + 567** = ?", options: ["1.801","1.701","1.811","1.901"], answer: 0, wrongHints: [null, "Te weinig — heb je het onthoudje uit de tientallen meegeteld bij de honderdtallen?", "Te veel — tel de tientallen-kolom nog eens na.", "Te veel — tel de honderdtallen-kolom nog eens na."] },
-      { q: "**1.000 − 245** = ?", options: ["755","855","655","745"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — bijna."] },
-      { q: "**45 × 11** = ?", options: ["495","450","405","550"], answer: 0, wrongHints: [null, "Dat is ×10.", "Niet.", "Niet."] },
+      { q: "**1.000 − 245** = ?", options: ["755","855","655","745"], answer: 0, wrongHints: [null, "Gebruik de truc: 999 − 245, en dan + 1. Welk cijfer krijg je bij de honderdtallen?", "Schat eens: 1.000 − 250 is ongeveer 750. Past jouw antwoord daarbij?", "Bijna — na het lenen staat er bij de tientallen een 9. Hoeveel is 9 − 4?"] },
+      { q: "**45 × 11** = ?", options: ["495","450","405","550"], answer: 0, wrongHints: [null, "Dat is 45 × 10. Hoeveel keer 45 mis je dan nog?", "Reken 45 × 10 en 45 × 1 apart uit en tel ze op.", "Dat is 50 × 11. Rekende je met 45 of met 50?"] },
       { q: "**100 ÷ 25** = ?", options: ["4","5","2","10"], answer: 0, wrongHints: [null, "Tel op in stappen van 25: 25, 50, 75, 100 — hoeveel sprongen zijn dat precies?", "2 keer 25 is pas 50 — is dat al 100? Blijf verder tellen.", "10 keer 25 zou 250 zijn, veel te veel — welk getal keer 25 geeft precies 100?"] },
-      { q: "Welk **cijfer** staat op de plek van de **honderdtallen** in 4.567?", options: ["5","4","6","7"], answer: 0, wrongHints: [null, "De 4 staat op de plek van de duizendtallen.", "De 6 staat op de plek van de tientallen.", "De 7 staat op de plek van de eenheden."] },
+      { q: "Welk **cijfer** staat op de plek van de **honderdtallen** in 4.567?", options: ["5","4","6","7"], answer: 0, wrongHints: [null, "Tel vanaf rechts: eenheden, tientallen, honderdtallen. Op welke plek staat de 4?", "Begin rechts met tellen. Is dit de derde plek van rechts?", "Welke plek heeft het allerlaatste cijfer van een getal?"] },
     ],
   },
   // F. Oefenronde plus & min (11 aug 2026, zelfde didactiek als tafels/topografie):
@@ -2375,7 +2375,7 @@ const steps = [
       "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
     interactiveComponent: makeRekenOefenRonde({ soort: ["optellen", "aftrekken"], aantal: 12, totMax: 100, emoji: "➕", meervoud: "plus- en minsommen" }),
     checks: [
-      { q: "36 + 47 = ?", options: ["83","73","84","93"], answer: 0, wrongHints: [null, "Vergeet de onthoud-tien niet.", "Bijna — tel de eenheden nog eens.", "Te veel — controleer de tientallen."] },
+      { q: "36 + 47 = ?", options: ["83","73","84","93"], answer: 0, wrongHints: [null, "Kijk naar de tientallen: heb je het onthoudje van 6 + 7 meegeteld?", "Bijna — tel de eenheden nog eens.", "Te veel. Tel de tientallen opnieuw: heb je het onthoudje misschien twee keer meegeteld?"] },
     ],
   },
 ];

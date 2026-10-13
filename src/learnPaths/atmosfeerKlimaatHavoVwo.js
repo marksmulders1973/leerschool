@@ -24,7 +24,7 @@ const steps = [
         q: "Waarin vindt alle **weer** plaats?",
         options: ["Troposfeer", "Stratosfeer", "Mesosfeer", "Thermosfeer"],
         answer: 0,
-        wrongHints: [null, "Niet — stabiel + droog daar.", "Te hoog.", "Te hoog."],
+        wrongHints: [null, "In de stratosfeer zit bijna geen waterdamp en wordt het hoger juist warmer. Kunnen daar regenwolken ontstaan?", "De mesosfeer begint pas rond 50 km hoogte. Zie je daar ooit regen of sneeuw vandaan komen?", "In de thermosfeer is de lucht extreem dun. Is daar genoeg lucht en waterdamp voor weer?"],
         uitlegPad: {
           stappen: [{ titel: "Onderste laag", tekst: "Troposfeer (0-12 km): bevat waterdamp + verticale luchtbeweging → wolken + neerslag + wind. Boven tropopauze: stabiel, geen weer." }],
           niveaus: { basis: "Troposfeer.", simpeler: "Onderste laag = weer.", nogSimpeler: "Troposfeer" },
@@ -33,13 +33,13 @@ const steps = [
       {
         q: "Wat doet de **ozonlaag** (in stratosfeer)?",
         options: [
-          "Beschermt tegen schadelijke UV-straling",
-          "Houdt regenwolken tegen",
-          "Maakt zuurstof aan",
-          "Zorgt voor wind"
+          "Houdt schadelijke UV-straling tegen",
+          "Filtert stof en roet uit de lucht",
+          "Weerkaatst zonlicht terug de ruimte in",
+          "Laat meteorieten verbranden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — wolken zitten lager, in de troposfeer.", "Niet — al bestaande O₂.", "Niet — wind ontstaat door drukverschillen."],
+        wrongHints: [null, "Stof en roet spoelen vooral met regen uit de lucht, lager in de troposfeer. Wat doet ozon (O₃) met het zonlicht?", "Zonlicht terugkaatsen doen vooral wolken, ijs en sneeuw. Wat doet ozon (O₃) dan met zonlicht?", "Meteorieten verbranden hoger, in de mesosfeer. Wat doet de ozonlaag in de stratosfeer?"],
         uitlegPad: {
           stappen: [
             { titel: "O₃ absorbeert UV", tekst: "Ozon (O₃) absorbeert UV-fotonen → splitsen + samenstellen continu → UV blijft in atmosfeer + minder dringt door naar aarde. Cruciaal voor DNA-bescherming alle leven." },
@@ -51,13 +51,13 @@ const steps = [
       {
         q: "**Broeikaseffect** wordt veroorzaakt door:",
         options: [
-          "Atmosfeer houdt door de aarde uitgezonden warmte vast",
-          "Zonnestraling die het aardoppervlak direct opwarmt",
-          "Vulkanen die warme gassen uitstoten",
-          "Het magnetisch veld dat warmte vasthoudt"
+          "Gassen die uitgestraalde warmte vasthouden",
+          "Een gat in de ozonlaag dat meer zon doorlaat",
+          "Zonlicht dat de grond direct opwarmt",
+          "Vulkanen die warme gassen uitstoten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verschil tussen inkomend + uitgaand.", "Geen broeikas-mechanisme.", "Niet relevant."],
+        wrongHints: [null, "Het ozongat laat meer UV door, en dat geeft zonnebrand. Maar waardoor blijft de warmte van de aarde hangen?", "Inkomend zonlicht warmt de grond op, maar het broeikaseffect gaat over wat daarna gebeurt. Wat doet de aarde met die warmte?", "Vulkanen stoten wel gassen uit, maar het broeikaseffect werkt altijd. Wat houdt de warmte als een deken vast?"],
         uitlegPad: {
           stappen: [
             { titel: "Glas-effect in kas", tekst: "Naam komt van tuinkas: licht komt in, warmte uit moeilijk. Atmosfeer doet zelfde: zon (kort-golf) door, aarde-warmte (lang-golf IR) deels vastgehouden door CO₂/CH₄/H₂O. Natuurlijk effect = +33°C; versterkt = klimaatverandering." },
@@ -69,7 +69,7 @@ const steps = [
         q: "Hoeveel **% CO₂** zit in atmosfeer (2024)?",
         options: ["~0,04%", "~21%", "~78%", "~1%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is O₂.", "Niet — dat is N₂.", "Hoger dan werkelijk."],
+        wrongHints: [null, "21% is het aandeel van het gas dat je inademt om te leven. Welk gas is dat?", "Het grootste deel van de lucht is stikstof. Kan CO₂ dan 78% zijn?", "Rond 1% zit argon, een edelgas. Is er meer of minder CO₂ dan argon?"],
         uitlegPad: {
           stappen: [{ titel: "Spoor-gas met groot effect", tekst: "CO₂ is slechts ~420 ppm = 0,042% van atmosfeer. Toch enorme klimaat-impact want het absorbeert IR effectief. Pre-industrieel: 280 ppm. Stijgend ~2,5 ppm/jaar." }],
           niveaus: { basis: "0,042% (420 ppm).", simpeler: "Heel klein deel: 0,04%.", nogSimpeler: "420 ppm" },
@@ -79,12 +79,12 @@ const steps = [
         q: "**Montréal Protocol 1987** regelt:",
         options: [
           "CFK-verbod tegen ozonlaag-aantasting",
-          "CO₂-reductie",
-          "Plastic-verbod",
-          "Walvis-jacht"
+          "CO₂-reductie tegen de opwarming",
+          "Plastic-verbod tegen zeevervuiling",
+          "Walvisjacht-verbod tegen uitsterven"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Parijs/Kyoto.", "Niet — pas later beleidsdiscussies.", "Niet — andere verdragen."],
+        wrongHints: [null, "CO₂-afspraken staan in Kyoto (1997) en Parijs (2015). Waar ging het in 1987 om?", "Wereldwijde plasticafspraken kwamen pas veel later. Welk milieuprobleem speelde in de jaren 80 hoog in de lucht?", "De walvisjacht valt onder een ander verdrag. Welk probleem in de atmosfeer was in de jaren 80 groot nieuws?"],
         uitlegPad: {
           stappen: [
             { titel: "Internationaal succesverhaal", tekst: "Wetenschappers ontdekten 1985 ozongat → 1987 wereld-akkoord CFK's uitfaseren → ozonlaag herstelt langzaam → volledig herstel verwacht ~2070. Bewijs dat internationale samenwerking milieu-problemen kan oplossen." },
@@ -104,9 +104,9 @@ const steps = [
     checks: [
       {
         q: "**Luchtdruk op zee-niveau** is standaard:",
-        options: ["~1013 hPa", "~500 hPa", "~2000 hPa", "Variabel zonder norm"],
+        options: ["~1013 hPa", "~500 hPa", "~2000 hPa", "~760 hPa"],
         answer: 0,
-        wrongHints: [null, "Niet — te laag.", "Niet — te hoog.", "Niet — wel standaard."],
+        wrongHints: [null, "500 hPa meet je pas op zo'n 5,5 km hoogte. Hoe zit het op zeeniveau?", "Zelfs een sterk hogedrukgebied komt zelden boven de 1050 hPa. Kan het gemiddelde dan 2000 zijn?", "760 is de luchtdruk in millimeter kwik, niet in hectopascal. Hoeveel hPa hoort daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "1 atm = 1013 hPa = 1013 mbar", tekst: "Standaard atmosfeer-druk op zee-niveau, 15°C. Op weerkaart 'hoog' = >1015 hPa, 'laag' = <1010 hPa. Verandert door temperatuur + weersysteem." }],
           niveaus: { basis: "1013 hPa.", simpeler: "Standaard ~1000 hPa.", nogSimpeler: "1013" },
@@ -116,12 +116,12 @@ const steps = [
         q: "Een **anticycloon (hoge druk)** in NL betekent meestal:",
         options: [
           "Droog en vaak zonnig weer",
-          "Slecht weer met regen",
-          "Stormachtig weer",
-          "Sneeuw"
+          "Wisselvallig weer met buien",
+          "Warm en zwoel met onweersbuien",
+          "Harde westenwind met regen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — anticycloon kalm.", "Mogelijk maar niet typisch."],
+        wrongHints: [null, "Wisselvallig weer hoort bij de fronten van een lagedrukgebied. Wat doet lucht die bij hoge druk daalt?", "Onweer ontstaat als warme lucht snel opstijgt. Stijgt of daalt de lucht in een hogedrukgebied?", "Harde wind hoort bij grote drukverschillen, zoals bij een depressie. Hoe groot zijn die rond een hogedrukgebied?"],
         uitlegPad: {
           stappen: [
             { titel: "Dalende lucht = drogend", tekst: "In anticycloon zakt lucht → warmt op + verliest relatieve vochtigheid → minder wolken. Daarom: zonnig + droog. Vooral in zomer 'hittegolf' onder H-gebied; in winter 'mistig + ijskoud'." },
@@ -132,13 +132,13 @@ const steps = [
       {
         q: "**Coriolis-effect** op het Noordelijk Halfrond buigt bewegende lucht:",
         options: [
-          "Naar rechts",
-          "Naar links",
-          "Niet, alleen ZH",
-          "Hangt af van breedte-graad"
+          "Naar rechts af",
+          "Naar links af",
+          "Niet, rechtdoor",
+          "Per seizoen anders"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is ZH.", "Niet — werkt op NH ook.", "Effect-grootte wel, richting niet."],
+        wrongHints: [null, "Op het zuidelijk halfrond buigt lucht naar links af. Hoe zit het op het noordelijk halfrond?", "Zonder afbuiging zou wind recht van hoge naar lage druk waaien. Waarom draait de wind op een weerkaart dan rond een depressie?", "Het corioliseffect komt door de draaiing van de aarde, en die verandert niet per seizoen. Wat betekent dat voor de richting?"],
         uitlegPad: {
           stappen: [
             { titel: "Aarde-rotatie schijneffect", tekst: "Aarde draait van west naar oost. Voor waarnemer op draaiende aarde lijkt lucht naar rechts (NH) of links (ZH) af te buigen. Effect 0 op evenaar, maximaal op polen. Verklaart waarom orkanen op NH tegen de klok in draaien." },
@@ -151,11 +151,11 @@ const steps = [
         options: [
           "Tegen de klok in",
           "Met de klok mee",
-          "Geen draaiing",
+          "Recht naar het midden",
           "Hangt af van seizoen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel draaiing.", "Niet seizoens-afhankelijk."],
+        wrongHints: [null, "Met de klok mee draait de lucht rond een hogedrukgebied. Hoe draait ze rond lage druk?", "Lucht stroomt wel naar het midden, maar het corioliseffect buigt haar af naar rechts. Wat voor draaiing geeft dat?", "Het corioliseffect komt door de draaiing van de aarde, en die verandert niet per seizoen. Wat betekent dat voor de draairichting?"],
         uitlegPad: {
           stappen: [
             { titel: "Coriolis + drukgradiënt", tekst: "Lucht stroomt naar L-centrum. Coriolis-buiging naar rechts op NH → spiraal tegen de klok in. Op ZH: met de klok mee. Orkanen volgen zelfde patroon (grote depressies)." },
@@ -166,13 +166,13 @@ const steps = [
       {
         q: "**Föhn-wind** is:",
         options: [
-          "Warme, droge valwind aan de lijzijde van een berg",
-          "Koude wind die van zee naar land waait",
-          "Sneeuwstorm hoog in de bergen",
-          "Tropische cycloon boven warme zee"
+          "Warme, droge valwind aan de lijzijde",
+          "Koude, droge valwind van een ijsvlakte",
+          "Warme, vochtige stijgwind aan de loefzijde",
+          "Warme, vochtige zeewind uit de tropen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — föhn warm.", "Niet — föhn warm.", "Niet — kleine schaal."],
+        wrongHints: [null, "Koude valwinden van een ijskap heten katabatische winden. Föhn ontstaat juist doordat lucht eerst over een berg is gegaan. Wat verloor die lucht onderweg?", "Aan de loefzijde stijgt de lucht en regent hij uit. Waar waait de föhn: vóór of achter de berg?", "Een tropische zeewind komt van zee, niet van een berg. Waar ontstaat föhn?"],
         uitlegPad: {
           stappen: [
             { titel: "Adiabatische opwarming", tekst: "Vochtige lucht stijgt aan windkant berg → koelt → condenseert → regen → lucht nu DROOG. Aan andere kant zakt droge lucht → adiabatische opwarming (1°C per 100m). Bovenop berg 0°C → in dal 25°C. Vooral Alpen + Schotse Hooglanden." },
@@ -194,12 +194,12 @@ const steps = [
         q: "Een **koudefront** brengt vaak:",
         options: [
           "Korte, hevige buien en soms onweer",
-          "Langdurige motregen",
-          "Mist",
-          "Helder zonnig weer"
+          "Langdurige motregen uit grijze lucht",
+          "Dichte mist die urenlang blijft hangen",
+          "Helder zonnig weer zonder wolken"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is warmtefront.", "Niet — geen mist.", "Pas NA passage."],
+        wrongHints: [null, "Motregen hoort bij het front waar warme lucht langzaam omhoog glijdt. Is dat dit front?", "Mist ontstaat bij rustig, koel weer. Is een koudefront rustig?", "Opklaringen komen pas als het front voorbij is. Wat gebeurt er als het front zelf overtrekt?"],
         uitlegPad: {
           stappen: [{ titel: "Steile lift = hevig", tekst: "Koude lucht dringt onder warme door → warme lucht snel omhoog → snel condensatie → cumulonimbus (verticale onweerswolken). Resultaat: korte hevige buien, soms hagel + onweer. Na passage: temperatuur daalt + heldere lucht." }],
           niveaus: { basis: "Buien + onweer.", simpeler: "Korte hevige bui.", nogSimpeler: "Onweer" },
@@ -211,10 +211,10 @@ const steps = [
           "Lijnen van gelijke luchtdruk",
           "Lijnen van gelijke temperatuur",
           "Lijnen van gelijke neerslag",
-          "Lijnen van gelijke wind"
+          "Lijnen van gelijke hoogte"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn isothermen.", "Niet — isohyeten.", "Niet — anders weergegeven."],
+        wrongHints: [null, "Lijnen van gelijke temperatuur heten isothermen (thermo = warmte). Bij welke grootheid hoort het woorddeel 'baar'?", "Lijnen van gelijke neerslag heten isohyeten. Welke grootheid zie je in hectopascal (hPa) bij de lijnen op een weerkaart?", "Lijnen van gelijke hoogte heten hoogtelijnen (isohypsen) en staan op een topografische kaart. Wat staat er op een weerkaart?"],
         uitlegPad: {
           stappen: [{ titel: "Iso = gelijk, baar = druk", tekst: "Hoe dichter op elkaar isobaren → grotere drukgradiënt → hardere wind. Patronen rond H + L op weerkaart vertellen waar het waait + hoe hard." }],
           niveaus: { basis: "Gelijke druk.", simpeler: "Iso-druk-lijnen.", nogSimpeler: "Druk" },
@@ -223,13 +223,13 @@ const steps = [
       {
         q: "Een **occlusiefront** ontstaat wanneer:",
         options: [
-          "Koudefront warmtefront inhaalt + warme lucht omhoog duwt",
-          "Twee koudefronten samenkomen",
-          "Stationair front beweegt",
-          "Depressie verdwijnt"
+          "Het koudefront het warmtefront inhaalt",
+          "Twee koudefronten samensmelten",
+          "Een stationair front gaat bewegen",
+          "Een depressie helemaal oplost"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — koud + warm combinatie.", "Niet — beweging vereist.", "Wel resultaat, niet oorzaak."],
+        wrongHints: [null, "Bij occlusie gaat het om twee verschillende soorten fronten. Welke?", "Een stationair front dat gaat bewegen wordt gewoon een warm- of koudefront. Wat gebeurt er bij occlusie?", "Een depressie verdwijnt vaak ná de occlusie. Is dat oorzaak of gevolg?"],
         uitlegPad: {
           stappen: [
             { titel: "Eind-stadium depressie", tekst: "Koudefront beweegt sneller dan warmtefront → haalt het in → warme lucht-pakket tussen wordt OMHOOG gedrukt + verdwijnt aan oppervlakte. Resultaat: één front met gemengde eigenschappen. Daarna sterft depressie uit." },
@@ -241,12 +241,12 @@ const steps = [
         q: "Maximale **betrouwbare** weersvoorspelling-horizon:",
         options: [
           "~3-7 dagen",
-          "1 dag",
-          "~30 dagen",
-          "Niet voorspelbaar"
+          "~1-2 dagen",
+          "~10-14 dagen",
+          "~3-4 weken"
         ],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Niet betrouwbaar zo ver.", "Wel voor enkele dagen."],
+        wrongHints: [null, "Een verwachting voor overmorgen klopt meestal nog goed. Hoe ver vooruit lukt dat ongeveer?", "Kijk eens naar een 14-daagse 'pluim': hoe ver lopen de lijnen aan het eind uiteen? Is dat nog betrouwbaar?", "Kleine meetfouten groeien elke dag verder door (het vlindereffect). Blijft een voorspelling dan weken betrouwbaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Chaos-grens (Lorenz)", tekst: "Edward Lorenz 1963 ontdekte: atmosfeer is chaotisch systeem. Kleinste verstoring (vlinder-effect) groeit exponentieel. Praktisch: 1-3 dagen vrij betrouwbaar, 7 dagen indicatie, na 14 dagen vrijwel willekeurig. Daarom: weer-modellen draaien tientallen variaties (ensemble) + tonen waarschijnlijkheidsbereik." },
@@ -257,13 +257,13 @@ const steps = [
       {
         q: "**Orkaan** vereist als energiebron:",
         options: [
-          "Warm oceaanwater",
-          "Koude poolregio",
-          "Bergen",
-          "Woestijn"
+          "Warm, verdampend zeewater",
+          "Botsende warme en koude lucht",
+          "Een sterke straalstroom",
+          "Hete lucht boven woestijnen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Geen orkanen.", "Daar verdampt nauwelijks water — waar haalt een orkaan zijn energie vandaan?"],
+        wrongHints: [null, "Botsende luchtmassa's horen bij de fronten van onze depressies. Een orkaan heeft geen fronten. Waar haalt hij dan energie vandaan?", "De straalstroom stuurt depressies, maar sterke wind hoog in de lucht blaast een orkaan juist uit elkaar. Wat voedt hem wel?", "Boven een woestijn verdampt bijna geen water. Welke warmte komt vrij als waterdamp condenseert?"],
         uitlegPad: {
           stappen: [
             { titel: "Latente warmte uit verdamping", tekst: "Warme oceaan: water verdampt → waterdamp omhoog → condenseert → geeft latente warmte vrij → drijft opwaartse luchtstroom → cyclonale spiraal. Daarom orkanen vooral tropisch eind zomer (warmste water). Verdwijnt boven land of koud water (geen energiebron meer)." },
@@ -283,9 +283,9 @@ const steps = [
     checks: [
       {
         q: "Welke klimaat-classificatie heeft **Nederland** (Köppen)?",
-        options: ["Cfb (zee-klimaat)", "Cs (mediterraan)", "Df (continentaal)", "ET (toendra)"],
+        options: ["Cfb (gematigd zeeklimaat)", "Cfc (koel zeeklimaat)", "Dfb (vochtig landklimaat)", "Cfa (vochtig subtropisch)"],
         answer: 0,
-        wrongHints: [null, "Niet — geen droge zomers.", "Niet — niet streng winter.", "Niet — wel >0 winter."],
+        wrongHints: [null, "Bij Cfc zijn er minder dan vier maanden boven 10 °C, zoals op IJsland en de Faeröer. Hoeveel van die maanden heeft Nederland?", "D-klimaten hebben strenge winters met maandenlang vorst. Past dat bij een Nederlandse winter?", "Bij Cfa is de zomer heet: de warmste maand is gemiddeld boven 22 °C. Is dat een gewone Nederlandse zomer?"],
         uitlegPad: {
           stappen: [{ titel: "Mild + nat hele jaar", tekst: "Cfb: gematigd (C), zonder droog seizoen (f), warmste maand <22°C en minstens 4 maanden >10°C (b). NL klassieker — door zee-invloed mild jaarrond." }],
           theorie: "Zonder Golfstroom: NL Df (continentaal, strenge winter zoals St-Petersburg).",
@@ -295,13 +295,13 @@ const steps = [
       {
         q: "**Atacama-woestijn** (Chili) is droog door:",
         options: [
-          "Koude Humboldt-stroom voor de kust + regenschaduw van de Andes",
-          "Ligging op hoge breedte, dicht bij de pool",
-          "Er waait daar vrijwel nooit wind",
-          "Veel vulkanen die de grond uitdrogen"
+          "Koude zeestroom en regenschaduw van de Andes",
+          "Koude zeestroom en ligging bij de poolcirkel",
+          "Warme zeestroom en de hoge ligging van de Andes",
+          "Ligging midden op het continent, ver van zee"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — relatief tropisch.", "Wel wind, maar droog.", "Geen relatie."],
+        wrongHints: [null, "De Atacama ligt rond de Steenbokskeerkring, ver van de poolcirkel. Wat houdt verder nog vocht tegen?", "Warm zeewater verdampt juist veel en geeft regen. Welke zeestroom loopt er langs de kust van Chili?", "De Atacama ligt pal aan de Grote Oceaan. Wat houdt het vocht van die zee tegen?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee mechanismen", tekst: "1. Humboldt-stroom (koud water langs Chili-kust) → koude lucht erboven → weinig verdamping → weinig regen.\n2. Andes-gebergte aan oost-kant: vochtige Atlantische lucht regent uit aan oostkant → droge lucht aan west = Atacama.\n\nResultaat: droogste woestijn ter aarde (sommige plekken <1 mm regen/jaar)." },
@@ -313,12 +313,12 @@ const steps = [
         q: "**Golfstroom** beïnvloedt het klimaat van:",
         options: [
           "Noordwest-Europa",
-          "Zuid-Amerika",
-          "Australië",
-          "Geen invloed op land"
+          "Zuidwest-Afrika",
+          "Oost-Azië en Japan",
+          "West-Zuid-Amerika"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daar Humboldt.", "Niet — Pacific.", "Wel — significant."],
+        wrongHints: [null, "Langs Zuidwest-Afrika stroomt de koude Benguelastroom. Waar gaat het warme water uit de Golf van Mexico naartoe?", "Bij Japan stroomt de Kuroshio, in de Grote Oceaan. In welke oceaan ligt de Golfstroom?", "Langs Chili en Peru stroomt de koude Humboldtstroom. In welke oceaan ligt de Golfstroom?"],
         uitlegPad: {
           stappen: [
             { titel: "Lopende band warmte", tekst: "Golfstroom transporteert ~1 PW (= 10¹⁵ W) warmte van tropen naar Noord-Atlantische. Zonder: Londen zou klimaat hebben van Labrador (Canada) op zelfde breedte (~50°N). Engeland + NL profiteren enorm." },
@@ -329,13 +329,13 @@ const steps = [
       {
         q: "Tropisch **regenwoud** (Af-klimaat) vereist:",
         options: [
-          "Het hele jaar warm en veel regen",
-          "Koud + droog",
-          "Wisselende seizoenen",
-          "Hoogte boven 3000 m"
+          "Het hele jaar warm en nat",
+          "Nat, maar met koele winters",
+          "Een natte en een droge tijd",
+          "Regen door bergen in de buurt"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — constant.", "Niet — hoe hoger, hoe kouder."],
+        wrongHints: [null, "Nat met koele winters past bij een zeeklimaat zoals in Nederland. Waar staat de A in Af voor?", "Een droge tijd hoort bij de savanne. Hoe is het in het regenwoud?", "Bergen geven soms veel stuwingsregen, maar het Amazonegebied is vlak. Wat zegt de code Af?"],
         uitlegPad: {
           stappen: [{ titel: "Af = altijd nat + warm", tekst: "Amazone, Congo, Borneo, Sumatra: bijna evenaar + constante warmte (~25°C) + 2000+ mm regen/jaar. Hoogste biodiversiteit + grootste netto-fotosynthese ter aarde." }],
           niveaus: { basis: "Warm + nat.", simpeler: "Altijd warm + regen.", nogSimpeler: "Warm/nat" },
@@ -344,13 +344,13 @@ const steps = [
       {
         q: "**Thermohaliene circulatie** wordt gedreven door:",
         options: [
-          "Verschillen in temperatuur en zoutgehalte van water",
-          "Wind alleen",
-          "Coriolis-effect",
-          "Magnetisme"
+          "Verschillen in temperatuur en zoutgehalte",
+          "Vooral de wind aan het zeeoppervlak",
+          "Het corioliseffect van de draaiende aarde",
+          "Eb en vloed door de aantrekking van de maan"
         ],
         answer: 0,
-        wrongHints: [null, "Wind speelt rol bij oppervlakte, maar diepte = dichtheid.", "Wel deels, niet hoofdmotor.", "Geen relatie."],
+        wrongHints: [null, "Wind beweegt vooral de bovenste laag. Wat laat water in de diepte zakken?", "Coriolis buigt stromingen af, maar zet ze niet in gang. Wat maakt zeewater zwaarder?", "Getijden laten het water op en neer gaan, maar zetten geen stroming door alle oceanen in gang. Waardoor zakt water ergens naar de bodem?"],
         uitlegPad: {
           stappen: [
             { titel: "Thermo (T) + halien (zout)", tekst: "Warm + zoet water = licht → drijft. Koud + zout = dicht → zinkt. In NW Atlantische zinkt water naar diepe → terug naar tropen via diep-stroom → cyclus van 1000 jaar. Klimaat-bepalend voor halve wereld." },
@@ -370,9 +370,9 @@ const steps = [
     checks: [
       {
         q: "**Belangrijkste broeikasgas** door menselijke activiteit:",
-        options: ["CO₂", "Waterdamp", "Ozon", "Stikstof"],
+        options: ["CO₂", "Waterdamp", "Ozon", "Methaan"],
         answer: 0,
-        wrongHints: [null, "Waterdamp is wel een broeikasgas, maar de hoeveelheid hangt af van de temperatuur — niet van wat de mens uitstoot.", "Niet — ozon-laag herstelt.", "Niet — N₂ inert."],
+        wrongHints: [null, "Waterdamp is wel een broeikasgas, maar de hoeveelheid hangt af van de temperatuur, niet van wat de mens uitstoot.", "Ozon bij de grond is een broeikasgas, maar de mens stoot het niet direct uit. Welk gas komt uit elke uitlaat en schoorsteen?", "Methaan houdt per molecuul meer warmte vast, maar de mens stoot er veel minder van uit. Welk gas draagt in totaal het meest bij?"],
         uitlegPad: {
           stappen: [{ titel: "CO₂ + lange levensduur", tekst: "CO₂ blijft eeuwen in atmosfeer. CH₄ veel sterker maar afgebroken in ~12 j. CO₂ is de hoofd-driver van langetermijn opwarming. Pre-industrieel 280 ppm → 2024: 420 ppm." }],
           niveaus: { basis: "CO₂.", simpeler: "Koolstof-dioxide uit kolen + olie.", nogSimpeler: "CO₂" },
@@ -382,12 +382,12 @@ const steps = [
         q: "Wat is **mitigatie** vs **adaptatie**?",
         options: [
           "Mitigatie = oorzaak aanpakken; adaptatie = met gevolgen omgaan",
-          "Beide hetzelfde",
-          "Mitigatie = klein, adaptatie = groot",
+          "Mitigatie = rijke landen; adaptatie = arme landen",
+          "Mitigatie = lokaal aanpakken; adaptatie = wereldwijd",
           "Mitigatie = dijken bouwen; adaptatie = CO₂ verminderen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verschillende strategieën.", "Niet — schaal onafhankelijk.", "Draai het eens om: welke aanpak pakt de oorzaak (de uitstoot) aan?"],
+        wrongHints: [null, "Rijke én arme landen doen allebei aan mitigatie en adaptatie. Waar zit dan het echte verschil?", "Een dijk is lokaal, maar CO₂ verminderen kan ook in je eigen stad. Gaat het verschil echt over schaal?", "Draai het eens om: welke aanpak pakt de oorzaak (de uitstoot) aan?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee aanpakken", tekst: "**Mitigatie**: CO₂-uitstoot verminderen → klimaat-verandering beperken (zon/wind, EV, etc.).\n**Adaptatie**: zelfs met mitigatie blijft opwarming → samenleving aanpassen (hogere dijken, droogte-resistente gewassen, koeler bouwen).\nBeide nodig — niet of/of." },
@@ -397,9 +397,9 @@ const steps = [
       },
       {
         q: "Parijs-akkoord (2015) richt zich op opwarming **onder**:",
-        options: ["1,5-2 °C totaal", "5 °C", "10 °C", "Geen doel"],
+        options: ["1,5 à 2 °C", "2 à 2,5 °C", "2,5 à 3 °C", "0,5 à 1 °C"],
         answer: 0,
-        wrongHints: [null, "Veel te hoog.", "Catastrofaal.", "Wel doel."],
+        wrongHints: [null, "Bij 2,5 °C verwachten wetenschappers al veel meer hittegolven en droogte. Was dat het afgesproken doel?", "Bij 3 °C smelten de ijskappen veel sneller. Mikte het akkoord zo hoog?", "De aarde is al ruim 1 °C opgewarmd. Kan het doel dan nog lager liggen?"],
         uitlegPad: {
           stappen: [
             { titel: "Klimaatwetenschappelijk doel", tekst: "<1,5°C = 'veilig', <2°C = 'beheersbaar'. Boven 2°C: tipping points cascade-risico. Huidige plannen: ~2,5°C tegen 2100 zonder versterkte actie. 1,5°C waarschijnlijk al onbereikbaar zonder revolutionaire CCS." },
@@ -410,13 +410,13 @@ const steps = [
       {
         q: "**Tipping point** in klimaat betekent:",
         options: [
-          "Onomkeerbare drempel waarna verandering zichzelf versterkt",
-          "Een belasting die je per ton CO₂ betaalt",
-          "Een politiek besluit om uitstoot te stoppen",
+          "Drempel waarna verandering zichzelf versterkt",
+          "Hoogste temperatuur die de aarde bereikt",
+          "Punt waarop de opwarming weer omkeert",
           "Een tijdelijke schommeling die vanzelf herstelt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — fysisch concept.", "Niet — natuurlijk verschijnsel.", "Tegenovergesteld."],
+        wrongHints: [null, "Een record is maar een getal. Wat gebeurt er met de Amazone als die te droog wordt?", "Een omslag naar afkoeling zou goed nieuws zijn. Waarom waarschuwen klimaatwetenschappers dan voor tipping points?", "Wat is het verschil tussen een schommeling en iets dat niet meer terug kan?"],
         uitlegPad: {
           stappen: [
             { titel: "Feedback-loops", tekst: "Permafrost-voorbeeld: opwarming → permafrost ontdooit → CH₄ vrij → meer opwarming → meer ontdooiing → cyclus. Eenmaal voorbij drempel niet meer te stoppen. IPCC identificeert ~10 grote tipping points (Golfstroom, Amazone, Antarctische ijskap, etc.)." },
@@ -428,13 +428,13 @@ const steps = [
       {
         q: "Nederland is **bijzonder kwetsbaar** voor klimaatverandering omdat:",
         options: [
-          "26% land onder zeeniveau + dichtbevolkte kust",
-          "Het klimaat is te koud voor de meeste gewassen",
-          "Er is geen enkel overheidsbeleid voor klimaat",
-          "Er wordt in NL geen klimaatonderzoek gedaan"
+          "Veel land onder zeeniveau en een drukke kust",
+          "De hoge CO₂-uitstoot per inwoner van Nederland",
+          "Ligging op de route van Atlantische orkanen",
+          "Ligging in het droogste deel van Europa"
         ],
         answer: 0,
-        wrongHints: [null, "Onjuist klimaat.", "Wel beleid (klimaatakkoord 2019).", "Juist veel onderzoek (bijvoorbeeld KNMI en Deltares)."],
+        wrongHints: [null, "Uitstoot zegt iets over de oorzaak, niet over hoe hard de gevolgen een land raken. Wat maakt Nederland kwetsbaar?", "Atlantische orkanen buigen af of verzwakken lang voordat ze bij Nederland zijn. Welk ander gevolg van opwarming raakt Nederland wel?", "Droogte speelt soms, maar Nederland is juist nat met veel rivieren. Wat maakt de ligging van het land zo riskant?"],
         uitlegPad: {
           stappen: [
             { titel: "Geografie + bevolking", tekst: "NL ligt grotendeels in delta + onder zeeniveau (Randstad, Flevoland). Met zeespiegelstijging + extreme stormvloeden vereist veel investering in dijken + het Deltaprogramma (na advies Deltacommissie 2008). Plus dichte stedelijke bevolking → hittegolf-stress." },

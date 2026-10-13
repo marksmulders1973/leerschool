@@ -13,13 +13,13 @@ const tekst1 = {
 const tekst2 = {
   titel: "T2 — We worden slimmer, maar niet per se wijzer",
   body:
-    "**(1-4)** IQ-scores stijgen al een eeuw, elk decennium ~3 punten — het *Flynn-effect*. Nederlandse 18-jarigen uit de jaren 80 scoorden 20 punten hoger dan die uit de jaren 50. De stijging gaat wereldwijd door.\n\n**(5-6)** Over de oorzaak wordt gespeculeerd: kleinere gezinnen (meer aandacht), betere voeding/zorg/scholing, en andere manieren van spelen (computerspelletjes → ruimtelijk inzicht, vooruitdenken, snel reageren).\n\n**(7)** Toch zijn we niet over de hele breedte slimmer: we redeneren beter, maar ons vocabulaire is zwakker.\n\n**(8, slot)** Recente onderzoeken tonen dat de toename in IQ *afzwakt* — d.w.z. het gemiddelde IQ stijgt minder hard dan voorheen. De oorzaak is onbekend: 'We weten nog te weinig over hoe intelligentie zich ontwikkelt.' *(Hoofdgedachte: de stijgende IQ-scores roepen vooral vragen op — er is veel onzeker.)*",
+    "**(1-4)** IQ-scores stijgen al een eeuw, elk decennium ~3 punten — het *Flynn-effect*. Nederlandse 18-jarigen uit de jaren 80 scoorden 20 punten hoger dan die uit de jaren 50. De stijging gaat wereldwijd door.\n\n**(5-6)** Over de oorzaak wordt gespeculeerd: kleinere gezinnen (meer aandacht), betere voeding/zorg/scholing, en andere manieren van spelen (computerspelletjes → ruimtelijk inzicht, vooruitdenken, snel reageren).\n\n**(7)** Toch zijn we niet over de hele breedte slimmer: we redeneren beter, maar ons vocabulaire is zwakker.\n\n**(8, slot)** Recente onderzoeken tonen dat de toename in IQ afzwakt. De oorzaak is onbekend: 'We weten nog te weinig over hoe intelligentie zich ontwikkelt.'",
 };
 
 const tekst3 = {
   titel: "T3 — Advertentie: 'Als je taal leuk vindt, doe er dan wat mee!'",
   body:
-    "Een advertentie (met een afbeelding van woordmagneten op een koelkast) roept lezers op om **taalvrijwilliger** te worden: help nieuwkomers in Nederland de Nederlandse taal te leren.\n\nHet werk heeft twee voordelen — één voor de vrijwilliger zelf en één voor de nieuwe landgenoten. De advertentie eindigt met een concrete oproep: **kijk op de website en geef je op als taalcoach**.\n\n*(Tekstsoort: advertentie. De afbeelding ondersteunt de inhoud en trekt de aandacht.)*",
+    "Een advertentie (met een afbeelding van woordmagneten op een koelkast) roept lezers op om taalvrijwilliger te worden: help nieuwkomers in Nederland de Nederlandse taal te leren.\n\nHet werk heeft twee voordelen — één voor de vrijwilliger zelf en één voor de nieuwe landgenoten. De advertentie eindigt met een concrete oproep: kijk op de website en geef je op als taalcoach.",
 };
 
 const tekst4 = {
@@ -61,10 +61,10 @@ const steps = [
       options: ["middel - doel", "oorzaak - gevolg", "opsomming", "uitspraak - toelichting"],
       answer: 1,
       wrongHints: [
-        "Middel-doel = 'om te...'. Hier gebeurt iets en dáárdoor volgt iets — dat is een ander verband.",
+        "Middel-doel = 'om te...'. Staat er in deze zin een 'om te', of een doel dat iemand wil bereiken?",
         null,
-        "Opsomming = los naast elkaar (en... en...). Hier volgt het tweede uit het eerste.",
-        "Toelichting = uitleg geven. Hier is het tweede deel een gevólg, geen uitleg.",
+        "Opsomming = dingen los naast elkaar (en... en...). Staan de twee delen hier los van elkaar, of hangen ze samen?",
+        "Toelichting = het eerste deel verder uitleggen. Wat doet het tweede deel van de zin precies met het eerste deel?",
       ],
       explanation: "Het signaalwoord 'daarmee' wijst op een gevolg: afleiden (oorzaak) → kennis opdoen wordt gefrustreerd (gevolg). Dus oorzaak-gevolg.",
       examenBron: BRON_LABEL(2),
@@ -101,7 +101,7 @@ const steps = [
       answer: 3,
       wrongHints: [
         "Te eenzijdig — deze alinea's noemen óók voordelen en oplossingen, niet alleen nadelen.",
-        "Te smal — voordelen zijn één punt; het blok gaat over de balans als geheel.",
+        "Te smal — nieuwe technologie komt maar in één zin voor. Waar gaan de vier alinea's samen over?",
         "Te smal — de 'ongelijke strijd' is één opmerking, niet het deelonderwerp van alle vier de alinea's.",
         null,
       ],
@@ -143,7 +143,7 @@ const steps = [
         null,
         "Te smal — ouders spelen een rol, maar de tekst legt het niet 'puur' bij hen; school en samenleving doen ook mee.",
       ],
-      explanation: "De hoofdgedachte draagt de hele tekst: gebruik leidt tot lagere prestaties, scholen bepalen in NL zelf of ze een verbod willen, dus de nadruk ligt op het AANLEREN van verantwoord gebruik (door school én ouders). Antwoord C dekt dat het breedst.",
+      explanation: "De hoofdgedachte draagt de hele tekst: gebruik leidt tot lagere prestaties, scholen bepalen in NL zelf of ze een verbod willen, dus de nadruk ligt op het AANLEREN van verantwoord gebruik (door school én ouders). De zin 'Verantwoord smartphonegebruik aanleren is belangrijk, onder andere omdat de cijfers en prestaties op school achteruitgaan' dekt dat het breedst.",
       examenBron: BRON_LABEL(13),
       bronLink: BRON_LINK,
       bronTekst: tekst1,
@@ -176,9 +176,9 @@ const steps = [
       ],
       answer: 3,
       wrongHints: [
-        "Dat gaat over verschillen tussen scores; 'toename afzwakt' gaat over hoe snel het gemiddelde stijgt.",
-        "De tekst zegt niet dat alles lager wordt — het IQ stijgt nog steeds, alleen langzamer.",
-        "Let op: 'toename afzwakt' ≠ 'IQ daalt'. Het IQ wordt nog steeds hoger, maar trager.",
+        "Dat gaat over verschillen tussen scores. Waar gaat het woord 'toename' over: over verschillen of over het gemiddelde?",
+        "Zegt de tekst dat de scores lager worden? Kijk goed naar het woord 'toename'.",
+        "Let op het woord 'toename'. Is 'een toename die afzwakt' hetzelfde als 'een afname'?",
         null,
       ],
       explanation: "'De toename zwakt af' = het IQ stijgt nog steeds, maar minder snel dan vroeger. Het daalt dus niet — de groei wordt alleen kleiner.",
@@ -215,9 +215,9 @@ const steps = [
       answer: 2,
       wrongHints: [
         "Te smal — de website bekijken is een middel; het echte doel zit erachter.",
-        "Informeren = iets laten weten. Een advertentie wil juist dat je iets DOET.",
+        "Informeren = iets laten weten. Is dat wat deze advertentie vooral wil? Lees de laatste zin nog eens.",
         null,
-        "Overtuigen van een idee is niet het hoofddoel — de advertentie wil concrete actie: meld je aan.",
+        "Wil de advertentie vooral dat je iets gaat dénken, of dat je iets gaat dóen? Lees de laatste zin nog eens.",
       ],
       explanation: "Een advertentie wil bijna altijd activeren (tot actie aanzetten). De kern hier: meld je aan als taalvrijwilliger. De website is daarbij het middel.",
       examenBron: BRON_LABEL(26),
@@ -252,9 +252,9 @@ const steps = [
       ],
       answer: 3,
       wrongHints: [
-        "Te negatief — de tekst zegt niet dat het 'niet kan', maar dat het ons nog niet lukt.",
-        "Dat staat er niet — het gaat juist over onszelf (wel willen, niet doen), niet over anderen.",
-        "'Weigeren' is te sterk — het is geen onwil maar onmacht/gewoonte ('het komt er niet van').",
+        "Te negatief — zegt de tekst dat duurzamer leven onmogelijk is door hindernissen?",
+        "Gaat het onderzoek over wat we van anderen vinden, of over wat we zelf doen?",
+        "Is 'weigeren' niet te sterk? Lees in alinea 1 en 2 nog eens hoe de tekst ons gedrag beschrijft.",
         null,
       ],
       explanation: "Alinea 1-2: 'we willen wel, maar we doen het niet' — een discrepantie tussen wens en gedrag. Niet onwil, maar het lukt nog niet.",

@@ -7,13 +7,13 @@
 const tekst1 = {
   titel: "T1 — Dure vis weggooien, dat doet pijn (voedselverspilling horeca)",
   body:
-    "**(1)** Met een groot mes snijdt chef-kok Dyon den Dunnen (24) in de keuken van restaurant Three in Rotterdam groene appels brunoise — tot kleine blokjes. Die veranderen door een marinade van yuzu in vegetarische ceviche, verrijkt met groente en bloemen uit eigen tuin.\n\n**(3-4)** *Hoofddocent Ilona de Hooge (Wageningen Universiteit) zegt*: 'Eten, met name zwaarder voedsel zoals vlees, kost veel energie en water. Daar zit het grootste aandeel CO₂ in. Als je het vervolgens weggooit, is het helemaal zonde.'\n\n**(5-9)** Restaurants experimenteren met: minder porties, hergebruik van schillen, vegetarische gerechten, en samenwerking met boeren-coöperaties. Bedrijfsleider Daan Veldhoen vertelt over een tegenvaller: het is niet altijd financieel haalbaar. Veel chefs willen wel, maar het kost tijd + geld.\n\n*(Slot: een overzicht van wat er in de horeca aan verspilling gedaan kan worden — informerend, niet adviserend.)*",
+    "**(1)** Met een groot mes snijdt chef-kok Dyon den Dunnen (24) in de keuken van restaurant Three in Rotterdam groene appels brunoise — tot kleine blokjes. Die veranderen door een marinade van yuzu in vegetarische ceviche, verrijkt met groente en bloemen uit eigen tuin.\n\n**(3-4)** *Hoofddocent Ilona de Hooge (Wageningen Universiteit) zegt*: 'Eten, met name zwaarder voedsel zoals vlees, kost veel energie en water. Daar zit het grootste aandeel CO₂ in. Als je het vervolgens weggooit, is het helemaal zonde.'\n\n**(5-9)** Restaurants experimenteren met: minder porties, hergebruik van schillen, vegetarische gerechten, en samenwerking met boeren-coöperaties. Bedrijfsleider Daan Veldhoen vertelt over een tegenvaller: het is niet altijd financieel haalbaar. Veel chefs willen wel, maar het kost tijd + geld.",
 };
 
 const tekst2 = {
   titel: "T2 — Kun je met een cursus of app twee tot drie keer zo snel leren lezen?",
   body:
-    "**(1)** Zou het niet handig zijn om dit artikel twee of drie keer zo snel te kunnen lezen als normaal? Verschillende cursussen snellezen beloven dit — meerdaagse cursussen, online apps, alles.\n\n**(3-5)** Snellezen-tip: stop met 'regressie' (terugspringen naar woorden) en met 'sub-vocaliseren' (woorden in je hoofd uitspreken). Maar wetenschapper Roel uit Nijmegen waarschuwt: in lange, complexe zinnen LEES je regelmatig vooruit en terug — dat is normaal en NODIG voor begrip.\n\n**(8-10)** *Risico*: bij snellezen leer je vooral SCANNEN — niet diep begrijpen. Bij FICTIE (romans) is snellezen vaak ongewenst, omdat je sfeer/karakter mist. Slot: 'De beste manier om snel te leren lezen, zonder in te leveren op begrip, is gewoon: VEEL lezen.'\n\n*(De tekst weegt voordelen en risico's af — informerend.)*",
+    "**(1)** Zou het niet handig zijn om dit artikel twee of drie keer zo snel te kunnen lezen als normaal? Verschillende cursussen snellezen beloven dit — meerdaagse cursussen, online apps, alles.\n\n**(3-5)** Snellezen-tip: stop met 'regressie' (terugspringen naar woorden) en met 'sub-vocaliseren' (woorden in je hoofd uitspreken). Maar wetenschapper Roel uit Nijmegen waarschuwt: in lange, complexe zinnen LEES je regelmatig vooruit en terug — dat is normaal en NODIG voor begrip.\n\n**(8-10)** *Risico*: bij snellezen leer je vooral SCANNEN — niet diep begrijpen. Bij FICTIE (romans) is snellezen vaak ongewenst, omdat je sfeer/karakter mist. Slot: 'De beste manier om snel te leren lezen, zonder in te leveren op begrip, is gewoon: VEEL lezen.'",
 };
 
 const tekst3 = {
@@ -25,7 +25,7 @@ const tekst3 = {
 const tekst4 = {
   titel: "T4 — Zwerfafval, is er een oplossing?",
   body:
-    "**(1)** Zwerfafval is overal: drankblikjes, sigarettenpeuken, plastic flesjes, snoeppapiertjes. Hoe pakken we dit aan?\n\n**(3-6)** De Landelijke Opschoondag mobiliseert duizenden vrijwilligers. Maar dat lost niet alles op — er komt steeds nieuw afval. Vervuilers zijn vaak gemakzuchtige individuen, maar ook bedrijven die te veel verpakking gebruiken. Statiegeld op flesjes en blikjes WERKT meetbaar — minder zwerfafval sinds invoering.\n\n**(7)** *Onderzoeker Bos zegt*: 'De overheid moet aan gedragssturing doen — statiegeld, boetes, campagnes. Burgers alleen redden het niet.'\n\n**(8)** *Maar het is óók niet alleen overheidsverantwoordelijkheid* — bedrijven moeten kiezen voor minder/ander verpakkingsmateriaal. *(Alinea 7 vs 8 = tegenstelling: wie is verantwoordelijk?)*\n\n**(9-13)** EU-regels dwingen producenten tot 'uitgebreide producentenverantwoordelijkheid' (UPV) — bedrijven betalen mee aan inzameling. Maar internationale verschillen + verpakkingslobby zorgen voor traagheid.\n\n*(Slot: zwerfafval blijft moeilijk aan te pakken — ondanks initiatieven van burgers, overheid en regels voor bedrijven.)*",
+    "**(1)** Zwerfafval is overal: drankblikjes, sigarettenpeuken, plastic flesjes, snoeppapiertjes. Hoe pakken we dit aan?\n\n**(3-6)** De Landelijke Opschoondag mobiliseert duizenden vrijwilligers. Maar dat lost niet alles op — er komt steeds nieuw afval. Vervuilers zijn vaak gemakzuchtige individuen, maar ook bedrijven die te veel verpakking gebruiken. Statiegeld op flesjes en blikjes WERKT meetbaar — minder zwerfafval sinds invoering.\n\n**(7)** *Onderzoeker Bos zegt*: 'De overheid moet aan gedragssturing doen — statiegeld, boetes, campagnes. Burgers alleen redden het niet.'\n\n**(8)** Maar het is óók niet alleen overheidsverantwoordelijkheid — bedrijven moeten kiezen voor minder/ander verpakkingsmateriaal.\n\n**(9-13)** EU-regels dwingen producenten tot 'uitgebreide producentenverantwoordelijkheid' (UPV) — bedrijven betalen mee aan inzameling. Maar internationale verschillen + verpakkingslobby zorgen voor traagheid.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag ${n}`;
@@ -227,8 +227,8 @@ const steps = [
       wrongHints: [
         "Opsomming = 'A én B én C' op dezelfde lijn. Lees het begin van alinea 8: gaat die gewoon in dezelfde lijn verder?",
         null,
-        "Conclusie = 'dus...'. Alinea 8 is geen samengevat oordeel, maar ander standpunt.",
-        "Gevolg = 'A → B'. Alinea 8 is geen automatisch gevolg, maar een aanvulling/correctie.",
+        "Conclusie = 'dus...'. Vat alinea 8 samen wat alinea 7 zegt, of zegt alinea 8 iets anders?",
+        "Gevolg = 'A → B'. Volgt alinea 8 vanzelf uit alinea 7? Lees het eerste woord van alinea 8 nog eens.",
       ],
       explanation: "Alinea 7 (Bos): 'overheid moet gedragssturing doen'. Alinea 8: 'MAAR het is ÓÓK niet alleen overheidsverantwoordelijkheid — bedrijven moeten ook'. Klassiek 'aan de ene kant — aan de andere kant' = tegenstelling.",
       examenBron: BRON_LABEL(26),

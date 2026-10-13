@@ -1,0 +1,1250 @@
+[
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke plaatgrens veroorzaakt stratovulkanen + tsunami's?",
+  "opties": [
+   "Convergent met subductie",
+   "Divergent",
+   "Transform",
+   "Stationair"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat veroorzaakt zeespiegelstijging primair?",
+  "opties": [
+   "Smeltend landijs + thermische uitzetting",
+   "Smeltend zee-ijs",
+   "Meer regen",
+   "Verdamping minder"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2K",
+  "q": "Wat is een stedelijk hitte-eiland (UHI)?",
+  "opties": [
+   "Steden zijn warmer dan platteland",
+   "Hitte-bestendige plant",
+   "Kunstmatig eiland tegen hitte",
+   "Hitte-wering-systeem"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is El Niño?",
+  "opties": [
+   "Opwarming van de Grote Oceaan die het weer wereldwijd verandert",
+   "Een Spaanse vulkaan die om de paar jaar uitbarst",
+   "De naam van een zware orkaan boven Mexico",
+   "Een computermodel dat het klimaat voorspelt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet GIS?",
+  "opties": [
+   "Geo-data verwerken + visualiseren",
+   "Stroom opwekken",
+   "Satellieten lanceren",
+   "Klimaat berekenen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "SK",
+  "q": "Polaire baan-satelliet bedekt hele aarde in:",
+  "opties": [
+   "Paar dagen",
+   "1 uur",
+   "1 jaar",
+   "Nooit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Welk soort straling werkt door wolken heen?",
+  "opties": [
+   "Radar (microgolf / SAR)",
+   "Zichtbaar licht",
+   "Infrarood",
+   "Ultraviolet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "NDVI meet:",
+  "opties": [
+   "Vegetatie-gezondheid",
+   "Aardbeving",
+   "Zeetemperatuur",
+   "Bevolkingsdichtheid"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is OpenStreetMap?",
+  "opties": [
+   "Door vrijwilligers gemaakt open-kaartwerk",
+   "Google-bezit",
+   "Alleen satellieten",
+   "Alleen tegen betaling"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat bepaalt risico volgens risico-formule?",
+  "opties": [
+   "Kans × gevolg × kwetsbaarheid",
+   "Alleen kans",
+   "Alleen gevolg",
+   "Geluk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke is een nature-based solution?",
+  "opties": [
+   "Mangrove-bossen planten tegen kust-erosie",
+   "Hoge betonnen dijk",
+   "Diepe pomp-systemen",
+   "Stormvloedkering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is klimaatmigratie?",
+  "opties": [
+   "Mensen verhuizen door klimaat-impact",
+   "Trekvogels seizoens-trek",
+   "Toeristen naar warme landen",
+   "Plant-verspreiding"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Bij welke plaatgrens ontstaan hoge bergen + zware aardbevingen, maar geen vulkanen?",
+  "opties": [
+   "Continentale botsing (Himalaya)",
+   "Subductie",
+   "Divergent",
+   "Transform"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een Day Zero-scenario?",
+  "opties": [
+   "Dag dat een stad zonder kraanwater komt",
+   "Eerste dag opwarming",
+   "Begin oorlog",
+   "Aardbeving"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is het verschil tussen adaptatie en mitigatie bij klimaat?",
+  "opties": [
+   "Adaptatie = hogere dijken; mitigatie = CO₂-reductie",
+   "Beide hetzelfde",
+   "Adaptatie = stoppen olie",
+   "Mitigatie = evacuatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2S",
+  "q": "Sentinel-satellieten (ESA) hebben welke eigenschap?",
+  "opties": [
+   "Gratis open-data wereldwijd",
+   "Alleen voor militair",
+   "Commercieel duur",
+   "Werken alleen in EU"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "aardobservatie-risico-havo-vwo",
+  "file": "./aardobservatieHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Sendai Framework is:",
+  "opties": [
+   "VN-akkoord rampreductie 2015-2030",
+   "Stad in Japan",
+   "Klimaatverdrag CO₂",
+   "Satelliet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet de ozonlaag (in stratosfeer)?",
+  "opties": [
+   "Beschermt tegen schadelijke UV-straling",
+   "Houdt regenwolken tegen",
+   "Maakt zuurstof aan",
+   "Zorgt voor wind"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Broeikaseffect wordt veroorzaakt door:",
+  "opties": [
+   "Atmosfeer houdt door de aarde uitgezonden warmte vast",
+   "Zonnestraling die het aardoppervlak direct opwarmt",
+   "Vulkanen die warme gassen uitstoten",
+   "Het magnetisch veld dat warmte vasthoudt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Montréal Protocol 1987 regelt:",
+  "opties": [
+   "CFK-verbod tegen ozonlaag-aantasting",
+   "CO₂-reductie",
+   "Plastic-verbod",
+   "Walvis-jacht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Een anticycloon (hoge druk) in NL betekent meestal:",
+  "opties": [
+   "Droog en vaak zonnig weer",
+   "Slecht weer met regen",
+   "Stormachtig weer",
+   "Sneeuw"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Föhn-wind is:",
+  "opties": [
+   "Warme, droge valwind aan de lijzijde van een berg",
+   "Koude wind die van zee naar land waait",
+   "Sneeuwstorm hoog in de bergen",
+   "Tropische cycloon boven warme zee"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een koudefront brengt vaak:",
+  "opties": [
+   "Korte, hevige buien en soms onweer",
+   "Langdurige motregen",
+   "Mist",
+   "Helder zonnig weer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een occlusiefront ontstaat wanneer:",
+  "opties": [
+   "Koudefront warmtefront inhaalt + warme lucht omhoog duwt",
+   "Twee koudefronten samenkomen",
+   "Stationair front beweegt",
+   "Depressie verdwijnt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Atacama-woestijn (Chili) is droog door:",
+  "opties": [
+   "Koude Humboldt-stroom voor de kust + regenschaduw van de Andes",
+   "Ligging op hoge breedte, dicht bij de pool",
+   "Er waait daar vrijwel nooit wind",
+   "Veel vulkanen die de grond uitdrogen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Tropisch regenwoud (Af-klimaat) vereist:",
+  "opties": [
+   "Het hele jaar warm en veel regen",
+   "Koud + droog",
+   "Wisselende seizoenen",
+   "Hoogte boven 3000 m"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Thermohaliene circulatie wordt gedreven door:",
+  "opties": [
+   "Verschillen in temperatuur en zoutgehalte van water",
+   "Wind alleen",
+   "Coriolis-effect",
+   "Magnetisme"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is mitigatie vs adaptatie?",
+  "opties": [
+   "Mitigatie = oorzaak aanpakken; adaptatie = met gevolgen omgaan",
+   "Beide hetzelfde",
+   "Mitigatie = klein, adaptatie = groot",
+   "Mitigatie = dijken bouwen; adaptatie = CO₂ verminderen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Parijs-akkoord (2015) richt zich op opwarming onder:",
+  "opties": [
+   "1,5-2 °C totaal",
+   "5 °C",
+   "10 °C",
+   "Geen doel"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atmosfeer-klimaat-havo-vwo",
+  "file": "./atmosfeerKlimaatHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Tipping point in klimaat betekent:",
+  "opties": [
+   "Onomkeerbare drempel waarna verandering zichzelf versterkt",
+   "Een belasting die je per ton CO₂ betaalt",
+   "Een politiek besluit om uitstoot te stoppen",
+   "Een tijdelijke schommeling die vanzelf herstelt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is vergrijzing?",
+  "opties": [
+   "Bevolking wordt gemiddeld ouder",
+   "Bevolking sterft uit",
+   "Bevolking verhuist",
+   "Bevolking jonger"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bevolkingsgroei wordt gemeten via?",
+  "opties": [
+   "Geboorten − sterften + (immigratie − emigratie)",
+   "Alleen geboortes",
+   "Alleen sterftes",
+   "Alleen immigratie − emigratie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Een bevolkingspiramide met smalle top + brede basis duidt op?",
+  "opties": [
+   "Jonge bevolking met veel geboorten",
+   "Vergrijzing",
+   "Krimpend land",
+   "Migratie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "10 miljoen inwoners op 100.000 km². Dichtheid?",
+  "opties": [
+   "100 mensen/km²",
+   "10 mensen/km²",
+   "1000 mensen/km²",
+   "1 mens/km²"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is de Randstad?",
+  "opties": [
+   "De vier grote steden in het westen + omgeving",
+   "Alle steden langs de grens",
+   "Alleen Amsterdam en omgeving",
+   "De provincies in het noorden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Verstedelijking (urbanisatie) = ?",
+  "opties": [
+   "Steeds meer mensen wonen in steden",
+   "Steden krimpen",
+   "Platteland groeit",
+   "Niets verandert"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Een krimpregio in NL is een gebied waar?",
+  "opties": [
+   "Bevolking afneemt",
+   "Bevolking groeit",
+   "Gelijk blijft",
+   "Geen bevolking"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is interne migratie?",
+  "opties": [
+   "Binnen 1 land verhuizen",
+   "Tussen landen",
+   "Tussen continenten",
+   "Reizen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een diaspora?",
+  "opties": [
+   "Verspreid wonende mensen van 1 volk",
+   "Een buurland",
+   "Een vluchtelingenkamp",
+   "Een uitwisselingsprogramma"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke is een pull-factor?",
+  "opties": [
+   "Goed werk + veilig land",
+   "Oorlog",
+   "Hongersnood",
+   "Ramp"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel % NL'ers heeft migratie-achtergrond (2024)?",
+  "opties": [
+   "~25%",
+   "~5%",
+   "~75%",
+   "~50%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wereldbevolking nu?",
+  "opties": [
+   "~8 miljard",
+   "~1 miljard",
+   "~80 miljard",
+   "~10 miljoen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Welke is een push-factor?",
+  "opties": [
+   "Oorlog in het land",
+   "Goede school",
+   "Veiligheid",
+   "Werk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat is een megastad?",
+  "opties": [
+   "Steden met >10 miljoen inwoners",
+   "Hele grote landen",
+   "Steden met veel wolkenkrabbers",
+   "Hoofdsteden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bevolking-migratie-aardrijkskunde",
+  "file": "./bevolkingMigratieAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 7,
+  "soort": "L2",
+  "q": "Welke is een pull-factor voor migratie?",
+  "opties": [
+   "Beter werk in nieuw land",
+   "Oorlog in eigen land",
+   "Geen geld",
+   "Hongersnood"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Aardolie ontstaat uit:",
+  "opties": [
+   "Dode zee-organismen van miljoenen jaren geleden",
+   "Vulkanen",
+   "Recent afval",
+   "Dieren van afgelopen 1000 jaar"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "Groningen-gas:",
+  "opties": [
+   "Grootste gasveld van de EU, winning afgebouwd door aardbevingen",
+   "Een klein veld dat nauwelijks iets opleverde",
+   "Een veld waar nooit gas uit is gewonnen",
+   "Een olieveld in plaats van een gasveld"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Aardgas (CH₄) is schoner dan steenkool omdat:",
+  "opties": [
+   "Minder CO₂ + minder roet/zwavel per energie-eenheid",
+   "Er komt bij verbranding helemaal geen CO₂ vrij",
+   "Aardgas is een hernieuwbare brandstof",
+   "Er is geen verschil tussen beide"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Fracking = ?",
+  "opties": [
+   "Water + chemicaliën onder druk in gesteente om olie/gas vrij te maken",
+   "Gewoon recht naar beneden boren zonder hulpmiddelen",
+   "Een hernieuwbare techniek om stroom op te wekken",
+   "Het schoonmaken van vervuild grondwater"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Three Gorges Dam (China) is:",
+  "opties": [
+   "Grootste waterkracht-installatie wereld",
+   "Klein experimenteel project",
+   "Kolencentrale",
+   "Olie-platform"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Biobrandstof is controversieel als:",
+  "opties": [
+   "Er bos of voedselgrond voor wordt opgeofferd",
+   "Het goedkoper is dan benzine",
+   "Het schoner verbrandt dan diesel",
+   "Het op duurzame wijze wordt geteeld"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Offshore wind (op zee) voordeel boven onshore (op land):",
+  "opties": [
+   "Meer en constantere wind + minder bezwaren van bewoners",
+   "Het is goedkoper om te bouwen en onderhouden",
+   "Op zee waait het juist minder",
+   "Er is geen verschil tussen beide"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "1973 Oliecrisis veroorzaakt door:",
+  "opties": [
+   "Arabische OPEC-boycot na Israël-oorlog",
+   "Schaarste reserve",
+   "Pandemie",
+   "Aardbeving"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Oekraïne-oorlog 2022 + energie:",
+  "opties": [
+   "EU verloor Russisch gas → energie-crisis + diversificatie versneld",
+   "Er was nauwelijks impact op de energiemarkt",
+   "De olieprijzen daalden sterk",
+   "De VS exporteerde minder gas naar Europa"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Kobalt voor batterijen komt vooral uit:",
+  "opties": [
+   "DR Congo",
+   "Australië",
+   "Saudi-Arabië",
+   "Nederland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Groene waterstof wordt gemaakt door:",
+  "opties": [
+   "Elektrolyse van water met groene stroom",
+   "Aardgas-reformatie",
+   "Olie-raffinage",
+   "Direct uit lucht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Lithium-driehoek ligt in:",
+  "opties": [
+   "Bolivia + Chili + Argentinië",
+   "China + Mongolië + Rusland",
+   "Australië + Nieuw-Zeeland",
+   "VS + Canada + Mexico"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Een EV-auto gebruikt hoeveel keer meer koper dan benzine-auto?",
+  "opties": [
+   "~4× meer",
+   "Net zoveel",
+   "Half zoveel",
+   "10× meer"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "energie-hulpbronnen-havo-vwo",
+  "file": "./energieHulpbronnenHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Netcongestie in NL:",
+  "opties": [
+   "Stroomnet vol — kan groei van zonnestroom + EV niet aan",
+   "Er is geen enkel probleem met het stroomnet",
+   "Het net is alleen 's nachts overbelast",
+   "Het speelt alleen op het platteland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Verstedelijking wereldwijd in 2024 is ongeveer:",
+  "opties": [
+   "57%",
+   "30%",
+   "75%",
+   "10%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke regio heeft de explosiefste verstedelijking vandaag?",
+  "opties": [
+   "Afrika ten zuiden van de Sahara",
+   "Nederland",
+   "Japan",
+   "Duitsland"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Counter-urbanisatie is:",
+  "opties": [
+   "Mensen verlaten stad richting platteland",
+   "Naar stad trekken",
+   "Naar megacity",
+   "Skyscrapers bouwen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Burgess-model beschrijft stad als:",
+  "opties": [
+   "Concentrische ringen rond centrum",
+   "Sectoren langs transport",
+   "Meerdere centra",
+   "Geen structuur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Edge City is:",
+  "opties": [
+   "Nieuw subcentrum aan rand stad bij snelwegknooppunt",
+   "Krottenwijk",
+   "Stadscentrum",
+   "Toeristische trekpleister"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Donut-effect in westerse steden:",
+  "opties": [
+   "Stadscentrum loopt leeg terwijl de rand groeit",
+   "Hoogbouw in centrum",
+   "Centrum en rand groeien even hard",
+   "Rand loopt leeg terwijl het centrum groeit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Dharavi (Mumbai) is een:",
+  "opties": [
+   "Een van de grootste krottenwijken van Azië",
+   "Luxe wijk",
+   "Toeristische plek alleen",
+   "Bedrijventerrein zonder bewoners"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Megacity is een stad met:",
+  "opties": [
+   ">10 miljoen inwoners",
+   ">1 miljoen",
+   ">100 miljoen",
+   ">1 miljard"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een 'global city' (Sassen)?",
+  "opties": [
+   "Stad die de wereldeconomie aanstuurt",
+   "Toeristische topbestemming",
+   "Stad >5 mln",
+   "Hoofdstad van groot land"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Smart City gebruikt:",
+  "opties": [
+   "Data + sensoren + IoT voor efficiëntie",
+   "Alleen ouderwetse planning",
+   "Geen technologie",
+   "Verbod op auto's"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Heat-island-effect in steden:",
+  "opties": [
+   "Stad warmer dan platteland",
+   "Stad kouder dan platteland",
+   "Geen verschil",
+   "Alleen 's nachts warmer"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Wereldwijd veroorzaken steden welk % van CO₂-uitstoot?",
+  "opties": [
+   "~70%",
+   "~30%",
+   "~10%",
+   "Nul"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "15-minuten-stad (Parijs):",
+  "opties": [
+   "Alle dagelijkse voorzieningen binnen 15 min lopen/fietsen",
+   "Auto-verbod",
+   "Elke wijk een bus die om de 15 minuten rijdt",
+   "Maximaal 15 minuten met de auto naar je werk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Kaapstad 'Day Zero' (2018):",
+  "opties": [
+   "Stad bijna zonder drinkwater door extreme droogte",
+   "Stroomstoring",
+   "Pandemie",
+   "Aardbeving"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een BRT (Bus Rapid Transit) systeem zoals Curitiba (Brazilië):",
+  "opties": [
+   "Bussen op afgescheiden baan met metro-achtige stations",
+   "Privé taxi-systeem",
+   "Vliegtuig-shuttle",
+   "Trein-systeem"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Het concept 'donut-economy' in Amsterdam:",
+  "opties": [
+   "Balans tussen menselijke behoeften (basis) + planetaire grenzen (plafond)",
+   "Zo veel mogelijk economische groei, zonder grenzen",
+   "Bedrijven verhuizen van het centrum naar de rand",
+   "Alle winkels concentreren in de binnenstad"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een modal shift in stadsverkeer betekent:",
+  "opties": [
+   "Verschuiving van auto naar fiets + OV + lopen",
+   "Andere ringweg",
+   "Snelheid omhoog",
+   "Auto-aanschaf"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "'Circulaire economie' in stad betekent:",
+  "opties": [
+   "Afval = grondstof voor iets anders (recycling op industrieel niveau)",
+   "Een ringweg rond de stad aanleggen",
+   "Niet recyclen",
+   "Producten sneller vervangen door nieuwe"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stedelijke-ontwikkeling-havo-vwo",
+  "file": "./stedelijkeOntwikkelingHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke stad heeft bijna 100% geothermische + waterkracht-energie?",
+  "opties": [
+   "Reykjavik (IJsland)",
+   "Lagos",
+   "Tokyo",
+   "Sydney"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

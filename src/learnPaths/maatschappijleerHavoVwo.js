@@ -34,7 +34,7 @@ const steps = [
         q: "Hoeveel leden heeft de **Tweede Kamer**?",
         options: ["150","75","100","225"],
         answer: 0,
-        wrongHints: [null, "Eerste Kamer.", "Niet correct.", "Te veel."],
+        wrongHints: [null, "75 zetels heeft de Eerste Kamer. Is de Tweede Kamer groter of kleiner?", "Zoveel waren het vroeger. Is dat aantal later veranderd?", "225 is het aantal zetels van Eerste en Tweede Kamer samen. Hoeveel heeft de Tweede Kamer alleen?"],
         uitlegPad: {
           stappen: [{ titel: "Vast aantal", tekst: "**Tweede Kamer: 150 leden** (sinds 1956). Direct gekozen door volk elke 4 jaar via evenredige vertegenwoordiging. **Eerste Kamer: 75 leden** (indirect via Provinciale Staten). Daarvoor: TK had 100 leden — uitgebreid om de gegroeide bevolking en het toegenomen werk beter aan te kunnen." }],
           niveaus: { basis: "150.", simpeler: "TK = 150", nogSimpeler: "150" },
@@ -44,7 +44,7 @@ const steps = [
         q: "**Trias politica** is bedacht door:",
         options: ["Montesquieu","Karl Marx","John Locke","Rousseau"],
         answer: 0,
-        wrongHints: [null, "Niet — Marx kwam later.", "Locke beïnvloedde wel maar Montesquieu formaliseerde.", "Niet."],
+        wrongHints: [null, "Marx leefde in de 19e eeuw en schreef over klassenstrijd. De trias politica is ouder.", "Locke schreef wel over het begrenzen van macht, maar wie werkte de drie machten uit?", "Rousseau schreef vooral over het maatschappelijk verdrag en de volkswil."],
         uitlegPad: {
           stappen: [{ titel: "De l'esprit des lois", tekst: "**Montesquieu** in *De geest van de wetten* (1748): **trias politica** = scheiding van wetgevende, uitvoerende, rechterlijke macht voorkomt tirannie. Geïnspireerd door Engels parlementair systeem. Invloed: Amerikaanse Grondwet 1787, Franse 1791, NL 1815." }],
           niveaus: { basis: "Montesquieu.", simpeler: "Trias = Montesq.", nogSimpeler: "Montesquieu" },
@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "Wat is een **kabinet**?",
-        options: ["Ministers + staatssecretarissen samen","Koning + ministers","Alle volksvertegenwoordigers","Politieke partij"],
+        options: ["Ministers + staatssecretarissen samen","Koning + alle ministers samen","Alle leden van de Tweede Kamer","De grootste politieke partij"],
         answer: 0,
-        wrongHints: [null, "Dat is regering.", "Te breed.", "Niet relevant."],
+        wrongHints: [null, "Koning en ministers samen heten 'de regering'. Hoort de koning ook bij het kabinet?", "Dat is het parlement — en dat controleert juist.", "Een partij kan meeregeren, maar is zelf geen kabinet."],
         uitlegPad: {
           stappen: [{ titel: "Regering vs kabinet", tekst: "**Regering** = koning + ministers + staatssecretarissen. **Kabinet** = alleen ministers + staatssecretarissen (zonder koning). Hoofd: **minister-president** (premier). De ministerraad (alleen de ministers) vergadert op vrijdag in de Trêveszaal (Den Haag). Beslissingen bij meerderheid + collegiale verantwoordelijkheid." }],
           niveaus: { basis: "Ministers + staatssecretarissen.", simpeler: "Kabinet = ministers + staatssecretarissen", nogSimpeler: "Ministers + staatssecretarissen" },
@@ -64,7 +64,7 @@ const steps = [
         q: "Sinds wanneer hebben **vrouwen stemrecht** in NL?",
         options: ["1919","1948","1789","1965"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Frankrijk Revolutie.", "Niet relevant."],
+        wrongHints: [null, "In 1948 kwam de Universele Verklaring van de Rechten van de Mens. Wanneer kregen Nederlandse vrouwen stemrecht?", "1789 is de Franse Revolutie — vrouwen kregen toen nog geen stemrecht.", "Denk aan de strijd van Aletta Jacobs — in welke tijd leefde zij?"],
         uitlegPad: {
           stappen: [{ titel: "Aletta Jacobs", tekst: "Vrouwen NL-stemrecht: **1919** (passief 1917, actief 1919). Strijd geleid door **Aletta Jacobs** (1854-1929), eerste vrouwelijke arts NL. **Mannen algemeen stemrecht**: 1917 (loskoppeling van welvaart-vereiste). Vergelijking: Nieuw-Zeeland 1893 (eerste vrouwen-stemrecht wereldwijd), UK 1918/1928 (gefaseerd), VS 1920, Frankrijk 1944 (laat!)." }],
           niveaus: { basis: "1919.", simpeler: "Vrouwen 1919", nogSimpeler: "1919" },
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "**Coalitie Schoof** (juli 2024) bestond uit:",
-        options: ["PVV + VVD + NSC + BBB","CDA + PvdA","D66 + VVD","Eén partij meerderheid"],
+        options: ["PVV + VVD + NSC + BBB","PVV + VVD + CDA + JA21","VVD + D66 + CDA + CU","PVV + NSC + BBB + CDA"],
         answer: 0,
-        wrongHints: [null, "Niet deze coalitie.", "Niet deze coalitie.", "Komt in NL vrijwel nooit voor."],
+        wrongHints: [null, "CDA en JA21 zaten niet in dit kabinet. Welke nieuwe partijen wonnen in 2023 veel zetels?", "Dat was het kabinet-Rutte IV (2022). Wie wonnen de verkiezingen van november 2023?", "Het CDA had in 2023 maar 5 zetels. Welke grote partij van Yeşilgöz deed wel mee?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste PVV-deelname", tekst: "**Kabinet-Schoof** vanaf 2 juli 2024: 4-partij-coalitie **PVV + VVD + NSC + BBB**. **Premier**: Dick Schoof (extra-parlementair, geen partij). Eerste keer PVV in regering. Compromis-akkoord 'Hoofdlijnenakkoord'. Omstreden + spanningen rond migratie + EU-positie. In juni 2025 stapte de PVV eruit." }],
           niveaus: { basis: "4 partijen.", simpeler: "Schoof = PVV/VVD/NSC/BBB", nogSimpeler: "PVV/VVD/NSC/BBB" },
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "Welk **integratie-model** behoudt eigen cultuur?",
-        options: ["Multiculturalisme","Assimilatie","Segregatie","Discriminatie"],
+        options: ["Multiculturalisme","Assimilatie","Segregatie","Smeltkroes"],
         answer: 0,
-        wrongHints: [null, "Niet — aanpassen.", "Niet — apart.", "Niet integratie."],
+        wrongHints: [null, "Bij assimilatie pas je je volledig aan de nieuwe cultuur aan. Blijft je eigen cultuur dan bestaan?", "Bij segregatie leven groepen langs elkaar heen. Is dat nog integratie?", "In een smeltkroes versmelten culturen tot iets nieuws. Blijft de eigen cultuur dan herkenbaar?"],
         uitlegPad: {
           stappen: [{ titel: "Salad bowl", tekst: "**Multiculturalisme**: migranten behouden eigen culturele identiteit naast nieuwe samenleving ('salad bowl'). **Assimilatie**: volledig aanpassen aan dominante cultuur ('melting pot' VS-traditioneel). NL heeft historisch geneigd richting multiculturalisme, sinds 2002 (Fortuyn-moord) meer assimilatie-eis." }],
           niveaus: { basis: "Multiculturalisme.", simpeler: "Behoud cultuur = multi", nogSimpeler: "Multiculturalisme" },
@@ -101,9 +101,9 @@ const steps = [
       },
       {
         q: "Welk percentage NL-bevolking heeft **niet-westerse migratie-achtergrond** (2024)?",
-        options: ["~15%","~5%","~50%","~1%"],
+        options: ["~15%","~5%","~26%","~40%"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te hoog.", "Veel te laag."],
+        wrongHints: [null, "Alleen al mensen met een Turkse, Marokkaanse of Surinaamse achtergrond zijn samen meer dan 5%.", "Zo'n kwart heeft een migratieachtergrond als je westers en niet-westers optelt. Hoeveel is alleen niet-westers?", "Mensen schatten dit vaak te hoog in. Wat zeggen de CBS-cijfers?"],
         uitlegPad: {
           stappen: [{ titel: "CBS-cijfers", tekst: "NL-bevolking 2024 (~18 mln):\n• **Autochtoon**: ~75% (NL-geboren met NL-geboren ouders).\n• **Westers** (EU/VS/etc.): ~10%.\n• **Niet-westers**: **~15%** (Turks, Marokkaans, Surinaams, Antilliaans, Syrisch, Iraans, etc.).\n\nGroei van migratie-achtergrond: 1972 ~9%, 2024 ~25%. CBS-definities veranderd 2022 — nu meer focus op herkomst-land." }],
           niveaus: { basis: "15%.", simpeler: "Niet-westers ~15%", nogSimpeler: "15" },
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "Wat zijn **push-factoren** bij migratie?",
-        options: ["Redenen om thuisland te verlaten","Aantrekkings-redenen","Welvaart-creatie","Politiek-belang"],
+        options: ["Redenen om thuisland te verlaten","Redenen om juist naar een land te gaan","Regels die migratie naar een land beperken","Gevolgen van migratie voor het nieuwe land"],
         answer: 0,
-        wrongHints: [null, "Dat zijn pull-factoren.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Dat zijn pull-factoren.", "Dat zijn belemmeringen onderweg, geen redenen om te migreren. Welke twee soorten redenen onderscheid je?", "Gaat het om gevolgen achteraf, of om redenen vooraf?"],
         uitlegPad: {
           stappen: [{ titel: "Push vs Pull", tekst: "**Push-factoren**: redenen om **weg** te gaan uit thuisland — oorlog, vervolging, armoede, klimaat. **Pull-factoren**: redenen om naar **nieuw** land te gaan — werk, kansen, familie, veiligheid. Migratie-beslissing meestal combinatie van beide. Vluchteling: push dominant. Expat: pull dominant." }],
           niveaus: { basis: "Weg-redenen.", simpeler: "Push = weg", nogSimpeler: "Weg-redenen" },
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Hoeveel % NL is **geen religie** (2023)?",
-        options: ["~55%","~10%","~80%","~30%"],
+        options: ["~55%","~40%","~80%","~30%"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te hoog.", "Christelijk."],
+        wrongHints: [null, "Het aandeel zonder religie groeit al tientallen jaren. Is 40% de stand van nu of van vroeger?", "Nog een flink deel van Nederland noemt zich christen of moslim. Blijft er dan 80% over?", "Rond de 30% noemt zich christelijk. Hoeveel mensen noemen zich niets?"],
         uitlegPad: {
           stappen: [{ titel: "Sterke secularisatie", tekst: "**NL 2023**: ~55% geen religie / atheïst / agnost. Christendom ~30% (RK 20%, protestants 10%). Islam ~5%. Andere <1%.\n\n**Trend secularisatie**: 1960 ~80% kerkelijk → 2023 ~30%. Eén van snelst-seculierende landen wereld. Verzuiling (1900-1960) afgebroken." }],
           niveaus: { basis: "55%.", simpeler: "Geen religie = 55%", nogSimpeler: "55" },
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "**Toeslagenaffaire** illustreert:",
-        options: ["Discriminatie door de overheid","Goede uitvoering belastingen","Migratiebeleid","Sociaal vangnet"],
+        options: ["Discriminatie door de overheid","Fraude door veel ouders met toeslagen","Een te streng migratiebeleid","Een te ruim sociaal vangnet"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "Was er bij de meeste ouders echt sprake van fraude?", "Ging deze affaire over wie Nederland in mocht?", "Was het probleem dat de regels te soepel waren?"],
         uitlegPad: {
           stappen: [{ titel: "Etnisch profileren", tekst: "**Toeslagenaffaire (2005-2019)**: belastingdienst beschuldigde ~26.000 ouders van fraude met kinderopvang-toeslag. Ouders met migratie-achtergrond (vooral Surinaams + Turks-Marokkaans) **disproportioneel** geraakt door discriminatie via algoritme dat 'risico-profielen' creëerde. Hoge boetes + schuld → financiële drama's. Kabinet-Rutte III viel 2021. Symbool van rechtsstaat-falen + structurele discriminatie." }],
           niveaus: { basis: "Discriminatie.", simpeler: "Toeslagen = discr", nogSimpeler: "Discriminatie" },
@@ -150,9 +150,9 @@ const steps = [
     checks: [
       {
         q: "**Klassieke grondrechten** beschermen burger:",
-        options: ["Tegen de overheid","Voor overheid","Tegen andere burgers alleen","Tegen EU"],
+        options: ["Tegen de overheid","Tegen werkgevers en bedrijven","Tegen andere burgers","Tegen de Europese Unie"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Bedrijven moeten zich ook aan wetten houden, maar tegen wie waren klassieke grondrechten oorspronkelijk bedoeld?", "Gaan grondrechten vooral over ruzies tussen burgers onderling?", "Grondrechten bestonden al lang vóór de EU — tegen wie waren ze toen bedoeld?"],
         uitlegPad: {
           stappen: [{ titel: "Vrijheidsrechten", tekst: "**Klassieke grondrechten**: burger TEGEN overheid (vrijheidsrechten). Overheid moet 'met rust laten' (negatief recht). Bv. meningsuiting, godsdienst, privacy, vereniging. **Sociale grondrechten**: overheid moet 'iets doen' (positief recht) — werkgelegenheid, milieu, gezondheid, onderwijs." }],
           niveaus: { basis: "Tegen overheid.", simpeler: "Klassiek = vrijheid vs staat", nogSimpeler: "Tegen overheid" },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "Welk verdrag is **juridisch bindend** voor lidstaten?",
-        options: ["EVRM (Europees Verdrag)","UVRM (VN)","Geen","Allebei niet"],
+        options: ["Het EVRM","De UVRM","Geen van beide","Zowel EVRM als UVRM"],
         answer: 0,
-        wrongHints: [null, "Niet — moreel sterk, niet bindend.", "Wel bindend.", "Wel."],
+        wrongHints: [null, "De UVRM is een tekst van de VN uit 1948. Kan een rechter een land daaraan houden?", "Is er een rechter waar je een land kunt aanklagen?", "Bij welke van de twee hoort een hof waar je een land kunt aanklagen?"],
         uitlegPad: {
           stappen: [{ titel: "Hof Straatsburg", tekst: "**EVRM** (Europees Verdrag Rechten van de Mens, 1950) is **juridisch bindend** voor Raad van Europa-lidstaten. Burgers kunnen klagen bij **Europees Hof Mensenrechten (EHRM) Straatsburg**. **UVRM** (Universele Verklaring, 1948) is wereldwijd moreel sterk maar **niet juridisch bindend**." }],
           theorie: "Toets-actueel: in de Urgenda-klimaatzaak gebruikte de Nederlandse rechter het EVRM om de overheid tot actie te dwingen.",
@@ -171,9 +171,9 @@ const steps = [
       },
       {
         q: "Hoogste **rechter** in NL is:",
-        options: ["Hoge Raad","Gerechtshof","Rechtbank","Koning"],
+        options: ["Hoge Raad","Gerechtshof","Rechtbank","Constitutioneel Hof"],
         answer: 0,
-        wrongHints: [null, "Niet — hoger beroep, maar nog niet hoogste.", "Eerste aanleg.", "Geen rechter."],
+        wrongHints: [null, "Niet — hoger beroep, maar nog niet hoogste.", "Bij de rechtbank begint een zaak (eerste aanleg). Waar kun je daarna nog heen?", "Veel landen hebben een grondwettelijk hof, maar Nederland niet. Welk college staat hier bovenaan?"],
         uitlegPad: {
           stappen: [{ titel: "Cassatie", tekst: "**Hoge Raad** (Den Haag) = hoogste rechter NL. **Cassatie**: niet over feiten, maar of wet correct is toegepast door lagere rechter. Boven Hoge Raad alleen internationale instanties (EHRM voor mensenrechten, HvJ EU voor EU-recht). HR kan **niet** wetten toetsen aan grondwet (art 120 — uniek NL-element)." }],
           niveaus: { basis: "Hoge Raad.", simpeler: "Hoogste = HR", nogSimpeler: "HR" },
@@ -183,7 +183,7 @@ const steps = [
         q: "Welk **strafdoel** gaat over terugkeer in de maatschappij?",
         options: ["Resocialisatie","Vergelding","Preventie","Beveiliging"],
         answer: 0,
-        wrongHints: [null, "Verdiende straf.", "Afschrikken.", "Apart houden."],
+        wrongHints: [null, "Bij vergelding krijgt de dader wat hij verdient. Gaat dat over terugkeer?", "Preventie wil daders en anderen afschrikken. Is dat hetzelfde als terugkeren?", "Beveiliging houdt gevaarlijke daders juist apart van de samenleving."],
         uitlegPad: {
           stappen: [{ titel: "Heropvoeden", tekst: "**Resocialisatie**: dader heropvoeden + voorbereiden op terugkeer in maatschappij. Bv. via onderwijs in gevangenis, werk-projecten, reclassering, schuldhulp. NL-strafrecht legt **veel nadruk** op resocialisatie (kortere straffen dan VS). Tegenargument: te lichte straffen geven een slecht signaal. Andere doelen: vergelding, preventie, beveiliging." }],
           niveaus: { basis: "Resocialisatie.", simpeler: "Terug in maatschappij", nogSimpeler: "Resocialisatie" },
@@ -193,7 +193,7 @@ const steps = [
         q: "Welk recht **geldt tussen burgers onderling**?",
         options: ["Privaatrecht","Strafrecht","Bestuursrecht","Staatsrecht"],
         answer: 0,
-        wrongHints: [null, "Staat vervolgt.", "Overheid neemt besluiten.", "Grondwet + instituties."],
+        wrongHints: [null, "Bij strafrecht vervolgt de staat een verdachte. Staan daar twee burgers tegenover elkaar?", "Bestuursrecht gaat over besluiten van de overheid, zoals een vergunning.", "Staatsrecht regelt de Grondwet en de inrichting van de staat."],
         uitlegPad: {
           stappen: [{ titel: "Civiel recht", tekst: "**Privaatrecht (civiel)** regelt verhoudingen tussen burgers/organisaties: contracten, eigendom, huwelijk, schade, erfrecht, arbeidsrecht. Conflict → civiele rechter. **Publiek recht** (staat ↔ burger): strafrecht, bestuursrecht, staatsrecht, belastingrecht." }],
           niveaus: { basis: "Privaat.", simpeler: "Burger-burger = privaat", nogSimpeler: "Privaatrecht" },
@@ -210,9 +210,9 @@ const steps = [
     checks: [
       {
         q: "**Witteboorden-criminaliteit** wordt gepleegd door:",
-        options: ["'Nette' mensen in hun beroep","Tieners","Daklozen","Buitenlandse groepen"],
+        options: ["Werknemers die hun functie misbruiken voor fraude","Hackers die van buitenaf bedrijven aanvallen","Bendes die drugs via de haven smokkelen","Jongeren die winkels en auto's openbreken"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet specifiek."],
+        wrongHints: [null, "Hacken van buitenaf heet cybercriminaliteit. Wie pleegt witteboordencriminaliteit, en waar?", "Dat is georganiseerde criminaliteit, een andere categorie.", "Dat heet veelvoorkomende criminaliteit of 'street crime', een andere categorie."],
         uitlegPad: {
           stappen: [{ titel: "Edwin Sutherland 1939", tekst: "**White-collar crime** (Edwin Sutherland 1939): door **'nette' mensen** in hun beroep gepleegd. Fraude, omkoping, witwassen, milieumisdrijven, belastingontduiking. **Tegenovergesteld** klassieke 'street crime'. Vaak: hogere schade, lager opsporings-percentage, mildere straffen. Voorbeelden NL: Vestia-affaire, Imtech-faillissement, recente ABN AMRO-witwasboetes." }],
           niveaus: { basis: "'Nette' functies.", simpeler: "Witteboord = nette", nogSimpeler: "Nette mensen" },
@@ -220,9 +220,9 @@ const steps = [
       },
       {
         q: "**Aangifte**-bereidheid bij politie:",
-        options: ["Sterk gedaald sinds 2002","Sterk gestegen","Stabiel","Onbekend"],
+        options: ["Sterk gedaald sinds 2002","Sterk gestegen sinds 2002","Stabiel gebleven sinds 2002","Onbekend, want niet gemeten"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — wel veranderd.", "Wel bekend."],
+        wrongHints: [null, "Wat laat de Veiligheidsmonitor zien over hoe vaak slachtoffers nog naar de politie stappen?", "Laat de Veiligheidsmonitor een vlakke lijn zien?", "Het CBS meet dit al jaren in de Veiligheidsmonitor."],
         uitlegPad: {
           stappen: [{ titel: "Dark figure groter", tekst: "**Aangifte-bereidheid** is **sterk gedaald** sinds 2002. Redenen: 'politie doet er toch niets mee', lange wachttijden, online opmaken te omslachtig, lichte feiten niet meer aangegeven. Daardoor: officiële cijfers lager → maar werkelijke criminaliteit niet noodzakelijk lager. **Dark figure** (niet-geregistreerde criminaliteit) groot." }],
           niveaus: { basis: "Gedaald.", simpeler: "Aangifte ↓", nogSimpeler: "Gedaald" },
@@ -230,9 +230,9 @@ const steps = [
       },
       {
         q: "**Broken windows-theorie** zegt:",
-        options: ["Verloedering buurt → meer criminaliteit","Cameratoezicht werkt niet","Politie heeft macht","Te veel diefstal"],
+        options: ["Zichtbare verloedering lokt meer criminaliteit uit","Armoede in een buurt lokt meer criminaliteit uit","Meer politie op straat leidt tot meer aangiftes","Strengere straffen leiden tot minder diefstal"],
         answer: 0,
-        wrongHints: [null, "Niet primair stelling.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Armoede staat centraal in andere theorieën. Wat zien mogelijke daders als ze door een buurt lopen?", "Deze theorie gaat niet over aangiftes. Wat zien mogelijke daders als ze door een buurt lopen?", "Afschrikking door straf is een ander idee. Waar kijkt deze theorie naar?"],
         uitlegPad: {
           stappen: [{ titel: "Kelling + Wilson 1982", tekst: "**Broken windows-theorie**: zichtbare verloedering (gebroken ramen, graffiti, vandalisme) signaleert dat niemand controleert → mensen denken normen zijn afwezig → meer criminaliteit. Aanpak: snel ingrijpen op kleine vergrijpen + buurt schoon houden. **New York-burgemeester Giuliani** paste dit in de jaren 90 radicaal toe — criminaliteit daalde (oorzaak omstreden). Kritiek: leidt tot etnisch profileren + over-aanhouding minderheden." }],
           niveaus: { basis: "Verloedering → crim.", simpeler: "BW = verloedering", nogSimpeler: "Verloedering → criminaliteit" },
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "Welke is **georganiseerde criminaliteit** NL?",
-        options: ["Drugshandel via havens","Verkeersovertredingen","Belasting-ontduiking","Diefstal fiets"],
+        options: ["Drugshandel via havens","Rellen door een groep hooligans","Fraude door een directeur","Milieudelict door een fabriek"],
         answer: 0,
-        wrongHints: [null, "Niet primair georg.", "Witteboorden.", "Veelvoorkomend, niet georg."],
+        wrongHints: [null, "Een groep is nog geen criminele organisatie. Zit er een vaste structuur met winstdoel achter?", "Fraude binnen een gewoon bedrijf heet witteboordencriminaliteit.", "Misdaad door een gewoon, legaal bedrijf heet organisatiecriminaliteit. Dat klinkt hetzelfde, maar is het niet."],
         uitlegPad: {
           stappen: [{ titel: "Cocaïne + heroïne via havens", tekst: "**Georganiseerde criminaliteit NL**: vooral **drugshandel** via Rotterdam + Antwerpen-havens. NL = belangrijk doorvoerland EU. Bij smokkel via containers: enorme bedragen + geweld. Liquidaties (Marengo-zaak Ridouan Taghi). **Peter R. de Vries vermoord 2021** door criminele organisatie. Discussie 'narcostaat'. Aanpak via 'ondermijningsfonds' + politie + justitie." }],
           niveaus: { basis: "Drugs.", simpeler: "Georg = drugs", nogSimpeler: "Drugshandel" },
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "**Subjectieve veiligheid** is:",
-        options: ["Hoe veilig je je voelt","Aantal misdrijven","Politie-cijfers","Cameratoezicht"],
+        options: ["Hoe veilig je je voelt","Aantal misdrijven","Je eigen inbraakpreventie","Politietoezicht op straat"],
         answer: 0,
-        wrongHints: [null, "Objectief.", "Objectief.", "Niet relevant."],
+        wrongHints: [null, "Telt dit wat er gebeurt, of wat mensen ervaren?", "Een goed slot is een maatregel die je zelf neemt. Wordt hier gevraagd naar een maatregel of een beleving?", "Meer blauw op straat kan helpen, maar is dat zelf een gevoel?"],
         uitlegPad: {
           stappen: [{ titel: "Gevoel vs cijfers", tekst: "**Subjectieve veiligheid** = gevoel + perceptie van veiligheid. Kan **afwijken** van objectieve criminaliteit. Voorbeeld: criminaliteit NL daalt sinds 2002, maar **gevoel onveiligheid stijgt** door media-aandacht voor incidenten + polarisatie. **Moral panic**: overdreven angst over specifieke groep (jongeren, migranten, etc.). Belangrijk voor politiek beleid." }],
           niveaus: { basis: "Gevoel.", simpeler: "Subj = gevoel", nogSimpeler: "Gevoel" },
@@ -269,9 +269,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **filterbubbel**?",
-        options: ["Online omgeving waar je alleen eigen mening tegenkomt","Filter wasmachine","Soort bubbeltjes","Internet-protocol"],
+        options: ["Online omgeving waar je alleen eigen mening tegenkomt","Een filter dat nepnieuws van je tijdlijn weert","Privacy-instelling die bepaalt wie jouw berichten ziet","Leeftijdsfilter dat volwassen inhoud voor kinderen verbergt"],
         answer: 0,
-        wrongHints: [null, "Denk aan internet en algoritmes, niet aan huishoudelijke apparaten.", "Het is beeldspraak — waar zou de 'bubbel' bij sociale media voor staan?", "Geen techniek-term — het gaat over wat algoritmes je wél en níét laten zien."],
+        wrongHints: [null, "Haalt een filterbubbel bewust iets weg, of ontstaat hij ongemerkt door algoritmes?", "Gaat het om wie jóúw berichten ziet, of om wat jíj te zien krijgt?", "Dat filter stel je bewust in. Ontstaat een filterbubbel bewust?"],
         uitlegPad: {
           stappen: [{ titel: "Eli Pariser 2011", tekst: "**Filterbubbel**: algoritmes (Facebook, YouTube, etc.) tonen je vooral content die je waarschijnlijk leuk vindt → je komt alleen eigen mening tegen → polarisatie versterkt. **Echokamer**: vergelijkbaar maar specifieker over gemeenschap (vrienden) die dezelfde opvattingen versterkt. Term door Eli Pariser (*The Filter Bubble*, 2011).\n\nOplossing: actief diverse bronnen zoeken, niet alleen aanbevolen content." }],
           niveaus: { basis: "Eigen mening.", simpeler: "Filter = eigen mening", nogSimpeler: "Eigen mening" },
@@ -279,9 +279,9 @@ const steps = [
       },
       {
         q: "Hoe wordt **NPO** gefinancierd?",
-        options: ["Belasting","Alleen reclame","Donaties","Aandeelhouders"],
+        options: ["Belastinggeld","Kijkgeld per tv","Abonnementen","Aandeelhouders"],
         answer: 0,
-        wrongHints: [null, "Niet — beperkte reclame.", "Niet — institutioneel.", "Niet — geen aandelen."],
+        wrongHints: [null, "Kijk- en luistergeld bestond tot 2000. Hoe gaat het sindsdien?", "NPO Plus bestaat, maar betalen de meeste kijkers een abonnement? Wie betaalt dan?", "De NPO is geen bedrijf op de beurs. Wie betaalt dan de programma's?"],
         uitlegPad: {
           stappen: [{ titel: "Publieke omroep", tekst: "**NPO** (Nederlandse Publieke Omroep) wordt vooral **gefinancierd via belasting** (rijksmediabijdrage, honderden miljoenen per jaar). Beperkte reclame toegestaan (Ster). Onafhankelijk van regering — eigen bestuur. Bedoeld voor pluriforme + kwalitatieve programmering. Tegenovergesteld: SBS/RTL = commercieel, gefinancierd door reclame + abonnementen." }],
           niveaus: { basis: "Belasting.", simpeler: "NPO = belasting", nogSimpeler: "Belasting" },
@@ -289,9 +289,9 @@ const steps = [
       },
       {
         q: "Wat is **bronbescherming** voor journalisten?",
-        options: ["Recht om bron niet te onthullen","Verzekering tegen geweld","Vrije parkeerplaats","Goedkope koffie"],
+        options: ["Recht om je bron geheim te houden","Plicht om je bron bij naam te vermelden","Plicht om elke bron eerst te controleren","Recht om overheidsstukken in te zien"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om geld of schade — wat heeft een anonieme tipgever nodig om veilig te praten?", "Denk serieus: wat moet een klokkenluider kunnen vertrouwen bij een journalist?", "Grapje-optie — denk aan de anonieme informant van een journalist."],
+        wrongHints: [null, "Dat is bronvermelding: laten zien waar je info vandaan komt. Wat heeft een anonieme tipgever nodig?", "Controleren is belangrijk, maar wat moet een klokkenluider kunnen vertrouwen bij een journalist?", "Dat regelt de Wet open overheid. Denk aan de anonieme informant van een journalist."],
         uitlegPad: {
           stappen: [{ titel: "Wet 2018", tekst: "**Bronbescherming**: journalisten hoeven hun **bron niet te onthullen**, ook niet aan rechter of politie (behalve uitzonderlijke gevallen, bv. terrorisme). Wet bronbescherming 2018 NL. Cruciaal voor **persvrijheid** — zonder bronbescherming durven mensen geen info te geven. Beschermd ook door EVRM art 10 (vrijheid van meningsuiting + ontvangen)." }],
           niveaus: { basis: "Bron geheim.", simpeler: "Bronbescherming", nogSimpeler: "Bron geheim" },
@@ -299,9 +299,9 @@ const steps = [
       },
       {
         q: "**Vierde macht** is een ander woord voor:",
-        options: ["Onafhankelijke media","Politie","Leger","EU"],
+        options: ["Onafhankelijke media","Het Openbaar Ministerie","Het Nederlandse leger","De Europese Unie"],
         answer: 0,
-        wrongHints: [null, "De politie hoort bij de uitvoerende macht — wie contróleert de macht zonder zelf te regeren?", "Het leger voert uit — wie houdt politici kritisch in de gaten en onthult schandalen?", "Geen instantie of verbond — denk aan wie misstanden openbaar maakt."],
+        wrongHints: [null, "Het Openbaar Ministerie hoort bij de uitvoerende macht — wie contróleert de macht zonder zelf te regeren?", "Het leger voert uit — wie houdt politici kritisch in de gaten en onthult schandalen?", "Geen instantie of verbond — denk aan wie misstanden openbaar maakt."],
         uitlegPad: {
           stappen: [{ titel: "Edmund Burke", tekst: "**Vierde macht** (fourth estate): onafhankelijke media als controlerend orgaan naast trias politica (wetgevend/uitvoerend/rechterlijk). Term uit Britse parlement. **Waakhond democratie** — onthullen schandalen, controleren machthebbers (Watergate, Panama Papers, MeToo, Toeslagenaffaire-onthullingen door Trouw + RTL). Vandaag onder druk door commercialisering + sociale media + populisme." }],
           niveaus: { basis: "Media.", simpeler: "4e macht = media", nogSimpeler: "Media" },
@@ -309,9 +309,9 @@ const steps = [
       },
       {
         q: "Onderzoeker **Jonathan Haidt** waarschuwt voor:",
-        options: ["Mentale gezondheid jongeren door sociale media","Klimaatverandering","Inflatie","Migratie"],
+        options: ["Mentale gezondheid jongeren door sociale media","Klimaatangst bij jongeren door het nieuws","Stijgende inflatie door de coronacrisis","Spanningen door migratie naar Europa"],
         answer: 0,
-        wrongHints: [null, "Dat is het terrein van klimaatwetenschappers — Haidt is sociaal-psycholoog.", "Economen-onderwerp — waar kijkt een psycholoog naar?", "Politiek thema — denk aan zijn boek over 'de angstige generatie': welke groep en welk probleem?"],
+        wrongHints: [null, "Haidt is sociaal-psycholoog — welke grote verandering zag hij rond 2012 in het leven van jongeren?", "Inflatie is een onderwerp voor economen. Waar kijkt een psycholoog naar?", "Migratie is een politiek thema. Denk aan zijn boek over 'de angstige generatie': welke groep en welk probleem?"],
         uitlegPad: {
           stappen: [{ titel: "The Anxious Generation 2024", tekst: "**Jonathan Haidt** (NYU psycholoog) — *The Anxious Generation* (2024): stelt dat **smartphones + sociale media** sinds ~2010 mentale gezondheid jongeren beschadigen (depressie + angst + zelfdoding gestegen). Aanbevelingen: **geen smartphone vóór 14**, **geen sociale media vóór 16**, **smartphone-vrije scholen**. Internationaal debat — diverse landen overwegen wetgeving (Australië verbiedt sociale media <16 jaar 2025)." }],
           niveaus: { basis: "Mentale gezondheid jongeren.", simpeler: "Haidt = mentale gezondheid", nogSimpeler: "Jongeren + sociale media" },

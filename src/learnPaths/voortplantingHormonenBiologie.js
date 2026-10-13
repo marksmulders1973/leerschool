@@ -273,16 +273,11 @@ const steps = [
     checks: [
       {
         q: "Wat zijn hormonen?",
-        options: [
-          "Chemische boodschappers in het bloed",
-          "Een soort spier",
-          "Een soort vitamine",
-          "Een onderdeel van het zenuwstelsel",
-        ],
+        options: ["Chemische boodschappers in het bloed", "Enzymen die voedsel in je darm afbreken", "Vitamines die je via je eten binnenkrijgt", "Een onderdeel van het zenuwstelsel"],
         answer: 0,
         wrongHints: [
           null,
-          "Spieren bewegen je lichaam — hormonen geven boodschappen.",
+          "Enzymen knippen voedsel in stukjes. Brengen ze ook een boodschap over naar een ander orgaan?",
           "Vitamines komen uit voedsel — hormonen maakt je lichaam zelf.",
           "Het hormoonstelsel is een ander systeem dan het zenuwstelsel.",
         ],
@@ -297,12 +292,12 @@ const steps = [
       },
       {
         q: "Hoe verspreiden hormonen zich door het lichaam?",
-        options: ["Via het bloed", "Via de spieren", "Via de huid", "Via de luchtwegen"],
+        options: ["Via het bloed", "Via de zenuwen", "Via de lymfevaten", "Via de luchtwegen"],
         answer: 0,
         wrongHints: [
           null,
-          "Spieren bewegen, ze vervoeren niets door het lichaam.",
-          "De huid is een buitenkant — geen vervoer-systeem.",
+          "Via de zenuwen werkt het zenuwstelsel. Hormonen horen bij een ander stelsel: waarlangs reizen die?",
+          "Lymfe vervoert vooral weefselvocht en witte bloedcellen. Waar geven hormoonklieren hun stoffen aan af?",
           "Luchtwegen vervoeren lucht (zuurstof), geen hormonen.",
         ],
         uitlegPad: {
@@ -325,12 +320,7 @@ const steps = [
         q: "Welke klier wordt vaak de 'baas' van het hormoonstelsel genoemd?",
         options: ["Hypofyse", "Schildklier", "Bijnieren", "Alvleesklier"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Wordt door de hypofyse aangestuurd, niet andersom.",
-          "Maken adrenaline maar sturen anderen niet aan.",
-          "Maakt insuline, geen stuurhormonen.",
-        ],
+        wrongHints: [null, "De schildklier wordt zelf aangestuurd door een andere klier. Welke?", "De bijnieren maken adrenaline. Sturen ze daarmee ook andere klieren aan?", "De alvleesklier maakt insuline voor de bloedsuiker. Geeft ze ook bevelen aan andere klieren?"],
         uitlegPad: {
           stappen: [{ titel: "Hypofyse = baas-klier", tekst: "De hypofyse zit onderin de hersenen. Hij stuurt andere klieren aan via stuurhormonen (TSH → schildklier, LH/FSH → eierstokken)." }],
           woorden: [{ woord: "stuurhormoon", uitleg: "hormoon dat andere klieren activeert" }],
@@ -377,12 +367,7 @@ const steps = [
         q: "Waar vindt **bevruchting** meestal plaats?",
         options: ["In de eileider", "In de baarmoeder", "In de eierstok", "In de vagina"],
         answer: 0,
-        wrongHints: [
-          null,
-          "In de baarmoeder vindt de innesteling plaats — bevruchting is eerder.",
-          "In de eierstok rijpt de eicel; die komt eerst los voordat bevruchting kan.",
-          "Daar komt sperma binnen, maar het zwemt door tot in de eileider.",
-        ],
+        wrongHints: [null, "In de baarmoeder vindt de innesteling plaats — bevruchting is eerder.", "In de eierstok rijpt de eicel; die komt eerst los voordat bevruchting kan.", "Daar komt sperma binnen, maar de zaadcellen zwemmen nog een heel eind door. Waar komen ze de eicel tegen?"],
         uitlegPad: {
           stappen: [{ titel: "Bevruchting in eileider", tekst: "Eicel komt uit eierstok → wordt opgevangen door eileider. Zaadcellen zwemmen vanaf vagina door baarmoeder de eileider in. Daar ontmoeten ze elkaar." }],
           woorden: [{ woord: "eileider", uitleg: "buisje tussen eierstok en baarmoeder" }],
@@ -397,15 +382,15 @@ const steps = [
         options: [
           "1-2 miljoen",
           "0 — die maakt ze later aan",
-          "100",
-          "Een handjevol",
+          "~10.000",
+          "~400",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Andersom — vrouwen maken geen nieuwe eicellen aan, in tegenstelling tot mannen met zaadcellen.",
-          "Veel meer — de voorraad bij geboorte is enorm groot.",
-          "Veel meer — denk in een heel andere orde van grootte.",
+          "Het zijn er nog veel meer: rond de puberteit zijn er zelfs nog zo'n 300.000 over.",
+          "Zo vaak heeft een vrouw in haar leven een eisprong. Hoeveel onrijpe eicellen zijn er bij de geboorte?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1-2 miljoen bij geboorte", tekst: "Een baby-meisje heeft al haar eicellen aangelegd: ~1-2 miljoen. Daarvan komen er ~400 tot rijping in haar leven (1 per cyclus van puberteit tot menopauze)." }],
@@ -418,19 +403,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt er bij de **menopauze**?",
-        options: [
-          "De eierstokken stoppen geleidelijk met werken",
-          "De baarmoeder verdwijnt",
-          "Vrouwen krijgen extra eicellen",
-          "Niks bijzonders",
-        ],
+        options: ["De eierstokken stoppen geleidelijk met werken", "De baarmoeder wordt langzaam afgebroken", "De hypofyse stopt met het maken van FSH", "De eileiders groeien langzaam dicht"],
         answer: 0,
-        wrongHints: [
-          null,
-          "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.",
-          "Andersom — eicellen raken juist op.",
-          "Wel degelijk een grote verandering met hormonale gevolgen.",
-        ],
+        wrongHints: [null, "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.", "Na de menopauze zit er juist veel FSH in het bloed. Stopt de hypofyse dan echt?", "De eileiders blijven gewoon open. Waarom komt er dan toch geen eicel meer doorheen?"],
         uitlegPad: {
           stappen: [{ titel: "Menopauze = eierstokken stoppen", tekst: "Rond 45-55 jaar stoppen de eierstokken geleidelijk: geen rijpe eicellen meer, geen menstruatie. Hormonen oestrogeen + progesteron dalen sterk." }],
           woorden: [{ woord: "menopauze", uitleg: "einde van vruchtbare periode" }],
@@ -449,19 +424,9 @@ const steps = [
     checks: [
       {
         q: "Waarom hangen de teelballen **buiten** het lichaam in de balzak?",
-        options: [
-          "Zaadcellen hebben een iets lagere temperatuur nodig dan 37 °C",
-          "Het is gewoon zo gegroeid, geen reden",
-          "Anders kan de man niet plassen",
-          "Voor de zwaartekracht",
-        ],
+        options: ["Zaadcellen hebben het iets koeler nodig dan 37 °C", "Zo krijgen de zaadcellen meer bloed en zuurstof", "Zo is er meer ruimte over in de buikholte", "Zo zakken zaadcellen makkelijker naar beneden"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Er is wel degelijk een reden — denk aan wat zaadcellen nodig hebben om goed te groeien.",
-          "Plassen heeft niets met de teelballen te maken.",
-          "Niets met zwaartekracht.",
-        ],
+        wrongHints: [null, "De bloedtoevoer is in de buik net zo goed. Wat is buiten de buik anders dan erbinnen?", "Is ruimte het probleem, of iets wat zaadcellen nodig hebben om goed te rijpen?", "Zaadcellen worden door spieren weggeduwd, niet door de zwaartekracht."],
         uitlegPad: {
           stappen: [{ titel: "Zaadcellen willen koeler", tekst: "Zaadcellen ontwikkelen zich het best bij ~35°C (2°C lager dan lichaamstemperatuur). Daarom hangen de teelballen buiten het lichaam in de balzak." }],
           woorden: [{ woord: "balzak (scrotum)", uitleg: "huidzak buiten het lichaam" }],
@@ -473,14 +438,9 @@ const steps = [
       },
       {
         q: "Hoeveel zaadcellen zitten er ongeveer in één uitstoot van sperma?",
-        options: ["~200-400 miljoen", "~10", "~1.000", "~10 miljard"],
+        options: ["~200-400 miljoen", "~10-20 duizend", "~1-2 miljoen", "~10-20 miljard"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Veel te weinig — de meeste zaadcellen sterven onderweg, dus er moeten er enorm veel vertrekken.",
-          "Te weinig.",
-          "Te veel — niet zo'n groot aantal.",
-        ],
+        wrongHints: [null, "Veel te weinig — de meeste zaadcellen sterven onderweg, dus er moeten er enorm veel vertrekken.", "Nog steeds te weinig — de meeste zaadcellen halen de eicel niet.", "Te veel — zo'n groot aantal past niet in een paar milliliter sperma."],
         uitlegPad: {
           stappen: [{ titel: "200-400 miljoen", tekst: "Eén uitstoot sperma (2-5 ml) bevat ~200-400 miljoen zaadcellen. Maar slechts één kan een eicel bevruchten — concurrentie is enorm." }],
           woorden: [{ woord: "ejaculaat", uitleg: "uitgestoten sperma" }],
@@ -501,13 +461,13 @@ const steps = [
     checks: [
       {
         q: "Op welke dag van de cyclus vindt de **eisprong** ongeveer plaats?",
-        options: ["Dag 14", "Dag 1", "Dag 28", "Elke dag"],
+        options: ["Dag 14", "Dag 1", "Dag 28", "Dag 21"],
         answer: 0,
         wrongHints: [
           null,
-          "Dag 1 is begin van menstruatie, nog ver voor eisprong.",
-          "Dag 28 is einde — als geen bevruchting begint cyclus opnieuw.",
-          "Eisprong is een eenmalige gebeurtenis per cyclus.",
+          "Op dag 1 begint de menstruatie. Is er dan al een nieuwe eicel rijp?",
+          "Op dag 28 eindigt de cyclus en begint de volgende. Valt de eisprong helemaal aan het eind?",
+          "Rond dag 21 is het slijmvlies op zijn dikst, maar is de eicel dan pas vrijgekomen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Eisprong dag 14", tekst: "Bij een 28-daagse cyclus is de eisprong rond dag 14 (midden). Bij kortere/langere cyclus schuift de datum mee — meestal 14 dagen vóór volgende menstruatie." }],
@@ -520,13 +480,13 @@ const steps = [
       },
       {
         q: "Hoe lang kan een eicel **bevrucht** worden na de eisprong?",
-        options: ["~24 uur", "~1 maand", "~1 week", "Onbeperkt"],
+        options: ["~24 uur", "~1 maand", "~5 dagen", "~1 uur"],
         answer: 0,
         wrongHints: [
           null,
           "Veel te lang — een eicel sterft snel af zonder bevruchting.",
-          "Te lang — een eicel leeft na de eisprong veel korter.",
-          "Niet onbeperkt — eicel sterft af.",
+          "Zo lang kunnen zaadcellen in het lichaam overleven. Leeft een eicel ook zo lang?",
+          "Iets langer: een eicel kan in de eileider nog een tijdje wachten op zaadcellen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "~24 uur na eisprong", tekst: "De eicel blijft maar ~24 uur leefbaar in de eileider. Daarna sterft ze af. Sperma kan ~3-5 dagen overleven — daarom vruchtbare periode ~5-6 dagen rond eisprong." }],
@@ -541,16 +501,16 @@ const steps = [
         q: "Wat gebeurt er als er **geen** bevruchting plaatsvindt?",
         options: [
           "Progesteron daalt en het slijmvlies komt los",
-          "Er gebeurt niets meer: de cyclus stopt",
-          "De eicel wordt de volgende cyclus opnieuw gebruikt",
-          "Het lichaam slaat de eicel op voor later",
+          "Oestrogeen stijgt en het slijmvlies wordt dikker",
+          "Progesteron stijgt en het slijmvlies blijft zitten",
+          "De eicel nestelt zich toch in het slijmvlies",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "De cyclus begint juist opnieuw.",
-          "Eicellen worden niet hergebruikt — ze sterven af.",
-          "Eicellen worden niet opgeslagen — komen elke cyclus opnieuw uit eierstok.",
+          "Een dikker slijmvlies hoort bij de voorbereiding op een zwangerschap. Wat gebeurt er als die niet komt?",
+          "Progesteron blijft alleen hoog zolang het gele lichaam bestaat. Blijft dat bestaan zonder bevruchting?",
+          "Een eicel kan zich alleen innestelen als hij bevrucht is. Wat gebeurt er dan met het slijmvlies?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Geen bevruchting → menstruatie", tekst: "Zonder bevruchting daalt het progesteron-niveau. Slijmvlies in baarmoeder houdt zich niet meer in stand → komt los → bloedt af via vagina = menstruatie." }],
@@ -571,17 +531,17 @@ const steps = [
       {
         q: "Hoeveel zaadcellen kunnen een eicel **bevruchten**?",
         options: [
-          "Slechts 1 — daarna sluit de eicel zich af",
-          "Allemaal die binnen weten te komen",
-          "Minimaal 100 voor een succesvolle bevruchting",
-          "Geen — het gebeurt vanzelf zonder zaadcel",
+          "Eén: daarna sluit de eicel zich af",
+          "Een paar: de snelste drie of vier",
+          "Minimaal 100: samen breken ze de wand open",
+          "Twee: dan ontstaat een eeneiige tweeling",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niet allemaal — eicel sluit na de eerste die binnenkomt.",
-          "Veel te veel — denk aan wat de eicel doet zodra er een zaadcel binnen is.",
-          "Wel degelijk een zaadcel nodig.",
+          "Bevruchten betekent: de kern van de zaadcel versmelt met die van de eicel. Hoeveel zaadcelkernen passen daarbij?",
+          "Veel zaadcellen helpen wel om bij de eicel te komen. Maar hoeveel komen er echt binnen?",
+          "Een eeneiige tweeling ontstaat uit één bevruchte eicel die zich later splitst. Hoeveel zaadcellen waren daarvoor nodig?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Slechts 1 zaadcel", tekst: "Honderden zaadcellen duwen tegen de eicel, maar zodra één doorbreekt, sluit de eicel zich chemisch af. De rest kan er niet meer in. Eén-op-één DNA-versmelting." }],
@@ -613,18 +573,13 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen een **eeneiige** en **twee-eiige** tweeling?",
-        options: [
-          "Eeneiig = 1 bevruchte eicel splitst, twee-eiig = 2 verschillende eicellen",
-          "Eeneiig is altijd een meisje, twee-eiig altijd een jongen",
-          "Eeneiig wordt geboren in 1 maand, twee-eiig duurt langer",
-          "Geen verschil — gewoon twee namen",
-        ],
+        options: ["Eeneiig = 1 eicel splitst; twee-eiig = 2 eicellen", "Eeneiig = 2 eicellen; twee-eiig = 1 eicel splitst", "Eeneiig = 1 zaadcel; twee-eiig = 2 zaadcellen in 1 eicel", "Eeneiig = verschillend DNA; twee-eiig = hetzelfde DNA"],
         answer: 0,
         wrongHints: [
           null,
-          "Geslacht heeft hier niets mee te maken.",
-          "Beide tweelingen worden tegelijk geboren.",
-          "Wel degelijk verschil in oorsprong.",
+          "Kijk naar het woord: hoeveel eicellen horen bij 'een'-eiig?",
+          "Een eicel sluit zich af zodra er één zaadcel binnen is. Kunnen er dan twee in?",
+          "Bij een eeneiige tweeling komt alles uit één bevruchte eicel. Is hun DNA dan verschillend?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Eeneiig = 1, twee-eiig = 2", tekst: "Eeneiig: één bevruchte eicel splitst → identieke tweeling, zelfde DNA + altijd zelfde geslacht. Twee-eiig: twee eicellen + twee zaadcellen → verschillend DNA, kunnen ander geslacht hebben." }],
@@ -694,8 +649,8 @@ const steps = [
         wrongHints: [
           null,
           "Veel langer — ook na je tienerjaren gaat de ontwikkeling door.",
-          "Veel langer.",
-          "Tegen die tijd is het meeste klaar.",
+          "Rond je twaalfde begint de puberteit pas. Zijn je hersenen dan al klaar?",
+          "Rond je veertigste zijn de hersenen al jaren volgroeid. Wanneer was de ontwikkeling ongeveer af?",
         ],
         uitlegPad: {
           stappen: [{ titel: "~25 jaar", tekst: "Het frontale deel van de hersenen (verantwoordelijk voor afwegingen + remming impulsen) is pas rond 25 jaar volledig ontwikkeld. Verklaart waarom tieners soms impulsief zijn." }],
@@ -718,17 +673,17 @@ const steps = [
       {
         q: "Wat doet **insuline**?",
         options: [
-          "Verlaagt bloedsuiker",
-          "Verhoogt bloedsuiker",
-          "Bestrijdt infecties",
-          "Maakt zaadcellen",
+          "Verlaagt het bloedsuikergehalte",
+          "Verhoogt het bloedsuikergehalte",
+          "Breekt eiwitten af in de darm",
+          "Verhoogt de hartslag bij schrik",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — dat doet glucagon.",
-          "Niets met afweer — wel met suiker.",
-          "Niet de taak van insuline.",
+          "Dat doet glucagon. Wat doet insuline met suiker in het bloed?",
+          "Dat doen verteringsenzymen. Insuline is een hormoon: waar heeft het mee te maken?",
+          "Dat doet adrenaline. Uit welke klier komt insuline, en wat regelt die?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Insuline verlaagt bloedsuiker", tekst: "Na het eten stijgt bloedsuiker. Alvleesklier maakt insuline → cellen openen 'glucose-poortjes' → glucose verlaat bloed, gaat cellen in. Bloedsuiker daalt." }],
@@ -741,18 +696,13 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **diabetes type 1** en **type 2**?",
-        options: [
-          "Type 1: geen insuline meer; type 2: cellen reageren slecht op insuline",
-          "Type 1 is een lichte vorm, type 2 een zware vorm",
-          "Type 2 is besmettelijk, type 1 is niet besmettelijk",
-          "Geen verschil — twee namen voor hetzelfde",
-        ],
+        options: ["Type 1: geen insuline; type 2: cellen reageren er slecht op", "Type 1 is een lichte vorm, type 2 een zware vorm", "Type 1: door te veel suiker; type 2: aangeboren", "Type 1: cellen reageren slecht; type 2: geen insuline"],
         answer: 0,
         wrongHints: [
           null,
           "Beide kunnen ernstig zijn — verschil zit in oorzaak.",
-          "Diabetes is NIET besmettelijk.",
-          "Wel degelijk verschil in oorzaak en behandeling.",
+          "Type 1 is een auto-immuunziekte. Ontstaat die door veel suiker te eten?",
+          "Bij welk type valt de afweer de cellen aan die insuline maken, zodat er geen insuline meer is?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Type 1 vs Type 2", tekst: "Type 1: immuunsysteem heeft insuline-cellen vernietigd → geen insuline (vaak op jonge leeftijd). Type 2: insuline wel, maar cellen reageren slecht (vaak bij ouderdom + leefstijl)." }],
@@ -774,16 +724,16 @@ const steps = [
         q: "Wat is de **fight-or-flight**-response?",
         options: [
           "Lichaam maakt zich klaar voor actie via adrenaline",
-          "Het lichaam komt tot rust na een drukke dag",
-          "De alvleesklier maakt insuline na het eten",
-          "Het lichaam verteert het eten extra snel",
+          "Lichaam komt tot rust via het parasympathische zenuwstelsel",
+          "Lichaam maakt zich klaar voor actie via insuline",
+          "Lichaam maakt zich klaar voor actie via melatonine",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — fight-or-flight is juist actie, geen rust.",
-          "Niet over suiker — over gevaar/stress.",
-          "Spijsvertering wordt juist tijdens fight-or-flight onderdrukt.",
+          "Het parasympathische zenuwstelsel zorgt voor rust en vertering. Is dat wat je nodig hebt bij gevaar?",
+          "Insuline haalt suiker uit het bloed en slaat het op. Heb je bij gevaar juist meer of minder suiker in je bloed nodig?",
+          "Melatonine maakt je slaperig. Past dat bij vechten of vluchten?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vechten of vluchten", tekst: "Bij gevaar maakt bijnier in seconden adrenaline → hart sneller, bloeddruk omhoog, pupillen wijd, spieren krijgen meer bloed → lichaam klaar om te vechten of vluchten." }],
@@ -796,19 +746,9 @@ const steps = [
       },
       {
         q: "Wat doet schildklierhormoon vooral?",
-        options: [
-          "Regelt de stofwisselingssnelheid",
-          "Maakt zaadcellen",
-          "Bestrijdt bacteriën",
-          "Reguleert slaap",
-        ],
+        options: ["Regelt de stofwisselingssnelheid", "Zorgt voor de aanmaak van zaadcellen", "Bestrijdt bacteriën in het bloed", "Regelt wanneer je slaap krijgt"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Zaadcellen komen uit de teelballen.",
-          "Niet de taak van schildklier.",
-          "Slaap wordt vooral door melatonine geregeld.",
-        ],
+        wrongHints: [null, "Zaadcellen komen uit de teelballen.", "Bacteriën worden door witte bloedcellen bestreden.", "Slaap wordt vooral door melatonine geregeld."],
         uitlegPad: {
           stappen: [{ titel: "Schildklier = stofwisselingssnelheid", tekst: "Schildklierhormoon (T3, T4) bepaalt hoe snel je cellen energie verbranden. Hoger = sneller (warmte, energie). Lager = trager (moe, koud)." }],
           woorden: [{ woord: "T3/T4", uitleg: "schildklierhormonen (T3 = trijoodthyronine, T4 = thyroxine)" }],
@@ -829,16 +769,11 @@ const steps = [
     checks: [
       {
         q: "Hoe wordt **diabetes type 1** behandeld?",
-        options: [
-          "Dagelijks insuline injecteren of via pomp",
-          "Alleen met een speciaal dieet",
-          "Met een operatie aan de alvleesklier",
-          "Met een kuur antibiotica",
-        ],
+        options: ["Dagelijks insuline injecteren of via pomp", "Met tabletten die cellen gevoeliger maken", "Met een operatie aan de alvleesklier", "Met een kuur antibiotica van enkele weken"],
         answer: 0,
         wrongHints: [
           null,
-          "Bij type 1 is dieet alleen onvoldoende — er komt geen insuline meer.",
+          "Zulke tabletten helpen bij type 2. Maar wat als het lichaam zelf geen insuline meer maakt?",
           "Operatie wordt zelden bij type 1 gedaan.",
           "Antibiotica zijn voor bacteriën, niet voor diabetes.",
         ],
@@ -853,18 +788,13 @@ const steps = [
       },
       {
         q: "Wat is **PCOS**?",
-        options: [
-          "Een syndroom met hormonale onbalans bij vrouwen",
-          "Een besmettelijke ziekte door een virus",
-          "Een huidziekte met veel uitslag",
-          "Een tekort aan vitamines bij vrouwen",
-        ],
+        options: ["Een syndroom met hormonale onbalans bij vrouwen", "Een syndroom waarbij de schildklier te traag werkt", "Een syndroom waarbij de huid te veel talg maakt", "Een syndroom met een tekort aan vitamine D"],
         answer: 0,
         wrongHints: [
           null,
-          "Niet besmettelijk — geen virus.",
-          "Niet vooral de huid — een hormoon-syndroom.",
-          "Niet vitamine, hormonaal.",
+          "Een trage schildklier is een andere aandoening. Waar staan de letters PCO (polycysteuze ovaria) voor?",
+          "Puistjes kunnen bij PCOS horen. Maar is de huid de oorzaak, of een gevolg van iets anders?",
+          "Een vitaminetekort komt door voeding of te weinig zon. Waar staan de letters PCO (polycysteuze ovaria) voor?",
         ],
         uitlegPad: {
           stappen: [{ titel: "PCOS — hormonaal syndroom", tekst: "Polycysteus Ovarium Syndroom: vrouwen met hormonale onbalans (te veel mannelijke hormonen). Onregelmatige cyclus, soms vruchtbaarheidsproblemen, vaak meerdere kleine cysten op eierstokken." }],
@@ -910,7 +840,7 @@ const steps = [
         wrongHints: [
           null,
           "Insuline gaat over bloedsuiker, niet stress.",
-          "Oestrogeen is voortplantings-hormoon.",
+          "Oestrogeen is een geslachtshormoon voor de voortplanting, niet voor stress.",
           "Melatonine gaat over slaap.",
         ],
         uitlegPad: {
@@ -924,18 +854,13 @@ const steps = [
       },
       {
         q: "Wat doet **progesteron**?",
-        options: [
-          "Houdt het slijmvlies in de baarmoeder in stand",
-          "Verlaagt de bloedsuiker na het eten",
-          "Zorgt voor de aanmaak van zaadcellen",
-          "Regelt het slaap-waakritme",
-        ],
+        options: ["Houdt het baarmoederslijmvlies in stand", "Verlaagt de bloedsuiker na het eten", "Zorgt voor de aanmaak van zaadcellen", "Regelt het slaap-waakritme in je lichaam"],
         answer: 0,
         wrongHints: [
           null,
-          "Dat is insuline.",
+          "Bloedsuiker verlagen is de taak van insuline.",
           "Zaadcellen worden gemaakt onder invloed van testosteron.",
-          "Dat is melatonine.",
+          "Het slaap-waakritme wordt geregeld door melatonine.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Progesteron = slijmvlies-bescherming", tekst: "Progesteron (uit lege follikel na eisprong) houdt het baarmoederslijmvlies dik en klaar voor innesteling. Daalt het → slijmvlies komt los → menstruatie." }],
@@ -952,9 +877,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dag 1 is begin van menstruatie.",
-          "Dag 28 is einde van cyclus.",
-          "Te vroeg.",
+          "Op dag 1 begint de menstruatie. Is er dan al een nieuwe eicel rijp?",
+          "Op dag 28 eindigt de cyclus. Valt de eisprong helemaal aan het eind?",
+          "Rond dag 7 is de eicel nog aan het rijpen in de eierstok. Komt hij dan al vrij?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Dag 14 midden", tekst: "Bij 28-daagse cyclus: eisprong rond dag 14 (midden). Eisprong is meestal ~14 dagen vóór volgende menstruatie." }],

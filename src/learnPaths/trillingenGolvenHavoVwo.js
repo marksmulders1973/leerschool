@@ -44,9 +44,9 @@ const steps = [
       },
       {
         q: "Een trilling heeft uiterste posities op **+8 cm** en **−8 cm**. Wat is de **amplitude**?",
-        options: ["8 cm", "16 cm", "4 cm", "0 cm"],
+        options: ["8 cm", "16 cm", "4 cm", "−8 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is de afstand van uiterst-links naar uiterst-rechts (2A).", "Niet — dat zou de helft van A zijn.", "Onmogelijk — er is wel beweging."],
+        wrongHints: [null, "Niet — dat is de afstand van uiterst-links naar uiterst-rechts (2A).", "Hoe ver ligt een uiterste stand van de evenwichtsstand (0 cm)?", "De amplitude is een afstand vanaf de evenwichtsstand. Kan een afstand negatief zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "A = max uitwijking", tekst: "Amplitude meet je **vanuit de evenwichtsstand** tot de uiterste uitwijking. Evenwicht ligt midden tussen +8 en −8 (= 0). Vanaf 0 tot +8 = 8 cm. **Veel-gemaakte fout**: 16 cm is de **piek-tot-piek-afstand**, niet de amplitude." },
@@ -77,7 +77,7 @@ const steps = [
         q: "Een **slinger van 1,0 m** op aarde (g = 9,81 m/s²). Periode T ≈ ?",
         options: ["2,0 s", "1,0 s", "6,3 s", "0,5 s"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet de 2π niet.", "Te lang — check formule.", "Te kort."],
+        wrongHints: [null, "Gebruik je T = 2π·√(L/g)? Kijk of je de factor 2π hebt meegenomen.", "6,3 is 2π. Heb je √(L/g) ook meegenomen?", "Een slinger van 1 m zwaait rustig heen en weer. Duurt één volle heen-en-weer echt maar een halve seconde?"],
         uitlegPad: {
           stappen: [
             { titel: "Slinger-formule", tekst: "T = 2π·√(L/g) = 2π·√(1,0/9,81) = 2π·√0,102 = 2π·0,319 ≈ **2,0 s**. Klassiek: 1 m slinger op aarde tikt elke seconde één kant op (T/2 = 1 s = secondeslinger)." },
@@ -95,7 +95,7 @@ const steps = [
         q: "Een massa-veer-systeem heeft T = 0,5 s. Je **verdubbelt de massa**. Nieuwe T?",
         options: ["0,71 s", "1,0 s", "0,25 s", "0,5 s"],
         answer: 0,
-        wrongHints: [null, "Niet — T hangt niet rechtstreeks van m af. Kijk in de formule T = 2π·√(m/C) wat er met T gebeurt als m verdubbelt.", "Niet — meer massa maakt de trilling juist trager.", "Niet — er verandert wel iets."],
+        wrongHints: [null, "Niet — T hangt niet rechtstreeks van m af. Kijk in de formule T = 2π·√(m/C) wat er met T gebeurt als m verdubbelt.", "Niet — meer massa maakt de trilling juist trager.", "T hangt af van √(m/C). Blijft T gelijk als m verandert?"],
         uitlegPad: {
           stappen: [
             { titel: "T ~ √m", tekst: "T = 2π·√(m/C). Verdubbelen van m geeft factor √2 ≈ 1,41 op T. Dus T_nieuw = 0,5 × √2 ≈ **0,71 s**." },
@@ -139,7 +139,7 @@ const steps = [
         q: "Een golf in een **touw** is een voorbeeld van welk type?",
         options: ["Transversaal", "Longitudinaal", "Beide", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "Niet — touw schudt loodrecht op richting, niet langs.", "Niet — alleen één soort.", "Het is wel een golf."],
+        wrongHints: [null, "Beweegt een stukje touw mee in de richting van de golf, of op en neer?", "Beweegt elk stukje touw op en neer, of ook heen en weer in de looprichting?", "Er loopt wel een golf door het touw. Hoe bewegen de stukjes touw ten opzichte van de golf?"],
         uitlegPad: {
           stappen: [
             { titel: "Loodrecht = transversaal", tekst: "Bij een touw bewegen de deeltjes op-en-neer (verticaal) terwijl de golf horizontaal voortplant. Trilling **loodrecht** op richting = **transversaal**. Geluid daarentegen is langsbeweging = longitudinaal." },
@@ -159,7 +159,7 @@ const steps = [
         q: "Een geluidsgolf in lucht heeft v = 343 m/s. **A4 = 440 Hz**. Bereken λ.",
         options: ["0,78 m", "0,12 m", "1,28 m", "151 m"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer formule λ = v/f.", "Niet — zo'n golf zou heel laag-frequent zijn.", "Veel te groot — eenheid-check!"],
+        wrongHints: [null, "Je deelde f door v. Welke van de twee staat boven de deelstreep in λ = v/f?", "Bij 1,28 m hoort f = 343/1,28 ≈ 268 Hz. Is dat de 440 Hz uit de vraag?", "151 m is langer dan een voetbalveld. Heb je v en f vermenigvuldigd in plaats van gedeeld?"],
         uitlegPad: {
           stappen: [
             { titel: "λ = v/f", tekst: "Uit v = f·λ volgt λ = v/f = 343/440 ≈ **0,78 m**. Dat is dus de afstand tussen twee opeenvolgende drukpieken in lucht voor een A4-toon." },
@@ -175,13 +175,13 @@ const steps = [
       {
         q: "Welke uitspraak over **golfsnelheid v** in een medium klopt?",
         options: [
-          "v hangt af van het medium",
-          "v hangt alleen af van de bron",
+          "v hangt af van het medium, niet van de bron",
+          "v hangt af van de bron, niet van het medium",
           "v wordt groter als f groter wordt",
           "v wordt groter als λ groter wordt",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — de bron bepaalt f, niet v.", "Niet — in homogeen medium is v constant. Hogere f → kortere λ.", "Niet — bij vast medium klopt dat niet."],
+        wrongHints: [null, "Een fluit en een bas spelen in dezelfde zaal. Komt het geluid van de fluit eerder bij je aan?", "Een hoge en een lage toon uit dezelfde luidspreker: komt de hoge toon eerder bij je aan?", "In een vast medium ligt v vast. Als λ groter wordt, wat gebeurt er dan met f?"],
         uitlegPad: {
           stappen: [
             { titel: "v = eigenschap van het medium", tekst: "Bij dezelfde lucht, dezelfde temperatuur, is v ≈ 343 m/s — onafhankelijk of een bas of fluit speelt. Hogere frequentie betekent kortere golflengte (λ = v/f), maar NIET een snellere golf." },
@@ -197,13 +197,13 @@ const steps = [
       {
         q: "Geluidsgolven zijn **longitudinaal**. Hoe weet je dat?",
         options: [
-          "Lucht-deeltjes bewegen heen en weer in de voortplantingsrichting",
-          "Lucht-deeltjes bewegen loodrecht op de voortplanting",
-          "Geluid heeft geen golfeigenschappen",
-          "Geluid kan zonder medium reizen",
+          "Lucht-deeltjes trillen heen en weer in de looprichting",
+          "Lucht-deeltjes trillen loodrecht op de looprichting",
+          "Lucht-deeltjes reizen zelf mee van bron naar oor",
+          "Lucht-deeltjes draaien rondjes op hun eigen plek",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou transversaal zijn (zoals touw).", "Onjuist — geluid is WEL een golf.", "Onjuist — geluid heeft medium nodig (geen geluid in vacuüm)."],
+        wrongHints: [null, "Loodrecht trillen zie je bij een golf in een touw. Heet dat ook longitudinaal?", "Komt de lucht uit je mond echt bij het oor van een ander aan? Wat reist er dan wel?", "Rondjes draaien zie je bij watergolven. Hoe bewegen luchtdeeltjes ten opzichte van de richting van het geluid?"],
         uitlegPad: {
           stappen: [
             { titel: "Compressie + verdunning = langsbeweging", tekst: "Een luidspreker duwt lucht-deeltjes vooruit (compressie) en trekt ze terug (verdunning). De deeltjes bewegen **langs** de richting waarin het geluid reist → longitudinaal. Daarom kan geluid niet door vacuüm (geen deeltjes om te duwen)." },
@@ -228,7 +228,7 @@ const steps = [
         q: "Bij donder hoor je het **9 s** na de bliksem. Hoe ver is de bui? (v ≈ 340 m/s)",
         options: ["~3 km", "~9 km", "~30 km", "~1 km"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen de tijd in seconden direct als km is fout.", "Te groot — controleer.", "Te klein — 1 km zou 3 s zijn."],
+        wrongHints: [null, "Niet — alleen de tijd in seconden direct als km is fout.", "Op 30 km afstand zou de donder er bijna anderhalve minuut over doen. Klopt dat met 9 seconden?", "Te klein — 1 km zou 3 s zijn."],
         uitlegPad: {
           stappen: [
             { titel: "Geluid ~340 m per seconde", tekst: "Afstand = v · t = 340 × 9 = **3060 m ≈ 3 km**. Snelle vuistregel: deel seconden door 3 → km." },
@@ -245,7 +245,7 @@ const steps = [
         q: "Geluid van **80 dB** naar **90 dB** — hoeveel keer zo intens?",
         options: ["10×", "2×", "1,5×", "100×"],
         answer: 0,
-        wrongHints: [null, "Niet — dB is logaritmisch, niet lineair.", "Te klein — dB-schaal is steiler.", "Dat zou +20 dB zijn."],
+        wrongHints: [null, "Is de dB-schaal lineair, zodat +10 dB gewoon wat meer is? Of hoort bij elke 10 dB een vaste factor?", "Is de decibelschaal lineair of logaritmisch? Wat betekent een stap van 10 dB?", "100× hoort bij +20 dB. Hoeveel dB komt er hier bij?"],
         uitlegPad: {
           stappen: [
             { titel: "+10 dB = ×10", tekst: "De decibel-schaal is **logaritmisch**: elke +10 dB betekent 10× zo grote intensiteit (W/m²). Dus 90 dB is 10× zo intens als 80 dB. Je oor ervaart het maar als ongeveer 2× zo luid (psycho-akoestiek), maar fysiek is het 10× zo veel energie." },
@@ -262,7 +262,7 @@ const steps = [
         q: "Geluid reist het **snelst** in:",
         options: ["Staal", "Water", "Lucht (20°C)", "Vacuüm"],
         answer: 0,
-        wrongHints: [null, "Niet — water is sneller dan lucht, maar staal nog sneller.", "Niet — lucht is juist het traagst van deze drie.", "Vacuüm = geen geluid (geen medium)."],
+        wrongHints: [null, "Water geleidt geluid sneller dan lucht. Maar hoe zit het met een vaste stof?", "Niet — lucht is juist het traagst van deze drie.", "Kan geluid door een ruimte zonder deeltjes?"],
         uitlegPad: {
           stappen: [
             { titel: "Stijver medium = sneller", tekst: "Geluid plant zich voort door deeltjes tegen elkaar te duwen. In staal zitten atomen heel dicht + sterk gebonden → snelle overdracht. Volgorde: staal (~5100 m/s) > water (~1480) > lucht (~343) > vacuüm (0)." },
@@ -279,7 +279,7 @@ const steps = [
         q: "Hoorbaar frequentie-bereik van een gezond jong mens?",
         options: ["~20 Hz – 20 kHz", "~100 Hz – 1 kHz", "~50 Hz – 5 kHz", "~1 kHz – 100 kHz"],
         answer: 0,
-        wrongHints: [null, "Te smal — mensen horen veel breder.", "Te smal aan de hoge kant.", "Te hoog — 100 kHz is ultrageluid."],
+        wrongHints: [null, "Een lage bastoon van 50 Hz en een fluittoon van 5.000 Hz hoor je allebei. Passen die binnen 100 Hz – 1 kHz?", "Een vogel of een hondenfluitje komt ver boven 5 kHz uit. Hoor je die?", "100 kHz is ultrageluid, alleen voor vleermuizen. En hoor je een lage bastoon onder 1 kHz?"],
         uitlegPad: {
           stappen: [{ titel: "20 Hz – 20 kHz", tekst: "Klassiek bereik. Onder 20 Hz = infrageluid (voelbaar, niet hoorbaar), boven 20 kHz = ultrageluid (vleermuizen, echo-medische apparatuur). Bovenkant zakt met leeftijd — 50-jarigen vaak max 12-15 kHz." }],
           niveaus: {
@@ -293,7 +293,7 @@ const steps = [
         q: "Je verdubbelt de afstand tot een geluidsbron. Intensiteit wordt:",
         options: ["4× kleiner (−6 dB)", "2× kleiner (−3 dB)", "8× kleiner", "Onveranderd"],
         answer: 0,
-        wrongHints: [null, "Niet — denk aan hoe het oppervlak van een bol groeit als de afstand verdubbelt.", "Niet — geluid verspreidt zich over een boloppervlak, niet over een volume.", "Niet — geluid wordt wel zwakker bij grotere afstand."],
+        wrongHints: [null, "Niet — denk aan hoe het oppervlak van een bol groeit als de afstand verdubbelt.", "Niet — geluid verspreidt zich over een boloppervlak, niet over een volume.", "Klinkt geluid op 2 meter afstand even hard als op 1 meter?"],
         uitlegPad: {
           stappen: [
             { titel: "1/r²-wet", tekst: "Punt-bron straalt energie uit over een **bol** met oppervlak 4π·r². Verdubbel r → oppervlak ×4 → intensiteit ÷4. In dB: 10·log(1/4) ≈ −6 dB." },
@@ -319,7 +319,7 @@ const steps = [
         q: "Een **gitaarsnaar** is L = 0,65 m. Golfsnelheid v = 286 m/s. **Grondtoon**?",
         options: ["220 Hz", "440 Hz", "143 Hz", "880 Hz"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is een octaaf hoger: je rekende v/L in plaats van v/(2L).", "Niet — je deelde alleen door 2; gebruik f = v/(2L).", "Niet — 2 octaven te hoog."],
+        wrongHints: [null, "Niet — dat is een octaaf hoger: je rekende v/L in plaats van v/(2L).", "Niet — je deelde alleen door 2; gebruik f = v/(2L).", "880 Hz ligt twee octaven boven de grondtoon. Welke deling heb je gemaakt?"],
         uitlegPad: {
           stappen: [
             { titel: "f₁ = v/(2L)", tekst: "f₁ = 286 / (2 × 0,65) = 286 / 1,3 = **220 Hz**. Dat is een A-toon (A3)." },
@@ -337,11 +337,11 @@ const steps = [
         options: [
           "Sterk meetrilt bij zijn eigenfrequentie",
           "Altijd trilt met dezelfde amplitude",
-          "Geen energie kwijt raakt",
+          "Geen energie kwijtraakt",
           "Zwakker reageert als de frequentie matcht",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — amplitude varieert wel.", "Niet — er is wel demping in de echte wereld.", "Tegenovergesteld."],
+        wrongHints: [null, "Hangt de amplitude af van hoe goed de duw past bij de eigen trilling, zoals bij een schommel?", "Ook bij resonantie gaat er energie verloren aan wrijving. Wat is het kenmerk van resonantie?", "Een schommel die je precies op het goede moment duwt: gaat die hoger of minder hoog?"],
         uitlegPad: {
           stappen: [
             { titel: "Eigenfrequentie raken", tekst: "Bij resonantie matcht de aandrijf-frequentie met de **natuurlijke** trillingsfrequentie van het systeem → energie wordt elke cyclus toegevoegd → amplitude groeit (tot demping/breuk)." },
@@ -361,7 +361,7 @@ const steps = [
         q: "Een **open buis** heeft λ-grondtoon = 2L. Een **buis met één gesloten kant** heeft λ-grondtoon = ?",
         options: ["4L", "2L", "L", "L/2"],
         answer: 0,
-        wrongHints: [null, "Niet — dat geldt als beide kanten open zijn. Wat verandert een dichte kant?", "Niet — teken knoop en buik: welk deel van een golf past in de buis?", "Niet — niet kleiner dan L."],
+        wrongHints: [null, "Niet — dat geldt als beide kanten open zijn. Wat verandert een dichte kant?", "Niet — teken knoop en buik: welk deel van een golf past in de buis?", "Bij een open buis past een halve golf in de buis. Past er bij één dichte kant meer of minder van de golf in?"],
         uitlegPad: {
           stappen: [
             { titel: "Dichte kant = knoop", tekst: "Aan een dichte kant moet de lucht in rust zijn → **knoop**. Aan open kant → **buik**. Het kortste patroon dat in een buis van L past met knoop+buik = kwart-golflengte → λ = 4L." },
@@ -378,7 +378,7 @@ const steps = [
         q: "Op een snaar met grondtoon 110 Hz krijg je een **staande golf met 3 buiken**. Welke frequentie wordt aangestuurd?",
         options: ["330 Hz", "220 Hz", "110 Hz", "440 Hz"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou 2 buiken zijn.", "Niet — dat is de grondtoon (1 buik).", "Niet — dat is 4× grondtoon."],
+        wrongHints: [null, "220 Hz is twee keer de grondtoon. Hoeveel buiken horen daarbij?", "110 Hz is de grondtoon zelf. Hoeveel buiken heeft de grondtoon?", "440 Hz is vier keer de grondtoon. Hoeveel buiken horen daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "n-de harmonische", tekst: "n buiken = n-de harmonische = n·f₁. Hier n = 3 → f = 3 × 110 = **330 Hz**." },
@@ -399,7 +399,7 @@ const steps = [
           "Doppler-effect",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — irrelevant voor barsten.", "Niet — reflectie alleen breekt geen glas.", "Niet — geen bewegende bron/waarnemer."],
+        wrongHints: [null, "De geluidssnelheid in glas bepaalt hoe snel geluid erdoorheen gaat. Waarom zou het glas daardoor breken?", "Teruggekaatst geluid is niet harder dan het geluid zelf. Waardoor gaat het glas steeds harder trillen?", "Bij het Doppler-effect bewegen de bron of de waarnemer. Bewegen de zangeres en het glas?"],
         uitlegPad: {
           stappen: [
             { titel: "Toon op eigenfrequentie van glas", tekst: "Elk glas heeft een eigen-tikkende frequentie (hoor maar als je 'm tikt). Als de zangeres precies die toon haalt en lang genoeg houdt → resonantie → trilling-amplitude groeit → glas-wand kan spanning niet meer aan → barsten." },
@@ -424,7 +424,7 @@ const steps = [
         q: "Een touw heeft v = 12 m/s. De bron trilt op **6 Hz**. Wat is λ?",
         options: ["2,0 m", "0,5 m", "72 m", "6 m"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer formule λ=v/f.", "Veel te groot.", "Niet — dat is f, niet λ."],
+        wrongHints: [null, "Je deelde f door v. Welke van de twee staat boven de deelstreep in λ = v/f?", "Je vermenigvuldigde v en f. Krijg je dan een lengte in meter?", "6 is de frequentie in Hz, geen golflengte. Wat doe je met v en f?"],
         uitlegPad: {
           stappen: [{ titel: "λ = v/f", tekst: "λ = 12/6 = **2,0 m**." }],
           niveaus: {
@@ -436,9 +436,9 @@ const steps = [
       },
       {
         q: "Een **slinger op de maan** (g_maan ≈ 1,6 m/s²) heeft dezelfde lengte als op aarde. Periode is daar:",
-        options: ["Langer (slingert trager)", "Korter (slingert sneller)", "Gelijk", "Nul"],
+        options: ["Langer (slingert trager)", "Korter (slingert sneller)", "Gelijk", "Hangt af van de massa van het gewicht"],
         answer: 0,
-        wrongHints: [null, "Niet — minder g betekent juist trager.", "Niet — g verandert wel.", "Slinger werkt nog."],
+        wrongHints: [null, "Op de maan is g kleiner. Wat doet een kleinere g met √(L/g)?", "De lengte is gelijk, maar g niet. Zit g in de formule voor T?", "Zit de massa in de formule T = 2π·√(L/g)?"],
         uitlegPad: {
           stappen: [
             { titel: "T = 2π·√(L/g)", tekst: "Kleinere g (maan: 1,6 vs aarde 9,81) → grotere T = trager. Concreet: factor √(9,81/1,6) ≈ √6,1 ≈ 2,5× zo lang." },
@@ -454,7 +454,7 @@ const steps = [
         q: "Een **ambulance** (sirene 500 Hz) rijdt **naar je toe** met 30 m/s. Geluidssnelheid 340 m/s. Waargenomen f?",
         options: ["~548 Hz", "~459 Hz", "~470 Hz", "500 Hz"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou bij WEGRIJDEN gelden.", "Niet — controleer richting/formule.", "Niet — Doppler doet wel iets."],
+        wrongHints: [null, "459 Hz is lager dan 500 Hz. Hoor je een naderende sirene hoger of lager?", "Reken f' = f · v/(v − v_bron) na. Gebruik je bij naderen een min of een plus in de noemer?", "Klinkt een sirene anders als de ambulance naar je toe rijdt dan wanneer hij stilstaat?"],
         uitlegPad: {
           stappen: [
             { titel: "f' = f · c/(c − v_bron)", tekst: "Bron naar je toe: noemer kleiner → f' hoger. f' = 500 · 340/(340−30) = 500 · 340/310 ≈ 500 · 1,097 = **~548 Hz**." },
@@ -471,7 +471,7 @@ const steps = [
         q: "Een geluid van 70 dB naast een ander van 70 dB. Samen (twee losse, onafhankelijke bronnen):",
         options: ["~73 dB", "~140 dB", "~70 dB", "~77 dB"],
         answer: 0,
-        wrongHints: [null, "Niet — dB is logaritmisch, je telt NIET op tot 140.", "Niet — bij twee bronnen is intensiteit wel groter.", "Te veel."],
+        wrongHints: [null, "Kun je decibellen gewoon optellen? Wat gebeurt er met de intensiteit als er een tweede bron bij komt?", "Twee bronnen samen geven meer intensiteit. Blijft het geluidsniveau dan gelijk?", "Twee gelijke bronnen geven twee keer zoveel intensiteit. Hoeveel dB komt erbij: 10·log(2)?"],
         uitlegPad: {
           stappen: [
             { titel: "2× intens = +3 dB", tekst: "Twee identieke bronnen geven 2× de intensiteit. Op dB-schaal: 10·log(2) ≈ **+3 dB**. Dus 70 + 70 dB ≈ 73 dB, niet 140 dB. Veel-gemaakte examen-fout!" },
@@ -488,12 +488,12 @@ const steps = [
         q: "Voor een **half-open buis** (één kant dicht) klinkt de grondtoon **een octaaf lager** dan een open buis van dezelfde lengte. Waarom?",
         options: [
           "De golflengte van de grondtoon is twee keer zo lang",
-          "Beide hebben dezelfde grondtoon",
-          "Half-open buis heeft 2× zo hoge frequentie",
-          "Beide afhankelijk van temperatuur, niet van eindes",
+          "De geluidssnelheid is in een half-open buis lager",
+          "In de buis past een hele golflengte in plaats van een halve",
+          "De dichte kant dempt de hoge tonen weg",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — de eindes maken wel verschil.", "Niet — tegenovergesteld.", "Niet — de eindes bepalen welke golven passen."],
+        wrongHints: [null, "De lucht in beide buizen is hetzelfde. Waarom zou de geluidssnelheid dan verschillen?", "Een hele golflengte in de buis zou λ = L geven, een kortere golf. Wordt de toon dan lager?", "Dempen maakt een toon zachter, maar verandert het ook welke golflengte in de buis past?"],
         uitlegPad: {
           stappen: [
             { titel: "λ-verdubbeling = f-halvering", tekst: "Open buis: buik aan beide kanten → λ₁ = 2L. Half-open: knoop aan dichte kant + buik aan open → λ₁ = 4L. Dus λ verdubbelt; bij gelijke v geldt f = v/λ → f halveert → octaaf lager." },

@@ -73,7 +73,7 @@ const steps = [
         q: "*Welke as gaat horizontaal (links-rechts)?*",
         options: ["x-as", "y-as", "z-as", "h-as"],
         answer: 0,
-        wrongHints: [null, "De y-as gaat verticaal (omhoog/omlaag).", "Een z-as gebruik je in 3D, niet bij een gewoon assenstelsel.", "h-as bestaat niet als standaard-as."],
+        wrongHints: [null, "De y-as gaat verticaal (omhoog/omlaag).", "Een z-as gebruik je in 3D, niet bij een gewoon assenstelsel.", "De h van horizontaal klinkt logisch, maar zo'n as heeft het assenstelsel niet. Welke letters staan er bij de twee assen?"],
         uitlegPad: {
           stappen: [{ titel: "X = horizontaal", tekst: "X-as = horizontaal (links-rechts). Y-as = verticaal (omhoog-omlaag). Standaard 2D-assenstelsel. Conventie van Descartes (17e eeuw)." }],
           woorden: [{ woord: "x-as", uitleg: "Horizontale as." }, { woord: "y-as", uitleg: "Verticale as." }, { woord: "z-as", uitleg: "Derde dimensie (3D), bv. diepte." }],
@@ -99,9 +99,9 @@ const steps = [
     checks: [
       {
         q: "*Wat zijn de coördinaten van de oorsprong?*",
-        options: ["(0, 0)", "(1, 1)", "(0, 1)", "(geen, geen)"],
+        options: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"],
         answer: 0,
-        wrongHints: [null, "(1, 1) is een punt 1 rechts en 1 omhoog vanaf de oorsprong, niet de oorsprong zelf.", "(0, 1) ligt op de y-as, niet op het kruispunt.", "Coördinaten zijn altijd getallen. De oorsprong heeft beide assen op 0."],
+        wrongHints: [null, "(1, 1) is een punt 1 rechts en 1 omhoog vanaf de oorsprong, niet de oorsprong zelf.", "(0, 1) ligt op de y-as, niet op het kruispunt.", "(1, 0) ligt 1 stap rechts op de x-as. Waar kruisen de twee assen elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Oorsprong (0,0)", tekst: "Oorsprong = punt waar x-as en y-as elkaar snijden. Allebei coördinaten op 0. Notatie (x,y) = (0,0). Centraal punt van assenstelsel." }],
           woorden: [{ woord: "oorsprong", uitleg: "Kruispunt assenstelsel. (0,0). Engels: origin." }, { woord: "(x, y)", uitleg: "Notatie coördinaten: eerst x (horizontaal), dan y (verticaal)." }],
@@ -275,9 +275,9 @@ const steps = [
     checks: [
       {
         q: "*In welke richting worden de kwadranten genummerd?*",
-        options: ["Tegen de klok in, vanaf rechtsboven","Met de klok mee, vanaf rechtsboven","Van linksonder naar rechtsboven","Willekeurig, per boek anders"],
+        options: ["Tegen de klok in, vanaf rechtsboven","Met de klok mee, vanaf rechtsboven","Van linksonder naar rechtsboven","Tegen de klok in, vanaf linksonder"],
         answer: 0,
-        wrongHints: [null, "Kwadrant I ligt rechtsboven. Ligt kwadrant II daarna rechtsonder of linksboven?", "De richting is rotatie, niet diagonaal. Kwadrant I = rechtsboven.", "Het is een vaste volgorde — niet willekeurig."],
+        wrongHints: [null, "Kwadrant I ligt rechtsboven. Ligt kwadrant II daarna rechtsonder of linksboven?", "De richting is rotatie, niet diagonaal. Kwadrant I = rechtsboven.", "Kwadrant I is het vak waar x en y allebei positief zijn. Ligt dat vak linksonder?"],
         uitlegPad: {
           stappen: [{ titel: "I → II → III → IV", tekst: "Kwadranten genummerd I (rechtsboven) → II (linksboven) → III (linksonder) → IV (rechtsonder). TEGEN de klok in. Internationale wiskunde-conventie." }],
           woorden: [{ woord: "kwadrant", uitleg: "Een van 4 vakken in assenstelsel. Latijn 'quadrans' = vierde." }, { woord: "tegen de klok in", uitleg: "Andersom dan klokwijzer. Begint bij 12 uur, gaat naar 9, dan 6, dan 3." }],
@@ -429,14 +429,14 @@ const steps = [
     checks: [
       {
         q: "*Drie punten op exact één rechte lijn vormen geen driehoek. Hoe noem je drie punten op één lijn?*",
-        options: ["Collineair", "Concentrisch", "Parallel", "Diagonaal"],
+        options: ["Collineair", "Concentrisch", "Lineair", "Congruent"],
         answer: 0,
-        wrongHints: [null, "Concentrisch betekent met hetzelfde middelpunt (zoals cirkels die binnen elkaar liggen).", "Parallel zijn twee of meer lijnen die nooit kruisen — niet drie punten op één lijn.", "Diagonaal is een lijn dwars door iets heen."],
+        wrongHints: [null, "Concentrisch betekent met hetzelfde middelpunt (zoals cirkels die binnen elkaar liggen).", "Lineair zeg je van een verband of formule waarvan de grafiek een rechte lijn is. Gaat deze vraag over een formule, of over losse punten?", "Congruent betekent: precies dezelfde vorm en grootte. Gaat deze vraag over twee figuren die gelijk zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Collineair = op één lijn", tekst: "Latijn 'co' (samen) + 'lineair' (lijn). Punten zijn collineair als ze allemaal op één rechte lijn liggen. Geen driehoek mogelijk." }],
           woorden: [{ woord: "collineair", uitleg: "Op één lijn liggend. Engels: collinear." }],
           theorie: "Test op collineariteit: verschillen y/x constant? Voor punten (0,0), (2,4), (4,8): per x-stap +2 wordt y +4. Constant → collineair. Liggen op $y = 2x$.",
-          voorbeelden: [{ type: "andere termen", tekst: "Concentrisch = zelfde middelpunt (cirkels). Parallel = lijnen die elkaar nooit kruisen. Diagonaal = dwarslijn." }],
+          voorbeelden: [{ type: "andere termen", tekst: "Concentrisch = zelfde middelpunt (cirkels). Lineair = een verband of formule met een rechte lijn als grafiek. Congruent = zelfde vorm en grootte." }],
           basiskennis: [{ onderwerp: "Toepassing", uitleg: "Bij rechte-lijn-formules (y=ax+b): alle (x,y) op die lijn zijn collineair. Basis lineaire algebra." }],
           niveaus: { basis: "Collineair.", simpeler: "3 punten op één lijn = collineair.", nogSimpeler: "Collineair" },
         },
@@ -505,9 +505,9 @@ const steps = [
     checks: [
       {
         q: "*In een spreadsheet (zoals Excel) heet een cel \"B5\". Welke richting geeft de letter B aan?*",
-        options: ["Horizontaal (zoals de x-as)","Verticaal (zoals de y-as)","De diepte","De kleur"],
+        options: ["Horizontaal (zoals de x-as)","Verticaal (zoals de y-as)","De diepte (zoals een z-as)","Het werkblad (het tabblad)"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de bovenkant van een spreadsheet: daar staan de letters A, B, C … Staan die naast elkaar of onder elkaar?", "Een spreadsheet is plat (2D) — er is geen diepte.", "De letter geeft een plek aan, geen kleur."],
+        wrongHints: [null, "Kijk naar de bovenkant van een spreadsheet: daar staan de letters A, B, C … Staan die naast elkaar of onder elkaar?", "Een spreadsheet is plat (2D) — er is geen diepte.", "Het tabblad zie je onderaan, met een eigen naam. Waar staan de letters A, B, C?"],
         uitlegPad: {
           stappen: [{ titel: "Letter = kolom = x-richting", tekst: "In een spreadsheet staan de letters A, B, C … naast elkaar bovenaan (kolommen, horizontaal — zoals de x-as). De cijfers 1, 2, 3 … staan onder elkaar aan de zijkant (rijen, verticaal — zoals de y-as). 'B5' = kolom B, rij 5." }],
           woorden: [{ woord: "kolom", uitleg: "Verticale strook cellen. De letter zegt hoe ver naar rechts je gaat." }],
@@ -531,9 +531,9 @@ const steps = [
     checks: [
       {
         q: "*Wat zijn de coördinaten van de oorsprong?*",
-        options: ["(0, 0)", "(1, 0)", "(0, 1)", "Geen"],
+        options: ["(0, 0)", "(1, 0)", "(0, 1)", "(1, 1)"],
         answer: 0,
-        wrongHints: [null, "(1, 0) ligt 1 stap rechts op de x-as.", "(0, 1) ligt 1 stap omhoog op de y-as.", "De oorsprong heeft wel coördinaten — beide assen op 0."],
+        wrongHints: [null, "(1, 0) ligt 1 stap rechts op de x-as.", "(0, 1) ligt 1 stap omhoog op de y-as.", "(1, 1) ligt 1 stap rechts en 1 stap omhoog. Waar kruisen de assen elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Oorsprong = (0,0)", tekst: "Kruispunt assen, allebei op 0. Vaste notatie: (0, 0)." }],
           woorden: [{ woord: "oorsprong", uitleg: "(0,0). Centraal punt." }],
@@ -593,7 +593,7 @@ const steps = [
       { q: "Welk punt is de **oorsprong**?", options: ["(0, 0)","(1, 1)","(0, 1)","(−1, 0)"], answer: 0, wrongHints: [null, "(1, 1) ligt 1 stap naar rechts én 1 omhoog — de oorsprong ligt op het kruispunt zelf, hoeveel stappen is dat?", "(0, 1) ligt 1 stap omhoog op de y-as. Staat het kruispunt hoger dan de x-as?", "(−1, 0) ligt 1 stap naar links op de x-as. Ligt het kruispunt links van de y-as?"] },
       { q: "Punt (−2, −3) ligt in welk kwadrant?", options: ["III","I","II","IV"], answer: 0, wrongHints: [null, "Kwadrant I ligt rechtsboven. Zijn x en y hier positief?", "Kwadrant II ligt linksboven. Is y hier positief?", "Kwadrant IV ligt rechtsonder. Is x hier positief?"] },
       { q: "Welk punt ligt op de **y-as**?", options: ["(0, 7)","(7, 0)","(7, 7)","(1, 2)"], answer: 0, wrongHints: [null, "(7, 0) heeft y = 0. Op welke as ligt het dan?", "Op de y-as is één van de coördinaten 0. Is dat hier zo?", "Op de y-as is één van de coördinaten 0. Welke moet dat zijn?"] },
-      { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Vul de x-waarde in de formule in en kijk of y klopt.", "Vul x = 6 in de formule in. Welke y hoort daar dan bij?", "Controleer of y twee keer de x-waarde is."] },
+      { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Vul x = 2 in y = 2x in. Welke y hoort daarbij?", "Vul x = 6 in de formule in. Welke y hoort daar dan bij?", "Controleer of y twee keer de x-waarde is."] },
       { q: "**Helling** = verandering in y per verandering in x. Van (0,1) naar (3,7) is helling?", options: ["2","1/2","3","6"], answer: 0, wrongHints: [null, "Je hebt de verandering in x gedeeld door die in y. Welke hoort boven de deelstreep?", "3 is alleen hoeveel x verandert. Kijk ook naar y.", "6 is alleen hoeveel y verandert. Deel je dat nog ergens door?"] },
       { q: "Welke as is **horizontaal**?", options: ["x-as","y-as","z-as","Geen"], answer: 0, wrongHints: [null,"De y-as staat rechtop (verticaal).","Een z-as gebruik je alleen in 3D.","Er is wel een horizontale as. Welke van de twee ligt plat?"] },
       { q: "Welke coördinaat staat **eerst** in (3, 5)?", options: ["x = 3","y = 3","x = 5","y = 5"], answer: 0, wrongHints: [null,"Het getal 3 klopt, maar welke letter hoort bij de eerste plek: x of y?","5 staat op de tweede plek. Welk getal staat vooraan?","y = 5 klopt wel, maar staat y eerst of tweede?"] },

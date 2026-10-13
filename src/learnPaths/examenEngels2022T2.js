@@ -23,13 +23,13 @@ const tekst4 = {
 const tekst5 = {
   titel: "T5 — High fashion from old clothes (Sottes, Switzerland)",
   body:
-    "1 Sustainability and fashion usually do not go hand in hand. But things might be changing. This month, Switzerland-based fashion brand Sottes created waves when it launched its waste-free collection in Singapore.\n\n2 The label's founders are Jeanne Guenat and Elliot Upton. Their brand, Sottes, focuses on **upcycling**, a process in which unwanted pieces of fabric are transformed through design and creativity into something more valuable. Using **waste fabric collected from a community shop in the neighborhood**, the designers work with a team of 12 local seamstresses on the designs.",
+    "1 Sustainability and fashion usually do not go hand in hand. But things might be changing. This month, Switzerland-based fashion brand Sottes created waves when it launched its waste-free collection in Singapore.\n\n2 The label's founders are Jeanne Guenat and Elliot Upton. Their brand, Sottes, focuses on upcycling, a process in which unwanted pieces of fabric are transformed through design and creativity into something more valuable. Using waste fabric collected from a community shop in the neighborhood, the designers work with a team of 12 local seamstresses on the designs.",
 };
 
 const tekst6 = {
   titel: "T6 — Crime and Punishment (Canada Youth Justice, Lori Saunders)",
   body:
-    "1 Early last year, Anne McLellan, Minister of Justice and Attorney General of Canada, **introduced the new Youth Criminal Justice Act**. According to McLellan, the unreformed youth justice system didn't seem to be working very well, with increasing numbers of young people in jail for relatively minor offences.\n\n2 'Putting kids in jail, though sometimes necessary, is not an effective response to youth crime,' McLellan says. 'Putting more young people in jail for longer will not make this a safer society.' She feels, 'We need to acknowledge that when serious things happen, there need to be meaningful consequences.'",
+    "1 Early last year, Anne McLellan, Minister of Justice and Attorney General of Canada, introduced the new Youth Criminal Justice Act. According to McLellan, the unreformed youth justice system didn't seem to be working very well, with increasing numbers of young people in jail for relatively minor offences.\n\n2 'Putting kids in jail, though sometimes necessary, is not an effective response to youth crime,' McLellan says. 'Putting more young people in jail for longer will not make this a safer society.' She feels, 'We need to acknowledge that when serious things happen, there need to be meaningful consequences.'",
 };
 
 const tekst7 = {
@@ -70,7 +70,7 @@ const steps = [
         "om verdachte activiteiten die ze zien door te geven",
       ],
       answer: 2,
-      wrongHints: ["Tekst noemt geen foto's — wel 'note' en 'pass on information'. Verschillend.", "Tekst zegt EXPLICIET 'don't get involved' — dus niet ingrijpen.", null],
+      wrongHints: ["Staat het woord 'photo' ergens in de tekst? Lees nog eens wat je volgens de zinnen met 'Please' en 'You can' moet doen.", "Tekst zegt EXPLICIET 'don't get involved' — dus niet ingrijpen.", null],
       explanation: "Tekst: 'asking legitimate boat users to **help us by reporting any suspicious activity**' + 'don't get involved' + 'pass on information'. Doel = informatie doorgeven (anoniem mag).",
       examenBron: BRON_LABEL(1),
       bronLink: BRON_LINK,
@@ -130,7 +130,7 @@ const steps = [
         "Schools should be more focused on allowing talented children to get enough sleep.",
       ],
       answer: 1,
-      wrongHints: ["Tekst gaat over egg-and-spoon en three-legged race — KORT, niet long-distance. Niet het punt.", null, "Geen vermelding van age-appropriate tasks. Lees nog eens wat de schrijver over haar dochter en de klasgenoten zegt.", "Geen sleep-onderwerp. Verkeerde tekst-vermenging."],
+      wrongHints: ["Tekst gaat over egg-and-spoon en three-legged race — KORT, niet long-distance. Niet het punt.", null, "Geen vermelding van age-appropriate tasks. Lees nog eens wat de schrijver over haar dochter en de klasgenoten zegt.", "Komt slaap ergens voor in alinea 1 en 2? Lees nog eens wat de schrijver over haar dochter zegt."],
       explanation: "Schrijver maakt dit punt in alinea 2: 'it won't have occurred to her for a millisecond that she shouldn't be racing alongside 50% of her classmates' + 'Most children probably aren't even aware of this resistance to mixed competition.' = kinderen WETEN niet eens van het debat.",
       examenBron: BRON_LABEL(5),
       bronLink: BRON_LINK,
@@ -160,7 +160,7 @@ const steps = [
         "by using fair trade methods throughout the whole production process",
       ],
       answer: 1,
-      wrongHints: ["Geen 'organic litter and plastic' in tekst. Wel 'unwanted fabric'.", null, "Local seamstresses JA, maar 'local materials vs foreign textiles' is niet de KERN. Waar komt de stof vandaan?", "'Fair trade' niet genoemd. Wel 'upcycling'."],
+      wrongHints: ["Staan 'organic litter' of 'plastic' in de tekst? Lees nog eens welke stof Sottes gebruikt.", null, "Local seamstresses JA, maar 'local materials vs foreign textiles' is niet de KERN. Waar komt de stof vandaan?", "Wordt 'fair trade' in de tekst genoemd? Zoek op welke werkwijze het merk wél noemt."],
       explanation: "Tekst: 'upcycling, a process in which **unwanted pieces of fabric** are transformed' + 'waste fabric collected from a community shop'. = oude/weggegooide materialen omgevormd.",
       examenBron: BRON_LABEL(11),
       bronLink: BRON_LINK,

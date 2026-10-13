@@ -23,13 +23,13 @@ const steps = [
       {
         q: "Wat is een **producent** in een ecosysteem?",
         options: [
-          "Plant of alg die via fotosynthese eigen voedsel maakt",
-          "Carnivoor die andere dieren eet",
-          "Bacterie die dode stof afbreekt",
-          "Mens die voedsel produceert"
+          "Plant of alg die zelf zijn voedsel aanmaakt",
+          "Herbivoor die plantenstof omzet in vlees",
+          "Bacterie die dode resten omzet in mineralen",
+          "Carnivoor die andere dieren eet"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — carnivoor is consument.", "Niet — dat is reducent.", "Niet — biologisch concept."],
+        wrongHints: [null, "Een herbivoor zet voedsel om, maar heeft hij dat voedsel zelf gemaakt? Waar haalt hij het vandaan?", "Dat is een reducent: die werkt aan het eind van de kringloop. Wie staat er aan het begin van een voedselketen?", "Een carnivoor eet andere dieren. Maakt hij dan zelf zijn voedsel?"],
         uitlegPad: {
           stappen: [{ titel: "P = autotroof", tekst: "Producenten (autotrofen) gebruiken zonlicht/anorganische stoffen om organisch materiaal te maken. Vooral planten + algen + cyanobacteriën. Begin van alle voedselketens." }],
           niveaus: { basis: "Plant via fotosynthese.", simpeler: "Maakt zelf voedsel uit zon.", nogSimpeler: "Plant" },
@@ -39,7 +39,7 @@ const steps = [
         q: "Energie-verlies per trofische stap is ongeveer:",
         options: ["90%", "10%", "50%", "99%"],
         answer: 0,
-        wrongHints: [null, "Niet — andersom.", "Niet — er gaat veel meer verloren.", "Te veel."],
+        wrongHints: [null, "Lees de vraag goed: gaat het om wat doorgaat of om wat verloren gaat?", "Als de helft doorging, zouden ketens van tien schakels makkelijk zijn. Zie je die in de natuur?", "Dan zou een vos bijna niets aan een haas hebben. Kan een voedselketen dan nog drie niveaus hebben?"],
         uitlegPad: {
           stappen: [{ titel: "10%-regel", tekst: "Per niveau gaat ~10% over, 90% verloren (ademhaling, warmte, oneetbaar). Daarom zijn ecosysteem-piramides smal aan de top." }],
           theorie: "Daarom kunnen we max ~3-4 trofische niveaus hebben — daarna te weinig energie voor populatie.",
@@ -55,7 +55,7 @@ const steps = [
           "Reducent"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — een producent maakt zelf voedsel.", "Niet — eet vlees.", "Niet — vos is geen schimmel."],
+        wrongHints: [null, "Een producent maakt zelf voedsel met zonlicht. Doet een vos dat?", "Een C1 eet planten. Wat eet de haas, en wat eet de vos?", "Een reducent breekt dode resten af. Doet de vos dat met een levende haas?"],
         uitlegPad: {
           stappen: [{ titel: "Trofische niveau", tekst: "Gras → P. Haas (eet plant) → C1. Vos (eet haas = C1) → **C2**. Een adelaar die vossen eet zou C3 zijn." }],
           niveaus: { basis: "C2.", simpeler: "Vos eet planteneter → niveau 3 = C2.", nogSimpeler: "C2" },
@@ -70,7 +70,7 @@ const steps = [
           "Toppredatoren"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — die maken juist organische stof.", "Niet — die eten ander organisch.", "Niet — top, niet afbraak."],
+        wrongHints: [null, "Producenten bouwen nieuwe stof op uit CO₂ en water. Breken ze ook dode resten af?", "Consumenten eten levende planten en dieren. Wie ruimt een dood blad op de bosgrond op?", "Een adelaar eet levende prooi. Wie breekt een dode adelaar uiteindelijk af?"],
         uitlegPad: {
           stappen: [
             { titel: "R = afbraak → mineralen", tekst: "Reducenten breken dode stof af → maken anorganische mineralen vrij (N, P, K). Zonder R: voedingsstoffen zouden vastzitten in lijken; planten zouden geen nutriënten hebben → ecosysteem stort in." },
@@ -82,13 +82,13 @@ const steps = [
       {
         q: "Een **toppredator** zoals adelaar zit aan top van piramide omdat:",
         options: [
-          "Energie-verliezen maken hoger niveau onmogelijk te ondersteunen",
-          "Adelaars zijn de grootste vogels",
-          "Adelaars kunnen het hoogst vliegen",
-          "Adelaars zijn beschermd"
+          "Er is te weinig energie over voor nog een niveau",
+          "Ze krijgen de meeste energie van alle niveaus",
+          "Hun soort heeft de grootste biomassa van allemaal",
+          "Adelaars zijn wettelijk beschermd tegen de jacht"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — relevant maar geen reden.", "Hoe hoog een vogel vliegt, zegt niets over zijn plek in de voedselpiramide.", "Niet — beleid, niet ecologie."],
+        wrongHints: [null, "Bij elke stap omhoog gaat er energie verloren. Op welk niveau is er dan het meeste energie?", "Hoeveel adelaars leven er in een bos, vergeleken met muizen of grassprieten?", "Bescherming is een regel van mensen. Verklaart dat waarom er van nature zo weinig toppredatoren zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Energie-piramide", tekst: "Met 10% over per niveau: na 4 niveaus is er 0,001 (= 0,1%) van de energie in de producenten over. Te weinig om een groot dier te voeden. Daarom adelaars zeldzaam + groot territorium." }],
           niveaus: { basis: "Energie op.", simpeler: "Niet genoeg eten meer hoger.", nogSimpeler: "Energie-grens" },
@@ -106,13 +106,13 @@ const steps = [
       {
         q: "Wat is **draagkracht K** van een ecosysteem?",
         options: [
-          "Maximale populatie-grootte die ecosysteem duurzaam kan onderhouden",
-          "Het gewicht van een groep",
-          "De totale biomassa",
-          "Het aantal soorten"
+          "Grootste populatie die een gebied op lange termijn aankan",
+          "De snelheid waarmee een populatie maximaal groeit",
+          "De totale biomassa van alle organismen in het gebied",
+          "Het aantal verschillende soorten in het ecosysteem"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — letterlijk fout.", "Niet — biomassa is gerelateerd maar K is anders.", "Niet — dat is biodiversiteit."],
+        wrongHints: [null, "Dat is de groeisnelheid (r). Waar op de S-curve vind je K?", "Biomassa is het gewicht van alles wat leeft. Gaat K over gewicht, of over het aantal dieren van één soort?", "Het aantal soorten heet biodiversiteit. Gaat K over veel soorten of over één populatie?"],
         uitlegPad: {
           stappen: [{ titel: "K = plafond", tekst: "Boven K kan ecosysteem populatie niet meer voeden/herbergen → sterfte > geboorte → terugkeer naar K. Dynamische evenwichtswaarde." }],
           niveaus: { basis: "Max duurzame populatie.", simpeler: "Plafond voor populatie-grootte.", nogSimpeler: "K" },
@@ -121,13 +121,13 @@ const steps = [
       {
         q: "**Exponentiële groei** (J-curve) gebeurt typisch:",
         options: [
-          "Bij invasieve soorten zonder predatoren + overvloed voedsel",
-          "Bij stabiel evenwicht",
-          "Bij hoge densiteit",
-          "Bij oude populaties"
+          "Bij een nieuwe soort in een gebied zonder natuurlijke vijanden",
+          "Bij een populatie die haar draagkracht K net heeft bereikt",
+          "Bij een soort met volop voedsel maar veel natuurlijke vijanden",
+          "Bij een populatie die al eeuwen in evenwicht met haar omgeving leeft"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — stabiel = logistisch.", "Niet — hoge densiteit remt af.", "Niet — niet leeftijd-gerelateerd."],
+        wrongHints: [null, "Rond K vlakt de groeicurve af. Is dat een steil stijgende J?", "Wat doen veel natuurlijke vijanden met het aantal jongen dat volwassen wordt?", "In evenwicht blijft een populatie ongeveer even groot. Past daar een steil stijgende J-curve bij?"],
         uitlegPad: {
           stappen: [{ titel: "Geen rem = explosie", tekst: "Klassiek voorbeeld: bacteriën in vers medium verdubbelen elke 20 minuten — zou in 3 dagen massa-aarde overschrijden ZONDER beperking. In praktijk lopen ze tegen K aan." }],
           theorie: "Daarom zijn invasieve soorten zo'n probleem: nieuwe omgeving zonder co-geëvolueerde predatoren → exponentieel.",
@@ -140,10 +140,10 @@ const steps = [
           "Haas-populatie piekt",
           "Haas-populatie daalt",
           "Lynx-piek komt eerst",
-          "Beide tegelijk piek"
+          "Beide pieken tegelijk"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daling komt erna.", "Niet — predator volgt prooi.", "Niet — er is faseverschuiving."],
+        wrongHints: [null, "Als de hazen al afnemen, hebben de lynxen dan meer of minder te eten?", "Kunnen lynxen talrijk worden voordat er genoeg voedsel voor hen is?", "Lynxen hebben tijd nodig om jongen groot te brengen. Kunnen ze meteen meegroeien met de hazen?"],
         uitlegPad: {
           stappen: [
             { titel: "Predator volgt prooi", tekst: "Tijd-lijn: 1) haas-piek (overvloed voedsel voor lynx). 2) lynx groeit. 3) lynx-piek → haas-daling. 4) lynx krimpt. 5) haas herstelt. 6) terug naar 1. Cyclus ~10 jaar in Canada-gegevens." },
@@ -155,13 +155,13 @@ const steps = [
       {
         q: "**Concurrentie-uitsluitings-principe** (Gause):",
         options: [
-          "Twee soorten met identieke niche kunnen niet duurzaam samen leven",
-          "Sterkste soort wint altijd",
-          "Soorten delen netjes",
-          "Geen concurrentie in natuur"
+          "Bij dezelfde niche verdringt de ene soort op den duur de andere",
+          "Soorten met verschillende niches kunnen niet samenleven",
+          "Bij dezelfde niche verdelen twee soorten het voedsel eerlijk",
+          "Een roofdier verdringt op den duur zijn prooisoort uit het gebied"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — 'sterkste' is te simpel.", "Niet — er IS competitie.", "Niet — er IS competitie."],
+        wrongHints: [null, "Een vos en een konijn hebben een heel andere niche en leven toch samen in hetzelfde bos. Klopt deze bewering dan?", "Als twee soorten precies hetzelfde nodig hebben, blijft het dan bij eerlijk delen?", "Een roofdier en zijn prooi zijn geen concurrenten van elkaar. Om wie gaat het bij concurrentie?"],
         uitlegPad: {
           stappen: [{ titel: "Niche-uitsplitsing", tekst: "Bij identieke niche: een soort verdrijft de andere. Vandaar dat in natuur soorten **niche-uitsplitsen** (eten andere insecten, op andere tijden actief, andere hoogtes in boom). Co-existentie vereist ecologisch verschil." }],
           niveaus: { basis: "Identieke niche kan niet.", simpeler: "Soorten moeten verschillen in niche om samen te leven.", nogSimpeler: "Verschil nodig" },
@@ -172,11 +172,11 @@ const steps = [
         options: [
           "Densiteit-onafhankelijke factor",
           "Densiteit-afhankelijke factor",
-          "Predator-effect",
-          "Concurrentie"
+          "Predatie als regulerende factor",
+          "Concurrentie als beperkende factor"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — orkaan werkt onafhankelijk van populatie-densiteit.", "Niet — geen predator.", "Niet — geen soort-conflict."],
+        wrongHints: [null, "Maakt het voor de orkaan uit of er 10 of 1000 bomen per hectare staan?", "Bij predatie eet een dier een ander dier op. Gebeurt dat hier?", "Bij concurrentie strijden soorten om hetzelfde voedsel of dezelfde ruimte. Wie strijdt hier met wie?"],
         uitlegPad: {
           stappen: [{ titel: "Storm slaat blind toe", tekst: "Densiteit-onafhankelijk: effect onafhankelijk van hoe vol het bos is. Tegen-voorbeeld densiteit-afhankelijk: ziekte verspreidt sneller bij volle populatie (meer contact)." }],
           niveaus: { basis: "Densiteit-onafh.", simpeler: "Storm slaat toe, onafhankelijk van populatie.", nogSimpeler: "Onafh" },
@@ -195,7 +195,7 @@ const steps = [
         q: "Welke kringloop heeft GEEN belangrijke atmosferische fase?",
         options: ["Fosforkringloop", "Koolstofkringloop", "Stikstofkringloop", "Waterkringloop"],
         answer: 0,
-        wrongHints: [null, "Niet — CO₂ in lucht.", "Niet — N₂ is 78% van lucht.", "Niet — waterdamp."],
+        wrongHints: [null, "Planten halen CO₂ uit de lucht. Zit koolstof dan ook in de atmosfeer?", "Waar bestaat het grootste deel van de lucht uit?", "Wolken bestaan uit waterdruppels. Gaat water dan ook door de lucht?"],
         uitlegPad: {
           stappen: [{ titel: "P komt uit gesteente", tekst: "Fosfor zit voornamelijk in rots-mineralen + opgelost in water/bodem. Geen significante luchtfase (in tegenstelling tot C, N, H₂O). Daarom lokaal: één plek 'pakt' fosfor en geeft 'm langzaam vrij." }],
           theorie: "Daarom is fosfaat-meststof een eindige hulpbron. Belangrijke geopolitieke kwestie (Marokko + China hebben grote voorraden).",
@@ -208,10 +208,10 @@ const steps = [
           "Korstmossen en algen",
           "Grote bomen",
           "Grazende dieren",
-          "Vlinders + insecten"
+          "Vlinders en andere insecten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bomen vereisen bodem.", "Niet — eten gras dat er niet is.", "Niet — vereisen planten."],
+        wrongHints: [null, "Kan een grote boom wortelen op kale rots zonder bodem?", "Wat zouden grazers moeten eten op kale rots?", "Waar halen vlinders hun nectar als er nog geen bloemen zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Korstmossen breken rots af", tekst: "Korstmossen (symbiose schimmel + alg) produceren zuren die rots langzaam verweren. Pionierende mossen volgen, dan kruiden, struiken, bomen. Successie maakt bodem dieper + rijker." }],
           niveaus: { basis: "Korstmossen.", simpeler: "Eerste leven op kale rots.", nogSimpeler: "Korstmossen" },
@@ -220,13 +220,13 @@ const steps = [
       {
         q: "**Stikstoffixatie** wordt vooral gedaan door:",
         options: [
-          "Bacteriën en bliksem",
-          "Alle planten direct uit lucht",
-          "Mensen via Haber-Bosch alleen",
-          "Vissen"
+          "Bacteriën in de bodem en bliksem",
+          "Planten die N₂ via hun bladeren opnemen",
+          "Dieren die stikstofrijk voedsel eten",
+          "Schimmels die dode resten afbreken"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — planten kunnen N₂ niet zelf binden.", "Niet de enige weg.", "Onzin."],
+        wrongHints: [null, "N₂ komt wel de bladeren in, maar kan een plant die sterke drievoudige binding zelf verbreken?", "Dieren krijgen stikstof binnen via hun voedsel. Maken ze daarmee ook N₂ uit de lucht bruikbaar?", "Afbrekers maken stikstof vrij uit dode resten. Maar halen ze ook N₂ uit de lucht?"],
         uitlegPad: {
           stappen: [
             { titel: "Drievoudige stikstof-binding doorbreken", tekst: "N₂ heeft 3-voudige binding (heel sterk). Slechts enkele bacteriën (rhizobia, vrijwonend Azotobacter) + cyanobacteriën hebben enzym nitrogenase om dit te kraken. Plus: bliksem-energie vormt NO. Mens: industrieel Haber-Bosch sinds 1909 → 40% van wereldbevolking-voedsel afhankelijk." },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Een **climaxgemeenschap** in Nederland is:",
-        options: ["Loofbos", "Tropisch regenwoud", "Toendra", "Woestijn"],
+        options: ["Loofbos", "Heide", "Grasland", "Rietmoeras"],
         answer: 0,
-        wrongHints: [null, "Niet — verkeerd klimaat.", "Niet — te koud.", "Niet — te droog."],
+        wrongHints: [null, "Wat gebeurt er met heide als er geen schapen meer grazen en niemand plagt?", "Als je een weiland nooit meer maait of begraast, blijft het dan gras?", "Riet maakt het water ondieper en de bodem voller. Wat groeit daar na een tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Klimaat bepaalt climax", tekst: "Gematigd zee-klimaat in NL → loofbos eind-stadium. Beuk (schaduwbestendig) + eik overheersen. Zonder menselijk ingrijpen zou ~95% NL bos zijn." }],
           niveaus: { basis: "Loofbos.", simpeler: "Eikenbos = NL-climax.", nogSimpeler: "Loofbos" },
@@ -254,7 +254,7 @@ const steps = [
           "Water"
         ],
         answer: 0,
-        wrongHints: [null, "Verbranding geeft ook wat stikstofoxiden, maar welk gas komt er véél meer vrij?", "Niet — geen P bij verbranding.", "Niet — al wel water-damp, maar primaire impact is CO₂."],
+        wrongHints: [null, "Verbranding geeft ook wat stikstofoxiden, maar welk gas komt er véél meer vrij?", "Fosfor zit vooral in gesteente en mest. Wat komt er uit een uitlaat of schoorsteen?", "Bij verbranding ontstaat ook waterdamp, maar die regent snel weer uit. Welk gas stapelt zich op in de lucht?"],
         uitlegPad: {
           stappen: [
             { titel: "Vastgelegd C → atmosferisch C", tekst: "Kolen/olie/gas = miljoenen-jaren oude plant-C, opgesloten onder de grond. Verbranding zet snel om naar CO₂ → atmosfeer 0,03% (preindustrieel) → 0,042% (2024). Versterkt broeikaseffect → opwarming." },
@@ -274,9 +274,9 @@ const steps = [
     checks: [
       {
         q: "**HIPPO** is een ezelsbruggetje voor 5 bedreigingen voor biodiversiteit. H staat voor:",
-        options: ["Habitatverlies", "Honden + katten", "Hitte", "Honger"],
+        options: ["Habitatverlies", "Handel in wilde dieren", "Hitte door klimaatverandering", "Huisdieren die verwilderen"],
         answer: 0,
-        wrongHints: [null, "Niet — niet direct.", "Niet — klimaat is een aparte factor.", "Niet — sub-onderdeel."],
+        wrongHints: [null, "Wilde dieren wegvangen en verkopen is overexploitatie. Bij welke letter van HIPPO hoort dat?", "Klimaat zit niet in de oorspronkelijke vijf letters. Waar draait de H dan om?", "Verwilderde of uitgezette dieren zijn invasieve soorten. Bij welke letter hoort dat?"],
         uitlegPad: {
           stappen: [{ titel: "H-I-P-P-O", tekst: "**H**abitatverlies → **I**nvasieve → **P**ollutie → **P**opulatie → **O**verexploitatie. Onthoud-truc, gebruikt door E.O. Wilson. Klimaat als 6e factor toegevoegd in laatste tijd." }],
           niveaus: { basis: "Habitatverlies.", simpeler: "H = habitat.", nogSimpeler: "Habitat" },
@@ -286,12 +286,12 @@ const steps = [
         q: "Een **ecosysteemdienst** is:",
         options: [
           "Natuurlijke functie waarvan de mens profiteert",
-          "Service van overheid",
-          "Internet-dienst",
-          "Schoonmaak-service voor parken"
+          "Werk dat boswachters doen om de natuur te onderhouden",
+          "Voordeel dat twee soorten elkaar geven, zoals bij symbiose",
+          "Geld dat mensen betalen om natuur te beschermen"
         ],
         answer: 0,
-        wrongHints: [null, "Onjuist concept.", "Onzin.", "Niet — natuurlijk proces."],
+        wrongHints: [null, "Een boswachter is een mens. Is een ecosysteemdienst werk dat mensen doen?", "Dat heet mutualisme: twee soorten helpen elkaar. Gaat een ecosysteemdienst over een relatie tussen twee diersoorten?", "Dat is geld van mensen. Is een ecosysteemdienst iets wat mensen betalen, of iets wat de natuur zelf doet?"],
         uitlegPad: {
           stappen: [
             { titel: "Vier categorieën (Millennium Ecosystem Assessment)", tekst: "1. **Productie**: voedsel, hout, water.\n2. **Regulering**: klimaat, water-zuivering, bestuiving.\n3. **Culturele**: recreatie, spiritualiteit.\n4. **Ondersteunend**: bodemvorming, nutriënten-kringloop." },
@@ -303,13 +303,13 @@ const steps = [
       {
         q: "Cheetah's hebben **lage genetische diversiteit** door een **flessenhals**. Waarom is dat een probleem?",
         options: [
-          "Minder veerkracht tegen ziekten + omgevingsverandering",
-          "Cheetah's worden steeds langzamer",
-          "Cheetah's zijn alleen geel",
-          "Geen probleem"
+          "Eén nieuwe ziekte kan bijna de hele populatie treffen",
+          "Er ontstaan per generatie veel meer schadelijke mutaties",
+          "De dieren geven hun eigenschappen slechter door aan hun jongen",
+          "Hun lichaam past zich minder snel aan tijdens hun leven"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin — snelheid is gewoon hetzelfde.", "Niet — kleur niet gerelateerd.", "Wel degelijk een probleem — wat gebeurt er als er een nieuwe ziekte opduikt?"],
+        wrongHints: [null, "Mutaties zijn toevallige kopieerfouten. Hangt hun aantal af van hoeveel variatie er al is?", "Erfelijkheid werkt bij elk dier hetzelfde. Gaat het probleem over het doorgeven zelf, of over wát er door te geven valt?", "Evolutie gebeurt in een populatie over generaties, niet in één lichaam. Wat is dan het risico voor de hele groep?"],
         uitlegPad: {
           stappen: [{ titel: "Variatie = adaptatie-potentieel", tekst: "Met weinig genetische variatie zijn er weinig 'opties' bij nieuwe selectie-druk (nieuwe ziekte, klimaatwijziging). Bij identieke genen kan één virus de hele populatie wegvagen. Aardappel-Ierland 1845: monocultuur → Phytophthora → ramp." }],
           niveaus: { basis: "Minder adaptatie.", simpeler: "Genetisch arm → kwetsbaar.", nogSimpeler: "Kwetsbaar" },
@@ -319,12 +319,12 @@ const steps = [
         q: "**Stikstof-overschot** in NL bedreigt biodiversiteit doordat:",
         options: [
           "Snelle groeiers verdringen zeldzame planten",
-          "N₂ is giftig voor planten",
-          "N maakt de bodem droger",
-          "N verlaagt CO₂"
+          "Stikstofgas (N₂) is giftig voor de meeste planten",
+          "Stikstof maakt de bodem droger en zanderiger",
+          "Stikstof verlaagt de hoeveelheid CO₂ in de lucht"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — vrijwel inert gas.", "Stikstof verandert vooral de voedselrijkdom van de bodem, niet het vochtgehalte.", "Geen relatie."],
+        wrongHints: [null, "N₂ is 78% van de lucht die overal om planten heen zit. Zou dat gas dan giftig voor ze zijn?", "Stikstof verandert vooral de voedselrijkdom van de bodem, niet het vochtgehalte.", "Zelfs als dat zo was: waarom zouden zeldzame planten daardoor verdwijnen?"],
         uitlegPad: {
           stappen: [{ titel: "N-arme habitats lijden", tekst: "Heide, veen, kustduinen zijn van nature N-arm. Soorten daar aangepast aan armoede. Stikstof-depositie (uit veehouderij + verkeer) → vergrassing → biodiversiteit-verlies. Daarom: 'stikstof-crisis' in NL (boerenprotesten 2019+)." }],
           niveaus: { basis: "N verstoort N-arme habitats.", simpeler: "Te veel mest → zeldzame planten verdwijnen.", nogSimpeler: "N-overschot" },
@@ -333,15 +333,15 @@ const steps = [
       {
         q: "Welke is GEEN bedreiging voor biodiversiteit?",
         options: [
-          "Beschermde Natura 2000-gebieden",
-          "Plastic in zee",
-          "Ontbossing voor palmolie",
-          "Klimaatverandering"
+          "Een gebied aanwijzen als Natura 2000-gebied",
+          "Exotische waterplanten in vijvers zetten",
+          "Oerbos vervangen door één soort productiebos",
+          "Graslanden extra bemesten voor meer opbrengst"
         ],
         answer: 0,
-        wrongHints: [null, "Dat IS een bedreiging.", "Idem.", "Idem."],
+        wrongHints: [null, "Wat gebeurt er als zo'n plant in de sloot belandt en hier geen natuurlijke vijanden heeft?", "Hoeveel soorten vinden een plek in een bos met maar één soort boom?", "Denk aan stikstof: welke planten profiteren van extra voeding, en welke verdwijnen dan?"],
         uitlegPad: {
-          stappen: [{ titel: "Natura 2000 = bescherming", tekst: "Natura 2000 = EU-netwerk van beschermde natuurgebieden. Andere opties zijn allemaal bedreigingen: plastic verstrengelt + giftig, palmolie-ontbossing = habitatverlies, klimaat verschuift habitats sneller dan soorten kunnen volgen." }],
+          stappen: [{ titel: "Natura 2000 = bescherming", tekst: "Natura 2000 = EU-netwerk van beschermde natuurgebieden. De andere opties zijn bedreigingen: exoten zonder natuurlijke vijanden verdringen inheemse soorten, één soort productiebos = habitatverlies, extra mest (stikstof) laat een paar snelle soorten winnen ten koste van de rest." }],
           niveaus: { basis: "Natura 2000 = oplossing.", simpeler: "Beschermd gebied is goed.", nogSimpeler: "Natura" },
         },
       },
@@ -358,12 +358,12 @@ const steps = [
         q: "Wolven uit Yellowstone weg → elanden over-grazen wilg → erosie. Wolven terug → herstel. Voorbeeld van:",
         options: [
           "Trofische cascade (keystone species)",
-          "Successie",
-          "Klimaatverandering",
-          "Mutualisme"
+          "Successie (vegetatie-opvolging)",
+          "Klimaatverandering (opwarming)",
+          "Mutualisme (beide soorten winnen)"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — successie is langere termijn.", "Niet — geen klimaat-element.", "Niet — geen 'beiden-winnen'."],
+        wrongHints: [null, "Successie is een opeenvolging van begroeiing op kale of verstoorde grond. Begon het hier met kale grond?", "Wat veranderde hier: het weer, of welke dieren er rondliepen?", "Bij mutualisme winnen beide soorten. Wint de eland bij de terugkeer van de wolf?"],
         uitlegPad: {
           stappen: [{ titel: "Eén soort, grote impact", tekst: "Sleutelsoort (keystone species) heeft impact die veel groter is dan zijn aantal of biomassa zou suggereren. Wolven aantal: klein, maar effect op hele ecosysteem: groot. Andere keystones: zee-otters voor kelpbossen, olifanten voor savanne." }],
           niveaus: { basis: "Trofische cascade.", simpeler: "Top-predator stuurt hele systeem.", nogSimpeler: "Cascade" },
@@ -373,7 +373,7 @@ const steps = [
         q: "Een dier-pop. groeit van 100 naar 200 in 1 jaar (zonder beperking). Wat is de **groeiratio r** per jaar in het model N(t) = N₀ · e^(r·t)?",
         options: ["~0,69", "1,0", "2,0", "0,5"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is volledig nieuwgeboren-aantal.", "Niet — dat is factor van verdubbeling.", "Niet — half-tempo."],
+        wrongHints: [null, "Vul r = 1 in: e¹ ≈ 2,72. Wordt 100 dan 200?", "De groeifactor is 2, maar is r hetzelfde als die factor? Reken e² eens uit.", "Reken e^0,5 uit. Komt daar 2 uit?"],
         uitlegPad: {
           stappen: [
             { titel: "ln(N/N₀) = r·t", tekst: "N(t)/N₀ = e^(rt) → ln(2) = r·1 → r = **ln 2 ≈ 0,693 per jaar**. Hoog tempo." },
@@ -385,12 +385,12 @@ const steps = [
         q: "**Eutrofiëring** van een meer is:",
         options: [
           "Overmaat aan voedingsstoffen in het water",
-          "Uitdroging van meer",
-          "Stijging van pH",
-          "Vermindering van planten"
+          "Uitdroging van het meer door verdamping",
+          "Stijging van de pH door kalk in het water",
+          "Opwarming van het water door de zon"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen droogte.", "Niet — alleen indirect.", "Niet — tegenovergesteld."],
+        wrongHints: [null, "Verdwijnt er bij eutrofiëring water, of verandert er iets ín het water?", "Kalk kan de pH veranderen, maar wat spoelt er met mest en kunstmest de sloot in?", "Warm water versnelt de algengroei wel, maar wat moet er eerst in het water zitten?"],
         uitlegPad: {
           stappen: [
             { titel: "Te veel N+P", tekst: "Mest-afspoeling + riolering → veel N + P → algen-explosie → algen sterven → bacteriën verbruiken zuurstof om af te breken → anoxie → vissen sterven. Klassiek probleem rond agrarische gebieden + steden." },
@@ -403,12 +403,12 @@ const steps = [
         q: "Het **6e massa-uitsterven** is uniek omdat:",
         options: [
           "Het wordt veroorzaakt door de mens",
-          "Het al gestopt is",
-          "Het is een goede zaak",
-          "Het is bedacht"
+          "Het in de vorige eeuw alweer gestopt is",
+          "Het zorgt voor meer nieuwe soorten dan ooit",
+          "Het wordt veroorzaakt door een meteorietinslag"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — het is juist zorgwekkend.", "Wetenschappelijk verifieerbaar."],
+        wrongHints: [null, "Kijk naar de cijfers van nu: verdwijnen er nog steeds soorten?", "Nieuwe soorten ontstaan in miljoenen jaren. Hoe snel verdwijnen ze nu?", "Een inslag verklaarde het uitsterven van de dinosauriërs. Is dat nu ook de oorzaak?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste antropogene massa-uitsterven", tekst: "Vorige 5 events door geologische/astronomische oorzaken (asteroïde Krijt-Tertiair, vulkanen Perm-Trias). Huidige door **mens-activiteiten**: ontbossing, jacht, klimaat-verandering, invasieve soorten. Tempo: 100-1000× natuurlijk basistempo." }],
           theorie: "Schattingen: 1 mln soorten dreigen uit te sterven, ~25% van zoogdieren in direct gevaar.",
@@ -419,12 +419,12 @@ const steps = [
         q: "Wat is de **effectiefste** persoonlijke actie tegen klimaat- + biodiversiteit-crisis?",
         options: [
           "Minder vlees eten, autorijden en vliegen",
-          "Recyclen flessen",
-          "Plastic rietjes vermijden",
-          "LED-lampen kopen"
+          "Flessen, blikjes en papier recyclen",
+          "Plastic rietjes, bekers en tasjes mijden",
+          "LED-lampen en zuinige apparaten kopen"
         ],
         answer: 0,
-        wrongHints: [null, "Helpt iets maar relatief klein.", "Vrij triviale impact.", "Helpt maar marginaal."],
+        wrongHints: [null, "Recyclen helpt, maar hoeveel CO₂ scheelt een blikje vergeleken met een vliegreis?", "Een rietje weegt een paar gram. Hoe groot is dat vergeleken met het land en de uitstoot voor vlees?", "Lampen en apparaten gebruiken relatief weinig stroom. Wat weegt zwaarder: je lamp of je auto?"],
         uitlegPad: {
           stappen: [
             { titel: "Wynes & Nicholas 2017 review", tekst: "Onderzoek wetenschappelijke studies: top-4 grote impact:\n1. Eén kind minder krijgen (~58 ton CO₂/jaar).\n2. Auto-vrij leven (~2,4 ton).\n3. Vluchten vermijden (~1,6 ton/lange reis).\n4. Plantaardig dieet (~0,8 ton).\n\nKleine acties (recyclen, lampen) belangrijk maar relatief klein effect (<0,2 ton elk)." },

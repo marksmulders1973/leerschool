@@ -63,7 +63,7 @@ const steps = [
         "Gabriël heeft gelijk en Petra heeft gelijk.",
       ],
       answer: 1,
-      wrongHints: ["Gabriël heeft wél gelijk — vaccin = kunstmatige immunisatie (niet natuurlijk via ziek-worden).", null, "Petra heeft niet gelijk — passieve immunisatie = klaargemaakte antistoffen krijgen. Vaccin = ACTIEF, het lichaam maakt zelf antistoffen.", "Niet beiden — Petra's passief klopt niet voor een vaccin."],
+      wrongHints: ["Bekijk Gabriël apart: krijg je een vaccin vanzelf, of geeft een arts het je?", null, "Passief betekent: je krijgt kant-en-klare antistoffen. Wat zit er in een vaccin, en wie maakt dan de antistoffen?", "Bekijk elke uitspraak apart. Maakt het lichaam na een vaccin zelf antistoffen, of krijgt het ze kant-en-klaar?"],
       explanation: "4 immunisatie-types: **kunstmatig actief** = vaccin (verzwakte ziekteverwekker → lichaam maakt antistoffen). **kunstmatig passief** = injectie met klaar-antistoffen (bv. bij een slangenbeet). **natuurlijk actief** = ziek worden + herstel. **natuurlijk passief** = moedermelk-antistoffen baby. Vaccin = kunstmatig + actief. Gabriël zegt 'kunstmatig' = goed. Petra zegt 'passief' = fout (moest actief zijn).",
       examenBron: BRON_LABEL(22),
       bronLink: BRON_LINK,

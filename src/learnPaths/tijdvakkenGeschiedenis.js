@@ -70,7 +70,7 @@ const steps = [
         q: "Hoeveel tijdvakken zijn er?",
         options: ["10", "5", "12", "8"],
         answer: 0,
-        wrongHints: [null, "Te weinig — de Commissie De Rooy heeft er meer vastgesteld.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig: de Commissie De Rooy heeft er meer vastgesteld.", "Te veel. Elk tijdvak heeft een eigen naam; tel ze maar eens na in het overzicht.", "Na de tijd van burgers en stoommachines komen er nog tijdvakken."],
         uitlegPad: {
           stappen: [{ titel: "10 tijdvakken (NL-canon)", tekst: "Commissie De Rooy heeft de geschiedenis in 10 tijdvakken verdeeld. Elk tijdvak heeft een NAAM die typisch is voor die periode (jagers, monniken, ontdekkers, etc)." }],
           woorden: [{ woord: "tijdvak", uitleg: "Periode in de geschiedenis met een eigen naam en kenmerken." }, { woord: "Commissie De Rooy", uitleg: "Werkgroep die in 2001 de 10 tijdvakken vastlegde voor het onderwijs." }],
@@ -82,15 +82,15 @@ const steps = [
       },
       {
         q: "Wat is het **eerste** tijdvak?",
-        options: ["Jagers en boeren", "Grieken en Romeinen", "Monniken en ridders", "Wereldoorlogen"],
+        options: ["Jagers en boeren", "Grieken en Romeinen", "Monniken en ridders", "Steden en staten"],
         answer: 0,
-        wrongHints: [null, "Dat is tijdvak 2 — een lang tweede tijdvak (3000 v.Chr. tot 500 n.Chr.).", "Dat is tijdvak 3 — vroege middeleeuwen.", "Dat is tijdvak 9 — pas in de 20e eeuw."],
+        wrongHints: [null, "Dat is tijdvak 2 — een lang tweede tijdvak (3000 v.Chr. tot 500 n.Chr.).", "Dat is tijdvak 3 — vroege middeleeuwen.", "Dat is tijdvak 4, de late middeleeuwen."],
         uitlegPad: {
           stappen: [{ titel: "Prehistorie = jagers+boeren", tekst: "Tijdvak 1 = Jagers en boeren, tot 3000 v.Chr. Alles vóór schrift. Mensen leefden van jacht + later landbouw. Geen geschreven bronnen." }],
           woorden: [{ woord: "prehistorie", uitleg: "Tijd vóór het schrift (tijdvak 1: tot ~3000 v.Chr.). Alles wat we weten komt uit archeologie." }, { woord: "landbouwrevolutie", uitleg: "Overgang van jagers-verzamelaars naar boeren (~10.000 v.Chr.)." }],
           theorie: "Eerste fase: jagers-verzamelaars (rondtrekkend). Tweede fase: landbouw + vaste dorpen + aardewerk. In NL: hunebedden ~3000 v.Chr.",
           voorbeelden: [{ type: "NL-spoor", tekst: "Hunebedden in Drenthe = stenen graven van Trechterbekercultuur ~3000 v.Chr. Toeristische bezienswaardigheid." }],
-          basiskennis: [{ onderwerp: "Volgorde belangrijk", uitleg: "Tijdvak 2/3/9 komen LATER. Eerste = jagers." }],
+          basiskennis: [{ onderwerp: "Volgorde belangrijk", uitleg: "Tijdvak 2/3/4 komen LATER. Eerste = jagers." }],
           niveaus: { basis: "Jagers en boeren.", simpeler: "Eerste tijdvak = jagers + boeren, prehistorie tot 3000 v.Chr.", nogSimpeler: "Jagers" },
         },
       },
@@ -105,9 +105,9 @@ const steps = [
     checks: [
       {
         q: "Wat veranderde tijdens de **landbouwrevolutie**?",
-        options: ["Mensen gingen op één plek wonen en akkers bewerken", "Mensen ontdekten elektriciteit", "Romeinen veroverden Nederland", "De boekdrukkunst werd uitgevonden"],
+        options: ["Mensen gingen boeren op één vaste plek", "Machines namen het werk op het land over", "Mensen leerden vuur maken en jagen", "Romeinen brachten nieuwe gewassen mee"],
         answer: 0,
-        wrongHints: [null, "Elektriciteit is veel later — pas in tijdvak 8.", "Romeinen kwamen in tijdvak 2.", "Boekdrukkunst = ~1450, dat is tijdvak 4."],
+        wrongHints: [null, "Machines op het land kwamen pas veel later, in tijdvak 8-10.", "Jagen en vuur gebruiken deden mensen al lang vóór de landbouw.", "Romeinen kwamen pas in tijdvak 2."],
         uitlegPad: {
           stappen: [{ titel: "Rondtrekkend → vast", tekst: "Landbouwrevolutie (~10.000 v.Chr.) = mensen stoppen met rondtrekken en gaan VAST WONEN. Ze verbouwen graan + houden vee. Eerste dorpen ontstaan." }],
           woorden: [{ woord: "landbouwrevolutie", uitleg: "Overgang van jacht-verzameling naar landbouw + veeteelt." }, { woord: "neolithicum", uitleg: "Jonge steentijd — periode van landbouwrevolutie." }],
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Wat zijn **hunebedden**?",
-        options: ["Stenen graven uit ~3000 v.Chr. in Drenthe", "Romeinse forten", "Middeleeuwse kastelen", "Boerderijen uit de Gouden Eeuw"],
+        options: ["Stenen graven uit ~3000 v.Chr.", "Romeinse forten langs de Rijn", "Vikinggraven uit ongeveer 800 n.Chr.", "Stenen huizen van de eerste boeren"],
         answer: 0,
-        wrongHints: [null, "Romeinen kwamen pas in tijdvak 2.", "Kastelen zijn middeleeuws — tijdvak 3-4.", "Gouden Eeuw is tijdvak 6."],
+        wrongHints: [null, "Romeinen kwamen pas in tijdvak 2.", "De Vikingen kwamen pas in tijdvak 3, duizenden jaren later.", "De eerste boeren woonden in houten boerderijen. Wat vonden archeologen ónder de stenen?"],
         uitlegPad: {
           stappen: [{ titel: "Oudste monumenten NL", tekst: "Hunebedden = grote stenen graven uit ~3000 v.Chr. Gebouwd door de Trechterbekercultuur (TRB). Vooral in Drenthe (52 van de 54 in NL). Per hunebed: enorme stenen (10-25 ton) bovenop kleinere." }],
           woorden: [{ woord: "hunebed", uitleg: "Megalitisch graf van zwerfkeien. Oudste monument NL (~5000 jaar oud)." }, { woord: "Trechterbekercultuur", uitleg: "Neolithische cultuur in Noord-NL/Duitsland (~3400-2800 v.Chr.). Genoemd naar trechter-vormige potten." }],
@@ -135,14 +135,14 @@ const steps = [
   },
   {
     title: "Tijdvak 2 — Grieken en Romeinen (3000 v.Chr. – 500)",
-    explanation: "Met de uitvinding van het **schrift** begint de **echte geschiedenis** (vandaar het einde van de prehistorie). In dit lange tijdvak staan twee culturen centraal die enorm veel invloed hebben gehad op Europa: **Grieken** en **Romeinen**.\n\n**De Grieken** (~800 – 146 v.Chr.)\n• **Stadstaten**: Athene, Sparta, Korinthe.\n• Athene: eerste **democratie** (~500 v.Chr.) — burgers stemden zelf.\n• Filosofie: **Socrates, Plato, Aristoteles**.\n• Olympische Spelen, theater, wiskunde (Pythagoras!).\n\n**De Romeinen** (~750 v.Chr. – 476 n.Chr.)\n• Begonnen als stad → werd een **enorm rijk** rond de Middellandse Zee.\n• **Latijn**: hun taal, basis van Frans/Spaans/Italiaans en veel Nederlandse leenwoorden.\n• Rechtssysteem, wegen, aquaducten, beton.\n• Romeinen in Nederland: **limes** (grens) langs de Rijn, forten bij Nijmegen en Utrecht.\n• 476 n.Chr.: **Val van het West-Romeinse Rijk** — einde tijdvak 2.\n\n**Onthoud**: schrift, democratie (Grieken), wegen + recht (Romeinen).",
+    explanation: "Met de uitvinding van het **schrift** begint de **echte geschiedenis** (vandaar het einde van de prehistorie). In dit lange tijdvak staan twee culturen centraal die enorm veel invloed hebben gehad op Europa: **Grieken** en **Romeinen**.\n\n**De Grieken** (~800 – 146 v.Chr.)\n• **Stadstaten**: Athene, Sparta, Korinthe.\n• Athene: eerste **democratie** (~500 v.Chr.) — burgers stemden zelf.\n• Filosofie: **Socrates, Plato, Aristoteles**.\n• Olympische Spelen, theater, wiskunde (Pythagoras!).\n\n**De Romeinen** (~750 v.Chr. – 476 n.Chr.)\n• Begonnen als stad → werd een **enorm rijk** rond de Middellandse Zee.\n• **Latijn**: hun taal, basis van Frans/Spaans/Italiaans en veel Nederlandse leenwoorden.\n• Rechtssysteem, wegen, aquaducten, beton.\n• Romeinen in Nederland: **limes** (grens) langs de Rijn, forten bij Nijmegen en Utrecht.\n• 476 n.Chr.: **Val van het West-Romeinse Rijk** — rond 500 eindigt tijdvak 2.\n\n**Onthoud**: schrift, democratie (Grieken), wegen + recht (Romeinen).",
     svg: tijdlijnSvg(1),
     checks: [
       {
         q: "Waar werd **democratie** voor het eerst ingevoerd?",
-        options: ["Athene (Griekenland)", "Rome", "Sparta", "Egypte"],
+        options: ["Athene", "Rome", "Sparta", "Egypte"],
         answer: 0,
-        wrongHints: [null, "Rome was eerst een republiek, pas later een keizerrijk — geen democratie zoals Athene.", "Sparta had juist een militaire koningsregering, geen democratie.", "Egypte had farao's — absolute monarchen."],
+        wrongHints: [null, "In Rome had de senaat van rijke families het meeste te zeggen, en later keizers. Waar ontstond voor het eerst een volksvergadering van gewone burgers?", "Sparta had juist een militaire koningsregering, geen democratie.", "Egypte had farao's — absolute monarchen."],
         uitlegPad: {
           stappen: [{ titel: "Athene ~500 v.Chr.", tekst: "Eerste democratie in Athene (~508 v.Chr., onder Cleisthenes). Volwassen mannelijke burgers stemden in volksvergadering over wetten en oorlog. Niet voor vrouwen, slaven, vreemdelingen — eerste vorm, niet perfect." }],
           woorden: [{ woord: "democratie", uitleg: "Volk-bestuur. Athene 5e eeuw v.Chr. = eerste gedocumenteerde vorm." }, { woord: "demos", uitleg: "Grieks voor 'volk'. 'Kratos' = macht. Democratie = volksmacht." }],
@@ -154,16 +154,16 @@ const steps = [
       },
       {
         q: "Wanneer eindigt tijdvak 2?",
-        options: ["476 — val van het West-Romeinse Rijk", "1492 — ontdekking Amerika", "1789 — Franse Revolutie", "1945 — einde WO2"],
+        options: ["Rond 500, na de val van Rome", "Rond 0, bij de geboorte van Jezus", "Rond 800, met keizer Karel de Grote", "Rond 1000, als de steden groeien"],
         answer: 0,
-        wrongHints: [null, "Dat is in tijdvak 5 — Ontdekkers en hervormers.", "Dat is tijdvak 7.", "Dat is tijdvak 9."],
+        wrongHints: [null, "Het jaar 0 is het begin van onze jaartelling, maar de Romeinen bleven daarna nog eeuwen de baas: denk aan de limes langs de Rijn.", "Karel de Grote werd in 800 tot keizer gekroond, maar hij hoort bij de monniken en ridders van het volgende tijdvak.", "Rond 1000 begint juist tijdvak 4, als de steden groeien. Tijdvak 2 was toen al lang voorbij."],
         uitlegPad: {
-          stappen: [{ titel: "Val Rome 476", tekst: "Tijdvak 2 eindigt in 476 met val van het West-Romeinse Rijk. Germaanse stam onder Odoaker zette laatste keizer Romulus Augustulus af. Begin Middeleeuwen (tijdvak 3)." }],
+          stappen: [{ titel: "Rond 500: val van West-Rome", tekst: "Tijdvak 2 eindigt rond 500. Het ijkpunt is 476: de val van het West-Romeinse Rijk. Een Germaanse stam onder Odoaker zette de laatste keizer Romulus Augustulus af. Daarna begint de middeleeuwen (tijdvak 3)." }],
           woorden: [{ woord: "Val van Rome", uitleg: "Einde West-Romeinse Rijk in 476. Oost-Romeinse Rijk (Byzantium) leefde nog 1000 jr door." }, { woord: "Romulus Augustulus", uitleg: "Laatste keizer van West-Rome. Afgezet 4 sept 476." }],
-          theorie: "Belangrijke jaartallen om te onthouden: 3000 v.Chr. (begin tijdvak 2), 476 (einde 2 / begin 3), 1500 (begin 5), 1789 (Franse Revolutie tijdvak 7), 1900 (begin 9), 1945 (einde 9).",
+          theorie: "Belangrijke jaartallen om te onthouden: 3000 v.Chr. (begin tijdvak 2), rond 500 (einde 2 / begin 3; val West-Rome in 476), 1500 (begin 5), 1789 (Franse Revolutie tijdvak 7), 1900 (begin 9), 1945 (einde 9).",
           voorbeelden: [{ type: "tijdlijn", tekst: "476 = scharnierpunt. Daarvoor: Romeinen domineren Europa. Daarna: chaos, Germaanse koninkrijken, opkomst Kerk." }],
-          basiskennis: [{ onderwerp: "Andere jaartallen", uitleg: "1492 = ontdekking Amerika (tijdvak 5). 1789 = FR (tijdvak 7). 1945 = WO2 einde (tijdvak 9)." }],
-          niveaus: { basis: "476 Val Rome.", simpeler: "Tijdvak 2 (Grieken+Romeinen) eindigt in 476 met val West-Romeinse Rijk.", nogSimpeler: "476" },
+          basiskennis: [{ onderwerp: "Andere jaartallen", uitleg: "Jaar 0 = begin van de jaartelling, midden in tijdvak 2. 800 = Karel de Grote keizer (tijdvak 3). 1000 = begin tijdvak 4." }],
+          niveaus: { basis: "Rond 500 (val Rome 476).", simpeler: "Tijdvak 2 (Grieken+Romeinen) eindigt rond 500, met de val van het West-Romeinse Rijk (476).", nogSimpeler: "Rond 500" },
         },
       },
     ],
@@ -177,9 +177,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het **feodale stelsel**?",
-        options: ["Koning geeft land aan ridders, die hem in ruil daarvoor beschermen", "Iedereen mag stemmen voor de koning", "Het systeem van Romeinse legerkampen", "Een soort handelsroute"],
+        options: ["Koning geeft land, ridders beloven trouw", "Burgers kiezen wie hun koning wordt", "Boeren werken samen op gedeelde grond", "Handel tussen steden via gilden"],
         answer: 0,
-        wrongHints: [null, "Stemmen speelde hier geen rol — dat kwam pas met de moderne democratie (tijdvak 8+).", "Romeinse legerkampen = tijdvak 2.", "Een handelsroute is iets anders."],
+        wrongHints: [null, "Stemmen speelde hier geen rol: dat kwam pas met de moderne democratie (tijdvak 8+).", "Gedeelde grond (de meent) bestond wel, maar daar gaat het feodale stelsel niet over.", "Gilden en handel horen bij de steden. Het feodale stelsel speelde vooral op het platteland."],
         uitlegPad: {
           stappen: [{ titel: "Land voor bescherming", tekst: "Feodaal stelsel = piramide. Koning bovenaan → geeft LEEN (stuk land) aan ridder/leenheer → die ridder belooft trouw + leveren van soldaten in oorlog. Boeren onderaan werken op het land in ruil voor bescherming." }],
           woorden: [{ woord: "feodaal stelsel", uitleg: "Middeleeuws systeem van wederzijdse verplichtingen: land tegen trouw + bescherming." }, { woord: "leenheer", uitleg: "Persoon die land in leen GEEFT (boven in piramide)." }, { woord: "leenman", uitleg: "Persoon die land in leen ONTVANGT en trouw belooft." }, { woord: "horige", uitleg: "Boer aan het land gebonden — niet vrij om weg te gaan." }],
@@ -193,7 +193,7 @@ const steps = [
         q: "Wie werd in 800 tot keizer gekroond door de paus?",
         options: ["Karel de Grote", "Julius Caesar", "Willem van Oranje", "Napoleon"],
         answer: 0,
-        wrongHints: [null, "Caesar leefde rond 100-44 v.Chr. — tijdvak 2.", "Willem van Oranje = tijdvak 5/6 (16e eeuw).", "Napoleon = tijdvak 7 (1800)."],
+        wrongHints: [null, "Caesar leefde rond 100-44 v.Chr. — tijdvak 2.", "Willem van Oranje leefde in de 16e eeuw, ruim 700 jaar later.", "Napoleon kroonde zich in 1804 tot keizer, duizend jaar later."],
         uitlegPad: {
           stappen: [{ titel: "Karel de Grote 800", tekst: "Karel de Grote (768-814) was koning van de Franken. Bouwde een groot rijk dat Frankrijk + Duitsland + NL + Noord-Italië besloeg. In jaar 800 werd hij in Rome door de paus tot KEIZER gekroond — symbool van macht + christelijke legitimering." }],
           woorden: [{ woord: "Karel de Grote", uitleg: "Frankisch koning (768-814). Eerste 'keizer' van Europa sinds val Rome. Voorloper Heilige Romeinse Rijk." }, { woord: "kroning", uitleg: "Officiële ceremonie waarin iemand koning/keizer wordt. Vaak door paus = goddelijk gezag." }],
@@ -212,9 +212,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn **gilden**?",
-        options: ["Organisaties van ambachtslieden in steden", "Soort kerkgebouwen", "Romeinse soldaten", "Vikinglegers"],
+        options: ["Organisaties van ambachtslieden in steden", "Bondgenootschap van handelssteden", "Groepen monniken in een klooster", "Groepen ridders die samen vochten"],
         answer: 0,
-        wrongHints: [null, "Kerken zijn iets anders — die hadden monniken.", "Romeinen waren tijdvak 2.", "Vikingen waren tijdvak 3."],
+        wrongHints: [null, "Dat is de Hanze. Een gilde was kleiner.", "Dat is een kloosterorde. Gilden bestonden niet uit monniken.", "Dat is een ridderorde, zoals de Tempeliers."],
         uitlegPad: {
           stappen: [{ titel: "Beroepsverenigingen", tekst: "Gilden = middeleeuwse organisaties van vakgenoten in steden: bakkersgilde, smedengilde, weversgilde. Regelden prijzen, kwaliteit, opleiding (leerling→gezel→meester). Soort 'vakbond'." }],
           woorden: [{ woord: "gilde", uitleg: "Beroepsorganisatie van ambachtslieden, vooral 13e-17e eeuw." }, { woord: "meesterproef", uitleg: "Test om van gezel meester te worden — toelating tot gilde." }],
@@ -226,9 +226,9 @@ const steps = [
       },
       {
         q: "Wat veranderde de **boekdrukkunst** (~1450)?",
-        options: ["Boeken werden veel goedkoper en kennis verspreidde sneller", "De Romeinen vonden Nederland", "Kastelen werden gebouwd", "Het christendom werd verboden"],
+        options: ["Boeken werden goedkoper, kennis ging sneller rond", "Kinderen moesten naar school om te leren lezen", "Boeken kregen mooiere, gekleurde plaatjes", "De Kerk kreeg meer grip op wat mensen lazen"],
         answer: 0,
-        wrongHints: [null, "Romeinen kwamen veel eerder — tijdvak 2.", "Kastelen werden vooral in tijdvak 3-4 gebouwd, los van de drukpers.", "Christendom bleef heel sterk."],
+        wrongHints: [null, "Een leerplicht kwam er in Nederland pas in 1901. Wat veranderde er rond 1450 aan de boeken zelf?", "Prachtig versierde handschriften maakten monniken al eeuwen. Wat kon een drukpers wat een monnik niet kon?", "Juist andersom: denk aan Luther, wiens ideeën ineens overal te lezen waren."],
         uitlegPad: {
           stappen: [{ titel: "Massa-kopie van kennis", tekst: "Tot 1450 moesten monniken boeken HAND-KOPIËREN — maanden werk, peperduur. Gutenbergs drukpers (~1450) kon honderden kopieën maken. Boeken werden veel goedkoper, kennis breed beschikbaar." }],
           woorden: [{ woord: "boekdrukkunst", uitleg: "Mechanische druk met losse letters. Gutenberg ~1450 in Mainz." }, { woord: "Gutenberg-bijbel", uitleg: "Eerste grote boek in Europa gedrukt met losse letters (~1455). Symbool van revolutie." }],
@@ -249,9 +249,9 @@ const steps = [
     checks: [
       {
         q: "Wat deed **Maarten Luther** in 1517?",
-        options: ["Plakte 95 stellingen op de kerkdeur als protest", "Ontdekte Amerika", "Werd koning van Nederland", "Vond de boekdrukkunst uit"],
+        options: ["Hing 95 stellingen op als protest", "Werd tot paus gekozen in Rome", "Vertaalde de bijbel in het Nederlands", "Begon de opstand tegen Spanje"],
         answer: 0,
-        wrongHints: [null, "Dat was Columbus, in 1492.", "Nederland had toen nog geen eigen koning — het hoorde bij het rijk van keizer Karel V.", "Boekdrukkunst was eerder, ~1450 (Gutenberg)."],
+        wrongHints: [null, "Luther werd door de paus juist uit de Kerk gezet.", "Luther vertaalde de bijbel in het Duits. De Nederlandse Statenbijbel kwam pas in 1637.", "Dat was Willem van Oranje, vanaf 1568."],
         uitlegPad: {
           stappen: [{ titel: "95 stellingen Wittenberg", tekst: "31 oktober 1517: Maarten Luther (Duits monnik) plakt 95 stellingen op de slotkerkdeur in Wittenberg. Protest tegen aflaten-handel + corruptie katholieke kerk. Begin van REFORMATIE." }],
           woorden: [{ woord: "95 stellingen", uitleg: "Luthers lijst van bezwaren tegen katholieke praktijken. Schriftelijk protest." }, { woord: "aflaten", uitleg: "Pauselijke 'vergevingsbriefjes' tegen betaling — Luther vond dit corrupt." }, { woord: "Reformatie", uitleg: "Kerk-hervormingsbeweging 16e eeuw. Splitsing katholiek vs protestants." }],
@@ -265,7 +265,7 @@ const steps = [
         q: "Wanneer begint de **Tachtigjarige Oorlog**?",
         options: ["1568", "1492", "1815", "1914"],
         answer: 0,
-        wrongHints: [null, "Dat is Columbus' jaar.", "Dat is na Napoleon — tijdvak 8.", "Dat is begin WO1 — tijdvak 9."],
+        wrongHints: [null, "In 1492 bereikte Columbus Amerika.", "In 1815 werd Napoleon definitief verslagen.", "In 1914 begon de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1568 begin, 1648 einde", tekst: "Tachtigjarige Oorlog = NL-opstand tegen Spaanse koning Filips II. Officieel begin: 1568 (slag bij Heiligerlee). Einde: 1648 (Vrede van Münster) — Spanje erkent NL-onafhankelijkheid. 80 jaar oorlog ertussen." }],
           woorden: [{ woord: "Tachtigjarige Oorlog", uitleg: "1568-1648. NL-opstand tegen Spanje, leidde tot Republiek der Zeven Verenigde Nederlanden." }, { woord: "Willem van Oranje", uitleg: "Leider van NL-opstand. 'Vader des vaderlands'. Vermoord 1584." }],
@@ -284,9 +284,9 @@ const steps = [
     checks: [
       {
         q: "Wat was de **VOC**?",
-        options: ["Een handelsbedrijf dat handel dreef in Azië", "Een politieke partij in Nederland", "Het Romeinse leger", "Een protestantse kerk"],
+        options: ["Handelsbedrijf met schepen naar Azië", "Handelsbedrijf met schepen naar Amerika", "De oorlogsvloot van de Republiek", "Een grote bank in Amsterdam"],
         answer: 0,
-        wrongHints: [null, "Politieke partijen zoals nu kwamen pas in de 19e eeuw — tijdvak 8.", "Romeinen = tijdvak 2.", "VOC was een handelsbedrijf, geen kerk."],
+        wrongHints: [null, "Dat was de WIC (West-Indische Compagnie). De VOC voer de andere kant op.", "De VOC had wel kanonnen aan boord, maar was geen marine.", "Dat was de Amsterdamse Wisselbank. De VOC deed iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Eerste multinational ter wereld", tekst: "VOC = Vereenigde Oost-Indische Compagnie, opgericht 1602. Handel in specerijen uit Indonesië. Had eigen leger + vloot + recht om oorlog te voeren. Verdiende fortuin in Gouden Eeuw — basis Nederlandse welvaart." }],
           woorden: [{ woord: "VOC", uitleg: "1602-1799. Specerijen-handelsbedrijf met staats-rechten." }, { woord: "WIC", uitleg: "West-Indische Compagnie. Handel + kolonisatie Amerika + Afrika (ook slavenhandel)." }, { woord: "aandeel", uitleg: "Stukje eigendom van de VOC. Daarin werd in Amsterdam gehandeld — een van de eerste beurzen." }],
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "Wie was **Lodewijk XIV**?",
-        options: ["Absolute koning van Frankrijk ('Zonnekoning')", "Engelse koning", "Nederlandse stadhouder", "Spaanse keizer"],
+        options: ["Absolute koning van Frankrijk", "Koning van Engeland en Schotland", "Stadhouder van de Republiek", "Koning tijdens de Franse Revolutie"],
         answer: 0,
-        wrongHints: [null, "Engelse koningen heetten in deze tijd vaak Charles of James.", "Stadhouders waren Oranjes (Willem III bv.).", "Spanje had koningen, geen keizers — en Lodewijk regeerde niet in Spanje."],
+        wrongHints: [null, "Engelse koningen heetten in deze tijd vaak Charles of James.", "Stadhouders waren Oranjes (Willem III bijvoorbeeld).", "Dat was Lodewijk XVI, ruim honderd jaar later."],
         uitlegPad: {
           stappen: [{ titel: "Zonnekoning Frankrijk", tekst: "Lodewijk XIV (1638-1715) = absolute koning van Frankrijk, 72 jaar geregeerd. Symbool: zon. Quote: \"L'État, c'est moi\" (de staat, dat ben ik). Bouwde paleis Versailles als statussymbool." }],
           woorden: [{ woord: "Lodewijk XIV", uitleg: "Franse koning 1643-1715. Symbool van absolute monarchie." }, { woord: "absolute monarchie", uitleg: "Koning heeft ALLE macht, geen parlement, geen beperkingen." }, { woord: "Versailles", uitleg: "Reusachtig paleis bij Parijs. Symbool van Lodewijks macht + adel onder controle." }],
@@ -319,9 +319,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **trias politica**?",
-        options: ["Scheiding tussen wetgevende, uitvoerende en rechtsprekende macht", "Drie soorten kerken", "Drie keizers in Rome", "Een drie-eenheid in het christendom"],
+        options: ["Macht verdeeld over wetgeven, besturen en rechtspreken", "Indeling van de bevolking in drie standen", "Bestuur door gemeente, provincie en het Rijk", "Drie mannen die samen het Romeinse Rijk bestuurden"],
         answer: 0,
-        wrongHints: [null, "Niets met kerk — het gaat over politieke macht.", "Romeinse keizers zijn een ander thema.", "Drie-eenheid is een godsdienstig idee, geen politiek systeem."],
+        wrongHints: [null, "Dat zijn de drie standen (geestelijkheid, adel, volk). De trias politica gaat over iets anders.", "Dat zijn bestuurslagen. Montesquieu bedoelde iets anders.", "Dat heet een triumviraat. De trias politica is een idee uit de 18e eeuw."],
         uitlegPad: {
           stappen: [{ titel: "Macht in 3 delen", tekst: "Trias politica = bedacht door Montesquieu (1748). Drie machten gescheiden: WETGEVEND (parlement maakt wetten), UITVOEREND (regering voert uit), RECHTSPREKEND (rechters oordelen). Doel: voorkomen dat 1 persoon alles kan." }],
           woorden: [{ woord: "trias politica", uitleg: "Latijn: 'drie machten'. Filosofisch principe achter moderne rechtsstaten." }, { woord: "Montesquieu", uitleg: "Frans Verlichtingsdenker. Boek 'De l'esprit des lois' (1748)." }],
@@ -335,7 +335,7 @@ const steps = [
         q: "Wanneer was de **Franse Revolutie**?",
         options: ["1789", "1568", "1492", "1914"],
         answer: 0,
-        wrongHints: [null, "Dat was begin Tachtigjarige Oorlog — tijdvak 5.", "Dat was Columbus.", "Dat was begin WO1."],
+        wrongHints: [null, "In 1568 begon de Tachtigjarige Oorlog.", "In 1492 bereikte Columbus Amerika.", "In 1914 begon de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1789 — bestorming Bastille", tekst: "Franse Revolutie begon 14 juli 1789 met bestorming van de Bastille (gevangenis Parijs). Het volk in opstand tegen koning Lodewijk XVI + zware belastingen + adelvoorrechten. Slogan: 'Vrijheid, Gelijkheid, Broederschap'." }],
           woorden: [{ woord: "Franse Revolutie", uitleg: "1789-1799. Volksopstand tegen monarchie + standenmaatschappij." }, { woord: "guillotine", uitleg: "Onthoofdingsmachine. Lodewijk XVI + Marie-Antoinette werden er in 1793 mee gedood." }, { woord: "Verklaring Rechten van de Mens", uitleg: "Augustus 1789. Eerste moderne grondrechten-verklaring." }],
@@ -356,9 +356,9 @@ const steps = [
     checks: [
       {
         q: "Wat veranderde door de **stoommachine**?",
-        options: ["Fabrieken, treinen en massaproductie kwamen op", "Iedereen kreeg een computer", "Romeinen werden machtig", "De middeleeuwen begonnen"],
+        options: ["Er kwamen fabrieken, treinen en massaproductie", "Er kwamen elektriciteit, auto's en vliegtuigen", "Er kwamen windmolens, zaagmolens en grachten", "Er kwamen meer boerderijen, dorpen en akkers"],
         answer: 0,
-        wrongHints: [null, "Computers = tijdvak 10.", "Romeinen = tijdvak 2.", "Middeleeuwen begonnen in tijdvak 3."],
+        wrongHints: [null, "Elektriciteit, auto's en vliegtuigen kwamen pas rond 1900, ná de stoommachine.", "Windmolens en zaagmolens draaiden al in de Gouden Eeuw, op windkracht. Wat kon er met stoom?", "Waar was opeens veel werk te vinden: in de dorpen of in de steden?"],
         uitlegPad: {
           stappen: [{ titel: "Industriële revolutie", tekst: "Stoommachine (verbeterd door James Watt 1769) gaf MASSALE krachtbron. Fabrieken konden produceren zonder mens-kracht. Trein verving paard. Stoomschepen vervangen zeilboten. Massale verstedelijking + arbeidersklasse." }],
           woorden: [{ woord: "stoommachine", uitleg: "Apparaat dat warmte (kolen → stoom) omzet in beweging. Basis industriële revolutie." }, { woord: "industriële revolutie", uitleg: "Overgang van hand-arbeid naar mechanische productie, ~1750-1900. Begin in Engeland." }],
@@ -372,13 +372,13 @@ const steps = [
         q: "Wanneer kwam de **Nederlandse grondwet** van Thorbecke?",
         options: ["1848", "1568", "1789", "1914"],
         answer: 0,
-        wrongHints: [null, "Begin Tachtigjarige Oorlog — tijdvak 5.", "Franse Revolutie — tijdvak 7.", "Begin WO1 — tijdvak 9."],
+        wrongHints: [null, "In 1568 begon de Tachtigjarige Oorlog.", "In 1789 begon de Franse Revolutie.", "In 1914 begon de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1848 grondwet Thorbecke", tekst: "Thorbecke schreef de nieuwe grondwet in 1848, het revolutiejaar in Europa. Koning Willem II werd naar eigen zeggen 'in 24 uur van zeer conservatief zeer liberaal'. Sindsdien: ministers verantwoordelijk, koning veel minder macht. Basis huidige democratie." }],
           woorden: [{ woord: "Thorbecke", uitleg: "Johan Rudolf Thorbecke (1798-1872). Liberaal staatsman. Vader Nederlandse grondwet." }, { woord: "constitutionele monarchie", uitleg: "Koning blijft, maar parlement heeft echte macht. Modern NL-model." }],
           theorie: "Voor 1848: koning had veel macht. Na 1848: ministers verantwoordelijk aan parlement, niet alleen aan koning. Kiesrecht eerst alleen rijken (censuskiesrecht), later algemeen (1917 mannen, 1919 vrouwen).",
           voorbeelden: [{ type: "context", tekst: "1848 was revolutiejaar in heel Europa. Veel landen kregen toen grondwet. NL deed het netjes via Thorbecke, geen geweld." }],
-          basiskennis: [{ onderwerp: "Niet andere jaartallen", uitleg: "1568 = Tachtigjarige Oorlog (tijdvak 5). 1789 = Franse Revolutie (tijdvak 7). 1914 = WO1 (tijdvak 9)." }],
+          basiskennis: [{ onderwerp: "Niet andere jaartallen", uitleg: "1568 = begin Tachtigjarige Oorlog. 1789 = Franse Revolutie. 1914 = begin WO1." }],
           niveaus: { basis: "1848.", simpeler: "NL-grondwet kwam in 1848 — Thorbecke maakte 'm. Koning kreeg minder macht.", nogSimpeler: "1848" },
         },
       },
@@ -408,7 +408,7 @@ const steps = [
           null,
           "Dat is wapenstilstand WO1.",
           "Dat is de capitulatie van Japan — einde wereldoorlog, maar Nederland was al bevrijd.",
-          "Dat is de val van de Berlijnse Muur — tijdvak 10.",
+          "Dat is de val van de Berlijnse Muur, veel later.",
         ],
       },
     ],
@@ -420,23 +420,23 @@ const steps = [
     checks: [
       {
         q: "Wat gebeurde er in 1989?",
-        options: ["De Berlijnse Muur viel", "WO2 begon", "Nederland werd onafhankelijk", "De boekdrukkunst werd uitgevonden"],
+        options: ["De Berlijnse Muur viel", "Duitsland werd herenigd", "De Sovjet-Unie viel uiteen", "De euro werd ingevoerd"],
         answer: 0,
-        wrongHints: [null, "WO2 begon in 1939.", "De Nederlandse onafhankelijkheid werd bezegeld door de Vrede van Münster — maar dat was al ver vóór 1989.", "De boekdrukkunst (Gutenberg) dateert al van de 15e eeuw — veel eerder."],
+        wrongHints: [null, "De hereniging volgde bijna een jaar later, op 3 oktober 1990.", "Dat gebeurde eind 1991.", "De euro kwam pas in 1999, en als munt in je portemonnee in 2002."],
         uitlegPad: {
           stappen: [{ titel: "9 november 1989 — Muur valt", tekst: "De Berlijnse Muur (gebouwd 1961) scheidde Oost- en West-Berlijn 28 jaar lang. Op 9 november 1989 mocht het Oost-Duitse volk plots vrij naar het westen. Mensen sloegen de muur eigenhandig kapot. Symbool van het einde Koude Oorlog." }],
           woorden: [{ woord: "Berlijnse Muur", uitleg: "Betonnen muur 1961-1989 die Berlijn in tweeën deelde. Symbool IJzeren Gordijn." }, { woord: "IJzeren Gordijn", uitleg: "Term Churchill: scheidslijn tussen democratisch West-Europa en communistisch Oost-Europa." }],
           theorie: "Gevolgen: Duitse hereniging (3 oktober 1990). Einde Sovjet-Unie (1991). Oost-Europese landen werden democratisch + traden later toe tot EU en NAVO. Start tijdvak-10 fase 'na Koude Oorlog'.",
           voorbeelden: [{ type: "context", tekst: "Niet alleen Berlijn — in 1989 vielen communistische regimes in Polen, Hongarije, Tsjechoslowakije, Roemenië. Heel Oost-Europa veranderde in 1 jaar." }],
-          basiskennis: [{ onderwerp: "Niet andere jaartallen", uitleg: "1939 = begin WO2. 1648 = Vrede van Münster (NL onafhankelijk). 1450 = boekdrukkunst Gutenberg." }],
+          basiskennis: [{ onderwerp: "Niet andere jaartallen", uitleg: "3 oktober 1990 = Duitse hereniging. Eind 1991 = einde Sovjet-Unie. 1999/2002 = invoering euro. Allemaal gevolgen die pas ná de val van de Muur kwamen." }],
           niveaus: { basis: "Muur viel.", simpeler: "1989 = Berlijnse Muur viel, einde Koude Oorlog.", nogSimpeler: "Muur weg" },
         },
       },
       {
         q: "Wat is de **Koude Oorlog**?",
-        options: ["Spanning tussen VS en Sovjet-Unie zonder open oorlog", "Een oorlog in Antarctica", "Een oorlog uit de middeleeuwen", "De Tachtigjarige Oorlog"],
+        options: ["Spanning tussen VS en Sovjet-Unie", "Oorlog tussen Noord- en Zuid-Korea", "Duitse aanval op Rusland in de winter", "Vlootwedloop van Duitsland en Engeland"],
         answer: 0,
-        wrongHints: [null, "Niet letterlijk koud qua temperatuur — figuurlijk.", "Middeleeuwen = tijdvak 3-4.", "Tachtigjarige Oorlog = tijdvak 5-6."],
+        wrongHints: [null, "Dat was de Korea-oorlog, een 'hete' oorlog binnen de Koude Oorlog.", "'Koud' is hier figuurlijk, niet het weer.", "Die wedloop was vóór de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1945-1989 — twee blokken", tekst: "Na WO2 stonden 2 supermachten tegenover elkaar: VS (kapitalisme/democratie) en Sovjet-Unie (communisme/dictatuur). Géén directe oorlog tussen hen (vandaar 'koud'), maar wel wapenwedloop, ruimterace, kernwapens, spionage, en proxy-oorlogen (Korea, Vietnam, Afghanistan)." }],
           woorden: [{ woord: "Koude Oorlog", uitleg: "1945-1989. Spanning tussen VS en USSR zonder open militair conflict tussen hen direct." }, { woord: "wapenwedloop", uitleg: "Beide kanten bouwden steeds meer en grotere kernwapens. Op piek: 70.000 kernkoppen." }, { woord: "proxy-oorlog", uitleg: "Conflict in derde land waar beide machten zich mee bemoeien (Korea, Vietnam, Afghanistan)." }],
@@ -457,15 +457,15 @@ const steps = [
     checks: [
       {
         q: "In welk tijdvak hoort de **Tachtigjarige Oorlog** (1568-1648)?",
-        options: ["Tijdvak 5 + 6", "Tijdvak 3", "Tijdvak 8", "Tijdvak 9"],
+        options: ["Tijdvak 5 + 6", "Tijdvak 3 + 4", "Tijdvak 8 + 9", "Tijdvak 6 + 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 3 = vroege middeleeuwen, veel eerder.", "Tijdvak 8 hoort bij de 19e eeuw — klopt dat met de periode 1568-1648?", "Tijdvak 9 gaat over WO1+WO2 — was de Tachtigjarige Oorlog echt zo recent?"],
+        wrongHints: [null, "Tijdvak 3 en 4 zijn de middeleeuwen (500-1500). De Tachtigjarige Oorlog begon later.", "Tijdvak 8 en 9 lopen van 1800 tot 1950: veel te laat.", "Tijdvak 7 begint in 1700. Liep de oorlog toen nog?"],
         uitlegPad: {
           stappen: [{ titel: "1568-1648 = tijdvak 5 + 6", tekst: "Tachtigjarige Oorlog liep van 1568 tot 1648 (80 jaar). 1568 viel in tijdvak 5 (Ontdekkers+hervormers, 1500-1600). 1648 viel in tijdvak 6 (Regenten+vorsten, 1600-1700). De oorlog overspant dus beide tijdvakken." }],
           woorden: [{ woord: "Tachtigjarige Oorlog", uitleg: "1568-1648. NL-opstand tegen Spanje. Begin door Willem van Oranje. Einde Vrede van Münster." }],
           theorie: "Tijdvak 5 = begin opstand + ontdekkingsreizen + Reformatie. Tijdvak 6 = Gouden Eeuw + einde oorlog + VOC-bloei. De oorlog koppelt deze tijdvakken aan elkaar.",
           voorbeelden: [{ type: "tijdlijn", tekst: "1568 (tijdvak 5) → 1572 inname Den Briel → 1588 begin Republiek → 1602 VOC (tijdvak 6) → 1648 Vrede van Münster." }],
-          basiskennis: [{ onderwerp: "Niet andere tijdvakken", uitleg: "Tijdvak 3 = vroege middeleeuwen, veel eerder. Tijdvak 8 = 19e eeuw. Tijdvak 9 = WO1+WO2." }],
+          basiskennis: [{ onderwerp: "Niet andere tijdvakken", uitleg: "Tijdvak 3 + 4 = middeleeuwen, veel eerder. Tijdvak 6 + 7: in 1648 was de oorlog al voorbij, vóór tijdvak 7 (1700) begon. Tijdvak 8 + 9 = 19e en 20e eeuw, veel te laat." }],
           niveaus: { basis: "Tijdvak 5+6.", simpeler: "Tachtigjarige Oorlog 1568-1648 valt in tijdvak 5 (begin) + 6 (einde).", nogSimpeler: "5+6" },
         },
       },
@@ -473,7 +473,7 @@ const steps = [
         q: "In welk tijdvak hoort **Columbus' ontdekking van Amerika** (1492)?",
         options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 3", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 3 = vroege middeleeuwen (500-1000). Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
+        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 3 is de tijd van monniken en ridders (500-1000). Ligt 1492 daar niet ver na?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
           stappen: [{ titel: "1492 → kenmerk tijdvak 5", tekst: "1492 ligt op de grens tussen tijdvak 4 (Steden+staten, 1000-1500) en tijdvak 5 (Ontdekkers+hervormers, 1500-1600). Maar 'ontdekkingsreizen' is het BELANGRIJKSTE kenmerk van tijdvak 5. Dus Columbus = tijdvak 5." }],
           woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op de Bahama's." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],

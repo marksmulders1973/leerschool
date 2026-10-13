@@ -29,7 +29,7 @@ const steps = [
         q: "**Schat 28 × 41**. Welk antwoord komt het dichtst bij?",
         options: ["1200","1500","800","2000"],
         answer: 0,
-        wrongHints: [null,"Te veel — rond 28 en 41 af op tientallen en vermenigvuldig die.","Te weinig — controleer met 30 × 40.","Veel te veel."],
+        wrongHints: [null,"Te veel — rond 28 en 41 af op tientallen en vermenigvuldig die.","Te weinig. 800 is bijvoorbeeld 20 × 40. Naar welk tiental rond je 28 af?","2000 zou 40 × 50 zijn. Naar welke tientallen rond je 28 en 41 af?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: rond beide getallen af op 10", tekst: "28 → afgerond op tientallen = **30**. 41 → afgerond op tientallen = **40**." },
@@ -55,15 +55,15 @@ const steps = [
       },
       {
         q: "**Wanneer is schatten handig**?",
-        options: ["Snel checken of een antwoord klopt","Alleen bij de Doorstroomtoets","Nooit — altijd precies","Alleen bij grote getallen"],
+        options: ["Om snel te checken of een antwoord klopt","Om de precieze uitkomst sneller te vinden","Om een getal op een tiental te laten eindigen","Om een lange som korter op te schrijven"],
         answer: 0,
-        wrongHints: [null,"Niet alleen bij de Doorstroomtoets — overal in echte rekensommen.","Wel handig — een snelle check is waardevol.","Ook bij kleine getallen kun je schatten."],
+        wrongHints: [null,"Een schatting geeft een ruwe uitkomst, geen precieze. Wat kun je met zo'n ruwe uitkomst wel?","Dat is afronden van één getal. Schatten gaat over een hele berekening: waarvoor gebruik je die ruwe uitkomst?","Bij schatten schrijf je de som niet anders op, je rekent met ronde getallen. Wat heb je aan die uitkomst?"],
       },
       {
         q: "**Schat het totaal**: € 4,80 + € 7,20 + € 12,30",
         options: ["€ 24","€ 22","€ 26","€ 30"],
         answer: 0,
-        wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Veel te veel."],
+        wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel op.","Rond € 4,80, € 7,20 en € 12,30 af op hele euro's. Welke drie bedragen tel je dan op?","€ 30 is zelfs meer dan alle bedragen naar boven afgerond. Hoe rond je € 7,20 en € 12,30 af?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -72,14 +72,14 @@ const steps = [
           "Een antwoord bijna goed geven, niet precies",
           "Een antwoord tot op de cent precies uitrekenen",
           "Een antwoord opschrijven zonder na te denken",
-          "Een getal altijd naar beneden maken",
+          "Een getal afronden met een vaste regel",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Bij schatten hoeft het juist níét precies.",
           "Bij schatten denk je wel na: je rekent met makkelijke getallen.",
-          null,
+          "Dat is afronden: een vaste regel per cijfer. Bij schatten gaat het om een hele som: hoe precies moet die uitkomst zijn?",
         ],
         uitlegPad: {
           stappen: [
@@ -137,8 +137,8 @@ const steps = [
         wrongHints: [
           null,
           "Vergelijk met de schatting 600: is dit ongeveer even groot?",
-          null,
-          "Dat is 300 meer dan de schatting — dat is te ver weg.",
+          "59 is maar ongeveer een tiende van de schatting 600. Kan het echte antwoord zo veel kleiner zijn?",
+          "899 ligt 300 boven de schatting 600. Kan afronden van 213 en 386 zo'n groot verschil geven?",
         ],
         uitlegPad: {
           stappen: [
@@ -441,13 +441,13 @@ const steps = [
         q: "**Rond af op 10: 47**",
         options: ["50","40","45","47"],
         answer: 0,
-        wrongHints: [null,"7 is meer dan 5 — naar boven afronden.","Geen tussen-getal — kies 40 of 50.","Niet afgerond."],
+        wrongHints: [null,"Kijk naar het cijfer van de eenheden: 7. Ligt 47 dichter bij 40 of bij 50?","Bij afronden op 10 eindigt het antwoord op een 0. Eindigt 45 op een 0?","47 is het getal zelf. Afronden op 10 betekent: naar het dichtstbijzijnde tiental. Welke tientallen liggen om 47 heen?"],
       },
       {
         q: "**Rond af op 100: 358**",
         options: ["400","300","350","360"],
         answer: 0,
-        wrongHints: [null,"5 in tientallen → naar boven.","Niet op 100 afgerond — dat is op 10.","Niet op 100 afgerond — dat is op 10."],
+        wrongHints: [null,"Kijk naar het cijfer van de tientallen in 358: een 5. Wat zegt de regel bij een 5?","350 eindigt niet op 00. Tussen welke twee honderdtallen kies je bij afronden op 100?","360 is 358 afgerond op 10. Naar welk honderdtal rond je af?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: welk cijfer telt?", tekst: "Bij afronden op **100** kijk je naar het cijfer in de **tientallen** (de '5' in 358)." },
@@ -475,7 +475,7 @@ const steps = [
         q: "**Rond af op 1000: 4500**",
         options: ["5000","4000","4500","5500"],
         answer: 0,
-        wrongHints: [null,"5 in honderden → naar boven (regel).","Niet afgerond.","Te veel — bij afronden op 1000 eindigt het getal op 000."],
+        wrongHints: [null,"Het cijfer van de honderdtallen is een 5. Rond je bij een 5 naar boven of naar beneden af?","4500 is het getal zelf. Bij afronden op 1000 moet het op 000 eindigen.","Te veel — bij afronden op 1000 eindigt het getal op 000."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -541,7 +541,7 @@ const steps = [
         q: "**Rond af op 10: 65**",
         options: ["70", "60", "65", "75"],
         answer: 0,
-        wrongHints: [null, "Wat zegt de regel bij een 5?", "Niet afgerond.", "Dat eindigt niet op 0."],
+        wrongHints: [null, "Wat zegt de regel bij een 5?", "65 is het getal zelf. Naar welk tiental rond je af?", "75 eindigt op 5, niet op 0. Welke twee tientallen liggen om 65 heen?"],
         uitlegPad: {
           stappen: [
             {
@@ -892,7 +892,7 @@ const steps = [
         q: "**Schat 198 + 412** (afgerond op 100):",
         options: ["600","500","700","400"],
         answer: 0,
-        wrongHints: [null,"Te weinig — rond elk getal af op honderdtallen en tel ze dan op.","Te veel — controleer afronding.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — rond elk getal af op honderdtallen en tel ze dan op.","198 wordt 200. Naar welk honderdtal rond je 412 af?","Waar ligt 198 dichter bij: 100 of 200? En heb je beide getallen meegeteld?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: rond elk getal af op 100", tekst: "198 → ligt vlakbij 200 (cijfer in tien = 9 = omhoog) → **200**. 412 → ligt vlakbij 400 (cijfer in tien = 1 = omlaag) → **400**." },
@@ -920,7 +920,7 @@ const steps = [
         q: "**Schat 39 × 21** (afgerond op 10):",
         options: ["800","600","1000","900"],
         answer: 0,
-        wrongHints: [null,"Te weinig — rond 39 en 21 af op tientallen en vermenigvuldig die.","Te veel — niet 50 × 20.","Te veel — heb je 30 ipv 20 gerekend?"],
+        wrongHints: [null,"Te weinig — rond 39 en 21 af op tientallen en vermenigvuldig die.","1000 = 50 × 20. Rond je 39 af naar 50 of naar 40?","Te veel — heb je 30 ipv 20 gerekend?"],
       },
       {
         q: "**Schat 732 − 289** (afgerond op 100):",
@@ -1289,19 +1289,19 @@ const steps = [
         q: "Een kassabon: **€ 4,85 + € 7,15 + € 12,40 + € 3,60**. Schat:",
         options: ["€ 28","€ 25","€ 30","€ 22"],
         answer: 0,
-        wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel ze alle vier op.","Te veel — controleer schatting.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel ze alle vier op.","Welke vier hele euro's krijg je na afronden? Tel die nog eens op.","Heb je alle vier de bedragen meegeteld? Ook € 3,60 hoort erbij."],
       },
       {
         q: "Een rit duurt **2 uur 47 min**. Afgerond op kwartiers — hoeveel?",
         options: ["2 uur 45 min","3 uur","2 uur 30 min","3 uur 15 min"],
         answer: 0,
-        wrongHints: [null,"Te veel — welk kwartier (0, 15, 30 of 45 minuten) ligt het dichtst bij 47 minuten?","Te weinig — 47 minuten ligt dichter bij een ander kwartier.","Te veel."],
+        wrongHints: [null,"Te veel — welk kwartier (0, 15, 30 of 45 minuten) ligt het dichtst bij 47 minuten?","Te weinig — 47 minuten ligt dichter bij een ander kwartier.","Je bent een kwartier te ver doorgeschoten. Hoeveel minuten liggen er tussen 2 uur 47 en 3 uur 15?"],
       },
       {
         q: "**€ 49,80 + € 24,30** — schat (rond af op hele euro's):",
         options: ["€ 74","€ 70","€ 80","€ 75"],
         answer: 0,
-        wrongHints: [null,"Te weinig — rond elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Te veel — klopt jouw schatting van beide bedragen?"],
+        wrongHints: [null,"Te weinig — rond elk bedrag af op hele euro's en tel op.","€ 80 krijg je als je € 24,30 naar € 30 afrondt. Is dat afronden op hele euro's?","€ 75 = € 50 + € 25. Rond je € 24,30 af naar € 25 of naar € 24?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -1357,7 +1357,7 @@ const steps = [
         q: "Noor speelt 's middags buiten van **13:05** tot **15:55**. Hoe lang is dat ongeveer?",
         options: ["Ongeveer 3 uur", "Ongeveer 2 uur", "Ongeveer 4 uur", "Ongeveer 1 uur"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 15:55 is bijna 16:00.", null, "Veel te weinig."],
+        wrongHints: [null, "Te weinig — 15:55 is bijna 16:00.", null, "Van 13:05 tot 14:05 is al een uur, en Noor speelt tot bijna 16:00. Hoeveel hele uren zijn dat?"],
       },
     ],
   },
@@ -1370,37 +1370,37 @@ const steps = [
         q: "**Rond 4567 af op 1000**:",
         options: ["5000","4000","4500","4600"],
         answer: 0,
-        wrongHints: [null,"5 in honderden → naar boven.","Niet op 1000 afgerond.","Niet op 1000."],
+        wrongHints: [null,"Het cijfer van de honderdtallen is een 5. Wat zegt de regel bij een 5?","4500 eindigt op 500, niet op 000. Welke twee duizendtallen liggen om 4567 heen?","4600 is 4567 afgerond op 100. Bij afronden op 1000 eindigt het getal op 000."],
       },
       {
         q: "**Schat 248 + 391 + 152** (op 100):",
         options: ["800","700","900","600"],
         answer: 0,
-        wrongHints: [null,"Te weinig — rond elk getal af op honderdtallen en tel ze op.","Te veel — schatting controleren.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — rond elk getal af op honderdtallen en tel ze op.","Rond elk getal af op honderdtallen. Wordt 248 dan 200 of 300?","Heb je alle drie de getallen meegeteld? Ook 152 hoort erbij."],
       },
       {
         q: "Een biljet van **€ 50** voor boodschappen van **€ 12,40 + € 8,30 + € 25,80**. **Past 't?**",
         options: ["Ja, het past","Nee, je komt ruim € 10 tekort","Nee, je komt net iets tekort","Onmogelijk te zeggen"],
         answer: 0,
-        wrongHints: [null,"Schat de som: rond elk bedrag af op hele euro's en tel op.","Schat nog eens: rond elk bedrag af en tel op — is dat meer of minder dan € 50?","Wel te zeggen — schat de som."],
+        wrongHints: [null,"Schat de som: rond elk bedrag af op hele euro's en tel op.","Schat nog eens: rond elk bedrag af en tel op — is dat meer of minder dan € 50?","Met een schatting kun je dit wél zeggen. Rond de drie bedragen af en vergelijk met € 50."],
       },
       {
         q: "**Schat 612 ÷ 7**:",
-        options: ["~87","~100","~70","~120"],
+        options: ["~90","~9","~70","~900"],
         answer: 0,
-        wrongHints: [null,"Te veel — 7 × 100 is al 700, en dat is meer dan 612.","Te weinig — 7 × 70 is maar 490, dat is ver onder 612.","Te veel."],
+        wrongHints: [null,"Reken terug: is 7 × 9 ongeveer 612?","Te weinig — 7 × 70 is maar 490, dat is ver onder 612.","Reken terug: 7 × 900 = 6300. Ligt dat in de buurt van 612?"],
       },
       {
         q: "**Rond 2849 af op 100**:",
         options: ["2800","2900","2850","3000"],
         answer: 0,
-        wrongHints: [null,"4 in tientallen → naar beneden.","Niet op 100 afgerond.","Niet op 100 — dat is op 1000."],
+        wrongHints: [null,"Kijk naar het cijfer van de tientallen in 2849: een 4. Rond je dan naar boven of naar beneden af?","2850 eindigt op 50, niet op 00. Tussen welke twee honderdtallen kies je?","3000 is afgerond op duizendtallen, niet op honderdtallen."],
       },
       {
         q: "**Schat: 19,80 × 4** (in winkel zonder rekenmachine):",
         options: ["~80","~70","~90","~50"],
         answer: 0,
-        wrongHints: [null, "Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.", "Te veel — rond 19,80 af op een heel getal en reken dan × 4.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.", "Te veel — rond 19,80 af op een heel getal en reken dan × 4.", "~50 zou 4 × 12,5 zijn. Naar welk heel getal rond je 19,80 af?"],
         uitlegPad: {
           stappen: [
             { titel: "Wanneer schat je?", tekst: "Bij winkel-vragen zonder rekenmachine: rond eerst af naar makkelijk getal, daarna rekenen." },
@@ -1424,7 +1424,7 @@ const steps = [
         q: "Tel op en **rond de uitkomst af op 10**: 145 + 89 + 36 = ?",
         options: ["270","260","280","250"],
         answer: 0,
-        wrongHints: [null, "Te weinig — tel eerst precies op.", "Dat krijg je als je elk getal apart afrondt. Hier rond je de uitkomst af.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig. Controleer je optelling: hoeveel is 145 + 89 precies?", "Dat krijg je als je elk getal apart afrondt. Hier rond je de uitkomst af.", "Tel 145 + 89 + 36 eerst precies op. Ligt de uitkomst echt bij 250?"],
         uitlegPad: {
           stappen: [
             { titel: "Precies vs schatten", tekst: "Voor PRECIES antwoord: 145 + 89 + 36. Stap voor stap: 145+89 = 234, +36 = **270**." },
@@ -1439,9 +1439,9 @@ const steps = [
       },
       {
         q: "Een **klas van 24 kinderen** krijgt elk een trakteerzakje van **€ 2,15**. **Past het in € 50 budget**?",
-        options: ["Nee, net niet — precies €51,60","Ja, precies — schat €48","Nee, ruim te duur","Geen idee zonder rekenmachine"],
+        options: ["Nee, net niet — precies €51,60","Ja, precies — schat €48","Nee, ruim te duur","Ja, net — precies €49,60"],
         answer: 0,
-        wrongHints: [null, "Te optimistisch — je vergeet de 15 cent per zakje: 24 × €0,15 komt er nog bovenop.", "Te pessimistisch — schat eerst: 24 × €2 = €48.", "Wel — schat altijd eerst voor budget-vragen."],
+        wrongHints: [null, "Te optimistisch — je vergeet de 15 cent per zakje: 24 × €0,15 komt er nog bovenop.", "Te pessimistisch — schat eerst: 24 × €2 = €48.", "Reken 24 × € 0,15 nog eens na: is dat € 1,60? Tel dat bij € 48 op."],
         uitlegPad: {
           stappen: [
             { titel: "Schatten voor budget-check", tekst: "Bij 'past het in budget?'-vragen schat je eerst grof. 24 × €2,15." },
@@ -1462,7 +1462,7 @@ const steps = [
         q: "**Rond af op 1000**: 4.612 + 3.298 = ?",
         options: ["8.000","7.000","9.000","7.910"],
         answer: 0,
-        wrongHints: [null, "Te weinig — afronding op 1000 brengt 4.612 dichter bij 5.000 dan 4.000.", "Te veel.", "Dat is precies, niet afgerond op 1000."],
+        wrongHints: [null, "Te weinig — afronding op 1000 brengt 4.612 dichter bij 5.000 dan 4.000.", "Rond 4.612 en 3.298 eerst elk af op duizendtallen. Welke afrondingen krijg je?", "Dat is precies, niet afgerond op 1000."],
         uitlegPad: {
           stappen: [
             { titel: "Afronden op 1000", tekst: "Kijk naar de **honderden-cijfer**:\n• 4.612 → 6 in honderden ≥ 5 → afronden naar BOVEN = **5.000**\n• 3.298 → 2 in honderden < 5 → afronden naar BENEDEN = **3.000**" },
@@ -1502,24 +1502,24 @@ const steps = [
           niveaus: { basis: "5 × €8 = €40.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40.", nogSimpeler: "~€40" },
         },
       },
-      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5, afronden omhoog.", "Dat is honderdtal.", "Te ver — dat is ook geen tiental van 347."] },
-      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","8"], answer: 0, wrongHints: [null, "Na de komma staat een 8 — dat is 5 of meer, dus omhoog.", "Dat is afgerond op 1 decimaal, niet op een heel getal.", "Te ver: 6,82 ligt veel dichter bij 7 dan bij 8."] },
-      { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null, "Te hoog.", "Te laag.", "Veel te hoog."] },
-      { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null, "Niet.", "Te ver.", "Te ver."] },
-      { q: "Rond 0,72 af op tienden", options: ["0,7","0,8","1,0","0,72"], answer: 0, wrongHints: [null, "Niet — 2 < 5.", "Te ver.", "Niet afgerond."] },
+      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Kijk naar het cijfer van de eenheden: 7. Ligt 347 dichter bij 340 of bij 350?", "300 is afgerond op een honderdtal. Welke twee tientallen liggen om 347 heen?", "400 is een honderdtal en ligt nog verder weg. Welke tientallen liggen direct om 347 heen?"] },
+      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","8"], answer: 0, wrongHints: [null, "Na de komma staat een 8. Ligt 6,82 dichter bij 6 of bij 7?", "Dat is afgerond op 1 decimaal, niet op een heel getal.", "Te ver: 6,82 ligt veel dichter bij 7 dan bij 8."] },
+      { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null, "Rond 198 en 403 af op honderdtallen. Wordt 403 dan 400 of 500?", "198 is bijna 200, niet bijna 100. Wat krijg je dan samen met 400?", "1000 zou 500 + 500 zijn. Ligt 198 dicht bij 500?"] },
+      { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null, "Kijk naar het cijfer van de tientallen (6). Rond je dan naar boven of naar beneden af?", "4.000 krijg je als je de laatste drie cijfers weglaat. Je moet afronden op honderdtallen, niet op duizendtallen.", "5.000 is afgerond op duizendtallen. Welke plek hoort bij de honderdtallen?"] },
+      { q: "Rond 0,72 af op tienden", options: ["0,7","0,8","1,0","0,72"], answer: 0, wrongHints: [null, "Het cijfer na de tienden is een 2. Ligt 0,72 dichter bij 0,7 of bij 0,8?", "1,0 is afgerond op een heel getal. Bij afronden op tienden houd je één cijfer achter de komma.", "0,72 heeft nog twee cijfers achter de komma. Hoeveel houd je er over bij afronden op tienden?"] },
       { q: "Schat: 19 × 21 ≈ ?", options: ["~400","~200","~600","~40"], answer: 0, wrongHints: [null, "Rond beide af naar 20 — wat is 20 × 20?", "Te hoog gegokt — rond 19 én 21 allebei af naar 20 en reken opnieuw.", "Dat lijkt op 19 + 21 — maar er staat kéér, niet plus!"] },
       { q: "Schat: 4,9 × 5,1 ≈ ?", options: ["~25","~9","~10","~50"], answer: 0, wrongHints: [null, "Dat lijkt op ongeveer 4 + 5 — er staat kéér. Rond beide af naar 5.", "Dat is 4,9 + 5,1 — maar er staat kéér, niet plus! Hoeveel is 5 × 5?", "Te hoog — rond allebei af naar 5 en reken 5 × 5."] },
-      { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null, "Niet — 5 ≥ 5.", "Honderdtal-niveau.", "Te ver."] },
-      { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
-      { q: "Een mens is 1,72 m lang. Afgerond op hele tientallen cm is dat ongeveer…", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Dat is niet afgerond.", "Te laag."] },
-      { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€21"], answer: 0, wrongHints: [null, "Niet.", "Geen afronding.", "Te ver — 19,80 ligt dicht bij 20."] },
-      { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd, ook als het precies moet","Nooit, precies rekenen is altijd beter","Alleen als je in de winkel staat"], answer: 0, wrongHints: [null, "Niet altijd nuttig.", "Wel handig.", "Niet alleen daar."] },
-      { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Niet — geen exact 10×10.", "Te weinig.", "Te veel."] },
-      { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },
-      { q: "Het cijfer na de afrondplek is een 5. Wat doe je?", options: ["Naar boven","Naar beneden","Willekeurig","Niet afronden"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Je rondt wél af."] },
-      { q: "11,3 + 8,9 schatten = ?", options: ["~20","~30","~10","~25"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Niet."] },
-      { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = vaste regel per cijfer","Ze betekenen precies hetzelfde","Schatten is altijd preciezer dan afronden","Afronden doe je alleen met geld"], answer: 0, wrongHints: [null, "Wel verschil.", "Schatten is juist een ruwe inschatting.", "Afronden kan met elk getal."] },
-      { q: "Rond 0,49 af op heel getal", options: ["0","1","0,5","49"], answer: 0, wrongHints: [null, "Niet — onder 0,5.", "Niet — heel getal.", "Niet."] },
+      { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null, "Het cijfer van de honderdtallen is een 5. Wat zegt de regel bij een 5?", "12.500 eindigt op 500, niet op 000. Welke twee duizendtallen liggen om 12.567 heen?", "10.000 is afgerond op tienduizendtallen. Welke duizendtallen liggen direct om 12.567 heen?"] },
+      { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Waar komt die extra 500 vandaan? Tel 1.000 en 2.000 gewoon op.", "Tel 1.000 en 2.000 op. Kom je onder de 3.000 uit?", "5.000 is meer dan 1.000 + 2.000. Heb je iets dubbel geteld?"] },
+      { q: "Een mens is 1,72 m lang. Afgerond op hele tientallen cm is dat ongeveer…", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Kijk naar de eenheden van 172: een 2. Ligt 172 dichter bij 170 of bij 180?", "172 cm is de lengte zelf. Afronden op tientallen betekent: eindigen op een 0.", "150 cm is meer dan 20 cm korter. Welke tientallen liggen direct om 172 heen?"] },
+      { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€21"], answer: 0, wrongHints: [null, "Kijk naar het cijfer achter de komma: een 8. Rond je dan naar boven of naar beneden af?", "€ 19,80 is het bedrag zelf. Afronden op euro's betekent: geen centen meer.", "Te ver. Je rondt af naar het dichtstbijzijnde hele bedrag. Ligt €19,80 echt het dichtst bij €21?"] },
+      { q: "Wanneer **schatten** ipv exact?", options: ["Als een ongeveer-antwoord genoeg is","Als de getallen al rond zijn, zoals 300 + 500","Bij elke toetsvraag, in plaats van uitrekenen","Als je een prijs tot op de cent wilt weten"], answer: 0, wrongHints: [null, "300 + 500 reken je meteen precies uit, dat is al makkelijk. Wanneer heeft schatten dan wél zin?", "Op de toets moet je meestal een precies antwoord geven. Waarvoor gebruik je een schatting daar dan?", "Een schatting kan er een paar euro naast zitten. Past dat bij 'tot op de cent'?"] },
+      { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Je rondde 9 af naar 10. Wat is 10 × 9 zonder afronden?", "10 × 9 is tien keer 9 bij elkaar. Kan dat ongeveer 10 zijn?", "Je deed 100 × 9. Hoeveel nullen heeft 10?"] },
+      { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Rond 998 en 1.005 af op duizendtallen. Welke twee getallen tel je dan op?", "998 is bijna 1.000 en 1.005 ook. Kom je dan onder de 2.000 uit?", "Dat is tien keer zoveel. Heb je een nul te veel geschreven?"] },
+      { q: "Het cijfer na de afrondplek is een 5. Wat doe je?", options: ["Naar boven","Naar beneden","Willekeurig","Niet afronden"], answer: 0, wrongHints: [null, "Bij 0 tot en met 4 rond je naar beneden af. Hoort de 5 daarbij?", "Afronden volgt een vaste regel, zodat iedereen hetzelfde antwoord krijgt. Wat is die regel bij een 5?", "De vraag gaat over afronden: je moet wél een kant kiezen. Welke kant hoort bij een 5?"] },
+      { q: "11,3 + 8,9 schatten = ?", options: ["~20","~30","~10","~25"], answer: 0, wrongHints: [null, "Rond 11,3 en 8,9 af op hele getallen. Wat krijg je dan samen?", "Rond eerst af: 11,3 wordt 11 en 8,9 wordt 9. Is de som dan 10?", "Hoe ver ligt 8,9 van 9? En 11,3 van 11? Kan de som dan 25 zijn?"] },
+      { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = vaste regel per cijfer","Schatten en afronden zijn twee woorden voor hetzelfde","Schatten geeft een preciezer antwoord dan afronden","Afronden is ruw, schatten volgt een vaste regel per cijfer"], answer: 0, wrongHints: [null, "Krijgt iedereen bij schatten precies hetzelfde antwoord, zoals bij afronden?", "Bij schatten rond je ruw af om snel te kunnen rekenen. Wordt een antwoord daar preciezer van?", "Bij welke van de twee hoort de regel 'vanaf 5 naar boven'?"] },
+      { q: "Rond 0,49 af op heel getal", options: ["0","1","0,5","49"], answer: 0, wrongHints: [null, "0,49 ligt net onder 0,5. Ligt het dan dichter bij 0 of bij 1?", "0,5 is geen heel getal. Tussen welke twee hele getallen ligt 0,49?", "49 krijg je als je de komma weghaalt. Tussen welke twee hele getallen ligt 0,49?"] },
     ],
   },
 ];

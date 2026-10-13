@@ -1,0 +1,1954 @@
+[
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "s = v × t — voor wat?",
+  "opties": [
+   "Afstand uitrekenen",
+   "Snelheid",
+   "Tijd",
+   "Gewicht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Fietser rijdt 30 min met 20 km/u. Afstand?",
+  "opties": [
+   "10 km",
+   "20 km",
+   "600 km",
+   "5 km"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoe reken je m/s om naar km/u?",
+  "opties": [
+   "× 3,6",
+   "÷ 3,6",
+   "× 60",
+   "÷ 60"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "100 km/u ≈ ... m/s?",
+  "opties": [
+   "~28",
+   "~10",
+   "~360",
+   "~1000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Hoe verander je km/u naar m/s?",
+  "opties": [
+   "Deel door 3,6",
+   "Vermenigvuldig met 3,6",
+   "Deel door 60",
+   "Vermenigvuldig met 1000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Hoe verander je m/s naar km/u?",
+  "opties": [
+   "Vermenigvuldig met 3,6",
+   "Deel door 3,6",
+   "Vermenigvuldig met 60",
+   "Deel door 1000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is versnelling?",
+  "opties": [
+   "Verandering snelheid per tijd",
+   "Hoge snelheid",
+   "Hoeveelheid afstand",
+   "Constant snel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Zwaartekrachtversnelling (valversnelling) op aarde ongeveer?",
+  "opties": [
+   "~10 m/s²",
+   "~1 m/s²",
+   "~100 m/s²",
+   "0 m/s²"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welke factor maakt remweg veel langer?",
+  "opties": [
+   "Snelheid",
+   "Kleur auto",
+   "Weersomstandigheden alleen",
+   "Bestuurders gewicht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat geeft een steile rechte lijn aan?",
+  "opties": [
+   "Hoge constante snelheid",
+   "Stilstaan",
+   "Versnellen",
+   "Pauze"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Hoe bereken je snelheid uit een afstand-tijd-grafiek?",
+  "opties": [
+   "De helling van de lijn",
+   "Lengte van lijn",
+   "Y-waarde",
+   "X-waarde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "S",
+  "q": "100 km/u op snelweg in NL — wanneer?",
+  "opties": [
+   "Overdag",
+   "Alleen 's nachts",
+   "Nooit",
+   "Altijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Snelheid geluid in lucht?",
+  "opties": [
+   "~343 m/s",
+   "~100 m/s",
+   "~1.000 m/s",
+   "~10.000 m/s"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Lichtsnelheid?",
+  "opties": [
+   "300.000 km/s",
+   "300 km/s",
+   "30.000 km/s",
+   "Oneindig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "K",
+  "q": "60 km in 30 min. Snelheid?",
+  "opties": [
+   "120 km/u",
+   "30 km/u",
+   "60 km/u",
+   "2 km/u"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "K",
+  "q": "5 m/s in km/u?",
+  "opties": [
+   "18 km/u",
+   "5 km/u",
+   "50 km/u",
+   "1,4 km/u"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Zwaartekracht versnelling aarde?",
+  "opties": [
+   "~10 m/s²",
+   "~5 m/s²",
+   "~100 m/s²",
+   "0 m/s²"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Versnelling 0 betekent?",
+  "opties": [
+   "Constante snelheid (of stilstand)",
+   "Stoppen",
+   "Heel snel",
+   "Steeds sneller gaan"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bewegingen-snelheid-natuurkunde",
+  "file": "./bewegingenSnelheidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 7,
+  "soort": "S",
+  "q": "Formule afstand = ? (bij constante snelheid)",
+  "opties": [
+   "snelheid × tijd",
+   "snelheid + tijd",
+   "snelheid / tijd",
+   "alleen tijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Welke deeltjes lopen meestal door een elektrische draad?",
+  "opties": [
+   "Elektronen",
+   "Protonen",
+   "Neutronen",
+   "Atomen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat moet er gebeuren om een lamp te laten branden?",
+  "opties": [
+   "De stroomkring moet gesloten zijn",
+   "De lamp moet warm zijn",
+   "Er moet een isolator in zitten",
+   "De spanning moet 0 zijn"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is kortsluiting?",
+  "opties": [
+   "Stroom gaat terug naar de bron zonder verbruiker",
+   "Een stroomkring zonder spanningsbron",
+   "Een hele lange draad",
+   "Een lamp die kapot is"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Hoe meet je stroomsterkte?",
+  "opties": [
+   "Met een ampèremeter in serie",
+   "Met een voltmeter parallel",
+   "Met een thermometer",
+   "Met een liniaal"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wat is gelijk voor alle verbruikers in een serieschakeling?",
+  "opties": [
+   "Stroomsterkte I",
+   "Spanning U",
+   "Weerstand R",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Wat is gelijk voor alle verbruikers in een parallelschakeling?",
+  "opties": [
+   "Spanning U",
+   "Stroomsterkte I",
+   "Weerstand R",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Bij een serieschakeling: als 1 lamp stukgaat, wat gebeurt er met de rest?",
+  "opties": [
+   "Alle lampen gaan uit",
+   "Niks, ze blijven branden",
+   "Alleen de 2e lamp gaat uit",
+   "De batterij ontploft"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Waarom hebben metalen apparaten een aardingdraad?",
+  "opties": [
+   "Bij een defect gaat stroom via de aarde weg, niet via jou",
+   "Zodat het apparaat minder stroom verbruikt",
+   "Zodat het apparaat sneller opwarmt",
+   "Om de spanning boven 230 V te brengen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 10,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Een lamp van 200 Ω op 230 V. Hoeveel stroom?",
+  "opties": [
+   "1,15 A",
+   "230 A",
+   "0,01 A",
+   "46 A"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektriciteit-natuurkunde",
+  "file": "./elektriciteitNatuurkunde.js",
+  "stap": 10,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Een apparaat van 1.500 W staat 4 uur aan. Hoeveel kWh?",
+  "opties": [
+   "6 kWh",
+   "375 kWh",
+   "0,375 kWh",
+   "60 kWh"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een elektron beweegt loodrecht door een B-veld. De Lorentzkracht is:",
+  "opties": [
+   "Maximaal en loodrecht op zowel v als B",
+   "Maximaal en parallel aan v",
+   "Nul (elektron is negatief)",
+   "Parallel aan B"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Een draad van 0,40 m draagt I = 3,0 A loodrecht door B = 0,20 T. F op draad?",
+  "opties": [
+   "0,24 N",
+   "2,4 N",
+   "0,024 N",
+   "1,5 N"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "In een cyclotron beweegt een deeltje in een cirkel. De straal hangt af van:",
+  "opties": [
+   "Massa, snelheid, lading én B-sterkte",
+   "Alleen de B-sterkte",
+   "Alleen lading + snelheid",
+   "Alleen massa"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Een spoel heeft N = 100 windingen. Flux verandert met dΦ/dt = 0,020 Wb/s. U_ind?",
+  "opties": [
+   "2,0 V",
+   "0,2 V",
+   "20 V",
+   "200 V"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "De fiets-dynamo werkt op:",
+  "opties": [
+   "Inductie — wielmagneet draait langs spoel",
+   "Lorentzkracht zonder verandering",
+   "Statische elektriciteit",
+   "Batterij in dynamo"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Een rechthoekige spoel (100 windingen, A = 0,020 m²) in B = 0,50 T draait met ω = 100 rad/s. U_max?",
+  "opties": [
+   "100 V",
+   "1,0 V",
+   "0,10 V",
+   "1000 V"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Waarom transport elektriciteit op hoogspanning (150-400 kV)?",
+  "opties": [
+   "Lage stroom → minder warmteverlies in draden",
+   "Hogere spanning is veiliger",
+   "Hogere spanning gaat sneller",
+   "Apparaten werken alleen op hoogspanning"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Een spoel met L = 0,10 H. Stroom verandert met dI/dt = 5,0 A/s. Zelfinductie-spanning?",
+  "opties": [
+   "0,50 V",
+   "5,0 V",
+   "0,050 V",
+   "50 V"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "elektromagnetisme-havo-vwo",
+  "file": "./elektromagnetismeHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat horen tot elektromagnetische golven?",
+  "opties": [
+   "Radio, microgolf, zichtbaar licht en röntgen",
+   "Alleen zichtbaar licht",
+   "Alleen radio + microgolven",
+   "Radio, licht, röntgen én geluid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "Wat heeft een kracht altijd?",
+  "opties": [
+   "Een grootte én een richting",
+   "Alleen een grootte",
+   "Alleen een richting",
+   "Een kleur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat verandert er als je naar de maan gaat?",
+  "opties": [
+   "Je gewicht wordt kleiner, je massa blijft gelijk",
+   "Beide worden kleiner",
+   "Beide blijven gelijk",
+   "Alleen je massa wordt kleiner"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Een blok ligt stil op tafel. Wat klopt?",
+  "opties": [
+   "De resultante kracht is 0 N",
+   "Er is geen kracht aanwezig",
+   "Alleen zwaartekracht werkt",
+   "Het blok versnelt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "In welke richting werkt wrijving?",
+  "opties": [
+   "Tegen de bewegingsrichting in",
+   "In de bewegingsrichting",
+   "Naar boven",
+   "Geen vaste richting"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom is wrijving belangrijk voor lopen?",
+  "opties": [
+   "Zonder wrijving slipt je voet weg",
+   "Het maakt je lichter",
+   "Het versnelt je",
+   "Het houdt je warm"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is spankracht?",
+  "opties": [
+   "Kracht in een gespannen touw of kabel",
+   "Kracht waarmee je iets duwt",
+   "Wrijvingskracht",
+   "Zwaartekracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zegt de eerste wet van Newton?",
+  "opties": [
+   "Zonder netto kracht blijft beweging hetzelfde",
+   "F = m × a",
+   "Actie = reactie",
+   "Alle voorwerpen vallen even snel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom vlieg je naar voren als de auto remt?",
+  "opties": [
+   "Je lichaam wil door met dezelfde snelheid",
+   "Een kracht duwt je naar voren",
+   "De auto versnelt",
+   "Door de zwaartekracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat klopt over Newton 2?",
+  "opties": [
+   "Meer massa → kleinere versnelling bij dezelfde kracht",
+   "Meer massa → grotere versnelling",
+   "Massa heeft geen invloed",
+   "Versnelling = kracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe vliegt een raket omhoog?",
+  "opties": [
+   "Hij stoot gas naar beneden, gas duwt raket omhoog",
+   "Hij wordt aangezogen door de zon",
+   "Lucht trekt hem op",
+   "Door zwaartekracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 9,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Newton 1 zegt: een voorwerp in rust blijft in rust ZOLANG?",
+  "opties": [
+   "Er geen netto kracht op werkt",
+   "Het zwaar genoeg is",
+   "Het op de grond ligt",
+   "Het bevriest"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 9,
+  "vraag": 6,
+  "soort": "K",
+  "q": "F = m × a. Massa 2 kg, versnelling 3 m/s². Wat is F?",
+  "opties": [
+   "6 N",
+   "5 N",
+   "1,5 N",
+   "0,67 N"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 9,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Wrijving werkt meestal ___ de bewegingsrichting?",
+  "opties": [
+   "Tegen",
+   "Mee",
+   "Loodrecht",
+   "Geen relatie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 9,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Normaalkracht werkt waar?",
+  "opties": [
+   "Loodrecht op het oppervlak",
+   "In bewegingsrichting",
+   "Tegen wrijving",
+   "Niet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "K",
+  "q": "De derde wet van Newton zegt?",
+  "opties": [
+   "Actie = reactie",
+   "Massa = constant",
+   "Snelheid maakt kracht",
+   "Geen wet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "krachten-natuurkunde",
+  "file": "./krachtenNatuurkunde.js",
+  "stap": 9,
+  "vraag": 13,
+  "soort": "L2S",
+  "q": "Een veerkracht is bv. de kracht in een ___?",
+  "opties": [
+   "Uitgerekt elastiek",
+   "Een blok hout",
+   "Een steen",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is frequentie?",
+  "opties": [
+   "Aantal trillingen per seconde (Hz)",
+   "Hardheid van geluid",
+   "Snelheid van geluid",
+   "Aantal personen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "Hoe gaat licht door lucht?",
+  "opties": [
+   "In een rechte lijn",
+   "In een cirkel",
+   "In zigzag",
+   "Krom"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een lichtjaar?",
+  "opties": [
+   "Afstand die licht in 1 jaar aflegt",
+   "Een jaar met veel zon",
+   "Een tijdseenheid",
+   "Een sterrenstelsel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een bolle lens?",
+  "opties": [
+   "Lens dikker in midden, vergroot",
+   "Lens dunner in midden",
+   "Spiegel",
+   "Doorzichtige plaat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wet van reflectie?",
+  "opties": [
+   "Hoek van inval = hoek van weerkaatsing",
+   "Licht weg, geluid terug",
+   "Spiegel maakt 2× licht",
+   "Alleen voor sterren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel kleuren in de regenboog?",
+  "opties": [
+   "7",
+   "3",
+   "10",
+   "5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom is een rode appel rood?",
+  "opties": [
+   "Weerkaatst rood, absorbeert rest",
+   "Heeft eigen rood licht",
+   "Reflecteert geluid",
+   "Niemand weet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is UV-straling?",
+  "opties": [
+   "Onzichtbaar licht voorbij violet",
+   "Onzichtbaar licht onder rood",
+   "Zichtbaar paars licht",
+   "Geluid boven 20.000 Hz"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Hoe verspreidt geluid zich?",
+  "opties": [
+   "Trillingen door materie",
+   "Stralen door vacuüm",
+   "Met licht",
+   "Met magneten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Reflectie-wet: hoek van inval = ... ?",
+  "opties": [
+   "Hoek van weerkaatsing",
+   "0°",
+   "90°",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is UV-licht?",
+  "opties": [
+   "Onzichtbaar licht voorbij violet",
+   "Onzichtbaar licht onder rood",
+   "Een soort geluid",
+   "Een felle tint paars"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "licht-geluid-natuurkunde",
+  "file": "./lichtGeluidNatuurkunde.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Mens hoort frequenties tot ... ?",
+  "opties": [
+   "20.000 Hz",
+   "100 Hz",
+   "1 miljoen Hz",
+   "1.000.000.000 Hz"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Vrije val vanaf 5 m hoog (v₀=0, g=10). Eindsnelheid bij grond?",
+  "opties": [
+   "10 m/s",
+   "5 m/s",
+   "20 m/s",
+   "2 m/s"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Object 10 kg op aarde. Zwaartekracht (gebruik g=10)?",
+  "opties": [
+   "100 N",
+   "10 N",
+   "1 N",
+   "9,81 kg"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Je springt van een trampoline. Welke wet beschrijft dat trampoline jou omhoog duwt?",
+  "opties": [
+   "Derde Newton",
+   "Eerste Newton",
+   "Tweede Newton alleen",
+   "Pythagoras"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Kinetische energie auto 1000 kg op 20 m/s?",
+  "opties": [
+   "200.000 J",
+   "20.000 J",
+   "20 J",
+   "1.000.000 J"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Bal 2 kg valt van 5 m hoog. Welke snelheid bij grond (g=10, geen luchtweerstand)?",
+  "opties": [
+   "10 m/s",
+   "5 m/s",
+   "20 m/s",
+   "2 m/s"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Twee karren botsen + plakken samen. Welke behoudswet altijd?",
+  "opties": [
+   "Impuls",
+   "Kinetische energie",
+   "Beide",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Kar 4 kg, 6 m/s raakt stilstaande 2 kg, plakken samen. Snelheid na?",
+  "opties": [
+   "4 m/s",
+   "6 m/s",
+   "2 m/s",
+   "12 m/s"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Airbag in auto vermindert letsel door:",
+  "opties": [
+   "Botstijd verlengen → kracht verlagen",
+   "Je massa verkleinen",
+   "Snelheid stoppen",
+   "Geen invloed"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Bal A 5 m/s raakt gelijke bal B in rust, elastisch. Na botsing:",
+  "opties": [
+   "A staat stil, B 5 m/s",
+   "Beide 2,5 m/s",
+   "A 5 m/s, B 0",
+   "Beide stil"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mechanica-havo-vwo",
+  "file": "./mechanicaHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Raket lanceert door gas naar beneden te stoten. Welke Newton-wet primair?",
+  "opties": [
+   "Derde (actie-reactie)",
+   "Eerste (traagheid)",
+   "Pythagoras",
+   "Geen Newton"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Een lichtstraal valt loodrecht op een glasplaat. Wat gebeurt er met de richting?",
+  "opties": [
+   "Recht doorlopen — geen breking",
+   "30° breken naar normaal",
+   "Totaal weerkaatsen",
+   "Splitsen in kleuren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Reflectiewet zegt:",
+  "opties": [
+   "Invalshoek = reflectiehoek, t.o.v. de normaal",
+   "Invalshoek = brekingshoek",
+   "Reflectiehoek is altijd 90°",
+   "Reflectie hangt af van kleur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een lichtstraal in water (n=1,33) bereikt het oppervlak met 50°. Wat gebeurt?",
+  "opties": [
+   "Totale interne reflectie — niets komt uit het water",
+   "Breekt en komt uit, hoek ~37°",
+   "Breekt en komt uit, hoek ~90°",
+   "Reflecteert volledig én breekt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke kleur licht heeft de kleinste brekingsindex in glas?",
+  "opties": [
+   "Rood",
+   "Geel",
+   "Blauw",
+   "Violet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Hoe ontstaat een regenboog?",
+  "opties": [
+   "Breking en weerkaatsing in regendruppels",
+   "Reflectie tegen wolken",
+   "Diffractie achter wolk-rand",
+   "Dispersie door luchtdruppels"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Grenshoek voor glas (n=1,5) naar lucht?",
+  "opties": [
+   "~41,8°",
+   "~30°",
+   "~45°",
+   "~60°"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom is de lucht overdag blauw?",
+  "opties": [
+   "Rayleigh-verstrooiing — blauw wordt meer verstrooid dan rood",
+   "Atmosfeer is blauw geverfd",
+   "Zeeën reflecteren blauw omhoog",
+   "Onze ogen zijn blauw-gevoelig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Een dubbelspleet (d = 0,10 mm) belicht met λ = 600 nm. Hoek 1e maximum?",
+  "opties": [
+   "~0,34°",
+   "~3°",
+   "~0,06°",
+   "~6°"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat onthult spectraal-analyse van een ster?",
+  "opties": [
+   "Chemische samenstelling + temperatuur + snelheid",
+   "Alleen kleur",
+   "Alleen afstand",
+   "Niets — licht reist te ver"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een microscoop vergroot met:",
+  "opties": [
+   "Twee lenzen: objectief en oculair",
+   "Eén grote lens",
+   "Spiegel + lens",
+   "Alleen virtuele beelden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "optica-havo-vwo",
+  "file": "./opticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom gebruiken moderne telescopen spiegels in plaats van lenzen?",
+  "opties": [
+   "Geen dispersie + groter te maken zonder vervorming",
+   "Spiegels zijn goedkoper per cm",
+   "Lenzen verbreken licht",
+   "Spiegels schitteren mooier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Voor 1 eV energie heeft elektron welke spanning doorlopen?",
+  "opties": [
+   "1 V",
+   "1 J",
+   "1 kV",
+   "Geen verband"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2K",
+  "q": "Constante van Planck (h) is fundamenteel omdat:",
+  "opties": [
+   "Het de schaal van quantum-effecten bepaalt",
+   "Het de lichtsnelheid bepaalt",
+   "Het de gravitatie verklaart",
+   "Het magnetische velden levert"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Bij hogere intensiteit licht boven drempel, wat verandert?",
+  "opties": [
+   "Aantal elektronen per seconde stijgt, energie per elektron blijft",
+   "Energie per elektron stijgt",
+   "Beide stijgen",
+   "Niets — alles van frequentie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Een metaal met W=4 eV. Foton 3 eV. Wat gebeurt?",
+  "opties": [
+   "Geen elektron — onder drempel",
+   "Elektron met 3 eV",
+   "Elektron met 7 eV",
+   "Er komen twee elektronen los"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een zonnecel zet licht direct om in elektriciteit via:",
+  "opties": [
+   "Foto-elektrisch effect in halfgeleider",
+   "Reflectie",
+   "Inductie",
+   "Statische lading"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een atoom kan alleen fotonen absorberen met:",
+  "opties": [
+   "Energie die exact past op een sprong tussen niveaus",
+   "Elke energie",
+   "Alleen rode fotonen",
+   "Alleen UV-fotonen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een emissie-spectrum ontstaat doordat:",
+  "opties": [
+   "Atomen vallen terug naar een lager niveau",
+   "Atomen absorberen licht",
+   "Elektronen bewegen langs banen",
+   "Atomen botsen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom faalt het Bohr-model voor atomen met meer dan één elektron?",
+  "opties": [
+   "Elektronen stoten elkaar af; dat kan het model niet aan",
+   "Bohr-model is helemaal fout",
+   "Zwaardere atomen volgen klassieke fysica",
+   "Geen fotonen mogelijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Fraunhofer-lijnen in zonlicht zijn:",
+  "opties": [
+   "Donkere absorptielijnen door koudere zon-atmosfeer",
+   "Heldere lijnen van neon in atmosfeer",
+   "Reflectie tegen aarde-atmosfeer",
+   "Verzonnen — bestaan niet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wien-verschuivingswet: piek van spectrum verschuift met T. Bij hogere T:",
+  "opties": [
+   "Kortere golflengte-piek (richting blauw/UV)",
+   "Langere golflengte-piek (richting rood/IR)",
+   "Geen verandering",
+   "Splitsen in twee pieken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "quantum-atoommodel-havo-vwo",
+  "file": "./quantumAtoommodelHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2SK",
+  "q": "Heisenberg: ΔX · Δp ≥ ℏ/2 betekent:",
+  "opties": [
+   "Plek en impuls zijn nooit tegelijk exact bekend",
+   "Meetinstrument is gewoon te slecht",
+   "Geldt alleen voor lichte deeltjes",
+   "Alleen op kwantumcomputers"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom hebben zware kernen méér neutronen dan protonen?",
+  "opties": [
+   "Neutronen verdunnen de elektrische afstoting tussen protonen",
+   "Neutronen zijn lichter",
+   "Neutronen zijn elektrisch positief en versterken",
+   "Toeval"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Elementen boven Z = 83 (bismut) zijn:",
+  "opties": [
+   "Allemaal radioactief — geen stabiele isotoop",
+   "Allemaal stabiel",
+   "Half stabiel, half radioactief",
+   "Bestaan niet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "γ-straling is:",
+  "opties": [
+   "Elektromagnetische golf — foton met hoge energie",
+   "Heliumkern",
+   "Elektron uit de kern",
+   "Stroom van neutronen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Activiteit A is evenredig met:",
+  "opties": [
+   "Aantal radioactieve kernen N",
+   "Massa van het hele monster",
+   "Volume van het monster",
+   "Temperatuur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Bij fissie komt energie vrij omdat:",
+  "opties": [
+   "Eindproducten dichter bij Fe-piek liggen → hogere E_b/nucleon",
+   "Er extra protonen ontstaan",
+   "De temperatuur stijgt",
+   "Er meer neutronen zijn dan in de uitgangsstof"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is de brandstof van fusie in de zon?",
+  "opties": [
+   "Waterstof → helium",
+   "Uranium",
+   "Koolstof",
+   "Zuurstof"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Voordeel fusie boven fissie?",
+  "opties": [
+   "Brandstof overvloedig + bijna geen langlevend radioactief afval",
+   "Werkt bij kamertemperatuur",
+   "Geen plasma nodig",
+   "Geen netto energie nodig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een fissie-reactor gebruikt regelstaven (cadmium/borium) om:",
+  "opties": [
+   "Neutronen te absorberen → kettingreactie regelen",
+   "Warmte op te slaan",
+   "Elektriciteit op te wekken",
+   "Radioactief afval te zuiveren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Equivalente dosis H = ?",
+  "opties": [
+   "Q · D",
+   "D / Q",
+   "Q + D",
+   "Alleen D"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "radioactiviteit-havo-vwo",
+  "file": "./radioactiviteitHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Welk stralingstype is biologisch het gevaarlijkst binnen het lichaam (ingeademd/gegeten)?",
+  "opties": [
+   "α — alle energie in klein volume + Q=20",
+   "γ — gaat door alles heen",
+   "β — gemiddeld doordringend",
+   "Allemaal gelijk gevaarlijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "trillingen-golven-havo-vwo",
+  "file": "./trillingenGolvenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Geluidsgolven zijn longitudinaal. Hoe weet je dat?",
+  "opties": [
+   "Lucht-deeltjes bewegen heen en weer in de voortplantingsrichting",
+   "Lucht-deeltjes bewegen loodrecht op de voortplanting",
+   "Geluid heeft geen golfeigenschappen",
+   "Geluid kan zonder medium reizen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "trillingen-golven-havo-vwo",
+  "file": "./trillingenGolvenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "H",
+  "q": "Geluid reist het snelst in:",
+  "opties": [
+   "Staal",
+   "Water",
+   "Lucht (20°C)",
+   "Vacuüm"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "trillingen-golven-havo-vwo",
+  "file": "./trillingenGolvenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Een geluid van 70 dB naast een ander van 70 dB. Samen (twee losse, onafhankelijke bronnen):",
+  "opties": [
+   "~73 dB",
+   "~140 dB",
+   "~70 dB",
+   "~77 dB"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Welke schaal gebruik je in natuurkundige formules (zoals pV=nRT)?",
+  "opties": [
+   "Kelvin (K)",
+   "Celsius (°C)",
+   "Fahrenheit (°F)",
+   "Maakt niet uit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Een glas water in een warme kamer. Wat gebeurt op den duur?",
+  "opties": [
+   "Water en kamer krijgen dezelfde T",
+   "Water blijft koud, kamer warm",
+   "Water wordt steeds kouder",
+   "Niets verandert"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Tijdens smelten van ijs bij 0 °C:",
+  "opties": [
+   "Temperatuur blijft 0 °C terwijl energie binnenkomt",
+   "Temperatuur stijgt gelijkmatig",
+   "Temperatuur daalt",
+   "Geen energie nodig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom voelt metaal kouder dan hout, ondanks dezelfde T (kamer)?",
+  "opties": [
+   "Metaal geleidt warmte veel beter dan hout",
+   "Metaal is kouder dan hout zelf",
+   "Hout reflecteert warmte",
+   "Optische illusie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Een spuitbus in vuur: waarom ontploft hij?",
+  "opties": [
+   "De druk van het gas stijgt",
+   "Verf reageert met vlam",
+   "Vacuüm trekt wand naar binnen",
+   "Magnetisme van vuur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Bij STP (0 °C, 1 atm) bevat 1 mol gas welk volume?",
+  "opties": [
+   "22,4 L",
+   "1,0 L",
+   "100 L",
+   "Afhankelijk van gas"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Een ballon vol heliumgas op zee-niveau (1 atm). Wat gebeurt als ballon opstijgt naar grote hoogte (lagere p)?",
+  "opties": [
+   "Volume neemt toe — kan barsten",
+   "Volume neemt af",
+   "T daalt zonder V-verandering",
+   "Massa verdwijnt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Een gas T=300 K, p=1·10⁵ Pa, V=10 L. Hoeveel mol?",
+  "opties": [
+   "~0,40 mol",
+   "~4,0 mol",
+   "~40 mol",
+   "~0,04 mol"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welk transport-type voor zon naar aarde?",
+  "opties": [
+   "Straling",
+   "Geleiding",
+   "Convectie",
+   "Alle drie even sterk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Heteluchtballon stijgt op. Onderliggende fysica?",
+  "opties": [
+   "Hete lucht is lichter dan koude lucht",
+   "Vlam duwt ballon omhoog",
+   "Wind blaast ballon omhoog",
+   "Anti-zwaartekracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "warmte-thermodynamica-havo-vwo",
+  "file": "./warmteThermodynamicaHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "SK",
+  "q": "Een thermoskan houdt thee warm door:",
+  "opties": [
+   "Vacuüm en spiegelende wanden",
+   "Alleen isolatie tegen geleiding",
+   "Alleen tegen convectie",
+   "Magnetisch verbod warmte"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

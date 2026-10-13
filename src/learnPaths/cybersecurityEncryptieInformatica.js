@@ -20,29 +20,29 @@ const steps = [
     checks: [
       {
         q: "Wat is **ransomware**?",
-        options: ["Malware die je bestanden gijzelt en losgeld eist", "Een gratis antivirusprogramma", "Een sterk wachtwoord", "Een soort firewall"],
+        options: ["Malware die je bestanden gijzelt en losgeld eist", "Een gratis programma dat virussen opspoort", "Malware die stiekem je toetsaanslagen opslaat", "Een beveiliging die verkeer van buiten blokkeert"],
         answer: 0,
-        wrongHints: [null, "Het is juist kwaadaardig, geen bescherming.", "Het heeft niets met wachtwoorden te maken.", "Een firewall beschermt juist."],
+        wrongHints: [null, "Het is juist kwaadaardig, geen bescherming.", "Dat is een keylogger, een soort spyware — ransomware wil iets anders van je.", "Een firewall beschermt juist."],
         uitlegPad: {
           stappen: [{ titel: "Gijzelsoftware", tekst: "**Ransomware** is malware die je bestanden **versleutelt** en **losgeld** (ransom) eist om ze terug te geven. Beste bescherming: **back-ups** (dan kun je herstellen zonder te betalen) + niet op verdachte links/bijlagen klikken." }],
-          niveaus: { basis: "Gijzelt bestanden voor losgeld.", simpeler: "Ransomware = losgeld-malware", nogSimpeler: "A." },
+          niveaus: { basis: "Gijzelt bestanden voor losgeld.", simpeler: "Ransomware = losgeld-malware", nogSimpeler: "Malware die je bestanden gijzelt en losgeld eist." },
         },
       },
       {
         q: "Wat is **phishing**?",
-        options: ["Een nep-bericht om je gegevens/geld te ontfutselen", "Een snelle internetverbinding", "Een back-upmethode", "Een programmeertaal"],
+        options: ["Een nep-bericht om je gegevens/geld te ontfutselen", "Malware die zichzelf via usb-sticks verspreidt", "Een computer die je wachtwoord probeert te raden", "Het overspoelen van een server met verkeer"],
         answer: 0,
-        wrongHints: [null, "Het heeft niets met snelheid te maken.", "Het is geen back-up — het is oplichting.", "Geen taal — een vorm van oplichting."],
+        wrongHints: [null, "Dat is een virus of worm — bij phishing word jij zelf om de tuin geleid.", "Dat is een brute-force-aanval: de computer probeert alles. Bij phishing doe jij zelf iets. Wat dan?", "Dat is een DDoS-aanval (overbelasting), geen oplichting."],
         uitlegPad: {
           stappen: [{ titel: "Nep-bericht met haast", tekst: "**Phishing** is een **nep-bericht** (mail/sms/app) dat doet alsof het van je bank/school/bekende komt, om je **wachtwoord, pincode of geld** te ontfutselen — vaak met haast en een nep-link. Herken het aan: rare afzender/URL, taalfouten, onverwachte vraag, druk. Bij twijfel zelf naar de officiële site gaan." }],
-          niveaus: { basis: "Nep-bericht voor je gegevens.", simpeler: "Phishing = nep-bericht", nogSimpeler: "A." },
+          niveaus: { basis: "Nep-bericht voor je gegevens.", simpeler: "Phishing = nep-bericht", nogSimpeler: "Een nep-bericht om je gegevens/geld te ontfutselen." },
         },
       },
       {
         q: "Bij **social engineering** valt de aanvaller vooral aan op…",
-        options: ["De mens", "De stroomvoorziening", "De printer", "De kleur van het scherm"],
+        options: ["Het vertrouwen van mensen", "Je socialemediaprofiel", "Het wifinetwerk van een bedrijf", "De server van een website"],
         answer: 0,
-        wrongHints: [null, "Het gaat om mensen misleiden, niet om stroom.", "Niet de hardware, maar de gebruiker.", "Beeldscherm heeft er niets mee te maken."],
+        wrongHints: [null, "Social media kan een middel zijn, maar wat wordt er eigenlijk misleid?", "Een netwerk binnendringen is technisch werk. Wat betekent 'social'?", "Een server aanvallen kan, maar dat is technisch hacken. Wat wordt er bij social engineering misleid?"],
         uitlegPad: {
           stappen: [{ titel: "De zwakste schakel", tekst: "**Social engineering** manipuleert **de mens** in plaats van de computer te hacken — bv. bellen en doen alsof je de helpdesk bent. Omdat mensen te vertrouwen/behulpzaam zijn, is de mens vaak de **zwakste schakel** in de beveiliging." }],
           niveaus: { basis: "De mens.", simpeler: "Social engineering = mens misleiden", nogSimpeler: "A." },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen een **virus** en een **worm**?",
-        options: ["Een worm verspreidt zichzelf over netwerken; een virus heeft een gastbestand nodig", "Ze zijn precies hetzelfde", "Een virus verspreidt zichzelf over netwerken; een worm heeft een gastbestand nodig", "Een worm is antivirussoftware"],
+        options: ["Een worm verspreidt zichzelf over netwerken; een virus heeft een gastbestand nodig", "Een worm wist bestanden op je schijf; een virus versleutelt ze en eist losgeld", "Een virus verspreidt zichzelf over netwerken; een worm heeft een gastbestand nodig", "Een worm komt binnen via e-mailbijlagen; een virus via geïnfecteerde usb-sticks"],
         answer: 0,
-        wrongHints: [null, "Er is wél verschil in hóé ze zich verspreiden.", "Andersom: welke van de twee wacht tot jij een bestand uitvoert?", "Een worm is juist malware, geen bescherming."],
+        wrongHints: [null, "Versleutelen voor losgeld is ransomware. Het verschil tussen virus en worm zit in hóé ze zich verspreiden.", "Andersom: welke van de twee wacht tot jij een bestand uitvoert?", "Allebei kunnen ze via mail én via usb binnenkomen; de route is niet het verschil."],
         uitlegPad: {
           stappen: [{ titel: "Zelf verspreiden of niet", tekst: "Een **virus** verstopt zich in een bestand/programma en verspreidt zich pas als jij het **uitvoert**. Een **worm** verspreidt **zichzelf** over netwerken, zonder dat je iets hoeft te doen — daardoor gaat een worm vaak veel sneller rond." }],
           niveaus: { basis: "Worm verspreidt zichzelf.", simpeler: "Worm = zelfverspreidend", nogSimpeler: "A." },
@@ -60,12 +60,12 @@ const steps = [
       },
       {
         q: "Een **trojaans paard** herken je aan…",
-        options: ["Het doet zich voor als iets nuttigs, maar doet stiekem iets kwaads", "Het versleutelt je bestanden en eist losgeld", "Het is altijd een mail van je bank", "Het is een sterk wachtwoord"],
+        options: ["Het lijkt nuttig, maar doet stiekem iets kwaads", "Het versleutelt je bestanden en eist losgeld", "Het lokt je naar een nepsite van je bank", "Het verspreidt zich vanzelf via het netwerk"],
         answer: 0,
-        wrongHints: [null, "Dat is ransomware.", "Dat lijkt meer op phishing.", "Een trojan is malware, geen wachtwoord."],
+        wrongHints: [null, "Dat is ransomware.", "Dat lijkt meer op phishing.", "Zelfstandig verspreiden doet een worm."],
         uitlegPad: {
           stappen: [{ titel: "Nuttig verkleed", tekst: "Een **trojaans paard (trojan)** lijkt iets nuttigs (een gratis spelletje, een 'update'), maar doet stiekem iets kwaads op de achtergrond. Net als het houten paard van Troje: van buiten een cadeau, van binnen de vijand." }],
-          niveaus: { basis: "Nuttig lijken, kwaad doen.", simpeler: "Trojan = nep-nuttig", nogSimpeler: "A." },
+          niveaus: { basis: "Nuttig lijken, kwaad doen.", simpeler: "Trojan = nep-nuttig", nogSimpeler: "Het lijkt nuttig, maar doet stiekem iets kwaads." },
         },
       },
     ],
@@ -79,9 +79,9 @@ const steps = [
     checks: [
       {
         q: "Wat maakt een wachtwoord het sterkst?",
-        options: ["Een lange zin, uniek per site", "Eén kort woord met een hoofdletter", "Je naam met een cijfer", "Hetzelfde wachtwoord overal"],
+        options: ["Een lange zin die je alleen op één site gebruikt", "Een kort wachtwoord vol tekens, zoals K@t9!", "Een sterk wachtwoord dat je elke maand wijzigt", "Een woord in een andere taal, met cijfers erachter"],
         answer: 0,
-        wrongHints: [null, "Kort is juist zwak, ook met hoofdletter.", "Je naam is makkelijk te raden.", "Overal hetzelfde is het gevaarlijkst."],
+        wrongHints: [null, "Het ziet er moeilijk uit, maar het is kort: een computer probeert zulke combinaties razendsnel. Wat helpt meer, lengte of trucjes?", "Vaak wijzigen leidt tot zwakke varianten (Zomer1, Zomer2). Wat helpt meer?", "Aanvallers proberen ook buitenlandse woordenlijsten, en cijfers achteraan is het eerste trucje dat ze testen."],
         uitlegPad: {
           stappen: [{ titel: "Lang + uniek", tekst: "**Lengte** maakt een wachtwoord sterk (een lange zin is moeilijk te kraken én te onthouden), en het moet **uniek per site** zijn — lekt er één, dan liggen niet meteen al je accounts open. Een **wachtwoordmanager** helpt hierbij." }],
           niveaus: { basis: "Lang + uniek.", simpeler: "Sterk = lang + uniek", nogSimpeler: "A." },
@@ -89,19 +89,19 @@ const steps = [
       },
       {
         q: "Wat is **tweestapsverificatie (2FA)**?",
-        options: ["Een tweede bewijs naast je wachtwoord", "Twee keer hetzelfde wachtwoord", "Een dubbel zo lang wachtwoord", "Twee gebruikersnamen"],
+        options: ["Een tweede bewijs naast je wachtwoord", "Een tweede wachtwoord dat je ook onthoudt", "Een slot dat na twee foute pogingen dichtgaat", "Een wachtwoord dat je in twee stappen intypt"],
         answer: 0,
-        wrongHints: [null, "Niet hetzelfde twee keer — een ánder soort bewijs.", "Het is een tweede stap, geen langer wachtwoord.", "Het gaat om bewijs, niet om twee namen."],
+        wrongHints: [null, "Een tweede wachtwoord is hetzelfde soort ding als het eerste. Wat maakt 2FA sterker?", "Blokkeren na foute pogingen is een andere beveiliging. Wat gebeurt er bij 2FA nádat je wachtwoord klopt?", "In delen typen maakt het niet sterker; het blijft hetzelfde wachtwoord."],
         uitlegPad: {
           stappen: [{ titel: "Iets weten + iets hebben", tekst: "**2FA** voegt een **tweede bewijs** toe naast je wachtwoord: een code via een app/sms of je vingerafdruk. Zelfs met je wachtwoord komt een aanvaller er niet in zonder die tweede stap. Het is de belangrijkste extra beveiliging die je kunt aanzetten." }],
-          niveaus: { basis: "Tweede bewijs.", simpeler: "2FA = extra code", nogSimpeler: "A." },
+          niveaus: { basis: "Tweede bewijs.", simpeler: "2FA = extra code", nogSimpeler: "Een tweede bewijs naast je wachtwoord." },
         },
       },
       {
         q: "Hoe hoort een goede website je wachtwoord op te slaan?",
-        options: ["Als hash, niet als gewone tekst", "Gewoon als leesbare tekst", "Als een foto", "Helemaal niet — onthouden uit het hoofd"],
+        options: ["Als hash, dus nooit als leesbare tekst", "Als leesbare tekst in een beveiligde map", "Versleuteld met een sleutel die de site bewaart", "Als tekst die alleen beheerders kunnen lezen"],
         answer: 0,
-        wrongHints: [null, "Leesbaar bewaren is juist onveilig (lekt het, dan ligt alles open).", "Een foto van je wachtwoord is geen opslagmethode.", "De site moet 'm wel kunnen controleren — dus opslaan, maar als hash."],
+        wrongHints: [null, "Komt een hacker toch binnen, wat ziet hij dan?", "Wie die sleutel vindt, kan alle wachtwoorden terugrekenen. Moet de site jouw wachtwoord eigenlijk kunnen teruglezen?", "Dan kan elke beheerder (of wie zijn account kaapt) je wachtwoord lezen. Is dat nodig om je in te laten loggen?"],
         uitlegPad: {
           stappen: [{ titel: "Hashing", tekst: "Een goede site bewaart een **hash**: een **onomkeerbare** omzetting (anders dan encryptie is er geen sleutel om terug te gaan). Dezelfde invoer → dezelfde hash, maar je kunt het wachtwoord er niet uit terugrekenen. Lekt de database, dan zien hackers alleen hashes. Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen laten resetten." }],
           niveaus: { basis: "Als hash.", simpeler: "Wachtwoord = als hash bewaren", nogSimpeler: "A." },
@@ -109,22 +109,22 @@ const steps = [
       },
       {
         q: "Waarom is **hetzelfde wachtwoord op meerdere sites** gebruiken gevaarlijk?",
-        options: ["Lekt één site, dan kunnen aanvallers er meteen je andere accounts mee proberen", "Het is juist het veiligst", "Websites worden er trager van", "Je onthoudt het dan slechter"],
+        options: ["Eén lek maakt al je accounts kwetsbaar", "Websites delen je wachtwoord dan met elkaar", "Een site blokkeert je account bij hergebruik", "Het wachtwoord wordt dan sneller gekraakt"],
         answer: 0,
-        wrongHints: [null, "Het tegendeel: het is juist het gevaarlijkst.", "Snelheid heeft er niets mee te maken.", "Onthouden is makkelijker, veiligheid juist slechter."],
+        wrongHints: [null, "Websites wisselen geen wachtwoorden uit — het gevaar zit ergens anders.", "Een site kan niet zien welk wachtwoord je elders gebruikt. Waar komt het gevaar dan vandaan?", "Hergebruik maakt het wachtwoord zelf niet zwakker. Waar zit het risico dan?"],
         uitlegPad: {
           stappen: [{ titel: "Eén lek = alles open", tekst: "Als je overal hetzelfde wachtwoord gebruikt en één site wordt gehackt, proberen aanvallers datzelfde wachtwoord automatisch op je mail, socials en bank (dat heet **credential stuffing**). Daarom: **uniek per site**, het liefst via een wachtwoordmanager." }],
-          niveaus: { basis: "Eén lek opent alles.", simpeler: "Hergebruik = risico", nogSimpeler: "A." },
+          niveaus: { basis: "Eén lek opent alles.", simpeler: "Hergebruik = risico", nogSimpeler: "Eén lek maakt al je accounts kwetsbaar." },
         },
       },
       {
         q: "Wat doet een **wachtwoordmanager**?",
-        options: ["Onthoudt sterke, unieke wachtwoorden achter één hoofdwachtwoord", "Zet je wachtwoorden openbaar op internet", "Maakt je wachtwoorden korter", "Deelt je wachtwoorden met je vrienden"],
+        options: ["Bewaart al je verschillende wachtwoorden", "Vervangt je wachtwoorden door tweestapsverificatie", "Logt je uit op openbare computers", "Versleutelt je bestanden tegen ransomware"],
         answer: 0,
-        wrongHints: [null, "Hij bewaart ze juist versleuteld, niet openbaar.", "Hij maakt ze juist langer/sterker.", "Delen is precies wat je níét wilt."],
+        wrongHints: [null, "2FA is een extra bewijs náást een wachtwoord. Wat doet een manager met je wachtwoorden?", "Uitloggen doe je zelf. Wat doet een manager met al die verschillende wachtwoorden?", "Tegen ransomware helpen vooral back-ups. Waar gaat een wachtwoordmanager over?"],
         uitlegPad: {
           stappen: [{ titel: "Eén sleutelbos", tekst: "Een **wachtwoordmanager** verzint en onthoudt voor elke site een **sterk, uniek** wachtwoord. Jij onthoudt alleen nog één sterk **hoofdwachtwoord**. Zo hoef je niet te kiezen tussen 'veilig' en 'te onthouden'." }],
-          niveaus: { basis: "Onthoudt sterke wachtwoorden.", simpeler: "Manager = kluis", nogSimpeler: "A." },
+          niveaus: { basis: "Onthoudt sterke wachtwoorden.", simpeler: "Manager = kluis", nogSimpeler: "Bewaart al je sterke, unieke wachtwoorden." },
         },
       },
     ],
@@ -138,52 +138,52 @@ const steps = [
     checks: [
       {
         q: "Wat doet **encryptie**?",
-        options: ["Data onleesbaar maken zonder de juiste sleutel", "Bestanden kleiner maken", "Het internet sneller maken", "Virussen verwijderen"],
+        options: ["Data onleesbaar maken zonder de juiste sleutel", "Bestanden kleiner maken om ruimte te sparen", "Data sneller over het internet versturen", "Virussen opsporen en van je schijf verwijderen"],
         answer: 0,
         wrongHints: [null, "Verkleinen is compressie — iets anders.", "Snelheid is niet het doel.", "Dat doet antivirus, niet encryptie."],
         uitlegPad: {
           stappen: [{ titel: "Geheim met een sleutel", tekst: "**Encryptie** zet klare tekst om in onleesbare **cijfertekst** met een **sleutel**. Alleen wie de juiste sleutel heeft, kan het terug omzetten. Zo blijft informatie geheim, ook als iemand het onderschept." }],
-          niveaus: { basis: "Onleesbaar zonder sleutel.", simpeler: "Encryptie = versleutelen", nogSimpeler: "A." },
+          niveaus: { basis: "Onleesbaar zonder sleutel.", simpeler: "Encryptie = versleutelen", nogSimpeler: "Data onleesbaar maken zonder de juiste sleutel." },
         },
       },
       {
         q: "Bij **asymmetrische encryptie** zijn er…",
-        options: ["Twee sleutels: een publieke en een privé", "Eén sleutel voor alles", "Helemaal geen sleutels", "Een sleutel per letter"],
+        options: ["Twee sleutels: een publieke en een privé", "Eén sleutel die beide kanten geheim delen", "Twee sleutels: een korte en een lange", "Twee sleutels: allebei geheim, maar anders"],
         answer: 0,
-        wrongHints: [null, "Eén sleutel = symmetrisch, niet asymmetrisch.", "Zonder sleutel is er geen encryptie.", "Niet per letter — wat zegt 'asymmetrisch' (ongelijk) over de sleutels?"],
+        wrongHints: [null, "Eén sleutel = symmetrisch, niet asymmetrisch.", "Asymmetrisch gaat niet over de lengte van de sleutels.", "Als beide sleutels geheim zijn: hoe kan een vreemde dan iets voor jou versleutelen?"],
         uitlegPad: {
           stappen: [{ titel: "Publiek + privé", tekst: "**Asymmetrische encryptie** gebruikt een **sleutelpaar**: een **publieke sleutel** (mag iedereen hebben) om te versleutelen, en een geheime **privésleutel** om te ontsleutelen. Zo kun je veilig communiceren met iemand zonder vooraf een geheime sleutel te delen. **Symmetrisch** gebruikt juist één gedeelde sleutel." }],
-          niveaus: { basis: "Publieke + privé.", simpeler: "Asymmetrisch = 2 sleutels", nogSimpeler: "A." },
+          niveaus: { basis: "Publieke + privé.", simpeler: "Asymmetrisch = 2 sleutels", nogSimpeler: "Twee sleutels: een publieke en een privé." },
         },
       },
       {
         q: "Het slotje **🔒 (HTTPS)** gebruikt encryptie om…",
-        options: ["Het verkeer tussen jou en de server af te schermen", "De site gratis te maken", "Reclame te blokkeren", "De site sneller te laden"],
+        options: ["Het verkeer met de server af te schermen", "Te bewijzen dat de site eerlijk is", "Virussen op de site tegen te houden", "Je wachtwoord op de server te hashen"],
         answer: 0,
-        wrongHints: [null, "Het zegt niets over de prijs.", "Reclame blokkeren doet iets anders.", "Snelheid is niet het doel van HTTPS."],
+        wrongHints: [null, "Ook nepsites hebben vaak een slotje. Zegt het iets over de eerlijkheid van de eigenaar?", "Het slotje scant geen bestanden. Wat wordt er wél versleuteld?", "Hoe de server wachtwoorden bewaart, staat los van het slotje. Waar werkt het slotje dan op?"],
         uitlegPad: {
           stappen: [{ titel: "Versleuteld webverkeer", tekst: "Bij **HTTPS** zetten je browser en de server (met asymmetrische encryptie) veilig een gedeelde sleutel op en **versleutelen daarna al het verkeer**. Niemand onderweg kan meelezen — belangrijk bij wachtwoorden en betalingen." }],
-          niveaus: { basis: "Verkeer afschermen.", simpeler: "🔒 = verkeer versleuteld", nogSimpeler: "A." },
+          niveaus: { basis: "Verkeer afschermen.", simpeler: "🔒 = verkeer versleuteld", nogSimpeler: "Het verkeer met de server af te schermen." },
         },
       },
       {
         q: "Wat is het lastige aan **symmetrische encryptie** (één gedeelde sleutel)?",
-        options: ["Je moet die ene geheime sleutel veilig bij de ander zien te krijgen", "Er zijn altijd te veel sleutels", "Versleutelde data is nooit meer te lezen", "Het werkt alleen zonder internet"],
+        options: ["Die ene sleutel moet veilig bij de ander komen", "Het is veel trager dan asymmetrische encryptie", "Iedereen kan met de publieke sleutel meelezen", "De sleutel moet na elk bericht vervangen worden"],
         answer: 0,
-        wrongHints: [null, "Er is juist maar één sleutel — dat is het punt.", "Met de sleutel kun je het wél terug lezen.", "Het werkt ook prima online."],
+        wrongHints: [null, "Symmetrisch is juist de snelle variant — het probleem zit ergens anders.", "Een publieke sleutel hoort bij asymmetrische encryptie, niet bij deze vorm.", "Dat is geen vaste regel. Wat moet er gebeuren voordat de ander je bericht kan openen?"],
         uitlegPad: {
           stappen: [{ titel: "Het sleutelprobleem", tekst: "Bij **symmetrische encryptie** gebruiken zender en ontvanger **dezelfde** geheime sleutel. Snel — maar hoe geef je die sleutel veilig door zonder dat iemand onderweg 'm onderschept? Dat 'sleuteldeel-probleem' lost **asymmetrische** encryptie op." }],
-          niveaus: { basis: "Sleutel veilig delen.", simpeler: "Symmetrisch = deelprobleem", nogSimpeler: "A." },
+          niveaus: { basis: "Sleutel veilig delen.", simpeler: "Symmetrisch = deelprobleem", nogSimpeler: "Die ene sleutel moet veilig bij de ander komen." },
         },
       },
       {
         q: "Waarom is het slotje **🔒 (HTTPS)** juist op **openbare wifi** belangrijk?",
-        options: ["Anderen op hetzelfde netwerk kunnen onversleuteld verkeer meelezen", "Openbare wifi is dan sneller", "Het bespaart stroom", "Het maakt de site gratis"],
+        options: ["Anderen op het netwerk kunnen anders meelezen", "Het verbergt je locatie voor de websites", "Het houdt virussen op het netwerk tegen", "Het voorkomt dat je verbinding wegvalt"],
         answer: 0,
-        wrongHints: [null, "Snelheid verandert er niet door.", "Het gaat om veiligheid, niet om stroom.", "HTTPS zegt niets over de prijs."],
+        wrongHints: [null, "Je locatie verbergen is een andere functie (denk aan een VPN). Wie kan er op openbare wifi met je meekijken?", "Het slotje scant niets op virussen. Wat wordt er wél versleuteld?", "Een stabiele verbinding heeft niets met encryptie te maken. Wie zit er nog meer op dat netwerk?"],
         uitlegPad: {
           stappen: [{ titel: "Meelezen voorkomen", tekst: "Op openbare wifi zit je op hetzelfde netwerk als vreemden. Zonder **HTTPS** kan iemand je verkeer (wachtwoorden, berichten) meelezen. Met het **slotje** is alles versleuteld, dus onleesbaar voor meelezers. Check dus altijd het slotje bij inloggen of betalen." }],
-          niveaus: { basis: "Anderen kunnen meelezen.", simpeler: "🔒 stopt meelezen", nogSimpeler: "A." },
+          niveaus: { basis: "Anderen kunnen meelezen.", simpeler: "🔒 stopt meelezen", nogSimpeler: "Anderen op het netwerk kunnen anders meelezen." },
         },
       },
     ],
@@ -197,9 +197,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de beste bescherming tegen het kwijtraken van data (bv. door ransomware)?",
-        options: ["Regelmatig back-ups maken", "Een mooier bureaublad", "Meer reclame toelaten", "Je wachtwoord opschrijven op je scherm"],
+        options: ["Regelmatig back-ups maken", "Een goede antivirusscanner", "Een sterk, uniek wachtwoord", "Een firewall op je router"],
         answer: 0,
-        wrongHints: [null, "Uiterlijk helpt niet tegen dataverlies.", "Reclame beschermt niets.", "Een wachtwoord op je scherm is juist onveilig."],
+        wrongHints: [null, "Antivirus houdt veel tegen, maar niet alles. Wat als je bestanden tóch versleuteld worden?", "Dat beschermt je account. Maar wat helpt je als het tóch misgaat?", "Een firewall filtert verkeer, maar ransomware komt vaak via een bijlage binnen. En dan?"],
         uitlegPad: {
           stappen: [{ titel: "Back-ups = je vangnet", tekst: "Met een recente **back-up** (liefst ook offline/in de cloud) kun je je gegevens herstellen na ransomware, diefstal of een crash — zonder losgeld te betalen. Samen met updates, 2FA en niet-zomaar-klikken is dit digitale basishygiëne." }],
           niveaus: { basis: "Back-ups.", simpeler: "Dataverlies voorkomen = back-up", nogSimpeler: "A." },
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Waarom zijn **software-updates** belangrijk voor veiligheid?",
-        options: ["Ze dichten beveiligingsgaten", "Ze maken de batterij voller", "Ze verwijderen je bestanden", "Ze zijn alleen voor nieuwe kleuren"],
+        options: ["Ze dichten beveiligingsgaten", "Ze maken een back-up van je bestanden", "Ze scannen je apparaat op virussen", "Ze maken je wachtwoorden sterker"],
         answer: 0,
-        wrongHints: [null, "Updates laden je batterij niet op.", "Updates wissen je bestanden niet (back-up blijft slim).", "Het gaat om veiligheid, niet alleen uiterlijk."],
+        wrongHints: [null, "Een update maakt geen kopie van je bestanden. Wat repareert hij wel?", "Dat doet een antivirusprogramma. Wat verandert er bij een update aan de software zelf?", "Je wachtwoord blijft na een update hetzelfde. Wat wordt er dan verbeterd?"],
         uitlegPad: {
           stappen: [{ titel: "Gaten dichten", tekst: "Software bevat soms **beveiligingsgaten** (kwetsbaarheden). **Updates** dichten die. Verouderde software is een open deur voor aanvallers — daarom: updates niet uitstellen." }],
           niveaus: { basis: "Dichten gaten.", simpeler: "Updates = gaten dichten", nogSimpeler: "A." },
@@ -217,19 +217,19 @@ const steps = [
       },
       {
         q: "De **AVG** gaat over…",
-        options: ["Hoe organisaties met persoonsgegevens moeten omgaan", "Hoe je sneller internet krijgt", "Welke kleuren een website mag hebben", "Hoe je een virus maakt"],
+        options: ["Hoe organisaties met persoonsgegevens moeten omgaan", "Wanneer je auteursrecht hebt op foto's en teksten", "Hoe goed bedrijven hun netwerk beveiligen", "Wanneer de politie je telefoon mag doorzoeken"],
         answer: 0,
-        wrongHints: [null, "De AVG gaat over privacy, niet over snelheid.", "Het bepaalt geen kleuren.", "Het is een privacywet; met malware maken heeft het niets te maken."],
+        wrongHints: [null, "Dat regelt de Auteurswet. Over wat voor gegevens gaat de AVG?", "Beveiliging hoort er wel bij, maar de AVG gaat breder dan alleen netwerkbeveiliging.", "Dat regelt het strafrecht, niet de AVG."],
         uitlegPad: {
           stappen: [{ titel: "Europese privacywet", tekst: "De **AVG** (Algemene Verordening Gegevensbescherming) regelt hoe organisaties met **persoonsgegevens** mogen omgaan: dataminimalisatie (alleen wat nodig is), doelbinding, toestemming, en je recht op **inzage, correctie en verwijdering** — plus veilig bewaren." }],
-          niveaus: { basis: "Omgaan met persoonsgegevens.", simpeler: "AVG = privacywet", nogSimpeler: "A." },
+          niveaus: { basis: "Omgaan met persoonsgegevens.", simpeler: "AVG = privacywet", nogSimpeler: "Hoe organisaties met persoonsgegevens moeten omgaan." },
         },
       },
       {
         q: "Wat is het verschil tussen een **firewall** en **antivirus**?",
-        options: ["Een firewall filtert netwerkverkeer; antivirus spoort malware op je apparaat op", "Een firewall spoort malware op je apparaat op; antivirus filtert netwerkverkeer", "Een firewall is zelf een virus", "Antivirus versnelt je wifi"],
+        options: ["Een firewall filtert netwerkverkeer; antivirus spoort malware op", "Een firewall spoort malware op; antivirus filtert netwerkverkeer", "Een firewall maakt back-ups; antivirus spoort malware op", "Een firewall versleutelt je wifi; antivirus spoort malware op"],
         answer: 0,
-        wrongHints: [null, "Andersom: wie bewaakt de poort naar het netwerk, en wie zoekt op je apparaat zelf?", "Een firewall beschermt juist.", "Antivirus gaat over malware, niet snelheid."],
+        wrongHints: [null, "Andersom: wie bewaakt de poort naar het netwerk, en wie zoekt op je apparaat zelf?", "Back-ups maken is een andere maatregel. Wat bewaakt een firewall?", "Wifi versleutel je met WPA. Waar staat een firewall tussen?"],
         uitlegPad: {
           stappen: [{ titel: "Poortwachter vs. speurhond", tekst: "Een **firewall** is de poortwachter: hij bepaalt welk **netwerkverkeer** binnen/buiten mag. **Antivirus** is de speurhond op je apparaat zelf: hij spoort **malware** op en ruimt die op. Samen dekken ze verschillende risico's af." }],
           niveaus: { basis: "Firewall = verkeer, antivirus = malware.", simpeler: "Poort vs. speurhond", nogSimpeler: "A." },
@@ -237,12 +237,12 @@ const steps = [
       },
       {
         q: "Volgens de **AVG** mag een organisatie…",
-        options: ["Alleen persoonsgegevens verzamelen die echt nodig zijn", "Alle gegevens verzamelen die ze maar wil", "Je gegevens nooit laten inzien", "Je gegevens altijd doorverkopen"],
+        options: ["Alleen persoonsgegevens verzamelen die echt nodig zijn", "Gegevens bewaren zolang de klant geen bezwaar maakt", "Gegevens versleuteld doorgeven aan andere bedrijven", "Gegevens verzamelen als het in de voorwaarden staat"],
         answer: 0,
-        wrongHints: [null, "Juist niet — de AVG wil dat organisaties zuinig zijn met gegevens.", "Je hebt recht op inzage.", "Doorverkopen mag niet zomaar."],
+        wrongHints: [null, "De AVG zegt: niet langer bewaren dan nodig, ook als niemand bezwaar maakt.", "Versleutelen is goed, maar het geeft nog geen toestemming om te delen.", "Iets in de kleine lettertjes zetten maakt het nog niet nodig. Welk principe gaat over zuinig zijn met gegevens?"],
         uitlegPad: {
           stappen: [{ titel: "Zo min mogelijk, met een doel", tekst: "De **AVG** eist **dataminimalisatie**: verzamel alleen wat je echt nodig hebt, en gebruik het alleen voor het doel waarvoor je het kreeg (**doelbinding**). Jij hebt recht op **inzage, correctie en verwijdering** van je gegevens." }],
-          niveaus: { basis: "Alleen wat nodig is.", simpeler: "AVG = zuinig met data", nogSimpeler: "A." },
+          niveaus: { basis: "Alleen wat nodig is.", simpeler: "AVG = zuinig met data", nogSimpeler: "Alleen persoonsgegevens verzamelen die echt nodig zijn." },
         },
       },
     ],

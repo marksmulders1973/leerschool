@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Wie zei **Cogito, ergo sum**?",
-        options: ["René Descartes","John Locke","Plato","Kant"],
+        options: ["René Descartes","John Locke","Plato","Immanuel Kant"],
         answer: 0,
-        wrongHints: [null, "Niet — empirist.", "Niet — Antiek.", "Niet — synthese."],
+        wrongHints: [null, "Locke zag de ervaring als bron van alle kennis. Wie begon juist bij het denken zelf?", "Plato schreef in het Grieks, ruim 2000 jaar eerder. Deze Latijnse zin komt uit de 17e eeuw.", "Kant kwam ruim een eeuw later en zocht een tussenweg tussen rede en ervaring."],
         uitlegPad: {
           stappen: [{ titel: "1637", tekst: "**René Descartes** (1596-1650) in *Discours de la méthode* (1637) + *Meditationes* (1641). 'Cogito, ergo sum' = 'Ik denk, dus ik ben'. Onbetwijfelbaar startpunt voor zekere kennis." }],
           niveaus: { basis: "Descartes.", simpeler: "Cogito = Descartes", nogSimpeler: "Descartes" },
@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "**Empirist** John Locke gebruikt term *tabula rasa* voor:",
-        options: ["Geest als leeg schrijfblok bij geboorte", "Aangeboren ideeën die je al hebt", "Kennis die alleen uit de rede komt", "Een geest die niets kan leren"],
+        options: ["Geest die bij de geboorte nog niets weet", "Geest met aangeboren ideeën bij de geboorte", "Geest die kennis alleen uit de rede haalt", "Geest die bij de geboorte al goed is"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — dat zeggen rationalisten.", "Dat is rationalisme, niet empirisme.", "Leeg betekent niet onleerbaar — wat wordt er volgens Locke later 'ingevuld'?"],
+        wrongHints: [null, "Tegenovergesteld — dat zeggen rationalisten.", "Kennis uit de rede: dat zeggen rationalisten, niet empiristen.", "Dat de mens van nature goed is, zei Rousseau. Waar gaat tabula rasa over: goedheid of kennis?"],
         uitlegPad: {
           stappen: [{ titel: "Tabula rasa = leeg blad", tekst: "**Locke** stelde: bij geboorte is geest een **tabula rasa** (leeg schrijfblok). Alle kennis ontstaat via ervaring (zintuigen + reflectie). Tegen rationalisten die zeiden dat we aangeboren kennis hebben (Plato: anamnese, Descartes: ideeën van God)." }],
           niveaus: { basis: "Leeg blad.", simpeler: "Tabula rasa = leeg", nogSimpeler: "Leeg" },
@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "Welke kennis is **analytisch**?",
-        options: ["Alle vrijgezellen zijn ongehuwd","Water kookt bij 100°C","Aarde is rond","Sokrates was leraar"],
+        options: ["Alle vrijgezellen zijn ongehuwd","Water kookt op zeeniveau bij 100°C","De aarde draait in een jaar om de zon","Socrates was de leraar van Plato"],
         answer: 0,
-        wrongHints: [null, "Empirisch, niet analytisch.", "Empirisch.", "Historisch (empirisch)."],
+        wrongHints: [null, "Dat moet je met een thermometer nagaan. Volgt het uit de betekenis van het woord 'water'?", "Moet je hiervoor naar de hemel kijken, of volgt het uit de betekenis van de woorden?", "Om dit te weten moet je bronnen nalezen. Is het dan waar puur door de betekenis van de woorden?"],
         uitlegPad: {
           stappen: [{ titel: "Analytisch = definitie", tekst: "**Analytisch**: waarheid volgt uit **definitie** van termen. 'Vrijgezel' = 'ongehuwde man' → 'alle vrijgezellen zijn ongehuwd' is automatisch waar zonder waarneming. **Synthetisch**: betekenis voegt iets toe wat moet worden gecheckt." }],
           theorie: "Kant onderscheidde: analytisch a priori (definitie-waar), synthetisch a posteriori (empirisch), en introduceerde synthetisch a priori (volgens hem o.a. wiskunde; omstreden).",
@@ -63,9 +63,9 @@ const steps = [
       },
       {
         q: "Volgens **Karl Popper** is wetenschap:",
-        options: ["Falsificeerbaar", "Bewezen waar", "Subjectief", "Hetzelfde als religie"],
+        options: ["Falsificeerbaar", "Bewezen waar", "Verifieerbaar", "Inductief bewezen"],
         answer: 0,
-        wrongHints: [null, "Niet — pseudowetenschap claimt vaak dit.", "Niet — kan objectief streven.", "Niet — fundamenteel anders."],
+        wrongHints: [null, "Kan een theorie volgens Popper ooit definitief bewezen worden?", "Dat vond de Wiener Kreis. Popper zei: bevestigen kan eindeloos. Wat moet een theorie dan kunnen?", "Popper verwierp inductie: duizend witte zwanen bewijzen niet dat alle zwanen wit zijn."],
         uitlegPad: {
           stappen: [{ titel: "Falsificatiecriterium", tekst: "**Popper**: theorie is **wetenschappelijk** als ze in principe **gefalsifieerd** (weerlegd) kan worden door waarneming. Theorie nooit definitief 'bewezen', alleen 'nog niet weerlegd'. Astrologie + freudianisme = niet falsificeerbaar = pseudowetenschap volgens Popper." }],
           theorie: "Toets-patroon: 'is X wetenschap volgens Popper?' → kan deze claim getest + weerlegd worden?",
@@ -74,9 +74,9 @@ const steps = [
       },
       {
         q: "**Kant** onderscheidde *Fenomeen* van *Ding-an-sich*. Wat kunnen we kennen?",
-        options: ["Alleen fenomenen", "Ding-an-sich rechtstreeks", "Beide", "Geen"],
+        options: ["Alleen fenomenen", "Alleen het ding-an-sich", "Beide, via de rede", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "Niet — fundamenteel verborgen.", "Niet — één van de twee blijft voor ons verborgen.", "Wel iets."],
+        wrongHints: [null, "Het ding-an-sich blijft volgens Kant juist verborgen. Wat nemen we dan wel waar?", "Kan de rede volgens Kant voorbij onze waarneming kijken?", "Kant was geen scepticus: iets kunnen we wel kennen. Wat?"],
         uitlegPad: {
           stappen: [{ titel: "Beperkte kennis", tekst: "**Kant**: zintuigen + categorieën-denken (oorzaak/ruimte/tijd) leveren **fenomeen** (wat verschijnt). Werkelijkheid zelf (**Ding-an-sich, noumenon**) blijft principieel **onkenbaar**. We kennen alleen 'gefilterde' versie." }],
           theorie: "Compromis tussen rationalisme (Descartes — kennis vanuit denken) en empirisme (Locke/Hume — alleen uit ervaring).",
@@ -94,9 +94,9 @@ const steps = [
     checks: [
       {
         q: "Wie zegt: 'esse est **percipi**' (zijn = waargenomen worden)?",
-        options: ["George Berkeley","Plato","Aristoteles","Hume"],
+        options: ["George Berkeley","Plato","Aristoteles","David Hume"],
         answer: 0,
-        wrongHints: [null, "Niet — ander concept.", "Niet — vier oorzaken.", "Niet — anders."],
+        wrongHints: [null, "Plato vond de ideeënwereld juist echter dan alles wat je waarneemt.", "Aristoteles vond dat dingen ook bestaan als niemand ernaar kijkt. Wie dacht daar anders over?", "Hume was wel empirist, maar bekend om zijn twijfel aan oorzaak en gevolg."],
         uitlegPad: {
           stappen: [{ titel: "Idealistische empirist", tekst: "**George Berkeley** (1685-1753): 'esse est percipi' = bestaan = waargenomen worden. Voorbeeld: tafel bestaat zolang iemand hem ziet. God ziet altijd alles → alles blijft bestaan. Empirist-idealist." }],
           theorie: "Limerick Knox: 'There was once a young man who said \"God / Must think it exceedingly odd / If he finds that this tree / Continues to be / When there's no one about in the quad...\"'",
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Bij **dualisme** (Descartes) zijn er hoeveel substanties?",
-        options: ["Twee", "Een", "Drie", "Oneindig"],
+        options: ["Twee", "Eén", "Drie", "Oneindig"],
         answer: 0,
-        wrongHints: [null, "Niet — monisme.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Eén substantie is monisme, zoals bij Spinoza. Dacht Descartes ook zo?", "Descartes onderscheidde lichaam en geest. Komt daar nog iets bij?", "Oneindig veel substanties past eerder bij de 'monaden' van Leibniz."],
         uitlegPad: {
           stappen: [{ titel: "Lichaam vs geest", tekst: "**Cartesiaans dualisme**: twee fundamenteel verschillende substanties: **res extensa** (uitgebreid ding = materie) en **res cogitans** (denkend ding = geest). Hoe interacteren ze? Probleem 'mind-body'." }],
           niveaus: { basis: "Twee.", simpeler: "Dualisme = 2", nogSimpeler: "2" },
@@ -117,7 +117,7 @@ const steps = [
         q: "Welk standpunt verzoent **vrije wil + determinisme**?",
         options: ["Compatibilisme","Libertarisme","Hard determinisme","Idealisme"],
         answer: 0,
-        wrongHints: [null, "Niet — verwerpt determinisme.", "Niet — verwerpt vrije wil.", "Niet relevant."],
+        wrongHints: [null, "Libertariërs kiezen voor de vrije wil en wijzen het determinisme af. Verzoent dat beide?", "Hard deterministen zeggen dat alles vastligt en vrije wil een illusie is. Verzoent dat beide?", "Idealisme gaat over wat de werkelijkheid is (geest), niet over vrije wil."],
         uitlegPad: {
           stappen: [{ titel: "Hume + Dennett", tekst: "**Compatibilisme**: vrije wil + determinisme **zijn niet in conflict**. 'Vrij' = handelen volgens eigen wensen + redenering (zonder externe dwang), zelfs als die wensen zelf oorzakelijk bepaald zijn. Verschillend van Cartesiaans-libertarisch 'absoluut vrije wil'." }],
           theorie: "Toets-patroon: 'past dit bij compatibilisme of libertarisme?' Beoordeel definitie.",
@@ -126,9 +126,9 @@ const steps = [
       },
       {
         q: "Wat is het **probleem van het kwaad**?",
-        options: ["Hoe kan God almachtig + goed zijn bij veel lijden?","Wat is moreel kwaad?","Hoe stop je oorlog?","Wat is zonde?"],
+        options: ["Hoe kan God almachtig + goed zijn bij veel lijden?","Wat maakt een daad moreel goed of juist kwaad?","Hoe kunnen landen oorlog voorgoed voorkomen?","Wat telt volgens de Bijbel precies als zonde?"],
         answer: 0,
-        wrongHints: [null, "Andere vraag (ethiek).", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Dat is een algemene vraag uit de ethiek. Wiens bestaan staat bij dit 'probleem' ter discussie?", "Dat is een politieke vraag, geen vraag uit de godsdienstfilosofie.", "Dat vraagt naar een regel binnen een geloof. Waarom heet het een 'probleem'?"],
         uitlegPad: {
           stappen: [{ titel: "Theodicee", tekst: "**Probleem van het kwaad**: als God **almachtig + alwetend + goed** is, waarom is er lijden? Drie eigenschappen lijken onverenigbaar met realiteit van lijden. Klassiek atheïstisch argument. Theologen verdedigen met 'theodicee': vrije wil (Plantinga), zielsvorming, mysterie." }],
           niveaus: { basis: "God + lijden onverenigbaar.", simpeler: "Prob kwaad = God+lijden", nogSimpeler: "God + lijden" },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Volgens **Spinoza** is alles:",
-        options: ["Uitdrukking van één substantie", "Twee aparte werelden", "Toeval", "Illusie"],
+        options: ["Uitdrukking van één substantie", "Twee aparte werelden: geest en lichaam", "Puur toeval zonder oorzaak", "Een illusie van onze zintuigen"],
         answer: 0,
-        wrongHints: [null, "Niet — monist.", "Niet relevant.", "Niet — niet idealist."],
+        wrongHints: [null, "Dat is het dualisme van Descartes. Spinoza was monist: hoeveel substanties zijn er dan?", "Spinoza zag alles als noodzakelijk — is er dan plaats voor toeval?", "Spinoza zag de natuur als echt, niet als schijn. Hoeveel 'stoffen' bestaan er volgens hem?"],
         uitlegPad: {
           stappen: [{ titel: "Deus sive Natura", tekst: "**Spinoza** (1632-1677, Amsterdam): één substantie = **God = Natuur** (pantheïsme). Alle dingen = uitdrukkingen ('modi') van deze ene substantie. Geen aparte 'God' tegenover wereld. **Joods-Portugese** filosoof, uitgesloten uit synagoge voor zijn ideeën." }],
           theorie: "Einstein: 'Ik geloof in de God van Spinoza' (de wetmatigheden van natuur, niet persoonlijke God).",
@@ -158,7 +158,7 @@ const steps = [
         q: "Wie formuleerde de **categorische imperatief**?",
         options: ["Immanuel Kant","John Stuart Mill","Aristoteles","Plato"],
         answer: 0,
-        wrongHints: [null, "Niet — utilitarist.", "Niet — deugd-ethiek.", "Niet — Antiek."],
+        wrongHints: [null, "Mill was utilitarist: hij keek naar de gevolgen van een daad, niet naar plichten.", "Aristoteles deed aan deugdethiek: hij vroeg wat een goed mens is, niet welke regel je moet volgen.", "Plato leefde 2000 jaar eerder; de term 'imperatief' komt uit de Verlichting."],
         uitlegPad: {
           stappen: [{ titel: "Deontologisch principe", tekst: "**Kant** in *Grundlegung zur Metaphysik der Sitten* (1785). **Categorische imperatief**: handel alleen volgens regel die je tot universele wet zou willen maken. Toets: zou iedereen dit kunnen doen zonder zelf-tegenspraak?\n\n2e formule: 'Behandel mensen nooit louter als middel, maar altijd ook als doel op zich.'" }],
           niveaus: { basis: "Kant.", simpeler: "Cat. imp. = Kant", nogSimpeler: "Kant" },
@@ -168,7 +168,7 @@ const steps = [
         q: "**Utilitarisme** beoordeelt handeling op:",
         options: ["Gevolgen", "Bedoeling", "Aard handeling zelf", "Regelconformiteit"],
         answer: 0,
-        wrongHints: [null, "Niet — speelt rol bij Kant.", "Niet — dat is deontologie.", "Niet — dat is regel-ethiek."],
+        wrongHints: [null, "De bedoeling achter een daad telt vooral bij Kant. Waar kijkt een utilitarist naar?", "Of een daad op zichzelf goed of fout is, dat vraagt de plichtethiek (deontologie).", "Of je je aan de regels houdt, staat centraal in de regel-ethiek. Wat telt een utilitarist?"],
         uitlegPad: {
           stappen: [{ titel: "Consequenties tellen", tekst: "**Utilitarisme** (Bentham, Mill): handeling is goed als ze **grootste geluk voor grootste aantal** oplevert. Beoordeel **gevolgen**, niet intentie of regel. Klassieke kritiek: rechtvaardigt slechte middelen voor goed doel (organen oogsten van 1 om 5 te redden?)." }],
           niveaus: { basis: "Gevolgen.", simpeler: "Utili = gevolgen", nogSimpeler: "Gevolg" },
@@ -176,9 +176,9 @@ const steps = [
       },
       {
         q: "Aristotelische **eudaimonia** betekent:",
-        options: ["Goed leven / menselijke bloei","Geluksgevoel (kort)","Roem","Rijkdom"],
+        options: ["Goed leven / menselijke bloei","Kortstondig geluksgevoel / plezier","Gemoedsrust / vrij zijn van onrust","Zielenheil / geluk na de dood"],
         answer: 0,
-        wrongHints: [null, "Te eng — eudaimonia is dieper.", "Niet — extern goed.", "Niet — extern."],
+        wrongHints: [null, "Plezier duurt maar even. Aristoteles bedoelde iets wat over je hele leven gaat.", "Dat heet ataraxia, het doel van Epicurus. Aristoteles dacht aan een actief leven.", "Aristoteles dacht aan dit leven, niet aan een hiernamaals."],
         uitlegPad: {
           stappen: [{ titel: "Bloei door deugd", tekst: "**Eudaimonia** (εὐδαιμονία) = goed leven / bloei / flourishing. Niet alleen geluksgevoel, maar **compleet leven volgens deugd + redelijk handelen**. Iemand kan tijdelijk lijden maar nog steeds eudaimon zijn als hij deugdzaam leeft. Hedendaagse vertaling: 'flourishing' beter dan 'happiness'." }],
           niveaus: { basis: "Goed leven.", simpeler: "Eudaimonia = bloei", nogSimpeler: "Bloei" },
@@ -186,9 +186,9 @@ const steps = [
       },
       {
         q: "**Trolleyprobleem**: utilitarist zou switch trekken?",
-        options: ["Ja (5 redden > 1 doden)","Nee (mens gebruiken als middel)","Geen oordeel","Wachten"],
+        options: ["Ja (5 redden > 1 doden)","Nee (mens gebruiken als middel)","Nee (niet voor God spelen)","Alleen als die ene instemt"],
         answer: 0,
-        wrongHints: [null, "Niet — deontoloog zou dat zeggen.", "Niet — wel oordeel.", "Niet — moet kiezen."],
+        wrongHints: [null, "Een mens niet als middel gebruiken is een argument van Kant (plichtethiek). Waar let een utilitarist op?", "Een utilitarist telt uitkomsten. Maakt het voor hem uit wie de keuze maakt?", "Instemming is belangrijk voor een plichtethicus. Waar kijkt de utilitarist naar?"],
         uitlegPad: {
           stappen: [{ titel: "Calculatie", tekst: "**Utilitarist**: 5 mensen levens > 1. Switch trekken minimaliseert dood. Doen.\n\n**Deontoloog (Kant)**: switch trekken = actief 1 persoon doden = persoon gebruiken als middel = fout. Nee (niet actief tussenkomen).\n\nVarianten testen intuïties verder: dikke man duwen (zelfde getal-uitkomst, maar lichamelijk anders) → veel mensen vinden dat erger." }],
           niveaus: { basis: "Ja.", simpeler: "Utili = ja", nogSimpeler: "Ja" },
@@ -198,7 +198,7 @@ const steps = [
         q: "**Peter Singer** maakte welke term bekend?",
         options: ["Speciesisme", "Categorische imperatief", "Tabula rasa", "Trolleyprobleem"],
         answer: 0,
-        wrongHints: [null, "Niet — Kant.", "Niet — Locke.", "Niet — Foot."],
+        wrongHints: [null, "De categorische imperatief komt van Kant.", "Tabula rasa ('onbeschreven blad') is een idee van Locke.", "Het trolleyprobleem is bedacht door Philippa Foot."],
         uitlegPad: {
           stappen: [{ titel: "Dier-ethiek", tekst: "**Peter Singer** (1946-) Australisch filosoof, *Animal Liberation* (1975). **Speciesisme / soortisme** (term bedacht door Richard Ryder, 1970) = discriminatie op basis van soort, analoog aan racisme of seksisme. Stelling: lijdenscapaciteit = wat telt, niet soort. Implicatie: vleeseten moreel problematisch." }],
           theorie: "Singer is utilitarist — toepassing utilitarisme op dieren. Tegenstander Tom Regan: dieren-rechten-theorie (deontologisch).",
@@ -216,9 +216,9 @@ const steps = [
     checks: [
       {
         q: "**Hobbes' natuurtoestand** wordt beschreven als:",
-        options: ["Oorlog van allen tegen allen","Paradijs","Communistisch","Vrij + vredig"],
+        options: ["Oorlog van allen tegen allen","Een paradijs zonder gebrek","Gemeenschap zonder eigendom","Vrij en vredig samenleven"],
         answer: 0,
-        wrongHints: [null, "Niet — Rousseau-achtig.", "Niet relevant.", "Niet — dat is Locke/Rousseau."],
+        wrongHints: [null, "Zo'n rooskleurig beeld past meer bij Rousseau. Dacht Hobbes positief over mensen zonder staat?", "Dat lijkt meer op Marx dan op Hobbes.", "Dat beeld past meer bij Locke of Rousseau. Waarom vond Hobbes een sterke staat nodig?"],
         uitlegPad: {
           stappen: [{ titel: "Bellum omnium...", tekst: "**Hobbes** in *Leviathan*: zonder staat = 'oorlog van allen tegen allen' (bellum omnium contra omnes). Leven 'solitary, poor, nasty, brutish, and short'. Daarom geven mensen macht af aan absolute soeverein voor veiligheid." }],
           niveaus: { basis: "Oorlog allen tegen allen.", simpeler: "Hobbes natuur = oorlog", nogSimpeler: "Oorlog" },
@@ -228,7 +228,7 @@ const steps = [
         q: "**Rawls' sluier van onwetendheid** test:",
         options: ["Welke principes je kiest als je niet weet wie je wordt", "Welke principes jou persoonlijk het meest opleveren", "Welke principes de meerderheid nu al aanhangt", "Of mensen eerlijk zijn als niemand kijkt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — je weet juist niet wie je bent.", "Niet — het gaat om onpartijdig kiezen.", "Niet relevant."],
+        wrongHints: [null, "Zou zo'n keuze eerlijk uitpakken voor wie het slechtst af is?", "Niet — het gaat om onpartijdig kiezen.", "Dat gaat over iemands karakter, niet over regels voor de samenleving."],
         uitlegPad: {
           stappen: [{ titel: "Onpartijdig kiezen", tekst: "**Rawls' veil of ignorance**: stel je zou principes voor maatschappij kiezen zonder te weten of je rijk/arm, man/vrouw, gezond/ziek wordt. Dan kies je principes die meest kwetsbaren beschermen (omdat je dat zelf zou kunnen zijn). Resultaat: redelijk egalitaire samenleving." }],
           niveaus: { basis: "Welke principes.", simpeler: "Sluier = onbevooroordeeld kiezen", nogSimpeler: "Onwetend kiezen" },
@@ -238,7 +238,7 @@ const steps = [
         q: "**Banaliteit van het kwaad** — wie introduceerde dit?",
         options: ["Hannah Arendt", "Nietzsche", "Marx", "Aristoteles"],
         answer: 0,
-        wrongHints: [null, "Niet — andere concepten.", "Niet — eerder.", "Niet — antiek."],
+        wrongHints: [null, "Nietzsche schreef over 'de wil tot macht'. Deze term ontstond bij het Eichmann-proces in 1961.", "Marx stierf in 1883. Deze term ontstond bij een proces tegen een nazi in 1961.", "Aristoteles is antiek; deze term komt uit de twintigste eeuw, na de Holocaust."],
         uitlegPad: {
           stappen: [{ titel: "Eichmann-proces 1961", tekst: "**Arendt** (1906-1975) over Adolf Eichmann (nazi-bureaucraat verantwoordelijk voor deportatie Joden): geen monster maar gehoorzame ambtenaar zonder kritische reflectie. **Banaliteit van het kwaad** = grote misdaden begaan door 'gewone mensen' die functioneren zonder oordeel. Boek 1963, omstreden indertijd." }],
           theorie: "Toepassing modern: hoe systemen kwaad mogelijk maken (slavernij, holocaust, ecologische crisis) — niet door 'monsters' maar door routine + onreflexieve mensen.",
@@ -247,9 +247,9 @@ const steps = [
       },
       {
         q: "**Montesquieus** scheiding der machten:",
-        options: ["Wetgevend / uitvoerend / rechterlijk","Staat / kerk","Rijk / arm","Stad / platteland"],
+        options: ["Wetgevend / uitvoerend / rechterlijk","Koning / adel / geestelijkheid","Gemeente / provincie / Rijk","Kerk / staat / universiteit"],
         answer: 0,
-        wrongHints: [null, "Niet — andere scheiding.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Dat zijn de standen uit de oude standenmaatschappij, geen soorten macht.", "Dat zijn bestuurslagen, geen soorten macht.", "Scheiding van kerk en staat is een ander idee."],
         uitlegPad: {
           stappen: [{ titel: "Trias politica", tekst: "**Montesquieu** in *De l'esprit des lois* (1748): **trias politica** = drie machten gescheiden:\n• **Wetgevend** (parlement maakt wet).\n• **Uitvoerend** (regering past toe).\n• **Rechterlijk** (rechters beoordelen).\n\nOm tirannie te voorkomen. Basis moderne rechtsstaten." }],
           niveaus: { basis: "Wetg/uitv/rechtsp.", simpeler: "Trias = 3 machten", nogSimpeler: "3" },
@@ -257,9 +257,9 @@ const steps = [
       },
       {
         q: "**Nozick** stelt:",
-        options: ["Belasting voor herverdeling is dwangarbeid", "Herverdeling is nodig voor rechtvaardigheid", "De staat moet alle bezit beheren", "Er moet helemaal geen staat zijn"],
+        options: ["Belasting voor herverdeling is dwangarbeid", "Herverdeling is nodig voor rechtvaardigheid", "Privé-eigendom is in feite een vorm van diefstal", "Ook een minimale staat is al onrechtmatig"],
         answer: 0,
-        wrongHints: [null, "Niet — dat lijkt meer op Rawls.", "Niet — juist tegen.", "Niet — wel staat (minimaal)."],
+        wrongHints: [null, "Dat lijkt meer op Rawls. Wat vond Nozick van een staat die geld van de een aan de ander geeft?", "Dat zei de anarchist Proudhon. Hoe dacht Nozick over eigendom?", "Nozick verdedigde een minimale 'nachtwakersstaat'. Wat vond hij van een staat die méér doet?"],
         uitlegPad: {
           stappen: [{ titel: "Libertarisme rechts", tekst: "**Robert Nozick** in *Anarchy, State, and Utopia* (1974): libertarisme. Staat moet minimaal zijn (alleen veiligheid + recht). **Herverdeling-belasting** = staat dwingt jou te werken voor anderen = vorm dwangarbeid. Recht op eigendom heilig. Reactie op Rawls' egalitarisme." }],
           theorie: "Toets-patroon: Rawls vs Nozick is klassiek debat: gelijkheid vs vrijheid.",
@@ -277,9 +277,9 @@ const steps = [
     checks: [
       {
         q: "**Aristoteles' deugd** ligt volgens hem:",
-        options: ["Tussen twee uitersten", "Aan extreme kant", "Bij meerderheid", "Bij God"],
+        options: ["Tussen twee uitersten", "Aan één van de uitersten", "Bij wat de meerderheid vindt", "Bij wat God voorschrijft"],
         answer: 0,
-        wrongHints: [null, "Niet — juist de uitersten zag Aristoteles als ondeugd.", "Niet — niet democratisch.", "Niet — humanistisch."],
+        wrongHints: [null, "Is roekeloosheid volgens Aristoteles een deugd of een ondeugd?", "Is moed volgens Aristoteles iets waar je over stemt?", "Niet — Aristoteles redeneert vanuit de mens, niet vanuit God."],
         uitlegPad: {
           stappen: [{ titel: "Gulden middenweg", tekst: "**Aristoteles**: deugd = **mediocritas / golden mean** tussen twee uitersten. Moed = tussen lafheid (te weinig) en roekeloosheid (te veel). Vrijgevigheid = tussen gierigheid en verkwisting. Niet voor elke handeling — sommige daden (zoals moord of diefstal) hebben geen 'midden' en zijn altijd fout." }],
           niveaus: { basis: "Midden.", simpeler: "Aristoteles = midden", nogSimpeler: "Midden" },
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "**Foucault** stelt: macht is:",
-        options: ["Overal aanwezig + relationeel", "Alleen bij staat", "Alleen onderdrukkend", "Niet bestaand"],
+        options: ["Overal aanwezig + relationeel", "Vooral geconcentreerd bij de staat", "Vooral onderdrukkend en verbiedend", "Bezit van één persoon of groep"],
         answer: 0,
-        wrongHints: [null, "Juist niet — volgens Foucault zit macht niet alleen bij de staat.", "Niet — macht is volgens hem ook normerend en productief.", "Bestaat wel."],
+        wrongHints: [null, "Zit macht volgens Foucault vooral in het parlement en de regering?", "Niet — macht is volgens hem ook normerend en productief.", "Ziet Foucault macht als een ding dat iemand kan bezitten?"],
         uitlegPad: {
           stappen: [{ titel: "Macht-relaties overal", tekst: "**Michel Foucault** stelt dat **macht overal aanwezig** is — niet alleen bij staat, ook in school, ziekenhuis, gevangenis, familie. Macht produceert kennis ('discours'). Niet alleen onderdrukkend maar ook normerend." }],
           niveaus: { basis: "Overal.", simpeler: "Foucault = overal macht", nogSimpeler: "Overal" },
@@ -297,9 +297,9 @@ const steps = [
       },
       {
         q: "Volgens **deontoloog** is liegen:",
-        options: ["Altijd fout", "Goed als het helpt", "Toegestaan als niemand het merkt", "Soms goed soms fout op basis gevolg"],
+        options: ["Altijd fout, ook met goede bedoeling", "Goed als het meer geluk oplevert", "Fout, behalve om een leven te redden", "Afhankelijk van de gevolgen"],
         answer: 0,
-        wrongHints: [null, "Niet — utilitarist.", "Niet — het gaat om de handeling zelf.", "Niet — dat is consequentialist."],
+        wrongHints: [null, "Dat is utilitaristisch denken. Kijkt de deontoloog naar het resultaat?", "Dat vinden veel mensen, maar Kant vond zelfs een leugen tegen een moordenaar aan de deur verkeerd.", "Naar de gevolgen kijken is consequentialisme. Waar kijkt de deontoloog naar?"],
         uitlegPad: {
           stappen: [{ titel: "Regel zonder uitzondering", tekst: "**Deontologie (Kant)**: handeling beoordeeld op aard, niet uitkomst. **Liegen** = niet universaliseerbaar (als iedereen liegt, geen vertrouwen). Dus altijd fout. Beroemd-extreem voorbeeld: Kant zei zelfs **geen liegen tegen moordenaar** die vraagt waar slachtoffer is.\n\n(Niet alle deontologen volgen Kant zo strikt — moderne kunnen 'witte leugen' toestaan.)" }],
           niveaus: { basis: "Altijd fout.", simpeler: "Deontoloog liegt nooit", nogSimpeler: "Altijd fout" },
@@ -307,9 +307,9 @@ const steps = [
       },
       {
         q: "**Communisme** volgens Marx wordt bereikt door:",
-        options: ["Klassenstrijd → revolutie", "Vrije markt en ondernemerschap", "Verkiezingen", "Geleidelijk debat"],
+        options: ["Klassenstrijd die uitloopt op revolutie", "Vrije markt en ondernemerschap", "Hervorming via verkiezingen", "Voorbeeldgemeenschappen en goede wil"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is juist het kapitalisme.", "Niet — radicaler.", "Niet — Marx ziet dat onmogelijk."],
+        wrongHints: [null, "Niet — dat is juist het kapitalisme.", "Dat is de route van de sociaaldemocratie. Dacht Marx dat de heersende klasse vrijwillig opgeeft?", "Dat wilden de 'utopische socialisten' zoals Owen. Marx vond dat te naïef."],
         uitlegPad: {
           stappen: [{ titel: "Marxistische theorie", tekst: "**Marx**: kapitalisme bevat tegenstellingen → arbeiders (proletariaat) worden bewust → **revolutie** tegen bezittende klasse (bourgeoisie). Daarna 'dictatuur van proletariaat' → uiteindelijk klassenloze + staatsloze samenleving (communisme).\n\nPraktijk 20e eeuw: Sovjet-Unie + China stopten op 'dictatuur'-fase, geen echt communisme bereikt." }],
           niveaus: { basis: "Klassenstrijd.", simpeler: "Marx = revolutie", nogSimpeler: "Revol." },
@@ -317,9 +317,9 @@ const steps = [
       },
       {
         q: "**Nietzsches** beroemde uitspraak 'God is dood' betekent:",
-        options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet", "Atheïsme verplicht"],
+        options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet en heeft nooit bestaan", "De wetenschap heeft God weerlegd"],
         answer: 0,
-        wrongHints: [null, "Niet — metaforisch.", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Niet — culturele observatie."],
+        wrongHints: [null, "Nietzsche bedoelde het niet letterlijk: het is beeldspraak. Waarover zegt hij dan iets?", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Nietzsche beschrijft een verandering in de cultuur, geen wetenschappelijk bewijs."],
         uitlegPad: {
           stappen: [{ titel: "Cultureel feit", tekst: "**Nietzsche** in *Die fröhliche Wissenschaft* (1882): 'Gott ist tot'. Geen feitelijke claim — **cultuurdiagnose**: na Verlichting + wetenschap geloven westerse mensen niet meer in God. Probleem: traditionele moraal hing aan God. Wat nu? Nietzsche zelf: schep eigen waarden (Übermensch).\n\nMisbruikt door Nazi's; Nietzsche zelf was tegen antisemitisme + nationalisme." }],
           niveaus: { basis: "Einde moraal.", simpeler: "God dood = einde moraal", nogSimpeler: "Zelf waarden scheppen" },

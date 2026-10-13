@@ -1,0 +1,1938 @@
+[
+ {
+  "pad": "differentialen-havo-vwo",
+  "file": "./differentialenHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Afgeleide van y = x · cos(x):",
+  "opties": [
+   "cos(x) − x·sin(x)",
+   "−x·sin(x)",
+   "cos(x)",
+   "−sin(x)"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "differentialen-havo-vwo",
+  "file": "./differentialenHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Afgeleide van ln(x²):",
+  "opties": [
+   "2/x",
+   "1/x²",
+   "2x",
+   "ln(2x)"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "differentialen-havo-vwo",
+  "file": "./differentialenHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Voor max winst: marginale opbrengst R' = marginale kosten K'. Wat betekent dat?",
+  "opties": [
+   "Op die productie q* geeft elke extra eenheid zoveel kosten als opbrengst → geen voordeel meer om uit te breiden",
+   "Op die productie is de winst precies nul, omdat opbrengst en kosten daar gelijk zijn",
+   "Op die productie kun je beter helemaal stoppen, want extra eenheden leveren niets op",
+   "Met alleen R' en K' kun je niets zeggen over waar de winst het grootst is"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "differentialen-havo-vwo",
+  "file": "./differentialenHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Newton-Raphson zoekt nulpunten van f(x). Formule:",
+  "opties": [
+   "x_{n+1} = x_n − f(x_n)/f'(x_n)",
+   "x_{n+1} = f(x_n)",
+   "x_{n+1} = x_n + f(x_n)",
+   "Geen formule nodig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke zijde is altijd hetzelfde, ongeacht welke hoek je bekijkt?",
+  "opties": [
+   "Schuine zijde",
+   "Tegenoverstaand",
+   "Aanliggend",
+   "Maakt niet uit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Je hebt α en de aanliggende zijde. Je zoekt de schuine zijde. Welke verhouding?",
+  "opties": [
+   "cos",
+   "sin",
+   "tan",
+   "geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Je weet alleen 2 zijden en je zoekt een hoek. Wat moet je gebruiken?",
+  "opties": [
+   "Inverse (sin⁻¹/cos⁻¹/tan⁻¹)",
+   "Pythagoras",
+   "sin/cos/tan zelf",
+   "Geen van deze"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "SOH-CAH-TOA (de Engelse geheugentruc) — waar staat SOH voor?",
+  "opties": [
+   "Sinus = Overstaand / Hypotenusa",
+   "Sinus = Schuin / Overstaand",
+   "Sinus = Onder / Hoog",
+   "Sinus = Som / Hoogte"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Driehoek met hoek 30°, hypotenusa 10. Overstaand?",
+  "opties": [
+   "5",
+   "8,66",
+   "10",
+   "3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Welke is correct? sin² 30° + cos² 30° = ?",
+  "opties": [
+   "1",
+   "0",
+   "2",
+   "½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Tan 0° = ?",
+  "opties": [
+   "0",
+   "1",
+   "∞",
+   "−1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 10,
+  "soort": "S",
+  "q": "Bij rechthoekige driehoek — wat is altijd 90°?",
+  "opties": [
+   "1 hoek",
+   "2 hoeken",
+   "Alle 3 hoeken",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 13,
+  "soort": "K",
+  "q": "In een rechthoekige driehoek met hoek 60°: tan 60° ≈ ?",
+  "opties": [
+   "1,73",
+   "0,5",
+   "1,41",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 14,
+  "soort": "K",
+  "q": "Driehoek hoek 30°, aanliggend 6 cm. Overstaand = ?",
+  "opties": [
+   "3,46 cm",
+   "12 cm",
+   "6 cm",
+   "2 cm"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 17,
+  "soort": "K",
+  "q": "tan 45° = ?",
+  "opties": [
+   "1",
+   "0",
+   "∞",
+   "½"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 20,
+  "soort": "SK",
+  "q": "Sinusregel geldt voor?",
+  "opties": [
+   "Alle driehoeken",
+   "Alleen rechthoekige",
+   "Alleen gelijkzijdige",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "goniometrie",
+  "file": "./goniometrie.js",
+  "stap": 10,
+  "vraag": 21,
+  "soort": "L2S",
+  "q": "Hypotenusa heeft welke positie?",
+  "opties": [
+   "Tegenover de rechte hoek",
+   "Aan de rechte hoek",
+   "Tegenover hoek α",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "integralen-havo-vwo",
+  "file": "./integralenHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent ∫[1 tot 5] f(x) dx geometrisch als f(x) ≥ 0?",
+  "opties": [
+   "Oppervlakte onder grafiek tussen x=1 en x=5",
+   "Helling op x=5",
+   "Afgeleide op x=1",
+   "Lengte van grafiek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "integralen-havo-vwo",
+  "file": "./integralenHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Oppervlakte tussen f(x)=x² (onder) en g(x)=2x (boven) op interval waar ze elkaar omsluiten: Snijpunten?",
+  "opties": [
+   "x = 0 en x = 2",
+   "x = 1 en x = 2",
+   "x = 0 en x = 4",
+   "Alleen x = 1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "integralen-havo-vwo",
+  "file": "./integralenHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Oppervlakte tussen f(x) = 4 − x² en x-as (parabool boven x-as):",
+  "opties": [
+   "32/3",
+   "16/3",
+   "8",
+   "16"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening",
+  "file": "./kansrekening.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Een gebeurtenis heeft kans 1. Wat betekent dat?*",
+  "opties": [
+   "Het is zeker — gebeurt altijd",
+   "Het gebeurt nooit",
+   "50% kans",
+   "Onbepaald"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kansrekening",
+  "file": "./kansrekening.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*In een kansboom: hoe bereken je de kans op een specifiek pad?*",
+  "opties": [
+   "Vermenigvuldig de kansen langs dat pad",
+   "Tel de kansen op",
+   "Trek de kansen af",
+   "Pak de grootste kans"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kansrekening",
+  "file": "./kansrekening.js",
+  "stap": 13,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*\"Een dobbelsteen 3× rollen — kans op minstens één 6?\"*",
+  "opties": [
+   "1 − (5/6)³ = 91/216",
+   "(1/6)³ = 1/216",
+   "3 · 1/6 = 1/2",
+   "1/6"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is de kans op een even getal bij dobbelsteen?",
+  "opties": [
+   "1/2",
+   "1/3",
+   "1/6",
+   "2/3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Twee dobbelstenen gooien: P(beide 6) = ?",
+  "opties": [
+   "1/36",
+   "1/6",
+   "2/6",
+   "1/12"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Bij afhankelijke gebeurtenissen: kans 2e gebeurtenis hangt af van:",
+  "opties": [
+   "Uitkomst 1e gebeurtenis",
+   "Tijd van de dag",
+   "Wie het doet",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "S",
+  "q": "In een boomdiagram vermenigvuldig je kansen:",
+  "opties": [
+   "Langs één pad",
+   "Tussen verschillende paden",
+   "Nooit",
+   "Alleen bij terugleggen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Vaas 2 rood + 3 blauw, trek 2 ZONDER terugleggen. P(beide rood)?",
+  "opties": [
+   "1/10",
+   "4/25",
+   "2/5",
+   "1/5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Atletiek-race 100m: 3 medailles uit 8 lopers. Aantal podium-volgordes?",
+  "opties": [
+   "336",
+   "56",
+   "24",
+   "8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Een eerlijk spel heeft E(winst) gelijk aan:",
+  "opties": [
+   "0",
+   "1",
+   "0,5",
+   "Variabel"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "P(A) = 0,7. P(niet A) = ?",
+  "opties": [
+   "0,3",
+   "0,7",
+   "1,7",
+   "0"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "5 mensen rond een ronde tafel — hoeveel volgorden?",
+  "opties": [
+   "24",
+   "120",
+   "5",
+   "720"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Vaas 3 wit + 7 zwart. P(eerste trek wit) = ?",
+  "opties": [
+   "0,3",
+   "0,7",
+   "3",
+   "0,1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kansrekening-havo-vwo",
+  "file": "./kansrekeningHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wanneer is P(A en B) = P(A) × P(B)?",
+  "opties": [
+   "Bij onafhankelijke gebeurtenissen",
+   "Altijd",
+   "Bij disjuncte",
+   "Bij volle kans 1"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Bereken: 6² = ?",
+  "opties": [
+   "36",
+   "12",
+   "18",
+   "30"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Bereken: √144 = ?",
+  "opties": [
+   "12",
+   "11",
+   "14",
+   "72"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Is π rationaal of irrationaal?",
+  "opties": [
+   "Irrationaal",
+   "Rationaal",
+   "Geheel",
+   "Natuurlijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Bereken 5² + 12²",
+  "opties": [
+   "169",
+   "144",
+   "25",
+   "60"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Wat is √0?",
+  "opties": [
+   "0",
+   "1",
+   "Bestaat niet",
+   "∞"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Wat is √(25 × 4)?",
+  "opties": [
+   "10",
+   "20",
+   "100",
+   "5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 10,
+  "soort": "K",
+  "q": "Kwadraat van een breuk (½)² = ?",
+  "opties": [
+   "¼",
+   "½",
+   "¾",
+   "1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kwadraten-wortels",
+  "file": "./kwadratenWortels.js",
+  "stap": 17,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Welke getallen zijn perfecte kwadraten?",
+  "opties": [
+   "1, 4, 9, 16, 25...",
+   "Alle even getallen",
+   "Alle oneven",
+   "Alle priemgetallen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen-exponentieel-havo-vwo",
+  "file": "./logaritmenExponentieleHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "€1000 sparen bij 4% rente, 10 jaar. Eindbedrag?",
+  "opties": [
+   "~€1480",
+   "~€1400",
+   "~€2000",
+   "~€10000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen-exponentieel-havo-vwo",
+  "file": "./logaritmenExponentieleHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Een aardbeving 7 op Richter is hoeveel sterker dan 5?",
+  "opties": [
+   "100× sterker",
+   "2× sterker",
+   "7/5×",
+   "10× sterker"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen-exponentieel-havo-vwo",
+  "file": "./logaritmenExponentieleHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Vergelijking 2^x = 32. x = ?",
+  "opties": [
+   "5",
+   "16",
+   "10",
+   "30"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen-exponentieel-havo-vwo",
+  "file": "./logaritmenExponentieleHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een logistische curve lijkt op exponentieel bij:",
+  "opties": [
+   "Lage N (ver onder draagkracht K)",
+   "Hoge N (dichtbij K)",
+   "N = K",
+   "N = 0"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "logaritmen-exponentieel-havo-vwo",
+  "file": "./logaritmenExponentieleHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Een spaarrekening: €500 sparen, 4% rente per jaar. Na 5 jaar?",
+  "opties": [
+   "~€608",
+   "~€500",
+   "~€600",
+   "~€700"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "logaritmen-exponentieel-havo-vwo",
+  "file": "./logaritmenExponentieleHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een populatie groeit met R₀ = 0,9 (R<1). Wat gebeurt?",
+  "opties": [
+   "Exponentieel verval — sterft uit",
+   "Exponentiële groei",
+   "Stabiel",
+   "Logistische groei"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "procenten",
+  "file": "./procenten.js",
+  "stap": 12,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Hoeveel is 25% van 80?",
+  "opties": [
+   "20",
+   "25",
+   "40",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "procenten",
+  "file": "./procenten.js",
+  "stap": 12,
+  "vraag": 10,
+  "soort": "K",
+  "q": "20% van een getal is 60. Wat is het hele getal?",
+  "opties": [
+   "300",
+   "12",
+   "80",
+   "30"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke zijde is altijd de langste in een rechthoekige driehoek?",
+  "opties": [
+   "De schuine zijde",
+   "Een rechthoekszijde",
+   "Maakt niet uit",
+   "De korte zijde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Hoe weet je zeker welke zijde de schuine is?",
+  "opties": [
+   "Het is de zijde tegenover de rechte hoek",
+   "Het is altijd de bovenste zijde",
+   "Het is de zijde links",
+   "Maakt niet uit, ze zijn gelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wanneer kun je Pythagoras gebruiken?",
+  "opties": [
+   "Bij een rechthoekige driehoek met 2 zijden bekend",
+   "Bij elke driehoek",
+   "Alleen bij gelijkbenige driehoeken",
+   "Bij vierhoeken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 11,
+  "vraag": 0,
+  "soort": "S",
+  "q": "In een driehoek zijn de zijden 7, 24 en 25. Welke is de schuine zijde?",
+  "opties": [
+   "25",
+   "24",
+   "7",
+   "Maakt niet uit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 14,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Bij Pythagoras heet de langste zijde?",
+  "opties": [
+   "Schuine zijde",
+   "Rechthoekszijde",
+   "Hoogte",
+   "Basis"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 14,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Een rechthoekige driehoek a=6, b=8. Schuine zijde c?",
+  "opties": [
+   "10",
+   "14",
+   "48",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 14,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Stelling klinkt: a² + b² = ?",
+  "opties": [
+   "c²",
+   "c",
+   "a+b",
+   "a×b"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pythagoras",
+  "file": "./pythagoras.js",
+  "stap": 14,
+  "vraag": 7,
+  "soort": "K",
+  "q": "Bij a=5, c=13, b=?",
+  "opties": [
+   "12",
+   "8",
+   "18",
+   "6"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rekenen-met-letters",
+  "file": "./rekenenMetLetters.js",
+  "stap": 14,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Vereenvoudig: 5a − 2a = ?",
+  "opties": [
+   "3a",
+   "7a",
+   "10a",
+   "a"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rekenen-met-letters",
+  "file": "./rekenenMetLetters.js",
+  "stap": 14,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Vereenvoudig: 4x + 2x − 3x = ?",
+  "opties": [
+   "3x",
+   "9x",
+   "3",
+   "x³"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rekenen-met-letters",
+  "file": "./rekenenMetLetters.js",
+  "stap": 14,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Wat is 3x · 2x = ?",
+  "opties": [
+   "6x²",
+   "6x",
+   "5x",
+   "9x"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rekenen-met-letters",
+  "file": "./rekenenMetLetters.js",
+  "stap": 14,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Vereenvoudig: (2x)² = ?",
+  "opties": [
+   "4x²",
+   "2x²",
+   "4x",
+   "2x⁴"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rekenen-met-letters",
+  "file": "./rekenenMetLetters.js",
+  "stap": 14,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Werk haakjes weg: −(x − 5) = ?",
+  "opties": [
+   "−x + 5",
+   "−x − 5",
+   "x − 5",
+   "−x · 5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rekenen-met-letters",
+  "file": "./rekenenMetLetters.js",
+  "stap": 14,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Bereken voor x=2: 3x + 1",
+  "opties": [
+   "7",
+   "6",
+   "4",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "Wanneer is schatten handig?",
+  "opties": [
+   "Snel checken of een antwoord klopt",
+   "Alleen bij de Doorstroomtoets",
+   "Nooit — altijd precies",
+   "Alleen bij grote getallen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Een rit duurt 2 uur 47 min. Afgerond op kwartiers — hoeveel?",
+  "opties": [
+   "2 uur 45 min",
+   "3 uur",
+   "2 uur 30 min",
+   "3 uur 15 min"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Schat 612 ÷ 7:",
+  "opties": [
+   "~87",
+   "~100",
+   "~70",
+   "~120"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Rond af op 1000: 4.612 + 3.298 = ?",
+  "opties": [
+   "8.000",
+   "7.000",
+   "9.000",
+   "7.910"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 13,
+  "soort": "K",
+  "q": "Rond 4.567 af op honderdtal",
+  "opties": [
+   "4.600",
+   "4.500",
+   "4.000",
+   "5.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 18,
+  "soort": "K",
+  "q": "Hoeveel is ±1.000 + ±2.000?",
+  "opties": [
+   "~3.000",
+   "~3.500",
+   "~2.500",
+   "~5.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "K",
+  "q": "Rond €19,80 af op euro",
+  "opties": [
+   "€20",
+   "€19",
+   "€19,80",
+   "€21"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 21,
+  "soort": "L2S",
+  "q": "Wanneer schatten ipv exact?",
+  "opties": [
+   "Bij snelle controle of als precisie niet hoeft",
+   "Altijd, ook als het precies moet",
+   "Nooit, precies rekenen is altijd beter",
+   "Alleen als je in de winkel staat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 22,
+  "soort": "K",
+  "q": "10 × ~9 ≈ wat?",
+  "opties": [
+   "~90",
+   "~100",
+   "~10",
+   "~900"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 23,
+  "soort": "K",
+  "q": "Hoeveel is 998 + 1.005 ongeveer?",
+  "opties": [
+   "~2.000",
+   "~3.000",
+   "~1.500",
+   "~10.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 24,
+  "soort": "K",
+  "q": "Het cijfer na de afrondplek is een 5. Wat doe je?",
+  "opties": [
+   "Naar boven",
+   "Naar beneden",
+   "Willekeurig",
+   "Niet afronden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 25,
+  "soort": "K",
+  "q": "11,3 + 8,9 schatten = ?",
+  "opties": [
+   "~20",
+   "~30",
+   "~10",
+   "~25"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 26,
+  "soort": "L2",
+  "q": "Verschil tussen 'schatten' en 'afronden'?",
+  "opties": [
+   "Schatten = ruw idee; afronden = vaste regel per cijfer",
+   "Ze betekenen precies hetzelfde",
+   "Schatten is altijd preciezer dan afronden",
+   "Afronden doe je alleen met geld"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "schatten-afronden",
+  "file": "./schattenAfronden.js",
+  "stap": 4,
+  "vraag": 27,
+  "soort": "K",
+  "q": "Rond 0,49 af op heel getal",
+  "opties": [
+   "0",
+   "1",
+   "0,5",
+   "49"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is statistiek?",
+  "opties": [
+   "Verzamelen en bestuderen van gegevens",
+   "Iets uit de oudheid",
+   "Een soort breuk",
+   "Een soort hoek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Wat hoort op de y-as van een staafdiagram (in het frequentievoorbeeld)?",
+  "opties": [
+   "Frequentie",
+   "De waardes zelf",
+   "De percentages",
+   "Het gemiddelde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wanneer is mediaan beter dan gemiddelde?",
+  "opties": [
+   "Bij uitschieters",
+   "Bij even aantallen",
+   "Nooit",
+   "Altijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 10,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Bereik van 12, 5, 18, 9, 3?",
+  "opties": [
+   "15",
+   "18",
+   "12",
+   "3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 10,
+  "vraag": 7,
+  "soort": "K",
+  "q": "Frequentie van 4 in [4,5,4,6,4,7,5]?",
+  "opties": [
+   "3",
+   "2",
+   "1",
+   "4"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 10,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Een dobbelsteen is 60 keer gegooid. In het staafdiagram staan de ogen 1 t/m 6 onder de staven. Waar staat de hoogte van een staaf voor?",
+  "opties": [
+   "Frequentie",
+   "Waarde",
+   "Som",
+   "Modus"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 10,
+  "vraag": 9,
+  "soort": "K",
+  "q": "5, 5, 5, 5, 5 — bereik?",
+  "opties": [
+   "0",
+   "5",
+   "25",
+   "1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 10,
+  "vraag": 10,
+  "soort": "L2K",
+  "q": "Modus van 3, 4, 5, 7, 8 (alle verschillend)?",
+  "opties": [
+   "Geen modus",
+   "3",
+   "8",
+   "5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek",
+  "file": "./statistiek.js",
+  "stap": 10,
+  "vraag": 11,
+  "soort": "K",
+  "q": "6 cijfers gem 7. Eén cijfer is 4. Som overige 5?",
+  "opties": [
+   "38",
+   "42",
+   "32",
+   "7"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Wat betekent een grote standaardafwijking?",
+  "opties": [
+   "Data is sterk gespreid",
+   "Data zit dichtbij gemiddelde",
+   "Geen mediaan",
+   "Veel modi"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "IQ heeft N(100, 15). Hoeveel % heeft IQ tussen 85 en 115?",
+  "opties": [
+   "68%",
+   "95%",
+   "50%",
+   "99,7%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zegt correlatiecoëfficiënt r = 0,9?",
+  "opties": [
+   "Sterke positieve samenhang",
+   "Sterk negatief",
+   "Geen verband",
+   "Onmogelijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "*'IJsverkoop en verdrinkingen correleren positief'* — wat is meest waarschijnlijk?",
+  "opties": [
+   "Gemeenschappelijke oorzaak (warmte)",
+   "IJs veroorzaakt verdrinking",
+   "Verdrinking veroorzaakt ijsverkoop",
+   "Toeval"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Helling in y = ax + b betekent:",
+  "opties": [
+   "Hoeveel y stijgt per eenheid x",
+   "Y-waarde bij x=0",
+   "Gemiddelde van y",
+   "Maximum y"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke centrummaat is gevoelig voor uitschieters?",
+  "opties": [
+   "Gemiddelde",
+   "Mediaan",
+   "Modus",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Regressie y = −0,5x + 20. Bij x = 8, y = ?",
+  "opties": [
+   "16",
+   "24",
+   "12",
+   "28"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "statistiek-havo-vwo",
+  "file": "./statistiekHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "K",
+  "q": "In een boxplot: linkerkant van de box (Q1) = 30, mediaan (Q2) = 50, rechterkant (Q3) = 60. Wat is IQR?",
+  "opties": [
+   "30",
+   "20",
+   "10",
+   "60"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vergelijkingen-oplossen",
+  "file": "./vergelijkingenOplossen.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Wat is een vergelijking?*",
+  "opties": [
+   "Twee uitdrukkingen met een = ertussen",
+   "Een rekenstuk zonder = teken",
+   "Een tabel met getallen",
+   "Een grafiek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vergelijkingen-oplossen",
+  "file": "./vergelijkingenOplossen.js",
+  "stap": 13,
+  "vraag": 6,
+  "soort": "K",
+  "q": "Los op: 2x − 3 = 11",
+  "opties": [
+   "x = 7",
+   "x = 4",
+   "x = 5",
+   "x = 8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Recept 4 personen: 200 g pasta. Voor 6 personen?",
+  "opties": [
+   "300 g",
+   "250 g",
+   "400 g",
+   "350 g"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Schaal 1:100.000 — 5 cm op kaart = ? in werkelijkheid",
+  "opties": [
+   "5 km",
+   "500 m",
+   "50 m",
+   "50 km"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Werkverhouding 2:1 (Anna : Bob werken). Anna 12 uur. Bob?",
+  "opties": [
+   "6 uur",
+   "24 uur",
+   "18 uur",
+   "8 uur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Mix sap 1:4 (siroop : water). 1 dl siroop nodig — water?",
+  "opties": [
+   "4 dl",
+   "0,25 dl",
+   "5 dl",
+   "2 dl"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "K",
+  "q": "Verhouding 2:3:5 in klas van 50. Aantal in middelste groep?",
+  "opties": [
+   "15",
+   "10",
+   "25",
+   "20"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 13,
+  "soort": "K",
+  "q": "1 km = ? cm?",
+  "opties": [
+   "100.000 cm",
+   "1.000 cm",
+   "10.000 cm",
+   "1.000.000 cm"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 14,
+  "soort": "K",
+  "q": "1 L = ? mL?",
+  "opties": [
+   "1.000 mL",
+   "100 mL",
+   "10 mL",
+   "10.000 mL"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "verhoudingen",
+  "file": "./verhoudingen.js",
+  "stap": 9,
+  "vraag": 15,
+  "soort": "K",
+  "q": "Auto 60 km/u — afstand in 2 uur?",
+  "opties": [
+   "120 km",
+   "30 km",
+   "60 km",
+   "240 km"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vlakke-figuren",
+  "file": "./vlakkeFiguren.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een middelloodlijn van AB is een lijn die...",
+  "opties": [
+   "Door het midden gaat én loodrecht op AB staat",
+   "Schuin door A loopt",
+   "Parallel aan AB loopt",
+   "Door beide punten A en B gaat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vlakke-figuren",
+  "file": "./vlakkeFiguren.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Punt P ligt op de bissectrice van een hoek. Wat klopt?",
+  "opties": [
+   "P ligt even ver van beide zijden van de hoek",
+   "P ligt op één van de zijden",
+   "P ligt op de top van de hoek",
+   "P ligt verder van één zijde dan de andere"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vlakke-figuren",
+  "file": "./vlakkeFiguren.js",
+  "stap": 9,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe deelt het zwaartepunt een zwaartelijn?",
+  "opties": [
+   "In de verhouding 2 : 1, vanaf de hoek gerekend",
+   "Precies in tweeën (1:1)",
+   "In drie gelijke delen",
+   "Niet — Z ligt aan een uiteinde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vlakke-figuren",
+  "file": "./vlakkeFiguren.js",
+  "stap": 16,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Een ruit heeft hoeveel gelijke zijden?",
+  "opties": [
+   "4",
+   "2",
+   "3",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is i²?",
+  "opties": [
+   "−1",
+   "1",
+   "0",
+   "i"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "K",
+  "q": "x² − 4x + 13 = 0. Oplossing?",
+  "opties": [
+   "x = 2 ± 3i",
+   "x = 4 ± 13i",
+   "Geen oplossing",
+   "x = 0"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Eulerformule:",
+  "opties": [
+   "e^(iθ) = cos θ + i·sin θ",
+   "e^θ = cos θ",
+   "e^(iπ) = i",
+   "cos + sin = 1"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Bij vermenigvuldigen in polair doe je:",
+  "opties": [
+   "Modulus × en argumenten +",
+   "Beide ×",
+   "Beide +",
+   "Modulus + en arg ×"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2SK",
+  "q": "Vermenigvuldigen met i is geometrisch:",
+  "opties": [
+   "Rotatie 90° tegen klok",
+   "Verdubbeling",
+   "Spiegeling",
+   "Geen effect"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Matrix-vermenigvuldiging is:",
+  "opties": [
+   "Niet commutatief",
+   "Wel commutatief",
+   "Niet bestaand",
+   "Altijd nul"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Eenheidsmatrix I₃ is:",
+  "opties": [
+   "Hoofddiagonaal 1, rest 0",
+   "Alle 1en",
+   "Alle 0en",
+   "Random getallen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Transpose van A = [[1,2],[3,4]]:",
+  "opties": [
+   "[[1,3],[2,4]]",
+   "[[4,3],[2,1]]",
+   "[[1,2],[3,4]]",
+   "[[2,1],[4,3]]"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Rotatiematrix 90° in 2D:",
+  "opties": [
+   "[[0,−1],[1,0]]",
+   "[[1,0],[0,1]]",
+   "[[−1,0],[0,−1]]",
+   "[[1,1],[1,1]]"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Gauss-eliminatie is voor:",
+  "opties": [
+   "Stelsels lineaire vergelijkingen oplossen",
+   "Eigenwaarden vinden",
+   "Matrix transponeren",
+   "Wortels van een polynoom vinden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "PageRank (Google) gebruikt:",
+  "opties": [
+   "Eigenvector van web-graf-matrix",
+   "Random aantallen",
+   "SQL-database",
+   "HTML-tags"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wiskunde-d-vwo",
+  "file": "./wiskundeDVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Hoeveel n-de wortels heeft complex getal z (z ≠ 0)?",
+  "opties": [
+   "n verschillende",
+   "1",
+   "2",
+   "Oneindig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

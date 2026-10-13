@@ -443,14 +443,14 @@ const steps = [
           "Hoeveel ruimte er in een 3D-figuur past",
           "Hoe ver de buitenkant rond gaat",
           "Hoeveel oppervlakte een figuur heeft",
-          "Hoe lang een lijn is",
+          "Hoe lang de langste zijde is",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Dat is **omtrek**, niet inhoud.",
+          "De afstand rondom heet **omtrek**. Inhoud gaat over wat er ín een figuur past.",
           "Dat is **oppervlakte**, niet inhoud. Inhoud heeft te maken met 3D — wat erin past.",
-          "Dat is gewoon **lengte**. Inhoud meet ruimte in 3D.",
+          "Een zijde meet je in cm: dat is een **lengte**. Inhoud meet ruimte in 3D.",
         ],
       },
     ],
@@ -1079,9 +1079,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de diameter — de doorsnee. Straal = halve diameter.",
+          "Dat is de diameter: de hele doorsnee. Loopt de straal van rand tot rand, of van het midden naar de rand?",
           "Te groot — je hebt de diameter verdubbeld. Is de straal groter of kleiner dan de diameter?",
-          "Niet — je hebt door 4 gedeeld. De straal is de helft van de diameter.",
+          "Je hebt door 4 gedeeld. Hoe vaak past de straal in de diameter?",
         ],
       },
       {
@@ -1091,7 +1091,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt waarschijnlijk r in plaats van r² gebruikt. Kijk nog eens naar de formule.",
-          "Je hebt diameter gebruikt: π × 60 × 60. Maar er is r² nodig (= 30²) voor de oppervlakte van de cirkel.",
+          "Je hebt π × 60 × 60 gedaan: de diameter in plaats van de straal, en de hoogte ontbreekt. Wat hoort er in de formule voor een cilinder?",
           "Te klein — je bent π en het kwadraat vergeten (60 × 80). Welke formule hoort bij een cilinder?",
         ],
       },

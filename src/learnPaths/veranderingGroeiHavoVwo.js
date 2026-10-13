@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Bij **lineaire groei** is welke eigenschap constant?",
-        options: ["Absolute toename per stap","Procentuele toename","Beide","Geen"],
+        options: ["Absolute toename per stap","Procentuele toename per stap","Verdubbelingstijd van de groei","Absolute én procentuele toename"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is exponentieel.", "Niet — een van twee.", "Wel constant."],
+        wrongHints: [null, "Een vast percentage per stap hoort bij exponentiële groei. Wat is er bij lineaire groei elke stap gelijk?", "Een vaste verdubbelingstijd zie je bij exponentiële groei. Wat blijft bij lineaire groei gelijk?", "Als er elke stap evenveel bijkomt, blijft het percentage dan ook gelijk? Reken 100 → 110 → 120."],
         uitlegPad: {
           stappen: [{ titel: "Vast bedrag erbij", tekst: "**Lineair**: elke stap **zelfde bedrag** erbij (of eraf). Bv +€50/maand sparen. Procentueel (5%/jaar) is exponentieel, niet lineair." }],
           theorie: "Toets-favoriet om te onderscheiden: 'is dit lineair of exponentieel?' → kijk naar verschillen vs procenten in tabel.",
@@ -45,7 +45,7 @@ const steps = [
         q: "Tabel: x: 1,2,3,4 | y: 7, 11, 15, 19. **Formule**?",
         options: ["y = 3 + 4x","y = 7 + 4x","y = 7 + 11x","y = 4 + 3x"],
         answer: 0,
-        wrongHints: [null, "Vul de eerste x-waarde in en kijk of de y-uitkomst met de tabel overeenkomt.", "Onmogelijk.", "Vul de eerste x-waarde in en vergelijk de uitkomst met de tabelwaarde — klopt het?"],
+        wrongHints: [null, "Vul de eerste x-waarde in en kijk of de y-uitkomst met de tabel overeenkomt.", "Vul x = 1 in: 7 + 11 = 18. Staat 18 in de tabel bij x = 1?", "Vul de eerste x-waarde in en vergelijk de uitkomst met de tabelwaarde — klopt het?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschillen", tekst: "Verschillen: 11-7=4, 15-11=4, 19-15=4. Constant 4 → lineair met **b=4**." },
@@ -59,7 +59,7 @@ const steps = [
         q: "Auto kost nu €20.000, verliest **€2000/jaar lineair**. Waarde over 5 jaar?",
         options: ["€10.000","€18.000","€2000","€0"],
         answer: 0,
-        wrongHints: [null, "Niet — slechts 1 jaar.", "Niet — wel over.", "Niet zo snel."],
+        wrongHints: [null, "€18.000 is de waarde na 1 jaar. Over hoeveel jaar gaat de vraag?", "€2000 is het verlies per jaar. Hoeveel verlies je in 5 jaar, en wat blijft er over?", "€0 zou je pas na 10 jaar hebben. Hoeveel is 5 × €2000?"],
         uitlegPad: {
           stappen: [{ titel: "y = 20000 − 2000·t", tekst: "t=5: y = 20000 − 2000·5 = 20000 − 10000 = **€10.000**. Lineaire afschrijving." }],
           theorie: "Praktijk: vooral nieuwe auto's verliezen exponentieel (eerste jaar veel). Lineair is een vereenvoudiging.",
@@ -70,7 +70,7 @@ const steps = [
         q: "Tussen (1, 5) en (4, 14). **Helling b**?",
         options: ["3","9","2","4,5"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen Δy, niet ÷Δx.", "Niet correct.", "Niet — deel Δy door Δx, niet door iets anders."],
+        wrongHints: [null, "9 is alleen de toename van y. Hoeveel stappen x heb je daarvoor gezet?", "Bij helling 2 kom je vanaf (1, 5) in 3 stappen op y = 11. Is dat 14?", "4,5 is 9 / 2. Is de toename van x 2 of 3?"],
         uitlegPad: {
           stappen: [{ titel: "b = Δy/Δx", tekst: "b = (14−5) / (4−1) = 9/3 = **3**." }],
           niveaus: { basis: "3.", simpeler: "9/3=3", nogSimpeler: "3" },
@@ -78,9 +78,9 @@ const steps = [
       },
       {
         q: "Lineair model voor lange-termijn-projecties is **risicovol** omdat:",
-        options: ["Patronen veranderen vaak buiten data-bereik","Te complex","Geen rekenkracht","Verboden"],
+        options: ["Patronen veranderen vaak buiten de data","Lineaire modellen groeien te snel","Afrondfouten worden steeds groter","De beginwaarde is vaak onbekend"],
         answer: 0,
-        wrongHints: [null, "Niet — juist eenvoudig.", "Niet relevant.", "Niet — wordt gebruikt."],
+        wrongHints: [null, "Een rechte lijn groeit juist gelijkmatig, niet steeds sneller. Waar zit het risico dan?", "Afronden kan kleine fouten geven, maar is dat de hoofdreden? Wat weet je over de periode ná je metingen?", "De beginwaarde lees je gewoon uit je data af. Wat weet je níet zeker over later?"],
         uitlegPad: {
           stappen: [{ titel: "Extrapolatie-risico", tekst: "Lineair past kort meetbaar bereik vaak goed, maar **extrapolatie** buiten dat bereik = risicovol omdat patroon kan kantelen (capaciteit, saturatie, technologische verandering). Bevolkingsgroei kan bijvoorbeeld afvlakken." }],
           theorie: "Klassieker: Malthusiaans lineair voedsel + exp.bevolking → catastrofe. In praktijk bleek voedselgroei ook exp. door techniek.",
@@ -100,7 +100,7 @@ const steps = [
         q: "Bij **5% rente per jaar** is de groeifactor:",
         options: ["1,05","0,05","5","0,95"],
         answer: 0,
-        wrongHints: [null, "Niet — moet 1+...", "Niet — factor.", "Tegenovergesteld — afname."],
+        wrongHints: [null, "0,05 is alleen het stukje dat erbij komt. Het bedrag zelf blijft toch ook staan?", "Bij groeifactor 5 wordt je geld elk jaar 5 keer zoveel. Is dat 5% rente?", "0,95 hoort bij 5% minder per jaar. Komt rente erbij of gaat die eraf?"],
         uitlegPad: {
           stappen: [{ titel: "b = 1 + p/100", tekst: "5% groei → **b = 1 + 0,05 = 1,05**. Elk jaar vermenigvuldigt waarde met 1,05.\n\n€100 → na 1 jaar €105 → na 2 jaar €110,25 → na 10 jaar €162,89." }],
           niveaus: { basis: "1,05.", simpeler: "5% = ×1,05", nogSimpeler: "1,05" },
@@ -108,9 +108,9 @@ const steps = [
       },
       {
         q: "Tabel: x:1,2,3,4 | y: 4, 8, 16, 32. Welk model?",
-        options: ["Exponentieel met b=2","Lineair met b=4","Logistisch","Kwadratisch"],
+        options: ["Exponentieel met b=2","Lineair met b=4","Logistisch met grens 64","Kwadratisch met a=2"],
         answer: 0,
-        wrongHints: [null, "Niet — verschillen niet constant.", "Niet — quotiënten constant.", "Niet correct."],
+        wrongHints: [null, "Bekijk de stappen tussen 4, 8, 16 en 32. Is het verschil elke keer 4?", "Logistische groei vlakt af naar een grens. Zie je dat afvlakken in de tabel?", "Reken y = 2x² eens uit voor x = 1 en x = 3. Klopt dat met de tabel?"],
         uitlegPad: {
           stappen: [{ titel: "Quotiënten = constant", tekst: "8/4=2, 16/8=2, 32/16=2 → **factor 2 per stap = exponentieel b=2**. Formule: y = 2 · 2^x (a=2, b=2). Check: y(1)=4 ✓.\n\nKlassiek 'verdubbel-elke-stap'-patroon (bacteriegroei, schaakbord-graan-legende)." }],
           niveaus: { basis: "Exp b=2.", simpeler: "Quotiënten 2 = exp", nogSimpeler: "Exp" },
@@ -120,7 +120,7 @@ const steps = [
         q: "**Verdubbelingstijd** bij 7% groei?",
         options: ["~10 jaar","~5 jaar","~70 jaar","~1 jaar"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Veel te snel."],
+        wrongHints: [null, "Na 5 jaar met 7% groei heb je ongeveer 1,4 keer zoveel. Is dat al het dubbele?", "70 is het getal uit de regel van 70 zelf. Waar deel je het door?", "Na 1 jaar is er 7% bijgekomen. Is dat al een verdubbeling?"],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel 70", tekst: "**Vuistregel 70**: T_v ≈ 70 / groei% = 70/7 = **10 jaar**. Werkt nauwkeurig voor kleine groei-%. Exact: T_v = ln(2)/ln(1,07) ≈ 10,24." }],
           theorie: "Memo: 1%/jaar → 70 jaar verdubbeling. 7% → 10 jaar. 10% → 7 jaar.",
@@ -131,7 +131,7 @@ const steps = [
         q: "Auto **20%/jaar afnemen**, start €25.000. Na 2 jaar?",
         options: ["€16.000","€15.000","€10.000","€20.000"],
         answer: 0,
-        wrongHints: [null, "Lijkt — maar exp anders.", "Niet — te laag.", "Niet — dat is na 1 jaar."],
+        wrongHints: [null, "€15.000 krijg je als je twee keer 20% van €25.000 aftrekt. Gaat de tweede 20% van €25.000 af, of van de nieuwe waarde?", "Bij €10.000 is er €15.000 af. Hoeveel is 20% van €25.000, en daarna 20% van wat er over is?", "€20.000 is de waarde na 1 jaar. Er volgt nog een jaar: wat is 20% van €20.000?"],
         uitlegPad: {
           stappen: [{ titel: "y = 25000 · 0,8²", tekst: "Groeifactor 0,8. y = 25000 · 0,80² = 25000 · 0,64 = **€16.000**." }],
           theorie: "Lineair 'min €5000/jaar' zou na 2 jaar 15000 zijn. Exponentieel is hier nipt hoger (16000) omdat de daling ‘op kleiner bedrag’ wordt toegepast.",
@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "Welk wereld-fenomeen heeft **exponentiële groei** in 20e-21e eeuw?",
-        options: ["Rekenkracht van computerchips","Aantal uren in een dag","Lengte van een marathon","Wereldtemperatuur"],
+        options: ["Rekenkracht van computerchips","Lengte van kinderen van 4 tot 12","Snelheid van een vallende steen","Gemiddelde wereldtemperatuur"],
         answer: 0,
-        wrongHints: [null, "Dat blijft altijd 24 — groeit dat wel?", "Die afstand ligt vast — groeit die wel?", "Die stijgt wel, maar ongeveer lineair, niet met een vaste factor."],
+        wrongHints: [null, "Kinderen groeien elk jaar ongeveer evenveel centimeter. Is dat een vaste factor of een vaste toename?", "Een vallende steen wordt elke seconde ongeveer 10 m/s sneller. Is dat een vaste factor of een vaste toename?", "Die stijgt wel, maar ongeveer lineair, niet met een vaste factor."],
         uitlegPad: {
           stappen: [{ titel: "Moore's wet", tekst: "**Moore's wet** (1965): aantal transistors per chip verdubbelt ~elke 2 jaar. **Exponentiële groei**. Klopte ~50 jaar — sinds 2020 vertraagd vanwege fysieke grenzen (atomaire schaal). Vandaar specialisatie GPU/AI/quantum als opvolger." }],
           theorie: "Andere exp: internet-gebruikers tot ~2010, GenAI-modellen 2017-2024, zonne-energie-prijs dalend exp.",
@@ -162,7 +162,7 @@ const steps = [
         q: "Wat is **log(1000)** (basis 10)?",
         options: ["3","100","1000","0"],
         answer: 0,
-        wrongHints: [null, "Niet — log geeft de exponent.", "Niet — log is exponent.", "Niet — dat is log(1)."],
+        wrongHints: [null, "100 is 10². Tot welke macht moet 10 om 1000 te krijgen?", "1000 is het getal ín de log. Tot welke macht moet 10 om 1000 te krijgen?", "0 is log(1), want 10⁰ = 1. Welke macht van 10 geeft 1000?"],
         uitlegPad: {
           stappen: [{ titel: "10³ = 1000", tekst: "log_10(1000) = **3** want 10³ = 1000. Logaritme = de exponent die je nodig hebt om grondtal naar getal te krijgen." }],
           niveaus: { basis: "3.", simpeler: "10³=1000 → log=3", nogSimpeler: "3" },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Spaargeld €1000 bij 5%/jaar. **Na hoeveel jaar €2000**?",
-        options: ["~14,2 jaar","~10 jaar","~20 jaar","~40 jaar"],
+        options: ["~14,2 jaar","~20,0 jaar","~6,0 jaar","~155,8 jaar"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Veel te lang."],
+        wrongHints: [null, "Bij 20 jaar tel je elk jaar €50 op. Krijg je in latere jaren ook rente over de rente?", "6,0 krijg je met log(2) / 0,05. Is de groeifactor bij 5% per jaar 0,05?", "155,8 krijg je met log(2000) / log(1,05). Waar is de beginwaarde van €1000 gebleven?"],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijking", tekst: "2000 = 1000 · 1,05^t → 2 = 1,05^t." },
@@ -186,7 +186,7 @@ const steps = [
         q: "Welke regel klopt?",
         options: ["log(a·b) = log(a) + log(b)","log(a+b) = log(a)·log(b)","log(a/b) = log(a)·log(b)","log(a²) = 2 + log(a)"],
         answer: 0,
-        wrongHints: [null, "Niet — fout patroon.", "Niet — moet aftrekken.", "Niet — moet × niet +."],
+        wrongHints: [null, "Probeer a = b = 10: log(20) ≈ 1,3, maar log(10) · log(10) = 1. Klopt dat?", "Probeer a = 100 en b = 10: log(10) = 1, maar log(100) · log(10) = 2. Klopt dat?", "Probeer a = 10: log(100) = 2, maar 2 + log(10) = 3. Klopt dat?"],
         uitlegPad: {
           stappen: [{ titel: "Vermenigvuldig → optellen", tekst: "**log(a·b) = log(a) + log(b)**. Vermenigvuldigen wordt optellen na log-transformatie. Dit is fundamentele log-regel (uitgevonden 17e eeuw, vóór rekenmachines, om vermenigvuldigen op te lossen)." }],
           niveaus: { basis: "log(ab) = log(a)+log(b).", simpeler: "× → + bij log", nogSimpeler: "× → +" },
@@ -194,9 +194,9 @@ const steps = [
       },
       {
         q: "Houtskool van fossiel heeft **25% C-14** vergeleken levend. T_h C-14 = 5730 jaar. **Leeftijd**?",
-        options: ["~11.460 jaar","5730 jaar","2865 jaar","23.000 jaar"],
+        options: ["~11.460 jaar","~8.595 jaar","~22.920 jaar","~17.190 jaar"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 50%.", "Niet — te jong.", "Te oud."],
+        wrongHints: [null, "8.595 krijg je als er elke 5730 jaar 50% van het begin verdwijnt. Wat halveert er: het begin, of wat er nog over is?", "22.920 is 4 × 5730: je deelde 100% door 4. Hoe vaak moet je 100% écht halveren om bij 25% te komen?", "17.190 is 3 × 5730. Tel opnieuw: hoe vaak halveer je van 100% tot 25%?"],
         uitlegPad: {
           stappen: [
             { titel: "Tellen halveringen", tekst: "Levend: 100%. Na 1 halvering: 50%. Na 2 halveringen: 25%. → **2 halveringstijden** voorbij." },
@@ -229,7 +229,7 @@ const steps = [
         q: "Welk model heeft een **plafond**?",
         options: ["Logistisch","Lineair","Exponentieel groei","Periodiek"],
         answer: 0,
-        wrongHints: [null, "Niet — gaat door.", "Niet — naar oneindig.", "Wel begrensd maar geen plafond — schommelt."],
+        wrongHints: [null, "Een rechte lijn gaat steeds verder omhoog. Stopt die ergens?", "Exponentiële groei gaat steeds sneller. Komt die ooit tegen een grens aan?", "Een periodieke grafiek heeft wel een hoogste punt, maar komt er steeds weer van af. Groeit hij naar een grens toe?"],
         uitlegPad: {
           stappen: [{ titel: "S-curve = logistisch", tekst: "**Logistisch model**: S-vormige curve, groeit eerst snel, vlakt af naar plafond (carrying capacity K). Past op bevolking in eindig gebied, virus-uitbraak, marktverzadiging." }],
           niveaus: { basis: "Logistisch.", simpeler: "Plafond = logistisch", nogSimpeler: "Logistisch" },
@@ -239,7 +239,7 @@ const steps = [
         q: "Welk patroon past bij **eb en vloed** in NL-haven?",
         options: ["Periodiek (sinus)","Lineair","Exponentieel","Logistisch"],
         answer: 0,
-        wrongHints: [null, "Niet — herhalend.", "Niet — niet groeiend.", "Niet — geen plafond."],
+        wrongHints: [null, "Een rechte lijn blijft stijgen of dalen. Komt het water steeds terug op dezelfde hoogte?", "Exponentieel groeit steeds sneller. Wordt het water elke dag hoger?", "Logistisch groeit naar een plafond en blijft daar. Blijft het water hoog staan?"],
         uitlegPad: {
           stappen: [{ titel: "Cyclisch herhalend", tekst: "Eb-vloed herhaalt ~12,5u (Maan-gravitatie). **Periodiek (sinus)-model** past: f(t) = a + b·sin(c·t + d). Toets-classics: getijden, dagelijkse temperatuur, hartslag, seizoens-vraag." }],
           niveaus: { basis: "Periodiek.", simpeler: "Getijden = sinus", nogSimpeler: "Sinus" },
@@ -247,9 +247,9 @@ const steps = [
       },
       {
         q: "Bal omhoog gooien — hoogte als functie van tijd is:",
-        options: ["Kwadratisch (parabool)","Lineair","Exponentieel","Logaritmisch"],
+        options: ["Kwadratisch (parabool)","Lineair (rechte lijn)","Exponentieel (groeikromme)","Logaritmisch (vlakt af)"],
         answer: 0,
-        wrongHints: [null, "Niet — versnelling.", "Niet — de bal stijgt eerst en daalt dan.", "Niet relevant."],
+        wrongHints: [null, "Gaat de bal elke seconde precies evenveel omhoog? En komt hij ooit terug?", "Een exponentiële kromme blijft steeds sneller stijgen. Wat doet de bal na het hoogste punt?", "Een logaritmische grafiek blijft altijd stijgen. Wat doet de bal na het hoogste punt?"],
         uitlegPad: {
           stappen: [{ titel: "h = v₀·t − ½g·t²", tekst: "**Kwadratisch model**: hoogte stijgt eerst (lineaire bijdrage v₀·t) maar wordt door zwaartekracht (−½g·t²) afgeremd → maximum → daling. **Parabool** met top." }],
           niveaus: { basis: "Kwadratisch.", simpeler: "Bal-baan = parabool", nogSimpeler: "Parabool" },
@@ -257,9 +257,9 @@ const steps = [
       },
       {
         q: "Virus-uitbraak: aantal besmettingen verloopt typisch:",
-        options: ["Logistisch","Lineair","Periodiek alleen","Constant"],
+        options: ["Logistisch: eerst snel, dan afvlakkend","Lineair: elke dag evenveel erbij","Periodiek: steeds op en neer","Exponentieel: steeds sneller omhoog"],
         answer: 0,
-        wrongHints: [null, "Niet — niet zonder beperking.", "Wel later golf, eerst monotoon.", "Niet — wel verandering."],
+        wrongHints: [null, "Komen er elke dag precies evenveel besmettingen bij, ook als bijna iedereen het al heeft gehad?", "Een virus kan in golven komen. Maar gaat één uitbraak steeds op en neer?", "In het begin lijkt het zo. Maar wat gebeurt er als bijna iedereen al besmet is geweest?"],
         uitlegPad: {
           stappen: [{ titel: "Logistisch met R0", tekst: "Beginfase virus: weinig immuniteit → besmettingen groeien exp. Naarmate meer mensen besmet (of beschermd door maatregelen/immuniteit): R-getal daalt → groei vlakt af → **logistische curve**.\n\nMeerdere golven mogelijk (nieuwe varianten) → opvolgende S-curves." }],
           theorie: "COVID-19-grafiekpatroon: meerdere logistische golven achter elkaar.",
@@ -268,9 +268,9 @@ const steps = [
       },
       {
         q: "Voor **extrapolatie naar 50 jaar** is welk model meest risicovol?",
-        options: ["Exponentieel ongebreideld","Lineair tussen grenzen","Logistisch","Periodiek voor bekende cyclus"],
+        options: ["Exponentieel","Lineair","Logistisch","Periodiek"],
         answer: 0,
-        wrongHints: [null, "Niet — beperkt risico.", "Niet — bevat plafond.", "Wel betrouwbaar bekend cyclisch."],
+        wrongHints: [null, "Bij een lijn groeit een fout gelijkmatig mee. Welk model vermenigvuldigt een kleine fout elk jaar opnieuw?", "Een logistisch model heeft een plafond. Kan het dan eindeloos ver uit de bocht vliegen?", "Een bekende cyclus herhaalt zich netjes. Welk model blijft steeds sneller groeien als je verder kijkt?"],
         uitlegPad: {
           stappen: [{ titel: "Exp loopt scheef", tekst: "**Exponentieel zonder plafond** extrapoleren naar lange termijn → onrealistisch grote uitkomsten. Voorbeeld: 'bevolking groeit 3%/jaar voor altijd' → na 1000 jaar miljarden×miljarden mensen. Klopt niet door eindige voedsel/grond." }],
           theorie: "Toets-patroon: 'leg uit waarom je niet zomaar 2080 mag voorspellen via exp.'",
@@ -290,7 +290,7 @@ const steps = [
         q: "Bevolking 100.000 groeit **2,5%/jaar**. Aantal na 10 jaar?",
         options: ["~128.000","~125.000","~250.000","~10.000.000"],
         answer: 0,
-        wrongHints: [null, "Lineair zou 125.000 — exp ietsje meer.", "Te groot.", "Belachelijk."],
+        wrongHints: [null, "Dat is 10 × 2,5% = 25% erbij. Groeit de bevolking niet elk jaar over een steeds groter aantal?", "Dat is een verdubbeling. Hoeveel jaar duurt verdubbelen bij 2,5% per jaar ongeveer?", "Dat is 100 keer zoveel. Kan 2,5% per jaar in 10 jaar zoveel opleveren?"],
         uitlegPad: {
           stappen: [{ titel: "y = 100.000·1,025^10", tekst: "1,025^10 ≈ 1,28. → **~128.000**.\n\nVerschil met lineair (+2500/jaar = 125.000): exp ~3000 meer door rente-op-rente." }],
           niveaus: { basis: "~128.000.", simpeler: "100.000·1,025^10≈128k", nogSimpeler: "128k" },
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "Tabel: x:1,2,3,4 | y:100, 90, 81, 72,9. Welk model + factor?",
-        options: ["Exp afnemend, b=0,9","Lineair, b=−10","Logistisch","Onmogelijk"],
+        options: ["Exp afnemend, b=0,9","Lineair, b=−10","Logistisch","Exp afnemend, b=0,1"],
         answer: 0,
-        wrongHints: [null, "Niet — verschillen veranderen.", "Niet zo te zien.", "Wel mogelijk."],
+        wrongHints: [null, "Bekijk de stappen: −10, −9, −8,1. Is het verschil steeds even groot?", "Logistisch groeit eerst en vlakt dan af naar een plafond. Groeit deze tabel?", "Bij b = 0,1 wordt elk getal een tiende van het vorige. Is 90 een tiende van 100?"],
         uitlegPad: {
           stappen: [{ titel: "Quotiënten = 0,9", tekst: "90/100=0,9, 81/90=0,9, 72,9/81=0,9 → constante factor → **exp afnemend met b=0,9** (10% verlies/jaar)." }],
           niveaus: { basis: "Exp b=0,9.", simpeler: "0,9-quotiënt = exp afn", nogSimpeler: "0,9" },
@@ -310,7 +310,7 @@ const steps = [
         q: "Jodium-131 halveringstijd 8 dagen. Na **24 dagen** is welk % over?",
         options: ["12,5%","50%","25%","6,25%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 8 dagen.", "Niet — dat is 16 dagen.", "Niet — dat is 32 dagen."],
+        wrongHints: [null, "50% is over na één halveringstijd: 8 dagen. Hoeveel halveringstijden passen in 24 dagen?", "25% is over na twee halveringstijden: 16 dagen. Hoeveel halveringstijden passen in 24 dagen?", "6,25% is over na vier halveringstijden: 32 dagen. Hoeveel halveringstijden passen in 24 dagen?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel halveringen?", tekst: "24 / 8 = 3 halveringen." },
@@ -324,7 +324,7 @@ const steps = [
         q: "Welk model past bij **leerproces** (oefenen)?",
         options: ["Logistisch","Lineair","Periodiek","Kwadratisch"],
         answer: 0,
-        wrongHints: [null, "Niet — geen gelijke stappen.", "Niet — geen cyclus.", "Niet relevant."],
+        wrongHints: [null, "Ga je elke oefenweek precies evenveel vooruit, ook als je het al bijna kunt?", "Periodiek betekent dat iets steeds terugkomt, zoals seizoenen. Gaat leren op en neer?", "Een parabool gaat steeds sneller omhoog. Word je bij oefenen steeds sneller beter, zonder grens?"],
         uitlegPad: {
           stappen: [{ titel: "Learning curve = S-vorm", tekst: "**Leren**: begin traag (basis snappen), dan snel (kennis groeit op kennis), uiteindelijk plateau (expertgrens, afnemende meeropbrengst). Klassieke S-curve = **logistisch**. Wordt gebruikt in psychologie + training-theorie." }],
           theorie: "Daarom: 15-min/dag werkt op lange termijn (volharden door beginplateau) > sprong-leren.",
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Vuistregel **70**: T_v ≈ 70/p werkt voor:",
-        options: ["Alleen kleine percentages","Alleen percentages > 50%","Alleen lineair","Niet bestaand"],
+        options: ["Alleen kleine percentages","Alleen percentages > 50%","Alleen bij lineaire groei","Alle percentages even goed"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — voor exp.", "Wel bestaand."],
+        wrongHints: [null, "Reken na: bij 70% zou verdubbelen 1 jaar duren. Is 1,7 gelijk aan 2?", "Bij lineaire groei is er geen vaste groeifactor. Bij welk soort groei hoort een verdubbelingstijd?", "Probeer 100%: de regel geeft 0,7 jaar. Hoe lang duurt verdubbelen echt bij 100% per jaar?"],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel uit ln(2)", tekst: "T_v = ln(2)/ln(1+r) ≈ 0,693/r voor kleine r (Taylorbenadering). Met r in % en uitkomst in jaar: T_v ≈ 70/p. **Werkt voor p < 10%**. Bij grotere groei (20%, 50%) wordt de benadering minder nauwkeurig — gebruik exacte formule." }],
           niveaus: { basis: "Kleine %.", simpeler: "70-regel = kleine %", nogSimpeler: "Kleine %" },

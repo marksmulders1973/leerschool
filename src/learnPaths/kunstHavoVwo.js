@@ -33,7 +33,7 @@ const steps = [
         q: "Welke architectonische stijl gebruikt **spitsbogen + glas-in-lood**?",
         options: ["Gotisch","Romaans","Renaissance","Barok"],
         answer: 0,
-        wrongHints: [null, "Rondbogen + dikke muren.", "Klassiek + perspectief.", "Drama + krullen later."],
+        wrongHints: [null, "De Romaanse stijl bouwde met ronde bogen, dikke muren en kleine ramen. Past dat bij spitsbogen en grote ramen?", "De Renaissance greep terug op de klassieke oudheid, met zuilen en ronde bogen. Uit welke eerdere periode stammen de kathedralen met spitsbogen?", "De barok begon pas rond 1600. Uit welke periode stammen de grote kathedralen met spitsbogen?"],
         uitlegPad: {
           stappen: [{ titel: "Gotisch = licht + hoog", tekst: "**Gotische stijl** (1150-1400): **spitsbogen** ipv romaanse rondbogen → muren konden hoger + dunner. **Glas-in-lood-ramen** (vooral roosvensters) brachten licht binnen. Symboliek: licht = goddelijk. **Stenen ribbengewelven** verdeelden gewicht. Voorbeelden: Notre-Dame Paris, Chartres, NL Sint Jan Den Bosch + Domtoren Utrecht." }],
           niveaus: { basis: "Gotisch.", simpeler: "Spits = gotisch", nogSimpeler: "Gotisch." },
@@ -43,7 +43,7 @@ const steps = [
         q: "Wie schilderde **Mona Lisa**?",
         options: ["Leonardo da Vinci","Michelangelo","Rafaël","Botticelli"],
         answer: 0,
-        wrongHints: [null, "Sixtijnse Kapel.", "School van Athene.", "Geboorte van Venus."],
+        wrongHints: [null, "Michelangelo was vooral beroemd als beeldhouwer, bijvoorbeeld van de David. Wie was het veelzijdige genie achter dit portret?", "Rafaël is vooral bekend van grote fresco's in Rome. Wie schilderde rond 1503 het beroemdste portret ter wereld?", "Botticelli schilderde vooral godinnen uit oude verhalen. Wie was het veelzijdige genie achter dit portret?"],
         uitlegPad: {
           stappen: [{ titel: "1503-1519", tekst: "**Leonardo da Vinci** (1452-1519) schilderde *Mona Lisa* (1503-19). **Sfumato-techniek**: zachte overgangen tonen, mysterieuze glimlach. Hangt in **Louvre Parijs** sinds 1797. Veiligst beveiligde + meest bezocht schilderij wereld (~10 mln bezoekers/jaar). 1911 gestolen (terug 1913) — dat maakte het wereldberoemd." }],
           niveaus: { basis: "Leonardo.", simpeler: "Mona Lisa = Leonardo", nogSimpeler: "Leonardo." },
@@ -51,9 +51,9 @@ const steps = [
       },
       {
         q: "**Perspectief** in schilderkunst werd uitgevonden door:",
-        options: ["Brunelleschi","Caravaggio","Rembrandt","Picasso"],
+        options: ["Brunelleschi","Giotto","Jan van Eyck","Leonardo da Vinci"],
         answer: 0,
-        wrongHints: [null, "Veel later.", "Veel later.", "20e eeuw."],
+        wrongHints: [null, "Giotto gaf rond 1300 al wat diepte aan zijn fresco's, maar nog zonder vaste regels. Wie bedacht rond 1420 het verdwijnpunt?", "Van Eyck is vooral bekend om zijn olieverftechniek in Vlaanderen. Wie bedacht in Florence de regels voor diepte?", "Leonardo werd pas in 1452 geboren en gebruikte perspectief dat toen al bestond. Wie ging hem voor?"],
         uitlegPad: {
           stappen: [{ titel: "Lineair perspectief", tekst: "**Filippo Brunelleschi** (1377-1446) ontwikkelde ~1420 in Florence **lineair perspectief** met een **verdwijnpunt**: parallelle lijnen lopen samen aan horizon. Revolutionair voor 2D-schilderkunst — gaf diepte-illusie. Versterkt door wiskundige berekeningen. **Masaccio** + **Donatello** + later **Leonardo + Rafaël** pasten het meesterlijk toe." }],
           theorie: "Voor Brunelleschi: middeleeuwse schilderkunst plat, symbolisch. Daarna: realistische ruimte mogelijk.",
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Welk Renaissance-kunstwerk schilderde Michelangelo?",
-        options: ["Sixtijnse Kapel-plafond","Mona Lisa","Lam Gods","Tuin der Lusten"],
+        options: ["Sixtijnse Kapel-plafond","Het Laatste Avondmaal","Het Lam Gods-altaarstuk","De School van Athene"],
         answer: 0,
-        wrongHints: [null, "Leonardo.", "Van Eyck.", "Bosch."],
+        wrongHints: [null, "Deze muurschildering in Milaan is van Leonardo da Vinci.", "Dit altaarstuk in Gent is van de Vlaamse meester Van Eyck.", "Dit fresco in het Vaticaan is van Rafaël, die tegelijk met Michelangelo in Rome werkte."],
         uitlegPad: {
           stappen: [{ titel: "1508-1512", tekst: "**Michelangelo** (1475-1564) schilderde plafond **Sixtijnse Kapel** Vaticaan in 4 jaar (1508-12). Ruim 500 vierkante meter fresco's. Beroemd: 'Schepping van Adam' (vingers Adam + God). Later schilderde hij ook *Laatste Oordeel* op achterwand (1536-41). Michelangelo zelf zag zich primair als **beeldhouwer** (David 1504, Pietà) maar werd door Paus gedwongen tot schilderen." }],
           niveaus: { basis: "Sixtijnse Kapel.", simpeler: "Michelangelo = Sixtijns", nogSimpeler: "Sixtijnse Kapel." },
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "Wat is **humanisme** in Renaissance-zin?",
-        options: ["Mens centraal","Mensenrechten-beweging","Helpen-organisatie","Geen religie"],
+        options: ["De mens staat centraal","Strijd voor mensenrechten","Zorg voor arme mensen","Afkeer van het geloof"],
         answer: 0,
-        wrongHints: [null, "Niet — komt later, andere betekenis.", "Niet relevant.", "Niet — wel religie + mens."],
+        wrongHints: [null, "Mensenrechten worden pas veel later een beweging, vooral na de Verlichting. Wat was er nieuw in de Renaissance?", "Liefdadigheid bestond al in de middeleeuwen. Wat was er nieuw aan het denken in de Renaissance?", "Renaissance-kunstenaars maakten nog veel religieuze kunst. Verdween het geloof dan?"],
         uitlegPad: {
           stappen: [{ titel: "Erasmus + Petrarca", tekst: "**Humanisme** (Renaissance): intellectuele beweging die **mens centraal** plaatst (anders dan middeleeuws God-centrum). Studie klassieke oudheid + talen (Latijn, Grieks, Hebreeuws). **Erasmus van Rotterdam** (1466-1536): *Lof der Zotheid* — kritiek op kerk + dwaasheid. **Petrarca** (1304-1374) bedacht 'duistere middeleeuwen' (te zwart geschilderd) — pleitte voor herontdekking klassieke geest.\n\nModern 'humanisme' = niet-religieuze ethiek — andere betekenis." }],
           niveaus: { basis: "Mens centraal.", simpeler: "Humanisme = mens centraal", nogSimpeler: "Mens centraal." },
@@ -93,7 +93,7 @@ const steps = [
         q: "Wie schilderde **De Nachtwacht** (1642)?",
         options: ["Rembrandt","Vermeer","Hals","Van Eyck"],
         answer: 0,
-        wrongHints: [null, "Meisje met de parel.", "Levendige portretten.", "Veel eerder, Vlaamse Renaissance."],
+        wrongHints: [null, "Vermeer schilderde vooral kleine, stille interieurs. Is De Nachtwacht klein en stil?", "Frans Hals schilderde levendige portretten in Haarlem. Wie maakte in 1642 het grote schuttersstuk met fel licht en diepe schaduw?", "Van Eyck leefde rond 1430, lang vóór 1642. Wie werkte er in de Gouden Eeuw in Amsterdam?"],
         uitlegPad: {
           stappen: [{ titel: "1642 Amsterdam", tekst: "**Rembrandt van Rijn** (1606-69) schilderde *De Nachtwacht* in 1642. Officieel: 'De compagnie van kapitein Frans Banning Cocq'. Schutterstuk (groepsportret) maar met drama + beweging — innovatief. Hangt **Rijksmuseum Amsterdam**. **Niet eigenlijk nacht** — gele vernis verkleurde, nu schoongemaakt. Recent verder gerestaureerd via 'Operatie Nachtwacht' 2019+." }],
           niveaus: { basis: "Rembrandt.", simpeler: "Nachtwacht = Rembrandt", nogSimpeler: "Rembrandt." },
@@ -101,9 +101,9 @@ const steps = [
       },
       {
         q: "**Chiaroscuro** is:",
-        options: ["Sterk licht-donker-contrast","Veel kleur","Geometrische vormen","Buiten schilderen"],
+        options: ["Sterk licht-donker-contrast","Sterk warm-koudcontrast","Zacht vervagen van contouren","Schilderen in grijstinten"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet relevant.", "Impressionisme."],
+        wrongHints: [null, "Warm en koud gaat over kleur. Wat betekenen de Italiaanse woorden chiaro en scuro?", "Zacht vervagen van randen heeft een eigen Italiaanse naam. Zie je bij Caravaggio zachte overgangen of harde?", "Dat heet grisaille. Wat zegt het woord chiaroscuro letterlijk?"],
         uitlegPad: {
           stappen: [{ titel: "Italiaans 'licht-donker'", tekst: "**Chiaroscuro** (Italiaans 'licht-donker'): dramatisch contrast tussen licht + schaduw. Kenmerkend voor **barok** (Caravaggio, Rembrandt). Creëert volume + drama + psychologische diepte. Anders dan vlakke middeleeuwse verlichting." }],
           niveaus: { basis: "Licht-donker.", simpeler: "Chiaroscuro = licht-donker", nogSimpeler: "Licht-donker." },
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "**Impressionisme** kenmerkt zich door:",
-        options: ["Korte penseelstreken + buiten + licht","Geometrische abstracte vormen","Gouden achtergronden","Streng lineair perspectief"],
+        options: ["Losse streken en natuurlijk licht","Geometrische, abstracte vormen","Gouden achtergronden en heiligen","Gladde, onzichtbare penseelstreken"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is kubisme.", "Niet — middeleeuws.", "Niet primair."],
+        wrongHints: [null, "Geometrische vormen horen bij het kubisme. Schilderden Monet en Renoir hoekige vlakken of buiten in het licht?", "Dat past bij middeleeuwse kunst. Wat schilderden Monet en Renoir?", "Kijk eens van dichtbij naar een schilderij van Monet. Zie je de streken of niet?"],
         uitlegPad: {
           stappen: [{ titel: "1874 Parijs-start", tekst: "**Impressionisme** (1870-1900): groep schilders (Monet, Renoir, Pissarro, Degas) breken met academische conventies. Innovaties: **buiten schilderen** ('en plein air'), **korte/losse penseelstreken**, **kleur + licht** boven vorm + lijn. Mogelijk gemaakt door industriële verftubes (1841) + draagbare schildersezels. **Eerste tentoonstelling 1874** in Parijs. Naam komt van een kritisch artikel over Monets *Impressie, opkomende zon*." }],
           niveaus: { basis: "Korte penseel + licht.", simpeler: "Imp = licht + buiten", nogSimpeler: "Korte penseel + licht." },
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Welke schilder werd **na zijn dood pas beroemd**?",
-        options: ["Vincent van Gogh","Rembrandt","Monet","Picasso"],
+        options: ["Vincent van Gogh","Rembrandt van Rijn","Claude Monet","Pablo Picasso"],
         answer: 0,
-        wrongHints: [null, "Beroemd tijdens leven.", "Beroemd tijdens leven.", "Zeer beroemd tijdens leven."],
+        wrongHints: [null, "Rembrandt was al jong een gevierd schilder in Amsterdam, ook al raakte hij later in geldnood.", "Monet verkocht later in zijn leven veel werk en werd er rijk van.", "Picasso was tijdens zijn leven al wereldberoemd en rijk."],
         uitlegPad: {
           stappen: [{ titel: "1 schilderij verkocht", tekst: "**Vincent van Gogh** (1853-1890) verkocht tijdens zijn leven maar **1 schilderij** (*De rode wijngaard*, 1888). Verbleef in armoede, depressief, sneed oor af 1888, schoot zichzelf neer in juli 1890 (overleden 29 juli). Broer Theo + diens vrouw Jo van Gogh-Bonger verzamelden + promootten zijn werk na zijn dood. Nu wereldberoemd, schilderijen tot $200+ mln waard. **Van Gogh Museum** Amsterdam." }],
           niveaus: { basis: "Van Gogh.", simpeler: "Postuum = Van Gogh", nogSimpeler: "Van Gogh." },
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "**NL Gouden Eeuw** kunst-specialiteit was:",
-        options: ["Genre-stukken + landschappen + stillevens","Kerk-fresco's","Mythologische scènes","Tapijten"],
+        options: ["Genrestukken, landschappen en stillevens","Fresco's en altaarstukken voor kerken","Grote mythologische scènes voor paleizen","Wandtapijten en portretten van vorsten"],
         answer: 0,
-        wrongHints: [null, "Niet — protestants, geen kerk-kunst.", "Niet primair NL.", "Niet primair NL."],
+        wrongHints: [null, "Na de Reformatie waren de protestantse kerken kaal. Wie kocht er dan wel schilderijen?", "Dat past bij hoven in Frankrijk en Italië. Wie waren de kopers in de Republiek?", "De Republiek had geen koning aan het hof. Wat hing er bij rijke burgers thuis?"],
         uitlegPad: {
           stappen: [{ titel: "Burgerlijke kunstmarkt", tekst: "**NL Gouden Eeuw** (1600s): geen rijke kerk-mecenaten (protestants), maar **welvarende burgerij** kocht kunst voor woonhuizen. Resultaat: kunstmarkt met **specialisaties** per schilder:\n• **Landschappen** (Ruisdael, Van Goyen).\n• **Stillevens** (bloemen, vanitas — Heda).\n• **Portretten** (Hals, Rembrandt).\n• **Interieurs / genre-stukken** (Vermeer, De Hooch, Steen).\n• **Zeegezichten** (Van de Velde).\n• **Stadsgezichten** (Berckheyde).\n\n~5 mln schilderijen geproduceerd in NL 1600s — meer dan ooit eerder." }],
           niveaus: { basis: "Landschap/stilleven/portret.", simpeler: "NL = specialismen", nogSimpeler: "Landschap/stilleven/portret." },
@@ -152,7 +152,7 @@ const steps = [
         q: "**De Stijl** beweging stamt uit:",
         options: ["Nederland","Italië","Duitsland","Frankrijk"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — Bauhaus.", "Niet — fauvisme/kubisme."],
+        wrongHints: [null, "In Italië ontstond rond die tijd het futurisme. Waar woonden Mondriaan en Van Doesburg?", "In Duitsland zat het Bauhaus, dat door De Stijl werd beïnvloed. Waar kwamen de oprichters vandaan?", "In Frankrijk ontstonden het fauvisme en het kubisme. In welk land verscheen het tijdschrift De Stijl?"],
         uitlegPad: {
           stappen: [{ titel: "1917 Leiden", tekst: "**De Stijl**: NL-beweging opgericht 1917 in Leiden door **Theo van Doesburg + Piet Mondriaan**. Strikte regels: alleen **rechthoeken + primaire kleuren (rood/geel/blauw) + zwart/wit/grijs**. Geometrische abstractie. Mondriaan = schilder, **Rietveld** = meubels + architectuur (rood-blauwe stoel 1917, Rietveld-Schröderhuis Utrecht 1924). UNESCO-erfgoed." }],
           niveaus: { basis: "NL.", simpeler: "De Stijl = NL", nogSimpeler: "NL." },
@@ -162,7 +162,7 @@ const steps = [
         q: "Wie maakte **Urinoir / Fountain** (1917)?",
         options: ["Marcel Duchamp","Andy Warhol","Picasso","Dalí"],
         answer: 0,
-        wrongHints: [null, "Pop Art later.", "Kubisme.", "Surrealisme."],
+        wrongHints: [null, "Warhol werkte pas vanaf de jaren 60. Wie zette al in 1917 een gekocht voorwerp in een tentoonstelling?", "Picasso schilderde en beeldhouwde zelf. Wie exposeerde een gewoon, gekocht voorwerp als kunst?", "Dalí schilderde droombeelden met de hand. Bij welke beweging rond de Eerste Wereldoorlog hoorden de ready-mades?"],
         uitlegPad: {
           stappen: [{ titel: "Ready-made dadaïsme", tekst: "**Marcel Duchamp** (1887-1968) zond in 1917 een **urinoir** onder pseudoniem 'R. Mutt' naar tentoonstelling Society of Independent Artists. Werd geweigerd → schandaal → kunstgeschiedenis-mijlpaal. **Ready-made**-concept: alledaags object wordt kunst door keuze + presentatie. Fundamenteel voor 20e-eeuwse kunst — daad van benoemen = kunst." }],
           niveaus: { basis: "Duchamp.", simpeler: "Urinoir = Duchamp", nogSimpeler: "Duchamp." },
@@ -172,7 +172,7 @@ const steps = [
         q: "**Pop Art** kunstenaar:",
         options: ["Andy Warhol","Picasso","Mondriaan","Caravaggio"],
         answer: 0,
-        wrongHints: [null, "Kubist.", "De Stijl.", "Barok."],
+        wrongHints: [null, "Picasso brak voorwerpen op in hoekige vlakken. Lijkt dat op beelden uit reclame en strips?", "Mondriaan schilderde strakke lijnen en vlakken. Lijkt dat op beelden uit reclame en strips?", "Caravaggio leefde rond 1600. Pop Art komt uit de jaren 60. Kan dat kloppen?"],
         uitlegPad: {
           stappen: [{ titel: "1962-1970s", tekst: "**Andy Warhol** (1928-1987) = boegbeeld **Pop Art**: kunst die massacultuur (soep-blikken, beroemdheden, strips) verheft tot kunst. Bekendste: *Campbell's Soup Cans* (1962), *Marilyn Diptych* (na de dood van Monroe in 1962), *Brillo-boxes*. Werkte in **The Factory** Studio New York — massaproductie kunst. 'In the future everyone will be famous for 15 minutes' = profetisch citaat (1968)." }],
           niveaus: { basis: "Warhol.", simpeler: "Pop Art = Warhol", nogSimpeler: "Warhol." },
@@ -180,19 +180,19 @@ const steps = [
       },
       {
         q: "Welke beweging is **abstract** + **geometrisch**?",
-        options: ["De Stijl","Romantiek","Realisme","Renaissance"],
+        options: ["De Stijl","Kubisme","Futurisme","Expressionisme"],
         answer: 0,
-        wrongHints: [null, "Emotie + natuur.", "Werkelijkheid.", "Klassieke idealen."],
+        wrongHints: [null, "Kubisten braken dingen op in blokjes, maar je herkent nog een gitaar of een gezicht. Is dat helemaal abstract?", "Futuristen schilderden auto's en treinen in volle vaart. Is dat abstract en strak geometrisch?", "Expressionisten zoals Munch vervormden figuren om gevoel te tonen. Zie je daar strakke lijnen en vlakken?"],
         uitlegPad: {
           stappen: [{ titel: "20e eeuw breekt vorm op", tekst: "**De Stijl** (Mondriaan 1917+) en **Suprematisme** (Malevich 1915) gingen volledig geometrisch abstract; het **Kubisme** (Picasso/Braque 1907+) was de opmaat, maar bleef herkenbare objecten tonen. Mondriaan: alleen rechthoeken + primaire kleuren. Kubisme: objecten ontleed in vlakken vanuit meerdere perspectieven tegelijk. Tegenstelling met figuratief realisme van eerdere eeuwen." }],
-          niveaus: { basis: "De Stijl.", simpeler: "Geom abstract = 20e eeuw", nogSimpeler: "De Stijl." },
+          niveaus: { basis: "De Stijl.", simpeler: "Volledig geometrisch abstract: alleen lijnen en vlakken", nogSimpeler: "De Stijl." },
         },
       },
       {
         q: "**Surrealisme** wordt geïnspireerd door:",
-        options: ["Onbewuste + dromen","Politiek","Wetenschap","Industrie"],
+        options: ["Het onbewuste en dromen","Politiek en protest","Wetenschap en techniek","Machines en snelheid"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet — dat is futurisme."],
+        wrongHints: [null, "Dada was fel politiek. Waar haalden Dalí en Magritte hun vreemde beelden vandaan?", "Kleurtheorie uit de wetenschap inspireerde het pointillisme. Zijn de smeltende klokken van Dalí wetenschappelijk?", "Machines en snelheid vierde het futurisme. Lijken de beelden van Magritte daarop?"],
         uitlegPad: {
           stappen: [{ titel: "1924 Breton-manifest", tekst: "**Surrealisme** (André Breton-manifest 1924): kunst van het **onbewuste** + dromen + ontsnappen aan rationaliteit. Geïnspireerd door **Sigmund Freud** (psychoanalyse, droomduiding 1899). **Dalí** (smeltende klokken 1931), **Magritte** (pijp), **Miró**, **Frida Kahlo**. Tegenovergesteld van rationeel kubisme + geometrische abstractie." }],
           niveaus: { basis: "Onbewuste/dromen.", simpeler: "Surr = dromen", nogSimpeler: "Onbewuste/dromen." },
@@ -209,9 +209,9 @@ const steps = [
     checks: [
       {
         q: "Welke kunstenaar maakte **Spiral Jetty** (Land Art)?",
-        options: ["Robert Smithson","Banksy","Andy Warhol","Picasso"],
+        options: ["Robert Smithson","Christo en Jeanne-Claude","Andy Goldsworthy","Jeff Koons"],
         answer: 0,
-        wrongHints: [null, "Street art.", "Pop Art.", "Kubisme."],
+        wrongHints: [null, "Christo en Jeanne-Claude pakten gebouwen in met stof. Is Spiral Jetty ingepakt?", "Goldsworthy maakt kleine, vergankelijke werken van bladeren en ijs. Is een stenen spiraal van honderden meters klein en vergankelijk?", "Jeff Koons maakt glanzende kitschbeelden zoals Balloon Dog. Werkt hij met rotsen en zout water in de natuur?"],
         uitlegPad: {
           stappen: [{ titel: "Utah 1970", tekst: "**Robert Smithson** (1938-1973) maakte **Spiral Jetty** in 1970: spiraalvormige strekdam van basaltrots, modder + zout in Great Salt Lake, Utah. 460m lang. **Land Art**: kunst van natuur in natuur. Soms zichtbaar, soms verzonken (afhankelijk waterpeil). Smithson zelf stierf jong bij vliegtuigongeluk." }],
           niveaus: { basis: "Smithson.", simpeler: "Spiral Jetty = Smithson", nogSimpeler: "Smithson." },
@@ -219,9 +219,9 @@ const steps = [
       },
       {
         q: "**Banksy** is bekend om:",
-        options: ["Anonieme politieke street art","Renaissance-schilderijen","Klassieke beeldhouwwerken","Architectuur"],
+        options: ["Anonieme politieke street art","Kleurrijke popart-zeefdrukken","Grote ingepakte gebouwen","Abstracte druppelschilderijen"],
         answer: 0,
-        wrongHints: [null, "De Renaissance was eeuwen geleden (Da Vinci, Rafaël) — maakt een nog levende, anonieme kunstenaar zulke schilderijen?", "Banksy werkt met spuitbus op muren in de openbare ruimte, niet met marmer of brons — past beeldhouwen bij hem?", "Architecten ontwerpen gebouwen; deze kunstenaar zet zijn werk juist óp bestaande muren — is dat hetzelfde?"],
+        wrongHints: [null, "Zeefdrukken maak je in een atelier en verkoop je in galeries. Waar zie je werk van Banksy meestal?", "Christo pakte gebouwen in met stof. Werkt Banksy met stof of met een spuitbus?", "Druppelschilderijen zijn van Jackson Pollock. Is het werk van Banksy abstract?"],
         uitlegPad: {
           stappen: [{ titel: "Anonieme provocateur", tekst: "**Banksy** (anoniem UK-kunstenaar, vermoedelijk geboren ~1974): **politieke pochoir-stencils** op muren wereldwijd. Onderwerpen: oorlog, kapitalisme, klimaat, migratie. Bekend: **Girl with Balloon** (verkocht 2018 voor £1mln, zelfvernietigde via interne shredder tijdens veiling — werd waardevoller). Identiteit nog onbekend (theorieën genoeg). Documentaire *Exit Through the Gift Shop* (2010)." }],
           niveaus: { basis: "Street art.", simpeler: "Banksy = street", nogSimpeler: "Street art." },
@@ -229,9 +229,9 @@ const steps = [
       },
       {
         q: "De kunstanalyse-niveaus van **Panofsky**:",
-        options: ["Pre-iconografisch / iconografisch / iconologisch","Eén niveau","Vijf niveaus","Geen niveaus"],
+        options: ["Pre-iconografisch / iconografisch / iconologisch","Beschrijven / analyseren / interpreteren / beoordelen","Lijn / vorm / kleur / compositie / ruimte","Materiaal / techniek / functie / betekenis"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Geen 5.", "Wel niveaus."],
+        wrongHints: [null, "Dat is het stappenplan van Feldman. Panofsky gaat van wat je herkent naar wat het betekent in zijn tijd. Hoe heten die niveaus?", "Dat zijn beeldaspecten voor de vormanalyse. Gaan de niveaus van Panofsky over vorm of over betekenis?", "Materiaal en techniek horen bij de vormkant. Panofsky onderscheidt lagen in de betekenis. Welke?"],
         uitlegPad: {
           stappen: [{ titel: "Drie-stappen-analyse", tekst: "**Erwin Panofsky** (Duitse kunsthistoricus, 1892-1968) ontwikkelde 3-stappen-analyse:\n1. **Pre-iconografisch**: wat zie je letterlijk? (man met zwaard).\n2. **Iconografisch**: betekenissen, symbolen (David verslaat Goliath — bijbelse referentie).\n3. **Iconologisch**: bredere culturele betekenis (politieke identiteit van Renaissance-Florence, kleine stad tegen grotere mogendheden).\n\nExamen-favoriet model voor analyse." }],
           niveaus: { basis: "Pre/icono/icono.", simpeler: "Panofsky = 3 niveaus", nogSimpeler: "Pre/icono/icono." },
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "Welk **museum** heeft *Meisje met de parel*?",
-        options: ["Mauritshuis Den Haag","Louvre","Rijksmuseum","Van Gogh Museum"],
+        options: ["Mauritshuis Den Haag","Louvre Parijs","Rijksmuseum Amsterdam","Van Gogh Museum Amsterdam"],
         answer: 0,
-        wrongHints: [null, "Mona Lisa.", "Nachtwacht.", "Van Gogh-werken."],
+        wrongHints: [null, "In het Louvre hangt de Mona Lisa, maar niet dit schilderij van Vermeer.", "Het Rijksmuseum heeft wel Het melkmeisje van Vermeer, maar dit meisje hangt elders.", "Daar hangt vooral werk van Van Gogh en tijdgenoten. Leefde Vermeer in die tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Vermeer 1665", tekst: "*Meisje met de parel* (Johannes Vermeer, ~1665) hangt in **Mauritshuis Den Haag**. Tronie (karakterstudie, geen specifieke persoon). Soms genoemd 'Mona Lisa van het Noorden'. Cultuur-icoon — boek + film (2003 met Scarlett Johansson)." }],
           niveaus: { basis: "Mauritshuis.", simpeler: "Vermeer = Mauritshuis", nogSimpeler: "Mauritshuis." },
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "**AI-generated art** (DALL-E, Midjourney) controverse over:",
-        options: ["Auteursrecht trainingsdata","Kleur-keuze","Prijs","Spelfouten"],
+        options: ["Auteursrecht op de trainingsdata","Een verbod op het veilen van AI-kunst","Te weinig stijlen om uit te kiezen","Hoge prijs van de abonnementen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "In 2018 werd bij Christie's al AI-kunst geveild. Bestaat zo'n verbod dan? Waarover klagen kunstenaars wel?", "AI kan juist elke stijl nadoen. Waar komt die kennis van stijlen vandaan?", "Een prijs is geen kunstdebat. Wiens werk zit er in de AI verwerkt?"],
         uitlegPad: {
           stappen: [{ titel: "Wie wordt vergoed?", tekst: "**AI-art-controverses 2020s**:\n• Modellen getraind op miljoenen kunstwerken **zonder toestemming** kunstenaars. Rechtszaken (Getty vs Stability AI, Sarah Andersen et al vs Stable Diffusion).\n• **Auteursrecht uitkomst-werk**: VS Copyright Office besloot 2023 dat puur AI-gegenereerd werk **niet auteursrecht-beschermd** is (alleen werken met menselijke creativiteit).\n• **Vermindering werk** voor illustrators + concept-artiesten.\n• **Identiteit-vragen**: is AI-gemanipuleerde 'kunst' gelijkwaardig aan menselijk werk?\n\nEvolutie + jurisprudentie nog onderweg." }],
           niveaus: { basis: "Auteursrecht.", simpeler: "AI-art = auteursrecht", nogSimpeler: "Auteursrecht." },
@@ -268,9 +268,9 @@ const steps = [
     checks: [
       {
         q: "Welk werk is **Pop Art**?",
-        options: ["Campbell's Soup Cans","Mona Lisa","De Schreeuw","Sterrennacht"],
+        options: ["Campbell's Soup Cans","Victory Boogie Woogie","De Schreeuw","Guernica"],
         answer: 0,
-        wrongHints: [null, "Renaissance.", "Expressionisme.", "Post-impressionisme."],
+        wrongHints: [null, "Dit is het laatste werk van Mondriaan (De Stijl): vlakjes en lijnen. Zie je daar beelden uit reclame of de supermarkt?", "De Schreeuw van Munch is expressionisme: angst en emotie, geen beeld uit reclame of strips.", "Picasso schilderde Guernica in 1937 als aanklacht tegen de oorlog. Komt dat uit reclame of strips?"],
         uitlegPad: {
           stappen: [{ titel: "1962 Warhol", tekst: "**Campbell's Soup Cans** (Andy Warhol, 1962): 32 schilderijen, één per soep-variant. **Pop Art**-icoon. Massaproductie-cultuur als kunst. Tegenwoordig: MoMA New York." }],
           niveaus: { basis: "Soup Cans.", simpeler: "Pop = Soup Cans", nogSimpeler: "Soup Cans." },
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "**Sfumato**-techniek wordt geassocieerd met:",
-        options: ["Leonardo da Vinci","Caravaggio","Picasso","Mondriaan"],
+        options: ["Leonardo da Vinci","Caravaggio","Pablo Picasso","Piet Mondriaan"],
         answer: 0,
-        wrongHints: [null, "Niet — chiaroscuro.", "Niet — kubisme.", "Niet — De Stijl."],
+        wrongHints: [null, "Caravaggio staat bekend om harde contrasten. Is sfumato hard of juist zacht?", "Picasso werkte met harde, hoekige vormen. Past zacht vervagen daarbij?", "Mondriaan schilderde strakke lijnen en vlakken. Past zacht vervagen daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Zachte overgangen", tekst: "**Sfumato** (Italiaans 'gerookt'): zachte, geleidelijke overgangen tussen tonen, geen scherpe lijnen. **Leonardo da Vinci** meester: de mysterieuze glimlach van de *Mona Lisa* + het atmosferische landschap zijn sfumato. Andere techniek, andere meester: **chiaroscuro** (sterke licht-donker, Caravaggio + Rembrandt)." }],
           niveaus: { basis: "Leonardo.", simpeler: "Sfumato = Leonardo", nogSimpeler: "Leonardo." },
@@ -288,9 +288,9 @@ const steps = [
       },
       {
         q: "**Bauhaus** was:",
-        options: ["Designschool","Renaissance-paleis","Kerk","Galerij"],
+        options: ["Een Duitse school voor design","Een groep Nederlandse schilders","Een Duits museum voor moderne kunst","Een stijl met rijk versierde gebouwen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet primair."],
+        wrongHints: [null, "Het Bauhaus stond in Weimar en later in Dessau. In welk land liggen die steden?", "Er hing geen vaste collectie. Wat deden de mensen er dan?", "Bauhaus-ontwerpen zijn juist strak en functioneel. Past rijke versiering daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Form follows function", tekst: "**Bauhaus** (1919-1933 Duitsland): designschool die kunst, ambacht + industrie verenigde. **Walter Gropius** oprichter. Filosofie: 'form follows function'. **Docenten**: Kandinsky, Klee, Mies van der Rohe, Marcel Breuer. Nazi's sloten in 1933 — docenten verhuisden naar VS → Amerikaanse moderne architectuur. Invloed: alles om je heen (IKEA, Apple, modernisme)." }],
           niveaus: { basis: "Designschool.", simpeler: "Bauhaus = design", nogSimpeler: "Designschool." },
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "Welk werk verwijst naar de **Spaanse Burgeroorlog**?",
-        options: ["Guernica","Demoiselles d'Avignon","Mona Lisa","Nachtwacht"],
+        options: ["Guernica","Demoiselles d'Avignon","De schreeuw","De vrijheid leidt het volk"],
         answer: 0,
-        wrongHints: [null, "Eerder Picasso-werk, geen oorlog.", "Renaissance.", "NL Gouden Eeuw."],
+        wrongHints: [null, "Picasso schilderde Les Demoiselles d'Avignon al in 1907. Wanneer was de Spaanse Burgeroorlog?", "Munch schilderde De schreeuw in 1893, over angst. Wanneer was de Spaanse Burgeroorlog?", "Delacroix schilderde dit doek over de Franse Julirevolutie van 1830. Gaat het dan over Spanje?"],
         uitlegPad: {
           stappen: [{ titel: "Anti-oorlogs-meesterwerk", tekst: "**Guernica** (Pablo Picasso, 1937): groot zwart-wit-grijs werk (3,5m × 7,8m) na **bombardement Baskische stad Guernica** door Duitse + Italiaanse vliegtuigen in opdracht Franco (26 april 1937). Toont chaos, paard, stier, lijden moeders + kinderen. Hangt in Museo Reina Sofia Madrid. **Picasso weigerde 'm aan Spanje te leveren** zolang Franco leefde — kwam pas 1981 naar Spanje na herstel democratie." }],
           niveaus: { basis: "Guernica.", simpeler: "Picasso oorlog = Guernica", nogSimpeler: "Guernica." },
@@ -308,9 +308,9 @@ const steps = [
       },
       {
         q: "Bij **kunstanalyse** kijk je naar:",
-        options: ["Vorm + inhoud + context","Alleen vorm","Alleen prijs","Alleen jaartal"],
+        options: ["Vorm + inhoud + context","Vorm + techniek + materiaal","Inhoud + mening + prijs","Kunstenaar + jaartal + titel"],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Niet kunst-relevant.", "Niet voldoende."],
+        wrongHints: [null, "Dat is allemaal de vormkant. Wat stelt het werk voor, en in welke tijd is het gemaakt?", "Een mening is een oordeel en een prijs zegt niets over het werk. Waar kijk je verder naar?", "Dat staat op het bordje naast het werk. Kijk je daarmee al naar het werk zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Drie hoeken", tekst: "**Goede kunstanalyse**:\n• **Vorm** (compositie, kleur, lijn, materiaal).\n• **Inhoud** (wat zien we + iconografie + symbolen + thema).\n• **Context** (wanneer, waar, voor wie, hoe ontvangen).\n\nVergelijk met de **3 niveaus van Panofsky**: pre-iconografisch / iconografisch / iconologisch.\n\nGoede analyse combineert alle drie — niet alleen 'mooie kleuren' maar ook 'waarom toen + voor wie + welke betekenis'." }],
           niveaus: { basis: "Vorm/inhoud/context.", simpeler: "Analyse = 3 hoeken", nogSimpeler: "Vorm/inhoud/context." },

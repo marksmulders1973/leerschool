@@ -33,7 +33,7 @@ const steps = [
         q: "Welke Verlichter maakte **'Sapere aude' (Durf te denken)** tot motto van de Verlichting?",
         options: ["Kant","Voltaire","Rousseau","Locke"],
         answer: 0,
-        wrongHints: [null, "Niet — andere bijdragen.", "Niet — *volonté générale*.", "Eerder, empirisme."],
+        wrongHints: [null, "Voltaire is bekend van zijn spot en zijn strijd voor tolerantie. Wie schreef het Duitse essay 'Wat is Verlichting?'", "Rousseau schreef vooral over opvoeding en de wil van het volk.", "Locke leefde een eeuw eerder. Het motto komt uit een Duits essay uit 1784."],
         uitlegPad: {
           stappen: [{ titel: "Kant 1784", tekst: "**Immanuel Kant** in *Was ist Aufklärung?* (1784): 'Sapere aude!' = 'Durf te denken!'. Verlichting = uitkomen uit onmondigheid + zelf nadenken. Kernzin van hele beweging." }],
           niveaus: { basis: "Kant.", simpeler: "Sapere aude = Kant", nogSimpeler: "Kant" },
@@ -41,9 +41,9 @@ const steps = [
       },
       {
         q: "**Montesquieu's** bijdrage aan staatsleer:",
-        options: ["Trias politica", "Vrije markt", "Communisme", "Volonté générale"],
+        options: ["Trias politica", "Vrije markt", "Natuurrechten", "Volonté générale"],
         answer: 0,
-        wrongHints: [null, "Adam Smith.", "Niet relevant (later).", "Dat is Rousseau."],
+        wrongHints: [null, "De vrije markt is het idee van econoom Adam Smith.", "Natuurrechten (leven, vrijheid, bezit) komen van een Engelse denker, niet van Montesquieu.", "De 'algemene wil' is het idee van een andere Franse denker. Wat schreef Montesquieu over de macht in een staat?"],
         uitlegPad: {
           stappen: [{ titel: "De l'esprit des lois 1748", tekst: "**Montesquieu** in *De geest van de wetten* (1748): trias politica — scheiding van **wetgevende, uitvoerende, rechterlijke** macht voorkomt tirannie. Inspireerde Amerikaanse Grondwet 1787 + Franse 1791." }],
           niveaus: { basis: "Trias politica.", simpeler: "Montesquieu = scheiding", nogSimpeler: "Trias politica." },
@@ -51,9 +51,9 @@ const steps = [
       },
       {
         q: "*Encyclopédie* werd geredigeerd door:",
-        options: ["Diderot + d'Alembert","Voltaire alleen","Rousseau","Newton"],
+        options: ["Diderot + d'Alembert","Voltaire + Rousseau","Montesquieu + Locke","Newton + Leibniz"],
         answer: 0,
-        wrongHints: [null, "Heeft niet geleid.", "Niet hoofdredacteur.", "Eerder, wetenschap."],
+        wrongHints: [null, "Ze schreven wel stukken, maar leidden het werk niet.", "Locke was al dood toen het werk begon (1751).", "Wetenschappers van eerder, geen redacteuren van dit Franse werk."],
         uitlegPad: {
           stappen: [{ titel: "Kennis-monument", tekst: "**Encyclopédie** (1751-1772): 28 delen, 70.000 artikelen, 140 auteurs. Hoofdredacteuren **Denis Diderot** + **Jean d'Alembert**. Doel: alle menselijke kennis verzamelen + toegankelijk. Gecensureerd door kerk + koning. Symbool Verlichting." }],
           niveaus: { basis: "Diderot.", simpeler: "Encyc. = Diderot", nogSimpeler: "Diderot" },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Welk land was **verlicht despotisme** voorbeeld?",
-        options: ["Pruisen onder Frederik II","Frankrijk onder Lodewijk XIV","NL onder Willem III","Engeland"],
+        options: ["Pruisen onder Frederik II", "Frankrijk onder Lodewijk XIV", "Spanje onder Filips II", "Engeland onder George III"],
         answer: 0,
-        wrongHints: [null, "Te vroeg — geen Verlichting.", "Anders republiek.", "Anders parlementaire monarchie."],
+        wrongHints: [null, "Lodewijk XIV was een absolute vorst, maar regeerde vóór de Verlichting en hervormde niet in verlichte geest.", "Filips II leefde ver vóór de Verlichting en regeerde vanuit geloofsijver.", "In Engeland beperkte het parlement de koning. Is dat despotisme?"],
         uitlegPad: {
           stappen: [{ titel: "Frederik 'De Grote'", tekst: "**Frederik II van Pruisen** (1740-1786): correspondeerde met Voltaire, hervormde rechtspraak + onderwijs, religieuze tolerantie — maar bleef **absolute monarch**. 'Verlicht despotisme' = top-down hervormingen zonder volkmacht." }],
           theorie: "Andere voorbeelden: Jozef II Habsburg, Catharina II Rusland. Anders dan echte democratie (zoals NL-tendens jaren 1780 of post-revolutie FR).",
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "**Wollstonecraft** schreef over:",
-        options: ["Rechten van de vrouw", "Rechten van de man", "Rechten van de werkman", "Rechten van de koning"],
+        options: ["Rechten van de vrouw", "Afschaffing slavernij", "Rechten van het kind", "Godsdienstvrijheid"],
         answer: 0,
-        wrongHints: [null, "Niet — al elders behandeld.", "Te vroeg.", "Tegenovergestelde."],
+        wrongHints: [null, "Daar streden anderen voor, zoals Wilberforce. Over welke groep ging haar beroemdste boek?", "Kinderrechten werden pas in de 20e eeuw echt vastgelegd.", "Over verdraagzaamheid in geloof schreef vooral Voltaire."],
         uitlegPad: {
           stappen: [{ titel: "Vroege feminisme", tekst: "**Mary Wollstonecraft** in *A Vindication of the Rights of Woman* (1792): vrouwen verdienen onderwijs + politieke rechten. Eén van eerste systematische feministische teksten. Onderdeel van het debat rond Thomas Paines *Rights of Man* (1791). Moeder van Mary Shelley." }],
           niveaus: { basis: "Vrouwen.", simpeler: "Wollst. = vrouwen-rechten", nogSimpeler: "Vrouwenrechten." },
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer **Onafhankelijkheidsverklaring** VS?",
-        options: ["4 juli 1776","14 juli 1789","1492","1865"],
+        options: ["4 juli 1776", "14 juli 1789", "3 september 1783", "17 september 1787"],
         answer: 0,
-        wrongHints: [null, "Niet — Franse Bestorming Bastille.", "Niet — Columbus.", "Niet — einde Burgeroorlog."],
+        wrongHints: [null, "In juli 1789 begon een andere revolutie, in Europa.", "In 1783 erkende Engeland bij de Vrede van Parijs de VS. Hadden de kolonies zichzelf toen al vrij verklaard?", "Op die dag werd de Amerikaanse grondwet getekend, na de oorlog. Wanneer verklaarden de kolonies zich vrij?"],
         uitlegPad: {
           stappen: [{ titel: "Independence Day", tekst: "**4 juli 1776**: Continentaal Congres in Philadelphia neemt Onafhankelijkheidsverklaring aan, geschreven door **Thomas Jefferson**. Nog steeds nationale feestdag VS (4th of July)." }],
           niveaus: { basis: "4 juli 1776.", simpeler: "4-7-1776", nogSimpeler: "1776" },
@@ -103,7 +103,7 @@ const steps = [
         q: "Wie schreef de **Onafhankelijkheidsverklaring**?",
         options: ["Thomas Jefferson","George Washington","Benjamin Franklin","John Adams"],
         answer: 0,
-        wrongHints: [null, "Niet — opperbevelhebber.", "Niet — diplomaat.", "Niet — niet hoofdauteur."],
+        wrongHints: [null, "Washington leidde het leger. Wie was de jonge schrijver uit Virginia?", "Franklin zat in het comité en las de tekst na, maar wie schreef het grootste deel?", "Adams zat ook in het comité, maar liet het schrijven aan een ander over."],
         uitlegPad: {
           stappen: [{ titel: "Jefferson auteur", tekst: "**Thomas Jefferson** (1743-1826) schreef de Onafhankelijkheidsverklaring (met aanpassingen door Franklin + Adams). Later 3e president (1801-1809). Geïnspireerd door Locke. Hypocriet: had zelf slaven." }],
           niveaus: { basis: "Jefferson.", simpeler: "Jefferson = onafh.verkl.", nogSimpeler: "Jefferson." },
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "Slagzin **'No taxation without representation'** betekent:",
-        options: ["Geen belasting zonder vertegenwoordiging in parlement","Iedereen mag stemmen","Geen oorlog","Geen koningen"],
+        options: ["Geen belasting zonder vertegenwoordiging in parlement","Iedere kolonist mag stemmen voor het parlement","Lagere belasting voor de armere kolonisten","Geen soldaten zonder toestemming van kolonisten"],
         answer: 0,
-        wrongHints: [null, "Niet specifiek dat.", "Niet — geen verband.", "Wel context maar specifieker."],
+        wrongHints: [null, "Dat eisten ze niet: ook in Engeland zelf mocht lang niet iedereen stemmen.", "De klacht ging niet over de hoogte van de belasting.", "Soldaten inkwartieren was ook een klacht, maar 'taxation' gaat over iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Kerngrief koloniën", tekst: "**'No taxation without representation'** = Britse koloniën weigerden belasting te betalen omdat ze geen vertegenwoordigers in Brits parlement (Westminster) hadden. Fundamenteel democratie-principe. Modernisering: belastingplicht ↔ stemrecht." }],
           niveaus: { basis: "Geen belasting zonder vertegenwoordiging.", simpeler: "Belasting betalen = meebeslissen", nogSimpeler: "Geen inspraak, geen belasting." },
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Welk land **steunde de koloniën** tegen Engeland?",
-        options: ["Frankrijk","Pruisen","Rusland","Italië"],
+        options: ["Frankrijk", "Pruisen", "Rusland", "Oostenrijk"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Bestond nog niet als verenigd land."],
+        wrongHints: [null, "Pruisen vocht niet mee in deze oorlog.", "Rusland bleef neutraal in deze oorlog.", "Oostenrijk bemoeide zich niet met de oorlog in Amerika. Welke oude rivaal van Engeland stuurde schepen en soldaten?"],
         uitlegPad: {
           stappen: [{ titel: "Erfvijand-strategie", tekst: "**Frankrijk** steunde koloniën met leger + vloot, vooral na Slag bij Saratoga 1777. Reden: revanche op aartsvijand Engeland (na 7-jarige oorlog 1763-verlies Canada). Markies de la Fayette uit FR vocht mee. Frans-Amerikaanse alliantie kostte Frankrijk veel geld — droeg bij aan eigen revolutie 1789!" }],
           theorie: "Toets-patroon: ironie — Frankrijk hielp Amerikanen tegen monarchie, droeg bij aan eigen monarchie-val.",
@@ -132,9 +132,9 @@ const steps = [
       },
       {
         q: "Wat is **hypocrisie** in Onafhankelijkheidsverklaring?",
-        options: ["Gelijkheid beloofd, slavernij bleef", "Geen gelijkheid beloofd", "Geen leger opgericht", "Geen koloniën genoemd"],
+        options: ["Gelijkheid beloofd, slavernij bleef", "Vrijheid beloofd, Engelse koning bleef", "Geloofsvrijheid beloofd, staatskerk bleef", "Lagere belasting beloofd, belasting steeg"],
         answer: 0,
-        wrongHints: [null, "Er werd juist wél gelijkheid beloofd.", "Er was wel een leger.", "Niet relevant."],
+        wrongHints: [null, "De Engelse koning werd juist afgezworen.", "De VS kregen juist géén staatskerk.", "Over de hoogte van belasting ging de verklaring niet."],
         uitlegPad: {
           stappen: [{ titel: "Slavernij + inheemsen", tekst: "Onafhankelijkheidsverklaring zegt **'all men are created equal'** — maar **slavernij** bleef bestaan tot 1865 (Amerikaanse Burgeroorlog + 13e Amendement), **inheemse Amerikanen** kregen geen burgerrechten tot 1924, vrouwen geen stemrecht tot 1920. 'Alle mensen' = praktisch alleen witte, mannelijke, bezittende protestanten." }],
           theorie: "Toets-favoriet: hypocrisie-onderwerp. Belangrijk om gelijktijdig ideaal én praktijk te zien.",
@@ -164,7 +164,7 @@ const steps = [
         q: "Hoeveel **standen** in ancien régime?",
         options: ["Drie","Twee","Vier","Acht"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."],
+        wrongHints: [null, "Je mist een groep: wie bad, wie vocht en wie werkte?", "Kun je vier groepen noemen? Denk aan wie bad, wie vocht en wie werkte.", "Zo veel waren het er niet — denk aan wie bad, wie vocht en wie werkte."],
         uitlegPad: {
           stappen: [{ titel: "Drie standen", tekst: "Ancien régime: **drie standen**.\n• 1e stand: geestelijkheid (~1%).\n• 2e stand: adel (~2%, privileges).\n• 3e stand: rest (~97%): burgerij, boeren, arbeiders.\n\n3e stand droeg belasting, 1e + 2e niet. Onrechtvaardig gevonden — een van oorzaken Revolutie." }],
           niveaus: { basis: "3.", simpeler: "3 standen", nogSimpeler: "3" },
@@ -174,7 +174,7 @@ const steps = [
         q: "Wie leidde het **Schrikbewind (Terreur)** 1793-94?",
         options: ["Robespierre","Napoleon","Lodewijk XVI","Marie Antoinette"],
         answer: 0,
-        wrongHints: [null, "Niet — kwam later.", "Niet — was zelf slachtoffer.", "Niet — zelf onthoofd."],
+        wrongHints: [null, "Napoleon was in 1793-94 nog een jonge officier in het leger.", "Lodewijk XVI werd in januari 1793 zelf onthoofd.", "Marie Antoinette was zelf een van de slachtoffers van de guillotine."],
         uitlegPad: {
           stappen: [{ titel: "Idealist + dictator", tekst: "**Maximilien Robespierre** leidde het Comité van Openbaar Welzijn 1793-94. **Schrikbewind**: duizenden geëxecuteerd om revolutie te beschermen. Idealist + extreem. Zelf onthoofd op 28 juli 1794 (10 Thermidor) — einde Terreur." }],
           niveaus: { basis: "Robespierre.", simpeler: "Terreur = Robespierre", nogSimpeler: "Robespierre." },
@@ -182,9 +182,9 @@ const steps = [
       },
       {
         q: "**Verklaring Rechten Mens** (aug 1789) afkomstig uit invloed van:",
-        options: ["Verlichting + Amerikaans voorbeeld","Bijbel","Egyptische beschaving","Romeinse keizers"],
+        options: ["Verlichting + Amerikaans voorbeeld", "Code Napoléon + Romeins recht", "Renaissance + Italiaanse stadstaten", "Absolutisme + Lodewijk XIV"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "De Code Napoléon kwam pas in 1804, vijftien jaar later. Welke ideeën lagen er in 1789 al klaar?", "De renaissance lag eeuwen eerder en ging vooral over kunst en de oudheid. Welke 18e-eeuwse denkers schreven over rechten van de mens?", "Tegen het absolutisme kwam de revolutie juist in verzet. Waar haalden de revolutionairen hun ideeën dan vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Locke/Montesquieu/Jefferson", tekst: "Verklaring Rechten Mens (aug 1789) is duidelijk **product van Verlichting** (Locke's natuurrechten, Montesquieu's machtsscheiding, Rousseau's volonté générale) + **Amerikaans voorbeeld** (1776 + Amerikaanse staatsgrondwetten). Universele mensenrechten — Olympe de Gouges schreef tegelijk versie voor vrouwen 1791." }],
           niveaus: { basis: "Verlichting + VS.", simpeler: "Verlichting+VS", nogSimpeler: "Verlichting." },
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat is het **motto** van Franse Republiek tot vandaag?",
-        options: ["Liberté, égalité, fraternité","Sapere aude","E pluribus unum","Deus vult"],
+        options: ["Liberté, égalité, fraternité","Travail, famille, patrie","E pluribus unum","Unité, travail, progrès"],
         answer: 0,
-        wrongHints: [null, "Niet — Kant/Verlichting algemeen.", "Niet — VS-motto.", "Niet — kruistocht-leuze."],
+        wrongHints: [null, "Dat was het motto van het Vichy-regime in WO2, niet van de Republiek.", "Dat is het motto van de VS.", "Dat is het motto van Tsjaad, een vroegere Franse kolonie."],
         uitlegPad: {
           stappen: [{ titel: "Vrijheid-gelijkheid-broederschap", tekst: "**Liberté, égalité, fraternité** = motto Frankrijk sinds Franse Revolutie. Staat op gemeentehuizen, scholen, munten. Symboliseert idealen Revolutie. Gebruikt door alle republikeinse regimes." }],
           niveaus: { basis: "Liberté, égalité, fraternité.", simpeler: "Frans motto = vrijheid, gelijkheid, broederschap", nogSimpeler: "Vrijheid, gelijkheid, broederschap." },
@@ -211,9 +211,9 @@ const steps = [
     checks: [
       {
         q: "Welke gebeurtenis bracht **Napoleon aan macht**?",
-        options: ["Staatsgreep 18 Brumaire 1799","Bestorming Bastille","Slag bij Waterloo","Geboorte op Corsica"],
+        options: ["Staatsgreep 18 Brumaire 1799", "Bestorming van de Bastille 1789", "Nederlaag bij Leipzig in 1813", "Kroning tot keizer in 1804"],
         answer: 0,
-        wrongHints: [null, "Niet — Revolutie-begin.", "Niet — einde Napoleon.", "Begin leven, niet macht."],
+        wrongHints: [null, "Dat was het begin van de Revolutie.", "Leipzig was een zware nederlaag: eerder het begin van zijn einde.", "Keizer werd hij pas toen hij al aan de macht was."],
         uitlegPad: {
           stappen: [{ titel: "9 november 1799", tekst: "**18 Brumaire (jaar 8)** = 9 november 1799. Napoleon pleegt staatsgreep tegen Directoire. Wordt 'Eerste Consul', begin Consulaat. 1804 wordt hij keizer." }],
           niveaus: { basis: "18 Brumaire 1799.", simpeler: "1799 staatsgreep", nogSimpeler: "1799" },
@@ -221,9 +221,9 @@ const steps = [
       },
       {
         q: "Wanneer **Slag bij Waterloo**?",
-        options: ["18 juni 1815","14 juli 1789","1776","1648"],
+        options: ["18 juni 1815", "2 december 1805", "14 september 1812", "1 maart 1815"],
         answer: 0,
-        wrongHints: [null, "Niet — Bastille.", "Niet — VS.", "Niet — vrede Münster (NL onafh.)."],
+        wrongHints: [null, "Op 2 december 1805 won Napoleon juist bij Austerlitz.", "In september 1812 trok Napoleon Moskou binnen. Daarna volgde nog een lange terugtocht.", "Op 1 maart 1815 landde Napoleon na zijn ontsnapping van Elba. Hoe lang duurde zijn terugkeer, de 'Honderd Dagen'?"],
         uitlegPad: {
           stappen: [{ titel: "Eindslag Napoleon", tekst: "**18 juni 1815, Waterloo** (België, dichtbij Brussel). Britse generaal **Wellington** + Pruisische **Blücher** verslaan Napoleon definitief. Napoleon naar Sint-Helena, sterft daar 1821." }],
           theorie: "ABBA-lied 'Waterloo' refereert aan deze slag (waterloo = nederlaag).",
@@ -232,9 +232,9 @@ const steps = [
       },
       {
         q: "Wat is **Code Napoléon (1804)**?",
-        options: ["Burgerlijk wetboek", "Kledingcode voor het leger", "Kookboek van het hof", "Geheime legercode"],
+        options: ["Burgerlijk wetboek", "Grondwet van Frankrijk", "Verdrag met de paus", "Nieuwe belastingwet"],
         answer: 0,
-        wrongHints: [null, "'Code' betekent hier geen kledingvoorschrift maar een verzameling regels — waar zou een keizer regels voor opstellen?", "Het is geen kookrecept; denk aan iets juridisch dat Napoleon in heel Europa invoerde.", "Geen geheimschrift — denk aan iets op papier dat de rechten van burgers vastlegde."],
+        wrongHints: [null, "Een grondwet regelt hoe de staat bestuurd wordt. Ging deze code over de staat, of over het dagelijks leven van burgers?", "Met de paus sloot Napoleon in 1801 een concordaat, geen wetboek.", "Belastingen regelde Napoleon apart. Wat legde deze code vast over eigendom, huwelijk en erfenis?"],
         uitlegPad: {
           stappen: [{ titel: "Burgerlijk recht", tekst: "**Code Napoléon (1804)** = burgerlijk wetboek. Verspreidde Verlichtings-principes: **gelijkheid voor de wet**, vrijheid van religie, eigendom, scheiding kerk-staat, burgerlijk huwelijk. Invloed in NL, BE, IT, DE, Latijns-Amerika. NL-BW 1838 daarop gebaseerd." }],
           niveaus: { basis: "Burgerlijk wetboek.", simpeler: "Code Napol = BW", nogSimpeler: "BW" },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "Napoleon verloor **Russische veldtocht 1812** vooral door:",
-        options: ["Winter + 'verschroeide aarde' tactiek", "Verraad", "Britse vloot", "Ziekte alleen"],
+        options: ["Strenge winter + verschroeide aarde", "Verraad van generaals + te weinig soldaten", "Britse vloot + Pruisische tegenaanval", "Opstand in Parijs + gebrek aan geld"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "De Britse vloot kon niet tot diep in Rusland komen — wat hield Napoleon op het land tegen?", "Speelde rol maar niet primair."],
+        wrongHints: [null, "Napoleon trok met ruim 600.000 man op en zijn generaals bleven trouw. Waardoor kwamen er zo weinig soldaten terug?", "De Britse vloot kwam niet diep in Rusland, en Pruisen vocht in 1812 nog mee aan Napoleons kant. Wat hield hem op het land tegen?", "In Parijs mislukte een staatsgreep, en geld was niet het probleem. Wat ging er in Rusland zelf mis?"],
         uitlegPad: {
           stappen: [{ titel: "Russische strategie + winter", tekst: "**1812**: Napoleon valt Rusland binnen met 600.000 man. Russen ontwijken slag, branden eigen oogst + dorpen ('verschroeide aarde') zodat Frans leger geen voedsel kan vinden. Moskou bereikt maar in vlammen. Terugtocht in winter: vrieskou + honger + Russen-aanvallen. **Slechts ~30.000 keren terug**. Catastrofe." }],
           theorie: "Lessen herhaald: Hitler-invasie RU 1941-43 = vergelijkbaar mislukt om vergelijkbare redenen.",
@@ -253,7 +253,7 @@ const steps = [
       },
       {
         q: "Wat besliste **Congres van Wenen 1814-15** voor NL?",
-        options: ["Verenigd Koninkrijk der Nederlanden", "Ingelijfd bij Pruisen", "Bij Frankrijk", "Republiek Holland"],
+        options: ["Verenigd Koninkrijk der Nederlanden", "Ingelijfd bij het koninkrijk Pruisen", "Opnieuw ingelijfd bij Frankrijk", "Herstel van de oude Republiek"],
         answer: 0,
         wrongHints: [null, "Niet — Pruisen kreeg wel gebied in het Rijnland, maar Nederland niet.", "Niet — Napoleon-tijdperk afgelopen.", "Niet — de tijd van de Republiek kwam niet terug."],
         uitlegPad: {
@@ -273,9 +273,9 @@ const steps = [
     checks: [
       {
         q: "Welke Verlichter beïnvloedde **Onafhankelijkheidsverklaring VS** vooral?",
-        options: ["John Locke", "Voltaire alleen", "Rousseau alleen", "Newton"],
+        options: ["John Locke", "Voltaire", "Rousseau", "Immanuel Kant"],
         answer: 0,
-        wrongHints: [null, "Speelde wel rol, niet primair.", "Vooral later in Frankrijk belangrijk.", "Wetenschap, niet politiek."],
+        wrongHints: [null, "Voltaire streed vooral tegen de macht van de kerk. Wie schreef over natuurrechten van ieder mens?", "Rousseau werd vooral later in de Franse Revolutie belangrijk.", "Kant schreef in het Duits, en zijn bekendste werken kwamen pas na 1776."],
         uitlegPad: {
           stappen: [{ titel: "Locke + Jefferson", tekst: "**Locke's natuurrechten** (leven, vrijheid, eigendom) → Jefferson maakt ervan 'life, liberty, pursuit of happiness' in Onafhankelijkheidsverklaring. Locke's recht op opstand bij tirannie ook centraal. Montesquieu beïnvloedde latere Grondwet 1787." }],
           niveaus: { basis: "Locke.", simpeler: "VS = Locke", nogSimpeler: "Locke" },
@@ -285,7 +285,7 @@ const steps = [
         q: "Welke Verlichter schreef *Du contrat social*?",
         options: ["Rousseau","Voltaire","Locke","Kant"],
         answer: 0,
-        wrongHints: [null, "Niet — andere werken.", "Niet — *Two Treatises*.", "Niet — *Kritiek*."],
+        wrongHints: [null, "Voltaire schreef vooral spotverhalen, zoals 'Candide'.", "Locke schreef in het Engels: 'Two Treatises of Government'.", "Kant schreef in het Duits, zoals de 'Kritiek van de zuivere rede'."],
         uitlegPad: {
           stappen: [{ titel: "Rousseau 1762", tekst: "**Jean-Jacques Rousseau** (1712-1778): *Du contrat social* (1762). Beroemde opening: 'De mens is vrij geboren maar overal in ketenen'. Idee algemene wil → inspirator Franse Revolutie." }],
           niveaus: { basis: "Rousseau.", simpeler: "Contrat social = Rousseau", nogSimpeler: "Rousseau." },
@@ -293,9 +293,9 @@ const steps = [
       },
       {
         q: "Welk **document** is uit 1776?",
-        options: ["Amerikaanse Onafhankelijkheidsverklaring","Verklaring Rechten Mens (FR)","Code Napoléon","Magna Carta"],
+        options: ["Amerikaanse Onafhankelijkheidsverklaring","Franse Verklaring van de Rechten van de Mens","Code Napoléon (Frans wetboek)","Magna Carta van de Engelse koning"],
         answer: 0,
-        wrongHints: [null, "1789.", "1804.", "1215."],
+        wrongHints: [null, "De Franse verklaring kwam pas in 1789, dertien jaar later.", "Het Franse wetboek van Napoleon is van 1804.", "De Magna Carta is uit 1215, middeleeuws."],
         uitlegPad: {
           stappen: [{ titel: "1776 = VS", tekst: "**4 juli 1776**: Amerikaanse Onafhankelijkheidsverklaring. Verklaring Rechten Mens (FR): **augustus 1789**. Code Napoléon: 1804. Magna Carta (UK): 1215." }],
           niveaus: { basis: "1776 = VS.", simpeler: "1776 = VS-onafh.", nogSimpeler: "1776" },
@@ -305,7 +305,7 @@ const steps = [
         q: "**Trias politica** afkomstig van:",
         options: ["Montesquieu","Rousseau","Voltaire","Adam Smith"],
         answer: 0,
-        wrongHints: [null, "Niet — *volonté générale*.", "Niet — tolerantie.", "Niet — economie."],
+        wrongHints: [null, "Rousseau schreef over de algemene wil van het volk, niet over het scheiden van machten.", "Voltaire schreef vooral over tolerantie.", "Adam Smith schreef over economie en de vrije markt."],
         uitlegPad: {
           stappen: [{ titel: "1748 De l'esprit des lois", tekst: "**Montesquieu** in *De geest van de wetten* (1748): trias politica = scheiding wetgevende / uitvoerende / rechterlijke macht. Voorkomt tirannie. Basis moderne grondwetten." }],
           niveaus: { basis: "Montesquieu.", simpeler: "Trias = Montesq.", nogSimpeler: "Montesquieu." },
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "Wat is een **paradox** Verlichting + revoluties?",
-        options: ["Gelijkheid beloofd, maar slavernij bleef", "Iedereen kreeg direct stemrecht", "Revoluties slaagden volledig", "Kerk kreeg meer macht"],
+        options: ["Gelijkheid beloofd, maar slavernij bleef", "Volksmacht beloofd, maar de paus bleef baas", "Geloofsvrijheid beloofd, maar staatskerk bleef", "Vrije handel beloofd, maar de gilden bleven"],
         answer: 0,
-        wrongHints: [null, "Was dat maar zo — wie mochten er níét stemmen?", "Niet — onafgemaakt.", "Niet — de Verlichting was juist kritisch op de kerk."],
+        wrongHints: [null, "De paus had in Frankrijk en Amerika geen politieke macht.", "In de VS kwam juist geen staatskerk, en in Frankrijk verloor de kerk macht.", "De gilden werden in Frankrijk juist afgeschaft (1791)."],
         uitlegPad: {
           stappen: [{ titel: "Onafgewerkte revolutie", tekst: "**Paradox**: Verlichtingsidealen 'alle mensen gelijk' werden geproclameerd, maar **slavernij bleef** in VS (tot 1865) + FR-koloniën (terug onder Napoleon 1802), **vrouwen kregen geen stemrecht**, **inheemse Amerikanen + kolonisaties** werden niet als gelijken behandeld. Postkoloniale kritiek: Verlichting was westers + mannelijk + bezittend, sloot anderen uit." }],
           theorie: "Toets-favoriet: ideaal vs praktijk evalueren. Belangrijk te zien dat strijd doorging in 19e + 20e eeuw (vrouwenkiesrecht 1919 NL, dekolonisatie 20e eeuw, civil rights 1960s VS).",

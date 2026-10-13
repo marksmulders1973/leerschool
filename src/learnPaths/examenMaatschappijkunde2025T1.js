@@ -17,7 +17,7 @@ const tekst11 = {
 const tekst14 = {
   titel: "T14 — Minister Weerwind bezoekt 'vadervleugel' gevangenis Veenhuizen",
   body:
-    "Demissionair minister voor Rechtsbescherming Franc Weerwind heeft een werkbezoek gebracht aan gevangenis Veenhuizen. Weerwind ging in gesprek met twee gedetineerden die op de **vadervleugel** verblijven. Op deze afdeling is plek voor 23 gemotiveerde gedetineerden die vader zijn en tijdens hun detentie in staat worden gesteld om de band met hun kinderen te onderhouden via extra bezoek-uren, ouder-cursussen en gezamenlijk koken. Doel: bij vrijlating een hechte gezinsband + lagere recidive.",
+    "Demissionair minister voor Rechtsbescherming Franc Weerwind heeft een werkbezoek gebracht aan gevangenis Veenhuizen. Weerwind ging in gesprek met twee gedetineerden die op de **vadervleugel** verblijven. Op deze afdeling is plek voor 23 gemotiveerde gedetineerden die vader zijn en tijdens hun detentie in staat worden gesteld om de band met hun kinderen te onderhouden via extra bezoek-uren, ouder-cursussen en gezamenlijk koken.",
 };
 
 const tekst17 = {
@@ -118,7 +118,7 @@ const steps = [
         "neutraliseringstheorie",
       ],
       answer: 1,
-      wrongHints: ["Anomie = normloze samenleving (Durkheim). Geen direct verband met FAMILIEbanden.", null, "Etikettering = 'eens een dief = altijd een dief'-stempel. Vadervleugel doet juist het OMGEKEERDE.", "Neutralisering = goedpraten van eigen criminaliteit ('ik moest wel'). Geen verband met familie."],
+      wrongHints: ["Anomie = een samenleving zonder duidelijke normen (Durkheim). Probeert de vadervleugel dat op te lossen?", null, "Etikettering = 'eens een dief, altijd een dief'-stempel. Wat probeert de vadervleugel te bereiken bij de gedetineerden?", "Neutralisering = goedpraten van eigen criminaliteit ('ik moest wel'). Gaat de vadervleugel over smoesjes van daders?"],
       explanation: "**Bindingstheorie** (Hirschi): wie sterke BANDEN heeft met familie/werk/school/maatschappij komt minder snel in de criminaliteit. Vadervleugel versterkt vader-kind-band → minder recidive.",
       examenBron: BRON_LABEL(22),
       bronLink: BRON_LINK,
@@ -177,7 +177,7 @@ const steps = [
         "het slachtoffer",
       ],
       answer: 1,
-      wrongHints: ["Advocaat = verdedigt de VERDACHTE. Leest niet de aanklacht voor — die is gericht tegen zijn cliënt.", null, "Rechter = LEIDT de zitting + spreekt het vonnis. Wie treedt in de rechtszaal op als aanklager namens de staat?", "Slachtoffer = mag wel verklaring afleggen, maar leest niet de officiële aanklacht voor."],
+      wrongHints: ["Advocaat = verdedigt de VERDACHTE. Leest niet de aanklacht voor — die is gericht tegen zijn cliënt.", null, "Rechter = LEIDT de zitting + spreekt het vonnis. Past het voorlezen van een beschuldiging bij iemand die neutraal moet blijven?", "Slachtoffer = mag wel verklaring afleggen, maar leest niet de officiële aanklacht voor."],
       explanation: "**Officier van justitie** (OvJ) is de aanklager namens de staat. Leest TENLASTELEGGING voor (= 'u wordt verdacht van...') aan begin van rechtszitting. Later in zitting volgt zijn REQUISITOIR met strafeis.",
       examenBron: BRON_LABEL(33),
       bronLink: BRON_LINK,
@@ -205,7 +205,7 @@ const steps = [
         "de injectienaaldtheorie",
       ],
       answer: 1,
-      wrongHints: ["Agendatheorie = media bepalen WAAR mensen over praten (welke onderwerpen) — niet hoe ze het inkaderen.", null, "Injectienaaldtheorie = media-boodschap wordt direct 'ingespoten' (oude/onhoudbare theorie). Past niet bij subtiele framing."],
+      wrongHints: ["Agendatheorie = media bepalen WAAR mensen over praten (welke onderwerpen). Gaat het hier om welk onderwerp, of om hoe het getoond wordt?", null, "Injectienaaldtheorie = de media-boodschap wordt direct 'ingespoten' en iedereen neemt die over. Gaat het hier om dat effect, of om de invalshoek van de influencer?"],
       explanation: "**Framingtheorie**: media kiezen een INVALSHOEK (frame) waardoor publiek het onderwerp op die manier ziet. Vapen als 'cool' framen = positief frame. AGENDA-theorie = media bepalen WAAR over wordt gesproken (niet HOE). INJECTIENAALD = ouder model, direct effect (achterhaald).",
       examenBron: BRON_LABEL(40),
       bronLink: BRON_LINK,

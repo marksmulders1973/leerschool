@@ -34,7 +34,7 @@ const steps = [
         q: "Welke tekstsoort heeft als doel **lezer overtuigen** van eigen standpunt?",
         options: ["Betoog","Beschouwing","Uiteenzetting","Verhaal"],
         answer: 0,
-        wrongHints: [null, "Niet — die weegt af.", "Niet — die informeert.", "Niet — die vermaakt."],
+        wrongHints: [null, "Een beschouwing zet verschillende kanten naast elkaar en weegt ze af. Probeert die de lezer van één standpunt te overtuigen?", "Een uiteenzetting legt neutraal uit hoe iets zit. Kiest die schrijver een kant?", "Een verhaal wil vooral boeien of vermaken. Welke tekstsoort draait om een eigen standpunt?"],
         uitlegPad: {
           stappen: [{ titel: "Betoog = overtuigen", tekst: "**Betoog** = persuasieve tekst met **duidelijke mening** van schrijver + argumenten om lezer over te halen. 'Ik vind dat...' is signaal." }],
           theorie: "Tekst-doelen-cluster: betoog/beschouwing/uiteenzetting + soms beschrijving (literatuur) + activering (reclame).",
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Een **beschouwing** kenmerkt zich door:",
-        options: ["Voor- en tegenargumenten afwegen","Eén duidelijke mening","Alleen feiten","Spanning/spanningsboog"],
+        options: ["Voor- en tegenargumenten afwegen","Eén duidelijke mening verdedigen","Feiten neutraal op een rij zetten","Een spanningsboog met ontknoping"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is betoog.", "Niet — dat is uiteenzetting.", "Niet — dat is verhaal."],
+        wrongHints: [null, "Eén mening verdedigen doe je in een betoog. Wat doet een beschouwing met de verschillende standpunten?", "Feiten neutraal uitleggen doe je in een uiteenzetting. Wat komt er in een beschouwing bij?", "Een spanningsboog met ontknoping hoort bij een verhaal. Waar draait een beschouwing om?"],
         uitlegPad: {
           stappen: [{ titel: "Beschouwing = nuance", tekst: "**Beschouwing** belicht **verschillende kanten** van kwestie. Schrijver kan **lichte voorkeur** uitspreken maar geen definitieve conclusie. Voorbeeld: NRC-opinie over migratie met meerdere perspectieven." }],
           theorie: "Toets-patroon: signaalwoorden 'aan de ene kant... aan de andere kant' wijzen bijna altijd op beschouwing.",
@@ -54,9 +54,9 @@ const steps = [
       },
       {
         q: "Welke tekst is een **uiteenzetting**?",
-        options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Verkiezings-toespraak","Roman-fragment"],
+        options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Toespraak van een partijleider","Romanfragment over een zomer"],
         answer: 0,
-        wrongHints: [null, "Niet — een opiniestuk geeft een mening of een afweging.", "Niet — dat is betoog.", "Niet — dat is verhaal/literatuur."],
+        wrongHints: [null, "Een opiniestuk geeft een mening of een afweging. Welke tekst legt uit hoe iets werkt, zonder mening?", "Een partijleider wil kiezers overtuigen. Welke tekst geeft neutrale informatie?", "Een romanfragment vertelt een verhaal. Welke tekst legt iets uit zonder mening?"],
         uitlegPad: {
           stappen: [{ titel: "Wikipedia = informeren", tekst: "**Uiteenzetting** = informatieve tekst zonder mening. Wikipedia-artikelen, schoolboek-paragrafen, instructies horen hier. Doel: **kennis overdragen**." }],
           theorie: "Toets-truc: titel 'Wat is X?' of 'Hoe werkt Y?' → uiteenzetting.",
@@ -65,11 +65,11 @@ const steps = [
       },
       {
         q: "Welk **signaalwoord** wijst typisch op een betoog?",
-        options: ["Ik vind dat","Aan de ene kant","Ten eerste","Bovendien"],
+        options: ["Naar mijn mening","Aan de ene kant","Volgens sommigen","Het is de vraag of"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is beschouwing.", "Niet — opsommen doe je in alle drie.", "Niet — kan alle drie."],
+        wrongHints: [null, "'Aan de ene kant' gebruik je als je verschillende kanten afweegt, zoals in een beschouwing. Kiest de schrijver dan al een kant?", "'Volgens sommigen' geeft de mening van anderen weer, zoals in een beschouwing. Van wie is de mening in een betoog?", "'Het is de vraag of' zet een vraag open zonder te kiezen. Wat doet de schrijver van een betoog met zo'n vraag?"],
         uitlegPad: {
-          stappen: [{ titel: "'Ik vind' = mening = betoog", tekst: "**'Ik vind dat'**, 'het is duidelijk dat', 'zonder twijfel', 'daarom moet' = signalen dat schrijver een **stellige mening** heeft. Betoog-kenmerk." }],
+          stappen: [{ titel: "Eigen mening = betoog", tekst: "**'Naar mijn mening'**, **'Ik vind dat'**, 'het is duidelijk dat', 'zonder twijfel', 'daarom moet' = signalen dat schrijver een **stellige mening** heeft. Betoog-kenmerk." }],
           theorie: "Vergelijk met 'aan de ene kant' (beschouwing) of 'ten eerste/vervolgens' (uiteenzetting).",
           niveaus: { basis: "Ik vind.", simpeler: "Ik vind = mening = betoog", nogSimpeler: "Ik vind" },
         },
@@ -78,7 +78,7 @@ const steps = [
         q: "In welk soort tekst is schrijver **het meest neutraal**?",
         options: ["Uiteenzetting","Beschouwing","Betoog","Reclame"],
         answer: 0,
-        wrongHints: [null, "Niet — heeft nuance.", "Niet — duidelijke mening.", "Niet — wil overtuigen."],
+        wrongHints: [null, "In een beschouwing weegt de schrijver af en mag hij een lichte voorkeur laten merken. Welke tekstsoort legt alleen uit?", "In een betoog verdedigt de schrijver een duidelijke mening. Is dat neutraal?", "Reclame wil dat je iets koopt of doet. Is de maker dan neutraal?"],
         uitlegPad: {
           stappen: [{ titel: "Uiteenzetting = neutraal", tekst: "**Uiteenzetting** = puur informatief. Geen mening. Vergelijk: encyclopedie, wetenschappelijk rapport (objectiviteit-norm). Schrijver presenteert feiten, lezer beslist zelf." }],
           niveaus: { basis: "Uiteenzetting.", simpeler: "Neutraal = uiteenzetting", nogSimpeler: "Neutraal" },
@@ -97,7 +97,7 @@ const steps = [
         q: "Wat hoort in de **inleiding** van een betoog?",
         options: ["Aanleiding + stelling","Conclusie + actie","Voorbeelden","Tegenargumenten"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is slot.", "Niet — die komen in midden.", "Niet — die horen in midden + weerlegging."],
+        wrongHints: [null, "Een conclusie en een oproep tot actie horen aan het eind, in het slot. Wat vertel je de lezer eerst?", "Voorbeelden ondersteunen je argumenten in het middenstuk. Wat moet de lezer weten vóórdat de argumenten komen?", "Tegenargumenten bespreek en weerleg je in het middenstuk. Waarmee open je een betoog?"],
         uitlegPad: {
           stappen: [{ titel: "Inleiding = openen", tekst: "**Inleiding**: trekt aandacht (aanleiding) + plaatst stelling. Lezer moet na de **eerste alinea** weten waar het over gaat én wat schrijver vindt." }],
           theorie: "Toets-tip: kijk altijd naar EERSTE ALINEA om stelling te vinden. Vaak letterlijk geformuleerd.",
@@ -106,33 +106,33 @@ const steps = [
       },
       {
         q: "Welke is de **sterkste stelling** voor een betoog?",
-        options: ["'Vanaf groep 8 moet schooladvies door de leerling zelf gegeven worden'","'School is voor iedereen heel erg belangrijk'","'Het is vandaag in het klaslokaal erg warm'","'Misschien moeten kinderen op school meer dingen leren'"],
+        options: ["'Leerlingen moeten hun schooladvies zelf bepalen'","'Goed onderwijs is belangrijk voor alle kinderen'","'Leerlingen krijgen in groep 8 een schooladvies'","'Scholen moeten beter onderwijs gaan geven'"],
         answer: 0,
-        wrongHints: [null, "Niet — niet discussieerbaar.", "Niet — geen meningsstelling.", "Niet — te vaag."],
+        wrongHints: [null, "Bijna iedereen is het hiermee eens. Valt er over deze stelling echt te discussiëren?", "Dit is een feit dat je kunt opzoeken. Is dat een standpunt dat je met argumenten verdedigt?", "Wie is er tegen 'beter onderwijs'? En wat moet er dan precies veranderen? Is deze stelling specifiek genoeg?"],
         uitlegPad: {
-          stappen: [{ titel: "Concreet + discussieerbaar", tekst: "Goede stelling = specifiek (welke groep, welke actie) + discussieerbaar (mensen kunnen oneens zijn) + niet vanzelfsprekend. De stelling over het schooladvies scoort op alle 3." }],
+          stappen: [{ titel: "Concreet + discussieerbaar", tekst: "Goede stelling = specifiek (welke groep, welke actie) + discussieerbaar (mensen kunnen oneens zijn) + niet vanzelfsprekend. De stelling dat leerlingen hun schooladvies zelf moeten bepalen, scoort op alle 3. Een feit ('je krijgt in groep 8 een advies') is geen stelling." }],
           theorie: "Toets-patroon: vermijd 'is belangrijk' (te vaag), 'wel/niet doen' zonder context, of vanzelfsprekendheden.",
-          niveaus: { basis: "De stelling over het schooladvies.", simpeler: "Concreet + discussieerbaar", nogSimpeler: "Schooladvies" },
+          niveaus: { basis: "Leerlingen bepalen zelf hun schooladvies.", simpeler: "Concreet + discussieerbaar", nogSimpeler: "Zelf bepalen" },
         },
       },
       {
         q: "Een **goed betoog** noemt het **tegenargument** en:",
-        options: ["Weerlegt het","Negeert het","Bevestigt het","Maakt het belangrijker"],
+        options: ["Laat zien waarom het niet opgaat","Laat het verder onbesproken","Vat het samen in het slot","Laat de lezer het zelf afwegen"],
         answer: 0,
-        wrongHints: [null, "Niet — wie het negeert, lijkt de tegenargumenten niet te kennen.", "Niet — verzwakt eigen positie.", "Niet — verzwakt overtuiging."],
+        wrongHints: [null, "Wie een tegenargument noemt en er niets mee doet, laat de lezer met twijfel achter. Is het dan onschadelijk gemaakt?", "Een samenvatting herhaalt alleen wat er al stond. Verzwakt dat het tegenargument?", "Zelf laten afwegen past bij een beschouwing. Wat wil een betoog met de lezer?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument noemen + weerleggen", tekst: "Een sterk betoog **onderkent tegenargumenten** ('Critici stellen X') maar **weerlegt** ze ('Dat klopt niet omdat...'). Toont dat schrijver het hele veld kent → meer geloofwaardig." }],
           theorie: "CSE-favoriet: tegenargument-weerlegging is herkennings-vraag. Zoek 'Sommigen', 'Tegenstanders', 'Critici stellen' + zin erna.",
-          niveaus: { basis: "Weerlegt het.", simpeler: "Tegenargument = noemen + weerleggen", nogSimpeler: "Weerleggen" },
+          niveaus: { basis: "Laat zien waarom het niet opgaat.", simpeler: "Tegenargument = noemen + weerleggen", nogSimpeler: "Weerleggen" },
         },
       },
       {
         q: "Welk argument-type is **sterk**?",
-        options: ["Feit-argument met onderzoek","Emotie-appel zonder bewijs","Persoonlijke ervaring zonder context","Algemene uitspraak"],
+        options: ["Feit uit onderzoek of statistiek","Mening van een bekende Nederlander","Logische als-dan-redenering","Beroep op gevoel en emotie"],
         answer: 0,
-        wrongHints: [null, "Zwak — geen bewijs.", "Niet — één losse ervaring bewijst weinig.", "Te vaag."],
+        wrongHints: [null, "Een bekende Nederlander is meestal geen deskundige op het onderwerp. Kun je zijn mening controleren?", "Een als-dan-redenering klinkt logisch, maar rust op een aanname. Staat logica hoog of laag in de rij?", "Een beroep op het gevoel kan raken, maar bewijst niets. Welk soort argument kun je controleren?"],
         uitlegPad: {
-          stappen: [{ titel: "Hiërarchie argumenten", tekst: "Sterkste → zwakste: **feit** (onderzoek, statistiek) > **voorbeeld** (concrete case) > **autoriteit** (expert noemt) > **logica** (als-dan) > **emotie** (gevoel). De toets waardeert feit/voorbeeld het hoogst." }],
+          stappen: [{ titel: "Hiërarchie argumenten", tekst: "Sterkste → zwakste: **feit** (onderzoek, statistiek) > **voorbeeld** (concrete case) > **autoriteit** (expert noemt) > **logica** (als-dan) > **emotie** (gevoel). De toets waardeert het feit het hoogst; een mening van een bekend persoon zonder deskundigheid telt nauwelijks." }],
           niveaus: { basis: "Feit.", simpeler: "Feit-argument = sterkste", nogSimpeler: "Feit" },
         },
       },
@@ -140,7 +140,7 @@ const steps = [
         q: "Wat hoort NIET in het **slot** van een betoog?",
         options: ["Nieuwe argumenten","Stelling herhalen","Oproep tot actie","Conclusie"],
         answer: 0,
-        wrongHints: [null, "Wel — in slot stelling herhalen.", "Wel — optioneel.", "Wel — slot is conclusie."],
+        wrongHints: [null, "Het slot herhaalt de stelling vaak, krachtiger dan eerst. Wat hoort er juist níét in?", "Een oproep tot actie past goed in een slot. Waar zou de lezer in het slot niet meer op kunnen reageren?", "Het slot is de plek voor de conclusie. Wat hoort al eerder in de tekst te staan?"],
         uitlegPad: {
           stappen: [{ titel: "Slot = afsluiten, niet openen", tekst: "Slot **sluit af**. Geen nieuwe argumenten — die horen in middenstuk. Slot herhaalt stelling (krachtiger) + eventueel oproep. Nieuw materiaal in slot = zwak betoog (lezer kan niet meer reageren)." }],
           theorie: "Toets-tip: in slot 'Concluderend...' / 'Daarom blijft...' / 'Het moet duidelijk zijn dat...' zijn signaalwoorden.",
@@ -160,7 +160,7 @@ const steps = [
         q: "*'Iedereen vindt onze school de beste.'* — welke drogreden?",
         options: ["Generalisatie","Vals dilemma","Persoonlijke aanval","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen aanval op persoon.", "Niet — geen zelf-bewijs."],
+        wrongHints: [null, "Bij een vals dilemma krijg je maar twee keuzes. Zie je hier een of-of-keuze?", "Bij een persoonlijke aanval wordt iemand zelf aangevallen. Wordt hier iemand aangevallen?", "Bij een cirkelredenering komt de conclusie terug als argument. Wordt hier eigenlijk wel een reden gegeven?"],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen' = ongelimiteerd", tekst: "**Generalisatie**: uitspraak over **alle leden** van een groep zonder bewijs. 'Iedereen', 'altijd', 'niemand', 'nooit', 'alle' = signaal. Probleem: 1 tegenvoorbeeld weerlegt." }],
           niveaus: { basis: "Generalisatie.", simpeler: "Iedereen-uitspraak = generalisatie", nogSimpeler: "Generalisatie" },
@@ -168,9 +168,9 @@ const steps = [
       },
       {
         q: "*'Óf je stemt voor de nieuwe sporthal, óf sport voor kinderen kan je niets schelen.'* — welke drogreden?",
-        options: ["Vals dilemma","Generalisatie","Stroman","Feit-argument"],
+        options: ["Vals dilemma","Generalisatie","Stroman","Hellend vlak"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 'iedereen'-uitspraak.", "Niet — argument wordt niet verdraaid.", "Niet — geen feit."],
+        wrongHints: [null, "Bij een generalisatie doe je een uitspraak over een hele groep. Hoeveel keuzes worden hier voorgesteld?", "Bij een stroman wordt het standpunt van de ander verdraaid. Wordt hier iemands standpunt verdraaid?", "Bij een hellend vlak leidt één stap tot een keten van gevolgen. Zie je hier zo'n keten, of iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "Of-of zonder middenweg", tekst: "**Vals dilemma**: doen alsof er maar 2 opties zijn (voor of tegen). In realiteit kun je tegen déze sporthal zijn en sport voor kinderen tóch belangrijk vinden. Onterecht binair maken." }],
           theorie: "Toets-favoriet: vals dilemma + 'wie niet voor is, is tegen' / 'óf X óf Y' / 'er is geen andere optie'.",
@@ -181,7 +181,7 @@ const steps = [
         q: "*'Mijn tegenstander wil het leger volledig afschaffen!'* (terwijl hij alleen bezuinigen voorstelde) — drogreden:",
         options: ["Stroman","Hellend vlak","Generalisatie","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen oorzaak-keten.", "Niet — geen 'iedereen'.", "Niet — geen zelf-bewijs."],
+        wrongHints: [null, "Bij een hellend vlak voorspel je een keten van gevolgen. Wat gebeurt hier met wat de tegenstander voorstelde?", "Bij een generalisatie doe je een uitspraak over een hele groep. Gaat deze zin over een groep?", "Bij een cirkelredenering bewijst de conclusie zichzelf. Vergelijk wat de tegenstander zei met wat hier staat."],
         uitlegPad: {
           stappen: [{ titel: "Stroman = verdraaid tegenstandpunt", tekst: "**Stroman-drogreden**: argument tegenstander **verdraaien tot extreme versie** die makkelijker te verslaan is. Bezuinigen ≠ afschaffen. Vechten tegen iets dat tegenstander niet zei." }],
           theorie: "Strawman (Engels) — je schiet een stropop neer in plaats van het echte argument.",
@@ -190,9 +190,9 @@ const steps = [
       },
       {
         q: "*'Als we cannabis legaliseren, zullen jongeren heroïne gaan gebruiken.'* — drogreden:",
-        options: ["Hellend vlak","Stroman","Vals dilemma","Goed argument"],
+        options: ["Hellend vlak","Stroman","Vals dilemma","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen verdraaiing.", "Niet — geen of-of.", "Niet — wel drogreden."],
+        wrongHints: [null, "Bij een stroman verdraai je wat de ander zegt. Wordt hier iemands standpunt verdraaid?", "Bij een vals dilemma krijg je maar twee keuzes. Wat doet deze zin in plaats daarvan?", "Bij een cirkelredenering komt de conclusie terug als argument. Is dat hier zo, of gebeurt er iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "Hellend vlak = ongegronde oorzaak-keten", tekst: "**Hellend vlak (slippery slope)**: claim dat A onvermijdelijk leidt tot Z via B, C, D... zonder dat de keten bewezen is. Elke schakel (cannabis → heroïne) zou je met **onderzoek** moeten aantonen — en dat bewijs ontbreekt hier." }],
           theorie: "Toets-truc: 'Als we X toestaan, dan komt Y, dan Z' = hellend vlak. Bewijs voor elke schakel is nodig.",
@@ -201,12 +201,12 @@ const steps = [
       },
       {
         q: "Welk argument is het **sterkst** voor 'sport is goed'?",
-        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Iedereen weet toch allang dat sporten goed is","Mijn vader zegt het en die sport elke dag","Sport is gewoon heel erg leuk om te doen"],
+        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Een enquête onder 25 leden van onze sportclub: 92% voelt zich fitter door sport","Een onderzoek onder 40 marathonlopers toont dat zij zelden ziek zijn","Een bekende voetballer zegt in een interview dat sport goed is voor je hart"],
         answer: 0,
-        wrongHints: [null, "Niet — generalisatie zonder bewijs.", "Niet — autoriteit zonder relevantie.", "Te vaag + alleen emotie."],
+        wrongHints: [null, "25 leden van één sportclub zijn een kleine en eenzijdige groep. Mag je daaruit iets concluderen over iedereen?", "40 marathonlopers zijn een kleine groep die al extreem fit is. Zegt dat iets over gewone mensen?", "Een voetballer is bekend, maar is hij ook deskundig op het gebied van gezondheid? Welke bron is dat wel?"],
         uitlegPad: {
-          stappen: [{ titel: "Feit-argument > rest", tekst: "**WHO-onderzoek + getallen** = feit-argument. Concreet, controleerbaar, bewezen. Andere opties zijn drogredenen (generalisatie / autoriteit / emotie)." }],
-          theorie: "Toets-patroon: bij meerkeuze-vraag 'sterkste argument' → kies optie met BRON + CIJFERS / onderzoek.",
+          stappen: [{ titel: "Feit-argument > rest", tekst: "**WHO-onderzoek + getallen** = feit-argument. Concreet, controleerbaar, bewezen. De andere opties zijn zwak of drogredenen (kleine, eenzijdige groep / uitzonderlijke groep / autoriteit zonder deskundigheid)." }],
+          theorie: "Toets-patroon: bij meerkeuze-vraag 'sterkste argument' → kijk niet alleen óf er cijfers zijn, maar ook hoe groot en representatief de onderzochte groep is en hoe deskundig de bron.",
           niveaus: { basis: "Het WHO-onderzoek.", simpeler: "Onderzoek + cijfers = sterk", nogSimpeler: "Onderzoek" },
         },
       },
@@ -223,7 +223,7 @@ const steps = [
         q: "*'Wie wil er nou niet gezond leven?'* — welk stijlmiddel?",
         options: ["Retorische vraag","Contrast","Metafoor","Hyperbool"],
         answer: 0,
-        wrongHints: [null, "Niet — geen tegenstelling.", "Niet — geen beeldspraak.", "Niet — geen overdrijving."],
+        wrongHints: [null, "Bij contrast zet je twee tegengestelde dingen naast elkaar. Zie je hier een tegenstelling?", "Een metafoor noemt iets met een beeld. Welk beeld zie je hier?", "Een hyperbool overdrijft. Wordt hier iets overdreven? Kijk ook naar het leesteken aan het eind."],
         uitlegPad: {
           stappen: [{ titel: "Vraag waarvan antwoord duidelijk", tekst: "**Retorische vraag**: vraag NIET om info maar om effect. Antwoord ligt vast ('niemand wil ongezond leven'). Doel: lezer impliciet doen instemmen." }],
           theorie: "Toets-patroon: retorische vragen vaak in opiniestukken + speeches.",
@@ -234,7 +234,7 @@ const steps = [
         q: "*'Het leven is een rivier.'* — welk stijlmiddel?",
         options: ["Metafoor","Vergelijking","Hyperbool","Ironie"],
         answer: 0,
-        wrongHints: [null, "Niet — bij vergelijking zou 'als' of 'zoals' staan.", "Niet — geen overdrijving.", "Niet — geen tegenovergestelde bedoeling."],
+        wrongHints: [null, "Niet — bij vergelijking zou 'als' of 'zoals' staan.", "Een hyperbool overdrijft iets. Wordt het leven hier groter gemaakt dan het is?", "Bij ironie bedoel je het tegenovergestelde van wat je zegt. Bedoelt de schrijver hier het omgekeerde?"],
         uitlegPad: {
           stappen: [{ titel: "Metafoor = zonder 'als'", tekst: "**Metafoor**: beeldspraak die A = B claimt (zonder 'als'). 'Leven IS rivier'. Vergelijking gebruikt WEL 'als': 'Het leven is ALS een rivier'." }],
           theorie: "Toets-tip: ezelsbrug 'Metafoor zonder als'. Vergelijking met 'als' of 'zoals'.",
@@ -245,7 +245,7 @@ const steps = [
         q: "Wat is een **understatement**?",
         options: ["Bewust afzwakken","Bewust overdrijven","Vraag stellen","Beeldspraak"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is hyperbool.", "Niet — dat is retorische vraag.", "Niet — dat is metafoor."],
+        wrongHints: [null, "Bewust overdrijven heet een hyperbool. Wat betekent 'under' in understatement?", "Een vraag waarop je geen antwoord verwacht, heet een retorische vraag. Waar gaat een understatement over?", "Beeldspraak is een metafoor of vergelijking. Wat betekent 'under' in understatement?"],
         uitlegPad: {
           stappen: [{ titel: "Understatement = onderbenadrukking", tekst: "**Understatement** = bewust afzwakken. 'Niet onaardig' = heel aardig. 'Het regent een beetje' (terwijl 't plenst). Engels: 'It's a bit chilly' (bij −20°C). Vaak ironisch effect." }],
           theorie: "Britse humor-favoriet. Tegenovergesteld van hyperbool.",
@@ -256,7 +256,7 @@ const steps = [
         q: "Tijdens een regenstorm zegt iemand: *'Wat een geweldig weer!'* Welk stijlmiddel?",
         options: ["Ironie","Hyperbool","Metafoor","Vergelijking"],
         answer: 0,
-        wrongHints: [null, "Niet — geen overdrijving.", "Niet — geen beeldspraak.", "Niet — geen 'als'."],
+        wrongHints: [null, "Een hyperbool overdrijft. Past 'geweldig' bij een regenstorm, of bedoelt de spreker iets anders?", "Een metafoor gebruikt een beeld. Welk beeld zie je in 'geweldig weer'?", "Een vergelijking gebruikt 'als' of 'zoals'. Staat dat woord hier?"],
         uitlegPad: {
           stappen: [{ titel: "Ironie = tegenovergestelde bedoeling", tekst: "**Ironie**: spreker zegt A, bedoelt **tegenovergestelde**. 'Geweldig weer' bij regenstorm betekent juist 'verschrikkelijk weer'. Lezer/luisteraar herkent contradictie." }],
           theorie: "Toets-favoriet: ironie herkennen in tekst — kijk naar context. Past gezegde bij situatie? Zo nee → mogelijk ironisch.",
@@ -267,7 +267,7 @@ const steps = [
         q: "*'Vrijheid, gelijkheid, broederschap.'* — welk stijlmiddel?",
         options: ["Drieslag","Anafoor","Climax","Antithese"],
         answer: 0,
-        wrongHints: [null, "Bijna — anafoor is herhaling, hier 3 verschillende woorden.", "Bijna — climax stijgt in intensiteit.", "Niet — antithese is tegenstelling."],
+        wrongHints: [null, "Bij een anafoor begint elk zinsdeel met hetzelfde woord. Gebeurt dat hier?", "Bij een climax wordt elk deel sterker dan het vorige. Is 'broederschap' sterker dan 'vrijheid'?", "Bij een antithese zet je tegenstellingen naast elkaar. Zijn deze woorden elkaars tegenstelling?"],
         uitlegPad: {
           stappen: [{ titel: "3 elementen = tricolon", tekst: "**Drieslag (tricolon)**: 3 elementen op rij — klinkt compleet + memorabel. Klassiek: 'Veni, vidi, vici' (Caesar), 'Vrijheid, gelijkheid, broederschap' (Franse Revolutie), 'Voor God, voor koning, voor vaderland'." }],
           theorie: "Onze hersenen onthouden patroon van 3 het best (drie-regel in retoriek + reclame).",
@@ -285,9 +285,9 @@ const steps = [
     checks: [
       {
         q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
-        options: ["Autoriteits-misbruik + generalisatie","Vals dilemma","Stroman","Goed argument"],
+        options: ["Autoriteits-misbruik + generalisatie","Vals dilemma + persoonlijke aanval","Hellend vlak + cirkelredenering","Geldig autoriteitsargument"],
         answer: 0,
-        wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen verdraaiing.", "Niet — zou jij dit als bewijs accepteren?"],
+        wrongHints: [null, "Er wordt geen of-of-keuze gegeven en niemand wordt persoonlijk aangevallen. Wie wordt hier als bron opgevoerd?", "Er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet. Kijk naar het woord 'alle' en naar de bron.", "Is een opa deskundig op het gebied van moderne muziek? Wanneer is een beroep op iemand terecht?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
           niveaus: { basis: "Autoriteit + generalisatie.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },
@@ -297,7 +297,7 @@ const steps = [
         q: "Welke tekstsoort: *artikel waarin schrijver verschillende kanten van AI-gebruik in scholen belicht zonder eindstandpunt*?",
         options: ["Beschouwing","Betoog","Uiteenzetting","Verhaal"],
         answer: 0,
-        wrongHints: [null, "Niet — geen duidelijke mening.", "Niet — meer dan alleen feiten.", "Niet — geen fictie."],
+        wrongHints: [null, "In een betoog kiest de schrijver één standpunt. Doet deze schrijver dat?", "Een uiteenzetting legt uit hoe iets zit. Wat doet deze schrijver met de verschillende kanten?", "Een verhaal is fictie. Is dit artikel verzonnen?"],
         uitlegPad: {
           stappen: [{ titel: "Verschillende kanten = beschouwing", tekst: "**Beschouwing** = belicht meerdere perspectieven zonder definitieve conclusie. Schrijver weegt af, soms met lichte voorkeur, vaak open einde." }],
           niveaus: { basis: "Beschouwing.", simpeler: "Verschillende kanten = beschouwing", nogSimpeler: "Beschouwing" },
@@ -305,9 +305,9 @@ const steps = [
       },
       {
         q: "Wat is een **anafoor**?",
-        options: ["Herhaling aan begin van zinnen","Vraag-zonder-antwoord","Tegenstelling","Beeldspraak"],
+        options: ["Herhaling aan begin van zinnen","Vraag waarop geen antwoord komt","Tegenstelling tussen twee zinnen","Beeldspraak zonder het woord 'als'"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is retorische vraag.", "Niet — dat is antithese/contrast.", "Niet — dat is metafoor."],
+        wrongHints: [null, "Een vraag waarop geen antwoord komt, heet een retorische vraag. Bij een anafoor wordt iets herhaald — wat en waar?", "Een tegenstelling tussen twee zinnen heet een antithese. Wat gebeurt er bij een anafoor?", "Beeldspraak zonder 'als' is een metafoor. Wat gebeurt er bij een anafoor?"],
         uitlegPad: {
           stappen: [{ titel: "Anafoor = begin-herhaling", tekst: "**Anafoor** = herhalen van **woord(en) aan begin** van opeenvolgende zinnen. 'Ik heb een droom dat... Ik heb een droom dat...' (Martin Luther King). Versterkt boodschap door ritme + nadruk." }],
           niveaus: { basis: "Begin-herhaling.", simpeler: "Anafoor = herhaling begin", nogSimpeler: "Begin" },
@@ -315,9 +315,9 @@ const steps = [
       },
       {
         q: "In een **betoog** hoort het tegenargument:",
-        options: ["Genoemd + weerlegd","Volledig genegeerd","Vooraan in tekst","Pas in slot"],
+        options: ["Genoemd + weerlegd","Genoemd + bevestigd","Vooraan in tekst","Pas in slot"],
         answer: 0,
-        wrongHints: [null, "Niet — geeft zwak signaal.", "Niet — komt meestal in midden.", "Niet — slot is conclusie."],
+        wrongHints: [null, "Als je het tegenargument gelijk geeft, verzwak je je eigen standpunt. Wat doe je er dan wel mee?", "Vooraan in de tekst staan de aanleiding en de stelling. Waar komt het tegenargument meestal?", "In het slot trek je je conclusie. Kan de lezer daar nog op een nieuw argument reageren?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument behandelen", tekst: "Goed betoog **erkent** tegenargumenten en weerlegt ze. Plaats: in midden, ergens tussen hoofd-argumenten. Toont kennis van veld + versterkt eigen positie." }],
           niveaus: { basis: "Genoemd + weerlegd.", simpeler: "Tegenargument = noemen + weerleggen", nogSimpeler: "Weerleggen" },
@@ -327,7 +327,7 @@ const steps = [
         q: "*'Hij is een leeuw op het strijdveld.'* (over voetballer) — welk stijlmiddel?",
         options: ["Metafoor","Vergelijking","Hyperbool","Ironie"],
         answer: 0,
-        wrongHints: [null, "Niet — bij vergelijking zou 'als een' staan.", "Niet — geen overdrijving.", "Niet — geen tegenovergestelde."],
+        wrongHints: [null, "Een vergelijking gebruikt 'als' of 'zoals', bijvoorbeeld 'hij vecht als een leeuw'. Staat dat hier?", "Een hyperbool overdrijft iets, zoals 'ik heb het duizend keer gezegd'. Gebeurt dat hier?", "Bij ironie bedoel je het tegenovergestelde. Bedoelt de schrijver dat de voetballer slap speelt?"],
         uitlegPad: {
           stappen: [{ titel: "Metafoor: 'is' = direct", tekst: "Hij IS een leeuw → metafoor (direct gelijkstellen). Hij is ALS een leeuw → vergelijking (met 'als'). Verschil: woord 'als' bepaalt." }],
           niveaus: { basis: "Metafoor.", simpeler: "IS leeuw = metafoor", nogSimpeler: "Metafoor" },

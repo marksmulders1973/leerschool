@@ -24,7 +24,7 @@ const steps = [
         q: "Wie schreef **'Pride and Prejudice'**?",
         options: ["Jane Austen", "Charles Dickens", "George Orwell", "Virginia Woolf"],
         answer: 0,
-        wrongHints: [null, "Niet — andere periode.", "Niet — 20e eeuw.", "Niet — modernist."],
+        wrongHints: [null, "Dickens schreef later, in de Victoriaanse tijd, over armoede in Londen. Pride and Prejudice verscheen al in 1813.", "Orwell schreef in de 20e eeuw over dictaturen. Pride and Prejudice verscheen al in 1813.", "Woolf was een modernist uit de 20e eeuw. Pride and Prejudice verscheen al in 1813."],
         uitlegPad: {
           stappen: [{ titel: "Austen, 1813", tekst: "Jane Austen (1775-1817): meesterwerk over Elizabeth Bennet + Mr Darcy. Onderzoekt sociale klasse, huwelijksmarkt, vrouwelijke autonomie. Subtiele ironie. Boek tot vandaag gelezen + meer dan 10× verfilmd." }],
           niveaus: { basis: "Austen.", simpeler: "Pride+Prejudice = Austen.", nogSimpeler: "Austen" },
@@ -34,7 +34,7 @@ const steps = [
         q: "**Beowulf** is uit welke periode?",
         options: ["Old English", "Middle English", "Renaissance", "Modern"],
         answer: 0,
-        wrongHints: [null, "Niet — eerder.", "Veel later.", "Veel later."],
+        wrongHints: [null, "Middle English is de taal van Chaucer, rond 1400. Is Beowulf ouder of jonger?", "De Renaissance (Shakespeare) kwam eeuwen later. Beowulf is een van de oudste Engelse teksten.", "Modern English begint rond 1500. Uit welke vroegste periode komt Beowulf?"],
         uitlegPad: {
           stappen: [{ titel: "Angelsaksisch epos", tekst: "Geschreven in Old English (Angelsaksisch) — totaal andere taal dan modern Engels. Held Beowulf verslaat monster Grendel + draak. Mondelinge traditie, opgeschreven ~10e eeuw." }],
           niveaus: { basis: "Old English.", simpeler: "Heel oud (~700).", nogSimpeler: "OE" },
@@ -45,11 +45,11 @@ const steps = [
         options: [
           "Science-fiction roman",
           "Detectiveroman",
-          "Western",
+          "Historische roman",
           "Romantische poëziebundel"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — kwam later.", "Niet — Amerikaans subgenre.", "Niet — proza."],
+        wrongHints: [null, "De detectiveroman kwam pas later op, met Poe en Conan Doyle. Wat bouwt Victor Frankenstein in zijn laboratorium?", "De eerste historische roman wordt vaak bij Walter Scott gelegd. Wat bouwt Victor Frankenstein in zijn laboratorium?", "Frankenstein is een verhaal in proza, geen bundel gedichten. Waar draait het verhaal om?"],
         uitlegPad: {
           stappen: [
             { titel: "Mary Shelley, 1818", tekst: "Mary Shelley begon op 18-jarige leeftijd aan Frankenstein. Wetenschapper Victor Frankenstein creëert monster uit dode lichaamsdelen + reanimeert via elektriciteit. Pionier sci-fi door wetenschap als plot-driver, niet magie." },
@@ -60,13 +60,13 @@ const steps = [
       {
         q: "**Booker Prize** wordt uitgereikt voor:",
         options: [
-          "Beste roman geschreven in het Engels",
-          "Beste Amerikaanse boek",
-          "Beste poëzie",
-          "Beste filmscript"
+          "Beste Engelstalige roman van het jaar",
+          "Beste Amerikaanse roman van het jaar",
+          "Beste Engelstalige dichtbundel van het jaar",
+          "Beste Britse filmscript van het jaar"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — niet alleen US.", "Niet — alleen roman.", "Niet — het gaat om boeken."],
+        wrongHints: [null, "Ook Britse, Ierse en Indiase schrijvers winnen hem. Gaat het dan om één land?", "Voor poëzie bestaan andere prijzen, zoals de T.S. Eliot Prize. Om welke vorm gaat het bij de Booker?", "Films hebben hun eigen prijzen, zoals de Oscars. Waar gaat deze literatuurprijs over?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1969", tekst: "Prestigieuze prijs voor roman in Engels. Sinds 2014 ook van Amerikaanse auteurs. Daarnaast: **Booker International** voor vertaalde werken (Marieke Lucas Rijneveld won die 2020 met 'De avond is ongemak')." }],
           niveaus: { basis: "Roman in Engels.", simpeler: "Beste Engelstalige roman.", nogSimpeler: "Booker" },
@@ -75,13 +75,13 @@ const steps = [
       {
         q: "**Modernism** (1900-1945) kenmerken:",
         options: [
-          "Experimenteel, gebroken vorm, stream-of-consciousness",
-          "Realistisch + chronologisch",
-          "Religieus dominant",
-          "Strakke klassieke vormregels"
+          "Experimenteel, stream of consciousness",
+          "Realistisch, chronologisch, alwetende verteller",
+          "Religieus, moraliserend, met vaste moraal",
+          "Strak, klassiek, met vast rijm en metrum"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — wel diverse thema's.", "Denk aan wat WO1 deed met het vertrouwen in traditie."],
+        wrongHints: [null, "Dat past bij de 19e-eeuwse roman (denk aan Dickens). Wat deden schrijvers na 1900 met die vorm?", "Moraliserende verhalen kennen we vooral uit de Victoriaanse tijd. Wat zochten modernisten?", "Denk aan wat WO1 deed met het vertrouwen in traditie."],
         uitlegPad: {
           stappen: [
             { titel: "Breken met traditie", tekst: "WO1 schokte vertrouwen in 'vooruitgang' → schrijvers experimenteren. Stream of consciousness = gedachten direct op papier (Joyce 'Ulysses', Woolf 'Mrs Dalloway'). Tijd-sprong, meerdere vertellers, ambiguïteit. T.S. Eliot 'The Waste Land' (1922) = hoogtepunt." },
@@ -102,7 +102,7 @@ const steps = [
         q: "**'To be or not to be'** komt uit welk werk?",
         options: ["Hamlet", "Macbeth", "Romeo and Juliet", "King Lear"],
         answer: 0,
-        wrongHints: [null, "Niet — andere monoloog.", "Niet — andere monoloog.", "Niet."],
+        wrongHints: [null, "In Macbeth is 'Tomorrow, and tomorrow' de bekende monoloog. Welke prins twijfelt over leven en dood?", "Romeo and Juliet kent de balkonscène ('Wherefore art thou Romeo?'). Welke prins twijfelt over leven en dood?", "Lear is een oude koning met drie dochters. Wie twijfelt in deze monoloog over leven en dood?"],
         uitlegPad: {
           stappen: [{ titel: "Beroemdste monoloog", tekst: "Hamlet's soliloquy uit Act 3 Scene 1. Filosofische vraag over leven of dood, zelfmoord, betekenis. Wereldberoemd, eindeloos geïnterpreteerd." }],
           niveaus: { basis: "Hamlet.", simpeler: "Hamlet's monoloog.", nogSimpeler: "Hamlet" },
@@ -112,7 +112,7 @@ const steps = [
         q: "Hoeveel **sonnetten** schreef Shakespeare?",
         options: ["154", "14", "37", "200"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is regels per sonnet.", "Niet — dat is aantal toneelstukken.", "Niet — minder."],
+        wrongHints: [null, "14 is het aantal regels in één sonnet. Hoeveel sonnetten schreef hij in totaal?", "37 is ongeveer het aantal toneelstukken. Hoeveel sonnetten waren er?", "Het zijn er minder dan 200. Welk aantal ken je uit de bundel van 1609?"],
         uitlegPad: {
           stappen: [{ titel: "154 stuks", tekst: "Uitgegeven 1609 in één bundel. Eerste 126: aan de 'Fair Youth' (een mooie jonge man). 127-154: aan de 'Dark Lady'. Vrijwel allemaal 14 regels in ABAB CDCD EFEF GG = 'Shakespearean sonnet'." }],
           niveaus: { basis: "154.", simpeler: "154 sonnetten.", nogSimpeler: "154" },
@@ -120,9 +120,9 @@ const steps = [
       },
       {
         q: "**Macbeth** is een:",
-        options: ["Tragedy", "Comedy", "History", "Sonnet"],
+        options: ["Tragedy", "Comedy", "History", "Romance"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt slecht.", "Er komt een Schotse koning in voor — maar kijk hoe het afloopt voor de hoofdpersoon.", "Niet — toneelstuk."],
+        wrongHints: [null, "Een comedy eindigt goed, vaak met een huwelijk. Hoe loopt het af met Macbeth?", "Er komt een Schotse koning in voor — maar kijk hoe het afloopt voor de hoofdpersoon.", "Een romance, zoals The Tempest, eindigt met verzoening. Hoe loopt het af met Macbeth?"],
         uitlegPad: {
           stappen: [{ titel: "Schots koningschap door moord", tekst: "Macbeth + Lady Macbeth manipuleren elkaar tot moord op koning Duncan. Resultaat: schuldgevoel, waanzin, ondergang van beiden. Klassieke tragedy: ambitie + hubris → val. Geïnspireerd door echte Schotse historie (deels)." }],
           niveaus: { basis: "Tragedy.", simpeler: "Tragedie.", nogSimpeler: "Tragedy" },
@@ -132,12 +132,12 @@ const steps = [
         q: "**Iambic pentameter** is:",
         options: [
           "5 jamben per regel",
-          "Geen metrum",
-          "Rijmend AABB",
-          "Vrij vers"
+          "6 jamben per regel",
+          "5 regels met jamben",
+          "5 trocheeën per regel"
         ],
         answer: 0,
-        wrongHints: [null, "Wel metrum.", "Niet — geen vast rijm-vereiste.", "Niet — wel structuur."],
+        wrongHints: [null, "Een regel met zes jamben heet een alexandrijn. Wat betekent het voorvoegsel penta-, zoals in pentagon?", "Een metrum beschrijft het ritme binnen één regel. Telt 'pentameter' regels, of versvoeten?", "Een trochee is beklemtoond-onbeklemtoond (DA-da), een jambe andersom. Welke voet zit in 'iambic'?"],
         uitlegPad: {
           stappen: [
             { titel: "Standaard Engelse poëzie", tekst: "Pent = 5, jambe = ta-DAH. Voorbeeld: 'shall-I · com-PARE · thee-TO · a-SUM · mer's-DAY' (5 maal ta-DAH; klemtoon op I, PARE, TO, SUM, DAY). Natuurlijk Engels accentpatroon → klinkt vloeiend. Shakespeare's dialogen meestal in blank verse (iambic pentameter zonder rijm)." },
@@ -148,13 +148,13 @@ const steps = [
       {
         q: "**Globe Theatre** in Shakespeare's tijd:",
         options: [
-          "Open-air, 3000 toeschouwers, alle rollen door mannen",
-          "Modern theater met stoelen",
-          "Privé voor koning",
-          "Bestond niet"
+          "Open dak, veel publiek, alleen mannelijke acteurs",
+          "Overdekt, alleen zitplaatsen, ook actrices",
+          "Privétheater voor de koning en zijn hof",
+          "Open dak, alleen voor adel, vrouwen speelden mee"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — anachronisme.", "Niet — publiek.", "Bestaat wel + replica vandaag."],
+        wrongHints: [null, "Denk aan de 'groundlings' die voor een penny stonden. Waren er dan alleen zitplaatsen?", "Het Globe was een publiek theater: iedereen met een paar pennies kon erin. Was het dan privé?", "Ook gewone mensen kwamen kijken. En mochten vrouwen in Shakespeares tijd al toneelspelen?"],
         uitlegPad: {
           stappen: [
             { titel: "Originele was 1599-1644", tekst: "Open-air rond theater aan de Theems. 'Groundlings' (lagere klasse) stonden op vloer voor 1 penny. Galerijen rondom voor rijken. Vrouwenrollen door jonge mannen gespeeld (acteursvak verboden voor vrouwen tot 1660+). Replica gebouwd 1997 in Londen — bezoekbaar." },
@@ -175,7 +175,7 @@ const steps = [
         q: "Wie schreef **'1984'**?",
         options: ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Margaret Atwood"],
         answer: 0,
-        wrongHints: [null, "Niet — schreef 'Brave New World'.", "Niet — 'Fahrenheit 451'.", "Niet — Handmaid's Tale."],
+        wrongHints: [null, "Huxley schreef ook een dystopie, maar die heet Brave New World. Wie schreef over Big Brother?", "Bradbury schreef Fahrenheit 451, over verboden boeken. Wie schreef over Big Brother?", "Atwood is een Canadese schrijfster die pas na 1960 bekend werd. '1984' verscheen al in 1949."],
         uitlegPad: {
           stappen: [
             { titel: "Dystopie uit 1949", tekst: "Orwell schreef '1984' over totalitaire toekomst-staat: Big Brother kijkt mee, taal wordt vereenvoudigd ('Newspeak') om denken te beperken, geschiedenis wordt herschreven. Begrippen: 'doublethink', 'thoughtcrime', 'Room 101' — alledaags geworden. Sterk politiek-engagement (Orwell was tegen Stalinisme + nazisme)." },
@@ -186,13 +186,13 @@ const steps = [
       {
         q: "**Charles Dickens'** romans verschenen vaak als:",
         options: [
-          "Losse afleveringen",
-          "Eén dik boek tegelijk",
-          "Korte verhalen alleen",
-          "Toneelstukken"
+          "Afleveringen in tijdschriften",
+          "Eén dik boek in één keer",
+          "Bundels met korte verhalen",
+          "Toneelstukken voor het theater"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — werd zo populair.", "Wel verhalen ook.", "Niet — vooral proza."],
+        wrongHints: [null, "Boeken waren duur in die tijd. Hoe kon een gewone lezer Dickens dan toch volgen?", "Dickens schreef wel korte verhalen, maar hoe kwamen zijn grote romans bij de lezers?", "Dickens schreef vooral proza. Hoe verschenen zijn romans voor het eerst?"],
         uitlegPad: {
           stappen: [
             { titel: "Victoriaanse 'tv-series'", tekst: "Dickens publiceerde in tijdschriften en losse delen, steeds een nieuw stuk per week of per maand. Mensen wachtten in spanning op volgende. Bv. 'The Old Curiosity Shop': Amerikaanse lezers wachtten in de haven op Engelse boten met de laatste aflevering om te weten of Little Nell stierf." },
@@ -205,7 +205,7 @@ const steps = [
         q: "**'Jane Eyre'** is geschreven door:",
         options: ["Charlotte Brontë", "Emily Brontë", "Jane Austen", "Mary Shelley"],
         answer: 0,
-        wrongHints: [null, "Niet — die schreef Wuthering Heights.", "Niet — andere stijl + tijdperk.", "Niet — Frankenstein."],
+        wrongHints: [null, "Niet — die schreef Wuthering Heights.", "De titel heeft wel de voornaam Jane, maar Austen overleed al in 1817. Jane Eyre verscheen in 1847.", "Mary Shelley schreef Frankenstein (1818), een gruwelroman. Jane Eyre is van een andere schrijfster."],
         uitlegPad: {
           stappen: [
             { titel: "Drie Brontë-zussen", tekst: "**Charlotte**: Jane Eyre (1847).\n**Emily**: Wuthering Heights (1847).\n**Anne**: Tenant of Wildfell Hall.\nAlle drie schreven onder MANNELIJK pseudoniem (Currer, Ellis, Acton Bell) wegens vrouwen-vooroordeel. Alle drie stierven jong." },
@@ -217,7 +217,7 @@ const steps = [
         q: "**Ulysses** (1922) is het hoofdwerk van:",
         options: ["James Joyce", "George Orwell", "Charles Dickens", "Virginia Woolf"],
         answer: 0,
-        wrongHints: [null, "Niet — politieke fictie.", "Niet — Victoriaans.", "Niet — wel modernist, ander werk."],
+        wrongHints: [null, "Orwell schreef politieke romans zoals Animal Farm en 1984, pas later in de twintigste eeuw.", "Dickens schreef in de Victoriaanse tijd en overleed al in 1870, lang vóór 1922.", "Woolf was wel een modernist uit dezelfde tijd, maar haar bekende werken zijn Mrs Dalloway en To the Lighthouse."],
         uitlegPad: {
           stappen: [
             { titel: "Notoir moeilijk maar bewonderd", tekst: "Joyce, Iers schrijver. Ulysses speelt op één dag (16 juni 1904) in Dublin. Volgt Leopold Bloom door 18 hoofdstukken, elk in andere literaire stijl. Parallel met Homerus' Odyssee (Bloom = Odysseus). Stream of consciousness pionierde hier. Lang gecensureerd in VS + UK door taal." },
@@ -235,7 +235,7 @@ const steps = [
           "Frankenstein"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Conan Doyle.", "Niet — Stoker.", "Niet — Shelley."],
+        wrongHints: [null, "Sherlock Holmes is de detective van Arthur Conan Doyle, geen figuur uit een kerstverhaal.", "Dracula is de vampier uit de roman van Bram Stoker, geen kerstverhaal.", "Frankenstein komt uit de gruwelroman van Mary Shelley, geen kerstverhaal."],
         uitlegPad: {
           stappen: [
             { titel: "Bekendste vrek wereld", tekst: "Dickens, 1843. Scrooge wordt bezocht door 3 geesten (verleden, heden, toekomst) → bekeert zich van gierigaard tot vrijgevig mens. Naam 'scrooge' is sindsdien een synoniem voor 'vrek'. Bah humbug! Klassiek Kerst-verhaal." },
@@ -256,7 +256,7 @@ const steps = [
         q: "**'The Great Gatsby'** is geschreven door:",
         options: ["F. Scott Fitzgerald", "Ernest Hemingway", "John Steinbeck", "Mark Twain"],
         answer: 0,
-        wrongHints: [null, "Niet — Hemingway andere stijl.", "Niet — Grapes of Wrath etc.", "Niet — 19e eeuw."],
+        wrongHints: [null, "Hemingway schreef The Old Man and the Sea, in korte, kale zinnen. Wie beschreef de glitter van de Roaring Twenties?", "Steinbeck schreef The Grapes of Wrath, over de crisis van de jaren '30. Gatsby speelt in de feestelijke jaren '20.", "Mark Twain leefde in de 19e eeuw. Gatsby speelt in de jaren '20 van de 20e eeuw."],
         uitlegPad: {
           stappen: [
             { titel: "Jazz Age, 1925", tekst: "Fitzgerald (1896-1940) schreef over rijkdom + decadentie van jaren 1920. Jay Gatsby probeert oude liefde terug te krijgen via aanzien + geld → tragedy. Klassiek beeld van American Dream + zijn schaduwzijde. Eindigt met 'So we beat on, boats against the current, borne back ceaselessly into the past.'" },
@@ -268,7 +268,7 @@ const steps = [
         q: "Wie schreef **'Moby Dick'**?",
         options: ["Herman Melville", "Nathaniel Hawthorne", "Edgar Allan Poe", "Walt Whitman"],
         answer: 0,
-        wrongHints: [null, "Niet — Scarlet Letter.", "Niet — horror + detective.", "Niet — poëzie."],
+        wrongHints: [null, "Hawthorne schreef The Scarlet Letter, over schuld in een puriteinse gemeenschap, niet over walvisjacht.", "Poe schreef vooral korte horror- en detectiveverhalen, geen lange zeeroman.", "Whitman was dichter (Leaves of Grass), geen romanschrijver."],
         uitlegPad: {
           stappen: [
             { titel: "1851, walvis-obsessie", tekst: "Kapitein Ahab jaagt op witte walvis Moby Dick die zijn been afnam. Symbolisch verhaal over obsessie, hubris, mens vs natuur. Verteld door Ishmael ('Call me Ishmael' — beroemde openingszin). Bij verschijning flop; pas in 20e eeuw als meesterwerk erkend." },
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "**Toni Morrison** won Nobel Literature in:",
-        options: ["1993", "1900", "2020", "Heeft nooit gewonnen"],
+        options: ["1993", "1976", "2020", "2016"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te recent.", "Wel gewonnen."],
+        wrongHints: [null, "In 1976 won Saul Bellow. Morrison kreeg de prijs na haar bekendste roman, Beloved (1987).", "In 2020 won de dichteres Louise Glück. Morrison overleed al in 2019.", "In 2016 won Bob Dylan, als songschrijver. Morrison kreeg de prijs na Beloved (1987), maar wanneer?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerste zwarte vrouw Nobel", tekst: "Morrison (1931-2019): meest gevierde Afro-Amerikaanse schrijver. 'Beloved' (1987, Pulitzer + basis Nobel-citation) over een voormalige slavin wier dode dochter terugkeert als geest. Trauma-roman. Anderen: 'Song of Solomon', 'Sula'." },
@@ -291,13 +291,13 @@ const steps = [
       {
         q: "**Beat Generation** schrijvers (1950s) reageerden op:",
         options: [
-          "Conformisme + materialisme van naoorlogs Amerika",
-          "Eerste Wereldoorlog",
-          "Slavernij",
-          "Vietnam-oorlog"
+          "Conformisme en materialisme na 1945",
+          "De verwoesting van de Eerste Wereldoorlog",
+          "Slavernij in het Amerikaanse zuiden",
+          "De Vietnamoorlog en de dienstplicht"
         ],
         answer: 0,
-        wrongHints: [null, "Eerder generatie.", "Eerder eeuw.", "Latere generatie."],
+        wrongHints: [null, "Op WO1 reageerde de 'Lost Generation' rond 1920. Wat speelde er in de jaren '50?", "Slavernij was al in 1865 afgeschaft. Wat zagen jongeren in het Amerika van de jaren '50 om zich heen?", "De Vietnamoorlog escaleerde pas in de jaren '60. Waar zetten de Beats zich in de jaren '50 tegen af?"],
         uitlegPad: {
           stappen: [
             { titel: "On the road, jazz, drugs, oosterse filosofie", tekst: "Kerouac, Ginsberg, Burroughs reageerden op '50s-rust met spontane improvisatie, reizen, drugs-experimenten, oosters denken. 'On the Road' (1957): Kerouac's road-trip met Neal Cassady → manifest van vrijheid + zoektocht. Voorloper van hippiecultuur." },
@@ -308,13 +308,13 @@ const steps = [
       {
         q: "**Mark Twain's** Huckleberry Finn (1884) is bijzonder door:",
         options: [
-          "Amerikaanse spreektaal + kritiek op slavernij",
-          "Engelse koloniale stijl",
-          "Vol Shakespeare-citaten",
-          "Geen plot"
+          "Amerikaanse spreektaal en kritiek op slavernij",
+          "Deftige Britse stijl en kritiek op de adel",
+          "Amerikaanse spreektaal en lof voor het zuiden",
+          "Eerste roman over de Amerikaanse Burgeroorlog"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — anti-Brits.", "Wel plot."],
+        wrongHints: [null, "Huck vertelt zelf, in de taal van een jongen uit Missouri. Klinkt dat deftig Brits?", "Het boek speelt in het zuiden. Laat Twain dat zuiden met zijn slavernij er goed vanaf komen?", "Het boek speelt vóór de Burgeroorlog. Waar richt Twain zijn kritiek dan op?"],
         uitlegPad: {
           stappen: [
             { titel: "Echte Amerikaanse stem", tekst: "Voor Twain: Amerikaanse schrijvers imiteerden Brits Engels. Huck Finn (arme jongen) spreekt + denkt in DIALECT-Engels van Zuid-VS. Plus: hij sluit vriendschap met de weggelopen slaaf Jim → ontmaskert hypocrisie van 'fatsoenlijke' samenleving die slavernij steunde. Hemingway: 'All modern American literature comes from one book... Huckleberry Finn.'" },
@@ -335,7 +335,7 @@ const steps = [
         q: "Wie schreef **'The Handmaid's Tale'**?",
         options: ["Margaret Atwood", "Toni Morrison", "Zadie Smith", "Donna Tartt"],
         answer: 0,
-        wrongHints: [null, "Niet — Beloved.", "Niet — White Teeth.", "Niet — Goldfinch."],
+        wrongHints: [null, "Toni Morrison schreef Beloved, een roman over slavernij in Amerika.", "Zadie Smith schreef White Teeth, over families in Londen.", "Donna Tartt schreef The Goldfinch en The Secret History."],
         uitlegPad: {
           stappen: [
             { titel: "Atwood, 1985 (TV 2017)", tekst: "Dystopie waarin VS overgenomen door religieus regime; vruchtbare vrouwen ('handmaids') gedwongen tot baren voor elites. Vandaag herontdekt door politieke ontwikkelingen (Trump-tijdperk, anti-abortuswetten). TV-serie werd een hit in 2017. Vervolg 'The Testaments' (2019, Booker)." },
@@ -346,13 +346,13 @@ const steps = [
       {
         q: "**Symbolism** in literatuur betekent:",
         options: [
-          "Object/figuur staat voor groter idee",
-          "Letterlijke betekenis",
-          "Beschrijving zonder doel",
-          "Random toeval"
+          "Een object staat voor een groter idee",
+          "Een ding krijgt menselijke eigenschappen",
+          "Twee dingen vergelijken met 'like' of 'as'",
+          "Woorden die met dezelfde klank beginnen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel betekenis.", "Niet bedoeld."],
+        wrongHints: [null, "Dat heet personificatie ('the wind whispered'). Wat kan een duif of een roos 'betekenen'?", "Dat is een vergelijking (simile): het verband staat er letterlijk bij. Hoe werkt een symbool?", "Dat heet alliteratie en gaat over klank. Waar gaat symboliek over?"],
         uitlegPad: {
           stappen: [
             { titel: "Verhaal binnen verhaal", tekst: "Voorbeeld: in 'Great Gatsby' is 'green light' aan overkant van baai → symbool voor Gatsby's hoop + onbereikbare droom. Veel groter dan letterlijk lichtje. Auteur gebruikt vaak terugkerende objecten/kleuren als anker." },
@@ -363,13 +363,13 @@ const steps = [
       {
         q: "**Stream of consciousness** is een techniek van:",
         options: [
-          "Gedachten zoals ze opkomen, ongefilterd op papier",
-          "Plot in chronologische volgorde",
-          "Korte simpele zinnen",
-          "Geen verteller"
+          "Gedachten weergeven zoals ze opkomen",
+          "Een verteller die in ieders hoofd kijkt",
+          "Een personage dat de lezer direct aanspreekt",
+          "Gebeurtenissen vloeiend op volgorde vertellen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel verteller."],
+        wrongHints: [null, "Dat is een alwetende verteller: die kent alle gedachten, maar vertelt ze geordend. Is dat de techniek die hier bedoeld is?", "Een personage dat de lezer aanspreekt, doorbreekt de 'vierde wand'. Gaat consciousness (bewustzijn) daarover?", "'Stream' klinkt als vloeiend, maar volgen gedachten in je hoofd een nette tijdlijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Joyce + Woolf + Faulkner", tekst: "Pogen INTERN bewustzijn van personage weer te geven: associatieve sprongen, herinneringen, halverwege zinnen onderbroken, geen interpunctie soms. Voorbeeld Molly Bloom's monoloog (Ulysses): 40 pagina's met bijna geen leestekens." },
@@ -380,13 +380,13 @@ const steps = [
       {
         q: "**'Foreshadowing'** is:",
         options: [
-          "Hints geven over wat later in verhaal gaat gebeuren",
-          "Terugblik",
-          "Plot-twist",
-          "Personage-introductie"
+          "Vooraf hints geven over wat er later gebeurt",
+          "Terugblikken op wat er eerder gebeurde",
+          "De afloop vooraf al letterlijk verklappen",
+          "Een inleiding (proloog) vóór het verhaal"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — flashback.", "Niet — twist verrast juist.", "Niet specifiek."],
+        wrongHints: [null, "Dat heet een flashback. Wat betekent 'fore' in foreshadowing?", "Dan is de afloop geen geheim meer: dat is een flash-forward. Werkt foreshadowing zo openlijk?", "Een proloog is een los stuk tekst vooraf. Gaat foreshadowing over zo'n apart stuk, of over iets ín het verhaal?"],
         uitlegPad: {
           stappen: [{ titel: "Vooruitwijzen", tekst: "Auteur plaatst kleine signalen — woord, gebeurtenis, beschrijving — die later betekenis krijgen. Bv. een geweer wordt vroeg getoond in scène (Chekhov's gun): moet later afgaan. Beloont aandachtige lezers." }],
           niveaus: { basis: "Hints geven.", simpeler: "Vooruit-signaal.", nogSimpeler: "Voorspel" },
@@ -395,16 +395,16 @@ const steps = [
       {
         q: "Welk **citaat** is uit Hamlet?",
         options: [
-          "'To be or not to be, that is the question.'",
-          "'Call me Ishmael.'",
-          "'It was the best of times, it was the worst of times.'",
-          "'In the beginning was the Word.'"
+          "'Something is rotten in the state of Denmark.'",
+          "'Is this a dagger which I see before me?'",
+          "'O Romeo, Romeo, wherefore art thou Romeo?'",
+          "'We are such stuff as dreams are made on.'"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Moby Dick.", "Niet — A Tale of Two Cities.", "Niet — Bijbel."],
+        wrongHints: [null, "Iemand ziet een dolk voor zich, vlak voor een moord. Bij welk stuk over een Schotse edelman past dat?", "Hier roept iemand naar Romeo. In welk stuk speelt die verboden liefde?", "Dromen en magie: welk stuk speelt op een magisch eiland met Prospero?"],
         uitlegPad: {
-          stappen: [{ titel: "Beroemdste openingsregel monoloog", tekst: "Hamlet, Act 3, Scene 1. Filosofische overpeinzing over leven, dood, betekenis. Wordt vaak geparodieerd, gebruikt in films + reclame. Onmiddellijk herkenbaar — toets je geletterdheid via dit citaat." }],
-          niveaus: { basis: "Hamlet.", simpeler: "To be or not to be = Hamlet.", nogSimpeler: "Hamlet" },
+          stappen: [{ titel: "Let op het land", tekst: "Hamlet, Act 1, Scene 4: de wachter Marcellus zegt dit nadat de geest van Hamlets vader is verschenen. 'Denmark' is de sleutel: Hamlet is de Deense prins. Bekendste andere Hamlet-regel: 'To be or not to be' (Act 3, Scene 1). De andere citaten komen uit Macbeth, Romeo and Juliet en The Tempest." }],
+          niveaus: { basis: "Hamlet.", simpeler: "Denmark = Hamlet, de Deense prins.", nogSimpeler: "Hamlet" },
         },
       },
     ],

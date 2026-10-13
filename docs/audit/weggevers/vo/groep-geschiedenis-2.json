@@ -1,0 +1,1250 @@
+[
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Hoeveel standen waren er?",
+  "opties": [
+   "3",
+   "2",
+   "5",
+   "10"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de Verlichting?",
+  "opties": [
+   "Een denkstroming over rede en vrijheid",
+   "Een religieuze beweging",
+   "Een oorlog",
+   "Een schilderstijl"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat maakte de winter 1788-1789 moeilijk?",
+  "opties": [
+   "Slechte oogst + brood-tekort",
+   "Pestpandemie",
+   "Aardbeving",
+   "Buitenlandse aanval"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is de slogan van de Franse Revolutie?",
+  "opties": [
+   "Vrijheid, Gelijkheid, Broederschap",
+   "Een voor allen, allen voor een",
+   "God, vaderland, koning",
+   "Brood en vrede"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat gebeurde met Lodewijk XVI in 1793?",
+  "opties": [
+   "Onthoofd met guillotine",
+   "Verbannen",
+   "Gevlucht",
+   "Bleef koning"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel mensen werden ongeveer geguillotineerd tijdens de Terreur (in heel Frankrijk)?",
+  "opties": [
+   "~17.000",
+   "~100",
+   "~1 miljoen",
+   "~500"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wie was Napoleon Bonaparte?",
+  "opties": [
+   "Keizer van Frankrijk",
+   "Russische tsaar",
+   "Koning Engeland",
+   "Paus"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welke Nederlandse administratie komt van Napoleon?",
+  "opties": [
+   "Burgerlijke stand",
+   "Belasting",
+   "Politie",
+   "Brandweer"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de slogan van de revolutie?",
+  "opties": [
+   "Vrijheid, Gelijkheid, Broederschap",
+   "God, vaderland, koning",
+   "Brood + vrede",
+   "Werk maakt vrij"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "franse-revolutie-geschiedenis",
+  "file": "./franseRevolutieGeschiedenis.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat zijn 3 standen in pre-revolutie Frankrijk?",
+  "opties": [
+   "Geestelijkheid, adel, gewone volk",
+   "Rijk, gemiddeld, arm",
+   "Koning, generaal, paus",
+   "Mannen, vrouwen, kinderen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wie was Karel de Grote?",
+  "opties": [
+   "Koning Frankenrijk + keizer rond 800",
+   "Pestslachtoffer",
+   "Ridder",
+   "Kunstenaar"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wie was de machtigste in middeleeuwen?",
+  "opties": [
+   "Koning, adel en Kerk",
+   "Boeren",
+   "Ridders",
+   "Burgers in steden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een vazal?",
+  "opties": [
+   "Iemand die land in leen krijgt",
+   "Boer",
+   "Koning",
+   "Monnik"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat zijn tienden?",
+  "opties": [
+   "10% inkomen aan Kerk",
+   "10% korting",
+   "10e zoon",
+   "Tien jaar straf"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat deden monniken in kloosters?",
+  "opties": [
+   "Kopieerden boeken + bewaarden kennis",
+   "Reisden de wereld",
+   "Vochten oorlog",
+   "Werkten op markt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wat hadden ridders als wapens?",
+  "opties": [
+   "Zwaard en lans",
+   "Pistool en geweer",
+   "Tank en vliegtuig",
+   "Alleen hun vuisten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Waarom waren er kruistochten?",
+  "opties": [
+   "Religie + macht + land",
+   "Olie",
+   "Ontdekken van Amerika",
+   "Klimaat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Waar gingen de kruisvaarders heen?",
+  "opties": [
+   "Het Heilige Land",
+   "Amerika",
+   "China",
+   "Engeland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Wie won uiteindelijk Jeruzalem terug voor de moslims in 1187?",
+  "opties": [
+   "Saladin",
+   "Karel de Grote",
+   "Richard Leeuwenhart",
+   "Mohammed"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wie waren horigen?",
+  "opties": [
+   "Niet-vrije boeren, gebonden aan land",
+   "Slaven",
+   "Ridders",
+   "Burgers in stad"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een gilde?",
+  "opties": [
+   "Beroepsvereniging in stad",
+   "Soort slot",
+   "Soort munt",
+   "Soort eten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat betekent 'stadslucht maakt vrij'?",
+  "opties": [
+   "Jaar+dag in stad = vrij van horigheid",
+   "Lucht in stad gezond",
+   "Stadsmensen rijk",
+   "Gratis brood"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "middeleeuwen-geschiedenis",
+  "file": "./middeleeuwenGeschiedenis.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat droeg de pest over op mensen?",
+  "opties": [
+   "Vlooien op ratten",
+   "Vogels",
+   "Wind",
+   "Eten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat regelde het Kinderwetje van Van Houten in 1874?",
+  "opties": [
+   "Kinderen onder 12 mogen niet in fabrieken",
+   "Recht op schoolonderwijs",
+   "Kinderbijslag",
+   "Gratis ziekenhuis"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat gebeurde tijdens de crisisjaren '30 in NL?",
+  "opties": [
+   "Massa-werkloosheid",
+   "Massa-immigratie",
+   "Verplichte vakantie",
+   "Algemene vredetijd zonder problemen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Vóór 1945 was hulp bij armoede vooral een zaak van:",
+  "opties": [
+   "Familie + kerk + liefdadigheid",
+   "De overheid",
+   "Werkgevers",
+   "Niemand"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "Wat betekent 'volksverzekering'?",
+  "opties": [
+   "Voor iedereen verplicht",
+   "Alleen werknemers",
+   "Vrijwillig",
+   "Alleen rijken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat regelt de Algemene Bijstandswet (1965)?",
+  "opties": [
+   "Uitkering voor wie geen ander inkomen heeft",
+   "Pensioen vanaf 65",
+   "Werkloosheidsuitkering",
+   "Kinderbijslag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is Slochteren (1959)?",
+  "opties": [
+   "Aardgasveld in Groningen",
+   "Stad in Limburg",
+   "Politieke partij",
+   "Sociale wet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is het poldermodel?",
+  "opties": [
+   "Compromis tussen werkgevers + werknemers + regering",
+   "Type irrigatiesysteem",
+   "Politiek systeem zonder oppositie",
+   "Belastingsysteem"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Het Akkoord van Wassenaar (1982) regelde:",
+  "opties": [
+   "Loonmatiging + werktijdverkorting",
+   "Nieuwe grondwet",
+   "Privatisering NS",
+   "Eurolancering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "sociale-zekerheid-nl",
+  "file": "./socialeZekerheidNL.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Vergrijzing betekent:",
+  "opties": [
+   "Meer ouderen, minder jongeren in bevolking",
+   "Meer jongeren, minder ouderen in bevolking",
+   "Klimaatverandering",
+   "Inflatie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Welke koning regeerde NL in 1848 toen de grondwet werd herzien?",
+  "opties": [
+   "Willem II",
+   "Willem I",
+   "Willem-Alexander",
+   "Beatrix"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke liberale denker schreef de grondwet van 1848?",
+  "opties": [
+   "Johan Rudolph Thorbecke",
+   "Pim Fortuyn",
+   "Willem Drees",
+   "Mark Rutte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent: *'De koning is onschendbaar, de ministers zijn verantwoordelijk'*?",
+  "opties": [
+   "Koning kan niet vervolgd, ministers stappen op bij fout",
+   "Koning kan ministers ontslaan",
+   "Beide kunnen zelf wetten maken",
+   "Niemand is verantwoordelijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Motie van wantrouwen door de Tweede Kamer: wat is gevolg?",
+  "opties": [
+   "Minister moet aftreden",
+   "Koning treedt af",
+   "Verkiezingen direct",
+   "Niks"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welke 3 machten scheidt Montesquieu's trias politica?",
+  "opties": [
+   "Wetgevend / uitvoerend / rechterlijk",
+   "Leger / politie / belasting",
+   "Koning / ministers / volk",
+   "Kerk / staat / school"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie maakt een wet in Nederland?",
+  "opties": [
+   "Regering + Tweede Kamer + Eerste Kamer samen",
+   "Alleen de koning",
+   "Alleen de minister",
+   "De rechter"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "H",
+  "q": "Rechters worden benoemd voor:",
+  "opties": [
+   "Het leven",
+   "4 jaar",
+   "Tot 65 jaar precies",
+   "Tot regering ze ontslaat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Een gemeente weigert iemand een baan vanwege religie. Welke wet is overtreden?",
+  "opties": [
+   "Grondwet artikel 1",
+   "Privacy-wet AVG",
+   "Verkeerswet",
+   "Belastingwet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wie is voorzitter van de regering (= minister-president)?",
+  "opties": [
+   "Politicus gekozen door coalitie-partijen",
+   "Koning",
+   "Voorzitter Tweede Kamer",
+   "Voorzitter Eerste Kamer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welk politiek systeem heeft Nederland sinds 1848?",
+  "opties": [
+   "Constitutionele monarchie",
+   "Absolute monarchie",
+   "Republiek",
+   "Dictatuur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "staatsinrichting-1848",
+  "file": "./staatsinrichting1848.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke macht is rechterlijk?",
+  "opties": [
+   "Onafhankelijke rechtbanken + Hoge Raad",
+   "Tweede Kamer + Eerste Kamer",
+   "Regering + ambtenaren",
+   "Koning + ministerraad"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel tijdvakken zijn er?",
+  "opties": [
+   "10",
+   "5",
+   "12",
+   "8"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat veranderde tijdens de landbouwrevolutie?",
+  "opties": [
+   "Mensen gingen op één plek wonen en akkers bewerken",
+   "Mensen ontdekten elektriciteit",
+   "Romeinen veroverden Nederland",
+   "De boekdrukkunst werd uitgevonden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zijn hunebedden?",
+  "opties": [
+   "Stenen graven uit ~3000 v.Chr. in Drenthe",
+   "Romeinse forten",
+   "Middeleeuwse kastelen",
+   "Boerderijen uit de Gouden Eeuw"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waar werd democratie voor het eerst ingevoerd?",
+  "opties": [
+   "Athene (Griekenland)",
+   "Rome",
+   "Sparta",
+   "Egypte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wanneer eindigt tijdvak 2?",
+  "opties": [
+   "476 — val van het West-Romeinse Rijk",
+   "1492 — ontdekking Amerika",
+   "1789 — Franse Revolutie",
+   "1945 — einde WO2"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het feodale stelsel?",
+  "opties": [
+   "Koning geeft land aan ridders, die hem in ruil daarvoor beschermen",
+   "Iedereen mag stemmen voor de koning",
+   "Het systeem van Romeinse legerkampen",
+   "Een soort handelsroute"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zijn gilden?",
+  "opties": [
+   "Organisaties van ambachtslieden in steden",
+   "Soort kerkgebouwen",
+   "Romeinse soldaten",
+   "Vikinglegers"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat veranderde de boekdrukkunst (~1450)?",
+  "opties": [
+   "Boeken werden veel goedkoper en kennis verspreidde sneller",
+   "De Romeinen vonden Nederland",
+   "Kastelen werden gebouwd",
+   "Het christendom werd verboden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat deed Maarten Luther in 1517?",
+  "opties": [
+   "Plakte 95 stellingen op de kerkdeur als protest",
+   "Ontdekte Amerika",
+   "Werd koning van Nederland",
+   "Vond de boekdrukkunst uit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat was de VOC?",
+  "opties": [
+   "Een handelsbedrijf dat handel dreef in Azië",
+   "Een politieke partij in Nederland",
+   "Het Romeinse leger",
+   "Een protestantse kerk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie was Lodewijk XIV?",
+  "opties": [
+   "Absolute koning van Frankrijk ('Zonnekoning')",
+   "Engelse koning",
+   "Nederlandse stadhouder",
+   "Spaanse keizer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de trias politica?",
+  "opties": [
+   "Scheiding tussen wetgevende, uitvoerende en rechtsprekende macht",
+   "Drie soorten kerken",
+   "Drie keizers in Rome",
+   "Een drie-eenheid in het christendom"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat veranderde door de stoommachine?",
+  "opties": [
+   "Fabrieken, treinen en massaproductie kwamen op",
+   "Iedereen kreeg een computer",
+   "Romeinen werden machtig",
+   "De middeleeuwen begonnen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tijdvakken-geschiedenis",
+  "file": "./tijdvakkenGeschiedenis.js",
+  "stap": 10,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de Koude Oorlog?",
+  "opties": [
+   "Spanning tussen VS en Sovjet-Unie zonder open oorlog",
+   "Een oorlog in Antarctica",
+   "Een oorlog uit de middeleeuwen",
+   "De Tachtigjarige Oorlog"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Lebensraum = ?",
+  "opties": [
+   "Leefruimte in Oost-Europa",
+   "Vrije markt",
+   "Religieuze tolerantie",
+   "Koloniën in Afrika"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Stalingrad (1942-43):",
+  "opties": [
+   "Duitse nederlaag, keerpunt in het oosten",
+   "Duitse overwinning",
+   "Slag zonder militair belang",
+   "Stad die zonder strijd viel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Hongerwinter (1944-45):",
+  "opties": [
+   "Hongersnood in bezet West-NL",
+   "Korte, zachte winter",
+   "Italiaanse hongersnood",
+   "Hongersnood in Rusland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wannsee-conferentie (jan 1942):",
+  "opties": [
+   "Nazi-plan om alle Europese joden te doden",
+   "Vredesakkoord",
+   "Plan voor Olympische Spelen",
+   "Overleg over oorlogseconomie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2K",
+  "q": "Februaristaking (25-26 feb 1941):",
+  "opties": [
+   "Protest tegen jodenvervolging",
+   "Voor hogere lonen",
+   "Voor de koningin",
+   "Tegen voedseltekort"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "SK",
+  "q": "Oskar Schindler redde:",
+  "opties": [
+   "~1100 joden",
+   "Niemand",
+   "Hele dorpen",
+   "Alleen zijn eigen familie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Marshall-plan was:",
+  "opties": [
+   "Amerikaanse hulp voor wederopbouw",
+   "Militair plan",
+   "Energie-plan",
+   "Russische ontwikkelingshulp"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Neurenberg-principe:",
+  "opties": [
+   "'Orders volgen' is geen verdediging voor oorlogsmisdaden",
+   "Geen straf voor leiders",
+   "Alleen militair berecht",
+   "Geen rechtszitting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tweede-wereldoorlog-havo-vwo",
+  "file": "./tweedeWereldoorlogHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2K",
+  "q": "Europese integratie (EGKS → EU) had als hoofddoel:",
+  "opties": [
+   "Vrede door economische samenwerking",
+   "Eén Europees leger vormen",
+   "Engels verspreiden",
+   "Eén godsdienst voor Europa"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Verdrag van Versailles 1919: wat bepaalde 'oorlogsschuld-clausule' (art 231)?",
+  "opties": [
+   "Duitsland is alleen schuldig aan WO1",
+   "Frankrijk schuldig",
+   "Geen oorlog meer",
+   "Schadevergoeding voor VS"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Stalin-Hitler-pact (Molotov-Ribbentrop) 1939 betekende:",
+  "opties": [
+   "Niet-aanvalsverdrag met geheime deal",
+   "Militair bondgenootschap",
+   "Oorlog tegen elkaar",
+   "Handelsboycot"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat besloot de Wannsee-Conferentie (jan 1942)?",
+  "opties": [
+   "Systematische uitroeiing Joden",
+   "Inval Sovjet-Unie",
+   "Capitulatie",
+   "Vrede"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het 'IJzeren Gordijn' (Churchill 1946)?",
+  "opties": [
+   "Symbolische scheiding tussen West + Oost-Europa",
+   "Echte muur Berlijn",
+   "Wapen",
+   "Beleid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Marshall-Plan was:",
+  "opties": [
+   "VS economische hulp West-Europa",
+   "Sovjet-plan",
+   "Oorlogsplan",
+   "NAVO-document"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat is Glasnost (Gorbatsjov)?",
+  "opties": [
+   "Openheid",
+   "Herstructurering",
+   "Kernwapen",
+   "Communisme"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Srebrenica 1995 is NL-trauma omdat:",
+  "opties": [
+   "Dutchbat kon de moslimmannen niet beschermen",
+   "NL-soldaten pleegden de moord",
+   "NL won een veldslag",
+   "Er waren geen Nederlanders bij"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "11 september 2001 begon:",
+  "opties": [
+   "War on Terror + Afghanistan-oorlog",
+   "Koude Oorlog",
+   "WO2",
+   "Vietnam-oorlog"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke gebeurtenis wordt vaakst aangewezen als directe oorzaak WO2?",
+  "opties": [
+   "Inval Polen door DE (1 sept 1939)",
+   "Beurskrach 1929",
+   "Verdrag Versailles 1919",
+   "Pearl Harbor"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de NAVO (NATO)?",
+  "opties": [
+   "Westers militair bondgenootschap",
+   "Communistisch blok",
+   "VN-onderdeel",
+   "Kerncentrale-organisatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Korea-oorlog (1950-53) was tussen:",
+  "opties": [
+   "Noord-Korea + Zuid-Korea",
+   "DDR + BRD",
+   "VS + Vietnam",
+   "NL + Indonesië"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "twintigste-eeuw-havo-vwo",
+  "file": "./twintigsteEeuwHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Wanneer NL erkende Indonesische onafhankelijkheid?",
+  "opties": [
+   "27 december 1949",
+   "17 augustus 1945",
+   "5 mei 1945",
+   "1965"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

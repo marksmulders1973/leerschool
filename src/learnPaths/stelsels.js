@@ -78,7 +78,7 @@ const steps = [
         q: "*Is x = 5, y = 2 een oplossing van het stelsel: x + y = 7 én 2x − y = 8?*",
         options: ["Ja — beide vergelijkingen kloppen","Nee — alleen de eerste klopt","Nee — alleen de tweede klopt","Nee — geen van beide klopt"],
         answer: 0,
-        wrongHints: [null, "Vul het paar in BEIDE vergelijkingen — kloppen ze allebei?", "Heb je beide vergelijkingen los gecheckt? Eén klopt niet automatisch betekent 'beide niet'.", "Reken rustig na: vul x en y in elke vergelijking apart — kloppen ze dan allebei?"],
+        wrongHints: [null, "Vul het paar in BEIDE vergelijkingen — kloppen ze allebei?", "Vul x = 5 en y = 2 in de eerste vergelijking in: wat is 5 + 2?", "Reken rustig na: vul x en y in elke vergelijking apart — kloppen ze dan allebei?"],
         uitlegPad: {
           stappen: [{ titel: "Beide vergelijkingen checken", tekst: "Vgl 1: 5+2=7 ✓. Vgl 2: 2·5−2=10−2=8 ✓. Beide kloppen → oplossing." }],
           woorden: [{ woord: "stelsel-oplossing", uitleg: "Paar (x,y) dat BEIDE vergelijkingen waar maakt." }],
@@ -179,9 +179,9 @@ const steps = [
     checks: [
       {
         q: "*Stelsel: y = 3x − 1 én x + y = 7. Wat doe je in stap 2 (substitutie)?*",
-        options: ["Vul (3x − 1) in voor y in de tweede vergelijking","Vul x = 7 − y in beide vergelijkingen","Tel beide vergelijkingen op","Vermenigvuldig beide kanten met 3"],
+        options: ["Vul 3x − 1 in voor y in x + y = 7","Vul x = 7 − y in beide vergelijkingen","Tel beide vergelijkingen bij elkaar op","Vermenigvuldig beide kanten met 3"],
         answer: 0,
-        wrongHints: [null, "Te veel werk — y is al netjes geïsoleerd. Pak die uitdrukking en vul in waar y staat.", "Dat is optellen-methode, niet substitutie.", "Vermenigvuldigen is geen onderdeel van de basis-substitutie-stap."],
+        wrongHints: [null, "Met x = 7 − y moet je eerst omschrijven en in twee vergelijkingen invullen. Kijk naar de eerste vergelijking: welke variabele staat daar al alleen?", "Dat is optellen-methode, niet substitutie.", "Waarom zou je met 3 vermenigvuldigen? Bij substitutie vul je iets in. Welke variabele staat al alleen?"],
         uitlegPad: {
           stappen: [{ titel: "Y al klaar, invullen", tekst: "y = 3x−1 is al geïsoleerd. Vul (3x−1) in voor y in 2e vergelijking: x + (3x−1) = 7." }],
           woorden: [{ woord: "substitutie", uitleg: "Vervangen. Hier: y vervangen door uitdrukking met x." }],
@@ -247,7 +247,7 @@ const steps = [
         q: "*In stelsel \"x + 3y = 8 en 2x + 5y = 14\" — welke variabele isoleer je het eerst?*",
         options: ["x in vergelijking 1 (heeft coëfficiënt 1)","y in vergelijking 1 (heeft coëfficiënt 3)","x in vergelijking 2 (heeft coëfficiënt 2)","Geen verschil — kies willekeurig"],
         answer: 0,
-        wrongHints: [null, "Coëfficiënt 3 betekent meer rekenwerk. Coëfficiënt 1 is veel makkelijker.", "Coëfficiënt 2 vereist een breuk. Coëfficiënt 1 is ideaal.", "Coëfficiënt 1 is altijd handiger — minder breuken, minder fouten."],
+        wrongHints: [null, "Als je y vrijmaakt, moet je door 3 delen. Krijg je dan breuken?", "Als je x uit vergelijking 2 vrijmaakt, deel je door 2. Krijg je dan breuken, en kan het ook zonder?", "Maakt het voor het rekenwerk uit of je door 1, 2 of 3 moet delen?"],
         uitlegPad: {
           stappen: [{ titel: "Kies coëfficiënt 1", tekst: "x in vgl 1 heeft coëfficiënt 1 — meteen klaar voor isoleren: x = 8 − 3y. Geen breuken. Andere keuzes geven breuken." }],
           woorden: [{ woord: "coëfficiënt", uitleg: "Getal vóór variabele. Bij x of 1x = coëff 1." }],
@@ -279,9 +279,9 @@ const steps = [
     checks: [
       {
         q: "*Stelsel: 4x + y = 13 en 2x − y = 5. Welke methode is direct toepasbaar?*",
-        options: ["Optellen — y heeft tegengesteld teken (+1 en -1)","Aftrekken — x heeft zelfde teken","Vermenigvuldigen met 2","Geen — eerst manipuleren"],
+        options: ["Optellen — y heeft tegengestelde tekens","Aftrekken — x heeft hetzelfde teken","Vermenigvuldigen — x wordt dan gelijk","Eerst een vergelijking herschrijven"],
         answer: 0,
-        wrongHints: [null, "Voor aftrekken moeten coëfficiënten gelijk zijn. x heeft 4 in de eerste en 2 in de tweede — niet gelijk.", "Niet nodig — y is direct tegengesteld, dus optellen werkt meteen.", "Wel direct toepasbaar — optellen elimineert y direct."],
+        wrongHints: [null, "Voor aftrekken moeten coëfficiënten gelijk zijn. x heeft 4 in de eerste en 2 in de tweede — niet gelijk.", "Daarmee maak je de x-termen gelijk, maar dat kost een extra stap. Staat er al een variabele klaar?", "Is herschrijven nodig? Kijk eerst naar de y-termen in beide vergelijkingen."],
         uitlegPad: {
           stappen: [{ titel: "+y en −y → optellen", tekst: "y heeft +1 en −1 in twee vergelijkingen. Optellen: (+y) + (−y) = 0 → y verdwijnt. Resultaat: 6x = 18 → x = 3." }],
           woorden: [{ woord: "elimineren", uitleg: "Variabele wegmaken door + of − van vergelijkingen." }],
@@ -345,9 +345,9 @@ const steps = [
     checks: [
       {
         q: "*Welke methode ligt het meest voor de hand bij: y = 5x én 2x + y = 14?*",
-        options: ["Substitutie (y is al geïsoleerd)","Eliminatie (optellen)","Eliminatie (aftrekken)","Grafisch oplossen"],
+        options: ["Substitutie (y staat al alleen)","Eliminatie (y staat in beide)","Eliminatie (x staat in beide)","Grafisch (twee rechte lijnen)"],
         answer: 0,
-        wrongHints: [null, "Optellen vereist standaard-vorm in beide. Hier is y al netjes alleen.", "Aftrekken vereist standaard-vorm in beide met matchende coëfficiënt. Hier is y al alleen.", "Grafisch werkt maar is veel werk — welke methode is sneller als y al geïsoleerd staat?"],
+        wrongHints: [null, "y staat inderdaad in beide, maar om te elimineren moet je eerst omschrijven. Hoe ziet de eerste vergelijking er al uit?", "Om x weg te werken moet je eerst vermenigvuldigen. Kan het met minder rekenwerk? Kijk naar de eerste vergelijking.", "Grafisch werkt, maar is veel werk. Welke methode is sneller als je naar de eerste vergelijking kijkt?"],
         uitlegPad: {
           stappen: [{ titel: "Y al klaar = substitutie", tekst: "y = 5x is al netjes geïsoleerd. Vul direct in: 2x + 5x = 14 → 7x = 14 → x = 2. Substitutie is hier veruit snelste." }],
           woorden: [{ woord: "methode-keuze", uitleg: "Slim kiezen op basis van vorm vergelijkingen." }],
@@ -410,15 +410,15 @@ const steps = [
     checks: [
       {
         q: "*\"Twee getallen samen 20, hun verschil 6. Welke vergelijkingen?\"*",
-        options: ["x + y = 20 en x − y = 6","x · y = 20 en x · y = 6","x + y = 20 en 2x + 2y = 6","x − y = 20 en x − y = 6"],
+        options: ["x + y = 20 en x − y = 6","x + y = 6 en x − y = 20","x · y = 20 en x − y = 6","x + y = 20 en x : y = 6"],
         answer: 0,
-        wrongHints: [null, "'Samen' = optellen, niet vermenigvuldigen.", "'Verschil' = aftrekken, niet 2x + 2y.", "'Samen' betekent optellen — de eerste vergelijking moet een som zijn."],
+        wrongHints: [null, "Welk getal hoort bij 'samen' en welk bij 'verschil'? Kijk welke vergelijking welk getal krijgt.", "Betekent 'samen' keer elkaar, of bij elkaar opgeteld?", "Is een verschil hetzelfde als een deling?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woorden", tekst: "'Samen 20' = som = x+y=20. 'Verschil 6' = aftrekken = x−y=6 (grotere - kleinere)." }],
           woorden: [{ woord: "som", uitleg: "Resultaat optelling." }, { woord: "verschil", uitleg: "Resultaat aftrekking." }],
           theorie: "Standaard woord-vertaling: 'samen/totaal' → +. 'verschil/meer/minder' → −. 'keer zoveel' → ×.",
           voorbeelden: [{ type: "oplossen", tekst: "x+y=20 en x−y=6. Optellen: 2x=26 → x=13. y=20−13=7. Getallen: 13 en 7." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "x·y=20 = product (niet som). 2x+2y=6 = onlogisch. x−y=20 voor 'samen' fout." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "x·y=20 = product (niet som). x:y=6 = deling (niet verschil). x+y=6 en x−y=20 = getallen verwisseld." }],
           niveaus: { basis: "x+y=20, x−y=6.", simpeler: "Samen=+, verschil=−.", nogSimpeler: "+,−" },
         },
       },
@@ -440,7 +440,7 @@ const steps = [
         q: "*Los op: x + y = 10 en 2x − y = 5. Wat is x?*",
         options: ["x = 5", "x = 10", "x = 7,5", "x = 3,33"],
         answer: 0,
-        wrongHints: [null, "Optellen elimineert y. Wat krijg je dan voor 3x — en deel je dat door 3?", "Hoe komt 7,5 eruit? Even nagaan welk getal je deelt en door wat.", "Geen ingewikkelde breuk hier — je krijgt een mooi heel getal als je correct deelt."],
+        wrongHints: [null, "Optellen elimineert y. Wat krijg je dan voor 3x — en deel je dat door 3?", "7,5 is 15 / 2. Hoeveel x heb je na het optellen: 2x of 3x?", "3,33 is 10 / 3. Welk getal staat rechts na het optellen: 10 of 15?"],
         uitlegPad: {
           stappen: [
             { titel: "Optellen", tekst: "x+y=10, 2x−y=5. Optellen: 3x=15 → x=5." },
@@ -491,7 +491,7 @@ const steps = [
         q: "*\"Een hond + 2 katten = 8 kg. 2 honden + 1 kat = 11 kg.\" Hoeveel weegt een hond?*",
         options: ["Hond = 4,67 kg", "Hond = 4 kg", "Hond = 5 kg", "Hond = 3 kg"],
         answer: 0,
-        wrongHints: [null, "Stel eerst het stelsel op met h en k — vul dan beide gegevens in en los op.", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?"],
+        wrongHints: [null, "Vul h = 4 in: dan wegen 2 katten samen 4 kg, dus k = 2. Klopt 2h + k = 11 dan?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "h+2k=8 en 2h+k=11. Verg 2 ·2: 4h+2k=22. Aftrekken: 3h=14 → h=14/3≈4,67." },
@@ -537,7 +537,7 @@ const steps = [
         q: "*\"Een fietsentocht: 60 km. Eerste deel 15 km/u, tweede 20 km/u. Totaal 3,5 uur.\" Hoe lang duurde het eerste deel?*",
         options: ["2 uur","1 uur","1,5 uur","3 uur"],
         answer: 0,
-        wrongHints: [null, "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?", "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?", "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?"],
+        wrongHints: [null, "Bij 1 uur fiets je 15 km; er blijft 45 km over voor 2,5 uur. Is dat 20 km/u?", "Bij 1,5 uur fiets je 22,5 km; er blijft 37,5 km over voor 2 uur. Is dat 20 km/u?", "Bij 3 uur fiets je 45 km; er blijft 15 km over voor een half uur. Is dat 20 km/u?"],
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "t1+t2=3,5 (tijd). 15·t1+20·t2=60 (afstand)." },
@@ -552,7 +552,7 @@ const steps = [
       },
       {
         q: "*Stelsel: 2x − y = 4 en 4x − 2y = 8. Aantal oplossingen?*",
-        options: ["Oneindig veel","Eén","Geen","Twee"],
+        options: ["Oneindig veel","Precies één","Geen enkele","Precies twee"],
         answer: 0,
         wrongHints: [null, "Vermenigvuldig vergelijking 1 met 2 en vergelijk met vergelijking 2 — wat valt je op?", "Geen oplossing zou tegenstrijdige vergelijkingen betekenen. Vermenigvuldig vergelijking 1 met 2 — spreken ze elkaar dan tegen?", "Een lineair stelsel heeft 0, 1 of oneindig — niet precies 2."],
         uitlegPad: {
@@ -610,11 +610,11 @@ const steps = [
           niveaus: { basis: "€2,50.", simpeler: "k=2, b=2,50. Broodje €2,50.", nogSimpeler: "€2,50" },
         },
       },
-      { q: "Een **stelsel** heeft hoeveel onbekenden?", options: ["2 of meer","1","0","Oneindig"], answer: 0, wrongHints: [null, "Dat is gewone vergelijking.", "Niet.", "Niet algemeen."] },
-      { q: "Welke methode lost stelsel op door optellen/aftrekken?", options: ["Eliminatie","Substitutie","Factorisatie","Grafiek"], answer: 0, wrongHints: [null, "Andere methode (één vervangen).", "Niet relevant.", "Niet specifiek."] },
-      { q: "Stelsel x+y=5 en x−y=1. Wat is x?", options: ["3","2","4","1"], answer: 0, wrongHints: [null, "Dat is de andere onbekende, niet x. Tel de vergelijkingen eens op.", "Niet.", "Niet."] },
+      { q: "Een **stelsel** heeft hoeveel onbekenden?", options: ["2 of meer","1","0","Oneindig"], answer: 0, wrongHints: [null, "Met één onbekende heb je een gewone vergelijking. Waarom zou je dan meerdere vergelijkingen nodig hebben?", "Zonder onbekenden valt er niets op te lossen.", "Een stelsel heeft een vast aantal onbekenden, zoals x en y. Is dat oneindig?"] },
+      { q: "Welke methode lost stelsel op door optellen/aftrekken?", options: ["Eliminatie","Substitutie","Factorisatie","Grafiek"], answer: 0, wrongHints: [null, "Bij substitutie vul je een uitdrukking in. Welke methode werkt met optellen of aftrekken?", "Factoriseren gebruik je bij kwadratische vergelijkingen, niet om een onbekende weg te werken.", "Bij de grafische methode teken je lijnen. Welke methode gebruikt optellen of aftrekken?"] },
+      { q: "Stelsel x+y=5 en x−y=1. Wat is x?", options: ["3","2","4","1"], answer: 0, wrongHints: [null, "Dat is de andere onbekende, niet x. Tel de vergelijkingen eens op.", "Vul x = 4 in de eerste vergelijking in: dan is y = 1. Klopt x − y = 1 dan?", "Bij x = 1 is y = 4. Klopt x − y = 1 dan?"] },
       { q: "Grafisch: snijpunt twee lijnen = ?", options: ["Oplossing van het stelsel","Startgetal van beide lijnen","Hellingsgetal van beide lijnen","Nulpunt van beide lijnen"], answer: 0, wrongHints: [null, "Het startgetal lees je af waar een lijn de y-as snijdt. Hier snijden de lijnen elkaar — wat geldt daar voor x en y?", "Het hellingsgetal zegt hoe steil een lijn is; dat is geen punt. Wat is bijzonder aan een punt dat op beide lijnen ligt?", "Een nulpunt ligt altijd op de x-as, maar het snijpunt kan overal liggen. Wat geldt daar voor beide vergelijkingen?"] },
-      { q: "Stelsel y=2x en y=x+1. Snijpunt y= ?", options: ["2","1","0","3"], answer: 0, wrongHints: [null, "Niet — dat is wat y wordt als x nul is, niet op het snijpunt.", "Niet.", "Niet."] },
+      { q: "Stelsel y=2x en y=x+1. Snijpunt y= ?", options: ["2","1","0","3"], answer: 0, wrongHints: [null, "Niet — dat is wat y wordt als x nul is, niet op het snijpunt.", "Bij y = 0 is x = 0 volgens y = 2x. Klopt y = x + 1 dan?", "Bij y = 3 hoort volgens y = 2x een x van 1,5. Klopt y = x + 1 dan?"] },
     ],
   },
 ];

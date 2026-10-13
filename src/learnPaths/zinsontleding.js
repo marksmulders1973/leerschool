@@ -60,7 +60,7 @@ const steps = [
         wrongHints: [
           null,
           "Koffie is een ding, geen werkwoord.",
-          "Heerlijk zegt hoe de koffie smaakt — het is geen werkwoord.",
+          "Heerlijk zegt hoe iets is. Kun je het vervoegen, zoals ik heerlijk, hij heerlijkt?",
           "Vandaag is een tijdsaanduiding, geen werkwoord.",
         ],
         uitlegPad: {
@@ -218,7 +218,7 @@ const steps = [
         wrongHints: [
           null,
           "'Zou' is alleen de pv. Het werkwoordelijk gezegde bevat ALLE werkwoorden samen.",
-          "Je mist 'zou' (de pv). Het hele werkwoordelijk gezegde = pv + alle andere werkwoorden.",
+          "Welke werkwoorden staan er in de zin? Tel ze allemaal, ook de persoonsvorm.",
           "'Thuis' is een bepaling (waar?), geen werkwoord. Tel alleen de werkwoorden.",
         ],
         uitlegPad: {
@@ -714,16 +714,16 @@ const steps = [
         q: "*Hoeveel persoonsvormen staan er in: \"Toen ik thuiskwam, lag de hond al te slapen.\"?*",
         options: [
           "Twee (thuiskwam + lag)",
-          "Een (lag)",
+          "Eén (lag, in de hoofdzin)",
           "Drie (thuiskwam + lag + slapen)",
-          "Vier",
+          "Twee (lag + slapen)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Bij samengestelde zinnen heb je vaak meerdere persoonsvormen — één per deelzin. Tel beide deelzinnen.",
           "'Slapen' is geen persoonsvorm hier — het is een infinitief in een werkwoordelijk restdeel ('lag te slapen').",
-          "Te veel. Tel alleen werkwoorden die echt vervoegd zijn naar persoon en tijd.",
+          "'Slapen' staat na 'te' en is niet vervoegd. Welk ander werkwoord in de zin is wél vervoegd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Twee deelzinnen, twee pv", tekst: "Toen ik thuiskwam (bijzin: thuiskwam) + lag de hond (hoofdzin: lag) = 2 pv." }],
@@ -746,7 +746,7 @@ const steps = [
         wrongHints: [
           null,
           "'Moet' is alleen de pv — het werkwoordelijk gezegde bestaat uit ALLE werkwoorden samen.",
-          "Je mist 'moet' (de pv).",
+          "Welke werkwoorden staan er in de zin? Tel ze allemaal, ook de persoonsvorm.",
           "'Morgen vroeg' zijn bepalingen, geen werkwoorden. Tel alleen de werkwoorden.",
         ],
         uitlegPad: {
@@ -771,7 +771,7 @@ const steps = [
           null,
           "Binnen = bep. van plaats (waar?), niet van reden.",
           "We = onderwerp.",
-          "Blijven = persoonsvorm. Reden = WAAROM? → bijzin met 'omdat'.",
+          "Blijven = persoonsvorm. Welk zinsdeel geeft antwoord op de vraag 'waarom?'",
         ],
         uitlegPad: {
           stappen: [{ titel: "Waarom? = reden", tekst: "Waarom blijven we binnen? omdat het regent = bep. van reden." }],
@@ -805,7 +805,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verhuizen is een werkwoord, maar niet vervoegd. 'Zullen' is wel vervoegd: meervoud, passend bij 'mijn ouders'.",
+          "Verhuizen is een werkwoord, maar is het vervoegd? Zet de zin in het enkelvoud ('mijn vader …'): welk werkwoord verandert dan mee?",
           "Ouders = onderwerp.",
           "Spanje = bep. van plaats.",
         ],

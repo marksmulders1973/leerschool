@@ -148,16 +148,16 @@ const steps = [
         q: "Een middelloodlijn van AB is een lijn die...",
         options: [
           "Door het midden gaat én loodrecht op AB staat",
-          "Schuin door A loopt",
-          "Parallel aan AB loopt",
-          "Door beide punten A en B gaat",
+          "Door A gaat én loodrecht op AB staat",
+          "Door het midden gaat én evenwijdig aan AB loopt",
+          "De hoek bij A in twee gelijke delen deelt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Schuin werkt niet — de naam zegt 'lood' = loodrecht.",
-          "Parallel betekent dezelfde richting — niet loodrecht. Dat is geen middelloodlijn.",
-          "Door A en B is gewoon AB zelf, niet de middelloodlijn.",
+          "Dat is een loodlijn door A. Kijk naar het eerste deel van het woord middelloodlijn.",
+          "Evenwijdig betekent dezelfde richting als AB, dus niet loodrecht. Dat is geen middelloodlijn.",
+          "Een lijn die een hoek halveert is een bissectrice. Waar gaat een middelloodlijn door?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Midden + lood", tekst: "Middelloodlijn = door midden van AB én loodrecht op AB." }],
@@ -199,7 +199,7 @@ const steps = [
           "P ligt even ver van A als van B",
           "P ligt dichterbij A dan B",
           "P ligt verder van A dan van B",
-          "P ligt altijd op de lijn AB zelf",
+          "P ligt op de lijn AB zelf",
         ],
         answer: 0,
         wrongHints: [
@@ -243,15 +243,15 @@ const steps = [
         options: [
           "Het snijpunt van de drie middelloodlijnen",
           "Het snijpunt van de drie hoogtelijnen",
-          "Het midden van de driehoek",
-          "Een willekeurig punt binnen de driehoek",
+          "Het snijpunt van de drie zwaartelijnen",
+          "Het snijpunt van de drie bissectrices",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Hoogtelijnen geven een ander snijpunt (het hoogtelijnpunt). Voor de omgeschreven cirkel: middelloodlijnen.",
-          "'Midden van de driehoek' is vaag. M is specifiek waar de drie middelloodlijnen kruisen.",
-          "M is geen willekeurig punt — het is exact bepaald als snijpunt van middelloodlijnen.",
+          "Hoogtelijnen snijden elkaar in het hoogtepunt. De omgeschreven cirkel gaat door de drie hoekpunten: welke lijnen liggen overal even ver van twee hoekpunten?",
+          "Zwaartelijnen snijden elkaar in het zwaartepunt, het balanspunt. Welke lijnen liggen overal even ver van twee hoekpunten?",
+          "Bissectrices geven het middelpunt van de ingeschreven cirkel, die de zijden raakt. Waar gaat de omgeschreven cirkel doorheen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "3 middelloodlijnen → M", tekst: "Drie middelloodlijnen van driehoek kruisen in één punt M — middelpunt omgeschreven cirkel." }],
@@ -337,15 +337,15 @@ const steps = [
         q: "Punt P ligt op de bissectrice van een hoek. Wat klopt?",
         options: [
           "P ligt even ver van beide zijden van de hoek",
-          "P ligt op één van de zijden",
-          "P ligt op de top van de hoek",
+          "P ligt op één van de zijden van de hoek",
+          "P ligt dichter bij de top dan bij de zijden",
           "P ligt verder van één zijde dan de andere",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat zou betekenen dat P op een zijde ligt, niet op de bissectrice (die zit ertussen).",
-          "Op de top zou alleen kloppen voor één punt. P is een willekeurig punt op de bissectrice.",
+          "Hoe verder P van de top ligt, hoe verder ook van de zijden. Maar wat geldt er voor de afstand tot de twee zijden?",
           "Een bissectrice is de spiegel-as van de hoek. Wat betekent dat voor de afstanden tot de twee zijden?",
         ],
         uitlegPad: {
@@ -384,14 +384,14 @@ const steps = [
           "Snijpunt van de drie bissectrices",
           "Snijpunt van de drie middelloodlijnen",
           "Het zwaartepunt",
-          "Een hoekpunt van de driehoek",
+          "Snijpunt van de drie hoogtelijnen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Middelloodlijnen geven het middelpunt van de **omgeschreven** cirkel (door de hoekpunten). De ingeschreven cirkel moet de zijden raken — welke lijnen liggen overal even ver van twee zijden?",
           "Het zwaartepunt is het balanspunt — dat ligt niet altijd even ver van de drie zijden. Welke lijnen hebben die eigenschap wél?",
-          "De ingeschreven cirkel zit binnen de driehoek, niet op een hoek.",
+          "Hoogtelijnen snijden elkaar in het hoogtepunt; dat ligt soms zelfs buiten de driehoek. Welke lijnen liggen overal even ver van twee zijden?",
         ],
         uitlegPad: {
           stappen: [{ titel: "3 bissectrices → I", tekst: "Drie bissectrices kruisen in I, het middelpunt van de ingeschreven cirkel." }],
@@ -431,14 +431,14 @@ const steps = [
           "Het midden van de overstaande zijde",
           "Het midden van een willekeurige zijde",
           "Het midden van zijde naast A",
-          "De andere hoeken",
+          "Het voetpunt van de loodlijn uit A",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Niet willekeurig — er is precies één zijde die hoek A níet als eindpunt heeft. Welke?",
           "Een lijn van A naar het midden van een zijde naast A loopt langs die zijde zelf — dat is geen zwaartelijn.",
-          "Een zwaartelijn eindigt op een midden, niet op een hoek.",
+          "Een lijn uit A die loodrecht op de overstaande zijde staat, is een hoogtelijn. Waar eindigt een zwaartelijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Naar midden overkant", tekst: "Vanuit hoek A naar midden van BC (de zijde tegenover A)." }],
@@ -476,16 +476,16 @@ const steps = [
         q: "Hoe deelt het zwaartepunt een zwaartelijn?",
         options: [
           "In de verhouding 2 : 1, vanaf de hoek gerekend",
-          "Precies in tweeën (1:1)",
-          "In drie gelijke delen",
-          "Niet — Z ligt aan een uiteinde",
+          "In de verhouding 1 : 1, precies in het midden",
+          "In de verhouding 1 : 2, vanaf de hoek gerekend",
+          "In de verhouding 3 : 1, vanaf de hoek gerekend",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Z ligt niet precies in het midden van de zwaartelijn. Ligt Z dichter bij de hoek of dichter bij het midden van de zijde?",
-          "Z is één punt, dus het verdeelt de zwaartelijn in twee stukken, niet drie. Zijn die twee stukken even lang?",
-          "Z ligt **binnen** de driehoek, op het kruispunt — niet op een uiteinde.",
+          "Dan zou Z dichter bij de hoek liggen dan bij het midden van de zijde. Ligt Z echt zo dicht bij de hoek?",
+          "Bij 3 : 1 ligt Z heel dicht bij het midden van de zijde. Hoeveel keer zo lang is het stuk vanaf de hoek echt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "2:1 verhouding", tekst: "Vanaf hoek tot Z = 2 delen. Vanaf Z tot midden overkant = 1 deel." }],
@@ -528,9 +528,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet hetzelfde — ze raken vaak een ander punt op de overstaande zijde.",
+          "Bij een scheve driehoek komen ze op een ander punt van de overstaande zijde uit. Waar eindigt elk van de twee?",
           "Kijk naar de namen: welke van de twee heeft met 'hoogte' te maken — en hoe meet je een hoogte?",
-          "Een hoek delen is een **bissectrice**, niet zwaartelijn.",
+          "Een lijn die een hoek in tweeën deelt, is een bissectrice. Waar eindigt een zwaartelijn dan wel?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Twee verschillende lijnen", tekst: "Zwaartelijn → naar midden. Hoogtelijn → loodrecht op overkant." }],
@@ -695,9 +695,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bissectrices kruisen in het middelpunt van de **ingeschreven** cirkel.",
-          "Middelloodlijnen kruisen in het middelpunt van de **omgeschreven** cirkel.",
-          "Hoogtelijnen kruisen in het hoogtelijnpunt — niet zwaartepunt.",
+          "Bissectrices kruisen in het middelpunt van de **ingeschreven** cirkel. Is dat het punt waar de vraag naar zoekt?",
+          "Middelloodlijnen kruisen in het middelpunt van de **omgeschreven** cirkel. Is dat het punt waar de vraag naar zoekt?",
+          "Hoogtelijnen kruisen elkaar in het hoogtepunt. Welk snijpunt hoort bij welke soort lijnen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zwaartepunt", tekst: "3 zwaartelijnen kruisen in het zwaartepunt Z." }],
@@ -780,7 +780,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is alleen de omtrek-helft (12 + 8). Oppervlakte = lengte × breedte.",
-          "Heb je de juiste berekening gebruikt? Oppervlakte rechthoek = lengte × breedte.",
+          "40 m is de omtrek: alle zijden opgeteld. Wat doe je met lengte en breedte voor de oppervlakte?",
           "Controleer je vermenigvuldiging — heb je de goede getallen gebruikt?",
         ],
         uitlegPad: {
@@ -827,7 +827,7 @@ const steps = [
           null,
           "Dat is de hele tuin. Vergeet niet de zandbak ervan af te trekken.",
           "Je hebt de zandbak erbij opgeteld. Wordt het grasveld groter of kleiner door de zandbak?",
-          "Je hebt waarschijnlijk een hele cirkel afgetrokken ipv halfrond.",
+          "67,7 = 96 − 28,3: je trok een hele cirkel af. Is de zandbak een hele cirkel?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Tuin − zandbak", tekst: "96 − 14,1 ≈ 81,9 m²." }],

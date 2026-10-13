@@ -21,9 +21,9 @@ const steps = [
     checks: [
       {
         q: "**Verdrag van Versailles** (1919) gaf Duitsland:",
-        options: ["Schuld, sancties en herstelbetalingen", "Beloningen en nieuwe kolonies", "Gelijkwaardige behandeling", "Extra grondgebied in het oosten"],
+        options: ["Schuld, sancties en herstelbetalingen", "Bezetting, vier zones en ontwapening", "Een vrede zonder winnaars of verliezers", "Steun en leningen via het Marshallplan"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld — Duitsland verloor juist grond."],
+        wrongHints: [null, "Een bezetting in vier zones kwam pas na de Tweede Wereldoorlog, in 1945.", "Zo'n vrede zonder overwinnaars wilde de Amerikaanse president Wilson, maar Frankrijk en Engeland kregen hun zin. Hoe keken zij naar Duitsland?", "Het Marshallplan was Amerikaanse hulp ná de Tweede Wereldoorlog, vanaf 1947."],
         uitlegPad: {
           stappen: [
             { titel: "Vernederend voor Duitsland", tekst: "DE moest 'oorlogsschuld' accepteren (artikel 231), 132 mld goudmark betalen, leger inkrimpen tot 100k man, kolonies + grondgebied verliezen. Werd als 'Diktat' ervaren. Voedde later extremisme + Hitlers belofte 'recht doen'. Veel historici zien het als een van de oorzaken van WO2." },
@@ -35,7 +35,7 @@ const steps = [
         q: "**Hitler werd Rijkskanselier** op:",
         options: ["30 januari 1933", "1 sept 1939", "9 nov 1923", "1 mei 1945"],
         answer: 0,
-        wrongHints: [null, "Niet — start WO2.", "Niet — München-putsch (mislukt).", "Niet — toen was Hitler al dood (30 april 1945)."],
+        wrongHints: [null, "Op 1 september 1939 viel Duitsland Polen binnen: het begin van WO2. Hitler was toen al jaren aan de macht.", "In november 1923 probeerde Hitler in München de macht te grijpen, maar die putsch mislukte. Hij kwam pas later via een benoeming aan de macht.", "Niet — toen was Hitler al dood (30 april 1945)."],
         uitlegPad: {
           stappen: [{ titel: "Wettelijk aan macht", tekst: "Hitler kwam legaal aan de macht (NSDAP grootste partij na 1932-verkiezingen). Hindenburg benoemde hem Rijkskanselier 30 jan 1933. Binnen maanden: brand Rijksdag, machtigingswet, eenpartij-staat. Geen gewelddadige greep, maar legaal aan de macht komen en dan het systeem afbreken." }],
           niveaus: { basis: "30-1-1933.", simpeler: "Begin 1933.", nogSimpeler: "1933" },
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "**Lebensraum** = ?",
-        options: ["Leefruimte in Oost-Europa", "Vrije markt", "Religieuze tolerantie", "Koloniën in Afrika"],
+        options: ["Leefruimte in Oost-Europa", "Herstel van de grenzen van 1914", "Eén rijk voor alle Duitstaligen", "Leefruimte in koloniën overzee"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet — Hitler zocht land dichter bij Duitsland."],
+        wrongHints: [null, "Hitler wilde veel meer dan de oude grenzen terug. Waar zag hij nieuw land voor Duitsers?", "Dat idee heet 'Heim ins Reich'. Lebensraum ging over land voor boeren en grondstoffen.", "Duitsland verloor in 1919 zijn koloniën, maar Hitler zocht geen land overzee. In welke richting keek hij?"],
         uitlegPad: {
           stappen: [
             { titel: "Rechtvaardiging invasie", tekst: "Hitler: DE bevolking groeit, heeft meer ruimte nodig. Oost-Europa (Polen, Oekraïne, Rusland) zou herkoloniseerd worden als DE leefruimte. Slaven 'inferieur' → onderdrukken of uitroeien. Argument voor invasie 1941 USSR (Operatie Barbarossa)." },
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "**München-akkoord (1938)**:",
-        options: ["Sudetenland naar Duitsland", "Oorlogsverklaring", "Vredesakkoord WO2-einde", "Olympische Spelen"],
+        options: ["Sudetenland naar Duitsland", "Oostenrijk bij Duitsland", "Duitse troepen in het Rijnland", "Elzas-Lotharingen naar Duitsland"],
         answer: 0,
-        wrongHints: [null, "Niet — uitstel.", "Niet — WO2 was toen nog niet begonnen.", "Niet — de Spelen in Duitsland waren in 1936 in Berlijn."],
+        wrongHints: [null, "De Anschluss van Oostenrijk was in maart 1938 en werd niet in München geregeld.", "Duitse troepen trokken al in 1936 het Rijnland in, zonder akkoord.", "Elzas-Lotharingen bleef in 1938 gewoon Frans."],
         uitlegPad: {
           stappen: [
             { titel: "Appeasement faalde", tekst: "Chamberlain (UK) + Daladier (FR) hoopten oorlog te vermijden door Hitler Sudetenland te geven. Hitler beloofde verdere expansie te staken. 11 maanden later: invasie Polen. Klassieke les: dictatoriale agressie niet sussen via concessies. 'Peace for our time' werd ironie." },
@@ -69,7 +69,7 @@ const steps = [
         q: "**WO2 begon** met DE-invasie van:",
         options: ["Polen", "Frankrijk", "USSR", "Nederland"],
         answer: 0,
-        wrongHints: [null, "Niet — mei 1940.", "Niet — juni 1941.", "Niet — mei 1940."],
+        wrongHints: [null, "Frankrijk werd pas in mei 1940 aangevallen. Na welke inval verklaarden Engeland en Frankrijk Duitsland de oorlog?", "De Sovjet-Unie werd pas in juni 1941 aangevallen. In 1939 sloot Stalin juist een pact met Hitler.", "Nederland werd pas in mei 1940 aangevallen; tot dan bleef het neutraal."],
         uitlegPad: {
           stappen: [
             { titel: "Datum WO2-start", tekst: "1 sept 1939 vroeg ochtend: DE valt Polen binnen na grens-incident (gefabriceerd door SS). 3 sept: UK + FR verklaren oorlog aan DE. 17 sept: USSR valt OOST-Polen aan (Molotov-Ribbentrop-pact). Polen bezet binnen weken." },
@@ -90,7 +90,7 @@ const steps = [
         q: "Nederland werd door DE bezet in:",
         options: ["Mei 1940", "September 1939", "Juni 1941", "Juli 1944"],
         answer: 0,
-        wrongHints: [null, "Niet — DE viel Polen aan.", "Niet — USSR-invasie.", "Niet — toen was Nederland al vier jaar bezet."],
+        wrongHints: [null, "In september 1939 viel Duitsland Polen aan. Nederland bleef toen nog neutraal.", "In juni 1941 viel Duitsland de Sovjet-Unie aan. Toen was Nederland al een jaar bezet.", "In juli 1944 was Nederland al vier jaar bezet; in september 1944 werd het zuiden bevrijd."],
         uitlegPad: {
           stappen: [
             { titel: "5-daagse oorlog", tekst: "10 mei 1940 vroeg ochtend: DE valt NL aan (Westfeldzug). 14 mei: Rotterdam-bombardement → NL capituleert om verdere steden te sparen. Koningin + regering naar Londen. Beneluxlanden + FR allemaal in 6 weken bezet — Blitzkrieg-succes." },
@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "**Stalingrad** (1942-43):",
-        options: ["Duitse nederlaag, keerpunt in het oosten", "Duitse overwinning", "Slag zonder militair belang", "Stad die zonder strijd viel"],
+        options: ["Duitse nederlaag, keerpunt in het oosten", "Duitse overwinning, Rusland gaf zich over", "Slag die de oorlog in Afrika besliste", "Begin van de Duitse aanval op Rusland"],
         answer: 0,
-        wrongHints: [null, "Kijk naar wie aan het eind van de slag nog stond — en wie zich moest overgeven.", "Een slag met ~2 miljoen slachtoffers was allesbehalve onbelangrijk — waarom noemen historici dit een keerpunt?", "Er werd juist maandenlang huis-voor-huis gevochten in de stad — 'zonder strijd' klopt hier zeker niet."],
+        wrongHints: [null, "Kijk naar wie aan het eind van de slag nog stond, en wie zich moest overgeven.", "Dat was El Alamein (1942). Stalingrad ligt in Rusland.", "Die aanval begon al in juni 1941."],
         uitlegPad: {
           stappen: [
             { titel: "Hitler-megalomanie", tekst: "Hitler wilde Stalingrad (naar Stalin genoemd) ten koste van alles. Sovjets vochten om elke straat. Winter 1942-43: 6e Leger DE omsingeld, geen ontsnapping toegestaan. Februari 1943 capitulatie. ~800 000 DE verliezen + ~1,2 mln Sovjet. Daarna USSR op offensief. Keerpunt aan oostfront." },
@@ -114,7 +114,7 @@ const steps = [
         q: "**D-Day** (6 juni 1944):",
         options: ["Landing in Normandië", "Pearl Harbor", "Bevrijding Auschwitz", "Hiroshima"],
         answer: 0,
-        wrongHints: [null, "Niet — dec 1941.", "Niet — jan 1945.", "Niet — aug 1945."],
+        wrongHints: [null, "De aanval op Pearl Harbor was in december 1941, ruim twee jaar eerder.", "Auschwitz werd pas in januari 1945 bevrijd, ruim een half jaar na D-Day.", "De atoombom op Hiroshima viel meer dan een jaar later."],
         uitlegPad: {
           stappen: [
             { titel: "Operation Overlord", tekst: "Grootste amfibische operatie ooit. Eisenhower-commando. 5 stranden (Utah, Omaha, Gold, Juno, Sword) op Normandische kust. Omaha het bloedigst (~2400 Amerikaanse slachtoffers). Doorbraak naar Parijs (bevrijd aug 1944) en oprukken naar Duitsland. Begin van eind in West." },
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "**Hongerwinter** (1944-45):",
-        options: ["Hongersnood in bezet West-NL", "Korte, zachte winter", "Italiaanse hongersnood", "Hongersnood in Rusland"],
+        options: ["Hongersnood in bezet West-NL", "Hongersnood in bevrijd Zuid-NL", "Hongersnood in Engeland", "Hongersnood in Rusland"],
         answer: 0,
-        wrongHints: [null, "Niet — wel ernstig.", "Niet.", "Die grote Russische hongersnood was al rond 1921."],
+        wrongHints: [null, "Het zuiden was in de herfst van 1944 al bevrijd en had veel minder honger.", "Engeland werd niet bezet en kreeg voedsel over zee.", "Die grote Russische hongersnood was al rond 1921."],
         uitlegPad: {
           stappen: [
             { titel: "Wraak voor spoorwegstaking", tekst: "Sept 1944: NL-spoorwegen staakten om geallieerde-bevrijding te steunen. DE blokkeerde voedsel-toelevering aan WEST-NL (Randstad). Strenge winter + bezetting → mensen aten tulpenbollen + suikerbieten + brandnetels. ~20 000 doden, vooral ouderen. Foto's hongerige kinderen wereldwijd bekend." },
@@ -138,7 +138,7 @@ const steps = [
         q: "**V-E Day** (Victory Europe) is:",
         options: ["8 mei 1945", "5 mei 1945", "6 juni 1944", "15 augustus 1945"],
         answer: 0,
-        wrongHints: [null, "NL-specifieke bevrijdingsdag.", "Niet — D-Day.", "Niet — V-J Day (Japan)."],
+        wrongHints: [null, "Op 5 mei vieren we in Nederland de bevrijding. Wanneer gaf Duitsland zich in heel Europa over?", "6 juni 1944 is D-Day, de landing in Normandië. Daarna duurde de oorlog in Europa nog bijna een jaar.", "Op 15 augustus 1945 gaf Japan zich over (V-J Day). Duitsland had zich toen al eerder overgegeven."],
         uitlegPad: {
           stappen: [
             { titel: "Officiële DE-capitulatie", tekst: "7 mei: DE tekent capitulatie in Reims. 8 mei: ratificatie Berlijn. Sovjet-tijdzone: 9 mei (Victory Day in Rusland). NL viert 5 mei (bevrijdingsdag) want dat was effectieve bevrijding voor NL-bevolking — DE-troepen in NL gaven zich over." },
@@ -158,13 +158,13 @@ const steps = [
       {
         q: "**Holocaust**: ~6 miljoen joden vermoord. Hoogste percentage West-Europa was in:",
         options: [
-          "Nederland (~75%)",
-          "België (~40%)",
-          "Frankrijk (~25%)",
-          "Denemarken (<5%)"
+          "Nederland",
+          "België",
+          "Frankrijk",
+          "Denemarken"
         ],
         answer: 0,
-        wrongHints: [null, "Wel hoog, niet hoogste.", "Idem.", "Bijna alle gered — laagste."],
+        wrongHints: [null, "In België werd ongeveer 40% van de joden vermoord. Elders lag het percentage nog hoger.", "In Frankrijk overleefden de meeste joden; ongeveer een kwart werd vermoord.", "Denemarken smokkelde in 1943 bijna alle joden naar Zweden."],
         uitlegPad: {
           stappen: [
             { titel: "Tragische uitschieter", tekst: "Van 140 000 NL-joden vermoord 104 000 — hoogste % West-Europa. Redenen: efficiënte bevolkingsregistratie, weinig schuilplaats in dichtbevolkt klein land, weinig massaal-verzet, NSB-collaboratie. Denemarken redde bijna iedereen via boot-evacuatie naar Zweden." },
@@ -174,9 +174,9 @@ const steps = [
       },
       {
         q: "**Wannsee-conferentie** (jan 1942):",
-        options: ["Nazi-plan om alle Europese joden te doden", "Vredesakkoord", "Plan voor Olympische Spelen", "Overleg over oorlogseconomie"],
+        options: ["Nazi-plan om alle Europese joden te doden", "Plan om joden naar Madagaskar te sturen", "Plan voor de inval in de Sovjet-Unie", "Overleg over de Duitse oorlogseconomie"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — de Spelen in Berlijn waren al in 1936.", "Niet — het ging over iets veel gruwelijkers."],
+        wrongHints: [null, "Dat Madagaskar-plan was in 1940 al opgegeven. In 1942 besloten de nazi's tot iets veel ergers.", "Die inval begon al in juni 1941.", "Niet: het ging over iets veel gruwelijkers."],
         uitlegPad: {
           stappen: [
             { titel: "Bureaucratie van moord", tekst: "Heydrich + 14 hoge nazi-ambtenaren bij Wannsee-meer Berlijn. Lijst 11 mln joden + organisatorische uitvoering. Bewijst: Holocaust was PLAN, niet impuls. Wannsee-villa nu Gedenkstätte. Notities (Eichmann) ontdekt na oorlog — onmiskenbaar bewijs." },
@@ -186,9 +186,9 @@ const steps = [
       },
       {
         q: "**Anne Frank** stierf:",
-        options: ["Bergen-Belsen", "Auschwitz", "Westerbork", "Amsterdam"],
+        options: ["In Bergen-Belsen", "In Auschwitz", "In Westerbork", "In Amsterdam"],
         answer: 0,
-        wrongHints: [null, "Wel geweest, niet gestorven daar.", "Idem.", "Onderdook daar, niet gestorven."],
+        wrongHints: [null, "Anne werd in 1944 naar Auschwitz gebracht, maar daarna nog verder vervoerd.", "Westerbork was een doorgangskamp in Drenthe: Anne zat er maar kort.", "In Amsterdam zat Anne ondergedoken in het Achterhuis, tot ze in 1944 werd opgepakt."],
         uitlegPad: {
           stappen: [
             { titel: "Tijdslijn", tekst: "Aug 1944: verraden, gearresteerd. Sept '44: Westerbork → Auschwitz. Okt '44: naar Bergen-Belsen (DE). Feb '45: tyfus-epidemie → Anne + zus Margot sterven. Bevrijding kamp april '45 — paar weken te laat. Otto enige overlevende familie." },
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "**Februaristaking** (25-26 feb 1941):",
-        options: ["Protest tegen jodenvervolging", "Voor hogere lonen", "Voor de koningin", "Tegen voedseltekort"],
+        options: ["Protest tegen jodenvervolging", "Staking voor hogere lonen", "Steun voor de koningin in Londen", "Protest tegen voedseltekort"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet hoofdreden.", "Niet."],
+        wrongHints: [null, "Onvrede over werk speelde mee, maar was niet de directe aanleiding. Wat gebeurde er vlak daarvoor in Amsterdam?", "De staking ging niet over het Koningshuis. Wat gebeurde er vlak daarvoor in Amsterdam?", "Echte honger kwam pas later, in de Hongerwinter van 1944-45."],
         uitlegPad: {
           stappen: [
             { titel: "Eerste massa-protest joden-vervolging", tekst: "Na razzia's in de Jodenbuurt: trambestuurders staakten, kantoor + winkel-personeel volgde. Massaal-uniek voor bezet West-Europa. DE-bezetters reageerden hard: arrestaties, executies. Toch belangrijke morele actie. Standbeeld 'De Dokwerker' op Jonas Daniël Meijerplein Amsterdam herinnert." },
@@ -210,9 +210,9 @@ const steps = [
       },
       {
         q: "**Oskar Schindler** redde:",
-        options: ["~1100 joden", "Niemand", "Hele dorpen", "Alleen zijn eigen familie"],
+        options: ["~1100 joden", "~100 joden", "~10.000 joden", "~6 miljoen joden"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Te veel.", "Niet — hij redde vooral vreemden."],
+        wrongHints: [null, "Meer: zijn lijst met fabrieksarbeiders was veel langer.", "Minder: zijn lijst telde de arbeiders van zijn fabriek.", "Zoveel joden werden er in de Holocaust vermoord. Schindler redde de mensen op zijn lijst."],
         uitlegPad: {
           stappen: [
             { titel: "Film 'Schindler's List' 1993", tekst: "DE-zakenman + NSDAP-lid. Maakte aanvankelijk winst met joodse dwangarbeiders. Geleidelijk veranderde mening → kostte fortuin om hen veilig te houden. Met zijn 'lijst' redde hij ~1100 mensen van de dood. Stierf arm 1974, begraven op de Sionsberg in Jeruzalem. Film Spielberg won 7 Oscars." },
@@ -233,7 +233,7 @@ const steps = [
         q: "**Pearl Harbor** = aanval van:",
         options: ["Japan op de VS", "Duitsland op de USSR", "VS op Japan", "China op Japan"],
         answer: 0,
-        wrongHints: [null, "Niet — Barbarossa.", "Tegenovergesteld.", "Niet — Japan viel China binnen."],
+        wrongHints: [null, "De Duitse aanval op de Sovjet-Unie heette operatie Barbarossa (juni 1941). Pearl Harbor ligt op Hawaï, ver van Europa.", "Pearl Harbor ligt op Hawaï. Van wie was die marinebasis?", "China vocht in die jaren in eigen land en had geen vloot om ver over zee aan te vallen."],
         uitlegPad: {
           stappen: [
             { titel: "Verrassings-aanval", tekst: "Zondagochtend 7 dec 1941, geen oorlogsverklaring vooraf. Japanse vliegtuigen bombardeerden Amerikaanse vloot in Pearl Harbor (Hawaii). 2400 doden. VS verklaart oorlog aan Japan + komt zo in WO2 (ook in Europa)." },
@@ -245,7 +245,7 @@ const steps = [
         q: "**Atoombom Hiroshima** datum?",
         options: ["6 augustus 1945", "6 juni 1944", "8 mei 1945", "15 augustus 1945"],
         answer: 0,
-        wrongHints: [null, "Niet — D-Day.", "Niet — V-E.", "Niet — V-J Day (capitulatie)."],
+        wrongHints: [null, "6 juni 1944 is D-Day, de landing in Normandië. De atoombom viel in de laatste fase van de oorlog tegen Japan.", "8 mei 1945 is V-E Day: de oorlog in Europa was voorbij, maar tegen Japan werd nog gevochten.", "Op 15 augustus 1945 capituleerde Japan. Dat was een gevolg van de atoombom, niet de dag van de bom zelf."],
         uitlegPad: {
           stappen: [
             { titel: "'Little Boy'", tekst: "8:15 ochtend. Enola Gay-bommenwerper. 13 kt TNT-equivalent (klein vs huidige H-bommen). 80 000 direct dood, stad weggevaagd. 9 aug Nagasaki. 15 aug Japan capituleert. Eerste + enige militair-gebruikte atoomwapens." },
@@ -257,7 +257,7 @@ const steps = [
         q: "**Manhattan Project** ontwikkelde:",
         options: ["Atoombom", "Radar", "Penicilline", "Computer"],
         answer: 0,
-        wrongHints: [null, "Apart project.", "Apart.", "Apart (Bletchley/Turing)."],
+        wrongHints: [null, "Radar werd vooral in Groot-Brittannië ontwikkeld.", "Penicilline ontdekte Fleming al in 1928.", "Aan de eerste computers werkten onder meer Turing en zijn team in Bletchley Park."],
         uitlegPad: {
           stappen: [
             { titel: "Geheimst project ooit", tekst: "Na Einsteins brief aan Roosevelt (1939, zorg dat DE eerst bom heeft) gestart in 1942. 125 000 mensen, $2 mld. Locaties: Los Alamos (design, Oppenheimer), Oak Ridge (uranium-verrijking), Hanford (plutonium). Trinity test 16 juli 1945. 3 weken later Hiroshima." },
@@ -269,7 +269,7 @@ const steps = [
         q: "**Indonesië-onafhankelijkheid** uitgeroepen op:",
         options: ["17 aug 1945", "15 aug 1945", "8 mei 1945", "27 dec 1949"],
         answer: 0,
-        wrongHints: [null, "Niet — Japan capituleert die dag.", "Niet — V-E day Europe.", "Niet — NL-erkenning."],
+        wrongHints: [null, "Op 15 augustus 1945 capituleerde Japan. Dat is iets anders dan het uitroepen van de onafhankelijkheid.", "8 mei 1945 is V-E Day in Europa. Indonesië was toen nog door Japan bezet.", "Op 27 december 1949 erkende Nederland de onafhankelijkheid. Indonesië had die zelf al eerder uitgeroepen."],
         uitlegPad: {
           stappen: [
             { titel: "Tijdens machtsvacuüm", tekst: "Soekarno + Hatta riepen onafhankelijkheid uit 2 dagen na Japan-capitulatie. NL erkende niet → 4 jaar conflict ('politionele acties'). Onder internationale druk (VN, VS) tekende NL 27 dec 1949 erkenning. Bersiap-tijd 1945-46: lokale jongeren vermoorden duizenden NL/Indo-Europeanen." },
@@ -281,12 +281,12 @@ const steps = [
         q: "**Bloedbad van Nanjing** (dec 1937):",
         options: [
           "Massamoord door Japanse troepen op Chinezen",
-          "Grote Chinese overwinning op Japan",
-          "Vredesverdrag tussen China en Japan",
+          "Massamoord door Chinese troepen op Japanners",
+          "Opstand van Chinese boeren tegen hun regering",
           "Duits bombardement op een Chinese stad"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet Duits — in China vochten in 1937 Japan en China tegen elkaar."],
+        wrongHints: [null, "Het bloedbad gebeurde toen de Chinese hoofdstad in december 1937 werd veroverd. Door welk leger?", "In China vochten communisten en nationalisten ook tegen elkaar, maar dit bloedbad gebeurde toen een buitenlands leger de hoofdstad innam.", "Duitsland was in 1937 niet in oorlog met China. Welk land viel China in 1937 binnen?"],
         uitlegPad: {
           stappen: [
             { titel: "'Rape of Nanking'", tekst: "Toen Japanse leger de Chinese hoofdstad Nanjing innam: massamoord + verkrachting van Chinese burgers + krijgsgevangenen. Schattingen 200-300k doden in 6 weken. Eén van ergste oorlogsmisdaden 20e eeuw. Belangrijke reden voor naoorlogse anti-Japan-sentiment in China. Sommige Japanse nationalisten ontkennen schaal nog steeds — diplomatiek spanningsveld." },
@@ -305,9 +305,9 @@ const steps = [
     checks: [
       {
         q: "**Marshall-plan** was:",
-        options: ["Amerikaanse hulp voor wederopbouw", "Militair plan", "Energie-plan", "Russische ontwikkelingshulp"],
+        options: ["Amerikaanse hulp voor wederopbouw", "Amerikaans plan om Duitsland te verzwakken", "Plan voor een Europees leger", "Sovjet-hulp voor Oost-Europa"],
         answer: 0,
-        wrongHints: [null, "Niet militair.", "Niet specifiek.", "Tegenovergesteld."],
+        wrongHints: [null, "Dat was het Morgenthau-plan, dat juist niet werd uitgevoerd.", "Een Europees leger kwam er niet. Het Marshall-plan ging niet over soldaten.", "De Sovjet-Unie weigerde juist mee te doen. Waar kwam het geld vandaan?"],
         uitlegPad: {
           stappen: [
             { titel: "Genereus + strategisch", tekst: "Genoemd naar George Marshall (VS-minister van Buitenlandse Zaken). Hulp voor wederopbouw + voorkomen communisme-uitbreiding. Sleutel naoorlogs welvaart Europa. Sovjet-zone weigerde → kloof West-Oost diep. NL ontving ~$1 mld." },
@@ -318,13 +318,13 @@ const steps = [
       {
         q: "**Neurenberg-principe**:",
         options: [
-          "'Orders volgen' is geen verdediging voor oorlogsmisdaden",
-          "Geen straf voor leiders",
-          "Alleen militair berecht",
-          "Geen rechtszitting"
+          "'Bevelen opvolgen' is geen excuus voor misdaden",
+          "Wie het bevel geeft is schuldig, de uitvoerder niet",
+          "Een staat berecht zelf zijn eigen oorlogsmisdadigers",
+          "Een land betaalt voor de misdaden van zijn leiders"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onjuist.", "Er waren juist grote rechtszaken in Neurenberg."],
+        wrongHints: [null, "Dit klopt maar half. Lees de tweede helft van deze zin nog eens kritisch.", "In Neurenberg zaten rechters uit de VS, de Sovjet-Unie, Engeland en Frankrijk. Berechtte Duitsland daar zijn eigen oorlogsmisdadigers?", "Het ging in Neurenberg om de schuld van personen, niet van een land."],
         uitlegPad: {
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Klassiek beginsel: ook ambtenaren + soldaten zijn verantwoordelijk voor hun handelingen. Eichmann probeerde dit verweer ('ich war nur ein kleines Rädchen') — werd verworpen. Vandaag basis voor het Internationaal Strafhof in Den Haag (ICC) waar oorlogsmisdaden berecht worden." },
@@ -336,7 +336,7 @@ const steps = [
         q: "**Israël** werd onafhankelijk in:",
         options: ["1948", "1939", "1945", "1967"],
         answer: 0,
-        wrongHints: [null, "Niet — start WO2.", "Niet — einde WO2.", "Niet — Zesdaagse Oorlog."],
+        wrongHints: [null, "In 1939 begon WO2; de staat Israël bestond toen nog niet.", "In 1945 eindigde WO2. Werd Israël meteen bij het einde van de oorlog onafhankelijk?", "In 1967 was de Zesdaagse Oorlog. Israël bestond toen al en vocht tegen zijn buurlanden."],
         uitlegPad: {
           stappen: [
             { titel: "VN-verdeelplan + Britse mandaat-einde", tekst: "VN-resolutie 181 (nov 1947) verdeelde mandaat-Palestina in joodse + Arabische staat. 14 mei 1948: David Ben-Gurion roept Israël uit. Direct oorlog met Egypte+Jordanië+Syrië+Libanon+Irak. Israël wint, vergroot grondgebied. Begin van conflict tot vandaag." },
@@ -346,9 +346,9 @@ const steps = [
       },
       {
         q: "**Europese integratie** (EGKS → EU) had als hoofddoel:",
-        options: ["Vrede door economische samenwerking", "Eén Europees leger vormen", "Engels verspreiden", "Eén godsdienst voor Europa"],
+        options: ["Vrede door economische samenwerking", "Eén Europees leger tegen de Sovjet-Unie", "Eén munt om de handel makkelijker te maken", "Concurreren met de economie van de VS"],
         answer: 0,
-        wrongHints: [null, "Dat Europese leger kwam er juist níét — waarom deelden landen hun kolen en staal?", "Niet de bedoeling.", "Niet."],
+        wrongHints: [null, "Een Europees leger werd in 1954 juist afgewezen. Waarom deelden landen hun kolen en staal?", "De euro kwam pas in 1999/2002. Waarom begonnen landen in 1951 samen te werken?", "De VS steunden de Europese samenwerking juist, onder meer met het Marshallplan. Waarom legden juist Frankrijk en Duitsland hun kolen en staal samen?"],
         uitlegPad: {
           stappen: [
             { titel: "Schuman + Monnet", tekst: "1951: kolen + staal-industrie (oorlogsbasis) onder gemeenschappelijk bestuur Schumanplan. Idee: landen die handel + economie delen, gaan geen oorlog meer voeren. Werkt: geen oorlog meer tussen EU-leden sinds 1945. Nobelvredesprijs 2012 voor EU." },
@@ -360,7 +360,7 @@ const steps = [
         q: "**Welke genocide sinds WO2** vond plaats in 1994?",
         options: ["Rwanda", "Bosnië", "Cambodja", "Darfur"],
         answer: 0,
-        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "1975-79.", "Darfur was vanaf 2003."],
+        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "De Rode Khmer vermoordden in Cambodja tussen 1975 en 1979 enorm veel mensen.", "Darfur was vanaf 2003."],
         uitlegPad: {
           stappen: [
             { titel: "Hutu vs Tutsi", tekst: "Apr 1994: Hutu-extremisten begonnen systematische slachting Tutsi-bevolking + gematigde Hutu. ~800 000 doden in 100 dagen via machetes + geweren. VN-vredesmacht trok zich grotendeels terug. Internationale gemeenschap verzuimde. Belangrijke les: 'Nooit Weer' is geen automatische garantie. Sindsdien meer aandacht voor preventie genocide." },

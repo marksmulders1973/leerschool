@@ -1,0 +1,1554 @@
+[
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Bij goede oogst in graan (overvloed aanbod), wat gebeurt met evenwicht?",
+  "opties": [
+   "Aanbod-curve schuift naar rechts → lagere prijs",
+   "Vraag-curve schuift naar rechts → hogere prijs",
+   "Beweging langs aanbodcurve",
+   "Geen verandering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Boter + margarine zijn substituten. Boter-prijs stijgt. Wat met margarine?",
+  "opties": [
+   "Vraagcurve margarine schuift rechts → meer verkoop",
+   "Vraagcurve margarine schuift links → minder verkoop",
+   "Geen effect — margarine is een ander product",
+   "Margarine verdwijnt helemaal van de markt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Monopolie ontstaat vaak door:",
+  "opties": [
+   "Hoge toetredingsbarrières voor nieuwe bedrijven",
+   "Lage prijzen voor alle klanten",
+   "Veel concurrentie tussen kleine bedrijven",
+   "Alleen klantenloyaliteit aan een merk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Een kartel is:",
+  "opties": [
+   "Geheime prijsafspraken tussen concurrenten",
+   "Een legaal samenwerkingsverband van bedrijven",
+   "Eén bedrijf dat de enige aanbieder is",
+   "Een sociale beweging van consumenten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Restaurants in een grote stad: veel aanbieders met verschillende menukaart + sfeer. Marktvorm?",
+  "opties": [
+   "Monopolistische concurrentie",
+   "Volkomen concurrentie",
+   "Oligopolie",
+   "Monopolie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een collectief goed?",
+  "opties": [
+   "Nationaal defensie-leger",
+   "Auto",
+   "Brood",
+   "Bioscoop-kaartje"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Tweedehands auto-handelaar verkoopt auto met verborgen gebreken. Type marktfalen?",
+  "opties": [
+   "Asymmetrische informatie",
+   "Externaliteit",
+   "Monopolie",
+   "Collectief goed"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2S",
+  "q": "Wat is progressieve belasting?",
+  "opties": [
+   "Hogere inkomens betalen procentueel meer",
+   "Iedereen zelfde % betaalt",
+   "Hogere inkomens betalen minder",
+   "Alleen bedrijven betalen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Privatisering van energie-bedrijven sinds 1990s heeft als doel:",
+  "opties": [
+   "Marktwerking → efficiëntie en lagere prijzen",
+   "Hogere prijzen → meer winst voor de staat",
+   "Meer ambtenaren in de energiesector",
+   "Sluiting van energiebedrijven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Piketty's stelling r > g betekent:",
+  "opties": [
+   "Rendement op kapitaal > economische groei → vermogen concentreert",
+   "Rente > groei → er volgt altijd een recessie",
+   "Geen verband tussen kapitaal en economische groei",
+   "Salarissen stijgen sneller dan vermogens groeien"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "marktvormen-havo-vwo",
+  "file": "./marktvormenHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Wat is een argument vóór enige ongelijkheid?",
+  "opties": [
+   "Prikkels voor hard werken, ondernemen, risico nemen",
+   "Meer sociale rust in de samenleving",
+   "Betere gezondheid van de bevolking",
+   "Minder eenzaamheid onder mensen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is opportunity cost (opofferingskosten)?",
+  "opties": [
+   "Wat je opgeeft door voor iets anders te kiezen",
+   "De prijs in de winkel",
+   "Belasting over een aankoop",
+   "Wat een ondernemer betaalt voor reclame"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wanneer is iets schaars in economische zin?",
+  "opties": [
+   "De vraag is groter dan het beschikbare aanbod",
+   "Het is helemaal op",
+   "Het is duur",
+   "Het is mooi"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "S",
+  "q": "De ondernemer draagt risico. Wat is daarvoor de beloning?",
+  "opties": [
+   "Winst",
+   "Loon",
+   "Pacht",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Bij welk soort inkomen hoort de zorgtoeslag?",
+  "opties": [
+   "Secundair inkomen",
+   "Primair inkomen",
+   "Loon",
+   "Winst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is het verschil tussen bruto en netto?",
+  "opties": [
+   "Bruto = vóór inhoudingen, netto = ná inhoudingen",
+   "Hetzelfde",
+   "Bruto is minder dan netto",
+   "Bruto is voor zzp'ers"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Een Lorenz-curve dichtbij de diagonaal betekent:",
+  "opties": [
+   "Inkomens zijn relatief gelijk verdeeld",
+   "Inkomens zijn zeer ongelijk",
+   "Niemand verdient iets",
+   "Alle inkomens zijn gelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke maatregel vermindert inkomensongelijkheid?",
+  "opties": [
+   "Progressieve belasting + toeslagen voor lage inkomens",
+   "Belasting verlagen voor rijken",
+   "Minimumloon afschaffen",
+   "Geen toeslagen meer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom verdient een arts vaak meer dan een verkoper?",
+  "opties": [
+   "Schaarste van vaardigheden + lange opleiding",
+   "Toeval",
+   "Artsen werken minder",
+   "Verkopers willen niet meer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is het verschil tussen gemiddelde en mediane inkomen?",
+  "opties": [
+   "Gemiddelde wordt door enkele extremen omhoog getrokken",
+   "Geen verschil",
+   "Mediaan is altijd hoger",
+   "Mediaan wordt door enkele extremen omhoog getrokken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Je inkomen stijgt 3%, prijzen stijgen 5%. Wat gebeurt met je koopkracht?",
+  "opties": [
+   "Daalt met ongeveer 2%",
+   "Stijgt met 3%",
+   "Stijgt met 8%",
+   "Blijft gelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat meet het CPI?",
+  "opties": [
+   "De gemiddelde prijsstijging van consumentengoederen",
+   "De koopkracht per persoon",
+   "Het totaal inkomen in NL",
+   "Werkloosheidscijfer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "CPI 2025 = 108 (basis 2023 = 100). Hoeveel zijn de prijzen gestegen sinds 2023?",
+  "opties": [
+   "8%",
+   "108%",
+   "0,8%",
+   "1,08%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is welvaart in ruime zin?",
+  "opties": [
+   "Inkomen + gezondheid + milieu + vrije tijd",
+   "Alleen inkomen",
+   "Alleen gezondheid",
+   "Alleen vakantiedagen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "S",
+  "q": "Wat is het verschil tussen nominale en reële loonstijging?",
+  "opties": [
+   "Reëel = nominale stijging min inflatie",
+   "Geen verschil",
+   "Nominaal is altijd hoger dan reëel",
+   "Reëel is vóór belasting, nominaal erna"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is BBP in eenvoudige bewoording?",
+  "opties": [
+   "Totale waarde van alle productie in NL in 1 jaar",
+   "Belasting per Nederlander",
+   "Totale waarde van alle export van NL in 1 jaar",
+   "Brutoloon van iedereen samen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat telt NIET mee in het BBP?",
+  "opties": [
+   "Vrijwilligerswerk in een buurthuis",
+   "Loon van een leraar",
+   "Huur van een woning",
+   "Verkoop van een nieuwe auto"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is het verschil tussen welvaart en welzijn?",
+  "opties": [
+   "Welvaart = materieel, welzijn = bredere kwaliteit van leven",
+   "Geen verschil",
+   "Welvaart is voor rijken",
+   "Welzijn is alleen gezondheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat meet de HDI?",
+  "opties": [
+   "Inkomen + onderwijs + levensverwachting",
+   "Alleen BBP",
+   "Aantal toeristen",
+   "Hoeveel auto's er rijden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Een land heeft hoog BBP maar veel milieuvervuiling. Wat zegt dat?",
+  "opties": [
+   "Welvaart is hoog, maar welzijn lager dan BBP suggereert",
+   "Welzijn is automatisch hoog",
+   "Het BBP is fout gemeten",
+   "Milieu telt niet voor welvaart"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is minimumloon?",
+  "opties": [
+   "Wettelijk vastgelegd laagste loon dat werkgevers mogen betalen",
+   "Het gemiddelde loon",
+   "Loon van een directeur",
+   "Pensioen-basisbedrag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "Wie krijgt AOW?",
+  "opties": [
+   "Iedereen vanaf de pensioenleeftijd",
+   "Alleen mensen die werken",
+   "Alleen ondernemers",
+   "Alleen wie geen vermogen heeft"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat zijn de 3 pijlers van pensioen?",
+  "opties": [
+   "AOW + werkgevers-pensioen + eigen pensioenpotje",
+   "Brutoloon, nettoloon, vakantiegeld",
+   "Belasting, premie, toeslag",
+   "Werk, vrije tijd, slaap"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 6,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Sanne (25) studeert niet, werkte pas een paar weken in een bijbaan, verliest die en heeft geen ander inkomen. Welke uitkering?",
+  "opties": [
+   "Bijstand (vangnet via gemeente)",
+   "AOW",
+   "WW (werkloosheidswet)",
+   "WIA"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-inkomen-welvaart",
+  "file": "./pincodeInkomenWelvaart.js",
+  "stap": 6,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Hoe maakt progressieve belasting inkomens gelijker?",
+  "opties": [
+   "Hogere inkomens betalen een hoger percentage",
+   "Iedereen betaalt hetzelfde",
+   "Lagere inkomens betalen meer",
+   "Geen invloed"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat meet de HDI (Human Development Index)?",
+  "opties": [
+   "Combinatie inkomen + levensverwachting + onderwijs",
+   "Alleen inkomen",
+   "Aantal toeristen",
+   "Auto's per inwoner"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "S",
+  "q": "Hoeveel mensen in extreme armoede wereldwijd (~2020)?",
+  "opties": [
+   "~700 miljoen",
+   "~10 miljoen",
+   "~5 miljard",
+   "Niemand"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Kindersterfte is goede graadmeter omdat:",
+  "opties": [
+   "Reflecteert toegang zorg, voeding, hygiëne breed",
+   "Het is onbelangrijk",
+   "Alleen relevant voor moeders",
+   "Geen verband met welvaart"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wereldbank-categorie 'lage-inkomen-land':",
+  "opties": [
+   "BBP/hoofd onder $1.135/jaar",
+   "Iedereen onder €30k",
+   "Elk land in Afrika",
+   "Geen categorie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is welvaart in enge zin?",
+  "opties": [
+   "Alleen materiële zaken",
+   "Alleen geluk",
+   "Alleen gezondheid",
+   "Alles"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Easterlin-paradox zegt:",
+  "opties": [
+   "Boven ~$20-30k extra geld levert nauwelijks meer geluk",
+   "Geld kan altijd geluk kopen",
+   "Geluk is niet meetbaar",
+   "Iedereen wil meer geld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat meet de Better Life Index (OESO)?",
+  "opties": [
+   "11 dimensies van kwaliteit van leven",
+   "Alleen BBP",
+   "Aantal banen",
+   "Kosten levensonderhoud"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Bhutan meet Gross National Happiness (GNH) ipv:",
+  "opties": [
+   "BBP",
+   "Inflatie",
+   "Belasting",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat maakt mensen vooral gelukkig (volgens onderzoek)?",
+  "opties": [
+   "Sociale relaties + gezondheid + doel + autonomie",
+   "Alleen geld",
+   "Alleen vakantie",
+   "Alleen status"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een vicieuze cirkel van armoede?",
+  "opties": [
+   "Armoede die zichzelf in stand houdt",
+   "Willekeurige situatie",
+   "Alleen externe oorzaken",
+   "Iedereen gelijk arm"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom kan export van alleen grondstoffen een land arm houden?",
+  "opties": [
+   "Verwerking (waar geld in zit) gebeurt elders",
+   "Grondstoffen altijd schaars",
+   "Geen havens",
+   "Vervuiling"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Kolonisatie-erfenis als oorzaak armoede betekent:",
+  "opties": [
+   "Grenzen en economie zijn door koloniale machten bepaald",
+   "Te veel kolonies",
+   "Ze betalen nog steeds belasting aan Europa",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Waarom zijn schulden zo slecht voor arme landen?",
+  "opties": [
+   "Rente kost geld dat naar onderwijs of zorg kon",
+   "Schulden zijn altijd te groot",
+   "Rente is altijd 0%",
+   "Ze moeten alles binnen een jaar terugbetalen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat verklaart het succes van China sinds 1980?",
+  "opties": [
+   "Hervormingen, openheid en export",
+   "Toeval",
+   "Geen verandering",
+   "Communisme onveranderd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Multilaterale hulp is:",
+  "opties": [
+   "Hulp via internationale organisaties",
+   "Direct van NL naar Mali",
+   "Particuliere hulp",
+   "Noodhulp"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke NGO is bekend van noodhulp bij rampen?",
+  "opties": [
+   "Artsen zonder Grenzen",
+   "Belastingdienst",
+   "Wereldbank",
+   "Rabobank"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een risico van gratis hulp?",
+  "opties": [
+   "Lokale producenten kunnen niet concurreren met gratis goederen",
+   "Gratis is altijd goed",
+   "Mensen ondankbaar",
+   "Te duur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is NL ontwikkelingsbudget als % BBP?",
+  "opties": [
+   "Minder dan 1%",
+   "~5%",
+   "~50%",
+   "~10%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is Fair Trade?",
+  "opties": [
+   "Eerlijke prijs voor boeren in arme landen",
+   "Gratis producten",
+   "Geen handel",
+   "Alleen Europese handel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Remittances — wat zijn dat?",
+  "opties": [
+   "Geld dat migranten naar familie thuis sturen",
+   "Een soort belasting",
+   "Toeristisch geld",
+   "Ontwikkelingshulp van overheden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Microkrediet werkt vooral voor:",
+  "opties": [
+   "Beginnende kleine ondernemers in arme landen",
+   "Internationale grote bedrijven",
+   "NL-studenten",
+   "Hele dorpen tegelijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Leapfrogging is:",
+  "opties": [
+   "Arme landen slaan ontwikkelingsstappen over",
+   "Een kinderspel",
+   "Belastingontwijking",
+   "Soort hulp"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Klimaat en arme landen:",
+  "opties": [
+   "Ze stoten weinig CO2 uit maar lijden het meest",
+   "Geen verband",
+   "Profiteren van klimaat",
+   "Ze stoten het meeste CO2 uit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet Fair Trade voor boeren?",
+  "opties": [
+   "Eerlijke prijs plus een premie",
+   "Gratis goederen",
+   "Korting voor consument",
+   "Belasting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welk keurmerk gaat over eerlijke handel in koffie/cacao?",
+  "opties": [
+   "Max Havelaar / Fairtrade / UTZ",
+   "EU-bio",
+   "MSC",
+   "Energy Star"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is greenwashing?",
+  "opties": [
+   "Bedrijven doen zich groener voor dan ze zijn",
+   "Wassen met groen wasmiddel",
+   "Afval scheiden en recyclen",
+   "Echt duurzaam beleid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Hoeveel water kost 1 kg rundvlees ongeveer?",
+  "opties": [
+   "~15.000 liter",
+   "~10 liter",
+   "~100 liter",
+   "~1 miljoen liter"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "'Stem met je portemonnee' betekent:",
+  "opties": [
+   "Wat je koopt beïnvloedt wat bedrijven produceren",
+   "Letterlijk stemmen met geld",
+   "Alleen wie belasting betaalt mag stemmen",
+   "Rijke mensen krijgen meer stemmen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Hoeveel mensen leefden in extreme armoede in 1990 vs 2020?",
+  "opties": [
+   "Van 1,9 miljard naar ~700 miljoen",
+   "Geen verandering",
+   "Toename",
+   "Van 1,9 miljard naar ~10 miljoen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ontwikkelingslanden",
+  "file": "./pincodeOntwikkelingslanden.js",
+  "stap": 6,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is een tip voor jouw rol als toekomstige burger?",
+  "opties": [
+   "Levenslang leren + internationaal denken + bewuste keuzes",
+   "Alleen op je eigen land letten",
+   "Na je diploma stoppen met leren",
+   "Altijd het goedkoopste kopen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke taak van de overheid is inkomensverdeling?",
+  "opties": [
+   "Belasting heffen om verschil arm/rijk te verkleinen",
+   "Loon verhogen voor iedereen",
+   "Banen verdelen",
+   "Spaargeld verdelen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Een extern effect is bv:",
+  "opties": [
+   "Een fabriek vervuilt een rivier en omwonenden lijden eronder",
+   "Een belastingverlaging voor bedrijven",
+   "Hogere lonen voor werknemers van de fabriek",
+   "Spaargeld van de fabriekseigenaar"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Wie verzorgt jeugdzorg (sinds 2015)?",
+  "opties": [
+   "De gemeente",
+   "De Rijksoverheid",
+   "De provincie",
+   "Niemand"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is OZB?",
+  "opties": [
+   "Een gemeentebelasting op je huis",
+   "Een Rijksbelasting",
+   "Provinciale belasting",
+   "Belasting op brandstof"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een waterschap zorgt voor:",
+  "opties": [
+   "Dijken, sloten en waterkwaliteit",
+   "Onderwijs",
+   "Politie",
+   "Parkeren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat ging er mis bij de decentralisatie van jeugdzorg (2015)?",
+  "opties": [
+   "Gemeenten kregen meer taken maar minder geld dan nodig",
+   "Niemand merkte iets",
+   "Rijk nam alles terug",
+   "Het werd goedkoper en beter"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is de Miljoenennota?",
+  "opties": [
+   "Document met de plannen voor de Rijksbegroting",
+   "Een toespraak van de koning",
+   "Het jaarverslag over vorig jaar",
+   "Europese richtlijn"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is de grootste uitgavenpost van de Rijksoverheid?",
+  "opties": [
+   "Sociale zekerheid",
+   "Defensie",
+   "Onderwijs",
+   "Cultuur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wie keurt de begroting definitief goed?",
+  "opties": [
+   "Tweede Kamer + Eerste Kamer",
+   "De koning",
+   "De minister van Financiën",
+   "De Belastingdienst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom kan lenen soms zinvol zijn voor de overheid?",
+  "opties": [
+   "Voor investeringen die later geld opleveren",
+   "Belasting verlagen",
+   "Uitkeringen extra hoog maken",
+   "Lenen is altijd slecht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Hoe drukt een hoge staatsschuld de samenleving?",
+  "opties": [
+   "Rente gaat ten koste van onderwijs en zorg",
+   "Iedereen krijgt korting",
+   "Niemand merkt iets",
+   "Burgers krijgen rente"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet een overheid anticyclisch in een recessie?",
+  "opties": [
+   "Belasting verlagen + meer uitgeven om vraag te stimuleren",
+   "Belasting verhogen + bezuinigen",
+   "Niets doen",
+   "De crisis afkondigen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Tijdens hoogconjunctuur:",
+  "opties": [
+   "Hoge groei en lage werkloosheid",
+   "Recessie",
+   "Krimp van BBP",
+   "Veel werkloosheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat veroorzaakt vaak een recessie?",
+  "opties": [
+   "Externe schokken, zoals een pandemie",
+   "Een verkiezing",
+   "Lage werkloosheid",
+   "Veel vertrouwen van consumenten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat is een depressie?",
+  "opties": [
+   "Een lange, diepe recessie",
+   "Korte tegenslag",
+   "Hoge inflatie",
+   "Snelle groei"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet de ACM?",
+  "opties": [
+   "Bewaakt eerlijke concurrentie + consumentenrechten",
+   "Maakt nieuwe wetten",
+   "Int belasting",
+   "Geeft scholen subsidie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een kartel is:",
+  "opties": [
+   "Geheime prijsafspraak tussen bedrijven",
+   "Goedkeuring overheid",
+   "Een soort consumentenvereniging",
+   "Reclame"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L2S",
+  "q": "Hoeveel garantie heb je op een product (in NL)?",
+  "opties": [
+   "Minimaal 2 jaar",
+   "1 maand",
+   "Geen",
+   "5 jaar"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is DGS?",
+  "opties": [
+   "Een garantie op spaargeld als een bank failliet gaat",
+   "Een belasting op spaargeld",
+   "Een lening van de overheid aan banken",
+   "Een vakbond voor bankmedewerkers"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is trias politica?",
+  "opties": [
+   "Machtenscheiding: wetgever, uitvoerder, rechter",
+   "Drie politieke partijen",
+   "Drie verkiezingen",
+   "Driedaagse zitting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doet de regering?",
+  "opties": [
+   "Voert wetten uit en bepaalt beleid",
+   "Maakt wetten zelfstandig",
+   "Rechtspraak",
+   "Controleert het parlement"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-overheid",
+  "file": "./pincodeOverheid.js",
+  "stap": 6,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een coalitie?",
+  "opties": [
+   "Samenwerking van meerdere partijen om meerderheid te vormen",
+   "Een type wet",
+   "De koning + regering",
+   "Een verkiezing"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wie is de vrager op een markt?",
+  "opties": [
+   "De koper / consument",
+   "De producent",
+   "De overheid",
+   "De bank"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zegt de wet van de vraag?",
+  "opties": [
+   "Hoe hoger de prijs, hoe lager de gevraagde hoeveelheid",
+   "Hoe hoger de prijs, hoe meer wordt gevraagd",
+   "Vraag is constant",
+   "Vraag heeft niets met prijs te maken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet de vraaglijn in een grafiek (prijs op Y, aantal op X)?",
+  "opties": [
+   "Loopt schuin naar rechts beneden",
+   "Loopt schuin naar rechts boven",
+   "Is horizontaal",
+   "Is verticaal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is evenwichtsprijs?",
+  "opties": [
+   "De prijs waarbij vraag = aanbod",
+   "De hoogste prijs ooit",
+   "De gemiddelde prijs",
+   "De prijs van vorige week"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Energieprijzen stijgen sterk. Wat gebeurt met aanbod van staal?",
+  "opties": [
+   "Aanbodlijn schuift naar links",
+   "Aanbodlijn schuift naar rechts",
+   "Niets",
+   "Vraaglijn verandert"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Subsidie voor producenten van zonnepanelen — wat gebeurt met het aanbod?",
+  "opties": [
+   "Aanbodlijn naar rechts",
+   "Aanbodlijn naar links",
+   "Niets",
+   "Alleen vraagverandering"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Concertkaartjes voor Taylor Swift zijn duur. Waarom?",
+  "opties": [
+   "Beperkt aanbod, hoge vraag → hoge evenwichtsprijs",
+   "Er zit een hoge belasting op kaartjes",
+   "Fans kopen allemaal extra kaartjes",
+   "De zaal is gratis te huur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Iedereen wil opeens fietsen kopen. Wat gebeurt er bij gelijk aanbod?",
+  "opties": [
+   "Prijs en hoeveelheid stijgen",
+   "Beide dalen",
+   "Niets",
+   "Prijs daalt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 8,
+  "vraag": 5,
+  "soort": "S",
+  "q": "Wat gebeurt met prijs als de vraag stijgt (aanbod gelijk)?",
+  "opties": [
+   "Prijs stijgt",
+   "Prijs daalt",
+   "Niets",
+   "Aanbod stopt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "vraag-aanbod-economie",
+  "file": "./vraagAanbodEconomie.js",
+  "stap": 8,
+  "vraag": 7,
+  "soort": "L2",
+  "q": "Concurrentie — wat doen bedrijven om klanten te trekken?",
+  "opties": [
+   "Lagere prijzen, betere kwaliteit, reclame",
+   "Niets, klanten komen vanzelf",
+   "Klanten dwingen om te kopen",
+   "Alle andere bedrijven opkopen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

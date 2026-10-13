@@ -201,7 +201,7 @@ const steps = [
         wrongHints: [
           "Wel verandering — meer ontvangers + minder betalers = wel impact.",
           null,
-          "Tegendeel — als er per werkende meer uitkeringen betaald moeten worden, wordt het zwaarder, niet lichter.",
+          "De i/a-ratio = aantal inactieven gedeeld door aantal actieven. Als die stijgt, hoeveel uitkeringen moet elke werkende dan meebetalen?",
         ],
         explanation: "i/a-ratio stijgt = meer mensen met uitkering t.o.v. werkenden. De werkenden moeten via belasting/premies de uitkeringen betalen — als er minder werkenden per uitkering zijn, wordt het MOEILIJKER om uitkeringen te financieren. Vergrijzing is een grote drijver van een stijgende i/a-ratio.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 27",
@@ -256,7 +256,7 @@ const steps = [
         answer: 2,
         wrongHints: [
           "Bilateraal = land-tot-land hulp (overheid). Fairtrade is privaat.",
-          "Noodhulp = bij rampen (voedsel, medicijnen, snel). Fairtrade is langdurig.",
+          "Noodhulp = snelle hulp bij een ramp (voedsel, medicijnen). Is fairtrade handel een reactie op een ramp?",
           null,
         ],
         explanation: "Fairtrade biedt boeren in ontwikkelingslanden een eerlijke prijs voor hun producten — over jaren heen. Dat is structurele hulp: gericht op duurzame verbetering van inkomens. Tegenover noodhulp (acuut, kortlopend) staat structurele hulp (lange termijn, op de oorzaken van armoede gericht).",

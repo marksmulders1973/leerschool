@@ -426,7 +426,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Heb je de nul ook meegeteld? De oorsprong is ook een geldige x-waarde.",
+          "Heb je de nul ook meegeteld? x = 0 is ook een x-waarde in de tabel.",
           "Schrijf alle gehele x-waarden van -3 tot en met 3 op een rij en tel ze nauwkeurig — heb je er één te veel?",
           "Heb je alleen de positieve gepakt? De negatieve tellen óók mee.",
         ],
@@ -460,13 +460,13 @@ ${gridSvg}
     checks: [
       {
         q: "Welke vorm krijg je als je de punten verbindt met een vloeiende lijn?",
-        options: ["Een U-vorm", "Een rechte lijn", "Een cirkel", "Een driehoek"],
+        options: ["Een U-vorm", "Een rechte lijn", "Een V-vorm", "Een ∩-vorm"],
         answer: 0,
         wrongHints: [
           null,
           "Een rechte lijn krijg je bij y = x. Hier hadden we y = x² — en de y-waardes stegen sneller.",
-          "Een cirkel sluit zich. Loopt de kromme terug naar het beginpunt?",
-          "Een driehoek heeft hoeken. Heeft een vloeiende kromme hoeken?",
+          "Een V heeft onderaan een scherpe punt. Krijg je die als je de punten met een vloeiende lijn verbindt?",
+          "Kijk naar de y-waarden in de tabel: liggen de punten bij x = 0 het hoogst of het laagst?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Punten verbinden → U-vorm", tekst: "Als je de punten uit de tabel y = x² vloeiend verbindt, krijg je een U-vorm. Deze vorm heet een PARABOOL." }],
@@ -1226,7 +1226,7 @@ ${gridSvg}
         wrongHints: [
           null,
           "Stel y gelijk aan nul — welk getal geeft x² dan? Welk getal, vermenigvuldigd met zichzelf, levert dat op?",
-          "Er zijn altijd twee oplossingen: één positieve en één negatieve. Denk aan beide richtingen op de getallenlijn.",
+          "4 · 4 = 16 klopt. Welk ander getal geeft ook 16 als je het met zichzelf vermenigvuldigt?",
           "Stel y gelijk aan nul en herleid — heeft x² dan een oplossing? Kijk welk getal past.",
         ],
         uitlegPad: {

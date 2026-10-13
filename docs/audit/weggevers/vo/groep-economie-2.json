@@ -1,0 +1,1538 @@
+[
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke zijn passiva?",
+  "opties": [
+   "Eigen vermogen + vreemd vermogen",
+   "Gebouwen + voorraden",
+   "Klanten + leveranciers",
+   "Omzet + winst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Solvabiliteit berekenen:",
+  "opties": [
+   "EV / Totaal vermogen × 100%",
+   "VV / EV",
+   "Omzet / kosten",
+   "Winst / omzet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Afschrijving is:",
+  "opties": [
+   "Waardevermindering vaste activa over tijd",
+   "Belastingaangifte",
+   "Loonbetaling",
+   "Voorraad-aankoop"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Constante kosten zijn:",
+  "opties": [
+   "Onafhankelijk van productie-omvang",
+   "Stijgen met productie",
+   "Worden 0 bij stop",
+   "Variëren maandelijks"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Break-even-punt-formule:",
+  "opties": [
+   "Constante kosten / (prijs − variabele kosten/stuk)",
+   "Constante kosten / verkoopprijs per stuk",
+   "Omzet / totale kosten",
+   "Winst / eigen vermogen × 100%"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2K",
+  "q": "Welke prijsstrategie past bij nieuwe iPhone?",
+  "opties": [
+   "Skimming (hoge start-prijs)",
+   "Penetratie (lage start)",
+   "Cost-plus",
+   "Geen strategie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Cashflow kan negatief zijn terwijl bedrijf winst maakt. Waarom?",
+  "opties": [
+   "Klanten hebben nog niet betaald",
+   "Onmogelijk",
+   "Doordat de kosten daalden",
+   "Door belasting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Porter's 5 Forces is voor:",
+  "opties": [
+   "Concurrentie-analyse",
+   "Marketing-mix",
+   "Boekhouding",
+   "HR"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is MVO (CSR)?",
+  "opties": [
+   "Maatschappelijk Verantwoord Ondernemen",
+   "Marketing Vereniging Online",
+   "Maandelijkse Verkoop Overzicht",
+   "Markttoezicht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Brutomarge = ?",
+  "opties": [
+   "(Omzet − inkoop) / omzet × 100%",
+   "Omzet / inkoop × 100%",
+   "Nettowinst / EV × 100%",
+   "Inkoop / omzet × 100%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bedrijfseconomie-havo-vwo",
+  "file": "./bedrijfseconomieHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke is vraag-stimulerend (geen prijs-strategie)?",
+  "opties": [
+   "Reclame-campagne (promotie)",
+   "Penetratie",
+   "Skimming",
+   "Cost-plus"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is het verschil tussen belasting en premie?",
+  "opties": [
+   "Premie heeft specifiek doel; belasting gaat naar algemene pot",
+   "Premie is altijd hoger dan belasting",
+   "Belasting betalen alleen rijke mensen",
+   "Er is geen enkel verschil tussen beide"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Een ondernemer ontvangt €1.000 omzet inclusief 9% BTW. Hoeveel BTW houdt hij apart?",
+  "opties": [
+   "€83",
+   "€90",
+   "€100",
+   "€9"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat betekent progressief in inkomstenbelasting?",
+  "opties": [
+   "Hoger inkomen → hoger percentage in hoogste schijf",
+   "Belasting elk jaar hoger",
+   "Iedereen evenveel",
+   "Belasting daalt met inkomen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat hoort in Box 1?",
+  "opties": [
+   "Loon, winst, AOW, eigen woning",
+   "Alleen aandelen",
+   "Alleen spaargeld",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een heffingskorting?",
+  "opties": [
+   "Bedrag dat van je te betalen IB wordt afgehaald",
+   "Korting in winkel",
+   "Type spaarrekening",
+   "Rente op spaargeld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Box 3 belasting gaat over:",
+  "opties": [
+   "Spaargeld + beleggingen boven vrijstelling",
+   "Inkomen uit werk en eigen woning",
+   "Aandelen in je eigen BV",
+   "Een erfenis die je krijgt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Arbeidskorting krijg je als:",
+  "opties": [
+   "Je met werk een inkomen verdient",
+   "Je geen werk hebt",
+   "Je gepensioneerd bent",
+   "Je student bent zonder bijbaan"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie krijgt de algemene heffingskorting?",
+  "opties": [
+   "Iedereen, maar daalt bij hoger inkomen",
+   "Alleen rijken",
+   "Alleen werknemers",
+   "Niemand"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is IACK voor?",
+  "opties": [
+   "Werkende ouders met kind onder 12",
+   "Iedereen",
+   "Alleen vrouwen",
+   "Alleen mannen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Werk loont betekent in deze context:",
+  "opties": [
+   "Door arbeidskorting is netto-effect van werken positief",
+   "Iedereen verdient hetzelfde loon",
+   "Iedereen is verplicht om te werken",
+   "Werken is altijd zwaar en vermoeiend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie krijgt kinderbijslag?",
+  "opties": [
+   "Iedere ouder met kind, ongeacht inkomen",
+   "Alleen lage inkomens",
+   "Alleen werkenden",
+   "Alleen alleenstaanden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat ging er mis bij de toeslagenaffaire?",
+  "opties": [
+   "~26.000 ouders ten onrechte beschuldigd, jaren financiële nood",
+   "Er werden veel te veel toeslagen uitbetaald",
+   "Alle toeslagen werden afgeschaft",
+   "Er ging eigenlijk niets mis"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat gebeurt als je toeslag krijgt op basis van te laag geschat inkomen?",
+  "opties": [
+   "Je moet later terugbetalen",
+   "Je krijgt extra",
+   "Niets",
+   "Je krijgt een boete"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wie krijgt kinderopvangtoeslag?",
+  "opties": [
+   "Werkende/studerende ouders die opvang/crèche gebruiken",
+   "Iedere ouder, ook zonder opvang",
+   "Alleen alleenstaande ouders",
+   "Ouders krijgen hem nooit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is belastingontwijking?",
+  "opties": [
+   "Legaal slim gebruik maken van mazen in de wet",
+   "Belasting niet aangeven (verzwijgen)",
+   "Belasting kwijt raken",
+   "Belasting betalen op tijd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een tuinman die contant betaald wordt zonder factuur:",
+  "opties": [
+   "Mogelijk zwart geld — geen belasting/BTW betaald",
+   "Een gewone, nette betaling",
+   "Een nieuwe wet voor tuinmannen",
+   "Een toeslag van de overheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat zijn de Panama Papers?",
+  "opties": [
+   "Gelekte documenten over geheime offshore-bedrijven",
+   "Een nieuwe belasting in Panama",
+   "Een nieuw verdrag tussen landen",
+   "Een soort contract voor bedrijven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Waarom is eerlijke belasting belangrijk?",
+  "opties": [
+   "Solidariteit + financiering overheid + eerlijke markt",
+   "Niemand vindt het eigenlijk belangrijk",
+   "Het is alleen belangrijk voor rijken",
+   "Het is alleen belangrijk tijdens een crisis"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Een belastingparadijs is:",
+  "opties": [
+   "Land met zeer lage belasting + geheimhouding",
+   "Land met hoge belasting en strenge controle",
+   "Een populaire vakantiebestemming",
+   "Een soort verzekering"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L2S",
+  "q": "Wat gebeurt bij opzettelijk te laag aangeven (fraude)?",
+  "opties": [
+   "Boete tot 100% + mogelijk strafrecht",
+   "Geen enkele sanctie",
+   "Een korting op de aanslag",
+   "Alleen een waarschuwingsbrief"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-belasting",
+  "file": "./pincodeBelasting.js",
+  "stap": 6,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Toeslagenaffaire: wat ging mis?",
+  "opties": [
+   "Algoritme markeerde ouders ten onrechte als fraudeur",
+   "Er werden veel te veel toeslagen uitbetaald",
+   "Alle toeslagen werden afgeschaft",
+   "Er ging niets bijzonders mis"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Een land heeft een handelsoverschot. Wat betekent dat?",
+  "opties": [
+   "Export is groter dan import",
+   "Import groter dan export",
+   "Schulden afgelost",
+   "Recessie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Waarom is NL een uitgesproken handelsland?",
+  "opties": [
+   "Grote havens (Rotterdam) + Schiphol + ligging Europa",
+   "Er wordt veel goud gevonden in NL",
+   "NL heeft de laagste belasting ter wereld",
+   "NL hoeft zelf niets te importeren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is re-export?",
+  "opties": [
+   "Goederen komen NL binnen + gaan door naar ander land",
+   "Hetzelfde product twee keer exporteren",
+   "Export naar landen buiten Europa",
+   "Een belastingvoordeel voor exporteurs"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Welk risico brengt internationale afhankelijkheid?",
+  "opties": [
+   "Tekorten bij verstoringen zoals corona of oorlog",
+   "Er is helemaal geen risico",
+   "De prijzen worden altijd lager",
+   "Er komen meer toeristen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is een invoerheffing?",
+  "opties": [
+   "Belasting op importproducten aan de grens",
+   "Een soort BTW op alle producten",
+   "Belasting op je loon",
+   "Geld van de overheid voor bedrijven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is een quotum?",
+  "opties": [
+   "Maximum aantal dat geïmporteerd mag worden",
+   "Een belasting op importproducten",
+   "Een label voor goede kwaliteit",
+   "Een verdrag tussen twee landen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een subsidie voor eigen bedrijven:",
+  "opties": [
+   "Maakt hun producten goedkoper, internationaal concurrerender",
+   "Maakt hun producten duurder",
+   "Heeft geen enkel effect op prijzen",
+   "Is door de WTO altijd verboden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Reshoring is:",
+  "opties": [
+   "Productie terughalen naar eigen continent",
+   "Toerisme stimuleren",
+   "Belasting verlagen",
+   "Vrijhandel uitbreiden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel landen zitten in de EU?",
+  "opties": [
+   "27",
+   "20",
+   "50",
+   "12"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Welk land gebruikt de euro NIET?",
+  "opties": [
+   "Polen",
+   "Frankrijk",
+   "Spanje",
+   "Duitsland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Wat zijn de 4 vrijheden EU?",
+  "opties": [
+   "Goederen, personen, diensten, kapitaal",
+   "Eten, drinken, slapen, werken",
+   "Lucht, water, vuur, aarde",
+   "Stem, religie, pers, vereniging"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is de Europese Commissie?",
+  "opties": [
+   "'Regering' van de EU — maakt voorstellen, voert beleid uit",
+   "Het parlement dat door burgers gekozen wordt",
+   "De rechter die over EU-wetten beslist",
+   "De centrale bank die over de euro gaat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Voordeel euro voor toerist:",
+  "opties": [
+   "Geen wisselkosten of -koersrisico in eurozone",
+   "Hogere prijzen in andere eurolanden",
+   "Lagere belasting op je vakantie",
+   "Gratis hotelkamers in eurolanden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Koers €1 = $1,10. Je wilt $220 kopen. Hoeveel euro nodig?",
+  "opties": [
+   "€200",
+   "€220",
+   "€242",
+   "€110"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "De euro is sterk geworden. Effect voor NL-exporteur?",
+  "opties": [
+   "Exporteren naar VS wordt duurder voor Amerikanen",
+   "Exporteren naar VS wordt goedkoper voor Amerikanen",
+   "Geen effect op de export",
+   "De fabriek moet meteen sluiten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat veroorzaakt wisselkoers-verandering?",
+  "opties": [
+   "Vraag/aanbod, rente, politiek, inflatie",
+   "Alleen het weer",
+   "Alleen verkiezingen",
+   "Alleen toerisme"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is een 'safe haven'-valuta?",
+  "opties": [
+   "Valuta waar mensen naar vluchten in onzekere tijden",
+   "De goedkoopste valuta van de wereld",
+   "De nieuwste valuta van de wereld",
+   "Een cryptovaluta zoals bitcoin"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Voor een toerist: waar wisselen meestal slechtste koers?",
+  "opties": [
+   "Bij een wisselkantoor op de luchthaven",
+   "Bij pinnen ter plaatse",
+   "Bij je eigen bank vooraf",
+   "Online bij je bank"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat is een vrije zwevende koers?",
+  "opties": [
+   "Markt bepaalt — overheid grijpt niet in",
+   "Overheid zet de koers vast",
+   "Er is helemaal geen koers",
+   "Een koers voor cryptovaluta"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is globalisering?",
+  "opties": [
+   "Wereld wordt steeds meer verbonden — handel, communicatie, reizen",
+   "Een handelsverdrag tussen twee landen",
+   "Een belasting die wereldwijd geldt",
+   "Eén regering voor de hele wereld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wie is een verliezer van globalisering?",
+  "opties": [
+   "Westerse fabrieksarbeider — banen weg naar lage-loon-landen",
+   "Multinationals die wereldwijd verkopen",
+   "Consumenten die goedkoper kunnen kopen",
+   "Hoogopgeleiden die wereldwijd kunnen werken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Reshoring is:",
+  "opties": [
+   "Productie terug naar eigen continent halen",
+   "Buitenland uitbreiden",
+   "Toerisme bevorderen",
+   "Importtarief"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Containers waren cruciaal voor globalisering omdat:",
+  "opties": [
+   "Gestandaardiseerd → veel goederen snel + goedkoop transporteren",
+   "Ze zien er mooi uit in de haven",
+   "Ze zijn klein en licht",
+   "Ze waren in veel landen verboden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Klimaat en globalisering:",
+  "opties": [
+   "Veel CO2 door transport + productie verplaatst naar landen met lakse regels",
+   "Globalisering heeft geen effect op het klimaat",
+   "Globalisering helpt het klimaat altijd",
+   "Klimaat speelt bij handel geen enkele rol"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is een multinational?",
+  "opties": [
+   "Bedrijf met vestigingen in meerdere landen",
+   "Een soort belasting op handel",
+   "Een land met veel inwoners",
+   "Een vakbond voor werknemers"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Een voordeel van multinationals voor NL:",
+  "opties": [
+   "Banen + belastingopbrengst + innovatie",
+   "Er is geen enkel voordeel",
+   "Alleen voordeel voor rijke mensen",
+   "Alleen voordeel voor arme landen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een nadeel van multinationals:",
+  "opties": [
+   "Belastingontwijking via internationale structuren",
+   "Ze zorgen voor te veel banen",
+   "Ze doen te veel aan innovatie",
+   "Er zijn helemaal geen nadelen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat doet de ECB?",
+  "opties": [
+   "Beheert de euro: rente, geldhoeveelheid, inflatie",
+   "Belasting innen in de eurolanden",
+   "Wetten maken voor de EU",
+   "Ontwikkelingshulp geven aan arme landen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-buitenland-eu",
+  "file": "./pincodeBuitenlandEu.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is QE (Quantitative Easing)?",
+  "opties": [
+   "Veel geld bijdrukken om economie te helpen",
+   "Belastingen flink verhogen",
+   "Banken laten sluiten",
+   "Spaargeld in beslag nemen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke instantie schrijft je in als nieuwe ondernemer?",
+  "opties": [
+   "Kamer van Koophandel (KvK)",
+   "De gemeente",
+   "DUO",
+   "De school"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Welk kenmerk hoort er NIET bij een ondernemer?",
+  "opties": [
+   "Heeft een baas die het werk uitdeelt",
+   "Ziet kansen",
+   "Investeert eigen geld of leent",
+   "Neemt risico"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is deskresearch?",
+  "opties": [
+   "Bestaande informatie opzoeken, zoals cijfers van het CBS",
+   "Onderzoek door interviews op straat",
+   "Klanten observeren in de winkel",
+   "Een verplichte enquête"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat zou een bedreiging (T) zijn voor een nieuwe foodtruck?",
+  "opties": [
+   "Een grote concurrent komt op hetzelfde festival",
+   "Een trouwe klantenkring",
+   "Lage huur voor parkeerplek",
+   "Goede recensies"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom is veldonderzoek vaak nuttiger dan deskresearch alleen?",
+  "opties": [
+   "Je hoort het van je eigen doelgroep",
+   "Het is gratis",
+   "Het is altijd sneller",
+   "Het is verplicht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een doelgroep?",
+  "opties": [
+   "De mensen voor wie jouw product bedoeld is",
+   "Het personeel",
+   "Concurrenten",
+   "Leveranciers"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een USP?",
+  "opties": [
+   "Wat jou anders maakt dan de concurrent",
+   "Een soort BTW",
+   "Een marktanalyse",
+   "Een type lening"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Een hoge prijs (€8 voor friet) past bij welke marketing-strategie?",
+  "opties": [
+   "Exclusieve kwaliteit-uitstraling",
+   "Massa-verkoop",
+   "Doelgroep met laag inkomen",
+   "Laagste-prijs-strategie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Wet van de vraag: bij hogere prijs willen kopers...",
+  "opties": [
+   "Minder kopen",
+   "Meer kopen",
+   "Hetzelfde kopen",
+   "Sneller kopen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Wet van het aanbod: bij hogere prijs willen verkopers...",
+  "opties": [
+   "Meer leveren",
+   "Minder leveren",
+   "Hetzelfde",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Evenwichtsprijs is:",
+  "opties": [
+   "Prijs waar vraag = aanbod",
+   "Hoogste prijs",
+   "Laagste prijs",
+   "Gemiddelde prijs"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Substituten zijn:",
+  "opties": [
+   "Producten die elkaar kunnen vervangen",
+   "Producten die bij elkaar horen",
+   "Gratis producten",
+   "Belastingvrije producten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Hoeveel aanbieders bij volkomen concurrentie?",
+  "opties": [
+   "Veel",
+   "Weinig (3-10)",
+   "1",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Monopolie kenmerk:",
+  "opties": [
+   "1 aanbieder bepaalt prijs",
+   "Veel aanbieders",
+   "Weinig grote aanbieders",
+   "Lage prijs"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doet de ACM?",
+  "opties": [
+   "Bewaakt eerlijke concurrentie",
+   "Maakt wetten",
+   "Int belasting",
+   "Verdeelt subsidies"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Veel kledingmerken (Nike, Adidas, Puma, ...): welke marktvorm?",
+  "opties": [
+   "Monopolistische concurrentie",
+   "Volkomen concurrentie",
+   "Oligopolie",
+   "Monopolie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Twee vrienden starten een VOF voor hun foodtruck. Wat is het belangrijkste risico?",
+  "opties": [
+   "Ze zijn ook aansprakelijk voor elkaars schulden",
+   "Ze mogen geen winst maken",
+   "Ze betalen dubbele belasting",
+   "Ze hebben een notaris nodig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke belasting betaalt een BV?",
+  "opties": [
+   "Vennootschapsbelasting (VPB)",
+   "Inkomstenbelasting",
+   "Alleen BTW",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 6,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij welk winst-niveau wordt een BV vaak interessanter dan eenmanszaak?",
+  "opties": [
+   "Boven ongeveer €100.000 winst per jaar",
+   "Vanaf €1 winst",
+   "Pas bij €1 miljoen",
+   "Nooit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 6,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is een rechtspersoon?",
+  "opties": [
+   "Een bedrijf dat juridisch een eigen 'persoon' is",
+   "Een advocaat",
+   "Een ondernemer met een diploma",
+   "Een werknemer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 7,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is verplicht op een factuur?",
+  "opties": [
+   "KvK-nummer, BTW-nummer, datum, factuurnummer, prijs + BTW",
+   "Alleen het bedrag en de datum",
+   "Alleen jouw naam en handtekening",
+   "Niets — je kiest zelf wat erop staat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 7,
+  "vraag": 5,
+  "soort": "L2K",
+  "q": "Sam ontvangt €1.000 omzet inclusief 9% BTW op een dag. Hoeveel houdt hij apart voor BTW?",
+  "opties": [
+   "Ongeveer €83",
+   "€90",
+   "€100",
+   "€9"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Bij een faillissement van een eenmanszaak, wat is het belangrijkste verschil met een BV?",
+  "opties": [
+   "Ook privé-bezittingen kunnen verkocht worden",
+   "Geen verschil",
+   "Bij eenmanszaak gebeurt niets",
+   "BV is altijd erger"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 8,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke maatregel beperkt risico voor een ondernemer?",
+  "opties": [
+   "Een buffer van 3-6 maanden kosten op spaarrekening",
+   "Snel veel personeel aannemen",
+   "Alleen 1 hele grote klant",
+   "Geen verzekering nemen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 8,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat betekent diversificatie van klanten?",
+  "opties": [
+   "Veel verschillende klanten, niet afhankelijk van 1 grote",
+   "Alleen 1 type klant",
+   "Klanten verschillende prijzen geven",
+   "Veel in advertenties investeren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-ondernemen",
+  "file": "./pincodeOndernemen.js",
+  "stap": 8,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is een belangrijk persoonlijk risico voor een eenmanszaak-eigenaar?",
+  "opties": [
+   "Ziekte of burn-out → geen omzet meer",
+   "BTW-aangifte vergeten",
+   "Te weinig advertentie",
+   "Geen logo hebben"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een rechtsvorm?",
+  "opties": [
+   "De juridische opzet van een onderneming",
+   "De winst van een bedrijf",
+   "Een soort belasting",
+   "Het logo van een bedrijf"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Bij welke groep ben je privé aansprakelijk voor de schulden?",
+  "opties": [
+   "Eenmanszaak en VOF (geen rechtspersoon)",
+   "BV en NV (rechtspersoon)",
+   "Alleen de NV",
+   "Bij geen enkele rechtsvorm"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2S",
+  "q": "Welke belasting betaalt een rechtspersoon (BV of NV) over de winst?",
+  "opties": [
+   "Vennootschapsbelasting (VPB)",
+   "Inkomstenbelasting (IB)",
+   "Alleen BTW",
+   "Geen enkele belasting"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Twee vennoten hebben een VOF. Eén maakt een grote schuld. Wat betekent hoofdelijk aansprakelijk?",
+  "opties": [
+   "De schuldeisers kunnen de hele schuld bij de andere vennoot halen",
+   "Elke vennoot betaalt alleen zijn eigen helft",
+   "Alleen het bedrijf betaalt, niet de vennoten",
+   "De vennoten betalen niets, want het is een rechtspersoon"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Waarom kiezen veel zzp'ers voor een eenmanszaak?",
+  "opties": [
+   "Snel en goedkoop op te richten, met belastingvoordelen",
+   "Omdat het hun privé-vermogen het best beschermt",
+   "Omdat ze dan naar de beurs kunnen",
+   "Omdat een eenmanszaak geen belasting betaalt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Waar staat de B van BV voor?",
+  "opties": [
+   "Besloten — aandelen staan op naam, in een kleine kring",
+   "Bedrijf — elk bedrijf is een BV",
+   "Beurs — een BV staat op de beurs",
+   "Belasting — een BV betaalt geen belasting"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hoeveel minimumkapitaal heb je nodig om een BV op te richten?",
+  "opties": [
+   "Geen minimum — het mag met €0,01",
+   "€45.000",
+   "€100.000",
+   "€1 miljoen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is de belangrijkste reden om voor een NV te kiezen in plaats van een BV?",
+  "opties": [
+   "Veel kapitaal ophalen bij een groot publiek",
+   "Geen belasting hoeven betalen",
+   "Geen notaris nodig hebben",
+   "De eigenaar privé aansprakelijk maken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "rechtsvormen-overzicht",
+  "file": "./rechtsvormenOverzicht.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Welk kenmerk hebben alle vier de rechtsvormen gemeen?",
+  "opties": [
+   "Het zijn allemaal ondernemingen die winst willen maken",
+   "Ze zijn allemaal een rechtspersoon",
+   "Ze betalen allemaal vennootschapsbelasting",
+   "Ze kunnen allemaal naar de beurs"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

@@ -79,7 +79,7 @@ const steps = [
         answer: 2,
         wrongHints: [
           "De tekst noemt politici alleen indirect (ministers gebruiken AI om vragen op te zoeken) — niet als hoofdreden voor introductie van AI.",
-          "Niet 'overbezetting' (te veel personeel) — de tekst spreekt juist van 'shrinking population'. Tegengesteld probleem.",
+          "Heeft Japan volgens de tekst te veel personeel? Lees nog eens wat er over de Japanse bevolking staat.",
           null,
           "De tekst noemt geen rekenfouten — wel snellere afhandeling, maar dat is geen 'correctie van fouten'.",
         ],

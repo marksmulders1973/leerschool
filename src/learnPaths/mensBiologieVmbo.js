@@ -29,9 +29,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Kleine hersenen = coördinatie + balans, geen bewust horen.",
-          "Hersenstam = onbewuste functies (ademen, hartslag).",
-          "Ruggenmerg = signaal-doorgifte, bewust horen is hogerop.",
+          "De kleine hersenen regelen coördinatie en evenwicht. Is horen daar ook bewust?",
+          "De hersenstam regelt onbewuste dingen zoals ademen en hartslag. Is bewust horen onbewust?",
+          "Het ruggenmerg geeft signalen door en regelt reflexen. Waar word je je van een geluid bewust?",
         ],
         explanation: "Bewust waarnemen (zien, horen, voelen) gebeurt altijd in de grote hersenen — de cortex.",
         uitlegPad: {
@@ -64,15 +64,15 @@ const steps = [
       },
       {
         q: "Welke functie wordt geregeld door de hersenstam?",
-        options: ["Ademhaling + hartslag", "Bewust nadenken", "Fijne motoriek", "Spier-reflex"],
+        options: ["Ademhaling en hartslag", "Denken en onthouden", "Evenwicht en coördinatie", "Lichaamstemperatuur en dorst"],
         answer: 0,
         wrongHints: [
           null,
-          "Bewust denken = grote hersenen.",
-          "Fijne motoriek regelen de grote en kleine hersenen, niet de hersenstam.",
-          "Reflexen lopen via ruggenmerg.",
+          "Denken en onthouden gebeurt in de grote hersenen. Wat regelt de hersenstam vanzelf, zonder dat je erover nadenkt?",
+          "Evenwicht en coördinatie regelen de kleine hersenen. Welk deel ligt vlak boven het ruggenmerg?",
+          "Temperatuur en dorst regelt de hypothalamus in de tussenhersenen. Welke functies gaan door, ook als je slaapt?",
         ],
-        explanation: "De hersenstam regelt automatische vitale functies: ademen, hartslag, slikken, lichaamstemperatuur.",
+        explanation: "De hersenstam regelt automatische vitale functies: ademen, hartslag, slikken en bloeddruk. Lichaamstemperatuur en dorst regelt de hypothalamus (tussenhersenen).",
       },
       {
         q: "Bij clicker-training leert de hond click = beloning. Welk type leergedrag is dit?",
@@ -118,7 +118,7 @@ const steps = [
         wrongHints: [
           null,
           "Rode bloedcellen kunnen niet door de haarvatwand — ze blijven in de bloedbaan.",
-          "Plaatjes blijven ook in bloed — alleen witte cellen kunnen door vaatwand.",
+          "Bloedplaatjes zijn te groot om door de haarvatwand te gaan. Welke cellen kunnen zich wél door die wand wringen?",
         ],
         explanation: "Alleen witte bloedcellen kunnen door de wand van haarvaten heen kruipen (diapedese). Zo komen ze in weefselvocht en daarmee in lymfe.",
         uitlegPad: {
@@ -138,7 +138,7 @@ const steps = [
       },
       {
         q: "Wat zorgt ervoor dat lymfevocht maar in één richting stroomt?",
-        options: ["Kleppen in lymfevaten + spierwerking", "Het hart pompt lymfe rond", "Diafragma duwt lymfe omhoog", "Zwaartekracht"],
+        options: ["Kleppen in lymfevaten + spierwerking", "Het hart pompt de lymfe door de vaten", "Het middenrif duwt de lymfe omhoog", "Zwaartekracht trekt de lymfe naar beneden"],
         answer: 0,
         wrongHints: [
           null,
@@ -150,13 +150,13 @@ const steps = [
       },
       {
         q: "Welke bloedcellen vervoeren zuurstof?",
-        options: ["Rode bloedcellen", "Witte bloedcellen", "Bloedplaatjes", "Plasma alleen"],
+        options: ["Rode bloedcellen", "Witte bloedcellen", "Bloedplaatjes", "Bloedplasma"],
         answer: 0,
         wrongHints: [
           null,
-          "Witte cellen = afweer, niet transport.",
-          "Plaatjes = stolling.",
-          "Plasma vervoert maar heel weinig O₂ — de meeste zuurstof zit gebonden in cellen.",
+          "Witte bloedcellen ruimen ziekteverwekkers op. Vervoeren ze ook zuurstof?",
+          "Bloedplaatjes zorgen dat een wondje dichtgaat. Heeft dat met zuurstof te maken?",
+          "In plasma lost maar heel weinig zuurstof op. In welke cellen zit het meeste gebonden?",
         ],
         explanation: "Rode bloedcellen (erytrocyten) bevatten hemoglobine, dat zich aan zuurstof bindt. Vandaar de rode kleur.",
       },
@@ -188,8 +188,8 @@ const steps = [
         wrongHints: [
           null,
           "Bronchiën = vertakkingen die lucht NAAR de longblaasjes brengen — geen uitwisseling.",
-          "Luchtpijp = grote transportbuis vóór de bronchiën.",
-          "Mondholte = begin van luchtweg, geen gas-bloed-uitwisseling.",
+          "De luchtpijp heeft een dikke wand met kraakbeenringen. Kan zuurstof daar makkelijk doorheen naar het bloed?",
+          "In de mondholte zitten geen dunne blaasjes vol haarvaten. Waar in de longen wel?",
         ],
         explanation: "Alleen longblaasjes hebben de dunne wand + haarvaten waar gaswisseling kan plaatsvinden. De rest is transport.",
         uitlegPad: {
@@ -213,26 +213,16 @@ const steps = [
       },
       {
         q: "Welke spier is het belangrijkste voor de ademhaling?",
-        options: ["Middenrif", "Hart", "Tussenribspieren alleen", "Buikspieren"],
+        options: ["Middenrif", "Hart", "Tussenribspieren", "Buikspieren"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Hart pompt bloed, geen lucht.",
-          "Tussenribspieren helpen wel mee maar middenrif is hoofdspier.",
-          "Buikspieren helpen bij geforceerd uitademen maar zijn niet hoofdspier.",
-        ],
+        wrongHints: [null, "Het hart pompt bloed rond. Verplaatst het ook de lucht in je longen?", "Tussenribspieren helpen wel mee, maar doen niet het meeste werk. Welke spier doet dat wel?", "Buikspieren helpen bij hard uitademen, maar bij gewoon ademen doen ze weinig."],
         explanation: "Middenrif is de grote koepelvormige spier onder de longen. Trekt samen = zakt = borstkas groter = lucht stroomt in.",
       },
       {
         q: "Bloed dat de longen verlaat (via longader) bevat:",
-        options: ["veel zuurstof + weinig CO₂", "veel CO₂ + weinig zuurstof", "alleen zuurstof", "alleen CO₂"],
+        options: ["veel zuurstof + weinig CO₂", "veel CO₂ + weinig zuurstof", "weinig zuurstof + weinig CO₂", "veel zuurstof + veel CO₂"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Andersom — dát is bloed dat NAAR de longen gaat.",
-          "Bloed bevat altijd ook andere stoffen + wat CO₂.",
-          "Bloed bevat altijd zowel O₂ als CO₂, alleen verhouding verschilt.",
-        ],
+        wrongHints: [null, "Andersom — dát is bloed dat NAAR de longen gaat.", "In de longen neemt het bloed iets op. Waar zit daarna dan meer van in?", "In de longen geeft het bloed ook iets af. Waar blijft daarna weinig van over?"],
         explanation: "Na gaswisseling: bloed heeft O₂ opgenomen + CO₂ afgegeven. Verlaat longen via longader → hart → lichaam.",
       },
       {
@@ -241,9 +231,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Veel meer — 300 miljoen blaasjes samen.",
-          "Te veel — geen sportveld.",
-          "Veel meer — een blaadje is groter.",
+          "Er zijn zo'n 300 miljoen longblaasjes. Is hun oppervlak samen dan maar zo groot als een tafelblad?",
+          "Dat is meer dan een voetbalveld. Is het echt zó veel?",
+          "Dat is kleiner dan je handpalm. Is dat genoeg om je hele lichaam van zuurstof te voorzien?",
         ],
         explanation: "300 miljoen alveolen samen = ~70 m². Groot oppervlak = veel uitwisseling mogelijk.",
       },
@@ -270,13 +260,13 @@ const steps = [
       },
       {
         q: "Waar zitten de zenuwen in een tand?",
-        options: ["alleen in de tandholte", "alleen in het tandbeen", "in beide", "in geen van beide"],
+        options: ["in de tandholte", "in het tandbeen", "in het glazuur", "in het tandcement"],
         answer: 0,
         wrongHints: [
           null,
           "Tandbeen is hard en heeft geen zenuwen — alleen kanaaltjes.",
-          "Niet ook in tandbeen.",
-          "Wel — anders zou de tandarts geen verdoving nodig hebben bij diepe gaatjes.",
+          "Glazuur is het hardste deel van je lichaam en bevat geen levende cellen. Kunnen daar zenuwen in zitten?",
+          "Tandcement zet de wortel vast in de kaak. Is dat het zachte deel waar ook bloedvaten lopen?",
         ],
         explanation: "Tandzenuwen + bloedvaten zitten samen in de tandholte (pulpa), het zachte centrum. Glazuur + tandbeen eromheen zijn hard en zonder zenuwen.",
       },
@@ -314,8 +304,8 @@ const steps = [
         wrongHints: [
           null,
           "Maag = afbraak (vooral eiwitten), opname is hier minimaal.",
-          "Dikke darm = water + zouten opname, voedingsstoffen zijn al verwerkt.",
-          "Slokdarm = alleen transport.",
+          "In de dikke darm wordt vooral water en zout opgenomen. Waar zijn de voedingsstoffen dan al opgenomen?",
+          "Voedsel glijdt in een paar seconden door de slokdarm. Is daar tijd om iets op te nemen?",
         ],
         explanation: "Dunne darm heeft darmvlokken + microvilli → enorm oppervlak. Glucose + aminozuren → bloed. Vetzuren → lymfe.",
       },
@@ -338,8 +328,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Nierbekken filtert NIET — het verzamelt alleen urine.",
-          "Nierbekken filtert niet. Alleen schors + merg samen doen filterwerk.",
+          "Het nierbekken vangt de urine op die al gemaakt is. Waar liggen de nefronen dan?",
+          "Het nierbekken verzamelt alleen urine. Welk ander deel van de nier hoort dan bij het filteren?",
         ],
         explanation: "Nefronen (filter-eenheden) lopen door schors + merg. Het nierbekken is een opvangruimte, geen filter.",
         uitlegPad: {
@@ -365,12 +355,7 @@ const steps = [
         q: "In welk orgaan ontstaat ureum?",
         options: ["lever", "nier", "darm", "maag"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Nier VERWIJDERT ureum uit bloed, maakt het niet zelf.",
-          "Darm = opname voedingsstoffen + uitscheiding ontlasting.",
-          "Maag = vertering eiwit. Aminozuren komen daarna in lever terecht.",
-        ],
+        wrongHints: [null, "Nier VERWIJDERT ureum uit bloed, maakt het niet zelf.", "De darm neemt voedingsstoffen op en voert ontlasting af. Waar worden overtollige aminozuren afgebroken?", "Maag = vertering eiwit. Waar gaan de aminozuren daarna naartoe om afgebroken te worden?"],
         explanation: "Lever breekt aminozuren (uit eiwit-vertering) af en maakt daarbij ureum als afvalstof. Ureum gaat via bloed naar nieren → urine.",
       },
       {
@@ -379,8 +364,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Filtering = schors + merg.",
-          "Water terug-opnemen = niermerg (in nefron-lus).",
+          "Het filteren gebeurt in de nefronen. Liggen die in het nierbekken?",
+          "Water wordt teruggenomen in de lus van het nefron, in het niermerg. Wat gebeurt er daarna in het nierbekken?",
           "Hormonen worden door andere klieren gemaakt.",
         ],
         explanation: "Nierbekken is een verzamelplek voor klare urine voordat die via de urineleider naar de blaas gaat. Geen filtering.",
@@ -392,8 +377,8 @@ const steps = [
         wrongHints: [
           null,
           "Lever breekt alcohol af, maar via stofwisseling — niet via uitademen.",
-          "Nieren filteren bloed, maar geen gas.",
-          "Huid scheidt zweet uit, geen alcoholdamp.",
+          "Nieren voeren afvalstoffen af met de urine. Komt daar iets van in je adem terecht?",
+          "Via de huid verlies je zweet. Meet een blaastest wat er uit je huid komt?",
         ],
         explanation: "Vluchtige stoffen (gas-vorm) kunnen via gaswisseling in longblaasjes terug naar uitgeademde lucht. Vandaar de blaastest bij alcohol.",
       },
@@ -409,7 +394,7 @@ const steps = [
         q: "Bewust denken en willekeurige bewegingen worden geregeld door:",
         options: ["de grote hersenen", "de kleine hersenen", "de hersenstam", "het ruggenmerg"],
         answer: 0,
-        wrongHints: [null, "Kleine = coördinatie + balans.", "Stam = onbewuste vitale functies.", "Ruggenmerg = signaal-snelweg + reflexen."],
+        wrongHints: [null, "De kleine hersenen zorgen voor coördinatie en evenwicht. Denk je daar ook bewust mee na?", "De hersenstam regelt onbewuste functies zoals ademen. Is bewust denken onbewust?", "Het ruggenmerg geeft signalen door en regelt reflexen. Kun je daarmee nadenken?"],
         explanation: "Grote hersenen = cortex = bewust denken, willekeurige bewegingen, geheugen.",
       },
       {
@@ -423,28 +408,28 @@ const steps = [
         q: "Waar in de longen vindt gaswisseling plaats?",
         options: ["In de longblaasjes", "In de bronchiën", "In de luchtpijp", "In de neusholte"],
         answer: 0,
-        wrongHints: [null, "Bronchiën = transport.", "Luchtpijp = transport.", "Neus = filter + opwarmen."],
+        wrongHints: [null, "De bronchiën vertakken zich en brengen lucht naar diep in de long. Is hun wand dun genoeg voor gaswisseling?", "De luchtpijp brengt lucht naar de longen. Kan zuurstof door de dikke wand met kraakbeen?", "De neus filtert en verwarmt de lucht. Zit de neusholte in de longen?"],
         explanation: "Longblaasjes zijn de enige plek waar O₂ + CO₂ kunnen oversteken tussen lucht en bloed.",
       },
       {
         q: "Maagsap bevat het enzym pepsine. Wat doet dat?",
-        options: ["Het verteert eiwitten", "Het verteert vetten", "Het verteert vezels", "Het maakt hormonen"],
+        options: ["Het verteert eiwitten", "Het verteert vetten", "Het verteert vezels", "Het verteert zetmeel"],
         answer: 0,
-        wrongHints: [null, "Vet → lipase in dunne darm.", "Vezels worden niet door enzymen afgebroken.", "Hormoon-maken doen klieren, niet maagenzymen."],
+        wrongHints: [null, "Vetten worden vooral in de dunne darm verteerd door lipase. Is pepsine een lipase?", "Vezels worden niet door enzymen afgebroken.", "Zetmeel wordt verteerd door amylase uit speeksel en alvleessap. Werkt pepsine daarop?"],
         explanation: "Pepsine breekt eiwitten af tot peptiden. Het werkt alleen in zure omgeving (maagzuur).",
       },
       {
         q: "Ureum (afvalstof van eiwit-afbraak) wordt gevormd in:",
         options: ["de lever", "de nieren", "de darmen", "de hersenen"],
         answer: 0,
-        wrongHints: [null, "Nieren filteren ureum, maken het niet.", "Darm = opname voeding, geen ureum-vorming.", "Hersenen verbruiken voeding maar maken geen ureum."],
+        wrongHints: [null, "Nieren filteren ureum, maken het niet.", "De darmen nemen voedingsstoffen op. In welk orgaan worden overtollige aminozuren omgezet?", "Hersenen verbruiken voeding maar maken geen ureum."],
         explanation: "Lever breekt overtollige aminozuren af → stikstof wordt omgezet in ureum → bloed → nieren → urine.",
       },
       {
         q: "Welke spier is de belangrijkste ademspier?",
-        options: ["Middenrif", "Hart", "Buikspieren", "Tussenribspieren alleen"],
+        options: ["Middenrif", "Hart", "Buikspieren", "Tussenribspieren"],
         answer: 0,
-        wrongHints: [null, "Hart pompt bloed, niet lucht.", "Buikspieren helpen forceren maar zijn niet hoofdspier.", "Tussenribspieren helpen, maar middenrif doet ~75% van het werk."],
+        wrongHints: [null, "Het hart pompt bloed rond. Verplaatst het ook de lucht in je longen?", "Buikspieren helpen bij hard uitademen, maar bij gewoon ademen doen ze weinig.", "Tussenribspieren helpen wel mee, maar doen niet het meeste werk. Welke spier doet dat wel?"],
         explanation: "Middenrif = grote koepelspier onder longen. Trekt samen = zakt = borstkas groter = lucht in.",
       },
     ],

@@ -23,28 +23,28 @@ const steps = [
       {
         q: "Welke is **GEEN** voorwaarde voor natuurlijke selectie?",
         options: [
-          "Vrije keuze van het individu om te evolueren",
-          "Variatie binnen populatie",
+          "Doorgeven van aangeleerde eigenschappen",
+          "Variatie binnen een populatie",
           "Erfelijkheid van eigenschappen",
-          "Selectiedruk uit omgeving"
+          "Selectiedruk uit de omgeving"
         ],
         answer: 0,
-        wrongHints: [null, "Variatie IS vereist.", "Erfelijkheid IS vereist.", "Selectiedruk IS vereist."],
+        wrongHints: [null, "Als alle dieren precies gelijk zijn, waartussen kan de natuur dan nog kiezen?", "Als een gunstige eigenschap niet naar de jongen gaat, verandert de populatie dan over generaties?", "Als niets sommige dieren minder kans geeft, wie valt er dan af?"],
         uitlegPad: {
-          stappen: [{ titel: "Geen keuze", tekst: "Evolutie is geen bewuste keuze. Het individu 'kiest' niets — de combinatie van variatie, erfelijkheid + selectiedruk werkt op populatie-niveau. Veel gemaakt misverstand: 'soorten passen zich aan' wel maar 'giraffen wilden langer worden' niet (Lamarck-fout)." }],
-          niveaus: { basis: "Geen vrije keuze.", simpeler: "Evolutie is geen bewuste actie.", nogSimpeler: "Keuze ≠ A." },
+          stappen: [{ titel: "Aangeleerd telt niet", tekst: "Wat een individu tijdens zijn leven aanleert of traint (een gespierde nek, een trucje) gaat niet via het DNA naar de jongen. Dat dacht Lamarck: 'giraffen rekten hun nek en kregen zo langnekkige jongen'. Natuurlijke selectie heeft alleen variatie, erfelijkheid + selectiedruk nodig en werkt op populatie-niveau." }],
+          niveaus: { basis: "Aangeleerde eigenschappen worden niet doorgegeven.", simpeler: "Wat je oefent, zit niet in je DNA.", nogSimpeler: "Geleerd is niet geërfd." },
         },
       },
       {
         q: "Pepermot-evolutie in 19e eeuw: licht → donker. Door wat?",
         options: [
           "Selectie door vogels op roetzwarte bomen",
-          "Motten 'wilden' donker worden",
-          "Selectie door vrouwelijke motten",
-          "Toeval zonder selectie"
+          "Mutaties door roet en luchtvervuiling",
+          "Partnerkeuze door vrouwelijke motten",
+          "Genetische drift in kleine populaties"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen bewuste wens.", "Geen seksuele selectie hier.", "Niet — duidelijk selectiedruk."],
+        wrongHints: [null, "Donkere motten bestonden al vóór de industrie, alleen zeldzaam. Was roet dan de oorzaak van de mutatie?", "Waarom zouden vrouwtjes in industriegebieden ineens een andere voorkeur hebben dan op het platteland?", "Waarom werd juist de donkere vorm vaker, en dan vooral in de industriegebieden?"],
         uitlegPad: {
           stappen: [
             { titel: "Industrieel melanisme", tekst: "Klassiek experiment + observatie. Voor 1850: <1% donker. Tegen 1900: >95% donker. Vogel-predatie favoriseerde camouflage met roetschors. Na Clean Air Act 1956 + schonere industrie → omgekeerd → terug naar licht. **Bewijs evolutie in mensentijdschalen**." },
@@ -56,12 +56,12 @@ const steps = [
         q: "**Darwiniaanse fitness** betekent:",
         options: [
           "Reproductief succes",
-          "Fysieke kracht",
-          "Snelheid",
-          "Intelligentie"
+          "Lichamelijke kracht",
+          "Een lange levensduur",
+          "Grootte van het lichaam"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — kracht is niet doorslaggevend.", "Idem.", "Idem."],
+        wrongHints: [null, "Een heel sterk dier dat nooit jongen krijgt: geeft dat zijn genen door?", "Een schildpad van 100 jaar zonder nakomelingen: hoeveel genen laat die achter?", "Kleine muizen krijgen vaak veel meer jongen dan grote dieren. Wie geeft dan meer genen door?"],
         uitlegPad: {
           stappen: [{ titel: "Niet 'survival of the fittest' als kracht", tekst: "Fitness = hoeveel je doorgeeft aan volgende generatie. Pauw met verleidelijke staart: minder mobiel → hogere kans gepakt door predator, MAAR meer paartjes → meer nakomelingen → hoge fitness. Wat 'fit' is hangt af van omgeving." }],
           niveaus: { basis: "Nakomelingen.", simpeler: "Wie meeste baby's krijgt = fit.", nogSimpeler: "Reproductie" },
@@ -71,12 +71,12 @@ const steps = [
         q: "Galapagos-vinken hebben **verschillende snavels** per eiland. Waarom?",
         options: [
           "Aanpassing aan het voedsel per eiland",
-          "Toeval",
-          "Vinken kiezen hun snavel-vorm",
+          "Snavels groeien door veel oefenen",
+          "Kruising met andere vogelsoorten",
           "Elke eilandvink stamt af van een andere vogelsoort"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — wel patroon.", "Onmogelijk.", "Nee — de vinken hebben juist één gemeenschappelijke voorouder."],
+        wrongHints: [null, "Stel dat een vink zijn snavel sterker maakt door te oefenen. Krijgen zijn jongen dan ook die snavel?", "Kunnen vinken vruchtbare jongen krijgen met heel andere vogels, zoals meeuwen?", "Nee — de vinken hebben juist één gemeenschappelijke voorouder."],
         uitlegPad: {
           stappen: [
             { titel: "Adaptieve radiatie", tekst: "Eén voorouder-vink kwam op archipel. Op verschillende eilanden: ander voedsel beschikbaar. Selectie favoriseert snavels per habitat. In ~3 mln jaar: 15+ soorten. Klassiek voorbeeld dat Darwin tot zijn theorie bracht." },
@@ -88,13 +88,13 @@ const steps = [
       {
         q: "Een vogelpaar krijgt 8 jongen, maar er is maar voedsel voor 2. Wat gebeurt er volgens Darwin?",
         options: [
-          "De best aangepaste jongen overleven het vaakst",
-          "Iedereen overleeft",
-          "Niemand overleeft",
-          "De ouders kiezen bewust welke jongen overleven"
+          "Jongen met gunstige erfelijke eigenschappen overleven vaker",
+          "Puur het toeval bepaalt welke jongen overleven",
+          "Jongen die sterker worden door te vechten, geven dat door",
+          "De jongen passen zich samen aan en eten elk wat minder"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — overproductie geeft selectie.", "Geen reden voor totaal-verlies.", "Is selectie een bewuste keuze?"],
+        wrongHints: [null, "Heeft een jong dat sneller of slimmer voedsel vindt geen betere kans?", "Kracht die je tijdens je leven opbouwt: zit die in je DNA? Kan een jong dat dan erven?", "Kan een jong met een kwart van het voedsel volwassen worden? En wordt zuinig eten erfelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde 3: overproductie", tekst: "Darwin's inzicht (geïnspireerd door Malthus): organismen produceren altijd meer nakomelingen dan omgeving aankan. Daardoor: concurrentie + selectie. Niet alle nakomelingen overleven → die met betere variatie hebben hogere kans → evolutie." }],
           niveaus: { basis: "Selectie door overschot.", simpeler: "Te veel baby's → niet alle overleven.", nogSimpeler: "Selectie" },
@@ -113,12 +113,12 @@ const steps = [
         q: "De meeste **mutaties** zijn:",
         options: [
           "Neutraal of schadelijk",
-          "Allemaal gunstig",
-          "Allemaal schadelijk",
-          "Bewust gekozen"
+          "Meestal gunstig",
+          "Direct zichtbaar",
+          "Reactie op de omgeving"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — meeste niet zo.", "Niet — neutrale wel.", "Onmogelijk."],
+        wrongHints: [null, "Een toevallige verandering in een goed werkend bouwplan: maakt dat het meestal beter?", "Veel mutaties zitten in stukken DNA die je niet terugziet. Zie je ze dan aan de buitenkant?", "Ontstaat een mutatie omdat het dier hem nodig heeft, of door een toevallige kopieerfout?"],
         uitlegPad: {
           stappen: [{ titel: "Random + meestal onzichtbaar", tekst: "DNA-replicatie maakt fouten. De meeste vallen in niet-coderend DNA → geen effect. Coderende mutaties: meestal verstoren werking eiwit → schadelijk. Zeldzame: gunstig — daarop werkt selectie." }],
           niveaus: { basis: "Meeste neutraal/schadelijk.", simpeler: "Mutaties willekeurig, zelden gunstig.", nogSimpeler: "Neut/schad" },
@@ -128,12 +128,12 @@ const steps = [
         q: "**Recombinatie** bij seksuele voortplanting:",
         options: [
           "Mengt bestaande genen, geen nieuwe genen",
-          "Maakt nieuwe genen",
-          "Verdwijnt bij meiose",
-          "Werkt alleen voor mannetjes"
+          "Maakt nieuwe genen die er nog niet waren",
+          "Verdwijnt tijdens de meiose helemaal",
+          "Werkt alleen bij de gameten van mannetjes"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — wisselt, niet creëert.", "Tegenovergesteld.", "Geldt voor alle gameten."],
+        wrongHints: [null, "Waar komen echt nieuwe varianten van een gen vandaan: uit mutaties of uit het husselen?", "Juist in de meiose wisselen chromosomen stukken uit. Kan het daar dan verdwijnen?", "Maken vrouwtjes hun eicellen ook via meiose?"],
         uitlegPad: {
           stappen: [
             { titel: "Crossing-over + onafhankelijke segregatie", tekst: "Tijdens meiose: chromosomen koppelen + wisselen stukken. Plus elk chromosoom gaat random naar ene of andere gameet. Combinatie van 2 sets ouders → enorme variatie zonder dat nieuwe genen ontstaan. Mutatie levert nieuwe variatie." },
@@ -145,12 +145,12 @@ const steps = [
         q: "Een **kleine populatie** loopt risico op:",
         options: [
           "Verlies van genetische variatie",
-          "Te veel variatie",
-          "Mutaties uitgesloten",
-          "Geen evolutie mogelijk"
+          "Selectie die sterker werkt dan drift",
+          "Meer mutaties per dier per generatie",
+          "Meer heterozygote dieren door inteelt"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — mutaties gebeuren.", "Drift maakt evolutie juist sneller."],
+        wrongHints: [null, "In een kleine groep kan toeval grote verschuivingen geven. Wie heeft daar de overhand: selectie of drift?", "Mutaties zijn toevallige kopieerfouten. Worden dat er per dier meer omdat de groep klein is?", "Bij inteelt krijgt een jong vaak van beide ouders hetzelfde allel. Wordt het dan heterozygoot of homozygoot?"],
         uitlegPad: {
           stappen: [
             { titel: "Flessenhals + inteelt", tekst: "Kleine populatie: variatie smal, gevoelig voor verlies door drift + inteelt. Voorbeeld cheetah's: bottleneck ~10 000 jaar geleden → vandaag bijna geen genetische verschillen → vatbaar voor virussen. Beschermingsprogramma's mengen populaties om diversiteit te behouden." },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "Frequentie van gen-a in populatie is q = 0,2. Frequentie van **homozygoot aa**?",
-        options: ["0,04", "0,2", "0,32", "2q = 0,4"],
+        options: ["0,04", "0,2", "0,32", "0,4"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is allel-frequentie.", "Niet — dat is de frequentie van de heterozygoten (2pq).", "Niet — geen relatie."],
+        wrongHints: [null, "Dat is de frequentie van allel a zelf. Hoe groot is de kans dat iemand twéé keer a heeft?", "Niet — dat is de frequentie van de heterozygoten (2pq).", "Dat is 2q. Waarom zou je de kansen op twee allelen optellen in plaats van vermenigvuldigen?"],
         uitlegPad: {
           stappen: [
             { titel: "Hardy-Weinberg q²", tekst: "Frequentie aa = q² = 0,2² = **0,04 = 4%**. Heterozygoot 2pq = 2·0,8·0,2 = 0,32 = 32%. AA = p² = 0,64 = 64%. Som: 100%. ✓" },
@@ -174,12 +174,12 @@ const steps = [
         q: "**Gene flow** is:",
         options: [
           "Uitwisseling van allelen door migratie",
-          "Genen die door cel stromen",
-          "Mutaties die zich verspreiden",
-          "DNA-replicatie"
+          "Overdracht van genen van ouder op kind",
+          "Mutaties die zich over de soort verspreiden",
+          "Het kopiëren van DNA bij celdeling"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verkeerde betekenis.", "Specifiek migratie, niet algemene verspreiding.", "Onjuist concept."],
+        wrongHints: [null, "Dat is gewone overerving binnen één populatie. Gaat gene flow over één familie of tussen populaties?", "Een mutatie kan zich binnen een populatie verspreiden door selectie of drift. Wat is er nodig om allelen naar een ándere populatie te brengen?", "Dat is DNA-replicatie. Gaat gene flow over één cel of over populaties?"],
         uitlegPad: {
           stappen: [{ titel: "Populaties met uitwisseling", tekst: "Wanneer individuen migreren naar nieuwe populatie + reproduceren → brengen ze hun allelen mee → genfrequenties verschuiven. Bij hoge gene flow: populaties blijven homogeen. Bij lage gene flow: populaties groeien uit elkaar → mogelijke soortvorming." }],
           niveaus: { basis: "Migratie brengt allelen.", simpeler: "Verhuizen voegt nieuwe genen toe.", nogSimpeler: "Migratie" },
@@ -197,13 +197,13 @@ const steps = [
       {
         q: "**Genetische drift** werkt sterker in:",
         options: [
-          "Kleine populaties",
-          "Grote populaties",
-          "Bij sterke selectie",
-          "Bij hoge mutatie-snelheid"
+          "Populaties met weinig dieren",
+          "Populaties met veel dieren",
+          "Populaties onder sterke selectie",
+          "Populaties met veel mutaties"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — drift is naast selectie.", "Mutaties leveren variatie, niet drift."],
+        wrongHints: [null, "Gooi 10 keer een munt of 1000 keer. Waar wijkt de uitkomst het makkelijkst af van half om half?", "Drift is toeval en selectie is juist niet toevallig. Wordt toeval sterker als selectie sterk is?", "Mutaties leveren nieuwe allelen, maar drift gaat over toeval bij het doorgeven. Waar heeft toeval de meeste invloed?"],
         uitlegPad: {
           stappen: [{ titel: "Wet van grote aantallen", tekst: "Statistisch: bij weinig waarnemingen veel ruis. In klein dorp van 50 mensen: 1 ongeluk verandert ratios sterk. In stad van 1 mln: amper effect. Drift = ruis." }],
           niveaus: { basis: "Klein = sterke drift.", simpeler: "Toeval domineert in kleine groep.", nogSimpeler: "Klein" },
@@ -213,12 +213,12 @@ const steps = [
         q: "**Allopatrische soortvorming** vereist:",
         options: [
           "Geografische scheiding tussen populaties",
-          "Polyploïdie",
-          "Sympatrische co-existentie",
-          "Hybriden"
+          "Polyploïdie (verdubbeling van chromosomen)",
+          "Samenleven in hetzelfde gebied",
+          "Kruising tot vruchtbare hybriden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is sympatrisch.", "Tegenovergesteld.", "Niet — kruisen wordt onmogelijk juist."],
+        wrongHints: [null, "Polyploïdie kan een nieuwe soort maken zonder dat de groepen uit elkaar gaan. Gaat 'allopatrisch' daarover?", "Samenleven in één gebied heet sympatrisch. Wat betekent 'allo' (anders)?", "Als twee groepen nog vruchtbare jongen samen krijgen, zijn het dan al aparte soorten?"],
         uitlegPad: {
           stappen: [{ titel: "Allo = ander, patria = land", tekst: "'Allopatrisch' = letterlijk 'ander vaderland'. Bv. populatie aan beide kanten van Rocky Mountains gescheiden → onafhankelijke evolutie → na honderdduizenden jaren verschillende soorten. Meest voorkomende model." }],
           niveaus: { basis: "Geografische barrière.", simpeler: "Gescheiden door berg/rivier.", nogSimpeler: "Allo" },
@@ -227,13 +227,13 @@ const steps = [
       {
         q: "**Cheetah's** hebben weinig genetische variatie. Oorzaak?",
         options: [
-          "Een flessenhals in het verleden",
-          "Inteelt door menselijke ingreep",
-          "Stichter-effect",
-          "Sympatrische soortvorming"
+          "Een sterke inkrimping van de populatie, lang geleden",
+          "Inteelt door fokprogramma's in dierentuinen",
+          "Een kleine groep die een nieuw gebied koloniseerde",
+          "Het ontstaan van een nieuwe soort in hetzelfde gebied"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair — gevolg, niet oorzaak.", "Nee — er heeft geen kleine groep een nieuw gebied gekoloniseerd.", "Niet relevant."],
+        wrongHints: [null, "De lage variatie is duizenden jaren oud, veel ouder dan dierentuinen. Welke gebeurtenis laat zo'n oud spoor achter?", "Dat heet het stichtereffect. Is er bekend dat cheetah's vanuit een klein groepje een nieuw gebied zijn binnengetrokken?", "Soortvorming maakt nieuwe soorten. Verklaart dat waarom er binnen één soort zo weinig variatie is?"],
         uitlegPad: {
           stappen: [
             { titel: "Klassiek voorbeeld", tekst: "DNA-analyse toont dat de cheetah-populatie ~10 000 j geleden heel klein was (mss ~7 individuen). Reden onbekend (mss ijstijd-einde + grote zoogdier-uitsterving). Vandaag: alle cheetah's bijna identiek genetisch → gevoelig voor virussen + lage vruchtbaarheid." },
@@ -250,7 +250,7 @@ const steps = [
           "Gedragsisolatie"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bevruchting heeft plaatsgevonden.", "Niet — wel ontmoet + gepaard.", "Niet — wel gepaard."],
+        wrongHints: [null, "Pre-zygotisch betekent: vóór de bevruchting. Is de eicel bij een muildier bevrucht of niet?", "Paard en ezel hebben elkaar ontmoet en gepaard. Lag het probleem dan aan hun leefgebied?", "Paard en ezel paren wel met elkaar. Lag het probleem dan aan hun gedrag?"],
         uitlegPad: {
           stappen: [
             { titel: "Hybrid sterility", tekst: "Bevruchting werkt → muildier levensvatbaar. MAAR muildier zelf onvruchtbaar (oneven aantal chromosomen → meiose mislukt). Dus genen worden NIET doorgegeven → reproductieve isolatie achteraf. Bewijst dat paard + ezel verschillende soorten zijn." },
@@ -262,12 +262,12 @@ const steps = [
         q: "**Co-evolutie** voorbeeld:",
         options: [
           "Orchidee en nachtvlinder met lange tong",
-          "Eenzaam mos in toendra",
-          "Genetische drift in klein dorp",
-          "Mutatie in DNA"
+          "Haaien en dolfijnen met dezelfde vorm",
+          "Wolf en hond die uit één voorouder komen",
+          "Paard en ezel die samen een muildier krijgen"
         ],
         answer: 0,
-        wrongHints: [null, "Geen interactie.", "Geen interactie.", "Geen wisselwerking."],
+        wrongHints: [null, "Haaien en dolfijnen lijken op elkaar door hetzelfde water. Passen ze zich ook aan elkáár aan?", "Dat is gemeenschappelijke afstamming. Beïnvloeden wolf en hond elkaars evolutie over en weer?", "Een kruising is eenmalig en het muildier is onvruchtbaar. Passen de twee soorten zich aan elkaar aan?"],
         uitlegPad: {
           stappen: [
             { titel: "Reciprocale aanpassing", tekst: "Charles Darwin's voorbeeld: Angraecum-orchidee in Madagaskar met 28 cm spoor → voorspelde 'er moet een vlinder zijn met 28 cm tong'. Bevestigd 1903: Xanthopan-nachtvlinder. Beide drijven elkaars evolutie." },
@@ -290,11 +290,11 @@ const steps = [
         options: [
           "Zelfde structuur, andere functie",
           "Andere structuur, zelfde functie",
-          "Identieke functie + structuur",
-          "Functieloos"
+          "Zelfde structuur én zelfde functie",
+          "Organen zonder functie meer"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is analoog.", "Nee — het gaat om gemeenschappelijke afkomst, niet om gelijke functie.", "Niet — dat is rudimentair."],
+        wrongHints: [null, "De vleugel van een vlieg en die van een vogel doen hetzelfde, maar zijn heel anders gebouwd. Wijst dat op dezelfde afkomst?", "Nee — het gaat om gemeenschappelijke afkomst, niet om gelijke functie.", "Organen die hun functie kwijt zijn, zoals ons staartbeen, hebben een eigen naam. Is dat homoloog?"],
         uitlegPad: {
           stappen: [{ titel: "Gemeenschappelijke voorouder bewijs", tekst: "Vleermuis-vleugel + walvis-flipper + paard-poot + mens-hand: zelfde botten in verschillende verhoudingen. Onmogelijk te verklaren zonder gemeenschappelijke voorouder. Klassiek bewijs Darwin." }],
           niveaus: { basis: "Zelfde structuur, andere functie.", simpeler: "Zelfde basis-skelet, ander gebruik.", nogSimpeler: "Homoloog" },
@@ -309,7 +309,7 @@ const steps = [
           "Identiek"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — andere afkomst.", "Niet — beide actief gebruikt.", "Onjuist."],
+        wrongHints: [null, "Een vleermuis is een zoogdier, een libel een insect. Hebben hun vleugels dezelfde bouw en oorsprong?", "Gebruiken vleermuis en libel hun vleugels nog gewoon om te vliegen?", "Een libellenvleugel is een dun vlies, een vleermuisvleugel heeft botten en huid. Zijn ze dan gelijk?"],
         uitlegPad: {
           stappen: [
             { titel: "Convergente evolutie", tekst: "Vleermuis evolueerde uit zoogdier; libel uit insect. Beide ontwikkelden onafhankelijk vleugels omdat omgeving vliegen 'beloont'. Geen gemeenschappelijke vlieg-voorouder. Voorbeeld convergentie." },
@@ -319,9 +319,9 @@ const steps = [
       },
       {
         q: "Mens + chimpansee delen **welk percentage** DNA?",
-        options: ["~98,8%", "~80%", "~50%", "~10%"],
+        options: ["~98,8%", "~88,5%", "~75,2%", "~51,6%"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Veel te weinig."],
+        wrongHints: [null, "Nog te laag. De chimpansee is onze naaste nog levende verwant. Hoe klein moet het verschil dan zijn?", "Te laag. Hoe dicht staan mens en chimpansee bij elkaar in de stamboom?", "Veel te laag. Mens en chimpansee splitsten pas zo'n 6 miljoen jaar geleden."],
         uitlegPad: {
           stappen: [{ titel: "Bijna identiek", tekst: "Mens + chimp delen ~98,8% van DNA. Verschillen vooral in regulatoire sequenties (welke genen waar/wanneer aan staan), niet zozeer in coderende. Bevestigt recente gemeenschappelijke voorouder (~6 mln j geleden)." }],
           theorie: "Mens + muis: ~85%. Mens + banaan: ~60%. Mens + bacterie: ~50% genen vergelijkbaar. Suggereert gradiënt van verwantschap.",
@@ -331,13 +331,13 @@ const steps = [
       {
         q: "**Antibiotica-resistentie** in bacteriën:",
         options: [
-          "Directe + lopende evolutie door selectiedruk",
-          "Bewijst dat evolutie niet bestaat",
-          "Bewijst intelligent ontwerp",
-          "Bacteriën besluiten resistent te worden"
+          "Directe en lopende evolutie door selectiedruk",
+          "Mensen worden zelf resistent tegen antibiotica",
+          "Antibiotica veroorzaken de nodige mutaties zelf",
+          "Elke bacterie went langzaam aan het middel"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onjuiste verbinding.", "Geen 'besluit' bij bacteriën."],
+        wrongHints: [null, "Wie verandert er: jouw lichaam of de bacteriën? Bij wie werkt het middel niet meer?", "Resistente bacteriën waren er vaak al vóór de kuur. Wat doet het antibioticum dan met de rest?", "Kan één bacterie iets 'leren' en dat aan haar nakomelingen doorgeven?"],
         uitlegPad: {
           stappen: [
             { titel: "Selectie zichtbaar binnen weken", tekst: "Bacterie-populatie heeft variatie (mutaties). Antibiotica doodt gevoelige stammen → resistente overleven + reproduceren. Binnen weken: hele populatie resistent. Eén van DUIDELIJKSTE evolutie-bewijzen — heeft direct medische implicaties (MRSA, etc.)." },
@@ -349,13 +349,13 @@ const steps = [
       {
         q: "Een **moleculaire klok** gebruikt:",
         options: [
-          "Het vaste tempo van DNA-mutaties om te schatten wanneer soorten uit elkaar gingen",
-          "Het aantal jaarringen in fossiel hout om aardlagen te dateren",
-          "Het verval van radioactieve stoffen om de leeftijd van gesteente te bepalen",
-          "Het aantal organen van een soort om te bepalen hoe oud die soort is"
+          "Het aantal DNA-verschillen tussen soorten om te schatten wanneer ze uit elkaar gingen",
+          "Het verval van koolstof-14 in botten om te bepalen hoe oud een fossiel is",
+          "Het aantal chromosomen per soort om te bepalen welke soorten verwant zijn",
+          "Het aantal genen in het DNA om te bepalen hoe ingewikkeld een soort is"
         ],
         answer: 0,
-        wrongHints: [null, "Jaarringen tellen is een andere dateringsmethode. Een moleculaire klok kijkt naar moleculen in cellen.", "Radioactief verval dateert gesteente, niet de verwantschap tussen soorten. Welk molecuul verandert langzaam per generatie?", "Organen tellen zegt weinig over tijd. Welk molecuul geef je door aan je nakomelingen?"],
+        wrongHints: [null, "Koolstof-14 zegt hoe oud één bot is. Zegt het ook wanneer twee soorten uit elkaar gingen?", "Verwante soorten kunnen een heel ander aantal chromosomen hebben. Verandert dat aantal stap voor stap, zoals een klok tikt?", "Meer genen betekent niet ingewikkelder of ouder. Waarmee meet een klok eigenlijk tijd?"],
         uitlegPad: {
           stappen: [
             { titel: "Mutatie-snelheid ~ constant", tekst: "Bepaalde DNA-sequenties muteren in voorspelbaar tempo (bv. mitochondriaal DNA 1 mutatie per 6500 jaar). Door verschillen tussen soorten te tellen → datering van splitsing. Mens + chimp splitsing ~6-7 mln j geleden volgens deze methode." },
@@ -376,12 +376,12 @@ const steps = [
         q: "**Lactose-tolerantie** bij Noord-Europeanen is voorbeeld van:",
         options: [
           "Recente menselijke evolutie door selectie",
-          "Aangeleerd gedrag",
+          "Aangeleerd gedrag door vaker melk te drinken",
           "Cultureel verschijnsel zonder genen",
-          "Toeval"
+          "Toeval zonder voordeel voor overleving"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — gen bepaalt.", "Wel genetisch.", "Wel selectie."],
+        wrongHints: [null, "Kan een volwassene een enzym gaan maken door veel te oefenen?", "Het kunnen verteren van melk erf je van je ouders. Wat zegt dat?", "Melkdrinkers hadden in koude streken meer voedsel. Gaf dat geen voordeel?"],
         uitlegPad: {
           stappen: [{ titel: "Co-evolutie mens + cultuur", tekst: "Eerst koeien houden → wie melk kan verteren → meer voedsel → meer kinderen → mutatie verspreidt zich. Binnen 10 000 jaar van zeldzame mutatie naar 90% in Noord-Europa. Klassiek voorbeeld 'gen-cultuur co-evolutie'." }],
           niveaus: { basis: "Recente evolutie.", simpeler: "Genen reageerden op koeien-cultuur.", nogSimpeler: "Evolutie" },
@@ -390,13 +390,13 @@ const steps = [
       {
         q: "**Sikkel-cel-anemie**: HbS-allel beschermt tegen malaria. Wat verklaart hoge frequentie in Afrika?",
         options: [
-          "Heterozygoot voordeel — drager beschermd, homozygoot ziek",
-          "Toeval",
-          "Mensen die geen anemie willen",
-          "Allel verdwijnt door selectie"
+          "Heterozygoot voordeel: wie één HbS-allel heeft, overleeft vaker",
+          "Genetische drift: het allel is door toeval vaak geworden",
+          "Homozygoot voordeel: wie twee HbS-allelen heeft, overleeft vaker",
+          "Mutatiedruk: malaria laat het allel steeds opnieuw ontstaan"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — specifieke selectie.", "Onmogelijk.", "Tegenovergesteld — heeft balans."],
+        wrongHints: [null, "Het allel is juist vaak waar malaria heerst. Past dat bij puur toeval?", "Wie twee HbS-allelen heeft, krijgt de ernstige bloedziekte. Heeft die persoon dan de beste overlevingskans?", "Een ziekte als malaria verandert je DNA niet. Hoe kan een allel dan toch vaak worden?"],
         uitlegPad: {
           stappen: [
             { titel: "Balanced polymorphism", tekst: "HbS heterozygoot (HbS/HbA): mild + malaria-beschermd → hoge fitness in malaria-gebied. Homozygoot HbS/HbS: sikkel-cel-anemie → lage fitness. Selectie houdt de allel-frequentie in evenwicht (in delen van Afrika is tot ~30% van de mensen drager). Buiten malaria-gebied: allel verdwijnt." },
@@ -408,13 +408,13 @@ const steps = [
       {
         q: "Een **theorie** in wetenschap (zoals evolutie-theorie) betekent:",
         options: [
-          "Een goed onderbouwde verklaring",
-          "Een gok of speculatie",
-          "Iets onbewezen",
-          "Tegenovergesteld van feit"
+          "Een verklaring gesteund door veel bewijs",
+          "Een vermoeden zonder veel bewijs erachter",
+          "Een beschrijving van wat er steeds gebeurt",
+          "Een idee dat nog getest moet worden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — vakjargon vs dagelijks.", "Tegenovergesteld.", "Niet — onderzoeker-theorieën kunnen feiten verklaren."],
+        wrongHints: [null, "In het dagelijks leven is een theorie een gok. Betekent het woord in de wetenschap hetzelfde?", "Zo'n beschrijving van wát er gebeurt heet in de wetenschap een wet. Is een theorie hetzelfde als een wet?", "Een idee dat je nog gaat testen heet een hypothese. Is de evolutietheorie nog ongetest?"],
         uitlegPad: {
           stappen: [
             { titel: "Wetenschappelijke 'theorie'", tekst: "In wetenschap is theorie de HOOGSTE status: verklaart vele waargenomen feiten + maakt voorspellingen die kloppen + getest door velen. Zoals zwaartekrachts-theorie, atoomtheorie, evolutie-theorie. Dagelijks 'theorie = gok' is verwarrend — 'hypothese' is dichter bij dat in wetenschap." },
@@ -425,13 +425,13 @@ const steps = [
       {
         q: "**Kunstmatige selectie** door mens (zoals honden-fokken):",
         options: [
-          "Vergelijkbaar mechanisme, mens kiest in plaats van omgeving",
-          "Werkt niet",
-          "Maakt nieuwe genen",
-          "Verbiedt evolutie"
+          "Zelfde mechanisme, maar de mens selecteert",
+          "Verandert het gedrag, maar niet de genen",
+          "Maakt nieuwe genen die de fokker wil",
+          "Werkt anders dan natuurlijke selectie"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — sorteert bestaande.", "Tegenovergesteld."],
+        wrongHints: [null, "Een chihuahua krijgt chihuahua-pups. Zit dat verschil dan in het gedrag of in de genen?", "Kan een fokker nieuwe genen bestellen, of kiest hij uit wat er al in de honden zit?", "Ook bij fokken krijgen de dieren met de gewenste eigenschap de meeste jongen. Is dat principe anders dan in de natuur?"],
         uitlegPad: {
           stappen: [
             { titel: "Sleutel voor Darwin", tekst: "Mens fokt honden, koeien, maïs. In 15 000 jaar van wolf naar chihuahua + Duitse herder + Bulldog. Darwin: 'als mens dit in eeuwen kan, kan natuur in miljoenen jaren veel meer'. Cruciaal inzicht voor publicatie 'Origin of Species'." },
@@ -443,12 +443,12 @@ const steps = [
         q: "Volgens **2e thermodynamica-wet**: entropie neemt toe in gesloten systeem. Argument 'dit verbiedt evolutie' is:",
         options: [
           "Onjuist — de aarde krijgt energie van de zon",
-          "Correct — evolutie verbroken",
-          "Niet relevant",
-          "Bewijst evolutie"
+          "Correct — orde kan nooit vanzelf ontstaan",
+          "Niet relevant — de wet geldt alleen in labs",
+          "Onjuist — de wet bewijst juist evolutie"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel relevant om te weerleggen.", "Niet direct bewijs."],
+        wrongHints: [null, "Denk aan een sneeuwvlok of een groeiende plant. Ontstaat orde echt nooit vanzelf?", "Natuurwetten gelden overal. Wat is dan de echte fout in het argument?", "Een natuurkundige wet zegt niets over soorten. Waarom klopt het argument dan niet?"],
         uitlegPad: {
           stappen: [
             { titel: "Open systeem-clausule", tekst: "2e wet: in **gesloten** systeem (geen energie-uitwisseling) entropie altijd toe. Aarde is NIET gesloten — krijgt ~10¹⁷ J/s zon-energie. Lokale organisatie (leven, sneeuwvlokken, kristallen) kan ontstaan zolang elders entropie toeneemt (warmte naar ruimte). Geen tegenspraak met evolutie." },

@@ -128,7 +128,7 @@ const steps = [
         "Door het lagere aanbod stijgen de verkoopprijzen.",
       ],
       answer: 0,
-      wrongHints: [null, "Onmogelijk — meer aanbod en hogere prijs gaan tegen marktwerking in.", "Niet 'lager aanbod' — recordoogst = juist MEER aanbod.", "Niet 'lager aanbod' — recordoogst is meer, niet minder."],
+      wrongHints: [null, "Er komt meer op de markt terwijl de vraag gelijk blijft. Moeten verkopers dan duurder of goedkoper worden om alles kwijt te raken?", "Wat betekent een recordoogst: komt er meer of minder op de markt dan normaal?", "Wat betekent een recordoogst: komt er meer of minder op de markt dan normaal?"],
       explanation: "Klassiek vraag-aanbod-principe: **meer aanbod (recordoogst) → prijzen dalen** als vraag gelijk blijft. Boeren bieden meer aan op markt → klanten kunnen kiezen → prijs zakt. Bij landbouw is dit een bekende 'oogstparadox': goede oogst = lage prijs = soms minder inkomen voor boer.",
       examenBron: BRON_LABEL(32),
       bronLink: BRON_LINK,

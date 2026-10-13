@@ -3,15 +3,15 @@
 // Bron: examenblad.nl, 1127 GT 2023-2.
 
 const tekst1 = {
-  titel: "T1 — Scholen Helsinki verruilen koemelk voor haverdrank (referendum)",
+  titel: "T1 — Scholen Helsinki verruilen koemelk voor haverdrank",
   body:
-    "De Finse hoofdstad Helsinki trekt 100.000 euro uit om kinderen uit het basisonderwijs over te laten stappen op havermelk. Het besluit is het resultaat van een **raadpleging onder de bevolking** — een referendum waarin Helsinki-inwoners konden stemmen over duurzaamheids-maatregelen voor basisscholen. Havermelk is een plantaardig alternatief; door de overstap zou de stad jaarlijks tienduizenden kilo's CO₂ besparen.",
+    "De Finse hoofdstad Helsinki trekt 100.000 euro uit om kinderen uit het basisonderwijs over te laten stappen op havermelk. Het besluit is het resultaat van een raadpleging onder de bevolking. Havermelk is een plantaardig alternatief; door de overstap zou de stad jaarlijks tienduizenden kilo's CO₂ besparen.",
 };
 
 const tekst2 = {
   titel: "T2 — Coalitieakkoord op hoofdlijnen (Pijnacker-Nootdorp)",
   body:
-    "De gemeente Pijnacker-Nootdorp is zo'n gemeente waar ze het 7 jaar geleden al over een andere boeg gooiden en afscheid namen van dichtgetimmerde coalitieakkoorden. Wethouder Ilona Jense van Haarts onderhandelde namens haar partij over een 'akkoord op hoofdlijnen' — wel een meerderheid achter een aantal kern-punten, maar geen detail-afspraken. Na het akkoord werd in de raad de samenstelling van het college van B&W vastgesteld: 4 wethouders verdeeld over de coalitiepartijen.",
+    "De gemeente Pijnacker-Nootdorp is zo'n gemeente waar ze het 7 jaar geleden al over een andere boeg gooiden en afscheid namen van dichtgetimmerde coalitieakkoorden. Wethouder Ilona Jense van Haarts onderhandelde namens haar partij over een 'akkoord op hoofdlijnen' — wel een meerderheid achter een aantal kern-punten, maar geen detail-afspraken.",
 };
 
 const tekst4 = {
@@ -27,9 +27,9 @@ const tekst7 = {
 };
 
 const tekst9 = {
-  titel: "T9 — Klassenjustitie: arbeidsmigranten + taal-barrière",
+  titel: "T9 — Arbeidsmigranten + taal-barrière",
   body:
-    "Als bijvoorbeeld arbeidsmigranten die het Nederlands niet goed beheersen, een zwaardere straf krijgen omdat met hen op de rechtszitting niet goed te praten valt, en ze een celstraf krijgen terwijl iemand anders in een soortgelijke zaak een taakstraf zou hebben gekregen — dan is er sprake van een ongelijke behandeling op basis van iemand's positie in de samenleving. Dit gaat in tegen het rechtsstaat-principe 'iedereen gelijk voor de wet'.",
+    "Als bijvoorbeeld arbeidsmigranten die het Nederlands niet goed beheersen, een zwaardere straf krijgen omdat met hen op de rechtszitting niet goed te praten valt, en ze een celstraf krijgen terwijl iemand anders in een soortgelijke zaak een taakstraf zou hebben gekregen — dan is er sprake van ongelijke behandeling.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag ${n}`;
@@ -64,7 +64,7 @@ const steps = [
         "openlijke actie",
       ],
       answer: 1,
-      wrongHints: ["Politieke partijen = via stemmen op partij of lid worden. Geen directe bevolkings-raadpleging.", null, "Lobbyen = achter de schermen druk uitoefenen op politici. Niet een open volksraadpleging.", "Openlijke actie = demonstreren, staken. Hier was een gestructureerde stem-raadpleging."],
+      wrongHints: ["Politieke partijen = via stemmen op partij of lid worden. Geen directe bevolkings-raadpleging.", null, "Lobbyen = achter de schermen druk uitoefenen op politici. Niet een open volksraadpleging.", "Openlijke actie = demonstreren, staken. Lees nog eens: hoe kwam het besluit in Helsinki tot stand?"],
       explanation: "**Referendum** = volksraadpleging waarbij burgers direct over een vraag mogen stemmen. Helsinki organiseerde dit voor de havermelk-keuze. Andere invloed-vormen: politieke partij (kies/lid), lobby (druk achter de schermen), actie (demonstreren).",
       examenBron: BRON_LABEL(1),
       bronLink: BRON_LINK,
@@ -153,7 +153,7 @@ const steps = [
         "Richtlijnen gelden niet alleen voor de lidstaten van de Europese Unie. Andere landen kunnen zich er ook aan houden.",
       ],
       answer: 0,
-      wrongHints: [null, "Tegenovergesteld: richtlijnen ZIJN verplicht — lidstaat MOET het doel halen, alleen het 'hoe' is vrij.", "Tegenovergesteld: richtlijnen gelden ALLEEN voor EU-lidstaten. Niet voor buiten-EU-landen."],
+      wrongHints: [null, "Het gaat om EU-wetgeving. Mag een lidstaat wetgeving zomaar laten liggen als hij dat wil?", "Tegenovergesteld: richtlijnen gelden ALLEEN voor EU-lidstaten. Niet voor buiten-EU-landen."],
       explanation: "**EU-richtlijn** = lidstaat MOET een doel bereiken, maar mag zelf bepalen HOE dat in eigen wetgeving wordt vastgelegd. Verschil met **EU-verordening** = die geldt direct, woordelijk in alle lidstaten (geen omzetting in eigen wet nodig).",
       examenBron: BRON_LABEL(8),
       bronLink: BRON_LINK,

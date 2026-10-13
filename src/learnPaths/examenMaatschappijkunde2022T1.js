@@ -5,25 +5,25 @@
 const tekst3 = {
   titel: "T3 — Parlementaire onderzoekscommissie Kinderopvangtoeslag",
   body:
-    "De Parlementaire onderzoekscommissie Kinderopvangtoeslag heeft haar **openbare verhoren** afgesloten. De commissie biedt op 17 december 2020 haar verslag met bevindingen aan de Tweede Kamer. De commissie heeft onderzoek gedaan op verschillende **ministeries** — Sociale Zaken, Financiën, Belastingdienst — om uit te zoeken hoe duizenden ouders ten onrechte als fraudeurs werden aangemerkt. Op ministeries werken vooral ambtenaren die het beleid voorbereiden en uitvoeren.",
+    "De Parlementaire onderzoekscommissie Kinderopvangtoeslag heeft haar **openbare verhoren** afgesloten. De commissie biedt op 17 december 2020 haar verslag met bevindingen aan de Tweede Kamer. De commissie heeft onderzoek gedaan op verschillende **ministeries** — Sociale Zaken, Financiën, Belastingdienst — om uit te zoeken hoe duizenden ouders ten onrechte als fraudeurs werden aangemerkt.",
 };
 
 const tekst6 = {
   titel: "T6 — Kan een minister een burgemeester ontslaan?",
   body:
-    "De huidige bepalingen rond het ontslag van de burgemeester zijn in 2001 ingevoerd en sindsdien niet meer gewijzigd. De Gemeentewet bepaalt dat de burgemeester te allen tijde op eigen verzoek ontslag kan krijgen, maar gedwongen ontslag is gebonden aan strikte voorwaarden. Dit valt onder de verantwoordelijkheid van een **minister**, die leiding geeft aan een **ministerie** en politiek verantwoordelijk is voor het beleid in zijn portefeuille.",
+    "De huidige bepalingen rond het ontslag van de burgemeester zijn in 2001 ingevoerd en sindsdien niet meer gewijzigd. De Gemeentewet bepaalt dat de burgemeester te allen tijde op eigen verzoek ontslag kan krijgen, maar gedwongen ontslag is gebonden aan strikte voorwaarden.",
 };
 
 const tekst8 = {
   titel: "T8 — Toespraak koning Willem-Alexander (corona-saamhorigheid)",
   body:
-    "De toespraak die koning Willem-Alexander vrijdagavond gaf, is door meer dan 6,7 miljoen mensen bekeken. De toespraak, waarin de koning onder meer opriep tot saamhorigheid in coronatijd, was opgesteld in samenwerking met de minister-president en het kabinet. Volgens de Nederlandse staatsregeling is de koning ONSCHENDBAAR — voor de inhoud van wat hij in zijn officiële rol zegt zijn de **ministers verantwoordelijk**.",
+    "De toespraak die koning Willem-Alexander vrijdagavond gaf, is door meer dan 6,7 miljoen mensen bekeken. De toespraak, waarin de koning onder meer opriep tot saamhorigheid in coronatijd, was opgesteld in samenwerking met de minister-president en het kabinet.",
 };
 
 const tekst10 = {
   titel: "T10 — EU-parlement eist actie tegen illegale handel huisdieren",
   body:
-    "De illegale handel in huisdieren zorgt voor veel dierenleed en moet snel worden aangepakt, vindt het Europees Parlement. Een grote meerderheid riep de **Europese Commissie** op om met een actieplan te komen. De Commissie is het EU-orgaan dat als enige wetsvoorstellen mag INDIENEN bij de andere EU-instellingen. Ursula von der Leyen is de huidige voorzitter.",
+    "De illegale handel in huisdieren zorgt voor veel dierenleed en moet snel worden aangepakt, vindt het Europees Parlement. Een grote meerderheid riep de Europese Commissie op om met een actieplan te komen.",
 };
 
 const tekst19 = {
@@ -33,7 +33,7 @@ const tekst19 = {
 };
 
 const tekst20 = {
-  titel: "T20 — Hoogbejaarde Utrechter voorkomt beroving (noodweer)",
+  titel: "T20 — Hoogbejaarde Utrechter voorkomt beroving",
   body:
     "In Utrecht werd een hoogbejaarde man slachtoffer van criminaliteit. Een inbreker wilde de man overvallen in zijn huis, maar de bewoner liet dat niet zomaar gebeuren en sloeg de inbreker neer met een pook. Toen de politie ter plaatse kwam, werd niet de man, maar de inbreker meegenomen. De man werd niet aangehouden — de politie hield rekening met de omstandigheden waarin hij zich verdedigde.",
 };
@@ -189,7 +189,7 @@ const steps = [
         "Media kunnen van invloed zijn op het ontstaan van crimineel gedrag.",
       ],
       answer: 3,
-      wrongHints: ["Hier gaat het niet om OPVATTINGEN over oorzaken, maar over GEDRAG bij kijkers.", "Media en wetgeving: niet hier — geen wet wordt gemaakt.", "Stereotypering = beeldvorming. Hier gaat het om DAADWERKELIJK GEDRAG (de roof zelf).", null],
+      wrongHints: ["Gaat de tekst over wat mensen DENKEN over de oorzaken van criminaliteit? Lees nog eens wat de tieners na de serie deden.", "Media en wetgeving: niet hier — geen wet wordt gemaakt.", "Stereotypering gaat over beeldvorming. Gaat de tekst over een beeld dat mensen krijgen, of over wat de tieners na de serie deden?", null],
       explanation: "**Media kunnen direct gedrag uitlokken** — bekend effect van geweld/criminaliteit in tv-series (kopieer-effect). Tieners zagen truc in serie + namen actie. Dit is directe invloed op crimineel gedrag, niet alleen opvattingen of beeldvorming.",
       examenBron: BRON_LABEL(32),
       bronLink: BRON_LINK,

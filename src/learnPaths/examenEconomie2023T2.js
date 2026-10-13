@@ -318,7 +318,7 @@ const steps = [
           "Tegendeel — invoerrechten maken Chinees staal DUURDER, niet goedkoper.",
           null,
           "Wat doet een extra heffing met de prijs van Chinees staal voor een Amerikaans bedrijf?",
-          "De prijs-kant klopt. Maar waar koopt een bedrijf liever als het buitenlandse staal duurder wordt?",
+          "Bekijk beide delen van deze optie apart: wat doet een invoerrecht met de prijs van Chinees staal, en waar koopt een bedrijf dan liever?",
         ],
         explanation: "Invoerrechten op Chinees staal = Chinees staal wordt duurder (importprijs stijgt door heffing). Amerikaanse bedrijven gaan dan kopen bij eigen Amerikaanse staalproducenten — die zijn relatief goedkoper geworden. Dat is precies het doel van protectionisme: eigen industrie beschermen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 28",

@@ -52,19 +52,19 @@ const steps = [
         q: "Welke zin is een **standpunt**?",
         options: [
           "Jongeren zouden minder schermtijd moeten hebben.",
-          "Gemiddeld kijken Nederlandse jongeren 4 uur per dag op hun telefoon.",
-          "Smartphones zijn ontwikkeld in de jaren 90.",
-          "Tiktok is een sociaal medium.",
+          "Veel ouders vinden dat hun kind te veel op de telefoon zit.",
+          "Op veel scholen moeten telefoons in de kluis blijven.",
+          "Jongeren die laat op een scherm kijken, slapen vaak slechter.",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Dat is een meetbare uitspraak — kun je controleren via cijfers. Welk kenmerk maakt iets een standpunt?",
-          "Dat is een historisch feit. Geen mening waarover je kunt discussiëren.",
-          "Dat is een definitie / feit. Een standpunt bevat een waardeoordeel.",
+          "Hier staat wát ouders vinden. Dat kun je met een enquête controleren. Geeft de schrijver zelf een mening, of meldt hij een feit?",
+          "Hier staat 'moeten', maar het beschrijft een regel die al bestaat. Kun je dat controleren of is het een oordeel?",
+          "Dat is een uitkomst van onderzoek: je kunt het meten. Waarover kun je discussiëren en waarover niet?",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Standpunt = mening", tekst: "Met 'zouden moeten' = mening = standpunt." }],
+          stappen: [{ titel: "Standpunt = mening", tekst: "'Zouden moeten' geeft hier het oordeel van de schrijver: zo hoort het volgens hem. Dat is een mening = standpunt. Let op: 'moeten' in een bestaande regel ('telefoons moeten in de kluis') is een feit." }],
           woorden: [{ woord: "standpunt", uitleg: "subjectieve uitspraak, geen feit" }],
           theorie: "Standpunt = mening waar je over kan discussiëren.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Modale woorden: moet, zou, is nodig" }],
@@ -79,8 +79,8 @@ const steps = [
         wrongHints: [
           null,
           "Beschrijvend zegt hoe iets *is*. Wat doet deze zin: iets beschrijven, of iets anders?",
-          "Waarderend gaat over hoe goed/mooi iets is. Hier gaat het over een actie die ondernomen moet worden.",
-          "Het bevat een mening (\"moet\") — geen toetsbaar feit. Wat zegt deze zin over wat er zou moeten gebeuren?",
+          "Waarderend gaat over hoe goed of mooi iets is. Zegt deze zin iets over hoe goed de jeugdzorg nu is?",
+          "Kun je deze zin met cijfers controleren, of kun je erover van mening verschillen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Voorschrijvend = moet doen", tekst: "'Gemeente moet meer geld' = voorschrijvend (zou moeten)." }],
@@ -117,15 +117,15 @@ const steps = [
         options: [
           "Planten verbeteren de luchtkwaliteit.",
           "Het schoolplein zou groener moeten worden.",
-          "Schoolplein.",
+          "Het schoolplein is nu te grijs.",
           "Dit is geen argumentatie.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat is het standpunt — wat de schrijver *vindt*. Het argument is de **reden**.",
-          "Dat is een woord uit de zin, geen volledige bewering.",
-          "Er staat een signaalwoord (want). Dat duidt op argumentatie.",
+          "Dat staat nergens in de zin: die reden vul je zelf in. Welke reden geeft de schrijver zelf?",
+          "Zie je in de zin een woord dat een reden inleidt? Wat betekent dat voor de zin?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Argument = waarom", tekst: "Argument is de REDEN: 'planten verbeteren luchtkwaliteit'." }],
@@ -174,17 +174,17 @@ const steps = [
       {
         q: "*\"Jongeren bewegen te weinig. Mijn buurjongen zit elke avond achter zijn PlayStation.\"* — Is de tweede zin een argument?",
         options: [
-          "Nee, het is een voorbeeld dat een argument zou kunnen illustreren.",
+          "Nee, het is een voorbeeld bij een argument.",
           "Ja, want het bewijst dat jongeren niet bewegen.",
-          "Ja, het is een hoofdargument.",
-          "Nee, het is een drogreden.",
+          "Ja, het is een hoofdargument voor de stelling.",
+          "Nee, het is het standpunt van de tekst.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Eén buurjongen bewijst niets over alle jongeren. Wat is het verschil tussen een algemene uitspraak en een individueel voorbeeld?",
-          "Een hoofdargument is een algemene reden. Hier wordt één concreet geval genoemd.",
-          "Een drogreden is een onjuist *type* argument. Maar dit is gewoon een voorbeeld, geen argument.",
+          "Een hoofdargument is een algemene reden die het standpunt draagt. Is 'mijn buurjongen' een algemene uitspraak?",
+          "Het standpunt staat in de eerste zin: 'Jongeren bewegen te weinig.' Wat doet de tweede zin bij die bewering?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld ≠ argument", tekst: "Eén concreet geval (buurjongen) = voorbeeld, geen algemene reden." }],
@@ -227,9 +227,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een autoriteit is een persoon/instantie. Hier wordt geen autoriteit aangehaald.",
-          "Een vergelijking trekt parallel met iets anders. Hier wordt geen vergelijking gemaakt.",
-          "Een kenmerk-argument zegt: *omdat X de eigenschap Y heeft*. Hier wordt een gevolg/voordeel genoemd.",
+          "Bij een autoriteitsargument steun je op een deskundige of instantie. Welke persoon of instantie wordt hier genoemd?",
+          "Bij een vergelijking zet je twee situaties naast elkaar. Met welke andere situatie wordt het examen hier vergeleken?",
+          "Een kenmerk-argument noemt een eigenschap van het ding zelf. Zegt dit argument hoe een computerexamen ís, of wat het oplevert?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Voor-/nadelen-argument", tekst: "Dat scheelt bomen = VOORDEEL → voor-/nadelen-type." }],
@@ -270,9 +270,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Voor-/nadelen weegt af tussen voordelen en nadelen. Hier wordt een verband uitgelegd: *door X komt Y*.",
-          "Een autoriteit is een persoon/bron. Hier wordt geen bron aangehaald.",
-          "Kenmerk-argument zegt *iets is zo omdat het de eigenschap X heeft*. Hier gaat het over een keten: oorzaak → gevolg.",
+          "Voor-/nadelen weegt voordelen en nadelen tegen elkaar af. Worden hier voordelen en nadelen genoemd?",
+          "Een autoriteitsargument haalt een deskundige of bron aan. Wordt hier iemand als bron genoemd?",
+          "Een kenmerk-argument zegt: iets is zo, omdat het eigenschap X heeft. Wordt hier een eigenschap van de examens genoemd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Oorzaak → gevolg", tekst: "'Doordat...' = causaal verband." }],
@@ -309,9 +309,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een vergelijking trekt parallel met iets anders. Hier wordt een eigenschap van de film genoemd.",
-          "Oorzaak-gevolg legt een keten uit. Hier wordt een eigenschap (afwezigheid van geweld) genoemd waaruit de conclusie volgt.",
-          "Een autoriteit is een persoon/instantie. Hier wordt geen autoriteit aangehaald.",
+          "Bij een vergelijking zet je twee situaties naast elkaar. Met welke andere film wordt deze film vergeleken?",
+          "Oorzaak-gevolg legt uit hoe het ene tot het andere leidt. Wordt hier iets genoemd dat gebeurt, of iets wat de film ís?",
+          "Bij een autoriteitsargument steun je op een deskundige of instantie. Wie wordt hier als bron genoemd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Kenmerk-argument", tekst: "Eigenschap van film (geen geweld) → conclusie." }],
@@ -351,9 +351,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er wordt geen autoriteit (persoon, instantie) genoemd. Wel wordt iets uit een ander land aangehaald.",
-          "Oorzaak-gevolg verbindt twee dingen direct. Hier wordt een parallel met een ander land gebruikt om te onderbouwen.",
-          "Kenmerk-argument noemt een eigenschap van het ding zelf. Hier wordt verwezen naar wat elders is gebeurd.",
+          "Bij een autoriteitsargument steun je op een deskundige of instantie. Wordt hier een deskundige aan het woord gelaten?",
+          "Oorzaak-gevolg legt uit hoe het ene in dezelfde situatie tot het andere leidt. Over welk land gaat dit argument eigenlijk?",
+          "Een kenmerk-argument noemt een eigenschap van de schoolboeken zelf. Gaat dit argument over de boeken, of over iets anders?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vergelijking met ander land", tekst: "Duitsland deed het, dus Nederland kan ook = vergelijking." }],
@@ -391,9 +391,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een kenmerk-argument benoemt een eigenschap van iets. Hier worden onderzoekers aangehaald — wat zijn dat?",
-          "Een vergelijking trekt parallel tussen twee dingen. Hier wordt een bron aangehaald.",
-          "Oorzaak-gevolg legt een directe relatie tussen X en Y. Hier wordt een bron aangehaald die iets stelt.",
+          "Een kenmerk-argument noemt een eigenschap van het onderwerp. Welke rol hebben de slaaponderzoekers in dit argument?",
+          "Een vergelijking zet twee situaties naast elkaar. Welke twee dingen worden hier vergeleken?",
+          "Oorzaak-gevolg legt uit hoe X tot Y leidt. Wordt hier een oorzaak genoemd, of steunt het argument op iets anders?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Autoriteit = deskundige bron", tekst: "Slaaponderzoekers = deskundig op slaap → autoriteitsargument." }],
@@ -431,9 +431,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Nevenschikkend = meerdere onafhankelijke argumenten. Hier staat er maar één.",
-          "Onderschikkend = argument dat een ander argument ondersteunt. Er is geen ondersteunende laag hier.",
-          "Er is wel argumentatie: standpunt (jas mee) + reden (regen).",
+          "Nevenschikkend betekent: meerdere argumenten naast elkaar. Hoeveel redenen geeft de zin voor het meenemen van de jas?",
+          "Onderschikkend betekent: een argument wordt zelf weer onderbouwd. Wordt uitgelegd waarom het gaat regenen?",
+          "Staat er een signaalwoord dat een reden inleidt? Wat betekent dat voor de zin?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Enkelvoudig = 1 + 1", tekst: "1 standpunt + 1 argument zonder verdere lagen." }],
@@ -476,8 +476,8 @@ const steps = [
         wrongHints: [
           null,
           "Enkelvoudig = één argument. Tel de argumenten in de zin.",
-          "Onderschikkend = argument ondersteunt een ander argument. Hier staan ze los van elkaar.",
-          "Er staat duidelijk argumentatie in: standpunt + drie redenen.",
+          "Onderschikkend betekent: een argument wordt zelf weer onderbouwd. Steunt een van de redenen hier een andere reden, of staan ze naast elkaar?",
+          "Kijk naar de eerste zin: is dat een mening? En wat doen de zinsdelen daarna?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Nevenschikkend = meerdere gelijk", tekst: "3 argumenten naast elkaar — elk apart al overtuigend." }],
@@ -516,9 +516,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Nevenschikkend = meerdere onafhankelijke argumenten. Hier wordt het argument verder onderbouwd, niet aangevuld met een tweede.",
-          "Enkelvoudig = standpunt + één argument zonder verdere onderbouwing. Hier zit nog een laag dieper.",
-          "Er is wel degelijk argumentatie: standpunt (verplicht) + argument (bescherming) + subargument (waarom kwetsbaar).",
+          "Nevenschikkend betekent: losse argumenten naast elkaar voor het standpunt. Gaat de tweede zin over het standpunt, of over het eerste argument?",
+          "Enkelvoudig betekent: één argument zonder verdere onderbouwing. Waar gaat de tweede zin over?",
+          "Tel de keren dat 'want' voorkomt. Wat zegt dat over de zinnen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Onderschikkend = keten", tekst: "Argument wordt zélf onderbouwd door subargument." }],
@@ -551,16 +551,16 @@ const steps = [
         q: "Wat is het verschil tussen een drogreden en een zwak argument?",
         options: [
           "Bij een drogreden deugt de redenering zelf niet.",
-          "Een drogreden is altijd een leugen.",
-          "Er is geen verschil.",
-          "Een drogreden komt alleen voor in reclames.",
+          "Een drogreden is een bewuste leugen.",
+          "Een zwak argument is hetzelfde als een drogreden.",
+          "Bij een drogreden ontbreekt een bron of cijfer.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een drogreden hoeft geen leugen te zijn — soms gelooft de spreker het zelf. Het gaat om de logica.",
-          "Het verschil is wel degelijk relevant. Lees de uitleg: zwak vs onlogisch.",
-          "Drogredenen komen overal voor: politiek, sociale media, kranten, schoolopstellen.",
+          "Is elk argument dat weinig bewijst meteen onlogisch? Lees de uitleg: zwak vs onlogisch.",
+          "Een ontbrekende bron maakt een argument zwak. Maar is de redenering dan ook onlogisch?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Drogreden ≠ zwak", tekst: "Zwak = wel argument maar minder overtuigend. Drogreden = redenering deugt niet." }],
@@ -603,9 +603,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er wordt geen autoriteit aangehaald. De spreker valt de persoon van mevrouw De Vries aan.",
-          "Er wordt geen onterechte conclusie getrokken uit een paar voorbeelden. De drogreden zit in *wie* wordt aangevallen.",
-          "Een vals dilemma stelt twee opties tegenover elkaar. Hier wordt iemand persoonlijk gediskwalificeerd.",
+          "Bij een vals autoriteitsberoep wordt een deskundige of bron opgevoerd. Wordt mevrouw De Vries hier als deskundige gebruikt?",
+          "Bij een overhaaste generalisatie trek je een algemene regel uit een paar gevallen. Welke algemene regel wordt hier getrokken?",
+          "Bij een vals dilemma krijg je maar twee keuzes. Welke twee keuzes worden hier tegenover elkaar gezet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Ad hominem = persoon aanvallen", tekst: "Argument over milieuregels wordt niet besproken; de persoon wordt aangevallen." }],
@@ -627,9 +627,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er wordt geen overhaaste conclusie getrokken uit te weinig gevallen. De drogreden zit in de vage bron.",
-          "Er wordt niemand persoonlijk aangevallen. De drogreden zit in een vaag autoriteitsberoep.",
-          "Er is wel degelijk iets mis: \"mensen\" is geen specifieke, deskundige bron. Dat maakt het een vals autoriteitsberoep.",
+          "Bij een overhaaste generalisatie trek je een regel uit een paar gevallen. Welke gevallen worden hier genoemd?",
+          "Bij een persoonlijke aanval wordt iemand afgekraakt. Wie wordt hier afgekraakt?",
+          "Op wie steunt de reden 'want mensen zeggen…'? Weet je wie die mensen zijn en of ze er verstand van hebben?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vage bron = drogreden", tekst: "'Mensen zeggen' = geen specifieke deskundige." }],
@@ -672,9 +672,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er wordt geen conclusie getrokken uit te weinig voorbeelden. Er worden twee uitersten tegenover elkaar gezet.",
-          "Niemand wordt persoonlijk aangevallen. Het gaat om de manier waarop een keuze wordt voorgesteld.",
-          "Er wordt geen autoriteit aangehaald. De drogreden zit in de structuur \"of A, of B\".",
+          "Bij een overhaaste generalisatie trek je een regel uit een paar gevallen. Welke gevallen worden hier genoemd?",
+          "Bij een persoonlijke aanval wordt iemand afgekraakt. Wie wordt hier afgekraakt?",
+          "Bij een vals autoriteitsberoep wordt een deskundige opgevoerd. Wie is hier de bron? Tel ook eens hoeveel mogelijkheden de zin je laat.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vals dilemma = fake-keuze", tekst: "'Of studeren of bijstand' = alleen 2 opties? Er zijn meer." }],
@@ -696,14 +696,14 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er worden geen twee opties tegenover elkaar gezet. Er wordt een algemene conclusie getrokken uit één geval.",
-          "Er wordt geen bron aangehaald. De drogreden zit in de stap van één geval naar een algemene conclusie.",
-          "Er wordt niemand aangevallen. De drogreden zit in de logica: één persoonlijke ervaring → algemene uitspraak.",
+          "Bij een vals dilemma krijg je maar twee keuzes. Worden hier twee opties tegenover elkaar gezet?",
+          "Bij een vals autoriteitsberoep wordt een bron of deskundige opgevoerd. Noemt de spreker een bron?",
+          "Bij een persoonlijke aanval wordt iemand afgekraakt in plaats van zijn argument. Gebeurt dat hier?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Overhaaste generalisatie", tekst: "1 persoonlijke ervaring → algemene conclusie = drogreden." }],
           woorden: [{ woord: "generalisatie", uitleg: "te brede conclusie uit te weinig gevallen" }],
-          theorie: "Eén voorbeeld bewijst geen algemene regel.",
+          theorie: "Eén voorbeeld bewijst geen algemene regel. Let op: ná de prik is nog niet dóór de prik. Dat heet ook wel een post-hoc-redenering (onterecht oorzakelijk verband); in deze les valt het onder overhaaste generalisatie, omdat één eigen ervaring een algemene regel wordt.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Eén buurman ≠ alle jongeren" }],
           basiskennis: [{ onderwerp: "vereist", uitleg: "representatieve steekproef, officiële cijfers" }],
           niveaus: { basis: "Overhaaste generalisatie.", simpeler: "Te weinig bewijs.", nogSimpeler: "Generalisatie." },
@@ -734,9 +734,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er wordt geen vergelijking met iets anders gemaakt. Wel wordt een specifieke bron aangehaald.",
-          "Oorzaak-gevolg verbindt twee dingen direct. Hier wordt een onderzoeksuitspraak aangehaald — wat is dat?",
-          "De bron is specifiek (Nederlandse Vereniging voor Slaap-Waakonderzoek) en deskundig op het onderwerp. Dat maakt het een geldig autoriteitsargument, geen drogreden.",
+          "Bij een vergelijking zet je twee situaties naast elkaar. Met welke andere situatie wordt de starttijd hier vergeleken?",
+          "De biologische klok verklaart wel iets, maar waar komt die uitleg vandaan? Op wie steunt de schrijver?",
+          "Is de bron hier vaag of onbekend, of juist specifiek (Nederlandse Vereniging voor Slaap-Waakonderzoek) en deskundig op dit onderwerp? Wanneer is een beroep op een deskundige terecht?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Echte autoriteit", tekst: "Specifieke deskundige organisatie = geldig autoriteitsargument." }],
@@ -758,9 +758,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Onderschikkend = subargument ondersteunt argument. Hier staan drie argumenten naast elkaar — niet boven/onder elkaar.",
+          "Onderschikkend betekent: een argument wordt zelf weer onderbouwd. Steunt een van de redenen hier een andere reden?",
           "Enkelvoudig = één argument. Tel de redenen die genoemd worden.",
-          "Het standpunt is duidelijk (kunst-onderwijs behouden), met drie redenen (creativiteit, vorming, stress). Dat is wel argumentatie.",
+          "Is 'Kunst-onderwijs moet behouden blijven' een mening? En wat doet de zin daarna?",
         ],
         uitlegPad: {
           stappen: [{ titel: "3 gelijkwaardige redenen", tekst: "Creativiteit + vorming + stress = nevenschikkend." }],
@@ -782,9 +782,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er worden geen voorbeelden gegeven waaruit overhaast wordt geconcludeerd. De drogreden zit in de manier waarop tegenstanders worden afgeschilderd.",
-          "Er worden geen twee opties tegenover elkaar gezet. De aanval gaat over wie de tegenstanders zíjn.",
-          "Het is wel degelijk een drogreden: het argument *voor* windmolens wordt niet beoordeeld, maar de motieven van voorstanders worden gediskwalificeerd.",
+          "Bij een overhaaste generalisatie trek je een regel uit een paar gevallen. Welke gevallen worden hier genoemd?",
+          "Bij een vals dilemma krijg je maar twee keuzes. Welke twee keuzes worden hier tegenover elkaar gezet?",
+          "Wordt hier een reden gegeven waarom windmolens goed of slecht zijn? Of gaat de zin over iets anders?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Ad hominem windmolens", tekst: "Niet het argument wordt besproken, maar de motieven van voorstanders." }],
@@ -806,9 +806,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Nevenschikkend = meerdere onafhankelijke argumenten. Hier staat één hoofdargument, dat verder wordt onderbouwd.",
-          "Enkelvoudig = standpunt + één argument zonder verdere onderbouwing. Hier wordt het argument nog onderbouwd: *waarom die drempel weg moet*.",
-          "Er is duidelijk argumentatie: standpunt (meer geld) → argument (drempel) → subargument (gelijke kansen).",
+          "Nevenschikkend betekent: losse argumenten naast elkaar voor het standpunt. Gaat 'om gelijke kansen te garanderen' over het standpunt of over de drempel?",
+          "Enkelvoudig betekent: één argument zonder verdere onderbouwing. Wordt het argument over de drempel zelf nog onderbouwd?",
+          "Is de eerste zin een mening? En wat doet de tweede zin daarbij?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Onderschikkend: keten", tekst: "Standpunt → argument (drempel) → subargument (waarom drempel slecht is)." }],
@@ -819,16 +819,16 @@ const steps = [
           niveaus: { basis: "Onderschikkend.", simpeler: "Reden onder reden.", nogSimpeler: "Onderschikkend." },
         },
       },
-      { q: "*'Je bent dom, dus je hebt ongelijk.'* Welke drogreden?", options: ["Ad hominem","Vals dilemma","Cirkelredenering","Vergelijking"], answer: 0, wrongHints: [null, "Niet — geen 2 opties.", "Niet — geen herhaling.", "Niet — geen vergelijking."] },
-      { q: "*'Je bent vóór de regering óf je bent een verrader.'* = ?", options: ["Vals dilemma","Ad hominem","Autoriteit","Vergelijking"], answer: 0, wrongHints: [null, "Geen persoonsaanval.", "Geen expert genoemd.", "Geen vergelijking."] },
-      { q: "Welk woord signaleert een **argument**?", options: ["want","maar","echter","ondanks"], answer: 0, wrongHints: [null, "Tegenstellings-woord.", "Tegenstelling.", "Tegenstelling."] },
-      { q: "*'Iedereen doet het, dus jij moet het ook doen.'* Welke drogreden?", options: ["Beroep op meerderheid","Cirkelredenering","Ad hominem","Vals dilemma"], answer: 0, wrongHints: [null, "Geen herhaling.", "Geen aanval op persoon.", "Geen 2 opties."] },
-      { q: "*'Professor X zegt het, dus het is waar.'* = ?", options: ["Beroep op autoriteit","Cirkelredenering","Vals dilemma","Vergelijking"], answer: 0, wrongHints: [null, "Niet herhaling.", "Niet 2 opties.", "Niet vergelijking."] },
-      { q: "Wat is een **standpunt**?", options: ["Mening die je verdedigt","Een vraag","Een feit","Een citaat"], answer: 0, wrongHints: [null, "Geen mening.", "Een feit kun je controleren — daar valt niet over te discussiëren.", "Niet eigen mening."] },
-      { q: "Een **subargument** ondersteunt?", options: ["Een ander argument","Het standpunt direct","Niets","Een tegenargument"], answer: 0, wrongHints: [null, "Dat is hoofdargument.", "Wel iets.", "Een subargument ondersteunt iets, het gaat er niet tegenin."] },
-      { q: "Een **tegenargument** is?", options: ["Argument tegen je standpunt","Argument voor je standpunt","Geen argument","Een vraag"], answer: 0, wrongHints: [null, "Pro-argument.", "Wel argument.", "Geen vraag."] },
-      { q: "*'De fiets is rood want de fiets is rood.'* Welke drogreden?", options: ["Cirkelredenering","Ad hominem","Vals dilemma","Vergelijking"], answer: 0, wrongHints: [null, "Geen persoon.", "Geen 2 opties.", "Geen vergelijking."] },
-      { q: "Welk signaalwoord wijst op een **conclusie**?", options: ["dus","want","omdat","ondanks"], answer: 0, wrongHints: [null, "Reden.", "Reden.", "Tegenstelling."] },
+      { q: "*'Je bent dom, dus je hebt ongelijk.'* Welke drogreden?", options: ["Ad hominem","Vals dilemma","Cirkelredenering","Overhaaste generalisatie"], answer: 0, wrongHints: [null, "Bij een vals dilemma krijg je maar twee keuzes. Worden er hier twee opties tegenover elkaar gezet?", "Bij een cirkelredenering komt de conclusie terug als argument. Staat 'je hebt ongelijk' ook als reden in de zin?", "Bij een overhaaste generalisatie trek je een algemene regel uit een paar gevallen. Welke gevallen worden hier genoemd?"] },
+      { q: "*'Je bent vóór de regering óf je bent een verrader.'* = ?", options: ["Vals dilemma","Ad hominem","Cirkelredenering","Overhaaste generalisatie"], answer: 0, wrongHints: [null, "Bij ad hominem val je iemand persoonlijk aan om zijn argument onderuit te halen. Welk argument van de ander wordt hier onderuitgehaald?", "Bij een cirkelredenering komt de conclusie terug als argument. Zie je hier twee keer hetzelfde staan?", "Bij een overhaaste generalisatie trek je een regel uit een paar gevallen. Worden hier gevallen genoemd? Tel ook eens hoeveel keuzes de zin je laat."] },
+      { q: "Welk woord signaleert een **argument**?", options: ["want","maar","echter","ondanks"], answer: 0, wrongHints: [null, "'Maar' zet twee dingen tegenover elkaar. Geeft het ook een reden voor een standpunt?", "'Echter' kondigt een tegenstelling aan. Welk woord leidt juist een reden in?", "'Ondanks' geeft aan dat iets toch gebeurt. Is dat een reden, of een toegeving?"] },
+      { q: "*'Iedereen doet het, dus jij moet het ook doen.'* Welke drogreden?", options: ["Beroep op meerderheid","Overhaaste generalisatie","Vals beroep op autoriteit","Vals dilemma"], answer: 0, wrongHints: [null, "Bij een overhaaste generalisatie trek je een algemene regel uit een paar gevallen. Worden hier losse gevallen genoemd waaruit een regel volgt?", "Bij een vals autoriteitsberoep wordt een deskundige of bron opgevoerd. Wordt hier een deskundige genoemd?", "Bij een vals dilemma krijg je maar twee keuzes. Worden hier twee keuzes tegenover elkaar gezet?"] },
+      { q: "*'Professor X zegt het, dus het is waar.'* = ?", options: ["Beroep op autoriteit","Cirkelredenering","Persoonlijke aanval","Beroep op meerderheid"], answer: 0, wrongHints: [null, "Bij een cirkelredenering komt de conclusie terug als argument. Komt 'het is waar' hier ook als reden terug?", "Bij een persoonlijke aanval wordt iemand afgekraakt. Wordt professor X hier afgekraakt?", "Bij een beroep op meerderheid wijs je naar wat veel mensen vinden. Hoeveel mensen worden hier genoemd?"] },
+      { q: "Wat is een **standpunt**?", options: ["Mening die je verdedigt","Vraag die je onderzoekt","Feit dat je controleert","Citaat dat je aanhaalt"], answer: 0, wrongHints: [null, "Met een vraag stel je iets aan de orde. Neem je daarmee al zelf positie in?", "Een feit kun je controleren — daar valt niet over te discussiëren.", "Een citaat zijn de woorden van een ander. Neem jij daarmee zelf ergens positie in?"] },
+      { q: "Een **subargument** ondersteunt?", options: ["Een ander argument","Het standpunt direct","De inleiding van de tekst","Een tegenargument"], answer: 0, wrongHints: [null, "Een argument dat direct het standpunt ondersteunt, heet een hoofdargument. Waar wijst het woorddeel 'sub-' (onder) op?", "Een subargument hoort bij de argumentatie, niet bij de opbouw van de tekst. Wat ondersteunt het dan?", "Een tegenargument pleit tegen je standpunt. Zou je met een subargument iets willen verzwakken of versterken?"] },
+      { q: "Een **tegenargument** is?", options: ["Reden die pleit voor het omgekeerde standpunt","Reden die een ander argument ondersteunt","Reden die je standpunt direct ondersteunt","Weerlegging van een argument van de ander"], answer: 0, wrongHints: [null, "Een reden die een ander argument steunt, heet een subargument. Voor welk standpunt pleit een tegenargument?", "Een reden die je standpunt direct steunt, is een hoofdargument. Voor welk standpunt pleit een tegenargument?", "Een weerlegging is jouw reactie op wat de ander inbrengt. Wat brengt die ander dan in?"] },
+      { q: "*'De fiets is rood want de fiets is rood.'* Welke drogreden?", options: ["Cirkelredenering","Ad hominem","Vals dilemma","Overhaaste generalisatie"], answer: 0, wrongHints: [null, "Bij ad hominem wordt iemand persoonlijk aangevallen. Wordt hier over een persoon gesproken?", "Bij een vals dilemma krijg je maar twee keuzes. Zie je hier keuzes?", "Bij een overhaaste generalisatie trek je een algemene regel uit een paar gevallen. Worden hier gevallen genoemd?"] },
+      { q: "Welk signaalwoord wijst op een **conclusie**?", options: ["dus","want","omdat","ondanks"], answer: 0, wrongHints: [null, "'Want' leidt een reden in: wat erachter staat, is het argument. Welk woord leidt juist de uitkomst in?", "'Omdat' geeft een reden of oorzaak. Welk woord geeft aan wat eruit volgt?", "'Ondanks' geeft een toegeving: iets gebeurt toch. Welk woord trekt een conclusie?"] },
       { q: "**Open vraag**: noem 1 typisch signaalwoord voor een argument (reden).", kind: "open", acceptedAnswers: ["want", "omdat", "doordat", "aangezien", "namelijk"], explanation: "Reden-signalen: want, omdat, doordat, aangezien, namelijk." },
       { q: "**Open vraag**: hoe heet een redenering die zichzelf bewijst (A omdat A)?", kind: "open", acceptedAnswers: ["cirkelredenering", "cirkel-redenering", "petitio principii"], explanation: "Cirkelredenering: het bewijs is hetzelfde als de stelling — geen geldig argument." },
     ],
