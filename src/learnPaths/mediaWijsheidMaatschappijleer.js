@@ -226,21 +226,21 @@ const steps = [
     checks: [
       {
         q: "Wat doe je bij **cyberpesten**?",
-        options: ["Niet reageren, bewijs bewaren, melden", "Terug pesten", "Je account meteen verwijderen", "Wachtwoord delen"],
+        options: ["Niet reageren, bewijs bewaren, melden", "Rustig terugschrijven dat het moet stoppen", "Je account meteen verwijderen", "Het negeren en het aan niemand vertellen"],
         answer: 0,
-        wrongHints: [null, "Werkt averechts.", "Dan raak je ook je bewijs kwijt — en stopt de pester er niet door.", "Gevaarlijk."],
+        wrongHints: [null, "Een reactie geeft de pester vaak juist aandacht. Wat werkt beter?", "Dan raak je ook je bewijs kwijt — en stopt de pester er niet door.", "Negeren kan helpen, maar wie kan je steunen als niemand het weet?"],
       },
       {
         q: "**Kindertelefoon**-nummer?",
-        options: ["0800-0432", "112", "0900-9292", "Onbekend"],
+        options: ["0800-0432", "112", "0900-9292", "113"],
         answer: 0,
-        wrongHints: [null, "Spoed.", "Niet relevant.", "Wel bekend."],
+        wrongHints: [null, "112 is alleen voor spoed: politie, brandweer of ambulance.", "Dat is het nummer voor reisinformatie over bus en trein.", "113 is de hulplijn voor zelfmoordpreventie. Welke lijn is speciaal voor kinderen?"],
       },
       {
         q: "Wat is **grooming**?",
-        options: ["Volwassene bouwt online vertrouwen met kind voor misbruik", "Haartrim", "Sport", "Game"],
+        options: ["Volwassene bouwt online vertrouwen met kind voor misbruik", "Klasgenoten die iemand via de groepsapp pesten", "Iemand chanteren met een gestuurde naaktfoto", "Je wachtwoord stelen via een nepmail of nepsite"],
         answer: 0,
-        wrongHints: [null, "Andere betekenis.", "Niet.", "Niet."],
+        wrongHints: [null, "Dat is cyberpesten.", "Dat is sextortion.", "Dat is phishing."],
       },
       {
         q: "Bij **sextortion** — wat doen?",
