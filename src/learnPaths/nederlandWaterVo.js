@@ -68,9 +68,9 @@ const steps = [
       },
       {
         q: "Hoeveel **doden** vielen bij de Watersnoodramp 1953 in NL?",
-        options: ["~1.836 doden","~100 doden","~10.000 doden","~50.000 doden"],
+        options: ["Ruim 1.800 doden","Ruim 600 doden","Ruim 6.000 doden","Ruim 25.000 doden"],
         answer: 0,
-        wrongHints: [null, "In één nacht liepen hele dorpen onder water. Zou het bij zo'n honderd slachtoffers zijn gebleven?", "Veel mensen overleefden op zolders, daken en dijken. Hoe groot was het aantal doden dan ongeveer?", "Ongeveer 100.000 mensen moesten weg uit hun huis. Is de helft daarvan omgekomen?"],
+        wrongHints: [null, "In één nacht liepen hele dorpen onder water. Zou het bij een paar honderd slachtoffers zijn gebleven?", "Veel mensen overleefden op zolders, daken en dijken. Hoe groot was het aantal doden dan ongeveer?", "Ongeveer 100.000 mensen moesten weg uit hun huis. Is een kwart daarvan omgekomen?"],
         uitlegPad: {
           stappen: [{ titel: "1.836 NL + ~350 buitenland", tekst: "**1.836 NL-doden** + 28.000 dode dieren + 47.000 gebouwen beschadigd. In België ook 28 doden + Groot-Brittannië 326. Erger had nog gekund — Rotterdam ontsnapte ternauwernood." }],
           theorie: "Ezelsbruggetje: het dodental 1836 lijkt op een jaartal (achttien-zesendertig).",
@@ -133,9 +133,9 @@ const steps = [
       },
       {
         q: "Welke provincie is opgericht in **1986** uit ingepolderd land?",
-        options: ["Flevoland","Drenthe","Limburg","Friesland"],
+        options: ["Flevoland","Noord-Holland","Zeeland","Friesland"],
         answer: 0,
-        wrongHints: [null, "Drenthe is al eeuwen een eigen gewest. Welke provincie ligt op de drooggelegde bodem van de Zuiderzee?", "Limburg is heuvelachtig en ligt hoog. Kan daar ingepolderd land liggen?", "Friesland bestaat al eeuwen. Welke provincie ligt op de bodem van de vroegere Zuiderzee?"],
+        wrongHints: [null, "In Noord-Holland liggen ook polders, zoals de Beemster en de Wieringermeer, maar de provincie bestaat al eeuwen. Welke provincie kwam er in 1986 bij?", "Zeeland heeft veel ingepolderd land, maar is al eeuwen een eigen gewest. Welke provincie kwam er in 1986 bij?", "Friesland bestaat al eeuwen. Welke provincie ligt op de bodem van de vroegere Zuiderzee?"],
         uitlegPad: {
           stappen: [{ titel: "Flevoland = 12e provincie", tekst: "**Flevoland** opgericht 1 januari **1986** uit drooggemaakte polders. Bevat: Noordoostpolder + Oostelijk Flevoland + Zuidelijk Flevoland. Hoofdstad **Lelystad** — grootste stad **Almere** (vandaag ~220.000 inwoners)." }],
           theorie: "Toets-feit: NL heeft 12 provincies sinds 1986. Daarvoor 11.",
@@ -164,7 +164,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **kenmerkend** voor de Oosterscheldekering (1986)?",
-        options: ["62 schuiven die open en dicht kunnen","Een dichte dam die eb en vloed tegenhoudt","Twee drijvende deuren die dichtdraaien","Een dijk met daarop een rij windmolens"],
+        options: ["Beweegbare schuiven die bij storm dichtgaan","Een dichte dam die eb en vloed tegenhoudt","Twee drijvende deuren die dichtdraaien","Een dijk met daarop een rij windmolens"],
         answer: 0,
         wrongHints: [null, "Eerst was een dichte dam gepland, maar dat zou de natuur in de Oosterschelde vernietigen. Wat werd het toen?", "Zulke drijvende deuren heeft de Maeslantkering bij Rotterdam. Hoe ziet de kering in de Oosterschelde eruit?", "Over de Oosterscheldekering loopt een weg. Wat is er onder die weg bijzonder?"],
         uitlegPad: {
@@ -241,9 +241,9 @@ const steps = [
       },
       {
         q: "Wat is **'Ruimte voor de Rivier'**?",
-        options: ["Rivieren meer ruimte geven, niet hogere dijken","Rivieren afsluiten met dammen en sluizen","Meer bruggen bouwen over de rivieren","Tunnels graven onder de grote rivieren"],
+        options: ["Uiterwaarden verdiepen en nevengeulen graven","Rivieren afsluiten met dammen en sluizen","Dijken flink verhogen en verzwaren","Rivieren rechttrekken voor snellere afvoer"],
         answer: 0,
-        wrongHints: [null, "Afsluiten met dammen past bij de Deltawerken aan zee. Wat zegt de naam van dit plan?", "Bruggen helpen het verkeer. Gaat dit plan over verkeer of over hoogwater?", "Een tunnel helpt niet als de rivier overstroomt. Waar gaat dit plan over?"],
+        wrongHints: [null, "Afsluiten met dammen past bij de Deltawerken aan zee. Wat deed men na het hoogwater van 1993 en 1995 met de rivieren?", "Steeds hogere dijken was juist de oude aanpak. Wat deed dit plan anders?", "Rivieren rechttrekken deed men vroeger juist, met smallere rivieren als gevolg. Koos dit plan voor hetzelfde?"],
         uitlegPad: {
           stappen: [{ titel: "Nieuwe rivierstrategie", tekst: "Na hoogwater Rijn/Maas 1993+1995 (in 1995 werden 250.000 mensen geëvacueerd) koos NL voor **anders denken**. Niet alleen hogere dijken, maar **uiterwaarden verbreden** + **nevengeulen graven**. Voorbeeld: Nijmegen kreeg een 'nieuwe Waal-arm' met park (klaar 2015)." }],
           woorden: [{ woord: "uiterwaard", uitleg: "Vlak land langs een rivier dat bij hoogwater onderloopt." }, { woord: "nevengeul", uitleg: "Extra rivierloop naast de hoofdgeul, zodat water meer weg kan." }],
@@ -328,13 +328,13 @@ const steps = [
       },
       {
         q: "Wat is bestuurlijk **niet juist** voor waterschappen?",
-        options: ["Geen eigen verkiezingen","Eigen belasting heffen","Dijkbeheer","Rioolwaterzuivering"],
+        options: ["De provincie kiest hun bestuur","Ze heffen eigen belasting","Ze beheren de dijken","Ze zuiveren rioolwater"],
         answer: 0,
         wrongHints: [null, "Waterschappen sturen elk jaar een aanslag waterschapsbelasting. Is deze uitspraak dus juist?", "Dijken onderhouden is de oudste taak van een waterschap. Is deze uitspraak dan juist of niet juist?", "Waterschappen zuiveren het rioolwater van huishoudens. Is deze uitspraak dus juist?"],
         uitlegPad: {
-          stappen: [{ titel: "Letten op 'niet'-vraag", tekst: "Vraag draait om wat NIET juist is. **Geen eigen verkiezingen** = onjuist (waterschappen hebben WEL eigen verkiezingen, samen met Provinciale Statenverkiezingen elke 4 jaar). Andere opties zijn allemaal echte taken." }],
+          stappen: [{ titel: "Letten op 'niet'-vraag", tekst: "Vraag draait om wat NIET juist is. **De provincie kiest hun bestuur** = onjuist (waterschappen hebben eigen verkiezingen, samen met Provinciale Statenverkiezingen elke 4 jaar). Andere opties zijn allemaal echte taken." }],
           theorie: "Examen-tip: lees altijd 'niet'-vragen 2x. Onderstreep 'niet' voor je antwoordt.",
-          niveaus: { basis: "Geen verkiezingen = onjuist.", simpeler: "Waterschappen HEBBEN verkiezingen → 'geen' = onjuist", nogSimpeler: "'Geen verkiezingen' = onjuist." },
+          niveaus: { basis: "Bestuur door provincie gekozen = onjuist.", simpeler: "Waterschappen HEBBEN eigen verkiezingen → 'de provincie kiest hun bestuur' = onjuist", nogSimpeler: "Eigen verkiezingen." },
         },
       },
       {

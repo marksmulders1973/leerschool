@@ -559,7 +559,7 @@ const steps = [
           woorden: [{ woord: "ℕ natuurlijk", uitleg: "0, 1, 2, 3, ... Telgetallen vanaf 0." }, { woord: "ℤ geheel", uitleg: "Alle getallen zonder breuken/decimalen. Inclusief negatieve." }],
           theorie: "Hiërarchie: natuurlijke ⊂ gehele ⊂ rationale ⊂ reële. Elk natuurlijk getal ook geheel. Maar niet andersom.",
           voorbeelden: [{ type: "voorbeelden", tekst: "5: natuurlijk + geheel + rationaal. −7: geheel + rationaal (niet natuurlijk). ½: rationaal (niet geheel). √2: reëel (niet rationaal)." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "5 wel natuurlijk. 0,5 + ½ = breuken (niet geheel). Alleen −7 voldoet aan 'geheel maar niet natuurlijk'." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "5 wel natuurlijk. 0,5 en −2,5 = kommagetallen (niet geheel). Alleen −7 voldoet aan 'geheel maar niet natuurlijk'." }],
           niveaus: { basis: "−7.", simpeler: "Geheel + niet natuurlijk = negatief geheel getal. −7.", nogSimpeler: "−7" },
         },
       },

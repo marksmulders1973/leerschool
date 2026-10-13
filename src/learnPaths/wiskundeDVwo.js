@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "**(3 + 2i)(1 + i)** = ?",
-        options: ["1 + 5i","3 + 2i","4 + 3i","6 + 4i"],
+        options: ["1 + 5i","3 + 2i","4 + 3i","5 + 5i"],
         answer: 0,
-        wrongHints: [null, "Niet — vermenigvuldig.", "Niet correct.", "Niet correct."],
+        wrongHints: [null, "Dat is (3 + 2i) zelf: je vermenigvuldigde alleen met de 1. Wat geeft (3 + 2i) · i nog?", "4 + 3i = (3 + 2i) + (1 + i): je telde op. Werk de haakjes uit: elke term keer elke term.", "Je rekende met i² = +1. Wat is i² ook alweer?"],
         uitlegPad: {
           stappen: [
             { titel: "FOIL + i²=−1", tekst: "(3 + 2i)(1 + i) = 3·1 + 3·i + 2i·1 + 2i·i = 3 + 3i + 2i + 2i² = 3 + 5i − 2 = **1 + 5i**." },
@@ -54,7 +54,7 @@ const steps = [
         q: "Wat is **|3 + 4i|** (modulus)?",
         options: ["5","7","25","12"],
         answer: 0,
-        wrongHints: [null, "Niet — niet optellen.", "Mist wortel.", "Niet correct."],
+        wrongHints: [null, "7 = 3 + 4. De modulus is de afstand tot 0 in het complexe vlak: welke stelling gebruik je voor die afstand?", "25 = 3² + 4². Je bent er bijna: welke stap moet nog?", "12 = 3 · 4: je vermenigvuldigde. Teken 3 + 4i als punt: hoe ver ligt het van 0?"],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras", tekst: "**|z| = √(a² + b²)**. Hier: |3 + 4i| = √(9 + 16) = √25 = **5**.\n\nKlassieke Pythagoras-rechthoekige driehoek 3-4-5." }],
           niveaus: { basis: "5.", simpeler: "√(9+16)=5", nogSimpeler: "5" },
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "**Geconjugeerde** van **3 − 4i**:",
-        options: ["3 + 4i","−3 + 4i","−3 − 4i","3 − 4i"],
+        options: ["3 + 4i","−3 + 4i","−3 − 4i","4 − 3i"],
         answer: 0,
-        wrongHints: [null, "Niet — andere reëel deel.", "Niet — beide tekens.", "Geen verandering."],
+        wrongHints: [null, "Bij toevoegen blijft het reële deel gelijk. Welk deel krijgt een ander teken?", "Je draaide beide tekens om; dat is −z. Bij toevoegen verandert maar één teken: welk?", "Je verwisselde het reële en het imaginaire deel. Wat gebeurt er bij toevoegen echt?"],
         uitlegPad: {
           stappen: [{ titel: "Spiegelen langs reële as", tekst: "**Geconjugeerde** = imaginaire deel-teken omkeren. 3 − 4i → **3 + 4i**. In complex vlak: spiegelen langs reële (horizontale) as.\n\nEigenschap: z·z̄ = (3−4i)(3+4i) = 9 + 16 = 25 (altijd reëel)." }],
           niveaus: { basis: "3+4i.", simpeler: "Geconjugeerd = teken om", nogSimpeler: "3 + 4i." },
@@ -116,7 +116,7 @@ const steps = [
         q: "**i⁴** is?",
         options: ["1","−1","i","−i"],
         answer: 0,
-        wrongHints: [null, "Niet — i².", "Niet — i¹.", "Niet — i³."],
+        wrongHints: [null, "−1 is i². Wat krijg je als je −1 nog een keer kwadrateert?", "i is i¹. Wat is i² · i²?", "−i is i³. Vermenigvuldig nog één keer met i: wat krijg je?"],
         uitlegPad: {
           stappen: [{ titel: "Cyclus 4", tekst: "i¹=i, i²=−1, i³=−i, **i⁴=1**, i⁵=i, ... Cyclus van lengte 4. Werk: i⁴ = (i²)² = (−1)² = **1**." }],
           niveaus: { basis: "1.", simpeler: "i⁴=1", nogSimpeler: "1" },
@@ -137,7 +137,7 @@ const steps = [
         q: "**De Moivre**: (1+i)⁴ = ?",
         options: ["−4","4","16","2i"],
         answer: 0,
-        wrongHints: [null, "Niet — let op het teken: wat doet i² met het teken als je (1+i)² nog een keer kwadrateert?", "Niet — bereken (1+i)² eerst en pas dan nogmaals de kwadraat toe.", "Niet correct — werk stap voor stap uit."],
+        wrongHints: [null, "Niet — let op het teken: wat doet i² met het teken als je (1+i)² nog een keer kwadrateert?", "Bereken eerst (1 + i)² en kwadrateer dat resultaat daarna nog een keer.", "2i is (1 + i)², maar de vraag gaat over de vierde macht. Wat geeft (2i)²?"],
         uitlegPad: {
           stappen: [
             { titel: "Polair (1+i) = √2 e^(iπ/4)", tekst: "|1+i| = √2, arg = π/4." },
@@ -168,9 +168,9 @@ const steps = [
       },
       {
         q: "**Determinant** van [[2,3],[1,4]]?",
-        options: ["5","11","8","6"],
+        options: ["5","11","8","−5"],
         answer: 0,
-        wrongHints: [null, "Niet — ad + bc? Let op het minteken.", "Niet — je vergeet bc af te trekken.", "Niet correct."],
+        wrongHints: [null, "Niet — ad + bc? Let op het minteken.", "Niet — je vergeet bc af te trekken.", "Je rekende bc − ad. In welke volgorde trek je de producten van de diagonalen van elkaar af?"],
         uitlegPad: {
           stappen: [{ titel: "ad − bc", tekst: "**det([[a,b],[c,d]]) = ad − bc** = 2·4 − 3·1 = 8 − 3 = **5**." }],
           niveaus: { basis: "5.", simpeler: "ad−bc = 8−3 = 5", nogSimpeler: "5" },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Wanneer is matrix **niet inverteerbaar**?",
-        options: ["det = 0","det = 1","Vierkant","Diagonaal"],
+        options: ["det = 0","det = 1","Vierkant","Symmetrisch"],
         answer: 0,
-        wrongHints: [null, "Niet — wel inverteerbaar.", "Voorwaarde maar niet doorslaggevend.", "Wel inverteerbaar (als geen nul-diagonaal)."],
+        wrongHints: [null, "Bij det = 1 kun je gewoon door de determinant delen. Bij welke waarde lukt dat niet?", "Vierkant zijn is juist nodig om een inverse te kunnen hebben. Welke extra eis is er nog?", "Een symmetrische matrix kan best een inverse hebben, zoals I. Welk getal bepaalt of een inverse bestaat?"],
         uitlegPad: {
           stappen: [{ titel: "Singulier", tekst: "Matrix **niet inverteerbaar** (singulier) als **det = 0**. Reden: inverse-formule heeft 1/det → deling door 0. Geometrisch: matrix 'plat-drukt' ruimte (verliest dimensie). Stelsel met det=0 heeft 0 of oneindig veel oplossingen, geen unieke." }],
           niveaus: { basis: "det=0.", simpeler: "Singulier = det=0", nogSimpeler: "det = 0." },
@@ -200,7 +200,7 @@ const steps = [
         q: "**Transpose** van A = [[1,2],[3,4]]:",
         options: ["[[1,3],[2,4]]","[[4,3],[2,1]]","[[1,2],[3,4]]","[[2,1],[4,3]]"],
         answer: 0,
-        wrongHints: [null, "Je hebt de matrix helemaal omgedraaid. Wat gebeurt er bij transponeren met de eerste rij?", "Niet — geen verandering.", "Je hebt de kolommen verwisseld. Wat gebeurt er bij transponeren met de eerste rij?"],
+        wrongHints: [null, "Je hebt de matrix helemaal omgedraaid. Wat gebeurt er bij transponeren met de eerste rij?", "Dat is A zelf. Bij transponeren worden rijen kolommen: wat wordt de eerste kolom?", "Je hebt de kolommen verwisseld. Wat gebeurt er bij transponeren met de eerste rij?"],
         uitlegPad: {
           stappen: [{ titel: "Rijen ↔ kolommen", tekst: "**Transpose A^T**: rijen worden kolommen + vice versa. Rij 1 (1,2) wordt kolom 1. Rij 2 (3,4) wordt kolom 2. **A^T = [[1,3],[2,4]]**." }],
           niveaus: { basis: "[[1,3],[2,4]].", simpeler: "Transpose = rijen↔kolom", nogSimpeler: "[[1,3],[2,4]]" },
@@ -239,7 +239,7 @@ const steps = [
         q: "**Eigenvector** v van A vervult:",
         options: ["A·v = λ·v","A·v = 0","A = λ·v","A·v + λ = 0"],
         answer: 0,
-        wrongHints: [null, "Dat is alleen het speciale geval λ = 0.", "Niet zinvol.", "Niet correct."],
+        wrongHints: [null, "Dat is alleen het speciale geval λ = 0.", "Links staat een matrix en rechts een vector. Kunnen die aan elkaar gelijk zijn?", "Hier tel je een getal λ op bij een vector. Wat moet er met v gebeuren als A erop werkt?"],
         uitlegPad: {
           stappen: [{ titel: "Karakteristieke vergelijking", tekst: "**Eigenvector v** van matrix A: **A·v = λ·v** voor scalair λ. v wordt door A op zichzelf afgebeeld (alleen geschaald met λ). λ = **eigenwaarde**. Vinden: oplossen det(A − λI) = 0.\n\nToepassing: PCA, PageRank, Markov-stabiel, trillingen." }],
           niveaus: { basis: "A·v = λv.", simpeler: "Eig: A·v = λv", nogSimpeler: "A·v = λ·v" },
@@ -249,7 +249,7 @@ const steps = [
         q: "Welke matrix doet **spiegeling in y-as**?",
         options: ["[[−1,0],[0,1]]","[[1,0],[0,−1]]","[[0,1],[1,0]]","[[1,0],[0,1]]"],
         answer: 0,
-        wrongHints: [null, "Spiegeling in x-as.", "Spiegeling in y=x.", "Geen verandering."],
+        wrongHints: [null, "[[1,0],[0,−1]] laat x staan en klapt y om: dat is spiegelen in de x-as. Welke coördinaat verandert bij spiegelen in de y-as?", "[[0,1],[1,0]] verwisselt x en y: dat is spiegelen in de lijn y = x. Wat gebeurt er met (x, y) bij spiegelen in de y-as?", "[[1,0],[0,1]] is de eenheidsmatrix en laat alles staan. Welke coördinaat moet van teken wisselen?"],
         uitlegPad: {
           stappen: [{ titel: "x-coord teken om", tekst: "**Spiegeling y-as**: x-coord wisselt van teken, y blijft. (1,2) → (−1,2). Matrix: **[[−1,0],[0,1]]**. (−1)·1 + 0·2 = −1. 0·1 + 1·2 = 2. ✓" }],
           niveaus: { basis: "[[-1,0],[0,1]].", simpeler: "y-as = [[-1,0],[0,1]]", nogSimpeler: "x wordt −x." },
@@ -278,7 +278,7 @@ const steps = [
         q: "**(2 + 3i)** + **(4 − 5i)** =?",
         options: ["6 − 2i","6 + 2i","2 + 3i","8 − 15i"],
         answer: 0,
-        wrongHints: [null, "Imaginair deel teken.", "Niet — moet optellen.", "Niet — niet vermenigvuldigen."],
+        wrongHints: [null, "Het reële deel klopt. Wat is 3i + (−5i)?", "2 + 3i is het eerste getal zelf. Tel je de reële en de imaginaire delen apart op?", "8 − 15i krijg je door de delen te vermenigvuldigen. Bij optellen tel je reëel bij reëel en imaginair bij imaginair."],
         uitlegPad: {
           stappen: [{ titel: "Reëel + reëel, im + im", tekst: "**Per component** optellen: reële delen optellen (2+4=6), imaginaire delen optellen (3+(−5)=−2). = **6 − 2i**." }],
           niveaus: { basis: "6−2i.", simpeler: "(2+4) + (3−5)i = 6 − 2i", nogSimpeler: "6 − 2i" },
@@ -288,7 +288,7 @@ const steps = [
         q: "Modulus **|5 − 12i|** =?",
         options: ["13","17","7","60"],
         answer: 0,
-        wrongHints: [null, "Niet — niet optellen.", "Niet correct.", "Niet — niet vermenigvuldigen."],
+        wrongHints: [null, "17 = 5 + 12. De modulus is een afstand: welke stelling gebruik je?", "7 = 12 − 5. Kwadrateer beide delen, tel ze op en neem de wortel.", "60 = 5 · 12. Teken 5 − 12i als punt: hoe ver ligt het van 0?"],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras", tekst: "|5 − 12i| = √(5² + 12²) = √(25 + 144) = √169 = **13**. Klassiek Pythagoras-triple 5-12-13." }],
           niveaus: { basis: "13.", simpeler: "√169 = 13", nogSimpeler: "13" },
@@ -298,7 +298,7 @@ const steps = [
         q: "Welke matrix beeldt elk punt (x, y) af op **(2x, 2y)**?",
         options: ["[[2,0],[0,2]]","[[1,1],[1,1]]","[[0,2],[2,0]]","[[1,0],[0,2]]"],
         answer: 0,
-        wrongHints: [null, "Niet — geen schaling.", "Spiegelt in y = x én schaalt.", "Alleen y-schaling."],
+        wrongHints: [null, "Deze matrix stuurt (x, y) naar (x + y, x + y). Is dat (2x, 2y)?", "Deze matrix geeft (2y, 2x): x en y wisselen ook nog van plaats. Is dat (2x, 2y)?", "Deze matrix geeft (x, 2y). Wat gebeurt er met de x?"],
         uitlegPad: {
           stappen: [{ titel: "Uniforme schaling", tekst: "**Uniforme schaling met factor k**: matrix [[k,0],[0,k]]. Voor **2×**: **[[2,0],[0,2]]**. Test op (3,4): 2·3 + 0·4 = 6; 0·3 + 2·4 = 8. (3,4) → (6,8) = dubbel. ✓" }],
           niveaus: { basis: "[[2,0],[0,2]].", simpeler: "2× schaling", nogSimpeler: "[[2,0],[0,2]]" },
@@ -316,9 +316,9 @@ const steps = [
       },
       {
         q: "**Fundamentele stelling algebra**:",
-        options: ["Polynoom graad n heeft n complexe wortels","Polynoom graad n heeft n reële wortels","Polynoom graad n heeft hooguit één wortel","Polynoom graad n heeft geen complexe wortels"],
+        options: ["Polynoom graad n heeft n complexe wortels","Polynoom graad n heeft n reële wortels","Polynoom graad n heeft minstens één reële wortel","Polynoom graad n heeft n verschillende wortels"],
         answer: 0,
-        wrongHints: [null, "Niet altijd reëel — denk aan x² + 1 = 0.", "Niet — een kwadratische vergelijking heeft er vaak twee.", "Niet — juist in ℂ heeft elk polynoom wortels."],
+        wrongHints: [null, "Heeft x² + 1 = 0 twee reële oplossingen?", "Dat geldt alleen bij oneven graad. Heeft x² + 1 = 0 een reële wortel?", "Wortels kunnen samenvallen, zoals bij (x − 1)² = 0. Hoe tel je ze dan?"],
         uitlegPad: {
           stappen: [{ titel: "Carl Friedrich Gauss 1799", tekst: "**Fundamentele Stelling Algebra**: elk polynoom van graad **n ≥ 1** (met complexe coëfficiënten) heeft **precies n complexe wortels** (met multipliciteit). Bewezen door **Gauss** in 1799 (proefschrift, 22 jaar oud!). Reden om ℝ uit te breiden naar ℂ: alle polynomen factoriseerbaar in lineaire factoren. Onmisbaar voor algebra + complexe analyse." }],
           niveaus: { basis: "n wortels.", simpeler: "Polynoom n = n wortels", nogSimpeler: "n wortels." },

@@ -134,7 +134,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "75 ligt 2,5σ boven het gemiddelde. Valt dat nog binnen de gewone spreiding rond 50?", "25 ligt 2,5σ onder het gemiddelde. Hoeveel procent van de data ligt zó ver weg?", "10 is de standaardafwijking, geen waarde uit de data. Rond welk getal liggen de meeste waarden?"],
         uitlegPad: {
-          stappen: [{ titel: "Binnen 1σ = typisch", tekst: "Waarden binnen 1σ van gemiddelde = typisch. Bereik: 50 ± 10 = [40, 60]. **55 valt erin** → typisch. 100 = 5σ boven gemiddelde = extreme uitschieter." }],
+          stappen: [{ titel: "Binnen 1σ = typisch", tekst: "Waarden binnen 1σ van gemiddelde = typisch. Bereik: 50 ± 10 = [40, 60]. **55 valt erin** → typisch. 75 en 25 liggen 2,5σ van het gemiddelde af = zeldzaam, en 10 is σ zelf, geen datawaarde." }],
           theorie: "68% van normaalverdeelde data valt binnen 1σ van gemiddelde (zie volgende stap).",
           niveaus: { basis: "55.", simpeler: "55 binnen [40,60] = typisch", nogSimpeler: "55" },
         },
