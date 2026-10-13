@@ -1,0 +1,1038 @@
+{
+ "bestanden": [
+  "./tijdvakkenNederlandPo.js",
+  "./geschiedenisVroegerEnNuG5.js",
+  "./bekendeBoekenLiteratuurPo.js",
+  "./industrieleRevolutiePo.js",
+  "./kritischDenkenPo.js",
+  "./koudeOorlogModernPo.js",
+  "./topografieEuropaPo.js",
+  "./topografieNederlandProvinciesPo.jsx"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L",
+   "q": "Op een tijdbalk staan: de ridders, school met lei en griffel, en nu. Wat staat in het midden?",
+   "opties": [
+    "school met lei en griffel",
+    "de ridders",
+    "nu",
+    "dat kan overal staan"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wie schreef Jip en Janneke?",
+   "opties": [
+    "Annie M.G. Schmidt",
+    "Roald Dahl",
+    "Tonke Dragt",
+    "Multatuli"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel Harry Potter-boeken?",
+   "opties": [
+    "7",
+    "1",
+    "100",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Waar is Anne Frank Huis?",
+   "opties": [
+    "Amsterdam",
+    "Bergen-Belsen",
+    "Den Haag",
+    "Rotterdam"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel talen Anne Frank dagboek?",
+   "opties": [
+    "70+",
+    "1",
+    "5",
+    "200"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wie schreef Jip en Janneke?",
+   "opties": [
+    "Annie M.G. Schmidt",
+    "Roald Dahl",
+    "Vriens",
+    "Slee"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wie tekende bij Schmidt?",
+   "opties": [
+    "Fiep Westendorp",
+    "Bruna",
+    "Pieck",
+    "Rembrandt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Anne Frank zat ondergedoken in?",
+   "opties": [
+    "Amsterdam",
+    "Den Haag",
+    "Rotterdam",
+    "Frankfurt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wie schreef Max Havelaar?",
+   "opties": [
+    "Multatuli",
+    "Mulisch",
+    "Vriens",
+    "Schmidt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "SK",
+   "q": "Kinderboekenweek = welke maand?",
+   "opties": [
+    "Oktober",
+    "Januari",
+    "Mei",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Harry Potter = aantal delen?",
+   "opties": [
+    "7",
+    "1",
+    "100",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Kruistocht in Spijkerbroek (Thea Beckman) — wat is het thema?",
+   "opties": [
+    "Tijdreis terug naar de Middeleeuwen",
+    "Een voetbalteam op wereldreis",
+    "Een soldaat in de Eerste Wereldoorlog",
+    "Een prinses in een sprookjesland"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Wie schreef *Sjakie en de Chocoladefabriek*?",
+   "opties": [
+    "Roald Dahl",
+    "Annie M.G. Schmidt",
+    "Tonke Dragt",
+    "Anne Frank"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Wat is proza?",
+   "opties": [
+    "Gewone tekst, zoals een verhaal",
+    "Tekst op rijm in versregels",
+    "Tekst om op toneel te spelen",
+    "Een woord dat niet bestaat"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Wie tekende Nijntje?",
+   "opties": [
+    "Dick Bruna",
+    "Fiep Westendorp",
+    "Annie M.G. Schmidt",
+    "Roald Dahl"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Wie schreef *Het Achterhuis*?",
+   "opties": [
+    "Anne Frank",
+    "Multatuli",
+    "Tonke Dragt",
+    "Annie M.G. Schmidt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 21,
+   "soort": "L2",
+   "q": "Gouden Griffel is prijs voor?",
+   "opties": [
+    "Beste NL-kinderboek",
+    "Beste film",
+    "Beste spel",
+    "Beste recept"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-boeken-literatuur-po",
+   "file": "./bekendeBoekenLiteratuurPo.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Wie schreef fantasy *De Hobbit*?",
+   "opties": [
+    "J.R.R. Tolkien",
+    "Roald Dahl",
+    "C.S. Lewis",
+    "Tonke Dragt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Wat is geschiedenis?",
+   "opties": [
+    "alles wat vroeger is gebeurd",
+    "alles wat morgen gebeurt",
+    "alleen verhaaltjes die verzonnen zijn",
+    "alleen wat in de krant staat"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Hoe kunnen we weten hoe mensen honderd jaar geleden leefden?",
+   "opties": [
+    "door oude foto's, spullen en verhalen",
+    "dat kan niemand weten",
+    "door heel hard na te denken",
+    "door naar de toekomst te kijken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Welk van deze dingen is ook geschiedenis?",
+   "opties": [
+    "wat er gisteren op school gebeurde",
+    "wat je morgen gaat doen",
+    "wat je volgende week gaat eten",
+    "een verzonnen sprookje"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Hoe kwamen veel mensen vroeger aan water?",
+   "opties": [
+    "uit een pomp op straat of op het erf",
+    "uit flesjes van de winkel",
+    "uit de regenpijp drinken",
+    "water bestond nog niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "S",
+   "q": "Hoe waren de klassen op school honderd jaar geleden vaak?",
+   "opties": [
+    "groot",
+    "klein",
+    "er waren geen klassen",
+    "alleen online"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat hoort bij de middeleeuwen?",
+   "opties": [
+    "ridders en kastelen",
+    "vliegtuigen",
+    "computers",
+    "treinen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welke bron vertelt het meest over hoe jouw overgrootouders leefden?",
+   "opties": [
+    "oude foto's en verhalen van de familie",
+    "een striptekening over de toekomst",
+    "het journaal van vandaag",
+    "een spelletjes-app"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Op een tijdbalk staan: de ridders, school met lei en griffel, en nu. Wat staat in het midden?",
+   "opties": [
+    "school met lei en griffel",
+    "de ridders",
+    "nu",
+    "dat kan overal staan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geschiedenis-vroeger-en-nu-g5",
+   "file": "./geschiedenisVroegerEnNuG5.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Wat hoort niet bij de middeleeuwen?",
+   "opties": [
+    "een mobiele telefoon",
+    "een harnas",
+    "een kasteel",
+    "een gracht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Werkdag in vroege fabriek?",
+   "opties": [
+    "12-16 uur",
+    "8 uur",
+    "4 uur",
+    "24 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2K",
+   "q": "Wat is verstedelijking?",
+   "opties": [
+    "Mensen verhuizen naar steden",
+    "Steden verlaten",
+    "Boerderijen bouwen",
+    "Steden groener maken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Wat is proletariaat?",
+   "opties": [
+    "Arbeidersklasse",
+    "Adel",
+    "Boeren",
+    "Kerk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "SK",
+   "q": "Wanneer kinderwetje Van Houten?",
+   "opties": [
+    "1874",
+    "1700",
+    "1950",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Leerplichtwet in NL?",
+   "opties": [
+    "1900",
+    "1800",
+    "1950",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "SK",
+   "q": "Wanneer vrouwenkiesrecht in NL (actief)?",
+   "opties": [
+    "1919",
+    "1900",
+    "1800",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "SK",
+   "q": "Laatste mijn Limburg sloot?",
+   "opties": [
+    "1974",
+    "2020",
+    "1900",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Kinderarbeid verboden in NL onder?",
+   "opties": [
+    "12 jaar",
+    "Geen wet",
+    "16 jaar",
+    "8 jaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Wat is bourgeoisie?",
+   "opties": [
+    "Rijke burgers",
+    "Boeren",
+    "Adel",
+    "Arbeiders"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "L2K",
+   "q": "Wat doet een spoorweg?",
+   "opties": [
+    "Treinen + goederen verplaatsen",
+    "Wegen onderhouden",
+    "Schepen laten varen",
+    "Stroom leveren aan huizen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "L2",
+   "q": "Wat zijn vakbonden?",
+   "opties": [
+    "Organisaties voor werknemers-rechten",
+    "Organisaties van fabriekseigenaren",
+    "Clubs voor sport",
+    "Winkels voor gereedschap"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Twentse textiel was vroeg NL-industrie in?",
+   "opties": [
+    "Enschede / Almelo",
+    "Amsterdam",
+    "Rotterdam",
+    "Maastricht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "L2",
+   "q": "Karl Marx schreef over?",
+   "opties": [
+    "Arbeiders en kapitalisme",
+    "Sterrenkunde",
+    "Evolutie van dieren",
+    "Ontdekkingsreizen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "industriele-revolutie-po",
+   "file": "./industrieleRevolutiePo.js",
+   "stap": 5,
+   "vraag": 15,
+   "soort": "L2",
+   "q": "Welke transportuitvinding kwam in de Industriële Revolutie?",
+   "opties": [
+    "Stoomtrein + stoomschip",
+    "Ruimteraket",
+    "Straalvliegtuig",
+    "Internet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "koude-oorlog-modern-po",
+   "file": "./koudeOorlogModernPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Welke Nederlander is sinds 2024 secretaris-generaal van de NAVO?",
+   "opties": [
+    "Mark Rutte",
+    "Wilders",
+    "Schoof",
+    "Niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "koude-oorlog-modern-po",
+   "file": "./koudeOorlogModernPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat was de Cuba-crisis (1962)?",
+   "opties": [
+    "Bijna-kernoorlog om raketten op Cuba",
+    "Echte oorlog tussen VS en Cuba",
+    "Revolutie van Fidel Castro",
+    "Orkaan die Cuba verwoestte"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "koude-oorlog-modern-po",
+   "file": "./koudeOorlogModernPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Wie won de Vietnam-oorlog?",
+   "opties": [
+    "Noord-Vietnam",
+    "VS",
+    "Niemand",
+    "Frankrijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "koude-oorlog-modern-po",
+   "file": "./koudeOorlogModernPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Wie won de Vietnam-oorlog?",
+   "opties": [
+    "Noord-Vietnam",
+    "VS",
+    "Frankrijk",
+    "Niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wie won de Nobelprijs voor onderzoek naar denkfouten?",
+   "opties": [
+    "Daniel Kahneman",
+    "Einstein",
+    "Darwin",
+    "Newton"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Waarom is 'iedereen doet het' een drogreden?",
+   "opties": [
+    "Meerderheid kan fout zijn",
+    "Klopt altijd",
+    "Omdat de groep te klein is",
+    "Wel goed"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "SK",
+   "q": "Wie maakte de eerste lijst met drogredenen?",
+   "opties": [
+    "Aristoteles",
+    "Newton",
+    "Einstein",
+    "Niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Wie won een Nobelprijs voor onderzoek naar denkfouten?",
+   "opties": [
+    "Daniel Kahneman",
+    "Einstein",
+    "Darwin",
+    "Aristoteles"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Welke vraag is een kritische vraag bij een bewering?",
+   "opties": [
+    "Klopt de bron?",
+    "Hoe lang is de zin?",
+    "Wie schreef het mooist?",
+    "Wat is de kleur?"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 18,
+   "soort": "L2",
+   "q": "Wat is correlatie ≠ causatie?",
+   "opties": [
+    "Samen voorkomen betekent niet dat het een het ander veroorzaakt",
+    "Samen voorkomen bewijst dat het een het ander veroorzaakt",
+    "Twee dingen komen nooit samen voor",
+    "Oorzaak en gevolg bestaan niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Wat doe je bij een claim zonder bewijs?",
+   "opties": [
+    "Bronnen vragen",
+    "Geloven",
+    "Volg de meerderheid",
+    "Negeren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "S",
+   "q": "Wat is een goed argument?",
+   "opties": [
+    "Standpunt + bewijs/redenering",
+    "Alleen mening",
+    "Aanval op persoon",
+    "Eén voorbeeld van één persoon"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 26,
+   "soort": "L2K",
+   "q": "Wat is een autoriteits-drogreden?",
+   "opties": [
+    "Beroep op gezag zonder bewijs",
+    "Wetenschap citeren",
+    "Logica",
+    "Iemand persoonlijk aanvallen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kritisch-denken-po",
+   "file": "./kritischDenkenPo.js",
+   "stap": 3,
+   "vraag": 27,
+   "soort": "K",
+   "q": "Hoe leer je kritisch denken?",
+   "opties": [
+    "Vragen stellen + bronnen checken",
+    "Stoppen met denken",
+    "Alles geloven wat je leest",
+    "Alleen naar je beste vriend luisteren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is het feodaal stelsel?",
+   "opties": [
+    "Koning gaf grond als leen aan ridders en graven",
+    "Boeren regeerden zelf hun land",
+    "Steden hadden de macht over het platteland",
+    "Iedereen was even rijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat moest een ridder doen in ruil voor zijn leen?",
+   "opties": [
+    "trouw zijn en meevechten",
+    "een kerk bouwen",
+    "met de VOC varen",
+    "de stad besturen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wanneer werd de Republiek officieel onafhankelijk?",
+   "opties": [
+    "1648 (Vrede van Münster)",
+    "1581 (Plakkaat)",
+    "1568 (begin oorlog)",
+    "1701"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Wat gebeurde er in 1795?",
+   "opties": [
+    "de Fransen veroverden de Republiek",
+    "de VOC werd opgericht",
+    "Willem van Oranje werd vermoord",
+    "de euro werd ingevoerd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Welk land gaf na 1945 Marshall-hulp?",
+   "opties": [
+    "de Verenigde Staten",
+    "Duitsland",
+    "Spanje",
+    "Frankrijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Eerste WO in NL — was NL?",
+   "opties": [
+    "Neutraal",
+    "Bezet",
+    "Aanvaller",
+    "Bondgenoot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdvakken-nederland-po",
+   "file": "./tijdvakkenNederlandPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "L2",
+   "q": "Wie waren de eerste bewoners van NL?",
+   "opties": [
+    "Jagers-verzamelaars",
+    "Romeinen",
+    "Vikingen",
+    "Spanjaarden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-europa-po",
+   "file": "./topografieEuropaPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel werelddelen (continenten) telt de aarde?",
+   "opties": [
+    "5",
+    "6",
+    "7",
+    "9"
+   ],
+   "answer": 2,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-europa-po",
+   "file": "./topografieEuropaPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welk land ligt deels in Europa én deels in Azië?",
+   "opties": [
+    "Turkije",
+    "Rusland",
+    "Turkije én Rusland",
+    "Frankrijk"
+   ],
+   "answer": 2,
+   "lijst": "extra"
+  }
+ ]
+}

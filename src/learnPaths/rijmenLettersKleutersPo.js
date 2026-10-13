@@ -314,7 +314,7 @@ const steps = [
         q: "Klap mee 👏: **o-li-fant** 🐘 — hoeveel stukjes?",
         options: ["3", "2", "1", "4"],
         answer: 0,
-        wrongHints: [null, "Klap nog eens mee: o... li... en er komt nog een stukje!", "Eén klap maar? Zeg het langzaam: o... li... fant... en klap bij elk stukje.", "Dat is één klap te veel — probeer het nog eens rustig."],
+        wrongHints: [null, "Klap nog eens mee: o... li... en er komt nog een stukje!", "Eén klap maar? Zeg het langzaam: o... li... fant... en klap bij elk stukje.", "Klap nog eens rustig mee en tel goed: bij elk stukje één klap."],
         uitlegPad: {
           stappen: [{ titel: "Drie klappen", tekst: "Zeg het langzaam en klap: **o** 👏 **li** 👏 **fant** 👏. Drie klappen = **3 stukjes**! 🐘" }],
           niveaus: {
@@ -671,9 +671,9 @@ const steps = [
       },
       {
         q: "Een olifant 🐘 is groot. Een muis 🐭 is juist...",
-        options: ["klein", "groot", "rood", "nat"],
+        options: ["klein", "groot", "zwaar", "dik"],
         answer: 0,
-        wrongHints: [null, 'Kijk naar de plaatjes: past een muis in jouw hand? En een olifant?', 'Gaat de vraag over kleur? Kijk nog eens goed wat er gevraagd wordt.', 'Gaat de vraag over water? Kijk naar de olifant en de muis: wat is het verschil?'],
+        wrongHints: [null, "Kijk naar de plaatjes: past een muis in jouw hand? En een olifant?", "Kun je een muis makkelijk optillen? Zoek het woord dat het tegendeel is van groot.", "Is een muis dik? Zoek het woord dat het tegendeel is van groot."],
         uitlegPad: {
           stappen: [{ titel: "Tegendeel", tekst: "Groot en **klein** zijn elkaars **tegendeel** — net als warm ☀️ en koud ❄️. Een olifant 🐘 is heel groot, een muis 🐭 past in je hand: die is **klein**!" }],
           niveaus: {
@@ -685,7 +685,7 @@ const steps = [
       },
       {
         q: "Kijk naar het plaatje 👀: 🐸 — wat is dit?",
-        options: ["kikker 🐸", "vogel 🐦", "vis 🐟", "hond 🐶"],
+        options: ["kikker", "vogel", "vis", "hond"],
         answer: 0,
         wrongHints: [null, "Kan dit dier vliegen? Kijk nog eens goed naar het plaatje.", "Zwemt dit dier de hele dag onder water? Wat kan het nog meer?", "Zegt dit dier *woef*? Of maakt het een ander geluid?"],
         uitlegPad: {
@@ -714,9 +714,9 @@ const steps = [
       },
       {
         q: "Warm ☀️ en ... horen bij elkaar als tegendeel. Welk woord?",
-        options: ["koud ❄️", "heet 🔥", "groot 🐘", "blij 😃"],
+        options: ["koud ❄️", "heet 🔥", "zomer 🏖️", "zonnig 🌤️"],
         answer: 0,
-        wrongHints: [null, "Heet lijkt juist heel erg op warm — we zoeken het tegendeel! Wat voel je bij sneeuw?", "Groot hoort bij klein — maar wat hoort bij warm?", "Blij hoort bij verdrietig — maar wat hoort bij warm?"],
+        wrongHints: [null, "Heet lijkt juist heel erg op warm — we zoeken het tegendeel! Wat voel je bij sneeuw?", "In de zomer is het vaak warm. We zoeken juist het tegendeel!", "Als het zonnig is, wordt het juist warm. Wat is het tegenovergestelde?"],
         uitlegPad: {
           stappen: [{ titel: "Tegendeel-vriendjes", tekst: "Warm ☀️ en **koud** ❄️ zijn tegendeel-vriendjes: precies het omgekeerde van elkaar! Denk maar aan een warme zomerdag ☀️ en aan sneeuw ❄️ — brrr!" }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Meer tegendeel-vriendjes: groot 🐘 en klein 🐭, blij 😃 en verdrietig 😢." }],
@@ -766,7 +766,7 @@ const steps = [
           null,
           "Kun je een peer eten? Dan is het misschien wel fruit!",
           null,
-          "Een druif kun je eten — zoek iets wat je níét kunt eten.",
+          "Een druif groeit aan een plant en je kunt hem eten. Is dat fruit?",
         ],
         uitlegPad: {
           stappen: [
@@ -877,7 +877,7 @@ const steps = [
         q: "👏 Klap mee: **kro-ko-dil** 🐊 — hoeveel stukjes?",
         options: ["3", "2", "4", "1"],
         answer: 0,
-        wrongHints: [null, "Klap nog eens mee: kro... ko... en er komt nog een stukje!", "Dat is één klap te veel — zeg het rustig: kro... ko... dil...", "Eén klap maar? Zeg het woord heel langzaam en klap bij elk stukje."],
+        wrongHints: [null, "Klap nog eens mee: kro... ko... en er komt nog een stukje!", "Klap nog eens rustig mee en tel goed: bij elk stukje één klap.", "Eén klap maar? Zeg het woord heel langzaam en klap bij elk stukje."],
         uitlegPad: {
           stappen: [{ titel: "Drie klappen", tekst: "Zeg het langzaam en klap mee: **kro** 👏 **ko** 👏 **dil** 👏. Drie klappen = **3 stukjes**! 🐊" }],
           niveaus: {
@@ -970,7 +970,7 @@ const steps = [
         wrongHints: [
           null,
           "Eén klap maar? Zeg het langzaam: ze... bra... en klap bij elk stukje.",
-          "Dat is één klap te veel — zeg het rustig: ze... bra...",
+          "Klap nog eens rustig mee en tel goed: bij elk stukje één klap.",
           null,
         ],
         uitlegPad: {

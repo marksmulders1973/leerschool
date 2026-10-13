@@ -619,7 +619,7 @@ const steps = [
         q: "In welke eeuw leven we nu, geschreven in Romeinse cijfers (de 21e eeuw)?",
         options: ["XXI", "XIX", "XXe", "IXX"],
         answer: 0,
-        wrongHints: [null, "Dat is 19.", "Dat is geen Romeins cijfer (gewoon getal + e).", "Zo schrijf je 21 niet."],
+        wrongHints: [null, "Dat is 19.", "XX is 20: dat is de vorige eeuw. En een Romeins getal krijgt geen 'e' erachter.", "Kleiner vóór groter betekent aftrekken. Wat is IXX dan, en is dat 21?"],
         uitlegPad: {
           stappen: [{ titel: "20 + 1", tekst: "21 = XX (20) + I (1) = XXI." }],
           niveaus: {

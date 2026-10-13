@@ -1,0 +1,507 @@
+{
+ "bestanden": [
+  "./citoStrategieenGroep8.js",
+  "./alfabetWoordenboekPo.js",
+  "./dienstregelingRoostersPo.js",
+  "./plattegrondLegendaPo.js",
+  "./folderBonAdvertentiePo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "dienstregeling-roosters-po",
+   "file": "./dienstregelingRoostersPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "H",
+   "q": "De bus vertrekt om 10:52 en de rit duurt 24 minuten. De film in de bioscoop begint om 11:20. Hoeveel minuten ben je te vroeg?",
+   "opties": [
+    "4 minuten",
+    "28 minuten",
+    "24 minuten",
+    "14 minuten"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "alfabet-woordenboek-po",
+   "file": "./alfabetWoordenboekPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat vind je meestal direct achter een trefwoord?",
+   "opties": [
+    "de betekenis/uitleg",
+    "de prijs",
+    "een spelletje",
+    "de datum"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alfabet-woordenboek-po",
+   "file": "./alfabetWoordenboekPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Waarom staan de woorden in een woordenboek op alfabet?",
+   "opties": [
+    "zodat je een woord snel kunt vinden",
+    "omdat het mooier is",
+    "om plaatjes te kunnen tonen",
+    "dat heeft geen reden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alfabet-woordenboek-po",
+   "file": "./alfabetWoordenboekPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Waarvoor zijn de kopwoorden bovenaan een bladzijde van het woordenboek handig?",
+   "opties": [
+    "om snel te zien of jouw woord op die bladzijde staat",
+    "om te lezen wat het woord betekent",
+    "om te zien wie het boek heeft geschreven",
+    "om te tellen hoeveel woorden er op staan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat hoort bij studievaardigheden?",
+   "opties": [
+    "Woordenboek + kaart + grafiek aflezen",
+    "Spelling + werkwoorden",
+    "Optellen + aftrekken",
+    "Geschiedenis + aardrijkskunde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Wat hoort niet bij taalverzorging?",
+   "opties": [
+    "Breuken vereenvoudigen",
+    "Hoofdletters",
+    "Leestekens",
+    "Werkwoordsvormen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 1,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Wat hoort bij wereldoriëntatie?",
+   "opties": [
+    "De provincies van Nederland",
+    "Procenten uitrekenen",
+    "De d/t-regels",
+    "Een register gebruiken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Je bent bij vraag 25, maar je bent al 35 minuten bezig. Wat doe je?",
+   "opties": [
+    "Moeilijke vragen overslaan en later terugkomen",
+    "Rustig aan doen en alles extra checken",
+    "Op elke vraag nog langer nadenken",
+    "Stoppen met de toets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Je bent al bij vraag 40, maar pas 30 minuten bezig. Wat doe je?",
+   "opties": [
+    "Rustig aan doen en extra checken",
+    "Nog sneller gaan",
+    "Expres vragen overslaan",
+    "De laatste vragen leeg laten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "S",
+   "q": "Hoe vaak kijk je op de klok bij het pacing-trucje?",
+   "opties": [
+    "Om de 10 vragen",
+    "Na elke vraag",
+    "Alleen aan het einde",
+    "Nooit, dat leidt af"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat doe je VOORDAT je naar de antwoordopties kijkt?",
+   "opties": [
+    "Bedenk zelf wat je denkt dat het antwoord is",
+    "Meteen een antwoord gokken",
+    "De vraag direct overslaan",
+    "Je leerkracht om het antwoord vragen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is eliminatie?",
+   "opties": [
+    "Foute antwoorden uitsluiten",
+    "Goede antwoorden zoeken",
+    "Vragen weglaten",
+    "Snel kiezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat doe je EERST bij een begrijpend-lezen-vraag?",
+   "opties": [
+    "Tekst skimmen + vragen lezen voordat je hele tekst leest",
+    "De hele tekst woord voor woord lezen",
+    "Meteen een antwoord gokken zonder te lezen",
+    "Je leerkracht om uitleg over de tekst vragen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Een vraag is: 'Wat is de boodschap van de tekst?' Waar kijk je vooral?",
+   "opties": [
+    "Naar de eerste en laatste alinea",
+    "Alleen naar de middelste alinea",
+    "Naar het aantal woorden in de tekst",
+    "Naar de moeilijkste woorden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Een vraag is: 'Waarom doet de hoofdpersoon dat?' Het staat niet letterlijk in de tekst. Wat doe je?",
+   "opties": [
+    "Tussen de regels lezen",
+    "Je eigen mening opschrijven",
+    "Alleen naar de titel kijken",
+    "De vraag overslaan, het staat er niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 6,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is de veiligste strategie als je tijd hebt voor maar 1 controle-ronde?",
+   "opties": [
+    "Markeer twijfels tijdens, controleer aan einde",
+    "Na elke vraag meteen alles checken",
+    "Helemaal niets meer controleren",
+    "Alles herlezen vanaf vraag 1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 6,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Welke houding is goed voor de Doorstroomtoets?",
+   "opties": [
+    "Gewoon mijn best doen, ik ben voorbereid",
+    "Stress & paniek — er hangt veel van af",
+    "Alles vergeten en raden",
+    "Iemand anders laten meedoen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 6,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat is niet handig te doen tijdens de toets?",
+   "opties": [
+    "Doorpiekeren op 1 vraag tot je het weet",
+    "Skippen + later terugkomen",
+    "Iets gokken bij twijfel",
+    "Eliminatie van foute opties"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 6,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Wat doe je 's avonds voor de Doorstroomtoets?",
+   "opties": [
+    "Rustige avond, vroeg slapen — geen last-minute studeren",
+    "Tot 1 uur 's nachts blokken",
+    "Laat opblijven en gamen tot je moe bent",
+    "Veel koffie drinken om wakker te blijven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 6,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Stress vlak voor de toets — wat helpt direct om rustig te worden?",
+   "opties": [
+    "Een paar keer rustig en diep ademhalen",
+    "Veel cola of koffie drinken",
+    "Klagen tegen je klasgenoten",
+    "Nog snel alles doorlezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "cito-strategieen-groep8",
+   "file": "./citoStrategieenGroep8.js",
+   "stap": 6,
+   "vraag": 23,
+   "soort": "S",
+   "q": "Waar gaat de Doorstroomtoets in groep 8 over?",
+   "opties": [
+    "Lezen + taalverzorging + rekenen",
+    "Rekenen + geschiedenis + Engels",
+    "Aardrijkskunde + biologie + lezen",
+    "Alleen rekenen + topografie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dienstregeling-roosters-po",
+   "file": "./dienstregelingRoostersPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Op woensdag is de bieb open van 10:00 tot 17:00. Hoe lang is dat?",
+   "opties": [
+    "7 uur",
+    "5 uur",
+    "6 uur",
+    "4 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dienstregeling-roosters-po",
+   "file": "./dienstregelingRoostersPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Op zaterdag is de bieb open van 10:00 tot 13:00. Je wilt om 14:00 langs. Lukt dat?",
+   "opties": [
+    "Nee, om 14:00 is het al dicht",
+    "Ja, het is dan open",
+    "Ja, maar je moet snel zijn",
+    "Alleen met een afspraak"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dienstregeling-roosters-po",
+   "file": "./dienstregelingRoostersPo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2S",
+   "q": "Een winkel is open van 9:00 tot 18:00. Het is nu 18:30. Kun je nog naar binnen?",
+   "opties": [
+    "Nee, het is na sluitingstijd",
+    "Ja, het is nog open",
+    "Ja, nog 30 minuten",
+    "Alleen met een afspraak"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "folder-bon-advertentie-po",
+   "file": "./folderBonAdvertentiePo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Wat is het 'totaalbedrag' onderaan een bon?",
+   "opties": [
+    "alles bij elkaar opgeteld",
+    "het duurste artikel",
+    "het goedkoopste artikel",
+    "alleen de BTW"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "folder-bon-advertentie-po",
+   "file": "./folderBonAdvertentiePo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Welke zin uit een advertentie is reclame-taal (geen feit)?",
+   "opties": [
+    "Onze schoenen zijn fantastisch en uniek!",
+    "De schoenen zijn van leer.",
+    "De schoenen zijn er in maat 38.",
+    "De schoenen kosten €50."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "plattegrond-legenda-po",
+   "file": "./plattegrondLegendaPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat kun je doen met een plattegrond van een dierentuin?",
+   "opties": [
+    "zien waar de dieren en de uitgang liggen",
+    "horen welke geluiden de dieren maken",
+    "weten hoe oud de dieren zijn",
+    "de dieren voeren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "plattegrond-legenda-po",
+   "file": "./plattegrondLegendaPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Een plattegrond lijkt nog het meest op...",
+   "opties": [
+    "een foto recht van bovenaf",
+    "een selfie",
+    "een filmpje",
+    "een geschilderd portret"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "plattegrond-legenda-po",
+   "file": "./plattegrondLegendaPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is een legenda?",
+   "opties": [
+    "de uitleg van de symbolen op de kaart",
+    "de titel van de kaart",
+    "de naam van de tekenaar",
+    "een lijst met openingstijden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "plattegrond-legenda-po",
+   "file": "./plattegrondLegendaPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "In de legenda staat 🍴 = restaurant. Je ziet 🍴 op de plattegrond. Wat is daar?",
+   "opties": [
+    "een eetplek/restaurant",
+    "een toilet",
+    "de uitgang",
+    "een parkeerplaats"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "plattegrond-legenda-po",
+   "file": "./plattegrondLegendaPo.js",
+   "stap": 1,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Je ziet op de plattegrond een symbool dat je niet kent. Wat doe je?",
+   "opties": [
+    "in de legenda kijken wat het betekent",
+    "het symbool maar negeren",
+    "de plattegrond weggooien",
+    "zomaar wat raden en doorlopen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

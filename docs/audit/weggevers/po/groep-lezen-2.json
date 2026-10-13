@@ -1,0 +1,747 @@
+{
+ "bestanden": [
+  "./begrijpendLezenStrategie.js",
+  "./nieuwsberichtLezenPo.js",
+  "./langeToetsTekstenG8Po.js",
+  "./verwijswoordenBegrijpendLezenPo.js",
+  "./alineaFunctiesTussenkopjesPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "H",
+   "q": "*\"De merel zong in de tuin. Ik hoorde hem al vroeg in de ochtend.\"* — Naar wie of wat verwijst 'hem'?",
+   "opties": [
+    "De merel",
+    "De tuin",
+    "Ik",
+    "De ochtend"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is een alinea?",
+   "opties": [
+    "Een stukje tekst dat over één deelonderwerp gaat",
+    "Eén losse zin uit de tekst",
+    "De titel die boven de hele tekst staat",
+    "Een moeilijk woord in de tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waarom staat de kernzin van een alinea zo vaak als EERSTE zin?",
+   "opties": [
+    "De schrijver zegt eerst het belangrijkste en legt het daarna uit",
+    "Omdat de eerste zin altijd de kortste is",
+    "Zodat de lezer die zin makkelijk kan overslaan",
+    "Omdat titels verboden zijn boven alinea's"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is de functie van alinea 1 van de egel-tekst?",
+   "opties": [
+    "Het is de inleiding: de lezer maakt kennis met het onderwerp",
+    "De schrijver geeft een voorbeeld uit één tuin",
+    "De schrijver geeft zijn mening over egels",
+    "Het is het slot: de tekst wordt afgerond"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat doet een tussenkopje?",
+   "opties": [
+    "Het vertelt in een paar woorden waar het stukje eronder over gaat",
+    "Het geeft alvast de antwoorden op de vragen bij de tekst",
+    "Het vertelt hoe de tekst afloopt",
+    "Het maakt de tekst netjes even lang"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "*\"Een regenboog zie je alleen als de zon schijnt terwijl het regent. Elke regendruppel breekt het zonlicht dan in zeven kleuren. Al die druppels samen vormen de",
+   "opties": [
+    "Zo ontstaat een regenboog",
+    "Het weer",
+    "Zeven kleuren",
+    "Verven met waterverf"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Waarom mag een tussenkopje NIET te breed zijn?",
+   "opties": [
+    "Dan past het boven veel meer alinea's dan alleen deze ene",
+    "Dan is het kopje te lang om snel te lezen",
+    "Dan staan er te veel moeilijke woorden in",
+    "Dan is de alinea zelf ook te lang"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Welk tussenkopje past het best boven alinea 3?",
+   "opties": [
+    "De vuurtorenwachter van vroeger",
+    "Olie bijvullen",
+    "De geschiedenis van Nederland",
+    "Computers in de toren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "alinea-functies-tussenkopjes-po",
+   "file": "./alineaFunctiesTussenkopjesPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Wat is de functie van alinea 1 van de vuurtoren-tekst?",
+   "opties": [
+    "Het is de inleiding: de lezer maakt kennis met het onderwerp",
+    "De schrijver geeft zijn mening over vuurtorens",
+    "Het is het slot: de tekst wordt samengevat",
+    "De schrijver geeft een voorbeeld van één schipper"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat betekent 'tussen de regels lezen'?",
+   "opties": [
+    "Snappen wat niet letterlijk in de tekst staat",
+    "Alleen de vetgedrukte woorden lezen",
+    "Elke tweede regel overslaan",
+    "De tekst van onder naar boven lezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welk woord helpt herkennen dat een tekst betogend is?",
+   "opties": [
+    "'bijvoorbeeld' of 'zoals'",
+    "'fantastisch' of 'verschrikkelijk'",
+    "'gisteren' of 'daarna'",
+    "'de man' of 'het huis'"
+   ],
+   "answer": 1,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "L2S",
+   "q": "Je leest een betogende tekst. Waar let je vooral op?",
+   "opties": [
+    "De mening en argumenten van de schrijver",
+    "De personages en wat er gebeurt",
+    "Alleen de jaartallen in de tekst",
+    "Het aantal alinea's"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Hoe vind je snel de hoofdgedachte?",
+   "opties": [
+    "Lees eerste + laatste zin van elke alinea",
+    "Lees alleen de moeilijkste woorden",
+    "Sla alle alinea's over",
+    "Kijk alleen naar de titel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is skimmen?",
+   "opties": [
+    "Snel overzicht krijgen door titels en eerste zinnen",
+    "Heel langzaam woord-voor-woord",
+    "De hele tekst overslaan",
+    "Vragen beantwoorden zonder de tekst te lezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Welke is de ideale leesvolgorde voor de Doorstroomtoets?",
+   "opties": [
+    "Skim → vragen lezen → scannen voor antwoord",
+    "Hele tekst woord-voor-woord, dan vragen",
+    "Vragen eerst gokken, dan tekst lezen",
+    "Alleen vragen lezen, geen tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Vraag bij een tekst: *'In welk jaar werd de brug gebouwd?'* Welke techniek gebruik je het best?",
+   "opties": [
+    "Scannen",
+    "Skimmen",
+    "Alles woord voor woord lezen",
+    "Alleen de titel lezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 5,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Hoe vind je antwoord op een inferentie-vraag (tussen de regels)?",
+   "opties": [
+    "Letten op emoties en signaalwoorden in tekst",
+    "Letterlijk woord opzoeken",
+    "Gokken zonder de tekst te bekijken",
+    "De vraag overslaan en niets invullen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 6,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Hoe lees je een lastige zin écht goed?",
+   "opties": [
+    "Stuk voor stuk + woorden snappen + verband zien",
+    "Snel scannen voor sleutelwoorden",
+    "Alleen de eerste en laatste woorden lezen",
+    "De lange zin gewoon overslaan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 6,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Hoe verbeter je je leesvaardigheid op lange termijn?",
+   "opties": [
+    "Veel lezen en nieuwe woorden leren",
+    "Alleen maar oefentoetsen maken",
+    "Veel series en filmpjes kijken",
+    "Wachten tot het vanzelf beter gaat"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 6,
+   "vraag": 11,
+   "soort": "S",
+   "q": "Wat doe je bij skimmen?",
+   "opties": [
+    "Snel doorlezen voor de hoofdlijn",
+    "Heel langzaam elk woord lezen",
+    "De hele tekst overschrijven",
+    "Alleen naar de plaatjes kijken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 6,
+   "vraag": 12,
+   "soort": "L2",
+   "q": "Een informatieve tekst geeft vooral?",
+   "opties": [
+    "Feiten + uitleg",
+    "Mening",
+    "Spanning",
+    "Humor"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 6,
+   "vraag": 18,
+   "soort": "S",
+   "q": "Welke alinea bevat meestal de hoofdgedachte van de hele tekst?",
+   "opties": [
+    "Inleiding of slot",
+    "De middelste alinea",
+    "Een random alinea",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-strategie",
+   "file": "./begrijpendLezenStrategie.js",
+   "stap": 6,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Wat is een alinea?",
+   "opties": [
+    "Stukje tekst over één onderwerp",
+    "Een hele bladzijde tekst",
+    "Eén losse zin in een tekst",
+    "De titel boven een tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Je hebt een tekst globaal gelezen. Wat weet je daarna?",
+   "opties": [
+    "Waar elk onderwerp ongeveer in de tekst staat",
+    "Alle details en getallen uit je hoofd",
+    "De hele tekst woord voor woord",
+    "Het antwoord op elke vraag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "In de tekst staat het woord 'huilers'. Wat betekent dat woord hier?",
+   "opties": [
+    "Jonge zeehonden die hun moeder kwijt zijn en om haar roepen",
+    "Verzorgers die verdrietig worden van zielige dieren",
+    "Harde golven die tegen de dijk slaan",
+    "Zeehonden die niet van water houden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 1,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Wat is de hoofdgedachte van deze tekst?",
+   "opties": [
+    "De opvang in Terdam verzorgt zwakke zeehonden tot ze sterk genoeg zijn voor de zee",
+    "Zeehonden zijn de gevaarlijkste dieren van de Noordzee",
+    "Het dorp Terdam heeft een mooie dijk waar veel toeristen komen",
+    "Vispap is het lekkerste eten voor jonge dieren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waar gaat dit verhaal vooral over?",
+   "opties": [
+    "Sanne en opa die samen vallende sterren kijken",
+    "Een recept voor warme chocolademelk",
+    "Een ruzie tussen Sanne en opa Berend",
+    "Hoe je een luchtbed moet opblazen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Wat kun je uit het briefje aan het einde afleiden?",
+   "opties": [
+    "Opa wil graag nog eens samen met Sanne naar de sterren kijken",
+    "Opa is boos dat Sanne te hard riep",
+    "Sanne moet het briefje aan haar juf laten zien",
+    "Opa gaat verhuizen naar een ander dorp"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 2,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Stel dat de eerste alinea nog een zin had: *'Sanne stond op en deed het raam open, de kilte van de nacht naar binnen latend.'* Wat kun je daaruit het beste afle",
+   "opties": [
+    "Sanne wilde alvast naar de hemel kijken",
+    "Sanne wilde de kamer verwarmen",
+    "Sanne was bang voor het donker",
+    "Sanne wilde de buren roepen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 2,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Waarom kon Sanne aan het begin van het verhaal niet slapen?",
+   "opties": [
+    "Ze verheugde zich op het sterrenkijken met opa",
+    "Ze had het te koud in haar bed",
+    "Opa maakte te veel lawaai in huis",
+    "Ze had te veel chocolademelk gedronken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat is het verschil tussen een feitenvraag en een conclusievraag bij een leestekst?",
+   "opties": [
+    "Bij een feitenvraag zoek je op; bij een conclusievraag denk je één stapje verder",
+    "Feitenvragen zijn moeilijker dan conclusievragen",
+    "Bij een conclusievraag moet je de tekst niet meer lezen",
+    "Er is geen verschil — je antwoordt bij beide altijd vanuit je hoofd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lange-toets-teksten-g8-po",
+   "file": "./langeToetsTekstenG8Po.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Waarom lees je de tekst eerst één keer rustig door, ook al onthoud je niet alles?",
+   "opties": [
+    "Zo weet je waar alles ongeveer staat en kun je per vraag snel terugzoeken",
+    "Zo ken je daarna de hele tekst uit je hoofd",
+    "Omdat je de tekst tijdens de vragen niet meer mag bekijken",
+    "Omdat de eerste vraag altijd over de eerste zin gaat"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 0,
+   "vraag": 8,
+   "soort": "S",
+   "q": "Je leest een lang nieuwsbericht over een voetbaltoernooi. Je zoekt een klein weetje: hoe oud de jongste toeschouwer was. Waar kijk je het best?",
+   "opties": [
+    "Verderop in het bericht, bij de details",
+    "In de kop boven het bericht",
+    "Alleen in de allereerste zin",
+    "Nergens, dat staat nooit in een nieuwsbericht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is het grote nieuws in dit bericht?",
+   "opties": [
+    "Er is een nieuwe speeltoren geopend op het schoolplein",
+    "Een school is verhuisd naar Weidedorp",
+    "Er is in maart een sponsorloop gehouden",
+    "De oude speeltoren is gerepareerd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Waarom moest er een nieuwe speeltoren komen?",
+   "opties": [
+    "De oude toren was afgekeurd omdat het hout begon te rotten",
+    "De leerlingen vonden de oude toren te klein",
+    "De directeur wilde een cadeau voor de school",
+    "De oude toren was omgewaaid tijdens een storm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat zei Milan vanaf het uitkijkpunt?",
+   "opties": [
+    "\"Dit is de mooiste toren van heel Nederland.\"",
+    "\"Dank je wel, juf Karin.\"",
+    "\"Ik ben de eerste die naar boven klimt.\"",
+    "\"Onze school heeft hard gespaard.\""
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 1,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Hoe kwam het geld voor de nieuwe toren bij elkaar?",
+   "opties": [
+    "Alle leerlingen liepen een sponsorloop door het dorp",
+    "De gemeente betaalde de hele toren",
+    "De school leende het geld van een bank",
+    "Ouders verkochten zelfgebakken koeken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Wie mogen er na schooltijd op de nieuwe speeltoren spelen?",
+   "opties": [
+    "Kinderen uit de hele buurt",
+    "Alleen de leerlingen van groep 6",
+    "Alleen kinderen die meeliepen met de sponsorloop",
+    "Niemand, na schooltijd is de toren dicht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "De kop luidt: *\"Bloemwijk verandert in gatenkaas\"*. In de tekst staat: *\"In de Dorpsstraat zitten twaalf gaten in het wegdek.\"* Wat leer je hiervan over koppen?",
+   "opties": [
+    "Een kop mag overdrijven om je nieuwsgierig te maken; de precieze informatie staat in de tekst",
+    "De hele wijk zit vol gaten, dat zegt de kop immers",
+    "Het bericht klopt niet, want de kop en de tekst zeggen iets anders",
+    "De journalist heeft de kop per ongeluk boven het verkeerde bericht gezet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nieuwsbericht-lezen-po",
+   "file": "./nieuwsberichtLezenPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Hoe maakten buurtbewoners de vermissing van Berry bekend?",
+   "opties": [
+    "Ze hingen posters op met een foto van Berry",
+    "Ze belden de politie",
+    "Ze stuurden een e-mail rond",
+    "Ze zochten alleen zelf in het dorp"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "S",
+   "q": "*\"Opa en oma komen morgen op bezoek. Ze nemen vast weer taart mee.\"* — Naar wie verwijst 'ze'?",
+   "opties": [
+    "Opa en oma",
+    "Alleen oma",
+    "De taart",
+    "De buren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 0,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "*\"Sanne kreeg een brief van haar oom. Hij woont al tien jaar in Canada.\"* — Naar wie verwijst 'hij'?",
+   "opties": [
+    "De oom van Sanne",
+    "Sanne",
+    "De brief",
+    "De postbode"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Je zoekt naar wie of wat een verwijswoord wijst. Waar staat het antwoord meestal?",
+   "opties": [
+    "Vlak vóór het verwijswoord",
+    "Helemaal aan het einde van de tekst",
+    "Alleen in de titel van de tekst",
+    "Nergens, je moet het raden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 2,
+   "vraag": 9,
+   "soort": "L2",
+   "q": "*\"Het had de hele nacht gesneeuwd. Daardoor bleef de school dicht.\"* — Naar wat verwijst 'daardoor'?",
+   "opties": [
+    "Dat het de hele nacht had gesneeuwd",
+    "Dat de school dicht bleef",
+    "De hele nacht",
+    "De kinderen die thuis bleven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "*\"Daar wonen geiten, kippen, konijnen en een oude ezel.\"* — Naar welke plek verwijst 'daar'?",
+   "opties": [
+    "De kinderboerderij",
+    "Het dorp",
+    "De school",
+    "De bus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-begrijpend-lezen-po",
+   "file": "./verwijswoordenBegrijpendLezenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "*\"Dit vonden ze het allerleukst van de hele dag.\"* — Naar wat verwijst 'dit'?",
+   "opties": [
+    "Het voeren van de konijnen",
+    "De konijnen zelf",
+    "De busreis terug",
+    "Het aaien van de ezel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

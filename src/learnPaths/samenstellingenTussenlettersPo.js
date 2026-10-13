@@ -26,12 +26,12 @@ const steps = [
         q: "Wat is een samenstelling?",
         options: [
           "één woord gemaakt van twee losse woorden",
-          "een woord met een hoofdletter",
-          "een woord dat je niet kunt spellen",
-          "een woord uit een andere taal",
+          "een woord dat twee betekenissen heeft",
+          "een woord met twee of meer lettergrepen",
+          "een woord dat uit een andere taal komt",
         ],
         answer: 0,
-        wrongHints: [null, "Een hoofdletter maakt nog geen samenstelling.", "Je kunt een samenstelling juist gewoon spellen.", "Het hoeft niet uit een andere taal te komen."],
+        wrongHints: [null, "'Bank' heeft twee betekenissen. Is 'bank' daarom een samenstelling?", "'Tafel' heeft twee lettergrepen. Is 'tafel' een samenstelling?", "'Voetbal' is een Nederlands woord en toch een samenstelling. Waar let je dan op?"],
         uitlegPad: {
           stappen: [{ titel: "Twee woorden samen", tekst: "Een samenstelling bestaat uit twee losse woorden die samen één nieuw woord vormen, zoals voet + bal = voetbal." }],
           niveaus: {
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Uit welke twee woorden bestaat 'voetbal'?",
-        options: ["voet + bal", "voe + tbal", "voetb + al", "vo + etbal"],
+        options: ["voet + bal", "voeten + bal", "voetb + al", "voet + baal"],
         answer: 0,
-        wrongHints: [null, "Knip op de plek waar twee echte woorden ontstaan.", "'voetb' is geen woord.", "'vo' is geen woord."],
+        wrongHints: [null, "Zie je 'en' staan in 'voetbal'? Kijk letter voor letter.", "'voetb' is geen woord.", "Hoeveel a's staan er in 'voetbal'?"],
         uitlegPad: {
           stappen: [{ titel: "Twee echte woorden", tekst: "Voetbal = voet + bal. Allebei zijn het op zichzelf een woord." }],
           niveaus: {
@@ -57,11 +57,11 @@ const steps = [
       },
       {
         q: "Welk woord is een samenstelling?",
-        options: ["tafelpoot", "lopen", "mooi", "snel"],
+        options: ["tafelpoot", "olifant", "vakantie", "limonade"],
         answer: 0,
-        wrongHints: [null, "Dat is één werkwoord, geen twee woorden.", "Dat is één bijvoeglijk naamwoord.", "Ook één woord, geen samenstelling."],
+        wrongHints: [null, "Kun je 'olifant' knippen in twee echte woorden?", "Is 'va' of 'kantie' een echt woord?", "Kun je 'limonade' knippen in twee echte woorden?"],
         uitlegPad: {
-          stappen: [{ titel: "Twee woorden erin", tekst: "Tafelpoot = tafel + poot, dus een samenstelling. 'lopen', 'mooi' en 'snel' bestaan elk uit maar één woord." }],
+          stappen: [{ titel: "Twee woorden erin", tekst: "Tafelpoot = tafel + poot, dus een samenstelling. 'olifant', 'vakantie' en 'limonade' kun je niet in twee echte woorden knippen." }],
           niveaus: {
             basis: "tafelpoot (tafel + poot) is een samenstelling.",
             simpeler: "Welk woord kun je in twee woorden knippen?",
@@ -71,9 +71,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je een samenstelling?",
-        options: ["aan elkaar, als één woord", "altijd met een streepje", "altijd los", "met een hoofdletter in het midden"],
+        options: ["aan elkaar, als één woord", "met een streepje tussen de woorden", "los, met een spatie ertussen", "met een hoofdletter in het midden"],
         answer: 0,
-        wrongHints: [null, "Een streepje is meestal niet nodig.", "Los schrijven is juist fout.", "Geen hoofdletter midden in een woord."],
+        wrongHints: [null, "Schrijf je 'voet-bal'? Kijk hoe 'voetbal' in de les staat.", "Zie je een spatie in 'tafelpoot'?", "Geen hoofdletter midden in een woord."],
         uitlegPad: {
           stappen: [{ titel: "Eén woord", tekst: "Een samenstelling schrijf je aan elkaar: voetbal, tafelpoot — niet 'voet bal'." }],
           niveaus: {
@@ -85,9 +85,9 @@ const steps = [
       },
       {
         q: "Uit welke twee woorden bestaat 'speelgoedwinkel'?",
-        options: ["speelgoed + winkel", "speel + goedwinkel", "speelgoedwink + el", "speel + goed + winkel"],
+        options: ["speelgoed + winkel", "speel + goedwinkel", "speelgoed + winkels", "speel + goed + winkel"],
         answer: 0,
-        wrongHints: [null, "'goedwinkel' is geen zelfstandig woord.", "'el' is geen woord.", "Een samenstelling bestaat uit twee stukken — kijk of allebei echte woorden zijn."],
+        wrongHints: [null, "'goedwinkel' is geen zelfstandig woord.", "Staat er 'winkels' in 'speelgoedwinkel'? Kijk naar het eind.", "De vraag zoekt twee woorden. Hoeveel stukken heb je hier?"],
         uitlegPad: {
           stappen: [{ titel: "Twee echte woorden", tekst: "Speelgoedwinkel = speelgoed + winkel. Allebei zijn het echte woorden." }],
           niveaus: {
@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Welk woord is GEEN samenstelling?",
-        options: ["bloemen", "bloemenveld", "bloemenvaas", "bloemenkweker"],
+        options: ["bloemen", "bloembol", "bloemkool", "bloemperk"],
         answer: 0,
-        wrongHints: [null,"Kun je 'bloemenveld' in twee losse woorden knippen? Dan is het wél een samenstelling.","Kun je 'bloemenvaas' in twee losse woorden knippen? Dan is het ook een samenstelling.","Kun je 'bloemenkweker' in twee losse woorden knippen? Dan is het ook een samenstelling."],
+        wrongHints: [null,"Kun je 'bloembol' in twee losse woorden knippen? Dan is het wél een samenstelling.","Kun je 'bloemkool' in twee losse woorden knippen? Dan is het ook een samenstelling.","Kun je 'bloemperk' in twee losse woorden knippen? Dan is het ook een samenstelling."],
         uitlegPad: {
           stappen: [{ titel: "Eén woord is geen samenstelling", tekst: "'Bloemen' is het meervoud van bloem — één woord, geen twee samengevoegde woorden." }],
           niveaus: {
@@ -116,7 +116,7 @@ const steps = [
         q: "Uit welke twee woorden bestaat 'zandkasteel'?",
         options: ["zand + kasteel", "zan + dkasteel", "zandkas + teel", "zandka + steel"],
         answer: 0,
-        wrongHints: [null, "Is 'zan' een echt woord?", null, "Zijn allebei de stukjes echte woorden?"],
+        wrongHints: [null, "Is 'zan' een echt woord?", "Is 'teel' een echt woord?", "Zijn allebei de stukjes echte woorden?"],
         uitlegPad: {
           stappen: [
             {
@@ -139,7 +139,7 @@ const steps = [
           null,
           "Welk woord komt eerst: 'boom' of 'hut'?",
           "Hoe schrijf je een samenstelling: los of aan elkaar?",
-          null,
+          "Hoor je een s tussen 'boom' en 'hut'?",
         ],
         uitlegPad: {
           stappen: [
@@ -160,14 +160,14 @@ const steps = [
         options: [
           "het bestaat uit 'huis' en 'deur'",
           "het is een heel lang woord",
-          "het begint met de letter h",
+          "het heeft twee lettergrepen",
           "het is de naam van een ding",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Is elk lang woord een samenstelling?",
-          null,
+          "'Tafel' heeft ook twee lettergrepen. Is dat een samenstelling?",
           "Waar is een samenstelling van gemaakt?",
         ],
         uitlegPad: {
@@ -215,7 +215,7 @@ const steps = [
         q: "De wijk waar iemand kranten bezorgt, heet de...",
         options: ["krantenwijk", "krantwijk", "krantewijk", "krantenwijken"],
         answer: 0,
-        wrongHints: [null, "Krant → kranten, dus met tussen-n.", "Het is -en-, niet alleen -e-.", "Dat is het meervoud."],
+        wrongHints: [null, "Wat is het meervoud van 'krant'? Hoor je dat terug?", "Hoor je alleen een e, of ook een n na 'krant'?", "Dat is het meervoud."],
         uitlegPad: {
           stappen: [{ titel: "krant → kranten → krantenwijk", tekst: "Het meervoud van 'krant' is 'kranten'. Daarom krantenwijk, met tussen-n." }],
           niveaus: {
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Wanneer schrijf je vaak een tussen-n (-en-)?",
-        options: ["als het eerste woord meervoud op -en heeft","altijd, bij elke samenstelling die er is","als het eerste woord eindigt op een -n","alleen als het eerste woord een dier is"],
+        options: ["als het eerste woord meervoud op -en heeft","als het tweede woord met een klinker begint","als het eerste woord eindigt op een -n","als het eerste woord meer dan één lettergreep heeft"],
         answer: 0,
-        wrongHints: [null,"Niet bij élke samenstelling (voetbal heeft er geen).","Denk aan 'boekenkast': 'boek' eindigt niet op een n en toch krijgt het -en-.","Het heeft niets met dieren te maken."],
+        wrongHints: [null,"Denk aan 'krantenwijk': 'wijk' begint niet met een klinker.","Denk aan 'krantenwijk': 'krant' eindigt niet op een n en toch komt er -en-.","'Krant' heeft maar één lettergreep en toch schrijf je 'krantenwijk'."],
         uitlegPad: {
           stappen: [{ titel: "Meervoud op -en", tekst: "Kun je van het eerste woord een meervoud op -en maken (pan → pannen)? Dan schrijf je vaak -en- in de samenstelling." }],
           niveaus: {
@@ -255,9 +255,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: de tafel in de keuken?",
-        options: ["keukentafel", "keukentabellen", "keuktafel", "keukenetafel"],
+        options: ["keukentafel", "keukenstafel", "keuktafel", "keukenetafel"],
         answer: 0,
-        wrongHints: [null, "'Tabellen' is een ander woord (meervoud van tabel).", "Keuken → keuken, dus het -en- zit er al in het eerste woord.", "Het is -en-, niet een extra -e-."],
+        wrongHints: [null, "Hoor je een s tussen 'keuken' en 'tafel'?", "Het woord is 'keuken'. Laat je daar letters van weg?", "Het is -en-, niet een extra -e-."],
         uitlegPad: {
           stappen: [{ titel: "keuken + tafel = keukentafel", tekst: "Het meervoud van 'keuken' is 'keukens' (op -s), maar het woord zelf eindigt al op -en. Daarom: keukentafel, met het -en- van het eerste woord." }],
           niveaus: {
@@ -286,7 +286,7 @@ const steps = [
         q: "Hoe schrijf je: het hok voor de kippen?",
         options: ["kippenhok", "kiphok", "kippehok", "kipshok"],
         answer: 0,
-        wrongHints: [null, "Wat is het meervoud van 'kip'?", "Hoe eindigt het meervoud van 'kip'?", null],
+        wrongHints: [null, "Wat is het meervoud van 'kip'?", "Hoe eindigt het meervoud van 'kip'?", "Hoor je een s tussen 'kip' en 'hok'?"],
         uitlegPad: {
           stappen: [
             {
@@ -308,7 +308,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoe eindigt het meervoud van 'tand'?",
-          null,
+          "Hoor je een s tussen 'tand' en 'borstel'?",
           "Schrijf je een samenstelling los of aan elkaar?",
         ],
         uitlegPad: {
@@ -329,7 +329,7 @@ const steps = [
         q: "In welk woord zit een tussen-n?",
         options: ["eendenvijver", "verkeerslicht", "deurbel", "zandbak"],
         answer: 0,
-        wrongHints: [null, "Welke tussenletter hoor je hier?", null, "Zit hier wel een tussenletter in?"],
+        wrongHints: [null, "Welke tussenletter hoor je hier?", "Hoor je iets tussen 'deur' en 'bel'?", "Zit hier wel een tussenletter in?"],
         uitlegPad: {
           stappen: [
             {
@@ -373,9 +373,9 @@ const steps = [
       },
       {
         q: "Het bord langs de weg voor het verkeer heet het...",
-        options: ["verkeersbord", "verkeerbord", "verkerenbord", "verkeersborden"],
+        options: ["verkeersbord", "verkeerbord", "verkeerenbord", "verkeersborden"],
         answer: 0,
-        wrongHints: [null, "Spreek het uit — je hoort een -s-.", "Dat is geen woord.", "Dat is het meervoud."],
+        wrongHints: [null, "Spreek het uit — je hoort een -s-.", "Hoor je -en- tussen 'verkeer' en 'bord'?", "Dat is het meervoud."],
         uitlegPad: {
           stappen: [{ titel: "verkeer + s + bord", tekst: "Zeg 'verkeer...bord': je hoort een s ertussen. Daarom verkeersbord." }],
           niveaus: {
@@ -401,9 +401,9 @@ const steps = [
       },
       {
         q: "Hoor je in 'stadsplein' een tussen-n of een tussen-s?",
-        options: ["een tussen-s", "een tussen-n", "geen van beide", "allebei"],
+        options: ["een tussen-s", "een tussen-n", "geen van beide", "een tussen-e"],
         answer: 0,
-        wrongHints: [null, "Spreek het woord eens langzaam uit — welke letter hoor je tussen 'stad' en 'plein'?", "Er zit wél een tussenletter — luister nog eens goed.", "Het is maar één tussenletter."],
+        wrongHints: [null, "Spreek het woord eens langzaam uit — welke letter hoor je tussen 'stad' en 'plein'?", "Er zit wél een tussenletter — luister nog eens goed.", "Zeg je 'stade-plein'? Luister welke klank je echt hoort."],
         uitlegPad: {
           stappen: [{ titel: "stads-plein", tekst: "Zeg 'stad...plein': je hoort een s. Dus stadsplein, met tussen-s." }],
           niveaus: {
@@ -429,11 +429,11 @@ const steps = [
       },
       {
         q: "Welk woord heeft een tussen-s?",
-        options: ["verjaardagstaart", "pannenkoek", "boekenkast", "krantenwijk"],
+        options: ["verjaardagstaart", "kerstvakantie", "schoolvoetbal", "postzegelalbum"],
         answer: 0,
-        wrongHints: [null, "Pannenkoek heeft een tussen-n (pan → pannen).", "Boekenkast heeft een tussen-n (boek → boeken).", "Krantenwijk heeft een tussen-n (krant → kranten)."],
+        wrongHints: [null, "De s hoort bij 'kerst' zelf. Is dat een tussen-s?", "Hoor je een s tussen 'school' en 'voetbal'?", "De s hoort bij 'post' zelf. Komt er tussen 'postzegel' en 'album' iets bij?"],
         uitlegPad: {
-          stappen: [{ titel: "verjaardags-taart", tekst: "Bij 'verjaardagstaart' hoor je een -s- tussen verjaardag en taart. De andere woorden hebben een -en-." }],
+          stappen: [{ titel: "verjaardags-taart", tekst: "Bij 'verjaardagstaart' hoor je een -s- tussen verjaardag en taart. Bij de andere woorden hoort de s bij het woord zelf, of hoor je geen s." }],
           niveaus: {
             basis: "'verjaardagstaart' heeft een tussen-s.",
             simpeler: "Hoor je bij welk woord een -s- ertussen?",
@@ -450,7 +450,7 @@ const steps = [
           null,
           "Spreek het uit: hoor je een s tussen 'volk' en 'lied'?",
           "Hoor je hier -en- of een -s-?",
-          null,
+          "Hoor je 'es' of alleen een s tussen 'volk' en 'lied'?",
         ],
         uitlegPad: {
           stappen: [
@@ -473,7 +473,7 @@ const steps = [
         wrongHints: [
           null,
           "Spreek dit woord uit: hoor je een extra s tussen de twee delen?",
-          null,
+          "De s in 'kerst' hoort bij het woord zelf. Mist hier iets?",
           "Kijk goed: staat de s die je hoort er al in?",
         ],
         uitlegPad: {
@@ -504,9 +504,9 @@ const steps = [
     checks: [
       {
         q: "Welk woord is een samenstelling?",
-        options: ["speelgoedwinkel", "vrolijk", "rennen", "groot"],
+        options: ["speelgoedwinkel", "verschrikkelijk", "temperatuur", "bibliotheek"],
         answer: 0,
-        wrongHints: [null, "Dat is één bijvoeglijk naamwoord.", "Dat is één werkwoord.", "Ook één woord."],
+        wrongHints: [null, "Kun je 'verschrikkelijk' knippen in twee echte woorden?", "Kun je 'temperatuur' knippen in twee echte woorden?", "Kun je 'bibliotheek' knippen in twee echte woorden?"],
         uitlegPad: {
           stappen: [{ titel: "speelgoed + winkel", tekst: "Speelgoedwinkel = speelgoed + winkel, dus een samenstelling." }],
           niveaus: {
@@ -545,7 +545,7 @@ const steps = [
         },
       },
       {
-        q: "Welke is goed: het pad voor fietsers?",
+        q: "Hoe schrijf je: het pad voor fietsers?",
         options: ["fietspad", "fietsenpad", "fietsspad", "fiets pad"],
         answer: 0,
         wrongHints: [null, "Je hoort hier geen -en-.", "Je hoort geen dubbele -s-.", "Een samenstelling schrijf je aan elkaar."],
@@ -574,9 +574,9 @@ const steps = [
       },
       {
         q: "Welke twee woorden maken samen 'woordenboek'?",
-        options: ["woorden + boek", "woord + enboek", "woordenboek is niet opgesplitst", "woor + denboek"],
+        options: ["woorden + boek", "woord + enboek", "het is één woord, je kunt het niet knippen", "woor + denboek"],
         answer: 0,
-        wrongHints: [null, "'enboek' is geen woord.", "Je kunt het wel opsplitsen in twee woorden.", "'denboek' is geen woord."],
+        wrongHints: [null, "'enboek' is geen woord.", "Kijk naar het eind: staat daar een los woord?", "'denboek' is geen woord."],
         uitlegPad: {
           stappen: [{ titel: "woorden + boek", tekst: "Woordenboek = woord + boek, met -en- ertussen (woord → woorden). Dus woorden + boek." }],
           niveaus: {

@@ -701,14 +701,9 @@ const steps = [
       },
       {
         q: "Waar hoort het vraagteken? *Hij vroeg: \"Kom je vanavond___\"*",
-        options: [
-          "binnen de aanhalingstekens: \"Kom je vanavond?\"",
-          "na de aanhalingstekens: \"Kom je vanavond\"?",
-          "er hoort een punt, geen vraagteken",
-          "er hoort helemaal geen leesteken",
-        ],
+        options: ["binnen de aanhalingstekens: \"Kom je vanavond?\"", "na de aanhalingstekens: \"Kom je vanavond\"?", "binnen én na de aanhalingstekens: \"Kom je vanavond?\"?", "na 'vroeg': Hij vroeg?: \"Kom je vanavond\""],
         answer: 0,
-        wrongHints: [null, "Het vraagteken hoort bij de gesproken vraag zelf.", "Het is een vraag, geen mededeling.", "Elke zin krijgt een eindteken."],
+        wrongHints: [null, "Het vraagteken hoort bij de gesproken vraag zelf.", "Hoeveel eindtekens krijgt één vraag?", "Vraagt het woord 'vroeg' zelf iets? Bij welke woorden hoort het vraagteken?"],
         uitlegPad: {
           stappen: [{ titel: "Leesteken hoort bij de gesproken woorden", tekst: "Wat hij vraagt ('Kom je vanavond?') is een vraag, dus het vraagteken staat binnen de aanhalingstekens." }],
           niveaus: {
@@ -777,14 +772,9 @@ const steps = [
       },
       {
         q: "Waar hoort de dubbele punt? *Ik heb drie huisdieren een kat een hond en een vis.*",
-        options: [
-          "na 'huisdieren': Ik heb drie huisdieren: een kat, een hond en een vis.",
-          "na 'drie': Ik heb drie: huisdieren een kat een hond en een vis.",
-          "na 'hond': Ik heb drie huisdieren een kat een hond: en een vis.",
-          "er hoort helemaal geen dubbele punt",
-        ],
+        options: ["na 'huisdieren'", "na 'drie'", "na 'hond'", "na 'een kat'"],
         answer: 0,
-        wrongHints: [null, "Na 'drie' is de opsomming nog niet begonnen.", "Daar is de opsomming al gedeeltelijk voorbij.", "Er komt juist een opsomming — daar hoort een dubbele punt bij."],
+        wrongHints: [null, "Na 'drie' is de opsomming nog niet begonnen.", "Daar is de opsomming al gedeeltelijk voorbij.", "Dan staat 'een kat' vóór de dubbele punt. Hoort de kat niet bij het rijtje?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbele punt vóór de opsomming", tekst: "Na de aankondiging ('Ik heb drie huisdieren') komt de dubbele punt, dan de opsomming: een kat, een hond en een vis." }],
           niveaus: {
@@ -859,12 +849,7 @@ const steps = [
       },
       {
         q: "Waarom krijgt *Kom* een hoofdletter in: Oma zei: \"Kom maar binnen.\"",
-        options: [
-          "Daar begint de zin die oma zegt.",
-          "Kom is de naam van iemand.",
-          "Na een dubbele punt komt altijd een hoofdletter.",
-          "Kom is het belangrijkste woord.",
-        ],
+        options: ["Daar begint de zin die oma zegt.", "Kom is de naam van iemand.", "Na een dubbele punt hoort een hoofdletter.", "Kom is het belangrijkste woord."],
         answer: 0,
         wrongHints: [
           null,

@@ -1,0 +1,571 @@
+{
+ "bestanden": [
+  "./woordenschatEngelsPo.js",
+  "./onderwijsNiveausVmboHavoVwo.js",
+  "./basisGrammaticaEngelsPo.js",
+  "./inhoudsopgaveRegisterPo.js",
+  "./betrouwbaarheidBronnenPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 5,
+   "vraag": 3,
+   "soort": "H",
+   "q": "Wat betekent Where?",
+   "opties": [
+    "waar",
+    "wat",
+    "wanneer",
+    "waarom"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "woordenschat-engels-po",
+   "file": "./woordenschatEngelsPo.js",
+   "stap": 5,
+   "vraag": 3,
+   "soort": "H",
+   "q": "Wat is apple?",
+   "opties": [
+    "appel",
+    "banaan",
+    "aardappel",
+    "ei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Welk lidwoord voor één apple — a of an?",
+   "opties": [
+    "an",
+    "a",
+    "the",
+    "geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Meervoud van book?",
+   "opties": [
+    "books",
+    "bookes",
+    "bookies",
+    "book"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Meervoud van baby?",
+   "opties": [
+    "babies",
+    "babys",
+    "babes",
+    "baby"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Meervoud van child?",
+   "opties": [
+    "children",
+    "childs",
+    "childes",
+    "childies"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "*'__ is my book.'* — boek dat ik vasthoud",
+   "opties": [
+    "This",
+    "That",
+    "These",
+    "Those"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "*'Look at __ birds in the tree.'* — meerdere vogels ver weg",
+   "opties": [
+    "those",
+    "that",
+    "these",
+    "this"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Meervoud van this?",
+   "opties": [
+    "these",
+    "thats",
+    "thoses",
+    "this"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Vertaal: die auto (verderop)",
+   "opties": [
+    "that car",
+    "this car",
+    "those car",
+    "these car"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 5,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Vraag: *'__ you like apples?'*",
+   "opties": [
+    "Do",
+    "Does",
+    "Are",
+    "Is"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 5,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Vraag: *'__ she play tennis?'*",
+   "opties": [
+    "Does",
+    "Do",
+    "Is",
+    "Are"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "basis-grammatica-engels-po",
+   "file": "./basisGrammaticaEngelsPo.js",
+   "stap": 6,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Meervoud van woman?",
+   "opties": [
+    "women",
+    "womans",
+    "womens",
+    "womies"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "betrouwbaarheid-bronnen-po",
+   "file": "./betrouwbaarheidBronnenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Waarom kijk je wie iets geschreven heeft?",
+   "opties": [
+    "om te weten of die er verstand van heeft",
+    "om te zien hoe lang de tekst is",
+    "om de mooiste plaatjes te vinden",
+    "dat maakt niet uit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "betrouwbaarheid-bronnen-po",
+   "file": "./betrouwbaarheidBronnenPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Twee websites zeggen iets anders. Welke vertrouw je eerder?",
+   "opties": [
+    "de site met een auteur én bronvermelding",
+    "de site zonder auteur",
+    "de site met de meeste reclame",
+    "de site met de grootste letters"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "betrouwbaarheid-bronnen-po",
+   "file": "./betrouwbaarheidBronnenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Hoe herken je dat iets reclame is?",
+   "opties": [
+    "het wil je iets laten kopen",
+    "het noemt een datum",
+    "het heeft een auteur",
+    "het geeft een bron"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "betrouwbaarheid-bronnen-po",
+   "file": "./betrouwbaarheidBronnenPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Waarom is de datum van een artikel belangrijk?",
+   "opties": [
+    "informatie kan na verloop van tijd verouderen",
+    "langere teksten zijn altijd beter",
+    "oude teksten zijn altijd fout",
+    "de datum maakt de tekst mooier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "betrouwbaarheid-bronnen-po",
+   "file": "./betrouwbaarheidBronnenPo.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "In een boek uit 1990 staat hoeveel mensen er in Nederland wonen. Je wilt dat getal gebruiken voor je spreekbeurt. Wat doe je het best?",
+   "opties": [
+    "het aantal opzoeken in een nieuwere bron",
+    "het getal precies zo overnemen",
+    "zelf een getal schatten",
+    "je spreekbeurt over iets anders doen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "inhoudsopgave-register-po",
+   "file": "./inhoudsopgaveRegisterPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat staat er in een inhoudsopgave?",
+   "opties": [
+    "de hoofdstukken met hun paginanummers",
+    "alle woorden op alfabet",
+    "de naam van de schrijver",
+    "een samenvatting van het verhaal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "inhoudsopgave-register-po",
+   "file": "./inhoudsopgaveRegisterPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "In welke volgorde staat de inhoudsopgave?",
+   "opties": [
+    "op volgorde van het boek",
+    "op alfabet",
+    "van duur naar goedkoop",
+    "willekeurig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "inhoudsopgave-register-po",
+   "file": "./inhoudsopgaveRegisterPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Je wilt het hele hoofdstuk over het heelal lezen. Wat gebruik je het best?",
+   "opties": [
+    "de inhoudsopgave",
+    "het register",
+    "de achterflap",
+    "alleen de plaatjes"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "inhoudsopgave-register-po",
+   "file": "./inhoudsopgaveRegisterPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Je houdt een spreekbeurt over orkanen en gebruikt een dik aardrijkskundeboek. Wat is de slimste eerste stap?",
+   "opties": [
+    "in het register zoeken bij 'orkaan'",
+    "het hele boek van voor naar achter lezen",
+    "alleen naar de plaatjes kijken",
+    "de kaft bestuderen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "inhoudsopgave-register-po",
+   "file": "./inhoudsopgaveRegisterPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2S",
+   "q": "In het register staat: 'rivier ... 22, 56'. Waar kijk je voor informatie over rivieren?",
+   "opties": [
+    "pagina 22 en pagina 56",
+    "pagina 2",
+    "hoofdstuk 22",
+    "alleen pagina 1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "inhoudsopgave-register-po",
+   "file": "./inhoudsopgaveRegisterPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "S",
+   "q": "Je hebt nog 5 minuten en wilt snel één feit over de maan vinden in een dik boek. Wat doe je?",
+   "opties": [
+    "in het register zoeken bij 'maan'",
+    "het hele boek van voor tot achter lezen",
+    "bij het voorwoord beginnen",
+    "alleen de kaft bekijken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Waarin verschillen vmbo, havo en vwo vooral?",
+   "opties": [
+    "In hoe snel en hoe theoretisch de stof gaat",
+    "In hoe slim of dom de leerlingen zijn",
+    "In hoe groot het schoolgebouw is",
+    "In hoe laat de lessen beginnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Welke leerweg heeft het meeste theorie en lijkt op havo?",
+   "opties": [
+    "Theoretische leerweg (tl/mavo)",
+    "Basisberoepsgericht (bb)",
+    "Kaderberoepsgericht (kb)",
+    "Gemengd (gl)"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 1,
+   "vraag": 8,
+   "soort": "L2S",
+   "q": "Wat leer je op het mbo, na je vmbo-diploma?",
+   "opties": [
+    "Een vak, zoals kok of monteur",
+    "Latijn en Grieks",
+    "Weer de stof van groep 8",
+    "Alleen maar sporten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Hoe heten de twee smaken van het vwo?",
+   "opties": [
+    "Atheneum en gymnasium",
+    "Havo en mavo",
+    "Bb en tl",
+    "N&T en C&M"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Kun je van vmbo-tl doorstromen naar de havo?",
+   "opties": [
+    "Ja, vaak met goede cijfers",
+    "Nee, dat mag nooit",
+    "Alleen als je verhuist",
+    "Alleen op je 18e"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Je begint op het vmbo. Kun je later op de universiteit komen?",
+   "opties": [
+    "Ja, via stapelen",
+    "Nee, dat is onmogelijk",
+    "Alleen met vwo vanaf het begin",
+    "Alleen in het buitenland"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+   "file": "./onderwijsNiveausVmboHavoVwo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Naar een lager niveau gaan dat beter past, is...",
+   "opties": [
+    "Slim kiezen wat bij je past",
+    "Altijd een mislukking",
+    "Verboden op elke school",
+    "Alleen voor luie kinderen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-engels-po",
+   "file": "./woordenschatEngelsPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat antwoord je op 'How are you?'",
+   "opties": [
+    "I'm fine, thanks",
+    "Hello",
+    "Goodbye",
+    "Yes"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-engels-po",
+   "file": "./woordenschatEngelsPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Wat is *'My name is Tom'*?",
+   "opties": [
+    "Mijn naam is Tom",
+    "Zijn naam is Tom",
+    "Hallo Tom",
+    "Tot ziens Tom"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-engels-po",
+   "file": "./woordenschatEngelsPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat is cousin?",
+   "opties": [
+    "neef of nicht",
+    "broer",
+    "zus",
+    "oom"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-engels-po",
+   "file": "./woordenschatEngelsPo.js",
+   "stap": 6,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wat is het meervoud van tooth (tand)?",
+   "opties": [
+    "teeth",
+    "tooths",
+    "toothes",
+    "tothes"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

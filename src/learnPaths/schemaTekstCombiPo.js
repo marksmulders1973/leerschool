@@ -87,7 +87,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           null,
           "Kijk je wel op de goede regel? Zoek eerst de regel die met 'woensdag' begint.",
           "Is dat het begin of juist het einde van de dag? Let op welk getal vóór het streepje staat.",
-          null,
+          "20.00 uur staat wel in de lijst, maar bij welke dag? Zoek de regel die met 'woensdag' begint.",
         ],
         uitlegPad: {
           stappen: [
@@ -127,7 +127,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           null,
           "Kijk precies op de maandag-regel: tot hoe laat is de bibliotheek dan open?",
           "Vrijdag is inderdaad tot 20.00 uur open — maar de vraag gaat over maandag.",
-          null,
+          "Staat maandag in de lijst? Kijk welke tijden er achter maandag staan.",
         ],
         uitlegPad: {
           stappen: [
@@ -155,7 +155,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         wrongHints: [
           null,
           "Waar komt die sluitingstijd vandaan — staat die achter 'zaterdag' of achter een ándere dag?",
-          null,
+          "20.00 uur staat wel in de lijst, maar achter welke dag? Kijk op de zaterdag-regel.",
           "De bibliotheek is op zaterdag wél een stukje van de dag open. Kijk alleen goed van hoe laat tot hoe laat.",
         ],
         uitlegPad: {
@@ -187,14 +187,14 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           "Zoek de rij die bij jouw vraag hoort",
           "Lees de hele lijst van boven naar beneden",
           "Kijk eerst in de tekst boven de lijst",
-          "Pak het eerste getal dat je ziet",
+          "Zoek eerst het gegeven dat je wilt weten",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Zo verlies je tijd. Je hebt maar één hokje nodig — hoe vind je dat het snelst?",
           "De tekst lees je ook, maar de eerste stap bij een tabel is gericht zoeken in de tabel zelf.",
-          null,
+          "Dat is ook een stap van kruispunt-lezen, maar is het de eerste? Denk aan de bibliotheek-oefening.",
         ],
         uitlegPad: {
           stappen: [
@@ -215,15 +215,15 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           "In de prijslijst",
           "In de eerste zin van de tekst",
           "In de titel van de tekst",
-          "Dat moet je zelf schatten",
+          "In de uitleg over kortingen in de tekst",
         ],
         answer: 0,
         evidence: "De tabel of lijst geeft de precieze gegevens: getallen, tijden en prijzen.",
         wrongHints: [
           null,
           "De tekst legt vooral uit en geeft regels. Waar staan getallen netjes onder elkaar?",
-          null,
-          "Schatten is nooit nodig: een van de twee onderdelen is juist gemaakt om precieze getallen te laten zien.",
+          "Een titel zegt waar de tekst over gaat. Staan daar prijzen in?",
+          "Daar staat soms een uitzondering, maar waar staat de gewone prijs netjes onder elkaar?",
         ],
         uitlegPad: {
           stappen: [
@@ -276,14 +276,14 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
       },
       {
         q: "Op welke dag is de bibliotheek het langst open?",
-        options: ["Vrijdag (7 uur open)", "Woensdag (6 uur open)", "Maandag (4 uur open)", "Zaterdag (3 uur open)"],
+        options: ["Vrijdag", "Woensdag", "Maandag", "Zaterdag"],
         answer: 0,
         evidence: "Vrijdag: 13.00 – 20.00 uur",
         wrongHints: [
           null,
-          "Woensdag is ook lang open — maar is het even lang als vrijdag? Bereken het voor beide.",
-          null,
-          "Zaterdag heeft de kortste openingstijd. Kijk naar de langste tijdspanne.",
+          "Woensdag is lang open, maar reken het ook uit voor de andere dagen. Welke dag komt het hoogst uit?",
+          "Reken uit: van 13.00 tot 17.00 uur, hoeveel uur is dat? Vergelijk het met de andere dagen.",
+          "Reken uit hoeveel uur de bibliotheek op zaterdag open is. Is dat veel of weinig vergeleken met de rest?",
         ],
         uitlegPad: {
           stappen: [
@@ -301,18 +301,18 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
       {
         q: "Wat is de slimme volgorde bij het zoeken in een tabel (kruispunt-lezen)?",
         options: [
-          "Eerst de goede rij zoeken, dan het goede gegeven, dan kijken waar ze samenkomen",
-          "De hele tabel uit je hoofd leren en dan pas de vraag lezen",
-          "Altijd het eerste getal van de tabel overnemen",
-          "De tabel overslaan en het antwoord in de tekst zoeken",
+          "Eerst de goede rij zoeken, dan het gegeven, dan het kruispunt",
+          "Eerst de hele lijst lezen, dan de vraag, dan het antwoord",
+          "Eerst de tekst lezen, dan het bovenste getal van de lijst nemen",
+          "Eerst het kruispunt zoeken, dan de rij, dan het gegeven",
         ],
         answer: 0,
         evidence: "Zoek de rij, zoek het gegeven, en kijk waar ze elkaar kruisen.",
         wrongHints: [
           null,
-          "Moet je álles onthouden, of hoef je maar één plekje in de tabel te vinden?",
+          "Moet je echt álles lezen, of hoef je maar één plekje in de tabel te vinden?",
           "Staat het antwoord altijd bovenaan? Denk aan hoe je gericht zoekt naar precies dat ene hokje.",
-          null,
+          "Kun je een kruispunt vinden voordat je weet welke rij en welk gegeven je zoekt?",
         ],
         uitlegPad: {
           stappen: [
@@ -365,7 +365,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           null,
           "Bij welke leeftijden hoort dat bedrag? Kijk tussen de haakjes — en hoe oud is Milan?",
           "Dat bedrag geldt voor een hele groep tegelijk. Hoeveel personen gaan er nu eigenlijk zwemmen?",
-          null,
+          "Voor wie is zwemmen gratis? Kijk naar de leeftijd tussen de haakjes.",
         ],
         uitlegPad: {
           stappen: [
@@ -399,7 +399,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
         wrongHints: [
           null,
           "Dat is de gewone kinderprijs uit de lijst — maar welke dag is het vandaag? Lees de regel over woensdagmiddag nog eens.",
-          null,
+          "Dat is de prijs voor volwassenen. Hoort Sara van 10 daarbij?",
           "Reken het nog eens rustig na: wat is precies de helft van de gewone kinderprijs?",
         ],
         uitlegPad: {
@@ -436,7 +436,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           null,
           "Die prijs hoort bij kinderen vanaf 4 jaar. Zoek de regel die past bij een kind van 2.",
           "Halve prijs is een Spetterdag-regel voor kinderen die normaal moeten betalen. Kijk eerst in welke rij een 2-jarige hoort — wat staat daar?",
-          null,
+          "Dat is de prijs voor volwassenen. In welke rij hoort een kind van 2?",
         ],
         uitlegPad: {
           stappen: [
@@ -469,7 +469,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
         wrongHints: [
           null,
           "Dat is het volwassenen-tarief. Kijk goed hoe oud Tim is en welke leeftijdsgroep daarbij hoort.",
-          null,
+          "Voor wie is zwemmen gratis? Kijk naar de leeftijden tussen de haakjes.",
           "De gezinskaart is voor een heel gezin, niet voor één persoon.",
         ],
         uitlegPad: {
@@ -494,7 +494,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           null,
           "Spetterdag geeft korting op de kinderprijs. Maar het kind is 3 jaar — in welke rij valt dat?",
           "Dat is het kind-tarief voor 4 t/m 11 jaar. Een kind van 3 valt in een andere rij.",
-          null,
+          "Staat het bedrag € 1,00 ergens in de prijslijst? Zoek eerst de rij voor een kind van 3.",
         ],
         uitlegPad: {
           stappen: [
@@ -515,7 +515,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           "De gezinskaart",
           "Vier losse kaartjes",
           "Twee tienbadenkaarten",
-          "Twee gezinskaarten",
+          "Een gezinskaart plus twee kinderkaartjes",
         ],
         answer: 0,
         evidence: "Gezinskaart (2 volwassenen + 2 kinderen): € 18,00 — Volwassene (vanaf 12 jaar): € 6,50 — Kind (4 t/m 11 jaar): € 4,50",
@@ -523,7 +523,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           null,
           "Reken de losse kaartjes eens uit: 2 volwassenen en 2 kinderen. Vergelijk dat totaal met de andere mogelijkheden in de lijst.",
           "Voor wie is zo'n kaart bedoeld — voor één dagje zwemmen, of voor wie heel vaak gaat?",
-          null,
+          "Hoeveel personen passen er al op één gezinskaart? Lees de regel tussen de haakjes.",
         ],
         uitlegPad: {
           stappen: [
@@ -558,7 +558,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           null,
           "Kijk goed naar de leeftijden tussen de haakjes: in welke groep hoort iemand van 12?",
           "Dat is de gezinskaart. Voor wie is die kaart precies bedoeld?",
-          null,
+          "Dat zijn twee kinderkaartjes. Hoort Jesse van 12 nog bij de kinderen? En zijn moeder?",
         ],
         uitlegPad: {
           stappen: [
@@ -612,7 +612,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Lees de eerste zin van de tekst: tot hoe laat is het zwembad open?",
           "De tienbadenkaart gaat over hoe vaak je zwemt. Verandert die kaart iets aan de openingstijden?",
           "Lees de eerste zin van de tekst. Is het zwembad op sommige dagen dicht?",
         ],
@@ -661,16 +661,16 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
         q: "Noor is 7 jaar en heeft nog geen zwemdiploma. Wat moet zij volgens de tekst doen in het zwembad?",
         options: [
           "Een oranje bandje dragen en in het ondiepe bad blijven",
-          "Een tienbadenkaart kopen bij de kassa",
-          "Altijd op woensdagmiddag komen zwemmen",
-          "Samen met een volwassene in het diepe bad zwemmen",
+          "Een gezinskaart kopen en met haar ouders komen",
+          "Op woensdagmiddag komen en in het ondiepe bad blijven",
+          "Met een volwassene in het diepe bad zwemmen",
         ],
         answer: 0,
         wrongHints: [
           null,
-          null,
-          "Woensdagmiddag gaat over de prijs. Staat er een regel over zwemmen zonder diploma?",
-          null,
+          "Gaat de gezinskaart over de prijs, of over zwemmen zonder diploma?",
+          "Woensdagmiddag gaat over de prijs. Wat moet Noor volgens de tekst dragen?",
+          "Lees de zin over kinderen zonder zwemdiploma: in welk bad blijven ze?",
         ],
         uitlegPad: {
           stappen: [
@@ -717,7 +717,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
         q: "Sam is 8 jaar. Hij gaat in de vakantie tien keer zwemmen in De Blauwe Golf, steeds op zaterdag. Hoeveel geld bespaart hij met een tienbadenkaart vergeleken met tien losse kaartjes?",
         options: ["€ 5,00", "€ 4,50", "€ 40,00", "€ 45,00"],
         answer: 0,
-        wrongHints: [null, null, "Dat is de prijs van de kaart zelf. Wat wil de vraag precies weten?", null],
+        wrongHints: [null, "Dat is de prijs van één keer zwemmen. Hoeveel kosten tien losse kaartjes samen?", "Dat is de prijs van de kaart zelf. Wat wil de vraag precies weten?", "Dat kosten tien losse kaartjes samen. Hoeveel is dat méér dan de kaart?"],
         uitlegPad: {
           stappen: [
             {
@@ -791,7 +791,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
           null,
           "Lees de regel nog eens precies: is dat het rítje of de lés? De woorden lijken op elkaar.",
           "Dat is het bedrag om binnen te komen, niet om op een pony te zitten.",
-          null,
+          "Dat bedrag hoort bij de speurtocht. Zoek de regel die met 'Ponyritje' begint.",
         ],
         uitlegPad: {
           stappen: [
@@ -824,7 +824,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
         wrongHints: [
           null,
           "Dat is de gewone entreeprijs uit de lijst — maar staat er in de folder-tekst een speciale regel die vandaag voor Sam geldt?",
-          null,
+          "Halve prijs staat nergens in de folder. Wat zegt de tekst over bezoekers die jarig zijn?",
           "Dat is de prijs van iets anders uit de lijst. Wat zegt de tékst over bezoekers die jarig zijn?",
         ],
         uitlegPad: {
@@ -859,7 +859,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
           null,
           "Je hebt per kind gerekend. Lees nog eens wat er tussen de haakjes staat: waarvoor geldt dat bedrag precies?",
           "Waar komt dit bedrag vandaan? Kijk precies op de speurtocht-regel wat erbij staat.",
-          null,
+          "Je deelde het bedrag door vier. Vraagt de vraag wat het per kind kost, of wat ze samen betalen?",
         ],
         uitlegPad: {
           stappen: [
@@ -894,7 +894,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
           null,
           "Kijk wat er op de ponyles-regel tussen de haakjes staat: 'per groepje' of 'per kind'?",
           "Vergelijk de ponyles-regel met de speurtocht-regel: staat er ook 'per groepje' bij de ponyles?",
-          null,
+          "Waar komt € 10,00 vandaan? Kijk op de ponyles-regel wat er tussen de haakjes staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -911,10 +911,10 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
       },
       {
         q: "Je hebt de prijs al in de lijst gevonden. Waarom moet je tóch ook de tekst nog lezen?",
-        options: ["Omdat de tekst uitzonderingen kan noemen die de prijs veranderen", "Omdat de lijst bijna altijd fouten bevat die je moet verbeteren", "Omdat de tekst dezelfde getallen nog een keer noemt, als controle", "Dat hoeft niet: de lijst is altijd genoeg om de prijs te weten"],
+        options: ["Omdat de tekst uitzonderingen kan noemen die de prijs veranderen", "Omdat de lijst vaak oude prijzen bevat die niet meer kloppen", "Omdat de tekst dezelfde getallen nog een keer noemt, als controle", "Omdat alleen de tekst de prijzen voor volwassenen noemt"],
         answer: 0,
         evidence: "Wie jarig is, mag die dag gratis naar binnen.",
-        wrongHints: [null, "De lijst klopt heus wel — maar vertelt de lijst je álles? Denk aan Sam, die vandaag jarig was.", "Als de tekst precies hetzelfde zei, waarom zou je hem dan lezen? Denk aan Sam.", "Denk terug aan de entree-vraag over Sam: had je die goed gehad met alléén de lijst?"],
+        wrongHints: [null, "De lijst klopt heus wel — maar vertelt de lijst je álles? Denk aan Sam, die vandaag jarig was.", "Als de tekst precies hetzelfde zei, waarom zou je hem dan lezen? Denk aan Sam.", "Staan de prijzen voor volwassenen niet gewoon in de lijst? Denk aan Sam, die vandaag jarig was."],
         uitlegPad: {
           stappen: [
             { titel: "Wat de lijst kan", tekst: "De lijst geeft je de gewone prijzen en gegevens, snel en overzichtelijk. Voor de meeste vragen is dat het startpunt." },
@@ -946,8 +946,8 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
         wrongHints: [
           null,
           "Staat er bij de entree 'per persoon' of 'per groepje'? En met hoeveel zijn ze?",
-          null,
-          null,
+          "Dat is de prijs van de speurtocht. Zoek de regel die met 'Entree' begint.",
+          "Waar komt € 4,00 vandaan? Reken uit: wat kost de entree per persoon, en met hoeveel zijn ze?",
         ],
         uitlegPad: {
           stappen: [
@@ -994,7 +994,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
         q: "Tim maakt bij 't Hoefje drie ponyritjes. Wat kosten die samen?",
         options: ["€ 6,00", "€ 22,50", "€ 2,00", "€ 7,50"],
         answer: 0,
-        wrongHints: [null, "Rítje of lés? Lees de hele regel nog eens.", null, null],
+        wrongHints: [null, "Rítje of lés? Lees de hele regel nog eens.", "Dat is de prijs van één ritje. Hoeveel ritjes maakt Tim?", "Dat is de prijs van een ponyles. Maakt Tim ritjes of lessen?"],
         uitlegPad: {
           stappen: [
             {
@@ -1040,7 +1040,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
         q: "Zeven kinderen willen bij 't Hoefje de speurtocht doen. Wat betalen ze daar samen minstens voor?",
         options: ["€ 20,00", "€ 10,00", "€ 70,00", "€ 14,00"],
         answer: 0,
-        wrongHints: [null, "Hoeveel kinderen mogen er maximaal in één groepje?", null, null],
+        wrongHints: [null, "Hoeveel kinderen mogen er maximaal in één groepje?", "Je rekende per kind. Staat er bij de speurtocht 'per kind' of 'per groepje'?", "Waar komt € 2,00 per kind vandaan? Kijk wat er tussen de haakjes bij de speurtocht staat."],
         uitlegPad: {
           stappen: [
             {
@@ -1090,7 +1090,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
           null,
           "Moet Femke vandaag wel entree betalen? Lees de folder-tekst.",
           "Jarigen mogen gratis naar binnen. Staat er ook dat de ponyles gratis is?",
-          null,
+          "Waar komt die € 2,00 extra vandaan? Neemt Femke een ritje of een les?",
         ],
         uitlegPad: {
           stappen: [
@@ -1158,7 +1158,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         wrongHints: [
           null,
           "Om die tijd begint er iets anders in de feesttent — zoek de regel met het woord 'talentenjacht'.",
-          null,
+          "Om 10.30 uur beginnen de kinderspelen. Zoek de regel met het woord 'talentenjacht'.",
           "Kijk nog eens goed: welke activiteit begint er om die tijd? Zoek in het programma de goede regel.",
         ],
         uitlegPad: {
@@ -1193,7 +1193,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
           null,
           "Dat staat inderdaad zo in het programma — maar de tekst noemt een uitzondering voor regen. Wat gebeurt er dan?",
           "Op het plein zijn de opening en de ballonnenwedstrijd. Zoek de zin in de tekst die met 'Bij regen' begint.",
-          null,
+          "Op het grasveld zijn de kinderspelen. Zoek de zin in de tekst die met 'Bij regen' begint.",
         ],
         uitlegPad: {
           stappen: [
@@ -1231,7 +1231,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         wrongHints: [
           null,
           "De begintijd klopt — maar om mee te dóén moest je vooraf nog iets regelen. Wat, en tot hoe laat kon dat?",
-          null,
+          "Lees de regels in de tekst: tot hoe laat kon je je opgeven bij meneer Baris?",
           "Kijk in het programma: hoe laat begint de talentenjacht, en hoe laat komt Fee aan?",
         ],
         uitlegPad: {
@@ -1267,7 +1267,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
           null,
           "Je rekende álle muntjes mee. Maar hoeveel muntjes krijgt Roan al cadeau bij de ingang?",
           "Hoeveel pannenkoeken wil Roan in totaal, en hoeveel muntjes heeft hij daarvoor nodig?",
-          null,
+          "Lees de alinea over de pannenkoeken: wat heb je nodig voor één pannenkoek, en wat kost dat?",
         ],
         uitlegPad: {
           stappen: [
@@ -1301,7 +1301,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         wrongHints: [
           null,
           "Om die tijd begint er nog iets. Zoek de laatste regel van het programma.",
-          null,
+          "Om 13.30 uur begint de talentenjacht. Zoek de laatste regel van het programma.",
           "17.00 uur staat niet in het programma. Kijk naar de laatste tijdsvermelding.",
         ],
         uitlegPad: {
@@ -1320,7 +1320,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
       {
         q: "Wil je meedoen aan de ballonnenwedstrijd? Wat moet je meenemen?",
         options: [
-          "Een naamkaartje aan het touwtje van je ballon",
+          "Een naamkaartje voor aan je ballon",
           "Geld voor extra muntjes",
           "Een opgaveformulier van meneer Baris",
           "Een eigen ballon van thuis",
@@ -1331,7 +1331,7 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
           null,
           "Geld voor muntjes is nodig voor pannenkoeken, niet voor de ballonnenwedstrijd.",
           "Opgeven bij meneer Baris geldt voor de talentenjacht, niet voor de ballonnenwedstrijd.",
-          null,
+          "Staat er in de tekst iets over een ballon van thuis? Lees de laatste alinea: wat mag je niet vergeten?",
         ],
         uitlegPad: {
           stappen: [
@@ -1354,8 +1354,8 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         wrongHints: [
           null,
           "Daar begon om 10.00 uur de opening — maar de kinderspelen zijn ergens anders. Kijk tussen de haakjes achter 'kinderspelen'.",
-          null,
-          null,
+          "In de feesttent eet je pannenkoeken. Kijk tussen de haakjes achter 'kinderspelen'.",
+          "Op het podium is de talentenjacht. Kijk tussen de haakjes achter 'kinderspelen'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1393,8 +1393,8 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         wrongHints: [
           null,
           "Dat bedrag hoort bij iets anders op het feest. Wat zegt de eerste alinea over de toegang?",
-          null,
-          null,
+          "Muntjes zijn voor de pannenkoeken. Wat zegt de eerste alinea over de toegang?",
+          "Staat er ergens een prijs per gezin? Lees de laatste zin van de eerste alinea.",
         ],
         uitlegPad: {
           stappen: [
@@ -1449,8 +1449,8 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         wrongHints: [
           null,
           "Waar is de ballonnenwedstrijd volgens het programma? Kijk tussen de haakjes.",
-          null,
-          null,
+          "Op het podium is de talentenjacht. Waar is de opening volgens het programma?",
+          "Op het grasveld zijn de kinderspelen. Kijk tussen de haakjes achter 'opening' en 'ballonnenwedstrijd'.",
         ],
         uitlegPad: {
           stappen: [

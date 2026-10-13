@@ -78,7 +78,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         wrongHints: [
           null,
           "Let op de werkwoorden: smijten, stampen, dichtslaan. Doe jij dat na een fijne dag?",
-          null,
+          "Wie verlegen is, maakt zich klein en stil. Passen smijten en stampen daarbij?",
           "Iemand die alleen moe is, ploft rustig op de bank. Wat zeggen smijten en stampen over Saar van binnen?",
         ],
         uitlegPad: {
@@ -115,7 +115,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
           null,
           "Iemand die woedend is, praat meestal juist hard. Wat zegt zo'n piepklein stemmetje over Ravi?",
           "Iemand die trots is, staat rechtop en kijkt de zaal in. Waar kijkt Ravi naar?",
-          null,
+          "Wie uitgelaten is, springt en praat hard. Wat doet Ravi met zijn stem en zijn ogen?",
         ],
         uitlegPad: {
           stappen: [
@@ -145,15 +145,15 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         q: "*\"'Dat lukt jou toch nooit,' zei haar zus lachend.\"* — Welk woord verandert de betekenis van wat de zus zegt?",
         options: [
           "'Lachend' — het is plagerig bedoeld",
-          "'Nooit' — het is een absolute uitspraak",
-          "'Toch' — dat klinkt zeker",
-          "'Jou' — ze bedoelt het persoonlijk",
+          "'Nooit' — het is heel streng bedoeld",
+          "'Toch' — het is twijfelend bedoeld",
+          "'Jou' — het is persoonlijk bedoeld",
         ],
         answer: 0,
         wrongHints: [
           null,
           "'Nooit' zegt iets over de kans — maar 'lachend' bepaalt de toon. Wat voelt anders als iemand lacht bij wat ze zegt?",
-          null,
+          "Maakt 'toch' de zin twijfelend, of alleen wat sterker? Kijk hoe de zus het zegt.",
           "Wie ze aanspreekt zegt iets over het doelwit, niet over de bedoeling. Kijk hoe het gezegd wordt.",
         ],
         uitlegPad: {
@@ -176,7 +176,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         wrongHints: [
           null,
           "Iemand die blij is, gooit dingen niet in de prullenbak. Wat zeggen opnieuw beginnen en weggooien over Lotte?",
-          null,
+          "Wie slaperig is, legt zijn pen neer. Lotte begint juist opnieuw. Wat zegt het weggooien over haar?",
           "Verlegen gedrag zie je in gezelschap — Lotte is hier in haar eentje aan het werk. Kijk naar haar acties.",
         ],
         uitlegPad: {
@@ -196,17 +196,17 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         q: "In een verhaal staat nergens hoe een personage zich voelt. Hoe kom je er dan tóch achter?",
         options: [
           "Kijk goed naar wat het personage doet en zegt",
-          "Sla dat stuk over — je kunt het niet weten",
-          "Kies het gevoel dat je zelf vandaag hebt",
-          "Tel hoe vaak de naam van het personage voorkomt",
+          "Zoek een zin waarin het gevoel letterlijk staat",
+          "Kies het gevoel dat jij zelf zou hebben",
+          "Kijk naar de titel van het verhaal",
         ],
         answer: 0,
         evidence: "Rik zei niets. Hij sloeg de deur keihard achter zich dicht.",
         wrongHints: [
           null,
-          "Toetsvragen gaan juist vaak over gevoelens die er níét letterlijk staan — er is altijd een spoor. Waar zou dat spoor zitten?",
+          "De vraag zegt dat het gevoel nergens letterlijk staat. Waar kan het dan wél in zitten?",
           "Gaat de vraag over jouw gevoel of over dat van het personage? Waar vind je aanwijzingen over het personage?",
-          null,
+          "De titel zegt waar het verhaal over gaat. Vertelt die hoe een personage zich op één moment voelt?",
         ],
         uitlegPad: {
           stappen: [
@@ -237,14 +237,14 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         options: [
           "Hij wil het cadeau beschermen",
           "Hij is moe van het lopen",
-          "Hij wil te laat op school aankomen",
+          "Hij heeft geen zin om naar school te gaan",
           "De doos is te zwaar om snel te dragen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Staat er iets over vermoeidheid? Kijk naar wat er in de doos zit en hoe waardevol dat is.",
-          null,
+          "Staat er iets over geen zin hebben? Kijk naar hoe Ties de doos vasthoudt.",
           "De doos wordt vergeleken met een baby'tje — is een baby zwaar, of eerder kwetsbaar?",
         ],
         uitlegPad: {
@@ -267,7 +267,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         wrongHints: [
           null,
           "Een blij iemand scheurt zo'n envelop open. Waarom maakt Kai hem niet open?",
-          null,
+          "Heeft honger iets met een envelop te maken? Waarom zou Kai hem zo lang dichthouden?",
           "Er is geen aanwijzing voor boosheid — Kai doet gewoon niets. Waaróm doe je dat?",
         ],
         uitlegPad: {
@@ -289,7 +289,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
           "Ze is bang",
           "Het licht viel uit",
           "Ze ligt in bed",
-          "Ze is dol op haar dekbed",
+          "Ze is moe en wil gaan slapen",
         ],
         answer: 0,
         evidence: "Toen het licht uitviel, kroop Mila diep onder haar dekbed en riep om haar vader.",
@@ -297,7 +297,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
           null,
           "Dat gebeurt er inderdaad — maar is dat een gevóél? De vraag gaat over wat Mila van binnen voelt.",
           "Dat is een plek, geen gevoel. Wat vertellen het wegkruipen en het roepen over Mila van binnen?",
-          null,
+          "Roep je om je vader als je gewoon wilt slapen? Wat gebeurde er net met het licht?",
         ],
         uitlegPad: {
           stappen: [
@@ -332,7 +332,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
           null,
           "Iemand die opgewonden is, huppelt eerder naar de auto. Wat zegt een hoofd naar beneden over Yara van binnen?",
           "Knijp je iemand stevig vast als je boos op hem bent? Kijk wat Yara bij het afscheid doet.",
-          null,
+          "Wie zich verveelt, knijpt niemand stevig vast. Wat zegt een hoofd naar beneden?",
         ],
         uitlegPad: {
           stappen: [
@@ -405,7 +405,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         wrongHints: [
           null,
           "Milan wordt van een afstandje beschreven ('hij hangt lui over de rand'). Wie zegt er de hele tijd 'ik' en 'mijn'?",
-          null,
+          "Het jongetje zegt maar één zin. Wie zegt er de hele tijd 'ik' en 'mijn'?",
           "De badmeester wordt maar één keer kort genoemd. Wiens gedachten lees je van begin tot eind?",
         ],
         uitlegPad: {
@@ -439,7 +439,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         wrongHints: [
           null,
           "'Lui' beschrijft de houding van Milan zoals Noa die ziet — dat is een observatie, geen gok-woordje.",
-          null,
+          "'Over' zegt alleen waar Milan hangt. Welk woordje laat zien dat Noa iets raadt?",
           "'Niks' is wat er gesuggereerd wordt. Welk woordje maakt het duidelijk dat het een veronderstelling is?",
         ],
         uitlegPad: {
@@ -468,7 +468,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         wrongHints: [
           null,
           "Daar lees je juist héél veel over — het hele verhaal zit vol met die gedachten. Wiens binnenkant blijft verborgen?",
-          null,
+          "Dat staat in de eerste zin van het verhaal. Zoek iets dat je alleen kunt gókken.",
           "Dat staat er letterlijk: 'Ik heb het de hele week aan iedereen verteld.' Zoek iets dat je alleen kunt gókken.",
         ],
         uitlegPad: {
@@ -508,7 +508,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
           null,
           "Zou de zin dan zo geheimzinnig klinken? Waaróm vertelt Noa erbij dat het niet door het zwembad komt?",
           "Staat er ergens iets over het weer? Zoek de aanwijzing in Noa zelf, niet erbuiten.",
-          null,
+          "Noa zegt zelf dat het níét door het zwembad komt. Waardoor dan wel?",
         ],
         uitlegPad: {
           stappen: [
@@ -545,7 +545,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         wrongHints: [
           null,
           "Is er enig bewijs dat Noa bang is voor Milan? Wat zegt de tekst over haar eigen motivatie?",
-          null,
+          "Wie roept 'Je hoeft niet, hoor!'? Lees de zin nog eens.",
           "Lees de zinnen erna goed: Noa wil iets bewíjzen. Aan wie, en wat?",
         ],
         uitlegPad: {
@@ -575,7 +575,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
           null,
           "De schrijver heeft dit verhaal vérzonnen — heeft de schrijver zelf een broer Milan? Wie leeft er ín het verhaal?",
           "Jij leest mee, maar sta jij zelf op die duikplank?",
-          null,
+          "Milan roept naar de 'ik' vanaf de kant. Welke naam roept hij?",
         ],
         uitlegPad: {
           stappen: [
@@ -611,7 +611,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
           "Milan heeft het bord verkeerd gelezen",
         ],
         answer: 0,
-        wrongHints: [null, "Zegt Noa dat het bord fout is, of zegt ze hoe het vóélt?", null, null],
+        wrongHints: [null, "Zegt Noa dat het bord fout is, of zegt ze hoe het vóélt?", "Zegt Noa dat de plank echt dertig meter is, of hoe het vóélt?", "Wie las het bord: Milan of Noa? En zegt Noa dat het bord fout is?"],
         uitlegPad: {
           stappen: [
             {
@@ -669,8 +669,8 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         wrongHints: [
           null,
           "Een stapje zetten kun je zien. Zoek een zin die je alleen kunt weten als je in Noa's hoofd zit.",
-          null,
-          null,
+          "Adem halen kun je zien en horen. Zoek een zin die alleen in Noa's hoofd gebeurt.",
+          "Kun je zien dat iemands tenen krullen? Zoek een zin die alleen in Noa's hoofd gebeurt.",
         ],
         uitlegPad: {
           stappen: [
@@ -753,7 +753,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
         wrongHints: [
           null,
           "De munt en de spaarpot horen allebei bij het bééld. Wat uit de echte wereld wordt met die munt vergeleken?",
-          null,
+          "Staat er dat de nacht op de zon lijkt? Zoek het woordje 'als'.",
           "Gaat dit gedicht over geld? Kijk waarvóór het beeld gebruikt wordt: wat doet de zon 's avonds?",
         ],
         uitlegPad: {
@@ -783,10 +783,10 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
       {
         q: "*\"De schommel hangt te slapen aan zijn touwen.\"* — Wat betekent dit écht?",
         options: [
-          "De schommel hangt stil; er speelt niemand meer",
+          "De schommel hangt stil, niemand speelt erop",
           "De schommel heeft zijn ogen dicht",
           "Er ligt een kind op de schommel te slapen",
-          "De schommel is kapot en moet gemaakt worden",
+          "De schommel wiebelt zachtjes in de wind",
         ],
         answer: 0,
         evidence: "De schommel hangt te slapen aan zijn touwen,",
@@ -794,7 +794,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
           null,
           "Heeft een schommel ogen? De dichter doet alsof de schommel een levend wezen is — wat wil hij daarmee laten zíén?",
           "Staat er ergens een kind in deze regel? Kijk wat de schommel zélf 'doet'.",
-          null,
+          "Wie slaapt, beweegt bijna niet. Past wiebelen daarbij?",
         ],
         uitlegPad: {
           stappen: [
@@ -833,7 +833,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
         wrongHints: [
           null,
           "Er gebeurt niets engs: geen monster, geen gevaar. Lees de laatste regel nog eens — wat voor gevoel geeft die deken van schaduw?",
-          null,
+          "Zoek eens drukke of vrolijke woorden in het gedicht. Of gaat alles juist langzaam?",
           "Zoek eens boze of wilde woorden in het gedicht — vind je die ergens?",
         ],
         uitlegPad: {
@@ -873,7 +873,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
           null,
           "Staat er iets over warmte in dit deel van het gedicht? Kijk wat 'adem inhouden' betekent.",
           "Wie adem inhoudt, beweegt niet. Past dat bij wind?",
-          null,
+          "Wie zijn adem inhoudt, doet niets. Past snel groeien daarbij?",
         ],
         uitlegPad: {
           stappen: [
@@ -901,7 +901,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
           null,
           "De dichter vergelijkt de beweging van de deur met gapen. Wat heeft gapen met bewegen te maken?",
           "Iemand die zijn deur keihard dichtgooit gaapt niet. Gapen is langzaam en sloom.",
-          null,
+          "Staat er iets over kapot zijn? Denk aan hoe je mond langzaam opengaat als je gaapt.",
         ],
         uitlegPad: {
           stappen: [
@@ -930,7 +930,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
           null,
           "Neem je de zin dan niet te letterlijk? Denk aan hoe honing vóélt en smaakt — wat heeft dat met een stem te maken?",
           "Kun je een stem zíén? Beeldspraak gaat over wat twee dingen met elkaar gemeen hebben.",
-          null,
+          "Staat er waar het verhaal over gaat? De zin zegt iets over hoe haar stem klinkt.",
         ],
         uitlegPad: {
           stappen: [
@@ -970,8 +970,8 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
         wrongHints: [
           null,
           "Staat er in het gedicht een persoon met een deken? Neem je de regel niet te letterlijk?",
-          null,
-          null,
+          "Staat er iets over regen of kou? Wat gebeurt er met de zon aan het begin van het gedicht?",
+          "Staat er iemand die bomen plant? Neem je de regel niet te letterlijk?",
         ],
         uitlegPad: {
           stappen: [
@@ -1030,8 +1030,8 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
         wrongHints: [
           null,
           "Neem je 'van lood' niet te letterlijk? Wat heeft lood dat bij moeë benen past?",
-          null,
-          null,
+          "Neem je 'van lood' niet te letterlijk? Draagt de schrijver echt iets om zijn benen?",
+          "Hoe voelt iets van lood: licht of zwaar? Kun je daarmee hard rennen?",
         ],
         uitlegPad: {
           stappen: [
@@ -1083,11 +1083,11 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
         options: [
           "Ze maken allebei bijna geen geluid",
           "Ze zijn allebei klein en grijs",
-          "Ze eten allebei graag kaas",
+          "Ze zitten allebei in een hoekje",
           "Ze zijn allebei bang voor katten",
         ],
         answer: 0,
-        wrongHints: [null, "Gaat de zin over hoe ze eruitzien, of over wat ze doen?", null, null],
+        wrongHints: [null, "Gaat de zin over hoe ze eruitzien, of over wat ze doen?", "Staat er waar het meisje zit? Welk woord staat er vóór 'als'?", "Staat er iets over katten of bang zijn? Welk woord staat er vóór 'als'?"],
         uitlegPad: {
           stappen: [
             {
@@ -1160,7 +1160,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         wrongHints: [
           null,
           "Zoek de woordjes 'ik' en 'mijn' buiten de gesproken zinnen — vind je ze? Wie noemt Ties steeds bij zijn naam?",
-          null,
+          "Juf Karin komt pas aan het eind in het verhaal. Zie je ergens 'ik' buiten de gesproken zinnen?",
           "Lees je ergens wat Fleur van bínnen denkt, of zie je alleen wat ze doet en roept?",
         ],
         uitlegPad: {
@@ -1201,7 +1201,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
           null,
           "Staat er ergens iets over de temperatuur? Denk aan wat er in die doos zit en hoe belangrijk dat is.",
           "Heeft Fleur iets verkeerd gedaan dan? Lees terug wat zij bij het hek riep.",
-          null,
+          "Was de doos zwaar? Ties droeg hem helemaal naar school. Wat zou hij in de doos kunnen vinden?",
         ],
         uitlegPad: {
           stappen: [
@@ -1240,7 +1240,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         wrongHints: [
           null,
           "Neem je de vergelijking niet te letterlijk? Er staat 'als' — het is een beeld. Wat is er net gebeurd met de vaas?",
-          null,
+          "Staat er iets over ziek zijn? Wat is er net gebeurd met de vaas?",
           "Heeft Ties gerend? Lees terug hoe hij naar school liep — en wat er daarna misging.",
         ],
         uitlegPad: {
@@ -1270,8 +1270,8 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "Waarom zegt juf Karin dat ze 'tweeëndertig cadeautjes in plaats van één' krijgt?",
         options: [
-          "Ze wil Ties troosten en laten merken dat het niet erg is",
-          "Ze wil tweeëndertig nieuwe vazen bestellen",
+          "Ze wil Ties troosten na het ongelukje",
+          "Ze wil van iedereen een nieuw cadeautje",
           "Ze vindt scherven echt mooier dan een hele vaas",
           "Ze is boos en zegt het spottend",
         ],
@@ -1279,7 +1279,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         evidence: "\"Weet je,\" zei ze zacht, \"ik krijg zo tweeëndertig cadeautjes in plaats van één. Ik neem alle scherven mee, van iedereen één.\"",
         wrongHints: [
           null,
-          null,
+          "Vraagt juf om nieuwe cadeautjes? Wat doet ze met de scherven?",
           "Zou iemand dat écht vinden — of zégt ze het met een bedoeling? Let op het woordje 'zacht' en naar wie ze daarna lacht.",
           "Boze mensen praten zelden 'zacht' en lachen er niet bij. Wat wil juf bij Ties bereiken?",
         ],
@@ -1310,7 +1310,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "*\"Op de laatste schooldag mocht Ties de vaas naar school brengen.\"* — Wat zegt het woord 'mocht' over hoe de klas dit besliste?",
         options: [
-          "Ties kreeg die speciale taak toegewezen",
+          "Ties kreeg die speciale taak van de klas",
           "Ties dwong de klas om hem de vaas te laten brengen",
           "Ties kocht de vaas zelf",
           "Ties had de vaas per ongeluk mee",
@@ -1320,7 +1320,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
           null,
           "Staat er iets over dwingen in de tekst? Kijk ook naar het woord 'mocht' — geeft dat dwang aan?",
           "De klas had wekenlang gespaard voor de vaas — die was van alle kinderen samen.",
-          null,
+          "Liep Ties per ongeluk zo voorzichtig met de doos? Wat zegt 'mocht' over wie het besliste?",
         ],
         uitlegPad: {
           stappen: [
@@ -1339,17 +1339,17 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         q: "*\"Iedereen boog naar voren. Toen werd het doodstil.\"* — Wat gebeurt hier met de sfeer in de klas?",
         options: [
           "Van verwachtingsvol naar geschrokken",
-          "Het blijft de hele tijd even gezellig",
-          "De kinderen vallen in slaap",
-          "Iedereen wordt boos op juf Karin",
+          "Van verveeld naar vrolijk",
+          "Van druk naar slaperig",
+          "Van verwachtingsvol naar boos",
         ],
         answer: 0,
         evidence: "Iedereen boog naar voren. Toen werd het doodstil. Onder in de doos lagen scherven.",
         wrongHints: [
           null,
-          "Lees wat er ónder in de doos ligt — blijft het dan gezellig?",
+          "Zijn de kinderen verveeld als ze naar voren buigen? En wat ligt er onder in de doos?",
           "Betekent 'doodstil' dat iedereen slaapt, midden op een schooldag? Waaróm zegt niemand opeens meer iets?",
-          null,
+          "Wordt er iemand boos? Lees wat Fleur en Ties doen als ze de scherven zien.",
         ],
         uitlegPad: {
           stappen: [
@@ -1387,7 +1387,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Fleur roept 'Voorzichtig!' en springt op en neer. Klinkt dat boos?",
           "Weet Fleur bij het hek al dat de vaas kapot is? Lees terug wanneer de scherven gevonden worden.",
           "Wie zich verveelt, staat stil of hangt rond. Wat doet Fleur?",
         ],
@@ -1448,8 +1448,8 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         wrongHints: [
           null,
           "Is het aan het einde nog doodstil, of is er iets veranderd? Kijk wat de juf doet.",
-          null,
-          null,
+          "Is er iemand boos aan het eind? Kijk wat de juf doet.",
+          "Staat er dat er nog iets misgaat? Lees de laatste zin nog eens.",
         ],
         uitlegPad: {
           stappen: [

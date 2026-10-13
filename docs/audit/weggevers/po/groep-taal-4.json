@@ -1,0 +1,347 @@
+{
+ "bestanden": [
+  "./interpunctiePo.js",
+  "./spellingOverigePo.js",
+  "./taalLerenLezenG3.js",
+  "./leestekensHoofdlettersPo.js",
+  "./trappenVanVergelijkingPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "trappen-van-vergelijking-po",
+   "file": "./trappenVanVergelijkingPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "H",
+   "q": "Welke is de overtreffende trap van 'goed'?",
+   "opties": [
+    "best",
+    "beter",
+    "goedst",
+    "goeder"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "trappen-van-vergelijking-po",
+   "file": "./trappenVanVergelijkingPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "H",
+   "q": "Maak de rij af: goed – beter – ___",
+   "opties": [
+    "best",
+    "goedst",
+    "beters",
+    "bester"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2S",
+   "q": "Wat is interpunctie?",
+   "opties": [
+    "Leestekens en hoofdletters",
+    "Alleen leestekens",
+    "Alleen hoofdletters",
+    "Alle woorden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welke schrijf je MET hoofdletter in een zin?",
+   "opties": [
+    "Frans (als taal)",
+    "maandag",
+    "december",
+    "voorjaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Welke woorden krijgen een hoofdletter in: *'wij wonen in de kerkstraat'*?",
+   "opties": [
+    "Wij en Kerkstraat",
+    "Alleen Wij",
+    "Alleen Kerkstraat",
+    "Wij, Wonen en Kerkstraat"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Waaraan zie je dat *'Gaat de bus om acht uur'* een vraag is?",
+   "opties": [
+    "Het werkwoord staat vooraan",
+    "Er staat een getal in",
+    "De zin is kort",
+    "Het gaat over een bus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat is er fout in: *Sem riep: \"Kijk eens!*",
+   "opties": [
+    "Het aanhalingsteken aan het eind mist",
+    "De dubbele punt mist",
+    "Er staat geen hoofdletter bij 'Kijk'",
+    "Het uitroepteken mist"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "S",
+   "q": "Wanneer hoofdletter in midden van zin?",
+   "opties": [
+    "Bij namen",
+    "Altijd",
+    "Nooit",
+    "Alleen na komma"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "interpunctie-po",
+   "file": "./interpunctiePo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "L2SK",
+   "q": "Een puntkomma (;) verbindt?",
+   "opties": [
+    "Twee verwante zinnen",
+    "Een opsomming",
+    "Niets",
+    "Vraag en antwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "leestekens-hoofdletters-po",
+   "file": "./leestekensHoofdlettersPo.js",
+   "stap": 0,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "In welke zin is een hoofdletter fout gebruikt?",
+   "opties": [
+    "Het was koud, Dus we bleven binnen.",
+    "Het regent. We blijven binnen.",
+    "Kom je ook, Daan?",
+    "Ik ben moe, dus ik ga slapen."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "leestekens-hoofdletters-po",
+   "file": "./leestekensHoofdlettersPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waar hoort de dubbele punt? *Ik heb drie huisdieren een kat een hond en een vis.*",
+   "opties": [
+    "na 'huisdieren': Ik heb drie huisdieren: een kat, een hond en een vis.",
+    "na 'drie': Ik heb drie: huisdieren een kat een hond en een vis.",
+    "na 'hond': Ik heb drie huisdieren een kat een hond: en een vis.",
+    "er hoort helemaal geen dubbele punt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritis'?",
+   "opties": [
+    "kritisch",
+    "kritich",
+    "kritiec",
+    "kritis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Welke is goed: 'voetbalveld' of 'voetbal-veld'?",
+   "opties": [
+    "voetbalveld",
+    "voetbal-veld",
+    "voet-bal-veld",
+    "voet balveld"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Hoofdletter: 'We zien elkaar op ___.'",
+   "opties": [
+    "maandag",
+    "Maandag",
+    "MAANDAG",
+    "maan dag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Welk woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?",
+   "opties": [
+    "mogelijk",
+    "mogelik",
+    "moglijk",
+    "mogeleijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Welke is goed: 'huisdier' of 'huis dier' of 'huis-dier'?",
+   "opties": [
+    "huisdier",
+    "huis dier",
+    "huis-dier",
+    "huisdir"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Het meervoud van 'huis' is?",
+   "opties": [
+    "huizen",
+    "huisen",
+    "huises",
+    "huis'en"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Het meervoud van 'kind' is?",
+   "opties": [
+    "kinderen",
+    "kinden",
+    "kindes",
+    "kinds"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Welke is goed: 'in tussen' of 'intussen'?",
+   "opties": [
+    "intussen",
+    "in tussen",
+    "in-tussen",
+    "intussent"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-overige-po",
+   "file": "./spellingOverigePo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "De goedheiligman zelf (de persoon): 'sinterklaas' of 'Sinterklaas'?",
+   "opties": [
+    "Sinterklaas",
+    "sinterklaas",
+    "sint-erklaas",
+    "Sint Erklaas"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "trappen-van-vergelijking-po",
+   "file": "./trappenVanVergelijkingPo.js",
+   "stap": 1,
+   "vraag": 9,
+   "soort": "L2S",
+   "q": "Wanneer gebruik je de vergrotende trap?",
+   "opties": [
+    "als je twee dingen met elkaar vergelijkt",
+    "als iets het meest is van allemaal",
+    "als je niets vergelijkt",
+    "alleen bij onregelmatige woorden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

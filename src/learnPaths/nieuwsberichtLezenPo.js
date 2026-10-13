@@ -66,7 +66,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         q: "Je leest alleen de eerste alinea van een nieuwsbericht. Wat weet je dan meestal al?",
         options: [
           "Het belangrijkste van het nieuws",
-          "Alle kleine details en weetjes",
+          "De kleine details en weetjes",
           "De mening van de schrijver",
           "Hoe het verhaal spannend afloopt",
         ],
@@ -76,7 +76,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           null,
           "Waar bewaart een journalist de kleine weetjes: vooraan of juist verderop in het bericht?",
           null,
-          "Een nieuwsbericht is geen spannend verhaal met een einde. Wat wil een journalist je juist zo snél mogelijk vertellen?",
+          "Is een nieuwsbericht een spannend verhaal met een einde, zoals een boek?",
         ],
         uitlegPad: {
           stappen: [
@@ -141,18 +141,18 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
       {
         q: "Wat is de belangrijkste taak van de kop boven een nieuwsbericht?",
         options: [
-          "Je nieuwsgierig maken zodat je verder wilt lezen",
-          "Alle zes gouden vragen beantwoorden",
-          "De mening van de journalist geven",
-          "Vertellen hoe laat het bericht geschreven is",
+          "Je nieuwsgierig maken naar het bericht",
+          "De zes gouden vragen beantwoorden",
+          "Vertellen wat de journalist ervan vindt",
+          "Vertellen wie het bericht schreef",
         ],
         answer: 0,
         evidence: "De kop — kort en pakkend. De kop moet je nieuwsgierig maken, zodat je verder wilt lezen.",
         wrongHints: [
           null,
-          "Een kop is maar een paar woorden lang. Passen daar zes complete antwoorden in?",
-          "Een journalist hoort nieuws te brengen, niet wat hij er zelf van vindt. Wat moet een kop bij jou als lezer losmaken?",
-          null,
+          "Een kop is maar een paar woorden lang. Passen daar zes antwoorden in?",
+          "Hoort de mening van de journalist in een nieuwsbericht?",
+          "Waar staat de naam van de schrijver meestal: in de kop of ergens anders?",
         ],
         uitlegPad: {
           stappen: [
@@ -180,19 +180,19 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         },
       },
       {
-        q: "Hoe noem je de zes vragen die een journalist probeert te beantwoorden in een nieuwsbericht?",
+        q: "Welke zes gouden vragen probeert een journalist te beantwoorden in een nieuwsbericht?",
         options: [
-          "De zes gouden vragen: wie, wat, waar, wanneer, waarom en hoe",
-          "De vijf W's: wie, wat, waar, wanneer en waarom (zonder hoe)",
-          "De drie H's: hoe, hoeveel en hoelang",
-          "De vier W's: wat, waar, wanneer en wie (zonder waarom en hoe)",
+          "Wie, wat, waar, wanneer, waarom en hoe",
+          "Wie, wat, waar, wanneer, waarom en hoeveel",
+          "Wie, wat, welke, wanneer, waarom en hoe",
+          "Wie, wat, waar, wanneer, hoelang en hoe",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Er is ook een zesde vraag die begint met een andere letter. Welke is dat?",
-          null,
-          "Er zijn zes vragen, niet vier. Welke twee ontbreken hier?",
+          "'Hoeveel' is een detail. Mis je hier geen vraag naar de manier waarop iets gebeurde?",
+          "Mis je hier niet een vraag naar de plek van het nieuws?",
+          "Mis je hier niet een vraag naar de reden?",
         ],
         uitlegPad: {
           stappen: [
@@ -203,7 +203,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           niveaus: {
             basis: "Hoeveel gouden vragen zijn er — en welke letters beginnen ze?",
             simpeler: "De vijf W's ken je misschien al. Welke extra vraag hoort er ook bij?",
-            nogSimpeler: "Zoek het antwoord dat zes vragen noemt en ook 'hoe' erbij heeft.",
+            nogSimpeler: "Zoek het rijtje met de vijf W's (wie, wat, waar, wanneer, waarom) én 'hoe'.",
           },
         },
       },
@@ -238,17 +238,17 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
       {
         q: "Wat is het verschil tussen een kop en de eerste alinea van een nieuwsbericht?",
         options: [
-          "De kop maakt je nieuwsgierig; de eerste alinea geeft het belangrijkste nieuws",
-          "De kop geeft details; de eerste alinea geeft alleen de mening van de journalist",
-          "De kop is altijd waar; de eerste alinea mag overdrijven",
-          "Ze bevatten precies dezelfde informatie, maar in een andere volgorde",
+          "De kop maakt nieuwsgierig; de eerste alinea geeft het belangrijkste",
+          "De kop geeft de details; de eerste alinea geeft de mening",
+          "De kop geeft het hele nieuws; de eerste alinea maakt nieuwsgierig",
+          "Ze geven hetzelfde nieuws, alleen in een andere volgorde",
         ],
         answer: 0,
         wrongHints: [
           null,
           "De details staan juist verderop, niet in de kop. En meningen horen niet in een nieuwsbericht thuis.",
-          null,
-          "Een kop is maar een paar woorden en de eerste alinea is al een stuk langer. Ze kunnen onmogelijk dezelfde informatie bevatten.",
+          "Is het niet net andersom? Hoeveel nieuws past er in een paar woorden?",
+          "Een kop is maar een paar woorden en de eerste alinea is al een stuk langer. Kan daar hetzelfde in staan?",
         ],
         uitlegPad: {
           stappen: [
@@ -269,7 +269,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           "Het belangrijkste eerst, kleine details later",
           "Alles op volgorde van de klok, van 's ochtends tot 's avonds",
           "Kleine details eerst, het belangrijkste als verrassing op het eind",
-          "In willekeurige volgorde, dat maakt niet uit",
+          "Eerst de mening van de journalist, dan de feiten",
         ],
         answer: 0,
         evidence: "De rest — details, van belangrijk naar minder belangrijk. Onderaan staan de kleinste weetjes.",
@@ -277,7 +277,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           null,
           "Dat past bij een verhaal of een dagboek. Denk aan de lezer die haast heeft — wat moet díé als eerste zien?",
           "Zo werkt een spannend verhaal, maar een journalist wil je juist niet laten wachten. Waar zet hij het grote nieuws?",
-          null,
+          "Hoort de mening van de journalist in een nieuwsbericht?",
         ],
         uitlegPad: {
           stappen: [
@@ -357,17 +357,17 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
       {
         q: "Je leest een lang nieuwsbericht over een voetbaltoernooi. Je zoekt een klein weetje: hoe oud de jongste toeschouwer was. Waar kijk je het best?",
         options: [
-          "Verderop in het bericht, bij de details",
+          "Verderop in het bericht",
           "In de kop boven het bericht",
-          "Alleen in de allereerste zin",
-          "Nergens, dat staat nooit in een nieuwsbericht",
+          "In de eerste alinea, bij het hoofdnieuws",
+          "In het bijschrift onder de foto",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een kop is maar een paar woorden lang. Is daar plek voor kleine weetjes?",
-          null,
-          null,
+          "Staat in de eerste alinea het hoofdnieuws, of de kleine weetjes?",
+          "Gaat een bijschrift over wat er op de foto staat, of over alle weetjes?",
         ],
         uitlegPad: {
           stappen: [
@@ -544,7 +544,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
       {
         q: "Waarom moest er een nieuwe speeltoren komen?",
         options: [
-          "De oude toren was afgekeurd omdat het hout begon te rotten",
+          "Het hout van de oude toren begon te rotten",
           "De leerlingen vonden de oude toren te klein",
           "De directeur wilde een cadeau voor de school",
           "De oude toren was omgewaaid tijdens een storm",
@@ -555,7 +555,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           null,
           "Over de grootte van de oude toren zegt het bericht niets. Zoek de zin met het woordje 'omdat'.",
           null,
-          "Een storm staat niet in dít bericht. Wat was er mis met het hout van de oude toren?",
+          "Een storm staat niet in dít bericht. Zoek de zin met het woordje 'omdat'.",
         ],
         uitlegPad: {
           stappen: [
@@ -635,8 +635,8 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
       {
         q: "Hoe kwam het geld voor de nieuwe toren bij elkaar?",
         options: [
-          "Alle leerlingen liepen een sponsorloop door het dorp",
-          "De gemeente betaalde de hele toren",
+          "De leerlingen liepen een sponsorloop",
+          "De gemeente betaalde de toren",
           "De school leende het geld van een bank",
           "Ouders verkochten zelfgebakken koeken",
         ],
@@ -727,16 +727,16 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
         q: "Wie mogen er na schooltijd op de nieuwe speeltoren spelen?",
         options: [
           "Kinderen uit de hele buurt",
-          "Alleen de leerlingen van groep 6",
-          "Alleen kinderen die meeliepen met de sponsorloop",
-          "Niemand, na schooltijd is de toren dicht",
+          "De leerlingen van groep 6",
+          "De kinderen die de sponsorloop liepen",
+          "De leerlingen van De Klimboom",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Milan zit in groep 6, maar zegt de tekst dat de toren alleen voor zijn groep is?",
-          null,
-          "Lees de laatste alinea: wanneer is de toren open?",
+          "Milan zit in groep 6, maar zegt de tekst dat de toren voor zijn groep is?",
+          "Zegt de tekst dat je mee moest lopen om te mogen spelen?",
+          "Lees de laatste alinea: zijn het alleen de eigen leerlingen?",
         ],
         uitlegPad: {
           stappen: [
@@ -852,10 +852,10 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
       {
         q: "De kop luidt: *\"Bloemwijk verandert in gatenkaas\"*. In de tekst staat: *\"In de Dorpsstraat zitten twaalf gaten in het wegdek.\"* Wat leer je hiervan over koppen?",
         options: [
-          "Een kop mag overdrijven om je nieuwsgierig te maken; de precieze informatie staat in de tekst",
-          "De hele wijk zit vol gaten, dat zegt de kop immers",
-          "Het bericht klopt niet, want de kop en de tekst zeggen iets anders",
-          "De journalist heeft de kop per ongeluk boven het verkeerde bericht gezet",
+          "Een kop mag overdrijven; de precieze informatie staat in de tekst",
+          "De kop geeft het precieze nieuws; de tekst geeft één voorbeeld",
+          "Kop en tekst spreken elkaar tegen, dus het bericht klopt niet",
+          "De kop is een grapje; de tekst gaat over iets anders",
         ],
         answer: 0,
         evidence: "Neem een kop dus nooit letterlijk: de precieze informatie staat in de tekst.",
@@ -863,7 +863,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           null,
           "Vergelijk met de tekst: hoeveel gaten worden er écht genoemd, en in hoeveel straten?",
           "Kop en tekst horen bij hetzelfde nieuws — de één is alleen wat schreeuweriger. Waarvoor dient een kop ook alweer?",
-          null,
+          "Gaan de kop en de tekst allebei over gaten in de weg?",
         ],
         uitlegPad: {
           stappen: [
@@ -895,7 +895,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           "Een mening — het is wat Ties ervan vindt",
           "Een feit — het staat in een nieuwsbericht, dus het is waar",
           "Een feit — Ties was er zelf bij, dus hij weet het zeker",
-          "Geen van beide — het is een grap van de journalist",
+          "Een feit — de journalist heeft het opgeschreven",
         ],
         answer: 0,
         evidence: "Let extra op bij een citaat (uitspraak tussen aanhalingstekens): dat zijn de woorden van díé persoon.",
@@ -903,7 +903,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           null,
           "In een nieuwsbericht staan feiten én uitspraken van mensen door elkaar. Kun je nameten of een feest 'het gezelligste' was?",
           "Ties was erbij, dat wel — maar een ander die erbij was kan het feest saai gevonden hebben. Wat zegt dat over zijn uitspraak?",
-          null,
+          "Wie zegt het: de journalist of Ties? En kun je 'gezelligste' nameten?",
         ],
         uitlegPad: {
           stappen: [
@@ -1054,14 +1054,14 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           "Een feit — je kunt nameten hoe lang de baan is",
           "Een mening — het staat tussen aanhalingstekens",
           "Een mening — Kees werkt zelf bij de ijsbaan",
-          "Geen van beide — het is een grapje van Kees",
+          "Een mening — Kees zegt 'onze', dus hij is trots",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Aanhalingstekens laten zien dat iemand iets zegt. Maar maakt dat van elke uitspraak een mening? Kun je dit controleren?",
           null,
-          null,
+          "Maakt het woordje 'onze' een lengte minder controleerbaar?",
         ],
         uitlegPad: {
           stappen: [
@@ -1277,7 +1277,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
           "Een mening van buurvrouw De Wit",
           "Een feit, want het staat in een nieuwsbericht",
           "Een feit, want mevrouw De Wit woont er vlakbij",
-          "Een fout van de journalist",
+          "Een mening van de journalist",
         ],
         answer: 0,
         evidence: "\"Dit is het spannendste dat hier ooit is gebeurd\", zegt buurvrouw De Wit lachend.",
@@ -1285,7 +1285,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
           null,
           "In een nieuwsbericht mogen mensen geciteerd worden — en mensen zeggen niet alleen feiten. Kun je 'het spannendste ooit' nameten?",
           "Dichtbij wonen maakt je uitspraak niet controleerbaar. Zou een andere buur het misschien helemaal niet spannend gevonden kunnen hebben?",
-          null,
+          "Wie zegt deze zin: de journalist of iemand anders?",
         ],
         uitlegPad: {
           stappen: [
@@ -1359,7 +1359,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
       {
         q: "De kop zegt: *\"Heel Zandhoven in de ban van ontsnapte alpaca\"*. Wat kun je hierover zeggen na het lezen van de tekst?",
         options: [
-          "De kop overdrijft: veel mensen hielpen, maar niet letterlijk iedereen",
+          "De kop overdrijft: niet echt iedereen hielp mee",
           "Elke inwoner van Zandhoven heeft meegezocht naar Berry",
           "De kop klopt niet, want niemand in het dorp wist van de ontsnapping",
           "De kop gaat eigenlijk over de storm van het weekend",

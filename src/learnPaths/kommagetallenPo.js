@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat cijfer staat direct ná de komma. Is dat de eerste of de tweede plek?",
-          null,
+          "De 6 staat vóór de komma. Waar staan de honderdsten?",
           "Kijk naar de cijfers ná de komma, niet ervoor.",
         ],
         uitlegPad: {
@@ -189,7 +189,7 @@ const steps = [
         wrongHints: [
           null,
           "Vergeet je niet een cijfer ná de komma?",
-          null,
+          "Is 6,04 hetzelfde als 6,40?",
           "Kijk nog eens naar het cijfer vóór de komma.",
         ],
         uitlegPad: {
@@ -240,7 +240,7 @@ const steps = [
         wrongHints: [
           null,
           "Op welke plek ná de komma staat de 1: de eerste of de tweede?",
-          null,
+          "Een kwart is 0,25. Is 0,1 even groot?",
           "Een half is 0,5. Is 0,1 even groot?",
         ],
         uitlegPad: {
@@ -287,8 +287,8 @@ const steps = [
         wrongHints: [
           null,
           "Meer cijfers betekent niet automatisch groter. Vergelijk eerst de tienden.",
-          null,
-          null,
+          "Vergelijk eerst de tienden van alle getallen.",
+          "Kijk naar het cijfer direct ná de komma. Is dat groot?",
         ],
         uitlegPad: {
           stappen: [
@@ -334,7 +334,7 @@ const steps = [
         wrongHints: [
           null,
           "De cijfers ná de komma zijn stukjes, geen hele getallen.",
-          null,
+          "Staat de 6 op de tienden- of op de honderdsten-plek?",
           "Wat is de waarde van de 5 vóór de komma: eenheden of tientallen?",
         ],
         uitlegPad: {
@@ -385,7 +385,7 @@ const steps = [
         wrongHints: [
           null,
           "Staat de 3 bij dit getal vóór of ná de komma?",
-          null,
+          "Welk cijfer staat direct ná de komma in 8,13?",
           "De tienden-plek is de eerste plek ná de komma. Welk cijfer staat daar hier?",
         ],
         uitlegPad: {
@@ -481,7 +481,7 @@ const steps = [
         wrongHints: [
           null,
           "Staan de komma's recht onder elkaar? Schrijf 6,3 eerst als 6,30.",
-          null,
+          "Moet je hier optellen of aftrekken?",
           "Tel de hele getallen vóór de komma nog eens na.",
         ],
         uitlegPad: {
@@ -529,7 +529,7 @@ const steps = [
           null,
           "Je kunt 6 niet zomaar van 4 afhalen. Wat doe je dan bij gewoon aftrekken?",
           "Moet je erbij doen of eraf halen?",
-          null,
+          "Reken terug: 4,8 + 3,6 = ? Is dat 9,4?",
         ],
         uitlegPad: {
           stappen: [
@@ -579,7 +579,7 @@ const steps = [
         wrongHints: [
           null,
           "Is 3 een heel getal of drie tienden? Schrijf 3 als 3,0.",
-          null,
+          "Is 0,6 zes tienden of zes honderdsten? Schrijf 3 als 3,0 en zet de komma's onder elkaar.",
           "Waar is de komma gebleven?",
         ],
         uitlegPad: {
@@ -627,7 +627,7 @@ const steps = [
           null,
           "Reken de centen nog eens na: 35 + 40.",
           "Samen betekent optellen. Heb je dat gedaan?",
-          null,
+          "Tel de hele euro's nog eens: 1 + 2 = ?",
         ],
         uitlegPad: {
           stappen: [
@@ -673,7 +673,7 @@ const steps = [
         wrongHints: [
           null,
           "Een nul direct ná de komma verschuift de 3. Verandert het getal dan?",
-          null,
+          "Twee nullen vóór de 3 schuiven die naar de duizendsten. Blijft het getal dan gelijk?",
           "Kijk naar het hele deel vóór de komma.",
         ],
         uitlegPad: {
@@ -721,7 +721,7 @@ const steps = [
           null,
           "Schrijf 8,5 als 8,50 en zet de komma's recht onder elkaar.",
           "Moet je erbij doen of eraf halen?",
-          null,
+          "Reken terug: 6,35 + 2,25 = ? Is dat 8,5?",
         ],
         uitlegPad: {
           stappen: [
@@ -817,7 +817,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel cijfers ná de komma hebben de twee getallen samen?",
-          null,
+          "Tel de cijfers ná de komma: hoeveel heeft 0,7 en hoeveel 0,3?",
           "Heb je vermenigvuldigd of opgeteld?",
         ],
         uitlegPad: {
@@ -865,7 +865,7 @@ const steps = [
         q: "**1,6 × 4** = ?",
         options: ["6,4", "64", "0,64", "5,6"],
         answer: 0,
-        wrongHints: [null, "Waar is de komma gebleven?", null, "Is dit een plus-som of een keer-som?"],
+        wrongHints: [null, "Waar is de komma gebleven?", "Schat eerst: 1,6 × 4 is ongeveer 2 × 4. Past 0,64 daarbij?", "Is dit een plus-som of een keer-som?"],
         uitlegPad: {
           stappen: [
             {
@@ -914,7 +914,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel de cijfers ná de komma in beide getallen samen.",
-          null,
+          "0,4 is bijna een half. Is 0,1 ongeveer de helft van 2,5?",
           "Je moet vermenigvuldigen, niet optellen.",
         ],
         uitlegPad: {
@@ -965,7 +965,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel de cijfers ná de komma in 1,25 én in 0,3.",
-          null,
+          "Schat: 1,25 × 0,3 is minder dan 1,25. Kan het dan 37,5 zijn?",
           "Tel nog eens: hoeveel cijfers staan er samen ná de komma?",
         ],
         uitlegPad: {
@@ -1013,7 +1013,7 @@ const steps = [
         q: "**3,9 × 5** = ?",
         options: ["19,5", "1,95", "195", "8,9"],
         answer: 0,
-        wrongHints: [null, "Schat eerst: 3,9 is bijna 4. Hoeveel is 4 × 5?", "Komma vergeten?", null],
+        wrongHints: [null, "Schat eerst: 3,9 is bijna 4. Hoeveel is 4 × 5?", "Komma vergeten?", "Moet je hier optellen of keer doen?"],
         uitlegPad: {
           stappen: [
             {
@@ -1062,7 +1062,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel cijfers ná de komma hebben de twee getallen samen?",
-          null,
+          "Schat: 1,3 × 1,1 is iets meer dan 1,3. Past 0,143 daarbij?",
           "Is dit een plus-som of een keer-som?",
         ],
         uitlegPad: {
@@ -1125,7 +1125,7 @@ const steps = [
         q: "**2,4 ÷ 0,3** = ?",
         options: ["8", "0,8", "80", "0,08"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je de komma's wel verschoven? (24 ÷ 3)", "Te veel — komma 1 plaats te ver.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — heb je de komma's wel verschoven? (24 ÷ 3)", "Te veel — komma 1 plaats te ver.", "Hoe vaak past 0,3 in 2,4? Meer of minder dan 1 keer?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschuif komma", tekst: "0,3 heeft 1 cijfer ná komma. Schuif komma in beide getallen 1 plaats: 2,4 → 24, 0,3 → 3." },
@@ -1146,7 +1146,7 @@ const steps = [
         q: "**3,6 ÷ 0,4** = ?",
         options: ["9", "0,9", "14,4", "0,09"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je de komma's wel verschoven? (36 ÷ 4)", "Dat is 3,6 × 4 — je moet juist delen.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — heb je de komma's wel verschoven? (36 ÷ 4)", "Dat is 3,6 × 4 — je moet juist delen.", "Hoe vaak past 0,4 in 3,6? Meer of minder dan 1 keer?"],
       },
       {
         q: "Een lint van **9,6 m** wordt in stukjes van **0,8 m** geknipt. **Hoeveel stukjes**?",
@@ -1162,7 +1162,7 @@ const steps = [
         wrongHints: [
           null,
           "Waar komt de komma in het antwoord? Op dezelfde plek als in 9,3.",
-          null,
+          "Schat: 9,3 ÷ 3 is ongeveer 9 ÷ 3. Past 0,31 daarbij?",
           "Moet je delen of keer doen?",
         ],
         uitlegPad: {
@@ -1209,7 +1209,7 @@ const steps = [
         wrongHints: [
           null,
           "Heb je de komma's in beide getallen verschoven? (45 ÷ 5)",
-          null,
+          "Schat: hoe vaak past 0,5 in 5? Kan het dan 90 zijn?",
           "Delen door 0,5 is niet hetzelfde als delen door 2. Hoe vaak past 0,5 in 4,5?",
         ],
         uitlegPad: {
@@ -1256,7 +1256,7 @@ const steps = [
         wrongHints: [
           null,
           "Heb je de komma's wel verschoven? (72 ÷ 9)",
-          null,
+          "Schat: hoe vaak past bijna 1 in 7,2? Kan het dan 80 zijn?",
           "Dat is 7,2 × 0,9. Je moet juist delen.",
         ],
         uitlegPad: {
@@ -1303,7 +1303,7 @@ const steps = [
         wrongHints: [
           null,
           "Schuif je de komma in béide getallen?",
-          null,
+          "Is 0,6 nu al een heel getal? Schuif de komma in béide getallen even ver.",
           "Hoeveel plaatsen moet je schuiven om van 0,6 een heel getal te maken?",
         ],
         uitlegPad: {
@@ -1350,7 +1350,7 @@ const steps = [
         wrongHints: [
           null,
           "Kan er in één glas meer zitten dan in de hele fles?",
-          null,
+          "Moet je verdelen of keer doen?",
           "Waar komt de komma? 12 ÷ 4 = 3, dus 1,2 ÷ 4 = …",
         ],
         uitlegPad: {
@@ -1451,7 +1451,7 @@ const steps = [
         wrongHints: [
           null,
           "Schrijf € 5 als € 5,00 en trek dan af.",
-          null,
+          "Reken terug: € 2,75 + € 2,35 = ? Is dat € 5?",
           "Terugkrijgen betekent aftrekken, niet optellen.",
         ],
         uitlegPad: {
@@ -1498,7 +1498,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel mL zit er in 1 liter?",
-          null,
+          "Is 0,25 liter meer of minder dan 1 liter? En 2500 mL?",
           "Is 0,25 liter meer of minder dan 1 liter? En hoeveel mL is 1 liter?",
         ],
         uitlegPad: {
@@ -1545,7 +1545,7 @@ const steps = [
         wrongHints: [
           null,
           "Is een halve kilo duurder of goedkoper dan een hele kilo?",
-          null,
+          "Een halve kilo is de helft van een kilo. Is € 0,24 de helft van € 2,40?",
           "Moet je de prijs en het gewicht optellen?",
         ],
         uitlegPad: {
@@ -1592,7 +1592,7 @@ const steps = [
         wrongHints: [
           null,
           "Staan de komma's recht onder elkaar? Schrijf 1,2 als 1,20.",
-          null,
+          "Reken terug: 1,2 + 0,33 = ? Is dat 1,35?",
           "Hoeveel verder vraagt om het verschil, niet om de twee sprongen samen.",
         ],
         uitlegPad: {
@@ -1663,7 +1663,7 @@ const steps = [
         q: "**8,4 ÷ 0,7** = ?",
         options: ["12", "1,2", "120", "0,12"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je de komma's verschoven? (84 ÷ 7)", "Komma te ver naar rechts.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — heb je de komma's verschoven? (84 ÷ 7)", "Komma te ver naar rechts.", "Hoe vaak past 0,7 in 8,4? Meer of minder dan 1 keer?"],
       },
       {
         q: "Een doos met **0,25 kg** koekjes. **4 dozen** wegen samen?",
@@ -1691,18 +1691,18 @@ const steps = [
           },
         },
       },
-      { q: "0,3 + 0,4 = ?", options: ["0,7","0,07","7","0,1"], answer: 0, wrongHints: [null, "Komma fout.", "Niet — komma vergeten.", "Niet."] },
-      { q: "1,5 + 2,7 = ?", options: ["4,2","3,2","4,12","42"], answer: 0, wrongHints: [null, "Niet.", "Niet zo schrijven.", "Komma weg."] },
-      { q: "5 − 0,3 = ?", options: ["4,7","4,3","5,3","53"], answer: 0, wrongHints: [null, "Niet.", "Niet — eraf, niet erbij.", "Niet."] },
-      { q: "0,2 × 5 = ?", options: ["1","10","0,1","0,7"], answer: 0, wrongHints: [null, "Komma vergeten.", "Niet.", "Niet."] },
-      { q: "Welke is groter: 0,5 of 0,15?", options: ["0,5","0,15","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — 'meer cijfers' ≠ groter.", "Niet.", "Wel — vergelijken."] },
+      { q: "0,3 + 0,4 = ?", options: ["0,7","0,07","7","0,1"], answer: 0, wrongHints: [null, "Je telt tienden bij tienden op. Krijg je dan honderdsten?", "Waar is de komma gebleven? 0,3 en 0,4 zijn allebei kleiner dan 1.", "Je hebt 0,4 − 0,3 gedaan. Moet je hier aftrekken?"] },
+      { q: "1,5 + 2,7 = ?", options: ["4,2","3,2","4,12","42"], answer: 0, wrongHints: [null, "Hoeveel is 5 tienden + 7 tienden? Dat is meer dan 1 hele.", "12 tienden kun je niet zo achter de komma zetten. Hoeveel hele zitten erin?", "Waar is de komma gebleven?"] },
+      { q: "5 − 0,3 = ?", options: ["4,7","4,3","5,3","53"], answer: 0, wrongHints: [null, "Schrijf 5 als 5,0. Hoeveel is 5,0 − 0,3?", "Je hebt 0,3 erbij gedaan. Moet het eraf of erbij?", "Waar is de komma gebleven?"] },
+      { q: "0,2 × 5 = ?", options: ["1","10","0,1","0,7"], answer: 0, wrongHints: [null, "Kan 5 keer een klein getal als 0,2 zo groot worden? Tel 0,2 vijf keer op.", "Je hebt 0,2 ÷ 2 gedaan. Tel 0,2 vijf keer op.", "Je hebt 0,2 + 0,5 gedaan. Moet je hier plus of keer doen?"] },
+      { q: "Welk getal is groter: 0,5 of 0,15?", options: ["0,5","0,15","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Meer cijfers betekent niet groter. Vergelijk het cijfer direct ná de komma.", "Vergelijk het cijfer direct ná de komma. Is dat bij allebei hetzelfde?", "Je kunt het wél zeggen: kijk naar de tienden."] },
       { q: "Schrijf ½ als kommagetal", options: ["0,5","0,2","0,1","0,05"], answer: 0, wrongHints: [null, "Dat is ⅕.", "Dat is ¹⁄₁₀.", "Dat is ¹⁄₂₀."] },
-      { q: "€ 1,25 + € 0,75 = ?", options: ["€ 2,00","€ 1,50","€ 2,25","€ 20,00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Komma weg."] },
-      { q: "Rond 7,38 af op één decimaal", options: ["7,4","7,3","7,0","8,0"], answer: 0, wrongHints: [null, "Niet — 8 ≥ 5.", "Te ver.", "Te ver."] },
-      { q: "0,8 × 10 = ?", options: ["8","80","0,08","0,8"], answer: 0, wrongHints: [null, "Te veel.", "Andersom.", "Niet veranderd."] },
-      { q: "Welke is het kleinst: 0,4 / 0,04 / 0,44?", options: ["0,04","0,4","0,44","Gelijk"], answer: 0, wrongHints: [null, "Tiende.", "Groter.", "Niet — andere getallen."] },
-      { q: "1,75 = welke breuk?", options: ["1¾","1¼","1⅓","1⅖"], answer: 0, wrongHints: [null, "Dat is 1,25.", "≈ 1,33.", "≈ 1,4."] },
-      { q: "10,5 ÷ 5 = ?", options: ["2,1","2,5","21","5,5"], answer: 0, wrongHints: [null, "Niet.", "Komma weg.", "Niet."] },
+      { q: "€ 1,25 + € 0,75 = ?", options: ["€ 2,00","€ 1,50","€ 2,25","€ 20,00"], answer: 0, wrongHints: [null, "Tel de centen: 25 + 75. Hoeveel is dat?", "Reken terug: € 2,25 − € 0,75 = ? Is dat € 1,25?", "Kost dit samen twintig euro? Waar hoort de komma?"] },
+      { q: "Rond 7,38 af op één decimaal", options: ["7,4","7,3","7,0","8,0"], answer: 0, wrongHints: [null, "Kijk naar het cijfer na de 3. Rond je dan naar boven of naar beneden af?", "Je moet op één cijfer ná de komma afronden, niet op een heel getal.", "Dat is afgerond op een heel getal. Hoeveel cijfers ná de komma moeten er blijven?"] },
+      { q: "0,8 × 10 = ?", options: ["8","80","0,08","0,8"], answer: 0, wrongHints: [null, "Bij × 10 schuift de komma één plaats. Hoeveel plaatsen schoof jij?", "Wordt een getal groter of kleiner als je × 10 doet?", "Er is niets veranderd. Wat doet × 10 met een getal?"] },
+      { q: "Welk getal is het kleinst: 0,4, 0,04 of 0,44?", options: ["0,04","0,4","0,44","Even groot"], answer: 0, wrongHints: [null, "0,4 zijn 4 tienden. Vergelijk het cijfer direct ná de komma.", "0,44 is meer dan 0,4. Zoek het kleinste.", "Kijk naar het cijfer direct ná de komma: is dat overal hetzelfde?"] },
+      { q: "Welke breuk is gelijk aan 1,75?", options: ["1¾","1¼","1⅓","1⅖"], answer: 0, wrongHints: [null, "Dat is 1,25.", "≈ 1,33.", "≈ 1,4."] },
+      { q: "10,5 ÷ 5 = ?", options: ["2,1","2,5","21","5,5"], answer: 0, wrongHints: [null, "Reken terug: 2,5 × 5 = ? Is dat 10,5?", "Waar is de komma gebleven?", "Je hebt 5 afgetrokken. Wat betekent ÷?"] },
       { q: "Welke is **gelijk** aan 0,25?", options: ["¼","½","⅛","⅓"], answer: 0, wrongHints: [null, "Dat is 0,5.", "Dat is 0,125.", "≈ 0,33."] },
     ],
   },

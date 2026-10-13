@@ -110,8 +110,8 @@ const steps = [
         wrongHints: [
           null,
           "Een recept vertelt je ook dingen. Maar wat moet jij er daarna mee doen?",
-          null,
-          null,
+          "Wil een recept je ergens van overtuigen, of zegt het wat je moet doen?",
+          "Is een recept bedoeld om om te lachen?",
         ],
         uitlegPad: {
           stappen: [
@@ -154,7 +154,7 @@ const steps = [
         q: "Wat is het **tekstdoel** van een **mop** in een moppenboek?",
         options: ["Amuseren", "Instrueren", "Informeren", "Overtuigen"],
         answer: 0,
-        wrongHints: [null, null, "Leer je van een mop vooral nieuwe feiten?", null],
+        wrongHints: [null, "Staan er in een mop stappen die je moet uitvoeren?", "Leer je van een mop vooral nieuwe feiten?", "Wil een mop je van een mening overtuigen?"],
         uitlegPad: {
           stappen: [
             {
@@ -198,8 +198,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          null,
-          null,
+          "Staan er stappen in die je moet uitvoeren?",
+          "Is deze brief bedoeld om om te lachen?",
           "Geeft de schrijver alleen feiten, of wil hij dat jij het met hem eens bent?",
         ],
         uitlegPad: {
@@ -243,12 +243,12 @@ const steps = [
         q: "Volgens de toets-truc: waar vind je het **tekstdoel** meestal?",
         options: [
           "In de eerste en de laatste zin",
-          "In de langste zin",
-          "Midden in de tekst",
-          "In de kleinste letters",
+          "In de langste zin van de tekst",
+          "In de middelste alinea van de tekst",
+          "In de voorbeelden in de tekst",
         ],
         answer: 0,
-        wrongHints: [null, "Hoe lang een zin is, zegt dat iets over het doel?", null, null],
+        wrongHints: [null, "Hoe lang een zin is, zegt dat iets over het doel?", "Waar zet een schrijver zijn bedoeling meestal neer: tussen de details, of op een plek die opvalt?", "Voorbeelden zijn details. Waar zet een schrijver meestal zijn bedoeling neer?"],
         uitlegPad: {
           stappen: [
             {
@@ -335,9 +335,9 @@ const steps = [
       },
       {
         q: "Welke zin past in een **formele** brief aan de schooldirecteur?",
-        options: ['Graag wil ik een afspraak met u maken.', 'Hey, kan ik morgen even bij je langskomen?', 'Yo, ik kom morgen effe langs, oké?', 'Doei, tot snel en de groetjes!'],
+        options: ['Graag wil ik een afspraak met u maken.', 'Graag wil ik een afspraak met je maken.', 'Hoi, kan ik morgen even bij je langskomen?', 'Ik kom morgen effe langs, is dat oké?'],
         answer: 0,
-        wrongHints: [null, 'Veel te informeel — \'hey\' is geen formele aanhef.', '\'Yo\' en \'effe\' zijn spreektaal, niet formeel.', 'Dat is een afsluiting, geen verzoek.'],
+        wrongHints: [null, 'Welke vorm hoort in een formele brief: je of u?', 'Begin je een formele brief met \'hoi\'?', '\'Effe\' en \'oké\' zijn spreektaal. Horen die in een formele brief?'],
         uitlegPad: {
           stappen: [{ titel: "Formeel verzoek", tekst: "'Hierbij wil ik u graag verzoeken' is **beleefd**, gebruikt **u-vorm** en heeft een **duidelijk doel** (afspraak). Past bij formele brief aan directeur." }],
           woorden: [{ woord: "verzoeken", uitleg: "Beleefd vragen om iets." }, { woord: "register", uitleg: "Toon van een tekst — formeel of informeel." }],
@@ -364,12 +364,12 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Je mailt je **beste vriendin** Lisa. Welke aanhef past?",
-        options: ["Hoi Lisa,", "Geachte mevrouw,", "Geachte heer,", "Met vriendelijke groet,"],
+        options: ["Hoi Lisa,", "Beste mevrouw De Vries,", "Geachte Lisa,", "Met vriendelijke groet,"],
         answer: 0,
         wrongHints: [
           null,
-          "Schrijf je zo aan iemand die je goed kent?",
-          null,
+          "Spreek je je beste vriendin aan met 'mevrouw' en haar achternaam?",
+          "'Geachte' schrijf je aan iemand die je niet goed kent. Is Lisa dat?",
           "Staat dit aan het begin of aan het eind van een brief?",
         ],
         uitlegPad: {
@@ -414,11 +414,11 @@ const steps = [
         options: [
           "Met vriendelijke groet, Noor Bakker",
           "Groetjes en tot snel, Noor",
-          "Liefs en een knuffel, Noor",
-          "Doei doei, je Noor",
+          "Veel liefs van Noor Bakker",
+          "Tot de volgende keer, Noor",
         ],
         answer: 0,
-        wrongHints: [null, "Schrijf je 'groetjes' aan iemand die je niet kent?", null, null],
+        wrongHints: [null, "Schrijf je 'groetjes' aan iemand die je niet kent?", "Schrijf je 'liefs' aan een bedrijf?", "Klinkt dit als een brief aan een vriendin of aan een bedrijf?"],
         uitlegPad: {
           stappen: [
             {
@@ -460,7 +460,7 @@ const steps = [
         q: "*'Beste Sanne, kom je zaterdag op mijn feestje?'* Wat voor bericht is dit?",
         options: ["Informeel", "Formeel", "Reclame", "Handleiding"],
         answer: 0,
-        wrongHints: [null, "Kijk wat er na 'Beste' komt: een voornaam of een achternaam?", null, null],
+        wrongHints: [null, "Kijk wat er na 'Beste' komt: een voornaam of een achternaam?", "Probeert Sanne je iets te verkopen?", "Staan er stappen in die je moet uitvoeren?"],
         uitlegPad: {
           stappen: [
             {
@@ -511,7 +511,7 @@ const steps = [
           null,
           "Welke vorm gebruik je in een formele e-mail: jij of u?",
           "Horen afkortingen en smileys in formele post?",
-          null,
+          "Begin je een formele e-mail met 'hé'?",
         ],
         uitlegPad: {
           stappen: [
@@ -550,7 +550,7 @@ const steps = [
         q: "Wat hoort **niet** in een formele brief?",
         options: ["Smileys en afkortingen", "De u-vorm", "Een beleefde aanhef", "Je voor- en achternaam"],
         answer: 0,
-        wrongHints: [null, "Gebruik je in een formele brief 'u' of niet?", null, null],
+        wrongHints: [null, "Gebruik je in een formele brief 'u' of niet?", "Is een beleefde aanhef juist netjes in een formele brief?", "Zet je je naam onder een formele brief?"],
         uitlegPad: {
           stappen: [
             {
@@ -623,9 +623,9 @@ const steps = [
       },
       {
         q: "Wat hoort NIET in een samenvatting?",
-        options: ["Voorbeelden uit de tekst","De hoofdgedachte","Kern-zinnen per alinea","Conclusie"],
+        options: ["Voorbeelden uit de tekst","De hoofdgedachte","De kernzin van elke alinea","De conclusie van de tekst"],
         answer: 0,
-        wrongHints: [null, "Hoort wel — dat IS de essentie.", "Hoort wel — kern-zinnen vormen de samenvatting.", "Hoort wel — conclusie is vaak hoofdgedachte."],
+        wrongHints: [null, "Hoort wel — dat IS de essentie.", "Hoort wel — de kernzinnen vormen samen de samenvatting.", "Hoort wel — de conclusie is vaak de hoofdgedachte."],
         uitlegPad: {
           stappen: [{ titel: "Voorbeelden = details, niet kern", tekst: "Voorbeelden zoals 'zoals bijvoorbeeld katten en honden' zijn **illustratie** — leuk om de tekst-lezer te helpen, maar niet de **kern**. In samenvatting laat je ze WEG." }],
           woorden: [{ woord: "voorbeeld", uitleg: "Concreet geval ter illustratie van een algemene regel." }],
@@ -637,9 +637,9 @@ const steps = [
       },
       {
         q: "Hoe lang moet een goede samenvatting zijn ten opzichte van de tekst?",
-        options: ["20-30% van de tekst","Even lang","Maar 1 zin","Twee keer zo lang"],
+        options: ["20-30% van de tekst","70-80% van de tekst","45-55% van de tekst","5-10% van de tekst"],
         answer: 0,
-        wrongHints: [null, "Niet — dan vat je niet samen.", "Vaak te kort — kern + sleutelpunten zijn meer dan 1 zin.", "Niet — een samenvatting is altijd korter dan het origineel."],
+        wrongHints: [null, "Dan laat je bijna niets weg. Is dat nog samenvatten?", "Dat is nog vrij lang. Welke vuistregel leerde je?", "Dan blijft er bijna niets over. Mis je dan geen belangrijke punten?"],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel 25%", tekst: "Een Toets-samenvatting = ongeveer **20-30%** van de oorspronkelijke tekst. Bv. 500 woorden tekst → 100-150 woorden samenvatting. Korter? Te weinig info. Langer? Geen samenvatting meer." }],
           woorden: [{ woord: "vuistregel", uitleg: "Algemene richtlijn die meestal klopt." }],
@@ -651,9 +651,9 @@ const steps = [
       },
       {
         q: "Tekst over gezond eten eindigt: *'Kortom, groente en fruit zijn de basis van een gezonde voeding.'* Wat is de hoofdgedachte?",
-        options: ['Groente en fruit zijn de basis van gezonde voeding', 'Iedereen moet elke dag een hele ananas eten', 'Gezond eten kost veel meer geld dan snoep', 'Sporten is belangrijker dan wat je eet'],
+        options: ['Groente en fruit zijn de basis van gezonde voeding', 'Je moet elke dag fruit eten bij het ontbijt', 'Gezond eten kost veel meer geld dan snoep', 'Sporten is belangrijker dan wat je eet'],
         answer: 0,
-        wrongHints: [null, "Niet — dat is een specifiek voorbeeld, niet de hoofdgedachte.", "Niet — de tekst gaat niet over geld.", "Niet — niet het onderwerp van deze tekst."],
+        wrongHints: [null, "Dat is een detail, niet de hoofdgedachte. Welke zin vat alles samen?", "Niet — de tekst gaat niet over geld.", "Niet — niet het onderwerp van deze tekst."],
         uitlegPad: {
           stappen: [{ titel: "Conclusie-zin = hoofdgedachte", tekst: "De zin **direct na 'Kortom'** is de hoofdgedachte. 'Groente en fruit zijn de basis van een gezonde voeding' = exact dat. Geen interpretatie nodig — gewoon kopiëren." }],
           woorden: [{ woord: "hoofdgedachte", uitleg: "De belangrijkste boodschap van de tekst — alles draait hierom." }],
@@ -673,7 +673,7 @@ const steps = [
           "Ook passen ze goed op het huis.",
         ],
         answer: 0,
-        wrongHints: [null, "Dit is waar de hele tekst over gaat. Laat je dat weg?", null, null],
+        wrongHints: [null, "Dit is waar de hele tekst over gaat. Laat je dat weg?", "Gaat deze zin over alle honden, of over één hond als voorbeeld?", "Gaat deze zin over alle honden, of over één hond als voorbeeld?"],
         uitlegPad: {
           stappen: [
             {
@@ -710,13 +710,13 @@ const steps = [
       {
         q: "Welke fout maken veel leerlingen bij samenvatten?",
         options: [
-          "De eerste zin zomaar overnemen",
+          "De eerste zin letterlijk overnemen",
           "De hoofdgedachte opschrijven",
           "Eerst de hele tekst lezen",
           "Voorbeelden weglaten",
         ],
         answer: 0,
-        wrongHints: [null, "Hoort de hoofdgedachte juist wél in een samenvatting?", null, null],
+        wrongHints: [null, "Hoort de hoofdgedachte juist wél in een samenvatting?", "Is het slim om eerst alles te lezen?", "Horen voorbeelden in een samenvatting?"],
         uitlegPad: {
           stappen: [
             {
@@ -763,7 +763,7 @@ const steps = [
         q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Welk argument-soort?",
         options: ["Feit","Voorbeeld","Gevoel","Autoriteit"],
         answer: 0,
-        wrongHints: [null, "Geen concreet geval — algemeen 'gezond houden'.", "'Gezond' is bewijsbaar in onderzoek, geen alleen-gevoel.", "Geen expert wordt aangehaald."],
+        wrongHints: [null, "Geen concreet geval — algemeen 'gezond houden'.", "Zegt de schrijver hoe hij zich voelt, of iets wat je kunt nagaan?", "Geen expert wordt aangehaald."],
         uitlegPad: {
           stappen: [{ titel: "Bewijsbaar = feit", tekst: "'Voetbal houdt je gezond' is **bewijsbaar** via onderzoek/cijfers. Dus feit-argument — sterk type. Beter dan 'omdat ik het leuk vind' (gevoel)." }],
           woorden: [{ woord: "argument", uitleg: "Reden achter een mening." }],
@@ -803,23 +803,23 @@ const steps = [
       },
       {
         q: "Bij een goed opiniestuk: wat doe je met een **tegenargument**?",
-        options: ["Noemen + weerleggen","Negeren","Voor jezelf houden","Bevestigen en stoppen"],
+        options: ["Noemen en weerleggen","Negeren","Alleen kort noemen","Er gelijk in geven"],
         answer: 0,
-        wrongHints: [null, "Niet — je stuk wordt juist sterker als je het noemt.", "Niet — dan ziet de lezer niet dat je 'm hebt overwogen.", "Niet — dan verlies je je eigen punt."],
+        wrongHints: [null, "Niet — je stuk wordt juist sterker als je het noemt.", "Alleen noemen is niet genoeg. Wat doe je daarna met het tegenargument?", "Niet — dan verlies je je eigen punt."],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument toelaten = sterker", tekst: "Toets-truc: noem de **tegenargumenten** ('Sommigen denken dat...'), **weerleg** ze ('...maar dat klopt niet omdat...'), en kom terug naar jouw mening. Dat toont dat je doordenkt." }],
           woorden: [{ woord: "weerleggen", uitleg: "Tegenargument onderuit halen met bewijs." }],
           theorie: "Opbouw opiniestuk: mening → 2-3 argumenten → tegenargument + weerlegging → herhaalde mening (slot).",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Sommigen vinden een schooluniform saai, maar het voorkomt dat kinderen om hun kleren gepest worden.'" }],
           basiskennis: [{ onderwerp: "Niet drogreden-weerlegging", uitleg: "Weerleg met FEIT/voorbeeld, niet met 'jij hebt ongelijk' (= persoonlijke aanval-drogreden)." }],
-          niveaus: { basis: "Noemen + weerleggen.", simpeler: "'Sommigen denken... MAAR...' = sterke opbouw.", nogSimpeler: "Weerleggen" },
+          niveaus: { basis: "Noemen en weerleggen.", simpeler: "'Sommigen denken... MAAR...' = sterke opbouw.", nogSimpeler: "Weerleggen" },
         },
       },
       {
-        q: "*'Of je bent VOOR een uniform op school, of je bent tegen vrijheid.'* — drogreden?",
+        q: "*'Of je bent VOOR een uniform op school, of je bent tegen vrijheid.'* Welke drogreden is dit?",
         options: ["Vals dilemma","Generaliseren","Persoonlijke aanval","Goed argument"],
         answer: 0,
-        wrongHints: [null, "Geen 'iedereen-uitspraak' — wel een nep-keuze.", "Geen aanval op een persoon.", "Niet — wel degelijk een drogreden."],
+        wrongHints: [null, "Staat er een 'iedereen'-uitspraak? Kijk naar 'of … of'.", "Geen aanval op een persoon.", "Niet — wel degelijk een drogreden."],
         uitlegPad: {
           stappen: [{ titel: "Vals dilemma = nep-keuze", tekst: "Deze zin zegt: óf A, óf B. Er is geen middenweg. Maar in werkelijkheid kun je tégen uniformen zijn ÉN voor vrijheid (= optie 3). Dat is een **vals dilemma**." }],
           woorden: [{ woord: "vals dilemma", uitleg: "Drogreden: doen alsof er maar 2 keuzes zijn terwijl er meer mogelijk zijn." }],
@@ -834,12 +834,12 @@ const steps = [
         q: "Mening: *'Ik vind dat we vaker buiten moeten gymmen.'* Welke zin is een **argument** bij deze mening?",
         options: [
           "Want frisse lucht is gezond.",
-          "Onze gymzaal heeft blauwe muren.",
-          "Gisteren hadden we gym.",
-          "Wij gymmen op dinsdag.",
+          "Want in de gymzaal is het lekker warm.",
+          "Gisteren hadden we gym in de zaal.",
+          "Wij gymmen op dinsdag en vrijdag.",
         ],
         answer: 0,
-        wrongHints: [null, "Geeft deze zin een reden waarom buiten gymmen beter is?", null, null],
+        wrongHints: [null, "Is dat een reden vóór buiten gymmen, of juist ertegen?", "Is dit een reden, of vertelt het alleen wat er gebeurde?", "Geeft deze zin een reden waarom buiten gymmen beter is?"],
         uitlegPad: {
           stappen: [
             {
@@ -881,7 +881,7 @@ const steps = [
         q: "*'Snoep is slecht voor je tanden, want de tandarts zegt het.'* Welk soort argument is dit?",
         options: ["Autoriteit", "Gevoel", "Voorbeeld", "Vals dilemma"],
         answer: 0,
-        wrongHints: [null, "Zegt de schrijver hoe hij zich voelt?", null, null],
+        wrongHints: [null, "Zegt de schrijver hoe hij zich voelt?", "Wordt er een voorbeeld uit het echte leven verteld?", "Moet je hier kiezen tussen twee dingen?"],
         uitlegPad: {
           stappen: [
             {
@@ -919,7 +919,7 @@ const steps = [
         q: "*'Ik wil een hond, want ik word er heel blij van.'* Welk soort argument is dit?",
         options: ["Gevoel", "Autoriteit", "Feit", "Voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Wordt er een deskundige genoemd?", null, null],
+        wrongHints: [null, "Wordt er een deskundige genoemd?", "Kun je dit nakijken, of gaat het over hoe de schrijver zich voelt?", "Wordt er een voorbeeld verteld van iets wat gebeurde?"],
         uitlegPad: {
           stappen: [
             {
@@ -957,7 +957,7 @@ const steps = [
         q: "*'Luister niet naar Tim, die snapt er toch niks van.'* Welke drogreden is dit?",
         options: ["Persoonlijke aanval", "Vals dilemma", "Generaliseren", "Het is een goed argument"],
         answer: 0,
-        wrongHints: [null, "Moet je hier kiezen tussen twee dingen?", null, null],
+        wrongHints: [null, "Moet je hier kiezen tussen twee dingen?", "Zegt Tim iets over 'iedereen'? Kijk naar wie er wordt aangesproken.", "Gaat de zin over wat Tim zegt, of over Tim zelf?"],
         uitlegPad: {
           stappen: [
             {
@@ -999,15 +999,15 @@ const steps = [
         q: "Mening: *'Huiswerk is nuttig.'* Welke zin noemt een **tegenargument** én weerlegt het?",
         options: [
           "Sommigen vinden huiswerk saai, maar je leert er veel van.",
-          "Huiswerk is altijd saai en daarom is het slecht voor je.",
-          "Ik maak mijn huiswerk meestal op maandag na het eten.",
+          "Huiswerk is saai en daarom is het slecht voor je.",
+          "Huiswerk is nuttig, maar het kost wel veel tijd.",
           "Iedereen in mijn klas vindt huiswerk echt heel saai.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Deze zin noemt alleen een tegenargument. Wordt het ook weerlegd?",
-          null,
+          "Hier komt het tegenargument als laatste. Wordt het daarna nog weerlegd?",
           "Dit is een iedereen-uitspraak. Wordt er iets weerlegd?",
         ],
         uitlegPad: {
@@ -1058,9 +1058,9 @@ const steps = [
     checks: [
       {
         q: "Welke opbouw past bij een goed **opiniestuk**?",
-        options: ["Mening → argumenten → tegenargument-weerleggen → slot","Inleiding → midden → einde zonder mening","Alleen feiten zonder mening","Stappen 1-2-3 zoals een handleiding"],
+        options: ["Mening → argumenten → tegenargument weerleggen → slot","Inleiding → midden → einde zonder mening","Feit → feit → feit → samenvatting","Stap 1 → stap 2 → stap 3 → klaar"],
         answer: 0,
-        wrongHints: [null, "Niet — opiniestuk MOET een mening hebben.", "Niet — opiniestuk gaat juist over jouw mening.", "Niet — dat is een handleiding-structuur."],
+        wrongHints: [null, "Niet — opiniestuk MOET een mening hebben.", "Waar is de mening? Een opiniestuk gaat juist over wat jij vindt.", "Dat is de opbouw van een handleiding."],
         uitlegPad: {
           stappen: [{ titel: "Opiniestuk-structuur", tekst: "Goede opbouw: 1) Mening (1 zin); 2) 2-3 argumenten met voorbeeld; 3) Tegenargument noemen + weerleggen; 4) Slot-zin (mening herhalen). De toets kijkt naar deze 4 elementen." }],
           niveaus: { basis: "4 stappen: mening, argumenten, tegen weerleggen, slot.", simpeler: "Opiniestuk = jouw mening + redenen + tegenargument-weerleggen.", nogSimpeler: "Opbouw 1" },
@@ -1078,9 +1078,9 @@ const steps = [
       },
       {
         q: "Tekst: *'Sport is belangrijk. Het houdt je gezond. Bovendien leer je samenwerken. Tot slot maakt het je vrolijk.'* Wat is de **hoofdgedachte**?",
-        options: ["Sport is belangrijk","Sport maakt je vrolijk","Sport is moeilijk","Sporters zijn beter"],
+        options: ["Sport is belangrijk","Sport maakt je vrolijk","Sport leert je samenwerken","Sport houdt je gezond"],
         answer: 0,
-        wrongHints: [null, "Dat is 1 argument, niet de hoofdgedachte.", "Niet in de tekst genoemd.", "Niet in de tekst genoemd."],
+        wrongHints: [null, "Dat is 1 argument, niet de hoofdgedachte.", "Dat is 1 argument, niet de hoofdgedachte.", "Dat is 1 argument, niet de hoofdgedachte."],
         uitlegPad: {
           stappen: [{ titel: "Eerste zin = vaak hoofdgedachte", tekst: "'Sport is belangrijk' = de stelling. De zinnen erna geven argumenten (gezond, samenwerken, vrolijk). Hoofdgedachte = de stelling." }],
           niveaus: { basis: "Sport is belangrijk.", simpeler: "Eerste zin = stelling = hoofdgedachte.", nogSimpeler: "Eerste zin." },
@@ -1098,9 +1098,9 @@ const steps = [
       },
       {
         q: "*'Iedereen wil meer huiswerk, dus de school moet het verplichten.'* — wat klopt niet?",
-        options: ["Er wordt gegeneraliseerd","De zin is grammaticaal fout","De school heeft geen recht","De zin is te lang"],
+        options: ["Er wordt gegeneraliseerd","De zin is grammaticaal fout","De school heeft geen recht","Er wordt iemand persoonlijk aangevallen"],
         answer: 0,
-        wrongHints: [null, "Niet — grammaticaal klopt het.", "Niet de kwestie hier — kijk naar 'iedereen'.", "Niet — lengte is geen probleem."],
+        wrongHints: [null, "Niet — grammaticaal klopt het.", "Zegt de zin iets over wat de school mag?", "Wordt hier een persoon uitgescholden?"],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' is een **generalisatie** — niet bewijsbaar (er zijn vast leerlingen die GEEN extra huiswerk willen). Drogreden, Toets-val." }],
           niveaus: { basis: "Iedereen = generaliseren.", simpeler: "'Iedereen' is geen bewijs = drogreden.", nogSimpeler: "Generaliseren" },
@@ -1109,9 +1109,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Je schrijft een brief aan **meneer Smit** van de bibliotheek, die je niet kent. Welke aanhef past?",
-        options: ["Beste meneer Smit,", "Hoi Smit,", "Hé meneer,", "Lieve Smit,"],
+        options: ["Beste meneer Smit,", "Beste Smit,", "Hoi meneer Smit,", "Lieve meneer Smit,"],
         answer: 0,
-        wrongHints: [null, "Begin je zo een brief aan iemand die je niet kent?", null, null],
+        wrongHints: [null, "Schrijf je alleen de achternaam, zonder 'meneer'?", "Is 'hoi' netjes genoeg voor iemand die je niet kent?", "'Lieve' schrijf je aan familie en vrienden."],
         uitlegPad: {
           stappen: [
             {
@@ -1135,7 +1135,7 @@ const steps = [
           "Een jaar heeft twaalf maanden.",
         ],
         answer: 0,
-        wrongHints: [null, "Kun je dit nakijken in een boek?", null, null],
+        wrongHints: [null, "Kun je dit nakijken in een boek?", "Kun je dit nakijken in een boek?", "Kun je dit nakijken in een boek?"],
         uitlegPad: {
           stappen: [
             {

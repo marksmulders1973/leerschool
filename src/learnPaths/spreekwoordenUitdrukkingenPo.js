@@ -48,10 +48,10 @@ const steps = [
         },
       },
       {
-        q: "*'Het regent pijpenstelen'* — wat betekent?",
-        options: ["Het regent heel hard", "Er vallen pijpen uit de lucht", "Het sneeuwt", "Het regent een klein beetje"],
+        q: "*'Het regent pijpenstelen'* — wat betekent dit?",
+        options: ["Het regent heel hard", "Er vallen pijpen uit de lucht", "Het regent al heel lang", "Het regent een klein beetje"],
         answer: 0,
-        wrongHints: [null, "Letterlijk kan dat niet — denk figuurlijk.", "Het gaat over regen, niet over sneeuw.", "Andersom — pijpenstelen zijn juist lang en dik."],
+        wrongHints: [null, "Letterlijk kan dat niet — denk figuurlijk.", "Gaat het om hoe lang het regent? Denk aan lange, dikke stralen water.", "Andersom — pijpenstelen zijn juist lang en dik."],
         uitlegPad: {
           stappen: [
             { titel: "Klassieke Nederlandse uitdrukking", tekst: "'Het regent pijpenstelen' is een beroemde **uitdrukking** in NL. **Letterlijk** zou het betekenen: er vallen lange pijpen (zoals oude tabakspijpen) uit de lucht. Onmogelijk! Dus: **figuurlijk**." },
@@ -82,10 +82,10 @@ const steps = [
         wrongHints: [null, "Dat is een metafoor — er staat geen 'als'.", "Dat is een spreekwoord met een les.", "Dat is letterlijk taalgebruik."],
       },
       {
-        q: "*'Ze is een engel'* — wat voor soort beeldspraak?",
+        q: "*'Ze is een engel'* — wat voor soort beeldspraak is dit?",
         options: ["Metafoor", "Spreekwoord", "Letterlijk", "Vergelijking"],
         answer: 0,
-        wrongHints: [null, "Geen volkswijsheid met een les.", "Geen mens-engel.", "Geen 'als'."],
+        wrongHints: [null, "Is dit een volkswijsheid met een les?", "Is ze echt een engel met vleugels?", "Staat er 'als' in de zin?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een metafoor?", tekst: "Een **metafoor** is een korte beeldspraak waarbij je iets IS iets anders, zonder 'als'. Je vergelijkt direct." },
@@ -179,7 +179,7 @@ const steps = [
           "Ik heb heel erge honger",
         ],
         answer: 0,
-        wrongHints: [null, "Kan dat echt? Denk figuurlijk.", null, null],
+        wrongHints: [null, "Kan dat echt? Denk figuurlijk.", "Gaat het over eten? Denk aan het kriebelige gevoel in je buik.", "Gaat het over eten? Denk aan het kriebelige gevoel in je buik."],
         uitlegPad: {
           stappen: [
             {
@@ -229,7 +229,7 @@ const steps = [
         q: "*'Zo wit als sneeuw'* — wat voor soort beeldspraak is dit?",
         options: ["Vergelijking", "Metafoor", "Spreekwoord", "Letterlijk"],
         answer: 0,
-        wrongHints: [null, "Kijk of er 'als' in staat.", null, null],
+        wrongHints: [null, "Kijk of er 'als' in staat.", "Is dit een volkswijsheid met een les?", "Is iets echt zo wit als sneeuw, of wordt er iets vergeleken?"],
         uitlegPad: {
           stappen: [
             {
@@ -283,7 +283,7 @@ const steps = [
         q: "*'Het loopt in de papieren.'* Wat betekent dit?",
         options: ["Het wordt duur", "Er is veel papier nodig", "Het gaat heel snel", "Het wordt makkelijk"],
         answer: 0,
-        wrongHints: [null, "Dat is letterlijk gedacht.", null, null],
+        wrongHints: [null, "Dat is letterlijk gedacht.", "Gaat het om snelheid? Denk aan papiergeld.", "Is het makkelijk als iets 'in de papieren loopt'? Denk aan papiergeld."],
         uitlegPad: {
           stappen: [
             {
@@ -337,8 +337,8 @@ const steps = [
       "Top-30 Toets-uitdrukkingen — leer ze uit het hoofd.\n\n**Lichaam**:\n• *'Iets uit je duim zuigen'* — iets verzinnen.\n• *'Een appeltje met iemand te schillen hebben'* — iets uit te praten.\n• *'Iemand een poot uitdraaien'* — iemand te veel laten betalen.\n• *'Door de bocht gaan'* — iets toegeven.\n• *'Voet bij stuk houden'* — niet toegeven.\n• *'De handen ineenslaan'* — samenwerken.\n• *'Zijn hart vasthouden'* — zich grote zorgen maken.\n\n**Dieren**:\n• *'Een kat in de zak kopen'* — iets slechts kopen *(zonder kijken)*.\n• *'Twee vliegen in één klap'* — twee dingen tegelijk doen.\n• *'Als een kip zonder kop'* — zonder nadenken rondrennen.\n• *'Van een mug een olifant maken'* — overdrijven.\n• *'Een wolf in schaapskleren'* — slecht persoon doet aardig.\n• *'De kat uit de boom kijken'* — afwachten.\n• *'Op je tenen lopen'* — je uiterste best moeten doen.\n\n**Eten**:\n• *'Met de mond vol tanden staan'* — niet weten wat te zeggen.\n• *'Een appeltje voor de dorst'* — geld of voorraad opzij voor later.\n• *'De koe bij de horens vatten'* — een probleem direct aanpakken.\n• *'Iets met een korreltje zout nemen'* — niet alles geloven.\n• *'Boter op het hoofd hebben'* — zelf doen wat je een ander verwijt.\n• *'Iets onder de pet houden'* — geheim houden.\n\n**Geld**:\n• *'In de rooie staan'* — schulden hebben.\n• *'Het geld groeit me niet op de rug'* — geld is niet onbeperkt.\n• *'Op de kleintjes letten'* — zuinig zijn.\n• *'Met een sisser aflopen'* — beter aflopen dan gedacht.\n\n**Plek**:\n• *'In zak en as zitten'* — heel verdrietig zijn.\n• *'Op rozen zitten'* — het heel goed hebben.\n• *'De wind van voren krijgen'* — een uitbrander krijgen.\n• *'De hete adem in je nek voelen'* — onder druk staan.\n\n**Toets-tip**:\nJe hoeft niet alle uitdrukkingen te kennen. Maak een lijst van de **20-30 meest voorkomende** + oefen die. Onbekend? Kijk naar de context.",
     checks: [
       {
-        q: "*'Een appeltje met iemand te schillen hebben'* — wat?",
-        options: ["Iets uit te praten", "Samen een appel eten", "Iemand iets cadeau geven", "Iemand helpen met koken"],
+        q: "*'Een appeltje met iemand te schillen hebben'* — wat betekent dit?",
+        options: ["Nog iets moeten uitpraten", "Samen een appel eten", "Iemand iets cadeau geven", "Iemand helpen met koken"],
         answer: 0,
         wrongHints: [null, "Letterlijk gedacht — denk figuurlijk.", "Nee — het gaat om iets wat nog besproken moet worden.", "Letterlijk gedacht — het gaat niet om eten."],
         uitlegPad: {
@@ -365,10 +365,10 @@ const steps = [
         },
       },
       {
-        q: "*'In de rooie staan'* — wat?",
-        options: ["Schulden hebben", "Boos zijn", "Op rood licht", "Veel geld"],
+        q: "*'In de rooie staan'* — wat betekent dit?",
+        options: ["Schulden hebben", "Boos zijn", "Voor een rood stoplicht wachten", "Veel geld over hebben"],
         answer: 0,
-        wrongHints: [null, null, "Letterlijk.", "Tegenovergesteld."],
+        wrongHints: [null, "Rood worden van boosheid is een andere uitdrukking. Waar staat 'de rooie' hier voor?", "Dat is te letterlijk gedacht — denk figuurlijk.", "Andersom — 'rood' op je bankrekening is geen goed teken."],
         uitlegPad: {
           stappen: [
             { titel: "Waar komt 'rood staan' vandaan?", tekst: "Vroeger gebruikten **boekhouders + banken** gekleurde inkt:\n• **Zwart** = je hebt geld (positief saldo)\n• **Rood** = je hebt schuld (negatief saldo).\nVandaar de term '**in het rood staan**' of '**rood staan**'." },
@@ -394,13 +394,13 @@ const steps = [
         },
       },
       {
-        q: "*'De koe bij de horens vatten'* — wat?",
+        q: "*'De koe bij de horens vatten'* — wat betekent dit?",
         options: ["Een probleem direct aanpakken", "Een probleem uit de weg gaan", "Heel sterk zijn", "Een dier vastpakken"],
         answer: 0,
         wrongHints: [null, "Andersom — wie de koe bij de horens vat, loopt niet weg.", "Niet — het gaat om hoe je iets aanpakt.", "Dat is letterlijk — denk figuurlijk."],
       },
       {
-        q: "*'Wolf in schaapskleren'* — wat?",
+        q: "*'Wolf in schaapskleren'* — wat betekent dit?",
         options: ["Een slecht persoon die aardig doet", "Een aardig persoon die eng lijkt", "Iemand die heel bang is", "Iemand die zich verkleedt voor een feest"],
         answer: 0,
         wrongHints: [null, "Andersom — wie lijkt hier aardig?", "Niet — het gaat om iemand die anders is dan hij lijkt.", "Dat is te letterlijk gedacht."],
@@ -413,7 +413,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is letterlijk — denk figuurlijk.",
-          null,
+          "Moet je iets onthouden, of bedenk je iets wat niet echt gebeurd is?",
           "Is wat je uit je duim zuigt echt gebeurd?",
         ],
       },
@@ -421,7 +421,7 @@ const steps = [
         q: "*'De kat uit de boom kijken'* — wat betekent dit?",
         options: ["Afwachten", "Meteen ingrijpen", "Naar dieren kijken", "Iemand redden"],
         answer: 0,
-        wrongHints: [null, null, "Dat is te letterlijk.", null],
+        wrongHints: [null, "Andersom — de kat kijkt eerst rustig wat er gebeurt.", "Dat is te letterlijk.", "Wordt er iemand gered? De kat blijft juist zitten en kijkt."],
       },
       {
         q: "*'Met de mond vol tanden staan'* — wat betekent dit?",
@@ -432,7 +432,7 @@ const steps = [
           "Met volle mond eten",
         ],
         answer: 0,
-        wrongHints: [null, null, "Dat is letterlijk gedacht.", null],
+        wrongHints: [null, "Andersom — wie met de mond vol tanden staat, krijgt geen woord uit.", "Dat is letterlijk gedacht.", "Dat is te letterlijk gedacht — denk figuurlijk."],
       },
     ],
   },
@@ -442,7 +442,7 @@ const steps = [
       "**Spreekwoorden** = volkswijsheden, vaak met een **les**.\n\nTop-20 Toets-spreekwoorden:\n\n**Over geduld + tijd**:\n• *'Beter laat dan nooit.'* — beter laat doen dan helemaal niet.\n• *'Rome is niet op één dag gebouwd.'* — grote dingen kosten tijd.\n• *'Wie het laatst lacht, lacht het best.'* — wacht maar af wie wint.\n• *'Haastige spoed is zelden goed.'* — te snel werken = fouten.\n\n**Over zuinigheid**:\n• *'Wie het kleine niet eert, is het grote niet weert.'* — wees zuinig.\n• *'Goedkoop is duurkoop.'* — goedkope dingen gaan vaak snel kapot.\n• *'Beter een vogel in de hand dan tien in de lucht.'* — wat je hebt is meer waard dan iets onzekers.\n\n**Over werken**:\n• *'Wie niet werkt, zal niet eten.'* — alleen door werk verdien je.\n• *'Vele handen maken licht werk.'* — samen gaat het makkelijk.\n• *'Hoge bomen vangen veel wind.'* — bekende mensen krijgen veel kritiek.\n• *'Wie het onderste uit de kan wil, krijgt het lid op de neus.'* — wie alles wil, krijgt niets.\n\n**Over vrienden + familie**:\n• *'Eigen haard is goud waard.'* — thuis is het mooist.\n• *'Bloed kruipt waar het niet gaan kan.'* — familie blijft familie.\n• *'Een goede buur is beter dan een verre vriend.'* — buren helpen meer.\n• *'In nood leert men zijn vrienden kennen.'* — echte vrienden helpen als het moeilijk is.\n\n**Over leren**:\n• *'Al doende leert men.'* — door te doen leer je.\n• *'Wie zijn neus schendt, schendt zijn aangezicht.'* — wie slecht praat over eigen familie, schaadt zichzelf.\n• *'Een gewaarschuwd man telt voor twee.'* — wie gewaarschuwd is, kan zich voorbereiden.\n\n**Over geluk + tegenslag**:\n• *'Na regen komt zonneschijn.'* — na slechte tijden komen goede.\n• *'Jong geleerd, oud gedaan.'* — wat je jong leert, blijft je leven lang.\n• *'Onbekend maakt onbemind.'* — wat je niet kent, vind je niet mooi.\n\n**toetsvraag-truc**:\nVaak: 'Welk spreekwoord past bij deze situatie?'\nLees situatie → denk aan **les** → kies spreekwoord met **zelfde les**.",
     checks: [
       {
-        q: "*'Rome is niet op één dag gebouwd'* — wat is les?",
+        q: "*'Rome is niet op één dag gebouwd'* — wat is de les?",
         options: ["Grote dingen kosten tijd", "Rome is een heel oude stad", "Je moet snel werken om klaar te komen", "Bouwen is zwaar werk"],
         answer: 0,
         wrongHints: [null, "Dat is een feit, geen les.", "Andersom — haast is hier niet de les.", "Niet — het gaat niet echt over bouwen."],
@@ -470,19 +470,19 @@ const steps = [
         },
       },
       {
-        q: "*'Goedkoop is duurkoop'* — wat?",
-        options: ["Goedkoop kopen kost je uiteindelijk meer", "Dure dingen zijn altijd slecht", "Je moet altijd het goedkoopste kopen", "Duur kopen is zonde van je geld"],
+        q: "*'Goedkoop is duurkoop'* — wat betekent dit?",
+        options: ["Goedkoop kopen kost je uiteindelijk meer", "Dure dingen gaan snel kapot", "Kies steeds het goedkoopste", "Duur kopen is zonde van je geld"],
         answer: 0,
-        wrongHints: [null, "Niet — het gaat over goedkope dingen.", "Andersom — wat gebeurt er met goedkope spullen?", "Andersom — wat kost goedkoop je uiteindelijk?"],
+        wrongHints: [null, "Niet — het spreekwoord gaat over goedkope dingen.", "Andersom — wat gebeurt er met goedkope spullen?", "Andersom — wat kost goedkoop je uiteindelijk?"],
       },
       {
-        q: "*'Vele handen maken licht werk'* — les?",
+        q: "*'Vele handen maken licht werk'* — wat is de les?",
         options: ["Samen gaat het makkelijker", "Werk gaat sneller als je het alleen doet", "Licht werk kun je met één hand doen", "Hoe meer mensen, hoe meer ruzie"],
         answer: 0,
         wrongHints: [null, "Andersom — kijk naar 'vele handen'.", "Te letterlijk — het gaat niet om licht of zwaar tillen.", "Niet — het spreekwoord is juist positief over samen."],
       },
       {
-        q: "*'Hoge bomen vangen veel wind'* — wat betekent?",
+        q: "*'Hoge bomen vangen veel wind'* — wat betekent dit?",
         options: ["Bekende mensen krijgen veel kritiek", "Grote bomen waaien snel om", "Bekende mensen krijgen veel hulp", "Wie groot is, is sterk"],
         answer: 0,
         wrongHints: [null, "Dat is letterlijk — denk figuurlijk.", "Niet — wat 'vangen' hoge bomen: iets fijns of iets lastigs?", "Niet — het gaat om opvallen en wat je dan over je heen krijgt."],
@@ -493,11 +493,11 @@ const steps = [
         options: [
           "Als je te snel werkt, maak je fouten",
           "Wie snel werkt, is eerder klaar",
-          "Je moet altijd op tijd komen",
+          "Wie haast heeft, moet eerder beginnen",
           "Langzaam werken is saai",
         ],
         answer: 0,
-        wrongHints: [null, "Andersom — is haast hier iets goeds?", null, null],
+        wrongHints: [null, "Andersom — is haast hier iets goeds?", "Gaat het spreekwoord over wanneer je begint, of over wat er gebeurt als je haast maakt?", "Zegt het spreekwoord iets over saai of leuk?"],
       },
       {
         q: "*'In nood leert men zijn vrienden kennen'* — wat is de les?",
@@ -508,18 +508,18 @@ const steps = [
           "Hoe meer vrienden, hoe beter",
         ],
         answer: 0,
-        wrongHints: [null, null, null, "Het gaat niet om het aantal — wat betekent 'in nood'?"],
+        wrongHints: [null, "Gaat 'nood' over een feest? Wat betekent 'in nood'?", "Zegt het spreekwoord dat je níet om hulp moet vragen? Lees 'in nood' nog eens.", "Het gaat niet om het aantal — wat betekent 'in nood'?"],
       },
       {
         q: "*'Een gewaarschuwd man telt voor twee'* — wat is de les?",
         options: [
           "Wie gewaarschuwd is, kan zich voorbereiden",
           "Twee mannen zijn sterker dan één",
-          "Je moet anderen nooit waarschuwen",
-          "Wie waarschuwt, moet dubbel betalen",
+          "Wie waarschuwt, is twee keer zo slim",
+          "Je moet anderen niet bang maken",
         ],
         answer: 0,
-        wrongHints: [null, "Te letterlijk — het gaat niet om echt tellen.", null, null],
+        wrongHints: [null, "Te letterlijk — het gaat niet om echt tellen.", "Gaat het om wie waarschuwt, of om wie gewaarschuwd wordt?", "Het spreekwoord zegt juist iets goeds over gewaarschuwd zijn."],
       },
     ],
   },
@@ -529,28 +529,28 @@ const steps = [
       "**toetsvraag-type**: krijg situatie → kies passende uitdrukking / spreekwoord.\n\n**Werkwijze**:\n1. Lees situatie goed.\n2. Bepaal de **kern-les** *(geduld, doorzettingsvermogen, samenwerking, etc.)*.\n3. Match met spreekwoord dat **zelfde les** geeft.\n4. Negeer afleiders die alleen letterlijk passen.\n\n**Voorbeelden**:\n\n**Situatie 1**:\n*'Lisa is laat begonnen met leren voor de toets, maar in de laatste week leerde ze elke dag 3 uur. Ze haalde een goed cijfer.'*\n\nWelk spreekwoord past?\nA. Beter laat dan nooit. ✅\nB. Goedkoop is duurkoop.\nC. Vele handen maken licht werk.\nD. Op rood licht staan.\n\n**Antwoord: A** — laat begonnen, toch goed afgelopen.\n\n**Situatie 2**:\n*'Peter wilde de mooiste fiets en de beste laptop en de duurste schoenen kopen — maar nu heeft hij geen geld meer voor eten.'*\n\nWelk spreekwoord past?\nA. Wie het onderste uit de kan wil, krijgt het lid op de neus. ✅\nB. Rome is niet op één dag gebouwd.\nC. Een appeltje voor de dorst.\nD. Op de kleintjes letten.\n\n**Antwoord: A** — wie alles wil, krijgt niets.\n\n**Situatie 3**:\n*'Marie en haar oma wonen elk in een ander land. Ze zien elkaar maar 1× per jaar, maar als oma binnenkomt is de band meteen warm weer.'*\n\nWelk spreekwoord?\nA. Bloed kruipt waar het niet gaan kan. ✅\nB. Wie niet werkt, zal niet eten.\nC. Goedkoop is duurkoop.\nD. Beter laat dan nooit.\n\n**Antwoord: A** — familieband blijft, ondanks afstand.\n\n**Strategie bij twijfel**:\n• Werk met **uitsluiten** — sluit antwoorden die NIET de situatie beschrijven uit.\n• Vermijd antwoorden die alleen **letterlijk** passen *(als het verhaal over eten gaat, hoeft het spreekwoord niet over eten te gaan)*.\n• Kijk naar **kern-emotie** *(verdriet, dapperheid, geduld, hebzucht, samenwerking)*.\n\n**Veel-voorkomende valkuilen**:\n• Twee spreekwoorden lijken op elkaar *(bijv. 'Beter laat dan nooit' vs 'Haastige spoed is zelden goed')* — kies welke past bij de **richting** van situatie.\n• Soms past geen enkel perfect → kies het **dichtstbijzijnde**.",
     checks: [
       {
-        q: "Marie kreeg 's morgens een rapport met 1 zes — verdrietig. 's Middags kreeg ze een lieve brief van oma. Spreekwoord?",
+        q: "Marie was 's ochtends verdrietig om een zes op haar rapport. 's Middags kreeg ze een lieve brief van oma. Welk spreekwoord past?",
         options: ["Na regen komt zonneschijn", "Goedkoop is duurkoop", "Vele handen maken licht werk", "Hoge bomen vangen veel wind"],
         answer: 0,
         wrongHints: [null, "Niet over geld.", "Niet over samen.", "Niet over kritiek."],
       },
       {
-        q: "Tien klasgenoten ruimden samen het lokaal — duurde 10 min ipv 1 uur. Spreekwoord?",
+        q: "Tien klasgenoten ruimden samen het lokaal op. Het duurde 10 minuten in plaats van 1 uur. Welk spreekwoord past?",
         options: ["Vele handen maken licht werk", "Beter laat dan nooit", "Op rozen zitten", "Hoge bomen vangen veel wind"],
         answer: 0,
-        wrongHints: [null, "Niet over tijd.", null, null],
+        wrongHints: [null, "Kwam er iemand te laat? Lees het verhaal nog eens.", "Past dit bij een klus die heel snel klaar was? Lees het verhaal nog eens.", "Krijgt hier iemand kritiek? Kijk naar wie er meehielpen."],
       },
       {
-        q: "Tom kocht 6 paar goedkope schoenen — alle 6 binnen 2 maanden kapot. Spreekwoord?",
+        q: "Tom kocht 6 paar goedkope schoenen. Alle 6 waren binnen 2 maanden kapot. Welk spreekwoord past?",
         options: ["Goedkoop is duurkoop", "Beter een goede buur dan een verre vriend", "Op rozen zitten", "Vele handen maken licht werk"],
         answer: 0,
-        wrongHints: [null, "Gaat dit verhaal over vrienden? Kijk wat Tom overkomt met zijn géld.", "Zit Tom lekker op rozen, of gaat het juist mis? Zoek het spreekwoord over kopen.", "Er helpt hier niemand mee — het gaat over goedkoop kopen en wat dat kost."],
+        wrongHints: [null, "Gaat dit verhaal over vrienden? Kijk wat Tom overkomt met zijn géld.", "Lees het verhaal nog eens: wat gebeurt er met Toms schoenen?", "Er helpt hier niemand mee. Waar gaat het verhaal over?"],
       },
       {
-        q: "Anna's broer was wereldberoemd → kreeg veel haatmail + kritiek. Spreekwoord?",
+        q: "Anna's broer werd wereldberoemd. Daarna kreeg hij veel boze berichten en kritiek. Welk spreekwoord past?",
         options: ["Hoge bomen vangen veel wind", "Goedkoop is duurkoop", "Beter laat dan nooit", "Vele handen maken licht werk"],
         answer: 0,
-        wrongHints: [null, "Er wordt niets gekocht — het gaat om iemand die hoog en zichtbaar staat en daardoor kritiek 'vangt'.", "Komt hier iemand te laat? Zoek het spreekwoord over opvallen en kritiek krijgen.", "Er wordt niet samengewerkt — wie opvalt, krijgt hier iets over zich heen."],
+        wrongHints: [null, "Er wordt niets gekocht. Wat gebeurt er met iemand die heel bekend wordt?", "Komt hier iemand te laat? Wat overkomt Anna's broer?", "Er wordt niet samengewerkt. Wat krijgt de broer over zich heen?"],
       },
     ],
   },
@@ -561,27 +561,27 @@ const steps = [
     checks: [
       {
         q: "Hoe vaak komen **spreekwoord/uitdrukking-vragen** op de Doorstroomtoets ongeveer voor?",
-        options: ["Een paar vragen", "De helft van alle vragen", "Bijna alle vragen", "Geen enkele vraag"],
+        options: ["Een paar vragen", "Ongeveer een kwart van de vragen", "Ongeveer de helft van de vragen", "Alleen in de oefentoetsen"],
         answer: 0,
-        wrongHints: [null, "Veel minder.", "Veel minder.", "Ze komen wel voor."],
+        wrongHints: [null, "Minder — het is maar een klein deel van de taalvragen.", "Veel minder — het is maar een klein deel van de taalvragen.", "Ze komen ook in de echte toets voor."],
       },
       {
         q: "Hoe werkt **letterlijk uitsluiten** bij de Doorstroomtoets?",
-        options: ["Je streept de letterlijke betekenis weg", "Je kiest juist de letterlijke betekenis", "Je streept de figuurlijke betekenis weg", "Je kiest het langste antwoord"],
+        options: ["Je streept de letterlijke betekenis weg", "Je kiest juist de letterlijke betekenis", "Je streept de figuurlijke betekenis weg", "Je streept de moeilijkste woorden weg"],
         answer: 0,
-        wrongHints: [null, "Letterlijk is bijna nooit goed bij uitdrukkingen.", "Andersom.", "Niet — lengte zegt niets."],
+        wrongHints: [null, "Klopt de letterlijke betekenis meestal bij een uitdrukking?", "Welke betekenis klopt bijna nooit bij een uitdrukking? Die streep je weg.", "Het gaat om de betekenis, niet om moeilijke woorden."],
       },
       {
-        q: "*'Iemand met de neus op de feiten drukken'* — wat?",
+        q: "*'Iemand met de neus op de feiten drukken'* — wat betekent dit?",
         options: ["Iemand op een fout wijzen", "Iemand pijn doen", "Iemand iets laten ruiken", "Iemand een geheim vertellen"],
         answer: 0,
         wrongHints: [null, "Niet — geen geweld.", "Dat is te letterlijk.", "Niet — het gaat om iets wat iemand liever niet wil zien."],
       },
       {
-        q: "Bij **onbekend** spreekwoord — wat doen?",
-        options: ["Kijk naar kernwoorden en context", "Zomaar een antwoord gokken", "De vraag gewoon leeg laten staan", "Het eerste antwoord kiezen"],
+        q: "Je kent een spreekwoord niet. Wat doe je dan?",
+        options: ["Kijk naar de kernwoorden en de situatie", "Kies de betekenis die letterlijk klopt", "Kies het antwoord met de moeilijkste woorden", "Kies het antwoord dat je het vaakst hoort"],
         answer: 0,
-        wrongHints: [null, "Gok liever slim: gebruik eerst wat je wél weet.", "Niet — leeg is altijd fout.", "Niet — lees eerst alle opties."],
+        wrongHints: [null, "Klopt de letterlijke betekenis bij een spreekwoord? Bijna nooit.", "Moeilijke woorden zeggen niets over de betekenis.", "Vaak gehoord is nog niet goed. Wat zeggen de woorden in het spreekwoord?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -593,18 +593,18 @@ const steps = [
           "Iets snel opeten",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is letterlijk — streep het weg.", null, null],
+        wrongHints: [null, "Dat is letterlijk — streep het weg.", "Gaat het om zuinig zijn, of om wat je gelooft?", "Gaat het om eten? Een korreltje zout is maar een klein beetje."],
       },
       {
         q: "*'Komt tijd, komt raad'* — wat betekent dit?",
         options: [
-          "Wacht maar af, er komt vanzelf een oplossing",
-          "Je moet altijd op tijd komen",
-          "Vraag meteen iemand om advies",
+          "Na een tijdje vind je vanzelf een oplossing",
+          "Wie op tijd komt, krijgt goede raad",
+          "Vraag meteen iemand anders om advies",
           "Tijd is het belangrijkste wat er is",
         ],
         answer: 0,
-        wrongHints: [null, "Te letterlijk — het gaat niet over op tijd komen.", null, null],
+        wrongHints: [null, "Te letterlijk — het gaat niet over op tijd komen.", "Waar komt de raad vandaan volgens het spreekwoord: van een ander, of van de tijd?", "Wat betekent 'raad' hier? Denk aan 'raad weten'."],
       },
     ],
   },
@@ -612,26 +612,26 @@ const steps = [
     title: "Eind-toets — uitdrukking mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "*'Twee vliegen in één klap'* — wat?", options: ["Twee dingen tegelijk bereiken", "Twee vliegen tegelijk doodslaan", "Twee keer dezelfde fout maken", "Iets heel snel doen"], answer: 0, wrongHints: [null, "Dat is letterlijk.", "Niet — het gaat juist om iets wat lukt.", "Niet — het gaat om twee dingen met één actie."] },
-      { q: "*'Beter een vogel in de hand dan tien in de lucht'* — les?", options: ["Iets zekers is beter dan veel onzekers", "Je moet zo veel mogelijk verzamelen", "Vogels moet je vrij laten vliegen", "Wie veel wil, krijgt ook altijd veel"], answer: 0, wrongHints: [null, "Niet — de tien in de lucht heb je nog niet.", "Het gaat niet écht over vogels.", "Andersom — wat is het risico als je te veel wilt?"] },
+      { q: "*'Twee vliegen in één klap'* — wat betekent dit?", options: ["Twee dingen tegelijk bereiken", "Twee vliegen tegelijk doodslaan", "Twee keer dezelfde fout maken", "Iets heel snel doen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het gaat juist om iets wat lukt.", "Niet — het gaat om twee dingen met één actie."] },
+      { q: "*'Beter een vogel in de hand dan tien in de lucht'* — wat is de les?", options: ["Iets zekers is beter dan veel onzekers", "Je moet zo veel mogelijk verzamelen", "Vogels moet je vrij laten vliegen", "Wie veel wil, krijgt ook veel"], answer: 0, wrongHints: [null, "Niet — de tien in de lucht heb je nog niet.", "Het gaat niet écht over vogels.", "Andersom — wat is het risico als je te veel wilt?"] },
       { q: "Wat is **figuurlijk taalgebruik**?", options: ["Woorden in een andere betekenis", "Woorden precies zoals ze staan", "Woorden zonder spelfouten", "Woorden uit een andere taal"], answer: 0, wrongHints: [null, "Dat is letterlijk.", "Het gaat om betekenis, niet om spelling.", "Het gaat om betekenis, niet om de taal."] },
-      { q: "*'Op rozen zitten'* — wat?", options: ["Het heel goed hebben", "Het heel moeilijk hebben", "Op een stekelige plek zitten", "Van bloemen houden"], answer: 0, wrongHints: [null, "Andersom.", "Dat is letterlijk.", "Niet — het gaat om hoe het met je gaat."] },
-      { q: "*'Onbekend maakt onbemind'* — les?", options: ["Wat je niet kent, vind je niet mooi", "Wat je niet kent, is nieuw en spannend", "Je moet geheimen bewaren", "Onbekende mensen zijn altijd gemeen"], answer: 0, wrongHints: [null, "Andersom — 'onbemind' betekent: niet geliefd.", "Het gaat niet om geheimen — 'onbemind' zegt iets over mooi of niet mooi vinden.", "Te sterk — het gaat over wat je vindt van iets onbekends."] },
+      { q: "*'Op rozen zitten'* — wat betekent dit?", options: ["Het heel goed hebben", "Het heel moeilijk hebben", "Op een stekelige plek zitten", "Van bloemen houden"], answer: 0, wrongHints: [null, "Is zitten op rozen fijn of vervelend bedoeld?", "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het gaat om hoe het met je gaat."] },
+      { q: "*'Onbekend maakt onbemind'* — wat is de les?", options: ["Wat je niet kent, vind je niet mooi", "Wat je niet kent, is nieuw en spannend", "Je moet geheimen bewaren", "Onbekende mensen zijn vaak gemeen"], answer: 0, wrongHints: [null, "Wat betekent 'onbemind'? Is dat iets positiefs?", "Het gaat niet om geheimen. Wat betekent 'onbemind'?", "Gaat het over gemene mensen, of over wat jij van iets vindt?"] },
       { q: "Wat is een **vergelijking**?", options: ["Beeldspraak met 'zo ... als'", "Beeldspraak zonder 'als'", "Een volkswijsheid met een les", "Een zin die je letterlijk neemt"], answer: 0, wrongHints: [null, "Dat is een metafoor.", "Dat is een spreekwoord.", "Dat is juist geen beeldspraak."] },
-      { q: "*'De **kogel** is door de kerk.'* Wat betekent dit?", options: ["Er is definitief een besluit genomen", "Er is iets kapotgeschoten", "De kerkdienst is begonnen", "Het besluit is nog niet genomen"], answer: 0, wrongHints: [null, "Letterlijk gelezen.", "Niet — het gaat niet om de kerk.", "Andersom."] },
-      { q: "*'Vele handen maken licht werk.'* — betekenis?", options: ["Samen gaat het makkelijker", "Veel handen wegen samen weinig", "Met veel lampen zie je beter", "Alleen werken gaat het snelst"], answer: 0, wrongHints: [null, "Letterlijk gelezen.", "Niet bedoeld.", "Andersom."] },
-      { q: "*'Aan zijn lot overlaten.'* — betekenis?", options: ["Iemand niet helpen", "Een lot uit de loterij kopen", "Iemand goed verzorgen", "Iemand laten winnen"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Niet — het gaat om iemand alleen laten."] },
-      { q: "Wat is een **figuurlijke uitdrukking**?", options: ["Een zin die je niet letterlijk moet nemen", "Een zin die je precies zo moet nemen", "Een rekenformule met woorden", "Een tekening bij een tekst"], answer: 0, wrongHints: [null, "Tegenstelling.", "Niet — het gaat om taal.", "Niet — het gaat om taal, niet om plaatjes."] },
-      { q: "*'Iemand iets onder de neus wrijven.'* — betekenis?", options: ["Iemand verwijtend op een fout wijzen", "Iemand zijn gezicht schoonmaken", "Iemand voor de grap kietelen", "Iemand een mooi compliment geven"], answer: 0, wrongHints: [null, "Letterlijk.", null, "Andersom — het is juist niet aardig bedoeld."] },
-      { q: "*'Op één lijn zitten.'* — betekenis?", options: ["Eens zijn", "Wachten in een rij", "Ruzie hebben", "Naast elkaar in de bus zitten"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Dat is letterlijk."] },
-      { q: "*'De druppel die de emmer doet overlopen.'* — betekenis?", options: ["Laatste reden waardoor je boos wordt", "Water dat over de rand stroomt", "Een groot ongeluk dat zomaar gebeurt", "Goed nieuws waar je blij van wordt"], answer: 0, wrongHints: [null, "Letterlijk.", "Niet — het is juist iets kleins, maar wát doet die laatste druppel?", null] },
-      { q: "*'Een kat in de zak kopen.'* — betekenis?", options: ["Iets kopen dat tegenvalt", "Een echte kat kopen", "Een cadeau voor een huisdier kopen", "Iets heel goedkoops kopen"], answer: 0, wrongHints: [null, "Letterlijk.", "Letterlijk gedacht.", "Niet — het gaat erom dat je niet goed keek wat je kocht."] },
-      { q: "*'Een appeltje voor de dorst.'* — betekenis?", options: ["Geld bewaren voor later", "Een appel voor als je dorst hebt", "Iets lekkers voor tussendoor", "Al je geld meteen uitgeven"], answer: 0, wrongHints: [null, "Letterlijk.", "Te letterlijk.", "Andersom."] },
-      { q: "*'Met de neus in de boter vallen.'* — betekenis?", options: ["Net op tijd komen voor iets goeds", "Net te laat komen voor iets leuks", "Veel geld verliezen door pech", "Vies worden tijdens het eten"], answer: 0, wrongHints: [null, "Denk aan boter: is dat iets fijns of iets vervelends?", "Is in de boter vallen pech of geluk?", "Het is een uitdrukking, niet letterlijk bedoeld."] },
-      { q: "*'Boontje komt om zijn loontje.'* — betekenis?", options: ["Wie kwaad doet, krijgt straf", "Bonen kopen op de markt", "Wie hard werkt, krijgt meer loon", "Je moet je groente opeten"], answer: 0, wrongHints: [null, "Letterlijk.", "Niet — het gaat om iets slechts dat terugkomt.", "Te letterlijk."] },
-      { q: "*'Een open deur intrappen.'* — betekenis?", options: ["Iets zeggen dat iedereen al weet", "Inbreken in een huis", "Ergens boos binnenkomen", "Iets heel nieuws vertellen"], answer: 0, wrongHints: [null, "Letterlijk.", "Niet — het gaat om wat je zegt.", "Andersom."] },
-      { q: "*'Met twee maten meten.'* — betekenis?", options: ["Iets oneerlijk beoordelen", "Iets twee keer nameten", "Iedereen precies gelijk behandelen", "Twee dingen tegelijk doen"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Niet — het gaat om eerlijk beoordelen."] },
-      { q: "*'Knollen voor citroenen verkopen.'* — betekenis?", options: ["Mensen bedriegen", "Groente verkopen op de markt", "Eerlijk zaken doen", "Heel goedkoop verkopen"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Niet — het gaat erom dat iets anders is dan beloofd."] },
+      { q: "*'De **kogel** is door de kerk.'* Wat betekent dit?", options: ["Er is definitief een besluit genomen", "Er is iets kapotgeschoten", "De kerkdienst is begonnen", "Er is een ruzie begonnen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het gaat niet om de kerk.", "Is er hier ruzie? Denk aan een kogel die niet meer terug kan."] },
+      { q: "*'Vele handen maken licht werk.'* — wat betekent dit?", options: ["Samen gaat het makkelijker", "Veel mensen maken veel rommel", "Makkelijk werk doe je met je handen", "Alleen werken gaat het snelst"], answer: 0, wrongHints: [null, "Gaat het spreekwoord over rommel, of over werk?", "Te letterlijk — wat zeggen 'vele' handen?", "Kijk naar 'vele handen'. Werk je dan alleen?"] },
+      { q: "*'Aan zijn lot overlaten.'* — wat betekent dit?", options: ["Iemand niet helpen", "Een lot uit de loterij kopen", "Iemand goed verzorgen", "Iemand laten winnen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Wat betekent 'overlaten'? Doe je dan nog iets voor iemand?", "Niet — het gaat om iemand alleen laten."] },
+      { q: "Wat is een **figuurlijke uitdrukking**?", options: ["Een zin die je niet letterlijk moet nemen", "Een zin die je precies zo moet nemen", "Een zin met heel moeilijke woorden", "Een zin die uit een andere taal komt"], answer: 0, wrongHints: [null, "Zo'n zin bedoel je letterlijk.", "Moeilijke woorden maken een zin nog niet figuurlijk.", "Het gaat om de betekenis, niet om de taal."] },
+      { q: "*'Iemand iets onder de neus wrijven.'* — wat betekent dit?", options: ["Iemand verwijtend op een fout wijzen", "Iemand zijn gezicht schoonmaken", "Iemand voor de grap kietelen", "Iemand een mooi compliment geven"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Dat is te letterlijk gedacht — denk figuurlijk.", "Andersom — het is juist niet aardig bedoeld."] },
+      { q: "*'Op één lijn zitten.'* — wat betekent dit?", options: ["Het met elkaar eens zijn", "Achter elkaar in de rij staan", "Met elkaar ruzie hebben", "Naast elkaar in de bus zitten"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Is 'op één lijn' iets van samen, of van tegen elkaar?", "Dat is te letterlijk gedacht — denk figuurlijk."] },
+      { q: "*'De druppel die de emmer doet overlopen.'* — wat betekent dit?", options: ["Laatste reden waardoor je boos wordt", "Water dat over de rand stroomt", "Een groot ongeluk dat zomaar gebeurt", "Goed nieuws waar je blij van wordt"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het is juist iets kleins, maar wát doet die laatste druppel?", "Loopt de emmer over van iets fijns?"] },
+      { q: "*'Een kat in de zak kopen.'* — wat betekent dit?", options: ["Iets kopen dat tegenvalt", "Een echte kat kopen", "Een cadeau voor een huisdier kopen", "Iets heel goedkoops kopen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het gaat erom dat je niet goed keek wat je kocht."] },
+      { q: "*'Een appeltje voor de dorst.'* — wat betekent dit?", options: ["Geld bewaren voor later", "Een appel voor als je dorst hebt", "Iets lekkers voor tussendoor", "Al je geld meteen uitgeven"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Is het appeltje echt iets om op te eten?", "Wanneer heb je dorst: nu, of straks?"] },
+      { q: "*'Met de neus in de boter vallen.'* — wat betekent dit?", options: ["Net op tijd komen voor iets goeds", "Net te laat komen voor iets leuks", "Veel geld verliezen door pech", "Vies worden tijdens het eten"], answer: 0, wrongHints: [null, "Denk aan boter: is dat iets fijns of iets vervelends?", "Is in de boter vallen pech of geluk?", "Het is een uitdrukking, niet letterlijk bedoeld."] },
+      { q: "*'Boontje komt om zijn loontje.'* — wat betekent dit?", options: ["Wie kwaad doet, krijgt straf", "Bonen kopen op de markt", "Wie hard werkt, krijgt meer loon", "Je moet je groente opeten"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het gaat om iets slechts dat terugkomt.", "Dat is te letterlijk gedacht — denk figuurlijk."] },
+      { q: "*'Een open deur intrappen.'* — wat betekent dit?", options: ["Iets zeggen dat iedereen al weet", "Inbreken in een huis", "Ergens boos binnenkomen", "Iets heel nieuws vertellen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Niet — het gaat om wat je zegt.", "Hoeveel moeite kost het om een open deur in te trappen? Is wat je zegt dan nieuw?"] },
+      { q: "*'Met twee maten meten.'* — wat betekent dit?", options: ["Iets oneerlijk beoordelen", "Iets twee keer nameten", "Iedereen precies gelijk behandelen", "Twee dingen tegelijk doen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Andersom — met twee verschillende maten meet je niet gelijk.", "Gaat het om twee dingen tegelijk, of om twee verschillende maten?"] },
+      { q: "*'Knollen voor citroenen verkopen.'* — wat betekent dit?", options: ["Mensen bedriegen", "Groente verkopen op de markt", "Eerlijk zaken doen", "Heel goedkoop verkopen"], answer: 0, wrongHints: [null, "Dat is te letterlijk gedacht — denk figuurlijk.", "Een knol is geen citroen. Is het eerlijk om die zo te verkopen?", "Is goedkoop het probleem? Een knol is geen citroen."] },
     ],
   },
 ];

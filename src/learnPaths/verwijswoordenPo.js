@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "*Tom pakt zijn jas. Hij heeft het koud.* Naar wie verwijst 'Hij'?",
-        options: ["Tom", "de jas", "het koud", "niemand"],
+        options: ["Tom", "de jas", "het weer", "iemand anders"],
         answer: 0,
-        wrongHints: [null, "Een jas heeft het niet koud — wie wel?", "Dat is geen persoon.", "Er is wel degelijk iemand: kijk in de zin ervoor."],
+        wrongHints: [null, "Een jas heeft het niet koud — wie wel?", "Kan het weer het koud hébben? Wie voelt de kou?", "Kijk in de zin ervóór: welke persoon wordt daar al genoemd?"],
         uitlegPad: {
           stappen: [{ titel: "Wie heeft het koud?", tekst: "'Hij' is een persoon die het koud heeft. In de zin ervoor staat 'Tom'. 'Hij' verwijst dus naar Tom." }],
           niveaus: {
@@ -36,9 +36,9 @@ const steps = [
       },
       {
         q: "Een verwijswoord is een woord dat...",
-        options: ["terugwijst naar iets dat eerder genoemd is", "altijd helemaal vooraan in de zin moet staan", "een nieuw onderwerp begint in de tekst", "alleen in vragen en uitroepen voorkomt"],
+        options: ["terugwijst naar iets dat eerder genoemd is", "zegt wat iemand in de zin aan het doen is", "een nieuw onderwerp begint in de tekst", "vertelt hoe iets eruitziet of hoe het is"],
         answer: 0,
-        wrongHints: [null, "Het kan overal in de zin staan.", "Weet je bij 'hij' wie er bedoeld wordt zonder de zin ervoor?", "Verwijswoorden staan in alle soorten zinnen."],
+        wrongHints: [null, "Dat doet een werkwoord. Wat doet een woord als 'hij' of 'die'?", "Weet je bij 'hij' wie er bedoeld wordt zonder de zin ervoor?", "Dat doet een bijvoeglijk naamwoord. Waar wijst 'hij' naar?"],
         uitlegPad: {
           stappen: [{ titel: "Terugwijzen", tekst: "Een verwijswoord wijst terug naar iets of iemand dat al genoemd is, zodat je het woord niet hoeft te herhalen." }],
           niveaus: {
@@ -64,9 +64,9 @@ const steps = [
       },
       {
         q: "Waarom gebruiken we verwijswoorden?",
-        options: ["om niet steeds hetzelfde woord te herhalen", "om de zin langer en moeilijker te maken", "om van een gewone zin een vraag te maken", "om te zeggen dat iets niet waar is"],
+        options: ["om niet steeds hetzelfde woord te herhalen", "om de zin langer en moeilijker te maken", "om te laten zien wie het belangrijkst is", "om een nieuwe persoon in het verhaal te brengen"],
         answer: 0,
-        wrongHints: [null, "Wordt een tekst langer als je 'hij' schrijft in plaats van 'Pieter'?", "Daar dienen ze niet voor.", "Daar dienen ze niet voor."],
+        wrongHints: [null, "Wordt een tekst langer als je 'hij' schrijft in plaats van 'Pieter'?", "Wordt Pieter belangrijker als je 'hij' schrijft? Wat is er dan anders?", "Neem 'Tom pakt zijn jas. Hij heeft het koud.' Komt er met 'Hij' iemand nieuws bij?"],
         uitlegPad: {
           stappen: [{ titel: "Herhaling voorkomen", tekst: "Met een verwijswoord (hij, die) hoef je 'de hond' niet steeds te herhalen. Dat leest prettiger." }],
           niveaus: {
@@ -78,9 +78,9 @@ const steps = [
       },
       {
         q: "*Sara fietst naar school. Ze is laat.* Naar wie verwijst 'Ze'?",
-        options: ["Sara", "de school", "laat", "niemand"],
+        options: ["Sara", "de school", "de fiets", "haar juf"],
         answer: 0,
-        wrongHints: [null, "Een school fietst niet — wie wel?", "Dat zegt hóé ze is, geen persoon.", "Er is wél iemand: kijk in de zin ervoor."],
+        wrongHints: [null, "Een school fietst niet — wie wel?", "Kan een fiets te laat zijn? Wie moet er op tijd zijn?", "Staat er een juf in de zinnen? Kijk wie er al genoemd is."],
         uitlegPad: {
           stappen: [{ titel: "Wie is er laat?", tekst: "'Ze' is een persoon die fietst en laat is. In de zin ervoor staat 'Sara'." }],
           niveaus: {
@@ -107,9 +107,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "*Mijn buurman staat in de tuin. Hij harkt de bladeren bij elkaar.* Naar wie verwijst 'Hij'?",
-        options: ["mijn buurman", "de tuin", "de bladeren", "niemand"],
+        options: ["mijn buurman", "de tuin", "de bladeren", "de hark"],
         answer: 0,
-        wrongHints: [null, "Kan een tuin harken? Wie doet dat wel?", null, "Kijk nog eens in de zin ervóór."],
+        wrongHints: [null, "Kan een tuin harken? Wie doet dat wel?", "Kunnen bladeren zichzelf bij elkaar harken?", "Een hark harkt niet vanzelf. Wie houdt hem vast?"],
         uitlegPad: {
           stappen: [
             {
@@ -188,9 +188,9 @@ const steps = [
     checks: [
       {
         q: "*Lisa leest een boek. Zij vindt het spannend.* Naar wie verwijst 'Zij'?",
-        options: ["Lisa", "het boek", "spannend", "niemand"],
+        options: ["Lisa", "het boek", "de schrijver", "haar vriendin"],
         answer: 0,
-        wrongHints: [null, "Dat is een ding; 'zij' is hier een persoon.", "Dat is geen persoon.", "Er is wél iemand: kijk ervoor."],
+        wrongHints: [null, "Dat is een ding; 'zij' is hier een persoon.", "Staat er een schrijver in de zinnen? Kijk wie er al genoemd is.", "Staat er een vriendin in de zinnen? Kijk wie er leest."],
         uitlegPad: {
           stappen: [{ titel: "Wie leest en vindt het spannend?", tekst: "'Zij' is een persoon. In de zin ervoor staat 'Lisa'. 'Zij' verwijst dus naar Lisa." }],
           niveaus: {
@@ -202,9 +202,9 @@ const steps = [
       },
       {
         q: "*Lisa leest een boek. Zij vindt het spannend.* Waar verwijst 'het' naar?",
-        options: ["het boek", "Lisa", "spannend", "niemand"],
+        options: ["het boek", "Lisa", "spannend", "de kaft"],
         answer: 0,
-        wrongHints: [null, "Lisa is een persoon; 'het' is hier een ding.", "Dat is hoe ze het vindt, geen ding.", "Er wordt wél iets genoemd: kijk in de zin ervoor."],
+        wrongHints: [null, "Lisa is een persoon; 'het' is hier een ding.", "Dat is hoe ze het vindt, geen ding.", "Staat er een kaft in de zinnen? Kijk welk ding er al genoemd is."],
         uitlegPad: {
           stappen: [{ titel: "Wat vindt ze spannend?", tekst: "Ze vindt het boek spannend. 'Het' verwijst naar het boek (een 'het'-woord)." }],
           niveaus: {
@@ -216,9 +216,9 @@ const steps = [
       },
       {
         q: "*De auto staat langs de weg. Hij is kapot.* Waar verwijst 'Hij' naar?",
-        options: ["de auto", "de weg", "kapot", "niemand"],
+        options: ["de auto", "de weg", "de garage", "de bestuurder"],
         answer: 0,
-        wrongHints: [null, "Een weg gaat niet kapot op deze manier — wat wel?", "Dat is geen ding dat kapot is.", "Er is wél iets: kijk ervoor."],
+        wrongHints: [null, "Een weg gaat niet kapot op deze manier — wat wel?", "Staat er een garage in de zinnen? Welk ding wordt er al genoemd?", "Staat er een bestuurder in de zinnen? Kijk wat er langs de weg staat."],
         uitlegPad: {
           stappen: [{ titel: "Wat is er kapot?", tekst: "De auto is kapot. 'Hij' verwijst naar de auto (een 'de'-woord)." }],
           niveaus: {
@@ -244,9 +244,9 @@ const steps = [
       },
       {
         q: "*De kat ligt op de bank. Hij slaapt lekker.* Waar verwijst 'Hij' naar?",
-        options: ["de kat", "de bank", "slaapt", "niemand"],
+        options: ["de kat", "de bank", "het kussen", "de hond"],
         answer: 0,
-        wrongHints: [null, "Een bank slaapt niet — wat wel?", "Dat is een werkwoord.", "Er is wél een dier: kijk ervoor."],
+        wrongHints: [null, "Een bank slaapt niet — wat wel?", "Staat er een kussen in de zinnen? Kijk welk dier er al genoemd is.", "Staat er een hond in de zinnen? Kijk welk dier er op de bank ligt."],
         uitlegPad: {
           stappen: [{ titel: "Wat slaapt er?", tekst: "De kat slaapt. 'Hij' verwijst naar de kat (een 'de'-woord)." }],
           niveaus: {
@@ -273,9 +273,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "*Het konijn zit in het hok. Het eet een blaadje sla.* Waar verwijst 'Het' in de tweede zin naar?",
-        options: ["het konijn", "het hok", "de sla", "niemand"],
+        options: ["het konijn", "het hok", "de sla", "het blaadje"],
         answer: 0,
-        wrongHints: [null, "Kan een hok iets eten?", null, null],
+        wrongHints: [null, "Kan een hok iets eten?", "Wordt de sla gegeten, of eet de sla zelf?", "Het blaadje wordt opgegeten. Wie eet het op?"],
         uitlegPad: {
           stappen: [
             {
@@ -377,9 +377,9 @@ const steps = [
       },
       {
         q: "*Pak het touw uit de kast. Bind dat goed vast.* Waar verwijst 'dat' naar?",
-        options: ["het touw", "de kast", "vast", "pak"],
+        options: ["het touw", "de kast", "de knoop", "pak"],
         answer: 0,
-        wrongHints: [null, "Een kast bind je niet vast — wat wel?", "Dat is geen ding.", "Dat is een werkwoord."],
+        wrongHints: [null, "Een kast bind je niet vast — wat wel?", "Staat er een knoop in de zinnen? Welk ding wordt er al genoemd?", "Dat is een werkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Wat moet je vastbinden?", tekst: "Je bindt het touw vast. 'Dat' verwijst naar het touw (een 'het'-woord, dus 'dat')." }],
           niveaus: {
@@ -405,9 +405,9 @@ const steps = [
       },
       {
         q: "*Er liggen twee pennen op tafel. Deze is van mij.* Waar verwijst 'Deze' naar?",
-        options: ["een pen", "de tafel", "twee", "mij"],
+        options: ["één van de pennen", "de tafel", "allebei de pennen", "mij"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet over de tafel maar over wat erop ligt.", "Dat is een aantal.", "Dat is de eigenaar, niet het ding."],
+        wrongHints: [null, "Het gaat niet over de tafel maar over wat erop ligt.", "'Deze is van mij' — gaat het over één ding of over twee?", "Dat is de eigenaar, niet het ding."],
         uitlegPad: {
           stappen: [{ titel: "Welk ding is van mij?", tekst: "'Deze' wijst naar één van de pennen — die dichtbij is. 'Deze' verwijst dus naar een pen." }],
           niveaus: {
@@ -419,9 +419,9 @@ const steps = [
       },
       {
         q: "*Ik kocht een boek. Dit lees ik nu.* Waar verwijst 'Dit' naar?",
-        options: ["het boek", "ik", "nu", "kopen"],
+        options: ["het boek", "ik", "de winkel", "kopen"],
         answer: 0,
-        wrongHints: [null, "Dat is de lezer, niet wat gelezen wordt.", "Dat zegt wannéér.", "Dat is een werkwoord."],
+        wrongHints: [null, "Dat is de lezer, niet wat gelezen wordt.", "Staat er een winkel in de zinnen? Welk ding wordt er al genoemd?", "Dat is een werkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Wat lees je nu?", tekst: "Je leest het boek. 'Dit' verwijst naar het boek (een 'het'-woord, dus 'dit')." }],
           niveaus: {
@@ -523,9 +523,9 @@ const steps = [
     checks: [
       {
         q: "*De kinderen spelen in het park. Ze hebben veel plezier.* Naar wie verwijst 'Ze'?",
-        options: ["de kinderen", "het park", "plezier", "niemand"],
+        options: ["de kinderen", "het park", "de ouders", "de vogels"],
         answer: 0,
-        wrongHints: [null, "Een park heeft geen plezier — wie wel?", "Dat is een gevoel, geen persoon.", "Er zijn wél personen: kijk ervoor."],
+        wrongHints: [null, "Een park heeft geen plezier — wie wel?", "Staan er ouders in de zin ervóór? Kijk wie er spelen.", "Staan er vogels in de zinnen? Kijk wie er al genoemd zijn."],
         uitlegPad: {
           stappen: [{ titel: "Wie hebben plezier?", tekst: "'Ze' (meervoud) verwijst naar de kinderen, die in het park spelen." }],
           niveaus: {
@@ -622,9 +622,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "*De boer roept zijn koeien. Ze komen meteen naar de stal.* Naar wie verwijst 'Ze'?",
-        options: ["de koeien", "de boer", "de stal", "niemand"],
+        options: ["de koeien", "de boer", "de stal", "de honden"],
         answer: 0,
-        wrongHints: [null, "De boer is één man. Zou je dan 'ze' zeggen?", null, null],
+        wrongHints: [null, "De boer is één man. Zou je dan 'ze' zeggen?", "Kan een stal naar de stal komen?", "Staan er honden in de zinnen? Kijk welke dieren er al genoemd zijn."],
         uitlegPad: {
           stappen: [
             {

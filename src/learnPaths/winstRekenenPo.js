@@ -62,9 +62,9 @@ const steps = [
         // 6 okt 2026 (melding 4 okt): "winst" is strikt verkoop − álle kosten; wat hier wordt
         // geoefend is de brutowinst (verkoop − inkoop). Zo heet het dan ook.
         q: "Wat is **brutowinst**?",
-        options: ["De verkoopprijs min de inkoopprijs", "De inkoopprijs min de verkoopprijs", "De verkoopprijs plus de inkoopprijs", "Alleen de verkoopprijs"],
+        options: ["De verkoopprijs min de inkoopprijs", "De inkoopprijs min de verkoopprijs", "De verkoopprijs plus de inkoopprijs", "De verkoopprijs keer het aantal"],
         answer: 0,
-        wrongHints: [null, "Andersom — dan krijg je bij winst een negatief getal.", "Optellen klopt niet; winst is wat je overhoudt.", "De inkoop telt ook mee — die ben je kwijtgeraakt."],
+        wrongHints: [null, "Andersom — dan krijg je bij winst een negatief getal.", "Optellen klopt niet; winst is wat je overhoudt.", "Dat is de opbrengst: al het geld dat binnenkomt. Is dat ook wat je overhoudt?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat houd je over?", tekst: "Je verkoopt iets en krijgt de verkoopprijs. Maar het kostte jou eerst de inkoopprijs. Wat overblijft is de brutowinst." },
@@ -126,7 +126,7 @@ const steps = [
         q: "Je koopt iets in voor **€6** en verkoopt het voor **€5**. Wat gebeurt er?",
         options: ["Je maakt €1 verlies", "Je maakt €1 winst", "Je maakt €11 winst", "Je houdt precies niets over"],
         answer: 0,
-        wrongHints: [null, "Je verkocht juist goedkoper dan je inkoop — dan win je niet.", "Optellen klopt niet; je verkocht voor minder dan de inkoop.", "Er is wél een verschil van €1 — alleen de verkeerde kant op."],
+        wrongHints: [null, "Je verkocht juist goedkoper dan je inkoop — dan win je niet.", "Optellen klopt niet; je verkocht voor minder dan de inkoop.", "Vergelijk de prijzen: zijn €6 en €5 even veel?"],
         uitlegPad: {
           stappen: [
             { titel: "Reken de winst-som", tekst: "Winst = verkoop − inkoop = €5 − €6 = −€1." },
@@ -151,7 +151,7 @@ const steps = [
       },
       {
         q: "Je koopt een boek in voor **€9** en verkoopt het voor **€9**. Wat is je winst?",
-        options: ["€0", "€9 winst", "€18 winst", "€9 verlies"],
+        options: ["€0 winst", "€9 winst", "€18 winst", "€9 verlies"],
         answer: 0,
         wrongHints: [null, "Dat zou alleen kloppen als de inkoop niets had gekost.", "Optellen klopt niet — winst is het verschil.", "Verlies maak je als de verkoop lager is dan de inkoop."],
         uitlegPad: {
@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "Wat heet het als je iets verkoopt **voor precies de inkoopprijs**?",
-        options: ["Quitte", "Grote winst", "Verlies", "Opbrengst"],
+        options: ["Quitte", "Brutowinst", "Verlies", "Opbrengst"],
         answer: 0,
-        wrongHints: [null, "Voor winst moet de verkoopprijs hoger zijn dan de inkoop.", "Voor verlies moet de verkoopprijs lager zijn — hier zijn ze gelijk.", "Opbrengst is al het geld dat binnenkomt, niet de eindstand."],
+        wrongHints: [null, "Brutowinst is verkoop min inkoop. Hoe noem je het als dat verschil nul is?", "Voor verlies moet de verkoopprijs lager zijn — hier zijn ze gelijk.", "Opbrengst is al het geld dat binnenkomt, niet de eindstand."],
         uitlegPad: {
           stappen: [
             { titel: "Verkoop = inkoop", tekst: "Als je verkoopt voor precies de inkoopprijs, is het verschil €0." },
@@ -208,7 +208,7 @@ const steps = [
         wrongHints: [
           null,
           "Wat houd je over als verkoop en inkoop even groot zijn?",
-          null,
+          "Is €12 meer of minder dan wat de bal jou kostte?",
           "Is deze prijs hoger of lager dan wat de bal jou kostte?",
         ],
         uitlegPad: {
@@ -676,13 +676,13 @@ const steps = [
         wrongHints: [null, "Niet optellen — winst is het verschil.", "Dat is je inkoop.", "Daar zit de inkoop nog in."],
       },
       {
-        q: "Je maakt **€4 winst per stuk** en verkoopt **3 stuks**. **Totale winst**?",
+        q: "Je maakt **€4 winst per stuk** en verkoopt **3 stuks**. Hoeveel is je **totale winst**?",
         options: ["€12", "€7", "€1", "€43"],
         answer: 0,
         wrongHints: [null, "Bij 'per stuk × aantal' vermenigvuldig je, niet optellen.", "Aftrekken klopt niet — elk stuk levert €4 op.", "Reken €4 × 3, niet de cijfers naast elkaar."],
       },
       {
-        q: "Inkoop **€2**, je wilt **€3 winst**. Voor hoeveel **verkopen**?",
+        q: "Inkoop **€2**, je wilt **€3 winst**. Voor hoeveel moet je het **verkopen**?",
         options: ["€5", "€1", "€6", "€3"],
         answer: 0,
         wrongHints: [null, "Aftrekken klopt niet — je wilt méér dan je inkoop.", "Niet vermenigvuldigen; reken inkoop + winst.", "Dat is alleen de winst; de inkoop moet erbij."],
@@ -700,19 +700,19 @@ const steps = [
         wrongHints: [null, "Optellen klopt niet — bij een prijs per stuk en een aantal vermenigvuldig je.", "Dat is de prijs van één knuffel.", "Dat is het aantal, niet het geld."],
       },
       {
-        q: "Een dier koop je in voor **€10** en verkoopt voor **€14**. **Winst**?",
+        q: "Een knuffeldier koop je in voor **€10** en verkoop je voor **€14**. Hoeveel **winst** maak je?",
         options: ["€4", "€24", "€10", "€14"],
         answer: 0,
         wrongHints: [null, "Niet optellen — winst is het verschil.", "Dat is je inkoop.", "Daar zit de inkoop nog in."],
       },
       {
         q: "Wat is het verschil tussen **opbrengst** en **winst**?",
-        options: ["Opbrengst is al het geld dat binnenkomt; winst is wat overblijft na de inkoop", "Ze zijn precies hetzelfde: allebei het geld dat bij de verkoop binnenkomt", "Winst is altijd groter dan de opbrengst, omdat de inkoop erbij wordt geteld", "Opbrengst is wat overblijft na de inkoop; winst is al het geld dat binnenkomt"],
+        options: ["Opbrengst is al het geld dat binnenkomt; winst is wat overblijft na de inkoop", "Ze zijn precies hetzelfde: allebei het geld dat bij de verkoop binnenkomt", "Winst is groter dan de opbrengst, omdat de inkoop erbij wordt geteld", "Opbrengst is wat overblijft na de inkoop; winst is al het geld dat binnenkomt"],
         answer: 0,
         wrongHints: [null, "Niet hetzelfde — de inkoop gaat nog van de opbrengst af.", "Winst is juist kleiner; de inkoop gaat er nog af.", "Andersom: opbrengst komt binnen, winst blijft over."],
       },
       {
-        q: "Een ijsje: inkoop **€0,40**, verkoop **€1,00**. **Winst per ijsje**?",
+        q: "Een ijsje: inkoop **€0,40**, verkoop **€1,00**. Hoeveel **winst** maak je **per ijsje**?",
         options: ["€0,60", "€1,40", "€0,40", "€1,00"],
         answer: 0,
         wrongHints: [null, "Niet optellen — winst is het verschil.", "Dat is je inkoop.", "Daar zit de inkoop nog in."],
@@ -750,7 +750,7 @@ const steps = [
         },
       },
       {
-        q: "Inkoop **€12**, gewenste winst **€8**. Hoeveel **verkoopprijs**?",
+        q: "Inkoop **€12**, gewenste winst **€8**. Wat moet de **verkoopprijs** zijn?",
         options: ["€20", "€4", "€12", "€8"],
         answer: 0,
         wrongHints: [null, "Dan verkoop je voor minder dan de inkoop — verlies!", "Dat is de inkoopprijs zonder winst.", "Dat is alleen de gewenste winst, de inkoop moet erbij."],

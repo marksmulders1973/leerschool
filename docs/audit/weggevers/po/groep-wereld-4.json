@@ -1,0 +1,1118 @@
+{
+ "bestanden": [
+  "./kaartlezenPo.js",
+  "./werelddelenLandenPo.js",
+  "./beroepenWerkPo.js",
+  "./oudheidEgyptiansGriekenPo.js",
+  "./godsdienstenCulturenPo.js",
+  "./wereldorientatieMixPo.js",
+  "./vulkanenPo.js",
+  "./wereldreligiesPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is primaire sector?",
+   "opties": [
+    "Werk in de natuur",
+    "Diensten",
+    "Maken",
+    "Zorg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2SK",
+   "q": "Wat is bruto?",
+   "opties": [
+    "Salaris voor belasting",
+    "Salaris na belasting",
+    "Geen verschil",
+    "Bonus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Minimum-uurloon NL 2024?",
+   "opties": [
+    "~€14/uur",
+    "€5/uur",
+    "€50/uur",
+    "Geen wet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Welke is HBO-beroep?",
+   "opties": [
+    "Verpleegkundige",
+    "Loodgieter",
+    "Arts",
+    "Kassier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Wat is bruto?",
+   "opties": [
+    "Salaris voor belasting",
+    "Salaris na belasting",
+    "Cadeau",
+    "Extra geld voor overuren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 4,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Wat betekent MBO/HBO/WO?",
+   "opties": [
+    "Drie niveaus van vervolgonderwijs",
+    "Drie soorten belasting",
+    "Drie soorten bedrijven",
+    "Drie groepen van de basisschool"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "beroepen-werk-po",
+   "file": "./beroepenWerkPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "L2",
+   "q": "Wat is loon?",
+   "opties": [
+    "Betaling voor werk",
+    "Bonus",
+    "Vakantie",
+    "Belasting"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "godsdiensten-culturen-po",
+   "file": "./godsdienstenCulturenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Percentage NL zonder religie?",
+   "opties": [
+    "~55%",
+    "1%",
+    "100%",
+    "20%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "godsdiensten-culturen-po",
+   "file": "./godsdienstenCulturenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel zuilen heeft islam?",
+   "opties": [
+    "5",
+    "10",
+    "3",
+    "1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "godsdiensten-culturen-po",
+   "file": "./godsdienstenCulturenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wat is kosjer?",
+   "opties": [
+    "Joods toegestaan eten",
+    "Niet toegestaan",
+    "Islamitisch toegestaan eten",
+    "Christelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "godsdiensten-culturen-po",
+   "file": "./godsdienstenCulturenPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Anne Frank was een ___ kind in WO2?",
+   "opties": [
+    "Joods",
+    "Christen",
+    "Moslim",
+    "Atheïst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Amsterdam ligt boven Rotterdam op de kaart. Dus Amsterdam ligt:",
+   "opties": [
+    "Ten noorden van Rotterdam",
+    "Ten zuiden van Rotterdam",
+    "Ten oosten van Rotterdam",
+    "Ten westen van Rotterdam"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Schaal 1:100.000. 1 cm op kaart = ___ in het echt.",
+   "opties": [
+    "1 km",
+    "100 m",
+    "10 km",
+    "100 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Schaal 1:100.000. 5 cm op kaart = ___ in het echt.",
+   "opties": [
+    "5 km",
+    "500 m",
+    "50 km",
+    "0,5 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Schaal 1:50.000. 2 cm = ___ in het echt.",
+   "opties": [
+    "1 km",
+    "100 m",
+    "10 km",
+    "2 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Een wereldkaart heeft welke schaal?",
+   "opties": [
+    "1:50.000.000",
+    "1:1.000",
+    "1:50",
+    "1:200"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Schaal 1:1.000.000. 1 cm op de kaart = ___ in het echt.",
+   "opties": [
+    "10 km",
+    "1 km",
+    "100 km",
+    "1.000 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Een rode lijn op een wegenkaart is meestal:",
+   "opties": [
+    "Snelweg / hoofdweg",
+    "Rivier",
+    "Wandelpad",
+    "Spoor"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Schaal 1:100.000. 8 cm op de kaart = ___ km.",
+   "opties": [
+    "8 km",
+    "80 km",
+    "0,8 km",
+    "800 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Stad A ligt links-boven. Stad B ligt rechts-onder. Welke richting moet je lopen van A naar B?",
+   "opties": [
+    "Zuidoost",
+    "Noordwest",
+    "Zuidwest",
+    "Noordoost"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Op een kaart staat N-pijl naar links. Wat betekent dat?",
+   "opties": [
+    "Noord ligt aan de linkerkant",
+    "Kaart is verkeerd",
+    "Noord is altijd boven",
+    "Kompas is kapot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Een kaart toont hoogtelijnen dicht bij elkaar. Wat betekent dat?",
+   "opties": [
+    "Een steile helling",
+    "Plat landschap",
+    "Water",
+    "Bos"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Wat is de windroos op een kaart?",
+   "opties": [
+    "Symbool dat noord, oost, zuid, west aanwijst",
+    "Versiering in de vorm van een bloem",
+    "Teken dat laat zien hoe hard het waait",
+    "Soort kaart"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 9,
+   "soort": "L2",
+   "q": "Met Google Maps of een navigatie-app in de auto — welk principe lijkt op een papieren kaart?",
+   "opties": [
+    "Toont gebied met schaal + symbolen + jouw locatie",
+    "Maakt foto's van de omgeving",
+    "Filmt wat er onderweg gebeurt",
+    "Stuurt berichten naar andere auto's"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Een legenda is?",
+   "opties": [
+    "Uitleg van symbolen op de kaart",
+    "De titel bovenaan de kaart",
+    "Lijst van alle landen op de kaart",
+    "Aantal pagina's van de atlas"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Schaal 1:1.000 betekent: 1 cm op kaart = ___?",
+   "opties": [
+    "10 m",
+    "1 m",
+    "1 km",
+    "100 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Op kaart 5 cm bij schaal 1:50.000 = welke afstand?",
+   "opties": [
+    "2,5 km",
+    "250 m",
+    "25 km",
+    "50 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Welk symbool op de kaart is meestal voor een kerk?",
+   "opties": [
+    "†",
+    "△",
+    "∼",
+    "#"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Tussen N en O ligt?",
+   "opties": [
+    "Noordoost",
+    "Noordwest",
+    "Zuidoost",
+    "Zuidwest"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Welke richting wijst de rode kant van een kompasnaald?",
+   "opties": [
+    "Noord",
+    "Zuid",
+    "Oost",
+    "Onder"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kaartlezen-po",
+   "file": "./kaartlezenPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Wat is de afkorting van kilometer?",
+   "opties": [
+    "km",
+    "kg",
+    "kn",
+    "kml"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat is Rosetta-steen?",
+   "opties": [
+    "Steen die hielp hiërogliefen ontcijferen",
+    "Gouden schat uit een farao-graf",
+    "Bekende mummie uit Gizeh",
+    "Berg vlak bij de Nijl"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wie veroverde Perzië + Egypte + deel India?",
+   "opties": [
+    "Alexander de Grote",
+    "Caesar",
+    "Aristoteles",
+    "Plato"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wie stichtte volgens legende Rome?",
+   "opties": [
+    "Romulus en Remus",
+    "Caesar",
+    "Augustus",
+    "Alexander"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Romeinse grens in NL was?",
+   "opties": [
+    "Rijn",
+    "Maas",
+    "IJssel",
+    "Schelde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Welke rivier was levensader Egypte?",
+   "opties": [
+    "Nijl",
+    "Donau",
+    "Rijn",
+    "Tigris"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wie zei 'Veni, vidi, vici'?",
+   "opties": [
+    "Caesar",
+    "Augustus",
+    "Alexander",
+    "Toetanchamon"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Wat is een piramide?",
+   "opties": [
+    "Grafmonument voor een farao",
+    "Tempel voor goden",
+    "Woonhuis van de farao",
+    "Opslagplaats voor graan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Wie ontcijferde de Rosetta-steen?",
+   "opties": [
+    "Champollion",
+    "Caesar",
+    "Cleopatra",
+    "Erasmus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Socrates was een?",
+   "opties": [
+    "Griekse filosoof",
+    "Romeinse keizer",
+    "Egyptische farao",
+    "Romeinse veldheer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Alexander de Grote kwam uit?",
+   "opties": [
+    "Macedonië",
+    "Egypte",
+    "Rome",
+    "Perzië"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Eerste Olympische Spelen waren in?",
+   "opties": [
+    "Olympia, 776 v.Chr.",
+    "Athene, 1896",
+    "Rome, 100 n.Chr.",
+    "Egypte, 1000 v.Chr."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "S",
+   "q": "Welke godenwereld kenden de Romeinen vóór het christendom?",
+   "opties": [
+    "Veel goden",
+    "Eén god",
+    "Geen goden",
+    "Alleen dierengoden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 25,
+   "soort": "K",
+   "q": "Wat is een gladiator?",
+   "opties": [
+    "Romeinse arena-vechter",
+    "Egyptische priester",
+    "Griekse wetenschapper",
+    "Romeinse senator"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+   "file": "./oudheidEgyptiansGriekenPo.js",
+   "stap": 3,
+   "vraag": 27,
+   "soort": "K",
+   "q": "Welke Griekse stad was bekend voor leger?",
+   "opties": [
+    "Sparta",
+    "Athene",
+    "Korinthe",
+    "Olympia"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vulkanen-po",
+   "file": "./vulkanenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is het verschil tussen magma en lava?",
+   "opties": [
+    "Magma zit onder de grond, lava is naar buiten gekomen",
+    "Magma is koud, lava is heet",
+    "Lava is steen, magma is water",
+    "Er is geen verschil, het zijn twee woorden voor as"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vulkanen-po",
+   "file": "./vulkanenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Wat komt er uit een vulkaan als hij uitbarst?",
+   "opties": [
+    "Lava, as en gassen",
+    "Alleen lava",
+    "Alleen rook en vuur",
+    "Water en modder"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vulkanen-po",
+   "file": "./vulkanenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat gebeurt er met lava als het afkoelt?",
+   "opties": [
+    "Het wordt weer hard steen",
+    "Het wordt water",
+    "Het verdwijnt",
+    "Het wordt zand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vulkanen-po",
+   "file": "./vulkanenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat gebeurde er met de stad Pompeï in het jaar 79?",
+   "opties": [
+    "Ze werd bedolven onder de as van de Vesuvius",
+    "Ze werd overstroomd door de zee",
+    "Ze werd verwoest door een aardbeving",
+    "Ze werd gebouwd op een vulkaan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vulkanen-po",
+   "file": "./vulkanenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Waarom is aardwarmte een slimme energiebron?",
+   "opties": [
+    "Het is schoon en raakt niet op",
+    "Het is fossiel",
+    "Het maakt lava",
+    "Het werkt alleen in Nederland"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vulkanen-po",
+   "file": "./vulkanenPo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Welk voordeel hebben vulkanen voor boeren?",
+   "opties": [
+    "De as maakt de grond vruchtbaar",
+    "De lava geeft schaduw",
+    "Er valt meer regen",
+    "De grond wordt harder"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel werelddelen leer je op een Nederlandse school?",
+   "opties": [
+    "7",
+    "5",
+    "10",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel mensen wonen er op de wereld (2024)?",
+   "opties": [
+    "~8 miljard",
+    "1 miljard",
+    "100 miljard",
+    "500 miljoen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoofdstad van Frankrijk?",
+   "opties": [
+    "Parijs",
+    "Lyon",
+    "Marseille",
+    "Bordeaux"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel landen in EU (2024)?",
+   "opties": [
+    "27",
+    "50",
+    "10",
+    "100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Welk land heeft Tafelberg + Mandela?",
+   "opties": [
+    "Zuid-Afrika",
+    "Nigeria",
+    "Egypte",
+    "Brazilië"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel werelddelen telt de indeling die je op school leert?",
+   "opties": [
+    "7",
+    "5",
+    "10",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoofdstad Frankrijk?",
+   "opties": [
+    "Parijs",
+    "Lyon",
+    "Berlijn",
+    "Madrid"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Hoofdstad van Verenigd Koninkrijk?",
+   "opties": [
+    "Londen",
+    "Manchester",
+    "Edinburgh",
+    "Liverpool"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Hoofdstad van VS?",
+   "opties": [
+    "Washington D.C.",
+    "New York",
+    "Los Angeles",
+    "Chicago"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Hoofdstad van Japan?",
+   "opties": [
+    "Tokio",
+    "Kyoto",
+    "Osaka",
+    "Seoul"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Welke is grootste Europese stad?",
+   "opties": [
+    "Moskou",
+    "Londen",
+    "Parijs",
+    "Madrid"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werelddelen-landen-po",
+   "file": "./werelddelenLandenPo.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Welk land heeft Acropolis?",
+   "opties": [
+    "Griekenland",
+    "Italië",
+    "Egypte",
+    "Turkije"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "wereldorientatie-mix-po",
+   "file": "./wereldorientatieMixPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Wie was Anne Frank?",
+   "opties": [
+    "Joodse onderduikster",
+    "Schilder",
+    "Koningin",
+    "Schrijfster fantasy"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "wereldorientatie-mix-po",
+   "file": "./wereldorientatieMixPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel provincies heeft Nederland?",
+   "opties": [
+    "12",
+    "11",
+    "13",
+    "14"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "wereldorientatie-mix-po",
+   "file": "./wereldorientatieMixPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel EU-lidstaten zijn er nu (sinds Brexit)?",
+   "opties": [
+    "27",
+    "28",
+    "26",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "wereldorientatie-mix-po",
+   "file": "./wereldorientatieMixPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel botten heeft een volwassen mens?",
+   "opties": [
+    "~206",
+    "~50",
+    "~500",
+    "~50.000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "wereldorientatie-mix-po",
+   "file": "./wereldorientatieMixPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Een spin is:",
+   "opties": [
+    "Geen insect",
+    "Insect",
+    "Vogel",
+    "Zoogdier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "wereldorientatie-mix-po",
+   "file": "./wereldorientatieMixPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Op welke datum vieren we Koningsdag?",
+   "opties": [
+    "27 april",
+    "30 april",
+    "5 mei",
+    "27 mei"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

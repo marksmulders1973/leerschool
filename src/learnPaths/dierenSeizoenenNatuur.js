@@ -52,16 +52,16 @@ const steps = [
       },
       {
         q: "Wat doen alle levende wezens?",
-        options: ["Ze ademen", "Ze praten", "Ze lopen", "Ze zingen"],
+        options: ["Ze halen adem", "Ze hebben bloed", "Ze maken geluid", "Ze lopen rond"],
         answer: 0,
-        wrongHints: [null, "Niet alle dieren praten.", "Vissen lopen niet, planten ook niet.", "Niet alle dieren zingen."],
+        wrongHints: [null, "Een boom of een paddenstoel heeft geen bloed — en die leven toch.", "Hoor je een boom of een slak ooit geluid maken? Die leven toch.", "Een boom staat altijd op dezelfde plek — en leeft toch."],
         uitlegPad: {
           stappen: [{ titel: "Ademen = universeel", tekst: "Dieren en planten hebben allemaal zuurstof nodig — ook een plant ademt." }],
           woorden: [{ woord: "ademen", uitleg: "Zuurstof opnemen, kooldioxide afgeven." }],
           theorie: "6 levenskenmerken die ALLE wezens delen: eten, ademen, groeien, bewegen, reageren, voortplanten.",
           voorbeelden: [{ type: "lijst", tekst: "Mens ademt met longen. Vis met kieuwen. Plant via blaadjes." }],
-          basiskennis: [{ onderwerp: "Niet praten/lopen/zingen", uitleg: "Praten/lopen/zingen geldt niet voor planten of vissen." }],
-          niveaus: { basis: "Ademen.", simpeler: "ALLE levende wezens ademen (zuurstof). Praten/lopen/zingen niet voor planten/vissen.", nogSimpeler: "Ademen" },
+          basiskennis: [{ onderwerp: "Niet bloed/geluid/rondlopen", uitleg: "Bloed hebben, geluid maken of rondlopen geldt niet voor planten en paddenstoelen." }],
+          niveaus: { basis: "Ademen.", simpeler: "ALLE levende wezens ademen (zuurstof). Bloed, geluid of rondlopen niet: planten hebben dat niet.", nogSimpeler: "Ademen" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -98,13 +98,13 @@ const steps = [
       {
         q: "Wat is **uniek** aan zoogdieren?",
         options: [
-          "Moeder geeft melk aan baby",
+          "De moeder geeft melk",
           "Ze leggen eieren",
           "Ze hebben koud bloed",
-          "Ze leven alleen in zee",
+          "Ze ademen met longen",
         ],
         answer: 0,
-        wrongHints: [null, "Eieren = vogels, vissen, reptielen.", "Koud bloed = vissen, reptielen.", "Zoogdieren leven overal."],
+        wrongHints: [null, "Eieren = vogels, vissen, reptielen.", "Koud bloed = vissen, reptielen.", "Vogels en reptielen ademen ook met longen. Is dat dan alleen iets van zoogdieren?"],
         uitlegPad: {
           stappen: [{ titel: "Zogen = melk geven", tekst: "Alleen zoogdieren geven melk aan jongen. Andere dieren niet." }],
           woorden: [{ woord: "zogen", uitleg: "Moeder geeft melk uit tepels aan baby. Daarom 'zoogdier'." }],
@@ -133,7 +133,7 @@ const steps = [
         q: "Wat hebben **alleen vogels**?",
         options: ["Veren", "Vleugels", "Eieren", "Snavel"],
         answer: 0,
-        wrongHints: [null, "Vleermuizen + insecten hebben ook vleugels.", "Reptielen + vissen leggen ook eieren.", "Sommige inktvissen hebben ook een snavel-achtig iets."],
+        wrongHints: [null, "Vleermuizen + insecten hebben ook vleugels.", "Reptielen + vissen leggen ook eieren.", "Ook een schildpad en een inktvis hebben een soort snavel."],
         uitlegPad: {
           stappen: [{ titel: "Veren = uniek", tekst: "ALLEEN vogels hebben veren. Andere dieren hebben haar/schubben/huid." }],
           woorden: [{ woord: "veren", uitleg: "Lichte structuren voor isolatie + vliegen. Alleen vogels." }],
@@ -147,7 +147,7 @@ const steps = [
         q: "Welke vogel kan **niet** vliegen?",
         options: ["pinguïn", "havik", "mus", "ooievaar"],
         answer: 0,
-        wrongHints: [null, "Havik vliegt zeker.", "Mus vliegt.", "Ooievaar trekt — vliegt ver."],
+        wrongHints: [null, "Havik vliegt zeker.", "Mus vliegt.", "Een ooievaar vliegt met zijn grote vleugels."],
         uitlegPad: {
           stappen: [{ titel: "Pinguïn = zwemt", tekst: "Pinguïn heeft vleugels die als 'flippers' werken — zwemmen, niet vliegen." }],
           woorden: [{ woord: "pinguïn", uitleg: "Vogel die niet vliegt. Leeft op het zuidelijk halfrond, zwemt heel goed." }],
@@ -184,7 +184,7 @@ const steps = [
         q: "Hoeveel poten heeft een **insect**?",
         options: ["6", "4", "8", "10"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "8 = spin, geen insect!", "10 poten heeft een krab — geen insect."],
+        wrongHints: [null, "Vier poten heeft een hond of een kat. Tel de poten van een mier eens.", "8 = spin, geen insect!", "10 poten heeft een krab — geen insect."],
         uitlegPad: {
           stappen: [{ titel: "Insect = 6 poten", tekst: "Alle insecten hebben PRECIES 6 poten. Andere telling = geen insect." }],
           woorden: [{ woord: "insect", uitleg: "Dier met 6 poten + (vaak) vleugels + hard pantser." }],
@@ -210,9 +210,9 @@ const steps = [
       },
       {
         q: "Wat klopt over een **spin**?",
-        options: ["Het is geen insect", "Het is een insect", "Het is een reptiel", "Het is een vogel"],
+        options: ["Het is geen insect", "Het is een insect", "Het heeft zes poten", "Het is een soort kever"],
         answer: 0,
-        wrongHints: [null, "Spinnen zijn aparte groep (spinachtigen).", "Spinnen hebben geen schubben.", "Spinnen hebben geen veren."],
+        wrongHints: [null, "Een insect heeft 6 poten. Tel de poten van een spin eens.", "Tel nog eens: heeft een spin evenveel poten als een mier?", "Een kever heeft 6 poten en harde dekschilden. Lijkt een spin daarop?"],
         uitlegPad: {
           stappen: [{ titel: "Spin = 8 poten", tekst: "Spinnen hebben 8 poten — insecten 6. Spin = aparte groep (spinachtigen)." }],
           woorden: [{ woord: "spinachtigen", uitleg: "Aparte groep: spinnen, schorpioenen, mijten. 8 poten." }],
@@ -240,9 +240,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **slak**?",
-        options: ["Weekdier", "Schaaldier", "Insect", "Reptiel"],
+        options: ["Weekdier", "Schaaldier", "Insect", "Amfibie"],
         answer: 0,
-        wrongHints: [null, "Geen pantser.", "Geen 6 poten.", "Geen schubben."],
+        wrongHints: [null, "Een schaaldier zoals een krab heeft een hard pantser en poten.", "Een insect heeft 6 poten. Heeft een slak poten?", "Een amfibie zoals de kikker heeft poten en botten. Een slak niet."],
         uitlegPad: {
           stappen: [{ titel: "Zacht + schelp", tekst: "Slak heeft zacht lichaam + schelp = weekdier." }],
           woorden: [{ woord: "weekdier", uitleg: "Zacht lichaam, vaak met schelp. Slak, mossel, octopus, inktvis." }],
@@ -286,9 +286,9 @@ const steps = [
     checks: [
       {
         q: "Welk **stadium** komt tussen rups en vlinder?",
-        options: ["pop", "ei", "kuiken", "kikkervisje"],
+        options: ["pop", "ei", "kleine vlinder", "grote rups"],
         answer: 0,
-        wrongHints: [null, "Het ei komt vóór de rups.", "Een kuiken komt uit een vogelei.", "Een kikkervisje wordt een kikker."],
+        wrongHints: [null, "Het ei komt vóór de rups.", "Een vlinder groeit niet meer na het uitkomen. Wat zit er tussen rups en vlinder?", "Ook een grote rups is nog steeds een rups. Wat komt daarna?"],
         uitlegPad: {
           stappen: [{ titel: "Ei → rups → pop → vlinder", tekst: "Een vlinder groeit op in 4 stadia. Tussen rups en vlinder zit het popstadium." }],
           woorden: [{ woord: "pop", uitleg: "Het stadium waarin de rups stil hangt en van binnen verandert in een vlinder." }],
@@ -342,15 +342,15 @@ const steps = [
     checks: [
       {
         q: "Wat gebeurt vooral in de **lente**?",
-        options: ["Veel jonge dieren geboren", "Bladeren vallen", "Sneeuw", "Lange koude nachten"],
+        options: ["Veel jonge dieren worden geboren", "De bladeren vallen van de bomen", "Er ligt vaak sneeuw op straat", "Trekvogels vliegen weg naar het zuiden"],
         answer: 0,
-        wrongHints: [null, "Bladeren vallen = herfst.", "Sneeuw = winter.", "Lange koude nachten = winter."],
+        wrongHints: [null, "Wanneer worden de bomen kaal? Dat is niet de lente.", "Sneeuw valt vooral in de winter.", "Trekvogels vertrekken in de herfst. In de lente komen ze juist terug."],
         uitlegPad: {
           stappen: [{ titel: "Lente = nieuw leven", tekst: "Lente: warmer + bloemen + jonge dieren (lammetjes, kuikens, hazen)." }],
           woorden: [{ woord: "lente", uitleg: "Maart-april-mei. Periode van ontwaken na winter." }],
           theorie: "Seizoen-toewijzing: lente=geboorte, zomer=groei, herfst=oogst/voorraad, winter=rust.",
           voorbeelden: [{ type: "tabel", tekst: "Lente: lammetjes, kuikens, paardenbloemen, trekvogels terug." }],
-          basiskennis: [{ onderwerp: "Niet andere seizoenen", uitleg: "Bladval=herfst, sneeuw/koude nachten=winter." }],
+          basiskennis: [{ onderwerp: "Niet andere seizoenen", uitleg: "Bladval=herfst, sneeuw=winter, trekvogels vertrekken in de herfst." }],
           niveaus: { basis: "Jonge dieren.", simpeler: "Lente = jonge dieren geboren (lammetjes, kuikens) + bloemen bloeien.", nogSimpeler: "Jong" },
         },
       },
@@ -412,13 +412,13 @@ const steps = [
       {
         q: "Waarom **vallen bladeren** in de herfst?",
         options: [
-          "Boom spaart energie in winter",
-          "Bladeren worden vies",
-          "Sneeuw drukt ze eraf",
-          "Vogels eten ze op",
+          "Zo spaart de boom energie voor de winter",
+          "De harde herfstwind blaast ze eraf",
+          "De nachtvorst maakt de bladeren kapot",
+          "Nieuwe bladeren duwen de oude eraf",
         ],
         answer: 0,
-        wrongHints: [null, "Niet over vies.", "Bladeren vallen vóór de sneeuw.", "Vogels eten geen bladeren."],
+        wrongHints: [null, "Ook op een windstille dag vallen bladeren. Wat heeft de boom in de winter aan zijn bladeren?", "Bladeren vallen al in oktober, vaak vóór de eerste vorst.", "Nieuwe blaadjes komen pas in de lente. Waarom laat de boom ze al in de herfst los?"],
         uitlegPad: {
           stappen: [{ titel: "Geen zonlicht = geen werk", tekst: "Bladeren maken voedsel met zonlicht. Winter = weinig licht. Bladeren kosten dan energie. Dus: vallen af." }],
           woorden: [{ woord: "fotosynthese", uitleg: "Voedsel maken uit zonlicht. Stopt bij gebrek aan licht." }],
@@ -451,19 +451,19 @@ const steps = [
       {
         q: "Wat is **fotosynthese**?",
         options: [
-          "Plant maakt suiker uit zonlicht",
-          "Plant fotografeert de zon",
-          "Plant verbrandt suiker",
-          "Plant ademt water in",
+          "Plant maakt suiker met zonlicht",
+          "Plant neemt water op met wortels",
+          "Plant verbrandt suiker voor energie",
+          "Plant groeit naar het licht toe",
         ],
         answer: 0,
-        wrongHints: [null, "Niets met fotograferen.", "Suiker verbranden is juist het omgekeerde van fotosynthese.", "Water komt via de wortels binnen — wat doet de plant met het licht?"],
+        wrongHints: [null, "Water opnemen doen de wortels. Wat doet het blad met het licht?", "Suiker verbranden is juist het omgekeerde van fotosynthese.", "Een plant groeit wel naar het licht, maar wat máákt hij met dat licht?"],
         uitlegPad: {
           stappen: [{ titel: "Foto + synthese", tekst: "Foto=licht. Synthese=maken. Plant maakt suiker uit zonlicht (+ water + CO2)." }],
           woorden: [{ woord: "fotosynthese", uitleg: "Plant maakt voedsel via zonlicht. Geeft zuurstof af." }],
           theorie: "Formule: water + CO2 + zonlicht → suiker + zuurstof.",
           voorbeelden: [{ type: "feit", tekst: "Daarom geven planten ons zuurstof om te ademen!" }],
-          basiskennis: [{ onderwerp: "Niet fotograferen", uitleg: "'Foto' Grieks voor licht (zoals bij fotosynthese, fotograaf)." }],
+          basiskennis: [{ onderwerp: "Foto = licht", uitleg: "'Foto' is Grieks voor licht (zoals bij fotosynthese en fotograaf)." }],
           niveaus: { basis: "Suiker uit zonlicht.", simpeler: "Foto (licht) + synthese (maken) = plant maakt suiker uit zonlicht. Geeft zuurstof af.", nogSimpeler: "Suiker" },
         },
       },
@@ -548,13 +548,13 @@ const steps = [
       {
         q: "Wat doet een **afbreker**?",
         options: [
-          "Eet dode resten en maakt grond",
-          "Jaagt op andere dieren",
-          "Eet alleen planten",
-          "Slaapt de hele dag",
+          "Maakt van dode resten weer grond",
+          "Jaagt op kleine levende dieren",
+          "Maakt zelf voedsel met zonlicht",
+          "Eet de bladeren van levende planten",
         ],
         answer: 0,
-        wrongHints: [null, "Jagen = vleeseter.", "Planteneter eet planten.", "Niet slapen — actief afbreken."],
+        wrongHints: [null, "Jagen doet een vleeseter, zoals een vos.", "Voedsel maken met zonlicht doet een plant.", "Levende planten eten doet een planteneter, zoals een konijn."],
         uitlegPad: {
           stappen: [{ titel: "Afbreken = recyclen", tekst: "Afbrekers (regenworm/schimmel/bacterie) eten dode resten en maken er weer grond van." }],
           woorden: [{ woord: "afbreker", uitleg: "Maakt dode planten/dieren weer tot voedingsstoffen voor nieuwe planten." }],
@@ -595,9 +595,9 @@ const steps = [
       },
       {
         q: "Wat doen **bijen** voor planten?",
-        options: ["Bestuiven", "Eten ze op", "Beschermen ze", "Maken zaden"],
+        options: ["Ze bestuiven de bloemen", "Ze eten de blaadjes op", "Ze brengen honing naar de bloem", "Ze maken de zaden"],
         answer: 0,
-        wrongHints: [null, "Bijen eten honing, ze eten geen planten op.", "Beschermen doen ze niet direct.", "Bijen maken honing, geen zaden."],
+        wrongHints: [null, "Bijen drinken nectar uit bloemen. Eten ze ook blaadjes?", "Honing maken bijen zelf in de korf, van nectar. Gaat die terug naar de bloem?", "Zaden groeien in de plant zelf. Wat brengen bijen mee waardoor dat kan?"],
         uitlegPad: {
           stappen: [{ titel: "Bestuiving = sleutel", tekst: "Bij vliegt van bloem naar bloem en brengt stuifmeel mee → bevruchting → vrucht/zaad." }],
           woorden: [{ woord: "bestuiving", uitleg: "Stuifmeel van ene bloem naar andere → bloem kan vrucht/zaad maken." }],
@@ -609,15 +609,15 @@ const steps = [
       },
       {
         q: "Welke vorm heeft een **kikker** als baby?",
-        options: ["kikkervisje", "kuiken", "rups", "pop"],
+        options: ["kikkervisje", "kikkerdril", "rups", "pop"],
         answer: 0,
-        wrongHints: [null, "Kuiken = vogel.", "Rups = vlinder.", "Een pop hoort bij insecten zoals de vlinder."],
+        wrongHints: [null, "Kikkerdril zijn de eitjes. Wat komt er uit die eitjes?", "Rups = vlinder.", "Een pop hoort bij insecten zoals de vlinder."],
         uitlegPad: {
           stappen: [{ titel: "Kikkervisje = baby kikker", tekst: "Kikker-cyclus: ei → kikkervisje (in water, met staart) → kikker met poten → volwassen." }],
           woorden: [{ woord: "kikkervisje", uitleg: "Baby-kikker met staart, leeft in water, ademt met kieuwen." }],
           theorie: "Kikker doet metamorfose: water-baby met kieuwen → land-volwassen met longen.",
           voorbeelden: [{ type: "stap", tekst: "Eerst kikkervisje (vis-achtig met staart), dan poten, dan staart weg, dan klaar." }],
-          basiskennis: [{ onderwerp: "Niet kuiken/rups", uitleg: "Kuiken = vogel-baby. Rups = vlinder-baby. Kikkervisje = kikker-baby." }],
+          basiskennis: [{ onderwerp: "Niet kikkerdril/rups", uitleg: "Kikkerdril = de eitjes. Rups = vlinder-baby. Kikkervisje = kikker-baby." }],
           niveaus: { basis: "kikkervisje.", simpeler: "Kikker-baby = kikkervisje (met staart, in water). Verandert later in kikker.", nogSimpeler: "Kikkervisje" },
         },
       },
@@ -637,30 +637,30 @@ const steps = [
       },
       {
         q: "Wat doet een **plant met zonlicht**?",
-        options: ["Maakt zelf voedsel", "Wordt warmer", "Krijgt kleur", "Slaapt"],
+        options: ["Hij maakt er zijn eigen voedsel mee", "Hij houdt er zijn blaadjes warm mee", "Hij kleurt er zijn bloemen mee", "Hij zuigt er water mee uit de grond"],
         answer: 0,
-        wrongHints: [null, "Wordt wel warmer, maar dat is een bijproduct.", "Krijgt wel kleur, maar dat is niet het hoofddoel.", "Planten slapen niet."],
+        wrongHints: [null, "Warm wordt hij wel van de zon, maar daar gebruikt het blad het licht niet voor.", "Bloemen hebben kleur om bijen te lokken. Het licht heeft een belangrijkere taak.", "Water opzuigen doen de wortels. Wat doet het blad met het licht?"],
         uitlegPad: {
           stappen: [{ titel: "Fotosynthese", tekst: "Plant gebruikt zonlicht om voedsel te maken (suiker) uit water + CO2." }],
           woorden: [{ woord: "fotosynthese", uitleg: "Plant maakt suiker uit zonlicht. Geeft zuurstof af." }],
           theorie: "Gevolg: plant heeft eigen voedsel (groei) + wij krijgen zuurstof om te ademen.",
           voorbeelden: [{ type: "feit", tekst: "Zonder zonlicht (in donkere kamer) gaat plant dood — geen voedsel mogelijk." }],
-          basiskennis: [{ onderwerp: "Bij-effecten", uitleg: "Warmer + kleur zijn bijeffecten, niet hoofddoel." }],
+          basiskennis: [{ onderwerp: "Bij-effecten", uitleg: "Warm worden en kleur zijn bijzaken. Water halen doen de wortels." }],
           niveaus: { basis: "Fotosynthese.", simpeler: "Plant gebruikt zonlicht om voedsel (suiker) te maken = fotosynthese.", nogSimpeler: "Voedsel" },
         },
       },
-      { q: "Welk seizoen begint **rond 21 maart**?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "21 juni.", "21 sept.", "21 dec."] },
+      { q: "Welk seizoen begint **rond 21 maart**?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "De zomer begint rond 21 juni.", "De herfst begint rond 21 september.", "De winter begint rond 21 december."] },
       { q: "Welk seizoen heeft **bladval**?", options: ["Herfst","Lente","Zomer","Winter"], answer: 0, wrongHints: [null, "Bloesem.", "Volle bladeren.", "Geen bladeren meer."] },
-      { q: "Wat doet een **trekvogel** in de winter?", options: ["Vliegt naar warmer land","Gaat in een holletje slapen","Krijgt een wit verenpak","Blijft gewoon hier wonen"], answer: 0, wrongHints: [null, "Winterslaap is iets voor egels, niet voor vogels.", "Van kleur wisselen doet een sneeuwhaas — denk aan wat 'trek' in trekvogel betekent.", "Hij doet juist iets groots — denk aan het woord 'trek'."] },
-      { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Een korte slaap van één nacht","De hele winter wakker blijven","Wegvliegen naar een warm land"], answer: 0, wrongHints: [null, "Winterslaap duurt geen nacht, maar maanden.", "Bij winterslaap blijft het dier juist niet wakker.", "Wegvliegen naar een warm land doen trekvogels."] },
+      { q: "Wat doet een **trekvogel** in de winter?", options: ["Vliegt naar warmer land","Gaat in een holletje slapen","Krijgt een wit verenpak","Blijft gewoon hier wonen"], answer: 0, wrongHints: [null, "Een vogel houdt geen winterslaap in een holletje.", "Van kleur wisselen doet een sneeuwhaas — denk aan wat 'trek' in trekvogel betekent.", "Hij doet juist iets groots — denk aan het woord 'trek'."] },
+      { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Een dikke vacht krijgen voor de kou","Een voorraad eten verstoppen","Wegvliegen naar een warm land"], answer: 0, wrongHints: [null, "Een wintervacht helpt tegen de kou, maar het dier blijft dan wakker.", "Eten verstoppen doet een eekhoorn, en die is in de winter vaak wakker.", "Wegvliegen naar een warm land doen trekvogels."] },
       { q: "Welk dier houdt **winterslaap** in NL?", options: ["Egel","Vos","Konijn","Eekhoorn"], answer: 0, wrongHints: [null, "Blijft actief.", "Blijft actief.", "Blijft actief — eet van zijn wintervoorraad."] },
       { q: "Welk seizoen is in Nederland meestal het **droogst**?", options: ["Lente","Winter","Zomer","Herfst"], answer: 0, wrongHints: [null, "Denk aan de grijze, natte wintermaanden. Is dat het droogste seizoen?", "Verrassend: in de zomer valt juist veel regen, door onweersbuien.", "De herfst is vaak het natst."] },
-      { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt diep in de modder","Verstopt zich onder stenen","Vliegt boven de sloot"], answer: 0, wrongHints: [null, "Het is juist heel actief in het water.", "Het zwemt rond in het water, niet verborgen.", "Een kikkervisje heeft geen vleugels."] },
+      { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt diep in de modder","Verstopt zich onder stenen","Legt zelf eitjes in de sloot"], answer: 0, wrongHints: [null, "Het is juist heel actief in het water.", "Het zwemt rond in het water, niet verborgen.", "Eitjes leggen kan pas een volwassen kikker."] },
       { q: "Welke vogel **trekt** in de herfst weg uit NL?", options: ["Ooievaar","Mus","Merel","Koolmees"], answer: 0, wrongHints: [null, "Mussen blijven heel jaar in NL — standvogel.", "Merels blijven hier — bij voederplankjes zie je ze 's winters ook.", "Koolmezen blijven het hele jaar — je ziet ze 's winters bij de pindakaaspot."] },
       { q: "In welk seizoen gaan de **knoppen** aan een tak open (lopen ze uit)?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "Dan zijn de bladeren al volgroeid.", "Dan vallen de bladeren juist.", "Dan zitten de knoppen nog dicht te wachten."] },
-      { q: "Welk seizoen heeft **kortste dagen** in NL?", options: ["Winter","Zomer","Lente","Herfst"], answer: 0, wrongHints: [null, "In de zomer zijn de dagen juist het langst.", "In de lente worden de dagen steeds langer.", "In de herfst worden de dagen korter. Maar in welk seizoen valt de kortste dag, rond 21 december?"] },
+      { q: "In welk seizoen zijn de dagen in Nederland het **kortst**?", options: ["Winter","Zomer","Lente","Herfst"], answer: 0, wrongHints: [null, "In de zomer zijn de dagen juist het langst.", "In de lente worden de dagen steeds langer.", "In de herfst worden de dagen korter. Worden ze daarna nog korter?"] },
       { q: "Wat is een **standvogel**?", options: ["Vogel die het hele jaar in NL blijft","Vogel die in de winter wegtrekt","Vogel die alleen insecten eet","Vogel die niet kan vliegen"], answer: 0, wrongHints: [null, "Dat is juist een trekvogel.", "Wat een vogel eet, heeft niets met 'stand' te maken.", "Kunnen vliegen heeft niets met 'stand' te maken."] },
-      { q: "Wat doet een **rups** uiteindelijk?", options: ["Wordt vlinder","Sterft direct","Wordt bij","Wordt spin"], answer: 0, wrongHints: [null, "De rups eet en groeit eerst een hele tijd — en dan verandert hij.", "Uit een bijeneitje komt een larve, geen rups.", "Spinnen hebben geen rups-fase."] },
+      { q: "Wat doet een **rups** uiteindelijk?", options: ["Wordt vlinder","Wordt libel","Wordt bij","Wordt spin"], answer: 0, wrongHints: [null, "Een libel komt uit een larve die in het water leeft.", "Uit een bijeneitje komt een larve, geen rups.", "Spinnen hebben geen rups-fase."] },
     ],
   },
 ];

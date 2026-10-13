@@ -111,19 +111,19 @@ const steps = [
         q: "Wat is **3 × 4**?",
         options: ["12", "7", "34", "9"],
         answer: 0,
-        wrongHints: [null, "Dat is 3+4, niet 3×4.", "Plak-getal.", "Te weinig."],
+        wrongHints: [null, "Dat is 3+4, niet 3×4.", "Je zette 3 en 4 achter elkaar. Bij × tel je 3 keer 4 op.", "9 is 3 × 3. Hoe vaak tel je 4 op?"],
       },
       {
         q: "Wat is **5 × 2**?",
         options: ["10", "7", "5", "52"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Te weinig.", "Plak-getal."],
+        wrongHints: [null, "Dat is 5 + 2. Bij × tel je 5 keer 2 op.", "5 is maar één keer 5. Wat is 2 keer 5?", "Je zette 5 en 2 achter elkaar. Bij × tel je 5 keer 2 op."],
       },
       {
         q: "**3 × 4** = **4 × 3** — klopt dat?",
-        options: ["Ja, altijd", "Nee", "Soms", "Hangt af"],
+        options: ["Ja, allebei is het 12", "Nee, 3 × 4 is groter", "Nee, 4 × 3 is groter", "Nee, 3 × 4 is 7"],
         answer: 0,
-        wrongHints: [null, "Wel waar — reken 3 × 4 én 4 × 3 en vergelijk.", "Probeer het ook met andere getallen — kom je dan ooit iets anders uit?", "Waar zou het van afhangen? Reken 3 × 4 en 4 × 3 eens uit."],
+        wrongHints: [null, "Reken 3 × 4 én 4 × 3 uit en vergelijk.", "Reken 4 × 3 = 3 + 3 + 3 + 3 uit. Wat komt eruit?", "3 + 4 is 7. Wat is 3 keer 4?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat zegt de wisselregel?", tekst: "Bij **vermenigvuldigen** (keer) maakt de **volgorde niet uit**. 3 × 4 geeft hetzelfde antwoord als 4 × 3. Dit heet de **wisselregel**." },
@@ -151,7 +151,7 @@ const steps = [
         q: "Hoeveel is **2 × 6**?",
         options: ["12", "8", "26", "10"],
         answer: 0,
-        wrongHints: [null, "Optelling 2+6.", "Plak-getal.", "Te weinig."],
+        wrongHints: [null, "Dat is 2 + 6. Bij × tel je 2 keer 6 op.", "Je zette 2 en 6 achter elkaar. Het is een keersom.", "10 is 2 × 5. Hoe vaak tel je de 2 op?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -162,7 +162,7 @@ const steps = [
           null,
           "Dit is een plussom van twee getallen. Bij 'keer' tel je hetzelfde getal vaker op.",
           "Tel eens hoe vaak de 5 hier staat. Hoe vaak moet dat?",
-          null,
+          "Dat is 4 × 4 = 16. Is dat hetzelfde als 4 × 5?",
         ],
         uitlegPad: {
           stappen: [
@@ -216,7 +216,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel eens hoe vaak de 2 er staat.",
-          null,
+          "8 is de uitkomst, niet hoe vaak de 2 er staat.",
           "Dit is een plussom. Welke keersom hoort bij steeds 2 erbij?",
         ],
         uitlegPad: {
@@ -271,7 +271,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt 3 en 6 opgeteld. Maar élke rij heeft 6 blokjes.",
-          null,
+          "Tel elke rij van 6 blokjes op. Hoeveel rijen zijn er?",
           "Tel eens hoeveel rijen er zijn. Zijn dat er 6?",
         ],
         uitlegPad: {
@@ -326,8 +326,8 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt 2 en 7 opgeteld. Maar het is een keersom.",
-          "Maakt de volgorde bij keer eigenlijk uit?",
-          null,
+          "12 is 2 × 6. Kijk naar de som die je al weet.",
+          "16 is 2 × 8. Maakt de volgorde bij keer iets uit?",
         ],
         uitlegPad: {
           stappen: [
@@ -377,7 +377,7 @@ const steps = [
         wrongHints: [
           null,
           "Hier komt er steeds 1 bij. Hoeveel komt er bij de tafel van 3 steeds bij?",
-          null,
+          "Hier komt er steeds 2 bij. Hoeveel komt er bij de tafel van 3 steeds bij?",
           "Hier wordt het getal steeds dubbel. Komt er steeds hetzelfde bij?",
         ],
         uitlegPad: {
@@ -505,7 +505,7 @@ const steps = [
         q: "**3 × 5** = ?",
         options: ["15", "8", "35", "13"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Optelling met 10."],
+        wrongHints: [null, "Dat is 3 + 5. Bij × tel je 3 keer 5 op.", "Je zette 3 en 5 achter elkaar. Het is een keersom.", "13 komt niet voor in de tafel van 5. Tel in stappen van 5."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -516,7 +516,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Hoeveel nullen plak je erachter bij keer 10?",
-          null,
+          "80 is 8 × 10. Hoe vaak tel je 10 op?",
         ],
         uitlegPad: {
           stappen: [
@@ -567,7 +567,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Tel eens hoe vaak je 5 hebt opgeteld.",
-          null,
+          "40 is 8 × 5. Eén stap te veel.",
         ],
         uitlegPad: {
           stappen: [
@@ -617,7 +617,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
-          null,
+          "18 is 9 × 2. Eén stap te veel.",
           "Eén stap te weinig — tel eens hoe vaak 2 je optelt.",
         ],
         uitlegPad: {
@@ -668,8 +668,8 @@ const steps = [
         wrongHints: [
           null,
           "Kijk naar het laatste cijfer. Waar eindigen getallen van de tafel van 5 op?",
-          null,
-          null,
+          "Tel in stappen van 5: 5, 10, 15 … Kom je 40 tegen?",
+          "Tel in stappen van 5. Kom je 35 tegen?",
         ],
         uitlegPad: {
           stappen: [
@@ -725,19 +725,19 @@ const steps = [
         q: "**4 × 3** = ?",
         options: ["12", "7", "43", "9"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 3 × 3."],
+        wrongHints: [null, "Dat is 4 + 3. Bij × tel je 4 keer 3 op.", "Je zette 4 en 3 achter elkaar. Het is een keersom.", "Dat is 3 × 3."],
       },
       {
         q: "**7 × 4** = ?",
         options: ["28", "11", "47", "24"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 6 × 4."],
+        wrongHints: [null, "Dat is 7 + 4. Bij × tel je 7 keer 4 op.", "Je zette 4 en 7 achter elkaar. Het is een keersom.", "Dat is 6 × 4."],
       },
       {
         q: "**9 × 3** = ?",
         options: ["27", "12", "30", "24"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Dat is 10 × 3.", "Dat is 8 × 3."],
+        wrongHints: [null, "Dat is 9 + 3. Bij × tel je 9 keer 3 op.", "Dat is 10 × 3.", "Dat is 8 × 3."],
         uitlegPad: {
           stappen: [
             { titel: "9 keer 3", tekst: "Reken stap voor stap: 3, 6, 9, 12, 15, 18, 21, 24, 27. Negende getal = 27." },
@@ -758,7 +758,7 @@ const steps = [
         q: "**6 × 4** = ?",
         options: ["24", "10", "64", "20"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 5 × 4."],
+        wrongHints: [null, "Dat is 6 + 4. Bij × tel je 6 keer 4 op.", "Je zette 6 en 4 achter elkaar. Het is een keersom.", "Dat is 5 × 4."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -769,7 +769,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Eén stap te weinig — tel eens hoe vaak je 3 optelt.",
-          null,
+          "27 is 9 × 3. Eén stap te veel.",
         ],
         uitlegPad: {
           stappen: [
@@ -816,7 +816,7 @@ const steps = [
         q: "Welk getal hoort **wel** bij de tafel van 4?",
         options: ["28", "26", "30", "18"],
         answer: 0,
-        wrongHints: [null, "Tel in stappen van 4: kom je dit getal tegen?", null, null],
+        wrongHints: [null, "Tel in stappen van 4: kom je dit getal tegen?", "Tel in stappen van 4. Kom je 30 tegen?", "Tel in stappen van 4: 4, 8, 12, 16 … Kom je 18 tegen?"],
         uitlegPad: {
           stappen: [
             {
@@ -865,8 +865,8 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt 2 bij 18 opgeteld. Wat is de tafel van 4 vergeleken met de tafel van 2?",
-          null,
-          null,
+          "Je telde 4 bij 18 op. Hoe hangt de tafel van 4 samen met de tafel van 2?",
+          "32 is 8 × 4. Je zoekt 9 × 4.",
         ],
         uitlegPad: {
           stappen: [
@@ -923,13 +923,13 @@ const steps = [
         q: "**6 × 7** = ?",
         options: ["42", "13", "67", "36"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Niet juist."],
+        wrongHints: [null, "Dat is 6 + 7. Bij × tel je 6 keer 7 op.", "Je zette 6 en 7 achter elkaar. Het is een keersom.", "36 is 6 × 6. Eén stap te weinig."],
       },
       {
         q: "**8 × 7** = ?",
         options: ["56", "15", "87", "48"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 6 × 8."],
+        wrongHints: [null, "Dat is 8 + 7. Bij × tel je 8 keer 7 op.", "Je zette 8 en 7 achter elkaar. Het is een keersom.", "Dat is 6 × 8."],
         uitlegPad: {
           stappen: [
             { titel: "8 × 7 — een lastige", tekst: "8 × 7 is een van de **lastigste** tafel-sommen. Bijna iedereen vergeet 'm soms. Gelukkig zijn er trucjes." },
@@ -956,13 +956,13 @@ const steps = [
         q: "**9 × 6** = ?",
         options: ["54", "15", "96", "45"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 9 × 5."],
+        wrongHints: [null, "Dat is 9 + 6. Bij × tel je 9 keer 6 op.", "Je zette 9 en 6 achter elkaar. Het is een keersom.", "Dat is 9 × 5."],
       },
       {
         q: "**8 × 8** = ?",
         options: ["64", "16", "88", "48"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 6 × 8."],
+        wrongHints: [null, "Dat is 8 + 8. Bij × tel je 8 keer 8 op.", "Je zette 8 en 8 achter elkaar. Het is een keersom.", "Dat is 6 × 8."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -972,7 +972,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
-          null,
+          "56 is 8 × 7. Eén stap te weinig.",
           "Eén stap te veel — tel eens hoe vaak je 9 optelt.",
         ],
         uitlegPad: {
@@ -1024,7 +1024,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Eén stap te weinig — tel eens hoe vaak je 6 optelt.",
-          null,
+          "42 is 7 × 6. Eén stap te veel.",
         ],
         uitlegPad: {
           stappen: [
@@ -1074,8 +1074,8 @@ const steps = [
         wrongHints: [
           null,
           "Tel de twee cijfers van elk getal bij elkaar op. Wat komt er bij de tafel van 9 altijd uit?",
-          null,
-          null,
+          "Tel de cijfers op: 7 + 2. Wat komt eruit?",
+          "Tel de cijfers op: 1 + 8. Wat komt eruit?",
         ],
         uitlegPad: {
           stappen: [
@@ -1122,7 +1122,7 @@ const steps = [
         q: "Een week heeft **7 dagen**. Hoeveel dagen zijn **3 weken**?",
         options: ["21 dagen", "10 dagen", "14 dagen", "28 dagen"],
         answer: 0,
-        wrongHints: [null, "Je hebt 3 en 7 opgeteld. Maar elke week heeft 7 dagen.", null, null],
+        wrongHints: [null, "Je hebt 3 en 7 opgeteld. Maar elke week heeft 7 dagen.", "14 dagen zijn 2 weken.", "28 dagen zijn 4 weken."],
         uitlegPad: {
           stappen: [
             {
@@ -1177,25 +1177,25 @@ const steps = [
         q: "**7 × 12** = ? *(via splitsen)*",
         options: ["84", "19", "712", "78"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Niet juist."],
+        wrongHints: [null, "Dat is 7 + 12. Bij × tel je 7 keer 12 op.", "Je zette 7 en 12 achter elkaar. Het is een keersom.", "Splits 12 in 10 en 2. Wat is 7 × 10 en wat is 7 × 2?"],
       },
       {
         q: "**9 × 8** = ? *(via 10×8 − 8)*",
         options: ["72", "17", "98", "63"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 9 × 7."],
+        wrongHints: [null, "Dat is 9 + 8. Bij × tel je 9 keer 8 op.", "Je zette 9 en 8 achter elkaar. Het is een keersom.", "Dat is 9 × 7."],
       },
       {
         q: "**5 × 18** = ? *(via 10×18 ÷ 2)*",
         options: ["90", "23", "518", "85"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Net niet."],
+        wrongHints: [null, "Dat is 5 + 18. Bij × tel je 5 keer 18 op.", "Je zette 5 en 18 achter elkaar. Het is een keersom.", "85 is 5 × 17. Wat is 10 × 18, en de helft daarvan?"],
       },
       {
         q: "**6 × 25** = ? *(via splitsen)*",
         options: ["150", "31", "625", "100"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Net niet."],
+        wrongHints: [null, "Dat is 6 + 25. Bij × tel je 6 keer 25 op.", "Je zette 6 en 25 achter elkaar. Het is een keersom.", "100 is 4 × 25. Hoe vaak moet de 25?"],
         uitlegPad: {
           stappen: [
             { titel: "Waarom splitsen?", tekst: "**25** zit niet in de gewone tafels (1 t/m 10). Maar je kunt 25 splitsen in delen die je WEL kent: **20 + 5**." },
@@ -1228,7 +1228,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Splits 13 in 10 en 3. Hoeveel is 6 × 3 ook alweer?",
-          null,
+          "Je zette 6 en 13 achter elkaar. Het is een keersom.",
         ],
         uitlegPad: {
           stappen: [
@@ -1279,7 +1279,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Dit is 10 × 7. Moet er nog iets bij?",
-          null,
+          "Je zette 7 en 11 achter elkaar. Het is een keersom.",
         ],
         uitlegPad: {
           stappen: [
@@ -1329,7 +1329,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
-          null,
+          "60 is 5 × 12. Wat is 10 × 14, en de helft daarvan?",
           "Dit is 10 × 14. Wat moet je daarna nog doen?",
         ],
         uitlegPad: {
@@ -1381,7 +1381,7 @@ const steps = [
           null,
           "Je hebt opgeteld in plaats van vermenigvuldigd.",
           "Dit is 2 × 15. Hoe vaak moet je verdubbelen bij keer 4?",
-          null,
+          "45 is 3 × 15. Hoe vaak moet de 15?",
         ],
         uitlegPad: {
           stappen: [
@@ -1428,7 +1428,7 @@ const steps = [
         q: "Je rekent **8 × 12** uit met **splitsen**. Welke som klopt?",
         options: ["(8 × 10) + (8 × 2)", "(8 × 10) + 2", "(8 × 1) + (8 × 2)", "(8 + 10) × 2"],
         answer: 0,
-        wrongHints: [null, "Je moet élk stuk keer 8 doen. Ook de 2?", null, null],
+        wrongHints: [null, "Je moet élk stuk keer 8 doen. Ook de 2?", "12 splits je in 10 en 2, niet in 1 en 2.", "Er hoort geen plus tussen 8 en 10. Wat doe je met elk stuk van 12?"],
         uitlegPad: {
           stappen: [
             {
@@ -1483,31 +1483,31 @@ const steps = [
         q: "**6 × 7** = ?",
         options: ["42", "13", "67", "48"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 6 × 8."],
+        wrongHints: [null, "Dat is 6 + 7. Bij × tel je 6 keer 7 op.", "Je zette 6 en 7 achter elkaar. Het is een keersom.", "Dat is 6 × 8."],
       },
       {
         q: "**9 × 9** = ?",
         options: ["81", "18", "99", "72"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 8 × 9."],
+        wrongHints: [null, "Dat is 9 + 9. Bij × tel je 9 keer 9 op.", "Je zette 9 en 9 achter elkaar. Het is een keersom.", "Dat is 8 × 9."],
       },
       {
         q: "**8 × 5** = ?",
         options: ["40", "13", "85", "35"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 7 × 5."],
+        wrongHints: [null, "Dat is 8 + 5. Bij × tel je 8 keer 5 op.", "Je zette 8 en 5 achter elkaar. Het is een keersom.", "Dat is 7 × 5."],
       },
       {
-        q: "**4 zakjes** met **7 koekjes** per zakje. Totaal?",
+        q: "Je hebt **4 zakjes** met elk **7 koekjes**. Hoeveel koekjes zijn het samen?",
         options: ["28 koekjes", "11 koekjes", "47 koekjes", "21 koekjes"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 3 × 7."],
+        wrongHints: [null, "Dat is 4 + 7. Maar élk zakje heeft 7 koekjes.", "Je zette 4 en 7 achter elkaar. Het is een keersom.", "Dat is 3 × 7."],
       },
       {
-        q: "**5 boeken** van **€7** elk. **Totaalprijs**?",
+        q: "Je koopt **5 boeken** van **€7** per stuk. Hoeveel betaal je samen?",
         options: ["€35", "€12", "€57", "€28"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Plak-getal.", "Dat is 4 × 7."],
+        wrongHints: [null, "Dat is 5 + 7. Maar élk boek kost €7.", "Je zette 5 en 7 achter elkaar. Het is een keersom.", "Dat is 4 × 7."],
       },
       {
         q: "Welke tafel-uitkomst is **fout**?",
@@ -1515,20 +1515,20 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Probeer 6 × 6 zelf even uit te rekenen.", "Reken 9 × 4 stap voor stap na.", "Reken 8 × 7 stap voor stap na."],
       },
-      { q: "3 × 4 = ?", options: ["12","7","9","16"], answer: 0, wrongHints: [null, "Som.", "Niet.", "Niet."] },
-      { q: "5 × 6 = ?", options: ["30","11","25","36"], answer: 0, wrongHints: [null, "Som.", "5×5.", "6×6."] },
-      { q: "7 × 7 = ?", options: ["49","14","42","56"], answer: 0, wrongHints: [null, "Niet — × niet +.", "Niet.", "Niet."] },
-      { q: "8 × 9 = ?", options: ["72","17","81","56"], answer: 0, wrongHints: [null, "Som.", "9×9.", "Niet."] },
-      { q: "6 × 7 = ?", options: ["42","13","36","49"], answer: 0, wrongHints: [null, "Som.", "Niet.", "Niet."] },
-      { q: "4 × 8 = ?", options: ["32","12","36","48"], answer: 0, wrongHints: [null, "Som.", "Niet.", "Te veel."] },
-      { q: "Welke is tafel van **9**? 9 × 6 = ?", options: ["54","56","45","63"], answer: 0, wrongHints: [null, "Niet.", "Cijfers gehusseld.", "9×7."] },
-      { q: "10 × 8 = ?", options: ["80","18","100","800"], answer: 0, wrongHints: [null, "Som.", "10×10.", "Te veel."] },
-      { q: "2 × 12 = ?", options: ["24","14","20","6"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
-      { q: "Tafel-truc: 5 × even getal eindigt op?", options: ["0","5","1","2"], answer: 0, wrongHints: [null, "Bij oneven.", "Niet.", "Niet."] },
-      { q: "Welke truc helpt bij **9-tafel**?", options: ["Elke stap: tientallen +1, eenheden −1","Elke stap: tientallen −1, eenheden +1","Er is geen truc","Alles gewoon uit je hoofd leren"], answer: 0, wrongHints: [null, "Andersom: van 9 naar 18 gaat het tiental omhoog (0 → 1) en de eenheid omlaag (9 → 8).", "Er is wel een handige truc — kijk naar 9, 18, 27.", "Uit je hoofd mag, maar de truc helpt je controleren."] },
-      { q: "6 × 8 = ?", options: ["48","14","56","42"], answer: 0, wrongHints: [null, "Som.", "7×8.", "6×7."] },
-      { q: "11 × 11 = ?", options: ["121","111","112","144"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "12×12."] },
-      { q: "12 × 4 = ?", options: ["48","16","44","36"], answer: 0, wrongHints: [null, "Som.", "Niet.", "12×3."] },
+      { q: "3 × 4 = ?", options: ["12","7","9","16"], answer: 0, wrongHints: [null, "Dat is 3 + 4. Het is een keersom.", "9 is 3 × 3.", "16 is 4 × 4."] },
+      { q: "5 × 6 = ?", options: ["30","11","25","36"], answer: 0, wrongHints: [null, "Dat is 5 + 6. Het is een keersom.", "25 is 5 × 5. Eén stap te weinig.", "36 is 6 × 6."] },
+      { q: "7 × 7 = ?", options: ["49","14","42","56"], answer: 0, wrongHints: [null, "Dat is 7 + 7. Het is een keersom.", "42 is 6 × 7. Eén stap te weinig.", "56 is 8 × 7. Eén stap te veel."] },
+      { q: "8 × 9 = ?", options: ["72","17","81","56"], answer: 0, wrongHints: [null, "Dat is 8 + 9. Het is een keersom.", "81 is 9 × 9. Eén stap te veel.", "56 is 8 × 7."] },
+      { q: "6 × 7 = ?", options: ["42","13","36","49"], answer: 0, wrongHints: [null, "Dat is 6 + 7. Het is een keersom.", "36 is 6 × 6.", "49 is 7 × 7."] },
+      { q: "4 × 8 = ?", options: ["32","12","36","48"], answer: 0, wrongHints: [null, "Dat is 4 + 8. Het is een keersom.", "36 is 4 × 9.", "48 is 6 × 8."] },
+      { q: "Tafel van **9**: hoeveel is 9 × 6?", options: ["54","56","45","63"], answer: 0, wrongHints: [null, "56 is 7 × 8.", "45 is 9 × 5. Eén stap te weinig.", "63 is 9 × 7. Eén stap te veel."] },
+      { q: "10 × 8 = ?", options: ["80","18","100","800"], answer: 0, wrongHints: [null, "Dat is 10 + 8. Het is een keersom.", "100 is 10 × 10.", "Bij × 10 komt er één nul achter, niet twee."] },
+      { q: "2 × 12 = ?", options: ["24","14","20","6"], answer: 0, wrongHints: [null, "Dat is 2 + 12. Het is een keersom.", "20 is 2 × 10. Vergeet 2 × 2 niet.", "6 is de helft van 12. Bij × 2 verdubbel je."] },
+      { q: "Tafel-truc: op welk cijfer eindigt **5 × een even getal**?", options: ["0","5","1","2"], answer: 0, wrongHints: [null, "Op 5 eindigt het bij 5 × een oneven getal, zoals 5 × 3.", "Tel in stappen van 5: 5, 10, 15, 20. Eindigt er één op 1?", "Reken 5 × 2 en 5 × 4 uit. Waar eindigen die op?"] },
+      { q: "Welke truc helpt bij de **tafel van 9**?", options: ["Elke stap: tientallen +1, eenheden −1","Elke stap: tientallen −1, eenheden +1","Elke stap: tientallen +1, eenheden +1","Elke stap: alleen eenheden −1"], answer: 0, wrongHints: [null, "Kijk naar 9 en 18. Gaat het tiental omhoog of omlaag?", "Kijk naar 9 en 18. Wat gebeurt er met het laatste cijfer?", "Van 9 naar 18 verandert ook het eerste cijfer."] },
+      { q: "6 × 8 = ?", options: ["48","14","56","42"], answer: 0, wrongHints: [null, "Dat is 6 + 8. Het is een keersom.", "56 is 7 × 8.", "42 is 6 × 7."] },
+      { q: "11 × 11 = ?", options: ["121","111","112","144"], answer: 0, wrongHints: [null, "Reken 10 × 11 = 110 en tel er nog één keer 11 bij, geen 1.", "Hoeveel is 10 × 11? Tel daar nog één keer 11 bij.", "144 is 12 × 12."] },
+      { q: "12 × 4 = ?", options: ["48","16","44","36"], answer: 0, wrongHints: [null, "Dat is 12 + 4. Het is een keersom.", "44 is 11 × 4.", "36 is 12 × 3."] },
     ],
   },
   // G. Oefenronde (11 aug 2026, zelfde didactiek als topografie "Ken ze alle 12"):

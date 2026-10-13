@@ -47,7 +47,7 @@ const steps = [
         q: "Tel maar: 1, 2, 3... Welk getal komt erna?",
         options: ["4", "2", "5", "6"],
         answer: 0,
-        wrongHints: [null, "Dat getal had je al gehad — we tellen vooruit!", "Je slaat er eentje over — tel rustig verder vanaf 3.", "Dat komt pas veel later in het liedje."],
+        wrongHints: [null, "Dat getal had je al gehad — we tellen vooruit!", "Je slaat er eentje over — tel rustig verder vanaf 3.", "Je slaat er twee over — welk getal komt metéén na 3?"],
         uitlegPad: {
           stappen: [{ titel: "Het tel-liedje", tekst: "Zing maar mee: 1, 2, 3, **4**, 5! Na de 3 komt de 4." }],
           niveaus: { basis: "Na 3 komt 4.", simpeler: "1, 2, 3... 4!", nogSimpeler: "4" },

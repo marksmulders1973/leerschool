@@ -38,7 +38,7 @@ const steps = [
         q: "Welke letter komt direct ná de M?",
         options: ["N", "L", "O", "K"],
         answer: 0,
-        wrongHints: [null, "L komt juist vóór M.", "O komt ná N.", "K komt eerder."],
+        wrongHints: [null, "L komt juist vóór M.", "Zeg het alfabet op vanaf de L. Komt de O direct na de M?", "Komt de K vóór of ná de M?"],
         uitlegPad: {
           stappen: [{ titel: "…K L M N O…", tekst: "In het alfabet volgt na de M de N." }],
           niveaus: {
@@ -49,29 +49,29 @@ const steps = [
         },
       },
       {
-        q: "Zet op alfabet: kat, aap, muis. Welk woord komt het eerst?",
-        options: ["aap", "kat", "muis", "ze zijn gelijk"],
+        q: "Zet op alfabet: kat, aap, muis, egel. Welk woord komt het eerst?",
+        options: ["aap", "kat", "muis", "egel"],
         answer: 0,
-        wrongHints: [null, "K komt ná A.", "M komt nog later.", "Ze beginnen met verschillende letters."],
+        wrongHints: [null, "Kijk naar de beginletters: is er een die nog eerder komt dan de k?", "Staat de m vooraan in het alfabet?", "Is er een beginletter die nog vóór de e komt?"],
         uitlegPad: {
-          stappen: [{ titel: "a vóór k vóór m", tekst: "Eerste letters: a (aap), k (kat), m (muis). A is de vroegste, dus 'aap' eerst." }],
+          stappen: [{ titel: "a vóór k vóór m", tekst: "Eerste letters: a (aap), k (kat), m (muis), e (egel). A is de vroegste, dus 'aap' eerst." }],
           niveaus: {
             basis: "'aap' begint met a → komt eerst.",
             simpeler: "Welk woord begint met de vroegste letter?",
-            nogSimpeler: "a, k of m — welke komt eerst?",
+            nogSimpeler: "a, k, m of e — welke komt eerst?",
           },
         },
       },
       {
-        q: "Welk woord komt het laatst in het alfabet: zon, maan of ster?",
-        options: ["zon", "ster", "maan", "ze zijn gelijk"],
+        q: "Welk woord komt het laatst in het alfabet: zon, maan, ster of wolk?",
+        options: ["zon", "ster", "maan", "wolk"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de beginletters: s, m en z — welke komt het laatst in het alfabet?", "M komt juist vroeg in het alfabet, niet het laatst.", "Ze beginnen met verschillende letters, dus er is wel een volgorde."],
+        wrongHints: [null, "Staat de s helemaal achteraan in het alfabet? Kijk ook naar de andere beginletters.", "M komt juist vroeg in het alfabet, niet het laatst.", "De w komt laat, maar is er een beginletter die nog later komt?"],
         uitlegPad: {
-          stappen: [{ titel: "z is de laatste letter", tekst: "Eerste letters: m, s, z. Z komt het laatst in het alfabet, dus 'zon' komt het laatst." }],
+          stappen: [{ titel: "z is de laatste letter", tekst: "Eerste letters: m, s, w, z. Z komt het laatst in het alfabet, dus 'zon' komt het laatst." }],
           niveaus: {
             basis: "'zon' begint met z, de laatste letter → komt laatst.",
-            simpeler: "Welke letter komt het laatst: m, s of z?",
+            simpeler: "Welke letter komt het laatst: m, s, w of z?",
             nogSimpeler: "Welk woord begint met z?",
           },
         },
@@ -91,16 +91,16 @@ const steps = [
         },
       },
       {
-        q: "Zet op alfabet: vis, eend, geit. Welk woord komt het laatst?",
-        options: ["eend", "geit", "vis", "ze zijn gelijk"],
+        q: "Zet op alfabet: vis, eend, geit, raaf. Welk woord komt het laatst?",
+        options: ["eend", "geit", "vis", "raaf"],
         answer: 2,
-        wrongHints: ["e komt juist vooraan.", "g komt vóór v.", null, "Ze beginnen met verschillende letters."],
+        wrongHints: ["e komt juist vooraan.", "Komt de g ná alle andere beginletters?", null, "De r komt laat, maar is er een beginletter die nog later komt?"],
         uitlegPad: {
-          stappen: [{ titel: "v komt het laatst", tekst: "Eerste letters: e, g, v. V staat het verst in het alfabet, dus 'vis' komt het laatst." }],
+          stappen: [{ titel: "v komt het laatst", tekst: "Eerste letters: e, g, r, v. V staat het verst in het alfabet, dus 'vis' komt het laatst." }],
           niveaus: {
             basis: "'vis' (v) staat het verst in het alfabet → komt laatst.",
-            simpeler: "Welke beginletter komt het laatst: e, g of v?",
-            nogSimpeler: "e, g of v — welke is de laatste?",
+            simpeler: "Welke beginletter komt het laatst: e, g, r of v?",
+            nogSimpeler: "e, g, r of v — welke is de laatste?",
           },
         },
       },
@@ -202,9 +202,9 @@ const steps = [
     checks: [
       {
         q: "Bij welke letter staat het woord 'fiets' in het woordenboek?",
-        options: ["F", "V", "P", "E"],
+        options: ["F", "V", "S", "I"],
         answer: 0,
-        wrongHints: [null, "Je zoekt op de geschréven beginletter, en dat is een f.", "Het begint niet met p.", "E is de tweede letter, niet de eerste."],
+        wrongHints: [null, "Je zoekt op de geschréven beginletter, en dat is een f.", "De s staat aan het eind van 'fiets', niet vooraan.", "De i is de tweede letter van 'fiets', niet de eerste."],
         uitlegPad: {
           stappen: [{ titel: "Eerste letter", tekst: "'Fiets' begint met de letter f, dus je zoekt het bij de F." }],
           niveaus: {
@@ -230,9 +230,9 @@ const steps = [
       },
       {
         q: "Je zoekt het woord 'wolk'. Waar sla je het woordenboek het best open?",
-        options: ["achteraan", "vooraan", "precies in het midden", "het maakt niet uit"],
+        options: ["achteraan", "vooraan", "precies in het midden", "net vóór het midden"],
         answer: 0,
-        wrongHints: [null, "Vooraan staan de A's en B's, niet de W.", "Het midden is bij K-M; W zit verder.", "Het scheelt veel tijd om op de goede plek te beginnen."],
+        wrongHints: [null, "Vooraan staan de A's en B's, niet de W.", "Welke letters staan rond het midden van het woordenboek? Hoort de W daarbij?", "Welke letters staan in het eerste deel van het boek? Zit de W daartussen?"],
         uitlegPad: {
           stappen: [{ titel: "W = achteraan", tekst: "De W zit bijna aan het eind van het alfabet, dus 'wolk' staat achteraan in het woordenboek." }],
           niveaus: {
@@ -260,7 +260,7 @@ const steps = [
         q: "Bij welke letter zoek je het woord 'ziekenhuis'?",
         options: ["S", "Z", "C", "H"],
         answer: 1,
-        wrongHints: ["Het begint niet met een s, maar met z.", null, "Niet met een c.", "De h zit midden in het woord, niet vooraan."],
+        wrongHints: ["Het begint niet met een s, maar met z.", null, "Hoor je een s-klank? Kijk naar de letter die je echt opschrijft.", "De h zit midden in het woord, niet vooraan."],
         uitlegPad: {
           stappen: [{ titel: "Eerste letter", tekst: "'Ziekenhuis' begint met de letter z, dus je zoekt het achteraan bij de Z." }],
           niveaus: {
@@ -331,17 +331,17 @@ const steps = [
       {
         q: "Je slaat het woordenboek open bij woorden met een M. Je zoekt het woord 'vork'. Welke kant blader je op?",
         options: [
-          "naar achteren",
-          "naar voren",
-          "nergens heen, je bent al goed",
-          "het maakt niet uit welke kant",
+          "verder naar achteren",
+          "terug naar voren",
+          "blijven zoeken bij de M",
+          "eerst terug naar de A",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Komt de V in het alfabet vóór of ná de M?",
-          null,
-          "Als je de goede kant kiest, ben je veel sneller klaar.",
+          "Begint 'vork' met een m?",
+          "Moet je echt helemaal opnieuw beginnen? Komt de V vóór of ná de M?",
         ],
         uitlegPad: {
           stappen: [
@@ -393,86 +393,86 @@ const steps = [
       "Zo zoek je steeds een letter dieper tot je een verschil vindt: *school* (sc…) komt vóór *stoel* (st…), want **c** komt vóór **t**.",
     checks: [
       {
-        q: "Welk woord komt eerst: bal of boom?",
-        options: ["bal", "boom", "ze zijn gelijk", "boom, want langer"],
+        q: "Welk woord komt het eerst: boom, bal, bus of beer?",
+        options: ["bal", "boom", "bus", "beer"],
         answer: 0,
-        wrongHints: [null, "Tweede letter o komt ná a.", "Ze verschillen bij de tweede letter.", "De lengte bepaalt de volgorde niet."],
+        wrongHints: [null, "Alle vier beginnen met b. Vergelijk de tweede letters: komt de o het eerst?", "Is de u een vroege of een late letter in het alfabet?", "Vergelijk de tweede letters. Is er een die nog vóór de e komt?"],
         uitlegPad: {
-          stappen: [{ titel: "Tweede letter: a vóór o", tekst: "Beide beginnen met b. Tweede letters: a (bal) en o (boom). A komt eerst, dus 'bal'." }],
+          stappen: [{ titel: "Tweede letter: a vóór o", tekst: "Alle vier beginnen met b. Tweede letters: a (bal), o (boom), u (bus) en e (beer). A komt eerst, dus 'bal'." }],
           niveaus: {
-            basis: "Bij gelijke eerste letter beslist de tweede: a < o, dus 'bal' eerst.",
-            simpeler: "De b's zijn gelijk. Kijk naar de tweede letter: a of o?",
-            nogSimpeler: "Wat komt eerst: a of o?",
+            basis: "Bij gelijke eerste letter beslist de tweede: a < e < o < u, dus 'bal' eerst.",
+            simpeler: "De b's zijn gelijk. Kijk naar de tweede letter: a, o, u of e?",
+            nogSimpeler: "Wat komt eerst: a, e, o of u?",
           },
         },
       },
       {
-        q: "Welk woord komt eerst: school of stoel?",
-        options: ["school", "stoel", "ze zijn gelijk", "stoel, want korter"],
+        q: "Welk woord komt het eerst: stoel, school, stip of stam?",
+        options: ["school", "stoel", "stip", "stam"],
         answer: 0,
-        wrongHints: [null, "Bij de tweede letter komt c vóór t.", "Ze verschillen bij de tweede letter.", "Lengte bepaalt het niet."],
+        wrongHints: [null, "Vergelijk eerst de tweede letters van alle woorden. Welke komt het eerst?", "Is de tweede letter van 'stip' de vroegste van allemaal?", "De a is vroeg, maar kijk eerst naar de tweede letter. Is die bij alle woorden hetzelfde?"],
         uitlegPad: {
-          stappen: [{ titel: "s gelijk, dan c vóór t", tekst: "Beide beginnen met s. Tweede letters: c (school) en t (stoel). C komt eerst, dus 'school'." }],
+          stappen: [{ titel: "s gelijk, dan c vóór t", tekst: "Alle vier beginnen met s. Tweede letters: c (school) en t (stoel, stip, stam). C komt eerst, dus 'school'." }],
           niveaus: {
             basis: "Eerste letter s gelijk; tweede letter c < t → 'school' eerst.",
             simpeler: "De s'en zijn gelijk. Kijk naar de tweede letter: c of t?",
-            nogSimpeler: "Wat komt eerst: c of t?",
+            nogSimpeler: "Wat komt eerst: c of t? Let op: de derde letter doet er hier nog niet toe.",
           },
         },
       },
       {
-        q: "Zet op alfabet: kat, kip, koe. Welk woord komt het eerst?",
-        options: ["kat", "kip", "koe", "ze zijn gelijk"],
+        q: "Zet op alfabet: kat, kip, koe, kus. Welk woord komt het eerst?",
+        options: ["kat", "kip", "koe", "kus"],
         answer: 0,
-        wrongHints: [null, "Tweede letter i komt ná a.", "Tweede letter o komt nog later.", "Ze verschillen bij de tweede letter."],
+        wrongHints: [null, "Is de i de vroegste van de tweede letters?", "Komt de o vroeg of laat, vergeleken met de andere tweede letters?", "De u komt laat in het alfabet. Welke tweede letter komt het vroegst?"],
         uitlegPad: {
-          stappen: [{ titel: "k gelijk, dan a < i < o", tekst: "Alle drie beginnen met k. Tweede letters: a, i, o. A komt eerst, dus 'kat'." }],
+          stappen: [{ titel: "k gelijk, dan a < i < o", tekst: "Alle vier beginnen met k. Tweede letters: a, i, o, u. A komt eerst, dus 'kat'." }],
           niveaus: {
-            basis: "Eerste letter k gelijk; tweede letters a, i, o → 'kat' (a) eerst.",
-            simpeler: "De k's zijn gelijk. Welke tweede letter komt eerst: a, i of o?",
-            nogSimpeler: "a, i, o — welke is de vroegste?",
+            basis: "Eerste letter k gelijk; tweede letters a, i, o, u → 'kat' (a) eerst.",
+            simpeler: "De k's zijn gelijk. Welke tweede letter komt eerst: a, i, o of u?",
+            nogSimpeler: "a, i, o, u — welke is de vroegste?",
           },
         },
       },
       {
-        q: "Welk woord komt het laatst: tafel, tijger, toren?",
-        options: ["toren", "tafel", "tijger", "ze zijn gelijk"],
+        q: "Welk woord komt het laatst: tafel, tijger, toren, tent?",
+        options: ["toren", "tafel", "tijger", "tent"],
         answer: 0,
-        wrongHints: [null, "Alle drie beginnen met t — vergelijk dus de twééde letters: a, i en o. Komt de a dan het laatst?", "Vergelijk de tweede letters: komt de i het laatst van a, i en o?", "Ze verschillen bij de tweede letter, dus er is wel een volgorde."],
+        wrongHints: [null, "Alle vier beginnen met t — vergelijk dus de tweede letters. Komt de a het laatst?", "Vergelijk de tweede letters: komt de i het laatst?", "Vergelijk de tweede letters: komt de e het laatst?"],
         uitlegPad: {
-          stappen: [{ titel: "t gelijk, dan a < i < o", tekst: "Alle drie beginnen met t. Tweede letters: a, i, o. O komt het laatst, dus 'toren' het laatst." }],
+          stappen: [{ titel: "t gelijk, dan a < i < o", tekst: "Alle vier beginnen met t. Tweede letters: a, i, o, e. O komt het laatst, dus 'toren' het laatst." }],
           niveaus: {
-            basis: "Tweede letters a, i, o → 'toren' (o) komt het laatst.",
-            simpeler: "De t's zijn gelijk. Welke tweede letter komt het laatst: a, i of o?",
-            nogSimpeler: "Welke is de laatste: a, i of o?",
+            basis: "Tweede letters a, e, i, o → 'toren' (o) komt het laatst.",
+            simpeler: "De t's zijn gelijk. Welke tweede letter komt het laatst: a, i, o of e?",
+            nogSimpeler: "Welke is de laatste: a, e, i of o?",
           },
         },
       },
       {
-        q: "Welk woord komt eerst: planten of plein?",
-        options: ["planten", "plein", "ze zijn gelijk", "plein, want korter"],
+        q: "Welk woord komt het eerst: planten, plein, ploeg of pluim?",
+        options: ["planten", "plein", "ploeg", "pluim"],
         answer: 0,
-        wrongHints: [null, "Bij de derde letter komt a vóór e.", "Ze verschillen bij de derde letter.", "Lengte bepaalt de volgorde niet."],
+        wrongHints: [null, "Alle woorden beginnen met pl. Vergelijk de derde letter: is de e de vroegste?", "Vergelijk de derde letters. Is er een die nog vóór de o komt?", "Is de u een vroege of een late letter?"],
         uitlegPad: {
-          stappen: [{ titel: "pl gelijk, dan a vóór e", tekst: "Beide beginnen met 'pl'. Derde letters: a (planten) en e (plein). A komt eerst, dus 'planten'." }],
+          stappen: [{ titel: "pl gelijk, dan a vóór e", tekst: "Alle vier beginnen met 'pl'. Derde letters: a (planten), e (plein), o (ploeg) en u (pluim). A komt eerst, dus 'planten'." }],
           niveaus: {
-            basis: "Eerste twee letters 'pl' gelijk; derde letter a < e → 'planten' eerst.",
-            simpeler: "De 'pl' is gelijk. Kijk naar de derde letter: a of e?",
-            nogSimpeler: "Wat komt eerst: a of e?",
+            basis: "Eerste twee letters 'pl' gelijk; derde letter a < e < o < u → 'planten' eerst.",
+            simpeler: "De 'pl' is gelijk. Kijk naar de derde letter: a, e, o of u?",
+            nogSimpeler: "Wat komt eerst: a, e, o of u?",
           },
         },
       },
       {
-        q: "Zet op alfabet: storm, station, stoel. Welk woord komt het eerst?",
-        options: ["station", "stoel", "storm", "ze zijn gelijk"],
+        q: "Zet op alfabet: storm, station, stoel, stuur. Welk woord komt het eerst?",
+        options: ["station", "stoel", "storm", "stuur"],
         answer: 0,
-        wrongHints: [null, "Derde letter o komt ná de a.", "Ook hier komt o ná de a.", "Ze verschillen al bij de derde letter."],
+        wrongHints: [null, "Vergelijk de derde letters. Is de o de vroegste?", "Kijk naar de derde letter. Is er een die nog eerder komt dan de o?", "Komt de u vroeg of laat in het alfabet?"],
         uitlegPad: {
-          stappen: [{ titel: "st gelijk, dan a vóór o", tekst: "Alle drie beginnen met 'st'. Derde letters: a (station), o (stoel), o (storm). A komt eerst, dus 'station'." }],
+          stappen: [{ titel: "st gelijk, dan a vóór o", tekst: "Alle vier beginnen met 'st'. Derde letters: a (station), o (stoel), o (storm), u (stuur). A komt eerst, dus 'station'." }],
           niveaus: {
-            basis: "Derde letter a komt vóór o → 'station' eerst.",
-            simpeler: "De 'st' is gelijk. Welke derde letter komt eerst: a of o?",
-            nogSimpeler: "a of o — welke komt eerst?",
+            basis: "Derde letter a komt vóór o en u → 'station' eerst.",
+            simpeler: "De 'st' is gelijk. Welke derde letter komt eerst: a, o of u?",
+            nogSimpeler: "a, o of u — welke komt eerst?",
           },
         },
       },
@@ -521,21 +521,21 @@ const steps = [
         },
       },
       {
-        q: "Zet op alfabet: trein, trap, trui. Welk woord komt het eerst?",
-        options: ["trap", "trein", "trui", "ze zijn gelijk"],
+        q: "Zet op alfabet: trein, trap, trui, tros. Welk woord komt het eerst?",
+        options: ["trap", "trein", "trui", "tros"],
         answer: 0,
-        wrongHints: [null, null, null, "De woorden verschillen bij de derde letter."],
+        wrongHints: [null, null, null, "Vergelijk de derde letters. Komt de o het eerst?"],
         uitlegPad: {
           stappen: [
             {
               titel: "tr gelijk, dan de derde letter",
-              tekst: "Alle drie beginnen met 'tr'. De derde letters zijn e (trein), a (trap) en u (trui). De a komt het eerst, dus 'trap'.",
+              tekst: "Alle vier beginnen met 'tr'. De derde letters zijn e (trein), a (trap), u (trui) en o (tros). De a komt het eerst, dus 'trap'.",
             },
           ],
           niveaus: {
-            basis: "Derde letters a, e, u → 'trap' komt eerst.",
-            simpeler: "De 'tr' is gelijk. Welke derde letter komt eerst: e, a of u?",
-            nogSimpeler: "Wat komt eerst: a, e of u?",
+            basis: "Derde letters a, e, o, u → 'trap' komt eerst.",
+            simpeler: "De 'tr' is gelijk. Welke derde letter komt eerst: e, a, u of o?",
+            nogSimpeler: "Wat komt eerst: a, e, o of u?",
           },
         },
       },
@@ -577,10 +577,10 @@ const steps = [
           "het woord dat je opzoekt",
           "de naam van de schrijver",
           "het laatste woord van het boek",
-          "een plaatje",
+          "de uitleg achter een woord",
         ],
         answer: 0,
-        wrongHints: [null, "Dat staat meestal voorin het boek, niet als trefwoord.", "Trefwoorden staan door het hele boek, op alfabet.", "Een trefwoord is een woord, geen plaatje."],
+        wrongHints: [null, "Staat de schrijver op elke bladzijde, op alfabet? Wat zoek je op?", "Trefwoorden staan door het hele boek, op alfabet.", "Is het trefwoord de uitleg zelf, of het woord waar de uitleg bij hoort?"],
         uitlegPad: {
           stappen: [{ titel: "Trefwoord = het opgezochte woord", tekst: "Het trefwoord is het (vet gedrukte) woord dat je opzoekt; daarachter staat de betekenis." }],
           niveaus: {
@@ -592,14 +592,14 @@ const steps = [
       },
       {
         q: "Wat vind je meestal direct achter een trefwoord?",
-        options: ["de betekenis/uitleg", "de prijs", "een spelletje", "de datum"],
+        options: ["de betekenis van het woord", "een plaatje van het woord", "de vertaling in het Engels", "een woord dat erop rijmt"],
         answer: 0,
-        wrongHints: [null, "Een woordenboek geeft geen prijzen.", "Daar staat uitleg, geen spel.", "Geen datum — wel de betekenis."],
+        wrongHints: [null, "Heeft elk woord een plaatje? Wat staat er bij elk trefwoord?", "Is dit een Nederlands woordenboek of een vertaalwoordenboek?", "Helpt een rijmwoord je om te snappen wat het woord is?"],
         uitlegPad: {
           stappen: [{ titel: "Betekenis", tekst: "Achter het trefwoord staat de uitleg: wat het woord betekent (en soms de uitspraak of voorbeelden)." }],
           niveaus: {
             basis: "Achter het trefwoord staat de betekenis.",
-            simpeler: "Waarvoor gebruik je een woordenboek: de betekenis of de prijs?",
+            simpeler: "Waarvoor gebruik je een woordenboek meestal?",
             nogSimpeler: "Geeft een woordenboek de betekenis van een woord?",
           },
         },
@@ -608,12 +608,12 @@ const steps = [
         q: "Waarom staan de woorden in een woordenboek op alfabet?",
         options: [
           "zodat je een woord snel kunt vinden",
-          "omdat het mooier is",
-          "om plaatjes te kunnen tonen",
-          "dat heeft geen reden",
+          "zodat elke bladzijde even vol staat",
+          "zodat de moeilijkste woorden achteraan staan",
+          "zodat je de woorden makkelijk kunt leren",
         ],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om mooi, maar om snel zoeken.", "Plaatjes hebben er niets mee te maken.", "Er is wel degelijk een reden: snel zoeken."],
+        wrongHints: [null, "Heeft de volgorde iets te maken met hoeveel woorden er op een bladzijde passen?", "Zijn woorden met een z moeilijker dan woorden met een a?", "Leer je een woordenboek uit je hoofd, of doe je er iets anders mee?"],
         uitlegPad: {
           stappen: [{ titel: "Snel terugvinden", tekst: "Door de alfabetische volgorde weet je precies waar je moet zoeken, zonder alle pagina's door te bladeren." }],
           niveaus: {
@@ -667,9 +667,9 @@ const steps = [
       },
       {
         q: "Je zoekt het woord 'liep' (van lopen). Onder welk woord vind je de betekenis meestal?",
-        options: ["lopen", "liep", "geliepen", "loopt"],
+        options: ["lopen", "liep", "gelopen", "loopt"],
         answer: 0,
-        wrongHints: [null, "Een woordenboek zet werkwoorden onder het hele werkwoord, niet de verleden tijd.", "Dat is geen bestaand woord.", "De vorm met -t staat ook niet apart als trefwoord."],
+        wrongHints: [null, "Staan alle vormen van een werkwoord apart in het woordenboek?", "Dat is ook een vorm van het werkwoord. Welke vorm staat als trefwoord in het woordenboek?", "De vorm met -t staat ook niet apart als trefwoord."],
         uitlegPad: {
           stappen: [{ titel: "Hele werkwoord = trefwoord", tekst: "Werkwoorden staan in het woordenboek onder het hele werkwoord (de vorm met -en). 'liep' zoek je dus onder 'lopen'." }],
           niveaus: {
@@ -702,13 +702,13 @@ const steps = [
       {
         q: "Waarvoor zijn de kopwoorden bovenaan een bladzijde van het woordenboek handig?",
         options: [
-          "om snel te zien of jouw woord op die bladzijde staat",
+          "om te zien of jouw woord op die bladzijde staat",
           "om te lezen wat het woord betekent",
-          "om te zien wie het boek heeft geschreven",
-          "om te tellen hoeveel woorden er op staan",
+          "om te zien welke woorden het moeilijkst zijn",
+          "om te zien welk woord het belangrijkst is",
         ],
         answer: 0,
-        wrongHints: [null, "De betekenis staat achter het trefwoord zelf.", null, null],
+        wrongHints: [null, "De betekenis staat achter het trefwoord zelf.", "Zijn kopwoorden moeilijker dan de andere woorden?", "Zijn de kopwoorden belangrijker dan de rest? Waarom staan juist zij bovenaan?"],
         uitlegPad: {
           stappen: [
             {

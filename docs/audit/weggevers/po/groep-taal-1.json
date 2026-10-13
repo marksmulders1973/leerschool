@@ -1,0 +1,684 @@
+{
+ "bestanden": [
+  "./synoniemenTegenstellingenPo.js",
+  "./dichtenPoezieRijmenPo.js",
+  "./taalWoordenZinnenG4.js",
+  "./werkwoordTijdenPo.js",
+  "./lettergrepenKlemtoonPo.js",
+  "./samenstellingenTussenlettersPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "samenstellingen-tussenletters-po",
+   "file": "./samenstellingenTussenlettersPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "H",
+   "q": "Welk woord is GEEN samenstelling?",
+   "opties": [
+    "bloemen",
+    "bloemenveld",
+    "bloemenvaas",
+    "bloemenkweker"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "taal-woorden-zinnen-g4",
+   "file": "./taalWoordenZinnenG4.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "H",
+   "q": "Poesje is het verkleinwoord van…?",
+   "opties": [
+    "poes",
+    "poesen",
+    "poezen",
+    "poest"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Annie M.G. Schmidt schreef vooral?",
+   "opties": [
+    "Kindergedichten",
+    "Romans",
+    "Filosofie",
+    "Wiskunde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "*'De zon lacht naar mij'* — wat?",
+   "opties": [
+    "Personificatie",
+    "Hyperbool",
+    "Synoniem",
+    "Geen beeldspraak"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wat is hyperbool?",
+   "opties": [
+    "Overdrijving",
+    "Onderdrijving",
+    "Synoniem",
+    "Rijm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "SK",
+   "q": "*'Mijn hart is een vogel'* — wat?",
+   "opties": [
+    "Metafoor",
+    "Letterlijk",
+    "Hyperbool",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Een vrij vers heeft?",
+   "opties": [
+    "Geen vast rijm + versmaat",
+    "Vast rijm",
+    "Vast aantal regels",
+    "Moet 14 regels"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "L2K",
+   "q": "*'De wind fluistert'* = ?",
+   "opties": [
+    "Personificatie",
+    "Hyperbool",
+    "Niet",
+    "Rijm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Haiku is uit welk land?",
+   "opties": [
+    "Japan",
+    "Nederland",
+    "Verenigde Staten",
+    "Frankrijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Hoeveel lettergrepen heeft een haiku per regel?",
+   "opties": [
+    "5-7-5",
+    "4-4-4",
+    "8-8-8",
+    "2-3-2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Welk woord rijmt op hond?",
+   "opties": [
+    "mond",
+    "kat",
+    "huis",
+    "boom"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "*'Duizend keer gezegd.'* — welke stijlfiguur?",
+   "opties": [
+    "Hyperbool",
+    "Personificatie",
+    "Vergelijking",
+    "Rijm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "L2K",
+   "q": "Wat is een metafoor?",
+   "opties": [
+    "Beeldspraak zonder 'als'",
+    "Vergelijking met 'als'",
+    "Overdrijving",
+    "Rijm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "*'Pim heeft een paard in de tuin.'* — welke alliteratie-letters?",
+   "opties": [
+    "P",
+    "T",
+    "H",
+    "E"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Limerick heeft hoeveel regels?",
+   "opties": [
+    "5",
+    "3",
+    "14",
+    "8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Wat rijmt op regen?",
+   "opties": [
+    "zegen",
+    "zon",
+    "wolk",
+    "huis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dichten-poezie-rijmen-po",
+   "file": "./dichtenPoezieRijmenPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "L2SK",
+   "q": "*'Ik zag, ik zag, wat jij niet zag.'* — welk effect door herhaling?",
+   "opties": [
+    "Versterkt + ritme",
+    "Vermoeit",
+    "Onzin",
+    "Niet relevant"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lettergrepen-klemtoon-po",
+   "file": "./lettergrepenKlemtoonPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Eén medeklinker tussen twee klinkers gaat bij het verdelen meestal naar...",
+   "opties": [
+    "de volgende lettergreep",
+    "de vorige lettergreep",
+    "allebei",
+    "geen van beide"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lettergrepen-klemtoon-po",
+   "file": "./lettergrepenKlemtoonPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Hoe hoor je waar de klemtoon ligt?",
+   "opties": [
+    "die lettergreep klinkt harder en langer",
+    "die lettergreep heeft een hoofdletter",
+    "die lettergreep staat vooraan",
+    "dat kun je niet horen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenstellingen-tussenletters-po",
+   "file": "./samenstellingenTussenlettersPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is een samenstelling?",
+   "opties": [
+    "één woord gemaakt van twee losse woorden",
+    "een woord met een hoofdletter",
+    "een woord dat je niet kunt spellen",
+    "een woord uit een andere taal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenstellingen-tussenletters-po",
+   "file": "./samenstellingenTussenlettersPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Welk woord is een samenstelling?",
+   "opties": [
+    "speelgoedwinkel",
+    "vrolijk",
+    "rennen",
+    "groot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 0,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Waarom gebruik je synoniemen in een tekst?",
+   "opties": [
+    "Zodat je niet steeds hetzelfde woord herhaalt",
+    "Zodat je tekst korter wordt",
+    "Zodat je minder spelfouten maakt",
+    "Zodat niemand je tekst begrijpt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Synoniem van hard?",
+   "opties": [
+    "luid",
+    "zacht",
+    "stil",
+    "klein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Tegenstelling van rijk?",
+   "opties": [
+    "arm",
+    "duur",
+    "groot",
+    "mooi"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Synoniem van belangrijk?",
+   "opties": [
+    "essentieel",
+    "onbelangrijk",
+    "klein",
+    "saai"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Synoniem van vrolijk?",
+   "opties": [
+    "blij",
+    "boos",
+    "stil",
+    "slim"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Tegenstelling van jong?",
+   "opties": [
+    "oud",
+    "klein",
+    "groot",
+    "langzaam"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Synoniem van eenvoudig?",
+   "opties": [
+    "makkelijk",
+    "moeilijk",
+    "lang",
+    "snel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Tegenstelling van schoon?",
+   "opties": [
+    "vies",
+    "mooi",
+    "groot",
+    "stil"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Synoniem van bang?",
+   "opties": [
+    "angstig",
+    "blij",
+    "stoer",
+    "sterk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Tegenstelling van boven?",
+   "opties": [
+    "onder",
+    "naast",
+    "achter",
+    "voor"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Synoniem van veel?",
+   "opties": [
+    "talloos",
+    "weinig",
+    "klein",
+    "traag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Tegenstelling van warm?",
+   "opties": [
+    "koud",
+    "heet",
+    "zacht",
+    "stil"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Synoniem van slim?",
+   "opties": [
+    "intelligent",
+    "dom",
+    "klein",
+    "langzaam"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Tegenstelling van leeg?",
+   "opties": [
+    "vol",
+    "stil",
+    "groot",
+    "klein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "synoniemen-tegenstellingen-po",
+   "file": "./synoniemenTegenstellingenPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Synoniem van stil?",
+   "opties": [
+    "rustig",
+    "luid",
+    "druk",
+    "fel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "taal-woorden-zinnen-g4",
+   "file": "./taalWoordenZinnenG4.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "L2S",
+   "q": "Wat hoort er aan het eind van deze zin? Hoe heet jouw juf of meester",
+   "opties": [
+    "een vraagteken (?)",
+    "een punt (.)",
+    "niets",
+    "een komma (,)"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "taal-woorden-zinnen-g4",
+   "file": "./taalWoordenZinnenG4.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Welke woorden in deze zin moeten een hoofdletter hebben? gisteren ging lisa naar school.",
+   "opties": [
+    "gisteren én lisa",
+    "alleen school",
+    "alleen ging",
+    "geen enkel woord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoord-tijden-po",
+   "file": "./werkwoordTijdenPo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Verleden tijd 'lopen' (ik) — sterk werkwoord",
+   "opties": [
+    "liep",
+    "loopte",
+    "loopde",
+    "loopen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoord-tijden-po",
+   "file": "./werkwoordTijdenPo.js",
+   "stap": 4,
+   "vraag": 20,
+   "soort": "L2",
+   "q": "Welke hulpwerkwoorden gebruik je in de voltooide tijd?",
+   "opties": [
+    "hebben of zijn",
+    "worden",
+    "kunnen",
+    "willen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoord-tijden-po",
+   "file": "./werkwoordTijdenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Wat is een regelmatig werkwoord?",
+   "opties": [
+    "Volgt vaste regels: stam + te of de",
+    "Een werkwoord waarvan de klinker verandert",
+    "Een werkwoord als kunnen of moeten",
+    "Een werkwoord dat alleen helpt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoord-tijden-po",
+   "file": "./werkwoordTijdenPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Wat is een onregelmatig werkwoord?",
+   "opties": [
+    "Klinker verandert in de verleden tijd",
+    "Volgt de vaste regels met -te of -de",
+    "Krijgt altijd een s achter de stam",
+    "Is altijd een hulpwerkwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

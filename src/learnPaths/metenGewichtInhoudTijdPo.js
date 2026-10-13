@@ -35,7 +35,7 @@ const steps = [
         q: "**2,5 kg** is hoeveel gram?",
         options: ["2500 g", "250 g", "25 000 g", "25 g"],
         answer: 0,
-        wrongHints: [null, "Kijk nog eens: 1 kg is hoeveel gram?", null, "Dat zou minder dan een ons zijn — klopt dat voor 2,5 kilo?"],
+        wrongHints: [null, "Kijk nog eens: 1 kg is hoeveel gram?", "25 000 g is 25 kilo. Hoeveel gram is 1 kilo?", "Dat zou minder dan een ons zijn — klopt dat voor 2,5 kilo?"],
         uitlegPad: {
           stappen: [
             { titel: "Ken de omrekening", tekst: "1 kilo (kg) is altijd 1000 gram (g). Dat basisgetal heb je nodig bij elke gewicht-som." },
@@ -59,7 +59,7 @@ const steps = [
         q: "Hoeveel gram is **1 pond**?",
         options: ["500 g", "1000 g", "100 g", "250 g"],
         answer: 0,
-        wrongHints: [null, "Dat is een hele kilo — een pond is de helft daarvan.", "Dat is een ons.", null],
+        wrongHints: [null, "Dat is een hele kilo — een pond is de helft daarvan.", "Dat is een ons.", "250 g is een half pond. Hoe zwaar is een heel pond?"],
         uitlegPad: {
           stappen: [
             { titel: "Pond is een oude maat", tekst: "Een pond is een gewicht dat je vooral bij groente, fruit en vlees tegenkomt. Het is de helft van een kilo." },
@@ -83,7 +83,7 @@ const steps = [
         q: "**3 ons** kaas is hoeveel gram?",
         options: ["300 g", "30 g", "3000 g", "150 g"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 ons is al 100 g.", "Dat zou 3 kilo zijn.", null],
+        wrongHints: [null, "Te weinig — 1 ons is al 100 g.", "Dat zou 3 kilo zijn.", "150 g is anderhalf ons. Hoeveel gram is 1 ons?"],
         uitlegPad: {
           stappen: [
             { titel: "Ons is honderd gram", tekst: "Een ons is een vaste maat: elke ons weegt 100 gram, hoeveel ons je ook hebt." },
@@ -107,7 +107,7 @@ const steps = [
         q: "**750 g** is hoeveel kilo?",
         options: ["0,75 kg", "7,5 kg", "0,075 kg", "75 kg"],
         answer: 0,
-        wrongHints: [null, "Dat zou 7500 g zijn — dat is veel te zwaar.", null, "Te zwaar: 75 kg weegt zoveel als een volwassene, en 750 g is nog geen kilo."],
+        wrongHints: [null, "Dat zou 7500 g zijn — dat is veel te zwaar.", "0,075 kg is maar 75 g. Hoeveel plaatsen schuift de komma van gram naar kilo?", "Te zwaar: 75 kg weegt zoveel als een volwassene, en 750 g is nog geen kilo."],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar kilo", tekst: "Van gram naar kilo ga je naar een grotere eenheid, dus je moet delen: deel door 1000." },
@@ -131,7 +131,7 @@ const steps = [
         q: "Je koopt **1 kg appels** en **3 ons druiven**. Hoeveel gram fruit samen?",
         options: ["1300 g", "1003 g", "4000 g", "1030 g"],
         answer: 0,
-        wrongHints: [null, "Let op: 3 ons is niet 3 gram.", "Dat zou 4 kilo zijn.", null],
+        wrongHints: [null, "Let op: 3 ons is niet 3 gram.", "Dat zou 4 kilo zijn.", "3 ons is meer dan 30 gram. Hoeveel gram is 1 ons?"],
         uitlegPad: {
           stappen: [
             { titel: "Maak dezelfde eenheid", tekst: "Je kunt kilo's en ons niet zomaar bij elkaar optellen — reken beide eerst om naar gram." },
@@ -208,7 +208,7 @@ const steps = [
         wrongHints: [
           null,
           "Is een pond even zwaar als een kilo?",
-          null,
+          "Je deelde door 2. Passen er meer of minder ponden in een kilo?",
           "Een pond is een halve kilo, geen tiende kilo.",
         ],
         uitlegPad: {
@@ -259,7 +259,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel gram zit er in 1 ons?",
-          null,
+          "1,5 is het aantal kilo. Hoeveel ons zit er in 1 kilo?",
           "Kijk naar het hele getal 1500, niet alleen naar het laatste stukje.",
         ],
         uitlegPad: {
@@ -307,7 +307,7 @@ const steps = [
         q: "Welk pakje is het **zwaarst**?",
         options: ["1,2 kg", "900 g", "2 pond", "11 ons"],
         answer: 0,
-        wrongHints: [null, "Zet eerst alles om naar gram, dan kun je ze vergelijken.", null, null],
+        wrongHints: [null, "Zet eerst alles om naar gram, dan kun je ze vergelijken.", "Hoeveel gram is 2 pond? Vergelijk dat met de rest.", "Hoeveel gram is 11 ons? Vergelijk dat met de rest."],
         uitlegPad: {
           stappen: [
             {
@@ -373,7 +373,7 @@ const steps = [
         q: "**2 liter** is hoeveel milliliter?",
         options: ["2000 ml", "200 ml", "20 000 ml", "20 ml"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 liter is al 1000 ml.", null, "Dat is nog geen borrelglaasje."],
+        wrongHints: [null, "Te weinig — 1 liter is al 1000 ml.", "20 000 ml zou 20 liter zijn.", "20 ml is maar een paar slokjes. Hoeveel ml is 1 liter?"],
         uitlegPad: {
           stappen: [
             { titel: "Ken de omrekening", tekst: "1 liter is altijd 1000 milliliter. Dat getal gebruik je bij elke inhoud-som met liters." },
@@ -397,7 +397,7 @@ const steps = [
         q: "**50 cl** is hoeveel liter?",
         options: ["0,5 l", "5 l", "0,05 l", "50 l"],
         answer: 0,
-        wrongHints: [null, "Dat zou 500 cl zijn — een hele emmer.", null, null],
+        wrongHints: [null, "Dat zou 500 cl zijn — een hele emmer.", "0,05 l is maar 5 cl. Hoeveel cl zit er in 1 liter?", "Is een cl even groot als een liter?"],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar liter", tekst: "1 liter is 100 centiliter (cl). Van cl naar liter ga je naar een grotere eenheid, dus je deelt." },
@@ -421,7 +421,7 @@ const steps = [
         q: "Hoeveel milliliter is **1 deciliter (dl)**?",
         options: ["100 ml", "10 ml", "1000 ml", "1 ml"],
         answer: 0,
-        wrongHints: [null, "Dat is 1 cl, een stap te klein.", "Dat is een hele liter.", null],
+        wrongHints: [null, "Dat is 1 cl, een stap te klein.", "Dat is een hele liter.", "In het rijtje l → dl → cl → ml: hoeveel stappen is het van dl naar ml?"],
         uitlegPad: {
           stappen: [
             { titel: "Deciliter zit tussenin", tekst: "Een deciliter (dl) zit tussen een liter en een milliliter in de rij liter → deciliter → centiliter → milliliter." },
@@ -445,7 +445,7 @@ const steps = [
         q: "Een pak melk is **1,5 l**. Je schenkt glazen van **250 ml**. Hoeveel volle glazen?",
         options: ["6", "4", "7", "5"],
         answer: 0,
-        wrongHints: [null, "Reken eerst de liters om naar ml voor je deelt.", null, null],
+        wrongHints: [null, "Reken eerst de liters om naar ml voor je deelt.", "Reken na: hoeveel ml is 7 glazen van 250 ml? Past dat in het pak?", "Is het pak na 5 glazen al leeg? Reken 5 × 250 ml."],
         uitlegPad: {
           stappen: [
             { titel: "Zet om naar dezelfde eenheid", tekst: "Je kunt geen liters delen door milliliters — reken de 1,5 liter eerst om naar milliliter." },
@@ -470,7 +470,7 @@ const steps = [
         q: "In een recept: **3 dl** water + **200 ml** melk. Hoeveel milliliter vocht samen?",
         options: ["500 ml", "320 ml", "230 ml", "3200 ml"],
         answer: 0,
-        wrongHints: [null, "Let op: 3 dl is niet 3 ml.", "Reken 3 dl eerst om naar ml.", null],
+        wrongHints: [null, "Let op: 3 dl is niet 3 ml.", "Reken 3 dl eerst om naar ml.", "3 dl is geen 3000 ml. Hoeveel ml is 1 dl?"],
         uitlegPad: {
           stappen: [
             { titel: "Zet om naar dezelfde eenheid", tekst: "Je kunt deciliter en milliliter niet zomaar optellen — reken de 3 dl eerst om naar ml." },
@@ -519,7 +519,7 @@ const steps = [
         q: "Hoeveel liter is **750 ml**?",
         options: ["0,75 l", "7,5 l", "75 l", "0,075 l"],
         answer: 0,
-        wrongHints: [null, "Dat zou 7500 ml zijn — veel te veel.", "750 ml is geen 75 liter.", "De komma gaat 3 plaatsen naar links, niet 4."],
+        wrongHints: [null, "Dat zou 7500 ml zijn — veel te veel.", "75 liter is meer dan zeven emmers vol. Hoeveel ml is 1 liter?", "De komma gaat 3 plaatsen naar links, niet 4."],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar liter", tekst: "Van milliliter naar liter ga je naar een grotere eenheid, dus je deelt door 1000." },
@@ -547,7 +547,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel stappen zit er tussen dl en cl in het rijtje l → dl → cl → ml?",
-          null,
+          "4 cl is veel minder dan 4 dl. Hoeveel cl past er in 1 dl?",
           "Is cl een kleinere of een grotere eenheid dan dl?",
         ],
         uitlegPad: {
@@ -603,7 +603,7 @@ const steps = [
           null,
           "Hoeveel cl zit er in 1 liter?",
           "Dat getal hoort bij milliliter, niet bij centiliter.",
-          null,
+          "25 000 cl zou 250 liter zijn. Hoeveel cl is 1 liter?",
         ],
         uitlegPad: {
           stappen: [
@@ -672,7 +672,7 @@ const steps = [
         q: "**2 uur** is hoeveel minuten?",
         options: ["120 min", "200 min", "60 min", "240 min"],
         answer: 0,
-        wrongHints: [null, "Tijd rekent met 60, niet met 100.", "Dat is maar 1 uur.", null],
+        wrongHints: [null, "Tijd rekent met 60, niet met 100.", "Dat is maar 1 uur.", "240 minuten is 4 uur."],
         uitlegPad: {
           stappen: [
             { titel: "Tijd rekent met 60", tekst: "Anders dan bij geld of gewicht rekent tijd niet met 10 of 100, maar met 60: 1 uur is altijd 60 minuten." },
@@ -696,7 +696,7 @@ const steps = [
         q: "**90 minuten** is hoeveel uur?",
         options: ["1,5 uur", "1,3 uur", "9 uur", "0,9 uur"],
         answer: 0,
-        wrongHints: [null, "Hoeveel minuten zitten er in een heel uur? Wat blijft er over, en hoe schrijf je dat deel als kommagetal?", null, null],
+        wrongHints: [null, "Hoeveel minuten zitten er in een heel uur? Wat blijft er over, en hoe schrijf je dat deel als kommagetal?", "9 uur is een hele schooldag. Hoeveel minuten heeft 1 uur?", "0,9 uur is minder dan 1 uur. Is 90 minuten minder dan een uur?"],
         uitlegPad: {
           stappen: [
             { titel: "Haal er een heel uur af", tekst: "Een heel uur is 60 minuten. Hoeveel minuten houd je over als je dat van de 90 minuten afhaalt?" },
@@ -720,7 +720,7 @@ const steps = [
         q: "**180 seconden** is hoeveel minuten?",
         options: ["3 min", "18 min", "30 min", "1,8 min"],
         answer: 0,
-        wrongHints: [null, "Deel door 60, niet door 10.", null, null],
+        wrongHints: [null, "Deel door 60, niet door 10.", "30 minuten is een half uur. Hoeveel seconden heeft 1 minuut?", "Je deelde door 100. Een minuut heeft 60 seconden."],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar minuten", tekst: "1 minuut bestaat uit 60 seconden. Van seconden naar minuten ga je naar een grotere eenheid, dus je deelt." },
@@ -744,7 +744,7 @@ const steps = [
         q: "Een film duurt **1 uur en 45 minuten**. Hoeveel minuten is dat in totaal?",
         options: ["105 min", "145 min", "175 min", "60 min"],
         answer: 0,
-        wrongHints: [null, "Niet de getallen aan elkaar plakken — reken het uur eerst om.", null, "Dat is maar het uur, de 45 min mist nog."],
+        wrongHints: [null, "Niet de getallen aan elkaar plakken — reken het uur eerst om.", "Reken het uur om naar minuten en tel er 45 bij.", "Dat is maar het uur, de 45 min mist nog."],
         uitlegPad: {
           stappen: [
             { titel: "Zet het uur om", tekst: "Reken eerst het hele uur om naar minuten: 1 uur is 60 minuten." },
@@ -768,7 +768,7 @@ const steps = [
         q: "De trein vertrekt om **14:50** en rijdt **35 minuten**. Hoe laat komt hij aan?",
         options: ["15:25", "14:85", "15:05", "15:35"],
         answer: 0,
-        wrongHints: [null, "Een klok gaat niet tot 85 minuten — na 60 komt een nieuw uur.", null, null],
+        wrongHints: [null, "Een klok gaat niet tot 85 minuten — na 60 komt een nieuw uur.", "Van 14:50 tot 15:00 is 10 minuten. Hoeveel minuten moet je daarna nog?", "Je telde 35 minuten bij 15:00. Maar de trein vertrok om 14:50."],
         uitlegPad: {
           stappen: [
             { titel: "Naar het hele uur", tekst: "Reken eerst hoeveel minuten je nodig hebt om van 14:50 bij het volgende hele uur (15:00) te komen." },
@@ -845,7 +845,7 @@ const steps = [
         wrongHints: [
           null,
           "Een uur heeft 60 minuten, geen 100.",
-          null,
+          "2 uur en 50 min is 170 minuten. Reken na.",
           "Hoeveel minuten zitten er in 2 hele uren?",
         ],
         uitlegPad: {
@@ -893,7 +893,7 @@ const steps = [
         q: "Je begint 's ochtends om **9:40** met een klusje en bent **1 uur en 35 minuten** bezig. Hoe laat ben je klaar?",
         options: ["11:15", "10:75", "10:15", "11:05"],
         answer: 0,
-        wrongHints: [null, "Bestaat een tijd met meer dan 59 minuten?", "Vergeet het hele uur niet.", null],
+        wrongHints: [null, "Bestaat een tijd met meer dan 59 minuten?", "Vergeet het hele uur niet.", "Tel de minuten nog eens: 40 + 35. Hoeveel uur en minuten is dat?"],
         uitlegPad: {
           stappen: [
             {
@@ -942,7 +942,7 @@ const steps = [
         wrongHints: [
           null,
           "Reken alles eerst om naar minuten.",
-          null,
+          "Hoeveel minuten is 1,5 uur? Vergelijk dat met de rest.",
           "Hoeveel seconden zitten er in 1 minuut?",
         ],
         uitlegPad: {
@@ -1004,10 +1004,10 @@ const steps = [
       "Reken bij tijd over het hele uur heen (na 60 min begint een nieuw uur), en gebruik bij recepten een **verhoudingstabel** als je voor meer of minder personen moet rekenen.",
     checks: [
       {
-        q: "Een recept voor **4 personen** vraagt **500 ml** melk. Hoeveel melk voor **6 personen**?",
+        q: "Een recept voor **4 personen** vraagt **500 ml** melk. Hoeveel melk heb je nodig voor **6 personen**?",
         options: ["750 ml", "600 ml", "500 ml", "1000 ml"],
         answer: 0,
-        wrongHints: [null, "Je voegt 2 personen toe, niet 1 — reken per persoon.", "Voor meer personen heb je niet evenveel nodig.", null],
+        wrongHints: [null, "Je voegt 2 personen toe, niet 1 — reken per persoon.", "Voor meer personen heb je niet evenveel nodig.", "1000 ml hoort bij 8 personen. Hoeveel ml is het per 2 personen?"],
         uitlegPad: {
           stappen: [
             { titel: "Reken per persoon", tekst: "Om te weten hoeveel 1 persoon nodig heeft, deel je de 500 ml door het aantal personen (4) waarvoor het recept bedoeld is." },
@@ -1031,7 +1031,7 @@ const steps = [
         q: "Een pakket weegt **2 kg en 300 g**. Hoeveel gram is dat?",
         options: ["2300 g", "2003 g", "230 g", "2030 g"],
         answer: 0,
-        wrongHints: [null, "Let op waar de 300 komt te staan.", "Dat is minder dan het pakket alleen al aan kilo's heeft.", null],
+        wrongHints: [null, "Let op waar de 300 komt te staan.", "Dat is minder dan het pakket alleen al aan kilo's heeft.", "300 g is meer dan 30 g. Waar komt de 300 te staan?"],
         uitlegPad: {
           stappen: [
             { titel: "Zet de kilo's om", tekst: "Reken eerst de 2 kg om naar gram: 1 kg is 1000 g." },
@@ -1052,10 +1052,10 @@ const steps = [
         },
       },
       {
-        q: "Vier kinderen drinken elk **3 dl** limonade. Hoeveel **liter** samen?",
+        q: "Vier kinderen drinken elk **3 dl** limonade. Hoeveel **liter** drinken ze samen?",
         options: ["1,2 l", "12 l", "0,12 l", "1,12 l"],
         answer: 0,
-        wrongHints: [null, "12 liter is meer dan een emmer — kan dat voor 4 glazen?", null, null],
+        wrongHints: [null, "12 liter is meer dan een emmer — kan dat voor 4 glazen?", "4 × 3 dl = 12 dl. Hoeveel dl zit er in 1 liter?", "Hoeveel dl is 4 × 3 dl? Zet dat daarna om naar liter."],
         uitlegPad: {
           stappen: [
             { titel: "Tel eerst alles bij elkaar in dl", tekst: "Vier kinderen drinken allemaal 3 dl. Vermenigvuldig 4 met 3 om het totaal in deciliters te vinden." },
@@ -1076,10 +1076,10 @@ const steps = [
         },
       },
       {
-        q: "Een reis duurt **2 uur 15 min** heen en **1 uur 50 min** terug. Hoeveel tijd in totaal?",
+        q: "Een reis duurt **2 uur 15 min** heen en **1 uur 50 min** terug. Hoeveel tijd is dat in totaal?",
         options: ["4 uur 5 min", "4 uur 25 min", "3 uur 65 min", "4 uur 15 min"],
         answer: 0,
-        wrongHints: [null, null, "Bijna — maar meer dan 59 minuten schrijf je niet zo. Hoeveel uur en minuten is 65 minuten?", null],
+        wrongHints: [null, "Tel de minuten na: 15 + 50.", "Bijna — maar meer dan 59 minuten schrijf je niet zo. Hoeveel uur en minuten is 65 minuten?", "Hoeveel minuten is 15 + 50? Hoeveel blijft er over na een heel uur?"],
         uitlegPad: {
           stappen: [
             { titel: "Tel uren en minuten apart", tekst: "Tel eerst de hele uren bij elkaar op (2 + 1), en apart de minuten (15 + 50)." },
@@ -1133,7 +1133,7 @@ const steps = [
         wrongHints: [
           null,
           "Klopt het als je voor wat pannenkoeken een hele emmer melk nodig hebt?",
-          null,
+          "0,6 l is genoeg voor 12 pannenkoeken. Hoeveel keer 6 pannenkoeken is 18?",
           "Hoeveel dl zit er in 1 liter?",
         ],
         uitlegPad: {
@@ -1184,7 +1184,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is wat je hebt ingeschonken, niet wat er over is.",
-          null,
+          "Je trok maar 25 cl af. Hoeveel cl zit er in 6 bekers?",
           "Kun je liters en centiliters zomaar van elkaar aftrekken?",
         ],
         uitlegPad: {
@@ -1236,7 +1236,7 @@ const steps = [
         q: "Je fietst **3 rondjes** om het park. Elk rondje duurt **25 minuten**. Hoe lang fiets je in totaal?",
         options: ["1 uur en 15 min", "1 uur en 25 min", "1 uur en 5 min", "50 min"],
         answer: 0,
-        wrongHints: [null, "Hoeveel minuten zitten er in een uur?", null, "Je fietst 3 rondjes, niet 2."],
+        wrongHints: [null, "Hoeveel minuten zitten er in een uur?", "3 × 25 is 75 minuten. Hoeveel is dat in uren en minuten?", "Je fietst 3 rondjes, niet 2."],
         uitlegPad: {
           stappen: [
             {
@@ -1286,7 +1286,7 @@ const steps = [
           null,
           "Klopt het dat een appel zo licht is als een paar suikerklontjes?",
           "Deel je door het aantal appels in de zak?",
-          null,
+          "Je deed keer 8. Moet je hier niet delen?",
         ],
         uitlegPad: {
           stappen: [

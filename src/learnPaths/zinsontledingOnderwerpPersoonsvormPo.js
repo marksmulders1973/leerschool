@@ -266,14 +266,9 @@ const steps = [
       },
       {
         q: "Hoe zoek je het onderwerp?",
-        options: [
-          "Stel de vraag: wie of wat + persoonsvorm?",
-          "Zoek het eerste zelfstandig naamwoord.",
-          "Zoek het langste woord in de zin.",
-          "Zoek het werkwoord met -en erachter.",
-        ],
+        options: ["Stel de vraag: wie of wat + persoonsvorm?", "Zoek het eerste zelfstandig naamwoord.", "Zoek het langste woord in de zin.", "Neem het woord dat vooraan staat."],
         answer: 0,
-        wrongHints: [null, "Het eerste zelfstandig naamwoord is niet altijd het onderwerp.", "De lengte van een woord zegt niets over de zinsdelen.", "Dat is de manier om een werkwoord te herkennen, niet het onderwerp."],
+        wrongHints: [null, "Het eerste zelfstandig naamwoord is niet altijd het onderwerp.", "De lengte van een woord zegt niets over de zinsdelen.", "Het onderwerp staat vaak vooraan, maar niet altijd: 'Vandaag fietst Sem naar school.' Hoe vind je het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Wie of wat + persoonsvorm?", tekst: "Stap 1: zoek de persoonsvorm. Stap 2: stel de vraag 'wie of wat + persoonsvorm?' Het antwoord is het onderwerp." }],
           niveaus: {
@@ -448,7 +443,7 @@ const steps = [
         q: "Vul goed in: *Mijn broer en ik ___ elke avond samen tv.* (kijken)",
         options: ["kijken", "kijkt", "kijkend", "keek"],
         answer: 0,
-        wrongHints: [null, "Mijn broer én ik zijn samen twee personen → meervoud.", "Dat is geen persoonsvorm.", "Ook in de verleden tijd telt het aantal: is 'keek' enkelvoud of meervoud?"],
+        wrongHints: [null, "Mijn broer én ik: hoeveel personen zijn dat samen?", "Dat is geen persoonsvorm.", "Ook in de verleden tijd telt het aantal: is 'keek' enkelvoud of meervoud?"],
         uitlegPad: {
           stappen: [{ titel: "'A en ik' = meervoud", tekst: "'Mijn broer en ik' zijn samen twee personen → meervoud → 'kijken' (niet 'kijkt')." }],
           niveaus: {
@@ -629,7 +624,7 @@ const steps = [
         },
       },
       {
-        q: "Welke zin heeft een fout in de congruentie?",
+        q: "In welke zin passen onderwerp en persoonsvorm **niet** bij elkaar?",
         options: [
           "De honden blaft luid.",
           "De honden blaffen luid.",

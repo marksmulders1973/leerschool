@@ -54,7 +54,7 @@ const steps = [
         q: "Wat zijn **homofonen**?",
         options: ["Woorden die hetzelfde klinken, anders geschreven", "Woorden die hetzelfde betekenen, anders klinken", "Woorden die alleen aan het eind hetzelfde klinken", "Woorden met dezelfde letters, in andere volgorde"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn synoniemen; het gaat hier om klank en spelling.", "Niet — dat zijn rijmwoorden.", "Niet — kijk naar klank en spelling."],
+        wrongHints: [null, "Niet — dat zijn synoniemen; het gaat hier om klank en spelling.", "Niet — dat zijn rijmwoorden.", "Dat zijn woorden met dezelfde letters door elkaar. Gaat het hier om hoe woorden klinken?"],
         uitlegPad: {
           stappen: [{ titel: "homo + foon", tekst: "Homo = gelijk. Foon = klank/geluid. Homofoon = woorden met gelijke KLANK maar andere SPELLING." }],
           woorden: [{ woord: "homofoon", uitleg: "Twee woorden die identiek klinken maar verschillend geschreven worden." }],
@@ -66,16 +66,16 @@ const steps = [
       },
       {
         q: "Klinken **'reist'** en **'rijst'** hetzelfde?",
-        options: ["Ja, identiek","Nee, totaal verschillend","Ja maar 'rijst' is iets langer","Nee, 'reis' is hoger"],
+        options: ["Ja, ze klinken precies hetzelfde","Nee, ze klinken totaal anders","Ja, maar 'rijst' klinkt iets langer","Nee, 'reist' klinkt iets hoger"],
         answer: 0,
-        wrongHints: [null,"Zeg ze allebei langzaam hardop. Hoor je verschil?","Geen verschil in lengte.","Geen verschil in toon."],
+        wrongHints: [null,"Zeg ze allebei langzaam hardop. Hoor je verschil?","Zeg 'reist' en 'rijst' na elkaar. Duurt één van de twee echt langer?","Zeg ze allebei hardop. Gaat je stem bij één ervan echt omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Test: spreek uit", tekst: "Spreek 'reist' (ei) uit. Spreek 'rijst' (ij) uit. Verschil? NEE — 100% identiek." }],
           woorden: [{ woord: "reist", uitleg: "Met ei: van reizen (hij reist naar Spanje)." }, { woord: "rijst", uitleg: "Met ij: voedsel (witte korreltjes uit Azië)." }],
           theorie: "Homofoon-test: spreek beide hardop uit. Klinken identiek = homofoon. Alleen schrijfwijze verschilt.",
           voorbeelden: [{ type: "paar", tekst: "Hij reist = hij gaat op reis. Hij eet rijst = hij eet voedsel. Klinkt hetzelfde, maar de betekenis is ANDERS." }],
           basiskennis: [{ onderwerp: "500 jaar geleden", uitleg: "Vroeger klonken ei en ij wél verschillend — nu uitspraak samengesmolten." }],
-          niveaus: { basis: "Ja, identiek.", simpeler: "Spreek hardop: r-ei-st en r-ij-st. Geen verschil in klank.", nogSimpeler: "Identiek" },
+          niveaus: { basis: "Ja, ze klinken precies hetzelfde.", simpeler: "Spreek hardop: r-ei-st en r-ij-st. Geen verschil in klank.", nogSimpeler: "Identiek" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -127,14 +127,14 @@ const steps = [
         options: [
           "Je moet het woord kennen of opzoeken",
           "Je hoort het aan de klank",
-          "Lange woorden hebben altijd ij",
+          "Lange woorden schrijf je met ij",
           "Woorden met een e erin hebben ei",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Klinken ei en ij anders? Zeg 'reist' en 'rijst'.",
-          null,
+          "Denk aan 'eindelijk' (lang) en 'bij' (kort). Klopt die regel dan?",
           "Denk aan 'hij leest'. Zit daar een ei in?",
         ],
         uitlegPad: {
@@ -175,7 +175,7 @@ const steps = [
         q: "Hoe noem je de **ij** ook wel?",
         options: ["de lange ij", "de korte ij", "de ronde ij", "de dubbele ij"],
         answer: 0,
-        wrongHints: [null, "Welke naam hoort bij de e-i, zoals in klein?", null, null],
+        wrongHints: [null, "Welke naam hoort bij de e-i, zoals in klein?", "Zo noem je de ij niet. Kijk eens hoe de letter eruitziet: wat valt op aan de staart?", "Zo noem je de ij niet. Hoe heet de ei ook wel? De ij heeft de andere naam."],
         uitlegPad: {
           stappen: [
             {
@@ -259,16 +259,16 @@ const steps = [
         q: "Waarom schrijven we **ei** en **ij** anders, terwijl ze hetzelfde klinken?",
         options: [
           "Vroeger klonken ze verschillend",
-          "Dat is een nieuwe regel van vorig jaar",
+          "Omdat de ij uit een andere taal komt",
           "Omdat ij alleen aan het eind van een woord staat",
           "Omdat ei alleen in korte woorden staat",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Deze spelling bestaat al honderden jaren.",
+          "De ij is een echt Nederlandse letter — denk aan wij, tijd en mijn.",
           "Denk aan 'tijd'. Waar staat daar de ij?",
-          null,
+          "Denk aan 'eindelijk'. Is dat een kort woord?",
         ],
         uitlegPad: {
           stappen: [
@@ -316,9 +316,9 @@ const steps = [
     checks: [
       {
         q: "Hoe schrijf je: het voertuig op rails?",
-        options: ["trein","trijn","tryn","train"],
+        options: ["trein","trijn","treijn","tren"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Geen Nederlandse spelling.","Dat is Engels."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?","Zeg het langzaam. Hoor je echt alleen een korte e, zoals in 'pen'?"],
         uitlegPad: {
           stappen: [{ titel: "trein = ei", tekst: "Trein hoort in het 'klein-rein-trein-plein' rijtje — allemaal ei." }],
           woorden: [{ woord: "trein", uitleg: "Voertuig op rails. Komt van Frans 'train' = sleep/rij." }],
@@ -330,9 +330,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: niet groot?",
-        options: ["klein","klijn","kleyn","kleen"],
+        options: ["klein","klijn","kleijn","kleen"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?","Met ee klinkt het als in 'been'. Klinkt dit woord zo?"],
         uitlegPad: {
           stappen: [{ titel: "klein = ei", tekst: "Klein staat in het ei-rijtje 'klein-plein-trein-rein'." }],
           woorden: [{ woord: "klein", uitleg: "Niet groot. Bijvoeglijk naamwoord met ei." }],
@@ -344,9 +344,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: een open ruimte in een stad?",
-        options: ["plein","plijn","pleyn","plyn"],
+        options: ["plein","plijn","pleijn","plien"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?","Met ie klinkt het als in 'zien'. Klinkt dit woord zo?"],
         uitlegPad: {
           stappen: [{ titel: "plein = ei", tekst: "Plein hoort in 'klein-plein-trein' — allemaal ei. Onthoud groep." }],
           woorden: [{ woord: "plein", uitleg: "Open ruimte midden in stad of dorp." }],
@@ -364,7 +364,7 @@ const steps = [
         wrongHints: [
           null,
           "Bijna — kies nog eens tussen korte ei en lange ij.",
-          "Geen Nederlandse spelling.",
+          "De klank ai schrijf je in het Nederlands bijna nooit. Welke twee mogelijkheden zijn er wel?",
           "Tel de s'en nog eens.",
         ],
         uitlegPad: {
@@ -408,7 +408,7 @@ const steps = [
           null,
           "Bijna — kies nog eens tussen korte ei en lange ij.",
           "Kijk goed naar het stukje na de d.",
-          null,
+          "Hoor je een d of een t? Denk aan het woord 'einde'.",
         ],
         uitlegPad: {
           stappen: [
@@ -445,9 +445,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: het grasland waar koeien grazen?",
-        options: ["wei", "weij", "wai", "wey"],
+        options: ["wei", "wij", "weij", "wee"],
         answer: 0,
-        wrongHints: [null, "Kijk naar het eind: is daar een j nodig?", "Geen Nederlandse spelling.", null],
+        wrongHints: [null, "'wij' betekent: ik en de anderen. Is dat een grasland?", "Kijk naar het eind: is daar een j nodig?", "Met ee klinkt het als in 'twee'. Klinkt het grasland zo?"],
         uitlegPad: {
           stappen: [
             {
@@ -527,10 +527,10 @@ const steps = [
     svg: woordenTabelSvg("ij (lange)", "Voorbeelden", COLORS.ij, COLORS.warm, ["tijd","wij","jij","hij","zij","mij","bij","rijst","schrijven","rijden","prijs"], ["kijken","blijven","wijzer","fijn","dijk","vlijt"]),
     checks: [
       {
-        q: "Welk persoonlijk voornaamwoord heeft **ij**?",
-        options: ["wij","jullie","wei","ons"],
+        q: "Welk persoonlijk voornaamwoord is goed geschreven?",
+        options: ["wij","wei","zei","mei"],
         answer: 0,
-        wrongHints: [null,"Zoek een woord met ij erin.","Is dit een voornaamwoord? Denk aan ik, jij, wij…","Zoek een woord met ij erin."],
+        wrongHints: [null,"'wei' is een grasland. Hoe schrijf je het voornaamwoord?","'zei' komt van zeggen. Hoe schrijf je het voornaamwoord?","'mei' is een maand. Hoe schrijf je het voornaamwoord?"],
         uitlegPad: {
           stappen: [{ titel: "Voornaamwoorden = ij", tekst: "Wij, jij, hij, zij en mij schrijf je altijd met ij, nooit met ei." }],
           woorden: [{ woord: "voornaamwoord", uitleg: "Woord dat een persoon vervangt: ik, jij, hij, zij, wij, jullie." }],
@@ -542,9 +542,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: het voedsel uit Azië (witte korreltjes)?",
-        options: ["rijst","reist","reize","rijz"],
+        options: ["rijst","reist","rijsd","reijst"],
         answer: 0,
-        wrongHints: [null,"'reist' = van reizen.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"'reist' = van reizen.","Hoor je aan het eind een d of een t?","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?"],
         uitlegPad: {
           stappen: [{ titel: "rijst = ij", tekst: "Voedsel = rijst (ij). Werkwoord van reizen = reist (ei). Context bepaalt!" }],
           woorden: [{ woord: "rijst", uitleg: "Voedsel uit Azië, met ij." }, { woord: "reist", uitleg: "Werkwoordsvorm van reizen, met ei." }],
@@ -556,9 +556,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: hoeveel uur het is?",
-        options: ["tijd","teid","tied","tijt"],
+        options: ["tijd","teid","teit","tijt"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Geen Nederlandse spelling.","Bijna — maak het woord langer (meervoud). Hoor je dan een t of een d?"],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Kijk naar twee dingen: de klank in het midden en de letter aan het eind.","Bijna — maak het woord langer (meervoud). Hoor je dan een t of een d?"],
         uitlegPad: {
           stappen: [{ titel: "tijd = ij", tekst: "Tijd is een -tijd-woord. Alle -tijd-woorden hebben ij." }],
           woorden: [{ woord: "tijd", uitleg: "Wat de klok aangeeft. Met ij." }],
@@ -577,7 +577,7 @@ const steps = [
           null,
           "Bijna — kies nog eens tussen korte ei en lange ij.",
           "Hoor je hier een f of een v?",
-          null,
+          "Hoor je sch of sg? Denk aan 'school'.",
         ],
         uitlegPad: {
           stappen: [
@@ -620,7 +620,7 @@ const steps = [
           null,
           "Bijna — kies nog eens tussen korte ei en lange ij.",
           "Hoor je hier een f of een v?",
-          null,
+          "Kijk naar twee dingen: de klank in het midden en de f of v.",
         ],
         uitlegPad: {
           stappen: [
@@ -657,13 +657,13 @@ const steps = [
       },
       {
         q: "'Op mijn verjaardag ____ ik een cadeau.' Welk woord is goed?",
-        options: ["krijg", "kreig", "kraig", "kryg"],
+        options: ["krijg", "kreig", "krijch", "kreich"],
         answer: 0,
         wrongHints: [
           null,
           "Bijna — kies nog eens tussen korte ei en lange ij.",
-          "Geen Nederlandse spelling.",
-          null,
+          "Hoor je een g of een ch? Denk aan 'krijgen'.",
+          "Kijk naar twee dingen: de klank in het midden en de letter aan het eind.",
         ],
         uitlegPad: {
           stappen: [
@@ -700,9 +700,9 @@ const steps = [
       },
       {
         q: "'Mijn zus leert ____ op een paard.' Welk woord is goed?",
-        options: ["rijden", "reiden", "ryden", "rijdden"],
+        options: ["rijden", "reiden", "rijen", "rijdden"],
         answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", null, "Tel de d's nog eens."],
+        wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Denk aan 'hij rijdt'. Welke letter mis je nog?", "Tel de d's nog eens."],
         uitlegPad: {
           stappen: [
             {
@@ -738,12 +738,12 @@ const steps = [
       },
       {
         q: "'Wat moeten we kopen? Kijk even op de ____.'",
-        options: ["lijst", "leist", "lyst", "lijsd"],
+        options: ["lijst", "leist", "lijs", "lijsd"],
         answer: 0,
         wrongHints: [
           null,
           "Bijna — kies nog eens tussen korte ei en lange ij.",
-          null,
+          "Zeg het langzaam. Hoor je aan het eind nog een letter?",
           "Hoor je aan het eind een t of een d?",
         ],
         uitlegPad: {
@@ -788,9 +788,9 @@ const steps = [
     checks: [
       {
         q: "Hoe schrijf je: op elk moment, steeds?",
-        options: ["altijd","alteid","altijt","altyd"],
+        options: ["altijd","alteid","altijt","alteit"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Bijna — denk aan het woord tijden. Hoor je een t of een d?","De 'y' wordt in modern Nederlands niet gebruikt voor deze klank."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Bijna — denk aan het woord tijden. Hoor je een t of een d?","Kijk naar twee dingen: de klank in het midden en de letter aan het eind."],
         uitlegPad: {
           stappen: [{ titel: "altijd = ij", tekst: "Al + tijd = altijd. Want -tijd heeft altijd ij." }],
           woorden: [{ woord: "altijd", uitleg: "Steeds, op elk moment. Samenstelling: al + tijd." }],
@@ -802,9 +802,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: wat iets kost?",
-        options: ["prijs","preis","prijz","prys"],
+        options: ["prijs","preis","prijz","preiz"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Bijna — aan het eind van een woord schrijf je hier geen z.","De 'y' wordt in modern Nederlands niet meer gebruikt voor deze klank."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Bijna — aan het eind van een woord schrijf je hier geen z.","Kijk naar twee dingen: de klank in het midden en de letter aan het eind."],
         uitlegPad: {
           stappen: [{ titel: "prijs = ij", tekst: "Prijs (kosten) heeft ij. Familie: prijslijst, prijswinnaar — allemaal ij." }],
           woorden: [{ woord: "prijs", uitleg: "Kosten van iets, of beloning bij wedstrijd." }],
@@ -816,15 +816,15 @@ const steps = [
       },
       {
         q: "Welk woord is **goed** geschreven?",
-        options: ["klein","klijn","kleyn","klyn"],
+        options: ["klein","klijn","klain","kleen"],
         answer: 0,
-        wrongHints: [null,"Bestaat niet in deze schrijfwijze.","De 'ey'-combinatie wordt in Nederlands niet gebruikt voor deze klank.","De 'y' wordt in modern Nederlands niet meer gebruikt."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","De klank ai schrijf je in het Nederlands bijna nooit. Welke twee mogelijkheden zijn er wel?","Met ee klinkt het als in 'been'. Klinkt dit woord zo?"],
         uitlegPad: {
           stappen: [{ titel: "klein = ei", tekst: "Alleen 'klein' is een echt Nederlands woord — met ei. Andere opties bestaan niet." }],
           woorden: [{ woord: "klein", uitleg: "Niet groot. Bijvoeglijk naamwoord met ei." }],
           theorie: "ei-rijtje 'klein-plein-trein' — leer als geheel.",
           voorbeelden: [{ type: "trio", tekst: "klein, plein, trein — drie ei-broers." }],
-          basiskennis: [{ onderwerp: "Schrap nep-woorden", uitleg: "Klijn, kleyn, klyn = bestaan niet als gewoon NL woord." }],
+          basiskennis: [{ onderwerp: "Schrap nep-woorden", uitleg: "Klijn, klain, kleen = bestaan niet als gewoon NL woord." }],
           niveaus: { basis: "klein = ei.", simpeler: "Klein heeft ei. Andere opties zijn geen Nederlandse woorden.", nogSimpeler: "Ei" },
         },
       },
@@ -835,10 +835,10 @@ const steps = [
           "Het eindigt op -tijd, dus ij",
           "Het is een voornaamwoord, dus ij",
           "Het rijmt op klein, dus ei",
-          "Het begint met aug-, dus au",
+          "Het komt van 'eind', dus ei",
         ],
         answer: 0,
-        wrongHints: [null, "Is bedtijd een woord als jij, hij of wij?", null, "Zit er een au-klank in bedtijd?"],
+        wrongHints: [null, "Is bedtijd een woord als jij, hij of wij?", "Rijmt bedtijd echt op klein? Zeg ze allebei hardop.", "Zit het woord 'eind' in bedtijd?"],
         uitlegPad: {
           stappen: [
             {
@@ -874,9 +874,9 @@ const steps = [
       },
       {
         q: "Welk woord hoort in het ei-rijtje **klein, rein, plein**?",
-        options: ["trein", "tijd", "wij", "prijs"],
+        options: ["trein", "lijn", "wijn", "pijn"],
         answer: 0,
-        wrongHints: [null, "Dit woord heeft een lange ij.", null, null],
+        wrongHints: [null, "Rijmt wel! Maar hoe schrijf je de streep die je met een liniaal trekt?", "Rijmt wel! Maar kijk eens hoe 'wijn' op een fles staat.", "Rijmt wel! Maar hoe schrijf je 'au, dat doet ...'?"],
         uitlegPad: {
           stappen: [
             {
@@ -917,7 +917,7 @@ const steps = [
         wrongHints: [
           null,
           "Het begin komt van eind. Hoe schrijf je eind?",
-          null,
+          "Kijk goed naar het stukje aan het eind van het woord.",
           "Kijk naar begin en eind van het woord.",
         ],
         uitlegPad: {
@@ -959,8 +959,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Hoe schrijf je het stukje aan het eind, zoals in eindelijk?",
-          null,
+          "Kijk goed naar het stukje aan het eind van het woord.",
+          "Je zegt 'moeiluk', maar zo schrijf je het niet. Welk stukje staat aan het eind van veel van zulke woorden?",
           "Hoe eindigt het woord? Tel de letters na de ij.",
         ],
         uitlegPad: {
@@ -1006,7 +1006,7 @@ const steps = [
           "eerlijk, vrolijk, duideleik",
         ],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar het middelste woord.", null, "Kijk goed naar het laatste woord."],
+        wrongHints: [null, "Kijk goed naar het middelste woord.", "Kijk goed naar het eerste woord.", "Kijk goed naar het laatste woord."],
         uitlegPad: {
           stappen: [
             {
@@ -1049,9 +1049,9 @@ const steps = [
     checks: [
       {
         q: "Hoe schrijf je: een **voertuig op vier wielen**?",
-        options: ["auto","outo","oto","autoo"],
+        options: ["auto","outo","autoo","outoo"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen Nederlandse spelling.","Niet — kijk naar het eind van het woord."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Kijk naar het eind van het woord. Hoeveel o's hoor je?","Kijk naar twee dingen: het begin en het eind van het woord."],
         uitlegPad: {
           stappen: [{ titel: "auto = au", tekst: "Auto komt van 'automobiel' — uit het Grieks/Frans, met au." }],
           woorden: [{ woord: "auto", uitleg: "Voertuig op 4 wielen. Met au." }],
@@ -1063,9 +1063,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: de **maand 8** van het jaar?",
-        options: ["augustus","ougustus","augustes","oogstus"],
+        options: ["augustus","ougustus","augustes","ougustes"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen 'augustes' in NL.","'oogstus' niet Nederlands."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Zeg het langzaam: au-gus-... Welke klank hoor je aan het eind?","Kijk naar twee dingen: het begin en het eind van het woord."],
         uitlegPad: {
           stappen: [{ titel: "augustus = au", tekst: "Augustus komt uit Latijn, vernoemd naar keizer Augustus. Met au." }],
           woorden: [{ woord: "augustus", uitleg: "Maand 8 (zomermaand). Latijnse oorsprong." }],
@@ -1079,7 +1079,7 @@ const steps = [
         q: "Hoe schrijf je: niet sterk gekruid eten?",
         options: ["flauw","flouw","flou","flauwt"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Mist de w.","Geen extra t."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Mist de w.","Flauw is geen werkwoord. Hoort er dan een t achter?"],
         uitlegPad: {
           stappen: [{ titel: "flauw = au", tekst: "Flauw hoort in -auw-rijtje: blauw, gauw, rauw, flauw, dauw — allemaal au." }],
           woorden: [{ woord: "flauw", uitleg: "Niet sterk gekruid. Of: niet leuk (een flauwe grap)." }],
@@ -1097,7 +1097,7 @@ const steps = [
         wrongHints: [
           null,
           "Bijna — kies nog eens tussen au en ou.",
-          null,
+          "Hoor je een s of een z? Zeg het langzaam.",
           "Kijk naar de au/ou én naar de letter voor de e.",
         ],
         uitlegPad: {
@@ -1141,7 +1141,7 @@ const steps = [
           null,
           "Bijna — kies nog eens tussen au en ou.",
           "Hoor je aan het eind nog iets na de au?",
-          null,
+          "Zeg het langzaam: welke klank hoor je in het midden?",
         ],
         uitlegPad: {
           stappen: [
@@ -1180,7 +1180,7 @@ const steps = [
         q: "Hoe schrijf je: een zure groene groente uit een pot?",
         options: ["augurk", "ougurk", "augurck", "augerk"],
         answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", null, "Zeg het langzaam: au-gurk."],
+        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Hoeveel letters heb je nodig voor de k-klank aan het eind?", "Zeg het langzaam: au-gurk."],
         uitlegPad: {
           stappen: [
             {
@@ -1218,7 +1218,7 @@ const steps = [
         q: "Hoe schrijf je: eten fijnmaken met je tanden?",
         options: ["kauwen", "kouwen", "kauwe", "kawen"],
         answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", null, "Geen Nederlandse spelling."],
+        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Kijk naar het eind: hoe eindigt een heel werkwoord, zoals 'lopen'?", "Geen Nederlandse spelling."],
         uitlegPad: {
           stappen: [
             {
@@ -1261,9 +1261,9 @@ const steps = [
     checks: [
       {
         q: "Hoe schrijf je: het **gele metaal** voor sieraden?",
-        options: ["goud","gaud","gout","goldt"],
+        options: ["goud","gaud","gout","gaut"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Klinkt als 'gout' maar dat is geen NL spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Hoor je aan het eind een t of een d? Denk aan 'gouden'.","Kijk naar twee dingen: de klank in het midden en de letter aan het eind."],
         uitlegPad: {
           stappen: [{ titel: "goud = ou", tekst: "Goud hoort in -oud-rijtje: oud, koud, goud, zout — allemaal ou." }],
           woorden: [{ woord: "goud", uitleg: "Geel edelmetaal voor sieraden, met ou." }],
@@ -1275,9 +1275,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: 'Is dat ___ boek?' (bezittelijk):",
-        options: ["jouw","jauw","joew","jou"],
+        options: ["jouw","jauw","jau","jou"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen Nederlandse spelling.","'jou' is lijdend voorwerp, niet bezittelijk."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Kijk naar twee dingen: de klank in het midden en de letter aan het eind.","'jou' is lijdend voorwerp, niet bezittelijk."],
         uitlegPad: {
           stappen: [{ titel: "jouw = bezittelijk", tekst: "Bezittelijk = 'het boek dat aan jou toebehoort' = jouw boek (met w!)." }],
           woorden: [{ woord: "jouw", uitleg: "Bezittelijk voornaamwoord (= van jou). Met w." }, { woord: "jou", uitleg: "Lijdend voorwerp van jij. Zonder w." }],
@@ -1291,7 +1291,7 @@ const steps = [
         q: "Hoe schrijf je: het deel van je jas om je arm?",
         options: ["mouw","mauw","mouwe","mauwe"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Het is één mouw. Hoort er dan een e achter?","Kijk naar twee dingen: de klank en het eind van het woord."],
         uitlegPad: {
           stappen: [{ titel: "mouw = ou", tekst: "Mouw (deel van trui/jas) heeft ou. 'Mauw' is geen NL woord (kat zegt miauw)." }],
           woorden: [{ woord: "mouw", uitleg: "Deel van een trui/jas/shirt waarin je arm zit." }],
@@ -1304,9 +1304,9 @@ const steps = [
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Hoe schrijf je: het materiaal van een boomstam?",
-        options: ["hout", "haut", "hauwt", "hoout"],
+        options: ["hout", "haut", "hauwt", "houd"],
         answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", null, "Geen Nederlandse spelling."],
+        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Hoor je een w in dit woord? Zeg het langzaam.", "Hoor je aan het eind een t of een d? Denk aan 'houten'."],
         uitlegPad: {
           stappen: [
             {
@@ -1348,7 +1348,7 @@ const steps = [
           null,
           "Bijna — kies nog eens tussen au en ou.",
           "Hoor je aan het eind een t of een d?",
-          null,
+          "Hoor je een w in dit woord? Zeg het langzaam.",
         ],
         uitlegPad: {
           stappen: [
@@ -1387,7 +1387,7 @@ const steps = [
         q: "Hoe schrijf je: het tegenovergestelde van **nieuw**?",
         options: ["oud", "aud", "oudt", "ouwd"],
         answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", null, "Is er een w nodig?"],
+        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Oud is geen werkwoord. Hoort er dan een t achter?", "Is er een w nodig?"],
         uitlegPad: {
           stappen: [
             {
@@ -1425,7 +1425,7 @@ const steps = [
         q: "'De kinderen ____ een hut van takken.' Welk woord is goed?",
         options: ["bouwen", "bauwen", "bouwe", "bauwe"],
         answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Kijk naar het eind: wij bouw...?", null],
+        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Kijk naar het eind: wij bouw...?", "Kijk naar twee dingen: de klank en het eind van het woord."],
         uitlegPad: {
           stappen: [
             {
@@ -1470,7 +1470,7 @@ const steps = [
         q: "**'Het is heel ____ buiten'** (= zeer lage temperatuur):",
         options: ["koud","kaud","kouwd","koudt"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen Nederlandse spelling.","Geen extra t — bijvoeglijk naamwoord eindigt zonder t."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Hoor je een w in dit woord? Zeg het langzaam.","Geen extra t — bijvoeglijk naamwoord eindigt zonder t."],
         uitlegPad: {
           stappen: [{ titel: "koud = ou", tekst: "Koud hoort in -oud-rijtje: oud, koud, goud, zout — allemaal ou." }],
           woorden: [{ woord: "koud", uitleg: "Lage temperatuur. Bijvoeglijk naamwoord met ou." }],
@@ -1482,9 +1482,9 @@ const steps = [
       },
       {
         q: "**'Hij rijd / rijdt op zijn fiets'**: welke is goed?",
-        options: ["rijdt","rijd","rijds","rijden"],
+        options: ["rijdt","rijd","reidt","rijden"],
         answer: 0,
-        wrongHints: [null,"Bij 'hij' krijg je geen kale stam — denk aan de regel.","-s is geen Nederlandse vervoeging.","-en is voor meervoud (wij/zij)."],
+        wrongHints: [null,"Bij 'hij' krijg je geen kale stam — denk aan de regel.","Kijk naar de klank in het midden: schrijf je rijden met ei?","-en is voor meervoud (wij/zij)."],
         uitlegPad: {
           stappen: [{ titel: "Hij/zij/het + stam + t", tekst: "Werkwoord rijden → stam = rijd. Hij/zij + stam + t = rijdt." }],
           woorden: [{ woord: "rijdt", uitleg: "3e persoon enkelvoud van rijden (hij/zij/het rijdt)." }],
@@ -1496,16 +1496,16 @@ const steps = [
       },
       {
         q: "**'____, wat kun jij hard rennen!'** (tussenwerpsel, zoals in 'nou zeg'):",
-        options: ["Nou","Nau","Now","Nouw"],
+        options: ["Nou","Nau","Nauw","Nouw"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Dat is Engels.","Nou heeft geen w aan het eind."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","'Nauw' betekent smal, zoals een nauwe gang. Past dat hier?","Hoor je aan het eind een w? Zeg het hardop."],
         uitlegPad: {
           stappen: [{ titel: "nou = ou", tekst: "Informeel 'nou' (= nu) wordt met ou geschreven." }],
           woorden: [{ woord: "nou", uitleg: "Informele variant van 'nu'. Met ou." }],
           theorie: "Korte ou-woorden: nou, jou, kou → eindigen op -ou.",
           voorbeelden: [{ type: "context", tekst: "'Nou ja!' = informele uitroep. 'Nu' = formele variant." }],
           basiskennis: [{ onderwerp: "Niet 'now'", uitleg: "'Now' is Engels. Nederlandse versie altijd met ou." }],
-          niveaus: { basis: "Nou = ou.", simpeler: "Informele 'nu' = nou (met ou). Niet nau, niet now.", nogSimpeler: "Nou" },
+          niveaus: { basis: "Nou = ou.", simpeler: "Informele 'nu' = nou (met ou). Niet nau.", nogSimpeler: "Nou" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1513,7 +1513,7 @@ const steps = [
         q: "In welk rijtje hebben **alle** woorden een **ij**?",
         options: ["tijd, jij, prijs", "tijd, trein, prijs", "klein, jij, prijs", "tijd, jij, reis"],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar het middelste woord.", null, "Kijk goed naar het laatste woord."],
+        wrongHints: [null, "Kijk goed naar het middelste woord.", "Kijk goed naar het eerste woord.", "Kijk goed naar het laatste woord."],
         uitlegPad: {
           stappen: [
             {
@@ -1557,7 +1557,7 @@ const steps = [
           "In ougustus is het niet kaud.",
         ],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar de maand.", null, null],
+        wrongHints: [null, "Kijk goed naar de maand.", "Kijk goed naar het laatste woord.", "Kijk goed naar allebei: de maand en het weer."],
         uitlegPad: {
           stappen: [
             {
@@ -1599,7 +1599,7 @@ const steps = [
         q: "Vul in: 'Hij ____ naar Parijs en eet daar ____.'",
         options: ["reist … rijst", "rijst … reist", "reist … reist", "rijst … rijst"],
         answer: 0,
-        wrongHints: [null, "Welk woord hoort bij reizen, en welk bij eten?", null, null],
+        wrongHints: [null, "Welk woord hoort bij reizen, en welk bij eten?", "Kijk naar het tweede woord: wat eet hij?", "Kijk naar het eerste woord: wat doet hij naar Parijs?"],
         uitlegPad: {
           stappen: [
             {
@@ -1641,7 +1641,7 @@ const steps = [
         q: "Welk woord schrijf je met **dezelfde letters** voor de klank als in **vrouw**?",
         options: ["mouw", "blauw", "gauw", "rauw"],
         answer: 0,
-        wrongHints: [null, "Schrijf je 'vrouw' met dezelfde letters als dit woord?", null, null],
+        wrongHints: [null, "Schrijf je 'vrouw' met dezelfde letters als dit woord?", "Schrijf je 'vrouw' met dezelfde letters als dit woord?", "Schrijf je 'vrouw' met dezelfde letters als dit woord?"],
         uitlegPad: {
           stappen: [
             {
@@ -1679,7 +1679,7 @@ const steps = [
         q: "Welk woord is **fout** geschreven?",
         options: ["plijn", "tijd", "blauw", "koud"],
         answer: 0,
-        wrongHints: [null, "Denk aan het trucje met -tijd.", null, null],
+        wrongHints: [null, "Denk aan het trucje met -tijd.", "Dit woord is goed geschreven. Zoek het woord dat fout is.", "Dit woord is goed geschreven. Zoek het woord dat fout is."],
         uitlegPad: {
           stappen: [
             {
@@ -1722,9 +1722,9 @@ const steps = [
     checks: [
       {
         q: "**'Ik ga met de ____'** (rijdt op rails):",
-        options: ["trein","trijn","tryen","train"],
+        options: ["trein","trijn","tren","treijn"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Geen NL spelling.","Dat is Engels."],
+        wrongHints: [null,"Bijna — kies nog eens tussen korte ei en lange ij.","Zeg het langzaam. Hoor je echt alleen een korte e, zoals in 'pen'?","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?"],
         uitlegPad: {
           stappen: [{ titel: "trein = ei", tekst: "Trein hoort bij klein/plein/rein — ei-rijtje." }],
           woorden: [{ woord: "trein", uitleg: "Voertuig op rails. Met ei." }],
@@ -1735,10 +1735,10 @@ const steps = [
         },
       },
       {
-        q: "**'Mijn ____ heeft een nieuwe jas'** (vrouwelijk persoon, gehuwd):",
+        q: "**'Mijn ____ heeft een nieuwe jas'** (= echtgenote):",
         options: ["vrouw","vrau","vrouwt","frouw"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen extra t.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Vrouw is een zelfstandig naamwoord. Hoort er dan een t achter?","Hoor je een v of een f? Denk aan 'vrouwen'."],
         uitlegPad: {
           stappen: [{ titel: "vrouw = ou", tekst: "Vrouw hoort in -ouw-rijtje: vrouw, mouw, jouw, bouwen — allemaal ou." }],
           woorden: [{ woord: "vrouw", uitleg: "Vrouwelijk persoon. Met ou." }],
@@ -1750,9 +1750,9 @@ const steps = [
       },
       {
         q: "**'Hij heeft een ____ ring'** (van het gele edelmetaal):",
-        options: ["gouden","gauden","goldene","goudte"],
+        options: ["gouden","gauden","gouwden","gouten"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Duits — niet NL.","Geen NL vorm."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Hoor je een w in dit woord? Zeg het langzaam.","Denk aan het woord goud. Hoe eindigt dat?"],
         uitlegPad: {
           stappen: [{ titel: "gouden = ou", tekst: "Gouden komt van goud (ou). Verbuiging tot bijvoeglijk: gouden ring." }],
           woorden: [{ woord: "gouden", uitleg: "Bijvoeglijke vorm van goud (= van goud gemaakt)." }],
@@ -1764,9 +1764,9 @@ const steps = [
       },
       {
         q: "**'Wij eten elke avond ____'** (witte korreltjes uit Azië):",
-        options: ["rijst","reist","reizen","rijz"],
+        options: ["rijst","reist","reizen","reijst"],
         answer: 0,
-        wrongHints: [null,"Met ei = van 'reizen', een ander woord.","Dat is de -en-vorm (werkwoord).","Geen bestaande NL-spelling."],
+        wrongHints: [null,"Met ei = van 'reizen', een ander woord.","Dat is de -en-vorm (werkwoord).","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?"],
         uitlegPad: {
           stappen: [{ titel: "rijst (eten) = ij", tekst: "Voedsel = rijst met ij. Werkwoord reist (van reizen) = ei. Context bepaalt!" }],
           woorden: [{ woord: "rijst", uitleg: "Voedsel uit Azië, met ij." }],
@@ -1778,9 +1778,9 @@ const steps = [
       },
       {
         q: "**'Het is ____ in de winter'** (lage temperatuur):",
-        options: ["koud","kaud","kowd","koudt"],
+        options: ["koud","kaud","kouwd","koudt"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Geen NL spelling.","Geen extra t."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Hoor je een w in dit woord? Zeg het langzaam.","Koud is geen werkwoord. Hoort er dan een t achter?"],
         uitlegPad: {
           stappen: [{ titel: "koud = ou", tekst: "Koud hoort in -oud-rijtje: oud, koud, goud, zout — allemaal ou." }],
           woorden: [{ woord: "koud", uitleg: "Lage temperatuur. Bijvoeglijk naamwoord met ou." }],
@@ -1795,7 +1795,7 @@ const steps = [
         q: "Welke twee woorden zijn **allebei** goed geschreven?",
         options: ["plein en tijd", "plijn en tijd", "plein en teid", "plijn en teid"],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar het eerste woord.", null, null],
+        wrongHints: [null, "Kijk goed naar het eerste woord.", "Kijk goed naar het tweede woord.", "Kijk goed naar allebei de woorden."],
         uitlegPad: {
           stappen: [
             {
@@ -1832,9 +1832,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "'Onze ____ naar Frankrijk duurt tien uur met de auto.' Welk woord is goed?",
-        options: ["reis", "rijs", "raais", "reys"],
+        options: ["reis", "rijs", "reiz", "rijz"],
         answer: 0,
-        wrongHints: [null, "'rijs' komt van rijzen: omhoog gaan. Past dat hier?", null, null],
+        wrongHints: [null, "'rijs' komt van rijzen: omhoog gaan. Past dat hier?", "Aan het eind van een woord schrijf je hier geen z, ook al zeg je 'reizen'.", "Kijk naar twee dingen: de klank in het midden en de letter aan het eind."],
         uitlegPad: {
           stappen: [
             {
@@ -1876,24 +1876,24 @@ const steps = [
     svg: woordenTabelSvg("ei", "ij", COLORS.ei, COLORS.ij, ["klein","reis","plein","eind","brein"], ["jij","tijd","prijs","wij","mij"]),
     checks: [
       {
-        q: "**'____ heeft de mooiste fiets van de klas'** (persoonlijk vnw, één persoon, 2e p):",
-        options: ["Jij","Jei","Jay","Joe"],
+        q: "**'____ heeft de mooiste fiets van de klas'** (persoonlijk voornaamwoord: de persoon tegen wie je praat):",
+        options: ["Jij","Jei","Jai","Jeij"],
         answer: 0,
-        wrongHints: [null,"Bijna — denk aan het trucje voor voornaamwoorden.","Geen NL spelling.","Engels."],
+        wrongHints: [null,"Bijna — denk aan het trucje voor voornaamwoorden.","De klank ai schrijf je in het Nederlands bijna nooit. Welke twee mogelijkheden zijn er wel?","Je hoort maar één klank. Heb je dan ei én ij allebei nodig?"],
         uitlegPad: {
           stappen: [{ titel: "Voornaamwoord = ij", tekst: "Persoonlijke voornaamwoorden: jij, hij, zij, wij, mij — allemaal ij." }],
           woorden: [{ woord: "jij", uitleg: "Persoonlijk voornaamwoord, 2e persoon enkelvoud. Met ij." }],
           theorie: "Hoofdregel ij: de voornaamwoorden jij, hij, zij, wij en mij eindigen op -ij.",
           voorbeelden: [{ type: "lijst", tekst: "ik → mij. jij. hij. zij. wij. — vijf vormen, allemaal ij." }],
-          basiskennis: [{ onderwerp: "Geen Engels", uitleg: "Jay/Joe zijn Engelse namen, geen Nederlandse voornaamwoorden." }],
+          basiskennis: [{ onderwerp: "Geen ai of eij", uitleg: "Jai en Jeij bestaan niet als Nederlandse voornaamwoorden." }],
           niveaus: { basis: "Jij = ij.", simpeler: "Voornaamwoord 2e persoon = jij met ij. Allerlei voornaamwoorden hebben ij.", nogSimpeler: "Jij" },
         },
       },
       {
         q: "**'In ____ hebben we zomervakantie'** (maand 8):",
-        options: ["augustus","ougustus","augstus","august"],
+        options: ["augustus","ougustus","augstus","ougstus"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Mist een u.","Engels — niet NL."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Mist een u.","Kijk naar twee dingen: het begin en het midden van het woord."],
         uitlegPad: {
           stappen: [{ titel: "augustus = au", tekst: "Augustus uit Latijn (keizer Augustus). Begin met au, einde -us." }],
           woorden: [{ woord: "augustus", uitleg: "Maand 8 (zomermaand). Latijnse oorsprong." }],
@@ -1905,9 +1905,9 @@ const steps = [
       },
       {
         q: "**'De ____ heeft 4 wielen en rijdt op de weg'**:",
-        options: ["auto","outo","oto","autto"],
+        options: ["auto","outo","outto","autto"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Mist een letter.","Niet — tel de t's nog eens."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Kijk naar twee dingen: het begin en het aantal t's.","Niet — tel de t's nog eens."],
         uitlegPad: {
           stappen: [{ titel: "auto = au", tekst: "Auto = afkorting van 'automobiel'. Met au-begin." }],
           woorden: [{ woord: "auto", uitleg: "Voertuig op 4 wielen. Au-spelling." }],
@@ -1919,9 +1919,9 @@ const steps = [
       },
       {
         q: "**'Mijn ____ poseert voor een portret'** (= echtgenote):",
-        options: ["vrouw","frauw","vraau","vrouwt"],
+        options: ["vrouw","frauw","vrau","vrouwt"],
         answer: 0,
-        wrongHints: [null,"Kijk naar de eerste letter, en kies nog eens tussen au en ou.","Geen Nederlandse spelling.","Geen extra t."],
+        wrongHints: [null,"Kijk naar de eerste letter, en kies nog eens tussen au en ou.","Kijk naar twee dingen: de klank in het midden en de letter aan het eind.","Vrouw is een zelfstandig naamwoord. Hoort er dan een t achter?"],
         uitlegPad: {
           stappen: [{ titel: "vrouw = ou", tekst: "Vrouw begint met V, heeft -ouw (ou + w). Net als mouw, jouw, bouwen." }],
           woorden: [{ woord: "vrouw", uitleg: "Vrouwelijk persoon. Met ou-spelling." }],
@@ -1945,16 +1945,16 @@ const steps = [
           niveaus: { basis: "met jou.", simpeler: "'Hoe gaat het met jou' = lijdend voorwerp na 'met' = jou (zonder w). Jij is onderwerp, jouw bezittelijk.", nogSimpeler: "Jou" },
         },
       },
-      { q: "Schrijf juist: 'Hij is een k___ in rekenen.'", options: ["kei","kij","kai","key"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Die klank schrijf je in het Nederlands als ei of ij, niet als ai.", "Dat is Engels."] },
-      { q: "Schrijf juist: 'Ik woon b___ jou.'", options: ["bij","bei","bai","by"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Die klank schrijf je in het Nederlands als ei of ij, niet als ai.", "Dat is Engels."] },
-      { q: "Schrijf juist: 'Een ___ in de pan.'", options: ["ei","ij","ey","ai"], answer: 0, wrongHints: [null, "Niet — geen voornaamwoord.", "Engels.", "Niet."] },
-      { q: "Schrijf juist: 'De ring is van g___d.'", options: ["ou","au","aw","ow"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Engels.", "Engels."] },
+      { q: "Schrijf juist: 'Hij is een k___ in rekenen.'", options: ["kei","kij","kai","keij"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Die klank schrijf je in het Nederlands als ei of ij, niet als ai.", "Je hoort maar één klank. Heb je dan ei én ij allebei nodig?"] },
+      { q: "Schrijf juist: 'Ik woon b___ jou.'", options: ["bij","bei","bai","beij"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Die klank schrijf je in het Nederlands als ei of ij, niet als ai.", "Je hoort maar één klank. Heb je dan ei én ij allebei nodig?"] },
+      { q: "Schrijf juist: 'Een ___ in de pan.'", options: ["ei","ij","eij","ai"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Je hoort maar één klank. Heb je dan ei én ij allebei nodig?", "De klank ai schrijf je in het Nederlands bijna nooit. Welke twee mogelijkheden zijn er wel?"] },
+      { q: "Schrijf juist: 'De ring is van g___d.'", options: ["ou","au","ouw","auw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Hoor je een w in dit woord? Zeg het langzaam.", "Kijk naar twee dingen: de klank en de w."] },
       { q: "Schrijf juist: 'Het is k___d.'", options: ["ou","au","oe","ouw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Met oe staat er 'koed' — dat is een ander woord.", "Koud heeft geen w."] },
-      { q: "Schrijf juist: 'Zij is een vr___w.'", options: ["ou","au","ouw","aw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Bijna — kijk goed: de w staat al in de zin.", "Engels."] },
-      { q: "Schrijf juist: 'Wat een bl___we lucht!'", options: ["au","ou","auw","ouw"], answer: 0, wrongHints: [null, "ou klinkt hetzelfde, maar zo schrijf je de kleur van de lucht niet.", "Bijna — kijk goed: de w staat al in de zin.", "Niet."] },
-      { q: "Schrijf juist: 'Mijn k___s heeft een gat.'", options: ["ou","au","aw","ow"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Geen Nederlandse spelling.", "Geen Nederlandse spelling."] },
-      { q: "Schrijf juist: 'De p___s woont in Rome.'", options: ["au","ou","aw","ow"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Niet.", "Niet."] },
-      { q: "Schrijf juist: 'Vergeet jouw bril niet, ___!'", options: ["wijsneus","weisneus","wijsneuws","wysneus"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Niet — kijk naar het eind van het woord.", "Niet — geen y."] },
+      { q: "Schrijf juist: 'Zij is een vr___w.'", options: ["ou","au","ouw","auw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Bijna — kijk goed: de w staat al in de zin.", "Kijk goed: de w staat al in de zin. En welke klank kies je?"] },
+      { q: "Schrijf juist: 'Wat een bl___we lucht!'", options: ["au","ou","auw","ouw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Bijna — kijk goed: de w staat al in de zin.", "Kijk goed: de w staat al in de zin. En welke klank kies je?"] },
+      { q: "Schrijf juist: 'Mijn k___s heeft een gat.'", options: ["ou","au","ouw","auw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Hoor je een w in dit woord? Zeg het langzaam.", "Kijk naar twee dingen: de klank en de w."] },
+      { q: "Schrijf juist: 'De p___s woont in Rome.'", options: ["au","ou","auw","ouw"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", "Hoor je een w in dit woord? Zeg het langzaam.", "Kijk naar twee dingen: de klank en de w."] },
+      { q: "Schrijf juist: 'Vergeet jouw bril niet, ___!'", options: ["wijsneus","weisneus","wijsneuws","wijzneus"], answer: 0, wrongHints: [null, "Bijna — kies nog eens tussen korte ei en lange ij.", "Zeg 'neus' hardop. Hoor je daar een w?", "Hoor je hier een s of een z?"] },
     ],
   },
 ];

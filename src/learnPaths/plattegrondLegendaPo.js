@@ -24,11 +24,11 @@ const steps = [
         options: [
           "een tekening van bovenaf",
           "een foto van de voorkant",
-          "een lijst met namen",
-          "een verhaal over een gebouw",
+          "een tekening van de zijkant",
+          "een schilderij van een straat",
         ],
         answer: 0,
-        wrongHints: [null, "Een plattegrond kijk je van bovenaf, niet van voren.", "Het is een tekening, geen namenlijst.", "Het is geen verhaal maar een tekening."],
+        wrongHints: [null, "Kun je op een foto van de voorkant zien hoe de kamers achter elkaar liggen?", "Zie je van de zijkant wat er achter de muren ligt?", "Zie je op een schilderij precies hoe alles naast elkaar ligt?"],
         uitlegPad: {
           stappen: [{ titel: "Bovenaanzicht", tekst: "Een plattegrond is een tekening van bovenaf, waarop je ziet waar alles ligt." }],
           niveaus: {
@@ -54,9 +54,9 @@ const steps = [
       },
       {
         q: "Waarvoor gebruik je een plattegrond?",
-        options: ["om te zien waar iets ligt","om te weten hoe laat het is","om het weer te voorspellen","om een verhaal te lezen"],
+        options: ["om te zien waar iets ligt","om te zien hoe een gebouw er van buiten uitziet","om te zien wanneer iets open is","om te lezen wat er in een gebouw gebeurt"],
         answer: 0,
-        wrongHints: [null, "Daar gebruik je een klok voor.", "Daar gebruik je een weerbericht voor.", "Een plattegrond is geen verhaal."],
+        wrongHints: [null, "Zie je op een plattegrond de buitenkant, of hoe het binnen is ingedeeld?", "Staan er tijden op een plattegrond, of plekken?", "Vertelt een plattegrond een verhaal, of laat hij iets anders zien?"],
         uitlegPad: {
           stappen: [{ titel: "De weg vinden", tekst: "Met een plattegrond vind je de weg en zie je waar de dingen liggen." }],
           niveaus: {
@@ -83,13 +83,13 @@ const steps = [
       {
         q: "Wat kun je doen met een plattegrond van een dierentuin?",
         options: [
-          "zien waar de dieren en de uitgang liggen",
-          "horen welke geluiden de dieren maken",
+          "zien waar de dieren wonen",
+          "zien hoe de dieren eruitzien",
           "weten hoe oud de dieren zijn",
-          "de dieren voeren",
+          "zien wanneer de dieren eten krijgen",
         ],
         answer: 0,
-        wrongHints: [null, "Geluiden hoor je niet op een tekening.", "Leeftijden staan niet op een plattegrond.", "Voeren doe je niet via een kaart."],
+        wrongHints: [null, "Staan er foto's van de dieren op, of vooral plekken?", "Leeftijden staan niet op een plattegrond.", "Is dat een plek op de kaart, of een tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Zien waar alles ligt", tekst: "Op de plattegrond zie je waar de dieren, de ingang en de uitgang liggen, zodat je de weg vindt." }],
           niveaus: {
@@ -103,12 +103,12 @@ const steps = [
         q: "Een plattegrond lijkt nog het meest op...",
         options: [
           "een foto recht van bovenaf",
-          "een selfie",
-          "een filmpje",
-          "een geschilderd portret",
+          "een foto van de voorkant",
+          "een tekening van opzij",
+          "een foto van heel dichtbij",
         ],
         answer: 0,
-        wrongHints: [null, "Een selfie is van voren, niet van boven.", "Een plattegrond beweegt niet.", "Een portret toont een gezicht, geen indeling."],
+        wrongHints: [null, "Zie je op zo'n foto hoe de kamers achter elkaar liggen?", "Zie je van opzij hoe alles naast elkaar ligt?", "Zie je dan het hele gebouw, of maar een klein stukje?"],
         uitlegPad: {
           stappen: [{ titel: "Bovenaanzicht", tekst: "Een plattegrond is als een foto recht van bovenaf: je ziet de indeling van boven." }],
           niveaus: {
@@ -175,13 +175,13 @@ const steps = [
       {
         q: "Wat is een legenda?",
         options: [
-          "de uitleg van de symbolen op de kaart",
-          "de titel van de kaart",
-          "de naam van de tekenaar",
-          "een lijst met openingstijden",
+          "de uitleg van de tekens op de kaart",
+          "de titel bovenaan de kaart",
+          "de schaal onderaan de kaart",
+          "de pijl die het noorden aanwijst",
         ],
         answer: 0,
-        wrongHints: [null, "De titel staat los van de legenda.", "De maker staat er soms bij, maar dat is niet de legenda.", "Openingstijden staan ergens anders."],
+        wrongHints: [null, "De titel staat los van de legenda.", "Wat vertelt een schaal je: hoe ver iets is, of wat een teken betekent?", "Wat laat die pijl zien: een richting, of wat de tekens betekenen?"],
         uitlegPad: {
           stappen: [{ titel: "Legenda = uitleg symbolen", tekst: "De legenda legt uit wat elk tekentje op de plattegrond betekent." }],
           niveaus: {
@@ -193,7 +193,7 @@ const steps = [
       },
       {
         q: "In de legenda staat 🍴 = restaurant. Je ziet 🍴 op de plattegrond. Wat is daar?",
-        options: ["een eetplek/restaurant", "een toilet", "de uitgang", "een parkeerplaats"],
+        options: ["een restaurant", "een toilet", "de uitgang", "een parkeerplaats"],
         answer: 0,
         wrongHints: [null, "Het toilet heeft een ander symbool (🚻).", "De uitgang heeft een eigen teken.", "Parkeren heeft het 🅿️-teken."],
         uitlegPad: {
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Waarom is een legenda handig?",
-        options: ["het legt uit wat de tekens betekenen","het maakt de kaart mooier en kleurrijker","het vertelt je hoe laat het nu is","het is verplicht, maar niet nuttig"],
+        options: ["het legt uit wat de tekens betekenen","het vertelt hoe ver alles van elkaar ligt","het laat zien waar het noorden is","het geeft de naam van de plek"],
         answer: 0,
-        wrongHints: [null, "Het gaat om begrijpen, niet om kleur.", "Een legenda zegt niets over de tijd.", "Een legenda is juist heel nuttig."],
+        wrongHints: [null, "Doet de legenda dat, of de schaal?", "Doet de legenda dat, of de pijl met de N?", "Doet de legenda dat, of de titel?"],
         uitlegPad: {
           stappen: [{ titel: "Tekens begrijpen", tekst: "Met de legenda begrijp je de symbolen; zonder zou je niet weten wat ze betekenen." }],
           niveaus: {
@@ -251,12 +251,12 @@ const steps = [
         q: "Je ziet op de plattegrond een symbool dat je niet kent. Wat doe je?",
         options: [
           "in de legenda kijken wat het betekent",
-          "het symbool maar negeren",
-          "de plattegrond weggooien",
-          "zomaar wat raden en doorlopen",
+          "het symbool gewoon overslaan",
+          "een symbool zoeken dat je wel kent",
+          "raden wat het plaatje voorstelt",
         ],
         answer: 0,
-        wrongHints: [null, "Negeren helpt je niet verder.", "Juist de plattegrond heb je nu nodig.", "Raden kan je de verkeerde kant op sturen."],
+        wrongHints: [null, "Overslaan helpt je niet verder. Waar kun je het opzoeken?", "Weet je dan wat dít symbool betekent?", "Raden kan je de verkeerde kant op sturen. Waar staat het zeker?"],
         uitlegPad: {
           stappen: [{ titel: "Legenda raadplegen", tekst: "Ken je een symbool niet? Kijk in de legenda; daar staat wat het betekent." }],
           niveaus: {
@@ -527,9 +527,9 @@ const steps = [
     checks: [
       {
         q: "Je zoekt de kapper in een groot winkelcentrum. Wat gebruik je het best?",
-        options: ["de plattegrond met legenda","het weerbericht van vandaag","de grote klok bij de ingang","een folder met aanbiedingen"],
+        options: ["de plattegrond met legenda","de lijst met openingstijden","een kaart van de hele stad","een folder met aanbiedingen"],
         answer: 0,
-        wrongHints: [null,"Het weer helpt je niet de kapper te vinden.","Een klok zegt niet waar de kapper is.","Een folder vertelt wat iets kost, niet waar het is."],
+        wrongHints: [null,"Zie je op die lijst wáár de kapper is?","Staan de winkels binnen het winkelcentrum op een stadskaart?","Een folder vertelt wat iets kost, niet waar het is."],
         uitlegPad: {
           stappen: [{ titel: "Plattegrond + legenda", tekst: "Met de plattegrond en de legenda vind je waar de kapper zit." }],
           niveaus: {
@@ -541,9 +541,9 @@ const steps = [
       },
       {
         q: "In een dierentuin liggen de apen tussen de ingang en het restaurant. Je staat bij de ingang. Je loopt richting...",
-        options: ["het restaurant", "de uitgang", "de parkeerplaats", "terug naar buiten"],
+        options: ["het restaurant", "de uitgang", "de parkeerplaats", "de toiletten"],
         answer: 0,
-        wrongHints: [null, "De apen liggen niet richting de uitgang.", "Daar liggen de apen niet tussenin.", "Je hoeft niet terug — de apen zijn vóór je."],
+        wrongHints: [null, "De apen liggen niet richting de uitgang.", "Daar liggen de apen niet tussenin.", "Liggen de apen tussen de ingang en de toiletten?"],
         uitlegPad: {
           stappen: [{ titel: "Tussen ingang en restaurant", tekst: "De apen liggen tussen de ingang (waar jij staat) en het restaurant, dus je loopt richting het restaurant." }],
           niveaus: {
@@ -558,11 +558,11 @@ const steps = [
         options: [
           "de 'je bent hier'-stip",
           "de titel van de kaart",
-          "de naam van de tekenaar",
+          "de legenda",
           "de schaal",
         ],
         answer: 0,
-        wrongHints: [null, "De titel zegt niet waar jij staat.", "De maker helpt je niet met je positie.", "De schaal gaat over afstanden, niet je plek."],
+        wrongHints: [null, "De titel zegt niet waar jij staat.", "De legenda legt tekens uit. Vertelt die ook waar jij nu staat?", "De schaal gaat over afstanden, niet je plek."],
         uitlegPad: {
           stappen: [{ titel: "Eerst je startplek", tekst: "Zonder te weten waar je zelf staat, kun je geen route bepalen. Zoek dus eerst de 'je bent hier'-stip." }],
           niveaus: {
@@ -574,9 +574,9 @@ const steps = [
       },
       {
         q: "Op de legenda: 🚻 = toilet. Je moet snel naar het toilet. Wat doe je?",
-        options: ["het 🚻-teken op de kaart zoeken","de plattegrond op zijn kop draaien","de legenda gewoon weggooien","meteen naar de uitgang lopen"],
+        options: ["het 🚻-teken op de kaart zoeken","het grootste gebouw op de kaart zoeken","terug naar de ingang lopen","het 🍴-teken op de kaart zoeken"],
         answer: 0,
-        wrongHints: [null, "Omdraaien helpt je het toilet niet vinden.", "Juist de legenda heb je nodig.", "De uitgang is niet het toilet."],
+        wrongHints: [null, "Staat het toilet altijd in het grootste gebouw?", "Weet je zeker dat het toilet bij de ingang is?", "Wat betekent 🍴 volgens de legenda?"],
         uitlegPad: {
           stappen: [{ titel: "Symbool op de kaart vinden", tekst: "Je weet uit de legenda dat 🚻 het toilet is. Zoek dat symbool op de plattegrond en loop ernaartoe." }],
           niveaus: {
@@ -588,9 +588,9 @@ const steps = [
       },
       {
         q: "Je zoekt de speeltuin in een park. In de legenda staat een glijbaan-symbool. Wat doe je?",
-        options: ["de glijbaan op de kaart zoeken","meteen naar de uitgang lopen","de legenda helemaal overslaan","bij de ingang blijven wachten"],
+        options: ["het glijbaan-teken op de kaart zoeken","de grootste groene plek zoeken","het park in lopen en goed rondkijken","zoeken waar de meeste paden zijn"],
         answer: 0,
-        wrongHints: [null, "De uitgang is niet de speeltuin.", "Juist de legenda wijst je het symbool.", "Wachten brengt je niet bij de speeltuin."],
+        wrongHints: [null, "Is elke groene plek een speeltuin? Wat zegt de legenda?", "Hoe lang ben je dan aan het zoeken? Wat op de kaart kan helpen?", "Ligt een speeltuin altijd waar de meeste paden zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Symbool → plek", tekst: "Je weet uit de legenda welk teken bij de speeltuin hoort. Zoek dat teken op de kaart en loop ernaartoe." }],
           niveaus: {
@@ -617,13 +617,13 @@ const steps = [
       {
         q: "Wat zijn de 3 slimme stappen om iets te vinden op een plattegrond?",
         options: [
-          "je startplek zoeken, je doel via de legenda, dan de route bepalen",
-          "de kaart omdraaien, gokken en dan maar gaan lopen",
-          "de titel lezen, de maker zoeken, dan de schaal meten",
-          "eerst de route lopen, dan je doel zoeken, dan je startplek",
+          "startplek zoeken, doel zoeken, route bepalen",
+          "doel zoeken, route bepalen, startplek zoeken",
+          "titel lezen, schaal meten, route bepalen",
+          "route lopen, doel zoeken, startplek zoeken",
         ],
         answer: 0,
-        wrongHints: [null, "Omdraaien en gokken is geen plan.", "Titel, maker en schaal helpen je niet de weg te vinden.", "Kijk naar de volgorde: kun je een route lopen als je nog niet weet waar je staat?"],
+        wrongHints: [null, "Kun je een route bepalen als je nog niet weet waar je staat?", "Helpen de titel en de schaal je om je startplek en je doel te vinden?", "Kijk naar de volgorde: kun je een route lopen als je nog niet weet waar je staat?"],
         uitlegPad: {
           stappen: [{ titel: "Start → doel → route", tekst: "1) Zoek de 'je bent hier'-stip. 2) Zoek je doel met de legenda. 3) Bepaal de route ernaartoe." }],
           niveaus: {

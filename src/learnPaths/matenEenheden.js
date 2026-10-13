@@ -394,7 +394,7 @@ const steps = [
         q: "**3 m is hoeveel cm?**",
         options: ["300","30","3000","30.000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — denk: 1 m is 100 cm, dus 3 m is...","Te veel — dat is mm, niet cm.","Veel te veel."],
+        wrongHints: [null,"Te weinig — denk: 1 m is 100 cm, dus 3 m is...","Te veel — dat is mm, niet cm.","Dat zou 300 m zijn. Hoeveel nullen komen erbij als je van m naar cm gaat?"],
         uitlegPad: {
           stappen: [{ titel: "× 100", tekst: "1 m = 100 cm. 3 m = 3 × 100 = 300 cm." }],
           woorden: [{ woord: "m → cm", uitleg: "2 stappen op trapje (m → dm → cm) = × 100." }],
@@ -408,7 +408,7 @@ const steps = [
         q: "Een afstand van **2,5 km** is hoeveel **m**?",
         options: ["2500","250","25","25000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — hoeveel meter zitten er in 1 km, en hoe gebruik je dat voor 2,5 km?","Veel te weinig.","Te veel — heb je per ongeluk × 10.000 gedaan?"],
+        wrongHints: [null,"Te weinig — hoeveel meter zitten er in 1 km, en hoe gebruik je dat voor 2,5 km?","Dat zou maar 25 m zijn — veel te kort voor 2,5 km. Hoeveel meter is 1 km?","Te veel — heb je per ongeluk × 10.000 gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "× 1000", tekst: "1 km = 1000 m. 2,5 × 1000 = 2500 m." }],
           woorden: [{ woord: "komma verschuiven", uitleg: "Bij × 1000: komma 3 plekken naar rechts. 2,5 → 2500." }],
@@ -613,7 +613,7 @@ const steps = [
         q: "**5 kg = ? g**",
         options: ["5000","500","50","50.000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — hoeveel gram zitten er in 1 kg, en pas dat toe op 5 kg.","Veel te weinig.","Te veel."],
+        wrongHints: [null,"Te weinig — hoeveel gram zitten er in 1 kg, en pas dat toe op 5 kg.","Heb je × 10 gedaan? Hoeveel gram zit er in 1 kg?","Heb je × 10.000 gedaan? Van kg naar g is × 1000."],
         uitlegPad: {
           stappen: [{ titel: "× 1000", tekst: "1 kg = 1000 g. 5 × 1000 = 5000 g." }],
           woorden: [{ woord: "kg → g", uitleg: "Kilo-prefix = 1000. Dus kg naar g = × 1000." }],
@@ -641,7 +641,7 @@ const steps = [
         q: "Een paracetamol-tablet is **500 mg**. Hoeveel **g** is dat?",
         options: ["0,5","5","50","0,05"],
         answer: 0,
-        wrongHints: [null,"Te veel — 500 mg is minder dan 1 g, dus de uitkomst moet kleiner dan 1 zijn.","Veel te veel.","Te weinig — heb je per ongeluk ÷ 10.000 gedaan?"],
+        wrongHints: [null,"Te veel — 500 mg is minder dan 1 g, dus de uitkomst moet kleiner dan 1 zijn.","Heb je ÷ 10 gedaan? Van mg naar g deel je door 1000.","Te weinig — heb je per ongeluk ÷ 10.000 gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "÷ 1000", tekst: "1000 mg = 1 g. 500 mg = 500/1000 = 0,5 g." }],
           woorden: [{ woord: "mg → g", uitleg: "Naar grotere eenheid = delen. ÷ 1000." }],
@@ -875,7 +875,7 @@ const steps = [
         q: "**Een fles cola van 1,5 L = ? mL**",
         options: ["1500","150","15","15.000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — hoeveel mL zitten er in 1 L, en bereken dan hoeveel mL 1,5 L is.","Veel te weinig.","Te veel — dat zou 15 L zijn."],
+        wrongHints: [null,"Te weinig — hoeveel mL zitten er in 1 L, en bereken dan hoeveel mL 1,5 L is.","Heb je × 10 gedaan? Hoeveel mL zit er in 1 L?","Te veel — dat zou 15 L zijn."],
         uitlegPad: {
           stappen: [{ titel: "× 1000", tekst: "1 L = 1000 mL. 1,5 × 1000 = 1500 mL." }],
           woorden: [{ woord: "L → mL", uitleg: "3 stappen op trapje (L→dL→cL→mL) = × 1000." }],
@@ -889,7 +889,7 @@ const steps = [
         q: "Een glas water = **2 dL**. Hoeveel **mL**?",
         options: ["200","20","2","2000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — hoeveel mL zitten er in 1 dL, en bereken dan voor 2 dL.","Veel te weinig.","Te veel — heb je × 1000 gedaan?"],
+        wrongHints: [null,"Te weinig — hoeveel mL zitten er in 1 dL, en bereken dan voor 2 dL.","Dat zou maar 2 mL zijn — een paar druppels. Hoeveel mL zit er in 1 dL?","Te veel — heb je × 1000 gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "× 100", tekst: "1 dL = 100 mL. 2 × 100 = 200 mL." }],
           woorden: [{ woord: "dL", uitleg: "Deciliter. 1/10 van een liter = 100 mL." }],
@@ -1158,10 +1158,10 @@ const steps = [
         },
       },
       {
-        q: "Een film begint om **19:45** en duurt **1 uur 30 min**. Hoe laat eindigt 'ie?",
-        options: ["21:15","20:75","20:15","21:75"],
+        q: "Een film begint om **19:45** en duurt **1 uur 30 min**. Hoe laat is de film afgelopen?",
+        options: ["21:15","20:75","20:15","20:45"],
         answer: 0,
-        wrongHints: [null,"Past niet — 75 minuten bestaat niet, dat is meer dan 1 uur.","Te vroeg — heb je 1 uur 30 wel meegerekend?","Past niet — 75 minuten is geen geldige tijd."],
+        wrongHints: [null,"Past niet — 75 minuten bestaat niet, dat is meer dan 1 uur.","Te vroeg — heb je 1 uur 30 wel meegerekend?","Dan heb je alleen het hele uur erbij gedaan. Komen de 30 minuten er ook nog bij?"],
         uitlegPad: {
           stappen: [{ titel: "Stap apart", tekst: "Uren: 19:45 + 1 uur = 20:45. Minuten: 20:45 + 30 = 21:15 (45+30=75=1u15m)." }],
           woorden: [{ woord: "tijd-overflow", uitleg: "Boven 60 min = uur erbij. 45+30=75 → 1u15m → 21:15." }],
@@ -1512,7 +1512,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "**1750 g** in **kg**?",
+        q: "Hoeveel **kg** is **1750 g**?",
         options: ["1,75","17,5","175","0,175"],
         answer: 0,
         wrongHints: [null,"Te veel — heb je de komma maar 2 plekken verschoven?","Veel te veel — heb je de komma maar 1 plek verschoven?","Te weinig — heb je 4 plekken verschoven ipv 3?"],
@@ -1526,7 +1526,7 @@ const steps = [
         },
       },
       {
-        q: "**0,8 L** in **mL**?",
+        q: "Hoeveel **mL** is **0,8 L**?",
         options: ["800","80","8000","8"],
         answer: 0,
         wrongHints: [null,"Te weinig — L → mL is 3 stappen omlaag, dus komma 3 naar rechts.","Veel te veel — heb je 4 plekken verschoven?","Te weinig — heb je maar 1 plek verschoven?"],
@@ -1555,7 +1555,7 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**275 cm** in **m**?",
+        q: "Hoeveel **m** is **275 cm**?",
         options: ["2,75", "27,5", "0,275", "2750"],
         answer: 0,
         wrongHints: [
@@ -1598,7 +1598,7 @@ const steps = [
         },
       },
       {
-        q: "**0,6 kg** in **g**?",
+        q: "Hoeveel **g** is **0,6 kg**?",
         options: ["600", "60", "6000", "6"],
         answer: 0,
         wrongHints: [
@@ -1641,7 +1641,7 @@ const steps = [
         },
       },
       {
-        q: "**3,25 L** in **mL**?",
+        q: "Hoeveel **mL** is **3,25 L**?",
         options: ["3250", "325", "32.500", "32,5"],
         answer: 0,
         wrongHints: [
@@ -1684,7 +1684,7 @@ const steps = [
         },
       },
       {
-        q: "**85 mm** in **cm**?",
+        q: "Hoeveel **cm** is **85 mm**?",
         options: ["8,5", "0,85", "850", "0,085"],
         answer: 0,
         wrongHints: [
@@ -1727,7 +1727,7 @@ const steps = [
         },
       },
       {
-        q: "**6,4 km** in **m**?",
+        q: "Hoeveel **m** is **6,4 km**?",
         options: ["6400", "640", "64.000", "64"],
         answer: 0,
         wrongHints: [
@@ -1770,7 +1770,7 @@ const steps = [
         },
       },
       {
-        q: "**45 cL** in **L**?",
+        q: "Hoeveel **L** is **45 cL**?",
         options: ["0,45", "4,5", "0,045", "450"],
         answer: 0,
         wrongHints: [
@@ -1813,7 +1813,7 @@ const steps = [
         },
       },
       {
-        q: "**1,08 m** in **cm**?",
+        q: "Hoeveel **cm** is **1,08 m**?",
         options: ["108", "10,8", "1080", "180"],
         answer: 0,
         wrongHints: [
@@ -2099,7 +2099,7 @@ const steps = [
         q: "Een marathon is **42 km en 195 m**. Hoeveel **m** in totaal?",
         options: ["42.195","42.000","42,195","422.000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — vergeet de 195 m niet.","Past niet als hele meters — getal-formaat klopt niet voor 'aantal meter'.","Veel te veel — heb je per ongeluk × 10 gedaan?"],
+        wrongHints: [null,"Te weinig — vergeet de 195 m niet.","Dat is het aantal km. Hoeveel meter is dat?","Veel te veel — 1 km is 1000 m. Hoeveel meter is 42 km, en wat komt er nog bij?"],
         uitlegPad: {
           stappen: [{ titel: "km → m + optellen", tekst: "42 km = 42.000 m. + 195 m = 42.195 m." }],
           woorden: [{ woord: "marathon", uitleg: "Officiële afstand: 42,195 km = 42.195 m." }],
@@ -2138,7 +2138,7 @@ const steps = [
         },
       },
       {
-        q: "Een trein vertrekt om **08:47** en rijdt **2 uur 18 min**. Hoe laat komt 'ie aan?",
+        q: "Een trein vertrekt om **08:47** en rijdt **2 uur 18 min**. Hoe laat komt de trein aan?",
         options: ["11:05","10:65","11:15","10:55"],
         answer: 0,
         wrongHints: [null,"Past niet — 65 minuten bestaat niet, dat is 1 uur 5 min.","Te laat — heb je 18 min wel goed gerekend?","Te vroeg — vergeet je niet 18 minuten erbij op te tellen?"],
@@ -2152,17 +2152,17 @@ const steps = [
         },
       },
       {
-        q: "Welk verhaal past bij **'2,5 m'**?",
+        q: "Wat is ongeveer **2,5 m**?",
         options: [
-          "De voordeur van het huis",
+          "De hoogte van een voordeur",
           "De lengte van een potlood",
           "De afstand tussen 2 steden",
-          "Het gewicht van een kind",
+          "De lengte van een voetbalveld",
         ],
         answer: 0,
-        wrongHints: [null,"Een potlood is veel korter — denk in cm.","Tussen steden meet je in km, niet m.","Dat is een gewicht, niet een lengte."],
+        wrongHints: [null,"Een potlood is veel korter — denk in cm.","Tussen steden meet je in km, niet m.","Een voetbalveld is ongeveer 100 m lang — veel langer."],
         uitlegPad: {
-          stappen: [{ titel: "Schatten in m", tekst: "Voordeur ~2,5 m hoog. Potlood ~15 cm. Steden ~km. Kind ~30 kg." }],
+          stappen: [{ titel: "Schatten in m", tekst: "Voordeur ~2,5 m hoog. Potlood ~15 cm. Steden ~km. Voetbalveld ~100 m." }],
           woorden: [{ woord: "schat-truc", uitleg: "Match getal+eenheid met realistisch object." }],
           theorie: "Schatten: m = mensen/meubels. Cm = potlood. Km = steden. Kg = gewicht.",
           voorbeelden: [{ type: "tabel", tekst: "Voordeur 2-2,5 m. Potlood 15-20 cm. Stad-stad 5-50 km." }],
@@ -2173,18 +2173,18 @@ const steps = [
       { q: "1 km = hoeveel m?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — 100 m is een sprint, geen kilometer.", "Veel te weinig — 10 m is ongeveer de lengte van een klaslokaal.", "Te veel — dat is 10 km."] },
       { q: "1 m = hoeveel cm?", options: ["100","10","1000","60"], answer: 0, wrongHints: [null, "Te weinig — een lat van 10 cm is geen meter.", "Dat is m → mm (×1000).", "60 is tijd (sec/min), geen lengtemaat."] },
       { q: "1 cm = hoeveel mm?", options: ["10","100","1","1000"], answer: 0, wrongHints: [null, "Dat is m → cm-verhouding, niet cm → mm.", "1 mm in 1 cm? Veel te weinig.", "Dat is km → m-verhouding."] },
-      { q: "1 kg = hoeveel g?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — hoeveel gram past in 1 kg? Denk aan de kilo-prefix.", "Veel te weinig — 10 g is heel licht, zoals een paar muntjes.", "Te veel — dat zou 10 kg zijn."] },
-      { q: "1 L = hoeveel mL?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — hoeveel milliliter zitten er in een liter? Denk aan de milli-prefix.", "Heel weinig — 10 mL is een lepel.", "Te veel — dat is 10 L (een emmer)."] },
-      { q: "Zet om: **2,5 m** in cm", options: ["250","25","2500","0,025"], answer: 0, wrongHints: [null, "×10.", "×1000.", "Verkeerde kant."] },
-      { q: "Zet om: **500 g** in kg", options: ["0,5","5","50","0,05"], answer: 0, wrongHints: [null, "Te veel — hoeveel g zitten er in 1 kg? Deel dan 500 g daardoor.", "Veel te veel.", "Te weinig — controleer: hoeveel gram is jouw antwoord?"] },
-      { q: "Zet om: **3.500 m** in km", options: ["3,5","350","35","0,35"], answer: 0, wrongHints: [null, "Niet — komma verkeerd.", "Niet.", "Niet."] },
-      { q: "Welke is meer: **0,5 kg** of **600 g**?", options: ["600 g","0,5 kg","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — reken 0,5 kg eerst om naar gram.", "Niet — reken 0,5 kg eerst om naar gram en vergelijk.", "Wel — vergelijken."] },
-      { q: "Welke is langste: 1 m, 100 cm, 1.000 mm?", options: ["Allemaal gelijk","1 m","100 cm","1000 mm"], answer: 0, wrongHints: [null, "Zet alle maten om naar dezelfde eenheid — zijn ze echt ongelijk?", "100 cm — zet de andere twee ook om naar cm en vergelijk dan.", "1000 mm — zet de andere twee ook om naar mm en vergelijk dan."] },
-      { q: "Een fles **1,5 L** = hoeveel mL?", options: ["1500","150","15","15.000"], answer: 0, wrongHints: [null, "Niet — ×1000.", "Niet.", "Te veel."] },
-      { q: "Een sinaasappel weegt **ongeveer**?", options: ["150 g","150 kg","15 g","1,5 kg"], answer: 0, wrongHints: [null, "Veel te zwaar.", "Te licht.", "Te zwaar."] },
-      { q: "Lengte van een **gymzaal** ongeveer?", options: ["20 m","2 m","200 m","2 cm"], answer: 0, wrongHints: [null, "Te klein.", "Te groot.", "Heel klein."] },
+      { q: "1 kg = hoeveel g?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — wat betekent 'kilo' in kilogram?", "Veel te weinig — 10 g is heel licht, zoals een paar muntjes.", "Te veel — dat zou 10 kg zijn."] },
+      { q: "1 L = hoeveel mL?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — wat betekent 'milli' in milliliter?", "Heel weinig — 10 mL is een lepel.", "Te veel — dat is 10 L (een emmer)."] },
+      { q: "Zet om: **2,5 m** in cm", options: ["250","25","2500","0,025"], answer: 0, wrongHints: [null, "Je hebt × 10 gedaan. Hoeveel cm zit er in 1 m?", "Je hebt × 1000 gedaan — dat is van m naar mm.", "Het getal is kleiner geworden. Maar cm is een kleinere eenheid — wordt het getal dan groter of kleiner?"] },
+      { q: "Zet om: **500 g** in kg", options: ["0,5","5","50","0,05"], answer: 0, wrongHints: [null, "Te veel — hoeveel g zitten er in 1 kg? Deel dan 500 g daardoor.", "Heb je door 10 gedeeld? Van g naar kg deel je door 1000.", "Te weinig — controleer: hoeveel gram is jouw antwoord?"] },
+      { q: "Zet om: **3.500 m** in km", options: ["3,5","350","35","0,35"], answer: 0, wrongHints: [null, "Heb je door 10 gedeeld? Van m naar km deel je door 1000.", "Heb je door 100 gedeeld? Hoeveel meter is 1 km?", "Je hebt de komma een plek te ver geschoven: dat is door 10.000 gedeeld."] },
+      { q: "Welke is meer: **0,5 kg** of **600 g**?", options: ["600 g","0,5 kg","Gelijk","Dat kun je niet vergelijken"], answer: 0, wrongHints: [null, "Reken 0,5 kg eerst om naar gram. Hoeveel gram is dat?", "Reken 0,5 kg eerst om naar gram en vergelijk dan.", "Dat kan wel: zet allebei om naar gram."] },
+      { q: "Welke maat is het langst: 1 m, 100 cm of 1.000 mm?", options: ["Even lang","1 m","100 cm","1000 mm"], answer: 0, wrongHints: [null, "Hoeveel cm is 1 m? Vergelijk dat met de andere maten.", "Zet de andere twee ook om naar cm en vergelijk dan.", "Zet de andere twee ook om naar mm en vergelijk dan."] },
+      { q: "Een fles **1,5 L** = hoeveel mL?", options: ["1500","150","15","15.000"], answer: 0, wrongHints: [null, "Heb je × 100 gedaan? Hoeveel mL zit er in 1 L?", "Heb je × 10 gedaan? Dat is veel te weinig voor anderhalve liter.", "Dat zou 15 L zijn — een hele emmer vol."] },
+      { q: "Hoeveel weegt een sinaasappel **ongeveer**?", options: ["150 g","50 g","15 g","1,5 kg"], answer: 0, wrongHints: [null, "Dat is ongeveer een ei. Een sinaasappel is een stuk zwaarder.", "Dat is zo licht als een paar muntjes.", "Dat is zo zwaar als anderhalf pak suiker."] },
+      { q: "Hoe lang is een **gymzaal** ongeveer?", options: ["20 m","2 m","200 m","5 m"], answer: 0, wrongHints: [null, "Dat is ongeveer zo lang als een bed.", "Dat is zo lang als twee voetbalvelden achter elkaar.", "Dat is ongeveer de lengte van een auto. Een gymzaal is veel langer."] },
       { q: "1 **ton** = hoeveel kg?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — een ton is veel meer dan 100 kg. Denk aan een auto.", "Heel weinig — 10 kg is maar een kleine tas.", "Te veel — dat zou 10 ton zijn, zwaarder dan meerdere vrachtwagens."] },
-      { q: "1 **dL** = hoeveel mL?", options: ["100","10","1000","1"], answer: 0, wrongHints: [null, "Niet — dat is 1 cL.", "Niet — dat is 1 L.", "Niet."] },
+      { q: "1 **dL** = hoeveel mL?", options: ["100","10","1000","1"], answer: 0, wrongHints: [null, "Dat is 1 cL — een dL is groter.", "Dat is 1 L — een dL is kleiner.", "Dat is 1 mL zelf. Een dL is veel meer."] },
     ],
   },
 ];

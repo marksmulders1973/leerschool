@@ -23,7 +23,7 @@ const steps = [
         q: "**2,5 uur** = hoeveel **minuten**?",
         options: ["150 min", "250 min", "120 min", "180 min"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Niet — dat is 2 uur.", "Niet — 3 uur."],
+        wrongHints: [null, "Is 1 uur 100 minuten? Hoeveel minuten zitten er in 1 uur?", "Dat zijn maar 2 uur. Het halve uur komt er ook nog bij.", "Dat zijn 3 hele uren — maar het is 2,5 uur."],
         uitlegPad: {
           stappen: [
             { titel: "Splits in hele uren + half uur", tekst: "2,5 uur bestaat uit 2 hele uren en een half uur. Reken eerst de 2 hele uren om naar minuten (uren × 60)." },
@@ -40,10 +40,10 @@ const steps = [
         },
       },
       {
-        q: "Van **14:45 naar 17:20** — hoe lang?",
+        q: "Hoe lang duurt het van **14:45** tot **17:20**?",
         options: ["2 h 35 min", "2 h 25 min", "3 h 5 min", "1 h 35 min"],
         answer: 0,
-        wrongHints: [null, "Niet — tel goed na.", "Te lang — tel stap voor stap via het hele uur.", "Niet — controleer."],
+        wrongHints: [null, "Tel stap voor stap: van 14:45 naar 15:00, dan naar 17:00, dan naar 17:20.", "Te lang — tel stap voor stap via het hele uur.", "Hoeveel hele uren zitten er tussen 15:00 en 17:00?"],
         uitlegPad: {
           stappen: [
             { titel: "Naar een rond heel uur", tekst: "Reken eerst van 14:45 naar het eerstvolgende hele uur (15:00). Hoeveel minuten is dat?" },
@@ -63,7 +63,7 @@ const steps = [
         q: "Hoeveel **dagen tussen 1 januari en 1 maart** (niet-schrikkeljaar)?",
         options: ["59 dagen", "60 dagen", "61 dagen", "58 dagen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen schrikkel.", "Niet.", "Te weinig."],
+        wrongHints: [null, "Hoeveel dagen heeft februari in een gewoon jaar (geen schrikkeljaar)?", "Tel januari en februari apart: hoeveel dagen heeft elk?", "Tel nog eens: januari heeft 31 dagen. En februari?"],
         uitlegPad: {
           stappen: [
             { titel: "Januari eerst", tekst: "Januari heeft 31 dagen. Van 1 januari tot 1 februari zijn dat dus 31 dagen." },
@@ -80,10 +80,10 @@ const steps = [
         },
       },
       {
-        q: "Een trein rijdt van **22:45 tot 02:30 's nachts**. Hoe lang?",
-        options: ["3 h 45 min", "4 h 45 min", "20 h 15 min", "Onmogelijk"],
+        q: "Een trein rijdt van **22:45 tot 02:30 's nachts**. Hoe lang duurt de rit?",
+        options: ["3 h 45 min", "4 h 45 min", "20 h 15 min", "2 h 45 min"],
         answer: 0,
-        wrongHints: [null, "Te lang.", "Onzin lange tijd.", "Wel — over middernacht."],
+        wrongHints: [null, "Tel stap voor stap: eerst tot 24:00, dan verder tot 02:30.", "Heb je 22:45 − 02:30 gerekend? De trein rijdt over middernacht heen.", "Tel eerst tot middernacht: van 22:45 naar 24:00 — hoeveel is dat?"],
         uitlegPad: {
           stappen: [
             { titel: "Tot middernacht", tekst: "Reken eerst uit hoeveel tijd er zit tussen 22:45 en 00:00 (middernacht)." },
@@ -103,7 +103,7 @@ const steps = [
         q: "**1 dag** is hoeveel **seconden**?",
         options: ["86 400 s", "1440 s", "3600 s", "1 000 000 s"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is minuten.", "Niet — dat is 1 uur.", "Te veel."],
+        wrongHints: [null, "Dat is het aantal minuten in een dag. Hoeveel seconden zitten er in elke minuut?", "Dat is het aantal seconden in 1 uur. Hoeveel uur heeft een dag?", "Dat is een gok. Reken het uit: seconden in 1 uur, keer het aantal uren in een dag."],
         uitlegPad: {
           stappen: [
             { titel: "Van dag naar uur naar minuut", tekst: "1 dag = 24 uur. Reken eerst uit hoeveel minuten dat zijn (uren × 60)." },
@@ -365,10 +365,10 @@ const steps = [
       "**Snelheid** = afstand per tijd.\n\n**Twee belangrijkste eenheden**:\n• **km/h** (kilometer per uur): auto, fiets, lopen.\n• **m/s** (meter per seconde): natuurkunde, korte afstanden.\n\n**Omrekenen**:\n\n**Van km/h naar m/s** (delen door 3,6):\nWaarom? 1 km = 1000 m. 1 uur = 3600 s.\n→ 1 km/h = 1000/3600 m/s = 1/3,6 m/s.\n• 36 km/h = 36/3,6 = 10 m/s.\n• 108 km/h = 30 m/s.\n• 18 km/h = 5 m/s.\n\n**Van m/s naar km/h** (× 3,6):\n• 5 m/s = 18 km/h.\n• 10 m/s = 36 km/h.\n• 25 m/s = 90 km/h.\n\n**Voorbeeld-snelheden**:\n• Lopen: ~5 km/h.\n• Fietsen: ~15-20 km/h.\n• Stadsverkeer auto: 50 km/h.\n• Snelweg: 100-130 km/h.\n• Trein NL-IC: 140 km/h.\n• Hoge-snelheidstrein: 300 km/h.\n• Vliegtuig: ~900 km/h (kruissnelheid).\n• Lichtsnelheid: 300 000 km/s = 1 080 000 000 km/h!\n\n**Gemiddelde snelheid**:\n• v_gem = totale afstand / totale tijd.\n• Bij wisselend tempo: hele afstand ÷ hele tijd.\n\nVoorbeeld:\n• Eerste uur 80 km, tweede uur 60 km.\n• v_gem = (80+60)/(1+1) = 140/2 = **70 km/h**.\n• Let op: NIET (80+60)/2 = 70 (klopt toevallig wel hier, maar werkt niet als tijden verschillen).\n\nVoorbeeld 2:\n• 100 km met 50 km/h, daarna 100 km met 100 km/h.\n• Tijd: 100/50 + 100/100 = 2 + 1 = 3 h.\n• Totaal: 200 km in 3 h → v_gem = **66,7 km/h** (NIET 75!).\n\n**Verkeer-borden**:\n• 30, 50, 70, 80, 100, 120, 130 km/h zijn standaard.\n• Boete-systeem: kilometer over snelheidsgrens, flitspaal, trajectcontrole.\n\n**Sport-snelheid**:\n• Usain Bolt 100m wereldrecord 9,58 s → 37,6 km/h gemiddeld.\n• Jachtluipaard topsnelheid: ~110 km/h.\n• Slak: 0,05 km/h.",
     checks: [
       {
-        q: "**90 km/h** in m/s?",
+        q: "Hoeveel m/s is **90 km/h**?",
         options: ["25 m/s", "50 m/s", "324 m/s", "9 m/s"],
         answer: 0,
-        wrongHints: [null, "Niet — te veel.", "Te veel.", "Niet."],
+        wrongHints: [null, "Hoeveel meter is 90 km, en hoeveel seconden zitten er in een uur?", "Heb je × 3,6 gedaan? Van km/h naar m/s wordt het getal kleiner.", "Heb je door 10 gedeeld? Een uur heeft 3600 seconden."],
         uitlegPad: {
           stappen: [
             { titel: "Waarom delen door 3,6?", tekst: "1 km/h is hetzelfde als 1000 meter per 3600 seconden. Dat kun je vereenvoudigen tot een deling door 3,6 om van km/h naar m/s te gaan." },
@@ -385,10 +385,10 @@ const steps = [
         },
       },
       {
-        q: "**12 m/s** in km/h?",
+        q: "Hoeveel km/h is **12 m/s**?",
         options: ["43,2 km/h", "33 km/h", "3,3 km/h", "120 km/h"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Veel te weinig.", "Te veel."],
+        wrongHints: [null, "Hoeveel meter leg je af in een uur (3600 seconden)? Reken dat om naar km.", "Heb je gedeeld? Van m/s naar km/h wordt het getal groter.", "Heb je × 10 gedaan? Reken met 3600 seconden in een uur."],
         uitlegPad: {
           stappen: [
             { titel: "De andere kant op", tekst: "Van m/s naar km/h reken je met dezelfde factor als van km/h naar m/s, maar dan andersom." },
@@ -405,10 +405,10 @@ const steps = [
         },
       },
       {
-        q: "Auto rijdt eerst 1 uur 60 km/h, dan 1 uur 90 km/h. **Gemiddelde snelheid**?",
+        q: "Een auto rijdt eerst 1 uur met 60 km/h en daarna 1 uur met 90 km/h. Wat is de **gemiddelde snelheid**?",
         options: ["75 km/h", "70 km/h", "65 km/h", "85 km/h"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Niet.", "Niet."],
+        wrongHints: [null, "Hoeveel km rijdt de auto in totaal, en in hoeveel uur?", "Reken na: hoeveel km na het eerste uur, en hoeveel na het tweede?", "Het gemiddelde ligt tussen de twee snelheden in. Reken het precies uit."],
         uitlegPad: {
           stappen: [
             { titel: "Bereken de totale afstand", tekst: "Reken per uur uit hoeveel kilometer er is afgelegd, en tel die twee afstanden bij elkaar op." },
@@ -425,7 +425,7 @@ const steps = [
         },
       },
       {
-        q: "Een renner gaat **50 km met 25 km/h** + **50 km met 50 km/h**. Gemiddelde?",
+        q: "Een renner fietst **50 km met 25 km/h** en daarna **50 km met 50 km/h**. Wat is zijn gemiddelde snelheid?",
         options: [
           "33,3 km/h",
           "37,5 km/h",
@@ -433,7 +433,7 @@ const steps = [
           "25 km/h"
         ],
         answer: 0,
-        wrongHints: [null, "Te veel — klassieke fout.", "Onzin.", "Te weinig."],
+        wrongHints: [null, "Dat is het midden tussen 25 en 50. Maar de renner rijdt langer met de lage snelheid — reken de tijd per stuk uit.", "Dat is 25 + 50. Kan het gemiddelde hoger zijn dan de hoogste snelheid?", "Dat is de laagste snelheid. Het tweede stuk ging sneller."],
         uitlegPad: {
           stappen: [
             { titel: "Bereken de tijd per stuk", tekst: "Bereken apart hoeveel tijd het eerste stuk (50 km met 25 km/h) kostte en hoeveel tijd het tweede stuk (50 km met 50 km/h) kostte." },
@@ -450,15 +450,15 @@ const steps = [
         },
       },
       {
-        q: "**Lichtsnelheid** in vacuüm:",
+        q: "Hoe snel gaat **licht** in de lege ruimte?",
         options: [
           "300 000 km/s",
           "300 000 km/h",
           "300 m/s",
-          "Onbeperkt"
+          "30 000 km/s"
         ],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Veel te weinig.", "Niet — vaste grens."],
+        wrongHints: [null, "Per uur? Licht is véél sneller: in één seconde gaat het al zo'n 7 keer rond de aarde.", "Zo snel gaat geluid ongeveer. Licht is véél sneller.", "Te langzaam — tel de nullen nog eens. Licht is het snelste dat er bestaat."],
         uitlegPad: {
           stappen: [
             { titel: "Vaste natuurkundige waarde", tekst: "De lichtsnelheid is geen som die je zelf uitrekent — het is een vaste, gemeten waarde in de natuurkunde die je moet kennen of herkennen." },
@@ -633,10 +633,10 @@ const steps = [
       "**Hoofdformule**: **Afstand = Snelheid × Tijd** (S = V × T).\n\nVoorbeeld:\n• Snelheid 80 km/h, tijd 3 uur.\n• Afstand = 80 × 3 = **240 km**.\n\n**Eenheden moeten matchen!**\n• Snelheid km/h + tijd in uur → afstand in km.\n• Snelheid m/s + tijd in seconden → afstand in m.\n• Snelheid km/h + tijd in minuten → eerst tijd naar uren omrekenen.\n\n**Voorbeeld** met conversie:\n• Snelheid 60 km/h, tijd 30 minuten.\n• 30 min = 0,5 h.\n• Afstand = 60 × 0,5 = **30 km**.\n\n**Of**: 60 km/h = 1 km/min. → 30 km in 30 min.\n\n**Praktijk-sommen**:\n\n**Som 1**: Auto rijdt 1 h 45 min met 80 km/h. Afstand?\n• 1 h 45 min = 1,75 h.\n• 80 × 1,75 = **140 km**.\n\n**Som 2**: Trein 120 km/h. In 20 min?\n• 20 min = 1/3 h.\n• 120 × 1/3 = **40 km**.\n\n**Som 3**: Fietser 18 km/h. Afstand in 45 min?\n• 45 min = 0,75 h.\n• 18 × 0,75 = **13,5 km**.\n\n**Combineren met andere maten**:\n\n**Som 4**: Bal rolt 5 m/s. In 12 seconden?\n• 5 × 12 = **60 m**.\n\n**Som 5**: Vliegtuig 900 km/h. Hoeveel km in 30 min?\n• 30 min = 0,5 h.\n• 900 × 0,5 = **450 km**.\n\n**Toets-truc grafieken**:\n• v-t-grafiek (snelheid tegen tijd):\n  - Bij CONSTANTE snelheid: horizontale lijn.\n  - **Oppervlakte onder curve = afgelegde afstand**.\n• s-t-grafiek (positie-tijd):\n  - Bij constante snelheid: rechte lijn met helling.\n  - **Helling = snelheid**.\n  - Vlakke lijn = stilstand.\n\n**Voorbeeld grafiek-vraag**:\nAuto rijdt 1 h met 60 km/h, daarna 1 h met 100 km/h. v-t-grafiek?\n• Twee horizontale lijnen: op 60 km/h (0-1h), op 100 km/h (1-2h).\n• Oppervlakte = 60×1 + 100×1 = 160 km.\n\n**Veelgemaakte fout**:\n• Tijden in verschillende eenheden niet matchen.\n• Vergeet de eenheid bij antwoord (km, niet alleen 240).\n• Snelheid km/u verwarren met km of m/s.",
     checks: [
       {
-        q: "Auto rijdt **3 uur met 90 km/h**. Afstand?",
+        q: "Een auto rijdt **3 uur met 90 km/h**. Hoe ver komt hij?",
         options: ["270 km", "30 km", "93 km", "180 km"],
         answer: 0,
-        wrongHints: [null, "Niet — je deelde in plaats van te vermenigvuldigen.", "Niet — verkeerde rekening.", "Niet."],
+        wrongHints: [null, "Niet — je deelde in plaats van te vermenigvuldigen.", "Dat is 90 + 3. Moet je optellen of keer doen?", "Dat is 2 × 90. Hoeveel uur rijdt de auto?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke formule?", tekst: "Je hebt de snelheid én de tijd, en zoekt de afstand. Welke van de drie formules (S=V×T, V=S/T, T=S/V) past daarbij?" },
@@ -653,10 +653,10 @@ const steps = [
         },
       },
       {
-        q: "Fietser **20 km/h** rijdt **15 minuten**. Afstand?",
+        q: "Een fietser rijdt **20 km/h** en fietst **15 minuten**. Hoe ver komt hij?",
         options: ["5 km", "300 km", "20 km", "15 km"],
         answer: 0,
-        wrongHints: [null, "Niet — minuten omzetten.", "Niet.", "Niet."],
+        wrongHints: [null, "Heb je 20 × 15 gedaan? 15 minuten is geen 15 uur.", "Zo ver komt hij in een heel uur. Hij fietst maar 15 minuten.", "Heb je de minuten als km genomen? Welk deel van een uur is 15 minuten?"],
         uitlegPad: {
           stappen: [
             { titel: "Minuten passen niet bij km/h", tekst: "De snelheid staat in km/h (per uur), maar de tijd staat in minuten. Reken de minuten eerst om naar uren." },
@@ -673,10 +673,10 @@ const steps = [
         },
       },
       {
-        q: "Een loper start 14:00 met **10 km/h**. Komt aan om 14:30. Afstand?",
-        options: ["5 km", "10 km", "20 km", "300 km"],
+        q: "Een loper start om 14:00 met **10 km/h** en komt aan om 14:30. Hoe ver heeft hij gelopen?",
+        options: ["5 km", "10 km", "20 km", "2,5 km"],
         answer: 0,
-        wrongHints: [null, "Niet — slechts half uur.", "Niet.", "Onzin."],
+        wrongHints: [null, "Zo ver komt hij in een heel uur. Hoe lang loopt hij?", "Heb je × 2 gedaan in plaats van ÷ 2? Hij loopt korter dan een uur.", "Zo ver komt hij in een kwartier. Hoe lang is hij onderweg?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken eerst de tijdsduur", tekst: "Reken uit hoeveel tijd er tussen 14:00 en 14:30 zit, en zet dat om in uren." },
@@ -693,10 +693,10 @@ const steps = [
         },
       },
       {
-        q: "Op een **v-t-grafiek**: oppervlakte onder curve =?",
-        options: ["Afgelegde afstand", "Snelheid", "Versnelling", "Tijd"],
+        q: "In een **snelheid-tijdgrafiek**: wat betekent de oppervlakte onder de lijn?",
+        options: ["De afstand", "De snelheid", "De versnelling", "De tijd"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is y-as.", "Niet — apart.", "Niet — x-as."],
+        wrongHints: [null, "De snelheid lees je af op de verticale as. Wat krijg je als je snelheid × tijd doet?", "Versnelling zie je aan hoe steil de lijn loopt, niet aan de oppervlakte.", "De tijd lees je af op de horizontale as. Wat krijg je als je snelheid × tijd doet?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat staat er op de assen?", tekst: "Op een v-t-grafiek staat de snelheid op de verticale as en de tijd op de horizontale as. Wat gebeurt er als je snelheid met tijd vermenigvuldigt?" },
@@ -713,10 +713,10 @@ const steps = [
         },
       },
       {
-        q: "Een trein rijdt **2 uur met 80 km/h + 1 uur met 120 km/h**. Totale afstand?",
-        options: ["280 km", "200 km", "240 km", "240 km/h"],
+        q: "Een trein rijdt **2 uur met 80 km/h** en daarna **1 uur met 120 km/h**. Hoeveel km legt hij in totaal af?",
+        options: ["280 km", "200 km", "240 km", "320 km"],
         answer: 0,
-        wrongHints: [null, "Niet — het eerste stuk duurde 2 uur.", "Niet — controleer.", "Niet — eenheid km."],
+        wrongHints: [null, "Het eerste stuk duurde 2 uur. Heb je dat meegerekend?", "Reken elk stuk apart uit: afstand = snelheid × tijd.", "Heb je de tijden omgedraaid? Hoe lang rijdt de trein 80 km/h?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken elk deel apart", tekst: "Bereken de afstand van het eerste stuk (2 uur met 80 km/h) en van het tweede stuk (1 uur met 120 km/h) los van elkaar." },
@@ -932,10 +932,10 @@ const steps = [
       "**Hoofdformules** (omzetten van S = V × T):\n• **V = S / T** (snelheid).\n• **T = S / V** (tijd).\n\n**Snelheid berekenen**:\n\n**Som 1**: 120 km in 2 uur. Snelheid?\n• V = 120/2 = **60 km/h**.\n\n**Som 2**: 30 km in 45 min. Snelheid?\n• 45 min = 0,75 h.\n• V = 30/0,75 = **40 km/h**.\n\n**Som 3**: 1500 m in 5 min. Snelheid in m/s?\n• 5 min = 300 s.\n• V = 1500/300 = **5 m/s** (= 18 km/h, dus joggen-tempo).\n\n**Tijd berekenen**:\n\n**Som 4**: 200 km met 80 km/h. Tijd?\n• T = 200/80 = 2,5 h = **2 h 30 min**.\n\n**Som 5**: 12 km lopen met 6 km/h. Tijd?\n• T = 12/6 = 2 h.\n\n**Som 6**: 1 km zwemmen met 4 km/h. Tijd?\n• T = 1/4 = 0,25 h = **15 min**.\n\n**Klassieke Toets-sommen**:\n\n**Som 7**: Bus vertrekt 8:00 uit Amsterdam, rijdt 90 km/h. Wanneer in Utrecht (afstand 40 km)?\n• T = 40/90 = 0,444 h = 26,67 min ≈ 27 min.\n• Aankomst: 8:00 + 27 min = **8:27**.\n\n**Som 8**: Trein 9:15 → 10:45 reis. Afstand 120 km. Snelheid?\n• Tijd: 1 h 30 min = 1,5 h.\n• V = 120/1,5 = **80 km/h**.\n\n**Twee voertuigen** (geavanceerd):\n\n**Som 9**: Auto A vertrekt 14:00 uit Amsterdam, 80 km/h. Auto B vertrekt 14:30 uit Amsterdam, 100 km/h. Wanneer haalt B A in?\n• Bij 14:30 is A 0,5 h gereden = 40 km vooruit.\n• B is 20 km/h sneller.\n• Tijd om in te halen: 40 / 20 = 2 h.\n• B haalt A in om 14:30 + 2 h = **16:30**.\n\n**Som 10** (tegelijk uit verschillende kanten):\nAmsterdam → Rotterdam (60 km). Auto Amsterdam → Rotterdam 80 km/h. Auto Rotterdam → Amsterdam 100 km/h. Wanneer ontmoeten?\n• Samen rijden ze 80 + 100 = 180 km/h naar elkaar toe.\n• Tijd: 60/180 = 1/3 h = **20 min**.\n\n**Klassieke vraagjes om voor te bereiden**:\n• 'Snelheid in km/h ↔ tijd in minuten' — let op eenheid.\n• 'Wanneer arriveert?' — tijd berekenen + optellen bij vertrektijd.\n• 'Hoeveel sneller moet?' — formule omdraaien.\n• 'Met pauze' — rijtijd = totale tijd − pauze.",
     checks: [
       {
-        q: "Een auto reist **300 km in 4 uur**. Snelheid?",
+        q: "Een auto rijdt **300 km in 4 uur**. Wat is de snelheid?",
         options: ["75 km/h", "1200 km/h", "60 km/h", "100 km/h"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Niet — controleer.", "Niet."],
+        wrongHints: [null, "Heb je 300 × 4 gedaan? Moet je delen of keer doen?", "Reken na: hoeveel km is 60 × 4?", "Reken na: hoeveel km is 100 × 4?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke formule?", tekst: "Je kent de afstand en de tijd, en zoekt de snelheid. Welke formule (S=V×T, V=S/T, T=S/V) hoort daarbij?" },
@@ -952,10 +952,10 @@ const steps = [
         },
       },
       {
-        q: "**240 km met 80 km/h** — hoe lang?",
+        q: "Hoe lang doe je over **240 km** als je **80 km/h** rijdt?",
         options: ["3 uur", "2 uur", "4 uur", "30 min"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "In 2 uur kom je 160 km ver. Is dat genoeg?", "In 4 uur kom je 320 km ver. Is dat niet te ver?", "In een half uur kom je maar 40 km ver."],
         uitlegPad: {
           stappen: [
             { titel: "Welke formule?", tekst: "Je kent de afstand en de snelheid, en zoekt de tijd. Welke formule hoort daarbij?" },
@@ -972,10 +972,10 @@ const steps = [
         },
       },
       {
-        q: "Bus 8:00 vertrek Amsterdam → 50 km/h. **Utrecht 40 km**. Aankomst?",
+        q: "Een bus vertrekt om 8:00 uit Amsterdam en rijdt **50 km/h**. **Utrecht ligt 40 km** verderop. Hoe laat komt de bus aan?",
         options: ["8:48", "8:40", "9:00", "8:30"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Te laat.", "Te vroeg."],
+        wrongHints: [null, "Doet de bus er 40 minuten over? Hij rijdt 50 km in een uur, niet 60.", "In een heel uur rijdt de bus 50 km. Utrecht ligt dichterbij.", "In een half uur rijdt de bus 25 km. Is hij dan al in Utrecht?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken eerst de reistijd", tekst: "Gebruik T = S/V om te bepalen hoeveel uur de rit duurt. Zet je antwoord daarna om naar minuten." },
@@ -992,10 +992,10 @@ const steps = [
         },
       },
       {
-        q: "Wandelaar legt **6 km in 1,5 uur** af. Snelheid?",
+        q: "Een wandelaar loopt **6 km in 1,5 uur**. Wat is zijn snelheid?",
         options: ["4 km/h", "9 km/h", "0,25 km/h", "3 km/h"],
         answer: 0,
-        wrongHints: [null, "Niet — × ipv ÷.", "Te weinig.", "Te weinig."],
+        wrongHints: [null, "Heb je 6 × 1,5 gedaan? Moet je delen of keer doen?", "Heb je 1,5 ÷ 6 gedaan? Deel de afstand door de tijd.", "Reken na: hoe ver kom je in 1,5 uur met 3 km/h?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke formule?", tekst: "Je kent de afstand en de tijd, en zoekt de snelheid. Welke formule hoort daarbij?" },
@@ -1012,10 +1012,10 @@ const steps = [
         },
       },
       {
-        q: "Twee auto's 100 km uit elkaar, rijden NAAR elkaar toe (60 + 40 km/h). Wanneer ontmoeten?",
-        options: ["1 uur", "30 min", "2 uur", "Geen ontmoeting"],
+        q: "Twee auto's staan 100 km uit elkaar en rijden naar elkaar toe: de ene met 60 km/h, de andere met 40 km/h. Na hoeveel tijd ontmoeten ze elkaar?",
+        options: ["1 uur", "30 min", "2 uur", "2 uur 30 min"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Wel ontmoeting."],
+        wrongHints: [null, "Hoeveel km komen ze samen dichterbij in een half uur?", "Hoeveel km komen ze samen dichterbij in één uur?", "Zo lang doet de langzame auto er alleen over. Maar ze rijden allebei."],
         uitlegPad: {
           stappen: [
             { titel: "Snelheden optellen", tekst: "Als twee dingen naar elkaar toe bewegen, komen ze samen sneller dichterbij dan wanneer er maar één beweegt. Tel de twee snelheden bij elkaar op." },
@@ -1185,7 +1185,7 @@ const steps = [
       "**Toets-tijd-snelheid-afstand** is altijd PRAKTISCH:\n• Reistijden bus/trein/auto.\n• Sport-records.\n• Vertraging + inhaal.\n• Treinen kruisen.\n• Met pauzes.\n\n**Werkwijze**:\n1. **Lees** rustig — wat is GEGEVEN, wat GEVRAAGD?\n2. **Eenheden check**: km/h + uren? m/s + s?\n3. **Formule** kiezen: V=S/T, S=V×T, T=S/V.\n4. **Bereken** stap voor stap.\n5. **Eenheid bij antwoord** (km, h, min, m/s).\n6. **Check** door terug te rekenen.\n\n**Voorbeeld-som** (Doorstroomtoets-stijl):\n\n**Som 1 — Reisplan**:\nNL → Frankrijk. Vertrek 8:00. Pauze 1 uur in België (12:00-13:00). Snelheid 90 km/h, totale rij-afstand 1080 km. Aankomst?\n• Rij-tijd: 1080/90 = 12 uur.\n• Met 1 uur pauze: totaal 13 uur.\n• Aankomst: 8:00 + 13 = **21:00**.\n\n**Som 2 — Inhalen**:\nLeo fietst 10:00 weg, 18 km/h. Mark vertrekt 10:15, 24 km/h. Wanneer haalt Mark Leo in?\n• Bij 10:15: Leo is al 0,25 × 18 = 4,5 km vooruit.\n• Snelheids-verschil: 24 − 18 = 6 km/h.\n• Inhaaltijd: 4,5/6 = 0,75 h = 45 min.\n• Mark haalt om 10:15 + 45 min = **11:00**.\n\n**Som 3 — Marathon**:\n42 km marathon in 3 h 30 min. Gemiddelde snelheid?\n• 3 h 30 min = 3,5 h.\n• V = 42/3,5 = **12 km/h**.\n\n**Som 4 — Vliegen**:\nAmsterdam-Tokio vlucht: 9000 km, 11 uur (incl. wind-effecten). Gemiddelde snelheid?\n• 9000/11 = ~**818 km/h**.\n\n**Som 5 — Twee treinen tegelijk**:\nTrein Amsterdam 130 km/h, Trein Den Haag 110 km/h. Recht naar elkaar, 60 km uit elkaar om 10:00. Wanneer kruisen?\n• Samen 240 km/h.\n• Tijd: 60/240 = 0,25 h = 15 min.\n• Om **10:15** kruisen ze.\n\n**Toets-valkuilen**:\n• **Eenheden missen**: km/h + minuten → vergeet om te rekenen.\n• **Pauzes vergeten** in totale tijd.\n• **Gemiddelde snelheid** verwarrend bij verschillende stukken (zie stap 2).\n• **'Wanneer' vs 'hoe lang'**: 'Wanneer arriveert' = vertrek + reisduur.\n\n**Tip Doorstroomtoets-stijl-vraag-types**:\n• Meerkeuze: bereken alle 4 opties + zie welke past.\n• Tekening helpt — schets reisplan op tijdas.\n• Schrijf eenheid groot in antwoord — vergeet je 'm dan minder.",
     checks: [
       {
-        q: "Auto Amsterdam-Maastricht 220 km, 100 km/h, met 30 min pauze. Vertrek 14:00. Aankomst?",
+        q: "Een auto rijdt van Amsterdam naar Maastricht: 220 km met 100 km/h, plus 30 minuten pauze. Hij vertrekt om 14:00. Hoe laat komt hij aan?",
         options: [
           "16:42",
           "16:12",
@@ -1193,7 +1193,7 @@ const steps = [
           "15:42"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet pauze.", "Te laat.", "Te vroeg."],
+        wrongHints: [null, "Ben je de pauze vergeten?", "Reken 2,2 uur precies om: 0,2 uur is hoeveel minuten?", "Reken eerst uit hoe lang de rit zelf duurt: 220 km met 100 km/h."],
         uitlegPad: {
           stappen: [
             { titel: "Bereken de rij-tijd", tekst: "Gebruik T = S/V om te berekenen hoeveel tijd het rijden zelf kost (zonder pauze)." },
@@ -1210,10 +1210,10 @@ const steps = [
         },
       },
       {
-        q: "Marathon 42 km in **3 uur**. Gemiddelde snelheid?",
-        options: ["14 km/h", "126 km/h", "12 km/h", "Onmogelijk"],
+        q: "Iemand loopt een marathon van 42 km in **3 uur**. Wat is de gemiddelde snelheid?",
+        options: ["14 km/h", "126 km/h", "12 km/h", "16 km/h"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Niet — dat is 3,5 uur.", "Wel mogelijk."],
+        wrongHints: [null, "Heb je 42 × 3 gedaan? Moet je delen of keer doen?", "Reken na: hoe ver kom je in 3 uur met 12 km/h?", "Reken na: hoe ver kom je in 3 uur met 16 km/h?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke formule?", tekst: "Je kent de afstand (42 km) en de tijd (3 uur), en zoekt de snelheid. Welke formule hoort daarbij?" },
@@ -1230,7 +1230,7 @@ const steps = [
         },
       },
       {
-        q: "Trein om 14:30 vertrek, ongeveer 250 km met 100 km/h. Aankomst?",
+        q: "Een trein vertrekt om 14:30 en rijdt 250 km met 100 km/h. Hoe laat komt hij aan?",
         options: [
           "17:00",
           "16:00",
@@ -1238,7 +1238,7 @@ const steps = [
           "15:00"
         ],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "Dan is hij 1,5 uur onderweg. Hoe lang duurt 250 km met 100 km/h?", "Dan is hij 3,5 uur onderweg. Reken de reistijd nog eens.", "Dan is hij maar een half uur onderweg — veel te kort voor 250 km."],
         uitlegPad: {
           stappen: [
             { titel: "Bereken de reistijd", tekst: "Gebruik T = S/V om uit te rekenen hoeveel uur de treinreis duurt." },
@@ -1255,7 +1255,7 @@ const steps = [
         },
       },
       {
-        q: "**100 m sprint** in 10 s. Snelheid m/s + km/h?",
+        q: "Een sprinter loopt **100 m** in 10 s. Wat is zijn snelheid in m/s en in km/h?",
         options: [
           "10 m/s = 36 km/h",
           "10 m/s = 10 km/h",
@@ -1280,15 +1280,15 @@ const steps = [
         },
       },
       {
-        q: "Auto + fiets tegelijk, beide vanuit Amsterdam naar Utrecht (40 km). Auto 80 km/h, fiets 16 km/h. Hoeveel **eerder** is de auto er?",
+        q: "Een auto en een fiets vertrekken tegelijk van Amsterdam naar Utrecht (40 km). De auto rijdt 80 km/h, de fiets 16 km/h. Hoeveel **eerder** is de auto er?",
         options: [
           "2 uur",
           "30 min",
           "5 uur",
-          "Gelijk"
+          "2,5 uur"
         ],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Onjuist."],
+        wrongHints: [null, "Zo lang doet de auto erover. Wat vraagt de vraag precies?", "Heb je 80 ÷ 16 gedaan? Reken per voertuig uit hoe lang het erover doet.", "Zo lang doet de fiets erover. Wat vraagt de vraag precies?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken beide reistijden", tekst: "Gebruik T = S/V twee keer: eenmaal voor de auto (80 km/h) en eenmaal voor de fiets (16 km/h), allebei over 40 km." },

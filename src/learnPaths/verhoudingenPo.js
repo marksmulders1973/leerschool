@@ -61,10 +61,10 @@ const steps = [
     svg: siroopSvg(),
     checks: [
       {
-        q: "**12 jongens en 18 meisjes** — vereenvoudigde verhouding?",
+        q: "In een groep zitten **12 jongens en 18 meisjes**. Wat is de verhouding jongens : meisjes, zo eenvoudig mogelijk?",
         options: ["2 : 3","12 : 18","3 : 2","1 : 1"],
         answer: 0,
-        wrongHints: [null,"Klopt in aantal, maar niet vereenvoudigd. Welk getal deelt 12 én 18?","Volgorde klopt niet — vraag begint met jongens.","Past dat bij meer meisjes dan jongens?"],
+        wrongHints: [null,"Klopt in aantal, maar niet vereenvoudigd. Welk getal deelt 12 én 18?","Kijk naar de volgorde in de vraag: wie komen eerst, de jongens of de meisjes?","Past dat bij meer meisjes dan jongens?"],
         uitlegPad: {
           stappen: [{ titel: "Beide ÷6", tekst: "12÷6=2. 18÷6=3. → 2 : 3." }],
           woorden: [{ woord: "vereenvoudigen verhouding", uitleg: "Beide kanten door zelfde getal delen (zoals breuken)." }],
@@ -75,10 +75,10 @@ const steps = [
         },
       },
       {
-        q: "Een verhouding **6 : 9** — vereenvoudigd?",
+        q: "Wat is de verhouding **6 : 9**, zo eenvoudig mogelijk?",
         options: ["2 : 3","3 : 2","6 : 9","1 : 1"],
         answer: 0,
-        wrongHints: [null,"Andersom — kijk naar de volgorde.","Niet vereenvoudigd. Beide getallen kun je door iets delen.","Is 6 hetzelfde als 9?"],
+        wrongHints: [null,"Kijk naar de volgorde: welk getal stond eerst?","Niet vereenvoudigd. Beide getallen kun je door iets delen.","Is 6 hetzelfde als 9?"],
         uitlegPad: {
           stappen: [{ titel: "Beide ÷3", tekst: "6÷3=2. 9÷3=3. → 2 : 3." }],
           woorden: [{ woord: "GGD 3", uitleg: "Grootste gemene deler van 6 en 9 = 3." }],
@@ -89,10 +89,10 @@ const steps = [
         },
       },
       {
-        q: "Op het strand staan **20 fietsen en 5 brommers**. Verhouding fietsen:brommers vereenvoudigd?",
+        q: "Bij het strand staan **20 fietsen en 5 brommers**. Wat is de verhouding fietsen : brommers, zo eenvoudig mogelijk?",
         options: ["4 : 1","20 : 5","1 : 4","5 : 20"],
         answer: 0,
-        wrongHints: [null,"Niet vereenvoudigd — beide door 5 delen.","Andersom — fietsen staan eerst.","Niet vereenvoudigd, en andersom."],
+        wrongHints: [null,"Kan het nog eenvoudiger? Door welk getal kun je 20 én 5 delen?","Kijk naar de volgorde in de vraag: wat komt eerst, fietsen of brommers?","Kijk naar de volgorde in de vraag. En kan het nog eenvoudiger?"],
         uitlegPad: {
           stappen: [{ titel: "Beide ÷5", tekst: "20÷5=4. 5÷5=1. → 4 : 1 (fietsen : brommers)." }],
           woorden: [{ woord: "verhouding-volgorde", uitleg: "Eerst genoemde categorie staat links." }],
@@ -326,10 +326,10 @@ const steps = [
     explanation: "Verhoudingen kom je vaak tegen bij **recepten**.\n\n**Voorbeeld**: limonade-recept zegt 1 : 4 (1 deel siroop op 4 delen water).\n\nAls je een **glas vult van 200 mL**:\n• 1 + 4 = **5 delen totaal** in één glas.\n• Elk deel = 200 ÷ 5 = **40 mL**.\n• Dus: **40 mL siroop + 160 mL water**.\n\n**Slimme aanpak — denk in 'delen'**:\n• Bij 1 : 4 zit 1 deel van 5 = **1/5** in siroop.\n• Bij 2 : 3 zit 2 delen van 5 = **2/5** in het eerste.\n• Bij 3 : 7 zit 3 delen van 10 = **3/10** in het eerste.\n\n**Voorbeeld 2**: een schip-bemanning is 1 : 5 (officieren : matrozen). Als er 24 mensen zijn:\n• 1 + 5 = 6 delen.\n• Elk deel = 24 ÷ 6 = 4.\n• Officieren: 1 × 4 = **4**.\n• Matrozen: 5 × 4 = **20**.\n• Check: 4 + 20 = 24 ✓.\n\n**Toets-truc**: tel eerst **alle delen samen** (1 + 4 = 5, 2 + 3 = 5, etc.). Verdeel dan het totaal door dat getal — en je kent de waarde van **één deel**.",
     checks: [
       {
-        q: "Een recept zegt **1 : 3 (siroop : water)**. Voor een glas van **400 mL** — hoeveel **siroop**?",
+        q: "Een recept voor limonade is **1 : 3 (siroop : water)**. Je maakt een glas van **400 mL**. Hoeveel mL is **siroop**?",
         options: ["100 mL","200 mL","133 mL","300 mL"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is de helft. 1 : 3 betekent 1 deel van 4.","Dat is 400 ÷ 3 — maar 1 : 3 betekent 4 delen totaal.","Te veel — dat is het water-deel."],
+        wrongHints: [null,"Dat is de helft van het glas. Is er evenveel siroop als water?","Je deelde 400 door 3. Hoeveel delen zijn er samen: siroop én water?","Dat is het water. Hoeveel delen is de siroop?"],
         uitlegPad: {
           stappen: [{ titel: "Tel delen + verdeel", tekst: "1+3 = 4 delen. 400÷4 = 100 per deel. Siroop = 1 × 100 = 100 mL." }],
           woorden: [{ woord: "delen tellen", uitleg: "Bij verhouding A:B → totaal = A+B delen. Eerst opdelen." }],
@@ -340,10 +340,10 @@ const steps = [
         },
       },
       {
-        q: "Verhouding **2 : 5** in een klas van **28 leerlingen**. Hoeveel leerlingen zitten in de eerste groep?",
+        q: "In een klas van **28 leerlingen** is de verhouding tussen twee groepen **2 : 5**. Hoeveel leerlingen zitten in de eerste groep?",
         options: ["8","10","20","14"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je per ongeluk 5 delen genomen?","Veel te veel — dat is de tweede groep.","Te veel — dat is de helft."],
+        wrongHints: [null,"Hoeveel delen zijn er samen? Deel 28 door dat getal.","Dat is de tweede groep. Hoeveel delen heeft de eerste groep?","Dat is de helft. Zijn de twee groepen even groot?"],
         uitlegPad: {
           stappen: [{ titel: "Tel + verdeel", tekst: "2+5=7 delen. 28÷7=4 per deel. Eerste groep = 2 × 4 = 8." }],
           woorden: [{ woord: "verdelen via delen", uitleg: "Totaal ÷ aantal-delen × eigen aantal-delen." }],
@@ -354,10 +354,10 @@ const steps = [
         },
       },
       {
-        q: "Een mengsel **3 : 1 (zand : cement)**. Bij **20 kg totaal** — hoeveel **cement**?",
+        q: "Een mengsel is **3 : 1 (zand : cement)**. Het mengsel weegt **20 kg**. Hoeveel kg is **cement**?",
         options: ["5 kg","15 kg","4 kg","6 kg"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is het zand-deel.","Te weinig — denk: 4 delen totaal van 20.","Te weinig."],
+        wrongHints: [null,"Dat is het zand. Hoeveel delen is het cement?","4 is het aantal delen. Hoeveel kg is één deel?","Je deelde 20 ongeveer door 3. Hoeveel delen zijn er samen: zand én cement?"],
         uitlegPad: {
           stappen: [{ titel: "Tel + verdeel", tekst: "3+1=4 delen. 20÷4=5 per deel. Cement = 1 × 5 = 5 kg." }],
           woorden: [{ woord: "1-deel cement", uitleg: "Cement is 1 deel van 4 totaal." }],
@@ -635,10 +635,10 @@ const steps = [
     svg: tabelSvg(),
     checks: [
       {
-        q: "**3 broden = € 6**. Wat kosten **5 broden**?",
+        q: "**3 broden** kosten **€ 6**. Wat kosten **5 broden**?",
         options: ["€ 10","€ 9","€ 12","€ 8"],
         answer: 0,
-        wrongHints: [null,"Te weinig — reken eerst uit wat 1 brood kost en neem dat 5 keer.","Te veel — dat is de prijs van 6 broden.","Te weinig."],
+        wrongHints: [null,"Wat kost 1 brood? Neem dat 5 keer.","Dat kosten 6 broden. Hoeveel broden wil je?","Je telde er € 2 bij op. Hoeveel broden komen er bij, en wat kost 1 brood?"],
         uitlegPad: {
           stappen: [{ titel: "Via 1 brood", tekst: "1 brood: €6÷3 = €2. 5 broden: 5 × €2 = €10." }],
           woorden: [{ woord: "stuksprijs", uitleg: "Prijs per 1 stuk = totaal ÷ aantal." }],
@@ -649,10 +649,10 @@ const steps = [
         },
       },
       {
-        q: "**Verhouding 2 : 5**. Bij **40** voor de eerste — hoeveel voor de tweede?",
+        q: "De verhouding is **2 : 5**. Het eerste getal wordt **40**. Wat wordt het tweede getal?",
         options: ["100","20","8","16"],
         answer: 0,
-        wrongHints: [null,"Te weinig — bereken eerst met welke factor 2 naar 40 gaat, dan pas je die factor op 5 toe.","Te weinig — dat is alleen voor 1 deel.","Te weinig — vermenigvuldig 5 met dezelfde factor."],
+        wrongHints: [null,"Met welk getal doe je 2 keer om op 40 te komen? Doe 5 keer datzelfde getal.","Je deelde 40 door 5. Hoe kom je van 2 naar 40?","Je rekende 40 × 2 ÷ 5. Wordt het tweede getal groter of kleiner dan 40?"],
         uitlegPad: {
           stappen: [{ titel: "Factor + ander", tekst: "Eerste: 2 → 40 = ×20. Tweede: 5 × 20 = 100." }],
           woorden: [{ woord: "schaal-factor", uitleg: "Met welk getal vermenigvuldigd: 40÷2=20." }],
@@ -663,10 +663,10 @@ const steps = [
         },
       },
       {
-        q: "**Recept 4 : 3 (meel : suiker) bij 200 g meel** — hoeveel **suiker**?",
+        q: "Een recept gebruikt meel en suiker in de verhouding **4 : 3**. Je hebt **200 g meel**. Hoeveel **suiker** heb je nodig?",
         options: ["150 g","250 g","100 g","75 g"],
         answer: 0,
-        wrongHints: [null,"Te veel — kijk: meel is groter (4) dan suiker (3), dus suiker is minder.","Te weinig — denk via 1 deel.","Te weinig — heb je halveren ipv evenredig?"],
+        wrongHints: [null,"Is er meer suiker of meer meel nodig? Kijk naar 4 : 3.","Hoeveel gram is één deel meel? Hoeveel delen suiker heb je?","Hoeveel gram is één deel? Kijk alleen naar de 4 delen meel."],
         uitlegPad: {
           stappen: [{ titel: "Via 1 deel", tekst: "1 deel meel: 200÷4 = 50 g. Suiker = 3 × 50 = 150 g." }],
           woorden: [{ woord: "1-deel-truc", uitleg: "Totaal ÷ aantal delen = waarde per deel." }],
@@ -943,10 +943,10 @@ const steps = [
     explanation: "Een recept is meestal voor **een vast aantal mensen**. Bij meer of minder mensen reken je het hele recept om.\n\n**Voorbeeld**: pannenkoek-recept voor **4 personen**:\n• 200 g meel\n• 400 mL melk\n• 2 eieren\n\n**Voor 6 personen** *(× 1,5)*:\n• 200 × 1,5 = **300 g meel**\n• 400 × 1,5 = **600 mL melk**\n• 2 × 1,5 = **3 eieren**\n\n**Voor 1 persoon** *(÷ 4)*:\n• 200 ÷ 4 = 50 g meel\n• 400 ÷ 4 = 100 mL melk\n• 2 ÷ 4 = ½ ei (in praktijk: 1 ei voor 2 mensen)\n\n**Toets-aanpak**:\n1. **Welke factor?** Aantal nieuwe mensen ÷ aantal oude mensen.\n2. **Vermenigvuldig** alle ingrediënten met die factor.\n\n**Voorbeeld 2 — recept voor 8, jij maakt voor 6**:\n• Factor = 6/8 = 0,75 *(ofwel ÷ 8 × 6)*.\n• Alle ingrediënten × 0,75.\n\n**Toets-truc voor mooie getallen**:\nGa via 1 persoon. Als recept voor 8 = 200g, dan 1 persoon = 25g. Voor 6 = 6 × 25 = 150g. Sneller dan met komma-factor rekenen.",
     checks: [
       {
-        q: "Recept voor **4 personen** gebruikt **300 g pasta**. Voor **6 personen**?",
+        q: "Een recept voor **4 personen** gebruikt **300 g pasta**. Hoeveel pasta heb je nodig voor **6 personen**?",
         options: ["450 g","400 g","500 g","600 g"],
         answer: 0,
-        wrongHints: [null,"Te weinig — ga via 1 persoon: deel 300 door 4, dan vermenigvuldig met 6.","Te veel — reken via 1 persoon: 300 ÷ 4 = 75 g.","Veel te veel — dat zou voor 8 zijn."],
+        wrongHints: [null,"Je telde er 100 g bij. Hoeveel gram is het per persoon?","Hoeveel gram pasta krijgt 1 persoon? Neem dat 6 keer.","Dat is genoeg voor 8 personen. Hoeveel personen eten er mee?"],
         uitlegPad: {
           stappen: [{ titel: "Via 1 persoon", tekst: "1 persoon: 300÷4 = 75g. 6 personen: 6×75 = 450g." }],
           woorden: [{ woord: "per-persoon-truc", uitleg: "Totaal ÷ aantal personen = per-persoon hoeveelheid." }],
@@ -957,10 +957,10 @@ const steps = [
         },
       },
       {
-        q: "Limonade voor **8 mensen** = **1 L water**. Voor **3 mensen**?",
+        q: "Voor **8 mensen** maak je limonade met **1 L water**. Hoeveel water heb je nodig voor **3 mensen**?",
         options: ["375 mL","300 mL","250 mL","500 mL"],
         answer: 0,
-        wrongHints: [null,"Te weinig — ga via 1 persoon: hoeveel mL is dat? Vermenigvuldig daarna met 3.","Te weinig — dat is voor 2 personen.","Te veel — dat is voor 4 personen."],
+        wrongHints: [null,"Je deed 3 × 100 mL. Hoeveel mL is het per persoon?","Dat is genoeg voor 2 personen. Hoeveel personen drinken er mee?","Dat is genoeg voor 4 personen. Hoeveel personen drinken er mee?"],
         uitlegPad: {
           stappen: [{ titel: "Via 1 persoon", tekst: "1L=1000mL. Per persoon: 1000÷8=125mL. 3 personen: 3×125=375mL." }],
           woorden: [{ woord: "per-persoon", uitleg: "Eerste stap: deel door aantal personen." }],
@@ -971,10 +971,10 @@ const steps = [
         },
       },
       {
-        q: "Een **schaal van 1 : 100.000** op een kaart. **Werkelijke afstand 5 km** — hoeveel **cm op de kaart**?",
+        q: "Een kaart heeft **schaal 1 : 100.000**. In het echt is een afstand **5 km**. Hoeveel **cm** is dat op de kaart?",
         options: ["5 cm","50 cm","500 cm","0,5 cm"],
         answer: 0,
-        wrongHints: [null,"Te veel — hoeveel cm is 5 km? Deel dat door 100.000.","Veel te veel.","Te weinig — reken 5 km om naar cm en deel door 100.000."],
+        wrongHints: [null,"Hoeveel cm is 5 km? Deel dat door 100.000.","Hoeveel cm in het echt hoort bij 1 cm op deze kaart? Hoeveel km is dat?","Te weinig — reken 5 km om naar cm en deel door 100.000."],
         uitlegPad: {
           stappen: [{ titel: "Schaal-truc 1:100.000", tekst: "Bij schaal 1:100.000 geldt: 1 cm op kaart = 1 km werkelijk. Dus 5 km = 5 cm op kaart." }],
           woorden: [{ woord: "schaal", uitleg: "Verhouding kaart-afstand : werkelijke afstand." }],
@@ -1165,10 +1165,10 @@ const steps = [
     explanation: "Een **schaal** is een **verhouding** tussen kaart-afstand en werkelijke afstand.\n\n**Voorbeeld**: schaal **1 : 100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt = **1 km**.\n\n**Belangrijke schalen** (schoolse kaarten):\n• 1 : 100 → 1 cm = 1 m (plattegrond kamer)\n• 1 : 1.000 → 1 cm = 10 m (school-plattegrond)\n• 1 : 10.000 → 1 cm = 100 m (klein gebied)\n• 1 : 100.000 → 1 cm = 1 km (regio-kaart)\n• 1 : 1.000.000 → 1 cm = 10 km (provincie-kaart)\n\n**Aanpak — twee soorten vragen**:\n\n**A. Kaart → werkelijk** *(meten naar werkelijkheid)*:\n• Op kaart staat 5 cm + schaal 1 : 100.000.\n• 5 × 100.000 = 500.000 cm = 5.000 m = **5 km**.\n\n**B. Werkelijk → kaart** *(plannen op kaart)*:\n• Werkelijke afstand 8 km = 800.000 cm.\n• Bij schaal 1 : 100.000: 800.000 ÷ 100.000 = **8 cm op kaart**.\n\n**Truc voor schaal 1 : 100.000** *(meest gebruikt)*:\n• 1 cm op kaart = 1 km in echt. Heel simpel.\n• Werkelijke km = direct cm op kaart.\n\n**Toets-tip**:\nLet op **eenheden**! Schaal-getallen werken in cm. Reken alles eerst naar cm voor je deelt of vermenigvuldigt.",
     checks: [
       {
-        q: "Schaal **1 : 100.000**. Op kaart **3 cm** — werkelijk?",
+        q: "Een kaart heeft **schaal 1 : 100.000**. Op de kaart is een afstand **3 cm**. Hoe ver is dat in het echt?",
         options: ["3 km","30 km","300 m","30 m"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je per ongeluk × 1 miljoen gedaan?","Te weinig — zoek op hoeveel km 1 cm op een 1:100.000-kaart vertegenwoordigt.","Veel te weinig."],
+        wrongHints: [null,"Reken 3 × 100.000 cm uit. Hoeveel km is dat?","Hoeveel meter is 100.000 cm? En hoeveel km?","Hoeveel cm gaan er in 1 m? En in 1 km?"],
         uitlegPad: {
           stappen: [{ titel: "1 cm = 1 km", tekst: "Bij 1:100.000 geldt: 1 cm op kaart = 1 km werkelijk. Dus 3 cm = 3 km." }],
           woorden: [{ woord: "1:100.000", uitleg: "Standaard kaart-schaal. 100.000 cm = 1000 m = 1 km." }],
@@ -1179,10 +1179,10 @@ const steps = [
         },
       },
       {
-        q: "Een tuin is **15 m breed**. Op een schaal **1 : 100** kaart — hoeveel **cm**?",
+        q: "Een tuin is **15 m breed**. Je tekent hem op een kaart met **schaal 1 : 100**. Hoeveel **cm** is hij op de kaart?",
         options: ["15 cm","1,5 cm","150 cm","1500 cm"],
         answer: 0,
-        wrongHints: [null,"Te weinig — bij 1:100 stelt 1 cm werkelijk 100 cm voor. Hoeveel cm op de kaart is 15 m?","Te veel — dat is werkelijk 150 m.","Veel te veel."],
+        wrongHints: [null,"Bij 1 : 100 is 1 cm op de kaart 100 cm in het echt. Hoeveel cm is 15 m?","Op de kaart zou dat 150 m in het echt zijn. Is de tuin zo breed?","1500 cm is de echte breedte van de tuin. Wat doe je bij schaal 1 : 100?"],
         uitlegPad: {
           stappen: [{ titel: "1 m = 1 cm", tekst: "Bij 1:100 is 100 cm (= 1 m) werkelijk 1 cm op de kaart. Dus 15 m = 15 cm." }],
           woorden: [{ woord: "1:100", uitleg: "Plattegrond-schaal. 100 cm = 1 m. Dus 1 m werkelijk = 1 cm op kaart." }],
@@ -1193,10 +1193,10 @@ const steps = [
         },
       },
       {
-        q: "Schaal **1 : 50**. Op kaart staat **8 cm**. **Werkelijke afstand**?",
+        q: "Een tekening heeft **schaal 1 : 50**. Op de tekening is iets **8 cm**. Hoe lang is het **in het echt**?",
         options: ["4 m","400 m","80 m","8 m"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je × 5000 ipv × 50 gedaan?","Te veel — heb je × 1000 gedaan?","Te veel — heb je × 100 gedaan in plaats van × 50?"],
+        wrongHints: [null,"Je rekende 8 × 50 = 400 uit. Is dat 400 m of 400 cm?","Hoeveel cm is 8 × 50? Hoeveel meter is dat?","Je deed 8 × 100. Waarmee moet je vermenigvuldigen bij schaal 1 : 50?"],
         uitlegPad: {
           stappen: [{ titel: "8 × 50", tekst: "Kaart × schaal = werkelijk. 8 cm × 50 = 400 cm = 4 m." }],
           woorden: [{ woord: "1:50", uitleg: "1 cm op kaart = 50 cm werkelijk = 0,5 m." }],
@@ -1395,7 +1395,7 @@ const steps = [
         q: "Een fles van **750 mL** kost **€ 3,75**. Wat is de **prijs per 100 mL**?",
         options: ["€ 0,50","€ 5,00","€ 0,75","€ 0,30"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je × 100 ipv ÷ gedaan?","Te veel — 7,5 × €0,75 is meer dan €3,75.","Te weinig — hoeveel keer past 100 mL in 750 mL? Deel de prijs door dat aantal."],
+        wrongHints: [null,"Is 100 mL meer of minder dan de hele fles? Dan kost het ook…","Reken 7,5 × € 0,75. Kom je dan op € 3,75?","Te weinig — hoeveel keer past 100 mL in 750 mL? Deel de prijs door dat aantal."],
         uitlegPad: {
           stappen: [{ titel: "Per mL → per 100", tekst: "€3,75 ÷ 750 = €0,005 per mL. Per 100 mL = €0,005 × 100 = €0,50." }],
           woorden: [{ woord: "stuksprijs", uitleg: "Prijs per eenheid. Hier: per mL of per 100 mL." }],
@@ -1406,10 +1406,10 @@ const steps = [
         },
       },
       {
-        q: "Verhouding **3 : 5 (rood : blauw)**. **24 rode** ballonnen — hoeveel **blauwe**?",
+        q: "Rood en blauw zijn in de verhouding **3 : 5**. Er zijn **24 rode** ballonnen. Hoeveel **blauwe** ballonnen zijn er?",
         options: ["40","16","30","8"],
         answer: 0,
-        wrongHints: [null,"Te weinig — bereken eerst met welke factor 3 naar 24 gaat, dan pas je die factor op 5 toe.","Te weinig — heb je verhouding goed?","Te weinig — klopt jouw berekening van 5 × die factor?"],
+        wrongHints: [null,"Met welk getal doe je 3 keer om op 24 te komen? Doe 5 keer datzelfde getal.","Je telde er iets bij op. In een verhoudingstabel doe je keer, niet plus.","8 is het getal waarmee je keer doet. Welk getal hoort dan bij de 5?"],
         uitlegPad: {
           stappen: [{ titel: "Factor + ander", tekst: "Rood: 3 → 24 = ×8. Blauw: 5 × 8 = 40." }],
           woorden: [{ woord: "schaal-factor", uitleg: "Met welk getal vermenigvuldigd: 24÷3 = 8." }],
@@ -1420,10 +1420,10 @@ const steps = [
         },
       },
       {
-        q: "Pannenkoek-recept voor **4 mensen** = **300 g meel**. Voor **10 mensen**?",
+        q: "Een recept voor pannenkoeken voor **4 mensen** gebruikt **300 g meel**. Hoeveel meel heb je nodig voor **10 mensen**?",
         options: ["750 g","600 g","800 g","450 g"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je × 2 gedaan ipv × 2,5?","Te veel — dat zou voor meer dan 10 zijn.","Te weinig — dat is voor 6 mensen."],
+        wrongHints: [null,"Dat is genoeg voor 8 mensen. Hoeveel gram meel is het per persoon?","Hoeveel gram meel is het per persoon? Neem dat 10 keer.","Dat is genoeg voor 6 mensen. Hoeveel mensen eten er mee?"],
         uitlegPad: {
           stappen: [{ titel: "Via 1 persoon", tekst: "Per persoon: 300÷4 = 75g. 10 personen: 10×75 = 750g." }],
           woorden: [{ woord: "per-persoon-truc", uitleg: "Eerst per 1, dan keer aantal." }],
@@ -1434,10 +1434,10 @@ const steps = [
         },
       },
       {
-        q: "Schaal **1 : 200**. Op kaart staat **9 cm** — werkelijk?",
+        q: "Een tekening heeft **schaal 1 : 200**. Op de tekening is een muur **9 cm**. Hoe lang is die muur in het echt?",
         options: ["18 m","9 m","180 m","1,8 m"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je × 100 ipv × 200 gedaan?","Te veel — heb je × 2000 gedaan?","Te weinig — heb je × 20 gedaan?"],
+        wrongHints: [null,"Je deed 9 × 100. Waarmee moet je vermenigvuldigen bij schaal 1 : 200?","Hoeveel cm is 9 × 200? Reken dat om naar meter.","Je deed 9 × 20. Waarmee moet je vermenigvuldigen bij schaal 1 : 200?"],
         uitlegPad: {
           stappen: [{ titel: "9 × 200", tekst: "9 cm × 200 = 1800 cm = 18 m." }],
           woorden: [{ woord: "1:200", uitleg: "1 cm op kaart = 200 cm werkelijk = 2 m." }],
@@ -1448,10 +1448,10 @@ const steps = [
         },
       },
       {
-        q: "**Klas A: 12 jongens, 16 meisjes. Klas B: 9 jongens, 12 meisjes**. Welke klas heeft **dezelfde verhouding** jongens:meisjes?",
-        options: ["Beide hetzelfde","Klas A heeft naar verhouding meer jongens","Klas B heeft naar verhouding meer jongens","Niet te zeggen"],
+        q: "**Klas A** heeft 12 jongens en 16 meisjes. **Klas B** heeft 9 jongens en 12 meisjes. Wat klopt over de verhouding jongens : meisjes?",
+        options: ["Beide klassen hebben dezelfde verhouding","Klas A heeft naar verhouding meer jongens","Klas B heeft naar verhouding meer jongens","Dat kun je niet zeggen: de klassen zijn niet even groot"],
         answer: 0,
-        wrongHints: [null,"Vereenvoudig beide verhoudingen zo ver mogelijk — zijn ze dan gelijk?","Vereenvoudig beide verhoudingen en vergelijk ze dan.","Wel te zeggen — vereenvoudig de verhoudingen."],
+        wrongHints: [null,"Vereenvoudig beide verhoudingen zo ver mogelijk — zijn ze dan gelijk?","Vereenvoudig beide verhoudingen en vergelijk ze dan.","Je kunt verhoudingen wél vergelijken, ook bij klassen van een andere grootte. Maak beide zo eenvoudig mogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Vereenvoudig beide", tekst: "Klas A: 12:16 ÷4 = 3:4. Klas B: 9:12 ÷3 = 3:4. Zelfde verhouding!" }],
           woorden: [{ woord: "vergelijken", uitleg: "Vereenvoudig beide naar simpelste vorm en vergelijk." }],
@@ -1462,10 +1462,10 @@ const steps = [
         },
       },
       {
-        q: "**Recept** voor 4 pannenkoeken: 200 g meel, 1 ei, 300 ml melk. Hoeveel **meel** voor **12 pannenkoeken**?",
+        q: "Een recept voor 4 pannenkoeken: 200 g meel, 1 ei en 300 ml melk. Hoeveel **meel** heb je nodig voor **12 pannenkoeken**?",
         options: ["600 g","300 g","800 g","200 g"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoe vaak past recept van 4 in 12 pannenkoeken? Gebruik die factor voor het meel.", "Te veel — geen × 4 nodig.", "Onveranderd — heb je vermenigvuldigen overgeslagen?"],
+        wrongHints: [null, "Hoe vaak past 4 in 12? Doe het meel zo vaak keer.", "Je deed 200 × 4. Hoe vaak past 4 in 12?", "Dat is het meel voor 4 pannenkoeken. Wil je er meer of minder bakken?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: vergrotingsfactor", tekst: "Hoeveel keer GROTER is recept B? 12 pannenkoeken ÷ 4 pannenkoeken = **3 keer groter**. Alle ingrediënten moeten dus × 3." },
@@ -1486,10 +1486,10 @@ const steps = [
         },
       },
       {
-        q: "Op een **kaart 1:25.000** is een weg **8 cm**. Hoe **lang** is de weg in werkelijkheid?",
+        q: "Op een kaart met **schaal 1 : 25.000** is een weg **8 cm** lang. Hoe **lang** is de weg in het echt?",
         options: ["2 km","200 m","20 km","2 m"],
         answer: 0,
-        wrongHints: [null, "Te kort — heb je wel het juiste schaal-getal gebruikt?", "Te lang — reken de cm om naar km: hoeveel meter is 8 × 25.000 cm?", "Veel te kort — eenheid omrekenen vergeten?"],
+        wrongHints: [null, "Reken 8 × 25.000 cm uit. Hoeveel meter is dat?", "Hoeveel cm gaan er in 1 km? Deel 8 × 25.000 cm daardoor.", "Hoeveel cm gaan er in 1 m? Reken 8 × 25.000 cm opnieuw om."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is schaal 1:25.000?", tekst: "**Schaal 1:25.000** = **1 cm op kaart komt overeen met 25.000 cm werkelijk**. Of: kaart is 25.000× kleiner dan werkelijkheid." },
@@ -1510,10 +1510,10 @@ const steps = [
         },
       },
       {
-        q: "Een **muur van 4 m²** kost **€ 12** verf. Hoeveel verf nodig voor **muur van 10 m²**?",
+        q: "De verf voor een **muur van 4 m²** kost **€ 12**. Wat kost de verf voor een **muur van 10 m²**?",
         options: ["€ 30","€ 20","€ 25","€ 40"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer prijs per m².", "Te weinig — bereken eerst de prijs per m² en vermenigvuldig dan met 10.", "Te veel — controleer hoeveelheid per m²."],
+        wrongHints: [null, "Wat kost de verf voor 1 m²? Neem dat 10 keer.", "Te weinig — bereken eerst de prijs per m² en vermenigvuldig dan met 10.", "Klopt je prijs per m²? Hoeveel is € 12 verdeeld over 4 m²?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: prijs per m²", tekst: "€ 12 voor 4 m² → 12 ÷ 4 = **€ 3 per m²**. Dit is de **eenheidsprijs**." },
@@ -1533,23 +1533,23 @@ const steps = [
           niveaus: { basis: "€30.", simpeler: "€12 voor 4 m² = €3/m². Voor 10 m²: 10 × €3 = €30.", nogSimpeler: "€30" },
         },
       },
-      { q: "In een klas van 28 leerlingen zijn 12 jongens. Verhouding jongens : meisjes?", options: ["12 : 16","16 : 12","12 : 28","28 : 12"], answer: 0, wrongHints: [null, "Andersom — jongens eerst.", "Tweede getal moet meisjes zijn, niet totaal.", "Andersom."] },
-      { q: "Schaal 1 : 1.000 — een straat is 5 cm op de kaart. Echt?", options: ["50 m","5 m","500 m","5 km"], answer: 0, wrongHints: [null, "Te weinig — vermenigvuldig met 1.000 en reken de cm om naar m.", "Te veel — controleer je omrekening van cm naar m.", "Veel te groot."] },
-      { q: "Recept voor 4 personen wil je voor 8 — vermenigvuldig met?", options: ["2","4","½","8"], answer: 0, wrongHints: [null, "Niet — alles ×4 = te veel.", "Halveren = minder.", "Niet zo."] },
-      { q: "1 fles cola = €1,50. 6 flessen = ?", options: ["€9","€6","€1,50","€15"], answer: 0, wrongHints: [null, "Niet vermenigvuldigd.", "1 fles.", "Te veel."] },
-      { q: "Verhouding 2:3. Bij 2 = 10, bij 3 = ?", options: ["15","13","20","30"], answer: 0, wrongHints: [null, "Niet — verhouding behouden.", "Niet.", "Niet."] },
-      { q: "Schaal 1:100 — 3 cm op tekening = echt?", options: ["3 m","30 cm","30 m","3 km"], answer: 0, wrongHints: [null, "Te klein.", "Te groot.", "Veel te groot."] },
-      { q: "Sap : water = 1 : 3. 200 mL sap → hoeveel water?", options: ["600 mL","200 mL","100 mL","300 mL"], answer: 0, wrongHints: [null, "Gelijk = 1:1.", "Te weinig.", "1,5×."] },
-      { q: "120 km in 2 uur = welke snelheid?", options: ["60 km/u","120 km/u","240 km/u","30 km/u"], answer: 0, wrongHints: [null, "Dat is afstand.", "Te hoog.", "Niet."] },
-      { q: "Schaal 1:5 op een tekening. 2 cm op de tekening = hoeveel in het echt?", options: ["10 cm","5 cm","½ cm","20 cm"], answer: 0, wrongHints: [null, "Niet vermenigvuldigd.", "Andersom.", "Niet."] },
-      { q: "8 m² muur kost 12 euro verf. 24 m²?", options: ["€36","€18","€48","€12"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Geen vermenigvuldiging."] },
-      { q: "Op kaart 1:50.000 is 4 cm = welke afstand?", options: ["2 km","20 m","200 m","20 km"], answer: 0, wrongHints: [null, "Te weinig.", "Niet.", "Te veel."] },
-      { q: "Wat is een **verhouding**?", options: ['Een vergelijking, zoals 2 : 3', 'De uitkomst van een plussom', 'De uitkomst van een minsom', 'De uitkomst van een keersom'], answer: 0, wrongHints: [null, "Optellen.", "Aftrekken.", "Vermenigvuldigen."] },
-      { q: "5 leerlingen in 3 banken — gemiddeld?", options: ["~1,7","3","5","~2,5"], answer: 0, wrongHints: [null, "Aantal banken.", "Aantal leerlingen.", "Dat zou bij 2 banken horen."] },
-      { q: "Recept 2 eieren voor 4 personen. Voor 6 personen?", options: ["3 eieren","2 eieren","4 eieren","6 eieren"], answer: 0, wrongHints: [null, "Niet meer.", "Te veel.", "Niet zo."] },
-      { q: "Plant groeit 5 cm in 2 weken. Per week?", options: ["2,5 cm","5 cm","7 cm","10 cm"], answer: 0, wrongHints: [null, "Dat is 2 weken.", "Niet — niet plus.", "Te veel."] },
-      { q: "Schaal 1:25 — model van 8 cm = echt?", options: ["2 m","25 m","2 cm","20 cm"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Niet."] },
-      { q: "Mix: 3 deel zout + 1 deel peper. 12 g totaal. Hoeveel zout?", options: ["9 g","3 g","6 g","12 g"], answer: 0, wrongHints: [null, "Dat is peper.", "Helft.", "Hele."] },
+      { q: "In een klas van **28 leerlingen** zitten **12 jongens**. Wat is de verhouding jongens : meisjes?", options: ["12 : 16","16 : 12","12 : 28","28 : 12"], answer: 0, wrongHints: [null, "Kijk naar de volgorde in de vraag: wat komt eerst?", "Is 28 het aantal meisjes? Hoeveel meisjes zijn er?", "Is 28 het aantal meisjes? En welk getal hoort vooraan?"] },
+      { q: "Een kaart heeft **schaal 1 : 1.000**. Een straat is 5 cm op de kaart. Hoe lang is de straat in het echt?", options: ["50 m","5 m","500 m","5 km"], answer: 0, wrongHints: [null, "Reken 5 × 1.000 cm uit. Hoeveel meter is dat?", "Te veel — controleer je omrekening van cm naar m.", "Reken 5 × 1.000 cm uit. Hoeveel cm gaan er in 1 km?"] },
+      { q: "Je hebt een recept voor **4 personen** en wilt koken voor **8 personen**. Met welk getal vermenigvuldig je alles?", options: ["2","4","½","8"], answer: 0, wrongHints: [null, "Dan kook je voor 16 personen. Hoe vaak past 4 in 8?", "Dan kook je voor 2 personen. Worden het meer of minder personen?", "Dan kook je voor 32 personen. Hoe vaak past 4 in 8?"] },
+      { q: "Een fles cola kost **€ 1,50**. Wat kosten **6 flessen**?", options: ["€9","€6","€7,50","€15"], answer: 0, wrongHints: [null, "Je deed 6 × € 1. Waar is de € 0,50 per fles gebleven?", "Dat kosten 5 flessen. Hoeveel flessen koop je?", "Je deed 10 × € 1,50. Hoeveel flessen koop je?"] },
+      { q: "De verhouding is **2 : 3**. Bij de 2 hoort **10**. Welk getal hoort bij de 3?", options: ["15","13","20","30"], answer: 0, wrongHints: [null, "Je telde er 3 bij op. Doe je bij een verhouding plus of keer?", "Je deed 10 × 2. Met welk getal deed je de 2 keer om op 10 te komen?", "Je deed 10 × 3. Met welk getal deed je de 2 keer om op 10 te komen?"] },
+      { q: "Een tekening heeft **schaal 1 : 100**. Op de tekening is iets **3 cm**. Hoe lang is het in het echt?", options: ["3 m","30 cm","30 m","3 km"], answer: 0, wrongHints: [null, "Je deed 3 × 10. Waarmee moet je vermenigvuldigen bij schaal 1 : 100?", "Hoeveel cm is 3 × 100? Hoeveel meter is dat?", "Reken 3 × 100 cm uit. Hoeveel cm gaan er in 1 km?"] },
+      { q: "Sap en water gaan in de verhouding **1 : 3**. Je hebt **200 mL sap**. Hoeveel water doe je erbij?", options: ["600 mL","200 mL","100 mL","300 mL"], answer: 0, wrongHints: [null, "Dan is er evenveel water als sap. Klopt dat bij 1 : 3?", "Je deelde 200 door 2. Is er meer of minder water dan sap?", "Je deed 200 + 100. Hoeveel keer zoveel water als sap hoort erbij?"] },
+      { q: "Een auto rijdt **120 km in 2 uur**. Hoe hard rijdt hij gemiddeld?", options: ["60 km/u","120 km/u","240 km/u","30 km/u"], answer: 0, wrongHints: [null, "Dat is de afstand in 2 uur. Hoeveel km rijdt hij in 1 uur?", "Je deed 120 × 2. Rijd je in 1 uur meer of minder dan in 2 uur?", "Je deelde door 4. Hoeveel uur duurt de rit?"] },
+      { q: "Een tekening heeft **schaal 1 : 5**. Iets is 2 cm op de tekening. Hoe groot is het in het echt?", options: ["10 cm","5 cm","½ cm","20 cm"], answer: 0, wrongHints: [null, "5 is het schaalgetal. Wat doe je met de 2 cm van de tekening?", "Is het echte ding groter of kleiner dan de tekening?", "Je deed 2 × 10. Met welk getal moet je vermenigvuldigen bij schaal 1 : 5?"] },
+      { q: "De verf voor **8 m²** muur kost **€ 12**. Wat kost de verf voor **24 m²**?", options: ["€36","€18","€48","€12"], answer: 0, wrongHints: [null, "Je telde er € 6 bij op. Hoeveel keer zo groot is de muur nu?", "Je deed € 12 × 4. Hoe vaak past 8 m² in 24 m²?", "Dat kost de verf voor 8 m². Is de nieuwe muur groter?"] },
+      { q: "Een kaart heeft **schaal 1 : 50.000**. Op de kaart is een afstand **4 cm**. Hoe ver is dat in het echt?", options: ["2 km","20 m","200 m","20 km"], answer: 0, wrongHints: [null, "Reken 4 × 50.000 cm uit. Hoeveel cm gaan er in 1 km?", "Je deelde door 1000 in plaats van door 100.000. Hoeveel cm gaan er in 1 km?", "Hoeveel cm gaan er in 1 km? Deel 4 × 50.000 cm daardoor."] },
+      { q: "Wat is een **verhouding**?", options: ['Een vergelijking van twee hoeveelheden, zoals 2 : 3', 'Het totaal van twee hoeveelheden, zoals 2 + 3 = 5', 'Het verschil tussen twee hoeveelheden, zoals 3 − 2 = 1', 'Twee hoeveelheden keer elkaar, zoals 2 × 3 = 6'], answer: 0, wrongHints: [null, "Dat is een plussom. Zegt 2 : 3 hoeveel er samen zijn?", "Dat is een minsom. Lees je 2 : 3 als 'drie min twee'?", "Dat is een keersom. Betekent het teken : in een verhouding 'keer'?"] },
+      { q: "**5 leerlingen** zitten verdeeld over **3 banken**. Hoeveel leerlingen zitten er gemiddeld in een bank?", options: ["ongeveer 1,7","ongeveer 0,6","ongeveer 2,5","ongeveer 1,5"], answer: 0, wrongHints: [null, "Je deelde 3 door 5. Wat moet je verdelen: de leerlingen of de banken?", "Dat zou bij 2 banken horen. Hoeveel banken zijn er?", "Reken eens 3 × 1,5. Kom je dan op 5 leerlingen?"] },
+      { q: "Een recept gebruikt **2 eieren voor 4 personen**. Hoeveel eieren heb je nodig voor **6 personen**?", options: ["3 eieren","2 eieren","4 eieren","6 eieren"], answer: 0, wrongHints: [null, "Dat is genoeg voor 4 personen. Worden het meer personen?", "Dat is genoeg voor 8 personen. Hoeveel eieren zijn het per 2 personen?", "Je gaf elke persoon een heel ei. Hoeveel eieren zijn het per 2 personen?"] },
+      { q: "Een plant groeit **5 cm in 2 weken**. Hoeveel groeit hij per week?", options: ["2,5 cm","5 cm","7 cm","10 cm"], answer: 0, wrongHints: [null, "Dat groeit de plant in 2 weken. Hoeveel is het in 1 week?", "Je telde 5 en 2 op. Moet je optellen of delen?", "Je deed 5 × 2. Wordt het in 1 week meer of minder dan in 2 weken?"] },
+      { q: "Een model is gemaakt op **schaal 1 : 25**. Het model is **8 cm** lang. Hoe lang is het echte ding?", options: ["2 m","25 m","2 cm","20 cm"], answer: 0, wrongHints: [null, "Hoeveel cm is 8 × 25? Hoeveel meter is dat?", "Is het echte ding groter of kleiner dan het model?", "Hoeveel cm is 8 × 25? Kijk goed naar het aantal nullen."] },
+      { q: "Een mengsel is **3 delen zout en 1 deel peper**. Het weegt samen **12 g**. Hoeveel gram is zout?", options: ["9 g","3 g","6 g","12 g"], answer: 0, wrongHints: [null, "Dat is de peper. Hoeveel delen is het zout?", "Dat is de helft. Is er evenveel zout als peper?", "Dat is het hele mengsel. Er zit ook peper in."] },
     ],
   },
 ];

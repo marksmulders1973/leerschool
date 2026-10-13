@@ -100,7 +100,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **gemiddelde**?",
-        options: ["Een berekening die laat zien wat 'in het midden' ligt", "Het hoogste getal dat in de groep voorkomt", "Het laagste getal dat in de groep voorkomt", "Het getal dat in de groep het vaakst voorkomt"],
+        options: ["Het getal dat je krijgt als je alles eerlijk verdeelt", "Het hoogste getal dat in de groep voorkomt", "Het laagste getal dat in de groep voorkomt", "Het getal dat in de groep het vaakst voorkomt"],
         answer: 0,
         wrongHints: [null, "Dat is het maximum, niet het gemiddelde.", "Dat is het minimum.", "Dat is de modus, niet het gemiddelde."],
       },
@@ -108,7 +108,7 @@ const steps = [
         q: "Een gemiddelde ligt altijd tussen het kleinste en het grootste getal. Welk getal kan dus **nooit** het gemiddelde van een rij tussen **5 en 9** zijn?",
         options: ["3", "6", "7", "8"],
         answer: 0,
-        wrongHints: [null, "6 ligt tussen 5 en 9 — dat kán het gemiddelde zijn (bv. van 5 en 7).", "7 ligt tussen 5 en 9 — dat kán (bv. van 5, 7 en 9).", "8 ligt tussen 5 en 9 — dat kán (bv. van 7 en 9)."],
+        wrongHints: [null, "Kun je twee getallen tussen 5 en 9 bedenken met 6 als gemiddelde?", "Kun je getallen tussen 5 en 9 bedenken met 7 als gemiddelde?", "Kun je twee getallen tussen 5 en 9 bedenken met 8 als gemiddelde?"],
         uitlegPad: {
           stappen: [
             { titel: "Tussen min en max", tekst: "Gemiddelde ligt altijd tussen het laagste (5) en het hoogste (9) getal. 3 ligt eronder. 6/7/8 liggen ertussen, dus die kunnen wél." },
@@ -126,16 +126,16 @@ const steps = [
       },
       {
         q: "Welke zin **klopt** over een gemiddelde?",
-        options: ["Het is een berekening, geen 'echt' cijfer", "Het is altijd een rond getal", "Het is altijd hetzelfde als de modus", "Het is altijd het hoogste"],
+        options: ["Het kan een getal zijn dat niet in de rij staat", "Het is het middelste getal van de rij", "Het is het getal dat het vaakst voorkomt", "Het kan groter zijn dan het hoogste getal"],
         answer: 0,
-        wrongHints: [null, "Niet altijd — een gemiddelde kan ook 6,5 zijn.", "Modus en gemiddelde zijn vaak verschillend.", "Het ligt tussen laagste en hoogste, niet automatisch het hoogste."],
+        wrongHints: [null, "Het middelste getal na sorteren heeft een eigen naam. Is dat hetzelfde als som ÷ aantal?", "Hoe heet het getal dat het vaakst voorkomt?", "Kan een eerlijke verdeling meer opleveren dan het grootste stuk?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Welk zinnetje gaat over een **gemiddelde**?",
         options: [
-          "In juli was het hier per dag ongeveer 22 graden",
-          "Op maandag was het 25 graden",
+          "In juli was het per dag ongeveer 22 graden",
+          "Op maandag 6 juli was het 25 graden",
           "De warmste dag van juli was 31 graden",
           "In juli kwam 20 graden het vaakst voor",
         ],
@@ -189,7 +189,7 @@ const steps = [
           "Over de hele klas samen",
           "Over het kind met het hoogste cijfer",
           "Over het kind met het laagste cijfer",
-          "Over het kind dat als eerste klaar was",
+          "Over het kind met het middelste cijfer",
         ],
         answer: 0,
         wrongHints: [null, "Telt alleen dat ene kind mee als je een gemiddelde uitrekent?", null, null],
@@ -729,7 +729,7 @@ const steps = [
       },
       {
         q: "Wanneer **kun je geen gemiddelde** uitrekenen maar wel een **modus**?",
-        options: ["Bij kleuren / woorden / categorieën", "Bij hele getallen zoals 3 en 7", "Bij decimale getallen zoals 2,5", "Bij negatieve getallen zoals -4"],
+        options: ["Bij kleuren zoals rood en blauw", "Bij hele getallen zoals 3 en 7", "Bij decimale getallen zoals 2,5", "Bij negatieve getallen zoals -4"],
         answer: 0,
         wrongHints: [null, "Bij hele getallen werkt gemiddelde gewoon.", "Bij decimale getallen werkt gemiddelde ook.", "Bij negatieve getallen werkt gemiddelde ook."],
       },
@@ -1018,13 +1018,13 @@ const steps = [
     svg: mediaanSvg(),
     checks: [
       {
-        q: "**Mediaan** van: 3, 5, 7, 8, 9?",
+        q: "Wat is de **mediaan** van: 3, 5, 7, 8, 9?",
         options: ["7", "3", "9", "6"],
         answer: 0,
-        wrongHints: [null, "Dat is de laagste.", "Dat is de hoogste.", "Niet het middelste — kijk goed naar volgorde."],
+        wrongHints: [null, "Dat is de laagste.", "Dat is de hoogste.", "Staat 6 wel in de rij? De mediaan is het getal dat in het midden staat."],
       },
       {
-        q: "**Mediaan** van: 4, 8, 6, 10 (op volgorde zetten!)?",
+        q: "Wat is de **mediaan** van: 4, 8, 6, 10 (op volgorde zetten!)?",
         options: ["7", "6", "8", "28"],
         answer: 0,
         wrongHints: [null, "Dat is één van de 2 middelste; bij een even aantal pak je het gemiddelde van die twee.", "Dat is het andere middelste getal — wat doe je bij een even aantal met de twee middelste?", "Dat is de som, niet de mediaan."],
@@ -1045,10 +1045,10 @@ const steps = [
         },
       },
       {
-        q: "**Mediaan** van: 12, 5, 8, 3, 10, 7, 9 (7 getallen)?",
+        q: "Wat is de **mediaan** van: 12, 5, 8, 3, 10, 7, 9 (7 getallen)?",
         options: ["8", "7", "9", "5"],
         answer: 0,
-        wrongHints: [null, "Te weinig — vergeet niet eerst te sorteren en daarna het middelste getal te pakken.", "Te veel — controleer je sortering.", "Te weinig."],
+        wrongHints: [null, "Te weinig — vergeet niet eerst te sorteren en daarna het middelste getal te pakken.", "Te veel — controleer je sortering.", "Zet de getallen op volgorde. Staat 5 dan in het midden?"],
         uitlegPad: {
           stappen: [
             { titel: "Sorteer eerst", tekst: "3, 5, 7, **8**, 9, 10, 12 (op volgorde van klein naar groot)." },
@@ -1067,9 +1067,9 @@ const steps = [
       },
       {
         q: "Cijfers: 7, 7, 7, 7, **2** (iemand was ziek). Welk getal geeft een **eerlijker beeld** van de klas?",
-        options: ["Mediaan (7)", "Gemiddelde (6)", "Het laagste cijfer (2)", "Niet uit te leggen"],
+        options: ["Mediaan (7)", "Gemiddelde (6)", "Het laagste cijfer (2)", "Het bereik (5)"],
         answer: 0,
-        wrongHints: [null, "Gemiddelde is verlaagd door 1 uitschieter (2). Mediaan filtert dat eruit.", "Juist die 2 is de uitschieter — die zegt weinig over de rest van de klas.", "Wél — een uitschieter beïnvloedt gemiddelde maar niet mediaan."],
+        wrongHints: [null, "De 2 trekt het gemiddelde omlaag. Welk getal trekt zich weinig aan van zo'n uitschieter?", "Juist die 2 is de uitschieter — die zegt weinig over de rest van de klas.", "Het bereik zegt hoe ver de cijfers uit elkaar liggen, niet wat een gewoon cijfer is."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -1374,10 +1374,10 @@ const steps = [
       "Drie begrippen, drie situaties. **Welke gebruik je waarvoor?**\n\n**1. Gemiddelde** = som ÷ aantal.\n• Gebruik bij: cijfers, lengtes, gewichten, prijzen, temperaturen.\n• Voordeel: gebruikt alle getallen.\n• Nadeel: gevoelig voor uitschieters (extreem hoge of lage waardes).\n\n**2. Modus** = vaakst.\n• Gebruik bij: kleuren, schoenmaten, favoriete dieren, sport-keuzes.\n• Voordeel: werkt ook voor woorden/categorieën.\n• Nadeel: zegt niets over hoe verspreid de groep is.\n\n**3. Mediaan** = middelste op volgorde.\n• Gebruik bij: inkomens, huizenprijzen — overal waar uitschieters zijn.\n• Voordeel: minder gevoelig voor uitschieters.\n• Nadeel: een beetje meer werk (sorteren).\n\n**Toets-tip — herken de woorden in een vraag**:\n• *'gemiddeld'* → bereken gemiddelde.\n• *'meest', 'vaakst'* → modus.\n• *'middelste', 'mediaan'* → mediaan.\n\n**Voorbeeld** *'In een klas van 25 leerlingen is de gemiddelde leeftijd 11 jaar. De meest voorkomende leeftijd (modus) is 12.'*\n• Sommigen zijn dus jonger (lager dan 12) — daarom is gemiddelde 11 en modus 12.\n• Beide kloppen — verschillende dingen meten.",
     checks: [
       {
-        q: "Vraag: *'Welke schoenmaat verkoopt het **meest** in onze winkel?'* Welk begrip?",
+        q: "Vraag: *'Welke schoenmaat verkoopt het **meest** in onze winkel?'* Welk begrip hoort daarbij?",
         options: ["Modus", "Gemiddelde", "Mediaan", "Som"],
         answer: 0,
-        wrongHints: [null, "Gemiddelde geeft een uitkomst zoals 'maat 38,5'. Niemand draagt dat. We willen weten welke maat het VAAKST verkocht is.", "Mediaan zou het middelste zijn van alle verkopen. Geeft niet aan welke maat 'het populairst' is.", "Som is alleen het totaal aantal verkopen."],
+        wrongHints: [null, "Het gemiddelde geeft een uitkomst zoals maat 38,5. Kun je die maat verkopen?", "Mediaan zou het middelste zijn van alle verkopen. Geeft niet aan welke maat 'het populairst' is.", "Som is alleen het totaal aantal verkopen."],
       },
       {
         q: "Vraag: *'Je telt alle rapportcijfers van de klas op en deelt door het aantal leerlingen.'* Welk begrip reken je dan uit?",
@@ -1392,7 +1392,7 @@ const steps = [
         wrongHints: [null, "Gemiddelde wordt opgedreven door de superrijke — geeft scheef beeld.", "Modus is wat het VAAKST voorkomt — bij inkomens vaak niet handig.", "Som is totaal van alle inkomens, niet 'per persoon'."],
       },
       {
-        q: "Wat heeft een **kleur-stemming** wel maar geen gemiddelde?",
+        q: "Welk begrip kun je bij een stemming over **kleuren** wél gebruiken?",
         options: ["Modus", "Gemiddelde", "Mediaan", "Geen van deze"],
         answer: 0,
         wrongHints: [null, "Probeer 'gemiddelde kleur' uit te rekenen — werkt dat?", "Mediaan werkt niet — kleuren hebben geen volgorde.", "Eén van deze drie werkt wél bij kleuren."],
@@ -1404,14 +1404,14 @@ const steps = [
           "Je moet de getallen eerst op volgorde zetten",
           "Hij werkt alleen bij kleuren en woorden",
           "Eén uitschieter verandert hem heel veel",
-          "Hij gebruikt nooit het middelste getal",
+          "Je moet eerst alle getallen optellen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Bij welk begrip gebruik je kleuren en woorden?",
           "Is de mediaan juist gevoelig of juist niet zo gevoelig voor uitschieters?",
-          null,
+          "Optellen hoort bij een ander begrip. Wat doe je eerst bij de mediaan?",
         ],
       },
       {
@@ -1419,15 +1419,15 @@ const steps = [
         options: [
           "Hij zegt niets over hoe verspreid de groep is",
           "Hij werkt niet bij kleuren en woorden",
-          "Je moet altijd delen door het aantal",
-          "Je moet de getallen eerst optellen",
+          "Je moet eerst delen door het aantal",
+          "Eén uitschieter verandert hem heel veel",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Juist bij kleuren en woorden is de modus handig. Wat is dan het nadeel?",
           "Delen doe je bij een ander begrip.",
-          null,
+          "Verandert het getal dat het vaakst voorkomt als je één heel groot getal toevoegt?",
         ],
       },
       {
@@ -1452,56 +1452,56 @@ const steps = [
       "Mix-toets in Doorstroomtoets-stijl. Verschillende sommen door elkaar — gemiddelde, modus, mediaan.\n\n**Tip**: lees rustig en kijk welk woord in de vraag staat (*gemiddeld* / *meest* / *middelste*). Daar zit de hint.\n\nVeel succes!",
     checks: [
       {
-        q: "Cijfers: 7, 8, 9, 6, 5 *(5 toetsen)*. **Gemiddeld**?",
+        q: "Je haalt voor 5 toetsen een 7, 8, 9, 6 en 5. Wat is je **gemiddelde**?",
         options: ["7", "8", "35", "5"],
         answer: 0,
-        wrongHints: [null, "Te veel — 8 is maar één van de cijfers. Reken som ÷ aantal.", "Dat is de som — nog ÷ 5.", "Dat is de laagste."],
+        wrongHints: [null, "Te veel — 8 is maar één van de cijfers. Reken som ÷ aantal.", "Dat is de som — nog ÷ 5.", "Dat is je laagste cijfer. Ligt het gemiddelde zo laag?"],
       },
       {
-        q: "Schoenen verkocht: maat 38, 39, 38, 40, 38, 41, 39. **Modus**?",
+        q: "Een winkel verkoopt schoenen in maat 38, 39, 38, 40, 38, 41 en 39. Wat is de **modus**?",
         options: ["38", "39", "40", "41"],
         answer: 0,
         wrongHints: [null, "39 komt 2× voor — tel nog eens welke maat het vaakst voorkomt.", "40 komt maar 1×.", "41 komt maar 1×."],
       },
       {
-        q: "Leeftijden: 8, 10, 12, 9, 11. **Mediaan**?",
+        q: "Vijf kinderen zijn 8, 10, 12, 9 en 11 jaar. Wat is de **mediaan**?",
         options: ["10", "8", "12", "11"],
         answer: 0,
         wrongHints: [null, "Dat is de laagste, niet de middelste — sorteer eerst.", "Dat is de hoogste, niet de middelste.", "Dat is positie 4 — niet de middelste van 5."],
       },
       {
-        q: "Temperaturen 4 dagen: 18, 20, 22, 20 °C. **Gemiddelde temperatuur**?",
+        q: "Het was 4 dagen 18, 20, 22 en 20 °C. Wat is de **gemiddelde** temperatuur?",
         options: ["20 °C", "18 °C", "80 °C", "22 °C"],
         answer: 0,
-        wrongHints: [null, "Te weinig — tel alle temperaturen bij elkaar op en deel dan door het aantal dagen.", "Dat is de som — je moet nog door het aantal metingen delen.", "Dat is de hoogste."],
+        wrongHints: [null, "Te weinig — tel alle temperaturen bij elkaar op en deel dan door het aantal dagen.", "Dat is de som — je moet nog door het aantal metingen delen.", "Dat is de hoogste temperatuur. Ligt het gemiddelde zo hoog?"],
       },
       {
-        q: "Klas-test: 6, 6, 6, 7, 8. **Modus** EN **mediaan** zijn allebei ... ?",
-        options: ["6", "7", "8", "Ze verschillen — modus=6, mediaan=7"],
+        q: "Uitslagen van een toets: 6, 6, 6, 7 en 8. De **modus** en de **mediaan** zijn hier allebei …",
+        options: ["6", "7", "8", "Modus 6, mediaan 7"],
         answer: 0,
-        wrongHints: [null, "Controleer welk getal het vaakst voorkomt (modus) en welk getal in het midden staat na sortering (mediaan).", "Niet beide 8 — 8 komt maar 1× voor.", "Ze zijn hier toch gelijk — bereken modus (meest voorkomend) en mediaan (midden na sortering) nog eens."],
+        wrongHints: [null, "Controleer welk getal het vaakst voorkomt (modus) en welk getal in het midden staat na sortering (mediaan).", "Niet beide 8 — 8 komt maar 1× voor.", "De getallen staan al op volgorde. Welk getal staat precies in het midden?"],
       },
       {
         q: "Kan een gemiddelde een **kommagetal** zijn (dus geen heel getal)?",
-        options: ["Ja, bijvoorbeeld bij 6 en 7", "Nooit", "Alleen bij negatieve getallen", "Alleen bij heel veel getallen"],
+        options: ["Ja, ook bij twee hele getallen", "Nee, dat kan niet", "Alleen bij negatieve getallen", "Alleen bij heel veel getallen"],
         answer: 0,
-        wrongHints: [null, "Wél — probeer twee cijfers bij elkaar op te tellen en te delen, kan het uitkomen op een kommagetal?", "Dat is niet de regel — gemiddeldes met decimalen komen super vaak voor.", "Ook bij weinig getallen kan een gemiddelde decimaal zijn."],
+        wrongHints: [null, "Probeer het gemiddelde van 6 en 7. Komt dat op een heel getal uit?", "Reken het gemiddelde van 6 en 7 uit. Zitten daar negatieve getallen bij?", "Hoeveel getallen heb je nodig voor een gemiddelde als 6,5?"],
       },
-      { q: "Gem van 3, 5, 7?", options: ["5","15","3","7"], answer: 0, wrongHints: [null, "Dat is som.", "Min.", "Max."] },
-      { q: "Modus van 4, 7, 4, 9, 4, 7, 2?", options: ["4","7","9","2"], answer: 0, wrongHints: [null, "2 keer.", "1 keer.", "1 keer."] },
-      { q: "Mediaan van 5, 2, 8, 1, 4?", options: ["4","2","8","5"], answer: 0, wrongHints: [null, "Niet zonder sorteren.", "Niet.", "Niet zonder sorteren."] },
-      { q: "Mediaan van 4, 6, 8, 10?", options: ["7","6","8","9"], answer: 0, wrongHints: [null, "Een midden.", "Een midden.", "Niet."] },
-      { q: "Gem van 10, 20, 30, 40?", options: ["25","30","100","40"], answer: 0, wrongHints: [null, "Te veel — 30 is maar één van de getallen. Reken som ÷ aantal.", "Som.", "Max."] },
-      { q: "5 toetsen, gemiddelde 7. Som?", options: ["35","12","7","75"], answer: 0, wrongHints: [null, "Niet — som = aantal × gem.", "Gem.", "Te veel."] },
-      { q: "Bereik (grootste min kleinste getal) van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Max alleen.", "Niet.", "Min alleen."] },
-      { q: "Modus van 1,2,3,4,5 (alle 1×)?", options: ["Geen modus","1","5","3"], answer: 0, wrongHints: [null, "Niet — vaakst is niemand.", "Niet.", "Niet."] },
-      { q: "Welk getal in een rij komt **vaakst** voor: 3, 5, 5, 5, 7, 7, 9?", options: ["5","7","3","9"], answer: 0, wrongHints: [null, "2 keer.", "1 keer.", "1 keer."] },
-      { q: "Wanneer is mediaan zinvoller dan gemiddelde?", options: ["Bij uitschieters","Bij weinig getallen","Nooit","Altijd"], answer: 0, wrongHints: [null, "Niet.", "Wel soms.", "Niet altijd."] },
+      { q: "Wat is het **gemiddelde** van 3, 5 en 7?", options: ["5","15","3","7"], answer: 0, wrongHints: [null, "Dat is de som. Wat moet je daarna nog doen?", "Dat is het kleinste getal. Ligt het gemiddelde zo laag?", "Dat is het grootste getal. Ligt het gemiddelde zo hoog?"] },
+      { q: "Wat is de **modus** van 4, 7, 4, 9, 4, 7, 2?", options: ["4","7","9","2"], answer: 0, wrongHints: [null, "7 staat er 2 keer in. Is er een getal dat vaker voorkomt?", "Hoe vaak staat 9 in de rij?", "Hoe vaak staat 2 in de rij?"] },
+      { q: "Wat is de **mediaan** van 5, 2, 8, 1, 4?", options: ["4","2","8","5"], answer: 0, wrongHints: [null, "Zet de getallen op volgorde. Staat 2 dan in het midden?", "8 staat midden in de rij zoals hij nu is. Heb je de getallen eerst op volgorde gezet?", "5 is het eerste getal. Staat het na sorteren in het midden?"] },
+      { q: "Wat is de **mediaan** van 4, 6, 8 en 10?", options: ["7","6","8","9"], answer: 0, wrongHints: [null, "6 is één van de twee middelste getallen. Wat doe je bij een even aantal?", "8 is ook een van de twee middelste. Wat doe je met die twee?", "Welke twee getallen staan in het midden? Ligt 9 daar precies tussen?"] },
+      { q: "Wat is het **gemiddelde** van 10, 20, 30 en 40?", options: ["25","30","100","40"], answer: 0, wrongHints: [null, "Te veel — 30 is maar één van de getallen. Reken som ÷ aantal.", "Dat is de som. Door hoeveel moet je nog delen?", "Dat is het grootste getal. Ligt het gemiddelde zo hoog?"] },
+      { q: "Je maakte 5 toetsen en je gemiddelde is een 7. Wat is de **som** van je cijfers?", options: ["35","12","7","1,4"], answer: 0, wrongHints: [null, "Een gemiddelde is som ÷ aantal. Hoe reken je dan terug naar de som?", "Dat is het gemiddelde zelf. Hoeveel is alles samen?", "Je deelde 7 door 5. Moet je hier delen?"] },
+      { q: "Wat is het **bereik** (grootste min kleinste getal) van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Dat is het grootste getal. Wat moet je er nog vanaf halen?", "12 is het eerste getal van de rij. Welke twee getallen heb je nodig?", "Dat is het kleinste getal. Wat doe je ermee?"] },
+      { q: "Wat is de **modus** van 1, 2, 3, 4, 5?", options: ["Geen modus","1","5","3"], answer: 0, wrongHints: [null, "Hoe vaak staat 1 in de rij? En de andere getallen?", "5 is het grootste getal. Komt het vaker voor dan de rest?", "3 staat in het midden. Is de modus het middelste getal?"] },
+      { q: "Welk getal komt het **vaakst** voor in 3, 5, 5, 5, 7, 7, 9?", options: ["5","7","3","9"], answer: 0, wrongHints: [null, "7 staat er 2 keer. Komt een ander getal vaker voor?", "Hoe vaak staat 3 erin?", "Hoe vaak staat 9 erin?"] },
+      { q: "Wanneer is de **mediaan** beter dan het gemiddelde?", options: ["Bij een uitschieter in de rij","Bij weinig getallen in de rij","Bij getallen met een komma","Bij getallen die dicht bij elkaar liggen"], answer: 0, wrongHints: [null, "Ook bij weinig getallen werkt het gemiddelde prima. Wat kan een gemiddelde scheef trekken?", "Kommagetallen kun je gewoon optellen en delen. Wat trekt een gemiddelde scheef?", "Als alles dicht bij elkaar ligt, scheelt het weinig. Wanneer scheelt het juist veel?"] },
       { q: "Een **uitschieter** is?", options: ["Een getal dat ver van de rest afligt","Het getal dat het vaakst voorkomt","Het middelste getal na sorteren","Het gemiddelde van alle getallen"], answer: 0, wrongHints: [null, "Dat is de modus.", "Dat is de mediaan.", "Dat is het gemiddelde zelf."] },
-      { q: "Welke maat verandert het meest als je 1 grote uitschieter toevoegt?", options: ["Gemiddelde","Mediaan","Modus","Geen"], answer: 0, wrongHints: [null, "Mediaan verschuift maar weinig — de middelste blijft bijna gelijk.", "Modus blijft meestal hetzelfde — vaakste-getal verandert niet vlug.", "Eén van deze maten reageert wél sterk op een uitschieter."] },
-      { q: "5 keer gegooid: 3, 5, 5, 6, 6. Mediaan?", options: ["5","6","4","3"], answer: 0, wrongHints: [null, "Te hoog — welk getal staat precies in het midden van de 5? (Ze staan al op volgorde.)", "Te laag.", "Te laag."] },
-      { q: "Gem van 4 en 8?", options: ["6","12","4","2"], answer: 0, wrongHints: [null, "Niet — dat is som.", "Klein.", "Niet."] },
-      { q: "Gemiddelde 5, modus 5 én mediaan 5 — kan dat?", options: ["Ja, dat kan","Nooit","Alleen bij 1 getal","Alleen bij 2 getallen"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Welke maat verandert het meest als je één grote uitschieter toevoegt?", options: ["Gemiddelde","Mediaan","Modus","Ze veranderen alle drie evenveel"], answer: 0, wrongHints: [null, "Mediaan verschuift maar weinig — de middelste blijft bijna gelijk.", "Modus blijft meestal hetzelfde — vaakste-getal verandert niet vlug.", "Kijk naar 2, 3, 4 en voeg 100 toe. Verandert alles evenveel?"] },
+      { q: "Je gooit 5 keer: 3, 5, 5, 6, 6. Wat is de **mediaan**?", options: ["5","6","4","3"], answer: 0, wrongHints: [null, "Te hoog — welk getal staat precies in het midden van de 5? (Ze staan al op volgorde.)", "Staat 4 wel in de rij? Welk getal staat precies in het midden?", "3 is het kleinste getal. Staat het in het midden?"] },
+      { q: "Wat is het **gemiddelde** van 4 en 8?", options: ["6","12","4","2"], answer: 0, wrongHints: [null, "Dat is de som. Wat moet je daarna nog doen?", "Dat is het kleinste getal. Ligt het gemiddelde zo laag?", "Deelde je 8 door 4? Tel eerst de getallen op."] },
+      { q: "Kan een rij getallen als gemiddelde, modus én mediaan allemaal 5 hebben?", options: ["Ja, dat kan","Nee, dat kan niet","Alleen bij 1 getal","Alleen bij 2 getallen"], answer: 0, wrongHints: [null, "Probeer de rij 4, 5, 5, 6. Wat zijn het gemiddelde, de modus en de mediaan?", "Kan het ook met meer getallen? Probeer 4, 5, 5, 6.", "Kan het ook met meer getallen? Probeer 4, 5, 5, 6."] },
     ],
   },
 ];

@@ -1,0 +1,587 @@
+{
+ "bestanden": [
+  "./matenEenheden.js",
+  "./vlakkeFigurenPo.js",
+  "./getallenTot20Po.js",
+  "./tijdSnelheidAfstandPo.js",
+  "./tellenKleutersPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "maten-eenheden",
+   "file": "./matenEenheden.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "5 kg = ? g",
+   "opties": [
+    "5000",
+    "500",
+    "50",
+    "50.000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-eenheden",
+   "file": "./matenEenheden.js",
+   "stap": 7,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Zet om: 3.500 m in km",
+   "opties": [
+    "3,5",
+    "350",
+    "35",
+    "0,35"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-eenheden",
+   "file": "./matenEenheden.js",
+   "stap": 7,
+   "vraag": 14,
+   "soort": "L2",
+   "q": "Welke is langste: 1 m, 100 cm, 1.000 mm?",
+   "opties": [
+    "Allemaal gelijk",
+    "1 m",
+    "100 cm",
+    "1000 mm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-eenheden",
+   "file": "./matenEenheden.js",
+   "stap": 7,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Een fles 1,5 L = hoeveel mL?",
+   "opties": [
+    "1500",
+    "150",
+    "15",
+    "15.000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-eenheden",
+   "file": "./matenEenheden.js",
+   "stap": 7,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Lengte van een gymzaal ongeveer?",
+   "opties": [
+    "20 m",
+    "2 m",
+    "200 m",
+    "2 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-eenheden",
+   "file": "./matenEenheden.js",
+   "stap": 7,
+   "vraag": 19,
+   "soort": "K",
+   "q": "1 dL = hoeveel mL?",
+   "opties": [
+    "100",
+    "10",
+    "1000",
+    "1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel dagen tussen 1 januari en 1 maart (niet-schrikkeljaar)?",
+   "opties": [
+    "59 dagen",
+    "60 dagen",
+    "61 dagen",
+    "58 dagen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "K",
+   "q": "1 dag is hoeveel seconden?",
+   "opties": [
+    "86 400 s",
+    "1440 s",
+    "3600 s",
+    "1 000 000 s"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "90 km/h in m/s?",
+   "opties": [
+    "25 m/s",
+    "50 m/s",
+    "324 m/s",
+    "9 m/s"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "12 m/s in km/h?",
+   "opties": [
+    "43,2 km/h",
+    "33 km/h",
+    "3,3 km/h",
+    "120 km/h"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Auto rijdt eerst 1 uur 60 km/h, dan 1 uur 90 km/h. Gemiddelde snelheid?",
+   "opties": [
+    "75 km/h",
+    "70 km/h",
+    "65 km/h",
+    "85 km/h"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Een renner gaat 50 km met 25 km/h + 50 km met 50 km/h. Gemiddelde?",
+   "opties": [
+    "33,3 km/h",
+    "37,5 km/h",
+    "75 km/h",
+    "25 km/h"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Lichtsnelheid in vacuüm:",
+   "opties": [
+    "300 000 km/s",
+    "300 000 km/h",
+    "300 m/s",
+    "Onbeperkt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Auto rijdt 3 uur met 90 km/h. Afstand?",
+   "opties": [
+    "270 km",
+    "30 km",
+    "93 km",
+    "180 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Fietser 20 km/h rijdt 15 minuten. Afstand?",
+   "opties": [
+    "5 km",
+    "300 km",
+    "20 km",
+    "15 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Een loper start 14:00 met 10 km/h. Komt aan om 14:30. Afstand?",
+   "opties": [
+    "5 km",
+    "10 km",
+    "20 km",
+    "300 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Op een v-t-grafiek: oppervlakte onder curve =?",
+   "opties": [
+    "Afgelegde afstand",
+    "Snelheid",
+    "Versnelling",
+    "Tijd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Een auto reist 300 km in 4 uur. Snelheid?",
+   "opties": [
+    "75 km/h",
+    "1200 km/h",
+    "60 km/h",
+    "100 km/h"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "240 km met 80 km/h — hoe lang?",
+   "opties": [
+    "3 uur",
+    "2 uur",
+    "4 uur",
+    "30 min"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wandelaar legt 6 km in 1,5 uur af. Snelheid?",
+   "opties": [
+    "4 km/h",
+    "9 km/h",
+    "0,25 km/h",
+    "3 km/h"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Trein om 14:30 vertrek, ongeveer 250 km met 100 km/h. Aankomst?",
+   "opties": [
+    "17:00",
+    "16:00",
+    "18:00",
+    "15:00"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijd-snelheid-afstand-po",
+   "file": "./tijdSnelheidAfstandPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Auto + fiets tegelijk, beide vanuit Amsterdam naar Utrecht (40 km). Auto 80 km/h, fiets 16 km/h. Hoeveel eerder is de auto er?",
+   "opties": [
+    "2 uur",
+    "30 min",
+    "5 uur",
+    "Gelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Met welke som reken je de omtrek van een rechthoek uit?",
+   "opties": [
+    "2 × (lengte + breedte)",
+    "lengte × breedte",
+    "lengte + breedte",
+    "4 × lengte"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waarom deel je bij de oppervlakte van een driehoek door 2?",
+   "opties": [
+    "Een driehoek is de helft van een rechthoek",
+    "Een driehoek heeft twee schuine zijden",
+    "Een driehoek heeft drie hoeken",
+    "De basis telt maar half mee"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Een vloer 8 × 6 m wordt betegeld. € 12 per m². Kosten?",
+   "opties": [
+    "€ 576",
+    "€ 168",
+    "€ 96",
+    "€ 720"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Rechthoek 8 × 5 cm. Oppervlakte?",
+   "opties": [
+    "40 cm²",
+    "26 cm²",
+    "13 cm²",
+    "45 cm²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Driehoek basis 6, hoogte 4. Oppervlakte?",
+   "opties": [
+    "12",
+    "24",
+    "10",
+    "8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Omtrek van driehoek met zijden 3, 4, 5?",
+   "opties": [
+    "12",
+    "60",
+    "11",
+    "9"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Oppervlakte vierkant 5 m bij 5 m?",
+   "opties": [
+    "25 m²",
+    "20 m²",
+    "10 m²",
+    "100 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Tegel 50 cm × 50 cm. Oppervlakte?",
+   "opties": [
+    "2.500 cm²",
+    "100 cm²",
+    "250 cm²",
+    "1 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Een cirkel heeft hoeveel hoeken?",
+   "opties": [
+    "0",
+    "1",
+    "2",
+    "4"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Een gelijkzijdige driehoek heeft hoeveel gelijke zijden?",
+   "opties": [
+    "3",
+    "2",
+    "1",
+    "0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Som van 3 hoeken in een driehoek?",
+   "opties": [
+    "180°",
+    "90°",
+    "360°",
+    "270°"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Som van 4 hoeken in een vierhoek?",
+   "opties": [
+    "360°",
+    "180°",
+    "270°",
+    "90°"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 25,
+   "soort": "K",
+   "q": "Tegels 1 m × 1 m. Vloer 3 × 4 m. Hoeveel tegels?",
+   "opties": [
+    "12",
+    "7",
+    "4",
+    "16"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "vlakke-figuren-po",
+   "file": "./vlakkeFigurenPo.js",
+   "stap": 4,
+   "vraag": 27,
+   "soort": "SK",
+   "q": "Symmetrie-as van een vierkant?",
+   "opties": [
+    "4 assen",
+    "2 assen",
+    "1 as",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

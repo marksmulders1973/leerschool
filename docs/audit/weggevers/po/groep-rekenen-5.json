@@ -1,0 +1,634 @@
+{
+ "bestanden": [
+  "./tabellenGrafieken.js",
+  "./verhoudingenPo.js",
+  "./oppervlakteOmtrekPo.js",
+  "./matenOmtrekOppervlaktePo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "3,5 km is hoeveel meter?",
+   "opties": [
+    "3500 m",
+    "350 m",
+    "35 m",
+    "35 000 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "K",
+   "q": "450 cm is hoeveel m?",
+   "opties": [
+    "4,5 m",
+    "45 m",
+    "0,45 m",
+    "4500 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "75 mm is hoeveel cm?",
+   "opties": [
+    "7,5 cm",
+    "750 cm",
+    "0,75 cm",
+    "0,075 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel cm² in 2,5 m²?",
+   "opties": [
+    "25 000 cm²",
+    "250 cm²",
+    "2500 cm²",
+    "250 000 cm²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Een park van 2 hectare is in m²?",
+   "opties": [
+    "20 000 m²",
+    "200 m²",
+    "2000 m²",
+    "2 000 000 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Cirkel met diameter 14 cm. Omtrek? (π = 3,14)",
+   "opties": [
+    "43,96 cm",
+    "21,98 cm",
+    "87,92 cm",
+    "153,86 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Cirkel met straal 10 m. Oppervlakte? (π = 3,14)",
+   "opties": [
+    "314 m²",
+    "31,4 m²",
+    "62,8 m²",
+    "100 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Een halve cirkel met straal 4 cm. Oppervlakte? (π = 3,14)",
+   "opties": [
+    "25,12 cm²",
+    "50,24 cm²",
+    "12,56 cm²",
+    "8 cm²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Balk 8 × 4 × 3 cm. Inhoud?",
+   "opties": [
+    "96 cm³",
+    "24 cm³",
+    "15 cm³",
+    "108 cm³"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Aquarium 60 cm × 30 cm × 25 cm. Inhoud in liter?",
+   "opties": [
+    "45 L",
+    "4,5 L",
+    "450 L",
+    "45 cm³"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Hoeveel m³ in 2500 L?",
+   "opties": [
+    "2,5 m³",
+    "25 m³",
+    "0,25 m³",
+    "250 m³"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Een vierkante tuin met omtrek 32 m. Oppervlakte?",
+   "opties": [
+    "64 m²",
+    "32 m²",
+    "128 m²",
+    "16 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Een muur is 3 m hoog en 5 m breed. Eén verfblik dekt 6 m². Hoeveel blikken?",
+   "opties": [
+    "3 blikken",
+    "2 blikken",
+    "1 blik",
+    "15 blikken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Een rechthoekig zwembad is 5 m × 3 m × 1 m. Hoeveel liter water past erin?",
+   "opties": [
+    "15 000 L",
+    "1500 L",
+    "150 L",
+    "150 000 L"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "maten-omtrek-oppervlakte-po",
+   "file": "./matenOmtrekOppervlaktePo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Een cirkelvormige vijver met straal 4 m. Oppervlakte? (π=3,14)",
+   "opties": [
+    "50,24 m²",
+    "25,12 m²",
+    "12,56 m²",
+    "100,48 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 5,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Lijngrafiek temperatuur over 5 dagen: 14, 16, 19, 17, 20. Op welke 2 opeenvolgende dagen daalde 't?",
+   "opties": [
+    "Dag 3 → 4",
+    "Dag 1 → 2",
+    "Dag 2 → 3",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Een cirkeldiagram: rood 60%, blauw 25%, geel 15%. Welk deel is MINDER dan een kwart?",
+   "opties": [
+    "Geel",
+    "Blauw",
+    "Rood",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Welk soort grafiek voor 30% jongens / 70% meisjes?",
+   "opties": [
+    "Cirkel/taartdiagram",
+    "Lijngrafiek",
+    "Staafdiagram",
+    "Verspreidingsdiagram"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Waar staat in een tabel meestal het totaal?",
+   "opties": [
+    "Onderaan",
+    "Linksboven",
+    "Verspreid",
+    "Niet in tabel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 12,
+   "soort": "S",
+   "q": "In een kolom van een tabel staan typisch?",
+   "opties": [
+    "Waarden onder elkaar",
+    "Waarden naast elkaar",
+    "Plaatjes",
+    "Alleen de titel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Bij lijngrafiek 'temperatuur per dag': hoogste piek = ?",
+   "opties": [
+    "Warmste dag",
+    "Koudste dag",
+    "Begin",
+    "Eind"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 15,
+   "soort": "L2K",
+   "q": "Welk schaal-probleem kan grafiek misleidend maken?",
+   "opties": [
+    "Y-as begint niet bij 0",
+    "Lijngrafiek",
+    "Veel data",
+    "Mooi getekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Welke gegevens zet je niet in een cirkeldiagram?",
+   "opties": [
+    "Verloop in tijd",
+    "Verdeling",
+    "Procenten",
+    "Verhouding"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 17,
+   "soort": "L2K",
+   "q": "Bij 'meeste/minste'-vraag in staaf: kijk naar?",
+   "opties": [
+    "Hoogste/laagste staaf",
+    "Eerste staaf",
+    "Laatste",
+    "Willekeurig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tabellen-grafieken",
+   "file": "./tabellenGrafieken.js",
+   "stap": 6,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Bij grafiek-vraag: eerst doen?",
+   "opties": [
+    "Titel + assen lezen",
+    "Direct antwoord raden",
+    "Telling totaal",
+    "Naam tellen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Een mengsel 3 : 1 (zand : cement). Bij 20 kg totaal — hoeveel cement?",
+   "opties": [
+    "5 kg",
+    "15 kg",
+    "4 kg",
+    "6 kg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "3 broden = € 6. Wat kosten 5 broden?",
+   "opties": [
+    "€ 10",
+    "€ 9",
+    "€ 12",
+    "€ 8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "In een klas van 28 leerlingen zijn 12 jongens. Verhouding jongens : meisjes?",
+   "opties": [
+    "12 : 16",
+    "16 : 12",
+    "12 : 28",
+    "28 : 12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "1 fles cola = €1,50. 6 flessen = ?",
+   "opties": [
+    "€9",
+    "€6",
+    "€1,50",
+    "€15"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Verhouding 2:3. Bij 2 = 10, bij 3 = ?",
+   "opties": [
+    "15",
+    "13",
+    "20",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Schaal 1:100 — 3 cm op tekening = echt?",
+   "opties": [
+    "3 m",
+    "30 cm",
+    "30 m",
+    "3 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Sap : water = 1 : 3. 200 mL sap → hoeveel water?",
+   "opties": [
+    "600 mL",
+    "200 mL",
+    "100 mL",
+    "300 mL"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 15,
+   "soort": "K",
+   "q": "120 km in 2 uur = welke snelheid?",
+   "opties": [
+    "60 km/u",
+    "120 km/u",
+    "240 km/u",
+    "30 km/u"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Schaal 1:5 op een tekening. 2 cm op de tekening = hoeveel in het echt?",
+   "opties": [
+    "10 cm",
+    "5 cm",
+    "½ cm",
+    "20 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "K",
+   "q": "8 m² muur kost 12 euro verf. 24 m²?",
+   "opties": [
+    "€36",
+    "€18",
+    "€48",
+    "€12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Op kaart 1:50.000 is 4 cm = welke afstand?",
+   "opties": [
+    "2 km",
+    "20 m",
+    "200 m",
+    "20 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Recept 2 eieren voor 4 personen. Voor 6 personen?",
+   "opties": [
+    "3 eieren",
+    "2 eieren",
+    "4 eieren",
+    "6 eieren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Plant groeit 5 cm in 2 weken. Per week?",
+   "opties": [
+    "2,5 cm",
+    "5 cm",
+    "7 cm",
+    "10 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhoudingen-po",
+   "file": "./verhoudingenPo.js",
+   "stap": 5,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Schaal 1:25 — model van 8 cm = echt?",
+   "opties": [
+    "2 m",
+    "25 m",
+    "2 cm",
+    "20 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

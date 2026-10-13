@@ -1,0 +1,555 @@
+{
+ "bestanden": [
+  "./breukenPo.js",
+  "./tijdsduurRekenenPo.js",
+  "./grafiekenLezenPo.js",
+  "./schaalKaartRekenenPo.js",
+  "./winstRekenenPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Drie-kwart van de klas in een klas van 24 — hoeveel?",
+   "opties": [
+    "18",
+    "6",
+    "12",
+    "20"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "3/4 van 20 = ?",
+   "opties": [
+    "15",
+    "12",
+    "16",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 5,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Een fles van 1,5 L, je drinkt 1/3. Hoeveel mL is dat?",
+   "opties": [
+    "500",
+    "300",
+    "450",
+    "250"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Op een toets van 40 vragen maakt Sven 3/5 goed. Hoeveel?",
+   "opties": [
+    "24",
+    "20",
+    "16",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 10,
+   "soort": "K",
+   "q": "½ van 20 = ?",
+   "opties": [
+    "10",
+    "5",
+    "15",
+    "2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 11,
+   "soort": "K",
+   "q": "¾ van 12 = ?",
+   "opties": [
+    "9",
+    "3",
+    "6",
+    "8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Vereenvoudig: ⁶⁄₉ = ?",
+   "opties": [
+    "⅔",
+    "½",
+    "¾",
+    "⅓"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Welke is kleinst: ¼, ½, of ¾?",
+   "opties": [
+    "¼",
+    "½",
+    "¾",
+    "Gelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 17,
+   "soort": "K",
+   "q": "¾ als decimaal?",
+   "opties": [
+    "0,75",
+    "0,34",
+    "0,43",
+    "0,8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 19,
+   "soort": "K",
+   "q": "2/5 + 1/5 = ?",
+   "opties": [
+    "3/5",
+    "3/10",
+    "2/25",
+    "⅕"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "breuken-po",
+   "file": "./breukenPo.js",
+   "stap": 6,
+   "vraag": 20,
+   "soort": "K",
+   "q": "½ × 4 = ?",
+   "opties": [
+    "2",
+    "½",
+    "¼",
+    "4"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Wat moet je altijd eerst lezen bij een grafiek?",
+   "opties": [
+    "Titel + assen + eenheid",
+    "Alleen het hoogste getal",
+    "De kleuren",
+    "Het laagste punt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat lees je af aan de y-as (zijkant)?",
+   "opties": [
+    "De waarde / hoeveelheid",
+    "De tijd / de dag",
+    "De legenda",
+    "De titel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Een staafdiagram is best voor?",
+   "opties": [
+    "Vergelijken van categorieën",
+    "Verloop in tijd",
+    "Verdeling van een geheel",
+    "Patroon"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "L2K",
+   "q": "Een taartdiagram is best voor?",
+   "opties": [
+    "Verdeling van een geheel",
+    "Verloop in tijd",
+    "Categorieën los",
+    "Patroon"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "L2",
+   "q": "Op de x-as staan meestal?",
+   "opties": [
+    "Tijd of categorie",
+    "Aantal",
+    "Frequentie",
+    "Totaal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Bij een lijngrafiek: stijgende lijn = ?",
+   "opties": [
+    "Toename",
+    "Afname",
+    "Geen verandering",
+    "Patroon herhalend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "SK",
+   "q": "Welke grafiek bij '4 leerlingen kiezen voetbal, 6 hockey, 2 zwemmen'?",
+   "opties": [
+    "Staafdiagram",
+    "Lijngrafiek",
+    "Tijdslijn",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Bij 'totaal 100%' verdeling kies je?",
+   "opties": [
+    "Taartdiagram",
+    "Lijn",
+    "Tijdslijn",
+    "Boom"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "K",
+   "q": "In een tabel met cijferresultaten: hoeveel cellen heeft 'naam + 3 vakken' voor 1 leerling?",
+   "opties": [
+    "4",
+    "3",
+    "1",
+    "2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "S",
+   "q": "Bij schaal-aanpassing kun je een grafiek?",
+   "opties": [
+    "Misleidend maken",
+    "Onmogelijk maken",
+    "Alleen mooier maken",
+    "Niet veranderen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "grafieken-lezen-po",
+   "file": "./grafiekenLezenPo.js",
+   "stap": 5,
+   "vraag": 20,
+   "soort": "L2",
+   "q": "Trend in lijngrafiek = ?",
+   "opties": [
+    "Algemene richting",
+    "1 punt",
+    "Titel",
+    "Schaal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schaal-kaart-rekenen-po",
+   "file": "./schaalKaartRekenenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Schaal 1 : 100.000. Op de kaart 4 cm. Hoeveel km in het echt?",
+   "opties": [
+    "4 km",
+    "40 km",
+    "40 m",
+    "0,4 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schaal-kaart-rekenen-po",
+   "file": "./schaalKaartRekenenPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Welke stap doe je ALTIJD als eerste bij een schaalvraag?",
+   "opties": [
+    "Bepalen of je van kaart naar echt rekent of andersom",
+    "Het antwoord meteen omzetten naar km",
+    "Altijd delen door het schaalgetal",
+    "Altijd vermenigvuldigen met het schaalgetal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Hardlopen van 17:50 → 18:25. Hoe lang?",
+   "opties": [
+    "35 min",
+    "45 min",
+    "25 min",
+    "1 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Vlucht 6 uur 45 min. Vertrek 9:00. Aankomst?",
+   "opties": [
+    "15:45",
+    "16:00",
+    "14:45",
+    "15:00"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "K",
+   "q": "70 minuten = ?",
+   "opties": [
+    "1 uur 10 min",
+    "1 uur 7 min",
+    "70 sec",
+    "2 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Hoeveel seconden in 5 minuten?",
+   "opties": [
+    "300",
+    "60",
+    "100",
+    "500"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "School 8:30 → 12:00, daarna 13:00 → 15:00. Totale lestijd?",
+   "opties": [
+    "5 uur 30 min",
+    "6 uur",
+    "4 uur",
+    "5 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Reis duurt 2 uur 50 min. Begint 14:25. Eindigt?",
+   "opties": [
+    "17:15",
+    "17:25",
+    "16:25",
+    "17:00"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Wedstrijd 90 min + verlenging 30 min. Totaal?",
+   "opties": [
+    "2 uur",
+    "1 uur 30 min",
+    "1 uur",
+    "2 uur 30 min"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Tussen 13:15 en 15:50. Duur?",
+   "opties": [
+    "2 uur 35 min",
+    "2 uur 45 min",
+    "2 uur 25 min",
+    "3 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tijdsduur-rekenen-po",
+   "file": "./tijdsduurRekenenPo.js",
+   "stap": 5,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Hoeveel uur in 1 dag?",
+   "opties": [
+    "24",
+    "12",
+    "48",
+    "60"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "winst-rekenen-po",
+   "file": "./winstRekenenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Wat is brutowinst?",
+   "opties": [
+    "De verkoopprijs min de inkoopprijs",
+    "De inkoopprijs min de verkoopprijs",
+    "De verkoopprijs plus de inkoopprijs",
+    "Alleen de verkoopprijs"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

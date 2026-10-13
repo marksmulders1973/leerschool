@@ -1,0 +1,1565 @@
+{
+ "bestanden": [
+  "./dierenSeizoenenNatuur.js",
+  "./dierenklassenPo.js",
+  "./gezondeVoedingPo.js",
+  "./lichaamGezondheidPo.js",
+  "./toestandStoffenPo.js",
+  "./waterkringloopPo.js",
+  "./ruimtevaartPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "dieren-seizoenen-natuur",
+   "file": "./dierenSeizoenenNatuur.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel poten heeft een insect?",
+   "opties": [
+    "6",
+    "4",
+    "8",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dieren-seizoenen-natuur",
+   "file": "./dierenSeizoenenNatuur.js",
+   "stap": 6,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat gebeurt vooral in de lente?",
+   "opties": [
+    "Veel jonge dieren geboren",
+    "Bladeren vallen",
+    "Sneeuw",
+    "Lange koude nachten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dieren-seizoenen-natuur",
+   "file": "./dierenSeizoenenNatuur.js",
+   "stap": 7,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Waarom vallen bladeren in de herfst?",
+   "opties": [
+    "Boom spaart energie in winter",
+    "Bladeren worden vies",
+    "Sneeuw drukt ze eraf",
+    "Vogels eten ze op"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dieren-seizoenen-natuur",
+   "file": "./dierenSeizoenenNatuur.js",
+   "stap": 8,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is fotosynthese?",
+   "opties": [
+    "Plant maakt suiker uit zonlicht",
+    "Plant fotografeert de zon",
+    "Plant verbrandt suiker",
+    "Plant ademt water in"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dieren-seizoenen-natuur",
+   "file": "./dierenSeizoenenNatuur.js",
+   "stap": 9,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat doet een afbreker?",
+   "opties": [
+    "Eet dode resten en maakt grond",
+    "Jaagt op andere dieren",
+    "Eet alleen planten",
+    "Slaapt de hele dag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dieren-seizoenen-natuur",
+   "file": "./dierenSeizoenenNatuur.js",
+   "stap": 10,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat doet een plant met zonlicht?",
+   "opties": [
+    "Maakt zelf voedsel",
+    "Wordt warmer",
+    "Krijgt kleur",
+    "Slaapt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welk kenmerk hebben zoogdieren?",
+   "opties": [
+    "Zogen jongen met melk",
+    "Leggen eieren",
+    "Schubben",
+    "Kieuwen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel lichaamsdelen heeft een insect?",
+   "opties": [
+    "3",
+    "2",
+    "4",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "S",
+   "q": "In de keten *'gras → muis → uil'*: wat eet de uil?",
+   "opties": [
+    "Muis",
+    "Gras",
+    "Andere uilen",
+    "Alles"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat doet een producent in een voedselketen?",
+   "opties": [
+    "Maakt eigen voedsel met zonlicht",
+    "Eet andere dieren",
+    "Verteert dood materiaal",
+    "Wordt nooit opgegeten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Hoeveel groepen gewervelde dieren (dieren met een ruggengraat) zijn er?",
+   "opties": [
+    "5",
+    "2",
+    "10",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Een walvis is een?",
+   "opties": [
+    "Zoogdier",
+    "Vis",
+    "Reptiel",
+    "Insect"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Een slang is een?",
+   "opties": [
+    "Reptiel",
+    "Amfibie",
+    "Vis",
+    "Zoogdier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "L2",
+   "q": "Wat is een koudbloedig dier?",
+   "opties": [
+    "Dier waarvan de temperatuur meegaat met de omgeving",
+    "Dier waarvan het bloed altijd ijskoud is",
+    "Dier dat altijd dezelfde temperatuur houdt",
+    "Dier zonder bloed"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "L2",
+   "q": "Welke diergroep heeft schubben?",
+   "opties": [
+    "Vissen + reptielen",
+    "Vogels",
+    "Zoogdieren",
+    "Insecten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Hoeveel lichaamsdelen heeft een insect?",
+   "opties": [
+    "3",
+    "2",
+    "4",
+    "6"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "dierenklassen-po",
+   "file": "./dierenklassenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Een spin is een?",
+   "opties": [
+    "Geen insect",
+    "Insect",
+    "Reptiel",
+    "Zoogdier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Hoeveel water per dag drinken?",
+   "opties": [
+    "1,5-2 liter",
+    "Geen",
+    "5 liter",
+    "100 ml"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat heeft vezels?",
+   "opties": [
+    "Volkoren + groente",
+    "Snoep",
+    "Frisdrank",
+    "Boter"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel groente per dag?",
+   "opties": [
+    "250 gram",
+    "1 kilo",
+    "10 gram",
+    "Geen aanbeveling"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Hoeveel vis per week?",
+   "opties": [
+    "1 keer",
+    "Elke dag",
+    "Nooit",
+    "Maandelijks"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Wat is vegetarisch?",
+   "opties": [
+    "Geen vlees en geen vis",
+    "Geen enkel dierlijk product",
+    "Alleen brood en groente",
+    "Alleen vis, geen vlees"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel suiker max per dag (WHO kind)?",
+   "opties": [
+    "25 g",
+    "100 g",
+    "0 g",
+    "1 kilo"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel alcohol onder 18?",
+   "opties": [
+    "Niets",
+    "1 glas",
+    "Veel",
+    "Geen regel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "1 glas frisdrank = hoeveel suikerklontjes?",
+   "opties": [
+    "~7",
+    "1",
+    "0",
+    "100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "SK",
+   "q": "Beweegnorm kind per dag?",
+   "opties": [
+    "1 uur bewegen",
+    "Niets",
+    "8 uur",
+    "5 minuten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Hoeveel water per dag?",
+   "opties": [
+    "1,5-2 liter",
+    "Geen",
+    "5 L",
+    "100 ml"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat in Schijf van Vijf moet het meest?",
+   "opties": [
+    "Groente + fruit",
+    "Vet",
+    "Snoep",
+    "Frisdrank"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2S",
+   "q": "Veganistisch = ?",
+   "opties": [
+    "Geen dierlijke producten",
+    "Geen vlees alleen",
+    "Alleen vlees",
+    "Alleen geen melk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Eiwitten vooral voor?",
+   "opties": [
+    "Groei + spieren",
+    "Snelle energie",
+    "Water",
+    "Vitamine"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "S",
+   "q": "Waardoor wordt de kans op diabetes type 2 kleiner?",
+   "opties": [
+    "Gezond eten + bewegen + niet roken",
+    "Veel suiker en snoep eten als kind",
+    "Alleen stoppen met vlees eten",
+    "Niets, want het is altijd erfelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 11,
+   "soort": "S",
+   "q": "Voor wie geldt 0,0 alcohol wettelijk?",
+   "opties": [
+    "Iedereen onder 18 jaar",
+    "Iedereen onder 21",
+    "Alleen kinderen onder 12",
+    "Bestuurders"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Hoeveel maaltijden per dag is gezond?",
+   "opties": [
+    "3 hoofdmaaltijden + 2-3 tussendoor",
+    "1 grote maaltijd + niets tussendoor",
+    "10 kleine maaltijden + veel snacks",
+    "Zoveel als je wilt, er is geen norm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "L2",
+   "q": "Welke voeding heeft veel calcium?",
+   "opties": [
+    "Melk + zuivel",
+    "Chips",
+    "Cola",
+    "Snoep"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Hoeveel fruit per dag (Schijf van Vijf)?",
+   "opties": [
+    "2 stuks",
+    "1 stuk",
+    "5 stuks",
+    "10 stuks"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 20,
+   "soort": "S",
+   "q": "Vegetarisch eten betekent?",
+   "opties": [
+    "Geen vlees + vis",
+    "Geen suiker",
+    "Niets",
+    "Alleen plantaardig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 22,
+   "soort": "S",
+   "q": "Wat is gezond ontbijt?",
+   "opties": [
+    "Volkoren + fruit + zuivel",
+    "Snoep + koek + limonade",
+    "Niets eten + snel naar school",
+    "Alleen een glas sap drinken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 25,
+   "soort": "L2K",
+   "q": "Welke voeding heeft veel vezels?",
+   "opties": [
+    "Volkoren + groenten",
+    "Wit brood",
+    "Snoep",
+    "Frisdrank"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gezonde-voeding-po",
+   "file": "./gezondeVoedingPo.js",
+   "stap": 3,
+   "vraag": 26,
+   "soort": "SK",
+   "q": "Hoeveel lichaamsbeweging per dag?",
+   "opties": [
+    "~1 uur",
+    "5 min",
+    "Geen",
+    "8 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel spieren heeft een mens ongeveer?",
+   "opties": [
+    "Meer dan 600",
+    "Ongeveer 100",
+    "Precies 200",
+    "Ongeveer 50"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Rode bloedcellen vervoeren ... ?",
+   "opties": [
+    "Zuurstof",
+    "Ziektekiemen",
+    "Voedsel",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel nieren heb je?",
+   "opties": [
+    "2",
+    "1",
+    "4",
+    "0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel vakken heeft de Schijf van Vijf?",
+   "opties": [
+    "5",
+    "3",
+    "7",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel stuks fruit per dag?",
+   "opties": [
+    "2 stuks",
+    "5 stuks",
+    "1 stuk",
+    "10 stuks"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel water moet je drinken per dag?",
+   "opties": [
+    "~1,5 liter",
+    "~3 liter",
+    "~0,5 liter",
+    "~5 liter"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel uur slaap heeft een kind van 10 ongeveer nodig?",
+   "opties": [
+    "9-11 uur",
+    "5-6 uur",
+    "12-15 uur",
+    "3-4 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Hoe vaak tanden poetsen?",
+   "opties": [
+    "2× per dag",
+    "1× per week",
+    "5× per dag",
+    "Alleen als ze pijn doen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoe lang moet een kind bewegen per dag (minimaal)?",
+   "opties": [
+    "~1 uur",
+    "10 minuten",
+    "3 uur",
+    "Heel de dag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel belangrijke soorten bloedcellen zijn er?",
+   "opties": [
+    "3",
+    "1",
+    "5",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Tanden poetsen doe je hoe vaak?",
+   "opties": [
+    "2× per dag",
+    "1× per dag",
+    "1× per week",
+    "Na elke maaltijd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Hoeveel botten heeft een volwassen mens ongeveer?",
+   "opties": [
+    "206",
+    "100",
+    "500",
+    "1.000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Welke voeding is goed voor botten?",
+   "opties": [
+    "Melk en kaas",
+    "Snoep",
+    "Cola",
+    "Chips"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Hoeveel uur slaap heeft een 10-jarige nodig?",
+   "opties": [
+    "9-11 uur",
+    "4-5 uur",
+    "12-14 uur",
+    "6 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Hoeveel zintuigen noemen we meestal?",
+   "opties": [
+    "5",
+    "2",
+    "3",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "lichaam-gezondheid-po",
+   "file": "./lichaamGezondheidPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Hoeveel liter water moet een 10-jarige drinken per dag?",
+   "opties": [
+    "~1,5 liter",
+    "5 liter",
+    "0,5 liter",
+    "10 liter"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Door welke wet werkt een raket?",
+   "opties": [
+    "Newtons 3e wet",
+    "Zwaartekracht alleen",
+    "Einstein",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Waarom dichtbij evenaar lanceren?",
+   "opties": [
+    "Aarde draait daar sneller",
+    "Mooier weer",
+    "Geen reden",
+    "Minder vliegverkeer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel mensen liepen op maan totaal?",
+   "opties": [
+    "12",
+    "1",
+    "100",
+    "0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoe lang doet ISS over een rondje aarde?",
+   "opties": [
+    "~90 minuten",
+    "24 uur",
+    "1 maand",
+    "Een jaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat is James Webb (gelanceerd in 2021)?",
+   "opties": [
+    "Een ruimtetelescoop",
+    "ISS-onderdeel",
+    "Raket",
+    "Auto"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel mensen op maan totaal?",
+   "opties": [
+    "12",
+    "0",
+    "100",
+    "1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Apollo 11 wanneer?",
+   "opties": [
+    "1969",
+    "1957",
+    "1989",
+    "2020"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ruimtevaart-po",
+   "file": "./ruimtevaartPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Hoeveel manen heeft de Aarde?",
+   "opties": [
+    "1",
+    "0",
+    "2",
+    "Meer dan 50"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2K",
+   "q": "Waarom drijft olie op water?",
+   "opties": [
+    "Olie is lichter dan water",
+    "Olie is zwaarder",
+    "Olie is een gas",
+    "Olie is vast"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2S",
+   "q": "In de watercyclus: wat gebeurt eerst?",
+   "opties": [
+    "Verdampen (zee → wolk)",
+    "Regenen (wolk → zee)",
+    "IJsvorming",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Wat vult een gas?",
+   "opties": [
+    "De hele ruimte",
+    "Onderkant van ruimte",
+    "Bovenkant",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Stoom is welke toestand?",
+   "opties": [
+    "Gas",
+    "Vloeibaar",
+    "Vast",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Wat is sublimeren?",
+   "opties": [
+    "Direct van vast naar gas",
+    "Smelten",
+    "Stollen",
+    "Verdampen via vloeibaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Hoeveel hoofdtoestanden heeft een stof?",
+   "opties": [
+    "3",
+    "2",
+    "5",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Bij welke temperatuur kookt water (op zeeniveau)?",
+   "opties": [
+    "100°C",
+    "0°C",
+    "37°C",
+    "50°C"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Wat is stollen?",
+   "opties": [
+    "Vloeibaar wordt vast",
+    "Vast wordt vloeibaar",
+    "Verdampen",
+    "Condenseren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Wat is verdampen?",
+   "opties": [
+    "Vloeibaar wordt gas",
+    "Gas wordt vloeibaar",
+    "Smelten",
+    "Stollen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "IJs op een glas is welke toestand?",
+   "opties": [
+    "Vast",
+    "Vloeibaar",
+    "Gas",
+    "Plasma"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "L2",
+   "q": "Wat is massa?",
+   "opties": [
+    "Hoeveelheid materie",
+    "Temperatuur",
+    "Volume",
+    "Kleur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Lucht is welke toestand?",
+   "opties": [
+    "Gas",
+    "Vloeibaar",
+    "Vast",
+    "Plasma"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "toestand-stoffen-po",
+   "file": "./toestandStoffenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "L2SK",
+   "q": "Welke stof zet uit bij verwarming (gewoonlijk)?",
+   "opties": [
+    "Bijna alle stoffen",
+    "Geen",
+    "Alleen water",
+    "Alleen ijs"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is verdamping?",
+   "opties": [
+    "Vloeibaar water → damp",
+    "Damp → vloeibaar",
+    "Wolken naar regen",
+    "IJs smelt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2K",
+   "q": "Wat is condensatie?",
+   "opties": [
+    "Damp koelt af → wolken",
+    "Regen valt",
+    "Water bevriest",
+    "Verdampen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoe lang blijft water gemiddeld in de lucht?",
+   "opties": [
+    "~8-10 dagen",
+    "1 uur",
+    "Eeuwen",
+    "Niet bekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel weegt gemiddelde cumulus-wolk?",
+   "opties": [
+    "~500 ton",
+    "1 kg",
+    "Geen gewicht",
+    "1 miljoen ton"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel kleuren in regenboog?",
+   "opties": [
+    "7",
+    "3",
+    "10",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel van NL ligt onder zeeniveau?",
+   "opties": [
+    "~25%",
+    "100%",
+    "0%",
+    "75%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Verdamping = ?",
+   "opties": [
+    "Vloeibaar → damp",
+    "Damp → vloeibaar",
+    "Bevriezen",
+    "Smelten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel zoet water op aarde?",
+   "opties": [
+    "~3%",
+    "50%",
+    "100%",
+    "97%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Polder = ?",
+   "opties": [
+    "Drooggemaakt land",
+    "Bergweide",
+    "Meer",
+    "Een soort dijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "SK",
+   "q": "Wanneer was de Afsluitdijk klaar?",
+   "opties": [
+    "1932",
+    "1953",
+    "1900",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Hoeveel kleuren regenboog?",
+   "opties": [
+    "7",
+    "3",
+    "10",
+    "1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Welke 4 hoofdstappen vormen samen de waterkringloop?",
+   "opties": [
+    "Verdamping → wolken → neerslag → afstromen terug naar zee",
+    "Eten → drinken → plassen → slapen",
+    "Zonsopgang → middag → zonsondergang → nacht",
+    "Lente → zomer → herfst → winter"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "S",
+   "q": "Waar komt drinkwater in NL vandaan?",
+   "opties": [
+    "Vooral uit grondwater en rivieren",
+    "Direct uit zee zonder zuivering",
+    "Alleen regenwater opvangen",
+    "Geïmporteerd uit het buitenland"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 9,
+   "soort": "L2",
+   "q": "Wat is verdamping?",
+   "opties": [
+    "Water wordt waterdamp (gas)",
+    "Water wordt ijs",
+    "Water valt naar beneden",
+    "IJs wordt water"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 10,
+   "soort": "L2S",
+   "q": "Wat is condensatie?",
+   "opties": [
+    "Waterdamp wordt water",
+    "IJs wordt water",
+    "Water wordt gas",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Wanneer was de Watersnoodramp?",
+   "opties": [
+    "1953",
+    "1900",
+    "2000",
+    "1700"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Hoeveel % van de aarde is bedekt met water?",
+   "opties": [
+    "~71%",
+    "30%",
+    "100%",
+    "50%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 16,
+   "soort": "L2S",
+   "q": "Wat is neerslag?",
+   "opties": [
+    "Regen + sneeuw + hagel",
+    "Alleen regen",
+    "Alleen sneeuw",
+    "Wolken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Hoe ziet een regenboog eruit?",
+   "opties": [
+    "7 kleuren",
+    "1 kleur",
+    "Zwart-wit",
+    "Onzichtbaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Wanneer zie je dauw?",
+   "opties": [
+    "Ochtend op gras",
+    "Middag",
+    "Nacht in lucht",
+    "In de winter in huis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "waterkringloop-po",
+   "file": "./waterkringloopPo.js",
+   "stap": 3,
+   "vraag": 26,
+   "soort": "K",
+   "q": "Hoeveel van je lichaam is water?",
+   "opties": [
+    "~60%",
+    "10%",
+    "100%",
+    "30%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

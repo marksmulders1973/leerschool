@@ -1,0 +1,894 @@
+{
+ "bestanden": [
+  "./topografieNederland.js",
+  "./algoritmenProgrammerenPo.js",
+  "./digitaleGeletterdheidPo.js",
+  "./politiekDemocratiePo.js",
+  "./klassiekeMuziekPo.js",
+  "./emotiesSocialePo.js",
+  "./europeseUniePo.js",
+  "./topografieWereldWerelddelenPo.jsx"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L",
+   "q": "Welk wachtwoord is sterk?",
+   "opties": [
+    "Mijn-kat-eet-graag-vis-2024!",
+    "123456",
+    "password",
+    "Je naam"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L",
+   "q": "Welk wachtwoord is goed?",
+   "opties": [
+    "Mijn-kat-eet-vis-2024!",
+    "12345",
+    "naam",
+    "Wachtwoord"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "algoritmen-programmeren-po",
+   "file": "./algoritmenProgrammerenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat doet if-statement?",
+   "opties": [
+    "Iets doen ALS voorwaarde klopt",
+    "De computer sneller maken",
+    "Iets steeds herhalen",
+    "Een waarde onthouden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "algoritmen-programmeren-po",
+   "file": "./algoritmenProgrammerenPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wie was Ada Lovelace?",
+   "opties": [
+    "De eerste programmeur",
+    "Eerste president",
+    "Schilder",
+    "Astronaut"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "algoritmen-programmeren-po",
+   "file": "./algoritmenProgrammerenPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Wat doet een variabele in code?",
+   "opties": [
+    "Onthoudt een waarde onder een naam",
+    "Voert berekening uit",
+    "Toont bericht aan gebruiker",
+    "Sluit programma af"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "algoritmen-programmeren-po",
+   "file": "./algoritmenProgrammerenPo.js",
+   "stap": 3,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Wat is een loop (lus) in code?",
+   "opties": [
+    "Stappen herhalen",
+    "Een spel",
+    "Een variabele",
+    "Een fout"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "algoritmen-programmeren-po",
+   "file": "./algoritmenProgrammerenPo.js",
+   "stap": 3,
+   "vraag": 23,
+   "soort": "L2",
+   "q": "Welk probleem lost een algoritme niet op?",
+   "opties": [
+    "Onmogelijke wiskunde",
+    "Sorteren",
+    "Zoeken",
+    "Patronen vinden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wat is CPU?",
+   "opties": [
+    "Processor",
+    "Geheugen",
+    "Scherm",
+    "Internet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat is kruis-controleren?",
+   "opties": [
+    "2-3 onafhankelijke bronnen vergelijken",
+    "Eén keer kijken op één site",
+    "Niets vragen en meteen geloven",
+    "Gokken welke bron het beste is"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2K",
+   "q": "Welk wachtwoord is sterk?",
+   "opties": [
+    "Mijn-kat-eet-graag-vis-2024!",
+    "123456",
+    "password",
+    "Je naam"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wie bedacht WWW?",
+   "opties": [
+    "Tim Berners-Lee",
+    "Gates",
+    "Jobs",
+    "Zuckerberg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "digitale-geletterdheid-po",
+   "file": "./digitaleGeletterdheidPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welk wachtwoord is goed?",
+   "opties": [
+    "Mijn-kat-eet-vis-2024!",
+    "12345",
+    "naam",
+    "Wachtwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel basis-emoties (Ekman)?",
+   "opties": [
+    "6",
+    "2",
+    "100",
+    "12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wat is een ik-boodschap?",
+   "opties": [
+    "Eigen gevoel uiten",
+    "Verwijt aan ander",
+    "Geen mening",
+    "Schreeuwen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel slaap bij puberteit?",
+   "opties": [
+    "8-10 uur",
+    "3 uur",
+    "12+ uur",
+    "6 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Welk nummer Kindertelefoon?",
+   "opties": [
+    "0800-0432",
+    "112",
+    "0900",
+    "0800-2000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Mag je 'nee' zeggen?",
+   "opties": [
+    "Ja, jouw grenzen tellen",
+    "Nee, altijd toegeven",
+    "Soms",
+    "Niet aan vrienden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel basis-emoties (Ekman)?",
+   "opties": [
+    "6",
+    "1",
+    "100",
+    "0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Wat is ik-boodschap?",
+   "opties": [
+    "Eigen gevoel uiten",
+    "Verwijt aan ander",
+    "Geen mening",
+    "Schreeuwen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Welk nummer Kindertelefoon?",
+   "opties": [
+    "0800-0432",
+    "112",
+    "0900",
+    "0800-2000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "emoties-sociaal-po",
+   "file": "./emotiesSocialePo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2S",
+   "q": "Wat doe je bij boosheid?",
+   "opties": [
+    "Tel 10 + diep ademen",
+    "Direct schreeuwen",
+    "Slaan",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "europese-unie-po",
+   "file": "./europeseUniePo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Mag een Nederlander zonder werkvergunning in Frankrijk gaan werken?",
+   "opties": [
+    "Ja — door het vrij verkeer van personen",
+    "Nee — alleen met speciale vergunning",
+    "Alleen voor maximaal 3 maanden",
+    "Alleen als hij Frans spreekt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "europese-unie-po",
+   "file": "./europeseUniePo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "De Nederlandse minister van Klimaat & Energie gaat naar Brussel om met andere EU-ministers Klimaat over een wet te stemmen. In welke instelling zit hij dan?",
+   "opties": [
+    "de Europese Commissie",
+    "het Europees Parlement",
+    "de Europese Raad",
+    "de Raad van de Europese Unie"
+   ],
+   "answer": 3,
+   "lijst": "extra"
+  },
+  {
+   "pad": "europese-unie-po",
+   "file": "./europeseUniePo.js",
+   "stap": 5,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel sterren staan er op de EU-vlag?",
+   "opties": [
+    "10 sterren",
+    "12 sterren",
+    "15 sterren",
+    "27 sterren (één per lidstaat)"
+   ],
+   "answer": 1,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Welke componist was een wonderkind in de 18e eeuw?",
+   "opties": [
+    "Mozart",
+    "Bach",
+    "Beethoven",
+    "Chopin"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel mensen in symfonieorkest?",
+   "opties": [
+    "~80-100",
+    "10",
+    "1000",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Wie leidt orkest?",
+   "opties": [
+    "Dirigent",
+    "Eerste violist",
+    "Pianist",
+    "Niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wie won Eurovisie 2019 voor NL?",
+   "opties": [
+    "Duncan Laurence",
+    "Marco Borsato",
+    "André Hazes",
+    "Tiësto"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel strijkers in symfonieorkest?",
+   "opties": [
+    "~50-60",
+    "5",
+    "200",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "K",
+   "q": "EU-volkslied = ?",
+   "opties": [
+    "Beethoven 9e",
+    "Mozart Requiem",
+    "Wilhelmus",
+    "Bach Toccata"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Welke muziekstijl hoort bij Mozart en Beethoven?",
+   "opties": [
+    "Klassieke muziek",
+    "Pop",
+    "Hip-hop",
+    "Country"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Wat is een strijkkwartet?",
+   "opties": [
+    "4 strijkers samen",
+    "Sportgroep",
+    "Schilderij",
+    "Boek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "klassieke-muziek-po",
+   "file": "./klassiekeMuziekPo.js",
+   "stap": 3,
+   "vraag": 11,
+   "soort": "L2",
+   "q": "Wat is adagio?",
+   "opties": [
+    "Langzaam tempo",
+    "Snel tempo",
+    "Stil",
+    "Hard"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel zetels in Tweede Kamer?",
+   "opties": [
+    "150",
+    "100",
+    "300",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2K",
+   "q": "Wat is Trias Politica?",
+   "opties": [
+    "3 machten verdeeld",
+    "1 partij",
+    "Politieagent",
+    "Verkiezing"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Wie maakt wetten?",
+   "opties": [
+    "Tweede + Eerste Kamer + regering",
+    "Alleen de koning, in zijn eentje",
+    "De politie en de burgemeester",
+    "De rechters in de rechtbank"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wie straft misdaad?",
+   "opties": [
+    "Rechter",
+    "Minister",
+    "Burgemeester",
+    "Iedereen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wie is koning NL sinds 2013?",
+   "opties": [
+    "Willem-Alexander",
+    "Beatrix",
+    "Amalia",
+    "Máxima"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wie controleert wetkwaliteit?",
+   "opties": [
+    "Eerste Kamer",
+    "Tweede Kamer",
+    "Koning",
+    "Politie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wat doet waterschap?",
+   "opties": [
+    "Dijken en water beheren",
+    "Treinen laten rijden",
+    "Paspoorten maken",
+    "Scholen bouwen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "L2K",
+   "q": "Wat is Artikel 1 Grondwet?",
+   "opties": [
+    "Verbod op discriminatie",
+    "Recht op auto",
+    "Recht op huis",
+    "Plicht naar school"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Wat is een klassiek grondrecht?",
+   "opties": [
+    "Wat je MAG (vrijheid)",
+    "Wat je MOET (verplichting)",
+    "Wat de staat MOET regelen (zorg)",
+    "Wat je MOET betalen (belasting)"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat is briefgeheim?",
+   "opties": [
+    "Je post mag niet zomaar gelezen worden",
+    "Een brief in geheimschrift",
+    "Een verbod om brieven te schrijven",
+    "Een brief zonder afzender"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 5,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wat is democratie?",
+   "opties": [
+    "Volk beslist",
+    "Eén leider",
+    "Rechters beslissen",
+    "Koning beslist"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 5,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel Tweede Kamerleden?",
+   "opties": [
+    "150",
+    "75",
+    "300",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 5,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel provincies?",
+   "opties": [
+    "12",
+    "11",
+    "13",
+    "16"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 5,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Wat is Trias Politica?",
+   "opties": [
+    "3 machten gescheiden",
+    "2 partijen die samenwerken",
+    "1 koning met alle macht",
+    "3 grote politieke partijen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 5,
+   "vraag": 16,
+   "soort": "L2",
+   "q": "Wat is een referendum?",
+   "opties": [
+    "Volk stemt direct over één onderwerp",
+    "Verkiezing van kandidaten",
+    "Peiling door een krant",
+    "Toespraak van de koning"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "politiek-democratie-po",
+   "file": "./politiekDemocratiePo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Wat is een burgemeester?",
+   "opties": [
+    "Hoofd van een gemeente",
+    "Minister",
+    "Koning",
+    "Commissaris van de Koning"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-nederland",
+   "file": "./topografieNederland.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat is de hoofdstad van Noord-Brabant?",
+   "opties": [
+    "'s-Hertogenbosch",
+    "Eindhoven",
+    "Tilburg",
+    "Breda"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-nederland",
+   "file": "./topografieNederland.js",
+   "stap": 8,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Wat is de hoofdstad van Nederland?",
+   "opties": [
+    "Amsterdam",
+    "Den Haag",
+    "Rotterdam",
+    "Utrecht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-nederland",
+   "file": "./topografieNederland.js",
+   "stap": 8,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Welke stad is de regeringsstad van NL?",
+   "opties": [
+    "Den Haag",
+    "Amsterdam",
+    "Rotterdam",
+    "Utrecht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-nederland",
+   "file": "./topografieNederland.js",
+   "stap": 8,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Hoeveel provincies heeft NL?",
+   "opties": [
+    "12",
+    "11",
+    "13",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-nederland",
+   "file": "./topografieNederland.js",
+   "stap": 8,
+   "vraag": 12,
+   "soort": "K",
+   "q": "De Waddeneilanden liggen in het ... van Nederland?",
+   "opties": [
+    "Noorden",
+    "Zuiden",
+    "Westen",
+    "Oosten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "topografie-nederland",
+   "file": "./topografieNederland.js",
+   "stap": 8,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Hoogste berg in NL ligt in?",
+   "opties": [
+    "Limburg",
+    "Friesland",
+    "Zeeland",
+    "Noord-Holland"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

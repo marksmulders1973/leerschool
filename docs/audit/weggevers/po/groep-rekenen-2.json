@@ -1,0 +1,474 @@
+{
+ "bestanden": [
+  "./delenPo.js",
+  "./kalenderRekenenPo.js",
+  "./redactiesommen.js",
+  "./romeinseCijfersPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel dagen in een gewoon jaar?",
+   "opties": [
+    "365 dagen",
+    "360 dagen",
+    "366 dagen",
+    "364 dagen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel dagen in februari in een schrikkeljaar?",
+   "opties": [
+    "29 dagen",
+    "28 dagen",
+    "30 dagen",
+    "31 dagen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "10 dagen na dinsdag is welke dag?",
+   "opties": [
+    "Vrijdag",
+    "Donderdag",
+    "Zaterdag",
+    "Dinsdag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Vandaag = 10 maart. Welke datum is 5 dagen later?",
+   "opties": [
+    "15 maart",
+    "5 maart",
+    "14 maart",
+    "20 maart"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Vandaag = 28 februari (gewoon jaar). Welke datum is 3 dagen later?",
+   "opties": [
+    "3 maart",
+    "31 februari",
+    "1 maart",
+    "5 maart"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Anna geboren in 2010, vandaag is 2026 *(ze is al jarig dit jaar)*. Leeftijd?",
+   "opties": [
+    "16 jaar",
+    "15 jaar",
+    "14 jaar",
+    "17 jaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Tom geboren 20 oktober 2013. Vandaag is 5 maart 2026 *(NOG niet jarig dit jaar)*. Leeftijd?",
+   "opties": [
+    "12 jaar",
+    "13 jaar",
+    "14 jaar",
+    "11 jaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Lisa wordt 8 jaar, ze is geboren in 2018. Welk jaar wordt ze 8?",
+   "opties": [
+    "2026",
+    "2025",
+    "2027",
+    "2024"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel dagen is een week?",
+   "opties": [
+    "7",
+    "5",
+    "10",
+    "14"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Vakantie van 20 juli t/m 3 augustus. Aantal dagen *(beide meetellen)*?",
+   "opties": [
+    "15 dagen",
+    "14 dagen",
+    "16 dagen",
+    "13 dagen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel dagen in een schrikkeljaar?",
+   "opties": [
+    "366",
+    "365",
+    "364",
+    "367"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Van 10 juni tot 10 juli is hoeveel dagen *(niet beide meetellen)*?",
+   "opties": [
+    "30 dagen",
+    "31 dagen",
+    "28 dagen",
+    "29 dagen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Hoeveel maanden in 1 jaar?",
+   "opties": [
+    "12",
+    "10",
+    "11",
+    "13"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Schrikkeljaar komt elke?",
+   "opties": [
+    "4 jaar",
+    "2 jaar",
+    "10 jaar",
+    "100 jaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Hoeveel weken in 1 jaar (ongeveer)?",
+   "opties": [
+    "52",
+    "12",
+    "100",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Welke dag komt na vrijdag?",
+   "opties": [
+    "Zaterdag",
+    "Donderdag",
+    "Zondag",
+    "Maandag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Koningsdag is op?",
+   "opties": [
+    "27 april",
+    "30 april",
+    "5 mei",
+    "30 maart"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Dodenherdenking is op?",
+   "opties": [
+    "4 mei",
+    "5 mei",
+    "11 nov",
+    "2 nov"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Hoeveel dagen in een week?",
+   "opties": [
+    "7",
+    "5",
+    "10",
+    "6"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Een kwartaal heeft hoeveel maanden?",
+   "opties": [
+    "3",
+    "4",
+    "6",
+    "12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kalender-rekenen-po",
+   "file": "./kalenderRekenenPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Hoeveel dagen in 3 weken?",
+   "opties": [
+    "21",
+    "20",
+    "14",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "*'In 4 dozen zitten elk 12 koeken'.* — welke bewerking voor totaal?",
+   "opties": [
+    "Vermenigvuldigen",
+    "Optellen",
+    "Aftrekken",
+    "Delen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "S",
+   "q": "*'Tom is 11 jaar. Hij heeft 36 knikkers. Hij verliest er 8.'* Welk getal is niet relevant?",
+   "opties": [
+    "11",
+    "36",
+    "8",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "*'In een tuin staan 24 rozen, 18 tulpen en 12 zonnebloemen. Hoeveel bloemen totaal?'*",
+   "opties": [
+    "54",
+    "42",
+    "30",
+    "60"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "K",
+   "q": "*'In de klas zitten 28 kinderen. 3/4 deel is naar gym. Hoeveel kinderen niet?'*",
+   "opties": [
+    "7",
+    "21",
+    "4",
+    "14"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "5 vrienden delen 20 koeken eerlijk. Per persoon?",
+   "opties": [
+    "4",
+    "5",
+    "20",
+    "2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Een doos heeft 12 chocoladerepen. Hoeveel repen zitten er in 3 dozen?",
+   "opties": [
+    "36",
+    "12",
+    "9",
+    "15"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 4,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Klas heeft 30 leerlingen. 12 meisjes. Hoeveel jongens?",
+   "opties": [
+    "18",
+    "12",
+    "30",
+    "42"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "redactiesommen-pad",
+   "file": "./redactiesommen.js",
+   "stap": 4,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Trein 250 km/u. In 3 uur?",
+   "opties": [
+    "750",
+    "250",
+    "83",
+    "550"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

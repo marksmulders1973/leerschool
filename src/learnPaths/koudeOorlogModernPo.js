@@ -75,10 +75,10 @@ const steps = [
         },
       },
       {
-        q: "Wat is **'IJzeren Gordijn'**?",
-        options: ["Scheiding tussen West- en Oost-Europa","Een echt gordijn gemaakt van ijzer","Een groot wapen uit de Koude Oorlog","Een beroemd Russisch oorlogsschip"],
+        q: "Wat was het **IJzeren Gordijn**?",
+        options: ["Scheiding tussen West- en Oost-Europa","Een muur dwars door de stad Berlijn","Een groot wapen uit de Koude Oorlog","Een beroemd Russisch oorlogsschip"],
         answer: 0,
-        wrongHints: [null, "Geen letterlijk gordijn van ijzer — dit is beeldspraak voor een politieke grens.", "Geen wapen, maar een term over verdeling van Europa.", "Geen voertuig — het gaat over een grens in Europa na WO2."],
+        wrongHints: [null, "Dat is de Berlijnse Muur — het IJzeren Gordijn was veel langer.", "Geen wapen — het woord is beeldspraak.", "Geen schip — het woord is beeldspraak."],
         uitlegPad: {
           stappen: [
             { titel: "Wie bedacht het?", tekst: "Winston Churchill (oud-premier Groot-Brittannië) zei in 1946: 'Een ijzeren gordijn is over Europa gevallen'. Het werd direct een wereldberoemde term." },
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Welke Nederlander is sinds 2024 **secretaris-generaal van de NAVO**?",
-        options: ["Mark Rutte", "Wilders", "Schoof", "Niemand"],
+        options: ["Mark Rutte", "Geert Wilders", "Dick Schoof", "Jaap de Hoop Scheffer"],
         answer: 0,
-        wrongHints: [null, "Partijleider in de Tweede Kamer, geen NAVO-functie.", "Volgde Rutte op als premier in Den Haag — niet bij de NAVO in Brussel.", "Er is wél een Nederlander benoemd — wie was tot 2024 heel lang premier?"],
+        wrongHints: [null, "Geert Wilders is partijleider in de Tweede Kamer, geen NAVO-baas.", "Dick Schoof werd in 2024 minister-president in Den Haag.", "Hij was ook baas van de NAVO, maar van 2004 tot 2009."],
       },
     ],
   },
@@ -120,13 +120,13 @@ const steps = [
         q: "Wanneer werd de **Berlijnse Muur gebouwd**?",
         options: ["1961", "1945", "1989", "1949"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Toen viel hij.", "Toen ontstonden de twee Duitslanden — de muur kwam later."],
+        wrongHints: [null, "In 1945 eindigde de Tweede Wereldoorlog.", "In 1989 gebeurde er juist iets anders met de muur.", "In 1949 ontstonden de twee Duitslanden."],
       },
       {
         q: "Wat was de **Cuba-crisis** (1962)?",
-        options: ["Bijna-kernoorlog om raketten op Cuba", "Echte oorlog tussen VS en Cuba", "Revolutie van Fidel Castro", "Orkaan die Cuba verwoestte"],
+        options: ["Bijna-kernoorlog om raketten op Cuba", "Echte oorlog tussen VS en Cuba", "Opstand tegen de dictator van Cuba", "Blokkade van de stad Berlijn"],
         answer: 0,
-        wrongHints: [null, "Echte oorlog werd nét voorkomen — dat is juist het verhaal.", "Die revolutie was al in 1959 — wat gebeurde er in 1962?", "Geen natuurramp — dit was 13 dagen waarin de wereld op springen stond."],
+        wrongHints: [null, "Echte oorlog werd nét voorkomen — dat is juist het verhaal.", "Die revolutie was al in 1959 — wat gebeurde er in 1962?", "Berlijn werd in 1948 afgesloten — dat was een andere crisis."],
         uitlegPad: {
           stappen: [
             { titel: "Wat was er aan de hand?", tekst: "Cuba werd in 1959 communistisch (Fidel Castro). De USSR plaatste daar kernraketten — slechts **150 km** van Florida (VS). De VS schrok zich rot." },
@@ -153,9 +153,9 @@ const steps = [
       },
       {
         q: "Wie won de **Vietnam-oorlog**?",
-        options: ["Noord-Vietnam", "VS", "Niemand", "Frankrijk"],
+        options: ["Noord-Vietnam", "De VS", "Zuid-Vietnam", "Frankrijk"],
         answer: 0,
-        wrongHints: [null, "De VS trok zich terug zonder de oorlog te winnen — pijnlijke nederlaag.", "Iemand won wel — kijk naar wie sinds 1975 heel Vietnam beheerste.", "Frankrijk had Vietnam eerder als kolonie maar verloor al in 1954 (Dien Bien Phu)."],
+        wrongHints: [null, "De VS trok zich terug zonder de oorlog te winnen — pijnlijke nederlaag.", "Zuid-Vietnam verloor en hield in 1975 op te bestaan.", "Frankrijk had Vietnam eerder als kolonie maar verloor al in 1954 (Dien Bien Phu)."],
         uitlegPad: {
           stappen: [
             { titel: "Wie vocht tegen wie?", tekst: "Noord-Vietnam (communistisch, geholpen door USSR en China) vocht tegen Zuid-Vietnam (gesteund door VS en bondgenoten). Een proxy-oorlog tussen grootmachten." },
@@ -215,15 +215,15 @@ const steps = [
     checks: [
       {
         q: "Wanneer **viel de Berlijnse Muur**?",
-        options: ["1989", "1961", "2001", "2022"],
+        options: ["1989", "1961", "1979", "1999"],
         answer: 0,
-        wrongHints: [null, "Toen gebouwd.", "9/11.", "Oekraïne."],
+        wrongHints: [null, "In 1961 werd de muur juist gebouwd.", "In 1979 stond de muur nog overeind.", "Kijk in de les naar het jaartal bij de val van de muur."],
       },
       {
         q: "Wie was **Gorbatsjov**?",
-        options: ["Leider van de Sovjet-Unie", "President van de VS", "Leider van Oost-Duitsland", "Premier van Nederland"],
+        options: ["Leider van de Sovjet-Unie", "President van de VS", "Leider van Oost-Duitsland", "Leider van China"],
         answer: 0,
-        wrongHints: [null, "Gorbatsjov leidde de Sovjet-Unie, niet de VS.", "Oost-Duitsland had eigen leiders, zoals Honecker — Gorbatsjov zat in Moskou.", "Gorbatsjov is Russisch, niet Nederlands."],
+        wrongHints: [null, "De presidenten van de VS in die tijd waren Reagan en Bush.", "Oost-Duitsland had eigen leiders, zoals Honecker.", "China had eigen leiders, zoals Mao."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was hij?", tekst: "**Mikhail Gorbatsjov** (1931-2022) werd in 1985 leider van de Sovjet-Unie. Hij begreep dat het systeem stond te wankelen — armoede, corruptie, achterstand op Westen." },
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "Wat gebeurde op **11 september 2001**?",
-        options: ["Aanslag Twin Towers NYC", "Berlijnse Muur viel", "Cuba-crisis", "Sovjet-Unie viel uiteen"],
+        options: ["Aanslag op de Twin Towers in New York", "De Berlijnse Muur viel", "De Cuba-crisis begon", "De Sovjet-Unie viel uiteen"],
         answer: 0,
-        wrongHints: [null, "De Muur viel 12 jaar eerder (1989).", "Cuba-crisis was 1962, niet 2001.", "De Sovjet-Unie viel al in 1991 uit elkaar."],
+        wrongHints: [null, "De Muur viel al in de vorige eeuw.", "De Cuba-crisis was in 1962, niet in 2001.", "De Sovjet-Unie viel al in de vorige eeuw uit elkaar."],
         uitlegPad: {
           stappen: [
             { titel: "Wat gebeurde er?", tekst: "Op dinsdag 11 september 2001 kaapten **19 terroristen van Al-Qaida** 4 vliegtuigen in de VS. Twee vlogen in de Twin Towers (World Trade Center, New York). Eén in het Pentagon. Eén crashte in Pennsylvania (passagiers vochten terug)." },
@@ -289,18 +289,18 @@ const steps = [
     title: "Eind-toets — Koude Oorlog mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Koude Oorlog** = ?", options: ["Spanning tussen VS en USSR", "Echte oorlog tussen VS en USSR", "Oorlog in de winter", "Ruzie tussen VS en Engeland"], answer: 0, wrongHints: [null, "Geen direct.", "De naam slaat niet op het weer.", "Engeland was juist een bondgenoot van de VS."] },
-      { q: "Wanneer **viel de Berlijnse Muur**?", options: ["1989", "1961", "1945", "2001"], answer: 0, wrongHints: [null, "Gebouwd.", "WO2-einde.", "9/11."] },
-      { q: "Wie voorkwamen een **kernoorlog tijdens de Cuba-crisis (1962)**?", options: ["Kennedy en Chroesjtsjov", "Stalin en Truman", "Gorbatsjov en Reagan", "Hitler en Churchill"], answer: 0, wrongHints: [null, "Stalin was in 1953 al overleden.", "Die waren pas in de jaren '80 aan de macht.", "WO2."] },
+      { q: "Wat was de **Koude Oorlog**?", options: ["Spanning tussen VS en USSR", "Echte oorlog tussen VS en USSR", "Oorlog in de winter", "Ruzie tussen VS en Engeland"], answer: 0, wrongHints: [null, "Er werd wel gevochten in andere landen, maar niet rechtstreeks tussen die twee.", "De naam slaat niet op het weer.", "Engeland was juist een bondgenoot van de VS."] },
+      { q: "Wanneer **viel de Berlijnse Muur**?", options: ["1989", "1961", "1945", "1999"], answer: 0, wrongHints: [null, "In 1961 werd de muur gebouwd.", "In 1945 eindigde de Tweede Wereldoorlog.", "Kijk in de les naar het jaartal bij de val van de muur."] },
+      { q: "Wie voorkwamen een **kernoorlog tijdens de Cuba-crisis (1962)**?", options: ["Kennedy en Chroesjtsjov", "Stalin en Truman", "Gorbatsjov en Reagan", "Hitler en Churchill"], answer: 0, wrongHints: [null, "Stalin was in 1953 al overleden.", "Die waren pas in de jaren '80 aan de macht.", "Zij leefden in de tijd van de Tweede Wereldoorlog."] },
       { q: "Wat is **NAVO**?", options: ["Westers militair bondgenootschap","Oosters militair bondgenootschap","Wereldwijde organisatie voor vrede","Europese samenwerking voor handel"], answer: 0, wrongHints: [null,"Dat was het Warschaupact, rond de Sovjet-Unie.","Dat lijkt op de VN. Doen bij de NAVO alle landen van de wereld mee?","Dat lijkt op de EU. Ging de NAVO over handel, of over iets anders?"] },
-      { q: "Wie won de **Vietnam-oorlog**?", options: ["Noord-Vietnam", "VS", "Frankrijk", "Niemand"], answer: 0, wrongHints: [null, "Verloor.", "Eerder weg.", "Iemand won wel — wie beheerste sinds 1975 heel Vietnam?"] },
+      { q: "Wie won de **Vietnam-oorlog**?", options: ["Noord-Vietnam", "De VS", "Frankrijk", "Zuid-Vietnam"], answer: 0, wrongHints: [null, "De VS trok zich terug zonder te winnen.", "Frankrijk was al in 1954 vertrokken.", "Zuid-Vietnam verloor en hield in 1975 op te bestaan."] },
       { q: "Wanneer was **9/11**?", options: ["11 september 2001","9 november 1989","5 mei 1945","24 februari 2022"], answer: 0, wrongHints: [null,"Toen viel de Berlijnse Muur. 9/11 gaat over een aanslag in Amerika.","Toen werd Nederland bevrijd.","Toen begon de grote oorlog in Oekraïne."] },
-      { q: "Wat was het **IJzeren Gordijn**?", options: ["Symbolische grens tussen Oost en West","Een echt gordijn in een museum","Een lange rivier tussen twee landen","Een hoge bergketen midden in Europa"], answer: 0, wrongHints: [null,"Geen echt gordijn — waar staat het woord voor?","Is een rivier van ijzer? Waar zou het woord 'gordijn' voor staan?","Bergen horen bij de natuur. Gaat het IJzeren Gordijn over natuur of over politiek?"] },
-      { q: "Welke leider leidde de **Sovjet-Unie** in WO2?", options: ["Stalin", "Hitler", "Roosevelt", "Churchill"], answer: 0, wrongHints: [null, "Duitsland.", "VS.", "VK."] },
-      { q: "Welk land was **bondgenoot van de VS** in de NAVO?", options: ["West-Duitsland", "Oost-Duitsland", "Sovjet-Unie", "China"], answer: 0, wrongHints: [null, "Warschau-pact.", "Tegenstander VS.", "Communistisch."] },
-      { q: "Wat is een **dictatuur**?", options: ["Eén leider met alle macht", "Een eerlijke democratie", "Een soort religie", "Een soort sport"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet politiek.", "Niet politiek."] },
-      { q: "Wanneer viel de **Sovjet-Unie uiteen**?", options: ["1991", "1945", "1989", "2000"], answer: 0, wrongHints: [null, "WO2.", "Berlijnse Muur.", "Te laat."] },
-      { q: "Wie werd **leider van Cuba na de revolutie van 1959**?", options: ["Fidel Castro", "Kennedy", "Stalin", "Chroesjtsjov"], answer: 0, wrongHints: [null, "VS-president.", "Sovjet-leider eerder.", "Sovjet."] },
+      { q: "Wat was het **IJzeren Gordijn**?", options: ["Een grens tussen Oost- en West-Europa","De muur dwars door de stad Berlijn","Een lange rivier tussen twee landen","Een hoge bergketen midden in Europa"], answer: 0, wrongHints: [null,"De Berlijnse Muur was maar een klein stukje — het IJzeren Gordijn was veel langer.","Is een rivier van ijzer? Waar zou het woord 'gordijn' voor staan?","Bergen horen bij de natuur. Gaat het IJzeren Gordijn over natuur of over politiek?"] },
+      { q: "Welke leider leidde de **Sovjet-Unie** in WO2?", options: ["Stalin", "Hitler", "Roosevelt", "Churchill"], answer: 0, wrongHints: [null, "Hitler leidde Duitsland.", "Roosevelt was president van de VS.", "Churchill leidde het Verenigd Koninkrijk."] },
+      { q: "Welk land was in de NAVO een **bondgenoot van de VS**?", options: ["West-Duitsland", "Oost-Duitsland", "Sovjet-Unie", "China"], answer: 0, wrongHints: [null, "Oost-Duitsland hoorde bij het Warschaupact.", "De Sovjet-Unie was juist de tegenstander van de VS.", "China was communistisch en zat niet in de NAVO."] },
+      { q: "Wat is een **dictatuur**?", options: ["Eén leider met alle macht", "Een land met eerlijke verkiezingen", "Een land met koning en parlement", "Een land zonder leger"], answer: 0, wrongHints: [null, "Dat is juist een democratie.", "Zo is het in Nederland: daar beslist het parlement mee.", "Een dictator heeft juist vaak een sterk leger."] },
+      { q: "Wanneer viel de **Sovjet-Unie uiteen**?", options: ["1991", "1945", "1989", "2000"], answer: 0, wrongHints: [null, "In 1945 eindigde de Tweede Wereldoorlog.", "In 1989 viel de Berlijnse Muur — de Sovjet-Unie bestond toen nog.", "Kijk in de les naar het jaartal."] },
+      { q: "Wie werd **leider van Cuba na de revolutie van 1959**?", options: ["Fidel Castro", "John F. Kennedy", "Che Guevara", "Chroesjtsjov"], answer: 0, wrongHints: [null, "Kennedy was president van de VS.", "Che Guevara vocht mee in de revolutie, maar werd niet de leider.", "Chroesjtsjov leidde de Sovjet-Unie."] },
     ],
   },
 ];

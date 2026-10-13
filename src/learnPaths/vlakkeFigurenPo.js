@@ -57,7 +57,7 @@ const steps = [
         q: "Vierkant met **zijde 7 m** — wat is de **omtrek**?",
         options: ["28 m","49 m","14 m","21 m"],
         answer: 0,
-        wrongHints: [null,"Dat is oppervlakte (zijde²).","Te weinig — controleer 4 × 7.","Te weinig — heb je 3 zijden gerekend?"],
+        wrongHints: [null,"Dat is oppervlakte (zijde²).","Dat zijn maar twee zijden. Hoeveel zijden heeft een vierkant?","Te weinig — heb je 3 zijden gerekend?"],
         uitlegPad: {
           stappen: [{ titel: "4 × zijde", tekst: "Vierkant: 4 gelijke zijden. Omtrek = 4 × zijde = 4 × 7 = 28 m." }],
           woorden: [{ woord: "omtrek", uitleg: "Lengte rondom het figuur. Eenheid: m, cm, km." }],
@@ -69,9 +69,9 @@ const steps = [
       },
       {
         q: "Rechthoek **10 m × 4 m** — wat is de **oppervlakte**?",
-        options: ["40 m²","28 m","14 m","40 m"],
+        options: ["40 m²","28 m²","14 m²","40 m"],
         answer: 0,
-        wrongHints: [null,"Dat is omtrek, niet oppervlakte.","Dat is alleen halve omtrek.","Klopt qua getal maar verkeerde eenheid — oppervlakte = m²."],
+        wrongHints: [null,"Heb je de zijden opgeteld? Bij oppervlakte vermenigvuldig je.","Dat is 10 + 4. Bij oppervlakte tel je niet op.","Kijk goed naar de eenheid: meet je hier een lijn of een vlak?"],
         uitlegPad: {
           stappen: [{ titel: "L × B", tekst: "Rechthoek: oppervlakte = lengte × breedte = 10 × 4 = 40 m²." }],
           woorden: [{ woord: "oppervlakte", uitleg: "Hoeveel plek het figuur inneemt. Eenheid: m² (vierkante meters)." }],
@@ -270,13 +270,13 @@ const steps = [
       },
       {
         q: "Met welke som reken je de **omtrek** van een **rechthoek** uit?",
-        options: ["2 × (lengte + breedte)", "lengte × breedte", "lengte + breedte", "4 × lengte"],
+        options: ["2 × (lengte + breedte)", "lengte × breedte", "lengte + breedte", "2 × lengte + breedte"],
         answer: 0,
         wrongHints: [
           null,
           "Zo reken je hoeveel plek de rechthoek inneemt.",
           "Dan heb je nog niet alle zijden geteld.",
-          null,
+          "Loop in gedachten rond de rechthoek: hoe vaak kom je de breedte tegen?",
         ],
         uitlegPad: {
           stappen: [
@@ -362,10 +362,10 @@ const steps = [
     explanation: "Praktijk-sommen waar je omtrek en oppervlakte gebruikt:\n\n**Voorbeeld 1 — hek om tuin**:\n*'Een tuin is 12 m × 8 m. Hoeveel meter hek heb je nodig?'*\n• Hek = **omtrek** = 2 × (12 + 8) = **40 m**.\n\n**Voorbeeld 2 — gras zaaien**:\n*'Een grasveld 15 m × 10 m. Hoeveel m² gras nodig?'*\n• Gras = **oppervlakte** = 15 × 10 = **150 m²**.\n\n**Voorbeeld 3 — rand om foto**:\n*'Een foto 20 cm × 15 cm wordt omlijnd. Hoeveel cm lijst nodig?'*\n• Lijst = **omtrek** = 2 × (20 + 15) = **70 cm**.\n\n**Voorbeeld 4 — tegels**:\n*'Een vloer 6 m × 4 m wordt betegeld met tegels van 50 × 50 cm. Hoeveel tegels nodig?'*\n• Vloer = 6 × 4 = 24 m² = 240.000 cm².\n• Tegel = 50 × 50 = 2.500 cm².\n• Aantal: 240.000 ÷ 2.500 = **96 tegels**.\n\n**toetsvraag — kies juiste maat**:\n• 'Hek', 'lijst', 'rand' → **omtrek**.\n• 'Gras', 'tegels', 'verf', 'tapijt' → **oppervlakte**.\n\n**Veel-voorkomende fout**:\nOmtrek en oppervlakte verwarren. Vraag: meet je *langs de rand* (omtrek) of *over het hele vlak* (oppervlakte)?",
     checks: [
       {
-        q: "Een **tuin 18 × 12 m** krijgt een hek. Hoeveel **meter hek**?",
+        q: "Een **tuin van 18 × 12 m** krijgt een hek eromheen. Hoeveel **meter hek** is nodig?",
         options: ["60 m","216 m","30 m","6 m"],
         answer: 0,
-        wrongHints: [null,"Dat is oppervlakte, niet omtrek.","Te weinig — heb je halve omtrek?","Veel te weinig."],
+        wrongHints: [null,"Dat is oppervlakte, niet omtrek.","Dat zijn maar twee zijden. Het hek gaat rondom de hele tuin.","Dat is 18 − 12. Het hek gaat rondom: moet je dan aftrekken?"],
         uitlegPad: {
           stappen: [{ titel: "Hek = omtrek", tekst: "Hek loopt rondom = omtrek. 2 × (18+12) = 2 × 30 = 60 m." }],
           woorden: [{ woord: "hek", uitleg: "Loopt langs alle 4 zijden = omtrek." }],
@@ -377,9 +377,9 @@ const steps = [
       },
       {
         q: "Een **kamer 5 × 4 m** krijgt een nieuwe vloer. Hoeveel **m² vloer**?",
-        options: ["20 m²","18 m","9 m","20 m"],
+        options: ["20 m²","18 m²","9 m²","40 m²"],
         answer: 0,
-        wrongHints: [null,"Dat is omtrek, niet oppervlakte.","Klopt niet — onjuiste eenheid en getal.","Klopt qua getal maar oppervlakte = m²."],
+        wrongHints: [null,"Heb je de zijden opgeteld? Dat is de rand, niet de vloer.","Dat is 5 + 4. Bij oppervlakte tel je niet op.","Heb je nog eens × 2 gedaan? Dat hoort niet bij oppervlakte."],
         uitlegPad: {
           stappen: [{ titel: "Vloer = oppervlakte", tekst: "Vloer = vlak = oppervlakte. 5×4 = 20 m²." }],
           woorden: [{ woord: "vloer", uitleg: "Het hele vlak = oppervlakte. Eenheid m²." }],
@@ -390,10 +390,10 @@ const steps = [
         },
       },
       {
-        q: "Een vierkant terras met **zijde 6 m**. Hoeveel **omtrek**?",
+        q: "Een vierkant terras heeft een **zijde van 6 m**. Wat is de **omtrek**?",
         options: ["24 m","36 m","12 m","48 m"],
         answer: 0,
-        wrongHints: [null,"Dat is oppervlakte (6²).","Te weinig — controleer 4 × 6.","Te veel — heb je extra zijde gerekend?"],
+        wrongHints: [null,"Dat is oppervlakte (6²).","Dat zijn maar twee zijden. Hoeveel zijden heeft een vierkant?","Heb je 8 × 6 gedaan? Hoeveel zijden heeft een vierkant?"],
         uitlegPad: {
           stappen: [{ titel: "4 × 6", tekst: "Vierkant 4 zijden × 6 m = 24 m omtrek." }],
           woorden: [{ woord: "vierkant terras", uitleg: "Alle 4 zijden gelijk lang." }],
@@ -666,10 +666,10 @@ const steps = [
     svg: driehoekSvg(10, 6, "Driehoek b=10, h=6 → opp = 30"),
     checks: [
       {
-        q: "Driehoek **basis 12 m, hoogte 8 m** — oppervlakte?",
+        q: "Een driehoek heeft een **basis van 12 m** en een **hoogte van 8 m**. Wat is de oppervlakte?",
         options: ["48 m²","96 m²","24 m²","20 m²"],
         answer: 0,
-        wrongHints: [null,"Te veel — vergeet ÷ 2 niet.","Te weinig — heb je nog een keer ÷ 2 gedaan?","Veel te weinig."],
+        wrongHints: [null,"Te veel — vergeet ÷ 2 niet.","Te weinig — heb je nog een keer ÷ 2 gedaan?","Dat is 12 + 8. Bij oppervlakte tel je niet op."],
         uitlegPad: {
           stappen: [{ titel: "B × H ÷ 2", tekst: "12 × 8 = 96. ÷2 = 48 m²." }],
           woorden: [{ woord: "driehoek-formule", uitleg: "Oppervlakte = (basis × hoogte) ÷ 2." }],
@@ -680,10 +680,10 @@ const steps = [
         },
       },
       {
-        q: "Driehoek met **basis 5 cm, hoogte 4 cm** — oppervlakte?",
+        q: "Een driehoek heeft een **basis van 5 cm** en een **hoogte van 4 cm**. Wat is de oppervlakte?",
         options: ["10 cm²","20 cm²","9 cm²","40 cm²"],
         answer: 0,
-        wrongHints: [null,"Te veel — vergeet ÷ 2.","Niet optellen — vermenigvuldigen.","Veel te veel."],
+        wrongHints: [null,"Te veel — vergeet de ÷ 2 niet.","Dat is 5 + 4. Bij oppervlakte tel je niet op.","Heb je × 2 gedaan in plaats van ÷ 2?"],
         uitlegPad: {
           stappen: [{ titel: "B × H ÷ 2", tekst: "5 × 4 = 20. ÷2 = 10 cm²." }],
           woorden: [{ woord: "driehoek-oppervlakte", uitleg: "(basis × hoogte) ÷ 2." }],
@@ -697,7 +697,7 @@ const steps = [
         q: "Een driehoekig tuintje met basis **6 m**, hoogte **9 m**. Hoeveel **m² gras**?",
         options: ["27 m²","54 m²","15 m²","18 m²"],
         answer: 0,
-        wrongHints: [null,"Te veel — vergeet ÷ 2.","Te weinig — heb je optellen gedaan?","Te weinig — controleer 6×9÷2."],
+        wrongHints: [null,"Te veel — vergeet ÷ 2.","Te weinig — heb je optellen gedaan?","Heb je 6 × 6 ÷ 2 gedaan? Kijk nog eens naar de hoogte."],
         uitlegPad: {
           stappen: [{ titel: "B × H ÷ 2", tekst: "6 × 9 = 54. ÷2 = 27 m² gras." }],
           woorden: [{ woord: "gras = oppervlakte", uitleg: "Hele vlak = oppervlakte (m²)." }],
@@ -795,7 +795,7 @@ const steps = [
           "Een driehoek is de helft van een rechthoek",
           "Een driehoek heeft twee schuine zijden",
           "Een driehoek heeft drie hoeken",
-          "De basis telt maar half mee",
+          "De basis van een driehoek telt maar half mee",
         ],
         answer: 0,
         wrongHints: [null, "Denk aan een rechthoek die je van hoek tot hoek doorknipt.", null, null],
@@ -954,10 +954,10 @@ const steps = [
     explanation: "Toetsvragen mengen vaak omtrek/oppervlakte met andere onderwerpen *(geld, kosten, tegels, verf)*.\n\n**Voorbeeld 1**:\n*'Een kantoor van 10 × 8 m wordt geverfd. 1 liter verf is voor 10 m². Hoeveel liter?'*\n• Oppervlakte = 80 m².\n• Liter = 80 ÷ 10 = **8 L**.\n\n**Voorbeeld 2**:\n*'Een tuin 20 × 15 m. Hek kost € 8 per meter. Wat kost het hek?'*\n• Omtrek = 2 × (20 + 15) = 70 m.\n• Kost = 70 × 8 = **€ 560**.\n\n**Voorbeeld 3 — gras + hek**:\n*'Een gras-veld 25 × 12 m. Het kost € 5 per m² gras + € 6 per meter hek. Totaal?'*\n• Gras-oppervlakte = 25 × 12 = 300 m². Kost = 300 × 5 = € 1500.\n• Hek-omtrek = 2 × (25 + 12) = 74 m. Kost = 74 × 6 = € 444.\n• Totaal = **€ 1944**.\n\n**Stappenplan**:\n1. Lees: heb je omtrek of oppervlakte nodig?\n2. Reken die uit met de juiste formule.\n3. Vermenigvuldig met de prijs/factor.\n4. Voeg samen als het meerdere onderdelen zijn.",
     checks: [
       {
-        q: "Een tuin **15 × 12 m**. Hek kost **€ 10/m**. Hekkosten?",
+        q: "Een tuin is **15 × 12 m**. Er komt een hek omheen dat **€ 10 per meter** kost. Wat kost het hek?",
         options: ["€ 540","€ 1800","€ 270","€ 600"],
         answer: 0,
-        wrongHints: [null,"Te veel — voor een hek heb je de omtrek nodig, niet de oppervlakte.","Te weinig — tel alle zijden bij elkaar op (omtrek-formule voor rechthoek).","Te veel — controleer de formule."],
+        wrongHints: [null,"Te veel — voor een hek heb je de omtrek nodig, niet de oppervlakte.","Te weinig — tel alle zijden bij elkaar op (omtrek-formule voor rechthoek).","Tel de vier zijden nog eens precies op."],
         uitlegPad: {
           stappen: [{ titel: "Omtrek + prijs", tekst: "Hek = omtrek = 2×(15+12) = 54 m. Kost = 54×€10 = €540." }],
           woorden: [{ woord: "hekkosten", uitleg: "Lengte hek (m) × prijs per meter." }],
@@ -968,10 +968,10 @@ const steps = [
         },
       },
       {
-        q: "Een vloer **8 × 6 m** wordt betegeld. **€ 12 per m²**. Kosten?",
+        q: "Een vloer van **8 × 6 m** wordt betegeld. De tegels kosten **€ 12 per m²**. Wat kost dat?",
         options: ["€ 576","€ 168","€ 96","€ 720"],
         answer: 0,
-        wrongHints: [null,"Te weinig — voor tegels heb je de oppervlakte nodig, niet de omtrek.","Niet correct — bereken eerst de oppervlakte, dan pas vermenigvuldig je met de prijs.","Te veel."],
+        wrongHints: [null,"Te weinig — voor tegels heb je de oppervlakte nodig, niet de omtrek.","Dat is 8 × 12. Reken eerst de oppervlakte uit, daarna keer de prijs.","Reken eerst de oppervlakte precies uit: 8 × 6. Daarna keer € 12."],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte + prijs", tekst: "Vloer = oppervlakte = 8×6 = 48 m². Kost = 48×€12 = €576." }],
           woorden: [{ woord: "tegelkosten", uitleg: "Vloer (m²) × prijs per m²." }],
@@ -982,10 +982,10 @@ const steps = [
         },
       },
       {
-        q: "Een driehoekige tuin **basis 10 m, hoogte 4 m**. Gras kost **€ 6/m²**. Kosten?",
+        q: "Een driehoekige tuin heeft een **basis van 10 m** en een **hoogte van 4 m**. Gras kost **€ 6 per m²**. Wat kost het gras?",
         options: ["€ 120","€ 60","€ 240","€ 84"],
         answer: 0,
-        wrongHints: [null,"Te weinig — bereken eerst de oppervlakte van de driehoek (vergeet niet te delen door 2).","Te veel — heb je ÷ 2 vergeten?","Klopt niet."],
+        wrongHints: [null,"Te weinig — bereken eerst de oppervlakte van de driehoek (vergeet niet te delen door 2).","Te veel — heb je ÷ 2 vergeten?","Heb je 10 + 4 gedaan? Bij oppervlakte tel je niet op."],
         uitlegPad: {
           stappen: [{ titel: "Driehoek + prijs", tekst: "Oppervlakte = (10×4)÷2 = 20 m². Kost = 20×€6 = €120." }],
           woorden: [{ woord: "graskosten", uitleg: "Oppervlakte (m²) × prijs per m²." }],
@@ -1290,10 +1290,10 @@ const steps = [
     explanation: "Mix-toets met omtrek + oppervlakte in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       {
-        q: "Vierkant zijde **9 m** — oppervlakte?",
+        q: "Een vierkant heeft een **zijde van 9 m**. Wat is de oppervlakte?",
         options: ["81 m²","36 m","36 m²","9 m²"],
         answer: 0,
-        wrongHints: [null,"Dat is omtrek (4×9), eenheid ook fout.","Bijna — eenheid klopt maar getal is omtrek.","Te weinig — dat is alleen 1 zijde."],
+        wrongHints: [null,"Dat is 4 × 9 — de rand, niet het vlak.","Dat is 4 × 9: zo reken je de omtrek uit.","Te weinig — dat is alleen 1 zijde."],
         uitlegPad: {
           stappen: [{ titel: "Zijde × zijde", tekst: "Vierkant: oppervlakte = 9×9 = 81 m²." }],
           woorden: [{ woord: "vierkant-oppervlakte", uitleg: "Zijde × zijde (= zijde²)." }],
@@ -1304,10 +1304,10 @@ const steps = [
         },
       },
       {
-        q: "Rechthoek **20 × 5 m** — omtrek?",
+        q: "Een rechthoek is **20 × 5 m**. Wat is de omtrek?",
         options: ["50 m","100 m","25 m","40 m"],
         answer: 0,
-        wrongHints: [null,"Dat is oppervlakte (20×5).","Te weinig — heb je niet ALLE zijden geteld?","Te weinig — tel je de korte zijden ook mee?"],
+        wrongHints: [null,"Dat is 20 × 5 — het vlak, niet de rand.","Dat zijn maar twee zijden: 20 + 5. Hoeveel zijden heeft een rechthoek?","Te weinig — tel je de korte zijden ook mee?"],
         uitlegPad: {
           stappen: [{ titel: "2(L+B)", tekst: "2 × (20+5) = 2 × 25 = 50 m omtrek." }],
           woorden: [{ woord: "rechthoek-omtrek", uitleg: "2 × (lengte + breedte)." }],
@@ -1318,10 +1318,10 @@ const steps = [
         },
       },
       {
-        q: "Driehoek **basis 14 cm, hoogte 6 cm** — oppervlakte?",
-        options: ["42 cm²","84 cm²","20 cm²","40 cm"],
+        q: "Een driehoek heeft een **basis van 14 cm** en een **hoogte van 6 cm**. Wat is de oppervlakte?",
+        options: ["42 cm²","84 cm²","20 cm²","21 cm²"],
         answer: 0,
-        wrongHints: [null,"Te veel — vergeet ÷ 2.","Te weinig — controleer 14×6÷2.","Eenheid en getal kloppen niet."],
+        wrongHints: [null,"Te veel — vergeet ÷ 2.","Dat is 14 + 6. Bij oppervlakte tel je niet op.","Heb je twee keer door 2 gedeeld?"],
         uitlegPad: {
           stappen: [{ titel: "B × H ÷ 2", tekst: "14 × 6 = 84. ÷2 = 42 cm²." }],
           woorden: [{ woord: "driehoek", uitleg: "(basis × hoogte) ÷ 2." }],
@@ -1332,24 +1332,24 @@ const steps = [
         },
       },
       {
-        q: "Een sportveld **40 × 25 m** — hoe lang lopen rondom?",
-        options: ["130 m","65 m","1000 m","1000 m²"],
+        q: "Je loopt één keer rondom een sportveld van **40 × 25 m**. Hoeveel meter loop je?",
+        options: ["130 m","65 m","1000 m","105 m"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is halve omtrek.","Dat is oppervlakte.","Verkeerde eenheid voor lengte."],
+        wrongHints: [null,"Dat zijn maar twee zijden: 40 + 25.","Dat is 40 × 25 — hoeveel plek het veld inneemt, niet de rand.","Heb je alle vier de zijden meegeteld?"],
         uitlegPad: {
           stappen: [{ titel: "2(L+B)", tekst: "2 × (40+25) = 2 × 65 = 130 m." }],
           woorden: [{ woord: "rondom = omtrek", uitleg: "Lopen rondom veld = omtrek." }],
-          theorie: "Rondom = omtrek = 2(L+B). 1000 m² = oppervlakte (verkeerd voor lengte).",
+          theorie: "Rondom = omtrek = 2(L+B). 40 × 25 = 1000 is de oppervlakte (verkeerd voor de rand).",
           voorbeelden: [{ type: "stap", tekst: "40+25=65 (halve omtrek). ×2 = 130 m." }],
           basiskennis: [{ onderwerp: "Eenheid m niet m²", uitleg: "Lengte = m. Vlak = m²." }],
           niveaus: { basis: "130 m.", simpeler: "Rondom = omtrek = 2×(40+25) = 130 m.", nogSimpeler: "130" },
         },
       },
       {
-        q: "Een vloer **6 × 5 m** wordt geverfd. Verf voor **20 m² per liter**. Hoeveel **liter**?",
+        q: "Een vloer van **6 × 5 m** wordt geverfd. Met 1 liter verf doe je **20 m²**. Hoeveel **liter** verf heb je nodig?",
         options: ["1,5","2","3","30"],
         answer: 0,
-        wrongHints: [null,"Te veel — controleer 30 ÷ 20.","Te veel — heb je oppervlakte verkeerd?","Veel te veel — heb je niet door 20 gedeeld?"],
+        wrongHints: [null,"Heb je afgerond? Reken precies uit hoe vaak 20 m² in de vloer past.","Heb je door 10 gedeeld? Met 1 liter doe je 20 m².","Heb je wel door 20 gedeeld? Dat is de oppervlakte van de vloer."],
         uitlegPad: {
           stappen: [{ titel: "Opp ÷ dekking", tekst: "Vloer = 6×5 = 30 m². Verf: 30 ÷ 20 = 1,5 L." }],
           woorden: [{ woord: "verf-dekking", uitleg: "Aantal m² dat 1 liter verf bedekt." }],
@@ -1360,10 +1360,10 @@ const steps = [
         },
       },
       {
-        q: "Een raam **120 cm × 80 cm**. Hoeveel **glas** in m²?",
-        options: ["0,96 m²","9.600 m²","9.600 cm²","2 m²"],
+        q: "Een raam is **120 cm × 80 cm**. Hoeveel m² **glas** zit erin?",
+        options: ["0,96 m²","9,6 m²","96 m²","2 m²"],
         answer: 0,
-        wrongHints: [null, "Verkeerde eenheid — cm² getal correct maar gevraagd m².", "Geen omrekening gedaan naar m².", "Veel te ruw geschat."],
+        wrongHints: [null, "Kijk goed waar de komma komt. Reken eerst om: 120 cm en 80 cm zijn hoeveel meter?", "Een raam van 96 m² is groter dan een klaslokaal! Reken eerst cm om naar m.", "Dat is 1,2 + 0,8. Bij oppervlakte tel je niet op."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: oppervlakte in cm²", tekst: "Raam-rechthoek: 120 × 80 = **9.600 cm²**." },
@@ -1384,10 +1384,10 @@ const steps = [
         },
       },
       {
-        q: "Een **L-vormig** terras: rechthoek 8 × 4 m + uitstekend stuk 3 × 2 m. **Totale oppervlakte**?",
+        q: "Een **L-vormig** terras bestaat uit een rechthoek van 8 × 4 m en een uitstekend stuk van 3 × 2 m. Hoe groot is de **totale oppervlakte**?",
         options: ["38 m²","32 m²","26 m²","48 m²"],
         answer: 0,
-        wrongHints: [null, "Klopt voor de grote rechthoek alleen — uitstekend stuk vergeten.", "Niet aftrekken — het uitstekende stuk komt erbij.", "Te veel — geen overlap."],
+        wrongHints: [null, "Dat is alleen de grote rechthoek. Waar is het uitstekende stuk?", "Niet aftrekken — het uitstekende stuk komt erbij.", "Heb je één grote rechthoek van 8 × 6 m gerekend? Het terras is niet helemaal vol."],
         uitlegPad: {
           stappen: [
             { titel: "Splits in eenvoudige stukken", tekst: "L-vorm = optellen van twee rechthoeken.\n• Rechthoek 1: 8 × 4 = **32 m²**\n• Uitstekend stuk: 3 × 2 = **6 m²**" },
@@ -1411,7 +1411,7 @@ const steps = [
         q: "Hoeveel **vierkante tegels van 30 cm** passen op een vloer van **3 m × 2,4 m**?",
         options: ["80","24","800","72"],
         answer: 0,
-        wrongHints: [null, "Te weinig — reken beide maten eerst om naar centimeters.", "Veel te veel — je rekent oppervlakte in cm² niet in tegels.", "Niet — reken per richting uit hoeveel tegels er passen."],
+        wrongHints: [null, "Te weinig — reken beide maten eerst om naar centimeters.", "Veel te veel — je rekent oppervlakte in cm² niet in tegels.", "Reken per richting uit hoeveel tegels er passen."],
         uitlegPad: {
           stappen: [
             { titel: "Aantal tegels per richting", tekst: "Tegel = 30 cm. Vloer 3 m = 300 cm → 300 ÷ 30 = **10 tegels lang**. Vloer 2,4 m = 240 cm → 240 ÷ 30 = **8 tegels breed**." },
@@ -1431,26 +1431,26 @@ const steps = [
           niveaus: { basis: "10 × 8 = 80 tegels.", simpeler: "Vloer 3 m = 10 tegels, 2,4 m = 8 tegels. 10 × 8 = 80.", nogSimpeler: "80" },
         },
       },
-      { q: "Vierkant met zijde 7 cm. Omtrek?", options: ["28 cm","14 cm","49 cm","21 cm"], answer: 0, wrongHints: [null, "Niet — 4 zijden.", "Dat is oppervlakte.", "3 zijden gerekend."] },
-      { q: "Vierkant zijde 7 cm. Oppervlakte?", options: ["49 cm²","28 cm²","14 cm²","21 cm²"], answer: 0, wrongHints: [null, "Dat is omtrek.", "Te laag.", "Te laag."] },
-      { q: "Rechthoek 8 × 5 cm. Oppervlakte?", options: ["40 cm²","26 cm²","13 cm²","45 cm²"], answer: 0, wrongHints: [null, "Dat is omtrek.", "Niet.", "Te hoog."] },
-      { q: "Driehoek basis 6, hoogte 4. Oppervlakte?", options: ["12","24","10","8"], answer: 0, wrongHints: [null, "Vergeet niet ÷2.", "Niet — basis × hoogte, geen optellen.", "Niet."] },
-      { q: "Rechthoek 10 × 4 m. Omtrek?", options: ["28 m","40 m","20 m","14 m"], answer: 0, wrongHints: [null, "Dat is oppervlakte.", "Maar 2 zijden meegenomen.", "Niet — 4 zijden."] },
-      { q: "Eenheid van oppervlakte is?", options: ["m² of cm²","m","cm","kg"], answer: 0, wrongHints: [null, "Lengte.", "Lengte.", "Gewicht."] },
-      { q: "Eenheid van omtrek is?", options: ["m of cm","m² of cm²","kg","L"], answer: 0, wrongHints: [null, "Oppervlakte.", "Gewicht.", "Inhoud."] },
-      { q: "Hoeveel **hoeken** heeft een rechthoek?", options: ["4","3","5","6"], answer: 0, wrongHints: [null, "Driehoek.", "Vijfhoek.", "Zeshoek."] },
+      { q: "Een vierkant heeft zijden van 7 cm. Wat is de omtrek?", options: ["28 cm","14 cm","35 cm","21 cm"], answer: 0, wrongHints: [null, "Dat zijn maar twee zijden. Hoeveel zijden heeft een vierkant?", "Hoeveel zijden heeft een vierkant? Tel ze nog eens.", "Dat zijn maar drie zijden."] },
+      { q: "Een vierkant heeft zijden van 7 cm. Wat is de oppervlakte?", options: ["49 cm²","42 cm²","14 cm²","21 cm²"], answer: 0, wrongHints: [null, "Dat is 6 × 7. Hoe lang is de andere zijde van een vierkant?", "Dat is 7 + 7. Bij oppervlakte tel je niet op.", "Dat is 3 × 7. Hoe lang is de andere zijde?"] },
+      { q: "Een rechthoek is 8 × 5 cm. Wat is de oppervlakte?", options: ["40 cm²","26 cm²","13 cm²","45 cm²"], answer: 0, wrongHints: [null, "Heb je de vier zijden opgeteld? Dat is de rand, niet het vlak.", "Dat is 8 + 5. Bij oppervlakte tel je niet op.", "Dat is 9 × 5. Kijk nog eens naar de lengte."] },
+      { q: "Een driehoek heeft een basis van 6 en een hoogte van 4. Wat is de oppervlakte?", options: ["12","24","10","8"], answer: 0, wrongHints: [null, "Basis × hoogte is een goed begin. Wat moet er daarna nog?", "Dat is 6 + 4. Bij oppervlakte tel je niet op.", "Heb je 4 × 4 ÷ 2 gedaan? Kijk nog eens naar de basis."] },
+      { q: "Een rechthoek is 10 × 4 m. Wat is de omtrek?", options: ["28 m","40 m","20 m","14 m"], answer: 0, wrongHints: [null, "Heb je vermenigvuldigd? Bij de omtrek tel je de zijden op.", "Je telde alleen de twee lange zijden.", "Dat is 10 + 4 — maar twee zijden. Een rechthoek heeft er vier."] },
+      { q: "Wat is een eenheid van oppervlakte?", options: ["m² of cm²","m of cm","kg of g","L of mL"], answer: 0, wrongHints: [null, "Meet je daarmee een lijn of een vlak?", "Daarmee meet je hoe zwaar iets is.", "Daarmee meet je hoeveel vloeistof erin past."] },
+      { q: "Wat is een eenheid van omtrek?", options: ["m of cm","m² of cm²","kg of g","L of mL"], answer: 0, wrongHints: [null, "Meet je daarmee een lijn of een vlak? De omtrek is de rand.", "Daarmee meet je hoe zwaar iets is.", "Daarmee meet je hoeveel vloeistof erin past."] },
+      { q: "Hoeveel **hoeken** heeft een rechthoek?", options: ["4","3","5","6"], answer: 0, wrongHints: [null, "Zoveel hoeken heeft een driehoek.", "Zoveel hoeken heeft een vijfhoek.", "Zoveel hoeken heeft een zeshoek."] },
       { q: "Hoeveel **gelijke zijden** heeft een vierkant?", options: ["4","2","3","1"], answer: 0, wrongHints: [null, "Tel álle zijden van een vierkant — het zijn er meer dan 2.", "3 gelijke zijden hoort bij een driehoek.", "Een vierkant heeft meerdere even lange zijden — tel ze."] },
-      { q: "Omtrek van driehoek met zijden 3, 4, 5?", options: ["12","60","11","9"], answer: 0, wrongHints: [null, "Niet — som, geen ×.", "Niet.", "Niet."] },
-      { q: "Oppervlakte vierkant 5 m bij 5 m?", options: ["25 m²","20 m²","10 m²","100 m²"], answer: 0, wrongHints: [null, "Omtrek.", "Niet.", "Niet."] },
-      { q: "Tegel 50 cm × 50 cm. Oppervlakte?", options: ["2.500 cm²","100 cm²","250 cm²","1 m²"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
-      { q: "Een **cirkel** heeft hoeveel **hoeken**?", options: ["0","1","2","4"], answer: 0, wrongHints: [null, "Een cirkel is één rondlopende gebogen lijn — zit daar ergens een punt in?", "Niet.", "Niet."] },
-      { q: "Een **gelijkzijdige** driehoek heeft hoeveel gelijke zijden?", options: ["3","2","1","0"], answer: 0, wrongHints: [null, "Dat is gelijkbenig.", "Niet.", "Niet."] },
-      { q: "Een **rechte hoek** = hoeveel graden?", options: ["90°","45°","180°","360°"], answer: 0, wrongHints: [null, "Halve rechte.", "Gestrekt.", "Volle cirkel."] },
-      { q: "Som van 3 hoeken in een driehoek?", options: ["180°","90°","360°","270°"], answer: 0, wrongHints: [null, "Eén hoek.", "Cirkel.", "Niet."] },
-      { q: "Som van 4 hoeken in een vierhoek?", options: ["360°","180°","270°","90°"], answer: 0, wrongHints: [null, "Driehoek.", "Niet.", "Eén hoek."] },
-      { q: "**Tegels** 1 m × 1 m. Vloer 3 × 4 m. Hoeveel tegels?", options: ["12","7","4","16"], answer: 0, wrongHints: [null, "Niet — niet som.", "Niet.", "Te veel."] },
-      { q: "Een **vierhoek** met 2 paar parallelle zijden = ?", options: ["Parallellogram","Cirkel","Driehoek","Trapezium"], answer: 0, wrongHints: [null, "Geen hoeken.", "Geen vier zijden.", "Een trapezium heeft maar één paar evenwijdige zijden."] },
-      { q: "**Symmetrie-as** van een vierkant?", options: ["4 assen","2 assen","1 as","Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Wel symmetrisch."] },
+      { q: "Wat is de omtrek van een driehoek met zijden van 3, 4 en 5?", options: ["12","60","11","9"], answer: 0, wrongHints: [null, "Dat is 3 × 4 × 5. Bij omtrek tel je de zijden op.", "Reken nog eens na: heb je alle drie de zijden goed opgeteld?", "Dat zijn maar twee zijden. Een driehoek heeft er drie."] },
+      { q: "Wat is de oppervlakte van een vierkant van 5 m bij 5 m?", options: ["25 m²","20 m²","10 m²","100 m²"], answer: 0, wrongHints: [null, "Heb je de vier zijden opgeteld? Dat is de rand.", "Dat is 5 + 5. Bij oppervlakte tel je niet op.", "Heb je ook nog × 4 gedaan? Dat hoort niet bij oppervlakte."] },
+      { q: "Een tegel is 50 cm × 50 cm. Wat is de oppervlakte?", options: ["2.500 cm²","100 cm²","250 cm²","1 m²"], answer: 0, wrongHints: [null, "Dat is 50 + 50. Bij oppervlakte tel je niet op.", "Tel de nullen nog eens: 50 × 50 is meer dan 5 × 50.", "Een tegel van 1 m² is 100 cm bij 100 cm. Deze tegel is kleiner."] },
+      { q: "Een **cirkel** heeft hoeveel **hoeken**?", options: ["0","1","2","4"], answer: 0, wrongHints: [null, "Een cirkel is één rondlopende gebogen lijn — zit daar ergens een punt in?", "Waar zou een hoek moeten zitten? Een cirkel is overal rond.", "Vier hoeken heeft een vierkant. Is een cirkel ergens puntig?"] },
+      { q: "Een **gelijkzijdige** driehoek heeft hoeveel gelijke zijden?", options: ["3","2","1","0"], answer: 0, wrongHints: [null, "Dat is een gelijkbenige driehoek.", "'Gelijkzijdig' betekent: zijden die even lang zijn als elkaar. Kan dat met maar één zijde?", "'Gelijk' zit in de naam — er zijn dus wél zijden die even lang zijn."] },
+      { q: "Hoeveel graden is een **rechte hoek**?", options: ["90°","45°","180°","360°"], answer: 0, wrongHints: [null, "Die hoek is scherper — kleiner dan de hoek van een boek.", "Dat is een gestrekte hoek: een rechte lijn.", "Dat is een hele draai, een volle cirkel."] },
+      { q: "Hoeveel graden zijn de 3 hoeken van een driehoek samen?", options: ["180°","90°","360°","270°"], answer: 0, wrongHints: [null, "Dat is één rechte hoek. De drie hoeken samen zijn meer.", "Dat is een hele draai. Is dat niet te veel voor drie hoeken?", "Knip de drie hoeken eens uit en leg ze naast elkaar: welke hoek vormen ze samen?"] },
+      { q: "Hoeveel graden zijn de 4 hoeken van een vierhoek samen?", options: ["360°","180°","270°","90°"], answer: 0, wrongHints: [null, "Dat is een gestrekte hoek. Zijn vier hoeken samen niet meer?", "Denk aan een rechthoek: hoeveel graden heeft elke hoek, en hoeveel hoeken zijn er?", "Dat is maar één rechte hoek. Er zijn er vier."] },
+      { q: "Tegels zijn 1 m × 1 m. De vloer is 3 × 4 m. Hoeveel tegels heb je nodig?", options: ["12","7","4","16"], answer: 0, wrongHints: [null, "Dat is 3 + 4. Leg de tegels in rijen: hoeveel rijen, en hoeveel per rij?", "Dat is maar één rij. Hoeveel rijen passen er?", "Dat zou een vloer van 4 × 4 m zijn."] },
+      { q: "Hoe heet een **vierhoek** met 2 paar evenwijdige zijden?", options: ["Parallellogram","Vlieger","Zeshoek","Trapezium"], answer: 0, wrongHints: [null, "Een vlieger heeft geen evenwijdige zijden — wel twee paar even lange zijden naast elkaar.", "Tel de zijden: is dit wel een vierhoek?", "Een trapezium heeft maar één paar evenwijdige zijden."] },
+      { q: "Hoeveel **symmetrie-assen** heeft een vierkant?", options: ["4 assen","2 assen","1 as","8 assen"], answer: 0, wrongHints: [null, "Vouw een papieren vierkant dubbel: welke vouwlijnen vind je allemaal? Denk ook aan schuin.", "Er is meer dan één manier om een vierkant dubbel te vouwen.", "Teken ze maar: kun je echt zoveel vouwlijnen vinden?"] },
     ],
   },
 ];

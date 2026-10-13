@@ -1,0 +1,779 @@
+{
+ "bestanden": [
+  "./schemasStappenplannenPo.js",
+  "./woordsoortenPo.js",
+  "./rijmenLettersKleutersPo.js",
+  "./informatiebronnenPo.js",
+  "./verwijswoordenPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "H",
+   "q": "Welk woord is een zelfstandig naamwoord?",
+   "opties": [
+    "fiets",
+    "fietst",
+    "snel",
+    "mooi"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "informatiebronnen-po",
+   "file": "./informatiebronnenPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Je wilt weten wat er gisteren in het journaal was. Welke bron?",
+   "opties": [
+    "Krant of nieuws-site",
+    "Woordenboek",
+    "Atlas",
+    "Encyclopedie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "informatiebronnen-po",
+   "file": "./informatiebronnenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Welke bron is het beste voor een werkstuk over de Romeinen?",
+   "opties": [
+    "Encyclopedie + schoolboek",
+    "Woordenboek alleen",
+    "Atlas alleen",
+    "Krant van vandaag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "informatiebronnen-po",
+   "file": "./informatiebronnenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is een primaire bron over Anne Frank?",
+   "opties": [
+    "Het dagboek van Anne Frank zelf",
+    "Schoolboek over Anne Frank",
+    "Film over Anne Frank",
+    "Wikipedia-artikel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "informatiebronnen-po",
+   "file": "./informatiebronnenPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Welk Wikipedia-artikel is waarschijnlijk het MEEST betrouwbaar?",
+   "opties": [
+    "Artikel met 50 bronvermeldingen onderaan",
+    "Artikel zonder bronnen",
+    "Artikel met 'omstreden'-banner",
+    "Artikel van 1 week oud zonder bronnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wat zegt een stappenplan?",
+   "opties": [
+    "Welke volgorde te doen",
+    "Welke kleur",
+    "Wie iets doet",
+    "Wanneer iets ophoudt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Pijlen in een schema laten zien:",
+   "opties": [
+    "Verband of volgorde",
+    "Kleuren of vormen",
+    "Aantal of grootte",
+    "Alleen versiering"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2S",
+   "q": "Stap-recept: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken. Wat doe je direct vóór mixen?",
+   "opties": [
+    "Meel + melk doen",
+    "Bakken",
+    "Kom pakken",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Stappen: 1) Spullen pakken. 2) Boterhammen smeren. 3) Inpakken. 4) Naar school. Welke stap mist als je beleg op je boterham wil?",
+   "opties": [
+    "Beleg erop leggen na smeren",
+    "Boterham eten",
+    "Pak openmaken",
+    "Geen, alle stappen kloppen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Beslisboom: 'Heb je honger? Ja → eet. Nee → drink water'. Je hebt dorst, niet honger. Wat doe je?",
+   "opties": [
+    "Drink water",
+    "Eet",
+    "Iets anders",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Beslisboom: 'Regen? Ja → jas aan. Nee → buiten zonder jas.' Het regent niet maar is wel koud. Volgens de beslisboom:",
+   "opties": [
+    "Buiten zonder jas",
+    "Jas aan",
+    "Beslisboom werkt niet",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Voedselketen: gras → konijn → vos. Wat eet de vos?",
+   "opties": [
+    "konijn",
+    "gras",
+    "vlinder",
+    "niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Stamboom: Opa Jan → Vader Piet → Kind Tom. Wie is opa van Tom?",
+   "opties": [
+    "Jan",
+    "Piet",
+    "Tom",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Productieketen: graan → meel → brood. Een jaar lang is er geen graan. Wat volgt uit deze keten?",
+   "opties": [
+    "Er is ook geen meel en geen brood",
+    "Er is wel meel, maar geen brood",
+    "Er is juist meer brood",
+    "Er verandert niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Tijdslijn van Noor: 2016 geboren → 2020 naar school → 2022 zwemdiploma → 2024 verhuisd. Wat gebeurde er tussen de start op school en de verhuizing?",
+   "opties": [
+    "Ze haalde haar zwemdiploma",
+    "Ze werd geboren",
+    "Ze verhuisde",
+    "Ze ging naar school"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Recept-stappen: 1) Boter smelten. 2) Eieren breken in kom. 3) Klutsen. 4) Bakken in pan. Wat doe je direct na klutsen?",
+   "opties": [
+    "Bakken in pan",
+    "Boter smelten",
+    "Eieren breken",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Beslisboom: 'Is het warm? Ja → korte broek. Nee → lange broek.' Het is koud. Wat draag je?",
+   "opties": [
+    "Lange broek",
+    "Korte broek",
+    "Allebei",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Voedselketen: bladluizen → lieveheersbeestjes → vogels. Wie eet de bladluizen?",
+   "opties": [
+    "Lieveheersbeestjes",
+    "Vogels",
+    "Niets",
+    "Bladluizen onderling"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "L2S",
+   "q": "Stappen: 1) Computer aan. 2) Browser openen. 3) Site bezoeken. 4) Iets bestellen. Welke stap mist voor het betalen?",
+   "opties": [
+    "Betaalmethode kiezen",
+    "Computer uit",
+    "Browser sluiten",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 6,
+   "soort": "S",
+   "q": "Beslisboom voor schooladvies VMBO/HAVO/VWO: • Toetsscore 525-535 → VMBO-GL/TL • 536-545 → HAVO • 546+ → VWO Welk advies bij score 540?",
+   "opties": [
+    "HAVO",
+    "VMBO-GL/TL",
+    "VWO",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "L2K",
+   "q": "Wat is een beslisboom?",
+   "opties": [
+    "Schema met ja/nee-vragen die leidt naar antwoord",
+    "Een boom waar je onder zit om na te denken",
+    "Een stappenplan zonder vragen",
+    "Een tijdslijn met jaartallen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 9,
+   "soort": "L2K",
+   "q": "Wat hoort op een tijdslijn?",
+   "opties": [
+    "Gebeurtenissen in chronologische volgorde",
+    "Willekeurige feiten door elkaar",
+    "Recepten met ingrediënten",
+    "Tekeningen zonder tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Bij 'A → B' in voedselketen?",
+   "opties": [
+    "A wordt door B gegeten",
+    "B leeft naast A",
+    "A en B zijn vrienden",
+    "Geen betekenis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "L2",
+   "q": "Welk symbool voor begin/eind in stroomdiagram?",
+   "opties": [
+    "Cirkel of ovaal",
+    "Ruit",
+    "Rechthoek",
+    "Pijl"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Wat is de eerste kolom in een tabel vaak?",
+   "opties": [
+    "Categorieën/labels",
+    "Willekeurige getallen",
+    "De totalen",
+    "Reclame"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "L2",
+   "q": "Een organogram toont?",
+   "opties": [
+    "Wie boven/onder wie staat in organisatie",
+    "Hoe laat het is in andere landen",
+    "Welke stappen een recept heeft",
+    "Hoe een verhaal afloopt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Wat doet een pijl in een stappenplan?",
+   "opties": [
+    "Wijst naar volgende stap",
+    "Verbiedt de vorige stap",
+    "Toont fouten in het plan",
+    "Markeert alleen het begin"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 25,
+   "soort": "L2",
+   "q": "Bij chronologisch schema staan dingen op?",
+   "opties": [
+    "Volgorde van tijd",
+    "Alfabet",
+    "Grootte",
+    "Willekeurig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schemas-stappenplannen-po",
+   "file": "./schemasStappenplannenPo.js",
+   "stap": 4,
+   "vraag": 26,
+   "soort": "K",
+   "q": "Wat helpt het meest om stappenplan te onthouden?",
+   "opties": [
+    "Stappen genummerd zien",
+    "Willekeurige kleuren",
+    "Lange zin per stap",
+    "Tekening zonder tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "S",
+   "q": "*Tom pakt zijn jas. Hij heeft het koud.* Naar wie verwijst 'Hij'?",
+   "opties": [
+    "Tom",
+    "de jas",
+    "het koud",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "S",
+   "q": "*Sara fietst naar school. Ze is laat.* Naar wie verwijst 'Ze'?",
+   "opties": [
+    "Sara",
+    "de school",
+    "laat",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 0,
+   "vraag": 6,
+   "soort": "S",
+   "q": "*Mijn buurman staat in de tuin. Hij harkt de bladeren bij elkaar.* Naar wie verwijst 'Hij'?",
+   "opties": [
+    "mijn buurman",
+    "de tuin",
+    "de bladeren",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "S",
+   "q": "*Lisa leest een boek. Zij vindt het spannend.* Naar wie verwijst 'Zij'?",
+   "opties": [
+    "Lisa",
+    "het boek",
+    "spannend",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "S",
+   "q": "*Lisa leest een boek. Zij vindt het spannend.* Waar verwijst 'het' naar?",
+   "opties": [
+    "het boek",
+    "Lisa",
+    "spannend",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "S",
+   "q": "*De auto staat langs de weg. Hij is kapot.* Waar verwijst 'Hij' naar?",
+   "opties": [
+    "de auto",
+    "de weg",
+    "kapot",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "S",
+   "q": "*De kat ligt op de bank. Hij slaapt lekker.* Waar verwijst 'Hij' naar?",
+   "opties": [
+    "de kat",
+    "de bank",
+    "slaapt",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 1,
+   "vraag": 6,
+   "soort": "S",
+   "q": "*Het konijn zit in het hok. Het eet een blaadje sla.* Waar verwijst 'Het' in de tweede zin naar?",
+   "opties": [
+    "het konijn",
+    "het hok",
+    "de sla",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "S",
+   "q": "*De kinderen spelen in het park. Ze hebben veel plezier.* Naar wie verwijst 'Ze'?",
+   "opties": [
+    "de kinderen",
+    "het park",
+    "plezier",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "S",
+   "q": "*Sanne en Tom koken samen. Zij maken soep.* Naar wie verwijst 'Zij'?",
+   "opties": [
+    "Sanne en Tom",
+    "alleen Sanne",
+    "alleen Tom",
+    "de soep"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verwijswoorden-po",
+   "file": "./verwijswoordenPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "S",
+   "q": "*De boer roept zijn koeien. Ze komen meteen naar de stal.* Naar wie verwijst 'Ze'?",
+   "opties": [
+    "de koeien",
+    "de boer",
+    "de stal",
+    "niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "*'Deze appel is rood.'* — welk soort woord is 'deze'?",
+   "opties": [
+    "aanwijzend voornaamwoord",
+    "lidwoord",
+    "bijvoeglijk naamwoord",
+    "werkwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 6,
+   "soort": "L2K",
+   "q": "*'De snelle auto rijdt.'* — Welke woordsoort is 'snelle'?",
+   "opties": [
+    "Bijvoeglijk naamwoord",
+    "Zelfst. naamwoord",
+    "Werkwoord",
+    "Lidwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "K",
+   "q": "*'Jij loopt naar school.'* — Welke woordsoort is 'loopt'?",
+   "opties": [
+    "Werkwoord",
+    "Zelfst. naamwoord",
+    "Bijvoeglijk",
+    "Voornaamwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "*'De hond rent.'* — Welke woordsoort is 'de'?",
+   "opties": [
+    "Lidwoord",
+    "Zelfst. naamwoord",
+    "Werkwoord",
+    "Voornaamwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "L2K",
+   "q": "*'Op de tafel.'* — Welke woordsoort is 'tafel'?",
+   "opties": [
+    "Zelfstandig naamwoord",
+    "Werkwoord",
+    "Bijvoeglijk",
+    "Voornaamwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "*'Wij gaan morgen zwemmen.'* Wat is 'morgen'?",
+   "opties": [
+    "Bijwoord van tijd",
+    "Zelfst. nw",
+    "Voornaamwoord",
+    "Lidwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Hoeveel woordsoorten kent het Nederlands ongeveer?",
+   "opties": [
+    "10",
+    "2",
+    "5",
+    "15"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordsoorten-po",
+   "file": "./woordsoortenPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "L2",
+   "q": "Wat is een zelfstandig naamwoord?",
+   "opties": [
+    "Woord voor een persoon, dier of ding",
+    "Woord voor een eigenschap",
+    "Woord voor een actie",
+    "Woord waarmee je een vraag stelt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}
