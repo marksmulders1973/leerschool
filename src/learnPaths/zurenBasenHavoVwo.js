@@ -33,7 +33,7 @@ const steps = [
         q: "Wat is een **Brønsted-zuur**?",
         options: ["H⁺-donor","H⁺-acceptor","Elektron-donor","OH⁻-donor"],
         answer: 0,
-        wrongHints: [null, "Dat is base.", "Niet — andere definitie (Lewis).", "Niet — dat lijkt op de oude definitie van een base (Arrhenius)."],
+        wrongHints: [null, "Een H⁺-acceptor neemt een proton op. Doet een zuur dat, of geeft het juist iets weg?", "Niet — andere definitie (Lewis).", "Niet — dat lijkt op de oude definitie van een base (Arrhenius)."],
         uitlegPad: {
           stappen: [{ titel: "Zuur staat proton af", tekst: "**Brønsted-zuur** = stof die **H⁺ (proton) afstaat** aan andere stof. Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺. HCl is zuur, geeft proton aan H₂O." }],
           theorie: "Toets-formulering: 'Brønsted-zuur = protondonor, Brønsted-base = protonacceptor'.",
@@ -65,7 +65,7 @@ const steps = [
         q: "Welke is een **sterk zuur**?",
         options: ["HCl","CH₃COOH (azijnzuur)","NH₃","NaCl"],
         answer: 0,
-        wrongHints: [null, "Zwak zuur.", "Base.", "Zout (neutraal)."],
+        wrongHints: [null, "Azijn doe je gewoon over je patat. Zou dat kunnen met een sterk zuur?", "Ammoniak (NH₃) maakt water basisch. Is het dan een zuur?", "NaCl is keukenzout en heeft geen H⁺ om af te staan. Is het een zuur?"],
         uitlegPad: {
           stappen: [{ titel: "Sterke zuren-lijst", tekst: "**Sterke zuren** (volledig dissociëren in water): **HCl, H₂SO₄, HNO₃, HBr, HI, HClO₄**. Alle andere zijn zwak (azijnzuur, citroenzuur, koolzuur, etc.). Onthouden uit hoofd voor eindexamen." }],
           theorie: "Memo: HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄ = de 6 standaard-sterke zuren.",
@@ -76,7 +76,7 @@ const steps = [
         q: "Zuur + base (bv. HCl + NaOH) → ?",
         options: ["Zout + water","Zout + waterstofgas","Een buffer","Zout + CO₂ + water"],
         answer: 0,
-        wrongHints: [null, "Waterstofgas ontstaat als een zuur met een metaal reageert. Waar blijven de OH⁻-ionen van de base?", "Een buffer maak je met een zwak zuur en zijn geconjugeerde base. Is HCl een zwak zuur?", "Dat gebeurt als de base een carbonaat is. Zit er C in NaOH?"],
+        wrongHints: [null, "Waterstofgas ontstaat als een zuur met een metaal reageert. Waar blijven de OH⁻-ionen van de base?", "Een buffer maak je met een zwak zuur en zijn geconjugeerde base. Ontstaat die als je een zuur en een base precies laat reageren?", "Dat gebeurt als de base een carbonaat is. Zit er C in NaOH?"],
         uitlegPad: {
           stappen: [{ titel: "Neutralisatie", tekst: "**Neutralisatie**: zuur + base → zout + water. Voorbeelden:\n• HCl + NaOH → NaCl + H₂O\n• H₂SO₄ + 2 KOH → K₂SO₄ + 2 H₂O\nBij sterk zuur + sterke base in gelijke hoeveelheden wordt de pH neutraal (7)." }],
           niveaus: { basis: "Zout + water.", simpeler: "Z+B → zout+water", nogSimpeler: "Zout+water" },
@@ -95,7 +95,7 @@ const steps = [
         q: "[H₃O⁺] = **10⁻⁴ mol/L**. **pH** = ?",
         options: ["4","−4","10","−10"],
         answer: 0,
-        wrongHints: [null, "Niet — −log positief.", "Niet — niet rechtstreeks.", "Niet correct."],
+        wrongHints: [null, "pH = −log[H₃O⁺]. Wat doet het minteken met de log van 10⁻⁴?", "14 − 4 = 10 is de pOH. Vraagt de vraag naar de pH of de pOH?", "Een pH van −10 bestaat in water niet. Hoe reken je de pH uit [H₃O⁺]?"],
         uitlegPad: {
           stappen: [{ titel: "pH = −log[H₃O⁺]", tekst: "pH = −log(10⁻⁴) = −(−4) = **4**. Bij macht van 10 = exponent invers (zonder min)." }],
           niveaus: { basis: "4.", simpeler: "−log(10⁻⁴) = 4", nogSimpeler: "4" },
@@ -125,7 +125,7 @@ const steps = [
         q: "Oplossing met **[OH⁻] = 10⁻²** mol/L. pH?",
         options: ["12","2","14","7"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pOH.", "Niet — niet totaal.", "Niet — base, geen neutraal."],
+        wrongHints: [null, "Niet — dat is pOH.", "14 is pH en pOH samen. Hoe groot is de pOH hier, en wat blijft er voor de pH over?", "[OH⁻] is hier veel groter dan in zuiver water. Is de oplossing dan neutraal?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst pOH", tekst: "[OH⁻] = 10⁻² → pOH = 2." },
@@ -138,7 +138,7 @@ const steps = [
         q: "Verdun 0,1 M HCl **10×**. Nieuwe pH?",
         options: ["2","1","0,1","12"],
         answer: 0,
-        wrongHints: [null, "Niet — pH stijgt na verdunnen.", "Niet pH.", "Niet — geen base."],
+        wrongHints: [null, "Na verdunnen heb je 0,01 M. Is de pH dan nog steeds 1?", "0,1 is de oude concentratie, geen pH. Wat is −log van de nieuwe concentratie?", "12 hoort bij een basische oplossing. Wordt HCl door verdunnen een base?"],
         uitlegPad: {
           stappen: [{ titel: "10× verdund = pH +1", tekst: "0,1 M HCl heeft pH=1. **10× verdund** → 0,01 M → pH=**2**. Algemene regel: 10× verdunnen = pH stijgt 1 (zuur) of daalt 1 (base). Maximaal tot pH=7 (verdund sterk zuur kan nooit basisch worden)." }],
           niveaus: { basis: "2.", simpeler: "10× verdund = pH+1 = 2", nogSimpeler: "2" },
@@ -157,7 +157,7 @@ const steps = [
         q: "**Zwak zuur** dissocieert:",
         options: ["Gedeeltelijk","Volledig","Niet","Volledig, maar langzaam"],
         answer: 0,
-        wrongHints: [null, "Dat is sterk zuur.", "Azijn is zuur en geleidt een beetje stroom. Kan dat als er helemaal geen ionen zijn?", "Sterk of zwak gaat niet over snelheid. Welk deel van de moleculen staat een H⁺ af?"],
+        wrongHints: [null, "Volledig dissociëren doet een sterk zuur. Wat betekent zwak dan?", "Azijn is zuur en geleidt een beetje stroom. Kan dat als er helemaal geen ionen zijn?", "Sterk of zwak gaat niet over snelheid. Welk deel van de moleculen staat een H⁺ af?"],
         uitlegPad: {
           stappen: [{ titel: "Evenwicht ⇌", tekst: "**Zwak zuur**: dissocieert **gedeeltelijk** → evenwicht tussen HA, A⁻ en H⁺. Bv. azijnzuur: ~1% gedissocieerd bij 0,1 M. Sterk zuur dissocieert volledig (~100%)." }],
           niveaus: { basis: "Gedeeltelijk.", simpeler: "Zwak = gedeeltelijk", nogSimpeler: "Deels" },
@@ -197,7 +197,7 @@ const steps = [
         q: "Welke buffer is **cruciaal** voor bloed?",
         options: ["Bicarbonaat","Azijnzuur","Zoutzuur","Ammoniak"],
         answer: 0,
-        wrongHints: [null, "Niet — niet in bloed.", "Niet — sterk zuur, geen buffer.", "Ammoniak is giftig en zit nauwelijks in bloed. Welk buffersysteem hoort bij het CO₂ in je bloed?"],
+        wrongHints: [null, "Azijnzuur zit in azijn, niet in je bloed. Welk buffersysteem hoort bij het CO₂ in je bloed?", "Zoutzuur kan zelf geen toegevoegd zuur opvangen. Welk buffersysteem hoort bij het CO₂ in je bloed?", "Ammoniak is giftig en zit nauwelijks in bloed. Welk buffersysteem hoort bij het CO₂ in je bloed?"],
         uitlegPad: {
           stappen: [{ titel: "Bicarbonaat = bloed-pH", tekst: "**Bicarbonaat-buffer** H₂CO₃ ⇌ HCO₃⁻ + H⁺ houdt bloed-pH op 7,35-7,45. Cruciaal — een grote afwijking is levensbedreigend. CO₂ uit ademhaling + nier-reabsorptie HCO₃⁻ samen reguleren." }],
           theorie: "Toets-actueel: hyperventilatie verhoogt pH (alkalose), longontsteking kan pH verlagen (acidose).",
@@ -215,9 +215,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het **equivalentiepunt** in een titratie?",
-        options: ["Punt waar zuur en base gelijkwaardig zijn","Het moment waarop de titratie begint","Het punt waar de pH altijd 7 is","Het punt waar de indicator omslaat"],
+        options: ["Punt waar zuur en base gelijkwaardig zijn","Het moment waarop de titratie begint","Het punt waar de pH precies 7 is","Het punt waar de indicator omslaat"],
         answer: 0,
-        wrongHints: [null, "Niet — aan het begin is er nog niets toegevoegd.", "Niet — alleen bij sterk-sterk.", "Eindpunt — niet hetzelfde."],
+        wrongHints: [null, "Niet — aan het begin is er nog niets toegevoegd.", "Bij azijnzuur met natronloog ligt het equivalentiepunt boven pH 7. Is het dan altijd 7?", "Het omslagpunt van de indicator heet het eindpunt. Valt dat altijd precies samen met wat er chemisch gebeurt?"],
         uitlegPad: {
           stappen: [{ titel: "Stoïchiometrisch", tekst: "**Equivalentiepunt** = exact moment waarop toegevoegde stof stoichiometrisch gelijk is aan beginstof. Bij sterk zuur + sterke base = pH 7. Bij zwak/sterk-combinaties anders." }],
           niveaus: { basis: "Stoichiometrisch evenwicht.", simpeler: "Equivalentie = even-veel", nogSimpeler: "Even" },
@@ -227,7 +227,7 @@ const steps = [
         q: "10 mL HCl getitreerd met **0,1 M NaOH**, indicator-omslag bij 15 mL. C(HCl)?",
         options: ["0,15 M","0,1 M","1,5 M","0,01 M"],
         answer: 0,
-        wrongHints: [null, "Niet — er was méér NaOH nodig dan het volume HCl; wat zegt dat over de concentratie?", "Niet — niet 10× verschil.", "Niet — wel substantieel zuur."],
+        wrongHints: [null, "Niet — er was méér NaOH nodig dan het volume HCl; wat zegt dat over de concentratie?", "Reken n(NaOH) = 0,1 × 0,015 L. Deel je dat door 0,010 L of door 0,001 L?", "Er was 15 mL NaOH van 0,1 M nodig. Kan het zuur dan tien keer zo verdund zijn als de base?"],
         uitlegPad: {
           stappen: [{ titel: "Cz·Vz = Cb·Vb", tekst: "1-protonig: **C_zuur × V_zuur = C_base × V_base**. C_HCl × 10 = 0,1 × 15 → C_HCl = 1,5/10 = **0,15 M**." }],
           niveaus: { basis: "0,15 M.", simpeler: "0,1·15/10 = 0,15", nogSimpeler: "0,15" },
@@ -235,9 +235,9 @@ const steps = [
       },
       {
         q: "Welke indicator voor **azijnzuur + NaOH-titratie**?",
-        options: ["Fenolftaleïne","Methyloranje","Lakmoes alleen","Niet nodig"],
+        options: ["Fenolftaleïne","Methyloranje","Broomthymolblauw","Universeelindicator"],
         answer: 0,
-        wrongHints: [null, "Niet — omslag te vroeg.", "Te vaag.", "Wel nodig."],
+        wrongHints: [null, "Methyloranje slaat al om rond pH 4. Ligt het equivalentiepunt hier zo laag?", "Broomthymolblauw slaat om rond pH 7. Ligt het equivalentiepunt van azijnzuur met NaOH bij 7 of hoger?", "Universeelindicator verkleurt geleidelijk over de hele pH-schaal. Zie je dan een scherpe omslag?"],
         uitlegPad: {
           stappen: [{ titel: "Zwak zuur + sterke base = basisch eq.", tekst: "Bij zwak zuur (azijn) + sterke base (NaOH): equivalentiepunt **pH > 7** (acetaat-ion is base). **Fenolftaleïne** slaat om rond pH 8,2 → past. Methyloranje slaat al om bij pH 4 → veel te vroeg." }],
           niveaus: { basis: "Fenolftaleïne.", simpeler: "Azijn+NaOH = fenolftaleïne", nogSimpeler: "Fenolft." },
@@ -277,7 +277,7 @@ const steps = [
         q: "0,001 M **NaOH** in water. pH?",
         options: ["11","3","12","7"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pOH.", "Niet — controleer de exponent van [OH⁻].", "Niet neutraal."],
+        wrongHints: [null, "Niet — dat is pOH.", "Niet — controleer de exponent van [OH⁻].", "NaOH is een base. Kan de oplossing dan neutraal zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Bereken via pOH", tekst: "[OH⁻] = 0,001 = 10⁻³ → pOH = 3 → pH = 14 − 3 = **11**." }],
           niveaus: { basis: "11.", simpeler: "pOH=3, pH=11", nogSimpeler: "11" },
@@ -297,7 +297,7 @@ const steps = [
         q: "Bloed-pH = 7,4. **Hyperventilatie** doet pH:",
         options: ["Stijgen","Dalen","Geen invloed","Onmogelijk te zeggen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel — CO₂ minder.", "Wel duidelijke richting."],
+        wrongHints: [null, "Bij hyperventileren adem je veel CO₂ uit. Wordt je bloed dan zuurder of minder zuur?", "CO₂ vormt in je bloed koolzuur. Heeft minder CO₂ dan echt geen effect?", "Volg de keten vanaf het CO₂ dat je uitademt. Is de richting echt onvoorspelbaar?"],
         uitlegPad: {
           stappen: [{ titel: "CO₂ uit → pH op", tekst: "**Hyperventilatie** = snel ademen → veel CO₂ uitgeademd → minder H₂CO₃ in bloed → minder H⁺ → pH **stijgt** (alkalose). Rustig ademen brengt het CO₂-gehalte weer op peil." }],
           theorie: "Onderademing (hypoventilatie): omgekeerd, pH daalt (acidose). Beide gevaarlijk.",
@@ -308,7 +308,7 @@ const steps = [
         q: "Mengsel **CH₃COOH + CH₃COONa** = ?",
         options: ["Buffer","Sterk zuur","Sterke base","Geen reactie"],
         answer: 0,
-        wrongHints: [null, "Azijnzuur is een zwak zuur. Wat doet het natriumacetaat er dan bij?", "Acetaat is maar een zwakke base. Wat doet het samen met azijnzuur?", "Het mengsel reageert pas als je er zuur of base bij doet. Hoe heet zo'n mengsel?"],
+        wrongHints: [null, "Wat doet het natriumacetaat in dit mengsel als je er een beetje zuur bij doet?", "Acetaat is maar een zwakke base. Wat doet het samen met azijnzuur?", "Het mengsel reageert pas als je er zuur of base bij doet. Hoe heet zo'n mengsel?"],
         uitlegPad: {
           stappen: [{ titel: "Klassieker", tekst: "**Azijnzuur + natriumacetaat** = zwak zuur + zijn geconjugeerde base = **buffer**. pH-bereik rond pKa azijnzuur (4,75)." }],
           niveaus: { basis: "Buffer.", simpeler: "Mengsel = buffer", nogSimpeler: "Buffer" },
@@ -318,7 +318,7 @@ const steps = [
         q: "Cola heeft pH ≈ 2,5 (door koolzuur + fosforzuur). Tandglazuur lost op bij pH < 5,5. Wat te doen?",
         options: ["Minder vaak drinken en water spoelen","Direct na cola heel hard poetsen","Cola zo langzaam mogelijk drinken","Suikers blokkeren met spoelmiddel"],
         answer: 0,
-        wrongHints: [null, "Niet — verergert schade.", "Niet — hoe lang staan je tanden dan in het zuur?", "Niet primair (suikers zijn ander mechanisme)."],
+        wrongHints: [null, "Direct na zuur is het glazuur zacht. Wat doet hard poetsen dan met dat zachte laagje?", "Niet — hoe lang staan je tanden dan in het zuur?", "Hier gaat het om het zuur in cola, niet om de suiker. Helpt een middel tegen suiker dan tegen zuur?"],
         uitlegPad: {
           stappen: [{ titel: "Glazuur kwetsbaar", tekst: "Cola pH 2,5 → veel onder 5,5 → glazuur lost op. Tips: minder drinken, **water spoelen** na om pH te verhogen, **niet direct poetsen** (glazuur is verzacht — poetsen schuurt het weg). Wacht 30 min." }],
           theorie: "Toets-toepassing: zuur-base-chemie in dagelijks leven. Tandarts-advies = direct uit chemie.",

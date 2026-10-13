@@ -138,9 +138,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **pseudocode**?",
-        options: ["Een algoritme in leesbare 'bijna-taal'", "Een taal die de computer direct uitvoert", "Versleutelde code die niemand kan lezen", "Een tekening met blokjes en pijlen"],
+        options: ["Een algoritme in leesbare 'bijna-taal'", "Een taal die de computer direct uitvoert", "Nepcode die echt lijkt, maar niet werkt", "Een tekening met blokjes en pijlen"],
         answer: 0,
-        wrongHints: [null, "Juist niet — de computer kan pseudocode niet draaien.", "Pseudocode is juist bedoeld om makkelijk te lezen.", "Een stroomdiagram is een tékening; pseudocode is tekst."],
+        wrongHints: [null, "De computer kan pseudocode niet uitvoeren. Voor wie schrijf je het dan?", "'Pseudo' betekent wel 'schijn', maar het is niet bedoeld om te misleiden. Waarvoor gebruik je het dan?", "Een stroomdiagram is een tékening; pseudocode is tekst."],
         uitlegPad: {
           stappen: [{ titel: "Voor mensen, niet voor de machine", tekst: "**Pseudocode** beschrijft een algoritme in **leesbare, informele taal** (LEES, ALS, TOON…). Het is bedoeld om de logica helder te krijgen vóór je echte code typt. De computer voert het niet uit — het is taal-onafhankelijk." }],
           niveaus: { basis: "Leesbare bijna-code.", simpeler: "Pseudocode = bijna-taal voor mensen", nogSimpeler: "Leesbare bijna-code." },
@@ -158,9 +158,9 @@ const steps = [
       },
       {
         q: "Waarom schrijf je een algoritme vaak **eerst** in pseudocode of een flowchart?",
-        options: ["Denkfouten vind je sneller dan in echte code", "Pseudocode draait sneller dan echte code", "De computer kan echte code anders niet lezen", "Het programma wordt er later kleiner van"],
+        options: ["Denkfouten vind je sneller dan in echte code", "Dan hoef je het programma later niet te testen", "Zo kan de computer je plan alvast controleren", "Dan wordt het programma later sneller"],
         answer: 0,
-        wrongHints: [null, "Pseudocode draait helemaal niet.", "De computer leest echte code prima — pseudocode is voor mensen.", "Bestandsgrootte heeft hier niets mee te maken."],
+        wrongHints: [null, "Ook een goed plan kan bugs opleveren als je het uitwerkt. Testen blijft nodig.", "De computer kan pseudocode niet lezen of controleren. Voor wie is het dan bedoeld?", "De snelheid hangt af van het algoritme zelf, niet van hoe je het eerst opschreef."],
         uitlegPad: {
           stappen: [{ titel: "Eerst denken, dan typen", tekst: "Je vindt **logica-fouten sneller op papier** (pseudocode/flowchart) dan tussen de details van een echte taal. Bovendien is het **taal-onafhankelijk**: dezelfde opzet kun je daarna in Python óf Java uitwerken." }],
           niveaus: { basis: "Fouten eerder vinden.", simpeler: "Eerst plan = fouten eerder", nogSimpeler: "Fouten eerder vinden." },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Waarom is pseudocode **taal-onafhankelijk** handig?",
-        options: ["Dezelfde opzet kun je in Python óf Java uitwerken", "Het draait zonder aanpassing op elke computer", "Het wordt automatisch omgezet naar elke taal", "De computer voert het zonder vertaling uit"],
+        options: ["Dezelfde opzet kun je in Python óf Java uitwerken", "Het werkt op Windows, macOS én Linux", "Je hoeft geen Engels te kennen om het te lezen", "Je kunt het met één klik omzetten naar code"],
         answer: 0,
-        wrongHints: [null, "Pseudocode draait juist nergens.", "Geen enkel programma zet pseudocode vanzelf om — wie doet dat dan?", "De computer voert het níét uit — het is voor mensen."],
+        wrongHints: [null, "Pseudocode draait nergens; het is geen programma. Op welke 'taal' slaat taal-onafhankelijk?", "Het gaat niet om spreektalen zoals Engels of Nederlands.", "Geen enkel programma zet pseudocode vanzelf om — wie doet dat dan?"],
         uitlegPad: {
           stappen: [{ titel: "Eén plan, meerdere talen", tekst: "Omdat **pseudocode** niet aan een taal vastzit, kun je hetzelfde plan daarna uitwerken in **Python, Java of wat dan ook**. Je bedenkt de logica één keer en hoeft je nog niet druk te maken over de exacte schrijfwijze van een taal." }],
           niveaus: { basis: "Werkt in elke taal.", simpeler: "Taal-onafhankelijk = flexibel", nogSimpeler: "Werkt in elke taal." },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Waarom is de **efficiëntie** van een algoritme belangrijk?",
-        options: ["Bij veel data scheelt het enorm veel tijd", "De code wordt er korter en netter van", "Zo kan het algoritme op elke computer draaien", "Een efficiënter algoritme geeft betere antwoorden"],
+        options: ["Bij veel data scheelt het enorm veel tijd", "De code wordt er korter en netter van", "Zo start het programma sneller op", "Een efficiënter algoritme geeft betere antwoorden"],
         answer: 0,
-        wrongHints: [null, "Het gaat om snelheid/tijd, niet om uiterlijk.", "Ook een traag algoritme draait op elke computer; het duurt dan alleen langer. Wanneer merk je dat?", "Een efficiënter algoritme geeft hetzelfde antwoord, alleen sneller."],
+        wrongHints: [null, "Het gaat om snelheid/tijd, niet om uiterlijk.", "Opstarten duurt kort, wat je algoritme ook is. Wanneer merk je het verschil wél?", "Een efficiënter algoritme geeft hetzelfde antwoord, alleen sneller."],
         uitlegPad: {
           stappen: [{ titel: "n maakt het verschil", tekst: "Bij een paar items maakt het niet uit, maar bij **miljoenen** items is het verschil tussen een slim en een traag algoritme enorm (seconden vs uren). Daarom tellen informatici het aantal **stappen** in verhouding tot de grootte n. Hetzelfde resultaat, maar veel sneller bereikt." }],
           niveaus: { basis: "Veel data = tijd telt.", simpeler: "Grote data → efficiëntie telt", nogSimpeler: "Veel data = tijd telt." },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Waarom is **binair zoeken** sneller dan lineair zoeken?",
-        options: ["Het halveert bij elke stap het zoekgebied", "Het bekijkt elk item één keer heel snel", "Het gebruikt meer geheugen om te zoeken", "Het begint altijd vooraan in de lijst"],
+        options: ["Het halveert bij elke stap het zoekgebied", "Het bekijkt elk item één keer heel snel", "Het zoekt vanaf twee kanten tegelijk", "Het werkt alleen met nullen en enen"],
         answer: 0,
-        wrongHints: [null, "Elk item apart bekijken is juist lineair (traag).", "Snelheid komt niet door meer geheugen.", "Waar kijkt binair zoeken als eerste: vooraan, of ergens anders?"],
+        wrongHints: [null, "Elk item apart bekijken is juist lineair (traag).", "Het kijkt per stap maar naar één item. Wélk item kiest het?", "'Binair' slaat hier niet op nullen en enen; ook woorden kun je zo doorzoeken."],
         uitlegPad: {
           stappen: [{ titel: "Halveren = supersnel", tekst: "**Binair zoeken** kijkt in het midden en **gooit de helft weg** die het niet kan zijn — steeds opnieuw. Daardoor kost het maar ~log₂(n) stappen i.p.v. n. Zo vind je een naam in een telefoonboek zonder elke pagina te lezen. (Voorwaarde: de lijst is gesorteerd.)" }],
           niveaus: { basis: "Steeds halveren.", simpeler: "Binair = halveren", nogSimpeler: "Steeds halveren." },

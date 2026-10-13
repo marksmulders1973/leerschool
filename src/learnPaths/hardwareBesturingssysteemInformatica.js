@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Waarvoor is de **GPU** (grafische kaart) vooral sterk?",
-        options: ["Beeld en veel berekeningen tegelijk", "Het blijvend bewaren van bestanden", "Het leveren van stroom aan de pc", "Het verwerken van toetsaanslagen"],
+        options: ["Beeld en veel berekeningen tegelijk", "Het bewaren van foto's en video's", "Het leveren van stroom aan de pc", "Het doorsturen van beeld via wifi"],
         answer: 0,
-        wrongHints: [null, "Bewaren doet de opslag (SSD/HDD).", "Stroom komt van de voeding.", "Toetsaanslagen zijn invoer — geen typische GPU-taak."],
+        wrongHints: [null, "Bewaren doet de opslag (SSD/HDD), ook als het om beelden gaat.", "Stroom komt van de voeding.", "Dat doet de netwerkkaart."],
         uitlegPad: {
           stappen: [{ titel: "Veel tegelijk rekenen", tekst: "De **GPU** (grafische kaart) is gebouwd om **heel veel berekeningen tegelijk (parallel)** te doen. Perfect voor **beeld/video** in games, maar ook voor **AI** (die veel parallelle rekensommen vraagt). De CPU is juist sterk in losse, complexe taken." }],
           niveaus: { basis: "Beeld + parallel rekenen.", simpeler: "GPU = veel tegelijk", nogSimpeler: "Beeld + parallel rekenen" },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Wat ben je kwijt als je de computer uitzet **zonder op te slaan**?",
-        options: ["Het werk dat alleen in het RAM stond", "Alle bestanden die op je SSD staan", "Het besturingssysteem van je pc", "Niets, want alles wordt vanzelf bewaard"],
+        options: ["Het werk dat alleen in het RAM stond", "Het hele bestand, ook de opgeslagen versie", "Alles wat in de prullenbak stond", "Niets: het werkgeheugen houdt het vast"],
         answer: 0,
-        wrongHints: [null, "De SSD is niet-vluchtig — die blijft bewaard.", "Het OS staat op opslag en blijft.", "Denk aan het vluchtige geheugen — wat blijft daar over zonder stroom?"],
+        wrongHints: [null, "De eerder opgeslagen versie staat op de SSD, en die is niet-vluchtig.", "De prullenbak is gewoon een map op je opslag. Blijft die bewaard zonder stroom?", "Wat gebeurt er met het werkgeheugen als de stroom eraf gaat?"],
         uitlegPad: {
           stappen: [{ titel: "RAM is vluchtig", tekst: "**RAM** is **vluchtig**: zonder stroom is het leeg. Werk dat je nog niet hebt **opgeslagen** (en dus alleen in RAM stond) ben je kwijt. Wat op de **SSD/HDD** staat (niet-vluchtig) blijft bewaard." }],
           niveaus: { basis: "Niet-opgeslagen werk in RAM.", simpeler: "RAM weg = niet-opgeslagen werk", nogSimpeler: "Niet-opgeslagen werk in RAM" },
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Wat is het voordeel van meerdere **cores** in een CPU?",
-        options: ["Meerdere instructies tegelijk uitvoeren", "Meer ruimte om bestanden op te slaan", "Meer werkgeheugen voor programma's", "Gegarandeerd minder stroomverbruik"],
+        options: ["Meerdere instructies tegelijk uitvoeren", "Meer ruimte om bestanden op te slaan", "Meer werkgeheugen voor programma's", "Een hogere kloksnelheid per core"],
         answer: 0,
-        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "Werkgeheugen is RAM; dat zit niet in de cores.", "Meer cores kunnen juist méér verbruiken."],
+        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "Werkgeheugen is RAM; dat zit niet in de cores.", "De kloksnelheid staat los van het aantal cores."],
         uitlegPad: {
           stappen: [{ titel: "Meer handen", tekst: "Elke **core** is als een aparte rekenkern. Met meerdere cores kan de CPU **meerdere instructies tegelijk (parallel)** uitvoeren — handig als je veel programma's tegelijk draait of zware taken splitst. Meer cores ≈ meer werk tegelijk." }],
           niveaus: { basis: "Meer tegelijk rekenen.", simpeler: "Cores = parallel", nogSimpeler: "Meer tegelijk rekenen" },
@@ -138,9 +138,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de hoofdtaak van een **besturingssysteem (OS)**?",
-        options: ["De hardware beheren en programma's laten draaien", "Foto's en video's bewerken en opslaan", "Websites bouwen en op internet zetten", "Programma's tegen virussen beschermen"],
+        options: ["De hardware beheren en programma's laten draaien", "Programma's vertalen naar machinetaal", "De pc opstarten voordat er software is", "Programma's tegen virussen beschermen"],
         answer: 0,
-        wrongHints: [null, "Fotobewerken doe je met een programma óp het OS.", "Websites maak je met programma's óp het OS.", "Een virusscanner is een programma óp het OS. Wat is de hoofdtaak van het OS zelf?"],
+        wrongHints: [null, "Dat doet een compiler of interpreter, een apart programma.", "Dat doet de firmware (BIOS/UEFI); pas daarna start het OS.", "Een virusscanner is een programma óp het OS. Wat is de hoofdtaak van het OS zelf?"],
         uitlegPad: {
           stappen: [{ titel: "De brug hardware ↔ software", tekst: "Het **OS** (Windows, macOS, Linux, Android…) is de **brug** tussen hardware en jouw programma's: het beheert hardware (via drivers), verdeelt CPU-tijd en geheugen over processen, regelt bestanden, de interface en beveiliging. Zonder OS kun je de computer niet gebruiken." }],
           niveaus: { basis: "Hardware + programma's beheren.", simpeler: "OS = beheert alles", nogSimpeler: "Hardware + programma's beheren" },
@@ -148,9 +148,9 @@ const steps = [
       },
       {
         q: "Dat meerdere programma's 'tegelijk' lijken te draaien, regelt het OS met…",
-        options: ["Multitasking", "Meer RAM-geheugen", "Een hogere kloksnelheid", "Een grotere SSD"],
+        options: ["Multitasking", "Virtualisatie", "Een hogere kloksnelheid", "Caching"],
         answer: 0,
-        wrongHints: [null, "Meer RAM helpt, maar verdeelt geen rekentijd. Wat doet het OS met de tijd van de CPU?", "Ook een snelle CPU doet per core één ding tegelijk. Hoe lijkt het dan alsof alles tegelijk gaat?", "Een grotere schijf bewaart meer, maar verdeelt geen rekentijd."],
+        wrongHints: [null, "Virtualisatie draait een complete extra computer in software; dat is iets anders.", "Ook een snelle CPU doet per core één ding tegelijk. Hoe lijkt het dan alsof alles tegelijk gaat?", "Caching bewaart vaak gebruikte gegevens dichtbij; het verdeelt geen rekentijd."],
         uitlegPad: {
           stappen: [{ titel: "CPU-tijd verdelen", tekst: "Het OS doet aan **multitasking**: het verdeelt de **CPU-tijd** razendsnel over alle lopende **processen**, zodat het lijkt alsof alles tegelijk draait. In werkelijkheid wisselt de CPU continu tussen taken." }],
           niveaus: { basis: "Multitasking.", simpeler: "Tegelijk = multitasking", nogSimpeler: "Multitasking" },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Windows en macOS zijn **gesloten (closed source)**. Dat betekent:",
-        options: ["De broncode is van het bedrijf en geheim", "Je mag ze niet op je eigen pc installeren", "Ze mogen altijd gratis gebruikt worden", "Iedereen mag de code vrij aanpassen"],
+        options: ["De broncode is van het bedrijf en geheim", "Je mag ze niet op je eigen pc installeren", "Ze kunnen geen apps van anderen draaien", "Iedereen mag de code vrij aanpassen"],
         answer: 0,
-        wrongHints: [null, "Installeren mag juist wél (met een licentie). Waar slaat 'source' op?", "Ze zijn meestal juist betaald.", "Vrij aanpassen is juist open source."],
+        wrongHints: [null, "Installeren mag juist wél (met een licentie). Waar slaat 'closed' dan op?", "Je kunt er juist allerlei apps op installeren. Waar slaat 'closed' dan op?", "Vrij aanpassen is juist open source."],
         uitlegPad: {
           stappen: [{ titel: "Code niet openbaar", tekst: "Bij **closed source** houdt het bedrijf de **broncode geheim** — je mag hem niet inzien of aanpassen (Windows, macOS). Bij **open source** (Linux, Android) is de code juist **openbaar** en mag iedereen meekijken en verbeteren." }],
           niveaus: { basis: "Code is van het bedrijf.", simpeler: "Closed = code geheim", nogSimpeler: "Code is van het bedrijf" },
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Wat is een voordeel van bestanden in de **cloud** opslaan?",
-        options: ["Overal bereikbaar + automatische back-up", "Bestanden openen sneller dan van je SSD", "Bereikbaar, ook als je offline bent", "Het bedrijf kan je bestanden niet inzien"],
+        options: ["Overal bereikbaar en meteen een extra kopie", "Bestanden openen sneller dan van je SSD", "Je eigen back-ups kun je dan overslaan", "Het bedrijf kan je bestanden niet inzien"],
         answer: 0,
-        wrongHints: [null, "Ophalen via internet is meestal trager dan van je eigen schijf. Wat is dan wél het voordeel?", "Om bij de cloud te komen heb je internet nodig.", "Je bestanden staan op servers van een bedrijf; let dus op privacy."],
+        wrongHints: [null, "Ophalen via internet is meestal trager dan van je eigen schijf. Wat is dan wél het voordeel?", "Ook een cloudaccount kun je kwijtraken. Is één plek dan genoeg?", "Je bestanden staan op servers van een bedrijf; let dus op privacy."],
         uitlegPad: {
           stappen: [{ titel: "Overal + back-up", tekst: "**Cloudopslag** (Drive, iCloud, Dropbox) staat op servers via internet: **overal bereikbaar**, automatische **back-up** en makkelijk **samenwerken**. Nadelen: je hebt **internet** nodig en je vertrouwt je gegevens toe aan een bedrijf (privacy/AVG)." }],
           niveaus: { basis: "Overal + back-up.", simpeler: "Cloud = overal bereikbaar", nogSimpeler: "Overal + back-up" },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Wat is een goede **back-up-regel**?",
-        options: ["Belangrijke bestanden op meerdere plekken bewaren", "Een kopie in een tweede map op dezelfde schijf", "Eén keer per jaar een kopie op een usb-stick", "Alles in de cloud, dan is een kopie niet nodig"],
+        options: ["Belangrijke bestanden op meerdere plekken bewaren", "Dagelijks een kopie in een tweede map op je pc", "Eén keer per jaar een kopie op een usb-stick", "Alles in de cloud zetten, die maakt zelf back-ups"],
         answer: 0,
-        wrongHints: [null, "Gaat die schijf kapot, dan ben je beide kwijt.", "Wat ben je kwijt van alles wat je dat jaar maakte?", "Ook een cloudaccount kun je kwijtraken (gehackt, per ongeluk gewist). Wat als dat de enige plek is?"],
+        wrongHints: [null, "Elke dag is mooi, maar het staat op dezelfde schijf. Wat als die kapotgaat?", "Wat ben je kwijt van alles wat je dat jaar maakte?", "Ook een cloudaccount kun je kwijtraken (gehackt, per ongeluk gewist). Wat als dat de enige plek is?"],
         uitlegPad: {
           stappen: [{ titel: "Eén kopie is geen kopie", tekst: "Bewaar belangrijke bestanden op **meer dan één plek** (bv. lokaal + cloud). Raakt de ene plek beschadigd (crash, ransomware, diefstal), dan heb je nog de andere. 'Eén kopie is geen kopie' — echte veiligheid begint bij twee." }],
           niveaus: { basis: "Meerdere plekken.", simpeler: "Back-up = meer plekken", nogSimpeler: "Meerdere plekken" },

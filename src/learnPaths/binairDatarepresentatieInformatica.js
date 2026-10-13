@@ -118,9 +118,9 @@ const steps = [
     checks: [
       {
         q: "Een computer slaat tekst eigenlijk op als…",
-        options: ["Getallen volgens een afgesproken tekenset", "Kleine plaatjes van iedere losse letter", "De klanken van de uitgesproken letters", "Morsecode van punten en strepen"],
+        options: ["Getallen volgens een afgesproken tekenset", "Kleine plaatjes van iedere losse letter", "Woorden uit een ingebouwd woordenboek", "Morsecode van punten en strepen"],
         answer: 0,
-        wrongHints: [null, "Nee, geen plaatjes — er zit een getalcode achter.", "Dat is geluid, niet tekst.", "Morse is een oude code voor telegrafie. Welke afspraak gebruikt een computer voor letters?"],
+        wrongHints: [null, "Een plaatje per letter kost veel ruimte, en hoe zoek je dan een woord? Wat slaat de computer dan wél op?", "Je kunt ook losse letters en nieuwe woorden typen. Hoe zou dat met een woordenboek gaan?", "Morse is een oude code voor telegrafie. Welke afspraak gebruikt een computer voor letters?"],
         uitlegPad: {
           stappen: [{ titel: "Teken → getal → bits", tekst: "Een tekenset (zoals ASCII of Unicode) spreekt af welk **getal** bij welk teken hoort. Dat getal wordt als bits opgeslagen. Zo wordt elke letter uiteindelijk een rij nullen en enen." }],
           niveaus: { basis: "Getallen via een tekenset.", simpeler: "Tekst = getallen (tekenset)", nogSimpeler: "Getallen volgens een afgesproken tekenset." },
@@ -138,9 +138,9 @@ const steps = [
       },
       {
         q: "Waarvoor heb je **Unicode/UTF-8** nodig in plaats van ASCII?",
-        options: ["Voor alle talen, symbolen én emoji", "Om sneller met tekst te rekenen", "Om bestanden te verkleinen", "Voor extra hoofdletters en leestekens"],
+        options: ["Voor alle talen, symbolen én emoji", "Voor opmaak zoals vet en cursief", "Voor cijfers en rekentekens", "Voor extra hoofdletters en leestekens"],
         answer: 0,
-        wrongHints: [null, "Het gaat om méér tekens, niet om rekensnelheid.", "Compressie is iets anders.", "ASCII kon hoofdletters en leestekens allang aan."],
+        wrongHints: [null, "Opmaak regelt je tekstverwerker. Waar gaat een tekenset over?", "De cijfers 0-9 en tekens als + en - zitten al in ASCII.", "ASCII kon hoofdletters en leestekens allang aan."],
         uitlegPad: {
           stappen: [{ titel: "128 tekens is te weinig", tekst: "ASCII heeft maar 128 tekens — geen é, geen Chinees, geen emoji. **Unicode** geeft élk teken ter wereld een nummer, en **UTF-8** slaat dat op (1-4 bytes per teken). Daarom kun je 🙂 en 'café' gewoon typen." }],
           niveaus: { basis: "Alle talen + emoji.", simpeler: "Unicode = alles + emoji", nogSimpeler: "Voor alle talen, symbolen én emoji." },
@@ -177,9 +177,9 @@ const steps = [
       },
       {
         q: "Wat betekent een hogere **samplefrequentie** (Hz) bij geluid?",
-        options: ["Vaker meten per seconde → beter geluid", "Het geluid klinkt hoger van toon", "Een kleiner bestand met minder data", "Het geluid wordt harder afgespeeld"],
+        options: ["Vaker meten per seconde → beter geluid", "Hogere tonen → helderder geluid", "Meer bits per meting → preciezer geluid", "Harder afspelen → voller geluid"],
         answer: 0,
-        wrongHints: [null, "Het gaat om méétmomenten, niet direct om de toon.", "Hogere kwaliteit maakt het bestand juist groter.", "Volume is iets anders dan hoe vaak je meet."],
+        wrongHints: [null, "De frequentie van een tóón is iets anders dan de frequentie bij het opnemen.", "Dat is de bitdiepte, een andere instelling.", "Volume heeft niets met de opname-instelling te maken."],
         uitlegPad: {
           stappen: [{ titel: "Sampling", tekst: "Bij **sampling** meet de computer de geluidsgolf heel vaak per seconde. Meer metingen (hogere **samplefrequentie**, in Hz; cd = 44.100 Hz) = nauwkeurigere weergave = beter geluid, maar een groter bestand." }],
           niveaus: { basis: "Vaker meten = beter geluid.", simpeler: "Meer Hz = beter geluid", nogSimpeler: "Vaker meten per seconde → beter geluid." },
@@ -197,7 +197,7 @@ const steps = [
       },
       {
         q: "Je wilt een schermafbeelding met scherpe tekst opslaan **zonder kwaliteitsverlies**. Wat kies je?",
-        options: ["PNG (lossless)", "JPG (lossy)", "JPG op hoogste kwaliteit", "Een lagere resolutie"],
+        options: ["Opslaan als PNG", "Opslaan als JPG", "Opslaan als JPG op 100%", "Opslaan op lagere resolutie"],
         answer: 0,
         wrongHints: [null, "JPG maakt tekstranden juist wazig (lossy-artefacten).", "Ook op de hoogste stand gooit JPG een beetje informatie weg.", "Resolutie verlagen kost juist kwaliteit."],
         uitlegPad: {

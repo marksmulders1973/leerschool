@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme**?",
-        options: ["Een stap-voor-stap-recept om een probleem op te lossen", "Een computer die stappen uitvoert", "Een database vol opgeslagen regels", "Een netwerk van gekoppelde computers"],
+        options: ["Een vaste reeks stappen om iets op te lossen", "Een computer die stappen uitvoert", "Een database vol opgeslagen regels", "Een programmeertaal om problemen op te lossen"],
         answer: 0,
-        wrongHints: [null, "Een algoritme is geen apparaat — je kunt het ook op papier volgen.", "Een database bewaart gegevens; dat is nog geen werkwijze.", "Een netwerk is hardware plus verbindingen — geen beschrijving van een werkwijze."],
+        wrongHints: [null, "Een algoritme is geen apparaat — je kunt het ook op papier volgen.", "Een database bewaart gegevens; dat is nog geen werkwijze.", "Een programmeertaal is een middel om iets op te schrijven; het idee zelf hangt niet van één taal af."],
         uitlegPad: {
           stappen: [{ titel: "Recept-analogie", tekst: "**Algoritme** = stap-voor-stap-instructies om probleem op te lossen. Niet computer-specifiek — kookrecept is ook algoritme. **Goed algoritme**: helder, eindig, deterministisch (zelfde input → zelfde output). **Programma** = algoritme + concrete code." }],
           niveaus: { basis: "Stappenplan.", simpeler: "Algoritme = recept", nogSimpeler: "Stappenplan" },
@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "**Binair zoeken** werkt:",
-        options: ["In een gesorteerde lijst, door het bereik steeds te halveren", "In een ongesorteerde lijst, item voor item", "Alleen op bestanden met nullen en enen", "Alleen op lijsten met getallen erin"],
+        options: ["In een gesorteerde lijst, door steeds te halveren", "In een ongesorteerde lijst, door vooraan te beginnen", "In een gesorteerde lijst, door vooraan te beginnen", "In een ongesorteerde lijst, door steeds te halveren"],
         answer: 0,
-        wrongHints: [null, "Item voor item is lineair zoeken — en mag de lijst ongesorteerd zijn?", "Het woord 'binair' slaat hier niet op het soort bestand.", "Ook namen kun je binair doorzoeken. Wat moet er dan wél gelden voor de lijst?"],
+        wrongHints: [null, "Vooraan beginnen en item voor item kijken is lineair zoeken.", "Ook in een gesorteerde lijst is vooraan beginnen gewoon lineair zoeken. Waar kijk je bij binair zoeken als eerste?", "Na het halveren moet je weten in welke helft het zit. Kan dat als de lijst door elkaar staat?"],
         uitlegPad: {
           stappen: [{ titel: "Telefoonboek-strategie", tekst: "**Binair zoeken** (binary search): in **gesorteerde** lijst, kijk middelste element. Te groot? Zoek in eerste helft. Te klein? In tweede helft. Halveer bereik elke stap → **O(log n)** = zeer snel.\n\n1 miljoen items: binair zoekt in max 20 stappen, lineair (één voor één) in gemiddeld 500.000.\n\nWerkt zoals zoeken in oud telefoonboek: open in het midden, zoek verder in de juiste helft." }],
           niveaus: { basis: "Halveren in gesorteerd.", simpeler: "Binair = halveren", nogSimpeler: "Halveren in gesorteerd" },
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "**O(n²)** schaalt:",
-        options: ["Kwadratisch","Lineair","Logaritmisch","Constant"],
+        options: ["Kwadratisch", "Lineair", "Logaritmisch", "Exponentieel"],
         answer: 0,
-        wrongHints: [null, "Dat is O(n).", "Dat is O(log n).", "Dat is O(1)."],
+        wrongHints: [null, "Dat is O(n).", "Dat is O(log n).", "Exponentieel is O(2ⁿ) — kijk waar de n staat."],
         uitlegPad: {
           stappen: [{ titel: "Big O", tekst: "**Big O-notatie**: hoe schaalt algoritme met n input-grootte?\n• O(1): constant (bv. array[5]).\n• O(log n): logaritmisch (binair zoeken).\n• O(n): lineair (lineair zoeken).\n• **O(n²): kwadratisch** (bubble sort, geneste lussen).\n• O(2^n): exponentieel (rugzakprobleem brute-force).\n\nBij n=1000: O(n²) = 1 miljoen operaties. O(n log n) = 10.000. Verschil groot.\n\nKies algoritme op basis van schaal." }],
           niveaus: { basis: "Kwadratisch.", simpeler: "n² = kwadratisch", nogSimpeler: "Kwadratisch" },
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "**AVG / GDPR** is:",
-        options: ["Europese privacywet sinds 2018", "Nederlandse wet op auteursrecht", "Een technische beveiligingsstandaard", "Amerikaanse wet tegen hacken"],
+        options: ["Europese privacywet sinds 2018", "Nederlandse privacywet sinds 2001", "Europese auteursrechtwet sinds 2019", "Nederlandse auteursrechtwet sinds 1912"],
         answer: 0,
-        wrongHints: [null, "Auteursrecht staat in de Auteurswet. Over welk recht van burgers gaat de AVG?", "Het is een wét van de EU, geen technische beveiligings-standaard.", "Het is geen Amerikaanse wet — en gaat het over hacken of over iets anders?"],
+        wrongHints: [null, "Dat was de Wbp, de voorganger van de AVG.", "Auteursrecht gaat over de makers van werk. Waar gaat de AVG over?", "De Auteurswet is al heel oud en gaat over makers. Waar gaat de AVG over?"],
         uitlegPad: {
           stappen: [{ titel: "GDPR/AVG", tekst: "**AVG** (Algemene Verordening Gegevensbescherming) = NL-naam. **GDPR** (General Data Protection Regulation) = EU. Sinds 25 mei 2018. Bescherming persoonsgegevens van EU-burgers. Rechten: inzage, correctie, **vergetelheid** ('right to be forgotten'), dataportabiliteit. **Datalek** moet binnen 72u gemeld worden bij Autoriteit Persoonsgegevens. Boetes tot 4% wereldwijde omzet of €20 mln (hoogste van twee)." }],
           niveaus: { basis: "EU-privacy-wet.", simpeler: "AVG = privacy", nogSimpeler: "EU-privacy-wet" },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "**JOIN** in SQL doet:",
-        options: ["Combineert rijen uit twee of meer tabellen", "Sorteert rijen op een kolom", "Verwijdert dubbele rijen uit een tabel", "Maakt een nieuwe lege tabel aan"],
+        options: ["Koppelt rijen van tabellen via een sleutel", "Sorteert rijen op een kolom", "Plakt twee query-uitkomsten onder elkaar", "Voegt een nieuwe rij toe aan een tabel"],
         answer: 0,
-        wrongHints: [null, "Dat is ORDER BY.", "Dat is DISTINCT.", "Dat is CREATE TABLE."],
+        wrongHints: [null, "Dat is ORDER BY.", "Onder elkaar plakken doet UNION.", "Dat is INSERT INTO."],
         uitlegPad: {
           stappen: [{ titel: "Tabellen koppelen", tekst: "**JOIN**: combineert rijen uit 2+ tabellen op basis van overeenkomende kolommen (vaak foreign-primary key match). Types: **INNER JOIN** (alleen matches), **LEFT JOIN** (alle uit linker tabel), RIGHT JOIN, FULL JOIN.\n\nVoorbeeld: leerling + diens cijfers in één query." }],
           niveaus: { basis: "Combineert tabellen.", simpeler: "JOIN = combineren", nogSimpeler: "Combineert tabellen" },
@@ -190,9 +190,9 @@ const steps = [
       },
       {
         q: "**Big Data 4 V's**:",
-        options: ["Volume + Velocity + Variety + Veracity", "Volume + Velocity + Variety + Visibility", "Volume + Velocity + Versie + Veracity", "Volume + Video + Variety + Veracity"],
+        options: ["Volume + Velocity + Variety + Veracity", "Volume + Velocity + Version + Video", "Virtual + Visibility + Variety + Video", "Virtual + Visibility + Version + Veracity"],
         answer: 0,
-        wrongHints: [null, "Drie kloppen. Zichtbaarheid is geen kenmerk van big data; welke V gaat over de betrouwbaarheid?", "'Versie' zegt iets over software, niet over data. Welke V gaat over de soorten data?", "Video is maar één soort data. Welke V gaat over de snelheid?"],
+        wrongHints: [null, "Twee van deze V's zijn geen kenmerk van big data. Welke V gaat over de soorten data, en welke over de betrouwbaarheid?", "Drie van deze V's horen er niet bij. Welke V's gaan over de hoeveelheid, de snelheid en de betrouwbaarheid?", "Drie van deze V's horen er niet bij. Welke V's gaan over de hoeveelheid, de snelheid en de soorten data?"],
         uitlegPad: {
           stappen: [{ titel: "4 V-kenmerken", tekst: "**Big Data 4 V's**:\n• **Volume**: groot (terabytes/petabytes).\n• **Velocity**: snelheid van data-stroom (real-time IoT, social media).\n• **Variety**: verschillende formaten (tekst, video, log, sensor).\n• **Veracity**: betrouwbaarheid + accuratheid (data kan vies, onzeker zijn).\n\nSoms 5e V: Value (waarde). Klassiek voorbeeld: Twitter-feed = volume + velocity + variety + veracity-uitdagingen tegelijk." }],
           niveaus: { basis: "Vol/Vel/Var/Ver.", simpeler: "4V", nogSimpeler: "Vol/Vel/Var/Ver" },
@@ -219,9 +219,9 @@ const steps = [
       },
       {
         q: "**LLM** staat voor:",
-        options: ["Large Language Model", "Large Learning Machine", "Linked Language Memory", "Logical Language Model"],
+        options: ["Large Language Model", "Large Learning Machine", "Linked Language Machine", "Linked Learning Model"],
         answer: 0,
-        wrongHints: [null, "Bijna. Over welk soort data gaat het? Denk aan wat een chatbot doet.", "Het eerste woord zegt iets over hoe groot het model is.", "Een LLM rekent niet met logische regels maar met kansen. Welk woord zegt iets over de grootte?"],
+        wrongHints: [null, "Bijna. Over welk soort data gaat het? Denk aan wat een chatbot doet.", "Het eerste woord zegt iets over hoe groot het model is.", "Kijk naar de eerste twee woorden: hoe groot is zo'n model, en waarmee werkt een chatbot de hele dag?"],
         uitlegPad: {
           stappen: [{ titel: "Voorspel volgend woord", tekst: "**LLM = Large Language Model**: model getraind op enorme tekst-corpus dat 'volgend woord' voorspelt op basis context. Voorbeelden: **ChatGPT** (OpenAI), **Claude** (Anthropic), **Gemini** (Google), **LLaMA** (Meta open source). Onderscheid: niet **denken** — herkennen patronen op grote schaal." }],
           niveaus: { basis: "Large Language Model.", simpeler: "LLM = taalmodel", nogSimpeler: "Large Language Model" },
@@ -229,9 +229,9 @@ const steps = [
       },
       {
         q: "Wat is **AI-hallucinatie**?",
-        options: ["AI die geloofwaardig klinkende onzin maakt", "Een storing waardoor de AI crasht", "AI die foto's en video's herkent", "AI die gesproken taal omzet in tekst"],
+        options: ["AI die geloofwaardig klinkende onzin maakt", "Een storing waardoor de AI crasht", "AI die op verzoek droomachtige kunst maakt", "AI die gesproken taal omzet in tekst"],
         answer: 0,
-        wrongHints: [null, "Het is geen defect — het model doet gewoon zijn werk. Wat klopt er dan niet aan de úítkomst?", "Dat is beeldherkenning — iets heel anders.", "Dat is spraakherkenning — iets heel anders."],
+        wrongHints: [null, "Het is geen defect — het model doet gewoon zijn werk. Wat klopt er dan niet aan de úítkomst?", "Kunst maken op verzoek is geen fout. Bij hallucinatie gaat er iets mis.", "Dat is spraakherkenning — iets heel anders."],
         uitlegPad: {
           stappen: [{ titel: "Verzonnen feiten", tekst: "**Hallucinatie**: LLM produceert antwoord dat **plausibel klinkt** maar **onjuist** is. Bv. verzint feiten, bronnen, citaten. Komt door: LLM is patroon-voorspeller, niet feit-checker. **Gevolg**: niet blind vertrouwen, altijd verifiëren. Modellen worden beter (RAG = Retrieval Augmented Generation hangt feiten erbij) maar probleem blijft." }],
           niveaus: { basis: "Plausibele onzin.", simpeler: "Hallucinatie = verzinnen", nogSimpeler: "Plausibele onzin" },
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "**AI-bias** ontstaat door:",
-        options: ["Vooringenomen trainingsdata", "Fouten in de computerchip", "Programmeurs die bewust oneerlijke regels typen", "Een te trage internetverbinding"],
+        options: ["Scheve of eenzijdige trainingsdata", "Een fout in de code van het model", "Programmeurs die bewust oneerlijke regels typen", "Te weinig rekenkracht bij het trainen"],
         answer: 0,
-        wrongHints: [null, "Hardwarefouten maken een model niet vooringenomen.", "Bias ontstaat meestal onbedoeld, en bij ML typt niemand de regels. Waar komen ze dan vandaan?", "Internetsnelheid heeft niets met eerlijke uitkomsten te maken."],
+        wrongHints: [null, "Een codefout geeft eerder een crash dan een oneerlijk patroon. Waar haalt het model zijn patronen vandaan?", "Bias ontstaat meestal onbedoeld, en bij ML typt niemand de regels. Waar komen ze dan vandaan?", "Minder rekenkracht maakt trainen trager, niet oneerlijker."],
         uitlegPad: {
           stappen: [{ titel: "Garbage in, garbage out", tekst: "**Bias** = systemische vertekening in AI-output. Komt door **vooringenomen trainingsdata**. Voorbeelden:\n• Gezichtsherkenning: getraind op vooral lichte huidskleur → werkt slechter op donkere.\n• Amazon-sollicitatie-AI: getraind op CV's mannen → discrimineerde vrouwen.\n• LLM's: kunnen seksisme, racisme overnemen uit web-data.\n\nAanpakken: diverse data, audits, fairness-evaluaties." }],
           niveaus: { basis: "Trainingsdata.", simpeler: "Bias = vooringenomen data", nogSimpeler: "Trainingsdata" },
@@ -298,11 +298,11 @@ const steps = [
       },
       {
         q: "Welke is een **NoSQL-database**?",
-        options: ["MongoDB","PostgreSQL","MySQL","Oracle"],
+        options: ["MongoDB", "MariaDB", "Microsoft Access", "Oracle"],
         answer: 0,
-        wrongHints: [null, "De naam eindigt op SQL — is dat dan Nó-SQL? Denk aan tabellen vs documenten.", "Ook deze draait op tabellen met SQL — welke uit het rijtje slaat documenten op?", "Oracle Database werkt ook met tabellen en SQL. Welke uit het rijtje slaat documenten op?"],
+        wrongHints: [null, "MariaDB is een afsplitsing van MySQL en werkt met tabellen en SQL.", "Access bewaart gegevens in tabellen die je met SQL kunt bevragen.", "Oracle Database werkt ook met tabellen en SQL. Welke uit het rijtje slaat documenten op?"],
         uitlegPad: {
-          stappen: [{ titel: "Document-database", tekst: "**MongoDB** = NoSQL document-database (JSON-achtige documenten). **PostgreSQL, MySQL, Oracle, SQL Server** = relationele SQL-databases. NoSQL-typen ook: Redis (key-value), Cassandra (column), Neo4j (graph). Gebruikt voor schaalbare web-apps + flexibele schema's." }],
+          stappen: [{ titel: "Document-database", tekst: "**MongoDB** = NoSQL document-database (JSON-achtige documenten). **PostgreSQL, MySQL, MariaDB, Oracle, SQL Server, Microsoft Access** = relationele SQL-databases. NoSQL-typen ook: Redis (key-value), Cassandra (column), Neo4j (graph). Gebruikt voor schaalbare web-apps + flexibele schema's." }],
           niveaus: { basis: "MongoDB.", simpeler: "NoSQL = MongoDB", nogSimpeler: "MongoDB" },
         },
       },

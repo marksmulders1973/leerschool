@@ -40,12 +40,12 @@ const steps = [
       },
       {
         q: "Waarom een database in plaats van één groot tekstbestand?",
-        options: ["Snel zoeken/filteren/combineren, ook bij veel data", "Gegevens zien er in een database mooier uit", "Een database kan geen typefouten bevatten", "Een database neemt minder opslagruimte in"],
+        options: ["Snel zoeken, filteren en combineren", "Een database is beter leesbaar voor mensen", "Een database verbetert zelf je typefouten", "Een database neemt minder opslagruimte in"],
         answer: 0,
-        wrongHints: [null, "Het gaat om snelheid en structuur, niet om uiterlijk.", "Ook in een database kun je verkeerde gegevens typen. Wat kan een database wél beter?", "Een database kost vaak juist méér ruimte (bijvoorbeeld voor indexen). Waar is hij dan goed in?"],
+        wrongHints: [null, "Een tabel kijkt prettig, maar daarvoor kies je geen database. Waar ligt het voordeel dan?", "Een database slaat op wat je invoert, ook als het fout is. Wat kan hij wél beter?", "Een database kost vaak juist méér ruimte (bijvoorbeeld voor indexen). Waar is hij dan goed in?"],
         uitlegPad: {
           stappen: [{ titel: "Structuur = snelheid", tekst: "In een database staan gegevens **gestructureerd** in tabellen, zodat je razendsnel kunt **zoeken, filteren en combineren** — ook bij miljoenen records. In een los tekstbestand zou je alles regel voor regel moeten doorzoeken; dat wordt onwerkbaar." }],
-          niveaus: { basis: "Snel zoeken bij veel data.", simpeler: "Database = snel zoeken", nogSimpeler: "Snel zoeken/filteren/combineren, ook bij veel data." },
+          niveaus: { basis: "Snel zoeken bij veel data.", simpeler: "Database = snel zoeken", nogSimpeler: "Snel zoeken, filteren en combineren, ook bij veel data." },
         },
       },
       {
@@ -60,9 +60,9 @@ const steps = [
       },
       {
         q: "Wat is een **DBMS** (zoals MySQL of PostgreSQL)?",
-        options: ["Een programma dat databases beheert", "Een taal om databases te bevragen", "Eén tabel met alle gegevens erin", "Een server die websites host"],
+        options: ["Een programma dat databases beheert", "Een taal om databases te bevragen", "Een bestandsformaat voor tabellen, zoals .csv", "Een server die websites host"],
         answer: 0,
-        wrongHints: [null, "Dat is SQL, de taal die je naar een DBMS stuurt. Wat is het DBMS zelf?", "Een tabel bevat de data. Wat doen MySQL en PostgreSQL met al die tabellen?", "Een webserver levert webpagina's. Waar zijn MySQL en PostgreSQL voor?"],
+        wrongHints: [null, "Dat is SQL, de taal die je naar een DBMS stuurt. Wat is het DBMS zelf?", "Een .csv-bestand bevat alleen data. Wat doen MySQL en PostgreSQL met al die gegevens?", "Een webserver levert webpagina's. Waar zijn MySQL en PostgreSQL voor?"],
         uitlegPad: {
           stappen: [{ titel: "De databasebeheerder", tekst: "Een **DBMS** (DataBase Management System) is de **software die de database beheert**: opslaan, opvragen, beveiligen, back-uppen. Bekende voorbeelden: MySQL, PostgreSQL, SQLite. Jij praat ermee via **SQL**." }],
           niveaus: { basis: "Databasebeheer-software.", simpeler: "DBMS = beheert database", nogSimpeler: "Een programma dat databases beheert." },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Een **foreign key** (verwijssleutel) wordt gebruikt om…",
-        options: ["Tabellen aan elkaar te koppelen", "Elk record uniek aan te wijzen", "Een back-up van de tabel te maken", "Records op volgorde te zetten"],
+        options: ["Tabellen aan elkaar te koppelen", "Elk record uniek aan te wijzen", "Naar een andere database te verwijzen", "Records op volgorde te zetten"],
         answer: 0,
-        wrongHints: [null, "Dat doet de primaire sleutel. Waar wijst een verwijssleutel naar?", "Een back-up is iets anders.", "Sorteren doet ORDER BY. Wat zegt 'verwijs' in verwijssleutel?"],
+        wrongHints: [null, "Dat doet de primaire sleutel. Waar wijst een verwijssleutel naar?", "Een verwijssleutel werkt binnen één database.", "Sorteren doet ORDER BY."],
         uitlegPad: {
           stappen: [{ titel: "Verwijzen naar een primaire sleutel", tekst: "Een **foreign key** is een veld in de ene tabel dat **verwijst naar de primaire sleutel** van een andere tabel. Zo koppel je records: `leerling_id` in Toetsen verwijst naar `id` in Leerlingen, zodat je weet welke toets bij welke leerling hoort." }],
           niveaus: { basis: "Tabellen koppelen.", simpeler: "Foreign key = koppeling", nogSimpeler: "Tabellen aan elkaar te koppelen." },
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Het netjes opsplitsen van gegevens over tabellen (om dubbele data te voorkomen) heet:",
-        options: ["Normaliseren", "Versleutelen", "Sorteren", "Back-uppen"],
+        options: ["Normaliseren", "Indexeren", "Fragmenteren", "Valideren"],
         answer: 0,
-        wrongHints: [null, "Versleutelen gaat over geheimhouding.", "Sorteren zet op volgorde, splitst niet op.", "Een back-up is een kopie, geen opsplitsing."],
+        wrongHints: [null, "Een index maakt zoeken sneller, maar splitst geen gegevens op.", "Fragmenteren gaat over stukjes van bestanden op een schijf, niet over tabellen.", "Valideren controleert of gegevens kloppen, maar splitst niets op."],
         uitlegPad: {
           stappen: [{ titel: "Opsplitsen zonder dubbels", tekst: "**Normaliseren** is het slim **opsplitsen** van gegevens over meerdere gekoppelde tabellen, zodat je elk gegeven maar één keer opslaat. Dat voorkomt **redundantie** (dubbele data) en de fouten die daaruit ontstaan." }],
           niveaus: { basis: "Slim opsplitsen.", simpeler: "Normaliseren = geen dubbels", nogSimpeler: "A." },
@@ -119,7 +119,7 @@ const steps = [
       },
       {
         q: "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
-        options: ["Via hun unieke primaire sleutel", "Via hun geboortedatum", "Via de volgorde waarin ze staan", "Via hun achternaam in de tabel"],
+        options: ["Via hun primaire sleutel", "Via hun geboortedatum", "Via de volgorde waarin ze staan", "Via hun achternaam in de tabel"],
         answer: 0,
         wrongHints: [null, "Ook twee Sara's kunnen op dezelfde dag jarig zijn.", "De volgorde van rijen kan veranderen — dat is geen vast kenmerk.", "Ook achternamen kunnen dubbel voorkomen."],
         uitlegPad: {
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Welk SQL-woord bepaalt **uit welke tabel** je gegevens haalt?",
-        options: ["FROM", "SELECT", "WHERE", "VALUES"],
+        options: ["FROM", "SELECT", "WHERE", "TABLE"],
         answer: 0,
-        wrongHints: [null, "SELECT kiest de kolommen.", "WHERE is de filter.", "VALUES hoort bij INSERT (toevoegen)."],
+        wrongHints: [null, "SELECT kiest de kolommen.", "WHERE is de filter.", "TABLE gebruik je bij CREATE TABLE, om een nieuwe tabel te maken."],
         uitlegPad: {
           stappen: [{ titel: "FROM = welke tabel", tekst: "**FROM** geeft de **tabel** aan waaruit je haalt: `SELECT naam FROM Leerlingen`. SELECT = kolommen, FROM = tabel, WHERE = filter. Samen vormen ze de basis van bijna elke query." }],
           niveaus: { basis: "FROM.", simpeler: "Tabel kiezen = FROM", nogSimpeler: "A." },
@@ -197,9 +197,9 @@ const steps = [
     checks: [
       {
         q: "Welk SQL-commando **verwijdert** een record?",
-        options: ["DELETE", "SELECT", "ORDER BY", "INSERT"],
+        options: ["DELETE", "SELECT", "DROP", "INSERT"],
         answer: 0,
-        wrongHints: [null, "SELECT haalt alleen op, verwijdert niets.", "ORDER BY sorteert.", "INSERT voegt juist toe."],
+        wrongHints: [null, "SELECT haalt alleen op, verwijdert niets.", "DROP gooit een hele tabel weg, niet één record.", "INSERT voegt juist toe."],
         uitlegPad: {
           stappen: [{ titel: "DELETE wist — gebruik WHERE!", tekst: "**DELETE** verwijdert records: `DELETE FROM Leerlingen WHERE id = 3;`. ⚠️ Zónder **WHERE** wist `DELETE FROM Leerlingen;` **alle** rijen. Daarom is de WHERE bij DELETE (en UPDATE) levensbelangrijk." }],
           niveaus: { basis: "DELETE.", simpeler: "Verwijderen = DELETE", nogSimpeler: "A." },
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Waarom is bij **UPDATE** en **DELETE** een **WHERE** zo belangrijk?",
-        options: ["Zonder WHERE pas je álle records aan / wis je alles", "Zonder WHERE geeft de query een foutmelding", "Het maakt de query beter leesbaar voor anderen", "Met WHERE werkt de database veel sneller"],
+        options: ["Anders geldt het voor elk record in de tabel", "Zonder WHERE geeft de query een foutmelding", "Anders weet de database niet welke tabel", "Met WHERE werkt de database veel sneller"],
         answer: 0,
-        wrongHints: [null, "De query werkt zonder WHERE gewoon — maar op welke records dan?", "Het gaat om veiligheid, niet om uiterlijk.", "Snelheid is hier niet het punt."],
+        wrongHints: [null, "De query werkt zonder WHERE gewoon — maar op welke records dan?", "De tabel staat al achter UPDATE of DELETE FROM. Wat bepaalt WHERE dan?", "Snelheid is hier niet het punt."],
         uitlegPad: {
           stappen: [{ titel: "Geen WHERE = alles", tekst: "**WHERE** bepaalt wélke records geraakt worden. Vergeet je 'm bij UPDATE of DELETE, dan wordt **élk** record aangepast of gewist. `DELETE FROM Leerlingen;` = alle leerlingen weg. Daarom altijd eerst de WHERE controleren." }],
           niveaus: { basis: "Anders raak je alles.", simpeler: "Zonder WHERE = alles", nogSimpeler: "Zonder WHERE pas je álle records aan / wis je alles." },

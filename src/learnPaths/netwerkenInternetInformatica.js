@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **het internet**?",
-        options: ["Een wereldwijd netwerk van netwerken", "Eén enorme supercomputer in Amerika", "Alle websites die je kunt bezoeken", "Een programma waarmee je surft"],
+        options: ["Een wereldwijd netwerk van netwerken", "Het draadloze netwerk in je huis", "Alle websites die je kunt bezoeken", "Een programma waarmee je surft"],
         answer: 0,
-        wrongHints: [null, "Het is niet één machine, maar heel veel verbonden netwerken.", "Websites staan óp het internet — dat is het web, niet het internet zelf.", "Dat is een browser."],
+        wrongHints: [null, "Dat is je wifi: een lokaal netwerk (LAN).", "Websites staan óp het internet — dat is het web, niet het internet zelf.", "Dat is een browser."],
         uitlegPad: {
           stappen: [{ titel: "Netwerk van netwerken", tekst: "Het **internet** is een wereldwijd **netwerk van netwerken**: miljoenen kleine (LAN) en grote (WAN) netwerken aan elkaar verbonden via kabels en routers. Het is de infrastructuur waarover diensten zoals het web, e-mail en streaming lopen." }],
           niveaus: { basis: "Netwerk van netwerken.", simpeler: "Internet = netwerken aan elkaar", nogSimpeler: "Netwerken samen" },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Wat is een **LAN** (Local Area Network)?",
-        options: ["Een klein netwerk, bv. thuis of op school", "Een wereldwijd netwerk over lange afstand", "Het netwerk van je telefoonprovider", "Een netwerkkabel tussen pc en router"],
+        options: ["Een klein netwerk, bv. thuis of op school", "Een wereldwijd netwerk over lange afstand", "Een netwerk dat alleen binnen één land werkt", "Een netwerkkabel tussen pc en router"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een WAN (groot, lange afstand).", "Een mobiel netwerk bestrijkt een heel land. Is dat lokaal?", "Een kabel is maar één onderdeel; een LAN is het hele netwerk."],
+        wrongHints: [null, "Dat is juist een WAN (groot, lange afstand).", "Een land is daarvoor veel te groot.", "Een kabel is maar één onderdeel; een LAN is het hele netwerk."],
         uitlegPad: {
           stappen: [{ titel: "Lokaal = klein", tekst: "Een **LAN** (Local Area Network) is een **klein, lokaal** netwerk — je huis, een klaslokaal, een kantoor. Een **WAN** (Wide Area Network) overbrugt juist grote afstanden. Het **internet** knoopt miljoenen LAN's en WAN's aan elkaar." }],
           niveaus: { basis: "Klein/lokaal netwerk.", simpeler: "LAN = klein netwerk", nogSimpeler: "Klein netwerk" },
@@ -79,9 +79,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **IP-adres**?",
-        options: ["Een uniek adres van een apparaat op een netwerk", "De naam van een website, zoals nu.nl", "Een wachtwoord voor je wifi-netwerk", "Het merk en type van je wifi-router"],
+        options: ["Het nummer van een apparaat op een netwerk", "Het adres van een website, zoals nu.nl", "Het e-mailadres waarmee je inlogt", "Het merk en type van je wifi-router"],
         answer: 0,
-        wrongHints: [null, "Dat is de domeinnaam — die hoort wél bij een IP, maar is iets anders.", "Een IP-adres is geen wachtwoord.", "Merk en type zeggen niets over waar een apparaat te vinden is."],
+        wrongHints: [null, "Dat is de domeinnaam — die hoort wél bij een IP, maar is iets anders.", "Een e-mailadres is voor berichten aan mensen. Waarvoor gebruiken apparaten een IP-adres?", "Merk en type zeggen niets over waar een apparaat te vinden is."],
         uitlegPad: {
           stappen: [{ titel: "Het huisadres van een apparaat", tekst: "Een **IP-adres** (bv. `145.7.220.13`) identificeert een apparaat op een netwerk — als een huisadres, zodat data op de juiste plek aankomt. IPv4 = vier getallen 0-255; IPv6 is veel langer omdat IPv4-adressen bijna op zijn." }],
           niveaus: { basis: "Adres van een apparaat.", simpeler: "IP = apparaat-adres", nogSimpeler: "Apparaat-adres" },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Wat doet **DNS** (Domain Name System)?",
-        options: ["Vertaalt een domeinnaam naar een IP-adres", "Beveiligt je wachtwoorden onderweg", "Zorgt dat websites sneller laden", "Slaat je bestanden op in de cloud"],
+        options: ["Vertaalt een domeinnaam naar een IP-adres", "Beveiligt je wachtwoorden onderweg", "Registreert wie een domeinnaam bezit", "Kiest de snelste route voor je pakketjes"],
         answer: 0,
-        wrongHints: [null, "Beveiliging is een andere taak (bv. HTTPS).", "Dat is iets anders (caching/CDN).", "Opslag is niet de taak van DNS."],
+        wrongHints: [null, "Beveiliging is een andere taak (bv. HTTPS).", "Dat doet een registrar (zoals SIDN voor .nl). Wat gebeurt er als je een naam in je browser typt?", "Routes kiezen doet een router."],
         uitlegPad: {
           stappen: [{ titel: "Het telefoonboek van internet", tekst: "**DNS** vertaalt een leesbare **domeinnaam** (`leerkwartier.app`) naar het bijbehorende **IP-adres**, zodat je computer weet met welke server hij moet verbinden. Daarom hoef je geen getallen te onthouden — DNS doet de vertaling." }],
           niveaus: { basis: "Naam → IP.", simpeler: "DNS = naam naar IP", nogSimpeler: "Naam → IP" },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt er als een **pakketje kwijtraakt** onderweg?",
-        options: ["Het wordt opnieuw gestuurd", "Het hele bericht wordt opnieuw gestuurd", "Het bericht is voorgoed weg", "De router maakt het zelf opnieuw"],
+        options: ["Alleen dat pakketje wordt opnieuw gestuurd", "Het hele bericht wordt opnieuw gestuurd", "Het bericht is voorgoed weg", "De router maakt het zelf opnieuw"],
         answer: 0,
-        wrongHints: [null, "Moet álles opnieuw, of alleen dat ene stukje?", "Denk aan de volgnummers — merkt de ontvanger dat er een ontbreekt?", "Een router heeft geen kopie van je data. Wie heeft het pakketje wél?"],
+        wrongHints: [null, "Denk aan de volgnummers op elk pakketje. Wat kan de ontvanger daarmee?", "Denk aan de volgnummers — merkt de ontvanger dat er een ontbreekt?", "Een router heeft geen kopie van je data. Wie heeft het pakketje wél?"],
         uitlegPad: {
           stappen: [{ titel: "TCP houdt de tel bij", tekst: "**TCP** controleert of alle pakketjes (met hun **volgnummers**) compleet aankomen. Ontbreekt er één, dan vraagt het om **herzending**. Daarom komt je bericht toch heel aan, ook al ging er onderweg eentje verloren — het internet is zo robuust." }],
           niveaus: { basis: "Opnieuw sturen.", simpeler: "Kwijt = opnieuw", nogSimpeler: "Opnieuw sturen" },

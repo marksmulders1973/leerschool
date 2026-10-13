@@ -50,11 +50,11 @@ const steps = [
       },
       {
         q: "Welke uitspraak gaat over **klimaat**?",
-        options: ["Italië heeft warme zomers en milde winters","In Rome regent het op dit moment flink","Morgen wordt het in Milaan 18 °C en droog","Vandaag is het zonnig aan de Italiaanse kust"],
+        options: ["Italië heeft warme zomers en milde winters","In Rome regent het op dit moment flink","Morgen wordt het in Milaan 18 °C en droog","Afgelopen zomer was Italië extreem heet en droog"],
         answer: 0,
-        wrongHints: [null, "'Op dit moment': gaat dat over één moment of over een lange periode?", "Een voorspelling voor morgen gaat over één dag. Is dat weer of klimaat?", "'Vandaag' is één dag. Hoort dat bij weer of bij klimaat?"],
+        wrongHints: [null, "'Op dit moment': gaat dat over één moment of over een lange periode?", "Een voorspelling voor morgen gaat over één dag. Is dat weer of klimaat?", "Eén zomer is één keer, ook al duurt die drie maanden. Over hoeveel jaren gaat klimaat?"],
         uitlegPad: {
-          stappen: [{ titel: "Algemene uitspraak = klimaat", tekst: "Italië heeft warme zomers en milde winters = algemene uitspraak, geldt elk jaar = KLIMAAT. Andere opties zijn over een MOMENT (nu, vandaag, morgen) = WEER." }],
+          stappen: [{ titel: "Algemene uitspraak = klimaat", tekst: "Italië heeft warme zomers en milde winters = algemene uitspraak, geldt elk jaar = KLIMAAT. Andere opties gaan over één MOMENT of één keer (nu, morgen, afgelopen zomer) = WEER." }],
           woorden: [{ woord: "patroon", uitleg: "Iets dat zich herhaalt over tijd. Klimaat = patroon. Weer = momentopname." }],
           theorie: "Truc: bevat de uitspraak woorden als 'gemiddeld/altijd/meestal/het hele jaar'? → klimaat. Bevat 'nu/vandaag/morgen/deze week'? → weer.",
           voorbeelden: [{ type: "test", tekst: "'NL heeft regen het hele jaar' = klimaat. 'NL heeft vandaag regen' = weer. 'Sahara is droog' = klimaat. 'Sahara is vandaag droog' = weer." }],
@@ -99,15 +99,15 @@ const steps = [
       },
       {
         q: "Waarom is het bij de polen zo koud?",
-        options: ["Het zonlicht valt er heel schuin in","De polen staan dichter bij de zon","De zon komt er bijna nooit boven de horizon","Er waait steeds ijskoude wind vanaf zee"],
+        options: ["Het zonlicht valt er heel schuin in","De polen staan dichter bij de zon","De aarde draait daar langzamer rond","Er waait steeds ijskoude wind vanaf zee"],
         answer: 0,
-        wrongHints: [null, "De afstand tot de zon is voor de polen en de evenaar bijna gelijk. Wat is er dan anders aan het zonlicht?", "In de zomer gaat de zon er zelfs wekenlang niet onder! Waarom wordt het dan toch niet warm?", "Wind verplaatst kou, maar waar komt die kou vandaan? Hoe valt het zonlicht bij de polen?"],
+        wrongHints: [null, "De afstand tot de zon is voor de polen en de evenaar bijna gelijk. Wat is er dan anders aan het zonlicht?", "De hele aarde draait in 24 uur één keer rond; dat bepaalt dag en nacht, niet de warmte. Wat is er bij de polen anders dan bij de evenaar?", "Wind verplaatst kou, maar waar komt die kou vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Schuine zoninval = zwak", tekst: "Bij polen valt zonlicht onder zeer schuine hoek (bijna horizontaal). Dezelfde hoeveelheid licht wordt verspreid over een veel groter oppervlak → minder warmte per m². Plus: zomer is heel kort + winter zonder zon (poolnacht)." }],
           woorden: [{ woord: "poolnacht", uitleg: "Bij polen blijft zon hele winter onder horizon (~6 maanden). Daarna 'middernachtszon' (zon nooit onder)." }, { woord: "albedo", uitleg: "Hoeveel licht een oppervlak weerkaatst. IJs weerkaatst veel (90%). Daarom blijft pool koud." }],
           theorie: "Niet afstand tot zon: aarde-zon afstand verschilt slechts 3% (zomer↔winter). Wel zoninval-hoek. Plus albedo-effect: ijs weerkaatst licht, blijft koud.",
           voorbeelden: [{ type: "feit", tekst: "Antarctica gemiddelde wintertemp: -49°C. Centrum: -89°C (laagst ooit gemeten). Bij evenaar zelden onder 18°C." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Polen niet dichter bij zon (afstand ~vast). De zon schijnt er in de zomer zelfs dag en nacht, maar heel schuin. Wind verplaatst kou, maar maakt die niet." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Polen niet dichter bij zon (afstand ~vast). De draaiing van de aarde bepaalt dag en nacht, niet de kou. Wind verplaatst kou, maar maakt die niet." }],
           niveaus: { basis: "Schuine zoninval.", simpeler: "Polen koud omdat zon schuin valt, weinig kracht per m².", nogSimpeler: "Schuine zon" },
         },
       },
@@ -290,15 +290,15 @@ const steps = [
     checks: [
       {
         q: "Wat is **permafrost**?",
-        options: ["Bodem die altijd bevroren is","Sneeuw die in de winter valt","Een ijsberg die in zee drijft","Rijp op het gras in de ochtend"],
+        options: ["Bodem die altijd bevroren is","Bodem die elke winter even bevriest","IJs dat altijd op een bergtop ligt","Een ijsberg die in zee drijft"],
         answer: 0,
-        wrongHints: [null, "Wintersneeuw smelt in de lente weer — 'perma' betekent blijvend. Wat kan er altijd bevroren blijven?", "Een ijsberg drijft weg en smelt langzaam. Permafrost blijft altijd op dezelfde plek. Wat is het dan?", "Rijp smelt zodra de zon schijnt — 'perma' betekent blijvend. Wat blijft er altijd bevroren?"],
+        wrongHints: [null, "In Nederland bevriest de bovenste laag grond soms een paar weken en ontdooit dan weer. Hoe is dat in Siberië en Alaska?", "IJs dat op een bergtop blijft liggen heet een gletsjer of ijskap. Ligt permafrost bovenop het land, of zit het ergens anders?", "Een ijsberg drijft weg en smelt langzaam. Permafrost blijft altijd op dezelfde plek. Wat is het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Permanent bevroren grond", tekst: "Permafrost = bodem die minstens 2 jaar achter elkaar onder 0°C blijft. Dus altijd bevroren, ook 's zomers. Vooral in poolgebieden (Siberië, noord-Canada, Alaska, Antarctica). Bovenlaag kan in zomer ontdooien, maar dieper blijft ijs." }],
           woorden: [{ woord: "permafrost", uitleg: "'Permanent' + 'frost' (vorst). Permanent bevroren bodem." }, { woord: "toendra", uitleg: "Vlak gebied met permafrost. Korte zomer, geen bomen, mossen + grassen." }],
           theorie: "Permafrost-gebieden: ~25% landoppervlak Noordelijk Halfrond. Door klimaatverandering smelt het — risico: vrijkomen broeikasgassen (methaan) + bodem zakt in.",
           voorbeelden: [{ type: "feit", tekst: "Sommige permafrost in Siberië is duizenden jaren oud. Er zitten nog goed bewaarde mammoetkadavers in." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet sneeuwvlok (water-kristallen lucht). Geen berg (bodem). Geen dier (=ijsbeer)." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet de grond die 's winters even bevriest en dan ontdooit. Geen gletsjer of ijsberg: permafrost zit ín de bodem." }],
           niveaus: { basis: "Bevroren bodem.", simpeler: "Permafrost = altijd bevroren grond (>2 jaar).", nogSimpeler: "Bevroren" },
         },
       },
@@ -346,15 +346,15 @@ const steps = [
       },
       {
         q: "Hoe kan er sneeuw liggen op de Kilimanjaro, terwijl die vlak bij de evenaar staat?",
-        options: ["Hoogte zorgt dat het toch koud wordt","Er waait koude wind van Antarctica","Het is een uitgedoofde vulkaan","Er valt daar veel meer regen dan elders"],
+        options: ["Hoogte zorgt dat het toch koud wordt","Het is daar winter als het bij ons zomer is","Het is een uitgedoofde vulkaan","Er valt daar veel meer regen dan elders"],
         answer: 0,
-        wrongHints: [null, "Antarctica ligt duizenden kilometers zuidelijker. Blijft die wind onderweg zo koud?", "Het is een vulkaan, maar dat zorgt niet voor sneeuw. Wat is er nog meer bijzonder aan deze berg?", "Neerslag is nodig voor sneeuw, maar boven nul valt die als regen. Waarom is het boven op de berg onder nul?"],
+        wrongHints: [null, "Zo dicht bij de evenaar is er nauwelijks verschil tussen zomer en winter. Wat is er dan bijzonder aan deze berg?", "Het is een vulkaan, maar dat zorgt niet voor sneeuw. Wat is er nog meer bijzonder aan deze berg?", "Neerslag is nodig voor sneeuw, maar boven nul valt die als regen. Waarom is het boven op de berg onder nul?"],
         uitlegPad: {
           stappen: [{ titel: "5895m → diep onder vriespunt", tekst: "Kilimanjaro (Tanzania) is 5895m hoog. Op zee-niveau bij evenaar: ~25°C. Op 5895m: 25 - 35 = ongeveer -10°C. Daarom: besneeuwde top ondanks ligging op evenaar! Hoogte > breedte voor klimaat." }],
           woorden: [{ woord: "Kilimanjaro", uitleg: "Hoogste berg Afrika. Tanzania. 5895m. Vulkaan (slapend)." }, { woord: "hoogteklimaat", uitleg: "Klimaat door hoogte ipv breedte. Verticale klimaatzones op bergen." }],
           theorie: "Op berg ontstaan VERTICALE klimaatzones: tropisch beneden → gematigd → koud → eeuwige sneeuw. Andere voorbeelden: Andes (tropisch op evenaar, sneeuw boven 5000m), Himalaya.",
           voorbeelden: [{ type: "klimaatzorgen", tekst: "Kilimanjaro-sneeuw is 80% gesmolten sinds 1912 door klimaatverandering. Verwacht volledige verdwijning ~2050. Cultureel verlies." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Wind uit Antarctica warmt onderweg op (Tanzania!). Vulkaan-zijn levert geen sneeuw op. Veel neerslag geeft alleen sneeuw als het koud genoeg is." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Bij de evenaar is er nauwelijks zomer of winter. Vulkaan-zijn levert geen sneeuw op. Veel neerslag geeft alleen sneeuw als het koud genoeg is." }],
           niveaus: { basis: "Hoogte koelt.", simpeler: "Kilimanjaro 5895m hoog → ~-10°C top → sneeuw mogelijk ondanks evenaar.", nogSimpeler: "Hoogte" },
         },
       },
@@ -377,23 +377,23 @@ const steps = [
     checks: [
       {
         q: "Wat is de hoofdoorzaak van klimaatverandering?",
-        options: ["Uitstoot van broeikasgassen door mensen","Uitstoot van gassen door vulkanen","Schommelingen in de baan van de aarde","De zon straalt de laatste eeuw steeds feller"],
+        options: ["Uitstoot van broeikasgassen door mensen","Het ozongat door cfk's van mensen","Schommelingen in de baan van de aarde","De zon straalt de laatste eeuw steeds feller"],
         answer: 0,
-        wrongHints: [null, "Vulkanen stoten al miljoenen jaren gassen uit. Wat is er sinds 1850 veranderd?", "Die baanschommelingen duren tienduizenden jaren. Kunnen ze de snelle opwarming sinds 1850 verklaren?", "Satellieten meten de zon sinds 1978: die is niet feller geworden. Wat is er dan wél veranderd?"],
+        wrongHints: [null, "Het ozongat laat meer uv-straling door, maar warmt de aarde nauwelijks op. Wat houdt de warmte dan wel vast?", "Die baanschommelingen duren tienduizenden jaren. Kunnen ze de snelle opwarming sinds 1850 verklaren?", "Satellieten meten de zon sinds 1978: die is niet feller geworden. Wat is er dan wél veranderd?"],
         uitlegPad: {
           stappen: [{ titel: "Mensen + broeikasgassen", tekst: "Klimaatverandering = aarde warmer (sinds 1850 +1,2°C). Hoofdoorzaak: MENSEN stoten broeikasgassen uit (CO2, methaan, lachgas). Bronnen: fossiele brandstoffen (kolen+olie+gas), ontbossing, veeteelt (koeien-methaan), industrie. Gevolg: meer warmte vastgehouden in atmosfeer." }],
           woorden: [{ woord: "broeikaseffect", uitleg: "Gassen in atmosfeer houden warmte vast (als deken). Natuurlijk maar nu versterkt." }, { woord: "CO2", uitleg: "Kooldioxide. Belangrijkste broeikasgas. Vrij bij verbranden fossiele brandstoffen." }, { woord: "methaan", uitleg: "CH4. Sterker broeikasgas dan CO2 (per kilo ~25× sterker, gerekend over 100 jaar). Van veeteelt + lekkende gas-pijpen." }],
           theorie: "IPCC (wetenschappelijk panel): 95%+ zeker dat klimaatverandering door mensen komt. Vulkanen stoten ~1% van menselijke CO2 uit. Zon-uitstraling vrijwel vast.",
           voorbeelden: [{ type: "cijfers", tekst: "Mensen stoten 35 miljard ton CO2/jaar uit. Alle vulkanen samen: 0,3 mrd ton. Mensen 100× meer." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Vulkanen klein. Baanschommelingen duren tienduizenden jaren. Zon vrijwel constante uitstraling (volgens metingen)." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Ozongat komt door cfk's en warmt de aarde nauwelijks op. Vulkanen klein. Baanschommelingen duren tienduizenden jaren. Zon vrijwel constante uitstraling (volgens metingen)." }],
           niveaus: { basis: "Broeikasgassen door mensen.", simpeler: "Klimaatverandering door mensen die broeikasgassen uitstoten (CO2).", nogSimpeler: "Mensen+CO2" },
         },
       },
       {
         q: "Wat is een gevolg van klimaatverandering?",
-        options: ["Zeespiegel stijgt door smeltend ijs","De ozonlaag wordt dunner door de warmte","De zeespiegel daalt doordat ijs aangroeit","Er vallen minder stormen en hoosbuien"],
+        options: ["Zeespiegel stijgt door smeltend ijs","De ozonlaag wordt dunner door de warmte","Woestijnen krijgen meer regen en worden groen","Er vallen minder stormen en hoosbuien"],
         answer: 0,
-        wrongHints: [null, "Het ozongat komt door cfk's, niet door opwarming. Wat gebeurt er met ijs als het warmer wordt?", "Wordt het warmer of kouder? Wat doet ijs dan?", "Warmere lucht kan meer water bevatten. Worden buien dan zwaarder of lichter?"],
+        wrongHints: [null, "Het ozongat komt door cfk's, niet door opwarming. Welk gevolg komt wél door de warmte?", "Door warmte verdampt er juist meer water. Worden droge gebieden dan natter of droger?", "Warmere lucht kan meer water bevatten. Worden buien dan zwaarder of lichter?"],
         uitlegPad: {
           stappen: [{ titel: "Zeespiegel stijgt", tekst: "Klimaatverandering veroorzaakt: (1) smeltend ijs op land (Groenland + Antarctica) → meer water in zee. (2) Uitzetten zeewater (warm = meer volume). Resultaat: zeespiegel stijgt ~3-4 mm/jaar. Tegen 2100: +30-100 cm. Lage landen (NL, Bangladesh, Malediven) bedreigd." }],
           woorden: [{ woord: "zeespiegelstijging", uitleg: "Niveau zee gaat omhoog. Door smelt + warmere-water-uitzet." }, { woord: "Akkoord van Parijs", uitleg: "VN-klimaatakkoord 2015. Doel: max 1,5-2°C opwarming." }],
@@ -449,9 +449,9 @@ const steps = [
       },
       {
         q: "Welk klimaat: \"Heel droog, overdag heet, 's nachts koud\"?",
-        options: ["Woestijnklimaat", "Savanneklimaat", "Mediterraan klimaat", "Toendra"],
+        options: ["Woestijnklimaat", "Savanneklimaat", "Mediterraan klimaat", "Steppeklimaat"],
         answer: 0,
-        wrongHints: [null, "Op de savanne valt in de natte tijd veel regen. Is het daar dan het hele jaar heel droog?", "Aan de Middellandse Zee regent het 's winters, en de zee houdt de nachten mild. Past 'heel droog en 's nachts koud' daarbij?", "Op de toendra wordt het ook overdag niet heet. Waar is het overdag heet en 's nachts koud?"],
+        wrongHints: [null, "Op de savanne valt in de natte tijd veel regen. Is het daar dan het hele jaar heel droog?", "Aan de Middellandse Zee regent het 's winters, en de zee houdt de nachten mild. Past 'heel droog en 's nachts koud' daarbij?", "Een steppe is droog, maar er valt genoeg regen voor gras. Is dat 'heel droog'?"],
         uitlegPad: {
           stappen: [{ titel: "Woestijn — extreem dag/nacht", tekst: "Woestijnklimaat (BW): bijna geen regen + grote temperatuurverschillen dag/nacht. Overdag tot 50°C (Sahara), 's nachts onder 0°C kan. Reden: geen wolken/water → snel warm overdag, snel koud 's nachts." }],
           woorden: [{ woord: "BW", uitleg: "B = droog. W = woestijn (Wüste, Duits)." }],
@@ -477,7 +477,7 @@ const steps = [
       },
       {
         q: "Wat is een **moesson**?",
-        options: ["Seizoenswind die een natte en een droge tijd brengt","Zware storm die boven de oceaan ontstaat","Warme, droge wind die van de bergen af waait","Koude wind uit het noorden in de winter"],
+        options: ["Seizoenswind met een natte en een droge tijd","Zware storm die boven de oceaan ontstaat","Warme, droge wind die van de bergen af waait","Koude wind uit het noorden in de winter"],
         answer: 0,
         wrongHints: [null, "Een storm duurt een paar dagen. Hoe lang duurt een moesson?", "Zo'n warme, droge bergwind heet föhn. Waar staat de moesson om bekend?", "Denk aan India: wat gebeurt er daar in de natte tijd van het jaar?"],
         uitlegPad: {
@@ -501,9 +501,9 @@ const steps = [
       },
       {
         q: "Wat zijn **klimaatzones** Köppen?",
-        options: ["Indeling van klimaten in hoofdgroepen","Indeling van wolken in soorten","Schaal voor de kracht van de wind","Schaal voor temperatuur in graden"],
+        options: ["Indeling van de aarde naar temperatuur en regen","Indeling van de aarde in tijdzones van een uur","Indeling van de aarde in gordels van passaatwind","Indeling van de aarde naar afstand tot de evenaar"],
         answer: 0,
-        wrongHints: [null, "Wolken heten cirrus, cumulus enzovoort. Gaat Köppen over wolken of over klimaat?", "Windkracht meet je met de schaal van Beaufort. Waar gaat de indeling van Köppen over?", "Temperatuur meet je in graden Celsius. Is Köppen een maat of een indeling?"],
+        wrongHints: [null, "Tijdzones gaan over de klok, niet over het weer over vele jaren. Waar keek Köppen naar?", "Passaatwinden horen bij de luchtstromen rond de aarde. Deelde Köppen de aarde in naar wind, of naar iets anders?", "Afstand tot de evenaar speelt mee, maar het milde Nederland en het ijzige Labrador in Canada liggen even ver noordelijk. Waar keek Köppen dan naar?"],
         uitlegPad: {
           stappen: [
             { titel: "Köppen-systeem 1900", tekst: "**Wladimir Köppen** (Duits-Russisch klimatoloog, 1846-1940) bedacht in 1900 een systeem om klimaten in te delen. Nog steeds standaard:\n• **A** — Tropisch (warm + nat, evenaar)\n• **B** — Droog (woestijn + steppe)\n• **C** — Gematigd (NL = Cfb)\n• **D** — Continentaal/land (Rusland)\n• **E** — Polair (Antarctica + Noordpool)\n\nElke groep heeft subtypes (Cfb, Csa, Aw, etc.)." },
@@ -554,11 +554,11 @@ const steps = [
       { q: "Welk klimaat heeft de **Sahara**?", options: ["Woestijn","Tropisch","Steppe","Bergklimaat"], answer: 0, wrongHints: [null, "Een tropisch klimaat heeft veel regen en regenwoud. Zie je dat in de Sahara?", "Een steppe is droog grasland met wat regen. Is de Sahara grasland?", "De Sahara is vooral een groot, laag en vlak gebied. Past een bergklimaat daarbij?"] },
       { q: "Wat is **klimaat** versus **weer**?", options: ["Klimaat = lange termijn; weer = nu","Klimaat = nu; weer = lange termijn","Klimaat = een dag; weer = een maand","Klimaat = temperatuur; weer = regen"], answer: 0, wrongHints: [null, "Welke van de twee hoort bij 'vandaag', en welke bij 30 jaar?", "Welke van de twee hoort bij een kort moment, en welke bij een lange periode?", "Beide gaan over temperatuur én regen — waar zit het verschil dan?"] },
       { q: "Welk **gas** is hoofd-broeikasgas?", options: ["CO₂","O₂","N₂","H₂"], answer: 0, wrongHints: [null, "O₂ is zuurstof, het gas dat je inademt. Houdt dat warmte vast?", "N₂ is stikstof: 78% van de lucht, maar geen broeikasgas. Welk gas komt uit uitlaten en schoorstenen?", "H₂ is waterstof; daar zit bijna niets van in de lucht. Welk gas ontstaat bij het verbranden van kolen en olie?"] },
-      { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Klimaatopwarming","Het gat in de ozonlaag","Zure regen","Meer zout in het zeewater"], answer: 0, wrongHints: [null, "Het ozongat laat meer uv-straling door, maar dat warmt de aarde nauwelijks op. Wat laat ijs smelten?", "Zure regen tast bossen en gebouwen aan. Maakt dat het ijs op de polen warmer?", "Zout water bevriest minder snel, maar het zeewater is niet zouter geworden. Wat is er wél veranderd?"] },
+      { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Het versterkte broeikaseffect","Het gat in de ozonlaag","Zure regen","Meer zout in het zeewater"], answer: 0, wrongHints: [null, "Het ozongat laat meer uv-straling door, maar dat warmt de aarde nauwelijks op. Wat laat ijs smelten?", "Zure regen tast bossen en gebouwen aan. Maakt dat het ijs op de polen warmer?", "Zout water bevriest minder snel, maar het zeewater is niet zouter geworden. Wat is er wél veranderd?"] },
       { q: "In welke klimaatzone vind je **toendra**?", options: ["Subpolair","Landklimaat","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "In een landklimaat groeien grote naaldbossen (taiga). Groeien er op de toendra bomen?", "Een woestijn is vooral droog. Wat is op de toendra het grootste probleem voor planten?", "In Nederland groeien gewoon bomen. Op de toendra niet — waarom niet?"] },
-      { q: "Wat is een **moesson**?", options: ["Seizoenswind met veel regen","Korte, zware storm op zee","Droge wind uit de woestijn","Koude wind uit het noorden"], answer: 0, wrongHints: [null, "Een storm duurt een paar dagen. Hoe lang duurt een moesson?", "Denk aan India in de zomer: is het daar dan droog?", "Denk aan Azië: wat gebeurt er in de natte tijd?"] },
+      { q: "Wat is een **moesson**?", options: ["Seizoenswind met veel regen","Korte, zware storm op zee","Droge zomerwind uit de woestijn","Koude winterwind uit het noorden"], answer: 0, wrongHints: [null, "Een storm duurt een paar dagen. Hoe lang duurt een moesson?", "Een droge woestijnwind zoals de sirocco brengt hitte en stof. Wat brengt de moesson in India in de zomer?", "Een koude noordenwind zoals de mistral in Frankrijk brengt kou. Wat gebeurt er in Azië in de natte tijd?"] },
       { q: "Op welk continent ligt het **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Afrika heeft ook een groot regenwoud, maar dat heet het Congo-regenwoud. Door welk werelddeel stroomt de Amazone?", "Azië heeft regenwoud op Borneo. Door welk werelddeel stroomt de rivier de Amazone?", "Australië is vooral woestijn en savanne."] },
-      { q: "Wat is een **gevolg** van klimaatopwarming?", options: ["Zeespiegel-stijging","Groter ozongat","Minder zuurstof","Minder droogte"], answer: 0, wrongHints: [null, "Het ozongat komt door cfk's, niet door opwarming. Wat gebeurt er met water als ijs smelt?", "De hoeveelheid zuurstof in de lucht verandert nauwelijks. Wat gebeurt er met landijs als het warmer wordt?", "Door hogere temperaturen verdampt er meer water en worden sommige gebieden juist droger — klopt 'minder' dan?"] },
+      { q: "Wat is een **gevolg** van klimaatopwarming?", options: ["Zeespiegel-stijging","Groter ozongat","Minder zuurstof","Meer zee-ijs rond de Noordpool"], answer: 0, wrongHints: [null, "Het ozongat komt door cfk's, niet door opwarming. Welk gevolg komt wél door de warmte?", "De hoeveelheid zuurstof in de lucht verandert nauwelijks. Wat verandert er wél als het overal warmer wordt?", "Kijk naar satellietbeelden van de laatste veertig jaar: wordt het ijs rond de Noordpool groter of kleiner?"] },
       { q: "Welk type **regen** komt door bergen?", options: ["Stuwingsregen","Convectieregen","Frontale regen","Motregen"], answer: 0, wrongHints: [null, "Convectieregen ontstaat door opstijgende warme lucht op hete dagen. Wat doet een berg met lucht die ertegenaan waait?", "Frontale regen ontstaat waar warme en koude lucht botsen. Welke regen ontstaat als lucht tegen een berg omhoog moet?", "Motregen zegt iets over de druppels, niet over hoe regen ontstaat."] },
       { q: "Wat doet de **Golfstroom**?", options: ["Transporteert warm water van de tropen naar Europa","Transporteert koud water van de polen naar Europa","Transporteert warm water van Europa naar de tropen","Zorgt voor eb en vloed langs de kust"], answer: 0, wrongHints: [null, "Dan zou het in NL juist kouder zijn — is het hier mild of koud?", "Andersom — waar is het zeewater het warmst?", "Eb en vloed komen door de maan."] },
       { q: "Wat zijn de **Köppen**-zones?", options: ["Internationale klimaat-classificatie","Indeling van gesteenten","Schaal voor de sterkte van aardbevingen","Indeling van tijdzones"], answer: 0, wrongHints: [null, "Gesteenten worden anders ingedeeld — het gaat hier over het weer op lange termijn.", "Dat is de schaal van Richter.", "Tijdzones gaan over de klok, niet over het weer."] },
