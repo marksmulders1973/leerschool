@@ -61,21 +61,21 @@ const steps = [
       },
       {
         q: "**Zeer formele** ondertekening?",
-        options: ["Hoogachtend,", "Doei!", "Liefs,", "Tot snel!"],
+        options: ["Hoogachtend,", "Groetjes,", "Liefs,", "Met groet,"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Persoonlijk.", "Informeel."],
+        wrongHints: [null, "'Groetjes' is een verkleinwoord. Hoort dat onder een zeer formele brief?", "'Liefs' schrijf je aan iemand die je goed kent. Past dat bij een zeer formele brief?", "'Met groet' is netjes, maar kort en zakelijk. Is er een ondertekening die nog plechtiger is?"],
       },
       {
         q: "Mag je **'je/jij'** in formele brief?",
-        options: ["Nee, 'u' gebruiken", "Ja, maakt niet uit", "Soms", "Alleen aan vrienden"],
+        options: ["Nee, 'u' gebruiken", "Ja, maakt niet uit", "Ja, als de lezer jong is", "Ja, als je de naam kent"],
         answer: 0,
-        wrongHints: [null, "Het maakt wél uit.", "Vrijwel nooit.", "Niet voor formele brief."],
+        wrongHints: [null, "De aanspreekvorm laat zien hoe beleefd je bent. Welke vorm past bij een formele brief?", "De leeftijd van de lezer bepaalt niet hoe formeel je brief is. Welke aanspreekvorm hoort bij een formele brief?", "Ook als je de naam van de ontvanger kent, blijft een formele brief afstandelijk. Welke aanspreekvorm hoort daarbij?"],
       },
       {
         q: "Wat hoort in **aanleiding** *(eerste alinea)*?",
         options: ["Waarom je schrijft", "Je adres en de datum", "De aanhef met de naam", "Wat je van de lezer vraagt"],
         answer: 0,
-        wrongHints: [null, "Je verzoek aan de lezer komt pas in het slot. Wat vertel je eerst?", "Je adres en de datum staan boven de brief, nog vóór de aanhef.", "De aanhef staat vóór de eerste alinea. Wat vertel je in die alinea?"],
+        wrongHints: [null, "Je adres en de datum staan boven de brief, nog vóór de aanhef. Wat vertel je in de eerste alinea?", "De aanhef staat vóór de eerste alinea. Wat vertel je in die alinea?", "Je verzoek aan de lezer komt pas in het slot. Wat vertel je eerst?"],
       },
       {
         q: "Welke aanhef is **formeel** in het Nederlands?",
@@ -102,13 +102,13 @@ const steps = [
         q: "Wat is een **stelling** in betoog?",
         options: ["Je standpunt", "Een feit", "Een vraag", "Een voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Stelling = mening.", "Geen vraag.", "Geen voorbeeld."],
+        wrongHints: [null, "Over een feit kun je niet discussiëren. Wat zet een schrijver in een stelling neer?", "Een vraag kan een betoog inleiden, maar neemt geen positie in. Wat doet een stelling wel?", "Een voorbeeld ondersteunt een argument. Wat ondersteunen de argumenten zelf?"],
       },
       {
         q: "*'Volgens onderzoek van TU Delft ...'* — welk argument?",
         options: ["Autoriteit", "Emotioneel", "Praktisch", "Moreel"],
         answer: 0,
-        wrongHints: [null, "Geen emotie.", "Niet praktisch.", "Niet over goed/fout."],
+        wrongHints: [null, "Een emotioneel argument speelt in op je gevoel. Doet deze zin dat, of wordt er een bron genoemd?", "Een praktisch argument gaat over wat werkt of handig is. Waar beroept deze zin zich op?", "Een moreel argument gaat over wat goed of slecht is. Waar beroept deze zin zich op?"],
       },
       {
         q: "Verschil **betogend** en **beschouwend**?",
@@ -120,7 +120,7 @@ const steps = [
         q: "Welk signaalwoord = **gevolg**?",
         options: ["dus", "echter", "omdat", "zoals"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Reden.", "Voorbeeld."],
+        wrongHints: [null, "'Echter' kondigt een tegenstelling aan. Welk woord geeft aan wat eruit volgt?", "'Omdat' geeft de reden of oorzaak. Welk woord geeft juist het gevolg?", "'Zoals' kondigt een voorbeeld aan. Welk woord geeft aan wat eruit volgt?"],
       },
       {
         q: "In een **betoog** wil je de lezer ___?",

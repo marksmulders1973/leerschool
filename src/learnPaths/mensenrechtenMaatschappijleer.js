@@ -69,9 +69,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **mensenrecht**?",
-        options: ["Recht dat iedereen heeft als mens", "Recht van Nederlanders alleen", "Een wet uit 2000", "Iets dat alleen volwassenen hebben"],
+        options: ["Recht dat iedereen heeft als mens", "Recht dat je krijgt als staatsburger", "Recht dat in de grondwet van je land staat", "Recht dat je krijgt vanaf je achttiende"],
         answer: 0,
-        wrongHints: [null, "Te beperkt — geldt voor iedereen.", "Veel ouder.", "Kinderen hebben ook rechten."],
+        wrongHints: [null, "Heeft een vluchteling zonder paspoort dan geen mensenrechten?", "Grondrechten staan in de grondwet van één land. Gelden mensenrechten alleen daar?", "Kinderen hebben ook mensenrechten. Hangt het af van je leeftijd?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een mensenrecht?", tekst: "Een **mensenrecht** is een recht dat iedereen heeft, simpelweg omdat hij of zij een MENS is. Geen onderscheid op land, leeftijd, geslacht, religie of huidskleur." },
@@ -103,9 +103,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **recht** en **plicht**?",
-        options: ["Recht = wat je mag, plicht = wat je moet", "Beide hetzelfde", "Recht = voor kinderen, plicht = volwassenen", "Recht = verplicht, plicht = vrijwillig"],
+        options: ["Recht = wat je mag, plicht = wat je moet", "Recht = wet, plicht = afspraak", "Recht = voor kinderen, plicht = volwassenen", "Recht = verplicht, plicht = vrijwillig"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet leeftijdsgebonden.", "Denk aan belasting betalen: mag dat, of moet dat?"],
+        wrongHints: [null, "Ook plichten staan in de wet, zoals de leerplicht. Wat is dan het verschil?", "Ook kinderen hebben plichten, zoals de leerplicht. Hangt het van je leeftijd af?", "Denk aan belasting betalen: mag dat, of moet dat?"],
       },
       {
         q: "Welke historische gebeurtenis was **direct aanleiding** voor moderne mensenrechten?",
@@ -125,9 +125,9 @@ const steps = [
     checks: [
       {
         q: "In welk jaar werd **UVRM** aangenomen?",
-        options: ["1948", "1789", "1900", "2000"],
+        options: ["1948", "1789", "1945", "1950"],
         answer: 0,
-        wrongHints: [null, "Franse Revolutie (Verklaring Mens en Burger).", "Te vroeg.", "Te laat."],
+        wrongHints: [null, "Franse Revolutie (Verklaring Mens en Burger).", "In 1945 werd de VN zelf opgericht. Was de verklaring er meteen?", "In 1950 kwam het Europese verdrag (EVRM). Welke verklaring was daar het voorbeeld voor?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is UVRM?", tekst: "**UVRM** = **Universele Verklaring van de Rechten van de Mens**. Een document met 30 artikelen die mensenrechten wereldwijd vastleggen." },
@@ -155,7 +155,7 @@ const steps = [
         q: "Welke organisatie nam UVRM aan?",
         options: ["Verenigde Naties (VN)", "Europese Unie (EU)", "NAVO (militair bondgenootschap)", "Raad van Europa (RvE)"],
         answer: 0,
-        wrongHints: [null, "Begon later.", "Een militair bondgenootschap — maakt dat verklaringen over rechten?", "De Raad van Europa maakte het EVRM (1950). Wie maakte de wereldwijde verklaring?"],
+        wrongHints: [null, "De EU (toen nog EEG) bestond in 1948 nog niet. Welke organisatie wel?", "Een militair bondgenootschap — maakt dat verklaringen over rechten?", "De Raad van Europa maakte het EVRM (1950). Wie maakte de wereldwijde verklaring?"],
       },
       {
         q: "Wat zegt **Artikel 1** UVRM?",
@@ -214,15 +214,15 @@ const steps = [
       },
       {
         q: "**Recht op schoon milieu** — welke generatie?",
-        options: ["3e (collectief)", "1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "Bestaat niet"],
+        options: ["3e (collectief)", "1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "4e (digitale rechten)"],
         answer: 0,
-        wrongHints: [null, "Niet klassiek.", "Niet alleen sociaal.", "Wel — recent."],
+        wrongHints: [null, "Moet de overheid van je afblijven, of gaat dit over iets wat we samen delen?", "Sociaal-economische rechten gaan over voorzieningen voor jou als persoon. Gaat milieu over één persoon?", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
       {
         q: "Van welke tot welke leeftijd geldt in NL de **leerplicht**?",
-        options: ["5-16 jaar", "0-18 jaar", "3-12 jaar", "Geen verplichting"],
+        options: ["5-16 jaar", "4-16 jaar", "5-18 jaar", "6-16 jaar"],
         answer: 0,
-        wrongHints: [null, "Niet vanaf 0.", "Niet die periode.", "Wel — leerplicht."],
+        wrongHints: [null, "Op je vierde mág je naar school. Moet het dan al?", "Tot je 18e geldt de kwalificatieplicht, als je nog geen diploma hebt. Wanneer stopt de leerplicht zelf?", "Op je zesde ga je naar groep 3. Moest je al eerder naar school?"],
       },
     ],
   },
@@ -235,9 +235,9 @@ const steps = [
     checks: [
       {
         q: "Wat berecht **het Internationaal Strafhof** (Den Haag)?",
-        options: ["Oorlogsmisdadigers", "Belastingontduikers", "Verkeersovertreders", "Sportzaken"],
+        options: ["Personen die oorlogsmisdaden plegen", "Landen die ruzie hebben over grenzen", "Grote internationale drugsbazen", "Bedrijven die mensenrechten schenden"],
         answer: 0,
-        wrongHints: [null, "Belastingzaken doet de nationale rechter — voor welke állerzwaarste misdaden is een wereldhof nodig?", "Een boete regelt je eigen land — waarom zou de hele wéreld een hof nodig hebben?", "Sport heeft eigen tuchtcolleges — denk aan genocide en misdaden tegen de menselijkheid."],
+        wrongHints: [null, "Ruzies tussen landen gaan naar het Internationaal Gerechtshof. Wie berecht het Strafhof?", "Drugshandel berecht een nationale rechter. Voor welke allerzwaarste misdaden is een wereldhof nodig?", "Het Strafhof berecht personen, geen bedrijven. En voor welke misdaden?"],
       },
       {
         q: "Wat is de **Toeslagenaffaire**?",
@@ -249,7 +249,7 @@ const steps = [
         q: "Hoeveel kinderen werkten wereldwijd ongeveer in 2020 (ILO)?",
         options: ["~160 miljoen", "~16 miljoen", "~600 miljoen", "~1,6 miljoen"],
         answer: 0,
-        wrongHints: [null, "Tel de nullen: dit is een factor tien te weinig.", "Dat zou ongeveer een kwart van alle kinderen ter wereld zijn. Zoveel?", "Veel te weinig — denk aan hoeveel kinderen er wereldwijd leven."],
+        wrongHints: [null, "Tel de nullen: dit is een factor tien te weinig.", "Dat zou ongeveer een kwart van alle kinderen ter wereld zijn. Zoveel?", "Dat is een factor honderd te weinig. Tel de nullen nog eens."],
       },
       {
         q: "**Amnesty International** is een ... ?",
@@ -268,9 +268,9 @@ const steps = [
     checks: [
       {
         q: "In welk jaar werd **VN opgericht**?",
-        options: ["1945", "1989", "1900", "2000"],
+        options: ["1945", "1989", "1919", "1948"],
         answer: 0,
-        wrongHints: [null, "Te laat — val Berlijnse Muur.", "Te vroeg.", "Te laat."],
+        wrongHints: [null, "Te laat — val Berlijnse Muur.", "In 1919 kwam de Volkenbond, de voorganger. Wanneer kwam de VN?", "1948 is het jaar van de UVRM. Werd de VN in hetzelfde jaar opgericht?"],
       },
       {
         q: "Welke 5 landen hebben **veto-recht** in VN-Veiligheidsraad?",
@@ -319,15 +319,15 @@ const steps = [
       },
       {
         q: "Wat is **ICC**?",
-        options: ["Internationaal Strafhof", "Internationale Cao Coalitie", "Inkomstenbelasting Code", "VS-presidentskandidaat"],
+        options: ["Internationaal Strafhof", "Internationaal Gerechtshof", "Internationaal Rode Kruis", "Joegoslavië-tribunaal"],
         answer: 0,
-        wrongHints: [null, "Cao's gaan over arbeidsvoorwaarden — waar gaat het ICC over?", "Niets met belasting — ICC is een Engelse afkorting.", "Geen persoon — het is een instituut, en het zetelt nota bene in Nederland."],
+        wrongHints: [null, "Het Gerechtshof (ICJ) gaat over ruzies tussen landen. Wat doet het ICC?", "Het Rode Kruis heet internationaal ICRC en is geen rechtbank.", "Het Joegoslavië-tribunaal was tijdelijk en is gesloten. Welk hof is blijvend?"],
       },
       {
         q: "Op welke **datum** is Internationale Dag van de Mensenrechten?",
-        options: ["10 december", "1 januari", "27 april", "4 mei"],
+        options: ["10 december", "24 oktober", "20 november", "4 mei"],
         answer: 0,
-        wrongHints: [null, "Nieuwjaar.", "Koningsdag.", "Dodenherdenking."],
+        wrongHints: [null, "24 oktober is de Dag van de Verenigde Naties. Welke dag hoort bij de UVRM?", "20 november is de dag van de Rechten van het Kind. Welke dag hoort bij de UVRM?", "Op 4 mei herdenken we de oorlogsdoden. Mensenrechtendag valt op de dag dat de UVRM werd aangenomen."],
       },
       {
         q: "Welke NGO begon met **'schrijfacties' voor politieke gevangenen**?",
