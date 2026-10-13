@@ -47,7 +47,7 @@ const steps = [
       },
       {
         q: "Wie is de **vrager** op een markt?",
-        options: ["De koper / consument", "De producent", "De overheid", "De bank"],
+        options: ["De koper / consument", "De producent / verkoper", "De overheid / het Rijk", "De bank / geldverstrekker"],
         answer: 0,
         wrongHints: [null, "Producent = aanbieder.", "Overheid kan vrager zijn (van beton voor wegen) maar de standaard rol is 'koper'.", "Bank is niet automatisch de vrager."],
         uitlegPad: {
@@ -78,13 +78,13 @@ const steps = [
       {
         q: "Wat zegt de wet van de vraag?",
         options: [
-          "Hoe hoger de prijs, hoe lager de gevraagde hoeveelheid",
+          "Hoe hoger de prijs, hoe minder er wordt gevraagd",
           "Hoe hoger de prijs, hoe meer wordt gevraagd",
-          "Vraag is constant",
-          "Vraag heeft niets met prijs te maken",
+          "De gevraagde hoeveelheid blijft altijd gelijk",
+          "Hoeveel mensen kopen staat los van de prijs",
         ],
         answer: 0,
-        wrongHints: [null, "Andersom — bij hoge prijs willen mensen minder kopen.", "Vraag verandert juist met de prijs.", "Prijs is het belangrijkste."],
+        wrongHints: [null, "Koop jij meer snoep als het duurder wordt?", "Vraag verandert juist met de prijs.", "Merk je het in de winkel als iets in de aanbieding is?"],
         uitlegPad: {
           stappen: [{ titel: "Hoger prijs → minder vraag", tekst: "Wet van de vraag: hoe duurder iets is, hoe minder mensen het willen/kunnen kopen. Inverse relatie tussen prijs en vraag." }],
           woorden: [{ woord: "wet van de vraag", uitleg: "fundamentele markt-regel" }],
@@ -99,8 +99,8 @@ const steps = [
         options: [
           "Loopt schuin naar rechts beneden",
           "Loopt schuin naar rechts boven",
-          "Is horizontaal",
-          "Is verticaal",
+          "Loopt als vlakke, horizontale lijn",
+          "Loopt recht omhoog, verticaal",
         ],
         answer: 0,
         wrongHints: [null, "Dat is de aanbodlijn.", "Een horizontale lijn = prijs onafhankelijk van vraag — niet realistisch.", "Verticaal = vraag onafhankelijk van prijs — ook niet."],
@@ -188,8 +188,8 @@ const steps = [
         q: "Wat is **evenwichtsprijs**?",
         options: [
           "De prijs waarbij vraag = aanbod",
-          "De hoogste prijs ooit",
-          "De gemiddelde prijs",
+          "De hoogste prijs die ooit betaald is",
+          "De gemiddelde prijs over een jaar",
           "De prijs van vorige week",
         ],
         answer: 0,
@@ -277,9 +277,9 @@ const steps = [
     checks: [
       {
         q: "Energieprijzen stijgen sterk. Wat gebeurt met aanbod van staal?",
-        options: ["Aanbodlijn schuift naar links", "Aanbodlijn schuift naar rechts", "Niets", "Vraaglijn verandert"],
+        options: ["Aanbodlijn schuift naar links", "Aanbodlijn schuift naar rechts", "Aanbodlijn blijft op dezelfde plek", "Vraaglijn schuift naar links"],
         answer: 0,
-        wrongHints: [null, "Hogere kosten → producent kan minder leveren bij dezelfde prijs.", "Energie is een productiekost.", "Dit gaat over aanbod, niet vraag."],
+        wrongHints: [null, "Wordt staal maken goedkoper of duurder als energie duurder wordt? Wat doet dat met het aanbod?", "Energie is een productiekost.", "Dit gaat over de producenten van staal, niet over de kopers."],
         uitlegPad: {
           stappen: [{ titel: "Hogere kosten = aanbod naar links", tekst: "Staalproducenten gebruiken veel energie. Energieprijs hoog → productiekosten hoog → bij elke prijs willen ze MINDER aanbieden → aanbodlijn schuift naar links." }],
           woorden: [{ woord: "productiekost", uitleg: "kost om iets te maken" }],
@@ -291,7 +291,7 @@ const steps = [
       },
       {
         q: "Subsidie voor producenten van zonnepanelen — wat gebeurt met het aanbod?",
-        options: ["Aanbodlijn naar rechts", "Aanbodlijn naar links", "Niets", "Alleen vraagverandering"],
+        options: ["Aanbodlijn naar rechts", "Aanbodlijn naar links", "Aanbodlijn blijft staan", "Vraaglijn naar rechts"],
         answer: 0,
         wrongHints: [null, "Subsidie verlaagt de kosten — kunnen producenten dan meer of minder leveren?", "Subsidie maakt produceren goedkoper.", "Subsidie aan producent = aanbodfactor."],
         uitlegPad: {
@@ -389,9 +389,9 @@ const steps = [
       },
       {
         q: "Concertkaartjes voor Taylor Swift zijn duur. Waarom?",
-        options: ["Beperkt aanbod, hoge vraag → hoge evenwichtsprijs", "Er zit een hoge belasting op kaartjes", "Fans kopen allemaal extra kaartjes", "De zaal is gratis te huur"],
+        options: ["Beperkt aanbod + hoge vraag → hoge prijs", "Er zit een hoge belasting op kaartjes", "Fans kopen allemaal extra kaartjes", "Kaartjes worden pas op de dag zelf verkocht"],
         answer: 0,
-        wrongHints: [null, "Belasting is een kleinere factor.", "Hoge vraag alleen verklaart het niet — kijk ook naar de andere kant van de markt.", "Zaalkosten zijn een aanbodfactor."],
+        wrongHints: [null, "Belasting is een kleinere factor.", "Hoge vraag alleen verklaart het niet — kijk ook naar de andere kant van de markt.", "Verandert het moment van verkopen iets aan het aantal plekken of het aantal fans?"],
         uitlegPad: {
           stappen: [{ titel: "Veel vraag + beperkt aanbod = hoge prijs", tekst: "Taylor Swift kan maar X stadions/avonden vullen — vast aanbod. Miljoenen fans willen tickets → enorme vraag. Resultaat: hoge prijs." }],
           woorden: [{ woord: "beperkt aanbod", uitleg: "fysieke limiet (zaalcapaciteit)" }],
@@ -438,12 +438,12 @@ const steps = [
         q: "Iedereen wil opeens fietsen kopen. Wat gebeurt er bij gelijk aanbod?",
         options: [
           "Prijs en hoeveelheid stijgen",
-          "Beide dalen",
-          "Niets",
-          "Prijs daalt",
+          "Prijs en hoeveelheid dalen allebei",
+          "Prijs en hoeveelheid blijven gelijk",
+          "Prijs daalt, hoeveelheid stijgt",
         ],
         answer: 0,
-        wrongHints: [null, "Meer kopers voor dezelfde fietsen — wordt het dan goedkoper?", "Markt verandert wel.", "Denk aan wat verkopers doen als veel meer mensen hetzelfde willen kopen."],
+        wrongHints: [null, "Meer kopers voor dezelfde fietsen — wordt het dan goedkoper?", "Als veel meer mensen een fiets willen, blijft alles dan bij het oude?", "Denk aan wat verkopers doen als veel meer mensen hetzelfde willen kopen."],
         uitlegPad: {
           stappen: [{ titel: "Meer vraag fietsen → P+ Q+", tekst: "Iedereen wil opeens fietsen kopen = vraaglijn naar rechts. Bij gelijk aanbod betekent dit hogere prijs en meer verkocht. Allebei stijgen samen." }],
           woorden: [{ woord: "vraagschok", uitleg: "plotselinge vraagverandering" }],
@@ -512,9 +512,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt met **prijs** als de **vraag stijgt** (aanbod gelijk)?",
-        options: ["Prijs stijgt","Prijs daalt","Niets","Aanbod stopt"],
+        options: ["Prijs stijgt","Prijs daalt","Prijs blijft gelijk","Aanbod stopt"],
         answer: 0,
-        wrongHints: [null, "Niet — meer kopers voor hetzelfde aantal producten: wordt het dan goedkoper?", "Niet — markt reageert direct.", "Niet — aanbod blijft gelijk per aanname."],
+        wrongHints: [null, "Niet — meer kopers voor hetzelfde aantal producten: wordt het dan goedkoper?", "Als meer kopers hetzelfde willen, houdt de verkoper dan zijn oude prijs?", "Niet — aanbod blijft gelijk per aanname."],
         uitlegPad: {
           stappen: [
             { titel: "Wet: meer vraag = hoger prijs", tekst: "Als **vraag stijgt** maar aanbod gelijk blijft:\n• Meer kopers willen zelfde aantal producten\n• Schaarste ontstaat\n• Verkopers kunnen meer vragen\n• **Prijs stijgt**\n\nVoorbeeld: bij hete zomer → meer vraag naar airco's → prijs stijgt." },
@@ -558,7 +558,7 @@ const steps = [
       },
       {
         q: "**Concurrentie** — wat doen bedrijven om klanten te trekken?",
-        options: ["Lagere prijzen, betere kwaliteit, reclame", "Niets, klanten komen vanzelf", "Klanten dwingen om te kopen", "Alle andere bedrijven opkopen"],
+        options: ["Lagere prijzen, betere kwaliteit, reclame", "Niets doen, want klanten komen toch vanzelf", "Klanten met contracten dwingen om te kopen", "Alle andere bedrijven in de markt opkopen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — bedrijven concurreren actief.", "Niet legaal — dwang is verboden.", "Soms (overnames) maar niet hoofd-strategie."],
         uitlegPad: {

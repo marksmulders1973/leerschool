@@ -22,7 +22,7 @@ const steps = [
     checks: [
       {
         q: "Waarom is een briefje van €10 echt iets waard?",
-        options: ["Omdat we met z'n allen afspreken en vertrouwen dat het 10 euro waard is", "Omdat het papier en de inkt samen 10 euro kosten", "Omdat er een klein beetje goud in het briefje zit", "Omdat de winkel het briefje zelf maakt en goedkeurt"],
+        options: ["Omdat iedereen afspreekt en vertrouwt dat het 10 euro waard is", "Omdat het papier en de inkt samen 10 euro kosten", "Omdat er een klein beetje goud in het briefje zit", "Omdat de winkel het briefje zelf maakt en goedkeurt"],
         answer: 0,
         wrongHints: [null, "Een briefje maken kost maar een paar cent.", "Er zit geen goud in een bankbiljet.", "Winkels maken geen geld."],
         uitlegPad: {
@@ -45,9 +45,9 @@ const steps = [
     checks: [
       {
         q: "Er komt heel veel extra geld bij, maar er zijn niet meer spullen te koop. Wat gebeurt er meestal?",
-        options: ["De prijzen stijgen: alles wordt duurder", "Alles wordt goedkoper", "Er verandert helemaal niets", "Iedereen wordt er echt rijker van"],
+        options: ["De prijzen stijgen, alles wordt duurder", "De prijzen dalen, alles wordt goedkoper", "De prijzen blijven gelijk, net als eerst", "Iedereen wordt rijker en koopt meer spullen"],
         answer: 0,
-        wrongHints: [null, "Meer geld op dezelfde spullen duwt prijzen juist omhoog.", "Er gebeurt wel degelijk iets met de prijzen.", "Als alles duurder wordt, koop je per euro juist minder."],
+        wrongHints: [null, "Er komt geld bij, maar niet meer spullen. Waarom zouden winkels dan hun prijzen verlagen?", "Meer geld voor dezelfde spullen: blijft de prijs dan echt hetzelfde?", "Er zijn niet meer spullen te koop. Kan iedereen dan echt meer kopen?"],
         uitlegPad: {
           stappen: [{ titel: "Veel geld, weinig spullen → duurder", tekst: "Meer geld dat om dezelfde spullen vecht, jaagt de prijzen op. Dat is inflatie." }],
           niveaus: {
@@ -68,9 +68,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een belangrijk verschil tussen crypto (zoals Bitcoin) en het geld op je bankrekening?",
-        options: ["Crypto wordt niet door een bank/overheid beheerd, maar door een netwerk van computers", "Crypto is gemaakt van speciaal papier met een geheime code erop", "Crypto werkt alleen in Nederland en niet in andere landen", "Crypto is precies hetzelfde als sparen bij de bank"],
+        options: ["Crypto wordt niet door een bank beheerd, maar door een computernetwerk", "Crypto is gemaakt van speciaal papier met een geheime code erop", "Crypto werkt alleen in Nederland en kun je niet naar het buitenland sturen", "Crypto is precies hetzelfde als sparen bij de bank, met dezelfde garantie"],
         answer: 0,
-        wrongHints: [null, "Crypto is digitaal, er is geen papieren vorm.", "Een wereldwijd netwerk kent geen landsgrenzen.", "Bij de bank is er juist wél een bank die de baas is."],
+        wrongHints: [null, "Crypto is digitaal, er is geen papieren vorm.", "Kun je bitcoin ook naar iemand in Duitsland of Japan sturen?", "Krijg je bij crypto ook de spaargarantie tot €100.000 die een bank biedt?"],
         uitlegPad: {
           stappen: [{ titel: "Geen bank, maar een netwerk", tekst: "Crypto wordt decentraal beheerd door computers wereldwijd, niet door een bank of overheid." }],
           niveaus: {

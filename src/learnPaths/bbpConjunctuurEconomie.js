@@ -62,15 +62,15 @@ const steps = [
       },
       {
         q: "Wat wordt **NIET** in BBP gerekend?",
-        options: ["Huishoudelijk werk + vrijwilligers", "Auto-fabricage", "Restaurant-bezoek", "Knipbeurt bij kapper"],
+        options: ["Huishoudelijk werk + vrijwilligers", "Auto's bouwen in een autofabriek", "Een etentje in een restaurant", "Een knipbeurt bij de kapper"],
         answer: 0,
         wrongHints: [null, "Voor auto's wordt betááld — welk werk gebeurt zonder rekening of loonstrook?", "Je rekent er af — het BBP telt betaalde diensten mee. Wat wordt níét betaald?", "De kapper stuurt een rekening — welk werk kent geen prijskaartje?"],
       },
       {
         q: "Wat is **reëel** BBP?",
-        options: ["BBP gecorrigeerd voor inflatie", "BBP zonder belasting", "BBP per huishouden", "BBP van vorig jaar"],
+        options: ["BBP gecorrigeerd voor inflatie", "BBP gecorrigeerd voor belasting", "BBP gedeeld door huishoudens", "BBP gemeten in prijzen van nu"],
         answer: 0,
-        wrongHints: [null, "Niet de definitie.", "Niet correct.", "Niet hetzelfde."],
+        wrongHints: [null, "Reëel betekent 'echt'. Waardoor kan het BBP stijgen zonder dat er meer gemaakt wordt?", "Delen door huishoudens zegt iets over welvaart per gezin. Waar gaat 'reëel' over?", "Meten in prijzen van nu heet nominaal BBP. Wat is daar het probleem van?"],
       },
       {
         q: "**5% nominale BBP-groei**, **3% inflatie** → reële groei?",
@@ -80,9 +80,9 @@ const steps = [
       },
       {
         q: "Wat is **BBP per hoofd**?",
-        options: ["BBP gedeeld door inwoneraantal", "BBP × inwoners", "BBP plus inwoners", "BBP min belasting"],
+        options: ["BBP gedeeld door inwoneraantal", "BBP keer het aantal inwoners", "BBP gedeeld door aantal bedrijven", "BBP min de betaalde belastingen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen vermenigvuldiging.", "Niet relevant.", "Niet primair."],
+        wrongHints: [null, "Wordt een bedrag per persoon groter of kleiner dan het hele BBP?", "Waar slaat 'hoofd' op in 'per hoofd'?", "Belasting aftrekken verandert het totaal, maar zegt niets over 'per hoofd'."],
       },
       {
         q: "NL: BBP €1.000 mld, 18 mln inwoners. Duitsland: BBP €4.000 mld, 84 mln inwoners. Welk land heeft het hoogste **BBP per hoofd**?",
@@ -102,21 +102,21 @@ const steps = [
     checks: [
       {
         q: "Wat is **conjunctuur**?",
-        options: ["Golfbeweging economie", "Belasting van bedrijf", "Soort munt", "BBP per hoofd"],
+        options: ["Golfbeweging van de economie", "Belasting voor bedrijven", "Munteenheid van een land", "BBP gedeeld door inwoners"],
         answer: 0,
-        wrongHints: [null, "Iets anders.", "Niet relevant.", "Iets anders."],
+        wrongHints: [null, "Bedrijven betalen wel belasting, maar dat is beleid van de overheid. Waar gaat conjunctuur over?", "Onze munt heet de euro. Conjunctuur is een begrip over de economie als geheel.", "Dat is BBP per hoofd: één getal op één moment. Conjunctuur gaat over verandering in de tijd."],
       },
       {
         q: "Wanneer is er officieel **recessie**?",
-        options: ["2 kwartalen negatieve BBP-groei", "1 jaar negatief", "1 kwartaal negatief", "BBP onder 0"],
+        options: ["2 kwartalen negatieve BBP-groei", "2 kwartalen stijgende werkloosheid", "1 kwartaal negatieve BBP-groei", "2 kwartalen stijgende inflatie"],
         answer: 0,
-        wrongHints: [null, "Te streng.", "Te kort.", "Niet de definitie."],
+        wrongHints: [null, "Werkloosheid stijgt vaak in een recessie, maar de officiële maat is een ander cijfer.", "Eén slecht kwartaal kan toeval zijn. Hoe lang moet het duren?", "Inflatie gaat over prijzen. Welk cijfer laat zien of de economie krimpt?"],
       },
       {
         q: "Wat gebeurt bij **opgang**?",
-        options: ["Lonen + prijzen stijgen, werkloosheid daalt", "Lonen dalen, werkloosheid stijgt", "BBP daalt twee kwartalen op rij", "Veel bedrijven gaan failliet"],
+        options: ["Lonen en prijzen stijgen, werkloosheid daalt", "Lonen en prijzen dalen, werkloosheid stijgt", "BBP krimpt twee kwartalen op rij, minder banen", "Veel bedrijven gaan failliet, prijzen dalen"],
         answer: 0,
-        wrongHints: [null, "Bij neergang.", "Bij neergang.", "Bij depressie."],
+        wrongHints: [null, "Dat hoort bij neergang. Wat gebeurt er als de economie juist groeit?", "Dat is een recessie. Wat gebeurt er als de economie juist groeit?", "Dat hoort bij een depressie. Wat gebeurt er als de economie juist groeit?"],
       },
       {
         q: "Welke crisis was in **2008**?",
@@ -155,7 +155,7 @@ const steps = [
         q: "Wat is **hyperinflatie**?",
         options: ["Extreem hoge inflatie", "Een klein beetje inflatie", "Prijzen die dalen", "Prijzen die gelijk blijven"],
         answer: 0,
-        wrongHints: [null, "Te mild.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Te mild.", "Dalende prijzen heet deflatie. Wat betekent 'hyper'?", "Gelijke prijzen betekent nul inflatie. Wat zegt 'hyper' over de hoeveelheid?"],
       },
     ],
   },
@@ -168,9 +168,9 @@ const steps = [
     checks: [
       {
         q: "**4 soorten werkloosheid** zijn?",
-        options: ["Frictie / conjunctureel / structureel / seizoen", "Hoog / midden / laag / nul", "Jong / oud / tijdelijk / vast", "Vrijwillig / betaald / zwart / parttime"],
+        options: ["Frictie / conjunctureel / structureel / seizoen", "Hoge / gemiddelde / lage / geen werkloosheid", "Jongeren / ouderen / laagopgeleid / hoogopgeleid", "Vrijwillig / betaald / zwart / parttime"],
         answer: 0,
-        wrongHints: [null, "Niet de classificatie.", "Kijk naar de óórzaak van de werkloosheid.", "Kijk naar de óórzaak van de werkloosheid."],
+        wrongHints: [null, "Dat zijn niveaus, geen soorten. Kijk naar de óórzaak van de werkloosheid.", "Kijk naar de óórzaak van de werkloosheid.", "Kijk naar de óórzaak van de werkloosheid."],
       },
       {
         q: "Werkloosheid van **mijnwerkers nadat mijnen sluiten** — welke?",
@@ -186,9 +186,9 @@ const steps = [
       },
       {
         q: "**WW-uitkering** is voor wie?",
-        options: ["Onvrijwillig werklozen met arbeidsverleden", "Iedereen boven de 18 jaar", "Studenten zonder bijbaan", "Gepensioneerden boven de AOW-leeftijd"],
+        options: ["Onvrijwillig werklozen met arbeidsverleden", "Iedereen vanaf 18 jaar die geen baan heeft", "Studenten die hun bijbaan zelf opzeggen", "Gepensioneerden boven de AOW-leeftijd"],
         answer: 0,
-        wrongHints: [null, "Niet iedereen.", "Studenten apart.", "Pensioen apart."],
+        wrongHints: [null, "Heeft iemand die nooit gewerkt heeft premie betaald voor de WW?", "Wie zelf opzegt, is vrijwillig werkloos. Krijg je dan WW?", "Na de AOW-leeftijd krijg je AOW, geen WW."],
       },
     ],
   },
@@ -201,9 +201,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **monetair beleid**?",
-        options: ["Door centrale bank — rente + geld", "Door overheid — belasting", "Door bedrijven — prijzen", "Door burgers — sparen"],
+        options: ["Door centrale bank — rente + geld", "Door overheid — belasting + uitgaven", "Door bedrijven — prijzen + lonen", "Door burgers — sparen + lenen"],
         answer: 0,
-        wrongHints: [null, "Dat is begrotingsbeleid.", "Niet beleid-makers.", "Niet beleid."],
+        wrongHints: [null, "Dat is begrotingsbeleid.", "Bedrijven bepalen hun eigen prijzen, maar maken geen landelijk beleid.", "Burgers maken eigen keuzes, geen beleid. Wat betekent 'monetair'?"],
       },
       {
         q: "Wat doet overheid bij **recessie**?",
@@ -215,7 +215,7 @@ const steps = [
         q: "Welke is **Keynesiaans**?",
         options: ["Anti-cyclisch beleid", "Geen overheidsingrijpen", "Pro-cyclisch beleid", "Alleen de rente aanpassen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Anti-Keynesiaans.", "Niet alleen rente."],
+        wrongHints: [null, "Geen ingrijpen past bij de vrije markt. Wat wilde Keynes dat de overheid deed?", "Pro-cyclisch versterkt de golven. Wil Keynes de golven groter of kleiner maken?", "Rente is beleid van de centrale bank. Keynes keek vooral naar de overheid."],
       },
       {
         q: "Wat is **EU-norm** voor staatsschuld?",
@@ -258,9 +258,9 @@ const steps = [
       },
       {
         q: "Bij **hoge inflatie** wat doet ECB?",
-        options: ["Rente omhoog", "Rente omlaag", "Geld bijdrukken", "Niets"],
+        options: ["Rente omhoog", "Rente omlaag", "Geld bijdrukken", "Belasting verhogen"],
         answer: 0,
-        wrongHints: [null, "Andersom.", "Verergert inflatie.", "Wel iets."],
+        wrongHints: [null, "Lagere rente maakt lenen goedkoper. Remt dat de bestedingen of jaagt het ze aan?", "Verergert inflatie.", "Belasting is iets van de overheid, niet van de ECB."],
       },
       {
         q: "**Loon 4%, inflatie 6%** — koopkracht?",
@@ -294,9 +294,9 @@ const steps = [
       },
       {
         q: "Bij **recessie** wat doet de overheid vaak (Keynesiaans)?",
-        options: ["Meer uitgeven", "Minder uitgeven", "Niets", "Bedrijven sluiten"],
+        options: ["Meer uitgeven", "Minder uitgeven", "Belasting verhogen", "Lonen verlagen"],
         answer: 0,
-        wrongHints: [null, "Verergert.", "Geen actie helpt niet.", "Niet."],
+        wrongHints: [null, "Als de overheid ook minder koopt, daalt de vraag nog verder. Is dat de bedoeling?", "Hogere belasting laat mensen minder besteden. Helpt dat bij een recessie?", "Lagere lonen betekent minder koopkracht. Wat doet dat met de vraag?"],
       },
       {
         q: "**ECB-rente verhogen** — gevolg?",
@@ -306,21 +306,21 @@ const steps = [
       },
       {
         q: "Een **stijgende lijn op BBP-grafiek over jaar 2024-2025** wijst op?",
-        options: ["Hoogconjunctuur / herstel", "Recessie", "Krimp van de economie", "Stijgende werkloosheid"],
+        options: ["Hoogconjunctuur / herstel", "Recessie / neergang", "Krimp van de economie", "Stijgende werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Een stijgende lijn is geen krimp.", "Bij groei daalt de werkloosheid meestal juist."],
+        wrongHints: [null, "Bij een recessie krimpt het BBP. Wat doet de lijn hier?", "Een stijgende lijn is geen krimp.", "Bij groei daalt de werkloosheid meestal juist."],
       },
       {
         q: "Wat is **stagflatie**?",
-        options: ["Hoge inflatie + lage groei + werkloosheid tegelijk", "Hoge groei + lage inflatie tegelijk", "Lage rente + hoge groei tegelijk", "Alleen een daling van het BBP"],
+        options: ["Hoge inflatie + lage groei + werkloosheid tegelijk", "Hoge groei + lage inflatie + weinig werkloosheid", "Lage inflatie + lage groei + werkloosheid tegelijk", "Hoge rente + dalende huizenprijzen tegelijk"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Er hoort ook iets met prijzen bij."],
+        wrongHints: [null, "Dat klinkt als een gezonde economie. Is 'stagflatie' iets goeds?", "Kijk naar het woord: 'stag-' + '-flatie'. Welk deel klopt hier niet?", "Stagflatie gaat over de hele economie, niet alleen over rente en huizen."],
       },
       {
         q: "Welke **combinatie van cijfers** geeft het beste beeld van de economische gezondheid?",
-        options: ["BBP-groei + inflatie + werkloosheid", "Alleen BBP", "Alleen inflatie", "Alleen bevolkingsaantal"],
+        options: ["BBP-groei + inflatie + werkloosheid", "Alleen de BBP-groei van dit jaar", "Inflatie + rente op de spaarrekening", "Bevolkingsaantal + aantal toeristen"],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Niet primair economisch."],
+        wrongHints: [null, "Eén cijfer laat maar één kant zien. Wat mis je dan?", "Hiermee zie je nog niet of de economie groeit of krimpt.", "Hoeveel mensen er zijn, zegt nog niet hoe goed de economie draait."],
       },
       {
         q: "**Hyperinflatie 1923 Duitsland** — wat gebeurde er?",
@@ -336,9 +336,9 @@ const steps = [
       },
       {
         q: "Een **rente-verlaging** door ECB wordt vaak gedaan bij ___?",
-        options: ["Recessie / lage groei", "Hoge inflatie", "Hoogconjunctuur", "Geen reden"],
+        options: ["Recessie / lage groei", "Snel stijgende inflatie", "Hoogconjunctuur / hoge groei", "Oplopende staatsschuld"],
         answer: 0,
-        wrongHints: [null, "Andersom.", "Andersom.", "Wel reden."],
+        wrongHints: [null, "Bij hoge inflatie wil de ECB lenen juist duurder maken.", "Als de economie al hard groeit, wil de ECB die dan nog extra aanjagen?", "De ECB stuurt niet op de staatsschuld van landen. Waarvoor gebruikt ze de rente?"],
       },
       {
         q: "**Conjunctuur-cyclus** duurt typisch ___?",

@@ -54,9 +54,9 @@ const steps = [
     checks: [
       {
         q: "Wat meet de **HDI** (Human Development Index)?",
-        options: ["Combinatie inkomen + levensverwachting + onderwijs", "Alleen inkomen", "Aantal toeristen", "Auto's per inwoner"],
+        options: ["Inkomen + levensverwachting + onderwijs", "Alleen inkomen per inwoner (BBP per hoofd)", "Inkomen + toerisme + export", "Auto's + telefoons + internet per inwoner"],
         answer: 0,
-        wrongHints: [null, "BBP/hoofd is alleen inkomen.", "Toerisme apart.", "Niet HDI."],
+        wrongHints: [null, "BBP/hoofd is alleen inkomen.", "Zijn toerisme en export maten voor hoe goed mensen zich ontwikkelen?", "Spullen tellen is niet hetzelfde als ontwikkeling meten. Wat telt de HDI dan?"],
         uitlegPad: {
           stappen: [{ titel: "HDI = bredere maat dan BBP", tekst: "HDI (Human Development Index) is een 0-1 schaal die 3 zaken samen meet: (1) inkomen per hoofd, (2) levensverwachting, (3) onderwijs (jaren scholing). Maakt het mogelijk landen breed te vergelijken. Niet alleen 'rijk' tellen — ook of mensen lang + opgeleid leven." }],
           woorden: [{ woord: "HDI", uitleg: "Human Development Index. UN-index 0-1. Hoger = beter ontwikkeld." }, { woord: "UNDP", uitleg: "United Nations Development Programme. Publiceert jaarlijks HDI-rapport." }],
@@ -96,43 +96,43 @@ const steps = [
       },
       {
         q: "Hoeveel mensen in **extreme armoede** wereldwijd (~2020)?",
-        options: ["~700 miljoen", "~10 miljoen", "~5 miljard", "Niemand"],
+        options: ["~700 miljoen", "~10 miljoen", "~5 miljard", "~70 miljoen"],
         answer: 0,
-        wrongHints: [null, "Te laag — dat is nog minder dan het aantal inwoners van Nederland.", "Veel te hoog.", "Helaas wel veel."],
+        wrongHints: [null, "Te laag — dat is nog minder dan het aantal inwoners van Nederland.", "Veel te hoog.", "Dat is minder dan 1 op de 100 mensen op aarde. Past dat bij wat je over armoede leerde?"],
         uitlegPad: {
           stappen: [{ titel: "700 mln in extreme armoede", tekst: "Extreme armoede = leven van <$2,15/dag (Wereldbank-definitie 2022). In 1990: 1,9 miljard mensen. In 2020: ~700 miljoen. Sterke daling vooral door China + India. Sub-Sahara Afrika blijft achter. SDG-doel: 0 in 2030 (waarschijnlijk niet haalbaar)." }],
           woorden: [{ woord: "extreme armoede", uitleg: "Wereldbank: <$2,15/dag/persoon (in koopkracht-pariteit). Onder dit niveau kun je niet in je basisbehoeften voorzien." }, { woord: "Wereldbank", uitleg: "Internationale ontwikkelingsbank. Hoofdkwartier Washington. Definieert armoede-grenzen." }],
           theorie: "Daling 1,9 mrd → 700 mln in 30 jaar = grootste armoede-daling in geschiedenis. Vooral China: ~800 mln Chinezen uit armoede (1980-2020). India ook fors. Corona + Oekraïne-oorlog veroorzaken recente terugval.",
           voorbeelden: [{ type: "trend", tekst: "1990: 36% wereldbevolking extreem arm. 2020: 9%. Spectaculair. Maar nog steeds = 1 op 11 mensen leeft van <€2/dag." }],
-          basiskennis: [{ onderwerp: "Niet andere getallen", uitleg: "10 mln = te laag. 5 mrd = bijna hele wereld, onmogelijk. Niemand = ook niet (nog 700 mln)." }],
+          basiskennis: [{ onderwerp: "Niet andere getallen", uitleg: "10 mln = te laag. 5 mrd = bijna hele wereld, onmogelijk. 70 mln = ook veel te laag (nog ~700 mln)." }],
           niveaus: { basis: "~700 miljoen.", simpeler: "Extreme armoede 2020 = ~700 miljoen. Daalde van 1,9 mrd (1990).", nogSimpeler: "700 mln" },
         },
       },
       {
         q: "**Kindersterfte** is goede graadmeter omdat:",
-        options: ["Reflecteert toegang zorg, voeding, hygiëne breed", "Het is onbelangrijk", "Alleen relevant voor moeders", "Geen verband met welvaart"],
+        options: ["Reflecteert toegang zorg, voeding, hygiëne breed", "Het zegt alleen iets over de ziekenhuizen", "Het is alleen belangrijk voor moeders", "Het hangt vooral af van het klimaat"],
         answer: 0,
-        wrongHints: [null, "Wel belangrijk.", "Voor iedereen.", "Wel direct verband."],
+        wrongHints: [null, "Hangt kindersterfte alleen af van ziekenhuizen? Wat heeft een baby nog meer nodig?", "Raakt kindersterfte alleen moeders, of zegt het iets over het hele land?", "Warme landen als Singapore hebben weinig kindersterfte. Is klimaat dan de oorzaak?"],
         uitlegPad: {
           stappen: [{ titel: "Kindersterfte = breedste indicator", tekst: "Aantal kinderen dat sterft voor 5e jaar per 1000 geboortes. In rijke landen: <5/1000. In armste landen: 50+/1000. Goede indicator omdat alle onderdelen van welvaart erin samenkomen: zorg (vaccinaties), voeding (groei), hygiëne (water/sanitair), onderwijs moeders, woonomstandigheden." }],
           woorden: [{ woord: "kindersterfte", uitleg: "Aantal kinderen onder 5 jaar dat overlijdt, per 1000 levend-geborenen." }, { woord: "vaccinaties", uitleg: "Inenting tegen ziektes (mazelen, polio, DKTP). Voorkomt veel kinderdoden." }, { woord: "ondervoeding", uitleg: "Te weinig voedsel of verkeerde voeding. Hoofdoorzaak van veel kinderdoden in arme landen." }],
           theorie: "Daling wereldwijd: 1990 = 12,5 mln kinderdoden, 2020 = 5 mln. Vooral door vaccinatie-campagnes (rotavirus, mazelen). Maar nog veel: 5 miljoen = 1 kind per 6 seconden. Sub-Sahara Afrika hoogste cijfers.",
           voorbeelden: [{ type: "cijfers", tekst: "NL <4 per 1000. Tsjaad 110 per 1000 (=11%!). Verschil enorm. Een Tsjaads kind 25x meer kans op overlijden voor 5e." }],
-          basiskennis: [{ onderwerp: "Wel belangrijk", uitleg: "Niet onbelangrijk. Voor hele samenleving (toekomst!). Sterk verband met welvaart, niet geen." }],
+          basiskennis: [{ onderwerp: "Breed signaal", uitleg: "Niet alleen ziekenhuizen: ook voeding, schoon water en hygiëne tellen mee. Voor hele samenleving (toekomst!). Niet het klimaat, maar de welvaart bepaalt het." }],
           niveaus: { basis: "Reflecteert zorg+voeding+hygiëne.", simpeler: "Kindersterfte raakt 4 dingen tegelijk: zorg + voeding + hygiëne + woon. Goede maat.", nogSimpeler: "Alles tegelijk" },
         },
       },
       {
         q: "Wereldbank-categorie 'lage-inkomen-land':",
-        options: ["BBP/hoofd onder $1.135/jaar", "Iedereen onder €30k", "Elk land in Afrika", "Geen categorie"],
+        options: ["BBP/hoofd onder $1.135/jaar", "Inwoners met minder dan €30.000/jaar", "Elk land in Afrika of Azië", "BBP/hoofd onder $13.000/jaar"],
         answer: 0,
-        wrongHints: [null, "Per land, niet per persoon.", "Niet per werelddeel — het gaat om het inkomen per inwoner.", "Wel categorie."],
+        wrongHints: [null, "Per land, niet per persoon.", "Niet per werelddeel — het gaat om het inkomen per inwoner.", "Met $13.000 per inwoner ben je bijna een hoog-inkomen-land. Is dat 'laag'?"],
         uitlegPad: {
           stappen: [{ titel: "4 Wereldbank-categorieën", tekst: "Wereldbank-classificatie (per land BBP/hoofd in dollars): (1) Lage-inkomen <$1.135. (2) Laag-midden $1.135-$4.465. (3) Hoog-midden $4.466-$13.845. (4) Hoge-inkomen >$13.845. Per jaar herzien." }],
           woorden: [{ woord: "BBP/hoofd", uitleg: "Bruto Binnenlands Product per inwoner. Totaal nationaal inkomen / aantal mensen." }, { woord: "Wereldbank-classificatie", uitleg: "Officiële indeling landen in 4 inkomenscategorieën. Gebaseerd op gemiddeld inkomen per hoofd." }],
           theorie: "Waarvoor? Arme landen kunnen leningen + hulp krijgen tegen voordeligere voorwaarden. Status verandert: China was laag-midden, nu hoog-midden. Doel: landen klimmen op. NL = hoge-inkomen ($56k/hoofd).",
           voorbeelden: [{ type: "categorisatie", tekst: "Hoge-inkomen: NL, DE, USA, Japan. Hoog-midden: China, Brazilië, Mexico. Laag-midden: India, Indonesië. Lage-inkomen: Mali, Niger, Tsjaad, DR Congo." }],
-          basiskennis: [{ onderwerp: "Per LAND niet persoon", uitleg: "€30k/persoon = ander begrip (persoonlijk inkomen). Classificatie automatisch op jaar-data. Wel categorie." }],
+          basiskennis: [{ onderwerp: "Per LAND niet persoon", uitleg: "€30k/persoon = ander begrip (persoonlijk inkomen). Classificatie automatisch op jaar-data. Niet per werelddeel. $13.000 ligt al bij de grens naar hoog-inkomen." }],
           niveaus: { basis: "<$1.135/jaar BBP/hoofd.", simpeler: "Lage-inkomen-land = gemiddelde inkomen <$1.135/jaar/persoon.", nogSimpeler: "$1.135" },
         },
       },
@@ -162,7 +162,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **welvaart in enge zin**?",
-        options: ["Alleen materiële zaken", "Alleen geluk", "Alleen gezondheid", "Alles"],
+        options: ["Alleen materiële zaken", "Alleen geluk en plezier", "Alleen gezondheid", "Alles wat je gelukkig maakt"],
         answer: 0,
         wrongHints: [null, "Geluk = ruime zin.", "Gezondheid = ruime zin.", "Te breed."],
         uitlegPad: {
@@ -190,23 +190,23 @@ const steps = [
       },
       {
         q: "**Easterlin-paradox** zegt:",
-        options: ["Boven ~$20-30k extra geld levert nauwelijks meer geluk", "Geld kan altijd geluk kopen", "Geluk is niet meetbaar", "Iedereen wil meer geld"],
+        options: ["Boven ~$20-30k extra geld levert nauwelijks meer geluk", "Hoe meer geld, hoe gelukkiger, zonder enige grens", "Geluk kun je niet meten, dus ook niet vergelijken", "Rijke landen zijn altijd ongelukkiger dan arme"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Wel ruwweg meetbaar.", "Niet wat het zegt."],
+        wrongHints: [null, "Wordt een miljonair van elke extra euro nog net zo veel gelukkiger?", "Wel ruwweg meetbaar.", "Is 'altijd ongelukkiger' niet te sterk? Kijk naar wat Easterlin onderzocht."],
         uitlegPad: {
           stappen: [{ titel: "Geld koopt geluk — tot een punt", tekst: "Richard Easterlin (1974, econoom) ontdekte: tot ~$20-30k/hoofd LEVERT extra inkomen geluk op. Daarboven: nauwelijks. Reden: basisbehoeften vervuld, daarna sociale vergelijking + andere zaken belangrijker. Meer geld wordt 'nieuwe normaal'." }],
           woorden: [{ woord: "Easterlin-paradox", uitleg: "Boven bepaald inkomen levert extra geld nauwelijks meer geluk op. Eerst gerapporteerd 1974." }, { woord: "sociale vergelijking", uitleg: "Mensen voelen zich niet rijk in absolute zin, maar t.o.v. buren/vrienden." }, { woord: "hedonische adaptatie", uitleg: "Mensen wennen aan hogere welvaart. Nieuwe auto = blijdschap, maar na 6 maanden 'normaal'." }],
           theorie: "Implicatie: na basisbehoeften focus op andere zaken voor geluk. Onderzoek update: drempel ~$75k (Kahneman/Deaton 2010), maar moderne studies (Killingsworth 2021) zien wel verdere stijging. Discussie nog gaande.",
           voorbeelden: [{ type: "vergelijk", tekst: "Iemand van €25k naar €50k = grote sprong geluk. Van €100k naar €200k = nauwelijks meer geluk. Afnemende meeropbrengst." }],
-          basiskennis: [{ onderwerp: "Niet tegendeel", uitleg: "Tegendeel = 'altijd kopen'. Easterlin zegt JUIST 'niet altijd'. Geluk wel ruwweg meetbaar. Niet over wat mensen willen." }],
+          basiskennis: [{ onderwerp: "Niet tegendeel", uitleg: "Tegendeel = 'meer geld = altijd gelukkiger'. Easterlin zegt JUIST 'niet altijd'. Geluk wel ruwweg meetbaar. Niet over rijk tegen arm, maar over steeds méér geld." }],
           niveaus: { basis: "Boven drempel geen extra geluk.", simpeler: "Easterlin = boven ~$20-30k levert extra geld nauwelijks meer geluk. Drempelwaarde.", nogSimpeler: "Genoeg=genoeg" },
         },
       },
       {
         q: "Wat meet de **Better Life Index** (OESO)?",
-        options: ["11 dimensies van kwaliteit van leven", "Alleen BBP", "Aantal banen", "Kosten levensonderhoud"],
+        options: ["11 dimensies van kwaliteit van leven", "Het BBP per inwoner van elk OESO-land", "Het aantal banen en de werkloosheid", "De kosten van wonen, eten en vervoer"],
         answer: 0,
-        wrongHints: [null, "Veel breder.", "1 dimensie.", "1 dimensie."],
+        wrongHints: [null, "Heet het een 'Better Life'-index als het alleen over geld gaat?", "Werk is maar één onderdeel van een goed leven. Wat hoort er nog meer bij?", "Kosten zijn maar één kant. Wat hoort er nog meer bij een goed leven?"],
         uitlegPad: {
           stappen: [{ titel: "OESO meet 11 levensaspecten", tekst: "Better Life Index van OESO (organisatie westerse welvarende landen) meet 11 dimensies: huisvesting, inkomen, banen, gemeenschap, onderwijs, milieu, civiele rechten, gezondheid, tevredenheid, veiligheid, werk-privé-balans. Veel breder dan BBP. Burger kan zelf gewichten kiezen op website." }],
           woorden: [{ woord: "Better Life Index", uitleg: "OESO-index sinds 2011. Vergelijkt 40 landen op 11 dimensies." }, { woord: "OESO", uitleg: "Organisatie voor Economische Samenwerking + Ontwikkeling. 38 landen vooral rijk westers." }],
@@ -218,23 +218,23 @@ const steps = [
       },
       {
         q: "Bhutan meet **Gross National Happiness** (GNH) ipv:",
-        options: ["BBP", "Inflatie", "Belasting", "Niets"],
+        options: ["BBP", "Inflatie", "Belasting", "Werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Inflatie meet nog steeds.", "Wel belasting.", "Wel iets."],
+        wrongHints: [null, "Inflatie meet nog steeds.", "Belasting zegt niet hoe goed een land het doet. Welke maat gebruiken de meeste landen?", "Werkloosheid is maar één cijfer. Welke maat gebruiken de meeste landen voor welvaart?"],
         uitlegPad: {
           stappen: [{ titel: "Bhutan koos welzijn boven BBP", tekst: "Bhutan (klein Himalaya-koninkrijk, ~800.000 inwoners) verving in 1972 BBP als hoofdmaatstaf door GNH (Gross National Happiness). Meet 9 domeinen: psychologisch welzijn, gezondheid, onderwijs, tijdsgebruik, cultuur, goed bestuur, gemeenschap, ecologische diversiteit, levensstandaard. Iconisch alternatief." }],
           woorden: [{ woord: "GNH", uitleg: "Gross National Happiness. Bhutan's welzijns-index sinds 1972. 9 domeinen, 33 indicatoren." }, { woord: "Bhutan", uitleg: "Land in Himalaya tussen India en China. Boeddhistisch koninkrijk. Pionier alternatieve welvaart-meting." }],
           theorie: "Inspireert wereldwijd discussies over BBP-alternatieven. VN-Algemene Vergadering nam 2011 resolutie aan: landen moeten geluk meer betrekken in beleid. Maar Bhutan ZELF blijft economisch arm — critici zeggen daarom dat geluk meten alleen niet genoeg is.",
           voorbeelden: [{ type: "domeinen", tekst: "9 domeinen GNH: psychologisch welzijn, gezondheid, onderwijs, tijdsgebruik, cultuur, goed bestuur, gemeenschap, ecologie, levensstandaard. Wereld kijkt mee." }],
-          basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Inflatie + belasting blijven gewoon meten. GNH komt ipv BBP. Wel iets (geluksstrategie)." }],
+          basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Inflatie, belasting en werkloosheid blijven gewoon meten. GNH komt ipv BBP (geluksstrategie)." }],
           niveaus: { basis: "BBP.", simpeler: "Bhutan vervangt BBP door GNH = geluksmeting.", nogSimpeler: "BBP" },
         },
       },
       {
         q: "Wat maakt mensen vooral **gelukkig** (volgens onderzoek)?",
-        options: ["Sociale relaties + gezondheid + doel + autonomie", "Alleen geld", "Alleen vakantie", "Alleen status"],
+        options: ["Relaties + gezondheid + doel + vrijheid", "Geld + status + een groot huis", "Veel vakantie + vrije tijd + rust", "Status + bekendheid + veel volgers"],
         answer: 0,
-        wrongHints: [null, "Boven basis-niveau geen sterke link.", "1 onderdeel.", "1 onderdeel."],
+        wrongHints: [null, "Boven basis-niveau geen sterke link.", "Vakantie helpt, maar maakt het je blijvend gelukkig? Wat doe je de rest van het jaar?", "Maakt aanzien je diep gelukkig, of gaat het om iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "4 kernpijlers geluk", tekst: "Decennia geluksonderzoek (vooral Harvard Study Adult Development, 80+ jaar gevolgd) wijzen 4 pijlers aan: (1) Sociale relaties — familie, vrienden, gemeenschap. (2) Gezondheid — fysiek + mentaal. (3) Doel — zinvol werk + missie. (4) Autonomie — eigen keuzes maken. Geld helpt tot basis, daarna deze 4." }],
           woorden: [{ woord: "Harvard Study of Adult Development", uitleg: "Langste geluksonderzoek ooit (1938-nu). 700+ mannen levenslang gevolgd. Conclusie: relaties belangrijkst." }, { woord: "autonomie", uitleg: "Zelf kunnen kiezen wat je doet. Voorspelt geluk sterker dan inkomen." }, { woord: "purpose/doel", uitleg: "Gevoel dat je leven betekenis heeft. Geeft veerkracht bij tegenslagen." }],
@@ -270,9 +270,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **vicieuze cirkel van armoede**?",
-        options: ["Armoede die zichzelf in stand houdt", "Willekeurige situatie", "Alleen externe oorzaken", "Iedereen gelijk arm"],
+        options: ["Armoede die zichzelf in stand houdt", "Armoede die toevallig ontstaat", "Armoede die alleen door het buitenland komt", "Armoede waarin iedereen even arm is"],
         answer: 0,
-        wrongHints: [null, "Vicieuze cirkel ≠ willekeurig.", "Interne feedback-loop.", "Geen gelijkheid-claim."],
+        wrongHints: [null, "Vicieuze cirkel ≠ willekeurig.", "Kan de oorzaak ook in het land zelf zitten? Wat betekent 'cirkel'?", "Geen gelijkheid-claim."],
         uitlegPad: {
           stappen: [{ titel: "Cirkel die zichzelf voedt", tekst: "Vicieuze cirkel armoede: arm land → weinig belastinginkomsten → geen geld voor scholen → geen opgeleide werkers → geen industrie → geen banen → mensen blijven arm → cyclus herhaalt zich. Dit verklaart waarom landen arm BLIJVEN, niet alleen waarom ze arm ZIJN. Moeilijk te doorbreken zonder externe inbreng." }],
           woorden: [{ woord: "vicieuze cirkel", uitleg: "Latijn 'vitium' = fout/gebrek. Zelf-versterkende negatieve cyclus." }, { woord: "feedback-loop", uitleg: "Systeem waar gevolg weer oorzaak wordt. Hier: armoede → effect → meer armoede." }, { woord: "doorbreken", uitleg: "Cirkel doorbreken vraagt grote interventie: hulp, hervormingen, technologie, onderwijs-massa." }],
@@ -284,7 +284,7 @@ const steps = [
       },
       {
         q: "Waarom kan **export van alleen grondstoffen** een land arm houden?",
-        options: ["Verwerking (waar geld in zit) gebeurt elders", "Grondstoffen altijd schaars", "Geen havens", "Vervuiling"],
+        options: ["Verwerking (waar geld in zit) gebeurt elders", "Grondstoffen raken altijd snel op", "Het land heeft geen havens voor export", "De mijnen vervuilen het hele land"],
         answer: 0,
         wrongHints: [null, "Sommige grondstoffen overvloedig.", "Veel landen hebben havens.", "Vervuiling kan issue zijn maar niet hoofdreden."],
         uitlegPad: {
@@ -312,23 +312,23 @@ const steps = [
       },
       {
         q: "**Kolonisatie-erfenis** als oorzaak armoede betekent:",
-        options: ["Grenzen en economie zijn door koloniale machten bepaald", "Te veel kolonies", "Ze betalen nog steeds belasting aan Europa", "Niet relevant"],
+        options: ["Grenzen en economie zijn door kolonisators bepaald", "De koloniale tijd duurde daar heel kort", "Ze betalen nog steeds belasting aan Europa", "Kolonisatie heeft geen invloed meer op vandaag"],
         answer: 0,
-        wrongHints: [null, "Niet aantal.", "Die betalingen stopten bij de onafhankelijkheid.", "Wel relevant."],
+        wrongHints: [null, "De duur alleen zegt weinig. Wat lieten de koloniale machten achter?", "Die betalingen stopten bij de onafhankelijkheid.", "Kan iets van honderd jaar geleden nu nog doorwerken?"],
         uitlegPad: {
           stappen: [{ titel: "Erfenis: kunstmatige grenzen + mono-cultuur", tekst: "Europese koloniale machten (UK/FR/NL/BE) trokken in 19e eeuw landgrenzen door Afrika willekeurig op kaart — geen rekening met volkeren/talen. Bv. Nigeria heeft 250+ etnische groepen samen. Economie gericht op 1 grondstof voor moederland (cacao Ghana, koffie Ivoorkust, koper Zambia, olie Nigeria). Bij onafhankelijkheid (jaren '60) erfden de landen deze problemen." }],
           woorden: [{ woord: "kolonisatie", uitleg: "Land neemt vreemd gebied in voor eigen voordeel. Westerse mogendheden deden dit massaal 16e-20e eeuw." }, { woord: "mono-cultuur", uitleg: "Land hangt van 1 product af. Kwetsbaar bij prijsdaling." }, { woord: "Scramble for Africa", uitleg: "1881-1914. Europese mogendheden verdeelden Afrika in 30 jaar. Grenzen nu nog steeds koloniaal." }],
           theorie: "Gevolgen vandaag: (1) etnische conflicten door slechte grenzen (Rwanda 1994). (2) afhankelijkheid 1 grondstof = economisch wankel. (3) zwakke staatsinstituties (koloniale machten bouwden instellingen voor zichzelf, niet voor het land). (4) brain drain — slimste mensen gingen naar Europa.",
           voorbeelden: [{ type: "concreet", tekst: "Rwanda was een Belgische kolonie. De Belgen zetten op identiteitskaarten of iemand Tutsi of Hutu was. Leidde tot genocide 1994 (~800.000 doden in 100 dagen)." }],
-          basiskennis: [{ onderwerp: "Wel relevant", uitleg: "Niet 'aantal kolonies'. Geen belasting (geen geld-overdracht meer). Wel zeer relevant nu (60 jaar na onafhankelijkheid)." }],
+          basiskennis: [{ onderwerp: "Wel relevant", uitleg: "Niet de duur van de koloniale tijd. Geen belasting (geen geld-overdracht meer). Wel zeer relevant nu (60 jaar na onafhankelijkheid)." }],
           niveaus: { basis: "Slechte grenzen + mono-cultuur.", simpeler: "Kolonisatie-erfenis = grenzen + economie door Westen gemaakt voor zichzelf.", nogSimpeler: "Slechte grenzen" },
         },
       },
       {
         q: "Waarom zijn **schulden** zo slecht voor arme landen?",
-        options: ["Rente kost geld dat naar onderwijs of zorg kon", "Schulden zijn altijd te groot", "Rente is altijd 0%", "Ze moeten alles binnen een jaar terugbetalen"],
+        options: ["Rente kost geld dat naar onderwijs of zorg kon", "Schulden zijn altijd te groot om af te lossen", "Arme landen betalen nooit rente op leningen", "Ze moeten alles binnen een jaar terugbetalen"],
         answer: 0,
-        wrongHints: [null, "Soms haalbaar — opofferingen wel.", "Rente is juist hoog.", "Staatsschulden lopen vaak tientallen jaren."],
+        wrongHints: [null, "Soms haalbaar — opofferingen wel.", "Als er geen rente was, waarom zouden schulden dan zo zwaar zijn?", "Staatsschulden lopen vaak tientallen jaren."],
         uitlegPad: {
           stappen: [{ titel: "Rente vreet onderwijs-budget op", tekst: "Veel arme landen leenden in jaren '70-'80 bij Wereldbank + IMF (vaak gepusht). Door hoge rentes + crisissen werden schulden onbetaalbaar. Voorbeeld: Mozambique besteedde in 1995 25%+ overheidsbudget aan rente. Geld dat NIET naar scholen + ziekenhuizen + wegen ging. 'Schuldenval'." }],
           woorden: [{ woord: "staatsschuld", uitleg: "Wat overheid schuldig is aan binnen- of buitenland." }, { woord: "Schuldenval", uitleg: "Rente jaarlijks zo hoog dat land niet kan investeren in ontwikkeling. Vicieuze cyclus." }, { woord: "Highly Indebted Poor Countries (HIPC)", uitleg: "IMF/Wereldbank-programma 1996+ dat 36 armste landen schuld kwijtschold mits hervormingen." }],
@@ -340,15 +340,15 @@ const steps = [
       },
       {
         q: "Wat verklaart het **succes van China sinds 1980**?",
-        options: ["Hervormingen, openheid en export", "Toeval", "Geen verandering", "Communisme onveranderd"],
+        options: ["Hervormingen, openheid en export", "Geluk met het weer en de oogst", "Weinig handel met andere landen", "Een strikte planeconomie zonder markt"],
         answer: 0,
-        wrongHints: [null, "Niet toeval — beleid.", "Wel verandering.", "Communistisch label maar markteconomie."],
+        wrongHints: [null, "Groeit een land veertig jaar lang door goed weer?", "Waar komen veel spullen in jouw huis vandaan?", "China heet nog communistisch, maar werkt het nog als een planeconomie?"],
         uitlegPad: {
           stappen: [{ titel: "Deng Xiaoping 1978 — hervormingen", tekst: "China was tot 1976 (dood Mao) gesloten communistisch + arm. Deng Xiaoping vanaf 1978: hervormingen + opening naar buiten. Stappen: (1) Boeren mochten weer zelf een stuk land bewerken + winst behouden. (2) Speciale Economische Zones (Shenzhen) voor buitenlands kapitaal. (3) Export-industrie opbouwen. Resultaat: ~800 miljoen Chinezen uit armoede 1980-2020. Grootste reductie ooit." }],
           woorden: [{ woord: "Deng Xiaoping", uitleg: "Chinees leider 1978-1992. Architect van China's hervormingen. Beroemd: 'Het maakt niet uit of de kat zwart of wit is, als hij maar muizen vangt.'" }, { woord: "Speciale Economische Zones", uitleg: "Gebieden in China waar marktregels golden + buitenlandse bedrijven welkom waren. Bv. Shenzhen." }, { woord: "wereldfabriek", uitleg: "China's rol sinds 2000: produceert goedkoop voor wereldmarkt. Wereldwijde productie verschoof naar daar." }],
           theorie: "Recept China: communistisch politiek systeem MAAR markt-economie. Goedkope arbeid + massale investeringen in onderwijs + infrastructuur + export = jarenlang 8-10% groei/jaar. China haalde 2010 Japan in als 2e economie wereld. Nu rivaal VS.",
           voorbeelden: [{ type: "cijfers", tekst: "1980: 88% Chinezen in armoede (>700 mln). 2020: <1% (<5 mln). 40 jaar = 800 mln uit armoede. Grootste reductie in geschiedenis." }],
-          basiskennis: [{ onderwerp: "Niet onveranderd", uitleg: "Geen toeval (beleidskeuze). Wel verandering (radicaal). Communistisch label bleef, markt-praktijk veranderde alles." }],
+          basiskennis: [{ onderwerp: "Niet onveranderd", uitleg: "Geen geluk met het weer (beleidskeuze). Juist veel handel (export). Geen strikte planeconomie meer. Communistisch label bleef, markt-praktijk veranderde alles." }],
           niveaus: { basis: "Hervormingen + export.", simpeler: "China's succes = Deng hervormingen 1978, opening + export, 800 mln uit armoede.", nogSimpeler: "Hervormingen" },
         },
       },
@@ -375,49 +375,49 @@ const steps = [
     checks: [
       {
         q: "**Multilaterale hulp** is:",
-        options: ["Hulp via internationale organisaties", "Direct van NL naar Mali", "Particuliere hulp", "Noodhulp"],
+        options: ["Hulp via internationale organisaties", "Hulp rechtstreeks van Nederland aan Mali", "Hulp van particulieren via een NGO", "Hulp van één land aan meerdere landen"],
         answer: 0,
-        wrongHints: [null, "Dat is bilateraal.", "Particulier = NGO.", "Noodhulp = bij rampen."],
+        wrongHints: [null, "Dat is bilateraal.", "Particuliere hulp loopt via NGO's. Waar staat 'multi' in multilateraal voor?", "Let op wie de hulp verdeelt. Is dat één land?"],
         uitlegPad: {
           stappen: [{ titel: "Multi = meerdere landen samen", tekst: "Multilaterale hulp = via internationale organisaties waar veel landen geld in stoppen. Bv. VN, EU, Wereldbank, IMF, UNICEF. Ontvanger weet niet welk land precies betaalde. Voordeel: minder politieke beïnvloeding. Nadeel: meer overhead + bureaucratie. Tegenpool: bilateraal = NL → Mali direct." }],
           woorden: [{ woord: "multilateraal", uitleg: "'Veel-zijdig'. Meerdere landen samen via organisatie." }, { woord: "bilateraal", uitleg: "'Twee-zijdig'. Land A geeft direct aan land B." }, { woord: "UNICEF", uitleg: "VN-organisatie voor kinderen. Wereldwijd actief. Multilateraal." }],
           theorie: "NL doneert via beide kanalen. Multilateraal: NL → EU → ontwikkelingsfonds. Bilateraal: NL → Mali direct. Voordeel multi: NL kan met andere landen samen schaal maken. Nadeel: NL minder controle waar geld heen gaat.",
           voorbeelden: [{ type: "voorbeelden", tekst: "VN-fonds = multi. UNICEF = multi. Wereldbank = multi. NL-ambassade Ghana met direct project = bilateraal. Oxfam = particulier." }],
-          basiskennis: [{ onderwerp: "Niet andere vormen", uitleg: "Bilateraal = direct (NL→Mali). Particulier = NGO's (Oxfam etc). Noodhulp = doel (rampen), niet kanaal." }],
+          basiskennis: [{ onderwerp: "Niet andere vormen", uitleg: "Bilateraal = direct (NL→Mali). Particulier = NGO's (Oxfam etc). Eén land dat aan meerdere landen geeft = nog steeds bilateraal." }],
           niveaus: { basis: "Meerdere landen samen.", simpeler: "Multilateraal = via VN/EU/Wereldbank, meerdere landen samen.", nogSimpeler: "Samen" },
         },
       },
       {
         q: "Welke NGO is bekend van **noodhulp bij rampen**?",
-        options: ["Artsen zonder Grenzen", "Belastingdienst", "Wereldbank", "Rabobank"],
+        options: ["Artsen zonder Grenzen", "Internationaal Monetair Fonds", "Wereldbank", "Kamer van Koophandel"],
         answer: 0,
-        wrongHints: [null, "Geen hulp.", "Wereldbank is multilateraal.", "Bank, geen NGO."],
+        wrongHints: [null, "Het IMF leent geld aan landen. Is dat een NGO die bij rampen helpt?", "Wereldbank is multilateraal.", "Dat is een Nederlandse organisatie voor bedrijven."],
         uitlegPad: {
           stappen: [{ titel: "Médecins Sans Frontières — 1971", tekst: "Artsen zonder Grenzen (AzG / MSF — Médecins Sans Frontières) = NGO opgericht in 1971 door Franse artsen. Sturen medische teams naar rampen, oorlogen, epidemieën — onafhankelijk van overheden. Werken in ~70 landen. Nobelprijs Vrede 1999. Bekend door snelle inzet bij aardbevingen + Ebola-uitbraken." }],
           woorden: [{ woord: "NGO", uitleg: "Non-Governmental Organisation. Niet-overheids hulporganisatie. Vaak privaat gefinancierd door donaties." }, { woord: "Artsen zonder Grenzen", uitleg: "Internationale medische NGO. Specialiteit: noodhulp bij rampen/oorlogen." }, { woord: "noodhulp", uitleg: "Korte termijn hulp bij rampen: voedsel, medicijnen, tenten. Anders dan structurele hulp." }],
           theorie: "Andere bekende NL-NGO's: Oxfam Novib (armoede), Cordaid (ontwikkeling), Save the Children (kinderen), Stichting Vluchteling. Allemaal niet-overheid, gefinancierd door donaties + soms overheidssubsidies.",
           voorbeelden: [{ type: "inzet", tekst: "AzG na aardbeving Haïti 2010, Ebola-uitbraak West-Afrika 2014, Syrische oorlog vanaf 2011. Snelle inzet + medische expertise op moeilijke plekken." }],
-          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Belastingdienst = NL-overheid (geen hulp). Wereldbank = multilateraal. Rabobank = commerciële bank." }],
+          basiskennis: [{ onderwerp: "Niet andere", uitleg: "IMF = leent geld aan landen (multilateraal). Wereldbank = multilateraal. Kamer van Koophandel = NL-organisatie voor bedrijven." }],
           niveaus: { basis: "Artsen zonder Grenzen.", simpeler: "Noodhulp-NGO = Artsen zonder Grenzen (AzG). Medische rampenhulp.", nogSimpeler: "AzG" },
         },
       },
       {
         q: "Wat is een **risico van gratis hulp**?",
-        options: ["Lokale producenten kunnen niet concurreren met gratis goederen", "Gratis is altijd goed", "Mensen ondankbaar", "Te duur"],
+        options: ["Lokale boeren kunnen niet op tegen gratis goederen", "Gratis hulp heeft nooit nadelen voor een land", "De ontvangers moeten de hulp later terugbetalen", "De hulp is te duur voor de ontvangers"],
         answer: 0,
-        wrongHints: [null, "Soms wel risico.", "Niet relevant.", "Gratis ≠ duur voor ontvanger."],
+        wrongHints: [null, "Bestaat er iets zonder nadelen? Denk aan wie er nog meer in dat land werkt.", "Gratis hulp hoef je niet terug te betalen. Wat is het risico dan wél?", "Gratis ≠ duur voor ontvanger."],
         uitlegPad: {
           stappen: [{ titel: "Gratis hulp kan lokale economie ondermijnen", tekst: "Voorbeeld: VS dumpt gratis voedsel (rijst, graan) in Haïti na rampen. Goed bedoeld — maar Haïtiaanse boeren konden hun rijst niet meer verkopen (wie koopt rijst als er gratis rijst ligt?). Boeren gingen failliet. Land werd MEER afhankelijk van import + hulp. 'Hulp die hulp veroorzaakt'." }],
           woorden: [{ woord: "afhankelijkheid", uitleg: "Land kan niet zonder hulp meer. Lokale economie verzwakt." }, { woord: "marktverstoring", uitleg: "Gratis goederen drukken prijzen, lokale aanbieders konden niet concurreren." }, { woord: "dignity", uitleg: "'Waardigheid'. Modern hulpdenken: liever cash + werk dan gratis goederen die mensen passief maken." }],
           theorie: "Modern hulpdenken: hulp werkt beter als (1) cash-transfers in plaats van goederen, (2) tijdelijk + uitfasering, (3) lokale producten inkopen waar mogelijk, (4) capaciteit opbouwen ipv afhankelijkheid. Easterly/Banerjee/Duflo schreven hier veel over.",
           voorbeelden: [{ type: "concreet", tekst: "VS Food for Peace-programma: kreeg kritiek omdat het Afrikaanse boeren schaadde in jaren '80-'90. Veranderd nu naar lokaal voedsel inkopen + cash-vouchers." }],
-          basiskennis: [{ onderwerp: "Niet ander", uitleg: "Niet 'altijd goed' (soms slecht effect). Niet 'ondankbaar' (geen oorzaak). Voor gever duur, voor ontvanger niet." }],
+          basiskennis: [{ onderwerp: "Niet ander", uitleg: "Niet 'zonder nadelen' (soms slecht effect). Geen terugbetaling (het is gratis). Voor gever duur, voor ontvanger niet." }],
           niveaus: { basis: "Lokale producenten verliezen.", simpeler: "Gratis hulp = lokale producent kan niet concurreren, gaat failliet.", nogSimpeler: "Lokaal verliest" },
         },
       },
       {
         q: "Wat is **NL ontwikkelingsbudget** als % BBP?",
-        options: ["Minder dan 1%", "~5%", "~50%", "~10%"],
+        options: ["Minder dan 1%", "Ongeveer 5%", "Ongeveer 50%", "Ongeveer 10%"],
         answer: 0,
         wrongHints: [null, "Te hoog.", "Veel te hoog.", "Te hoog."],
         uitlegPad: {
@@ -431,9 +431,9 @@ const steps = [
       },
       {
         q: "Wat is **Fair Trade**?",
-        options: ["Eerlijke prijs voor boeren in arme landen", "Gratis producten", "Geen handel", "Alleen Europese handel"],
+        options: ["Eerlijke prijs voor boeren in arme landen", "Gratis producten voor mensen in arme landen", "Een verbod op handel met arme landen", "Handel die alleen binnen Europa plaatsvindt"],
         answer: 0,
-        wrongHints: [null, "Wel handel, eerlijker.", "Tegendeel.", "Wereldwijd."],
+        wrongHints: [null, "Wel handel, eerlijker.", "Fair Trade gaat juist wél over handel. Wat maakt die handel anders?", "Wereldwijd."],
         uitlegPad: {
           stappen: [{ titel: "Boeren krijgen eerlijke + minimum-prijs", tekst: "Fair Trade = systeem waar consumenten in rijke landen iets meer betalen, zodat boeren in arme landen een EERLIJKE prijs krijgen — niet de absoluut laagste die wereldmarkt vraagt. Plus: minimumprijs gegarandeerd (ook als wereldprijs daalt). Plus: premie voor sociale projecten (school, kliniek dorp). Keurmerken: Max Havelaar, Fairtrade, UTZ." }],
           woorden: [{ woord: "Fair Trade", uitleg: "'Eerlijke handel'. Systeem voor eerlijkere prijzen boeren arme landen." }, { woord: "Max Havelaar", uitleg: "Eerste Fair Trade-keurmerk in NL (1988). Genoemd naar boek Multatuli (1860, anti-koloniaal)." }, { woord: "minimum-prijs", uitleg: "Vaste vloer onder prijs. Boer weet zeker inkomen, ook bij wereldmarkt-crash." }],
@@ -445,7 +445,7 @@ const steps = [
       },
       {
         q: "**Remittances** — wat zijn dat?",
-        options: ["Geld dat migranten naar familie thuis sturen", "Een soort belasting", "Toeristisch geld", "Ontwikkelingshulp van overheden"],
+        options: ["Geld dat migranten naar familie thuis sturen", "Belasting die migranten in Nederland betalen", "Geld dat toeristen in arme landen uitgeven", "Hulpgeld dat overheden naar arme landen sturen"],
         answer: 0,
         wrongHints: [null, "Niet belasting.", "Niet toerisme.", "Niet overheid."],
         uitlegPad: {
@@ -511,9 +511,9 @@ const steps = [
       },
       {
         q: "**Microkrediet** werkt vooral voor:",
-        options: ["Beginnende kleine ondernemers in arme landen", "Internationale grote bedrijven", "NL-studenten", "Hele dorpen tegelijk"],
+        options: ["Beginnende kleine ondernemers in arme landen", "Grote internationale bedrijven met veel personeel", "Nederlandse studenten met een studieschuld", "Overheden van arme landen in Afrika en Azië"],
         answer: 0,
-        wrongHints: [null, "Grote bedrijven hebben gewone leningen.", "DUO doet dat in NL.", "Per persoon."],
+        wrongHints: [null, "Grote bedrijven hebben gewone leningen.", "DUO doet dat in NL.", "Microkrediet is een heel kleine lening. Heeft een regering daar genoeg aan?"],
         uitlegPad: {
           stappen: [{ titel: "Kleine lening = grote impact", tekst: "Microkrediet = mini-lening (€50-€500) voor mensen die nooit bij gewone bank kunnen lenen (geen onderpand, geen baan). Vooral vrouwen in arme landen. Doel: eigen bedrijfje starten (kraampje, naaiwerk, kleine winkel) en uit armoede komen." }],
           woorden: [{ woord: "microkrediet", uitleg: "Kleine lening voor arme ondernemers. Vaak <€500. Korte looptijd." }, { woord: "Grameen Bank", uitleg: "Eerste microkrediet-bank. Opgericht door Yunus in Bangladesh 1976." }],
@@ -539,23 +539,23 @@ const steps = [
       },
       {
         q: "**Leapfrogging** is:",
-        options: ["Arme landen slaan ontwikkelingsstappen over", "Een kinderspel", "Belastingontwijking", "Soort hulp"],
+        options: ["Arme landen slaan ontwikkelingsstappen over", "Arme landen volgen precies de weg van rijke landen", "Bedrijven ontwijken belasting in arme landen", "Een vorm van hulp tussen arme landen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant hier.", "Niet hetzelfde.", "Geen specifieke hulpvorm."],
+        wrongHints: [null, "Denk aan Kenia: mobiel betalen zonder eerst overal bankkantoren. Volgden ze de westerse route?", "Niet hetzelfde.", "Geen specifieke hulpvorm."],
         uitlegPad: {
           stappen: [{ titel: "Generatie overslaan", tekst: "Leapfrogging = letterlijk 'haasje-over springen'. Arme landen slaan ontwikkelings-stappen over. Voorbeeld: nooit vaste telefoonlijn aangelegd → direct mobiel. Geen kolencentrales gebouwd → direct zonne-energie. Schoolboeken overgeslagen → direct tablet/internet." }],
           woorden: [{ woord: "leapfrogging", uitleg: "Ontwikkelings-stappen overslaan, direct naar nieuwste technologie." }, { woord: "M-Pesa", uitleg: "Keniaans mobiel-bankieren systeem. Sinds 2007. Mensen zonder bankrekening kunnen geld sturen via SMS." }],
           theorie: "Voordeel: arme landen hoeven niet 50 jaar te wachten om Westen in te halen. Kunnen sprong maken via nieuwe tech. Vooral mobiel + internet + zonne-energie maken dit mogelijk.",
           voorbeelden: [{ type: "Afrika", tekst: "Kenia: veel meer volwassenen gebruiken M-Pesa dan er een bankrekening hebben. Indonesië: veel meer mensen hebben een smartphone dan een pc. Direct mobiel zonder pc-tijdperk." }],
-          basiskennis: [{ onderwerp: "Engels", uitleg: "Niet kinderspel (haasje-over voor kinderen). Niet belastingontwijking. Specifieke ontwikkelings-term." }],
+          basiskennis: [{ onderwerp: "Engels", uitleg: "Niet stap voor stap de westerse route volgen. Niet belastingontwijking. Geen hulpvorm. Specifieke ontwikkelings-term." }],
           niveaus: { basis: "Stappen overslaan.", simpeler: "Leapfrogging = arme landen slaan tech-stappen over (vaste tel → direct mobiel).", nogSimpeler: "Overslaan" },
         },
       },
       {
         q: "**Klimaat en arme landen**:",
-        options: ["Ze stoten weinig CO2 uit maar lijden het meest", "Geen verband", "Profiteren van klimaat", "Ze stoten het meeste CO2 uit"],
+        options: ["Ze stoten weinig CO2 uit maar lijden het meest", "Klimaat raakt arme en rijke landen precies gelijk", "Ze profiteren het meest van de opwarming", "Ze stoten zelf het meeste CO2 uit van iedereen"],
         answer: 0,
-        wrongHints: [null, "Wel sterk verband.", "Tegendeel.", "Kijk naar de uitstoot: wie stoten historisch het meest uit?"],
+        wrongHints: [null, "Wie kan zich beter beschermen tegen droogte of overstromingen: een rijk of een arm land?", "Tegendeel.", "Kijk naar de uitstoot: wie stoten historisch het meest uit?"],
         uitlegPad: {
           stappen: [{ titel: "Onrechtvaardige verdeling", tekst: "Klimaat-paradox: rijke landen (VS, EU) en China veroorzaakten samen het grootste deel van de historische CO2-uitstoot. Maar arme landen lijden meeste klimaatschade: droogtes (Sahel), overstromingen (Bangladesh), zeespiegel-stijging (eilandstaten zoals Malediven, Tuvalu)." }],
           woorden: [{ woord: "klimaat-rechtvaardigheid", uitleg: "Idee dat veroorzakers (rijke landen) moeten betalen voor schade in slachtoffer-landen (arme)." }, { woord: "loss and damage", uitleg: "VN-fonds (sinds 2022) waarin rijke landen geld storten voor klimaatschade arme landen." }],
@@ -591,7 +591,7 @@ const steps = [
     checks: [
       {
         q: "Wat doet **Fair Trade** voor boeren?",
-        options: ["Eerlijke prijs plus een premie", "Gratis goederen", "Korting voor consument", "Belasting"],
+        options: ["Eerlijke prijs plus een premie", "Gratis zaden en gereedschap", "Korting voor kopers in de winkel", "Een extra belasting op hun oogst"],
         answer: 0,
         wrongHints: [null, "Niet gratis.", "Tegendeel.", "Geen belasting."],
         uitlegPad: {
@@ -605,21 +605,21 @@ const steps = [
       },
       {
         q: "Welk **keurmerk** gaat over eerlijke handel in koffie/cacao?",
-        options: ["Max Havelaar / Fairtrade / UTZ", "EU-bio", "MSC", "Energy Star"],
+        options: ["Max Havelaar / Fairtrade / UTZ", "EU-bio / Demeter / EKO", "MSC / ASC / Beter Leven", "Energy Star / Energielabel"],
         answer: 0,
-        wrongHints: [null, "EU-bio = biologisch.", "MSC = vis.", "Niet voedsel."],
+        wrongHints: [null, "Dat zijn keurmerken voor biologische producten.", "Die gaan over vis en dierenwelzijn.", "Die gaan over energieverbruik, niet over voedsel."],
         uitlegPad: {
           stappen: [{ titel: "Logo's koffie/cacao", tekst: "Op koffie/cacao-pakken zie je vaak: Max Havelaar (NL, sinds 1988), Fairtrade (internationaal), UTZ (eerlijk + duurzaam). Soms gecombineerd met Rainforest Alliance (geen ontbossing). Allemaal Fair Trade-achtige labels voor cacao/koffie/thee/bananen." }],
           woorden: [{ woord: "Max Havelaar", uitleg: "Eerste NL Fair Trade-keurmerk (1988). Naam verwijst naar Multatuli's anti-koloniale boek." }, { woord: "UTZ", uitleg: "Afkorting van 'Utz Kapeh' (Maya-taal: 'goede koffie'). Sinds 2002. Focus duurzaamheid + eerlijke handel. Fuseerde 2018 met Rainforest Alliance." }],
           theorie: "Andere keurmerken voor ANDERE producten: EU-bio = biologisch eten (alle voedsel), MSC = duurzame vis, FSC = duurzaam hout/papier, GOTS = bio-textiel. Pas op: keurmerk past bij PRODUCT-categorie.",
           voorbeelden: [{ type: "supermarkt", tekst: "Tony's Chocolonely-reep heeft het Fairtrade-keurmerk. Veel huismerk-koffie en -chocolade hebben het Rainforest Alliance-keurmerk (waar UTZ in is opgegaan)." }],
-          basiskennis: [{ onderwerp: "Niet andere keurmerken", uitleg: "EU-bio = bio voedsel algemeen. MSC = vis. Energy Star = energiezuinige apparaten. Allemaal andere categorieën." }],
+          basiskennis: [{ onderwerp: "Niet andere keurmerken", uitleg: "EU-bio/Demeter/EKO = biologisch. MSC/ASC = vis, Beter Leven = dierenwelzijn. Energy Star/Energielabel = energiezuinige apparaten. Allemaal andere categorieën." }],
           niveaus: { basis: "Max Havelaar/Fairtrade/UTZ.", simpeler: "Koffie/cacao-keurmerk = Max Havelaar + Fairtrade + UTZ. EU-bio = ander (alle bio-eten).", nogSimpeler: "Max Havelaar" },
         },
       },
       {
         q: "Wat is **greenwashing**?",
-        options: ["Bedrijven doen zich groener voor dan ze zijn", "Wassen met groen wasmiddel", "Afval scheiden en recyclen", "Echt duurzaam beleid"],
+        options: ["Bedrijven doen zich groener voor dan ze zijn", "Wassen met een groen, milieuvriendelijk wasmiddel", "Afval scheiden en recyclen in een fabriek", "Bedrijven die echt duurzaam werken"],
         answer: 0,
         wrongHints: [null, "Niet letterlijk wassen.", "Dat is echt milieugedrag, geen misleiding.", "Tegendeel."],
         uitlegPad: {
@@ -649,7 +649,7 @@ const steps = [
         q: "Hoeveel water kost **1 kg rundvlees** ongeveer?",
         options: ["~15.000 liter", "~10 liter", "~100 liter", "~1 miljoen liter"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Veel te weinig.", "Te veel."],
+        wrongHints: [null, "Een koe eet en drinkt veel, en haar voer moet ook water krijgen. Kan dat met 10 liter?", "Bedenk hoeveel kilo voer een koe in haar leven eet. Is 100 liter dan genoeg?", "Een miljoen liter is zo veel als een klein zwembad. Voor één kilo vlees?"],
         uitlegPad: {
           stappen: [{ titel: "Waterspoor rundvlees", tekst: "1 kg rundvlees kost ~15.000 liter water om te produceren. Inclusief: water voor koe-drinken, water voor verbouwen van veevoer (mais, soja), water voor stallenreiniging. Vergelijk: 1 kg tarwe = 1500 L. 1 kg appels = 800 L. 1 kg groente = 200-300 L." }],
           woorden: [{ woord: "waterspoor", uitleg: "Hoeveelheid water nodig om iets te produceren. Engels: water footprint." }, { woord: "veevoer", uitleg: "Eten voor dieren (gras, mais, soja). Grootste verbruiker bij vlees-productie." }],
@@ -661,9 +661,9 @@ const steps = [
       },
       {
         q: "**'Stem met je portemonnee'** betekent:",
-        options: ["Wat je koopt beïnvloedt wat bedrijven produceren", "Letterlijk stemmen met geld", "Alleen wie belasting betaalt mag stemmen", "Rijke mensen krijgen meer stemmen"],
+        options: ["Wat je koopt beïnvloedt wat bedrijven produceren", "Je kunt bij verkiezingen een stem kopen met geld", "Alleen wie belasting betaalt mag stemmen", "Rijke mensen krijgen bij verkiezingen meer stemmen"],
         answer: 0,
-        wrongHints: [null, "Metafoor.", "Het gaat om kopen, niet om verkiezingen.", "Bij verkiezingen heeft iedereen één stem — het gaat hier om kopen."],
+        wrongHints: [null, "Mag je in Nederland een stem kopen? Het gaat hier om beeldspraak.", "Het gaat om kopen, niet om verkiezingen.", "Bij verkiezingen heeft iedereen één stem — het gaat hier om kopen."],
         uitlegPad: {
           stappen: [{ titel: "Consument heeft macht", tekst: "'Stem met je portemonnee' = elke aankoop is een keuze. Wie koopt, bepaalt indirect wat bedrijven maken. Koop je Fair Trade-koffie → bedrijven zien vraag → meer Fair Trade-aanbod. Koop je goedkoop vlees → bedrijven zien vraag → meer goedkoop vlees. Geld = invloed." }],
           woorden: [{ woord: "consumenten-macht", uitleg: "Invloed die kopers samen hebben op markt. Bedrijven volgen wat verkoopt." }, { woord: "boycot", uitleg: "Bewust NIET kopen van bedrijf/product om druk uit te oefenen. Sterke vorm consumenten-actie." }],
@@ -740,9 +740,9 @@ const steps = [
       },
       {
         q: "Hoeveel mensen leefden in **extreme armoede** in 1990 vs 2020?",
-        options: ["Van 1,9 miljard naar ~700 miljoen", "Geen verandering", "Toename", "Van 1,9 miljard naar ~10 miljoen"],
+        options: ["Van 1,9 miljard naar ~700 miljoen", "Ongeveer gelijk: rond 1,9 miljard", "Van 700 miljoen naar 1,9 miljard", "Van 1,9 miljard naar ~10 miljoen"],
         answer: 0,
-        wrongHints: [null, "Wel verandering.", "Tegendeel.", "Zo snel ging het niet — er zijn nog honderden miljoenen mensen extreem arm."],
+        wrongHints: [null, "In China en India is in dertig jaar veel veranderd. Bleef het aantal dan gelijk?", "Is extreme armoede sinds 1990 gestegen of gedaald?", "Zo snel ging het niet — er zijn nog honderden miljoenen mensen extreem arm."],
         uitlegPad: {
           stappen: [{ titel: "Daling van 1,9 mrd naar 700 mln", tekst: "In 1990: 1,9 miljard mensen extreem arm (37% wereldbevolking). In 2020: ~700 miljoen (9%). DALING van 1,2 miljard mensen in 30 jaar. Grootste reductie in geschiedenis. Vooral door China (800 mln uit armoede) + India (~200 mln). Sub-Sahara Afrika blijft achter." }],
           woorden: [{ woord: "extreme armoede", uitleg: "Wereldbank: <$2,15/dag/persoon. Daaronder kun je niet in je basisbehoeften voorzien." }, { woord: "Wereldbank", uitleg: "Internationale organisatie die armoede meet + monitort." }],
@@ -768,7 +768,7 @@ const steps = [
       },
       {
         q: "Wat is een tip voor jouw **rol als toekomstige burger**?",
-        options: ["Levenslang leren + internationaal denken + bewuste keuzes", "Alleen op je eigen land letten", "Na je diploma stoppen met leren", "Altijd het goedkoopste kopen"],
+        options: ["Blijven leren + internationaal denken + bewust kiezen", "Alleen op je eigen land en je eigen buurt letten", "Na je diploma stoppen met leren, dan ben je klaar", "Altijd het goedkoopste kopen, hoe het ook gemaakt is"],
         answer: 0,
         wrongHints: [null, "Problemen als klimaat stoppen niet bij de grens.", "De wereld verandert snel — is één opleiding genoeg?", "Wat zeg je dan met je portemonnee?"],
         uitlegPad: {

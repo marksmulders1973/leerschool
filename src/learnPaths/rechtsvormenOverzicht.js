@@ -56,9 +56,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **rechtsvorm**?",
-        options: ["De juridische opzet van een onderneming", "De winst van een bedrijf", "Een soort belasting", "Het logo van een bedrijf"],
+        options: ["De juridische vorm van een bedrijf", "De winst die een bedrijf maakt", "Een soort belasting voor bedrijven", "Het logo en de naam van een bedrijf"],
         answer: 0,
-        wrongHints: [null, "Winst is iets anders dan de juridische vorm.", "Belasting hángt af van de rechtsvorm, maar is het niet.", "Een logo is de huisstijl, niet de juridische opzet."],
+        wrongHints: [null, "Winst is iets anders dan de juridische vorm.", "Belasting hángt af van de rechtsvorm, maar is het niet.", "Logo en naam horen bij de huisstijl. Waar gaat een rechtsvorm over?"],
         uitlegPad: {
           stappen: [{ titel: "De juridische opzet", tekst: "Een rechtsvorm is de juridische 'jas' van je bedrijf: eenmanszaak, VOF, BV of NV. Die bepaalt aansprakelijkheid, belasting en oprichting." }],
           woorden: [{ woord: "rechtsvorm", uitleg: "De juridische opzet van een onderneming." }, { woord: "onderneming", uitleg: "Een bedrijf dat producten of diensten levert om winst te maken." }],
@@ -70,7 +70,7 @@ const steps = [
       },
       {
         q: "Bij welke groep ben je **privé aansprakelijk** voor de schulden?",
-        options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (rechtspersoon)", "Alleen de NV", "Bij geen enkele rechtsvorm"],
+        options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (wel een rechtspersoon)", "Alleen de NV (grote bedrijven)", "Geen enkele: privé is altijd beschermd"],
         answer: 0,
         wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Er zijn wél rechtsvormen waarbij je privé risico loopt."],
         uitlegPad: {
@@ -84,7 +84,7 @@ const steps = [
       },
       {
         q: "Welke belasting betaalt een **rechtspersoon** (BV of NV) over de winst?",
-        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW", "Geen enkele belasting"],
+        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Geen, BV en NV zijn vrijgesteld"],
         answer: 0,
         wrongHints: [null, "IB hoort bij eenmanszaak en VOF.", "BTW betalen alle ondernemingen — dat is geen winstbelasting.", "Een rechtspersoon betaalt juist zelf belasting."],
         uitlegPad: {
@@ -137,7 +137,7 @@ const steps = [
       },
       {
         q: "Twee vennoten hebben een VOF. Eén maakt een grote schuld. Wat betekent **hoofdelijk aansprakelijk**?",
-        options: ["De schuldeisers kunnen de hele schuld bij de andere vennoot halen", "Elke vennoot betaalt alleen zijn eigen helft", "Alleen het bedrijf betaalt, niet de vennoten", "De vennoten betalen niets, want het is een rechtspersoon"],
+        options: ["Schuldeisers kunnen alles bij de andere vennoot halen", "Elke vennoot betaalt alleen zijn eigen helft", "Alleen het bedrijf betaalt, niet de vennoten", "De vennoten betalen niets, want het is een rechtspersoon"],
         answer: 0,
         wrongHints: [null, "Bij hoofdelijke aansprakelijkheid is het niet netjes 'ieder zijn deel'.", "Een VOF is geen rechtspersoon, dus de vennoten betalen zelf.", "Een VOF beschermt je privé-vermogen juist niet."],
         uitlegPad: {
@@ -151,7 +151,7 @@ const steps = [
       },
       {
         q: "Waarom kiezen veel **zzp'ers** voor een eenmanszaak?",
-        options: ["Snel en goedkoop op te richten, met belastingvoordelen", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan naar de beurs kunnen", "Omdat een eenmanszaak geen belasting betaalt"],
+        options: ["Snel en goedkoop op te richten, met belastingvoordelen", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan aandelen op de beurs kunnen verkopen", "Omdat een eenmanszaak geen belasting betaalt"],
         answer: 0,
         wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Naar de beurs kan alleen een NV.", "Een eenmanszaak betaalt wél belasting (IB)."],
         uitlegPad: {
@@ -184,7 +184,7 @@ const steps = [
     checks: [
       {
         q: "Waar staat de **B** van BV voor?",
-        options: ["Besloten — aandelen staan op naam, in een kleine kring", "Bedrijf — elk bedrijf is een BV", "Beurs — een BV staat op de beurs", "Belasting — een BV betaalt geen belasting"],
+        options: ["Besloten — aandelen op naam, kleine kring", "Bedrijf — elk bedrijf in Nederland is een BV", "Beurs — de aandelen van een BV staan op de beurs", "Belasting — een BV betaalt geen belasting"],
         answer: 0,
         wrongHints: [null, "Niet elk bedrijf is een BV; denk aan eenmanszaak of NV.", "Een BV kan juist NIET naar de beurs.", "Een BV betaalt wél belasting (VPB)."],
         uitlegPad: {
@@ -212,7 +212,7 @@ const steps = [
       },
       {
         q: "Hoeveel **minimumkapitaal** heb je nodig om een BV op te richten?",
-        options: ["Geen minimum — het mag met €0,01", "€45.000", "€100.000", "€1 miljoen"],
+        options: ["Geen minimum — het mag met €0,01", "Minimaal €45.000 op de bankrekening", "Minimaal €100.000 bij de notaris", "Minimaal €1 miljoen aan aandelen"],
         answer: 0,
         wrongHints: [null, "Dat bedrag hoort bij een ándere rechtspersoon.", "Zo'n hoog bedrag is sinds 2012 niet meer nodig voor een BV.", "Veel te hoog voor een BV."],
         uitlegPad: {
@@ -278,7 +278,7 @@ const steps = [
       },
       {
         q: "Wat is de belangrijkste reden om voor een **NV** te kiezen in plaats van een BV?",
-        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen belasting hoeven betalen", "Geen notaris nodig hebben", "De eigenaar privé aansprakelijk maken"],
+        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen vennootschapsbelasting hoeven betalen", "Geen notaris nodig hebben bij de oprichting", "De eigenaar privé aansprakelijk maken"],
         answer: 0,
         wrongHints: [null, "Een NV betaalt net als een BV gewoon VPB.", "Ook een NV wordt via de notaris opgericht.", "Bij een NV is de aandeelhouder juist beperkt aansprakelijk, niet privé."],
         uitlegPad: {
@@ -356,7 +356,7 @@ const steps = [
       },
       {
         q: "Welk kenmerk hebben **alle vier** de rechtsvormen gemeen?",
-        options: ["Het zijn allemaal ondernemingen die winst willen maken", "Ze zijn allemaal een rechtspersoon", "Ze betalen allemaal vennootschapsbelasting", "Ze kunnen allemaal naar de beurs"],
+        options: ["Het zijn allemaal ondernemingen met winstdoel", "Ze zijn allemaal een zelfstandige rechtspersoon", "Ze betalen allemaal vennootschapsbelasting", "Ze kunnen allemaal aandelen op de beurs verkopen"],
         answer: 0,
         wrongHints: [null, "Alleen BV en NV zijn een rechtspersoon.", "Eenmanszaak en VOF betalen IB, geen VPB.", "Alleen een NV kan naar de beurs."],
         uitlegPad: {

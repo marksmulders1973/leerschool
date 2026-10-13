@@ -46,11 +46,11 @@ const steps = [
         options: [
           "Aanbod-curve schuift naar rechts → lagere prijs",
           "Vraag-curve schuift naar rechts → hogere prijs",
-          "Beweging langs aanbodcurve",
-          "Geen verandering"
+          "Beweging langs de aanbodcurve → hogere prijs",
+          "Aanbod-curve schuift naar links → hogere prijs"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen vraag-verandering.", "Niet — verschuiving, niet langs.", "Wel reactie."],
+        wrongHints: [null, "Verandert er iets aan wat kopers willen, of aan wat boeren kunnen leveren?", "Verandert eerst de prijs, of verandert de hoeveelheid die boeren bij élke prijs aanbieden?", "Een goede oogst betekent méér graan. Schuift het aanbod dan naar links?"],
         uitlegPad: {
           stappen: [{ titel: "Aanbod-shift", tekst: "Goede oogst = elke prijs nu hoger aanbod → curve naar rechts. Nieuw evenwicht: lagere P, hogere Q. Boerenparadox: goede oogst kan tot **lager inkomen** leiden als vraag inelastisch is." }],
           niveaus: { basis: "Aanbod-shift → P daalt.", simpeler: "Veel oogst = lagere prijs.", nogSimpeler: "Q↑P↓" },
@@ -60,7 +60,7 @@ const steps = [
         q: "Boter + margarine zijn **substituten**. Boter-prijs stijgt. Wat met margarine?",
         options: ["Vraagcurve margarine schuift rechts → meer verkoop", "Vraagcurve margarine schuift links → minder verkoop", "Geen effect — margarine is een ander product", "Margarine verdwijnt helemaal van de markt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — wel effect.", "Onzin."],
+        wrongHints: [null, "Als boter duurder wordt, wat doen mensen die niet meer willen betalen? Kopen die minder margarine?", "Substituten kun je voor elkaar inwisselen. Heeft de boterprijs dan echt geen invloed op margarine?", "Waarom zou een product verdwijnen als zijn vervanger duurder wordt?"],
         uitlegPad: {
           stappen: [{ titel: "Substituten = + Ek", tekst: "Mensen schakelen over: 'boter te duur, neem margarine'. Vraag naar margarine stijgt → curve naar rechts. Klassiek voorbeeld substituten met positieve kruiselasticiteit." }],
           theorie: "Complementen werken omgekeerd: benzine-prijs ↑ → minder auto-vraag (Ek < 0).",
@@ -113,9 +113,9 @@ const steps = [
       },
       {
         q: "**Monopolie** ontstaat vaak door:",
-        options: ["Hoge toetredingsbarrières voor nieuwe bedrijven", "Lage prijzen voor alle klanten", "Veel concurrentie tussen kleine bedrijven", "Alleen klantenloyaliteit aan een merk"],
+        options: ["Hoge toetredingsbarrières voor nieuwe bedrijven", "Lage kosten om als nieuw bedrijf te starten", "Veel concurrentie tussen kleine bedrijven", "Veel reclame van alle bedrijven in de markt"],
         answer: 0,
-        wrongHints: [null, "Niet — tegenovergesteld.", "Tegenovergesteld.", "Niet alleen."],
+        wrongHints: [null, "Als starten makkelijk is, komen er dan veel of weinig concurrenten bij?", "Veel kleine bedrijven betekent veel aanbieders. Past dat bij één aanbieder?", "Reclame maken alle bedrijven. Houdt dat nieuwe bedrijven buiten de markt?"],
         uitlegPad: {
           stappen: [{ titel: "Bescherming tegen concurrenten", tekst: "Een monopolie blijft bestaan zolang anderen niet kunnen toetreden. Diverse mechanismen: investering enorm (Boeing fabriek), wettelijk monopolie (octrooi 20 jaar), netwerkeffect (WhatsApp), of natuurlijke schaal (één spoorwegnet)." }],
           niveaus: { basis: "Hoge barrières.", simpeler: "Anderen kunnen niet erbij komen.", nogSimpeler: "Barrières" },
@@ -125,7 +125,7 @@ const steps = [
         q: "Een **kartel** is:",
         options: ["Geheime prijsafspraken tussen concurrenten", "Een legaal samenwerkingsverband van bedrijven", "Eén bedrijf dat de enige aanbieder is", "Een sociale beweging van consumenten"],
         answer: 0,
-        wrongHints: [null, "Niet — zulke afspraken zijn in de EU juist verboden.", "Niet — bij een kartel gaat het om meerdere bedrijven.", "Onzin."],
+        wrongHints: [null, "Niet — zulke afspraken zijn in de EU juist verboden.", "Niet — bij een kartel gaat het om meerdere bedrijven.", "Bij een kartel gaat het niet om consumenten. Wie maken de afspraken dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Mededingingsautoriteit (ACM)", tekst: "EU + NL: prijsafspraken/marktverdeling tussen onafhankelijke bedrijven verboden onder mededingingsrecht. Boetes tot 10% wereldwijde omzet. Bekende boetes: liftbedrijven (€1 mld EU 2007), bierbrouwers (€273 mln NL 2007)." },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Restaurants in een grote stad: veel aanbieders met **verschillende menukaart + sfeer**. Marktvorm?",
-        options: ["Monopolistische concurrentie", "Volkomen concurrentie", "Oligopolie", "Monopolie"],
+        options: ["Monopolistische concurrentie", "Volkomen concurrentie", "Heterogeen oligopolie", "Natuurlijk monopolie"],
         answer: 0,
-        wrongHints: [null, "Niet — producten verschillen.", "Niet — niet weinig.", "Niet — veel restaurants."],
+        wrongHints: [null, "Bij deze marktvorm zijn alle producten gelijk. Is dat zo bij restaurants?", "Bij een oligopolie zijn er maar een paar aanbieders. Hoeveel restaurants telt een grote stad?", "Bij een monopolie is er één aanbieder. Hoeveel restaurants zijn er?"],
         uitlegPad: {
           stappen: [{ titel: "Veel + gedifferentieerd", tekst: "Veel restaurants (geen oligopolie of monopolie), maar elk biedt iets unieks (sushi, Italiaans, vegan). Klanten hebben merken-/keuken-voorkeur → restaurant kan iets boven gemiddelde prijs vragen. Lage toetreding (huur + vergunning)." }],
           niveaus: { basis: "Monopolistische conc.", simpeler: "Veel + gedifferentieerd.", nogSimpeler: "Monopolistisch" },
@@ -175,9 +175,9 @@ const steps = [
         q: "Wat is een **collectief goed**?",
         options: [
           "Nationaal defensie-leger",
-          "Auto",
-          "Brood",
-          "Bioscoop-kaartje"
+          "Eigen auto van een gezin",
+          "Brood bij de bakker",
+          "Bioscoopkaartje voor een film"
         ],
         answer: 0,
         wrongHints: [null, "Niet — uitsluitbaar.", "Niet — uitsluitbaar + rivaliserend.", "Niet — uitsluitbaar (toegangsbewijs)."],
@@ -191,9 +191,9 @@ const steps = [
       },
       {
         q: "Tweedehands auto-handelaar verkoopt auto met verborgen gebreken. Type marktfalen?",
-        options: ["Asymmetrische informatie", "Externaliteit", "Monopolie", "Collectief goed"],
+        options: ["Asymmetrische informatie", "Negatieve externaliteit", "Marktmacht van een monopolie", "Free-rider-probleem"],
         answer: 0,
-        wrongHints: [null, "Niet — info-asymmetrie hier kern.", "Niet — geen monopolie nodig.", "Niet — het is juist een privé-transactie."],
+        wrongHints: [null, "Een externaliteit raakt een buitenstaander. Heeft hier een buitenstaander last, of de koper zelf?", "Kan de koper niet gewoon naar een andere handelaar? Waar zit het probleem dan echt?", "Een free rider profiteert zonder te betalen. Betaalt deze koper niet gewoon voor de auto?"],
         uitlegPad: {
           stappen: [
             { titel: "Akerlof 1970 (Nobel)", tekst: "Akerlof's 'The Market for Lemons': tweedehands auto-markt. Verkopers van slechte auto's ('lemons') verbergen gebreken; goede auto's halen niet hun waarde. Goede aanbieders trekken zich terug → markt 'rot van onderaf'." },
@@ -240,12 +240,12 @@ const steps = [
         q: "Wat is **progressieve belasting**?",
         options: [
           "Hogere inkomens betalen procentueel meer",
-          "Iedereen zelfde % betaalt",
-          "Hogere inkomens betalen minder",
-          "Alleen bedrijven betalen"
+          "Iedereen betaalt hetzelfde percentage",
+          "Hogere inkomens betalen procentueel minder",
+          "Iedereen betaalt hetzelfde vaste bedrag"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is vlaktaks.", "Niet — regressief, onbillijk.", "Niet — privé ook."],
+        wrongHints: [null, "Niet — dat is vlaktaks.", "Niet — regressief, onbillijk.", "Een vast bedrag weegt zwaarder voor iemand met een laag inkomen. Is dat progressief?"],
         uitlegPad: {
           stappen: [
             { titel: "NL inkomstenbelasting 2024", tekst: "Schijf 1 (< €38.098): 36,97%.\nSchijf 2 (€38.098-75.518): 36,97%.\nSchijf 3 (> €75.518): 49,5%.\nHogere inkomens hogere %. Progressief = herverdeling. Tegen-vorm 'regressief' (lage inkomens hoger %) — BTW heeft regressief karakter want lage inkomens consumeren groter % van inkomen." },
@@ -294,7 +294,7 @@ const steps = [
         q: "**Privatisering** van energie-bedrijven sinds 1990s heeft als doel:",
         options: ["Marktwerking → efficiëntie en lagere prijzen", "Hogere prijzen → meer winst voor de staat", "Meer ambtenaren in de energiesector", "Sluiting van energiebedrijven"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld bedoeld.", "Tegenovergesteld.", "Onzin."],
+        wrongHints: [null, "Na privatisering is het bedrijf niet meer van de staat. Gaat de winst dan nog naar de staat?", "Privatiseren betekent: van de overheid naar private bedrijven. Komen er dan meer ambtenaren?", "Privatiseren verandert wie de eigenaar is. Waarom zou het bedrijf daardoor sluiten?"],
         uitlegPad: {
           stappen: [
             { titel: "Theorie vs praktijk", tekst: "Argument: privé-bedrijven concurreren → efficiënter → lagere prijzen. Praktijk in NL: liberalisering 1998 (gas + elektriciteit). Wel keuze tussen aanbieders, maar netwerk-tarieven nog steeds gereguleerd (TenneT, Gasunie). 2022-crisis: gasprijzen schoten omhoog → kritiek op privatisering." },
@@ -345,9 +345,9 @@ const steps = [
       },
       {
         q: "Piketty's stelling **r > g** betekent:",
-        options: ["Rendement op kapitaal > economische groei → vermogen concentreert", "Rente > groei → er volgt altijd een recessie", "Geen verband tussen kapitaal en economische groei", "Salarissen stijgen sneller dan vermogens groeien"],
+        options: ["Rendement op kapitaal > groei → vermogen concentreert", "Rente > groei → er volgt altijd een recessie", "Geen verband tussen kapitaal en economische groei", "Salarissen stijgen sneller dan vermogens groeien"],
         answer: 0,
-        wrongHints: [null, "Niet — onderbouwing voor ongelijkheid.", "Wel — bekend mechanisme.", "Tegenovergesteld."],
+        wrongHints: [null, "r staat voor rendement, g voor groei. Zegt de formule iets over recessies?", "De formule vergelijkt twee dingen met elkaar. Waarom zou er dan geen verband zijn?", "Staat er in de formule iets over salarissen? Wat betekenen r en g?"],
         uitlegPad: {
           stappen: [
             { titel: "'Kapitaal in de 21ste eeuw'", tekst: "Thomas Piketty, 2014: historisch r ~5% > g ~2-3%. Dus vermogen groeit sneller dan economie → bestaande vermogens groeien relatief sneller. Verklaart trend stijgende ongelijkheid sinds 1980. Veel discussie + kritiek, maar invloedrijk." },
@@ -358,9 +358,9 @@ const steps = [
       },
       {
         q: "Wat is een argument **vóór** enige ongelijkheid?",
-        options: ["Prikkels voor hard werken, ondernemen, risico nemen", "Meer sociale rust in de samenleving", "Betere gezondheid van de bevolking", "Minder eenzaamheid onder mensen"],
+        options: ["Prikkels om hard te werken en te ondernemen", "Meer sociale rust in de samenleving", "Betere gezondheid van de hele bevolking", "Minder criminaliteit in arme wijken"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — minder rust.", "Tegen — minder gezond.", "Niet relevant."],
+        wrongHints: [null, "Zorgen grote verschillen tussen arm en rijk eerder voor rust of voor onvrede?", "Onderzoek koppelt grote ongelijkheid aan méér gezondheidsproblemen. Is dit dan een argument vóór?", "Leidt meer armoede in een wijk eerder tot minder of tot meer criminaliteit?"],
         uitlegPad: {
           stappen: [
             { titel: "Incentive-argument", tekst: "Als arts en kassière hetzelfde verdienen → wie wordt arts (lange dure studie + verantwoordelijkheid)? Sommige inkomensverschillen prikkelen tot inspanning + investering. Hoeveel ongelijkheid 'gezond' is, is een normatieve discussie — daarover verschillen politieke stromingen sterk van mening." },

@@ -63,15 +63,15 @@ const steps = [
       },
       {
         q: "Welke taak van de overheid is **inkomensverdeling**?",
-        options: ["Belasting heffen om verschil arm/rijk te verkleinen", "Loon verhogen voor iedereen", "Banen verdelen", "Spaargeld verdelen"],
+        options: ["Belasting heffen om verschil arm/rijk te verkleinen", "Voor alle werknemers hetzelfde loon vastzetten", "Banen eerlijk verdelen over alle werklozen", "Prijzen in alle winkels laag vastzetten"],
         answer: 0,
-        wrongHints: [null, "Loon wordt op de markt bepaald (behalve minimumloon).", "Banen verdelen doet de markt.", "Spaargeld blijft van de spaarder."],
+        wrongHints: [null, "Loon wordt op de markt bepaald (behalve minimumloon).", "Banen verdelen doet de markt.", "Prijzen bepaalt de markt. Verkleint dat het verschil tussen arm en rijk?"],
         uitlegPad: {
           stappen: [{ titel: "Herverdelen via belasting", tekst: "Inkomensverdeling = overheid verkleint verschillen tussen arm en rijk. Methode: hoge inkomens belasten + lage inkomens steunen (toeslagen, uitkeringen)." }],
           woorden: [{ woord: "inkomensverdeling", uitleg: "Overheidstaak: ongelijkheid tussen arm en rijk verkleinen via belasting + uitkeringen." }, { woord: "progressieve belasting", uitleg: "Hoger inkomen → hoger %. Maakt netto-verschillen kleiner." }],
           theorie: "NL is wereldwijd één van de meest gelijke landen (Gini ~0,28) DOOR sterke herverdeling: IB-schijven ~36-49,5%, AOW, bijstand, zorgtoeslag, huurtoeslag.",
           voorbeelden: [{ type: "praktijk", tekst: "Iemand met €100k brutosalaris betaalt veel IB → financiert AOW + toeslagen voor lager-betaalden." }],
-          basiskennis: [{ onderwerp: "Niet 'loon verhogen'", uitleg: "Overheid bepaalt geen lonen (behalve minimumloon). Banen + spaargeld zijn ook geen overheidsverdeling." }],
+          basiskennis: [{ onderwerp: "Niet 'loon verhogen'", uitleg: "Overheid bepaalt geen lonen (behalve minimumloon). Banen en winkelprijzen verdeelt of bepaalt de markt, niet de overheid." }],
           niveaus: { basis: "Belasting + toeslagen voor herverdelen.", simpeler: "Inkomensverdeling = overheid haalt belasting van rijken + helpt armen met toeslagen.", nogSimpeler: "Herverdelen" },
         },
       },
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Een **extern effect** is bv:",
-        options: ["Een fabriek vervuilt een rivier en omwonenden lijden eronder", "Een belastingverlaging voor bedrijven", "Hogere lonen voor werknemers van de fabriek", "Spaargeld van de fabriekseigenaar"],
+        options: ["Een fabriek vervuilt een rivier; omwonenden hebben last", "Een belastingverlaging voor bedrijven in de buurt", "Hogere lonen voor werknemers van de fabriek", "De fabriekseigenaar zet zijn winst op de bank"],
         answer: 0,
-        wrongHints: [null, "Beleidsmaatregel, geen extern effect.", "Werknemers doen zelf mee — dat is geen effect op buitenstaanders.", "Spaargeld is privé."],
+        wrongHints: [null, "Beleidsmaatregel, geen extern effect.", "Werknemers doen zelf mee — dat is geen effect op buitenstaanders.", "Spaargeld is privé. Heeft iemand buiten de fabriek daar last van?"],
         uitlegPad: {
           stappen: [{ titel: "Effect VOOR ANDEREN", tekst: "Extern effect = gevolg van een activiteit voor mensen die er NIET aan deelnemen. Fabriek vervuilt → omwonenden krijgen ziekteklachten. Niet in prijs verrekend." }],
           woorden: [{ woord: "extern effect", uitleg: "Positief of negatief gevolg voor derden, niet meegenomen in de marktprijs." }, { woord: "negatief extern effect", uitleg: "Schade voor derden: vervuiling, geluidsoverlast, files." }, { woord: "positief extern effect", uitleg: "Voordeel voor derden: onderwijs (slimmere samenleving), bijenhouder (bestuiving voor buurtboer)." }],
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wie verzorgt **jeugdzorg** (sinds 2015)?",
-        options: ["De gemeente", "De Rijksoverheid", "De provincie", "Niemand"],
+        options: ["De gemeente", "De Rijksoverheid", "De provincie", "Het waterschap"],
         answer: 0,
-        wrongHints: [null, "Lag vroeger bij Rijk en provincie, sinds 2015 gedecentraliseerd.", "Provincie heeft andere taken.", "Wel verzorgd."],
+        wrongHints: [null, "Lag vroeger bij Rijk en provincie, sinds 2015 gedecentraliseerd.", "Provincie heeft andere taken.", "Het waterschap zorgt voor dijken en water, niet voor zorg."],
         uitlegPad: {
           stappen: [{ titel: "Decentralisatie 2015", tekst: "In 2015 ging jeugdzorg van Rijk en provincie → gemeente. Idee: gemeente is dichter bij gezinnen, kan beter maatwerk leveren. Praktijk: gemeenten kregen minder geld dan nodig." }],
           woorden: [{ woord: "jeugdzorg", uitleg: "Hulp aan jongeren + gezinnen met problemen: gedragsproblemen, opvoedhulp, soms uithuisplaatsing." }, { woord: "decentralisatie", uitleg: "Taken van Rijk overdragen naar lagere overheid (provincie/gemeente)." }],
@@ -184,9 +184,9 @@ const steps = [
       },
       {
         q: "Wat is **OZB**?",
-        options: ["Een gemeentebelasting op je huis", "Een Rijksbelasting", "Provinciale belasting", "Belasting op brandstof"],
+        options: ["Een gemeentebelasting op je huis", "Een Rijksbelasting op je inkomen", "Een provinciale belasting op je auto", "Een belasting op benzine en diesel"],
         answer: 0,
-        wrongHints: [null, "Niet Rijk.", "Niet provincie.", "Brandstof = accijns."],
+        wrongHints: [null, "Inkomen belast het Rijk. Gaat OZB over je inkomen?", "Gaat OZB over auto's?", "Brandstof = accijns."],
         uitlegPad: {
           stappen: [{ titel: "OZB = gemeente + huis", tekst: "Onroerendezaakbelasting = belasting op het BEZIT van een huis of bedrijfspand. Geheven door de GEMEENTE. Berekend op basis van WOZ-waarde." }],
           woorden: [{ woord: "OZB", uitleg: "Onroerendezaakbelasting. Gemeentebelasting voor eigenaren van onroerend goed." }, { woord: "WOZ-waarde", uitleg: "Geschatte marktwaarde van je woning per 1 januari, vastgesteld door gemeente." }],
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Een **waterschap** zorgt voor:",
-        options: ["Dijken, sloten en waterkwaliteit", "Onderwijs", "Politie", "Parkeren"],
+        options: ["Dijken, sloten en waterkwaliteit", "Scholen, leraren en lesmateriaal", "Politie, brandweer en ambulance", "Parkeren, wegen en straatverlichting"],
         answer: 0,
-        wrongHints: [null, "Onderwijs is gemeente/Rijk.", "Politie is Rijk.", "Parkeren is gemeente."],
+        wrongHints: [null, "Onderwijs is gemeente/Rijk.", "Politie, brandweer en ambulance vallen niet onder het waterschap.", "Parkeren en straatverlichting regelt de gemeente."],
         uitlegPad: {
           stappen: [{ titel: "Vierde overheidslaag — water", tekst: "Waterschappen zijn een aparte overheid voor alles wat met WATER te maken heeft: dijken onderhouden, sloten schoonhouden, waterkwaliteit bewaken." }],
           woorden: [{ woord: "waterschap", uitleg: "Speciale overheid voor water. 21 in NL. Heeft eigen verkiezingen + waterschapsbelasting." }],
@@ -226,7 +226,7 @@ const steps = [
       },
       {
         q: "Wat ging er mis bij de **decentralisatie van jeugdzorg** (2015)?",
-        options: ["Gemeenten kregen meer taken maar minder geld dan nodig", "Niemand merkte iets", "Rijk nam alles terug", "Het werd goedkoper en beter"],
+        options: ["Gemeenten kregen meer taken maar minder geld dan nodig", "Er veranderde in de praktijk eigenlijk niets", "Het Rijk nam alle taken van gemeenten terug", "Het werd voor gemeenten goedkoper en beter"],
         answer: 0,
         wrongHints: [null, "Wel veel media-aandacht.", "Rijk gaf juist los.", "Vaak juist duurder en moeilijker."],
         uitlegPad: {
@@ -296,7 +296,7 @@ const steps = [
       },
       {
         q: "Wat is de **Miljoenennota**?",
-        options: ["Document met de plannen voor de Rijksbegroting", "Een toespraak van de koning", "Het jaarverslag over vorig jaar", "Europese richtlijn"],
+        options: ["Document met de plannen voor de Rijksbegroting", "Een toespraak van de koning op Prinsjesdag", "Het jaarverslag over vorig jaar", "Een Europese richtlijn over overheidsgeld"],
         answer: 0,
         wrongHints: [null, "Troonrede is de toespraak.", "Terugkijken gebeurt later, op Verantwoordingsdag in mei.", "Puur Nederlands document."],
         uitlegPad: {
@@ -310,9 +310,9 @@ const steps = [
       },
       {
         q: "Wat is de **grootste uitgavenpost** van de Rijksoverheid?",
-        options: ["Sociale zekerheid", "Defensie", "Onderwijs", "Cultuur"],
+        options: ["Sociale zekerheid", "Defensie en veiligheid", "Onderwijs en wetenschap", "Cultuur en sport"],
         answer: 0,
-        wrongHints: [null, "Defensie is veel kleiner (~3-5%).", "Onderwijs ~10%.", "Cultuur is klein."],
+        wrongHints: [null, "Defensie is veel kleiner (~3-5%).", "Onderwijs ~10%.", "Cultuur en sport zijn kleine posten."],
         uitlegPad: {
           stappen: [{ titel: "Sociale zekerheid #1", tekst: "AOW + WW + bijstand + WIA + toeslagen + kinderbijslag samen ~30% van Rijksuitgaven. Veruit grootste post." }],
           woorden: [{ woord: "sociale zekerheid", uitleg: "Stelsel van uitkeringen + toeslagen om iedereen een basisinkomen + sociale bescherming te garanderen." }],
@@ -338,9 +338,9 @@ const steps = [
       },
       {
         q: "Wie keurt de begroting **definitief goed**?",
-        options: ["Tweede Kamer + Eerste Kamer", "De koning", "De minister van Financiën", "De Belastingdienst"],
+        options: ["Tweede Kamer + Eerste Kamer", "De koning op Prinsjesdag", "De minister van Financiën", "De Algemene Rekenkamer"],
         answer: 0,
-        wrongHints: [null, "De koning ondertekent ceremonieel maar parlement beslist.", "Hij/zij stelt voor, parlement beslist.", "Belastingdienst voert uit."],
+        wrongHints: [null, "De koning ondertekent ceremonieel maar parlement beslist.", "Hij/zij stelt voor, parlement beslist.", "De Rekenkamer controleert achteraf. Wie beslist vooraf?"],
         uitlegPad: {
           stappen: [{ titel: "Parlement beslist", tekst: "Regering DIENT begroting in. Tweede Kamer behandelt + amendeert + stemt. Eerste Kamer beoordeelt + stemt. Pas met goedkeuring van BEIDE Kamers wordt begroting wet." }],
           woorden: [{ woord: "Tweede Kamer", uitleg: "150 leden, direct gekozen. Hoofdrol bij budgetbehandeling." }, { woord: "Eerste Kamer", uitleg: "75 leden, indirect gekozen door Provinciale Staten. Toetst kwaliteit van wetten." }],
@@ -385,7 +385,7 @@ const steps = [
       },
       {
         q: "Waarom kan **lenen soms zinvol** zijn voor de overheid?",
-        options: ["Voor investeringen die later geld opleveren", "Belasting verlagen", "Uitkeringen extra hoog maken", "Lenen is altijd slecht"],
+        options: ["Voor investeringen die later geld opleveren", "Om de belasting voor iedereen te verlagen", "Om alle uitkeringen extra hoog te maken", "Lenen is voor een overheid altijd slecht"],
         answer: 0,
         wrongHints: [null, "Verschuift probleem naar later.", "Niet duurzaam.", "Soms is lenen rationeel."],
         uitlegPad: {
@@ -441,7 +441,7 @@ const steps = [
       },
       {
         q: "Hoe **drukt een hoge staatsschuld de samenleving**?",
-        options: ["Rente gaat ten koste van onderwijs en zorg", "Iedereen krijgt korting", "Niemand merkt iets", "Burgers krijgen rente"],
+        options: ["Rente gaat ten koste van onderwijs en zorg", "Iedereen krijgt korting op belasting", "Niemand merkt er iets van in het dagelijks leven", "Burgers krijgen rente van de overheid"],
         answer: 0,
         wrongHints: [null, "Geen automatische korting.", "Indirect wel via belastingdruk.", "Burgers betalen, niet ontvangen."],
         uitlegPad: {
@@ -488,9 +488,9 @@ const steps = [
       },
       {
         q: "Wat doet een overheid **anticyclisch** in een recessie?",
-        options: ["Belasting verlagen + meer uitgeven om vraag te stimuleren", "Belasting verhogen + bezuinigen", "Niets doen", "De crisis afkondigen"],
+        options: ["Belasting verlagen + meer uitgeven om vraag te stimuleren", "Belasting verhogen + bezuinigen om schuld te verlagen", "Wachten tot de economie zich vanzelf herstelt", "Lonen bevriezen en uitkeringen verlagen"],
         answer: 0,
-        wrongHints: [null, "Tegendeel — versterkt recessie.", "Past niet bij anticyclisch.", "Symbolisch, geen beleid."],
+        wrongHints: [null, "Tegendeel — versterkt recessie.", "Past niet bij anticyclisch.", "Als mensen minder te besteden hebben, stijgt de vraag dan?"],
         uitlegPad: {
           stappen: [{ titel: "Tegen de cyclus in", tekst: "Anticyclisch = TEGEN de economische cyclus werken. Recessie? Stimuleren: belasting omlaag + uitgaven omhoog = meer geld in economie → economie veert terug." }],
           woorden: [{ woord: "anticyclisch begroten", uitleg: "Bij krimp uitgeven, bij groei sparen. Tegenwicht aan cyclus." }, { woord: "Keynesiaans beleid", uitleg: "Theorie van John Maynard Keynes: overheid moet in recessie de vraag opvijzelen." }],
@@ -502,7 +502,7 @@ const steps = [
       },
       {
         q: "Tijdens **hoogconjunctuur**:",
-        options: ["Hoge groei en lage werkloosheid", "Recessie", "Krimp van BBP", "Veel werkloosheid"],
+        options: ["Hoge groei en lage werkloosheid", "Een recessie met dalende productie", "Krimp van het BBP en weinig groei", "Veel werkloosheid en weinig vacatures"],
         answer: 0,
         wrongHints: [null, "Een recessie is juist een dip in de economie — past dat bij het woorddeel 'hoog' in hoogconjunctuur?", "Als het BBP krimpt, draait de economie terug — hoort dat bij de topfase of bij de dalfase?", "Veel werklozen hoort bij slechte tijden; in een bloeiende economie hebben juist veel mensen werk."],
         uitlegPad: {
@@ -516,7 +516,7 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt vaak een recessie?",
-        options: ["Externe schokken, zoals een pandemie", "Een verkiezing", "Lage werkloosheid", "Veel vertrouwen van consumenten"],
+        options: ["Externe schokken, zoals een pandemie", "Een verkiezing voor de Tweede Kamer", "Lage werkloosheid en veel vacatures", "Veel vertrouwen van consumenten"],
         answer: 0,
         wrongHints: [null, "Verkiezing is geen oorzaak.", "Lage werkloosheid hoort juist bij goede tijden.", "Veel vertrouwen zorgt juist voor méér bestedingen."],
         uitlegPad: {
@@ -544,7 +544,7 @@ const steps = [
       },
       {
         q: "Wat is een **depressie**?",
-        options: ["Een lange, diepe recessie", "Korte tegenslag", "Hoge inflatie", "Snelle groei"],
+        options: ["Een lange, diepe recessie", "Een korte, kleine tegenslag", "Een periode van hoge inflatie", "Een periode van snelle groei"],
         answer: 0,
         wrongHints: [null, "Te kort.", "Iets anders (hyperinflatie).", "Tegendeel."],
         uitlegPad: {
@@ -582,7 +582,7 @@ const steps = [
     checks: [
       {
         q: "Wat doet de **ACM**?",
-        options: ["Bewaakt eerlijke concurrentie + consumentenrechten", "Maakt nieuwe wetten", "Int belasting", "Geeft scholen subsidie"],
+        options: ["Bewaakt eerlijke concurrentie + consumentenrechten", "Maakt nieuwe wetten over concurrentie", "Int belasting bij bedrijven en consumenten", "Geeft subsidie aan scholen en sportclubs"],
         answer: 0,
         wrongHints: [null, "Wetten = parlement.", "Belasting = Belastingdienst.", "Onderwijs is iets anders."],
         uitlegPad: {
@@ -596,9 +596,9 @@ const steps = [
       },
       {
         q: "Een **kartel** is:",
-        options: ["Geheime prijsafspraak tussen bedrijven", "Goedkeuring overheid", "Een soort consumentenvereniging", "Reclame"],
+        options: ["Geheime prijsafspraak tussen bedrijven", "Een vergunning die de overheid geeft", "Een soort consumentenvereniging", "Een reclamecampagne van een groot merk"],
         answer: 0,
-        wrongHints: [null, "Geen overheidsproduct.", "Tegendeel — kartel werkt tegen consument.", "Reclame is publiek."],
+        wrongHints: [null, "Geen overheidsproduct.", "Tegendeel — kartel werkt tegen consument.", "Reclame mag gewoon. Waarom zou de ACM een kartel dan wél aanpakken?"],
         uitlegPad: {
           stappen: [{ titel: "Stiekem samenwerken", tekst: "Kartel = ILLEGALE afspraak tussen concurrenten om PRIJZEN HOOG te houden, MARKTEN te verdelen of NIEUWKOMERS te weren. Werkt tegen de consument." }],
           woorden: [{ woord: "kartel", uitleg: "Illegale prijsafspraak tussen concurrenten." }, { woord: "kartelvorming", uitleg: "Het maken van zulke afspraken — wettelijk verboden, hoge boetes mogelijk." }],
@@ -610,9 +610,9 @@ const steps = [
       },
       {
         q: "Hoeveel garantie heb je op een product (in NL)?",
-        options: ["Minimaal 2 jaar", "1 maand", "Geen", "5 jaar"],
+        options: ["Minimaal 2 jaar", "Minimaal 1 maand", "Minimaal 6 maanden", "Minimaal 5 jaar"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Wel garantie.", "Niet de wettelijke standaard."],
+        wrongHints: [null, "Te kort.", "Dat is korter dan de wettelijke termijn.", "Niet de wettelijke standaard."],
         uitlegPad: {
           stappen: [{ titel: "Wettelijke 2 jaar", tekst: "Bij consumentenkoop (van bedrijf aan particulier) geldt WETTELIJKE garantie van 2 jaar. Sommige producten langer (witgoed → conformiteitseis afhankelijk van verwachte levensduur)." }],
           woorden: [{ woord: "consumentenkoop", uitleg: "Verkoop van product door bedrijf aan particulier. Bijzondere bescherming." }, { woord: "conformiteit", uitleg: "Product moet voldoen aan wat je redelijkerwijs mocht verwachten — bij defect: recht op gratis reparatie/vervanging." }],
@@ -624,7 +624,7 @@ const steps = [
       },
       {
         q: "Wat is **DGS**?",
-        options: ["Een garantie op spaargeld als een bank failliet gaat", "Een belasting op spaargeld", "Een lening van de overheid aan banken", "Een vakbond voor bankmedewerkers"],
+        options: ["Garantie op spaargeld als een bank failliet gaat", "Een belasting op spaargeld bij een bank", "Een lening van de overheid aan banken", "Een vakbond voor medewerkers van banken"],
         answer: 0,
         wrongHints: [null, "Geen belasting — het beschermt juist.", "Geen lening — het gaat om spaarders.", "Het gaat om spaarders, niet om werknemers."],
         uitlegPad: {
@@ -703,7 +703,7 @@ const steps = [
       },
       {
         q: "Wat is **trias politica**?",
-        options: ["Machtenscheiding: wetgever, uitvoerder, rechter", "Drie politieke partijen", "Drie verkiezingen", "Driedaagse zitting"],
+        options: ["Machtenscheiding: wetgever, uitvoerder, rechter", "Samenwerking van drie politieke partijen", "Drie verkiezingen: gemeente, provincie, Rijk", "Een driedaagse zitting van het parlement"],
         answer: 0,
         wrongHints: [null, "Niet specifiek partijen.", "Niet drie verkiezingen.", "Geen tijdsduur."],
         uitlegPad: {
@@ -731,7 +731,7 @@ const steps = [
       },
       {
         q: "Wat doet de **regering**?",
-        options: ["Voert wetten uit en bepaalt beleid", "Maakt wetten zelfstandig", "Rechtspraak", "Controleert het parlement"],
+        options: ["Voert wetten uit en bepaalt beleid", "Maakt wetten helemaal zelfstandig", "Spreekt recht in rechtszaken", "Controleert het werk van het parlement"],
         answer: 0,
         wrongHints: [null, "Wetten maken doet ze samen met parlement.", "Rechtspraak is gescheiden.", "Het is andersom: het parlement controleert de regering."],
         uitlegPad: {
@@ -745,7 +745,7 @@ const steps = [
       },
       {
         q: "Wat is een **coalitie**?",
-        options: ["Samenwerking van meerdere partijen om meerderheid te vormen", "Een type wet", "De koning + regering", "Een verkiezing"],
+        options: ["Samenwerking van partijen voor een meerderheid", "Een type wet dat het parlement aanneemt", "De koning samen met de ministers", "Een verkiezing voor de Tweede Kamer"],
         answer: 0,
         wrongHints: [null, "Geen wet.", "De koning doet niet mee aan coalities.", "Coalitie komt na verkiezing."],
         uitlegPad: {

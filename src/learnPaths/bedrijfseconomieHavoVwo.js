@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Welke zijn **passiva**?",
-        options: ["Eigen vermogen + vreemd vermogen","Gebouwen + voorraden","Klanten + leveranciers","Omzet + winst"],
+        options: ["Eigen + vreemd vermogen", "Gebouwen + voorraden + kas", "Debiteuren + crediteuren", "Omzet + kosten + winst"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn activa.", "Niet — wel termen maar niet beide passiva.", "Niet — W&V."],
+        wrongHints: [null, "Niet — dat zijn activa.", "Crediteuren staan wel rechts op de balans — maar debiteuren? Wie is wie geld schuldig?", "Dat zijn posten van de winst-en-verliesrekening, niet van de balans."],
         uitlegPad: {
           stappen: [{ titel: "Rechts op balans", tekst: "**Passiva** (credit-zijde balans) = **hoe** bedrijf gefinancierd is: Eigen Vermogen + Vreemd Vermogen. Tegenover **activa** (debet) = **wat** bedrijf bezit: gebouwen, voorraad, debiteuren, etc. Balans altijd in evenwicht: A = P." }],
           niveaus: { basis: "EV + VV.", simpeler: "Passiva = EV+VV", nogSimpeler: "EV + VV." },
@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "**Solvabiliteit** berekenen:",
-        options: ["EV / Totaal vermogen × 100%","VV / EV","Omzet / kosten","Winst / omzet"],
+        options: ["EV / totaal vermogen × 100%", "VV / eigen vermogen × 100%", "Omzet / totale kosten × 100%", "Nettowinst / omzet × 100%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is debt-equity-ratio.", "Niet — dat zegt niets over hoe het bedrijf gefinancierd is.", "Niet — winstmarge."],
+        wrongHints: [null, "Dat is de verhouding vreemd tegenover eigen vermogen (debt-equity-ratio), niet de solvabiliteit.", "Niet — dat zegt niets over hoe het bedrijf gefinancierd is.", "Niet — dat is de winstmarge."],
         uitlegPad: {
           stappen: [{ titel: "Eigen vermogen-aandeel", tekst: "**Solvabiliteit** = **EV / Totaal vermogen × 100%**. Toont in welke mate bedrijf zijn schulden kan betalen bij faillissement. Vuistregel ≥25-30%. Banken eisen vaak 40%+ voor lening." }],
           niveaus: { basis: "EV/TV ×100.", simpeler: "Solv = EV/TV", nogSimpeler: "EV/TV ×100." },
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "**Afschrijving** is:",
-        options: ["Waardevermindering vaste activa over tijd","Belastingaangifte","Loonbetaling","Voorraad-aankoop"],
+        options: ["Waardedaling van vaste activa door gebruik", "Aangifte van de winst bij de Belastingdienst", "Uitbetaling van loon aan het personeel", "Inkoop van nieuwe voorraad grondstoffen"],
         answer: 0,
-        wrongHints: [null, "Afschrijven heeft niets met de fiscus te maken — wat gebeurt er met de waarde van een machine na jaren gebruik?", null, null],
+        wrongHints: [null, "Afschrijven heeft niets met de fiscus te maken — wat gebeurt er met de waarde van een machine na jaren gebruik?", "Loon is de vergoeding voor werk van mensen. Afschrijven gaat over iets wat jaren meegaat — wat gebeurt daarmee?", "Voorraad verkoop of verbruik je snel. Waarover gaat afschrijven: iets wat kort of wat lang meegaat?"],
         uitlegPad: {
           stappen: [{ titel: "Spreiding van kosten", tekst: "**Afschrijving** = jaarlijkse waardevermindering vaste activa (gebouw, machine, auto). Lineair: (aanschaf − restwaarde) / levensduur. Bv. machine €50k, restwaarde €5k, levensduur 10 jaar → €4500/jaar afschrijving. Spreiding van kosten over gebruiksperiode." }],
           niveaus: { basis: "Waardeverlies activa.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "Waardeverlies activa." },
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "**Constante kosten** zijn:",
-        options: ["Onafhankelijk van productie-omvang","Stijgen met productie","Worden 0 bij stop","Variëren maandelijks"],
+        options: ["Onafhankelijk van productie-omvang", "Stijgen mee met de productie-omvang", "Worden nul zodra de productie stopt", "Verschillen elke maand in hoogte"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn variabele.", "Niet noodzakelijk — huur loopt door.", "Niet primair definitie."],
+        wrongHints: [null, "Niet — dat zijn variabele.", "Niet noodzakelijk — huur loopt door.", "Dat kan gebeuren, maar zegt niets over de definitie. Waar hangen constante kosten wél of níét van af?"],
         uitlegPad: {
           stappen: [{ titel: "Vast = vast", tekst: "**Constante (vaste) kosten** blijven gelijk ongeacht hoeveel je produceert: huur, vaste lonen, verzekeringen, afschrijving. **Variabele kosten** stijgen met productie: grondstof, energie. Per stuk dalen constante als je meer maakt." }],
           niveaus: { basis: "Onafhankelijk productie.", simpeler: "Constant = vast", nogSimpeler: "Vast" },
@@ -101,7 +101,7 @@ const steps = [
       },
       {
         q: "**Break-even-punt-formule**:",
-        options: ["Constante kosten / (prijs − variabele kosten/stuk)", "Constante kosten / verkoopprijs per stuk", "Omzet / totale kosten", "Winst / eigen vermogen × 100%"],
+        options: ["Constante kosten / (prijs − variabele kosten/stuk)", "Constante kosten / verkoopprijs per stuk", "Omzet / (totale kosten − constante kosten)", "Nettowinst / gemiddeld eigen vermogen × 100%"],
         answer: 0,
         wrongHints: [null, "Bijna — maar wat moet je van de prijs eerst nog aftrekken?", "Niet — daar komt geen aantal stuks uit.", "Niet — dat is de rentabiliteit van het eigen vermogen."],
         uitlegPad: {
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Welke prijsstrategie past bij **nieuwe iPhone**?",
-        options: ["Skimming (hoge start-prijs)","Penetratie (lage start)","Cost-plus","Geen strategie"],
+        options: ["Skimming (hoge start-prijs)", "Penetratie (lage start-prijs)", "Cost-plus (kostprijs + opslag)", "Prijsvolger (prijs van concurrent)"],
         answer: 0,
-        wrongHints: [null, "Niet — Apple kiest niet voor laag.", "Te eenvoudig — Apple denkt markt-strategisch.", "Wel."],
+        wrongHints: [null, "Niet — Apple kiest niet voor laag.", "Te eenvoudig — Apple denkt markt-strategisch.", "Volgt Apple bij een nieuwe lancering de prijs van een concurrent, of zet Apple zelf de toon?"],
         uitlegPad: {
           stappen: [{ titel: "Premium-strategie", tekst: "**Skimming**: hoge start-prijs voor early-adopters bereid te betalen. Later prijsverlaging. Apple-classic: nieuwe iPhone €1200+, oudere modellen blijven beschikbaar lager. Tesla-debut zelfde patroon. **Penetratie**: tegenovergestelde — lage start om markt te winnen (Aldi, Netflix-NL-start)." }],
           niveaus: { basis: "Skimming.", simpeler: "iPhone-nieuw = skimming", nogSimpeler: "Skimming." },
@@ -180,9 +180,9 @@ const steps = [
       },
       {
         q: "**Cashflow** kan negatief zijn terwijl bedrijf winst maakt. Waarom?",
-        options: ["Klanten hebben nog niet betaald","Onmogelijk","Doordat de kosten daalden","Door belasting"],
+        options: ["Klanten hebben nog niet betaald", "Kan niet — winst is altijd ook cash", "Doordat de kosten dit jaar daalden", "Doordat er belasting over de winst is"],
         answer: 0,
-        wrongHints: [null, "Wel mogelijk.", "Dalende kosten laten juist méér geld over.", "Belasting is een kostenpost die al in de winst zit — dat verklaart het verschil niet."],
+        wrongHints: [null, "Winst en kasstroom zijn twee verschillende dingen — dus het kán wel. Waardoor kunnen ze uit elkaar lopen?", "Dalende kosten laten juist méér geld over.", "Belasting is een kostenpost die al in de winst zit — dat verklaart het verschil niet."],
         uitlegPad: {
           stappen: [{ titel: "Winst ≠ cash", tekst: "**Winst** is boekhoudkundig (omzet − kosten), maar **cashflow** is werkelijk geld. Als klanten op factuur kopen (op rekening) maar nog niet betaald → winst staat in boek maar geen cash. Bedrijven kunnen failliet ondanks 'winstgevend' zijn. **'Cash is king'** — focus op kasstroom." }],
           theorie: "Klassieker: snel-groeiende bedrijven (groot werkkapitaal nodig) komen vaak in cash-tekort. Daarom externe financiering nodig.",
@@ -230,9 +230,9 @@ const steps = [
       },
       {
         q: "**Porter's 5 Forces** is voor:",
-        options: ["Concurrentie-analyse","Marketing-mix","Boekhouding","HR"],
+        options: ["Concurrentie-analyse", "Marketing-mix bepalen", "Boekhouding bijhouden", "Personeelsplanning"],
         answer: 0,
-        wrongHints: [null, "Niet — andere theorie.", "Boekhouden is registreren wat er gebeurde — Porter analyseert de markt óm je heen.", null],
+        wrongHints: [null, "Niet — andere theorie.", "Boekhouden is registreren wat er gebeurde — Porter analyseert de markt óm je heen.", "Personeel zit bínnen het bedrijf. Porter kijkt naar krachten van búíten — welke?"],
         uitlegPad: {
           stappen: [{ titel: "Michael Porter 1979", tekst: "**5 Forces** (Porter): analyse-framework concurrentie sector.\n1. Concurrentie binnen sector.\n2. Macht leveranciers.\n3. Macht klanten.\n4. Dreiging nieuwe toetreders.\n5. Substituten.\n\nBedrijven analyseren hun positie via deze 5 invalshoeken." }],
           niveaus: { basis: "Concurrentie.", simpeler: "5F = concurrentie-analyse", nogSimpeler: "Concurrentie." },
@@ -251,9 +251,9 @@ const steps = [
       },
       {
         q: "Wat is **MVO** (CSR)?",
-        options: ["Maatschappelijk Verantwoord Ondernemen","Marketing Vereniging Online","Maandelijkse Verkoop Overzicht","Markttoezicht"],
+        options: ["Maatschappelijk Verantwoord Ondernemen", "Marketing Vereniging voor Ondernemers", "Maandelijks Verkoop-Overzicht", "Markttoezicht door de Overheid"],
         answer: 0,
-        wrongHints: [null, "MVO gaat niet over marketing — het gaat over hoe een bedrijf omgaat met mens en milieu. Welke woorden passen daarbij?", null, "Dat zou een toezichthouder zijn — MVO is iets wat een bedrijf zélf doet."],
+        wrongHints: [null, "MVO gaat niet over een vereniging of over reclame — het zegt iets over hóé een bedrijf onderneemt. Welke woorden passen daarbij?", "Een verkoopoverzicht is gewoon administratie. Waar zou de M van MVO dan voor staan?", "Dat zou een toezichthouder zijn — MVO is iets wat een bedrijf zélf doet."],
         uitlegPad: {
           stappen: [{ titel: "Triple bottom line", tekst: "**MVO** = Maatschappelijk Verantwoord Ondernemen (Engels CSR = Corporate Social Responsibility). Bedrijven hebben verantwoordelijkheid voor **People, Planet, Profit** (triple bottom line). Voorbeelden: Tony's Chocolonely (slavernijvrije chocolade), Triodos Bank, Patagonia. EU verplicht rapportage via CSRD sinds 2024 voor grote bedrijven." }],
           niveaus: { basis: "MVO.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "MVO." },
@@ -280,9 +280,9 @@ const steps = [
       },
       {
         q: "**Brutomarge** = ?",
-        options: ["(Omzet − inkoop) / omzet × 100%", "Omzet / inkoop × 100%", "Nettowinst / EV × 100%", "Inkoop / omzet × 100%"],
+        options: ["(Omzet − inkoop) / omzet × 100%", "(Omzet − inkoop) / inkoop × 100%", "Nettowinst / eigen vermogen × 100%", "Inkoopwaarde / omzet × 100%"],
         answer: 0,
-        wrongHints: [null, "Geen marge-formule.", "Niet — REV.", "Tegenovergesteld."],
+        wrongHints: [null, "Zo reken je de opslag op de inkoopprijs uit, niet de marge. Waardoor deel je bij een marge?", "Niet — dat is de rentabiliteit van het eigen vermogen (REV).", "Dit is het deel van de omzet dat aan inkoop opgaat — is dat wat er overblijft?"],
         uitlegPad: {
           stappen: [{ titel: "Bruto-rendement op omzet", tekst: "**Brutomarge** = (Omzet − Inkoopwaarde) / Omzet × 100%. Toont % van elke euro omzet dat als brutowinst overblijft. Sectoren verschillen: tech 60-80%, detailhandel 30-50%, auto's 10-15%." }],
           niveaus: { basis: "(O−I)/O ×100.", simpeler: "Bruto = (O−I)/O", nogSimpeler: "(O−I)/O ×100." },
@@ -310,7 +310,7 @@ const steps = [
       },
       {
         q: "Welke is **vraag-stimulerend** (geen prijs-strategie)?",
-        options: ["Reclame-campagne (promotie)","Penetratie","Skimming","Cost-plus"],
+        options: ["Promotie", "Penetratie", "Skimming", "Cost-plus"],
         answer: 0,
         wrongHints: [null, "Penetratie = laag ínstappen met je prijs — de vraag zoekt juist iets dat géén prijs-strategie is.", "Skimming = afromen met een hoge príjs — dus wél een prijs-strategie.", "Cost-plus = kostprijs plus winstmarge — ook een prijs-methode. Wat stimuleert vraag zónder aan de prijs te zitten?"],
         uitlegPad: {

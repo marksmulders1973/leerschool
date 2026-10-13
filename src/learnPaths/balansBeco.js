@@ -36,13 +36,13 @@ const steps = [
       {
         q: "Wat is een **onderneming**?",
         options: [
-          "Organisatie die producten/diensten verkoopt om winst te maken",
-          "Een vereniging zonder winstdoel",
-          "Een privépersoon",
-          "De overheid",
+          "Organisatie die verkoopt om winst te maken",
+          "Vereniging die werkt zonder winstdoel",
+          "Privépersoon die alleen voor zichzelf koopt",
+          "De overheid, die belasting int en uitgeeft",
         ],
         answer: 0,
-        wrongHints: [null, "Een vereniging heeft geen winstdoel — past dat bij een onderneming?", "Een privépersoon doet niet automatisch zaken.", "Overheid maakt geen winst — geen onderneming."],
+        wrongHints: [null, "Een vereniging heeft geen winstdoel — past dat bij een onderneming?", "Wie alleen voor zichzelf koopt, verkoopt niets. Waar draait een onderneming om?", "Maakt de overheid winst op belastinggeld? Waar draait een onderneming om?"],
         uitlegPad: {
           stappen: [{ titel: "Onderneming = winst-doel", tekst: "Een onderneming is een organisatie die producten of diensten verkoopt om winst te maken. Privé-personen + overheid horen er niet bij." }],
           woorden: [{ woord: "winstdoel", uitleg: "doel om meer geld terug te krijgen dan uitgegeven" }],
@@ -55,10 +55,10 @@ const steps = [
       {
         q: "Wat doet een balans?",
         options: [
-          "Toont op één moment wat het bedrijf heeft + schuldig is",
-          "Berekent winst over een jaar",
-          "Voorspelt verkoop",
-          "Lijst klanten",
+          "Toont op één moment wat het bedrijf bezit en schuldig is",
+          "Berekent de winst of het verlies over een heel jaar",
+          "Voorspelt hoeveel het bedrijf volgend jaar verkoopt",
+          "Geeft een lijst van alle klanten en hun adressen",
         ],
         answer: 0,
         wrongHints: [null, "Dat doet de winst-en-verliesrekening.", "Balans is achteraf, geen voorspelling.", "Dat is een klantenbestand, geen balans."],
@@ -200,12 +200,12 @@ const steps = [
         q: "Wat is **eigen vermogen**?",
         options: [
           "Geld van de eigenaar zelf, dat hoeft niet terug",
-          "Een lening van de bank",
-          "Voorraad in het magazijn",
-          "Kas en bank",
+          "Geld dat de bank leent en dat terug moet",
+          "Voorraad goederen die in het magazijn ligt",
+          "Geld dat in de kas en op de bank staat",
         ],
         answer: 0,
-        wrongHints: [null, "Lening = vreemd vermogen.", "Voorraad = activa.", "Kas/bank = activa."],
+        wrongHints: [null, "Geld dat terug moet naar de bank: is dat eigen of vreemd vermogen?", "Voorraad = activa.", "Kas/bank = activa."],
         uitlegPad: {
           stappen: [{ titel: "EV = eigen ingelegd geld", tekst: "Eigen vermogen is geld van de eigenaar(s) zelf — inleg + ingehouden winst. Hoeft niet terugbetaald te worden. Vreemd vermogen = schulden (wel terug)." }],
           woorden: [{ woord: "ingehouden winst", uitleg: "winst die in het bedrijf blijft" }],
@@ -219,12 +219,12 @@ const steps = [
         q: "Wat zijn **crediteuren**?",
         options: [
           "Leveranciers die nog betaald moeten worden",
-          "Klanten die nog moeten betalen",
-          "Een bank",
-          "Personeel",
+          "Klanten die het bedrijf nog moeten betalen",
+          "Banken waar het bedrijf spaargeld heeft",
+          "Personeel dat elke maand loon krijgt",
         ],
         answer: 0,
-        wrongHints: [null, "Dat zijn debiteuren.", "Bank is geen leverancier.", "Personeelskosten zijn aparte posten."],
+        wrongHints: [null, "Dat zijn debiteuren.", "Spaargeld bij de bank is een bezitting van het bedrijf. Wie wacht er nog op geld?", "Personeelskosten zijn aparte posten."],
         uitlegPad: {
           stappen: [{ titel: "Crediteur = leverancier met openstaande factuur", tekst: "Crediteuren zijn leveranciers die het bedrijf nog moet betalen. Schuld → vreemd vermogen (kort). Op de creditkant van de balans." }],
           woorden: [{ woord: "kort vreemd vermogen", uitleg: "schulden <1 jaar" }],
@@ -421,13 +421,13 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       {
         q: "Wat klopt over **afschrijven**?",
         options: [
-          "Het is een kostenpost, geen daadwerkelijke geldstroom",
-          "Het is geld dat van de bank gaat",
-          "Het is een soort belasting",
-          "Alleen banken doen het",
+          "Het is een kostenpost, maar er gaat geen geld weg",
+          "Het is geld dat elk jaar van de bank afgaat",
+          "Het is een soort belasting op bezittingen",
+          "Het is iets wat alleen banken mogen doen",
         ],
         answer: 0,
-        wrongHints: [null, "Het geld is al uitgegeven bij aankoop.", "Geen belasting.", "Elk bedrijf doet het."],
+        wrongHints: [null, "Het geld is al uitgegeven bij aankoop.", "Gaat dit geld naar de Belastingdienst? Denk aan een machine die elk jaar ouder wordt.", "Elk bedrijf doet het."],
         uitlegPad: {
           stappen: [{ titel: "Afschrijven = boekhoudkundige kost", tekst: "Bij aanschaf geef je het geld al uit. Afschrijving is alleen een KOSTENPOST in de boeken — geen werkelijke geldstroom. Wel verlaagt het de boekwaarde op de balans." }],
           woorden: [{ woord: "boekwaarde", uitleg: "huidige waarde op de balans" }],
@@ -474,9 +474,9 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Wat is **btw**?",
         options: [
           "Belasting die het bedrijf afdraagt aan de Belastingdienst",
-          "Winst van het bedrijf",
-          "Kostprijs",
-          "Vaste kosten",
+          "Deel van de winst dat het bedrijf zelf mag houden",
+          "Inkoopprijs van de goederen die het bedrijf verkoopt",
+          "Vaste kosten, zoals huur, die elke maand terugkomen",
         ],
         answer: 0,
         wrongHints: [null, "Btw is niet voor het bedrijf — moet afgedragen worden.", "Btw is geen kostprijsbestanddeel in de boekhouding.", "Btw is niet vast — het is een percentage."],
@@ -565,7 +565,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       },
       {
         q: "Wat staat aan de **DEBET-kant** van een balans?",
-        options: ["Bezittingen (activa)","Schulden","Winst","Inkomen"],
+        options: ["Bezittingen (activa)", "Schulden (vreemd vermogen)", "Winst (resultaat)", "Inkomen (omzet)"],
         answer: 0,
         wrongHints: [null, "Niet — schulden = credit (rechts).", "Niet — winst = onderdeel eigen vermogen, credit-kant.", "Niet — inkomen staat op winst-en-verliesrekening, niet balans."],
         uitlegPad: {
@@ -590,9 +590,9 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       },
       {
         q: "Wat is **liquiditeit**?",
-        options: ["Hoe snel je bezit kunt omzetten in geld","Hoeveelheid winst","Hoeveel je verdient","Hoeveel eigen vermogen je hebt"],
+        options: ["Hoe snel je bezit kunt omzetten in geld", "Hoeveel winst je in een jaar maakt", "Hoeveel omzet je per maand draait", "Hoeveel eigen vermogen je hebt"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is winst.", "Niet — dat is inkomen.", "Niet — eigen vermogen zegt hoe je bezit gefinancierd is, niet hoe snel je aan geld komt."],
+        wrongHints: [null, "Dat is winst. Liquiditeit gaat over iets anders.", "Dat is omzet: wat er binnenkomt aan verkopen. Waar gaat liquiditeit over?", "Niet — eigen vermogen zegt hoe je bezit gefinancierd is, niet hoe snel je aan geld komt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is liquiditeit?", tekst: "**Liquiditeit** = **mate waarin bezittingen snel naar geld omgezet kunnen worden**. Belangrijk voor bedrijven om rekeningen te betalen.\n\n**Liquide volgorde** (snelst naar langzaamst):\n• **Kas** (direct beschikbaar)\n• **Bank** (binnen 1 dag)\n• **Vorderingen** (klanten betalen binnen 30-60 dagen)\n• **Voorraad** (moet eerst verkocht)\n• **Gebouwen** (kost maanden om te verkopen)" },
@@ -614,7 +614,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       },
       {
         q: "Wat is **afschrijven** (boekhoudkundig)?",
-        options: ["Waarde-vermindering vaste activa over levensduur","Iets weggooien","Korting","Belasting"],
+        options: ["Waarde-vermindering vaste activa over levensduur", "Oude machines weggooien en laten afvoeren", "Korting geven op producten aan vaste klanten", "Belasting betalen over je vaste bezittingen"],
         answer: 0,
         wrongHints: [null, "Niet — dat is afvoeren, andere term.", "Niet — korting is iets anders.", "Niet — wel verlaagt afschrijving de winst, en daardoor de belasting."],
         uitlegPad: {
@@ -641,10 +641,10 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       { q: "Welke is een **schuld op lange termijn**?", options: ["Hypotheek","Crediteur","Belasting","Salaris"], answer: 0, wrongHints: [null, "Een leverancier wil binnen weken betaald worden — is dat lang of kort?", "Belasting betaal je binnen het jaar — kort dus.", "Salaris betaal je elke maand — welke schuld loopt tientallen jaren?"] },
       { q: "Een **balans** bestaat uit welke 2 kanten?", options: ["Activa + Passiva","Inkomsten + Uitgaven","Winst + Verlies","Debiteuren + Crediteuren"], answer: 0, wrongHints: [null, "Inkomsten en uitgaven horen bij de resultatenrekening — de balans is een fóto van bezit en financiering.", "Winst en verlies staan op de W&V-rekening, niet op de balans.", "Dat zijn maar twee losse posten — welke twéé volledige kanten heeft de balans?"] },
       { q: "Balanstotaal **links = rechts** moet altijd ___?", options: ["Gelijk zijn","Verschillen","Links groter","Rechts groter"], answer: 0, wrongHints: [null, "Elke euro bezit is ergens mee betaald (eigen of geleend geld) — kunnen de kanten dan verschillen?", "Alles wat links staat (bezit) is gefinancierd door iets van rechts — wat betekent dat voor de totalen?", "Elk bezit heeft een financieringsbron — vergelijk de totalen nog eens."] },
-      { q: "**Eigen vermogen** = ?", options: ["Activa − Vreemd vermogen","Activa + Schulden","Schulden alleen","Winst alleen"], answer: 0, wrongHints: [null, "Optellen maakt het groter — maar schulden zijn juist níét van jou. Erbij of eraf?", "Schulden zijn precies het deel dat níét van het bedrijf zelf is.", "Winst is een resultaat over een periode — eigen vermogen is een stánd op de balans."] },
-      { q: "**Winst & Verliesrekening** toont?", options: ["Opbrengsten − kosten over een periode","Bezittingen op balans-datum","Schulden alleen","Eigen vermogen"], answer: 0, wrongHints: [null, "Bezittingen op één moment = een foto (balans). Welk overzicht is juist een fílm over een periode?", "Schulden staan op de balans — de W&V gaat over verdienen en uitgeven.", "Eigen vermogen is een balans-post — wat laat de W&V-rekening wél zien?"] },
+      { q: "**Eigen vermogen** = ?", options: ["Activa − Vreemd vermogen", "Activa + Schulden", "Activa − Eigen vermogen", "Winst − Vreemd vermogen"], answer: 0, wrongHints: [null, "Optellen maakt het groter — maar schulden zijn juist níét van jou. Erbij of eraf?", "Activa min eigen vermogen geeft juist de schulden. Welk deel is van het bedrijf zelf?", "Winst is een resultaat over een periode — eigen vermogen is een stánd op de balans."] },
+      { q: "**Winst & Verliesrekening** toont?", options: ["Opbrengsten − kosten over een periode", "Bezittingen op balans-datum", "Schulden die nog betaald moeten worden", "Eigen vermogen aan het eind van het jaar"], answer: 0, wrongHints: [null, "Bezittingen op één moment = een foto (balans). Welk overzicht is juist een fílm over een periode?", "Schulden staan op de balans — de W&V gaat over verdienen en uitgeven.", "Eigen vermogen is een balans-post — wat laat de W&V-rekening wél zien?"] },
       { q: "**Crediteur** = ?", options: ["Iemand aan wie het bedrijf geld moet","Iemand die het bedrijf nog geld moet betalen","Concurrent","Klant"], answer: 0, wrongHints: [null, "Dat is de omgekeerde geldstroom — wie moet wíé nog betalen bij een crediteur?", null, "Een klant die nog moet betalen heeft een andere naam — welke ook alweer?"] },
-      { q: "**Debiteur** = ?", options: ["Klant die nog moet betalen","Leverancier","Eigenaar","Bank"], answer: 0, wrongHints: [null, "Een leverancier waar jíj nog moet betalen heet juist anders — hoe ook alweer?", null, null] },
+      { q: "**Debiteur** = ?", options: ["Klant die nog moet betalen", "Leverancier die nog geld krijgt", "Eigenaar die geld in het bedrijf stopt", "Bank die het bedrijf geld leent"], answer: 0, wrongHints: [null, "Een leverancier waar jíj nog moet betalen heet juist anders — hoe ook alweer?", "Geld van de eigenaar is eigen vermogen. Een debiteur staat bij de bezittingen: wie is dat?", "Een lening is een schuld van het bedrijf. Een debiteur staat juist bij de bezittingen."] },
       { q: "**Open vraag**: machine €40.000, restwaarde €0, levensduur 4 jaar — lineaire afschrijving per jaar in euro? (typ alleen getal)", kind: "open", acceptedAnswers: ["10000", "10.000", "10000 euro"], explanation: "(40.000 − 0) / 4 = 10.000 per jaar." },
     ],
   },

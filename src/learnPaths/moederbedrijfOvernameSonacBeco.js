@@ -101,7 +101,7 @@ const steps = [
     checks: [
       {
         q: "Onder welk internationaal moederbedrijf valt Sonac sinds 2014?",
-        options: ["Darling Ingredients", "Vion", "Sovion", "Smits"],
+        options: ["Darling Ingredients", "Vion Food Group", "Sovion", "Smits Vuren BV"],
         answer: 0,
         wrongHints: [null, "Dat was het moederbedrijf vóór 2014.", "Dat was de oude naam van dat eerdere moederbedrijf.", "Dat is juist de oude naam van de fabriek zelf."],
         uitlegPad: {
