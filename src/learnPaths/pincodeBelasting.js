@@ -52,7 +52,7 @@ const steps = [
         q: "Welke belasting zit verstopt in de prijs van een glas frisdrank?",
         options: ["BTW", "Inkomstenbelasting", "Vennootschapsbelasting", "Erfbelasting"],
         answer: 0,
-        wrongHints: [null, "Inkomstenbelasting betaal je over je loon. Betaal je die ook als je iets koopt?", "Vennootschapsbelasting betaalt een BV over haar winst, niet jij als koper.", "Erfbelasting betaal je alleen als je iets erft. Welke belasting betaal je bij bijna elke aankoop?"],
+        wrongHints: [null, "Inkomstenbelasting betaal je over je loon. Betaal je die ook als je iets koopt?", "Vennootschapsbelasting betaalt een BV over haar winst, niet jij als koper.", "Erfbelasting betaal je alleen over een erfenis. Hoe heet de belasting die al in een prijs is verwerkt?"],
         uitlegPad: {
           stappen: [{ titel: "Indirect = in de prijs", tekst: "Bij een aankoop betaal je BTW automatisch — die zit verwerkt in de eindprijs. Daarom 'indirect': je ziet 't niet apart, maar het zit erin." }],
           woorden: [{ woord: "BTW", uitleg: "Belasting Toegevoegde Waarde. 9% (eten/drinken) of 21% (rest). Inbegrepen in prijs." }, { woord: "indirecte belasting", uitleg: "Belasting via aankopen, niet apart aangeslagen." }],
@@ -78,9 +78,9 @@ const steps = [
       },
       {
         q: "**AOW-premie** — wat is het?",
-        options: ["Een verplichte bijdrage voor het AOW-pensioen", "Een algemene belasting voor de overheidskas", "Een uitkering die je krijgt als je werkloos wordt", "Een korting op je inkomstenbelasting"],
+        options: ["Een verplichte bijdrage waaruit de AOW betaald wordt", "Een uitkering die je krijgt vanaf de AOW-leeftijd", "Een spaarpot op je eigen naam voor je AOW", "Een belasting die gepensioneerden over hun AOW betalen"],
         answer: 0,
-        wrongHints: [null, "Gaat AOW-premie naar de algemene pot, of naar één vast doel?", "Een uitkering bij werkloosheid is de WW. Bij AOW-premie betaal jíj iets — waarvoor?", "Een premie betaal je, een korting krijg je. Waarvoor betaal je AOW-premie?"],
+        wrongHints: [null, "Dat is de AOW zelf, die krijg je later. Krijg je een premie, of betaal je hem?", "Het geld komt niet op een rekening op jouw naam. Wat leerde je over het omslagstelsel?", "Wie de AOW-leeftijd heeft bereikt, betaalt juist géén AOW-premie meer. Wie betaalt hem dan?"],
         uitlegPad: {
           stappen: [{ titel: "Pensioen-financiering", tekst: "AOW-premie (~17,9% van loon) wordt automatisch ingehouden. Specifiek voor het AOW-fonds — daaruit krijgt iedereen vanaf pensioenleeftijd basis-pensioen." }],
           woorden: [{ woord: "AOW", uitleg: "Algemene Ouderdomswet. Basis-pensioen voor iedereen vanaf 67 jaar." }, { woord: "omslagstelsel", uitleg: "Huidige werkenden betalen voor huidige gepensioneerden. Niet 'jouw' premie wacht op je." }],
@@ -92,9 +92,9 @@ const steps = [
       },
       {
         q: "**Erfbelasting** — direct of indirect?",
-        options: ["Direct", "Indirect", "Indirect, via de notaris", "Een premie, met een vast doel"],
+        options: ["Direct: de erfgenaam krijgt zelf een aanslag", "Indirect: de notaris houdt het in en draagt af", "Een heffing: betaling voor een overheidsdienst", "Een premie: het geld gaat naar een vast doel"],
         answer: 0,
-        wrongHints: [null, "Indirecte belasting zit verstopt in een prijs, zoals btw. Zit erfbelasting in een prijs?", "De notaris helpt bij een erfenis, maar wie krijgt de aanslag op zijn eigen naam?", "Een premie betaal je voor een vast doel, zoals de AOW. Is dat bij erfbelasting zo?"],
+        wrongHints: [null, "De notaris helpt bij de erfenis, maar op wiens naam komt de aanslag? En zit erfbelasting in een prijs?", "Bij een heffing zoals leges krijg je iets terug, bijvoorbeeld een paspoort. Krijg je iets terug voor erfbelasting?", "Een premie betaal je voor een vast doel, zoals de AOW. Gaat erfbelasting naar één vast doel?"],
         uitlegPad: {
           stappen: [{ titel: "Direct = wat je krijgt", tekst: "Erfbelasting wordt geheven over wat JIJ erft (boven vrijstelling). Belastingdienst stuurt JOU een aanslag. Direct verbonden aan jouw situatie = directe belasting." }],
           woorden: [{ woord: "erfbelasting", uitleg: "Belasting bij erven boven vrijstelling. Tarief 10%-40% afhankelijk van wie en hoeveel." }, { woord: "directe belasting", uitleg: "Belasting op basis van wie je bent / wat je verdient/erft." }],
@@ -202,9 +202,9 @@ const steps = [
       },
       {
         q: "Waarom heft de overheid hoge **accijns op tabak**?",
-        options: ["Roken ontmoedigen en geld ophalen", "Om tabaksboeren in NL te beschermen", "Omdat tabak duur is om te maken", "Om de btw op tabak te vervangen"],
+        options: ["Roken ontmoedigen en geld ophalen", "Om tabaksboeren in NL te beschermen", "Om goedkope smokkelsigaretten te weren", "Omdat tabak een luxeproduct is"],
         answer: 0,
-        wrongHints: [null, "Nederland heeft nauwelijks tabaksboeren, en accijns geldt voor alle tabak. Wat wil de overheid bereiken bij rokers?", "Tabak maken is juist goedkoop; de hoge prijs komt vooral door belasting. Waarom zou de overheid dat doen?", "Op tabak betaal je accijns én btw. Waarom maakt de overheid tabak dan extra duur?"],
+        wrongHints: [null, "Nederland heeft nauwelijks tabaksboeren, en accijns geldt voor alle tabak. Wat wil de overheid bereiken bij rokers?", "Hogere prijzen maken smokkel juist aantrekkelijker. Wat moet de hoge prijs dan wél doen?", "Luxe is geen reden voor accijns: op sieraden zit gewoon btw. Wat maakt tabak anders dan sieraden?"],
         uitlegPad: {
           stappen: [{ titel: "Twee doelen tegelijk", tekst: "Hoge accijns op tabak: (1) inkomsten voor staat (~€3 mrd/jaar), (2) ontmoediging — hogere prijs = minder rokers, vooral jongeren." }],
           woorden: [{ woord: "accijns", uitleg: "Extra belasting bovenop BTW op specifieke producten. Tabak, alcohol, brandstof." }, { woord: "sin tax", uitleg: "Engelse term: 'zondebelasting'. Belasting op schadelijk gedrag." }],
@@ -374,9 +374,9 @@ const steps = [
     checks: [
       {
         q: "**Arbeidskorting** krijg je als:",
-        options: ["Je met werk een inkomen verdient", "Je geen werk hebt maar een uitkering", "Je met pensioen bent (AOW krijgt)", "Je student bent zonder bijbaan"],
+        options: ["Je met werk een inkomen verdient", "Je een uitkering krijgt en werk zoekt", "Je minstens 36 uur per week werkt", "Je student bent zonder bijbaan"],
         answer: 0,
-        wrongHints: [null, "Een uitkering is geen loon uit werk. Waar staat 'arbeid' in arbeidskorting voor?", "AOW of pensioen krijg je zonder te werken. Voor wie is deze korting bedoeld?", "Studeren is geen betaald werk. Wanneer krijg je de korting dan wel?"],
+        wrongHints: [null, "Een uitkering is geen loon uit werk, ook niet als je solliciteert. Waar staat 'arbeid' in arbeidskorting voor?", "Ook wie maar een paar uur per week werkt, krijgt arbeidskorting. Waar hangt hij dan van af?", "Studeren is geen betaald werk. Wanneer krijg je de korting dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Werken-bonus", tekst: "Arbeidskorting krijg je alleen als je ARBEIDSINKOMEN hebt — loon uit baan of winst uit zelfstandige. Niet bij uitkering/pensioen/studiebeurs." }],
           woorden: [{ woord: "arbeidskorting", uitleg: "Heffingskorting voor werkenden. Max ~€5.500/jaar bij midden-inkomen. Stimulans om te werken." }, { woord: "arbeidsinkomen", uitleg: "Loon (werknemer) of winst (zelfstandige) — geen uitkering/AOW/studiebeurs." }],
@@ -402,9 +402,9 @@ const steps = [
       },
       {
         q: "Wat is **IACK** voor?",
-        options: ["Werkende ouders met kind onder 12", "Alle ouders, ook zonder werk", "Alleen alleenstaande moeders", "Gepensioneerden met kleinkinderen"],
+        options: ["Werkende ouders met kind onder 12", "Werkende ouders met een kind onder 18", "Ouders met een kind onder 12, ook zonder werk", "Alleenstaande ouders met een kind onder 4"],
         answer: 0,
-        wrongHints: [null, "Kijk naar het woord 'combinatie' in de naam — een combinatie van wat?", "Zegt de naam iets over man of vrouw, of over alleenstaand zijn?", "Het is een korting voor ouders van jonge kinderen — horen grootouders daarbij?"],
+        wrongHints: [null, "Tot 18 jaar krijg je kinderbijslag. Geldt voor de IACK dezelfde leeftijdsgrens?", "Kijk naar het woord 'combinatie' in de naam — een combinatie van wat?", "Zegt de naam iets over alleenstaand zijn? En kijk nog eens naar de leeftijdsgrens."],
         uitlegPad: {
           stappen: [{ titel: "Werkende ouders helpen", tekst: "IACK = Inkomensafhankelijke Combinatiekorting. Voor werkende ouders met kind onder 12. Doel: combinatie werk + zorg ondersteunen." }],
           woorden: [{ woord: "IACK", uitleg: "Inkomensafhankelijke Combinatiekorting. Heffingskorting voor werkende ouders met jonge kinderen." }],
@@ -430,9 +430,9 @@ const steps = [
       },
       {
         q: "Wat is de **uitfasering** van een heffingskorting?",
-        options: ["Korting wordt kleiner naarmate je inkomen stijgt", "Korting wordt groter naarmate je inkomen stijgt", "Korting blijft gelijk, wat je ook verdient", "Korting verdwijnt na één jaar"],
+        options: ["Korting wordt kleiner naarmate je inkomen stijgt", "Korting wordt groter naarmate je inkomen stijgt", "Korting wordt kleiner naarmate je ouder wordt", "Korting wordt kleiner als je partner ook werkt"],
         answer: 0,
-        wrongHints: [null, "Dan zouden mensen met een hoog inkomen de meeste korting krijgen. Is dat de bedoeling?", "Het woord 'uitfasering' zegt dat er iets verandert. Waarmee hangt die verandering samen?", "Het gaat niet om tijd. Waar hangt de hoogte van de korting dan van af?"],
+        wrongHints: [null, "Dan zou wie meer verdient steeds meer korting krijgen. Dat gebeurt alleen bij de laagste inkomens. Wat gebeurt er daarna?", "Leeftijd speelt hier geen rol. Waar hangt de hoogte van een heffingskorting van af?", "Of je partner werkt, verandert deze korting niet. Waar hangt de hoogte van een heffingskorting van af?"],
         uitlegPad: {
           stappen: [{ titel: "Geleidelijk afbouwen", tekst: "Uitfasering = korting wordt KLEINER met stijgend inkomen. Niet plotseling in één keer, maar geleidelijk (% per €1.000 extra). Voorkomt dat €1 extra inkomen €1.000 minder korting betekent." }],
           woorden: [{ woord: "uitfaseren", uitleg: "Geleidelijk afbouwen — vaak per €1 extra inkomen X cent korting minder." }, { woord: "marginaal effect", uitleg: "Effect op netto-inkomen van €1 extra bruto. Door uitfasering kan dat verrassend laag zijn (50%+ belasting+korting-verlies)." }],
@@ -444,9 +444,9 @@ const steps = [
       },
       {
         q: "**Werk loont** betekent in deze context:",
-        options: ["Door arbeidskorting houd je netto meer over", "Iedereen verdient voor werk hetzelfde loon", "Iedereen is wettelijk verplicht om te werken", "Wie hard werkt, krijgt meer vakantiedagen"],
+        options: ["Door arbeidskorting houd je netto meer over", "Door een hoger minimumloon verdien je bruto meer", "Door toeslagen houd je zonder werk meer over", "Door minder uren te werken betaal je minder belasting"],
         answer: 0,
-        wrongHints: [null, "Lonen verschillen per baan — daar gaat de term niet over.", "Werken is in Nederland niet verplicht. Waar gaat 'loont' dan over?", "Gaat het hier over vrije tijd, of over geld en belasting?"],
+        wrongHints: [null, "Het minimumloon gaat over je brutoloon. 'Werk loont' gaat over wat de belasting met je netto doet — hoe?", "Dat is juist het probleem dat 'werk loont' wil oplossen. Wat moet er gebeuren als je gaat werken?", "Minder uren betekent ook minder loon. Gaat 'loont' over meer werken of over minder werken?"],
         uitlegPad: {
           stappen: [{ titel: "Politiek doel", tekst: "'Werk loont' = beleidsdoel dat werken financieel aantrekkelijker moet zijn dan uitkering. Arbeidskorting + IACK zorgen daarvoor — werkenden houden netto meer over." }],
           woorden: [{ woord: "werk loont", uitleg: "Beleidsprincipe: werkenden houden via arbeidskorting netto meer over dan uitkeringsontvangers met zelfde brutoloon." }],
@@ -537,9 +537,9 @@ const steps = [
       },
       {
         q: "Wie krijgt **kinderopvangtoeslag**?",
-        options: ["Werkende ouders die kinderopvang gebruiken", "Iedere ouder, ook zonder kinderopvang", "Alleen alleenstaande ouders met een baan", "Alleen ouders met een hoog inkomen"],
+        options: ["Werkende ouders die kinderopvang gebruiken", "Ouders die kinderopvang gebruiken, ook zonder werk", "Werkende ouders bij wie opa en oma oppassen", "Ouders die thuisblijven om voor hun kind te zorgen"],
         answer: 0,
-        wrongHints: [null, "Waarvoor is deze toeslag bedoeld? Als je geen opvang gebruikt, wat valt er dan te vergoeden?", "Ook stellen kunnen hem krijgen — gezinsvorm is niet de voorwaarde.", "Hangt de hoogte af van je inkomen? Wie krijgt dan juist méér?"],
+        wrongHints: [null, "Wie niet werkt of studeert, kan vaak zelf oppassen. Is opvang gebruiken dan genoeg om de toeslag te krijgen?", "Oppas door familie is meestal geen geregistreerde kinderopvang. Telt dat mee voor de toeslag?", "Bij thuisblijven betaal je niets voor opvang. Waar is de toeslag dan voor bedoeld?"],
         uitlegPad: {
           stappen: [{ titel: "Twee voorwaarden", tekst: "Kinderopvangtoeslag krijg je als (1) je kind naar formele opvang/crèche/BSO gaat én (2) BEIDE ouders werken of studeren. Anders geen recht." }],
           woorden: [{ woord: "kinderopvangtoeslag", uitleg: "Tegemoetkoming in kinderopvangkosten voor werkende/studerende ouders." }, { woord: "formele opvang", uitleg: "Geregistreerde kinderopvang (in LRK-register). Oma die oppast telt niet (tenzij als geregistreerde gastouder)." }],
@@ -551,9 +551,9 @@ const steps = [
       },
       {
         q: "**Niet-gebruik** van toeslagen — wat is het probleem?",
-        options: ["Veel mensen met recht vragen hem niet aan", "Veel mensen vragen hem aan zonder recht", "De toeslag wordt te laat uitbetaald", "Mensen geven de toeslag aan iets anders uit"],
+        options: ["Veel mensen met recht vragen hem niet aan", "Veel mensen vragen hem aan zonder recht", "Mensen laten de toeslag op hun spaarrekening staan", "Mensen geven de toeslag aan iets anders uit"],
         answer: 0,
-        wrongHints: [null, "Aanvragen zonder recht is misbruik of fraude. 'Niet-gebruik' gaat over mensen die iets laten liggen — wie?", "Te laat uitbetalen is vervelend, maar dan wordt de toeslag wél gebruikt. Wat betekent 'niet-gebruik'?", "Waaraan je de toeslag uitgeeft, mag je grotendeels zelf weten. Waar slaat 'niet-gebruik' dan op?"],
+        wrongHints: [null, "Aanvragen zonder recht is misbruik of fraude. 'Niet-gebruik' gaat over mensen die iets laten liggen — wie?", "Wat je met een uitbetaalde toeslag doet, mag je grotendeels zelf weten. Waar slaat 'niet-gebruik' dan op?", "Waaraan je de toeslag uitgeeft, mag je grotendeels zelf weten. Waar slaat 'niet-gebruik' dan op?"],
         uitlegPad: {
           stappen: [{ titel: "Geld blijft liggen", tekst: "Veel mensen vragen toeslagen NIET aan waar ze wel recht op hebben — vanwege: onbekendheid, schaamte, ingewikkelde procedure, angst voor terugvordering. ~10-20% niet-gebruik." }],
           woorden: [{ woord: "niet-gebruik", uitleg: "Recht hebben op toeslag/voorziening maar deze niet aanvragen." }, { woord: "toeslagcomplexiteit", uitleg: "5 verschillende toeslagen, elk met eigen voorwaarden — drempel voor gebruik." }],
@@ -617,9 +617,9 @@ const steps = [
       },
       {
         q: "Een tuinman die contant betaald wordt zonder factuur:",
-        options: ["Mogelijk zwart werk zonder belasting", "Een gewone betaling, alles is in orde", "Een speciale vrijstelling voor tuinmannen", "Een toeslag die de overheid uitbetaalt"],
+        options: ["Mogelijk zwart werk zonder belasting", "Een gift, die de tuinman niet hoeft op te geven", "Witwassen, omdat contant betalen verboden is", "Belastingontwijking: legaal gebruik van regels"],
         answer: 0,
-        wrongHints: [null, "Zonder factuur ziet de Belastingdienst niets van deze betaling. Is dat in orde?", "Bestaat er een regel waardoor tuinmannen geen belasting hoeven te betalen?", "Wie betaalt de tuinman hier: de overheid of de klant?"],
+        wrongHints: [null, "Een gift krijg je zonder er iets voor te doen. De tuinman heeft gewerkt — is dit dan nog een gift?", "Contant betalen mag gewoon, en witwassen gaat over geld uit misdaad. Is het geld van deze klant crimineel?", "Ontwijken gebeurt binnen de regels van de wet. Valt dit binnen de regels?"],
         uitlegPad: {
           stappen: [{ titel: "Geen factuur = geen spoor", tekst: "Contant + geen factuur = vaak zwart werk. Tuinman geeft inkomen niet aan IB en draagt geen BTW af. Klant 'spaart' BTW. Beide profiteren — Belastingdienst verliest." }],
           woorden: [{ woord: "zwart geld", uitleg: "Inkomsten waarvan geen belasting/BTW is betaald — meestal cash transacties zonder factuur." }, { woord: "informele economie", uitleg: "Werk buiten officiële economie om. Schat 5-15% BBP NL." }],
@@ -631,9 +631,9 @@ const steps = [
       },
       {
         q: "Wat zijn de **Panama Papers**?",
-        options: ["Gelekte documenten over geheime offshore-bedrijven", "Een nieuwe belasting op bedrijven in Panama", "Een handelsverdrag tussen Panama en de EU", "Contracten voor schepen door het Panamakanaal"],
+        options: ["Gelekte documenten over geheime offshore-bedrijven", "Een rapport van de EU over belastingparadijzen", "Een verdrag tussen Panama en de EU over belasting", "Contracten voor schepen door het Panamakanaal"],
         answer: 0,
-        wrongHints: [null, "Panama staat juist bekend om lage belastingen. Waarom kwamen deze 'papers' dan in het nieuws?", "Een verdrag wordt openlijk gesloten — waarom stond dit dan als schandaal in de krant?", "Klinkt logisch bij Panama — maar waarom kwamen deze 'papers' dan wereldwijd in het nieuws?"],
+        wrongHints: [null, "De EU maakt wel een openbare lijst van belastingparadijzen, maar dat is gewoon beleid. Waarom waren de Panama Papers zo'n schandaal?", "Een verdrag wordt openlijk gesloten — waarom stond dit dan als schandaal in de krant?", "Klinkt logisch bij Panama — maar waarom kwamen deze 'papers' dan wereldwijd in het nieuws?"],
         uitlegPad: {
           stappen: [{ titel: "Megaschandaal 2016", tekst: "Panama Papers = lekken van 11,5 miljoen documenten van advocatenkantoor Mossack Fonseca in Panama. Onthulde geheime offshore-bedrijven van wereldleiders, sterren, criminelen — gebruikt voor belastingontwijking + witwassen." }],
           woorden: [{ woord: "Panama Papers", uitleg: "2016 datalek over offshore-bedrijven. Onderzocht door 400 journalisten wereldwijd." }, { woord: "offshore-bedrijf", uitleg: "Bedrijf gevestigd in laag-belasting/geheim land om belasting te ontwijken." }],
@@ -645,7 +645,7 @@ const steps = [
       },
       {
         q: "Waarom is **eerlijke belasting** belangrijk?",
-        options: ["Zodat iedereen bijdraagt en bedrijven eerlijk concurreren", "Zodat iedereen precies hetzelfde bedrag betaalt", "Zodat je zelf kiest waaraan je belastinggeld opgaat", "Zodat de overheid spaargeld heeft voor een crisis"],
+        options: ["Zodat iedereen bijdraagt en bedrijven gelijke kansen hebben", "Zodat iedereen precies hetzelfde bedrag betaalt", "Zodat je zelf kiest waaraan je belastinggeld opgaat", "Zodat de overheid spaargeld heeft voor een crisis"],
         answer: 0,
         wrongHints: [null, "Is hetzelfde bedrag voor arm en rijk eerlijk? Denk aan 'bijdragen naar vermogen'.", "Waar belastinggeld heen gaat, beslist de politiek — niet ieder voor zich. Waar dient het geld wel voor?", "Wegen, scholen en zorg kosten elk jaar geld, ook als er geen crisis is."],
         uitlegPad: {
@@ -659,9 +659,9 @@ const steps = [
       },
       {
         q: "Een **belastingparadijs** is:",
-        options: ["Land met heel lage belasting en veel geheimhouding", "Land met hoge belasting en strenge controle", "Een zonnig land waar veel toeristen heen gaan", "Een gemeente met de laagste OZB van Nederland"],
+        options: ["Land met heel lage belasting en veel geheimhouding", "Land met hoge belasting maar veel toeslagen", "Land waar het belastinggeld goed besteed wordt", "Land waar winkels geen btw hoeven te rekenen"],
         answer: 0,
-        wrongHints: [null, "Tegendeel — daar zou niemand zijn geld parkeren.", "'Paradijs' klinkt naar vakantie — maar het woord 'belasting' staat ervoor. Waar gaat het dan om?", "Een lage OZB scheelt huiseigenaren wat, maar daar parkeren bedrijven geen miljarden. Waar gaat het om?"],
+        wrongHints: [null, "Dat lijkt meer op een verzorgingsstaat zoals Nederland. Waarom zou een bedrijf zijn winst juist ergens anders onderbrengen?", "'Paradijs' gaat hier niet over goed besteed geld. Voor wie is zo'n land een paradijs: voor de eigen burgers of voor buitenlandse bedrijven?", "Btw betalen gewone kopers in de winkel. Waarom zouden juist grote bedrijven en rijke mensen hun geld daar parkeren?"],
         uitlegPad: {
           stappen: [{ titel: "Lage belasting + geheim", tekst: "Belastingparadijs = land met (1) zeer lage of geen belasting voor bepaalde inkomsten, (2) geheimhouding (banken hoeven niet te delen met andere landen). Lokt geld + bedrijven aan." }],
           woorden: [{ woord: "belastingparadijs", uitleg: "Land waar belasting laag is + transparantie minimaal. Aantrekkelijk voor ontwijking." }, { woord: "BEPS", uitleg: "Base Erosion and Profit Shifting. OESO-programma tegen belastingontwijking via paradijzen." }],
@@ -741,9 +741,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt bij **opzettelijk te laag aangeven (fraude)**?",
-        options: ["Boete tot 100% + mogelijk strafrecht", "Geen straf, je betaalt alleen het verschil", "Je toeslagen worden voor altijd stopgezet", "Alleen een waarschuwingsbrief, verder niets"],
+        options: ["Een boete tot 100% en mogelijk strafvervolging", "Je betaalt het verschil terug, met wat rente", "Een boete van hooguit 10% van het bedrag", "Je toeslagen worden een jaar stopgezet"],
         answer: 0,
-        wrongHints: [null, "Opzettelijk is iets anders dan een vergissing — zou het dan bij nabetalen blijven?", "Toeslagen staan los van je aangifte. Welke straf hoort bij opzettelijk te laag aangeven?", "Bij opzet gaat het om fraude. Blijft het dan bij een brief?"],
+        wrongHints: [null, "Nabetalen met rente hoort bij een vergissing. Bij opzet komt er meer bij — wat?", "Een lage boete past bij een slordigheid. Opzettelijk is zwaarder — hoe hoog kan het dan worden?", "Toeslagen staan los van je aangifte. Welke straf hoort bij opzettelijk te laag aangeven?"],
         uitlegPad: {
           stappen: [{ titel: "Zware sancties bij opzet", tekst: "Bij OPZETTELIJK te laag aangeven: boete tot 100% van naheffing + bij grote bedragen strafrechtelijke vervolging (gevangenisstraf). Belastingdienst werkt samen met OM." }],
           woorden: [{ woord: "vergrijpboete", uitleg: "Fiscale boete bij vergrijp: meestal 25% (grove schuld) of 50% (opzet), maximaal 100%." }, { woord: "fiscaal strafrecht", uitleg: "Strafrechtelijke vervolging bij grote belastingfraude. Tot 6 jaar gevangenis." }],
@@ -755,9 +755,9 @@ const steps = [
       },
       {
         q: "Hoe lang moet je administratie **bewaren**?",
-        options: ["7 jaar", "1 jaar", "5 jaar", "3 jaar"],
+        options: ["Als ondernemer: 7 jaar", "Als ondernemer: 1 jaar", "Als ondernemer: 5 jaar", "Als ondernemer: 3 jaar"],
         answer: 0,
-        wrongHints: [null, "Na een jaar kan de Belastingdienst nog steeds komen controleren. Hoe lang moet je het dan bewaren?", "De Belastingdienst kan 5 jaar terug navorderen, maar de bewaarplicht is langer.", "Ook na 3 jaar kan de Belastingdienst nog controleren. De bewaarplicht is langer."],
+        wrongHints: [null, "Na een jaar kan de Belastingdienst nog steeds komen controleren. Hoe lang moet je het dan bewaren?", "Particulieren houden vaak 5 jaar aan, omdat de Belastingdienst zo lang terug kan navorderen. Voor een ondernemer is de bewaarplicht langer.", "Ook na 3 jaar kan de Belastingdienst nog controleren. De bewaarplicht is langer."],
         uitlegPad: {
           stappen: [{ titel: "7 jaar", tekst: "Wettelijke bewaarplicht administratie = 7 jaar. Voor onroerend goed: 10 jaar. Belastingdienst kan tot 5 jaar terug controleren (12 jaar bij buitenland)." }],
           woorden: [{ woord: "bewaarplicht", uitleg: "Wettelijke verplichting administratie minimaal X jaar bewaren. Papier of digitaal." }],
@@ -769,9 +769,9 @@ const steps = [
       },
       {
         q: "**Toeslagenaffaire**: wat ging mis?",
-        options: ["Algoritme markeerde ouders ten onrechte als fraudeur", "Er werden veel te veel toeslagen uitbetaald", "Alle toeslagen werden in één keer afgeschaft", "Het was alleen een korte computerstoring"],
+        options: ["Een algoritme zag ouders ten onrechte als fraudeur", "Ouders kregen door een computerfout dubbel uitbetaald", "Banken rekenden ouders te hoge rente op toeslagen", "Kinderopvangbedrijven hielden de toeslag zelf"],
         answer: 0,
-        wrongHints: [null, "Het probleem zat niet in te veel uitbetalen, maar in het terugvorderen. Bij wie ging dat mis?", "Toeslagen bestaan nog steeds. Wat overkwam de ouders?", "Een storing is snel opgelost — deze affaire leidde zelfs tot het aftreden van het kabinet."],
+        wrongHints: [null, "Het probleem zat niet in te veel uitbetalen, maar in het terugvorderen. Wie werd daarvan de dupe?", "Banken keren geen toeslagen uit; dat doet de Belastingdienst. Wat deed die dienst verkeerd?", "Niet de opvang, maar de ouders waren de dupe. Wat overkwam hen?"],
         uitlegPad: {
           stappen: [{ titel: "Algoritme zonder check", tekst: "Belastingdienst gebruikte algoritme dat ouders aanmerkte als fraudeur (vaak met migratieachtergrond). Toeslagen stopgezet, soms tienduizenden euro's teruggevorderd. Geen menselijke check. ~26.000 ouders in financiële nood." }],
           woorden: [{ woord: "toeslagenaffaire", uitleg: "Schandaal (onthuld 2018-2020): onterechte fraudebeschuldigingen via een risico-algoritme." }, { woord: "algoritmische besluitvorming", uitleg: "Beslissingen door computer-systeem zonder menselijke tussenkomst — risico op fouten + bias." }],

@@ -90,9 +90,9 @@ const steps = [
       },
       {
         q: "Waarom is NL een uitgesproken **handelsland**?",
-        options: ["Grote havens, Schiphol en centrale ligging", "Een grote eigen auto- en vliegtuigindustrie", "Veel inwoners, dus een grote thuismarkt", "Een eigen munt die goedkoop is voor kopers"],
+        options: ["Grote havens, Schiphol en centrale ligging", "Lage lonen, dus goedkope exportproducten", "Veel inwoners, dus een grote thuismarkt", "Veel eigen grondstoffen, zoals ijzererts en olie"],
         answer: 0,
-        wrongHints: [null, "Nederland heeft maar weinig auto- en vliegtuigfabrieken. Waar verdient NL dan aan als handelsland?", "Nederland is juist klein. Waarom moet een klein land veel handelen, en wat helpt daarbij?", "Nederland betaalt met de euro, net als veel buurlanden. Wat maakt NL dan bijzonder voor handel?"],
+        wrongHints: [null, "Nederland heeft juist hoge lonen. Waar verdient NL dan aan als handelsland?", "Nederland is juist klein. Waarom moet een klein land veel handelen, en wat helpt daarbij?", "Nederland heeft weinig eigen grondstoffen; die worden juist ingevoerd. Wat maakt NL dan bijzonder voor handel?"],
         uitlegPad: {
           stappen: [{ titel: "Logistiek = sleutel", tekst: "Rotterdam = grootste haven Europa. Schiphol = een van de grootste vrachtluchthavens van Europa. NL ligt midden in Europa." }],
           woorden: [{ woord: "handelsland", uitleg: "Land waar veel handel doorheen gaat — niet per se eigen productie." }],
@@ -104,9 +104,9 @@ const steps = [
       },
       {
         q: "Wat is **re-export**?",
-        options: ["Goederen komen NL binnen + gaan door naar ander land", "Hetzelfde product twee keer naar één land exporteren", "Export naar landen ver buiten de Europese Unie", "Een belastingvoordeel voor bedrijven die exporteren"],
+        options: ["Goederen komen NL binnen en gaan door naar een ander land", "Grondstoffen die NL invoert, verwerkt en weer uitvoert", "Producten die retour komen en opnieuw verkocht worden", "Nederlandse producten die naar het buitenland gaan"],
         answer: 0,
-        wrongHints: [null, "Twee keer hetzelfde exporteren is gewoon meer export. Waar komt het product bij re-export vandaan?", "Het gaat niet om hoe ver weg het land ligt.", "Het gaat hier niet om belasting, maar om een stroom van goederen."],
+        wrongHints: [null, "Als NL er een nieuw product van maakt, is het gewone Nederlandse export. Wat is het verschil bij re-export?", "'Re' betekent hier niet 'retour van de klant'. Waar gaan de goederen bij re-export naartoe?", "Dat is gewone export van eigen producten. Waar komen de goederen bij re-export vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Doorvoer", tekst: "Re-export = goederen komen NL binnen, gaan via NL naar Duitsland of UK. NL is doorgangshuis." }],
           woorden: [{ woord: "re-export", uitleg: "Goederen die NL binnenkomen en weer uitgaan, zonder veel bewerking." }],
@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Welk **risico** brengt internationale afhankelijkheid?",
-        options: ["Tekorten bij een verstoring, zoals oorlog", "NL-producten worden te duur in het buitenland", "Je land kan geen eigen munt meer gebruiken", "De lonen in Nederland stijgen te snel"],
+        options: ["Tekorten bij een verstoring, zoals oorlog", "NL-producten worden te duur in het buitenland", "Buitenlandse bedrijven nemen NL-bedrijven over", "Meer concurrentie voor Nederlandse bedrijven"],
         answer: 0,
-        wrongHints: [null, "Afhankelijk zijn gaat over wat je zelf nodig hebt van anderen. Wat gebeurt er als dat ineens niet komt?", "Dat gaat over de euro, niet over afhankelijkheid in de handel. Wat als een leverancier ver weg uitvalt?", "Lonen hangen van veel dingen af. Welk risico ontstaat als je spullen uit één ver land moet halen?"],
+        wrongHints: [null, "Afhankelijk zijn gaat over wat je zelf nodig hebt van anderen. Wat gebeurt er als dat ineens niet komt?", "Overnames gaan over wie de eigenaar is. Waarvoor ben je afhankelijk van andere landen?", "Concurrentie komt door vrije handel. Waarvoor ben je afhankelijk van andere landen?"],
         uitlegPad: {
           stappen: [{ titel: "Afhankelijkheid = risico", tekst: "Als je medicijnen uit India komen + India sluit grenzen = tekort hier. Corona toonde dit." }],
           woorden: [{ woord: "supply chain", uitleg: "Toeleverketen — alle stappen van grondstof tot eindproduct, vaak verspreid wereldwijd." }],
@@ -156,9 +156,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **invoerheffing**?",
-        options: ["Belasting op importproducten aan de grens", "Een soort BTW op alle producten", "Belasting op producten die je exporteert", "Geld van de overheid voor bedrijven"],
+        options: ["Belasting op importproducten aan de grens", "Een soort BTW op alle producten", "Belasting op producten die je exporteert", "Een maximum op de invoer van een product"],
         answer: 0,
-        wrongHints: [null, "Btw betaal je op bijna alles, ook op Nederlandse producten. Waarvoor geldt een invoerheffing alleen?", "Kijk naar het woord: gaat het om invoer of om uitvoer?", "Geld van de overheid voor bedrijven is een subsidie. Wie betaalt er bij een heffing?"],
+        wrongHints: [null, "Btw betaal je op bijna alles, ook op Nederlandse producten. Waarvoor geldt een invoerheffing alleen?", "Kijk naar het woord: gaat het om invoer of om uitvoer?", "Dat is een quotum: een grens aan de hoeveelheid. Bij een heffing betaal je iets — over wat?"],
         uitlegPad: {
           stappen: [{ titel: "Belasting bij grens", tekst: "Invoerheffing = belasting die je moet betalen bij invoer van goederen. Maakt buitenlandse producten duurder." }],
           woorden: [{ woord: "invoerheffing", uitleg: "Belasting bij grens op import. Ook: importtarief." }],
@@ -184,9 +184,9 @@ const steps = [
       },
       {
         q: "Een **subsidie** voor eigen bedrijven:",
-        options: ["Maakt hun producten goedkoper op de wereldmarkt", "Maakt hun producten duurder in het buitenland", "Heeft geen effect, want de markt bepaalt de prijs", "Is volgens de WTO-regels altijd verboden"],
+        options: ["Maakt hun producten goedkoper op de wereldmarkt", "Maakt buitenlandse producten in NL goedkoper", "Heeft geen effect, want de markt bepaalt de prijs", "Werkt als een invoerheffing op buitenlandse producten"],
         answer: 0,
-        wrongHints: [null, "Krijgt het bedrijf geld erbij, of moet het juist iets betalen?", "Als de overheid meebetaalt, veranderen je kosten dan echt niet?", "De WTO stelt wel regels voor subsidies, maar verbiedt ze niet allemaal. Wat doet een subsidie met de prijs?"],
+        wrongHints: [null, "De subsidie gaat naar je éígen bedrijven. Wiens kosten dalen dan?", "Als de overheid meebetaalt, veranderen je kosten dan echt niet?", "Een heffing maakt buitenlandse producten duurder; bij een subsidie betaalt de overheid juist mee. Aan wie?"],
         uitlegPad: {
           stappen: [{ titel: "Geld erbij = goedkoper produceren", tekst: "Eigen bedrijf krijgt geld van overheid → kan goedkoper produceren → meer concurrerend." }],
           woorden: [{ woord: "subsidie", uitleg: "Geld van overheid om iets te stimuleren (bv. zonnepanelen, eigen industrie)." }],
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Welke organisatie regelt globale handelsregels?",
-        options: ["WTO (Wereldhandelsorganisatie)", "EU (Europese Unie)", "VN (Verenigde Naties)", "ECB (Europese Centrale Bank)"],
+        options: ["WTO (Wereldhandelsorganisatie)", "EU (Europese Unie)", "VN (Verenigde Naties)", "IMF (Internationaal Monetair Fonds)"],
         answer: 0,
-        wrongHints: [null, "De EU maakt handelsregels voor Europa. De vraag gaat over de hele wereld.", "De VN gaat vooral over vrede en mensenrechten. Is er een aparte wereldorganisatie voor handel?", "De ECB gaat over de euro en de rente, niet over handelsregels."],
+        wrongHints: [null, "De EU maakt handelsregels voor Europa. De vraag gaat over de hele wereld.", "De VN gaat vooral over vrede en mensenrechten. Is er een aparte wereldorganisatie voor handel?", "Het IMF leent geld aan landen in geldnood, maar maakt geen handelsregels. Welke organisatie doet dat wel?"],
         uitlegPad: {
           stappen: [{ titel: "WTO = wereld-handel", tekst: "WTO = World Trade Organization. Regelt handel tussen landen + beslecht geschillen." }],
           woorden: [{ woord: "WTO", uitleg: "Wereldhandelsorganisatie. Hoofdkwartier Genève. ~166 leden." }],
@@ -226,9 +226,9 @@ const steps = [
       },
       {
         q: "Voor- en nadeel protectionisme:",
-        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "VOORDEEL: goedkoper voor consument. NADEEL: minder eigen banen", "VOORDEEL: meer keus in de winkel. NADEEL: eigen banen verdwijnen", "VOORDEEL: meer export. NADEEL: meer concurrentie voor eigen bedrijven"],
+        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "VOORDEEL: eigen banen beschermd. NADEEL: minder belastinggeld", "VOORDEEL: meer keus in de winkel. NADEEL: eigen banen verdwijnen", "VOORDEEL: meer keus in de winkel. NADEEL: duurder voor consument"],
         answer: 0,
-        wrongHints: [null, "Dat zijn juist de gevolgen van vrijhandel. Wat gebeurt er met prijzen als buitenlandse spullen extra belasting krijgen?", "Protectionisme houdt buitenlandse producten tegen. Krijg je dan meer of minder keus?", "Protectionisme houdt buitenlandse concurrenten juist buiten. Krijgen eigen bedrijven dan meer of minder concurrentie?"],
+        wrongHints: [null, "Invoerheffingen brengen de overheid juist geld op. Welk nadeel hoort er dan wel bij?", "Protectionisme houdt buitenlandse producten tegen. Krijg je dan meer of minder keus?", "Protectionisme houdt buitenlandse producten tegen. Krijg je dan meer of minder keus?"],
         uitlegPad: {
           stappen: [{ titel: "Trade-off", tekst: "Protectionisme = eigen banen beschermen MAAR consument betaalt meer voor producten." }],
           woorden: [{ woord: "trade-off", uitleg: "Voordeel kost iets — niet alleen plus." }],
@@ -328,9 +328,9 @@ const steps = [
       },
       {
         q: "Voordeel **euro voor toerist**:",
-        options: ["Geen wisselkosten binnen de eurozone", "Overal in Europa dezelfde prijzen", "Geen btw op aankopen in andere eurolanden", "Een vaste koers met de Amerikaanse dollar"],
+        options: ["Geen wisselkosten binnen de eurozone", "Overal in Europa dezelfde prijzen", "Geen paspoortcontrole bij de grens", "Een vaste koers met de Amerikaanse dollar"],
         answer: 0,
-        wrongHints: [null, "Een kop koffie kost in Italië nog steeds iets anders dan in Nederland. Wat scheelt de euro je dan wel?", "In elk euroland betaal je gewoon btw. Wat hoef je dankzij de euro niet meer te doen?", "De koers van de euro tegenover de dollar schommelt gewoon. Wat merk je binnen de eurozone?"],
+        wrongHints: [null, "Een kop koffie kost in Italië nog steeds iets anders dan in Nederland. Wat scheelt de euro je dan wel?", "Dat komt door het Schengenverdrag, niet door de euro. Wat merk je van de euro in je portemonnee?", "De koers van de euro tegenover de dollar schommelt gewoon. Wat merk je binnen de eurozone?"],
         uitlegPad: {
           stappen: [{ titel: "Geen wissel = geen kosten", tekst: "Met euro hoef je in 21 landen niets te wisselen — geen kosten, geen koersrisico." }],
           woorden: [{ woord: "wisselkosten", uitleg: "Bank/wisselkantoor neemt commissie + slechtere koers." }],
@@ -390,9 +390,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt **wisselkoers-verandering**?",
-        options: ["Vraag en aanbod, rente en inflatie", "De overheid stelt hem elke dag vast", "Het aantal inwoners en de oppervlakte", "De goudvoorraad in de schatkist"],
+        options: ["Vraag en aanbod, gestuurd door rente en inflatie", "Een besluit van de regering of de ECB", "De goudvoorraad en de hoeveelheid munten", "Het aantal inwoners en de grootte van het land"],
         answer: 0,
-        wrongHints: [null, "Bij een vrij zwevende koers doet de overheid dat niet. Wie bepaalt hem dan?", "Een groot land heeft niet vanzelf een sterke munt. Waardoor verandert de prijs van een munt, net als bij andere producten?", "Vroeger was geld gekoppeld aan goud, nu niet meer. Wat bepaalt de koers nu?"],
+        wrongHints: [null, "Bij een vrij zwevende koers zet niemand de koers vast. Hoe komt de prijs van een munt dan tot stand?", "Vroeger was geld gekoppeld aan goud, nu niet meer. Wat bepaalt de koers nu?", "Vroeger was geld gekoppeld aan goud, nu niet meer. Wat bepaalt de koers nu?"],
         uitlegPad: {
           stappen: [{ titel: "4 hoofdfactoren", tekst: "Wisselkoers verandert door: vraag/aanbod, renteverschil, politiek, inflatie." }],
           woorden: [{ woord: "valutamarkt", uitleg: "Wereldwijde markt waar valuta verhandeld worden. 24/7." }],
@@ -404,9 +404,9 @@ const steps = [
       },
       {
         q: "Wat is een **'safe haven'-valuta**?",
-        options: ["Valuta die als veilig geldt bij een crisis", "De goedkoopste valuta van de hele wereld", "De jongste munt die pas is ingevoerd", "Een cryptovaluta zoals bitcoin of ether"],
+        options: ["Valuta waar beleggers in een crisis naartoe vluchten", "Valuta met de hoogste rente ter wereld", "Valuta die stijgt als de wereldeconomie groeit", "Een cryptovaluta zoals bitcoin of ether"],
         answer: 0,
-        wrongHints: [null, "Een safe haven gaat niet over hoe goedkoop een munt is. Wat zoeken beleggers als het onrustig is?", "Een nieuwe munt heeft nog geen vertrouwen opgebouwd. Wat zoeken beleggers in onrustige tijden?", "Bitcoin schommelt juist enorm in waarde. Is dat veilig in een crisis?"],
+        wrongHints: [null, "Een hoge rente trekt beleggers als het goed gaat, maar is vaak risicovol. Wat zoeken beleggers als het onrustig is?", "Zulke munten heten juist 'risicovaluta'. Welke rol speelt een safe haven?", "Bitcoin schommelt juist enorm in waarde. Is dat veilig in een crisis?"],
         uitlegPad: {
           stappen: [{ titel: "Veilige haven", tekst: "Safe haven = veilige plek bij storm. Bij economische crisis/oorlog vluchten beleggers naar stabiele valuta." }],
           woorden: [{ woord: "safe haven", uitleg: "Engels voor veilige haven. Asset waar mensen naar vluchten bij onzekerheid." }],
@@ -432,9 +432,9 @@ const steps = [
       },
       {
         q: "Wat is een **vrije zwevende koers**?",
-        options: ["Vraag en aanbod op de markt bepalen de koers", "Overheid zet de koers vast op één waarde", "Koers die elke maand door de ECB wordt bepaald", "Een koers die alleen voor cryptomunten geldt"],
+        options: ["Vraag en aanbod op de markt bepalen de koers", "Koers die binnen een vaste bandbreedte mag schommelen", "Koers die de centrale bank elke maand vaststelt", "Koers die vrij is van wisselkosten voor toeristen"],
         answer: 0,
-        wrongHints: [null, "Als de overheid de koers vastzet, heet dat een vaste koers.", "Als een bank de koers vaststelt, zweeft hij dan nog vrij?", "Ook gewone munten zoals de euro en de dollar kunnen een zwevende koers hebben."],
+        wrongHints: [null, "Een bandbreedte is een tussenvorm: de overheid grijpt in bij de grenzen. Zweeft de koers dan vrij?", "Als een bank de koers vaststelt, zweeft hij dan nog vrij?", "Wisselkosten rekent de bank. 'Vrij zwevend' gaat over hoe de koers zelf tot stand komt."],
         uitlegPad: {
           stappen: [{ titel: "Markt bepaalt", tekst: "Vrije zwevende koers = vraag/aanbod bepaalt prijs. Overheid grijpt niet in." }],
           woorden: [{ woord: "zwevende koers", uitleg: "Koers beweegt vrij op markt — geen vaste waarde." }],
@@ -467,9 +467,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **globalisering**?",
-        options: ["De wereld raakt steeds meer met elkaar verbonden", "Een handelsverdrag tussen twee buurlanden", "Een belasting die in elk land hetzelfde is", "Eén regering die de hele wereld bestuurt"],
+        options: ["De wereld raakt steeds meer met elkaar verbonden", "Handel tussen landen binnen één werelddeel", "Steeds meer mensen gaan in grote steden wonen", "Overheden nemen bedrijven over in belangrijke sectoren"],
         answer: 0,
-        wrongHints: [null, "Een verdrag tussen twee landen is te klein. Globalisering gaat over de hele wereld — wat gebeurt er?", "Er bestaat geen belasting die overal gelijk is. Wat verandert er wel in handel, reizen en internet?", "Er is geen wereldregering; landen blijven zelfstandig. Wat groeit er dan wel naar elkaar toe?"],
+        wrongHints: [null, "Dat is handel binnen een regio, zoals de EU. Hoe ver reikt globalisering?", "Dat heet verstedelijking. Waar gaat globalisering over?", "Dat heet nationaliseren: de staat wordt eigenaar. Waar gaat globalisering over?"],
         uitlegPad: {
           stappen: [{ titel: "Globe = wereld", tekst: "Globalisering = wereld wordt steeds meer verbonden door handel, communicatie, reizen, internet." }],
           woorden: [{ woord: "globalisering", uitleg: "Proces waarbij de wereld dichterbij elkaar komt economisch + cultureel." }],
@@ -481,9 +481,9 @@ const steps = [
       },
       {
         q: "Een Nederlandse **multinational** is bv:",
-        options: ["Shell, ASML, Heineken, Unilever", "Een webwinkel die alleen in NL verkoopt", "Toyota, Samsung, Apple, Google", "Een NL webwinkel die ook naar België verstuurt"],
+        options: ["Shell, ASML, Heineken, Unilever", "Nestlé, Siemens, Volvo, Nokia", "Toyota, Samsung, Apple, Google", "Een NL webwinkel die ook naar België verstuurt"],
         answer: 0,
-        wrongHints: [null, "Deze winkel werkt alleen in Nederland. Waar werkt een multinational?", "Dat zijn wel multinationals, maar komen ze uit Nederland?", "Spullen naar het buitenland sturen is export. Wat heeft een multinational nog meer in andere landen?"],
+        wrongHints: [null, "Dit zijn wel multinationals, maar uit Zwitserland, Duitsland, Zweden en Finland. Welke komen uit Nederland?", "Dat zijn wel multinationals, maar komen ze uit Nederland?", "Spullen naar het buitenland sturen is export. Wat heeft een multinational nog meer in andere landen?"],
         uitlegPad: {
           stappen: [{ titel: "Vestigingen wereldwijd", tekst: "NL multinationals: Shell (energie), ASML (chips), Heineken (bier), Unilever (voedsel/huishouden)." }],
           woorden: [{ woord: "multinational", uitleg: "Bedrijf met vestigingen in meerdere landen." }],
@@ -523,7 +523,7 @@ const steps = [
       },
       {
         q: "**Containers** waren cruciaal voor globalisering omdat:",
-        options: ["Standaardmaat: snel en goedkoop overladen", "Schepen konden er sneller mee varen", "Ze maakten invoerheffingen overbodig", "Elk land kon zijn eigen formaat kiezen"],
+        options: ["Standaardmaat: snel en goedkoop overladen", "Sneller varen: schepen werden er lichter door", "Lagere belasting: geen invoerheffing op containers", "Eigen formaat: elk land kon zijn maat kiezen"],
         answer: 0,
         wrongHints: [null, "Een schip vaart niet harder door containers. Waar won je dan tijd: op zee of in de haven?", "Containers veranderden het vervoer, niet de belastingregels. Wat ging er sneller en goedkoper?", "Zou een eigen maat per land het overladen makkelijker of juist moeilijker maken?"],
         uitlegPad: {
@@ -537,9 +537,9 @@ const steps = [
       },
       {
         q: "Klimaat en globalisering:",
-        options: ["Meer CO2-uitstoot door al het transport", "Minder uitstoot, want productie is efficiënter", "Minder uitstoot, want er reizen minder mensen", "Vooral meer afval door verpakkingen"],
+        options: ["Meer CO2-uitstoot door al het transport", "Minder uitstoot, want productie is efficiënter", "Vooral meer ontbossing door de bouw van havens", "Vooral meer afval door verpakkingen"],
         answer: 0,
-        wrongHints: [null, "Productie kan efficiënter worden, maar al die schepen en vliegtuigen stoten ook uit. Wat weegt zwaarder?", "Door globalisering reizen juist méér mensen en spullen. Wat doet dat met de uitstoot?", "Verpakkingen zijn een probleem, maar wat zorgt bij globalisering voor de meeste uitstoot?"],
+        wrongHints: [null, "Productie kan efficiënter worden, maar al die schepen en vliegtuigen stoten ook uit. Wat weegt zwaarder?", "Er is wel natuur verdwenen voor havens, maar wat zorgt bij globalisering voor de meeste uitstoot?", "Verpakkingen zijn een probleem, maar wat zorgt bij globalisering voor de meeste uitstoot?"],
         uitlegPad: {
           stappen: [{ titel: "Twee CO2-problemen", tekst: "1) Transport (containerschepen, vliegen) = veel CO2. 2) Productie naar landen met lakse milieuregels = meer vervuiling totaal." }],
           woorden: [{ woord: "carbon leakage", uitleg: "Vervuiling die 'lekt' naar landen met lakse regels — totale vervuiling stijgt." }],
@@ -572,9 +572,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **multinational**?",
-        options: ["Bedrijf dat in meerdere landen werkt", "Een belasting op internationale handel", "Een land met inwoners van veel nationaliteiten", "Een internationale vakbond voor werknemers"],
+        options: ["Bedrijf met vestigingen in meerdere landen", "Bedrijf met werknemers van veel nationaliteiten", "Bedrijf dat veel naar het buitenland exporteert", "Bedrijf dat eigendom is van meerdere landen"],
         answer: 0,
-        wrongHints: [null, "Een belasting op handel heet een heffing. 'Multi-national' betekent: in meerdere… wat?", "Een land met veel nationaliteiten noem je multicultureel. Waar gaat dít woord over?", "Een vakbond komt op voor werknemers. Is een multinational een belangenclub?"],
+        wrongHints: [null, "Werknemers uit veel landen kan ook bij een bedrijf in één stad. Waar gaat 'multinational' over?", "Exporteren kan ook vanuit één land. Wat heeft een multinational nog meer in het buitenland?", "Een multinational is meestal van aandeelhouders, niet van landen. Wat betekent 'multi-national' dan?"],
         uitlegPad: {
           stappen: [{ titel: "Multi + nationaal", tekst: "Multi = meerdere, nationaal = land. Multinational = bedrijf in meerdere landen tegelijk." }],
           woorden: [{ woord: "multinational", uitleg: "Bedrijf met vestigingen in 10+ landen." }],
@@ -586,9 +586,9 @@ const steps = [
       },
       {
         q: "Welke is een **Nederlandse multinational**?",
-        options: ["Shell", "Apple", "Toyota", "McDonald's"],
+        options: ["Shell", "Siemens", "Nestlé", "Volvo"],
         answer: 0,
-        wrongHints: [null, "Apple heeft zijn hoofdkantoor in Californië, in de Verenigde Staten.", "Toyota is een Japans automerk.", "McDonald's is een hamburgerketen uit de Verenigde Staten."],
+        wrongHints: [null, "Siemens is een Duits technologiebedrijf uit München.", "Nestlé is een voedingsbedrijf uit Zwitserland.", "Volvo is een automerk uit Zweden."],
         uitlegPad: {
           stappen: [{ titel: "Shell = oorsprong NL", tekst: "Shell ontstond in NL (Den Haag). Wereldwijde olie/energie-multinational." }],
           woorden: [{ woord: "Shell", uitleg: "Royal Dutch Shell. Sinds 1907. Olie/energie. Hoofdkantoor verhuisde 2022 naar UK." }],
@@ -600,9 +600,9 @@ const steps = [
       },
       {
         q: "Een **voordeel** van multinationals voor NL:",
-        options: ["Banen, belastinggeld en nieuwe kennis", "Lagere prijzen doordat ze geen winst maken", "Ze hoeven in NL geen belasting te betalen", "Minder concurrentie voor Nederlandse bedrijven"],
+        options: ["Banen, belastinggeld en nieuwe kennis", "Lagere prijzen en geen btw op hun producten", "Minder import en minder afhankelijkheid", "Minder concurrentie en meer eigen bedrijven"],
         answer: 0,
-        wrongHints: [null, "Multinationals willen juist wel winst maken. Wat brengen ze dan naar Nederland?", "Multinationals betalen gewoon belasting — en zonder belasting zou NL er niets aan hebben. Wat levert hun komst op?", "Komen er door grote buitenlandse bedrijven meer of minder concurrenten bij?"],
+        wrongHints: [null, "Ook multinationals rekenen gewoon btw. Wat brengen ze dan naar Nederland?", "Multinationals handelen juist veel met het buitenland. Wat levert hun komst Nederland op?", "Komen er door grote buitenlandse bedrijven meer of minder concurrenten bij?"],
         uitlegPad: {
           stappen: [{ titel: "Drie voordelen", tekst: "1) Banen (Shell ~10.000 in NL). 2) Belasting (vennootschapsbelasting). 3) Innovatie (R&D-investeringen)." }],
           woorden: [{ woord: "vennootschapsbelasting", uitleg: "Belasting die bedrijven betalen over winst." }],
@@ -749,9 +749,9 @@ const steps = [
       },
       {
         q: "Waarom is de ECB **onafhankelijk** van politici?",
-        options: ["Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie", "De ECB heeft dat zelf besloten, zodat ze meer winst kan maken", "De grote banken bezitten de ECB, dus beslissen de banken zelf", "Zo hoeft de ECB aan niemand uitleg te geven over haar keuzes"],
+        options: ["Zodat politici de rente niet vlak voor verkiezingen verlagen", "Zodat de ECB de koers van de euro kan vastzetten", "Omdat de grote banken eigenaar zijn van de ECB", "Zodat de ECB geen uitleg hoeft te geven aan het parlement"],
         answer: 0,
-        wrongHints: [null, "Mag een centrale bank haar eigen regels kiezen? En draait de ECB om winst maken?", "Wie heeft de ECB opgericht: de banken, of de EU-landen samen?", "Klopt dat? De ECB-baas moet wél uitleg geven aan het Europees Parlement. Waarom mogen politici dan toch niet over de rente beslissen?"],
+        wrongHints: [null, "De koers van de euro zweeft vrij. Waarom mogen politici niet over de rente beslissen?", "Wie heeft de ECB opgericht: de banken, of de EU-landen samen?", "Klopt dat? De ECB-baas moet wél uitleg geven aan het Europees Parlement. Waarom mogen politici dan toch niet over de rente beslissen?"],
         uitlegPad: {
           stappen: [{ titel: "Politiek-belang ≠ economisch", tekst: "Politici willen herkozen worden → liever lage rente (mensen voelen zich rijker). Maar lage rente = inflatie. Dus ECB onafhankelijk." }],
           woorden: [{ woord: "onafhankelijkheid", uitleg: "Centrale bank niet door politici aangestuurd. Beslist zelf." }],

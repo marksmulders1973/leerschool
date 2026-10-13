@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "**Afschrijving** is:",
-        options: ["Waardedaling van vaste activa door gebruik", "Aangifte van de winst bij de Belastingdienst", "Uitbetaling van loon aan het personeel", "Inkoop van nieuwe voorraad grondstoffen"],
+        options: ["Waardedaling van vaste activa door gebruik", "Aflossing van een lening bij de bank", "Geld dat van de bankrekening wordt afgeboekt", "Korting op de verkoopprijs bij een uitverkoop"],
         answer: 0,
-        wrongHints: [null, "Afschrijven heeft niets met de fiscus te maken — wat gebeurt er met de waarde van een machine na jaren gebruik?", "Loon is de vergoeding voor werk van mensen. Afschrijven gaat over iets wat jaren meegaat — wat gebeurt daarmee?", "Voorraad verkoop of verbruik je snel. Waarover gaat afschrijven: iets wat kort of wat lang meegaat?"],
+        wrongHints: [null, "Aflossen is een schuld terugbetalen; dan daalt je vreemd vermogen. Gaat afschrijven over een schuld of over een bezitting?", "In het dagelijks leven heet dat ook 'afschrijving', maar in de bedrijfseconomie bedoel je iets anders. Denk aan een bestelbus die jaren meegaat.", "Een korting verlaagt je omzet. Afschrijven gaat over je eigen bezittingen, zoals een machine of een bestelbus."],
         uitlegPad: {
           stappen: [{ titel: "Spreiding van kosten", tekst: "**Afschrijving** = jaarlijkse waardevermindering vaste activa (gebouw, machine, auto). Lineair: (aanschaf − restwaarde) / levensduur. Bv. machine €50k, restwaarde €5k, levensduur 10 jaar → €4500/jaar afschrijving. Spreiding van kosten over gebruiksperiode." }],
           niveaus: { basis: "Waardeverlies activa.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "Waardeverlies activa." },
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "**Constante kosten** zijn:",
-        options: ["Onafhankelijk van productie-omvang", "Stijgen mee met de productie-omvang", "Worden nul zodra de productie stopt", "Verschillen elke maand in hoogte"],
+        options: ["In totaal gelijk, hoeveel je ook produceert", "Stijgen mee met de productie-omvang", "Worden nul zodra de productie stopt", "Per gemaakt product steeds even hoog"],
         answer: 0,
-        wrongHints: [null, "Kosten die meegroeien met de productie heten variabele kosten. Wat doen constante kosten dan?", "Denk aan de huur van de fabriek: loopt die door als de machines stilstaan?", "Dat kan gebeuren, maar zegt niets over de definitie. Waar hangen constante kosten wél of níét van af?"],
+        wrongHints: [null, "Kosten die meegroeien met de productie heten variabele kosten. Wat doen constante kosten dan?", "Denk aan de huur van de fabriek: loopt die door als de machines stilstaan?", "Een vast bedrag per product hoort bij variabele kosten: hoe meer producten, hoe hoger het totaal. Denk aan de huur van de fabriek."],
         uitlegPad: {
           stappen: [{ titel: "Vast = vast", tekst: "**Constante (vaste) kosten** blijven gelijk ongeacht hoeveel je produceert: huur, vaste lonen, verzekeringen, afschrijving. **Variabele kosten** stijgen met productie: grondstof, energie. Per stuk dalen constante als je meer maakt." }],
           niveaus: { basis: "Onafhankelijk productie.", simpeler: "Constant = vast", nogSimpeler: "Vast" },
@@ -150,9 +150,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **eigen vermogen** financieren?",
-        options: ["Inbreng van eigenaren en ingehouden winst", "Een lening van de bank met rente", "Een hypotheek op het bedrijfspand", "Aandelen kopen in een ander bedrijf"],
+        options: ["Inbreng van eigenaren en ingehouden winst", "Een banklening met een vaste rente en looptijd", "Winst die aan de aandeelhouders wordt uitgekeerd", "Leverancierskrediet: later betalen voor inkoop"],
         answer: 0,
-        wrongHints: [null, "Geld van de bank — is dat geld ván het bedrijf zelf, of van een buitenstaander die het terug wil?", "Ook geleend geld (met het pand als onderpand) — van wie ís dit vermogen eigenlijk?", "Dat is beleggen: daar geef je geld úít. Bij financieren gaat het om waar het geld vandaan kómt."],
+        wrongHints: [null, "Geld van de bank — is dat geld ván het bedrijf zelf, of van een buitenstaander die het terug wil?", "Dividend gaat naar de eigenaren toe en verlaat het bedrijf. Financieren gaat over geld dat het bedrijf binnenkrijgt — van wie?", "Leveranciers willen hun geld later wél terug; het is een schuld. Is dat geld van het bedrijf zelf?"],
         uitlegPad: {
           stappen: [{ titel: "EV-bronnen", tekst: "**Eigen vermogen** (EV) = geld eigenaren (bij oprichting + ingehouden winst + aandelen). Geen rente, geen aflossing. **Vreemd vermogen** (VV) = geleend (bank, obligaties, leveranciers) — heeft rente + aflossings-plicht. EV is duurder (verdunning) maar veiliger." }],
           niveaus: { basis: "Eigenaars + winst.", simpeler: "EV = eigenaars-geld", nogSimpeler: "Eigenaars + winst." },
@@ -180,9 +180,9 @@ const steps = [
       },
       {
         q: "**Cashflow** kan negatief zijn terwijl bedrijf winst maakt. Waarom?",
-        options: ["Klanten hebben nog niet betaald", "Doordat de afschrijvingen hoog waren", "Doordat de kosten dit jaar daalden", "Doordat er belasting over de winst is"],
+        options: ["Doordat klanten nog niet betaald hebben", "Doordat de afschrijvingen hoog waren", "Doordat klanten al vooruitbetaald hebben", "Doordat het loon pas later betaald wordt"],
         answer: 0,
-        wrongHints: [null, "Afschrijving verlaagt de winst, maar er gaat geen geld de deur uit. Waardoor kan er wél minder geld binnenkomen dan de winst laat zien?", "Dalende kosten laten juist méér geld over.", "Belasting is een kostenpost die al in de winst zit — dat verklaart het verschil niet."],
+        wrongHints: [null, "Afschrijving verlaagt de winst, maar er gaat geen geld de deur uit. Waardoor kan er wél minder geld binnenkomen dan de winst laat zien?", "Een vooruitbetaling brengt geld binnen vóórdat je de winst boekt. Maakt dat de cashflow lager of hoger dan de winst?", "Als je later betaalt, blijft het geld nog even op je rekening staan. Maakt dat de cashflow lager of hoger dan de winst?"],
         uitlegPad: {
           stappen: [{ titel: "Winst ≠ cash", tekst: "**Winst** is boekhoudkundig (omzet − kosten), maar **cashflow** is werkelijk geld. Als klanten op factuur kopen (op rekening) maar nog niet betaald → winst staat in boek maar geen cash. Bedrijven kunnen failliet ondanks 'winstgevend' zijn. **'Cash is king'** — focus op kasstroom." }],
           theorie: "Klassieker: snel-groeiende bedrijven (groot werkkapitaal nodig) komen vaak in cash-tekort. Daarom externe financiering nodig.",
@@ -191,9 +191,9 @@ const steps = [
       },
       {
         q: "**Vennootschapsbelasting NL** hoog tarief 2024:",
-        options: ["25,8%","19%","21%","9%"],
+        options: ["25,8%", "19,0%", "21,0%", "49,5%"],
         answer: 0,
-        wrongHints: [null, "19% is het lage vpb-tarief, voor de eerste €200.000 winst.", "21% is het hoge btw-tarief, geen belasting op winst.", "9% is het lage btw-tarief, geen belasting op winst."],
+        wrongHints: [null, "19% is het lage vpb-tarief, voor de eerste €200.000 winst.", "21% is het hoge btw-tarief, geen belasting op winst.", "49,5% is het hoogste tarief van de inkomstenbelasting (box 1). Betaalt een BV inkomstenbelasting?"],
         uitlegPad: {
           stappen: [{ titel: "Twee schijven", tekst: "**Vennootschapsbelasting** (vpb) 2024:\n• **19%** over eerste €200.000 winst.\n• **25,8%** boven €200.000.\n\nBelastingplanning groot bij grote bedrijven — controverse over multinationals (Shell, Apple-NL-route)." }],
           niveaus: { basis: "25,8%.", simpeler: "Vpb hoog = 25,8%", nogSimpeler: "25,8%." },
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "**Just-in-time** (JIT) is een methode voor:",
-        options: ["Voorraad minimaliseren — geleverd wanneer nodig", "Een bedrijf zo snel mogelijk opstarten", "Klanten korting geven bij snelle betaling", "Personeel precies op tijd laten beginnen"],
+        options: ["Onderdelen pas laten leveren als ze nodig zijn", "Bestellingen binnen 24 uur bij de klant bezorgen", "Een extra voorraad aanhouden voor drukke tijden", "Grondstoffen in grote partijen inkopen voor korting"],
         answer: 0,
-        wrongHints: [null, "JIT gaat niet over het opstarten van een bedrijf. Wat moet er bij JIT precies op tijd binnenkomen?", "Geen korting — het draait om wannéér spullen geleverd worden.", "Het gaat niet om mensen, maar om spullen en onderdelen. Wanneer komen die bij JIT binnen?"],
+        wrongHints: [null, "Snel bezorgen aan klanten is service. JIT gaat over de spullen die het bedrijf zélf binnenkrijgt — wanneer komen die?", "Een extra voorraad is juist het tegenovergestelde van JIT. Wat wil JIT met de voorraad doen?", "Grote partijen betekent een grote stapel op de plank. Past dat bij werken 'precies op tijd'?"],
         uitlegPad: {
           stappen: [{ titel: "Toyota-methode", tekst: "**Just-in-time**: voorraad zo minimaal mogelijk; producten + onderdelen worden geleverd **op het moment dat ze nodig zijn**. Spaart opslagkosten + werkkapitaal. **Toyota pionier** vanaf jaren '50. Zwakte: kwetsbaar bij verstoring keten (COVID-19 + chiptekort 2020-22 toonde dit)." }],
           theorie: "Toets-actueel: discussie 'just-in-case' (meer voorraad voor zekerheid) als reactie op kwetsbaarheid JIT.",
@@ -251,9 +251,9 @@ const steps = [
       },
       {
         q: "Wat is **MVO** (CSR)?",
-        options: ["Maatschappelijk Verantwoord Ondernemen", "Marketing Vereniging voor Ondernemers", "Maandelijks Verkoop-Overzicht", "Markttoezicht door de Overheid"],
+        options: ["Maatschappelijk Verantwoord Ondernemen", "Maatschappelijke Vereniging van Ondernemers", "Markt- en Verkooponderzoek bij klanten", "Milieuvergunning Voor Ondernemingen"],
         answer: 0,
-        wrongHints: [null, "MVO gaat niet over een vereniging of over reclame — het zegt iets over hóé een bedrijf onderneemt. Welke woorden passen daarbij?", "Een verkoopoverzicht is gewoon administratie. Waar zou de M van MVO dan voor staan?", "Dat zou een toezichthouder zijn — MVO is iets wat een bedrijf zélf doet."],
+        wrongHints: [null, "Een vereniging is een club van bedrijven. MVO is iets wat een bedrijf zélf doet in de manier waarop het werkt. Welke woorden passen daarbij?", "Marktonderzoek kijkt naar wat klanten willen. Waar staan de woorden achter de Engelse afkorting CSR voor?", "Een vergunning geeft de overheid af. MVO is iets wat een bedrijf uit zichzelf doet — welke woorden passen daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Triple bottom line", tekst: "**MVO** = Maatschappelijk Verantwoord Ondernemen (Engels CSR = Corporate Social Responsibility). Bedrijven hebben verantwoordelijkheid voor **People, Planet, Profit** (triple bottom line). Voorbeelden: Tony's Chocolonely (slavernijvrije chocolade), Triodos Bank, Patagonia. EU verplicht rapportage via CSRD sinds 2024 voor grote bedrijven." }],
           niveaus: { basis: "MVO.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "MVO." },
@@ -310,9 +310,9 @@ const steps = [
       },
       {
         q: "Welke is **vraag-stimulerend** (geen prijs-strategie)?",
-        options: ["Promotie", "Penetratie", "Skimming", "Cost-plus"],
+        options: ["Promotie", "Marktonderzoek", "Segmentatie", "Just-in-time"],
         answer: 0,
-        wrongHints: [null, "Penetratie = laag ínstappen met je prijs — de vraag zoekt juist iets dat géén prijs-strategie is.", "Skimming = afromen met een hoge príjs — dus wél een prijs-strategie.", "Cost-plus = kostprijs plus winstmarge — ook een prijs-methode. Wat stimuleert vraag zónder aan de prijs te zitten?"],
+        wrongHints: [null, "Bij marktonderzoek verzamel je informatie over klanten. Komen er daardoor al meer kopers?", "Bij segmentatie deel je de markt op in groepen. Gaan mensen door die indeling alleen al meer kopen?", "Just-in-time gaat over voorraad en levering. Merkt een klant daar iets van dat hem aanzet tot kopen?"],
         uitlegPad: {
           stappen: [{ titel: "Promotie ≠ prijs", tekst: "**Reclame** zit in 4e P (Promotie), niet 2e (Prijs). Stimuleert vraag zonder per se prijs aan te passen. Andere genoemde opties zijn allemaal prijs-strategieën." }],
           niveaus: { basis: "Reclame = promotie.", simpeler: "Reclame ≠ prijs", nogSimpeler: "Reclame = promotie." },

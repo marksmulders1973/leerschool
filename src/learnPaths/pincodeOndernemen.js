@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "Een ondernemer **neemt risico**. Wat betekent dat?",
-        options: ["Hij kan zijn geld verliezen", "Hij moet een verzekering afsluiten", "Hij is verplicht een lening af te sluiten", "Hij mag de prijzen zelf bepalen"],
+        options: ["Hij kan zijn ingelegde geld kwijtraken", "Hij moet zich verzekeren tegen schade", "Hij betaalt meer belasting dan een werknemer", "Hij moet beslissingen nemen zonder baas"],
         answer: 0,
-        wrongHints: [null, "Een verzekering kan helpen, maar daar gaat 'risico nemen' niet over. Wat kan er misgaan met wat hij in zijn bedrijf stopt?", "Lenen mag, maar is niet verplicht. Wat staat er op het spel als het tegenzit?", "Dat klopt vaak, maar dat is vrijheid, geen risico. Wat kan hij kwijtraken?"],
+        wrongHints: [null, "Een verzekering kan helpen, maar daar gaat 'risico nemen' niet over. Wat kan er misgaan met wat hij in zijn bedrijf stopt?", "Hoeveel belasting hij betaalt, hangt af van zijn winst. Wat staat er op het spel als het tegenzit?", "Zonder baas werken is vrijheid, geen risico. Wat kan hij kwijtraken?"],
         uitlegPad: {
           stappen: [{ titel: "Geld weg = mogelijk", tekst: "Risico = de kans dat het MIS gaat. De ondernemer kan zijn ingelegde geld kwijtraken als het bedrijf niet werkt." }],
           woorden: [{ woord: "ondernemersrisico", uitleg: "Kans op verlies van investering bij slecht resultaat. Daarom recht op winst als het wél lukt." }, { woord: "investering", uitleg: "Geld dat je in een bedrijf steekt: voorraad, machines, marketing." }],
@@ -114,9 +114,9 @@ const steps = [
       },
       {
         q: "Sam start de Foodtruck Funky Fries. Welke stap komt VÓÓR het ondernemingsplan?",
-        options: ["Marktonderzoek", "Inschrijving KvK", "Starten van verkoop", "BTW-aangifte doen"],
+        options: ["Marktonderzoek doen", "Inschrijven bij de KvK", "Een lening aanvragen", "De foodtruck kopen"],
         answer: 0,
-        wrongHints: [null, "Inschrijving komt nadat je weet wat je gaat doen.", "Verkoop is de laatste stap.", "BTW-aangifte volgt na inschrijving."],
+        wrongHints: [null, "Inschrijven doe je pas als je weet wat je gaat doen. Welke informatie heb je nodig voor je plan?", "Een bank wil eerst je plan zien voordat ze geld leent. Wat moet je weten vóór je een plan schrijft?", "Eerst een dure truck kopen en dan pas plannen is riskant. Waar haal je de informatie voor je plan vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Volgorde van starten", tekst: "1) Idee → 2) Marktonderzoek (is er vraag?) → 3) Plan (hoe ga je het doen?) → 4) KvK → 5) Starten → 6) Aangiften. Marktonderzoek komt vóór plan." }],
           woorden: [{ woord: "ondernemingsplan", uitleg: "Document met je idee, doelgroep, prijzen, kosten, verwachte omzet, financiering. Basis om te starten + lening krijgen." }, { woord: "marktonderzoek", uitleg: "Uitzoeken: is er vraag, wat is concurrentie, wat willen klanten betalen?" }],
@@ -128,9 +128,9 @@ const steps = [
       },
       {
         q: "Welk kenmerk hoort er NIET bij een ondernemer?",
-        options: ["Heeft een baas die het werk uitdeelt", "Ziet zelf kansen in de markt", "Investeert eigen geld of leent", "Neemt zelf beslissingen en risico"],
+        options: ["Krijgt werk toegewezen door een leidinggevende", "Werkt voor meerdere opdrachtgevers tegelijk", "Heeft een inkomen dat per maand verschilt", "Neemt zelf beslissingen en draagt het risico"],
         answer: 0,
-        wrongHints: [null, "Past dit bij een werknemer of bij een ondernemer? Wie ziet zelf de kansen?", "Wie investeert dat geld doorgaans: een werknemer of een ondernemer?", "Wie loopt het echte risico — de werknemer of de ondernemer?"],
+        wrongHints: [null, "Past dit bij een werknemer of bij een zelfstandige?", "Wie heeft een vast salaris: een werknemer of een ondernemer?", "Wie loopt het echte risico — de werknemer of de ondernemer?"],
         uitlegPad: {
           stappen: [{ titel: "Wat onderscheidt ondernemer van werknemer?", tekst: "Werknemer heeft een baas. Ondernemer IS de baas — neemt zelf alle beslissingen, ziet kansen, investeert + draagt risico." }],
           woorden: [{ woord: "ondernemer", uitleg: "Zelfstandig persoon die met eigen middelen een bedrijf runt." }, { woord: "werknemer", uitleg: "Iemand in loondienst bij een werkgever." }],
@@ -215,9 +215,9 @@ const steps = [
       },
       {
         q: "Wat zou een **bedreiging** (T) zijn voor een nieuwe foodtruck?",
-        options: ["Een grote concurrent op hetzelfde festival", "Een trouwe groep vaste klanten in de buurt", "Lage huur voor een goede standplaats", "Veel goede recensies van eerdere klanten"],
+        options: ["Een grote concurrent op hetzelfde festival", "Sam heeft nog weinig ervaring als kok", "De frituurpan is oud en valt vaak uit", "De truck heeft weinig ruimte voor voorraad"],
         answer: 0,
-        wrongHints: [null, "Vaste klanten zijn iets goeds van jezelf (een sterkte). Een bedreiging komt van buiten en is negatief.", "Een lage huur is gunstig. Is iets gunstigs een bedreiging?", "Goede recensies helpen je juist. Wat van buitenaf kan je omzet afpakken?"],
+        wrongHints: [null, "Dit ligt bij Sam zelf. In welk deel van de SWOT hoort een eigen zwak punt?", "Een oude pan is iets van het bedrijf zelf. Is dat een zwakte of een bedreiging?", "Te weinig ruimte is een eigenschap van je eigen truck. Is dat een zwakte of een bedreiging?"],
         uitlegPad: {
           stappen: [{ titel: "Wat KAN MIS GAAN buiten jezelf?", tekst: "Bedreiging = EXTERN gevaar dat je niet zelf controleert. Een concurrent die je markt opslokt = klassieke T." }],
           woorden: [{ woord: "bedreiging (T)", uitleg: "Externe ontwikkeling die jou kan SCHADEN: concurrenten, wetgeving, recessie, weer." }, { woord: "kans (O)", uitleg: "Externe ontwikkeling die jou kan HELPEN: trend, technologie, wegvallen concurrent." }],
@@ -284,9 +284,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **doelgroep**?",
-        options: ["Mensen voor wie je product bedoeld is", "Het personeel dat bij je werkt", "De bedrijven die hetzelfde verkopen", "De bedrijven die jou spullen leveren"],
+        options: ["Mensen voor wie je product bedoeld is", "De klanten die al eerder bij je kochten", "Het gebied waar je je product verkoopt", "Het doel dat je met je bedrijf wilt halen"],
         answer: 0,
-        wrongHints: [null, "Personeel = jouw mensen, geen klanten.", "Concurrenten zijn andere bedrijven.", "Leveranciers leveren AAN jou."],
+        wrongHints: [null, "Vaste klanten horen er vaak bij, maar een doelgroep is breder: ook wie nog nooit kocht kan erbij horen.", "Een gebied is je afzetgebied. Bij een doelgroep gaat het om mensen — welke?", "Een doel is iets wat je wilt bereiken. Bij een doelgroep gaat het om een groep — van wie?"],
         uitlegPad: {
           stappen: [{ titel: "Voor wie maak je het?", tekst: "Doelgroep = de specifieke mensen die je WIL bereiken als klant. Hoe scherper je hen omschrijft, hoe beter je marketing werkt." }],
           woorden: [{ woord: "doelgroep", uitleg: "De groep mensen voor wie je product of dienst gemaakt is." }, { woord: "segmentatie", uitleg: "De markt opdelen in groepen op basis van leeftijd, locatie, gedrag, etc." }],
@@ -354,9 +354,9 @@ const steps = [
       },
       {
         q: "Sam wil mensen op een festival bereiken. Welk promotie-kanaal werkt het beste?",
-        options: ["Berichten op Instagram en TikTok", "Een advertentie in de regionale krant", "Radioreclame op een landelijke zender", "Folders in de brievenbus in de wijk"],
+        options: ["Berichten op Instagram en TikTok", "Een advertentie in de regionale krant", "Een banner op een landelijke nieuwssite", "Folders in de brievenbus in de wijk"],
         answer: 0,
-        wrongHints: [null, "Festivalbezoekers bereik je niet gericht via de krant.", "Landelijke radio is duur en bereikt vooral mensen die niet naar het festival gaan. Waar zitten festivalgangers vaak?", "Folders bereiken buurtbewoners, niet gericht festivalbezoekers. Hoe bereik je jongeren die naar een festival gaan?"],
+        wrongHints: [null, "Festivalbezoekers bereik je niet gericht via de krant.", "Een nieuwssite bereikt veel mensen, maar niet gericht festivalgangers, en kost veel. Waar zitten festivalgangers vaak?", "Folders bereiken buurtbewoners, niet gericht festivalbezoekers. Hoe bereik je jongeren die naar een festival gaan?"],
         uitlegPad: {
           stappen: [{ titel: "Doelgroep bepaalt kanaal", tekst: "Kies het promotie-kanaal waar JOUW DOELGROEP zit. Festivalbezoekers 16-35 zijn op TikTok + Instagram, niet in de krant." }],
           woorden: [{ woord: "promotie-kanaal", uitleg: "Medium om je doelgroep te bereiken: socials, krant, radio, etc." }],
@@ -533,9 +533,9 @@ const steps = [
       },
       {
         q: "**Evenwichtsprijs** is:",
-        options: ["Prijs waar vraag = aanbod", "Hoogste prijs op de markt", "Laagste prijs op de markt", "Gemiddelde van alle prijzen"],
+        options: ["Prijs waarbij gevraagde = aangeboden hoeveelheid", "Prijs waarbij de winst het hoogst is", "Prijs waarbij alle kosten gedekt zijn", "Gemiddelde van alle prijzen op de markt"],
         answer: 0,
-        wrongHints: [null, "Bij de hoogste prijs willen kopers maar weinig. Blijft er dan iets onverkocht?", "Bij de laagste prijs willen verkopers maar weinig leveren. Is dat een evenwicht?", "Een gemiddelde zegt niets over kopers en verkopers. Wanneer is de markt in evenwicht?"],
+        wrongHints: [null, "Een evenwicht gaat over de hele markt, niet over de winst van één verkoper. Wie moeten het 'eens' zijn?", "Dat is het break-evenpunt van één bedrijf. Waar gaat de evenwichtsprijs over?", "Een gemiddelde zegt niets over kopers en verkopers. Wanneer is de markt in evenwicht?"],
         uitlegPad: {
           stappen: [{ titel: "Waar curves elkaar kruisen", tekst: "Op een grafiek: waar vraagcurve en aanbodcurve elkaar SNIJDEN — dat is de evenwichtsprijs. Vraag = aanbod, markt is in balans." }],
           woorden: [{ woord: "evenwichtsprijs", uitleg: "Prijs waarbij hoeveelheid vraag = hoeveelheid aanbod. Markt 'klikt'." }, { woord: "marktevenwicht", uitleg: "Toestand waar vraag en aanbod elkaar in balans houden." }],
@@ -645,9 +645,9 @@ const steps = [
       },
       {
         q: "**Monopolie** kenmerk:",
-        options: ["1 aanbieder bepaalt prijs", "Veel kleine aanbieders", "Weinig grote aanbieders", "Lage prijs door concurrentie"],
+        options: ["Eén aanbieder die de prijs bepaalt", "Veel kleine aanbieders met gelijke producten", "Een paar grote aanbieders die elkaar volgen", "Eén koper tegenover veel aanbieders"],
         answer: 0,
-        wrongHints: [null, "Veel kleine aanbieders past bij volkomen concurrentie. Wat betekent 'mono'?", "Dat is een oligopolie.", "Is er bij een monopolie concurrentie die de prijs laag houdt?"],
+        wrongHints: [null, "Veel kleine aanbieders past bij volkomen concurrentie. Wat betekent 'mono'?", "Een paar grote aanbieders: dat is een oligopolie.", "Eén koper heet een monopsonie. Bij een monopolie gaat het om de andere kant van de markt."],
         uitlegPad: {
           stappen: [{ titel: "Mono = 1", tekst: "Monopolie betekent letterlijk 'één verkoper'. Eén aanbieder = volledige macht over prijs. Geen concurrentie = hoge prijs mogelijk." }],
           woorden: [{ woord: "monopolie", uitleg: "Marktvorm met 1 aanbieder. Heeft volledige prijsmacht." }],
@@ -689,7 +689,7 @@ const steps = [
         q: "Bij welke marktvorm is **vergelijken** het meest waardevol?",
         options: ["Oligopolie", "Volkomen concurrentie", "Monopolie", "Overal gelijk"],
         answer: 0,
-        wrongHints: [null, "Bij volkomen alles gelijke prijs.", "Geen alternatief.", "Wel verschil."],
+        wrongHints: [null, "Bij volkomen concurrentie zijn producten en prijzen vrijwel gelijk. Valt er dan veel te vergelijken?", "Bij een monopolie is er maar één aanbieder. Met wie zou je dan vergelijken?", "Prijzen en voorwaarden verschillen wel per marktvorm. Kijk naar het aantal aanbieders: wanneer valt er iets te kiezen?"],
         uitlegPad: {
           stappen: [{ titel: "Wanneer loont vergelijken?", tekst: "Bij oligopolie zijn er weinig (3-10) maar gelijkwaardige spelers — prijzen verschillen genoeg om voor jou €100/jaar te schelen. Telecom, energie, banken." }],
           woorden: [{ woord: "prijsvergelijken", uitleg: "Aanbieders vergelijken om beste prijs/kwaliteit te kiezen." }],
@@ -764,9 +764,9 @@ const steps = [
       },
       {
         q: "Welke belasting betaalt een **BV**?",
-        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Dividendbelasting over de winst"],
+        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Omzetbelasting (btw) over de verkoop", "Dividendbelasting over de winst"],
         answer: 0,
-        wrongHints: [null, "De eigenaar betaalt IB over zijn loon — maar welke belasting betaalt de BV zelf over haar winst?", "BTW betalen alle ondernemingen — dat is geen belasting op winst.", "Dividendbelasting gaat over winst die aan de aandeelhouders wordt uitgekeerd. Welke belasting betaalt de BV zelf?"],
+        wrongHints: [null, "De eigenaar betaalt IB over zijn loon — maar welke belasting betaalt de BV zelf over haar winst?", "Btw betalen alle ondernemingen — dat is geen belasting op winst.", "Dividendbelasting gaat over winst die aan de aandeelhouders wordt uitgekeerd. Welke belasting betaalt de BV zelf?"],
         uitlegPad: {
           stappen: [{ titel: "BV = aparte belasting", tekst: "Omdat BV een aparte 'persoon' is, betaalt BV zelf vennootschapsbelasting (VPB) over de winst — niet de eigenaar zelf." }],
           woorden: [{ woord: "VPB", uitleg: "Vennootschapsbelasting. Belasting op winst van BV's en NV's." }, { woord: "IB", uitleg: "Inkomstenbelasting. Voor natuurlijke personen (zoals eenmanszaak-eigenaar)." }],
@@ -778,9 +778,9 @@ const steps = [
       },
       {
         q: "Sam wil zelfstandig starten met **lage start-kosten**. Welke rechtsvorm is meest geschikt?",
-        options: ["Eenmanszaak", "BV", "VOF", "Stichting"],
+        options: ["Eenmanszaak", "Eenpersoons-BV", "VOF", "Stichting"],
         answer: 0,
-        wrongHints: [null, "BV heeft notariskosten van €500-€1.500.", "VOF heeft 2 personen nodig — hij wil alleen.", "Stichting is voor non-profit, niet ondernemen."],
+        wrongHints: [null, "Ook met één eigenaar kost een BV notariskosten van €500-€1.500. Is dat goedkoop?", "VOF heeft 2 personen nodig — hij wil alleen.", "Stichting is voor non-profit, niet ondernemen."],
         uitlegPad: {
           stappen: [{ titel: "Beslisboom", tekst: "Sam wil: (1) alleen, (2) lage kosten. Eenmanszaak: 1 persoon, alleen €80 KvK, klaar. BV te duur (notaris), VOF vereist 2 vennoten, stichting is geen ondernemen." }],
           woorden: [{ woord: "eenmanszaak", uitleg: "1-eigenaars-bedrijf, €80 oprichten, geen minimumkapitaal." }, { woord: "starter-aftrek", uitleg: "Extra belastingvoordeel dat je in je eerste 5 jaar als zelfstandige maximaal 3 keer kunt gebruiken." }],
@@ -806,9 +806,9 @@ const steps = [
       },
       {
         q: "Wat is een **rechtspersoon**?",
-        options: ["Bedrijf dat juridisch zelf een 'persoon' is", "Een advocaat die voor bedrijven werkt", "Een eigenaar die met zijn privégeld instaat", "Een werknemer met een vast contract"],
+        options: ["Bedrijf dat juridisch zelf een 'persoon' is", "Een advocaat die voor bedrijven werkt", "Een eigenaar die met zijn privégeld instaat", "Een bestuurder die namens het bedrijf tekent"],
         answer: 0,
-        wrongHints: [null, "Een advocaat helpt je met het recht, maar is gewoon een mens met een beroep. Wat kan er nog meer een 'persoon' zijn in de wet?", "Dat is juist de eenmanszaak: daar staat de eigenaar zelf in. Wat is er anders bij een rechtspersoon?", "Een werknemer is een gewoon mens (een natuurlijk persoon). Wat kan er nog meer een 'persoon' zijn in de wet?"],
+        wrongHints: [null, "Een advocaat helpt je met het recht, maar is gewoon een mens met een beroep. Wat kan er nog meer een 'persoon' zijn in de wet?", "Dat is juist de eenmanszaak: daar staat de eigenaar zelf in. Wat is er anders bij een rechtspersoon?", "De bestuurder is een mens die namens iets anders handelt. Wat is dat 'iets'?"],
         uitlegPad: {
           stappen: [{ titel: "Juridisch een 'persoon'", tekst: "Rechtspersoon = juridisch een eigen entiteit. Heeft eigen bezit, eigen schulden, kan contracten sluiten in eigen naam — los van de eigenaars." }],
           woorden: [{ woord: "rechtspersoon", uitleg: "Juridische entiteit (BV, NV, stichting, vereniging) met eigen rechten en plichten." }, { woord: "natuurlijke persoon", uitleg: "Een mens van vlees en bloed. Heeft eigen rechten en plichten." }],
@@ -998,9 +998,9 @@ const steps = [
       },
       {
         q: "Welke maatregel beperkt **risico** voor een ondernemer?",
-        options: ["Een spaarbuffer voor een paar maanden kosten", "Al je spaargeld in de zaak investeren", "Eén grote vaste klant met een lang contract", "Veel voorraad inkopen voor een lage prijs"],
+        options: ["Een spaarbuffer voor een paar maanden kosten", "Je winst steeds direct investeren in groei", "Eén grote vaste klant met een lang contract", "Veel voorraad inkopen voor een lage prijs"],
         answer: 0,
-        wrongHints: [null, "Dan heb je niets meer achter de hand als het tegenzit. Wat beperkt het risico wél?", "Klinkt zeker, maar wat gebeurt er als die ene klant toch stopt?", "Een grote voorraad kost geld en kan blijven liggen. Wat helpt als de omzet even wegvalt?"],
+        wrongHints: [null, "Groeien kan slim zijn, maar wat gebeurt er als de omzet een paar maanden tegenvalt?", "Klinkt zeker, maar wat gebeurt er als die ene klant toch stopt?", "Een grote voorraad kost geld en kan blijven liggen. Wat helpt als de omzet even wegvalt?"],
         uitlegPad: {
           stappen: [{ titel: "Buffer = veiligheidsnet", tekst: "Een geldbuffer van 3-6 maanden vaste kosten is je schokdemper. Klanten betalen 30 dagen later, machine kapot, ziekte — buffer overbrugt het." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld om onverwachte tegenvallers op te vangen. Cruciaal voor zzp en MKB." }, { woord: "cashflow", uitleg: "Stroom in/uit van geld. Goede cashflow = altijd genoeg geld klaar voor betalingen." }],
@@ -1012,9 +1012,9 @@ const steps = [
       },
       {
         q: "Wat betekent **diversificatie van klanten**?",
-        options: ["Veel verschillende soorten klanten hebben", "Je richten op één vaste soort klant", "Klanten verschillende prijzen geven", "Klanten in verschillende groepen indelen"],
+        options: ["Veel verschillende soorten klanten hebben", "Veel verschillende producten aanbieden", "Klanten verschillende prijzen geven", "Klanten in verschillende groepen indelen"],
         answer: 0,
-        wrongHints: [null, "Wat gebeurt er als die ene soort klant wegblijft?", "Prijsverschil heeft niets met diversificatie te maken.", "Klanten indelen in groepen heet segmenteren. Bij diversificatie gaat het erom dat je niet afhankelijk bent van… wat?"],
+        wrongHints: [null, "Dat is spreiding in je producten. De vraag gaat over je klanten — van wie wil je niet afhankelijk zijn?", "Prijsverschil heeft niets met diversificatie te maken.", "Klanten indelen in groepen heet segmenteren. Bij diversificatie gaat het erom dat je niet afhankelijk bent van… wat?"],
         uitlegPad: {
           stappen: [{ titel: "Niet alle eieren in 1 mand", tekst: "Diversificatie = SPREIDING. Met 10 kleine klanten ben je weerbaar als er 1 wegvalt. Met 1 grote klant kan dat ene vertrek je bedrijf laten instorten." }],
           woorden: [{ woord: "diversificatie", uitleg: "Spreiding over meerdere klanten, producten, markten — risico verlagen." }, { woord: "concentratierisico", uitleg: "Risico door grote afhankelijkheid van 1 klant of leverancier." }],

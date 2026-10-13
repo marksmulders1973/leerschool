@@ -56,9 +56,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **rechtsvorm**?",
-        options: ["De juridische vorm van een bedrijf", "De winst die een bedrijf maakt", "Een soort belasting voor bedrijven", "Het logo en de naam van een bedrijf"],
+        options: ["De juridische vorm waarin een bedrijf bestaat", "De vergunning die een bedrijf nodig heeft", "De inschrijving van een bedrijf bij de KvK", "De cao met regels voor het personeel"],
         answer: 0,
-        wrongHints: [null, "Winst is iets anders dan de juridische vorm.", "Belasting hángt af van de rechtsvorm, maar is het niet.", "Logo en naam horen bij de huisstijl. Waar gaat een rechtsvorm over?"],
+        wrongHints: [null, "Een vergunning heb je nodig voor bepaald werk, zoals een terras. Een rechtsvorm staat daar los van.", "Bij de KvK schrijf je je in — en dan geef je juist je rechtsvorm op. Wat is die rechtsvorm zelf?", "Een cao gaat over lonen en werktijden van personeel. Waar gaat een rechtsvorm over?"],
         uitlegPad: {
           stappen: [{ titel: "De juridische opzet", tekst: "Een rechtsvorm is de juridische 'jas' van je bedrijf: eenmanszaak, VOF, BV of NV. Die bepaalt aansprakelijkheid, belasting en oprichting." }],
           woorden: [{ woord: "rechtsvorm", uitleg: "De juridische opzet van een onderneming." }, { woord: "onderneming", uitleg: "Een bedrijf dat producten of diensten levert om winst te maken." }],
@@ -151,9 +151,9 @@ const steps = [
       },
       {
         q: "Waarom kiezen veel **zzp'ers** voor een eenmanszaak?",
-        options: ["Omdat het snel, goedkoop en met belastingvoordeel kan", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan geen administratie hoeven bij te houden", "Omdat ze dan vennootschapsbelasting betalen"],
+        options: ["Omdat het goedkoop is en belastingvoordeel geeft", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan recht hebben op een WW-uitkering", "Omdat ze dan makkelijk aandelen kunnen uitgeven"],
         answer: 0,
-        wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Ook een eenmanszaak moet een boekhouding bijhouden en btw-aangifte doen. Waar zit het voordeel dan wel?", "Een eenmanszaak betaalt inkomstenbelasting, geen vennootschapsbelasting. Waar zit het voordeel dan wel?"],
+        wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Als zzp'er heb je meestal juist géén recht op WW. Waar zit het voordeel dan wel?", "Aandelen horen bij een BV of NV. Waar zit het voordeel van een eenmanszaak dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Lage drempel", tekst: "Een eenmanszaak richt je snel en goedkoop op: alleen inschrijven bij de KvK, geen notaris, geen startkapitaal. Plus belastingvoordelen voor starters." }],
           woorden: [{ woord: "zzp'er", uitleg: "Zelfstandige zonder personeel — werkt vaak via een eenmanszaak." }, { woord: "zelfstandigenaftrek", uitleg: "Belastingvoordeel voor ondernemers: een deel van de winst is onbelast." }],
@@ -184,9 +184,9 @@ const steps = [
     checks: [
       {
         q: "Waar staat de **B** van BV voor?",
-        options: ["Besloten — aandelen op naam, kleine kring", "Bedrijf — elk bedrijf in Nederland is een BV", "Beurs — de aandelen van een BV staan op de beurs", "Belasting — een BV betaalt geen belasting"],
+        options: ["Besloten — aandelen op naam, kleine kring", "Bedrijf — een bedrijf dat een rechtspersoon is", "Beurs — de aandelen staan op de beurs", "Beperkt — eigenaars zijn beperkt aansprakelijk"],
         answer: 0,
-        wrongHints: [null, "Niet elk bedrijf is een BV; denk aan eenmanszaak of NV.", "Een BV kan juist NIET naar de beurs.", "Een BV betaalt wél belasting (VPB)."],
+        wrongHints: [null, "Een BV is wel een rechtspersoon, maar daar staat de B niet voor. Waar zegt de B iets over?", "Een BV kan juist NIET naar de beurs.", "Dat klopt wel voor een BV, maar daar staat de B niet voor. Welk woord is de tegenhanger van 'naamloze' vennootschap?"],
         uitlegPad: {
           stappen: [{ titel: "Besloten kring", tekst: "Besloten betekent: de aandelen staan op naam en blijven in een kleine, gesloten kring. Je verkoopt ze niet zomaar aan een vreemde." }],
           woorden: [{ woord: "besloten", uitleg: "Gesloten kring: bekend wie de aandeelhouders zijn, aandelen niet vrij verhandelbaar." }, { woord: "aandeel op naam", uitleg: "Een aandeel waarvan vastligt wie de eigenaar is." }],
@@ -342,9 +342,9 @@ const steps = [
       },
       {
         q: "Een vriendengroep wil **samen** een bedrijfje beginnen, weinig kosten, en vertrouwt elkaar volledig. Wat past het beste?",
-        options: ["Een VOF (vennootschap onder firma)", "Een NV met beursnotering", "Een eenmanszaak op naam van één van hen", "Een BV met €45.000 startkapitaal"],
+        options: ["Een VOF (vennootschap onder firma)", "Een stichting met de vrienden als bestuur", "Een eenmanszaak op naam van één van hen", "Een BV met de vrienden als aandeelhouders"],
         answer: 0,
-        wrongHints: [null, "Een NV met beurs is voor grote bedrijven, niet voor een vriendengroep.", "Een eenmanszaak heeft maar één eigenaar — zij willen samen.", "€45.000 startkapitaal hoort bij een NV, niet bij een BV."],
+        wrongHints: [null, "Een stichting mag geen winst uitkeren aan de mensen die erachter zitten. Past dat bij een bedrijfje?", "Een eenmanszaak heeft maar één eigenaar — zij willen samen.", "Een BV kan, maar kost notariskosten en meer administratie. Ze vertrouwen elkaar en willen weinig kosten — wat past dan?"],
         uitlegPad: {
           stappen: [{ titel: "Samen + goedkoop + vertrouwen", tekst: "Meerdere eigenaren, lage kosten, geen notaris nodig en veel onderling vertrouwen → dat past bij een VOF." }],
           woorden: [{ woord: "VOF", uitleg: "Vennootschap onder firma: 2 of meer vennoten, geen rechtspersoon, privé + hoofdelijk aansprakelijk." }],
