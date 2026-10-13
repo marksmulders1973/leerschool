@@ -1130,9 +1130,9 @@ const steps = [
       },
       {
         q: "Welk land gaf na 1945 **Marshall-hulp**?",
-        options: ["de Verenigde Staten", "Duitsland", "Spanje", "Frankrijk"],
+        options: ["de Verenigde Staten", "Duitsland", "de Sovjet-Unie", "Groot-Brittannië"],
         answer: 0,
-        wrongHints: [null, "Dat land had Nederland juist bezet.", null, null],
+        wrongHints: [null, "Dat land had Nederland juist bezet.", "De Sovjet-Unie deed niet mee aan dit plan.", "Groot-Brittannië kreeg zelf ook Marshall-hulp."],
         uitlegPad: {
           stappen: [
             {

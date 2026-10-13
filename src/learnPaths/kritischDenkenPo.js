@@ -171,7 +171,7 @@ const steps = [
       },
       {
         q: "Wie won de **Nobelprijs voor onderzoek naar denkfouten**?",
-        options: ["Daniel Kahneman", "Einstein", "Darwin", "Newton"],
+        options: ["Daniel Kahneman", "Albert Einstein", "Charles Darwin", "Isaac Newton"],
         answer: 0,
         wrongHints: [null, "Einstein kreeg zijn Nobelprijs voor natuurkunde (over licht), niet voor onderzoek naar hoe mensen denkfouten maken — past hij?", "Darwin is beroemd om de evolutietheorie en kreeg trouwens nooit een Nobelprijs — kan hij het zijn?", "Newton onderzocht zwaartekracht en beweging, ver vóór er Nobelprijzen bestonden — hoort hij hier?"],
       },
@@ -239,7 +239,7 @@ const steps = [
       { q: "Wat is **bevestigingsbias**?", options: ["Vooral info zoeken die jou gelijk geeft","Steeds twijfelen aan je eigen idee","Iets geloven omdat een bekend iemand het zegt","Iets doen omdat iedereen het doet"], answer: 0, wrongHints: [null,"Bij deze denkfout twijfel je juist weinig aan jezelf.","Dat is een andere denkfout: daar gaat het om wie iets zegt.","Dat is een andere denkfout: daar gaat het om wat de groep doet."] },
       { q: "Wat zijn **drogredenen**?", options: ["Slechte argumenten die goed lijken","Sterke argumenten die goed kloppen","Feiten die door onderzoek bewezen zijn","Ruzies over wie er gelijk heeft"], answer: 0, wrongHints: [null,"Kloppen drogredenen echt?","Een feit is geen argument dat slecht kan zijn.","Een drogreden is geen ruzie, maar een soort argument."] },
       { q: "Waarom is **stereotypering** fout?", options: ["Je beoordeelt een groep, niet de persoon","Omdat het altijd een belediging is","Omdat je het niet hardop mag zeggen","Omdat groepen niet echt bestaan"], answer: 0, wrongHints: [null,"Ook iets aardigs over een hele groep kan een stereotype zijn.","Gaat het om hardop zeggen, of om hoe je over iemand oordeelt?","Groepen bestaan wel — het gaat om hoe je oordeelt."] },
-      { q: "Wie won een **Nobelprijs voor onderzoek naar denkfouten**?", options: ["Daniel Kahneman", "Einstein", "Darwin", "Aristoteles"], answer: 0, wrongHints: [null, "Einstein kreeg een Nobelprijs voor natuurkunde.", "Darwin kreeg nooit een Nobelprijs.", "Aristoteles leefde lang vóór er Nobelprijzen bestonden."] },
+      { q: "Wie won een **Nobelprijs voor onderzoek naar denkfouten**?", options: ["Daniel Kahneman", "Albert Einstein", "Charles Darwin", "Aristoteles"], answer: 0, wrongHints: [null, "Einstein kreeg een Nobelprijs voor natuurkunde.", "Darwin kreeg nooit een Nobelprijs.", "Aristoteles leefde lang vóór er Nobelprijzen bestonden."] },
       { q: "Wat is **cherry picking**?", options: ["Alleen de feiten noemen die jou goed uitkomen","Steeds van mening veranderen","Napraten wat een bekend persoon zegt","Twee kanten eerlijk bekijken"], answer: 0, wrongHints: [null,"Bij deze denkfout verander je niet van mening — wat doe je met de feiten?","Dat is een andere denkfout: daar gaat het om wie iets zegt.","Dat is juist het tegenovergestelde."] },
       {
         q: "Wat is **fake news**?",

@@ -681,7 +681,7 @@ const steps = [
         q: "Wat is ¾ in procent?",
         options: ["75%", "34%", "43%", "7%"],
         answer: 0,
-        wrongHints: [null, "Je zette de cijfers 3 en 4 naast elkaar. Hoeveel is ¾ van 100?", "Je draaide 4 en 3 om. ¾ is bijna alles: klopt 43% dan?", "Heb je alleen de 7 van 0,75 genomen? Schuif de komma 2 plaatsen."],
+        wrongHints: [null, "Je zette de cijfers 3 en 4 naast elkaar. Hoeveel is ¾ van 100?", "Je draaide 4 en 3 om. ¾ is bijna alles: klopt 43% dan?", "¾ is bijna het geheel. Is 7% dan niet veel te weinig?"],
         uitlegPad: {
           stappen: [
             { titel: "Bouw op uit kwarten", tekst: "Je weet al hoeveel procent één kwart is. ¾ bestaat uit drie van die kwarten." },

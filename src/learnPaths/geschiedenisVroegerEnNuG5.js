@@ -799,14 +799,14 @@ const steps = [
       },
       {
         q: "Wat hoort **niet** bij de middeleeuwen?",
-        options: ["een mobiele telefoon", "een harnas", "een kasteel", "een gracht"],
+        options: ["een stoomtrein", "een harnas", "een kasteel", "een gracht"],
         answer: 0,
-        wrongHints: [null, "Dat droeg een ridder.", null, null],
+        wrongHints: [null, "Dat droeg een ridder.", "Daar woonde een ridder of een heer.", "Daarmee werd een kasteel beschermd."],
         uitlegPad: {
           stappen: [
             {
               titel: "Middeleeuwen",
-              tekst: "Middeleeuwen: ridders, harnassen en kastelen met grachten. Een **mobiele telefoon** is heel nieuw.",
+              tekst: "Middeleeuwen: ridders, harnassen en kastelen met grachten. Een **stoomtrein** kwam pas honderden jaren later.",
             },
           ],
           woorden: [
@@ -816,9 +816,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een mobiele telefoon hoort er niet bij.",
-            simpeler: "Ridders hadden geen telefoon.",
-            nogSimpeler: "telefoon",
+            basis: "Een stoomtrein hoort er niet bij.",
+            simpeler: "Ridders reden niet met de trein.",
+            nogSimpeler: "stoomtrein",
           },
         },
       },
