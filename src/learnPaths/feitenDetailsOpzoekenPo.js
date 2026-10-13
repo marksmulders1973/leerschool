@@ -62,9 +62,9 @@ Oefen de strategie met de vragen hieronder.`,
       {
         q: "Je krijgt de vraag: *\"Hoeveel eieren legt een kip per week?\"* Wat doe je volgens de zoekstrategie als EERSTE?",
         options: [
-          "De vraag goed lezen en het zoekwoord onderstrepen",
+          "De vraag lezen en het zoekwoord onderstrepen",
           "De hele tekst van begin tot eind lezen",
-          "Meteen een antwoord gokken",
+          "De titel lezen en het antwoord raden",
           "Het eerste getal uit de tekst overnemen",
         ],
         answer: 0,
@@ -72,7 +72,7 @@ Oefen de strategie met de vragen hieronder.`,
         wrongHints: [
           null,
           "Kost dat niet heel veel tijd? Denk aan een speurder: die weet eerst wát hij zoekt, en gaat dan pas zoeken.",
-          null,
+          "Kun je uit een titel weten hoeveel eieren een kip legt? Wat moet je eerst weten voordat je gaat zoeken?",
           "Staat het eerste getal van een tekst altijd in de zin waar de vraag over gaat? Wat moet je éérst weten voordat een getal je iets zegt?",
         ],
         uitlegPad: {
@@ -137,7 +137,7 @@ Oefen de strategie met de vragen hieronder.`,
           null,
           "Dat getal staat in de zin over het insect. Over welk dier gaat de vráág? Lees de zin met jouw zoekwoord.",
           "Heb je twee getallen bij elkaar opgeteld? De vraag gaat over één dier — welk getal staat in díé zin?",
-          null,
+          "Staat het getal twee in de zinnen? Lees de zin met het woord 'spin'.",
         ],
         uitlegPad: {
           stappen: [
@@ -165,16 +165,16 @@ Oefen de strategie met de vragen hieronder.`,
       {
         q: "Je wilt snel een antwoord opzoeken in een lange tekst. Wat is de SLIMSTE eerste actie?",
         options: [
-          "De vraag lezen en het zoekwoord bepalen vóórdat je naar de tekst kijkt",
-          "De tekst van begin tot eind lezen en daarna de vraag lezen",
-          "Gokken op basis van de kop van de tekst",
-          "Alle getallen in de tekst opschrijven en daarna de vraag lezen",
+          "Eerst de vraag lezen en het zoekwoord kiezen",
+          "Eerst de tekst lezen, dan pas de vraag",
+          "Eerst de kop lezen en dan het antwoord gokken",
+          "Eerst alle getallen uit de tekst opschrijven",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Als je eerst de tekst leest, vergeet je de vraag soms halverwege. Wat doe je beter vóór het lezen?",
-          null,
+          "Een kop zegt waar de tekst over gaat, maar staat het antwoord daar ook in? Wat moet je eerst weten?",
           "Niet alle vragen gaan over getallen. Wat helpt je écht om gericht te zoeken?",
         ],
         uitlegPad: {
@@ -193,16 +193,16 @@ Oefen de strategie met de vragen hieronder.`,
       {
         q: "Je hebt je zoekwoord gevonden in de tekst. Wat is de VOLGENDE stap in de zoekstrategie?",
         options: [
-          "De zin met het zoekwoord — en de zin ervoor en erna — precies lezen",
+          "De zinnen rond het zoekwoord precies lezen",
           "De rest van de tekst ook helemaal lezen",
-          "Meteen het antwoord opschrijven zonder verder te lezen",
-          "Een nieuw zoekwoord kiezen en opnieuw beginnen",
+          "Meteen het eerste woord erna opschrijven",
+          "Een nieuw zoekwoord kiezen en opnieuw zoeken",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat kost veel tijd. Je hebt al de goede plek gevonden — wat doe je op die plek?",
-          null,
+          "Staat het antwoord altijd direct na het zoekwoord? Wat moet je eerst nog doen?",
           "Je hebt het zoekwoord al gevonden! Waarom zou je opnieuw beginnen?",
         ],
         uitlegPad: {
@@ -226,7 +226,7 @@ Oefen de strategie met de vragen hieronder.`,
           null,
           "Dat getal staat in de zin over het ándere dier. Scan op 'nijlpaard' en lees alleen díé zin.",
           "Je hebt de twee getallen bij elkaar opgeteld. De vraag gaat over één dier — welk getal staat bij de naam 'nijlpaard'?",
-          null,
+          "Kijk goed naar het getal 3.200. Hoeveel cijfers heeft het?",
         ],
         uitlegPad: {
           stappen: [
@@ -243,14 +243,14 @@ Oefen de strategie met de vragen hieronder.`,
       },
       {
         q: "Vraag: *\"Op welke dag is de bibliotheek gesloten?\"* — Welk woord uit de vraag is het beste zoekwoord om mee te scannen?",
-        options: ["gesloten", "de", "welke", "is"],
+        options: ["gesloten", "de", "welke", "dag"],
         answer: 0,
         evidence: "Kies als zoekwoord een woord dat opvalt: een naam, een getal of een bijzonder woord — niet een woordje als 'de' of 'is'.",
         wrongHints: [
           null,
           "Hoe vaak komt dat woordje in een tekst voor? Tientallen keren! Zoek een woord dat maar op één plek kan staan.",
           "Staat dat woord straks in de tékst, of alleen in de vraag? Kies een woord dat je in de tekst kunt terugvinden.",
-          null,
+          "'Dag' zit in elke dagnaam: maandag, dinsdag... Vind je zo snel de goede plek?",
         ],
         uitlegPad: {
           stappen: [
@@ -270,7 +270,7 @@ Oefen de strategie met de vragen hieronder.`,
           ],
           niveaus: {
             basis: "Welk woord uit de vraag staat straks waarschijnlijk maar op één plek in de tekst?",
-            simpeler: "Drie van de vier opties zijn kleine woordjes die in elke zin kunnen staan. Welk woord blijft over?",
+            simpeler: "Twee opties zijn kleine woordjes die in elke zin kunnen staan, en 'dag' zit in elke dagnaam. Welk woord blijft over?",
             nogSimpeler: "Welk woord vertelt precies waar de vraag over gaat: over open en dicht zijn?",
           },
         },
@@ -283,8 +283,8 @@ Oefen de strategie met de vragen hieronder.`,
         wrongHints: [
           null,
           "Die stad staat in de zin over Lars. Over wie gaat de vraag? Scan op 'Fenna'.",
-          null,
-          null,
+          "Staat Zwolle in een van de zinnen? Scan op de naam 'Fenna'.",
+          "Wordt Amsterdam genoemd? Lees de zin waarin 'Fenna' staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -354,7 +354,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           null,
           "Dat reuzegetal gaat over de bijen zélf, niet over de honing. Scan op het woord 'potten'.",
           "Dat getal staat wel in de goede alinea, maar het gaat over euro's. Lees de zin met 'potten' nog eens precies.",
-          null,
+          "Dat getal gaat over de bijenkasten. Scan op het woord 'potten'.",
         ],
         uitlegPad: {
           stappen: [
@@ -387,7 +387,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
         wrongHints: [
           null,
           "Die dag lijkt qua klank op wat er staat — maar lees de dag in de tekst letter voor letter over.",
-          null,
+          "Lees de dag in de tekst letter voor letter over. Staat daar donderdag?",
           "Komt die dag überhaupt in de tekst voor? Scan op de naam 'Joost' en lees precies wat er staat.",
         ],
         uitlegPad: {
@@ -419,15 +419,15 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           "Nieuwe planten voor de bloemenstrook",
           "Een derde bijenkast",
           "Nieuwe potten voor de honing",
-          "Cadeautjes voor groep zeven",
+          "Een bord met informatie over de bijen",
         ],
         answer: 0,
         evidence: "Van het geld kocht de school nieuwe planten voor de bloemenstrook.",
         wrongHints: [
           null,
           "Klinkt logisch bij een bijenproject — maar staat het er ook écht? Zoek de zin die begint met 'Van het geld'.",
-          null,
-          null,
+          "Staat er dat er nieuwe potten gekocht zijn? Zoek de zin die begint met 'Van het geld'.",
+          "Het bord wordt in alinea 2 genoemd. Zoek de zin die begint met 'Van het geld'.",
         ],
         uitlegPad: {
           stappen: [
@@ -458,9 +458,9 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Welke groep wordt bij de bloemenstrook genoemd? Scan op het woord 'gezaaid'.",
           "Die groep wordt in de tekst niet bij de bloemenstrook genoemd. Scan op het woord 'bloemenstrook' of 'gezaaid'.",
-          null,
+          "Wordt groep vijf in de tekst genoemd? Scan op het woord 'bloemenstrook'.",
         ],
         uitlegPad: {
           stappen: [
@@ -486,9 +486,9 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Staan er regels in de tekst? Scan op het woord 'bord' en lees wat daar staat.",
           "Staat er in de tekst iets over een foto? Scan op 'bord' en lees wat daar staat.",
-          null,
+          "Lees de zin met 'bord' helemaal: waarover gaat de informatie?",
         ],
         uitlegPad: {
           stappen: [
@@ -511,7 +511,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
         wrongHints: [
           null,
           "Dat getal gaat over het áántal potten, niet over de prijs. Welke zin noemt euro's?",
-          null,
+          "Dertig zit in het getal van de bijen. Scan op het woord 'euro'.",
           "Staat dat bedrag ergens in deze tekst? Scan op het woord 'euro' en lees wat er écht staat.",
         ],
         uitlegPad: {
@@ -546,7 +546,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           null,
           "Dat getal gaat over de potten honing. Scan op het woord 'bijenkasten'.",
           "Dat getal hoort bij de prijs van een pot. Zoek de zin met 'bijenkasten'.",
-          null,
+          "Lees de eerste zin van de tekst nog eens. Hoeveel kasten staan er?",
         ],
         uitlegPad: {
           stappen: [
@@ -601,7 +601,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           null,
           "Dat getal gaat over de potten honing. Scan op 'zomer'.",
           "Lees het getal in de tekst nog eens heel precies, letter voor letter.",
-          null,
+          "Lees het getal in de tekst helemaal: staat er alleen 'dertig'?",
         ],
         uitlegPad: {
           stappen: [
@@ -677,7 +677,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
           null,
           "Het woord 'kaartje' staat er inderdaad niet letterlijk — maar welk woord in de tekst betekent hetzelfde?",
           "Lees het bedrag in de tekst nog eens heel precies. Neem het exact over, niet ongeveer.",
-          null,
+          "Staat er ergens dat het gratis is? Lees de zin met 'toegangsbewijs'.",
         ],
         uitlegPad: {
           stappen: [
@@ -716,8 +716,8 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
         wrongHints: [
           null,
           "Die dag hoort bij een andere les. Scan op het woord 'zwemles' en lees precies díé zin.",
-          null,
-          null,
+          "Lees de tijd in de zin over de zwemles nog eens. Staat daar 'twee uur'?",
+          "Die dag hoort bij de voetbaltraining, en klopt de tijd? Scan op 'zwemles'.",
         ],
         uitlegPad: {
           stappen: [
@@ -745,9 +745,9 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
       {
         q: "Je zoekwoord uit de vraag staat nérgens letterlijk in de tekst. Wat doe je dan?",
         options: [
-          "Zoeken naar een synoniem: een ander woord dat hetzelfde betekent",
+          "Zoeken naar een woord dat hetzelfde betekent",
           "Antwoorden dat het niet in de tekst staat",
-          "De vraag overslaan en nooit meer terugkomen",
+          "De vraag overslaan en verder gaan",
           "Zelf een antwoord verzinnen dat goed klinkt",
         ],
         answer: 0,
@@ -755,7 +755,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
         wrongHints: [
           null,
           "Schrijvers gebruiken vaak een ander woord voor hetzelfde ding. Welk trucje helpt je dan tóch verder?",
-          null,
+          "Misschien staat het antwoord er wel, maar met een ander woord. Wat kun je proberen?",
           "Bij zoekend lezen moet je antwoord uit de tekst komen. Wat kun je nog proberen voordat je iets bedenkt?",
         ],
         uitlegPad: {
@@ -794,7 +794,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
           null,
           "Maandag staat in het rijtje open dagen. Lees de zin nog eens: van welke dag tot welke dag is de bibliotheek open?",
           "Vrijdag staat ook in het rijtje. Kijk eens welke dagen er niet worden genoemd in 'maandag tot en met vrijdag'.",
-          null,
+          "Woensdag en donderdag liggen tussen maandag en vrijdag. Zijn ze dan open of dicht?",
         ],
         uitlegPad: {
           stappen: [
@@ -817,7 +817,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
           null,
           "Dat is de vertrektijd van de bus. Scan op 'trein' en lees die zin.",
           "Let op de volgorde van de cijfers: heb je de uren en minuten misschien omgedraaid?",
-          null,
+          "Staat 11 ergens in de zinnen? Scan op 'trein' en neem de tijd exact over.",
         ],
         uitlegPad: {
           stappen: [
@@ -841,7 +841,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
           null,
           "Dat getal gaat over meters, niet over treden. Scan op het woord 'treden'.",
           "Heb je de cijfers misschien omgedraaid? Lees het getal in de tekst nog eens cijfer voor cijfer.",
-          null,
+          "Staat er '2'? Neem het hele getal in de zin met 'treden' over.",
         ],
         uitlegPad: {
           stappen: [
@@ -876,7 +876,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
           null,
           "Die tijd hoort bij de pauze. Scan op het woord 'film'.",
           "Lees de tijd in de tekst nog eens heel precies. Staat daar 'zeven'?",
-          null,
+          "Staat 'acht uur' in de zin over de film? Scan op het woord 'film'.",
         ],
         uitlegPad: {
           stappen: [
@@ -923,7 +923,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
         q: "*\"Bij de wedstrijd won Tim de eerste prijs. Zijn zus Eva werd tweede, en hun neef Bas werd derde.\"* — Wie werd tweede?",
         options: ["Eva", "Tim", "Bas", "Lisa"],
         answer: 0,
-        wrongHints: [null, "Die naam hoort bij de eerste prijs. Scan op het woord 'tweede'.", null, null],
+        wrongHints: [null, "Die naam hoort bij de eerste prijs. Scan op het woord 'tweede'.", "Die naam hoort bij de derde prijs. Scan op het woord 'tweede'.", "Komt Lisa in de zinnen voor? Scan op het woord 'tweede'."],
         uitlegPad: {
           stappen: [
             {
@@ -986,7 +986,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           null,
           "Die dag staat in het rijtje 'van dinsdag tot en met...' — zijn dat de open dagen of de dichte dagen?",
           "Op die dag gaat het museum juist ópen na de dichte dag. Scan op het woord 'gesloten'.",
-          null,
+          "Woensdag valt tussen dinsdag en zondag. Is het museum dan open of dicht?",
         ],
         uitlegPad: {
           stappen: [
@@ -1020,7 +1020,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           null,
           "Dat is de prijs voor grote mensen. Is Roos een volwassene of een kind?",
           "Gratis geldt alleen voor de állerkleinsten. Lees precies tot welke leeftijd dat is — en vergelijk met de leeftijd van Roos.",
-          null,
+          "Staat 'tien euro' in de folder? Lees de zin onder 'Prijzen'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1052,7 +1052,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
         evidence: "De speurtocht duurt ongeveer drie kwartier en eindigt bij de schatkist in de kelder.",
         wrongHints: [
           null,
-          null,
+          "Lees het woord achter 'drie' precies: drie wát? Hoeveel minuten is dat?",
           "In de folder staat het woord 'drie' — maar drie wát? Lees het hele woord dat erachter staat.",
           "Eén kwartier is 15 minuten. Hoeveel kwartieren noemt de folder?",
         ],
@@ -1088,7 +1088,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           null,
           "Daar eindigt iets anders — de speurtocht. Scan op het woord 'proefjes'.",
           "Daar vind je de uilenzaal. Zoek de zin waarin 'proefjes' staat.",
-          null,
+          "Op de begane grond leer je over het oude fort. Scan op het woord 'proefjes'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1117,17 +1117,17 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
       {
         q: "Wat vind je op de begane grond van het Uilenfort?",
         options: [
-          "Hoe het fort vroeger werd verdedigd",
+          "Uitleg over hoe het fort werd verdedigd",
           "De uilenzaal met opgezette uilen",
-          "Het Ontdeklab op zolder",
-          "De schatkist in de kelder",
+          "Het Ontdeklab met proefjes",
+          "De schatkist van de speurtocht",
         ],
         answer: 0,
         wrongHints: [
           null,
           "De uilenzaal is op de eerste verdieping. Scan op 'begane grond'.",
-          "Het Ontdeklab is op de zólder. Zoek de zin over de begane grond.",
-          null,
+          "Het Ontdeklab is op een andere verdieping. Zoek de zin die begint met 'Op de begane grond'.",
+          "De speurtocht eindigt op een andere plek. Zoek de zin die begint met 'Op de begane grond'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1154,8 +1154,8 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
         wrongHints: [
           null,
           "Zes jaar noemt de folder bij de leeftijd waarvoor het museum bedoeld is. Maar de vraag gaat over de grens voor grátis toegang. Lees de prijzen-zin nog eens.",
-          null,
-          null,
+          "Twaalf jaar noemt de folder bij de leeftijd waarvoor het museum bedoeld is. Lees de prijzen-zin nog eens.",
+          "Staat 18 jaar in de folder? Lees de laatste zin onder 'Prijzen'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1184,7 +1184,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           null,
           "Zoek de zin over groepen — staat daar iets over bellen, of over een andere manier?",
           "Tel de groep eens: twaalf kinderen plus een meester. Is dat meer of minder dan tien personen? Lees dan de regel over groepen.",
-          null,
+          "Hulphonden mogen mee, maar moet het? Lees de zin over groepen.",
         ],
         uitlegPad: {
           stappen: [
@@ -1219,7 +1219,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           null,
           "Dat is de prijs voor kinderen. Lees de zin onder 'Prijzen' tot het einde.",
           "Voor wie is het gratis volgens de folder? Lees de laatste zin onder 'Prijzen'.",
-          null,
+          "Staat 'tien euro' in de folder? Lees de zin onder 'Prijzen' tot het einde.",
         ],
         uitlegPad: {
           stappen: [
@@ -1279,7 +1279,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           null,
           "Daar vind je de opgezette uilen. Scan op het woord 'eindigt'.",
           "Daar haal je de speurkaart, aan het begin. Waar eindigt de tocht?",
-          null,
+          "In het Ontdeklab doe je proefjes. Scan op het woord 'eindigt'.",
         ],
         uitlegPad: {
           stappen: [
