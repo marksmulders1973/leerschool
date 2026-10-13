@@ -55,9 +55,9 @@ const steps = [
     checks: [
       {
         q: "Welke is een **formele aanhef**?",
-        options: ["Geachte heer Jansen,", "Hoi Tom!", "Hey daar,", "Lieve Anna,"],
+        options: ["Geachte heer Jansen,", "Hallo meneer Jansen,", "Geachte meneer Tom,", "Geachte Jansen,"],
         answer: 0,
-        wrongHints: [null, "'Hoi' met een voornaam en een uitroepteken — gebruik je dat in een brief aan een bedrijf of juist tegen een vriend?", "'Hey daar' klinkt losjes en spreektalig — past dat in een nette brief aan een instantie?", "'Lieve' gebruik je voor iemand die je goed kent — hoort dat bij een zakelijke, afstandelijke brief?"],
+        wrongHints: [null, "'Hallo' is een begroeting uit de spreektaal. Begin je zo een brief aan een bedrijf?", "'Geachte' is formeel, maar past een voornaam met 'meneer' daarbij? Hoe spreek je een onbekende netjes aan?", "Klinkt alleen 'Geachte' met een achternaam beleefd? Wat ontbreekt er tussen die twee woorden?"],
       },
       {
         q: "**Zeer formele** ondertekening?",
@@ -85,9 +85,9 @@ const steps = [
       },
       {
         q: "Welke afsluiting hoort bij een **formele brief**?",
-        options: ["Met vriendelijke groet,", "Met hartelijke groetjes,", "Liefs en tot snel,", "Doei en tot ziens,"],
+        options: ["Met vriendelijke groet,", "Met vriendelijke groetjes,", "Groeten en tot ziens,", "Groet en een fijne dag,"],
         answer: 0,
-        wrongHints: [null, "'Groetjes' is een verkleinwoord dat je onder een kaartje aan familie zet. Past dat bij een bedrijf?", "'Liefs' schrijf je aan iemand die je goed kent. Is dat bij een formele brief zo?", "'Doei' is spreektaal. Zou je zo een sollicitatiebrief afsluiten?"],
+        wrongHints: [null, "'Groetjes' is een verkleinwoord dat je onder een kaartje aan familie zet. Past dat bij een bedrijf?", "'Tot ziens' zeg je bij het weggaan; het is spreektaal. Hoort dat onder een formele brief?", "Een losse 'groet' met een wens klinkt als een snel mailtje aan een collega. Welke vaste slotformule hoort bij een formele brief?"],
       },
     ],
   },
@@ -159,7 +159,7 @@ const steps = [
         q: "*'Ik liep door de straat'* = welk perspectief?",
         options: ["Ik-perspectief", "Hij/zij-perspectief", "Alwetend", "Personaal perspectief"],
         answer: 0,
-        wrongHints: [null, "Staat er 'hij' of 'zij' in de zin? Kijk naar het eerste woord.", "Een alwetende verteller weet wat iedereen denkt. Over hoeveel personen gaat deze zin?", "Een personale verteller vertelt in de hij-vorm en kijkt mee met één personage. Staat er 'hij'?"],
+        wrongHints: [null, "Staat er 'hij' of 'zij' in de zin?", "Een alwetende verteller weet wat iedereen denkt. Over hoeveel personen gaat deze zin?", "Een personale verteller vertelt in de hij-vorm en kijkt mee met één personage. Staat er 'hij'?"],
       },
       {
         q: "Welke tijd vooral bij **verslagen**?",
@@ -169,9 +169,9 @@ const steps = [
       },
       {
         q: "Wat is **'show, don't tell'**?",
-        options: ["Laat zien wat een personage doet en voelt", "Vertel precies hoe een personage zich voelt", "Gebruik plaatjes bij je verhaal", "Gebruik vooral dialoog in je verhaal"],
+        options: ["Beschrijf gedrag; de lezer raadt zelf het gevoel", "Benoem duidelijk welk gevoel een personage heeft", "Maak het verhaal levendig met illustraties", "Vertel het verhaal vooral via veel dialogen"],
         answer: 0,
-        wrongHints: [null, "Dat is juist 'tell': je noemt het gevoel. Wat betekent 'show' dan?", "'Show' gaat hier niet over plaatjes, maar over hoe je schrijft.", "Dialoog kan helpen, maar daar gaat het niet om."],
+        wrongHints: [null, "Een gevoel letterlijk noemen ('hij was bang') is juist 'tell'. Wat is dan 'show'?", "'Show' gaat hier niet over plaatjes, maar over hoe je schrijft. Wat doe je met woorden?", "Dialoog kan helpen, maar je kunt ook in een dialoog alles letterlijk vertellen. Waar gaat het bij 'show' om?"],
       },
       {
         q: "Een **verhaal** heeft meestal welke 3 delen?",
@@ -214,9 +214,9 @@ const steps = [
       },
       {
         q: "Een samenvatting moet **neutraal** zijn — wat betekent dit?",
-        options: ["Geen eigen mening", "Geen moeilijke woorden", "Geen voorbeelden", "Geen citaten"],
+        options: ["Zonder je eigen oordeel erin", "Zonder de mening van de schrijver", "Zonder moeilijke woorden", "Zonder voorbeelden of cijfers"],
         answer: 0,
-        wrongHints: [null, "Moeilijke woorden vermijden gaat over leesbaarheid. Waar gaat 'neutraal' over?", "Voorbeelden laat je meestal weg, maar dat heeft met de lengte te maken. Wat betekent 'neutraal'?", "Citaten laat je weg omdat je in eigen woorden schrijft. Wat betekent 'neutraal' dan?"],
+        wrongHints: [null, "De mening van de schrijver is vaak de kern van de tekst. Mag die uit een samenvatting weg?", "Moeilijke woorden vermijden gaat over leesbaarheid. Waar gaat 'neutraal' over?", "Voorbeelden en losse cijfers laat je meestal weg, maar dat heeft met de lengte te maken. Wat betekent 'neutraal'?"],
       },
       {
         q: "*'**Open vraag**: noem 1 signaalwoord voor reden in het Nederlands.'*",
