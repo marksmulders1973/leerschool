@@ -448,12 +448,12 @@ const steps = [
     checks: [
       {
         q: "*Hoe spel je het woord voor 'een vaart met water die dwars door de stad loopt'?*",
-        options: ["gracht", "graht", "graggt", "grakt"],
+        options: ["gracht", "graht", "grachd", "grakt"],
         answer: 0,
         wrongHints: [
           null,
           "Er mist een letter: met welke twee letters schrijf je de ch-klank?",
-          "Dubbele g + t bestaat niet in het Nederlands.",
+          "Verleng het woord: 'grachten'. Hoor je dan een d of een t?",
           "Grakt zou met k zijn — maar de klank is een 'g/ch'-klank, geen k.",
         ],
         uitlegPad: {
@@ -463,7 +463,7 @@ const steps = [
           woorden: [{ woord: "cht-combinatie", uitleg: "g/ch + t-klank wordt geschreven als 'cht'. Vast." }],
           theorie: "Vuistregel: hoor je een g/ch-klank gevolgd door t? Schrijf 'cht'. Voorbeelden: gracht, lucht, slecht, recht, vrucht, dochter.",
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht voor t-klank." }],
-          basiskennis: [{ onderwerp: "Niet kt, niet ggt", uitleg: "De klank lijkt soms op k (grakt) of dubbele g (graggt) maar die spelling bestaat niet." }],
+          basiskennis: [{ onderwerp: "Niet kt, niet chd", uitleg: "De klank lijkt soms op k (grakt), en aan het eind hoor je geen verschil tussen d en t (grachd). Verleng het woord: grachten → t." }],
           niveaus: {
             basis: "G/ch + t-klank = cht → gracht.",
             simpeler: "Hoor je een 'ch'-klank en daarna een 't'? Dan schrijf je bijna altijd 'cht'. Gracht hoort daarbij.",
@@ -493,13 +493,13 @@ const steps = [
     checks: [
       {
         q: "*Welke spelling is juist?*",
-        options: ["zomervakantie", "zomer vakantie", "zomer-vakantie", "zomerVakantie"],
+        options: ["zomervakantie", "zomer vakantie", "zomer-vakantie", "zomersvakantie"],
         answer: 0,
         wrongHints: [
           null,
           "In het Nederlands schrijf je samenstellingen aaneen — geen spatie.",
           "Geen koppelteken nodig: er is geen klinker-botsing of andere reden.",
-          "CamelCase wordt in het Nederlands niet gebruikt voor samenstellingen.",
+          "Hoor je een s tussen 'zomer' en 'vakantie' als je het woord uitspreekt?",
         ],
         uitlegPad: {
           stappen: [
@@ -840,12 +840,12 @@ const steps = [
       },
       {
         q: "*Wat is het meervoud van 'man'?*",
-        options: ["mannen", "manen", "manens", "manne"],
+        options: ["mannen", "manen", "mans", "manne"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is meervoud van 'maan' (lange aa). Maar de vraag gaat over 'man' — korte a.",
-          "Geen Nederlands meervoud eindigt op -ens.",
+          "Een meervoud op -s krijgen vooral woorden op -el, -er of -en, zoals 'tafels'. Eindigt 'man' daarop?",
           "Het Nederlandse meervoud eindigt op -en, niet -e.",
         ],
         uitlegPad: {
