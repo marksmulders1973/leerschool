@@ -61,7 +61,7 @@ const steps = [
           null,
           "'Koffie' is iets wat je drinkt. Kun je het vervoegen, zoals ik koffie, hij kofft?",
           "Heerlijk zegt hoe iets is. Kun je het vervoegen, zoals ik heerlijk, hij heerlijkt?",
-          "'Vandaag' zegt wanneer. Verandert het als je de zin in een andere tijd zet: 'De koffie smaakte gisteren heerlijk'?",
+          "'Vandaag' zegt wanneer. Welk woord in de zin verandert als je de zin in de verleden tijd zet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Pv = vervoegd werkwoord", tekst: "Smaakt is vervoegd naar 'koffie' (3e persoon enkv)." }],
@@ -614,7 +614,7 @@ const steps = [
         wrongHints: [
           null,
           "'Vandaag' zegt wanneer. Stel de vraag: wie of wat heeft het feest georganiseerd?",
-          "Stel de vraag: wat heeft mijn moeder georganiseerd? Is dat ook wie het organiseerde?",
+          "'Een feest' is wat er georganiseerd werd. Stel de vraag: wie of wat heeft het georganiseerd?",
           "'Voor ons' zegt voor wie het feest is. Heeft 'ons' het feest georganiseerd?",
         ],
         uitlegPad: {

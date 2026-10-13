@@ -218,7 +218,7 @@ const steps = [
         q: "Welk woord is het werkwoord in: *De kat drinkt melk*?",
         options: ["drinkt", "kat", "melk", "de"],
         answer: 0,
-        wrongHints: [null, "'Kat' is een dier. Kun je er 'de' voor zetten? Wat voor woord is het dan?", "Kun je 'melk' vervoegen, zoals ik drink, jij drinkt?", "'De' staat vóór 'kat'. Vertelt dat woord wat de kat doet?"],
+        wrongHints: [null, "'Kat' is een dier. Kun je er 'de' voor zetten? Wat voor woord is het dan?", "Melk is iets wat je drinkt of koopt. Kun je 'melk' vervoegen, zoals je een werkwoord vervoegt bij ik, jij en hij?", "'De' staat vóór 'kat'. Vertelt dat woord wat de kat doet?"],
         uitlegPad: {
           stappen: [{ titel: "Drinkt = doen", tekst: "Drinkt is wat de kat doet → werkwoord." }],
           woorden: [{ woord: "werkwoord", uitleg: "actie of toestand" }],
