@@ -75,7 +75,7 @@ const steps = [
         q: "Schaal **1:100.000**. **3 cm** op kaart = ... in werkelijkheid?",
         options: ["3 km", "300 m", "30 m", "30 km"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer omrekening.", "Veel te weinig.", "Verkeerde berekening."],
+        wrongHints: [null, "Reken eerst 3 × 100.000 cm uit en zet dat om naar meters. Kom je dan op 300 m?", "30 m is nog geen half voetbalveld. Is 3 × 100.000 cm zo weinig?", "30 km: tel de nullen nog eens. Hoeveel cm zit er in 1 km?"],
         uitlegPad: {
           stappen: [
             { titel: "Onthoud truc 1:100.000", tekst: "Bij schaal 1:100.000 is 1 cm op kaart = 100.000 cm = 1.000 m = 1 km in het echt." },
@@ -96,7 +96,7 @@ const steps = [
         q: "Wat staat in de **legenda** van een kaart?",
         options: ['Uitleg van symbolen en kleuren', 'De schaal en de afstanden', 'Het aantal plaatsen op de kaart', 'De naam van de kaartenmaker'],
         answer: 0,
-        wrongHints: [null, 'Schaal staat meestal apart.', 'Plaatsen tel je zelf op de kaart. Wat leg je uit in een legenda?', 'Soms in colofon, niet legenda.'],
+        wrongHints: [null, 'Schaal staat meestal apart.', 'Plaatsen tel je zelf op de kaart. Wat leg je uit in een legenda?', 'De maker staat soms klein in een hoekje. Wat leg je uit in een legenda?'],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een legenda?", tekst: "Een legenda is het 'verklaring-blok' op de kaart waarin staat wat elk symbool of kleur betekent." },
@@ -114,9 +114,9 @@ const steps = [
       },
       {
         q: "Schaal **1:50.000**. Op kaart **4 cm**. In het echt?",
-        options: ["2 km", "200 m", "200 km", "0,2 km"],
+        options: ["2 km", "200 m", "200 km", "20 km"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer omrekening cm→km.", "Veel te veel.", "Te weinig."],
+        wrongHints: [null, "4 × 50.000 = 200.000 cm. Hoeveel cm zit er in 1 m — is dat echt maar 200 m?", "200 km: je hebt de cm gerekend alsof het meters waren. Hoeveel cm zit er in 1 km?", "20 km: tel de nullen nog eens. 4 × 50.000 cm is hoeveel cm, en hoeveel km is dat?"],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig kaart met schaal", tekst: "4 cm × 50.000 = 200.000 cm." },
@@ -137,7 +137,7 @@ const steps = [
         q: "Op een kompasroos staat boven meestal welke windrichting?",
         options: ["Noord (N)", "Oost (O)", "Zuid (Z)", "West (W)"],
         answer: 0,
-        wrongHints: [null, "Rechts staat oost.", "Onder staat zuid.", "Links staat west."],
+        wrongHints: [null, "Oost is de kant waar de zon opkomt. Wijst de pijl op een kaart daarheen?", "Zuid is de kant van de middagzon. Wijst de pijl op een kaart daarheen?", "West is de kant waar de zon ondergaat. Wijst de pijl op een kaart daarheen?"],
         uitlegPad: {
           stappen: [
             { titel: "Kompasroos = vier richtingen", tekst: "Op elke landkaart staat een kompasroos: een symbool met vier letters die de richtingen aanwijzen." },
@@ -161,13 +161,13 @@ const steps = [
         },
       },
       {
-        q: "In welk **kaartvak** ligt een stad? *'Vak C3'* betekent ...",
-        options: ["Kolom C, rij 3", "Bladzijde 3, hoofdstuk C", "3 cm vanaf C", "3e plaats vanaf C"],
+        q: "In de index van een atlas staat bij een stad *'vak C3'*. Wat betekent dat?",
+        options: ["Kolom C, rij 3", "Bladzijde 3 van hoofdstuk C", "3 cm rechts van de letter C", "De 3e stad in de lijst bij C"],
         answer: 0,
-        wrongHints: [null, "Een kaartvak gaat niet over bladzijden of hoofdstukken.", "Niet over afstand.", "Niet over volgorde."],
+        wrongHints: [null, "Een kaartvak is een plek óp de kaart, geen bladzijde. Wat staat er langs de rand van de kaart?", "C3 is geen afstand. Kijk langs de randen van de kaart: waar staan letters en cijfers?", "C3 wijst geen plek in een lijst aan. Waar op de kaart vind je de C en de 3?"],
       },
       {
-        q: "Tussen **N en O** op kompas: welke windrichting?",
+        q: "Welke windrichting ligt op het kompas tussen **N en O**?",
         options: ['NO (noord-oost)', 'ZO (zuid-oost)', 'NW (noord-west)', 'ZW (zuid-west)'],
         answer: 0,
         wrongHints: [null, "Tussen Z en O.", "Tussen N en W.", "Tussen Z en W."],
@@ -200,7 +200,7 @@ const steps = [
         q: "Schaal **1:25.000**. Op kaart **2 cm**. In het echt?",
         options: ["500 m", "5 km", "50 m", "2,5 km"],
         answer: 0,
-        wrongHints: [null, "Veel te veel.", "Te weinig — controleer cm→m.", "Verkeerde berekening."],
+        wrongHints: [null, "5 km = 500.000 cm. Is 2 × 25.000 zo veel?", "Te weinig — controleer cm→m.", "2,5 km = 250.000 cm. Reken 2 × 25.000 nog eens precies uit."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: schaal toepassen", tekst: "Schaal 1:25.000 betekent: 1 cm op kaart = 25.000 cm in echt. Dus 2 cm = 2 × 25.000 = **50.000 cm**." },
@@ -228,7 +228,7 @@ const steps = [
         q: "Op een kaart staat een **bruine vlek**. Wat betekent dat meestal?",
         options: ["Berg of heuvel", "Rivier", "Bos", "Stad"],
         answer: 0,
-        wrongHints: [null, "Rivier = blauw.", "Bos = groen.", "Stad = grijs/rood-vakje."],
+        wrongHints: [null, "Is een rivier op een kaart bruin? Denk aan de kleur van water.", "Kijk in de legenda welke kleur bos heeft. Bruin wordt voor iets anders gebruikt.", "Steden zijn op de meeste kaarten niet bruin. Kijk in de legenda welke kleur ze hebben."],
         uitlegPad: {
           stappen: [
             { titel: "Kaart-kleuren", tekst: "Bij topografische kaarten staat bruin meestal voor **hoogte** (berg/heuvel)." },
@@ -246,10 +246,10 @@ const steps = [
         },
       },
       {
-        q: "Schaal **1:200.000**. Op kaart **5 cm**. Werkelijkheid in **km**?",
+        q: "Schaal **1:200.000**. Op de kaart is het **5 cm**. Hoeveel **km** is dat in werkelijkheid?",
         options: ["10 km", "1 km", "100 km", "5 km"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Verkeerde berekening."],
+        wrongHints: [null, "1 km = 100.000 cm. Is 5 × 200.000 cm zo weinig?", "100 km = 10.000.000 cm. Reken 5 × 200.000 nog eens uit en tel de nullen.", "5 km: heb je alleen de 5 cm overgenomen? Vermenigvuldig eerst met 200.000."],
       },
       {
         q: "Op kompas: **ZW** ligt tussen welke twee?",
@@ -261,13 +261,13 @@ const steps = [
         q: "Tussen welke richtingen ligt **NO**?",
         options: ["N en O", "Z en O", "N en W", "Z en W"],
         answer: 0,
-        wrongHints: [null, "ZO.", "NW.", "ZW."],
+        wrongHints: [null, "Dat is ZO.", "Dat is NW.", "Dat is ZW."],
       },
       {
-        q: "Schaal **1:10.000** is **groter of kleiner** dan 1:100.000?",
+        q: "Is schaal **1:10.000** **groter of kleiner** dan schaal 1:100.000?",
         options: ["Groter", "Kleiner", "Gelijk", "Niet te vergelijken"],
         answer: 0,
-        wrongHints: [null, "Niet — 1:10.000 = stadsplattegrond met meer detail.", "Niet gelijk.", "Wel vergelijkbaar."],
+        wrongHints: [null, "Kijk niet alleen naar het getal: bij welke schaal is alles minder verkleind?", "Het ene getal is 10× zo groot als het andere. Wat betekent dat voor de verkleining?", "Je kunt ze wel vergelijken: op welke kaart wordt een straat groter getekend?"],
         uitlegPad: {
           stappen: [
             { titel: "Schaal verklaard", tekst: "1:10.000 betekent: 1 cm op kaart = 10.000 cm = 100 m in het echt. Veel detail!" },
@@ -288,10 +288,10 @@ const steps = [
         },
       },
       {
-        q: "Op kaart: **groene vlek** betekent meestal?",
+        q: "Wat betekent een **groene vlek** op een kaart meestal?",
         options: ["Bos / park", "Stad", "Water", "Berg"],
         answer: 0,
-        wrongHints: [null, "Stad = grijs/oranje.", "Water = blauw.", "Berg = bruin."],
+        wrongHints: [null, "Stad = grijs/oranje.", "Water = blauw.", "Hoge bergen krijgen op een kaart een andere kleur dan groen. Kijk in de legenda."],
         uitlegPad: {
           stappen: [
             { titel: "Kaartkleuren = symbolen", tekst: "Op landkaarten heeft elke kleur een vaste betekenis. Hierdoor herken je in één oogopslag wat er staat." },
@@ -316,10 +316,10 @@ const steps = [
         },
       },
       {
-        q: "Welk kaart-element vertelt **hoe lang 1 cm in echt** is?",
-        options: ["Schaal-balk", "Legenda", "Kompas", "Titel"],
+        q: "Welk onderdeel van een kaart vertelt **hoe lang 1 cm op de kaart in het echt** is?",
+        options: ["Schaalbalk", "Legenda", "Kompas", "Titel"],
         answer: 0,
-        wrongHints: [null, "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "Niet schaal."],
+        wrongHints: [null, "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "De titel geeft de kaart een naam. Waar lees je afstanden af?"],
         uitlegPad: {
           stappen: [
             { titel: "4 vaste kaart-elementen", tekst: "Op elke landkaart staan altijd 4 belangrijke dingen: TITEL (waar de kaart over gaat), LEGENDA (uitleg kleuren/symbolen), KOMPAS (windrichtingen), en SCHAALBALK (hoe groot het is in echt)." },
@@ -350,10 +350,10 @@ const steps = [
         wrongHints: [null, "ZW = tussen Z+W.", "NO = tussen N+O.", "ZO = tussen Z+O."],
       },
       {
-        q: "Een **fietsroute** op kaart staat aangegeven met?",
-        options: ["Stippellijn", "Doorgetrokken lijn", "Dikke lijn", "Vlek"],
+        q: "Hoe staat een **fietsroute** meestal op een kaart aangegeven?",
+        options: ["Stippellijn", "Doorgetrokken lijn", "Dikke lijn", "Blauwe lijn"],
         answer: 0,
-        wrongHints: [null, "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Vlek = vlak."],
+        wrongHints: [null, "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Een blauwe lijn is op een kaart meestal water: een rivier of kanaal."],
         uitlegPad: {
           stappen: [
             { titel: "Lijnsoorten op kaarten", tekst: "Op een kaart staan verschillende lijnsoorten. Elk soort heeft een vaste betekenis." },
@@ -378,10 +378,10 @@ const steps = [
         },
       },
       {
-        q: "Schaal **1:2.500** stadsplattegrond. Op kaart **2 cm**. Werkelijk?",
+        q: "Een stadsplattegrond heeft schaal **1:2.500**. Op de kaart is het **2 cm**. Hoe ver is dat in werkelijkheid?",
         options: ["50 m", "500 m", "2,5 km", "50 cm"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Veel te veel.", "Te weinig."],
+        wrongHints: [null, "500 m = 50.000 cm. Is 2 × 2.500 zo veel? Tel de nullen.", "2,5 km is een hele wandeling. Reken 2 × 2.500 cm uit en zet het om naar meters.", "Je hebt goed gedeeld door 100, maar welke eenheid krijg je dan: cm of m?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: cm op kaart × schaal", tekst: "Schaal 1:2.500 betekent: 1 cm op kaart = 2.500 cm in echt. 2 cm op kaart = 2 × 2.500 = **5.000 cm**." },
@@ -409,13 +409,13 @@ const steps = [
         q: "Op een kaart van **schaal 1:10.000** is een park **5 cm**. **Werkelijk in meter**?",
         options: ["500 m", "50 m", "5 km", "50 km"],
         answer: 0,
-        wrongHints: [null, "10× te weinig.", "Reken nog eens om: 50.000 cm is geen 5 km.", "Veel te veel."],
+        wrongHints: [null, "10× te weinig.", "Reken nog eens om: 50.000 cm is geen 5 km.", "50 km = 5.000.000 cm. Is 5 × 10.000 zo veel?"],
       },
       {
         q: "Welk **windstreek-symbool** staat meestal **bovenaan** op een kaart?",
         options: ["N (noord)", "Z (zuid)", "O (oost)", "W (west)"],
         answer: 0,
-        wrongHints: [null, "Onderaan.", "Rechts.", "Links."],
+        wrongHints: [null, "Kijk naar de noordpijl op een kaart: welke letter staat bij die pijl?", "Op een kaart wijst één pijl naar boven. Welke letter hoort bij die pijl?", "Welke letter staat bij de pijl die op de kaart omhoog wijst?"],
       },
       {
         q: "Een kaart heeft schaal **1:200.000**. Hoe groot is **2 cm in werkelijkheid** in **km**?",
@@ -445,10 +445,10 @@ const steps = [
         wrongHints: [null, 'Dat lees je af met de schaal.', 'De maker staat vaak klein in een hoekje, niet in de legenda.', 'Daarvoor heb je een historische kaart of een geschiedenisboek.'],
       },
       {
-        q: "Op een kaart wijst **N** naar het noorden. Wat staat **rechts** ervan?",
-        options: ["O (oost)", "Z (zuid)", "W (west)", "N (noord)"],
+        q: "Op een kaart wijst de **N** naar boven. Welke windrichting is dan **rechts**?",
+        options: ["O (oost)", "Z (zuid)", "W (west)", "NW (noordwest)"],
         answer: 0,
-        wrongHints: [null, "Onderaan.", "Links.", "Bovenaan."],
+        wrongHints: [null, "Z ligt tegenover N, niet ernaast. Draai vanaf N een kwartslag met de klok mee.", "Draai vanaf N een kwartslag met de klok mee: welke letter kom je dan tegen?", "Rechts van N staat een hoofdrichting, geen tussenrichting. Draai een kwartslag met de klok mee."],
         uitlegPad: {
           stappen: [
             { titel: "Windroos", tekst: "N boven, Z onder, O rechts, W links. Geheugentruc: 'Nooit Oversteken Zonder Wachten' (met de klok mee)." },
@@ -466,15 +466,15 @@ const steps = [
       },
       {
         q: "Een **plattegrond** is een kaart van...",
-        options: ['Een klein gebied, van bovenaf', 'De hele wereld op één blad', 'Een gebied zoals het vroeger was', 'Alleen de zeeën en oceanen'],
+        options: ['Een klein gebied, van bovenaf', 'De hele wereld op één blad', 'Een gebied zoals het vroeger was', 'Een gebied met de hoogte van de bergen'],
         answer: 0,
-        wrongHints: [null, 'Dat is een wereldkaart. Hoe groot is een plattegrond?', 'Een plattegrond gaat niet over vroeger. Denk aan de plattegrond van je school.', 'Zeeën en oceanen vind je op een zeekaart of wereldkaart.'],
+        wrongHints: [null, 'Dat is een wereldkaart. Hoe groot is een plattegrond?', 'Een plattegrond gaat niet over vroeger. Denk aan de plattegrond van je school.', 'Hoogte zie je op een hoogtekaart. Denk aan de plattegrond van je school.'],
       },
       {
-        q: "Wat staat in een **kaart-titel**?",
-        options: ["Waar de kaart over gaat", "De prijs", "Het land van herkomst", "De datum van vandaag"],
+        q: "Wat vertelt de **titel** van een kaart?",
+        options: ["Waar de kaart over gaat", "Wat de symbolen betekenen", "Hoe groot de afstanden zijn", "Waar het noorden is"],
         answer: 0,
-        wrongHints: [null, "Geen.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Dat staat in de legenda. Wat lees je als eerste boven een kaart?", "Afstanden lees je af met de schaal. Wat vertelt de kop boven de kaart?", "Het noorden zie je aan de noordpijl. Wat vertelt de kop boven de kaart?"],
       },
       {
         q: "Op een **wereldkaart** is **Nederland** vrij **klein** omdat...",
@@ -484,9 +484,9 @@ const steps = [
       },
       {
         q: "Welke richting ligt **tussen Noord en Oost**?",
-        options: ["Noordoost (NO)", "Zuidwest (ZW)", "West (W)", "Zuid (Z)"],
+        options: ["Noordoost (NO)", "Noordwest (NW)", "Zuidoost (ZO)", "Oost (O)"],
         answer: 0,
-        wrongHints: [null, "Tegenoverliggend.", "Niet — andere kant.", "Tegenoverliggend."],
+        wrongHints: [null, "NW ligt tussen Noord en West. Welke twee richtingen noemt de vraag?", "ZO ligt tussen Zuid en Oost. Welke twee richtingen noemt de vraag?", "Oost is zelf een hoofdrichting. Wat ligt er precies tússen Noord en Oost?"],
       },
       {
         q: "Op een **topografische kaart** in **Nederland** staan vaak ___?",
@@ -531,7 +531,7 @@ const steps = [
         q: "Welke **richting** ligt **tegenover west**?",
         options: ["Oost", "Zuid", "Noord", "Zuidwest"],
         answer: 0,
-        wrongHints: [null, "90° draaiing.", "90° draaiing.", "Zuidwest ligt juist vlak naast west."],
+        wrongHints: [null, "Zuid ligt een kwartslag van west af, niet ertegenover. Wat ligt er recht tegenover?", "Noord ligt ook een kwartslag van west af. Wat ligt er een halve slag verder?", "Zuidwest ligt juist vlak naast west."],
       },
       {
         q: "**Een plaats in een atlas** zoek je snel op via ___?",
@@ -541,9 +541,9 @@ const steps = [
       },
       {
         q: "Op een plattegrond staat **'schaal 1 : 2.000'**. Wat betekent dat?",
-        options: ["1 cm op de kaart = 2.000 cm (20 m) in het echt", "De kaart is 2.000 cm groot", "Er passen 2.000 huizen op", "1 km op de kaart = 2.000 km in het echt"],
+        options: ["1 cm op de kaart = 2.000 cm in het echt", "1 cm op de kaart = 2.000 m in het echt", "2.000 cm op de kaart = 1 cm in het echt", "1 cm op de kaart = 200 cm in het echt"],
         answer: 0,
-        wrongHints: [null, "Schaal zegt niets over de grootte van het papier.", "Schaal gaat over afstanden, niet over aantallen.", "De verhouding klopt, maar denk kleiner: op een kaart meet je in centimeters."],
+        wrongHints: [null, "Kijk naar de eenheid: bij een schaal staan beide kanten in dezelfde eenheid.", "Dan zou de kaart groter zijn dan het echt. Welk getal hoort bij de kaart?", "Tel de nullen van de schaal nog eens."],
         explanation: "Schaal 1 : 2.000 = alles in het echt is 2.000 keer zo groot. 1 cm op de kaart = 2.000 cm = **20 m** in het echt.",
       },
       {
@@ -583,9 +583,9 @@ const steps = [
       },
       {
         q: "Een kaart heeft schaal **1 : 100.000**, een andere **1 : 10.000**. Welke kaart toont **meer detail**?",
-        options: ["De kaart met schaal 1 : 10.000", "De kaart met schaal 1 : 100.000", "Allebei evenveel", "Dat hangt af van de kleur"],
+        options: ["De kaart met schaal 1 : 10.000", "De kaart met schaal 1 : 100.000", "Allebei evenveel", "Dat kun je aan de schaal niet zien"],
         answer: 0,
-        wrongHints: [null, "Hoe gróter het getal achter de 1, hoe meer er verkleind is — dus minder detail.", "De verkleining verschilt een factor 10 — dat scheelt veel detail.", "Kleur heeft niets met schaal te maken."],
+        wrongHints: [null, "Hoe gróter het getal achter de 1, hoe meer er verkleind is — dus minder detail.", "De verkleining verschilt een factor 10 — dat scheelt veel detail.", "De schaal zegt juist hoeveel er verkleind is. Welke kaart is minder verkleind?"],
         explanation: "Bij 1 : 10.000 is alles maar 10.000× verkleind (i.p.v. 100.000×) — straten en huizen blijven zichtbaar: **meer detail**.",
         uitlegPad: {
           stappen: [
@@ -674,10 +674,10 @@ const steps = [
         },
       },
       {
-        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Totaal**?",
+        q: "In een tabel staat: ma 12, di 8, wo 18, do 22, vr 30. Hoeveel is dat **samen**?",
         options: ["90", "70", "100", "60"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer optelling.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "70 is te weinig. Tel nog eens op en schrijf na elk getal de tussenstand op.", "100 is te veel. Ben je ergens een tiental te veel gaan tellen?", "60: heb je de 30 van vrijdag meegeteld?"],
         uitlegPad: {
           stappen: [
             { titel: "Optellen", tekst: "12 + 8 + 18 + 22 + 30 = 90." },
@@ -698,7 +698,7 @@ const steps = [
         q: "Cirkeldiagram: voetbal 50%, hockey 25%, zwemmen 15%, **rest** = ?",
         options: ["10%", "20%", "5%", "25%"],
         answer: 0,
-        wrongHints: [null, "Te veel — controleer 100% min de 3.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Tel 50 + 25 + 15 eerst op. Hoeveel blijft er dan over van 100?", "5%? Kijk of je goed hebt opgeteld: 50 + 25 + 15 = ?", "25% is het stuk hockey. Hoeveel blijft er over na alle drie de sporten?"],
         uitlegPad: {
           stappen: [
             { titel: "Alles samen = 100%", tekst: "Voetbal 50% + hockey 25% + zwemmen 15% = 90%. Rest = 100 − 90 = 10%." },
@@ -736,25 +736,25 @@ const steps = [
         },
         options: ["Eerst stijgen, dan dalen", "Steeds stijgen", "Steeds dalen", "Geen patroon"],
         answer: 0,
-        wrongHints: [null, "Niet — daalt na 25.", "Niet — stijgt eerst.", "Wel patroon zichtbaar."],
+        wrongHints: [null, "Kijk naar álle getallen, ook die aan het eind. Worden ze steeds groter?", "Kijk naar álle getallen, ook die aan het begin. Worden ze steeds kleiner?", "Zet de getallen op een rij en kijk wanneer ze groter en wanneer ze kleiner worden."],
       },
       {
         q: "Tabel: ma 22, di 18, wo 26, do 30, vr 24. **Hoeveel meer op donderdag dan dinsdag**?",
         options: ["12", "8", "6", "48"],
         answer: 0,
-        wrongHints: [null, "Verkeerde 2 dagen vergeleken.", "Verkeerde 2 dagen.", "Optelling, geen verschil."],
+        wrongHints: [null, "Welke twee getallen heb je van elkaar afgetrokken? Zoek donderdag en dinsdag op.", "Is 24 wel het getal van dinsdag? Kijk nog eens in de tabel.", "Je hebt opgeteld. Hoeveel méér is iets: optellen of aftrekken?"],
       },
       {
-        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Gemiddeld per dag**?",
+        q: "In een tabel staat: ma 12, di 8, wo 18, do 22, vr 30. Hoeveel is het **gemiddeld per dag**?",
         options: ["18", "20", "15", "90"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Dat is totaal."],
+        wrongHints: [null, "20 is te veel. Tel eerst alles op en deel dan door het aantal dagen.", "15: heb je door het goede aantal dagen gedeeld?", "90 is alles samen. Wat moet je daarna nog doen om het gemiddelde te krijgen?"],
       },
       {
         q: "Je wilt laten zien dat de **3e klas** 25 leerlingen heeft en de **4e klas** 30. Welk type grafiek **vergelijkt zulke groepen het beste**?",
         options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Tijdlijn"],
         answer: 0,
-        wrongHints: [null, "Lijngrafiek toont verandering door tijd.", "Cirkel = verdeling van geheel.", "Niet voor vergelijken aantallen."],
+        wrongHints: [null, "Je zet twee klassen naast elkaar en wilt de aantallen goed vergelijken. Lukt dat het makkelijkst met dit soort grafiek?", "Cirkel = verdeling van geheel. Wil je hier delen van één geheel laten zien?", "Een tijdlijn zet gebeurtenissen op volgorde van tijd. Past dat bij twee klassen?"],
         uitlegPad: {
           stappen: [
             { titel: "Welk diagram waarvoor?", tekst: "Drie veelvoorkomende diagrammen, elk met hun eigen doel:" },
@@ -810,10 +810,10 @@ const steps = [
         },
       },
       {
-        q: "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. **Rest**?",
+        q: "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. Hoeveel procent is de **rest**?",
         options: ["15%", "20%", "10%", "25%"],
         answer: 0,
-        wrongHints: [null, "Niet juist.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Tel 35 + 25 + 25 nog eens op. Hoeveel blijft er over van 100?", "10%? Kijk of je goed hebt opgeteld: 35 + 25 + 25 = ?", "25% is het stuk van rood of groen. Wat blijft er over?"],
         uitlegPad: {
           stappen: [
             { titel: "Cirkel = altijd 100%", tekst: "Alle stukjes van een cirkeldiagram zijn SAMEN altijd 100%. Geen meer, geen minder." },
@@ -837,16 +837,16 @@ const steps = [
         },
       },
       {
-        q: "Tabel-rij ma=5 di=10 wo=8 do=15 vr=12. **Mediaan** (middelste)?",
+        q: "In een tabel staat: ma 5, di 10, wo 8, do 15, vr 12. Wat is de **mediaan** (het middelste getal)?",
         options: ["10", "8", "15", "12"],
         answer: 0,
-        wrongHints: [null, "Tweede laagst.", "Hoogst.", "Tweede hoogst."],
+        wrongHints: [null, "8 staat in de tabel in het midden. Maar heb je de getallen eerst op volgorde gezet, van klein naar groot?", "15 is het grootste getal. De mediaan is het middelste getal na sorteren.", "12: heb je de getallen eerst op volgorde gezet, van klein naar groot?"],
       },
       {
-        q: "Welk type grafiek voor **verandering door tijd** (bv. temperatuur over week)?",
-        options: ["Lijngrafiek", "Staafdiagram", "Cirkeldiagram", "Geen"],
+        q: "Welk soort grafiek gebruik je voor **verandering door de tijd** (bijvoorbeeld de temperatuur in een week)?",
+        options: ["Lijngrafiek", "Staafdiagram", "Cirkeldiagram", "Beeldgrafiek"],
         answer: 0,
-        wrongHints: [null, "Staaf = vergelijken groepen.", "Cirkel = verdeling van 1 geheel.", "Er IS wel een passend grafiek-type — denk aan een doorlopende lijn over tijd."],
+        wrongHints: [null, "Een staafdiagram zet losse groepen naast elkaar. Laat het mooi zien hoe iets elke dag een beetje verandert?", "Cirkel = verdeling van 1 geheel. Verdeel je hier iets in stukken?", "Een beeldgrafiek telt aantallen met plaatjes. Hoe laat je zien hoe iets dag na dag verandert?"],
         uitlegPad: {
           stappen: [
             { titel: "Grafiek-type kiezen", tekst: "Voor verandering over tijd → lijngrafiek (punten verbonden, trend zichtbaar)." },
@@ -867,10 +867,10 @@ const steps = [
         },
       },
       {
-        q: "Tabel: 100/200/300/400/500. Gemiddelde?",
+        q: "In een tabel staan de getallen 100, 200, 300, 400 en 500. Wat is het **gemiddelde**?",
         options: ["300", "250", "350", "1500"],
         answer: 0,
-        wrongHints: [null, "Verkeerd berekend.", "Niet juist.", "Dat is totaal."],
+        wrongHints: [null, "Alles samen is 1.500. Deel je dat door 5 of door 6?", "350: tel alles eerst op en deel dan door het aantal getallen.", "1.500 is alles samen. Wat moet je daarna nog doen?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: tel alles op", tekst: "Tel alle getallen bij elkaar op. 100 + 200 + 300 + 400 + 500 = **1.500**." },
@@ -895,10 +895,10 @@ const steps = [
         },
       },
       {
-        q: "Cirkeldiagram: blauw 25%, geel 25%, **rest** = ?",
+        q: "Cirkeldiagram: blauw 25%, geel 25%. Hoeveel procent is de **rest**?",
         options: ["50%", "25%", "100%", "75%"],
         answer: 0,
-        wrongHints: [null, "Je hebt maar één stuk genomen — tel eerst alle bekende stukken op en trek dat van 100 af.", "Niet alles.", "Te veel."],
+        wrongHints: [null, "Je hebt maar één stuk genomen — tel eerst alle bekende stukken op en trek dat van 100 af.", "100% is de hele cirkel. Er zijn al stukken blauw en geel.", "75%: je hebt maar één stuk van 100 afgehaald. Tel blauw en geel eerst samen."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkel = altijd 100%", tekst: "Een cirkeldiagram is samen altijd 100%. Wat we kennen + wat we niet kennen = 100." },
@@ -922,10 +922,10 @@ const steps = [
         },
       },
       {
-        q: "Staafdiagram: hoogste staaf = ?",
-        options: ["Grootste waarde", "Kleinste waarde", "Niets", "Gemiddelde"],
+        q: "Wat laat de **hoogste staaf** in een staafdiagram zien?",
+        options: ["Grootste waarde", "Kleinste waarde", "Het meest recente jaar", "Gemiddelde"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel iets.", "Gemiddelde is lijn-tussenwaarde."],
+        wrongHints: [null, "Kijk naar de getallen langs de as: hoort bij een hoge staaf een klein of een groot getal?", "De hoogte van een staaf hangt niet af van het jaar. Kijk naar de as met getallen.", "Het gemiddelde is geen staaf. Waar staat de hoogte van één staaf voor?"],
         uitlegPad: {
           stappen: [
             { titel: "Staaf-hoogte = waarde", tekst: "Op een staafdiagram laat elke staaf een waarde zien. Hoe HOGER de staaf, hoe GROTER het getal." },
@@ -950,10 +950,10 @@ const steps = [
         },
       },
       {
-        q: "**Mediaan** van 5,7,7,8,10?",
-        options: ["7", "8", "5", "37"],
+        q: "Wat is de **mediaan** van 5, 7, 7, 8, 10?",
+        options: ["7", "8", "5", "7,4"],
         answer: 0,
-        wrongHints: [null, "Niet middelste.", "Laagste.", "Som."],
+        wrongHints: [null, "8 is het vierde getal van de vijf. Welk getal staat precies in het midden?", "5 is het kleinste getal. De mediaan staat in het midden van de rij.", "7,4 is het gemiddelde. De mediaan is het middelste getal van de rij."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de mediaan?", tekst: "De mediaan is het **MIDDELSTE** getal als je ze van klein naar groot zet. Niet het gemiddelde — gewoon de middelste!" },
@@ -978,10 +978,10 @@ const steps = [
         },
       },
       {
-        q: "Tabel: bedrag €10/€20/€30/€40/€50. **Som**?",
+        q: "In een tabel staan de bedragen €10, €20, €30, €40 en €50. Wat is de **som** (alles samen)?",
         options: ["€150", "€100", "€50", "€30"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Dat is alleen het grootste bedrag.", "Gemiddelde."],
+        wrongHints: [null, "€100: heb je alle vijf de bedragen opgeteld?", "Dat is alleen het grootste bedrag.", "€30 is het gemiddelde. Wat krijg je als je alles bij elkaar optelt?"],
         uitlegPad: {
           stappen: [
             { titel: "Slim optellen", tekst: "Combineer paartjes: 10+50=60, 20+40=60, 30 over. Som = 60+60+30 = 150." },
@@ -1030,13 +1030,13 @@ const steps = [
         q: "Een **staafdiagram** is vooral handig om...",
         options: ["Categorieën met elkaar te vergelijken", "Een verandering door tijd te tonen", "Een geheel in delen te splitsen", "Een plek op een kaart aan te wijzen"],
         answer: 0,
-        wrongHints: [null, "Daarvoor gebruik je een lijngrafiek.", "Daarvoor cirkeldiagram.", "Daarvoor gebruik je een kaart, geen diagram."],
+        wrongHints: [null, "Een verandering door de tijd laat je liever met een ander soort grafiek zien. Waar zijn losse staven handig voor?", "Een geheel in delen splitsen kan beter met een ander soort grafiek. Waar zijn losse staven handig voor?", "Daarvoor gebruik je een kaart, geen diagram."],
       },
       {
         q: "Een **lijngrafiek** toont vooral...",
-        options: ["Verandering in de tijd", "Een vergelijking van producten", "Een geheel verdeeld", "Een lijst met namen"],
+        options: ["Verandering in de tijd", "Een vergelijking van producten", "Een geheel verdeeld", "Het gemiddelde van een groep"],
         answer: 0,
-        wrongHints: [null, "Daarvoor staafdiagram.", "Daarvoor cirkeldiagram.", "Geen grafiek-type."],
+        wrongHints: [null, "Producten vergelijken kan, maar daar is een ander soort grafiek beter voor. Wat laat een lijn zien die van links naar rechts loopt?", "Een geheel verdeeld zie je beter in een ander soort grafiek. Wat laat een lijn zien die van links naar rechts loopt?", "Een gemiddelde is één getal; daar heb je geen lijn voor nodig."],
         uitlegPad: {
           stappen: [
             { titel: "Lijngrafiek = tijd-verloop", tekst: "Een lijngrafiek heeft tijd op de x-as (horizontaal) en een meetbare hoeveelheid op de y-as." },
@@ -1063,7 +1063,7 @@ const steps = [
         q: "Bij een **staafdiagram** is de **hoogste staaf**...",
         options: ["De grootste waarde", "De kleinste waarde", "Het gemiddelde", "Het verschil"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet aflezen aan hoogte.", "Niet één staaf."],
+        wrongHints: [null, "Kijk naar de getallen langs de as: hoort bij een hoge staaf een klein of een groot getal?", "Het gemiddelde lees je niet af aan één staaf. Waar staat de hoogte van één staaf voor?", "Een verschil zie je tussen twee staven, niet aan één staaf."],
       },
       {
         q: "**Cirkeldiagram**: appels=50%, peren=30%, rest=druiven. Druiven is ___?",
@@ -1099,16 +1099,16 @@ const steps = [
         wrongHints: [null, "Bijna gelijke getallen geven bijna even hoge staven.", "De hoogte van een staaf zegt iets over de grootte van het getal.", "De hoogte van een staaf hoort bij een getal op de as — kijk ernaar."],
       },
       {
-        q: "**Lijngrafiek** met dalende lijn = ___ door de tijd?",
+        q: "Wat laat een **lijngrafiek** met een **dalende lijn** zien?",
         options: ["daling / afname", "groei / toename", "geen verandering", "eerst stijgen, dan dalen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — er IS verandering.", "Dan zou de lijn eerst omhoog gaan."],
+        wrongHints: [null, "Bij groei gaat een lijn omhoog. Hoe loopt deze lijn?", "Geen verandering geeft een vlakke lijn. Is een dalende lijn vlak?", "Dan zou de lijn eerst omhoog gaan."],
       },
       {
         q: "Tabel **'Leerlingen per klas'**: groep 5 = 24, groep 6 = 26, groep 7 = 25. **Totaal**?",
-        options: ["75", "26", "24", "100"],
+        options: ["75", "74", "65", "100"],
         answer: 0,
-        wrongHints: [null, "Dat is een groep.", "Dat is een groep.", "Niet — bereken 24+26+25."],
+        wrongHints: [null, "74: controleer het laatste stukje van je optelling nog eens.", "65: ben je bij het optellen een tiental kwijtgeraakt?", "100 is te veel. Tel de drie groepen nog eens rustig op."],
       },
       {
         q: "**Welke as** is meestal **horizontaal** in een grafiek?",

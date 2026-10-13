@@ -1512,7 +1512,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "**1750 g** in **kg**?",
+        q: "Hoeveel **kg** is **1750 g**?",
         options: ["1,75","17,5","175","0,175"],
         answer: 0,
         wrongHints: [null,"Te veel — heb je de komma maar 2 plekken verschoven?","Veel te veel — heb je de komma maar 1 plek verschoven?","Te weinig — heb je 4 plekken verschoven ipv 3?"],
@@ -1526,7 +1526,7 @@ const steps = [
         },
       },
       {
-        q: "**0,8 L** in **mL**?",
+        q: "Hoeveel **mL** is **0,8 L**?",
         options: ["800","80","8000","8"],
         answer: 0,
         wrongHints: [null,"Te weinig — L → mL is 3 stappen omlaag, dus komma 3 naar rechts.","Veel te veel — heb je 4 plekken verschoven?","Te weinig — heb je maar 1 plek verschoven?"],
@@ -1555,7 +1555,7 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**275 cm** in **m**?",
+        q: "Hoeveel **m** is **275 cm**?",
         options: ["2,75", "27,5", "0,275", "2750"],
         answer: 0,
         wrongHints: [
@@ -1598,7 +1598,7 @@ const steps = [
         },
       },
       {
-        q: "**0,6 kg** in **g**?",
+        q: "Hoeveel **g** is **0,6 kg**?",
         options: ["600", "60", "6000", "6"],
         answer: 0,
         wrongHints: [
@@ -1641,7 +1641,7 @@ const steps = [
         },
       },
       {
-        q: "**3,25 L** in **mL**?",
+        q: "Hoeveel **mL** is **3,25 L**?",
         options: ["3250", "325", "32.500", "32,5"],
         answer: 0,
         wrongHints: [
@@ -1684,7 +1684,7 @@ const steps = [
         },
       },
       {
-        q: "**85 mm** in **cm**?",
+        q: "Hoeveel **cm** is **85 mm**?",
         options: ["8,5", "0,85", "850", "0,085"],
         answer: 0,
         wrongHints: [
@@ -1727,7 +1727,7 @@ const steps = [
         },
       },
       {
-        q: "**6,4 km** in **m**?",
+        q: "Hoeveel **m** is **6,4 km**?",
         options: ["6400", "640", "64.000", "64"],
         answer: 0,
         wrongHints: [
@@ -1770,7 +1770,7 @@ const steps = [
         },
       },
       {
-        q: "**45 cL** in **L**?",
+        q: "Hoeveel **L** is **45 cL**?",
         options: ["0,45", "4,5", "0,045", "450"],
         answer: 0,
         wrongHints: [
@@ -1813,7 +1813,7 @@ const steps = [
         },
       },
       {
-        q: "**1,08 m** in **cm**?",
+        q: "Hoeveel **cm** is **1,08 m**?",
         options: ["108", "10,8", "1080", "180"],
         answer: 0,
         wrongHints: [
