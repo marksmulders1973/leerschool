@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Welke lees-strategie gebruik je om **1 jaartal** te vinden in een lange tekst?",
-        options: ["Scannen", "Skim", "Detail-lezen", "Vertalen"],
+        options: ["Scannen", "Skimmen", "Detail-lezen", "Vertalen"],
         answer: 0,
-        wrongHints: [null, "Skim = overzicht, niet specifiek zoeken.", "Te langzaam — alleen voor relevante alinea.", "Vertalen kost veel tijd. Hoe vind je snel één jaartal in een lange tekst?"],
+        wrongHints: [null, "Skimmen geeft je snel een overzicht van de hele tekst. Zoek je hier een overzicht, of één los gegeven?", "Detail-lezen doe je pas in de alinea die je nodig hebt. Hoe vind je die alinea met het jaartal snel?", "Vertalen kost veel tijd. Hoe vind je snel één jaartal in een lange tekst?"],
         uitlegPad: {
           stappen: [{ titel: "Scan = specifiek zoeken", tekst: "**Scannen** = oogspotlight zoekt **1 specifiek element**: getal, naam, jaar, datum. Je leest NIET alle woorden — alleen typografisch opvallende elementen. Voor jaartal: zoek 4-cijferige getallen (1900-2030)." }],
           woorden: [{ woord: "scannen", uitleg: "Snel doorzoeken van tekst naar specifieke informatie." }, { woord: "skim", uitleg: "Globaal lezen voor algemene indruk." }],
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "Wat is het beste **tijdsbudget** per VMBO-CSE-vraag (120 min / ~40 vragen)?",
-        options: ["~3 minuten","30 seconden","8 minuten","Geen tijd budgetteren"],
+        options: ["~3 minuten","30 seconden","8 minuten","~5 minuten"],
         answer: 0,
-        wrongHints: [null, "Te snel — leesvaardigheid heeft tijd nodig.", "Te langzaam — kom je niet door.", "Niet — tijdsdruk is hoog."],
+        wrongHints: [null, "30 seconden × 40 is maar 20 minuten. Lees je een tekst en een vraag in een halve minuut?", "8 × 40 = 320 minuten. Hoeveel tijd heb je in totaal?", "5 × 40 = 200 minuten. Past dat in 120 minuten?"],
         uitlegPad: {
           stappen: [{ titel: "120 / 40 = 3 min", tekst: "**120 min ÷ 40 vragen = 3 min**. Trek af: ~3 min tekst-overzicht + ~10 min eind-check = 120 − 13 = 107 min / 40 ≈ **2,7 min per vraag**. Dus reken op **ongeveer 3 minuten**, inclusief het lezen van de tekst. Gebruik als richtlijn — sommige vragen sneller, andere langzamer." }],
           theorie: "Toets-strategie-tip: stel **timer per pagina** (~10 min) zodat je weet of je achterloopt.",
@@ -76,9 +76,9 @@ const steps = [
       },
       {
         q: "Wat doe je met een **moeilijke vraag** waar je vastloopt?",
-        options: ["Overslaan + later terug","Lang nadenken tot je 'm hebt","Willekeurig invullen","Stoppen met examen"],
+        options: ["Overslaan en er later naar terugkeren","Blijven puzzelen tot je het antwoord hebt","Meteen gokken en niet meer terugkijken","De hele tekst opnieuw grondig doorlezen"],
         answer: 0,
-        wrongHints: [null, "Niet — tijd is kostbaar.", "Doe op het einde als laatste optie.", "Zeker niet."],
+        wrongHints: [null, "Zo raak je tijd kwijt die je voor andere vragen nodig hebt. Wat levert meer punten op?", "Gokken kan aan het eind nog. Heb je later misschien tijd om het opnieuw te proberen?", "Een hele tekst opnieuw lezen kost veel tijd. Hoe zorg je dat je eerst de makkelijke punten binnenhaalt?"],
         uitlegPad: {
           stappen: [{ titel: "Tijd-budget bewaken", tekst: "Per moeilijke vraag **maximaal 2,5 min** investeren. Daarna **overslaan + door**. Aan het einde terug met **frisse blik** — vaak los je hem dan op. Anders: op het laatst gokken (~25% kans bij 4 opties)." }],
           theorie: "Toets-tip: zet een markering (sterretje) bij overgeslagen vragen op je antwoord-blad.",
@@ -96,9 +96,9 @@ const steps = [
     checks: [
       {
         q: "Welke strategie voor: *'What does 'this' refer to in line 12?'*",
-        options: ["Kijk in vorige zin/zinnen","Lees hele tekst","Zoek synoniem in tekst","Negeer de vraag"],
+        options: ["Kijk in de zinnen ervoor","Lees de hele tekst opnieuw","Zoek een synoniem in de tekst","Kijk naar de titel van de tekst"],
         answer: 0,
-        wrongHints: [null, "Te langzaam — verwijswoord is altijd lokaal.", "Niet relevant voor verwijswoord.", "Niet — moet wel beantwoorden."],
+        wrongHints: [null, "Een verwijswoord wijst bijna altijd naar iets dichtbij. Moet je daarvoor de hele tekst lezen?", "Een synoniem helpt bij een vraag naar de betekenis van een woord. Wat vraagt 'refer to'?", "Een verwijswoord wijst naar iets wat net genoemd is. Staat de titel dichtbij regel 12?"],
         uitlegPad: {
           stappen: [{ titel: "Verwijswoord = lokale context", tekst: "Verwijswoorden ('this / that / they / it / he / she') verwijzen naar iets in **vorige 1-3 zinnen**. Lees terug. Bv. 'The boys came home. **They** were tired.' → They = the boys." }],
           woorden: [{ woord: "verwijswoord", uitleg: "Woord dat terugwijst naar eerder genoemd iets (this/that/it/they/he/she)." }],
@@ -121,7 +121,7 @@ const steps = [
         q: "*'What is the writer's purpose?'* — welk vraagtype is dit?",
         options: ["Bedoel-/intentie-vraag","Feitelijke vraag","Conclusie-vraag","Woord-betekenis-vraag"],
         answer: 0,
-        wrongHints: [null, "Niet feitelijk — gaat over bedoeling.", "Bijna — conclusie zit dichtbij maar 'purpose' = bedoeling.", "Niet — geen specifiek woord."],
+        wrongHints: [null, "Een feitelijke vraag vraagt naar iets wat letterlijk in de tekst staat. Wat betekent het woord 'purpose'?", "Een conclusie-vraag vraagt wat je uit de tekst afleidt. Wat betekent het woord 'purpose'?", "Bij een woord-betekenis-vraag staat er een woord tussen aanhalingstekens. Zie je dat hier?"],
         uitlegPad: {
           stappen: [{ titel: "Purpose = doel = intentie", tekst: "**Purpose** vraagt naar **bedoeling** van schrijver. Mogelijke antwoorden: to inform (informeren), to entertain (vermaken), to warn (waarschuwen), to persuade (overtuigen). Vergelijk OBIA in NL." }],
           woorden: [{ woord: "purpose", uitleg: "Bedoeling, doel — waarom schreef de schrijver dit?" }],
@@ -131,7 +131,7 @@ const steps = [
       },
       {
         q: "Wat betekent het signaalwoord **'therefore'**?",
-        options: ["Daarom / dus (gevolg)","Echter (contrast)","Omdat (reden)","Bijvoorbeeld"],
+        options: ["Daarom / dus (gevolg)","Echter (contrast)","Omdat (reden)","Bijvoorbeeld (voorbeeld)"],
         answer: 0,
         wrongHints: [null, "Echter = however.", "Omdat = because.", "Bijvoorbeeld = for example."],
         uitlegPad: {
@@ -162,9 +162,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **'unbelievable'** waarschijnlijk?",
-        options: ["Niet te geloven","Erg lief","Heel snel","Vol vertrouwen"],
+        options: ["Niet te geloven","Goed te geloven","Niet meer gelovig","Vol vertrouwen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen verband.", "Niet — andere context.", "Niet — verkeerde prefix."],
+        wrongHints: [null, "Kijk naar het begin van het woord: un-. Wat doet un- met believable?", "Believe betekent hier 'geloven dat iets waar is', niet geloven in een god. Wat betekent -able?", "Vol vertrouwen is 'confident'. Welke delen zie je in un-believ-able?"],
         uitlegPad: {
           stappen: [{ titel: "un + believe + able", tekst: "**un-** (niet) + **believe** (geloven) + **-able** (kunnen) = 'niet kunnen worden geloofd' = **'niet te geloven'**. Drie woord-onderdelen + ezelsbruggetje 'un' = NIET." }],
           theorie: "CSE-pattern: 'un-X-able' = vaak 'kan niet X worden'. Unstoppable, unreachable, unbeatable.",
@@ -175,7 +175,7 @@ const steps = [
         q: "Welk prefix betekent **'opnieuw'**?",
         options: ["Re-","Un-","Dis-","Mis-"],
         answer: 0,
-        wrongHints: [null, "Niet — un = NIET.", "Niet — dis = tegenovergesteld.", "Niet — mis = verkeerd."],
+        wrongHints: [null, "Un- betekent 'niet', zoals in unhappy. Is dat 'opnieuw'?", "Dis- maakt het tegenovergestelde, zoals in dislike. Is dat 'opnieuw'?", "Mis- betekent 'verkeerd', zoals in misunderstand. Is dat 'opnieuw'?"],
         uitlegPad: {
           stappen: [{ titel: "Re = again", tekst: "**Re-** = again (opnieuw). Rewrite (herschrijven), rebuild (herbouwen), reload (herladen), renew (vernieuwen)." }],
           theorie: "CSE-favoriet: re-write / re-think / re-action vragen. Snap re- = je hebt 5+ woorden in 1 keer.",
@@ -196,9 +196,9 @@ const steps = [
       },
       {
         q: "Wat betekent **'hopeless'**?",
-        options: ["Zonder hoop","Vol hoop","Hopelijk","Snel"],
+        options: ["Zonder hoop","Vol hoop","Hopelijk","Een beetje hoop"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — dat is 'hopeful'.", "Niet — dat is 'hopefully'.", "Niet — andere root."],
+        wrongHints: [null, "Vol hoop is 'hopeful', met -ful. Welke uitgang heeft hopeless?", "Hopelijk is 'hopefully'. Welke uitgang heeft hopeless?", "-less lijkt op 'less' (minder), maar als uitgang betekent het iets sterkers. Wat betekent careless?"],
         uitlegPad: {
           stappen: [{ titel: "hope + less", tekst: "**hope** (hoop) + **-less** (zonder/geen) = 'zonder hoop' / hopeloos. **-less** = altijd 'zonder X'. Homeless = zonder huis. Penniless = zonder geld. Useless = zonder nut." }],
           theorie: "CSE-truc: -less = zonder, -ful = vol (van). Hopeful (vol hoop) vs Hopeless (zonder hoop).",
@@ -209,7 +209,7 @@ const steps = [
         q: "Wat is **synoniem** voor 'huge'?",
         options: ["enormous","tiny","slow","old"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling — klein.", "Niet — snelheid.", "Niet — leeftijd."],
+        wrongHints: [null, "Tiny betekent 'piepklein'. Is dat hetzelfde als huge?", "Slow gaat over snelheid. Gaat huge over snelheid?", "Old gaat over leeftijd. Gaat huge over leeftijd?"],
         uitlegPad: {
           stappen: [{ titel: "Huge = enormous = big", tekst: "**Synoniemen** voor groot: huge / enormous / big / large / giant / massive / vast / tremendous. Tegenstelling: tiny / small / little / minute." }],
           woorden: [{ woord: "synoniem", uitleg: "Woord met (bijna) dezelfde betekenis." }, { woord: "antoniem", uitleg: "Woord met tegengestelde betekenis." }],
@@ -251,9 +251,9 @@ const steps = [
       },
       {
         q: "Als je **moet gokken** tussen 'always' en 'sometimes' — wat is veiliger?",
-        options: ["Sometimes","Always","Beide even waarschijnlijk","Skip"],
+        options: ["Sometimes","Always","Beide even waarschijnlijk","De optie die het langst is"],
         answer: 0,
-        wrongHints: [null, "Niet — extreme woorden vaak fout.", "Statistisch wel verschil.", "Niet — gok als je moet."],
+        wrongHints: [null, "Always laat geen enkele uitzondering toe. Hoe vaak klopt zo'n stellige uitspraak?", "Kijk naar de twee woorden: welke laat ruimte voor uitzonderingen, en welke niet?", "De lengte van een optie zegt weinig. Welk woord laat ruimte voor uitzonderingen?"],
         uitlegPad: {
           stappen: [{ titel: "Extreme woorden = vaak fout", tekst: "Tekst-schrijvers gebruiken zelden absolute taal ('altijd', 'iedereen', 'nooit', 'allemaal'). Daarom zijn opties met **'always / never / all / none'** statistisch VAAK fout in CSE. Genuanceerde 'sometimes / usually / often / many' winnen vaker." }],
           theorie: "Strategie alleen voor noodgevallen (echte gok). Bij twijfel + context: nuance > absoluut.",
@@ -294,7 +294,7 @@ const steps = [
         q: "Welke lees-strategie gebruik je om **overzicht van een tekst** te krijgen?",
         options: ["Skim — eerste/laatste zin alinea", "Scan — zoek één bepaald woord", "Detail-lezen — woord-voor-woord", "Vertalen — zin voor zin omzetten"],
         answer: 0,
-        wrongHints: [null, "Scan = specifiek, niet overzicht.", "Woord voor woord lezen kost veel tijd. Krijg je zo snel een overzicht?", "Vertalen kost veel tijd en geeft vooral losse zinnen. Hoe krijg je snel overzicht?"],
+        wrongHints: [null, "Scannen doe je om één woord of getal snel te vinden. Krijg je daarmee overzicht van de hele tekst?", "Woord voor woord lezen kost veel tijd. Krijg je zo snel een overzicht?", "Vertalen kost veel tijd en geeft vooral losse zinnen. Hoe krijg je snel overzicht?"],
         uitlegPad: {
           stappen: [{ titel: "Skim = globaal", tekst: "**Skim**: lees titel + eerste/laatste zin elke alinea + grafiek-onderschriften. Geeft 80% overzicht in 20% tijd." }],
           niveaus: { basis: "Skim.", simpeler: "Overzicht = skim", nogSimpeler: "Skim" },
@@ -304,7 +304,7 @@ const steps = [
         q: "Wat betekent **'eventually'** in het Engels?",
         options: ["Uiteindelijk","Eventueel / misschien","Snel","Vroeger"],
         answer: 0,
-        wrongHints: [null, "False friend — lijkt op NL maar betekent anders.", "Eventually zegt iets over wánneer iets gebeurt, niet hoe snel. Na korte of na lange tijd?", "Niet — 'eventually' gaat over later, niet over vroeger."],
+        wrongHints: [null, "Eventually lijkt op 'eventueel'. Maar betekent het ook hetzelfde? Denk aan false friends.", "Eventually zegt iets over wánneer iets gebeurt, niet hoe snel. Na korte of na lange tijd?", "Niet — 'eventually' gaat over later, niet over vroeger."],
         uitlegPad: {
           stappen: [{ titel: "False friend — let op!", tekst: "**Eventually** (Engels) = 'uiteindelijk / na verloop van tijd'. **NIET** 'eventueel' (NL). 'Eventueel' = perhaps / possibly. Toets-favoriete valstrik." }],
           theorie: "Memo: 'eventueel' (NL) ≠ 'eventually' (Engels). Twee aparte concepten.",
@@ -315,7 +315,7 @@ const steps = [
         q: "Wat is **synoniem** voor 'difficult'?",
         options: ["Hard","Easy","Big","Slow"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Big gaat over grootte. Gaat 'difficult' over grootte?", "Slow gaat over snelheid. Waar gaat 'difficult' over?"],
+        wrongHints: [null, "Easy betekent 'makkelijk'. Is dat hetzelfde als difficult?", "Big gaat over grootte. Gaat 'difficult' over grootte?", "Slow gaat over snelheid. Waar gaat 'difficult' over?"],
         uitlegPad: {
           stappen: [{ titel: "Difficult = hard = tough", tekst: "Synoniemen voor moeilijk: **difficult / hard / tough / challenging / complicated / tricky**." }],
           niveaus: { basis: "Hard.", simpeler: "Difficult = hard", nogSimpeler: "Hard" },
@@ -335,7 +335,7 @@ const steps = [
         q: "Bij **'What does 'it' refer to in line 5?'** kijk je:",
         options: ["In de zinnen vóór regel 5", "In de zinnen aan het eind", "In de titel van de tekst", "In de voetnoten onderaan"],
         answer: 0,
-        wrongHints: [null, "Te ver weg — verwijswoord is lokaal.", "Een verwijswoord wijst meestal naar iets dichtbij. Is de titel dichtbij regel 5?", "Niet — voetnoten zeldzaam in CSE."],
+        wrongHints: [null, "De zinnen aan het eind staan ver weg van regel 5. Waar wijst een verwijswoord meestal naar?", "Een verwijswoord wijst meestal naar iets dichtbij. Is de titel dichtbij regel 5?", "Een verwijswoord wijst naar iets wat net genoemd is. Staat dat onderaan in een voetnoot?"],
         uitlegPad: {
           stappen: [{ titel: "Verwijswoord = lokale referentie", tekst: "**'It / they / this / that'** verwijst altijd naar iets dat **kort daarvoor** is genoemd. Lees 1-2 zinnen voor regel 5 en zoek het zelfstandig naamwoord." }],
           niveaus: { basis: "Vorige zinnen.", simpeler: "It verwijst kort terug = vorige zin", nogSimpeler: "Vorige" },

@@ -144,7 +144,7 @@ const steps = [
         q: "Vanaf welke leeftijd mag je stemmen in Nederland?",
         options: ["18 jaar", "16 jaar", "21 jaar", "25 jaar"],
         answer: 0,
-        wrongHints: [null, "16 mag bij sommige jongerenraden, niet officieel.", "21 was vroeger.", "Dat was de grens rond 1917 — nu ligt hij een stuk lager."],
+        wrongHints: [null, "16 mag bij sommige jongerenraden, niet officieel.", "Tot 1972 was 21 jaar de grens. Is die sindsdien omhoog of omlaag gegaan?", "Dat was de grens rond 1917 — nu ligt hij een stuk lager."],
         uitlegPad: {
           stappen: [{ titel: "18+ stemt", tekst: "Vanaf 18 jaar mag je in NL stemmen voor alle verkiezingen: Tweede Kamer, gemeente, provincie, EU, waterschap. Sinds 1972 leeftijd 18 (was 21). Discussie nu over verlagen naar 16 — nog niet door." }],
           woorden: [{ woord: "kiesgerechtigde leeftijd", uitleg: "Minimum leeftijd om te mogen stemmen." }],
@@ -156,9 +156,9 @@ const steps = [
       },
       {
         q: "Sinds welk jaar mogen vrouwen in Nederland stemmen?",
-        options: ["1919", "1848", "1945", "1980"],
+        options: ["1919", "1848", "1945", "1917"],
         answer: 0,
-        wrongHints: [null, "1848 = grondwet Thorbecke (alleen rijke mannen).", "1945 = einde WO2.", "Te laat."],
+        wrongHints: [null, "1848 = grondwet Thorbecke (alleen rijke mannen).", "1945 is het einde van de Tweede Wereldoorlog. Is dat ook het jaar van het vrouwenkiesrecht?", "In 1917 kregen alle mannen stemrecht en mochten vrouwen gekozen worden. Mochten ze toen ook zelf stemmen?"],
         uitlegPad: {
           stappen: [{ titel: "1919 = algemeen kiesrecht", tekst: "1919: vrouwen mogen voor het eerst stemmen in NL (passief kiesrecht al sinds 1917). Daarvoor alleen mannen (sinds 1917 alle mannen, daarvoor alleen rijke mannen vanaf Thorbecke 1848). Aletta Jacobs streed hiervoor decennia." }],
           woorden: [{ woord: "Aletta Jacobs", uitleg: "Eerste vrouwelijke arts NL + voorvechter vrouwenkiesrecht (1854-1929)." }, { woord: "passief kiesrecht", uitleg: "Recht om gekozen te worden. Voor vrouwen NL: 1917." }, { woord: "actief kiesrecht", uitleg: "Recht om te stemmen. Voor vrouwen NL: 1919." }],
@@ -181,7 +181,7 @@ const steps = [
         q: "Wie bedacht de **Trias Politica**?",
         options: ["Montesquieu", "Thorbecke", "Willem van Oranje", "Plato"],
         answer: 0,
-        wrongHints: [null, "Thorbecke schreef de NL grondwet 1848.", "Willem van Oranje = Tachtigjarige Oorlog.", "Plato leefde in de Griekse oudheid — dit idee komt uit de Verlichting (18e eeuw)."],
+        wrongHints: [null, "Thorbecke schreef de NL grondwet 1848.", "Willem van Oranje leidde de Opstand in de 16e eeuw, lang vóór de Verlichting.", "Plato leefde in de Griekse oudheid — dit idee komt uit de Verlichting (18e eeuw)."],
         uitlegPad: {
           stappen: [{ titel: "Montesquieu 1748", tekst: "Charles-Louis de Montesquieu, Frans Verlichtings-filosoof. Boek 'De l'esprit des lois' (1748). Bedacht idee: macht moet in 3 delen om misbruik te voorkomen. Werd basis van moderne democratieën (VS-grondwet 1787, Frans 1791, NL via Thorbecke 1848)." }],
           woorden: [{ woord: "Montesquieu", uitleg: "Frans denker 1689-1755. Verlichting. Trias Politica is zijn belangrijkste idee." }],
@@ -193,9 +193,9 @@ const steps = [
       },
       {
         q: "Welke macht **maakt** wetten?",
-        options: ["Wetgevende macht", "Uitvoerende macht", "Rechtsprekende macht", "Koninklijke macht"],
+        options: ["Wetgevende macht", "Uitvoerende macht", "Rechtsprekende macht", "Controlerende macht"],
         answer: 0,
-        wrongHints: [null, "Uitvoerend voert uit.", "Rechtsprekend oordeelt.", "Een 'koninklijke macht' bestaat niet in de Trias Politica."],
+        wrongHints: [null, "De uitvoerende macht voert wetten uit. Welke macht stelt ze vast?", "De rechter oordeelt over wie een wet overtreedt. Maakt de rechter ook wetten?", "Het parlement controleert wel, maar 'controlerend' is geen van de drie machten van Montesquieu."],
         uitlegPad: {
           stappen: [{ titel: "Wet-gevend = wet-maken", tekst: "Wetgevende macht maakt wetten. In NL: Tweede Kamer + Eerste Kamer + regering samen. Wet wordt voorgesteld, besproken, gestemd, getekend door Koning (formaliteit), gepubliceerd. Daarna is het wet." }],
           woorden: [{ woord: "wetgevend", uitleg: "Het maken van wetten. Latijn legis = wet, ferre = dragen/maken." }],
@@ -214,9 +214,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel zetels heeft de Tweede Kamer?",
-        options: ["150", "75", "100", "200"],
+        options: ["150", "75", "100", "225"],
         answer: 0,
-        wrongHints: [null, "Dit is het aantal van de Eerste Kamer — niet de Tweede.", "Dat was het aantal vóór 1956 — sindsdien zijn het er meer.", "Te veel — dit aantal komt nergens in NL voor."],
+        wrongHints: [null, "Dit is het aantal van de Eerste Kamer — niet de Tweede.", "Dat was het aantal vóór 1956 — sindsdien zijn het er meer.", "225 is het aantal zetels van Eerste en Tweede Kamer samen. Hoeveel heeft de Tweede Kamer alleen?"],
         uitlegPad: {
           stappen: [{ titel: "150 zetels", tekst: "Tweede Kamer heeft 150 zetels sinds 1956. Daarvoor 100. Aantal staat vast in grondwet. Voor meerderheid: 76+ zetels nodig. Coalitie vormt vaak meerderheid (meestal 3-4 partijen samen)." }],
           woorden: [{ woord: "zetel", uitleg: "Plek in parlement. Elk lid heeft 1 zetel." }, { woord: "meerderheid", uitleg: "Meer dan helft. Voor 150 zetels: 76+." }],
@@ -262,7 +262,7 @@ const steps = [
         q: "Hoe wordt de **Eerste Kamer** gekozen?",
         options: ["Indirect, door Provinciale Staten","Direct, door alle kiezers van 18+","Indirect, door de gemeenteraden","Door de leden van de Tweede Kamer"],
         answer: 0,
-        wrongHints: [null, "Direct = Tweede Kamer.", "Gemeenteraden hebben geen stem bij de Eerste Kamer. Welke volksvertegenwoordigers wel?", "De Tweede Kamer kiest de Eerste Kamer niet."],
+        wrongHints: [null, "Zo kiezen we de Tweede Kamer. Gaat het bij de Eerste Kamer ook zo?", "Gemeenteraden hebben geen stem bij de Eerste Kamer. Welke volksvertegenwoordigers wel?", "Kiezen Kamerleden hun eigen controleurs? Wie kiest de Eerste Kamer dan?"],
         uitlegPad: {
           stappen: [{ titel: "Indirect via provincie", tekst: "Eerste Kamer (75 zetels) wordt NIET direct door volk gekozen. Werkwijze: volk kiest Provinciale Staten (12 provincies, elke 4 jaar). Provinciale Statenleden kiezen vervolgens Eerste Kamerleden. Indirect = via tussenstap." }],
           woorden: [{ woord: "indirect kiesrecht", uitleg: "Kiezen via een tussenstap. Volk kiest niet direct, maar via een ander orgaan." }, { woord: "Provinciale Staten", uitleg: "Provinciaal parlement. 12 in NL." }],
@@ -274,9 +274,9 @@ const steps = [
       },
       {
         q: "Wie is het hoofd van de **regering**?",
-        options: ["Minister-president", "De Koning", "De Tweede Kamervoorzitter", "De President"],
+        options: ["Minister-president", "De Koning", "De Tweede Kamervoorzitter", "De vicepremier"],
         answer: 0,
-        wrongHints: [null, "Koning is staatshoofd, niet hoofd regering.", "Voorzitter Tweede Kamer is een ander.", "Nederland heeft geen president."],
+        wrongHints: [null, "De Koning is staatshoofd. Leidt hij ook de vergadering van de ministers?", "De Kamervoorzitter leidt de vergaderingen van de Kamer. Hoort die bij de regering?", "Een vicepremier neemt het alleen over als de premier er niet is."],
         uitlegPad: {
           stappen: [{ titel: "Minister-president = premier", tekst: "Minister-president (afgekort MP, ook 'premier') is leider van het kabinet (=regering). Zit de ministerraad voor (wekelijkse vergadering ministers). Vertegenwoordigt NL in buitenland. In 2024 volgde Dick Schoof Mark Rutte (2010-2024) op." }],
           woorden: [{ woord: "Minister-president", uitleg: "Premier. Leider regering. Eerste onder gelijken (ministers)." }, { woord: "premier", uitleg: "Ander woord voor MP. 'Premier' = eerste/voornaamste minister." }, { woord: "kabinet", uitleg: "Alle ministers + staatssecretarissen samen. = regering." }],
@@ -317,9 +317,9 @@ const steps = [
       },
       {
         q: "Mag de Koning wetten tegenhouden?",
-        options: ["Nee, hij ondertekent wetten formeel","Ja, hij heeft veto","Alleen als hij vindt dat ze fout zijn","Bij oorlog wel"],
+        options: ["Nee, hij ondertekent wetten formeel","Ja, hij heeft een vetorecht","Alleen als ze tegen de Grondwet ingaan","Ja, als de Raad van State negatief adviseert"],
         answer: 0,
-        wrongHints: [null, "In NL constitutionele monarchie: geen veto.", "Geen mening, geen weigering.", "Geen uitzondering."],
+        wrongHints: [null, "Een veto heeft bijvoorbeeld de Amerikaanse president. Heeft de Nederlandse Koning dat ook?", "Toetsen aan de Grondwet doen regering en parlement. Wie is er verantwoordelijk voor wat de Koning tekent?", "De Raad van State adviseert alleen. Wie beslist er over een wet?"],
         uitlegPad: {
           stappen: [{ titel: "Geen veto in NL", tekst: "In NL constitutionele monarchie: Koning TEKENT wetten verplicht. Dat is symbolisch (laatste stap). Hij mag niet weigeren — geen veto. Dit zou ongrondwettelijk zijn. 'De koning is onschendbaar, de ministers zijn verantwoordelijk' (art. 42 Grondwet)." }],
           woorden: [{ woord: "veto", uitleg: "Recht om iets te blokkeren. Latijn 'ik verbied'." }, { woord: "onschendbaar", uitleg: "Niet aansprakelijk. Koning kan niet politiek verantwoordelijk worden gehouden — wel de ministers." }],
@@ -391,9 +391,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **rechtsstaat**?",
-        options: ["Land waar iedereen zich aan dezelfde wetten moet houden","Land waar rechters ook de regering vormen","Land waar de politie overal streng toezicht houdt","Land waar de regels uit een heilig boek komen"],
+        options: ["Land waar iedereen zich aan dezelfde wetten moet houden","Land waar het volk via verkiezingen de regering kiest","Land waar de politie overal streng toezicht houdt","Land waar de regels uit een heilig boek komen"],
         answer: 0,
-        wrongHints: [null, "Rechters oordelen, regeren niet.", "Dat lijkt meer op een politiestaat. Wie moet zich in een rechtsstaat aan de wet houden?", "Dat is theocratie."],
+        wrongHints: [null, "Dat is een democratie. Aan wat moet in een rechtsstaat ook de overheid zich houden?", "Dat lijkt meer op een politiestaat. Wie moet zich in een rechtsstaat aan de wet houden?", "Dat is theocratie."],
         uitlegPad: {
           stappen: [{ titel: "Wet boven persoon", tekst: "Rechtsstaat = land waar IEDEREEN — ook regering, koning, rijke mensen — zich aan dezelfde wetten moet houden. Onafhankelijke rechters beoordelen. Niemand staat boven wet. Tegenovergesteld: politiestaat (overheid heeft alle macht zonder regels)." }],
           woorden: [{ woord: "rechtsstaat", uitleg: "Staatsvorm waarin overheid + burgers gelijk onder de wet staan." }, { woord: "onafhankelijke rechters", uitleg: "Rechters die door geen politicus of overheid kunnen worden ontslagen of beïnvloed." }],
@@ -405,9 +405,9 @@ const steps = [
       },
       {
         q: "Wat is de hoogste rechterlijke instantie in NL?",
-        options: ["Hoge Raad", "Gerechtshof", "Rechtbank", "Tweede Kamer"],
+        options: ["Hoge Raad", "Gerechtshof", "Rechtbank", "Constitutioneel Hof"],
         answer: 0,
-        wrongHints: [null, "Gerechtshof = midden.", "Rechtbank = eerste niveau.", "Tweede Kamer is wetgevend, niet rechtsprekend."],
+        wrongHints: [null, "Bij het gerechtshof kom je in hoger beroep. Is daarna nog iets mogelijk?", "Bij de rechtbank begint een zaak. Waar kun je daarna nog heen?", "Veel landen hebben een grondwettelijk hof, maar Nederland niet. Welk college staat bovenaan?"],
         uitlegPad: {
           stappen: [{ titel: "Hoge Raad — cassatie", tekst: "3 niveaus rechtspraak NL: (1) Rechtbank = 1e instantie. (2) Gerechtshof = hoger beroep. (3) Hoge Raad = hoogste, doet 'cassatie'. Hoge Raad oordeelt niet over feiten, alleen of wet JUIST is toegepast door lagere rechters." }],
           woorden: [{ woord: "Hoge Raad", uitleg: "Hoogste NL-rechter. In Den Haag. ~35 raadsheren (rechters)." }, { woord: "cassatie", uitleg: "Toetsing of lagere rechter de wet juist heeft toegepast. Niet over feiten." }, { woord: "hoger beroep", uitleg: "Tweede beoordeling. Rechtbank → gerechtshof → Hoge Raad." }],
@@ -440,9 +440,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **geen** plicht voor Nederlandse burgers?",
-        options: ["Stemmen", "Belasting betalen", "Leerplicht", "Identificatieplicht"],
+        options: ["Stemmen bij verkiezingen", "Belasting betalen", "Naar school tot je 16e", "Een ID-bewijs kunnen tonen"],
         answer: 0,
-        wrongHints: [null, "Belasting betalen is wél een plicht.", "Leerplicht is wél een plicht.", "ID-plicht is wél een plicht."],
+        wrongHints: [null, "Belasting betalen is wél een plicht.", "Naar school gaan is verplicht: dat heet de leerplicht.", "Vanaf 14 jaar moet je je kunnen legitimeren: de identificatieplicht."],
         uitlegPad: {
           stappen: [{ titel: "Stemmen = recht", tekst: "In NL is stemmen een RECHT, geen plicht. Je MAG, niet MOET. Vroeger (1917-1970) was er wel opkomstplicht (stemplicht). Sinds 1970 afgeschaft. Vergelijk: in België is stemmen WEL verplicht." }],
           woorden: [{ woord: "recht vs plicht", uitleg: "Recht = je MAG iets doen (vrijwillig). Plicht = je MOET iets doen (verplicht)." }, { woord: "opkomstplicht", uitleg: "Verplichting om naar stembureau te gaan. NL had dit 1917-1970." }],
@@ -456,7 +456,7 @@ const steps = [
         q: "Vanaf welke leeftijd ID-plicht in NL?",
         options: ["14 jaar", "12 jaar", "16 jaar", "18 jaar"],
         answer: 0,
-        wrongHints: [null, "Te jong.", "Te oud — de plicht begint al eerder.", "ID-plicht begint eerder dan stemrecht."],
+        wrongHints: [null, "Begint de ID-plicht al op de basisschool?", "Te oud — de plicht begint al eerder.", "ID-plicht begint eerder dan stemrecht."],
         uitlegPad: {
           stappen: [{ titel: "ID vanaf 14 jaar", tekst: "Sinds 2005 (Wet op de Identificatieplicht): elke NL'er vanaf 14 jaar moet legitimatie kunnen tonen bij politie-controle. ID-bewijs = paspoort, identiteitskaart of rijbewijs. Bij niet-tonen: boete €100+." }],
           woorden: [{ woord: "ID-plicht", uitleg: "Verplichting om je te kunnen identificeren met geldig document." }, { woord: "legitimatie", uitleg: "Officieel document dat bewijst wie je bent." }],
@@ -535,15 +535,15 @@ const steps = [
     checks: [
       {
         q: "Welke macht hoort bij de **rechter**?",
-        options: ["Rechtsprekend", "Wetgevend", "Uitvoerend", "Koninklijk"],
+        options: ["Rechtsprekend", "Wetgevend", "Uitvoerend", "Controlerend"],
         answer: 0,
-        wrongHints: [null, "Wetgevend = Kamer + regering.", "Uitvoerend = regering + politie.", "Niet bestaand binnen Trias."],
+        wrongHints: [null, "De wetgevende macht ligt bij parlement en regering. Maakt de rechter wetten?", "De uitvoerende macht is de regering, met ambtenaren en politie. Hoort de rechter daarbij?", "Het parlement controleert wel, maar 'controlerend' is geen van de drie machten van Montesquieu."],
         uitlegPad: {
           stappen: [{ titel: "Rechter = rechtspreken", tekst: "Trias Politica = 3 machten: WETGEVEND (Kamer+regering, maakt wetten), UITVOEREND (regering+politie, voert uit), RECHTSPREKEND (rechters, oordeelt). De rechter hoort bij rechtsprekende macht. Beoordeelt of wet is overtreden, deelt straffen uit." }],
           woorden: [{ woord: "rechtsprekend", uitleg: "Oordelen of wet is overtreden + straf bepalen." }],
           theorie: "Onafhankelijkheid: rechters worden voor leven benoemd door Koning. Kunnen niet door politici worden ontslagen. Beschermt onpartijdigheid.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Wet zegt: niet stelen. Iemand steelt → politie pakt op (uitvoerend) → Officier van Justitie klaagt aan → rechter oordeelt (rechtsprekend) + bepaalt straf." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Wetgevend = wetten maken (Kamer). Uitvoerend = uitvoeren (regering). Koninklijk = bestaat niet als aparte macht in Trias." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Wetgevend = wetten maken (Kamer). Uitvoerend = uitvoeren (regering). Controleren = taak van het parlement, geen aparte macht in de Trias." }],
           niveaus: { basis: "Rechtsprekend.", simpeler: "Rechter doet rechtsprekende macht (3e van Trias Politica).", nogSimpeler: "Rechtsprekend" },
         },
       },
@@ -551,7 +551,7 @@ const steps = [
         q: "Welke uitspraak is **juist**?",
         options: ["De Koning ondertekent wetten formeel","De Koning maakt zelf wetten","De Koning stemt mee in de Tweede Kamer","De Koning leidt de Tweede Kamer"],
         answer: 0,
-        wrongHints: [null, "Wetten maakt de Tweede Kamer.", "De Koning is geen Kamerlid en stemt nergens mee.", "Tweede Kamer heeft eigen voorzitter."],
+        wrongHints: [null, "Maakt de Koning wetten, of zetten anderen die in elkaar?", "De Koning is geen Kamerlid en stemt nergens mee.", "De Tweede Kamer kiest een eigen voorzitter. Wat is dan de rol van de Koning?"],
         uitlegPad: {
           stappen: [{ titel: "Koning ondertekent — meer niet", tekst: "Constitutionele monarchie: Koning ondertekent wetten als formaliteit (laatste handeling, kan niet weigeren). Daarbuiten: ceremonieel werk, vertegenwoordigt NL, wekelijks overleg met premier. Geen wetgevende macht. Stemt niet mee in de Kamer. Leidt geen Kamer (Tweede Kamer heeft eigen voorzitter)." }],
           woorden: [{ woord: "formele handtekening", uitleg: "Ondertekening zonder politieke macht. Verplichte handeling." }],
@@ -577,9 +577,9 @@ const steps = [
       },
       {
         q: "Wat is de **euro**?",
-        options: ["De munt van 21 EU-landen","Een Nederlandse munt","Een Europese stad","Een politieke partij"],
+        options: ["De munt van 21 EU-landen","De munt van alle EU-landen","De munt van heel Europa","De munt van 12 EU-landen"],
         answer: 0,
-        wrongHints: [null, "Niet alleen NL.", "Geen plaats.", "Geen partij."],
+        wrongHints: [null, "Denemarken en Zweden hebben bijvoorbeeld nog een eigen kroon.", "Het Verenigd Koninkrijk en Zwitserland horen bij Europa, maar betalen met pond en frank.", "Met 12 landen begon de euro in 2002. Is dat aantal sindsdien gegroeid?"],
         uitlegPad: {
           stappen: [{ titel: "Euro — 21 landen", tekst: "Euro (€) is de gemeenschappelijke munt van 21 EU-landen (in 2026): NL, DE, FR, IT, ES, PT, BE, LU, IE, FI, AT, GR, MT, CY, EE, LV, LT, SI, SK, HR, BG (Bulgarije sinds 1 jan 2026). Ingevoerd: 1999 (giraal), 2002 (briefjes+munten). 6 EU-landen behouden eigen munt (vb. Denemarken kroon, Zweden kroon, Polen zloty)." }],
           woorden: [{ woord: "euro", uitleg: "Gemeenschappelijke EU-munt. Symbool €." }, { woord: "Eurozone", uitleg: "EU-landen die euro hebben. Bestuurd door ECB (Europese Centrale Bank) Frankfurt." }, { woord: "ECB", uitleg: "Europese Centrale Bank. Bepaalt euro-rente + monetair beleid." }],
@@ -589,12 +589,12 @@ const steps = [
           niveaus: { basis: "Munt 21 EU-landen.", simpeler: "Euro = munt van 21 EU-landen, incl. NL sinds 2002.", nogSimpeler: "EU-munt" },
         },
       },
-      { q: "Wat is de **NAVO** (Noord-Atlantische Verdragsorganisatie)?", options: ["Militair bondgenootschap","Een instelling van de EU","Een onderdeel van de VN","Een handelsverdrag tussen VS en Europa"], answer: 0, wrongHints: [null, "Niet — losstaand van EU.", "De NAVO staat los van de VN. Waarvoor werd de NAVO in 1949 opgericht?", "Handel regelen de EU en de Wereldhandelsorganisatie. Waarvoor werd de NAVO in 1949 opgericht?"] },
-      { q: "Wie is **staatshoofd** van Nederland?", options: ["Willem-Alexander","Mark Rutte","Dilan Yesilgöz","Frans Timmermans"], answer: 0, wrongHints: [null,"Vroegere premier.","Yesilgöz is partijleider. Is in Nederland een politicus het staatshoofd?","Timmermans is politicus. Kiest Nederland zijn staatshoofd via verkiezingen?"] },
+      { q: "Wat is de **NAVO** (Noord-Atlantische Verdragsorganisatie)?", options: ["Militair bondgenootschap","Een instelling van de EU","Een onderdeel van de VN","Een handelsverdrag tussen VS en Europa"], answer: 0, wrongHints: [null, "Ook landen buiten de EU, zoals de VS en Noorwegen, zijn lid. Kan het dan een EU-instelling zijn?", "De NAVO staat los van de VN. Waarvoor werd de NAVO in 1949 opgericht?", "Handel regelen de EU en de Wereldhandelsorganisatie. Waarvoor werd de NAVO in 1949 opgericht?"] },
+      { q: "Wie is **staatshoofd** van Nederland?", options: ["Willem-Alexander","Mark Rutte","Dilan Yesilgöz","Frans Timmermans"], answer: 0, wrongHints: [null,"Rutte was premier. Is in Nederland de premier het staatshoofd?","Yesilgöz is partijleider. Is in Nederland een politicus het staatshoofd?","Timmermans is politicus. Kiest Nederland zijn staatshoofd via verkiezingen?"] },
       { q: "Wat doet de **Eerste Kamer**?", options: ["Aangenomen wetten van de Tweede Kamer controleren","Zelf nieuwe wetsvoorstellen bedenken en indienen","Wetsvoorstellen aanpassen met amendementen","De ministers en de premier na de verkiezingen benoemen"], answer: 0, wrongHints: [null,"Dat recht heeft de Eerste Kamer niet.","Mag de Eerste Kamer een wet veranderen, of alleen ja of nee zeggen?","Ministers worden na de formatie door de Koning benoemd."] },
-      { q: "Hoeveel zetels heeft de **Tweede Kamer** in Nederland?", options: ["150","75","100","200"], answer: 0, wrongHints: [null,"Eerste Kamer.","Dat was het aantal vóór 1956. Is het sindsdien veranderd?","Te veel."] },
+      { q: "Hoeveel zetels heeft de **Tweede Kamer** in Nederland?", options: ["150","75","100","225"], answer: 0, wrongHints: [null,"75 zetels heeft de Eerste Kamer. Is de Tweede Kamer groter of kleiner?","Dat was het aantal vóór 1956. Is het sindsdien veranderd?","225 is het aantal zetels van Eerste en Tweede Kamer samen. Hoeveel heeft de Tweede Kamer alleen?"] },
       { q: "Wat is een **coalitie**?", options: ["Meerdere partijen die samen een kabinet vormen","Eén partij die alleen het land bestuurt","Een losse politieke partij met eigen leden","Partijen die tegen het kabinet ingaan"], answer: 0, wrongHints: [null,"Komt in NL vrijwel nooit voor — geen partij haalt alleen een meerderheid.","Is een coalitie één partij, of een samenwerking?","Partijen die tegen het kabinet ingaan, heten de oppositie."] },
-      { q: "**Trias politica** verdeelt macht in?", options: ["3","2","4","5"], answer: 0, wrongHints: [null,"Welke macht oordeelt over wie de wet overtreedt? Telt die ook mee?","Te veel.","Wat betekent het Latijnse woord 'trias'?"] },
+      { q: "**Trias politica** verdeelt macht in?", options: ["3","2","4","5"], answer: 0, wrongHints: [null,"Welke macht oordeelt over wie de wet overtreedt? Telt die ook mee?","Hoeveel machten noemde Montesquieu als je ze opsomt?","Wat betekent het Latijnse woord 'trias'?"] },
       { q: "**Demonstreren** is in NL een grondrecht. Op basis van welk recht?", options: ["Recht op vergadering en betoging","Recht op vrijheid van onderwijs","Vrijheid van godsdienst en levensovertuiging","Recht op bescherming van privacy"], answer: 0, wrongHints: [null,"Vrijheid van onderwijs gaat over scholen oprichten. Gaat demonstreren daarover?","Je kunt over geloof demonstreren, maar welk recht beschermt het demonstreren zélf?","Privacy beschermt je persoonlijke leven. Beschermt het ook samen de straat op gaan?"] },
       { q: "Wie kiezen de **Tweede Kamer**?", options: ["Nederlandse burgers ≥18 jaar","Alle inwoners van Nederland ≥16 jaar","De leden van de Provinciale Staten","De gemeenteraden van alle gemeenten"], answer: 0, wrongHints: [null,"In sommige landen stem je vanaf 16. Hoe zit dat in Nederland, en mag elke inwoner stemmen?","Provinciale Staten kiezen Eerste Kamer.","Gemeenteraden kiezen geen Kamerleden."] },
       { q: "**Open vraag**: hoeveel jaar zit een Tweede Kamer-periode normaal? (typ getal)", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "Standaard zittingstermijn Tweede Kamer = 4 jaar." },

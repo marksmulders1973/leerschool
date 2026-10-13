@@ -150,13 +150,13 @@ const steps = [
     checks: [
       {
         q: "*Wat is het meervoud van 'pen' (om mee te schrijven)?*",
-        options: ["pennen", "penen", "pens", "penn"],
+        options: ["pennen", "penen", "pens", "pen's"],
         answer: 0,
         wrongHints: [
           null,
           "Penen zou de e-klank lang maken — maar 'pen' heeft een korte e. Wat moet je dan met de medeklinker?",
           "Het Nederlandse meervoud van 'pen' eindigt op -en, niet op -s.",
-          "Niet bestaand woord. Meervoud = stam + en + verdubbeling van de eindmedeklinker bij een korte klank.",
+          "Een apostrof gebruik je bij meervouden van woorden die op een lange klinker eindigen, zoals auto's. Eindigt 'pen' zo?",
         ],
         uitlegPad: {
           stappen: [

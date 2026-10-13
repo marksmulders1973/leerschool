@@ -108,7 +108,7 @@ const steps = [
         q: "*'Volgens onderzoek van TU Delft ...'* — welk argument?",
         options: ["Autoriteit", "Emotioneel", "Praktisch", "Moreel"],
         answer: 0,
-        wrongHints: [null, "Een emotioneel argument speelt in op je gevoel. Doet deze zin dat, of wordt er een bron genoemd?", "Een praktisch argument gaat over wat werkt of handig is. Waar beroept deze zin zich op?", "Een moreel argument gaat over wat goed of slecht is. Waar beroept deze zin zich op?"],
+        wrongHints: [null, "Een emotioneel argument speelt in op je gevoel. Roept deze zin een gevoel op?", "Een praktisch argument gaat over wat werkt of handig is. Waar beroept deze zin zich op?", "Een moreel argument gaat over wat goed of slecht is. Waar beroept deze zin zich op?"],
       },
       {
         q: "Verschil **betogend** en **beschouwend**?",
@@ -288,7 +288,7 @@ const steps = [
         q: "Welk signaalwoord = **conclusie**?",
         options: ["Kortom", "Ten eerste", "Echter", "Zoals"],
         answer: 0,
-        wrongHints: [null, "Eerste argument.", "Tegenstelling.", "Voorbeeld."],
+        wrongHints: [null, "'Ten eerste' opent een opsomming, vaak aan het begin. Welk woord sluit juist af?", "'Echter' kondigt een tegenstelling aan. Welk woord vat samen wat je hebt betoogd?", "'Zoals' kondigt een voorbeeld aan. Welk woord vat samen wat je hebt betoogd?"],
       },
       {
         q: "**Plagiaat** in samenvatting = wat?",
@@ -300,7 +300,7 @@ const steps = [
         q: "**Ik fietste** of **ik fietsde**?",
         options: ["Ik fietste", "Ik fietsde", "Beide", "Ik fiets"],
         answer: 0,
-        wrongHints: [null, "Verkeerde uitgang.", "1 is fout.", "Tegenwoordige tijd."],
+        wrongHints: [null, "Kijk naar de laatste letter van de stam 'fiets'. Zit die in 't kofschip?", "Er is maar één goede vorm. Welke regel bepaalt of je -te of -de schrijft?", "'Ik fiets' is tegenwoordige tijd. De vraag gaat over de verleden tijd: -te of -de?"],
       },
       {
         q: "Welk **perspectief** is *'Tom liep door de straat. Hij was moe.'*?",

@@ -43,7 +43,7 @@ const steps = [
         q: "Tijdsduur **CSE Nederlands HAVO**?",
         options: ["3 uur","2 uur","2,5 uur","4 uur"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te kort.", "Te lang."],
+        wrongHints: [null, "Het CSE heeft meerdere lange teksten met veel vragen. Is dat in twee uur te doen?", "Het is iets langer dan dat. Hoeveel uur staat er voor Nederlands op het examenrooster?", "Vier uur is langer dan een gewone examenzitting. Hoeveel uur is het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Drie uur", tekst: "**CSE Nederlands HAVO + VWO: 3 uur**. Met een verklaring (bv. dyslexie) kan de school maximaal 30 min verlenging geven." }],
           niveaus: { basis: "3 uur.", simpeler: "3u", nogSimpeler: "3" },
@@ -71,9 +71,9 @@ const steps = [
       },
       {
         q: "Is Nederlands **kernvak** voor slagen?",
-        options: ["Ja","Nee","Alleen HAVO","Optioneel"],
+        options: ["Ja, op havo en vwo","Nee, een gewoon vak","Ja, maar niet op vwo","Nee, het is optioneel"],
         answer: 0,
-        wrongHints: [null, "Wel kernvak.", "Wel voor beide.", "Verplicht."],
+        wrongHints: [null, "Voor drie vakken geldt een extra slaagregel: maximaal één 5. Hoort Nederlands bij die vakken?", "Is de kernvakregel op havo en vwo verschillend? Lees de regel nog eens na.", "Nederlands moet iedereen op havo en vwo volgen. Is het dan een keuzevak?"],
         uitlegPad: {
           stappen: [{ titel: "Kernvakken-regel", tekst: "**Nederlands** = kernvak (HAVO + VWO). Andere kernvakken: Engels + wiskunde A/B/C/D. Voor **slagen** mag je **maximaal 1 onvoldoende (5)** in deze 3 vakken samen hebben. Verder zoals normaal: gemiddeld 5,5+." }],
           niveaus: { basis: "Ja.", simpeler: "NL = kernvak", nogSimpeler: "Ja" },
@@ -92,7 +92,7 @@ const steps = [
         q: "Wat is de functie van een **concessio-alinea**?",
         options: ["Tegenargument erkennen","Hoofdgedachte stellen","Conclusie trekken","Voorbeeld geven"],
         answer: 0,
-        wrongHints: [null, "Niet — andere functie.", "Niet — komt later.", "Niet — andere functie."],
+        wrongHints: [null, "De hoofdgedachte geeft het standpunt van de schrijver zelf. Wat doet de schrijver in een concessio met de mening van anderen?", "Een conclusie staat in het slot. Wat betekent 'een concessie doen'?", "Een voorbeeld illustreert een argument. Wat betekent 'een concessie doen'?"],
         uitlegPad: {
           stappen: [{ titel: "'Toegegeven, maar...'", tekst: "**Concessio** (concessie / tegenwerping): alinea waarin auteur **kritiek of tegenargument erkent**, vaak gevolgd door **weerlegging** in volgende alinea. Signaalwoorden: *toegegeven, weliswaar, het is waar dat, hoewel, men zou kunnen stellen dat*. Versterkt eigen betoog door tegenstanders serieus te nemen." }],
           theorie: "Toets-favoriet: 'wat is de functie van alinea X?' → vaak concessio + weerlegging-paar.",
@@ -103,7 +103,7 @@ const steps = [
         q: "Signaalwoord **daarentegen** wijst op:",
         options: ["Tegenstelling","Voorbeeld","Conclusie","Oorzaak"],
         answer: 0,
-        wrongHints: [null, "Niet — andere woorden.", "Niet — kortom.", "Niet — omdat."],
+        wrongHints: [null, "Een voorbeeld kondig je aan met 'bijvoorbeeld' of 'zoals'. Lijkt 'daarentegen' daarop?", "Een conclusie kondig je aan met 'kortom' of 'dus'. Wat doet 'daarentegen' met wat ervoor staat?", "Een oorzaak kondig je aan met 'omdat' of 'doordat'. Wat doet 'daarentegen' met wat ervoor staat?"],
         uitlegPad: {
           stappen: [{ titel: "Contrast-marker", tekst: "**Daarentegen** = tegenstelling-signaal. Synoniemen: *echter, niettemin, toch, maar, integendeel, anderzijds, aan de andere kant*. Signaleert: 'hier komt iets dat tegenovergesteld is aan wat eerder gezegd is'. Lezer: focus, draaipunt." }],
           niveaus: { basis: "Tegenstelling.", simpeler: "Daarentegen = contrast", nogSimpeler: "Contrast" },
@@ -182,7 +182,7 @@ const steps = [
         q: "Correlatie ≠ causatie — met welke drogreden is dit verwant?",
         options: ["Post hoc","Ad hominem","Stroman","Hellend vlak"],
         answer: 0,
-        wrongHints: [null, "Persoon.", "Vertekening.", "Kettingdrogreden."],
+        wrongHints: [null, "Ad hominem is een aanval op de persoon. Gaat 'correlatie ≠ causatie' over een persoon?", "Een stroman verdraait wat de ander zegt. Gaat het hier om iemands standpunt?", "Een hellend vlak voorspelt een keten van gevolgen in de toekomst. Gaat het hier om een voorspelling, of om twee dingen die samen gebeurden?"],
         uitlegPad: {
           stappen: [{ titel: "Post hoc ergo propter hoc", tekst: "**Post hoc ergo propter hoc** ('daarna, dus daardoor'): omdat A vóór B kwam, denken dat A oorzaak is van B. Vaak fout. **Klassieker**: ijsverkoop + verdrinking stijgen samen in zomer — niet causaal, beide door warm weer.\n\n**Correlatie ≠ causatie**: twee dingen kunnen samenvallen zonder dat één de ander veroorzaakt. **Confounding** = derde factor verklaart beide." }],
           niveaus: { basis: "Post hoc.", simpeler: "Corr ≠ cause = post hoc", nogSimpeler: "Post hoc" },
@@ -209,9 +209,9 @@ const steps = [
     checks: [
       {
         q: "Wat staat er bij een **samenvattingsvraag** op het CSE altijd vermeld?",
-        options: ["Een maximum aantal woorden","Een minimum van 500 woorden","Hoeveel citaten je moet gebruiken","Welk woordenboek je moet gebruiken"],
+        options: ["Een maximum aantal woorden","Hoeveel alinea's je moet maken","Hoeveel citaten je moet gebruiken","Hoeveel tijd je ervoor mag nemen"],
         answer: 0,
-        wrongHints: [null, "Samenvatten = juist kort en bondig.", "Bij samenvatten gebruik je juist je eigen woorden.", "Dat heeft niets met de vraag zelf te maken."],
+        wrongHints: [null, "Hoe je je samenvatting indeelt, mag je zelf weten. Welke grens wordt wél altijd gegeven?", "Bij samenvatten gebruik je juist je eigen woorden.", "Je tijd verdeel je zelf over het hele examen. Welke grens staat er wél bij de vraag?"],
         uitlegPad: {
           stappen: [{ titel: "Let op de grens", tekst: "Bij samenvattingsvragen op het CSE (havo + vwo) staat altijd een **maximum aantal woorden**. Wat je daarboven schrijft, wordt niet beoordeeld. **Eerst tellen + dan inleveren**." }],
           niveaus: { basis: "Maximum aantal woorden.", simpeler: "Er staat een woordgrens bij", nogSimpeler: "Maximum" },
@@ -270,7 +270,7 @@ const steps = [
         q: "Bij **'iedereen vindt het, dus moet het waar zijn'** is dit:",
         options: ["Ad populum","Vals dilemma","Cirkelredenering","Hellend vlak"],
         answer: 0,
-        wrongHints: [null, "2 valse opties.", "Niet — geen cirkel.", "Niet — geen ketting."],
+        wrongHints: [null, "Bij een vals dilemma krijg je maar twee keuzes. Zie je hier een of-of-keuze?", "Bij een cirkelredenering komt de conclusie terug als argument. Waar beroept deze zin zich op?", "Bij een hellend vlak voorspel je een keten van gevolgen. Waar beroept deze zin zich op?"],
         uitlegPad: {
           stappen: [{ titel: "Argumentum ad populum", tekst: "**Ad populum** = beroep op meerderheid. 'Iedereen denkt zo, dus klopt het.' Drogreden: meerderheid kan zich vergissen (vroeger dachten de meeste mensen dat de zon om de aarde draaide). Geldigheid argument hangt niet af van aantal aanhangers." }],
           niveaus: { basis: "Ad populum.", simpeler: "Iedereen vindt = ad populum", nogSimpeler: "Meerderheid" },

@@ -70,19 +70,19 @@ const steps = [
         q: "Welk signaalwoord betekent **'maar/tegenstelling'**?",
         options: ["however", "moreover", "therefore", "for example"],
         answer: 0,
-        wrongHints: [null, "Dat is toevoegen.", "Dat is gevolg.", "Dat is voorbeeld."],
+        wrongHints: [null, "Moreover betekent 'bovendien': je voegt nog iets toe. Is dat een tegenstelling?", "Therefore betekent 'daarom': er volgt een gevolg. Is dat een tegenstelling?", "For example kondigt een voorbeeld aan. Zegt dat 'maar'?"],
       },
       {
         q: "Welk woord geeft **'gevolg'** aan?",
-        options: ["therefore", "but", "although", "for example"],
+        options: ["therefore", "but", "moreover", "for example"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Tegenstelling.", "Voorbeeld."],
+        wrongHints: [null, "But betekent 'maar'. Geeft dat een gevolg, of een tegenstelling?", "Moreover betekent 'bovendien': je voegt iets toe. Is dat een gevolg?", "For example kondigt een voorbeeld aan. Is dat een gevolg?"],
       },
       {
         q: "*'Tom studied hard. ___, he failed the exam.'* Welk woord?",
         options: ["However", "Therefore", "Because", "Moreover"],
         answer: 0,
-        wrongHints: [null, "Niet gevolg — hard werken zou tot slagen leiden, niet zakken.", "Geen reden.", "Geen toevoeging."],
+        wrongHints: [null, "Niet gevolg — hard werken zou tot slagen leiden, niet zakken.", "Because geeft een reden en staat meestal midden in een zin. Is 'hij zakte' de reden voor hard leren?", "Moreover voegt iets toe in dezelfde richting. Past zakken bij hard leren?"],
         uitlegPad: {
           stappen: [
             { titel: "Tegengestelde verwachting", tekst: "Eerste zin: 'Tom studied hard' — verwachting: hij slaagt. Tweede zin: 'he failed' — tegenovergesteld. Dus signaalwoord van tegenstelling." },
@@ -103,13 +103,13 @@ const steps = [
         q: "*'I was tired ___ I worked late.'* Welk woord (reden)?",
         options: ["because", "however", "therefore", "moreover"],
         answer: 0,
-        wrongHints: [null, "Geen tegenstelling.", "Dat zou andersom zijn.", "Geen toevoeging."],
+        wrongHints: [null, "However geeft een tegenstelling. Is moe zijn het tegendeel van laat werken?", "Therefore wijst naar een gevolg. Is laat werken het gevolg van moe zijn, of andersom?", "Moreover voegt iets extra's toe. Legt laat werken uit waarom je moe was?"],
       },
       {
         q: "*'First... then... finally...'* — welk soort signaalwoorden?",
-        options: ["Volgorde (sequence)", "Tegenstelling", "Reden-gevolg", "Voorbeeld"],
+        options: ["Volgorde (sequence)", "Tegenstelling (contrast)", "Reden-gevolg (cause-effect)", "Voorbeeld (example)"],
         answer: 0,
-        wrongHints: [null, "Geen 'but' / 'however'.", "Geen 'because'.", "Geen 'for instance'."],
+        wrongHints: [null, "Bij een tegenstelling horen woorden als but en however. Staan die hier?", "Bij reden en gevolg horen woorden als because en therefore. Staan die hier?", "Een voorbeeld begint met for example of for instance. Staat dat hier?"],
       },
       {
         q: "*'For example, ...'* leidt in?",
@@ -128,9 +128,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het doel van een **review**?",
-        options: ["Iets beoordelen", "Iets verkopen", "Iets verbergen", "Iemand groeten"],
+        options: ["Iets beoordelen", "Iets verkopen", "Nieuws neutraal melden", "Uitleggen hoe iets werkt"],
         answer: 0,
-        wrongHints: [null, "Dat is advertentie.", "Geen doel.", "Brief."],
+        wrongHints: [null, "Iets verkopen doet een advertentie. Wat doet een review met een film of product?", "Neutraal nieuws melden doet een nieuwsbericht. Geeft een review een neutraal verslag, of een oordeel?", "Uitleggen hoe iets werkt doet een handleiding. Wat geeft een recensent over een film?"],
       },
       {
         q: "Wat is het doel van een **opinion piece**?",
@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "*'Buy now! 50% off!'* Welk soort tekst?",
-        options: ["Advertentie", "Nieuws", "Wetenschap", "Verhaal"],
+        options: ["Advertentie", "Nieuws", "Review", "Verhaal"],
         answer: 0,
-        wrongHints: [null, "Geen feit-rapport.", "Niet wetenschappelijk.", "Geen verhaal."],
+        wrongHints: [null, "Nieuws meldt wat er gebeurd is. Meldt 'Buy now!' een gebeurtenis?", "Een review geeft een oordeel over een product. Geeft 'Buy now!' een oordeel, of een oproep?", "Een verhaal heeft personages en gebeurtenissen. Zie je die hier?"],
       },
       {
         q: "*'A new study by Oxford shows...'* Welk soort?",
@@ -181,19 +181,19 @@ const steps = [
         q: "*'unhappy'* — wat betekent **un-**?",
         options: ["niet", "veel", "zonder", "opnieuw"],
         answer: 0,
-        wrongHints: [null, "Geen 'veel'.", "Dat is -less.", "Dat is re-."],
+        wrongHints: [null, "Is unhappy 'erg blij'? Wat doet un- met happy?", "'Zonder' is de uitgang -less, achter een woord. Un- staat vooraan.", "'Opnieuw' is re-, zoals in redo. Is unhappy 'opnieuw blij'?"],
       },
       {
         q: "*'He bought legumes, such as beans and lentils.'* Wat zijn **legumes**?",
         options: ["Peulvruchten", "Fruit", "Vlees", "Brood"],
         answer: 0,
-        wrongHints: [null, "Geen fruit.", "Bonen en linzen zijn plantaardig, geen vlees.", "Niet brood."],
+        wrongHints: [null, "Zijn bonen en linzen fruit? Kijk naar de voorbeelden na 'such as'.", "Bonen en linzen zijn plantaardig. Is dat vlees?", "Bonen en linzen bak je niet tot een brood. Welke groep voedsel zijn het?"],
       },
       {
         q: "*'-less'* aan eind van woord betekent ... ?",
         options: ["Zonder", "Met", "Twee", "Opnieuw"],
         answer: 0,
-        wrongHints: [null, "Tegengesteld.", "Dat is bi-.", "Dat is re-."],
+        wrongHints: [null, "'Met' is juist -ful, zoals in careful. Is careless hetzelfde als careful?", "'Twee' is bi-, vooraan, zoals in bicycle. Waar staat -less?", "'Opnieuw' is re-, vooraan, zoals in redo. Waar staat -less?"],
       },
       {
         q: "*'un-'* aan begin van woord betekent meestal?",
@@ -205,7 +205,7 @@ const steps = [
         q: "*'I felt jubilant after passing the test.'* Wat betekent **jubilant** (uit context)?",
         options: ["Heel blij", "Verdrietig", "Boos", "Bang"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Geen positieve emotie.", "Geen positieve emotie."],
+        wrongHints: [null, "Hoe voel je je meestal net nadat je een toets hebt gehaald?", "Word je boos als je een toets haalt? Wat zegt 'after passing' over het gevoel?", "Is er na het halen van een toets iets om bang voor te zijn?"],
       },
     ],
   },
@@ -265,13 +265,13 @@ const steps = [
         q: "*'Tom ate his sandwich. **He** was hungry.'* Wie is **he**?",
         options: ["Tom", "Iemand anders", "Het broodje", "Mary"],
         answer: 0,
-        wrongHints: [null, "Niet — Tom expliciet.", "Een broodje is 'it'.", "Mary niet genoemd."],
+        wrongHints: [null, "Wordt er in de zinnen nog een andere man of jongen genoemd?", "Voor een ding zoals een broodje gebruik je 'it'. Kan 'he' een broodje zijn?", "Wordt Mary ergens in de zinnen genoemd? Een verwijswoord slaat terug op iets wat er al staat."],
       },
       {
         q: "*'The book was thick. ___ had 500 pages.'* Welk woord?",
         options: ["It", "He", "She", "They"],
         answer: 0,
-        wrongHints: [null, "Persoon, geen ding.", "Persoon (vrouw).", "Meervoud."],
+        wrongHints: [null, "He gebruik je voor een man of jongen. Is een boek dat?", "She gebruik je voor een vrouw of meisje. Is een boek dat?", "They is meervoud. Gaat het hier over één boek of meer?"],
       },
       {
         q: "*'Sarah loves cats. **They** are her favorite animals.'* Wat is **they**?",
@@ -303,13 +303,13 @@ const steps = [
         q: "*'Sarah likes Tom. **She** told **him** a joke.'* Waar verwijst **'she'** naar?",
         options: ["Sarah", "Tom", "Joke", "Iemand anders"],
         answer: 0,
-        wrongHints: [null, "Mannelijk — 'him'.", "Geen persoon.", "Niet — staat in zin."],
+        wrongHints: [null, "Tom is een jongen. Welk woord gebruikt de zin al voor hem: 'she' of 'him'?", "Een grap is een ding en geen persoon. Gebruik je daar 'she' voor?", "Wordt er in de zin nog een andere vrouw of meisje genoemd?"],
       },
       {
         q: "*'I bought a phone. **It** has a great camera.'* Waar verwijst **'it'** naar?",
         options: ["De telefoon", "De camera", "De winkel", "Ik"],
         answer: 0,
-        wrongHints: [null, "Wat staat er vóór 'it'? De camera wordt pas erna genoemd.", "Wordt er in de zinnen een winkel genoemd?", "Persoon, geen 'it'."],
+        wrongHints: [null, "Wat staat er vóór 'it'? De camera wordt pas erna genoemd.", "Wordt er in de zinnen een winkel genoemd?", "Voor jezelf gebruik je 'I'. Kan 'it' naar de spreker verwijzen?"],
       },
       {
         q: "*'The students who studied passed. **They** worked hard.'* Waar verwijst **'they'** naar?",
@@ -330,19 +330,19 @@ const steps = [
         q: "Welk signaalwoord voor **tegenstelling**?",
         options: ["however", "therefore", "for example", "moreover"],
         answer: 0,
-        wrongHints: [null, "Gevolg.", "Voorbeeld.", "Toevoegen."],
+        wrongHints: [null, "Therefore betekent 'daarom' en geeft een gevolg. Is dat een tegenstelling?", "For example kondigt een voorbeeld aan. Is dat een tegenstelling?", "Moreover betekent 'bovendien' en voegt iets toe. Is dat een tegenstelling?"],
       },
       {
         q: "Welk soort tekst probeert **iets te verkopen**?",
         options: ["Advertentie", "News", "Review", "Story"],
         answer: 0,
-        wrongHints: [null, "Informeert.", "Beoordeelt.", "Vermaakt."],
+        wrongHints: [null, "Een nieuwsbericht meldt wat er gebeurd is. Wil het je iets laten kopen?", "Een review beoordeelt een product, ook als je het niet koopt. Welke tekst roept op tot kopen?", "Een verhaal wil je vermaken. Welke tekst wil dat je iets koopt?"],
       },
       {
         q: "*'The vast majority of people support the law.'* Wat betekent **vast** in deze context?",
-        options: ["Heel groot (large)", "Snel", "Hard", "Vast (NL betekenis)"],
+        options: ["Heel groot", "Snel", "Hard / stevig", "Vast / blijvend"],
         answer: 0,
-        wrongHints: [null, "Engels 'vast' is niet 'fast' (snel).", "Niet hard.", "Engels vast ≠ Nederlands vast."],
+        wrongHints: [null, "Je denkt misschien aan 'fast'. Past 'de snelle meerderheid' in de zin?", "Past 'de harde meerderheid van de mensen' in de zin? Wat zegt 'majority' over aantallen?", "Engels vast is een valse vriend. Past 'de vaste meerderheid' bij 'majority of people'?"],
       },
       {
         q: "Hoofdgedachte van: *'Climate change threatens the polar bears. Their ice habitat is melting.'*",
@@ -354,13 +354,13 @@ const steps = [
         q: "*'Anna and Tim went to the park. **They** played football.'* Wie is **they**?",
         options: ["Anna and Tim", "Sport-team", "Toeschouwers", "Anna alleen"],
         answer: 0,
-        wrongHints: [null, "Niet — Anna+Tim genoemd.", "Niet genoemd.", "Te beperkt."],
+        wrongHints: [null, "Wordt er een sportteam genoemd? Kijk wie er naar het park gingen.", "Worden er toeschouwers genoemd? Op wie slaat 'they' terug?", "They is meervoud. Hoeveel personen gingen er naar het park?"],
       },
       {
         q: "*'Books are great. ___, they are also expensive.'* Welk signaalwoord (tegenstelling)?",
         options: ["However", "Therefore", "Because", "For example"],
         answer: 0,
-        wrongHints: [null, "Geen gevolg.", "Geen reden.", "Geen voorbeeld."],
+        wrongHints: [null, "Therefore geeft een gevolg. Is 'duur' een gevolg van 'geweldig'?", "Because geeft een reden en past niet aan het begin met een komma. Is 'duur' de reden dat boeken geweldig zijn?", "For example kondigt een voorbeeld aan. Is 'duur' een voorbeeld van 'geweldig'?"],
       },
       {
         q: "*'**Open question**: what does 'although' signal in English?'*",

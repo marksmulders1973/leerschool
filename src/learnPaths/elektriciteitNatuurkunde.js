@@ -440,13 +440,13 @@ const steps = [
     checks: [
       {
         q: "Een lamp van 100 Ω op een 12 V batterij. Wat is de stroomsterkte?",
-        options: ["0,12 A", "1.200 A", "12 A", "100 A"],
+        options: ["0,12 A", "1.200 A", "8,3 A", "1,2 A"],
         answer: 0,
         wrongHints: [
           null,
-          "Veel te veel — bij die spanning + weerstand is het minder.",
-          "Te veel — dan zou de batterij ontploffen.",
-          "Bedoel je de weerstand? Dan ja, maar de vraag is naar I.",
+          "Je vermenigvuldigde spanning en weerstand. Wordt de stroom groter of kleiner als de weerstand groter is?",
+          "Je deelde de weerstand door de spanning. Welke van de twee hoort boven de deelstreep?",
+          "Reken 12 ÷ 100 nog eens na. Waar staat de komma?",
         ],
         uitlegPad: {
           stappen: [{ titel: "I = U / R = 12/100 = 0,12 A", tekst: "Wet van Ohm omgeschreven: I = U/R. Met U=12 V en R=100 Ω → I = 12/100 = 0,12 A (= 120 mA)." }],
@@ -463,8 +463,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Plus is fout — de wet is een vermenigvuldiging.",
-          "Min is fout — vermenigvuldigen.",
+          "Kun je ampère en ohm bij elkaar optellen? Het zijn verschillende eenheden.",
+          "Ook aftrekken past niet: ampère en ohm zijn verschillende eenheden. Welke bewerking koppelt ze wel?",
           "Andersom — als je I berekent: I = U / R.",
         ],
         uitlegPad: {
@@ -581,7 +581,7 @@ const steps = [
           null,
           "Plus is fout — vermenigvuldigen.",
           "Dat is een variant op Wet van Ohm voor I, niet voor P.",
-          "Variatie kan maar net niet — let op de eenheden.",
+          "Reken de eenheden na: ohm × ampère geeft volt, geen watt. Welke twee grootheden geven samen watt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = U × I", tekst: "Vermogen P = spanning U × stroomsterkte I. Eenheid: watt (W) = V × A." }],
@@ -626,14 +626,14 @@ const steps = [
           "Schakelt uit als er stroom weglekt naar de aarde",
           "Filtert storingen uit de stroom",
           "Verlaagt de spanning naar een veilig niveau",
-          "Maakt de stroom sterker voor zware apparaten",
+          "Schakelt uit als er te veel apparaten aan staan",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Geen filter — een schakelaar.",
-          "Verlaagt niet de spanning, wel kan 'ie 'm uitschakelen.",
-          "Andersom — schakelt juist uit.",
+          "Storingen merk je aan flikkerende lampen, niet in de meterkast. Wanneer springt een aardlekschakelaar eruit?",
+          "De spanning in huis blijft gewoon 230 V. Waarop let een aardlekschakelaar dan?",
+          "Bij te veel apparaten tegelijk slaat de zekering (groepsautomaat) door. Waar let de aardlekschakelaar op?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Aardlek schakelt uit bij lek", tekst: "Aardlekschakelaar detecteert verschil tussen ingaande en uitgaande stroom. Bij verschil ≥ 30 mA (= stroom 'lekt' weg, vaak via mens naar aarde) → schakelt binnen 30 ms uit. Redt levens." }],
@@ -680,14 +680,14 @@ const steps = [
         options: [
           "Een apparaat van 1 kW dat 1 uur aan staat",
           "Een apparaat van 1 kW dat 1 minuut aan staat",
-          "1 kilometer per uur",
+          "1.000 watt per uur",
           "1.000 watt vermogen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Kijk goed naar de tijd: hoe lang hoort het apparaat aan te staan?",
-          "Niets met snelheid.",
+          "kWh betekent kilowatt × uur, niet kilowatt per uur. Wat krijg je als je vermogen met tijd vermenigvuldigt?",
           "Dat is 1 kW (vermogen), niet kWh (energie).",
         ],
         uitlegPad: {
@@ -729,13 +729,13 @@ const steps = [
     checks: [
       {
         q: "Een lamp van 200 Ω op 230 V. Hoeveel stroom?",
-        options: ["1,15 A", "230 A", "0,01 A", "46 A"],
+        options: ["1,15 A", "230 A", "0,01 A", "0,87 A"],
         answer: 0,
         wrongHints: [
           null,
           "Veel te veel — gebruik de wet van Ohm: welke formule geeft de stroom bij bekende spanning en weerstand?",
           "Te weinig. Controleer of je de spanning door de weerstand deelt: I = U ÷ R.",
-          "Hoe kom je aan 46? Gebruik de wet van Ohm met de gegeven 200 Ω.",
+          "Je deelde de weerstand door de spanning. Welke van de twee hoort boven de deelstreep in I = U ÷ R?",
         ],
         uitlegPad: {
           stappen: [{ titel: "I = U/R = 230/200 = 1,15 A", tekst: "Wet van Ohm: I = U/R. 230 ÷ 200 = 1,15 A." }],
@@ -748,11 +748,11 @@ const steps = [
       },
       {
         q: "Een apparaat van 1.500 W staat 4 uur aan. Hoeveel kWh?",
-        options: ["6 kWh", "375 kWh", "0,375 kWh", "60 kWh"],
+        options: ["6 kWh", "6.000 kWh", "0,375 kWh", "60 kWh"],
         answer: 0,
         wrongHints: [
           null,
-          "Te veel — zet het vermogen eerst om naar kW en reken dan pas met de tijd.",
+          "Je rekende in wattuur. Hoeveel wattuur gaan er in één kWh?",
           "Je deelde het vermogen door de tijd. Energie is vermogen × tijd.",
           "Je rekende met 15 kW. Hoeveel kW is 1.500 W?",
         ],

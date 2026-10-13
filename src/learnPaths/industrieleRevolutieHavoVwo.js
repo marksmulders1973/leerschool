@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Waarom begon de industriële revolutie in **Engeland** en niet bv. in Frankrijk?",
-        options: ["Samenloop van kolen, kolonies en stabiele politiek", "Engelse uitvinders waren slimmer dan anderen", "Engeland had veel meer inwoners dan Frankrijk", "Engeland had het beste onderwijs van Europa"],
+        options: ["Kolen, koloniën en politieke rust", "Een absolute koning die fabrieken stichtte", "Lage lonen door veel slavenarbeid", "Veel inwoners en het beste onderwijs"],
         answer: 0,
-        wrongHints: [null, "Ook in Frankrijk werd veel uitgevonden — waarom kwam het in Engeland wél van de grond?", "Frankrijk had juist veel meer inwoners dan Engeland.", "Gewone Engelsen kregen niet meer onderwijs dan mensen elders."],
+        wrongHints: [null, "Engeland had sinds 1688 juist een koning met beperkte macht. Wie bouwden de fabrieken dan?", "In Engelse fabrieken werkten vrije arbeiders voor loon. Wat zat er wél in de Engelse grond?", "Frankrijk had juist meer inwoners, en gewone Engelsen kregen niet meer les dan mensen elders."],
         uitlegPad: {
           stappen: [
             { titel: "Meerdere factoren", tekst: "Steenkool-rijkdom + grote afzetmarkt (Brits Rijk) + politieke stabiliteit sinds 1688 (Glorious Revolution) + sterke maritieme handel + Inclosure-arbeidsoverschot + Verlichtings-cultuur. Frankrijk had revolutie 1789 + napoleontische oorlogen → industrialisatie pas vanaf 1830." },
@@ -75,7 +75,7 @@ const steps = [
         q: "Vóór 1750 werkte ~**80%** van bevolking in:",
         options: ["Landbouw", "Fabriek", "Mijnen", "Handel"],
         answer: 0,
-        wrongHints: [null, "Niet — fabrieken bestonden nog niet als nu.", "Niet — kleinschalig.", "Niet — minder dan 5%."],
+        wrongHints: [null, "Fabrieken kwamen pas ná 1750 op. Waar werkten de meeste mensen daarvoor?", "Mijnen waren er wel, maar klein. Wat moest bijna iedereen doen om aan eten te komen?", "Kooplieden zaten in de steden, maar de meeste mensen woonden op het platteland."],
         uitlegPad: {
           stappen: [{ titel: "Agrarische samenleving", tekst: "Tot industriële revolutie domineerde landbouw. Per 1850 (UK): nog ~30% in landbouw. Per 1900: <20%. Vandaag (NL): <3%. Reusachtige verschuiving van werk-aard binnen ~150 jaar." }],
           niveaus: { basis: "Landbouw.", simpeler: "Bijna iedereen boer.", nogSimpeler: "80% boer" },
@@ -92,9 +92,9 @@ const steps = [
     checks: [
       {
         q: "De **stoommachine** van wie maakte de Industriële Revolutie mogelijk?",
-        options: ["James Watt", "Thomas Edison", "Karl Marx", "Henry Ford"],
+        options: ["James Watt", "Thomas Edison", "George Stephenson", "Henry Ford"],
         answer: 0,
-        wrongHints: [null, "Niet — elektriciteit, later.", "Niet — filosoof.", "Niet — lopende band, 1913."],
+        wrongHints: [null, "Edison werkte pas een eeuw later, met elektriciteit.", "Stephenson bouwde locomotieven die op stoom reden. Wie had de stoommachine zelf al eerder verbeterd?", "Henry Ford leefde in de 20e eeuw en werkte met auto's."],
         uitlegPad: {
           stappen: [
             { titel: "Watt verbeterde Newcomen", tekst: "Newcomen had stoom-mijnpomp (1712). Watt voegde aparte condensor toe → 70% minder kolen → economisch winstgevend buiten mijnbouw. Patentverlening 1769; commercialisatie tot 1800." },
@@ -125,9 +125,9 @@ const steps = [
       },
       {
         q: "**Eerste trein** in Nederland reed in:",
-        options: ["1839", "1825", "1880", "1900"],
+        options: ["1839", "1825", "1848", "1860"],
         answer: 0,
-        wrongHints: [null, "Niet — dat was eerste UK-trein (Stockton-Darlington).", "Te laat.", "Te laat."],
+        wrongHints: [null, "In 1825 reed de eerste trein in Engeland (Stockton-Darlington). Was Nederland net zo vroeg?", "In 1848 kreeg Nederland een nieuwe grondwet. Reed de Arend toen al tussen Amsterdam en Haarlem?", "Rond 1860 begon de staat met een groot spoornet. Wanneer reed de allereerste trein?"],
         uitlegPad: {
           stappen: [{ titel: "HSM 1839", tekst: "Hollandse IJzeren Spoorweg-Maatschappij (HSM) opende Amsterdam-Haarlem 1839. 20 km, ~30 min. Vooral passagiers. NL liep relatief achter — handelseconomie was minder afhankelijk van industriële infrastructuur dan UK." }],
           theorie: "Eerste passagierstrein wereldwijd: Liverpool-Manchester 1830.",
@@ -138,7 +138,7 @@ const steps = [
         q: "**Spinning Jenny** (Hargreaves 1764) was uitvinding in welke sector?",
         options: ["Textiel", "Mijnbouw", "Transport", "Landbouw"],
         answer: 0,
-        wrongHints: [null, "Niet — andere uitvindingen daar.", "Niet — Stephenson.", "Niet — denk aan wat 'spinning' betekent."],
+        wrongHints: [null, "In de mijnen ging het om kolen en stoompompen. Wat doe je met een spinmachine?", "Bij transport horen de locomotief en de stoomboot. Wordt daar iets gesponnen?", "De boer leverde de grondstof. In welke werkplaatsen werd die verder verwerkt?"],
         uitlegPad: {
           stappen: [{ titel: "Vroege spin-machine", tekst: "Spinning Jenny: één arbeider bedient 8 spillen tegelijk i.p.v. 1 traditioneel. Tienvoud van productiviteit. Textiel was eerste gemechaniseerde sector — vandaar dat industriële revolutie er begon." }],
           niveaus: { basis: "Textiel.", simpeler: "Garen spinnen.", nogSimpeler: "Textiel" },
@@ -167,9 +167,9 @@ const steps = [
       },
       {
         q: "Karl Marx + Engels publiceerden **Communistisch Manifest** in welk jaar?",
-        options: ["1848", "1789", "1917", "1900"],
+        options: ["1848", "1789", "1917", "1871"],
         answer: 0,
-        wrongHints: [null, "Niet — Franse Revolutie.", "Niet — Russische Revolutie (gevolg).", "Te laat."],
+        wrongHints: [null, "1789 is het jaar van de Franse Revolutie, ruim een halve eeuw eerder.", "In 1917 brak de Russische Revolutie uit. Die was juist geïnspireerd door het Manifest.", "In 1871 was er de Parijse Commune. Bestond het Manifest toen al?"],
         uitlegPad: {
           stappen: [{ titel: "Revolutiejaar 1848", tekst: "Klassiek 1848: revoluties in heel Europa (Wenen, Berlijn, Parijs, Milaan). Marx + Engels publiceren *Manifest der Kommunistischen Partei* — oproep tot arbeiders-revolutie. 'Een spook waart door Europa, het spook van het communisme.'" }],
           theorie: "1848-revoluties grotendeels mislukt; absolutisme keerde terug. Maar idee bleef bestaan → 1917 Russische Revolutie + later.",
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Liberalisme volgens Adam Smith:",
-        options: ["Vrije markt + minimale staats-rol", "Sterke staat met centrale planning", "Productiemiddelen in gemeenschap", "Religieus geleide economie"],
+        options: ["Vrije markt + minimale staats-rol", "Sterke staat met centrale planning", "Productiemiddelen in gemeenschap", "Handelsoverschot via staatssteun"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — dat is socialisme.", "Niet — laat religie buiten."],
+        wrongHints: [null, "Centrale planning hoort bij het communisme. Wilde Smith dat de staat alles regelde?", "Gemeenschappelijk bezit is het idee van socialisten zoals Marx.", "Dat is het mercantilisme, waar Smith zich juist tegen afzette."],
         uitlegPad: {
           stappen: [{ titel: "'Onzichtbare hand'", tekst: "Smith betoogde: als iedereen vrij eigen belang nastreeft, leidt 'onzichtbare hand' van de markt vanzelf tot optimale uitkomst voor allen. Staat alleen voor leger + rechtspraak + infrastructuur (klein). Probleem: werkt minder goed bij grote machts-ongelijkheid + externaliteiten (milieu)." }],
           niveaus: { basis: "Laissez-faire.", simpeler: "Vrije markt zonder staat.", nogSimpeler: "Laissez-faire" },
@@ -188,9 +188,9 @@ const steps = [
       },
       {
         q: "**Robert Owen** stichtte 'New Lanark' als voorbeeld van:",
-        options: ["Utopisch socialisme", "Kapitalistische fabriek", "Religieuze gemeente", "Militaire kazerne"],
+        options: ["Utopisch socialisme", "Kapitalistische fabriek", "Religieuze gemeente", "Communistische staat"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — sociaal experiment.", "Niet — New Lanark was een fabrieksdorp."],
+        wrongHints: [null, "New Lanark wás een fabriek, maar Owen gaf de arbeiders scholen en goede huizen. Waarom deed hij dat?", "Owen dacht niet aan geloof, maar aan een betere samenleving voor arbeiders.", "Owen bouwde één dorp, geen staat — en het communisme van Marx kwam later."],
         uitlegPad: {
           stappen: [{ titel: "Pre-Marx socialisme", tekst: "Owen kocht rond 1800 een textielfabriek in New Lanark (Schotland). Verkortte werkdag, bouwde scholen voor kinderen, verbood kinderarbeid <10, betaalde betere lonen. Toch winstgevend. Bewees: humane fabriek kan. Inspireerde latere socialistische bewegingen." }],
           niveaus: { basis: "Utopisch socialisme.", simpeler: "Sociale fabriek met goede voorwaarden.", nogSimpeler: "Owen" },
@@ -219,7 +219,7 @@ const steps = [
         q: "**Lopende band** voor auto-productie was door:",
         options: ["Henry Ford", "Karl Benz", "Thomas Edison", "James Watt"],
         answer: 0,
-        wrongHints: [null, "Niet — Benz vond de auto uit, niet de lopende band.", "Niet — Edison gloeilamp.", "Niet — stoom-machine, eerder."],
+        wrongHints: [null, "Niet — Benz vond de auto uit, niet de lopende band.", "Edison was uitvinder op het gebied van elektriciteit, niet van auto's.", "Watt leefde ruim honderd jaar eerder, in de tijd van de stoom."],
         uitlegPad: {
           stappen: [{ titel: "Massa-productie revolutie", tekst: "Ford T (sinds 1908), vanaf 1913: auto-bouw door arbeiders die elk één taak doen aan langs-bewegende band. Bouwtijd 12 uur → 1,5 uur. Prijs daalde van ~$850 naar $260 → eerste 'massa-product' auto." }],
           theorie: "Ford betaalde arbeiders relatief hoog loon ($5/dag) zodat ze zelf auto's konden kopen → eigen afzetmarkt.",
@@ -228,9 +228,9 @@ const steps = [
       },
       {
         q: "**Edison** patenteerde welke uitvinding (1879)?",
-        options: ["Gloeilamp", "Stoom-machine", "Telegraaf", "Telefoon"],
+        options: ["Gloeilamp", "Stoommachine", "Telegraaf", "Telefoon"],
         answer: 0,
-        wrongHints: [null, "Niet — Watt, eerder.", "Niet — Morse 1837.", "Niet — Bell 1876."],
+        wrongHints: [null, "De stoommachine was al een eeuw vóór 1879 verbeterd.", "De telegraaf van Morse werd al in de jaren 1830 gebruikt.", "De telefoon werd in 1876 door Bell gepatenteerd."],
         uitlegPad: {
           stappen: [{ titel: "Lichtgevend filament", tekst: "Edison's praktische gloeilamp (1879) gebruikte koolstof-filament dat ~40 uur brandde. Vereiste ook hele elektriciteits-distributiesysteem → Pearl Street centrale NYC 1882. Veranderde nachtleven + arbeidstijden voorgoed." }],
           niveaus: { basis: "Gloeilamp 1879.", simpeler: "Edison + gloeilamp.", nogSimpeler: "Gloeilamp" },
@@ -267,9 +267,9 @@ const steps = [
       },
       {
         q: "**Wisselstroom** voor elektriciteits-net door:",
-        options: ["Nikola Tesla", "Thomas Edison", "Albert Einstein", "Maxwell"],
+        options: ["Nikola Tesla", "Thomas Edison", "Michael Faraday", "James Clerk Maxwell"],
         answer: 0,
-        wrongHints: [null, "Niet — Edison voorstander gelijkstroom (en verloor stroom-oorlog).", "Niet — relativiteit.", "Niet — theorie EM, niet praktische generator."],
+        wrongHints: [null, "Edison was juist voorstander van gelijkstroom en verloor de 'stroomoorlog'.", "Faraday ontdekte de inductie waar dynamo's op werken, maar bouwde geen stroomnet.", "Maxwell schreef de theorie van het elektromagnetisme, maar bouwde geen generatoren."],
         uitlegPad: {
           stappen: [
             { titel: "AC won 'War of Currents'", tekst: "Edison wilde gelijkstroom; Tesla + Westinghouse promootten wisselstroom. AC kan via trafo's omhoog/omlaag → lange-afstand-transport mogelijk → AC won eind 19e eeuw. Tesla werd ietwat vergeten tot recent (eer voor Edison oneerlijk groot)." },
@@ -314,7 +314,7 @@ const steps = [
         q: "Welvaartsstaat in Nederland kwam vooral tot stand:",
         options: ["Na WO2", "Vóór WO1", "In de jaren 1830", "In de crisis van de jaren 1930"],
         answer: 0,
-        wrongHints: [null, "Niet — toen begon het pas (Kinderwet 1874).", "Niet — toen geen sociaal stelsel.", "Toen waren er alleen noodregelingen, nog geen breed stelsel."],
+        wrongHints: [null, "Vóór 1914 waren er pas de eerste losse wetten, zoals het Kinderwetje van 1874.", "In de jaren 1830 bemoeide de staat zich nog nauwelijks met armoede of ziekte.", "Toen waren er alleen noodregelingen, nog geen breed stelsel."],
         uitlegPad: {
           stappen: [
             { titel: "Naoorlogse opbouw", tekst: "Drees AOW 1957, Algemene Bijstandswet 1965, ziektewet/WW uitgebreid, onderwijs gratis. Sterke economische groei + brede politieke consensus. Vanaf 1980s: terugtrekking (geprivatiseerd, versoberd, sancties)." },
@@ -324,9 +324,9 @@ const steps = [
       },
       {
         q: "CO₂-concentratie atmosfeer veranderde van **280 ppm** (preindustrieel) naar:",
-        options: ["~420 ppm", "~300 ppm", "~600 ppm", "~250 ppm"],
+        options: ["~420 ppm", "~300 ppm", "~600 ppm", "~350 ppm"],
         answer: 0,
-        wrongHints: [null, "Veel hoger.", "Nog niet zo hoog.", "Onjuist — stijgt, niet daalt."],
+        wrongHints: [null, "Rond 300 ppm zat de lucht al vóór 1920. Is het daarna nog gestegen?", "Zo hoog is het nog niet: 600 ppm is een mogelijk niveau aan het eind van deze eeuw.", "350 ppm werd eind jaren 1980 bereikt. Is het sindsdien gestegen?"],
         uitlegPad: {
           stappen: [
             { titel: "150 jaar fossiele brandstoffen", tekst: "1850: ~285 ppm. 1950: ~310 ppm. 2000: ~370 ppm. 2024: ~420 ppm. Stijgsnelheid +2,5 ppm/jaar = snelste in 800 000 jaar (volgens ijs-kernen). Doel 1,5 °C: <450 ppm." },

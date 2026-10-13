@@ -130,7 +130,7 @@ const steps = [
         q: "Twee krachten van 4 N en 6 N, beide naar rechts. Wat is de resultante?",
         options: ["10 N naar rechts", "2 N naar rechts", "10 N naar links", "0 N"],
         answer: 0,
-        wrongHints: [null, "Dat is bij tegengestelde richting.", "Niet links — beide gaan rechts.", "Bij gelijke richting is het optellen."],
+        wrongHints: [null, "Je trok 4 van 6 af. Wanneer doe je dat: bij krachten in dezelfde of in tegengestelde richting?", "Beide krachten wijzen naar rechts. Kan de resultante dan naar links wijzen?", "Heffen twee krachten die dezelfde kant op wijzen elkaar op?"],
         uitlegPad: {
           stappen: [{ titel: "Dezelfde richting = optellen", tekst: "Twee krachten zelfde kant op: 4 + 6 = 10 N naar rechts." }],
           woorden: [{ woord: "resultante", uitleg: "som van alle krachten" }],
@@ -178,9 +178,9 @@ const steps = [
     checks: [
       {
         q: "Welke richting heeft zwaartekracht op aarde?",
-        options: ["Verticaal naar beneden", "Verticaal omhoog", "Naar het oosten", "Geen vaste richting"],
+        options: ["Verticaal naar beneden", "Verticaal omhoog", "Langs een helling omlaag", "Geen vaste richting"],
         answer: 0,
-        wrongHints: [null, "Dan zou je niet vallen.", "Heeft niets met windrichting te maken.", "Ze heeft wél een vaste richting — waar vallen dingen naartoe?"],
+        wrongHints: [null, "Als de aarde omhoog trok, wat zou er dan met een losgelaten bal gebeuren?", "Op een helling glijdt een blok schuin omlaag. Is dat de richting van de zwaartekracht zelf, of van een deel ervan?", "Ze heeft wél een vaste richting — waar vallen dingen naartoe?"],
         uitlegPad: {
           stappen: [{ titel: "Naar beneden = naar middelpunt aarde", tekst: "Zwaartekracht trekt alles naar het middelpunt van de aarde. Voor ons op het oppervlak = recht naar beneden (verticaal)." }],
           woorden: [{ woord: "verticaal", uitleg: "loodrecht op aardoppervlak" }],
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat is g op aarde (afgerond)?",
-        options: ["10 N/kg", "1 N/kg", "100 N/kg", "1000 N/kg"],
+        options: ["10 N/kg", "1 N/kg", "100 N/kg", "0,1 N/kg"],
         answer: 0,
-        wrongHints: [null, "Zou betekenen dat alles bijna gewichtloos is.", "Veel te groot — alles zou zwaar als lood lijken.", "Veel te groot."],
+        wrongHints: [null, "Bij 1 N/kg zou een pak melk van 1 kg bijna niets wegen. Voelt dat zo?", "Bij 100 N/kg zou een pak melk zo zwaar voelen als een flinke zak cement. Klopt dat?", "Bij 0,1 N/kg zou je bijna kunnen zweven. Valt een losgelaten bal zo langzaam?"],
         uitlegPad: {
           stappen: [{ titel: "g ≈ 10 N/kg op aarde", tekst: "Per kilogram massa is de zwaartekracht ~10 N (preciezer 9,81). In schoolopgaves rekenen we vrijwel altijd met g = 10 N/kg." }],
           woorden: [{ woord: "9,81 vs 10", uitleg: "voor rekengemak afgerond" }],
@@ -270,7 +270,7 @@ const steps = [
     checks: [
       {
         q: "Een veer met C = 100 N/m wordt 0,30 m uitgerekt. Wat is Fv?",
-        options: ["30 N", "100 N", "0,30 N", "330 N"],
+        options: ["30 N", "100 N", "0,30 N", "333 N"],
         answer: 0,
         wrongHints: [null, "Dat is C — je moet vermenigvuldigen met u.", "Te klein — dat is alleen u; vermenigvuldig nog met C.", "Te groot — je deelde C door u in plaats van te vermenigvuldigen."],
         uitlegPad: {
@@ -291,7 +291,7 @@ const steps = [
           "Kracht waarmee de aarde aan je trekt",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is veerkracht. Spankracht duwt niet, maar trekt. Waarin?", "Dat is wrijving.", "Zwaartekracht trekt naar beneden, spankracht langs het touw."],
+        wrongHints: [null, "Dat is veerkracht. Spankracht duwt niet, maar trekt. Waarin?", "Kracht tussen schurende oppervlakken heet wrijving. Waarin werkt spankracht?", "Zwaartekracht trekt naar beneden, spankracht langs het touw."],
         uitlegPad: {
           stappen: [{ titel: "Spankracht = trekken in touw", tekst: "In een gespannen touw of kabel zit spankracht: het touw trekt aan beide uiteinden naar binnen (richting middelpunt touw). Houdt dingen op." }],
           woorden: [{ woord: "spankracht (Fs)", uitleg: "kracht in gespannen draad/kabel" }],
@@ -483,7 +483,7 @@ const steps = [
         q: "Wat is het gewicht van iemand met massa 50 kg op aarde (g = 10 N/kg)?",
         options: ["500 N", "50 N", "10 N", "5 N"],
         answer: 0,
-        wrongHints: [null, "Dat is de massa, niet het gewicht.", "Te weinig — Fz = m·g.", "Veel te weinig."],
+        wrongHints: [null, "Dat is de massa, niet het gewicht.", "10 N is het gewicht van 1 kg. Hoeveel kilo heeft deze persoon?", "5 N is het gewicht van een halve kilo. Weegt een persoon van 50 kg zo weinig?"],
         uitlegPad: {
           stappen: [{ titel: "Fz = m × g = 50 × 10 = 500 N", tekst: "Gewicht (zwaartekracht) = massa × g. 50 kg × 10 N/kg = 500 N op aarde." }],
           woorden: [{ woord: "m·g", uitleg: "massa maal valversnelling" }],
@@ -497,7 +497,7 @@ const steps = [
         q: "Een blok van 2 kg wordt met 6 N voortgeduwd op een wrijvingsloze vloer. Versnelling?",
         options: ["3 m/s²", "12 m/s²", "8 m/s²", "0,33 m/s²"],
         answer: 0,
-        wrongHints: [null, "Vermenigvuldigd in plaats van gedeeld — welke bewerking geeft F/m?", "Optellen is niet de juiste bewerking hier.", "Verkeerde rekenvolgorde — welk getal deel je door welk?"],
+        wrongHints: [null, "Vermenigvuldigd in plaats van gedeeld — welke bewerking geeft F/m?", "Je telde kracht en massa op. Kun je newton en kilogram optellen?", "Je deelde de massa door de kracht. Welke van de twee staat boven de deelstreep?"],
         uitlegPad: {
           stappen: [{ titel: "a = F/m = 6/2 = 3 m/s²", tekst: "Geen wrijving betekent geen tegenwerkende kracht. Netto kracht = 6 N. a = F/m = 6/2 = 3 m/s²." }],
           woorden: [{ woord: "wrijvingsloos", uitleg: "ideale situatie, geen Fw" }],
@@ -511,7 +511,7 @@ const steps = [
         q: "Welke kracht remt bewegende voorwerpen af?",
         options: ["Wrijving", "Zwaartekracht", "Veerkracht", "Spankracht"],
         answer: 0,
-        wrongHints: [null, "Zwaartekracht is verticaal, niet altijd remmend.", "Veerkracht trekt naar rustpunt, niet remmend.", "Spankracht is langs touw."],
+        wrongHints: [null, "Zwaartekracht trekt omlaag. Remt die een bal die over de grond rolt?", "Veerkracht trekt een veer terug naar haar rustlengte. Remt die een fietser af?", "Spankracht werkt in een touw. Wat remt een rollende bal af als er geen touw is?"],
         uitlegPad: {
           stappen: [{ titel: "Wrijving remt", tekst: "Wrijving werkt tegen de bewegingsrichting in en remt voorwerpen af. Andere krachten (zwaarte, veer, span) hebben andere richtingen — niet specifiek remmend." }],
           woorden: [{ woord: "remmen", uitleg: "snelheid verminderen" }],
@@ -538,10 +538,10 @@ const steps = [
       { q: "Een voorwerp van 5 kg ondervindt zwaartekracht. Hoe groot is Fz? (g ≈ 10 N/kg)", options: ["50 N","5 N","0,5 N","500 N"], answer: 0, wrongHints: [null,"Te laag — gebruik de formule Fz = m × g en vul massa en g in.","Veel te laag — denk na over de juiste bewerking.","Te hoog — welke twee grootheden vermenigvuldig je met elkaar?"] },
       { q: "Newton 1 zegt: een voorwerp in rust blijft in rust ZOLANG?", options: ["Er geen netto kracht op werkt","Er geen zwaartekracht op werkt","Het zwaarder is dan de kracht erop","Er geen wrijving op werkt"], answer: 0, wrongHints: [null,"Een boek op tafel voelt wél zwaartekracht en blijft toch liggen. Waar gaat het dan om?","Massa en kracht kun je niet zomaar vergelijken. Kijk naar alle krachten samen.","Ook zonder wrijving blijft iets liggen als niets eraan trekt of duwt. Waar gaat het dan om?"] },
       { q: "F = m × a. Massa 2 kg, versnelling 3 m/s². Wat is F?", options: ["6 N","5 N","1,5 N","0,67 N"], answer: 0, wrongHints: [null,"Niet — niet optellen, vermenigvuldigen.","Niet — niet delen.","Je deelde massa door versnelling. Wat zegt F = m × a dat je moet doen?"] },
-      { q: "Eenheid van **kracht** is?", options: ["Newton (N)","Kilo (kg)","Meter (m)","Watt (W)"], answer: 0, wrongHints: [null,"Massa.","Lengte.","Vermogen."] },
+      { q: "Eenheid van **kracht** is?", options: ["Newton (N)","Kilo (kg)","Meter (m)","Watt (W)"], answer: 0, wrongHints: [null,"Kilogram is de eenheid van massa. Is massa hetzelfde als kracht?","Meter is de eenheid van lengte. Waarin druk je een duw of trek uit?","Watt is de eenheid van vermogen. Waarin druk je een duw of trek uit?"] },
       { q: "**Wrijving** werkt meestal ___ de bewegingsrichting?", options: ["Tegen","Mee","Loodrecht","Schuin omhoog"], answer: 0, wrongHints: [null,"Gaat een slee door wrijving sneller of langzamer glijden?","Loodrecht op het oppervlak werkt de normaalkracht. Wrijving werkt langs het oppervlak.","Wrijving werkt langs het oppervlak waar twee dingen langs elkaar schuren. Gaat dat schuin omhoog?"] },
-      { q: "Twee personen trekken aan touw: 10 N links, 15 N rechts. **Netto kracht** = ?", options: ["5 N rechts","25 N","5 N links","0 N"], answer: 0, wrongHints: [null,"Som — alleen bij dezelfde richting.","Verkeerde richting.","Niet gelijk."] },
-      { q: "**Zwaartekracht-versnelling** op aarde is ongeveer?", options: ["~10 m/s²","~5 m/s²","~100 m/s²","0 m/s²"], answer: 0, wrongHints: [null,"Te laag.","Te hoog.","Zwaartekracht bestaat."] },
+      { q: "Twee personen trekken aan touw: 10 N links, 15 N rechts. **Netto kracht** = ?", options: ["5 N rechts","25 N","5 N links","0 N"], answer: 0, wrongHints: [null,"Je telde 10 en 15 op. Mag dat als de krachten tegengesteld zijn?","Aan welke kant wordt het hardst getrokken?","Zijn 10 N en 15 N even groot? Wanneer zou de netto kracht 0 N zijn?"] },
+      { q: "**Zwaartekracht-versnelling** op aarde is ongeveer?", options: ["~10 m/s²","~5 m/s²","~100 m/s²","0 m/s²"], answer: 0, wrongHints: [null,"Een steen die je 1 seconde laat vallen, gaat al ongeveer zo hard als een brommer (36 km/u). Hoeveel m/s is dat?","Zou een vallende steen na 1 seconde al 100 m/s (360 km/u) gaan?","Bij 0 m/s² zou een losgelaten bal blijven hangen. Gebeurt dat op aarde?"] },
       { q: "**Normaalkracht** werkt waar?", options: ["Loodrecht op het oppervlak","Evenwijdig aan het oppervlak","In de bewegingsrichting","Naar het midden van de aarde"], answer: 0, wrongHints: [null,"Langs het oppervlak werkt de wrijving. In welke richting duwt de ondergrond terug?","Normaalkracht is er ook als iets stilligt. Heeft het dan een bewegingsrichting?","Naar het midden van de aarde werkt de zwaartekracht. Duwt de ondergrond jou omlaag?"] },
       { q: "De **derde wet van Newton** zegt?", options: ["Actie = reactie","Kracht = massa × versnelling","Traagheid: rust blijft rust","Aantrekking tussen alle massa's"], answer: 0, wrongHints: [null,"Dat is de tweede wet van Newton.","Dat is de eerste wet van Newton.","Dat is de gravitatiewet van Newton, niet een van zijn drie bewegingswetten."] },
       { q: "Een **veerkracht** is bv. de kracht in een ___?", options: ["Uitgerekt elastiek","Vallende steen","Remmend fietswiel","Drijvend bootje"], answer: 0, wrongHints: [null,"Bij een vallende steen werkt de zwaartekracht. Wat moet er uitrekken of indrukken bij veerkracht?","Bij remmen werkt wrijving. Wat moet er uitrekken of indrukken bij veerkracht?","Een drijvende boot krijgt opwaartse kracht van het water. Wat moet er uitrekken of indrukken bij veerkracht?"] },
