@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **het internet**?",
-        options: ["Een wereldwijd netwerk van netwerken", "Eén grote computer", "Een website", "Een programmeertaal"],
+        options: ["Een wereldwijd netwerk van netwerken", "Eén enorme supercomputer in Amerika", "Alle websites die je kunt bezoeken", "Een programma waarmee je surft"],
         answer: 0,
-        wrongHints: [null, "Het is niet één machine, maar heel veel verbonden netwerken.", "Een website is iets dát op internet staat, niet het internet zelf.", "Een taal is iets anders."],
+        wrongHints: [null, "Het is niet één machine, maar heel veel verbonden netwerken.", "Websites staan óp het internet — dat is het web, niet het internet zelf.", "Dat is een browser."],
         uitlegPad: {
           stappen: [{ titel: "Netwerk van netwerken", tekst: "Het **internet** is een wereldwijd **netwerk van netwerken**: miljoenen kleine (LAN) en grote (WAN) netwerken aan elkaar verbonden via kabels en routers. Het is de infrastructuur waarover diensten zoals het web, e-mail en streaming lopen." }],
           niveaus: { basis: "Netwerk van netwerken.", simpeler: "Internet = netwerken aan elkaar", nogSimpeler: "Netwerken samen" },
@@ -30,7 +30,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen het **internet** en het **web** (www)?",
-        options: ["Internet = de infrastructuur; web = één dienst erop", "Ze zijn precies hetzelfde", "Het web is groter dan het internet", "Het web bestaat uit kabels, internet uit sites"],
+        options: ["Internet = de infrastructuur; web = één dienst erop", "Twee verschillende namen voor precies hetzelfde", "Het web is groter dan het hele internet", "Het web bestaat uit kabels, internet uit sites"],
         answer: 0,
         wrongHints: [null, "Er is wel degelijk verschil.", "Kan een dienst groter zijn dan het netwerk waar hij overheen loopt?", "Kijk nog eens: welk van de twee is de fysieke infrastructuur?"],
         uitlegPad: {
@@ -79,9 +79,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **IP-adres**?",
-        options: ["Een uniek adres van een apparaat op een netwerk", "De naam van een website", "Een wachtwoord", "Een soort virus"],
+        options: ["Een uniek adres van een apparaat op een netwerk", "De naam van een website, zoals nu.nl", "Een wachtwoord voor je wifi-netwerk", "Het merk en type van je wifi-router"],
         answer: 0,
-        wrongHints: [null, "Dat is de domeinnaam — die hoort wél bij een IP, maar is iets anders.", "Een IP-adres is geen wachtwoord.", "Het heeft niets met malware te maken."],
+        wrongHints: [null, "Dat is de domeinnaam — die hoort wél bij een IP, maar is iets anders.", "Een IP-adres is geen wachtwoord.", "Merk en type zeggen niets over waar een apparaat te vinden is."],
         uitlegPad: {
           stappen: [{ titel: "Het huisadres van een apparaat", tekst: "Een **IP-adres** (bv. `145.7.220.13`) identificeert een apparaat op een netwerk — als een huisadres, zodat data op de juiste plek aankomt. IPv4 = vier getallen 0-255; IPv6 is veel langer omdat IPv4-adressen bijna op zijn." }],
           niveaus: { basis: "Adres van een apparaat.", simpeler: "IP = apparaat-adres", nogSimpeler: "Apparaat-adres" },
@@ -89,7 +89,7 @@ const steps = [
       },
       {
         q: "Wat doet **DNS** (Domain Name System)?",
-        options: ["Vertaalt een domeinnaam naar een IP-adres", "Beveiligt je wachtwoord", "Maakt websites sneller laden", "Slaat je bestanden op"],
+        options: ["Vertaalt een domeinnaam naar een IP-adres", "Beveiligt je wachtwoorden onderweg", "Zorgt dat websites sneller laden", "Slaat je bestanden op in de cloud"],
         answer: 0,
         wrongHints: [null, "Beveiliging is een andere taak (bv. HTTPS).", "Dat is iets anders (caching/CDN).", "Opslag is niet de taak van DNS."],
         uitlegPad: {
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Je typt `leerkwartier.app` in je browser. Wat gebeurt er **eerst**?",
-        options: ["DNS zoekt het bijbehorende IP-adres op", "De pagina wordt meteen versleuteld", "Er wordt een back-up gemaakt", "De CPU wordt gereset"],
+        options: ["DNS zoekt het bijbehorende IP-adres op", "De pagina wordt meteen versleuteld", "Er wordt een back-up gemaakt", "De server stuurt meteen de pagina"],
         answer: 0,
-        wrongHints: [null, "Versleuteling (HTTPS) komt pas bij het verbinden.", "Een back-up hoort hier niet.", "Resetten gebeurt niet."],
+        wrongHints: [null, "Versleuteling (HTTPS) komt pas bij het verbinden.", "Een back-up hoort hier niet.", "Dat gebeurt wel, maar niet als eerste."],
         uitlegPad: {
           stappen: [{ titel: "Eerst het adres opzoeken", tekst: "Je computer kent alleen de **naam**, niet het **IP**. Dus vraagt hij eerst aan een **DNS-server**: 'welk IP hoort bij leerkwartier.app?'. Pas met dat IP kan hij verbinding maken met de juiste server. Domeinnaam → (DNS) → IP → server." }],
           niveaus: { basis: "DNS zoekt het IP.", simpeler: "Eerst DNS → IP", nogSimpeler: "Eerst DNS" },
@@ -138,7 +138,7 @@ const steps = [
     checks: [
       {
         q: "Hoe gaat data over internet?",
-        options: ["Opgeknipt in kleine pakketjes", "Altijd als één groot geheel", "Alleen als tekst", "Nooit via routers"],
+        options: ["Opgeknipt in kleine pakketjes", "Altijd als één groot geheel", "Alleen als tekstbestanden", "Rechtstreeks, zonder routers"],
         answer: 0,
         wrongHints: [null, "Juist niet — denk aan wat routers onderweg doorsturen.", "Ook beeld en geluid gaan zo (als bits in pakketjes).", "Routers zijn juist essentieel."],
         uitlegPad: {
@@ -148,7 +148,7 @@ const steps = [
       },
       {
         q: "Wat is een **protocol** in een netwerk?",
-        options: ["Een afspraak voor communicatie", "Een soort kabel", "Een wachtwoord", "Een website"],
+        options: ["Een afspraak voor communicatie", "Een speciale netwerkkabel", "Een wachtwoord voor het netwerk", "Een lijst met alle websites"],
         answer: 0,
         wrongHints: [null, "Een protocol is een afspraak, geen fysieke kabel.", "Het is geen wachtwoord.", "Een website is iets anders."],
         uitlegPad: {
@@ -207,7 +207,7 @@ const steps = [
       },
       {
         q: "Wat betekent het **slotje 🔒 / HTTPS** in de adresbalk?",
-        options: ["Je verbinding met de site is versleuteld", "De site is gratis", "De site is populair", "De site is van de overheid"],
+        options: ["Je verbinding met de site is versleuteld", "De site is gratis te gebruiken", "De site is door veel mensen bezocht", "De site is van de overheid zelf"],
         answer: 0,
         wrongHints: [null, "Het zegt niets over de prijs.", "Het zegt niets over populariteit.", "Iedere site kan HTTPS hebben, niet alleen de overheid."],
         uitlegPad: {

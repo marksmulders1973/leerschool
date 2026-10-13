@@ -30,7 +30,7 @@ const steps = [
       },
       {
         q: "Wat is kenmerkend voor **RAM** (werkgeheugen)?",
-        options: ["Snel en tijdelijk — leeg bij uitzetten", "Bewaart bestanden voor altijd", "Maakt beeld voor games", "Levert de stroom"],
+        options: ["Snel, tijdelijk en leeg na uitzetten", "Langzaam, maar bewaart alles voor altijd", "Rekent het beeld voor games uit", "Levert stroom aan alle onderdelen"],
         answer: 0,
         wrongHints: [null, "Dat is juist opslag (SSD/HDD), niet RAM.", "Dat is de GPU.", "Dat is de voeding."],
         uitlegPad: {
@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen een **SSD** en een **HDD**?",
-        options: ["SSD is sneller en heeft geen bewegende delen", "SSD is werkgeheugen, HDD niet", "HDD is altijd groter dan een SSD kan zijn", "Ze zijn precies hetzelfde"],
+        options: ["SSD is sneller en heeft geen bewegende delen", "Een SSD is werkgeheugen, een HDD is opslag", "HDD is altijd groter dan een SSD kan zijn", "HDD is sneller en heeft geen bewegende delen"],
         answer: 0,
-        wrongHints: [null, "Beide zijn opslag, geen werkgeheugen.", "SSD's kunnen ook groot zijn.", "Ze verschillen duidelijk in snelheid en techniek."],
+        wrongHints: [null, "Beide zijn opslag, geen werkgeheugen.", "SSD's kunnen ook groot zijn.", "Draai het eens om: welke van de twee heeft een draaiende schijf?"],
         uitlegPad: {
           stappen: [{ titel: "Flash vs schijf", tekst: "Een **SSD** (Solid State Drive) gebruikt flashgeheugen — **snel**, stil, geen bewegende delen. Een **HDD** (Hard Disk Drive) heeft een **draaiende schijf** en is langzamer. Beide bewaren bestanden blijvend; SSD's zijn tegenwoordig de standaard." }],
           niveaus: { basis: "SSD sneller, geen bewegende delen.", simpeler: "SSD = sneller", nogSimpeler: "SSD sneller, geen bewegende delen" },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Waarvoor is de **GPU** (grafische kaart) vooral sterk?",
-        options: ["Beeld en veel berekeningen tegelijk", "Het blijvend bewaren van bestanden", "Het leveren van stroom", "Het typen van tekst"],
+        options: ["Beeld en veel berekeningen tegelijk", "Het blijvend bewaren van bestanden", "Het leveren van stroom aan de pc", "Het verwerken van toetsaanslagen"],
         answer: 0,
-        wrongHints: [null, "Bewaren doet de opslag (SSD/HDD).", "Stroom komt van de voeding.", "Typen is input, geen GPU-taak."],
+        wrongHints: [null, "Bewaren doet de opslag (SSD/HDD).", "Stroom komt van de voeding.", "Toetsaanslagen zijn invoer — geen typische GPU-taak."],
         uitlegPad: {
           stappen: [{ titel: "Veel tegelijk rekenen", tekst: "De **GPU** (grafische kaart) is gebouwd om **heel veel berekeningen tegelijk (parallel)** te doen. Perfect voor **beeld/video** in games, maar ook voor **AI** (die veel parallelle rekensommen vraagt). De CPU is juist sterk in losse, complexe taken." }],
           niveaus: { basis: "Beeld + parallel rekenen.", simpeler: "GPU = veel tegelijk", nogSimpeler: "Beeld + parallel rekenen" },
@@ -60,7 +60,7 @@ const steps = [
       },
       {
         q: "Wat doet het **moederbord**?",
-        options: ["Verbindt alle onderdelen met elkaar", "Rekent alle instructies uit", "Bewaart bestanden blijvend", "Toont het beeld"],
+        options: ["Verbindt alle onderdelen met elkaar", "Rekent alle instructies uit", "Bewaart bestanden blijvend", "Toont het beeld op je scherm"],
         answer: 0,
         wrongHints: [null, "Rekenen doet de CPU.", "Bewaren doet de opslag.", "Beeld toont het scherm/de GPU."],
         uitlegPad: {
@@ -89,7 +89,7 @@ const steps = [
       },
       {
         q: "Wat ben je kwijt als je de computer uitzet **zonder op te slaan**?",
-        options: ["Het werk dat alleen in het RAM stond", "Alles op je SSD", "Het besturingssysteem", "Niets, alles is altijd veilig"],
+        options: ["Het werk dat alleen in het RAM stond", "Alle bestanden die op je SSD staan", "Het besturingssysteem van je pc", "Niets, want alles wordt vanzelf bewaard"],
         answer: 0,
         wrongHints: [null, "De SSD is niet-vluchtig — die blijft bewaard.", "Het OS staat op opslag en blijft.", "Denk aan het vluchtige geheugen — wat blijft daar over zonder stroom?"],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "Wat is waar over de **geheugenhiërarchie**?",
-        options: ["Dichter bij de CPU = sneller maar kleiner", "Opslag is sneller dan RAM", "RAM is groter dan opslag", "Cache is het traagst"],
+        options: ["Dichter bij de CPU = sneller maar kleiner", "Opslag (SSD) is sneller dan RAM", "RAM heeft meer ruimte dan je SSD", "Cache is het traagste geheugen"],
         answer: 0,
         wrongHints: [null, "Andersom: opslag is juist langzamer dan RAM.", "Opslag is juist veel groter dan RAM.", "Cache zit juist ín de CPU — is die dan traag?"],
         uitlegPad: {
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Wat betekent de **kloksnelheid** (in GHz) van een CPU?",
-        options: ["Hoeveel cycli hij per seconde doorloopt", "Hoeveel bestanden erop passen", "Hoe groot het scherm is", "Hoeveel stroom hij levert"],
+        options: ["Hoeveel cycli hij per seconde doorloopt", "Hoeveel bestanden er tegelijk op passen", "Hoeveel pixels het scherm heeft", "Hoeveel stroom de processor verbruikt"],
         answer: 0,
-        wrongHints: [null, "Opslagruimte is iets anders.", "Schermgrootte staat los van de CPU.", "De CPU levert geen stroom."],
+        wrongHints: [null, "Opslagruimte is iets anders.", "Schermgrootte staat los van de CPU.", "Stroomverbruik meet je in watt, niet in GHz."],
         uitlegPad: {
           stappen: [{ titel: "Cycli per seconde", tekst: "De **kloksnelheid** (GHz = miljarden per seconde) zegt hoeveel **cycli** de CPU per seconde doorloopt — dus hoe vaak hij de fetch-decode-execute-cyclus herhaalt. Hoger betekent (grofweg) sneller, al telt het aantal **cores** ook mee." }],
           niveaus: { basis: "Cycli per seconde.", simpeler: "GHz = snelheid", nogSimpeler: "Cycli per seconde" },
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Wat is het voordeel van meerdere **cores** in een CPU?",
-        options: ["Meerdere instructies tegelijk uitvoeren", "Meer opslagruimte", "Een groter scherm", "Gegarandeerd minder stroomverbruik"],
+        options: ["Meerdere instructies tegelijk uitvoeren", "Meer ruimte om bestanden op te slaan", "Een scherpere afbeelding op je scherm", "Gegarandeerd minder stroomverbruik"],
         answer: 0,
-        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "Schermgrootte staat los.", "Meer cores kunnen juist méér verbruiken."],
+        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "De scherpte van het beeld hangt niet van de cores af.", "Meer cores kunnen juist méér verbruiken."],
         uitlegPad: {
           stappen: [{ titel: "Meer handen", tekst: "Elke **core** is als een aparte rekenkern. Met meerdere cores kan de CPU **meerdere instructies tegelijk (parallel)** uitvoeren — handig als je veel programma's tegelijk draait of zware taken splitst. Meer cores ≈ meer werk tegelijk." }],
           niveaus: { basis: "Meer tegelijk rekenen.", simpeler: "Cores = parallel", nogSimpeler: "Meer tegelijk rekenen" },
@@ -138,9 +138,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de hoofdtaak van een **besturingssysteem (OS)**?",
-        options: ["De hardware beheren en programma's laten draaien", "Foto's bewerken", "Het internet aanleggen", "Alleen games spelen"],
+        options: ["De hardware beheren en programma's laten draaien", "Foto's en video's bewerken en opslaan", "Websites bouwen en op internet zetten", "Alleen spelletjes snel laten draaien"],
         answer: 0,
-        wrongHints: [null, "Fotobewerken doe je met een programma óp het OS.", "Het OS legt geen kabels aan.", "Het OS doet veel meer dan games."],
+        wrongHints: [null, "Fotobewerken doe je met een programma óp het OS.", "Websites maak je met programma's óp het OS.", "Het OS doet veel meer dan games."],
         uitlegPad: {
           stappen: [{ titel: "De brug hardware ↔ software", tekst: "Het **OS** (Windows, macOS, Linux, Android…) is de **brug** tussen hardware en jouw programma's: het beheert hardware (via drivers), verdeelt CPU-tijd en geheugen over processen, regelt bestanden, de interface en beveiliging. Zonder OS kun je de computer niet gebruiken." }],
           niveaus: { basis: "Hardware + programma's beheren.", simpeler: "OS = beheert alles", nogSimpeler: "Hardware + programma's beheren" },
@@ -150,7 +150,7 @@ const steps = [
         q: "Dat meerdere programma's 'tegelijk' lijken te draaien, regelt het OS met…",
         options: ["Multitasking", "Een snellere internetverbinding", "Meer schermen", "Een grotere SSD"],
         answer: 0,
-        wrongHints: [null, "Internet heeft er niets mee te maken.", "Schermen doen niet mee.", "Opslaggrootte regelt geen multitasking."],
+        wrongHints: [null, "Internet heeft er niets mee te maken.", "Schermen doen niet mee.", "Een grotere schijf bewaart meer, maar verdeelt geen rekentijd."],
         uitlegPad: {
           stappen: [{ titel: "CPU-tijd verdelen", tekst: "Het OS doet aan **multitasking**: het verdeelt de **CPU-tijd** razendsnel over alle lopende **processen**, zodat het lijkt alsof alles tegelijk draait. In werkelijkheid wisselt de CPU continu tussen taken." }],
           niveaus: { basis: "Multitasking.", simpeler: "Tegelijk = multitasking", nogSimpeler: "Multitasking" },
@@ -168,7 +168,7 @@ const steps = [
       },
       {
         q: "Wat is een **driver**?",
-        options: ["Software die een apparaat laat samenwerken met het systeem", "Iemand die de computer bestuurt", "Software die virussen opspoort", "Het werkgeheugen van de computer"],
+        options: ["Software waarmee het OS een apparaat aanstuurt", "Een persoon die de computer bedient", "Software die virussen op je pc opspoort", "Het werkgeheugen van de computer zelf"],
         answer: 0,
         wrongHints: [null, "Het is software, geen persoon.", "Dat is een virusscanner — die beschermt, maar laat geen apparaat werken.", "RAM is iets heel anders."],
         uitlegPad: {
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Windows en macOS zijn **gesloten (closed source)**. Dat betekent:",
-        options: ["De broncode is eigendom van het bedrijf en niet openbaar", "Ze werken niet zonder internet", "Ze zijn altijd gratis", "Iedereen mag de code vrij aanpassen"],
+        options: ["De broncode is van het bedrijf en geheim", "Ze werken niet zonder internet", "Ze mogen altijd gratis gebruikt worden", "Iedereen mag de code vrij aanpassen"],
         answer: 0,
         wrongHints: [null, "Internet staat los van open/closed source.", "Ze zijn meestal juist betaald.", "Vrij aanpassen is juist open source."],
         uitlegPad: {
@@ -197,7 +197,7 @@ const steps = [
     checks: [
       {
         q: "Wat vertelt de **extensie** (achter de punt, bv. `.jpg`) van een bestand?",
-        options: ["Het bestandstype / met welk programma het opent", "Hoe groot het bestand is", "Wie het gemaakt heeft", "Op welke schijf het staat"],
+        options: ["Het bestandstype en welk programma het opent", "Hoeveel ruimte het bestand inneemt", "Wie het bestand gemaakt heeft en wanneer", "In welke map of op welke schijf het staat"],
         answer: 0,
         wrongHints: [null, "De grootte staat los van de extensie.", "De maker is iets anders.", "De locatie is het pad, niet de extensie."],
         uitlegPad: {
@@ -207,7 +207,7 @@ const steps = [
       },
       {
         q: "Wat is een voordeel van bestanden in de **cloud** opslaan?",
-        options: ["Overal bereikbaar + automatische back-up", "Werkt altijd zonder internet", "Niemand anders kan het ooit zien", "Het kost nooit opslag"],
+        options: ["Overal bereikbaar + automatische back-up", "Je kunt er altijd zonder internet bij", "Niemand anders kan het ooit zien", "Het neemt nergens opslagruimte in"],
         answer: 0,
         wrongHints: [null, "Cloud heeft juist internet nodig.", "Je vertrouwt je data aan een bedrijf toe — let op privacy.", "Het kost wel degelijk (cloud)opslag."],
         uitlegPad: {
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Wat is een goede **back-up-regel**?",
-        options: ["Belangrijke bestanden op meer dan één plek bewaren", "Eén kopie is altijd genoeg", "Nooit een kopie maken", "Alles alleen in het RAM zetten"],
+        options: ["Belangrijke bestanden op meerdere plekken bewaren", "Eén kopie op dezelfde schijf is genoeg", "Pas een kopie maken als er iets kapot is", "Alles alleen in het werkgeheugen bewaren"],
         answer: 0,
-        wrongHints: [null, "Ook die ene kopie kun je kwijtraken.", "Zonder kopie ben je bij een crash alles kwijt.", "RAM is vluchtig — daar ben je het meteen kwijt."],
+        wrongHints: [null, "Ook die ene kopie kun je kwijtraken.", "Als er al iets kapot is, ben je te laat.", "RAM is vluchtig — daar ben je het meteen kwijt."],
         uitlegPad: {
           stappen: [{ titel: "Eén kopie is geen kopie", tekst: "Bewaar belangrijke bestanden op **meer dan één plek** (bv. lokaal + cloud). Raakt de ene plek beschadigd (crash, ransomware, diefstal), dan heb je nog de andere. 'Eén kopie is geen kopie' — echte veiligheid begint bij twee." }],
           niveaus: { basis: "Meerdere plekken.", simpeler: "Back-up = meer plekken", nogSimpeler: "Meerdere plekken" },

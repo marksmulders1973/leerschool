@@ -20,12 +20,12 @@ const steps = [
     checks: [
       {
         q: "Wat is een **database**?",
-        options: ["Een geordende verzameling gegevens", "Eén losse foto", "Een programmeertaal", "Een netwerkkabel"],
+        options: ["Een geordende verzameling gegevens", "Eén los bestand met een foto", "Een taal om websites mee te bouwen", "Een kabel die computers verbindt"],
         answer: 0,
         wrongHints: [null, "Een database bevat juist heel veel gegevens, geordend.", "Een taal is iets anders (bv. SQL ondervraagt een database).", "Dat is hardware."],
         uitlegPad: {
           stappen: [{ titel: "Geordend opslaan", tekst: "Een **database** is een **gestructureerde verzameling gegevens** die je snel kunt opslaan, zoeken en bijwerken — opgeslagen in **tabellen**. Bijna elke app gebruikt er een. Een DBMS (zoals MySQL of PostgreSQL) beheert de database." }],
-          niveaus: { basis: "Geordende gegevens.", simpeler: "Database = geordende gegevens", nogSimpeler: "A." },
+          niveaus: { basis: "Geordende gegevens.", simpeler: "Database = geordende gegevens", nogSimpeler: "Een geordende verzameling gegevens." },
         },
       },
       {
@@ -40,32 +40,32 @@ const steps = [
       },
       {
         q: "Waarom een database in plaats van één groot tekstbestand?",
-        options: ["Snel zoeken/filteren/combineren, ook bij veel data", "Het is mooier om te lezen", "Bestanden bestaan niet meer", "Een database kost geen ruimte"],
+        options: ["Snel zoeken/filteren/combineren, ook bij veel data", "Gegevens zien er in een database mooier uit", "Tekstbestanden worden niet meer ondersteund", "Een database neemt geen opslagruimte in"],
         answer: 0,
-        wrongHints: [null, "Het gaat om snelheid en structuur, niet om uiterlijk.", "Bestanden bestaan natuurlijk gewoon.", "Een database kost wel degelijk opslag."],
+        wrongHints: [null, "Het gaat om snelheid en structuur, niet om uiterlijk.", "Tekstbestanden bestaan natuurlijk gewoon nog.", "Een database kost wel degelijk opslag."],
         uitlegPad: {
           stappen: [{ titel: "Structuur = snelheid", tekst: "In een database staan gegevens **gestructureerd** in tabellen, zodat je razendsnel kunt **zoeken, filteren en combineren** — ook bij miljoenen records. In een los tekstbestand zou je alles regel voor regel moeten doorzoeken; dat wordt onwerkbaar." }],
-          niveaus: { basis: "Snel zoeken bij veel data.", simpeler: "Database = snel zoeken", nogSimpeler: "A." },
+          niveaus: { basis: "Snel zoeken bij veel data.", simpeler: "Database = snel zoeken", nogSimpeler: "Snel zoeken/filteren/combineren, ook bij veel data." },
         },
       },
       {
         q: "In een tabel: wat is een **veld**?",
-        options: ["Eén kolom: één eigenschap", "Eén rij: één exemplaar", "De hele tabel", "Een foutmelding"],
+        options: ["Eén kolom: één eigenschap", "Eén rij: één exemplaar", "De naam van de tabel", "Een lege regel in de tabel"],
         answer: 0,
-        wrongHints: [null, "Eén rij is juist een record.", "De tabel bevat velden én records — het is niet één veld.", "Een veld is data, geen fout."],
+        wrongHints: [null, "Eén rij is juist een record.", "De tabelnaam is geen veld — een veld zit ín de tabel.", "Een lege regel is gewoon een (lege) rij — geen veld."],
         uitlegPad: {
           stappen: [{ titel: "Kolom = veld", tekst: "Een **veld** is één **kolom** in de tabel = één **eigenschap** (naam, groep, geboortejaar). Een **record** is een rij (één exemplaar). Elke record heeft dezelfde velden, maar met eigen waarden." }],
-          niveaus: { basis: "Een kolom.", simpeler: "Veld = kolom", nogSimpeler: "A." },
+          niveaus: { basis: "Een kolom.", simpeler: "Veld = kolom", nogSimpeler: "Eén kolom: één eigenschap." },
         },
       },
       {
         q: "Wat is een **DBMS** (zoals MySQL of PostgreSQL)?",
-        options: ["Een programma dat databases beheert", "Een programmeertaal voor games", "Een soort virus", "Een netwerkkabel"],
+        options: ["Een programma dat databases beheert", "Een programmeertaal voor games", "Een database met alleen getallen", "Een kabel tussen twee servers"],
         answer: 0,
-        wrongHints: [null, "Het beheert data; het is geen game-taal.", "Het heeft niets met malware te maken.", "Dat is hardware."],
+        wrongHints: [null, "Het beheert data; het is geen game-taal.", "Een DBMS bevat niet alleen getallen — en is het wel de data zelf?", "Dat is hardware."],
         uitlegPad: {
           stappen: [{ titel: "De databasebeheerder", tekst: "Een **DBMS** (DataBase Management System) is de **software die de database beheert**: opslaan, opvragen, beveiligen, back-uppen. Bekende voorbeelden: MySQL, PostgreSQL, SQLite. Jij praat ermee via **SQL**." }],
-          niveaus: { basis: "Databasebeheer-software.", simpeler: "DBMS = beheert database", nogSimpeler: "A." },
+          niveaus: { basis: "Databasebeheer-software.", simpeler: "DBMS = beheert database", nogSimpeler: "Een programma dat databases beheert." },
         },
       },
     ],
@@ -79,22 +79,22 @@ const steps = [
     checks: [
       {
         q: "Wat is een **primaire sleutel** (primary key)?",
-        options: ["Een uniek kenmerk dat elk record aanwijst", "Een wachtwoord voor de database", "De grootste kolom", "Een tabel zonder gegevens"],
+        options: ["Een uniek kenmerk dat elk record aanwijst", "Een wachtwoord voor de database", "De kolom met de langste teksten", "Een lege tabel die je later vult"],
         answer: 0,
         wrongHints: [null, "Het is geen wachtwoord, maar een identificatie.", "Grootte heeft er niets mee te maken.", "Een sleutel is een veld, geen lege tabel."],
         uitlegPad: {
           stappen: [{ titel: "Uniek per record", tekst: "Een **primaire sleutel** (vaak `id`) is een **uniek** kenmerk: geen twee records hebben dezelfde. Daarmee kun je elk record precies aanwijzen — ook als twee mensen dezelfde naam hebben. Het is de 'identiteitskaart' van een rij." }],
-          niveaus: { basis: "Uniek kenmerk per record.", simpeler: "Primaire sleutel = uniek id", nogSimpeler: "A." },
+          niveaus: { basis: "Uniek kenmerk per record.", simpeler: "Primaire sleutel = uniek id", nogSimpeler: "Een uniek kenmerk dat elk record aanwijst." },
         },
       },
       {
         q: "Een **foreign key** (verwijssleutel) wordt gebruikt om…",
-        options: ["Tabellen aan elkaar te koppelen", "De database te beveiligen", "Een back-up te maken", "Tekst te versleutelen"],
+        options: ["Tabellen aan elkaar te koppelen", "De database te beveiligen", "Een back-up van de tabel te maken", "Tekst in de tabel te versleutelen"],
         answer: 0,
         wrongHints: [null, "Beveiliging is een andere zaak.", "Een back-up is iets anders.", "Versleuteling hoort bij beveiliging, niet bij sleutels-relaties."],
         uitlegPad: {
           stappen: [{ titel: "Verwijzen naar een primaire sleutel", tekst: "Een **foreign key** is een veld in de ene tabel dat **verwijst naar de primaire sleutel** van een andere tabel. Zo koppel je records: `leerling_id` in Toetsen verwijst naar `id` in Leerlingen, zodat je weet welke toets bij welke leerling hoort." }],
-          niveaus: { basis: "Tabellen koppelen.", simpeler: "Foreign key = koppeling", nogSimpeler: "A." },
+          niveaus: { basis: "Tabellen koppelen.", simpeler: "Foreign key = koppeling", nogSimpeler: "Tabellen aan elkaar te koppelen." },
         },
       },
       {
@@ -119,12 +119,12 @@ const steps = [
       },
       {
         q: "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
-        options: ["Via hun unieke primaire sleutel", "Dat kan de database niet", "Via de kleur van de rij", "Via hun wachtwoord"],
+        options: ["Via hun unieke primaire sleutel", "Dat kan de database niet", "Via de volgorde waarin ze staan", "Via hun achternaam in de tabel"],
         answer: 0,
-        wrongHints: [null, "Dat kan wél — denk aan het veld dat in elke tabel voor ieder record anders is.", "Rijen hebben geen kleur als kenmerk.", "Een wachtwoord is geen record-identificatie."],
+        wrongHints: [null, "Dat kan wél — denk aan het veld dat in elke tabel voor ieder record anders is.", "De volgorde van rijen kan veranderen — dat is geen vast kenmerk.", "Ook achternamen kunnen dubbel voorkomen."],
         uitlegPad: {
           stappen: [{ titel: "Dezelfde naam, ander id", tekst: "Namen kunnen dubbel voorkomen, maar de **primaire sleutel (id)** is **uniek**. Sara #1 en Sara #2 hebben een verschillend id, dus de database (en foreign keys) verwijzen altijd naar precies de juiste leerling." }],
-          niveaus: { basis: "Uniek id.", simpeler: "Id houdt ze uit elkaar", nogSimpeler: "A." },
+          niveaus: { basis: "Uniek id.", simpeler: "Id houdt ze uit elkaar", nogSimpeler: "Via hun unieke primaire sleutel." },
         },
       },
     ],
@@ -148,32 +148,32 @@ const steps = [
       },
       {
         q: "Wat doet **`WHERE cijfer >= 6`** in een query?",
-        options: ["Toont alleen records met cijfer 6 of hoger", "Verandert alle cijfers in 6", "Verwijdert lage cijfers", "Sorteert op cijfer"],
+        options: ["Toont alleen records met cijfer 6 of hoger", "Zet alle cijfers lager dan 6 op 6", "Verwijdert alle records onder de 6", "Sorteert de records van 6 naar hoger"],
         answer: 0,
         wrongHints: [null, "WHERE wijzigt niets — het filtert alleen.", "WHERE verwijdert niets; het selecteert.", "Sorteren doet ORDER BY."],
         uitlegPad: {
           stappen: [{ titel: "WHERE = filter", tekst: "**WHERE** is een **voorwaarde**: alleen records die eraan voldoen komen terug. `WHERE cijfer >= 6` toont de voldoendes. Een SELECT-query **verandert de data niet** — het haalt alleen op." }],
-          niveaus: { basis: "Filtert op ≥6.", simpeler: "WHERE = filter", nogSimpeler: "A." },
+          niveaus: { basis: "Filtert op ≥6.", simpeler: "WHERE = filter", nogSimpeler: "Toont alleen records met cijfer 6 of hoger." },
         },
       },
       {
         q: "Je wilt **alle kolommen** van álle leerlingen in groep 7. Welke query?",
-        options: ["SELECT * FROM Leerlingen WHERE groep = 7;", "DELETE FROM Leerlingen;", "SELECT 7 FROM groep;", "WHERE Leerlingen = 7;"],
+        options: ["SELECT * FROM Leerlingen WHERE groep = 7;", "DELETE FROM Leerlingen WHERE groep = 7;", "SELECT * FROM groep WHERE Leerlingen = 7;", "SELECT naam FROM Leerlingen WHERE groep = 7;"],
         answer: 0,
-        wrongHints: [null, "DELETE verwijdert juist gegevens — gevaarlijk hier.", "De volgorde/namen kloppen niet (groep is een kolom, geen tabel).", "Een query begint niet met WHERE; SELECT/FROM ontbreken."],
+        wrongHints: [null, "DELETE verwijdert juist gegevens — gevaarlijk hier.", "De volgorde/namen kloppen niet (groep is een kolom, geen tabel).", "Zo krijg je alleen de namen — de vraag wil álle kolommen."],
         uitlegPad: {
           stappen: [{ titel: "SELECT * = alle kolommen", tekst: "`SELECT * FROM Leerlingen WHERE groep = 7;` → de **ster (*)** betekent alle kolommen, **FROM Leerlingen** is de tabel, **WHERE groep = 7** filtert op groep 7. Let op: **DELETE** zou records wíssen — dat wil je hier niet." }],
-          niveaus: { basis: "SELECT * ... WHERE groep=7.", simpeler: "Alles ophalen = SELECT *", nogSimpeler: "A." },
+          niveaus: { basis: "SELECT * ... WHERE groep=7.", simpeler: "Alles ophalen = SELECT *", nogSimpeler: "SELECT * FROM Leerlingen WHERE groep = 7;" },
         },
       },
       {
         q: "Wat doet **`ORDER BY cijfer DESC`** in een query?",
-        options: ["Sorteert op cijfer, hoogste bovenaan", "Verwijdert lage cijfers", "Telt de cijfers", "Filtert op cijfer 6"],
+        options: ["Sorteert op cijfer, hoogste bovenaan", "Verwijdert de laagste cijfers uit de lijst", "Telt hoeveel cijfers er zijn", "Sorteert op cijfer, laagste bovenaan"],
         answer: 0,
-        wrongHints: [null, "ORDER BY wijzigt/verwijdert niets.", "Tellen doet COUNT.", "Filteren doet WHERE."],
+        wrongHints: [null, "ORDER BY wijzigt/verwijdert niets.", "Tellen doet COUNT.", "DESC betekent aflopend — welke kant begint dan bovenaan?"],
         uitlegPad: {
           stappen: [{ titel: "Sorteren, aflopend", tekst: "**ORDER BY** sorteert de resultaten. **DESC** = aflopend (hoogste bovenaan), **ASC** = oplopend. `ORDER BY cijfer DESC` zet dus de hoogste cijfers vooraan. Het verandert de data niet, alleen de volgorde van het resultaat." }],
-          niveaus: { basis: "Sorteren, hoogste eerst.", simpeler: "ORDER BY = sorteren", nogSimpeler: "A." },
+          niveaus: { basis: "Sorteren, hoogste eerst.", simpeler: "ORDER BY = sorteren", nogSimpeler: "Sorteert op cijfer, hoogste bovenaan." },
         },
       },
       {
@@ -207,12 +207,12 @@ const steps = [
       },
       {
         q: "Waarom is bij **UPDATE** en **DELETE** een **WHERE** zo belangrijk?",
-        options: ["Zonder WHERE pas je álle records aan / wis je alles", "Anders werkt de query niet", "Het maakt de query mooier", "WHERE versnelt de database"],
+        options: ["Zonder WHERE pas je álle records aan / wis je alles", "Zonder WHERE geeft de query een foutmelding", "Het maakt de query beter leesbaar voor anderen", "Met WHERE werkt de database veel sneller"],
         answer: 0,
         wrongHints: [null, "De query werkt zonder WHERE gewoon — maar op welke records dan?", "Het gaat om veiligheid, niet om uiterlijk.", "Snelheid is hier niet het punt."],
         uitlegPad: {
           stappen: [{ titel: "Geen WHERE = alles", tekst: "**WHERE** bepaalt wélke records geraakt worden. Vergeet je 'm bij UPDATE of DELETE, dan wordt **élk** record aangepast of gewist. `DELETE FROM Leerlingen;` = alle leerlingen weg. Daarom altijd eerst de WHERE controleren." }],
-          niveaus: { basis: "Anders raak je alles.", simpeler: "Zonder WHERE = alles", nogSimpeler: "A." },
+          niveaus: { basis: "Anders raak je alles.", simpeler: "Zonder WHERE = alles", nogSimpeler: "Zonder WHERE pas je álle records aan / wis je alles." },
         },
       },
       {

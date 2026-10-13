@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme**?",
-        options: ["Een stapsgewijs plan om een taak op te lossen", "Een programmeertaal", "Een soort computer", "Een foutmelding"],
+        options: ["Een stapsgewijs plan om een taak op te lossen", "Een programmeertaal om software mee te schrijven", "Een computer die opdrachten razendsnel uitvoert", "Een foutmelding als een programma vastloopt"],
         answer: 0,
-        wrongHints: [null, "Een taal is het middel om het op te schrijven, niet het plan zelf.", "Hardware is iets anders.", "Een algoritme is juist de oplossing, geen fout."],
+        wrongHints: [null, "Een taal is het middel om het op te schrijven, niet het plan zelf.", "Hardware is iets anders — een algoritme kun je ook op papier volgen.", "Een algoritme is juist de oplossing, geen fout."],
         uitlegPad: {
           stappen: [{ titel: "Een recept", tekst: "Een **algoritme** is een eindige, eenduidige reeks **stappen** die een probleem oplost of een taak uitvoert — net als een recept. Het is het *plan*; pas als je het in een programmeertaal opschrijft, wordt het een programma." }],
           niveaus: { basis: "Stapsgewijs plan.", simpeler: "Algoritme = stappenplan", nogSimpeler: "Stapsgewijs plan." },
@@ -60,9 +60,9 @@ const steps = [
       },
       {
         q: "Een stap in een algoritme moet **eenduidig** zijn. Dat betekent:",
-        options: ["Er is maar één manier om de stap op te vatten", "Je mag de stap overslaan", "De stap moet lang duren", "De stap is geheim"],
+        options: ["Er is maar één manier om de stap op te vatten", "De stap mag je naar eigen keuze overslaan", "De stap moet even lang duren als de rest", "De stap mag maar één keer worden uitgevoerd"],
         answer: 0,
-        wrongHints: [null, "Overslaan zou het resultaat veranderen.", "Duur heeft er niets mee te maken.", "Geheimhouding is niet het punt."],
+        wrongHints: [null, "Overslaan zou het resultaat veranderen.", "Duur heeft er niets mee te maken.", "Eenduidig zegt niets over hoe vaak een stap gebeurt — denk aan het woord 'duidelijk'."],
         uitlegPad: {
           stappen: [{ titel: "Geen twijfel", tekst: "**Eenduidig** betekent dat er over een stap **geen twijfel** kan bestaan — precies één manier om 'm op te vatten. Een computer kan een stap alleen goed uitvoeren als die glashelder is; 'doe wat lekker voelt' kan een computer niet." }],
           niveaus: { basis: "Eén betekenis.", simpeler: "Eenduidig = geen twijfel", nogSimpeler: "Eén betekenis." },
@@ -91,7 +91,7 @@ const steps = [
         q: "**HERHAAL 10 keer: …** is een voorbeeld van:",
         options: ["Herhaling", "Selectie", "Sequentie", "Een foutmelding"],
         answer: 0,
-        wrongHints: [null, "Selectie is een keuze, geen herhaling.", "Sequentie doet elke stap één keer.", "Het is normale code, geen fout."],
+        wrongHints: [null, "Selectie is een keuze tussen wegen — wordt hier iets gekozen?", "Sequentie doet elke stap één keer.", "Het is normale code, geen fout."],
         uitlegPad: {
           stappen: [{ titel: "Iets meerdere keren doen", tekst: "**Herhaling** (loop) voert stappen meerdere keren uit. 'HERHAAL 10 keer' is een **vaste** herhaling (je weet hoe vaak). 'ZOLANG …' is **voorwaardelijk** (herhaalt tot de voorwaarde verandert)." }],
           niveaus: { basis: "Herhaling.", simpeler: "HERHAAL = loop", nogSimpeler: "Herhaling." },
@@ -119,7 +119,7 @@ const steps = [
       },
       {
         q: "Wanneer ontstaat een **oneindige lus**?",
-        options: ["Als de voorwaarde van een 'zolang'-lus nooit onwaar wordt", "Als een programma precies één keer draait", "Als je een variabele gebruikt", "Als de lijst gesorteerd is"],
+        options: ["Als de lus-voorwaarde nooit onwaar wordt", "Als een programma precies één keer draait", "Als je in de lus een variabele gebruikt", "Als de lus over een gesorteerde lijst loopt"],
         answer: 0,
         wrongHints: [null, "Eén keer draaien is juist netjes eindig.", "Variabelen veroorzaken op zich geen lus.", "Sorteren heeft er niets mee te maken."],
         uitlegPad: {
@@ -138,9 +138,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **pseudocode**?",
-        options: ["Een algoritme in leesbare 'bijna-taal'", "Een echte programmeertaal", "Een soort virus", "Een stroomdiagram"],
+        options: ["Een algoritme in leesbare 'bijna-taal'", "Een taal die de computer direct uitvoert", "Versleutelde code die niemand kan lezen", "Een tekening met blokjes en pijlen"],
         answer: 0,
-        wrongHints: [null, "Juist niet — de computer kan pseudocode niet draaien.", "Het heeft niets met malware te maken.", "Een stroomdiagram is een tékening; pseudocode is tekst."],
+        wrongHints: [null, "Juist niet — de computer kan pseudocode niet draaien.", "Pseudocode is juist bedoeld om makkelijk te lezen.", "Een stroomdiagram is een tékening; pseudocode is tekst."],
         uitlegPad: {
           stappen: [{ titel: "Voor mensen, niet voor de machine", tekst: "**Pseudocode** beschrijft een algoritme in **leesbare, informele taal** (LEES, ALS, TOON…). Het is bedoeld om de logica helder te krijgen vóór je echte code typt. De computer voert het niet uit — het is taal-onafhankelijk." }],
           niveaus: { basis: "Leesbare bijna-code.", simpeler: "Pseudocode = bijna-taal voor mensen", nogSimpeler: "Leesbare bijna-code." },
@@ -158,9 +158,9 @@ const steps = [
       },
       {
         q: "Waarom schrijf je een algoritme vaak **eerst** in pseudocode of een flowchart?",
-        options: ["Denkfouten vind je sneller dan in echte code", "Het draait sneller", "De computer eist het", "Het maakt het bestand kleiner"],
+        options: ["Denkfouten vind je sneller dan in echte code", "Pseudocode draait sneller dan echte code", "De computer kan echte code anders niet lezen", "Het programma wordt er later kleiner van"],
         answer: 0,
-        wrongHints: [null, "Pseudocode draait helemaal niet.", "Geen enkele computer eist pseudocode.", "Bestandsgrootte heeft hier niets mee te maken."],
+        wrongHints: [null, "Pseudocode draait helemaal niet.", "De computer leest echte code prima — pseudocode is voor mensen.", "Bestandsgrootte heeft hier niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Eerst denken, dan typen", tekst: "Je vindt **logica-fouten sneller op papier** (pseudocode/flowchart) dan tussen de details van een echte taal. Bovendien is het **taal-onafhankelijk**: dezelfde opzet kun je daarna in Python óf Java uitwerken." }],
           niveaus: { basis: "Fouten eerder vinden.", simpeler: "Eerst plan = fouten eerder", nogSimpeler: "Fouten eerder vinden." },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Waarom is pseudocode **taal-onafhankelijk** handig?",
-        options: ["Dezelfde opzet kun je later in Python óf Java uitwerken", "Het draait vanzelf op elke computer", "Het is korter dan één woord", "De computer voert het meteen uit"],
+        options: ["Dezelfde opzet kun je in Python óf Java uitwerken", "Het draait zonder aanpassing op elke computer", "Het wordt automatisch omgezet naar elke taal", "De computer voert het zonder vertaling uit"],
         answer: 0,
-        wrongHints: [null, "Pseudocode draait juist nergens.", "Lengte is niet het punt.", "De computer voert het níét uit — het is voor mensen."],
+        wrongHints: [null, "Pseudocode draait juist nergens.", "Geen enkel programma zet pseudocode vanzelf om — wie doet dat dan?", "De computer voert het níét uit — het is voor mensen."],
         uitlegPad: {
           stappen: [{ titel: "Eén plan, meerdere talen", tekst: "Omdat **pseudocode** niet aan een taal vastzit, kun je hetzelfde plan daarna uitwerken in **Python, Java of wat dan ook**. Je bedenkt de logica één keer en hoeft je nog niet druk te maken over de exacte schrijfwijze van een taal." }],
           niveaus: { basis: "Werkt in elke taal.", simpeler: "Taal-onafhankelijk = flexibel", nogSimpeler: "Werkt in elke taal." },
@@ -217,7 +217,7 @@ const steps = [
       },
       {
         q: "Waarom is de **efficiëntie** van een algoritme belangrijk?",
-        options: ["Bij grote hoeveelheden data scheelt het enorm veel tijd", "Het maakt de code mooier", "Het is alleen belangrijk voor kleine lijstjes", "Het verandert het antwoord"],
+        options: ["Bij veel data scheelt het enorm veel tijd", "De code wordt er korter en netter van", "Het is alleen belangrijk voor kleine lijstjes", "Een efficiënter algoritme geeft betere antwoorden"],
         answer: 0,
         wrongHints: [null, "Het gaat om snelheid/tijd, niet om uiterlijk.", "Juist bij grote data telt het zwaar.", "Een efficiënter algoritme geeft hetzelfde antwoord, alleen sneller."],
         uitlegPad: {
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Waarom is **binair zoeken** sneller dan lineair zoeken?",
-        options: ["Het gooit bij elke stap de helft van de lijst weg", "Het bekijkt elk item apart", "Het gebruikt meer geheugen", "Het werkt zonder de lijst te bekijken"],
+        options: ["Het halveert bij elke stap het zoekgebied", "Het bekijkt elk item één keer heel snel", "Het gebruikt meer geheugen om te zoeken", "Het werkt zonder de lijst te bekijken"],
         answer: 0,
         wrongHints: [null, "Elk item apart bekijken is juist lineair (traag).", "Snelheid komt niet door meer geheugen.", "Het kijkt wel, maar slim: halveren."],
         uitlegPad: {

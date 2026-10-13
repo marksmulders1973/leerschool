@@ -99,12 +99,12 @@ const steps = [
       },
       {
         q: "Hoeveel kleuren kun je maken met **24-bit RGB** (1 byte per kanaal)?",
-        options: ["Ongeveer 16,7 miljoen", "256", "24", "1024"],
+        options: ["Ongeveer 16,7 miljoen", "Precies 256 kleuren", "Ongeveer 65 duizend", "Precies 768 kleuren"],
         answer: 0,
-        wrongHints: [null, "256 is het aantal waarden per kanaal, niet het totaal.", "24 is het aantal bits, niet het aantal kleuren.", "Veel te weinig — denk aan 256 × 256 × 256."],
+        wrongHints: [null, "256 is het aantal waarden per kanaal, niet het totaal.", "Dat krijg je met 16 bits. Hoeveel bits heb je hier?", "Dat is 256 + 256 + 256 — moet je de kanalen optellen of vermenigvuldigen?"],
         uitlegPad: {
           stappen: [{ titel: "256 × 256 × 256", tekst: "Elk kanaal (R, G, B) heeft 256 waarden. Alle combinaties: 256 × 256 × 256 = **16.777.216** ≈ **16,7 miljoen** kleuren. Daarom heet 24-bit kleur ook wel 'truecolor'." }],
-          niveaus: { basis: "256³ ≈ 16,7 mln.", simpeler: "24-bit = ~16,7 miljoen kleuren", nogSimpeler: "A." },
+          niveaus: { basis: "256³ ≈ 16,7 mln.", simpeler: "24-bit = ~16,7 miljoen kleuren", nogSimpeler: "Ongeveer 16,7 miljoen." },
         },
       },
     ],
@@ -118,12 +118,12 @@ const steps = [
     checks: [
       {
         q: "Een computer slaat tekst eigenlijk op als…",
-        options: ["Getallen volgens een afgesproken tekenset", "Foto's van letters", "Klanken", "Niets — letters zijn al digitaal"],
+        options: ["Getallen volgens een afgesproken tekenset", "Kleine plaatjes van iedere losse letter", "De klanken van de uitgesproken letters", "Niets — letters zijn al digitaal"],
         answer: 0,
         wrongHints: [null, "Nee, geen plaatjes — er zit een getalcode achter.", "Dat is geluid, niet tekst.", "Een letter is geen 'gegeven' op zich — er is een code nodig."],
         uitlegPad: {
           stappen: [{ titel: "Teken → getal → bits", tekst: "Een tekenset (zoals ASCII of Unicode) spreekt af welk **getal** bij welk teken hoort. Dat getal wordt als bits opgeslagen. Zo wordt elke letter uiteindelijk een rij nullen en enen." }],
-          niveaus: { basis: "Getallen via een tekenset.", simpeler: "Tekst = getallen (tekenset)", nogSimpeler: "A." },
+          niveaus: { basis: "Getallen via een tekenset.", simpeler: "Tekst = getallen (tekenset)", nogSimpeler: "Getallen volgens een afgesproken tekenset." },
         },
       },
       {
@@ -138,12 +138,12 @@ const steps = [
       },
       {
         q: "Waarvoor heb je **Unicode/UTF-8** nodig in plaats van ASCII?",
-        options: ["Voor alle talen, symbolen én emoji", "Om sneller te rekenen", "Om bestanden te verkleinen", "Alleen voor hoofdletters"],
+        options: ["Voor alle talen, symbolen én emoji", "Om sneller met tekst te rekenen", "Om bestanden te verkleinen", "Voor extra hoofdletters en leestekens"],
         answer: 0,
-        wrongHints: [null, "Het gaat om méér tekens, niet om rekensnelheid.", "Compressie is iets anders.", "ASCII kon hoofdletters allang aan."],
+        wrongHints: [null, "Het gaat om méér tekens, niet om rekensnelheid.", "Compressie is iets anders.", "ASCII kon hoofdletters en leestekens allang aan."],
         uitlegPad: {
           stappen: [{ titel: "128 tekens is te weinig", tekst: "ASCII heeft maar 128 tekens — geen é, geen Chinees, geen emoji. **Unicode** geeft élk teken ter wereld een nummer, en **UTF-8** slaat dat op (1-4 bytes per teken). Daarom kun je 🙂 en 'café' gewoon typen." }],
-          niveaus: { basis: "Alle talen + emoji.", simpeler: "Unicode = alles + emoji", nogSimpeler: "A." },
+          niveaus: { basis: "Alle talen + emoji.", simpeler: "Unicode = alles + emoji", nogSimpeler: "Voor alle talen, symbolen én emoji." },
         },
       },
       {
@@ -177,12 +177,12 @@ const steps = [
       },
       {
         q: "Wat betekent een hogere **samplefrequentie** (Hz) bij geluid?",
-        options: ["Vaker meten per seconde → beter geluid", "Hogere toonhoogte", "Een korter bestand", "Minder kleuren"],
+        options: ["Vaker meten per seconde → beter geluid", "Het geluid klinkt hoger van toon", "Een kleiner bestand met minder data", "Het geluid wordt harder afgespeeld"],
         answer: 0,
-        wrongHints: [null, "Het gaat om méétmomenten, niet direct om de toon.", "Hogere kwaliteit maakt het bestand juist groter.", "Kleuren horen bij beeld, niet bij geluid."],
+        wrongHints: [null, "Het gaat om méétmomenten, niet direct om de toon.", "Hogere kwaliteit maakt het bestand juist groter.", "Volume is iets anders dan hoe vaak je meet."],
         uitlegPad: {
           stappen: [{ titel: "Sampling", tekst: "Bij **sampling** meet de computer de geluidsgolf heel vaak per seconde. Meer metingen (hogere **samplefrequentie**, in Hz; cd = 44.100 Hz) = nauwkeurigere weergave = beter geluid, maar een groter bestand." }],
-          niveaus: { basis: "Vaker meten = beter geluid.", simpeler: "Meer Hz = beter geluid", nogSimpeler: "A." },
+          niveaus: { basis: "Vaker meten = beter geluid.", simpeler: "Meer Hz = beter geluid", nogSimpeler: "Vaker meten per seconde → beter geluid." },
         },
       },
       {

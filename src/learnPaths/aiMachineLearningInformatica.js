@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Welke van deze is een voorbeeld van AI in het dagelijks leven?",
-        options: ["Aanbevelingen op YouTube/Netflix", "Een gewone rekenmachine", "Een lichtschakelaar", "Een papieren agenda"],
+        options: ["Aanbevelingen op YouTube/Netflix", "Een gewone rekenmachine-app", "Een digitale wekker met alarm", "Een tijdschakelaar voor lampen"],
         answer: 0,
-        wrongHints: [null, "Een rekenmachine volgt vaste regels, leert niets.", "Een schakelaar is gewone elektronica.", "Een agenda is geen software."],
+        wrongHints: [null, "Een rekenmachine volgt vaste regels, leert niets.", "Een wekker volgt de vaste tijd die jij instelt — hij leert niets.", "Die schakelt op een vaste tijd — er wordt niets geleerd uit data."],
         uitlegPad: {
           stappen: [{ titel: "Aanbevelingssystemen", tekst: "**Aanbevelingen** (YouTube, Netflix, Spotify) gebruiken AI: ze leren uit jouw (en andermans) kijk-/luistergedrag welke patronen erin zitten en voorspellen wat je leuk vindt. Een rekenmachine of schakelaar volgt vaste regels en **leert** niet." }],
           niveaus: { basis: "Aanbevelingen.", simpeler: "YouTube-tips = AI", nogSimpeler: "Aanbevelingen." },
@@ -79,9 +79,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het verschil tussen **machine learning** en klassiek programmeren?",
-        options: ["Bij ML leert de computer de regels uit data", "Er is geen verschil", "ML gebruikt geen computer", "Klassiek programmeren leert uit data"],
+        options: ["Bij ML leert de computer de regels uit data", "Bij ML schrijft de programmeur alle regels zelf", "ML is klassiek programmeren, maar dan sneller", "Klassiek programmeren leert uit data"],
         answer: 0,
-        wrongHints: [null, "Er is een wezenlijk verschil.", "ML draait juist op computers.", "Kijk wie bij klassiek programmeren de regels bedenkt."],
+        wrongHints: [null, "Wie bepaalt bij ML de regels — de programmeur of iets anders?", "Het verschil zit niet in snelheid, maar in wie of wat de regels bepaalt.", "Kijk wie bij klassiek programmeren de regels bedenkt."],
         uitlegPad: {
           stappen: [{ titel: "Regels schrijven vs leren", tekst: "Bij **klassiek programmeren** schrijft de **mens de regels**. Bij **machine learning** geef je veel **voorbeelden (data)** en **leert het systeem zelf de patronen/regels** eruit. Je programmeert het leerproces, niet de regels." }],
           niveaus: { basis: "ML leert uit data.", simpeler: "ML = leren uit voorbeelden", nogSimpeler: "ML leert uit data." },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt er in de **trainingsfase** van machine learning?",
-        options: ["Het model leert patronen uit trainingsdata", "De gebruiker betaalt voor de app", "De computer wordt gereset", "Er wordt niets opgeslagen"],
+        options: ["Het model leert patronen uit trainingsdata", "Het model wordt op nieuwe data getest", "De programmeur schrijft alle regels uit", "Het model geeft antwoorden aan gebruikers"],
         answer: 0,
-        wrongHints: [null, "Betalen heeft er niets mee te maken.", "Resetten is iets anders.", "Het geleerde model wordt juist bewaard."],
+        wrongHints: [null, "Dat gebeurt pas ná het trainen — in de testfase.", "Dat is klassiek programmeren; bij ML komen de regels ergens anders vandaan.", "Dat is het gebruik ná het trainen. Wat moet er eerst gebeuren?"],
         uitlegPad: {
           stappen: [{ titel: "Trainen → testen → gebruiken", tekst: "Tijdens het **trainen** leert het model **patronen uit trainingsdata** (bv. duizenden gelabelde foto's). Daarna **testen** op nieuwe data om te checken of het echt werkt, en dan **gebruiken** op echte gevallen." }],
           niveaus: { basis: "Leren uit trainingsdata.", simpeler: "Trainen = leren uit data", nogSimpeler: "Leren uit trainingsdata." },
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Waarom test je een ML-model op **nieuwe** data die het tijdens het trainen niet zag?",
-        options: ["Om te checken of het echt goed werkt", "Om de computer sneller te maken", "Om stroom te besparen", "Dat hoeft eigenlijk nooit"],
+        options: ["Om te checken of het echt goed werkt", "Om het model nog meer te laten leren", "Om het model sneller te laten rekenen", "Omdat oude data vaak fouten bevat"],
         answer: 0,
-        wrongHints: [null, "Testen gaat niet over snelheid.", "Het doel is betrouwbaarheid, niet stroom.", "Testen is juist essentieel."],
+        wrongHints: [null, "Tijdens het testen leert het model niets bij — je kijkt alleen hoe goed het is.", "Testen gaat niet over snelheid — wat wil je wél weten?", "Ook met foutloze trainingsdata wil je testen — wat vertelt nieuwe data jou wat oude data niet kan?"],
         uitlegPad: {
           stappen: [{ titel: "Werkt het ook 'in het echt'?", tekst: "Een model kan de **trainingsdata** uit z'n hoofd leren en tóch falen op nieuwe gevallen. Door te **testen op onbekende data** controleer je of het echt **generaliseert** — of het ook werkt op wat het nog nooit zag." }],
           niveaus: { basis: "Checken op onbekende data.", simpeler: "Testen = werkt het echt?", nogSimpeler: "Checken op onbekende data." },
@@ -138,9 +138,9 @@ const steps = [
     checks: [
       {
         q: "Bij **supervised learning** leert het model van…",
-        options: ["Gelabelde voorbeelden", "Data zonder enige labels", "Helemaal geen data", "Alleen straf"],
+        options: ["Gelabelde voorbeelden", "Data zonder enige labels", "Regels van een programmeur", "Belonen en straffen"],
         answer: 0,
-        wrongHints: [null, "Dat is juist unsupervised (zonder labels).", "ML heeft data nodig.", "Belonen/straffen is reinforcement learning."],
+        wrongHints: [null, "Dat is juist unsupervised (zonder labels).", "Regels die iemand typt is klassiek programmeren, geen machine learning.", "Belonen/straffen is reinforcement learning."],
         uitlegPad: {
           stappen: [{ titel: "Met labels = supervised", tekst: "**Supervised** (begeleid) leert van **gelabelde** voorbeelden: data mét het juiste antwoord (foto + 'kat'). **Unsupervised** zoekt zelf groepen zonder labels; **reinforcement** leert via belonen/straffen." }],
           niveaus: { basis: "Gelabelde voorbeelden.", simpeler: "Supervised = met labels", nogSimpeler: "Gelabelde voorbeelden." },
@@ -148,9 +148,9 @@ const steps = [
       },
       {
         q: "Hoe maakt een **taalmodel (chatbot/LLM)** een zin?",
-        options: ["Door woord voor woord te voorspellen wat waarschijnlijk volgt", "Door de zin op te zoeken in een boek", "Door echt te begrijpen wat het zegt", "Door willekeurige letters te plaatsen"],
+        options: ["Door telkens het volgende woord te voorspellen", "Door hele zinnen uit een database te kopiëren", "Door net als een mens te begrijpen wat het zegt", "Door willekeurige woorden achter elkaar te zetten"],
         answer: 0,
-        wrongHints: [null, "Het kopieert niet uit één boek.", "Het 'begrijpt' niet bewust — het voorspelt.", "Niet willekeurig — op basis van geleerde patronen."],
+        wrongHints: [null, "Het plakt geen vaste zinnen — elke zin wordt nieuw opgebouwd.", "Het 'begrijpt' niet bewust — het voorspelt.", "Niet willekeurig — op basis van geleerde patronen."],
         uitlegPad: {
           stappen: [{ titel: "Woord-voor-woord voorspellen", tekst: "Een **taalmodel (LLM)** is getraind op enorme hoeveelheden tekst en voorspelt **woord voor woord** wat waarschijnlijk volgt. Daardoor klinkt het vloeiend — maar het kan ook **feiten verzinnen** ('hallucineren'). Controleer belangrijke feiten dus altijd zelf." }],
           niveaus: { basis: "Woord voor woord voorspellen.", simpeler: "LLM = volgende woord voorspellen", nogSimpeler: "Woord voor woord voorspellen." },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Wat is een **neuraal netwerk**?",
-        options: ["Lagen van rekenknopen, losjes geïnspireerd op hersencellen", "Een echt menselijk brein in de computer", "Een sociaal netwerk zoals Instagram", "Een soort internetkabel"],
+        options: ["Lagen van rekenknopen, geïnspireerd op het brein", "Een nagebouwd menselijk brein dat zelf denkt", "Een netwerk van computers die via internet praten", "Een lijst als-dan-regels die iemand heeft getypt"],
         answer: 0,
-        wrongHints: [null, "Het is geïnspireerd op het brein, maar het ís er geen.", "Het is geen sociaal medium.", "Geen kabel — een rekenmodel."],
+        wrongHints: [null, "Het is geïnspireerd op het brein, maar het ís er geen.", "Dat is een computernetwerk; een neuraal netwerk zit ín het model.", "Die regels worden juist niet getypt — ze ontstaan door te leren uit data."],
         uitlegPad: {
           stappen: [{ titel: "Lagen rekenknopen", tekst: "Een **neuraal netwerk** bestaat uit **lagen rekenknopen** die signalen doorgeven, losjes geïnspireerd op hersencellen. Met veel lagen heet het **deep learning** — sterk in beeld, spraak en taal. Het is wiskunde, geen echt brein." }],
           niveaus: { basis: "Lagen rekenknopen.", simpeler: "Neuraal net = rekenlagen", nogSimpeler: "Lagen rekenknopen." },
@@ -197,9 +197,9 @@ const steps = [
     checks: [
       {
         q: "Hoe ontstaat **bias** (vooringenomenheid) in een AI-model?",
-        options: ["Doordat het leert van scheve/eenzijdige data", "Doordat de AI gemeen is", "Door een te snelle computer", "Door te weinig stroom"],
+        options: ["Doordat het leert van scheve/eenzijdige data", "Doordat de AI zelf een mening vormt", "Doordat de computer te traag rekent", "Doordat het model te vaak getest wordt"],
         answer: 0,
-        wrongHints: [null, "AI heeft geen bedoelingen — het ligt aan de data.", "Snelheid veroorzaakt geen bias.", "Stroom heeft er niets mee te maken."],
+        wrongHints: [null, "AI heeft geen eigen mening of bedoelingen.", "Snelheid veroorzaakt geen bias.", "Testen maakt een model niet scheef — testen helpt juist fouten vinden."],
         uitlegPad: {
           stappen: [{ titel: "Scheve data → scheef model", tekst: "**Bias** ontstaat doordat een model **vooroordelen in de data overneemt**. Train je een sollicitatie-AI vooral op mannen, dan benadeelt het vrouwen. Niet omdat de AI 'gemeen' is, maar omdat de **data scheef** was. Daarom is eerlijke, representatieve data essentieel." }],
           niveaus: { basis: "Scheve data.", simpeler: "Bias = scheve data", nogSimpeler: "Scheve data." },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Wat is de juiste houding bij het gebruik van (generatieve) AI?",
-        options: ["Gebruik het als hulpmiddel en controleer de uitkomst kritisch", "Geloof altijd alles wat het zegt", "Gebruik het nooit", "Deel er gerust al je persoonsgegevens mee"],
+        options: ["Als hulpmiddel gebruiken en de uitkomst controleren", "Alles overnemen, want AI weet het altijd beter", "Het nooit gebruiken, want het is altijd fout", "Er gerust al je persoonsgegevens in invoeren"],
         answer: 0,
-        wrongHints: [null, "AI kan fouten/verzinsels bevatten — niet blind vertrouwen.", "Het is juist een nuttig hulpmiddel, mits kritisch gebruikt.", "Wees voorzichtig met persoonsgegevens (privacy/AVG)."],
+        wrongHints: [null, "AI kan fouten/verzinsels bevatten — niet blind vertrouwen.", "Het is niet altijd fout — het is juist nuttig, mits kritisch gebruikt.", "Wees voorzichtig met persoonsgegevens (privacy/AVG)."],
         uitlegPad: {
           stappen: [{ titel: "Hulpmiddel, geen orakel", tekst: "Gebruik AI als **hulpmiddel**, maar blijf **kritisch**: het kan zelfverzekerd klinken en er tóch naast zitten. **Controleer** belangrijke feiten zelf, en let op **privacy** (deel niet zomaar persoonsgegevens) en **eerlijkheid** (bias)." }],
           niveaus: { basis: "Hulpmiddel + kritisch controleren.", simpeler: "AI = hulpmiddel, blijf kritisch", nogSimpeler: "Hulpmiddel + kritisch controleren." },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Waarom botst machine learning vaak met **privacy** (AVG)?",
-        options: ["ML heeft veel data nodig, vaak persoonsgegevens", "ML gebruikt nooit data", "Privacy heeft niets met data te maken", "ML werkt alleen op papier"],
+        options: ["ML heeft veel data nodig, vaak persoonsgegevens", "ML-modellen zijn altijd openbaar voor iedereen", "De AVG verbiedt het gebruik van computers", "ML-modellen maken vaak rekenfouten in cijfers"],
         answer: 0,
-        wrongHints: [null, "ML draait juist op grote hoeveelheden data.", "Privacy gaat nu net over persoonsgegevens.", "ML draait op data, niet op papier."],
+        wrongHints: [null, "Niet elk model is openbaar — waar draait ML op, en van wie komt die data?", "De AVG verbiedt geen computers — het gaat over gegevens van personen.", "Rekenfouten zijn geen privacyprobleem — waar gaat de AVG over?"],
         uitlegPad: {
           stappen: [{ titel: "Honger naar data", tekst: "ML wordt beter met **meer data** — en die data zijn vaak **persoonsgegevens**. Dat botst met de **AVG**: verzamel alleen wat nodig is (dataminimalisatie), met toestemming en een duidelijk doel, en bewaar het veilig. Meer data is niet zomaar toegestaan." }],
           niveaus: { basis: "Veel data = privacyrisico.", simpeler: "ML wil data, AVG remt", nogSimpeler: "Veel data = privacyrisico." },
