@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Welk **risico** brengt internationale afhankelijkheid?",
-        options: ["Tekorten bij een verstoring, zoals oorlog", "Geen risico, je kunt altijd elders kopen", "De prijzen in de winkel worden altijd lager", "Er komen meer buitenlandse toeristen naar NL"],
+        options: ["Tekorten bij een verstoring, zoals oorlog", "NL-producten worden te duur in het buitenland", "Je land kan geen eigen munt meer gebruiken", "De lonen in Nederland stijgen te snel"],
         answer: 0,
-        wrongHints: [null, "Lukt 'ergens anders kopen' ook als de hele wereld tegelijk een probleem heeft?", "Is 'altijd' hier waar? En is een lagere prijs eigenlijk een risico?", "Niet relevant voor handel."],
+        wrongHints: [null, "Afhankelijk zijn gaat over wat je zelf nodig hebt van anderen. Wat gebeurt er als dat ineens niet komt?", "Dat gaat over de euro, niet over afhankelijkheid in de handel. Wat als een leverancier ver weg uitvalt?", "Lonen hangen van veel dingen af. Welk risico ontstaat als je spullen uit één ver land moet halen?"],
         uitlegPad: {
           stappen: [{ titel: "Afhankelijkheid = risico", tekst: "Als je medicijnen uit India komen + India sluit grenzen = tekort hier. Corona toonde dit." }],
           woorden: [{ woord: "supply chain", uitleg: "Toeleverketen — alle stappen van grondstof tot eindproduct, vaak verspreid wereldwijd." }],
@@ -156,9 +156,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **invoerheffing**?",
-        options: ["Belasting op importproducten aan de grens", "Een soort BTW op alle producten", "Belasting die je betaalt over je loon", "Geld van de overheid voor bedrijven"],
+        options: ["Belasting op importproducten aan de grens", "Een soort BTW op alle producten", "Belasting op producten die je exporteert", "Geld van de overheid voor bedrijven"],
         answer: 0,
-        wrongHints: [null, "Vergelijkbaar maar specifiek voor import.", "Niets met loon.", "Tegendeel."],
+        wrongHints: [null, "Btw betaal je op bijna alles, ook op Nederlandse producten. Waarvoor geldt een invoerheffing alleen?", "Kijk naar het woord: gaat het om invoer of om uitvoer?", "Geld van de overheid voor bedrijven is een subsidie. Wie betaalt er bij een heffing?"],
         uitlegPad: {
           stappen: [{ titel: "Belasting bij grens", tekst: "Invoerheffing = belasting die je moet betalen bij invoer van goederen. Maakt buitenlandse producten duurder." }],
           woorden: [{ woord: "invoerheffing", uitleg: "Belasting bij grens op import. Ook: importtarief." }],
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wat is een **quotum**?",
-        options: ["Maximum aantal dat je mag importeren", "Een belasting op importproducten", "Een label voor goede kwaliteit", "Een verdrag tussen twee landen"],
+        options: ["Maximum aantal dat je mag importeren", "Een belasting op importproducten", "Een minimumprijs voor importproducten", "Een verdrag tussen twee landen"],
         answer: 0,
-        wrongHints: [null, "Quotum = aantal, heffing = geld.", "Niet kwaliteit.", "Niet verdrag."],
+        wrongHints: [null, "Een belasting op import heet een invoerheffing. Een quotum werkt anders — hoe?", "Een quotum gaat niet over de prijs. Wat beperkt het dan wel?", "Een quotum kan in een verdrag staan, maar is zelf een maatregel. Wat beperkt het?"],
         uitlegPad: {
           stappen: [{ titel: "Maximum-aantal", tekst: "Quotum = maximaal X stuks/jaar. Boven dat = niet toegestaan of veel duurder." }],
           woorden: [{ woord: "quotum", uitleg: "Vaste limiet op aantal of hoeveelheid." }],
@@ -186,7 +186,7 @@ const steps = [
         q: "Een **subsidie** voor eigen bedrijven:",
         options: ["Maakt hun producten goedkoper op de wereldmarkt", "Maakt hun producten duurder in het buitenland", "Heeft geen effect, want de markt bepaalt de prijs", "Is volgens de WTO-regels altijd verboden"],
         answer: 0,
-        wrongHints: [null, "Krijgt het bedrijf geld erbij, of moet het juist iets betalen?", "Als de overheid meebetaalt, veranderen je kosten dan echt niet?", "Niet altijd verboden — vaak geregeld."],
+        wrongHints: [null, "Krijgt het bedrijf geld erbij, of moet het juist iets betalen?", "Als de overheid meebetaalt, veranderen je kosten dan echt niet?", "De WTO stelt wel regels voor subsidies, maar verbiedt ze niet allemaal. Wat doet een subsidie met de prijs?"],
         uitlegPad: {
           stappen: [{ titel: "Geld erbij = goedkoper produceren", tekst: "Eigen bedrijf krijgt geld van overheid → kan goedkoper produceren → meer concurrerend." }],
           woorden: [{ woord: "subsidie", uitleg: "Geld van overheid om iets te stimuleren (bv. zonnepanelen, eigen industrie)." }],
