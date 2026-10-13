@@ -158,7 +158,7 @@ const steps = [
         q: "Wie formuleerde de **categorische imperatief**?",
         options: ["Immanuel Kant","John Stuart Mill","Aristoteles","Plato"],
         answer: 0,
-        wrongHints: [null, "Niet — utilitarist.", "Niet — deugd-ethiek.", "Plato leefde 2000 jaar eerder; de term 'imperatief' komt uit de Verlichting."],
+        wrongHints: [null, "Mill was utilitarist: hij keek naar de gevolgen van een daad, niet naar plichten.", "Aristoteles deed aan deugdethiek: hij vroeg wat een goed mens is, niet welke regel je moet volgen.", "Plato leefde 2000 jaar eerder; de term 'imperatief' komt uit de Verlichting."],
         uitlegPad: {
           stappen: [{ titel: "Deontologisch principe", tekst: "**Kant** in *Grundlegung zur Metaphysik der Sitten* (1785). **Categorische imperatief**: handel alleen volgens regel die je tot universele wet zou willen maken. Toets: zou iedereen dit kunnen doen zonder zelf-tegenspraak?\n\n2e formule: 'Behandel mensen nooit louter als middel, maar altijd ook als doel op zich.'" }],
           niveaus: { basis: "Kant.", simpeler: "Cat. imp. = Kant", nogSimpeler: "Kant" },
@@ -168,7 +168,7 @@ const steps = [
         q: "**Utilitarisme** beoordeelt handeling op:",
         options: ["Gevolgen", "Bedoeling", "Aard handeling zelf", "Regelconformiteit"],
         answer: 0,
-        wrongHints: [null, "Niet — speelt rol bij Kant.", "Niet — dat is deontologie.", "Niet — dat is regel-ethiek."],
+        wrongHints: [null, "De bedoeling achter een daad telt vooral bij Kant. Waar kijkt een utilitarist naar?", "Of een daad op zichzelf goed of fout is, dat vraagt de plichtethiek (deontologie).", "Of je je aan de regels houdt, staat centraal in de regel-ethiek. Wat telt een utilitarist?"],
         uitlegPad: {
           stappen: [{ titel: "Consequenties tellen", tekst: "**Utilitarisme** (Bentham, Mill): handeling is goed als ze **grootste geluk voor grootste aantal** oplevert. Beoordeel **gevolgen**, niet intentie of regel. Klassieke kritiek: rechtvaardigt slechte middelen voor goed doel (organen oogsten van 1 om 5 te redden?)." }],
           niveaus: { basis: "Gevolgen.", simpeler: "Utili = gevolgen", nogSimpeler: "Gevolg" },
@@ -178,7 +178,7 @@ const steps = [
         q: "Aristotelische **eudaimonia** betekent:",
         options: ["Goed leven / menselijke bloei","Kortstondig geluksgevoel / plezier","Gemoedsrust / vrij zijn van onrust","Zielenheil / geluk na de dood"],
         answer: 0,
-        wrongHints: [null, "Te eng — eudaimonia is dieper.", "Dat heet ataraxia, het doel van Epicurus. Aristoteles dacht aan een actief leven.", "Aristoteles dacht aan dit leven, niet aan een hiernamaals."],
+        wrongHints: [null, "Plezier duurt maar even. Aristoteles bedoelde iets wat over je hele leven gaat.", "Dat heet ataraxia, het doel van Epicurus. Aristoteles dacht aan een actief leven.", "Aristoteles dacht aan dit leven, niet aan een hiernamaals."],
         uitlegPad: {
           stappen: [{ titel: "Bloei door deugd", tekst: "**Eudaimonia** (εὐδαιμονία) = goed leven / bloei / flourishing. Niet alleen geluksgevoel, maar **compleet leven volgens deugd + redelijk handelen**. Iemand kan tijdelijk lijden maar nog steeds eudaimon zijn als hij deugdzaam leeft. Hedendaagse vertaling: 'flourishing' beter dan 'happiness'." }],
           niveaus: { basis: "Goed leven.", simpeler: "Eudaimonia = bloei", nogSimpeler: "Bloei" },
@@ -188,7 +188,7 @@ const steps = [
         q: "**Trolleyprobleem**: utilitarist zou switch trekken?",
         options: ["Ja (5 redden > 1 doden)","Nee (mens gebruiken als middel)","Nee (niet voor God spelen)","Alleen als die ene instemt"],
         answer: 0,
-        wrongHints: [null, "Niet — deontoloog zou dat zeggen.", "Een utilitarist telt uitkomsten. Maakt het voor hem uit wie de keuze maakt?", "Instemming is belangrijk voor een plichtethicus. Waar kijkt de utilitarist naar?"],
+        wrongHints: [null, "Een mens niet als middel gebruiken is een argument van Kant (plichtethiek). Waar let een utilitarist op?", "Een utilitarist telt uitkomsten. Maakt het voor hem uit wie de keuze maakt?", "Instemming is belangrijk voor een plichtethicus. Waar kijkt de utilitarist naar?"],
         uitlegPad: {
           stappen: [{ titel: "Calculatie", tekst: "**Utilitarist**: 5 mensen levens > 1. Switch trekken minimaliseert dood. Doen.\n\n**Deontoloog (Kant)**: switch trekken = actief 1 persoon doden = persoon gebruiken als middel = fout. Nee (niet actief tussenkomen).\n\nVarianten testen intuïties verder: dikke man duwen (zelfde getal-uitkomst, maar lichamelijk anders) → veel mensen vinden dat erger." }],
           niveaus: { basis: "Ja.", simpeler: "Utili = ja", nogSimpeler: "Ja" },
@@ -198,7 +198,7 @@ const steps = [
         q: "**Peter Singer** maakte welke term bekend?",
         options: ["Speciesisme", "Categorische imperatief", "Tabula rasa", "Trolleyprobleem"],
         answer: 0,
-        wrongHints: [null, "Niet — Kant.", "Niet — Locke.", "Niet — Foot."],
+        wrongHints: [null, "De categorische imperatief komt van Kant.", "Tabula rasa ('onbeschreven blad') is een idee van Locke.", "Het trolleyprobleem is bedacht door Philippa Foot."],
         uitlegPad: {
           stappen: [{ titel: "Dier-ethiek", tekst: "**Peter Singer** (1946-) Australisch filosoof, *Animal Liberation* (1975). **Speciesisme / soortisme** (term bedacht door Richard Ryder, 1970) = discriminatie op basis van soort, analoog aan racisme of seksisme. Stelling: lijdenscapaciteit = wat telt, niet soort. Implicatie: vleeseten moreel problematisch." }],
           theorie: "Singer is utilitarist — toepassing utilitarisme op dieren. Tegenstander Tom Regan: dieren-rechten-theorie (deontologisch).",
@@ -218,7 +218,7 @@ const steps = [
         q: "**Hobbes' natuurtoestand** wordt beschreven als:",
         options: ["Oorlog van allen tegen allen","Een paradijs zonder gebrek","Gemeenschap zonder eigendom","Vrij en vredig samenleven"],
         answer: 0,
-        wrongHints: [null, "Niet — Rousseau-achtig.", "Dat lijkt meer op Marx dan op Hobbes.", "Niet — dat is Locke/Rousseau."],
+        wrongHints: [null, "Zo'n rooskleurig beeld past meer bij Rousseau. Dacht Hobbes positief over mensen zonder staat?", "Dat lijkt meer op Marx dan op Hobbes.", "Dat beeld past meer bij Locke of Rousseau. Waarom vond Hobbes een sterke staat nodig?"],
         uitlegPad: {
           stappen: [{ titel: "Bellum omnium...", tekst: "**Hobbes** in *Leviathan*: zonder staat = 'oorlog van allen tegen allen' (bellum omnium contra omnes). Leven 'solitary, poor, nasty, brutish, and short'. Daarom geven mensen macht af aan absolute soeverein voor veiligheid." }],
           niveaus: { basis: "Oorlog allen tegen allen.", simpeler: "Hobbes natuur = oorlog", nogSimpeler: "Oorlog" },
@@ -259,7 +259,7 @@ const steps = [
         q: "**Nozick** stelt:",
         options: ["Belasting voor herverdeling is dwangarbeid", "Herverdeling is nodig voor rechtvaardigheid", "Privé-eigendom is in feite een vorm van diefstal", "Ook een minimale staat is al onrechtmatig"],
         answer: 0,
-        wrongHints: [null, "Niet — dat lijkt meer op Rawls.", "Dat zei de anarchist Proudhon. Hoe dacht Nozick over eigendom?", "Nozick verdedigde een minimale 'nachtwakersstaat'. Wat vond hij van een staat die méér doet?"],
+        wrongHints: [null, "Dat lijkt meer op Rawls. Wat vond Nozick van een staat die geld van de een aan de ander geeft?", "Dat zei de anarchist Proudhon. Hoe dacht Nozick over eigendom?", "Nozick verdedigde een minimale 'nachtwakersstaat'. Wat vond hij van een staat die méér doet?"],
         uitlegPad: {
           stappen: [{ titel: "Libertarisme rechts", tekst: "**Robert Nozick** in *Anarchy, State, and Utopia* (1974): libertarisme. Staat moet minimaal zijn (alleen veiligheid + recht). **Herverdeling-belasting** = staat dwingt jou te werken voor anderen = vorm dwangarbeid. Recht op eigendom heilig. Reactie op Rawls' egalitarisme." }],
           theorie: "Toets-patroon: Rawls vs Nozick is klassiek debat: gelijkheid vs vrijheid.",
@@ -319,7 +319,7 @@ const steps = [
         q: "**Nietzsches** beroemde uitspraak 'God is dood' betekent:",
         options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet en heeft nooit bestaan", "De wetenschap heeft God weerlegd"],
         answer: 0,
-        wrongHints: [null, "Niet — metaforisch.", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Nietzsche beschrijft een verandering in de cultuur, geen wetenschappelijk bewijs."],
+        wrongHints: [null, "Nietzsche bedoelde het niet letterlijk: het is beeldspraak. Waarover zegt hij dan iets?", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Nietzsche beschrijft een verandering in de cultuur, geen wetenschappelijk bewijs."],
         uitlegPad: {
           stappen: [{ titel: "Cultureel feit", tekst: "**Nietzsche** in *Die fröhliche Wissenschaft* (1882): 'Gott ist tot'. Geen feitelijke claim — **cultuurdiagnose**: na Verlichting + wetenschap geloven westerse mensen niet meer in God. Probleem: traditionele moraal hing aan God. Wat nu? Nietzsche zelf: schep eigen waarden (Übermensch).\n\nMisbruikt door Nazi's; Nietzsche zelf was tegen antisemitisme + nationalisme." }],
           niveaus: { basis: "Einde moraal.", simpeler: "God dood = einde moraal", nogSimpeler: "Zelf waarden scheppen" },

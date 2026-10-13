@@ -155,7 +155,7 @@ const steps = [
         q: "*Trotzdem* betekent:",
         options: ["Toch","Daarom","Bovendien","Misschien"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is *deshalb*.", "Niet — *außerdem*.", "Niet — *vielleicht*."],
+        wrongHints: [null, "Niet — dat is *deshalb*.", "'Bovendien' is in het Duits *außerdem*.", "'Misschien' is in het Duits *vielleicht*."],
         uitlegPad: {
           stappen: [{ titel: "Tegenstelling-marker", tekst: "**Trotzdem / dennoch** = toch, niettemin. Signaleert dat ondanks vorige bewering iets anders volgt. Verwant: *allerdings, jedoch* (= echter)." }],
           niveaus: { basis: "Toch.", simpeler: "Trotzdem = toch", nogSimpeler: "Toch" },

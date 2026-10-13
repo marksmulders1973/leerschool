@@ -33,7 +33,7 @@ const steps = [
         q: "Wat is een **Brønsted-zuur**?",
         options: ["H⁺-donor","H⁺-acceptor","Elektron-donor","OH⁻-donor"],
         answer: 0,
-        wrongHints: [null, "Een H⁺-acceptor neemt een proton op. Doet een zuur dat, of geeft het juist iets weg?", "Niet — andere definitie (Lewis).", "Niet — dat lijkt op de oude definitie van een base (Arrhenius)."],
+        wrongHints: [null, "Een H⁺-acceptor neemt een proton op. Doet een zuur dat, of geeft het juist iets weg?", "Een elektron-donor hoort bij een andere definitie, die van Lewis. Wat geeft een Brønsted-zuur af?", "Niet — dat lijkt op de oude definitie van een base (Arrhenius)."],
         uitlegPad: {
           stappen: [{ titel: "Zuur staat proton af", tekst: "**Brønsted-zuur** = stof die **H⁺ (proton) afstaat** aan andere stof. Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺. HCl is zuur, geeft proton aan H₂O." }],
           theorie: "Toets-formulering: 'Brønsted-zuur = protondonor, Brønsted-base = protonacceptor'.",
@@ -125,7 +125,7 @@ const steps = [
         q: "Oplossing met **[OH⁻] = 10⁻²** mol/L. pH?",
         options: ["12","2","14","7"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pOH.", "14 is pH en pOH samen. Hoe groot is de pOH hier, en wat blijft er voor de pH over?", "[OH⁻] is hier veel groter dan in zuiver water. Is de oplossing dan neutraal?"],
+        wrongHints: [null, "2 is de pOH, niet de pH. Hoe reken je van pOH naar pH?", "14 is pH en pOH samen. Hoe groot is de pOH hier, en wat blijft er voor de pH over?", "[OH⁻] is hier veel groter dan in zuiver water. Is de oplossing dan neutraal?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst pOH", tekst: "[OH⁻] = 10⁻² → pOH = 2." },
@@ -277,7 +277,7 @@ const steps = [
         q: "0,001 M **NaOH** in water. pH?",
         options: ["11","3","12","7"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pOH.", "Niet — controleer de exponent van [OH⁻].", "NaOH is een base. Kan de oplossing dan neutraal zijn?"],
+        wrongHints: [null, "3 is de pOH, niet de pH. Hoe reken je van pOH naar pH?", "Niet — controleer de exponent van [OH⁻].", "NaOH is een base. Kan de oplossing dan neutraal zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Bereken via pOH", tekst: "[OH⁻] = 0,001 = 10⁻³ → pOH = 3 → pH = 14 − 3 = **11**." }],
           niveaus: { basis: "11.", simpeler: "pOH=3, pH=11", nogSimpeler: "11" },

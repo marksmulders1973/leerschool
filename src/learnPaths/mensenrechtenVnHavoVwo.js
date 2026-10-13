@@ -39,7 +39,7 @@ const steps = [
           "Digitale en privacyrechten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — 2e generatie.", "Dat is de 3e generatie (vrede, milieu).", "Die bestonden nog niet toen de eerste rechten werden vastgelegd, rond 1789."],
+        wrongHints: [null, "Sociaal-economische rechten, zoals het recht op werk en onderwijs, zijn de 2e generatie.", "Dat is de 3e generatie (vrede, milieu).", "Die bestonden nog niet toen de eerste rechten werden vastgelegd, rond 1789."],
         uitlegPad: {
           stappen: [{ titel: "Klassieke vrijheidsrechten", tekst: "1e generatie beschermt INDIVIDU tegen MACHT van staat. Vrijheid van meningsuiting, godsdienst, vereniging. Geen willekeurige arrestatie. Eerlijk proces. Stamt uit Verlichting-revoluties (Amerikaans 1776, Frans 1789)." }],
           niveaus: { basis: "Burger + politiek.", simpeler: "Vrijheden tegen overheid.", nogSimpeler: "1e gen" },

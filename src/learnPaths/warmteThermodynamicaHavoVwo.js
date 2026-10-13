@@ -292,7 +292,7 @@ const steps = [
           "Een warmteverlies van 4 kJ"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — 4 kJ uit 1 kJ is méér dan 100%; hoe heet die verhouding bij een warmtepomp?", "Niet — vermogen is energie per seconde; hier gaat het om een verhouding.", "Niet — de pomp wint juist warmte."],
+        wrongHints: [null, "Niet — 4 kJ uit 1 kJ is méér dan 100%; hoe heet die verhouding bij een warmtepomp?", "Niet — vermogen is energie per seconde; hier gaat het om een verhouding.", "Van verlies is geen sprake: de pomp levert juist méér warmte dan de stroom die erin gaat."],
         uitlegPad: {
           stappen: [{ titel: "COP = Q_warm / W_elek", tekst: "Warmtepomp doet geen tovenarij: 3 kJ komen uit buiten-omgeving, 1 kJ doet pomp-werk. Totaal 4 kJ binnen. Daarom veel zuiniger dan elektrisch kacheltje (COP ≈ 1)." }],
           basiskennis: [

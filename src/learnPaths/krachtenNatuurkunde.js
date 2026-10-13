@@ -525,7 +525,7 @@ const steps = [
         q: "Wie schreef deze drie wetten op?",
         options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Marie Curie"],
         answer: 0,
-        wrongHints: [null, "Einstein deed relativiteit, niet deze wetten.", "Galilei was eerder maar formuleerde de wetten niet zo.", "Curie deed radioactiviteit."],
+        wrongHints: [null, "Einstein deed relativiteit, niet deze wetten.", "Galilei was eerder maar formuleerde de wetten niet zo.", "Marie Curie onderzocht radioactiviteit, ruim twee eeuwen na deze wetten."],
         uitlegPad: {
           stappen: [{ titel: "Isaac Newton (1687)", tekst: "Engelse wetenschapper Isaac Newton publiceerde in 1687 zijn 'Philosophiæ Naturalis Principia Mathematica' met de drie bewegingswetten + zwaartekrachtswet." }],
           woorden: [{ woord: "Principia", uitleg: "naam van Newtons beroemde boek" }],
@@ -537,7 +537,7 @@ const steps = [
       },
       { q: "Een voorwerp van 5 kg ondervindt zwaartekracht. Hoe groot is Fz? (g ≈ 10 N/kg)", options: ["50 N","5 N","0,5 N","500 N"], answer: 0, wrongHints: [null,"Te laag — gebruik de formule Fz = m × g en vul massa en g in.","Veel te laag — denk na over de juiste bewerking.","Te hoog — welke twee grootheden vermenigvuldig je met elkaar?"] },
       { q: "Newton 1 zegt: een voorwerp in rust blijft in rust ZOLANG?", options: ["Er geen netto kracht op werkt","Er geen zwaartekracht op werkt","Het zwaarder is dan de kracht erop","Er geen wrijving op werkt"], answer: 0, wrongHints: [null,"Een boek op tafel voelt wél zwaartekracht en blijft toch liggen. Waar gaat het dan om?","Massa en kracht kun je niet zomaar vergelijken. Kijk naar alle krachten samen.","Ook zonder wrijving blijft iets liggen als niets eraan trekt of duwt. Waar gaat het dan om?"] },
-      { q: "F = m × a. Massa 2 kg, versnelling 3 m/s². Wat is F?", options: ["6 N","5 N","1,5 N","0,67 N"], answer: 0, wrongHints: [null,"Niet — niet optellen, vermenigvuldigen.","Niet — niet delen.","Je deelde massa door versnelling. Wat zegt F = m × a dat je moet doen?"] },
+      { q: "F = m × a. Massa 2 kg, versnelling 3 m/s². Wat is F?", options: ["6 N","5 N","1,5 N","0,67 N"], answer: 0, wrongHints: [null,"Niet — niet optellen, vermenigvuldigen.","Je deelde 3 door 2. Kijk naar het teken tussen m en a in de formule.","Je deelde massa door versnelling. Wat zegt F = m × a dat je moet doen?"] },
       { q: "Eenheid van **kracht** is?", options: ["Newton (N)","Kilo (kg)","Meter (m)","Watt (W)"], answer: 0, wrongHints: [null,"Kilogram is de eenheid van massa. Is massa hetzelfde als kracht?","Meter is de eenheid van lengte. Waarin druk je een duw of trek uit?","Watt is de eenheid van vermogen. Waarin druk je een duw of trek uit?"] },
       { q: "**Wrijving** werkt meestal ___ de bewegingsrichting?", options: ["Tegen","Mee","Loodrecht","Schuin omhoog"], answer: 0, wrongHints: [null,"Gaat een slee door wrijving sneller of langzamer glijden?","Loodrecht op het oppervlak werkt de normaalkracht. Wrijving werkt langs het oppervlak.","Wrijving werkt langs het oppervlak waar twee dingen langs elkaar schuren. Gaat dat schuin omhoog?"] },
       { q: "Twee personen trekken aan touw: 10 N links, 15 N rechts. **Netto kracht** = ?", options: ["5 N rechts","25 N","5 N links","0 N"], answer: 0, wrongHints: [null,"Je telde 10 en 15 op. Mag dat als de krachten tegengesteld zijn?","Aan welke kant wordt het hardst getrokken?","Zijn 10 N en 15 N even groot? Wanneer zou de netto kracht 0 N zijn?"] },

@@ -69,13 +69,13 @@ const steps = [
     checks: [
       {
         q: "*Hoe wordt 'lopen' verdeeld in lettergrepen?*",
-        options: ["lo-pen", "lop-en", "l-open", "lopen"],
+        options: ["lo-pen", "lop-en", "lo-pe-n", "lope-n"],
         answer: 0,
         wrongHints: [
           null,
-          "De o is een lange klank — die hoort bij een open lettergreep, dus eindigt op een klinker.",
-          "Eén letter kan geen lettergreep zijn — er moet minstens een klinker bij.",
-          "Lopen heeft 2 lettergrepen, niet 1. Klap mee: lo - pen.",
+          "Klinkt de o in 'lopen' kort of lang? En op welke letter eindigt dan de eerste lettergreep: een klinker of een medeklinker?",
+          "Klap mee: hoe vaak klap je bij 'lopen'? Kan een losse n een eigen lettergreep zijn?",
+          "Zeg het woord langzaam. Waar hoor je de knip? En heeft je laatste stukje nog een klinker?",
         ],
         uitlegPad: {
           stappen: [
@@ -99,13 +99,13 @@ const steps = [
       },
       {
         q: "*In het woord 'kammen' (= het meervoud van kam): is de eerste lettergreep 'kam' open of gesloten?*",
-        options: ["Gesloten", "Open", "Halfopen", "Geen van beide"],
+        options: ["Gesloten, want 'kam' eindigt op een medeklinker", "Open, want de a in 'kam' klinkt kort", "Open, want 'kam' eindigt op een klinker", "Gesloten, want de a in 'kam' klinkt lang"],
         answer: 0,
         wrongHints: [
           null,
-          "Kijk goed naar 'kam-men': op welke letter eindigt de eerste lettergreep echt — een klinker of een medeklinker?",
-          "Halfopen bestaat niet als spellingbegrip.",
-          "Eén van beide moet kloppen. Loop het rijtje: eindigt 'kam-' op een klinker of een medeklinker?",
+          "Open en gesloten gaan over de laatste letter van de lettergreep. Hoort een korte klank bij open of bij gesloten?",
+          "Kijk goed naar 'kam-men': welke letter staat er aan het eind van 'kam'? Is dat een klinker?",
+          "Gesloten klopt, maar klinkt de a in 'kam' echt lang, zoals in 'kamer'?",
         ],
         uitlegPad: {
           stappen: [
@@ -117,7 +117,7 @@ const steps = [
           ],
           theorie: "Truc: kijk naar LAATSTE letter van de lettergreep. Klinker (aeiou) = open. Medeklinker = gesloten.",
           voorbeelden: [{ type: "gesloten", tekst: "kam-men, hop-pen, bus-sen — alle eerste lettergreep eindigt op medeklinker = gesloten = korte klank ervoor." }],
-          basiskennis: [{ onderwerp: "Halfopen bestaat niet", uitleg: "In spelling: alleen 'open' of 'gesloten'. Niets ertussen." }],
+          basiskennis: [{ onderwerp: "Kort of lang?", uitleg: "Gesloten lettergreep = korte klinker ervoor (kam). Open lettergreep = lange klinker (ka-mer)." }],
           niveaus: {
             basis: "'kam' eindigt op m (medeklinker) = gesloten.",
             simpeler: "Stel: 'kam-men'. Eerste stuk = 'kam'. Laatste letter = 'm'. M is geen klinker, dus medeklinker. Lettergreep eindigt op medeklinker = gesloten.",
@@ -155,7 +155,7 @@ const steps = [
         wrongHints: [
           null,
           "Penen zou de e-klank lang maken — maar 'pen' heeft een korte e. Wat moet je dan met de medeklinker?",
-          "Het Nederlandse meervoud van 'pen' eindigt op -en, niet op -s.",
+          "Een meervoud op -s krijgen vooral woorden op -el, -er of -en, zoals 'tafels'. Hoort 'pen' in dat rijtje?",
           "Een apostrof gebruik je bij meervouden van woorden die op een lange klinker eindigen, zoals auto's. Eindigt 'pen' zo?",
         ],
         uitlegPad: {
@@ -188,7 +188,7 @@ const steps = [
           null,
           "De oo-klank in 'boom' is lang. Hoeveel o's heb je nodig als de lettergreep op de o eindigt?",
           "Bommen = van 'bom' (korte o). Dat is iets anders dan een boom!",
-          "Het Nederlandse meervoud eindigt op -en, niet -s.",
+          "Zeg je 'twee booms'? Welke woorden krijgen een meervoud op -s, en hoort 'boom' daarbij?",
         ],
         uitlegPad: {
           stappen: [
@@ -229,13 +229,13 @@ const steps = [
     checks: [
       {
         q: "*Welke letter staat aan het eind van 'paard'?*",
-        options: ["d", "t", "td", "dt"],
+        options: ["d", "t", "t of d, allebei goed", "dt"],
         answer: 0,
         wrongHints: [
           null,
           "Het klinkt als 't', maar pas de truc toe: meervoud is paar___en. Welke letter hoor je daar?",
-          "td-combinatie staat niet aan het eind van een Nederlands zelfstandig naamwoord.",
-          "dt is een werkwoordsuitgang (zoals bij vindt). Bij een gewoon woord komt er één letter.",
+          "Klinkt allebei hetzelfde, maar er is maar één goede spelling. Hoe kom je erachter welke letter het is?",
+          "dt zie je bij werkwoorden, zoals 'hij vindt'. Is 'paard' een werkwoord?",
         ],
         uitlegPad: {
           stappen: [
@@ -244,7 +244,7 @@ const steps = [
           woorden: [{ woord: "verleng-truc", uitleg: "Maak woord langer (meervoud / lange vorm). De echte letter wordt dan hoorbaar." }],
           theorie: "**Eind-letter-truc:** veel NL-woorden eindigen op een d die als t klinkt. Verleng het woord (meervoud / werkwoordvorm) — dan hoor je welke letter het echt is.\n• Paard → paarden = D\n• Hand → handen = D\n• Hond → honden = D\n• Krat → kratten = T",
           voorbeelden: [{ type: "verlengen", tekst: "'Hond' klinkt als 'hont'. Maar verleng: 'honden' = D. Dus hond eindigt op D." }],
-          basiskennis: [{ onderwerp: "Niet 'td' of 'dt'", uitleg: "Bij gewone zelfstandige naamwoorden 1 letter, niet combinaties." }],
+          basiskennis: [{ onderwerp: "Eén goede spelling", uitleg: "Bij gewone zelfstandige naamwoorden kies je één letter: d of t. dt hoort bij werkwoorden." }],
           niveaus: {
             basis: "Paard verleng = paarden = D.",
             simpeler: "Hoor je 'paart' aan het eind? Maak 'm langer: 'paarden'. Daar hoor je duidelijk een D. Dus paard eindigt op D.",
@@ -254,13 +254,13 @@ const steps = [
       },
       {
         q: "*Welke laatste letter heeft 'lief'?*",
-        options: ["f", "v", "ff", "vt"],
+        options: ["f", "v", "ve", "ft"],
         answer: 0,
         wrongHints: [
           null,
           "In de lange vorm 'lieve' hoor je een v. Maar welke letter mag in het Nederlands niet aan het eind van een woord staan?",
-          "Dubbele f is bij geen enkele lange vorm hier nodig.",
-          "vt is geen normale eindcombinatie in het Nederlands.",
+          "'Een lieve hond' schrijf je met -ve. Maar in 'de hond is lief' staat het woord los, zonder -e erachter. Hoe eindigt het dan?",
+          "Hoor je aan het eind van 'lief' echt een t, of denk je aan 'liefst'?",
         ],
         uitlegPad: {
           stappen: [
@@ -303,12 +303,12 @@ const steps = [
     checks: [
       {
         q: "*Strikvraag over ei/ij: hoe schrijf je het woord voor de witte drank die van een koe komt?*",
-        options: ["melk", "mellek", "meelk", "melluk"],
+        options: ["melk", "mellek", "melg", "melluk"],
         answer: 0,
         wrongHints: [
           null,
           "In de spreektaal zeggen veel mensen 'mellek', met een extra klank tussen l en k. Schrijf je die klank ook op?",
-          "Hoor je een lange ee, zoals in 'zee', of een korte e, zoals in 'pen'?",
+          "Aan het eind hoor je een k-klank. Maak het woord langer: 'melken'. Hoor je dan een g of een k?",
           "'Melluk' schrijf je zoals sommige mensen het uitspreken. Hoort die extra klank in het geschreven woord?",
         ],
         uitlegPad: {
@@ -328,13 +328,13 @@ const steps = [
       },
       {
         q: "*Welk woord is correct gespeld?*",
-        options: ["vrijheid", "vreiheid", "vryheid", "vreyheid"],
+        options: ["vrijheid", "vreiheid", "vryheid", "vrijhijd"],
         answer: 0,
         wrongHints: [
           null,
           "Past de 'ei' wel bij de regels voor deze klank? Denk aan vergelijkbare woorden.",
-          "De y wordt in modern Nederlands niet meer gebruikt voor deze klank.",
-          "De combinatie 'ey' bestaat niet in het Nederlands.",
+          "Zo schreef je het vroeger soms, bijvoorbeeld in oude namen. Met welke letters schrijf je die klank nu?",
+          "Het stukje achter 'vrij' zie je ook in 'gezondheid' en 'waarheid'. Hoe schrijf je het daar?",
         ],
         uitlegPad: {
           stappen: [
@@ -376,13 +376,13 @@ const steps = [
     checks: [
       {
         q: "*Welke spelling is correct voor het voertuig met 4 wielen waar je in rijdt?*",
-        options: ["auto", "outo", "ooto", "oto"],
+        options: ["auto", "outo", "ooto", "autoo"],
         answer: 0,
         wrongHints: [
           null,
           "Past dit bij de au-of-ou-regel? Denk aan andere woorden met dezelfde klank.",
           "Veel mensen zeggen 'ooto'. Maar schrijf je een leenwoord altijd zoals je het uitspreekt?",
-          "Hoor je aan het begin één korte klinker, of een tweeklank? En schrijf je dit leenwoord zoals je het zegt?",
+          "Aan het eind hoor je een lange o. Hoe schrijf je die aan het eind van een woord, zoals in 'zo' en 'foto'?",
         ],
         uitlegPad: {
           stappen: [
@@ -452,7 +452,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er mist een letter: met welke twee letters schrijf je de ch-klank?",
+          "Kijk naar 'nacht' en 'licht': hoe schrijf je daar de schurende keelklank? Is een losse h genoeg?",
           "Verleng het woord: 'grachten'. Hoor je dan een d of een t?",
           "Na een korte klinker schrijf je deze keelklank vóór een t bijna nooit met een g. Denk aan 'nacht' en 'licht'.",
         ],
@@ -564,13 +564,13 @@ const steps = [
     checks: [
       {
         q: "*Hoe schrijf je het samengestelde woord voor 'koek met als hoofdingrediënt iets uit de pan'?*",
-        options: ["pannenkoek", "pannekoek", "panekoek", "pan-koek"],
+        options: ["pannenkoek", "pannekoek", "panekoek", "pankoek"],
         answer: 0,
         wrongHints: [
           null,
           "Sinds 2005 kijk je naar het meervoud van het eerste deel. Wat is het meervoud van 'pan'?",
           "Let op de korte a in 'pan' — en kijk naar het meervoud van 'pan'.",
-          "Geen koppelteken nodig — geen klinker-botsing.",
+          "Zeg het woord hardop: hoor je tussen 'pan' en 'koek' nog een extra klank?",
         ],
         uitlegPad: {
           stappen: [
@@ -608,13 +608,13 @@ const steps = [
     checks: [
       {
         q: "*Welke spelling is juist voor 'iets waarover mensen verschillend denken'?*",
-        options: ["meningsverschil", "meningverschil", "mening-verschil", "mening verschil"],
+        options: ["meningsverschil", "meningverschil", "meningenverschil", "mening verschil"],
         answer: 0,
         wrongHints: [
           null,
           "Spreek het woord hardop uit: hoor je tussen de twee delen een extra klank?",
-          "Geen koppelteken nodig — geen klinker-botsing.",
-          "Samenstellingen aaneen, geen spatie.",
+          "Een tussen-n schrijf je als het eerste deel een meervoud op -en heeft. Gaat het hier over meerdere meningen, en hoor je die -en?",
+          "Is dit één woord of zijn het twee losse woorden? Hoe schrijf je een samenstelling zoals 'zomervakantie'?",
         ],
         uitlegPad: {
           stappen: [

@@ -186,7 +186,7 @@ const steps = [
         q: "*Imparfait* (bv. *je mangeais*) gebruik je voor:",
         options: ["Doorlopende of gewoonte-actie in verleden", "Afgeronde, eenmalige actie in verleden", "Plannen voor later, in de toekomst", "Wens of beleefd verzoek in het heden"],
         answer: 0,
-        wrongHints: [null, "Niet — passé composé.", "Niet — futur.", "Niet — conditionnel."],
+        wrongHints: [null, "Een afgeronde, eenmalige actie in het verleden zet je in de passé composé.", "Voor plannen in de toekomst gebruik je de futur.", "Een wens of beleefd verzoek zet je in de conditionnel."],
         uitlegPad: {
           stappen: [{ titel: "Imparfait = was-aan-het-eten", tekst: "**Imparfait**: doorlopende of gewoonte-handeling in verleden. *Je mangeais quand il a téléphoné* = Ik was aan het eten toen hij belde. **Passé composé** voor voltooide: *J'ai mangé* = Ik heb gegeten." }],
           theorie: "Toets-patroon: tijdlijn-vragen door tijden interpreteren.",

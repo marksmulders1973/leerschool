@@ -175,7 +175,7 @@ const steps = [
         q: "Wat is het meervoud van **foot**?",
         options: ["feet", "foots", "feets", "footes"],
         answer: 0,
-        wrongHints: [null, "Niet -s — onregelmatig.", "Hier staan twee meervoudsvormen in één woord. Heb je die allebei nodig?", "Foot is onregelmatig, net als tooth – teeth. Wat verandert er in het midden van het woord?"],
+        wrongHints: [null, "Foot krijgt in het meervoud geen -s: het is een onregelmatig woord, net als man – men.", "Hier staan twee meervoudsvormen in één woord. Heb je die allebei nodig?", "Foot is onregelmatig, net als tooth – teeth. Wat verandert er in het midden van het woord?"],
         uitlegPad: {
           stappen: [{ titel: "foot → feet", tekst: "Onregelmatig meervoud: oo→ee. Foot wordt feet (geen -s)." }],
           woorden: [{ woord: "feet", uitleg: "Meervoud van foot (voet). Klanksprong oo→ee." }],

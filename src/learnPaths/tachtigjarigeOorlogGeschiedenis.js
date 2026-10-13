@@ -569,7 +569,7 @@ const steps = [
         q: "Wat gebeurde er **3 oktober 1574**?",
         options: ["Leiden werd ontzet","Beeldenstorm","Plakkaat van Verlatinghe","Vrede van Münster"],
         answer: 0,
-        wrongHints: [null, "Beeldenstorm was 1566.", "Plakkaat was 1581.", "Vrede van Münster was 1648."],
+        wrongHints: [null, "De Beeldenstorm was al in 1566.", "Het Plakkaat van Verlatinghe was pas in 1581.", "Vrede van Münster was 1648."],
         uitlegPad: {
           stappen: [{ titel: "Leidens Ontzet", tekst: "3 oktober 1574: na maanden beleg + honger bereikten Watergeuzen Leiden via overstroomde polders. Brachten brood + haring mee. Spanjaarden vluchtten. Tot vandaag herdacht in Leiden met haring + wittebrood + vrije dag." }],
           woorden: [{ woord: "ontzet", uitleg: "Bevrijding van belegerde stad." }],

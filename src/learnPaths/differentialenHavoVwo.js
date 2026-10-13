@@ -138,7 +138,7 @@ const steps = [
           "Daalt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is f''<0.", "Niet — constant betekent f' = 0.", "Niet — verband met f', niet f''."],
+        wrongHints: [null, "Bergvormig hoort bij f'' < 0. Welk teken heeft f'' hier?", "Bij een constante grafiek is f' = 0 en ook f'' = 0. Klopt dat met f'' > 0?", "Of een grafiek daalt, zie je aan f', niet aan f''. Wat zegt f'' over de vorm?"],
         uitlegPad: {
           stappen: [
             { titel: "Krommingsmaat", tekst: "f''(x) > 0: helling stijgt → grafiek 'lacht' (zoals x²). f''(x) < 0: helling daalt → 'frons' (zoals −x²). Buigpunt: f''=0 + wisselt teken." },

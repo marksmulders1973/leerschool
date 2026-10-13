@@ -192,7 +192,7 @@ const steps = [
         q: "**mRNA-vaccins** (Pfizer, Moderna) werken door:",
         options: ["Eigen cellen maken zelf het antigeen", "Een verzwakt levend virus inspuiten", "Kant-en-klare antilichamen inspuiten", "Het DNA van je cellen aanpassen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen levend virus.", "Niet — actief, niet passief.", "mRNA komt niet in de celkern en verandert je DNA niet."],
+        wrongHints: [null, "Een mRNA-vaccin bevat geen virus, ook geen verzwakt levend virus.", "Kant-en-klare antilichamen geven passieve afweer. Bij een vaccin moet je lichaam zelf aan het werk.", "mRNA komt niet in de celkern en verandert je DNA niet."],
         uitlegPad: {
           stappen: [
             { titel: "Eerste mRNA-vaccin breed gebruikt 2021", tekst: "Lipid-nanodeeltjes leveren mRNA aan cellen → cellen produceren spike-eiwit (van coronavirus) → immuunsysteem leert dit eiwit herkennen. mRNA wordt binnen dagen afgebroken. Voordeel: snel ontwikkelbaar (~weken na ontdekking pathogeen). Werd gebruikt voor COVID-19 in record-tijd." },

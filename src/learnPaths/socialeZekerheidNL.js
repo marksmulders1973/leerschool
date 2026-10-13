@@ -33,7 +33,7 @@ const steps = [
         q: "Welke wet (1901) was **de eerste echte sociale verzekering** in NL?",
         options: ["Ongevallenwet","AOW","Bijstandswet","Kinderwetje Van Houten"],
         answer: 0,
-        wrongHints: [null, "Veel later (1957).", "Veel later (1965).", "Eerder (1874), wel sociale wet maar geen verzekering."],
+        wrongHints: [null, "De AOW kwam pas veel later, in 1957.", "De Bijstandswet kwam pas veel later, in 1965.", "Eerder (1874), wel sociale wet maar geen verzekering."],
         uitlegPad: {
           stappen: [{ titel: "1901 = startpunt sociale verzekering", tekst: "**Ongevallenwet 1901** (aangenomen onder kabinet-Pierson, in werking 1903 onder premier Kuyper). Werknemers in industrie verplicht verzekerd tegen bedrijfsongevallen via werkgeverspremie. **Eerste sociale verzekering** — niet meer afhankelijk van liefdadigheid." }],
           woorden: [{ woord: "sociale verzekering", uitleg: "Wettelijke verzekering tegen risico's als ziekte/werkloosheid/ouderdom, betaald uit premies." }, { woord: "Kuyper", uitleg: "Abraham Kuyper, ARP-leider + premier 1901-1905." }],
@@ -285,7 +285,7 @@ const steps = [
         q: "Welke premier zat van **2010-2024** in NL?",
         options: ["Mark Rutte","Wim Kok","Jan-Peter Balkenende","Dries van Agt"],
         answer: 0,
-        wrongHints: [null, "1994-2002 PvdA-premier.", "2002-2010 CDA-premier.", "1977-1982 CDA-premier."],
+        wrongHints: [null, "Wim Kok (PvdA) was premier van 1994 tot 2002.", "Jan-Peter Balkenende (CDA) was premier van 2002 tot 2010.", "Dries van Agt (CDA) was premier van 1977 tot 1982."],
         uitlegPad: {
           stappen: [{ titel: "Rutte I-II-III-IV (14 jaar)", tekst: "**Mark Rutte** (VVD) was **langste premier ooit** in NL — bijna 14 jaar (14 oktober 2010 - 2 juli 2024). Vier kabinetten: Rutte I (2010-12), II (2012-17), III (2017-21), IV (2022-24). Daarna overgedragen aan Dick Schoof. Rutte werd later **NAVO-secretaris-generaal** (oktober 2024)." }],
           theorie: "Rutte's lange premierschap stond in het teken van: kredietcrisis (2008-13), eurocrisis, COVID (2020-22), oorlog Oekraïne (2022+), Toeslagenaffaire (2021).",
@@ -305,7 +305,7 @@ const steps = [
         q: "Welke wet was **eerste sociale verzekering** (1901)?",
         options: ["Ongevallenwet","AOW","Kinderbijslag","WAO"],
         answer: 0,
-        wrongHints: [null, "De AOW kwam pas in 1957.", "Veel later (1962).", "De WAO kwam pas in 1967."],
+        wrongHints: [null, "De AOW kwam pas in 1957.", "De kinderbijslag kwam pas veel later, in 1962.", "De WAO kwam pas in 1967."],
         uitlegPad: {
           stappen: [{ titel: "1901 Kuyper", tekst: "**Ongevallenwet 1901** (in werking 1903). Eerste sociale verzekering NL." }],
           niveaus: { basis: "Ongevallenwet.", simpeler: "1901 = Ongevallenwet", nogSimpeler: "Ongevallenwet" },

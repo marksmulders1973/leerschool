@@ -299,7 +299,7 @@ const steps = [
         q: "Brutoloon **€3.000**, loonheffing en premies samen **€750**. Wat is het **nettoloon**?",
         options: ["€2.250", "€3.750", "€2.750", "€2.000"],
         answer: 0,
-        wrongHints: [null, "Bij netto haal je inhoudingen ER AF.", "Net niet — alle €750 moet eraf.", "Te veel afgetrokken."],
+        wrongHints: [null, "Bij netto haal je inhoudingen ER AF.", "Net niet — alle €750 moet eraf.", "Je hebt €1.000 afgetrokken. Hoeveel gaat er volgens de vraag af?"],
         uitlegPad: {
           stappen: [{ titel: "Bruto − inhoudingen = netto", tekst: "Werkgever betaalt €3.000 (bruto). Inhoudingen €750 gaan naar Belastingdienst. Op bankrekening: €3.000 − €750 = €2.250." }],
           woorden: [{ woord: "brutoloon", uitleg: "Loonafspraak vóór belasting + premies." }, { woord: "nettoloon", uitleg: "Wat op je rekening komt nadat loonheffing + premies zijn ingehouden." }, { woord: "loonheffing", uitleg: "Voorheffing op inkomstenbelasting." }],
@@ -313,7 +313,7 @@ const steps = [
         q: "Een gezin: netto €2.500, zorgtoeslag €120, huurtoeslag €200, huur €1.000. **Vrij besteedbaar inkomen**?",
         options: ["€1.820", "€2.500", "€3.820", "€820"],
         answer: 0,
-        wrongHints: [null, "Vergeet de toeslagen + huur niet.", "Te veel — huur is min.", "Te weinig — toeslagen zijn plus."],
+        wrongHints: [null, "Vergeet de toeslagen + huur niet.", "Te veel — je telde de huur erbij. Is huur geld dat binnenkomt of dat eraf gaat?", "Te weinig — je haalde de toeslagen eraf. Krijg je toeslagen of betaal je ze?"],
         uitlegPad: {
           stappen: [{ titel: "Wat zit erin?", tekst: "Vrij besteedbaar = netto + toeslagen − vaste lasten. €2.500 + €120 + €200 − €1.000 = €1.820." }],
           woorden: [{ woord: "vrij besteedbaar inkomen", uitleg: "Geld dat over is om VRIJ te besteden (boodschappen, kleding, sport) na vaste lasten." }],
@@ -481,7 +481,7 @@ const steps = [
         q: "Je inkomen stijgt **3%**, prijzen stijgen **5%**. Wat gebeurt met je koopkracht?",
         options: ["Daalt met ongeveer 2%", "Stijgt met ongeveer 3%", "Stijgt met ongeveer 8%", "Blijft ongeveer gelijk"],
         answer: 0,
-        wrongHints: [null, "Loon wel hoger, maar prijzen sneller.", "Niet optellen.", "Alleen gelijk als beide percentages gelijk zijn."],
+        wrongHints: [null, "Loon wel hoger, maar prijzen sneller.", "Je telde 3% en 5% bij elkaar op. Maken stijgende prijzen je koopkracht groter?", "Alleen gelijk als beide percentages gelijk zijn."],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel", tekst: "Reële verandering ≈ nominale loonstijging − inflatie. +3% − 5% = −2% → koopkracht daalt." }],
           woorden: [{ woord: "koopkracht", uitleg: "Hoeveel je echt kan kopen voor je geld. Daalt als prijzen sneller stijgen dan loon." }, { woord: "reëel", uitleg: "Gecorrigeerd voor inflatie." }],
@@ -752,7 +752,7 @@ const steps = [
         q: "Sanne (25) studeert niet, werkte pas een paar weken in een bijbaan, verliest die en heeft geen ander inkomen. Welke uitkering?",
         options: ["Bijstand (vangnet via gemeente)", "AOW (basispensioen van de overheid)", "WW (bij verlies van je baan)", "WIA (bij arbeidsongeschiktheid)"],
         answer: 0,
-        wrongHints: [null, "AOW pas vanaf 67.", "WW vereist eerder werkverleden + minimum aantal weken.", "WIA = arbeidsongeschiktheid."],
+        wrongHints: [null, "AOW pas vanaf 67.", "WW vereist eerder werkverleden + minimum aantal weken.", "De WIA is voor wie door ziekte niet kan werken. Staat er dat Sanne ziek is?"],
         uitlegPad: {
           stappen: [{ titel: "Voor wie welke uitkering?", tekst: "Bijstand = laatste vangnet voor wie GEEN ander inkomen en geen recht op WW/WIA heeft. Wie pas een paar weken werkte, komt niet aan de WW-eis — bijstand is wat overblijft." }],
           woorden: [{ woord: "bijstand", uitleg: "Vangnet via gemeente voor wie geen ander inkomen heeft. Sociaal minimum." }, { woord: "WW", uitleg: "Tijdelijke uitkering na ontslag — vereist eerder werk + premie-betaling." }, { woord: "WIA", uitleg: "Arbeidsongeschiktheidsuitkering bij ziekte > 2 jaar." }],

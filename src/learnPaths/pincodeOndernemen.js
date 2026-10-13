@@ -175,7 +175,7 @@ const steps = [
         q: "Wat is **deskresearch**?",
         options: ["Bestaande cijfers opzoeken, zoals bij het CBS", "Onderzoek door interviews op straat", "Klanten observeren in je eigen winkel", "Een enquête die je zelf rondstuurt"],
         answer: 0,
-        wrongHints: [null, "Dat is veldonderzoek.", "Observeren is zelf nieuwe gegevens verzamelen.", "Met een enquête verzamel je zelf nieuwe gegevens. Is dat onderzoek achter je bureau?"],
+        wrongHints: [null, "Interviews op straat afnemen is veldonderzoek: je verzamelt zelf nieuwe gegevens.", "Observeren is zelf nieuwe gegevens verzamelen.", "Met een enquête verzamel je zelf nieuwe gegevens. Is dat onderzoek achter je bureau?"],
         uitlegPad: {
           stappen: [{ titel: "Achter je bureau zoeken", tekst: "Desk = bureau. Deskresearch = onderzoek dat je achter je computer doet: googelen, CBS-cijfers, sociale-media-scan, brancheorganisaties." }],
           woorden: [{ woord: "deskresearch", uitleg: "Marktonderzoek door bestaande informatie te zoeken — niet zelf interviewen." }, { woord: "veldonderzoek", uitleg: "Zelf data verzamelen via enquête, interview, observatie." }],
@@ -633,7 +633,7 @@ const steps = [
         q: "**Telecom** (KPN/Vodafone/Odido) is welke marktvorm?",
         options: ["Oligopolie", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
         answer: 0,
-        wrongHints: [null, "Te weinig spelers voor 'volkomen'.", "Niet 1, maar 3.", "Niet 'veel' aanbieders."],
+        wrongHints: [null, "Bij volkomen concurrentie zijn er heel veel kleine aanbieders. Hoeveel grote telecombedrijven zijn er?", "Bij een monopolie is er maar één aanbieder. Hoeveel telecombedrijven noemt de vraag?", "Bij monopolistische concurrentie zijn er heel veel aanbieders. Klopt dat voor telecom?"],
         uitlegPad: {
           stappen: [{ titel: "Tel de spelers", tekst: "KPN, Vodafone, Odido = 3 grote spelers. Niet 1 (monopolie), niet 50+ (mono. concurr.). 'Weinig grote' = oligopolie." }],
           woorden: [{ woord: "oligopolie", uitleg: "Marktvorm met weinig grote aanbieders (3-10). Strategisch met elkaar." }],
@@ -675,7 +675,7 @@ const steps = [
         q: "**Veel** kledingmerken (Nike, Adidas, Puma, ...): welke marktvorm?",
         options: ["Monopolistische concurrentie", "Volkomen concurrentie", "Oligopolie", "Monopolie"],
         answer: 0,
-        wrongHints: [null, "Producten verschillen wel.", "Te veel spelers.", "Veel meer dan 1."],
+        wrongHints: [null, "Bij volkomen concurrentie zijn alle producten precies gelijk. Is een Nike-schoen hetzelfde als een Puma-schoen?", "Bij een oligopolie zijn er maar een paar grote aanbieders. Hoeveel kledingmerken zijn er?", "Veel meer dan 1."],
         uitlegPad: {
           stappen: [{ titel: "Veel + verschillend", tekst: "Monopolistische concurrentie = veel aanbieders, maar elk met EIGEN merk/design. Nike-schoen ≠ Adidas-schoen al maken ze beide sportschoenen." }],
           woorden: [{ woord: "monopolistische concurrentie", uitleg: "Marktvorm: veel aanbieders + gedifferentieerd product (eigen merk/kwaliteit)." }, { woord: "differentiatie", uitleg: "Je product anders maken dan dat van concurrenten (merk, design, kwaliteit)." }],

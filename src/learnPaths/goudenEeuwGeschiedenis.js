@@ -137,7 +137,7 @@ const steps = [
         q: "Wie ontdekte **micro-organismen** met microscoop?",
         options: ["Antoni van Leeuwenhoek", "Christiaan Huygens", "Isaac Newton", "Galileo Galilei"],
         answer: 0,
-        wrongHints: [null, "Astronomie + slingerklok.", "Newton was een Engelsman en werkte aan zwaartekracht en licht.", "Galilei was een Italiaan, vooral bekend van de telescoop."],
+        wrongHints: [null, "Huygens werkte vooral aan sterrenkunde en vond de slingerklok uit.", "Newton was een Engelsman en werkte aan zwaartekracht en licht.", "Galilei was een Italiaan, vooral bekend van de telescoop."],
       },
       {
         q: "**Waarom** waren Amsterdamse huizen **smal en hoog**?",
