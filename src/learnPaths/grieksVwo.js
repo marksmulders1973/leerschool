@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Welke is **omega**?",
-        options: ["Ω (lange o)","Ο (korte o)","θ","ψ"],
+        options: ["Ω (lange o)","Ο (korte o)","θ (th)","ψ (ps)"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is omicron.", "Niet — theta.", "Dat is psi (ps)."],
+        wrongHints: [null, "Niet — dat is omicron.", "θ is de theta, uitgesproken als 'th'. Welke letter is de lange o?", "ψ is de psi, uitgesproken als 'ps'. Zoek de letter voor de lange o."],
         uitlegPad: {
           stappen: [{ titel: "Lange vs korte o", tekst: "**Omega Ω/ω** = lange o (oh). **Omicron Ο/ο** = korte o. Grieks onderscheidt klinker-lengtes — belangrijk voor klemtoon + metrum poëzie. Vergelijkbaar: Eta (Η/η) = lange e vs Epsilon (Ε/ε) = korte e." }],
           niveaus: { basis: "Ω.", simpeler: "Omega = Ω lange o", nogSimpeler: "Ω" },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "**Demos** (δῆμος) betekent:",
-        options: ["Volk","Wijsheid","Wet","Strijder"],
+        options: ["Volk","Wijsheid","Wet","Leger"],
         answer: 0,
-        wrongHints: [null, "Niet — sophia.", "Niet — nomos.", "Niet — strategos."],
+        wrongHints: [null, "Wijsheid is sophia (denk aan filosofie). Denk aan 'democratie': wie heeft daar de macht?", "Wet is nomos (denk aan autonomie). Denk aan 'democratie': wie heeft daar de macht?", "Leger is stratos (denk aan strategie). Denk aan 'democratie': wie heeft daar de macht?"],
         uitlegPad: {
           stappen: [{ titel: "Δῆμος = volk", tekst: "**Demos** (δῆμος) = volk. **Demo-cratie** = letterlijk 'macht van het volk'. Athene 5e eeuw v.Chr. = eerste democratie (alle vrije mannelijke burgers konden meebeslissen, niet vrouwen of slaven). Verwant: epidemie ('over het volk'), demografie ('schrijven over volk')." }],
           niveaus: { basis: "Volk.", simpeler: "Demos = volk", nogSimpeler: "Volk" },
@@ -62,7 +62,7 @@ const steps = [
         q: "Spiritus asper (῾) op klinker betekent:",
         options: ["H-klank vooraf","Geen H-klank","Lange klinker","Klemtoon"],
         answer: 0,
-        wrongHints: [null, "Spiritus lenis.", "Niet — andere markering.", "Niet — accenten apart."],
+        wrongHints: [null, "Geen h-klank geeft de spiritus lenis (᾿) aan. Welke kant op staat dit teken?", "De lengte van een klinker zie je aan de letter zelf (η, ω), niet aan dit teken. Wat doet ῾ dan?", "De klemtoon geef je aan met accenttekens (´ ` ῀). Wat doet ῾ dan?"],
         uitlegPad: {
           stappen: [{ titel: "῾ = ruwe ademing", tekst: "**Spiritus asper** (῾, 'ruwe ademing'): geeft h-klank vooraf. *ἑπτά* = hepta = zeven. *ἥλιος* = hèlios = zon. **Spiritus lenis** (᾽, 'gladde ademing'): geen h. *ἀγαθός* = agathos = goed. **Rho** (ρ) krijgt altijd asper aan begin." }],
           niveaus: { basis: "H-klank.", simpeler: "Asper = h", nogSimpeler: "H-klank" },
@@ -72,7 +72,7 @@ const steps = [
         q: "**Phi (Φ/φ)** wordt uitgesproken als:",
         options: ["F","P","B","Th"],
         answer: 0,
-        wrongHints: [null, "Niet — pi.", "Niet — beta.", "Niet — theta."],
+        wrongHints: [null, "De p-klank hoort bij pi (π). Denk aan 'filosofie' (φιλοσοφία): hoe begint dat woord?", "De b-klank hoort bij beta (β). Denk aan 'filosofie' (φιλοσοφία): hoe begint dat woord?", "De th-klank hoort bij theta (θ). Denk aan 'filosofie' (φιλοσοφία): hoe begint dat woord?"],
         uitlegPad: {
           stappen: [{ titel: "Aspirate p → f", tekst: "**Phi (Φ/φ)** = oorspronkelijk 'p-h' (geaspireerde p), in de (Erasmiaanse) schooluitspraak als **f**. Vandaar 'philosophy' = liefhebber wijsheid. **Theta (θ)** = th, **chi (χ)** = ch — beide ook geaspireerde varianten van t en k." }],
           niveaus: { basis: "F.", simpeler: "Φ = F", nogSimpeler: "F" },
@@ -101,7 +101,7 @@ const steps = [
         q: "Heeft **Grieks lidwoorden**?",
         options: ["Ja","Nee","Alleen onbepaald","Alleen voor mannelijk"],
         answer: 0,
-        wrongHints: [null, "Niet — wel.", "Niet — onbepaald LIDWOORD ontbreekt eigenlijk.", "Niet — alle geslachten."],
+        wrongHints: [null, "Denk aan ὁ, ἡ en τό. Wat voor woordjes zijn dat?", "Het Grieks heeft juist géén woord voor 'een'. Welk soort lidwoord bestaat dan wel?", "Naast ὁ bestaan ook ἡ en τό. Bij welke geslachten horen die?"],
         uitlegPad: {
           stappen: [{ titel: "ὁ ἡ τό", tekst: "**Grieks heeft lidwoorden** (anders dan Latijn): **ὁ (m), ἡ (v), τό (n)** voor 'de/het'. Ze worden verbogen in alle naamvallen.\n\n**Geen onbepaald lidwoord** ('een') in klassiek Grieks — context bepaalt." }],
           niveaus: { basis: "Ja.", simpeler: "Grieks = lidwoord", nogSimpeler: "Ja" },
@@ -111,7 +111,7 @@ const steps = [
         q: "**Logos** (λόγος) hoort bij welke declinatie?",
         options: ["2e (mannelijk -ος)","1e (vrouwelijk -α)","3e (medeklinkerstam)","Onverbuigbaar woord"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt op os.", "De 3e declinatie heeft stammen op een medeklinker. Eindigt logos zo?", "Logos krijgt wel andere uitgangen: logou, logoi… Welke declinatie heeft zulke vormen?"],
+        wrongHints: [null, "De 1e declinatie heeft vooral woorden op -α of -η. Op welke letters eindigt logos?", "De 3e declinatie heeft stammen op een medeklinker. Eindigt logos zo?", "Logos krijgt wel andere uitgangen: logou, logoi… Welke declinatie heeft zulke vormen?"],
         uitlegPad: {
           stappen: [{ titel: "2e decl -ος", tekst: "**Logos** (λόγος) = mannelijk, eindigt op **-ος** = **2e declinatie**. Gen: λόγου, Dat: λόγῳ, Acc: λόγον, Voc: λόγε.\n\nOnzijdig 2e decl eindigt op -ον: δῶρον (doron, geschenk)." }],
           niveaus: { basis: "2e.", simpeler: "-ος = 2e decl", nogSimpeler: "2e" },
@@ -121,7 +121,7 @@ const steps = [
         q: "Welk Grieks voorzetsel + **accusatief** = 'naar (richting)'?",
         options: ["εἰς","ἐν","ἐκ","ἀπό"],
         answer: 0,
-        wrongHints: [null, "Met datief = in.", "Met gen = uit.", "Met gen = van."],
+        wrongHints: [null, "ἐν gaat met de datief en betekent 'in' (stilstand). Zoek het voorzetsel voor beweging naartoe.", "ἐκ gaat met de genitief en betekent 'uit'. Gaat 'naar' van iets af of ernaartoe?", "ἀπό gaat met de genitief en betekent 'van … af'. Welke richting zoek je?"],
         uitlegPad: {
           stappen: [{ titel: "Richting = εἰς + acc", tekst: "**εἰς + Acc** = 'naar' (richting beweging). *εἰς τὴν πόλιν* = naar de stad. Tegenstelling: **ἐν + Dat** = 'in' (rust). *ἐν τῇ πόλει* = in de stad.\n\nGriekse voorzetsels veranderen betekenis afhankelijk van de naamval." }],
           niveaus: { basis: "εἰς.", simpeler: "Richting = εἰς+acc", nogSimpeler: "εἰς" },
@@ -160,7 +160,7 @@ const steps = [
         q: "Welk werkwoord betekent **'zijn'**?",
         options: ["εἰμί","λέγω","γράφω","φιλέω"],
         answer: 0,
-        wrongHints: [null, "Spreken.", "Schrijven.", "Liefhebben."],
+        wrongHints: [null, "λέγω betekent 'zeggen, spreken' (denk aan 'dialoog'). Welk werkwoord is 'zijn'?", "γράφω betekent 'schrijven' (denk aan 'grafiek'). Welk werkwoord is 'zijn'?", "φιλέω betekent 'liefhebben' (denk aan 'filosofie'). Welk werkwoord is 'zijn'?"],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig 'zijn'", tekst: "**εἰμί** (eimi) = ik ben. Vervoeging: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν). Onregelmatig (zoals Latijn 'esse' + Engels 'be'). Bekendste citaat: *Πάντα ῥεῖ* (panta rhei) = 'alles stroomt', maar dat is een ander werkwoord (ῥέω, stromen)." }],
           niveaus: { basis: "εἰμί.", simpeler: "Zijn = εἰμί", nogSimpeler: "εἰμί" },
@@ -180,7 +180,7 @@ const steps = [
         q: "**ἔγραφον** (egraphon) is welke tijd?",
         options: ["Imperfectum","Praesens","Aoristus","Perfectum"],
         answer: 0,
-        wrongHints: [null, "Geen augment.", "Anders gevormd.", "Anders gevormd."],
+        wrongHints: [null, "Het praesens is γράφω, zonder ἐ- vooraan. Wat zie je wel in ἔγραφον?", "De aoristus van γράφω is ἔγραψα, met een σ erin (ψ = φ + σ). Zie je die in ἔγραφον?", "Het perfectum heeft reduplicatie: γέγραφα. Zie je die in ἔγραφον?"],
         uitlegPad: {
           stappen: [{ titel: "Augment + presens-stam", tekst: "**ἔγραφον** = augment (ἐ-) + presens-stam (γραφ-) + uitgang -ον. **Imperfectum**: 'ik was aan het schrijven' of 'ik schreef herhaaldelijk'. **Imperfectief aspect** in verleden.\n\nVergelijk: **ἔγραψα** = aoristus, eenmalige actie." }],
           niveaus: { basis: "Imperfectum.", simpeler: "ἔγραφον = imperf", nogSimpeler: "Imperfectum" },
@@ -209,7 +209,7 @@ const steps = [
         q: "Wie was leraar van **Alexander de Grote**?",
         options: ["Aristoteles","Plato","Sokrates","Pythagoras"],
         answer: 0,
-        wrongHints: [null, "Niet — Plato eerder.", "Veel eerder.", "Heel anders thema."],
+        wrongHints: [null, "Plato leidde zijn Academie in Athene. Wie was zijn beroemdste leerling, die later naar het hof van Macedonië ging?", "Sokrates stierf in 399 v.Chr., ruim veertig jaar vóór Alexanders geboorte. Kan hij zijn leraar zijn geweest?", "Pythagoras leefde in de 6e eeuw v.Chr., lang vóór Alexander. Welke filosoof leefde in Alexanders tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Aristoteles 343 v.Chr.", tekst: "**Aristoteles** (384-322 v.Chr.) was 3 jaar (vanaf 343 v.Chr.) leraar van **Alexander de Grote** (toen ~13-16 jaar oud) in Macedonië. Filip II (Alexander's vader) huurde Aristoteles in. Onderwijs in filosofie, ethiek, politiek, retorica, natuurwetenschap." }],
           niveaus: { basis: "Aristoteles.", simpeler: "Alex leraar = Aristoteles", nogSimpeler: "Aristoteles" },
@@ -219,7 +219,7 @@ const steps = [
         q: "Wanneer **eerste Olympische Spelen**?",
         options: ["776 v.Chr.","1896","490 v.Chr.","753 v.Chr."],
         answer: 0,
-        wrongHints: [null, "Niet — moderne start.", "Niet — Slag Marathon.", "Niet — Rome stichting."],
+        wrongHints: [null, "1896 is het begin van de moderne Spelen. Wanneer waren de eerste Spelen in Olympia?", "490 v.Chr. is het jaar van de Slag bij Marathon. Waren de eerste Spelen in die tijd?", "753 v.Chr. is het jaar van de stichting van Rome. Welk jaartal hoort bij Olympia?"],
         uitlegPad: {
           stappen: [{ titel: "Olympia Peloponnesos", tekst: "**776 v.Chr.**: eerste Olympische Spelen in **Olympia** (Peloponnesos), te ere van Zeus. Tot 393 n.Chr. (verboden door christelijke keizer Theodosius). **Moderne herstart 1896** door Pierre de Coubertin in Athene." }],
           niveaus: { basis: "776 v.Chr.", simpeler: "Olympia = 776 vC", nogSimpeler: "776" },
@@ -229,7 +229,7 @@ const steps = [
         q: "**Grotgelijkenis** komt van:",
         options: ["Plato","Aristoteles","Sokrates","Homerus"],
         answer: 0,
-        wrongHints: [null, "Aristoteles haalde kennis juist uit waarneming. Past een grot vol schaduwen daarbij?", "Niet — zelf niets geschreven.", "Homerus schreef epen zoals de Ilias, geen filosofie."],
+        wrongHints: [null, "Aristoteles haalde kennis juist uit waarneming. Past een grot vol schaduwen daarbij?", "Sokrates schreef zelf niets op. Kan een tekst als de grotgelijkenis dan van hemzelf komen?", "Homerus was een dichter van heldenverhalen, geen filosoof. Wie dacht na over schaduwen en de echte werkelijkheid?"],
         uitlegPad: {
           stappen: [{ titel: "Politeia VII", tekst: "**Plato's grotgelijkenis** (*Politeia* VII): mensen vastgeketend in grot zien alleen schaduwen, denken dat realiteit is. Eén ontsnapt → ziet zonlicht (werkelijkheid van Ideeën) → keert terug om anderen te bevrijden (filosoof). Metafoor voor: onwetendheid vs ware kennis, fysieke wereld vs Ideeën-wereld." }],
           niveaus: { basis: "Plato.", simpeler: "Grot = Plato", nogSimpeler: "Plato" },
@@ -239,7 +239,7 @@ const steps = [
         q: "Wie schreef **Ilias + Odyssee**?",
         options: ["Homerus","Sofokles","Aischylus","Thucydides"],
         answer: 0,
-        wrongHints: [null, "Niet — tragedie.", "Niet — tragedie.", "Niet — historicus."],
+        wrongHints: [null, "Sofokles schreef tragedies voor het theater. De Ilias en Odyssee zijn epen — wie dichtte die?", "Aischylus schreef net als Sofokles tragedies. Welke dichter is veel ouder en vertelde over Troje?", "Thucydides was historicus en beschreef de Peloponnesische Oorlog. Wie schreef de epen over Troje?"],
         uitlegPad: {
           stappen: [{ titel: "~750 v.Chr.", tekst: "**Homerus** (~750 v.Chr., legendarische dichter) — eigenlijk waarschijnlijk traditie van orale dichters die geconsolideerd werden onder die naam. **Ilias** = laatste jaar Trojaanse Oorlog (Achilles' woede). **Odyssee** = Odysseus' 10-jarige terugkeer. Dactylisch hexameter — fundament westerse literatuur." }],
           niveaus: { basis: "Homerus.", simpeler: "Ilias = Homerus", nogSimpeler: "Homerus" },
@@ -249,7 +249,7 @@ const steps = [
         q: "**Slag bij Marathon (490 v.Chr.)** was tussen:",
         options: ["Atheners + Perzen","Atheners + Spartanen","Romeinen + Galliërs","Egyptenaren + Hettieten"],
         answer: 0,
-        wrongHints: [null, "Niet — Peloponnesische oorlog.", "Marathon ligt in Griekenland. Vochten daar Romeinen?", "Die slag (bij Kadesj) was bijna duizend jaar eerder, in Syrië."],
+        wrongHints: [null, "Atheners en Spartanen vochten later tegen elkaar, in de Peloponnesische Oorlog. Wie viel in 490 v.Chr. Griekenland binnen?", "Marathon ligt in Griekenland. Vochten daar Romeinen?", "Die slag (bij Kadesj) was bijna duizend jaar eerder, in Syrië."],
         uitlegPad: {
           stappen: [{ titel: "Atheners winnen", tekst: "**490 v.Chr.**: Atheners onder Miltiades verslaan Perzen op vlakte van **Marathon** (~40 km van Athene). Boodschapper Phidippides liep terug naar Athene om overwinning te melden, viel dood neer (volgens legende) → de **moderne marathon** (42,2 km) is ernaar vernoemd. Onderdeel **Perzische Oorlogen** 499-449 v.Chr." }],
           theorie: "10 jaar later: 480 v.Chr. Xerxes komt terug — Slag bij Salamis (Atheense zee-overwinning) + Thermopylae (300 Spartanen).",
@@ -269,7 +269,7 @@ const steps = [
         q: "*Panta rhei* (πάντα ῥεῖ) van Heraclitus betekent:",
         options: ["Alles stroomt","Alles is één","Alles is vuur","Wijsheid is liefde"],
         answer: 0,
-        wrongHints: [null, "'Alles is één' past bij Parmenides. Wat betekent 'rhei'?", "Heraclitus zag vuur als oerstof, maar dat zegt deze uitspraak niet. Wat betekent 'rhei'?", "Wel etymologie 'filosofie' maar andere zin."],
+        wrongHints: [null, "'Alles is één' past bij Parmenides. Wat betekent 'rhei'?", "Heraclitus zag vuur als oerstof, maar dat zegt deze uitspraak niet. Wat betekent 'rhei'?", "'Wijsheid is liefde' doet denken aan het woord filosofie, maar 'panta' betekent 'alles'. Wat betekent 'rhei'?"],
         uitlegPad: {
           stappen: [{ titel: "Heraclitus' beweging", tekst: "**Panta rhei** (πάντα ῥεῖ) = 'alles stroomt'. **Heraclitus** (~500 v.Chr.): werkelijkheid is voortdurend in verandering, zoals rivier waar je nooit twee keer in zelfde water staat. Tegenstelling: **Parmenides** — alles is één + onveranderlijk." }],
           niveaus: { basis: "Alles stroomt.", simpeler: "Panta rhei = stroomt", nogSimpeler: "Alles stroomt" },
@@ -279,7 +279,7 @@ const steps = [
         q: "Welke filosoof zei **'Ik weet dat ik niets weet'**?",
         options: ["Sokrates","Plato","Aristoteles","Heraclitus"],
         answer: 0,
-        wrongHints: [null, "Plato schreef veel op, maar deze uitspraak komt van een ander.", "Niet — andere ideeën.", "Heraclitus is bekend van 'alles stroomt'."],
+        wrongHints: [null, "Plato schreef veel op, maar deze uitspraak komt van een ander.", "Aristoteles was een leerling van Plato. Zoek de filosoof die zelf niets opschreef en steeds vragen stelde.", "Heraclitus is bekend van 'alles stroomt'."],
         uitlegPad: {
           stappen: [{ titel: "Socratische bescheidenheid", tekst: "**Sokrates**: 'Ik weet dat ik niets weet.' (overgeleverd via Plato). Vroeg vragen tot tegenstanders zelf zagen dat ze niets wisten. Paradox: hij wist meer dan anderen juist door zijn besef van onwetendheid. Let op: letterlijk staat de zin zo niet bij Plato; in de *Apologie* zegt Sokrates dat hij niet dénkt te weten wat hij niet weet." }],
           niveaus: { basis: "Sokrates.", simpeler: "Niets weten = Sokrates", nogSimpeler: "Sokrates" },
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "Welke god is **Zeus**?",
-        options: ["Oppergod","Liefde","Oorlog","Zee"],
+        options: ["Oppergod","Liefdesgod","Oorlogsgod","Zeegod"],
         answer: 0,
-        wrongHints: [null, "Niet — Aphrodite.", "Niet — Ares.", "Niet — Poseidon."],
+        wrongHints: [null, "Liefde hoort bij Aphrodite en Eros. Welke rol past bij de god met de bliksemschicht?", "Oorlog hoort bij Ares. Welke rol past bij de god met de bliksemschicht?", "De zee hoort bij Poseidon, de broer van Zeus. Welke rol past bij de god met de bliksemschicht?"],
         uitlegPad: {
           stappen: [{ titel: "Olympus-leider", tekst: "**Zeus** (Ζεύς) = oppergod Olympus. Romeinse tegenhanger: **Jupiter**. Wapen: bliksem. Vader van velen (Athena uit zijn hoofd, Heracles uit verhouding met mens, etc.). Zeer overspelig — bron veel mythen. Cultus-centrum: Olympia + Dodona." }],
           niveaus: { basis: "Oppergod.", simpeler: "Zeus = oppergod", nogSimpeler: "Oppergod" },
@@ -299,7 +299,7 @@ const steps = [
         q: "Welk theaterstuk schreef **Sofokles**?",
         options: ["Oidipous Tyrannos","Medea","Wolken","Ilias"],
         answer: 0,
-        wrongHints: [null, "Euripides.", "Aristofanes (komedie).", "Homerus (epos)."],
+        wrongHints: [null, "Medea is een tragedie van Euripides. Welk stuk is van Sofokles?", "De Wolken is een komedie van Aristofanes. Welk stuk is van Sofokles?", "De Ilias is een epos, geen theaterstuk. Welk stuk is van Sofokles?"],
         uitlegPad: {
           stappen: [{ titel: "Tragisch lot", tekst: "**Sofokles** schreef *Oidipous Tyrannos* (Koning Oedipus): koning ontdekt dat hij vader doodde + moeder huwde, ondanks pogingen lot te ontvluchten. **Freud-inspirator** (Oedipus-complex). Sofokles schreef 120+ stukken, 7 bewaard. Andere: *Antigone*, *Elektra*, *Aias*." }],
           niveaus: { basis: "Oidipous.", simpeler: "Sofokles = Oidipous", nogSimpeler: "Oidipous" },
@@ -309,7 +309,7 @@ const steps = [
         q: "**Alexander de Grote** stierf in:",
         options: ["323 v.Chr.","146 v.Chr.","330 n.Chr.","490 v.Chr."],
         answer: 0,
-        wrongHints: [null, "Niet — verovering Korinthe.", "Niet — Byzantion-hoofdstad.", "Niet — Marathon."],
+        wrongHints: [null, "In 146 v.Chr. verwoestten de Romeinen Korinthe, ruim anderhalve eeuw na Alexander. Hoe oud werd Alexander (geboren 356 v.Chr.)?", "330 ná Christus is de stichting van Constantinopel. Leefde Alexander vóór of na Christus?", "In 490 v.Chr. was de Slag bij Marathon, ruim een eeuw vóór Alexander. Wanneer stierf hij?"],
         uitlegPad: {
           stappen: [{ titel: "Babylon, 32 jaar oud", tekst: "**Alexander de Grote** (356-323 v.Chr.) stierf op 32-jarige leeftijd in **Babylon** (Mesopotamië). Doodsoorzaak: koorts/ziekte (mogelijk malaria, tyfus of vergiftiging — onbekend). In 13 jaar (336-323) had hij van Macedonië tot India veroverd. Na zijn dood: rijk verdeeld onder zijn generaals (Diadochen). Start **Hellenistische periode**." }],
           niveaus: { basis: "323 v.Chr.", simpeler: "Alex dood = 323 vC", nogSimpeler: "323" },

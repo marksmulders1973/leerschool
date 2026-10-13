@@ -32,7 +32,7 @@ const steps = [
         q: "Hoeveel letters had het **klassieke Latijnse alfabet**?",
         options: ["23","26","20","30"],
         answer: 0,
-        wrongHints: [null, "Niet — modern Nederlands.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "26 letters heeft ons alfabet. Welke letters (zoals J, U en W) kende het Latijn nog niet?", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Geen J/U/W", tekst: "**Klassiek Latijn = 23 letters**: A B C D E F G H I K L M N O P Q R S T V X Y Z. **Geen J, U of W**. J = I (Iulius = Yulius), U = V (vita = wita). Moderne edities voegen J+U toe voor leesbaarheid." }],
           niveaus: { basis: "23.", simpeler: "23 letters", nogSimpeler: "23" },
@@ -42,7 +42,7 @@ const steps = [
         q: "**Caesar** wordt klassiek uitgesproken als:",
         options: ["Kaesar","Tsjezar","Cijzer","Sesar"],
         answer: 0,
-        wrongHints: [null, "Kerkelijk Latijn.", "Engels.", "Klinkt een C in klassiek Latijn ooit als s?"],
+        wrongHints: [null, "'Tsjezar' is de uitspraak van het kerk-Latijn en het Italiaans. Hoe klonk de C in de klassieke tijd?", "'Cijzer' is de Engelse uitspraak. Hoe klonk de C bij de Romeinen zelf?", "Klinkt een C in klassiek Latijn ooit als s?"],
         uitlegPad: {
           stappen: [{ titel: "C = K", tekst: "**Klassiek Latijn** (Erasmus-uitspraak): C = altijd K. Caesar = **Kaesar** (Kai-sar). Vandaar Duitse 'Kaiser' + Russische 'Tsar' (verwerving). **Kerkelijk Latijn**: C voor e/i = tsj → Tsjezar. Op gymnasium wordt klassieke uitspraak geleerd." }],
           niveaus: { basis: "Kaesar.", simpeler: "C = K = Kaesar", nogSimpeler: "Kaesar." },
@@ -62,7 +62,7 @@ const steps = [
         q: "*Cogito ergo sum* (Descartes) betekent:",
         options: ["Ik denk, dus ik ben","Pluk de dag","Ik kwam, ik zag, ik overwon","Bedenk dat je sterft"],
         answer: 0,
-        wrongHints: [null, "Niet — carpe diem.", "Niet — veni vidi vici.", "Niet — memento mori."],
+        wrongHints: [null, "'Pluk de dag' is de vertaling van een andere spreuk. 'Cogito' komt van cogitare (denken) — zit dat erin?", "Dat is de vertaling van Caesars 'veni, vidi, vici'. Welk werkwoord zit in 'cogito'?", "Dat is 'memento mori'. Wat betekent 'sum'?"],
         uitlegPad: {
           stappen: [{ titel: "Descartes 1637", tekst: "**Cogito, ergo sum** = Ik denk, dus ik ben. Descartes' onbetwijfelbare startpunt, eerst in het Frans in *Discours de la méthode* (1637: 'je pense, donc je suis'); de Latijnse versie staat in *Principia philosophiae* (1644), voor het geleerde Europa. Fundament moderne filosofie." }],
           niveaus: { basis: "Ik denk dus ik ben.", simpeler: "Cogito = denken", nogSimpeler: "Ik denk dus ik ben." },
@@ -72,7 +72,7 @@ const steps = [
         q: "Wat betekent **e.g.** (afkorting)?",
         options: ["Bijvoorbeeld","Dat is","Tegen","Let op"],
         answer: 0,
-        wrongHints: [null, "Niet — i.e.", "Niet — vs.", "Niet — NB."],
+        wrongHints: [null, "'Dat is' kort je af als i.e. (id est). Waar staat e.g. voor?", "'Tegen' kort je af als vs. (versus). Waar staat e.g. voor?", "'Let op' kort je af als NB (nota bene). Waar staat e.g. voor?"],
         uitlegPad: {
           stappen: [{ titel: "Exempli gratia", tekst: "**e.g.** = *exempli gratia* (Latijn 'omwille van een voorbeeld') = **bijvoorbeeld**. Verschilt van **i.e.** = *id est* = 'dat is' (toelichting/herformulering). Verschil belangrijk in academisch + zakelijk schrijven." }],
           niveaus: { basis: "Bijvoorbeeld.", simpeler: "e.g. = bv", nogSimpeler: "bv" },
@@ -91,7 +91,7 @@ const steps = [
         q: "Hoeveel **naamvallen** heeft het Latijn?",
         options: ["6","4","8","2"],
         answer: 0,
-        wrongHints: [null, "Niet — Duits.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Vier naamvallen heeft het Duits. Heeft het Latijn er evenveel?", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Nom/Gen/Dat/Acc/Abl/Voc", tekst: "**Latijn: 6 naamvallen** — Nominatief (onderwerp), Genitief (bezit), Datief (mee.vw), Accusatief (lijd.vw), Ablatief (omstandigheden), Vocatief (aanspreken). Duits heeft 4 (geen Abl + Voc). NL geen naamvallen meer in moderne taal." }],
           niveaus: { basis: "6.", simpeler: "Latijn = 6 nv", nogSimpeler: "6" },
@@ -101,7 +101,7 @@ const steps = [
         q: "**Caesarem** (acc) past bij welke functie?",
         options: ["Lijdend voorwerp","Onderwerp van de zin","Bezitter (van Caesar)","Aanspreken (o Caesar!)"],
         answer: 0,
-        wrongHints: [null, "Nominatief.", "Genitief.", "Vocatief."],
+        wrongHints: [null, "Het onderwerp staat in de nominatief (Caesar). Welke functie hoort bij de accusatief?", "De bezitter staat in de genitief (Caesaris). Welke functie hoort bij de accusatief?", "Wie je aanspreekt staat in de vocatief. Welke functie hoort bij de accusatief?"],
         uitlegPad: {
           stappen: [{ titel: "Accusatief = lijd vw", tekst: "**Accusatief** = lijdend voorwerp ('wie/wat ondergaat actie?'). *Video Caesarem* = Ik zie **Caesar** (Caesar ondergaat het zien). Bij 'Caesar venit' (Caesar komt) = Caesar is nominatief (onderwerp)." }],
           niveaus: { basis: "Lijd vw.", simpeler: "Acc = lijd vw", nogSimpeler: "Lijd vw." },
@@ -111,7 +111,7 @@ const steps = [
         q: "**Genitief van puella** (meisje):",
         options: ["puellae","puella","puellam","puellis"],
         answer: 0,
-        wrongHints: [null, "Nominatief.", "Accusatief.", "Datief mv."],
+        wrongHints: [null, "Puella zonder extra uitgang is de nominatief: het meisje als onderwerp. Welke uitgang betekent 'van het meisje'?", "Puellam met -m is de accusatief (lijdend voorwerp). Welke uitgang hoort bij 'van'?", "Puellis is meervoud: 'aan/met de meisjes'. Zoek de vorm voor 'van het meisje' (enkelvoud)."],
         uitlegPad: {
           stappen: [{ titel: "1e declinatie", tekst: "**1e declinatie** (-a-stam, meestal vrouwelijk):\n```\nNom: puella\nGen: puellae\nDat: puellae\nAcc: puellam\nAbl: puella (lange a)\n```\nGenitief = 'van het meisje'. Voorbeeld: *liber puellae* = boek van het meisje." }],
           niveaus: { basis: "puellae.", simpeler: "Gen 1e decl = -ae", nogSimpeler: "puellae." },
@@ -131,7 +131,7 @@ const steps = [
         q: "**'Et tu, Brute?'** — welke naamval van Brutus?",
         options: ["Vocatief","Nominatief","Accusatief","Genitief"],
         answer: 0,
-        wrongHints: [null, "Niet — geen onderwerp.", "Niet — geen lijd vw.", "Niet — geen bezit."],
+        wrongHints: [null, "Is Brutus hier het onderwerp, of spreekt Caesar hem aan?", "Ondergaat Brutus hier een handeling, of wordt hij aangesproken?", "Gaat het hier om iets ván Brutus, of spreekt Caesar hem aan?"],
         uitlegPad: {
           stappen: [{ titel: "Aanroep", tekst: "**'Et tu, Brute?'** = 'En jij, Brutus?' (volgens Shakespeare Caesars laatste woorden). **Vocatief** voor aanspreken. Bij 2e declinatie -us → -e in vocatief: Brutus → **Brute**. Caesar → Caesar (vocatief = nominatief)." }],
           theorie: "Beroemde regel uit Shakespeares *Julius Caesar* (1599) — Latijn meebehouden door auteur voor effect.",
@@ -169,9 +169,9 @@ const steps = [
       },
       {
         q: "**4 hoofdvormen** van het werkwoord 'liefhebben':",
-        options: ["amare, amo, amavi, amatus","amare, amat, amabat, amatur","amo, amavi","amat alleen"],
+        options: ["amare, amo, amavi, amatus","amare, amat, amabat, amatur","amo, amas, amat, amamus","amo, amabam, amabo, amavi"],
         answer: 0,
-        wrongHints: [null, "Niet — vorm-mix.", "Onvolledig.", "Onvolledig."],
+        wrongHints: [null, "Dit zijn vormen van 'hij' in verschillende tijden en het passief. Welke vier vormen leer je bij een nieuw werkwoord uit je hoofd?", "Dit is de vervoeging van het praesens: ik, jij, hij, wij. Zijn dat de hoofdvormen?", "Dit zijn verschillende tijden van 'ik'. Welke vormen heb je nodig om álle tijden te kunnen maken?"],
         uitlegPad: {
           stappen: [{ titel: "Stam-leren", tekst: "Elk Latijn-werkwoord heeft **4 hoofdvormen** waaruit alle andere vormen worden gemaakt:\n• **Infinitief**: amare.\n• **1e persoon presens**: amo.\n• **1e persoon perfectum**: amavi.\n• **Perfect deelwoord (PPP)**: amatus.\n\nUit hoofd leren — basis voor alle vervoegingen." }],
           niveaus: { basis: "amare/amo/amavi/amatus.", simpeler: "4 hoofdvormen", nogSimpeler: "amare/amo/amavi/amatus." },
@@ -181,7 +181,7 @@ const steps = [
         q: "Welk werkwoord is **'zijn'**?",
         options: ["esse","amare","facere","ferre"],
         answer: 0,
-        wrongHints: [null, "Liefhebben.", "Maken.", "Dragen."],
+        wrongHints: [null, "Amare betekent 'liefhebben' (denk aan 'amateur'). Welk werkwoord is 'zijn'?", "Facere betekent 'maken, doen' (denk aan 'fabriek'). Welk werkwoord is 'zijn'?", "Ferre betekent 'dragen' (denk aan 'transfer'). Welk werkwoord is 'zijn'?"],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig", tekst: "**Esse** (zijn) — onregelmatig:\n• sum (ik ben)\n• es (jij)\n• est (hij/zij)\n• sumus (wij)\n• estis (jullie)\n• sunt (zij)\n\nVergelijkbaar met Engelse 'am/are/is/are/are/are'." }],
           niveaus: { basis: "esse.", simpeler: "Zijn = esse", nogSimpeler: "esse." },
@@ -191,7 +191,7 @@ const steps = [
         q: "**Imperatief** (gebiedende wijs) van *amare* enkelvoud:",
         options: ["Ama!","Amat!","Amare!","Amavi!"],
         answer: 0,
-        wrongHints: [null, "3e ev presens.", "Infinitief.", "Perfectum."],
+        wrongHints: [null, "Amat betekent 'hij/zij heeft lief'. Is dat een bevel?", "Amare is de infinitief: 'liefhebben'. Hoe maak je daar een bevel aan één persoon van?", "Amavi betekent 'ik heb liefgehad'. Is dat een bevel?"],
         uitlegPad: {
           stappen: [{ titel: "Stam + niets", tekst: "**Imperatief enkelvoud** = presens-stam zonder uitgang. amare → stam = ama- → **ama!** (heb lief!). Meervoud: stam + **-te**: amate! (heb lief!, jullie). Beroemd: *carpe* (diem) — imperatief van *carpere* = pluk!" }],
           niveaus: { basis: "Ama!", simpeler: "Imp ev = stam = ama", nogSimpeler: "Ama!" },
@@ -210,7 +210,7 @@ const steps = [
         q: "Wie schreef ***De Bello Gallico***?",
         options: ["Caesar","Cicero","Vergilius","Tacitus"],
         answer: 0,
-        wrongHints: [null, "Niet — redenaar.", "Niet — dichter.", "Niet — keizertijd historicus."],
+        wrongHints: [null, "Cicero was redenaar en politicus, geen veldheer. Wie vocht zelf in Gallië?", "Vergilius was dichter. Is De Bello Gallico een gedicht of een oorlogsverslag?", "Tacitus schreef geschiedenis, maar leefde in de keizertijd, ruim een eeuw later. Wie beschreef de oorlog in Gallië als ooggetuige?"],
         uitlegPad: {
           stappen: [{ titel: "Caesars eigen oorlog", tekst: "**Gaius Iulius Caesar** schreef *De Bello Gallico* — verslag eigen veldtochten in Gallië (58-50 v.Chr.). Propagandistisch + literair meesterwerk. Heldere, beknopte stijl. Beroemde opening: 'Gallia est omnis divisa in partes tres' = 'Heel Gallië is in 3 delen verdeeld'." }],
           niveaus: { basis: "Caesar.", simpeler: "Bello Gallico = Caesar", nogSimpeler: "Caesar." },
@@ -220,7 +220,7 @@ const steps = [
         q: "Wanneer werd **Rome gesticht** volgens de legende?",
         options: ["753 v.Chr.","27 v.Chr.","476 n.Chr.","1492"],
         answer: 0,
-        wrongHints: [null, "Niet — Augustus-troon.", "Einde West-Rome.", "1492 is het jaar van Columbus — veel te laat voor Rome."],
+        wrongHints: [null, "In 27 v.Chr. begon de keizertijd. Bestond Rome toen al lang?", "Einde West-Rome.", "1492 is het jaar van Columbus — veel te laat voor Rome."],
         uitlegPad: {
           stappen: [{ titel: "Romulus + Remus", tekst: "**753 v.Chr.**: legendarische stichting Rome door Romulus (broer Remus, die hij doodde). Tweelingen werden volgens mythe gevoed door wolvin. Historisch: bewoning Tiber-heuvels al eerder, maar 753 = officiële Romeinse jaartelling (Ab Urbe Condita)." }],
           niveaus: { basis: "753 v.Chr.", simpeler: "753 = stichting", nogSimpeler: "753" },
@@ -230,7 +230,7 @@ const steps = [
         q: "Wie was de eerste **Romeinse keizer**?",
         options: ["Augustus","Caesar","Nero","Constantijn"],
         answer: 0,
-        wrongHints: [null, "Niet — werd dictator, niet keizer.", "Veel later.", "Vroeg-christelijke keizer veel later."],
+        wrongHints: [null, "Niet — werd dictator, niet keizer.", "Nero regeerde in de 1e eeuw n.Chr., na meerdere andere keizers. Wie begon de rij?", "Constantijn regeerde pas in de 4e eeuw n.Chr. Wie begon de rij van keizers?"],
         uitlegPad: {
           stappen: [{ titel: "27 v.Chr.", tekst: "**Octavianus** (adoptiefzoon van Caesar) wordt **27 v.Chr.** door Senaat 'Augustus' genoemd → eerste **keizer** ('imperator'). Caesar zelf was dictator (perpetuo) maar werd vermoord vóór keizertijd. Augustus regeerde tot 14 n.Chr. — Pax Romana." }],
           niveaus: { basis: "Augustus.", simpeler: "Eerste keizer = Augustus", nogSimpeler: "Augustus." },
@@ -240,7 +240,7 @@ const steps = [
         q: "Wat gebeurde in **79 n.Chr.**?",
         options: ["Vesuvius bedolf Pompeii","Caesar vermoord","Rome gesticht","Christendom legaal"],
         answer: 0,
-        wrongHints: [null, "44 v.Chr.", "753 v.Chr.", "313 n.Chr."],
+        wrongHints: [null, "Caesar werd vermoord vóór het begin van onze jaartelling. Staat hier v.Chr. of n.Chr.?", "Rome werd volgens de legende eeuwen vóór Christus gesticht. Staat hier v.Chr. of n.Chr.?", "Het christendom werd pas in de 4e eeuw toegestaan, onder Constantijn. Is 79 n.Chr. zo laat?"],
         uitlegPad: {
           stappen: [{ titel: "Pompeii + Herculaneum", tekst: "**24 augustus 79 n.Chr.**: vulkaan **Vesuvius** uitbarsting → **Pompeii + Herculaneum** bedekt onder as. ~16.000 doden. **Plinius de Oudere** stierf bij reddingspoging. **Plinius de Jongere** schreef ooggetuigenverslag. Archeologisch ontdekt 18e eeuw — uniek inzicht in dagelijks Romeins leven." }],
           niveaus: { basis: "Vesuvius 79.", simpeler: "79 = Vesuvius", nogSimpeler: "79" },
@@ -250,7 +250,7 @@ const steps = [
         q: "Wie schreef de **Aeneis**?",
         options: ["Vergilius","Horatius","Ovidius","Cicero"],
         answer: 0,
-        wrongHints: [null, "Niet — oden.", "Niet — Metamorphoses.", "Niet — redenaar."],
+        wrongHints: [null, "Horatius schreef oden, korte gedichten. De Aeneis is een lang epos over Aeneas — wie schreef dat?", "Ovidius schreef de Metamorphosen. Wie schreef het epos over de vlucht van Aeneas uit Troje?", "Cicero schreef proza: redevoeringen en brieven. Is de Aeneis proza of poëzie?"],
         uitlegPad: {
           stappen: [{ titel: "Romeinse Ilias", tekst: "**Publius Vergilius Maro** schreef de *Aeneis* tussen 29-19 v.Chr. Epos over Trojaanse held **Aeneas** die na val Troje naar Italië reist en stichter Rome wordt. Eerste regels: 'Arma virumque cano' (Ik bezing wapens + man). Gymnasium-canon-tekst." }],
           niveaus: { basis: "Vergilius.", simpeler: "Aeneis = Vergilius", nogSimpeler: "Vergilius." },
@@ -269,7 +269,7 @@ const steps = [
         q: "Welke betekenis heeft **'carpe diem'**?",
         options: ["Pluk de dag","Met de dag","Lange dag","Tel de dagen"],
         answer: 0,
-        wrongHints: [null, "Niet — ander voorzetsel.", "Carpe is geen bijvoeglijk naamwoord maar een werkwoord. Wat doe je met de dag?", "'Carpe' is een gebiedende wijs. Wat betekent het werkwoord carpere?"],
+        wrongHints: [null, "'Carpe' is geen voorzetsel maar een werkwoord in de gebiedende wijs. Wat moet je met de dag doen?", "Carpe is geen bijvoeglijk naamwoord maar een werkwoord. Wat doe je met de dag?", "'Carpe' is een gebiedende wijs. Wat betekent het werkwoord carpere?"],
         uitlegPad: {
           stappen: [{ titel: "Horatius Oden 1.11", tekst: "**Carpe diem** = letterlijk 'pluk de dag' (carpe = imperatief 'pluk', diem = accusatief 'dag'). Uit **Horatius** Oden 1.11 (23 v.Chr.). Boodschap: leef in het nu, want toekomst onzeker. Veel later beroemd door Robin Williams in film *Dead Poets Society* (1989)." }],
           niveaus: { basis: "Pluk de dag.", simpeler: "Carpe diem = leef nu", nogSimpeler: "Pluk de dag." },
@@ -277,9 +277,9 @@ const steps = [
       },
       {
         q: "**SPQR** staat voor:",
-        options: ["Senatus Populusque Romanus","Roma Senatus Pax Quirinus","Romeinse Politie Quartier","Stad Quirinus"],
+        options: ["Senatus Populusque Romanus","Roma Senatus Pax Quirinus","Senatus Praetorque Romanus","Sacra Pax Quirini Romae"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de letter-volgorde: S-P-Q-R — begint jouw optie wel met een S-woord?", "SPQR is Latijn, geen Nederlands — en 'politie' bestond niet in Rome.", "Te kort — het motto noemt twéé groepen: wie bestuurden Rome samen?"],
+        wrongHints: [null, "Kijk naar de letter-volgorde: S-P-Q-R — begint jouw optie wel met een S-woord?", "Een praetor was één rechter, geen groep. Wie bestuurde Rome samen met de senaat?", "De letters kloppen, maar het motto gaat niet over vrede. Welke twee groepen bestuurden Rome samen?"],
         uitlegPad: {
           stappen: [{ titel: "Republiek-motto", tekst: "**SPQR** = *Senatus Populusque Romanus* = 'De Senaat + het Volk van Rome'. Symboliseert de **Romeinse Republiek** (509-27 v.Chr.). Stond op standaarden, gebouwen. Vandaag: nog steeds in gebruik door gemeente Rome (op deksels van rioolputten, gebouwen)." }],
           niveaus: { basis: "Senatus Populusque Romanus.", simpeler: "SPQR = Senaat+Volk", nogSimpeler: "Senatus Populusque Romanus." },
@@ -299,7 +299,7 @@ const steps = [
         q: "Welke god is **Mars**?",
         options: ["Oorlog","Liefde","Zee","Onderwereld"],
         answer: 0,
-        wrongHints: [null, "Niet — Venus.", "Niet — Neptunus.", "Niet — Pluto/Hades."],
+        wrongHints: [null, "Liefde hoort bij Venus. Denk aan het Engelse 'martial arts': waar gaat dat over?", "De zee hoort bij Neptunus. Denk aan het Engelse 'martial arts': waar gaat dat over?", "De onderwereld hoort bij Pluto. Denk aan het Engelse 'martial arts': waar gaat dat over?"],
         uitlegPad: {
           stappen: [{ titel: "Romeinse oorlogsgod", tekst: "**Mars** = Romeinse oorlogsgod (Griekse Ares). Vader van Romulus + Remus volgens legende. Daarom **Mars Pater** ('Mars Vader') belangrijk. Maand **maart** vernoemd. Symbolen: speer + schild. Planeet Mars rood vanwege ijzer-oxide — geassocieerd met 'bloed' van oorlog." }],
           niveaus: { basis: "Oorlog.", simpeler: "Mars = oorlog", nogSimpeler: "Oorlog." },

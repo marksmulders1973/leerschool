@@ -63,9 +63,9 @@ const steps = [
     checks: [
       {
         q: "Welk werkwoord is **groep 1 (-er)**?",
-        options: ["parler (spreken)", "finir (afmaken)", "vendre (verkopen)", "être (zijn)"],
+        options: ["parler (spreken)", "finir (afmaken)", "vendre (verkopen)", "aller (gaan)"],
         answer: 0,
-        wrongHints: [null, "Groep 2.", "Groep 3.", "Onregelmatig."],
+        wrongHints: [null, "Finir eindigt op -ir: dat is groep 2. Welke uitgang hoort bij groep 1?", "Vendre eindigt op -re: dat is groep 3. Welke uitgang hoort bij groep 1?", "Aller eindigt wel op -er, maar is onregelmatig (je vais, tu vas). Hoort het dan bij groep 1?"],
       },
       {
         q: "Wat betekent **'tu'**?",
@@ -77,7 +77,7 @@ const steps = [
         q: "Wat is de stam van **'aimer'**?",
         options: ["aim-", "aimer-", "am-", "aime-"],
         answer: 0,
-        wrongHints: [null, "Met -er.", "Spelling fout.", "Met -e."],
+        wrongHints: [null, "Voor de stam haal je de uitgang van de infinitief eraf. Staat die er hier nog aan?", "Voor de stam haal je alleen de uitgang weg, verder niets. Mist hier een letter?", "Je haalt de hele uitgang -er weg. Is dat hier gebeurd?"],
       },
       {
         q: "Waarom **'j'aime'** en niet **'je aime'**?",
@@ -104,7 +104,7 @@ const steps = [
         q: "**parler + nous** → ?",
         options: ["nous parlons", "nous parle", "nous parlez", "nous parlent"],
         answer: 0,
-        wrongHints: [null, "Niet meervoud.", "Voor vous.", "Voor ils."],
+        wrongHints: [null, "'Parle' hoort bij je en il/elle. Welke uitgang krijgt nous?", "Voor vous.", "Voor ils."],
       },
       {
         q: "**finir + il** → ?",
@@ -116,7 +116,7 @@ const steps = [
         q: "**vendre + tu** → ?",
         options: ["tu vends", "tu vend", "tu vendes", "tu vendons"],
         answer: 0,
-        wrongHints: [null, "Voor il.", "Niet correct.", "Voor nous."],
+        wrongHints: [null, "Voor il.", "Een -e vóór de -s hoort bij -er-werkwoorden (tu parles). Vendre is groep 3 — welke uitgang krijgt tu?", "Voor nous."],
         uitlegPad: {
           stappen: [
             { titel: "vendre is -re groep", tekst: "Verwijder -re → stam vend." },
@@ -164,7 +164,7 @@ const steps = [
         q: "**'Je ___ aller au cinéma.'** Welk werkwoord?",
         options: ["vais", "suis", "ai", "vais aller"],
         answer: 0,
-        wrongHints: [null, "être past niet.", "avoir past niet.", "Niet dubbel."],
+        wrongHints: [null, "être past niet.", "avoir past niet.", "Er staat al 'aller' in de zin. Wat gebeurt er als je 'vais aller' invult?"],
       },
     ],
   },
@@ -212,25 +212,25 @@ const steps = [
         q: "Welk hulpwerkwoord bij **'aller' in Passé composé**?",
         options: ["être", "avoir", "faire", "venir"],
         answer: 0,
-        wrongHints: [null, "Niet voor beweging.", "Geen hulpwerkwoord hier.", "Geen hulpwerkwoord."],
+        wrongHints: [null, "Avoir is het gewone hulpwerkwoord, maar bewegingswerkwoorden zoals aller zijn een uitzondering. Welk hulpwerkwoord nemen die?", "Faire betekent 'doen/maken' en is geen hulpwerkwoord van de passé composé. Welke twee hulpwerkwoorden ken je?", "Venir is geen hulpwerkwoord van de passé composé. Welke twee hulpwerkwoorden heb je daar?"],
       },
       {
         q: "Participe passé van **'parler'** = ?",
         options: ["parlé", "parlu", "parli", "parlir"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Voor -ir.", "Bestaat niet."],
+        wrongHints: [null, "De uitgang -u hoort bij groep 3 (vendre → vendu). Parler is groep 1 — welke uitgang krijgt het?", "Voor -ir.", "Parlir is geen bestaand werkwoord. Welke uitgang krijgt het participe passé van een -er-werkwoord?"],
       },
       {
         q: "Participe passé van **'avoir'** = ?",
         options: ["eu", "avu", "ai", "été"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Présent.", "Van être."],
+        wrongHints: [null, "Avoir is onregelmatig, dus je kunt niet gewoon -u achter de stam zetten. Wat is de korte vorm?", "Présent.", "Van être."],
       },
       {
         q: "**'Elle ___ allée au cinéma.'** Welk werkwoord?",
         options: ["est (être)", "a (avoir)", "va (aller)", "fait (faire)"],
         answer: 0,
-        wrongHints: [null, "Niet voor aller.", "Présent, geen voltooid.", "Verkeerd."],
+        wrongHints: [null, "Avoir gebruik je bij de meeste werkwoorden, maar niet bij aller. Waarom staat er 'allée' met een -e?", "Présent, geen voltooid.", "Faire is geen hulpwerkwoord van de passé composé. Welk hulpwerkwoord nemen bewegingswerkwoorden?"],
         uitlegPad: {
           stappen: [
             { titel: "aller is een être-werkwoord", tekst: "MRS VANDERTRAMP: aller komt in deze lijst → hulpwerkwoord 'être' in Passé composé." },
@@ -266,7 +266,7 @@ const steps = [
         q: "**être + il** in Présent → ?",
         options: ["il est", "il a", "il sont", "il était"],
         answer: 0,
-        wrongHints: [null, "Avoir.", "Voor ils.", "Imparfait."],
+        wrongHints: [null, "'A' is een vorm van avoir (hebben). Welke vorm van être hoort bij il?", "Voor ils.", "Imparfait."],
       },
       {
         q: "Imparfait van **'avoir' (j')** = ?",
@@ -278,13 +278,13 @@ const steps = [
         q: "Participe passé van **'finir'** = ?",
         options: ["fini", "finu", "finit", "finissé"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Présent (il).", "Bestaat niet."],
+        wrongHints: [null, "De uitgang -u hoort bij groep 3 (vendu). Finir is groep 2 — welke uitgang krijgt het?", "Présent (il).", "-é hoort bij -er-werkwoorden, en 'finiss-' gebruik je alleen in het meervoud van de présent. Welke korte vorm hoort bij finir?"],
       },
       {
         q: "**'Nous ___ allés à Paris.'** Passé composé.",
         options: ["sommes", "avons", "étions", "irons"],
         answer: 0,
-        wrongHints: [null, "Niet voor aller.", "Imparfait.", "Futur."],
+        wrongHints: [null, "Avoir is het gewone hulpwerkwoord, maar zie je de -s in 'allés'? Welk hulpwerkwoord krijgt aller?", "Imparfait.", "Futur."],
       },
       {
         q: "**aller + nous** in Présent → ?",

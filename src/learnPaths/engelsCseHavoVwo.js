@@ -54,9 +54,9 @@ const steps = [
       },
       {
         q: "Wat komt op het **VWO**-examen Engels vaak voor en vraagt extra nuance?",
-        options: ["Literair fragment","Geen tijdslimiet","Mondelinge toets","Geen leesvaardigheid"],
+        options: ["Literair fragment","Luisterfragment","Schrijfopdracht","Grammatica-oefening"],
         answer: 0,
-        wrongHints: [null, "Niet — 150 min.", "Niet — CSE = schriftelijk.", "Niet — dat is hoofd-onderdeel."],
+        wrongHints: [null, "Kijk- en luistervaardigheid toets je in het schoolexamen. Waaruit bestaat het CSE?", "Schrijven toets je in het schoolexamen. Het CSE is een leesexamen — welke tekstsoort vraagt daar extra nuance?", "Het CSE toetst leesvaardigheid, geen losse grammatica. Welke tekst vraagt om het lezen van nuance?"],
         uitlegPad: {
           stappen: [{ titel: "VWO heeft fictie-tekst", tekst: "**VWO**: vaak is een van de teksten een **literair fragment** (uit roman / short story). Vereist andere skills: tone, irony, character-analyse, sub-tekst. **HAVO**: meer journalistiek + non-fictie." }],
           theorie: "Een literair fragment heeft meestal een handvol vragen (bv. 6 in VWO 2025) — de moeilijkste nuance-vragen zitten vaak daar.",
@@ -65,9 +65,9 @@ const steps = [
       },
       {
         q: "Hoeveel tijd per vraag heb je gemiddeld op HAVO/VWO Engels (150 min / ~42 vragen)?",
-        options: ["~3,5 minuut","6 minuten","1 minuut","10 minuten"],
+        options: ["~3,5 minuut","~6 minuten","~1 minuut","~10 minuten"],
         answer: 0,
-        wrongHints: [null, "Te ruim — kom je niet door.", "Te krap — leesvaardigheid heeft tijd nodig.", "Veel te ruim."],
+        wrongHints: [null, "Te ruim — kom je niet door.", "Te krap — leesvaardigheid heeft tijd nodig.", "Reken na: 42 vragen × 10 minuten. Hoeveel minuten is dat?"],
         uitlegPad: {
           stappen: [{ titel: "150/42 ≈ 3,5", tekst: "**150 min / ~42 vragen ≈ 3,5 min/vraag** gemiddeld. Realistisch: korter voor scan-vragen (1 min), langer voor inhouds-vragen (4-5 min)." }],
           theorie: "Trek 10-15 min eind-check af → effectief ~3,2 min/vraag. Houd timer per pagina.",
@@ -76,9 +76,9 @@ const steps = [
       },
       {
         q: "Welke tekstsoort heeft vooral **subjectieve mening** + provocatie?",
-        options: ["Opinion column","Krantenbericht","Scientific summary","Interview"],
+        options: ["Opinion column","News report","Scientific summary","Interview"],
         answer: 0,
-        wrongHints: [null, "Niet — feitelijk + neutraal.", "Niet — uitleg van onderzoek.", "Bevat meningen maar van geïnterviewde, niet auteur."],
+        wrongHints: [null, "Een news report brengt feiten zo neutraal mogelijk. In welke tekstsoort staat de mening van de schrijver centraal?", "Een scientific summary geeft onderzoek weer. Probeert die de lezer te prikkelen?", "Bevat meningen maar van geïnterviewde, niet auteur."],
         uitlegPad: {
           stappen: [{ titel: "Opinion = mening", tekst: "**Opinion column** (vaak in The Guardian, NY Times etc.) = persoonlijke mening van schrijver, vaak controversieel. CSE-favoriet voor intentie- en toon-vragen." }],
           theorie: "Toets-tip: in opinion column zit auteur-mening duidelijk; in nieuws-artikel pas op met 'mening van schrijver vs van geïnterviewde'.",
@@ -98,7 +98,7 @@ const steps = [
         q: "*'What is the author's purpose in the final paragraph?'* — welke vraag-type?",
         options: ["Intentie","Detail","Verwijzing","Register"],
         answer: 0,
-        wrongHints: [null, "Niet — purpose is breder dan detail.", "Niet — verwijswoorden.", "Niet — register gaat over hoe formeel de taal is, niet over het doel."],
+        wrongHints: [null, "Een detailvraag gaat over één feit uit de tekst. Waar vraagt 'purpose' naar?", "Een verwijzingsvraag gaat over een woord als 'this' of 'they'. Vraagt 'purpose' daarnaar?", "Niet — register gaat over hoe formeel de taal is, niet over het doel."],
         uitlegPad: {
           stappen: [{ titel: "Purpose = intentie/doel", tekst: "**Purpose** = WAAROM schrijver dit deel schreef. Niet 'wat staat er' (detail) of 'hoe formeel is 't' (register), maar 'wat wil schrijver bereiken'. Vaak: conclude / persuade / warn / criticise." }],
           theorie: "Toets-strategie: lees laatste alinea zorgvuldig + kijk naar zinnen die actie/conclusie suggereren.",
@@ -121,7 +121,7 @@ const steps = [
         q: "*'However, this study has been challenged.'* Wat doet 'however' hier?",
         options: ["Contrast-signaal","Versterking","Voorbeeld","Conclusie"],
         answer: 0,
-        wrongHints: [null, "Niet — versterkt 'however' wat ervoor staat, of draait het de richting om?", "Niet — geen voorbeeld.", "Niet — geen samenvatting."],
+        wrongHints: [null, "Niet — versterkt 'however' wat ervoor staat, of draait het de richting om?", "Een voorbeeld kondig je aan met 'for example'. Wat doet 'however' met de bewering ervoor?", "Een conclusie kondig je aan met 'in conclusion' of 'therefore'. Wat doet 'however' met wat ervoor staat?"],
         uitlegPad: {
           stappen: [{ titel: "However = tegenstelling", tekst: "**However** = klassiek contrast-signaalwoord. Voorgaande zin zei iets positiefs over studie; deze keert om: 'maar is bekritiseerd'. Vooral belangrijk bij conclusie-vragen — zin na 'however' is vaak echte mening." }],
           theorie: "Toets-truc: kijk altijd zin NA 'however' / 'nonetheless' / 'on the contrary' voor hoofdstandpunt.",
@@ -130,9 +130,9 @@ const steps = [
       },
       {
         q: "Welke toon past bij: *'Oh great, another rainy day. Just what I needed.'*?",
-        options: ["Sarcastisch/ironisch","Enthousiast/blij","Neutraal/feitelijk","Wetenschappelijk"],
+        options: ["Sarcastisch/ironisch","Enthousiast/blij","Neutraal/feitelijk","Bezorgd/angstig"],
         answer: 0,
-        wrongHints: [null, "Is een zoveelste regendag echt iets om blij van te worden?", "Hoor je emotie in 'Just what I needed'?", "Is dit een zakelijke tekst met feiten en bronnen?"],
+        wrongHints: [null, "Is een zoveelste regendag echt iets om blij van te worden?", "Hoor je emotie in 'Just what I needed'?", "Klinkt de spreker echt ongerust, of zegt hij iets anders dan hij bedoelt?"],
         uitlegPad: {
           stappen: [{ titel: "Sarcasme = positief woord, negatieve bedoeling", tekst: "**Sarcastisch**: 'great' + 'just what I needed' in regen-context = duidelijk tegenovergestelde bedoeling. Cynisme/sarcasme in tekst herkennen aan **mismatch** tussen woordkeuze + context." }],
           theorie: "Toets-truc: bij toon-vragen — past de letterlijke betekenis bij wat schrijver écht bedoelt? Mismatch = irony of sarcasme.",
@@ -203,9 +203,9 @@ const steps = [
       },
       {
         q: "Welke **valstrik** is het meest schadelijk bij HAVO/VWO lang examen?",
-        options: ["Eind-haasten","Signaalwoorden omcirkelen","Markeren","Klok kijken"],
+        options: ["Haasten aan het eind","Eerste indruk volgen","Twijfelvragen overslaan","Vaak op de klok kijken"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een goede strategie.", "Markeren is JUIST strategie.", "Klok kijken is goed."],
+        wrongHints: [null, "Bij de anti-valstrikken staat juist: vertrouw vaak je eerste indruk, want eindeloos twijfelen kost tijd. Welke val kost je de meeste punten?", "Een twijfelvraag markeren en er later op terugkomen is juist een strategie. Wat gebeurt er als je de tijd uit het oog verliest?", "Elke twee vragen op de klok kijken voorkomt juist problemen. Welke val wil je daarmee voorkomen?"],
         uitlegPad: {
           stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt te veel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
           theorie: "Toets-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
@@ -258,7 +258,7 @@ const steps = [
         q: "*'She walked into the empty house, her footsteps echoing in the silence.'* Welke mood?",
         options: ["Eenzaam/spookachtig","Vrolijk/opgewekt","Zakelijk/neutraal","Romantisch/warm"],
         answer: 0,
-        wrongHints: [null, "Niet — woordkeuze is somber.", "Niet — geen feiten-toon.", "Niet — geen romance."],
+        wrongHints: [null, "Kijk naar 'empty' en 'silence'. Klinkt dat vrolijk?", "Er staan geen feiten of cijfers, wel 'echoing in the silence'. Welk gevoel roept dat op?", "Is er nog iemand in het huis? Wat voor gevoel geeft een leeg, stil huis?"],
         uitlegPad: {
           stappen: [{ titel: "Woordkeuze = mood", tekst: "**Empty / echoing / silence** = somber, vacuüm, eenzaam. Lezer voelt zelf onbehagen. Klassieke woorden voor 'lonely / eerie mood'." }],
           theorie: "Toets-tip: bij mood-vragen — zoek **3-5 adjectieven/zelfstandige naamwoorden** met emotie-lading.",
@@ -267,9 +267,9 @@ const steps = [
       },
       {
         q: "Een **first-person narrator** gebruikt:",
-        options: ["'I' en 'we'","'He' en 'she'","'You'","Geen voornaamwoorden"],
+        options: ["'I' en 'we'","'He' en 'she'","'You' en 'your'","'They' en 'them'"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is third-person.", "Niet — dat is second-person.", "Niet — wel."],
+        wrongHints: [null, "Niet — dat is third-person.", "Niet — dat is second-person.", "'They' en 'them' horen bij third-person (meervoud). Wie is de 'first person'?"],
         uitlegPad: {
           stappen: [{ titel: "First-person = ik", tekst: "**First-person**: 'I went to the store.' Verteller = personage. **Subjectief** — beperkt tot wat dit personage weet. Catcher in the Rye, To Kill a Mockingbird etc." }],
           theorie: "VWO-CSE-vraag: 'From whose POV is this fragment told?' Antwoord: kijk naar voornaamwoorden + bewustzijn.",
@@ -289,7 +289,7 @@ const steps = [
         q: "*'Notwithstanding the criticism, the experiment yielded valuable results.'* Wat doet 'notwithstanding'?",
         options: ["Concessie/contrast","Versterking/opsomming","Reden/oorzaak","Voorbeeld/illustratie"],
         answer: 0,
-        wrongHints: [null, "Vervang het woord door 'moreover'. Klopt de zin dan nog?", "Niet — geen oorzaak.", "Vervang het woord door 'for example'. Klopt de zin dan nog?"],
+        wrongHints: [null, "Vervang het woord door 'moreover'. Klopt de zin dan nog?", "Vervang het woord door 'because of'. Klopt de zin dan nog?", "Vervang het woord door 'for example'. Klopt de zin dan nog?"],
         uitlegPad: {
           stappen: [{ titel: "Notwithstanding = ondanks", tekst: "**Notwithstanding** = 'in spite of' = 'ondanks'. Formal concessie-signaalwoord. Synoniemen: despite, in spite of, notwithstanding the fact that." }],
           theorie: "Formal vocabulary CSE-favoriet: notwithstanding, albeit, henceforth, nonetheless.",

@@ -42,7 +42,7 @@ const steps = [
         q: "Welke is **present perfect**?",
         options: ["I have lived here for 10 years","I lived here 10 years ago","I am living here this year","I will live here for 10 years"],
         answer: 0,
-        wrongHints: [null, "Past simple.", "Present continuous.", "Future."],
+        wrongHints: [null, "'Lived … ago' gaat over een afgesloten moment in het verleden. Welke tijd is dat?", "'Am living' is een vorm van be + -ing. Hoort dat bij de present perfect?", "'Will live' gaat over de toekomst. Welk hulpwerkwoord hoort bij de present perfect?"],
         uitlegPad: {
           stappen: [{ titel: "Verleden met heden-relevantie", tekst: "**Present perfect**: have/has + past participle. Geeft handeling die **begon in verleden + nog relevant of doorgaand** is. 'I **have lived** here for 10 years' = ik woon hier (nog steeds) sinds 10 jaar geleden. Verschil met past simple: 'I lived here for 10 years' = verleden, niet meer." }],
           theorie: "Toets-val: 'How long have you...' altijd present perfect, niet past simple.",
@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Welke afsluiting past bij **'Dear Sir or Madam'**?",
-        options: ["Yours faithfully","Yours sincerely","Best","Cheers"],
+        options: ["Yours faithfully","Yours sincerely","Best wishes","Many thanks"],
         answer: 0,
-        wrongHints: [null, "Bij specifieke naam.", "Te informeel.", "Te informeel."],
+        wrongHints: [null, "'Yours sincerely' gebruik je als je de naam kent. Staat er een naam in de aanhef?", "'Best wishes' is een vriendelijke afsluiting voor bekenden. Past dat bij een brief aan een onbekende?", "'Many thanks' is een losse bedankformule, geen vaste afsluiting van een formele brief. Welke formule hoort bij een onbekende ontvanger?"],
         uitlegPad: {
           stappen: [{ titel: "Formele match", tekst: "**Yours faithfully** = bij 'Dear Sir or Madam' (naam onbekend). **Yours sincerely** = bij 'Dear Mr/Ms [naam]' (naam bekend). Onthouden: 'Sir' en 'Sincerely' gaan nooit samen (nooit twee s'en). Onbeleefd om de verkeerde combinatie te gebruiken in formeel verkeer." }],
           niveaus: { basis: "Yours faithfully.", simpeler: "Dear Sir = faithfully", nogSimpeler: "A." },
@@ -120,9 +120,9 @@ const steps = [
       },
       {
         q: "Lengte van **cover letter** (sollicitatie-brief):",
-        options: ["200-300 woorden","50 woorden","1000+ woorden","Geen limiet"],
+        options: ["200-300 woorden","100-150 woorden","450-600 woorden","800-1000 woorden"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Veel te lang.", "Wel impliciete limiet."],
+        wrongHints: [null, "Daarin kun je je motivatie en ervaring nauwelijks kwijt. Hoeveel ruimte heb je nodig voor inleiding, kern en slot?", "Dat is ruim één A4. Leest iemand die veel brieven krijgt dat helemaal?", "Dat zijn bijna drie A4'tjes. Hoe lang is een sollicitatiebrief meestal?"],
         uitlegPad: {
           stappen: [{ titel: "Kort + krachtig", tekst: "**Cover letter ideaal: 200-300 woorden**. Reden: HR-mensen scannen — lange brief = niet gelezen. Vier alinea's: introductie, wie ik ben + vaardigheden, waarom dit bedrijf, afsluiting + actie. Geen lange CV-inhoud — die staat in CV bijgevoegd." }],
           niveaus: { basis: "200-300 w.", simpeler: "Cover letter = 300 w", nogSimpeler: "A." },
@@ -132,7 +132,7 @@ const steps = [
         q: "Welke afsluitzin van een e-mail is **correct** Engels?",
         options: ["Looking forward to hearing from you","Looking forward hearing you","Look forward to hear from you","Looking forward hear from you"],
         answer: 0,
-        wrongHints: [null, "Niet — TO ontbreekt.", "Niet — niet gerund.", "Niet — niet gerund."],
+        wrongHints: [null, "Na 'looking forward' komt een vast voorzetsel. Welk woordje mist hier?", "'To' is hier een voorzetsel, geen deel van een infinitief. Welke vorm van het werkwoord komt na een voorzetsel?", "Hier missen twee dingen: een voorzetsel na 'forward' en de -ing-vorm. Zie je welke?"],
         uitlegPad: {
           stappen: [{ titel: "TO + -ing", tekst: "**Look forward TO + gerund (-ing)**. Bv. 'I look forward TO hearing from you.' 'TO' is **voorzetsel** hier, niet infinitief-marker → krijgt -ing-vorm na zich. Klassieke fout: 'look forward to hear' (verkeerd, moet 'to hearing'). Andere voorbeelden: 'I'm used to studying' (niet 'to study')." }],
           niveaus: { basis: "TO hearing.", simpeler: "Look fwd TO + -ing", nogSimpeler: "A." },
@@ -161,7 +161,7 @@ const steps = [
         q: "**'Furthermore'** is een connector voor:",
         options: ["Toevoegen","Contrast","Gevolg","Tijd"],
         answer: 0,
-        wrongHints: [null, "Niet — however.", "Niet — therefore.", "Niet — then."],
+        wrongHints: [null, "Een tegenstelling geef je aan met 'however'. Betekent 'furthermore' 'maar'?", "Een gevolg geef je aan met 'therefore'. Betekent 'furthermore' 'daarom'?", "Tijd geef je aan met 'then' of 'after that'. Betekent 'furthermore' 'daarna'?"],
         uitlegPad: {
           stappen: [{ titel: "Adding", tekst: "**Furthermore** = bovendien, daarnaast. Voor het toevoegen van argument. Synoniemen: moreover, in addition, additionally. Tegenstelling: however, nevertheless. Gevolg: therefore, consequently. Variatie in connectors = beter Engels." }],
           niveaus: { basis: "Toevoegen.", simpeler: "Furthermore = +", nogSimpeler: "A." },
@@ -189,9 +189,9 @@ const steps = [
       },
       {
         q: "**HAVO essay-lengte** SE:",
-        options: ["~250-300 woorden","~50 woorden","~1000 woorden","Geen limiet"],
+        options: ["~250-300 woorden","~350-400 woorden","~100-150 woorden","~600-700 woorden"],
         answer: 0,
-        wrongHints: [null, "Veel te kort.", "Te lang.", "Wel verwachting."],
+        wrongHints: [null, "Dat is de richtlijn voor het VWO. Hoeveel woorden verwacht je bij HAVO?", "Dan kun je je argumenten nauwelijks uitwerken. Hoeveel ruimte heb je nodig voor inleiding, kern en slot?", "Dan ga je opvullen met herhaling. Wat is de richtlijn voor HAVO?"],
         uitlegPad: {
           stappen: [{ titel: "Concreet beperkt", tekst: "**HAVO**: ~250-300 woorden. **VWO**: ~350-400 woorden. Korter = onvoldoende uitwerking, langer = padding. School-specifiek verschilt licht. **Plan: 4-5 alinea's** met intro + 2-3 argumenten + conclusie. Per alinea ~60-80 woorden." }],
           niveaus: { basis: "250-300.", simpeler: "HAVO = 300w", nogSimpeler: "A." },
@@ -208,9 +208,9 @@ const steps = [
     checks: [
       {
         q: "Welke is een goede **speech filler** (tijd-koper)?",
-        options: ["'Well, let me think...'","'Eh euh euh...'","Stil zwijgen","Praten zonder pauze"],
+        options: ["'Well, let me think...'","'Eh euh euh...'","'You know, like, like...'","'Sorry, I don't know.'"],
         answer: 0,
-        wrongHints: [null, "Niet — slordig.", "Niet — examinator wacht.", "Niet — fouten worden meer."],
+        wrongHints: [null, "'Eh euh' is een Nederlandse aarzeling. Hoe koop je tijd in het Engels?", "Steeds 'like' en 'you know' herhalen klinkt slordig. Welke filler klinkt bedachtzaam?", "Daarmee geef je op in plaats van tijd te kopen. Welke zin laat zien dat je nog nadenkt?"],
         uitlegPad: {
           stappen: [{ titel: "Vloeiend pauzeren", tekst: "**Goede speech fillers** (Engels):\n• 'Well, let me think for a moment...'\n• 'That's a really interesting question.'\n• 'You know, I would say that...'\n• 'Actually, I believe...'\n• 'Hmm, in my opinion...'\n\nGeeft je tijd om te denken zonder onhandige stilte. Vermijd NL 'eh euh' (klinkt onzeker). Beter rustig + bewust pauzeren met deze zinnen." }],
           niveaus: { basis: "Well let me think.", simpeler: "Speech filler", nogSimpeler: "A." },
@@ -228,9 +228,9 @@ const steps = [
       },
       {
         q: "Th-klank in 'think' is:",
-        options: ["Stemloos","Stemhebbend","Niet bestaand","Gelijk aan 's'"],
+        options: ["Stemloos","Stemhebbend","Gelijk aan 't'","Gelijk aan 's'"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 'this'.", "Bestaat wel.", "Anders dan s."],
+        wrongHints: [null, "Een stemhebbende th hoor je in 'this'. Trilt je keel bij de th van 'think'?", "Veel Nederlanders zeggen 'tink', maar de th is geen t. Trilt je keel bij 'think'?", "Bij de th zit je tong tussen je tanden, bij de s niet. Trilt je keel bij 'think'?"],
         uitlegPad: {
           stappen: [{ titel: "Twee th-klanken", tekst: "**Engels heeft 2 th-klanken**:\n• **Stemloos** (zoals 'think, three, throw, mouth, tooth'): tongtip tussen tanden, **geen stem** — alleen lucht. /θ/.\n• **Stemhebbend** (zoals 'this, that, mother, father, breathe'): zelfde positie maar **met stem** — trilling. /ð/.\n\nNL'ers vervangen hem vaak door 't' (tink voor think) of 's' (sink voor think) — fout. Oefenen: tongtip tussen tanden + verschil voelen tussen lucht-alleen en stem." }],
           niveaus: { basis: "Stemloos.", simpeler: "Think = stemloos", nogSimpeler: "A." },
@@ -269,7 +269,7 @@ const steps = [
         q: "Welke is **correct Engels**?",
         options: ["She works hard","She work hard","She is work hard","She working hard"],
         answer: 0,
-        wrongHints: [null, "Niet — let op de 3e persoon enkelvoud.", "Niet zinvol.", "Niet — hier ontbreekt de persoonsvorm."],
+        wrongHints: [null, "Niet — let op de 3e persoon enkelvoud.", "'Is' en 'work' zijn twee werkwoorden die hier niet samengaan. Heb je 'is' nodig in de present simple?", "Niet — hier ontbreekt de persoonsvorm."],
         uitlegPad: {
           stappen: [{ titel: "3e p ev = -s", tekst: "**She works hard** — 3e persoon enkelvoud present simple krijgt **-s** aan einde werkwoord. 'She work hard' is fout. 'She does work hard' is grammaticaal correct maar **emphatic** (nadruk: ze werkt wél hard, in tegenstelling tot ...) — niet de neutrale standaardvorm." }],
           niveaus: { basis: "Works.", simpeler: "She works", nogSimpeler: "A." },
@@ -277,9 +277,9 @@ const steps = [
       },
       {
         q: "**'Yours sincerely'** komt na:",
-        options: ["Dear Mr Smith","Dear Sir or Madam","Best regards","Hi"],
+        options: ["Dear Mr Smith","Dear Sir or Madam","Best regards","Hi Tom"],
         answer: 0,
-        wrongHints: [null, "Niet — bij faithfully.", "Niet — afsluiting zelf.", "Niet — informeel."],
+        wrongHints: [null, "Bij een onbekende ontvanger hoort een andere afsluiting. Welke aanhef noemt een naam?", "'Best regards' is zelf een afsluiting. Wat komt er bovenaan de brief?", "Aan een vriend schrijf je geen 'Yours sincerely'. Bij welke formele aanhef past het?"],
         uitlegPad: {
           stappen: [{ titel: "Sincerely + specifieke naam", tekst: "**'Yours sincerely'** = afsluiting wanneer je naam ontvanger weet ('Dear Mr Smith'). **'Yours faithfully'** = bij onbekende naam ('Dear Sir or Madam'). Memo: 'Sir' en 'Sincerely' gaan nooit samen (nooit twee s'en)." }],
           niveaus: { basis: "Naam bekend.", simpeler: "Sincerely = naam", nogSimpeler: "Naam bekend = sincerely." },
@@ -299,7 +299,7 @@ const steps = [
         q: "**'My CV is ___ (attach)'** — welke vorm?",
         options: ["attached","attaching","to attach","attach"],
         answer: 0,
-        wrongHints: [null, "Niet — het CV doet zelf niets.", "Niet — niet doel.", "Niet — na 'is' hoort hier een andere vorm."],
+        wrongHints: [null, "Niet — het CV doet zelf niets.", "'To attach' betekent 'om bij te voegen', een doel. Is het CV al bijgevoegd?", "Niet — na 'is' hoort hier een andere vorm."],
         uitlegPad: {
           stappen: [{ titel: "Passief past participle", tekst: "**'My CV is attached'** = passief: CV wordt **bijgevoegd** (door iemand/iets). Past participle (3e vorm) = 'attached'. Volledig: 'My CV is attached to this email'. Of formeler: 'Please find my CV attached'." }],
           niveaus: { basis: "Attached.", simpeler: "Is attached", nogSimpeler: "A." },

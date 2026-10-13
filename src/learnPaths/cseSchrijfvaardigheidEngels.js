@@ -70,19 +70,19 @@ const steps = [
         q: "Welke **sign-off** bij 'Dear Mr Smith'?",
         options: ["Yours sincerely,", "Yours faithfully,", "Cheers,", "Bye!"],
         answer: 0,
-        wrongHints: [null, "Bij naam onbekend.", "Informeel.", "Informeel."],
+        wrongHints: [null, "'Yours faithfully' gebruik je als je de naam níet kent. Staat er in de aanhef een naam?", "'Cheers' schrijf je aan een vriend. Past dat na een aanhef met 'Mr Smith'?", "'Bye!' zeg je in een gesprek; het is geen vaste afsluiting van een brief. Welke formule hoort bij een formele brief?"],
       },
       {
         q: "**Formeel** woord voor 'I'm':",
-        options: ["I am", "I'm (geen verschil)", "Im", "Me"],
+        options: ["I am", "I'm (geen verschil)", "Im", "I'am"],
         answer: 0,
-        wrongHints: [null, "Wel verschil — formeel niet.", "Spelling fout.", "Verkeerde vorm."],
+        wrongHints: [null, "Een samentrekking als I'm hoort bij spreektaal en informele mails. Gebruik je die in een formele brief?", "Zonder apostrof is 'Im' geen Engels woord. En is een samentrekking wel formeel?", "In 'I'am' staat een apostrof, maar er is geen letter weggelaten. Welke vorm is volledig uitgeschreven?"],
       },
       {
         q: "*'I would like to **___** about your job advert.'* Welk woord?",
-        options: ["enquire", "request", "look", "say"],
+        options: ["enquire", "request", "inform", "discuss"],
         answer: 0,
-        wrongHints: [null, "Na 'request' komt geen 'about' — je request iets direct.", "Niet juist.", "Niet juist."],
+        wrongHints: [null, "Na 'request' komt geen 'about' — je request iets direct.", "Na 'inform' komt eerst een persoon: 'inform you about'. Wie informeert hier wie?", "'Discuss' heeft geen 'about' nodig: je discusses iets direct. Welk formeel werkwoord past wél bij 'about'?"],
       },
       {
         q: "*'Yours sincerely'* gebruik je in een formele brief als je ___?",
@@ -107,15 +107,15 @@ const steps = [
     checks: [
       {
         q: "Welke **aanhef** voor vriend?",
-        options: ["Hi Tom,", "Dear Sir or Madam,", "Yours sincerely", "Best regards,"],
+        options: ["Hi Tom,", "Dear Sir or Madam,", "Yours sincerely", "Dear Mr Thompson,"],
         answer: 0,
-        wrongHints: [null, "Formeel.", "Sign-off, geen aanhef.", "Formeel."],
+        wrongHints: [null, "'Dear Sir or Madam' schrijf je als je de naam niet kent. Ken je de naam van je vriend?", "'Yours sincerely' staat onderaan een brief. Waar komt de aanhef?", "Met 'Mr' en een achternaam spreek je iemand formeel aan. Doe je dat bij een vriend?"],
       },
       {
         q: "Welke **sign-off** voor vriend?",
         options: ["Cheers,", "Yours sincerely,", "Yours faithfully,", "Best regards,"],
         answer: 0,
-        wrongHints: [null, "Formeel.", "Formeel.", "Halfformeel."],
+        wrongHints: [null, "'Yours sincerely' sluit een formele brief af waarin je de naam kent. Schrijf je je vriend een formele brief?", "'Yours faithfully' gebruik je bij een ontvanger van wie je de naam niet kent. Geldt dat voor je vriend?", "'Best regards' is netjes en een beetje zakelijk. Wat schrijf je onder een losse mail aan een vriend?"],
       },
       {
         q: "Mag je **samentrekkingen** (I'm, don't) in informele e-mail?",
@@ -125,21 +125,21 @@ const steps = [
       },
       {
         q: "Prompt: *'Reply to your friend's email.'* Welke toon?",
-        options: ["Informeel", "Formeel", "Officieel", "Neutraal"],
+        options: ["Informeel", "Formeel", "Half-formeel", "Neutraal"],
         answer: 0,
-        wrongHints: [null, "Niet voor vriend.", "Niet voor vriend.", "Vriend = wat warmer."],
+        wrongHints: [null, "Formeel schrijf je aan een bedrijf of een onbekende. Aan wie schrijf je hier?", "Half-formeel past bij een docent of een collega. Is dat de ontvanger hier?", "Neutraal past bij een tekst voor een onbekend publiek. Hoe praat je met een vriend?"],
       },
       {
         q: "Welke afsluiting past bij een **informeel berichtje aan een vriend**?",
         options: ["Take care", "Yours sincerely", "Yours faithfully", "Best regards"],
         answer: 0,
-        wrongHints: [null, "Formeel.", "Formeel.", "Half-formeel."],
+        wrongHints: [null, "'Yours sincerely' sluit een formele brief af. Is een berichtje aan een vriend formeel?", "'Yours faithfully' gebruik je als je de naam van de ontvanger niet kent. Ken je je vriend?", "'Best regards' is netjes en een beetje zakelijk. Wat past bij een los berichtje?"],
       },
       {
         q: "*'Hi mate, how's it going?'* — welk **register**?",
-        options: ["Informeel", "Formeel", "Neutraal", "Wetenschappelijk"],
+        options: ["Informeel", "Formeel", "Neutraal", "Half-formeel"],
         answer: 0,
-        wrongHints: [null, "Te losjes.", "Te losjes.", "Geen wetenschap."],
+        wrongHints: [null, "'Mate' en 'how's it going' zeg je niet tegen een onbekende. Past dat bij formeel?", "Neutrale taal heeft geen woorden als 'mate'. Wat zie je hier?", "Half-formeel is beleefd maar niet stijf, zoals tegen een docent. Spreek je je docent aan met 'mate'?"],
       },
     ],
   },
@@ -152,9 +152,9 @@ const steps = [
     checks: [
       {
         q: "Welke is een **goede samenvatting**?",
-        options: ["Hoofdpunten in eigen woorden", "Letterlijk kopiëren", "Alle voorbeelden meenemen", "Eigen mening toevoegen"],
+        options: ["Hoofdpunten in eigen woorden", "Belangrijkste zinnen overnemen", "Alle voorbeelden meenemen", "Eigen mening toevoegen"],
         answer: 0,
-        wrongHints: [null, "Plagiat-stijl.", "Te lang.", "Samenvatting = neutraal."],
+        wrongHints: [null, "Als je zinnen letterlijk overneemt, kopieer je. Wiens woorden staan er dan in je samenvatting?", "Voorbeelden lichten een punt toe. Heeft de lezer ze allemaal nodig om de kern te snappen?", "Een samenvatting geeft weer wat de schrijver zegt. Hoort jouw mening daarbij?"],
       },
       {
         q: "Welk **synoniem** voor 'big'?",
@@ -205,19 +205,19 @@ const steps = [
         q: "Welk woord = **mijn mening geven**?",
         options: ["In my opinion", "Generally speaking", "Indeed", "Furthermore"],
         answer: 0,
-        wrongHints: [null, "Algemeen, niet persoonlijke mening.", "Toevoeging, geen mening.", "Toevoeging."],
+        wrongHints: [null, "'Generally speaking' betekent 'over het algemeen'. Gaat dat over wat jij vindt of over wat meestal geldt?", "'Indeed' bevestigt iets ('inderdaad'). Kondig je daarmee aan wat jíj vindt?", "'Furthermore' voegt een extra punt toe ('bovendien'). Welke uitdrukking kondigt je eigen mening aan?"],
       },
       {
         q: "Welk signaalwoord = **conclusie**?",
         options: ["In conclusion", "Firstly", "For example", "However"],
         answer: 0,
-        wrongHints: [null, "Eerste argument.", "Voorbeeld.", "Tegenstelling."],
+        wrongHints: [null, "'Firstly' opent je eerste argument. Staat dat aan het begin of aan het eind?", "'For example' leidt een voorbeeld in. Rond je daarmee je tekst af?", "'However' geeft een tegenstelling aan. Welk signaalwoord kondigt het slot aan?"],
       },
       {
         q: "Wat doe je met een **tegenwerping** in essay?",
-        options: ["Noem en weerleg", "Negeer", "Eens mee zijn", "Ontwijken"],
+        options: ["Noem en weerleg", "Laat hem weg", "Bewaar voor je slot", "Geef hem gelijk"],
         answer: 0,
-        wrongHints: [null, "Niet — toont gebrek aan diepte.", "Tegenstrijdig met je standpunt.", "Niet — sterk essay heeft het."],
+        wrongHints: [null, "Als je een tegenwerping weglaat, lijkt het of je hem niet kent. Wat maakt je betoog sterker?", "In het slot vat je samen; daar is geen ruimte meer om iets te weerleggen. Wat doe je eerder in het essay met de tegenwerping?", "Als je de tegenwerping gelijk geeft, verzwak je je eigen standpunt. Wat doe je in plaats daarvan?"],
       },
       {
         q: "Welke structuur past bij **5-paragraaf essay**?",
@@ -242,9 +242,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **'eventual'** in Engels?",
-        options: ["Uiteindelijk", "Eventueel (Nederlandse betekenis)", "Snel", "Soms"],
+        options: ["Uiteindelijk", "Eventueel (Nederlandse betekenis)", "Gebeurtenis", "Soms"],
         answer: 0,
-        wrongHints: [null, "Dat is 'possible'.", "Snel is in het Engels 'quick'. Lijkt 'eventual' daarop?", "Soms is in het Engels 'sometimes'. Lijkt 'eventual' daarop?"],
+        wrongHints: [null, "Pas op: 'eventual' is een valse vriend. 'Eventueel' is in het Engels 'possible'.", "'Gebeurtenis' is in het Engels 'event'. 'Eventual' is een bijvoeglijk naamwoord — wat betekent het?", "Soms is in het Engels 'sometimes'. Lijkt 'eventual' daarop?"],
       },
       {
         q: "**It's** vs **Its** — verschil?",
@@ -260,9 +260,9 @@ const steps = [
       },
       {
         q: "*'Yesterday I ___ to the cinema.'* Welke tijd?",
-        options: ["went (past simple)", "have gone (present perfect)", "go (present)", "going"],
+        options: ["went (past simple)", "have gone (present perfect)", "go (present)", "going (-ing-vorm)"],
         answer: 0,
-        wrongHints: [null, "Voor onbepaalde tijd.", "Niet verleden.", "Geen volledige zin."],
+        wrongHints: [null, "De present perfect gebruik je zonder vast tijdstip. Staat er hier een tijdstip?", "'Go' is present. Wanneer ging je naar de bioscoop?", "'I going' mist een hulpwerkwoord. En gaat het over nu of over gisteren?"],
       },
     ],
   },
@@ -283,25 +283,25 @@ const steps = [
         q: "Sign-off bij **'Dear Mrs Brown'**?",
         options: ["Yours sincerely,", "Yours faithfully,", "Bye,", "Cheers,"],
         answer: 0,
-        wrongHints: [null, "Naam onbekend.", "Informeel.", "Informeel."],
+        wrongHints: [null, "'Yours faithfully' hoort bij een brief zonder naam. Ken je hier de naam van de ontvanger?", "'Bye' zeg je in een gesprek; het is geen vaste afsluiting van een brief. Welke formule hoort bij een formele brief?", "'Cheers' schrijf je aan een vriend. Past dat na 'Dear Mrs Brown'?"],
       },
       {
         q: "Welke is **samentrekking**?",
-        options: ["I'm", "I am", "Im", "Iam"],
+        options: ["I'm", "I am", "Im", "I'am"],
         answer: 0,
-        wrongHints: [null, "Geen samentrekking.", "Spelling fout.", "Spelling fout."],
+        wrongHints: [null, "'I am' is de volledige vorm. Wat gebeurt er met de letters bij een samentrekking?", "Bij een samentrekking zet je een apostrof op de plek van de weggelaten letter. Waar is die hier?", "In 'I'am' staat een apostrof, maar er is geen letter weggelaten. Welke letter valt weg bij de samentrekking?"],
       },
       {
         q: "Welk woord = **conclusie-signaal**?",
         options: ["In conclusion", "Firstly", "For example", "However"],
         answer: 0,
-        wrongHints: [null, "Eerste argument.", "Voorbeeld.", "Tegenstelling."],
+        wrongHints: [null, "'Firstly' opent je eerste argument. Staat dat aan het begin of aan het eind?", "'For example' leidt een voorbeeld in. Rond je daarmee je tekst af?", "'However' geeft een tegenstelling aan. Welk signaalwoord kondigt het slot aan?"],
       },
       {
         q: "**Their** vs **There** — welke is van bezit?",
         options: ["Their", "There", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Plek (daar).", "Verschillende functies.", "Eén van de twee is wél bezittelijk."],
+        wrongHints: [null, "'There' betekent 'daar', zoals in 'over there'. Zegt dat van wie iets is?", "Ze klinken hetzelfde, maar elk heeft een eigen betekenis. Welke van de twee zegt van wie iets is?", "Eén van de twee is wél bezittelijk."],
       },
       {
         q: "Een **samenvatting** is ... ?",
@@ -311,9 +311,9 @@ const steps = [
       },
       {
         q: "Welke is **goed gespeld**: 'definately' of 'definitely'?",
-        options: ["definitely", "definately", "definatley", "Beide"],
+        options: ["definitely", "definately", "definitly", "Beide"],
         answer: 0,
-        wrongHints: [null, "Veelgemaakte fout.", "Geen Engels.", "Slechts één klopt."],
+        wrongHints: [null, "Dit is een veelgemaakte fout. Denk aan het stamwoord 'finite': welke klinker staat er na de n?", "Hier mist een letter. Denk aan het stamwoord 'finite': wat staat er na de t?", "In het Engels is er maar één goede spelling. Welke past bij het stamwoord 'finite'?"],
       },
       {
         q: "*'**Open question**: write a polite opening to a formal email (name unknown).'* Typ de aanhef.",
