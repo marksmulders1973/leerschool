@@ -54,12 +54,12 @@ const steps = [
         q: "Welke leertruc helpt het meest voor woordenschat?",
         options: [
           "Per thema + herhalen over een week",
-          "Eén keer hardop, dan klaar",
-          "Alleen vertalingen invullen",
-          "Alleen lezen zonder vertalen",
+          "Alle woorden op één avond stampen",
+          "Lange lijsten op alfabet leren",
+          "Elk woord tien keer overschrijven",
         ],
         answer: 0,
-        wrongHints: [null, "Eén keer is niet genoeg — herhaling werkt beter.", "Alleen invullen zonder context werkt slecht.", "Lezen helpt, maar zonder begrijpen niet."],
+        wrongHints: [null, "Stampen op één avond voelt efficiënt. Maar hoeveel weet je er na een week nog van?", "Op alfabet staan woorden zonder verband. Onthoud je woorden beter los, of in een groepje dat bij elkaar hoort?", "Overschrijven kost veel tijd, en je oefent alleen op die ene dag. Wat helpt om het woord volgende week nog te weten?"],
         uitlegPad: {
           stappen: [{ titel: "Twee elementen", tekst: "Thema = woorden bij elkaar (eten, kleding...). Herhalen = meerdere keren in een week (spaced repetition)." }],
           woorden: [{ woord: "spaced repetition", uitleg: "Herhalen met steeds langere tussenpozen — een van de best onderzochte leertechnieken." }],
@@ -175,7 +175,7 @@ const steps = [
         q: "Wat is het meervoud van **foot**?",
         options: ["feet", "foots", "feets", "footes"],
         answer: 0,
-        wrongHints: [null, "Niet -s — onregelmatig.", "Niet -s.", "Niet -es."],
+        wrongHints: [null, "Niet -s — onregelmatig.", "Feet is al meervoud. Moet daar dan nog een -s achter?", "Foot is onregelmatig, net als tooth – teeth. Wat verandert er in het midden van het woord?"],
         uitlegPad: {
           stappen: [{ titel: "foot → feet", tekst: "Onregelmatig meervoud: oo→ee. Foot wordt feet (geen -s)." }],
           woorden: [{ woord: "feet", uitleg: "Meervoud van foot (voet). Klanksprong oo→ee." }],
@@ -293,7 +293,7 @@ const steps = [
         q: "Wat is het meervoud van **mouse**?",
         options: ["mice", "mouses", "mices", "mouse"],
         answer: 0,
-        wrongHints: [null, "Niet -s.", "Niet -s.", "Verschilt enkelvoud/mv."],
+        wrongHints: [null, "Mouse is onregelmatig, net als foot – feet. Krijgt het dan een -s?", "Mice is al meervoud. Moet daar dan nog een -s achter?", "Mouse is het enkelvoud. Blijft het in het meervoud hetzelfde, zoals sheep?"],
         uitlegPad: {
           stappen: [{ titel: "mouse → mice", tekst: "Onregelmatig: mouse (1) → mice (meerdere). Klanksprong ou→i." }],
           woorden: [{ woord: "mice", uitleg: "Meervoud van mouse (muis)." }],
@@ -377,7 +377,7 @@ const steps = [
         q: "Hoe schrijf je **maandag** in Engels?",
         options: ["Monday", "monday", "Mounday", "Mondag"],
         answer: 0,
-        wrongHints: [null, "Hoofdletter bij dagen!", "Spelfout.", "Geen Engels."],
+        wrongHints: [null, "Hoofdletter bij dagen!", "Mounday heeft een letter te veel. Hoe schrijf je het eerste stukje van het woord?", "Mondag lijkt op het Nederlands en het Duits. Op welke letters eindigen alle Engelse dagen?"],
         uitlegPad: {
           stappen: [{ titel: "Monday — hoofdletter", tekst: "Engelse dagen krijgen ALTIJD hoofdletter. Monday, Tuesday, Wednesday..." }],
           woorden: [{ woord: "Monday", uitleg: "Maandag. M-O-N-D-A-Y. Komt van 'Moon-day'." }],
@@ -477,7 +477,7 @@ const steps = [
         q: "Wat betekent: *I'm wearing a red dress.*",
         options: ["Ik draag een rode jurk.", "Ik koop een rode jurk.", "Ik ben een rode jurk.", "Ik wil een rode jurk."],
         answer: 0,
-        wrongHints: [null, "Wear ≠ buy.", "Wearing ≠ I am.", "Wearing ≠ want."],
+        wrongHints: [null, "Kopen is buy. Welk werkwoord staat er in de zin?", "'Ik ben' is I am. Maar wat doet 'wearing' achter I'm?", "Willen is want. Staat dat in de zin?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woord-voor-woord", tekst: "I'm = ik ben (bezig). Wearing = dragend. A red dress = een rode jurk. Samen: 'Ik draag een rode jurk'." }],
           woorden: [{ woord: "to wear", uitleg: "Dragen (kleding). Onregelmatig: wear-wore-worn." }],

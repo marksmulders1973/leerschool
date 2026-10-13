@@ -263,3 +263,97 @@ Controle: `node --check` op alle 6 bestanden groen; `vergelijk-met-main.mjs --al
 - **pincode-werk-arbeidsmarkt** (pincodeWerkArbeidsmarkt.js) stap 7 vraag 5 · optie 3: "Een verzekering is alleen voor mensen met veel geld" → "Een verzekering wordt door de gemeente uitbetaald" · hint 3: "Voor iedereen." → "De gemeente betaalt de bijstand, en dat is een voorziening. Wat is het kenmerk van een verzekering?" · optie 4: "Een voorziening is alleen voor mensen boven de 65" → "Een voorziening krijg je pas vanaf je 65e" · hint 4: "Niet leeftijdsgebonden." → "Bijstand is een voorziening en die krijg je ook op je 30e. Wat is dan het echte verschil?"
 - **pincode-werk-arbeidsmarkt** (pincodeWerkArbeidsmarkt.js) stap 7 vraag 6 · optie 1 (goed): "Vergrijzing" → "Door de vergrijzing" · optie 2: "Te veel jongeren" → "Door stijgende lonen" · hint 2: "Tegendeel." → "Hogere lonen betekenen juist meer premie-inkomsten. Wat zorgt dan voor druk?" · optie 3: "Iedereen wordt rijker" → "Door minder werklozen" · hint 3: "Tegendeel." → "Minder werklozen betekent minder WW-uitkeringen. Is dat een probleem voor het stelsel?" · optie 4: "Er zijn te weinig ouderen" → "Door meer werkenden" · hint 4: "Tegendeel — het aantal ouderen groeit juist." → "Meer werkenden betalen meer premie. Wat zorgt dan juist voor meer uitkeringen?"
 - Daarnaast `uitlegPad.basiskennis` afgestemd op de nieuwe opties bij: pincode-geld-sparen-lenen 1.2, 1.3, 3.3, 3.4, 5.6, 5.7, 7.2, 9.6; pincode-werk-arbeidsmarkt 4.6, 6.4, 7.5, 7.6.
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 87 gemarkeerde vragen (90 meldingen, incl. 3 taal) · **64 hersteld** · **13 vals alarm** · **10 twijfel**. Plus de 3 bekende vondsten (werk 1.2 zzp-letters, werk 7.6 vergrijzing, geld 7.4 sparen-eerst) — alle drie hersteld.
+
+Aanpak: afleiders vervangen door echte verwisselingen uit de lesstof (bv. aflossen ↔ afschrijven, kosteninflatie ↔ vraaginflatie, relatie-/zusterbedrijf ↔ moederbedrijf), meerderheidspatronen gebroken (BBP-afkorting: elke woordvariant komt even vaak voor; recessie, ECB-rente, werkloosheidssoorten en cijfercombinatie met een lokvogel die de meerderheid heeft), absurde/kale hints herschreven tot denkprikkel, en lekken tussen vragen gedicht (Sonac 3.1↔4.1: Darling-hint en "Smits Vuren BV" weg; geld 8.1-hints "geen onderpand → hogere rente" verklapten 8.2; spaargarantie-€100.000 uit geld 4.2-afleider). Taal: "Seizoens" → "Seizoen" in alle 6 werkloosheidsvragen (ook de niet-gemarkeerde). `uitlegPad.basiskennis` afgestemd bij geld 3.2, 3.4, 3.6, 9.6 en werk 1.2, 6.4, 6.5, 6.6, 7.6. Controle: `node --check` ok, vergelijk-met-main 0 afwijkingen.
+
+**Vals alarm (13)** — begrip zelf ís de lesstof, afleiders al uit dezelfde categorie: balans 1.1, 2.2, 4.1, 10.8 · bbp 1.5 · geld 4.3, 4.5, 4.6, 5.4 (€100.000 staat in de lesstof van stap 4) · werk 1.6, 2.3, 3.6, 4.3.
+
+### Twijfel voor Mark
+- balansBeco 10.12 — het antwoord ("gelijk zijn") staat in `q` ("links = rechts"); niet te herstellen zonder `q` te wijzigen.
+- balansBeco 10.14 — `q` schrijft "Winst & Verliesrekening"; moet "winst-en-verliesrekening" zijn (q niet gewijzigd).
+- bbpConjunctuurEconomie 3.4 en pincodeGeldSparenLenen 6.5 — "hyper" in `q` verklapt "extreem"; alleen de hints herschreven zodat ze 'hyper' niet meer uitleggen.
+- cryptoBlockchainGeldBeco 6.1 en (deels) geld 4.4 — gedrags-/oplichtingsvraag: wie gezond verstand gebruikt kiest "niet doen"; afleiders zijn al verstandig klinkend, verder forceren heeft geen zin.
+- pincodeGeldSparenLenen 1.3 (ruilhandel) — elke geloofwaardige afleider is óók een echt nadeel van ruilhandel (waarde bepalen, bewaren, opdelen); bank/btw-afleiders blijven daardoor zwak. Voorstel: vraag ombouwen naar "welk nadeel lost geld op als ruilmiddel?".
+- pincodeGeldSparenLenen 9.2 — onderpand = het huis staat letterlijk in `q` van 8.1 ("huis als onderpand"); lek via de vraagtekst, niet via opties.
+- pincodeGeldSparenLenen 5.7 — `q` "Stort jij €1.000 op de bank." is onnatuurlijk; beter "Je stort €1.000 op de bank." (q niet gewijzigd).
+- pincodeWerkArbeidsmarkt 2.5 — "wederzijds" in `q` verklapt "samen"; hints herschreven zodat ze 'wederzijds' niet meer vertalen.
+- pincodeWerkArbeidsmarkt 6.4 — antwoord + lesstof zeggen ~€60 per gewerkt uur; actuele cijfers (CBS/OECD) liggen eerder rond €75-80. Feit laten checken en dan antwoord + stap-6-tekst samen bijwerken. Afleider "Niet meetbaar" → "€35 per uur" en de onjuiste hint "€25 ligt iets boven het minimumloon" zijn al hersteld.
+
+### Per vraag oud → nieuw
+- balansBeco.js 3.1 · optie 1: "Gebouw of machine" → "Bedrijfspand of een machine" · optie 2: "Voorraad" → "Voorraad voor het hele jaar" · optie 3: "Bankrekening" → "Geld op de spaarrekening" · hint 2,3,4 herschreven
+- balansBeco.js 6.1 · optie 2: "Winst = Opbrengsten + Kosten" → "Winst = Eigen − Vreemd vermogen" · hint 2,4 herschreven
+- balansBeco.js 8.2 · optie 2: "Het is geld dat elk jaar van de bank afgaat" → "Het is een kostenpost, en er gaat elk jaar geld van de bank af" · optie 3: "Het is een soort belasting op bezittingen" → "Het is geen kostenpost, omdat er geen geld weggaat" · optie 4: "Het is het weggooien van een oude machine" → "Het is een kostenpost die je alleen in het aankoopjaar boekt" · hint 2,3,4 herschreven
+- balansBeco.js 9.2 · optie 1: "Belasting over de verkoopprijs, die het bedrijf afdraagt" → "Belasting over de verkoopprijs van producten"
+- balansBeco.js 10.6 · optie 1: "Hoe snel je bezit kunt omzetten in geld" → "Hoe snel je bezit in geld omzet" · hint 2,4 herschreven
+- balansBeco.js 10.7 · optie 2: "Oude machines weggooien en laten afvoeren" → "De hele aankoopprijs in één jaar als kosten boeken" · optie 3: "Korting geven op producten aan vaste klanten" → "Een lening voor de machine in delen aflossen" · hint 2,3,4 herschreven
+- balansBeco.js 10.9 · optie 3: "Machine" → "Banklening" · hint 3 herschreven
+- balansBeco.js 10.10 · optie 3: "Belasting" → "Rekening-courantkrediet" · optie 4: "Salaris" → "Te betalen btw" · hint 3,4 herschreven
+- bbpConjunctuurEconomie.js 1.1 · optie 2: "Bruto Buitenlands Product" → "Bruto Buitenlands Prijspeil" · optie 3: "Bruto Binnenlands Prijspeil" → "Begroting Binnenlands Prijspeil" · optie 4: "Begroting Binnenlands Product" → "Begroting Buitenlands Product" · hint 2,3,4 herschreven
+- bbpConjunctuurEconomie.js 1.2 · optie 1: "Huishoudelijk werk en vrijwilligerswerk" → "Vrijwilligerswerk bij de voetbalclub" · optie 3: "Een etentje in een restaurant" → "Gratis les op een openbare basisschool" · hint 3 herschreven
+- bbpConjunctuurEconomie.js 2.2 · optie 4: "2 kwartalen stijgende inflatie" → "Een jaar lang stijgende werkloosheid" · hint 2,4 herschreven
+- bbpConjunctuurEconomie.js 2.3 · optie 3: "Lonen en prijzen dalen, werkloosheid daalt" → "Lonen stijgen, prijzen dalen, werkloosheid daalt" · hint 3 herschreven
+- bbpConjunctuurEconomie.js 3.2 · optie 2: "Lonen en grondstoffen worden duurder" → "Vakbonden vragen en krijgen hogere lonen" · hint 2 herschreven
+- bbpConjunctuurEconomie.js 3.4 · hint 2,4 herschreven
+- bbpConjunctuurEconomie.js 4.1 · optie 2: "Frictie / conjunctureel / structureel / inflatoir" → "Frictie / conjunctureel / seizoen / jeugd" · optie 3: "Conjunctureel / structureel / tijdelijk / vrijwillig" → "Frictie / structureel / seizoen / jeugd" · optie 4: "Frictie / seizoen / jeugd / langdurig" → "Conjunctureel / structureel / jeugd / inflatoir" · hint 2,3,4 herschreven
+- bbpConjunctuurEconomie.js 4.4 · optie 1: "Onvrijwillig werklozen met arbeidsverleden" → "Werknemers die buiten eigen schuld hun baan kwijtraken" · optie 2: "Iedereen vanaf 18 jaar die geen baan heeft" → "Schoolverlaters die nog geen eerste baan vinden" · optie 3: "Studenten die hun bijbaan zelf opzeggen" → "Werknemers die zelf ontslag nemen voor een opleiding" · optie 4: "Gepensioneerden boven de AOW-leeftijd" → "Werknemers die langdurig ziek zijn en niet kunnen werken" · hint 2,3,4 herschreven
+- bbpConjunctuurEconomie.js 5.1 · optie 3: "Door bedrijven — prijzen + lonen" → "Door commerciële banken — spaargeld + leningen" · hint 2,3 herschreven
+- bbpConjunctuurEconomie.js 6.1 · optie 2: "Bruto Bedrijfs Productie" → "Basis Binnenlands Productie" · optie 3: "Netto Binnenlands Product" → "Basis Bedrijfs Product" · optie 4: "Bruto Buitenlands Product" → "Bruto Bedrijfs Productie" · hint 2,3,4 herschreven
+- bbpConjunctuurEconomie.js 6.2 · optie 2: "Inflatie" → "Cyclus" · hint 2 herschreven
+- bbpConjunctuurEconomie.js 6.4 · optie 1: "Seizoens" → "Seizoen"
+- bbpConjunctuurEconomie.js 6.9 · optie 4: "Seizoens" → "Seizoen"
+- bbpConjunctuurEconomie.js 6.10 · optie 4: "Seizoens" → "Seizoen"
+- bbpConjunctuurEconomie.js 6.12 · optie 3: "Inflatie gaat juist omhoog" → "Lenen duurder, inflatie stijgt" · optie 4: "Sparen wordt minder aantrekkelijk" → "Lenen goedkoper, inflatie remmen" · hint 3,4 herschreven
+- bbpConjunctuurEconomie.js 6.13 · optie 3: "Stijgende inflatie" → "Lage inflatie / stabiele prijzen"
+- bbpConjunctuurEconomie.js 6.14 · optie 4: "Hoge rente + dalende huizenprijzen tegelijk" → "Hoge inflatie + hoge groei + weinig werkloosheid" · hint 3,4 herschreven
+- bbpConjunctuurEconomie.js 6.15 · optie 4: "Werkloosheid + lonen + huizenprijzen" → "BBP-groei + werkloosheid + rente" · hint 4 herschreven
+- bbpConjunctuurEconomie.js 6.16 · optie 2: "Spaargeld werd meer waard" → "Prijzen daalden door geldgebrek" · optie 4: "Papiergeld werd afgeschaft" → "Er werd te weinig geld bijgedrukt" · hint 2,4 herschreven
+- cryptoBlockchainGeldBeco.js 1.1 · optie 1: "Omdat iedereen afspreekt en vertrouwt dat het 10 euro waard is" → "Omdat iedereen erop vertrouwt dat het 10 euro waard is" · optie 4: "Omdat de winkel het briefje zelf maakt en goedkeurt" → "Omdat het papier en de inkt veel geld kosten" · hint 4 herschreven
+- cryptoBlockchainGeldBeco.js 3.1 · optie 1: "Crypto wordt niet door een bank beheerd, maar door een computernetwerk" → "Crypto beheert geen bank, maar een netwerk van computers" · optie 2: "Crypto wordt door de Europese Centrale Bank uitgegeven" → "Crypto wordt beheerd door de beurs waar je het koopt" · optie 3: "Crypto staat op je bankrekening, maar in een aparte munt" → "Crypto is anoniem en kan daarom niet gestolen worden" · optie 4: "Crypto heeft dezelfde spaargarantie tot €100.000 als een bank" → "Crypto heeft een vaste koers die de overheid bepaalt" · hint 2,3,4 herschreven
+- cryptoBlockchainGeldBeco.js 4.1 · optie 3: "De overheid keurt elke betaling eerst goed voordat hij doorgaat" → "Elke betaling is versleuteld, dus niemand kan hem lezen" · hint 3 herschreven
+- cryptoBlockchainGeldBeco.js 5.1 · optie 1: "Je bent je crypto voorgoed kwijt; geen bank kan het terughalen" → "Je crypto is voorgoed weg; niemand kan het terughalen" · optie 2: "Je bank stuurt je binnen een paar dagen een nieuwe sleutel" → "Je bank boekt het na een melding binnen 30 dagen terug" · optie 4: "Niets aan de hand, je logt gewoon opnieuw in met je e-mail" → "De helpdesk zet het terug na een check van je paspoort" · hint 2,4 herschreven
+- moederbedrijfOvernameSonacBeco.js 1.1 · optie 3: "Voorganger" → "Hoofdkantoor" · optie 4: "Concurrent" → "Zusterbedrijf" · hint 2,3,4 herschreven
+- moederbedrijfOvernameSonacBeco.js 2.1 · optie 2: "Een faillissement" → "Een uitbesteding" · optie 3: "Een staking" → "Een afsplitsing" · hint 2,3 herschreven
+- moederbedrijfOvernameSonacBeco.js 3.1 · hint 4 herschreven
+- moederbedrijfOvernameSonacBeco.js 4.1 · optie 4: "Smits Vuren BV" → "Danish Crown" · hint 4 herschreven
+- pincodeGeldSparenLenen.js 1.4 · optie 4: "Uit één groot stuk bestaan" → "Van papier of metaal gemaakt zijn" · hint 4 herschreven
+- pincodeGeldSparenLenen.js 2.1 · optie 2: "Je spaart eigenlijk €60 op bij Klarna" → "De winkel leent eigenlijk €60 van jou" · hint 2 herschreven
+- pincodeGeldSparenLenen.js 2.2 · optie 4: "Geen van deze" → "Contant betalen" · hint 4 herschreven
+- pincodeGeldSparenLenen.js 2.5 · optie 1: "Vraag jezelf af: kan ik €200 nu missen? Zo niet, niet kopen." → "Eerst checken of ze €200 nu kan missen, anders niet kopen"
+- pincodeGeldSparenLenen.js 3.2 · optie 3: "Hogere rente voor zakelijke klanten" → "Rente met een vast en een variabel deel" · hint 3 herschreven
+- pincodeGeldSparenLenen.js 3.4 · optie 3: "Een creditcard-rekening" → "Een pensioenspaarrekening" · hint 3 herschreven
+- pincodeGeldSparenLenen.js 3.5 · optie 4: "Het levert toch geld op door de inflatie" → "Zo groeit je geld mee met de stijgende prijzen" · hint 4 herschreven
+- pincodeGeldSparenLenen.js 3.6 · optie 3: "De bank gaat failliet en je bent je geld kwijt" → "Je krijgt minder rente, maar nog wel iets" · hint 3 herschreven
+- pincodeGeldSparenLenen.js 4.2 · optie 2: "Sparen levert meer op; beleggen is veiliger, want aandelen dalen zelden" → "Beleggen is veilig met lage rente; sparen kan meer opleveren maar ook verlies" · optie 4: "Beleggen is net zo veilig als sparen, dankzij de garantie tot €100.000" → "Beide zijn veilig door de spaargarantie, maar beleggen levert meer op" · hint 4 herschreven
+- pincodeGeldSparenLenen.js 4.4 · optie 4: "Dat krijg je ook gewoon op een spaarrekening" → "Kan kloppen bij een goed gespreid beleggingsfonds" · hint 4 herschreven
+- pincodeGeldSparenLenen.js 4.7 · optie 1: "Heel hoog risico, zonder garantie" → "Heel hoog risico: de koers kan hard dalen" · optie 2: "Veilig, want de bank garandeert het" → "Laag risico, want steeds meer mensen kopen het" · optie 3: "Levert elk jaar vast 10% rendement op" → "Even veel risico als een gespreid aandelenfonds" · optie 4: "Waardevast, want er is maar weinig bitcoin" → "Weinig risico, want er is maar weinig bitcoin" · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 5.5 · optie 1: "Contant geld (M0) + giraal geld op betaalrekeningen" → "Contant geld + geld op betaalrekeningen" · optie 3: "Spaargeld + beleggingen van alle huishoudens" → "Contant geld + geld op spaarrekeningen" · optie 4: "Buitenlands geld (dollars, ponden) in Nederland" → "Alleen geld op betaalrekeningen (giraal)" · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 6.4 · optie 3: "Belastingen worden afgeschaft (btw, accijns)" → "De rente op leningen gaat flink omhoog" · optie 4: "Lonen worden verlaagd (minder koopkracht)" → "De euro wordt meer waard ten opzichte van de dollar" · hint 3,4 herschreven
+- pincodeGeldSparenLenen.js 6.5 · hint 2,4 herschreven
+- pincodeGeldSparenLenen.js 7.1 · optie 4: "Bioscoop-bezoek" → "Snacks in de kantine" · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 7.4 · optie 2: "De bank geeft extra rente als je vroeg in de maand spaart" → "Dan hoef je de rest van de maand niet meer op te letten" · optie 3: "Spaargeld is aan het eind van de maand minder waard" → "Zo laat je de bank zien dat je goed met geld omgaat" · optie 4: "Als je later spaart, betaal je meer belasting over je geld" → "Zo spaar je het geld voordat de prijzen stijgen" · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 7.6 · hint 2,3 herschreven
+- pincodeGeldSparenLenen.js 8.1 · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 8.2 · optie 2: "Banken willen klanten straffen voor rood staan" → "De bank betaalt spaarders er een hoge rente van" · hint 2 herschreven
+- pincodeGeldSparenLenen.js 8.5 · optie 1: "Voor een huis of een opleiding" → "Voor een eigen huis of een studie" · optie 2: "Voor een vakantie of een festival" → "Voor een vakantie waar je aan toe bent" · optie 3: "Voor een nieuwe telefoon of game" → "Voor een telefoon die je veel gebruikt" · optie 4: "Voor nieuwe kleren of schoenen" → "Voor merkkleding die lang meegaat" · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 8.6 · optie 2: "Klarna scheldt de schuld na een tijdje gewoon kwijt" → "Je betaalt eenmalig €5 boete en daarmee is het klaar" · optie 3: "Je krijgt automatisch extra tijd, zonder extra kosten" → "De winkel haalt de spullen weer bij je thuis op" · optie 4: "Klarna betaalt het zelf en jij hoeft niets meer" → "Je ouders moeten de schuld dan voor je betalen" · hint 2,3,4 herschreven
+- pincodeGeldSparenLenen.js 9.5 · optie 1: "Notaris, taxatie, advies en eventueel overdrachtsbelasting" → "Notariskosten, taxatie en vaak overdrachtsbelasting" · optie 3: "De rente en aflossing van het eerste jaar, vooraf" → "Rente, aflossing en verzekering van het eerste jaar" · optie 4: "Een borgsom van drie maanden, zoals bij huren" → "Een borgsom en de eerste maandhuur, zoals bij huren" · hint 3 herschreven
+- pincodeGeldSparenLenen.js 9.6 · optie 1: "Om bij baanverlies de hypotheek te kunnen blijven betalen" → "Om bij baanverlies de maandlasten te kunnen betalen" · optie 2: "De bank wil het geld als extra onderpand naast het huis" → "Om over een paar jaar een groter huis te kopen" · optie 3: "Met spaargeld op de bank krijg je een lagere hypotheekrente" → "Om de verbouwing van je nieuwe huis te betalen" · hint 2,3 herschreven
+- pincodeWerkArbeidsmarkt.js 1.2 · optie 2: "Vaste werknemer met een contract" → "Zelfstandige zorgprofessional" · optie 3: "Iemand die uitzendwerk doet" → "Zakelijk zelfstandig persoon" · optie 4: "Werkloze die een uitkering krijgt" → "Zelfstandig zakelijk partner" · hint 2,3,4 herschreven
+- pincodeWerkArbeidsmarkt.js 1.3 · hint 2,3,4 herschreven
+- pincodeWerkArbeidsmarkt.js 2.3 · hint 4 herschreven
+- pincodeWerkArbeidsmarkt.js 2.5 · hint 3,4 herschreven
+- pincodeWerkArbeidsmarkt.js 5.1 · optie 4: "Seizoens" → "Seizoen"
+- pincodeWerkArbeidsmarkt.js 5.2 · optie 2: "Alle inwoners van Nederland" → "Alle inwoners tussen 15 en 75 jaar oud" · optie 3: "Alleen de werkenden van 15-75 jaar" → "Iedereen met betaald werk van 15-75 jaar" · optie 4: "Alleen de werkzoekenden van 15-75 jaar" → "Werkenden + werkzoekenden + studenten" · hint 2,3,4 herschreven
+- pincodeWerkArbeidsmarkt.js 5.4 · optie 4: "Seizoens" → "Seizoen"
+- pincodeWerkArbeidsmarkt.js 5.5 · optie 1: "Seizoens" → "Seizoen" · hint 3 herschreven
+- pincodeWerkArbeidsmarkt.js 6.1 · hint 2,3,4 herschreven
+- pincodeWerkArbeidsmarkt.js 6.2 · optie 1: "Betere machines + opleiding + organisatie" → "Betere machines + beter opgeleid personeel" · hint 2,4 herschreven
+- pincodeWerkArbeidsmarkt.js 6.3 · optie 1: "Goedkoper produceren OF hogere lonen" → "Lagere kosten per product of hogere lonen" · optie 2: "Hogere prijzen voor de consument" → "Hogere prijzen en hogere lonen" · optie 4: "Minder winst voor bedrijven" → "Lagere winst en minder investeringen" · hint 2,4 herschreven
+- pincodeWerkArbeidsmarkt.js 6.4 · optie 1: "€60 per gewerkt uur" → "€60 per uur" · optie 4: "Niet meetbaar" → "€35 per uur" · hint 2,4 herschreven
+- pincodeWerkArbeidsmarkt.js 6.5 · optie 2: "Productiviteit is altijd hoog als je met computers werkt" → "Ondanks langere werkdagen daalt de productiviteit per uur" · optie 4: "Computers werken slechter dan mensen die het met de hand doen" → "Ondanks lagere lonen stijgt de productiviteit sneller" · hint 2,4 herschreven
+- pincodeWerkArbeidsmarkt.js 6.6 · optie 2: "Er is geen verband tussen lonen en productiviteit" → "Op lange termijn stijgen lonen sneller dan productiviteit" · optie 4: "Lonen stijgen alleen als werknemers gaan staken" → "Lonen stijgen vooral als vakbonden actie voeren" · hint 2,4 herschreven
+- pincodeWerkArbeidsmarkt.js 7.6 · optie 1: "Door de vergrijzing" → "Door de vergrijzing in Nederland" · optie 2: "Door stijgende lonen" → "Door fraude met uitkeringen" · optie 3: "Door minder werklozen" → "Door de hoge staatsschuld" · optie 4: "Door meer werkenden" → "Door de lage rente op spaargeld" · hint 2,3,4 herschreven

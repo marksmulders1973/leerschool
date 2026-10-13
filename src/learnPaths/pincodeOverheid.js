@@ -63,9 +63,9 @@ const steps = [
       },
       {
         q: "Welke taak van de overheid is **inkomensverdeling**?",
-        options: ["Belasting heffen om verschil arm/rijk te verkleinen", "Voor alle werknemers hetzelfde loon vastzetten", "Banen eerlijk verdelen over alle werklozen", "Prijzen in alle winkels laag vastzetten"],
+        options: ["Via belasting en toeslagen geld herverdelen", "Voor alle werknemers hetzelfde loon vastzetten", "Banen eerlijk verdelen over alle werklozen", "Prijzen in alle winkels laag vastzetten"],
         answer: 0,
-        wrongHints: [null, "Loon wordt op de markt bepaald (behalve minimumloon).", "Banen verdelen doet de markt.", "Prijzen bepaalt de markt. Verkleint dat het verschil tussen arm en rijk?"],
+        wrongHints: [null, "Lonen worden op de markt en in cao's bepaald. Zet de overheid alle lonen vast?", "Werkgevers kiezen zelf wie ze aannemen. Verdeelt de overheid de banen?", "Prijzen bepaalt de markt. Verkleint dat het verschil tussen arm en rijk?"],
         uitlegPad: {
           stappen: [{ titel: "Herverdelen via belasting", tekst: "Inkomensverdeling = overheid verkleint verschillen tussen arm en rijk. Methode: hoge inkomens belasten + lage inkomens steunen (toeslagen, uitkeringen)." }],
           woorden: [{ woord: "inkomensverdeling", uitleg: "Overheidstaak: ongelijkheid tussen arm en rijk verkleinen via belasting + uitkeringen." }, { woord: "progressieve belasting", uitleg: "Hoger inkomen → hoger %. Maakt netto-verschillen kleiner." }],
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Wat is een **verzorgingsstaat**?",
-        options: ["Land waar de overheid veel sociale taken heeft", "Land waar de overheid alleen voor veiligheid zorgt", "Land waar burgers hun zorg zelf regelen en betalen", "Land waar de overheid alle bedrijven bezit"],
+        options: ["Land waar de overheid veel sociale taken heeft", "Land waar de overheid vooral voor veiligheid zorgt", "Land waar families zelf voor zieken en ouderen zorgen", "Land waar de overheid alle bedrijven bezit"],
         answer: 0,
-        wrongHints: [null, "Dat is een nachtwakersstaat.", "Wie betaalt in een verzorgingsstaat mee aan zorg en uitkeringen: ieder voor zich, of iedereen samen via de overheid?", "Dat heet een planeconomie. Mogen er in een verzorgingsstaat gewoon private bedrijven zijn?"],
+        wrongHints: [null, "Dat heet een nachtwakersstaat. Doet de overheid in een verzorgingsstaat meer of minder?", "Wie betaalt in een verzorgingsstaat mee aan zorg en uitkeringen: ieder gezin voor zich, of iedereen samen via de overheid?", "Dat heet een planeconomie. Mogen er in een verzorgingsstaat gewoon private bedrijven zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Veel sociale taken + hoge belasting", tekst: "Verzorgingsstaat = land waar overheid veel SOCIALE taken vervult: gezondheidszorg, onderwijs, uitkeringen. Burger betaalt veel belasting, krijgt veel publieke voorzieningen terug." }],
           woorden: [{ woord: "verzorgingsstaat", uitleg: "Staatsmodel met sterk publiek systeem voor zorg, onderwijs, sociale zekerheid." }, { woord: "liberale staat", uitleg: "Staat waar overheid weinig doet en markt veel — VS-model." }],
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Een **extern effect** is bv:",
-        options: ["Een fabriek vervuilt een rivier; omwonenden hebben last", "Een belastingverlaging voor bedrijven in de buurt", "Hogere lonen voor werknemers van de fabriek", "De fabriekseigenaar zet zijn winst op de bank"],
+        options: ["Een fabriek vervuilt een rivier; omwonenden hebben last", "Een fabriek verhoogt de prijs; klanten betalen meer", "Een fabriek betaalt meer loon; werknemers verdienen meer", "Een fabriek krijgt subsidie; belastingbetalers betalen mee"],
         answer: 0,
-        wrongHints: [null, "Beleidsmaatregel, geen extern effect.", "Werknemers doen zelf mee — dat is geen effect op buitenstaanders.", "Spaargeld is privé. Heeft iemand buiten de fabriek daar last van?"],
+        wrongHints: [null, "Klanten kiezen zelf of ze kopen en betalen via de markt. Is dat een effect buiten de markt om?", "Werknemers doen zelf mee aan de ruil met de fabriek. Is dat een effect op buitenstaanders?", "Subsidie is een bewuste keuze van de overheid. Ontstaat dat effect per ongeluk, zonder dat er een prijs voor betaald wordt?"],
         uitlegPad: {
           stappen: [{ titel: "Effect VOOR ANDEREN", tekst: "Extern effect = gevolg van een activiteit voor mensen die er NIET aan deelnemen. Fabriek vervuilt → omwonenden krijgen ziekteklachten. Niet in prijs verrekend." }],
           woorden: [{ woord: "extern effect", uitleg: "Positief of negatief gevolg voor derden, niet meegenomen in de marktprijs." }, { woord: "negatief extern effect", uitleg: "Schade voor derden: vervuiling, geluidsoverlast, files." }, { woord: "positief extern effect", uitleg: "Voordeel voor derden: onderwijs (slimmere samenleving), bijenhouder (bestuiving voor buurtboer)." }],
@@ -200,7 +200,7 @@ const steps = [
         q: "Een **waterschap** zorgt voor:",
         options: ["Dijken, sloten en waterkwaliteit", "Scholen, leraren en lesmateriaal", "Politie, brandweer en ambulance", "Parkeren, wegen en straatverlichting"],
         answer: 0,
-        wrongHints: [null, "Onderwijs is gemeente/Rijk.", "Politie, brandweer en ambulance vallen niet onder het waterschap.", "Parkeren en straatverlichting regelt de gemeente."],
+        wrongHints: [null, "Scholen worden door het Rijk betaald. Heeft het waterschap daar iets mee te maken?", "Politie en brandweer vallen onder het Rijk en de veiligheidsregio's. Horen die bij het waterschap?", "Parkeren en straatverlichting regelt de gemeente."],
         uitlegPad: {
           stappen: [{ titel: "Vierde overheidslaag — water", tekst: "Waterschappen zijn een aparte overheid voor alles wat met WATER te maken heeft: dijken onderhouden, sloten schoonhouden, waterkwaliteit bewaken." }],
           woorden: [{ woord: "waterschap", uitleg: "Speciale overheid voor water. 21 in NL. Heeft eigen verkiezingen + waterschapsbelasting." }],
@@ -212,23 +212,23 @@ const steps = [
       },
       {
         q: "Welke instantie maakt **landelijke wetten**?",
-        options: ["Rijksoverheid", "Gemeenteraad", "Provinciale Staten", "ACM"],
+        options: ["Rijksoverheid", "Gemeenteraad", "Raad van State", "Hoge Raad"],
         answer: 0,
-        wrongHints: [null, "Gemeente maakt verordeningen, geen wetten.", "Provincie maakt geen wetten.", "ACM is een toezichthouder."],
+        wrongHints: [null, "Een gemeenteraad maakt regels voor één gemeente, verordeningen. Geldt dat voor het hele land?", "De Raad van State geeft advies over nieuwe wetten. Maakt hij ze ook zelf?", "De Hoge Raad is de hoogste rechter. Maakt een rechter de wetten?"],
         uitlegPad: {
           stappen: [{ titel: "Wetgevende macht", tekst: "Alleen de Rijksoverheid kan landelijke wetten maken. Procedure: regering dient wetsvoorstel in → Tweede Kamer stemt → Eerste Kamer stemt → Koning ondertekent → wet." }],
           woorden: [{ woord: "wet", uitleg: "Regel die voor heel NL geldt. Gemaakt door Tweede + Eerste Kamer (parlement)." }, { woord: "verordening", uitleg: "Lokale regel van gemeente of provincie — geen wet." }],
           theorie: "Trias politica: wetgevende macht (parlement), uitvoerende macht (regering), rechterlijke macht (rechters). Onafhankelijk van elkaar — controle/balans.",
           voorbeelden: [{ type: "wet", tekst: "Wet op het Hoger Onderwijs, Wegenverkeerswet, AOW-wet, Belastingwet." }, { type: "verordening", tekst: "Parkeerverordening gemeente Amsterdam — alleen geldig in Amsterdam." }],
-          basiskennis: [{ onderwerp: "ACM = uitvoeren", uitleg: "ACM (Autoriteit Consument & Markt) voert wetten UIT, maakt ze niet." }],
+          basiskennis: [{ onderwerp: "Adviseren en rechtspreken", uitleg: "De Raad van State adviseert over nieuwe wetten en de Hoge Raad spreekt recht. Geen van beide maakt de wetten." }],
           niveaus: { basis: "Tweede + Eerste Kamer.", simpeler: "Landelijke wetten = Tweede Kamer + Eerste Kamer (Rijksoverheid).", nogSimpeler: "Parlement" },
         },
       },
       {
         q: "Wat ging er mis bij de **decentralisatie van jeugdzorg** (2015)?",
-        options: ["Gemeenten kregen meer taken maar minder geld dan nodig", "Scholen moesten de jeugdzorg zelf gaan regelen", "Het Rijk nam alle taken van gemeenten terug", "De provincies kregen er te veel taken bij"],
+        options: ["Gemeenten kregen de taak met te weinig geld", "Scholen moesten de jeugdzorg zelf gaan regelen", "Het Rijk nam alle taken van gemeenten terug", "De provincies kregen er te veel taken bij"],
         answer: 0,
-        wrongHints: [null, "Scholen merken wel problemen op. Maar wie kreeg in 2015 de verantwoordelijkheid?", "Het Rijk gaf taken juist áf. Aan wie, en kregen die genoeg geld mee?", "De provincies raakten jeugdzorg in 2015 juist kwijt. Aan wie?"],
+        wrongHints: [null, "Scholen merken wel problemen op. Maar wie kreeg in 2015 de verantwoordelijkheid?", "In 2015 gaf het Rijk juist taken áf. Aan wie?", "De provincies raakten jeugdzorg in 2015 juist kwijt. Aan wie?"],
         uitlegPad: {
           stappen: [{ titel: "Bezuinigingsoperatie", tekst: "Bij decentralisatie 2015 ging jeugdzorg + WMO + bijstand naar gemeenten. Maar het Rijk gaf MINDER geld mee dan de oude budgetten — bezuinigingsoperatie. Gemeenten kwamen in financiële problemen." }],
           woorden: [{ woord: "decentralisatie", uitleg: "Taken van Rijk → gemeenten doorgeven." }, { woord: "korting bij overheveling", uitleg: "Rijk gaf minder geld dan eerder voor dezelfde taken — verwachting was efficiëntiewinst, maar bleek te krap." }],
@@ -324,9 +324,9 @@ const steps = [
       },
       {
         q: "Een **begrotingstekort** betekent:",
-        options: ["Meer uitgaven dan inkomsten", "Meer inkomsten dan uitgaven", "De totale schuld van de staat", "Minder uitgaven dan begroot"],
+        options: ["Meer uitgaven dan inkomsten", "Meer inkomsten dan uitgaven", "De totale schuld van de staat", "Meer uitgegeven dan vooraf begroot"],
         answer: 0,
-        wrongHints: [null, "Dat heet een begrotingsoverschot. Wat is het omgekeerde?", "De schuld is alles wat in de loop der jaren is geleend. Gaat een tekort over één jaar of over alles samen?", "Minder uitgeven dan gepland is een meevaller. Is dat een tekort?"],
+        wrongHints: [null, "Dat heet een begrotingsoverschot. Wat is het omgekeerde?", "De schuld is alles wat in de loop der jaren is geleend. Gaat een tekort over één jaar of over alles samen?", "Dat heet een begrotingsoverschrijding. Is dat hetzelfde als een tekort?"],
         uitlegPad: {
           stappen: [{ titel: "Tekort = bijlenen", tekst: "Begrotingstekort = uitgaven > inkomsten. Verschil moet de overheid LENEN op de kapitaalmarkt via staatsobligaties. Schuld groeit met dat bedrag." }],
           woorden: [{ woord: "begrotingstekort", uitleg: "Negatief saldo: meer uitgaven dan inkomsten. Resultaat: bijlenen + staatsschuld stijgt." }, { woord: "begrotingsoverschot", uitleg: "Positief saldo: inkomsten > uitgaven. Kan worden gebruikt om schuld af te lossen." }],
@@ -385,9 +385,9 @@ const steps = [
       },
       {
         q: "Waarom kan **lenen soms zinvol** zijn voor de overheid?",
-        options: ["Voor investeringen die later geld opleveren", "Om de belasting voor iedereen te verlagen", "Om alle uitkeringen extra hoog te maken", "Om de vaste kosten van elk jaar te betalen"],
+        options: ["Voor investeringen die later geld opleveren", "Om de jaarlijkse lonen van ambtenaren te betalen", "Om de rente op oude schulden te betalen", "Om een buffer op de bank te zetten"],
         answer: 0,
-        wrongHints: [null, "Een belastingverlaging levert later geen geld op. Hoe betaal je de lening dan terug?", "Uitkeringen moet je elk jaar opnieuw betalen. Brengt lenen daarvoor later iets op?", "Vaste kosten van elk jaar met leningen betalen: wat gebeurt er dan met de schuld?"],
+        wrongHints: [null, "Lonen moet je elk jaar opnieuw betalen. Brengt lenen daarvoor later iets op?", "Rente betalen met nieuwe leningen: wat gebeurt er dan met de schuld?", "Over geleend geld betaal je meer rente dan je op de bank krijgt. Levert dat iets op?"],
         uitlegPad: {
           stappen: [{ titel: "Investeren = goede schuld", tekst: "Lenen voor INVESTERINGEN die later geld opleveren is zinvol: spoorlijn, snelweg, onderwijs. Latere generaties profiteren ook → betalen mee via belasting." }],
           woorden: [{ woord: "investering", uitleg: "Uitgave die in de toekomst opbrengsten oplevert (productiviteit, economische groei)." }, { woord: "consumptieve uitgaven", uitleg: "Uitgaven zonder toekomstige opbrengst (uitkeringen, lonen)." }],
@@ -441,9 +441,9 @@ const steps = [
       },
       {
         q: "Hoe **drukt een hoge staatsschuld de samenleving**?",
-        options: ["Rente gaat ten koste van onderwijs en zorg", "Er komt meer geld voor onderwijs en zorg", "Je merkt er in het dagelijks leven weinig van", "De belastingen dalen, want de staat leent"],
+        options: ["Rente gaat ten koste van onderwijs en zorg", "Burgers moeten de schuld zelf persoonlijk aflossen", "De lonen van alle werknemers dalen meteen", "Banken mogen geen leningen meer geven"],
         answer: 0,
-        wrongHints: [null, "Over een schuld betaal je elk jaar rente. Waar haalt de overheid dat geld vandaan?", "Rente betalen gaat ten koste van iets. Merk je dat niet aan voorzieningen of aan belasting?", "Een lening moet terug, met rente. Wie betaalt dat uiteindelijk?"],
+        wrongHints: [null, "Burgers krijgen geen rekening thuis voor de staatsschuld. Hoe merk je het dan wel?", "Lonen worden door werkgevers en vakbonden bepaald, niet door de staatsschuld. Waar gaat het geld van de overheid dan naartoe?", "Banken lenen gewoon door. Wat merkt de begroting van de overheid wel van een grote schuld?"],
         uitlegPad: {
           stappen: [{ titel: "Rente vreet budget op", tekst: "Hoge schuld → veel rente per jaar betalen. Dat geld kan NIET aan onderwijs, zorg of infrastructuur worden uitgegeven. Verdringingseffect." }],
           woorden: [{ woord: "rente-uitgaven", uitleg: "Jaarlijkse rente die overheid betaalt over staatsschuld. Bij NL ~€10 mrd in 2024." }],
@@ -516,9 +516,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt vaak een recessie?",
-        options: ["Externe schokken, zoals een pandemie", "Een renteverlaging door de centrale bank", "Een flinke stijging van de export", "Lagere belastingen voor bedrijven"],
+        options: ["Externe schokken, zoals een pandemie", "Een renteverlaging door de centrale bank", "Een stijging van de werkloosheid", "Lagere belastingen voor bedrijven"],
         answer: 0,
-        wrongHints: [null, "Lagere rente maakt lenen goedkoper. Gaan mensen en bedrijven dan meer of minder uitgeven?", "Export betekent: het buitenland koopt bij ons. Krimpt de economie daardoor?", "Bedrijven houden meer over bij lagere belasting. Gaan ze daardoor minder produceren?"],
+        wrongHints: [null, "Lagere rente maakt lenen goedkoper. Gaan mensen en bedrijven dan meer of minder uitgeven?", "Werkloosheid stijgt vaak tíjdens een recessie. Is dat de oorzaak of het gevolg?", "Bedrijven houden meer over bij lagere belasting. Gaan ze daardoor minder produceren?"],
         uitlegPad: {
           stappen: [{ titel: "Plotselinge schok", tekst: "Recessies komen vaak door EXTERNE schokken: oorlog, pandemie, beurskrach, energieprijs-piek. Zo'n plotselinge klap verstoort de economie." }],
           woorden: [{ woord: "externe schok", uitleg: "Onverwachte gebeurtenis van buitenaf die economie raakt: oorlog, pandemie, beurskrach." }, { woord: "endogene oorzaak", uitleg: "Interne oorzaak: vertrouwens-cyclus, schuldopbouw, overinvestering." }],
@@ -530,23 +530,23 @@ const steps = [
       },
       {
         q: "Hoe groot was de daling NL-BBP in **2020 (corona)**?",
-        options: ["~3,7%", "~0,5%", "~10%", "~25%"],
+        options: ["~3,9%", "~0,5%", "~10%", "~25%"],
         answer: 0,
         wrongHints: [null, "Winkels, horeca en reizen lagen maandenlang stil. Was de daling dan zo klein?", "Zo hard krompen landen als Spanje en het Verenigd Koninkrijk. Kwam Nederland er beter of slechter vanaf?", "Zo'n ineenstorting had de VS in de crisis van de jaren 1930. Was 2020 in Nederland zo erg?"],
         uitlegPad: {
-          stappen: [{ titel: "Corona-dip 2020", tekst: "NL BBP daalde ~3,7% in 2020 als geheel. Vooral Q2 (april-juni) was heftig (-9,3%) door lockdowns. Daarna herstel." }],
+          stappen: [{ titel: "Corona-dip 2020", tekst: "NL BBP daalde ~3,9% in 2020 (na herziening door het CBS; eerst werd 3,7% gemeld) als geheel. Vooral Q2 (april-juni) was heftig (-9,3%) door lockdowns. Daarna herstel." }],
           woorden: [{ woord: "BBP-daling", uitleg: "Krimp van de totale economische productie." }],
           theorie: "Vergelijk: 2008 financiële crisis -3,7% in 2009. Corona was net zo zwaar maar veel KORTER (sneller herstel). Overheid steun voorkwam massa-faillissementen.",
-          voorbeelden: [{ type: "data", tekst: "2020 BBP NL: -3,7%. Werkloosheid steeg licht. Steunpakket NOW/TOZO/TVL voorkwam ergere klap." }],
+          voorbeelden: [{ type: "data", tekst: "2020 BBP NL: -3,9%. Werkloosheid steeg licht. Steunpakket NOW/TOZO/TVL voorkwam ergere klap." }],
           basiskennis: [{ onderwerp: "Niet ineenstorting", uitleg: "Een krimp van 25% of meer zie je bij oorlog of een crisis zoals die van de jaren 1930. Spanje en het Verenigd Koninkrijk krompen in 2020 ongeveer 10%. Vrede + functionerende economie verliest 'maar' enkele procenten." }],
-          niveaus: { basis: "~3,7% daling.", simpeler: "Corona-recessie NL: BBP daalde ongeveer 3,7% in 2020.", nogSimpeler: "~3,7%" },
+          niveaus: { basis: "~3,9% daling.", simpeler: "Corona-recessie NL: BBP daalde ongeveer 3,9% in 2020.", nogSimpeler: "~3,9%" },
         },
       },
       {
         q: "Wat is een **depressie**?",
-        options: ["Een lange, diepe recessie", "Een korte, kleine tegenslag", "Een periode van hoge inflatie", "Eén kwartaal met krimp"],
+        options: ["Een lange, diepe recessie", "Twee kwartalen krimp op rij", "Een periode van hoge inflatie", "Een beurscrash van één dag"],
         answer: 0,
-        wrongHints: [null, "Een depressie is erger dan een recessie. Past 'klein' daarbij?", "Hoge inflatie gaat over prijzen. Gaat een depressie over prijzen of over productie?", "Eén kwartaal krimp is nog niet eens een recessie. Is een depressie korter of langer?"],
+        wrongHints: [null, "Twee kwartalen krimp op rij is de definitie van een recessie. Is een depressie hetzelfde?", "Hoge inflatie gaat over prijzen. Gaat een depressie over prijzen of over productie?", "Een beurscrash kan een depressie inluiden, zoals in 1929. Maar gaat het begrip over de beurs of over de hele economie?"],
         uitlegPad: {
           stappen: [{ titel: "Recessie × tijd × diepte", tekst: "Depressie = bijzonder LANGE + DIEPE recessie. Niet maanden maar jaren. Niet -3% maar -10% of meer. Beroemd: Great Depression 1929-1939." }],
           woorden: [{ woord: "depressie", uitleg: "Extreme vorm van recessie: jaren durend, zeer diepe krimp, massale werkloosheid." }],
@@ -582,9 +582,9 @@ const steps = [
     checks: [
       {
         q: "Wat doet de **ACM**?",
-        options: ["Bewaakt eerlijke concurrentie + consumentenrechten", "Maakt nieuwe wetten over concurrentie", "Int belasting bij bedrijven en consumenten", "Geeft subsidie aan scholen en sportclubs"],
+        options: ["Grijpt in bij kartels en misleiding van klanten", "Houdt toezicht op banken en beleggers", "Controleert de veiligheid van ons voedsel", "Bepaalt hoeveel huur een verhuurder mag vragen"],
         answer: 0,
-        wrongHints: [null, "Wetten = parlement.", "Belasting = Belastingdienst.", "Onderwijs is iets anders."],
+        wrongHints: [null, "Dat doen de AFM en De Nederlandsche Bank. Waar let de ACM op?", "Dat doet de NVWA. Waar let de ACM op?", "Daarvoor bestaan de huurregels en de Huurcommissie. Waar let de ACM op?"],
         uitlegPad: {
           stappen: [{ titel: "Marktwaakhond", tekst: "ACM = Autoriteit Consument & Markt. Onafhankelijke toezichthouder die eerlijke concurrentie + consumentenrechten bewaakt." }],
           woorden: [{ woord: "ACM", uitleg: "Autoriteit Consument & Markt. Bewaakt eerlijke markt, voorkomt kartels, beschermt consumenten." }],
@@ -624,9 +624,9 @@ const steps = [
       },
       {
         q: "Wat is **DGS**?",
-        options: ["Garantie op spaargeld als een bank failliet gaat", "Een belasting op spaargeld bij een bank", "Een lening van de overheid aan banken", "Een vakbond voor medewerkers van banken"],
+        options: ["Vergoeding tot €100.000 als je bank failliet gaat", "Een belasting op spaargeld boven een grens", "Een noodlening van de overheid aan banken", "Toezicht op hoeveel rente banken mogen vragen"],
         answer: 0,
-        wrongHints: [null, "Geen belasting — het beschermt juist.", "Geen lening — het gaat om spaarders.", "Het gaat om spaarders, niet om werknemers."],
+        wrongHints: [null, "Belasting op spaargeld valt in box 3 van de inkomstenbelasting. Is DGS een belasting?", "Een noodlening gaat van de overheid naar de bank. Wie krijgt er bij DGS geld?", "Hun rente bepalen banken grotendeels zelf. Waar gaat DGS over?"],
         uitlegPad: {
           stappen: [{ titel: "Spaarders beschermd", tekst: "DGS = depositogarantiestelsel. Als jouw bank failliet gaat, garandeert het DGS tot €100.000 per spaarder per bank. Beschermt vertrouwen + voorkomt bank-run." }],
           woorden: [{ woord: "DGS", uitleg: "Depositogarantiestelsel. Verzekert spaargeld tot €100.000 per persoon per bank bij faillissement." }, { woord: "bank-run", uitleg: "Massale geldopname bij bank — kan bank doen omvallen door liquiditeit-tekort." }],
@@ -703,9 +703,9 @@ const steps = [
       },
       {
         q: "Wat is **trias politica**?",
-        options: ["Machtenscheiding: wetgever, uitvoerder, rechter", "Samenwerking van drie politieke partijen", "Drie verkiezingen: gemeente, provincie, Rijk", "Een driedaagse zitting van het parlement"],
+        options: ["Machtenscheiding: wetgever, uitvoerder, rechter", "Samenwerking van drie partijen in een coalitie", "Taakverdeling tussen Rijk, provincie en gemeente", "Drie Kamers die samen over wetten stemmen"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om partijen. Waarom wilde Montesquieu de macht verdelen?", "Er zijn wel drie soorten verkiezingen, maar daar gaat trias politica niet over. Wat werd er in drieën verdeeld?", "Het gaat niet om tijd. Welke drie machten ken je?"],
+        wrongHints: [null, "Een coalitie gaat over partijen die samen regeren. Gaat trias politica over partijen?", "Rijk, provincie en gemeente zijn drie bestuurslagen. Gaat trias politica over bestuurslagen?", "Nederland heeft twee Kamers, de Eerste en de Tweede. Gaat trias politica over Kamers?"],
         uitlegPad: {
           stappen: [{ titel: "Macht in 3 delen", tekst: "Trias politica (Montesquieu, 1748): scheiding van macht in (1) wetgevende macht (parlement), (2) uitvoerende macht (regering), (3) rechtsprekende macht (rechters)." }],
           woorden: [{ woord: "trias politica", uitleg: "Latijn voor 'drie machten'. Filosofisch principe achter rechtsstaten." }, { woord: "machtenscheiding", uitleg: "Verschillende organen mogen elkaars taken niet overnemen — onafhankelijke controle." }],

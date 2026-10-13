@@ -60,9 +60,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent de M in **MAIN-oorzaken** WO1?",
-        options: ["Militarisme", "Macht", "Marokko", "Marshall"],
+        options: ["Militarisme", "Macht", "Marokko", "Monarchie"],
         answer: 0,
-        wrongHints: [null, "Macht speelde mee, maar de M staat voor iets met legers en wapens.", "Marokko was 1 incident, niet de hoofdcategorie.", "Marshall plan was na WO2."],
+        wrongHints: [null, "Macht is te algemeen. Waar gaven de grote landen vóór 1914 enorm veel geld aan uit?", "Marokko was één incident, niet de hoofdcategorie.", "Veel landen hadden een vorst, vóór én na de oorlog. Welk woord past bij de wapenwedloop?"],
       },
       {
         q: "Welke landen vormden de **Triple Entente**?",
@@ -78,9 +78,9 @@ const steps = [
       },
       {
         q: "Welke regio heette **'Balkan-kruidvat'**?",
-        options: ["Zuidoost-Europa", "Noord-Europa", "Spanje", "Engeland"],
+        options: ["Zuidoost-Europa", "Noord-Europa", "West-Europa", "Midden-Europa"],
         answer: 0,
-        wrongHints: [null, "Daar bleef het juist rustig — in welk deel van Europa werd Frans Ferdinand vermoord?", "Spanje bleef in WO1 zelfs neutraal — zoek de regio vol spanningen tussen jonge staten.", "Engeland ligt geïsoleerd op een eiland — welk gebied had rivaliserende volken dicht op elkaar?"],
+        wrongHints: [null, "Daar bleef het juist rustig — in welk deel van Europa werd Frans Ferdinand vermoord?", "In West-Europa lagen oude, gevestigde staten als Frankrijk. Waar vochten jonge staten om hun grenzen?", "Daar lagen de grote rijken Duitsland en Oostenrijk. Waar woonden veel kleine, rivaliserende volken dicht op elkaar?"],
       },
     ],
   },
@@ -93,21 +93,21 @@ const steps = [
     checks: [
       {
         q: "Wanneer werd **Frans Ferdinand vermoord**?",
-        options: ["28 juni 1914", "1 september 1914", "11 november 1918", "11 augustus 1914"],
+        options: ["28 juni 1914", "1 september 1914", "28 juli 1914", "11 augustus 1914"],
         answer: 0,
-        wrongHints: [null, "Te laat.", "Einde oorlog.", "Niet bij begin."],
+        wrongHints: [null, "Begin september 1914 vochten de legers al aan de Marne. Wat had alles in gang gezet?", "Op 28 juli 1914 verklaarde Oostenrijk-Hongarije Servië de oorlog. Kwam de moord daarvóór of daarna?", "In augustus 1914 waren de legers al op mars. Wat zette alles in gang?"],
       },
       {
         q: "In welke stad gebeurde de **moord**?",
         options: ["Sarajevo", "Wenen", "Belgrado", "Berlijn"],
         answer: 0,
-        wrongHints: [null, "Hoofdstad Oostenrijk-Hongarije zelf.", "Hoofdstad Servië.", "Hoofdstad Duitsland."],
+        wrongHints: [null, "Wenen was de hoofdstad van Oostenrijk-Hongarije. Waar was Frans Ferdinand op bezoek, in Bosnië?", "Belgrado was de hoofdstad van Servië. De dader kwam uit Servische kring, maar waar was de aartshertog op bezoek?", "Berlijn lag ver van de Balkan. Waar was de aartshertog op bezoek?"],
       },
       {
         q: "Welk **plan** had Duitsland om snel te winnen?",
         options: ["Schlieffenplan", "Marshallplan", "Morgenthauplan", "Dawes-plan"],
         answer: 0,
-        wrongHints: [null, "Was na WO2.", "Was in WO2.", "Was 1924 — economisch herstel."],
+        wrongHints: [null, "Het Marshallplan was Amerikaanse hulp aan Europa na WO2.", "Het Morgenthauplan was een Amerikaans plan voor Duitsland na WO2.", "Het Dawesplan was een geldplan uit 1924, ná de oorlog."],
         uitlegPad: {
           stappen: [
             { titel: "Schlieffenplan — eerst Frankrijk", tekst: "Duitsland wilde een 2-fronten-oorlog vermijden. Plan: snel via België naar Parijs (Frankrijk verslaan in 6 weken), dán troepen omgooien naar Rusland." },
@@ -128,7 +128,7 @@ const steps = [
         q: "Welk **neutraal land** werd door Duitsland binnengevallen?",
         options: ["België", "Nederland", "Zwitserland", "Zweden"],
         answer: 0,
-        wrongHints: [null, "Bleef wel neutraal.", "Bleef neutraal.", "Bleef neutraal."],
+        wrongHints: [null, "Het Schlieffenplan liep ten zuiden van Nederland langs. Door welk land trokken de Duitsers naar Parijs?", "Zwitserland ligt in de bergen, ver van de Duitse route naar Parijs.", "Zweden ligt aan de andere kant van de Oostzee, ver van het westfront."],
       },
     ],
   },
@@ -147,21 +147,21 @@ const steps = [
       },
       {
         q: "Welk **nieuw wapen** werd in WO1 voor het eerst gebruikt?",
-        options: ["Tank", "Pistool", "Kanon", "Zwaard"],
+        options: ["Tank", "Pistool", "Kanon", "Machinegeweer"],
         answer: 0,
-        wrongHints: [null, "Pistolen bestonden al eeuwen — wat was er in 1916 splinternieuw?", "Kanonnen stonden er al in de tijd van Napoleon — welk wapen moest de loopgraven-impasse breken?", "Zwaarden zijn middeleeuws — denk aan gloednieuwe techniek uit 1916."],
+        wrongHints: [null, "Pistolen bestonden al eeuwen — wat was er in 1916 splinternieuw?", "Kanonnen stonden er al in de tijd van Napoleon — welk wapen moest de loopgraven-impasse breken?", "Het machinegeweer bestond al vóór 1914 en maakte aanvallen juist zo dodelijk. Welk wapen moest dat doorbreken?"],
       },
       {
         q: "Welk **gif** werd eerst gebruikt **bij Ieper (1915)**?",
-        options: ["Chloorgas", "Sarin", "Mosterdgas", "Pepperspray"],
+        options: ["Chloorgas", "Sarin", "Mosterdgas", "Fosgeen"],
         answer: 0,
-        wrongHints: [null, "Sarin werd pas veel later uitgevonden (1938).", "Mosterdgas kwam ook in WO1 maar later.", "Niet WO1."],
+        wrongHints: [null, "Sarin werd pas veel later uitgevonden (1938).", "Mosterdgas kwam ook in WO1, maar pas in 1917.", "Fosgeen werd pas later in 1915 ingezet en was nog dodelijker."],
       },
       {
         q: "Wanneer deden de **VS mee** aan WO1?",
-        options: ["April 1917", "Augustus 1914", "December 1916", "November 1918"],
+        options: ["April 1917", "Augustus 1914", "December 1916", "Mei 1915"],
         answer: 0,
-        wrongHints: [null, "VS deed nog niet mee.", "VS deed nog niet mee.", "Einde oorlog."],
+        wrongHints: [null, "In 1914 wilde president Wilson de VS juist buiten de oorlog houden.", "Eind 1916 werd Wilson herkozen met de leus dat hij Amerika uit de oorlog hield.", "In mei 1915 zonk de Lusitania. Dat maakte Amerikanen boos, maar verklaarden ze toen al de oorlog?"],
       },
     ],
   },
@@ -176,13 +176,13 @@ const steps = [
         q: "Was **Nederland in oorlog** in WO1?",
         options: ["Nee — neutraal", "Ja — met Duitsland", "Ja — met Engeland", "Ja — met Frankrijk"],
         answer: 0,
-        wrongHints: [null, "Nederland vocht niet tegen Duitsland — denk aan het verschil met België.", "Nederland koos geen kant — wat deed koningin Wilhelmina?", "Er vochten geen Nederlandse soldaten aan het westfront."],
+        wrongHints: [null, "Nederland vocht niet tegen Duitsland — denk aan het verschil met België.", "Er vochten geen Nederlandse soldaten aan Engelse kant. Wat was Nederland dan?", "Er vochten geen Nederlandse soldaten aan het westfront."],
       },
       {
         q: "Hoeveel **Belgische vluchtelingen** kwamen naar NL?",
-        options: ["~1 miljoen", "~10.000", "~100", "~10 miljoen"],
+        options: ["~1 miljoen", "~10.000", "~100.000", "~10 miljoen"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "Veel meer.", "Te veel — meer dan totaal België-bevolking."],
+        wrongHints: [null, "Dat is maar een fractie: bijna heel Antwerpen trok in oktober 1914 naar de grens.", "Na de val van Antwerpen staken er in een paar dagen al meer mensen de grens over.", "Te veel: dat is meer dan de hele bevolking van België."],
       },
       {
         q: "Welk **oproer** brak uit in juli 1917?",
@@ -207,9 +207,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer eindigde **WO1**?",
-        options: ["11 november 1918", "1 september 1939", "8 mei 1945", "28 juni 1919"],
+        options: ["11 november 1918", "3 maart 1918", "1 juli 1916", "28 juni 1919"],
         answer: 0,
-        wrongHints: [null, "Begin WO2.", "Einde WO2.", "Verdrag van Versailles — komt later."],
+        wrongHints: [null, "Op 3 maart 1918 stopte Rusland met vechten (Vrede van Brest-Litovsk), maar in het westen ging de oorlog door.", "Op 1 juli 1916 begon de Slag aan de Somme. Was de oorlog toen voorbij?", "Op 28 juni 1919 werd het Verdrag van Versailles getekend. Waren de kanonnen toen al stil?"],
       },
       {
         q: "Hoeveel **doden** ongeveer in WO1?",
@@ -219,9 +219,9 @@ const steps = [
       },
       {
         q: "Wat moest Duitsland in **Verdrag van Versailles**?",
-        options: ["Herstelbetalingen doen", "Helemaal niet veel", "Helft van land afstaan", "Toetreden tot Frankrijk"],
+        options: ["Herstelbetalingen doen", "Lid worden van de Volkenbond", "Het leger uitbreiden", "Elzas-Lotharingen krijgen"],
         answer: 0,
-        wrongHints: [null, "Wél veel.", "Niet de helft.", "Niet toetreden."],
+        wrongHints: [null, "Duitsland mocht juist eerst níet bij de Volkenbond; dat kon pas in 1926.", "Het Duitse leger werd juist beperkt tot 100.000 man.", "Elzas-Lotharingen ging juist terug naar Frankrijk."],
       },
       {
         q: "Welke **rijken vielen uiteen** na WO1?",
@@ -258,21 +258,21 @@ const steps = [
       },
       {
         q: "Welk **gas** werd eerst gebruikt in **Ieper 1915**?",
-        options: ["Chloorgas", "Mosterdgas", "Sarin", "Lachgas"],
+        options: ["Chloorgas", "Mosterdgas", "Sarin", "Fosgeen"],
         answer: 0,
-        wrongHints: [null, "Wel WO1 maar later.", "Niet WO1.", "Niet wapen."],
+        wrongHints: [null, "Mosterdgas werd pas in 1917 ingezet, ook bij Ieper.", "Sarin werd pas in 1938 uitgevonden.", "Fosgeen werd pas later in 1915 ingezet en was nog dodelijker."],
       },
       {
         q: "Wanneer ging de **wapenstilstand** in?",
-        options: ["11/11/1918 om 11u", "12/12/1918 om 12u", "1/1/1919", "28/6/1919"],
+        options: ["11/11/1918 om 11u", "11/11/1918 om 5u", "1/1/1919", "28/6/1919"],
         answer: 0,
-        wrongHints: [null, "Te laat.", "Niet wapenstilstand.", "Verdrag van Versailles — later."],
+        wrongHints: [null, "Rond 5 uur 's ochtends werd de wapenstilstand in een treinwagon getekend. Wanneer zwegen de kanonnen?", "Op nieuwjaarsdag 1919 waren de kanonnen al weken stil.", "Op 28 juni 1919 werd het Verdrag van Versailles getekend, de echte vrede."],
       },
       {
         q: "Welke **NL koningin** hield Nederland neutraal?",
-        options: ["Wilhelmina", "Juliana", "Beatrix", "Máxima"],
+        options: ["Wilhelmina", "Juliana", "Beatrix", "Emma"],
         answer: 0,
-        wrongHints: [null, "Was na haar.", "Was kleindochter.", "Veel later — en geen regerend vorst."],
+        wrongHints: [null, "Juliana werd pas in 1948 koningin.", "Beatrix werd pas in 1938 geboren.", "Emma was regentes tot 1898, toen haar dochter oud genoeg was om te regeren."],
       },
     ],
   },

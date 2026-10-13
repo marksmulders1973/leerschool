@@ -49,7 +49,7 @@ const steps = [
         q: "Wie is de **vrager** op een markt?",
         options: ["De koper / consument", "De producent / verkoper", "De overheid / het Rijk", "De bank / geldverstrekker"],
         answer: 0,
-        wrongHints: [null, "Producent = aanbieder.", "Overheid kan vrager zijn (van beton voor wegen) maar de standaard rol is 'koper'.", "Bank is niet automatisch de vrager."],
+        wrongHints: [null, "De producent maakt en verkoopt. Hoe heet hij in de taal van de markt?", "De overheid kán iets kopen, zoals beton voor wegen. Maar wie is de vrager in een gewone markt?", "Een bank leent geld uit. Is dat de rol van de vrager in een gewone markt?"],
         uitlegPad: {
           stappen: [{ titel: "Vrager = koper", tekst: "Op een markt heb je vragers (kopers/consumenten) en aanbieders (verkopers/producenten). De vrager is degene die WIL kopen tegen een bepaalde prijs." }],
           woorden: [{ woord: "consument", uitleg: "vrager — wil iets kopen" }],
@@ -149,13 +149,13 @@ const steps = [
       {
         q: "Waarom willen verkopers méér leveren bij hogere prijzen?",
         options: [
-          "Het is winstgevender",
+          "Ze verdienen er meer aan",
           "Kopers willen dan meer kopen",
           "Hun productiekosten dalen",
-          "Ze moeten meer belasting betalen",
+          "Ze raken hun voorraad sneller kwijt",
         ],
         answer: 0,
-        wrongHints: [null, "Bij een hogere prijs willen kopers juist minder. Waarom willen verkopers dan toch meer leveren?", "Productiekosten zijn vaak vrij stabiel; het gaat om winst.", "Belasting maakt produceren duurder, niet aantrekkelijker. Waarom zou een verkoper dan meer leveren?"],
+        wrongHints: [null, "Bij een hogere prijs willen kopers juist minder. Waarom willen verkopers dan toch meer leveren?", "Productiekosten veranderen niet doordat de marktprijs stijgt. Wat verandert er dan wel voor de verkoper?", "Een volle voorraad verkoop je juist met een lagere prijs. Waarom zou een hogere prijs aanzetten tot méér leveren?"],
         uitlegPad: {
           stappen: [{ titel: "Hogere prijs = meer winst per stuk", tekst: "Bij hogere verkoopprijs houdt verkoper meer winst over per product. Daarom wil hij meer produceren/leveren — meer kans op extra winst." }],
           woorden: [{ woord: "winstmotief", uitleg: "bedrijven willen winst maximaliseren" }],
@@ -188,12 +188,12 @@ const steps = [
         q: "Wat is **evenwichtsprijs**?",
         options: [
           "De prijs waarbij vraag = aanbod",
-          "De hoogste prijs die ooit betaald is",
-          "De gemiddelde prijs over een jaar",
+          "De prijs waarbij de vraag het grootst is",
+          "De prijs waarbij het aanbod het grootst is",
           "De prijs waarbij de winst het hoogst is",
         ],
         answer: 0,
-        wrongHints: [null, "Hoogste prijs ooit heeft niets met evenwicht te maken.", "Een gemiddelde geeft geen evenwicht.", "Winst gaat alleen over de verkoper. Over wie gaat een evenwicht op de markt?"],
+        wrongHints: [null, "De vraag is het grootst bij een heel lage prijs. Willen verkopers dan net zoveel leveren?", "Het aanbod is het grootst bij een heel hoge prijs. Willen kopers dan alles afnemen?", "Winst gaat alleen over de verkoper. Over wie gaat een evenwicht op de markt?"],
         uitlegPad: {
           stappen: [{ titel: "Evenwichtsprijs = vraag = aanbod", tekst: "De prijs waarbij precies evenveel gevraagd wordt als aangeboden — geen overschot, geen tekort. In grafiek: snijpunt van vraag- en aanbodlijn." }],
           woorden: [{ woord: "evenwicht", uitleg: "balans tussen vraag en aanbod" }],
@@ -389,9 +389,9 @@ const steps = [
       },
       {
         q: "Concertkaartjes voor Taylor Swift zijn duur. Waarom?",
-        options: ["Beperkt aanbod + hoge vraag → hoge prijs", "Er zit een hoge belasting op kaartjes", "Fans kopen allemaal extra kaartjes", "Kaartjes worden pas op de dag zelf verkocht"],
+        options: ["Beperkt aanbod + hoge vraag → hoge prijs", "Groot aanbod + hoge vraag → hoge prijs", "Beperkt aanbod + lage vraag → hoge prijs", "Groot aanbod + lage vraag → hoge prijs"],
         answer: 0,
-        wrongHints: [null, "Belasting is een kleinere factor.", "Hoge vraag alleen verklaart het niet — kijk ook naar de andere kant van de markt.", "Verandert het moment van verkopen iets aan het aantal plekken of het aantal fans?"],
+        wrongHints: [null, "Een stadion heeft een vast aantal plekken. Is het aanbod dan groot?", "Hoeveel fans proberen er kaartjes te krijgen? Is de vraag dan laag?", "Wat doen veel plekken en weinig kopers met de prijs?"],
         uitlegPad: {
           stappen: [{ titel: "Veel vraag + beperkt aanbod = hoge prijs", tekst: "Taylor Swift kan maar X stadions/avonden vullen — vast aanbod. Miljoenen fans willen tickets → enorme vraag. Resultaat: hoge prijs." }],
           woorden: [{ woord: "beperkt aanbod", uitleg: "fysieke limiet (zaalcapaciteit)" }],
@@ -455,11 +455,11 @@ const steps = [
       },
       {
         q: "Wat is een **substituut** van koffie?",
-        options: ["Thee", "Suiker", "Koffiebeker", "Espressomachine"],
+        options: ["Thee", "Koffiemelk", "Koffiebeker", "Espressomachine"],
         answer: 0,
-        wrongHints: [null, "Suiker is complement (samen gebruikt).", "Beker is complement.", "Espressomachine is complement."],
+        wrongHints: [null, "Koffiemelk doe je ín je koffie. Gebruik je ze samen, of in plaats van elkaar?", "Een beker gebruik je samen met koffie. Kan hij koffie vervangen?", "Een espressomachine heb je nodig om koffie te maken. Is dat een ander drankje?"],
         uitlegPad: {
-          stappen: [{ titel: "Substituut vs complement", tekst: "Substituut = vervanger (koffie ↔ thee). Complement = wordt samen gebruikt (koffie + suiker, koffie + beker). Voor 'substituut van koffie' moet je iets vinden dat in plaats van koffie kan." }],
+          stappen: [{ titel: "Substituut vs complement", tekst: "Substituut = vervanger (koffie ↔ thee). Complement = wordt samen gebruikt (koffie + koffiemelk, koffie + beker). Voor 'substituut van koffie' moet je iets vinden dat in plaats van koffie kan." }],
           woorden: [{ woord: "complement", uitleg: "samen-gebruikt-product" }],
           theorie: "Substituten zijn vervangers, complementen zijn aanvullers.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Substituut auto: trein. Complement auto: benzine" }],
@@ -488,7 +488,7 @@ const steps = [
       },
       {
         q: "Wat is **marktevenwicht**?",
-        options: ["Prijs waar vraag = aanbod", "Hoogste prijs die iemand wil betalen", "Laagste prijs die een verkoper vraagt", "Prijs met de meeste winst"],
+        options: ["Prijs waarbij er geen tekort of overschot is", "Hoogste prijs die iemand wil betalen", "Laagste prijs die een verkoper vraagt", "Prijs waarbij verkopers de meeste winst maken"],
         answer: 0,
         wrongHints: [null, "Bij de hoogste prijs die iemand wil betalen, zijn er dan genoeg kopers voor alles wat te koop is?", "Bij de laagste prijs die een verkoper vraagt, willen dan genoeg verkopers leveren?", "Winst gaat alleen over de verkoper. Over wie gaat een evenwicht op de markt?"],
         uitlegPad: {
@@ -558,9 +558,9 @@ const steps = [
       },
       {
         q: "**Concurrentie** — wat doen bedrijven om klanten te trekken?",
-        options: ["Lagere prijzen, betere kwaliteit, reclame", "Prijsafspraken maken met concurrenten", "Hun prijzen zo hoog mogelijk houden", "Andere bedrijven in de markt opkopen"],
+        options: ["Scherpe prijzen en betere kwaliteit bieden", "Prijsafspraken maken met concurrenten", "Minder maken zodat het schaars wordt", "Andere bedrijven in de markt opkopen"],
         answer: 0,
-        wrongHints: [null, "Afspraken tussen concurrenten heten een kartel. Is dat concurreren, en mag het?", "Hoge prijzen jagen klanten weg naar de concurrent. Hoe trek je ze juist aan?", "Opkopen gebeurt soms, maar dan verdwijnt de concurrent. Hoe strijden bedrijven om klanten?"],
+        wrongHints: [null, "Afspraken tussen concurrenten heten een kartel. Is dat concurreren, en mag het?", "Schaarste maken werkt alleen als er geen concurrenten zijn. Wat doen klanten als jij minder levert?", "Opkopen gebeurt soms, maar dan verdwijnt de concurrent. Hoe strijden bedrijven om klanten?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is concurrentie?", tekst: "**Concurrentie** = wedijver tussen bedrijven om klanten + winst. Bedrijven doen verschillende dingen:\n• **Lagere prijs** (Aldi/Lidl-strategie)\n• **Hogere kwaliteit** (premium-merk)\n• **Betere klantenservice**\n• **Slimmere marketing** (TikTok-reclame)\n• **Innovatie** (nieuwe producten)\n• **Locatie** (winkel op betere plek)" },

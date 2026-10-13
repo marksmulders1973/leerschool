@@ -70,7 +70,7 @@ const steps = [
         q: "Hoeveel tijdvakken zijn er?",
         options: ["10", "5", "12", "8"],
         answer: 0,
-        wrongHints: [null, "Te weinig: de Commissie De Rooy heeft er meer vastgesteld.", "Te veel. Elk tijdvak heeft een eigen naam, van 'jagers en boeren' tot 'televisie en computer'.", "Na de tijd van burgers en stoommachines komen er nog tijdvakken."],
+        wrongHints: [null, "Te weinig: de Commissie De Rooy heeft er meer vastgesteld.", "Te veel. Elk tijdvak heeft een eigen naam; tel ze maar eens na in het overzicht.", "Na de tijd van burgers en stoommachines komen er nog tijdvakken."],
         uitlegPad: {
           stappen: [{ titel: "10 tijdvakken (NL-canon)", tekst: "Commissie De Rooy heeft de geschiedenis in 10 tijdvakken verdeeld. Elk tijdvak heeft een NAAM die typisch is voor die periode (jagers, monniken, ontdekkers, etc)." }],
           woorden: [{ woord: "tijdvak", uitleg: "Periode in de geschiedenis met een eigen naam en kenmerken." }, { woord: "Commissie De Rooy", uitleg: "Werkgroep die in 2001 de 10 tijdvakken vastlegde voor het onderwijs." }],
@@ -82,9 +82,9 @@ const steps = [
       },
       {
         q: "Wat is het **eerste** tijdvak?",
-        options: ["Jagers en boeren", "Grieken en Romeinen", "Monniken en ridders", "Wereldoorlogen"],
+        options: ["Jagers en boeren", "Grieken en Romeinen", "Monniken en ridders", "Steden en staten"],
         answer: 0,
-        wrongHints: [null, "Dat is tijdvak 2 — een lang tweede tijdvak (3000 v.Chr. tot 500 n.Chr.).", "Dat is tijdvak 3 — vroege middeleeuwen.", "Dat is tijdvak 9 — pas in de 20e eeuw."],
+        wrongHints: [null, "Dat is tijdvak 2 — een lang tweede tijdvak (3000 v.Chr. tot 500 n.Chr.).", "Dat is tijdvak 3 — vroege middeleeuwen.", "Dat is tijdvak 4, de late middeleeuwen."],
         uitlegPad: {
           stappen: [{ titel: "Prehistorie = jagers+boeren", tekst: "Tijdvak 1 = Jagers en boeren, tot 3000 v.Chr. Alles vóór schrift. Mensen leefden van jacht + later landbouw. Geen geschreven bronnen." }],
           woorden: [{ woord: "prehistorie", uitleg: "Tijd vóór het schrift (tijdvak 1: tot ~3000 v.Chr.). Alles wat we weten komt uit archeologie." }, { woord: "landbouwrevolutie", uitleg: "Overgang van jagers-verzamelaars naar boeren (~10.000 v.Chr.)." }],
@@ -156,7 +156,7 @@ const steps = [
         q: "Wanneer eindigt tijdvak 2?",
         options: ["476 — einde West-Romeinse Rijk", "1492 — Columbus ontdekt Amerika", "1789 — begin Franse Revolutie", "1945 — einde Tweede Wereldoorlog"],
         answer: 0,
-        wrongHints: [null, "Dat is in tijdvak 5 — Ontdekkers en hervormers.", "Dat is tijdvak 7.", "Dat is tijdvak 9."],
+        wrongHints: [null, "In 1492 bereikte Columbus Amerika. Toen was het West-Romeinse Rijk al bijna duizend jaar verdwenen.", "In 1789 begon de Franse Revolutie, veel later.", "In 1945 eindigde de Tweede Wereldoorlog, bijna 1500 jaar na de Romeinen."],
         uitlegPad: {
           stappen: [{ titel: "Val Rome 476", tekst: "Tijdvak 2 eindigt in 476 met val van het West-Romeinse Rijk. Germaanse stam onder Odoaker zette laatste keizer Romulus Augustulus af. Begin Middeleeuwen (tijdvak 3)." }],
           woorden: [{ woord: "Val van Rome", uitleg: "Einde West-Romeinse Rijk in 476. Oost-Romeinse Rijk (Byzantium) leefde nog 1000 jr door." }, { woord: "Romulus Augustulus", uitleg: "Laatste keizer van West-Rome. Afgezet 4 sept 476." }],
@@ -193,7 +193,7 @@ const steps = [
         q: "Wie werd in 800 tot keizer gekroond door de paus?",
         options: ["Karel de Grote", "Julius Caesar", "Willem van Oranje", "Napoleon"],
         answer: 0,
-        wrongHints: [null, "Caesar leefde rond 100-44 v.Chr. — tijdvak 2.", "Willem van Oranje = tijdvak 5/6 (16e eeuw).", "Napoleon = tijdvak 7 (1800)."],
+        wrongHints: [null, "Caesar leefde rond 100-44 v.Chr. — tijdvak 2.", "Willem van Oranje leefde in de 16e eeuw, ruim 700 jaar later.", "Napoleon kroonde zich in 1804 tot keizer, duizend jaar later."],
         uitlegPad: {
           stappen: [{ titel: "Karel de Grote 800", tekst: "Karel de Grote (768-814) was koning van de Franken. Bouwde een groot rijk dat Frankrijk + Duitsland + NL + Noord-Italië besloeg. In jaar 800 werd hij in Rome door de paus tot KEIZER gekroond — symbool van macht + christelijke legitimering." }],
           woorden: [{ woord: "Karel de Grote", uitleg: "Frankisch koning (768-814). Eerste 'keizer' van Europa sinds val Rome. Voorloper Heilige Romeinse Rijk." }, { woord: "kroning", uitleg: "Officiële ceremonie waarin iemand koning/keizer wordt. Vaak door paus = goddelijk gezag." }],
@@ -265,7 +265,7 @@ const steps = [
         q: "Wanneer begint de **Tachtigjarige Oorlog**?",
         options: ["1568", "1492", "1815", "1914"],
         answer: 0,
-        wrongHints: [null, "Dat is Columbus' jaar.", "Dat is na Napoleon — tijdvak 8.", "Dat is begin WO1 — tijdvak 9."],
+        wrongHints: [null, "In 1492 bereikte Columbus Amerika.", "In 1815 werd Napoleon definitief verslagen.", "In 1914 begon de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1568 begin, 1648 einde", tekst: "Tachtigjarige Oorlog = NL-opstand tegen Spaanse koning Filips II. Officieel begin: 1568 (slag bij Heiligerlee). Einde: 1648 (Vrede van Münster) — Spanje erkent NL-onafhankelijkheid. 80 jaar oorlog ertussen." }],
           woorden: [{ woord: "Tachtigjarige Oorlog", uitleg: "1568-1648. NL-opstand tegen Spanje, leidde tot Republiek der Zeven Verenigde Nederlanden." }, { woord: "Willem van Oranje", uitleg: "Leider van NL-opstand. 'Vader des vaderlands'. Vermoord 1584." }],
@@ -335,7 +335,7 @@ const steps = [
         q: "Wanneer was de **Franse Revolutie**?",
         options: ["1789", "1568", "1492", "1914"],
         answer: 0,
-        wrongHints: [null, "Dat was begin Tachtigjarige Oorlog — tijdvak 5.", "Dat was Columbus.", "Dat was begin WO1."],
+        wrongHints: [null, "In 1568 begon de Tachtigjarige Oorlog.", "In 1492 bereikte Columbus Amerika.", "In 1914 begon de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1789 — bestorming Bastille", tekst: "Franse Revolutie begon 14 juli 1789 met bestorming van de Bastille (gevangenis Parijs). Het volk in opstand tegen koning Lodewijk XVI + zware belastingen + adelvoorrechten. Slogan: 'Vrijheid, Gelijkheid, Broederschap'." }],
           woorden: [{ woord: "Franse Revolutie", uitleg: "1789-1799. Volksopstand tegen monarchie + standenmaatschappij." }, { woord: "guillotine", uitleg: "Onthoofdingsmachine. Lodewijk XVI + Marie-Antoinette werden er in 1793 mee gedood." }, { woord: "Verklaring Rechten van de Mens", uitleg: "Augustus 1789. Eerste moderne grondrechten-verklaring." }],
@@ -372,7 +372,7 @@ const steps = [
         q: "Wanneer kwam de **Nederlandse grondwet** van Thorbecke?",
         options: ["1848", "1568", "1789", "1914"],
         answer: 0,
-        wrongHints: [null, "Begin Tachtigjarige Oorlog — tijdvak 5.", "Franse Revolutie — tijdvak 7.", "Begin WO1 — tijdvak 9."],
+        wrongHints: [null, "In 1568 begon de Tachtigjarige Oorlog.", "In 1789 begon de Franse Revolutie.", "In 1914 begon de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1848 grondwet Thorbecke", tekst: "Thorbecke schreef de nieuwe grondwet in 1848, het revolutiejaar in Europa. Koning Willem II werd naar eigen zeggen 'in 24 uur van zeer conservatief zeer liberaal'. Sindsdien: ministers verantwoordelijk, koning veel minder macht. Basis huidige democratie." }],
           woorden: [{ woord: "Thorbecke", uitleg: "Johan Rudolf Thorbecke (1798-1872). Liberaal staatsman. Vader Nederlandse grondwet." }, { woord: "constitutionele monarchie", uitleg: "Koning blijft, maar parlement heeft echte macht. Modern NL-model." }],
@@ -408,7 +408,7 @@ const steps = [
           null,
           "Dat is wapenstilstand WO1.",
           "Dat is de capitulatie van Japan — einde wereldoorlog, maar Nederland was al bevrijd.",
-          "Dat is de val van de Berlijnse Muur — tijdvak 10.",
+          "Dat is de val van de Berlijnse Muur, veel later.",
         ],
       },
     ],
@@ -420,9 +420,9 @@ const steps = [
     checks: [
       {
         q: "Wat gebeurde er in 1989?",
-        options: ["De Berlijnse Muur viel", "WO2 begon", "Nederland werd onafhankelijk", "De boekdrukkunst werd uitgevonden"],
+        options: ["De Berlijnse Muur viel", "Duitsland werd herenigd", "De Sovjet-Unie viel uiteen", "De euro werd ingevoerd"],
         answer: 0,
-        wrongHints: [null, "WO2 begon in 1939.", "De Nederlandse onafhankelijkheid werd bezegeld door de Vrede van Münster — maar dat was al ver vóór 1989.", "De boekdrukkunst (Gutenberg) dateert al van de 15e eeuw — veel eerder."],
+        wrongHints: [null, "De hereniging volgde bijna een jaar later, op 3 oktober 1990.", "Dat gebeurde eind 1991.", "De euro kwam pas in 1999, en als munt in je portemonnee in 2002."],
         uitlegPad: {
           stappen: [{ titel: "9 november 1989 — Muur valt", tekst: "De Berlijnse Muur (gebouwd 1961) scheidde Oost- en West-Berlijn 28 jaar lang. Op 9 november 1989 mocht het Oost-Duitse volk plots vrij naar het westen. Mensen sloegen de muur eigenhandig kapot. Symbool van het einde Koude Oorlog." }],
           woorden: [{ woord: "Berlijnse Muur", uitleg: "Betonnen muur 1961-1989 die Berlijn in tweeën deelde. Symbool IJzeren Gordijn." }, { woord: "IJzeren Gordijn", uitleg: "Term Churchill: scheidslijn tussen democratisch West-Europa en communistisch Oost-Europa." }],
@@ -457,9 +457,9 @@ const steps = [
     checks: [
       {
         q: "In welk tijdvak hoort de **Tachtigjarige Oorlog** (1568-1648)?",
-        options: ["Tijdvak 5 + 6", "Tijdvak 3", "Tijdvak 8", "Tijdvak 9"],
+        options: ["Tijdvak 5 + 6", "Tijdvak 3 + 4", "Tijdvak 8 + 9", "Tijdvak 6 + 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 3 = vroege middeleeuwen, veel eerder.", "Tijdvak 8 hoort bij de 19e eeuw — klopt dat met de periode 1568-1648?", "Tijdvak 9 gaat over WO1+WO2 — was de Tachtigjarige Oorlog echt zo recent?"],
+        wrongHints: [null, "Tijdvak 3 en 4 zijn de middeleeuwen (500-1500). De Tachtigjarige Oorlog begon later.", "Tijdvak 8 en 9 lopen van 1800 tot 1950: veel te laat.", "Tijdvak 7 begint in 1700. Liep de oorlog toen nog?"],
         uitlegPad: {
           stappen: [{ titel: "1568-1648 = tijdvak 5 + 6", tekst: "Tachtigjarige Oorlog liep van 1568 tot 1648 (80 jaar). 1568 viel in tijdvak 5 (Ontdekkers+hervormers, 1500-1600). 1648 viel in tijdvak 6 (Regenten+vorsten, 1600-1700). De oorlog overspant dus beide tijdvakken." }],
           woorden: [{ woord: "Tachtigjarige Oorlog", uitleg: "1568-1648. NL-opstand tegen Spanje. Begin door Willem van Oranje. Einde Vrede van Münster." }],

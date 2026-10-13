@@ -21,9 +21,9 @@ const steps = [
     checks: [
       {
         q: "**Verdrag van Versailles** (1919) gaf Duitsland:",
-        options: ["Schuld, sancties en herstelbetalingen", "Beloningen en nieuwe kolonies", "Gelijkwaardige behandeling", "Extra grondgebied in het oosten"],
+        options: ["Schuld, sancties en herstelbetalingen", "Verdeling in vier bezettingszones", "Een vereniging met Oostenrijk", "Een zetel in de Volkenbond"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld — Duitsland verloor juist grond."],
+        wrongHints: [null, "Die verdeling in vier zones kwam pas na de Tweede Wereldoorlog, in 1945.", "Een vereniging met Oostenrijk werd in Versailles juist verboden. Hitler deed het toch, in 1938.", "Duitsland mocht in 1919 juist niet bij de Volkenbond; dat kwam pas in 1926."],
         uitlegPad: {
           stappen: [
             { titel: "Vernederend voor Duitsland", tekst: "DE moest 'oorlogsschuld' accepteren (artikel 231), 132 mld goudmark betalen, leger inkrimpen tot 100k man, kolonies + grondgebied verliezen. Werd als 'Diktat' ervaren. Voedde later extremisme + Hitlers belofte 'recht doen'. Veel historici zien het als een van de oorzaken van WO2." },
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "**München-akkoord (1938)**:",
-        options: ["Sudetenland naar Duitsland", "Oorlogsverklaring", "Vredesakkoord WO2-einde", "Olympische Spelen"],
+        options: ["Sudetenland naar Duitsland", "Oostenrijk bij Duitsland", "Duitse troepen in het Rijnland", "Elzas-Lotharingen naar Duitsland"],
         answer: 0,
-        wrongHints: [null, "Niet — uitstel.", "Niet — WO2 was toen nog niet begonnen.", "Niet — de Spelen in Duitsland waren in 1936 in Berlijn."],
+        wrongHints: [null, "De Anschluss van Oostenrijk was in maart 1938 en werd niet in München geregeld.", "Duitse troepen trokken al in 1936 het Rijnland in, zonder akkoord.", "Elzas-Lotharingen bleef in 1938 gewoon Frans."],
         uitlegPad: {
           stappen: [
             { titel: "Appeasement faalde", tekst: "Chamberlain (UK) + Daladier (FR) hoopten oorlog te vermijden door Hitler Sudetenland te geven. Hitler beloofde verdere expansie te staken. 11 maanden later: invasie Polen. Klassieke les: dictatoriale agressie niet sussen via concessies. 'Peace for our time' werd ironie." },
@@ -90,7 +90,7 @@ const steps = [
         q: "Nederland werd door DE bezet in:",
         options: ["Mei 1940", "September 1939", "Juni 1941", "Juli 1944"],
         answer: 0,
-        wrongHints: [null, "Niet — DE viel Polen aan.", "Niet — USSR-invasie.", "Niet — toen was Nederland al vier jaar bezet."],
+        wrongHints: [null, "In september 1939 viel Duitsland Polen aan. Nederland bleef toen nog neutraal.", "In juni 1941 viel Duitsland de Sovjet-Unie aan. Toen was Nederland al een jaar bezet.", "Niet — toen was Nederland al vier jaar bezet."],
         uitlegPad: {
           stappen: [
             { titel: "5-daagse oorlog", tekst: "10 mei 1940 vroeg ochtend: DE valt NL aan (Westfeldzug). 14 mei: Rotterdam-bombardement → NL capituleert om verdere steden te sparen. Koningin + regering naar Londen. Beneluxlanden + FR allemaal in 6 weken bezet — Blitzkrieg-succes." },
@@ -114,7 +114,7 @@ const steps = [
         q: "**D-Day** (6 juni 1944):",
         options: ["Landing in Normandië", "Pearl Harbor", "Bevrijding Auschwitz", "Hiroshima"],
         answer: 0,
-        wrongHints: [null, "Niet — dec 1941.", "Niet — jan 1945.", "Niet — aug 1945."],
+        wrongHints: [null, "Niet — dec 1941.", "Niet — jan 1945.", "De atoombom op Hiroshima viel meer dan een jaar later."],
         uitlegPad: {
           stappen: [
             { titel: "Operation Overlord", tekst: "Grootste amfibische operatie ooit. Eisenhower-commando. 5 stranden (Utah, Omaha, Gold, Juno, Sword) op Normandische kust. Omaha het bloedigst (~2400 Amerikaanse slachtoffers). Doorbraak naar Parijs (bevrijd aug 1944) en oprukken naar Duitsland. Begin van eind in West." },
@@ -138,7 +138,7 @@ const steps = [
         q: "**V-E Day** (Victory Europe) is:",
         options: ["8 mei 1945", "5 mei 1945", "6 juni 1944", "15 augustus 1945"],
         answer: 0,
-        wrongHints: [null, "NL-specifieke bevrijdingsdag.", "Niet — D-Day.", "Niet — V-J Day (Japan)."],
+        wrongHints: [null, "Op 5 mei vieren we in Nederland de bevrijding. Wanneer gaf Duitsland zich in heel Europa over?", "Niet — D-Day.", "Niet — V-J Day (Japan)."],
         uitlegPad: {
           stappen: [
             { titel: "Officiële DE-capitulatie", tekst: "7 mei: DE tekent capitulatie in Reims. 8 mei: ratificatie Berlijn. Sovjet-tijdzone: 9 mei (Victory Day in Rusland). NL viert 5 mei (bevrijdingsdag) want dat was effectieve bevrijding voor NL-bevolking — DE-troepen in NL gaven zich over." },
@@ -158,13 +158,13 @@ const steps = [
       {
         q: "**Holocaust**: ~6 miljoen joden vermoord. Hoogste percentage West-Europa was in:",
         options: [
-          "Nederland (~75%)",
-          "België (~40%)",
-          "Frankrijk (~25%)",
-          "Denemarken (<5%)"
+          "Nederland",
+          "België",
+          "Frankrijk",
+          "Denemarken"
         ],
         answer: 0,
-        wrongHints: [null, "Wel hoog, niet hoogste.", "Idem.", "Bijna alle gered — laagste."],
+        wrongHints: [null, "In België werd ongeveer 40% van de joden vermoord. Elders lag het percentage nog hoger.", "In Frankrijk overleefden de meeste joden; ongeveer een kwart werd vermoord.", "Denemarken smokkelde in 1943 bijna alle joden naar Zweden."],
         uitlegPad: {
           stappen: [
             { titel: "Tragische uitschieter", tekst: "Van 140 000 NL-joden vermoord 104 000 — hoogste % West-Europa. Redenen: efficiënte bevolkingsregistratie, weinig schuilplaats in dichtbevolkt klein land, weinig massaal-verzet, NSB-collaboratie. Denemarken redde bijna iedereen via boot-evacuatie naar Zweden." },
@@ -188,7 +188,7 @@ const steps = [
         q: "**Anne Frank** stierf:",
         options: ["Bergen-Belsen", "Auschwitz", "Westerbork", "Amsterdam"],
         answer: 0,
-        wrongHints: [null, "Wel geweest, niet gestorven daar.", "Idem.", "Onderdook daar, niet gestorven."],
+        wrongHints: [null, "Anne werd in 1944 naar Auschwitz gebracht, maar daarna nog verder vervoerd.", "Westerbork was een doorgangskamp in Drenthe: Anne zat er maar kort.", "In Amsterdam zat Anne ondergedoken in het Achterhuis, tot ze in 1944 werd opgepakt."],
         uitlegPad: {
           stappen: [
             { titel: "Tijdslijn", tekst: "Aug 1944: verraden, gearresteerd. Sept '44: Westerbork → Auschwitz. Okt '44: naar Bergen-Belsen (DE). Feb '45: tyfus-epidemie → Anne + zus Margot sterven. Bevrijding kamp april '45 — paar weken te laat. Otto enige overlevende familie." },
@@ -233,7 +233,7 @@ const steps = [
         q: "**Pearl Harbor** = aanval van:",
         options: ["Japan op de VS", "Duitsland op de USSR", "VS op Japan", "China op Japan"],
         answer: 0,
-        wrongHints: [null, "Niet — Barbarossa.", "Tegenovergesteld.", "Niet — Japan viel China binnen."],
+        wrongHints: [null, "Niet — Barbarossa.", "Pearl Harbor ligt op Hawaï. Van wie was die marinebasis?", "China vocht in die jaren in eigen land en had geen vloot om ver over zee aan te vallen."],
         uitlegPad: {
           stappen: [
             { titel: "Verrassings-aanval", tekst: "Zondagochtend 7 dec 1941, geen oorlogsverklaring vooraf. Japanse vliegtuigen bombardeerden Amerikaanse vloot in Pearl Harbor (Hawaii). 2400 doden. VS verklaart oorlog aan Japan + komt zo in WO2 (ook in Europa)." },
@@ -257,7 +257,7 @@ const steps = [
         q: "**Manhattan Project** ontwikkelde:",
         options: ["Atoombom", "Radar", "Penicilline", "Computer"],
         answer: 0,
-        wrongHints: [null, "Apart project.", "Apart.", "Apart (Bletchley/Turing)."],
+        wrongHints: [null, "Radar werd vooral in Groot-Brittannië ontwikkeld.", "Penicilline ontdekte Fleming al in 1928.", "Aan de eerste computers werkten onder meer Turing en zijn team in Bletchley Park."],
         uitlegPad: {
           stappen: [
             { titel: "Geheimst project ooit", tekst: "Na Einsteins brief aan Roosevelt (1939, zorg dat DE eerst bom heeft) gestart in 1942. 125 000 mensen, $2 mld. Locaties: Los Alamos (design, Oppenheimer), Oak Ridge (uranium-verrijking), Hanford (plutonium). Trinity test 16 juli 1945. 3 weken later Hiroshima." },
@@ -286,7 +286,7 @@ const steps = [
           "Duits bombardement op een Chinese stad"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet Duits — in China vochten in 1937 Japan en China tegen elkaar."],
+        wrongHints: [null, "Een 'bloedbad' is geen overwinning. Wie veroverde Nanjing in december 1937?", "Een vredesverdrag kwam er toen niet: de oorlog tussen China en Japan ging nog door tot 1945.", "Niet Duits — in China vochten in 1937 Japan en China tegen elkaar."],
         uitlegPad: {
           stappen: [
             { titel: "'Rape of Nanking'", tekst: "Toen Japanse leger de Chinese hoofdstad Nanjing innam: massamoord + verkrachting van Chinese burgers + krijgsgevangenen. Schattingen 200-300k doden in 6 weken. Eén van ergste oorlogsmisdaden 20e eeuw. Belangrijke reden voor naoorlogse anti-Japan-sentiment in China. Sommige Japanse nationalisten ontkennen schaal nog steeds — diplomatiek spanningsveld." },
@@ -360,7 +360,7 @@ const steps = [
         q: "**Welke genocide sinds WO2** vond plaats in 1994?",
         options: ["Rwanda", "Bosnië", "Cambodja", "Darfur"],
         answer: 0,
-        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "1975-79.", "Darfur was vanaf 2003."],
+        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "De Rode Khmer vermoordden in Cambodja tussen 1975 en 1979 enorm veel mensen.", "Darfur was vanaf 2003."],
         uitlegPad: {
           stappen: [
             { titel: "Hutu vs Tutsi", tekst: "Apr 1994: Hutu-extremisten begonnen systematische slachting Tutsi-bevolking + gematigde Hutu. ~800 000 doden in 100 dagen via machetes + geweren. VN-vredesmacht trok zich grotendeels terug. Internationale gemeenschap verzuimde. Belangrijke les: 'Nooit Weer' is geen automatische garantie. Sindsdien meer aandacht voor preventie genocide." },

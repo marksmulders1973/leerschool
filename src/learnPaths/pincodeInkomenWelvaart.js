@@ -92,9 +92,9 @@ const steps = [
       },
       {
         q: "Wat is **opportunity cost** (opofferingskosten)?",
-        options: ["Wat je opgeeft door voor iets anders te kiezen", "De prijs die je in de winkel betaalt", "Het geld dat je opzijlegt om te sparen", "Extra kosten zoals verzending en bezorging"],
+        options: ["Het beste alternatief dat je laat lopen", "Het prijsverschil tussen twee merken", "Het geld dat je opzijlegt om te sparen", "Extra kosten zoals verzending en bezorging"],
         answer: 0,
-        wrongHints: [null, "Die prijs betaal je echt. Maar wat mis je doordat je je geld hieraan uitgeeft?", "Sparen is ook een keuze. Gaat het bij opofferingskosten om wat je opzijlegt, of om wat je daardoor misloopt?", "Ook verzendkosten betaal je gewoon. Waar denk je aan bij het woord 'opofferen'?"],
+        wrongHints: [null, "Een prijsverschil zie je gewoon op het schap. Telt bij dit begrip ook iets mee dat geen prijskaartje heeft, zoals je tijd?", "Ook sparen is een keuze. Is het bedrag op je spaarrekening zelf al een kost?", "Verzendkosten betaal je gewoon bovenop de prijs. Hebben ze iets te maken met kiezen tussen twee dingen?"],
         uitlegPad: {
           stappen: [{ titel: "Kiezen = offer brengen", tekst: "Bij schaarste moet je KIEZEN. Wat je niet kiest, geef je OP. Dat opgegeven alternatief = opportunity cost." }],
           woorden: [{ woord: "opportunity cost", uitleg: "Engels voor 'opofferingskosten'. Wat je opgeeft door A te kiezen i.p.v. B." }],
@@ -327,7 +327,7 @@ const steps = [
         q: "Wat is een voorbeeld van **primair inkomen**?",
         options: ["Loon van een baan", "AOW-uitkering", "Huurtoeslag", "Studiefinanciering"],
         answer: 0,
-        wrongHints: [null, "AOW = secundair (zonder werk).", "Huurtoeslag krijg je van de overheid. Lever je daar een productiefactor voor?", "Voor studiefinanciering lever je geen arbeid, natuur of kapitaal. Welk soort inkomen is het dan?"],
+        wrongHints: [null, "AOW krijg je van de overheid als je oud genoeg bent. Lever je daar op dat moment een productiefactor voor?", "Huurtoeslag krijg je van de overheid. Lever je daar een productiefactor voor?", "Voor studiefinanciering lever je geen arbeid, natuur of kapitaal. Welk soort inkomen is het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Welke krijg je voor PRESTATIE?", tekst: "Loon krijg je voor WERK (arbeid leveren) = primair. AOW, toeslagen, studiefin. krijg je van overheid zonder werk = secundair." }],
           woorden: [{ woord: "primair inkomen", uitleg: "Beloning voor productiefactor (loon/pacht/rente/winst)." }, { woord: "secundair inkomen", uitleg: "Overdracht van overheid zonder tegenprestatie." }],
@@ -414,9 +414,9 @@ const steps = [
       },
       {
         q: "Welke maatregel **vermindert inkomensongelijkheid**?",
-        options: ["Progressieve belasting + toeslagen voor lage inkomens", "Een vlaktaks: iedereen betaalt hetzelfde percentage", "Hogere btw op boodschappen, zodat iedereen meebetaalt", "Lagere belasting op spaargeld en beleggingen"],
+        options: ["Progressieve belasting en inkomensafhankelijke toeslagen", "Een vlaktaks: iedereen betaalt hetzelfde percentage", "Hogere btw op boodschappen, zodat iedereen meebetaalt", "Hogere accijns op tabak, alcohol en suikerdrank"],
         answer: 0,
-        wrongHints: [null, "Bij een vlaktaks betalen hoge en lage inkomens hetzelfde percentage. Wordt het verschil daardoor kleiner?", "Boodschappen kosten iemand met weinig geld een groot deel van zijn inkomen. Wie merkt een hogere btw het meest?", "Wie heeft er vooral veel spaargeld en beleggingen? Wie profiteert dus van die verlaging?"],
+        wrongHints: [null, "Bij een vlaktaks betalen hoge en lage inkomens hetzelfde percentage. Wordt het verschil daardoor kleiner?", "Boodschappen kosten iemand met weinig geld een groot deel van zijn inkomen. Wie merkt een hogere btw het meest?", "Wie geeft een groter deel van zijn inkomen uit aan zulke producten: iemand met weinig of met veel geld?"],
         uitlegPad: {
           stappen: [{ titel: "Wat verkleint verschil?", tekst: "Progressieve belasting = rijken betalen MEER % belasting. Toeslagen = lage inkomens krijgen iets extra. Beide trekken de uitersten naar elkaar toe → ongelijkheid daalt." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt mee met het inkomen — hoe meer je verdient, hoe hoger % belasting." }, { woord: "nivellering", uitleg: "Inkomensverschillen KLEINER maken." }],
@@ -428,9 +428,9 @@ const steps = [
       },
       {
         q: "Waarom verdient een **arts** vaak meer dan een **verkoper**?",
-        options: ["Schaarste van vaardigheden + lange opleiding", "Artsen zijn vaker lid van een vakbond", "Artsen werken minder uren dan verkopers", "Ziekenhuizen maken meer winst dan winkels"],
+        options: ["Schaarste van vaardigheden + lange opleiding", "De wet schrijft een hoger minimumloon voor artsen voor", "Veel vraag naar zorg en veel artsen die werk zoeken", "Zorg is duur, dus ziekenhuizen rekenen hoge prijzen"],
         answer: 0,
-        wrongHints: [null, "Verdienen alle vakbondsleden veel? Waar hangt de hoogte van een loon dan van af?", "Werken artsen echt minder uren? Denk aan nachtdiensten en weekenden.", "Veel ziekenhuizen maken nauwelijks winst. Waarom betalen ze artsen dan toch veel? Denk aan vraag en aanbod van arbeid."],
+        wrongHints: [null, "Het minimumloon is voor elke volwassen werknemer hetzelfde. Waar hangt een hoger loon dan van af?", "Als er veel artsen werk zoeken, is het aanbod van arbeid groot. Wat doet dat met het loon?", "Hoge zorgkosten komen mede dóór hoge lonen. Wat is hier oorzaak en wat gevolg? Denk aan vraag en aanbod van arbeid."],
         uitlegPad: {
           stappen: [{ titel: "Markt voor arbeid", tekst: "Artsen zijn SCHAARS (lange opleiding, niet iedereen kan het). Vraag is hoog, aanbod laag → hoog loon. Verkopers zijn er veel — markt biedt minder hoog." }],
           woorden: [{ woord: "schaarste van arbeid", uitleg: "Weinig mensen hebben deze vaardigheden — vraag > aanbod → hoog loon." }, { woord: "opleidingsinvestering", uitleg: "Jaren studeren = uitgestelde inkomsten + studieschuld → moet later worden gecompenseerd met hoger loon." }],
@@ -493,9 +493,9 @@ const steps = [
       },
       {
         q: "Wat meet het **CPI**?",
-        options: ["De gemiddelde prijsstijging van consumentengoederen", "De koopkracht per persoon in Nederland", "Het totale inkomen van alle Nederlanders", "Het percentage mensen zonder betaald werk"],
+        options: ["De prijsstijging van wat huishoudens gemiddeld kopen", "Het vertrouwen van consumenten in de economie", "De prijsstijging van grondstoffen voor fabrieken", "De bestedingen van consumenten in een jaar"],
         answer: 0,
-        wrongHints: [null, "Koopkracht bereken je mét het CPI, maar het is niet hetzelfde. Wat meet het CPI zelf?", "Het totale inkomen of de totale productie van een land meet je met het BBP.", "Werkloosheid heeft een eigen cijfer van het CBS. Wat meet het CPI dan wel?"],
+        wrongHints: [null, "Dat is het consumentenvertrouwen, een ander cijfer van het CBS. Wat meet het CPI zelf?", "Dat meet de producentenprijsindex. Over welke producten gaat het CPI dan?", "Bestedingen zeggen hoevéél mensen uitgeven. Zegt het CPI iets over de hoeveelheid die gekocht wordt?"],
         uitlegPad: {
           stappen: [{ titel: "Wat staat in de letters?", tekst: "CPI = Consumenten-Prijs-Index. Het meet hoeveel duurder boodschappen + woonlasten + diensten + transport gemiddeld geworden zijn." }],
           woorden: [{ woord: "CPI", uitleg: "Consumentenprijsindex. Maatstaf voor inflatie. Basisjaar = 100." }, { woord: "consumentengoederen", uitleg: "Producten die huishoudens kopen: voedsel, kleding, vervoer, energie, diensten." }],
@@ -582,9 +582,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **BBP** in eenvoudige bewoording?",
-        options: ["Totale waarde van alle productie in NL in 1 jaar", "Totale belasting die Nederlanders in 1 jaar betalen", "Totale waarde van alle export van NL in 1 jaar", "Het brutoloon van alle werkenden in 1 jaar"],
+        options: ["Totale waarde van alle productie in NL in 1 jaar", "Productie van NL-bedrijven wereldwijd in 1 jaar", "Totale waarde van alle export van NL in 1 jaar", "Totale bestedingen van alle huishoudens in 1 jaar"],
         answer: 0,
-        wrongHints: [null, "BBP betekent bruto binnenlands product. Is belasting een product?", "Export is maar één deel van wat er wordt geproduceerd.", "Bruto loon is een onderdeel, maar BBP omvat ook winst, belasting, etc."],
+        wrongHints: [null, "Neem een Nederlandse fabriek in China. In welk land wordt die productie gemaakt, en bij welk land telt hij dan mee?", "Export is maar één deel van wat er wordt gemaakt. Telt wat in NL gemaakt en hier verkocht wordt dan niet mee?", "Huishoudens kopen ook buitenlandse spullen, en bedrijven en de overheid kopen ook. Klopt een telling van alleen huishoudens dan?"],
         uitlegPad: {
           stappen: [{ titel: "BBP = totale productie", tekst: "Bruto Binnenlands Product = ALLES wat in NL geproduceerd wordt in 1 jaar, opgeteld in euro's. NL: ~€1.000 miljard." }],
           woorden: [{ woord: "BBP", uitleg: "Bruto Binnenlands Product. Totale waarde productie in 1 jaar." }, { woord: "productie", uitleg: "Alles wat gemaakt + geleverd wordt: goederen + diensten." }],
@@ -596,9 +596,9 @@ const steps = [
       },
       {
         q: "Wat telt **NIET mee** in het BBP?",
-        options: ["Vrijwilligerswerk in een buurthuis", "Loon van een leraar op school", "Huur die je voor een woning betaalt", "Verkoop van een nieuwe auto"],
+        options: ["Vrijwilligerswerk in een buurthuis", "Lessen op een gratis openbare basisschool", "Huur die je voor een woning betaalt", "Verkoop van een nieuwe auto"],
         answer: 0,
-        wrongHints: [null, "Voor het werk van de leraar wordt loon betaald. Telt betaald werk mee?", "Wonen in een huurhuis is een dienst waarvoor je betaalt. Telt dat mee?", "Voor die auto wordt betaald en hij is net gemaakt. Telt die productie mee?"],
+        wrongHints: [null, "Ouders betalen geen lesgeld, maar de leraar krijgt wel loon van de overheid. Telt die productie mee?", "Wonen in een huurhuis is een dienst waarvoor je betaalt. Telt dat mee?", "Voor die auto wordt betaald en hij is net gemaakt. Telt die productie mee?"],
         uitlegPad: {
           stappen: [{ titel: "Geen geldstroom = geen BBP", tekst: "BBP telt alleen wat in GELD wordt verhandeld. Vrijwilligers krijgen niks → geen geldstroom → telt niet mee, ook al is het waardevol werk." }],
           woorden: [{ woord: "informele economie", uitleg: "Werk zonder factuur of loon (vrijwilligerswerk, huishoudwerk, oma die past) — economisch waardevol maar niet in BBP." }],
@@ -694,9 +694,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **minimumloon**?",
-        options: ["Het laagste loon dat werkgevers wettelijk mogen betalen", "Het gemiddelde loon van alle werknemers in Nederland", "Het loon dat vakbonden met werkgevers afspreken", "Het bedrag dat je minimaal aan pensioen krijgt"],
+        options: ["Het laagste loon dat werkgevers wettelijk mogen betalen", "Het laagste loon uit de cao van een bedrijfstak", "Het laagste bedrag dat je in de bijstand krijgt", "Het loon dat een starter gemiddeld verdient"],
         answer: 0,
-        wrongHints: [null, "Gemiddelde is veel hoger.", "Zo'n afspraak (een cao) geldt per bedrijfstak. Geldt het minimumloon per bedrijfstak of voor iedereen?", "Pensioen is iets anders (AOW)."],
+        wrongHints: [null, "Een cao spreken vakbonden en werkgevers per bedrijfstak af. Geldt het minimumloon per bedrijfstak of voor iedereen?", "Bijstand is een uitkering van de gemeente. Krijg je het minimumloon van de gemeente?", "Een gemiddelde is geen grens. Mag een werkgever een starter ook minder betalen dan het gemiddelde?"],
         uitlegPad: {
           stappen: [{ titel: "Wet beschermt werknemer", tekst: "Minimumloon = WETTELIJKE ondergrens. Werkgever mag niet minder betalen. Beschermt werknemers tegen extreem lage lonen." }],
           woorden: [{ woord: "minimumloon", uitleg: "Wettelijk laagste uurloon/maandloon dat werkgevers mogen betalen. Geldt vanaf 21 jaar; jongeren krijgen jeugd-minimumloon." }],
@@ -724,7 +724,7 @@ const steps = [
         q: "Welke toeslag krijg je bij **huur in een sociale woning + laag inkomen**?",
         options: ["Huurtoeslag", "Zorgtoeslag", "Kinderbijslag", "Kindgebonden budget"],
         answer: 0,
-        wrongHints: [null, "Zorgtoeslag is voor zorgkosten.", "Kinderbijslag is voor kinderen.", "Het kindgebonden budget krijg je voor kinderen. Gaat deze vraag over kinderen of over wonen?"],
+        wrongHints: [null, "Zorgtoeslag helpt bij de premie voor je zorgverzekering. Gaat deze vraag over zorg of over wonen?", "Kinderbijslag krijg je voor elk kind, ook met een hoog inkomen. Gaat deze vraag over kinderen?", "Het kindgebonden budget krijg je voor kinderen. Gaat deze vraag over kinderen of over wonen?"],
         uitlegPad: {
           stappen: [{ titel: "Match toeslag aan kost", tekst: "Elke toeslag dekt een SPECIFIEKE kost. Huur betalen = huurtoeslag. Zorgverzekering betalen = zorgtoeslag. Voor kinderen = kinderbijslag." }],
           woorden: [{ woord: "huurtoeslag", uitleg: "Bijdrage van de overheid in huurkosten als je sociale huur hebt + laag inkomen." }, { woord: "sociale woning", uitleg: "Huurwoning onder een maximale huur (~€880/2024), beheerd door woningcorporatie." }],
@@ -736,9 +736,9 @@ const steps = [
       },
       {
         q: "Wat zijn de **3 pijlers van pensioen**?",
-        options: ["AOW + werkgeverspensioen + eigen pensioen", "Brutoloon + nettoloon + vakantiegeld", "AOW + zorgtoeslag + huurtoeslag", "Werkgeverspensioen + WW + bijstand"],
+        options: ["AOW + werkgeverspensioen + eigen pensioen", "AOW + werkgeverspensioen + WW", "AOW + bijstand + eigen pensioen", "Werkgeverspensioen + eigen pensioen + zorgtoeslag"],
         answer: 0,
-        wrongHints: [null, "Dat zijn onderdelen van je loon nu. Welke potjes zijn bedoeld voor je oude dag?", "Zorg- en huurtoeslag krijg je als je weinig inkomen hebt. Zijn die bedoeld voor je oude dag?", "WW en bijstand krijg je ook vóór je pensioen. Horen die bij je oude dag?"],
+        wrongHints: [null, "WW krijg je als je je baan verliest, vóór je pensioen. Is die speciaal voor je oude dag?", "Bijstand is een vangnet op elke leeftijd. Is die speciaal voor je oude dag?", "Zorgtoeslag krijg je bij een laag inkomen, op elke leeftijd. Is die speciaal voor je oude dag?"],
         uitlegPad: {
           stappen: [{ titel: "Drie lagen", tekst: "Pijler 1: AOW van overheid (basis). Pijler 2: aanvullend pensioen via werkgever (opgebouwd in dienst). Pijler 3: eigen sparen/lijfrente (vrijwillig extra)." }],
           woorden: [{ woord: "AOW", uitleg: "Pijler 1: basis-pensioen voor iedereen." }, { woord: "aanvullend pensioen", uitleg: "Pijler 2: bedrag dat werkgever + werknemer samen opbouwen tijdens loopbaan." }, { woord: "lijfrente", uitleg: "Pijler 3: eigen pensioenpotje, vaak via verzekeraar." }],

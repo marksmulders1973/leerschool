@@ -82,15 +82,15 @@ const steps = [
       },
       {
         q: "Welk land scoort verwacht **HOOGST** op HDI?",
-        options: ["Nederland", "Saoedi-Arabië", "Brazilië", "China"],
+        options: ["Nederland", "Saoedi-Arabië", "Japan", "Verenigde Staten"],
         answer: 0,
-        wrongHints: [null, "Saoedi-Arabië is rijk door olie. Maar hoe staat het met onderwijs en levensverwachting vergeleken met de andere landen?", "Brazilië heeft een middelhoge HDI. Welk land scoort op alle drie onderdelen nog hoger?", "China groeit snel, maar het inkomen per inwoner is nog veel lager dan in West-Europa. Welk land zit verder?"],
+        wrongHints: [null, "Saoedi-Arabië is rijk door olie. Maar hoe staat het met onderwijs en levensverwachting vergeleken met de andere landen?", "Japan scoort hoog, maar staat net buiten de wereldtop tien. Welk land in dit rijtje staat daar wel in?", "De VS is heel rijk, maar de levensverwachting is er lager dan in veel andere rijke landen. Wat doet dat met de HDI?"],
         uitlegPad: {
-          stappen: [{ titel: "NL is West-Europees ontwikkeld", tekst: "NL HDI ~0,94 (top 10 wereldwijd). Combineert hoog inkomen + lange levensverwachting + goed onderwijs. Andere optie-landen: Saoedi-Arabië 0,88, China 0,77, Brazilië 0,75 (lager door minder inkomen per inwoner of minder jaren onderwijs). NL ontwikkeld land = hoge HDI gegarandeerd." }],
+          stappen: [{ titel: "NL is West-Europees ontwikkeld", tekst: "NL HDI ~0,94 (top 10 wereldwijd). Combineert hoog inkomen + lange levensverwachting + goed onderwijs. Andere optie-landen: VS 0,93, Japan 0,92, Saoedi-Arabië 0,88 (lager door een kortere levensduur of minder jaren onderwijs). NL ontwikkeld land = hoge HDI gegarandeerd." }],
           woorden: [{ woord: "HDI-categorieën", uitleg: "UNDP: zeer hoog (>0,80) / hoog (0,70-0,80) / midden (0,55-0,70) / laag (<0,55)." }],
           theorie: "Top HDI-landen: Noorwegen, Zwitserland, Ierland, Duitsland, NL, Australië. Laagste: Niger, Tsjaad, Centraal-Afrikaanse Rep. Sterke correlatie met geografie + politiek + onderwijs-investeringen.",
-          voorbeelden: [{ type: "cijfers", tekst: "NL 0,941 (10e wereld). Saoedi-Arabië 0,875 (35e). China 0,768 (79e). Brazilië 0,754 (87e). Laagste: Niger 0,400 (189e van 191)." }],
-          basiskennis: [{ onderwerp: "Niet andere landen", uitleg: "Saoedi-Arabië = rijk door olie, maar lager op onderwijs. China en Brazilië = middelhoog: groeiend inkomen, maar nog ver onder West-Europa." }],
+          voorbeelden: [{ type: "cijfers", tekst: "NL 0,941 (10e wereld). Saoedi-Arabië 0,875 (35e). VS 0,927 (20e). Japan 0,920 (24e). Laagste: Niger 0,400 (189e van 191)." }],
+          basiskennis: [{ onderwerp: "Niet andere landen", uitleg: "Saoedi-Arabië = rijk door olie, maar lager op onderwijs. De VS en Japan scoren ook hoog, maar net lager: in de VS leven mensen korter en Japan staat net buiten de top tien." }],
           niveaus: { basis: "Nederland.", simpeler: "NL = West-Europa, hoge HDI ~0,94. Andere opties = arme landen.", nogSimpeler: "NL" },
         },
       },
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "**Kindersterfte** is goede graadmeter omdat:",
-        options: ["Het toont of er zorg, voeding en hygiëne is", "Het toont hoeveel kinderen er geboren worden", "Het toont hoe oud mensen gemiddeld worden", "Het hangt vooral af van het klimaat"],
+        options: ["Het toont hoe goed de basiszorg in een land is", "Het toont hoeveel kinderen er geboren worden", "Het toont hoe oud mensen gemiddeld worden", "Het toont hoe snel de bevolking groeit"],
         answer: 0,
-        wrongHints: [null, "Het aantal geboortes is het geboortecijfer. Gaat kindersterfte over geboren worden of over overleven?", "Dat is de levensverwachting. Wat heeft een baby nodig om zijn eerste jaren te overleven?", "Warme landen als Singapore hebben weinig kindersterfte. Is klimaat dan de oorzaak?"],
+        wrongHints: [null, "Het aantal geboortes is het geboortecijfer. Gaat kindersterfte over geboren worden of over overleven?", "Dat is de levensverwachting. Wat heeft een baby nodig om zijn eerste jaren te overleven?", "Bevolkingsgroei hangt af van geboortes én sterfte samen. Waar zegt het overlijden van jonge kinderen vooral iets over?"],
         uitlegPad: {
           stappen: [{ titel: "Kindersterfte = breedste indicator", tekst: "Aantal kinderen dat sterft voor 5e jaar per 1000 geboortes. In rijke landen: <5/1000. In armste landen: 50+/1000. Goede indicator omdat alle onderdelen van welvaart erin samenkomen: zorg (vaccinaties), voeding (groei), hygiëne (water/sanitair), onderwijs moeders, woonomstandigheden." }],
           woorden: [{ woord: "kindersterfte", uitleg: "Aantal kinderen onder 5 jaar dat overlijdt, per 1000 levend-geborenen." }, { woord: "vaccinaties", uitleg: "Inenting tegen ziektes (mazelen, polio, DKTP). Voorkomt veel kinderdoden." }, { woord: "ondervoeding", uitleg: "Te weinig voedsel of verkeerde voeding. Hoofdoorzaak van veel kinderdoden in arme landen." }],
@@ -204,9 +204,9 @@ const steps = [
       },
       {
         q: "Wat meet de **Better Life Index** (OESO)?",
-        options: ["11 dimensies van kwaliteit van leven", "Het BBP per inwoner van elk OESO-land", "Het aantal banen en de werkloosheid", "De kosten van wonen, eten en vervoer"],
+        options: ["11 dimensies van kwaliteit van leven", "3 dimensies: inkomen, onderwijs en levensduur", "Hoe gelukkig inwoners zichzelf inschatten", "De milieu-voetafdruk per inwoner"],
         answer: 0,
-        wrongHints: [null, "Heet het een 'Better Life'-index als het alleen over geld gaat?", "Werk is maar één onderdeel van een goed leven. Wat hoort er nog meer bij?", "Kosten zijn maar één kant. Wat hoort er nog meer bij een goed leven?"],
+        wrongHints: [null, "Die drie samen vormen de HDI van de VN, een andere index. Welke index hoort bij de OESO?", "Dat doet het World Happiness Report van de VN. Wat meet de index van de OESO?", "De voetafdruk meet hoeveel natuur een land gebruikt. Is dat hetzelfde als hoe goed mensen er leven?"],
         uitlegPad: {
           stappen: [{ titel: "OESO meet 11 levensaspecten", tekst: "Better Life Index van OESO (organisatie westerse welvarende landen) meet 11 dimensies: huisvesting, inkomen, banen, gemeenschap, onderwijs, milieu, civiele rechten, gezondheid, tevredenheid, veiligheid, werk-privé-balans. Veel breder dan BBP. Burger kan zelf gewichten kiezen op website." }],
           woorden: [{ woord: "Better Life Index", uitleg: "OESO-index sinds 2011. Vergelijkt 40 landen op 11 dimensies." }, { woord: "OESO", uitleg: "Organisatie voor Economische Samenwerking + Ontwikkeling. 38 landen vooral rijk westers." }],
@@ -218,21 +218,21 @@ const steps = [
       },
       {
         q: "Bhutan meet **Gross National Happiness** (GNH) ipv:",
-        options: ["BBP", "Inflatie", "Belasting", "Werkloosheid"],
+        options: ["BBP", "HDI", "Gini-coëfficiënt", "Werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Inflatie meet hoe snel prijzen stijgen. Is dát de maat waarmee landen hun welvaart vergelijken?", "Belasting zegt niet hoe goed een land het doet. Welke maat gebruiken de meeste landen?", "Werkloosheid is maar één cijfer. Welke maat gebruiken de meeste landen voor welvaart?"],
+        wrongHints: [null, "De HDI is zelf al een maat die verder kijkt dan geld. Welke maat gebruiken de meeste landen voor hun welvaart?", "De Gini meet hoe eerlijk het inkomen verdeeld is. Is dát de gewone maat voor de welvaart van een land?", "Werkloosheid is maar één cijfer. Welke maat gebruiken de meeste landen voor welvaart?"],
         uitlegPad: {
           stappen: [{ titel: "Bhutan koos welzijn boven BBP", tekst: "Bhutan (klein Himalaya-koninkrijk, ~800.000 inwoners) verving in 1972 BBP als hoofdmaatstaf door GNH (Gross National Happiness). Meet 9 domeinen: psychologisch welzijn, gezondheid, onderwijs, tijdsgebruik, cultuur, goed bestuur, gemeenschap, ecologische diversiteit, levensstandaard. Iconisch alternatief." }],
           woorden: [{ woord: "GNH", uitleg: "Gross National Happiness. Bhutan's welzijns-index sinds 1972. 9 domeinen, 33 indicatoren." }, { woord: "Bhutan", uitleg: "Land in Himalaya tussen India en China. Boeddhistisch koninkrijk. Pionier alternatieve welvaart-meting." }],
           theorie: "Inspireert wereldwijd discussies over BBP-alternatieven. VN-Algemene Vergadering nam 2011 resolutie aan: landen moeten geluk meer betrekken in beleid. Maar Bhutan ZELF blijft economisch arm — critici zeggen daarom dat geluk meten alleen niet genoeg is.",
           voorbeelden: [{ type: "domeinen", tekst: "9 domeinen GNH: psychologisch welzijn, gezondheid, onderwijs, tijdsgebruik, cultuur, goed bestuur, gemeenschap, ecologie, levensstandaard. Wereld kijkt mee." }],
-          basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Inflatie, belasting en werkloosheid blijven gewoon meten. GNH komt ipv BBP (geluksstrategie)." }],
+          basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "HDI, Gini en werkloosheid blijven gewoon meten. GNH komt ipv BBP (geluksstrategie)." }],
           niveaus: { basis: "BBP.", simpeler: "Bhutan vervangt BBP door GNH = geluksmeting.", nogSimpeler: "BBP" },
         },
       },
       {
         q: "Wat maakt mensen vooral **gelukkig** (volgens onderzoek)?",
-        options: ["Relaties + gezondheid + doel + vrijheid", "Een hoog inkomen + een eigen huis", "Veel vakantie + vrije tijd + rust", "Een goede opleiding + een vaste baan"],
+        options: ["Relaties + gezondheid + doel + vrijheid", "Inkomen + eigen huis + baan + spaargeld", "Vakantie + vrije tijd + rust + hobby's", "Opleiding + vaste baan + carrière + status"],
         answer: 0,
         wrongHints: [null, "Geld helpt tot je basisbehoeften gedekt zijn. Wat zei onderzoek over méér geld daarboven?", "Vakantie helpt, maar maakt het je blijvend gelukkig? Wat doe je de rest van het jaar?", "Opleiding en werk helpen zeker. Maar wat noemen mensen in onderzoek het allerbelangrijkst?"],
         uitlegPad: {
@@ -270,9 +270,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **vicieuze cirkel van armoede**?",
-        options: ["Armoede die zichzelf in stand houdt", "Armoede door één plotselinge ramp", "Armoede doordat hulp verkeerd terechtkomt", "Armoede die met de seizoenen meebeweegt"],
+        options: ["Armoede die zichzelf in stand houdt", "Armoede die van land naar land overslaat", "Armoede doordat hulp verkeerd terechtkomt", "Armoede die met de seizoenen meebeweegt"],
         answer: 0,
-        wrongHints: [null, "Een ramp is één gebeurtenis. Wat betekent het dat het een cirkel is: houdt het op of gaat het rond?", "Dat kan een oorzaak zijn. Maar wat is er bijzonder aan een cirkel?", "Op en neer met de seizoenen is een schommeling. Komt een arm gezin in een vicieuze cirkel er ooit vanzelf uit?"],
+        wrongHints: [null, "Armoede verspreidt zich niet als een ziekte. Denk aan één arm gezin: waarom komt het er moeilijk uit?", "Verkeerd besteedde hulp kan armoede verergeren. Maar gaat dit begrip over de hulp, of over de armoede zelf?", "Op en neer met de seizoenen heet seizoensarmoede. Is dat hetzelfde begrip?"],
         uitlegPad: {
           stappen: [{ titel: "Cirkel die zichzelf voedt", tekst: "Vicieuze cirkel armoede: arm land → weinig belastinginkomsten → geen geld voor scholen → geen opgeleide werkers → geen industrie → geen banen → mensen blijven arm → cyclus herhaalt zich. Dit verklaart waarom landen arm BLIJVEN, niet alleen waarom ze arm ZIJN. Moeilijk te doorbreken zonder externe inbreng." }],
           woorden: [{ woord: "vicieuze cirkel", uitleg: "Latijn 'vitium' = fout/gebrek. Zelf-versterkende negatieve cyclus." }, { woord: "feedback-loop", uitleg: "Systeem waar gevolg weer oorzaak wordt. Hier: armoede → effect → meer armoede." }, { woord: "doorbreken", uitleg: "Cirkel doorbreken vraagt grote interventie: hulp, hervormingen, technologie, onderwijs-massa." }],
@@ -312,9 +312,9 @@ const steps = [
       },
       {
         q: "**Kolonisatie-erfenis** als oorzaak armoede betekent:",
-        options: ["Grenzen en economie zijn door kolonisators bepaald", "De koloniale tijd duurde daar heel kort", "Ze betalen nog steeds belasting aan Europa", "De kolonisators lieten veel fabrieken achter"],
+        options: ["Grenzen en economie zijn door kolonisators bepaald", "Grenzen en bestuur bleven zoals vóór de kolonisatie", "Oud-kolonies krijgen nu minder hulp dan andere landen", "De kolonisators lieten veel fabrieken achter"],
         answer: 0,
-        wrongHints: [null, "De duur alleen zegt weinig. Wat lieten de koloniale machten achter?", "Die betalingen stopten bij de onafhankelijkheid.", "Kolonies leverden vooral grondstoffen aan Europa. Werd er dan veel industrie opgebouwd?"],
+        wrongHints: [null, "Kijk naar de kaart van Afrika: zie je veel kaarsrechte grenzen? Waar komen die vandaan?", "Veel hulp gaat juist naar oud-kolonies. Wat uit de koloniale tijd werkt nu nog door?", "Kolonies leverden vooral grondstoffen aan Europa. Werd er dan veel industrie opgebouwd?"],
         uitlegPad: {
           stappen: [{ titel: "Erfenis: kunstmatige grenzen + mono-cultuur", tekst: "Europese koloniale machten (UK/FR/NL/BE) trokken in 19e eeuw landgrenzen door Afrika willekeurig op kaart — geen rekening met volkeren/talen. Bv. Nigeria heeft 250+ etnische groepen samen. Economie gericht op 1 grondstof voor moederland (cacao Ghana, koffie Ivoorkust, koper Zambia, olie Nigeria). Bij onafhankelijkheid (jaren '60) erfden de landen deze problemen." }],
           woorden: [{ woord: "kolonisatie", uitleg: "Land neemt vreemd gebied in voor eigen voordeel. Westerse mogendheden deden dit massaal 16e-20e eeuw." }, { woord: "mono-cultuur", uitleg: "Land hangt van 1 product af. Kwetsbaar bij prijsdaling." }, { woord: "Scramble for Africa", uitleg: "1881-1914. Europese mogendheden verdeelden Afrika in 30 jaar. Grenzen nu nog steeds koloniaal." }],
@@ -326,9 +326,9 @@ const steps = [
       },
       {
         q: "Waarom zijn **schulden** zo slecht voor arme landen?",
-        options: ["Rente kost geld dat naar onderwijs of zorg kon", "Schulden maken de munt van het land sterker", "Ze mogen daardoor niet meer exporteren", "Ze moeten de lening binnen een jaar aflossen"],
+        options: ["Rente kost geld dat naar onderwijs of zorg kon", "Ze krijgen dan geen ontwikkelingshulp meer", "Schuldeisers nemen het bestuur van het land over", "Ze moeten de lening binnen een jaar aflossen"],
         answer: 0,
-        wrongHints: [null, "Een sterkere munt zou de invoer juist goedkoper maken. Wat kost een lening elk jaar?", "Exporteren mag gewoon. Waar gaat het geld van de overheid dan naartoe?", "Staatsschulden lopen vaak tientallen jaren."],
+        wrongHints: [null, "Arme landen met schulden krijgen vaak juist extra hulp. Waar gaat het geld van de overheid dan wel naartoe?", "Een land blijft zelf bestuurd, ook met schulden. Wat moet het wel elk jaar betalen?", "Staatsschulden lopen vaak tientallen jaren. Wat betaal je in al die jaren?"],
         uitlegPad: {
           stappen: [{ titel: "Rente vreet onderwijs-budget op", tekst: "Veel arme landen leenden in jaren '70-'80 bij Wereldbank + IMF (vaak gepusht). Door hoge rentes + crisissen werden schulden onbetaalbaar. Voorbeeld: Mozambique besteedde in 1995 25%+ overheidsbudget aan rente. Geld dat NIET naar scholen + ziekenhuizen + wegen ging. 'Schuldenval'." }],
           woorden: [{ woord: "staatsschuld", uitleg: "Wat overheid schuldig is aan binnen- of buitenland." }, { woord: "Schuldenval", uitleg: "Rente jaarlijks zo hoog dat land niet kan investeren in ontwikkeling. Vicieuze cyclus." }, { woord: "Highly Indebted Poor Countries (HIPC)", uitleg: "IMF/Wereldbank-programma 1996+ dat 36 armste landen schuld kwijtschold mits hervormingen." }],
@@ -340,9 +340,9 @@ const steps = [
       },
       {
         q: "Wat verklaart het **succes van China sinds 1980**?",
-        options: ["Hervormingen, openheid en export", "Veel ontwikkelingshulp uit het Westen", "Weinig handel met andere landen", "Een strikte planeconomie zonder markt"],
+        options: ["Hervormingen, openheid en export", "Veel ontwikkelingshulp uit het Westen", "Zelfvoorzienend worden, weinig import", "Staatsplanning van alle productie"],
         answer: 0,
-        wrongHints: [null, "Werd China door hulp de fabriek van de wereld? Wat veranderde China zelf na 1980?", "Waar komen veel spullen in jouw huis vandaan?", "China heet nog communistisch, maar werkt het nog als een planeconomie?"],
+        wrongHints: [null, "Werd China door hulp de fabriek van de wereld? Wat veranderde China zelf na 1980?", "Waar komen veel spullen in jouw huis vandaan? Werd China rijk door minder handel?", "China heet nog communistisch, maar plant de staat er nog alle productie?"],
         uitlegPad: {
           stappen: [{ titel: "Deng Xiaoping 1978 — hervormingen", tekst: "China was tot 1976 (dood Mao) gesloten communistisch + arm. Deng Xiaoping vanaf 1978: hervormingen + opening naar buiten. Stappen: (1) Boeren mochten weer zelf een stuk land bewerken + winst behouden. (2) Speciale Economische Zones (Shenzhen) voor buitenlands kapitaal. (3) Export-industrie opbouwen. Resultaat: ~800 miljoen Chinezen uit armoede 1980-2020. Grootste reductie ooit." }],
           woorden: [{ woord: "Deng Xiaoping", uitleg: "Chinees leider 1978-1992. Architect van China's hervormingen. Beroemd: 'Het maakt niet uit of de kat zwart of wit is, als hij maar muizen vangt.'" }, { woord: "Speciale Economische Zones", uitleg: "Gebieden in China waar marktregels golden + buitenlandse bedrijven welkom waren. Bv. Shenzhen." }, { woord: "wereldfabriek", uitleg: "China's rol sinds 2000: produceert goedkoop voor wereldmarkt. Wereldwijde productie verschoof naar daar." }],
@@ -357,7 +357,7 @@ const steps = [
   // ─── Stap 4: Ontwikkelingshulp ────────────────────
   {
     title: "Ontwikkelingshulp — werkt het?",
-    explanation: "**Ontwikkelingshulp** = rijkere landen helpen armere landen vooruit.\n\n**Soorten hulp**:\n\n**1. Bilaterale hulp**\n• Rechtstreeks van NL naar bv. Mali\n• Vaak met voorwaarden (NL bedrijf moet leveren)\n\n**2. Multilaterale hulp**\n• Via VN, EU, Wereldbank — meerdere landen samen\n• Vermijdt politieke beïnvloeding\n• Bv. UNICEF, WHO, UNDP, World Bank\n\n**3. Particuliere hulp**\n• NGO's: Oxfam Novib, Cordaid, Artsen zonder Grenzen, Save the Children\n• Donaties van burgers + bedrijven\n• Vaak directer naar projecten\n\n**4. Noodhulp**\n• Bij rampen — voedsel, medicijnen, tenten\n• Bv. aardbeving, oorlog, droogte\n• Snel, kort\n\n**5. Structurele hulp**\n• Lange termijn — scholen, ziekenhuizen, watervoorzieningen\n• Vaak meerjarige projecten\n• Effect na 10-20 jaar\n\n**NL-bijdrage**:\n• ~€5 miljard/jaar (~0,5% van BBP)\n• Doel: 0,7% van BBP (UN-norm), maar daar zit NL sinds ~2013 onder\n• Recente kabinetten bezuinigden verder\n\n**Voor- en nadelen hulp**:\n\n**Voor**:\n• ✓ Helpt bij rampen, vermindert directe nood\n• ✓ Investeringen in onderwijs/zorg leveren lange termijn winst op\n• ✓ Stabiliteit voorkomt migratie en conflict\n• ✓ Eigen markt op termijn (NL-bedrijven kunnen aan deze landen verkopen)\n\n**Tegen**:\n• ✗ Soms verdwijnt het in corruptie\n• ✗ Kan **afhankelijkheid** creëren — lokale producent kan niet concurreren met gratis hulp\n• ✗ Verkeerde prioriteiten (donor besluit, niet ontvanger)\n• ✗ Kortetermijn-projecten zonder duurzaam effect\n\n**Modern denken** (Easterly, Banerjee/Duflo):\n• 'Big push' (massale hulp): vaak teleurstellend\n• 'Randomized controlled trials': test wat WERKELIJK werkt\n• Voorbeeld: muskietennetten gratis = redt levens, kosten laag\n• Voorbeeld: cashtransfers (direct geld geven) = vaak beter dan goederen\n\n**Eerlijke handel (Fair Trade)**:\n• Kopers betalen een eerlijke prijs aan boeren, niet de laagst mogelijke\n• Logo's: Max Havelaar, Fairtrade, UTZ, Rainforest Alliance\n• Voor: koffie, thee, cacao, bananen, bloemen\n• Iets duurder voor consument, beter voor producent\n\n**Beste vorm hulp?**\nGeen consensus. Het meest effectief lijkt: **investering in onderwijs + zorg + infrastructuur** + **handel** + **stabiliteit**.\n\n**Migratie als 'hulp'**:\n• Gastarbeiders sturen geld terug naar familie ('remittances')\n• Wereldwijd ~$700 mrd/jaar — 3x zo groot als alle ontwikkelingshulp\n• Maar: brain drain ook risico",
+    explanation: "**Ontwikkelingshulp** = rijkere landen helpen armere landen vooruit.\n\n**Soorten hulp**:\n\n**1. Bilaterale hulp**\n• Rechtstreeks van NL naar bv. Mali\n• Vaak met voorwaarden (NL bedrijf moet leveren)\n\n**2. Multilaterale hulp**\n• Via VN, EU, Wereldbank — meerdere landen samen\n• Vermijdt politieke beïnvloeding\n• Bv. UNICEF, WHO, UNDP, World Bank\n\n**3. Particuliere hulp**\n• NGO's: Oxfam Novib, Cordaid, Artsen zonder Grenzen, Save the Children\n• Donaties van burgers + bedrijven\n• Vaak directer naar projecten\n\n**4. Noodhulp**\n• Bij rampen — voedsel, medicijnen, tenten\n• Bv. aardbeving, oorlog, droogte\n• Snel, kort\n\n**5. Structurele hulp**\n• Lange termijn — scholen, ziekenhuizen, watervoorzieningen\n• Vaak meerjarige projecten\n• Effect na 10-20 jaar\n\n**NL-bijdrage**:\n• ~€5 miljard/jaar (~0,5% van BBP)\n• Doel: 0,7% van BBP (UN-norm), maar daar zit NL sinds ~2013 onder\n• Recente kabinetten bezuinigden verder\n\n**Voor- en nadelen hulp**:\n\n**Voor**:\n• ✓ Helpt bij rampen, vermindert directe nood\n• ✓ Investeringen in onderwijs/zorg leveren lange termijn winst op\n• ✓ Stabiliteit voorkomt migratie en conflict\n• ✓ Eigen markt op termijn (NL-bedrijven kunnen aan deze landen verkopen)\n\n**Tegen**:\n• ✗ Soms verdwijnt het in corruptie\n• ✗ Kan **afhankelijkheid** creëren — lokale producent kan niet concurreren met gratis hulp\n• ✗ Verkeerde prioriteiten (donor besluit, niet ontvanger)\n• ✗ Kortetermijn-projecten zonder duurzaam effect\n\n**Modern denken** (Easterly, Banerjee/Duflo):\n• 'Big push' (massale hulp): vaak teleurstellend\n• 'Randomized controlled trials': test wat WERKELIJK werkt\n• Voorbeeld: muskietennetten gratis = redt levens, kosten laag\n• Voorbeeld: cashtransfers (direct geld geven) = vaak beter dan goederen\n\n**Eerlijke handel (Fair Trade)**:\n• Kopers betalen een eerlijke prijs aan boeren, niet de laagst mogelijke\n• Logo's: Max Havelaar, Fairtrade, Rainforest Alliance (waar UTZ in is opgegaan)\n• Voor: koffie, thee, cacao, bananen, bloemen\n• Iets duurder voor consument, beter voor producent\n\n**Beste vorm hulp?**\nGeen consensus. Het meest effectief lijkt: **investering in onderwijs + zorg + infrastructuur** + **handel** + **stabiliteit**.\n\n**Migratie als 'hulp'**:\n• Gastarbeiders sturen geld terug naar familie ('remittances')\n• Wereldwijd ~$700 mrd/jaar — 3x zo groot als alle ontwikkelingshulp\n• Maar: brain drain ook risico",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ONTWIKKELINGSHULP</text>
 <rect x="20" y="40" width="135" height="35" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
@@ -431,11 +431,11 @@ const steps = [
       },
       {
         q: "Wat is **Fair Trade**?",
-        options: ["Eerlijke prijs voor boeren in arme landen", "Gratis producten voor mensen in arme landen", "Handel zonder invoerheffingen tussen landen", "Producten die biologisch geteeld zijn"],
+        options: ["Een vaste minimumprijs voor boeren in arme landen", "Gratis producten voor mensen in arme landen", "Handel zonder invoerheffingen tussen landen", "Producten die biologisch geteeld zijn"],
         answer: 0,
         wrongHints: [null, "Bij Fair Trade wordt er gewoon gekocht en verkocht. Wat is er dan anders aan?", "Handel zonder heffingen heet vrijhandel. Gaat Fair Trade over heffingen, of over iets anders?", "Biologisch gaat over hoe iets geteeld wordt. Daar is een ander keurmerk voor. Waar gaat Fair Trade over?"],
         uitlegPad: {
-          stappen: [{ titel: "Boeren krijgen eerlijke + minimum-prijs", tekst: "Fair Trade = systeem waar consumenten in rijke landen iets meer betalen, zodat boeren in arme landen een EERLIJKE prijs krijgen — niet de absoluut laagste die wereldmarkt vraagt. Plus: minimumprijs gegarandeerd (ook als wereldprijs daalt). Plus: premie voor sociale projecten (school, kliniek dorp). Keurmerken: Max Havelaar, Fairtrade, UTZ." }],
+          stappen: [{ titel: "Boeren krijgen eerlijke + minimum-prijs", tekst: "Fair Trade = systeem waar consumenten in rijke landen iets meer betalen, zodat boeren in arme landen een EERLIJKE prijs krijgen — niet de absoluut laagste die wereldmarkt vraagt. Plus: minimumprijs gegarandeerd (ook als wereldprijs daalt). Plus: premie voor sociale projecten (school, kliniek dorp). Keurmerken: Max Havelaar, Fairtrade." }],
           woorden: [{ woord: "Fair Trade", uitleg: "'Eerlijke handel'. Systeem voor eerlijkere prijzen boeren arme landen." }, { woord: "Max Havelaar", uitleg: "Eerste Fair Trade-keurmerk in NL (1988). Genoemd naar boek Multatuli (1860, anti-koloniaal)." }, { woord: "minimum-prijs", uitleg: "Vaste vloer onder prijs. Boer weet zeker inkomen, ook bij wereldmarkt-crash." }],
           theorie: "Werkt voor: koffie, thee, cacao, bananen, bloemen. Consument betaalt ~10-20% extra. Bedrijven moeten audit doorstaan om keurmerk te krijgen. Critici: niet alle boeren kunnen meedoen (organisatie-eisen). Voorstanders: alternatief voor commodity-exploitatie.",
           voorbeelden: [{ type: "koffie", tekst: "Reguliere koffie: boer Ethiopië krijgt $0,02/kop. Fair Trade: $0,08 (4x). Voor consument een paar cent meer per kop. Voor boer = veel meer inkomen." }],
@@ -497,9 +497,9 @@ const steps = [
       },
       {
         q: "Wat zijn de **3 P's** van duurzaamheid?",
-        options: ["People, Planet, Profit", "Prijs, Personeel, Pensioen", "Product, Plaats, Promotie", "Plan, Pay, Promote"],
+        options: ["People, Planet, Profit", "Planet, Plastic, Pollution", "Product, Plaats, Promotie", "People, Peace, Partnership"],
         answer: 0,
-        wrongHints: [null, "Dat zijn begrippen uit loon en werk.", "Dat zijn P's van de marketingmix.", "Dat zijn geen begrippen uit duurzaamheid."],
+        wrongHints: [null, "Plastic en vervuiling horen allebei bij het milieu. Hoeveel verschillende kanten van duurzaamheid noemde de les?", "Dat zijn P's van de marketingmix. Bij welk onderwerp hoorden de drie P's van duurzaamheid?", "Die woorden komen uit de doelen van de VN. Welke drie P's gebruikte de les voor duurzaam ondernemen?"],
         uitlegPad: {
           stappen: [{ titel: "Mensen + planeet + winst", tekst: "3 P's = People (mensen — sociaal goed), Planet (planeet — milieu/klimaat), Profit (winst — economisch duurzaam). Concept van John Elkington (1994). Bedrijven moeten op ALLE drie scoren, niet alleen winst." }],
           woorden: [{ woord: "Triple Bottom Line", uitleg: "Engels voor '3 P's'. Bedrijven meten succes op 3 lijnen: sociaal + ecologisch + economisch." }, { woord: "Brundtland", uitleg: "Noors politica (1987). Definieerde duurzame ontwikkeling: 'voldoen aan behoeften NU zonder toekomstige generaties te belasten'." }],
@@ -511,9 +511,9 @@ const steps = [
       },
       {
         q: "**Microkrediet** werkt vooral voor:",
-        options: ["Beginnende kleine ondernemers in arme landen", "Grote internationale bedrijven met veel personeel", "Nederlandse studenten met een studieschuld", "Overheden van arme landen in Afrika en Azië"],
+        options: ["Beginnende kleine ondernemers in arme landen", "Arme gezinnen die voedsel moeten kopen", "Nederlandse studenten met een studieschuld", "Overheden van arme landen in Afrika en Azië"],
         answer: 0,
-        wrongHints: [null, "Grote bedrijven lenen miljoenen bij gewone banken. Wat betekent 'micro'?", "DUO doet dat in NL.", "Microkrediet is een heel kleine lening. Heeft een regering daar genoeg aan?"],
+        wrongHints: [null, "Een lening voor eten moet terug, maar levert zelf niets op. Hoe betaal je die dan af?", "Studenten in Nederland lenen bij DUO. Is microkrediet een studielening?", "Microkrediet is een heel kleine lening. Heeft een regering daar genoeg aan?"],
         uitlegPad: {
           stappen: [{ titel: "Kleine lening = grote impact", tekst: "Microkrediet = mini-lening (€50-€500) voor mensen die nooit bij gewone bank kunnen lenen (geen onderpand, geen baan). Vooral vrouwen in arme landen. Doel: eigen bedrijfje starten (kraampje, naaiwerk, kleine winkel) en uit armoede komen." }],
           woorden: [{ woord: "microkrediet", uitleg: "Kleine lening voor arme ondernemers. Vaak <€500. Korte looptijd." }, { woord: "Grameen Bank", uitleg: "Eerste microkrediet-bank. Opgericht door Yunus in Bangladesh 1976." }],
@@ -539,9 +539,9 @@ const steps = [
       },
       {
         q: "**Leapfrogging** is:",
-        options: ["Arme landen slaan ontwikkelingsstappen over", "Arme landen volgen precies de weg van rijke landen", "Arme landen kopen oude technologie van rijke landen", "Hulp die arme landen elkaar onderling geven"],
+        options: ["Arme landen slaan ontwikkelingsstappen over", "Arme landen volgen precies de weg van rijke landen", "Arme landen kopen oude technologie van rijke landen", "Snel groeien door één grote exportsprong"],
         answer: 0,
-        wrongHints: [null, "Denk aan Kenia: mobiel betalen zonder eerst overal bankkantoren. Volgden ze de westerse route?", "Oude technologie kopen is juist níét overslaan. Wat deed Kenia met mobiel betalen?", "Dat heet zuid-zuidsamenwerking. 'Leap' betekent springen. Waar springen arme landen overheen?"],
+        wrongHints: [null, "Denk aan Kenia: mobiel betalen zonder eerst overal bankkantoren. Volgden ze de westerse route?", "Kenia kocht geen oude vaste telefoonlijnen. Welke technologie gebruikten ze voor betalen?", "Het gaat hier niet om export. Denk aan Kenia en mobiel betalen: wat bouwden ze níét eerst?"],
         uitlegPad: {
           stappen: [{ titel: "Generatie overslaan", tekst: "Leapfrogging = letterlijk 'haasje-over springen'. Arme landen slaan ontwikkelings-stappen over. Voorbeeld: nooit vaste telefoonlijn aangelegd → direct mobiel. Geen kolencentrales gebouwd → direct zonne-energie. Schoolboeken overgeslagen → direct tablet/internet." }],
           woorden: [{ woord: "leapfrogging", uitleg: "Ontwikkelings-stappen overslaan, direct naar nieuwste technologie." }, { woord: "M-Pesa", uitleg: "Keniaans mobiel-bankieren systeem. Sinds 2007. Mensen zonder bankrekening kunnen geld sturen via SMS." }],
@@ -553,9 +553,9 @@ const steps = [
       },
       {
         q: "**Klimaat en arme landen**:",
-        options: ["Ze stoten weinig CO2 uit maar lijden het meest", "Ze stoten veel CO2 uit maar lijden er weinig onder", "Ze profiteren het meest van de opwarming", "Ze stoten zelf het meeste CO2 uit van iedereen"],
+        options: ["Ze stoten weinig CO2 uit maar lijden het meest", "Ze stoten veel CO2 uit en lijden het meest", "Ze stoten weinig CO2 uit en merken er weinig van", "Ze stoten veel CO2 uit maar merken er weinig van"],
         answer: 0,
-        wrongHints: [null, "Wie heeft de meeste fabrieken en auto's: arme of rijke landen? En wie kan zich het minst beschermen?", "Droogte en overstromingen raken vooral warme, arme gebieden. Is dat profiteren?", "Kijk naar de uitstoot: wie stoten historisch het meest uit?"],
+        wrongHints: [null, "Wie heeft de meeste fabrieken en auto's: arme of rijke landen?", "Droogte en overstromingen raken vooral warme gebieden. Kunnen arme landen zich daar goed tegen beschermen?", "Wie heeft de meeste fabrieken en auto's? En wie kan zich het minst beschermen tegen droogte?"],
         uitlegPad: {
           stappen: [{ titel: "Onrechtvaardige verdeling", tekst: "Klimaat-paradox: rijke landen (VS, EU) en China veroorzaakten samen het grootste deel van de historische CO2-uitstoot. Maar arme landen lijden meeste klimaatschade: droogtes (Sahel), overstromingen (Bangladesh), zeespiegel-stijging (eilandstaten zoals Malediven, Tuvalu)." }],
           woorden: [{ woord: "klimaat-rechtvaardigheid", uitleg: "Idee dat veroorzakers (rijke landen) moeten betalen voor schade in slachtoffer-landen (arme)." }, { woord: "loss and damage", uitleg: "VN-fonds (sinds 2022) waarin rijke landen geld storten voor klimaatschade arme landen." }],
@@ -570,12 +570,12 @@ const steps = [
   // ─── Stap 6: Eerlijke handel en consumeer-keuzes ──────
   {
     title: "Eerlijke handel en jouw keuzes als consument",
-    explanation: "Als consument heb je **macht**. Wat je koopt, beïnvloedt wat geproduceerd wordt en hoe.\n\n**Eerlijke handel (Fair Trade)** in detail:\n\n**Hoe het werkt**:\n• Boeren in arme landen organiseren in coöperatie\n• Kopers (Westerse bedrijven) betalen **hogere prijs** + **vaste minimumprijs** (zelfs als wereldprijs laag)\n• Extra premie voor sociale projecten in dorp (school, kliniek)\n• Garantie geen kinderarbeid + veilig werk\n\n**Belangrijkste keurmerken**:\n• **Max Havelaar** / **Fairtrade** — koffie, thee, cacao, fruit\n• **UTZ** (nu Rainforest Alliance) — koffie, thee, cacao\n• **Rainforest Alliance** — milieu + sociaal\n• **GOTS** — duurzaam textiel\n• **MSC** — visserij\n• **EU-bio** — biologisch\n• **B-Corp** — bedrijven die hele organisatie sociaal+milieu doen\n\n**Voorbeeld koffie**:\n• Reguliere koffie: boer in Ethiopië krijgt $0,02 per kop (1%!)\n• Fair Trade: $0,08 (4%)\n• Verschil voor jou: een paar cent per kop. Voor boer: veel meer inkomen.\n\n**Kritiek op Fair Trade**:\n• Niet alle boeren kunnen meedoen (organisatie-eisen)\n• Hogere prijs leidt soms tot OVERPRODUCTIE\n• Marketing > daadwerkelijk effect (sommige bedrijven 'fair-washing')\n\n**Andere bewuste keuzes**:\n\n**1. Lokaal kopen**\n• Minder transport-CO2\n• Steun lokale economie\n• Maar: niet alles kan lokaal (koffie, banaan)\n\n**2. Tweedehands**\n• Vinted, Marktplaats, kringloop\n• Minder grondstof-gebruik\n• Goedkoper\n\n**3. Repareren in plaats van weggooien**\n• Repair Café\n• Right to Repair (EU-wetgeving)\n• Spullen langer gebruiken\n\n**4. Minder vlees**\n• Vlees-productie veel CO2 + water + ruimte\n• 1 kg rundvlees ~15.000 liter water\n• 'Flexitariër': minder, niet geen\n\n**5. Energie besparen**\n• Verwarming 1°C lager = 6% minder gas\n• LED-lampen\n• Beter geïsoleerd huis\n\n**'Stem met je portemonnee'**:\n• Bedrijven volgen consumenten\n• Massa-keuzes maken verschil\n• Maar: niet ALLES op individu — beleid + bedrijven hebben grootste impact\n\n**Greenwashing**:\n• Bedrijven die zich groener voordoen dan ze zijn\n• Bv. olie-bedrijven met 'duurzaam'-reclames\n• Wees kritisch — kijk naar ACTIES, niet woorden\n\n**Voor jouw dagelijks leven**:\n• Koffie/thee: kies Fair Trade als je het kan betalen\n• Kleren: koop minder, betere kwaliteit, tweedehands\n• Eten: minder vlees, minder verspillen\n• Reizen: trein > vliegtuig\n• Spullen: lang gebruiken, repareren",
+    explanation: "Als consument heb je **macht**. Wat je koopt, beïnvloedt wat geproduceerd wordt en hoe.\n\n**Eerlijke handel (Fair Trade)** in detail:\n\n**Hoe het werkt**:\n• Boeren in arme landen organiseren in coöperatie\n• Kopers (Westerse bedrijven) betalen **hogere prijs** + **vaste minimumprijs** (zelfs als wereldprijs laag)\n• Extra premie voor sociale projecten in dorp (school, kliniek)\n• Garantie geen kinderarbeid + veilig werk\n\n**Belangrijkste keurmerken**:\n• **Max Havelaar** / **Fairtrade** — koffie, thee, cacao, fruit\n• **Rainforest Alliance** (waar UTZ in is opgegaan) — koffie, thee, cacao; milieu + sociaal\n• **GOTS** — duurzaam textiel\n• **MSC** — visserij\n• **EU-bio** — biologisch\n• **B-Corp** — bedrijven die hele organisatie sociaal+milieu doen\n\n**Voorbeeld koffie**:\n• Reguliere koffie: boer in Ethiopië krijgt $0,02 per kop (1%!)\n• Fair Trade: $0,08 (4%)\n• Verschil voor jou: een paar cent per kop. Voor boer: veel meer inkomen.\n\n**Kritiek op Fair Trade**:\n• Niet alle boeren kunnen meedoen (organisatie-eisen)\n• Hogere prijs leidt soms tot OVERPRODUCTIE\n• Marketing > daadwerkelijk effect (sommige bedrijven 'fair-washing')\n\n**Andere bewuste keuzes**:\n\n**1. Lokaal kopen**\n• Minder transport-CO2\n• Steun lokale economie\n• Maar: niet alles kan lokaal (koffie, banaan)\n\n**2. Tweedehands**\n• Vinted, Marktplaats, kringloop\n• Minder grondstof-gebruik\n• Goedkoper\n\n**3. Repareren in plaats van weggooien**\n• Repair Café\n• Right to Repair (EU-wetgeving)\n• Spullen langer gebruiken\n\n**4. Minder vlees**\n• Vlees-productie veel CO2 + water + ruimte\n• 1 kg rundvlees ~15.000 liter water\n• 'Flexitariër': minder, niet geen\n\n**5. Energie besparen**\n• Verwarming 1°C lager = 6% minder gas\n• LED-lampen\n• Beter geïsoleerd huis\n\n**'Stem met je portemonnee'**:\n• Bedrijven volgen consumenten\n• Massa-keuzes maken verschil\n• Maar: niet ALLES op individu — beleid + bedrijven hebben grootste impact\n\n**Greenwashing**:\n• Bedrijven die zich groener voordoen dan ze zijn\n• Bv. olie-bedrijven met 'duurzaam'-reclames\n• Wees kritisch — kijk naar ACTIES, niet woorden\n\n**Voor jouw dagelijks leven**:\n• Koffie/thee: kies Fair Trade als je het kan betalen\n• Kleren: koop minder, betere kwaliteit, tweedehands\n• Eten: minder vlees, minder verspillen\n• Reizen: trein > vliegtuig\n• Spullen: lang gebruiken, repareren",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">JOUW MACHT ALS CONSUMENT</text>
 <rect x="20" y="40" width="135" height="35" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
 <text x="87" y="60" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">FAIR TRADE</text>
-<text x="87" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Max Havelaar · UTZ</text>
+<text x="87" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Max Havelaar · Rainforest</text>
 <rect x="165" y="40" width="135" height="35" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
 <text x="232" y="60" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">LOKAAL</text>
 <text x="232" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">minder transport</text>
@@ -591,7 +591,7 @@ const steps = [
     checks: [
       {
         q: "Wat doet **Fair Trade** voor boeren?",
-        options: ["Eerlijke prijs plus een premie", "Gratis zaden en gereedschap", "Een lening tegen lage rente", "Een biologisch keurmerk op hun oogst"],
+        options: ["Een gegarandeerde prijs plus een premie", "Gratis zaden en gereedschap", "Een lening tegen lage rente", "Een biologisch keurmerk op hun oogst"],
         answer: 0,
         wrongHints: [null, "Fair Trade is handel, geen gift. Wat krijgt de boer voor zijn oogst?", "Een kleine lening is microkrediet. Wat krijgt de boer van Fair Trade bij de verkoop?", "Biologisch gaat over hoe je teelt. Waar gaat het Fair Trade-keurmerk over?"],
         uitlegPad: {
@@ -605,23 +605,23 @@ const steps = [
       },
       {
         q: "Welk **keurmerk** gaat over eerlijke handel in koffie/cacao?",
-        options: ["Max Havelaar / Fairtrade / UTZ", "EU-bio / Demeter / EKO", "MSC / ASC / Beter Leven", "Energy Star / Energielabel"],
+        options: ["Max Havelaar / Rainforest Alliance", "EU-bio / Demeter / EKO-keurmerk", "MSC / ASC / Beter Leven-keurmerk", "Energy Star / Europees Energielabel"],
         answer: 0,
-        wrongHints: [null, "Dat zijn keurmerken voor biologische producten.", "Die gaan over vis en dierenwelzijn.", "Die gaan over energieverbruik, niet over voedsel."],
+        wrongHints: [null, "Die keurmerken gaan over biologisch telen, zonder kunstmest en gif. Zeggen ze iets over de handel?", "MSC en ASC gaan over vis, Beter Leven over dierenwelzijn. Gaat dat over koffie of cacao?", "Die labels gaan over het energieverbruik van apparaten. Horen ze bij voedsel?"],
         uitlegPad: {
-          stappen: [{ titel: "Logo's koffie/cacao", tekst: "Op koffie/cacao-pakken zie je vaak: Max Havelaar (NL, sinds 1988), Fairtrade (internationaal), UTZ (eerlijk + duurzaam). Soms gecombineerd met Rainforest Alliance (geen ontbossing). Allemaal Fair Trade-achtige labels voor cacao/koffie/thee/bananen." }],
-          woorden: [{ woord: "Max Havelaar", uitleg: "Eerste NL Fair Trade-keurmerk (1988). Naam verwijst naar Multatuli's anti-koloniale boek." }, { woord: "UTZ", uitleg: "Afkorting van 'Utz Kapeh' (Maya-taal: 'goede koffie'). Sinds 2002. Focus duurzaamheid + eerlijke handel. Fuseerde 2018 met Rainforest Alliance." }],
+          stappen: [{ titel: "Logo's koffie/cacao", tekst: "Op koffie/cacao-pakken zie je vaak: Max Havelaar (NL, sinds 1988), dat bij het internationale Fairtrade hoort, en Rainforest Alliance (eerlijk + duurzaam, geen ontbossing; het oudere UTZ is daarin opgegaan). Allebei Fair Trade-achtige labels voor cacao/koffie/thee/bananen." }],
+          woorden: [{ woord: "Max Havelaar", uitleg: "Eerste NL Fair Trade-keurmerk (1988). Naam verwijst naar Multatuli's anti-koloniale boek." }, { woord: "Rainforest Alliance", uitleg: "Keurmerk met een groen kikkertje. Let op betere omstandigheden voor boeren én op natuur. Het keurmerk UTZ (2002) is er sinds de fusie in 2018 in opgegaan." }],
           theorie: "Andere keurmerken voor ANDERE producten: EU-bio = biologisch eten (alle voedsel), MSC = duurzame vis, FSC = duurzaam hout/papier, GOTS = bio-textiel. Pas op: keurmerk past bij PRODUCT-categorie.",
           voorbeelden: [{ type: "supermarkt", tekst: "Tony's Chocolonely-reep heeft het Fairtrade-keurmerk. Veel huismerk-koffie en -chocolade hebben het Rainforest Alliance-keurmerk (waar UTZ in is opgegaan)." }],
           basiskennis: [{ onderwerp: "Niet andere keurmerken", uitleg: "EU-bio/Demeter/EKO = biologisch. MSC/ASC = vis, Beter Leven = dierenwelzijn. Energy Star/Energielabel = energiezuinige apparaten. Allemaal andere categorieën." }],
-          niveaus: { basis: "Max Havelaar/Fairtrade/UTZ.", simpeler: "Koffie/cacao-keurmerk = Max Havelaar + Fairtrade + UTZ. EU-bio = ander (alle bio-eten).", nogSimpeler: "Max Havelaar" },
+          niveaus: { basis: "Max Havelaar/Rainforest Alliance.", simpeler: "Koffie/cacao-keurmerk = Max Havelaar (Fairtrade) + Rainforest Alliance. EU-bio = ander (alle bio-eten).", nogSimpeler: "Max Havelaar" },
         },
       },
       {
         q: "Wat is **greenwashing**?",
-        options: ["Bedrijven doen zich groener voor dan ze zijn", "Wassen met een groen, milieuvriendelijk wasmiddel", "Afval scheiden en recyclen in een fabriek", "Bedrijven die echt duurzaam werken"],
+        options: ["Bedrijven doen zich groener voor dan ze zijn", "Bedrijven brengen hun afval naar arme landen", "Bedrijven kopen rechten om CO2 uit te stoten", "Bedrijven stappen over op groene stroom"],
         answer: 0,
-        wrongHints: [null, "Het woord is beeldspraak. Wat 'wast' een bedrijf hier schoon?", "Dat is echt milieugedrag, geen misleiding.", "Bij 'washing' wordt iets mooier gemaakt dan het is. Misleidt een bedrijf dat écht duurzaam werkt?"],
+        wrongHints: [null, "Afval exporteren is een probleem met een eigen naam. Gaat greenwashing over wat er met afval gebeurt?", "Dat heet emissiehandel en is een regeling van de EU. Is greenwashing een regeling?", "Overstappen op groene stroom is een echte verbetering. Wat is het verschil met greenwashing?"],
         uitlegPad: {
           stappen: [{ titel: "Vals duurzaam-imago", tekst: "Greenwashing = bedrijven gebruiken DUURZAAMHEIDS-marketing terwijl ze niet echt duurzaam zijn. Bv. olie-bedrijven met 'wij investeren in groene energie!'-reclames (terwijl 95% nog steeds olie is). Of supermarkt met 'duurzaam!'-stempel op product dat amper verschilt." }],
           woorden: [{ woord: "greenwashing", uitleg: "Letterlijk 'groen-wassen'. Misleidende duurzaamheids-claims." }, { woord: "Shell-paradox", uitleg: "Shell-reclame benadrukt zonne-energie, terwijl ~95% van haar omzet uit fossiele brandstoffen komt. Klassiek voorbeeld greenwashing." }],
@@ -661,9 +661,9 @@ const steps = [
       },
       {
         q: "**'Stem met je portemonnee'** betekent:",
-        options: ["Wat je koopt beïnvloedt wat bedrijven produceren", "Je laat een politieke partij weten wat je wilt", "Je spaart geld in plaats van het uit te geven", "Je geeft geld aan een goed doel naar keuze"],
+        options: ["Wat je koopt beïnvloedt wat bedrijven produceren", "Je kiest steeds het product met de laagste prijs", "Je spaart geld in plaats van het uit te geven", "Je betaalt liever contant dan met je pinpas"],
         answer: 0,
-        wrongHints: [null, "Het gaat hier niet om politiek. Wat 'kies' je dan met je portemonnee?", "Sparen is niets kopen. Stuurt dat bedrijven een duidelijke boodschap over wat ze moeten maken?", "Een gift is geen aankoop. Gaat de uitdrukking over geven of over kopen?"],
+        wrongHints: [null, "Dan let je alleen op je eigen geld. Stem je dan ergens vóór?", "Sparen is niets kopen. Stuurt dat bedrijven een duidelijke boodschap over wat ze moeten maken?", "Hoe je betaalt maakt voor een bedrijf weinig uit. Gaat de uitdrukking over hóé je betaalt?"],
         uitlegPad: {
           stappen: [{ titel: "Consument heeft macht", tekst: "'Stem met je portemonnee' = elke aankoop is een keuze. Wie koopt, bepaalt indirect wat bedrijven maken. Koop je Fair Trade-koffie → bedrijven zien vraag → meer Fair Trade-aanbod. Koop je goedkoop vlees → bedrijven zien vraag → meer goedkoop vlees. Geld = invloed." }],
           woorden: [{ woord: "consumenten-macht", uitleg: "Invloed die kopers samen hebben op markt. Bedrijven volgen wat verkoopt." }, { woord: "boycot", uitleg: "Bewust NIET kopen van bedrijf/product om druk uit te oefenen. Sterke vorm consumenten-actie." }],
@@ -698,7 +698,7 @@ const steps = [
     checks: [
       {
         q: "Wat zal in arme landen vooral het **MEEST** helpen?",
-        options: ["Investeren in onderwijs", "Meer ruwe grondstoffen exporteren", "Meer leningen uit het buitenland", "Gratis voedsel blijven sturen"],
+        options: ["Investeren in onderwijs voor alle kinderen", "Meer grondstoffen verkopen aan rijke landen", "Grote leningen uit het buitenland voor wegen", "Veel voedselhulp sturen vanuit rijke landen"],
         answer: 0,
         wrongHints: [null, "Je leerde dat alleen grondstoffen verkopen een land arm kan houden. Waarom was dat?", "Leningen kosten rente. Wat leerde je over schulden van arme landen?", "Denk aan het risico van gratis hulp voor lokale boeren."],
         uitlegPad: {
@@ -754,9 +754,9 @@ const steps = [
       },
       {
         q: "Een **uitdaging** voor de toekomst is:",
-        options: ["Klimaatverandering en droogte", "Krimp van de wereldbevolking", "Steeds minder mensen in steden", "Een tekort aan landbouwgrond in Europa"],
+        options: ["Klimaatverandering en droogte", "Snelle vergrijzing in Afrikaanse landen", "Leegloop van steden naar het platteland", "Een tekort aan landbouwgrond in Europa"],
         answer: 0,
-        wrongHints: [null, "De wereldbevolking groeit nog tot na 2050. Is krimp dan de uitdaging?", "Steeds meer mensen trekken juist naar de stad. Is het omgekeerde dan een probleem?", "Europa heeft juist veel landbouwgrond en vaak een voedseloverschot. Welke uitdaging raakt arme landen het hardst?"],
+        wrongHints: [null, "Afrika heeft juist de jongste bevolking ter wereld. Is vergrijzing daar het grootste probleem?", "Steeds meer mensen trekken juist naar de stad. Is het omgekeerde dan een probleem?", "Europa heeft juist veel landbouwgrond en vaak een voedseloverschot. Welke uitdaging raakt arme landen het hardst?"],
         uitlegPad: {
           stappen: [{ titel: "Klimaat = #1 uitdaging", tekst: "Komende decennia grootste ontwikkelings-uitdaging: klimaatverandering. Treft arme landen MEER dan rijke (zie eerdere check). Droogtes Sahel, overstromingen Bangladesh, zeespiegel-stijging eilandstaten. Migratie-druk: 100+ miljoen klimaat-vluchtelingen verwacht 2050." }],
           woorden: [{ woord: "klimaat-vluchteling", uitleg: "Iemand die thuisland verlaat door klimaatschade (droogte, overstroming, zeespiegel)." }, { woord: "energietransitie", uitleg: "Overschakeling van fossiele brandstoffen (kolen/olie/gas) naar duurzame (zon/wind/water)." }],
@@ -768,9 +768,9 @@ const steps = [
       },
       {
         q: "Wat is een tip voor jouw **rol als toekomstige burger**?",
-        options: ["Blijven leren + internationaal denken + bewust kiezen", "Eigen land eerst + hulp aan arme landen stoppen", "Eén diploma halen + daarna vooral geld verdienen", "Steeds goedkoop kopen + veel nieuwe spullen"],
+        options: ["Blijven leren + internationaal denken + bewust kiezen", "Lokaal blijven + vooral je eigen buurt helpen", "Eén vak goed leren + je daarin specialiseren", "Zuinig leven + zo goedkoop mogelijk kopen"],
         answer: 0,
-        wrongHints: [null, "Problemen als klimaat en armoede stoppen niet bij de grens. Helpt 'eigen land eerst' dan?", "De wereld verandert snel. Is één diploma genoeg voor de rest van je leven?", "Wat zeg je met je portemonnee als je alleen op de prijs let?"],
+        wrongHints: [null, "Problemen als klimaat en armoede stoppen niet bij de grens. Is vooral je eigen buurt dan genoeg?", "De wereld verandert snel. Is één vak genoeg voor de rest van je leven?", "Wat zeg je met je portemonnee als je alleen op de prijs let?"],
         uitlegPad: {
           stappen: [{ titel: "3 vaardigheden voor 21e eeuw", tekst: "Voor de wereld van 2030-2080: (1) Levenslang leren — tech verandert te snel voor 1 opleiding-voor-leven. (2) Internationaal denken — problemen overschrijden grenzen (klimaat, AI, pandemie). (3) Bewuste keuzes — als consument, kiezer, professional." }],
           woorden: [{ woord: "levenslang leren", uitleg: "Nooit stoppen met nieuwe kennis opdoen. Nodig in snel veranderende wereld." }, { woord: "wereldburger", uitleg: "Iemand die zich verantwoordelijk voelt voor wereldwijde problemen, niet alleen eigen land." }],

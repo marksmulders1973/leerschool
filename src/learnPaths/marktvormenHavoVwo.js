@@ -46,11 +46,11 @@ const steps = [
         options: [
           "Aanbod-curve schuift naar rechts → lagere prijs",
           "Vraag-curve schuift naar links → lagere prijs",
-          "Beweging langs de aanbodcurve → hogere prijs",
-          "Aanbod-curve schuift naar links → hogere prijs"
+          "Beweging langs de aanbodcurve → lagere prijs",
+          "Aanbod-curve schuift naar links → lagere prijs"
         ],
         answer: 0,
-        wrongHints: [null, "Willen kopers ineens minder graan, of hebben boeren meer graan te verkopen?", "Verandert eerst de prijs, of verandert de hoeveelheid die boeren bij élke prijs aanbieden?", "Een goede oogst betekent méér graan. Schuift het aanbod dan naar links?"],
+        wrongHints: [null, "Willen kopers ineens minder graan, of hebben boeren meer graan te verkopen?", "Een beweging langs de curve komt door een prijsverandering. Is hier de prijs de oorzaak, of de oogst?", "Een goede oogst betekent bij elke prijs méér graan. Welke kant schuift een curve op als de hoeveelheid toeneemt?"],
         uitlegPad: {
           stappen: [{ titel: "Aanbod-shift", tekst: "Goede oogst = elke prijs nu hoger aanbod → curve naar rechts. Nieuw evenwicht: lagere P, hogere Q. Boerenparadox: goede oogst kan tot **lager inkomen** leiden als vraag inelastisch is." }],
           niveaus: { basis: "Aanbod-shift → P daalt.", simpeler: "Veel oogst = lagere prijs.", nogSimpeler: "Q↑P↓" },
@@ -292,9 +292,9 @@ const steps = [
       },
       {
         q: "**Privatisering** van energie-bedrijven sinds 1990s heeft als doel:",
-        options: ["Marktwerking → efficiëntie en lagere prijzen", "Hogere prijzen → meer winst voor de staat", "Meer zeggenschap van de overheid over de prijs", "Minder concurrentie → stabielere prijzen"],
+        options: ["Marktwerking → efficiëntie en lagere prijzen", "Schaalvoordeel → één groot bedrijf, lagere kosten", "Vaste tarieven → gelijke prijzen voor iedereen", "Meer staatsinvloed → betere leveringszekerheid"],
         answer: 0,
-        wrongHints: [null, "Na privatisering is het bedrijf niet meer van de staat. Gaat de winst dan nog naar de staat?", "Privatiseren betekent: de overheid verkoopt het bedrijf. Krijgt de overheid dan meer of minder te zeggen?", "Vóór 1990 leverde vaak één bedrijf van de overheid de energie. Hoeveel bedrijven mochten er na de privatisering leveren?"],
+        wrongHints: [null, "Eén groot energiebedrijf had je juist vóór 1990. Kwamen er na de privatisering meer of minder aanbieders?", "Vaste tarieven worden door de overheid vastgezet. Laat privatiseren de prijs aan de overheid of aan de markt over?", "Privatiseren betekent: de overheid verkoopt het bedrijf. Krijgt de overheid dan meer of minder te zeggen?"],
         uitlegPad: {
           stappen: [
             { titel: "Theorie vs praktijk", tekst: "Argument: privé-bedrijven concurreren → efficiënter → lagere prijzen. Praktijk in NL: liberalisering 1998 (gas + elektriciteit). Wel keuze tussen aanbieders, maar netwerk-tarieven nog steeds gereguleerd (TenneT, Gasunie). 2022-crisis: gasprijzen schoten omhoog → kritiek op privatisering." },

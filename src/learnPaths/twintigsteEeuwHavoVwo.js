@@ -92,9 +92,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer **bombardement Rotterdam**?",
-        options: ["14 mei 1940","6 juni 1944","Hongerwinter 1944","9 nov 1989"],
+        options: ["14 mei 1940","10 mei 1940","15 mei 1940","17 september 1944"],
         answer: 0,
-        wrongHints: [null, "Niet — D-Day.", "Niet — andere periode.", "Niet — val muur."],
+        wrongHints: [null, "Op 10 mei 1940 viel Duitsland Nederland binnen. Rotterdam werd pas een paar dagen later gebombardeerd.", "Op 15 mei 1940 gaf Nederland zich over. Het bombardement ging daaraan vooraf.", "Op 17 september 1944 begon Market Garden, de slag om Arnhem."],
         uitlegPad: {
           stappen: [{ titel: "Start NL-bezetting", tekst: "**14 mei 1940**: Duitse Luftwaffe bombardeert Rotterdam centrum. ~800 doden, binnenstad verwoest. Dezelfde dag dreigt DE met bombardement Utrecht → NL capituleert. Begin 5 jaar bezetting." }],
           niveaus: { basis: "14 mei 1940.", simpeler: "Bombardement = 14-5-40", nogSimpeler: "1940" },
@@ -112,9 +112,9 @@ const steps = [
       },
       {
         q: "Welke gebeurtenis bracht **VS in WO2**?",
-        options: ["Pearl Harbor", "Stalingrad", "D-Day", "Holocaust"],
+        options: ["Pearl Harbor", "Stalingrad", "D-Day", "Inval in Polen"],
         answer: 0,
-        wrongHints: [null, "Niet — al in oorlog.", "Niet — al in oorlog.", "Niet — bekend later."],
+        wrongHints: [null, "In Stalingrad vochten Duitsers en Russen, en toen deden de VS al mee.", "Bij D-Day (1944) vochten de VS al jaren mee.", "Na de inval in Polen bleven de VS nog ruim twee jaar neutraal."],
         uitlegPad: {
           stappen: [{ titel: "Japanse verrassingsaanval", tekst: "**7 december 1941**: Japan valt **Pearl Harbor** (VS-marinebasis Hawaï) aan. 2.400 doden. Volgende dag: VS verklaart oorlog aan Japan. Drie dagen later: DE + IT verklaren oorlog aan VS (As-pact). VS officieel in WO2 in beide theaters." }],
           theorie: "FDR-citaat: 'A date which will live in infamy'.",
@@ -135,7 +135,7 @@ const steps = [
         q: "Hoeveel % NL-Joden werd vermoord in Holocaust?",
         options: ["~75%","~10%","~25%","~95%"],
         answer: 0,
-        wrongHints: [null, "Veel te laag.", "Veel te laag.", "Te hoog — maar het was wel het hoogste percentage van West-Europa."],
+        wrongHints: [null, "Veel meer: de meeste joden in Nederland werden gedeporteerd.", "Dat percentage hoort eerder bij Frankrijk. In Nederland lag het veel hoger.", "Te hoog — maar het was wel het hoogste percentage van West-Europa."],
         uitlegPad: {
           stappen: [{ titel: "Tragisch hoog %", tekst: "Van ~140.000 NL-Joden werden **~104.000 vermoord (~75%)**. **Hoogste percentage West-Europa**. Redenen: efficiënte NL-administratie (registratie 1941), goede coöperatie politie, geografisch weinig ontsnappingsmogelijkheden, weinig verzet eerst. Anne Frank een van velen." }],
           theorie: "Vergelijking: België 40%, Frankrijk 25%, Denemarken 1% (door succesvolle redding-actie). Toets-favoriet: 'leg uit waarom % NL hoger dan BE/DK'.",
@@ -163,9 +163,9 @@ const steps = [
       },
       {
         q: "Wanneer **Bouw Berlijnse Muur**?",
-        options: ["13 augustus 1961","9 november 1989","5 mei 1945","1962"],
+        options: ["13 augustus 1961","9 november 1989","5 mei 1945","7 oktober 1949"],
         answer: 0,
-        wrongHints: [null, "Niet — val.", "Niet — WO2-einde.", "Niet — Cuba-crisis."],
+        wrongHints: [null, "Op die datum stond de Muur er al bijna dertig jaar.", "Niet — WO2-einde.", "Op 7 oktober 1949 werd de DDR opgericht. De Muur kwam pas later."],
         uitlegPad: {
           stappen: [{ titel: "Stop vlucht naar West", tekst: "**13 augustus 1961**: DDR begint Muur te bouwen om vlucht naar West-Berlijn te stoppen. Tot dan: ~3 mln mensen vluchten uit DDR via Berlijn (1949-61). Muur 155 km lang. **9 november 1989**: Muur valt → einde Koude Oorlog symbolisch." }],
           niveaus: { basis: "13-8-1961.", simpeler: "Muur 1961", nogSimpeler: "1961" },
@@ -175,7 +175,7 @@ const steps = [
         q: "**Cuba-crisis** vond plaats in:",
         options: ["1962","1957","1989","1979"],
         answer: 0,
-        wrongHints: [null, "Niet — Spoetnik.", "Niet — Muur valt.", "Niet — Afghanistan."],
+        wrongHints: [null, "Niet — Spoetnik.", "In 1989 liep de Koude Oorlog al ten einde.", "Niet — Afghanistan."],
         uitlegPad: {
           stappen: [{ titel: "13 dagen oktober 1962", tekst: "**Oktober 1962, Cuba-crisis**: USSR plaatst kernraketten Cuba (90 mijl van VS-kust). Kennedy zee-blokkade. **Dichtst dat wereld ooit bij kernoorlog kwam**. Chroesjtsjov trekt terug, VS belooft geen invasie + verwijdert geheim raketten Turkije." }],
           niveaus: { basis: "1962.", simpeler: "Cuba = 1962", nogSimpeler: "1962" },
@@ -193,9 +193,9 @@ const steps = [
       },
       {
         q: "**Vietnam-oorlog** eindigde in:",
-        options: ["1975", "1969", "1989", "1973"],
+        options: ["1975", "1969", "1968", "1973"],
         answer: 0,
-        wrongHints: [null, "Niet — toen landde Apollo 11 op de maan.", "Niet — Muur valt.", "Wapenstilstand maar oorlog ging door."],
+        wrongHints: [null, "Niet — toen landde Apollo 11 op de maan.", "In 1968 was het Tet-offensief; de oorlog duurde daarna nog jaren.", "Wapenstilstand maar oorlog ging door."],
         uitlegPad: {
           stappen: [{ titel: "Val Saigon", tekst: "**30 april 1975: val Saigon** — Noord-Vietnamese troepen veroveren Zuid-Vietnam hoofdstad. Amerikanen vluchten per helikopter van de ambassade (iconisch beeld). Vietnam communistisch verenigd. VS' eerste verloren oorlog. 58.000 VS-doden + ~3 mln Vietnamezen + Cambodja's Khmer Rouge regime gevolg." }],
           niveaus: { basis: "1975.", simpeler: "Vietnam = 1975", nogSimpeler: "1975" },
@@ -212,9 +212,9 @@ const steps = [
     checks: [
       {
         q: "Wie was de **laatste leider Sovjet-Unie**?",
-        options: ["Mikhail Gorbatsjov","Boris Jeltsin","Vladimir Poetin","Joseph Stalin"],
+        options: ["Mikhail Gorbatsjov","Boris Jeltsin","Vladimir Poetin","Leonid Brezjnev"],
         answer: 0,
-        wrongHints: [null, "Niet — eerste Russische president na 1991.", "Veel later.", "Veel eerder."],
+        wrongHints: [null, "Niet — eerste Russische president na 1991.", "Poetin werd pas in 2000 president van Rusland, toen de Sovjet-Unie al niet meer bestond.", "Brezjnev leidde de Sovjet-Unie tot 1982; daarna kwamen er nog anderen."],
         uitlegPad: {
           stappen: [{ titel: "Gorbatsjov 1985-91", tekst: "**Mikhail Gorbatsjov** (1931-2022) leidde USSR 1985-91. Hervormde via **glasnost** (openheid) + **perestrojka** (herstructurering). Trad af **25 december 1991** — USSR officieel ontbonden. Nobel Vredesprijs 1990." }],
           niveaus: { basis: "Gorbatsjov.", simpeler: "Laatste = Gorbatsjov", nogSimpeler: "Gorbatsjov" },
@@ -312,9 +312,9 @@ const steps = [
       },
       {
         q: "Tussen welke jaren liep de **Koude Oorlog**?",
-        options: ["~1945-1991","1939-1945","1914-1918","2001-2021"],
+        options: ["1945-1991","1918-1939","1950-1953","1962-1975"],
         answer: 0,
-        wrongHints: [null, "Niet — WO2.", "Niet — WO1.", "Niet — Afghanistan."],
+        wrongHints: [null, "Dat is het interbellum, de tijd tussen de twee wereldoorlogen.", "Dat is de Korea-oorlog, één 'hete' oorlog binnen de Koude Oorlog.", "Van de Cuba-crisis tot het einde van de Vietnam-oorlog: belangrijke jaren, maar de spanning begon eerder en duurde langer."],
         uitlegPad: {
           stappen: [{ titel: "46 jaar", tekst: "**Koude Oorlog ~1945-1991**: van einde WO2 tot ontbinding USSR. Begin niet exact bepaald (1945-47, verschillende beginpunten). Eind: 25 december 1991 ontbinding USSR. Sommige historici: einde 1989 (Muurval), anderen 1991." }],
           niveaus: { basis: "1945-1991.", simpeler: "KO = 1945-91", nogSimpeler: "1945 tot 1991" },

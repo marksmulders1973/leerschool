@@ -60,27 +60,27 @@ const steps = [
     checks: [
       {
         q: "Wat is een **absolute monarchie**?",
-        options: ["Koning heeft alle macht", "Koning + parlement delen", "Geen koning", "Democratie"],
+        options: ["Koning heeft zelf alle macht", "Koning en parlement delen macht", "Koning heeft een ceremoniële rol", "Adel kiest wie er koning wordt"],
         answer: 0,
-        wrongHints: [null, "Dat is constitutionele monarchie.", "Republiek/anders.", "Tegenovergesteld."],
+        wrongHints: [null, "Dan is het een constitutionele monarchie: een grondwet en een parlement beperken de koning. Wat betekent 'absoluut'?", "Zo is het nu in Nederland. Had Lodewijk XVI in Versailles zo weinig te zeggen?", "Een gekozen koning bestond wel, bijvoorbeeld in Polen. Maar 'absoluut' zegt iets over zijn macht, niet over hoe hij koning werd."],
       },
       {
         q: "Wie was **koning van Frankrijk** in 1789?",
         options: ["Lodewijk XVI", "Napoleon", "Robespierre", "Lodewijk XIV"],
         answer: 0,
-        wrongHints: [null, "Kwam later.", "Revolutionair, geen koning.", "Eerder — Zonnekoning."],
+        wrongHints: [null, "Napoleon kwam pas na de revolutie aan de macht, en dan als keizer.", "Robespierre was een revolutionair die juist tegen de koning streed.", "Lodewijk XIV, de Zonnekoning, stierf al in 1715. Wie zat er in 1789 op de troon?"],
       },
       {
         q: "Hoeveel **standen** waren er?",
-        options: ["3", "2", "5", "10"],
+        options: ["3", "2", "5", "4"],
         answer: 0,
-        wrongHints: [null, "Denk aan wie er bad, wie er vocht en wie er werkte. Hoeveel groepen zijn dat?", "Zoveel groepen waren er niet. Tel: wie bad, wie vocht en wie werkte?", "Veel minder. De samenleving was verdeeld in een paar grote groepen. Welke?"],
+        wrongHints: [null, "Er waren meer groepen dan alleen 'rijk' en 'arm'. Welke groep had in Frankrijk ook veel macht en bezit?", "Minder. Een stand was geen beroep, maar een hele bevolkingsgroep met eigen rechten.", "De koning telde niet als aparte stand: hij stond erboven. Hoeveel blijven er dan over?"],
       },
       {
         q: "Wie betaalde **bijna alle belasting**?",
         options: ["3e stand (gewone volk)", "1e stand (kerk)", "2e stand (adel)", "Iedereen evenveel"],
         answer: 0,
-        wrongHints: [null, "Vrijgesteld.", "Vrijgesteld.", "Bestond niet."],
+        wrongHints: [null, "De geestelijkheid hoefde bijna geen belasting te betalen. Wie moest het geld dan opbrengen?", "De adel had juist het voorrecht dat hij bijna geen belasting betaalde. Wie droeg de lasten dan?", "Gelijke lasten voor iedereen was juist een eis van de revolutionairen. Hoe was het daarvóór geregeld?"],
       },
     ],
   },
@@ -101,13 +101,13 @@ const steps = [
         q: "Wie pleitte voor **scheiding der machten**?",
         options: ["Montesquieu", "Voltaire", "Rousseau", "Napoleon"],
         answer: 0,
-        wrongHints: [null, "Ander idee.", "Volkssoevereiniteit.", "Later."],
+        wrongHints: [null, "Voltaire streed vooral voor vrijheid van mening en geloof. Wie schreef over het verdelen van de macht?", "Rousseau schreef dat de macht bij het volk hoort (volkssoevereiniteit). Wie wilde de macht in drie delen splitsen?", "Napoleon was geen denker van de Verlichting, maar een generaal die juist alle macht naar zich toe trok."],
       },
       {
         q: "Welke revolutie **inspireerde** Frankrijk?",
         options: ["Amerikaanse", "Russische", "Chinese", "Mexicaanse"],
         answer: 0,
-        wrongHints: [null, "Veel later.", "Veel later.", "Veel later — in de 20e eeuw."],
+        wrongHints: [null, "De Russische Revolutie was pas in 1917. Welke revolutie lag vóór 1789?", "De revoluties in China waren pas in de 20e eeuw. Welke revolutie lag vóór 1789?", "De Mexicaanse Revolutie begon pas in 1910. Welke revolutie lag vóór 1789?"],
       },
       {
         q: "Wat maakte de **winter 1788-1789** moeilijk?",
@@ -126,15 +126,15 @@ const steps = [
     checks: [
       {
         q: "Wat is de **officiële begindatum** van de Franse Revolutie?",
-        options: ["14 juli 1789", "1 januari 1789", "26 augustus 1789", "21 januari 1793"],
+        options: ["14 juli 1789", "5 mei 1789", "26 augustus 1789", "21 januari 1793"],
         answer: 0,
-        wrongHints: [null, "Niet specifiek.", "Verklaring Rechten van Mens.", "Onthoofding koning."],
+        wrongHints: [null, "Op 5 mei 1789 kwamen de Staten-Generaal bijeen. Belangrijk, maar van die dag maakten de Fransen geen nationale feestdag.", "Op 26 augustus 1789 kwam de Verklaring van de Rechten van de Mens. Toen was de revolutie al een paar weken bezig.", "In 1793 was de revolutie al jaren bezig. Zoek een dag in 1789."],
       },
       {
         q: "Wat was de **Bastille**?",
-        options: ["Gevangenis", "Paleis", "Kerk", "Schoolgebouw"],
+        options: ["Gevangenis", "Koninklijk paleis", "Kerk", "Stadhuis"],
         answer: 0,
-        wrongHints: [null, "Niet paleis.", "Niet kerk.", "Niet school."],
+        wrongHints: [null, "De koning woonde in Versailles, buiten Parijs. Waarvoor gebruikte hij de Bastille?", "De grote kerk van Parijs is de Notre-Dame. De Bastille was een symbool van de willekeur van de koning. Waarvoor diende ze?", "Op het stadhuis zat het stadsbestuur. De Bastille was van de koning zelf. Waarvoor gebruikte hij het gebouw?"],
       },
       {
         q: "Wat is de **slogan** van de Franse Revolutie?",
@@ -173,27 +173,27 @@ const steps = [
     checks: [
       {
         q: "Wie leidde de **Terreur**?",
-        options: ["Robespierre", "Napoleon", "Marie-Antoinette", "Voltaire"],
+        options: ["Robespierre", "Napoleon", "Danton", "Marat"],
         answer: 0,
-        wrongHints: [null, "Komt later.", "Slachtoffer revolutie.", "Filosoof, niet politicus."],
+        wrongHints: [null, "Napoleon kwam pas na de Terreur aan de macht.", "Danton was ook een leider van de revolutie, maar hij wilde de Terreur juist afremmen. Hij werd zelf onthoofd.", "Marat was een felle revolutionaire journalist, maar hij werd al in juli 1793 vermoord, vóór de Terreur op haar hevigst was."],
       },
       {
         q: "Hoeveel mensen werden ongeveer **geguillotineerd** tijdens de Terreur (in heel Frankrijk)?",
         options: ["~17.000", "~100", "~1 miljoen", "~500"],
         answer: 0,
-        wrongHints: [null, "Alleen al in Parijs gingen er veel meer mensen onder het mes.", "Zoveel inwoners had Parijs toen ongeveer. Zo veel slachtoffers maakte de guillotine niet.", "Veel meer: de Terreur duurde ongeveer een jaar en er vielen bijna elke dag slachtoffers."],
+        wrongHints: [null, "Alleen al in Parijs gingen er veel meer mensen onder het mes.", "Veel te veel: zoveel mensen woonden er toen niet eens in Parijs.", "Veel meer: de Terreur duurde ongeveer een jaar en er vielen bijna elke dag slachtoffers."],
       },
       {
         q: "Wat gebeurde uiteindelijk met **Robespierre**?",
-        options: ["Zelf onthoofd in 1794", "Werd koning", "Vluchtte naar Engeland", "Pensioen"],
+        options: ["Zelf onthoofd in 1794", "Keizer geworden in 1804", "Gevlucht naar Engeland", "Vermoord in zijn bad"],
         answer: 0,
-        wrongHints: [null, "Frankrijk was Republiek.", "Niet gevlucht.", "Niet gepensioneerd."],
+        wrongHints: [null, "Keizer werd Napoleon, in 1804. Robespierre was toen al lang uit beeld. Hoe kwam dat?", "Robespierre vluchtte niet: in juli 1794 lieten zijn tegenstanders hem oppakken. Wat deden ze met hem?", "Zo werd Jean-Paul Marat vermoord, door Charlotte Corday. Robespierre stierf een jaar later, op een andere manier."],
       },
       {
         q: "Wat zijn **sans-culottes**?",
-        options: ["Arme Parijzenaars", "Generaals", "Koningsfamilie", "Buitenlandse soldaten"],
+        options: ["Gewone arbeiders uit Parijs", "Rijke burgers uit Parijs", "Soldaten van de koning", "Aanhangers van de koning"],
         answer: 0,
-        wrongHints: [null, "Niet militair.", "Niet de koningsfamilie.", "Niet buitenlands."],
+        wrongHints: [null, "Rijke burgers droegen juist de dure kniebroek, de culotte. 'Sans' betekent 'zonder'.", "De soldaten van de koning vochten tegen de revolutie. De sans-culottes stonden aan de andere kant.", "Aanhangers van de koning heetten royalisten. De sans-culottes wilden de koning juist weg."],
       },
     ],
   },
@@ -206,21 +206,21 @@ const steps = [
     checks: [
       {
         q: "Wie was **Napoleon Bonaparte**?",
-        options: ["Keizer van Frankrijk", "Leider van de Terreur", "Koning vóór de revolutie", "Generaal die Waterloo won"],
+        options: ["Keizer van Frankrijk", "Leider van de Terreur", "Koning vóór de revolutie", "Generaal die Rusland veroverde"],
         answer: 0,
-        wrongHints: [null, "Dat was Robespierre. Napoleon kwam pas na de Terreur aan de macht.", "Dat was Lodewijk XVI. Napoleon kwam pas ná de revolutie aan de macht.", "Bij Waterloo (1815) verloor Napoleon juist zijn laatste slag."],
+        wrongHints: [null, "Dat was Robespierre. Napoleon kwam pas na de Terreur aan de macht.", "Dat was Lodewijk XVI. Napoleon kwam pas ná de revolutie aan de macht.", "Napoleon viel Rusland in 1812 wel binnen, maar zijn leger moest zich in de winter terugtrekken."],
       },
       {
         q: "Wanneer werd Napoleon **keizer**?",
         options: ["1804", "1789", "1815", "1769"],
         answer: 0,
-        wrongHints: [null, "Begin revolutie.", "Waterloo (einde).", "Geboortejaar."],
+        wrongHints: [null, "In 1789 begon de revolutie. Napoleon was toen pas twintig jaar.", "In 1815 was Napoleon zijn macht juist voorgoed kwijt.", "In 1769 werd Napoleon geboren, op Corsica."],
       },
       {
         q: "Bij welke **slag** verloor Napoleon definitief?",
-        options: ["Waterloo (1815)", "Trafalgar", "Marengo", "Verdun"],
+        options: ["Waterloo", "Trafalgar", "Leipzig", "Austerlitz"],
         answer: 0,
-        wrongHints: [null, "Eerder op zee.", "Eerdere overwinning.", "Veel later, WO1."],
+        wrongHints: [null, "Bij Trafalgar (1805) verloor de Franse vloot op zee, maar Napoleon bleef daarna nog tien jaar aan de macht.", "Na Leipzig (1813) werd Napoleon verbannen naar Elba, maar hij kwam terug. Waar verloor hij voorgoed?", "Bij Austerlitz (1805) behaalde Napoleon juist een van zijn grootste overwinningen."],
       },
       {
         q: "Welke Nederlandse **administratie** komt van Napoleon?",
@@ -254,9 +254,9 @@ const steps = [
     checks: [
       {
         q: "In welk jaar **viel de Bastille**?",
-        options: ["1789", "1804", "1815", "1900"],
+        options: ["1789", "1804", "1815", "1793"],
         answer: 0,
-        wrongHints: [null, "Napoleon keizer.", "Waterloo.", "Veel later."],
+        wrongHints: [null, "In 1804 was de revolutie al voorbij en had Frankrijk een keizer.", "Veel later: in 1815 was de revolutie al lang voorbij.", "In 1793 was de revolutie al volop bezig. Wanneer begon ze?"],
       },
       {
         q: "Wat is de **slogan** van de revolutie?",
@@ -266,21 +266,21 @@ const steps = [
       },
       {
         q: "Wie was de leider van de **Terreur** (1793-1794)?",
-        options: ["Robespierre", "Lodewijk XVI", "Napoleon", "Marie-Antoinette"],
+        options: ["Robespierre", "Danton", "Napoleon", "Marat"],
         answer: 0,
-        wrongHints: [null, "Eerder onthoofd.", "Komt later.", "Slachtoffer."],
+        wrongHints: [null, "Danton was ook een leider van de revolutie, maar hij wilde de Terreur juist afremmen. Hij werd zelf onthoofd.", "Napoleon kwam pas na de Terreur aan de macht.", "Marat was een felle revolutionaire journalist, maar hij werd al in juli 1793 vermoord, vóór de Terreur op haar hevigst was."],
       },
       {
         q: "Welke filosoof bedacht **scheiding der machten**?",
         options: ["Montesquieu", "Voltaire", "Rousseau", "Robespierre"],
         answer: 0,
-        wrongHints: [null, "Ander idee.", "Ander idee.", "Was politicus."],
+        wrongHints: [null, "Voltaire streed vooral voor vrijheid van mening en geloof. Wie schreef over het verdelen van de macht?", "Rousseau schreef dat de macht bij het volk hoort (volkssoevereiniteit). Wie wilde de macht in drie delen splitsen?", "Robespierre was een politicus van de revolutie, geen denker van de Verlichting."],
       },
       {
         q: "Wanneer was de **Slag bij Waterloo**?",
-        options: ["1815", "1789", "1804", "1900"],
+        options: ["1815", "1789", "1804", "1813"],
         answer: 0,
-        wrongHints: [null, "Bastille.", "Kroning Napoleon.", "Te laat."],
+        wrongHints: [null, "In 1789 begon de revolutie; Napoleon was toen nog een jonge officier.", "In 1804 kroonde Napoleon zichzelf tot keizer. Daarna volgden nog jaren van oorlog.", "In 1813 verloor Napoleon bij Leipzig, maar hij kwam daarna nog één keer terug."],
       },
       {
         q: "Wat zijn **3 standen** in pre-revolutie Frankrijk?",
