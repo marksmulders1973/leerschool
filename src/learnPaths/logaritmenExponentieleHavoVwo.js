@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "€1000 sparen bij **4% rente**, 10 jaar. Eindbedrag?",
-        options: ["~€1480", "~€1400", "~€2000", "~€10000"],
+        options: ["~€1480", "~€1400", "~€2000", "~€1040"],
         answer: 0,
-        wrongHints: [null, "Niet — exponentieel, niet lineair.", "Te groot.", "Onmogelijk."],
+        wrongHints: [null, "Dat is 10 × €40. Krijg je ook rente over de rente?", "€2000 is een verdubbeling. Reken 1,04¹⁰ uit: is dat echt 2?", "€1040 is het bedrag na 1 jaar. Hoe vaak komt er 4% bij in 10 jaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Samengestelde rente", tekst: "K = 1000 · 1,04¹⁰ = 1000 · 1,480 ≈ **€1480**. Vergelijking lineair (10×4%=40% = €1400): exponentieel geeft meer door 'rente op rente'." },
@@ -179,9 +179,9 @@ const steps = [
       },
       {
         q: "Een aardbeving 7 op Richter is **hoeveel sterker** dan 5?",
-        options: ["100× sterker", "2× sterker", "7/5×", "10× sterker"],
+        options: ["100× sterker", "2× sterker", "20× sterker", "10× sterker"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Onzin.", "Dat zou 6 vs 5 zijn."],
+        wrongHints: [null, "Je keek naar het verschil 7 − 5 = 2. Maar de schaal is logaritmisch: wat betekent één stap omhoog?", "Je deed 2 × 10. Maar elke stap is een factor 10: wat krijg je bij twee stappen achter elkaar?", "Dat zou het verschil tussen 6 en 5 zijn. Hoeveel stappen liggen er tussen 7 en 5?"],
         uitlegPad: {
           stappen: [
             { titel: "10× per magnitude", tekst: "Richter is log₁₀-schaal. 7−5 = 2 stappen → 10² = **100× sterker** amplitude. Energie zelfs ~32× per magnitude → bij verschil 2: ~1000× energie." },
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Vergelijking **2^x = 32**. x = ?",
-        options: ["5", "16", "10", "30"],
+        options: ["5", "16", "10", "6"],
         answer: 0,
-        wrongHints: [null, "Niet — verwarring.", "Niet — verkeerde rekensom.", "Onzin."],
+        wrongHints: [null, "Je deelde 32 door 2. Hoe vaak moet je 2 met zichzelf vermenigvuldigen om 32 te krijgen?", "2^10 = 1024. Dat is veel meer dan 32.", "2^6 = 64. Is dat 32?"],
         uitlegPad: {
           stappen: [{ titel: "Log van beide kanten", tekst: "log₂(2^x) = log₂(32). x = log₂(32) = **5**. Of direct: 2⁵=32 → x=5. Bij 2^x = 10: x = log₂(10) ≈ 3,32 (niet-geheel)." }],
           niveaus: { basis: "5.", simpeler: "2^5=32.", nogSimpeler: "5" },
@@ -247,12 +247,12 @@ const steps = [
         q: "Een **logistische curve** lijkt op exponentieel bij:",
         options: [
           "Lage N (ver onder draagkracht K)",
-          "Hoge N (dichtbij K)",
-          "N = K",
-          "N = 0"
+          "Hoge N (vlak onder draagkracht K)",
+          "N precies gelijk aan draagkracht K",
+          "N ruim boven draagkracht K"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daar plat.", "Niet — daar stilstand.", "Niet — daar geen groei."],
+        wrongHints: [null, "Dicht bij K remt de groei af en wordt de curve vlak.", "Op N = K groeit de populatie niet meer.", "Boven K neemt de populatie juist af. Waar groeit hij het minst geremd?"],
         uitlegPad: {
           stappen: [
             { titel: "Lage densiteit = veel ruimte", tekst: "Bij lage N: dN/dt ≈ r·N (1−0) = r·N → exponentieel. Vol-tegen-K: dN/dt → 0. Daarom S-vormig: start exponentieel, eindigt vlak." },
@@ -285,7 +285,7 @@ const steps = [
         q: "Een spaarrekening: **€500 sparen, 4% rente per jaar**. Na 5 jaar?",
         options: ["~€608", "~€500", "~€600", "~€700"],
         answer: 0,
-        wrongHints: [null, "Niet — rente erbij.", "Dat is 5 × 4% gewone rente. Vergeet je de rente op rente niet?", "Te veel."],
+        wrongHints: [null, "€500 is je beginbedrag. Er komt elk jaar rente bij.", "Dat is 5 × 4% gewone rente. Vergeet je de rente op rente niet?", "€700 is 40% erbij. Levert 5 jaar 4% rente zoveel op?"],
         uitlegPad: {
           stappen: [{ titel: "K · b^t", tekst: "500 · 1,04⁵ = 500 · 1,217 ≈ **€608**." }],
           niveaus: { basis: "608.", simpeler: "5 jaar 4% rente.", nogSimpeler: "608" },
@@ -318,9 +318,9 @@ const steps = [
       {
         q: "Een populatie groeit met **R₀ = 0,9** (R<1). Wat gebeurt?",
         options: [
-          "Exponentieel verval — sterft uit",
+          "Exponentiële afname",
           "Exponentiële groei",
-          "Stabiel",
+          "Blijft stabiel",
           "Logistische groei"
         ],
         answer: 0,

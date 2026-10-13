@@ -50,9 +50,9 @@ const steps = [
     checks: [
       {
         q: "Een **smartphone** voor een 16-jarige is een ... behoefte.",
-        options: ["Secundaire behoefte", "Primaire behoefte", "Vrije behoefte", "Geen behoefte"],
+        options: ["Secundaire behoefte", "Primaire behoefte", "Vrije behoefte", "Collectieve behoefte"],
         answer: 0,
-        wrongHints: [null, "Primair = nodig om te leven (eten/onderdak).", "'Vrij' is een goederentype, geen behoeftetype.", "Er is wel behoefte — anders zou je hem niet willen."],
+        wrongHints: [null, "Primair = nodig om te leven (eten/onderdak).", "'Vrij' is een goederentype, geen behoeftetype.", "Collectief betekent: voor iedereen samen, zoals een dijk. Is een eigen smartphone iets voor de hele groep?"],
         uitlegPad: {
           stappen: [{ titel: "Primair of secundair?", tekst: "Primair = nodig om te LEVEN (eten, drinken, onderdak, kleding). Secundair = aangenaam maar niet noodzakelijk. Een smartphone is leuk maar niet vitaal → secundair." }],
           woorden: [{ woord: "primaire behoefte", uitleg: "Noodzakelijk om te leven: voedsel, water, onderdak, kleding." }, { woord: "secundaire behoefte", uitleg: "Aangenaam, niet noodzakelijk: smartphone, vakantie, sneakers." }],
@@ -92,9 +92,9 @@ const steps = [
       },
       {
         q: "Wat is **opportunity cost** (opofferingskosten)?",
-        options: ["Wat je opgeeft door voor iets anders te kiezen", "De prijs die je in de winkel betaalt", "De btw die je over een aankoop betaalt", "Wat een ondernemer betaalt voor reclame"],
+        options: ["Wat je opgeeft door voor iets anders te kiezen", "De prijs die je in de winkel betaalt", "Het geld dat je opzijlegt om te sparen", "Extra kosten zoals verzending en bezorging"],
         answer: 0,
-        wrongHints: [null, "Dat is gewoon de prijs.", "Belasting is iets anders.", "Reclamekosten ook iets anders."],
+        wrongHints: [null, "Die prijs betaal je echt. Maar wat mis je doordat je je geld hieraan uitgeeft?", "Sparen is ook een keuze. Gaat het bij opofferingskosten om wat je opzijlegt, of om wat je daardoor misloopt?", "Ook verzendkosten betaal je gewoon. Waar denk je aan bij het woord 'opofferen'?"],
         uitlegPad: {
           stappen: [{ titel: "Kiezen = offer brengen", tekst: "Bij schaarste moet je KIEZEN. Wat je niet kiest, geef je OP. Dat opgegeven alternatief = opportunity cost." }],
           woorden: [{ woord: "opportunity cost", uitleg: "Engels voor 'opofferingskosten'. Wat je opgeeft door A te kiezen i.p.v. B." }],
@@ -208,9 +208,9 @@ const steps = [
       },
       {
         q: "Wat is **vlottend kapitaal**?",
-        options: ["Voorraden en kasgeld", "Een gebouw", "Een vrachtauto", "De bakker zelf"],
+        options: ["Voorraden en kasgeld", "Gebouwen en machines", "Vrachtauto's en computers", "Het personeel en de eigenaar"],
         answer: 0,
-        wrongHints: [null, "Gebouw = vast kapitaal.", "Vrachtauto = vast kapitaal.", "De ondernemer is geen kapitaal."],
+        wrongHints: [null, "Gebouwen en machines gebruik je jarenlang. Is dat vlottend of vast kapitaal?", "Een vrachtauto gaat vele jaren mee. 'Vlottend' gaat over wat snel opraakt of wordt uitgegeven. Hoort de auto daarbij?", "Mensen leveren arbeid of ondernemerschap. Zijn zij kapitaal?"],
         uitlegPad: {
           stappen: [{ titel: "Vlottend vs vast", tekst: "Vlottend = verbruikt zich SNEL (voorraad, kasgeld). Vast = gaat JAREN mee (gebouw, machine)." }],
           woorden: [{ woord: "vlottend kapitaal", uitleg: "Productiemiddelen die zich snel verbruiken: voorraden, kasgeld, halffabricaten." }, { woord: "vast kapitaal", uitleg: "Duurzame productiemiddelen: gebouwen, machines, vrachtwagens." }],
@@ -236,9 +236,9 @@ const steps = [
       },
       {
         q: "Welke productiefactor levert een **mijnbouwbedrijf vooral**?",
-        options: ["Natuur", "Arbeid alleen", "Kapitaal alleen", "Ondernemerschap alleen"],
+        options: ["Natuur", "Arbeid", "Kapitaal", "Ondernemerschap"],
         answer: 0,
-        wrongHints: [null, "Mijnbouw heeft alle 4 nodig — maar wat haalt een mijn uit de grond?", "Idem.", "Idem."],
+        wrongHints: [null, "Mijnwerkers leveren arbeid, dat klopt. Maar wat haalt een mijn uit de grond?", "Een mijn heeft dure machines nodig. Maar wat is het eigenlijke product dat uit de bodem komt?", "Iemand neemt het risico, ja. Maar welke productiefactor haal je letterlijk uit de bodem?"],
         uitlegPad: {
           stappen: [{ titel: "Wat KOMT uit een mijn?", tekst: "Mijnbouw haalt steenkool, ijzererts, koper, goud uit de grond → dat is NATUUR (grondstoffen)." }],
           woorden: [{ woord: "natuur", uitleg: "Productiefactor: alles wat de NATUUR biedt — grond, lucht, water, grondstoffen." }, { woord: "grondstof", uitleg: "Ruw materiaal uit de natuur dat je bewerkt tot eindproduct." }],
@@ -285,7 +285,7 @@ const steps = [
         q: "Bij welk soort inkomen hoort de **zorgtoeslag**?",
         options: ["Secundair inkomen", "Primair inkomen", "Vermogensinkomen", "Arbeidsinkomen"],
         answer: 0,
-        wrongHints: [null, "Toeslag is geen primair inkomen.", "Vermogensinkomen krijg je uit spaargeld of bezit. Krijg je zorgtoeslag voor je bezit?", "Arbeidsinkomen verdien je met werken. Moet je werken voor zorgtoeslag?"],
+        wrongHints: [null, "Primair inkomen krijg je voor een productiefactor die je levert. Wat lever je voor zorgtoeslag?", "Vermogensinkomen krijg je uit spaargeld of bezit. Krijg je zorgtoeslag voor je bezit?", "Arbeidsinkomen verdien je met werken. Moet je werken voor zorgtoeslag?"],
         uitlegPad: {
           stappen: [{ titel: "Toeslag = overheid geeft", tekst: "Zorgtoeslag krijg je VAN de overheid om je zorgverzekering te kunnen betalen. Je leverde geen productiefactor → secundair." }],
           woorden: [{ woord: "zorgtoeslag", uitleg: "Bedrag van overheid voor huishoudens met laag inkomen om zorgpremie te helpen betalen." }, { woord: "toeslag", uitleg: "Vorm van secundair inkomen, overdracht van overheid." }],
@@ -327,7 +327,7 @@ const steps = [
         q: "Wat is een voorbeeld van **primair inkomen**?",
         options: ["Loon van een baan", "AOW-uitkering", "Huurtoeslag", "Studiefinanciering"],
         answer: 0,
-        wrongHints: [null, "AOW = secundair (zonder werk).", "Toeslag = secundair.", "Studiefin. = secundair."],
+        wrongHints: [null, "AOW = secundair (zonder werk).", "Huurtoeslag krijg je van de overheid. Lever je daar een productiefactor voor?", "Voor studiefinanciering lever je geen arbeid, natuur of kapitaal. Welk soort inkomen is het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Welke krijg je voor PRESTATIE?", tekst: "Loon krijg je voor WERK (arbeid leveren) = primair. AOW, toeslagen, studiefin. krijg je van overheid zonder werk = secundair." }],
           woorden: [{ woord: "primair inkomen", uitleg: "Beloning voor productiefactor (loon/pacht/rente/winst)." }, { woord: "secundair inkomen", uitleg: "Overdracht van overheid zonder tegenprestatie." }],
@@ -372,9 +372,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **mediaan**-inkomen?",
-        options: ["Het middelste inkomen", "Het hoogste inkomen", "Gemiddelde inkomen", "Minimumloon"],
+        options: ["Het middelste inkomen", "Het hoogste inkomen", "Het gemiddelde inkomen", "Het meest voorkomende inkomen"],
         answer: 0,
-        wrongHints: [null, "Mediaan = midden, niet hoogste.", "Gemiddelde wordt door extremen vertekend.", "Minimum is wettelijke ondergrens."],
+        wrongHints: [null, "Zet alle inkomens op een rij van laag naar hoog. Kijk je bij de mediaan naar het eind van de rij?", "Het gemiddelde bereken je door alles op te tellen en te delen. Doe je dat bij de mediaan ook?", "Het getal dat het vaakst voorkomt heet de modus. Hoe heet het getal in het midden van de rij?"],
         uitlegPad: {
           stappen: [{ titel: "Mediaan = middelste", tekst: "Zet alle inkomens op rij van laag naar hoog. Het inkomen IN HET MIDDEN is de mediaan. Helft van de mensen verdient minder, helft verdient meer." }],
           woorden: [{ woord: "mediaan", uitleg: "Middelste waarde in een gesorteerde rij. Niet gevoelig voor extremen." }, { woord: "gemiddelde", uitleg: "Som van alle waarden gedeeld door het aantal. Wordt door enkele extreme hoge waarden naar boven getrokken." }],
@@ -400,9 +400,9 @@ const steps = [
       },
       {
         q: "Een land heeft **Gini = 0,55**. Wat zegt dat?",
-        options: ["Aanzienlijke ongelijkheid", "Perfect gelijk", "Iedereen heeft hetzelfde", "Kleine ongelijkheid, net als in Nederland"],
+        options: ["Aanzienlijke ongelijkheid", "Perfect gelijke verdeling", "Bijna volledige ongelijkheid", "Kleine ongelijkheid"],
         answer: 0,
-        wrongHints: [null, "Gini 0 = perfect gelijk.", "Tegenovergesteld.", "Nederland zit rond 0,28 — is 0,55 dan klein?"],
+        wrongHints: [null, "Een perfect gelijke verdeling hoort bij Gini 0. Is 0,55 nul?", "Volledige ongelijkheid is 1. Ligt 0,55 daar dichtbij?", "Nederland zit rond 0,28. Is 0,55 dan klein?"],
         uitlegPad: {
           stappen: [{ titel: "Gini-schaal", tekst: "Gini 0 = perfect gelijk (iedereen evenveel). Gini 1 = volledig ongelijk (1 persoon heeft alles). 0,55 ligt richting de bovenkant — aanzienlijke ongelijkheid." }],
           woorden: [{ woord: "Gini-coëfficiënt", uitleg: "Maatstaf voor inkomensongelijkheid op schaal 0 (gelijk) tot 1 (volledig ongelijk)." }],
@@ -414,9 +414,9 @@ const steps = [
       },
       {
         q: "Welke maatregel **vermindert inkomensongelijkheid**?",
-        options: ["Progressieve belasting + toeslagen voor lage inkomens", "Belasting verlagen voor de hoogste inkomens", "Minimumloon afschaffen voor alle werknemers", "Toeslagen voor lage inkomens helemaal afschaffen"],
+        options: ["Progressieve belasting + toeslagen voor lage inkomens", "Een vlaktaks: iedereen betaalt hetzelfde percentage", "Hogere btw op boodschappen, zodat iedereen meebetaalt", "Lagere belasting op spaargeld en beleggingen"],
         answer: 0,
-        wrongHints: [null, "Als juist de rijkste mensen minder belasting betalen, wordt het verschil met de armen dan kleiner of groter?", "Zonder minimumloon kunnen de laagste lonen verder zakken — helpt dat om de kloof te verkleinen?", "Toeslagen geven lage inkomens juist een steuntje; wat gebeurt er met de ongelijkheid als je die weghaalt?"],
+        wrongHints: [null, "Bij een vlaktaks betalen hoge en lage inkomens hetzelfde percentage. Wordt het verschil daardoor kleiner?", "Boodschappen kosten iemand met weinig geld een groot deel van zijn inkomen. Wie merkt een hogere btw het meest?", "Wie heeft er vooral veel spaargeld en beleggingen? Wie profiteert dus van die verlaging?"],
         uitlegPad: {
           stappen: [{ titel: "Wat verkleint verschil?", tekst: "Progressieve belasting = rijken betalen MEER % belasting. Toeslagen = lage inkomens krijgen iets extra. Beide trekken de uitersten naar elkaar toe → ongelijkheid daalt." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt mee met het inkomen — hoe meer je verdient, hoe hoger % belasting." }, { woord: "nivellering", uitleg: "Inkomensverschillen KLEINER maken." }],
@@ -428,9 +428,9 @@ const steps = [
       },
       {
         q: "Waarom verdient een **arts** vaak meer dan een **verkoper**?",
-        options: ["Schaarste van vaardigheden + lange opleiding", "Artsen zijn vaker lid van een vakbond", "Artsen werken minder uren dan verkopers", "Verkopers vragen nooit om opslag"],
+        options: ["Schaarste van vaardigheden + lange opleiding", "Artsen zijn vaker lid van een vakbond", "Artsen werken minder uren dan verkopers", "Ziekenhuizen maken meer winst dan winkels"],
         answer: 0,
-        wrongHints: [null, "Verdienen alle vakbondsleden veel? Waar hangt de hoogte van een loon dan van af?", "Werken artsen echt minder uren? Denk aan nachtdiensten en weekenden.", "Loon wordt door markt + werkgever bepaald."],
+        wrongHints: [null, "Verdienen alle vakbondsleden veel? Waar hangt de hoogte van een loon dan van af?", "Werken artsen echt minder uren? Denk aan nachtdiensten en weekenden.", "Veel ziekenhuizen maken nauwelijks winst. Waarom betalen ze artsen dan toch veel? Denk aan vraag en aanbod van arbeid."],
         uitlegPad: {
           stappen: [{ titel: "Markt voor arbeid", tekst: "Artsen zijn SCHAARS (lange opleiding, niet iedereen kan het). Vraag is hoog, aanbod laag → hoog loon. Verkopers zijn er veel — markt biedt minder hoog." }],
           woorden: [{ woord: "schaarste van arbeid", uitleg: "Weinig mensen hebben deze vaardigheden — vraag > aanbod → hoog loon." }, { woord: "opleidingsinvestering", uitleg: "Jaren studeren = uitgestelde inkomsten + studieschuld → moet later worden gecompenseerd met hoger loon." }],
@@ -442,9 +442,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **gemiddelde** en **mediane** inkomen?",
-        options: ["Gemiddelde wordt door enkele extremen omhoog getrokken", "Gemiddelde en mediaan zijn altijd precies gelijk", "Mediaan ligt altijd hoger dan het gemiddelde", "Mediaan wordt door enkele extremen omhoog getrokken"],
+        options: ["Gemiddelde wordt door enkele extremen omhoog getrokken", "Gemiddelde is het inkomen dat het vaakst voorkomt", "Mediaan is het gemiddelde van hoogste en laagste", "Mediaan wordt door enkele extremen omhoog getrokken"],
         answer: 0,
-        wrongHints: [null, "Reken eens met 1, 2 en 30. Wat is het gemiddelde, en wat is het middelste getal?", "Klopt 'altijd'? Bedenk wat er met beide gebeurt als er één heel hoog inkomen bij komt.", "Welke van de twee verandert als er één miljonair bij komt?"],
+        wrongHints: [null, "Het inkomen dat het vaakst voorkomt heet de modus. Hoe bereken je het gemiddelde?", "Neem 1, 2 en 30. Is het middelste getal hetzelfde als (1 + 30) : 2?", "Welke van de twee verandert als er één miljonair bij komt?"],
         uitlegPad: {
           stappen: [{ titel: "Twee maatstaven", tekst: "Gemiddelde = alle inkomens optellen + delen door aantal. Mediaan = middelste in gesorteerde rij. Extreem hoge inkomens trekken het GEMIDDELDE op, maar de MEDIAAN blijft gelijk." }],
           woorden: [{ woord: "gemiddelde", uitleg: "Som / aantal. Gevoelig voor extremen." }, { woord: "mediaan", uitleg: "Middelste waarde. Robuust tegen extremen." }],
@@ -495,7 +495,7 @@ const steps = [
         q: "Wat meet het **CPI**?",
         options: ["De gemiddelde prijsstijging van consumentengoederen", "De koopkracht per persoon in Nederland", "Het totale inkomen van alle Nederlanders", "Het percentage mensen zonder betaald werk"],
         answer: 0,
-        wrongHints: [null, "Koopkracht volgt UIT CPI.", "Het totale inkomen of de totale productie van een land meet je met het BBP.", "Werkloosheid is iets anders."],
+        wrongHints: [null, "Koopkracht bereken je mét het CPI, maar het is niet hetzelfde. Wat meet het CPI zelf?", "Het totale inkomen of de totale productie van een land meet je met het BBP.", "Werkloosheid heeft een eigen cijfer van het CBS. Wat meet het CPI dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Wat staat in de letters?", tekst: "CPI = Consumenten-Prijs-Index. Het meet hoeveel duurder boodschappen + woonlasten + diensten + transport gemiddeld geworden zijn." }],
           woorden: [{ woord: "CPI", uitleg: "Consumentenprijsindex. Maatstaf voor inflatie. Basisjaar = 100." }, { woord: "consumentengoederen", uitleg: "Producten die huishoudens kopen: voedsel, kleding, vervoer, energie, diensten." }],
@@ -521,9 +521,9 @@ const steps = [
       },
       {
         q: "Wat is **welvaart in ruime zin**?",
-        options: ["Inkomen + gezondheid + milieu + vrije tijd", "Inkomen + bezit + spaargeld + koopkracht", "Gezondheid + milieu, maar zonder inkomen", "Inkomen + vermogen, zonder vrije tijd"],
+        options: ["Inkomen + gezondheid + milieu + vrije tijd", "Inkomen + bezit + spaargeld + koopkracht", "Hoe gelukkig mensen zich zelf voelen", "Het BBP per inwoner van een land"],
         answer: 0,
-        wrongHints: [null, "Dat zijn allemaal materiële zaken. Is dat welvaart in ruime of in enge zin?", "Valt inkomen buiten welvaart? Hoort geld er niet ook bij?", "Hoort vrije tijd er in ruime zin niet ook bij?"],
+        wrongHints: [null, "Dat zijn allemaal materiële zaken. Is dat welvaart in ruime of in enge zin?", "Hoe je je voelt, is welzijn. Gaat welvaart over gevoel, of over hoe goed je in je behoeften kunt voorzien?", "Het BBP telt alleen wat er voor geld wordt geproduceerd. Is dat ruim of eng?"],
         uitlegPad: {
           stappen: [{ titel: "Smal vs breed", tekst: "Enge zin = ALLEEN materiële welvaart (geld, spullen, BBP). Ruime zin = ALLES dat je leven beter maakt (gezondheid, milieu, veiligheid, vrije tijd, geluk)." }],
           woorden: [{ woord: "welvaart enge zin", uitleg: "Materieel: inkomen + bezittingen + BBP." }, { woord: "welvaart ruime zin", uitleg: "Materieel + immaterieel: gezondheid, milieu, sociale relaties." }],
@@ -535,9 +535,9 @@ const steps = [
       },
       {
         q: "Wat is **deflatie**?",
-        options: ["Prijzen dalen gemiddeld", "Prijzen stijgen", "Lonen dalen", "Geen prijsverandering"],
+        options: ["Prijzen dalen gemiddeld", "Prijzen stijgen gemiddeld", "Lonen dalen gemiddeld", "Prijzen stijgen minder snel"],
         answer: 0,
-        wrongHints: [null, "Dat is inflatie.", "Lonen ≠ prijzen.", "Dan zou inflatie 0 zijn."],
+        wrongHints: [null, "Prijzen die stijgen, noem je inflatie. Wat betekent 'de-' voor een woord?", "Deflatie gaat over prijzen, niet over lonen. Welk cijfer kijk je dan na?", "Minder snel stijgen is nog steeds stijgen. Dalen de prijzen dan echt?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenovergesteld van inflatie", tekst: "Inflatie = prijzen STIJGEN. Deflatie = prijzen DALEN. CPI gaat omlaag." }],
           woorden: [{ woord: "deflatie", uitleg: "Gemiddelde DALING van prijzen. Tegenovergesteld van inflatie." }, { woord: "inflatie", uitleg: "Gemiddelde STIJGING van prijzen." }],
@@ -549,9 +549,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **nominale** en **reële** loonstijging?",
-        options: ["Reëel = nominale stijging min inflatie", "Reëel = nominale stijging plus inflatie", "Nominaal is altijd hoger dan reëel", "Reëel is vóór belasting, nominaal erna"],
+        options: ["Reëel = nominale stijging min inflatie", "Reëel = nominale stijging plus inflatie", "Nominaal = per maand, reëel = per jaar", "Reëel is vóór belasting, nominaal erna"],
         answer: 0,
-        wrongHints: [null, "Als prijzen stijgen, hou je dan meer of minder over van je loonsverhoging?", "Nominaal kan ook lager zijn dan reëel (bij deflatie).", "Vóór en na belasting is bruto en netto — hier gaat het om prijsstijging."],
+        wrongHints: [null, "Als prijzen stijgen, hou je dan meer of minder over van je loonsverhoging?", "Het verschil zit niet in de periode. Wat zorgt ervoor dat je met hetzelfde loon minder kunt kopen?", "Vóór en na belasting is bruto en netto — hier gaat het om prijsstijging."],
         uitlegPad: {
           stappen: [{ titel: "Twee verschillende metingen", tekst: "Nominaal = wat in EURO'S op je strookje verandert (+3%). Reëel = wat je echt meer KAN KOPEN (+3% − 2% inflatie = +1% reëel)." }],
           woorden: [{ woord: "nominaal", uitleg: "In geldbedragen, zonder rekening te houden met inflatie." }, { woord: "reëel", uitleg: "Gecorrigeerd voor inflatie. Vertelt over werkelijke koopkracht." }],
@@ -598,7 +598,7 @@ const steps = [
         q: "Wat telt **NIET mee** in het BBP?",
         options: ["Vrijwilligerswerk in een buurthuis", "Loon van een leraar op school", "Huur die je voor een woning betaalt", "Verkoop van een nieuwe auto"],
         answer: 0,
-        wrongHints: [null, "Loon = inkomen, telt mee.", "Huur = vermogensinkomen, telt mee.", "Verkoop = transactie, telt mee."],
+        wrongHints: [null, "Voor het werk van de leraar wordt loon betaald. Telt betaald werk mee?", "Wonen in een huurhuis is een dienst waarvoor je betaalt. Telt dat mee?", "Voor die auto wordt betaald en hij is net gemaakt. Telt die productie mee?"],
         uitlegPad: {
           stappen: [{ titel: "Geen geldstroom = geen BBP", tekst: "BBP telt alleen wat in GELD wordt verhandeld. Vrijwilligers krijgen niks → geen geldstroom → telt niet mee, ook al is het waardevol werk." }],
           woorden: [{ woord: "informele economie", uitleg: "Werk zonder factuur of loon (vrijwilligerswerk, huishoudwerk, oma die past) — economisch waardevol maar niet in BBP." }],
@@ -610,9 +610,9 @@ const steps = [
       },
       {
         q: "**BBP per hoofd** vergelijkt:",
-        options: ["Welvaart tussen landen", "Inkomen van rijken", "Belasting per persoon", "Aantal banen per persoon"],
+        options: ["Welvaart tussen landen", "Welzijn tussen landen", "Verdeling binnen een land", "Prijsstijging tussen landen"],
         answer: 0,
-        wrongHints: [null, "Niet specifiek rijken.", "Niet belasting.", "Geen banen-cijfer."],
+        wrongHints: [null, "Het BBP telt geld en productie. Meet dat ook geluk en gezondheid?", "Een gemiddelde per inwoner zegt niets over wie meer heeft. Welke maat meet de verdeling?", "Prijsstijging meet je met het CPI. Wat deel je hier door het aantal inwoners?"],
         uitlegPad: {
           stappen: [{ titel: "Wat is de formule?", tekst: "BBP per hoofd = totaal BBP / aantal inwoners. Geeft een 'gemiddelde welvaart per persoon'. Handig om landen van verschillende grootte te vergelijken." }],
           woorden: [{ woord: "BBP per hoofd", uitleg: "BBP gedeeld door bevolking. Maat voor gemiddelde welvaart in een land." }],
@@ -624,9 +624,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **welvaart en welzijn**?",
-        options: ["Welvaart = materieel, welzijn = bredere kwaliteit van leven", "Welvaart en welzijn zijn twee woorden voor hetzelfde", "Welvaart = alleen voor rijken, welzijn = voor iedereen", "Welvaart = geluk, welzijn = geld en spullen"],
+        options: ["Welvaart = materieel, welzijn = bredere kwaliteit van leven", "Welvaart en welzijn zijn twee woorden voor hetzelfde", "Welvaart = voor een heel land, welzijn = per persoon", "Welvaart = geluk, welzijn = geld en spullen"],
         answer: 0,
-        wrongHints: [null, "Kun je veel geld hebben en je toch ongelukkig voelen?", "Welvaart geldt voor iedereen.", "Welk woord gaat over geld en spullen? Denk aan 'welvarend'."],
+        wrongHints: [null, "Kun je veel geld hebben en je toch ongelukkig voelen?", "Kun je zowel van een land als van één persoon zeggen dat hij welvarend is? Waar zit het verschil dan wel?", "Welk woord gaat over geld en spullen? Denk aan 'welvarend'."],
         uitlegPad: {
           stappen: [{ titel: "Materieel vs breder", tekst: "Welvaart = wat je in EURO'S kan uitdrukken (BBP, inkomen, bezit). Welzijn = hoe je je echt voelt (geluk, gezondheid, vrije tijd, sociale relaties)." }],
           woorden: [{ woord: "welvaart", uitleg: "Materiële zijde van een goed leven — meetbaar in geld." }, { woord: "welzijn", uitleg: "Bredere kwaliteit van leven — niet altijd in geld te vangen." }],
@@ -638,9 +638,9 @@ const steps = [
       },
       {
         q: "Wat meet de **HDI**?",
-        options: ["Inkomen + onderwijs + levensverwachting", "Inkomen + koopkracht + werkloosheid", "Onderwijs + vrije tijd + aantal toeristen", "Inkomen + aantal auto's + internet"],
+        options: ["Inkomen + onderwijs + levensverwachting", "Inkomen + koopkracht + werkloosheid", "Geluk + vrije tijd + levensverwachting", "Onderwijs + levensverwachting + milieu"],
         answer: 0,
-        wrongHints: [null, "De HDI kijkt verder dan geld. Zijn dit niet allemaal geldzaken?", "Tellen toeristen echt mee voor hoe goed mensen leven?", "Zijn auto's en internet echt de maat voor ontwikkeling?"],
+        wrongHints: [null, "De HDI kijkt verder dan geld. Zijn dit niet allemaal geldzaken?", "Geluk meet je met een geluksindex. Welke drie meetbare onderdelen heeft de HDI?", "Milieu hoort bij welzijn in ruime zin, maar staat niet in de HDI. Welke drie onderdelen heeft de HDI wel?"],
         uitlegPad: {
           stappen: [{ titel: "HDI = drie dimensies", tekst: "Human Development Index combineert: (1) inkomen per hoofd, (2) onderwijs (gemiddelde + verwachte schooljaren), (3) levensverwachting." }],
           woorden: [{ woord: "HDI", uitleg: "Human Development Index. VN-maat voor menselijke ontwikkeling, 0 (laag) tot 1 (hoog)." }],
@@ -652,9 +652,9 @@ const steps = [
       },
       {
         q: "Een land heeft **hoog BBP** maar veel milieuvervuiling. Wat zegt dat?",
-        options: ["Welvaart is hoog, maar welzijn lager dan BBP suggereert", "Welzijn is automatisch hoog als het BBP hoog is", "Het BBP is in dat land verkeerd gemeten", "Milieu telt niet mee voor de kwaliteit van leven"],
+        options: ["Welvaart is hoog, maar welzijn lager dan BBP suggereert", "Welzijn is even hoog als het BBP doet denken", "Het BBP is in dat land verkeerd gemeten", "Milieuschade wordt al meegeteld in het BBP"],
         answer: 0,
-        wrongHints: [null, "Hoog BBP geeft niet automatisch welzijn.", "BBP-meting is consistent — welzijn is breder.", "Heb je last van vieze lucht en vies water? Hoort dat bij hoe goed je leeft?"],
+        wrongHints: [null, "Kun je in een rijk land toch ziek worden van vieze lucht? Gaan welvaart en welzijn dan altijd samen op?", "BBP-meting is consistent — welzijn is breder.", "Schone lucht wordt niet verkocht. Kan het BBP de schade aan lucht en water dan meetellen?"],
         uitlegPad: {
           stappen: [{ titel: "BBP telt vervuiling niet", tekst: "BBP meet PRODUCTIE in geld. Vervuiling kost ook geld, maar wordt NIET afgetrokken van BBP. Een fabriek die rivier verziekt verhoogt BBP (productie) maar verlaagt welzijn." }],
           woorden: [{ woord: "milieuschade", uitleg: "Negatieve effecten van productie op natuur/gezondheid. Niet in BBP verrekend." }],
@@ -694,9 +694,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **minimumloon**?",
-        options: ["Het laagste loon dat werkgevers wettelijk mogen betalen", "Het gemiddelde loon van alle werknemers in Nederland", "Het loon dat een directeur minstens moet krijgen", "Het bedrag dat je minimaal aan pensioen krijgt"],
+        options: ["Het laagste loon dat werkgevers wettelijk mogen betalen", "Het gemiddelde loon van alle werknemers in Nederland", "Het loon dat vakbonden met werkgevers afspreken", "Het bedrag dat je minimaal aan pensioen krijgt"],
         answer: 0,
-        wrongHints: [null, "Gemiddelde is veel hoger.", "Waarom zou de wet een directeur extra beschermen?", "Pensioen is iets anders (AOW)."],
+        wrongHints: [null, "Gemiddelde is veel hoger.", "Zo'n afspraak (een cao) geldt per bedrijfstak. Geldt het minimumloon per bedrijfstak of voor iedereen?", "Pensioen is iets anders (AOW)."],
         uitlegPad: {
           stappen: [{ titel: "Wet beschermt werknemer", tekst: "Minimumloon = WETTELIJKE ondergrens. Werkgever mag niet minder betalen. Beschermt werknemers tegen extreem lage lonen." }],
           woorden: [{ woord: "minimumloon", uitleg: "Wettelijk laagste uurloon/maandloon dat werkgevers mogen betalen. Geldt vanaf 21 jaar; jongeren krijgen jeugd-minimumloon." }],
@@ -722,9 +722,9 @@ const steps = [
       },
       {
         q: "Welke toeslag krijg je bij **huur in een sociale woning + laag inkomen**?",
-        options: ["Huurtoeslag", "Zorgtoeslag", "Kinderbijslag", "Geen toeslag"],
+        options: ["Huurtoeslag", "Zorgtoeslag", "Kinderbijslag", "Kindgebonden budget"],
         answer: 0,
-        wrongHints: [null, "Zorgtoeslag is voor zorgkosten.", "Kinderbijslag is voor kinderen.", "Wel toeslag mogelijk."],
+        wrongHints: [null, "Zorgtoeslag is voor zorgkosten.", "Kinderbijslag is voor kinderen.", "Het kindgebonden budget krijg je voor kinderen. Gaat deze vraag over kinderen of over wonen?"],
         uitlegPad: {
           stappen: [{ titel: "Match toeslag aan kost", tekst: "Elke toeslag dekt een SPECIFIEKE kost. Huur betalen = huurtoeslag. Zorgverzekering betalen = zorgtoeslag. Voor kinderen = kinderbijslag." }],
           woorden: [{ woord: "huurtoeslag", uitleg: "Bijdrage van de overheid in huurkosten als je sociale huur hebt + laag inkomen." }, { woord: "sociale woning", uitleg: "Huurwoning onder een maximale huur (~€880/2024), beheerd door woningcorporatie." }],
@@ -738,7 +738,7 @@ const steps = [
         q: "Wat zijn de **3 pijlers van pensioen**?",
         options: ["AOW + werkgeverspensioen + eigen pensioen", "Brutoloon + nettoloon + vakantiegeld", "AOW + zorgtoeslag + huurtoeslag", "Werkgeverspensioen + WW + bijstand"],
         answer: 0,
-        wrongHints: [null, "Toeslagen zijn geen pensioen. Welke potjes zijn bedoeld voor je oude dag?", "Geen pensioen-componenten.", "WW en bijstand krijg je ook vóór je pensioen. Horen die bij je oude dag?"],
+        wrongHints: [null, "Dat zijn onderdelen van je loon nu. Welke potjes zijn bedoeld voor je oude dag?", "Zorg- en huurtoeslag krijg je als je weinig inkomen hebt. Zijn die bedoeld voor je oude dag?", "WW en bijstand krijg je ook vóór je pensioen. Horen die bij je oude dag?"],
         uitlegPad: {
           stappen: [{ titel: "Drie lagen", tekst: "Pijler 1: AOW van overheid (basis). Pijler 2: aanvullend pensioen via werkgever (opgebouwd in dienst). Pijler 3: eigen sparen/lijfrente (vrijwillig extra)." }],
           woorden: [{ woord: "AOW", uitleg: "Pijler 1: basis-pensioen voor iedereen." }, { woord: "aanvullend pensioen", uitleg: "Pijler 2: bedrag dat werkgever + werknemer samen opbouwen tijdens loopbaan." }, { woord: "lijfrente", uitleg: "Pijler 3: eigen pensioenpotje, vaak via verzekeraar." }],
@@ -766,7 +766,7 @@ const steps = [
         q: "Hoe maakt **progressieve belasting** inkomens gelijker?",
         options: ["Hogere inkomens betalen een hoger percentage", "Iedereen betaalt hetzelfde percentage", "Lagere inkomens betalen een hoger percentage", "Iedereen betaalt hetzelfde vaste bedrag"],
         answer: 0,
-        wrongHints: [null, "Dat is vlaktaks.", "Wie houdt er dan relatief het meest over: arm of rijk?", "Een vast bedrag is voor een laag inkomen relatief zwaarder. Wordt het verschil dan kleiner?"],
+        wrongHints: [null, "Hetzelfde percentage voor iedereen heet een vlaktaks. Wordt het verschil tussen arm en rijk daardoor kleiner?", "Wie houdt er dan relatief het meest over: arm of rijk?", "Een vast bedrag is voor een laag inkomen relatief zwaarder. Wordt het verschil dan kleiner?"],
         uitlegPad: {
           stappen: [{ titel: "Hoe meer, hoe zwaarder", tekst: "Bij progressieve belasting STIJGT het BELASTING-percentage met je inkomen. €30k betaalt 37%, €100k betaalt 49% over hoogste schijf. Resultaat: hoge inkomens leveren relatief meer in." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt met inkomen. Hoe hoger je inkomen, hoe hoger % belasting." }, { woord: "vlaktaks", uitleg: "Iedereen betaalt zelfde percentage, ongeacht inkomen. (Tegengesteld aan progressief.)" }],

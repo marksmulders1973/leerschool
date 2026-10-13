@@ -264,9 +264,9 @@ const steps = [
       },
       {
         q: "Welk bedrijf is een typische **NV**?",
-        options: ["Een groot bedrijf als ASML", "De plaatselijke tandartspraktijk", "Een eenmanszaak van een fietsenmaker", "Een marktkraam"],
+        options: ["Een chipmaker op de beurs, zoals ASML", "Een familiebedrijf met drie aandeelhouders", "Een eenmanszaak van een fietsenmaker", "Een coöperatieve bank zoals de Rabobank"],
         answer: 0,
-        wrongHints: [null, "Een kleine praktijk is meestal een BV of eenmanszaak, niet beursgenoteerd.", "Een eenmanszaak is geen rechtspersoon met vrij verhandelbare aandelen.", "Een marktkraam is veel te klein voor een NV."],
+        wrongHints: [null, "Als de aandelen in een kleine, vaste kring blijven, welke rechtsvorm past daar dan bij?", "Een eenmanszaak is geen rechtspersoon met vrij verhandelbare aandelen.", "De Rabobank is groot, maar een coöperatie: de leden zijn eigenaar en er zijn geen vrij verhandelbare aandelen."],
         uitlegPad: {
           stappen: [{ titel: "Groot en op de beurs", tekst: "Een NV is bedoeld voor grote bedrijven die veel kapitaal ophalen, vaak via de beurs. Heineken NV en ASML zijn voorbeelden." }],
           woorden: [{ woord: "beursgenoteerd", uitleg: "Het bedrijf staat op de aandelenbeurs; iedereen kan aandelen kopen." }, { woord: "kapitaal ophalen", uitleg: "Geld verzamelen door aandelen te verkopen aan investeerders." }],
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "Wat is de belangrijkste reden om voor een **NV** te kiezen in plaats van een BV?",
-        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen vennootschapsbelasting hoeven betalen", "Geen notaris nodig hebben bij de oprichting", "De eigenaar privé aansprakelijk maken"],
+        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen vennootschapsbelasting hoeven betalen", "Lagere oprichtingskosten bij de notaris", "Minder regels en toezicht dan bij een BV"],
         answer: 0,
-        wrongHints: [null, "Een NV betaalt net als een BV gewoon VPB.", "Ook een NV wordt via de notaris opgericht.", "Bij een NV is de aandeelhouder juist beperkt aansprakelijk, niet privé."],
+        wrongHints: [null, "Een NV betaalt net als een BV gewoon VPB.", "Een NV oprichten is juist duurder: je hebt minimaal €45.000 kapitaal nodig. Waarom kiest een bedrijf er dan toch voor?", "Een NV heeft juist strengere regels, zeker op de beurs. Wat kan een NV wél wat een BV niet kan?"],
         uitlegPad: {
           stappen: [{ titel: "Geld ophalen bij velen", tekst: "De kracht van een NV is dat de aandelen vrij verhandelbaar zijn. Zo kun je aandelen verkopen aan een groot publiek en veel kapitaal ophalen om te groeien." }],
           woorden: [{ woord: "vrij verhandelbaar", uitleg: "Aandelen die iedereen mag kopen en verkopen, ook via de beurs." }, { woord: "kapitaal", uitleg: "Geld om mee te ondernemen en te groeien." }],
@@ -342,7 +342,7 @@ const steps = [
       },
       {
         q: "Een vriendengroep wil **samen** een bedrijfje beginnen, weinig kosten, en vertrouwt elkaar volledig. Wat past het beste?",
-        options: ["Een VOF", "Een NV met beursnotering", "Een eenmanszaak", "Een BV met €45.000 startkapitaal"],
+        options: ["Een VOF (vennootschap onder firma)", "Een NV met beursnotering", "Een eenmanszaak op naam van één van hen", "Een BV met €45.000 startkapitaal"],
         answer: 0,
         wrongHints: [null, "Een NV met beurs is voor grote bedrijven, niet voor een vriendengroep.", "Een eenmanszaak heeft maar één eigenaar — zij willen samen.", "€45.000 startkapitaal hoort bij een NV, niet bij een BV."],
         uitlegPad: {

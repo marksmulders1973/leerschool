@@ -52,9 +52,9 @@ const steps = [
     checks: [
       {
         q: "*Wat is een vergelijking?*",
-        options: ["Twee uitdrukkingen met een = ertussen","Een rekenstuk zonder = teken","Een tabel met getallen","Een grafiek"],
+        options: ["Twee uitdrukkingen met een = ertussen","Een rekenstuk zonder = teken","Een rij getallen met een vast verschil","Een uitdrukking met een letter erin"],
         answer: 0,
-        wrongHints: [null, "Dat is een uitdrukking. Een vergelijking heeft een = teken.", "Een tabel is geen vergelijking. Vergelijkingen hebben =.", "Een grafiek is iets anders — visuele weergave, geen vergelijking met = teken."],
+        wrongHints: [null, "Zonder =-teken heb je een uitdrukking. Wat maakt een vergelijking anders?", "Dat is een rij. Waar herken je een vergelijking aan?", "Een letter alleen maakt nog geen vergelijking: 3x + 2 is een uitdrukking. Wat mist er nog?"],
         uitlegPad: {
           stappen: [{ titel: "= teken sleutel", tekst: "Vergelijking = twee dingen aan elkaar gelijk gesteld via =. Uitdrukking = rekenstuk zonder =. Vergelijking: 3x+5=14. Uitdrukking: 3x+5." }],
           woorden: [{ woord: "uitdrukking", uitleg: "Rekenstuk. Voorbeeld: 3x+5." }, { woord: "vergelijking", uitleg: "Uitdrukking = uitdrukking. Bv. 3x+5=14." }],
@@ -624,7 +624,7 @@ const steps = [
       },
       { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null, "Niet — aftrekken, niet optellen.", "Niet — x niet 7.", "Niet — x staat nog niet alleen; welke bewerking haalt de +7 weg?"] },
       { q: "Los op: 3x = 21", options: ["x = 7","x = 18","x = 24","x = 63"], answer: 0, wrongHints: [null, "Niet — delen, niet aftrekken.", "Niet — optellen klopt niet.", "Niet — vermenigvuldigen klopt niet."] },
-      { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null, "Niet — vergeet +3 eerst.", "Niet.", "Niet."] },
+      { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null, "Je trok 3 af in plaats van op te tellen. Wat moet je doen om −3 weg te werken?", "Vul x = 5 in: 2 · 5 − 3 = 7. Is dat 11?", "Vul x = 8 in: 2 · 8 − 3 = 13. Is dat 11?"] },
     ],
   },
 ];

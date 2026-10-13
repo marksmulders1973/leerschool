@@ -157,9 +157,9 @@ const steps = [
     checks: [
       {
         q: "Afgeleide van **y = x · cos(x)**:",
-        options: ["cos(x) − x·sin(x)", "−x·sin(x)", "cos(x)", "−sin(x)"],
+        options: ["cos(x) − x·sin(x)", "cos(x) + x·sin(x)", "−x·sin(x)", "1 − sin(x)"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet productregel.", "Niet — alleen afgeleide cos.", "Idem."],
+        wrongHints: [null, "Controleer de afgeleide van cos(x) nog eens: welk teken hoort daarbij?", "Je differentieerde alleen cos(x). Wat zegt de productregel over de afgeleide van de factor x?", "Je telde de afgeleiden van x en cos(x) op. Bij een product werkt dat niet: welke regel geldt er?"],
         uitlegPad: {
           stappen: [
             { titel: "Productregel f·g", tekst: "f=x, f'=1. g=cos(x), g'=−sin(x). y' = 1·cos(x) + x·(−sin(x)) = **cos(x) − x·sin(x)**." },
@@ -194,7 +194,7 @@ const steps = [
         q: "Afgeleide van **ln(x²)**:",
         options: ["2/x", "1/x²", "2x", "ln(2x)"],
         answer: 0,
-        wrongHints: [null, "Niet — verkeerde afgeleide.", "Niet — vergeet ketting.", "Onzin."],
+        wrongHints: [null, "Je nam 1 gedeeld door het binnenste (x²). Wat moet je volgens de kettingregel nog met de afgeleide van x² doen?", "Dat is alleen de afgeleide van x². Wat is de afgeleide van ln(u) zelf?", "De afgeleide van een ln-functie bevat geen ln meer. Wat is de afgeleide van ln(u)?"],
         uitlegPad: {
           stappen: [
             { titel: "Kettingregel met ln", tekst: "u=x², u'=2x. y = ln(u). y' = (1/u) · u' = (1/x²) · 2x = **2/x**." },
@@ -306,13 +306,13 @@ const steps = [
       {
         q: "Voor max **winst**: marginale opbrengst R' = marginale kosten K'. Wat betekent dat?",
         options: [
-          "Op die productie q* geeft elke extra eenheid zoveel kosten als opbrengst → geen voordeel meer om uit te breiden",
+          "Elke extra eenheid levert er evenveel op als ze kost, dus uitbreiden loont niet meer",
           "Op die productie is de winst precies nul, omdat opbrengst en kosten daar gelijk zijn",
-          "Op die productie kun je beter helemaal stoppen, want extra eenheden leveren niets op",
-          "Met alleen R' en K' kun je niets zeggen over waar de winst het grootst is"
+          "Op die productie is de opbrengst het grootst, dus daar is ook de winst maximaal",
+          "Op die productie zijn de gemiddelde kosten per stuk het laagst"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — winst niet nul, juist max.", "Niet — wel productie.", "Wel info."],
+        wrongHints: [null, "R' en K' gaan over de extra opbrengst en kosten van één eenheid, niet over de totalen. Is W = R − K hier dan nul?", "De grootste opbrengst hoort bij R' = 0. Waarom hoeft de winst daar niet maximaal te zijn?", "De laagste kosten per stuk vind je met de gemiddelde kosten, niet met R' en K'. Wat zeggen R' en K' over één extra eenheid?"],
         uitlegPad: {
           stappen: [
             { titel: "1e-orde voorwaarde", tekst: "Winst W(q) = R(q) − K(q). W'(q) = R'(q) − K'(q) = 0 voor max → R' = K'. Onder dat punt is R' > K' (meer produceren = winst), boven punt R' < K' (winst daalt). Vandaar 'maximale winst-punt'." },
@@ -354,12 +354,12 @@ const steps = [
         q: "**Newton-Raphson** zoekt nulpunten van f(x). Formule:",
         options: [
           "x_{n+1} = x_n − f(x_n)/f'(x_n)",
-          "x_{n+1} = f(x_n)",
-          "x_{n+1} = x_n + f(x_n)",
-          "Geen formule nodig"
+          "x_{n+1} = x_n + f(x_n)/f'(x_n)",
+          "x_{n+1} = x_n − f'(x_n)/f(x_n)",
+          "x_{n+1} = f(x_n)/f'(x_n)"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen iteratie zo.", "Tegenovergesteld teken-effect.", "Wel formule."],
+        wrongHints: [null, "Kijk naar het teken: als f(x_n) > 0 is en de grafiek stijgt, moet je dan naar links of naar rechts?", "De breuk staat omgekeerd. Hoe hangt de stapgrootte af van de functiewaarde en van de helling van de raaklijn?", "Waar begin je aan de nieuwe stap? Je schuift op vanaf het oude punt x_n."],
         uitlegPad: {
           stappen: [
             { titel: "Raaklijn-snijpunt", tekst: "Idee: in punt x_n trek raaklijn aan f. Snijpunt raaklijn met x-as = betere benadering van nulpunt. Herhaal → convergeert kwadratisch snel naar werkelijk nulpunt (mits goede start)." },

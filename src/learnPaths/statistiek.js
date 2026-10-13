@@ -35,9 +35,9 @@ const steps = [
     checks: [
       {
         q: "Wat is statistiek?",
-        options: ["Verzamelen en bestuderen van gegevens","Iets uit de oudheid","Een soort breuk","Een soort hoek"],
+        options: ["Verzamelen en bestuderen van gegevens","Meten en berekenen van hoeken en afstanden","Rekenen met letters in plaats van getallen","Uitrekenen hoe geld groeit door rente"],
         answer: 0,
-        wrongHints: [null, "Niet historisch — statistiek is wiskunde van data.", "Niets met breuken te maken.", "Een hoek is meetkunde."],
+        wrongHints: [null, "Hoeken en afstanden horen bij meetkunde. Waar gaat statistiek over?", "Rekenen met letters is algebra. Waar gaat statistiek over?", "Rente uitrekenen hoort bij procenten en geld. Wat doe je bij statistiek met de uitkomsten van een enquête?"],
         uitlegPad: {
           stappen: [{ titel: "Data → conclusies", tekst: "Statistiek = wiskunde-onderdeel dat data (gegevens) verzamelt, ordent en analyseert. Doel: patronen vinden en conclusies trekken. Voorbeelden: gemiddeld cijfer, populairste sport, aantal regenbuien." }],
           woorden: [{ woord: "statistiek", uitleg: "Wiskunde van data. Verzamelen + ordenen + beschrijven." }, { woord: "data", uitleg: "Gegevens. Cijfers/feiten die je verzamelt." }],
@@ -114,7 +114,7 @@ const steps = [
         q: "Wat hoort op de y-as van een staafdiagram (in het frequentievoorbeeld)?",
         options: ["Frequentie", "De waardes zelf", "De percentages", "Het gemiddelde"],
         answer: 0,
-        wrongHints: [null, "Dat staat op de x-as.", "Percentages kunnen, maar in basis-staafdiagram is het frequentie.", "Het gemiddelde is één getal — geen as."],
+        wrongHints: [null, "Dat staat op de x-as.", "Percentages kunnen ook, maar in dit voorbeeld staan de staven niet in procenten. Wat geeft de hoogte van een staaf dan aan?", "Het gemiddelde is één getal — geen as."],
         uitlegPad: {
           stappen: [{ titel: "Y-as = hoogte = aantal", tekst: "Bij standaard frequentie-staafdiagram: X-as = waardes (38, 39, 40...). Y-as = frequentie (HOE VAAK elke waarde voorkomt). Hoogte balk = frequentie." }],
           woorden: [{ woord: "x-as", uitleg: "Horizontale as (links-rechts). Hier staan de categorieën/waardes." }, { woord: "y-as", uitleg: "Verticale as (boven-onder). Hier staan de aantallen/frequenties." }],
@@ -248,9 +248,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer is mediaan beter dan gemiddelde?",
-        options: ["Bij uitschieters", "Bij even aantallen", "Nooit", "Altijd"],
+        options: ["Bij uitschieters", "Bij even aantallen", "Bij kleine datasets", "Bij een symmetrische verdeling"],
         answer: 0,
-        wrongHints: [null, "Het hangt af van de data, niet van het aantal.", "Bij scheve verdelingen is mediaan zinvol.", "Beide zijn nuttig in verschillende situaties."],
+        wrongHints: [null, "Het hangt af van de data, niet van het aantal.", "Ook bij weinig waarden kan het gemiddelde prima werken. Wat maakt het gemiddelde onbetrouwbaar?", "Bij een symmetrische verdeling liggen gemiddelde en mediaan dicht bij elkaar. Wanneer lopen ze uit elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Uitschieters vertekenen gemiddelde", tekst: "Gemiddelde is GEVOELIG voor uitschieters (extreem hoog/laag). Mediaan is ONGEVOELIG. Voorbeeld inkomens 20k, 25k, 22k, 23k, 1000k. Gemiddelde 218k (vertekend door miljonair!). Mediaan 23k (realistisch). Bij scheve data: kies mediaan." }],
           woorden: [{ woord: "uitschieter", uitleg: "Extreem hoog/laag getal dat ver van rest ligt. Engels: outlier." }, { woord: "scheve verdeling", uitleg: "Data niet symmetrisch verdeeld. Bv. inkomens (paar zeer hoog, rest gemiddeld)." }],
@@ -411,15 +411,15 @@ const steps = [
       },
       { q: "Modus van 3, 5, 5, 7, 9, 5, 2?", options: ["5","3","9","7"], answer: 0, wrongHints: [null,"3 komt 1× voor. Welke komt vaakst?","9 komt 1× voor.","7 komt 1× voor. Welke 3× voor?"] },
       { q: "Mediaan van 2, 4, 6, 8?", options: ["5","4","6","20"], answer: 0, wrongHints: [null,"Even aantal — neem het GEMIDDELDE van de 2 middelste getallen.","Niet — neem gemiddelde van 2 middelste.","Dat is som."] },
-      { q: "Bereik van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Max alleen.", "Niet.", "Min alleen."] },
+      { q: "Bereik van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "18 is de grootste waarde. Wat moet je er nog vanaf halen?", "12 is het eerste getal uit de rij. Het bereik is het verschil tussen de grootste en de kleinste waarde.", "3 is de kleinste waarde. Hoe ver ligt die van de grootste?"] },
       { q: "Gemiddelde van 10, 20, 30?", options: ["20","60","10","30"], answer: 0, wrongHints: [null, "Dat is som.", "Min.", "Max."] },
       { q: "Wanneer is mediaan zinvoller dan gemiddelde?", options: ["Bij grote uitschieters","Bij weinig getallen","Bij even aantal","Bij oneven aantal"], answer: 0, wrongHints: [null, "Niet — beide werken bij elk aantal.", "Niet — speelt geen rol.", "Niet — speelt geen rol."] },
       { q: "5 toetsen gemiddeld 7. Som = ?", options: ["35","12","7","75"], answer: 0, wrongHints: [null, "Niet — optellen ipv vermenigvuldigen.", "Gem zelf.", "Verkeerde berekening."] },
-      { q: "Frequentie van 4 in [4,5,4,6,4,7,5]?", options: ["3","2","1","4"], answer: 0, wrongHints: [null, "Niet — tel zorgvuldig.", "Niet — tel nog eens.", "Niet."] },
-      { q: "Een dobbelsteen is 60 keer gegooid. In het staafdiagram staan de ogen 1 t/m 6 onder de staven. Waar staat de hoogte van een staaf voor?", options: ["Frequentie","Waarde","Som","Modus"], answer: 0, wrongHints: [null, "Niet — waarde op x-as.", "Niet.", "Modus = HOOGSTE staaf, niet hoogte zelf."] },
-      { q: "5, 5, 5, 5, 5 — bereik?", options: ["0","5","25","1"], answer: 0, wrongHints: [null, "Dat is de waarde, niet bereik.", "Dat is de som.", "Niet."] },
-      { q: "Modus van 3, 4, 5, 7, 8 (alle verschillend)?", options: ["Geen modus","3","8","5"], answer: 0, wrongHints: [null, "Niet — 3 komt 1× voor (zoals alle).", "Niet — zelfde frequentie.", "Niet."] },
-      { q: "6 cijfers gem 7. Eén cijfer is 4. Som overige 5?", options: ["38","42","32","7"], answer: 0, wrongHints: [null, "Dat is totaal-som, niet 'overige 5'.", "Te laag.", "Niet."] },
+      { q: "Frequentie van 4 in [4,5,4,6,4,7,5]?", options: ["3","2","1","4"], answer: 0, wrongHints: [null, "Loop de rij nog eens langs en zet bij elke 4 een streepje.", "Er staat meer dan één 4 in de rij. Tel ze allemaal.", "4 is de waarde zelf. De frequentie is hoe vaak die waarde voorkomt."] },
+      { q: "Een dobbelsteen is 60 keer gegooid. In het staafdiagram staan de ogen 1 t/m 6 onder de staven. Waar staat de hoogte van een staaf voor?", options: ["Frequentie","Waarde","Som","Modus"], answer: 0, wrongHints: [null, "Het aantal ogen (de waarde) staat onder de staven, op de x-as. Wat lees je af aan de hoogte?", "De som van alle ogen staat nergens in het diagram. Wat tel je per aantal ogen?", "Modus = HOOGSTE staaf, niet hoogte zelf."] },
+      { q: "5, 5, 5, 5, 5 — bereik?", options: ["0","5","25","1"], answer: 0, wrongHints: [null, "Dat is de waarde, niet bereik.", "Dat is de som.", "Wat is hier de grootste en wat de kleinste waarde? Hoe groot is het verschil?"] },
+      { q: "Modus van 3, 4, 5, 7, 8 (alle verschillend)?", options: ["Geen modus","3","8","5"], answer: 0, wrongHints: [null, "3 is de kleinste waarde. Komt 3 vaker voor dan de andere getallen?", "8 is de grootste waarde. Is de modus het grootste getal?", "5 is de mediaan, het middelste getal. Wat is de modus ook alweer?"] },
+      { q: "6 cijfers gem 7. Eén cijfer is 4. Som overige 5?", options: ["38","42","32","7"], answer: 0, wrongHints: [null, "Dat is totaal-som, niet 'overige 5'.", "Bereken eerst de som van alle 6 cijfers. Welk getal haal je daar dan van af?", "7 is het gemiddelde, geen som. Hoe reken je uit wat 6 cijfers samen opleveren?"] },
     ],
   },
   // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────

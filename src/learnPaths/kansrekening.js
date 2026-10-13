@@ -150,17 +150,17 @@ const steps = [
       {
         q: "*Een gebeurtenis heeft kans 1. Wat betekent dat?*",
         options: [
-          "Het is zeker — gebeurt altijd",
-          "Het gebeurt nooit",
-          "50% kans",
-          "Onbepaald",
+          "Het gebeurt zeker",
+          "Het kan niet gebeuren",
+          "Het is een gok van 50%",
+          "Het gebeurt één keer",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Welke kans betekent 'zeker' — 0 of 1?",
-          "50% komt overeen met welke breuk? Niet hetzelfde als 'zeker'.",
-          "Kijk naar de schaal van 0 tot 1: aan welk uiteinde zit kans 1, en wat betekent dat uiteinde?",
+          "Dat hoort bij kans 0. Aan welk uiteinde van de schaal ligt kans 1?",
+          "Een gok van 50% hoort bij kans ½. Is 1 hetzelfde als ½?",
+          "Een kans zegt niets over het aantal keren. Waar ligt 1 op de kansschaal van 0 tot 1?",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = 1 = zeker", tekst: "Een gebeurtenis met kans 1 gebeurt altijd, 100%." }],
@@ -329,16 +329,16 @@ const steps = [
         q: "*In een kansboom: hoe bereken je de kans op een specifiek pad?*",
         options: [
           "Vermenigvuldig de kansen langs dat pad",
-          "Tel de kansen op",
-          "Trek de kansen af",
-          "Pak de grootste kans",
+          "Tel de kansen langs dat pad op",
+          "Neem de kans van de laatste tak",
+          "Neem de kleinste kans van dat pad",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Optellen hoort bij een óf-situatie (verschillende paden). Hier gaat het om één pad met takken ná elkaar — welke bewerking past daarbij?",
-          "Aftrekken hoort niet in standaard kansrekening met bomen.",
-          "De grootste kans zegt niets over een pad. Kijk hoe je de takken van één pad combineert.",
+          "De laatste tak telt pas als de eerdere takken ook gebeurd zijn. Hoe neem je die eerdere kansen mee?",
+          "De kleinste tak zegt nog niet hoe groot de kans op het hele pad is. Hoe combineer je de takken van één pad?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vermenigvuldigen langs pad", tekst: "Pad-kans = kans tak 1 × kans tak 2 × ..." }],
@@ -710,14 +710,14 @@ const steps = [
           "1 − (5/6)³ = 91/216",
           "(1/6)³ = 1/216",
           "3 · 1/6 = 1/2",
-          "1/6",
+          "1 − (1/6)³ = 215/216",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat is kans op 3× zes — heel klein.",
           "Optellen werkt hier niet — gebruik het complement: bereken eerst de kans dat je géén zes gooit in alle 3 worpen.",
-          "1/6 is kans bij één worp. Bij 3 worpen verandert het.",
+          "Dat is de kans dat je níét drie keer een zes gooit. Wat is het tegenovergestelde van 'minstens één 6'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − (5/6)³", tekst: "P(geen 6 in 3 worpen) = (5/6)³. P(min. 1 zes) = 1 − (5/6)³ ≈ 0,42." }],

@@ -32,7 +32,7 @@ const steps = [
         q: "Wat is de **kans** op een **even getal** bij dobbelsteen?",
         options: ["1/2","1/3","1/6","2/3"],
         answer: 0,
-        wrongHints: [null, "Te weinig — er zijn 3 even op 6.", "Niet — dat is kans op 1 specifiek getal.", "Te veel."],
+        wrongHints: [null, "Tel hoeveel even getallen er op een dobbelsteen staan en deel door het aantal mogelijke uitkomsten.", "Niet — dat is kans op 1 specifiek getal.", "2/3 zou betekenen dat 4 van de 6 uitkomsten even zijn. Klopt dat?"],
         uitlegPad: {
           stappen: [{ titel: "3 even van 6 totaal", tekst: "Even getallen op dobbelsteen: 2, 4, 6 = 3 stuks. Totaal uitkomsten: 6. P(even) = 3/6 = **1/2 = 0,5 = 50%**." }],
           niveaus: { basis: "1/2.", simpeler: "3 even / 6 totaal = 1/2", nogSimpeler: "50%" },
@@ -53,7 +53,7 @@ const steps = [
         q: "Twee dobbelstenen gooien: P(beide 6) = ?",
         options: ["1/36","1/6","2/6","1/12"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 1 dobbelsteen.", "Niet — onafhankelijk, dus vermenigvuldigen.", "Niet."],
+        wrongHints: [null, "Niet — dat is 1 dobbelsteen.", "Je telde 1/6 + 1/6 op. Moeten beide dobbelstenen een 6 zijn, of maar één van de twee?", "1/12 krijg je door 1/6 te halveren. Welke twee kansen moet je met elkaar vermenigvuldigen?"],
         uitlegPad: {
           stappen: [{ titel: "Productregel onafhankelijk", tekst: "P(eerste 6) = 1/6. P(tweede 6) = 1/6. Onafhankelijk → P(beide 6) = 1/6 × 1/6 = **1/36**." }],
           theorie: "Toets-patroon: 'én'-vragen + onafhankelijk → vermenigvuldigen.",
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Bij **afhankelijke** gebeurtenissen: kans 2e gebeurtenis hangt af van:",
-        options: ["Uitkomst 1e gebeurtenis","Tijd van de dag","Wie het doet","Niets"],
+        options: ["De uitkomst van de 1e gebeurtenis","Hoe vaak je het experiment herhaalt","De volgorde waarin je de kansen noteert","Het moment waarop je de 2e doet"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Wel — daar zit het verschil."],
+        wrongHints: [null, "Het aantal herhalingen zegt hoe vaak iets gebeurt, niet wat de kans per keer is. Waar hangt die bij afhankelijke gebeurtenissen van af?", "Hoe je de kansen opschrijft, verandert de kansen niet. Wat verandert er wél na de eerste trekking zonder terugleggen?", "Of je de tweede trekking nu of later doet, maakt niet uit. Wat is er na de eerste trekking veranderd?"],
         uitlegPad: {
           stappen: [{ titel: "Afhankelijk = beïnvloed", tekst: "Voorbeeld: 2 kaarten trekken **zonder terugleggen**. Eerste kaart harten → 12 harten over van 51 kaarten. Eerste kaart geen harten → 13 harten van 51. **Kans tweede hangt af van eerste**." }],
           theorie: "Wel terugleggen = onafhankelijk. Niet terugleggen = afhankelijk.",
@@ -92,9 +92,9 @@ const steps = [
     checks: [
       {
         q: "In een boomdiagram **vermenigvuldig** je kansen:",
-        options: ["Langs één pad","Tussen verschillende paden","Nooit","Alleen bij terugleggen"],
+        options: ["Langs één pad","Tussen verschillende paden","Bij de takken uit één punt","Alleen bij terugleggen"],
         answer: 0,
-        wrongHints: [null, "Niet — daar tel je op (som-regel).", "Wel — product-regel.", "Niet — ook zonder terugleggen vermenigvuldig je langs een pad."],
+        wrongHints: [null, "Niet — daar tel je op (som-regel).", "De takken uit één punt tellen samen op tot 1. Wanneer vermenigvuldig je wél?", "Niet — ook zonder terugleggen vermenigvuldig je langs een pad."],
         uitlegPad: {
           stappen: [{ titel: "Pad = vermenigvuldigen", tekst: "**Langs één pad**: vermenigvuldig kansen (product-regel). **Tussen verschillende paden**: tel kansen op (som-regel)." }],
           theorie: "Onthoud: 'én' = ×, 'of' = +.",
@@ -126,7 +126,7 @@ const steps = [
         q: "Vaas 2 rood + 3 blauw, trek 2 ZONDER terugleggen. P(beide rood)?",
         options: ["1/10","4/25","2/5","1/5"],
         answer: 0,
-        wrongHints: [null, "Niet — MET terugleggen (2/5)².", "Niet — dat is alleen de kans op rood bij de eerste trekking.", "Niet."],
+        wrongHints: [null, "Niet — MET terugleggen (2/5)².", "Niet — dat is alleen de kans op rood bij de eerste trekking.", "Je nam bij de tweede trekking 2 rode van de 4. Hoeveel rode zitten er nog in de vaas als de eerste rood was?"],
         uitlegPad: {
           stappen: [{ titel: "Afhankelijk: tel ook af", tekst: "P(rood 1e) = 2/5. Daarna: 1 rood + 3 blauw = 4 over. P(rood 2e) = 1/4. Product: 2/5 × 1/4 = **2/20 = 1/10 = 0,1**." }],
           theorie: "Met terugleggen → onafhankelijk = (2/5)² = 4/25. Zonder = afhankelijk = 1/10. Verschil!",
@@ -176,9 +176,9 @@ const steps = [
       },
       {
         q: "Atletiek-race 100m: 3 medailles uit 8 lopers. Aantal **podium-volgordes**?",
-        options: ["336","56","24","8"],
+        options: ["336","56","512","6"],
         answer: 0,
-        wrongHints: [null, "Niet — combinaties zonder volgorde.", "Niet — andere combo.", "Niet."],
+        wrongHints: [null, "56 is het aantal groepjes van 3 zonder volgorde. Maakt het hier uit wie goud en wie brons krijgt?", "8³ telt ook volgordes waarin dezelfde loper twee medailles krijgt. Kan dat?", "3! = 6 is het aantal volgordes van drie vaste lopers. Maar wie er op het podium staat, ligt nog niet vast."],
         uitlegPad: {
           stappen: [{ titel: "Permutaties = volgorde", tekst: "**Medailles** = goud/zilver/brons = volgorde telt. P(8,3) = 8! / 5! = 8 × 7 × 6 = **336** mogelijke podiums." }],
           theorie: "Verschil: combinaties = 56, permutaties = 336. Permutaties = combinaties × k! (factor 3! = 6 erbij door volgorde).",
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "Een **eerlijk spel** heeft E(winst) gelijk aan:",
-        options: ["0","1","0,5","Variabel"],
+        options: ["0","1","0,5","De inzet"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — voor 50/50-kans, niet eerlijkheid.", "Niet specifiek."],
+        wrongHints: [null, "E(winst) = 1 betekent dat je per spel gemiddeld 1 wint. Is dat eerlijk voor de tegenspeler?", "0,5 hoort bij een kans van 50%, niet bij een verwachte winst. Wat wint of verliest een speler gemiddeld bij een eerlijk spel?", "Let op het verschil tussen uitbetaling en winst: winst = uitbetaling − inzet."],
         uitlegPad: {
           stappen: [{ titel: "E = 0 betekent fair", tekst: "**Eerlijk spel**: lange termijn winst = 0. Speler wint of verliest niets gemiddeld. Casino's bouwen E < 0 in (voor speler) → winstgevend op de lange termijn voor het huis." }],
           theorie: "Voorbeeld: muntje gooien om €1 — eerlijk (E=0). Casino-spel — niet eerlijk (E<0 speler).",
@@ -283,7 +283,7 @@ const steps = [
         q: "P(A) = 0,7. P(niet A) = ?",
         options: ["0,3","0,7","1,7","0"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is P(A) zelf.", "Niet — kansen ≤1.", "Niet."],
+        wrongHints: [null, "Niet — dat is P(A) zelf.", "Een kans kan nooit groter zijn dan 1. Moet je hier optellen of aftrekken?", "Kans 0 betekent onmogelijk. Is 'niet A' onmogelijk als P(A) = 0,7?"],
         uitlegPad: {
           stappen: [{ titel: "Complement", tekst: "1 − 0,7 = 0,3." }],
           niveaus: { basis: "0,3.", simpeler: "Complement = 1-0,7 = 0,3", nogSimpeler: "0,3" },
@@ -291,9 +291,9 @@ const steps = [
       },
       {
         q: "5 mensen rond een ronde tafel — hoeveel volgorden?",
-        options: ["24","120","5","720"],
+        options: ["24","120","5","60"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 5! voor rij, niet ronde tafel.", "Te weinig.", "Niet — dat is 6!."],
+        wrongHints: [null, "Niet — dat is 5! voor rij, niet ronde tafel.", "Er zijn veel meer volgordes dan mensen. Hoeveel rijen van 5 zijn er, en welke daarvan zijn aan een ronde tafel hetzelfde?", "Je deelde ook door 2 voor spiegelen. Aan tafel is links of rechts van iemand zitten wel verschillend."],
         uitlegPad: {
           stappen: [{ titel: "Ronde tafel = (n-1)!", tekst: "Bij **ronde tafel** is 'eerste plaats' niet uniek → (n-1)! = 4! = **24**. Voor rij is 't 5! = 120." }],
           theorie: "Toets-truc: ronde tafel = (n-1)! ipv n!. Belangrijk verschil.",
@@ -304,7 +304,7 @@ const steps = [
         q: "Vaas 3 wit + 7 zwart. P(eerste trek wit) = ?",
         options: ["0,3","0,7","3","0,1"],
         answer: 0,
-        wrongHints: [null, "Niet — kans op zwart.", "Niet — aantal.", "Niet."],
+        wrongHints: [null, "Niet — kans op zwart.", "3 is het aantal witte knikkers. Een kans ligt tussen 0 en 1: waardoor moet je delen?", "0,1 is de kans op één bepaalde knikker. Hoeveel witte zijn er?"],
         uitlegPad: {
           stappen: [{ titel: "3/10", tekst: "P(wit) = 3 / 10 = **0,3**." }],
           niveaus: { basis: "0,3.", simpeler: "3/10 = 0,3", nogSimpeler: "0,3" },
@@ -322,9 +322,9 @@ const steps = [
       },
       {
         q: "Wanneer is **P(A en B) = P(A) × P(B)**?",
-        options: ["Bij onafhankelijke gebeurtenissen","Altijd","Bij disjuncte","Bij volle kans 1"],
+        options: ["Bij onafhankelijke gebeurtenissen","Bij afhankelijke gebeurtenissen","Bij disjuncte gebeurtenissen","Bij complementaire gebeurtenissen"],
         answer: 0,
-        wrongHints: [null, "Niet — de vermenigvuldigingsregel geldt alleen onder een bepaalde voorwaarde; welke?", "Niet — disjuncte gebeurtenissen kunnen niet tegelijk optreden, waardoor de kans op 'en' nul is.", "Niet relevant — volle kans geldt voor 'of alle uitkomsten samen', niet voor de productregel."],
+        wrongHints: [null, "Bij afhankelijke gebeurtenissen verandert de kans op B door A. Welke kans moet je dan gebruiken in plaats van P(B)?", "Niet — disjuncte gebeurtenissen kunnen niet tegelijk optreden, waardoor de kans op 'en' nul is.", "A en niet-A kunnen nooit samen gebeuren, dus P(A en niet-A) = 0. Is P(A) × P(niet A) dan ook 0?"],
         uitlegPad: {
           stappen: [{ titel: "Productregel onafhankelijkheid", tekst: "**Onafhankelijk** = A beïnvloedt B niet. Dan P(A∩B) = P(A)·P(B). Bij afhankelijk: P(A∩B) = P(A)·P(B|A)." }],
           niveaus: { basis: "Onafhankelijk.", simpeler: "Onafhankelijk → vermenigvuldigen", nogSimpeler: "Onafhankelijk" },

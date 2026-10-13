@@ -104,9 +104,9 @@ const steps = [
       },
       {
         q: "Wat betekent **∫[1 tot 5] f(x) dx geometrisch** als f(x) ≥ 0?",
-        options: ["Oppervlakte onder grafiek tussen x=1 en x=5","Helling op x=5","Afgeleide op x=1","Lengte van grafiek"],
+        options: ["Oppervlakte onder de grafiek van x=1 tot x=5","Helling van de grafiek op x=5","Gemiddelde hoogte van de grafiek op [1, 5]","Lengte van de grafiek van x=1 tot x=5"],
         answer: 0,
-        wrongHints: [null, "Niet — helling is afgeleide.", "Niet — andere bewerking.", "Niet — booglengte vergt andere integraal."],
+        wrongHints: [null, "De helling vind je met de afgeleide, niet met een integraal.", "Voor de gemiddelde hoogte deel je de integraal nog door de lengte van het interval (5 − 1). Wat stelt de integraal zelf voor?", "De lengte van de kromme (booglengte) vraagt een andere integraal. Wat meet ∫ f(x) dx als f(x) ≥ 0?"],
         uitlegPad: {
           stappen: [{ titel: "Integraal = oppervlakte", tekst: "Bij **f(x) ≥ 0** op [a,b]: bepaalde integraal **= oppervlakte** tussen grafiek en x-as, tussen x=a en x=b. Geometrische interpretatie van integralen." }],
           theorie: "Toets-favoriet: 'wat stelt deze integraal voor in figuur?' Antwoord: gearceerde gebied.",
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Oppervlakte tussen **f(x)=x²** (onder) en **g(x)=2x** (boven) op interval waar ze elkaar omsluiten:\n\nSnijpunten?",
-        options: ["x = 0 en x = 2","x = 1 en x = 2","x = 0 en x = 4","Alleen x = 1"],
+        options: ["x = 0 en x = 2","x = 1 en x = 2","x = 0 en x = 4","x = −2 en x = 0"],
         answer: 0,
-        wrongHints: [null, "Niet — stel de twee functies gelijk aan elkaar en los op.", "Niet — er is een andere oplossing; check de vergelijking nogmaals.", "Niet — er zijn twee snijpunten."],
+        wrongHints: [null, "Niet — stel de twee functies gelijk aan elkaar en los op.", "Niet — er is een andere oplossing; check de vergelijking nogmaals.", "Vul x = −2 in: is (−2)² gelijk aan 2 · (−2)?"],
         uitlegPad: {
           stappen: [{ titel: "Snijpunten = vergelijk", tekst: "x² = 2x → x² − 2x = 0 → **x(x−2) = 0** → x=0 of x=2. Dit zijn de grenzen van het ingesloten gebied." }],
           niveaus: { basis: "x=0 en x=2.", simpeler: "x²=2x → x=0,2", nogSimpeler: "0,2" },
@@ -302,7 +302,7 @@ const steps = [
         q: "Oppervlakte tussen **f(x) = 4 − x²** en x-as (parabool boven x-as):",
         options: ["32/3","16/3","8","16"],
         answer: 0,
-        wrongHints: [null, "Te klein.", "Mist meer.", "Te groot."],
+        wrongHints: [null, "16/3 is de oppervlakte van x = 0 tot x = 2. Waar snijdt de parabool de x-as nog meer?", "8 is de oppervlakte van een driehoek met basis 4 en hoogte 4. Ligt de parabool boven of onder die driehoek?", "16 is de rechthoek van 4 breed en 4 hoog om de parabool heen. Moet de oppervlakte onder de parabool kleiner zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Snijpunten met x-as", tekst: "4 − x² = 0 → x = ±2. Parabool snijdt x-as op x=−2 en x=2." },

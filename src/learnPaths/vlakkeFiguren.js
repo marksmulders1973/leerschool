@@ -148,16 +148,16 @@ const steps = [
         q: "Een middelloodlijn van AB is een lijn die...",
         options: [
           "Door het midden gaat én loodrecht op AB staat",
-          "Schuin door A loopt",
-          "Parallel aan AB loopt",
-          "Door beide punten A en B gaat",
+          "Door A gaat én loodrecht op AB staat",
+          "Door het midden gaat én evenwijdig aan AB loopt",
+          "De hoek bij A in twee gelijke delen deelt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Schuin werkt niet — de naam zegt 'lood' = loodrecht.",
-          "Parallel betekent dezelfde richting — niet loodrecht. Dat is geen middelloodlijn.",
-          "Door A en B is gewoon AB zelf, niet de middelloodlijn.",
+          "Dat is een loodlijn door A. Kijk naar het eerste deel van het woord middelloodlijn.",
+          "Evenwijdig betekent dezelfde richting als AB, dus niet loodrecht. Dat is geen middelloodlijn.",
+          "Een lijn die een hoek halveert is een bissectrice. Waar gaat een middelloodlijn door?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Midden + lood", tekst: "Middelloodlijn = door midden van AB én loodrecht op AB." }],
@@ -337,15 +337,15 @@ const steps = [
         q: "Punt P ligt op de bissectrice van een hoek. Wat klopt?",
         options: [
           "P ligt even ver van beide zijden van de hoek",
-          "P ligt op één van de zijden",
-          "P ligt op de top van de hoek",
+          "P ligt op één van de zijden van de hoek",
+          "P ligt dichter bij de top dan bij de zijden",
           "P ligt verder van één zijde dan de andere",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat zou betekenen dat P op een zijde ligt, niet op de bissectrice (die zit ertussen).",
-          "Op de top zou alleen kloppen voor één punt. P is een willekeurig punt op de bissectrice.",
+          "Hoe verder P van de top ligt, hoe verder ook van de zijden. Maar wat geldt er voor de afstand tot de twee zijden?",
           "Een bissectrice is de spiegel-as van de hoek. Wat betekent dat voor de afstanden tot de twee zijden?",
         ],
         uitlegPad: {
@@ -476,16 +476,16 @@ const steps = [
         q: "Hoe deelt het zwaartepunt een zwaartelijn?",
         options: [
           "In de verhouding 2 : 1, vanaf de hoek gerekend",
-          "Precies in tweeën (1:1)",
-          "In drie gelijke delen",
-          "Niet — Z ligt aan een uiteinde",
+          "In de verhouding 1 : 1, precies in het midden",
+          "In de verhouding 1 : 2, vanaf de hoek gerekend",
+          "In de verhouding 3 : 1, vanaf de hoek gerekend",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Z ligt niet precies in het midden van de zwaartelijn. Ligt Z dichter bij de hoek of dichter bij het midden van de zijde?",
-          "Z is één punt, dus het verdeelt de zwaartelijn in twee stukken, niet drie. Zijn die twee stukken even lang?",
-          "Z ligt **binnen** de driehoek, op het kruispunt — niet op een uiteinde.",
+          "Dan zou Z dichter bij de hoek liggen dan bij het midden van de zijde. Ligt Z echt zo dicht bij de hoek?",
+          "Bij 3 : 1 ligt Z heel dicht bij het midden van de zijde. Hoeveel keer zo lang is het stuk vanaf de hoek echt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "2:1 verhouding", tekst: "Vanaf hoek tot Z = 2 delen. Vanaf Z tot midden overkant = 1 deel." }],

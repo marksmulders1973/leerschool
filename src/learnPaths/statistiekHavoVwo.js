@@ -108,9 +108,9 @@ const steps = [
       },
       {
         q: "Wat betekent een **grote standaardafwijking**?",
-        options: ["Data is sterk gespreid","Data zit dichtbij gemiddelde","Geen mediaan","Veel modi"],
+        options: ["Data is sterk gespreid","Data zit dichtbij gemiddelde","Het gemiddelde is groot","De steekproef is groot"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — dat is kleine σ.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Tegenovergesteld — dat is kleine σ.", "De standaardafwijking zegt niets over hoe groot het gemiddelde is. Waar gaat σ wel over?", "Een grote steekproef geeft niet vanzelf een grote σ. Wat meet σ?"],
         uitlegPad: {
           stappen: [{ titel: "σ = afstand tot gemiddelde", tekst: "**Grote σ** = waarden liggen ver van gemiddelde (verspreid). **Kleine σ** = waarden dichtbij gemiddelde (compact)." }],
           theorie: "Vergelijking: examen-cijfers klas A (σ=0,5) → iedereen ~hetzelfde. Klas B (σ=2) → grote verschillen.",
@@ -175,7 +175,7 @@ const steps = [
         q: "IQ heeft N(100, 15). Hoeveel % heeft IQ **tussen 85 en 115**?",
         options: ["68%","95%","50%","99,7%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is binnen 2σ (70-130).", "Te weinig.", "Te veel — dat is binnen 3σ."],
+        wrongHints: [null, "Niet — dat is binnen 2σ (70-130).", "50% is de helft onder het gemiddelde. Hier gaat het om 1σ aan beide kanten van 100.", "Te veel — dat is binnen 3σ."],
         uitlegPad: {
           stappen: [{ titel: "Binnen 1σ", tekst: "μ = 100, σ = 15. Bereik 85-115 = μ ± σ. Volgens 68%-regel: **68%** ligt hier." }],
           theorie: "Toets-voorbeeldpatroon: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",
@@ -226,9 +226,9 @@ const steps = [
     checks: [
       {
         q: "Wat zegt **correlatiecoëfficiënt r = 0,9**?",
-        options: ["Sterke positieve samenhang","Sterk negatief","Geen verband","Onmogelijk"],
+        options: ["Sterke positieve samenhang","Sterke negatieve samenhang","Zwakke positieve samenhang","Zwakke negatieve samenhang"],
         answer: 0,
-        wrongHints: [null, "Niet — positief verband heeft een pluswaarde, negatief verband een minwaarde.", "Niet — een waarde dicht bij 1 of -1 betekent een sterk verband, niet geen verband.", "Wel mogelijk — r ligt altijd tussen -1 en +1."],
+        wrongHints: [null, "Niet — positief verband heeft een pluswaarde, negatief verband een minwaarde.", "Een waarde dicht bij 1 hoort niet bij een zwak verband. Waar liggen zwakke verbanden op de schaal van −1 tot 1?", "Kijk naar het teken van r en naar hoe dicht r bij 0 of bij 1 ligt."],
         uitlegPad: {
           stappen: [{ titel: "r-interpretatie", tekst: "r = 0,9 → bijna +1 → **zeer sterke positieve** samenhang. Als x stijgt, stijgt y mee. Punten liggen dichtbij stijgende lijn." }],
           theorie: "Schaal: |r|>0,7 sterk, 0,3-0,7 matig, <0,3 zwak. Teken (+/-) bepaalt richting.",
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "*'IJsverkoop en verdrinkingen correleren positief'* — wat is meest waarschijnlijk?",
-        options: ["Gemeenschappelijke oorzaak (warmte)","IJs veroorzaakt verdrinking","Verdrinking veroorzaakt ijsverkoop","Toeval"],
+        options: ["Een derde factor: warm weer","IJs eten veroorzaakt verdrinking","Verdrinking zorgt voor ijsverkoop","Toeval: het verband is er per ongeluk"],
         answer: 0,
-        wrongHints: [null, "Onzin — geen causaal verband.", "Onzin.", "Onwaarschijnlijk — het verband keert elke zomer terug."],
+        wrongHints: [null, "Een correlatie laat niet zien wat oorzaak en wat gevolg is. Is er een logische reden waarom ijs eten verdrinking veroorzaakt?", "Oorzaak en gevolg zijn omgedraaid. Waarom zouden verdrinkingen mensen ijs laten kopen?", "Onwaarschijnlijk — het verband keert elke zomer terug."],
         uitlegPad: {
           stappen: [{ titel: "Correlatie ≠ oorzaak", tekst: "Beide stijgen in zomer. **Warmte** is de gemeenschappelijke oorzaak. **Schijncorrelatie** — leerlingen moeten dit herkennen." }],
           woorden: [{ woord: "schijncorrelatie", uitleg: "Correlatie zonder oorzakelijk verband — door gemeenschappelijke factor." }],
@@ -260,9 +260,9 @@ const steps = [
       },
       {
         q: "**Helling** in y = ax + b betekent:",
-        options: ["Hoeveel y stijgt per eenheid x","Y-waarde bij x=0","Gemiddelde van y","Maximum y"],
+        options: ["Hoeveel y stijgt per eenheid x","Waar de lijn de y-as snijdt","Hoeveel x stijgt per eenheid y","Waar de lijn de x-as snijdt"],
         answer: 0,
-        wrongHints: [null, "Dat is b (y-snijpunt).", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Het snijpunt met de y-as is b. Wat geeft a aan?", "Je hebt x en y verwisseld. Wat verandert er in y = ax + b als x met 1 toeneemt?", "Het snijpunt met de x-as vind je door y = 0 te stellen. Dat is niet a."],
         uitlegPad: {
           stappen: [{ titel: "a = richtingscoëfficiënt", tekst: "**a** in y = ax + b is **helling/steilheid**. Bv. y = 2x + 3: x stijgt met 1 → y stijgt met 2. Negatieve a = dalende lijn." }],
           niveaus: { basis: "Stijging y per x-eenheid.", simpeler: "Helling = stijging per x", nogSimpeler: "Helling" },
@@ -293,7 +293,7 @@ const steps = [
         q: "Welke centrummaat is **gevoelig voor uitschieters**?",
         options: ["Gemiddelde","Mediaan","Modus","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — juist robuust.", "Niet relevant — frequentie.", "Wel — denk na welke maat met álle waarden rekent."],
+        wrongHints: [null, "Bij de mediaan kijk je alleen naar het middelste getal. Verandert dat als de grootste waarde nóg groter wordt?", "De modus is de waarde die het vaakst voorkomt. Verandert die door één extreme waarde?", "Wel — denk na welke maat met álle waarden rekent."],
         uitlegPad: {
           stappen: [{ titel: "Gemiddelde = gevoelig", tekst: "Gemiddelde wordt direct beïnvloed door alle waarden — uitschieters tellen mee. Mediaan + modus niet." }],
           niveaus: { basis: "Gemiddelde.", simpeler: "Gemiddelde = uitschieter-gevoelig", nogSimpeler: "Gemiddelde" },
@@ -324,7 +324,7 @@ const steps = [
         q: "Regressie y = −0,5x + 20. Bij **x = 8**, y = ?",
         options: ["16","24","12","28"],
         answer: 0,
-        wrongHints: [null, "Niet — +0,5·8+20.", "Niet — vergeet de factor 0,5 niet.", "Niet."],
+        wrongHints: [null, "Niet — +0,5·8+20.", "Niet — vergeet de factor 0,5 niet.", "Je telde 8 bij 20 op. Wat gebeurt er met de factor −0,5?"],
         uitlegPad: {
           stappen: [{ titel: "Substitueren met negatieve helling", tekst: "y = −0,5·8 + 20 = −4 + 20 = **16**." }],
           niveaus: { basis: "16.", simpeler: "−0,5·8+20 = 16", nogSimpeler: "16" },
@@ -334,7 +334,7 @@ const steps = [
         q: "In een **boxplot**: linkerkant van de box (Q1) = 30, mediaan (Q2) = 50, rechterkant (Q3) = 60. Wat is **IQR**?",
         options: ["30","20","10","60"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is alleen mediaan − Q1.", "Niet — dat is Q3 − mediaan.", "Niet."],
+        wrongHints: [null, "Niet — dat is alleen mediaan − Q1.", "Niet — dat is Q3 − mediaan.", "60 is Q3 zelf. De IQR is een verschil: welke twee kwartielen trek je van elkaar af?"],
         uitlegPad: {
           stappen: [{ titel: "Q3 − Q1", tekst: "IQR = Q3 − Q1 = 60 − 30 = **30**." }],
           niveaus: { basis: "30.", simpeler: "IQR = 60-30 = 30", nogSimpeler: "30" },

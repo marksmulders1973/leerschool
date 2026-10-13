@@ -55,7 +55,7 @@ const steps = [
         q: "Je vergelijkt een nieuwe sneaker van €110 met een ander paar van €85. Welke functie van geld gebruik je hier?",
         options: ["Rekenmiddel", "Ruilmiddel", "Spaarmiddel", "Productiemiddel"],
         answer: 0,
-        wrongHints: [null, "Ruilen doe je bij de kassa, niet bij vergelijken.", "Sparen = bewaren voor later.", "Productiemiddel is geen geldfunctie."],
+        wrongHints: [null, "Ruilen doe je bij de kassa, niet bij vergelijken.", "Sparen = bewaren voor later.", "Een productiemiddel is iets waarmee je iets maakt, zoals een machine. Wat doe je hier met geld?"],
         uitlegPad: {
           stappen: [{ titel: "Wat doet geld hier?", tekst: "Je VERGELIJKT prijzen. Je betaalt nog niet, je bewaart nog niet — je gebruikt geld om twee dingen tegen elkaar te wegen. Dat is de rekenmiddel-functie." }],
           woorden: [{ woord: "rekenmiddel", uitleg: "Functie van geld: prijzen vergelijken. Alles wordt in 1 eenheid (€) uitgedrukt → vergelijkbaar." }, { woord: "ruilmiddel", uitleg: "Functie van geld: betalen bij transactie." }, { woord: "spaarmiddel", uitleg: "Functie van geld: waarde bewaren voor later." }],
@@ -67,37 +67,37 @@ const steps = [
       },
       {
         q: "Wat is **giraal geld**?",
-        options: ["Geld op je bankrekening", "Munten en biljetten", "Goudstaven in een kluis", "Een lening van de bank"],
+        options: ["Geld op je bankrekening", "Munten en biljetten", "Cryptomunten zoals bitcoin", "Een lening van de bank"],
         answer: 0,
-        wrongHints: [null, "Dat is chartaal.", "Goud is een waardeobject, geen modern geld.", "Een lening is een product, geen soort geld."],
+        wrongHints: [null, "Dat is chartaal.", "Bitcoin is digitaal, maar het is geen geld van een bank. Welk geld kun je overmaken met je bankpas?", "Een lening is een afspraak om geld terug te betalen, geen soort geld. Waar staat giraal geld?"],
         uitlegPad: {
           stappen: [{ titel: "Giraal = digitaal", tekst: "Giraal geld zit op een REKENING — je ziet alleen een getal in je bank-app. Tegenover chartaal (munten + biljetten die je vasthoudt)." }],
           woorden: [{ woord: "giraal geld", uitleg: "Tegoed op een bankrekening. Digitaal, niet vast te pakken." }, { woord: "chartaal geld", uitleg: "Munten en bankbiljetten. Tastbaar." }],
           theorie: "Tegenwoordig is ~95% van het geld in NL giraal — pinnen, Tikkie, salaris op je rekening. Chartaal wordt minder gebruikt (Zweden gaat zelfs richting een cashloze samenleving).",
           voorbeelden: [{ type: "giraal", tekst: "Salaris op rekening, Tikkie, overschrijving, pinbetaling." }, { type: "chartaal", tekst: "€20-biljet in je portemonnee, €2-munt, fooi bij de kapper." }],
-          basiskennis: [{ onderwerp: "Niet goud", uitleg: "Goud is een edelmetaal/waarde-object, geen modern geld." }],
+          basiskennis: [{ onderwerp: "Niet crypto", uitleg: "Bitcoin is digitaal, maar geen geld van een bank. Giraal geld staat op een bankrekening." }],
           niveaus: { basis: "Giraal = bankrekening.", simpeler: "Giraal = digitaal op je rekening. Chartaal = munten/biljetten.", nogSimpeler: "Op rekening" },
         },
       },
       {
         q: "Waarom is **ruilhandel** lastig?",
-        options: ["Je moet iemand vinden die wil wat jij hebt, en andersom", "Het is in Nederland bij wet verboden om te ruilen", "Spullen die je ruilt worden daardoor steeds duurder", "Je hebt internet nodig om een ruilpartner te vinden"],
+        options: ["Je moet iemand vinden die wil wat jij hebt, en andersom", "De spullen die je ruilt moeten precies even duur zijn", "Een bank moet de ruil vooraf controleren en goedkeuren", "Over een ruil moet je btw betalen aan de overheid"],
         answer: 0,
-        wrongHints: [null, "Niet verboden, alleen onhandig.", "Prijs heeft niets met ruilen te maken.", "Ruilhandel was er ver vóór internet."],
+        wrongHints: [null, "Je kunt ook drie appels ruilen tegen één brood. Wat is dan wél het lastige?", "Ruilhandel bestond al lang vóór er banken waren. Wat is dan het lastige?", "Ruilhandel was er al lang vóór de btw. Waarom was het toen al lastig?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbele match nodig", tekst: "Bij ruilen moeten BEIDE partijen tegelijk willen ruilen. Heb je een schaap en wil je brood? Dan moet de bakker ÓÓK een schaap willen. Zelden zo." }],
           woorden: [{ woord: "ruilhandel", uitleg: "Direct goederen ruilen zonder geld als tussenstap. Vereist 'dubbele wens'." }, { woord: "dubbele coïncidentie van wensen", uitleg: "Beide partijen moeten precies willen wat de ander biedt — economisch obstakel." }],
           theorie: "Geld lost dit op: jij verkoopt schaap voor geld, koopt brood voor geld. Geen dubbele match nodig. Daarom geld uitgevonden zo'n 5000 jaar geleden.",
           voorbeelden: [{ type: "ruilhandel mislukt", tekst: "Jij hebt vis, wilt brood. Bakker wil geen vis (vegetariër). Jij gaat hongerig naar huis." }, { type: "met geld", tekst: "Jij verkoopt vis op markt voor €10, koopt brood voor €3. Iedereen blij." }],
-          basiskennis: [{ onderwerp: "Niet verboden", uitleg: "Ruilen mag, maar onhandig. Marktplaats-ruil is een vorm ervan." }],
+          basiskennis: [{ onderwerp: "Het echte probleem", uitleg: "Ruilen mag gewoon, ook met ongelijke hoeveelheden (Marktplaats-ruil is een vorm ervan). Het lastige is dat jullie allebei precies moeten willen wat de ander heeft." }],
           niveaus: { basis: "Dubbele wens lastig.", simpeler: "Ruilhandel = beide moeten precies willen wat de ander heeft. Zelden zo.", nogSimpeler: "Dubbele match" },
         },
       },
       {
         q: "Welke eigenschap moet **goed geld** zeker hebben?",
-        options: ["Algemeen geaccepteerd zijn", "Heel mooi zijn", "Goud bevatten", "Door één persoon gemaakt zijn"],
+        options: ["Algemeen geaccepteerd zijn", "Elk jaar meer waard worden", "Goud of zilver bevatten", "Uit één groot stuk bestaan"],
         answer: 0,
-        wrongHints: [null, "Uiterlijk maakt geld niet bruikbaar als betaalmiddel.", "Vroeger wel, nu niet meer (chartaal geld is fiat).", "Tegenovergesteld — moet door iedereen geaccepteerd."],
+        wrongHints: [null, "Goed geld moet zijn waarde houden. Moet het ook steeds méér waard worden?", "Vroeger zat er goud of zilver in munten. Bevat een euro van nu goud?", "Goed geld moet je juist kunnen opdelen in kleine bedragen. Hoe betaal je anders wisselgeld?"],
         uitlegPad: {
           stappen: [{ titel: "Iedereen wil het", tekst: "Geld werkt alleen als IEDEREEN het accepteert. Als de bakker niet wil dat jij met euro's betaalt, is de euro waardeloos voor jou. Acceptatie is de KERN." }],
           woorden: [{ woord: "algemeen geaccepteerd", uitleg: "Iedereen in de samenleving neemt dit aan als betaling." }, { woord: "fiat-geld", uitleg: "Geld zonder eigen waarde (papier, digitaal getal) dat waarde heeft omdat overheid + maatschappij het erkennen." }],
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Een Tikkie is een voorbeeld van **welk type geld**?",
-        options: ["Giraal", "Chartaal", "Ruilhandel", "Spaargeld"],
+        options: ["Giraal", "Chartaal", "Cryptogeld", "Spaargeld"],
         answer: 0,
-        wrongHints: [null, "Chartaal = munten/biljetten, Tikkie is digitaal.", "Tikkie is geen ruilhandel — gewoon een betaling.", "Spaargeld is een doel, geen vorm."],
+        wrongHints: [null, "Chartaal = munten/biljetten, Tikkie is digitaal.", "Een Tikkie betaal je in gewone euro's via je bankapp. Is dat crypto?", "Spaargeld is een doel, geen vorm."],
         uitlegPad: {
           stappen: [{ titel: "Digitaal = giraal", tekst: "Tikkie is een DIGITALE overschrijving van rekening naar rekening. Geen munten, geen biljetten. Dus giraal geld." }],
           woorden: [{ woord: "Tikkie", uitleg: "ABN AMRO-betaalverzoek-app, populair voor onderling afrekenen. Werkt met giraal geld." }, { woord: "spaargeld", uitleg: "Geld dat je opzij zet (doel), niet een type/vorm." }],
@@ -153,9 +153,9 @@ const steps = [
     checks: [
       {
         q: "Je koopt een hoodie van €60 via **Klarna 'achteraf betalen'**. Wat gebeurt er economisch gezien?",
-        options: ["Je leent eigenlijk €60 van Klarna", "Je krijgt korting", "Je hoeft nooit meer te betalen", "Klarna betaalt het voor je als cadeau"],
+        options: ["Je leent eigenlijk €60 van Klarna", "Je spaart eigenlijk €60 op bij Klarna", "Je huurt de hoodie tot je betaald hebt", "Je krijgt korting omdat je later betaalt"],
         answer: 0,
-        wrongHints: [null, "Korting krijg je niet — alleen uitstel.", "Niet betalen = boete, deurwaarder, BKR-registratie.", "Klarna verdient eraan, dat is geen cadeau."],
+        wrongHints: [null, "Sparen is geld opzijzetten dat je al hebt. Heb jij die €60 al betaald?", "Bij huren is iets niet van jou. Neem je de hoodie mee naar huis als jouw eigendom?", "Krijg je korting, of alleen uitstel van betalen? Wie schiet het geld intussen voor?"],
         uitlegPad: {
           stappen: [{ titel: "Achteraf = lening", tekst: "'Achteraf betalen' = Klarna betaalt nu de winkel, jij betaalt over 14-30 dagen aan Klarna. Dat is per definitie een LENING van Klarna aan jou." }],
           woorden: [{ woord: "achteraf betalen", uitleg: "Vorm van consumentenkrediet waarbij je later betaalt. Vaak gratis bij snel terugbetalen, anders boetes." }, { woord: "BKR", uitleg: "Bureau Krediet Registratie — registreert leningen + betalingsachterstanden. Verhindert toekomstige leningen." }],
@@ -181,9 +181,9 @@ const steps = [
       },
       {
         q: "Waarom is contactloos onder €50 'gevaarlijker' dan pinnen?",
-        options: ["Er is geen pincode nodig", "Het werkt niet altijd", "Het is duurder", "Je bent verplicht extra fooi te geven"],
+        options: ["Er is geen pincode nodig", "Het werkt soms niet bij de kassa", "Je betaalt er extra kosten voor", "Het geld gaat er pas later af"],
         answer: 0,
-        wrongHints: [null, "Werkt juist heel betrouwbaar.", "Zelfde prijs als pinnen.", "Fooi is geen onderdeel van de betaling."],
+        wrongHints: [null, "Ook als het niet werkt, gaat er geen geld mis. Wat maakt het riskanter als je pas kwijt is?", "Contactloos kost hetzelfde als gewoon pinnen. Wat is er dan anders bij de kassa?", "Contactloos gaat net zo snel van je rekening als pinnen. Wat ontbreekt er wel?"],
         uitlegPad: {
           stappen: [{ titel: "Geen pincode = open deur", tekst: "Contactloos < €50 vraagt geen pincode. Als iemand jouw pas vindt/steelt kan hij meteen uitgeven tot €50 per transactie zonder enige controle." }],
           woorden: [{ woord: "contactloos betalen", uitleg: "Pas/telefoon tegen apparaat houden — werkt via NFC-chip. Onder €50 geen pin." }, { woord: "verlies-risico", uitleg: "Als pas weg is: snel blokkeren bij bank om misbruik te voorkomen." }],
@@ -195,9 +195,9 @@ const steps = [
       },
       {
         q: "Wanneer kun je een creditcard echt nuttig vinden?",
-        options: ["Bij online aankopen of in het buitenland", "Voor dagelijkse boodschappen want het is veiliger", "Als je geen pinpas hebt", "Om gratis geld te krijgen"],
+        options: ["Bij online aankopen of in het buitenland", "Voor dagelijkse boodschappen want het is veiliger", "Om je uitgaven beter bij te houden", "Om een spaarbuffer op te bouwen"],
         answer: 0,
-        wrongHints: [null, "Voor dagelijks gebruik is pin veiliger en goedkoper.", "Iedereen heeft wel een pinpas via je bank.", "Creditcard geeft GEEN gratis geld — je betaalt het terug."],
+        wrongHints: [null, "Voor dagelijks gebruik is pin veiliger en goedkoper.", "Bij een creditcard worden je uitgaven pas later afgeschreven. Houd je ze dan beter bij?", "Met een creditcard leen je geld, je spaart er niets mee op. Waarvoor is hij dan handig?"],
         uitlegPad: {
           stappen: [{ titel: "Bescherming bij online/buitenland", tekst: "Creditcard biedt EXTRA bescherming: bij niet-geleverd product (webshop fout), bedrog of verkeerde afschrijving krijg je geld terug via 'chargeback'. Niet bij pin." }],
           woorden: [{ woord: "chargeback", uitleg: "Recht om transactie terug te draaien via creditcardmaatschappij bij problemen." }, { woord: "creditcardrente", uitleg: "Hoge rente (~14%/jr) bij niet-tijdig aflossen — daarom altijd op tijd afschrijven." }],
@@ -209,9 +209,9 @@ const steps = [
       },
       {
         q: "Marie ziet een €200 jas en denkt: 'oh, met Klarna betaal ik pas later.' Wat is het beste financiële advies?",
-        options: ["Vraag jezelf af: kan ik €200 nu missen? Zo niet, niet kopen.", "Gewoon Klarna gebruiken, want achteraf betalen is gratis", "Drie keer Klarna nemen, dan is het pas €600 over een jaar", "Gewoon kopen, het geld komt later vanzelf wel binnen"],
+        options: ["Vraag jezelf af: kan ik €200 nu missen? Zo niet, niet kopen.", "Klarna gebruiken en het bedrag in drie termijnen betalen", "Kopen en de jas terugsturen als het geld op is", "Kopen en volgende maand extra uren gaan werken"],
         answer: 0,
-        wrongHints: [null, "Klarna lijkt gratis maar als je te laat bent komen er kosten bij.", "Drie leningen tegelijk = drie keer schuld + drie keer risico.", "Zo komen veel jongeren in de schulden."],
+        wrongHints: [null, "Gespreid betalen voelt licht, maar het blijft een schuld. Heeft Marie die €200 eigenlijk wel?", "Een gedragen jas neemt een winkel niet terug, en de termijn verloopt. Wat moet Marie zich eerst afvragen?", "Als die uren er niet komen, zit Marie met een schuld. Wat kan ze beter eerst checken?"],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel financieel volwassen", tekst: "Voor élke aankoop met uitgesteld betalen (Klarna, creditcard): vraag 'KAN IK DIT NU BETALEN?'. Zo nee → leg de jas terug. Anders bouw je schuld op." }],
           woorden: [{ woord: "uitgesteld betalen", uitleg: "Verzamelnaam voor Klarna, Afterpay, creditcard — verleidt tot kopen wat je niet kunt betalen." }, { woord: "schuldopbouw", uitleg: "Wanneer leningen zich opstapelen omdat je telkens nieuwe aangaat voor consumptie." }],
@@ -262,9 +262,9 @@ const steps = [
       },
       {
         q: "Wat is **samengestelde rente**?",
-        options: ["Rente over de eerder ontvangen rente", "Rente op een speciaal soort lening", "Hogere rente voor zakelijke klanten", "Belasting die je betaalt over spaargeld"],
+        options: ["Rente over de eerder ontvangen rente", "Rente op een speciaal soort lening", "Hogere rente voor zakelijke klanten", "Rente die elk jaar hetzelfde bedrag is"],
         answer: 0,
-        wrongHints: [null, "'Samengesteld' zegt iets over hoe de rente groeit, niet over een soort lening.", "Niet specifiek aan zakelijk gebonden.", "Dat is vermogensbelasting."],
+        wrongHints: [null, "'Samengesteld' zegt iets over hoe de rente groeit, niet over een soort lening.", "Zakelijke klanten krijgen niet per se een andere rente. Wat is 'samengesteld' aan deze rente?", "Dan groeit je spaargeld elk jaar met hetzelfde bedrag. Is dat bij samengestelde rente zo?"],
         uitlegPad: {
           stappen: [{ titel: "Rente over rente", tekst: "Samengestelde rente = je krijgt rente OOK over de rente die je eerder hebt ontvangen. Sneeuwbal-effect: elk jaar wordt het bedrag waarover rente wordt berekend groter." }],
           woorden: [{ woord: "samengestelde rente", uitleg: "Rente die ook over eerder ontvangen rente wordt berekend. Maakt sparen op lange termijn krachtig." }, { woord: "enkelvoudige rente", uitleg: "Rente ALLEEN over de oorspronkelijke inleg. Levert minder op." }],
@@ -276,37 +276,37 @@ const steps = [
       },
       {
         q: "Waarom betaalt een bank jou rente op je spaargeld?",
-        options: ["Zij leent jouw geld duurder uit aan anderen", "Uit dankbaarheid omdat je klant bent", "De wet verplicht banken om rente te betalen", "Omdat geld elk jaar meer waard wordt"],
+        options: ["Zij leent jouw geld duurder uit aan anderen", "De overheid vergoedt banken voor die rente", "De wet verplicht banken om rente te betalen", "Omdat geld elk jaar meer waard wordt"],
         answer: 0,
-        wrongHints: [null, "Bank doet het uit eigenbelang.", "Hoogte van rente is geen wettelijke plicht.", "Wordt geld door de jaren heen meer of juist minder waard?"],
+        wrongHints: [null, "De overheid betaalt jouw spaarrente niet. Waar haalt de bank dat geld vandaan?", "Er is geen wet die spaarrente verplicht; soms was hij zelfs 0%. Waar verdient de bank zijn geld mee?", "Wordt geld door de jaren heen meer of juist minder waard?"],
         uitlegPad: {
           stappen: [{ titel: "Bank verdient aan uitlenen", tekst: "Bank krijgt jouw spaargeld → leent het uit aan anderen (hypotheek 4%, persoonlijke lening 8%) → betaalt jou een lagere rente (2%) → verschil = winst voor de bank." }],
           woorden: [{ woord: "rentemarge", uitleg: "Verschil tussen rente die bank ONTVANGT (uitleen) en BETAALT (sparen). De winst." }, { woord: "intermediair", uitleg: "Tussenpersoon — bank bemiddelt tussen spaarders en leners." }],
           theorie: "Bank model: spaarders zetten geld in, bank leent uit aan anderen tegen hogere rente. Verschil is winst. Daarom willen banken graag dat je bij hen spaart — meer geld om uit te lenen.",
           voorbeelden: [{ type: "rekenstap", tekst: "Bank krijgt €1mln spaargeld @ 2% = kost €20k. Leent uit @ 4% = €40k inkomsten. Winst: €20k." }],
-          basiskennis: [{ onderwerp: "Niet dankbaarheid/wet", uitleg: "Bank is bedrijf, niet weldoener. Rente is niet verplicht — een bank mag ook 0% bieden." }],
+          basiskennis: [{ onderwerp: "Niet overheid/wet", uitleg: "Bank is een bedrijf, geen weldoener, en de overheid betaalt jouw spaarrente niet. Rente is ook niet verplicht — een bank mag 0% bieden." }],
           niveaus: { basis: "Bank verdient via uitlenen.", simpeler: "Bank pakt jouw spaargeld, leent het uit voor hogere rente, verschil is winst. Daarom betalen ze jou rente.", nogSimpeler: "Uitlenen-marge" },
         },
       },
       {
         q: "Anna spaart **€2.500 voor haar rijbewijs**. Welk type rekening is geschikt?",
-        options: ["Een spaarrekening", "Een hypotheekrekening", "Een creditcard-rekening", "Een doorlopend krediet"],
+        options: ["Een gewone spaarrekening", "Een beleggingsrekening", "Een creditcard-rekening", "Een deposito van 10 jaar"],
         answer: 0,
-        wrongHints: [null, "Hypotheek is voor een huis kopen.", "Creditcard is voor uitgeven, niet sparen.", "Een doorlopend krediet is een lening. Wil Anna geld lenen of opzij zetten?"],
+        wrongHints: [null, "Beleggen kan op korte termijn ook verlies geven. Wil Anna het risico lopen dat haar rijbewijsgeld krimpt?", "Creditcard is voor uitgeven, niet sparen.", "Je geld zit dan tien jaar vast. Wanneer wil Anna haar lessen betalen?"],
         uitlegPad: {
           stappen: [{ titel: "Sparen voor doel = spaarrekening", tekst: "Anna wil GELD APARTLEGGEN voor een toekomstig doel (rijbewijs). Dat is precies waar een spaarrekening voor is — apart van haar betaalrekening, geen dagelijks uitgavenrisico." }],
           woorden: [{ woord: "spaarrekening", uitleg: "Aparte rekening om geld vast te zetten + rente te krijgen. Tegoed is beschermd door DGS." }, { woord: "doelsparen", uitleg: "Sparen voor specifiek doel: vakantie, rijbewijs, eigen huis, pensioen." }],
           theorie: "Trucs om makkelijk te sparen: (1) automatische overschrijving begin maand, (2) spaarrekening die geen pinpas heeft (kan niet impulsief uitgeven), (3) duidelijk DOEL koppelen aan rekening.",
           voorbeelden: [{ type: "Anna", tekst: "€100/mnd op spaarrekening 'Rijbewijs' → na 25 mnd €2.500 + €30 rente." }],
-          basiskennis: [{ onderwerp: "Niet creditcard/hypotheek", uitleg: "Creditcard + krediet zijn LENINGEN, niet sparen. Hypotheek is voor huis." }],
+          basiskennis: [{ onderwerp: "Niet beleggen of vastzetten", uitleg: "Beleggen kan op korte termijn verlies geven, en bij een deposito zit je geld jaren vast. Een creditcard is een lening. Voor een doel binnen een paar jaar past een gewone spaarrekening." }],
           niveaus: { basis: "Spaarrekening.", simpeler: "Geld voor later opzij = spaarrekening. Niet vermengen met dagelijkse uitgaven.", nogSimpeler: "Spaarrek" },
         },
       },
       {
         q: "Een bank biedt een spaarrekening met **0% rente**. Waarom is sparen dan nóg steeds zinvol?",
-        options: ["Je houdt geld apart voor doelen of buffers", "De wet verplicht je om een buffer te sparen", "Je krijgt korting in winkels als je spaart", "Het levert toch geld op door de inflatie"],
+        options: ["Je houdt geld apart voor doelen of buffers", "De bank betaalt na een paar jaar alsnog rente", "Je mag dan later goedkoper lenen bij die bank", "Het levert toch geld op door de inflatie"],
         answer: 0,
-        wrongHints: [null, "Sparen is geen plicht.", "Geen winkelvoordeel verbonden aan sparen.", "Bij 0% rente groeit je saldo niet. En wat doet inflatie met de waarde van je geld?"],
+        wrongHints: [null, "Bij 0% rente krijg je ook later niets extra. Waarom is sparen dan toch slim?", "Sparen geeft je geen recht op een goedkopere lening. Waar dient het geld dan wél voor?", "Bij 0% rente groeit je saldo niet. En wat doet inflatie met de waarde van je geld?"],
         uitlegPad: {
           stappen: [{ titel: "Sparen om PSYCHOLOGISCHE reden", tekst: "Zelfs bij 0% rente helpt sparen: GELD APART houden in een aparte rekening voorkomt impulsuitgaven. Discipline > rente." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld voor onverwachte uitgaven (fiets kapot, baan verloren). Vuistregel: 3-6 maanden lasten." }, { woord: "doelsparen", uitleg: "Sparen voor specifiek doel. Geeft motivatie ook bij 0% rente." }],
@@ -359,9 +359,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **aandeel**?",
-        options: ["Stukje eigendom in een bedrijf", "Een lening aan een bedrijf", "Een spaarrekening bij een bedrijf", "Een soort belasting voor bedrijven"],
+        options: ["Stukje eigendom in een bedrijf", "Een lening aan een bedrijf", "Een spaarrekening bij een bedrijf", "Het deel van de winst voor beleggers"],
         answer: 0,
-        wrongHints: [null, "Dat is een obligatie.", "Een spaarrekening heb je bij een bank, niet bij een bedrijf als Philips.", "Geen belasting."],
+        wrongHints: [null, "Dat is een obligatie.", "Een spaarrekening heb je bij een bank, niet bij een bedrijf als Philips.", "Dat deel van de winst heet dividend. Waar krijg je dat dividend juist voor?"],
         uitlegPad: {
           stappen: [{ titel: "Mede-eigenaar worden", tekst: "Aandeel = je koopt een stukje van een bedrijf. Bij Shell: 6,5 mld aandelen totaal → 1 aandeel = 1 / 6,5 mld eigenaarschap. Je deelt mee in winst (dividend) + waardeverandering (koers)." }],
           woorden: [{ woord: "aandeel", uitleg: "Mede-eigenaarschap van een bedrijf. Verhandeld op de beurs." }, { woord: "obligatie", uitleg: "Lening aan een bedrijf/overheid. Geen eigenaarschap, wel rente." }],
@@ -373,9 +373,9 @@ const steps = [
       },
       {
         q: "Wat is het **verschil tussen sparen en beleggen**?",
-        options: ["Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies", "Geen verschil: allebei zijn even veilig en leveren evenveel op", "Beleggen is altijd veiliger dan sparen en levert altijd meer op", "Sparen levert altijd verlies op, beleggen levert nooit verlies op"],
+        options: ["Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies", "Sparen levert meer op; beleggen is veiliger, want aandelen dalen zelden", "Bij sparen koop je aandelen; bij beleggen zet je geld vast op een rekening", "Beleggen is net zo veilig als sparen, dankzij de garantie tot €100.000"],
         answer: 0,
-        wrongHints: [null, "Zijn aandelen echt net zo veilig als geld op een spaarrekening?", "Kunnen aandelen ook in waarde dalen?", "Kan een belegging nooit in waarde dalen?"],
+        wrongHints: [null, "Welke van de twee kan in waarde dalen: geld op de bank of aandelen?", "Wat koop je als je belegt: een stukje van een bedrijf, of zet je geld op een rekening?", "Die garantie geldt voor spaargeld bij een bank. Geldt hij ook voor aandelen?"],
         uitlegPad: {
           stappen: [{ titel: "Veiligheid vs potentie", tekst: "Sparen: gegarandeerd, weinig opbrengst (1-2%). Beleggen: gemiddeld hoger (~7%) maar GEEN garantie — kan ook verlies geven." }],
           woorden: [{ woord: "rendement", uitleg: "Opbrengst van belegging per jaar in %. Niet gegarandeerd." }, { woord: "risico-rendement-verhouding", uitleg: "Hoger rendement = bijna altijd hoger risico." }],
@@ -387,9 +387,9 @@ const steps = [
       },
       {
         q: "Bij **hoog rendement** hoort meestal:",
-        options: ["Hoog risico", "Geen risico", "Gegarandeerd geld", "Kortere wachttijd"],
+        options: ["Hoog risico", "Laag risico", "Lage kosten", "Een vaste rente"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Garanties bestaan zelden bij hoge rendementen.", "Niets met tijd."],
+        wrongHints: [null, "Als iets veel oplevert én veilig is, zou iedereen het kopen. Waar betaal je dan voor?", "Kosten verschillen per product, maar volgen niet uit het rendement. Wat hoort er bij kans op veel winst?", "Een vaste rente hoort bij sparen of een deposito, en die is meestal laag. Wat hoort bij kans op hoge winst?"],
         uitlegPad: {
           stappen: [{ titel: "IJzeren wet", tekst: "Risico en rendement gaan ALTIJD samen. Hoger rendement = hoger risico op verlies. Logisch: niemand betaalt jou hoge winst zonder iets terug te willen — risico = jouw bijdrage." }],
           woorden: [{ woord: "risico-rendement-curve", uitleg: "Lijn die laat zien: meer rendement = meer risico. Geldt voor alle beleggingsproducten." }],
@@ -401,9 +401,9 @@ const steps = [
       },
       {
         q: "Iemand belooft **gegarandeerd 30% rendement per jaar**. Wat denk je?",
-        options: ["Vrijwel zeker oplichting: zoiets bestaat niet", "Geweldig, meteen al je spaargeld erin stoppen", "Normaal rendement voor een gewone belegging", "Dat krijg je ook gewoon op een spaarrekening"],
+        options: ["Vrijwel zeker oplichting: zoiets bestaat niet", "Eerst een klein bedrag inleggen om het te testen", "Normaal rendement voor een gewone belegging", "Dat krijg je ook gewoon op een spaarrekening"],
         answer: 0,
-        wrongHints: [null, "Wie belooft er zóveel, en waarom zou hij dat juist jou aanbieden?", "Aandelen leveren gemiddeld zo'n 5 tot 8% per jaar op. Is 30% dan normaal?", "Hoeveel rente krijg je nu ongeveer op een spaarrekening?"],
+        wrongHints: [null, "Oplichters betalen kleine bedragen soms keurig uit om je vertrouwen te winnen. Kan iemand 30% garanderen?", "Aandelen leveren gemiddeld zo'n 5 tot 8% per jaar op. Is 30% dan normaal?", "Hoeveel rente krijg je nu ongeveer op een spaarrekening?"],
         uitlegPad: {
           stappen: [{ titel: "Te mooi = oplichting", tekst: "Beste belegger ooit (Warren Buffett) haalt ~20%/jr over decennia. Wie 30% GEGARANDEERD belooft is OPLICHTER. Beroemde gevallen: Madoff ($65 mrd weg), MMM-piramides." }],
           woorden: [{ woord: "piramidespel / Ponzi", uitleg: "Oplichting waarbij eerste investeerders worden betaald uit geld van nieuwe investeerders. Stort in bij stop nieuwe inleg." }, { woord: "red flags", uitleg: "Tekenen van oplichting: gegarandeerd hoog rendement, urgentie, geen heldere uitleg." }],
@@ -415,9 +415,9 @@ const steps = [
       },
       {
         q: "Wat is een **ETF** (beleggingsfonds)?",
-        options: ["Mandje met veel aandelen tegelijk → spreiding", "Spaarrekening met een vaste rente per jaar", "Hypotheek: een lening om een huis te kopen", "Belasting die je betaalt over je beleggingen"],
+        options: ["Mandje met aandelen van veel bedrijven tegelijk", "Spaarrekening met een vaste rente per jaar", "Aandeel in één groot techbedrijf", "Lening aan de overheid met vaste rente"],
         answer: 0,
-        wrongHints: [null, "Beleggingsproduct, geen spaar.", "Een hypotheek is een lening. Is een ETF een lening?", "Geen belasting."],
+        wrongHints: [null, "Een ETF koop je op de beurs, en de waarde kan dalen. Is dat bij een spaarrekening zo?", "Bij één bedrijf hangt alles af van dat ene bedrijf. Wat is het idee van een fonds?", "Een lening aan de overheid heet een obligatie. Wat zit er in een ETF?"],
         uitlegPad: {
           stappen: [{ titel: "Mandje aandelen", tekst: "ETF = Exchange Traded Fund. Je koopt 1 'fonds' dat bestaat uit honderden/duizenden aandelen. Spreiding ingebouwd — als 1 bedrijf failliet, blijven andere 499 over." }],
           woorden: [{ woord: "ETF", uitleg: "Beleggingsfonds dat 1-op-1 een index volgt (bv. wereld-index = MSCI World)." }, { woord: "spreiding", uitleg: "Risico verlagen door over veel beleggingen tegelijk te verdelen — niet alles in 1 mand." }],
@@ -429,9 +429,9 @@ const steps = [
       },
       {
         q: "**Vuistregel** voordat je gaat beleggen:",
-        options: ["Eerst een buffer sparen", "Direct alles inleggen", "Crypto is altijd eerst", "Lenen om te beleggen"],
+        options: ["Eerst een buffer sparen voor noodgevallen", "Eerst uitzoeken welk aandeel het hardst stijgt", "Eerst wachten tot de koersen laag staan", "Eerst lenen zodat je meer kunt inleggen"],
         answer: 0,
-        wrongHints: [null, "Te risicovol zonder buffer.", "Crypto is hoog risico.", "Heel risicovol — beter niet."],
+        wrongHints: [null, "Niemand weet vooraf welk aandeel gaat stijgen. Wat heb je nodig als het tegenvalt?", "Niemand weet wanneer de koersen het laagst zijn. Wat moet je eerst regelen voordat je geld riskeert?", "Lenen om te beleggen maakt je verlies groter als het tegenvalt. Wat heb je eerst nodig?"],
         uitlegPad: {
           stappen: [{ titel: "Buffer eerst", tekst: "Zonder buffer móét je beleggingen verkopen bij tegenslag (auto kapot, baan kwijt) — vaak op slechte momenten. Buffer geeft tijd om koersdips uit te zitten." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld voor onverwachte uitgaven: 3-6 maanden vaste lasten." }, { woord: "noodgevallen-fonds", uitleg: "Andere naam voor buffer. Niet aanraken behalve in echte nood." }],
@@ -443,9 +443,9 @@ const steps = [
       },
       {
         q: "**Crypto** als belegging:",
-        options: ["Heel hoog risico, zonder garantie", "Veilig, want de bank garandeert het", "Levert elk jaar vast 10% rendement op", "Wettelijk verzekerd tot €100.000"],
+        options: ["Heel hoog risico, zonder garantie", "Veilig, want de bank garandeert het", "Levert elk jaar vast 10% rendement op", "Waardevast, want er is maar weinig bitcoin"],
         answer: 0,
-        wrongHints: [null, "Welke bank staat er achter bitcoin?", "Kan de koers van crypto ook hard dalen?", "Die garantie geldt voor spaargeld bij een bank. Geldt hij ook voor crypto?"],
+        wrongHints: [null, "Welke bank staat er achter bitcoin?", "Kan de koers van crypto ook hard dalen?", "Schaarste maakt iets niet waardevast: de koers schommelt hard. Wat betekent dat voor je risico?"],
         uitlegPad: {
           stappen: [{ titel: "Extreem volatiel", tekst: "Crypto (Bitcoin, Ethereum) heeft GEEN onderliggende waarde — geen bedrijf, geen winst, geen kasstromen. Prijs hangt op vertrouwen. Kan in 1 jaar 200% stijgen of 80% dalen." }],
           woorden: [{ woord: "crypto", uitleg: "Digitale valuta, niet uitgegeven door overheid. Bitcoin = bekendste." }, { woord: "volatiliteit", uitleg: "Hoe sterk een prijs schommelt. Crypto = extreem volatiel." }],
@@ -499,9 +499,9 @@ const steps = [
       },
       {
         q: "Wat is **geldschepping door banken**?",
-        options: ["Banken maken nieuw geld door leningen te geven", "Banken drukken zelf nieuwe biljetten bij", "De Belastingdienst maakt nieuw geld aan", "Niemand kan geld scheppen, er is een vaste hoeveelheid"],
+        options: ["Banken maken nieuw geld door leningen te geven", "Banken drukken zelf nieuwe biljetten bij", "Banken wisselen goud om in nieuwe euro's", "Niemand kan geld scheppen, er is een vaste hoeveelheid"],
         answer: 0,
-        wrongHints: [null, "Drukt ECB, niet commerciële banken.", "Belastingdienst int.", "Is er nu meer geld in omloop dan vijftig jaar geleden? Waar komt dat vandaan?"],
+        wrongHints: [null, "Biljetten laat de centrale bank drukken, niet een gewone bank. Wat gebeurt er op je rekening als je een lening krijgt?", "Euro's zijn niet meer aan goud gekoppeld. Wat gebeurt er op je rekening als je een lening krijgt?", "Is er nu meer geld in omloop dan vijftig jaar geleden? Waar komt dat vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Vermenigvuldiging via uitlenen", tekst: "Jij stort €1.000. Bank leent €950 uit. Die persoon koopt iets, ontvanger stort op haar bank. Die bank leent weer €902 uit. Enz. → totale 'geld in omloop' GROEIT zonder dat ECB iets bijdrukt." }],
           woorden: [{ woord: "geldschepping", uitleg: "Proces waarbij commerciële banken via uitlenen + opnieuw storten de totale geldhoeveelheid in economie laten groeien." }, { woord: "fractional reserve", uitleg: "Systeem waarbij banken slechts fractie van deposito's als reserve houden." }],
@@ -513,9 +513,9 @@ const steps = [
       },
       {
         q: "Wat is een **bank run**?",
-        options: ["Veel klanten halen tegelijk hun geld op", "Bank organiseert een hardloopevenement", "Bank voert een grote reclamecampagne", "Klanten lopen weg uit boosheid"],
+        options: ["Veel klanten halen tegelijk hun geld op", "Een bank leent in korte tijd heel veel geld uit", "De koers van bankaandelen daalt in één dag hard", "Een bank gaat samen met een andere bank"],
         answer: 0,
-        wrongHints: [null, "Letterlijke betekenis is verkeerd hier.", "Geen reclame.", "Weglopen alleen kost de bank niets. Wat maakt een bank run zo gevaarlijk?"],
+        wrongHints: [null, "Dat is snelle kredietgroei. Een bank run begint bij de spaarders: wat doen zij?", "Dalende aandelen kosten beleggers geld, maar het spaargeld staat er nog. Wat gebeurt er bij een bank run met het spaargeld?", "Samengaan heet een fusie. Bij een bank run gaat het om wat klanten doen."],
         uitlegPad: {
           stappen: [{ titel: "Massa-opname = paniek", tekst: "Bank houdt maar 5% in kas. Als 50% van klanten tegelijk hun geld wil → onmogelijk. Bank moet uitgeleend geld terugvragen (kost tijd) → ondertussen géén cash → bank failliet." }],
           woorden: [{ woord: "bank run", uitleg: "Massa-paniek waarbij spaarders tegelijk geld opnemen. Kan elke bank doen omvallen, ook gezonde." }],
@@ -529,7 +529,7 @@ const steps = [
         q: "Hoeveel garandeert het **DGS** per spaarder per bank?",
         options: ["€100.000", "€10.000", "€1 miljoen", "€50.000"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te veel.", "Het garantiebedrag ligt hoger dan dit."],
+        wrongHints: [null, "Veel mensen hebben meer dan €10.000 gespaard. De garantie is ruimer bedoeld.", "Een miljoen is veel meer dan de meeste mensen sparen. De EU-afspraak ligt lager.", "Het garantiebedrag ligt hoger dan dit."],
         uitlegPad: {
           stappen: [{ titel: "€100k EU-norm", tekst: "Depositogarantiestelsel garandeert tot €100.000 per spaarder per bank. EU-regelgeving (sinds 2010). Bij faillissement bank → DGS-fonds keert uit." }],
           woorden: [{ woord: "DGS", uitleg: "Depositogarantiestelsel. Verzekert spaargeld tot €100k per persoon per bank bij bankfaillissement." }],
@@ -555,29 +555,29 @@ const steps = [
       },
       {
         q: "Wanneer **'rolt' geld snel** door de economie?",
-        options: ["Bij hoogconjunctuur", "Bij recessie", "Wanneer de rente heel hoog is", "Altijd even snel"],
+        options: ["Bij hoogconjunctuur", "Bij recessie", "Wanneer de rente heel hoog is", "Bij deflatie"],
         answer: 0,
-        wrongHints: [null, "Geven mensen in een recessie veel uit, of houden ze hun geld vast?", "Bij hoge rente lenen mensen minder en sparen ze meer. Rolt het geld dan sneller?", "Geven mensen in goede en slechte tijden evenveel uit?"],
+        wrongHints: [null, "Geven mensen in een recessie veel uit, of houden ze hun geld vast?", "Bij hoge rente lenen mensen minder en sparen ze meer. Rolt het geld dan sneller?", "Bij dalende prijzen wachten mensen met kopen. Rolt het geld dan sneller?"],
         uitlegPad: {
           stappen: [{ titel: "Snelheid van rondgaan", tekst: "Geld 'rolt' = hoe vaak hetzelfde geld van eigenaar wisselt per jaar. Bij hoogconjunctuur: veel besteden + investeren → rolt snel. Bij recessie: mensen oppotten → trage roulatie." }],
           woorden: [{ woord: "geld-omloopsnelheid", uitleg: "Hoe snel hetzelfde geld door economie circuleert. Hoge snelheid = veel economische activiteit." }],
           theorie: "Formule: V (omloopsnelheid) = BBP / M (geldhoeveelheid). Hoge V + stabiele M = groeiende economie. Lage V = stagnatie ondanks veel geld.",
           voorbeelden: [{ type: "hoog", tekst: "Hoogconjunctuur: jij koopt brood (€2,50) → bakker betaalt werknemer → werknemer koopt jas → enz. Veel transacties." }, { type: "laag", tekst: "Recessie: mensen sparen uit angst, bedrijven investeren niet → geld blijft staan." }],
-          basiskennis: [{ onderwerp: "Niet 'altijd gelijk'", uitleg: "Snelheid varieert sterk per economische fase + per land." }],
+          basiskennis: [{ onderwerp: "Niet bij deflatie", uitleg: "Bij dalende prijzen wachten mensen met kopen, dus het geld rolt juist langzamer. De snelheid verschilt sterk per economische fase." }],
           niveaus: { basis: "Hoogconjunctuur = snel.", simpeler: "In goede tijden geven mensen veel uit → geld wisselt sneller van eigenaar.", nogSimpeler: "Boom = snel" },
         },
       },
       {
         q: "Stort jij **€1.000** op de bank. Wat gebeurt er ongeveer?",
-        options: ["Bank houdt ~5% (€50) als reserve, leent ~€950 uit", "Geld blijft op jouw rekening, niets gebeurt", "Bank leent de volle €1.000 meteen uit (€0 reserve)", "Bank mag jouw €1.000 nooit aanraken of uitlenen"],
+        options: ["Bank houdt ~5% (€50) als reserve, leent ~€950 uit", "Bank houdt ~50% (€500) als reserve, leent ~€500 uit", "Bank leent de volle €1.000 meteen uit (€0 reserve)", "Bank houdt alles (€1.000) als reserve, leent niets uit"],
         answer: 0,
-        wrongHints: [null, "Niet 'niets' — bank verdient eraan.", "Kan de bank dan nog opnames van andere klanten betalen?", "Hoe verdient een bank dan geld om jou rente te betalen?"],
+        wrongHints: [null, "Zoveel reserve is niet nodig: meestal haalt maar een klein deel van de klanten tegelijk geld op.", "Kan de bank dan nog opnames van andere klanten betalen?", "Hoe verdient een bank dan geld om jou rente te betalen?"],
         uitlegPad: {
           stappen: [{ titel: "Storten = uitlenen", tekst: "Bij storten: bank houdt 5% kasreserve (€50), leent 95% (€950) uit. Op jouw rekening staat nog steeds €1.000, maar dat geld doet 'dubbel werk' — jij ziet het + bank leent het uit." }],
           woorden: [{ woord: "kasreserve", uitleg: "Percentage dat bank aanhoudt om opnames te kunnen doen (deels verplicht via ECB-regels)." }],
           theorie: "Bij massa-opname stort het systeem in (bank run) want bank kan nooit alle uitgeleende geld direct terugkrijgen. Daarom DGS-garantie voor vertrouwen.",
           voorbeelden: [{ type: "jouw 1000", tekst: "€1.000 op rekening blijft staan. Bank leent €950 uit aan starter voor zaakje. Die starter betaalt leverancier. Geld werkt op 2 plekken tegelijk." }],
-          basiskennis: [{ onderwerp: "Niet 'niets'", uitleg: "Bank kan jouw geld WEL aanraken — dat is het hele bankmodel. Jij hebt vordering, geen kluis." }],
+          basiskennis: [{ onderwerp: "Niet alles of niets", uitleg: "Een bank houdt een klein deel als reserve en leent de rest uit — dat is het hele bankmodel. Alles uitlenen of alles bewaren past daar niet bij." }],
           niveaus: { basis: "5% kas, 95% uitlenen.", simpeler: "Van €1.000 dat je stort houdt bank ~€50 in kas en leent ~€950 uit aan anderen.", nogSimpeler: "Uitlenen" },
         },
       },
@@ -623,7 +623,7 @@ const steps = [
         q: "Je loon stijgt **2%**, prijzen stijgen **5%**. Wat gebeurt met je koopkracht?",
         options: ["Daalt met ongeveer 3%", "Stijgt met ongeveer 2%", "Stijgt met ongeveer 7%", "Blijft ongeveer gelijk"],
         answer: 0,
-        wrongHints: [null, "Je loon stijgt, maar wat doen de prijzen intussen?", "Niet optellen.", "Alleen gelijk als beide percentages gelijk zijn."],
+        wrongHints: [null, "Je loon stijgt, maar wat doen de prijzen intussen?", "Je hebt loon en prijzen opgeteld. Werken die twee mee of tegen elkaar?", "Alleen gelijk als beide percentages gelijk zijn."],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel reëel", tekst: "Reële verandering ≈ nominale loonstijging − inflatie. +2% − 5% = −3% → koopkracht daalt ~3%." }],
           woorden: [{ woord: "koopkracht", uitleg: "Hoeveel je kunt kopen voor je inkomen — gecorrigeerd voor prijsstijging." }, { woord: "reëel", uitleg: "Gecorrigeerd voor inflatie. Wat je daadwerkelijk kan kopen." }],
@@ -637,7 +637,7 @@ const steps = [
         q: "Je krijgt **1% rente** op spaargeld, inflatie is **3%**. Wat doet je koopkracht?",
         options: ["Daalt met ongeveer 2% per jaar", "Stijgt met ongeveer 1% per jaar", "Blijft elk jaar precies gelijk", "Stijgt met ongeveer 4% per jaar"],
         answer: 0,
-        wrongHints: [null, "Rente alleen is geen winst — vergelijk met inflatie.", "Vergelijk de rente met de inflatie. Welke is hoger?", "Niet optellen — vergelijk."],
+        wrongHints: [null, "Rente alleen is geen winst — vergelijk met inflatie.", "Vergelijk de rente met de inflatie. Welke is hoger?", "Je hebt rente en inflatie opgeteld. Werken die twee mee of tegen elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Reële rente = nominaal − inflatie", tekst: "1% rente − 3% inflatie = -2% reëel. Je spaargeld groeit met 1% maar prijzen met 3% → over 1 jaar kun je MINDER kopen dan vandaag." }],
           woorden: [{ woord: "nominale rente", uitleg: "Wat bank op papier biedt. Hier 1%." }, { woord: "reële rente", uitleg: "Nominale rente min inflatie. Echte verandering in koopkracht." }],
@@ -715,15 +715,15 @@ const steps = [
       },
       {
         q: "Inkomsten **€350**, uitgaven **€420** in een maand. Wat is je situatie?",
-        options: ["Een tekort van €70", "Overschot van €70", "Het maakt niet uit", "Je krijgt €70 toeslag"],
+        options: ["Een tekort van €70", "Een overschot van €70", "Een tekort van €420", "Een overschot van €350"],
         answer: 0,
-        wrongHints: [null, "Andersom — uitgaven zijn hoger.", "Het maakt heel veel uit — kan tot schulden leiden.", "Toeslagen krijg je niet automatisch bij tekort."],
+        wrongHints: [null, "Andersom: welk bedrag is hoger, je inkomsten of je uitgaven?", "€420 zijn al je uitgaven. Hoeveel geef je méér uit dan er binnenkomt?", "€350 is je inkomen. Wat blijft er over als je €420 uitgeeft?"],
         uitlegPad: {
           stappen: [{ titel: "Eenvoudig rekenwerk", tekst: "€350 inkomsten − €420 uitgaven = -€70. Negatief = tekort. Je geeft €70 meer uit dan binnenkomt. Moet ergens vandaan komen → spaargeld of rood staan." }],
           woorden: [{ woord: "tekort", uitleg: "Uitgaven > inkomsten in een periode. Bij meerdere maanden achter elkaar = schulden." }, { woord: "rood staan", uitleg: "Negatief saldo op betaalrekening. Bank rekent hoge rente (~10-15%/jr)." }],
           theorie: "Bij maandelijks tekort: óf inkomsten omhoog (meer werken, andere baan), óf uitgaven omlaag (snijden). Niet structureel rood staan — heel duur door hoge rente.",
           voorbeelden: [{ type: "tekort", tekst: "Anna €350 in / €420 uit → -€70. Na 6 maanden: €420 spaargeld op." }, { type: "rood", tekst: "Geen spaargeld → bank trekt rood staan toe → -10% rente over €70 = €7 extra kosten per jaar." }],
-          basiskennis: [{ onderwerp: "Niet 'maakt niet uit'", uitleg: "Klein tekort kan elke maand groeien tot probleem. Wel actief reageren." }],
+          basiskennis: [{ onderwerp: "Tekort = uitgaven − inkomsten", uitleg: "€420 − €350 = €70 te kort. Een klein tekort kan elke maand groeien tot een probleem — wel actief reageren." }],
           niveaus: { basis: "Tekort €70.", simpeler: "€350 binnen, €420 eruit → tekort €70. Komt uit spaargeld of bank-rood.", nogSimpeler: "Tekort" },
         },
       },
@@ -743,9 +743,9 @@ const steps = [
       },
       {
         q: "Waarom is **eerst sparen, dan uitgeven** beter dan andersom?",
-        options: ["Anders blijft er aan het eind meestal niets over", "Als je later spaart, kost dat je extra belasting", "Spaargeld is aan het eind van de maand minder waard", "Banken sluiten anders je rekening zonder waarschuwing"],
+        options: ["Anders blijft er aan het eind meestal niets over", "De bank geeft extra rente als je vroeg in de maand spaart", "Spaargeld is aan het eind van de maand minder waard", "Als je later spaart, betaal je meer belasting over je geld"],
         answer: 0,
-        wrongHints: [null, "Sparen kost niet meer belasting.", "Binnen één maand wordt je geld niet merkbaar minder waard. Waar gaat het dan wel om?", "Banken sluiten geen rekeningen omdat je niet spaart."],
+        wrongHints: [null, "Banken belonen niet de dag waarop je spaart. Wat gebeurt er vaak met geld dat 'over' moet blijven?", "Binnen één maand wordt je geld niet merkbaar minder waard. Waar gaat het dan wel om?", "Belasting op spaargeld hangt niet af van de dag waarop je spaart. Waar gaat het dan wel om?"],
         uitlegPad: {
           stappen: [{ titel: "Pay yourself first", tekst: "Begin maand: automatische €100 naar spaarrekening. Resterend €300 = budget. ANDERSOM (eerst uitgeven, einde sparen): meestal weinig over want je 'vindt altijd' iets om geld aan uit te geven." }],
           woorden: [{ woord: "pay yourself first", uitleg: "Engelse term: betaal jezelf (spaarrekening) als EERSTE rekening. Dan pas de rest." }, { woord: "automatisering", uitleg: "Vaste overschrijving op vaste datum — neemt willekracht weg." }],
@@ -759,7 +759,7 @@ const steps = [
         q: "Anna heeft **€60 zakgeld** + **€80 bijbaan**. Streaming **€10**, telefoon **€15**, OV **€20**, uitgaan **€60**. Hoeveel kan zij sparen?",
         options: ["€35", "€10", "€60", "€105"],
         answer: 0,
-        wrongHints: [null, "Te weinig — tel inkomsten + trek uitgaven af.", "Dat zou alleen uitgaan zijn.", "Te veel — uitgaven niet vergeten."],
+        wrongHints: [null, "Tel eerst alles wat binnenkomt bij elkaar. Hoeveel is dat, en wat gaat eraf?", "Dat zou alleen uitgaan zijn.", "€105 is wat Anna in totaal uitgeeft. Wat houdt ze over van haar inkomsten?"],
         uitlegPad: {
           stappen: [{ titel: "Rekensom", tekst: "Inkomsten: €60 + €80 = €140. Uitgaven: €10 + €15 + €20 + €60 = €105. Sparen mogelijk: €140 − €105 = €35." }],
           woorden: [{ woord: "spaarcapaciteit", uitleg: "Wat je maximaal kunt sparen = inkomsten min vaste + variabele uitgaven." }],
@@ -771,9 +771,9 @@ const steps = [
       },
       {
         q: "Wat is een **buffer** op je spaarrekening?",
-        options: ["Geld voor onverwachte uitgaven", "Bedrag dat de bank verplicht stelt", "Een kleine lening voor noodgevallen", "Cashback die je krijgt bij Klarna"],
+        options: ["Geld voor onverwachte uitgaven", "Bedrag dat de bank verplicht stelt", "Een kleine lening voor noodgevallen", "Geld dat je opzij legt voor vakantie"],
         answer: 0,
-        wrongHints: [null, "Niet verplicht maar verstandig.", "Geen lening — eigen geld.", "Geen cadeau — spaargeld is van jou."],
+        wrongHints: [null, "Niet verplicht maar verstandig.", "Geen lening — eigen geld.", "Een vakantie kun je van tevoren plannen. Waarvoor is een buffer juist bedoeld?"],
         uitlegPad: {
           stappen: [{ titel: "Veiligheidsnet", tekst: "Buffer = spaargeld dat je NIET gebruikt voor doel — bedoeld voor onverwachte tegenslagen. Vuistregel: 3-6 maanden vaste lasten." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld als veiligheidsnet voor onverwachte uitgaven. Niet aanraken behalve in nood." }, { woord: "noodfonds", uitleg: "Andere term voor buffer. Engelse term: emergency fund." }],
@@ -828,9 +828,9 @@ const steps = [
       },
       {
         q: "Waarom heeft **rood staan** een hoge rente?",
-        options: ["De bank loopt risico, want er is geen onderpand", "Banken willen klanten straffen voor rood staan", "Rood staan is illegaal, dus de rente is een boete", "De overheid stelt die hoge rente wettelijk vast"],
+        options: ["De bank loopt risico, want er is geen onderpand", "Banken willen klanten straffen voor rood staan", "Rood staan kost de bank veel extra administratie", "De overheid stelt die hoge rente wettelijk vast"],
         answer: 0,
-        wrongHints: [null, "Een bank wil juist klanten houden. Waarom zou ze dan zoveel rente vragen?", "Rood staan is wel legaal binnen je limiet.", "Rente bepaalt de bank."],
+        wrongHints: [null, "Een bank wil juist klanten houden. Waarom zou ze dan zoveel rente vragen?", "Administratie is voor elke lening ongeveer even veel. Wat maakt rood staan riskant voor de bank?", "De overheid stelt alleen een maximum; de bank kiest zelf de rente. Waarom kiest ze dan een hoge?"],
         uitlegPad: {
           stappen: [{ titel: "Risico-prijs", tekst: "Geen onderpand + onvoorspelbaar bedrag + kort → bank weet niet of jij terugbetaalt. Hoge rente (10-15%/jr) is hun compensatie voor dat risico." }],
           woorden: [{ woord: "rood staan", uitleg: "Negatief saldo op betaalrekening tot een limiet (bv. -€500). Hoge rente." }, { woord: "risicovergoeding", uitleg: "Hogere rente bij meer risico voor de bank." }],
@@ -842,9 +842,9 @@ const steps = [
       },
       {
         q: "Wat is een **BKR-toets**?",
-        options: ["Check of je al schulden of betalingsproblemen hebt", "Examen dat bankmedewerkers moeten halen voor hun baan", "Brief van de Belastingdienst over je aanslag", "Spaarrekening met een extra bonus voor jongeren"],
+        options: ["Check of je al schulden of betalingsproblemen hebt", "Examen dat bankmedewerkers moeten halen voor hun baan", "Controle van je inkomen via je loonstrookjes", "Keuring of je oud genoeg bent om te mogen lenen"],
         answer: 0,
-        wrongHints: [null, "BKR is een register, geen opleiding.", "Niets met belasting.", "Geen spaarproduct."],
+        wrongHints: [null, "BKR is een register, geen opleiding.", "Je inkomen controleert de bank apart. Het BKR is een register: wat staat daarin?", "Je leeftijd staat gewoon in je paspoort. Wat houdt het BKR bij?"],
         uitlegPad: {
           stappen: [{ titel: "Schuldgeschiedenis-check", tekst: "Bureau Krediet Registratie (BKR) houdt bij wie wanneer welke leningen heeft + of er betalingsachterstanden zijn. Bank toetst dit altijd vóór nieuwe lening." }],
           woorden: [{ woord: "BKR", uitleg: "Bureau Krediet Registratie. Onafhankelijk register van alle leningen + betalingsproblemen." }, { woord: "negatieve BKR-registratie", uitleg: "Markering bij betalingsachterstand. Blijft 5 jaar zichtbaar, bemoeilijkt nieuwe leningen/hypotheek." }],
@@ -872,7 +872,7 @@ const steps = [
         q: "Wanneer is lenen meestal **zinvol**?",
         options: ["Voor een huis of een opleiding", "Voor een vakantie of een festival", "Voor een nieuwe telefoon of game", "Voor nieuwe kleren of schoenen"],
         answer: 0,
-        wrongHints: [null, "Vakantie levert geen geld op — eerst sparen.", "Telefoon: spaar liever.", "Kleren: niet lenen."],
+        wrongHints: [null, "Vakantie levert geen geld op — eerst sparen.", "Een telefoon is na een paar jaar weinig meer waard. Wat levert lenen ervoor op?", "Kleren zijn snel versleten. Duurt de lening dan langer dan het nut?"],
         uitlegPad: {
           stappen: [{ titel: "Investering = soms zinvol", tekst: "Lenen kán zinvol zijn voor LANGE-TERMIJN-investering: huis (decennia woongenot + waarde) of opleiding (hoger inkomen). NOOIT voor kortdurende consumptie." }],
           woorden: [{ woord: "investering", uitleg: "Uitgave die LATER iets oplevert: hoger inkomen, gespaarde huurkosten, eigen vermogen." }, { woord: "consumptie-lening", uitleg: "Lening voor kortdurend genot: vakantie, kleren, gadgets. Onverstandig." }],
@@ -939,9 +939,9 @@ const steps = [
       },
       {
         q: "Wat is **onderpand** bij een hypotheek?",
-        options: ["Het huis zelf", "Een spaarrekening", "Een verzekering", "Een toeslag"],
+        options: ["Het huis zelf", "Een spaarrekening", "Een verzekering", "Je salaris"],
         answer: 0,
-        wrongHints: [null, "Spaarrekening is iets anders.", "Een verzekering betaalt uit bij pech, maar de bank kan hem niet verkopen. Welk bezit kan de bank wél verkopen als jij niet betaalt?", "Toeslagen hebben hier niets mee te maken."],
+        wrongHints: [null, "Bij een hypotheek leen je voor iets heel duurs. Wat kan de bank verkopen als jij niet betaalt?", "Een verzekering betaalt uit bij pech, maar de bank kan hem niet verkopen. Welk bezit kan de bank wél verkopen als jij niet betaalt?", "Je inkomen bepaalt hoeveel je mag lenen, maar de bank kan het niet verkopen. Wat wel?"],
         uitlegPad: {
           stappen: [{ titel: "Bezit als zekerheid", tekst: "Onderpand = bezit dat bank kan OPEISEN als jij niet betaalt. Bij hypotheek is het huis zelf het onderpand. Bij wanbetaling: huis wordt openbaar verkocht, opbrengst gaat naar de bank." }],
           woorden: [{ woord: "onderpand", uitleg: "Goed waarvan bank eigendom kan claimen bij wanbetaling." }, { woord: "executieverkoop", uitleg: "Verplichte verkoop van onderpand door bank/notaris om schuld te dekken." }],
@@ -967,9 +967,9 @@ const steps = [
       },
       {
         q: "Maximale hypotheek hangt vooral af van:",
-        options: ["Je bruto-inkomen", "Je leeftijd alleen", "De prijs van het huis alleen", "Hoe blij je bent"],
+        options: ["Je bruto-inkomen per jaar", "Je leeftijd bij de aankoop", "De vraagprijs van het huis", "Je spaargeld op de bank"],
         answer: 0,
-        wrongHints: [null, "Leeftijd speelt mee, maar inkomen is hoofdfactor.", "Hoge prijs ≠ automatisch grote hypotheek mogelijk.", "Geen economische factor."],
+        wrongHints: [null, "Leeftijd speelt soms mee, maar waaruit betaal je elke maand de rente en aflossing?", "Een duur huis betekent niet dat jij meer mag lenen. Waar kijkt de bank naar om te zien of jij kunt betalen?", "Spaargeld helpt bij de bijkomende kosten, maar bepaalt niet hoeveel je mag lenen. Waarmee betaal je elke maand?"],
         uitlegPad: {
           stappen: [{ titel: "Inkomen bepaalt limiet", tekst: "Bank kijkt vooral naar je BRUTO-INKOMEN: kun je de maandlast dragen? Vuistregel: max hypotheek = 4-5 × bruto jaarsalaris." }],
           woorden: [{ woord: "loonafhankelijke leennorm", uitleg: "Maximale hypotheek wordt door inkomen begrensd. NHG/Nibud-tabellen." }, { woord: "tweeverdieners", uitleg: "Twee inkomens samen verhogen leennorm sterk." }],
@@ -981,9 +981,9 @@ const steps = [
       },
       {
         q: "Welke kosten komen **bovenop** de huisprijs bij koop?",
-        options: ["Notaris, taxatie, advies en eventueel overdrachtsbelasting", "Alleen de rente die je het eerste jaar betaalt", "Niets extra: alle kosten zitten al in de vraagprijs", "Alleen de makelaar die de verkoper heeft ingehuurd"],
+        options: ["Notaris, taxatie, advies en eventueel overdrachtsbelasting", "Btw over de koopprijs en de makelaar van de verkoper", "De rente en aflossing van het eerste jaar, vooraf", "Een borgsom van drie maanden, zoals bij huren"],
         answer: 0,
-        wrongHints: [null, "Rente is wel kost, maar niet bij koop — gedurende lening.", "Echt veel bijkomende kosten — denk al gauw €5.000 of meer.", "Die makelaar wordt betaald door de verkoper, niet door jou."],
+        wrongHints: [null, "Bij een bestaand huis betaal je geen btw, en de makelaar van de verkoper wordt door de verkoper betaald.", "Rente en aflossing betaal je elke maand tijdens de lening, niet bovenop de koopprijs.", "Een borg hoort bij huren, niet bij kopen. Wie moet er bij een koop allemaal iets regelen?"],
         uitlegPad: {
           stappen: [{ titel: "K.k. = kosten koper", tekst: "'Kosten koper' (k.k.) bij huiskoop: notaris (~€2.000), taxatie (~€500), hypotheekadvies (~€2.500), overdrachtsbelasting (2% van huis, 0% voor starters <35). Snel €5-10k extra." }],
           woorden: [{ woord: "kosten koper", uitleg: "Eenmalige extra kosten naast huisprijs bij koop. Moet je zelf betalen, niet meegefinancierd." }, { woord: "overdrachtsbelasting", uitleg: "Belasting bij huiskoop. 2% standaard, 0% voor starters tot 35 + huis onder de grens (2024: €510k)." }],
@@ -995,15 +995,15 @@ const steps = [
       },
       {
         q: "Waarom is een **buffer** op de spaarrekening nuttig als je een hypotheek hebt?",
-        options: ["Om bij baanverlies de hypotheek te kunnen blijven betalen", "Banken eisen het bij elke hypotheek als voorwaarde", "Spaargeld levert automatisch korting op je hypotheek op", "Het is wettelijk verboden om geen buffer te hebben"],
+        options: ["Om bij baanverlies de hypotheek te kunnen blijven betalen", "De bank wil het geld als extra onderpand naast het huis", "Met spaargeld op de bank krijg je een lagere hypotheekrente", "Om er elk jaar extra mee af te lossen op de hypotheek"],
         answer: 0,
-        wrongHints: [null, "Banken adviseren het wel, eisen meestal niet.", "Geen automatische korting.", "Geen verbod, wel verstandig."],
+        wrongHints: [null, "Het huis is al het onderpand. Waarvoor heb jij die buffer zelf nodig?", "Je hypotheekrente hangt niet af van je spaarrekening. Wanneer heb je die buffer dan nodig?", "Extra aflossen kan, maar dan is het geld weg. Wat als er iets onverwachts gebeurt?"],
         uitlegPad: {
           stappen: [{ titel: "Veiligheidsnet tegen huis-verlies", tekst: "Werkloos worden of ziek = inkomen weg. Hypotheek moet TOCH betaald. Zonder buffer kun je vaste lasten niet dragen → wanbetaling → executieverkoop." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld om vaste lasten te dragen tijdens inkomensverlies. Vuistregel: 3-6 mnd lasten." }, { woord: "WW-uitkering", uitleg: "Werkloosheidsuitkering, ~70% laatste loon, max 24 mnd. Niet altijd genoeg voor hypotheek." }],
           theorie: "WW dekt slechts deel van inkomen. Buffer overbrugt verschil + tijd tussen baan-verlies en nieuwe baan vinden (~3-6 mnd gemiddeld). Voorkomt verlies van huis door tijdelijke pech.",
           voorbeelden: [{ type: "praktijk", tekst: "Hypotheek €1.500/mnd. Baan kwijt → WW €1.400/mnd. Tekort €100/mnd. Buffer dekt dit + andere lasten tot nieuwe baan." }],
-          basiskennis: [{ onderwerp: "Niet wettelijk", uitleg: "Geen wet eist buffer. Wel sterk geadviseerd door financieel adviseurs." }],
+          basiskennis: [{ onderwerp: "Voor jezelf, niet voor de bank", uitleg: "Het huis is al het onderpand en je spaargeld verlaagt je rente niet. Een buffer is voor jezelf: om door te kunnen betalen als het tegenzit. Sterk geadviseerd door financieel adviseurs." }],
           niveaus: { basis: "Voor inkomensverlies.", simpeler: "Baan kwijt → toch hypotheek betalen. Buffer redt je dan tot je weer werk hebt.", nogSimpeler: "Inkomensverlies" },
         },
       },

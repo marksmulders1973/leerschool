@@ -48,9 +48,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **export** voor Nederland?",
-        options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Nederlanders die in het buitenland op vakantie gaan", "Een NL bedrijf in Duitsland"],
+        options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Nederlanders die in het buitenland op vakantie gaan", "Een NL bedrijf opent een fabriek in Duitsland"],
         answer: 0,
-        wrongHints: [null, "Dat is import.", "Vakantie in het buitenland is juist import (van diensten).", "Vestiging = directe investering."],
+        wrongHints: [null, "Kopen uit het buitenland heet import. Wat is het omgekeerde?", "Vakantie in het buitenland is juist import (van diensten).", "Een eigen fabriek in het buitenland is een investering daar. Wordt er dan iets aan het buitenland verkocht?"],
         uitlegPad: {
           stappen: [{ titel: "Export = uit-voer", tekst: "Export = NL verkoopt iets aan buitenland (kaas naar DE, ASML-machines naar TW)." }],
           woorden: [{ woord: "export", uitleg: "Verkopen aan ander land. Tegenovergestelde van import." }, { woord: "import", uitleg: "Kopen uit ander land." }],
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Wat is een **comparatief voordeel**?",
-        options: ["Elk land is RELATIEF goed in iets — handel loont", "Een land heeft meer inwoners dan een ander", "Een land maakt alles het goedkoopst", "Een land heeft de beste hoogleraren"],
+        options: ["Je specialiseert je in wat je relatief het best kunt", "Een land kan iets goedkoper maken dan alle anderen", "Een land verkoopt meer aan het buitenland dan het koopt", "Een land heeft goedkope grondstoffen in de bodem"],
         answer: 0,
-        wrongHints: [null, "Bevolking ≠ comparatief voordeel.", "Goedkoopste = absoluut voordeel.", "Onderwijs is factor, geen definitie."],
+        wrongHints: [null, "Goedkoper dan alle anderen heet een absoluut voordeel. Waarmee vergelijk je bij 'comparatief'?", "Dat is een handelsoverschot. 'Comparatief' betekent vergelijkend — wat vergelijk je?", "Grondstoffen kunnen helpen, maar zijn niet de definitie. Wat vergelijk je bij een comparatief voordeel?"],
         uitlegPad: {
           stappen: [{ titel: "Relatief beter", tekst: "Elk land is RELATIEF goed in iets. Door te ruilen worden ALLEBEI rijker." }],
           woorden: [{ woord: "comparatief voordeel", uitleg: "Voordeel ten opzichte van iets anders maken. Zelfs als 1 land 'beter' is in alles, loont ruilen (Ricardo 1817)." }],
@@ -76,9 +76,9 @@ const steps = [
       },
       {
         q: "Een land heeft een **handelsoverschot**. Wat betekent dat?",
-        options: ["Export is groter dan import", "Import is groter dan export", "Schulden zijn afgelost", "Economie krimpt (recessie)"],
+        options: ["Export is groter dan import", "Import is groter dan export", "De overheid houdt geld over op de begroting", "Economie krimpt (recessie)"],
         answer: 0,
-        wrongHints: [null, "Dat heet een handelstekort.", "Een overschot gaat hier over handel, niet over leningen.", "Recessie is iets anders."],
+        wrongHints: [null, "Dat heet een handelstekort.", "Dat is een begrotingsoverschot. Bij een handelsoverschot gaat het om wat er over de grens gaat.", "Een recessie gaat over krimp van de hele economie. Waar gaat een 'handels'-overschot over?"],
         uitlegPad: {
           stappen: [{ titel: "Over = export > import", tekst: "Overschot = OVER. Land verkoopt MEER dan het koopt." }],
           woorden: [{ woord: "handelsbalans", uitleg: "Export minus import. Plus = overschot, min = tekort." }],
@@ -90,9 +90,9 @@ const steps = [
       },
       {
         q: "Waarom is NL een uitgesproken **handelsland**?",
-        options: ["Grote havens, Schiphol en centrale ligging", "Er wordt veel goud gevonden in NL", "NL heeft de laagste belasting ter wereld", "NL hoeft zelf niets te importeren"],
+        options: ["Grote havens, Schiphol en centrale ligging", "Een grote eigen auto- en vliegtuigindustrie", "Veel inwoners, dus een grote thuismarkt", "Een eigen munt die goedkoop is voor kopers"],
         answer: 0,
-        wrongHints: [null, "Geen goud van betekenis.", "Belasting is normaal.", "NL importeert juist heel veel (olie!)."],
+        wrongHints: [null, "Nederland heeft maar weinig auto- en vliegtuigfabrieken. Waar verdient NL dan aan als handelsland?", "Nederland is juist klein. Waarom moet een klein land veel handelen, en wat helpt daarbij?", "Nederland betaalt met de euro, net als veel buurlanden. Wat maakt NL dan bijzonder voor handel?"],
         uitlegPad: {
           stappen: [{ titel: "Logistiek = sleutel", tekst: "Rotterdam = grootste haven Europa. Schiphol = een van de grootste vrachtluchthavens van Europa. NL ligt midden in Europa." }],
           woorden: [{ woord: "handelsland", uitleg: "Land waar veel handel doorheen gaat — niet per se eigen productie." }],

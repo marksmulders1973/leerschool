@@ -32,7 +32,7 @@ const steps = [
         q: "Wat is **i²**?",
         options: ["−1","1","0","i"],
         answer: 0,
-        wrongHints: [null, "Niet — definitie.", "Niet relevant.", "Niet — i² is gedefinieerd."],
+        wrongHints: [null, "i is juist zo gedefinieerd dat i² niet 1 is. Welk getal heeft in de reële getallen geen wortel?", "Alleen 0 × 0 = 0. Is i gelijk aan 0?", "i · i is niet i, net zoals 2 · 2 niet 2 is. Wat is de definitie van i?"],
         uitlegPad: {
           stappen: [{ titel: "Imaginaire eenheid", tekst: "**i² = −1** is de **definitie**. Daaruit volgt: i³ = i·i² = i·(−1) = −i. i⁴ = i²·i² = (−1)·(−1) = 1. Daarna herhaalt: i⁵ = i, i⁶ = −1, etc. Cyclus 4." }],
           niveaus: { basis: "−1.", simpeler: "i² = −1", nogSimpeler: "−1" },
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "x² − 4x + 13 = 0. Oplossing?",
-        options: ["x = 2 ± 3i","x = 4 ± 13i","Geen oplossing","x = 0"],
+        options: ["x = 2 ± 3i","x = 4 ± 6i","x = −2 ± 3i","x = 2 ± 6i"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Wel — complex.", "Niet."],
+        wrongHints: [null, "Je vergat te delen door 2a = 2.", "Let op het teken: in de abc-formule staat −b. Wat is −b als b = −4?", "Deel je de hele teller door 2, ook het deel met i?"],
         uitlegPad: {
           stappen: [
             { titel: "Discriminant negatief", tekst: "D = b² − 4ac = 16 − 52 = −36. Negatief → complexe oplossing." },
@@ -94,9 +94,9 @@ const steps = [
     checks: [
       {
         q: "**Eulerformule**:",
-        options: ["e^(iθ) = cos θ + i·sin θ","e^θ = cos θ","e^(iπ) = i","cos + sin = 1"],
+        options: ["e^(iθ) = cos θ + i·sin θ","e^(iθ) = cos θ − i·sin θ","e^(iθ) = sin θ + i·cos θ","e^θ = cos θ + i·sin θ"],
         answer: 0,
-        wrongHints: [null, "Mist i.", "Niet correct.", "Niet waar — je denkt aan cos² + sin² = 1."],
+        wrongHints: [null, "Vul θ = π/2 in. Krijg je dan i of −i?", "Vul θ = 0 in: e⁰ = 1. Klopt dat met deze formule?", "Vul θ = 1 in: e¹ ≈ 2,72 is een reëel getal. Kan dat gelijk zijn aan cos 1 + i·sin 1?"],
         uitlegPad: {
           stappen: [{ titel: "Verband e met sin+cos", tekst: "**Eulerformule**: e^(iθ) = cos θ + i·sin θ. Verbindt exponent met goniometrie. **Beroemd gevolg**: e^(iπ) = cos π + i·sin π = −1 + 0 = −1. Daarom: **e^(iπ) + 1 = 0** = Euler's identiteit ('mooiste formule in wiskunde')." }],
           niveaus: { basis: "e^(iθ) = cos+i·sin.", simpeler: "Euler-formule", nogSimpeler: "e^(iθ) = cos θ + i·sin θ." },
@@ -104,9 +104,9 @@ const steps = [
       },
       {
         q: "Bij **vermenigvuldigen in polair** doe je:",
-        options: ["Modulus × en argumenten +","Beide ×","Beide +","Modulus + en arg ×"],
+        options: ["Modulus × en argumenten +","Modulus × en argumenten ×","Modulus + en argumenten +","Modulus + en argumenten ×"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Niet correct.", "Tegenovergesteld."],
+        wrongHints: [null, "Neem i · i: de moduli geven 1 · 1 = 1. Wat gebeurt er met de hoeken van 90° en 90°?", "Neem 2 · 3 = 6, allebei met argument 0. Krijg je 6 als je de moduli optelt?", "Precies verwisseld. Wat gebeurt er met de modulus bij 2 · 3?"],
         uitlegPad: {
           stappen: [{ titel: "Mod × Arg +", tekst: "**r₁·e^(iθ₁) · r₂·e^(iθ₂) = (r₁·r₂)·e^(i(θ₁+θ₂))**. Modulus vermenigvuldigt, argumenten optellen. Komt door regel e^a·e^b = e^(a+b)." }],
           niveaus: { basis: "Mod × Arg +.", simpeler: "× = mod×, arg+", nogSimpeler: "Moduli ×, hoeken +." },
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "Vermenigvuldigen met **i** is geometrisch:",
-        options: ["Rotatie 90° tegen klok","Verdubbeling","Spiegeling","Geen effect"],
+        options: ["Rotatie 90° tegen de klok in","Rotatie 90° met de klok mee","Spiegeling in de reële as","Rotatie 180° om de oorsprong"],
         answer: 0,
-        wrongHints: [null, "Niet — modulus 1.", "Niet primair.", "Wel effect."],
+        wrongHints: [null, "Kijk naar 1 · i = i: van punt 1 naar punt i. Welke kant draait dat op?", "Spiegelen in de reële as is complex toevoegen (z̄). Wat gebeurt er met het punt 1 als je met i vermenigvuldigt?", "Draaien over 180° is vermenigvuldigen met −1 = i². Wat doet één keer i?"],
         uitlegPad: {
           stappen: [{ titel: "i = e^(iπ/2)", tekst: "**Vermenigvuldigen met i**: |i|=1 (modulus 1, geen schaling), arg(i)=π/2 (90°). Resultaat: rotatie 90° **tegen klok**. Voorbeeld: 1·i = i (van punt (1,0) naar (0,1)). i·i = −1 (van (0,1) naar (−1,0)). Eindeloos draaien." }],
           theorie: "Toepassing: computer graphics, signaal-bewerking.",
@@ -158,9 +158,9 @@ const steps = [
     checks: [
       {
         q: "Matrix-vermenigvuldiging is:",
-        options: ["Niet commutatief","Wel commutatief","Niet bestaand","Altijd nul"],
+        options: ["Niet commutatief","Wel commutatief","Niet associatief","Niet distributief"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel bestaand.", "Niet."],
+        wrongHints: [null, "Reken AB en BA uit voor twee 2×2-matrices. Krijg je hetzelfde?", "(AB)C = A(BC) geldt wél voor matrices. Welke rekenregel van gewone getallen geldt niet?", "A(B + C) = AB + AC geldt wél voor matrices. Welke rekenregel van gewone getallen geldt niet?"],
         uitlegPad: {
           stappen: [{ titel: "Volgorde telt", tekst: "Matrix-vermenigvuldiging is **NIET commutatief**: in het algemeen A·B ≠ B·A. Soms verschilt de dimensie zelfs zodat B·A niet eens gedefinieerd is. Belangrijk verschil met getal-vermenigvuldiging (2·3 = 3·2)." }],
           niveaus: { basis: "Niet commutatief.", simpeler: "AB ≠ BA", nogSimpeler: "Volgorde telt." },
@@ -188,9 +188,9 @@ const steps = [
       },
       {
         q: "**Eenheidsmatrix I₃** is:",
-        options: ["Hoofddiagonaal 1, rest 0","Alle 1en","Alle 0en","Random getallen"],
+        options: ["Hoofddiagonaal 1, rest 0","Hoofddiagonaal 0, rest 1","Nevendiagonaal 1, rest 0","Hoofddiagonaal 3, rest 0"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — nulmatrix.", "Niet."],
+        wrongHints: [null, "Vermenigvuldig A met deze matrix. Blijft A dan hetzelfde?", "Deze matrix verwisselt de eerste en de derde rij. Blijft A · I dan gelijk aan A?", "De 3 in I₃ geeft de grootte (3 × 3) aan, niet de getallen erin."],
         uitlegPad: {
           stappen: [{ titel: "Multiplicatief neutraal", tekst: "**I_n** (eenheidsmatrix): hoofddiagonaal **1**, rest **0**. I₃ = [[1,0,0],[0,1,0],[0,0,1]]. Eigenschap: A·I = I·A = A. Net zoals 1 voor getallen. Inverse-relatie: A·A^(−1) = I." }],
           niveaus: { basis: "Diagonaal 1, rest 0.", simpeler: "I = diag 1", nogSimpeler: "Enen op de diagonaal." },
@@ -200,7 +200,7 @@ const steps = [
         q: "**Transpose** van A = [[1,2],[3,4]]:",
         options: ["[[1,3],[2,4]]","[[4,3],[2,1]]","[[1,2],[3,4]]","[[2,1],[4,3]]"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — geen verandering.", "Niet correct."],
+        wrongHints: [null, "Je hebt de matrix helemaal omgedraaid. Wat gebeurt er bij transponeren met de eerste rij?", "Niet — geen verandering.", "Je hebt de kolommen verwisseld. Wat gebeurt er bij transponeren met de eerste rij?"],
         uitlegPad: {
           stappen: [{ titel: "Rijen ↔ kolommen", tekst: "**Transpose A^T**: rijen worden kolommen + vice versa. Rij 1 (1,2) wordt kolom 1. Rij 2 (3,4) wordt kolom 2. **A^T = [[1,3],[2,4]]**." }],
           niveaus: { basis: "[[1,3],[2,4]].", simpeler: "Transpose = rijen↔kolom", nogSimpeler: "[[1,3],[2,4]]" },
@@ -217,9 +217,9 @@ const steps = [
     checks: [
       {
         q: "**Rotatiematrix 90°** in 2D:",
-        options: ["[[0,−1],[1,0]]","[[1,0],[0,1]]","[[−1,0],[0,−1]]","[[1,1],[1,1]]"],
+        options: ["[[0,−1],[1,0]]","[[1,0],[0,1]]","[[−1,0],[0,−1]]","[[0,1],[−1,0]]"],
         answer: 0,
-        wrongHints: [null, "Eenheidsmatrix.", "180° rotatie.", "Niet."],
+        wrongHints: [null, "Dat is de eenheidsmatrix: die draait niets.", "Deze matrix draait 180°. Waar moet (1,0) heen bij 90°?", "Dat is een draaiing van 90° met de klok mee. Waar komt (1,0) terecht?"],
         uitlegPad: {
           stappen: [{ titel: "cos 90 = 0, sin 90 = 1", tekst: "**R(θ) = [[cos θ, −sin θ], [sin θ, cos θ]]**. Voor θ = 90°: cos 90° = 0, sin 90° = 1 → **R(90°) = [[0, −1], [1, 0]]**.\n\nTest: R · (1, 0)^T = (0, 1). Punt (1,0) draait naar (0,1) — correct 90° tegen klok." }],
           niveaus: { basis: "[[0,-1],[1,0]].", simpeler: "R90 = [[0,-1],[1,0]]", nogSimpeler: "[[0,-1],[1,0]]" },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "**Gauss-eliminatie** is voor:",
-        options: ["Stelsels lineaire vergelijkingen oplossen","Eigenwaarden vinden","Matrix transponeren","Wortels van een polynoom vinden"],
+        options: ["Stelsels lineaire vergelijkingen oplossen","De eigenwaarden van een matrix bepalen","Twee matrices met elkaar vermenigvuldigen","De nulpunten van een polynoom vinden"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Andere operatie.", "Daar gebruik je de abc-formule of ontbinden, geen rij-operaties."],
+        wrongHints: [null, "Eigenwaarden vind je met det(A − λI) = 0. Waar zijn rij-operaties vooral voor bedoeld?", "Matrices vermenigvuldigen doe je met 'rij keer kolom', zonder rij-operaties. Waarvoor gebruik je rij-operaties dan?", "Daar gebruik je de abc-formule of ontbinden, geen rij-operaties."],
         uitlegPad: {
           stappen: [{ titel: "Systematische methode", tekst: "**Gauss-eliminatie**: methode om stelsel lineaire vergelijkingen systematisch op te lossen door rij-operaties (vermenigvuldigen, optellen, verwisselen). Reduceer naar **bovendriehoek-vorm**, dan terugsubstitutie. Carl Friedrich Gauss (1777-1855) — werd grootste wiskundige zijn tijd genoemd." }],
           niveaus: { basis: "Stelsels.", simpeler: "Gauss = stelsel oplossen", nogSimpeler: "Stelsels oplossen." },
@@ -257,9 +257,9 @@ const steps = [
       },
       {
         q: "**PageRank** (Google) gebruikt:",
-        options: ["Eigenvector van web-graf-matrix","Random aantallen","SQL-database","HTML-tags"],
+        options: ["De eigenvector van de link-matrix","Het aantal bezoekers per pagina","De determinant van de link-matrix","De inverse van de link-matrix"],
         answer: 0,
-        wrongHints: [null, "PageRank rangschikt pagina's niet willekeurig — het rekent met de link-structuur van het web. Welk lineair-algebra-begrip hoort daarbij?", "Een database bewaart gegevens, maar berekent niet welke pagina belangrijker is — daar is een wiskundige berekening voor nodig.", "HTML-tags bepalen hoe een pagina eruitziet, niet hoe hoog hij scoort — PageRank kijkt naar de links tússen pagina's."],
+        wrongHints: [null, "Bezoekersaantallen gebruikt PageRank niet: het rekent met de links tússen pagina's. Welk lineair-algebra-begrip hoort daarbij?", "Een determinant is één getal voor de hele matrix. PageRank geeft elke pagina een eigen score: welk begrip levert een getal per pagina?", "PageRank zoekt een verdeling die niet meer verandert als je de matrix toepast. Hoort daar een inverse bij?"],
         uitlegPad: {
           stappen: [{ titel: "Larry Page 1996", tekst: "**PageRank** (Google-algoritme, Larry Page + Sergey Brin 1996): pagina's geranked op basis van **eigenvector** van matrix die links tussen pagina's representeert. Pagina populair als veel populaire pagina's ernaar linken (recursief). Eigenvector met eigenwaarde 1 = stabiele oplossing. Toonde kracht van lineaire algebra voor web-zoeken — basis Google-succes." }],
           niveaus: { basis: "Eigenvector.", simpeler: "PageRank = eigenvector", nogSimpeler: "Eigenvector." },
@@ -308,7 +308,7 @@ const steps = [
         q: "Hoeveel **n-de wortels** heeft complex getal z (z ≠ 0)?",
         options: ["n verschillende","1","2","Oneindig"],
         answer: 0,
-        wrongHints: [null, "Niet — meer.", "Niet — alleen bij n = 2.", "Niet — eindig."],
+        wrongHints: [null, "Denk aan z³ = 1: is 1 de enige oplossing in de complexe getallen?", "2 klopt alleen voor vierkantswortels (n = 2). Hoeveel oplossingen heeft z³ = 1?", "zⁿ = w is een veeltermvergelijking. Wat weet je over het aantal oplossingen daarvan?"],
         uitlegPad: {
           stappen: [{ titel: "Regelmatige n-hoek", tekst: "**Elk complex getal z ≠ 0 heeft precies n n-de wortels**. Ze vormen een regelmatige n-hoek op cirkel rond oorsprong (met straal |z|^(1/n)). Bv. 4 vierde wortels uit 1: 1, i, −1, −i (op hoeken 90° apart). Fundamenteel verschil met reëel: x² = 4 heeft 2 reële oplossingen (±2), x² = −4 heeft 0 reële maar 2 complexe (±2i)." }],
           niveaus: { basis: "n.", simpeler: "n wortels", nogSimpeler: "n" },

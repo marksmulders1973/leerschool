@@ -81,7 +81,7 @@ const steps = [
         q: "Wat is **clair-obscur** (chiaroscuro)?",
         options: ["Sterk contrast tussen licht en donker", "Sterk contrast tussen warm en koud", "Zacht vervagen van contouren", "Schilderen in grijs, zwart en wit"],
         answer: 0,
-        wrongHints: [null, "Het gaat om licht-donker, niet primair om kleur.", "Dat is sfumato, zoals bij de Mona Lisa. Wat betekenen de woorden clair en obscur?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
+        wrongHints: [null, "Warm en koud is een kleurcontrast. Wat valt het meest op in een schilderij van Caravaggio?", "Dat is sfumato, zoals bij de Mona Lisa. Wat betekenen de woorden clair en obscur?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
         uitlegPad: {
           stappen: [{ titel: "Drama door licht", tekst: "**Clair-obscur / chiaroscuro** is een sterk **licht-donkercontrast**, vaak met één lichtbron, dat **drama** geeft en de aandacht richt op het belangrijkste. Kenmerkend voor de **barok** — denk aan **Caravaggio** en **Rembrandt**." }],
           niveaus: { basis: "Licht-donkercontrast.", simpeler: "Clair-obscur = licht/donker", nogSimpeler: "Licht tegen donker." },
