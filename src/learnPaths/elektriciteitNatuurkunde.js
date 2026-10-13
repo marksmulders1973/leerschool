@@ -206,13 +206,13 @@ const steps = [
       },
       {
         q: "Welk materiaal is een **isolator**?",
-        options: ["Plastic", "Koper", "IJzer", "Aluminium"],
+        options: ["Plastic", "Koper", "Zout water", "Potloodstift (grafiet)"],
         answer: 0,
         wrongHints: [
           null,
           "Koper is juist een goede geleider (kabels van rood-koper).",
-          "IJzer geleidt ook stroom.",
-          "Aluminium geleidt stroom (hoogspanningskabels).",
+          "Waarom mag een föhn nooit in bad vallen? Wat doet water met zout erin met stroom?",
+          "Met een potloodstreep kun je een lampje laten branden in een stroomkring. Laat grafiet stroom door of niet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Plastic = isolator", tekst: "Plastic, rubber, glas en droog hout zijn isolatoren — geen vrije elektronen, dus stroom kan er niet doorheen." }],
@@ -624,15 +624,15 @@ const steps = [
         q: "Wat doet een **aardlekschakelaar**?",
         options: [
           "Schakelt uit als er stroom weglekt naar de aarde",
-          "Filtert storingen uit de stroom",
-          "Verlaagt de spanning naar een veilig niveau",
+          "Leidt lekstroom van de metalen behuizing naar de aarde",
+          "Leidt bij blikseminslag de stroom naar de aarde",
           "Schakelt uit als er te veel apparaten aan staan",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Storingen merk je aan flikkerende lampen, niet in de meterkast. Wanneer springt een aardlekschakelaar eruit?",
-          "De spanning in huis blijft gewoon 230 V. Waarop let een aardlekschakelaar dan?",
+          "Het wegleiden van stroom doet de groen-gele aardedraad zelf. Een schakelaar kan stroom alleen doorlaten of onderbreken; wanneer doet deze dat?",
+          "Tegen blikseminslag zit een bliksemafleider op het dak, geen kastje in de meterkast. Waar reageert de aardlekschakelaar dan op?",
           "Bij te veel apparaten tegelijk slaat de zekering (groepsautomaat) door. Waar let de aardlekschakelaar op?",
         ],
         uitlegPad: {
@@ -648,16 +648,16 @@ const steps = [
         q: "Waarom hebben metalen apparaten een **aardingdraad**?",
         options: [
           "Bij een defect gaat stroom via de aarde weg, niet via jou",
-          "Zodat het apparaat minder stroom en energie verbruikt",
-          "Zodat het apparaat zijn warmte kwijt kan aan de grond",
+          "Zodat het apparaat uitschakelt als het oververhit raakt",
+          "Zodat het apparaat niet kapotgaat als de spanning piekt",
           "Als extra draad waardoor de stroom terug naar de bron loopt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Door de aardingdraad loopt normaal geen stroom — dus geen invloed op verbruik.",
-          "Warmte gaat via de lucht weg, niet via een dun draadje naar de aarde. Waarvoor dient die draad dan?",
-          "Dat doet de nuldraad. Door de aardingdraad loopt normaal geen stroom; wanneer dan wel?",
+          "Tegen oververhitting zit een thermische beveiliging in het apparaat zelf. Door de aardedraad loopt normaal geen stroom; wanneer dan wel?",
+          "Tegen spanningspieken gebruik je een stekkerdoos met overspanningsbeveiliging. Door de aardedraad loopt normaal geen stroom; wanneer dan wel?",
+          "Dat doet de nuldraad. Door de aardedraad loopt normaal geen stroom; wanneer dan wel?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Aarding leidt sluiting weg", tekst: "Als binnenin een apparaat een draad de metalen behuizing raakt → behuizing onder spanning. De aardingdraad leidt die stroom DIRECT weg naar de aarde → aardlek detecteert lek → schakelt uit. Zonder aarding zou JIJ de aarde-route zijn." }],
@@ -680,15 +680,15 @@ const steps = [
         options: [
           "Een apparaat van 1 kW dat 1 uur aan staat",
           "Een apparaat van 1 kW dat 1 minuut aan staat",
-          "1.000 watt per uur",
-          "1.000 watt vermogen",
+          "Een apparaat van 1 W dat 1 uur aan staat",
+          "Een apparaat van 1.000 kW dat 1 uur aan staat",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Kijk goed naar de tijd: hoe lang hoort het apparaat aan te staan?",
-          "kWh betekent kilowatt × uur, niet kilowatt per uur. Wat krijg je als je vermogen met tijd vermenigvuldigt?",
-          "Dat is 1 kW (vermogen), niet kWh (energie).",
+          "1 W is duizend keer kleiner dan 1 kW. Waar staat de k in kWh voor?",
+          "Je rekende de kilo dubbel: 1.000 kW is al een megawatt. Hoeveel watt hoort bij de k in kWh?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 kWh = 1 kW × 1 uur", tekst: "kWh is energie: vermogen (kW) maal tijd (uren). 1 kWh = apparaat van 1000 W dat 1 uur aan staat." }],
@@ -790,14 +790,14 @@ const steps = [
           "P = U + I",
           "U = I × R",
           "P = U × I",
-          "E = P × t",
+          "R-totaal = R₁ + R₂ (serie)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Klopt — Wet van Ohm.",
           "Klopt — vermogen-formule.",
-          "Klopt — energie-formule.",
+          "Klopt — in een serieschakeling tel je de weerstanden op.",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = U + I is fout", tekst: "Vermogen is een vermenigvuldiging, geen optelling. P = U × I. Niet P = U + I." }],

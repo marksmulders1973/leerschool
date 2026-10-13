@@ -285,13 +285,13 @@ const steps = [
       {
         q: "Wat is **spankracht**?",
         options: [
-          "Kracht in een gespannen touw of kabel",
-          "Kracht waarmee een ingedrukte veer terugduwt",
+          "Kracht waarmee een strak touw of kabel trekt",
+          "Kracht waarmee een opgespannen elastiek terugtrekt",
           "Kracht tussen twee schurende oppervlakken",
           "Kracht waarmee de aarde aan je trekt",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is veerkracht. Spankracht duwt niet, maar trekt. Waarin?", "Kracht tussen schurende oppervlakken heet wrijving. Waarin werkt spankracht?", "Zwaartekracht trekt naar beneden, spankracht langs het touw."],
+        wrongHints: [null, "Een elastiek rekt flink uit en veert terug: dat heet veerkracht. Wat rekt (bijna) niet uit, maar trekt wel?", "Kracht tussen schurende oppervlakken heet wrijving. Waarin werkt spankracht?", "Zwaartekracht werkt op alles met massa, ook als er niets aan vastzit. Waarin zit spankracht dan?"],
         uitlegPad: {
           stappen: [{ titel: "Spankracht = trekken in touw", tekst: "In een gespannen touw of kabel zit spankracht: het touw trekt aan beide uiteinden naar binnen (richting middelpunt touw). Houdt dingen op." }],
           woorden: [{ woord: "spankracht (Fs)", uitleg: "kracht in gespannen draad/kabel" }],
@@ -448,12 +448,12 @@ const steps = [
         q: "Een schaatser duwt de muur weg. Wat gebeurt er?",
         options: [
           "Muur duwt schaatser even hard terug, schaatser glijdt weg",
-          "Muur duwt niet terug, er gebeurt helemaal niets",
-          "Muur valt om door de duw, schaatser blijft staan",
+          "Muur duwt even hard terug, schaatser blijft staan",
+          "Muur duwt zachter terug, schaatser glijdt weg",
           "Muur duwt zachter terug, schaatser blijft staan",
         ],
         answer: 0,
-        wrongHints: [null, "Voel maar wat je handen merken als je hard tegen een muur duwt. Duwt de muur echt niet terug?", "Een muur is veel zwaarder en zit vast aan de grond. Kan één duw van een schaatser hem omgooien?", "Hoe groot is de tegenkracht vergeleken met jouw duw? En wat houdt iemand op glad ijs op zijn plek?"],
+        wrongHints: [null, "Werken de duw en de tegenduw op hetzelfde voorwerp? Kunnen ze elkaar dan opheffen?", "Is de tegenkracht kleiner dan jouw duw, alleen omdat de muur zwaar is en stilstaat?", "Hoe groot is de tegenkracht vergeleken met jouw duw? En wat houdt iemand op glad ijs op zijn plek?"],
         uitlegPad: {
           stappen: [{ titel: "Muur duwt schaatser terug", tekst: "Schaatser duwt op muur (actie). Muur duwt schaatser met EVEN grote kracht terug (reactie). Muur staat vast (zwaar), schaatser glijdt weg." }],
           woorden: [{ woord: "tegenkracht", uitleg: "kracht in tegengestelde richting" }],
@@ -544,7 +544,7 @@ const steps = [
       { q: "**Zwaartekracht-versnelling** op aarde is ongeveer?", options: ["~10 m/s²","~5 m/s²","~100 m/s²","0 m/s²"], answer: 0, wrongHints: [null,"Een steen die je 1 seconde laat vallen, gaat al ongeveer zo hard als een brommer (36 km/u). Hoeveel m/s is dat?","Zou een vallende steen na 1 seconde al 100 m/s (360 km/u) gaan?","Bij 0 m/s² zou een losgelaten bal blijven hangen. Gebeurt dat op aarde?"] },
       { q: "**Normaalkracht** werkt waar?", options: ["Loodrecht op het oppervlak","Evenwijdig aan het oppervlak","In de bewegingsrichting","Naar het midden van de aarde"], answer: 0, wrongHints: [null,"Langs het oppervlak werkt de wrijving. In welke richting duwt de ondergrond terug?","Normaalkracht is er ook als iets stilligt. Heeft het dan een bewegingsrichting?","Naar het midden van de aarde werkt de zwaartekracht. Duwt de ondergrond jou omlaag?"] },
       { q: "De **derde wet van Newton** zegt?", options: ["Actie = reactie","Kracht = massa × versnelling","Traagheid: rust blijft rust","Aantrekking tussen alle massa's"], answer: 0, wrongHints: [null,"Dat is de tweede wet van Newton.","Dat is de eerste wet van Newton.","Dat is de gravitatiewet van Newton, niet een van zijn drie bewegingswetten."] },
-      { q: "Een **veerkracht** is bv. de kracht in een ___?", options: ["Uitgerekt elastiek","Vallende steen","Remmend fietswiel","Drijvend bootje"], answer: 0, wrongHints: [null,"Bij een vallende steen werkt de zwaartekracht. Wat moet er uitrekken of indrukken bij veerkracht?","Bij remmen werkt wrijving. Wat moet er uitrekken of indrukken bij veerkracht?","Een drijvende boot krijgt opwaartse kracht van het water. Wat moet er uitrekken of indrukken bij veerkracht?"] },
+      { q: "Een **veerkracht** is bv. de kracht in een ___?", options: ["Uitgerekt elastiek","Strak sleeptouw","Remmend fietswiel","Uitgerekte kauwgom"], answer: 0, wrongHints: [null,"In een strak touw dat (bijna) niet uitrekt werkt spankracht. Wat moet er uitrekken of indrukken bij veerkracht?","Bij remmen werkt wrijving. Wat moet er uitrekken of indrukken bij veerkracht?","Kauwgom blijft uitgerekt als je loslaat. Wat doet een voorwerp met veerkracht als je het loslaat?"] },
       { q: "**Open vraag**: bereken zwaartekracht op 8 kg (g=10). Typ getal in Newton.", kind: "open", acceptedAnswers: ["80"], numericTolerance: 0, explanation: "Fz = m × g = 8 × 10 = 80 N." },
       { q: "**Open vraag**: massa 4 kg, versnelling 5 m/s². Hoe groot is F (in Newton)?", kind: "open", acceptedAnswers: ["20"], numericTolerance: 0, explanation: "F = m × a = 4 × 5 = 20 N." },
     ],

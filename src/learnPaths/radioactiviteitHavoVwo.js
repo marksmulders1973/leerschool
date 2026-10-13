@@ -33,13 +33,13 @@ const steps = [
       {
         q: "Welke twee atomen zijn **isotopen** van elkaar?",
         options: [
-          "¹²C en ¹⁴C",
-          "¹²C en ¹²N",
-          "¹⁴N en ¹⁴C",
-          "¹H en ⁴He"
+          "Z=6, A=12 en Z=6, A=14",
+          "Z=6, A=14 en Z=7, A=14",
+          "Z=6, A=12 en Z=7, A=13",
+          "Z=1, A=1 en Z=2, A=4"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — N en C zijn verschillende elementen (ander atoomnummer), geen isotopen.", "Niet — als Z verschilt, zijn het andere elementen, geen isotopen.", "¹H en ⁴He hebben een ander atoomnummer. Zijn het dan isotopen van hetzelfde element?"],
+        wrongHints: [null, "Z=6 is koolstof en Z=7 is stikstof. Zijn dit dan twee vormen van hetzelfde element?", "Reken het aantal neutronen uit (A − Z). Is dat wat isotopen gemeen hebben, of iets anders?", "Z=1 is waterstof en Z=2 is helium. Zijn dit dan vormen van hetzelfde element?"],
         uitlegPad: {
           stappen: [{ titel: "Isotopen = zelfde Z", tekst: "¹²C en ¹⁴C hebben beide Z = 6 (zelfde element koolstof), maar verschillende A (12 vs 14). Andere stof heeft andere Z dus is een ander element." }],
           niveaus: { basis: "Zelfde Z = isotopen.", simpeler: "Beide koolstof (Z=6), ander massagetal.", nogSimpeler: "C-12 + C-14" },
@@ -110,7 +110,7 @@ const steps = [
         q: "¹⁴C (Z=6) verval β⁻ naar:",
         options: ["¹⁴N (Z=7)", "¹⁴B (Z=5)", "¹⁰Be + α", "¹³C"],
         answer: 0,
-        wrongHints: [null, "Niet — β⁻ verhoogt Z, niet verlaagt.", "Niet — dat zou α zijn.", "Bij β⁻-verval wordt een neutron een proton. Verandert het massagetal daarbij?"],
+        wrongHints: [null, "Bij β⁻-verval wordt een neutron een proton. Wordt Z dan groter of kleiner?", "Een heliumkern (α) uitzenden is een ander soort verval. Welk deeltje komt er bij β⁻-verval vrij?", "Bij β⁻-verval wordt een neutron een proton. Verandert het massagetal daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "β⁻: Z+1, A blijft", tekst: "Bij β⁻ wordt een neutron een proton + elektron + antineutrino. C-14 (Z=6) → N-14 (Z=7). A blijft 14 (elektron is bijna massaloos). Dit is de basis van koolstof-14-datering!" },
@@ -369,13 +369,13 @@ const steps = [
       {
         q: "Welk stralingstype is **biologisch het gevaarlijkst** binnen het lichaam (ingeademd/gegeten)?",
         options: [
-          "α — alle energie in klein volume + Q=20",
+          "α — geeft alle energie af op een kort stukje",
           "γ — dringt ver door en raakt veel organen",
           "β — middelmatig doordringend, raakt meer cellen",
           "Alle drie gelijk — alleen de dosis in Gy telt"
         ],
         answer: 0,
-        wrongHints: [null, "γ-straling dringt ver door en geeft haar energie verspreid af. Is dat binnen het lichaam het meest schadelijk?", "Welk soort straling geeft al zijn energie af op een heel kort stukje weefsel?", "Telt de soort straling mee in de equivalente dosis? Denk aan de weegfactor Q."],
+        wrongHints: [null, "γ-straling dringt ver door en geeft haar energie verspreid af. Is dat binnen het lichaam het meest schadelijk?", "Hoeveel weefsel heeft een β-deeltje nodig om tot stilstand te komen, vergeleken met de andere soorten?", "Telt de soort straling mee in de equivalente dosis? Denk aan de weegfactor Q."],
         uitlegPad: {
           stappen: [
             { titel: "α binnen = lokaal vernietigend", tekst: "α-deeltje deponeert ALLE energie in 50 μm weefsel → cel-DNA in nabij gebied wordt verwoest. Buiten lichaam stopt α door huid. Maar **ingeademd radon** of **gegeten polonium** → α-bron in long/maag-cellen → kankerrisico hoog. Q-factor 20 weerspiegelt deze schade." },

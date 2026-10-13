@@ -32,9 +32,9 @@ const steps = [
       },
       {
         q: "Het **absolute nulpunt** ligt op:",
-        options: ["−273,15 °C", "0 °C", "−100 °C", "−459 °C"],
+        options: ["−273,15 °C", "−237,15 °C", "−459,67 °C", "−373,15 °C"],
         answer: 0,
-        wrongHints: [null, "0 °C is het smeltpunt van ijs. Is er niets kouders dan ijs?", "Vloeibare stikstof is al −196 °C. Kan het absolute nulpunt dan op −100 °C liggen?", "−459 is het absolute nulpunt in graden Fahrenheit. Klopt dat getal ook in Celsius?"],
+        wrongHints: [null, "Kijk goed naar de volgorde van de cijfers. Welk getal tel je bij °C op om kelvin te krijgen?", "−459,67 is het absolute nulpunt in graden Fahrenheit. Klopt dat getal ook in Celsius?", "Het kookpunt van water is 373,15 K. Ligt het absolute nulpunt dan 373,15 graden onder 0 °C?"],
         uitlegPad: {
           stappen: [{ titel: "0 K", tekst: "Per definitie 0 K = −273,15 °C. Lager bestaat niet — daar zou kinetische energie negatief moeten zijn, fysisch onmogelijk." }],
           theorie: "In praktijk: laboratoria komen tot ~10⁻⁹ K, maar precies 0 is fundamenteel onbereikbaar (derde hoofdwet thermodynamica).",
@@ -53,9 +53,9 @@ const steps = [
       },
       {
         q: "**Warmte stroomt** uit zichzelf altijd:",
-        options: ["Van hoge T naar lage T", "Van lage T naar hoge T", "Beide kanten op", "Naar de plek met de meeste massa"],
+        options: ["Van hoge T naar lage T", "Van lage T naar hoge T", "Beide kanten op", "Van veel energie naar weinig"],
         answer: 0,
-        wrongHints: [null, "Kan een koelkast zonder stroom de binnenkant kouder maken dan de keuken?", "Deeltjes botsen alle kanten op, maar welke kant gaat er netto warmte heen?", "Een warme mok thee warmt je koude handen op, ook al is je lichaam zwaarder. Waar hangt de richting dan van af?"],
+        wrongHints: [null, "Kan een koelkast zonder stroom de binnenkant kouder maken dan de keuken?", "Deeltjes botsen alle kanten op, maar welke kant gaat er netto warmte heen?", "Een zwembad van 20 °C bevat veel meer energie dan een kop thee van 80 °C. Stroomt de warmte dan van het zwembad naar de thee?"],
         uitlegPad: {
           stappen: [{ titel: "Tweede hoofdwet thermodynamica", tekst: "Warm object verliest energie aan koud → tot evenwicht. Andersom kost werk (koelkast, airco), niet vanzelf." }],
           theorie: "Daarom kun je niet zomaar gratis stroom maken uit alleen omgevingswarmte — vereist temperatuurverschil.",
@@ -65,13 +65,13 @@ const steps = [
       {
         q: "Een glas water in een warme kamer. Wat gebeurt op den duur?",
         options: [
-          "Water en kamer krijgen dezelfde T",
-          "Water blijft koud, kamer warm",
-          "Water wordt warmer dan de kamer",
+          "Water warmt op tot ongeveer kamertemperatuur",
+          "Beide eindigen op het gemiddelde van de twee",
+          "Water warmt op tot boven kamertemperatuur",
           "Kamer koelt af tot de begin-T van het water"
         ],
         answer: 0,
-        wrongHints: [null, "Blijft het water voor altijd koud in een warme kamer? Wat stroomt er van de kamer naar het glas?", "Stroomt warmte vanzelf door van koud naar warm, ook als het water al even warm is als de kamer?", "De kamer is veel groter dan het glas. Wie verandert er dan het meest van temperatuur?"],
+        wrongHints: [null, "Het glas is piepklein vergeleken met de kamer. Verandert de kamer dan net zoveel van temperatuur als het water?", "Warmte stroomt van warm naar koud. Kan het water dan ooit warmer worden dan de lucht die het opwarmt?", "De kamer is veel groter dan het glas. Wie verandert er dan het meest van temperatuur?"],
         uitlegPad: {
           stappen: [{ titel: "Thermisch evenwicht", tekst: "Warmte stroomt van de warmere kamer naar het koudere water. Na lange tijd: gelijk. Snelheid van uitwisseling hangt af van isolatie, oppervlak, materiaal." }],
           niveaus: { basis: "Beide dezelfde T.", simpeler: "Water wordt warmer tot kamer-T.", nogSimpeler: "Evenwicht" },
@@ -274,9 +274,9 @@ const steps = [
       },
       {
         q: "Voor isolatie: welk materiaal heeft een **lage warmtegeleidingscoëfficiënt**?",
-        options: ["Glaswol", "Beton", "Glas", "Koper"],
+        options: ["Glaswol", "Beton", "Glas", "Aluminiumfolie"],
         answer: 0,
-        wrongHints: [null, "Beton voelt koud aan en laat warmte vrij goed door. Gebruik je het als isolatie?", "Door enkel glas verlies je veel warmte; daarom heeft dubbel glas een luchtlaag. Isoleert glas zelf goed?", "Koper zit in pannen en kabels omdat het warmte en stroom goed geleidt. Isoleert het dan?"],
+        wrongHints: [null, "Beton voelt koud aan en laat warmte vrij goed door. Gebruik je het als isolatie?", "Door enkel glas verlies je veel warmte; daarom heeft dubbel glas een luchtlaag. Isoleert glas zelf goed?", "Folie kaatst warmtestraling terug, maar aluminium zelf geleidt warmte heel goed. Is de warmtegeleidingscoëfficiënt dan laag?"],
         uitlegPad: {
           stappen: [{ titel: "Lage λ = isolator", tekst: "Glaswol bevat veel stilstaande lucht-poriën → lucht is slechte geleider → stopt warmtetransport. λ ~ 0,04 W/(m·K), vergeleken met koper ~400 W/(m·K) → 10 000× verschil." }],
           theorie: "Daarom zijn winterjassen vol met lucht (donsveren, polyester-vezel): de isolatie zit in de stilstaande lucht, niet in de stof.",
@@ -333,13 +333,13 @@ const steps = [
       {
         q: "Heteluchtballon stijgt op. Onderliggende fysica?",
         options: [
-          "Hete lucht is lichter dan koude lucht",
+          "Hete lucht heeft een kleinere dichtheid dan koude",
           "De vlam duwt de ballon met kracht omhoog",
-          "Opwaartse wind blaast de ballon omhoog",
-          "Hete lucht is zwaarder en duwt koude weg"
+          "Hete lucht heeft een hogere druk en duwt omhoog",
+          "Hete luchtdeeltjes zijn zelf lichter dan koude"
         ],
         answer: 0,
-        wrongHints: [null, "De vlam verwarmt de lucht in de ballon. Duwt de vlam zelf de ballon omhoog, zoals bij een raket?", "Niet — wind beweegt vooral zijwaarts, en een ballon stijgt ook bij windstil weer.", "Als hete lucht zwaarder was, zou de ballon dan stijgen of zakken?"],
+        wrongHints: [null, "De vlam verwarmt de lucht in de ballon. Duwt de vlam zelf de ballon omhoog, zoals bij een raket?", "Een heteluchtballon is onderaan open. Kan de druk binnen dan veel hoger worden dan buiten?", "Een stikstofmolecuul weegt evenveel, warm of koud. Wat verandert er dan wel als lucht warmer wordt?"],
         uitlegPad: {
           stappen: [
             { titel: "Warm = ijler", tekst: "Bij vaste p (atmosfeer): T↑ → V/m↑ (Charles) → ρ↓. Ballon vol hete lucht is lichter dan zelfde V koude buitenlucht → opwaartse kracht (Archimedes: F = ρ_buiten · V · g). Brander warm houden = blijven zweven." },

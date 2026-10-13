@@ -175,13 +175,13 @@ const steps = [
       {
         q: "Welke uitspraak over **golfsnelheid v** in een medium klopt?",
         options: [
-          "v hangt af van het medium",
-          "v hangt alleen af van de bron",
+          "v hangt af van het medium, niet van de bron",
+          "v hangt af van de bron, niet van het medium",
           "v wordt groter als f groter wordt",
           "v wordt groter als λ groter wordt",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — de bron bepaalt f, niet v.", "Niet — in homogeen medium is v constant. Hogere f → kortere λ.", "In een vast medium ligt v vast. Als λ groter wordt, wat gebeurt er dan met f?"],
+        wrongHints: [null, "Een fluit en een bas spelen in dezelfde zaal. Komt het geluid van de fluit eerder bij je aan?", "Een hoge en een lage toon uit dezelfde luidspreker: komt de hoge toon eerder bij je aan?", "In een vast medium ligt v vast. Als λ groter wordt, wat gebeurt er dan met f?"],
         uitlegPad: {
           stappen: [
             { titel: "v = eigenschap van het medium", tekst: "Bij dezelfde lucht, dezelfde temperatuur, is v ≈ 343 m/s — onafhankelijk of een bas of fluit speelt. Hogere frequentie betekent kortere golflengte (λ = v/f), maar NIET een snellere golf." },
@@ -197,13 +197,13 @@ const steps = [
       {
         q: "Geluidsgolven zijn **longitudinaal**. Hoe weet je dat?",
         options: [
-          "Lucht-deeltjes bewegen heen en weer in de voortplantingsrichting",
-          "Lucht-deeltjes bewegen loodrecht op de voortplanting",
+          "Lucht-deeltjes trillen heen en weer in de looprichting",
+          "Lucht-deeltjes trillen loodrecht op de looprichting",
           "Lucht-deeltjes reizen zelf mee van bron naar oor",
           "Lucht-deeltjes draaien rondjes op hun eigen plek",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou transversaal zijn (zoals touw).", "Komt de lucht uit je mond echt bij het oor van een ander aan? Wat reist er dan wel?", "Rondjes draaien zie je bij watergolven. Hoe bewegen luchtdeeltjes ten opzichte van de richting van het geluid?"],
+        wrongHints: [null, "Loodrecht trillen zie je bij een golf in een touw. Heet dat ook longitudinaal?", "Komt de lucht uit je mond echt bij het oor van een ander aan? Wat reist er dan wel?", "Rondjes draaien zie je bij watergolven. Hoe bewegen luchtdeeltjes ten opzichte van de richting van het geluid?"],
         uitlegPad: {
           stappen: [
             { titel: "Compressie + verdunning = langsbeweging", tekst: "Een luidspreker duwt lucht-deeltjes vooruit (compressie) en trekt ze terug (verdunning). De deeltjes bewegen **langs** de richting waarin het geluid reist → longitudinaal. Daarom kan geluid niet door vacuüm (geen deeltjes om te duwen)." },

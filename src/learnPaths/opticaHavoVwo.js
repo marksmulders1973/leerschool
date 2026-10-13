@@ -275,13 +275,13 @@ const steps = [
       {
         q: "Waarom is de **lucht overdag blauw**?",
         options: [
-          "Rayleigh-verstrooiing — blauw wordt meer verstrooid dan rood",
+          "Verstrooiing — blauw wordt sterker verstrooid dan rood",
           "Absorptie — de lucht slokt rood op en laat blauw door",
           "Weerkaatsing — de zeeën kaatsen blauw licht omhoog",
           "Gevoeligheid — onze ogen zien vooral blauw licht"
         ],
         answer: 0,
-        wrongHints: [null, "De zon zelf ziet er overdag wit-geel uit, niet blauw. Slokt de lucht dan veel licht op?", "Niet — ook boven de Sahara is de lucht blauw.", "Niet — onze ogen zien alle kleuren, en 's avonds kleurt de lucht rood."],
+        wrongHints: [null, "De zon zelf ziet er overdag wit-geel uit, niet blauw. Slokt de lucht dan veel licht op?", "Ook midden boven de Sahara is de lucht blauw. Kan het dan door de zee komen?", "Onze ogen zien alle kleuren, en 's avonds kleurt dezelfde lucht rood. Kan het dan aan je ogen liggen?"],
         uitlegPad: {
           stappen: [
             { titel: "1/λ⁴-wet", tekst: "Korte golflengte (blauw) → veel meer verstrooid door lucht-moleculen dan lange (rood). Vandaar: zon-licht via verstrooiing → vooral blauw bereikt onze ogen uit alle richtingen → blauwe lucht. Bij zonsondergang reist licht lang door atmosfeer → al het blauw weggestrooid → rest = rood/oranje." },

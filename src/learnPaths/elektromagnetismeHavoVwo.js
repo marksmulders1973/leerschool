@@ -72,12 +72,12 @@ const steps = [
         q: "Hoe versterk je het magnetisch veld in een **spoel** (geen kern-wijziging)?",
         options: [
           "Meer windingen + meer stroom",
-          "Spoel langer maken bij vaste windingen",
-          "Draad dunner maken",
-          "Wisselstroom gebruiken in plaats van gelijkstroom"
+          "Spoel langer, zelfde windingen",
+          "Spoel breder, zelfde windingen",
+          "2× windingen op 2× langere spoel"
         ],
         answer: 0,
-        wrongHints: [null, "Bij evenveel windingen over een langere spoel liggen ze verder uit elkaar. Wordt het veld dan sterker of zwakker?", "Een dunnere draad heeft meer weerstand. Wat doet dat met de stroom door de spoel?", "Wisselstroom laat het veld steeds omklappen. Wordt het veld daar sterker van?"],
+        wrongHints: [null, "Bij evenveel windingen over een langere spoel liggen ze verder uit elkaar. Wordt het veld dan sterker of zwakker?", "Hangt het veld binnen in een lange spoel af van hoe breed hij is? Kijk welke grootheden in de formule voor B staan.", "Tel het aantal windingen per meter: verandert dat als je beide verdubbelt? Wat betekent dat voor B?"],
         uitlegPad: {
           stappen: [{ titel: "B_spoel = μ₀·n·I", tekst: "Met n = N/L (windingen per meter). Meer N (bij vaste L) → hogere n → sterker veld. Meer I → ook sterker. Toevoegen ijzer-kern vermenigvuldigt nog eens met μ_r (kan factor 1000)." }],
           niveaus: { basis: "Meer N + meer I = sterker.", simpeler: "Veel windingen en veel stroom → sterk magneetveld.", nogSimpeler: "N + I op" },
@@ -133,13 +133,13 @@ const steps = [
       {
         q: "In een **cyclotron** beweegt een deeltje in een cirkel. De straal hangt af van:",
         options: [
-          "Massa, snelheid, lading én B-sterkte",
-          "Lading, snelheid én B-sterkte",
-          "Massa, lading én B-sterkte",
-          "Massa, snelheid én B-sterkte"
+          "r = m·v / (q·B)",
+          "r = q·B / (m·v)",
+          "r = m·v² / (q·B)",
+          "r = m / (q·v·B)"
         ],
         answer: 0,
-        wrongHints: [null, "Stel de Lorentzkracht gelijk aan de middelpuntzoekende kracht en los r op. Welke grootheid ontbreekt hier?", "Stel de Lorentzkracht gelijk aan de middelpuntzoekende kracht en los r op. Welke grootheid ontbreekt hier?", "Stel de Lorentzkracht gelijk aan de middelpuntzoekende kracht en los r op. Welke grootheid ontbreekt hier?"],
+        wrongHints: [null, "Krijgt een zwaarder of sneller deeltje een grotere of kleinere cirkel? Past jouw formule daarbij?", "Schrijf q·v·B = m·v²/r uit en los r op. Hoeveel factoren v blijven er dan over?", "Een sneller deeltje vliegt in een wijdere boog. Moet v dan boven of onder de deelstreep staan?"],
         uitlegPad: {
           stappen: [{ titel: "r = mv/(qB)", tekst: "Lorentzkracht = centripetaal: qvB = mv²/r → **r = mv/(qB)**. Zwaarder of sneller → grotere cirkel; sterker veld of meer lading → kleinere cirkel. Massa-spectrometer scheidt isotopen via verschillende r." }],
           niveaus: { basis: "r = mv/(qB).", simpeler: "Vier grootheden bepalen r.", nogSimpeler: "Alle 4" },
@@ -149,12 +149,12 @@ const steps = [
         q: "Wanneer **draait een elektromotor om** als je een eenvoudige spoel gebruikt?",
         options: [
           "Stroom- of veldrichting omkeren",
-          "Spoel sneller laten draaien",
+          "Stroom- én veldrichting omkeren",
           "Magneten dichter bij zetten",
-          "Spanning verhogen"
+          "Hogere spanning op de spoel zetten"
         ],
         answer: 0,
-        wrongHints: [null, "Sneller draaien is een gevolg, geen oorzaak. Wat bepaalt de richting van de kracht op de spoel?", "Magneten dichterbij maken het veld sterker en de motor krachtiger. Draait hij daardoor de andere kant op?", "Meer spanning geeft meer stroom en sneller draaien. Verandert de draairichting daardoor?"],
+        wrongHints: [null, "Wat gebeurt er met de kracht als je de stroom omkeert, en wat als je daarna ook het veld omkeert?", "Magneten dichterbij maken het veld sterker en de motor krachtiger. Draait hij daardoor de andere kant op?", "Meer spanning geeft meer stroom en sneller draaien. Verandert de draairichting daardoor?"],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L — omkeren I of B → omkeren F", tekst: "Lorentzkracht-richting volgt FBI-regel. Omkeren van stroom OF veld geeft tegenovergestelde kracht → omgekeerd koppel → motor draait andere kant op. Beide omkeren: zelfde richting." }],
           niveaus: { basis: "I omkeren of B omkeren.", simpeler: "Stroom-richting of magneet-pool omdraaien.", nogSimpeler: "I of B omkeren" },
@@ -272,7 +272,7 @@ const steps = [
           "Zodat apparaten thuis meer vermogen krijgen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — hoog is gevaarlijker.", "Niet — de snelheid van het signaal hangt niet af van de spanning.", "Thuis komt er gewoon 230 V uit het stopcontact. Waar gaat het om bij het transport zelf?"],
+        wrongHints: [null, "Is een lijn van 380.000 volt dichtbij veiliger of juist gevaarlijker dan 230 V? Waarvoor dient die hoge spanning dan?", "Hoe snel energie door de draad gaat, hangt niet van de spanning af. Wat gebeurt er wél met de stroomsterkte als de spanning omhooggaat?", "Thuis komt er gewoon 230 V uit het stopcontact. Waar gaat het om bij het transport zelf?"],
         uitlegPad: {
           stappen: [{ titel: "P_verlies = I²·R", tekst: "Bij vast vermogen P=U·I: hoger U → lagere I. Verlies in draad ~ I² → verdubbel U + halveer I → verlies wordt 4× kleiner. Daarom transporteren we op honderdduizenden volt." }],
           theorie: "Vóór wissel-stroom + transformatoren (Edison vs Tesla, jaren 1880) was gelijkstroom standaard — maar GS kan NIET getransformeerd worden, dus centrales dicht bij de gebruikers nodig. Tesla's AC-systeem won.",

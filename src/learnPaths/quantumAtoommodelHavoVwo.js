@@ -136,7 +136,7 @@ const steps = [
       },
       {
         q: "Een **zonnecel** zet licht direct om in elektriciteit via:",
-        options: ["Foto-elektrisch effect in halfgeleider", "Thermo-elektrisch effect door opwarming", "Elektromagnetische inductie in een spoel", "Chemische reactie zoals in een batterij"],
+        options: ["Foto-elektrisch effect in halfgeleider", "Fotothermisch effect: licht warmt de cel op", "Elektromagnetische inductie in een spoel", "Chemische reactie zoals in een batterij"],
         answer: 0,
         wrongHints: [null, "Een zonnecel werkt het best als hij koel blijft. Gaat het dan om warmte of om iets anders?", "Niet — in een zonnecel beweegt of draait niets, dus er is geen veranderend magnetisch veld.", "Een zonnecel raakt niet op en verbruikt geen stoffen. Wat gebeurt er dan wel als licht erop valt?"],
         uitlegPad: {
@@ -147,9 +147,9 @@ const steps = [
       },
       {
         q: "Eenheid uittree-arbeid W?",
-        options: ["J (of eV)", "W (watt)", "V (volt)", "Hz"],
+        options: ["J (of eV)", "W (of J/s)", "V (of J/C)", "Hz (of 1/s)"],
         answer: 0,
-        wrongHints: [null, "Niet — W is vermogen.", "Niet — V is spanning.", "Niet — Hz is frequentie."],
+        wrongHints: [null, "Watt is joule per seconde: dat hoort bij vermogen. Is uittree-arbeid iets per seconde?", "Volt is joule per coulomb: dat is spanning. Is uittree-arbeid een spanning?", "Hertz hoort bij frequentie, zoals de f in E = h·f. Is uittree-arbeid ook een frequentie?"],
         uitlegPad: {
           stappen: [{ titel: "W is energie-eenheid", tekst: "Uittree-arbeid = minimum energie nodig om elektron uit metaal te krijgen. Energie-eenheid = J of vaker eV in atomaire/quantum context." }],
           niveaus: { basis: "J of eV.", simpeler: "Energie-eenheid (J of eV).", nogSimpeler: "J" },

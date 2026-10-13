@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Wat is een **lichtjaar**?",
-        options: ["Afstand die licht in 1 jaar aflegt", "Tijd die licht nodig heeft voor 1 km", "Afstand die geluid in 1 jaar aflegt", "Hoe lang een ster licht blijft geven"],
+        options: ["Afstand die licht in 1 jaar aflegt", "Tijd die zonlicht nodig heeft tot de aarde", "Afstand die de aarde in 1 jaar aflegt", "Tijd die een ster licht blijft geven"],
         answer: 0,
-        wrongHints: [null, "Het woord 'jaar' klinkt als tijd. Maar wat meet je eigenlijk met een lichtjaar tussen de sterren?", "Geluid gaat bijna een miljoen keer langzamer dan licht. Waarom zou het dan lichtjaar heten?", "Een lichtjaar zegt niets over hoe lang een ster brandt. Is het eigenlijk een tijd of iets anders?"],
+        wrongHints: [null, "Zonlicht doet er ruim 8 minuten over naar de aarde. Waarom zou je daar een woord met 'jaar' voor gebruiken?", "Wie of wat legt de afstand af in het woord licht-jaar? Is dat de aarde?", "Hoe lang een ster brandt, meet je in miljoenen of miljarden jaren. Waarvoor gebruiken sterrenkundigen het lichtjaar dan?"],
       },
     ],
   },
@@ -144,9 +144,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **bolle lens**?",
-        options: ["Lens dikker in midden, vergroot", "Lens dunner in midden, verkleint", "Gebogen spiegel, vergroot", "Vlakke glazen plaat, vergroot"],
+        options: ["Dikker in het midden, bundelt het licht", "Dunner in het midden, bundelt het licht", "Dikker in het midden, spreidt het licht", "Dunner in het midden, spreidt het licht"],
         answer: 0,
-        wrongHints: [null, "Dat is een holle lens. Welke vorm past bij het woord bol?", "Een lens laat licht door, een spiegel kaatst het terug.", "Een vlakke plaat is overal even dik. Buigt die het licht samen?"],
+        wrongHints: [null, "Een lens die in het midden dunner is, heet hol. Welke vorm hoort bij bol?", "Kan een lens die het licht spreidt zonlicht op één punt (een brandpunt) samenbrengen, zoals een vergrootglas?", "Dunner in het midden en het licht spreiden: dat doet een holle lens. Welke vorm past bij bol?"],
       },
       {
         q: "**Wet van reflectie**?",
@@ -238,9 +238,9 @@ const steps = [
       },
       {
         q: "Wat maakt **laserstraal** speciaal?",
-        options: ["Eén golflengte, golven in fase", "Alle kleuren door elkaar", "Sneller dan gewoon licht", "Buigt om hoeken heen"],
+        options: ["Eén golflengte, golven in fase", "Alle kleuren, golven in fase", "Eén golflengte, golven niet in fase", "Alle kleuren, golven niet in fase"],
         answer: 0,
-        wrongHints: [null, "Alle kleuren door elkaar is gewoon wit licht.", "Alle licht gaat in vacuüm even snel.", "Ook laserlicht gaat in een rechte lijn."],
+        wrongHints: [null, "Zie je bij een laserpen een regenboog of één kleur?", "Ook licht door een kleurfilter heeft bijna één golflengte, maar is geen laser. Wat is er anders aan hoe de golven lopen?", "Alle kleuren door elkaar is gewoon wit licht, zoals van een lamp. Wat is daar nog speciaal aan?"],
       },
       {
         q: "**3 sec tussen bliksem en donder** = afstand?",
@@ -271,9 +271,9 @@ const steps = [
       },
       {
         q: "**Reflectie-wet**: hoek van inval = ... ?",
-        options: ["Hoek van weerkaatsing", "Hoek van breking", "Hoek met de spiegel", "90° min weerkaatsing"],
+        options: ["Hoek tussen teruggekaatste straal en normaal", "Hoek tussen gebroken straal en normaal", "Hoek tussen teruggekaatste straal en spiegel", "Hoek tussen invallende straal en spiegel"],
         answer: 0,
-        wrongHints: [null, "Breking gaat over licht dat een andere stof ingaat, niet over terugkaatsen.", "Meet je de hoeken vanaf de spiegel of vanaf de normaal?", "Kies 30° inval: kaatst de straal dan terug onder 60°?"],
+        wrongHints: [null, "Breking gaat over licht dat een andere stof ingaat. Gaat licht bij een spiegel de spiegel in?", "Valt een straal in onder 30° met de normaal, dan maakt de teruggekaatste straal 60° met de spiegel. Is dat gelijk?", "De hoek van inval meet je vanaf de normaal. Is de hoek met de spiegel dan even groot?"],
       },
       {
         q: "Welke kleur weerkaatst een **gele citroen**?",
@@ -283,9 +283,9 @@ const steps = [
       },
       {
         q: "Wat is **UV-licht**?",
-        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Een soort geluid dat je niet hoort", "Een heel felle tint paars"],
+        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Onhoorbaar geluid boven 20.000 Hz", "Een heel felle tint paars"],
         answer: 0,
-        wrongHints: [null, "Onder rood heet die straling anders.", "UV is straling, geen trilling van lucht.", "Een tint paars kun je zien — UV ook?"],
+        wrongHints: [null, "Onzichtbare straling onder rood ken je van de afstandsbediening. Heet die ook UV?", "Geluid boven 20.000 Hz heet ultrasoon. Is UV een trilling van lucht of een soort straling?", "Een tint paars kun je zien — UV ook?"],
       },
       {
         q: "Mens hoort **frequenties** tot ... ?",
