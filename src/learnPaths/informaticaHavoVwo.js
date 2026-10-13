@@ -32,7 +32,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme**?",
-        options: ["Stap-voor-stap-recept om probleem op te lossen", "Een computer die stappen uitvoert", "Een database vol opgeslagen regels", "Een netwerk van gekoppelde computers"],
+        options: ["Een stap-voor-stap-recept om een probleem op te lossen", "Een computer die stappen uitvoert", "Een database vol opgeslagen regels", "Een netwerk van gekoppelde computers"],
         answer: 0,
         wrongHints: [null, "Een algoritme is geen apparaat — je kunt het ook op papier volgen.", "Een database bewaart gegevens; dat is nog geen werkwijze.", "Een netwerk is hardware plus verbindingen — geen beschrijving van een werkwijze."],
         uitlegPad: {
@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "**Binair zoeken** werkt:",
-        options: ["In gesorteerde lijst, halveer bereik elke stap", "In een ongesorteerde lijst, item voor item", "Alleen op bestanden met nullen en enen", "Alleen op lijsten met getallen erin"],
+        options: ["In een gesorteerde lijst, door het bereik steeds te halveren", "In een ongesorteerde lijst, item voor item", "Alleen op bestanden met nullen en enen", "Alleen op lijsten met getallen erin"],
         answer: 0,
-        wrongHints: [null, "Item voor item is lineair zoeken — en mag de lijst ongesorteerd zijn?", "Het woord 'binair' slaat hier niet op het soort bestand.", "Niet — werkt op alles wat je kunt vergelijken."],
+        wrongHints: [null, "Item voor item is lineair zoeken — en mag de lijst ongesorteerd zijn?", "Het woord 'binair' slaat hier niet op het soort bestand.", "Ook namen kun je binair doorzoeken. Wat moet er dan wél gelden voor de lijst?"],
         uitlegPad: {
           stappen: [{ titel: "Telefoonboek-strategie", tekst: "**Binair zoeken** (binary search): in **gesorteerde** lijst, kijk middelste element. Te groot? Zoek in eerste helft. Te klein? In tweede helft. Halveer bereik elke stap → **O(log n)** = zeer snel.\n\n1 miljoen items: binair zoekt in max 20 stappen, lineair (één voor één) in gemiddeld 500.000.\n\nWerkt zoals zoeken in oud telefoonboek: open in het midden, zoek verder in de juiste helft." }],
           niveaus: { basis: "Halveren in gesorteerd.", simpeler: "Binair = halveren", nogSimpeler: "Halveren in gesorteerd" },
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "**DRY** programming-principe:",
-        options: ["Don't Repeat Yourself","Do React Yourself","Dynamic Resource Yielding","Draft Ready Yes"],
+        options: ["Don't Repeat Yourself", "Debug, Run, Yield", "Don't Rewrite Yourself", "Don't Run Yet"],
         answer: 0,
-        wrongHints: [null, "DRY waarschuwt tegen kopiëren-en-plakken van dezelfde code — wat zou je dan níét moeten doen?", null, null],
+        wrongHints: [null, "DRY gaat niet over de stappen bij het draaien, maar over gekopieerde code. Wat moet je dan níét doen?", "Herschrijven (refactoren) is juist vaak goed. DRY waarschuwt voor iets anders: twee keer hetzelfde stuk code.", "DRY gaat niet over wanneer je code start, maar over dubbele code."],
         uitlegPad: {
           stappen: [{ titel: "Hergebruik", tekst: "**DRY = Don't Repeat Yourself**: maak van herhaalde code een **functie/klasse** om duplicatie te vermijden. Voordeel: één plek aanpassen → effect overal. Tegenovergesteld: WET (Write Everything Twice — slecht). Onderhoudbaarheid groot verschil." }],
           niveaus: { basis: "Don't Repeat Yourself.", simpeler: "DRY = niet herhalen", nogSimpeler: "Don't Repeat Yourself" },
@@ -101,9 +101,9 @@ const steps = [
       },
       {
         q: "**HTTPS** verschilt van HTTP doordat:",
-        options: ["Verkeer wordt versleuteld", "Pagina's laden sneller", "Het is goedkoper voor de site", "Alleen voor grote websites"],
+        options: ["het verkeer versleuteld wordt", "pagina's sneller laden", "de site op virussen gecontroleerd is", "wachtwoorden op de server gehasht worden"],
         answer: 0,
-        wrongHints: [null, "Waar staat de S voor — snelheid of iets anders?", "Kosten zijn niet het verschil.", "Elke site kan HTTPS gebruiken."],
+        wrongHints: [null, "Waar staat de S voor — snelheid of iets anders?", "Ook een HTTPS-site kan malware bevatten. Waar staat de S voor?", "Wat de server opslaat, staat los van HTTPS. Waar werkt HTTPS dan op?"],
         uitlegPad: {
           stappen: [{ titel: "S = Secure", tekst: "**HTTPS** (HTTP Secure): verkeer geëncrypteerd via **TLS** (vroeger SSL). Voorkomt afluisteren + manipulatie tijdens transport. Vandaag standaard — browsers waarschuwen voor HTTP-sites. Slot-symbool naast URL = HTTPS actief." }],
           niveaus: { basis: "Encryptie.", simpeler: "HTTPS = TLS", nogSimpeler: "Encryptie" },
@@ -111,7 +111,7 @@ const steps = [
       },
       {
         q: "Wat is een **DDoS-aanval**?",
-        options: ["Overspoelen server met verkeer", "Wachtwoorden stelen via nepmail", "Database aanvallen via invoervelden", "Bestanden versleutelen voor losgeld"],
+        options: ["Een server overspoelen met verkeer", "Wachtwoorden stelen via nepmail", "Database aanvallen via invoervelden", "Bestanden versleutelen voor losgeld"],
         answer: 0,
         wrongHints: [null, "Dat is phishing.", "Dat is SQL-injectie.", "Dat is ransomware."],
         uitlegPad: {
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Welk **WLAN-protocol** is meest veilig (2024)?",
-        options: ["WPA3","WEP","WPA","Open netwerk"],
+        options: ["WPA3", "WEP", "WPA", "WPA2"],
         answer: 0,
-        wrongHints: [null, "Verouderd + gebroken.", "Oud — inmiddels twee keer opgevolgd door nieuwere versies.", "Geen beveiliging."],
+        wrongHints: [null, "WEP is de oudste vorm en is al lang te kraken.", "Oud — inmiddels twee keer opgevolgd door nieuwere versies.", "WPA2 wordt nog veel gebruikt, maar heeft al een nieuwere opvolger."],
         uitlegPad: {
           stappen: [{ titel: "WPA3 = nieuwste", tekst: "**WLAN-beveiligings-evolutie**: WEP (1997, gebroken) → WPA (2003) → **WPA2** (2004, lange tijd standaard) → **WPA3** (2018, nieuwste). WPA3 lost zwakheden WPA2 op (KRACK-aanval) + biedt bescherming tegen offline brute-force-aanvallen. Bij router-instellingen: kies WPA3 als beschikbaar." }],
           niveaus: { basis: "WPA3.", simpeler: "Veiligst = WPA3", nogSimpeler: "WPA3" },
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "**AVG / GDPR** is:",
-        options: ["EU-privacy-wet sinds 2018", "Nederlandse belastingwet", "Een beveiligingsstandaard", "Amerikaanse wet tegen hacken"],
+        options: ["Europese privacywet sinds 2018", "Nederlandse wet op auteursrecht", "Een technische beveiligingsstandaard", "Amerikaanse wet tegen hacken"],
         answer: 0,
-        wrongHints: [null, "Geen belastingwet — over welk recht van burgers gaat de AVG?", "Het is een wét van de EU, geen technische beveiligings-standaard.", "Het is geen Amerikaanse wet — en gaat het over hacken of over iets anders?"],
+        wrongHints: [null, "Auteursrecht staat in de Auteurswet. Over welk recht van burgers gaat de AVG?", "Het is een wét van de EU, geen technische beveiligings-standaard.", "Het is geen Amerikaanse wet — en gaat het over hacken of over iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "GDPR/AVG", tekst: "**AVG** (Algemene Verordening Gegevensbescherming) = NL-naam. **GDPR** (General Data Protection Regulation) = EU. Sinds 25 mei 2018. Bescherming persoonsgegevens van EU-burgers. Rechten: inzage, correctie, **vergetelheid** ('right to be forgotten'), dataportabiliteit. **Datalek** moet binnen 72u gemeld worden bij Autoriteit Persoonsgegevens. Boetes tot 4% wereldwijde omzet of €20 mln (hoogste van twee)." }],
           niveaus: { basis: "EU-privacy-wet.", simpeler: "AVG = privacy", nogSimpeler: "EU-privacy-wet" },
@@ -150,9 +150,9 @@ const steps = [
     checks: [
       {
         q: "**Primaire sleutel** in DB-tabel is:",
-        options: ["Uniek ID per rij","Wachtwoord","Buitenste tabel","SQL-commando"],
+        options: ["Een uniek ID per rij", "Een verwijzing naar een andere tabel", "De eerste kolom van de tabel", "Een SQL-commando"],
         answer: 0,
-        wrongHints: [null, "Deze 'sleutel' opent niets — hij wijst iets aan. Wat moet je per rij kunnen aanwijzen?", null, "Het is een eigenschap ván een tabel, geen commando dat je uitvoert."],
+        wrongHints: [null, "Dat is een foreign key (verwijssleutel). Wat moet je per rij kunnen aanwijzen?", "De plek maakt niet uit. Wat moet er gelden voor de waarden in die kolom?", "Het is een eigenschap ván een tabel, geen commando dat je uitvoert."],
         uitlegPad: {
           stappen: [{ titel: "Identificeert rij uniek", tekst: "**Primary key**: unieke identificatie per rij. Vaak auto-incrementing ID (1, 2, 3, ...). Garandeert geen duplicates. Andere tabellen kunnen verwijzen via **foreign key**. Voorbeeld: Leerling-ID 1 verschilt van Leerling-ID 2 zelfs als beide 'Anna' heten." }],
           niveaus: { basis: "Uniek ID.", simpeler: "PK = uniek", nogSimpeler: "Uniek ID" },
@@ -170,7 +170,7 @@ const steps = [
       },
       {
         q: "**JOIN** in SQL doet:",
-        options: ["Combineert rijen uit 2+ tabellen", "Sorteert rijen op een kolom", "Verwijdert dubbele rijen uit tabel", "Maakt een nieuwe lege tabel aan"],
+        options: ["Combineert rijen uit twee of meer tabellen", "Sorteert rijen op een kolom", "Verwijdert dubbele rijen uit een tabel", "Maakt een nieuwe lege tabel aan"],
         answer: 0,
         wrongHints: [null, "Dat is ORDER BY.", "Dat is DISTINCT.", "Dat is CREATE TABLE."],
         uitlegPad: {
@@ -180,9 +180,9 @@ const steps = [
       },
       {
         q: "**1NF (eerste normaalvorm)** vereist:",
-        options: ["Atomaire waarden","Indexering","Versleuteling","JSON-formaat"],
+        options: ["Atomaire waarden", "Indexering", "Versleuteling", "Koppelingen via foreign keys"],
         answer: 0,
-        wrongHints: [null, "Indexen maken zoeken sneller — maar normaalvormen gaan over de índeling van je data. Wat mag er niet in één cel?", "Versleuteling is beveiliging — normaalvormen gaan over structuur.", null],
+        wrongHints: [null, "Indexen maken zoeken sneller — maar normaalvormen gaan over de índeling van je data. Wat mag er niet in één cel?", "Versleuteling is beveiliging — normaalvormen gaan over structuur.", "Foreign keys koppelen tabellen. 1NF gaat over wat er in één cel mag staan."],
         uitlegPad: {
           stappen: [{ titel: "1NF = elke cel één waarde", tekst: "**1e Normaalvorm (1NF)**: elke cel bevat **één enkele atomaire waarde**, geen lijsten of geneste structuren. **Foute** cel: 'Wiskunde, Engels, Frans' in één cel. **Goede** oplossing: aparte rijen per vak in vakken-tabel.\n\nHogere normaalvormen (2NF, 3NF) elimineren verdere redundantie + afhankelijkheid-anomalieën." }],
           niveaus: { basis: "Atomair.", simpeler: "1NF = 1 waarde per cel", nogSimpeler: "Atomair" },
@@ -190,9 +190,9 @@ const steps = [
       },
       {
         q: "**Big Data 4 V's**:",
-        options: ["Volume + Velocity + Variety + Veracity", "Virus + Verbinding + Versie + Venster", "Verkoop + Vraag + Voorraad + Verlies", "Volume + Video + Verkeer + Verbinding"],
+        options: ["Volume + Velocity + Variety + Veracity", "Volume + Velocity + Variety + Visibility", "Volume + Velocity + Versie + Veracity", "Volume + Video + Variety + Veracity"],
         answer: 0,
-        wrongHints: [null, "Dit zijn computerwoorden, maar ze zeggen niets over de data zelf.", null, "Eén hiervan klopt, de andere drie niet — welke kenmerken van data ken je?"],
+        wrongHints: [null, "Drie kloppen. Zichtbaarheid is geen kenmerk van big data; welke V gaat over de betrouwbaarheid?", "'Versie' zegt iets over software, niet over data. Welke V gaat over de soorten data?", "Video is maar één soort data. Welke V gaat over de snelheid?"],
         uitlegPad: {
           stappen: [{ titel: "4 V-kenmerken", tekst: "**Big Data 4 V's**:\n• **Volume**: groot (terabytes/petabytes).\n• **Velocity**: snelheid van data-stroom (real-time IoT, social media).\n• **Variety**: verschillende formaten (tekst, video, log, sensor).\n• **Veracity**: betrouwbaarheid + accuratheid (data kan vies, onzeker zijn).\n\nSoms 5e V: Value (waarde). Klassiek voorbeeld: Twitter-feed = volume + velocity + variety + veracity-uitdagingen tegelijk." }],
           niveaus: { basis: "Vol/Vel/Var/Ver.", simpeler: "4V", nogSimpeler: "Vol/Vel/Var/Ver" },
@@ -209,7 +209,7 @@ const steps = [
     checks: [
       {
         q: "**Turing-test** test:",
-        options: ["Of machine onderscheidbaar is van mens", "Hoeveel rekenkracht een computer heeft", "Hoe snel een computer data verstuurt", "Of een programma zonder fouten werkt"],
+        options: ["Of een machine van een mens te onderscheiden is", "Hoeveel rekenkracht een computer heeft", "Hoe snel een computer data verstuurt", "Of een programma zonder fouten werkt"],
         answer: 0,
         wrongHints: [null, "Kracht meet je met een benchmark — de Turing-test is een gesprekstest. Wat probeert de ondervrager te ontdekken?", "Snelheid speelt geen rol — het is een gesprekstest.", "Of code correct werkt test je met unit-tests — waar gaat dit beroemde gedachte-experiment over?"],
         uitlegPad: {
@@ -219,9 +219,9 @@ const steps = [
       },
       {
         q: "**LLM** staat voor:",
-        options: ["Large Language Model","Long Linked Memory","Latin Letters Model","Last Logic Module"],
+        options: ["Large Language Model", "Large Learning Machine", "Linked Language Memory", "Logical Language Model"],
         answer: 0,
-        wrongHints: [null, "Denk aan wat zo'n model vooral doet: tekst begrijpen en maken. Welke woorden passen daarbij?", null, null],
+        wrongHints: [null, "Bijna. Over welk soort data gaat het? Denk aan wat een chatbot doet.", "Het eerste woord zegt iets over hoe groot het model is.", "Een LLM rekent niet met logische regels maar met kansen. Welk woord zegt iets over de grootte?"],
         uitlegPad: {
           stappen: [{ titel: "Voorspel volgend woord", tekst: "**LLM = Large Language Model**: model getraind op enorme tekst-corpus dat 'volgend woord' voorspelt op basis context. Voorbeelden: **ChatGPT** (OpenAI), **Claude** (Anthropic), **Gemini** (Google), **LLaMA** (Meta open source). Onderscheid: niet **denken** — herkennen patronen op grote schaal." }],
           niveaus: { basis: "Large Language Model.", simpeler: "LLM = taalmodel", nogSimpeler: "Large Language Model" },
@@ -229,7 +229,7 @@ const steps = [
       },
       {
         q: "Wat is **AI-hallucinatie**?",
-        options: ["AI produceert plausibel-klinkende onzin", "Een storing waardoor de AI crasht", "AI die foto's en video's herkent", "AI die gesproken taal omzet in tekst"],
+        options: ["AI die geloofwaardig klinkende onzin maakt", "Een storing waardoor de AI crasht", "AI die foto's en video's herkent", "AI die gesproken taal omzet in tekst"],
         answer: 0,
         wrongHints: [null, "Het is geen defect — het model doet gewoon zijn werk. Wat klopt er dan niet aan de úítkomst?", "Dat is beeldherkenning — iets heel anders.", "Dat is spraakherkenning — iets heel anders."],
         uitlegPad: {
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "**AI-bias** ontstaat door:",
-        options: ["Vooringenomen trainingsdata", "Fouten in de computerchip", "Te weinig rekenkracht", "Een te trage internetverbinding"],
+        options: ["Vooringenomen trainingsdata", "Fouten in de computerchip", "Programmeurs die bewust oneerlijke regels typen", "Een te trage internetverbinding"],
         answer: 0,
-        wrongHints: [null, "Hardwarefouten maken een model niet vooringenomen.", "Rekenkracht bepaalt de snelheid, niet de eerlijkheid.", "Internetsnelheid heeft niets met eerlijke uitkomsten te maken."],
+        wrongHints: [null, "Hardwarefouten maken een model niet vooringenomen.", "Bias ontstaat meestal onbedoeld, en bij ML typt niemand de regels. Waar komen ze dan vandaan?", "Internetsnelheid heeft niets met eerlijke uitkomsten te maken."],
         uitlegPad: {
           stappen: [{ titel: "Garbage in, garbage out", tekst: "**Bias** = systemische vertekening in AI-output. Komt door **vooringenomen trainingsdata**. Voorbeelden:\n• Gezichtsherkenning: getraind op vooral lichte huidskleur → werkt slechter op donkere.\n• Amazon-sollicitatie-AI: getraind op CV's mannen → discrimineerde vrouwen.\n• LLM's: kunnen seksisme, racisme overnemen uit web-data.\n\nAanpakken: diverse data, audits, fairness-evaluaties." }],
           niveaus: { basis: "Trainingsdata.", simpeler: "Bias = vooringenomen data", nogSimpeler: "Trainingsdata" },
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "**EU AI Act** (2024) reguleert AI op basis van:",
-        options: ["Risico-niveau","Land van oorsprong","Prijs","Gebruikers-aantal"],
+        options: ["Risico-niveau", "Land van oorsprong", "Bedrijfsomvang", "Aantal gebruikers"],
         answer: 0,
-        wrongHints: [null, "De wet kijkt niet naar wáár de AI vandaan komt, maar naar wat er mis kan gaan — hoe noem je dat?", null, null],
+        wrongHints: [null, "De wet kijkt niet naar wáár de AI vandaan komt, maar naar wat er mis kan gaan — hoe noem je dat?", "Ook kleine bedrijven vallen onder de wet. Waar kijkt de wet wél naar?", "Ook een AI met weinig gebruikers kan schade doen, bijvoorbeeld bij sollicitaties. Waar kijkt de wet dan naar?"],
         uitlegPad: {
           stappen: [{ titel: "Risicogebaseerd", tekst: "**EU AI Act** (eerste grote AI-wet wereldwijd, 2024): **risico-niveau-aanpak**:\n• **Onaanvaardbaar** (verboden): social scoring (China-stijl), realtime biometrie publieke ruimte, manipulatie.\n• **Hoog risico**: medisch, kritieke infra, HR, onderwijs-AI — strenge regels.\n• **Beperkt risico** (transparantie): chatbots, deepfakes moeten gemarkeerd.\n• **Minimaal**: vrij gebruik (zoals spamfilter).\n\nBoetes tot 7% wereldwijde omzet. NL regelt het toezicht via een aanvullende uitvoeringswet." }],
           niveaus: { basis: "Risico-niveau.", simpeler: "AI Act = risico-tiers", nogSimpeler: "Risico-niveau" },
@@ -270,7 +270,7 @@ const steps = [
         q: "Hoeveel **operaties** doet binair zoeken in lijst van 1 miljoen items (worst case)?",
         options: ["~20", "~500.000", "~1.000.000", "~1.000"],
         answer: 0,
-        wrongHints: [null, "Lineair gemiddeld.", "Niet — veel minder.", "Meer dan nodig: halveer een miljoen eens een paar keer — hoe snel krimpt dat?"],
+        wrongHints: [null, "Zoveel stappen heb je gemiddeld bij lineair zoeken. Hoe vaak kun je een miljoen halveren?", "Zoveel stappen kost lineair zoeken in het slechtste geval. Wat doet binair zoeken anders?", "Meer dan nodig: halveer een miljoen eens een paar keer — hoe snel krimpt dat?"],
         uitlegPad: {
           stappen: [{ titel: "log₂(1 miljoen) ≈ 20", tekst: "**Binair zoeken**: O(log n). log₂(1.000.000) ≈ **20**. Elke stap halveer je bereik: 1.000.000 → 500.000 → 250.000 → ... → 1.\n\nVergelijk: lineair zoeken = O(n) = gemiddeld 500.000 stappen.\n\nVerschil: 20 vs 500.000 = factor 25.000 sneller bij grote lijsten." }],
           niveaus: { basis: "~20.", simpeler: "log n = 20", nogSimpeler: "~20" },
@@ -280,7 +280,7 @@ const steps = [
         q: "Welk **protocol** stuurt e-mail?",
         options: ["SMTP","HTTP","FTP","DNS"],
         answer: 0,
-        wrongHints: [null, "Web-pagina's.", "Bestanden.", "Naam → IP."],
+        wrongHints: [null, "HTTP haalt webpagina's op, geen e-mail.", "FTP zet bestanden over, maar verstuurt geen e-mail.", "DNS vertaalt namen naar IP-adressen; het verstuurt niets."],
         uitlegPad: {
           stappen: [{ titel: "SMTP", tekst: "**SMTP** (Simple Mail Transfer Protocol): voor **versturen** e-mail. **POP3** of **IMAP**: voor **ontvangen** (cliënt-server). HTTP = web, FTP = bestanden, DNS = naam→IP-vertaling." }],
           niveaus: { basis: "SMTP.", simpeler: "Mail = SMTP", nogSimpeler: "SMTP" },
@@ -300,7 +300,7 @@ const steps = [
         q: "Welke is een **NoSQL-database**?",
         options: ["MongoDB","PostgreSQL","MySQL","Oracle"],
         answer: 0,
-        wrongHints: [null, "De naam eindigt op SQL — is dat dan Nó-SQL? Denk aan tabellen vs documenten.", "Ook deze draait op tabellen met SQL — welke uit het rijtje slaat documenten op?", null],
+        wrongHints: [null, "De naam eindigt op SQL — is dat dan Nó-SQL? Denk aan tabellen vs documenten.", "Ook deze draait op tabellen met SQL — welke uit het rijtje slaat documenten op?", "Oracle Database werkt ook met tabellen en SQL. Welke uit het rijtje slaat documenten op?"],
         uitlegPad: {
           stappen: [{ titel: "Document-database", tekst: "**MongoDB** = NoSQL document-database (JSON-achtige documenten). **PostgreSQL, MySQL, Oracle, SQL Server** = relationele SQL-databases. NoSQL-typen ook: Redis (key-value), Cassandra (column), Neo4j (graph). Gebruikt voor schaalbare web-apps + flexibele schema's." }],
           niveaus: { basis: "MongoDB.", simpeler: "NoSQL = MongoDB", nogSimpeler: "MongoDB" },

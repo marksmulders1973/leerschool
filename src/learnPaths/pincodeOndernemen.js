@@ -229,9 +229,9 @@ const steps = [
       },
       {
         q: "Waarom is **veldonderzoek** vaak nuttiger dan deskresearch alleen?",
-        options: ["Je hoort het van je eigen doelgroep", "Het is gratis voor de ondernemer", "Het is altijd sneller dan zoeken", "Het is wettelijk verplicht voor starters"],
+        options: ["Je hoort het van je eigen doelgroep", "Het kost minder geld dan deskresearch", "Het gaat sneller dan cijfers opzoeken", "De cijfers zijn officieel en betrouwbaar"],
         answer: 0,
-        wrongHints: [null, "Veldonderzoek kost juist meer.", "Tegendeel — interviews kosten tijd.", "Niet verplicht."],
+        wrongHints: [null, "Veldonderzoek kost juist meer tijd en geld. Wat levert het op dat deskresearch niet heeft?", "Interviews en enquêtes kosten juist meer tijd. Waarom doe je het dan toch?", "Officiële cijfers vind je juist bij deskresearch, zoals bij het CBS. Wat is het voordeel van zelf vragen stellen?"],
         uitlegPad: {
           stappen: [{ titel: "Algemeen vs specifiek", tekst: "Desk geeft algemene marktcijfers. Veld geeft antwoorden van JOUW klanten over JOUW idee. Veel waardevoller voor een concrete beslissing." }],
           woorden: [{ woord: "specifiek onderzoek", uitleg: "Onderzoek gericht op JOUW situatie/doelgroep — niet 'de markt in het algemeen'." }],
@@ -243,9 +243,9 @@ const steps = [
       },
       {
         q: "Welk kenmerk hoort bij **deskresearch**?",
-        options: ["Goedkoop, snel toegankelijke informatie", "Specifiek voor jouw doelgroep", "Vereist veel persoonlijke gesprekken", "Levert altijd nieuwe inzichten"],
+        options: ["Goedkoop, snel toegankelijke informatie", "Specifiek voor jouw doelgroep", "Vereist veel persoonlijke gesprekken", "Levert nieuwe gegevens over jouw klanten"],
         answer: 0,
-        wrongHints: [null, "Specifiek = juist veldonderzoek.", "Persoonlijke gesprekken = veld.", "Desk = algemeen, soms al bekend."],
+        wrongHints: [null, "Gegevens speciaal over jouw doelgroep verzamel je zelf. Hoe heet dat onderzoek?", "Met gesprekken verzamel je zelf nieuwe gegevens. Doe je dat achter je bureau?", "Bij deskresearch gebruik je gegevens die al bestaan. Zijn die nieuw?"],
         uitlegPad: {
           stappen: [{ titel: "Voordelen deskresearch", tekst: "Voordelen: GOEDKOOP (vaak gratis info) + SNEL (binnen uren) + GEMAKKELIJK toegankelijk." }],
           woorden: [{ woord: "deskresearch-voordeel", uitleg: "Lage drempel + brede info + snel beeld van de markt." }],
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "De **4 P's** van marketing zijn:",
-        options: ["Product, Prijs, Plaats, Promotie", "Personeel, Productiviteit, Promotie, Pensioen", "Plan, Profit, Patent, People", "Product, Prijs, Plaats, Pakket"],
+        options: ["Product, Prijs, Plaats, Promotie", "Product, Prijs, Personeel, Promotie", "Product, Prijs, Plaats, Profit", "Product, Prijs, Plaats, Pakket"],
         answer: 0,
-        wrongHints: [null, "Personeel hoort bij personeelsbeleid.", "Internationale termen die niet in Pincode staan.", "Een pakket is geen aparte P van de marketingmix."],
+        wrongHints: [null, "Personeel is in winkels soms een extra (vijfde) P. Welke P van de vier mis je dan?", "Profit (winst) is het doel van een bedrijf, geen onderdeel van de marketingmix. Hoe zorg je dat klanten van je product horen?", "Een pakket is geen aparte P van de marketingmix."],
         uitlegPad: {
           stappen: [{ titel: "Vier instrumenten", tekst: "Marketing-mix = 4 P's. Product (wat verkoop je) + Prijs (wat vraag je) + Plaats (waar verkoop je) + Promotie (hoe maak je bekend)." }],
           woorden: [{ woord: "marketing-mix", uitleg: "De vier (of zes) instrumenten waarmee je je markt benadert." }, { woord: "4 P's", uitleg: "Product, Prijs, Plaats, Promotie. Soms uitgebreid met Personeel en Presentatie (6 P's)." }],
@@ -312,9 +312,9 @@ const steps = [
       },
       {
         q: "Wat is een **USP**?",
-        options: ["Wat jou anders maakt dan de concurrent", "Een soort BTW voor ondernemers", "Een analyse van de hele markt", "Een lening voor startende ondernemers"],
+        options: ["Wat jou anders maakt dan de concurrent", "De prijs die je voor je product vraagt", "Een analyse van de hele markt", "De groep klanten die je wilt bereiken"],
         answer: 0,
-        wrongHints: [null, "USP heeft niets met BTW te maken.", "Een marktanalyse is iets breders.", "Geen lening-vorm."],
+        wrongHints: [null, "Een lage prijs kán een USP zijn, maar de prijs zelf is het niet. Wat betekent 'unique' (uniek)?", "Een marktanalyse is iets breders.", "Dat is je doelgroep. Een USP zegt iets over jou tegenover anderen — wat?"],
         uitlegPad: {
           stappen: [{ titel: "Wat maakt JOU uniek?", tekst: "Unique Selling Point = je 'reden om bij JOU te kopen, niet bij de concurrent'. 1 of 2 dingen waar jij sterk in bent." }],
           woorden: [{ woord: "USP", uitleg: "Unique Selling Point — uniek verkoop-argument. Wat onderscheidt jou van concurrenten?" }],
@@ -326,9 +326,9 @@ const steps = [
       },
       {
         q: "Een **hoge prijs** (€8 voor friet) past bij welke marketing-strategie?",
-        options: ["Exclusieve kwaliteit-uitstraling", "Massaverkoop met veel klanten", "Doelgroep met laag inkomen", "Laagste-prijs-strategie"],
+        options: ["Exclusieve uitstraling met topkwaliteit", "Massaverkoop met veel klanten", "Een doelgroep van scholieren met weinig geld", "Penetratie om de markt te veroveren"],
         answer: 0,
-        wrongHints: [null, "Massa = lage prijs, hoog volume.", "Lage inkomens kunnen hoge prijs niet vaak betalen.", "Tegenovergesteld."],
+        wrongHints: [null, "Massaverkoop werkt meestal met lage prijzen en grote aantallen. Past €8 daarbij?", "Scholieren met weinig geld betalen niet vaak €8 voor friet. Voor wie is zo'n prijs wel bedoeld?", "Bij penetratie start je juist met een lage prijs. Wat straalt een hoge prijs uit?"],
         uitlegPad: {
           stappen: [{ titel: "Hoge prijs signaleert kwaliteit", tekst: "Een hoge prijs maakt je product EXCLUSIEF — alleen bepaalde mensen kopen het. Past bij premium-merk, niet bij massa-strategie." }],
           woorden: [{ woord: "premium-strategie", uitleg: "Hoog prijspunt + sterke uitstraling + kleinere maar koopkrachtige doelgroep." }, { woord: "massa-strategie", uitleg: "Lage prijs + groot volume + brede doelgroep." }],
@@ -340,9 +340,9 @@ const steps = [
       },
       {
         q: "**Vuistregel klantenwerving**:",
-        options: ["Een nieuwe klant werven is duurder", "Nieuwe klanten zijn altijd gratis", "Bestaande klanten kosten meer", "Alle klanten kosten hetzelfde"],
+        options: ["Een nieuwe klant werven kost meer dan een vaste houden", "Werven en houden kosten ongeveer even veel", "Een vaste klant houden kost meer dan een nieuwe werven", "Nieuwe klanten werf je het goedkoopst met korting"],
         answer: 0,
-        wrongHints: [null, "Reclame en moeite kosten geld.", "Tegenovergesteld.", "Verschil is groot."],
+        wrongHints: [null, "Er is wel een groot verschil. Wat kost meer moeite: iemand nieuw overtuigen of een vaste klant tevreden houden?", "Een vaste klant kent je al. Hoeveel reclame moet je maken om een onbekende te overtuigen?", "Korting kost je juist geld. Wat zegt de vuistregel over nieuwe tegenover vaste klanten?"],
         uitlegPad: {
           stappen: [{ titel: "Trouw is goud", tekst: "Bestaande klant kent je al, vertrouwt je. Nieuwe klant moet je vinden, overtuigen, eerste keer laten kopen. Veel duurder per persoon." }],
           woorden: [{ woord: "klantbinding", uitleg: "Bestaande klanten tevreden houden zodat ze terugkomen. Goedkoper dan nieuwe werven." }, { woord: "acquisitie", uitleg: "Nieuwe klanten werven. Duur door reclame, kennismakingsaanbiedingen, eerste contact." }],
@@ -354,9 +354,9 @@ const steps = [
       },
       {
         q: "Sam wil mensen op een festival bereiken. Welk promotie-kanaal werkt het beste?",
-        options: ["Instagram en TikTok", "Krantenadvertentie", "Telefoongids", "Brieven sturen"],
+        options: ["Berichten op Instagram en TikTok", "Een advertentie in de regionale krant", "Radioreclame op een landelijke zender", "Folders in de brievenbus in de wijk"],
         answer: 0,
-        wrongHints: [null, "Festivalbezoekers bereik je niet gericht via de krant.", "Niet meer in gebruik.", "Vaak ongelezen, hoge kosten."],
+        wrongHints: [null, "Festivalbezoekers bereik je niet gericht via de krant.", "Landelijke radio is duur en bereikt vooral mensen die niet naar het festival gaan. Waar zitten festivalgangers vaak?", "Folders bereiken buurtbewoners, niet gericht festivalbezoekers. Hoe bereik je jongeren die naar een festival gaan?"],
         uitlegPad: {
           stappen: [{ titel: "Doelgroep bepaalt kanaal", tekst: "Kies het promotie-kanaal waar JOUW DOELGROEP zit. Festivalbezoekers 16-35 zijn op TikTok + Instagram, niet in de krant." }],
           woorden: [{ woord: "promotie-kanaal", uitleg: "Medium om je doelgroep te bereiken: socials, krant, radio, etc." }],
@@ -402,7 +402,7 @@ const steps = [
         q: "Een ondernemer heeft omzet **€2.000**, vaste kosten **€500**, variabele kosten **€800**. Wat is de winst?",
         options: ["€700", "€1.500", "€1.200", "€500"],
         answer: 0,
-        wrongHints: [null, "Vergeet niet ALLE kosten af te trekken.", "Je trok alleen de variabele kosten af — de vaste kosten ook.", "Dat is alleen het bedrag van de vaste kosten, niet de winst."],
+        wrongHints: [null, "Je trok alleen de vaste kosten af. Welke kosten moeten er nog af?", "Je trok alleen de variabele kosten af — de vaste kosten ook.", "Dat is alleen het bedrag van de vaste kosten, niet de winst."],
         uitlegPad: {
           stappen: [{ titel: "Winst-formule", tekst: "Winst = Omzet − Totale Kosten. Totale Kosten = Vast + Variabel. €2.000 − (€500 + €800) = €700." }],
           woorden: [{ woord: "omzet", uitleg: "Aantal × prijs. Totaal binnenkomend geld." }, { woord: "totale kosten", uitleg: "Vaste + variabele kosten samen." }, { woord: "winst", uitleg: "Omzet minus totale kosten. Positief = winst, negatief = verlies." }],
@@ -416,7 +416,7 @@ const steps = [
         q: "Welke kost is **VARIABEL** voor een foodtruck?",
         options: ["Aardappelen en olie", "Huur kraampje", "Verzekering", "Telefoon-abo"],
         answer: 0,
-        wrongHints: [null, "Huur is vast.", "Verzekering is vast.", "Telefoon is vast."],
+        wrongHints: [null, "Betaal je meer huur als je meer friet verkoopt?", "Verandert de verzekering als je meer friet bakt?", "Kost je abonnement meer op een drukke dag?"],
         uitlegPad: {
           stappen: [{ titel: "Wat verandert MET aantal stuks?", tekst: "Variabel = verandert met productie. Meer friet bakken = meer aardappel/olie nodig. Huur/verzekering/abo blijft hetzelfde, ongeacht of je 10 of 1000 frieten verkoopt." }],
           woorden: [{ woord: "variabele kosten", uitleg: "Kosten die meebewegen met productie/verkoop: grondstof, verpakking, energie-per-stuk." }, { woord: "vaste kosten", uitleg: "Kosten die hetzelfde blijven: huur, verzekering, abonnementen." }],
@@ -428,9 +428,9 @@ const steps = [
       },
       {
         q: "Het **break-even-punt** is wanneer:",
-        options: ["Omzet = totale kosten", "Winst maximaal", "Verkoop maximaal", "De ondernemer stopt"],
+        options: ["Omzet = totale kosten", "Winst is maximaal", "Omzet = vaste kosten", "Omzet = variabele kosten"],
         answer: 0,
-        wrongHints: [null, "Maximale winst zit hoger dan break-even.", "Bij break-even verkoop je niet het maximum — denk aan winst en verlies.", "Stoppen is geen economisch begrip."],
+        wrongHints: [null, "Maximale winst zit hoger dan break-even.", "Dan ben je de variabele kosten vergeten. Is er dan nog verlies of niet?", "Dan heb je de vaste kosten nog niet terugverdiend. Welke kosten moeten allemaal gedekt zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Quitte draaien", tekst: "Break-even-punt (BEP) = de hoeveelheid waar omzet PRECIES gelijk is aan totale kosten. Boven BEP = winst. Onder BEP = verlies." }],
           woorden: [{ woord: "break-even-punt", uitleg: "Punt waar omzet = kosten. Engels 'break even' = quitte spelen." }, { woord: "dekkingsbijdrage", uitleg: "Verkoopprijs − variabele kosten per stuk. Wat overblijft om vaste kosten te dekken." }],
@@ -444,7 +444,7 @@ const steps = [
         q: "Sam verkoopt friet voor €5. Variabele kosten **€1,50** per friet. Vaste kosten **€140** per dag. **Hoeveel friet moet hij verkopen om break-even** te draaien?",
         options: ["40 friet", "28 friet", "94 friet", "100 friet"],
         answer: 0,
-        wrongHints: [null, "Te weinig — je deelde door de verkoopprijs. Welk deel van de €5 blijft per friet echt over?", "Te veel — controleer de berekening.", "Te veel — controleer je deling."],
+        wrongHints: [null, "Te weinig — je deelde door de verkoopprijs. Welk deel van de €5 blijft per friet echt over?", "Je deelde door de variabele kosten (€1,50). Welk bedrag blijft er per friet over als je die van de prijs aftrekt?", "Te veel. Hoe vaak past de bijdrage per friet (prijs min variabele kosten) in €140?"],
         uitlegPad: {
           stappen: [{ titel: "Bereken in 2 stappen", tekst: "(1) Dekkingsbijdrage per friet: €5 − €1,50 = €3,50. (2) BEP: vaste kosten / dekkingsbijdrage = €140 / €3,50 = 40 frieten." }],
           woorden: [{ woord: "dekkingsbijdrage", uitleg: "Wat elke verkochte eenheid bijdraagt aan dekken van vaste kosten." }],
