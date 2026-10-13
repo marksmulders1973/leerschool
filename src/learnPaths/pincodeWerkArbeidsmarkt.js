@@ -607,7 +607,7 @@ const steps = [
       },
       {
         q: "Hogere productiviteit kan leiden tot:",
-        options: ["Lagere kosten per product of hogere lonen", "Hogere prijzen en hogere lonen", "Meer werkloosheid en lagere lonen", "Minder winst voor bedrijven"],
+        options: ["Lagere kosten per product of hogere lonen", "Hogere prijzen en hogere lonen", "Meer werkloosheid en lagere lonen", "Lagere winst en minder investeringen"],
         answer: 0,
         wrongHints: [null, "Als je per uur meer maakt, wordt elk product dan duurder of goedkoper om te maken?", "Soms verdwijnt werk door machines, maar wat gebeurt er gemiddeld met lonen als iedereen meer per uur maakt?", "Als je met hetzelfde werk meer maakt, dalen je kosten per product. Wat doet dat met de winst?"],
         uitlegPad: {
@@ -621,7 +621,7 @@ const steps = [
       },
       {
         q: "Productiviteit Nederland is ongeveer:",
-        options: ["€60 per gewerkt uur", "€25 per uur", "€150 per uur", "€35 per uur"],
+        options: ["€60 per uur", "€25 per uur", "€150 per uur", "€35 per uur"],
         answer: 0,
         wrongHints: [null, "Met €25 per uur zou Nederland bij de armere landen horen, zoals Mexico. Klopt dat?", "Zoveel levert een gemiddeld uur niet op: ook winkelpersoneel en schoonmakers tellen mee.", "Zelfs Duitsland zit een stuk hoger. Waar staat Nederland in het rijtje?"],
         uitlegPad: {
@@ -754,7 +754,7 @@ const steps = [
       },
       {
         q: "Waarom staat sociale zekerheid **onder druk**?",
-        options: ["Door de vergrijzing van de bevolking", "Door fraude met uitkeringen", "Door de hoge staatsschuld", "Door de lage rente op spaargeld"],
+        options: ["Door de vergrijzing in Nederland", "Door fraude met uitkeringen", "Door de hoge staatsschuld", "Door de lage rente op spaargeld"],
         answer: 0,
         wrongHints: [null, "Fraude komt voor, maar het gaat om een klein deel van het geld. Wat zorgt voor een veel grotere groei van de kosten?", "De staatsschuld is een ander probleem van de overheid. Waarom stijgen juist de uitgaven aan uitkeringen zelf?", "Rente op spaargeld raakt spaarders, maar AOW en WW worden niet uit spaargeld betaald. Wat zorgt dan voor druk?"],
         uitlegPad: {

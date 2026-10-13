@@ -262,7 +262,7 @@ const steps = [
       },
       {
         q: "Wat is **samengestelde rente**?",
-        options: ["Rente over de eerder ontvangen rente", "Rente op een speciaal soort lening", "Rente die is opgebouwd uit een vast en een variabel deel", "Rente die elk jaar hetzelfde bedrag is"],
+        options: ["Rente over de eerder ontvangen rente", "Rente op een speciaal soort lening", "Rente met een vast en een variabel deel", "Rente die elk jaar hetzelfde bedrag is"],
         answer: 0,
         wrongHints: [null, "'Samengesteld' zegt iets over hoe de rente groeit, niet over een soort lening.", "Het woord klinkt alsof de rente uit delen bestaat, maar daar gaat het niet om. Reken eens twee jaar door met 10% rente op €100.", "Dan groeit je spaargeld elk jaar met hetzelfde bedrag. Is dat bij samengestelde rente zo?"],
         uitlegPad: {
@@ -318,7 +318,7 @@ const steps = [
       },
       {
         q: "Wat gebeurt er bij een **negatieve rente** op je spaargeld?",
-        options: ["Je betaalt de bank in plaats van andersom", "Je krijgt extra rente bovenop je spaargeld", "Je krijgt minder rente dan vorig jaar, maar nog wel iets", "Je saldo blijft precies hetzelfde staan"],
+        options: ["Je betaalt de bank in plaats van andersom", "Je krijgt extra rente bovenop je spaargeld", "Je krijgt minder rente, maar nog wel iets", "Je saldo blijft precies hetzelfde staan"],
         answer: 0,
         wrongHints: [null, "Wat betekent 'negatief' bij een getal: komt er iets bij of gaat er iets af?", "Een lagere rente is nog steeds iets krijgen. Wat is het verschil tussen 'lager' en 'onder nul'?", "Rente van min 0,5% op je saldo: wat gebeurt er met dat bedrag?"],
         uitlegPad: {
@@ -701,9 +701,9 @@ const steps = [
     checks: [
       {
         q: "Welke uitgave is een **vaste uitgave**?",
-        options: ["Spotify-abonnement", "Boodschappen", "Een nieuwe broek", "Elke week snacks in de kantine"],
+        options: ["Spotify-abonnement", "Boodschappen", "Een nieuwe broek", "Snacks in de kantine"],
         answer: 0,
-        wrongHints: [null, "Je doet elke week boodschappen, maar is het bedrag ook steeds precies hetzelfde?", "Een nieuwe broek koop je af en toe. Betaal je die elke maand opnieuw?", "Het gebeurt elke week, maar is het bedrag ook steeds precies hetzelfde?"],
+        wrongHints: [null, "Je doet elke week boodschappen, maar is het bedrag ook steeds precies hetzelfde?", "Een nieuwe broek koop je af en toe. Betaal je die elke maand opnieuw?", "Misschien koop je elke week wel iets in de kantine. Maar is het bedrag ook steeds precies hetzelfde?"],
         uitlegPad: {
           stappen: [{ titel: "Zelfde bedrag elke maand", tekst: "Vast = je weet exact wat het kost + komt elke maand terug. Spotify €10,99/mnd is altijd dat bedrag. Boodschappen wisselen → variabel." }],
           woorden: [{ woord: "vaste uitgave", uitleg: "Komt elke maand terug met (bijna) zelfde bedrag: huur, abonnementen, verzekering." }, { woord: "variabele uitgave", uitleg: "Wisselt per maand: boodschappen, kleding, uit eten." }],

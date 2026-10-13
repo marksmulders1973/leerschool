@@ -306,7 +306,7 @@ const steps = [
       },
       {
         q: "Een **stijgende lijn op BBP-grafiek over jaar 2024-2025** wijst op?",
-        options: ["Hoogconjunctuur / herstel", "Recessie / neergang", "Dalende inflatie", "Stijgende werkloosheid"],
+        options: ["Hoogconjunctuur / herstel", "Recessie / neergang", "Lage inflatie / stabiele prijzen", "Stijgende werkloosheid"],
         answer: 0,
         wrongHints: [null, "Bij een recessie krimpt het BBP. Wat doet de lijn hier?", "Een BBP-grafiek laat de productie zien, niet de prijzen. Wat zegt een stijgende lijn over de productie?", "Bij groei daalt de werkloosheid meestal juist."],
       },

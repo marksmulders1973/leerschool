@@ -145,7 +145,7 @@ const steps = [
       {
         q: "Wat hoort bij de **vaste activa**?",
         options: [
-          "Gebouw of machine",
+          "Bedrijfspand of een machine",
           "Voorraad voor het hele jaar",
           "Geld op de spaarrekening",
           "Klant die nog moet betalen",
@@ -309,7 +309,7 @@ const steps = [
         q: "Wat is de **formule voor winst**?",
         options: [
           "Winst = Opbrengsten − Kosten",
-          "Winst = Eigen vermogen − Vreemd vermogen",
+          "Winst = Eigen − Vreemd vermogen",
           "Winst = Activa − Passiva",
           "Winst = Kosten − Opbrengsten",
         ],
@@ -590,7 +590,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       },
       {
         q: "Wat is **liquiditeit**?",
-        options: ["Hoeveel bezit je snel kunt omzetten in geld", "Hoeveel winst je in een jaar maakt", "Hoeveel omzet je per maand draait", "Hoeveel eigen vermogen je hebt"],
+        options: ["Hoe snel je bezit in geld omzet", "Hoeveel winst je in een jaar maakt", "Hoeveel omzet je per maand draait", "Hoeveel eigen vermogen je hebt"],
         answer: 0,
         wrongHints: [null, "Winst laat zien wat je overhoudt over een heel jaar. Waar gaat liquiditeit over?", "Dat is omzet: wat er binnenkomt aan verkopen. Waar gaat liquiditeit over?", "Eigen vermogen zegt hoe je bezit betaald is. Waar gaat liquiditeit over?"],
         uitlegPad: {
