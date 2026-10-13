@@ -197,7 +197,7 @@ const steps = [
         wrongHints: [
           null,
           "Na het branden blijft as over. Is dat nog hout?",
-          "Roesten is reactie van ijzer met zuurstof.",
+          "Roest is bruin en brokkelig, heel anders dan glanzend ijzer. Is het nog dezelfde stof?",
           "Na het branden blijft een wit poeder over dat er eerst niet was. Is dat een nieuwe stof?",
         ],
         uitlegPad: {
@@ -319,7 +319,7 @@ const steps = [
           null,
           "Niet — komt zuurstof als los atoom voor?",
           "O₃ is ozon (speciaal), niet de gewone vorm.",
-          "Bestaat niet als gewone vorm.",
+          "Zoek in de uitleg op uit hoeveel atomen een molecuul zuurstofgas bestaat. Zijn dat er vier?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zuurstof = O₂ (paar)", tekst: "Zuurstofgas komt altijd als 2 atomen samen → O₂ (twee-atomig)." }],
@@ -343,9 +343,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Volgorde fout — element-symbool eerst, dan index.",
-          "Te weinig waterstof — CH₂ is iets anders.",
-          "Te weinig informatie — methaan heeft H-atomen.",
+          "Methaan heeft maar één koolstofatoom. Bij welk symbool hoort de 4 dan?",
+          "Een koolstofatoom maakt vier bindingen. Hoeveel H-atomen passen er dan aan één C?",
+          "Methaan is een koolwaterstof. Welke twee soorten atomen horen er dan in?",
         ],
         uitlegPad: {
           stappen: [{ titel: "CH₄ = 1 C + 4 H", tekst: "Methaan = koolstof omringd door 4 waterstof." }],
@@ -362,9 +362,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Goud is Au, niet (g).",
-          "Geen gewicht — fase.",
-          "Niet over temperatuur — fase.",
+          "Goud heeft het symbool Au. Zou je een element tussen haakjes achter een formule zetten?",
+          "Achter formules staan ook (s) en (l). Gaan die drie letters over gewicht?",
+          "Naast (g) bestaan ook (s) en (l). Waar gaan die drie letters samen over?",
         ],
         uitlegPad: {
           stappen: [{ titel: "(s)(l)(g)(aq) = fase", tekst: "Letters tussen haakjes geven de fase aan: vast, vloeibaar, gas, opgelost." }],
@@ -423,9 +423,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — H en O als laatste.",
-          "Indices mag je nóóit veranderen.",
-          "Coëfficiënten zijn al 1 als er niets staat.",
+          "H en O pak je juist als laatste aan. Hoe weet je wat er niet klopt voordat je iets aanpast?",
+          "Verander je de kleine getallen in een formule, dan krijg je een andere stof. Is dat de bedoeling?",
+          "Als er geen getal voor een formule staat, is de coëfficiënt al 1. Weet je dan al wat je moet aanpassen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Stappenplan balanceren", tekst: "1. Tel atomen per element. 2. Pas coëfficiënten aan. 3. Begin met meest complexe molecuul, bewaar O/H voor laatst." }],
@@ -535,7 +535,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verbranding heeft O₂ nodig.",
+          "Een kaars onder een glazen pot dooft vanzelf. Wat raakt er dan op?",
           "Oplossen is geen reactie, ook al wordt het warm. Met welke stof reageert iets dat brandt?",
           "Dat is dubbele verdringing.",
         ],
@@ -560,14 +560,14 @@ const steps = [
         options: [
           "Energie komt vrij",
           "Energie wordt opgenomen",
-          "Geen energie verandering",
+          "Er ontstaat een gas",
           "Reactie gaat heel snel",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — dat is endotherm.",
-          "Niet — bij deze reactie verandert er wel iets aan de energie.",
+          "Exo betekent 'naar buiten'. Gaat de energie dan de reactie in of eruit?",
+          "Gasvorming is een teken dat er een reactie is, maar zegt niets over energie. Waar gaat 'therm' over?",
           "Snelheid is iets anders dan energie-verandering.",
         ],
         uitlegPad: {
@@ -590,7 +590,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet vooral over warmte.",
+          "Een katalysator geeft zelf geen warmte af. Wat verandert hij dan aan het tempo van de reactie?",
           "Niet — kijk wat er met de activeringsenergie gebeurt.",
           "Niet — de katalysator is na afloop nog helemaal over.",
         ],
@@ -665,14 +665,14 @@ const steps = [
         options: [
           "Exotherm",
           "Endotherm",
-          "Symmetrisch",
+          "Katalytisch",
           "Reversibel",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — energie wordt opgenomen.",
-          "Niet een chemisch begrip.",
+          "Endo betekent 'naar binnen'. Komt de energie dan vrij of gaat ze erin?",
+          "Katalytisch betekent dat een katalysator de reactie versnelt. Zegt dat iets over vrijkomende energie?",
           "Reversibel = omkeerbaar, andere term.",
         ],
         uitlegPad: {
@@ -686,13 +686,13 @@ const steps = [
       },
       {
         q: "Wat is de juiste vorm voor zuurstof in een reactie?",
-        options: ["O₂", "O", "O₃", "Geen — gewoon weglaten"],
+        options: ["O₂", "O", "O₃", "2 O"],
         answer: 0,
         wrongHints: [
           null,
           "Niet — komt zuurstof als los atoom voor?",
-          "O₃ is ozon, speciaal geval.",
-          "Wel degelijk in de formule.",
+          "O₃ is ozon, de stof uit de ozonlaag. Is dat het gas dat je inademt?",
+          "2 O zijn twee losse atomen. Zitten de atomen in zuurstofgas los, of als molecuul aan elkaar?",
         ],
         uitlegPad: {
           stappen: [{ titel: "O₂ — twee-atomig", tekst: "Zuurstof komt in de natuur altijd als O₂ voor (twee atomen aan elkaar). Schrijf nooit alleen 'O'." }],
@@ -730,9 +730,9 @@ const steps = [
       },
       {
         q: "Welke **3 fasen** kan een stof hebben?",
-        options: ["Vast, vloeibaar, gas","Klein, middel, groot","Koud, lauw, heet","Kleurloos, helder, donker"],
+        options: ["Vast, vloeibaar, gas","Vast, vloeibaar, opgelost","Vast, poeder, vloeibaar","Vloeibaar, gas, damp"],
         answer: 0,
-        wrongHints: [null, "Niet — grootte is geen fase.", "Niet — temperatuur is geen fase (wel oorzaak overgang).", "Niet — kleur niet relevant voor fase."],
+        wrongHints: [null, "Een opgeloste stof zit verdeeld in een vloeistof. Is dat een eigen fase, of een mengsel?", "Poeder is fijngemalen vaste stof. Is dat een andere fase dan vast?", "Damp is een ander woord voor gas. Welke fase mis je dan?"],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofdfasen", tekst: "Een stof kan in **3 fasen** (toestanden) bestaan:\n• **Vast** (s = solid): atomen vast op plek, vorm + volume vast (ijs, hout, metaal)\n• **Vloeibaar** (l = liquid): atomen kunnen bewegen, vorm aanpassen aan vat, volume vast (water, olie)\n• **Gas** (g): atomen bewegen vrij, vorm + volume vullen vat (lucht, stoom)\n\n4e fase: **plasma** — geïoniseerd gas, in zon + bliksem + neon-lampen." },
@@ -801,13 +801,13 @@ const steps = [
           niveaus: { basis: "Zuur/base maat 0-14.", simpeler: "pH = maat voor zuur of base. 0 = sterk zuur (maagzuur), 7 = neutraal (water), 14 = sterke base (gootsteenontstopper).", nogSimpeler: "Zuur/base" },
         },
       },
-      { q: "**H₂O** is de formule voor?", options: ["Water","Waterstofgas","Zuurstofgas","Zout"], answer: 0, wrongHints: [null,"Dat is H₂.","Dat is O₂.","Dat is NaCl."] },
-      { q: "**O₂** is de formule voor?", options: ["Zuurstofgas","Water","Waterstof","Ozon"], answer: 0, wrongHints: [null,"H₂O.","H₂.","O₃."] },
+      { q: "**H₂O** is de formule voor?", options: ["Water","Waterstofgas","Zuurstofgas","Zout"], answer: 0, wrongHints: [null,"Waterstofgas bevat alleen H-atomen. Zie je in H₂O nog een ander symbool?","Zuurstofgas bevat alleen O-atomen. Zie je in H₂O nog een ander symbool?","Welke twee symbolen zie je in H₂O? Horen die bij keukenzout?"] },
+      { q: "**O₂** is de formule voor?", options: ["Zuurstofgas","Water","Waterstof","Ozon"], answer: 0, wrongHints: [null,"Water bevat ook waterstofatomen. Zie je een H in O₂?","Waterstof heeft het symbool H. Zie je een H in O₂?","Ozon is een vorm van zuurstof met drie atomen per molecuul. Hoeveel staan er in O₂?"] },
       { q: "**CO₂** is?", options: ["Koolstofdioxide","Koolstofmonoxide","Dikoolstofoxide","Koolwaterstof"], answer: 0, wrongHints: [null,"Mono betekent één. Hoeveel O-atomen zie je in CO₂?","Het voorvoegsel di- hoort bij het element waar de 2 achter staat. Welk element is dat?","Koolwaterstoffen bevatten C en H. Zit er H in CO₂?"] },
-      { q: "**NaCl** is?", options: ["Keukenzout","Suiker","Water","Zoutzuur"], answer: 0, wrongHints: [null,"Dat is C₁₂H₂₂O₁₁.","Dat is H₂O.","Dat is HCl."] },
+      { q: "**NaCl** is?", options: ["Keukenzout","Suiker","Water","Zoutzuur"], answer: 0, wrongHints: [null,"Suiker bevat koolstof, waterstof en zuurstof. Zie je C, H of O in NaCl?","Water bestaat uit waterstof en zuurstof. Zie je H of O in NaCl?","Zoutzuur is een zuur en bevat waterstof. Zie je een H in NaCl?"] },
       { q: "Bij **verbranding** komt iets vrij — wat?", options: ["Warmte + licht","Zuurstof + warmte","Stikstof + warmte","Waterstof + licht"], answer: 0, wrongHints: [null,"Zuurstof is nodig om te kunnen branden. Komt het vrij of wordt het verbruikt?","Stikstof uit de lucht doet bij verbranding nauwelijks mee. Wat merk je bij een kampvuur?","Waterstof kan zelf branden. Komt het vrij als een kaars brandt?"] },
       { q: "Wat is een **chemische reactie**?", options: ["Stoffen veranderen in nieuwe stoffen","Stoffen lossen op in een vloeistof","Stoffen smelten, koken of stollen","Stoffen worden fijngemalen tot poeder"], answer: 0, wrongHints: [null,"Opgeloste suiker krijg je terug door het water te verdampen. Is het dan een nieuwe stof?","Dat is een faseovergang: de stof blijft dezelfde. Wat moet er bij een reactie ontstaan?","Gemalen suiker is nog steeds suiker. Is er iets nieuws gevormd?"] },
-      { q: "**Reactie-pijl** (→) wijst van...?", options: ["Reactanten naar producten","Producten naar reactanten","Heen en terug tegelijk","Van zuur naar base"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet — daarvoor gebruik je een dubbele pijl (⇌).","Niet — de pijl geldt voor elke soort reactie."] },
+      { q: "**Reactie-pijl** (→) wijst van...?", options: ["Reactanten naar producten","Producten naar reactanten","Heen en terug tegelijk","Van zuur naar base"], answer: 0, wrongHints: [null,"Links van de pijl staan de stoffen waarmee je begint. Welke kant op loopt de reactie dan?","Niet — daarvoor gebruik je een dubbele pijl (⇌).","Niet — de pijl geldt voor elke soort reactie."] },
       { q: "Welke is een **base**?", options: ["NaOH","HCl","H₂SO₄","Citroensap"], answer: 0, wrongHints: [null,"HCl (zoutzuur) staat in water H⁺-ionen af — hoort dat bij een base of juist bij een zuur?","H₂SO₄ heet zwavelzúur en geeft ook H⁺-ionen af — het woorddeel '-zuur' verklapt het al. Is dat een base?","Citroensap smaakt scherp en heeft een pH onder de 7 — past dat bij een base?"] },
       { q: "**Open vraag**: noem 1 voorbeeld van een verbrandingsreactie.", kind: "open", acceptedAnswers: ["hout branden", "gas branden", "kaars", "kaars branden", "vuur", "houtvuur", "kaars-vlam", "auto-motor", "verbrandingsmotor"], explanation: "Verbrandingsreactie: stof + zuurstof → CO₂ + H₂O + energie. Voorbeelden: kaars, hout, benzine in motor." },
       { q: "**Open vraag**: wat is de pH-waarde van neutraal (puur) water? (typ getal)", kind: "open", acceptedAnswers: ["7"], numericTolerance: 0, explanation: "Neutraal water heeft pH = 7." },
