@@ -1,0 +1,352 @@
+[
+ {
+  "nr": 151,
+  "waar": "schatten-afronden stap 4 vraag 7",
+  "eigenKeuze": "€ 4",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 152,
+  "waar": "schema-tekst-combi-po stap 4 vraag 5",
+  "eigenKeuze": "Om 16.00 uur",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 153,
+  "waar": "schemas-stappenplannen-po stap 4 vraag 5",
+  "eigenKeuze": "Er worden meer rupsen opgegeten",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 154,
+  "waar": "schemas-stappenplannen-po stap 5 vraag 19",
+  "eigenKeuze": "Brood pakken → besmeren → eten",
+  "oordeel": "fout",
+  "reden": "De hints \"Niet — eerst pakken\" en \"Niet — laatste = eten\" geven samen per uitsluiting de volgorde; de afleiders zijn bovendien absurd, dus zonder vakkennis te raden."
+ },
+ {
+  "nr": 155,
+  "waar": "spelling stap 3 vraag 2",
+  "eigenKeuze": "f",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 156,
+  "waar": "spelling-ei-ij-au-ou stap 2 vraag 4",
+  "eigenKeuze": "meisje",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 157,
+  "waar": "spelling-ei-ij-au-ou stap 8 vraag 6",
+  "eigenKeuze": "plein en tijd",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 158,
+  "waar": "spelling-overige-po stap 2 vraag 5",
+  "eigenKeuze": "!",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 159,
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 15",
+  "eigenKeuze": "Geld bewaren voor later",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 160,
+  "waar": "staatsinrichting-1848 stap 1 vraag 1",
+  "eigenKeuze": "Willem II",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 161,
+  "waar": "statistiek-havo-vwo stap 5 vraag 3",
+  "eigenKeuze": "Negatief",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 162,
+  "waar": "sterren-planeten stap 7 vraag 1",
+  "eigenKeuze": "Hij ligt op zijn zij",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 163,
+  "waar": "tabellen-grafieken stap 5 vraag 8",
+  "eigenKeuze": "Gamen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 164,
+  "waar": "tabellen-grafieken stap 7 vraag 7",
+  "eigenKeuze": "Verloop in de tijd",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 165,
+  "waar": "tachtigjarige-oorlog-geschiedenis stap 10 vraag 1",
+  "eigenKeuze": "1648",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 166,
+  "waar": "tafels-po stap 6 vraag 15",
+  "eigenKeuze": "24",
+  "oordeel": "twijfel",
+  "reden": "Hints \"Niet.\" zijn nietszeggend en \"Helft.\" past maar half bij 6 (helft van 12, niet van 24)."
+ },
+ {
+  "nr": 167,
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 4",
+  "eigenKeuze": "Om de folder betrouwbaarder te laten klinken zodat je het product eerder koopt",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 168,
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 1",
+  "eigenKeuze": "De regen die de hele nacht viel",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 169,
+  "waar": "tellen-kleuters-po stap 1 vraag 6",
+  "eigenKeuze": "4",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 170,
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 3",
+  "eigenKeuze": "75 km/h",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 171,
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 8",
+  "eigenKeuze": "10 km",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 172,
+  "waar": "tijdsduur-rekenen-po stap 3 vraag 10",
+  "eigenKeuze": "3 uur 20 min",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 173,
+  "waar": "tijdvakken-nederland-po stap 5 vraag 11",
+  "eigenKeuze": "Amsterdam",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 174,
+  "waar": "topografie-europa-po stap 4 vraag 2",
+  "eigenKeuze": "Kopenhagen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 175,
+  "waar": "topografie-nederland stap 2 vraag 4",
+  "eigenKeuze": "Drenthe",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 176,
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 2",
+  "eigenKeuze": "het snelst",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 177,
+  "waar": "verandering-groei-havo-vwo stap 2 vraag 2",
+  "eigenKeuze": "Exponentieel met b=2",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 178,
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 9",
+  "eigenKeuze": "Ze maken allebei bijna geen geluid",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 179,
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 6",
+  "eigenKeuze": "Van verwachtingsvol naar geschrokken",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 180,
+  "waar": "verwijswoorden-po stap 2 vraag 10",
+  "eigenKeuze": "Hij",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 181,
+  "waar": "vlakke-figuren stap 17 vraag 6",
+  "eigenKeuze": "10π",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 182,
+  "waar": "vlakke-figuren-po stap 5 vraag 15",
+  "eigenKeuze": "m of cm",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 183,
+  "waar": "volgorde-bewerkingen stap 5 vraag 7",
+  "eigenKeuze": "5² uitrekenen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 184,
+  "waar": "volgorde-bewerkingen stap 6 vraag 3",
+  "eigenKeuze": "24",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 185,
+  "waar": "voortplanting-hormonen-biologie stap 3 vraag 3",
+  "eigenKeuze": "De eierstokken stoppen geleidelijk met werken",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 186,
+  "waar": "voortplanting-hormonen-biologie stap 8 vraag 2",
+  "eigenKeuze": "Type 1: geen insuline; type 2: cellen reageren er slecht op",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 187,
+  "waar": "warmte-thermodynamica-havo-vwo stap 4 vraag 5",
+  "eigenKeuze": "Een COP van 4",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 188,
+  "waar": "weersvoorspelling-po stap 4 vraag 28",
+  "eigenKeuze": "Juni-augustus",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 189,
+  "waar": "wereldoorlog1-geschiedenis stap 2 vraag 3",
+  "eigenKeuze": "Schlieffenplan",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 190,
+  "waar": "werkwoord-tijden-po stap 5 vraag 14",
+  "eigenKeuze": "zijn",
+  "oordeel": "fout",
+  "reden": "Het antwoord staat letterlijk tussen haakjes in de vraag (\"zijn\"); de wij-vorm is gelijk aan de infinitief, dus er valt niets te vervoegen of te kiezen."
+ },
+ {
+  "nr": 191,
+  "waar": "werkwoordsspelling-dt stap 3 vraag 7",
+  "eigenKeuze": "houdt",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 192,
+  "waar": "werkwoordsspelling-dt stap 7 vraag 1",
+  "eigenKeuze": "Word",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 193,
+  "waar": "werkwoordsvervoeging-duits stap 4 vraag 4",
+  "eigenKeuze": "spielte",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 194,
+  "waar": "werkwoordsvervoeging-frans stap 5 vraag 3",
+  "eigenKeuze": "eu",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 195,
+  "waar": "werkwoordsvervoeging-frans stap 6 vraag 2",
+  "eigenKeuze": "il est",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 196,
+  "waar": "woordbetekenis-context-po stap 3 vraag 8",
+  "eigenKeuze": "Een teken voor een muziektoon",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 197,
+  "waar": "woordenschat-engels-po stap 4 vraag 4",
+  "eigenKeuze": "Monday",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 198,
+  "waar": "woordenschat-po stap 1 vraag 2",
+  "eigenKeuze": "Spelling-regels",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 199,
+  "waar": "woordsoorten-po stap 3 vraag 4",
+  "eigenKeuze": "op",
+  "oordeel": "twijfel",
+  "reden": "\"op\" in \"de taart is op\" wordt in sommige woordenboeken ook als bijvoeglijk (predicatief) gebruik aangemerkt; voor een groep-6-8-leerling verdedigbaar, al is bijwoord de gangbare schoolanalyse."
+ },
+ {
+  "nr": 200,
+  "waar": "woordsoorten-po stap 5 vraag 8",
+  "eigenKeuze": "Werkwoord",
+  "oordeel": "goed",
+  "reden": ""
+ }
+]
