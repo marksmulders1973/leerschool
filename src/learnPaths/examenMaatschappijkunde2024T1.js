@@ -245,9 +245,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Strafbeschikking opleggen = LATERE fase, na het onderzoek (bij lichte zaken).",
+          "Een strafbeschikking = een lichte zaak afdoen, bijvoorbeeld met een boete. Gebeurt dat tijdens de politieactie zelf?",
           "Optreden in rechtszaal = pas BIJ de zitting, niet tijdens politieactie zelf.",
-          "Vervolgen = beslissing om iemand voor de rechter te brengen — gebeurt NA het opsporingsonderzoek.",
+          "Vervolgen = beslissen om iemand voor de rechter te brengen. Kan dat al tijdens de politieactie zelf?",
         ],
         explanation: "De **officier van justitie** heeft 4 hoofdtaken (uit elkaar te houden in tijd):\n1. **Leiding opsporingsonderzoek** — tijdens politieactie.\n2. **Vervolging beslissen** — wel/niet voor rechter brengen.\n3. **Strafbeschikking** — lichte zaak afdoen zonder rechter.\n4. **Optreden in rechtszaal** als openbaar aanklager.\nBij een **politieactie** zit je in fase 1 → leiding aan opsporing.",
         examenBron: BRON_LABEL(19),

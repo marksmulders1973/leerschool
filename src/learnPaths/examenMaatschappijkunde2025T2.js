@@ -11,7 +11,7 @@ const tekst1 = {
 const tekst6 = {
   titel: "T6 — Tweede Kamer wil verzorgingshuis terug",
   body:
-    "Ouderen moeten weer naar een soort zorgvoorziening kunnen tussen thuis en het verpleeghuis. Een meerderheid van de Tweede Kamer steunde dinsdag een oproep aan het volgende kabinet om 'werk te maken' van de herintroductie van zogenoemde verzorgingshuizen. Kamerlid Joost Eerdmans diende dit voorstel in als oproep aan de regering. De motie werd door BBB, JA21, FVD, PVV en CDA gesteund — net genoeg voor een meerderheid.",
+    "Ouderen moeten weer naar een soort zorgvoorziening kunnen tussen thuis en het verpleeghuis. Een meerderheid van de Tweede Kamer steunde dinsdag een oproep aan het volgende kabinet om 'werk te maken' van de herintroductie van zogenoemde verzorgingshuizen.",
 };
 
 const tekst12 = {
@@ -23,13 +23,13 @@ const tekst12 = {
 const tekst14 = {
   titel: "T14 — Vader+dochter vrijgesproken van bedreiging journalist",
   body:
-    "Een ondernemer en zijn dochter uit Groningen zijn vrijgesproken van **bedreiging** en **intimidatie** van journalist Willem Groeneveld in hoger beroep. De zaak gaat om een ondernemer die eigenaar is van verschillende panden. De officier van justitie eiste eerder een geldboete, maar bewijs ontbrak. De rechter oordeelde dat de uitlatingen niet onder bedreiging vielen zoals omschreven in het Wetboek van Strafrecht.",
+    "Een ondernemer en zijn dochter uit Groningen zijn vrijgesproken van **bedreiging** en **intimidatie** van journalist Willem Groeneveld in hoger beroep. De zaak gaat om een ondernemer die eigenaar is van verschillende panden. De officier van justitie eiste eerder een geldboete, maar bewijs ontbrak.",
 };
 
 const tekst15 = {
   titel: "T15 — Ambulance-centralist Jeroen Puyman over oudjaarsnacht-geweld",
   body:
-    "Op nieuwjaarsdag plaatste ambulance-centralist Jeroen Puyman uit Warfstermolen op zijn Facebookpagina een hartenkreet over het geweld tegen hulpverleners. 'Waar is de ophef?' Puyman werkt na achttien jaar als ambulance-broeder nu als centralist. Hij loodste die nacht zijn collega's door agressieve menigten heen. Hij had verwacht dat na nieuwjaarsdag de hele samenleving zou reageren met morele verontwaardiging over geweld tegen hulpverleners. Die reactie kwam niet, vond hij.",
+    "Op nieuwjaarsdag plaatste ambulance-centralist Jeroen Puyman uit Warfstermolen op zijn Facebookpagina een hartenkreet over het geweld tegen hulpverleners. 'Waar is de ophef?' Puyman werkt na achttien jaar als ambulance-broeder nu als centralist. Hij loodste die nacht zijn collega's door agressieve menigten heen.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag ${n}`;
