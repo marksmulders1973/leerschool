@@ -148,7 +148,7 @@ const steps = [
       wrongHints: [
         null,
         "Te smal — hypocrisie wordt 1× genoemd (citaat Hendriksen), niet de hele tekst.",
-        "Overtuigen vraagt MENING + ARGUMENTEN. Hier vooral feiten + interview = informeren.",
+        "Overtuigen vraagt een MENING + ARGUMENTEN. Probeert de tekst je ergens van te overtuigen, of geeft hij vooral feiten en uitspraken?",
         "Overtuigen vraagt MENING + ARGUMENTEN. De tekst neemt geen kant — wisselt voor- en nadelen af.",
       ],
       explanation: "De tekst is een interview met een onderzoeker over hoe het staat met proefdier-vermindering: nieuwe methodes (bloedtest, celkweek, orgaan-op-chip), waarom het langzaam gaat (regelgeving), wat de stand van zaken is. Geen MENING dat het anders MOET — wel uitleg over verschillende ontwikkelingen. = informeren.",
@@ -190,7 +190,7 @@ const steps = [
       wrongHints: [
         "'In kaart brengen' = ONDERZOEK doen naar leesmotivatie. De tekst doet geen onderzoek — beschrijft acties.",
         null,
-        "Te smal — gaat de tekst over ledenaantallen, of over iets wat de bieb bij jongeren wil bereiken?",
+        "Te smal — worden ledenaantallen in de tekst eigenlijk genoemd? En gaat de tekst alleen over bibliotheken?",
         "Te smal — scholen worden 1× genoemd (Davelaar). Het is vooral BIEB-actie (hiphopdans, leesclub).",
       ],
       explanation: "De tekst gaat over hiphoplessen in de bieb, schoolbieb-acties, een advies over bibliotheken — allemaal MANIEREN om jongeren weer aan het lezen te krijgen. Bibliotheek + school zijn de MIDDELEN, lezen is het DOEL.",
@@ -230,11 +230,11 @@ const steps = [
       answer: 0,
       wrongHints: [
         null,
-        "Oorzaak-gevolg = 'A gebeurde, DUS B'. Hier: 'we WILLEN A, daarvoor doen we B' = anders.",
+        "Oorzaak-gevolg = 'A gebeurde, DUS B'. Is het investeren hier iets wat vanzelf gebeurt door het veiligstellen?",
         "Probleem-oplossing = 'er IS een probleem (X), dus we doen Y'. In déze zin wordt geen probleem GENOEMD.",
         "Voorwaarde = 'ALS A, DAN B'. Hier geen 'als-dan' constructie.",
       ],
-      explanation: "Signaalwoord: **'Om ... te ...'** = klassiek doel-middel. Doel = 'voor de toekomst veilig stellen'. Middel = 'investeren'. Antwoord A. (Truc: 'om' aan het begin van een bijzin = altijd doel.)",
+      explanation: "Signaalwoord: **'Om ... te ...'** = klassiek doel-middel. Doel = 'voor de toekomst veilig stellen'. Middel = 'investeren'. Het verband is dus doel - middel. (Truc: 'om' aan het begin van een bijzin = altijd doel.)",
       examenBron: BRON_LABEL(20),
       bronLink: BRON_LINK,
       bronTekst: tekst3,

@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer was de **Watersnoodramp**?",
-        options: ["1 februari 1953","31 december 1953","1 februari 1963","12 mei 1940"],
+        options: ["1 februari 1953","31 december 1953","1 februari 1963","14 januari 1916"],
         answer: 0,
-        wrongHints: [null, "De ramp gebeurde in een stormnacht aan het begin van een nieuwe maand. Klopt deze datum dan?", "In 1963 waren de Deltawerken al jaren in aanbouw. Kwam de ramp vóór of na het begin daarvan?", "In mei 1940 viel Duitsland Nederland binnen. Ging het bij de Watersnoodramp om oorlog of om een storm?"],
+        wrongHints: [null, "De ramp gebeurde in een stormnacht aan het begin van een nieuwe maand. Klopt deze datum dan?", "In 1963 waren de Deltawerken al jaren in aanbouw. Kwam de ramp vóór of na het begin daarvan?", "In januari 1916 overstroomde het land rond de Zuiderzee; die ramp leidde tot de Afsluitdijk. Ging het bij de Watersnoodramp om de Zuiderzee of om Zeeland?"],
         uitlegPad: {
           stappen: [{ titel: "Nacht van 31 jan op 1 feb 1953", tekst: "Springvloed + storm samen 's nachts → dijken bezweken in Zeeland. **1.836 doden** in NL. Datum vaak afgekort als **'de Ramp'** of **'1 februari 1953'**." }],
           woorden: [{ woord: "springvloed", uitleg: "Extra hoge vloed rond volle en nieuwe maan." }],
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Welke provincies werden **het hardst getroffen** in 1953?",
-        options: ["Zeeland + Zuid-Holland + Brabant","Groningen + Friesland + Drenthe","Limburg + Overijssel + Gelderland","Utrecht + Noord-Holland + Flevoland"],
+        options: ["Zeeland + Zuid-Holland + Noord-Brabant","Groningen + Friesland + Noord-Holland","Gelderland + Overijssel + Utrecht","Noord-Holland + Zuid-Holland + Utrecht"],
         answer: 0,
-        wrongHints: [null, "Niet — Noord-NL bleef gespaard.", "Limburg, Overijssel en Gelderland liggen niet aan zee. Kon een stormvloed daar toeslaan?", "Flevoland bestond in 1953 nog niet. Sloeg de storm het hardst toe in het noorden of in het zuiden?"],
+        wrongHints: [null, "Ook in het noorden stond het water hoog, maar daar hielden de dijken het grotendeels. Waar braken ze wél?", "Deze provincies liggen niet aan zee maar aan rivieren. Was 1953 een overstroming vanuit de rivieren of vanuit de zee?", "Zuid-Holland werd zwaar getroffen, maar Noord-Holland en Utrecht niet. Welke provincies in het zuidwesten liggen aan de zeearmen?"],
         uitlegPad: {
           stappen: [{ titel: "Zuidwestelijke delta", tekst: "Zeeland (Schouwen-Duiveland, Tholen), Zuid-Holland (Goeree-Overflakkee, Voorne-Putten) en West-Brabant lagen direct in de baan van de stormvloed in de **Zuidwestelijke delta**. Daar mondden Schelde, Maas + Rijn uit in zee." }],
           woorden: [{ woord: "delta", uitleg: "Gebied waar rivieren in zee uitmonden — vlak land + veel water." }],
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "Wat is een **waterschap**?",
-        options: ["Bestuurslaag die zorgt voor waterbeheer","Schap met flessen water in de winkel","Bedrijf dat drinkwater naar huizen levert","Het Rijksinstituut voor Volksgezondheid"],
+        options: ["Bestuurslaag die zorgt voor waterbeheer","Afdeling van de gemeente voor de riolering","Bedrijf dat drinkwater naar huizen levert","Rijksdienst die de grote rivieren beheert"],
         answer: 0,
-        wrongHints: [null, "Klinkt zo, maar hier gaat het om bestuur.", "Niet — waterbedrijf is iets anders (drinkwater).", "Niet — RIVM is gezondheid."],
+        wrongHints: [null, "De gemeente zorgt voor het riool in de straat. Maar wie zorgt in een regio voor dijken, gemalen en het waterpeil?", "Drinkwater komt van een drinkwaterbedrijf, zoals Vitens of Dunea. Wat doet een waterschap dan?", "Dat is Rijkswaterstaat, van de landelijke overheid. Een waterschap werkt per regio: wat voor organisatie is het?"],
         uitlegPad: {
           stappen: [{ titel: "Waterschap = 4e bestuurslaag", tekst: "**21 waterschappen** in NL. Eigen verkiezingen (ook in 2023 + 2027). Taken: **dijken** (kering tegen water), **gemalen** (overtollig water wegpompen), **rioolwaterzuivering**, **peilbeheer** sloten. Heffen eigen belasting: **waterschapsbelasting**." }],
           woorden: [{ woord: "waterschap", uitleg: "Decentrale overheid die water beheert in een bepaald gebied." }, { woord: "peil", uitleg: "Hoogte van water in een gebied — wordt door waterschap geregeld via stuwen + gemalen." }],
@@ -102,7 +102,7 @@ const steps = [
         q: "Wanneer werd de **Afsluitdijk** voltooid?",
         options: ["1932","1916","1953","1986"],
         answer: 0,
-        wrongHints: [null, "Niet — toen overstroming, dat triggerde plan.", "Niet — andere ramp.", "Niet — provincie Flevoland."],
+        wrongHints: [null, "In 1916 overstroomde het land rond de Zuiderzee. Lag de dijk er toen al, of kwam het besluit pas daarna?", "In 1953 was de Watersnoodramp in Zeeland. Lag de Afsluitdijk er toen al?", "In 1986 werd Flevoland een provincie. Kon dat land worden drooggelegd zonder dat de Afsluitdijk er al lag?"],
         uitlegPad: {
           stappen: [{ titel: "28 mei 1932 = sluitstuk", tekst: "Bouw startte 1927 vanuit Wieringen + Friese kant. Beide kanten ontmoetten elkaar op 28 mei 1932 — 'sluitgat' werd gedicht. Plan Lely had geduurd van 1891 → 1932 (40 jaar van plan naar werkelijkheid)." }],
           theorie: "Toets-truc: 1932 = Afsluitdijk. 1953 = watersnood. Niet verwarren.",
@@ -124,7 +124,7 @@ const steps = [
         q: "Wie ontwierp het **plan voor de Afsluitdijk + IJsselmeer**?",
         options: ["Cornelis Lely","Pieter Caland","Johan van Veen","Hendrik Colijn"],
         answer: 0,
-        wrongHints: [null, "Nieuwe Waterweg-ontwerper (1872) — ander project.", "Deltawerken-ontwerper — 50 jaar later.", "Premier '30 — geen ingenieur."],
+        wrongHints: [null, "Caland ontwierp in de 19e eeuw de Nieuwe Waterweg naar Rotterdam. Wie bedacht het Zuiderzeeplan?", "Van Veen werkte na 1953 aan het Deltaplan. Wie maakte rond 1891 al een plan voor de Zuiderzee?", "Colijn was premier in de jaren '30, geen ingenieur. Wie ontwierp het plan al rond 1891?"],
         uitlegPad: {
           stappen: [{ titel: "Lely = ingenieur + minister", tekst: "**Cornelis Lely** (1854-1929), ingenieur + minister van Waterstaat (3x). Hoofdstad Flevoland (**Lelystad**) is naar hem genoemd. Standbeeld op kop Afsluitdijk." }],
           woorden: [{ woord: "Lely", uitleg: "Cornelis Lely, ingenieur Afsluitdijk/Zuiderzeewerken." }],
@@ -135,7 +135,7 @@ const steps = [
         q: "Welke provincie is opgericht in **1986** uit ingepolderd land?",
         options: ["Flevoland","Drenthe","Limburg","Friesland"],
         answer: 0,
-        wrongHints: [null, "Oude provincie sinds 1796.", "Provincie sinds 1839.", "Een van oudste — bestaat al eeuwen."],
+        wrongHints: [null, "Drenthe is al eeuwen een eigen gewest. Welke provincie ligt op de drooggelegde bodem van de Zuiderzee?", "Limburg is heuvelachtig en ligt hoog. Kan daar ingepolderd land liggen?", "Friesland bestaat al eeuwen. Welke provincie ligt op de bodem van de vroegere Zuiderzee?"],
         uitlegPad: {
           stappen: [{ titel: "Flevoland = 12e provincie", tekst: "**Flevoland** opgericht 1 januari **1986** uit drooggemaakte polders. Bevat: Noordoostpolder + Oostelijk Flevoland + Zuidelijk Flevoland. Hoofdstad **Lelystad** — grootste stad **Almere** (vandaag ~220.000 inwoners)." }],
           theorie: "Toets-feit: NL heeft 12 provincies sinds 1986. Daarvoor 11.",
@@ -164,9 +164,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **kenmerkend** voor de Oosterscheldekering (1986)?",
-        options: ["62 schuiven die open en dicht kunnen","Een volledig dichte dam van zand","Een drijvende brug voor het verkeer","Een tunnel diep onder de zeebodem"],
+        options: ["62 schuiven die open en dicht kunnen","Een dichte dam die eb en vloed tegenhoudt","Twee drijvende deuren die dichtdraaien","Een dijk met daarop een rij windmolens"],
         answer: 0,
-        wrongHints: [null, "Niet — bewust géén dichte dam vanwege natuur.", "Niet — vaste constructie.", "Een tunnel helpt het verkeer. Hoe houdt een kering het water tegen?"],
+        wrongHints: [null, "Eerst was een dichte dam gepland, maar dat zou de natuur in de Oosterschelde vernietigen. Wat werd het toen?", "Zulke drijvende deuren heeft de Maeslantkering bij Rotterdam. Hoe ziet de kering in de Oosterschelde eruit?", "Over de Oosterscheldekering loopt een weg. Wat is er onder die weg bijzonder?"],
         uitlegPad: {
           stappen: [{ titel: "Open-tenzij-storm-design", tekst: "Oosterscheldekering = grootste stormvloedkering ter wereld. **62 stalen schuiven** van elk 42 m breed. Normaal open → eb/vloed gaat door → Oosterschelde-natuur (oesters, kreeften, zeehonden) blijft. Dicht bij storm. Compromis tussen veiligheid en natuur." }],
           woorden: [{ woord: "stormvloedkering", uitleg: "Beweegbare barrière tegen extreme vloed — normaal open, dicht bij storm." }],
@@ -178,7 +178,7 @@ const steps = [
         q: "Welke kering beschermt **Rotterdam**?",
         options: ["Maeslantkering","Oosterscheldekering","Afsluitdijk","Haringvlietdam"],
         answer: 0,
-        wrongHints: [null, "Niet — Zeeland, niet Rotterdam.", "Beschermt Friesland-NH, niet Rotterdam.", "Beschermt Goeree-Overflakkee — niet Rotterdam stad."],
+        wrongHints: [null, "De Oosterscheldekering ligt in Zeeland. Welke kering ligt in de Nieuwe Waterweg, de toegang naar Rotterdam?", "De Afsluitdijk ligt tussen Noord-Holland en Friesland. Welke kering ligt bij Hoek van Holland?", "De Haringvlietdam sluit een zeearm verder naar het zuiden af. Via welke waterweg kom je van zee in Rotterdam?"],
         uitlegPad: {
           stappen: [{ titel: "Maeslantkering = Rotterdam-poort", tekst: "**Maeslantkering** sluit de **Nieuwe Waterweg** af bij extreem stormgevaar. 2 reuze-deuren elk 22m hoog. Beschermt 1,5 miljoen mensen + havengebied. Klaar 1997. Eerste echte storm-sluiting: 8-9 november 2007; daarna nog enkele keren." }],
           theorie: "Een computer beslist zelf over sluiting bij een voorspelling van >3m NAP.",
@@ -189,7 +189,7 @@ const steps = [
         q: "Wat is **ir. Johan van Veen** beroemd om?",
         options: ["Hoofdontwerper van de Deltawerken","Minister-president in 1953","Ontwerper van de Afsluitdijk","Redder tijdens de Watersnood"],
         answer: 0,
-        wrongHints: [null, "Drees was premier 1953.", "Lely deed Afsluitdijk.", "Veel mensen redden anderen in 1953. Waarom zou juist een ingenieur (ir.) beroemd zijn?"],
+        wrongHints: [null, "In 1953 was Willem Drees premier. Was Van Veen politicus of ingenieur?", "De Afsluitdijk kwam uit het plan van Cornelis Lely. Waar werkte Van Veen later aan?", "Veel mensen redden anderen in 1953. Waarom zou juist een ingenieur (ir.) beroemd zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Vader van de Deltawerken", tekst: "**Ir. Johan van Veen** (1893-1959) waarschuwde al **vóór 1953** voor dijk-zwakte in Zeeland — werd niet serieus genomen. Na de ramp werd hij eerste secretaris **Deltacommissie**. Tekende ontwerp Deltaplan. Stierf vóór voltooiing — kreeg postuum 'vader van Deltawerken' titel." }],
           theorie: "Tragiek: als er eerder naar Van Veens waarschuwingen was geluisterd, was de ramp misschien kleiner geweest.",
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Wanneer was het **laatste grote Deltawerk** voltooid?",
-        options: ["1997 — Maeslantkering","1986 — Oosterscheldekering","1953 — eerste plan","2011 — Zandmotor"],
+        options: ["1997 — Maeslantkering","1986 — Oosterscheldekering","1971 — Haringvlietdam","2011 — Zandmotor"],
         answer: 0,
-        wrongHints: [null, "Bekendst, maar Maeslantkering is later.", "Begin proces.", "Wel later innovatie, maar niet Deltawerk in oorspronkelijke plan."],
+        wrongHints: [null, "De Oosterscheldekering (1986) is het bekendst, maar daarna werd er nog een kering gebouwd. Welke?", "De Haringvlietdam was in 1971 klaar, maar daarna volgden nog grotere werken. Welke kwam als laatste?", "De Zandmotor is een zandproject langs de kust, geen onderdeel van het Deltaplan. Welk Deltawerk kwam als laatste?"],
         uitlegPad: {
           stappen: [{ titel: "Maeslantkering = 1997 sluitstuk", tekst: "**10 mei 1997**: Maeslantkering geopend door koningin Beatrix. Markeert **einde Deltawerken**. 44 jaar nadat Watersnoodramp 1953 het plan in gang zette." }],
           niveaus: { basis: "1997.", simpeler: "Maeslantkering 1997 = sluitstuk", nogSimpeler: "1997" },
@@ -210,7 +210,7 @@ const steps = [
         q: "Wat is de **kans op overstroming** voor de Randstad in NL-veiligheidsnorm?",
         options: ["1× per 10.000 jaar","1× per 100 jaar","1× per 1.000 jaar","1× per miljoen jaar"],
         answer: 0,
-        wrongHints: [null, "Veel te hoog risico — niet acceptabel.", "Nog te hoog voor Randstad.", "Niet realistisch laag — overdreven."],
+        wrongHints: [null, "Eens per 100 jaar zou betekenen dat je grootouders het al hebben meegemaakt. Vindt Nederland dat genoeg voor de Randstad?", "Eens per 1.000 jaar gold voor sommige minder dichtbevolkte gebieden. Is de norm voor de Randstad strenger of soepeler?", "Zo'n strenge norm vraagt onbetaalbaar hoge dijken. Welke kans koos de Deltacommissie voor Holland?"],
         uitlegPad: {
           stappen: [{ titel: "Hoogste norm ter wereld", tekst: "**Randstad-norm**: 1 keer per **10.000 jaar** mag dijk falen. Zeeland-norm: 1× per **4.000 jaar**. Rivierdijken NL: 1× per **1.250 jaar**. Veel andere landen hebben veel lagere normen." }],
           woorden: [{ woord: "overstromingsnorm", uitleg: "Acceptabele kans dat een dijk faalt per jaar." }],
@@ -229,9 +229,9 @@ const steps = [
     checks: [
       {
         q: "Wat wordt voorspeld als **zeespiegelstijging** in NL tot 2100?",
-        options: ["0,3 tot 1,2 meter","Niet meetbaar","5 meter","30 cm zeker"],
+        options: ["0,3 tot 1,2 meter","2 tot 4 meter","2 tot 5 cm","0,1 tot 0,2 meter"],
         answer: 0,
-        wrongHints: [null, "Niet — wel meetbaar, ~3mm/jaar nu.", "Te extreem — wel mogelijk bij ramp.", "Lager dan realistisch — verschilt per scenario."],
+        wrongHints: [null, "2 tot 4 meter wordt pas ná 2100 mogelijk geacht, als Antarctica snel smelt. Wat verwacht het KNMI tot 2100?", "Nu stijgt de zee al zo'n 3 à 4 mm per jaar, en dat versnelt. Hoeveel is dat in ongeveer 75 jaar?", "Reken: 3 à 4 mm per jaar, en de stijging versnelt nog. Kom je in 2100 dan onder de 20 cm uit?"],
         uitlegPad: {
           stappen: [{ titel: "KNMI 2023-scenario's", tekst: "Bij **lage** CO₂-uitstoot: ~30-50 cm in 2100. Bij **hoge** uitstoot (alles blijft zo): tot ~1,2m. Bij extreme **kantelpunt-scenario's** (Antarctische ijsmelt): >2m mogelijk." }],
           woorden: [{ woord: "KNMI", uitleg: "Koninklijk Nederlands Meteorologisch Instituut — staat in De Bilt." }],
@@ -255,7 +255,7 @@ const steps = [
         q: "Wat is **bodemdaling** in West-NL?",
         options: ["Land zakt door het inklinken van veen","Land zakt door aardbevingen","Land slijt weg door de zee (erosie)","Land gaat op en neer met de seizoenen"],
         answer: 0,
-        wrongHints: [null, "Niet — wel in Groningen (gas), maar bodemdaling-veen anders.", "Niet — vooral zee-erosie elders.", "Niet — chronisch proces, geen cyclus."],
+        wrongHints: [null, "In Groningen zakt de bodem door gaswinning. Waardoor zakt de bodem in de veenweidegebieden van West-Nederland?", "Erosie door de zee knaagt aan de kust, maar bodemdaling gebeurt midden in het land. Waaruit bestaat de bodem daar?", "Veen zwelt in natte tijden iets op, maar over de jaren gaat het land alleen maar omlaag. Waardoor?"],
         uitlegPad: {
           stappen: [{ titel: "Veen klinkt in", tekst: "West-NL ligt op **veen**. Veen bevat veel water — als waterpeil wordt verlaagd voor landbouw, droogt veen uit en klinkt in. **5-10 mm zakking per jaar** = 50 cm per eeuw. Maakt NL **steeds dieper** onder zeeniveau." }],
           woorden: [{ woord: "veen", uitleg: "Half-vergane plantenresten in moerasbodem — typisch West-NL ondergrond." }],
@@ -277,9 +277,9 @@ const steps = [
       },
       {
         q: "Welk doel stond in het **Klimaatakkoord 2019** voor **CO₂-reductie** in 2030?",
-        options: ["49% minder dan 1990","100% emissievrij","20% minder","Geen doel"],
+        options: ["49% minder dan 1990","95% minder dan 1990","20% minder dan 1990","35% minder dan 1990"],
         answer: 0,
-        wrongHints: [null, "Pas 2050-doel (klimaatneutraal).", "Te weinig — EU eist meer.", "Wel een doel — Klimaatakkoord 2019."],
+        wrongHints: [null, "95% minder is het doel voor 2050. Wat was de tussenstap voor 2030?", "20% was het oude Europese doel voor 2020. Lag de lat voor 2030 hoger of lager?", "Het Klimaatakkoord legde de lat hoger dan dit. Hoeveel minder moest het in 2030 worden?"],
         uitlegPad: {
           stappen: [{ titel: "Klimaatakkoord 2019", tekst: "**Klimaatakkoord** ondertekend juni 2019 door regering + werkgevers + milieugroepen. Doel: **49% CO₂-reductie 2030** vs 1990. **2050**: 95% reductie + klimaatneutraal. Sectoren: industrie / mobiliteit / gebouwde omgeving / landbouw / elektriciteit." }],
           theorie: "Toets-actueel: de Klimaatwet verhoogde het 2030-doel later naar 55%. Of het gehaald wordt, is onzeker.",
@@ -297,9 +297,9 @@ const steps = [
     checks: [
       {
         q: "Welk percentage van NL ligt **onder zeeniveau**?",
-        options: ["~26%","~5%","~70%","Heel NL"],
+        options: ["~26%","~5%","~70%","~50%"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Niet — Limburg + Veluwe hoger."],
+        wrongHints: [null, "Denk aan heel West-Nederland: de polders van Holland, Flevoland en Zeeland. Is dat maar een twintigste?", "Het oosten en zuiden (Veluwe, Drenthe, Limburg) liggen ruim boven zee. Kan dan bijna driekwart onder zeeniveau liggen?", "Je hoort vaak 'half Nederland', maar dan tel je ook het land mee dat langs rivieren kan overstromen. Hoeveel ligt er echt onder zeeniveau?"],
         uitlegPad: {
           stappen: [{ titel: "26% onder NAP", tekst: "**~26% NL ligt onder NAP** (Normaal Amsterdams Peil = zeeniveau). Zonder dijken zou ~60% bij hoog water onderlopen. Hoogste plek = Vaalserberg 322m. Laagste = Zuidplaspolder bij Nieuwerkerk -6,76m." }],
           niveaus: { basis: "26%.", simpeler: "Kwart NL onder zee", nogSimpeler: "26" },
@@ -317,9 +317,9 @@ const steps = [
       },
       {
         q: "Wat is **NAP**?",
-        options: ["Normaal Amsterdams Peil","Naam voor polder","Nationaal Afwateringsplan","Noordzee Afsluitprogramma"],
+        options: ["Normaal Amsterdams Peil","Nieuw Amsterdams Peil","Nationaal Afwateringsplan","Noordzee Afsluitprogramma"],
         answer: 0,
-        wrongHints: [null, "Niet — het gaat om een hoogtemaat, geen gebied.", "Niet — het is een meetpunt voor hoogte, geen plan.", "Niet — het is een meetpunt voor hoogte, geen bouwproject."],
+        wrongHints: [null, "Het peil werd al in de 17e eeuw in Amsterdam vastgelegd, dus allesbehalve nieuw. Waar staat de N dan voor?", "Je zegt '5 meter onder NAP'. Is NAP dan een plan of een maat voor hoogte?", "Je zegt '5 meter onder NAP'. Is NAP dan een bouwproject of een maat voor hoogte?"],
         uitlegPad: {
           stappen: [{ titel: "NAP sinds 1684", tekst: "**NAP** = Normaal Amsterdams Peil. Begon als gemiddeld zomerhoogwater van het IJ in Amsterdam (1684). In de Stopera (stadhuis Amsterdam) kun je het NAP zien. Alle hoogtes in NL gemeten t.o.v. NAP." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil — zeeniveau-referentie in NL." }],
@@ -330,7 +330,7 @@ const steps = [
         q: "Wat is bestuurlijk **niet juist** voor waterschappen?",
         options: ["Geen eigen verkiezingen","Eigen belasting heffen","Dijkbeheer","Rioolwaterzuivering"],
         answer: 0,
-        wrongHints: [null, "Klopt wel — waterschapsbelasting.", "Wel — eigen taak.", "Wel — eigen taak."],
+        wrongHints: [null, "Waterschappen sturen elk jaar een aanslag waterschapsbelasting. Is deze uitspraak dus juist?", "Dijken onderhouden is de oudste taak van een waterschap. Is deze uitspraak dan juist of niet juist?", "Waterschappen zuiveren het rioolwater van huishoudens. Is deze uitspraak dus juist?"],
         uitlegPad: {
           stappen: [{ titel: "Letten op 'niet'-vraag", tekst: "Vraag draait om wat NIET juist is. **Geen eigen verkiezingen** = onjuist (waterschappen hebben WEL eigen verkiezingen, samen met Provinciale Statenverkiezingen elke 4 jaar). Andere opties zijn allemaal echte taken." }],
           theorie: "Examen-tip: lees altijd 'niet'-vragen 2x. Onderstreep 'niet' voor je antwoordt.",
@@ -341,7 +341,7 @@ const steps = [
         q: "Welk **jaartal** koppel je aan de **Watersnoodramp**?",
         options: ["1953","1932","1986","1997"],
         answer: 0,
-        wrongHints: [null, "Afsluitdijk-jaar.", "Flevoland-oprichting.", "Maeslantkering-voltooiing."],
+        wrongHints: [null, "1932 is het jaar van de Afsluitdijk, bij de Zuiderzee. Welke ramp was er twintig jaar later in Zeeland?", "In 1986 kwam de Oosterscheldekering klaar, het sluitstuk van een plan dat ná de ramp kwam. Wanneer was de ramp zelf?", "In 1997 kwam de Maeslantkering klaar, het laatste Deltawerk. Hoe lang daarvoor was de ramp die alles in gang zette?"],
         uitlegPad: {
           stappen: [{ titel: "Vier kerndata water-NL", tekst: "**1932** Afsluitdijk. **1953** Watersnood. **1986** Provincie Flevoland + Oosterscheldekering. **1997** Maeslantkering. Onthoud deze 4 — kernkennis VMBO-AK." }],
           niveaus: { basis: "1953.", simpeler: "Watersnoodramp = 1953", nogSimpeler: "1953" },
