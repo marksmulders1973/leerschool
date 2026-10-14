@@ -16,6 +16,7 @@ import { track } from "../../utils.js";
 import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
 import KoppelcodeBanner from "../../components/KoppelcodeBanner.jsx";
 import TrouweGastKaart from "./TrouweGastKaart.jsx";
+import TesterOproep from "../../components/TesterOproep.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
@@ -2967,6 +2968,8 @@ export default function MijnPagina({
           </>
         )}
 
+        {/* 14 okt 2026: Play Store-testers werven, alleen op Android buiten de Play-app (TesterOproep.jsx). */}
+        <TesterOproep plek="mijn" />
         <MeerTegels onGa={(doel) => onOpenHub?.(doel)} />
       </div>
     </div>
