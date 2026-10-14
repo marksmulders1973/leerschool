@@ -715,8 +715,11 @@ export default function App() {
     // 🌟 Trouwe gast (idee H, 16 sep 2026): vandaag als bezoekdag noteren.
     try { noteerBezoekdag(); } catch { /* */ }
     // URL parameter ?code=XXXXX (alleen quiz-codes, niet Supabase OAuth codes)
+    // 14 okt 2026 (Mark, screenshot): /koppelen?code=XXXXXX is een OUDERKOPPELCODE, geen toets —
+    // anders kwam de melding "Toets met code … niet gevonden" over de koppelpagina heen.
     const urlCode = new URLSearchParams(window.location.search).get("code");
-    if (urlCode && urlCode.length <= 8) setPendingCode(urlCode.toUpperCase());
+    const isKoppelRoute = /^\/koppelen(\/|$)/.test(window.location.pathname);
+    if (urlCode && urlCode.length <= 8 && !isKoppelRoute) setPendingCode(urlCode.toUpperCase());
     // 📱 Kwam dit apparaat binnen via de QR-hoek op /klas? Tellen per klas (klasQr.js).
     try { noteerKlasQrBezoek(track); } catch { /* */ }
   }, []);
