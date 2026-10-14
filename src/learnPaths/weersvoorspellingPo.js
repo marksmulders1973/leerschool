@@ -353,7 +353,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const weersvoorspellingPo = {
   id: "weersvoorspelling-po",
-  title: "Weer + weersvoorspelling (Doorstroomtoets groep 6-8)",
+  title: "Weer + weersvoorspelling (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🌤️",
   level: "groep6-8",
   subject: "natuur",
@@ -363,7 +363,7 @@ const weersvoorspellingPo = {
     { id: "waterkringloop-po", title: "Waterkringloop", niveau: "1F" },
   ],
   intro:
-    "Weer voor Doorstroomtoets groep 6-8 — wat is weer (temperatuur/neerslag/wind/druk) + wind + luchtdruk + onweer/bliksem + KNMI in De Bilt + voorspellen via radar/satelliet/computermodellen + weerkaart-symbolen + extreem weer (orkaan/tornado/hittegolf). Sluit op water-kringloop. ~15 min.",
+    "Weer voor groep 6-8, Doorstroomtoets-stof — wat is weer (temperatuur/neerslag/wind/druk) + wind + luchtdruk + onweer/bliksem + KNMI in De Bilt + voorspellen via radar/satelliet/computermodellen + weerkaart-symbolen + extreem weer (orkaan/tornado/hittegolf). Sluit op water-kringloop. ~15 min.",
   triggerKeywords: [
     "weer", "weersvoorspelling",
     "temperatuur", "neerslag", "regen",

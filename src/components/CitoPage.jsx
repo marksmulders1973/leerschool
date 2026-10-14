@@ -39,7 +39,7 @@ const ONDERDELEN = [
     sub: "Spelling, grammatica, woordenschat",
     color: "#00b0ff",
     subject: "taal",
-    topic: "Doorstroomtoets taal groep 7-8: spelling, werkwoorden, grammatica, woordenschat",
+    topic: "Doorstroomtoets taal (groep 8): spelling, werkwoorden, grammatica, woordenschat",
     leerpaden: [
       { id: "werkwoord-tijden-po", label: "🕐 Werkwoord-tijden", dur: "~12 min" },
       { id: "spelling-overige-po", label: "✒️ Spelling — leestekens & samenstellingen", dur: "~12 min" },

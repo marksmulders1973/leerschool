@@ -757,7 +757,7 @@ const steps = [
   {
     title: "Opinie geven — argumenten onderbouwen",
     explanation:
-      "Een **mening** geven kan iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en precies wat de toets test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (Doorstroomtoets groep 7-8)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — iemand zégt het alleen).\n\n**Toets-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in de Doorstroomtoets):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
+      "Een **mening** geven kan iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en precies wat de toets test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (groep 7-8, Doorstroomtoets-stof)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — iemand zégt het alleen).\n\n**Toets-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in de Doorstroomtoets):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
     checks: [
       {
         q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Welk argument-soort?",
@@ -1158,7 +1158,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const schrijvenTekstenPo = {
   id: "schrijven-teksten-po",
-  title: "Schrijven van teksten (Doorstroomtoets groep 6-8)",
+  title: "Schrijven van teksten (groep 6-8, Doorstroomtoets-stof)",
   emoji: "📝",
   level: "groep6-8",
   subject: "taal",

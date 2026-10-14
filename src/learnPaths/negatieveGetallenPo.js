@@ -1477,7 +1477,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const negatieveGetallenPo = {
   id: "negatieve-getallen-po",
-  title: "Negatieve getallen — Doorstroomtoets groep 5-8",
+  title: "Negatieve getallen — groep 5-8, Doorstroomtoets-stof",
   emoji: "🌡️",
   level: "groep5-8",
   subject: "rekenen",

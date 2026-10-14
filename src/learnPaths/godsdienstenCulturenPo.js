@@ -157,7 +157,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const godsdienstenCulturenPo = {
   id: "godsdiensten-culturen-po",
-  title: "Godsdiensten + culturen (Doorstroomtoets groep 6-8)",
+  title: "Godsdiensten + culturen (groep 6-8, Doorstroomtoets-stof)",
   emoji: "⛪",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -165,7 +165,7 @@ const godsdienstenCulturenPo = {
   sloThema: "Wereldoriëntatie — burgerschap / culturen",
   prerequisites: [],
   intro:
-    "Godsdiensten + culturen voor Doorstroomtoets groep 6-8 — wat is religie (5 wereldgodsdiensten, atheist, NL-statistieken) + christendom (Jezus, paus, Reformatie) + islam (5 zuilen, Ramadan) + jodendom (Abraham, Mozes, Sabbat) + boeddhisme (Boeddha, vier waarheden) + hindoeisme (karma, Diwali). Toets-burgerschap. ~15 min.",
+    "Godsdiensten + culturen voor groep 6-8, Doorstroomtoets-stof — wat is religie (5 wereldgodsdiensten, atheist, NL-statistieken) + christendom (Jezus, paus, Reformatie) + islam (5 zuilen, Ramadan) + jodendom (Abraham, Mozes, Sabbat) + boeddhisme (Boeddha, vier waarheden) + hindoeisme (karma, Diwali). Toets-burgerschap. ~15 min.",
   triggerKeywords: [
     "godsdienst", "religie",
     "christendom", "christenen", "Jezus", "Bijbel", "paus",

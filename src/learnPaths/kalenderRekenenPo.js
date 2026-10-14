@@ -688,7 +688,7 @@ const steps = [
           stappen: [
             { titel: "De 'deel door 4'-truc", tekst: "**Vuistregel**: een jaar is een **schrikkeljaar** als het deelbaar is door **4**. Test 2024: 2024 ÷ 4 = 506 (rond getal, geen rest) → **schrikkeljaar**." },
             { titel: "Snel testen", tekst: "Kijk naar de **laatste 2 cijfers**: deelbaar door 4? Dan is het jaar dat ook.\n• 2024 → 24 ÷ 4 = 6 ✓ schrikkel\n• 2025 → 25 ÷ 4 = 6,25 ✗ gewoon\n• 2026 → 26 ÷ 4 = 6,5 ✗ gewoon\n• 2028 → 28 ÷ 4 = 7 ✓ schrikkel" },
-            { titel: "Uitzondering: eeuw-jaren", tekst: "**Hele eeuwen** (eindigend op 00) zijn alleen schrikkel als deelbaar door 400. Bv:\n• 1900: niet door 400 → **geen** schrikkel\n• 2000: wel door 400 → **wel** schrikkel\n• 2100: niet door 400 → geen schrikkel\nVoor Doorstroomtoets groep 6-8 meestal niet getoetst, maar handig om te weten." },
+            { titel: "Uitzondering: eeuw-jaren", tekst: "**Hele eeuwen** (eindigend op 00) zijn alleen schrikkel als deelbaar door 400. Bv:\n• 1900: niet door 400 → **geen** schrikkel\n• 2000: wel door 400 → **wel** schrikkel\n• 2100: niet door 400 → geen schrikkel\nVoor groep 6-8, Doorstroomtoets-stof meestal niet getoetst, maar handig om te weten." },
           ],
           woorden: [
             { woord: "schrikkeljaar", uitleg: "Jaar met 366 dagen (1 dag extra in februari)." },

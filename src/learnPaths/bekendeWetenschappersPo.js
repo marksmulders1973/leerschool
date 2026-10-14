@@ -379,7 +379,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const bekendeWetenschappersPo = {
   id: "bekende-wetenschappers-po",
-  title: "Bekende wetenschappers (Doorstroomtoets groep 6-8)",
+  title: "Bekende wetenschappers (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🔭",
   level: "groep6-8",
   subject: "natuur",
@@ -389,7 +389,7 @@ const bekendeWetenschappersPo = {
     { id: "industriele-revolutie-po", title: "Industriële Revolutie", niveau: "1F" },
   ],
   intro:
-    "Bekende wetenschappers voor Doorstroomtoets groep 6-8 — Copernicus/Galileo (zon-middelpunt) + Newton (zwaartekracht, 3 wetten) + Darwin (evolutie) + Mendel/Pasteur/Fleming + Einstein (E=mc²) + Curie (radium) + Turing (computer). toets-relevant. ~15 min.",
+    "Bekende wetenschappers voor groep 6-8, Doorstroomtoets-stof — Copernicus/Galileo (zon-middelpunt) + Newton (zwaartekracht, 3 wetten) + Darwin (evolutie) + Mendel/Pasteur/Fleming + Einstein (E=mc²) + Curie (radium) + Turing (computer). toets-relevant. ~15 min.",
   triggerKeywords: [
     "wetenschapper", "wetenschap",
     "Galileo", "Copernicus", "telescoop",

@@ -339,7 +339,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const politiekDemocratiePo = {
   id: "politiek-democratie-po",
-  title: "Politiek + democratie (Doorstroomtoets groep 6-8)",
+  title: "Politiek + democratie (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🗳️",
   level: "groep6-8",
   subject: "geschiedenis",

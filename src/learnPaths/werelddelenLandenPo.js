@@ -555,7 +555,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const werelddelenLandenPo = {
   id: "werelddelen-landen-po",
-  title: "Werelddelen + landen (Doorstroomtoets groep 6-8)",
+  title: "Werelddelen + landen (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🌍",
   level: "groep6-8",
   subject: "aardrijkskunde",
@@ -566,7 +566,7 @@ const werelddelenLandenPo = {
     { id: "topografie-nederland", title: "Topografie NL", niveau: "1F" },
   ],
   intro:
-    "Werelddelen + landen voor Doorstroomtoets groep 6-8 — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazone, Chinese Muur, Christus de Verlosser, Taj Mahal) + Antarctica. ~15 min.",
+    "Werelddelen + landen voor groep 6-8, Doorstroomtoets-stof — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazone, Chinese Muur, Christus de Verlosser, Taj Mahal) + Antarctica. ~15 min.",
   triggerKeywords: [
     "werelddeel", "continent",
     "Azië", "Afrika", "Europa",

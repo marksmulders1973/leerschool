@@ -285,7 +285,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const ontdekkingsreizenPo = {
   id: "ontdekkingsreizen-po",
-  title: "Ontdekkingsreizen (Doorstroomtoets groep 6-8)",
+  title: "Ontdekkingsreizen (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🧭",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -296,7 +296,7 @@ const ontdekkingsreizenPo = {
     { id: "gouden-eeuw-geschiedenis", title: "Gouden Eeuw", niveau: "klas2-3" },
   ],
   intro:
-    "Ontdekkingsreizen voor Doorstroomtoets groep 6-8 — waarom op reis (specerijen, goud) + Columbus 1492 + Vasco da Gama + Magellan + slavenhandel + NL-ontdekkers (Tasman, Hudson, Barentsz, Roggeveen) + VOC + Nieuw-Amsterdam → New York. Tijdvak 5. ~15 min.",
+    "Ontdekkingsreizen voor groep 6-8, Doorstroomtoets-stof — waarom op reis (specerijen, goud) + Columbus 1492 + Vasco da Gama + Magellan + slavenhandel + NL-ontdekkers (Tasman, Hudson, Barentsz, Roggeveen) + VOC + Nieuw-Amsterdam → New York. Tijdvak 5. ~15 min.",
   triggerKeywords: [
     "ontdekkingsreizen", "ontdekkers",
     "Columbus", "Vasco da Gama", "Magellan",

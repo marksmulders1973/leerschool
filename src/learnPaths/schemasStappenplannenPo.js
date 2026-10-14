@@ -1240,7 +1240,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const schemasStappenplannenPo = {
   id: "schemas-stappenplannen-po",
-  title: "Schema's en stappenplannen — Doorstroomtoets groep 5-8",
+  title: "Schema's en stappenplannen — groep 5-8, Doorstroomtoets-stof",
   emoji: "📋",
   level: "groep5-8",
   subject: "taal",

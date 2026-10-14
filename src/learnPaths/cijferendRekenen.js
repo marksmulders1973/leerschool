@@ -2384,7 +2384,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const cijferendRekenen = {
   id: "cijferend-rekenen",
-  title: "Cijferend rekenen — Doorstroomtoets groep 6-8",
+  title: "Cijferend rekenen — groep 6-8, Doorstroomtoets-stof",
   emoji: "🔢",
   level: "groep6-8",
   subject: "rekenen",

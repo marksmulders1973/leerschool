@@ -1816,7 +1816,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const procentenPo = {
   id: "procenten-po",
-  title: "Procenten — Doorstroomtoets groep 5-8",
+  title: "Procenten — groep 5-8, Doorstroomtoets-stof",
   emoji: "💯",
   level: "groep5-8",
   subject: "rekenen",

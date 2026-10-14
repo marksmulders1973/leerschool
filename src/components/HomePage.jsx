@@ -79,7 +79,7 @@ class TeaserErrorBoundary extends Component {
 // leren, rekenen/taal-onderwerpen die Toets-ouder herkent.
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
-  { icon: <DoorstroomtoetsLogo size={15} />, text: "Oefenen voor de Doorstroomtoets (groep 6-8)" },
+  { icon: <DoorstroomtoetsLogo size={15} />, text: "Oefenen voor de Doorstroomtoets (groep 8)" },
   { icon: "📅", text: "15 minuten per dag is genoeg" },
   { icon: "🧠", text: "Een rustige bijlesdocent in je broekzak" },
   { icon: "📖", text: "Begrijpend lezen groep 5 t/m 8" },
@@ -755,7 +755,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               Wat is {BRAND.name}?
             </div>
             <p style={{ margin: 0, fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.82)" }}>
-              Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en de{" "}
+              Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 8)</strong> en de{" "}
               <strong style={{ color: "#fff" }}>VMBO-examens</strong>. Snapt je kind iets niet? Dan leggen we het uit op drie niveaus, tot je kind het écht snapt. Een kwartier per dag is genoeg.
             </p>
             <div style={{

@@ -350,7 +350,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const bekendeBoekenLiteratuurPo = {
   id: "bekende-boeken-literatuur-po",
-  title: "Bekende boeken + literatuur (Doorstroomtoets groep 6-8)",
+  title: "Bekende boeken + literatuur (groep 6-8, Doorstroomtoets-stof)",
   emoji: "📖",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -360,7 +360,7 @@ const bekendeBoekenLiteratuurPo = {
     { id: "dichten-poezie-rijmen-po", title: "Dichten + poëzie", niveau: "1F" },
   ],
   intro:
-    "Bekende kinderboeken + literatuur voor Doorstroomtoets groep 6-8 — Annie M.G. Schmidt (Jip+Janneke, Pluk, Otje) + Fiep Westendorp + Tonke Dragt + Vriens + moderne (Slee, Oomen) + internationaal (Dahl, Rowling) + Anne Frank + Multatuli + Kinderboekenweek. ~15 min.",
+    "Bekende kinderboeken + literatuur voor groep 6-8, Doorstroomtoets-stof — Annie M.G. Schmidt (Jip+Janneke, Pluk, Otje) + Fiep Westendorp + Tonke Dragt + Vriens + moderne (Slee, Oomen) + internationaal (Dahl, Rowling) + Anne Frank + Multatuli + Kinderboekenweek. ~15 min.",
   triggerKeywords: [
     "boek", "boeken", "literatuur",
     "Annie M.G. Schmidt", "Jip Janneke", "Pluk Petteflet",

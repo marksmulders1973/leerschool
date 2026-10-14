@@ -129,7 +129,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const eetcultuurNederlandPo = {
   id: "eetcultuur-nederland-po",
-  title: "Eetcultuur NL + invloeden (Doorstroomtoets groep 6-8)",
+  title: "Eetcultuur NL + invloeden (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🥔",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -139,7 +139,7 @@ const eetcultuurNederlandPo = {
     { id: "gezonde-voeding-po", title: "Gezonde voeding", niveau: "1F" },
   ],
   intro:
-    "Eetcultuur NL voor Doorstroomtoets groep 6-8 — Hollandse keuken (stamppot/haring/stroopwafels) + vis+brood+zuivel (kazen Gouda/Edam/Leerdam, 14 kg per persoon) + invloeden uit koloniaal verleden (rijsttafel = NL-Indische uitvinding, roti Suriname) + Turks/Marokkaans/Italiaans + trends 2024 (plant-based). ~15 min.",
+    "Eetcultuur NL voor groep 6-8, Doorstroomtoets-stof — Hollandse keuken (stamppot/haring/stroopwafels) + vis+brood+zuivel (kazen Gouda/Edam/Leerdam, 14 kg per persoon) + invloeden uit koloniaal verleden (rijsttafel = NL-Indische uitvinding, roti Suriname) + Turks/Marokkaans/Italiaans + trends 2024 (plant-based). ~15 min.",
   triggerKeywords: [
     "eetcultuur", "Nederlands eten",
     "stamppot", "hutspot", "haring",

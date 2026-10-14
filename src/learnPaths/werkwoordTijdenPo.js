@@ -414,7 +414,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const werkwoordTijdenPo = {
   id: "werkwoord-tijden-po",
-  title: "Werkwoordsvervoeging T/V — Doorstroomtoets groep 7-8",
+  title: "Werkwoordsvervoeging T/V — groep 7-8, Doorstroomtoets-stof",
   emoji: "📝",
   level: "groep5-8",
   subject: "taal",

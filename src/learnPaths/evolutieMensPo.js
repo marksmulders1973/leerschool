@@ -349,7 +349,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const evolutieMensPo = {
   id: "evolutie-mens-po",
-  title: "Evolutie + mens (Doorstroomtoets groep 6-8)",
+  title: "Evolutie + mens (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🐒",
   level: "groep6-8",
   subject: "natuur",
@@ -359,7 +359,7 @@ const evolutieMensPo = {
     { id: "bekende-wetenschappers-po", title: "Bekende wetenschappers", niveau: "1F" },
   ],
   intro:
-    "Evolutie voor Doorstroomtoets groep 6-8 — Darwin/natuurlijke selectie + voorbeelden (Galapagos-vinken + pepermot) + mens stamboom (Australopithecus/Lucy/Neanderthaler/Homo sapiens) + reis uit Afrika + bewijzen (fossielen/DNA/restorganen/Tiktaalik) + 4,5 mld jr aarde + 5 massa-uitstervingen. Sluit aan op Bekende wetenschappers. ~15 min.",
+    "Evolutie voor groep 6-8, Doorstroomtoets-stof — Darwin/natuurlijke selectie + voorbeelden (Galapagos-vinken + pepermot) + mens stamboom (Australopithecus/Lucy/Neanderthaler/Homo sapiens) + reis uit Afrika + bewijzen (fossielen/DNA/restorganen/Tiktaalik) + 4,5 mld jr aarde + 5 massa-uitstervingen. Sluit aan op Bekende wetenschappers. ~15 min.",
   triggerKeywords: [
     "evolutie", "Darwin",
     "natuurlijke selectie", "survival fittest",

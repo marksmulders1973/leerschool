@@ -242,7 +242,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const verkeersregelsVeiligheidPo = {
   id: "verkeersregels-veiligheid-po",
-  title: "Verkeersregels + veiligheid (Doorstroomtoets groep 6-8)",
+  title: "Verkeersregels + veiligheid (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🚦",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -250,7 +250,7 @@ const verkeersregelsVeiligheidPo = {
   sloThema: "Wereldoriëntatie — burgerschap / verkeer",
   prerequisites: [],
   intro:
-    "Verkeersregels voor Doorstroomtoets groep 6-8 + verkeersexamen groep 7 — verkeersborden (verbod/gebod/waarschuwing/info) + lichten + fiets-uitrusting + regels (mobiel verboden, alcohol grens) + voorrang (rechts/rotonde/zebrapad) + politie + 112 + EHBO. ~15 min.",
+    "Verkeersregels voor groep 6-8, Doorstroomtoets-stof + verkeersexamen groep 7 — verkeersborden (verbod/gebod/waarschuwing/info) + lichten + fiets-uitrusting + regels (mobiel verboden, alcohol grens) + voorrang (rechts/rotonde/zebrapad) + politie + 112 + EHBO. ~15 min.",
   triggerKeywords: [
     "verkeer", "verkeersregels",
     "verkeersbord", "verbodsbord", "gebodsbord", "waarschuwing",

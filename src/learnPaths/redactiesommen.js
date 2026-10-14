@@ -1058,7 +1058,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const redactiesommen = {
   id: "redactiesommen-pad",
-  title: "Redactiesommen — Doorstroomtoets groep 5-8",
+  title: "Redactiesommen — groep 5-8, Doorstroomtoets-stof",
   emoji: "📖",
   level: "groep5-8",
   subject: "rekenen",

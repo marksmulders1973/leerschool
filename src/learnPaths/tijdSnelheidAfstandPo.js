@@ -1,4 +1,4 @@
-// Leerpad: Tijd + Snelheid + Afstand — Doorstroomtoets groep 7-8 PO.
+// Leerpad: Tijd + Snelheid + Afstand — groep 7-8, Doorstroomtoets-stof PO.
 // Doorstroomtoets onderdeel rekenen. S = V × T verhoudingen.
 // 5 stappen × ~5 checks. Referentieniveau 1F/1S.
 
@@ -1405,7 +1405,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const tijdSnelheidAfstandPo = {
   id: "tijd-snelheid-afstand-po",
-  title: "Tijd + Snelheid + Afstand (Doorstroomtoets groep 7-8)",
+  title: "Tijd + Snelheid + Afstand (groep 7-8, Doorstroomtoets-stof)",
   emoji: "🏃",
   level: "groep6-8",
   subject: "rekenen",

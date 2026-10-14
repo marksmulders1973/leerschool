@@ -2152,7 +2152,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const tabellenGrafieken = {
   id: "tabellen-grafieken",
-  title: "Tabellen en grafieken — Doorstroomtoets groep 6-8",
+  title: "Tabellen en grafieken — groep 6-8, Doorstroomtoets-stof",
   emoji: "📊",
   level: "groep6-8",
   subject: "rekenen",
@@ -2164,7 +2164,7 @@ const tabellenGrafieken = {
     { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
   ],
   intro:
-    "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdracht. ~15 min.",
+    "Tabellen en grafieken voor groep 6-8, Doorstroomtoets-stof (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdracht. ~15 min.",
   triggerKeywords: [
     "tabel","grafiek","staafdiagram","lijngrafiek","cirkeldiagram",
     "taartdiagram","data","verloop","gemiddelde","aflezen","verschil",

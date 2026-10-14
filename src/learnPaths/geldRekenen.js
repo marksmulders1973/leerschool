@@ -1469,7 +1469,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const geldRekenen = {
   id: "geld-rekenen",
-  title: "Geld rekenen — Doorstroomtoets groep 5-8",
+  title: "Geld rekenen — groep 5-8, Doorstroomtoets-stof",
   emoji: "💶",
   level: "groep5-8",
   subject: "rekenen",

@@ -1528,7 +1528,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const schattenAfronden = {
   id: "schatten-afronden",
-  title: "Schatten en afronden — Doorstroomtoets groep 5-8",
+  title: "Schatten en afronden — groep 5-8, Doorstroomtoets-stof",
   emoji: "🤔",
   level: "groep5-8",
   subject: "rekenen",

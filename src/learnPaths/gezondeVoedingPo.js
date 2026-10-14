@@ -350,7 +350,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const gezondeVoedingPo = {
   id: "gezonde-voeding-po",
-  title: "Gezonde voeding (Doorstroomtoets groep 6-8)",
+  title: "Gezonde voeding (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🍎",
   level: "groep6-8",
   subject: "natuur",
@@ -360,7 +360,7 @@ const gezondeVoedingPo = {
     { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid", niveau: "1F" },
   ],
   intro:
-    "Gezonde voeding voor Doorstroomtoets groep 6-8 — voedingsstoffen (koolhydraat/eiwit/vet/vitamine/mineraal/water) + Schijf van Vijf (groente 250g, vis 1x/week) + wat te beperken (suiker max 25g, zout max 5g, alcohol 0,0 onder 18) + vegetarisch/veganistisch. Sluit op lichaam-gezondheid. ~15 min.",
+    "Gezonde voeding voor groep 6-8, Doorstroomtoets-stof — voedingsstoffen (koolhydraat/eiwit/vet/vitamine/mineraal/water) + Schijf van Vijf (groente 250g, vis 1x/week) + wat te beperken (suiker max 25g, zout max 5g, alcohol 0,0 onder 18) + vegetarisch/veganistisch. Sluit op lichaam-gezondheid. ~15 min.",
   triggerKeywords: [
     "voeding", "eten", "gezond eten",
     "Schijf van Vijf", "Voedingscentrum",

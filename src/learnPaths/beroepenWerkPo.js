@@ -315,7 +315,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const beroepenWerkPo = {
   id: "beroepen-werk-po",
-  title: "Beroepen + werk (Doorstroomtoets groep 6-8)",
+  title: "Beroepen + werk (groep 6-8, Doorstroomtoets-stof)",
   emoji: "👷",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -325,7 +325,7 @@ const beroepenWerkPo = {
     { id: "financiele-vorming-po", title: "Financiële vorming", niveau: "1F" },
   ],
   intro:
-    "Beroepen + werk voor Doorstroomtoets groep 6-8 — wat is beroep (werknemer/ZZP/vrijwilliger) + 4 sectoren (primair/secundair/tertiair/quartair) + MBO/HBO/WO + voorbeelden beroepen + salaris (bruto/netto/minimum/CAO) + werkrechten + werken vanaf 13. Sluit aan op financiele-vorming. ~15 min.",
+    "Beroepen + werk voor groep 6-8, Doorstroomtoets-stof — wat is beroep (werknemer/ZZP/vrijwilliger) + 4 sectoren (primair/secundair/tertiair/quartair) + MBO/HBO/WO + voorbeelden beroepen + salaris (bruto/netto/minimum/CAO) + werkrechten + werken vanaf 13. Sluit aan op financiele-vorming. ~15 min.",
   triggerKeywords: [
     "beroep", "beroepen", "werk", "baan",
     "ZZP", "freelance", "ondernemer",

@@ -911,7 +911,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const woordenschatPo = {
   id: "woordenschat-po",
-  title: "Woordenschat — Doorstroomtoets groep 5-8",
+  title: "Woordenschat — groep 5-8, Doorstroomtoets-stof",
   emoji: "📚",
   level: "groep5-8",
   subject: "taal",

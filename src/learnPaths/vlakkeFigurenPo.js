@@ -1459,7 +1459,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const vlakkeFigurenPo = {
   id: "vlakke-figuren-po",
-  title: "Vlakke figuren — Doorstroomtoets groep 5-8",
+  title: "Vlakke figuren — groep 5-8, Doorstroomtoets-stof",
   emoji: "⬜",
   level: "groep5-8",
   subject: "rekenen",

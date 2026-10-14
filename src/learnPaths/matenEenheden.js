@@ -1,4 +1,4 @@
-// Leerpad: Maten en eenheden — Doorstroomtoets groep 7-8
+// Leerpad: Maten en eenheden — groep 7-8, Doorstroomtoets-stof
 // 8 stappen in 7 hoofdstukken (A t/m G).
 // Doelgroep: groep 6-8 basisschool, met focus op Doorstroomtoets-stijl.
 // Sprint-5+ S4 audit-3 (2026-05-08): nieuw Toets-content-pad voor ICP.
@@ -2193,7 +2193,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const matenEenheden = {
   id: "maten-eenheden",
-  title: "Maten en eenheden — Doorstroomtoets groep 7-8",
+  title: "Maten en eenheden — groep 7-8, Doorstroomtoets-stof",
   emoji: "📏",
   level: "groep6-8",
   subject: "rekenen",
@@ -2206,7 +2206,7 @@ const matenEenheden = {
     { id: "kommagetallen-po", title: "Kommagetallen", niveau: "po-1F" },
   ],
   intro:
-    "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
+    "Maten en eenheden voor groep 7-8, Doorstroomtoets-stof (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
   triggerKeywords: [
     "maten","eenheden","kilometer","meter","centimeter","millimeter",
     "kilogram","gram","milligram","ton","liter","milliliter","deciliter",

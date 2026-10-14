@@ -353,7 +353,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const waterkringloopPo = {
   id: "waterkringloop-po",
-  title: "Waterkringloop (Doorstroomtoets groep 6-8)",
+  title: "Waterkringloop (groep 6-8, Doorstroomtoets-stof)",
   emoji: "💧",
   level: "groep6-8",
   subject: "natuur",
@@ -363,7 +363,7 @@ const waterkringloopPo = {
     { id: "klimaten-aardrijkskunde", title: "Klimaten", niveau: "2F" },
   ],
   intro:
-    "Waterkringloop voor Doorstroomtoets groep 6-8 — 4 fasen (verdamping/condensatie/neerslag/afstroming) + soorten wolken (cumulus/cirrus/cumulonimbus) + soorten neerslag (regen/sneeuw/hagel/ijzel/mist/dauw/regenboog) + NL-water (Deltawerken/polders/IJsselmeer) + thuis-gebruik (130 L/dag). ~15 min.",
+    "Waterkringloop voor groep 6-8, Doorstroomtoets-stof — 4 fasen (verdamping/condensatie/neerslag/afstroming) + soorten wolken (cumulus/cirrus/cumulonimbus) + soorten neerslag (regen/sneeuw/hagel/ijzel/mist/dauw/regenboog) + NL-water (Deltawerken/polders/IJsselmeer) + thuis-gebruik (130 L/dag). ~15 min.",
   triggerKeywords: [
     "waterkringloop", "watercyclus",
     "verdamping", "condensatie", "neerslag",

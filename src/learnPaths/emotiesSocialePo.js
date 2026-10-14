@@ -128,7 +128,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const emotiesSocialePo = {
   id: "emoties-sociaal-po",
-  title: "Emoties + sociaal omgaan (Doorstroomtoets groep 6-8)",
+  title: "Emoties + sociaal omgaan (groep 6-8, Doorstroomtoets-stof)",
   emoji: "😊",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -138,7 +138,7 @@ const emotiesSocialePo = {
     { id: "pubertijd-groei-po", title: "Puberteit + groei", niveau: "1F" },
   ],
   intro:
-    "Emoties + sociaal omgaan voor Doorstroomtoets groep 6-8 — 6 basis-emoties (Ekman) + omgaan met boosheid/verdriet/angst + vrienden maken + conflict oplossen (ik-boodschap) + pesten (4 soorten + KiVa + Kindertelefoon 0800-0432) + grenzen + getuige-rol. Sluit aan op puberteit. ~15 min.",
+    "Emoties + sociaal omgaan voor groep 6-8, Doorstroomtoets-stof — 6 basis-emoties (Ekman) + omgaan met boosheid/verdriet/angst + vrienden maken + conflict oplossen (ik-boodschap) + pesten (4 soorten + KiVa + Kindertelefoon 0800-0432) + grenzen + getuige-rol. Sluit aan op puberteit. ~15 min.",
   triggerKeywords: [
     "emoties", "gevoelens",
     "blij", "verdrietig", "boos", "bang",

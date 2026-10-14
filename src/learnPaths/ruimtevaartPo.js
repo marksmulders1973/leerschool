@@ -128,7 +128,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const ruimtevaartPo = {
   id: "ruimtevaart-po",
-  title: "Ruimtevaart (Doorstroomtoets groep 6-8)",
+  title: "Ruimtevaart (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🚀",
   level: "groep6-8",
   subject: "natuur",
@@ -138,7 +138,7 @@ const ruimtevaartPo = {
     { id: "sterren-planeten", title: "Sterren + planeten", niveau: "1F" },
   ],
   intro:
-    "Ruimtevaart voor Doorstroomtoets groep 6-8 — hoe raket werkt (Newton's 3e wet, brandstof, lanceerlocaties) + maanlanding Apollo 11 (Armstrong/Aldrin 1969) + ISS (sinds 1998, André Kuipers) + Mars-rovers + SpaceX/Musk + James Webb telescoop + Artemis (terug naar de maan). Sluit op sterren-planeten. ~15 min.",
+    "Ruimtevaart voor groep 6-8, Doorstroomtoets-stof — hoe raket werkt (Newton's 3e wet, brandstof, lanceerlocaties) + maanlanding Apollo 11 (Armstrong/Aldrin 1969) + ISS (sinds 1998, André Kuipers) + Mars-rovers + SpaceX/Musk + James Webb telescoop + Artemis (terug naar de maan). Sluit op sterren-planeten. ~15 min.",
   triggerKeywords: [
     "ruimtevaart", "ruimte", "raket",
     "Newton derde wet", "ontsnappingssnelheid",

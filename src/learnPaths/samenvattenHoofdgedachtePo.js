@@ -1936,7 +1936,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const samenvattenHoofdgedachtePo = {
   id: "samenvatten-hoofdgedachte-po",
-  title: "Samenvatten en hoofdgedachte — Doorstroomtoets groep 5-8",
+  title: "Samenvatten en hoofdgedachte — groep 5-8, Doorstroomtoets-stof",
   emoji: "💭",
   level: "groep5-8",
   subject: "begrijpend-lezen",

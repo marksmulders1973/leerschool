@@ -389,7 +389,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const bekendeNederlandersPo = {
   id: "bekende-nederlanders-po",
-  title: "Bekende Nederlanders (Doorstroomtoets groep 6-8)",
+  title: "Bekende Nederlanders (groep 6-8, Doorstroomtoets-stof)",
   emoji: "📜",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -399,7 +399,7 @@ const bekendeNederlandersPo = {
     { id: "tijdvakken-nederland-po", title: "Tijdvakken NL", niveau: "1F" },
   ],
   intro:
-    "Bekende Nederlanders voor Doorstroomtoets groep 6-8 — historisch (Erasmus/Willem van Oranje/Hugo de Groot/Leeuwenhoek/Huygens/Eisinga) + sport (Cruijff/Van Basten/Kramer/Wüst/Verstappen) + modern (Willem-Alexander/Rutte/Boyan Slat) + films/muziek (Verhoeven/Hazes/DJ's). Sluit aan op tijdvakken-NL. ~15 min.",
+    "Bekende Nederlanders voor groep 6-8, Doorstroomtoets-stof — historisch (Erasmus/Willem van Oranje/Hugo de Groot/Leeuwenhoek/Huygens/Eisinga) + sport (Cruijff/Van Basten/Kramer/Wüst/Verstappen) + modern (Willem-Alexander/Rutte/Boyan Slat) + films/muziek (Verhoeven/Hazes/DJ's). Sluit aan op tijdvakken-NL. ~15 min.",
   triggerKeywords: [
     "Nederlander", "beroemde Nederlanders",
     "Erasmus", "Willem van Oranje", "Hugo de Groot",

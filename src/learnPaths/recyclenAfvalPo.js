@@ -353,7 +353,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const recyclenAfvalPo = {
   id: "recyclen-afval-po",
-  title: "Recyclen + afval + duurzaam (Doorstroomtoets groep 6-8)",
+  title: "Recyclen + afval + duurzaam (groep 6-8, Doorstroomtoets-stof)",
   emoji: "♻️",
   level: "groep6-8",
   subject: "natuur",
@@ -363,7 +363,7 @@ const recyclenAfvalPo = {
     { id: "klimaatverandering-aardrijkskunde", title: "Klimaatverandering", niveau: "2F" },
   ],
   intro:
-    "Recyclen voor Doorstroomtoets groep 6-8 — afval-soorten (GFT/PMD/glas/papier/restafval) + scheiden (NL 64% recycle, EU-top) + statiegeld + Ladder van Lansink (voorkomen→hergebruiken→recyclen) + circulaire economie + plastic-soup + Boyan Slat / Ocean Cleanup. ~15 min.",
+    "Recyclen voor groep 6-8, Doorstroomtoets-stof — afval-soorten (GFT/PMD/glas/papier/restafval) + scheiden (NL 64% recycle, EU-top) + statiegeld + Ladder van Lansink (voorkomen→hergebruiken→recyclen) + circulaire economie + plastic-soup + Boyan Slat / Ocean Cleanup. ~15 min.",
   triggerKeywords: [
     "afval", "recyclen", "recycling",
     "GFT", "PMD", "glasbak", "papier",

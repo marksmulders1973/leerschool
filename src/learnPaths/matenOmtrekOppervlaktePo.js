@@ -1216,7 +1216,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const matenOmtrekOppervlaktePo = {
   id: "maten-omtrek-oppervlakte-po",
-  title: "Maten + Omtrek + Oppervlakte + Inhoud (Doorstroomtoets groep 7-8)",
+  title: "Maten + Omtrek + Oppervlakte + Inhoud (groep 7-8, Doorstroomtoets-stof)",
   emoji: "📏",
   level: "groep6-8",
   subject: "rekenen",

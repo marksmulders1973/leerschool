@@ -1558,7 +1558,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const verhoudingenPo = {
   id: "verhoudingen-po",
-  title: "Verhoudingen — Doorstroomtoets groep 5-8",
+  title: "Verhoudingen — groep 5-8, Doorstroomtoets-stof",
   emoji: "⚖️",
   level: "groep5-8",
   subject: "rekenen",

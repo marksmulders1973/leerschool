@@ -157,7 +157,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const nederlandseKunstenaarsPo = {
   id: "nederlandse-kunstenaars-po",
-  title: "Nederlandse kunstenaars (Doorstroomtoets groep 6-8)",
+  title: "Nederlandse kunstenaars (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🎨",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -167,7 +167,7 @@ const nederlandseKunstenaarsPo = {
     { id: "gouden-eeuw-geschiedenis", title: "Gouden Eeuw", niveau: "klas2-3" },
   ],
   intro:
-    "Nederlandse kunstenaars voor Doorstroomtoets groep 6-8 — Rembrandt (Nachtwacht) + Vermeer (Meisje met Parel) + Gouden Eeuw (Jan Steen/Hals) + Van Gogh (Zonnebloemen/Sterrennacht) + Mondriaan + De Stijl (Rietveld) + Escher + moderne (Bruna/Pieck) + musea. ~15 min.",
+    "Nederlandse kunstenaars voor groep 6-8, Doorstroomtoets-stof — Rembrandt (Nachtwacht) + Vermeer (Meisje met Parel) + Gouden Eeuw (Jan Steen/Hals) + Van Gogh (Zonnebloemen/Sterrennacht) + Mondriaan + De Stijl (Rietveld) + Escher + moderne (Bruna/Pieck) + musea. ~15 min.",
   triggerKeywords: [
     "kunstenaar", "schilder", "schilderij",
     "Rembrandt", "Nachtwacht",

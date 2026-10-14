@@ -346,7 +346,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const kritischDenkenPo = {
   id: "kritisch-denken-po",
-  title: "Kritisch denken + denkfouten (Doorstroomtoets groep 6-8)",
+  title: "Kritisch denken + denkfouten (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🤔",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -356,7 +356,7 @@ const kritischDenkenPo = {
     { id: "digitale-geletterdheid-po", title: "Digitale geletterdheid", niveau: "1F" },
   ],
   intro:
-    "Kritisch denken voor Doorstroomtoets groep 6-8 — wat is kritisch denken (5 W's + niet alles geloven) + 10 denkfouten (bevestigingsbias/anker/groepsdruk/halo/sunk cost - Daniel Kahneman) + 10 drogredenen (ad hominem/stroman/vals dilemma/cherry picking - Aristoteles). Sluit op digitale-geletterdheid. ~15 min.",
+    "Kritisch denken voor groep 6-8, Doorstroomtoets-stof — wat is kritisch denken (5 W's + niet alles geloven) + 10 denkfouten (bevestigingsbias/anker/groepsdruk/halo/sunk cost - Daniel Kahneman) + 10 drogredenen (ad hominem/stroman/vals dilemma/cherry picking - Aristoteles). Sluit op digitale-geletterdheid. ~15 min.",
   triggerKeywords: [
     "kritisch denken",
     "denkfout", "bias",

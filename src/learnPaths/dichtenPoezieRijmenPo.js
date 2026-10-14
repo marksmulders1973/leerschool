@@ -1188,7 +1188,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const dichtenPoezieRijmenPo = {
   id: "dichten-poezie-rijmen-po",
-  title: "Dichten + poëzie + rijm (Doorstroomtoets groep 5-8)",
+  title: "Dichten + poëzie + rijm (groep 5-8, Doorstroomtoets-stof)",
   emoji: "🎭",
   level: "groep5-8",
   subject: "taal",
@@ -1198,7 +1198,7 @@ const dichtenPoezieRijmenPo = {
     { id: "spreekwoorden-uitdrukkingen-po", title: "Spreekwoorden + uitdrukkingen", niveau: "1F" },
   ],
   intro:
-    "Dichten + poëzie voor Doorstroomtoets groep 5-8 — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/metafoor) + soorten (limerick/haiku/sonnet/acrostichon/vrij vers). Sluit op spreekwoorden. ~15 min.",
+    "Dichten + poëzie voor groep 5-8, Doorstroomtoets-stof — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/metafoor) + soorten (limerick/haiku/sonnet/acrostichon/vrij vers). Sluit op spreekwoorden. ~15 min.",
   triggerKeywords: [
     "gedicht", "poëzie", "poezie",
     "rijm", "rijmen", "rijmschema",

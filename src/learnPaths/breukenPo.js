@@ -1644,7 +1644,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const breukenPo = {
   id: "breuken-po",
-  title: "Breuken — Doorstroomtoets groep 5-8",
+  title: "Breuken — groep 5-8, Doorstroomtoets-stof",
   emoji: "🍕",
   level: "groep5-8",
   subject: "rekenen",

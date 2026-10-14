@@ -219,7 +219,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const oudheidEgyptiansGriekenPo = {
   id: "oudheid-egyptenaren-grieken-romeinen-po",
-  title: "Oudheid — Egyptenaren + Grieken + Romeinen (Doorstroomtoets groep 6-8)",
+  title: "Oudheid — Egyptenaren + Grieken + Romeinen (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🏺",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -229,7 +229,7 @@ const oudheidEgyptiansGriekenPo = {
     { id: "tijdvakken-nederland-po", title: "Tijdvakken NL", niveau: "1F" },
   ],
   intro:
-    "Oudheid voor Doorstroomtoets groep 6-8 — Egyptenaren (Nijl/farao's/Toetanchamon/piramides/mummies/hiëroglyfen + Rosetta-steen) + Grieken (Athene democratie 508 v.Chr./Socrates-Plato-Aristoteles/Olympische Spelen 776 v.Chr./Alexander de Grote) + Romeinen (Caesar/Augustus/Colosseum/Limes-Rijn-NL/Latijn) + 476 val West-Romeinse Rijk. ~15 min.",
+    "Oudheid voor groep 6-8, Doorstroomtoets-stof — Egyptenaren (Nijl/farao's/Toetanchamon/piramides/mummies/hiëroglyfen + Rosetta-steen) + Grieken (Athene democratie 508 v.Chr./Socrates-Plato-Aristoteles/Olympische Spelen 776 v.Chr./Alexander de Grote) + Romeinen (Caesar/Augustus/Colosseum/Limes-Rijn-NL/Latijn) + 476 val West-Romeinse Rijk. ~15 min.",
   triggerKeywords: [
     "oudheid", "antiek",
     "Egyptenaren", "farao", "piramide", "Nijl",

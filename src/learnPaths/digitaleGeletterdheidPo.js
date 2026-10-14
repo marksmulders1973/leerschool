@@ -352,7 +352,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const digitaleGeletterdheidPo = {
   id: "digitale-geletterdheid-po",
-  title: "Digitale geletterdheid (Doorstroomtoets groep 6-8)",
+  title: "Digitale geletterdheid (groep 6-8, Doorstroomtoets-stof)",
   emoji: "💻",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -362,7 +362,7 @@ const digitaleGeletterdheidPo = {
     { id: "media-wijsheid-maatschappijleer", title: "Media-wijsheid", niveau: "1F" },
   ],
   intro:
-    "Digitale geletterdheid voor Doorstroomtoets groep 6-8 — computer + internet basis (CPU/HTTPS/WWW/Tim Berners-Lee) + slim zoeken (Google-trucs + bronnen-controle + AI-hallucinatie) + veiligheid (wachtwoord + 2FA + phishing + cyberpesten + AVG-privacy). Sluit op mediawijsheid. ~15 min.",
+    "Digitale geletterdheid voor groep 6-8, Doorstroomtoets-stof — computer + internet basis (CPU/HTTPS/WWW/Tim Berners-Lee) + slim zoeken (Google-trucs + bronnen-controle + AI-hallucinatie) + veiligheid (wachtwoord + 2FA + phishing + cyberpesten + AVG-privacy). Sluit op mediawijsheid. ~15 min.",
   triggerKeywords: [
     "digitaal", "computer", "internet",
     "CPU", "HTTPS", "browser",

@@ -129,7 +129,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const klassiekeMuziekPo = {
   id: "klassieke-muziek-po",
-  title: "Klassieke muziek + componisten (Doorstroomtoets groep 6-8)",
+  title: "Klassieke muziek + componisten (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🎼",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -139,7 +139,7 @@ const klassiekeMuziekPo = {
     { id: "nederlandse-kunstenaars-po", title: "Nederlandse kunstenaars", niveau: "1F" },
   ],
   intro:
-    "Klassieke muziek voor Doorstroomtoets groep 6-8 — muziek-basis (melodie/ritme/tempo/instrumenten) + 5 perioden (barok-klassiek-romantiek) + grote 3 (Bach/Mozart-wonderkind/Beethoven-doof) + Vivaldi/Tsjaikovski + orkest + NL (Concertgebouw + André Rieu + Duncan Laurence Eurovisie 2019 + DJ-grootmacht). ~15 min.",
+    "Klassieke muziek voor groep 6-8, Doorstroomtoets-stof — muziek-basis (melodie/ritme/tempo/instrumenten) + 5 perioden (barok-klassiek-romantiek) + grote 3 (Bach/Mozart-wonderkind/Beethoven-doof) + Vivaldi/Tsjaikovski + orkest + NL (Concertgebouw + André Rieu + Duncan Laurence Eurovisie 2019 + DJ-grootmacht). ~15 min.",
   triggerKeywords: [
     "klassieke muziek", "componist",
     "Bach", "Mozart", "Beethoven", "Vivaldi", "Chopin",

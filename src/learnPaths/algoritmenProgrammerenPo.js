@@ -351,7 +351,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const algoritmenProgrammerenPo = {
   id: "algoritmen-programmeren-po",
-  title: "Algoritmen + programmeren (Doorstroomtoets groep 6-8)",
+  title: "Algoritmen + programmeren (groep 6-8, Doorstroomtoets-stof)",
   emoji: "📋",
   level: "groep6-8",
   subject: "wereldorientatie",
@@ -361,7 +361,7 @@ const algoritmenProgrammerenPo = {
     { id: "digitale-geletterdheid-po", title: "Digitale geletterdheid", niveau: "1F" },
   ],
   intro:
-    "Algoritmen + programmeren voor Doorstroomtoets groep 6-8 — wat is algoritme (stappenplan, recept, GPS-Dijkstra-NL'er) + bouwstenen (variabele/if/loop/functie/lijst) + Ada Lovelace + talen (Scratch/Python/JavaScript) + Linus Torvalds Linux. Sluit op digitale-geletterdheid. ~15 min.",
+    "Algoritmen + programmeren voor groep 6-8, Doorstroomtoets-stof — wat is algoritme (stappenplan, recept, GPS-Dijkstra-NL'er) + bouwstenen (variabele/if/loop/functie/lijst) + Ada Lovelace + talen (Scratch/Python/JavaScript) + Linus Torvalds Linux. Sluit op digitale-geletterdheid. ~15 min.",
   triggerKeywords: [
     "algoritme", "stappenplan",
     "programmeren", "code", "coderen",

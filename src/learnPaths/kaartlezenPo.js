@@ -1019,7 +1019,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const kaartlezenPo = {
   id: "kaartlezen-po",
-  title: "Kaartlezen — Doorstroomtoets groep 5-8",
+  title: "Kaartlezen — groep 5-8, Doorstroomtoets-stof",
   emoji: "🗺️",
   level: "groep5-8",
   subject: "aardrijkskunde",

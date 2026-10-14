@@ -309,7 +309,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const koudeOorlogModernPo = {
   id: "koude-oorlog-modern-po",
-  title: "Koude Oorlog + moderne geschiedenis (Doorstroomtoets groep 7-8)",
+  title: "Koude Oorlog + moderne geschiedenis (groep 7-8, Doorstroomtoets-stof)",
   emoji: "🧊",
   level: "groep7-8",
   subject: "geschiedenis",
@@ -320,7 +320,7 @@ const koudeOorlogModernPo = {
     { id: "tijdvakken-nederland-po", title: "Tijdvakken NL", niveau: "1F" },
   ],
   intro:
-    "Koude Oorlog + moderne geschiedenis voor Doorstroomtoets groep 7-8 — VS vs USSR (kapitalisme vs communisme + NAVO 1949 + Rutte 2024) + crises (Berlijnse Muur 1961, Cuba 1962 bijna-kernoorlog, Vietnam) + val Muur 1989 + Gorbatsjov + 9/11 + Oekraïne 2022 + huidige wereld. Tijdvak 10. ~15 min.",
+    "Koude Oorlog + moderne geschiedenis voor groep 7-8, Doorstroomtoets-stof — VS vs USSR (kapitalisme vs communisme + NAVO 1949 + Rutte 2024) + crises (Berlijnse Muur 1961, Cuba 1962 bijna-kernoorlog, Vietnam) + val Muur 1989 + Gorbatsjov + 9/11 + Oekraïne 2022 + huidige wereld. Tijdvak 10. ~15 min.",
   triggerKeywords: [
     "Koude Oorlog",
     "VS", "USSR", "Sovjet-Unie",

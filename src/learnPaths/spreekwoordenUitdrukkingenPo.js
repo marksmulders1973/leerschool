@@ -640,7 +640,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const spreekwoordenUitdrukkingenPo = {
   id: "spreekwoorden-uitdrukkingen-po",
-  title: "Spreekwoorden + uitdrukkingen (Doorstroomtoets groep 6-8)",
+  title: "Spreekwoorden + uitdrukkingen (groep 6-8, Doorstroomtoets-stof)",
   emoji: "💬",
   level: "groep6-8",
   subject: "taal",
@@ -650,7 +650,7 @@ const spreekwoordenUitdrukkingenPo = {
     { id: "woordenschat-po", title: "Woordenschat", niveau: "1F" },
   ],
   intro:
-    "Spreekwoorden + uitdrukkingen voor Doorstroomtoets groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (toetsvraag) + valkuilen. ~15 min.",
+    "Spreekwoorden + uitdrukkingen voor groep 6-8, Doorstroomtoets-stof — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (toetsvraag) + valkuilen. ~15 min.",
   triggerKeywords: [
     "spreekwoord", "spreekwoorden",
     "uitdrukking", "uitdrukkingen", "idioom",

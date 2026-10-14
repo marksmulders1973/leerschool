@@ -128,7 +128,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const olympischeSpelenPo = {
   id: "olympische-spelen-po",
-  title: "Olympische Spelen + sport (Doorstroomtoets groep 6-8)",
+  title: "Olympische Spelen + sport (groep 6-8, Doorstroomtoets-stof)",
   emoji: "🥇",
   level: "groep6-8",
   subject: "geschiedenis",
@@ -136,7 +136,7 @@ const olympischeSpelenPo = {
   sloThema: "Wereldoriëntatie — cultuur / sport",
   prerequisites: [],
   intro:
-    "Olympische Spelen voor Doorstroomtoets groep 6-8 — geschiedenis (Olympia → Athene 1896 → Parijs 2024) + 5 ringen + motto + sport-categorieën (atletiek/water/bal/wintersport) + medailles + Paralympics + NL-helden (Ireen Wüst/Sven Kramer/Femke Bol). ~15 min.",
+    "Olympische Spelen voor groep 6-8, Doorstroomtoets-stof — geschiedenis (Olympia → Athene 1896 → Parijs 2024) + 5 ringen + motto + sport-categorieën (atletiek/water/bal/wintersport) + medailles + Paralympics + NL-helden (Ireen Wüst/Sven Kramer/Femke Bol). ~15 min.",
   triggerKeywords: [
     "Olympische Spelen", "OS", "olympisch",
     "Athene 1896", "Parijs 2024",
