@@ -52,6 +52,15 @@ const LINK_FOUT_BIJ_START = (() => {
 const HERSTUUR_WACHT_S = 30;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+// 🔢 Inloggen met de code uit de mail (14 okt 2026, Deianera's test: "ik ben alleen gekoppeld als ik
+// elke keer op de link in de mail klik"). De maillink opent in de browser van de mail-app; wie de app
+// via een icoon of de Play Store-app opent, zit in een andere browser en is daar niet ingelogd. Een
+// 6-cijferige code die je in de app zelf intypt (supabase.auth.verifyOtp, type "email") lost dat op:
+// de login landt precies waar de ouder zit. Vereist dat het Magic Link-mailsjabloon in Supabase
+// `{{ .Token }}` toont — zolang dat niet zo is, blijft het veld verborgen (CODE_IN_MAIL = false).
+const CODE_IN_MAIL = false;
+const CODE_RE = /^\d{6}$/;
+
 function foutTekst(error) {
   const code = error?.code || "";
   const status = error?.status || 0;
@@ -79,7 +88,34 @@ export default function EmailLogin({ terug = "/ouder", compact = false, onVerstu
   const [wacht, setWacht] = useState(0);
   const [consentOpen, setConsentOpen] = useState(false);
   const [linkFout, setLinkFout] = useState(LINK_FOUT_BIJ_START);
+  const [codeInvoer, setCodeInvoer] = useState("");
+  const [codeBezig, setCodeBezig] = useState(false);
+  const [codeFout, setCodeFout] = useState("");
   const timerRef = useRef(null);
+
+  // Code uit de mail intypen → sessie landt in déze browser/app (geen link nodig).
+  const metCode = async (e) => {
+    e?.preventDefault?.();
+    const token = codeInvoer.replace(/\s+/g, "");
+    if (!CODE_RE.test(token)) { setCodeFout("Typ de 6 cijfers uit de mail."); return; }
+    setCodeBezig(true); setCodeFout("");
+    try {
+      const { data, error } = await supabase.auth.verifyOtp({ email: verstuurdNaar, token, type: "email" });
+      if (error || !data?.session) {
+        setCodeFout(/expired|invalid|not found/i.test(error?.message || "") ? "Die code klopt niet of is verlopen. Vraag hieronder een nieuwe mail aan." : "Inloggen met de code lukte niet. Probeer het nog een keer.");
+        try { track("email_login_code_fout", { code: error?.code || "", status: error?.status || 0 }); } catch { /* */ }
+        return;
+      }
+      try { track("email_login_code_ok", { terug }); } catch { /* */ }
+      // Zelfde landing als de maillink: het ouder-dashboard (of waar de login vandaan kwam).
+      try { window.location.assign(terug.startsWith("/") ? terug : "/" + terug); } catch { /* */ }
+    } catch (err) {
+      setCodeFout("Inloggen met de code lukte niet. Probeer het nog een keer.");
+      try { track("email_login_code_fout", { code: "exception", msg: String(err?.message || "").slice(0, 60) }); } catch { /* */ }
+    } finally {
+      setCodeBezig(false);
+    }
+  };
 
   useEffect(() => {
     if (wacht <= 0) return undefined;
@@ -156,7 +192,32 @@ export default function EmailLogin({ terug = "/ouder", compact = false, onVerstu
       {verstuurdNaar ? (
         <div role="status" style={{ padding: "12px 14px", borderRadius: 14, background: "rgba(0,200,83,0.10)", border: "1px solid rgba(0,200,83,0.35)", fontFamily: "var(--font-body, sans-serif)", color: "rgba(255,255,255,0.9)", fontSize: compact ? 13 : 14, lineHeight: 1.5 }}>
           <div style={{ fontFamily: "var(--font-display, sans-serif)", fontWeight: 700, color: "#00e676", marginBottom: 4 }}>Mail is onderweg naar {verstuurdNaar}</div>
-          Kijk in je mail (ook in spam). Tik op de link, dan ben je ingelogd.
+          {CODE_IN_MAIL
+            ? <>Kijk in je mail (ook in spam). <strong>Typ hieronder de code uit de mail</strong>, dan blijf je ingelogd in deze app. Op de link tikken kan ook.</>
+            : <>Kijk in je mail (ook in spam). Tik op de link, dan ben je ingelogd.</>}
+          {CODE_IN_MAIL && (
+            <form onSubmit={metCode} noValidate style={{ marginTop: 10, display: "flex", gap: 8, alignItems: "stretch" }}>
+              <label htmlFor="lk-email-code" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>Code uit de mail</label>
+              <input
+                id="lk-email-code"
+                type="text"
+                inputMode="numeric"
+                autoComplete="one-time-code"
+                pattern="[0-9]*"
+                maxLength={7}
+                placeholder="code uit de mail (6 cijfers)"
+                value={codeInvoer}
+                onChange={(e) => { setCodeInvoer(e.target.value.replace(/[^\d\s]/g, "")); if (codeFout) setCodeFout(""); }}
+                disabled={codeBezig}
+                aria-invalid={!!codeFout}
+                style={{ ...inputStijl, border: codeFout ? "1px solid rgba(255,112,67,0.7)" : "1px solid rgba(255,255,255,0.18)", letterSpacing: 2, fontSize: 16 }}
+              />
+              <button type="submit" disabled={codeBezig} style={{ ...knopStijl, opacity: codeBezig ? 0.7 : 1 }}>
+                {codeBezig ? "Bezig…" : "Inloggen"}
+              </button>
+            </form>
+          )}
+          {codeFout && <div role="alert" style={{ color: "#ff7043", fontSize: 12.5, marginTop: 6 }}>{codeFout}</div>}
           <div style={{ marginTop: 8, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
             <button
               type="button"
