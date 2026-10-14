@@ -5,7 +5,8 @@
 //   dagrapport "sinds v923"). Nooit terugzetten naar 1: een oude versie zou dan
 //   nieuwer lijken.
 // - BOUW_STEMPEL: wat de bezoeker rechtsboven ziet. Mark 5 okt 2026: "versie 923"
-//   leest als "923 keer iets mis" → vanaf 6 okt een datum. Eerste uitrol van een
-//   dag = "6 okt", tweede = "6 okt b", derde "6 okt c".
-export const BOUW_VERSIE = 945;
-export const BOUW_STEMPEL = "14 okt c";
+//   leest als "923 keer iets mis" → van 6 t/m 14 okt een datum ("14 okt c"). Mark 14 okt:
+//   een datum "kan lijken of de datum niet klopt" → vanaf nu een teller met drie
+//   cijfers die bij 001 begint: elke uitrol +1 ("001", "002", …). Nooit terug naar 001.
+export const BOUW_VERSIE = 946;
+export const BOUW_STEMPEL = "001";
