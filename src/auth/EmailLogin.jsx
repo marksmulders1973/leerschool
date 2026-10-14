@@ -58,8 +58,9 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 // 6-cijferige code die je in de app zelf intypt (supabase.auth.verifyOtp, type "email") lost dat op:
 // de login landt precies waar de ouder zit. Vereist dat het Magic Link-mailsjabloon in Supabase
 // `{{ .Token }}` toont — zolang dat niet zo is, blijft het veld verborgen (CODE_IN_MAIL = false).
-const CODE_IN_MAIL = false;
-const CODE_RE = /^\d{6}$/;
+const CODE_IN_MAIL = true;
+// Supabase stuurt in dit project een code van 8 cijfers (Auth → OTP length); 6 t/m 8 toestaan.
+const CODE_RE = /^\d{6,8}$/;
 
 function foutTekst(error) {
   const code = error?.code || "";
@@ -97,7 +98,7 @@ export default function EmailLogin({ terug = "/ouder", compact = false, onVerstu
   const metCode = async (e) => {
     e?.preventDefault?.();
     const token = codeInvoer.replace(/\s+/g, "");
-    if (!CODE_RE.test(token)) { setCodeFout("Typ de 6 cijfers uit de mail."); return; }
+    if (!CODE_RE.test(token)) { setCodeFout("Typ de cijfers uit de mail (6 tot 8)."); return; }
     setCodeBezig(true); setCodeFout("");
     try {
       const { data, error } = await supabase.auth.verifyOtp({ email: verstuurdNaar, token, type: "email" });
@@ -204,8 +205,8 @@ export default function EmailLogin({ terug = "/ouder", compact = false, onVerstu
                 inputMode="numeric"
                 autoComplete="one-time-code"
                 pattern="[0-9]*"
-                maxLength={7}
-                placeholder="code uit de mail (6 cijfers)"
+                maxLength={9}
+                placeholder="code uit de mail"
                 value={codeInvoer}
                 onChange={(e) => { setCodeInvoer(e.target.value.replace(/[^\d\s]/g, "")); if (codeFout) setCodeFout(""); }}
                 disabled={codeBezig}
