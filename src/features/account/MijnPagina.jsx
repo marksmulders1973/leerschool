@@ -8,6 +8,7 @@ import supabase from "../../supabase.js";
 import { updateTeacherClasses } from "../../data/repos/profilesRepo.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
 import { loadResumeGewoon as loadResume } from "../learn/KwartierPauze.jsx";
+import { leesGastVoortgang } from "./gastVoortgang.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { voKeuzes, voLabel, padPastBijSchoolType, isVoType, maxJaar, normType } from "../../shared/voNiveau.js";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
@@ -295,21 +296,109 @@ function MeerTegels({ onGa }) {
   );
 }
 
-function LegeMijnPagina({ onStartKwartier, onNaamInvullen }) {
+// 14 okt 2026 (Mark: "bouw Mijn pagina ook voor kinderen zonder naam"): wat dit apparaat al
+// bewaart — vragen, afgeronde delen, minuten — staat hier nu óók zonder naam. De naam blijft
+// een keuze erbij (voor een ander apparaat, ouder of juf), geen drempel.
+function GastVoortgang({ v, onResumePath, onPickPath, streak }) {
+  const resume = loadResume("");
+  const resumePad = resume?.pathId ? PATHS_BY_ID[resume.pathId] : null;
+  useEffect(() => { try { track("mijn_gast_voortgang", { vragen: v.vragen, delen: v.delenAf, paden: v.paden.length }); } catch { /* */ } }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const kop = { fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: 0.6, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 };
+  const getal = { fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, lineHeight: 1.1 };
+  const sub = { fontFamily: "var(--font-body)", fontSize: 12, color: "var(--color-text-muted, #8899aa)" };
+  const vakLabel = (s) => SUBJECT_LABELS?.[s]?.title || s;
+  return (
+    <>
+      <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+        <div style={kop}>Dit heb je al gedaan op dit apparaat</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, textAlign: "center" }}>
+          <div><div style={getal}>{v.vragen}</div><div style={sub}>{v.vragen === 1 ? "vraag gemaakt" : "vragen gemaakt"}</div></div>
+          <div><div style={getal}>{v.delenAf}</div><div style={sub}>{v.delenAf === 1 ? "deel af" : "delen af"}</div></div>
+          <div><div style={getal}>{v.minutenVandaag === 0 && v.secondenVandaag > 0 ? "< 1" : v.minutenVandaag}</div><div style={sub}>min vandaag{streak > 1 ? ` · ${streak} dagen op rij` : ""}</div></div>
+        </div>
+      </Card>
+
+      {resumePad && (
+        <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+          <div style={kop}>Verder waar je was</div>
+          <button type="button" onClick={() => { try { track("mijn_gast_verder", { pad: resume.pathId }); } catch { /* */ } onResumePath?.(resume.pathId, resume.stepIdx); }}
+            style={{ width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 14, border: "1px solid var(--color-border-soft)", background: "rgba(255,255,255,0.05)", color: "inherit", cursor: "pointer" }}>
+            <span aria-hidden="true" style={{ fontSize: 26 }}>{resumePad.emoji || "📚"}</span>
+            <span style={{ flex: 1, minWidth: 0 }}>
+              <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800 }}>{resumePad.title}</span>
+              <span style={{ display: "block", ...sub }}>deel {(resume.stepIdx ?? 0) + 1}{typeof resume.checkIdx === "number" && resume.checkIdx > 0 ? `, vraag ${resume.checkIdx + 1}` : ""} · tik om door te gaan</span>
+            </span>
+            <span aria-hidden="true" style={{ fontSize: 18 }}>→</span>
+          </button>
+        </Card>
+      )}
+
+      {v.perVak.length > 0 && (
+        <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+          <div style={kop}>Waar je staat</div>
+          <div style={{ display: "grid", gap: 8 }}>
+            {v.perVak.slice(0, 5).map((x) => (
+              <div key={x.subj} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ flex: "0 0 110px", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textTransform: "capitalize" }}>{vakLabel(x.subj)}</span>
+                <span style={{ ...sub, flex: 1 }}>{x.vragen} {x.vragen === 1 ? "vraag" : "vragen"} · {x.delenAf} {x.delenAf === 1 ? "deel" : "delen"} af{x.padenAf ? ` · ${x.padenAf} ${x.padenAf === 1 ? "pad" : "paden"} helemaal af` : ""}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: "grid", gap: 6, marginTop: 12 }}>
+            {v.paden.filter((p) => !p.af).slice(0, 3).map((p) => (
+              <button key={p.id} type="button" onClick={() => { try { track("mijn_gast_pad", { pad: p.id }); } catch { /* */ } onPickPath?.(p.id); }}
+                style={{ textAlign: "left", display: "flex", alignItems: "center", gap: 10, padding: "9px 12px", borderRadius: 12, border: "1px solid var(--color-border-soft)", background: "transparent", color: "inherit", cursor: "pointer" }}>
+                <span aria-hidden="true">{p.emoji || "📚"}</span>
+                <span style={{ flex: 1, minWidth: 0, fontFamily: "var(--font-body)", fontSize: 13.5 }}>{p.title}</span>
+                <span style={sub}>{p.delenAf}/{p.stepCount || "?"} delen</span>
+              </button>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {v.padenAf.length > 0 && (
+        <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+          <div style={kop}>Helemaal af</div>
+          <div style={{ display: "grid", gap: 6 }}>
+            {v.padenAf.slice(0, 6).map((p) => (
+              <div key={p.id} style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: "var(--font-body)", fontSize: 13.5 }}>
+                <span aria-hidden="true">🏆</span><span>{p.title}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+    </>
+  );
+}
+
+function LegeMijnPagina({ onStartKwartier, onNaamInvullen, onResumePath, onPickPath, streak = 0 }) {
   const [naam, setNaam] = useState("");
+  const gast = useMemo(() => leesGastVoortgang(pathManifest), []);
   const start = () => {
-    try { track("mijn_leeg_start", {}); } catch { /* */ }
+    try { track("mijn_leeg_start", { met_voortgang: gast.heeftIets }); } catch { /* */ }
     onStartKwartier?.();
   };
   const openMet = (e) => {
     e.preventDefault();
     const n = naam.trim();
     if (!n) return;
-    try { track("mijn_leeg_naam", { name_length: n.length }); } catch { /* */ }
+    try { track("mijn_leeg_naam", { name_length: n.length, met_voortgang: gast.heeftIets }); } catch { /* */ }
     onNaamInvullen?.(n);
   };
   return (
     <>
+      {gast.heeftIets ? (
+        <>
+          <GastVoortgang v={gast} onResumePath={onResumePath} onPickPath={onPickPath} streak={streak} />
+          <Card padding="md" style={{ marginBottom: "var(--space-4)", textAlign: "center" }}>
+            <Button variant="primary" size="lg" onClick={start} style={{ width: "100%", maxWidth: 340 }}>
+              ▶️ Doe je kwartier van vandaag
+            </Button>
+          </Card>
+        </>
+      ) : (
       <Card padding="lg" style={{ marginBottom: "var(--space-4)", textAlign: "center" }}>
         <div aria-hidden="true" style={{ fontSize: 40, lineHeight: 1 }}>🌱</div>
         <h2 style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 800, margin: "10px 0 6px" }}>
@@ -323,7 +412,9 @@ function LegeMijnPagina({ onStartKwartier, onNaamInvullen }) {
           ▶️ Begin met een kwartier
         </Button>
       </Card>
+      )}
 
+      {!gast.heeftIets && (
       <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
         <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: 0.6, color: "var(--color-text-muted, #8899aa)", marginBottom: 10 }}>
           Dit komt hier te staan
@@ -340,11 +431,14 @@ function LegeMijnPagina({ onStartKwartier, onNaamInvullen }) {
           ))}
         </div>
       </Card>
+      )}
 
       <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
         <form onSubmit={openMet}>
           <label htmlFor="mijn-leeg-naam" style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
-            Heb je op dit apparaat al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij.
+            {gast.heeftIets
+              ? "Wil je dit ook op een ander apparaat zien, of mag iemand thuis of je juf meekijken? Vul dan je naam in. Het hoeft niet."
+              : "Heb je op dit apparaat al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij."}
           </label>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <input
@@ -586,6 +680,13 @@ export default function MijnPagina({
     try {
       const net = sessionStorage.getItem("lk_wie_net");
       if (net !== null && net === (player || "")) { sessionStorage.removeItem("lk_wie_net"); return false; }
+    } catch { /* */ }
+    // 14 okt 2026: een kind zonder naam dat al oefende op een apparaat zónder profielen komt
+    // hier om zijn voortgang te zien — dan niet eerst de kiezer ervoor schuiven (de naam
+    // blijft onderaan een keuze). Staan er wél profielen, dan blijft Marks regel van 1 okt gelden.
+    try {
+      const namen = JSON.parse(localStorage.getItem("lk_namen") || "[]");
+      if (!player && Array.isArray(namen) && namen.length === 0 && leesGastVoortgang(pathManifest).heeftIets) return false;
     } catch { /* */ }
     return true;
   });
@@ -1084,7 +1185,7 @@ export default function MijnPagina({
       <Header title={player ? `${player}’s Leerkwartier` : "Mijn Leerkwartier"} subtitle="" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {!player && (
-          <LegeMijnPagina onStartKwartier={onStartKwartier} onNaamInvullen={onNaamInvullen} />
+          <LegeMijnPagina onStartKwartier={onStartKwartier} onNaamInvullen={onNaamInvullen} onResumePath={onResumePath} onPickPath={onPickPath} streak={streak} />
         )}
 
         {player && (
