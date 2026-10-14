@@ -5,6 +5,7 @@ import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
 import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate, daysUntil } from "./utils.js";
 import { noteerKlasQrBezoek } from "./shared/klasQr.js";
+import { toetsCodeUitUrl } from "./shared/urlCode.js";
 import { noteerBezoekdag } from "./features/account/trouweGast.js";
 
 // Eager imports: alleen wat élke gebruiker direct ziet of nodig heeft.
@@ -715,11 +716,10 @@ export default function App() {
     // 🌟 Trouwe gast (idee H, 16 sep 2026): vandaag als bezoekdag noteren.
     try { noteerBezoekdag(); } catch { /* */ }
     // URL parameter ?code=XXXXX (alleen quiz-codes, niet Supabase OAuth codes)
-    // 14 okt 2026 (Mark, screenshot): /koppelen?code=XXXXXX is een OUDERKOPPELCODE, geen toets —
-    // anders kwam de melding "Toets met code … niet gevonden" over de koppelpagina heen.
-    const urlCode = new URLSearchParams(window.location.search).get("code");
-    const isKoppelRoute = /^\/koppelen(\/|$)/.test(window.location.pathname);
-    if (urlCode && urlCode.length <= 8 && !isKoppelRoute) setPendingCode(urlCode.toUpperCase());
+    // Wat ?code= hier betekent staat op één plek: src/shared/urlCode.js (14 okt 2026, na de
+    // botsing /koppelen?code= ↔ toets-deelcode). Nieuwe route met ?code=? Daar toevoegen + test.
+    const urlCode = toetsCodeUitUrl(window.location);
+    if (urlCode) setPendingCode(urlCode);
     // 📱 Kwam dit apparaat binnen via de QR-hoek op /klas? Tellen per klas (klasQr.js).
     try { noteerKlasQrBezoek(track); } catch { /* */ }
   }, []);
