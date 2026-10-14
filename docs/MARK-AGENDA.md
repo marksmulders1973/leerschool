@@ -317,3 +317,5 @@ de eenheden (per kind / per gezin / per docent) zijn consistent, en het staat ov
   (halve dag werk, zelfde bouw, muntje erbij) in plaats van meteen voor iedereen.
   Losstaand en sowieso waar: **twee van de drie die het scherm zien, doen niet eens de eerste proefvraag** —
   dat lek mag ik meten en dichten zonder de rol-tegels te raken.
+
+- 📱 **Play Store — 12 testers gehaald wo 14 okt (±10:30)**: de 14-dagenklok loopt → **productie-aanvraag mogelijk vanaf ~wo 28 okt** (Console → Dashboard → "Een aanvraag indienen voor productie"; vragen over de gesloten test beantwoorden). Testers moeten de app tot dan geïnstalleerd houden; lijst = 52 adressen.
