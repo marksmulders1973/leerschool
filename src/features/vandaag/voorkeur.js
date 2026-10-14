@@ -14,13 +14,68 @@ import { linkIdVoor } from "../../shared/koppeling.js";
 
 const KEY = "lk_voorkeur";
 export const VOORKEUR_EVENT = "lk-voorkeur-changed";
+// 14 okt 2026 (Deianera via Mark: "maar 5 keuzes en 3 aanvinken is weinig"): álle vakken die de app
+// heeft, passend bij groep of klas, met twee lagen: gekozen (tot MAX_VAKKEN) en favoriet (tot
+// MAX_FAVORIET, ster). Oude id's (rekenen/taal/werkwoorden/lezen/doorstroomtoets) blijven bestaan
+// zodat bewaarde voorkeuren blijven werken. `po`/`vo` = voor welke schoolsoort de knop verschijnt;
+// `alleenGroep` beperkt binnen de basisschool; `top` = staat in de ingeklapte lijst.
+export const MAX_FAVORIET = 3;
+export const MAX_VAKKEN = 10;
 export const VOORKEUR_VAKKEN = [
-  { id: "doorstroomtoets", label: "Doorstroomtoets-voorbereiding", alleenGroep: [7, 8] },
-  { id: "rekenen", label: "Rekenen" },
-  { id: "taal", label: "Taal en spelling" },
-  { id: "werkwoorden", label: "Werkwoorden" },
-  { id: "lezen", label: "Begrijpend lezen" },
+  { id: "doorstroomtoets", label: "Doorstroomtoets-voorbereiding", alleenGroep: [7, 8], po: true, top: true },
+  { id: "rekenen", label: "Rekenen", po: true, top: true },
+  { id: "taal", label: "Taal en spelling", po: true, top: true },
+  { id: "werkwoorden", label: "Werkwoorden", po: true, top: true },
+  { id: "lezen", label: "Begrijpend lezen", po: true, top: true },
+  { id: "dictee", label: "Dictee", po: true },
+  { id: "tafels", label: "Tafels", po: true, alleenGroep: [3, 4, 5, 6] },
+  { id: "engels", label: "Engels", po: true, vo: true, top: true },
+  { id: "studievaardigheden", label: "Studievaardigheden", po: true, alleenGroep: [6, 7, 8] },
+  { id: "natuur", label: "Natuur en techniek", po: true },
+  { id: "aardrijkskunde", label: "Aardrijkskunde", po: true, vo: true },
+  { id: "geschiedenis", label: "Geschiedenis", po: true, vo: true },
+  { id: "wiskunde", label: "Wiskunde", vo: true, top: true },
+  { id: "nederlands", label: "Nederlands", vo: true, top: true },
+  { id: "frans", label: "Frans", vo: true },
+  { id: "duits", label: "Duits", vo: true },
+  { id: "biologie", label: "Biologie", vo: true, top: true },
+  { id: "natuurkunde", label: "Natuurkunde", vo: true },
+  { id: "scheikunde", label: "Scheikunde", vo: true },
+  { id: "economie", label: "Economie", vo: true },
+  { id: "maatschappijleer", label: "Maatschappijleer", vo: true },
+  { id: "examens", label: "Examens oefenen", vo: true, alleenKlas: [3, 4, 5, 6] },
 ];
+
+/** Knoppen voor dit niveau. `level` = "groep8", "groep12", "klas3|havo", "4" (VO) of "" (onbekend → basisschool). */
+export function vakOptiesVoor(level = "", schoolType = "") {
+  const s = String(level || "");
+  const vo = /^klas/.test(s) || !!schoolType || /^[1-6]$/.test(s);
+  const g = s === "groep12" ? 2 : (s.match(/^groep(\d)$/) || [])[1];
+  const groep = g ? Number(g) : null;
+  const k = (s.match(/^klas(\d)/) || s.match(/^(\d)$/) || [])[1];
+  const klas = k ? Number(k) : null;
+  return VOORKEUR_VAKKEN.filter((v) => {
+    if (vo ? !v.vo : !v.po) return false;
+    if (!vo && v.alleenGroep && groep && !v.alleenGroep.includes(groep)) return false;
+    if (vo && v.alleenKlas && klas && !v.alleenKlas.includes(klas)) return false;
+    return true;
+  });
+}
+
+/**
+ * Eén tik = gekozen, nog een tik = favoriet (ster), derde tik = weg.
+ * Geeft { vakken, favoriet } terug; vakken bevat ook de favorieten (oude lezers blijven werken).
+ */
+export function wisselVakKeuze({ vakken = [], favoriet = [] }, id) {
+  const inV = vakken.includes(id), inF = favoriet.includes(id);
+  if (inF) return { vakken: vakken.filter((x) => x !== id), favoriet: favoriet.filter((x) => x !== id) };
+  if (inV) {
+    if (favoriet.length >= MAX_FAVORIET) return { vakken: vakken.filter((x) => x !== id), favoriet };
+    return { vakken, favoriet: [...favoriet, id] };
+  }
+  if (vakken.length >= MAX_VAKKEN) return { vakken, favoriet };
+  return { vakken: [...vakken, id], favoriet };
+}
 
 const sleutel = (naam) => String(naam || "").trim().toLowerCase();
 function lees() {

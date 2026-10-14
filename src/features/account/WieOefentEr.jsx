@@ -11,9 +11,9 @@
 //   (de vandaag-motor gebruikt die al).
 
 import { voKeuzes, voLabel, isVoType } from "../../shared/voNiveau.js";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
-import { VOORKEUR_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
+import { vakOptiesVoor, wisselVakKeuze, MAX_FAVORIET, MAX_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
 
 // 6 vaste plekken (Mark 1 okt 2026, middag): 3 kinderen, 2 ouders of verzorgers, 1 leerkracht.
@@ -133,13 +133,23 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
   const [leeftijd, setLeeftijd] = useState("");
   const [level, setLevel] = useState("");
   const [vakken, setVakken] = useState([]);
+  const [favoriet, setFavoriet] = useState([]);
+  const [meerVakken, setMeerVakken] = useState(false);
   const [fout, setFout] = useState("");
 
-  const groepNr = (() => { const m = level.match(/groep(\d)/); return m ? Number(m[1] === "1" ? 2 : m[1]) : null; })();
-  const vakOpties = VOORKEUR_VAKKEN.filter((v) => !v.alleenGroep || (groepNr && v.alleenGroep.includes(groepNr)));
+  // 14 okt 2026: alle vakken van de app, passend bij groep of klas; eerst de vijf meest gekozen,
+  // "meer vakken" klapt de rest open. Tik = gekozen, nog een tik = ★ favoriet, derde tik = weg.
+  const vakOpties = vakOptiesVoor(level);
+  const zichtbareVakken = meerVakken ? vakOpties : vakOpties.filter((v) => v.top || vakken.includes(v.id));
 
   const kiesLeeftijd = (v) => { setLeeftijd(v); if (!level || level === niveauBijLeeftijd(leeftijd)) setLevel(niveauBijLeeftijd(v)); };
-  const wisselVak = (id) => setVakken((cur) => cur.includes(id) ? cur.filter((x) => x !== id) : cur.length >= 3 ? cur : [...cur, id]);
+  const wisselVak = (id) => { const n = wisselVakKeuze({ vakken, favoriet }, id); setVakken(n.vakken); setFavoriet(n.favoriet); };
+  // Andere groep of klas gekozen → vakken die daar niet bij horen vallen weg.
+  useEffect(() => {
+    const toegestaan = new Set(vakOptiesVoor(level).map((v) => v.id));
+    setVakken((cur) => cur.filter((id) => toegestaan.has(id)));
+    setFavoriet((cur) => cur.filter((id) => toegestaan.has(id)));
+  }, [level]);
 
   const klaar = () => {
     const n = naam.trim().replace(/\s+/g, " ");
@@ -149,7 +159,7 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
     if (bestaand.some((p) => p.naam.toLowerCase() === n.toLowerCase())) { setFout("Die naam bestaat al op dit apparaat."); return; }
     const isKlas = /^klas/.test(level);
     const echteRol = role === "leerling" && isKlas ? "student" : role;
-    onKlaar({ naam: n, role: echteRol, level: role === "teacher" || role === "ouder" ? (role === "teacher" ? level : "") : level, leeftijd: role === "leerling" ? leeftijd : "", vakken });
+    onKlaar({ naam: n, role: echteRol, level: role === "teacher" || role === "ouder" ? (role === "teacher" ? level : "") : level, leeftijd: role === "leerling" ? leeftijd : "", vakken, favoriet });
   };
 
   const veld = { width: "100%", padding: "11px 12px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.2)", background: "#1e2d45", color: "#fff", colorScheme: "dark", fontSize: 16, fontFamily: "var(--font-body)" };
@@ -205,18 +215,28 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
             <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginTop: 4 }}>We stelden de groep voor bij deze leeftijd; klopt het niet, kies dan een andere.</div>
           )}
 
-          <span style={label}>Wat oefen je het liefst? <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.45)" }}>(kies er tot 3)</span></span>
+          <span style={label}>Wat wil je oefenen? <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.45)" }}>(tik = kiezen, nog eens tikken = ★ favoriet)</span></span>
+          <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>
+            ★ {favoriet.length} van {MAX_FAVORIET} favorieten · {vakken.length} van {MAX_VAKKEN} gekozen
+            {favoriet.length >= MAX_FAVORIET ? " · sterren vol: tik op een ster om die weg te halen" : ""}
+          </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            {vakOpties.map((v) => {
+            {zichtbareVakken.map((v) => {
+              const fav = favoriet.includes(v.id);
               const aan = vakken.includes(v.id);
               return (
-                <button key={v.id} type="button" onClick={() => wisselVak(v.id)} style={{
+                <button key={v.id} type="button" onClick={() => wisselVak(v.id)} aria-pressed={aan} style={{
                   ...knopBasis, padding: "9px 14px", fontSize: 14, borderRadius: 999,
-                  border: aan ? "2px solid #00e676" : "1px solid rgba(255,255,255,0.18)",
-                  background: aan ? "rgba(0,230,118,0.12)" : "rgba(255,255,255,0.04)", color: "#fff",
-                }}>{aan ? "✓ " : ""}{v.label}</button>
+                  border: fav ? "2px solid #ffd54f" : aan ? "2px solid #00e676" : "1px solid rgba(255,255,255,0.18)",
+                  background: fav ? "rgba(255,213,79,0.16)" : aan ? "rgba(0,230,118,0.12)" : "rgba(255,255,255,0.04)", color: "#fff",
+                }}>{fav ? "★ " : aan ? "✓ " : ""}{v.label}</button>
               );
             })}
+            {!meerVakken && zichtbareVakken.length < vakOpties.length && (
+              <button type="button" onClick={() => setMeerVakken(true)} style={{ ...knopBasis, padding: "9px 14px", fontSize: 14, borderRadius: 999, border: "1px dashed rgba(255,255,255,0.35)", background: "transparent", color: "rgba(255,255,255,0.85)" }}>
+                + meer vakken ({vakOpties.length - zichtbareVakken.length})
+              </button>
+            )}
           </div>
         </>
       )}
@@ -279,7 +299,7 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
   const [beheren, setBeheren] = useState(false);
   const [weg, setWeg] = useState(null);
 
-  const maak = ({ naam, role, level, leeftijd, vakken }) => {
+  const maak = ({ naam, role, level, leeftijd, vakken, favoriet = [] }) => {
     try {
       const app = naarAppNiveau(level);
       localStorage.setItem(`lk_profiel:${naam}`, JSON.stringify({ role, level: app.level, schoolType: app.schoolType, leeftijd: leeftijd || "", aangemaakt: Date.now() }));
@@ -288,9 +308,9 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
       localStorage.setItem("lk_namen", JSON.stringify(lijst.slice(0, 8)));
       // Zelfde groep-vorm als Gezinsstart: "6" (getal als tekst), brugklas voor klas 1.
       const groepVoorkeur = /^groep12$/.test(level) ? "2" : (level.match(/^groep(\d)$/) || [])[1] || (/^klas1(\||$)/.test(level) ? "brugklas" : null);
-      if (vakken.length) bewaarVoorkeur(naam, { groep: groepVoorkeur, voorkeur: { vakken, vrij: "", tot: standaardTot(), app_kiest: false } });
+      if (vakken.length) bewaarVoorkeur(naam, { groep: groepVoorkeur, voorkeur: { vakken, favoriet, vrij: "", tot: standaardTot(), app_kiest: false } });
     } catch { /* */ }
-    try { track("profiel_aangemaakt", { rol: role, leeftijd: !!leeftijd, groep: !!level, vakken: vakken.length, aantal: profielen.length + 1 }); } catch { /* */ }
+    try { track("profiel_aangemaakt", { rol: role, leeftijd: !!leeftijd, groep: !!level, vakken: vakken.length, favoriet: favoriet.length, aantal: profielen.length + 1 }); } catch { /* */ }
     onKies(naam);
   };
 

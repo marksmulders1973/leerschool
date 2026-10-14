@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import supabase from "../../supabase.js";
 import { bewaarKoppeling } from "../../shared/koppeling.js";
-import { bewaarVoorkeur, standaardTot, VOORKEUR_VAKKEN } from "../vandaag/voorkeur.js";
+import { bewaarVoorkeur, standaardTot, VOORKEUR_VAKKEN, vakOptiesVoor } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
 
 // 🏠 Gezinsstart (Mark 30 sep 2026): een ouder of verzorger zet in vier
@@ -78,7 +78,7 @@ export function VoorkeurEditor({ groep, voorkeur, onOpslaan, onAnnuleer, bezig =
     <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "12px", borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.05)" }}>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>Waar moet de nadruk op liggen?</div>
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-        {VOORKEUR_VAKKEN.filter((x) => !x.alleenGroep || x.alleenGroep.includes(+groep)).map((x) => (
+        {vakOptiesVoor(groep ? `groep${groep}` : "").map((x) => (
           <button key={x.id} type="button" onClick={() => toggle(x.id)} aria-pressed={v.vakken.includes(x.id)} style={{ ...F.chip(v.vakken.includes(x.id)), fontSize: 12.5, padding: "6px 11px" }}>{x.label}</button>
         ))}
         <button type="button" onClick={() => setV((p) => ({ ...p, app_kiest: !p.app_kiest, vakken: [], vrij: "" }))} aria-pressed={v.app_kiest} style={{ ...F.chip(v.app_kiest), fontSize: 12.5, padding: "6px 11px" }}>Laat de app kiezen</button>
@@ -250,7 +250,7 @@ export default function Gezinsstart({ authUser, bestaandAantal = 0, bestaandeNam
           <div style={F.kop}>Waar wil je bij {kind.naam} de eerste twee maanden de nadruk op leggen?{kindLabel}</div>
           <div style={F.sub}>Kies één of meer. Het dagelijkse kwartier haalt er dan minstens twee van de drie onderdelen uit — tot {new Date(kind.voorkeur.tot).toLocaleDateString("nl-NL", { day: "numeric", month: "long" })}. Daarna kiest de app weer zelf.</div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {VOORKEUR_VAKKEN.filter((v) => !v.alleenGroep || v.alleenGroep.includes(+kind.groep)).map((v) => (
+            {vakOptiesVoor(kind.groep ? `groep${kind.groep}` : "").map((v) => (
               <button key={v.id} type="button" onClick={() => toggleVak(v.id)} aria-pressed={kind.voorkeur.vakken.includes(v.id)} style={F.chip(kind.voorkeur.vakken.includes(v.id))}>{v.label}</button>
             ))}
             <button type="button" onClick={appKiest} aria-pressed={kind.voorkeur.app_kiest} style={F.chip(kind.voorkeur.app_kiest)}>Laat de app kiezen</button>

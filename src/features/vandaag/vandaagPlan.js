@@ -60,6 +60,24 @@ const VAK_MATCH = {
   werkwoorden: (p) => /werkwoord/i.test(p.id),
   lezen: (p) => p.subject === "begrijpend-lezen",
   doorstroomtoets: (p) => /^(doorstroomtoets|cito)/i.test(p.id),
+  // 14 okt 2026: alle vakken kiesbaar (voorkeur.js VOORKEUR_VAKKEN).
+  dictee: (p) => /dictee|spelling/i.test(p.id) || p.subject === "spelling",
+  tafels: (p) => /tafel|vermenigvuldig/i.test(p.id),
+  engels: (p) => p.subject === "engels",
+  studievaardigheden: (p) => p.subject === "studievaardigheden" || /studievaardig/i.test(p.id),
+  natuur: (p) => p.subject === "natuur" || p.subject === "wereldorientatie",
+  aardrijkskunde: (p) => p.subject === "aardrijkskunde" || /topografie|kaartlezen/i.test(p.id),
+  geschiedenis: (p) => p.subject === "geschiedenis",
+  wiskunde: (p) => p.subject === "wiskunde",
+  nederlands: (p) => p.subject === "taal" || p.subject === "begrijpend-lezen" || p.subject === "spelling",
+  frans: (p) => p.subject === "frans",
+  duits: (p) => p.subject === "duits",
+  biologie: (p) => p.subject === "biologie",
+  natuurkunde: (p) => p.subject === "natuurkunde",
+  scheikunde: (p) => p.subject === "scheikunde",
+  economie: (p) => p.subject === "economie" || p.subject === "beco",
+  maatschappijleer: (p) => p.subject === "maatschappijleer",
+  examens: (p) => /^examen-/.test(p.id),
 };
 function padVoorGroep(p, groep) {
   const lvl = String(p.level || "").toLowerCase();
@@ -100,9 +118,13 @@ export function voorkeurPaden(groep, voorkeur) {
   const voeg = (p) => { if (!uit.includes(p.id)) uit.push(p.id); };
   kandidaten.filter((p) => vrijeTekstMatch(p, voorkeur.vrij)).forEach(voeg);
   // Om de beurt één pad per gekozen vak, zodat twee vakken allebei aan bod komen.
-  const perVak = vakken.map((v) => kandidaten.filter((p) => VAK_MATCH[v]?.(p)));
+  // 14 okt 2026: favorieten (ster) komen twee keer zo vaak aan de beurt als de rest.
+  const favoriet = Array.isArray(voorkeur.favoriet) ? voorkeur.favoriet.filter((v) => vakken.includes(v)) : [];
+  const volgorde = [...favoriet, ...vakken.filter((v) => !favoriet.includes(v)), ...favoriet];
+  const perVak = volgorde.map((v) => kandidaten.filter((p) => VAK_MATCH[v]?.(p)));
+  const teller = volgorde.map(() => 0);
   const maxLen = Math.max(0, ...perVak.map((l) => l.length));
-  for (let i = 0; i < maxLen; i++) for (const lijst of perVak) if (lijst[i]) voeg(lijst[i]);
+  for (let i = 0; i < maxLen * 2; i++) for (let j = 0; j < perVak.length; j++) { const p = perVak[j][teller[j]]; if (p) { voeg(p); teller[j] += 1; } }
   return uit;
 }
 
