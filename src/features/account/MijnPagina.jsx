@@ -1172,6 +1172,7 @@ export default function MijnPagina({
       {wieOpen && (
         <WieOefentEr
           huidigeNaam={player}
+          authUser={authUser}
           startNieuw={wieNieuw}
           onKies={(naam) => {
             setWieOpen(false); setWieNieuw(false); setProfielVersie((v) => v + 1);

@@ -15,6 +15,9 @@ import { useMemo, useState, useEffect } from "react";
 import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import { vakOptiesVoor, wisselVakKeuze, MAX_FAVORIET, MAX_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
+import { koppelingVoor } from "../../shared/koppeling.js";
+import { koppelLijntjes } from "./profielKoppeling.js";
+import supabase from "../../supabase.js";
 
 // 6 vaste plekken (Mark 1 okt 2026, middag): 3 kinderen, 2 ouders of verzorgers, 1 leerkracht.
 // Lege plekken staan lichtgrijs klaar ("Kind 2 · naam · groep") en worden ingevuld bij aantikken.
@@ -105,17 +108,20 @@ const knopBasis = {
   cursor: "pointer", borderRadius: 14, fontFamily: "var(--font-display)", fontWeight: 800,
 };
 
-function Tegel({ p, actief, onKies }) {
+// `lijntje` (14 okt 2026): "gekoppeld met …" → oranje rand + regeltje onder de rol.
+// Het actieve profiel houdt zijn groene rand; het lijntje blijft dan oranje.
+function Tegel({ p, actief, onKies, lijntje = "" }) {
   const config = loadAvatarConfig(p.naam);
   return (
     <button
       type="button"
       onClick={onKies}
+      data-gekoppeld={lijntje ? "1" : undefined}
       style={{
-        ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
+        ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
         padding: "12px 6px", width: "100%", minHeight: 138,
-        border: actief ? "2px solid #00e676" : "1px solid rgba(255,255,255,0.15)",
-        background: actief ? "rgba(0,230,118,0.08)" : "rgba(255,255,255,0.04)", color: "#fff",
+        border: actief ? "2px solid #00e676" : lijntje ? "2px solid #ffb74d" : "1px solid rgba(255,255,255,0.15)",
+        background: actief ? "rgba(0,230,118,0.08)" : lijntje ? "rgba(255,183,77,0.08)" : "rgba(255,255,255,0.04)", color: "#fff",
       }}
     >
       <span style={{ width: 56, height: 56, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
@@ -123,6 +129,9 @@ function Tegel({ p, actief, onKies }) {
       </span>
       <span style={{ fontSize: 15, lineHeight: 1.2, wordBreak: "break-word" }}>{p.naam}</span>
       <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{rolWoord(p)}</span>
+      {lijntje && (
+        <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: "#ffb74d", lineHeight: 1.25, wordBreak: "break-word" }}>🔗 {lijntje}</span>
+      )}
     </button>
   );
 }
@@ -283,9 +292,24 @@ function LegePlek({ plek, onKlik }) {
   );
 }
 
-export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false, startRol = null }) {
+export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false, startRol = null, authUser = null }) {
   const [versie, setVersie] = useState(0);
   const profielen = useMemo(() => leesProfielen(), [versie]); // eslint-disable-line react-hooks/exhaustive-deps
+  // 🔗 Koppel-lijntjes (Mark 14 okt 2026): wat dit toestel weet + voor een
+  // ingelogde ouder de bevestigde kinderen van het account.
+  const [accountKinderen, setAccountKinderen] = useState([]);
+  useEffect(() => {
+    if (!authUser?.id || authUser.is_anonymous) { setAccountKinderen([]); return; }
+    let cancel = false;
+    supabase.from("parent_child_links").select("child_name, verified").eq("parent_user_id", authUser.id)
+      .then(({ data }) => { if (!cancel) setAccountKinderen((data || []).filter((c) => c.verified === true).map((c) => (c.child_name || "").trim()).filter(Boolean)); })
+      .catch(() => { if (!cancel) setAccountKinderen([]); });
+    return () => { cancel = true; };
+  }, [authUser]);
+  const lijntjes = useMemo(() => {
+    const heeftOuder = profielen.some((p) => p.role === "ouder");
+    return koppelLijntjes(profielen, koppelingVoor, heeftOuder ? accountKinderen : []);
+  }, [profielen, accountKinderen]);
   // Profielen verdelen over de vaste plekken; wat niet past (oude apparaten) komt onder "Andere profielen".
   const verdeling = useMemo(() => {
     const per = { kind: [], ouder: [], leraar: [] };
@@ -319,8 +343,8 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
     onKies(naam);
   };
 
-  const sectie = (titel, groep) => {
-    const items = verdeling.plekken.filter((x) => x.plek.groep === groep);
+  const sectie = (titel, groepen) => {
+    const items = verdeling.plekken.filter((x) => groepen.includes(x.plek.groep));
     return (
       <div style={{ marginBottom: 18 }}>
         <div style={{ textAlign: "left", fontSize: 12, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", margin: "0 0 8px 2px" }}>{titel}</div>
@@ -328,8 +352,8 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
           {items.map(({ plek, profiel }, i) => (
             <div key={plek.label + i} style={{ position: "relative" }}>
               {profiel
-                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} onKies={() => (beheren ? setWeg(profiel.naam) : kies(profiel.naam))} />
-                : (!beheren && <LegePlek plek={plek} onKlik={() => { try { track("profiel_plek_invullen", { groep }); } catch { /* */ } setNieuwRol(plek.rol); }} />)}
+                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} onKies={() => (beheren ? setWeg(profiel.naam) : kies(profiel.naam))} />
+                : (!beheren && <LegePlek plek={plek} onKlik={() => { try { track("profiel_plek_invullen", { groep: plek.groep }); } catch { /* */ } setNieuwRol(plek.rol); }} />)}
               {beheren && profiel && <span aria-hidden="true" style={{ position: "absolute", top: 6, right: 8, fontSize: 12, fontWeight: 800, color: "#ff8a80" }}>weghalen</span>}
             </div>
           ))}
@@ -349,9 +373,9 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
         <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "4px 0 4px", color: "#fff" }}>Wie oefent er?</h2>
           <p style={{ margin: "0 0 18px", fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
-          {sectie("Kinderen", "kind")}
-          {sectie("Ouders of verzorgers", "ouder")}
-          {sectie("Leerkracht", "leraar")}
+          {/* Mark 14 okt 2026: ouders + leerkracht bovenaan in één rij, kinderen eronder. */}
+          {sectie("Ouders, verzorgers en leerkracht", ["ouder", "leraar"])}
+          {sectie("Kinderen", ["kind"])}
 
           {verdeling.extra.length > 0 && (
             <div style={{ textAlign: "left", marginTop: 4 }}>
