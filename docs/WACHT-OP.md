@@ -129,3 +129,5 @@
 - **13 okt:** Gemeente Tilburg (Evy Calon) nee via Meedoenregeling; wil gebruikscijfers Den Haag zien → in voorjaar 2027 terugkoppelen (concept na Marks ja). Jarige Job (Amber) nee na beraad → lus dicht.
 
 - **14 okt:** herinnering 36 gemeenten UITGESTELD tot er gebruikscijfers van Den Haag/Ooievaarspas zijn (Mark); Tilburg-terugkoppeling gaat dan mee.
+
+- **14 okt:** Stichting NOB (info@stichtingnob.nl) — mail over /buitenland.html voor NTC-scholen/expat-gezinnen verstuurd (id 01a138c1). Wacht op: antwoord/vermelding; meten via bron deel:buitenland. Nudge: niet vóór ~4 nov.

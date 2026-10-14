@@ -1,4 +1,4 @@
-# Stichting NOB — concept-mail (14 okt 2026, NIET verstuurd; wacht op Marks "stuur maar")
+# Stichting NOB — mail ✅ VERSTUURD wo 14 okt 2026 via Resend/hallo@ (id 01a138c1), reply-to hallo@
 
 Doelgroep: Nederlandse en Vlaamse kinderen in het buitenland (NOB: ±13.000-15.000 leerlingen, ±180-200 NTC-scholen in 80+ landen).
 Aan: info@stichtingnob.nl (algemeen; pers = communicatie@stichtingnob.nl) · Stichting NOB, Laan van Vredenoord 11, 2289 DA Rijswijk · +31 70 386 66 46.
