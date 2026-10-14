@@ -1,3 +1,5 @@
+> **Koerswijziging 14 okt 2026** (na ronde 2: 40 gemeenten, 3 nee, 36 stil): geen gratis jaar; eerst bewijs (Ooievaarspas + Kinderhulp, A4 per partner half jan), lokale organisatie als referentie vóór de gemeente, stadspassen i.p.v. kindpakketten in jan 2027, omzet 2026-27 uit Familie voor ouders. Volledige stappen: docs/MARK-AGENDA.md § Langlopend plan.
+
 # 🧭 Langlopend plan — "de gemeente betaalt, niet de ouder" (doel: €500/mnd)
 
 > Vastgelegd 2 sep 2026 na gesprek Mark ↔ Fable 5.1. Mark: "500 euro per maand zou voor
