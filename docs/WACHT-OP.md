@@ -131,3 +131,5 @@
 - **14 okt:** herinnering 36 gemeenten UITGESTELD tot er gebruikscijfers van Den Haag/Ooievaarspas zijn (Mark); Tilburg-terugkoppeling gaat dan mee.
 
 - **14 okt:** Stichting NOB (info@stichtingnob.nl) — mail over /buitenland.html voor NTC-scholen/expat-gezinnen verstuurd (id 01a138c1). Wacht op: antwoord/vermelding; meten via bron deel:buitenland. Nudge: niet vóór ~4 nov.
+
+- **14 okt:** tester-oproep gemaild aan 35 Gmail-adressen (accounts + e-maillijst), allen vooraf op de Play-testerslijst (nu 50). Adreslijst + verzendlog: Desktop\Leerkwartier-dossiersndroid-testers (niet in git). Wacht op: aanmeldingen in Console (stand 9, nodig 12).
