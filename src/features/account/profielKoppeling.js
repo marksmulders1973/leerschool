@@ -46,3 +46,27 @@ export function koppelLijntjes(profielen, koppelingVoor, accountKinderen = []) {
   }
   return uit;
 }
+
+/**
+ * Wie kan hier met één tik gekoppeld worden? (Mark 14 okt 2026, 2e schermafbeelding:
+ * "nu zie ik mijn naam en die van Brian, maar niet dat ik kan koppelen".)
+ * Elk kind op dit toestel zónder ouder-koppeling × elke ouder op dit toestel.
+ * @returns {Array<{kind:string, ouder:string}>}
+ */
+export function koppelKandidaten(profielen, lijntjes) {
+  const ouders = profielen.filter((p) => p.role === "ouder");
+  const kinderen = profielen.filter((p) => p.role !== "ouder" && p.role !== "teacher" && !lijntjes?.has(laag(p.naam)));
+  const uit = [];
+  for (const k of kinderen) for (const o of ouders) uit.push({ kind: k.naam, ouder: o.naam });
+  return uit.slice(0, 6);
+}
+
+/** Groep-waarde voor de server ("8", "brugklas") uit een app-niveau ("groep8", "klas1|havo"). */
+export function groepUitNiveau(level) {
+  const l = String(level || "");
+  if (/^groep12$/.test(l)) return "2";
+  const m = l.match(/^groep(\d)$/);
+  if (m) return m[1];
+  if (/^klas1(\||$)/.test(l)) return "brugklas";
+  return null;
+}

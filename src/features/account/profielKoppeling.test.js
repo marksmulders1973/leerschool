@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { koppelLijntjes } from "./profielKoppeling.js";
+import { koppelLijntjes, koppelKandidaten, groepUitNiveau } from "./profielKoppeling.js";
 
 const profielen = [
   { naam: "Brian", role: "leerling" }, { naam: "Olivia", role: "leerling" }, { naam: "Noa", role: "leerling" },
@@ -33,5 +33,22 @@ describe("koppelLijntjes", () => {
   });
   it("niets gekoppeld → lege map", () => {
     expect(koppelLijntjes(profielen, () => null).size).toBe(0);
+  });
+});
+
+describe("koppelKandidaten", () => {
+  it("elk ongekoppeld kind × elke ouder; gekoppelde kinderen niet", () => {
+    const l = new Map([["brian", "gekoppeld met Mark"]]);
+    expect(koppelKandidaten(profielen, l)).toEqual([
+      { kind: "Olivia", ouder: "Mark" }, { kind: "Olivia", ouder: "Deianera" },
+      { kind: "Noa", ouder: "Mark" }, { kind: "Noa", ouder: "Deianera" },
+    ]);
+  });
+  it("zonder ouder op het toestel: niets", () => {
+    expect(koppelKandidaten([{ naam: "Brian", role: "leerling" }], new Map())).toEqual([]);
+  });
+  it("groep uit niveau", () => {
+    expect(groepUitNiveau("groep8")).toBe("8"); expect(groepUitNiveau("groep12")).toBe("2");
+    expect(groepUitNiveau("klas1|havo")).toBe("brugklas"); expect(groepUitNiveau("klas3|vwo")).toBe(null); expect(groepUitNiveau("")).toBe(null);
   });
 });

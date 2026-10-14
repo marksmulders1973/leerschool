@@ -16,7 +16,9 @@ import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import { vakOptiesVoor, wisselVakKeuze, MAX_FAVORIET, MAX_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
 import { koppelingVoor } from "../../shared/koppeling.js";
-import { koppelLijntjes } from "./profielKoppeling.js";
+import { koppelLijntjes, koppelKandidaten, groepUitNiveau } from "./profielKoppeling.js";
+import { bewaarKoppeling } from "../../shared/koppeling.js";
+import { leesVoorkeur } from "../vandaag/voorkeur.js";
 import supabase from "../../supabase.js";
 
 // 6 vaste plekken (Mark 1 okt 2026, middag): 3 kinderen, 2 ouders of verzorgers, 1 leerkracht.
@@ -292,6 +294,67 @@ function LegePlek({ plek, onKlik }) {
   );
 }
 
+// 🔗 Dik blok "Koppelen" onder de profielen (Mark 14 okt 2026: "nu zie ik mijn
+// naam en die van Brian, maar niet dat ik kan koppelen — maak dat jip-en-janneke").
+// 1) Staan ouder én kind op dít toestel en is de ouder ingelogd: één tik
+//    "Koppel Brian aan Mark" (gezin_koppel_zelfde_apparaat, verified) → lijntje.
+//    Niet ingelogd: dezelfde knop legt uit dat je eenmalig inlogt (knop → /ouder).
+// 2) Altijd: twee grote knoppen — ik ben de ouder / ik ben het kind → /koppelen.
+function KoppelBlok({ kandidaten, authUser, iemandGekoppeld, onGekoppeld }) {
+  const [bezig, setBezig] = useState(null);
+  const [melding, setMelding] = useState(null); // { tekst, soort: "ok" | "login" | "fout" }
+  const ingelogd = !!authUser?.id && !authUser.is_anonymous;
+  const groot = (extra) => ({ ...knopBasis, display: "block", width: "100%", padding: "14px 12px", fontSize: 16, border: "none", color: "#08121f", textAlign: "left", ...extra });
+  const tikKoppel = async ({ kind, ouder }) => {
+    try { track("koppel_blok_klik", { wat: "zelfde_toestel", ingelogd }); } catch { /* */ }
+    if (!ingelogd) { setMelding({ soort: "login", tekst: `Log eerst één keer in als ouder (Google of e-mail). Daarna koppel je ${kind} met één tik.` }); return; }
+    setBezig(kind); setMelding(null);
+    try {
+      let v = {}; try { v = leesVoorkeur(kind) || {}; } catch { /* */ }
+      let level = ""; try { level = (JSON.parse(localStorage.getItem(`lk_profiel:${kind}`) || "{}") || {}).level || ""; } catch { /* */ }
+      const { data, error } = await supabase.rpc("gezin_koppel_zelfde_apparaat", { p_child_name: kind, p_groep: v.groep || groepUitNiveau(level), p_voorkeur: v.voorkeur || null, p_verified: true });
+      if (error || !data) throw error || new Error("geen link");
+      bewaarKoppeling({ naam: kind, linkId: data, rol: "ouder", vanWie: ouder });
+      try { track("koppel_blok_ok", { via: "zelfde_toestel" }); } catch { /* */ }
+      setMelding({ soort: "ok", tekst: `Gelukt! ${kind} is gekoppeld aan ${ouder}.` });
+      onGekoppeld?.();
+    } catch {
+      setMelding({ soort: "fout", tekst: "Dat lukte niet. Probeer het zo nog eens, of ga via de knop hieronder." });
+    }
+    setBezig(null);
+  };
+  const ga = (wat, pad) => { try { track("koppel_blok_klik", { wat }); } catch { /* */ } window.location.href = pad; };
+  return (
+    <div data-koppel-blok style={{ textAlign: "left", marginTop: 6, marginBottom: 18, padding: "14px 14px 12px", borderRadius: 16, border: "2px solid #ffb74d", background: "rgba(255,183,77,0.10)" }}>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 2 }}>🔗 {iemandGekoppeld ? "Nog iemand koppelen?" : "Koppelen"}</div>
+      <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.45, marginBottom: 10 }}>Gekoppeld = de ouder ziet hoe het gaat en kan werk klaarzetten.</div>
+      {kandidaten.map((k) => (
+        <button key={k.kind + "|" + k.ouder} type="button" disabled={bezig === k.kind} onClick={() => tikKoppel(k)} data-koppel-tik={k.kind}
+          style={groot({ background: "#ffb74d", marginBottom: 8, opacity: bezig === k.kind ? 0.6 : 1 })}>
+          {bezig === k.kind ? "Even…" : <>Koppel <b>{k.kind}</b> aan <b>{k.ouder}</b> →</>}
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(0,0,0,0.6)", marginTop: 2 }}>{ingelogd ? "Allebei op deze telefoon: één tik, geen code nodig." : "Allebei op deze telefoon — na één keer inloggen als ouder is dit één tik."}</div>
+        </button>
+      ))}
+      {melding && (
+        <div role={melding.soort === "fout" ? "alert" : "status"} data-koppel-melding style={{ fontFamily: "var(--font-body)", fontSize: 13, lineHeight: 1.45, padding: "9px 12px", borderRadius: 10, marginBottom: 8, color: "#fff", background: melding.soort === "ok" ? "rgba(0,230,118,0.15)" : "rgba(255,255,255,0.08)", border: `1px solid ${melding.soort === "ok" ? "rgba(0,230,118,0.5)" : "rgba(255,255,255,0.2)"}` }}>
+          {melding.tekst}
+          {melding.soort === "login" && <div style={{ marginTop: 6 }}><button type="button" onClick={() => ga("login", "/ouder")} style={{ ...knopBasis, padding: "9px 14px", border: "none", background: "#00b0ff", color: "#08121f", fontSize: 14 }}>Inloggen als ouder →</button></div>}
+        </div>
+      )}
+      <div style={{ display: "grid", gap: 8 }}>
+        <button type="button" onClick={() => ga("ouder", "/koppelen?rol=ouder")} data-koppel-ouder style={groot({ background: "rgba(255,255,255,0.08)", color: "#fff", border: "1.5px solid rgba(255,255,255,0.25)" })}>
+          👪 Ik ben de ouder — mijn kind oefent op een ander toestel
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>Je krijgt een code die je kind intypt.</div>
+        </button>
+        <button type="button" onClick={() => ga("kind", "/koppelen")} data-koppel-kind style={groot({ background: "rgba(255,255,255,0.08)", color: "#fff", border: "1.5px solid rgba(255,255,255,0.25)" })}>
+          🧒 Ik ben het kind — ik heb een code van thuis
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>Code intypen, naam kiezen, klaar.</div>
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false, startRol = null, authUser = null }) {
   const [versie, setVersie] = useState(0);
   const profielen = useMemo(() => leesProfielen(), [versie]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -376,6 +439,9 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
           {/* Mark 14 okt 2026: ouders + leerkracht bovenaan in één rij, kinderen eronder. */}
           {sectie("Ouders, verzorgers en leerkracht", ["ouder", "leraar"])}
           {sectie("Kinderen", ["kind"])}
+          {!beheren && profielen.length > 0 && (
+            <KoppelBlok kandidaten={koppelKandidaten(profielen, lijntjes)} authUser={authUser} iemandGekoppeld={lijntjes.size > 0} onGekoppeld={() => setVersie((v) => v + 1)} />
+          )}
 
           {verdeling.extra.length > 0 && (
             <div style={{ textAlign: "left", marginTop: 4 }}>

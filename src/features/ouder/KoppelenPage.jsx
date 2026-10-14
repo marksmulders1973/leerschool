@@ -57,7 +57,8 @@ const VALKUILEN = [
 ];
 
 export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, onMijn }) {
-  const [tab, setTab] = useState(() => (codeUitUrl(window.location.search, sessionStorage) ? "kind" : "kind"));
+  // ?rol=ouder (uit het koppel-blok in de profielkiezer) opent de ouder-tab.
+  const [tab, setTab] = useState(() => { try { return new URLSearchParams(window.location.search).get("rol") === "ouder" ? "ouder" : "kind"; } catch { return "kind"; } });
   const [code, setCode] = useState(() => codeUitUrl(window.location.search, sessionStorage));
   const [stap, setStap] = useState(() => (codeUitUrl(window.location.search, sessionStorage) ? 2 : 1));
   const [naam, setNaam] = useState(() => (userName || "").trim());
