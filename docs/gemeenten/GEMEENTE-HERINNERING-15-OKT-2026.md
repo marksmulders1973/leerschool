@@ -1,4 +1,4 @@
-# Herinnering gemeenten — do 15 oktober 2026 (CONCEPT, niets verstuurd)
+# Herinnering gemeenten — (CONCEPT, niets verstuurd) · ⏸️ UITGESTELD 14 okt: pas na echte Den Haag-cijfers (Mark)
 
 Status: wacht op Marks "stuur maar" op deze tekst. Alleen naar gemeenten die op 15 okt **nog niet** hebben
 gereageerd (lijst + verzendlog in GEMEENTE-MAILS-OKT-2026.md). Iedereen krijgt dezelfde tekst — gelijke

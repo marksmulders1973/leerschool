@@ -127,3 +127,5 @@
 - **Leergeld Het Hoogeland (Detty Wiltjer, coordinator@leergeldhoogeland.nl)** — 13 okt plakteksten FB/website/nieuwsbrief + code HOOGELAND2027 + QR verstuurd vanaf hallo@. Wacht op: plaatsing FB/website; aanbod flyer met hun logo open. Scans volgen via HOOGELAND2027.
 
 - **13 okt:** Gemeente Tilburg (Evy Calon) nee via Meedoenregeling; wil gebruikscijfers Den Haag zien → in voorjaar 2027 terugkoppelen (concept na Marks ja). Jarige Job (Amber) nee na beraad → lus dicht.
+
+- **14 okt:** herinnering 36 gemeenten UITGESTELD tot er gebruikscijfers van Den Haag/Ooievaarspas zijn (Mark); Tilburg-terugkoppeling gaat dan mee.
