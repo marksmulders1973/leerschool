@@ -18,6 +18,8 @@ import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/
 import KindOverzicht from "./KindOverzicht.jsx";
 import CharleyTip from "../../components/CharleyTip.jsx";
 import Gezinsstart, { VoorkeurEditor, MAX_KINDEREN } from "./Gezinsstart.jsx";
+import { generateCode, splitsCodes, codesOver, koppelLink, koppelBericht } from "./koppelcodes.js";
+import KoppelcodesBlok from "./KoppelcodesBlok.jsx";
 import { bewaarVoorkeur, voorkeurSamenvatting } from "../vandaag/voorkeur.js";
 import { koppelingVoor } from "../../shared/koppeling.js";
 import EmailLogin from "../../auth/EmailLogin.jsx";
@@ -82,15 +84,7 @@ function fmtDatum(x, opts) {
   return isNaN(d.getTime()) ? "" : d.toLocaleDateString("nl-NL", opts);
 }
 
-function generateCode() {
-  // Audit 16-07: crypto-random i.p.v. Math.random — koppelcodes zijn een
-  // beveiligingsmiddel (toegang tot kind-voortgang), geen visueel gimmickje.
-  // Alfabet zonder verwarrende tekens (0/O, 1/I/L) voor overtypen vanaf WhatsApp.
-  const alphabet = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
-  const bytes = new Uint8Array(6);
-  crypto.getRandomValues(bytes);
-  return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
-}
+// generateCode + losse-codes-logica: zie koppelcodes.js (14 okt 2026).
 
 
 export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onHierOefenen, onOpenLes, embedded = false }) {
@@ -475,7 +469,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     if (!authUser || !childName?.trim()) return null;
     setLoading(true);
     const code = generateCode();
-    const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
+    const expires = null; // 14 okt 2026: codes verlopen niet meer (eenmalig gebruik blijft)
     // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Silent .catch
     // verving door explicit-log zodat insert-fails niet meer onzichtbaar zijn.
     const { error } = await supabase.from("link_codes").insert({
@@ -523,7 +517,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     if (!authUser || !childName?.trim()) return;
     setLoading(true);
     const code = generateCode();
-    const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
+    const expires = null; // 14 okt 2026: codes verlopen niet meer (eenmalig gebruik blijft)
     const { error } = await supabase.from("link_codes").insert({
       code, parent_user_id: authUser.id, child_name: childName.trim(), expires_at: expires, van_wie: null,
     });
@@ -542,8 +536,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // i.p.v. één globale inviteCode. Zelfde teksten als voorheen (Mark 14 aug):
   // code op eigen regel, plat, makkelijk over te typen vanuit WhatsApp.
   const sendWhatsApp = (code, naam) => {
-    const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
-    const msg = encodeURIComponent(`${hoi} Open ${BRAND.name} (${BRAND.domain}), tik op 'Code gekregen?' en vul deze koppelcode in:\n\n${code}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
+    // 14 okt 2026: link mét code — het kind tikt, vult zijn naam in, klaar.
+    const msg = encodeURIComponent(koppelBericht(code, naam));
     window.open(`https://wa.me/?text=${msg}`, "_blank");
     try { track("ouder_koppelcode_deel", { via: "whatsapp" }); } catch { /* */ }
   };
@@ -552,7 +546,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // keer — "je code staat nog klaar" — zodat het kind 'm alsnog invoert.
   const stuurHerinnering = (code, naam) => {
     const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
-    const msg = encodeURIComponent(`${hoi} Je koppelcode voor ${BRAND.name} staat nog klaar:\n\n${code}\n\nOpen de app, tik op 'Code gekregen?' en vul 'm in 😊 (nog even geldig)`);
+    const msg = encodeURIComponent(`${hoi} Je koppelcode voor ${BRAND.name} staat nog klaar 😊 Tik op de link en vul je naam in:\n${koppelLink(code)}\n\n(Of ga naar ${BRAND.domain}/koppelen en typ ${code})`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
     try { track("ouder_koppelcode_herinnering", {}); } catch { /* */ }
   };
@@ -561,9 +555,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // ouder kiest de ontvanger. Geen server/Resend nodig.
   const sendEmailCode = (code) => {
     const subject = encodeURIComponent(`Koppelcode voor ${BRAND.name}`);
-    const body = encodeURIComponent(
-      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}), tik op 'Code gekregen?' en vul de koppelcode ${code} in. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
-    );
+    const body = encodeURIComponent(koppelBericht(code));
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
     try { track("ouder_koppelcode_deel", { via: "mail" }); } catch { /* */ }
   };
@@ -594,6 +586,24 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     await supabase.from("link_codes").delete().eq("id", id);
   };
 
+  // 🔑 Losse codes (Mark 14 okt 2026): n codes zónder naam in één keer. Het kind
+  // vult zijn naam zelf in op /koppelen (claim_link_code neemt p_child_name).
+  // Geen vervaldatum; eenmalig gebruik. Cap: kinderen + losse codes ≤ MAX_CODES.
+  const [losseBezig, setLosseBezig] = useState(false);
+  const maakLosseCodes = async (n) => {
+    if (!authUser || losseBezig) return;
+    const { losse } = splitsCodes(openInvites);
+    const mag = Math.min(n, codesOver(children.length, losse.length));
+    if (mag <= 0) return;
+    setLosseBezig(true);
+    const rijen = Array.from({ length: mag }, () => ({ code: generateCode(), parent_user_id: authUser.id, child_name: "", expires_at: null, van_wie: null }));
+    const { error } = await supabase.from("link_codes").insert(rijen);
+    setLosseBezig(false);
+    if (error) { alert("Kon de codes niet maken. Probeer het zo nog eens."); return; }
+    try { track("ouder_koppelcode_gemaakt", { via: "losse", n: mag }); } catch { /* */ }
+    await laadKoppelStatus();
+  };
+
   // Statistieken berekenen. Alleen rijen met een geldig (eindig) percentage
   // tellen mee: één nullable/corrupte scorebord-rij maakte de som anders NaN,
   // waardoor de ouder "gem. NaN%" te zien kreeg (bug-jacht 2026-07-31).
@@ -615,8 +625,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // wizard midden in de stap (code + WhatsApp-knop en stap 4 nooit te zien).
   // Eenmaal vanzelf geopend blijft hij nu open tot "Later" of "Naar mijn overzicht".
   // (Hier, vóór de vroege return hieronder: hooks mogen niet achter een return.)
-  const leegGezin = overzichtGeladen && children.length === 0 && openInvites.length === 0;
-  useEffect(() => { if (gezinsstartOpen === null && leegGezin) setGezinsstartOpen(true); }, [gezinsstartOpen, leegGezin]);
+  // 14 okt 2026: de wizard gaat NIET meer vanzelf open — het blok "Koppelcodes"
+  // (hoeveel kinderen? → 1/2/3 codes) is nu de start; de wizard blijft bereikbaar
+  // via "Nog een kind" en "Oefent je kind op déze telefoon?".
 
   // Bug-jacht 7/7: anonieme park-sessies tellen óók als authUser, waardoor een
   // ouder koppelingen/doelen aan een wegwerp-anon-account kon hangen die na
@@ -661,14 +672,16 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // code zonder rij (oude flow) wordt ook een kaart "Nog niet gekoppeld".
   const gekoppeldeNamen = new Set(children.map((c) => (c.child_name || "").trim().toLowerCase()));
   const wachtPerNaam = new Map();
-  for (const iv of openInvites) wachtPerNaam.set((iv.child_name || "").trim().toLowerCase(), iv); // oplopend → nieuwste wint
+  // 14 okt 2026: losse codes (zonder naam) horen in het blok "Koppelcodes", niet hier.
+  const { losse: losseCodes, opNaam: codesOpNaam } = splitsCodes(openInvites);
+  for (const iv of codesOpNaam) wachtPerNaam.set((iv.child_name || "").trim().toLowerCase(), iv); // oplopend → nieuwste wint
   const kindKaarten = [
     ...children.map((c) => ({ key: `k-${c.id}`, naam: c.child_name, kind: c, invite: c.verified ? null : wachtPerNaam.get((c.child_name || "").trim().toLowerCase()) || null })),
     ...[...wachtPerNaam.entries()].filter(([naam]) => !gekoppeldeNamen.has(naam)).map(([, iv]) => ({ key: `w-${iv.id}`, naam: iv.child_name, kind: null, invite: iv })),
   ];
   // Gezinsstart: vanzelf open zolang er nog niets in het gezin staat (na de
   // eerste load), of expliciet via "Nog een kind".
-  const toonGezinsstart = gezinsstartOpen === true || (gezinsstartOpen === null && overzichtGeladen && kindKaarten.length === 0);
+  const toonGezinsstart = gezinsstartOpen === true;
 
   // Partner-invoer (Mark 14 aug, F15 double opt-in): één adres per gezin.
   // Staat in het blok "Ouders" én in stap 4 van de Gezinsstart.
@@ -734,6 +747,23 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           {" "}<FamilieAfsluiten plek="ouderlabel" variant="link" />
         </span>
       </div>
+
+      {/* 🔑 Koppelcodes (14 okt 2026): hoeveel kinderen? → 1/2/3 codes, blijven
+          staan tot gebruikt of gewist. Boven de wizard én boven "Ouders". */}
+      {overzichtGeladen && (
+        <KoppelcodesBlok
+          codes={losseCodes}
+          aantalKinderen={children.length}
+          over={codesOver(children.length, losseCodes.length)}
+          bezig={losseBezig}
+          copiedCode={copiedCode}
+          onMaak={maakLosseCodes}
+          onWis={trekCodeIn}
+          onWhatsApp={(code) => sendWhatsApp(code, "")}
+          onKopieer={copyCode}
+          onKindHier={() => setGezinsstartOpen(true)}
+        />
+      )}
 
       {/* 🏠 Gezinsstart-wizard (30 sep 2026): vanzelf bij een gezin zonder
           kinderen, en via "Nog een kind". Het kind ziet hier niets van. */}
@@ -862,7 +892,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     {iv ? (
                       <>
                         <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
-                          Stuur deze code naar {naam}. In de app: <strong>Code gekregen?</strong>, code invoeren, klaar.{geldigheidsTekst(iv.expires_at) ? ` De code is ${geldigheidsTekst(iv.expires_at)}.` : ""}
+                          Stuur deze code naar {naam}. Op zijn of haar eigen toestel: <strong>{BRAND.domain}/koppelen</strong>, code typen, naam kiezen, klaar.{geldigheidsTekst(iv.expires_at) ? ` De code is ${geldigheidsTekst(iv.expires_at)}.` : " De code blijft geldig tot hij gebruikt is."}
                         </div>
                         <div style={{ textAlign: "center", padding: "6px 0 8px" }}>
                           <div style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{iv.code}</div>
@@ -930,7 +960,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     </div>
                     <div style={{ textAlign: "center", padding: "2px 0 8px" }}>
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{herstelCode.code}</div>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>48 uur geldig</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>geldig tot gebruikt</div>
                     </div>
                     <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                       <button onClick={() => sendWhatsApp(herstelCode.code, naam)} style={deelKnop({ border: "none", background: "#25D366", color: "#08121f" })}>WhatsApp</button>
@@ -1139,7 +1169,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 <li>de databank staat op servers <strong>in de EU</strong> (Frankfurt) en de opslag is <strong>versleuteld</strong></li>
                 <li>alles gaat over een <strong>versleutelde verbinding</strong> (het slotje in je browser)</li>
                 <li><strong>toegangsregels per account:</strong> alleen jij kunt de gegevens van jouw gezin zien — en je kind moet de koppeling eerst zelf in de app bevestigen</li>
-                <li>koppelcodes zijn willekeurig en maar <strong>48 uur geldig</strong>; we tonen geen reclame en verkopen niets door</li>
+                <li>koppelcodes zijn willekeurig en <strong>eenmalig</strong> (na gebruik ongeldig); we tonen geen reclame en verkopen niets door</li>
               </ul>
               <a href="/privacy.html" style={{ color: "#69f0ae", fontWeight: 700, fontSize: 12 }}>Lees het volledige privacybeleid →</a>
             </div>
@@ -1296,7 +1326,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.5, maxWidth: 320, margin: "0 auto" }}>
             Voor de privacy van je kind zie je pas scores zodra je kind de
             koppeling bevestigt. Stuur de koppelcode (hierboven) en laat 'm
-            die in de app invoeren bij <strong>Code gekregen?</strong> (startpagina) of <strong>Koppelcode van thuis of school?</strong> (eigen pagina).
+            die invoeren op <strong>{BRAND.domain}/koppelen</strong> (of bij <strong>Code gekregen?</strong> op de startpagina).
           </div>
         </div>
       )}

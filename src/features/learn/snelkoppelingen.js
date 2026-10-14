@@ -85,6 +85,9 @@ export const SNELKOPPELINGEN = [
     woorden: ["leerlijn", "volgorde", "curriculum", "overzicht", "wat moet ik leren"] },
   { id: "ouder", emoji: "👪", label: "Voor thuis (ouder of verzorger)", uitleg: "Meekijken, klaarzetten, weekrapport.", pad: "/ouder",
     woorden: ["ouder", "ouders", "verzorger", "thuis", "meekijken", "weekrapport", "klaarzetten", "papa", "mama", "opa", "oma"] },
+  // 14 okt 2026: koppelen stap voor stap (ouder én kind), ?code= vult de code in.
+  { id: "koppelen", emoji: "🔗", label: "Koppelen met thuis (stap voor stap)", uitleg: "Code van je ouder invullen, of als ouder zien hoe het werkt.", pad: "/koppelen",
+    woorden: ["koppelen", "koppelcode", "koppeling", "code van thuis", "code thuis", "ouder koppelen", "kind koppelen", "meekijken", "koppel"] },
   { id: "leerkracht", emoji: "🧑‍🏫", label: "Voor de leerkracht", uitleg: "Werkblad, toets maken, klaarzetten, parkcode voor de klas.", pad: "/leerkracht",
     woorden: ["leerkracht", "juf", "meester", "school", "klas", "docent", "toets maken", "klassen", "leraar"] },
   { id: "tips", emoji: "💡", label: "Wensenbord", uitleg: "Een wens, tip of fout melden. De maker antwoordt.", pad: "/tips",

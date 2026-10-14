@@ -478,7 +478,8 @@ export default function CodeBalk({ rustig = false }) {
           ) : (
             <div style={{ marginTop: 8, background: "rgba(124,58,237,0.08)", border: "1.5px solid rgba(124,58,237,0.4)", borderRadius: 10, padding: "10px 12px" }}>
               <div style={{ font: "700 12.5px/1.45 system-ui", color: "#5b21b6" }}>
-                🔐 Dit is een <strong>koppelcode</strong> van thuis of school — die hoort bij jóuw naam. Tik bovenaan op "Leerling" en kies je naam; daarna koppelen we je meteen. Je hoeft de code niet nog een keer in te typen, we hebben hem onthouden.
+                🔐 Dit is een <strong>koppelcode</strong> van thuis of school — die hoort bij jóuw naam.{" "}
+                <a href="/koppelen" style={{ color: "#5b21b6", fontWeight: 800 }}>Kies hier je naam →</a> De code staat daar al ingevuld.
               </div>
             </div>
           ))}

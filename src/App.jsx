@@ -80,6 +80,7 @@ const Kampioenen = lazy(() =>
   import("./features/teacher/StudentProgress.jsx").then((m) => ({ default: m.Kampioenen }))
 );
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
+const KoppelenPage = lazy(() => import("./features/ouder/KoppelenPage.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
 const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
@@ -2631,6 +2632,8 @@ export default function App() {
           }}
         />
       )}
+      {/* 🔗 /koppelen (14 okt 2026): kind typt code + naam; ouder ziet de drie stappen. */}
+      {page === "koppelen" && <KoppelenPage userName={userName || ""} onNaamInvullen={bewaarNaam} onKlaar={() => setPage("mijn-pagina")} onMijn={() => setPage("mijn-pagina")} />}
       {page === "rondleiding" && <RondleidingPage setPage={setPage} />}
       {page === "oefenpakket" && <OefenpakketPage setPage={setPage} />}
       {page === "leesladder" && <LeesladderPage setPage={setPage} />}

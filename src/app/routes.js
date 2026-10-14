@@ -28,6 +28,8 @@ export const PAGE_TO_PATH = {
   "student-home": "/leerling",
   "teacher-home": "/leerkracht",
   "ouder-dashboard": "/ouder",
+  // Koppelen ouder↔kind stap voor stap (Mark 14 okt 2026); ?code=ABC123 vult de code in.
+  koppelen: "/koppelen",
   // Oefenen
   "self-study": "/zelfstudie",
   textbook: "/oefenen",
