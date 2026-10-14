@@ -45,6 +45,8 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
+import PadFeedback from "./PadFeedback.jsx";
+import { voortgangPct, beantwoordInDeel } from "./voortgang.js";
 import { meldAntwoord } from "../niveau/signalen.js";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
@@ -1006,7 +1008,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     }
   };
 
-  const progressPct = Math.round((completedSteps.size / totalSteps) * 100);
+  // 14 okt 2026: per vraag i.p.v. per deel — na de eerste som beweegt de balk al (voortgang.js).
+  const progressPct = voortgangPct({
+    afgerondeDelen: completedSteps.size,
+    totaalDelen: totalSteps,
+    deelIsAf: completedSteps.has(stepIdx),
+    beantwoord: beantwoordInDeel(checkIdx, mode),
+    vragenInDeel: checkOrder.length || 0,
+  });
 
   // ─── Render ────────────────────────────
   if (mode === "overview") {
@@ -1093,6 +1102,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       <div style={pageStyle()}>
         <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} />
         <div style={{ padding: "10px 18px 28px" }}>
+          {/* 14 okt 2026: "Wat vond je van dit leerpad?" (event pad_feedback, plek=pad) */}
+          <PadFeedback pathId={pathId} stepIdx={null} plek="pad" accent={C.warm} />
           <AllDone
             path={path}
             onHome={onHome}
@@ -2165,6 +2176,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 <LuisterKnop maat={40} tekst={`${path.steunTeksten ? `Deel ${stepIdx + 1} klaar!` : `Stap ${stepIdx + 1} voltooid!`} ${stepIdx + 1 < totalSteps ? "Goed bezig." : "Helemaal klaar."}`} />
               )}
             </div>
+
+            {/* 14 okt 2026: "Hoe was dit deel?" — twee tikken, gaat als event pad_feedback naar de db.
+                Niet bij nieuwkomerpaden (onvertaald). */}
+            {!path.steunTeksten && <PadFeedback pathId={pathId} stepIdx={stepIdx} plek="deel" accent={C.warm} />}
 
             {/* Stof begrepen?-eindblok (les van Leersnel) — 3 kaarten met
                 eyebrow-tags ipv 3 stacked buttons. Visuele rolverdeling. */}
