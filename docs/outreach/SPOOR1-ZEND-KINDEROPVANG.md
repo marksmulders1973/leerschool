@@ -1,7 +1,7 @@
 # Spoor 1 — Kinderopvang / BSO (ouder-app- of nieuwsbrief-plaatsing) · verzenddoc
 
 > Aangemaakt 14 okt 2026. Formaat `scripts/outreach-send-doc.mjs`. Meetlink `leerkwartier.app/?utm_source=bso` → `deel:bso`.
-> Tekst-akkoord Mark: ☐ — pas daarna verzenden, 60 per werkdag.
+> Tekst-akkoord Mark: ✅ 14 okt 2026 21:45 ("okk") — Windows-taak "Leerkwartier spoor 1", werkdagen 08:00, 60 per dag over de drie docs.
 
 ## Onderwerp
 Een gratis oefen-app voor de BSO-kinderen: één bericht in uw ouder-app?

@@ -3,7 +3,7 @@
 > Aangemaakt 14 okt 2026 (Mark: "werk spoor 1 uit, maximaal"). Formaat van `scripts/outreach-send-doc.mjs`: kop Onderwerp, kop Tekst met [ORGANISATIE], daarna de adrestabel onder de kop Adressen.
 > Meetlink: `leerkwartier.app/?utm_source=bibliotheek` → bron `deel:bibliotheek` in events.
 > Adressen: alleen letterlijk van de eigen website (bron-URL in SPOOR1-BIBLIOTHEKEN.md en -ZUID.md), ontdubbeld tegen opvolgbronnen + alle eerdere docs.
-> Tekst-akkoord Mark: ☐ (nog niet) — pas daarna verzenden, 60 per werkdag.
+> Tekst-akkoord Mark: ✅ 14 okt 2026 21:45 ("okk") — Windows-taak "Leerkwartier spoor 1", werkdagen 08:00, 60 per dag over de drie docs.
 
 ## Onderwerp
 Gratis oefen-app voor kinderen van groep 3 t/m 8: een blokje voor uw nieuwsbrief?

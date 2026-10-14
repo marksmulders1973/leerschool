@@ -2,7 +2,7 @@
 
 > Aangemaakt 14 okt 2026. Formaat `scripts/outreach-send-doc.mjs`. Meetlink `leerkwartier.app/?utm_source=gezin` → `deel:gezin`.
 > Doelgroep: Quiet Community, IMC Weekendschool, CJG's/JGZ, speelgoedbanken, Present, taalhuizen, ouderorganisaties e.d. (zie SPOOR1-GEZINSORGANISATIES.md).
-> Tekst-akkoord Mark: ☐ — pas daarna verzenden, 60 per werkdag.
+> Tekst-akkoord Mark: ✅ 14 okt 2026 21:45 ("okk") — Windows-taak "Leerkwartier spoor 1", werkdagen 08:00, 60 per dag over de drie docs.
 
 ## Onderwerp
 Gratis oefenen voor kinderen van groep 3 t/m 8: een blokje voor uw nieuwsbrief?
