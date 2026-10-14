@@ -30,6 +30,9 @@ export const SNELKOPPELINGEN = [
     woorden: ["bedrieger", "wie is de bedrieger", "imposter", "impostor", "wie is de imposter", "game", "among us", "verrader", "bots", "spelleider"] },
   { id: "klassenregels", emoji: "🖼️", label: "Klassenregels met plaatjes (printen)", uitleg: "kaartjes voor de taalklas: stil zijn, zelf werken, samen werken", pad: "/klassenregels.html",
     woorden: ["klassenregels", "regels", "pictogrammen", "picto", "plaatjes", "poster", "taalklas", "afspraken"] },
+  // 14 okt 2026: nieuwe doelgroep — Nederlandse kinderen in het buitenland (NTC/expat).
+  { id: "buitenland", emoji: "🌍", label: "Nederlands bijhouden in het buitenland", uitleg: "Voor gezinnen buiten Nederland en België: rekenen en taal op Nederlands niveau, naast de NTC-les.", pad: "/buitenland.html",
+    woorden: ["buitenland", "expat", "expats", "ntc", "nob", "emigratie", "emigreren", "wonen in het buitenland", "terugkeer", "nederlandse school buitenland", "internationale school"] },
   { id: "nieuwkomers-handleiding", emoji: "🌍", label: "Handleiding nieuwkomers (taalklas)", uitleg: "klassikaal en zelf oefenen, opbouw en planning voor drie weken", pad: "/nieuwkomers-handleiding.html",
     woorden: ["handleiding", "taalklas", "nt2", "nieuwkomers", "lesplan", "isk", "nieuwkomersklas", "anderstalig"] },
   { id: "voor-leerkrachten", emoji: "🏫", label: "Voor leerkrachten (gratis voor scholen)", uitleg: "wat je gratis krijgt, hoe je begint en veelgestelde vragen", pad: "/voor-leerkrachten.html",
