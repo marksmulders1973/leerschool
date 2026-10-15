@@ -19,7 +19,10 @@ Daarom een eenvoudige vraag: wilt u Leerkwartier een keer noemen in uw ouder-app
 
 Wilt u een eigen code voor uw organisatie, zodat u ziet hoeveel gezinnen via u binnenkomen en zij de extra's van het Familie-pakket gratis krijgen? Eén mailtje terug is genoeg, dan maak ik die aan.
 
-Kijk gerust zelf even op leerkwartier.app/?utm_source=bso. Vragen? Mail naar hallo@leerkwartier.app.
+Kijk gerust zelf even op:
+leerkwartier.app/?utm_source=bso
+
+Vragen? Mail naar hallo@leerkwartier.app.
 
 Met vriendelijke groet,
 

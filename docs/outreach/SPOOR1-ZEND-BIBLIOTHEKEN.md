@@ -23,7 +23,10 @@ Wilt u een eigen code voor uw bibliotheek, zodat u ziet hoeveel gezinnen via u b
 
 De weken voor de Doorstroomtoets (25 januari tot 12 februari 2027) zijn het drukst. Een plaatsing in november of december helpt kinderen uit groep 8 het meest.
 
-Kijk gerust zelf even op leerkwartier.app/?utm_source=bibliotheek. Vragen? Mail naar hallo@leerkwartier.app.
+Kijk gerust zelf even op:
+leerkwartier.app/?utm_source=bibliotheek
+
+Vragen? Mail naar hallo@leerkwartier.app.
 
 Met vriendelijke groet,
 

@@ -30,8 +30,12 @@ const ZOEKMACHINES = ["google.", "bing.com", "duckduckgo.com", "ecosia.org", "st
 const AI_BOTS = ["chatgpt.com", "chat.openai.com", "perplexity.ai", "claude.ai", "gemini.google", "copilot.microsoft"];
 const SOCIALS = ["facebook.com", "fb.me", "instagram.com", "threads.", "linkedin.com", "lnkd.in", "t.co", "twitter.com", "x.com", "whatsapp.com", "youtube.com", "pinterest."];
 
-function schoonLabel(s) {
-  return String(s || "").replace(/[^a-zA-Z0-9._-]/g, "").slice(0, 40);
+// 15 okt 2026 (idee 10): in een mail staat de link vaak vlak voor een punt
+// ("…?utm_source=bibliotheek. Vragen?"). Mailprogramma's en linkscanners nemen die
+// punt soms mee, waardoor één bron in twee labels uiteenviel (deel:bibliotheek en
+// deel:bibliotheek.). Leestekens aan begin en eind gaan er daarom af.
+export function schoonLabel(s) {
+  return String(s || "").replace(/[^a-zA-Z0-9._-]/g, "").replace(/^[._-]+|[._-]+$/g, "").slice(0, 40);
 }
 
 // Bepaal het bron-label uit URL-params + referrer. Volgorde = zekerheid:
