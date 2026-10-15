@@ -23,7 +23,7 @@
 | 1 | **Eén prijslijst die overal hetzelfde zegt** — `config.js`, `proPlan.js`, `PRIJSPLAN.md`, `abonnement.html`. ✅ **26 sep (v744)**: 14 publieke + 6 kleine plekken gelijkgetrokken (maandprijs weg, Pro → schoollicentie, Familie-pakket, t/m 2028, geen concurrent-prijzen in llms). | Claude | 1 okt | ✅ |
 | 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt || ✅ 22 sep — Pro geschrapt, schoollicentie **op aanvraag**, €99/klas uit code en copy (v683); prijs komt uit de eerste schoolgesprekken |
 | 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt || ✅ 22 sep — **partner koopt per gezin** (tot 3 kinderen), staffel 10–99 €34,50 · 100–249 €24,95 · 250+ in overleg |
-| 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
+| 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ✅ **20 sep (v680)** — cache_control op tutor-chat, buddy-chat, charley-hulp (vinkje bijgewerkt 15 okt) |
 | 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | ✅ **26 sep (v745) — trapje i.p.v. pauzeknop (Mark):** gratis versie dag 1 met Charley 75 berichten → 65 → 55 → 45 → 35 → 25, vanaf dag 7: 10 + 1 per gemaakte som (max 30); Familie (ook via partnercode) blijft 75/dag. Server telt de dagen zelf (ai_call_quota), terugval 20. Rem bij kletsen zonder sommen (5/15) blijft. Pauzeknop niet nodig: Charley praat nooit uit zichzelf. |
 | 6 | **Btw — besluit 22 sep: één bedrag, alles erin (zoals de markt doet), en de KOR aanvragen.** Op de 28e: (a) KvK-inschrijving; (b) **btw-id opvragen**; (c) daarna zelf via belastingdienst.nl **"Melding omzetbelasting kleineondernemersregeling"** insturen met ingang **1 januari 2027** (min. 4 weken vooraf, 3 jaar vast, grens €20.000 omzet); (d) laten bevestigen dat verlegde btw op Supabase/AI geen probleem is. Zin in het betaalplan ("geen btw bovenop") klopt zodra (c) is gedaan. Boven €20k ooit: 21% erin houden, prijs blijft €34,50 incl. | Mark | 28 sep | ☐ |
 | 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ✅ **30 sep** — `scripts/partner-rapport.mjs` → docs/rapporten (RPC partner_rapport): Kinderhulp 348 app/1.277 vragen/42 kwartieren · Buurtgezinnen 27/181/4 · Alkmaar 10/97/3 · Ooievaarspas 7/0 · VB Rotterdam 5 · Haarlemmermeer 1 |
@@ -61,7 +61,7 @@ de eenheden (per kind / per gezin / per docent) zijn consistent, en het staat ov
 > "maak er een plan van wat ik later door fable kan laten nalopen."
 
 - **Doel:** €500/mnd netto ≈ **175 betalende gezinnen** à €34,50/jaar (of 240 à €24,95). Stand: 0.
-- **Vier ingrepen:** ✅ prijs €25→€34,50 (20 sep) · ☐ prompt caching (~1u, −48% AI-rekening)
+- **Vier ingrepen:** ✅ prijs €25→€34,50 (20 sep) · ✅ prompt caching (v680, 20 sep)
   · 🗓️ **Charley praat alleen indien nodig + pauzeknop — week van 22 sep** (Marks keuze;
   dagbundel 20/50 als vangnet eronder) · ☐ Vercel Pro vóór de eerste betaling (€18,50/mnd).
 - ~~🔴 De gezinsprijs (€34,50, v.a. 100 gezinnen €24,95) moet in de oktober-Leergeld-mail~~ → **vervallen 14 okt**; de gezinsprijs blijft alleen in gemeente-/leveranciersvoorstellen staan.
