@@ -15,18 +15,34 @@
 import { useState } from "react";
 import { track } from "../../utils.js";
 
+// Mark 15 okt 2026: "makkelijk is niet iets waar ik iets aan heb" — makkelijk kan
+// fijn óf saai betekenen. Daarom "te makkelijk / precies goed / te moeilijk" (nieuwe
+// keys, zodat ze niet mengen met de oude 'makkelijk'/'moeilijk' van v944-v956), en
+// de vervolgvraag past zich aan: elke tik wijst zo naar iets wat we kunnen aanpassen.
 const NIVEAUS = [
-  { key: "makkelijk", label: "Makkelijk" },
+  { key: "te-makkelijk", label: "Te makkelijk" },
   { key: "goed", label: "Precies goed" },
-  { key: "moeilijk", label: "Moeilijk" },
+  { key: "te-moeilijk", label: "Te moeilijk" },
 ];
-const WENSEN = [
-  { key: "meer-uitleg", label: "Meer uitleg" },
-  { key: "minder-tekst", label: "Minder tekst" },
-  { key: "meer-sommen", label: "Meer vragen" },
-  { key: "leukere-vragen", label: "Leukere vragen" },
-  { key: "niets", label: "Niets, zo is het goed" },
-];
+const WENSEN_PER_NIVEAU = {
+  "te-makkelijk": [
+    { key: "moeilijker", label: "Moeilijkere vragen" },
+    { key: "minder-uitleg", label: "Minder uitleg" },
+    { key: "leukere-vragen", label: "Leukere vragen" },
+    { key: "niets", label: "Niets, zo is het goed" },
+  ],
+  goed: [
+    { key: "meer-sommen", label: "Meer vragen" },
+    { key: "leukere-vragen", label: "Leukere vragen" },
+    { key: "niets", label: "Niets, zo is het goed" },
+  ],
+  "te-moeilijk": [
+    { key: "meer-uitleg", label: "Meer uitleg" },
+    { key: "voorbeeld", label: "Een voorbeeld erbij" },
+    { key: "minder-tekst", label: "Minder tekst" },
+    { key: "makkelijker-beginnen", label: "Makkelijker beginnen" },
+  ],
+};
 
 const sleutel = (pathId, stepIdx, plek) => `lk_padfb:${plek}:${pathId}:${stepIdx ?? "pad"}`;
 
@@ -67,7 +83,7 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
             {niveau ? "Wat zou het beter maken?" : vraag}
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} role="group" aria-label={niveau ? "Wat zou het beter maken?" : vraag}>
-            {(niveau ? WENSEN : NIVEAUS).map((o) => (
+            {(niveau ? WENSEN_PER_NIVEAU[niveau] : NIVEAUS).map((o) => (
               <button key={o.key} type="button" onClick={() => (niveau ? kiesWens(o.key) : kiesNiveau(o.key))} style={knop(false)}>
                 {o.label}
               </button>
