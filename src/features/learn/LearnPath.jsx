@@ -45,7 +45,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
-import PadFeedback from "./PadFeedback.jsx";
+import PadFeedback, { heeftPadFeedback } from "./PadFeedback.jsx";
 import { voortgangPct, beantwoordInDeel } from "./voortgang.js";
 import { meldAntwoord } from "../niveau/signalen.js";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
@@ -578,12 +578,22 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // SH2 — "even stoppen"-knop: plek is al bewaard; dit is vooral de
   // geruststelling in kindtaal + een nette afsluiting naar home.
   const [stopBevestigd, setStopBevestigd] = useState(false);
+  // Stop-mening (Mark 15 okt 2026): wie stopt na ≥2 vragen in dit deel krijgt in het
+  // bewaard-scherm "Hoe ging het tot nu toe?". Niet bij nieuwkomerpaden (onvertaald) en
+  // één keer per deel per apparaat. Dan gaat het scherm niet vanzelf weg: het kind tikt
+  // een mening (→ na 1,2 s naar huis) of "Naar huis".
+  const [stopVraag, setStopVraag] = useState(null);
   const stopEnBewaar = useCallback(() => {
+    const gedaan = beantwoordInDeel(checkIdx, mode);
     try { saveResume(player, pathId, stepIdx, checkIdx); } catch { /* */ }
-    try { track("leerpad_stop_bewaard", { pathId, stepIdx, checkIdx }); } catch { /* */ }
+    try { track("leerpad_stop_bewaard", { pathId, stepIdx, checkIdx, beantwoord: gedaan }); } catch { /* */ }
     setStopBevestigd(true);
+    if (gedaan >= 2 && !path?.steunTeksten && !heeftPadFeedback(pathId, stepIdx, "stop")) {
+      setStopVraag({ beantwoord: gedaan });
+      return;
+    }
     schedule(() => { if (onHome) onHome(); }, 1200);
-  }, [player, pathId, stepIdx, checkIdx, schedule, onHome]);
+  }, [player, pathId, stepIdx, checkIdx, mode, path, schedule, onHome]);
 
   // Begripscheck-na-uitlegPad (Roediger-Karpicke retrieval, 2026-05-16):
   // bij entry van een latere stap, peek of er een check uit een vorige stap
@@ -955,6 +965,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     newDone.add(stepIdx);
     setCompletedSteps(newDone);
     setMode("stepDone");
+    // Meting (15 okt 2026): er was geen event voor "deel af", alleen de rij in learn_progress
+    // (en die ontbreekt bij kinderen zonder naam). Nodig voor het antwoordpercentage van pad_feedback.
+    try { track("leerpad_deel_af", { pad: pathId, stap: stepIdx, herhaling: completedSteps.has(stepIdx) }); } catch { /* */ }
     // 👀 Stap af → bewaarde vraagkeuze vergeten; het volgende bezoek kiest weer nieuwe vragen.
     try { vergeetStapVragen(pathId, stepIdx); } catch { /* */ }
     // B0.4 (7-bots-review): supabase-js v2 throwt niet — de oude try/catch
@@ -1172,6 +1185,25 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <div style={{ fontSize: 36, lineHeight: 1 }}>👍</div>
             <SteunTekst nl="Je plek is bewaard!"><div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, color: "#00e676", marginTop: 8 }}>Je plek is bewaard!</div></SteunTekst>
             <SteunTekst nl="Tot straks — je gaat verder waar je nu bent."><div style={{ fontSize: 13.5, color: "#cdd6e2", marginTop: 4 }}>Tot straks — je gaat verder waar je nu bent.</div></SteunTekst>
+            {stopVraag && (
+              <div style={{ maxWidth: 360 }}>
+                <PadFeedback
+                  pathId={pathId}
+                  stepIdx={stepIdx}
+                  plek="stop"
+                  accent={C.warm}
+                  beantwoord={stopVraag.beantwoord}
+                  onKlaar={() => schedule(() => { if (onHome) onHome(); }, 1200)}
+                />
+                <button
+                  type="button"
+                  onClick={() => { try { track("pad_feedback_overgeslagen", { pad: pathId, stap: stepIdx, plek: "stop" }); } catch { /* */ } if (onHome) onHome(); }}
+                  style={{ marginTop: 12, background: "transparent", border: "1px solid rgba(255,255,255,0.25)", color: "#cdd6e2", borderRadius: 10, padding: "8px 16px", fontSize: 13.5, fontWeight: 700, cursor: "pointer" }}
+                >
+                  Naar huis
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}

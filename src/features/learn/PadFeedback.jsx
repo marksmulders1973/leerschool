@@ -7,6 +7,11 @@
 // (props: pad, stap, plek, niveau, wens) — zie docs/sql/pad-feedback.sql voor
 // het dagrapport. Geen emoji-gezichtjes als knop (regel 11 sep: geen emoticon
 // als icoon); gewone woorden. Eén keer per deel per apparaat, anders wordt het zeuren.
+//
+// plek="stop" (Mark 15 okt 2026: "kan het ook eerder gevraagd worden, nadat iemand op
+// stop drukt en bv 2 of 3 vragen heeft gemaakt"): zelfde twee tikken in het
+// "plek bewaard"-scherm, met `beantwoord` = vragen die het kind in dit deel deed.
+// onKlaar wordt aangeroepen na de tweede tik.
 import { useState } from "react";
 import { track } from "../../utils.js";
 
@@ -25,7 +30,7 @@ const WENSEN = [
 
 const sleutel = (pathId, stepIdx, plek) => `lk_padfb:${plek}:${pathId}:${stepIdx ?? "pad"}`;
 
-export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", accent = "#ffd54f" }) {
+export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", accent = "#ffd54f", beantwoord, onKlaar }) {
   const [niveau, setNiveau] = useState(null);
   const [wens, setWens] = useState(null);
   const [verborgen, setVerborgen] = useState(() => {
@@ -34,15 +39,16 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
   if (verborgen) return null;
 
   const meld = (velden) => {
-    try { track("pad_feedback", { pad: pathId, stap: stepIdx, plek, ...velden }); } catch { /* meting mag nooit het scherm breken */ }
+    try { track("pad_feedback", { pad: pathId, stap: stepIdx, plek, ...(beantwoord != null ? { beantwoord } : {}), ...velden }); } catch { /* meting mag nooit het scherm breken */ }
   };
   const kiesNiveau = (k) => { setNiveau(k); meld({ niveau: k }); };
   const kiesWens = (k) => {
     setWens(k); meld({ niveau, wens: k });
     try { localStorage.setItem(sleutel(pathId, stepIdx, plek), "1"); } catch { /* */ }
+    if (onKlaar) onKlaar();
   };
 
-  const vraag = plek === "pad" ? "Wat vond je van dit leerpad?" : "Hoe was dit deel?";
+  const vraag = plek === "pad" ? "Wat vond je van dit leerpad?" : plek === "stop" ? "Hoe ging het tot nu toe?" : "Hoe was dit deel?";
   const knop = (actief) => ({
     padding: "9px 13px", borderRadius: 999, cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700,
     border: actief ? `2px solid ${accent}` : "1.5px solid rgba(255,255,255,0.22)",
@@ -50,7 +56,7 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
   });
 
   return (
-    <div style={{ marginTop: 14, padding: "12px 14px", borderRadius: 12, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)" }}>
+    <div style={{ marginTop: 14, padding: "12px 14px", textAlign: "left", borderRadius: 12, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)" }}>
       {wens ? (
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.85)" }}>
           Dank je. Hiermee maken we de app beter.
@@ -76,4 +82,9 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
       )}
     </div>
   );
+}
+
+// Al een mening gegeven op deze plek? (stop-scherm vraagt dan niet opnieuw)
+export function heeftPadFeedback(pathId, stepIdx, plek) {
+  try { return localStorage.getItem(sleutel(pathId, stepIdx, plek)) === "1"; } catch { return false; }
 }
