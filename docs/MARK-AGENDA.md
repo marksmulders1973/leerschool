@@ -6,6 +6,19 @@
 > MARK zelf moet doen of niet mag vergeten. Aangemaakt 5 aug 2026 (Mark:
 > "ik vergeet dat soort dingen, denk mee").
 
+## 🧠 Over het hoofd gezien? — vast blok in elk dagrapport (Mark 15 okt 2026)
+
+> "zet 1 t/m 5 op elk dagrapport en elke dagrapport denk je mee aan dingen die ik over het hoofd zie."
+> Staat in elk dagrapport onder "Jouw acties" tot elk punt ✅; afgevinkt = hier weghalen. Claude vult elke editie zelf aan met nieuwe (geverifieerde) punten.
+
+| # | Wat | Uiterlijk | Stand |
+|---|---|---|---|
+| 1 | **KOR aanmelden** op belastingdienst.nl (btw-id nodig, komt per post — is de brief "≤20 okt" die?) | eind nov (4 wk vóór 1-1-2027) | ☐ |
+| 2 | **Ooievaarspas live 1 nov ↔ kwaliteitsronde stil** (7% fout, doel ≤2%) — keuze deel 2 cloud/lokaal | nu (vóór 1 nov) | ☐ |
+| 3 | **Spark Fest zo 18 okt** — HAARLEMMERMEER2027 meten ma/di (≥25 scans = goodybag-model) · bedankt-toestemming Inez · LinkedIn-post | ma 19 okt | ☐ |
+| 4 | **Vercel Pro** vóór de eerste euro (Hobby = niet-commercieel; Stripe live nov) | vóór Stripe live | ☐ |
+| 5 | **Stripe-backupcode** op papier bij het wachtwoordblad (5 min) | zo snel mogelijk | ☐ |
+
 - **za 1 nov (Claude)**: klikbare link toevoegen aan de Facebook-post "Hij vroeg wat ik dacht" (Meta-linklimiet weer vrij).
 
 ## 🔴🔴 PRIORITEIT OKTOBER 2026 — "een kloppend verdienmodel"
