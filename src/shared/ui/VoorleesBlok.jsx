@@ -9,8 +9,24 @@ import { SteunTekst } from "./SteunTik.jsx";
 import { spreekMetMeelezen, nlStemmen, gekozenStemNaam, zetGekozenStem } from "../spraakTekst.js";
 import MeeleesTekst from "./MeeleesTekst.jsx";
 
+// Inklapbare strook (Mark 15 okt 2026: "neemt veel te veel plaats in" → standaard ingeklapt).
+// Eén stand voor alle blokken op de pagina; alleen het eerste blok tekent het knopje.
+let stripOpen = false;
+const instanties = [];
+const luisteraars = new Set();
+const meld = () => luisteraars.forEach((f) => f());
+
 // `licht` (26 sep 2026): knoppen leesbaar op een lichte achtergrond (ere-scherm partnercode).
 export default function VoorleesBlok({ tekst, accent = "#00C853", children, licht = false }) {
+  const idRef = useRef(Symbol("voorlees"));
+  const [, ververs] = useState(0);
+  useEffect(() => {
+    const id = idRef.current;
+    const f = () => ververs((n) => n + 1);
+    instanties.push(id); luisteraars.add(f); meld();
+    return () => { instanties.splice(instanties.indexOf(id), 1); luisteraars.delete(f); meld(); };
+  }, []);
+  const leider = instanties[0] === idRef.current;
   const [leest, setLeest] = useState(false);
   const [woord, setWoord] = useState(-1);
   const [faalt, setFaalt] = useState(false); // speech-engine weigert (bv. browser zonder voorleesstem)
@@ -46,6 +62,14 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children, lich
       setTimeout(() => { const el = document.getElementById("lk-voorlees-strip"); if (el && !el.children.length) document.body.style.paddingBottom = ""; }, 0);
     };
   }, [kan]);
+
+  // Ingeklapt: geen balk over de volle breedte, alleen een klein knopje rechts.
+  useEffect(() => {
+    if (!strip || !leider) return;
+    Object.assign(strip.style, stripOpen
+      ? { background: "rgba(11,18,36,0.92)", borderTop: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", pointerEvents: "auto" }
+      : { background: "transparent", borderTop: "none", backdropFilter: "none", WebkitBackdropFilter: "none", pointerEvents: "none" });
+  }, [strip, leider, stripOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Stemmenlijst laden (komt op Android pas na 'voiceschanged' beschikbaar).
   useEffect(() => {
@@ -174,7 +198,34 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children, lich
       {/* Knoppen onderin (Mark 30 sep 2026: "kunnen deze helemaal beneden in die onderste balk"):
           op pagina's mét de onderste balk gaan "Lees voor"/"Stem" naar de strook daarboven (portal);
           zonder balk blijven ze hier staan. Het meelezen zelf blijft op zijn plek. */}
-      {strip ? createPortal(<div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 4, flexWrap: "wrap", padding: "6px 10px 0" }}>{knoppen}</div>, strip) : knoppen}
+      {strip ? ((stripOpen || leest || leider) && createPortal(
+        <div style={{ display: "flex", justifyContent: stripOpen ? "center" : "flex-end", alignItems: "center", gap: 4, flexWrap: "wrap", padding: "6px 10px 0" }}>
+          {(stripOpen || leest) && <span style={{ display: "contents", pointerEvents: "auto" }}>{knoppen}</span>}
+          {leider && (
+            <button
+              type="button"
+              onClick={() => { stripOpen = !stripOpen; meld(); }}
+              aria-label={stripOpen ? "Voorleesknoppen inklappen" : "Voorleesknoppen tonen"}
+              aria-expanded={stripOpen}
+              style={{
+                pointerEvents: "auto",
+                background: stripOpen ? "transparent" : "rgba(11,18,36,0.92)",
+                border: "1px solid rgba(255,255,255,0.14)",
+                color: "rgba(230,235,245,0.75)",
+                borderRadius: 999,
+                padding: "4px 10px",
+                fontSize: 12,
+                fontWeight: 700,
+                cursor: "pointer",
+                marginLeft: 6,
+                marginBottom: 10,
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              {stripOpen ? "▾" : "🔊 ▴"}
+            </button>
+          )}
+        </div>, strip)) : knoppen}
       {leest
         ? <div style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}><MeeleesTekst tekst={tekst} actief={woord} accent={accent} /></div>
         : children}
