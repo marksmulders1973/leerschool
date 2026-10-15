@@ -6,6 +6,8 @@
 > MARK zelf moet doen of niet mag vergeten. Aangemaakt 5 aug 2026 (Mark:
 > "ik vergeet dat soort dingen, denk mee").
 
+- **za 1 nov (Claude)**: klikbare link toevoegen aan de Facebook-post "Hij vroeg wat ik dacht" (Meta-linklimiet weer vrij).
+
 ## 🔴🔴 PRIORITEIT OKTOBER 2026 — "een kloppend verdienmodel"
 
 > **Mark, 20 sep 2026: "prio moet zijn komende maand: maak een passend kloppend verdienmodel."**
