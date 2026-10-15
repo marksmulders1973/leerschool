@@ -106,3 +106,68 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 | 69 | Noord Oost Brabantse Bibliotheken (NOBB) | bibliotheek · nieuwsbrief ja | contactoss@nobb.nl |
 | 70 | SCHUNCK (bibliotheek Heerlen) | bibliotheek · nieuwsbrief ja | info@schunck.nl |
 | 71 | Bibliotheek Hilversum | bibliotheek | hulp@bibliotheekhilversum.nl |
+
+- **15-10-2026 09:09** — via Resend (hallo@leerkwartier.app), taak afgebroken na 1 mail (venster gesloten); nagetekend uit spoor1-run.log:
+  - 1 · Bibliotheken Zuidoost Fryslân · info@bzof.nl · OK · 01a13e65-36f3-7967-a2cf-32281a09a2dc
+
+- **15-10-2026, 10:29:52** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 2 · Facet Emmen · klantenservice@facet-emmen.nl · OK · 01a13eae-9abc-7e5c-99c6-9bfe65f48e1a
+  - 3 · Bibliotheek Hoogeveen · secr@bibliotheekhoogeveen.nl · OK · 01a13eae-a0a9-73a0-bd21-95e42f8728ba
+  - 4 · Bibliotheek Enschede · info@bibliotheekenschede.nl · OK · 01a13eae-a657-7519-9cff-bacba9728819
+  - 5 · Bibliotheek Almelo · centrale@bibliotheekalmelo.nl · OK · 01a13eae-ac27-79ba-bffe-6f6fca97d3bd
+  - 6 · Bibliotheek Twenterand · info@bibliotheektwenterand.nl · OK · 01a13eae-b2a6-7003-94d9-79a732277509
+  - 7 · Bibliotheek Salland · info@bibliotheeksalland.nl · OK · 01a13eae-b88e-7817-a793-e407d5bad948
+  - 8 · Bibliotheek Rijssen-Holten · info@bibliotheekrijssenholten.nl · OK · 01a13eae-bedd-70d4-a0c3-2c94a55f94ba
+  - 9 · Bibliotheek Hardenberg · info@bibliotheekhardenberg.nl · OK · 01a13eae-c4bd-73d2-931e-f3f83529e171
+  - 10 · Bibliotheek Borne (Kulturhus Borne) · bieb@kulturhusborne.nl · OK · 01a13eae-ca87-7cfa-a63b-fc3889e0dbf1
+  - 11 · Bibliotheek Dinkelland · info@bibliotheekdinkelland.nl · OK · 01a13eae-d064-7a48-aa3e-4e47589d6cf5
+  - 12 · Bibliotheken Tubbergen · info@bibliotheektubbergen.nl · OK · 01a13eae-d621-78d2-aee1-c2a58b98083f
+  - 13 · Bibliotheek Wierden · info@bibliotheekwierden.nl · OK · 01a13eae-dbe3-740b-ab74-776edfcf2019
+  - 14 · Kunstwerk! (Liemers) · info@liemerskunstwerk.nl · OK · 01a13eae-e1be-7ce1-896c-ef173b18c052
+  - 15 · Bibliotheek Noord-Veluwe · info@bibliotheeknoordveluwe.nl · OK · 01a13eae-e77f-7280-a5de-bbc582f986a1
+  - 16 · Bibliotheek West Achterhoek · info@bibliotheekwestachterhoek.nl · OK · 01a13eae-ed49-7c1c-ad4d-e5252c21233b
+  - 17 · Bibliotheek Oost-Achterhoek · info@oostachterhoek.nl · OK · 01a13eae-f30c-7844-ae10-95eb77a8d41e
+  - 18 · De Zoomerij (Bibliotheek Veluwezoom) · info@dezoomerij.nl · OK · 01a13eae-f8c7-71b5-b427-07fb25711eca
+  - 19 · Bibliotheken Noord Fryslân (ontdekdebieb.nl) · info@bnfrl.nl · OK · 01a13eae-fe91-7b8d-ae73-f0948c034c8e
+  - 20 · Bibliotheek Dalfsen · info@bibliotheekdalfsen.nl · OK · 01a13eaf-05cc-7878-965f-f0acd01f0cf2
+  - 21 · Fundament - Bibliotheek Losser · infobibliotheek@fundamentlosser.nl · OK · 01a13eaf-0c8d-7b4c-943f-3f6ecf9a4738
+  - 22 · ZINiN Bibliotheek Nijverdal · info@zinin.com · OK · 01a13eaf-1381-7002-89cf-3cd5060b4430
+  - 23 · MijnBieb (Kop van Overijssel + Staphorst + Zwartewaterland, gefuseerd) · steenwijk@mijnbieb.nl · OK · 01a13eaf-1a74-7313-8ce0-5c3c09a57928
+  - 24 · Bibliotheek Twente (Hengelo + Hof van Twente + Oldenzaal, gefuseerd) · hengelo@bibliotheektwente.nl · OK · 01a13eaf-2100-700c-94e5-c1e44ab93b0a
+  - 25 · Achterhoekse Poort (Poort van Gelre; ook bibliotheekmontferland.nl) · info@poortvangelre.nl · OK · 01a13eaf-2757-7b84-add9-6dd1bc3f9d93
+  - 26 · Bibliotheek Barneveld · info@bibliotheekbarneveld.nl · OK · 01a13eaf-2d80-7156-bcdc-5c6a634a9dcf
+  - 27 · Bibliotheek Nijkerk · info@bibliotheeknijkerk.nl · OK · 01a13eaf-3343-7914-9cd9-b0c3bd41d658
+  - 28 · Bibliotheek Scherpenzeel · info@bibliotheekscherpenzeel.nl · OK · 01a13eaf-3953-70f2-8ae7-f7e99bef5a10
+  - 29 · Bibliotheek Wijchen · info@bibliotheek-wijchen.nl · OK · 01a13eaf-3f29-794a-8875-55188e6b614c
+  - 30 · Bibliotheek Z-O-U-T · info@bibliotheekzout.nl · OK · 01a13eaf-44f2-7e46-8e83-8791dfd86698
+  - 31 · Bibliotheek Lek & IJssel · secretariaat@bibliotheeklekijssel.nl · OK · 01a13eaf-4aae-7b77-a9f6-722f7a71f97b
+  - 32 · Bibliotheek Utrechtse Venen (fusie Angstel Vecht en Venen + Regiobibliotheek Het Groene Hart) · info@bibliotheekuv.nl · OK · 01a13eaf-5084-7209-a499-a98443321e64
+  - 33 · Rijnbrink · info@rijnbrink.nl · OK · 01a13eaf-564f-78bd-b3e7-81a2df5388a2
+  - 34 · Bibliotheekservice Fryslân (BSF) · info@bsf.nl · OK · 01a13eaf-5c19-773a-8f3b-a48f6005e46a
+  - 35 · Bibliotheek Waterland · info@bibliotheekwaterland.nl · OK · 01a13eaf-61f4-7670-9647-a90f3d7adcc2
+  - 36 · KopGroep Bibliotheken · info@kopgroepbibliotheken.nl · OK · 01a13eaf-67c2-72a8-a700-0195167a7b62
+  - 37 · Bibliotheek IJmond Noord · info@obijmond.nl · OK · 01a13eaf-6d7f-7799-b9de-0dbef5c4a5c4
+  - 38 · Bibliotheek Velsen · info@bibliotheekvelsen.nl · OK · 01a13eaf-7341-7732-bd81-2acdeac41b02
+  - 39 · Bibliotheek Heiloo · info@bibliotheekheiloo.nl · OK · 01a13eaf-790c-70a7-b9af-a4c19b695fe4
+  - 40 · Bibliotheek Rotterdam · klantenservice@bibliotheek.rotterdam.nl · OK · 01a13eaf-7ed4-70c8-a05b-c1fe12058bbc
+  - 41 · Bibliotheek Oostland · communicatie@bibliotheekoostland.nl · OK · 01a13eaf-84a2-711f-ba99-d4f12a8c5f81
+  - 42 · de Bibliotheek Bollenstreek · info@bibliotheekbollenstreek.nl · OK · 01a13eaf-8a5d-7008-ac27-5fbb621720d7
+  - 43 · de Bibliotheek De Plataan · info@debibliotheekdeplataan.nl · OK · 01a13eaf-9042-7735-9eae-300603bdf665
+  - 44 · Bibliotheek Hoeksche Waard · info@debhw.nl · OK · 01a13eaf-961f-79b1-8f32-762abcd6c848
+  - 45 · de Bibliotheek Krimpenerwaard · info@debibliotheekkrimpenerwaard.nl · OK · 01a13eaf-9bdd-7e1b-9667-4490b7a79092
+  - 46 · Bibliotheek Voorschoten-Wassenaar · info@obvw.nl · OK · 01a13eaf-a19a-73df-b028-c6afad8d1982
+  - 47 · de Bibliotheek aan de Vliet · klantenservice@bibliotheekaandevliet.nl · OK · 01a13eaf-a763-7c44-9d96-6fa47a012486
+  - 48 · Cultuurhuis Planck (Bibliotheek Katwijk) · info@cultuurhuisplanck.nl · OK · 01a13eaf-ad2b-77f6-8e68-fa894dafac1a
+  - 49 · de Bibliotheek Regio Eindhoven · klantenservice@dbre.nl · OK · 01a13eaf-b2e8-7e7d-acfa-8e65bcbce418
+  - 50 · Theek 5 · info@theek5.nl · OK · 01a13eaf-b8ba-77dc-8b37-1db5f5863e37
+  - 51 · Bibliotheek De Kempen · info@bibliotheekdekempen.nl · OK · 01a13eaf-be8f-73ab-a1ad-532ce8c40157
+  - 52 · BiblioPlus · info@biblioplus.nl · OK · 01a13eaf-c494-7834-a630-f85b1c22b188
+  - 53 · Bibliotheek De Lage Beemden · contact@bibliotheekdlb.nl · OK · 01a13eaf-ca78-77ef-a38a-26ec56d23be0
+  - 54 · Bibliotheek Veldhoven · info@bibliotheekveldhoven.nl · OK · 01a13eaf-d05b-74fa-a262-25b30236bd54
+  - 55 · Bibliotheek Heusden · info@bibliotheekheusden.nl · OK · 01a13eaf-d628-7980-a9db-0a5d6e271b8f
+  - 56 · Bibliotheek CultuurPuntAltena · info@bibliotheekaltena.nl · OK · 01a13eaf-dbfc-7eb3-972c-f7a56bb06ed9
+  - 57 · Heuvellandbibliotheken · info@heuvellandbibliotheken.nl · OK · 01a13eaf-e1d3-789b-8d77-909a33240993
+  - 58 · BiblioNU · info@biblionu.nl · OK · 01a13eaf-e78e-7285-afed-2d7b52905f9c
+  - 59 · Bibliocenter · info@bibliocenter.nl · OK · 01a13eaf-ed68-71c7-9f4f-3476f23f4a18
+  - 60 · Bibliotheek Meerssen · info@bibliotheekmeerssen.nl · OK · 01a13eaf-f336-7b36-a123-73fda980662f
+- **15-10-2026, 10:31:21** — klaar: 59/59 verstuurd (OK-regels staan hierboven).

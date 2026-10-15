@@ -35,6 +35,7 @@ const todo = rows.filter(r => !alVerstuurd.has(r.email.toLowerCase()) && !nietMe
 if (!subject || !body || !todo.length) { console.error("doc onvolledig", { subject: !!subject, body: body.length, rows: rows.length }); process.exit(1); }
 console.log("onderwerp:", subject, "| tekst:", body.length, "tekens | adressen:", todo.length, DRY ? "| DRY" : "");
 const log = [];
+let kopGeschreven = false;
 for (const r of todo) {
   const code = (r.soort.match(/\b[A-Z][A-Z0-9]{3,}20\d\d\b/) || [])[0];
   if (body.includes("[CODE]") && !code) { console.log(`${r.n}\t${r.org}\t${r.email}\tOVERGESLAGEN: geen code`); continue; }
@@ -46,6 +47,12 @@ for (const r of todo) {
   const ok = resp.ok; let id = ""; try { id = (await resp.json()).id || ""; } catch {}
   log.push(`${r.n}\t${r.org}\t${r.email}\t${ok ? "OK" : "FOUT " + resp.status}\t${id}`);
   if (ok) { const nu = (fs.existsSync(TELLER) ? +fs.readFileSync(TELLER, "utf8") || 0 : 0) + 1; fs.writeFileSync(TELLER, String(nu)); }
+  // 15 okt 2026: elke geslaagde mail METEEN in het doc loggen. De dagtaak werd na 1 mail afgebroken
+  // (venster dichtgeklikt); het eindlog bleef leeg en de volgende run zou dezelfde adressen opnieuw mailen.
+  if (ok) {
+    if (!kopGeschreven) { fs.appendFileSync(DOC, `\n- **${new Date().toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" })}** — via Resend (hallo@leerkwartier.app), per mail gelogd:\n`); kopGeschreven = true; }
+    fs.appendFileSync(DOC, "  - " + log[log.length - 1].replace(/\t/g, " · ") + "\n");
+  }
   console.log(log[log.length - 1]);
   if (resp.status === 429) { console.log("Resend-limiet bereikt — stoppen; volgende run gaat verder."); log.pop(); break; }
   await new Promise(res => setTimeout(res, 1300));
@@ -53,6 +60,7 @@ for (const r of todo) {
 if (!DRY) {
   const ok = log.filter(l => l.includes("\tOK\t")).length;
   const stamp = new Date().toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" });
-  fs.appendFileSync(DOC, `\n- **${stamp}** — via Resend (hallo@leerkwartier.app), ${ok}/${todo.length} verstuurd.\n` + log.map(l => "  - " + l.replace(/\t/g, " · ")).join("\n") + "\n");
+  const fouten = log.filter(l => !l.includes("\tOK\t"));
+  fs.appendFileSync(DOC, `- **${stamp}** — klaar: ${ok}/${todo.length} verstuurd (OK-regels staan hierboven).\n` + fouten.map(l => "  - " + l.replace(/\t/g, " · ")).join("\n") + (fouten.length ? "\n" : ""));
   console.log("KLAAR", ok, "/", todo.length);
 }
