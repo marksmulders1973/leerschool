@@ -840,7 +840,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       if (path?.steunTeksten) noteerAntwoord(pathId, stepIdx, currentCheck.q, i === currentCheck.answer, currentCheck.options?.[currentCheck.answer]);
       // 25 sep 2026: leerpad-antwoorden werden niet als event gemeten (alleen learn_progress), dus "sommen"
       // in het dagrapport miste al het oefenen in leerpaden — ook de nieuwkomers. Eerste poging per vraag.
-      try { track("question_answered", { bron: "leerpad", pad: pathId, is_correct: i === currentCheck.answer, steuntaal: path?.steunTeksten ? leesSteuntaal() : undefined }); } catch { /* */ }
+      // 16 okt 2026: + stap en vraag (hash van de vraagtekst, zelfde als geziendeVragen) → moeilijkheidsgetal per vraag.
+      try { track("question_answered", { bron: "leerpad", pad: pathId, stap: stepIdx, vraag: vraagSleutel(pathId, rawCheck?.q).split("|")[1], is_correct: i === currentCheck.answer, steuntaal: path?.steunTeksten ? leesSteuntaal() : undefined }); } catch { /* */ }
       try { meldAntwoord({ pathId, correct: i === currentCheck.answer, ms: Date.now() - vraagStartRef.current, hints: hintsRef.current, bron: "leerpad" }); } catch { /* */ }
       if (i === currentCheck.answer) foutReeksRef.current = 0;
       else {

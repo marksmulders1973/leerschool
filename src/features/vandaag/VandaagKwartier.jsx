@@ -50,7 +50,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
       totaal={vragen.length}
       onBeantwoord={(goed) => {
         score.current = { goed: score.current.goed + (goed ? 1 : 0), totaal: score.current.totaal + 1 };
-        try { track("question_answered", { bron: "vandaag", pad: v.pathId, is_correct: goed }); } catch { /* */ }
+        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed }); } catch { /* */ }
         try { recordAnswerForPath({ playerName: userName || "Speler", pathId: v.pathId, isCorrect: goed, userId: authUser?.id || null }); } catch { /* */ }
         try { telAntwoordVoorVriend(); } catch { /* */ }
         // 👀 Beantwoord = gezien → volgende keer eerst andere vragen uit dit pad (geziendeVragen.js).
