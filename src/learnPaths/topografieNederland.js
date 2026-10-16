@@ -1202,7 +1202,7 @@ const steps = [
   },
   {
     title: "Landschap + Waddeneilanden",
-    explanation: "**De vorm van het land**\n\nNederland is bijna helemaal **plat**. Maar er zijn wel verschillen:\n\n**Hoge zandgronden** *(midden-oost-zuid)*\n• Veluwe (Gelderland) — bossen, heide, hoogste punt ~110 m.\n• Drenthe — bossen, hunebedden.\n• Noord-Brabant — zandgronden met bossen en heide.\n\n**Lage delen** *(west + noord)*\n• Polders en weilanden (vooral Zuid-Holland, Flevoland).\n• Hier is **26%** van het land **onder zeeniveau**.\n• Beschermd door dijken + duinen.\n\n**De heuvels van Limburg** *(zuid)*\n• Het **enige echte heuvelland** van NL.\n• Vaalserberg = **322 m** = hoogste punt van NL.\n• Geliefd voor wandelen en wielrennen.\n\n**5 Waddeneilanden** *(noord, in Waddenzee)*\nVan west naar oost:\n1. **Texel** — bij Noord-Holland — grootste\n2. **Vlieland** — Friesland\n3. **Terschelling** — Friesland\n4. **Ameland** — Friesland\n5. **Schiermonnikoog** — Friesland — oostelijkste\n\nGeheugenezel: **'Toen Vroeg Truus Aan Schelden?'** (T-V-T-A-S = Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog).\n\n**Waddenzee**: door eb en vloed komen grote delen droog te liggen → **wadlopen** mogelijk. UNESCO Werelderfgoed sinds 2009.\n\n**Tulpen + bollen**\n• Vooral in Noord- en Zuid-Holland.\n• Bekendste: **Keukenhof** in Lisse — 7 miljoen tulpen, 32 hectare.\n• Bloeitijd: maart-mei.\n• Nederland is **grootste tulpen-exporteur ter wereld**.",
+    explanation: "**De vorm van het land**\n\nNederland is bijna helemaal **plat**. Maar er zijn wel verschillen:\n\n**Hoge zandgronden** *(midden-oost-zuid)*\n• Veluwe (Gelderland) — bossen, heide, hoogste punt ~110 m.\n• Drenthe — bossen, hunebedden.\n• Noord-Brabant — zandgronden met bossen en heide.\n\n**Lage delen** *(west + noord)*\n• Polders en weilanden (vooral Noord- en Zuid-Holland, Friesland en Groningen; ook Flevoland in het midden is polder).\n• Hier is **26%** van het land **onder zeeniveau**.\n• Beschermd door dijken + duinen.\n\n**De heuvels van Limburg** *(zuid)*\n• Het **enige echte heuvelland** van NL.\n• Vaalserberg = **322 m** = hoogste punt van NL.\n• Geliefd voor wandelen en wielrennen.\n\n**5 Waddeneilanden** *(noord, in Waddenzee)*\nVan west naar oost:\n1. **Texel** — bij Noord-Holland — grootste\n2. **Vlieland** — Friesland\n3. **Terschelling** — Friesland\n4. **Ameland** — Friesland\n5. **Schiermonnikoog** — Friesland — oostelijkste\n\nGeheugenezel: **'Toen Vroeg Truus Aan Schelden?'** (T-V-T-A-S = Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog).\n\n**Waddenzee**: door eb en vloed komen grote delen droog te liggen → **wadlopen** mogelijk. UNESCO Werelderfgoed sinds 2009.\n\n**Tulpen + bollen**\n• Vooral in Noord- en Zuid-Holland.\n• Bekendste: **Keukenhof** in Lisse — 7 miljoen tulpen, 32 hectare.\n• Bloeitijd: maart-mei.\n• Nederland is **grootste tulpen-exporteur ter wereld**.",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -1421,20 +1421,28 @@ const steps = [
         },
       },
       {
-        q: "Waar in Nederland liggen vooral de **lage** polders en weilanden?",
+        // 16 okt 2026: herschreven na een 🚩-melding van een kind uit groep 6 ("het goede antwoord
+        // klopt niet"). Het antwoord klopte wél, maar de vraag was onduidelijk ("polders" roept ook
+        // Flevoland op; twee foute opties gingen allebei over Limburg) en optie 4 had geen hint.
+        q: "In welk deel van Nederland ligt het land het **laagst**, met veel **polders** (soms zelfs onder zeeniveau)?",
         options: [
           "In het westen en noorden",
-          "In het zuiden van Limburg",
+          "In het oosten en zuiden",
           "Op de Veluwe",
-          "Op de Vaalserberg",
+          "In Zuid-Limburg, bij de Vaalserberg",
         ],
         answer: 0,
-        wrongHints: [null, "Daar liggen juist de heuvels.", "Dit is een hoge zandgrond.", null],
+        wrongHints: [
+          null,
+          "Daar ligt het land juist hoger: zandgronden en heuvels.",
+          "De Veluwe is hoge zandgrond met bossen en heide.",
+          "Daar liggen de heuvels. De Vaalserberg is het hoogste punt van Nederland.",
+        ],
         uitlegPad: {
           stappen: [
             {
               titel: "Laag = west en noord",
-              tekst: "De **lage** delen met **polders** en **weilanden** liggen vooral in het **westen** en **noorden**. Ze worden beschermd door **dijken** en **duinen**.",
+              tekst: "Het **laagste** land van Nederland ligt in het **westen** en **noorden**: Noord- en Zuid-Holland, Friesland en Groningen. Daar liggen veel **polders**, soms zelfs **onder zeeniveau**. Ze worden beschermd door **dijken** en **duinen**.",
             },
           ],
           woorden: [
@@ -1443,11 +1451,15 @@ const steps = [
               uitleg: "Een grasveld waar koeien of schapen grazen.",
             },
           ],
-          theorie: "Hoog: Veluwe, Drenthe, Noord-Brabant, heuvels van Limburg. Laag: west en noord.",
+          theorie: "Hoog: Veluwe, Drenthe, Noord-Brabant, heuvels van Limburg (oosten en zuiden). Laag: west en noord.",
           voorbeelden: [
             {
               type: "verwarring",
               tekst: "Limburg heeft heuvels, de Veluwe is hoge zandgrond. Daar liggen geen lage polders.",
+            },
+            {
+              type: "verwarring",
+              tekst: "Flevoland (midden) is ook polder, maar het láágste land ligt in het westen en noorden, bij de zee.",
             },
           ],
           basiskennis: [
