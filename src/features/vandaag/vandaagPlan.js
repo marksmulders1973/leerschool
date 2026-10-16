@@ -177,30 +177,42 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
         blokjes: [{ soort: "klaargezet", items: open.slice(0, 3), titel: "💛 Voor jou klaargezet" }],
       };
     }
-    const toegestaan = new Set(klasPaden);
+    // 16 okt 2026 (melding "ik had niet voor Duits gekozen"): ook op de middelbare school
+    // alleen de gekozen vakken. Geen keuze, of geen paden bij de keuze → alle vakken van de klas.
+    const vkVo = voorkeurActief(voorkeur, vandaag) ? klasPaden.filter((id) => padMatchtVoorkeur(id, voorkeur)) : [];
+    const basis = vkVo.length ? vkVo : klasPaden;
+    const toegestaan = new Set(basis);
     // Eén pad per vak, elke dag bij een ander vak beginnen.
     const perVak = [];
     const vakGehad = new Set();
-    for (let i = 0; i < klasPaden.length; i++) {
-      const id = klasPaden[(i + weekdag * 7) % klasPaden.length];
+    for (let i = 0; i < basis.length; i++) {
+      const id = basis[(i + weekdag * 7) % basis.length];
       const vak = PATHS_BY_ID[id]?.subject || id;
       if (vakGehad.has(vak)) continue;
       vakGehad.add(vak); perVak.push(id);
+    }
+    // Maar één of twee vakken gekozen → aanvullen met andere paden van die vakken.
+    if (vkVo.length) {
+      for (let i = 0; i < basis.length && perVak.length < 3; i++) {
+        const id = basis[(i + weekdag * 7) % basis.length];
+        if (!perVak.includes(id)) perVak.push(id);
+      }
     }
     const zwak = kiesZwakkeConcepten(mastery, { maxConcepten: 6, minPogingen: 3, drempelPct: 101 })
       .filter((c) => toegestaan.has(c.id));
     const gekozen = conceptVoorVandaag(zwak, weekdag);
     if (gekozen) {
-      const rest = perVak.filter((id) => id !== gekozen.id && PATHS_BY_ID[id]?.subject !== PATHS_BY_ID[gekozen.id]?.subject).slice(0, 2);
+      const anderVak = perVak.filter((id) => id !== gekozen.id && PATHS_BY_ID[id]?.subject !== PATHS_BY_ID[gekozen.id]?.subject);
+      const rest = (anderVak.length >= 2 || !vkVo.length ? anderVak : [...anderVak, ...perVak.filter((id) => id !== gekozen.id && !anderVak.includes(id))]).slice(0, 2);
       return {
         reden: "weekschema",
-        uitleg: "Eerst je lastigste onderwerp, dan twee andere vakken van jouw klas.",
+        uitleg: vkVo.length ? "Eerst je lastigste onderwerp, dan meer uit de vakken die je koos." : "Eerst je lastigste onderwerp, dan twee andere vakken van jouw klas.",
         blokjes: [vb(gekozen.id), ...rest.map((id) => vb(id))],
       };
     }
     return {
       reden: "mix",
-      uitleg: "Nog weinig gemeten: een mix van vakken van jouw klas.",
+      uitleg: vkVo.length ? "Nog weinig gemeten: een mix uit de vakken die je koos." : "Nog weinig gemeten: een mix van vakken van jouw klas.",
       blokjes: perVak.slice(0, 3).map((id) => vb(id)),
     };
   }
