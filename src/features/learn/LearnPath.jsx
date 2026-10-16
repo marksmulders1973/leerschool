@@ -1193,6 +1193,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   plek="stop"
                   accent={C.warm}
                   beantwoord={stopVraag.beantwoord}
+                  path={path}
+                  naam={naamloos ? null : player}
+                  onOefenStap={(idx) => { setStopVraag(null); setStopBevestigd(false); goToStep(idx); }}
                   onKlaar={() => schedule(() => { if (onHome) onHome(); }, 1200)}
                 />
                 <button
@@ -2211,7 +2214,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
             {/* 14 okt 2026: "Hoe was dit deel?" — twee tikken, gaat als event pad_feedback naar de db.
                 Niet bij nieuwkomerpaden (onvertaald). */}
-            {!path.steunTeksten && <PadFeedback pathId={pathId} stepIdx={stepIdx} plek="deel" accent={C.warm} />}
+            {!path.steunTeksten && <PadFeedback pathId={pathId} stepIdx={stepIdx} plek="deel" accent={C.warm}
+              path={path} naam={naamloos ? null : player} onOefenStap={(idx) => goToStep(idx)} />}
 
             {/* Stof begrepen?-eindblok (les van Leersnel) — 3 kaarten met
                 eyebrow-tags ipv 3 stacked buttons. Visuele rolverdeling. */}

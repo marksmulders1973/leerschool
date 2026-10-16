@@ -14,6 +14,8 @@
 // onKlaar wordt aangeroepen na de tweede tik.
 import { useState } from "react";
 import { track } from "../../utils.js";
+import Uitdaging from "./Uitdaging.jsx";
+import { bouwTreden } from "./uitdagingLadder.js";
 
 // Mark 15 okt 2026: "makkelijk is niet iets waar ik iets aan heb" — makkelijk kan
 // fijn óf saai betekenen. Daarom "te makkelijk / precies goed / te moeilijk" (nieuwe
@@ -46,9 +48,13 @@ const WENSEN_PER_NIVEAU = {
 
 const sleutel = (pathId, stepIdx, plek) => `lk_padfb:${plek}:${pathId}:${stepIdx ?? "pad"}`;
 
-export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", accent = "#ffd54f", beantwoord, onKlaar }) {
+// 16 okt 2026 (Mark: "als iemand te makkelijk zegt, direct uitdagen"): met `path` erbij opent
+// "Te makkelijk" meteen de uitdagingsladder (Uitdaging.jsx) in plaats van de tweede vraag.
+// Geen volgend deel met een losse vraag → gewoon de tweede vraag zoals voorheen.
+export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", accent = "#ffd54f", beantwoord, onKlaar, path = null, naam = null, onOefenStap = null }) {
   const [niveau, setNiveau] = useState(null);
   const [wens, setWens] = useState(null);
+  const [treden, setTreden] = useState(null);
   const [verborgen, setVerborgen] = useState(() => {
     try { return localStorage.getItem(sleutel(pathId, stepIdx, plek)) === "1"; } catch { return false; }
   });
@@ -57,7 +63,14 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
   const meld = (velden) => {
     try { track("pad_feedback", { pad: pathId, stap: stepIdx, plek, ...(beantwoord != null ? { beantwoord } : {}), ...velden }); } catch { /* meting mag nooit het scherm breken */ }
   };
-  const kiesNiveau = (k) => { setNiveau(k); meld({ niveau: k }); };
+  const kiesNiveau = (k) => {
+    setNiveau(k); meld({ niveau: k });
+    if (k !== "te-makkelijk" || !path) return;
+    const t = bouwTreden(path, stepIdx);
+    if (!t.length) return;
+    try { localStorage.setItem(sleutel(pathId, stepIdx, plek), "1"); } catch { /* */ }
+    setTreden(t);
+  };
   const kiesWens = (k) => {
     setWens(k); meld({ niveau, wens: k });
     try { localStorage.setItem(sleutel(pathId, stepIdx, plek), "1"); } catch { /* */ }
@@ -73,7 +86,10 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
 
   return (
     <div style={{ marginTop: 14, padding: "12px 14px", textAlign: "left", borderRadius: 12, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)" }}>
-      {wens ? (
+      {treden && !wens ? (
+        <Uitdaging pathId={pathId} plek={plek} vanafStap={stepIdx} treden={treden} naam={naam} accent={accent}
+          onOefenStap={onOefenStap} onKlaar={() => { setWens("uitdaging"); if (onKlaar) onKlaar(); }} />
+      ) : wens ? (
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.85)" }}>
           Dank je. Hiermee maken we de app beter.
         </div>
