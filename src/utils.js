@@ -51,6 +51,22 @@ function _deviceId() {
   } catch { return null; }
 }
 
+// Groep/klas van wie er oefent (Mark 16 okt 2026: "leeftijd/groep koppelen aan de te
+// makkelijk/moeilijk-score, dan weten we wat gemiddeld je juiste norm is"). App.jsx zet dit
+// bij elke profielwissel; track() hangt het als `kind_groep` aan élk event ("groep6",
+// "klas2"). Geen persoonsgegeven: alleen het leerjaar.
+let _kindGroep = null;
+export function maakKindGroep(level, schoolType = "") {
+  const s = String(level || "").trim().toLowerCase();
+  if (!s) return null;
+  const m = s.match(/^(groep|klas)\s*(\d{1,2})/);
+  if (m) return `${m[1]}${m[2]}`;
+  const g = s.match(/^\d{1,2}$/)?.[0];
+  if (!g) return null;
+  return schoolType ? `klas${g}` : `groep${g}`;
+}
+export function zetKindGroep(level, schoolType = "") { _kindGroep = maakKindGroep(level, schoolType); }
+
 function _cleanProps(p) {
   if (!p || typeof p !== "object") return null;
   const out = {};
@@ -145,6 +161,7 @@ export function track(event, params = {}) {
     const cleaned = _cleanProps({ ..._campaignParams(), ...params }) || {};
     const uid = _deviceId();
     if (uid) cleaned.uid = uid;
+    if (_kindGroep && cleaned.kind_groep == null) cleaned.kind_groep = _kindGroep;
     // Bundle-versie op élk event (9 aug): oude gecachte PWA-tabbladen sturen
     // events uit verouderde code (het quiz_id-raadsel van 7 aug) — met dit
     // stempel is "welke bundle stuurde dit?" voortaan één query.

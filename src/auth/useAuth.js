@@ -4,6 +4,7 @@ import { ensureSession } from "../auth.js";
 import { signInWithGoogleIdToken } from "./googleSignIn.js";
 import { initDailyGoalSync, stopDailyGoalSync } from "../shared/dailyGoal.js";
 import { kindWisselActief, TERUG_NAAR_OUDER_KEY } from "../shared/koppeling.js";
+import { zetKindGroep } from "../utils.js";
 
 // Auth-state + bootstrap. Élke bezoeker krijgt een sessie (anonymous sign-in
 // als nog geen Google-login), zodat RLS strikt op user_id kan en geen RLS-fails
@@ -21,6 +22,9 @@ export function useAuth() {
   const [streak, setStreak] = useState(0);
   const [subscription, setSubscription] = useState({ tier: "free" });
   const [schoolLogoUrl, setSchoolLogoUrl] = useState("");
+
+  // Groep/klas meesturen met elke meting (16 okt 2026, norm per groep) — zie utils.js.
+  useEffect(() => { zetKindGroep(userLevel, userSchoolType); }, [userLevel, userSchoolType]);
 
   useEffect(() => {
     let cancelled = false;
