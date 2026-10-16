@@ -174,3 +174,17 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 59 · Bibliocenter · info@bibliocenter.nl · OK · 01a13eaf-ed68-71c7-9f4f-3476f23f4a18
   - 60 · Bibliotheek Meerssen · info@bibliotheekmeerssen.nl · OK · 01a13eaf-f336-7b36-a123-73fda980662f
 - **15-10-2026, 10:31:21** — klaar: 59/59 verstuurd (OK-regels staan hierboven).
+
+- **16-10-2026, 08:00:01** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 61 · Bibliotheek AanZet · marcom@bibliotheekaanzet.nl · OK · 01a1434b-c28e-742f-8398-467508cd3ad5
+  - 62 · Bibliotheek Landgraaf-Beekdaelen · info@oblb.nl · OK · 01a1434b-c865-7248-b193-bf3b057e7b95
+  - 63 · Mijn Streekbibliotheek · info@mijnstreekbibliotheek.nl · OK · 01a1434b-ce22-7892-b898-a6888b19b10a
+  - 64 · Bibliotheek De Groene Venen · info@bibliotheekdegroenevenen.nl · OK · 01a1434b-d3d7-7ec2-8503-848ff19d2687
+  - 65 · Bibliotheek Hoorn · centrum@bibliotheekhoorn.nl · OK · 01a1434b-d99a-710d-a5e6-db70270a1356
+  - 66 · Bibliotheek Dommeldal · info@bibliotheekdommeldal.nl · OK · 01a1434b-df54-73e4-a43b-6096d92be6be
+  - 67 · Bibliotheek Maas en Peel · info@debibliotheekmaasenpeel.nl · OK · 01a1434b-e51f-7d1d-85a2-83c775d07828
+  - 68 · Bibliotheek Oosterschelde · goes@bibliotheekoosterschelde.nl · OK · 01a1434b-eaf3-79e8-b61f-a35c5f6da53c
+  - 69 · Noord Oost Brabantse Bibliotheken (NOBB) · contactoss@nobb.nl · OK · 01a1434b-f356-7c2d-9cb6-12a90adfe1c3
+  - 70 · SCHUNCK (bibliotheek Heerlen) · info@schunck.nl · OK · 01a1434b-f99a-7a5f-9942-f498178be99d
+  - 71 · Bibliotheek Hilversum · hulp@bibliotheekhilversum.nl · OK · 01a1434b-ff57-7929-9762-c19edd039335
+- **16-10-2026, 08:00:17** — klaar: 11/11 verstuurd (OK-regels staan hierboven).

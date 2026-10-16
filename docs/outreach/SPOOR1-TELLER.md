@@ -32,3 +32,4 @@ Automatische antwoorden (niet meegeteld): Theek 5 (15 okt).
 | Datum | Bibliotheken | Gezinsorganisaties | Kinderopvang |
 |---|---|---|---|
 | do 15 okt 18:00 | 60/71 gemaild · 1 antwoord · 0 echt (5 ruw = scanners) · 0 oefenend | 0/191 | 0/96 |
+| vr 16 okt 08:05 | 71/71 gemaild · 1 antwoord · 0 echt · 0 oefenend | 49/191 | 0/96 |
