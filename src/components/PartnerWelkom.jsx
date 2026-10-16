@@ -87,6 +87,7 @@ export const PARTNER_NAMEN = {
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",
   KINDERHULP2027: "Nationaal Fonds Kinderhulp",
+  THEEK52027: "Bibliotheek Theek 5", // 16 okt 2026: spoor 1, Margo Kerstes vroeg om een "bibliotheekinlog"
   KINDERZWERFBOEK2027: "Kinderzwerfboek", // 11 sep 2026: Kinderzwerfboekdag 7 okt, flyers per post
   MAATJE2027: "SchuldHulpMaatje", // 23 sep 2026: benaderd (Anne Meint Bouma), code klaargezet
   MAASTRICHT2027: "Voedselbank Maastricht",

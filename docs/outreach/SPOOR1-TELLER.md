@@ -24,8 +24,9 @@ Vorm in het dagrapport:
 | Datum | Soort | Organisatie | Wat | Vervolg |
 |---|---|---|---|---|
 | do 15 okt 13:35 | bibliotheek | Bibliotheken Noord Fryslân (info@bnfrl.nl) | klantenservice stuurt door naar de marketingafdeling | wachten; reageert marketing, dan code aanbieden |
+| vr 16 okt 12:00 | bibliotheek | Theek 5 Oosterhout (Margo Kerstes, educatie@theek5.nl) | "benieuwd hoe dit eruit ziet", vraagt bibliotheekinlog om met leesmediaconsulenten + Programmering te kijken | ✅ 16 okt beantwoord (Mark "stuur maar"): code THEEK52027 + uitleg; flyer met logo aangeboden → wachten |
 
-Automatische antwoorden (niet meegeteld): Theek 5 (15 okt).
+Automatische antwoorden (niet meegeteld): Theek 5 (15 okt), Bibliotheek De Lage Beek / Suzan Mulder (16 okt, vakantie tot 26 okt).
 
 ## Stand
 
