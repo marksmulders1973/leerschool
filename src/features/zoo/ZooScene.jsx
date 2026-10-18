@@ -1802,7 +1802,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <WandelStopWachter doel={wandelDoel} playerPos={playerPos} onBereikt={onWandelBereikt} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
-        <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />
+        {!gameModus && <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />}
         {/* Ingang-poort + gele/blauwe "Kies je kant"-wegwijzer verwijderd (Mark
             23 aug: "het begin is veel te druk"). De entree is nu rustig. */}
         {/* Toegangslaan naar het starter-plein — nu zwart asfalt (Mark 23 aug:
@@ -1833,7 +1833,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
             in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
-        {buddyId && !firstPerson && rideIdx == null && (
+        {/* 🕵️ Mark 18 okt 2026: tijdens "Wie is de bedrieger?" alleen wie meedoet (bots + medespelers) — geen maatje, bezoekers of taferelen. */}
+        {buddyId && !firstPerson && rideIdx == null && !gameModus && (
           <Suspense fallback={null}>
             <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} onBubbleTap={onLeermoment} />
           </Suspense>
@@ -1870,7 +1871,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit && !bergRit} onGids={onGidsMoment} hierRef={hierRef} factsRef={factsRef} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
         <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit && !bergRit} onDoor={onPoortDoor} />
-        <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />
+        {!gameModus && <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />}
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />
