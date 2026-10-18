@@ -259,7 +259,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     const uitKamer = !!(auto && auto.rollen);
     const nBots = auto ? Math.max(uitKamer ? 0 : 1, Math.min(auto.nBots ?? 5, MAX_SPELERS - 1 - extra.length)) : Math.max(0, Math.min(Math.max(1, 5 - extra.length), MAX_SPELERS - 1 - extra.length));
     const rk = auto ? (uitKamer ? null : auto.rol) : (rolKeuze === "random" ? null : rolKeuze);
-    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rk, extraSpelers: extra, nImposters: auto ? 1 : nImp, vak, groep });
+    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rk, extraSpelers: extra, nImposters: auto ? (auto.nImp || 1) : nImp, vak, groep });
     if (uitKamer) {
       const rolVan = {}; const mijnK = kamerSpelerId();
       if (auto.rollen[mijnK]) rolVan[mijnId] = auto.rollen[mijnK];
@@ -273,7 +273,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     setN((n) => n + 1);
   };
   // 🕵️ Uit de witte kamer: geen lobby, meteen spelen met de geloot rol.
-  useEffect(() => { if (autoStart && !autoStart.rollen && host && stRef.current && stRef.current.fase !== "spel") { setRolKeuze(autoStart.rol); setNImp(1); startSpel(autoStart); } }, []); // eslint-disable-line
+  useEffect(() => { if (autoStart && !autoStart.rollen && host && stRef.current && stRef.current.fase !== "spel") { setRolKeuze(autoStart.rol); setNImp(autoStart.nImp || 1); startSpel(autoStart); } }, []); // eslint-disable-line
   // 🕵️ Uit de kamer mét vrienden: eerst wachten tot de gasten in dit park zijn aangemeld (of 15 s), dan starten met de geloot rollen.
   const kamerGestart = useRef(false);
   useEffect(() => {

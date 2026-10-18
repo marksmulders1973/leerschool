@@ -80,12 +80,14 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
   };
 }
 
-/** 🕵️ Rollen uit de Bedrieger-kamer (29 sep 2026): per speler-id een rol; de rest bouwer. Won een bot de
- *  loting → één willekeurige bot wordt bedrieger. Nooit nul bedriegers. Taken-totaal opnieuw uitrekenen. */
-export function zetRollen(st, rolVan = {}, botBedrieger = false) {
+/** 🕵️ Rollen uit de Bedrieger-kamer (29 sep 2026): per speler-id een rol; de rest bouwer. Wonnen er bots in
+ *  de loting → zoveel willekeurige bots worden bedrieger (18 okt 2026: aantal instelbaar; `true` = 1, oud formaat).
+ *  Nooit nul bedriegers. Taken-totaal opnieuw uitrekenen. */
+export function zetRollen(st, rolVan = {}, botBedriegers = 0) {
   for (const s of st.spelers) s.rol = (!s.bot && rolVan[s.id]) || "bouwer";
   const bots = st.spelers.filter((s) => s.bot);
-  if (botBedrieger && bots.length) bots[Math.floor(Math.random() * bots.length)].rol = "imposter";
+  const nBot = botBedriegers === true ? 1 : Math.max(0, Math.floor(Number(botBedriegers) || 0));
+  bots.slice().sort(() => Math.random() - 0.5).slice(0, nBot).forEach((b) => { b.rol = "imposter"; });
   if (!st.spelers.some((s) => s.rol === "imposter")) { const kand = bots.length ? bots : st.spelers; kand[Math.floor(Math.random() * kand.length)].rol = "imposter"; }
   st.nImp = st.spelers.filter((s) => s.rol === "imposter").length;
   st.takenTotaal = st.spelers.filter((s) => s.rol === "bouwer").length * TAKEN_PER_BOUWER;
@@ -224,7 +226,7 @@ export function sluitVergadering(st) {
   if (!top || gelijk) { uitkomst = { uitgestemd: null, tekst: "Geen meerderheid — niemand uitgestemd." }; }
   else {
     const u = speler(st, top); u.uitgestemd = true; zetAf(st, u, `🪑 ${u.naam} ${u.naam === "Jij" ? "bent" : "is"} uitgestemd en kijkt mee vanuit de zeppelin`);
-    if (u.rol === "imposter") uitkomst = { uitgestemd: u, imposter: true, tekst: `${u.naam} was de bedrieger!` };
+    if (u.rol === "imposter") uitkomst = { uitgestemd: u, imposter: true, tekst: `${u.naam} was ${(st.nImp || 1) > 1 ? "een" : "de"} bedrieger!` };
     else { st.fouteStemrondes += 1; uitkomst = { uitgestemd: u, imposter: false, tekst: `${u.naam} was géén bedrieger…` }; }
   }
   st.vergadering = { ...st.vergadering, uitkomst, telling };
@@ -239,7 +241,7 @@ export function checkEinde(st) {
   if (st.fase === "einde") return st.uitkomst;
   const impActief = imposters(st).filter((s) => !s.uitgestemd).length;
   let u = null;
-  if (impActief === 0) u = { gewonnen: "bouwers", reden: "De bedrieger is uitgestemd!" };
+  if (impActief === 0) u = { gewonnen: "bouwers", reden: (st.nImp || 1) > 1 ? "Alle bedriegers zijn uitgestemd!" : "De bedrieger is uitgestemd!" };
   else if (st.takenKlaar >= st.takenTotaal) u = { gewonnen: "bouwers", reden: "Alle taken zijn klaar!" };
   else if (st.fouteStemrondes >= 2) u = { gewonnen: "imposters", reden: "Twee keer de verkeerde uitgestemd…" };
   else if (st.spelTijd >= SPEL_DUUR) u = { gewonnen: "imposters", reden: "De tijd is om!" };
