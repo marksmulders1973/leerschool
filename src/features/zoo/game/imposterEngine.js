@@ -10,7 +10,8 @@ export const TIK_AFSTAND = 3.5;        // 15 sep 2026: was 2.5 — je moest er p
 export const OGEN_AFSTAND = 5;         // iemand anders zo dichtbij = te veel ogen om te tikken (was 8: bij een post stond altijd wel iemand)
 export const TIK_MARGE_GAST = 1.5;     // gasten (gedeeld park): hun positie loopt bij de spelleider tot ~1,5 m achter
 export const HINT_AFSTAND = 10;        // binnen deze afstand krijgt de bedrieger een hint (loop dichterbij / iemand kijkt)
-export const TAAK_AFSTAND = 3.2;       // zo dicht bij een post = taak doen mag
+export const TAAK_AFSTAND = 4.5;       // zo dicht bij een attractie = repareren mag (18 okt: 3.2 → 4.5, de attracties zijn groter dan de oude bordjes)
+export const HERSTEL_S = 20;           // zo lang blijft een gerepareerde attractie heel, daarna gaat hij weer kapot
 export const VERGADERING_S = 20;
 export const AUTO_VERGADERING_S = 120;
 export const MAX_VERGADERINGEN = 2;    // per echte speler
@@ -24,17 +25,22 @@ const rnd = (a, b) => a + Math.random() * (b - a);
 const dist = (a, b) => Math.hypot(a.x - b.x, a.z - b.z);
 const kies = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-/** 6 taakposten in een ring rond het parkmidden */
+/** 6 kapotte attracties in een ring rond het parkmidden (Mark 18 okt 2026: "de draaimolen is kapot, dan moet je
+ *  een som maken en dan wordt hij met een animatie gefixt"). Was: 6 gele taakbordjes. `soort` = welk 3D-model. */
+const ATTRACTIES = [
+  { naam: "Draaimolen", soort: "draaimolen", emoji: "🎠" }, { naam: "Reuzenrad", soort: "reuzenrad", emoji: "🎡" },
+  { naam: "Zweefmolen", soort: "zweefmolen", emoji: "🎢" }, { naam: "Theekopjes", soort: "draaimolen", emoji: "☕" },
+  { naam: "Kinderrad", soort: "reuzenrad", emoji: "🎡" }, { naam: "Schommelmolen", soort: "zweefmolen", emoji: "🎢" },
+];
 export function maakStations(r = 32, n = 6, vrij = null) {
   const uit = [];
-  const namen = ["Rekenpost", "Taalpost", "Leespost", "Sompost", "Woordpost", "Weetpost"];
-  const emoji = ["🔢", "✏️", "📖", "➕", "🔤", "💡"];
   for (let i = 0; i < n; i++) {
     const hoek = (i / n) * Math.PI * 2 + 0.3;
     let x = Math.cos(hoek) * r, z = Math.sin(hoek) * r;
     // een vrije plek zoeken als er iets staat
     for (let k = 0; k < 12 && vrij && !vrij(x, z); k++) { x += Math.cos(hoek + k) * 2.2; z += Math.sin(hoek + k) * 2.2; }
-    uit.push({ id: `post${i}`, naam: namen[i % namen.length], emoji: emoji[i % emoji.length], x, z });
+    const a = ATTRACTIES[i % ATTRACTIES.length];
+    uit.push({ id: `post${i}`, naam: a.naam, soort: a.soort, emoji: a.emoji, kleur: i, x, z, kapot: true, gemaaktOp: null, gemaaktDoor: null });
   }
   return uit;
 }
@@ -174,7 +180,7 @@ export function dichtstbijStation(st, p) {
   return best && bd <= TAAK_AFSTAND ? best : null;
 }
 export function magTaak(st, sp, station) {
-  return st.fase === "spel" && !isAf(sp) && sp.bevroren <= 0 && !!station && sp.laatstePost !== station.id;
+  return st.fase === "spel" && !isAf(sp) && sp.bevroren <= 0 && !!station && station.kapot !== false && sp.laatstePost !== station.id;
 }
 /** taak afgerond (na de vragen): goed = alle vragen goed genoeg */
 export function taakKlaar(st, spId, stationId, goedAantal, totaal) {
@@ -182,10 +188,15 @@ export function taakKlaar(st, spId, stationId, goedAantal, totaal) {
   sp.punten += goedAantal * PUNT_GOED;
   sp.laatstePost = stationId;
   sp.laatstePostGelukt = goedAantal >= Math.ceil(totaal / 2);
+  const stn = (st.stations || []).find((x) => x.id === stationId);
   if (goedAantal >= Math.ceil(totaal / 2)) {
-    if (sp.rol === "bouwer") { sp.taken += 1; st.takenKlaar = Math.min(st.takenTotaal, st.takenKlaar + 1); meld(st, `✅ ${sp.naam} deed een taak`); }
-    else meld(st, `✅ ${sp.naam} deed een taak`);
-  } else meld(st, `❌ ${sp.naam}: taak niet gelukt`);
+    // Alleen een bouwer repareert echt; een bedrieger doet alsof (de attractie blijft kapot — een spoor voor oplettende bouwers).
+    if (sp.rol === "bouwer" && stn && stn.kapot !== false) {
+      sp.taken += 1; st.takenKlaar = Math.min(st.takenTotaal, st.takenKlaar + 1);
+      stn.kapot = false; stn.gemaaktOp = st.spelTijd; stn.gemaaktDoor = sp.naam;
+      meld(st, `🔧 ${sp.naam} repareerde de ${stn.naam}`);
+    }
+  } else meld(st, `❌ ${sp.naam}: reparatie niet gelukt`);
   checkEinde(st);
 }
 
@@ -264,6 +275,7 @@ export function tick(st, dt, spelerPos, vrijPlek = null, posities = null) {
   if (st.fase === "vergadering") { st.vergadering.t += dt; if (st.vergadering.t >= VERGADERING_S) sluitVergadering(st); return; }
   st.spelTijd += dt; st.sindsVergadering += dt;
   for (const s of st.spelers) if (s.bevroren > 0) s.bevroren = Math.max(0, s.bevroren - dt);
+  for (const stn of st.stations || []) if (stn.kapot === false && st.spelTijd - (stn.gemaaktOp || 0) >= HERSTEL_S) { stn.kapot = true; meld(st, `💥 De ${stn.naam} is weer kapot!`); }
   for (const b of st.spelers) {
     if (!b.bot || isAf(b)) { if (b.bot) b.moving = false; continue; }
     if (b.bevroren > 0) { b.moving = false; continue; }
@@ -273,7 +285,15 @@ export function tick(st, dt, spelerPos, vrijPlek = null, posities = null) {
       if (doel) { tik(st, b.id, doel.id); b.doel = kies(st.stations); b.bezig = 0; continue; }
     }
     if (b.bezig > 0) { b.bezig -= dt; b.moving = false; if (b.bezig <= 0) { const stn = st.stations.find((s) => s.id === b.laatstePost); if (stn) taakKlaar(st, b.id, stn.id, Math.random() < 0.8 ? 3 : 1, 3); b.doel = null; } continue; }
-    if (!b.doel) { const kandidaten = st.stations.filter((s) => s.id !== b.laatstePost); b.doel = kies(kandidaten); b.doelOffset = { x: rnd(-1.5, 1.5), z: rnd(-1.5, 1.5) }; }
+    // een bouwer-bot die onderweg is naar een attractie die net door een ander is gemaakt: andere kiezen
+    if (b.doel && b.rol === "bouwer" && b.doel.kapot === false) b.doel = null;
+    if (!b.doel) {
+      const overig = st.stations.filter((s) => s.id !== b.laatstePost);
+      const kapot = overig.filter((s) => s.kapot !== false);
+      b.doel = kies(b.rol === "bouwer" && kapot.length ? kapot : overig);
+      // naast de attractie gaan staan (rand van het model), niet erin
+      const h = Math.random() * Math.PI * 2; b.doelOffset = { x: Math.cos(h) * 3.2, z: Math.sin(h) * 3.2 };
+    }
     const dx = b.doel.x + (b.doelOffset?.x || 0) - b.x, dz = b.doel.z + (b.doelOffset?.z || 0) - b.z, d = Math.hypot(dx, dz);
     if (d < 1.2) { b.laatstePost = b.doel.id; b.bezig = rnd(8, 15); b.moving = false; continue; }
     const stap = Math.min(d, BOT_SNELHEID * dt);

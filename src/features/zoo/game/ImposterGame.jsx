@@ -11,10 +11,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
+import { Color, MeshStandardMaterial } from "three";
 import CharacterModel from "../CharacterModel";
 import { zepPositie, zepCamera } from "./Zeppelin.jsx";
 import { bouwStartVragen } from "../../onboarding/startKwartier.js";
-import { bouwGameVragen, VAKKEN, GROEPEN, groepLabel } from "./vragenBron.js";
+import { bouwGameVragen, maakLotingSom, VAKKEN, GROEPEN, groepLabel } from "./vragenBron.js";
 import { haalKlassement, bewaarScores } from "../parkRoom.js";
 import { kamerSpelerId } from "./kamerNet.js";
 import { track } from "../../../utils.js";
@@ -67,15 +68,90 @@ function Bot({ sp, stRef, heightRef, soepel }) {
   );
 }
 
-function Station({ s, heightRef, gedaan }) {
+// 🎠 Kapotte attractie (Mark 18 okt 2026): scheef, grijs, rook en vonken. Een bouwer maakt de som → de attractie
+// komt rechtop, krijgt zijn kleur terug, confetti, en gaat draaien. Na HERSTEL_S seconden weer kapot (engine).
+const ATTR_KLEUREN = [["#e2574c", "#ffd166"], ["#3b82f6", "#f8fafc"], ["#22c55e", "#fde047"], ["#ec4899", "#ffffff"], ["#a855f7", "#fde68a"], ["#f97316", "#e0f2fe"]];
+const CONFETTI_KLEUREN = ["#ef4444", "#3b82f6", "#22c55e", "#f59e0b", "#ec4899", "#a855f7"];
+function Attractie({ s, heightRef }) {
   const y = heightRef?.current ? heightRef.current(s.x, s.z) : 0;
+  const romp = useRef(), draai = useRef(), confetti = useRef(), rook = useRef(), vonk = useRef();
+  const kapotNu = s.kapot !== false;
+  const anim = useRef({ kapotVorig: kapotNu, sinds: 99, tilt: kapotNu ? 0.28 : 0, hoek: 0, kleur: kapotNu ? 0 : 1 });
+  const [stand, setStand] = useState(kapotNu ? "kapot" : "heel");
+  const [c1, c2] = ATTR_KLEUREN[(s.kleur || 0) % ATTR_KLEUREN.length];
+  const mats = useMemo(() => ({ a: new MeshStandardMaterial({ color: c1, roughness: 0.6 }), b: new MeshStandardMaterial({ color: c2, roughness: 0.6 }), paal: new MeshStandardMaterial({ color: "#cfd4da", metalness: 0.4, roughness: 0.5 }) }), [c1, c2]);
+  const kleuren = useMemo(() => ({ a: new Color(c1), b: new Color(c2), grijs: new Color("#8a8f98") }), [c1, c2]);
+  useEffect(() => () => { mats.a.dispose(); mats.b.dispose(); mats.paal.dispose(); }, [mats]);
+  const stukjes = useMemo(() => Array.from({ length: 16 }, (_, i) => ({ hoek: (i / 16) * Math.PI * 2, v: 2.5 + Math.random() * 3, op: 5 + Math.random() * 3 })), []);
+  useFrame((three, dtRaw) => {
+    const dt = Math.min(dtRaw, 0.05), a = anim.current, kapot = s.kapot !== false;
+    if (a.kapotVorig && !kapot) a.sinds = 0;   // net gerepareerd → animatie start
+    a.kapotVorig = kapot; a.sinds += dt;
+    a.tilt += ((kapot ? 0.28 : 0) - a.tilt) * Math.min(1, dt * (kapot ? 2 : 5));
+    const wip = !kapot && a.sinds < 1.2 ? Math.abs(Math.sin(a.sinds * 10)) * 0.25 * (1.2 - a.sinds) : 0;
+    if (romp.current) { romp.current.rotation.z = a.tilt; romp.current.position.y = wip; }
+    a.kleur += ((kapot ? 0 : 1) - a.kleur) * Math.min(1, dt * 3);
+    mats.a.color.copy(kleuren.grijs).lerp(kleuren.a, a.kleur); mats.b.color.copy(kleuren.grijs).lerp(kleuren.b, a.kleur);
+    const snel = kapot ? 0 : Math.min(1, a.sinds / 1.5) * (s.soort === "reuzenrad" ? 0.5 : 1.2);
+    a.hoek += snel * dt;
+    if (draai.current) { if (s.soort === "reuzenrad") draai.current.rotation.z = a.hoek; else draai.current.rotation.y = a.hoek; }
+    const t0 = three.clock.elapsedTime;
+    if (rook.current) { rook.current.visible = kapot; if (kapot) rook.current.children.forEach((m, i) => { const t = (t0 * 0.5 + i / 4) % 1; m.position.set(Math.sin(i * 2.1) * 0.4, 3.6 + t * 2.4, Math.cos(i * 2.1) * 0.4); m.scale.setScalar(0.35 + t * 0.8); m.material.opacity = 0.5 * (1 - t); }); }
+    if (vonk.current) vonk.current.visible = kapot && Math.sin(t0 * 23) > 0.55;
+    if (confetti.current) { const t = a.sinds, zien = !kapot && t < 1.6; confetti.current.visible = zien; if (zien) confetti.current.children.forEach((m, i) => { const p = stukjes[i]; m.position.set(Math.cos(p.hoek) * p.v * t, 2.5 + p.op * t - 6 * t * t, Math.sin(p.hoek) * p.v * t); m.rotation.set(t * 8 + i, t * 6, 0); }); }
+    const nieuw = kapot ? "kapot" : a.sinds < 4 ? "net" : "heel";
+    if (nieuw !== stand) setStand(nieuw);
+  });
+  const ringKleur = stand === "kapot" ? "#e2574c" : "#2e9e4f";
   return (
     <group position={[s.x, y, s.z]}>
-      <mesh position={[0, 1.1, 0]} castShadow><cylinderGeometry args={[0.09, 0.11, 2.2, 8]} /><meshStandardMaterial color="#5a4632" roughness={0.9} /></mesh>
-      <mesh position={[0, 2.35, 0]} castShadow><boxGeometry args={[1.6, 0.9, 0.08]} /><meshStandardMaterial color={gedaan ? "#2e9e4f" : "#f2b134"} roughness={0.7} /></mesh>
-      <mesh position={[0, 0.05, 0]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[2.6, 3.1, 32]} /><meshStandardMaterial color={gedaan ? "#2e9e4f" : "#f2b134"} transparent opacity={0.55} /></mesh>
-      <Html position={[0, 2.35, 0.06]} center distanceFactor={14} zIndexRange={[4, 0]} style={{ pointerEvents: "none" }}>
-        <div style={{ font: "900 15px system-ui", color: "#1c2840", whiteSpace: "nowrap" }}>{s.emoji} {s.naam}{gedaan ? " ✓" : ""}</div>
+      <group ref={romp}>
+        {s.soort === "reuzenrad" ? (
+          <>
+            {[-1, 1].map((k) => [-0.45, 0.45].map((zz) => <mesh key={`${k}${zz}`} material={mats.paal} position={[k * 0.75, 1.6, zz]} rotation={[0, 0, k * 0.42]}><boxGeometry args={[0.16, 3.5, 0.16]} /></mesh>))}
+            <group ref={draai} position={[0, 3.2, 0]}>
+              <mesh material={mats.a}><torusGeometry args={[2.3, 0.09, 8, 40]} /></mesh>
+              {[0, 1, 2].map((i) => <mesh key={i} material={mats.paal} rotation={[0, 0, (i * Math.PI) / 3]}><boxGeometry args={[4.6, 0.07, 0.07]} /></mesh>)}
+              {[0, 1, 2, 3, 4, 5].map((i) => <mesh key={"c" + i} material={mats.b} position={[Math.cos((i * Math.PI) / 3) * 2.3, Math.sin((i * Math.PI) / 3) * 2.3, 0]}><boxGeometry args={[0.55, 0.5, 0.55]} /></mesh>)}
+            </group>
+          </>
+        ) : s.soort === "zweefmolen" ? (
+          <>
+            <mesh material={mats.paal} position={[0, 2.1, 0]}><cylinderGeometry args={[0.2, 0.28, 4.2, 10]} /></mesh>
+            <group ref={draai} position={[0, 4.2, 0]}>
+              <mesh material={mats.a}><coneGeometry args={[2.1, 0.7, 16]} /></mesh>
+              {[0, 1, 2, 3, 4, 5].map((i) => { const h = (i * Math.PI) / 3; return (
+                <group key={i} position={[Math.cos(h) * 1.8, 0, Math.sin(h) * 1.8]}>
+                  <mesh material={mats.paal} position={[0, -0.8, 0]}><cylinderGeometry args={[0.025, 0.025, 1.6, 4]} /></mesh>
+                  <mesh material={mats.b} position={[0, -1.7, 0]}><boxGeometry args={[0.45, 0.2, 0.45]} /></mesh>
+                </group>); })}
+            </group>
+          </>
+        ) : (
+          <>
+            <mesh material={mats.paal} position={[0, 0.15, 0]}><cylinderGeometry args={[2.3, 2.4, 0.3, 24]} /></mesh>
+            <group ref={draai}>
+              <mesh material={mats.b} position={[0, 0.38, 0]}><cylinderGeometry args={[2.05, 2.05, 0.16, 24]} /></mesh>
+              <mesh material={mats.paal} position={[0, 1.9, 0]}><cylinderGeometry args={[0.15, 0.15, 3.1, 8]} /></mesh>
+              <mesh material={mats.a} position={[0, 3.75, 0]}><coneGeometry args={[2.4, 1.1, 16]} /></mesh>
+              {[0, 1, 2, 3].map((i) => { const h = (i * Math.PI) / 2; return (
+                <group key={i} position={[Math.cos(h) * 1.4, 0, Math.sin(h) * 1.4]} rotation={[0, -h, 0]}>
+                  <mesh material={mats.paal} position={[0, 1.95, 0]}><cylinderGeometry args={[0.04, 0.04, 2.9, 4]} /></mesh>
+                  <mesh material={mats.a} position={[0, 1.15, 0]}><boxGeometry args={[0.28, 0.5, 0.8]} /></mesh>
+                  <mesh material={mats.b} position={[0, 1.45, 0.42]}><boxGeometry args={[0.2, 0.35, 0.22]} /></mesh>
+                </group>); })}
+            </group>
+          </>
+        )}
+      </group>
+      <group ref={rook}>{[0, 1, 2, 3].map((i) => <mesh key={i}><sphereGeometry args={[0.5, 8, 6]} /><meshStandardMaterial color="#555b63" transparent opacity={0.4} depthWrite={false} /></mesh>)}</group>
+      <group ref={vonk} position={[0.6, 2.4, 0.9]}>{[0, 1, 2].map((i) => <mesh key={i} position={[i * 0.25 - 0.25, i * 0.15, 0]}><sphereGeometry args={[0.09, 6, 4]} /><meshBasicMaterial color="#ffe14d" /></mesh>)}</group>
+      <group ref={confetti} visible={false}>{stukjes.map((_, i) => <mesh key={i}><boxGeometry args={[0.18, 0.18, 0.04]} /><meshBasicMaterial color={CONFETTI_KLEUREN[i % CONFETTI_KLEUREN.length]} /></mesh>)}</group>
+      <mesh position={[0, 0.05, 0]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[3.4, 3.9, 40]} /><meshStandardMaterial color={ringKleur} transparent opacity={0.55} /></mesh>
+      <Html position={[0, 5.4, 0]} center distanceFactor={14} zIndexRange={[4, 0]} style={{ pointerEvents: "none" }}>
+        <div style={{ font: "900 15px system-ui", whiteSpace: "nowrap", padding: "4px 12px", borderRadius: 999, boxShadow: "0 2px 8px rgba(0,0,0,.3)", background: stand === "kapot" ? "#b0332a" : stand === "net" ? "#1f7a3a" : "rgba(255,255,255,.92)", color: stand === "heel" ? "#1c2840" : "#fff" }}>
+          {stand === "kapot" ? `💥 ${s.naam} is kapot!` : stand === "net" ? `✅ Gemaakt${s.gemaaktDoor ? " door " + s.gemaaktDoor : ""}!` : `${s.emoji} ${s.naam} werkt`}
+        </div>
       </Html>
     </group>
   );
@@ -290,11 +366,18 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   const doelTik = st && mij && mij.rol === "imposter" ? actieveSpelers(st).find((s) => magTikken(st, mijMetPos, s)) : null;
   const tikInfo = st && mijMetPos && mijMetPos.rol === "imposter" ? tikStatus(st, mijMetPos) : null;
   const maten = st && mij && mij.rol === "imposter" ? st.spelers.filter((s) => s.rol === "imposter" && s.id !== mijnId).map((s) => s.naam) : [];
-  const openTaak = async () => {
-    if (!station || !mij || !magTaak(st, mij, station) || taak) return;
-    setTaak({ stationId: station.id, vragen: null, idx: 0, goed: 0, gekozen: null });
-    try { const v = await bouwGameVragen({ vak: st.vak, groep: st.groep, level, n: 3 }); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); }
+  // 🔧 Repareren = één som (Mark 18 okt 2026). Koos de spelleider een ander vak (bv. taal voor de klas), dan één vraag daaruit.
+  const somNiveau = () => (st.groep && st.groep !== "eigen" ? (st.groep === "vo" ? "8" : st.groep) : level);
+  const isSomVak = () => !st.vak || st.vak === "alles" || st.vak === "rekenen";
+  const laadTaakVraag = async (stationId) => {
+    setTaak({ stationId, vragen: isSomVak() ? [maakLotingSom(somNiveau())] : null, idx: 0, goed: 0, gekozen: null });
+    if (isSomVak()) return;
+    try { const v = await bouwGameVragen({ vak: st.vak, groep: st.groep, level, n: 1 }); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 1) } : t)); }
     catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); }
+  };
+  const openTaak = () => {
+    if (!station || !mij || !magTaak(st, mij, station) || taak) return;
+    laadTaakVraag(station.id);
   };
   const kiesOptie = (i) => {
     setTaak((t) => {
@@ -308,6 +391,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     setTaak((t) => {
       if (!t) return t;
       if (t.idx + 1 < t.vragen.length) return { ...t, idx: t.idx + 1, gekozen: null };
+      // fout bij een som: meteen een nieuwe som, de attractie blijft kapot tot het lukt
+      if (t.goed === 0 && isSomVak()) return { ...t, vragen: [maakLotingSom(somNiveau())], gekozen: null };
       if (host) taakKlaar(stRef.current, mijnId, t.stationId, t.goed, t.vragen.length);
       else { net.send({ t: "taak", stationId: t.stationId, goed: t.goed, totaal: t.vragen.length }); const m = speler(stRef.current, mijnId); if (m) { m.laatstePost = t.stationId; m.laatstePostGelukt = t.goed >= Math.ceil(t.vragen.length / 2); } }
       return null;
@@ -334,8 +419,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   // 🔧 test-haakje (Playwright)
   useEffect(() => {
     window.__imposter = {
-      st: () => stRef.current, host, mijnId,
-      taak: async (stationId) => { const sid = stationId || stRef.current.stations[0].id; setTaak({ stationId: sid, vragen: null, idx: 0, goed: 0, gekozen: null }); try { const v = await bouwGameVragen({ vak: stRef.current.vak, groep: stRef.current.groep, level, n: 3 }); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); } catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); } },
+      st: () => stRef.current, host, mijnId, pos: () => (playerRef?.current ? { x: playerRef.current.x, z: playerRef.current.z } : null),
+      taak: (stationId) => laadTaakVraag(stationId || stRef.current.stations[0].id),
       kies: (v, g, n) => { if (v) setVak(v); if (g) setGroep(g); if (n) setNImp(n); },
       winBouwers: () => { if (host && stRef.current) { stRef.current.takenKlaar = stRef.current.takenTotaal; setN((n) => n + 1); } },
       start: () => startSpel(),
@@ -375,7 +460,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
 
   return (
     <>
-      {(st.stations || []).map((s) => <Station key={s.id} s={s} heightRef={heightRef} gedaan={mij?.laatstePost === s.id && mij?.laatstePostGelukt !== false} />)}
+      {(st.stations || []).map((s) => <Attractie key={s.id} s={s} heightRef={heightRef} />)}
       {st.spelers.filter((s) => s.bot).map((sp) => <Bot key={sp.id} sp={sp} stRef={stRef} heightRef={heightRef} soepel={!host} />)}
 
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
@@ -466,7 +551,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
           <>
             {st.spelTijd < 8 && (
               <div style={{ position: "absolute", left: "50%", top: 70, transform: "translateX(-50%)", pointerEvents: "none", background: mij.rol === "imposter" ? "#b0332a" : "#1f7a3a", color: "#fff", borderRadius: 16, padding: "12px 18px", font: "900 20px system-ui", boxShadow: "0 8px 24px rgba(0,0,0,.4)", textAlign: "center" }}>
-                {mij.rol === "imposter" ? "🕵️ Jij bent de BEDRIEGER" : "🔧 Jij bent BOUWER"}<div style={{ font: "700 13px system-ui", opacity: .9 }}>{mij.rol === "imposter" ? `Doe alsof je taken doet. Loop naar een bouwer die alleen is — dan wordt de rode knop 👉 rechtsonder actief. Tik hem!${maten.length ? " Samen met " + maten.join(" en ") + "." : ""}` : "Doe taken bij de gele posten. Blijf bij elkaar: alleen ben je makkelijk te tikken."}</div>
+                {mij.rol === "imposter" ? "🕵️ Jij bent de BEDRIEGER" : "🔧 Jij bent BOUWER"}<div style={{ font: "700 13px system-ui", opacity: .9 }}>{mij.rol === "imposter" ? `Doe alsof je repareert (bij jou blijft de attractie kapot). Loop naar een bouwer die alleen is — dan wordt de rode knop 👉 rechtsonder actief. Tik hem!${maten.length ? " Samen met " + maten.join(" en ") + "." : ""}` : "Repareer de kapotte attracties: loop erheen en maak de som. Blijf bij elkaar: alleen ben je makkelijk te tikken."}</div>
               </div>
             )}
             <div style={{ position: "absolute", left: "50%", top: 54, transform: "translateX(-50%)", display: "flex", gap: 8, alignItems: "center", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 999, padding: "6px 12px", font: "800 13px system-ui", whiteSpace: "nowrap" }}>
@@ -497,8 +582,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               );
             })()}
             <div style={{ position: "absolute", left: "50%", bottom: "calc(86px + env(safe-area-inset-bottom))", transform: "translateX(-50%)", width: "min(94vw, 460px)", display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", pointerEvents: "auto" }}>
-              {station && magTaak(st, mij, station) && <button onClick={openTaak} style={KNOP}>{station.emoji} Taak doen</button>}
-              {station && !magTaak(st, mij, station) && mij.bevroren <= 0 && mij.laatstePost === station.id && <span style={{ ...KNOP_GRIJS, opacity: .8 }}>✓ Hier al gedaan — volgende post</span>}
+              {station && magTaak(st, mij, station) && <button onClick={openTaak} style={KNOP}>🔧 Repareer de {station.naam}</button>}
+              {station && !magTaak(st, mij, station) && mij.bevroren <= 0 && !isAf(mij) && <span style={{ ...KNOP_GRIJS, opacity: .8 }}>{station.kapot === false ? `✓ De ${station.naam} werkt — zoek een kapotte` : "Even een andere attractie proberen"}</span>}
               {mij.stemmen > 0 && mij.bevroren <= 0 && !isAf(mij) && <button onClick={roep} style={KNOP_ROOD}>🚨 Vergadering ({mij.stemmen})</button>}
               <button onClick={stop} style={{ ...KNOP_GRIJS, touchAction: "manipulation" }}>✖ Stop</button>
             </div>
@@ -512,7 +597,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                 const v = taak.vragen[taak.idx];
                 return (
                   <>
-                    <div style={{ font: "800 12px system-ui", letterSpacing: 1, color: "#6a3fd6" }}>TAAK · VRAAG {taak.idx + 1} VAN {taak.vragen.length} · minstens {Math.ceil(taak.vragen.length / 2)} goed = taak klaar</div>
+                    <div style={{ font: "800 12px system-ui", letterSpacing: 1, color: "#b0332a" }}>🔧 REPAREER DE {String((st.stations || []).find((x) => x.id === taak.stationId)?.naam || "attractie").toUpperCase()} · maak de som goed</div>
                     <div style={{ font: "800 17px/1.4 system-ui", margin: "6px 0 10px" }}>{schoon(v.q)}</div>
                     <div style={{ display: "grid", gap: 6 }}>
                       {v.options.map((o, i) => {
@@ -526,10 +611,11 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                         {taak.gekozen !== v.answer && v.explanation && <div style={{ font: "500 13.5px/1.45 system-ui", color: "#445", marginTop: 4 }}>{schoon(v.explanation).slice(0, 260)}</div>}
                         {taak.idx + 1 >= taak.vragen.length && (
                           <div style={{ marginTop: 8, font: "800 14px system-ui", color: taak.goed >= Math.ceil(taak.vragen.length / 2) ? "#146c43" : "#b42318" }}>
-                            {taak.goed >= Math.ceil(taak.vragen.length / 2) ? `✅ Taak gelukt: ${taak.goed} van ${taak.vragen.length} goed` : `❌ Taak niet gelukt: ${taak.goed} van ${taak.vragen.length} goed. Probeer een andere post.`}
+                            {taak.goed >= Math.ceil(taak.vragen.length / 2) ? "🔧 Goed zo! Kijk maar wat er gebeurt…" : isSomVak() ? "Nog niet gerepareerd. Probeer een nieuwe som!" : "Nog niet gerepareerd. Probeer een andere attractie."}
                           </div>
                         )}
-                        <button onClick={volgendeVraag} style={{ ...KNOP, marginTop: 10 }}>{taak.idx + 1 < taak.vragen.length ? "Volgende →" : "Taak afronden →"}</button>
+                        <button onClick={volgendeVraag} style={{ ...KNOP, marginTop: 10 }}>{taak.idx + 1 < taak.vragen.length ? "Volgende →" : taak.goed > 0 ? "🔧 Repareren!" : isSomVak() ? "🔁 Nieuwe som" : "Sluiten"}</button>
+                        {taak.goed === 0 && isSomVak() && <button onClick={() => setTaak(null)} style={{ ...KNOP_GRIJS, marginTop: 10, marginLeft: 8 }}>Later</button>}
                       </div>
                     )}
                   </>
