@@ -12,6 +12,7 @@ import { track } from "../../utils.js";
 import { claimKoppelcode, normaliseerKoppelcode } from "../../shared/koppelcode.js";
 import { koppelingVoor } from "../../shared/koppeling.js";
 import { codeUitUrl } from "./koppelcodes.js";
+import KoppelFeedback from "./KoppelFeedback.jsx";
 
 const F = {
   kop: { fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: "#fff", margin: 0 },
@@ -64,6 +65,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
   const [naam, setNaam] = useState(() => (userName || "").trim());
   const [bezig, setBezig] = useState(false);
   const [fout, setFout] = useState("");
+  const [foutCode, setFoutCode] = useState(null); // 18 okt: welke fout, voor de vraag 'wat ging er mis?'
   const [klaar, setKlaar] = useState(null); // { naam, vanWie, rol }
 
   const namen = (() => {
@@ -92,6 +94,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
       return;
     }
     try { track("koppelen_fout", { fout: r.fout }); } catch { /* */ }
+    if (r.fout !== "alGekoppeld") setFoutCode(r.fout);
     setFout(
       r.fout === "verlopen" ? "Deze code is al gebruikt of klopt niet. Vraag thuis om een nieuwe code (ouder-overzicht → Koppelcodes)."
         : r.fout === "alGekoppeld" ? `Je bent op dit toestel al gekoppeld, ${n}. Je hoeft niets meer te doen.`
@@ -126,6 +129,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                   {klaar.rol === "leraar" ? "Je juf of meester" : (klaar.vanWie || "Thuis")} kan nu meekijken en werk voor je klaarzetten. Kijk straks op je eigen pagina bij <strong style={{ color: "#ff9fb2" }}>💛 speciaal voor jou klaargezet</strong>.
                 </div>
                 <button type="button" onClick={onKlaar} style={{ ...F.primair(false), marginTop: 14 }}>Naar mijn pagina</button>
+                <KoppelFeedback route="kind-code" extra={{ rol: klaar.rol }} />
               </div>
             ) : (
               <>
@@ -171,6 +175,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                         {bezig ? "Even…" : "Koppel mij"}
                       </button>
                       {fout && <div role="alert" style={{ ...F.sub, color: "#ffab91", fontSize: 13, marginTop: 8 }} data-koppel-fout>{fout}</div>}
+                      {fout && foutCode && <KoppelFeedback route="kind-fout" extra={{ fout: foutCode }} />}
                     </Stap>
                   </div>
                 )}

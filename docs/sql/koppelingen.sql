@@ -75,3 +75,10 @@ where l.parent_user_id not in (select user_id from household_accounts);
 --   apparaat van de ouder) en events dragen geen link-id. topic_mastery heeft 0 rijen voor
 --   gekoppelde kinderen. Voorstel: link-id/kind-profiel meesturen met question_answered,
 --   dan kan stap 5 ("kind oefent na koppelen") en "komt terug" per gezin.
+
+-- 7) KOPPEL-FEEDBACK (v971, 18 okt 2026) — vraag na elke koppelpoging (KoppelFeedback.jsx)
+--    route: kind-code (gelukt) · kind-fout (mislukt, + fout) · gezinsstart (ouder, wizard klaar)
+select props->>'route' route, props->>'oordeel' oordeel, props->>'wens' wens, props->>'fout' fout,
+  count(*) keer, string_agg(nullif(props->>'tekst', ''), ' | ') teksten
+from events_mens where name = 'koppel_feedback' and created_at > now() - interval '28 days'
+group by 1, 2, 3, 4 order by 1, 5 desc;

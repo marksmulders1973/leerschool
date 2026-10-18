@@ -1,0 +1,23 @@
+// 18 okt 2026: vraag na een mislukte koppelpoging verschijnt en meldt koppel_feedback.
+import { chromium } from "playwright";
+const S = process.env.SHOTS || ".";
+const BASE = process.env.BASE || "http://localhost:4799";
+const b = await chromium.launch({ headless: true });
+const c = await b.newContext({ viewport: { width: 390, height: 844 } });
+const p = await c.newPage();
+const fouten = []; p.on("pageerror", (e) => { if (!/Unexpected token '<'/.test(String(e))) fouten.push(String(e).slice(0, 200)); });
+const events = []; p.on("request", (r) => { const d = r.postData() || ""; if (/koppel_feedback|koppelen_fout/.test(d)) events.push(d.match(/"name":"[a-z_]+"[^}]{0,160}/)?.[0] || d.slice(0, 160)); });
+await p.goto(BASE + "/koppelen?ic=1", { waitUntil: "networkidle" }); await p.waitForTimeout(1500);
+await p.fill("[data-koppel-code]", "ZZZ999"); await p.click("[data-koppel-verder]"); await p.waitForTimeout(400);
+await p.fill("[data-koppel-naam-invoer]", "Testkind"); await p.click("[data-koppel-knop]");
+await p.waitForSelector("[data-koppel-fout]", { timeout: 15000 });
+await p.waitForTimeout(600);
+console.log("fout:", await p.textContent("[data-koppel-fout]"));
+const blok = await p.$("[data-koppel-feedback='kind-fout']");
+console.log("vraagblok zichtbaar:", !!blok, blok ? (await blok.innerText()).replace(/\s+/g, " ") : "");
+await p.screenshot({ path: `${S}/koppelfb-1.png` });
+await p.click("text=Ik weet de code niet"); await p.waitForTimeout(1500);
+console.log("na tik:", (await p.textContent("[data-koppel-feedback]"))?.trim());
+console.log("events:", events);
+console.log("fouten:", fouten.length ? fouten : "geen");
+await b.close();

@@ -3,6 +3,7 @@ import supabase from "../../supabase.js";
 import { bewaarKoppeling } from "../../shared/koppeling.js";
 import { bewaarVoorkeur, standaardTot, VOORKEUR_VAKKEN, vakOptiesVoor } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
+import KoppelFeedback from "./KoppelFeedback.jsx";
 
 // 🏠 Gezinsstart (Mark 30 sep 2026): een ouder of verzorger zet in vier
 // stappen het gezin klaar. Verschijnt vanzelf bij een ingelogd account zonder
@@ -307,6 +308,7 @@ export default function Gezinsstart({ authUser, bestaandAantal = 0, bestaandeNam
           <div style={{ ...F.sub, marginTop: 8 }}>
             {weekrapportMoment} krijg je het weekrapport op <strong style={{ color: "rgba(255,255,255,0.85)" }}>{email || "je e-mailadres"}</strong>: kort en eerlijk hoe het ging.
           </div>
+          <KoppelFeedback route="gezinsstart" extra={{ kinderen: kinderen.length }} />
           {partnerSlot && (
             <div style={{ marginBottom: 12 }}>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginBottom: 6 }}>Leest een tweede ouder of verzorger mee? (kan ook later)</div>
