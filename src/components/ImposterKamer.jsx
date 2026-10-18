@@ -64,10 +64,56 @@ function Kamer() {
   );
 }
 
+// Waar elke bot nu staat (alle bots in de kamer), zodat ze niet door elkaar heen lopen.
+const BOT_POS = new Map();
+const BOT_AFSTAND = 0.9; // meter tussen twee bots
+
+// Kortste draai van hoek a naar b (radialen), stapje k (0..1).
+function draai(a, b, k) { const d = ((b - a + Math.PI * 3) % (Math.PI * 2)) - Math.PI; return a + d * Math.min(1, k); }
+
 // Een bot in de kamer: blokkig poppetje met naam. Kleurt goud als hij de som goed had.
-function Bot({ bot, x, z, hoek }) {
+// 🚶 Mark 18 okt 2026: in de lobby lopen de bots rond (rustig wandelen, af en toe stilstaan). Zodra het spel
+// begint, lopen ze vlot terug naar hun plek in de boog en kijken weer naar de muur.
+function Bot({ bot, x, z, hoek, lopen = false }) {
+  const g = useRef();
+  const st = useRef(null);
+  const doelRef = useRef({ x, z, hoek, lopen });
+  doelRef.current = { x, z, hoek, lopen };
+  useEffect(() => () => { BOT_POS.delete(bot.id); }, [bot.id]);
+  useFrame((_, dtRaw) => {
+    const el = g.current; if (!el) return;
+    const dt = Math.min(dtRaw, 0.05);
+    const s = st.current || (st.current = { x, z, yaw: hoek, doel: null, wacht: 0.5 + Math.random() * 2.5, t: Math.random() * 10, tempo: 1.1 + Math.random() * 0.6 });
+    const d0 = doelRef.current;
+    let tx = null, tz = null, snel = 6;
+    if (d0.lopen) {
+      snel = s.tempo;
+      if (s.wacht > 0) s.wacht -= dt;
+      else {
+        if (!s.doel) { const lim = KAMER / 2 - 1.5; s.doel = { x: (Math.random() * 2 - 1) * lim, z: (Math.random() * 2 - 1) * lim }; }
+        tx = s.doel.x; tz = s.doel.z;
+      }
+    } else { tx = d0.x; tz = d0.z; s.doel = null; s.wacht = 0; }
+    let beweegt = false;
+    if (tx != null) {
+      const dx = tx - s.x, dz = tz - s.z, d = Math.hypot(dx, dz);
+      const stap = Math.min(d, snel * dt);
+      const nx = s.x + (dx / (d || 1)) * stap, nz = s.z + (dz / (d || 1)) * stap;
+      // In de lobby: staat er een andere bot in de weg (en komen we dichterbij), dan even wachten en een andere kant op.
+      let botst = false;
+      if (d0.lopen) for (const [id, o] of BOT_POS) { if (id !== bot.id && Math.hypot(o.x - nx, o.z - nz) < BOT_AFSTAND && Math.hypot(o.x - nx, o.z - nz) < Math.hypot(o.x - s.x, o.z - s.z)) { botst = true; break; } }
+      if (botst) { s.doel = null; s.wacht = 0.4 + Math.random() * 1.2; }
+      else if (d > 0.05) { s.x = nx; s.z = nz; s.yaw = draai(s.yaw, Math.atan2(dx, dz), dt * 8); beweegt = true; }
+      else if (d0.lopen) { s.doel = null; s.wacht = 1 + Math.random() * 4; }
+    }
+    if (!d0.lopen && !beweegt) s.yaw = draai(s.yaw, d0.hoek, dt * 8);
+    s.t += dt;
+    BOT_POS.set(bot.id, { x: s.x, z: s.z });
+    el.position.set(s.x, beweegt ? Math.abs(Math.sin(s.t * 9)) * 0.07 : 0, s.z);
+    el.rotation.y = s.yaw;
+  });
   return (
-    <group position={[x, 0, z]} rotation={[0, hoek, 0]}>
+    <group ref={g} position={[x, 0, z]} rotation={[0, hoek, 0]}>
       <mesh position={[0, 0.55, 0]} castShadow><boxGeometry args={[0.55, 1.1, 0.35]} /><meshStandardMaterial color={bot.kleur} /></mesh>
       <mesh position={[0, 1.4, 0]}><boxGeometry args={[0.5, 0.5, 0.5]} /><meshStandardMaterial color="#f4d3b0" /></mesh>
       <mesh position={[-0.12, 1.45, 0.26]}><boxGeometry args={[0.08, 0.08, 0.02]} /><meshStandardMaterial color="#222" /></mesh>
@@ -382,7 +428,7 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
         <color attach="background" args={["#f4f4f4"]} />
         <Suspense fallback={null}>
           <Kamer />
-          {figuren.map((b, i) => { const hoek = ((i + 1) / (figuren.length + 1)) * Math.PI - Math.PI / 2; return <Bot key={b.id} bot={b} x={Math.sin(hoek) * 6} z={-Math.cos(hoek) * 6 - 1} hoek={Math.PI + hoek} />; })}
+          {figuren.map((b, i) => { const hoek = ((i + 1) / (figuren.length + 1)) * Math.PI - Math.PI / 2; return <Bot key={b.id} bot={b} x={Math.sin(hoek) * 6} z={-Math.cos(hoek) * 6 - 1} hoek={Math.PI + hoek} lopen={magLopen && String(b.id).startsWith("bot")} />; })}
           <Muurtekst {...(muur || {})} />
           <Speler toetsen={toetsen} touchLoop={touchLoop} touchKijk={touchKijk} mag={magLopen} />
           {!isTouch && magLopen && <PointerLockControls onLock={() => setGelockt(true)} onUnlock={() => setGelockt(false)} />}
