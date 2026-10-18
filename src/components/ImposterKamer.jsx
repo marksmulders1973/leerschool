@@ -11,7 +11,7 @@ import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { PointerLockControls, Html } from "@react-three/drei";
 import { CanvasTexture, RepeatWrapping, Vector3, Euler } from "three";
-import { bouwGameVragen } from "../features/zoo/game/vragenBron.js";
+import { bouwGameVragen, bouwLotingVraag } from "../features/zoo/game/vragenBron.js";
 import { track } from "../utils.js";
 import { verbindKamer, kamerSpelerId } from "../features/zoo/game/kamerNet.js";
 import { maakParkRoom } from "../features/zoo/parkRoom.js";
@@ -257,7 +257,8 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
     if (rolKamer !== "leider") return;
     setLaden(true);
     let v = null;
-    try { const vs = await bouwGameVragen({ vak: "alles", groep: "eigen", level: groep, n: 1 }); v = vs && vs[0]; } catch { /* */ }
+    try { v = await bouwLotingVraag(groep); } catch { /* */ }
+    if (!v) { try { const vs = await bouwGameVragen({ vak: "alles", groep: "eigen", level: groep, n: 1 }); v = vs && vs[0]; } catch { /* */ } }
     if (!v || !v.options) v = { q: "Wat is 7 × 8?", options: ["54", "56", "64", "48"], answer: 1 };
     setLaden(false);
     wis();

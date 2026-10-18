@@ -48,12 +48,39 @@ export function padenVoor(vak, groep) {
  */
 export async function bouwGameVragen({ vak = "alles", groep = "eigen", level = "6", n = 3 }) {
   const g = groep === "eigen" ? (String(level).match(/(\d)/) || [null, "6"])[1] : groep;
-  if (vak === "alles" || !vak) return (await bouwStartVragen(groep === "eigen" ? level : g, n)).slice(0, n);
+  // Vraag 1 van het start-kwartier is een vaste opwarmvraag: die overslaan, anders begon elke taak met dezelfde vraag (18 okt 2026).
+  if (vak === "alles" || !vak) return (await bouwStartVragen(groep === "eigen" ? level : g, n + 1)).slice(1, n + 1);
   let kandidaten = padenVoor(vak, g);
   if (!kandidaten.length && g !== "vo") kandidaten = padenVoor(vak, "6");
   const volgorde = kandidaten.slice().sort(() => Math.random() - 0.5).slice(0, 4);
   for (const p of volgorde) {
     try { const q = await buildTopicQuiz({ pathId: p.id, aantal: n }); if (q?.questions?.length) return q.questions.slice(0, n).map((v) => ({ ...v, padTitel: p.title })); } catch { /* volgende */ }
   }
-  return (await bouwStartVragen(level, n)).slice(0, n);
+  return (await bouwStartVragen(level, n + 1)).slice(1, n + 1);
+}
+
+// 🕵️ Eén vraag voor de loting in de Bedrieger-kamer (Mark 18 okt 2026: "je krijgt ALTIJD dezelfde vraag").
+// Vroeger kwam die uit het start-kwartier, en daarvan is vraag 1 een vaste opwarmvraag. Nu elke keer een
+// willekeurig reken-, taal- of wereldpad van de groep (groep 6: 77 paden, ~3.750 vragen). Geen begrijpend
+// lezen, plaatjes of lange vragen: iedereen moet hem in een paar seconden kunnen lezen (het is een race).
+const LOTING_VAKKEN = ["rekenen", "taal", "wereld"];
+const lotingRecent = [];   // laatste vragen in dit tabblad, om herhaling te voorkomen
+export const geschiktVoorLoting = (v) => !!v && Array.isArray(v.options) && v.options.length >= 2 && typeof v.answer === "number"
+  && !v.leesTekst && !v.stapTekst && !v.svg && String(v.q || "").length <= 140 && v.options.every((o) => String(o).length <= 60);
+export async function bouwLotingVraag(level = "6") {
+  const g = (String(level).match(/(\d)/) || [null, "6"])[1];
+  let kandidaten = LOTING_VAKKEN.flatMap((v) => padenVoor(v, g));
+  if (!kandidaten.length) kandidaten = LOTING_VAKKEN.flatMap((v) => padenVoor(v, "6"));
+  const volgorde = kandidaten.slice().sort(() => Math.random() - 0.5).slice(0, 5);
+  for (const p of volgorde) {
+    try {
+      const q = await buildTopicQuiz({ pathId: p.id, aantal: 8, groep: +g || null });
+      const goed = (q?.questions || []).filter((v) => geschiktVoorLoting(v) && !lotingRecent.includes(v.q));
+      if (!goed.length) continue;
+      const v = goed[Math.floor(Math.random() * goed.length)];
+      lotingRecent.push(v.q); if (lotingRecent.length > 30) lotingRecent.shift();
+      return { ...v, padTitel: p.title };
+    } catch { /* volgende pad */ }
+  }
+  return null;
 }
