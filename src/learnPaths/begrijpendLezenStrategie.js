@@ -129,7 +129,7 @@ const steps = [
           null,
           "Gaat begrijpend lezen over letters aan elkaar plakken, of over snappen wat er bedoeld wordt?",
           "Gaat studerend lezen over letters, of over onthouden wat je leest?",
-          null,
+          "Snel lezen gaat over tempo, en hoort niet bij het rijtje van drie. Welk soort lezen plakt letters aan elkaar?",
         ],
         uitlegPad: {
           stappen: [
@@ -179,7 +179,7 @@ const steps = [
         wrongHints: [
           null,
           "Gaat technisch lezen over onthouden, of over letters en woorden?",
-          null,
+          "Voorlezen doe je hardop voor een ander. Jij wilt de tekst onthouden voor een toets — welk soort lezen is dat?",
           "Onthoud je een tekst beter als je er snel doorheen gaat?",
         ],
         uitlegPad: {
@@ -710,7 +710,7 @@ const steps = [
         wrongHints: [
           null,
           "Wat wil een recept: je vermaken, of uitleggen hoe je iets maakt?",
-          null,
+          "Wat staat er in een encyclopedie: een verhaal met personages, of feiten over allerlei onderwerpen?",
           "Wat wil een advertentie dat jij doet?",
         ],
         uitlegPad: {
@@ -898,7 +898,7 @@ const steps = [
         wrongHints: [
           null,
           "Blijft een school open OMDAT het hard sneeuwt?",
-          null,
+          "Komt er na de puntjes een voorbeeld van sneeuw? Of gebeurt er iets wat je niet verwacht?",
           "Begint hier een rijtje met redenen?",
         ],
         uitlegPad: {
@@ -949,7 +949,7 @@ const steps = [
         wrongHints: [
           null,
           "Komt er na 'maar' een voorbeeld, of een tegenstelling?",
-          null,
+          "'Daarna' zegt iets over tijd: wat er later gebeurt. Komt er dan een voorbeeld?",
           "Trekt 'dus' een conclusie, of geeft het een voorbeeld?",
         ],
         uitlegPad: {
@@ -1006,7 +1006,7 @@ const steps = [
           null,
           "Is dit de reden, of wat eruit volgt?",
           "Staat in de tekst hoe Noor naar school ging?",
-          null,
+          "Staat er iets over hoe laat de school begon? Lees wat er na 'omdat' staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -1146,7 +1146,7 @@ const steps = [
         wrongHints: [
           null,
           "Zijn een plaatje en een naam delen van de tekst zelf?",
-          null,
+          "Dat lijkt op een toets, niet op een tekst. Hoe heten het begin, het midden en het eind van een tekst?",
           "Gaat dit over de opbouw van een tekst, of over kleine stukjes taal?",
         ],
         uitlegPad: {
@@ -1206,7 +1206,7 @@ const steps = [
           null,
           "Past er veel uitleg in een paar woorden boven de tekst?",
           "Wat doet de inleiding vooral: vertellen waar het over gaat, of alles uitleggen?",
-          null,
+          "Wat doet het slot vooral: samenvatten, of alles uitleggen?",
         ],
         uitlegPad: {
           stappen: [
@@ -1336,7 +1336,7 @@ const steps = [
           null,
           "Geeft skimmen je één precies antwoord, of vooral een overzicht?",
           "Heb je daar op een toets genoeg tijd voor?",
-          null,
+          "Staat een jaartal meestal in de titel, of ergens in de tekst?",
         ],
         uitlegPad: {
           stappen: [
@@ -1391,7 +1391,7 @@ const steps = [
         wrongHints: [
           null,
           "Kost skimmen veel of weinig tijd?",
-          null,
+          "Is gericht zoeken naar één ding langzaam, of juist snel?",
           "Helpt het om te weten wat je moet zoeken?",
         ],
         uitlegPad: {
@@ -1527,7 +1527,7 @@ const steps = [
         wrongHints: [
           null,
           "Vraagt dit naar de boodschap van de hele tekst?",
-          null,
+          "Vraagt dit wat een woord betekent, of vraagt het een getal uit de tekst?",
           "Gaat dit over hoe de alinea's na elkaar komen?",
         ],
         uitlegPad: {
@@ -1583,7 +1583,7 @@ const steps = [
         wrongHints: [
           null,
           "Staan er argumenten vóór en tegen iets in?",
-          null,
+          "Begint alinea 1 met een algemene regel en geeft alinea 2 daar voorbeelden bij? Of is er iets mis dat opgelost wordt?",
           "Geeft de schrijver een mening met redenen?",
         ],
         uitlegPad: {
@@ -1639,7 +1639,7 @@ const steps = [
           null,
           "Gaat deze tekst over dingen die na elkaar gebeurden?",
           "Wordt er een probleem opgelost?",
-          null,
+          "Gaat de tekst van een hoofdregel naar voorbeelden? Of staan er twee kanten tegenover elkaar?",
         ],
         uitlegPad: {
           stappen: [
@@ -1698,7 +1698,7 @@ const steps = [
           null,
           "Gooi je je tas in de hoek als je blij bent?",
           "Doe je hard en snel dingen als je slaperig bent?",
-          null,
+          "Smijt je met je tas als je trots bent? Welk gevoel past bij een deur hard dichtslaan?",
         ],
         uitlegPad: {
           stappen: [
@@ -1943,7 +1943,7 @@ const steps = [
       { q: "Waar vind je het antwoord op een **letterlijke vraag**?", options: ["In een zin uit de tekst","Door tussen de regels te lezen","In de plaatjes bij de tekst","In wat je zelf al weet"], answer: 0, wrongHints: [null, "Dat hoort bij een ander soort vraag. Bij welke?", "Staan er bij elke tekst plaatjes met het antwoord?", "Kan het zijn dat de tekst iets anders zegt dan wat jij al weet?"] },
       { q: "Wat moet je doen bij een **inferentie-vraag**?", options: ["Zelf een conclusie trekken uit de tekst","Een zin letterlijk overnemen","Woorden in de tekst tellen","Een moeilijk woord opzoeken"], answer: 0, wrongHints: [null,"Staat het antwoord bij een inferentie-vraag letterlijk in de tekst?","Moet je dan iets tellen, of zelf iets bedenken?","Gaat het om één woord, of om iets wat je zelf afleidt?"] },
       { q: "Aan welk **woord** zie je dat de schrijver **iets gaat opsommen**?", options: ["ten eerste","echter","daarom","kortom"], answer: 0, wrongHints: [null, "'Echter' zet iets tegenover elkaar.", "'Daarom' geeft een gevolg.", "'Kortom' vat samen aan het eind."] },
-      { q: "*'Kortom: lezen is belangrijk.'* — welk soort zin?", options: ["Conclusie","Vraag","Opsomming","Tegenstelling"], answer: 0, wrongHints: [null, "Geen vraagteken.", "Geen lijst.", "Geen 'maar'."] },
+      { q: "*'Kortom: lezen is belangrijk.'* — Wat voor soort zin is dit?", options: ["Conclusie","Vraag","Opsomming","Tegenstelling"], answer: 0, wrongHints: [null, "Staat er een vraagteken? Kijk wat het woord 'kortom' doet.", "Worden er hier meerdere dingen opgenoemd? Kijk wat het woord 'kortom' doet.", "Staat er een 'maar' of 'echter' in de zin? Wat doet 'kortom' aan het eind van een tekst?"] },
       { q: "Welke **alinea** bevat meestal de hoofdgedachte van de hele tekst?", options: ["De inleiding of het slot","De middelste alinea","De langste alinea","De alinea met de meeste cijfers"], answer: 0, wrongHints: [null, "Wat staat er meestal in het midden: uitleg en voorbeelden, of de boodschap?", "Is de langste alinea ook de belangrijkste?", "Zijn cijfers de boodschap, of details?"] },
       { q: "Welke **tekstsoort** is een dagboek?", options: ["Verhalend","Informatief","Betogend","Instructief"], answer: 0, wrongHints: [null, "Wil een dagboek de lezer iets uitleggen, zoals een schoolboek?", "Probeert een dagboek de lezer van een mening te overtuigen?", "Staan er in een dagboek stappen die je moet volgen?"] },
       { q: "Wat is een **kernzin**?", options: ["De zin met het hoofdpunt van de alinea","De zin met een voorbeeld erin","De laatste zin van de hele tekst","De langste zin van de alinea"], answer: 0, wrongHints: [null,"Is een voorbeeld het hoofdpunt, of een uitleg erbij?","Hoort een kernzin bij de hele tekst, of bij één alinea?","Zegt de lengte van een zin iets over hoe belangrijk hij is?"] },

@@ -75,7 +75,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         wrongHints: [
           null,
           "Waar bewaart een journalist de kleine weetjes: vooraan of juist verderop in het bericht?",
-          null,
+          "Hoort de mening van de schrijver in een nieuwsbericht? Wat zet een journalist vooraan?",
           "Is een nieuwsbericht een spannend verhaal met een einde, zoals een boek?",
         ],
         uitlegPad: {
@@ -112,7 +112,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           null,
           "Zie je in de zin een plek staan, zoals een straat, dorp of gebouw?",
           "Staat er een dag, datum of tijdstip in de zin?",
-          null,
+          "Staat er een reden in de zin, met 'omdat' of 'want'? Of vertelt de zin met wélk materieel er geblust werd?",
         ],
         uitlegPad: {
           stappen: [
@@ -219,7 +219,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         wrongHints: [
           null,
           "Staat er een plek of een reden in de zin? Kijk wat de zin inhoudelijk zegt.",
-          null,
+          "Staat er een manier of een dag in de zin? Kijk naar de persoon en naar wat ze deed.",
           "Er staat geen reden ('omdat') in de zin. Maar je kunt wél twee andere vragen beantwoorden.",
         ],
         uitlegPad: {
@@ -309,9 +309,9 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "'Wat' vraagt naar wat er gebeurde: de wedstrijd ging niet door. Maar wat vertelt het stukje met 'omdat'?",
           "De vijver is een plek, maar die staat in een ander stukje van de zin. Wat vertelt het stukje met 'omdat' je?",
-          null,
+          "Staat er een persoon in het stukje 'omdat het ijs nog te dun was'? Wat vertelt dat stukje wél?",
         ],
         uitlegPad: {
           stappen: [
@@ -414,7 +414,12 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         q: "Je wilt in een nieuwsbericht opzoeken op welke dag de nieuwe brug in het dorp werd geopend. Welke gouden vraag stel je dan aan de tekst?",
         options: ["Wanneer", "Waar", "Hoe", "Wie"],
         answer: 0,
-        wrongHints: [null, "De brug staat al in het dorp. Zoek je een plek of iets anders?", null, null],
+        wrongHints: [
+          null,
+          "De brug staat al in het dorp. Zoek je een plek of iets anders?",
+          "'Hoe' vraagt naar de manier waarop iets ging. Jij wilt een dag weten.",
+          "'Wie' vraagt naar een persoon. Jij wilt een dag weten.",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -477,9 +482,9 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
         q: "Wat is het grote nieuws in dit bericht?",
         options: [
           "Er is een nieuwe speeltoren geopend op het schoolplein",
-          "Een school is verhuisd naar Weidedorp",
-          "Er is in maart een sponsorloop gehouden",
-          "De oude speeltoren is gerepareerd",
+          "Een basisschool is verhuisd naar het dorp Weidedorp",
+          "Er is in maart een sponsorloop gehouden door het dorp",
+          "De oude speeltoren is gerepareerd door de leerlingen",
         ],
         answer: 0,
         evidence: "Afgelopen zaterdag werd op het schoolplein een gloednieuwe speeltoren geopend.",
@@ -487,7 +492,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           null,
           "Een verhuizing lees je nergens in het bericht. Wat wordt er in de eerste alinea geopend?",
           "Die sponsorloop staat inderdaad in de tekst — maar pas in de twééde alinea. Wat staat er in de allereerste alinea?",
-          null,
+          "Lees de tweede alinea: werd de oude toren gerepareerd, of afgekeurd?",
         ],
         uitlegPad: {
           stappen: [
@@ -554,7 +559,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
         wrongHints: [
           null,
           "Over de grootte van de oude toren zegt het bericht niets. Zoek de zin met het woordje 'omdat'.",
-          null,
+          "Een cadeau van de directeur staat niet in de tekst. Zoek de zin met het woordje 'omdat'.",
           "Een storm staat niet in dít bericht. Zoek de zin met het woordje 'omdat'.",
         ],
         uitlegPad: {
@@ -589,7 +594,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           null,
           "In maart vond iets anders plaats. Zoek de zin die zegt wanneer de openingsceremonie was.",
           "Vorig jaar werd de oude toren afgekeurd — maar wanneer werd de nieuwe geopend?",
-          null,
+          "Een woensdag komt in het bericht niet voor. Scan op het woord 'geopend'.",
         ],
         uitlegPad: {
           stappen: [
@@ -617,7 +622,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           null,
           "Milan spreekt niet tot juf Karin in de tekst. Scan op de naam 'Milan' en lees zijn citaat.",
           "Dat staat inderdaad in de tekst — maar is dat wat hij zégt? Zoek zijn letterlijke woorden tussen aanhalingstekens.",
-          null,
+          "Zo staat het niet in de tekst. Zoek Milans eigen woorden tussen aanhalingstekens.",
         ],
         uitlegPad: {
           stappen: [
@@ -646,7 +651,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           null,
           "De gemeente wordt in het hele bericht niet genoemd. Welk plan bedacht de school zélf?",
           "Van lenen staat niets in de tekst. Wat deden de leerlingen in maart?",
-          null,
+          "Over koeken staat niets in het bericht. Welk plan bedacht de school?",
         ],
         uitlegPad: {
           stappen: [
@@ -681,7 +686,12 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           "De oudste leerling van de school",
         ],
         answer: 0,
-        wrongHints: [null, "Milan deed iets anders als eerste. Wat mocht hij doen?", null, null],
+        wrongHints: [
+          null,
+          "Milan deed iets anders als eerste. Wat mocht hij doen?",
+          "Een burgemeester komt in het bericht niet voor. Zoek de zin met het woord 'lint'.",
+          "De oudste leerling wordt niet genoemd. Wie knipte volgens de derde alinea het lint door?",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -788,7 +798,12 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
           "Een klimnet, een wip en een touwbrug",
         ],
         answer: 0,
-        wrongHints: [null, "Hoeveel glijbanen noemt het bericht precies?", null, null],
+        wrongHints: [
+          null,
+          "Hoeveel glijbanen noemt het bericht precies?",
+          "Schommels en een klimmuur staan niet in de tekst. Lees de zin 'De toren is zes meter hoog en heeft...'.",
+          "Het klimnet klopt, maar een wip en een touwbrug staan er niet. Alle drie de dingen moeten kloppen.",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -943,7 +958,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
         wrongHints: [
           null,
           "Aanhalingstekens plus het woord 'leukste' — kun je dat nameten, of vindt iemand dat?",
-          null,
+          "'Geweldig geslaagd' is wat de organisator vindt. Kun je dat nameten?",
           "'Prachtig' — bestaat er een meetlat voor? Zoek de zin met iets wat je écht kunt natellen.",
         ],
         uitlegPad: {
@@ -978,7 +993,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
         wrongHints: [
           null,
           "Dat is de dag waarop het bericht geschreven is. De bomen werden gísteren geplant — wat is een dag eerder dan woensdag?",
-          null,
+          "Dat is twee dagen vóór woensdag. 'Gisteren' is maar één dag terug.",
           "Dat is de dag ná de schrijfdag. 'Gisteren' is een dag vóór de schrijfdag.",
         ],
         uitlegPad: {
@@ -1021,7 +1036,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           null,
           "Op die dag werd het bericht geschréven. Is dat dezelfde dag als de brand? Zoek het woordje 'afgelopen'.",
           "Die datum hoort bij de schrijfdag van het bericht, bovenaan. De brand was eerder — welke dag noemt de zin zelf?",
-          null,
+          "Jawel! Lees de zin nog eens: er staat een dag met het woordje 'afgelopen' ervoor.",
         ],
         uitlegPad: {
           stappen: [
@@ -1060,7 +1075,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
         wrongHints: [
           null,
           "Aanhalingstekens laten zien dat iemand iets zegt. Maar maakt dat van elke uitspraak een mening? Kun je dit controleren?",
-          null,
+          "Dat Kees er werkt, verandert niets aan de lengte van de baan. Kun je die lengte nameten?",
           "Maakt het woordje 'onze' een lengte minder controleerbaar?",
         ],
         uitlegPad: {
@@ -1108,7 +1123,12 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
         q: "*\"Gisteren speelde de schoolband een prachtig concert in de aula.\"* — Welk woord maakt van deze zin (deels) een mening?",
         options: ["prachtig", "gisteren", "schoolband", "aula"],
         answer: 0,
-        wrongHints: [null, "Dat woord vertelt wanneer iets gebeurde. Kun je dat controleren?", null, null],
+        wrongHints: [
+          null,
+          "Dat woord vertelt wanneer iets gebeurde. Kun je dat controleren?",
+          "Wie er speelde, kun je nagaan. Welk woord zegt hoe mooi het was?",
+          "Waar het was, kun je controleren. Welk woord zegt hoe mooi het was?",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -1171,7 +1191,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
           null,
           "In hún moestuin liep het verhaal af — maar over wie gaat bijna elke alinea?",
           "Zij zegt alleen één zinnetje aan het einde. Wie was er twee dagen spoorloos?",
-          null,
+          "De dierenarts onderzocht Berry alleen achteraf. Wie staat er in de kop én in de eerste zin?",
         ],
         uitlegPad: {
           stappen: [
@@ -1211,7 +1231,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
           null,
           "Over een openstaand hek lees je niets. Zoek de alinea die begint met 'Hoe kon Berry ontsnappen?'",
           "Die kinderen komen pas aan het éínde van het verhaal voorbij, bij het terugvinden. Wat gebeurde er in het weekend?",
-          null,
+          "Over springen staat niets in de tekst. Lees de alinea met 'Hoe kon Berry ontsnappen?': hoe kwam hij naar buiten?",
         ],
         uitlegPad: {
           stappen: [
@@ -1245,7 +1265,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
         wrongHints: [
           null,
           "Op dat moment werd juist ontdekt dat Berry wég was. Zoek de zin waarin hij wordt teruggevonden.",
-          null,
+          "In het weekend was de storm. Zoek de zin met het woord 'teruggevonden'.",
           "Kijk goed: die datum staat hélemaal bovenaan. Wat betekent een datum op die plek ook alweer?",
         ],
         uitlegPad: {
@@ -1332,16 +1352,16 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
         q: "Hoe maakten buurtbewoners de vermissing van Berry bekend?",
         options: [
           "Ze hingen posters op met een foto van Berry",
-          "Ze belden de politie",
-          "Ze stuurden een e-mail rond",
-          "Ze zochten alleen zelf in het dorp",
+          "Ze belden de politie en de dierenambulance",
+          "Ze stuurden een e-mail rond naar het hele dorp",
+          "Ze zochten alleen zelf in de straten van het dorp",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Er staat niets over de politie in het bericht. Zoek wat de buurtbewoners letterlijk deden.",
           "E-mail wordt nergens in de tekst genoemd. Scan op 'buurtbewoners' of 'posters'.",
-          null,
+          "Zoeken deden ze ook, maar hoe lieten ze anderen wéten dat Berry weg was? Scan op 'posters'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1370,7 +1390,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
           null,
           "Kun je in de tekst aanwijzen dat álle inwoners zochten? Er staat 'buurtbewoners hielpen mee' — is dat hetzelfde als iedereen?",
           "De tekst noemt juist zoekende buurtbewoners en posters. Wat maakt een kop graag groter dan de tekst?",
-          null,
+          "De storm is de oorzaak van de ontsnapping. Maar waar gaat de kop over: de storm, of de alpaca?",
         ],
         uitlegPad: {
           stappen: [
@@ -1408,7 +1428,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Een weiland wordt niet genoemd. Lees de derde alinea: waar hoorden de kinderen geritsel?",
           "De kinderen waren wel aan het voetballen, maar waar stond Berry toen ze hem vonden?",
           "Buurvrouw De Wit zegt alleen iets aan het eind. In wiens tuin hoorden de kinderen geritsel?",
         ],
@@ -1457,7 +1477,12 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
         q: "Hoe lang was Berry spoorloos?",
         options: ["Twee dagen", "Een week", "Een paar uur", "Drie weken"],
         answer: 0,
-        wrongHints: [null, "Berry verdween op maandag. Wanneer werd hij teruggevonden?", null, null],
+        wrongHints: [
+          null,
+          "Berry verdween op maandag. Wanneer werd hij teruggevonden?",
+          "Een paar uur? Berry verdween op maandag en werd pas op woensdag gevonden.",
+          "Drie weken is veel te lang. Lees de eerste zin van het bericht nog eens.",
+        ],
         uitlegPad: {
           stappen: [
             {

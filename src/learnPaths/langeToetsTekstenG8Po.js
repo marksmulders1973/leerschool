@@ -70,7 +70,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         options: [
           "De tekst één keer rustig doorlezen, zodat je weet waar alles staat",
           "Alle zes de vragen uit je hoofd leren voordat je begint te lezen",
-          "Meteen antwoorden invullen zonder de tekst te bekijken",
+          "Alleen de eerste alinea lezen en dan meteen de vragen maken",
           "De hele tekst woord voor woord uit je hoofd leren",
         ],
         answer: 0,
@@ -78,8 +78,8 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         wrongHints: [
           null,
           "Zes vragen onthouden terwijl je leest — lukt dat echt? Wat zegt het plan over wat je met de tékst doet?",
-          "Waar haal je dan je antwoorden vandaan? Denk aan de plattegrond in je hoofd.",
-          null,
+          "Dan mis je de rest van de tekst. Wat moet je weten om een plattegrond in je hoofd te maken?",
+          "Uit je hoofd leren kost veel tijd en hoeft niet: je mag terugkijken. Wat is dan wél genoeg?",
         ],
         uitlegPad: {
           stappen: [
@@ -118,7 +118,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
           null,
           "Details onthouden is niet het doel van globaal lezen — wat bouw je dan op?",
           "Dan zou globaal lezen hetzelfde zijn als alles uit je hoofd leren. Wat kost minder moeite?",
-          null,
+          "Na één keer rustig lezen heb je nog geen antwoorden. Wat heb je wél: een plattegrond. Wat staat daarop?",
         ],
         uitlegPad: {
           stappen: [
@@ -146,7 +146,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
           null,
           "Alle antwoorden leveren evenveel punten op. Wat maakt terugbladeren wél slim?",
           "Dat is niet het doel — je leest terug om één ding te vinden, niet om alles te onthouden.",
-          null,
+          "Verplicht is het niet. Waarom is het dan tóch slim om terug te kijken?",
         ],
         uitlegPad: {
           stappen: [
@@ -174,7 +174,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         wrongHints: [
           null,
           "Wat gebeurt er met de tijd voor de ándere vijf vragen als je hier blijft hangen?",
-          null,
+          "Dan gooi je ook de vragen weg die je wél kunt. Is er een manier om alleen déze vraag even te laten liggen?",
           "Een gok kan altijd nog — maar is er een manier om jezelf eerst nog een tweede kans te geven?",
         ],
         uitlegPad: {
@@ -213,7 +213,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         wrongHints: [
           null,
           "Zes is het aantal vragen, niet het aantal minuten. Hoe verdeel je 12 minuten over 6 vragen?",
-          null,
+          "Vier minuten per vraag, keer zes vragen — kom je dan uit op 12 minuten?",
           "Een halve minuut per vraag — kom je dan aan 12 minuten?",
         ],
         uitlegPad: {
@@ -269,7 +269,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         wrongHints: [
           null,
           "Hoeveel vragen is de helft van 6? En hoeveel tijd is er om?",
-          null,
+          "De helft van de vragen bij de helft van de tijd: loop je dan voor, achter, of precies gelijk?",
           "Waarom zou je opnieuw beginnen als je precies op schema ligt?",
         ],
         uitlegPad: {
@@ -325,7 +325,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         wrongHints: [
           null,
           "Verandert de toets zelf iets aan de vraag? Of ben jij veranderd?",
-          null,
+          "De vraag blijft precies hetzelfde. Wat is er dan wél veranderd: de vraag, of jij?",
           "Heb je de tekst uit je hoofd geleerd, of ben je er wel vaak in teruggezocht?",
         ],
         uitlegPad: {
@@ -394,7 +394,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         evidence: "Pas als een dier minstens veertig kilo weegt, mag het terug naar zee.",
         wrongHints: [
           null,
-          null,
+          "Twintig staat niet in de tekst. Zoek de zin met 'kilo' in de alinea over het buitenbad.",
           "Honderd en tweehonderd staan ook in de tekst, maar die getallen gaan over hoevéél zeehonden er per jaar binnenkomen. Zoek de zin over teruggaan naar zee.",
           "Jawel — zoek in de alinea over het buitenbad naar een getal met 'kilo' erachter.",
         ],
@@ -435,7 +435,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           null,
           "Lees de zin waarin het woord staat: gaat die over mensen of over jonge dieren?",
           "Kan een golf om iemand roepen? Kijk naar het woord 'jonkies' in dezelfde zin.",
-          null,
+          "Alle zeehonden leven in het water. Lees wat er na 'omdat' staat in de zin met 'huilers'.",
         ],
         uitlegPad: {
           stappen: [
@@ -470,7 +470,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           null,
           "De vrijwilliger komt pas verderop in de alinea voor. Lees de zin ervóór: wie ligt daar in zee te wachten?",
           "'Zij durft' is enkelvoud — past dat bij een hele groep mensen?",
-          null,
+          "Kan een gebouw ergens niet terug durven te komen? 'Zij' is een levend wezen. Wie wacht er in zee?",
         ],
         uitlegPad: {
           stappen: [
@@ -508,8 +508,8 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         wrongHints: [
           null,
           "Staat er ergens iets over gevaarlijke zeehonden? Zoek de 'goede reden' die de tekst zelf noemt.",
-          null,
-          null,
+          "Over privéterrein staat niets in de tekst. Zoek de 'goede reden' die de tekst zelf noemt.",
+          "Over warm zand staat niets in de tekst. Wie wacht er vlakbij in zee, en wat doet zij als er mensen komen?",
         ],
         uitlegPad: {
           stappen: [
@@ -542,7 +542,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         wrongHints: [
           null,
           "Kan de zeehond zelf iemand sturen? Wie of wat moet je bellen?",
-          null,
+          "De moeder stuurt geen vrijwilligers. Wie of wat moet je volgens de zin bellen?",
           "Kan een strand een vrijwilliger sturen? Zoek wat er vlak vóór 'die' genoemd wordt.",
         ],
         uitlegPad: {
@@ -574,7 +574,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           "De opvang in Terdam verzorgt zwakke zeehonden tot ze sterk genoeg zijn voor de zee",
           "Zeehonden zijn de gevaarlijkste dieren van de Noordzee",
           "Het dorp Terdam heeft een mooie dijk waar veel toeristen komen",
-          "Vispap is het lekkerste eten voor jonge dieren",
+          "Vispap door een slangetje is het beste eten voor jonge zeehonden",
         ],
         answer: 0,
         evidence: "Hier worden zieke en verzwakte zeehonden verzorgd tot ze sterk genoeg zijn om terug te gaan naar zee.",
@@ -582,7 +582,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           null,
           "Waar gaat bijna élke alinea over: over gevaar, of over verzorgen en terug naar zee gaan?",
           "De dijk wordt maar één keer kort genoemd — kan iets dat één keer voorbijkomt de hoofdgedachte van de héle tekst zijn?",
-          null,
+          "De vispap staat in één alinea. Gaat de hele tekst over eten, of over iets groters?",
         ],
         uitlegPad: {
           stappen: [
@@ -622,7 +622,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           null,
           "Lees de eerste zin van de laatste alinea nog eens: wat krijgt de opvang juist níét van de overheid?",
           "Wat krijg je volgens de tekst als je adopteert — het dier zelf, of iets anders?",
-          null,
+          "Staat er dat de opvang geld verdient aan het vrijlaten? Lees de laatste alinea: waar komt het geld vandaan?",
         ],
         uitlegPad: {
           stappen: [
@@ -688,8 +688,8 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         wrongHints: [
           null,
           "Hele vissen komen ook in de tekst voor — maar wanneer? Let op het woordje 'eerst'.",
-          null,
-          null,
+          "Melk uit een fles staat niet in de tekst. Lees de zin met het woordje 'eerst'.",
+          "Brood staat nergens in de tekst. Wat gaat er volgens de tekst door een slangetje?",
         ],
         uitlegPad: {
           stappen: [
@@ -745,7 +745,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           null,
           "Lees de laatste zin van die alinea precies: staat daar 'alle' of iets anders?",
           "Hoe komen de zeehonden in de tekst bij de golven? Met een boot, of op een andere manier?",
-          null,
+          "Lees de eerste zin van die alinea: is het stil, of is het een feest met publiek?",
         ],
         uitlegPad: {
           stappen: [
@@ -818,7 +818,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         wrongHints: [
           null,
           "Middernacht komt wel voor in het verhaal, maar dan liggen ze al lang buiten. Zoek het moment van het kloppen op de deur.",
-          null,
+          "Negen uur staat niet in het verhaal. Zoek de zin met het woord 'klopte'.",
           "Jawel — zoek aan het begin van het verhaal naar een tijdstip.",
         ],
         uitlegPad: {
@@ -852,7 +852,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         wrongHints: [
           null,
           "Bij schemer zie je nog van alles. Wat vertelt het zinnetje over de lantaarnpaal je over hoevéél licht er is?",
-          null,
+          "'Geen lantaarnpaal te zien' — zijn er dan veel lampen aan?",
           "Gaat 'donker' over de temperatuur of over licht?",
         ],
         uitlegPad: {
@@ -893,7 +893,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
           null,
           "Kan opa een thermoskan tellen als 'één'? Wat is er vlak hiervoor gebeurd dat je kunt tellen?",
           "De wensen komen pas later in het verhaal. Wat gebeurde er vlak vóór opa's woorden?",
-          null,
+          "Het luchtbed lag er al de hele tijd. Wat verscheen er nét, vlak voordat Sanne riep?",
         ],
         uitlegPad: {
           stappen: [
@@ -925,7 +925,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         evidence: "Straks was alles voor niets en had de krant het mis.",
         wrongHints: [
           null,
-          null,
+          "Over de smaak van de chocolademelk staat niets. Lees de zinnen rond 'Ze begon te twijfelen'.",
           "Staat er ergens dat Sanne naar binnen wilde? Lees wat ze in het begin wél of niet aan de hemel zag.",
           "Wie zei er 'Nu niets meer zeggen'? Die persoon was klaarwakker.",
         ],
@@ -960,8 +960,8 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         wrongHints: [
           null,
           "Kon Sanne eerder die nacht nog wel hard roepen? Zoek de regel van opa over wensen.",
-          null,
-          null,
+          "Opa lag klaarwakker naast haar te tellen. Zoek de regel van opa over wensen.",
+          "Staat er iets over overdag? Lees het zinnetje met 'anders' helemaal uit.",
         ],
         uitlegPad: {
           stappen: [
@@ -1001,7 +1001,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
           null,
           "De chocolademelk komt een paar keer voorbij — maar draait het héle verhaal daarom?",
           "Zoek eens: valt er ergens een boos woord tussen Sanne en opa?",
-          null,
+          "Het luchtbed komt in één zin voor. Draait het hele verhaal daarom?",
         ],
         uitlegPad: {
           stappen: [
@@ -1030,16 +1030,16 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         q: "Wat kun je uit het briefje aan het einde afleiden?",
         options: [
           "Opa wil graag nog eens samen met Sanne naar de sterren kijken",
-          "Opa is boos dat Sanne te hard riep",
-          "Sanne moet het briefje aan haar juf laten zien",
-          "Opa gaat verhuizen naar een ander dorp",
+          "Opa is boos omdat Sanne veel te hard riep",
+          "Sanne moet het briefje de volgende dag aan haar juf laten zien",
+          "Opa gaat binnenkort verhuizen naar een ander dorp",
         ],
         answer: 0,
         evidence: "Tot de volgende heldere nacht.",
         wrongHints: [
           null,
           "Klinkt 'Voor de sterrenkijker' als een boze opmerking? Let op de toon van het briefje.",
-          null,
+          "Staat er iets over een juf? Lees wat Sanne zelf met het briefje doet.",
           "Staat er iets over verhuizen? Lees de laatste zin van het briefje nog eens.",
         ],
         uitlegPad: {
@@ -1106,7 +1106,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         wrongHints: [
           null,
           "De kou komt pas later, als ze buiten liggen. Wat zou er vanavond gebeuren?",
-          null,
+          "Opa klopte juist zachtjes. Lees de eerste alinea: wat zou er vanavond gebeuren?",
           "Wanneer drinkt Sanne de chocolademelk? Aan het begin of pas aan het einde?",
         ],
         uitlegPad: {
@@ -1182,7 +1182,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Is opzoeken bij een leestoets verboden? Denk aan wat je in de eerste stap van dit deel leerde.",
           "Kost dat niet heel veel tijd voor één vraag? Je weet dankzij je plattegrond toch al ongeveer wáár het staat?",
-          null,
+          "De lengte van een antwoord zegt niets over goed of fout. Waar vind je het bewijs?",
         ],
         uitlegPad: {
           stappen: [
@@ -1215,7 +1215,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Een lang antwoord is niet automatisch het juiste. Wat helpt je écht kiezen?",
           "Lengte zegt niets over inhoud. Wat heeft de tekst je te vertellen?",
-          null,
+          "Voor altijd overslaan levert zeker geen punt op. Wat kun je nog doen met de zin in de tekst?",
         ],
         uitlegPad: {
           stappen: [
@@ -1234,16 +1234,16 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
         q: "Wat is het verschil tussen een feitenvraag en een conclusievraag bij een leestekst?",
         options: [
           "Bij een feitenvraag zoek je op; bij een conclusievraag denk je één stapje verder",
-          "Feitenvragen zijn moeilijker dan conclusievragen",
-          "Bij een conclusievraag moet je de tekst niet meer lezen",
-          "Er is geen verschil — je antwoordt bij beide altijd vanuit je hoofd",
+          "Bij een feitenvraag moet je meer nadenken dan bij een conclusievraag",
+          "Bij een conclusievraag hoef je de tekst niet meer te lezen",
+          "Er is geen verschil — je antwoordt bij allebei altijd vanuit je hoofd",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Welke klinkt als meer werk: opzoeken of redeneren? Wat maakt conclusies anders?",
+          "Andersom: bij welke van de twee moet je zelf iets bedenken, en bij welke zoek je alleen op?",
           "Ook bij conclusies heb je de tekst nodig — als bewijs. Wat doe je er dan méér mee?",
-          null,
+          "Vanuit je hoofd? De tekst is bij allebei je bewijs. Wat doe je bij een conclusie méér dan opzoeken?",
         ],
         uitlegPad: {
           stappen: [
@@ -1266,7 +1266,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Reken je hier iets uit, of zoek je gewoon een getal in de tekst?",
           "Gaat de vraag over het thema van het hele verhaal, of over één moment?",
-          null,
+          "Staat er een verwijswoord zoals 'hij' of 'die' in de vraag? Of zoek je gewoon een tijdstip?",
         ],
         uitlegPad: {
           stappen: [
@@ -1285,9 +1285,9 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
         q: "Waarom lees je de tekst eerst één keer rustig door, ook al onthoud je niet alles?",
         options: [
           "Zo weet je waar alles ongeveer staat en kun je per vraag snel terugzoeken",
-          "Zo ken je daarna de hele tekst uit je hoofd",
-          "Omdat je de tekst tijdens de vragen niet meer mag bekijken",
-          "Omdat de eerste vraag altijd over de eerste zin gaat",
+          "Zo ken je daarna de hele tekst woord voor woord uit je hoofd",
+          "Omdat je de tekst tijdens het maken van de vragen niet meer mag bekijken",
+          "Omdat de eerste vraag altijd over de eerste zin van de tekst gaat",
         ],
         answer: 0,
         evidence: "Je maakt een plattegrond in je hoofd: je weet waar alles ongeveer staat.",
@@ -1295,7 +1295,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Moet je een tekst van 400 woorden echt uit je hoofd kennen? Wat maakte je ook alweer 'in je hoofd' tijdens dat eerste lezen?",
           "Mag je tijdens de vragen nog terugkijken in de tekst? Denk aan wat je bij de vorige vraag leerde.",
-          null,
+          "Is dat zo? De vragen gaan over de héle tekst. Wat heb je dan nodig om snel te kunnen zoeken?",
         ],
         uitlegPad: {
           stappen: [
@@ -1355,7 +1355,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Dan mis je alle vragen bij die tekst. Wat kun je doen met de zinnen rond het woord?",
           "Gokken kan altijd nog. Is er eerst een manier om het in de tekst zelf te ontdekken?",
           "Zegt de lengte van een woord iets over wat het betekent?",
         ],
@@ -1412,7 +1412,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
         wrongHints: [
           null,
           "Dat werkt misschien, maar is het ook het snelst? Je weet toch al ongeveer waar het staat?",
-          null,
+          "Raden is gokken. De tekst ligt voor je — hoe vind je daarin snel één woord?",
           "Staan getallen meestal in de titel, of in de tekst zelf?",
         ],
         uitlegPad: {
@@ -1469,7 +1469,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Kan één zin vertellen waar de héle tekst over gaat?",
           "Een leuk detail komt vaak maar één keer voor. Gaat de hele tekst daarover?",
-          null,
+          "Een moeilijk woord zegt niets over de inhoud. Waar gaat bijna elke alinea over?",
         ],
         uitlegPad: {
           stappen: [

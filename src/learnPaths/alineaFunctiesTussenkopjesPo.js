@@ -57,9 +57,9 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         q: "Wat is een alinea?",
         options: [
           "Een stukje tekst dat over één deelonderwerp gaat",
-          "Eén losse zin uit de tekst",
+          "Eén losse zin die ergens midden in de tekst staat",
           "De titel die boven de hele tekst staat",
-          "Een moeilijk woord in de tekst",
+          "Een moeilijk woord dat in de tekst wordt uitgelegd",
         ],
         answer: 0,
         evidence: "Een alinea is een stukje tekst dat over één deelonderwerp gaat.",
@@ -67,7 +67,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
           null,
           "Een alinea is meestal langer dan dat — er passen uitleg én voorbeelden in. Hoeveel zinnen zaten er in de voorbeelden hierboven?",
           "De titel staat boven de héle tekst. Waar bestaat de tekst zelf uit, tussen de witregels?",
-          null,
+          "Een moeilijk woord is maar één woord. Een alinea is veel groter. Kijk naar de stukjes tussen de witregels.",
         ],
         uitlegPad: {
           stappen: [
@@ -107,7 +107,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         wrongHints: [
           null,
           "Een punt sluit één zín af — maar in één alinea staan meerdere zinnen. Wat zie je tússen twee alinea's?",
-          null,
+          "Een uitroepteken sluit één zin af. Kijk naar de ruimte tussen hele stukjes tekst.",
           "Dikgedrukte woorden vallen op, maar kunnen overal staan. Kijk naar de ruimte om de stukjes tekst heen.",
         ],
         uitlegPad: {
@@ -148,7 +148,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
           null,
           "Armen en benen zijn maar een déél van het verhaal. Welke zin dekt óók het hart en de longen?",
           "Het hart is één voorbeeld. Zoek de zin waar dit voorbeeld bij past.",
-          null,
+          "De longen zijn ook maar één voorbeeld. Welke zin past boven alle lichaamsdelen samen?",
         ],
         uitlegPad: {
           stappen: [
@@ -187,7 +187,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
           null,
           "Die zin legt de eerste zin alleen maar uit. Welke zin heeft de andere drie zinnen als 'uitleg' nodig?",
           "Dit is een detail over overdag. Welke zin dekt ook de nacht en het getal van vijftien uur?",
-          null,
+          "Dit is een detail over de nacht. Welke zin leggen alle andere zinnen samen uit?",
         ],
         uitlegPad: {
           stappen: [
@@ -209,7 +209,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         wrongHints: [
           null,
           "Tel de zinnen opnieuw — kijk naar elk punt en elke volgende hoofdletter.",
-          null,
+          "Dat zijn er te weinig. Tel de punten nog eens, van 'eeuw' tot 'hetzelfde'.",
           "Zijn er meer zinnen dan je telde? Lees het stukje nog eens zin voor zin.",
         ],
         uitlegPad: {
@@ -231,14 +231,14 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
           "De schrijver zegt eerst het belangrijkste en legt het daarna uit",
           "Omdat de eerste zin altijd de kortste is",
           "Zodat de lezer die zin makkelijk kan overslaan",
-          "Omdat titels verboden zijn boven alinea's",
+          "Omdat de eerste zin altijd een vraag aan de lezer is",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Is de eerste zin altijd de kortste? Kijk nog eens naar de voorbeeld-alinea's hierboven.",
           "Je wilt juist de kernzin lezen, niet overslaan. Waarom helpt het dat hij vooraan staat?",
-          null,
+          "Begint elke alinea met een vraag? En is zo'n openingsvraag eigenlijk de kernzin?",
         ],
         uitlegPad: {
           stappen: [
@@ -266,7 +266,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         wrongHints: [
           null,
           "Dat is een pakkende binnenkomer om je nieuwsgierig te maken — maar is één weetje-vraag de paraplu voor de héle alinea?",
-          null,
+          "Gras, bladeren en takken: dat is een rijtje details. Welke zin past daar als paraplu boven?",
           "Boomschors is één klein detail van het menu. Zoek de zin waar alle eet-zinnen bij passen.",
         ],
         uitlegPad: {
@@ -306,8 +306,8 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         wrongHints: [
           null,
           "Passen de voeten en de wimpers bij 'dagenlang zonder drinken'? Zoek de zin waar ze wél allemaal onder passen.",
-          null,
-          null,
+          "De hele tekst? Je ziet hier maar één alinea. Kijk wat deze ene vraag-zin met jou als lezer doet.",
+          "Een tussenkopje staat los bóven een alinea, niet als zin erin. Wat doet deze vraag-zin met je?",
         ],
         uitlegPad: {
           stappen: [
@@ -366,8 +366,8 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         wrongHints: [
           null,
           "Het rijzen staat maar in één zin. Waar gaan het kneden en de oven dan over?",
-          null,
-          null,
+          "Staat er iets over gezond in de alinea? Lees de zinnen nog eens: wat doet de bakker?",
+          "Gaat het over taart? Kijk wat de bakker in deze alinea maakt, en hoe vroeg hij begint.",
         ],
         uitlegPad: {
           stappen: [
@@ -438,16 +438,16 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
         q: "Wat is de functie van **alinea 1** van de egel-tekst?",
         options: [
           "Het is de inleiding: de lezer maakt kennis met het onderwerp",
-          "De schrijver geeft een voorbeeld uit één tuin",
-          "De schrijver geeft zijn mening over egels",
-          "Het is het slot: de tekst wordt afgerond",
+          "De schrijver geeft een voorbeeld uit de tuin van één meneer",
+          "De schrijver geeft zijn mening: egels verdienen onze hulp",
+          "Het is het slot: de tekst wordt samengevat en afgerond",
         ],
         answer: 0,
         evidence: "In deze tekst lees je waarom een egel een echte tuinhulp is.",
         wrongHints: [
           null,
           "Wordt hier één echte tuin met een naam genoemd? Kijk waar de alinea in de tekst stáát en wat hij aankondigt.",
-          null,
+          "'Verdient onze hulp' staat in een ándere alinea. Wat doet deze alinea met de zin 'In deze tekst lees je...'?",
           "Kan het einde van een tekst helemaal vooraan staan? Wat belooft de laatste zin van deze alinea?",
         ],
         uitlegPad: {
@@ -488,7 +488,7 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
           null,
           "Staat er ergens 'ik vind' of 'kortom'? Of laat de schrijver hier één echte tuin zíén?",
           "De tekst is al lang begonnen — kan dit stukje dan nog het begin zijn?",
-          null,
+          "Samenvatten doe je aan het einde, met een woord als 'kortom'. Begint deze alinea zo, of met 'kijk maar'?",
         ],
         uitlegPad: {
           stappen: [
@@ -527,7 +527,7 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
         wrongHints: [
           null,
           "Zoek eens een naam in deze alinea... vind je er geen? Waar zit die naam wél — en wat doet déze alinea dan?",
-          null,
+          "Nieuwsgierig maken gebeurt in de eerste alinea. Wat doet het woordje 'doordat' in déze alinea?",
           "De blaadjes-tip staat helemaal aan het einde van de tekst. Wat doet deze alinea met het woordje 'doordat'?",
         ],
         uitlegPad: {
@@ -567,7 +567,7 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
           null,
           "'Zo zie je maar' legt niets uit. Wat geeft de schrijver hiermee aan over egels?",
           "Zie je een naam of een echte tuin in deze zin?",
-          null,
+          "Nieuwsgierig maken doe je aan het begin van een tekst. Opent 'Zo zie je maar' een tekst, of rondt het iets af?",
         ],
         uitlegPad: {
           stappen: [
@@ -594,7 +594,7 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
         wrongHints: [
           null,
           "Dat is een oorzaak-gevolg-zin. Welke taak hoort bij 'doordat'?",
-          null,
+          "'In deze tekst lees je...' kondigt de hele tekst aan. Bij welke taak hoort dat?",
           "'Kortom' is een samenvat-woord. Welke taak hoort daarbij?",
         ],
         uitlegPad: {
@@ -624,7 +624,7 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
           null,
           "Het menu van de egel stond al eerder in de tekst. Waar wijst het woordje 'kortom' op?",
           "Meneer Baas woont in een ándere alinea. Lees alinea 4 nog eens: wat vindt de schrijver van egels?",
-          null,
+          "Staat er een vraag in alinea 4? En gaat het over de zomer, of over een ander seizoen?",
         ],
         uitlegPad: {
           stappen: [
@@ -664,7 +664,7 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
           null,
           "Wordt er een persoon of een echte tuin met een naam genoemd?",
           "Staat er 'ik vind' of 'kortom' in deze alinea?",
-          null,
+          "Wordt hier aangekondigd waar de tekst over gaat? Of wordt er verteld hoe iets werkt?",
         ],
         uitlegPad: {
           stappen: [
@@ -715,7 +715,12 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
         q: "Welk signaalwoord wijst op de functie **'mening geven'**?",
         options: ["ik vind", "bijvoorbeeld", "doordat", "kijk maar"],
         answer: 0,
-        wrongHints: [null, "Dat woord kondigt een echt geval aan. Hoort dat bij een mening?", null, null],
+        wrongHints: [
+          null,
+          "Dat woord kondigt een echt geval aan. Hoort dat bij een mening?",
+          "'Doordat' vertelt hoe het één door het ander komt. Is dat iets wat de schrijver vindt?",
+          "'Kijk maar' laat een echt geval zien. Hoort dat bij een mening?",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -766,7 +771,12 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
           "Hij leidt de tekst in",
         ],
         answer: 0,
-        wrongHints: [null, "Staat er ergens 'ik vind' of 'kortom'?", null, null],
+        wrongHints: [
+          null,
+          "Staat er ergens 'ik vind' of 'kortom'?",
+          "Afronden doe je met een woord als 'kortom' of 'dus'. Begint deze alinea zo?",
+          "Een inleiding kondigt de hele tekst aan. Doet 'Kijk maar naar...' dat, of laat het iets zien?",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -831,8 +841,8 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         options: [
           "Het vertelt in een paar woorden waar het stukje eronder over gaat",
           "Het geeft alvast de antwoorden op de vragen bij de tekst",
-          "Het vertelt hoe de tekst afloopt",
-          "Het maakt de tekst netjes even lang",
+          "Het vertelt in een paar woorden hoe de hele tekst afloopt",
+          "Het vertelt in een paar woorden waar de hele tekst over gaat",
         ],
         answer: 0,
         evidence: "Een tussenkopje is een wegwijzer — net als een bordje in de supermarkt.",
@@ -840,7 +850,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
           null,
           "Zou een schrijver de antwoorden zomaar verklappen? Denk aan het bordje in de supermarkt: wat vertelt dat je?",
           "Dan zou je het einde al kennen! Waar wijst het bordje boven een stúkje naartoe?",
-          null,
+          "Dat doet de titel, boven de héle tekst. Een tussenkopje staat boven één stukje. Waar gaat het dan over?",
         ],
         uitlegPad: {
           stappen: [
@@ -880,7 +890,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
           null,
           "Dat gaat maar over één zinnetje. Past dit kopje ook bij de vacht en de vetlaag?",
           "Zou dit kopje niet boven duizend andere teksten passen? Een goed kopje past precies bij dít stukje.",
-          null,
+          "Over jagen staat niets in de alinea. Lees de zinnen nog eens: waar gaan ze allemaal over?",
         ],
         uitlegPad: {
           stappen: [
@@ -912,7 +922,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
           "Zo ontstaat een regenboog",
           "Het weer",
           "Zeven kleuren",
-          "Verven met waterverf",
+          "Hoe regen ontstaat",
         ],
         answer: 0,
         evidence: "Een regenboog zie je alleen als de zon schijnt terwijl het regent.",
@@ -920,7 +930,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
           null,
           "Dat kopje past boven het journaal, boven een tekst over storm én boven eentje over sneeuw. Is het niet veel te ruim voor dit ene stukje?",
           "De kleuren zijn maar één zinnetje van de alinea. Waar gaat het héle stukje over?",
-          null,
+          "Over hoe regen ontstaat staat niets in de alinea. Wat ontstaat er wél, volgens alle vier de zinnen?",
         ],
         uitlegPad: {
           stappen: [
@@ -957,7 +967,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         wrongHints: [
           null,
           "Een te breed kopje is vaak juist heel kort. Wat is er mis met een kopje als 'Dieren' boven een alinea over de vacht van de ijsbeer?",
-          null,
+          "Moeilijke woorden maken een kopje niet te breed. Denk aan 'Dieren' boven een stukje over de ijsbeer: wat is daar mis mee?",
           "De lengte van de alinea heeft niets te maken met het probleem. Wat doet een wegwijzer die je overal heen stuurt?",
         ],
         uitlegPad: {
@@ -985,7 +995,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         wrongHints: [
           null,
           "Het ei is alleen de eerste stap. Past dat kopje ook bij de rups, de pop en de metamorfose?",
-          null,
+          "Zou dat kopje ook boven een tekst over kikkers of vogels kunnen staan? Dan past het niet precies bij dít stukje.",
           "Over vliegen staat niets in de alinea. Zoek het kopje dat alle stappen dekt.",
         ],
         uitlegPad: {
@@ -1014,7 +1024,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         wrongHints: [
           null,
           "Een staart is geen eten. Lees het kopje nog eens: waar moet de alinea over gaan?",
-          null,
+          "Bomen en bladeren: gaat dat over eten, of over de winter? Lees het kopje nog eens.",
           "Deze dieren gaan wel de winter door, maar wat dóén ze: eten verstoppen of iets heel anders?",
         ],
         uitlegPad: {
@@ -1048,7 +1058,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         wrongHints: [
           null,
           "Een te breed kopje past boven de héle tekst of boven heel veel teksten. Is dat hier het probleem?",
-          null,
+          "Een kopje dat precies goed is, past bij álle zinnen. Past een kopje over één zinnetje bij alle zinnen?",
           "Gaat het hier om het aantal woorden in het kopje, of om hoeveel zinnen het dekt?",
         ],
         uitlegPad: {
@@ -1108,7 +1118,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         wrongHints: [
           null,
           "Gaat deze alinea over de weg naar school, of over wat er ín de klas gebeurt?",
-          null,
+          "Dit speelt zich af ná school. Waar moet de alinea volgens het kopje over gaan?",
           "Er komt een fiets in voor, maar fietst Sam hier ergens naartoe?",
         ],
         uitlegPad: {
@@ -1184,7 +1194,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
           null,
           "De spiegels zijn maar een klein stukje van het verhaal. Past dit kopje ook bij het ritme van flitsen?",
           "Zou dit kopje niet boven honderd andere teksten kunnen staan? Zoek iets dat precies bij dít stukje past.",
-          null,
+          "De wachter hoort bij een ándere alinea. Lees de eerste zin van alinea 2 nog eens.",
         ],
         uitlegPad: {
           stappen: [
@@ -1224,7 +1234,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
           null,
           "Dat is maar één van zijn taken, uit één zinnetje. Wie deed al dat werk — en past dát boven de hele alinea?",
           "Gaat deze alinea over het hele land, of over één beroep in één toren? Pas op voor een kopje dat veel te ruim zit.",
-          null,
+          "Computers horen bij de alinea over nú. Met welk woord begint alinea 3?",
         ],
         uitlegPad: {
           stappen: [
@@ -1264,7 +1274,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
           null,
           "Satellieten staan in maar één zinnetje. Past dat kopje ook bij het reservelicht en bij de mensen die de torens prachtig vinden?",
           "Dat kopje past boven een tekst over telefoons, auto's én raketten. Zoek iets dat precies dít stukje dekt.",
-          null,
+          "Het treden klimmen deed de wachter van vroeger. Over welke tijd gaat alinea 4?",
         ],
         uitlegPad: {
           stappen: [
@@ -1302,7 +1312,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
         wrongHints: [
           null,
           "Staat er een naam van een schipper in alinea 2? Gaat de alinea over één concreet geval?",
-          null,
+          "Staat er een vraag in alinea 2? Nieuwsgierig maken gebeurt meestal in de eerste alinea.",
           "'Kortom' staat nergens in alinea 2. Wat doet het woordje 'daardoor' in de tweede zin?",
         ],
         uitlegPad: {
@@ -1331,7 +1341,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
           null,
           "Alinea 1 maakt je kennis met vuurtorens in het algemeen. Is een reservelicht daar het hoofdonderwerp?",
           "Alinea 2 gaat over hoe het licht werkt. Past 'reserve' daarboven?",
-          null,
+          "Alinea 3 gaat over de wachter van vroeger. In welke alinea staat het woord 'reservelicht'?",
         ],
         uitlegPad: {
           stappen: [
@@ -1359,7 +1369,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
         wrongHints: [
           null,
           "Olie en lenzen zijn twee losse taken. Onder welke zin passen ál die taken?",
-          null,
+          "Dat is één detail: hoe zwaar het werk was. Welke zin stelt de persoon voor die al dat werk deed?",
           "De lamp en de wacht zijn ook taken — details dus. Welke zin is de paraplu waar alle taken onder passen?",
         ],
         uitlegPad: {
@@ -1389,17 +1399,17 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
         q: "Wat is de functie van **alinea 1** van de vuurtoren-tekst?",
         options: [
           "Het is de inleiding: de lezer maakt kennis met het onderwerp",
-          "De schrijver geeft zijn mening over vuurtorens",
-          "Het is het slot: de tekst wordt samengevat",
-          "De schrijver geeft een voorbeeld van één schipper",
+          "De schrijver geeft zijn mening: vuurtorens zijn prachtig",
+          "Het is het slot: de tekst wordt samengevat en afgerond",
+          "De schrijver geeft een voorbeeld van één schipper op zee",
         ],
         answer: 0,
         evidence: "Langs de Nederlandse kust staan tientallen vuurtorens.",
         wrongHints: [
           null,
-          "Staat er ergens 'ik vind' of 'prachtig' in deze alinea? Of vertelt hij vooral wát een vuurtoren is?",
+          "'Prachtig' staat pas in de laatste alinea. Vertelt alinea 1 wat de schrijver vindt, of wát een vuurtoren is?",
           "Kan het einde vooraan staan? Kijk waar deze alinea zit en wat hij doet.",
-          null,
+          "Staat er een schipper met een naam in alinea 1? Of gaat het over alle vuurtorens langs de kust?",
         ],
         uitlegPad: {
           stappen: [

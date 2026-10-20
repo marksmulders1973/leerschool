@@ -67,7 +67,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
           null,
           "Kan Lisa knalrood zijn? Vul je antwoord eens in op de plek van 'hij' en luister of de zin klopt.",
           "De kleur wordt pas ná 'hij' genoemd. Zoek eens terug: wat werd er vlak vóór 'hij' genoemd?",
-          null,
+          "Lisa's vader komt in de zinnen niet voor. Zoek terug: wat heeft Lisa net gekregen?",
         ],
         uitlegPad: {
           stappen: [
@@ -103,7 +103,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
           null,
           "'Ze nemen' — dat werkwoord past bij meer dan één persoon. Wie komen er samen op bezoek?",
           "Kan een taart zichzelf meenemen? Zoek terug naar wie er iets kan meenemen.",
-          null,
+          "De buren worden niet genoemd. Wie komen er volgens de eerste zin op bezoek?",
         ],
         uitlegPad: {
           stappen: [
@@ -138,7 +138,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
           null,
           "Kan een deur ergens naartoe rennen? Zoek wie of wat er in de zin ervóór wordt genoemd.",
           "Er wordt geen buurman genoemd. Zoek terug in de zin ervoor.",
-          null,
+          "Kan een geluid naar de deur rennen? Zoek wie of wat er blafte.",
         ],
         uitlegPad: {
           stappen: [
@@ -200,7 +200,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
           null,
           "Kan een deur 'lek' zijn? Zoek iets dat lek kan zijn vlak vóór 'die'.",
           "Er wordt helemaal geen bel genoemd. Zoek terug naar iets dat lek kan zijn.",
-          null,
+          "De straat wordt niet genoemd. Zoek iets in de zin ervoor dat lek kan zijn.",
         ],
         uitlegPad: {
           stappen: [
@@ -217,13 +217,13 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
       },
       {
         q: "*\"De kinderen spelen buiten. ___ hebben veel plezier.\"* — Welk verwijswoord past op de lege plek?",
-        options: ["Ze", "Hij", "Het", "Deze week"],
+        options: ["Ze", "Hij", "Het", "Hun"],
         answer: 0,
         wrongHints: [
           null,
           "'Hij' past bij één persoon. Over hoeveel kinderen gaat de eerste zin?",
           "Past 'het' bij een groep spelende kinderen? Kijk naar het werkwoord 'hebben'.",
-          "'Deze week' zegt iets over tijd, niet over wie er plezier hebben.",
+          "'Hun hebben' hoor je weleens, maar zo schrijf je het niet. Welk woord gebruik je als een groep iets doet?",
         ],
         uitlegPad: {
           stappen: [
@@ -258,7 +258,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
         wrongHints: [
           null,
           "Zou je over Sanne 'hij' zeggen? Controleer of het verwijswoord past bij de persoon.",
-          null,
+          "Kan een brief ergens wonen? Zoek een persoon in de zin ervoor.",
           "Wordt er een postbode genoemd? Zoek terug in de zin ervoor.",
         ],
         uitlegPad: {
@@ -307,15 +307,15 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
         options: [
           "Vlak vóór het verwijswoord",
           "Helemaal aan het einde van de tekst",
-          "Alleen in de titel van de tekst",
-          "Nergens, je moet het raden",
+          "In de zin ná het verwijswoord",
+          "Altijd in de eerste zin van de tekst",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een verwijswoord wijst meestal naar iets dat al genoemd is. Is dat aan het einde van de tekst?",
-          null,
-          null,
+          "Een verwijswoord wijst terug naar iets dat al genoemd is. Kijk je dan vooruit of terug?",
+          "Een lange tekst noemt veel personen en dingen. Zoek je dan helemaal vooraan, of dicht bij het verwijswoord?",
         ],
         uitlegPad: {
           stappen: [
@@ -377,13 +377,13 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
     checks: [
       {
         q: "*\"Fenna heeft een kat. Ze heet Snuffel...\"* — Naar wie of wat verwijst 'ze' in deze zin?",
-        options: ["De kat", "Fenna", "De moeder van Fenna", "De dierenarts"],
+        options: ["De kat", "Fenna", "Fenna's vader", "De dierenarts"],
         answer: 0,
         evidence: "Fenna heeft een kat. Ze heet Snuffel en is drie jaar oud.",
         wrongHints: [
           null,
           "Fenna wordt ook vlak ervoor genoemd — maar vul eens in: heet Fenna Snuffel? Wie krijgt de naam?",
-          null,
+          "Over een vader zeg je 'hij', en hij komt pas later in de tekst. Zoek vlak vóór 'ze'.",
           "De dierenarts komt pas veel later in de tekst. Zoek vlak vóór het woordje 'ze'.",
         ],
         uitlegPad: {
@@ -452,7 +452,7 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
           null,
           "Fenna's vader belde juist óp — wie neemt er dan op en geeft antwoord?",
           "Kan de zieke kat zeggen dat ze langs mogen komen? Denk aan wie er kan praten aan de telefoon.",
-          null,
+          "Fenna komt in deze twee zinnen niet voor. Wie werd er gebeld en gaf antwoord?",
         ],
         uitlegPad: {
           stappen: [
@@ -484,7 +484,7 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
         wrongHints: [
           null,
           "De dierenarts is een persoon, geen plek. 'Er' wijst naar een plek. Welke plek staat er vlak voor?",
-          null,
+          "In het doosje zitten de pilletjes. Maar waar verstopt Fenna één pilletje in? Kijk in de zin ervoor.",
           "Fenna's vader is ook een persoon. 'Er' is hier een plek-verwijswoord — zoek de plek.",
         ],
         uitlegPad: {
@@ -540,7 +540,12 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
         q: "*\"Bij de dierenarts kreeg Snuffel een prikje. Dat vond ze niet leuk.\"* — Naar wat verwijst 'dat'?",
         options: ["Het prikje", "De witte jas", "Het doosje pilletjes", "De mand van Snuffel"],
         answer: 0,
-        wrongHints: [null, "De witte jas wordt pas ná 'dat' genoemd. Zoek terug in de zin ervoor.", null, null],
+        wrongHints: [
+          null,
+          "De witte jas wordt pas ná 'dat' genoemd. Zoek terug in de zin ervoor.",
+          "Het doosje pilletjes komt pas later. Zoek in de zin vlak vóór 'dat'.",
+          "De mand hoort bij het zieke stukje, eerder in de tekst. Wat kreeg Snuffel bij de dierenarts?",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -586,7 +591,12 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
         q: "*\"Fenna was opgelucht: haar kat was weer beter.\"* — Naar wie verwijst 'haar'?",
         options: ["Fenna", "Snuffel", "De dierenarts", "Fenna's vader"],
         answer: 0,
-        wrongHints: [null, "Snuffel ís de kat. Kan de kat dan ook de baas van de kat zijn?", null, null],
+        wrongHints: [
+          null,
+          "Snuffel ís de kat. Kan de kat dan ook de baas van de kat zijn?",
+          "De dierenarts heeft in dit verhaal geen kat. Wie is de baas van Snuffel?",
+          "Fenna's vader belde wel, maar van wie is de kat? Kijk naar het begin van de tekst.",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -655,7 +665,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
           null,
           "Lena's huis staat niet in de tekst. Zoek de plek in de zin ervoor.",
           "De egel is een dier, geen plek. 'Er' wijst naar een plaats.",
-          null,
+          "De straat wordt niet genoemd. Waar ging Lena naartoe?",
         ],
         uitlegPad: {
           stappen: [
@@ -708,7 +718,12 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
         q: "*\"De merel zong in de tuin. Ik hoorde hem al vroeg in de ochtend.\"* — Naar wie of wat verwijst 'hem'?",
         options: ["De merel", "De tuin", "Ik", "De ochtend"],
         answer: 0,
-        wrongHints: [null, 'Een tuin kun je niet horen — je hoort een geluid. Wie of wat maakte er geluid in de eerste zin?', '\'Ik\' is degene die hoort, niet de merel die gehoord wordt. Wie maakte het geluid?', null],
+        wrongHints: [
+          null,
+          "Een tuin kun je niet horen — je hoort een geluid. Wie of wat maakte er geluid in de eerste zin?",
+          "'Ik' is degene die hoort, niet degene die gehoord wordt. Wie maakte het geluid?",
+          "Kun je een ochtend horen? 'De ochtend' zegt alleen wanneer. Wie of wat maakte het geluid?",
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Zoek terug", tekst: "De zin ervoor noemt de merel. 'Hem' wijst naar dat mannetjesvogeltje." },
@@ -764,7 +779,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
           null,
           "'Daar' wijst naar een plek waar het druk kan zijn — zijn fietsen een plek?",
           "Ze fietsten er wel overheen, maar wáár kwamen ze aan? Zoek het doel van het fietstochtje.",
-          null,
+          "Het weer wordt niet genoemd. 'Daar' wijst naar een plek — waar fietsten ze naartoe?",
         ],
         uitlegPad: {
           stappen: [
@@ -797,7 +812,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
           null,
           "Kan een school ergens in lopen? 'Ze' wijst naar een persoon die zelf kan lopen.",
           "Een rugzak kan niet lopen. Zoek de persoon vlak voor 'ze'.",
-          null,
+          "Er komt geen leraar in de zinnen voor. Wie deed de rugzak op?",
         ],
         uitlegPad: {
           stappen: [
@@ -820,7 +835,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
           null,
           "Tom is een persoon, geen ding. 'Het' wijst naar een onzijdig ding.",
           "Er wordt geen winkel genoemd in de zinnen. Zoek terug.",
-          null,
+          "Geld wordt niet genoemd. Wat kocht Tom, en wat kun je uitlezen?",
         ],
         uitlegPad: {
           stappen: [
@@ -878,7 +893,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
         wrongHints: [
           null,
           "Kan een taart iets uit de oven halen? Zoek een persoon in de zin.",
-          null,
+          "Kan een oven zichzelf leeghalen? Zoek een persoon in de zin.",
           "Wordt er in deze zin een moeder genoemd? Lees de zin helemaal uit.",
         ],
         uitlegPad: {
@@ -934,7 +949,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
         wrongHints: [
           null,
           "Dat is wat er gebeurde ná 'daardoor': het gevolg. 'Daardoor' wijst juist naar de oorzaak. Wat gebeurde er eerst?",
-          null,
+          "'De hele nacht' zegt alleen hoe lang. Wat gebeurde er die nacht? Dát is de oorzaak.",
           "Worden er kinderen genoemd in deze twee zinnen?",
         ],
         uitlegPad: {
@@ -1071,7 +1086,7 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
           null,
           "Het dorp wordt wel genoemd, maar wonen de geiten en de ezel in het hele dorp — of op één plek aan de rand ervan?",
           "De school komt in deze zinnen niet voor. Waar was het uitje naartoe?",
-          null,
+          "De bus komt pas aan het einde van de tekst. Waar ging het uitje naartoe?",
         ],
         uitlegPad: {
           stappen: [
@@ -1164,7 +1179,12 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
         options: ['De hele dag op de kinderboerderij', 'De bus waarin ze terugreden', 'De chauffeur van de bus', 'De lange reis heen met de bus'],
         answer: 0,
         evidence: "Aan het einde van de middag mochten de kinderen de konijnen voeren. Dit vonden ze het allerleukst van de hele dag. In de bus terug werd er nog lang over nagepraat.",
-        wrongHints: [null, 'Wordt er over de bus nagepraat? Wat was er die dag zo bijzonder?', null, 'De heenreis was maar een klein stukje. Waar ging het hele verhaal over?'],
+        wrongHints: [
+          null,
+          "Wordt er over de bus nagepraat? Wat was er die dag zo bijzonder?",
+          "Een chauffeur wordt nergens genoemd. Waar praat je over na, in de bus na een uitje?",
+          "De heenreis was maar een klein stukje. Waar ging het hele verhaal over?",
+        ],
         uitlegPad: {
           stappen: [
             { titel: "'Er over napraten' = over een onderwerp praten", tekst: "'Er' verwijst hier naar de inhoud van het gesprek — het onderwerp. In de context: wat hebben ze die dag gedaan?" },
@@ -1218,7 +1238,12 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
         q: "*\"Eén geitje knabbelde zelfs aan haar jas.\"* — Naar wie verwijst 'haar'?",
         options: ["Jara", "Boerin Els", "Meester Ruben", "Het geitje"],
         answer: 0,
-        wrongHints: [null, "Boerin Els stond bij de ingang. Over wie gaat deze alinea?", null, null],
+        wrongHints: [
+          null,
+          "Boerin Els stond bij de ingang. Over wie gaat deze alinea?",
+          "Meester Ruben is een man. Past 'haar' bij hem?",
+          "Het geitje knabbelt zelf. Aan wiens jas knabbelt het? Kijk wie er naar de geiten liep.",
+        ],
         uitlegPad: {
           stappen: [
             {
@@ -1267,7 +1292,7 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
         wrongHints: [
           null,
           "Jara staat in de alinea ervoor, bij de geiten. Tegen wie praat boerin Els hier?",
-          null,
+          "Meester Ruben komt in dit stukje niet voor. Wie troostte boerin Els net? Tegen die persoon praat ze.",
           "Balthasar is de ezel zelf. Kan de ezel aan zichzelf wennen?",
         ],
         uitlegPad: {
