@@ -25,7 +25,7 @@ const steps = [
     emoji: "🇪🇺",
     checks: [
       {
-        q: "Hoeveel landen zitten er in de Europese Unie (in 2025)?",
+        q: "Hoeveel landen zitten er in de Europese Unie (in 2026)?",
         options: ["25 landen", "27 landen", "28 landen", "30 landen"],
         answer: 1,
         wrongHints: ["Zo groot was de EU in 2004. Sindsdien zijn er landen bijgekomen én is er een land vertrokken.", null, "Dat aantal hoort bij een eerdere periode. Is er sindsdien iets veranderd in wie er lid is?", "Te hoog — sinds 2013 is er geen nieuw land meer bij de EU gekomen."],
@@ -40,7 +40,7 @@ const steps = [
         q: "In welk jaar werd het Verdrag van Maastricht getekend — het ontstaan van de Europese Unie?",
         options: ["1957", "1973", "1992", "2002"],
         answer: 2,
-        wrongHints: ["Te vroeg — toen heette het nog EEG, niet EU.", null, null, "Te laat — toen kwam de euro pas in omloop. EU bestond al."],
+        wrongHints: ["Te vroeg — toen heette het nog EEG, niet EU.", "In 1973 kwamen het Verenigd Koninkrijk, Ierland en Denemarken bij de EEG, maar de EU bestond nog niet.", null, "Te laat — toen kwam de euro pas in omloop. EU bestond al."],
         explanation: "**1992 Verdrag van Maastricht** = oprichting Europese Unie. Was eerder EEG (Europese Economische Gemeenschap, 1957). Maastricht maakte de samenwerking breder: niet alleen economie, ook politiek + gemeenschappelijke munt (euro plan).",
         uitlegPad: compact(
           "Verdrag van Maastricht 1992 = officieel begin van de Europese Unie. NL-stad, ondertekend door 12 landen.",
@@ -71,7 +71,7 @@ const steps = [
         q: "Hoeveel vrijheden heeft de Europese interne markt?",
         options: ["2 vrijheden", "3 vrijheden", "4 vrijheden", "5 vrijheden"],
         answer: 2,
-        wrongHints: ["Te weinig — er zijn er meer.", "Bijna, maar er is nog één meer.", null, "Te veel — er zijn er minder."],
+        wrongHints: ["Dat zijn er te weinig. Tel de vrijheden in de uitleg na.", "Bijna. Tel de vrijheden in de uitleg nog eens na.", null, "Zoveel zijn het er niet. Tel ze in de uitleg na."],
         explanation: "**4 vrijheden**: personen + goederen + diensten + kapitaal. Onthoud met 'PGDK' of '4 P+G+D+K'.",
         uitlegPad: compact(
           "4 vrijheden van de interne EU-markt: personen, goederen, diensten, kapitaal. Vorm sinds oprichting EEG 1957.",
@@ -81,9 +81,9 @@ const steps = [
       },
       {
         q: "Mag een Nederlander zonder werkvergunning in Frankrijk gaan werken?",
-        options: ["Ja — door het vrij verkeer van personen", "Nee — alleen met speciale vergunning", "Alleen voor maximaal 3 maanden", "Alleen als hij Frans spreekt"],
+        options: ["Ja — door het vrij verkeer van personen", "Nee — alleen met speciale vergunning", "Alleen voor maximaal 3 maanden per jaar", "Alleen als hij goed Frans spreekt"],
         answer: 0,
-        wrongHints: [null, "EU-burgers hebben juist GEEN vergunning nodig. Wel registratie soms.", "Geen 3-maanden-limiet voor werken. Wel voor toerisme buiten EU.", "Taal is leuk maar niet wettelijk verplicht."],
+        wrongHints: [null, "Welke van de vier vrijheden gaat over mensen die in een ander EU-land willen werken?", "Een grens van 3 maanden geldt voor toeristen buiten de EU. Geldt zoiets ook voor EU-burgers in de EU? Kijk bij de eerste vrijheid.", "Een taal spreken is handig, maar staat er in de vier vrijheden iets over taal?"],
         explanation: "**Vrij verkeer van personen** = elke EU-burger mag in elk EU-land wonen, werken, studeren en met pensioen gaan. Geen werkvergunning vereist. Wel: meestal eerste 3 maanden registreren bij gemeente.",
         uitlegPad: compact(
           "EU-burger = mag overal in EU werken + wonen zonder vergunning. Geldt niet voor niet-EU (bv. Britten sinds Brexit moeten weer vergunning).",
@@ -95,7 +95,7 @@ const steps = [
         q: "Mag de Nederlandse overheid invoerheffing leggen op auto's uit Duitsland?",
         options: ["Ja — elk land is vrij om dat te kiezen", "Ja — maar alleen op dure luxe-auto's", "Nee — vrij verkeer van goederen verbiedt dit", "Nee — behalve op auto's die op benzine rijden"],
         answer: 2,
-        wrongHints: ["Tegenovergesteld — invoerheffingen binnen EU zijn juist VERBODEN.", "Geen onderscheid luxe/standaard binnen EU.", null, "Geen onderscheid brandstof/elektrisch binnen EU."],
+        wrongHints: ["Kijk bij de tweede vrijheid: wat zegt die over belasting op producten uit andere EU-landen?", "Maakt het voor de EU-regels uit hoe duur de auto is? Kijk bij de tweede vrijheid.", null, "Maakt de brandstof verschil voor de EU-regels? Kijk bij de tweede vrijheid."],
         explanation: "**Vrij verkeer van goederen** = geen invoerheffingen tussen EU-lidstaten. NL mag geen extra belasting op Duitse auto's heffen. WEL toegestaan: BPM (Belasting van Personenauto's) op ALLE auto's (Nederlandse + Duitse) — dat is geen invoerheffing, maar gebruiks-belasting.",
         uitlegPad: compact(
           "Geen invoerheffingen tussen EU-lidstaten = douanevrije markt. Wel BTW + gebruiks-belastingen (BPM) — die gelden voor alle auto's gelijk.",
@@ -243,7 +243,7 @@ const steps = [
         q: "Hoeveel sterren staan er op de EU-vlag?",
         options: ["10 sterren", "12 sterren", "15 sterren", "27 sterren (één per lidstaat)"],
         answer: 1,
-        wrongHints: ["Te weinig.", null, "Te veel — het is een vast aantal.", "Veel mensen denken dit — maar nee, het aantal sterren verandert NIET met het aantal landen. Vaste 12."],
+        wrongHints: ["Het zijn er meer. Tel ze op een EU-vlag.", null, "Het zijn er minder. Tel ze op een EU-vlag.", "Veel mensen denken dit — maar nee, het aantal sterren verandert NIET met het aantal landen. Vaste 12."],
         explanation: "**12 sterren** op de EU-vlag — vast aantal sinds 1955 (eerst als vlag van de Raad van Europa). 12 staat voor perfectie/voltooidheid (12 maanden, 12 apostelen, 12 uren). VERANDERT NIET met aantal lidstaten.",
         uitlegPad: compact(
           "EU-vlag = 12 gele sterren op blauw. Vast getal — niet aantal landen. Symbool van eenheid + perfectie.",
@@ -255,7 +255,7 @@ const steps = [
         q: "Welk land is de **grootste handelspartner** van Nederland binnen de EU?",
         options: ["België", "Duitsland", "Frankrijk", "Italië"],
         answer: 1,
-        wrongHints: ["België staat op #2 — net na #1.", null, "Frankrijk is wel groot maar niet de grootste partner van NL.", "Italië staat verder weg in handel."],
+        wrongHints: ["België hoort bij de top, maar is niet de allergrootste.", null, "Frankrijk is wel groot maar niet de grootste partner van NL.", "Italië ligt ver weg; de meeste handel heb je met een buurland."],
         explanation: "**Duitsland** = grootste handelspartner NL (zowel import als export). Logisch: buurland, ~84 miljoen mensen, sterke industrie. ~25% van Nederlandse export gaat naar Duitsland.",
         uitlegPad: compact(
           "Duitsland = NL's grootste handelspartner. Buurland, sterke economie, ~84 mln inwoners.",

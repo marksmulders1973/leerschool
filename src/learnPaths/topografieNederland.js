@@ -152,7 +152,7 @@ const steps = [
         q: "Hoeveel provincies heeft Nederland?",
         options: ["12","11","13","16"],
         answer: 0,
-        wrongHints: [null,"Net iets meer.","Net iets minder.","Veel te veel — denk aan ons landje."],
+        wrongHints: [null,"Zoveel waren het er vóór 1986, toen Flevoland erbij kwam.","Zoveel zijn het er niet. Tel ze in de uitleg na.","Dat is het aantal deelstaten van Duitsland. Tel de Nederlandse provincies in de uitleg na."],
         uitlegPad: {
           stappen: [{ titel: "12 provincies", tekst: "Nederland heeft 12 provincies. Vanaf noord: Groningen, Friesland, Drenthe → Overijssel, Flevoland → Gelderland, Utrecht → Noord-Holland, Zuid-Holland, Zeeland → Noord-Brabant, Limburg." }],
           woorden: [{ woord: "provincie", uitleg: "Bestuurlijke regio binnen een land. Elk met eigen hoofdstad + provinciaal bestuur (Provinciale Staten)." }],
@@ -170,7 +170,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat geld gebruikten we vroeger. Welk geld gebruik je nu in de winkel?",
-          null,
+          "De dollar is het geld van Amerika. Welk geld zit er in jouw portemonnee?",
           "Dit geld hoort bij Engeland.",
         ],
         uitlegPad: {
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [
           null,
           "Dit buurland ligt wel tegen Nederland aan, maar aan een andere kant.",
-          null,
+          "Frankrijk grenst aan België, niet aan Nederland. Kijk rechts van Nederland op de kaart.",
           "Tussen Nederland en dit land ligt de zee.",
         ],
         uitlegPad: {
@@ -253,7 +253,7 @@ const steps = [
         q: "Welke zee ligt aan de **westkant** van Nederland?",
         options: ["De Noordzee", "De Oostzee", "De Middellandse Zee", "De Zwarte Zee"],
         answer: 0,
-        wrongHints: [null, "Let op de naam: ligt deze zee aan de westkant?", null, null],
+        wrongHints: [null, "Let op de naam: ligt deze zee aan de westkant?", "De Middellandse Zee ligt ver weg in het zuiden, bij Spanje en Italië.", "De Zwarte Zee ligt helemaal in het oosten van Europa, ver van Nederland."],
         uitlegPad: {
           stappen: [
             {
@@ -295,7 +295,7 @@ const steps = [
           null,
           "Deze man leefde lang geleden. Wie is het nu?",
           "Dit is de koning van een buurland.",
-          null,
+          "Karel de Grote leefde meer dan duizend jaar geleden. Wie is het nu?",
         ],
         uitlegPad: {
           stappen: [
@@ -337,7 +337,7 @@ const steps = [
         wrongHints: [
           null,
           "Heeft Nederland veel van deze? Denk aan hoe plat het land is.",
-          null,
+          "Bossen en heide zijn mooi, maar houden ze het water tegen of pompen ze het weg?",
           "Hier ga je over of onder het water door. Houden ze het water weg?",
         ],
         uitlegPad: {
@@ -385,7 +385,7 @@ const steps = [
         wrongHints: [
           null,
           "Denk aan de hoogste 'berg' van Nederland. Is die echt hoog?",
-          null,
+          "Kijk op de kaart van Europa: ligt Nederland bij Spanje en Italië, of bij de Noordzee?",
           "Denk aan de rivieren, meren en kanalen.",
         ],
         uitlegPad: {
@@ -446,7 +446,7 @@ const steps = [
         q: "In welke provincie ligt de **Vaalserberg** (hoogste punt van NL)?",
         options: ["Limburg","Drenthe","Gelderland","Friesland"],
         answer: 0,
-        wrongHints: [null,"Drenthe is plat.","Gelderland heeft de Veluwe maar daar is de hoogste maar ~110m.","Friesland is ook plat."],
+        wrongHints: [null,"Drenthe heeft hunebedden en bossen, maar geen echte heuvels.","Gelderland heeft de Veluwe, maar die komt niet hoger dan ongeveer 110 meter.","Friesland is plat met veel meren. Waar zijn de enige echte heuvels van Nederland?"],
         uitlegPad: {
           stappen: [{ titel: "Vaalserberg — 322 m, Limburg", tekst: "Vaalserberg = 322 m hoog. Ligt in Limburg, uiterste zuid-oosten van NL. Tegelijk 'Drielandenpunt' — hier raken NL, België én Duitsland elkaar. Hoogste punt NL — niet groots als alpen-berg, maar voor plat NL wel iets bijzonders." }],
           woorden: [{ woord: "Vaalserberg", uitleg: "322 m hoog. Bij dorp Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen elkaar raken. Toerisme-trekker." }],
@@ -475,7 +475,7 @@ const steps = [
         q: "In welke provincie vind je veel **hunebedden**?",
         options: ["Drenthe", "Zeeland", "Flevoland", "Noord-Holland"],
         answer: 0,
-        wrongHints: [null, null, "Deze provincie is heel jong. Hunebedden zijn heel oud.", null],
+        wrongHints: [null, "Zeeland is bekend om eilanden en de Deltawerken, niet om hunebedden.", "Deze provincie is heel jong. Hunebedden zijn heel oud.", "Noord-Holland is bekend om Amsterdam en tulpen. Hunebedden vind je in een bosrijke provincie in het noordoosten."],
         uitlegPad: {
           stappen: [
             {
@@ -513,7 +513,7 @@ const steps = [
         q: "Welke provincie is bekend om **carnaval** en de stad **Eindhoven**?",
         options: ["Noord-Brabant", "Friesland", "Drenthe", "Flevoland"],
         answer: 0,
-        wrongHints: [null, "Deze provincie ligt in het noorden. Waar ligt Eindhoven?", null, null],
+        wrongHints: [null, "Deze provincie ligt in het noorden. Waar ligt Eindhoven?", "Drenthe ligt in het noorden en is bekend om hunebedden. Waar ligt Eindhoven?", "Flevoland is de jonge provincie in het midden. Waar wordt carnaval het meest gevierd?"],
         uitlegPad: {
           stappen: [
             {
@@ -551,7 +551,7 @@ const steps = [
         q: "In welke provincie liggen **Rotterdam** en **Den Haag**?",
         options: ["Zuid-Holland", "Noord-Holland", "Utrecht", "Zeeland"],
         answer: 0,
-        wrongHints: [null, "Daar ligt Amsterdam. Liggen Rotterdam en Den Haag daar ook?", null, null],
+        wrongHints: [null, "Daar ligt Amsterdam. Liggen Rotterdam en Den Haag daar ook?", "Utrecht ligt in het midden en niet aan zee. Liggen Rotterdam en Den Haag daar?", "Zeeland is de provincie met eilanden in het zuidwesten. Liggen deze twee grote steden daar?"],
         uitlegPad: {
           stappen: [
             {
@@ -596,7 +596,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Zeeland en Limburg liggen juist helemaal in het zuiden.",
           "Deze drie liggen aan zee, maar in het westen.",
           "Hier zitten twee provincies uit het zuiden bij.",
         ],
@@ -640,7 +640,7 @@ const steps = [
         wrongHints: [
           null,
           "Deze provincie ligt juist helemaal bovenaan.",
-          null,
+          "Friesland ligt in het noorden, bovenaan de kaart.",
           "Deze provincie ligt in het midden.",
         ],
         uitlegPad: {
@@ -683,8 +683,8 @@ const steps = [
         wrongHints: [
           null,
           "In deze provincie zijn juist heuvels. De Elfstedentocht gaat over het ijs.",
-          null,
-          null,
+          "Zeeland heeft zee en eilanden, maar geen elf steden op het ijs.",
+          "Utrecht ligt in het midden. Over welke provincie met meren en schaatsers gaat het?",
         ],
         uitlegPad: {
           stappen: [
@@ -777,7 +777,7 @@ const steps = [
           null,
           "Deze stad ligt wel in Drenthe, maar is niet de hoofdstad.",
           "Deze stad is de hoofdstad van Overijssel.",
-          null,
+          "Leeuwarden is de hoofdstad van Friesland.",
         ],
         uitlegPad: {
           stappen: [
@@ -821,7 +821,7 @@ const steps = [
           "Drenthe en Flevoland",
         ],
         answer: 0,
-        wrongHints: [null, "Wat is de hoofdstad van Friesland? Heet die ook Friesland?", null, null],
+        wrongHints: [null, "Wat is de hoofdstad van Friesland? Heet die ook Friesland?", "Utrecht klopt. Maar hoe heet de hoofdstad van Gelderland?", "Drenthe heeft Assen en Flevoland heeft Lelystad. Heten die hetzelfde als de provincie?"],
         uitlegPad: {
           stappen: [
             {
@@ -864,7 +864,7 @@ const steps = [
           "Naar een koning die daar vroeger woonde",
         ],
         answer: 0,
-        wrongHints: [null, "De naam lijkt op een bloem. Maar gaat het echt over een bloem?", null, null],
+        wrongHints: [null, "De naam lijkt op een bloem. Maar gaat het echt over een bloem?", "Er stroomt geen rivier met die naam door Flevoland. Lees de uitleg bij Lelystad nog eens.", "Er woonde geen koning in Flevoland: het land was toen nog zee. Lees de uitleg bij Lelystad nog eens."],
         uitlegPad: {
           stappen: [
             {
@@ -955,8 +955,8 @@ const steps = [
         wrongHints: [
           null,
           "Dit is wel de grootste stad van Zuid-Holland. Maar is het de hoofdstad?",
-          null,
-          null,
+          "Leiden is een oude universiteitsstad in Zuid-Holland, maar het provinciebestuur zit er niet.",
+          "Delft is bekend om Delfts blauw, maar het provinciebestuur zit er niet.",
         ],
         uitlegPad: {
           stappen: [
@@ -998,8 +998,8 @@ const steps = [
         wrongHints: [
           null,
           "Dit is een bekende grote stad in Noord-Brabant. Maar zit daar het bestuur?",
-          null,
-          null,
+          "Tilburg is een grote stad in Noord-Brabant, maar zit daar het bestuur?",
+          "Breda ligt ook in Noord-Brabant, maar is niet de hoofdstad.",
         ],
         uitlegPad: {
           stappen: [
@@ -1038,7 +1038,7 @@ const steps = [
         q: "Hoe noemen de meeste mensen **'s-Hertogenbosch** in het dagelijks leven?",
         options: ["Den Bosch", "Den Haag", "Den Helder", "Hertogstad"],
         answer: 0,
-        wrongHints: [null, "Deze naam begint ook met 'Den', maar is een andere stad.", null, null],
+        wrongHints: [null, "Deze naam begint ook met 'Den', maar is een andere stad.", "Den Helder ligt helemaal in het noorden van Noord-Holland, bij de marine.", "Die naam bestaat niet. Welke korte naam hoor je op tv en in de trein?"],
         uitlegPad: {
           stappen: [
             {
@@ -1111,7 +1111,7 @@ const steps = [
         q: "Wat is het doel van de **Deltawerken**?",
         options: ["Beschermen tegen overstromingen", "Drinkwater schoonmaken voor iedereen", "Stroom opwekken met water en wind", "Schepen sneller laten varen"],
         answer: 0,
-        wrongHints: [null,"Drinkwater wordt elders gezuiverd.","Sommige werken kunnen wel stroom opwekken maar dat is niet het hoofddoel.","Niet de bedoeling van Deltawerken."],
+        wrongHints: [null,"Drinkwater wordt elders gezuiverd.","Sommige werken kunnen wel stroom opwekken maar dat is niet het hoofddoel.","Schepen varen door sluizen in de Deltawerken, maar daarvoor zijn ze niet gebouwd. Wat gebeurde er in 1953?"],
         uitlegPad: {
           stappen: [{ titel: "Na Watersnood 1953", tekst: "1 februari 1953: zware stormvloed. Zeeland + Zuid-Holland onder water. 1.836 doden + ~70.000 mensen geëvacueerd + 47.000 dieren dood. Politiek besluit: 'nooit meer'. Resultaat: Deltawerken (1958-1997) — serie van 13 dammen + stormvloedkeringen die zee-armen Zeeland afsluiten." }],
           woorden: [{ woord: "Deltawerken", uitleg: "13 grote waterwerken Zeeland 1958-1997. Een van 7 wonderen moderne wereld (American Society of Civil Engineers)." }, { woord: "Oosterscheldekering", uitleg: "Bekendste Deltawerk. Beweegbare stormvloedkering. Alleen dicht bij hoog water." }, { woord: "Watersnoodramp", uitleg: "1953. Grootste natuurramp NL 20e eeuw. 1.836 doden." }],
@@ -1126,7 +1126,7 @@ const steps = [
         q: "Uit welk land komt de rivier de **Rijn**?",
         options: ["Zwitserland", "Frankrijk", "België", "Spanje"],
         answer: 0,
-        wrongHints: [null, "Uit dit land komen de Maas en de Schelde. Ook de Rijn?", null, null],
+        wrongHints: [null, "Uit dit land komen de Maas en de Schelde. Ook de Rijn?", "België ligt wel in de buurt, maar daar begint de Rijn niet. Denk aan bergen met sneeuw.", "Spanje ligt ver naar het zuiden; de Rijn komt daar niet vandaan."],
         uitlegPad: {
           stappen: [
             {
@@ -1223,7 +1223,7 @@ const steps = [
         q: "Hoeveel procent van NL ligt **onder zeeniveau**?",
         options: ["~26%","~5%","~50%","~75%"],
         answer: 0,
-        wrongHints: [null,"Te weinig — er ligt meer onder zeeniveau dan dat.","Te veel — niet de helft.","Veel te veel."],
+        wrongHints: [null,"Te weinig — er ligt meer onder zeeniveau dan dat.","Te veel — niet de helft.","Veel te veel — dan zou bijna heel Nederland onder water liggen."],
         uitlegPad: {
           stappen: [{ titel: "~26% onder NAP", tekst: "Ongeveer 26% van NL ligt onder zeeniveau (= NAP, Normaal Amsterdams Peil). Vooral in west (Zuid-Holland, Noord-Holland, Flevoland). Diepste punt: Zuidplaspolder bij Rotterdam = -6,76 m NAP. Zonder dijken + gemalen zou dit deel van NL gewoon zee zijn." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil. NL-meetpunt voor zeespiegel, gebaseerd op gemiddeld waterpeil Amsterdam." }, { woord: "polder", uitleg: "Land onder zeeniveau, drooggehouden door dijken + gemalen." }, { woord: "Zuidplaspolder", uitleg: "Diepste polder NL. -6,76 m NAP. Bij Rotterdam." }],
@@ -1237,7 +1237,7 @@ const steps = [
         q: "Wat is het **hoogste punt** van Nederland?",
         options: ["Vaalserberg","Mont Blanc","Zuiderzeeweg","Tafelberg"],
         answer: 0,
-        wrongHints: [null,"Mont Blanc is in Frankrijk!","Geen berg.","Tafelberg is in Zuid-Afrika of Suriname."],
+        wrongHints: [null,"Mont Blanc is in Frankrijk!","De Zuiderzeeweg is een straatnaam, geen berg.","Tafelberg is in Zuid-Afrika of Suriname."],
         uitlegPad: {
           stappen: [{ titel: "Vaalserberg 322 m", tekst: "Hoogste punt NL = Vaalserberg, 322,4 m boven NAP. Ligt in Limburg, dorp Vaals. Drielandenpunt — hier raken NL, België én Duitsland elkaar. Niet groots als alpen-berg, maar voor plat NL relatief hoog." }],
           woorden: [{ woord: "Vaalserberg", uitleg: "Hoogste punt NL. 322,4 m. Bij Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen samenkomen. Bij Vaalserberg: NL+BE+DE." }],
@@ -1252,7 +1252,7 @@ const steps = [
         q: "Welk Waddeneiland is het **grootste**?",
         options: ["Texel", "Vlieland", "Ameland", "Schiermonnikoog"],
         answer: 0,
-        wrongHints: [null, null, null, "Dit eiland ligt helemaal in het oosten. Is het ook het grootste?"],
+        wrongHints: [null, "Vlieland is juist een van de kleinste Waddeneilanden.", "Ameland is middelgroot. Welk eiland is veel groter?", "Dit eiland ligt helemaal in het oosten. Is het ook het grootste?"],
         uitlegPad: {
           stappen: [
             {
@@ -1298,7 +1298,7 @@ const steps = [
         wrongHints: [
           null,
           "Welk eiland ligt het meest naar het westen? Staat dat vooraan?",
-          null,
+          "Vlieland en Terschelling staan hier omgewisseld. Welke komt eerst, na Texel?",
           "Dit is de goede rij, maar dan precies omgekeerd. Welke kant begin je?",
         ],
         uitlegPad: {
@@ -1341,7 +1341,7 @@ const steps = [
         wrongHints: [
           null,
           "Dit gebied ligt bij de rivieren en is juist laag. Klopt 'hoog' dan?",
-          null,
+          "De Biesbosch is een nat natuurgebied met kreken in Noord-Brabant. Is dat hoge zandgrond?",
           "Dit is een bekend park met bloemen. Is het een groot bos?",
         ],
         uitlegPad: {
@@ -1384,7 +1384,7 @@ const steps = [
         wrongHints: [
           null,
           "Daarvoor heb je sneeuw en bergen nodig.",
-          null,
+          "Bergen zijn er niet in de Waddenzee. Wat kun je doen op de droge zeebodem?",
           "Daarvoor heb je juist diep water nodig.",
         ],
         uitlegPad: {
@@ -1529,7 +1529,7 @@ const steps = [
         q: "Wat is de **grootste** stad van Nederland?",
         options: ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
         answer: 0,
-        wrongHints: [null, "Deze stad staat op plek 2.", null, null],
+        wrongHints: [null, "Deze stad staat op plek 2.", "Den Haag is de stad van de regering, maar staat op plek 3.", "Utrecht ligt in het midden en staat op plek 4."],
         uitlegPad: {
           stappen: [
             {
@@ -1567,7 +1567,7 @@ const steps = [
         q: "Welke stad heeft de grootste **haven van Europa**?",
         options: ["Rotterdam", "Amsterdam", "Utrecht", "Eindhoven"],
         answer: 0,
-        wrongHints: [null, null, "Ligt deze stad aan zee? Kan daar een grote zeehaven zijn?", null],
+        wrongHints: [null, "Amsterdam heeft ook een haven, maar niet de grootste van Europa.", "Ligt deze stad aan zee? Kan daar een grote zeehaven zijn?", "Eindhoven ligt ver van de zee. Kan daar een grote zeehaven zijn?"],
         uitlegPad: {
           stappen: [
             {
@@ -1605,7 +1605,7 @@ const steps = [
         q: "Wat is de hoofdstad van **België**?",
         options: ["Brussel", "Antwerpen", "Gent", "Brugge"],
         answer: 0,
-        wrongHints: [null, "Dit is een grote havenstad in België. Is het de hoofdstad?", null, null],
+        wrongHints: [null, "Dit is een grote havenstad in België. Is het de hoofdstad?", "Gent is een oude stad in Vlaanderen, maar niet de hoofdstad.", "Brugge is een mooie oude stad, maar de regering van België zit er niet."],
         uitlegPad: {
           stappen: [
             {
@@ -1643,7 +1643,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Duitsland**?",
         options: ["Berlijn", "München", "Hamburg", "Keulen"],
         answer: 0,
-        wrongHints: [null, null, "Dit is een grote havenstad in Duitsland. Is het de hoofdstad?", null],
+        wrongHints: [null, "München is een grote stad in het zuiden van Duitsland, maar de regering zit er niet.", "Dit is een grote havenstad in Duitsland. Is het de hoofdstad?", "Keulen ligt vlak bij Nederland, maar is niet de hoofdstad."],
         uitlegPad: {
           stappen: [
             {
@@ -1686,7 +1686,7 @@ const steps = [
           "Nederlands, Engels en Duits",
         ],
         answer: 0,
-        wrongHints: [null, "Twee talen kloppen. Welke derde taal spreekt een kleine groep?", null, null],
+        wrongHints: [null, "Twee talen kloppen. Welke derde taal spreekt een kleine groep?", "Italiaans spreken ze in België niet. Welke taal spreken de Vlamingen?", "Engels is geen officiële taal in België. Welke taal spreken ze in Wallonië?"],
         uitlegPad: {
           stappen: [
             {
@@ -1728,7 +1728,7 @@ const steps = [
           null,
           "Deze stad ligt helemaal in het noorden.",
           "Deze stad ligt helemaal in het zuiden.",
-          null,
+          "Middelburg ligt in Zeeland, in het zuidwesten aan zee.",
         ],
         uitlegPad: {
           stappen: [
@@ -1767,7 +1767,7 @@ const steps = [
         q: "Welke stad hoort **niet** bij de vier grote steden van de **Randstad**?",
         options: ["Eindhoven", "Amsterdam", "Rotterdam", "Utrecht"],
         answer: 0,
-        wrongHints: [null, null, "Deze stad heeft de grote haven. Ligt die in de Randstad?", null],
+        wrongHints: [null, "Amsterdam hoort juist wél bij de vier grote steden van de Randstad.", "Deze stad heeft de grote haven. Ligt die in de Randstad?", "Utrecht hoort juist wél bij de vier grote steden van de Randstad."],
         uitlegPad: {
           stappen: [
             {
@@ -1826,7 +1826,7 @@ const steps = [
         q: "Wat is **Schiphol**?",
         options: ["Luchthaven","Treinstation","Haven","Stadion"],
         answer: 0,
-        wrongHints: [null,"Schiphol heeft wel een station maar het is vooral een vliegveld.","Schiphol is in Noord-Holland landinwaarts, geen haven.","Geen stadion."],
+        wrongHints: [null,"Schiphol heeft wel een station maar het is vooral een vliegveld.","Schiphol is in Noord-Holland landinwaarts, geen haven.","Er staat geen stadion met die naam. Wat vertrekt er vanaf Schiphol?"],
         uitlegPad: {
           stappen: [{ titel: "Schiphol — 4e luchthaven Europa", tekst: "Schiphol = grootste luchthaven NL. In Haarlemmermeer (Noord-Holland), -3 m onder NAP (op drooggemalen polder!). ~70 miljoen passagiers/jaar. 4e drukste van Europa (na London Heathrow, Parijs CDG, Frankfurt). Wel ook treinstation onder de luchthaven, maar vliegveld is hoofdfunctie." }],
           woorden: [{ woord: "Schiphol", uitleg: "Internationale luchthaven NL. Gebouwd 1916 in Haarlemmermeer-polder." }, { woord: "KLM", uitleg: "NL-vliegmaatschappij. Schiphol-hub. Oudste luchtvaartmaatschappij wereld (1919)." }],
@@ -1858,7 +1858,7 @@ const steps = [
         wrongHints: [
           null,
           "Deze ligt in Zeeland. Ligt die tussen Noord-Holland en Friesland?",
-          null,
+          "De Maeslantkering ligt bij Rotterdam, in de Nieuwe Waterweg.",
           "Dit is een plaats met oude molens in Zuid-Holland.",
         ],
         uitlegPad: {
@@ -1898,7 +1898,7 @@ const steps = [
         q: "Vanaf welke plaats bij **Rotterdam** varen veerboten naar **Engeland**?",
         options: ["Hoek van Holland", "Den Helder", "Volendam", "Giethoorn"],
         answer: 0,
-        wrongHints: [null, "Deze plaats ligt in het noorden van Noord-Holland, niet bij Rotterdam.", null, null],
+        wrongHints: [null, "Deze plaats ligt in het noorden van Noord-Holland, niet bij Rotterdam.", "Volendam ligt aan het Markermeer, niet aan zee bij Rotterdam.", "Giethoorn ligt in Overijssel, ver van de zee."],
         uitlegPad: {
           stappen: [
             {
@@ -1936,7 +1936,7 @@ const steps = [
         q: "Welke plaats bij **Den Haag** is bekend om de **pier** en het **strand**?",
         options: ["Scheveningen", "Volendam", "Giethoorn", "Marken"],
         answer: 0,
-        wrongHints: [null, null, "Hier vaar je door grachten. Is er een strand aan zee?", null],
+        wrongHints: [null, "Volendam ligt in Noord-Holland aan het Markermeer, niet bij Den Haag.", "Hier vaar je door grachten. Is er een strand aan zee?", "Marken ligt in Noord-Holland, niet bij Den Haag."],
         uitlegPad: {
           stappen: [
             {
@@ -1978,7 +1978,7 @@ const steps = [
           null,
           "Dit dorp ligt in Overijssel en is bekend om grachten.",
           "Hier staan oude molens. Is het een vissersdorp?",
-          null,
+          "Maastricht is een stad in Limburg, ver van de zee.",
         ],
         uitlegPad: {
           stappen: [
@@ -2017,7 +2017,7 @@ const steps = [
         q: "Wat was **Marken** vroeger?",
         options: ["Een eiland", "Een berg", "Een luchthaven", "Een rivier"],
         answer: 0,
-        wrongHints: [null, "Nederland is heel plat. Zou dit kloppen?", null, null],
+        wrongHints: [null, "Nederland is heel plat. Zou dit kloppen?", "Een luchthaven is iets van nu; Marken is veel ouder. Wat lag er vroeger om Marken heen?", "Een rivier stroomt. Marken is een dorp. Wat lag er vroeger omheen?"],
         uitlegPad: {
           stappen: [
             {
@@ -2060,7 +2060,7 @@ const steps = [
           "Een lange dijk tussen Friesland en Noord-Holland",
         ],
         answer: 0,
-        wrongHints: [null, null, null, "Dat is een andere bekende dijk. Hoe heet die?"],
+        wrongHints: [null, "Over de Maas liggen bruggen, maar de Oosterscheldekering ligt in Zeeland, aan zee.", "Bij Amsterdam liggen sluizen (IJmuiden), maar de Oosterscheldekering ligt in Zeeland.", "Dat is een andere bekende dijk. Hoe heet die?"],
         uitlegPad: {
           stappen: [
             {
@@ -2105,7 +2105,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Overijssel**?",
         options: ["Zwolle","Arnhem","Assen","Haarlem"],
         answer: 0,
-        wrongHints: [null,"Arnhem = Gelderland.","Assen = Drenthe.","Haarlem = Noord-Holland."],
+        wrongHints: [null,"Arnhem is de hoofdstad van Gelderland.","Assen is de hoofdstad van Drenthe.","Haarlem is de hoofdstad van Noord-Holland."],
         uitlegPad: {
           stappen: [{ titel: "Zwolle = hoofdstad Overijssel", tekst: "Overijssel = provincie midden-oost NL. Hoofdstad: Zwolle. Stad ~130.000 inwoners. Aan de IJssel-rivier. Bekend van markt + historische binnenstad." }],
           woorden: [{ woord: "Zwolle", uitleg: "Hoofdstad Overijssel. ~130.000 inwoners. Hanze-stad sinds middeleeuwen." }],
@@ -2147,7 +2147,7 @@ const steps = [
         q: "Wat is bijzonder aan **Flevoland**?",
         options: ["Het is de jongste provincie","Het is de oudste provincie","Het ligt het hoogst","Hier liggen alle Waddeneilanden"],
         answer: 0,
-        wrongHints: [null,"Andersom — het is de jongste.","Flevoland is plat, niet hoog.","Waddeneilanden zijn in Noord-Holland en Friesland."],
+        wrongHints: [null,"Flevoland bestaat pas sinds 1986. Is dat oud?","Flevoland is plat, niet hoog.","Waddeneilanden zijn in Noord-Holland en Friesland."],
         uitlegPad: {
           stappen: [{ titel: "Jongste provincie 1986", tekst: "Flevoland is uniek: jongste provincie (officieel sinds 1986) + helemaal op gewonnen land uit voormalige Zuiderzee. Polders drooggepompt vanaf 1942. Daarvoor zee — nu provincie met ~425.000 inwoners. Lelystad is hoofdstad." }],
           woorden: [{ woord: "Flevoland", uitleg: "12e provincie sinds 1986. Op gewonnen land. ~425.000 inwoners." }],
@@ -2171,17 +2171,17 @@ const steps = [
           niveaus: { basis: "~18 miljoen.", simpeler: "Nederland heeft ruim 18 miljoen inwoners.", nogSimpeler: "18 mln" },
         },
       },
-      { q: "Wat is de **hoofdstad** van Nederland?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Regeringsstad, geen hoofdstad.", "Grootste haven.", "Niet."] },
-      { q: "Welke stad is de **regeringsstad** van NL?", options: ["Den Haag","Amsterdam","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Hoofdstad.", "Niet.", "Niet."] },
-      { q: "Hoeveel **provincies** heeft NL?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Bijna.", "Te veel.", "Te weinig."] },
-      { q: "Welke is een NL-provincie?", options: ["Friesland","Beieren","Vlaanderen","Bretagne"], answer: 0, wrongHints: [null, "Duits.", "Belgisch.", "Frans."] },
-      { q: "Welke **rivier** stroomt door Rotterdam?", options: ["Nieuwe Maas","Rijn","IJssel","Amstel"], answer: 0, wrongHints: [null, "Er stroomt wel Rijnwater mee, maar de rivier in Rotterdam heeft een andere naam.", "Andere richting.", "Door Amsterdam."] },
-      { q: "Welke twee **landen** grenzen aan NL?", options: ["Duitsland + België","Frankrijk + Duitsland","Engeland + België","Italië + Frankrijk"], answer: 0, wrongHints: [null, "Niet — Frankrijk grenst niet aan NL.", "Niet — Engeland ligt over de Noordzee.", "Niet — die liggen veel zuidelijker."] },
-      { q: "In welke **provincie** ligt Amsterdam?", options: ["Noord-Holland","Zuid-Holland","Utrecht","Flevoland"], answer: 0, wrongHints: [null, "Rotterdam/Den Haag daar.", "Anders.", "Anders."] },
-      { q: "De **Waddeneilanden** liggen in het ... van Nederland?", options: ["Noorden","Zuiden","Westen","Oosten"], answer: 0, wrongHints: [null, "Niet.", "Niet exact.", "Niet."] },
-      { q: "**IJsselmeer** ontstond door?", options: ["De aanleg van de Afsluitdijk","Graafwerk door mensen","Een smeltende gletsjer","Een fabriek die water oppompte"], answer: 0, wrongHints: [null, "Niemand heeft dit meer uitgegraven — wat gebeurde er in 1932?", "Geen gletsjer — denk aan wat er in 1932 klaar was.", "Geen fabriek — denk aan wat er in 1932 klaar was."] },
+      { q: "Wat is de **hoofdstad** van Nederland?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Den Haag is de regeringsstad, maar niet de hoofdstad.", "Rotterdam heeft de grootste haven, maar is niet de hoofdstad.", "Utrecht ligt in het midden, maar is niet de hoofdstad."] },
+      { q: "Welke stad is de **regeringsstad** van Nederland?", options: ["Den Haag","Amsterdam","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Amsterdam is de hoofdstad, maar de regering zit ergens anders.", "Rotterdam is de havenstad. Zit de regering daar?", "Utrecht is het treinknooppunt. Zit de regering daar?"] },
+      { q: "Hoeveel **provincies** heeft Nederland?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Zoveel waren het er vóór 1986, toen Flevoland erbij kwam.", "Zoveel zijn het er niet. Tel ze in de uitleg na.", "Het zijn er meer. Tel ze in de uitleg na."] },
+      { q: "Welke van deze is een **Nederlandse provincie**?", options: ["Friesland","Beieren","Vlaanderen","Bretagne"], answer: 0, wrongHints: [null, "Beieren is een deelstaat van Duitsland.", "Vlaanderen is een deel van België.", "Bretagne is een streek in Frankrijk."] },
+      { q: "Welke **rivier** stroomt door Rotterdam?", options: ["Nieuwe Maas","Rijn","IJssel","Amstel"], answer: 0, wrongHints: [null, "Er stroomt wel Rijnwater mee, maar de rivier in Rotterdam heeft een andere naam.", "De IJssel stroomt naar het noorden, naar het IJsselmeer.", "De Amstel stroomt door Amsterdam, niet door Rotterdam."] },
+      { q: "Welke twee **landen** grenzen aan NL?", options: ["Duitsland + België","Frankrijk + Duitsland","Engeland + België","België + Luxemburg"], answer: 0, wrongHints: [null, "Frankrijk grenst niet aan Nederland, wel aan België.", "Engeland ligt aan de overkant van de Noordzee.", "Luxemburg ligt onder België en raakt Nederland niet."] },
+      { q: "In welke **provincie** ligt Amsterdam?", options: ["Noord-Holland","Zuid-Holland","Utrecht","Flevoland"], answer: 0, wrongHints: [null, "In Zuid-Holland liggen Rotterdam en Den Haag.", "Utrecht is de provincie in het midden; Amsterdam ligt verder naar het noordwesten.", "Flevoland is de jonge polderprovincie. Amsterdam ligt in een oudere provincie aan zee."] },
+      { q: "In welk deel van Nederland liggen de **Waddeneilanden**?", options: ["Noorden","Zuiden","Westen","Oosten"], answer: 0, wrongHints: [null, "In het zuiden liggen Limburg en Noord-Brabant, zonder eilanden.", "In het westen ligt de Noordzeekust met stranden, maar de eilanden liggen hoger op de kaart.", "In het oosten grenst Nederland aan Duitsland, niet aan zee."] },
+      { q: "Hoe is het **IJsselmeer** ontstaan?", options: ["De aanleg van de Afsluitdijk","Graafwerk door mensen","Een smeltende gletsjer","Een fabriek die water oppompte"], answer: 0, wrongHints: [null, "Niemand heeft dit meer uitgegraven — wat gebeurde er in 1932?", "Geen gletsjer — denk aan wat er in 1932 klaar was.", "Geen fabriek — denk aan wat er in 1932 klaar was."] },
       { q: "Welke **provincie** is de nieuwste (jongste)?", options: ["Flevoland","Limburg","Zeeland","Groningen"], answer: 0, wrongHints: [null, "Limburg bestaat al eeuwen.", "Zeeland is een hele oude provincie.", "Groningen is een hele oude provincie."] },
-      { q: "Hoogste **berg** in NL ligt in?", options: ["Limburg","Friesland","Zeeland","Noord-Holland"], answer: 0, wrongHints: [null, "Geen bergen.", "Niet hoog.", "Niet."] },
+      { q: "In welke provincie ligt de hoogste 'berg' van Nederland?", options: ["Limburg","Friesland","Zeeland","Noord-Holland"], answer: 0, wrongHints: [null, "Friesland is plat, met veel meren.", "Zeeland ligt juist heel laag, deels onder zeeniveau.", "Noord-Holland heeft duinen, maar geen echte heuvels."] },
       { q: "Welke provincie ligt het **meest noordelijk**?", options: ["Groningen","Limburg","Zeeland","Drenthe"], answer: 0, wrongHints: [null, "Limburg ligt in het zuiden.", "Zeeland ligt zuidwest.", "Drenthe ligt noord, maar er ligt nog een provincie boven."] },
     ],
   },
