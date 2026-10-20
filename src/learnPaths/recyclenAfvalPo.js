@@ -20,7 +20,7 @@ const steps = [
         q: "Hoeveel **afval** maakt gemiddelde Nederlander per jaar?",
         options: ["~480 kg", "10 kg", "10.000 kg", "100 kg"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Onmogelijk.", "Te weinig."],
+        wrongHints: [null, "Veel meer — alleen je verpakkingen wegen per jaar al meer.", "Dat is 10 ton, zoveel als een paar auto's. Zoveel maakt niemand.", "Meer — reken eens uit hoeveel het is per dag."],
         uitlegPad: {
           stappen: [
             { titel: "480 kg per jaar = veel!", tekst: "Een gemiddelde Nederlander maakt ongeveer **480 kg afval per jaar** (2024). Dat is ruim **1,3 kg PER DAG** — bijna zoveel als een grote fles cola!" },
@@ -49,7 +49,7 @@ const steps = [
         q: "Wat hoort in **GFT-bak**?",
         options: ["Schillen", "Plastic", "Glas", "Batterijen"],
         answer: 0,
-        wrongHints: [null, "PMD.", "Glasbak.", "KCA."],
+        wrongHints: [null, "Plastic rot niet. In welke bak hoort het wel?", "Glas rot niet — daar is een aparte bak voor.", "Batterijen zijn chemisch afval, dat mag nooit bij groente."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent GFT?", tekst: "**GFT** = afkorting voor **Groente, Fruit en Tuin**afval. Dit is afval dat KAN ROTTEN — biologisch materiaal." },
@@ -103,10 +103,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **% NL-afval** wordt gerecycled?",
+        q: "Hoeveel **procent** van het afval in Nederland wordt gerecycled?",
         options: ["~64%", "10%", "100%", "1%"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "Onmogelijk.", "Veel meer."],
+        wrongHints: [null, "Veel meer — Nederland hoort bij de top van Europa.", "Niet alles — restafval wordt verbrand, niet gerecycled.", "Veel meer — bijna iedereen scheidt thuis al afval."],
       },
     ],
   },
@@ -119,7 +119,7 @@ const steps = [
         q: "Wat is **beste optie** in Ladder van Lansink?",
         options: ["Voorkomen", "Recyclen", "Verbranden", "Storten"],
         answer: 0,
-        wrongHints: [null, "Goed, maar niet het allerbeste.", "Niet primair.", "Slechtste."],
+        wrongHints: [null, "Goed, maar er staan nog twee treden boven.", "Verbranden staat laag op de ladder.", "Storten is juist de onderste trede."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Ladder van Lansink?", tekst: "Een **rangorde** voor afval-aanpak, bedacht door politicus **Ad Lansink** in 1979. Van **beste** (boven) naar **slechtste** (onder)." },
@@ -179,9 +179,9 @@ const steps = [
       },
       {
         q: "Welk deel van al het **voedsel in de wereld** wordt weggegooid?",
-        options: ["~30%", "1%", "90%", "Niet"],
+        options: ["~30%", "1%", "90%", "~60%"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "Niet zo erg.", "Wel."],
+        wrongHints: [null, "Veel meer — denk aan alles wat in winkels en thuis wordt weggegooid.", "Minder — dan zou er bijna niets overblijven om te eten.", "Minder — meer dan de helft wordt gelukkig wél gegeten."],
       },
     ],
   },
@@ -194,7 +194,7 @@ const steps = [
         q: "Hoe lang duurt **plastic fles vergaan**?",
         options: ["~450 jaar", "1 maand", "10 jaar", "~50 jaar"],
         answer: 0,
-        wrongHints: [null, "Bananenschil.", "Plastic-tas.", "Veel langer — het duurt eeuwen."],
+        wrongHints: [null, "Dat geldt voor een bananenschil, niet voor plastic.", "Dat is ongeveer een plastic tasje; een fles is dikker en duurt veel langer.", "Veel langer — denk in eeuwen."],
         uitlegPad: {
           stappen: [
             { titel: "Plastic vergaan = HEEL traag", tekst: "Een plastic fles in natuur (zee, bos, weg) duurt **~450 jaar** voor het volledig vergaan is. Tegen die tijd leven jij en je achter-achterkleinkinderen al lang niet meer!" },
@@ -221,15 +221,15 @@ const steps = [
       },
       {
         q: "Wie startte **Ocean Cleanup**?",
-        options: ["Boyan Slat", "Verstappen", "Cruijff", "Rutte"],
+        options: ["Boyan Slat", "Max Verstappen", "Johan Cruijff", "Mark Rutte"],
         answer: 0,
-        wrongHints: [null, "F1.", "Voetbal.", "Politicus."],
+        wrongHints: [null, "Max Verstappen racet in de Formule 1.", "Johan Cruijff was voetballer.", "Mark Rutte was politicus, geen uitvinder."],
       },
       {
         q: "Waar ligt het **grootste plastic-eiland**?",
-        options: ["Grote Oceaan", "Atlantische Oceaan", "Indische Oceaan", "NL kust"],
+        options: ["Grote Oceaan", "Atlantische Oceaan", "Indische Oceaan", "Noordzee"],
         answer: 0,
-        wrongHints: [null, "Wel deel maar niet grootst.", "Ook deel.", "Niet."],
+        wrongHints: [null, "In de Atlantische Oceaan drijft ook plastic, maar niet het grootste 'eiland'.", "Ook daar drijft plastic, maar de grootste plek ligt in een andere oceaan.", "De Noordzee is veel te klein en te druk bevaren voor zo'n groot plastic-'eiland'."],
       },
       {
         q: "**Tips** om plastic te verminderen?",
@@ -243,12 +243,12 @@ const steps = [
     title: "Eind-toets — duurzaam mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wat hoort in **GFT-bak**?", options: ["Schillen", "Plastic", "Glas", "Batterij"], answer: 0, wrongHints: [null, "PMD.", "Glasbak.", "KCA."] },
-      { q: "Wat is **statiegeld** op een grote plastic fles (meer dan 1 liter)?", options: ["€0,25", "Niks", "€10", "€1"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te veel."] },
-      { q: "**Beste optie** Ladder van Lansink?", options: ["Voorkomen", "Verbranden", "Storten", "Recyclen"], answer: 0, wrongHints: [null, "Slecht.", "Slechtste.", "Goed maar niet beste."] },
-      { q: "**Plastic fles** vergaat in?", options: ["~450 jr", "1 maand", "10 dagen", "~50 jr"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Veel langer — eeuwen."] },
-      { q: "Wie startte **Ocean Cleanup**?", options: ["Boyan Slat", "Verstappen", "Cruijff", "Geen NL'er"], answer: 0, wrongHints: [null, "F1.", "Voetbal.", "Wel NL!"] },
-      { q: "Wat is **circulaire economie**?", options: ["Alles steeds opnieuw gebruiken", "Een autobedrijf", "Een rond geldstuk", "Alles na één keer weggooien"], answer: 0, wrongHints: [null, "Niet primair.", "Het gaat niet om de vorm van geld.", "Dat is juist lineair."] },
+      { q: "Wat hoort in **GFT-bak**?", options: ["Schillen", "Plastic", "Glas", "Batterij"], answer: 0, wrongHints: [null, "Plastic rot niet. In welke bak hoort het wel?", "Glas rot niet — daar is een aparte bak voor.", "Een batterij is chemisch afval, dat mag nooit bij groente."] },
+      { q: "Wat is **statiegeld** op een grote plastic fles (meer dan 1 liter)?", options: ["€0,25", "€0,15", "€1,00", "Geen statiegeld"], answer: 0, wrongHints: [null, "Dat is het bedrag voor een kleine fles (tot 1 liter).", "Veel te veel voor een lege fles.", "Op plastic flessen zit in Nederland wél statiegeld."] },
+      { q: "Wat is de **beste optie** op de Ladder van Lansink?", options: ["Voorkomen", "Verbranden", "Storten", "Recyclen"], answer: 0, wrongHints: [null, "Verbranden staat laag op de ladder.", "Storten is juist de onderste trede.", "Goed, maar er staan nog twee treden boven."] },
+      { q: "Hoe lang duurt het voordat een **plastic fles** is vergaan?", options: ["~450 jr", "1 maand", "10 dagen", "~50 jr"], answer: 0, wrongHints: [null, "Zo snel vergaat alleen een bananenschil.", "Nog sneller — zelfs papier duurt langer.", "Veel langer — denk in eeuwen."] },
+      { q: "Wie startte **Ocean Cleanup**?", options: ["Boyan Slat", "Max Verstappen", "Johan Cruijff", "Mark Rutte"], answer: 0, wrongHints: [null, "Max Verstappen racet in de Formule 1.", "Johan Cruijff was voetballer.", "Mark Rutte was politicus, geen uitvinder."] },
+      { q: "Wat is **circulaire economie**?", options: ["Alles steeds opnieuw gebruiken", "Handel tussen alle landen", "Geld dat rondgaat in een winkel", "Alles na één keer weggooien"], answer: 0, wrongHints: [null, "Dat heet wereldhandel.", "Het gaat niet om geld, maar om grondstoffen en spullen.", "Dat is juist lineair, het tegenovergestelde."] },
       {
         q: "Wat hoort in **PMD-bak** (Plastic, Metaal, Drankkartons)?",
         options: ["Een leeg melkpak", "Een appelschil", "Een oude krant", "Een lege batterij"],
@@ -326,9 +326,9 @@ const steps = [
           niveaus: { basis: "Reduce, Reuse, Recycle.", simpeler: "De 3 R's: 1) Reduce = minder kopen, 2) Reuse = tweedehands gebruiken, 3) Recycle = scheiden + verwerken tot nieuwe spullen. Reduce is altijd beste.", nogSimpeler: "Reduce-Reuse-Recycle" },
         },
       },
-      { q: "Waar gooi je een **bananenschil** in?", options: ["GFT","Restafval","Plastic","Papier"], answer: 0, wrongHints: [null, "Niet — composteerbaar.", "Niet — geen plastic.", "Niet."] },
-      { q: "**PMD** staat voor?", options: ["Plastic + Metaal + Drankkartons","Papier + Magazines + Drukwerk","Plastic + Materiaal + Dozen","Geen afkorting"], answer: 0, wrongHints: [null, "Papier gaat in een eigen bak.", "Bijna — drankkartons, niet dozen.", "Wel — bestaat sinds 2010s."] },
-      { q: "In welke bak hoort een **glazen fles**?", options: ["Glasbak","GFT","Plastic","Papier"], answer: 0, wrongHints: [null, "Niet — geen organisch.", "Niet.", "Niet."] },
+      { q: "Waar gooi je een **bananenschil** in?", options: ["GFT","Restafval","Plastic","Papier"], answer: 0, wrongHints: [null, "Een schil kan rotten en compost worden. Hoort ze dan bij het restafval?", "Een bananenschil is geen plastic.", "Papier is voor kranten en dozen, niet voor etensresten."] },
+      { q: "**PMD** staat voor?", options: ["Plastic + Metaal + Drankkartons","Papier + Magazines + Drukwerk","Plastic + Materiaal + Dozen","Papier + Metaal + Drankkartons"], answer: 0, wrongHints: [null, "Papier gaat in een eigen bak.", "Bijna — drankkartons, niet dozen.", "Bijna — maar papier hoort in zijn eigen bak. Waar staat de P dan voor?"] },
+      { q: "In welke bak hoort een **glazen fles**?", options: ["Glasbak","GFT","Plastic","Papier"], answer: 0, wrongHints: [null, "GFT is voor groente, fruit en tuinafval — kan glas rotten?", "Glas is geen plastic.", "Glas is geen papier."] },
       { q: "**Statiegeld** krijg je terug bij?", options: ["Inleveren van fles in winkel", "Kopen van een fles in de winkel", "Weggooien van fles in de glasbak", "Openen van een fles thuis"], answer: 0, wrongHints: [null, "Bij het kopen betaal je statiegeld juist extra.", "Krijg je geld als je de fles weggooit?", "Krijg je geld als je de fles openmaakt?"] },
       { q: "Waar gooi je **oud papier** in?", options: ["Papierbak / oud papier", "Restafval / grijze bak", "GFT / groene bak", "Glasbak / flessenbak"], answer: 0, wrongHints: [null, "Dan kan het niet meer gerecycled worden.", "Voor groente/fruit/tuin — geen papier.", "Voor glas, niet voor papier."] },
       { q: "Waar breng je een **kapotte koffer** naartoe?", options: ["Grofvuil / milieustraat", "Restafval / grijze bak", "Plastic / PMD-bak", "Oud papier / papierbak"], answer: 0, wrongHints: [null, "Past een koffer in de gewone bak?", "Past een koffer in de gewone bak?", "Is een koffer van papier?"] },
@@ -337,14 +337,14 @@ const steps = [
       { q: "Wat doet een **microplastic** in de zee?", options: ["Vissen eten het, ecosysteem schade", "Het lost op en verdwijnt helemaal", "Het verdampt in de zon naar de lucht", "Het is gezond voer voor vissen"], answer: 0, wrongHints: [null, "Plastic verdwijnt niet zomaar. Waar blijft het?", "Kan plastic verdampen zoals water?", "Is plastic gezond om te eten?"] },
       { q: "**Boyan Slat** is bekend om?", options: ["Plastic uit zee halen", "Racen in de Formule 1", "Winnen van schaatsgoud", "Politiek in de Tweede Kamer"], answer: 0, wrongHints: [null, "Dat doet Max Verstappen. Waar is Boyan Slat mee bezig?", "Sport, geen milieu-werk.", "Geen politicus — een ondernemer."] },
       { q: "Wat is **composteren**?", options: ["GFT-afval omzetten tot grond", "Plastic omsmelten tot nieuw plastic", "Afval verbranden tot as en rook", "Glas smelten tot nieuwe flessen"], answer: 0, wrongHints: [null, "Kan plastic verteren zoals bladeren?", "Composteren gaat langzaam en zonder vuur. Past dit?", "Glas kun je niet composteren."] },
-      { q: "Welk symbool zie je op recyclebare verpakkingen?", options: ["3 pijlen-driehoek","Smiley","Dollar","Niet"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Welk **symbool** staat op verpakkingen die je kunt recyclen?", options: ["Drie pijlen in een driehoek","Een groene smiley","Een groen blaadje","Een vuilnisbak met een kruis"], answer: 0, wrongHints: [null, "Een smiley zegt niets over recyclen.", "Een blaadje staat voor natuur, maar niet voor recyclen.", "Dat symbool betekent: niet bij het restafval (elektrisch afval)."] },
       { q: "Lawaai van een snelweg is welk type **vervuiling**?", options: ["Geluidsvervuiling", "Luchtvervuiling", "Watervervuiling", "Bodemvervuiling"], answer: 0, wrongHints: [null, "Lucht is gassen — geen geluid.", "Water-vervuiling = stoffen in water.", "Bodem-vervuiling = stoffen in grond."] },
-      { q: "Wat gebeurt met **restafval** uiteindelijk in NL?", options: ["Verbranden in afvalcentrale", "Storten op een grote vuilnisbelt", "Recyclen tot nieuwe spullen", "Lozen in de Noordzee"], answer: 0, wrongHints: [null, "Niet meer toegestaan.", "Niet — kan niet meer.", "Verboden."] },
-      { q: "Welk **percentage** van NL-afval wordt gerecycled (ongeveer)?", options: ["~60%+","20%","100%","5%"], answer: 0, wrongHints: [null, "Te weinig.", "Onmogelijk.", "Veel te weinig."] },
+      { q: "Wat gebeurt met **restafval** uiteindelijk in NL?", options: ["Verbranden in afvalcentrale", "Storten op een grote vuilnisbelt", "Recyclen tot nieuwe spullen", "Lozen in de Noordzee"], answer: 0, wrongHints: [null, "Storten gebeurt in Nederland bijna niet meer (minder dan 2%).", "Restafval is te gemengd en te vies om te recyclen.", "Afval in zee gooien is verboden."] },
+      { q: "Welk **percentage** van NL-afval wordt gerecycled (ongeveer)?", options: ["~60%+","20%","100%","5%"], answer: 0, wrongHints: [null, "Meer — Nederland hoort bij de top van Europa.", "Niet alles — restafval wordt verbrand, niet gerecycled.", "Veel meer — bijna iedereen scheidt thuis al afval."] },
       { q: "Wat is **duurzaam** kopen?", options: ["Spullen die lang meegaan", "Zoveel mogelijk spullen", "Spullen die goedkoop zijn", "Spullen met een mooie kleur"], answer: 0, wrongHints: [null, "Is meer kopen goed voor de aarde?", "Gaat iets goedkoops ook altijd lang mee?", "Maakt de kleur iets uit voor de aarde?"] },
       { q: "Welke afvalsoort wordt **niet** vaak gerecycled?", options: ["Vies/gemengd afval","Glas","Papier","Plastic flessen"], answer: 0, wrongHints: [null, "Glasbak naast supermarkt — recycle-tak.", "Oud papier-bak — apart ingezameld.", "PMD-bak of statiegeld — gerecycled."] },
-      { q: "Wat is **upcycling**?", options: ["Van iets ouds iets nieuws maken", "Oude spullen verbranden in een oven", "Oude spullen storten op de vuilnisbelt", "Oude spullen weggooien bij het restafval"], answer: 0, wrongHints: [null, "Dan gaat het juist verloren.", "Tegenovergesteld.", "Dan wordt er niets nieuws van gemaakt."] },
-      { q: "Welke soort plastic is **beter** voor milieu?", options: ["Herbruikbaar plastic", "Plastic zakje", "Wegwerp", "Folie"], answer: 0, wrongHints: [null, "1× gebruik — schadelijk voor milieu.", "Eenmalig — belast milieu juist.", "Dunne wegwerp — niet beter."] },
+      { q: "Wat is **upcycling**?", options: ["Van iets ouds iets nieuws maken", "Oude spullen verbranden in een oven", "Oude spullen storten op de vuilnisbelt", "Oude spullen weggooien bij het restafval"], answer: 0, wrongHints: [null, "Dan gaat het juist verloren.", "Storten is het tegenovergestelde: niets nieuws, alles weg.", "Dan wordt er niets nieuws van gemaakt."] },
+      { q: "Welke soort plastic is **beter** voor milieu?", options: ["Herbruikbaar plastic", "Een plastic tasje voor één keer", "Wegwerpbestek van plastic", "Dun plastic folie"], answer: 0, wrongHints: [null, "Eén keer gebruiken en weg — dat geeft veel afval.", "Eenmalig gebruik geeft veel afval.", "Dun folie gebruik je maar één keer."] },
     ],
   },
 ];

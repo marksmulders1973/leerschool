@@ -165,7 +165,7 @@ const steps = [
         q: "Hoeveel planeten heeft ons zonnestelsel?",
         options: ["8","9","7","12"],
         answer: 0,
-        wrongHints: [null,"Pluto telde mee tot 2006 — telt hij nu nog mee?","Te weinig.","Veel te veel."],
+        wrongHints: [null,"Pluto telde mee tot 2006 — telt hij nu nog mee?","Te weinig — er zijn vier rotsplaneten én nog een groep reuzen.","Veel te veel — zoveel zijn het er niet."],
         uitlegPad: {
           stappen: [{ titel: "8 planeten sinds 2006", tekst: "Sinds Pluto in 2006 dwergplaneet werd, tellen we 8 planeten: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus." }],
           woorden: [{ woord: "ezelsbruggetje", uitleg: "M-V-A-M-J-S-U-N" }],
@@ -312,7 +312,7 @@ const steps = [
         q: "Waarom heet Mars de **rode planeet**?",
         options: ["Er zit veel roest in de bodem","Vulkanen die rood gloeien","Door speciaal zonlicht","Door rood ijs op de polen"],
         answer: 0,
-        wrongHints: [null,"De vulkaan Olympus Mons is wel actief geweest maar dat geeft geen rode kleur.","Niet door zonlicht.","De polen van Mars zijn juist wit van ijs."],
+        wrongHints: [null,"De vulkaan Olympus Mons is wel actief geweest maar dat geeft geen rode kleur.","Zonlicht is overal hetzelfde — waarom zou Mars dan rood zijn en de aarde niet?","De polen van Mars zijn juist wit van ijs."],
         uitlegPad: {
           stappen: [{ titel: "IJzer-oxide = roest", tekst: "Mars-bodem bevat veel ijzer dat oxideert (roest, Fe₂O₃) → rode kleur. Hele planeet ziet eruit als een grote roestbruine woestijn." }],
           woorden: [{ woord: "oxidatie", uitleg: "reactie met zuurstof → roest" }],
@@ -373,9 +373,9 @@ const steps = [
       },
       {
         q: "Wat is bijzonder aan **Saturnus**?",
-        options: ["Mooie ringen van ijs + steen","Heeft de Grote Rode Vlek","Is vierkant","Heeft geen manen"],
+        options: ["Mooie ringen van ijs + steen","Heeft de Grote Rode Vlek","Is de grootste planeet","Heeft geen manen"],
         answer: 0,
-        wrongHints: [null,"Die storm zit op Jupiter.","Alle planeten zijn rond.","Saturnus heeft veel manen!"],
+        wrongHints: [null,"Die storm zit op Jupiter.","Dat is Jupiter; Saturnus is de tweede.","Saturnus heeft juist heel veel manen!"],
         uitlegPad: {
           stappen: [{ titel: "Saturnus = ringen", tekst: "Saturnus heeft prachtige ringen — duizenden subringen van ijs + steentjes + stof. 273.000 km breed maar slechts tientallen meters dun!" }],
           woorden: [{ woord: "ringen", uitleg: "platte schijven om planeet" }],
@@ -408,9 +408,9 @@ const steps = [
     checks: [
       {
         q: "Wat is bizar aan **Uranus**?",
-        options: ["Hij ligt op zijn zij","Hij is hol","Hij gloeit","Hij heeft geen rotatie"],
+        options: ["Hij ligt op zijn zij","Hij heeft geen manen","Hij is de heetste planeet","Hij draait niet om zijn as"],
         answer: 0,
-        wrongHints: [null,"Geen planeet is hol.","Planeten gloeien niet zoals sterren.","Alle planeten roteren."],
+        wrongHints: [null,"Uranus heeft bijna 30 manen.","Uranus is juist ijskoud (-200 °C).","Alle planeten draaien om hun as — maar hoe staat die as bij Uranus?"],
         uitlegPad: {
           stappen: [{ titel: "Uranus draait op z'n zij", tekst: "Uranus heeft z'n rotatie-as 98° gekanteld — als enige planeet draait 'ie min of meer op z'n zij. Vermoedelijk veroorzaakt door enorme botsing in het verleden." }],
           woorden: [{ woord: "rotatie-as", uitleg: "denkbeeldige lijn waaromheen planeet draait" }],
@@ -487,7 +487,7 @@ const steps = [
         q: "Wat veroorzaakte het **uitsterven van de dinosaurussen** (66 miljoen jaar geleden)?",
         options: ["Inslag van een asteroïde","Een komeet","Vulkaanuitbarsting (alleen)","Mensen"],
         answer: 0,
-        wrongHints: [null,"Niet komeet — asteroïde (rotsblok).","Vulkanen droegen wel bij maar inslag was de hoofdoorzaak.","Mensen bestonden nog niet — pas miljoenen jaren later."],
+        wrongHints: [null,"Een komeet is vooral ijs. Het brok dat insloeg was van steen.","Vulkanen droegen wel bij maar de inslag was de hoofdoorzaak.","Mensen bestonden nog niet — die kwamen pas miljoenen jaren later."],
         uitlegPad: {
           stappen: [{ titel: "Asteroïde-inslag Yucatán", tekst: "~66 miljoen jaar geleden sloeg een asteroïde van ~10 km in bij Yucatán (Mexico). Wereldwijde stof- + temperatuurschok → ~75% van soorten uitgestorven, inclusief alle niet-vogel-dinosaurussen." }],
           woorden: [{ woord: "Chicxulub-krater", uitleg: "180 km grote inslag-krater in Mexico" }],
@@ -574,17 +574,17 @@ const steps = [
           niveaus: { basis: "Afstand licht in 1 jaar.", simpeler: "Verre afstand.", nogSimpeler: "Reisafstand licht." },
         },
       },
-      { q: "Hoeveel **planeten** in ons zonnestelsel?", options: ["8","9","7","12"], answer: 0, wrongHints: [null, "Oude telling.", "Te weinig.", "Te veel."] },
-      { q: "Welke planeet is **dichtst bij de zon**?", options: ["Mercurius","Venus","Aarde","Mars"], answer: 0, wrongHints: [null, "Tweede.", "Derde.", "Vierde."] },
-      { q: "Welke planeet noemen we de **rode planeet**?", options: ["Mars","Venus","Jupiter","Saturnus"], answer: 0, wrongHints: [null, "Heet, geel.", "Reuzenplaneet.", "Ringen."] },
-      { q: "Welke planeet is **grootst**?", options: ["Jupiter","Saturnus","Neptunus","Aarde"], answer: 0, wrongHints: [null, "Tweede.", "Vierde.", "Klein."] },
-      { q: "**Maan** van de aarde — hoeveel?", options: ["1","2","0","5"], answer: 0, wrongHints: [null, "Niet.", "Kijk maar eens 's nachts naar de lucht.", "Niet."] },
+      { q: "Hoeveel **planeten** in ons zonnestelsel?", options: ["8","9","7","12"], answer: 0, wrongHints: [null, "Dat was de oude telling, met Pluto erbij.", "Te weinig — er zijn vier rotsplaneten én nog een groep reuzen.", "Veel te veel — zoveel zijn het er niet."] },
+      { q: "Welke planeet is **dichtst bij de zon**?", options: ["Mercurius","Venus","Aarde","Mars"], answer: 0, wrongHints: [null, "Venus is de tweede planeet vanaf de zon.", "De aarde is de derde planeet vanaf de zon.", "Mars is de vierde planeet vanaf de zon."] },
+      { q: "Welke planeet noemen we de **rode planeet**?", options: ["Mars","Venus","Jupiter","Saturnus"], answer: 0, wrongHints: [null, "Venus is heet en geelwit, niet rood.", "Jupiter is een gestreepte reuzenplaneet, niet de rode.", "Saturnus herken je aan ringen, niet aan een rode kleur."] },
+      { q: "Welke planeet is **grootst**?", options: ["Jupiter","Saturnus","Neptunus","Aarde"], answer: 0, wrongHints: [null, "Saturnus is de tweede grootste.", "Neptunus is kleiner dan de gasreuzen.", "De aarde is een kleine rotsplaneet."] },
+      { q: "Hoeveel **manen** heeft de aarde?", options: ["1","2","0","5"], answer: 0, wrongHints: [null, "Mars heeft er twee, de aarde niet.", "Kijk maar eens 's nachts naar de lucht.", "Zoveel heeft de aarde er niet — denk aan wat je 's nachts ziet."] },
       { q: "Welke planeet heeft veel **ringen**?", options: ["Saturnus","Mars","Venus","Mercurius"], answer: 0, wrongHints: [null, "Mars is rood, geen ringen.", "Venus is heet, geen ringen.", "Mercurius is klein en dicht bij de zon."] },
-      { q: "Hoeveel dagen duurt een **jaar** op aarde?", options: ["365","100","30","1000"], answer: 0, wrongHints: [null, "Niet.", "Maand.", "Te veel."] },
-      { q: "Hoe lang duurt 1 **dag** op aarde?", options: ["24 uur","12 uur","365 dagen","1 jaar"], answer: 0, wrongHints: [null, "Halve dag.", "Jaar.", "Niet."] },
-      { q: "Wat veroorzaakt **dag en nacht**?", options: ["Aarde draait om as","Zon beweegt","Wolken","Maan schuift voor de zon"], answer: 0, wrongHints: [null, "Het lijkt alsof de zon beweegt — maar wie draait er echt?", "Niet.", "Dat gebeurt maar heel soms: een zonsverduistering."] },
+      { q: "Hoeveel dagen duurt een **jaar** op aarde?", options: ["365","100","30","1000"], answer: 0, wrongHints: [null, "Te weinig — een jaar heeft 12 maanden van elk ongeveer 30 dagen.", "30 dagen is ongeveer één maand, geen jaar.", "Veel te veel."] },
+      { q: "Hoe lang duurt 1 **dag** op aarde?", options: ["24 uur","12 uur","365 dagen","1 jaar"], answer: 0, wrongHints: [null, "12 uur is maar een halve dag: alleen het lichte of alleen het donkere deel.", "365 dagen is een jaar, niet één dag.", "Een dag is veel korter dan een jaar."] },
+      { q: "Wat veroorzaakt **dag en nacht**?", options: ["Aarde draait om as","Zon beweegt","Wolken","Maan schuift voor de zon"], answer: 0, wrongHints: [null, "Het lijkt alsof de zon beweegt — maar wie draait er echt?", "Wolken maken het donkerder, maar geen nacht.", "Dat gebeurt maar heel soms: een zonsverduistering."] },
       { q: "Wat veroorzaakt **seizoenen**?", options: ["Schuine stand aarde + draai om zon", "Maan die om de aarde draait", "Afstand tot de zon: dichtbij + ver", "Wolken die de zon tegenhouden"], answer: 0, wrongHints: [null, "De maan zorgt voor eb en vloed, niet voor de seizoenen.", "De afstand tot de zon verandert bijna niet. In onze winter staan we zelfs het dichtst bij de zon!", "Wolken veranderen het weer, niet de seizoenen."] },
-      { q: "Wat is een **zonsverduistering**?", options: ["Maan tussen zon en aarde","Aarde tussen zon en maan","Wolk","Zon gaat even uit"], answer: 0, wrongHints: [null, "Maansverduistering.", "Niet astronomie.", "De zon blijft gewoon branden."] },
+      { q: "Wat is een **zonsverduistering**?", options: ["De maan staat tussen zon en aarde","De aarde staat tussen zon en maan","Een dikke wolk schuift voor de zon","De zon gaat even uit"], answer: 0, wrongHints: [null, "Dan wordt juist de maan donker: dat is een maansverduistering.", "Een wolk verduistert de zon niet echt — dat is gewoon bewolkt weer.", "De zon blijft gewoon branden."] },
     ],
   },
 ];

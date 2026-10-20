@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer begint **puberteit** bij meisjes (gemiddeld)?",
-        options: ["~11 jaar", "5 jaar", "16 jaar", "Niet bij meisjes"],
+        options: ["~11 jaar", "~5 jaar", "~16 jaar", "~14 jaar"],
         answer: 0,
-        wrongHints: [null, "Te jong.", "Te oud.", "Wel."],
+        wrongHints: [null, "Veel te jong — een kleuter zit nog niet in de puberteit.", "Te oud — op die leeftijd zijn de meeste meisjes al een eind op weg.", "Te oud — de meeste meisjes zijn dan al een paar jaar bezig."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is puberteit?", tekst: "**Puberteit** is de fase waarin je lichaam van KIND naar VOLWASSENE verandert. Hormonen sturen lichamelijke groei + ontwikkeling van geslachtsorganen." },
@@ -79,10 +79,10 @@ const steps = [
         wrongHints: [null, "Je eet het niet — je lichaam maakt het zélf. Wat voor stof is dat?", "Het hoort juist bij gezond opgroeien — wat stuurt de puberteit aan?", "Botten groeien erdóór, maar het is zelf geen lichaamsdeel."],
       },
       {
-        q: "Hoeveel kun je **per jaar groeien** in piek?",
-        options: ["10-12 cm", "1 mm", "1 meter", "Niet"],
+        q: "Hoeveel kun je **per jaar groeien** tijdens de groeispurt?",
+        options: ["10-12 cm", "1-2 cm", "50 cm", "25-30 cm"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Onmogelijk.", "Wel."],
+        wrongHints: [null, "Dat groei je in een rustig jaar, niet in de piek.", "Dan zou je in één jaar een halve meter langer worden — zoveel is het niet.", "Minder — zoveel groeit niemand in één jaar."],
       },
     ],
   },
@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Hoe vaak komt de **menstruatie** ongeveer?",
-        options: ["~Elke 28 dagen", "Elke week", "Elke 6 maanden", "Geen vaste tijd"],
+        options: ["~Elke 28 dagen", "Elke week", "Elke 6 maanden", "Elke 2 weken"],
         answer: 0,
-        wrongHints: [null, "Te vaak.", "Te zelden.", "Wel cyclisch."],
+        wrongHints: [null, "Te vaak — het duurt langer dan dat.", "Veel te zelden.", "Te vaak — het duurt langer dan dat."],
       },
       {
         q: "Wat **veroorzaakt puistjes**?",
@@ -146,9 +146,9 @@ const steps = [
     checks: [
       {
         q: "Tot welke leeftijd **ontwikkelt het brein** zich?",
-        options: ["~25 jaar", "12 jaar", "60 jaar", "Niet"],
+        options: ["~25 jaar", "12 jaar", "60 jaar", "~18 jaar"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te laat.", "Wel."],
+        wrongHints: [null, "Te vroeg — in de puberteit verandert het brein juist volop.", "Veel te laat.", "Je bent dan wettelijk volwassen, maar het brein is nog niet klaar."],
       },
       {
         q: "Waarom heb je in de puberteit **stemmingswisselingen**?",
@@ -157,10 +157,10 @@ const steps = [
         wrongHints: [null, 'Eten is niet de hoofdoorzaak.', 'Er is wél een oorzaak. Wat verandert er van binnen?', 'Het weer is niet de oorzaak.'],
       },
       {
-        q: "Welk **nummer Kindertelefoon**?",
-        options: ["0800-0432", "112", "0900", "06"],
+        q: "Welk **telefoonnummer** heeft de Kindertelefoon?",
+        options: ["0800-0432", "112", "0900-8844", "0800-0113"],
         answer: 0,
-        wrongHints: [null, "Spoednummer.", "Niet.", "Niet."],
+        wrongHints: [null, "112 is voor spoed en direct gevaar.", "Dat is het nummer van de politie zonder spoed.", "Dat is 113 Zelfmoordpreventie — ook belangrijk, maar een ander nummer."],
       },
       {
         q: "Wat is **LHBTQ+**?",
@@ -174,12 +174,12 @@ const steps = [
     title: "Eind-toets — puberteit mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Puberteit** begint bij meisjes gem.?", options: ["~11 jaar", "5", "18", "Niet bij meisjes"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Wel."] },
+      { q: "Op welke leeftijd begint de **puberteit** bij meisjes gemiddeld?", options: ["~11 jaar", "~5 jaar", "~18 jaar", "~14 jaar"], answer: 0, wrongHints: [null, "Veel te jong — een kleuter zit nog niet in de puberteit.", "Te oud — dan is de puberteit bijna voorbij.", "Te oud — de meeste meisjes zijn dan al een paar jaar bezig."] },
       { q: "Wat is een **hormoon**?", options: ['Stof die signaal geeft in lichaam', 'Spier die je kunt aanspannen', 'Voedingsstof uit je avondeten', 'Bot dat langer groeit in je been'], answer: 0, wrongHints: [null, "Een spier kun je aanspannen — een hormoon reist door je bloed. Wat doet het daar?", "Het komt niet van je bord — je lichaam maakt het zelf. Waarvoor?", "Geen hard lichaamsdeel — het is een stof die door je bloed reist. Met welk doel?"] },
-      { q: "Hoeveel **slaap** in puberteit?", options: ["9-10 uur", "4 uur", "12+ uur", "Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
-      { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Niet.", "Te zelden.", "Wel."] },
+      { q: "Hoeveel **slaap** heb je in de puberteit per nacht nodig?", options: ["9-10 uur", "4 uur", "12+ uur", "6 uur"], answer: 0, wrongHints: [null, "Veel te weinig — dan ben je overdag doodmoe.", "Te veel — zo lang slaapt een baby.", "Te weinig — in de puberteit heb je meer nodig dan een volwassene."] },
+      { q: "Hoe vaak komt de **menstruatie** ongeveer?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Elke 2 weken"], answer: 0, wrongHints: [null, "Veel te vaak.", "Veel te zelden.", "Te vaak — het duurt langer dan dat."] },
       { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900-8844", "0800-2000"], answer: 0, wrongHints: [null, "112 bel je alleen bij spoed: als er direct gevaar is.", "Dat is de politie als het géén spoed is. De Kindertelefoon is gratis — met welke cijfers beginnen gratis nummers?", "Dat is Veilig Thuis — ook goed om te kennen, maar het is een ander nummer dan de Kindertelefoon."] },
-      { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Te jong.", "Te jong.", "Te oud."] },
+      { q: "Tot welke leeftijd **ontwikkelt het brein** zich?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Te jong — in de puberteit verandert het brein juist volop.", "Veel te jong — dan begint de puberteit nog niet eens.", "Veel te oud."] },
       {
         q: "Wat is een **groeispurt**?",
         options: ['Periode waarin je snel langer wordt', 'Pijn in je benen als je groeit', 'Extra trainen om langer te worden', 'Extra veel eten om te groeien'],
@@ -234,7 +234,7 @@ const steps = [
         q: "Het **brein in puberteit** — wat is uniek?",
         options: ['Het keuze-deel is als laatste klaar', 'Het hele brein wordt kleiner', 'Het brein groeit niet meer verder', 'Het brein blijft precies hetzelfde'],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — brein verandert juist sterk.", "Tegenovergesteld — veel groei in puberteit.", "Tegenovergesteld."],
+        wrongHints: [null, "Tegenovergesteld — het brein verandert juist sterk.", "Tegenovergesteld — veel groei in de puberteit.", "Nee — in de puberteit verandert het brein juist enorm."],
         uitlegPad: {
           stappen: [
             { titel: "Twee verschillende brein-delen", tekst: "Je brein heeft (heel grof gezegd) twee delen die anders ontwikkelen:\n• **Emotie-deel (limbisch systeem)** — vroeg klaar, ~13 jaar. Dit is waarom je in puberteit intens kunt voelen.\n• **Beslissings-deel (prefrontale cortex)** — pas klaar rond **25 jaar**. Dit deel doet: lange-termijn-plannen, impuls-controle, gevolgen overzien." },
@@ -255,8 +255,8 @@ const steps = [
           niveaus: { basis: "Beslissings-deel laatst klaar.", simpeler: "Brein in puberteit: emotie-deel werkt al sterk, maar beslissings-deel (plannen + impuls-controle) pas klaar rond 25.", nogSimpeler: "Beslissings-deel laat klaar" },
         },
       },
-      { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in puberteit.", "Te veel.", "Onjuist."] },
-      { q: "Welk **hormoon** speelt vooral een rol bij **jongens in de puberteit**?", options: ["Testosteron", "Oestrogeen", "Insuline", "Adrenaline"], answer: 0, wrongHints: [null, "Speelt vooral bij meisjes een grote rol.", "Bloedsuiker.", "Stress."] },
+      { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in de puberteit.", "Te veel — zo lang slaapt een baby.", "Juist niet — in de puberteit heb je veel slaap nodig om te groeien en te leren."] },
+      { q: "Welk **hormoon** speelt vooral een rol bij **jongens in de puberteit**?", options: ["Testosteron", "Oestrogeen", "Insuline", "Adrenaline"], answer: 0, wrongHints: [null, "Speelt vooral bij meisjes een grote rol.", "Insuline regelt je bloedsuiker, niet de puberteit.", "Adrenaline is het stresshormoon, voor schrik en spanning."] },
       { q: "Wat is **acne** (jeugdpuistjes)?", options: ["Ontstoken talgklieren in de huid", "Een ziekte van de longen", "Schade aan tanden", "Een verkleuring van de ogen"], answer: 0, wrongHints: [null, "Puistjes zitten niet in je longen — waar zie je ze?", "Tanden hebben er niets mee te maken.", "Ogen hebben er niets mee te maken."] },
       { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ['Gezond eten, sport, voldoende slaap', 'Gamen, snoepen en laat opblijven', 'Niet leren en veel binnen zitten', 'Veel stress en weinig slaap'], answer: 0, wrongHints: [null, 'Is dat goed voor je lijf en je slaap?', 'Binnen zitten is niet goed voor je lijf. Wat heeft je lichaam nodig?', 'Stress en weinig slaap maken je juist moe en prikkelbaar.'] },
     ],
