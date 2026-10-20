@@ -71,7 +71,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "Lees wat er ná de dubbele punt staat — gaat dat over een lamp of over iets levends?",
-          null,
+          "Staat er iets over rotsen in de zin? Lees wat er na de dubbele punt staat.",
           "Het woord 'prik' zit erin, maar past een dokters-prik bij wat de rest van de zin vertelt?",
         ],
         uitlegPad: {
@@ -114,7 +114,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "Kijk naar de voorbeelden na 'zoals' — zijn oude knopen en kraaltjes duur?",
           "Staat er ergens een kledingstuk in het rijtje voorbeelden?",
-          null,
+          "Zie je gereedschap in het rijtje voorbeelden na 'zoals'?",
         ],
         uitlegPad: {
           stappen: [
@@ -156,7 +156,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "Het gaat niet om HOE hij praat, maar om hoevéél. Wat is het omgekeerde van 'bijna niets zeggen'?",
           "Let op het woord 'maar' — dat draait de zin juist om. Als hij vandaag stil is, hoe is hij dan meestal?",
-          null,
+          "Vragen stellen is maar één manier van praten. Gaat het om vragen, of om véél praten?",
         ],
         uitlegPad: {
           stappen: [
@@ -196,7 +196,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "Haal het woord uit elkaar: on + lees + baar. Waar zie je 'kort' in die stukjes?",
-          null,
+          "Zegt de zin iets over plaatjes? Haal het woord uit elkaar: on + lees + baar.",
           "Het briefje was gewoon geschreven — het probleem kwam pas door het water. Wat doet water met inkt?",
         ],
         uitlegPad: {
@@ -238,7 +238,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "Staat er een rijtje na 'uitgeput'? Kijk of er 'zoals' of 'bijvoorbeeld' in de zin staat.",
           "Zie je een woord als 'maar' of 'juist' in de zin?",
-          null,
+          "Staat er een dubbele punt na 'uitgeput'? Kijk goed naar de zin.",
         ],
         uitlegPad: {
           stappen: [
@@ -267,7 +267,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "De tekst noemt haar benen niet. Wat veroorzaakt trillen op een podium voor een publiek?",
           "Staat er iets over het publiek dat haar boos maakt?",
-          null,
+          "Staat er iets over wachten? Wat doet een podium met je gevoel?",
         ],
         uitlegPad: {
           stappen: [
@@ -304,7 +304,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "De zin ervoor zegt 'de diepzee is niet leeg'. Gaat het hier om gevaar, of om hoevéél er leeft?",
-          null,
+          "Staat er iets over geluid in de tekst? Lees de zinnen eromheen.",
           "Lees de zin ervoor: 'Toch is de diepzee niet leeg.' Past 'bijna geen leven' daarbij?",
         ],
         uitlegPad: {
@@ -344,7 +344,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "Zien en licht géven is niet hetzelfde. Wat staat er precies na de dubbele punt?",
           "Over kleuren zegt de tekst niets. Zoek de uitleg direct achter het woord.",
-          null,
+          "Dat klopt voor de diepzee, maar is dat de uitleg na de dubbele punt?",
         ],
         uitlegPad: {
           stappen: [
@@ -383,7 +383,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "Wie eet hier wie op? Lees de zin erna nog eens goed.",
           "Waarvoor gebruikt de hengelvis het lichtje volgens de zin erna — om zelf te zien, of om iets ánders te laten komen?",
-          null,
+          "Verstoppen de visjes zich bij het lichtje, of zwemmen ze er juist op af?",
         ],
         uitlegPad: {
           stappen: [
@@ -423,7 +423,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "Er zit wel 'berg' in het woord, maar kijk naar de opsomming erna: gaat die over bergen?",
           "Donker is maar één van de drie dingen in de opsomming. Welk antwoord dekt ze alle drie?",
-          null,
+          "Gaat de opsomming erna over ontdekken, of over hoe het er is?",
         ],
         uitlegPad: {
           stappen: [
@@ -462,7 +462,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "Onderzoekers komen in de zin voor, maar zij 'kennen een fractie' — kan een fractie dan zelf een groep mensen zijn?",
-          null,
+          "Zegt de zin dat er een nieuw dier is ontdekt? Lees wat er na de dubbele punt staat.",
           "Lees wat er na de dubbele punt staat: 'misschien maar één op de tien'. Gaat dat over meten, of over hoevéél?",
         ],
         uitlegPad: {
@@ -552,9 +552,9 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Lees de zin erna: komt er nooit zonlicht, of een beetje?",
           "Er zit wel 'aarde' in het woord, maar gaat de zin erna over modder of over licht?",
-          null,
+          "Gaat de zin erna over een kleur, of over licht?",
         ],
         uitlegPad: {
           stappen: [
@@ -613,8 +613,8 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "De duikboot is voor mensen. Lees de zin ervoor: hoe voelen de dieren zich daar?",
-          null,
-          null,
+          "Voelen zieke dieren zich 'thuis'? Lees de zin ervoor nog eens.",
+          "Staat er dat de dieren verhuisden? Ze voelen zich juist dáár thuis.",
         ],
         uitlegPad: {
           stappen: [
@@ -674,7 +674,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           null,
           "IJskoud is het daar wel, maar lees de zin ervoor: hoeveel diepzeedieren kennen we al?",
           "Lees het begin van de tekst nog eens: is de diepzee leeg?",
-          null,
+          "Gaat 'onontdekt' over grootte? Haal het woord uit elkaar: on + ontdekt.",
         ],
         uitlegPad: {
           stappen: [
@@ -752,8 +752,8 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Zou geld op een zitmeubel 'veilig bewaard' blijven? Kijk naar de woorden om 'bank' heen.",
-          null,
-          null,
+          "Zet papa zijn geld in zee? Kijk naar 'veilig bewaard'.",
+          "Een werkbank bestaat, maar bewaar je daar geld veilig?",
         ],
         uitlegPad: {
           stappen: [
@@ -792,7 +792,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Gaat de zin over kleur en donker, of over voelen en gewicht? Lees het stuk na 'zo licht dat...'.",
-          null,
+          "Kun je een lamp in je hand voelen zoals een veertje? Kijk naar 'zo licht dat'.",
           "Een 'lichte som' bestaat, maar kun je een veertje 'moeilijk of makkelijk' in je hand voelen? Wat vertelt het woord 'voelt'?",
         ],
         uitlegPad: {
@@ -833,7 +833,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
           null,
           "Groeit er een plant in een schrift? Kijk waar het blad vandaan komt.",
           "Een tijdschrift is een 'blad' dat je koopt — maar haal je dat uit een schrift?",
-          null,
+          "Zit er een roeispaan in een schrift? Kijk naar 'schrift' en 'tekening'.",
         ],
         uitlegPad: {
           stappen: [
@@ -871,7 +871,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         evidence: "Boven het krantenartikel stond in dikke letters de kop",
         wrongHints: [
           null,
-          null,
+          "Een dier heeft een kop, maar staat er een dier boven een krantenartikel?",
           "Uit een kop kún je drinken — maar staat er iets over drinken in deze zin? Kijk naar 'krantenartikel' en 'dikke letters'.",
           "Een trein heeft een kop, maar rijdt hier ergens een trein? Wat staat er bóven het artikel?",
         ],
@@ -964,8 +964,8 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Een vorst kan ook een koning zijn, maar maakt een koning ijsbloemen op je raam? Kijk naar 'gevroren'.",
-          null,
-          null,
+          "De rand van een dak heet ook vorst, maar maakt die ijsbloemen? Kijk naar 'gevroren'.",
+          "Staat er iets over wind in de zin? Lees 'hard gevroren'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1024,8 +1024,8 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Een walnoot is ook een noot, maar kun je een walnoot 'lezen'? Kijk naar 'muziekles' en 'notenbalk'.",
-          null,
-          null,
+          "Lees je een bladzijde 'op de notenbalk'? Kijk naar 'muziekles'.",
+          "Staat er iets over snaren? Kijk naar 'notenbalk'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1079,8 +1079,8 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Een deur heeft een slot, maar heeft een verhaal een deur? Kijk naar 'van het verhaal'.",
-          null,
-          null,
+          "Een slot kan een kasteel zijn, maar past dat bij 'van het verhaal'?",
+          "Leg je een boek weg omdat het begin spannend is? Wanneer kom je bij het slot?",
         ],
         uitlegPad: {
           stappen: [
@@ -1147,7 +1147,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         evidence: "Diep onder de grond is het zo heet dat steen er smelt. Dit gesmolten gesteente heet magma.",
         wrongHints: [
           null,
-          null,
+          "Rook komt eruit bij een uitbarsting. Maar wat heet er magma volgens de tekst?",
           "Die ruimte heeft een eigen naam in de tekst — de magmaKAMER. Wat zit erín?",
           "As komt pas bij de uitbarsting. Zoek de zin waarin het woord magma wordt uitgelegd.",
         ],
@@ -1187,7 +1187,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Over geluid zegt de tekst niets. Wat gebeurt er volgens de zin erna met de dorpen?",
-          null,
+          "Staat er iets over een verrassing in de zin? Kijk wat er met de dorpen gebeurt.",
           "Over hoe láng een uitbarsting duurt lees je niets. Kijk wat er met de omgeving gebeurt.",
         ],
         uitlegPad: {
@@ -1226,7 +1226,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Dichtbij! Maar er groeit meer dan fruit: de zin noemt óók groente. Welk antwoord dekt allebei?",
-          null,
+          "Zegt de tekst iets over de kleur van de grond? Lees de zin over de boeren.",
           "Over geld of prijzen zegt de tekst niets. Lees de zin over de boeren nog eens.",
         ],
         uitlegPad: {
@@ -1267,7 +1267,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
           null,
           "Hulpdiensten komen in de tekst niet voor. Kijk wat er óp de dorpen terechtkomt.",
           "Zakt het dorp naar beneden, of komt er juist iets bóvenop? Let op het woord 'onder... as en modder'.",
-          null,
+          "Vertrekken de bewoners, of gebeurt er iets mét het dorp? Kijk naar 'onder een dikke laag'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1306,7 +1306,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
           null,
           "Gevaarlijk is een vulkaan zeker, maar de laatste alinea gaat ergens anders over. Wat weten de wetenschappers wel en niet?",
           "De tekst zegt juist dat wetenschappers van alles kunnen meten. Wat lukt er dan tóch niet helemaal?",
-          null,
+          "Gaat het over hoe lang geleden, of over wat wetenschappers wel en niet weten?",
         ],
         uitlegPad: {
           stappen: [
@@ -1400,9 +1400,9 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "'Allesbehalve' betekent niet 'bijna'. Lees de zin met 'maar' nog eens.",
           "Lees de zin nog eens: hoe ziet een vulkaan er vanbuiten uit, en hoe is hij vanbinnen?",
-          null,
+          "Zegt de zin iets over de top? Kijk naar 'maar vanbinnen'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1456,8 +1456,8 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Gaat het over gezelligheid? Lees de zin ervoor: waar wonen die miljoenen mensen?",
-          null,
-          null,
+          "Staat er iets over geld? Haal het woord uit elkaar: on + verstandig.",
+          "Haal het woord uit elkaar: on + verstandig. Wat betekent 'on-'?",
         ],
         uitlegPad: {
           stappen: [

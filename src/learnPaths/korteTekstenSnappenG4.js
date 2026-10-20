@@ -67,7 +67,7 @@ const steps = [
         q: "*Papa leest een boek in de tuin.*\n\n**Wat** doet papa?",
         options: ["een boek lezen", "in de tuin werken", "de krant lezen", "een dutje doen"],
         answer: 0,
-        wrongHints: [null, "Hij is wel in de tuin — maar wat doet hij daar?", "Lees goed: wát leest hij?", null],
+        wrongHints: [null, "Hij is wel in de tuin — maar wat doet hij daar?", "Lees goed: wát leest hij?", "Staat dat er echt? Lees de zin nog eens."],
         uitlegPad: {
           stappen: [
             {
@@ -86,7 +86,7 @@ const steps = [
         q: "*De juf schrijft een woord op het bord.*\n\n**Wie** schrijft er op het bord?",
         options: ["de juf", "de meester", "een kind", "het bord"],
         answer: 0,
-        wrongHints: [null, null, "Staat die in de zin?", "Daar schrijft iemand óp — maar wie schrijft?"],
+        wrongHints: [null, "Lees de zin nog eens: staat er juf of meester?", "Staat die in de zin?", "Daar schrijft iemand óp — maar wie schrijft?"],
         uitlegPad: {
           stappen: [
             {
@@ -108,7 +108,7 @@ const steps = [
         wrongHints: [
           null,
           "Er staan wel blokken in de zin — maar wat doet hij ermee?",
-          null,
+          "Staat dat er echt? Lees de zin nog eens.",
           "Staat dat er echt?",
         ],
         uitlegPad: {
@@ -130,7 +130,7 @@ const steps = [
         q: "*Bram geeft zijn zus een cadeau.*\n\n**Wie** geeft het cadeau?",
         options: ["Bram", "zijn zus", "Daan", "het cadeau"],
         answer: 0,
-        wrongHints: [null, "Krijgt zij iets, of geeft zij iets?", "Staat Daan in de zin?", null],
+        wrongHints: [null, "Krijgt zij iets, of geeft zij iets?", "Staat Daan in de zin?", "Dat wordt gegeven. Maar wie geeft het?"],
         uitlegPad: {
           stappen: [
             {
@@ -149,7 +149,7 @@ const steps = [
         q: "*Na school speelt Eva op het plein.*\n\n**Wanneer** speelt Eva?",
         options: ["na school", "op het plein", "voor het eten", "in de pauze"],
         answer: 0,
-        wrongHints: [null, "Dat zegt waar ze speelt. Maar wanneer?", null, "Staat dat er echt?"],
+        wrongHints: [null, "Dat zegt waar ze speelt. Maar wanneer?", "Staat dat er echt? Lees de zin nog eens.", "Staat dat er echt?"],
         uitlegPad: {
           stappen: [
             {
@@ -168,7 +168,7 @@ const steps = [
         q: "*De kat drinkt melk uit een schaaltje.*\n\n**Wat** drinkt de kat?",
         options: ["melk", "water", "een schaaltje", "thee"],
         answer: 0,
-        wrongHints: [null, "Staat dat er echt?", "Kun je dat drinken?", null],
+        wrongHints: [null, "Staat dat er echt?", "Kun je dat drinken?", "Staat dat er echt? Lees de zin nog eens."],
         uitlegPad: {
           stappen: [
             {
@@ -243,7 +243,7 @@ const steps = [
           null,
           "Zij heeft het konijn — maar hoe heet het konijn zelf?",
           "Lees zin 2 nog eens.",
-          null,
+          "Dat eet hij graag — maar is het zijn naam?",
         ],
         uitlegPad: {
           stappen: [
@@ -264,7 +264,7 @@ const steps = [
         q: "*Sara heeft een konijn. Het konijn heet Snuf. Snuf eet graag wortels.*\n\n**Wat** eet Snuf graag?",
         options: ["wortels", "appels", "sla", "gras"],
         answer: 0,
-        wrongHints: [null, "Lees de laatste zin nog eens.", null, "Staat dat er echt?"],
+        wrongHints: [null, "Lees de laatste zin nog eens.", "Staat dat er echt? Lees de laatste zin.", "Staat dat er echt?"],
         uitlegPad: {
           stappen: [
             {
@@ -283,7 +283,7 @@ const steps = [
         q: "*Het is mooi weer. Ravi gaat met papa naar het strand. Daar bouwen ze een groot zandkasteel.*\n\n**Wat** bouwen Ravi en papa?",
         options: ["een zandkasteel", "een hut", "een toren van blokken", "een sneeuwpop"],
         answer: 0,
-        wrongHints: [null, "Lees de laatste zin nog eens.", null, "Is het daar wel koud genoeg voor?"],
+        wrongHints: [null, "Lees de laatste zin nog eens.", "Blokken op het strand? Lees de laatste zin nog eens.", "Is het daar wel koud genoeg voor?"],
         uitlegPad: {
           stappen: [
             {
@@ -302,7 +302,7 @@ const steps = [
         q: "*Juf Anne heeft een verrassing. Ze leest een spannend boek voor. De kinderen luisteren heel stil.*\n\n**Wie** leest het boek voor?",
         options: ["juf Anne", "de kinderen", "de meester", "een kind uit de klas"],
         answer: 0,
-        wrongHints: [null, "Die luisteren juist — wie leest er dan?", null, "Staat dat er echt?"],
+        wrongHints: [null, "Die luisteren juist — wie leest er dan?", "Staat er een meester in de tekst?", "Staat dat er echt?"],
         uitlegPad: {
           stappen: [
             {
@@ -327,7 +327,7 @@ const steps = [
         q: "*Juf Anne heeft een verrassing. Ze leest een spannend boek voor. De kinderen luisteren heel stil.*\n\n**Wat** doen de kinderen?",
         options: ["heel stil luisteren", "hard lachen", "zelf een boek lezen", "buiten spelen"],
         answer: 0,
-        wrongHints: [null, "Lees de laatste zin nog eens.", "Wie leest het boek eigenlijk?", null],
+        wrongHints: [null, "Lees de laatste zin nog eens.", "Wie leest het boek eigenlijk?", "Staat dat er echt? Lees de laatste zin."],
         uitlegPad: {
           stappen: [
             {
@@ -402,7 +402,7 @@ const steps = [
           "zijn huisje achterlaten",
         ],
         answer: 0,
-        wrongHints: [null, "Zoek het woord 'gevaarlijk' in de tekst.", null, "Staat dat in de tekst?"],
+        wrongHints: [null, "Zoek het woord 'gevaarlijk' in de tekst.", "Staat dat in de tekst? Zoek het woord 'gevaarlijk'.", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -435,7 +435,7 @@ const steps = [
         wrongHints: [
           null,
           "Lees de laatste zin nog eens — wat staat er naast het badpak?",
-          null,
+          "Staat dat allebei in de tekst? Lees de laatste zin.",
           "Staat dat in de tekst?",
         ],
         uitlegPad: {
@@ -457,7 +457,7 @@ const steps = [
         q: "*Een uil slaapt overdag. 's Nachts gaat hij op jacht. Hij eet graag muizen. Een uil kan heel goed zien in het donker.*\n\n**Wanneer** gaat de uil op jacht?",
         options: ["'s nachts", "overdag", "'s middags", "'s ochtends vroeg"],
         answer: 0,
-        wrongHints: [null, "Wat doet de uil overdag?", null, "Staat dat in de tekst?"],
+        wrongHints: [null, "Wat doet de uil overdag?", "Overdag slaapt hij. Hoort de middag bij overdag?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -476,7 +476,7 @@ const steps = [
         q: "*Mo heeft een moestuin. Hij plant tomaten en bonen. Elke avond geeft hij de plantjes water. In de zomer plukt hij de tomaten.*\n\n**Wanneer** geeft Mo de plantjes water?",
         options: ["elke avond", "in de zomer", "elke ochtend", "als het regent"],
         answer: 0,
-        wrongHints: [null, "Wat doet Mo in de zomer?", null, "Staat dat in de tekst?"],
+        wrongHints: [null, "Wat doet Mo in de zomer?", "Kijk goed: welk moment van de dag staat er in de tekst?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -495,7 +495,7 @@ const steps = [
         q: "*In het museum mag je niet rennen. Je mag ook niets aanraken. Foto's maken mag wel. Het museum is open tot vijf uur.*\n\nWat **mag** je wel in het museum?",
         options: ["foto's maken", "rennen", "dingen aanraken", "eten en drinken"],
         answer: 0,
-        wrongHints: [null, "Lees de eerste zin nog eens. Mag dat?", null, "Staat dat in de tekst?"],
+        wrongHints: [null, "Lees de eerste zin nog eens. Mag dat?", "Lees zin 2 nog eens. Mag dat?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -591,7 +591,7 @@ const steps = [
         wrongHints: [
           null,
           "Het woordje 'dan' staat in die zin — is dat het begin?",
-          null,
+          "Dat komt op het laatst. Wat doet ze het eerst?",
           "Staat dat in de tekst?",
         ],
         uitlegPad: {
@@ -617,7 +617,7 @@ const steps = [
           "een boterham pakken",
         ],
         answer: 0,
-        wrongHints: [null, "Dat komt net daarvóór.", null, "Daar begint het juist mee."],
+        wrongHints: [null, "Dat komt net daarvóór.", "Dat komt daarvóór al. Wat komt helemaal op het laatst?", "Daar begint het juist mee."],
         uitlegPad: {
           stappen: [
             {
@@ -635,13 +635,13 @@ const steps = [
       {
         q: "*Het begon te sneeuwen. Toen maakten Ali en Noa een sneeuwpop. Daarna gaven ze hem een wortel als neus.*\n\nWat gebeurde er **na** het maken van de sneeuwpop?",
         options: [
-          "de sneeuwpop kreeg een wortel als neus",
+          "ze gaven hem een wortel als neus",
           "het begon te sneeuwen",
-          "Ali en Noa gingen sleeën",
-          "Ali en Noa gingen naar binnen",
+          "Ali en Noa gingen samen sleeën",
+          "Ali en Noa gingen weer naar binnen",
         ],
         answer: 0,
-        wrongHints: [null, "Daar begon het juist mee.", "Staat dat in de tekst?", null],
+        wrongHints: [null, "Daar begon het juist mee.", "Staat dat in de tekst?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -660,7 +660,7 @@ const steps = [
         q: "*Eerst doet Tom zijn sokken aan. Daarna doet hij zijn schoenen aan. Ten slotte strikt hij zijn veters.*\n\nWat doet Tom **vóór** hij zijn schoenen aandoet?",
         options: ["zijn sokken aandoen", "zijn veters strikken", "zijn jas aandoen", "zijn tas pakken"],
         answer: 0,
-        wrongHints: [null, "Dat doet hij juist ná de schoenen.", null, "Staat dat in de tekst?"],
+        wrongHints: [null, "Dat doet hij juist ná de schoenen.", "Staat dat in de tekst?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -683,7 +683,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat doet ze ten slotte. Komt dat meteen na het wassen?",
-          null,
+          "Staat dat in de tekst?",
           "Staat dat in de tekst?",
         ],
         uitlegPad: {
@@ -756,7 +756,7 @@ const steps = [
         q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\n**Waarmee** gaat groep 4 naar de dierentuin?",
         options: ["met de bus", "met de trein", "met de fiets", "lopend"],
         answer: 0,
-        wrongHints: [null, "Lees zin 2 nog eens.", null, "Staat dat in de tekst?"],
+        wrongHints: [null, "Lees zin 2 nog eens.", "Staat dat in de tekst? Lees zin 2.", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -783,7 +783,7 @@ const steps = [
         q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\n**Wie** vindt de apen het leukst?",
         options: ["Lena", "Tim", "groep 4", "de juf"],
         answer: 0,
-        wrongHints: [null, "Staat Tim in de tekst?", null, null],
+        wrongHints: [null, "Staat Tim in de tekst?", "Zij zien de apen allemaal. Maar wie vindt ze het leukst?", "Staat de juf in de tekst?"],
         uitlegPad: {
           stappen: [
             {
@@ -807,7 +807,7 @@ const steps = [
           "Lena kijkt naar de apen",
         ],
         answer: 0,
-        wrongHints: [null, "Welk woordje staat in de zin met het broodje?", null, null],
+        wrongHints: [null, "Welk woordje staat in de zin met het broodje?", "Dat is juist het einde van de schoolreis.", "Dat gebeurt pas in de dierentuin. Hoe komen ze daar?"],
         uitlegPad: {
           stappen: [
             {

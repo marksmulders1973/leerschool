@@ -102,7 +102,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           null,
           "Dat is juist de oorzaak — kijk achter 'doordat'. Het gevolg staat vóór het signaalwoord.",
           "Dat is een plek, geen gevolg. Lees welk ding er veranderde door de zonneschijn.",
-          null,
+          "Staat er iets over de smaak in de zin? Kijk wat er met het ijsje gebeurde.",
         ],
         uitlegPad: {
           stappen: [
@@ -131,7 +131,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           null,
           "Dit zijn tijd-woorden: ze vertellen in welke vólgorde iets gebeurt, niet waardóór het gebeurt.",
           "Deze woorden zetten juist een tegenstelling neer — iets loopt anders dan je verwacht.",
-          null,
+          "Deze woorden kondigen een voorbeeld aan. Zeggen ze waardóór iets gebeurt?",
         ],
         uitlegPad: {
           stappen: [
@@ -170,7 +170,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
         wrongHints: [
           null,
           "Dat gebeurde éérst — is dat waar het door kómt, of wat eruit vólgt? Kijk wat er achter 'daardoor' staat.",
-          null,
+          "De blokfluit is een ding. Een gevolg is iets wat gebeurt. Kijk achter 'daardoor'.",
           "Staat er iets over leuk vinden in deze zinnen? Blijf bij wat er echt staat.",
         ],
         uitlegPad: {
@@ -210,7 +210,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           null,
           "Dat is het gevolg — het water stond er dóór. Kijk wat er achter het woord 'doordat' staat.",
           "De keuken is een plek, geen oorzaak of gevolg. Stel de waardoor-vraag.",
-          null,
+          "Staat de vloer in de zin? Zoek wat er achter 'doordat' staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -238,7 +238,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           null,
           "Er staat 'daarna' — dat is een tijd-woord, niet een oorzaak-woord. Dronk Emma melk dóór de boterham?",
           "Dat is een feit. Stel de waardoor-vraag: waardoor is het marktdag? Heeft dat een oorzaak?",
-          null,
+          "Twee kleuren naast elkaar: komt de ene kleur door de andere?",
         ],
         uitlegPad: {
           stappen: [
@@ -267,7 +267,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           null,
           "Denk aan de bananenschil en de uitglijder: lag de schil er aan het begin of aan het eind?",
           "Een mening herken je aan woorden als 'ik vind'. Gaat een oorzaak over vinden, of over gebeuren?",
-          null,
+          "Een oorzaak is geen woord, maar iets wat gebeurt. Denk aan de bananenschil.",
         ],
         uitlegPad: {
           stappen: [
@@ -302,7 +302,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           null,
           "Dit woord zegt dat iets anders loopt dan je zou verwachten. Is dat hier de bedoeling?",
           "Dit woord vertelt alleen de volgorde in tijd. Zegt het ook waardóór iets gebeurt?",
-          null,
+          "Dit woord zegt alleen wat er later gebeurde. Zegt het ook waardóór dat kwam?",
         ],
         uitlegPad: {
           stappen: [
@@ -354,7 +354,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           "Alleen wat er later gebeurde, zonder verband",
         ],
         answer: 0,
-        wrongHints: [null, "De vertraging staat vóór 'zodat'. Wat staat er áchter?", null, null],
+        wrongHints: [null, "De vertraging staat vóór 'zodat'. Wat staat er áchter?", "Is er een tegenstelling tussen de bus en de trein? Kijk wat 'zodat' aangeeft.", "Kwam het missen van de trein door de vertraging, of toevallig erna?"],
         uitlegPad: {
           stappen: [
             {
@@ -427,7 +427,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
           null,
           "De pomp zorgde ervoor dat hij moest lópen — maar waardoor werd de band zélf leeg? Zoek de zin met 'daardoor'.",
           "Dat is juist een gevolg, verderop in de keten. Ga terug naar het begin: wat gebeurde er vanmorgen op de weg?",
-          null,
+          "Staat er in de tekst dat Milan hard fietste? Zoek de zin met 'daardoor'.",
         ],
         uitlegPad: {
           stappen: [
@@ -465,7 +465,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         wrongHints: [
           null,
           "De juf komt pas op school in het verhaal voor. Zoek de zin in de tekst die met 'omdat' begint.",
-          null,
+          "Staat er dat Milan graag wilde bewegen? Zoek de zin die met 'omdat' begint.",
           "Staat er ergens in de tekst iets over regen? Blijf bij wat er écht in het verhaal gebeurt.",
         ],
         uitlegPad: {
@@ -532,7 +532,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         wrongHints: [
           null,
           "Staat er iets over nieuwe banden kopen in de tekst? Zoek wat er na schooltijd in de tekst staat.",
-          null,
+          "Komt er een fietsenmaker voor in de tekst? Lees wat ze na schooltijd deden.",
           "De pomp is een detail van eerder — wát gingen Milan en de juf na school daadwerkelijk doen?",
         ],
         uitlegPad: {
@@ -561,7 +561,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
           null,
           "Staat er iets over Milan die het gat zelf zag? Lees de alinea over de emmer nog eens.",
           "Dat zegt de tekst ook — maar waardóór wisten ze die specifieke plek te vinden?",
-          null,
+          "Staat er iets over horen in de tekst, of over zien? Lees de alinea over de emmer.",
         ],
         uitlegPad: {
           stappen: [
@@ -589,7 +589,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         wrongHints: [
           null,
           "Dat deden ze juist éérst, vóórdat de belletjes kwamen. Kijk wat er achter 'waardoor' staat.",
-          null,
+          "Dat gebeurde 's ochtends al. Kwam dat door de belletjes?",
           "Dat gebeurde pas daarná, als laatste stap. Zoek wat er diréct door de belletjes kwam.",
         ],
         uitlegPad: {
@@ -626,7 +626,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
           "Hij was moe van het lopen",
         ],
         answer: 0,
-        wrongHints: [null, null, null, "Ging Milan al lopen vóórdat het trappen zwaar werd, of pas erna?"],
+        wrongHints: [null, "Staat er iets over wind in de tekst? Lees de zinnen ervóór.", "Staat er iets over een zware tas in de tekst? Lees de zinnen ervóór.", "Ging Milan al lopen vóórdat het trappen zwaar werd, of pas erna?"],
         uitlegPad: {
           stappen: [
             {
@@ -680,8 +680,8 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         wrongHints: [
           null,
           "Milan legde uit wat er gebéúrd was. Is dat hetzelfde als uitleggen hoe je een band plakt?",
-          null,
-          null,
+          "Staat er iets over een boek? Lees de zin met 'want'.",
+          "Staat er dat de juf bij een fietsenmaker werkte? Lees verder na de aanhalingstekens.",
         ],
         uitlegPad: {
           stappen: [
@@ -736,7 +736,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         wrongHints: [
           null,
           "Waardoor kwam die spijker daar? Staat dat in de tekst?",
-          null,
+          "Waardoor kwam dat? Staat dat in de tekst? En leidde het zelf weer tot iets?",
           "Dit gebeurt helemaal aan het eind. Leidt het in de tekst nog tot iets anders?",
         ],
         uitlegPad: {
@@ -812,7 +812,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         wrongHints: [
           null,
           "Dat staat vooraan in de zin — maar vooraan is niet altijd de oorzaak. Achter welk signaalwoord moet je kijken?",
-          null,
+          "Staat er dat Sanne naar school wilde? Kijk wat er achter 'omdat' staat.",
           "Komt er een dokter voor in de zin? Kijk goed wat er ná 'omdat' staat.",
         ],
         uitlegPad: {
@@ -853,7 +853,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
           null,
           "Probeer de waardoor-vraag: waardoor lag er ijs? Kun je die vraag beantwoorden met de eerste zin?",
           "Welke van de twee gebeurde éérst — de nacht met vorst, of de ochtend met ijs? De oorzaak komt altijd eerst.",
-          null,
+          "Zet er zelf 'daardoor' tussen: 'Het vroor. Daardoor lag er ijs.' Klinkt dat logisch?",
         ],
         uitlegPad: {
           stappen: [
@@ -892,7 +892,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         wrongHints: [
           null,
           "Ging Jesse voetballen dóór die boterham? Test: 'doordat hij een boterham at, ging hij voetballen' — klinkt dat logisch?",
-          null,
+          "Wat gebeurde er eerst: eten of voetballen? Kan iets wat later komt de oorzaak zijn?",
           "Jawel hoor: gebruik de invoeg-truc met 'daardoor' en luister of de zin logisch blijft.",
         ],
         uitlegPad: {
@@ -967,7 +967,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         wrongHints: [
           null,
           "At Yusuf zijn bord leeg dóór zijn schouders op te halen? Test: 'doordat hij zijn schouders ophaalde, at hij zijn bord leeg' — klinkt dat logisch?",
-          null,
+          "Wat gebeurde er eerst? Kan iets wat later komt de oorzaak zijn van wat eerder gebeurde?",
           "Jawel! Gebruik de invoeg-test met 'daardoor' en luister of de zin logisch klinkt.",
         ],
         uitlegPad: {
@@ -996,7 +996,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         wrongHints: [
           null,
           "Doe de test: zou Bram óók niet mogen meedoen als hij zijn tas wél bij zich had? Wat zegt dat over het verband?",
-          null,
+          "De zwemles was er sowieso. Waardóór mocht Bram niet meedoen?",
           "Let op de volgorde: wat gebeurde er in het écht als eerste? De pijl loopt altijd van eerst naar later.",
         ],
         uitlegPad: {
@@ -1035,8 +1035,8 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         wrongHints: [
           null,
           "Doe de test: 'Doordat het stormde, lagen er takken op straat.' Klinkt dat logisch?",
-          null,
-          null,
+          "Doe de test: 'Doordat Tom zijn been brak, liep hij op krukken.' Klinkt dat logisch?",
+          "Doe de test: 'Doordat de oven te heet stond, verbrandden de koekjes.' Klinkt dat logisch?",
         ],
         uitlegPad: {
           stappen: [
@@ -1091,8 +1091,8 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         wrongHints: [
           null,
           "Dat staat vooraan in de zin. Maar is vooraan in de zin ook eerst in het echt?",
-          null,
-          null,
+          "Staat er dat Sem zijn huiswerk afmaakte? Lees de zin nog eens.",
+          "Staat er dat Sem buiten speelde? Lees de zin nog eens.",
         ],
         uitlegPad: {
           stappen: [
@@ -1166,7 +1166,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
           null,
           "Dat gebeurde pas ná het omvallen, helemaal aan het eind van de tekst. Zoek wat er vóóraf ging.",
           "Het hok kréég de boom juist op zich — is dat een oorzaak, of een gevolg van het vallen?",
-          null,
+          "Dat zegt wie Ties is. Heeft dat de boom laten omvallen?",
         ],
         uitlegPad: {
           stappen: [
@@ -1206,7 +1206,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
           null,
           "Staat er ergens in de tekst iets over kapotte fietsen? Zoek de zin met het signaalwoord 'dus'.",
           "Dat bericht was juist een gevólg — het kwam ergens door. Waardoor moest dat bericht verstuurd worden?",
-          null,
+          "Staat er dat Ties het hok schilderde? Lees wat er met het hok gebeurde.",
         ],
         uitlegPad: {
           stappen: [
@@ -1245,7 +1245,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
         wrongHints: [
           null,
           "Let op het woord 'gratis' in de tekst — past betaald worden daarbij?",
-          null,
+          "Staat er iets over een hok voor Ties zelf? Zoek de zin die met 'omdat' begint.",
           "Staat er iets in de tekst over schade aan het huis van Ties? Zoek de zin die met 'omdat' begint.",
         ],
         uitlegPad: {
@@ -1294,17 +1294,17 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
       {
         q: "Waardoor gaf de storm, die eerst alleen maar schade gaf, uiteindelijk toch iets nieuws op het schoolplein?",
         options: [
-          "Doordat de stam van de omgevallen boom in schijven werd gezaagd voor zitjes",
-          "Doordat de gemeente een nieuw speeltoestel plaatste",
-          "Doordat de school geld ontving voor de schade",
-          "Doordat Ties een nieuwe boom plantte op het plein",
+          "Doordat de stam van de omgevallen boom tot zitjes werd gezaagd",
+          "Doordat de gemeente een gloednieuw speeltoestel op het plein zette",
+          "Doordat de school geld kreeg om alle stormschade te herstellen",
+          "Doordat buurman Ties een jonge nieuwe boom op het plein plantte",
         ],
         answer: 0,
         evidence: "Zo zorgde de storm, die eerst alleen maar schade gaf, uiteindelijk toch voor iets nieuws op het schoolplein.",
         wrongHints: [
           null,
           "Staat er iets over de gemeente of speeltoestellen in de tekst? Lees de laatste alinea.",
-          null,
+          "Staat er iets over geld voor de school in de tekst? Lees de laatste alinea.",
           "Staat er iets over een nieuwe boom? Lees de laatste alinea over wat van de boom overbleef.",
         ],
         uitlegPad: {
@@ -1332,7 +1332,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
         evidence: "...bood hij aan het hok gratis te repareren. Een paar vaders hielpen mee. Binnen drie dagen stond er een steviger hok dan ooit.",
         wrongHints: [
           null,
-          null,
+          "De storm was voorbij, ja. Maar bouwt een storm die gaat liggen een nieuw hok?",
           "De zitjes horen bij een ánder gevolg van de storm, helemaal aan het eind van de tekst. Wie waren er met het hók bezig?",
           "Dat bericht ging over lopend naar school komen. Zoek in de tekst wie er aan het hok wérkten.",
         ],
@@ -1370,7 +1370,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
           "Zitjes gemaakt → boom valt om → fietsenhok beschadigd",
         ],
         answer: 0,
-        wrongHints: [null, "Wat gebeurde er in het écht het eerst: de storm of het kapotte hok?", null, null],
+        wrongHints: [null, "Wat gebeurde er in het écht het eerst: de storm of het kapotte hok?", "Kan een boom omvallen vóórdat er storm is? Kijk naar de volgorde.", "De zitjes kwamen pas helemaal aan het eind. Kunnen die de oorzaak zijn?"],
         uitlegPad: {
           stappen: [
             {

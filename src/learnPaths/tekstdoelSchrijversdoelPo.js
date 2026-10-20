@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [
           null,
           "Zie je ergens een mening of een aansporing zoals 'doe mee' of 'daarom moet'?",
-          null,
+          "Is dit een verhaal met een grap of spanning, of staan er feiten in?",
           "Staan er stappen in die jij moet uitvoeren, zoals 'eerst' en 'daarna'?",
         ],
         uitlegPad: {
@@ -94,7 +94,7 @@ const steps = [
           null,
           "Er staat wel een feit in (zwerfvuil is gevaarlijk), maar waarvoor gebruikt de schrijver dat feit?",
           "Is dit geschreven om je te laten lachen of om mee te leven met een verhaal?",
-          null,
+          "Staan er stappen in die je in een vaste volgorde moet uitvoeren?",
         ],
         uitlegPad: {
           stappen: [
@@ -131,7 +131,7 @@ const steps = [
           null,
           "De tekst legt niet uit hoe lijm wérkt — wat moet jij hier met je handen doen?",
           "Zie je een mening of een reden waarom lijmen beter zou zijn dan plakband?",
-          null,
+          "Is dit een grappig verhaal? Kijk naar de werkwoorden vooraan de zinnen.",
         ],
         uitlegPad: {
           stappen: [
@@ -166,7 +166,7 @@ const steps = [
           null,
           "Leer je hier echte feiten over goudvissen of kunstgebitten? Of is het verzonnen?",
           "Moet jij hier stappen uitvoeren?",
-          null,
+          "Wil de schrijver dat je iets vindt of doet? Of alleen dat je lacht?",
         ],
         uitlegPad: {
           stappen: [
@@ -201,7 +201,7 @@ const steps = [
           null,
           "Er staan geen feiten over hoe papier werkt — wat moet JIJ doen?",
           "Is er een verhaal of een grap? Kijk naar de werkwoorden vooraan de zinnen.",
-          null,
+          "Staat er een mening of een oproep in? Kijk naar de werkwoorden vooraan.",
         ],
         uitlegPad: {
           stappen: [
@@ -224,7 +224,7 @@ const steps = [
           null,
           "Staat er een mening of een aansporing om iets te doen?",
           "Is er een verhaal met personages, spanning of een grap?",
-          null,
+          "Moet jij hier stappen uitvoeren, zoals bij een recept?",
         ],
         uitlegPad: {
           stappen: [
@@ -302,7 +302,7 @@ const steps = [
           null,
           "Kijk naar de aanspreekvorm: staat er 'jij' of 'u'? En wie speelt er spelletjes op de achterbank?",
           "Gaat de tekst over het repareren van auto's?",
-          null,
+          "Rijdt de lezer de bus, of zit hij achterin te spelen?",
         ],
         uitlegPad: {
           stappen: [
@@ -337,7 +337,7 @@ const steps = [
         wrongHints: [
           null,
           "Er staat 'u' en 'uw kind' — hoort de lezer zélf op zwemles te zitten, of kiest de lezer een zwemschool voor iemand anders?",
-          null,
+          "Kiest een badmeester een zwemschool voor een kind?",
           "Zou iemand zonder kind iets hebben aan tips over het kiezen van een zwemschool?",
         ],
         uitlegPad: {
@@ -373,7 +373,7 @@ const steps = [
           null,
           "Staat er iets in dat alléén voor kinderen interessant is? Let op: er staat geen 'jij' of 'u'.",
           "Boeren hebben wel iets aan het weer, maar staat er iets dat alléén voor hen bedoeld is?",
-          null,
+          "Piloten hebben iets aan het weer, maar staat er iets dat alléén voor hen bedoeld is?",
         ],
         uitlegPad: {
           stappen: [
@@ -408,7 +408,7 @@ const steps = [
           null,
           "Wie nodigt de school op een ouderavond uit — de leerlingen, of degenen die voor hen zorgen?",
           "Leraren zouden intern een mail krijgen — voor wie is dit bericht bedoeld?",
-          null,
+          "Er staat 'Beste ouders'. Is dat voor iedereen?",
         ],
         uitlegPad: {
           stappen: [
@@ -431,7 +431,7 @@ const steps = [
           null,
           "De aanspreekvorm 'jij' en 'je' past bij welke groep?",
           "Gaat het over tanden of over een beroep? Kijk naar wat de lezer móét doen.",
-          null,
+          "Gaat het over fruit telen, of over fruit eten als tussendoortje?",
         ],
         uitlegPad: {
           stappen: [
@@ -494,7 +494,7 @@ const steps = [
           null,
           "Kijk naar de aanspreekvorm: staat er 'jij' of 'u'? En naar woorden als 'geachte'.",
           "Is de lezer degene die de pas krijgt, of degene die hem uitdeelt?",
-          null,
+          "Staat er iets over kinderboeken schrijven? Kijk naar 'uw bibliotheekpas'.",
         ],
         uitlegPad: {
           stappen: [
@@ -550,7 +550,7 @@ const steps = [
           null,
           "Kijk naar de woorden: 'aanmeldprocedure', 'raadpleeg', 'actuele tarieven'. Past die taal bij kinderen?",
           "De verbouwing wordt genoemd, maar waar gaat de tekst eigenlijk over?",
-          null,
+          "Regelen leerlingen van groep 8 zelf hun aanmelding en de kosten?",
         ],
         uitlegPad: {
           stappen: [
@@ -623,7 +623,7 @@ const steps = [
         wrongHints: [
           null,
           "De eerste alinea informeert inderdaad — maar lees de laatste alinea: waar wil de tekst dat jij heen gaat?",
-          null,
+          "Is er een verhaal met personages? Kijk naar wat de folder wil dat je doet.",
           "Zie je genummerde stappen of opdracht-werkwoorden zoals 'pak' en 'roer'?",
         ],
         uitlegPad: {
@@ -665,7 +665,7 @@ const steps = [
           null,
           "Dit is een feit over je lichaam. Duwt deze zin je richting de winkel?",
           "Dit is een gezondheidstip die overal kan staan. Welke zin maakt je haastig om te gaan kopen?",
-          null,
+          "Dit is een tip over rustig eten. Duwt deze zin je naar de winkel?",
         ],
         uitlegPad: {
           stappen: [
@@ -733,17 +733,17 @@ const steps = [
       {
         q: "Waarom is de zin 'Ochtendkracht bevat zes verschillende granen' in een reclame-folder opgenomen?",
         options: [
-          "Om de folder betrouwbaarder te laten klinken zodat je het product eerder koopt",
-          "Omdat de schrijver kinderen iets over granen wil leren",
-          "Omdat de wet verplicht dit op verpakkingen te zetten",
-          "Omdat de schrijver per ongeluk te veel informatie gaf",
+          "Zo klinkt de folder betrouwbaar, waardoor je het eerder koopt",
+          "Omdat de schrijver kinderen graag iets over granen wil leren",
+          "Omdat de wet verplicht om dit op verpakkingen te zetten",
+          "Omdat de schrijver per ongeluk te veel informatie heeft gegeven",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een schoolboek leert je over granen — maar wat wil een reclame-folder bereiken?",
           "Verpakkingstekst en een folder zijn verschillende dingen. Kijk naar het doel van de folder.",
-          null,
+          "Reclamemakers kiezen elke zin bewust. Waarom zou dit feit erin staan?",
         ],
         uitlegPad: {
           stappen: [
@@ -772,7 +772,7 @@ const steps = [
           null,
           "Wordt school of de juf ergens in de folder genoemd?",
           "De onderzoekers worden alleen gebruikt om de folder betrouwbaar te laten klinken. Wie moet er naar de winkel?",
-          null,
+          "Koopt de supermarkt zijn eigen pakken? Wie moet er naar de kassa?",
         ],
         uitlegPad: {
           stappen: [
@@ -810,8 +810,8 @@ const steps = [
         wrongHints: [
           null,
           "De onderzoekers worden in de folder genoemd. Maar hebben zíj de folder gemaakt?",
-          null,
-          null,
+          "Staat er een school in de folder? Kijk wie de folder verstuurt.",
+          "Brengt de folder nieuws, of stuurt hij je naar een winkel?",
         ],
         uitlegPad: {
           stappen: [
@@ -861,8 +861,8 @@ const steps = [
         wrongHints: [
           null,
           "Zonder product en zonder winkel: wat zou de schrijver je dan willen verkopen?",
-          null,
-          null,
+          "Is er een verhaal of een grap in de alinea?",
+          "Staan er stappen in die je moet uitvoeren?",
         ],
         uitlegPad: {
           stappen: [
@@ -916,9 +916,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Gaat 'op' hier over een leeg pak, of over de voorraad in de winkel?",
           "Gaat het hier over eten, of over iets wat je kunt krijgen zolang het er is?",
-          null,
+          "Gaat 'op' over de folder zelf? Lees de zin ervoor.",
         ],
         uitlegPad: {
           stappen: [
@@ -1026,7 +1026,7 @@ const steps = [
           null,
           "Staat er vaktaal in over tuinontwerp? En let op de aanspreekvorm: 'jij' of 'u'?",
           "Gaat de tekst over egels behandelen of opereren?",
-          null,
+          "Beslist de lezer zelf over de schutting, of moet hij het vragen? Let op 'jij'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1105,7 +1105,7 @@ const steps = [
           null,
           "Zijn teksten over dieren alleen voor kinderen? Denk aan een natuurblad voor volwassenen.",
           "Hebben teksten voor volwassenen geen alinea's?",
-          null,
+          "Zegt een streepje in de titel iets over de lezer?",
         ],
         uitlegPad: {
           stappen: [
@@ -1144,7 +1144,7 @@ const steps = [
           null,
           "Eén oproep maakt nog geen reclametekst. Wordt er iets verkocht? Kijk hoeveel alinea's informeren.",
           "Is er een stappenplan in deze slotzin?",
-          null,
+          "Elke tekst heeft een doel. Verdwijnt dat door één extra zin?",
         ],
         uitlegPad: {
           stappen: [
