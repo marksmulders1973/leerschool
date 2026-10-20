@@ -170,7 +170,7 @@ const steps = [
         q: "Welke windrichting ligt op het kompas tussen **N en O**?",
         options: ['NO (noord-oost)', 'ZO (zuid-oost)', 'NW (noord-west)', 'ZW (zuid-west)'],
         answer: 0,
-        wrongHints: [null, "Tussen Z en O.", "Tussen N en W.", "Tussen Z en W."],
+        wrongHints: [null, "ZO ligt tussen Zuid en Oost. Welke twee letters noemt de vraag?", "NW ligt tussen Noord en West. Welke twee letters noemt de vraag?", "ZW ligt tussen Zuid en West. Welke twee letters noemt de vraag?"],
         uitlegPad: {
           stappen: [
             { titel: "8-puntig kompas", tekst: "Naast de 4 hoofdrichtingen (N/O/Z/W) heeft een kompas 4 tussenrichtingen: NO, ZO, ZW, NW." },
@@ -200,7 +200,7 @@ const steps = [
         q: "Schaal **1:25.000**. Op kaart **2 cm**. In het echt?",
         options: ["500 m", "5 km", "50 m", "2,5 km"],
         answer: 0,
-        wrongHints: [null, "5 km = 500.000 cm. Is 2 × 25.000 zo veel?", "Te weinig — controleer cm→m.", "2,5 km = 250.000 cm. Reken 2 × 25.000 nog eens precies uit."],
+        wrongHints: [null, "5 km = 500.000 cm. Is 2 × 25.000 zo veel?", "50 m = 5.000 cm. Is 2 × 25.000 zo weinig? Tel de nullen.", "2,5 km = 250.000 cm. Reken 2 × 25.000 nog eens precies uit."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: schaal toepassen", tekst: "Schaal 1:25.000 betekent: 1 cm op kaart = 25.000 cm in echt. Dus 2 cm = 2 × 25.000 = **50.000 cm**." },
@@ -255,13 +255,13 @@ const steps = [
         q: "Op kompas: **ZW** ligt tussen welke twee?",
         options: ["Z en W", "N en W", "N en O", "Z en O"],
         answer: 0,
-        wrongHints: [null, "Dat is NW.", "Dat is NO.", "Dat is ZO."],
+        wrongHints: [null, "N en W samen geven NW. Lees de letters van ZW nog eens: welke twee zijn dat?", "N en O samen geven NO. Welke twee letters staan er in ZW?", "Z en O samen geven ZO. Kijk naar de tweede letter van ZW."],
       },
       {
         q: "Tussen welke richtingen ligt **NO**?",
         options: ["N en O", "Z en O", "N en W", "Z en W"],
         answer: 0,
-        wrongHints: [null, "Dat is ZO.", "Dat is NW.", "Dat is ZW."],
+        wrongHints: [null, "Z en O samen geven ZO. Welke twee letters staan er in NO?", "N en W samen geven NW. Kijk naar de tweede letter van NO.", "Z en W samen geven ZW. Lees de letters van NO nog eens."],
       },
       {
         q: "Is schaal **1:10.000** **groter of kleiner** dan schaal 1:100.000?",
@@ -347,7 +347,7 @@ const steps = [
         q: "Op kompas: **tussen N en W** ligt?",
         options: ['NW (noord-west)', 'ZW (zuid-west)', 'NO (noord-oost)', 'ZO (zuid-oost)'],
         answer: 0,
-        wrongHints: [null, "ZW = tussen Z+W.", "NO = tussen N+O.", "ZO = tussen Z+O."],
+        wrongHints: [null, "ZW ligt tussen Zuid en West. Welke twee richtingen noemt de vraag?", "NO ligt tussen Noord en Oost. Welke twee richtingen noemt de vraag?", "ZO ligt tussen Zuid en Oost. Welke twee richtingen noemt de vraag?"],
       },
       {
         q: "Hoe staat een **fietsroute** meestal op een kaart aangegeven?",
@@ -409,7 +409,7 @@ const steps = [
         q: "Op een kaart van **schaal 1:10.000** is een park **5 cm**. **Werkelijk in meter**?",
         options: ["500 m", "50 m", "5 km", "50 km"],
         answer: 0,
-        wrongHints: [null, "10× te weinig.", "Reken nog eens om: 50.000 cm is geen 5 km.", "50 km = 5.000.000 cm. Is 5 × 10.000 zo veel?"],
+        wrongHints: [null, "50 m = 5.000 cm. Is 5 × 10.000 zo weinig?", "5 km = 500.000 cm. Is 5 × 10.000 zo veel? Tel de nullen.", "50 km = 5.000.000 cm. Is 5 × 10.000 zo veel?"],
       },
       {
         q: "Welk **windstreek-symbool** staat meestal **bovenaan** op een kaart?",
@@ -421,7 +421,7 @@ const steps = [
         q: "Een kaart heeft schaal **1:200.000**. Hoe groot is **2 cm in werkelijkheid** in **km**?",
         options: ["4 km", "2 km", "20 km", "400 km"],
         answer: 0,
-        wrongHints: [null, "Schaal niet meegerekend.", "Te veel — controleer het omrekenen van cm naar km.", "100× te veel."],
+        wrongHints: [null, "2 km: heb je de 2 cm wel met de schaal vermenigvuldigd?", "20 km = 2.000.000 cm. Is 2 × 200.000 zo veel?", "400 km = 40.000.000 cm. Tel de nullen van 2 × 200.000 nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1 — × schaal", tekst: "2 cm × 200.000 = 400.000 cm werkelijk." },
@@ -557,14 +557,14 @@ const steps = [
         q: "Op een kaart wijst de **noordpijl** omhoog. Het zwembad ligt rechts van de school. In welke **windrichting** ligt het zwembad ten opzichte van de school?",
         options: ["Oosten", "Westen", "Noorden", "Zuiden"],
         answer: 0,
-        wrongHints: [null, "West is links als noord boven is — kijk nog eens.", "Noord is omhoog — het zwembad ligt opzij.", "Zuid is omlaag."],
+        wrongHints: [null, "West is links als noord boven is — kijk nog eens.", "Noord is omhoog — het zwembad ligt opzij.", "Zuid is omlaag als noord boven is. Ligt het zwembad onder de school?"],
         explanation: "Noord = boven → rechts = **oosten** (met de klok mee: Noord-Oost-Zuid-West).",
       },
       {
         q: "Je meet op een kaart (schaal 1 : 25.000) een afstand van **4 cm**. Hoeveel meter is dat in het echt?",
         options: ["1.000 m", "100 m", "10.000 m", "250 m"],
         answer: 0,
-        wrongHints: [null, "Vermenigvuldig de kaart-cm met de schaal en vergeet daarna niet om cm naar m om te zetten.", "Eén nul vergeten bij het omrekenen van cm naar m.", "Je hebt de 4 cm niet meegerekend."],
+        wrongHints: [null, "Vermenigvuldig de kaart-cm met de schaal en vergeet daarna niet om cm naar m om te zetten.", "10.000 m is 10 km. Heb je bij cm → m wel door 100 gedeeld?", "Je hebt de 4 cm niet meegerekend."],
         explanation: "4 × 25.000 = 100.000 cm = **1.000 m** (= 1 km).",
       },
       {
@@ -649,7 +649,7 @@ const steps = [
         q: "Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?",
         options: ["donderdag", "maandag", "vrijdag", "woensdag"],
         answer: 0,
-        wrongHints: [null, "10 is meer dan 8.", "20 is meest, niet minst.", "15 is niet laagst."],
+        wrongHints: [null, "Maandag heeft 10. Staat er in de tabel een dag met nog minder?", "Vrijdag heeft juist het meest. De vraag is naar de dag met het minst.", "Woensdag heeft 15. Staat er een dag met minder?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: lees alle getallen", tekst: "Tabel: ma 10, di 12, wo 15, do **8**, vr 20. Vijf getallen om te vergelijken." },
@@ -785,7 +785,7 @@ const steps = [
         q: "Lijngrafiek: aantal lezers daalde van 80 naar 50 in 5 jaar. Hoeveel **% afname**?",
         options: ["37,5%", "30%", "50%", "60%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dan deel je door de eindwaarde (50) in plaats van de beginwaarde."],
+        wrongHints: [null, "30 is het aantal lezers minder, nog geen percentage. Deel het verschil door de beginwaarde.", "Dat zou betekenen 40 lezers minder.", "Niet — dan deel je door de eindwaarde (50) in plaats van de beginwaarde."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: bereken het verschil", tekst: "Van 80 lezers naar 50 lezers. Verschil = 80 − 50 = **30** lezers afname." },
@@ -1505,7 +1505,7 @@ const steps = [
         q: "Welk soort boek bevat **uitgebreide info per onderwerp** (zoals 'olifant', 'Einstein')?",
         options: ["Encyclopedie", "Woordenboek", "Roman", "Atlas"],
         answer: 0,
-        wrongHints: [null, "Alleen woord-betekenis, niet uitgebreid.", "Een roman vertelt een verzonnen verhaal.", "Een atlas bevat vooral kaarten."],
+        wrongHints: [null, "Een woordenboek geeft alleen een korte betekenis per woord. Waar vind je lange stukken over een onderwerp?", "Een roman vertelt een verzonnen verhaal.", "Een atlas bevat vooral kaarten."],
       },
       {
         q: "Bij een **uitgebreide index** achterin een boek staat **'water 12, 45, 89'**. Wat betekent dit?",
@@ -1970,7 +1970,7 @@ const steps = [
       },
       {
         q: "Bij **'eerst → daarna → vervolgens'** spreek je over ___?",
-        options: ["Stappenplan / volgorde", "Tegenstelling", "Vergelijking", "Oorzaak en gevolg"],
+        options: ["Volgorde", "Tegenstelling", "Vergelijking", "Oorzaak en gevolg"],
         answer: 0,
         wrongHints: [null, "Tegenstelling-woorden zijn bijvoorbeeld 'maar' en 'toch'.", "Vergelijking-woorden zijn bijvoorbeeld 'net als' en 'evenals'.", "Oorzaak-gevolg-woorden zijn 'doordat' en 'daardoor'."],
       },
@@ -2171,13 +2171,13 @@ const steps = [
         q: "Op een kompas: tussen **W en Z** ligt welke richting?",
         options: ['ZW (zuid-west)', 'NW (noord-west)', 'NO (noord-oost)', 'ZO (zuid-oost)'],
         answer: 0,
-        wrongHints: [null, "Tussen N en W.", "Tussen N en O.", "Tussen Z en O."],
+        wrongHints: [null, "NW ligt tussen Noord en West. Welke twee letters noemt de vraag?", "NO ligt tussen Noord en Oost. Welke twee letters noemt de vraag?", "ZO ligt tussen Zuid en Oost. Welke twee letters noemt de vraag?"],
       },
       {
         q: "Lijngrafiek: het bezoek aan de dierentuin **stijgt** van 100 naar 250 in 3 jaar. Hoeveel stijgt het gemiddeld per jaar?",
         options: ["50", "150", "75", "350"],
         answer: 0,
-        wrongHints: [null, "Dat is totale stijging.", "75: heb je door 2 gedeeld? Hoeveel jaren zijn het?", "Dat is som."],
+        wrongHints: [null, "150 is de hele stijging in 3 jaar. Wat moet je nog doen voor 'per jaar'?", "75: heb je door 2 gedeeld? Hoeveel jaren zijn het?", "350 is 100 + 250 opgeteld. De vraag gaat over de stijging, niet over het totaal."],
       },
       {
         q: "Wat doe je **eerst** als je een onderwerp in een dik boek wilt vinden?",
@@ -2243,7 +2243,7 @@ const steps = [
         q: "Tabel **bezoekers museum**: ma=20, di=30, wo=50, do=40, vr=60. Wat is **gemiddeld** per dag?",
         options: ["40", "200", "50", "20"],
         answer: 0,
-        wrongHints: [null, "Dat is de som, niet het gemiddelde.", "50 is het getal van woensdag. Tel alles op en deel door 5.", "Te laag — dat is het minimum."],
+        wrongHints: [null, "Dat is de som, niet het gemiddelde.", "50 is het getal van woensdag. Tel alles op en deel door 5.", "20 is het laagste getal (maandag). Tel alles op en deel door 5."],
       },
       {
         q: "Bij een **cirkeldiagram** zijn alle delen samen altijd ___?",
@@ -2281,13 +2281,13 @@ const steps = [
         q: "Tabel toont **scores 6, 7, 4, 9**. Wat is het **bereik** (verschil hoogste − laagste)?",
         options: ["5", "4", "9", "26"],
         answer: 0,
-        wrongHints: [null, "Dat is laagste, niet bereik.", "Dat is hoogste, niet bereik.", "Som — niet bereik."],
+        wrongHints: [null, "4 is de laagste score. Het bereik is het verschil tussen de hoogste en de laagste.", "9 is de hoogste score. Trek daar de laagste nog van af.", "26 is alles opgeteld. Het bereik is een verschil, geen som."],
       },
       {
         q: "Op een **stadsplattegrond schaal 1:5.000**: 4 cm op kaart = **werkelijk**?",
         options: ["200 m", "20 m", "2 km", "20 km"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer je omrekening van cm naar m.", "Te veel — controleer je omrekening.", "Veel te veel — een stadsplattegrond toont geen kilometers ver."],
+        wrongHints: [null, "20 m = 2.000 cm. Is 4 × 5.000 zo weinig?", "2 km = 200.000 cm. Tel de nullen van 4 × 5.000 nog eens.", "20 km: je hebt de cm als meters gerekend. Hoeveel cm zit er in 1 m?"],
       },
       {
         q: "Welke **kolom** in een tabel **'Naam, Leeftijd, Hobby'** bevat getallen?",
@@ -2332,7 +2332,7 @@ const steps = [
         q: "Schaal **1:25.000**, 4 cm op kaart = werkelijk in **m**?",
         options: ["1.000 m", "100 m", "10.000 m", "10 m"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer je omrekening van cm naar m.", "Te veel — deel je cm wel door 100?", "10 m is nog geen klaslokaal lang. Reken 4 × 25.000 cm uit."],
+        wrongHints: [null, "100 m = 10.000 cm. Is 4 × 25.000 zo weinig?", "10.000 m is 10 km. Heb je bij cm → m wel door 100 gedeeld?", "10 m is nog geen klaslokaal lang. Reken 4 × 25.000 cm uit."],
       },
       {
         q: "Je sorteert een tabel op alfabet. Welk woord komt **eerst**?",
@@ -2390,7 +2390,7 @@ const steps = [
         q: "**Grafiek + rekenen:** de lijngrafiek toont 8 zwemmers om 9:00 en 24 om 11:00. Hoeveel keer zo druk werd het?",
         options: ["3 keer", "2 keer", "16 keer", "4 keer"],
         answer: 0,
-        wrongHints: [null, "Denk na: 'hoeveel keer zo druk' vraagt om een deling — welke twee getallen deel je door elkaar?", "Je hebt het verschil berekend, maar 'hoeveel keer' vraagt om een andere bewerking.", "Dat is te veel — controleer je berekening."],
+        wrongHints: [null, "Denk na: 'hoeveel keer zo druk' vraagt om een deling — welke twee getallen deel je door elkaar?", "Je hebt het verschil berekend, maar 'hoeveel keer' vraagt om een andere bewerking.", "4 keer zo druk zou 32 zwemmers zijn. Deel 24 door 8."],
         explanation: "24 ÷ 8 = **3 keer** zo druk. 'Hoeveel keer' = delen; 'hoeveel meer' = aftrekken.",
       },
       {
