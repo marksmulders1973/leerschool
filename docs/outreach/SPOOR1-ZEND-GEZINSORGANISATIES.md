@@ -280,3 +280,77 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 48 · Taalhuis Lekstroom IJsselstein · ijsselstein@taalhuislekstroom.nl · OK · 01a1434d-13eb-7e12-a4bb-2cdae352486e
   - 49 · Taalhuis Lekstroom Houten · houten@taalhuislekstroom.nl · OK · 01a1434d-199d-7c7f-900d-4b2372ea1568
 - **16-10-2026, 08:01:30** — klaar: 49/49 verstuurd (OK-regels staan hierboven).
+
+- **19-10-2026, 10:28:41** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 50 · Taalhuis Lekstroom Lopik · lopik@taalhuislekstroom.nl · OK · 01a15346-f3c3-7ebc-b978-81fa11ae1ebc
+  - 51 · Taalhuis Lekstroom Vijfheerenlanden · vijfheerenlanden@taalhuislekstroom.nl · OK · 01a15346-f9ad-7ae8-b25d-090a1a1b64d2
+  - 52 · Taalhuis Westfriesland (Vrijwilligerspunt) · taalhuis@vrijwilligerspunt.com · OK · 01a15346-ff6c-778c-9011-4060a8a56fe1
+  - 53 · Stichting Lezen & Schrijven · info@lezenenschrijven.nl · OK · 01a15347-0560-7358-9869-a3420f8b4ab8
+  - 54 · Stichting Lezen · info@lezen.nl · OK · 01a15347-0b5a-76e1-a89f-71a812cdfa8b
+  - 55 · De Leescoalitie · leescoalitie@lezen.nl · OK · 01a15347-111f-7d09-87c3-ba72d81cae04
+  - 56 · CPNB (Kinderboekenweek, Nationale Voorleesdagen) · info@cpnb.nl · OK · 01a15347-17ba-78db-adb9-bd86d6490b51
+  - 57 · de Bibliotheek op school · info@debibliotheekopschool.nl · OK · 01a15347-1dcf-7e4e-bc1a-17700389816e
+  - 58 · Kinderboekenmuseum (Literatuurmuseum) · info@literatuurmuseum.nl · OK · 01a15347-239d-725b-9dac-2d6ab1461a43
+  - 59 · Stichting Taalvorming · info@taalvorming.nl · OK · 01a15347-2951-758c-92bc-1c07210e2d7d
+  - 60 · QUIET Nederland (landelijk) · info@quiet.nl · OK · 01a15347-2f23-747c-8a23-7290c9c7aa71
+  - 61 · Quiet Breda · breda@quiet.nl · OK · 01a15347-34e6-7e32-9d23-4ee8090de247
+  - 62 · QUIET Den Bosch · denbosch@quiet.nl · OK · 01a15347-3aa0-76cd-ac5e-828afb3ce02e
+  - 63 · Quiet Drechtsteden · drechtsteden@quiet.nl · OK · 01a15347-4065-7e07-8d79-07671b347519
+  - 64 · Quiet Eindhoven · eindhoven@quiet.nl · OK · 01a15347-4625-7263-8a8d-7e88a0a2f07f
+  - 65 · Quiet Hilvarenbeek · hilvarenbeek@quiet.nl · OK · 01a15347-4bea-7058-9cb0-7556997fb489
+  - 66 · Quiet Leeuwarden · leeuwarden@quiet.nl · OK · 01a15347-519d-7635-aada-cd7d61408a49
+  - 67 · Quiet Maastricht · maastricht@quiet.nl · OK · 01a15347-575a-7ad6-bed9-b42a9c2a69f6
+  - 68 · Quiet Nijmegen · nijmegen@quiet.nl · OK · 01a15347-5d17-7b65-a5aa-29ed3bf69d96
+  - 69 · Quiet Oss · oss@quiet.nl · OK · 01a15347-62e4-7c47-8cb5-e2f66b063673
+  - 70 · Quiet Roermond · roermond@quiet.nl · OK · 01a15347-68ad-7037-ab8d-bd642e018b1c
+  - 71 · Quiet Roosendaal · roosendaal@quiet.nl · OK · 01a15347-6e70-7bfb-8986-32744f54705a
+  - 72 · QUIET Tilburg · info-tilburg@quiet.nl · OK · 01a15347-743f-73aa-91bb-a0312d02e8eb
+  - 73 · Quiet Waalwijk · waalwijk@quiet.nl · OK · 01a15347-7a24-7687-8301-599ac6393418
+  - 74 · Quiet Weert · weert@quiet.nl · OK · 01a15347-7fe5-72a2-b29d-d15f2ba5911d
+  - 75 · IMC Weekendschool (landelijk bureau, afd. communicatie) · communicatie@weekendschool.nl · OK · 01a15347-85a7-7e59-a891-328251d0cb86
+  - 76 · Ouders.nl · info@ouders.nl · OK · 01a15347-8b6a-7d59-b535-9a5e187e4a99
+  - 77 · BOinK (Belangenvereniging van Ouders in de Kinderopvang) · boink@boink.info · OK · 01a15347-9123-77b5-b783-8aceecf68b4e
+  - 78 · Balans (oudervereniging leer- en gedragsproblemen) · info@balansdigitaal.nl · OK · 01a15347-96ed-7008-bffc-ca1b80391ffb
+  - 79 · Nederlands Jeugdinstituut (incl. Opvoeden.nl) · info@nji.nl · OK · 01a15347-9cb4-7d8a-ad12-2e346e0008c4
+  - 80 · CJG Rijnmond · info@cjgrijnmond.nl · OK · 01a15347-a2a6-7a4f-8766-48f4e826b23e
+  - 81 · CJG Den Haag · cjg.jgz@denhaag.nl · OK · 01a15347-a8aa-7975-83a6-71545639a3ea
+  - 82 · JGZ Zuid-Holland West · info@jgzzhw.nl · OK · 01a15347-ae65-741e-8152-fd7a579efb8d
+  - 83 · JGZ Kennemerland · jgz@jgzkennemerland.nl · OK · 01a15347-b41e-76e1-8555-fb24d5490652
+  - 84 · GGD Hollands Noorden (communicatie) · communicatie@ggdhn.nl · OK · 01a15347-b9dc-729b-8380-8c9ce4e4aa14
+  - 85 · GGD regio Utrecht · info@ggdru.nl · OK · 01a15347-bf8a-7e5d-a7c2-44eadacf6668
+  - 86 · GGD Gelderland-Zuid, Jeugdgezondheidszorg · jeugdgezondheidszorg@ggdgelderlandzuid.nl · OK · 01a15347-c56e-7bc0-befc-6373053c6da5
+  - 87 · GGD Noord- en Oost-Gelderland · ggd@ggdnog.nl · OK · 01a15347-cb1e-7c68-83ea-19935e360b47
+  - 88 · GGD Fryslân · info@ggdfryslan.nl · OK · 01a15347-d0d6-77c5-8a9f-ace6d357b2e6
+  - 89 · GGD Drenthe, JGZ · jgz@ggddrenthe.nl · OK · 01a15347-d6be-70ed-a65d-e11c120c48c9
+  - 90 · Icare Jeugdgezondheidszorg · info@icare.nl · OK · 01a15347-dc8c-7070-8e49-2a5d3ec3fb97
+  - 91 · GGD Flevoland · post@ggdflevoland.nl · OK · 01a15347-e241-708c-89e7-b66d1591edb3
+  - 92 · GGD Zaanstreek-Waterland · info@ggdzw.nl · OK · 01a15347-e802-76d6-99a3-fd92c935709b
+  - 93 · GGD Hart voor Brabant · contact@ggdhvb.nl · OK · 01a15347-edcb-7aa1-b749-425a42e789a2
+  - 94 · CJG Breda · info@cjgbreda.nl · OK · 01a15347-f388-70ea-b02b-c085fb8276f2
+  - 95 · GGD Zeeland · info@ggdzeeland.nl · OK · 01a15347-f93e-7200-88c4-4bdc255a3000
+  - 96 · GGD Zuid-Limburg · info@ggdzl.nl · OK · 01a15347-ff04-7a2c-8a44-ab595946493d
+  - 97 · GGD Limburg-Noord · info.ggd@vrln.nl · OK · 01a15348-04bd-781f-8545-216e916759de
+  - 98 · CJG Capelle aan den IJssel · info@cjgcapelle.nl · OK · 01a15348-0a81-7b7b-9c9a-f9e0126b68ca
+  - 99 · Hecht (GGD Hollands Midden) · info@wijzijnhecht.nl · OK · 01a15348-1038-776d-a629-62c5625e8b45
+  - 100 · Vérian (JGZ) · welkom@verian.nl · OK · 01a15348-15f4-7c5b-94eb-7eac71192e71
+  - 101 · Yunio (JGZ) · info@yunio.nl · OK · 01a15348-1baf-7e87-b843-3d8575e0b81b
+  - 102 · CJG Haarlemmermeer · info@cjghaarlemmermeer.nl · OK · 01a15348-2167-7285-892d-719caed9d491
+  - 103 · Stichting Het Vergeten Kind · info@hetvergetenkind.nl · OK · 01a15348-2722-73a4-acee-b86fb10139b8
+  - 104 · Stichting Kinderpostzegels · info@kinderpostzegels.nl · OK · 01a15348-2ce7-74ad-82cc-b35b18c4ad81
+  - 105 · Stichting Present Nederland (landelijk) · info@presentnederland.nl · OK · 01a15348-32a5-7b04-9b2b-7803e42a0582
+  - 106 · Present Aalten-Dinxperlo · info@presentaalten-dinxperlo.nl · OK · 01a15348-386d-70e3-b265-eb07a6e6f721
+  - 107 · Present Almelo · info@presentalmelo.nl · OK · 01a15348-3e21-7e5b-a3e8-ff956d6d6457
+  - 108 · Present Amersfoort (Eemland) · info@presentamersfoort.nl · OK · 01a15348-43e2-7402-b255-283b54c4cd33
+  - 109 · Present Apeldoorn · info@presentapeldoorn.nl · OK · 01a15348-49a4-746e-988b-b55ad3a23377
+- **19-10-2026, 10:30:09** — klaar: 60/60 verstuurd (OK-regels staan hierboven).
+
+- **20-10-2026, 09:43:33** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 110 · Present Arnhem · info@presentarnhem.nl · OK · 01a15843-ff30-745c-8fd0-9241354a355b
+  - 111 · Present Assen · info@presentassen.nl · OK · 01a15844-0503-7007-b87d-90fec7cc3f4d
+  - 112 · Present Barendrecht · info@presentbarendrecht.nl · OK · 01a15844-0ae2-7abb-9c83-8b7cf48c4d07
+  - 113 · Present Delft · info@presentdelft.nl · OK · 01a15844-10cb-7469-b752-124e42ada74f
+  - 114 · Present Den Haag · info@presentdenhaag.nl · OK · 01a15844-169d-706a-ab8e-358bc73d25a4
+  - 115 · Present Den Helder · info@presentdenhelder.nl · OK · 01a15844-1c67-7333-999c-cd523933b9ca
+  - 116 · Present Deventer · info@presentdeventer.nl · OK · 01a15844-2223-76d7-b62e-3b3995d0ed46
+  - 117 · Present Doetinchem · info@presentdoetinchem.nl · OK · 01a15844-27e9-7477-9106-4e619d8d97da
+  - 118 · Present Dordrecht · info@presentdordrecht.nl · OK · 01a15844-2e13-78ea-a0ea-5d68bb9cd0b6

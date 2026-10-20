@@ -24,7 +24,7 @@ const OPWARM = {
   3: { onderwerp: "Rekenen", q: "Hoeveel is 3 + 4?", options: ["6", "7", "8", "5"], answer: 1, hint: "Begin bij 3 en tel er 4 bij: 4, 5, 6, …", uitleg: "3 + 4 = 7." },
   4: { onderwerp: "Rekenen", q: "Hoeveel is 3 + 4?", options: ["6", "7", "8", "5"], answer: 1, hint: "Begin bij 3 en tel er 4 bij: 4, 5, 6, …", uitleg: "3 + 4 = 7." },
   5: { onderwerp: "Taal", q: "Welk woord hoort er niet bij?", options: ["appel", "peer", "stoel", "banaan"], answer: 2, hint: "Drie woorden kun je eten. Welke niet?", uitleg: "Appel, peer en banaan zijn fruit. Een stoel niet." },
-  6: { onderwerp: "Taal", q: "Hij ___ elke dag naar school.", options: ["fiets", "fietst", "fietsd", "fietsen"], answer: 1, hint: "Zeg het hardop: hij … Wat hoor je aan het eind?", uitleg: "Hij fietst: bij 'hij' komt er een t achter." },
+  6: { onderwerp: "Taal", q: "Hij ___ elke dag naar school. (fietsen)", options: ["fiets", "fietst", "fietsd", "fietsen"], answer: 1, hint: "Vervang 'fietsen' door 'lopen': hij loopt. Komt er dan een t achter?", uitleg: "Hij fietst: bij 'hij' komt er een t achter de stam (fiets + t)." },
   7: { onderwerp: "Rekenen", q: "Welk getal is het grootst?", options: ["0,45", "0,5", "0,09", "0,4"], answer: 1, hint: "Maak ze even lang: 0,45 · 0,50 · 0,09 · 0,40.", uitleg: "0,5 is hetzelfde als 0,50, en dat is het meest." },
   8: { onderwerp: "Taal", q: "Wat betekent 'gehaast'?", options: ["heel rustig", "met veel haast", "verveeld", "trots"], answer: 1, hint: "Welk kleiner woord zit erin?", uitleg: "Gehaast = je hebt haast, je doet alles snel." },
 };
