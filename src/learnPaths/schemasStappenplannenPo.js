@@ -26,10 +26,10 @@ const steps = [
     explanation: "Een **schema** is een **overzicht** van informatie in vakjes en met pijlen. Het maakt duidelijk **hoe iets werkt** of **wat met wat samenhangt**.\n\n**Soorten schema's**:\n1. **Stappenplan**: stap 1 → stap 2 → stap 3.\n   - Bijv. 'hoe maak je pannenkoeken'.\n2. **Beslisboom**: ja/nee-vragen die je naar een antwoord leiden.\n   - Bijv. 'welk dier ben je?'\n3. **Boomschema**: een hoofdcategorie met subcategorieën.\n   - Bijv. dieren → zoogdieren / vissen / vogels.\n4. **Tijdslijn**: gebeurtenissen op volgorde van tijd.\n   - Bijv. geschiedenis-overzicht.\n5. **Mindmap**: woorden rondom een centraal idee.\n\n**Onderdelen** in elk schema:\n• **Vakjes/cirkels** met informatie.\n• **Pijlen** of lijnen die verbinden.\n• Soms een **legenda** *(wat de symbolen betekenen)*.\n• Een **titel** van het schema.\n\n**toetsvraag-typen**:\n• 'Wat is de eerste stap?' → kijk naar bovenste/eerste vakje.\n• 'Wat komt na X?' → volg de pijl.\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop de beslisboom door.\n\n**Tip**: Lees eerst de **titel** en **legenda** voordat je vragen beantwoordt. Scan daarna het schema globaal — wat is de structuur?",
     checks: [
       {
-        q: "Wat zegt een **stappenplan**?",
-        options: ["Welke volgorde te doen","Welke kleur","Wie iets doet","Wanneer iets ophoudt"],
+        q: "Wat laat een **stappenplan** zien?",
+        options: ["In welke volgorde je iets doet","Welke kleur iets heeft","Wie iets moet doen","Hoe lang iets duurt"],
         answer: 0,
-        wrongHints: [null,"Niet over kleur.","Dat staat er soms bij, maar waar draait een stappenplan om?","Niet primair."],
+        wrongHints: [null,"Gaat een stappenplan over hoe iets eruitziet, of over wat je doet?","Dat staat er soms bij, maar waar draait een stappenplan om?","Soms staat erbij hoe lang een stap duurt, maar is dat waar het om draait?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een stappenplan?", tekst: "Een **stappenplan** is een lijst van stappen in een BEPAALDE VOLGORDE om iets te doen. Het zegt: doe eerst dit, dan dat, daarna dat." },
@@ -54,10 +54,10 @@ const steps = [
         },
       },
       {
-        q: "**Pijlen** in een schema laten zien:",
+        q: "Wat laten **pijlen** in een schema zien?",
         options: ["Verband of volgorde", "Kleuren of vormen", "Aantal of grootte", "Alleen versiering"],
         answer: 0,
-        wrongHints: [null, "Niet kleur.", "Niet hoeveel.", "Een pijl wijst ergens naartoe. Wat laat dat zien?"],
+        wrongHints: [null, "Zegt een pijl iets over hoe iets eruitziet, of over waar het naartoe gaat?", "Een pijl telt niets. Hij gaat van het ene vakje naar het andere. Wat betekent dat?", "Een pijl wijst ergens naartoe. Wat laat dat zien?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat doen pijlen in schema's?", tekst: "**Pijlen** verbinden twee dingen en geven aan: hier hoort iets bij iets anders. Dat heet een VERBAND of een VOLGORDE." },
@@ -83,9 +83,9 @@ const steps = [
       },
       {
         q: "Wat doe je **eerst** als je een schema krijgt?",
-        options: ["Titel en legenda lezen","Antwoorden gokken","Schema overslaan","Pijlen tellen"],
+        options: ["Titel en legenda lezen","Meteen de vraag beantwoorden","Het laatste vakje lezen","De pijlen tellen"],
         answer: 0,
-        wrongHints: [null,"Geen goed plan.","Dan mis je info.","Tellen geeft geen begrip."],
+        wrongHints: [null,"Weet je dan al waar het schema over gaat?","Het laatste vakje zegt niet waar het schema over gaat. Welk onderdeel wel?","Het aantal pijlen zegt weinig. Welk onderdeel vertelt waar het schema over gaat?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [
           null,
           "Staan er jaartallen of een volgorde van tijd in?",
-          null,
+          "Staan de woorden hier na elkaar, als stappen die je moet doen?",
           "Zie je ergens een ja/nee-vraag?",
         ],
         uitlegPad: {
@@ -155,7 +155,7 @@ const steps = [
           null,
           "Gaat dit schema over wat er eerst en later gebeurde?",
           "Moet je hier iets doen in een vaste volgorde?",
-          null,
+          "Zie je ergens een ja/nee-vraag?",
         ],
         uitlegPad: {
           stappen: [
@@ -214,7 +214,7 @@ const steps = [
           null,
           "Wat vertelt een legenda je: het onderwerp of de betekenis van de tekentjes?",
           "Pijlen verbinden dingen. Vertellen ze ook het onderwerp?",
-          null,
+          "In de vakjes staan de losse stukjes informatie. Wat vertelt je het onderwerp van het hele schema?",
         ],
         uitlegPad: {
           stappen: [
@@ -277,7 +277,7 @@ const steps = [
         wrongHints: [
           null,
           "Is een schema lang, of juist kort en overzichtelijk?",
-          null,
+          "Staat er in een schema wat de maker ervan vindt?",
           "Gaat een schema over mooi maken, of over informatie?",
         ],
         uitlegPad: {
@@ -336,7 +336,7 @@ const steps = [
         wrongHints: [
           null,
           "Denk aan woorden rondom één idee. Is dat een schema?",
-          null,
+          "Gebeurtenissen op een lijn met pijlen. Is dat een schema?",
           "Ja/nee-vragen met pijlen. Is dat een schema?",
         ],
         uitlegPad: {
@@ -401,7 +401,7 @@ const steps = [
           null,
           "Bij welk schema horen ja/nee-vragen?",
           "Staan er in een stappenplan jaartallen?",
-          null,
+          "Bij welk schema staat één woord in het midden?",
         ],
         uitlegPad: {
           stappen: [
@@ -456,7 +456,7 @@ const steps = [
         q: "Lotte wil op een blad laten zien hoe je een tent opzet: eerst dit, dan dat, dan dat.\n\nWelk schema past daar het best bij?",
         options: ["Een stappenplan", "Een mindmap", "Een boomschema", "Een beslisboom"],
         answer: 0,
-        wrongHints: [null, "Zet een mindmap dingen in een volgorde?", null, "Moet Lotte ja/nee-vragen stellen?"],
+        wrongHints: [null, "Zet een mindmap dingen in een volgorde?", "Verdeelt Lotte iets in groepen, of zet ze stappen na elkaar?", "Moet Lotte ja/nee-vragen stellen?"],
         uitlegPad: {
           stappen: [
             {
@@ -514,16 +514,16 @@ const steps = [
     explanation: "**Stappenplan** = lijst stappen in **volgorde**.\n\n**Voorbeeld — pannenkoeken**:\n1. Pak een kom.\n2. Doe meel, melk, ei in de kom.\n3. Mix totdat het glad is.\n4. Verhit boter in de pan.\n5. Schenk beslag in de pan.\n6. Bak 2 minuten per kant.\n\n**Stap-volgorde is belangrijk**:\n• Je kunt niet 'bakken' (stap 6) zonder eerst de **kom** te pakken.\n• Stappen dwingen een **logische volgorde** af.\n\n**toetsvraag-typen**:\n• 'Wat doe je vóór stap X?' → stap (X-1).\n• 'Wat doe je na stap Y?' → stap (Y+1).\n• 'Welke stap mist?' → kijk welke logische stap ontbreekt.\n• 'Mag je stap A en B verwisselen?' → check of de tweede de eerste nodig heeft.\n\n**Voorbeeld — verwisselbaar?**\n• Stap 2 ('meel') en stap 3 ('mix') — kun je niet wisselen, je moet eerst meel hebben voordat je kunt mixen.\n• Stap 1 en stap 4 ('kom' en 'pan') — wel wisselbaar (onafhankelijk).\n\n**Tip — Toets-stappen**:\nLees ALLE stappen voordat je een vraag beantwoordt. Vaak gaat de vraag over volgorde of het MISSEN van een stap.\n\n**Belangrijke woorden in stappen**:\n• 'eerst', 'vervolgens', 'dan', 'daarna', 'ten slotte'.\n• Deze woorden geven volgorde aan.",
     checks: [
       {
-        q: "Stap-recept: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken.\n\nWat doe je **direct vóór mixen**?",
-        options: ["Meel + melk doen","Bakken","Kom pakken","Niets"],
+        q: "Recept in stappen: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken.\n\nWat doe je **direct vóór mixen**?",
+        options: ["Meel + melk doen","Bakken","Kom pakken","Mixen"],
         answer: 0,
-        wrongHints: [null,"Komt na mixen.","Dat is stap 1 — maar welke stap staat DIRECT vóór mixen?","Wel iets — kijk welke stap vlak vóór mixen staat."],
+        wrongHints: [null,"Bakken is stap 4. Komt dat vóór of ná mixen?","Dat is stap 1 — maar welke stap staat DIRECT vóór mixen?","Dat is de stap zelf. Welke stap staat er vlak vóór?"],
       },
       {
         q: "Stappen: 1) Spullen pakken. 2) Boterhammen smeren. 3) Inpakken. 4) Naar school.\n\n**Welke stap mist** als je beleg op je boterham wil?",
-        options: ["Beleg erop leggen na smeren","Boterham eten","Pak openmaken","Geen, alle stappen kloppen"],
+        options: ["Beleg op de boterham leggen","De boterham opeten","De broodtrommel openmaken","Er mist geen stap"],
         answer: 0,
-        wrongHints: [null,"Geen onderdeel van klaarmaken.","Niet relevant voor klaarmaken.","Lees de vraag nog eens: wat wil je op je boterham?"],
+        wrongHints: [null,"Eet je de boterham thuis op, of neem je hem mee naar school?","Dat kan, maar zorgt dat ervoor dat er beleg op je boterham komt?","Lees de vraag nog eens: wat wil je op je boterham?"],
       },
       {
         q: "Stappen: 1) Computer aan. 2) Wachtwoord typen. 3) Programma openen. 4) Bestand maken.\n\n**Mag je stap 1 en stap 2 wisselen?**",
@@ -539,7 +539,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is een stap verder. Welke stap komt vlak na stap 2?",
-          null,
+          "Dat is stap 1. Komt die vóór of ná stap 2?",
           "Dat ís stap 2. Wat komt erna?",
         ],
       },
@@ -547,7 +547,7 @@ const steps = [
         q: "Stappen: 1) Tandenborstel pakken. 2) ... 3) Tanden poetsen. 4) Mond spoelen.\n\nWelke stap **mist** op plek 2?",
         options: ["Tandpasta op de borstel doen", "Mond spoelen met water", "Tandenborstel opnieuw pakken", "Pyjama aantrekken en naar bed"],
         answer: 0,
-        wrongHints: [null, "Die stap staat er al, op plek 4.", null, "Hoort dat bij het poetsen zelf?"],
+        wrongHints: [null, "Die stap staat er al, op plek 4.", "Die heb je al gepakt bij stap 1. Wat heb je nog nodig om te kunnen poetsen?", "Hoort dat bij het poetsen zelf?"],
       },
       {
         q: "Stappen: 1) Borden op tafel zetten. 2) Glazen op tafel zetten. 3) Eten opscheppen.\n\n**Mag je stap 1 en stap 2 wisselen?**",
@@ -561,7 +561,7 @@ const steps = [
         wrongHints: [
           null,
           "Heb je de borden nodig om een glas neer te zetten?",
-          null,
+          "Zet je glazen boven op de borden? Kijk hoe een gedekte tafel eruitziet.",
           "Waarom zou je stap 3 overslaan als je 1 en 2 wisselt?",
         ],
       },
@@ -572,7 +572,7 @@ const steps = [
         wrongHints: [
           null,
           "Welk woord staat vóór deze stap: 'eerst' of 'ten slotte'?",
-          null,
+          "Welk woord staat vóór deze stap: 'daarna' of 'ten slotte'?",
           "Staat deze stap wel in de tekst?",
         ],
       },
@@ -589,7 +589,7 @@ const steps = [
           null,
           "Komt die stap vóór of na de postzegel?",
           "Dat doe je ook eerder, maar is het de stap vlak ervoor?",
-          null,
+          "Staat deze stap in het rijtje?",
         ],
       },
       {
@@ -604,7 +604,7 @@ const steps = [
         wrongHints: [
           null,
           "Kun je een sok over een schoen aantrekken?",
-          null,
+          "Kun je een veter strikken als de schoen nog niet aan is?",
           "Wat trek je het eerst aan je voet?",
         ],
       },
@@ -617,9 +617,9 @@ const steps = [
     checks: [
       {
         q: "Beslisboom: 'Heb je honger? Ja → eet. Nee → drink water'.\n\nJe hebt **dorst**, niet honger. Wat doe je?",
-        options: ["Drink water","Eet","Iets anders","Niets"],
+        options: ["Drink water","Eet","Eet én drink water","De beslisboom geeft geen antwoord"],
         answer: 0,
-        wrongHints: [null,"Dat hoort bij 'honger'.","Beslisboom geeft maar 2 opties.","Beslisboom zegt iets te doen."],
+        wrongHints: [null,"Dat hoort bij 'honger: ja'. Heb je honger?","Je volgt maar één pijl: ja óf nee. Welke?","De vraag is 'heb je honger?'. Daar kun je ja of nee op zeggen."],
         uitlegPad: {
           stappen: [
             { titel: "Lees de vraag goed", tekst: "De beslisboom vraagt: 'Heb je HONGER?' (niet dorst). Beantwoord ALLEEN die vraag, niet wat jij EIGENLIJK voelt." },
@@ -644,16 +644,16 @@ const steps = [
         },
       },
       {
-        q: "Beslisboom: 'Regen? Ja → jas aan. Nee → buiten zonder jas.'\n\nHet **regent niet** maar is wel koud. Volgens de beslisboom:",
-        options: ["Buiten zonder jas","Jas aan","Beslisboom werkt niet","Niets"],
+        q: "Beslisboom: 'Regen? Ja → jas aan. Nee → buiten zonder jas.'\n\nHet **regent niet** maar is wel koud. Wat doe je volgens de beslisboom?",
+        options: ["Buiten zonder jas","Jas aan","De beslisboom geeft geen antwoord","Een dikke trui aan"],
         answer: 0,
-        wrongHints: [null,"Hoort bij 'regen ja'.","Beslisboom werkt voor regen, niet voor temperatuur.","Wel — geeft pad."],
+        wrongHints: [null,"Dat hoort bij 'regen: ja'. Regent het?","De vraag is 'regent het?'. Daar kun je ja of nee op zeggen.","Staat er iets over een trui in de beslisboom? Volg alleen wat er staat."],
       },
       {
         q: "Wat is een **kenmerk** van een beslisboom?",
-        options: ["Heeft ja/nee-vragen","Heeft alleen plaatjes","Heeft geen pijlen","Heeft geen begin"],
+        options: ["Heeft ja/nee-vragen","Heeft jaartallen op een rij","Heeft één woord in het midden","Heeft stappen die je allemaal doet"],
         answer: 0,
-        wrongHints: [null,"Wel met tekst.","Wel met pijlen.","Wel een begin."],
+        wrongHints: [null,"Jaartallen op een rij horen bij een tijdslijn.","Eén woord in het midden met woorden eromheen: dat is een mindmap.","Doe je in een beslisboom alle stappen, of kies je een pad?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -664,7 +664,7 @@ const steps = [
           null,
           "Bij welk antwoord op de eerste vraag hoort deze sport?",
           "Hoe beantwoord je de vraag 'In het water?'",
-          null,
+          "Om hier te komen zeg je 'ja' bij team. Klopt dat?",
         ],
         uitlegPad: {
           stappen: [
@@ -722,7 +722,7 @@ const steps = [
         wrongHints: [
           null,
           "Om hier te komen moet je bij de eerste vraag 'ja' zeggen. Klopt dat?",
-          null,
+          "Wat antwoord je op 'Houd je van dieren?'",
           "Kom je hier met alleen nee-antwoorden?",
         ],
         uitlegPad: {
@@ -781,7 +781,7 @@ const steps = [
         wrongHints: [
           null,
           "Wat antwoord je op 'Mag het eng zijn?'",
-          null,
+          "Om hier te komen zeg je 'nee' bij spanning. Klopt dat?",
           "Om hier te komen zeg je 'nee' bij spanning. Klopt dat?",
         ],
         uitlegPad: {
@@ -837,7 +837,7 @@ const steps = [
         q: "Beslisboom 'Wat doe je in de pauze?':\nSchijnt de zon?\n  Ja → Heb je een bal? Ja → voetballen. Nee → tikkertje.\n  Nee → Mag je binnen blijven? Ja → lezen. Nee → onder het afdak spelen.\n\nDe zon **schijnt** en je hebt **geen** bal. Wat doe je?",
         options: ["tikkertje", "voetballen", "lezen", "onder het afdak spelen"],
         answer: 0,
-        wrongHints: [null, "Wat antwoord je op 'Heb je een bal?'", null, "Kom je hier als de zon schijnt?"],
+        wrongHints: [null, "Wat antwoord je op 'Heb je een bal?'", "Kom je hier als de zon schijnt? Kijk naar de eerste vraag.", "Kom je hier als de zon schijnt?"],
         uitlegPad: {
           stappen: [
             {
@@ -899,7 +899,7 @@ const steps = [
         wrongHints: [
           null,
           "Volg je in een beslisboom zowel de ja-pijl als de nee-pijl?",
-          null,
+          "Stel je in een stappenplan voor pannenkoeken vragen met ja of nee?",
           "Waar draait een stappenplan juist om?",
         ],
         uitlegPad: {
@@ -963,7 +963,7 @@ const steps = [
         wrongHints: [
           null,
           "Na de eerste vraag volg je nog een pijl. Ben je dan al klaar?",
-          null,
+          "Volg je in een beslisboom alle vakjes, of alleen jouw eigen pad?",
           "Na een nee-pijl kan er nog een vraag komen. Ben je dan klaar?",
         ],
         uitlegPad: {
@@ -1024,27 +1024,27 @@ const steps = [
     checks: [
       {
         q: "Voedselketen: gras → konijn → vos.\n\n**Wat eet de vos**?",
-        options: ["konijn","gras","vlinder","niets"],
+        options: ["konijn","gras","vlinder","het konijn en het gras"],
         answer: 0,
-        wrongHints: [null,"Kijk welk dier direct vóór de vos in de keten staat.","Niet in dit schema.","Aan het eind staan betekent: niemand eet de vos. Maar wat eet de vos zelf? Volg de pijl naar de vos."],
+        wrongHints: [null,"Kijk welk dier direct vóór de vos in de keten staat.","Staat er een vlinder in dit schema?","Volg de pijl die naar de vos wijst. Van welk dier komt die?"],
       },
       {
-        q: "Voedselketen: zaad → muis → uil.\n\n**Wat als muizen verdwijnen**?",
+        q: "Voedselketen: zaad → muis → uil.\n\nWat gebeurt er als de **muizen verdwijnen**?",
         options: ["Uilen krijgen minder voedsel", "Zaden krijgen meer te eten", "Er verandert niets aan de keten", "Konijnen komen in de plaats"],
         answer: 0,
-        wrongHints: [null,"Zaden eten niets.","Wel iets — kijk wie er van de muizen afhankelijk is.","Konijnen staan niet in deze keten."],
+        wrongHints: [null,"Kunnen zaden iets eten? Kijk welke kant de pijl op gaat.","Wel iets — kijk wie er van de muizen afhankelijk is.","Konijnen staan niet in deze keten."],
       },
       {
-        q: "Productie-keten: katoen → garen → kleren.\n\n**Wat gebeurt eerst**?",
+        q: "Productieketen: katoen → garen → kleren.\n\nWat gebeurt er **eerst**?",
         options: ["Katoen verbouwen","Kleren maken","Garen spinnen","Verkopen"],
         answer: 0,
-        wrongHints: [null,"Komt later.","Komt na katoen.","Komt nog later."],
+        wrongHints: [null,"Kleren staan aan het eind van de keten. Wat staat vooraan?","Kijk wat er vóór garen staat in de keten.","Staat verkopen in deze keten?"],
       },
       {
         q: "Stamboom: Opa Jan → Vader Piet → Kind Tom.\n\n**Wie is opa van Tom**?",
-        options: ["Jan","Piet","Tom","Geen"],
+        options: ["Jan","Piet","Tom","Jan én Piet"],
         answer: 0,
-        wrongHints: [null,"Vader van Tom.","Tom is het kind.","Wel — volg de pijlen terug vanaf Tom."],
+        wrongHints: [null,"Piet is de vader van Tom. Wie is de vader van Piet?","Tom is het kind zelf. Volg de pijlen terug.","Eén van de twee is Toms vader. Wie is de vader van die vader?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -1059,7 +1059,7 @@ const steps = [
         wrongHints: [
           null,
           "Wie eet de rupsen? En wat gebeurt er als die er meer zijn?",
-          null,
+          "De pijl gaat van rups naar koolmees. Wie eet dan wie?",
           "Volg de pijl. Wie eet wie?",
         ],
       },
@@ -1071,7 +1071,7 @@ const steps = [
           null,
           "Heeft Ilse dezelfde vader als Lars?",
           "Van wie is Lars het kind: van Bram of van Ilse?",
-          null,
+          "Van wie is Lars het kind? En van wie is Ilse een kind?",
         ],
       },
       {
@@ -1086,7 +1086,7 @@ const steps = [
         wrongHints: [
           null,
           "Waar wordt meel van gemaakt in deze keten?",
-          null,
+          "Waar wordt brood van gemaakt? Volg de pijlen.",
           "Volg de pijlen. Wat heeft brood nodig?",
         ],
       },
@@ -1097,7 +1097,7 @@ const steps = [
         wrongHints: [
           null,
           "Was dat vóór of na de start op school?",
-          null,
+          "Dat is het eindpunt. Wat gebeurde er daarvóór, maar ná de start op school?",
           "Dit is een van de twee grenzen. Wat zit ertussen?",
         ],
       },
@@ -1110,37 +1110,37 @@ const steps = [
     checks: [
       {
         q: "Recept-stappen: 1) Boter smelten. 2) Eieren breken in kom. 3) Klutsen. 4) Bakken in pan.\n\n**Wat doe je direct na klutsen**?",
-        options: ["Bakken in pan","Boter smelten","Eieren breken","Niets"],
+        options: ["Bakken in pan","Boter smelten","Eieren breken","Klutsen"],
         answer: 0,
-        wrongHints: [null,"Stap 1.","Stap 2.","Wel — kijk welke stap na klutsen staat."],
+        wrongHints: [null,"Dat is stap 1. Komt die vóór of ná klutsen?","Dat is stap 2. Wat komt er ná klutsen?","Dat is de stap zelf. Welke stap staat erna?"],
       },
       {
         q: "Beslisboom: 'Is het warm? Ja → korte broek. Nee → lange broek.'\n\nHet is **koud**. Wat draag je?",
-        options: ["Lange broek","Korte broek","Allebei","Niets"],
+        options: ["Lange broek","Korte broek","Een dikke jas","Een korte broek met een trui"],
         answer: 0,
-        wrongHints: [null,"Bij 'warm'.","Eén keuze.","Wel iets aan."],
+        wrongHints: [null,"Dat hoort bij 'warm: ja'. Is het warm?","Staat er een jas in de beslisboom? Volg alleen wat er staat.","Staat er een trui in de beslisboom? Kies één van de twee uitkomsten."],
       },
       {
         q: "Voedselketen: bladluizen → lieveheersbeestjes → vogels.\n\n**Wie eet de bladluizen**?",
-        options: ["Lieveheersbeestjes","Vogels","Niets","Bladluizen onderling"],
+        options: ["Lieveheersbeestjes","Vogels","De bladluizen worden niet gegeten","Bladluizen eten elkaar"],
         answer: 0,
-        wrongHints: [null,"Vogels staan een stap verder in de keten, niet direct ná bladluizen.","Niet rechtstreeks — kijk welke pijl ER NA bladluizen volgt.","Niet in dit schema."],
+        wrongHints: [null,"Vogels staan een stap verder in de keten, niet direct ná bladluizen.","Volg de pijl die bij bladluizen begint. Waar komt die uit?","Staat er een pijl van bladluizen naar bladluizen?"],
       },
       {
         q: "Stappen: 1) Computer aan. 2) Browser openen. 3) Site bezoeken. 4) Iets bestellen.\n\n**Welke stap mist** voor het betalen?",
-        options: ["Betaalmethode kiezen","Computer uit","Browser sluiten","Geen"],
+        options: ["Betaalmethode kiezen","Computer uitzetten","De site sluiten","Er mist geen stap"],
         answer: 0,
-        wrongHints: [null,"Hoort niet hier.","Idem.","Wel — betalen ontbreekt."],
+        wrongHints: [null,"Kun je iets betalen als de computer uit staat?","Kun je op een site betalen als je hem gesloten hebt?","Lees de stappen nog eens. Staat er ergens dat je betaalt?"],
       },
       {
         q: "Tijdslijn: 1900 — auto. 1950 — TV. 1990 — internet. 2007 — smartphone.\n\n**Wat kwam eerst**?",
         options: ["Auto","TV","Internet","Smartphone"],
         answer: 0,
-        wrongHints: [null,"Kwam later.","Veel later.","Veel later."],
+        wrongHints: [null,"Kijk naar het jaartal bij de tv: 1950. Is er een kleiner jaartal?","1990 — zoek het kleinste jaartal.","2007 is het grootste jaartal. Zoek het kleinste."],
       },
       {
         q: "Een **stappenplan** is gegeven: 1) Lees de hele opgave. 2) Onderstreep belangrijke woorden. 3) Maak schets. 4) Reken uit. 5) Controleer antwoord.\n\nWelke stap is gericht op **niet rekenen maar BEGRIJPEN**?",
-        options: ["Stap 1 (lees de hele opgave)","Stap 4 (reken uit)","Stap 5 (controleer)","Geen — alle gaan over rekenen"],
+        options: ["Stap 1 (lees de hele opgave)","Stap 4 (reken uit)","Stap 5 (controleer)","Geen — alle stappen gaan over rekenen"],
         answer: 0,
         wrongHints: [null, "Dat is uitrekenen, niet begrijpen.", "Controle is na rekenen, niet begrijpen vooraf.", "Wel — kijk naar wat je doet vóórdat je gaat rekenen."],
         uitlegPad: {
@@ -1164,9 +1164,9 @@ const steps = [
       },
       {
         q: "**Beslisboom voor schooladvies VMBO/HAVO/VWO**:\n• Toetsscore 525-535 → VMBO-GL/TL\n• 536-545 → HAVO\n• 546+ → VWO\n\n**Welk advies bij score 540**?",
-        options: ["HAVO","VMBO-GL/TL","VWO","Geen"],
+        options: ["HAVO","VMBO-GL/TL","VWO","VMBO-GL/TL of HAVO"],
         answer: 0,
-        wrongHints: [null, "Te laag — 540 zit hoger dan VMBO-grens.", "Te hoog — VWO begint pas bij 546.", "Wel een advies."],
+        wrongHints: [null, "Te laag — 540 zit hoger dan VMBO-grens.", "Te hoog — VWO begint pas bij 546.", "Een score valt in precies één vakje. In welk vakje valt 540?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een beslisboom?", tekst: "Een **beslisboom** is een schema waarmee je via **JA/NEE-vragen** of **getallen-vergelijkingen** tot een conclusie komt.\n\nVoorbeeld:\n```\nIs score ≥ 546? → JA → VWO\n                  → NEE → Is score ≥ 536? → JA → HAVO\n                                            → NEE → VMBO\n```\n\nVeel gebruikt bij: schooladvies, medische diagnose, kledings-keuze (warm/koud), recept-keuze." },
@@ -1191,7 +1191,7 @@ const steps = [
         q: "Een **diagram**: pijl van 'zon' naar 'plant', pijl van 'plant' naar 'koe', pijl van 'koe' naar 'mens'.\n\n**Wat stelt dit voor**?",
         options: ["Voedselketen","Familie-stamboom","Tijdslijn","Recept"],
         answer: 0,
-        wrongHints: [null, "Niet — geen familieleden.", "Niet — geen jaren genoemd.", "Niet — geen voedselbereiding."],
+        wrongHints: [null, "Zijn zon, plant en koe familie van elkaar?", "Staan er jaartallen bij?", "Staan er stappen om iets te koken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een voedselketen?", tekst: "Een **voedselketen** toont wie wie eet in de natuur. De **pijl** wijst naar **wie er EET** (zo stroomt de energie):\n• Zon → plant (plant gebruikt zonne-energie via fotosynthese)\n• Plant → koe (koe eet plant)\n• Koe → mens (mens eet koe = vlees)\n\nDe energie **stroomt door** de keten — elke stap verliest energie als warmte. Daarom: weinig roofdieren bovenaan, veel planten onderaan." },
@@ -1213,25 +1213,25 @@ const steps = [
           niveaus: { basis: "Voedselketen.", simpeler: "Dit diagram toont een voedselketen: zonne-energie → plant → koe → mens. Pijl = wat geeft energie aan wat.", nogSimpeler: "Voedselketen" },
         },
       },
-      { q: "Wat is een **beslisboom**?", options: ["Schema met ja/nee-vragen die leidt naar antwoord","Een boom waar je onder zit om na te denken","Een stappenplan zonder vragen","Een tijdslijn met jaartallen"], answer: 0, wrongHints: [null, "Niet.", "Niet — heeft vragen.", "Niet — geen tijd."] },
-      { q: "Wat hoort op een **tijdslijn**?", options: ["Gebeurtenissen in chronologische volgorde","Willekeurige feiten door elkaar","Recepten met ingrediënten","Tekeningen zonder tekst"], answer: 0, wrongHints: [null, "Niet — volgorde maakt uit.", "Niet relevant.", "Niet specifiek."] },
-      { q: "Een stappenplan **'pannenkoek bakken'** begint met?", options: ["Beslag mengen","Op tafel zetten","Pan wassen","Eieren scheiden"], answer: 0, wrongHints: [null, "Laatste stap.", "Dat hoort niet bij het bakken zelf.", "Bij sommige recepten, maar niet altijd eerste."] },
-      { q: "Bij **'A → B'** in voedselketen?", options: ["A wordt door B gegeten","B leeft naast A","A en B zijn vrienden","Geen betekenis"], answer: 0, wrongHints: [null, "Niet — pijl betekent eten/energie.", "Niet.", "Wel — waar staat de pijl voor in een voedselketen?"] },
+      { q: "Wat is een **beslisboom**?", options: ["Schema met ja/nee-vragen die leidt naar antwoord","Schema met één woord in het midden en woorden eromheen","Stappenplan waarin je alle stappen na elkaar doet","Tijdslijn met jaartallen in de goede volgorde"], answer: 0, wrongHints: [null, "Zo ziet een mindmap eruit. Waar kies je in een beslisboom steeds tussen?", "Volg je in een beslisboom alle stappen, of kies je?", "Staan er jaartallen in een beslisboom?"] },
+      { q: "Wat hoort op een **tijdslijn**?", options: ["Gebeurtenissen in chronologische volgorde","Gebeurtenissen in willekeurige volgorde","Stappen van een recept op een rij","Woorden rondom één onderwerp"], answer: 0, wrongHints: [null, "Maakt de volgorde uit op een tijdslijn?", "Gaat een recept over tijd en jaartallen?", "Dat lijkt op een mindmap. Gaat een tijdslijn over één onderwerp met woorden eromheen?"] },
+      { q: "Waarmee **begint** een stappenplan 'pannenkoek bakken'?", options: ["Beslag mengen","Pannenkoek op tafel zetten","Pannenkoek omdraaien","Suiker erover strooien"], answer: 0, wrongHints: [null, "Dat doe je als de pannenkoek klaar is. Wat doe je als allereerste?", "Omdraaien kan pas als er een pannenkoek in de pan ligt. Wat komt daarvóór?", "Suiker gaat erop als de pannenkoek klaar is."] },
+      { q: "Wat betekent **'A → B'** in een voedselketen?", options: ["A wordt door B gegeten","B wordt door A gegeten","A en B eten hetzelfde","A en B wonen op dezelfde plek"], answer: 0, wrongHints: [null, "De pijl heeft een richting. Wie wijst naar wie?", "Eten A en B samen, of eet de één de ander?", "De pijl laat zien wie wie opeet. Van wie naar wie gaat hij?"] },
       { q: "Wat is een **stroomdiagram**?", options: ["Schema met stappen en beslissingen", "Tabel met rijen en kolommen", "Tijdlijn met jaartallen op volgorde", "Tekening van een rivier met stroming"], answer: 0, wrongHints: [null, "Dat is een tabel.", "Dat is een tijdlijn.", "Het gaat niet om water dat stroomt."] },
-      { q: "Welk symbool gebruik je voor een **ja/nee-vraag** in beslisboom?", options: ["Ruit","Rechthoek","Cirkel","Driehoek"], answer: 0, wrongHints: [null, "Dat is actie/stap.", "Dat is begin/eind.", "Niet standaard."] },
-      { q: "Welk symbool voor **begin/eind** in stroomdiagram?", options: ["Cirkel of ovaal","Ruit","Rechthoek","Pijl"], answer: 0, wrongHints: [null, "Beslissing.", "Actie.", "Verbinding."] },
-      { q: "In een **tabel** staan?", options: ["Rijen + kolommen met data", "Zinnen + alinea's met tekst", "Pijlen + vakjes met stappen", "Plaatjes + tekeningen"], answer: 0, wrongHints: [null, "Geen verhaal.", "Dat is eerder een stroomdiagram.", "Dat is een tekening, geen tabel."] },
-      { q: "Wat is de **eerste kolom** in een tabel vaak?", options: ["Categorieën/labels","Willekeurige getallen","De totalen","Reclame"], answer: 0, wrongHints: [null, "Niet willekeurig.", "Vaak rechts.", "Niet."] },
-      { q: "Welk schema toont **hiërarchie** (boven-onder)?", options: ["Boomdiagram","Tijdslijn","Tabel","Beslisboom"], answer: 0, wrongHints: [null, "Tijd-volgorde.", "Data-overzicht.", "Wel boom, maar voor keuzes."] },
+      { q: "Welk symbool gebruik je voor een **ja/nee-vraag** in beslisboom?", options: ["Ruit","Rechthoek","Cirkel","Driehoek"], answer: 0, wrongHints: [null, "Dat is actie/stap.", "Dat is begin/eind.", "Een driehoek kom je in een stroomdiagram niet tegen. Zoek de vorm die voor een keuze staat."] },
+      { q: "Welk symbool gebruik je voor **begin en eind** in een stroomdiagram?", options: ["Cirkel of ovaal","Ruit","Rechthoek","Pijl"], answer: 0, wrongHints: [null, "Bij de ruit kies je tussen ja en nee. Is dat begin of eind?", "In de rechthoek staat wat je doet. Is dat begin of eind?", "Een pijl verbindt de vakjes. Is dat zelf een begin of eind?"] },
+      { q: "Wat staat er in een **tabel**?", options: ["Rijen en kolommen met gegevens", "Zinnen en alinea's met tekst", "Pijlen en vakjes met stappen", "Plaatjes en tekeningen"], answer: 0, wrongHints: [null, "Dat is een gewone tekst. Hoe ziet een tabel eruit?", "Dat is eerder een stroomdiagram.", "Dat is een tekening, geen tabel."] },
+      { q: "Wat is de **eerste kolom** in een tabel vaak?", options: ["De namen van de rijen","De grootste getallen","De totalen","De titel van de tabel"], answer: 0, wrongHints: [null, "Staan de getallen in een tabel op grootte? Kijk wat er vooraan elke rij staat.", "Totalen staan meestal onderaan of helemaal rechts.", "De titel staat boven de tabel, niet in een kolom."] },
+      { q: "Welk schema laat een **hiërarchie** zien (wie boven wie staat)?", options: ["Boomdiagram","Tijdslijn","Tabel","Beslisboom"], answer: 0, wrongHints: [null, "Een tijdslijn zet dingen op volgorde van tijd, niet boven elkaar.", "In een tabel staan rijen en kolommen. Zie je daar wie boven wie staat?", "Wel een boom, maar die is voor keuzes maken."] },
       { q: "Welke volgorde is goed in het **stappenplan 'boterham klaarmaken'**?", options: ["Brood pakken → besmeren → eten","Brood pakken → eten → besmeren","Besmeren → brood pakken → eten","Eten → besmeren → brood pakken"], answer: 0, wrongHints: [null, "Smeer je je brood voor of na het opeten?", "Kun je iets besmeren als je het brood nog niet hebt gepakt?", "Kun je iets eten dat je nog niet hebt gepakt?"] },
       { q: "Wat zoek je in een **legenda** bij een schema?", options: ["Wat de symbolen betekenen", "Wie het schema gemaakt heeft", "Wanneer het schema gemaakt is", "Hoeveel het schema gekost heeft"], answer: 0, wrongHints: [null, "Auteur staat los van de legenda.", "Datum is bij-info, niet legenda-werk.", "Prijs hoort niet in een legenda."] },
-      { q: "Bij een **flowchart**: wat doe je bij een ruit?", options: ["Antwoord op ja/nee-vraag kiezen", "Een gewone stap uitvoeren", "Stoppen: het schema is klaar", "Opnieuw beginnen bij de start"], answer: 0, wrongHints: [null, "Dat is rechthoek.", "Dat is ovaal-eind.", "Dat is ovaal-begin."] },
+      { q: "In een **stroomdiagram** (flowchart): wat doe je bij een ruit?", options: ["Antwoord op ja/nee-vraag kiezen", "Een gewone stap uitvoeren", "Stoppen: het schema is klaar", "Opnieuw beginnen bij de start"], answer: 0, wrongHints: [null, "Een gewone stap staat in een rechthoek. Wat staat er in een ruit?", "Stoppen doe je bij het ovaal aan het eind.", "Beginnen doe je bij het ovaal aan het begin."] },
       { q: "Wat is een **Venn-diagram**?", options: ["Cirkels die elkaar overlappen", "Een tijdslijn met jaartallen", "Een boom met vertakkingen", "Een tabel met rijen en kolommen"], answer: 0, wrongHints: [null, "Tijdslijn = volgorde van data, geen cirkels.", "Boom = vertakkingen, geen overlap.", "Tabel = rijen + kolommen, geen cirkels."] },
-      { q: "Wat is de zin 'kijk in tabel 2' in een tekst?", options: ["Een verwijzing", "Een mening", "Een conclusie", "Een vraagzin"], answer: 0, wrongHints: [null, "Niet — feitelijk.", "Niet conclusie.", "Er staat geen vraagteken."] },
-      { q: "Een **organogram** toont?", options: ["Wie boven/onder wie staat in organisatie","Hoe laat het is in andere landen","Welke stappen een recept heeft","Hoe een verhaal afloopt"], answer: 0, wrongHints: [null, "Tijd toon je in een tijdslijn.", "Recept = stappenplan, geen organisatie.", "Verhaal = tekst, geen schema."] },
-      { q: "Wat doet een **pijl** in een stappenplan?", options: ["Wijst naar volgende stap", "Verbiedt de vorige stap", "Toont fouten in het plan", "Markeert alleen het begin"], answer: 0, wrongHints: [null, "Niet.", "Niet relevant.", "Niet specifiek."] },
-      { q: "Bij **chronologisch** schema staan dingen op?", options: ["Volgorde van tijd","Alfabet","Grootte","Willekeurig"], answer: 0, wrongHints: [null, "Alfabetisch sorteer je een namenlijst, niet chronologisch.", "Op grootte is op afmeting, niet op tijd.", "Chronologisch heeft juist WEL een volgorde."] },
-      { q: "Wat helpt het meest om **stappenplan** te onthouden?", options: ["Stappen genummerd zien","Willekeurige kleuren","Lange zin per stap","Tekening zonder tekst"], answer: 0, wrongHints: [null, "Niet.", "Te lang om snel te zien.", "Tekst helpt ook."] },
+      { q: "Wat is de zin 'kijk in tabel 2' in een tekst?", options: ["Een verwijzing", "Een mening", "Een conclusie", "Een vraagzin"], answer: 0, wrongHints: [null, "Zegt de schrijver hier wat hij ervan vindt?", "Trekt de schrijver hier een slotsom?", "Er staat geen vraagteken."] },
+      { q: "Wat laat een **organogram** zien?", options: ["Wie boven/onder wie staat in organisatie","Hoe laat het is in andere landen","Welke stappen een recept heeft","Hoe een verhaal afloopt"], answer: 0, wrongHints: [null, "Tijd toon je in een tijdslijn.", "Recept = stappenplan, geen organisatie.", "Verhaal = tekst, geen schema."] },
+      { q: "Wat doet een **pijl** in een stappenplan?", options: ["Wijst naar volgende stap", "Wijst naar de vorige stap", "Laat zien welke stap het belangrijkst is", "Markeert alleen het begin"], answer: 0, wrongHints: [null, "Lees je een stappenplan van voor naar achter, of andersom?", "Een pijl zegt niets over belangrijk. Hij staat tussen twee stappen. Waarom?", "Een pijl staat tussen alle stappen, niet alleen bij het begin."] },
+      { q: "In welke volgorde staan dingen in een **chronologisch** schema?", options: ["Op volgorde van tijd","Op alfabet","Op grootte","Door elkaar"], answer: 0, wrongHints: [null, "Alfabetisch sorteer je een namenlijst, niet chronologisch.", "Op grootte is op afmeting, niet op tijd.", "Chronologisch heeft juist WEL een volgorde."] },
+      { q: "Wat helpt het meest om een **stappenplan** te onthouden?", options: ["Stappen genummerd zien","Elke stap een andere kleur","Lange zin per stap","Tekening zonder tekst"], answer: 0, wrongHints: [null, "Zegt een kleur je welke stap eerst komt?", "Te lang om snel te zien.", "Tekst helpt ook."] },
     ],
   },
 ];

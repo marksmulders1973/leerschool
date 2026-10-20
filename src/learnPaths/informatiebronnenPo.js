@@ -50,7 +50,7 @@ const steps = [
         q: "Je zoekt **waar Kazachstan ligt** op de wereldkaart. Welke bron?",
         options: ["Atlas","Woordenboek","Encyclopedie","Krant"],
         answer: 0,
-        wrongHints: [null, "Woordenboek heeft geen kaarten.", "Encyclopedie noemt wel land, maar kaart sneller.", "Krant heeft geen wereldkaarten."],
+        wrongHints: [null, "Woordenboek heeft geen kaarten.", "Een encyclopedie vertelt óver het land. Waar vind je een kaart?", "Krant heeft geen wereldkaarten."],
         uitlegPad: {
           stappen: [{ titel: "Plek = atlas", tekst: "Een atlas is een **kaartenboek**. Voor 'waar ligt...' altijd atlas (papier of online via Google Maps)." }],
           woorden: [{ woord: "atlas", uitleg: "Kaartenboek met landen, steden, water, gebergte etc." }],
@@ -74,12 +74,12 @@ const steps = [
       },
       {
         q: "Welke bron is het beste voor een **werkstuk over de Romeinen**?",
-        options: ["Encyclopedie + schoolboek","Woordenboek alleen","Atlas alleen","Krant van vandaag"],
+        options: ["Encyclopedie en schoolboek","Woordenboek en atlas","Atlas en krant","Woordenboek en krant"],
         answer: 0,
-        wrongHints: [null, "Woordenboek geeft alleen woord-betekenis, te weinig info.", "Atlas heeft kaarten maar geen geschiedenis-uitleg.", "Krant heeft geen Romeinse geschiedenis."],
+        wrongHints: [null, "Daar vind je woorden en kaarten. Staat er een verhaal over de Romeinen in?", "Kaarten en nieuws van nu. Vertellen die hoe de Romeinen leefden?", "Woordbetekenis en nieuws van vandaag. Vind je daar de geschiedenis?"],
         uitlegPad: {
           stappen: [{ titel: "Werkstuk = brede bron", tekst: "Een werkstuk vraagt **brede info** + **structuur**. Combineer **encyclopedie** (Wikipedia of Winkler Prins) voor algemeen + **schoolboek** voor jouw-niveau-uitleg. Atlas erbij als je kaarten nodig hebt." }],
-          niveaus: { basis: "Encyclopedie + schoolboek.", simpeler: "Werkstuk → brede info → encyclopedie.", nogSimpeler: "Encyclopedie" },
+          niveaus: { basis: "Encyclopedie en schoolboek.", simpeler: "Werkstuk → brede info → encyclopedie.", nogSimpeler: "Encyclopedie" },
         },
       },
       {
@@ -100,7 +100,7 @@ const steps = [
         wrongHints: [
           null,
           "Een woordenboek legt woorden uit. Staan daar kaarten in?",
-          null,
+          "Staat er in een krant een kaart met alle landen langs de Rijn?",
           "Zoek je bewezen onderzoek, of wil je iets op een kaart zien?",
         ],
         uitlegPad: {
@@ -258,7 +258,7 @@ const steps = [
         wrongHints: [
           null,
           "Alle vier beginnen met 'ta'. Vergelijk de derde letter.",
-          null,
+          "Alle vier beginnen met 'ta'. Kijk naar de derde letter: een f komt vroeg in het alfabet.",
           "Kijk naar de derde letter: een a komt vroeg in het alfabet.",
         ],
         uitlegPad: {
@@ -302,7 +302,7 @@ const steps = [
           null,
           "Begin met 'raa' en 'rab'. Komt 'rak' daarvóór of daarna?",
           "Vergelijk de derde letter: k en n. Welke komt eerst?",
-          null,
+          "Vergelijk de tweede letter: a en e. Welke komt eerst?",
         ],
         uitlegPad: {
           stappen: [
@@ -341,7 +341,7 @@ const steps = [
         q: "In een verhaal lees je het woord **'bomen'**. Welk woord zoek je op in het woordenboek?",
         options: ["boom", "bom", "boon", "bodem"],
         answer: 0,
-        wrongHints: [null, "Zeg het eens hardop: één ..., twee bomen. Klopt dat?", null, null],
+        wrongHints: [null, "Zeg het eens hardop: één ..., twee bomen. Klopt dat?", "Eén boon, twee bonen. Is dat hetzelfde als bomen?", "Eén bodem, twee bodems. Past dat bij 'bomen'?"],
         uitlegPad: {
           stappen: [
             {
@@ -382,7 +382,7 @@ const steps = [
         wrongHints: [
           null,
           "Alle drie beginnen met b. Vergelijk de tweede letter: o en e.",
-          null,
+          "Alle drie beginnen met b. Vergelijk de tweede letters: r, e en o. Welke komt eerst?",
           "Vergelijk de tweede letter van 'brug' en 'boek': r en o.",
         ],
         uitlegPad: {
@@ -422,7 +422,7 @@ const steps = [
         q: "Je wilt het woord **'ijsbeer'** opzoeken in het woordenboek. Bij welke letter zoek je?",
         options: ["Bij de i", "Bij de y", "Bij de j", "Bij de e"],
         answer: 0,
-        wrongHints: [null, "Zo deed men het soms in oude lijsten. Hoe gaat het in het woordenboek?", null, null],
+        wrongHints: [null, "Zo deed men het soms in oude lijsten. Hoe gaat het in het woordenboek?", "Schrijf het woord op: i-j-s-b-e-e-r. Welke letter staat vooraan?", "Je hoort misschien een e, maar hoe schrijf je 'ijs'? Kijk naar de eerste letter."],
         uitlegPad: {
           stappen: [
             {
@@ -481,7 +481,7 @@ const steps = [
         q: "Je zoekt in een geschiedenisboek **alles over 'Karel V'**. Welk deel kun je het beste raadplegen?",
         options: ["Index","Inhoudsopgave","Glossarium","Voorwoord"],
         answer: 0,
-        wrongHints: [null, "De inhoudsopgave noemt alleen de hoofdstukken. Welk deel noemt álle bladzijden waar een naam staat?", "Glossarium is betekenis, geen plek-vinder.", "Voorwoord is niet zoek-tool."],
+        wrongHints: [null, "De inhoudsopgave noemt alleen de hoofdstukken. Welk deel noemt álle bladzijden waar een naam staat?", "Een glossarium legt moeilijke woorden uit. Zegt het op welke bladzijde Karel V staat?", "In het voorwoord vertelt de schrijver iets vooraf. Kun je daar iets opzoeken?"],
         uitlegPad: {
           stappen: [{ titel: "Specifiek = index", tekst: "Wil je **ALLE plekken** waar 'Karel V' voorkomt? → index (achteraan). 'Karel V ... 47, 89-91, 156' = drie verspreide plekken in het boek." }],
           theorie: "Index = trefwoorden + paginanummers, alfabetisch. Beste zoek-tool voor specifieke namen/begrippen.",
@@ -490,7 +490,7 @@ const steps = [
         },
       },
       {
-        q: "*'Hoofdstuk 4 — Middeleeuwen ... blz 58'* — dit hoort bij?",
+        q: "*'Hoofdstuk 4 — Middeleeuwen ... blz 58'* — bij welk deel van een boek hoort dit?",
         options: ["Inhoudsopgave","Index","Bibliografie","Voetnoot"],
         answer: 0,
         wrongHints: [null, "Niet — index is alfabetisch.", "Bibliografie = boekenlijst.", "Voetnoot = uitleg onderaan bladzijde."],
@@ -503,7 +503,7 @@ const steps = [
         q: "In een bibliotheek vind je **een spannende roman over een speurder**. Waar zoek je?",
         options: ["Bij fictie","Bij non-fictie","Bij naslag","Bij stripboeken"],
         answer: 0,
-        wrongHints: [null, "Non-fictie = waar gebeurd. Roman = verzonnen.", "Naslag = woordenboeken/encyclopedieën.", "Niet — geen strip."],
+        wrongHints: [null, "Non-fictie = waar gebeurd. Roman = verzonnen.", "Naslag = woordenboeken/encyclopedieën.", "Is een roman een strip met plaatjes?"],
         uitlegPad: {
           stappen: [{ titel: "Roman = fictie", tekst: "Romans = **verhalen, verzonnen** = fictie-afdeling. Daar staan ze **alfabetisch op achternaam schrijver**. Bv. 'A. Achterberg' bij A, 'B. de Beer' bij B." }],
           woorden: [{ woord: "fictie", uitleg: "Verzonnen verhaal (roman, sprookje, sciencefiction)." }, { woord: "non-fictie", uitleg: "Echt gebeurd / feiten (geschiedenis, biografie, naslag)." }],
@@ -531,7 +531,7 @@ const steps = [
         wrongHints: [
           null,
           "Daar staan hoofdstukken. Is 'vulkaan' met een rij bladzijden een hoofdstuk?",
-          null,
+          "Staat er in een voorwoord een rij bladzijden achter een woord?",
           "Staat daar een uitleg van het woord, of staan er bladzijden?",
         ],
         uitlegPad: {
@@ -565,7 +565,7 @@ const steps = [
         q: "Je wilt snel zien of een boek over dieren een **hoofdstuk over vogels** heeft. Waar kijk je eerst?",
         options: ["Inhoudsopgave", "Glossarium", "Voorwoord", "Achterkant van het boek"],
         answer: 0,
-        wrongHints: [null, "Daar staan moeilijke woorden met uitleg. Staan daar hoofdstukken?", null, null],
+        wrongHints: [null, "Daar staan moeilijke woorden met uitleg. Staan daar hoofdstukken?", "Staan in het voorwoord alle hoofdstukken op een rij?", "Op de achterkant staat een korte tekst over het boek. Staan daar alle hoofdstukken?"],
         uitlegPad: {
           stappen: [
             {
@@ -597,7 +597,7 @@ const steps = [
         q: "Waar staat de **index** meestal in een boek?",
         options: ["Achterin", "Vooraan", "In het midden", "Op de voorkant"],
         answer: 0,
-        wrongHints: [null, "Wat staat er vooraan in een boek?", null, null],
+        wrongHints: [null, "Wat staat er vooraan in een boek?", "Een index is een lijst om iets terug te zoeken. Ligt die midden tussen de hoofdstukken?", "Op de voorkant staan de titel en een plaatje. Past daar een lange lijst woorden?"],
         uitlegPad: {
           stappen: [
             {
@@ -631,9 +631,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Hoe zou je dan snel een woord terugvinden? Denk aan het woordenboek.",
           "Op hoofdstuk zoeken doe je in een ander deel. Welke volgorde maakt zoeken naar één woord snel?",
-          null,
+          "Wie bepaalt wat belangrijk is? Denk aan hoe een woordenboek is geordend.",
         ],
         uitlegPad: {
           stappen: [
@@ -671,7 +671,7 @@ const steps = [
           "Op dikte van het boek",
         ],
         answer: 0,
-        wrongHints: [null, "Zo staan verhalenboeken. Is een boek over planeten een verhaal?", null, null],
+        wrongHints: [null, "Zo staan verhalenboeken. Is een boek over planeten een verhaal?", "Weet je van tevoren welke kleur een boek over planeten heeft?", "Zoek je een dik of een dun boek, of een boek over planeten?"],
         uitlegPad: {
           stappen: [
             {
@@ -712,7 +712,7 @@ const steps = [
         q: "Welke bron is **het meest betrouwbaar** voor info over de Tweede Wereldoorlog?",
         options: ["Website van oorlogsinstituut NIOD","Video van een willekeurige vlogger","TikTok-filmpje zonder bron","Blog zonder naam van de schrijver"],
         answer: 0,
-        wrongHints: [null, "Vlogger = vaak mening, geen historicus.", "TikTok zonder bron = onbetrouwbaar.", "Anoniem = wie schreef? Niet te checken."],
+        wrongHints: [null, "Vlogger = vaak mening, geen historicus.", "Wie heeft dit filmpje gemaakt, en waar haalt die persoon het vandaan?", "Anoniem = wie schreef? Niet te checken."],
         uitlegPad: {
           stappen: [{ titel: "Officiële instituten", tekst: "**NIOD** = Nederlands Instituut voor Oorlogsdocumentatie. Wetenschappelijk, primaire bronnen, peer-reviewed. Hoogste betrouwbaarheid voor WO2-info." }],
           woorden: [{ woord: "instituut", uitleg: "Officiële organisatie voor onderzoek." }],
@@ -781,7 +781,7 @@ const steps = [
         wrongHints: [
           null,
           "Is een korte tekst meteen onbetrouwbaar?",
-          null,
+          "Zijn plaatjes een probleem? Denk aan wie de site maakte en waarom.",
           "Denk aan de vraag: WAAROM is het geschreven?",
         ],
         uitlegPad: {
@@ -823,7 +823,7 @@ const steps = [
         wrongHints: [
           null,
           "Wie maakte deze foto, en was die persoon er zelf bij?",
-          null,
+          "Schreef deze bouwvakker het zelf op, toen hij erbij was?",
           "Schreef iemand die er zelf bij was deze brief?",
         ],
         uitlegPad: {
@@ -865,7 +865,7 @@ const steps = [
         wrongHints: [
           null,
           "Stonden de telefoons van dit jaar toen al in de krant?",
-          null,
+          "Stonden de telefoons van dit jaar al in een oud boek?",
           "Weet je bij deze tekst of hij nieuw of oud is?",
         ],
         uitlegPad: {
@@ -904,7 +904,7 @@ const steps = [
           "Hij kan geen plaatjes maken",
         ],
         answer: 0,
-        wrongHints: [null, null, "Gaat het hier om de taal, of om of het antwoord klopt?", null],
+        wrongHints: [null, "Gaat het om hoe snel hij antwoordt, of om of het klopt?", "Gaat het hier om de taal, of om of het antwoord klopt?", "Gaat het om plaatjes, of om of het antwoord klopt?"],
         uitlegPad: {
           stappen: [
             {
@@ -953,9 +953,9 @@ const steps = [
       },
       {
         q: "Welk woord komt **derde** alfabetisch: kraan, krant, kralen?",
-        options: ["krant","kraan","kralen","alle drie"],
+        options: ["krant","kraan","kralen","ze staan alle drie op dezelfde plek"],
         answer: 0,
-        wrongHints: [null, "Niet de derde — vergelijk de 4e letter van alle drie de woorden.", "Bijna — vergelijk de 4e letter van alle drie de woorden nog eens.", "Niet — er IS een volgorde."],
+        wrongHints: [null, "Niet de derde — vergelijk de 4e letter van alle drie de woorden.", "Bijna — vergelijk de 4e letter van alle drie de woorden nog eens.", "In het woordenboek heeft elk woord zijn eigen plek. Vergelijk de 4e letter."],
         uitlegPad: {
           stappen: [{ titel: "4e letter vergelijken bij gelijke 1-3", tekst: "Alle 3 beginnen met 'kra'. Kijk 4e letter: kra**a**n (a) < kra**l**en (l) < kra**n**t (n). A<L<N → kraan, kralen, krant. Derde = krant." }],
           niveaus: { basis: "Krant derde.", simpeler: "Volgorde: kraan, kralen, krant → 3e = krant.", nogSimpeler: "Krant" },
@@ -963,19 +963,19 @@ const steps = [
       },
       {
         q: "Een tekst zegt: *'Wist je dat de maan eigenlijk een spiegel is? Deel deze waarheid!'* Wat doe je?",
-        options: ["Niet delen en eerst controleren","Direct delen op WhatsApp","Doorsturen naar je vrienden","Op Wikipedia zetten"],
+        options: ["Niet delen en eerst controleren","Direct delen op WhatsApp","Het geloven, want het staat er toch","Op Wikipedia zetten"],
         answer: 0,
-        wrongHints: [null, "Niet — fake news verspreiden!", "Niet — zo verspreid je het ongecontroleerd verder.", "Niet bewerken zonder bron."],
+        wrongHints: [null, "Als je het deelt, geloven je vrienden het misschien ook. Weet je al of het klopt?", "Omdat iets ergens staat, is het nog niet waar. Hoe kom je erachter?", "Wikipedia wil bronnen. Heb je bewijs dat de maan een spiegel is?"],
         uitlegPad: {
           stappen: [{ titel: "Fake news-signaal", tekst: "Sensationele 'wist je dat' + 'deel!' + onlogische claim ('maan = spiegel') + geen bronvermelding = **fake news**. Niet delen, niet geloven, eerst check via NASA of wetenschapssite." }],
           niveaus: { basis: "Niet delen.", simpeler: "Geen bron + 'deel!' = fake.", nogSimpeler: "Fake" },
         },
       },
       {
-        q: "Je hebt 30 sec om in een **geschiedenisboek** info over **'Karel V'** te vinden. Waar kijk je?",
+        q: "Je hebt 30 seconden om in een **geschiedenisboek** info over **'Karel V'** te vinden. Waar kijk je?",
         options: ["Index achteraan","Hoofdstuk 1","Voorwoord","Hele boek doorbladeren"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen als toevallig Karel V hier behandeld wordt.", "Voorwoord = inleiding, geen feiten.", "Niet — duurt veel te lang."],
+        wrongHints: [null, "Niet — alleen als toevallig Karel V hier behandeld wordt.", "Voorwoord = inleiding, geen feiten.", "In 30 seconden het hele boek? Welk deel van het boek wijst je snel de goede bladzijde?"],
         uitlegPad: {
           stappen: [{ titel: "Specifieke naam = index", tekst: "**Index achteraan** = alfabetisch. Zoek 'Karel V' → pagina-nummers. Direct naar de juiste plek. 30 sec genoeg." }],
           niveaus: { basis: "Index.", simpeler: "Specifieke naam → index achteraan.", nogSimpeler: "Index" },
@@ -999,7 +999,7 @@ const steps = [
         wrongHints: [
           null,
           "Vergelijk 'vie' met 'vis': komt e vóór of na s?",
-          null,
+          "Vergelijk 'vle' met 'vla': komt e vóór of na a?",
           "Vergelijk de tweede letter met die van 'vlag'.",
         ],
         uitlegPad: {

@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [
           null,
           "Zeg ze hardop: sok... jas... Klinkt het einde hetzelfde?",
-          null,
+          "Zeg ze hardop: sok... hand... Hoor je hetzelfde einde?",
           "Luister naar het laatste stukje — hoor je *ok*?",
         ],
         uitlegPad: {
@@ -140,7 +140,7 @@ const steps = [
           null,
           "Die hoort ook in de keuken — maar luister: klinkt het einde als *an*?",
           "Zeg ze hardop: pan... vork... Hoor je hetzelfde einde?",
-          null,
+          "Die hoort ook op tafel — maar luister: klinkt het einde als *an*?",
         ],
         uitlegPad: {
           stappen: [
@@ -169,7 +169,7 @@ const steps = [
         wrongHints: [
           null,
           "Lekker bij een koek — maar zeg ze hardop: klinkt het einde hetzelfde?",
-          null,
+          "Zeg ze langzaam: koek... kaas... Hoor je hetzelfde einde?",
           "Zeg de woorden langzaam — welk woord eindigt net als *koek*?",
         ],
         uitlegPad: {
@@ -200,7 +200,7 @@ const steps = [
           null,
           "Een roos is óók een bloem — maar luister: klinkt het einde als *oos*?",
           "Zeg ze hardop: roos... blad... Hoor je hetzelfde einde?",
-          null,
+          "Zeg ze langzaam: roos... gras... Klinkt het einde hetzelfde?",
         ],
         uitlegPad: {
           stappen: [
@@ -230,7 +230,7 @@ const steps = [
           null,
           "Zeg ze hardop: mond... kat... Klinken de eindes hetzelfde?",
           "Luister naar het einde: mond... koe... Hoor je hetzelfde stukje?",
-          null,
+          "Zeg ze langzaam: mond... vis... Hoor je hetzelfde einde?",
         ],
         uitlegPad: {
           stappen: [
@@ -346,7 +346,7 @@ const steps = [
         wrongHints: [
           null,
           "Zeg het heel langzaam — hoor je een *m* aan het begin?",
-          null,
+          "Ssss klinkt als een slang — hoor je dat vooraan in *lamp*?",
           "Zeg *lamp* nog eens hardop — welke klank komt het allereerst?",
         ],
         uitlegPad: {
@@ -377,7 +377,7 @@ const steps = [
           null,
           "Zeg het langzaam en klap: kip... Komt er nog een stukje achteraan?",
           "Dat zijn wel heel veel klappen — zeg het nog eens rustig: kip.",
-          null,
+          "Vier klappen? Zeg het nog eens rustig: kip. Hoeveel stukjes hoor je?",
         ],
         uitlegPad: {
           stappen: [
@@ -407,7 +407,7 @@ const steps = [
           null,
           "Klap bij elk stukje: ko 👏 ... en dan komt er nog wat! Klap nog eens mee.",
           "Zeg het langzaam en klap: ko... nijn... Tel je klappen!",
-          null,
+          "Dat zijn wel heel veel klappen — probeer het nog eens langzaam: ko... nijn...",
         ],
         uitlegPad: {
           stappen: [
@@ -437,7 +437,7 @@ const steps = [
           null,
           "Zeg het heel langzaam en luister naar de allereerste klank. Hoor je een *a*?",
           "Mmm hoor je wel in *oma* — maar komt die als allereerste?",
-          null,
+          "Zeg *oma* hardop — hoor je een *b* aan het begin?",
         ],
         uitlegPad: {
           stappen: [
@@ -555,7 +555,7 @@ const steps = [
         wrongHints: [
           null,
           "Kijk goed: heeft deze letter ook een stokje aan de kant, zoals de *a*?",
-          null,
+          "Zeg deze letter eens hardop: *eee*. Klinkt dat als *aaa*?",
           "Leg ze naast elkaar in je hoofd — klinkt deze letter als *aaa*?",
         ],
         uitlegPad: {
@@ -586,7 +586,7 @@ const steps = [
           null,
           "Kijk letter voor letter: k-i-p. Zie je ergens een dicht rondje zoals de *o*?",
           "Kijk goed naar b-u-s — staat daar een *o* tussen?",
-          null,
+          "Kijk letter voor letter: v-i-s. Zie je ergens een dicht rondje zoals de *o*?",
         ],
         uitlegPad: {
           stappen: [
@@ -616,7 +616,7 @@ const steps = [
           null,
           "Tel de bergjes — heeft deze letter er net zo veel als de *m*?",
           "Kijk goed: staat deze letter niet op zijn kop?",
-          null,
+          "Kijk goed: heeft deze letter bergjes, zoals de *m*?",
         ],
         uitlegPad: {
           stappen: [
@@ -736,7 +736,7 @@ const steps = [
           null,
           "Kan een banaan lopen of geluid maken? Denk nog eens na!",
           "Trek je dit aan, of kan het zelf rondlopen?",
-          null,
+          "Kan een bal zelf rondlopen of geluid maken?",
         ],
         uitlegPad: {
           stappen: [
@@ -765,7 +765,7 @@ const steps = [
         wrongHints: [
           null,
           "Kun je een peer eten? Dan is het misschien wel fruit!",
-          null,
+          "Kun je een aardbei eten? Groeit hij aan een plant? Dan is het misschien wel fruit!",
           "Een druif groeit aan een plant en je kunt hem eten. Is dat fruit?",
         ],
         uitlegPad: {
@@ -796,7 +796,7 @@ const steps = [
           null,
           "Met een bal kun je spelen — maar eet je er ook mee?",
           "Een boom staat buiten — hoort die bij het eten?",
-          null,
+          "Een kat is een dier — eet je daarmee?",
         ],
         uitlegPad: {
           stappen: [
@@ -911,7 +911,7 @@ const steps = [
           null,
           "Ook iets om aan te trekken — maar luister: klinkt het einde als *as*?",
           "Zeg ze hardop: jas... jurk... Beginnen ze hetzelfde of eindigen ze hetzelfde?",
-          null,
+          "Zeg ze hardop: jas... pet... Klinkt het einde hetzelfde?",
         ],
         uitlegPad: {
           stappen: [
@@ -941,7 +941,7 @@ const steps = [
           null,
           "Mmm zeg je bij lekker eten — hoor je dat vooraan in *neus*?",
           "De *s* hoor je wel in *neus* — maar komt die als allereerste?",
-          null,
+          "Zeg *neus* nog eens hardop — welke klank komt het allereerst?",
         ],
         uitlegPad: {
           stappen: [
@@ -971,7 +971,7 @@ const steps = [
           null,
           "Eén klap maar? Zeg het langzaam: ze... bra... en klap bij elk stukje.",
           "Klap nog eens rustig mee en tel goed: bij elk stukje één klap.",
-          null,
+          "Dat zijn wel heel veel klappen — zeg het nog eens langzaam: ze... bra...",
         ],
         uitlegPad: {
           stappen: [

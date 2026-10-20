@@ -52,7 +52,7 @@ const steps = [
         q: "*De hond rent door de tuin. Hij blaft hard.* Wat is het verwijswoord?",
         options: ["Hij", "hond", "tuin", "blaft"],
         answer: 0,
-        wrongHints: [null, "Dat is waar 'Hij' naar verwijst, niet het verwijswoord zelf.", "Dat is een plaats.", "Dat is een werkwoord."],
+        wrongHints: [null, "Dat is waar 'Hij' naar verwijst, niet het verwijswoord zelf.", "Wijst 'tuin' terug naar iets eerder, of is het gewoon een plek?", "'Blaft' zegt wat de hond doet. Wijst het ergens naar terug?"],
         uitlegPad: {
           stappen: [{ titel: "Welk woord wijst terug?", tekst: "'Hij' is het korte woord dat terugwijst naar 'de hond'. Dat is het verwijswoord." }],
           niveaus: {
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is het ding waar het verwijswoord naar wijst, niet het verwijswoord zelf.",
-          null,
+          "Noor is een naam. Wijst die terug naar iets wat eerder genoemd is?",
           "Dat zegt wat er gebeurt; het wijst nergens naar terug.",
         ],
         uitlegPad: {
@@ -157,7 +157,7 @@ const steps = [
           "Bram koopt voer. Bram geeft de hamster eten.",
         ],
         answer: 0,
-        wrongHints: [null, "Hier worden 'Lotte' en 'de hamster' gewoon nog een keer genoemd.", null, null],
+        wrongHints: [null, "Hier worden 'Lotte' en 'de hamster' gewoon nog een keer genoemd.", "Staat hier een kort woord dat terugwijst naar iets uit de eerste zin?", "Hier wordt 'Bram' gewoon nog een keer genoemd."],
         uitlegPad: {
           stappen: [
             {
@@ -294,7 +294,7 @@ const steps = [
         q: "Welk woord past op de lege plek? *Het boek ligt op tafel. ___ is erg dik.*",
         options: ["Het", "Hij", "Zij", "Hem"],
         answer: 0,
-        wrongHints: [null, "'Hij' past bij een man of een 'de'-woord. Wat voor woord is 'boek'?", null, null],
+        wrongHints: [null, "'Hij' past bij een man of een 'de'-woord. Wat voor woord is 'boek'?", "'Zij' past bij een vrouw of een meisje. Is een boek dat?", "Probeer het hardop: 'Hem is erg dik'. Klinkt dat goed?"],
         uitlegPad: {
           stappen: [
             {
@@ -313,7 +313,7 @@ const steps = [
         q: "*De juf geeft Bas een sticker. Ze plakt hem op zijn schrift.* Naar wie verwijst 'Ze'?",
         options: ["de juf", "Bas", "de sticker", "het schrift"],
         answer: 0,
-        wrongHints: [null, "Bas is een jongen. Past 'ze' bij hem?", null, null],
+        wrongHints: [null, "Bas is een jongen. Past 'ze' bij hem?", "Kan een sticker iets plakken?", "Kan een schrift iets plakken?"],
         uitlegPad: {
           stappen: [
             {
@@ -332,7 +332,7 @@ const steps = [
         q: "*De bal rolt de straat op. ___ stuitert tegen een auto.* Welk woord past op de lege plek?",
         options: ["Hij", "Het", "Haar", "Hem"],
         answer: 0,
-        wrongHints: [null, "Zeg je 'het bal' of 'de bal'?", null, null],
+        wrongHints: [null, "Zeg je 'het bal' of 'de bal'?", "Probeer het hardop: 'Haar stuitert tegen een auto'. Klinkt dat goed?", "Probeer het hardop: 'Hem stuitert tegen een auto'. Klinkt dat goed?"],
         uitlegPad: {
           stappen: [
             {
@@ -450,7 +450,7 @@ const steps = [
         q: "*Ik heb een nieuw spel gekregen. ___ is heel leuk.* Welk woord past op de lege plek?",
         options: ["Dat", "Die", "Hem", "Zij"],
         answer: 0,
-        wrongHints: [null, "Zeg je 'de spel' of 'het spel'?", null, null],
+        wrongHints: [null, "Zeg je 'de spel' of 'het spel'?", "Probeer het hardop: 'Hem is heel leuk'. Klinkt dat goed?", "'Zij' past bij een meisje of vrouw. Is een spel dat?"],
         uitlegPad: {
           stappen: [
             {
@@ -474,7 +474,7 @@ const steps = [
           "Ik zag een mooie vogel. Het zat in de boom.",
         ],
         answer: 0,
-        wrongHints: [null, null, "Zeg je 'de paard' of 'het paard'?", null],
+        wrongHints: [null, "Zeg je 'de vogel' of 'het vogel'? Welk verwijswoord hoort daarbij?", "Zeg je 'de paard' of 'het paard'?", "'Het' past bij een het-woord. Is vogel een het-woord?"],
         uitlegPad: {
           stappen: [
             {
@@ -493,7 +493,7 @@ const steps = [
         q: "*Oma koopt op de markt een meloen. Die is heel zoet.* Waar verwijst 'Die' naar?",
         options: ["de meloen", "de markt", "oma", "zoet"],
         answer: 0,
-        wrongHints: [null, "Kan een markt zoet zijn?", null, null],
+        wrongHints: [null, "Kan een markt zoet zijn?", "Kan oma heel zoet zijn? Wat heeft ze gekocht?", "'Zoet' zegt hoe iets smaakt. Is dat een ding?"],
         uitlegPad: {
           stappen: [
             {
@@ -537,7 +537,7 @@ const steps = [
       },
       {
         q: "*Sanne en Tom koken samen. Zij maken soep.* Naar wie verwijst 'Zij'?",
-        options: ["Sanne en Tom", "alleen Sanne", "alleen Tom", "de soep"],
+        options: ["Sanne en Tom samen", "alleen Sanne", "alleen Tom", "de soep"],
         answer: 0,
         wrongHints: [null, "Het zijn er twee — kijk wie er samen koken.", "Het zijn er twee, niet één.", "Soep is geen persoon."],
         uitlegPad: {
@@ -643,7 +643,7 @@ const steps = [
         q: "*Fenna krijgt een brief van haar tante. Die leest ze drie keer.* Waar verwijst 'Die' naar?",
         options: ["de brief", "haar tante", "Fenna", "drie keer"],
         answer: 0,
-        wrongHints: [null, "Kun je een tante lezen?", null, null],
+        wrongHints: [null, "Kun je een tante lezen?", "Fenna is degene die leest. Wat leest ze?", "Dat zegt hoe vaak. Is dat iets wat je kunt lezen?"],
         uitlegPad: {
           stappen: [
             {

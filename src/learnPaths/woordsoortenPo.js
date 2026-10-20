@@ -29,7 +29,7 @@ const steps = [
         q: "Welk woord is een **zelfstandig naamwoord**?",
         options: ["fiets","fietst","snel","mooi"],
         answer: 0,
-        wrongHints: [null,"Werkwoord (hij fietst).","Bijvoeglijk naamwoord — beschrijft hoe.","Bijvoeglijk naamwoord."],
+        wrongHints: [null,"Kun je 'de fietst' zeggen? Dit woord zegt wat hij doet.","Zegt 'snel' wat iets is, of hoe iets is?","Zegt 'mooi' wat iets is, of hoe iets is?"],
         uitlegPad: {
           stappen: [{ titel: "De/het-test", tekst: "Past 'de' of 'het' ervoor? Dan zelfstandig naamwoord. 'De fiets' ✓." }],
           woorden: [{ woord: "zelfstandig naamwoord", uitleg: "Woord voor persoon, dier, ding, plaats of gevoel." }],
@@ -43,7 +43,7 @@ const steps = [
         q: "*'De dappere ridder vocht fel.'* — welk woord is een zelfstandig naamwoord?",
         options: ["ridder","dappere","fel","De"],
         answer: 0,
-        wrongHints: [null, "Dit woord zegt hoe iemand is. Welke woordsoort doet dat?", "Beschrijft hoe — bijwoord.", "Lidwoord."],
+        wrongHints: [null, "Dit woord zegt hoe iemand is. Welke woordsoort doet dat?", "Zegt 'fel' wie vocht, of hoe hij vocht?", "'De' is een klein woordje dat vóór iets staat. Welk woord staat erachter?"],
         uitlegPad: {
           stappen: [{ titel: "Wie/wat doet?", tekst: "Ridder = persoon (wie vocht?). Zelfst. naamwoord." }],
           woorden: [{ woord: "ridder", uitleg: "Persoon (zelfst nw). 'De ridder' = test bewijst." }],
@@ -72,7 +72,7 @@ const steps = [
         q: "*'Gisteren lachte Lisa heel hard.'* — welk woord is een zelfstandig naamwoord?",
         options: ["Lisa", "lachte", "hard", "Gisteren"],
         answer: 0,
-        wrongHints: [null, "Wat deed iemand gisteren? Dat woord zegt wat er gebeurde.", null, null],
+        wrongHints: [null, "Wat deed iemand gisteren? Dat woord zegt wat er gebeurde.", "Zegt 'hard' wie lachte, of hoe ze lachte?", "Zegt 'gisteren' wie lachte, of wanneer?"],
         uitlegPad: {
           stappen: [
             {
@@ -110,7 +110,7 @@ const steps = [
         q: "*'Wij rennen snel naar het park.'* — welk woord is een zelfstandig naamwoord?",
         options: ["park", "rennen", "snel", "Wij"],
         answer: 0,
-        wrongHints: [null, "Wat doen ze? Is dat een plaats of een ding?", null, null],
+        wrongHints: [null, "Wat doen ze? Is dat een plaats of een ding?", "Zegt 'snel' wie rent, of hoe ze rennen?", "'Wij' staat in de plaats van namen. Kun je er 'de' of 'het' voor zetten?"],
         uitlegPad: {
           stappen: [
             {
@@ -148,7 +148,7 @@ const steps = [
         q: "*'De juf leest een boek voor.'* — hoeveel zelfstandige naamwoorden staan in deze zin?",
         options: ["2", "1", "3", "4"],
         answer: 0,
-        wrongHints: [null, "Zoek ook de persoon in de zin.", null, null],
+        wrongHints: [null, "Zoek ook de persoon in de zin.", "Doe de de/het-test bij elk woord. Lukt dat bij 'leest' of 'voor'?", "Doe de de/het-test bij elk woord. Lukt dat bij 'leest' of 'voor'?"],
         uitlegPad: {
           stappen: [
             {
@@ -193,7 +193,7 @@ const steps = [
         q: "Welk woord is het **hele werkwoord**?",
         options: ["springen","sprong","springer","sprongetje"],
         answer: 0,
-        wrongHints: [null,"Dit is verleden tijd — wel werkwoord-vorm! Kies hele werkwoord.","Geen werkwoord (eindigt op -er = persoon).","Verkleinwoord = zelfst. naamwoord."],
+        wrongHints: [null,"Dit is 'hij sprong', verleden tijd. Welke vorm zou je in het woordenboek vinden?","Een springer is een persoon. Kun je 'ik springer' zeggen?","Een sprongetje is een klein dingetje. Kun je 'ik sprongetje' zeggen?"],
         uitlegPad: {
           stappen: [{ titel: "Hele werkwoord", tekst: "Springen = hele werkwoord (infinitief). Eindigt op -en, geen vervoeging." }],
           woorden: [{ woord: "infinitief", uitleg: "Het 'hele werkwoord' — vorm zonder vervoeging. Meestal -en." }],
@@ -207,7 +207,7 @@ const steps = [
         q: "*'Tom **schopt** de **bal** weg.'* — welk woord is het werkwoord?",
         options: ["schopt","Tom","bal","weg"],
         answer: 0,
-        wrongHints: [null,"Eigennaam.","Zelfst. naamwoord.","Bijwoord (richting)."],
+        wrongHints: [null,"Tom is degene die iets doet. Welk woord zegt wát hij doet?","De bal is het ding. Welk woord zegt wat Tom ermee doet?","'Weg' zegt waarheen. Welk woord zegt wat Tom doet?"],
         uitlegPad: {
           stappen: [{ titel: "Wat doet Tom?", tekst: "Tom DOET iets = schoppen. Schopt = werkwoord (vervoegd: hij schopt)." }],
           woorden: [{ woord: "schopt", uitleg: "3e persoon enkelvoud van 'schoppen' (hij/zij schopt)." }],
@@ -221,7 +221,7 @@ const steps = [
         q: "Wat is het **hele werkwoord** van 'liep'?",
         options: ["lopen","liepen","loop","lopend"],
         answer: 0,
-        wrongHints: [null,"Verleden tijd meervoud.","Tegenwoordige tijd-vorm.","Tegenwoordig deelwoord — niet het hele werkwoord."],
+        wrongHints: [null,"'Zij liepen' is ook verleden tijd. Welke vorm zou je in het woordenboek vinden?","Dat is 'ik loop', een vervoegde vorm. Welke vorm zou je in het woordenboek vinden?","Tegenwoordig deelwoord — niet het hele werkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Hele werkwoord = -en", tekst: "Liep = verleden tijd. Hele = lopen (vorm voor woordenboek)." }],
           woorden: [{ woord: "hele werkwoord", uitleg: "Infinitief — vorm zonder vervoeging. Vrijwel altijd op -en." }],
@@ -235,7 +235,7 @@ const steps = [
         q: "*'Ik **heb** mijn boek **gelezen**.'* — welk woord is het hulpwerkwoord?",
         options: ["heb","gelezen","mijn","boek"],
         answer: 0,
-        wrongHints: [null,"Hoofdwerkwoord.","Voornaamwoord.","Zelfst. naamwoord."],
+        wrongHints: [null,"'Gelezen' zegt wat ik deed. Welk woord helpt daarbij?","'Mijn' zegt van wie het boek is. Is dat een werkwoord?","Het boek is een ding. Is dat een werkwoord?"],
         uitlegPad: {
           stappen: [{ titel: "2 ww samen", tekst: "Heb + gelezen = perfectum. 'Heb' (vorm van hebben) = hulpwerkwoord. Gelezen = hoofd." }],
           woorden: [{ woord: "hulpwerkwoord", uitleg: "Werkwoord dat helpt bij hoofd-ww (heb, ben, zal, zou, kan)." }],
@@ -250,7 +250,7 @@ const steps = [
         q: "*'Mijn broer is ziek.'* — welk woord is het werkwoord?",
         options: ["is", "broer", "ziek", "Mijn"],
         answer: 0,
-        wrongHints: [null, "Zegt dit woord wat iemand doet of is?", null, null],
+        wrongHints: [null, "Zegt dit woord wat iemand doet of is?", "Kun je 'ik ziek' zeggen?", "Kun je 'ik mijn' zeggen? Van wie is de broer?"],
         uitlegPad: {
           stappen: [
             {
@@ -288,7 +288,7 @@ const steps = [
         q: "*'Gisteren kocht ik een ijsje.'* — van welk **hele werkwoord** komt 'kocht'?",
         options: ["kopen", "kochten", "koopt", "koken"],
         answer: 0,
-        wrongHints: [null, null, null, "Dat is een ander werkwoord. Wat doe je in een winkel?"],
+        wrongHints: [null, "'Zij kochten' is ook verleden tijd. Welke vorm zoek je in het woordenboek?", "'Hij koopt' is nu. Welke vorm zou je in het woordenboek vinden?", "Dat is een ander werkwoord. Wat doe je in een winkel?"],
         uitlegPad: {
           stappen: [
             {
@@ -326,7 +326,7 @@ const steps = [
         q: "*'Wij ___ elke dag naar school.'* — welke vorm van 'lopen' past?",
         options: ["lopen", "loopt", "loop", "lopend"],
         answer: 0,
-        wrongHints: [null, "Welke vorm hoort bij 'hij'? En welke bij 'wij'?", null, null],
+        wrongHints: [null, "Welke vorm hoort bij 'hij'? En welke bij 'wij'?", "'Ik loop', maar hier staat 'wij'. Welke vorm hoort bij 'wij'?", "Probeer het hardop: 'wij lopend naar school'. Klinkt dat goed?"],
         uitlegPad: {
           stappen: [
             {
@@ -364,7 +364,7 @@ const steps = [
         q: "Welk woord is een werkwoord? Tip: zet er **'ik'** voor.",
         options: ["zwemmen", "zwembad", "nat", "snel"],
         answer: 0,
-        wrongHints: [null, "Kun je zeggen 'ik zwembad'?", null, null],
+        wrongHints: [null, "Kun je zeggen 'ik zwembad'?", "Kun je zeggen 'ik nat'?", "Kun je zeggen 'ik snel'?"],
         uitlegPad: {
           stappen: [
             {
@@ -407,7 +407,7 @@ const steps = [
           "Ik ga naar huis lopen.",
         ],
         answer: 0,
-        wrongHints: [null, "Gebeurt dit nu?", null, null],
+        wrongHints: [null, "Gebeurt dit nu?", "Is dit al gebeurd, of gaat het nog gebeuren?", "Is dit al gebeurd, of gaat het nog gebeuren?"],
         uitlegPad: {
           stappen: [
             {
@@ -445,7 +445,7 @@ const steps = [
         q: "*'Wij hebben hard gewerkt.'* — welk woord is het **hoofdwerkwoord**?",
         options: ["gewerkt", "hebben", "hard", "Wij"],
         answer: 0,
-        wrongHints: [null, "Dit werkwoord helpt alleen. Wat hebben ze eigenlijk gedaan?", null, null],
+        wrongHints: [null, "Dit werkwoord helpt alleen. Wat hebben ze eigenlijk gedaan?", "'Hard' zegt hoe ze werkten. Is dat een werkwoord?", "'Wij' zijn de mensen. Welk woord zegt wat ze deden?"],
         uitlegPad: {
           stappen: [
             {
@@ -490,7 +490,7 @@ const steps = [
         q: "Welk woord is een **bijvoeglijk naamwoord**?",
         options: ["snel","auto","rijden","de"],
         answer: 0,
-        wrongHints: [null,"Zelfst. naamwoord.","Werkwoord.","Lidwoord."],
+        wrongHints: [null,"Een auto is een ding. Zegt 'auto' iets over hoe iets is?","Rijden is iets wat je doet. Zegt het hoe iets is?","'De' is een klein woordje dat vóór een ding staat."],
         uitlegPad: {
           stappen: [{ titel: "Beschrijft eigenschap", tekst: "Snel = eigenschap (hoe is iets?). 'De snelle auto' ✓ → bijvoeglijk." }],
           woorden: [{ woord: "bijvoeglijk naamwoord", uitleg: "Beschrijft eigenschap van zelfst nw. Mooi, snel, groot, blauw." }],
@@ -504,7 +504,7 @@ const steps = [
         q: "*'De **slimme** **leerling** maakte de **toets**.'* — welk woord is een bijvoeglijk naamwoord?",
         options: ["slimme","leerling","toets","maakte"],
         answer: 0,
-        wrongHints: [null,"Zelfst. naamwoord.","Zelfst. naamwoord.","Werkwoord."],
+        wrongHints: [null,"Leerling is een persoon. Welk woord zegt hoe de leerling is?","Toets is een ding. Welk woord zegt iets over hoe iemand is?","'Maakte' zegt wat de leerling deed."],
         uitlegPad: {
           stappen: [{ titel: "Hoe is leerling?", tekst: "Slimme beschrijft de leerling = bijvoeglijk." }],
           woorden: [{ woord: "slimme", uitleg: "Bijvoeglijk naamwoord met -e (verbogen vorm voor 'de')." }],
@@ -623,7 +623,7 @@ const steps = [
         q: "Welk woord past op de lege plek: *'de ___ fiets'*?",
         options: ["rode", "rijden", "zadel", "snelheid"],
         answer: 0,
-        wrongHints: [null, "Beschrijft dit woord hoe de fiets eruitziet?", null, null],
+        wrongHints: [null, "Beschrijft dit woord hoe de fiets eruitziet?", "Past het: 'de zadel fiets'? Zoek een woord dat zegt hoe de fiets is.", "Past het: 'de snelheid fiets'? Zoek een woord dat zegt hoe de fiets is."],
         uitlegPad: {
           stappen: [
             {
@@ -668,7 +668,7 @@ const steps = [
         q: "Welk woord is een **lidwoord**?",
         options: ["het","mij","mijn","wie"],
         answer: 0,
-        wrongHints: [null,"Persoonlijk voornaamwoord.","Bezittelijk voornaamwoord.","Vragend voornaamwoord."],
+        wrongHints: [null,"'Mij' staat in de plaats van een persoon. Staat het vóór een zelfstandig naamwoord?","'Mijn' zegt van wie iets is. Staat zo'n woord op het lijstje van de lidwoorden?","'Wie' is een vraagwoord. Staat zo'n woord op het lijstje van de lidwoorden?"],
         uitlegPad: {
           stappen: [{ titel: "3 lidwoorden", tekst: "Lidwoorden NL: de, het, een. Alleen deze 3." }],
           woorden: [{ woord: "lidwoord", uitleg: "Klein woordje vóór zelfst nw: de, het, een." }],
@@ -725,7 +725,7 @@ const steps = [
         q: "*'Tom heeft honger. ___ eet een appel.'* — welk voornaamwoord past op de lege plek?",
         options: ["Hij", "Zij", "Wij", "Het"],
         answer: 0,
-        wrongHints: [null, "Gaat het over een jongen of over een meisje?", null, null],
+        wrongHints: [null, "Gaat het over een jongen of over een meisje?", "Tom is één jongen. Past 'wij' dan?", "Tom is een jongen, geen ding. Past 'het'?"],
         uitlegPad: {
           stappen: [
             {
@@ -768,7 +768,7 @@ const steps = [
           "lidwoord",
         ],
         answer: 0,
-        wrongHints: [null, "Wijs je hier iets aan, of stel je een vraag?", null, null],
+        wrongHints: [null, "Wijs je hier iets aan, of stel je een vraag?", "'Ik', 'jij' en 'hij' zijn persoonlijk. Staat 'welke' in de plaats van een persoon?", "De lidwoorden zijn de, het en een. Hoort 'welke' daarbij?"],
         uitlegPad: {
           stappen: [
             {
@@ -813,7 +813,7 @@ const steps = [
         q: "*'De rode auto rijdt snel.'* — welk woord is een **werkwoord**?",
         options: ["rijdt","auto","rode","snel"],
         answer: 0,
-        wrongHints: [null, "Zelfst. naamwoord.", "Bijvoeglijk naamwoord.", "Bijwoord — zegt hoe iets gebeurt."],
+        wrongHints: [null, "De auto is het ding. Welk woord zegt wat de auto doet?", "'Rode' zegt hoe de auto eruitziet.", "'Snel' zegt hoe de auto rijdt. Welk woord is het rijden zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Wat doet de auto?", tekst: "Auto rijdt = doe-actie. Rijdt = werkwoord (vervoegd: hij rijdt)." }],
           woorden: [{ woord: "rijdt", uitleg: "3e persoon van 'rijden'. Werkwoord." }],
@@ -827,7 +827,7 @@ const steps = [
         q: "*'Mijn lieve hond Buddy is groot.'* — welk woord is een **eigennaam**?",
         options: ["Buddy","hond","Mijn","groot"],
         answer: 0,
-        wrongHints: [null,"Soort dier — geen specifieke naam.","Bezittelijk voornaamwoord.","Bijvoeglijk."],
+        wrongHints: [null,"Soort dier — geen specifieke naam.","'Mijn' zegt van wie de hond is. Is dat een naam?","'Groot' zegt hoe de hond is. Is dat een naam?"],
         uitlegPad: {
           stappen: [{ titel: "Hoofdletter = eigennaam", tekst: "Buddy = specifieke naam (hoofdletter). Eigennaam." }],
           woorden: [{ woord: "eigennaam", uitleg: "Specifieke naam van persoon, dier of plaats. Altijd hoofdletter." }],
@@ -869,7 +869,7 @@ const steps = [
         q: "Welke is een **persoonlijk voornaamwoord**?",
         options: ["zij","de","mijn","welke"],
         answer: 0,
-        wrongHints: [null,"Lidwoord.","Bezittelijk voornaamwoord.","Vragend voornaamwoord."],
+        wrongHints: [null,"'De' staat vóór een zelfstandig naamwoord. Staat het in de plaats van een persoon?","'Mijn' zegt van wie iets is.","'Welke' is een vraagwoord."],
         uitlegPad: {
           stappen: [{ titel: "Persoonlijke vnw", tekst: "Persoonlijk: ik, jij, hij, zij, wij, jullie, zij. 'Zij' is er één." }],
           woorden: [{ woord: "persoonlijk vnw", uitleg: "Verwijzen naar personen: ik/jij/hij/zij/wij/jullie/zij." }],
@@ -883,7 +883,7 @@ const steps = [
         q: "*'Wij hebben **een** mooi huis gekocht.'* — welk woord is het lidwoord?",
         options: ["een","Wij","mooi","huis"],
         answer: 0,
-        wrongHints: [null,"Persoonlijk voornaamwoord.","Bijvoeglijk.","Zelfst. naamwoord."],
+        wrongHints: [null,"'Wij' zijn de mensen die kopen. Is dat een klein woordje vóór een ding?","'Mooi' zegt hoe het huis is.","Huis is het ding zelf. Welk klein woordje staat ervoor?"],
         uitlegPad: {
           stappen: [{ titel: "Een = lidwoord", tekst: "Een = onbepaald lidwoord (vóór de- én het-woorden)." }],
           woorden: [{ woord: "een", uitleg: "Onbepaald lidwoord = niet specifiek. 'Een huis' = elk willekeurig huis." }],
@@ -897,18 +897,18 @@ const steps = [
       { q: "*'Jij **loopt** naar school.'* — Welke woordsoort is 'loopt'?", options: ["Werkwoord","Zelfstandig naamwoord","Bijvoeglijk naamwoord","Voornaamwoord"], answer: 0, wrongHints: [null, "Is 'loopt' een ding, dier of persoon?", "Zegt 'loopt' hoe iets eruitziet?", "Staat 'loopt' in de plaats van een naam, zoals 'jij'?"] },
       { q: "*'**Hij** is mijn vriend.'* — Welke woordsoort is 'hij'?", options: ["Persoonlijk voornaamwoord", "Zelfstandig naamwoord", "Bijvoeglijk naamwoord", "Bezittelijk voornaamwoord"], answer: 0, wrongHints: [null, "Kun je 'de' of 'het' voor 'hij' zetten?", "Zegt 'hij' hoe iets is?", "Zegt 'hij' van wie iets is?"] },
       { q: "*'**Mijn** boek ligt hier.'* — Welke woordsoort is 'mijn'?", options: ["Bezittelijk voornaamwoord", "Aanwijzend voornaamwoord", "Bijvoeglijk naamwoord", "Persoonlijk voornaamwoord"], answer: 0, wrongHints: [null, "Wijst 'mijn' iets aan, zoals 'deze' of 'die'?", "Zegt 'mijn' hoe het boek eruitziet?", "'Ik' en 'hij' zijn persoonlijk. Wat doet 'mijn' bij 'boek'?"] },
-      { q: "Welke 3 **lidwoorden** zijn er in het Nederlands?", options: ["de, het, een","de, een, hij","een, het, jij","de, dit, dat"], answer: 0, wrongHints: [null, "Hij is voornaamwoord.", "Jij is voornaamwoord.", "Dit/dat zijn aanwijzend vnw."] },
+      { q: "Welke 3 **lidwoorden** zijn er in het Nederlands?", options: ["de, het, een","de, een, hij","een, het, jij","de, dit, dat"], answer: 0, wrongHints: [null, "'Hij' staat in de plaats van een persoon. Is het een lidwoord?", "'Jij' staat in de plaats van een persoon. Is het een lidwoord?", "'Dit' en 'dat' wijzen iets aan. Zijn het lidwoorden?"] },
       { q: "*'**De** hond rent.'* — Welke woordsoort is 'de'?", options: ["Lidwoord","Zelfstandig naamwoord","Werkwoord","Voornaamwoord"], answer: 0, wrongHints: [null, "'Hond' is het dier. Is 'de' ook een ding, dier of persoon?", "'Rent' zegt wat de hond doet. Doet 'de' dat ook?", "Staat 'de' in de plaats van een naam, zoals 'hij'?"] },
       { q: "*'Op de **tafel**.'* — Welke woordsoort is 'tafel'?", options: ["Zelfstandig naamwoord","Werkwoord","Bijvoeglijk naamwoord","Persoonlijk voornaamwoord"], answer: 0, wrongHints: [null, "Kun je 'ik tafel' zeggen?", "Zegt 'tafel' hoe iets eruitziet?", "Staat 'tafel' in de plaats van een naam, zoals 'hij' of 'zij'?"] },
-      { q: "Welk woord is het **voorzetsel** in: 'Ik zit op de stoel'?", options: ["op","ik","zit","de"], answer: 0, wrongHints: [null, "Voornaamwoord.", "Werkwoord.", "Lidwoord."] },
+      { q: "Welk woord is het **voorzetsel** in: 'Ik zit op de stoel'?", options: ["op","ik","zit","de"], answer: 0, wrongHints: [null, "'Ik' is degene die zit. Welk woord zegt wáár?", "'Zit' is wat ik doe. Welk woord zegt wáár?", "'De' is het kleine woordje vóór 'stoel'. Welk woord zegt wáár ik zit?"] },
       { q: "*'Hij rent **snel**.'* Welke woordsoort is 'snel'?", options: ["Bijwoord","Bijvoeglijk naamwoord","Werkwoord","Zelfstandig naamwoord"], answer: 0, wrongHints: [null, "Een bijvoeglijk naamwoord hoort bij een ding, zoals 'de snelle auto'. Waar hoort 'snel' hier bij?", "Welk woord zegt wat hij doet? Is dat 'snel'?", "Is 'snel' een ding, dier of persoon?"] },
       { q: "Wat is een **persoonlijk voornaamwoord**?", options: ["Woord dat een persoon vervangt, zoals ik of hij","Woord dat zegt van wie iets is, zoals mijn of jouw","Woord dat een plaats aangeeft, zoals op of onder","Woord dat iets over een werkwoord zegt, zoals snel of vaak"], answer: 0, wrongHints: [null, "Dat is een bezittelijk voornaamwoord.", "Dat is een voorzetsel.", "Dat is een bijwoord."] },
       { q: "*'Wij gaan **morgen** zwemmen.'* Wat is 'morgen'?", options: ["Bijwoord van tijd","Zelfstandig naamwoord","Werkwoord","Bijvoeglijk naamwoord"], answer: 0, wrongHints: [null, "'De morgen' is wel een zelfstandig naamwoord. Maar zegt 'morgen' hier wat iets is, of wannéér ze gaan?", "Kun je 'ik morgen' zeggen? Welk woord zegt wat ze gaan doen?", "Zegt 'morgen' hoe iets eruitziet, zoals 'groot' of 'rood'?"] },
       { q: "**Hoeveel** woordsoorten kent het Nederlands ongeveer?", options: ["10","2","5","15"], answer: 0, wrongHints: [null, "Denk aan de soorten die je al kent: zelfstandig naamwoord, werkwoord, lidwoord... Zijn dat er maar 2?", "Tel ze eens: naamwoorden, werkwoorden, lidwoorden, voornaamwoorden, bijwoorden, voorzetsels... Kom je dan op 5?", "Tel de soorten uit deze les eens na. Kom je er zoveel tegen?"] },
-      { q: "Welk woord is het **telwoord** in: 'Ik heb 5 boeken'?", options: ["5","ik","heb","boeken"], answer: 0, wrongHints: [null, "Voornaamwoord.", "Werkwoord.", "Zelfst. nw."] },
-      { q: "Welke woorden zijn **voegwoorden**?", options: ["en/of/maar","de/het/een","ik/jij/hij","op/in/onder"], answer: 0, wrongHints: [null, "Lidwoorden.", "Voornaamwoorden.", "Voorzetsels."] },
+      { q: "Welk woord is het **telwoord** in: 'Ik heb 5 boeken'?", options: ["5","ik","heb","boeken"], answer: 0, wrongHints: [null, "'Ik' is een persoon. Welk woord zegt hoevéél?", "'Heb' zegt wat ik doe. Welk woord zegt hoevéél?", "'Boeken' zijn de dingen. Welk woord zegt hoevéél?"] },
+      { q: "Welke woorden zijn **voegwoorden**?", options: ["en/of/maar","de/het/een","ik/jij/hij","op/in/onder"], answer: 0, wrongHints: [null, "De, het en een staan vóór een zelfstandig naamwoord. Verbinden ze twee zinnen?", "Ik, jij en hij staan in de plaats van personen.", "Op, in en onder zeggen wáár iets is."] },
       { q: "*'**Deze** pen is leuk.'* Wat is 'deze'?", options: ["Aanwijzend voornaamwoord", "Bezittelijk voornaamwoord", "Persoonlijk voornaamwoord", "Bijvoeglijk naamwoord"], answer: 0, wrongHints: [null, "Zegt 'deze' van wie de pen is?", "'Ik', 'jij', 'hij' zijn persoonlijk. Lijkt 'deze' daarop?", "Zegt 'deze' hoe de pen is?"] },
-      { q: "Welk woord is het **tussenwerpsel** in: 'Au, dat doet pijn!'?", options: ["Au","dat","doet","pijn"], answer: 0, wrongHints: [null, "Voornaamwoord.", "Werkwoord.", "Zelfst. nw."] },
+      { q: "Welk woord is het **tussenwerpsel** in: 'Au, dat doet pijn!'?", options: ["Au","dat","doet","pijn"], answer: 0, wrongHints: [null, "'Dat' wijst naar iets. Is het een kreet?", "'Doet' zegt wat er gebeurt.", "'Pijn' is wat je voelt. Welk woord roep je uit?"] },
       { q: "Wat is een **werkwoord**?", options: ["Woord dat zegt wat iemand doet of is","Woord dat een persoon of ding noemt","Woord dat een eigenschap beschrijft","Woord waarmee je een vraag stelt"], answer: 0, wrongHints: [null, "Dat is een zelfstandig naamwoord.", "Dat is een bijvoeglijk naamwoord.", "Dat is een vragend voornaamwoord."] },
       { q: "*'In de **grote** stad.'* Wat is 'grote'?", options: ["Bijvoeglijk naamwoord", "Zelfstandig naamwoord", "Aanwijzend voornaamwoord", "Persoonlijk voornaamwoord"], answer: 0, wrongHints: [null, "Is 'grote' een ding, dier of persoon?", "Wijst 'grote' iets aan, zoals 'deze' of 'die'?", "Staat 'grote' in plaats van een naam, zoals 'hij'?"] },
       { q: "Wat is een **zelfstandig naamwoord**?", options: ["Woord voor een persoon, dier of ding", "Woord voor hoe iets of iemand is", "Woord voor wat iemand doet", "Woord waarmee je een vraag stelt"], answer: 0, wrongHints: [null, "Dat is een bijvoeglijk naamwoord.", "Dat is een werkwoord.", "Dat is een vragend voornaamwoord."] },
