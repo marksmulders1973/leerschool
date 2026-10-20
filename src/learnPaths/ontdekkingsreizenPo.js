@@ -17,10 +17,10 @@ const steps = [
       "Vanaf **1450** gingen Europeanen op zoek naar onbekende werelddelen. Deze periode heet **'Tijd van Ontdekkers en Hervormers'** *(Tijdvak 5, 1500-1600)*.\n\n**Waarom?**\n\n**1. Specerijen** 🌶️\n• Peper, kaneel, kruidnagel, nootmuskaat = duur in Europa.\n• Kwamen uit **Azië** *(India, Indonesië)*.\n• Maar de **landroute** *(Zijderoute)* werd geblokkeerd door Turken na val Constantinopel *(1453)*.\n• Oplossing: zoek **zeeroute naar Azië**.\n\n**2. Goud + rijkdom** 💰\n• Hoop op nieuwe schatten.\n• Goud + zilver uit verre landen.\n\n**3. Kennis** 📚\n• Wetenschappelijke nieuwsgierigheid.\n• In **Renaissance** *(herontdekking oude kennis)* nieuwe interesse in wereld.\n\n**4. Religie** ✝️\n• Christendom verspreiden *('heidenen' bekeren)*.\n• Vooral katholieke Spanjaarden + Portugezen.\n\n**5. Concurrentie** 🇪🇺\n• Spanje, Portugal, Engeland, Nederland — allemaal wilden eerst zijn.\n\n**Wat hadden ze nodig?**\n\n**Schepen** ⛵:\n• **Karveel** *(Portugees)*: snel, klein, ~25 m.\n• **Galjoen**: groter, voor handel + oorlog.\n• Later: Nederlandse **fluitschip** + **VOC-schip**.\n\n**Navigatie** 🧭:\n• **Kompas** *(uit China, vanaf 12e eeuw in Europa)* — wijst noord.\n• **Astrolabium** *(Arabisch)*: bepaalt breedtegraad met sterren/zon.\n• **Logboek** + dagboek.\n• **Kaarten** *(verbeterd door Mercator, Vlaams, 1569)*.\n• Sterren *(Poolster = noord)*.\n\n**Bewaring eten** 🥖:\n• Gezouten vlees + vis *(houdbaar)*.\n• Scheepsbeschuit *(hard, droog brood)*.\n• Bier ipv water *(blijft langer goed)*.\n• Maar — **scheurbuik** door tekort vitamine C → veel doden.\n• Later: limoen / zuurkool tegen scheurbuik.\n\n**Gevaren**:\n• Stormen + schipbreuk.\n• Tekort water + eten.\n• Scheurbuik.\n• Aanvallen door piraten of vijanden.\n• Onbekende ziektes *(malaria)*.\n• Op veel reizen kwam een **groot deel van de bemanning niet thuis**.\n\n**Toets-feitje**:\n**Portugal** en **Spanje** waren de eerste landen — daarom spreekt men in Zuid-Amerika vooral Spaans of Portugees. **Verdrag van Tordesillas** *(1494, tussen Spanje en Portugal, met steun van de paus)* verdeelde de niet-Europese wereld tussen beide: Spanje krijgt west, Portugal krijgt oost. Brazilië = Portugees, rest van Zuid-Amerika = Spaans.",
     checks: [
       {
-        q: "Waarom wilden Europeanen naar **Azië**?",
-        options: ["Specerijen + goud + handel", "Toerisme", "Om er als boer te gaan wonen", "Om oorlog te voeren met China"],
+        q: "Waarom wilden Europeanen naar **Azië** varen?",
+        options: ["Specerijen + goud + handel", "Om nieuwe talen te leren", "Om er als boer te gaan wonen", "Om oorlog te voeren met China"],
         answer: 0,
-        wrongHints: [null, "Bestond nog niet.", "Handel was het hoofdmotief.", "Niet."],
+        wrongHints: [null, "Talen leren kun je niet maandenlang op zee. Waarom gaven koningen zoveel geld uit aan zo'n reis?", "Boeren hadden grond genoeg in Europa. Wat was er in Azië dat Europa níét had?", "Ze wilden geen oorlog met China; ze wilden iets kópen. Wat?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat waren specerijen?", tekst: "**Specerijen** zoals peper, kruidnagel, kaneel, nootmuskaat kwamen uit Azië (vooral Indonesië). In 1500 waren ze ENORM duur in Europa — voor smaak én om voedsel langer te bewaren (vóór koelkasten)." },
@@ -73,7 +73,7 @@ const steps = [
         q: "In welk jaar kwam **Columbus** in Amerika?",
         options: ["1492", "1500", "1300", "1700"],
         answer: 0,
-        wrongHints: [null, "Iets later.", "Te vroeg.", "Te laat."],
+        wrongHints: [null, "In 1500 had Columbus zijn beroemde reis al gemaakt. Welk jaartal staat in de uitleg?", "In 1300 waren er nog geen ontdekkingsreizen. Die begonnen pas na 1450.", "In 1700 bestond de VOC al bijna 100 jaar. Columbus was veel eerder."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Columbus?", tekst: "**Christoffel Columbus** (1451-1506) was een Italiaanse zeevaarder in Spaanse dienst. Hij wilde naar Azië varen via het WESTEN — dacht dat dit korter was." },
@@ -101,19 +101,19 @@ const steps = [
         q: "Wie ging **rond Afrika naar India**?",
         options: ["Vasco da Gama", "Columbus", "Magellan", "Cook"],
         answer: 0,
-        wrongHints: [null, "Westwaarts.", "Rond aarde.", "Australië."],
+        wrongHints: [null, "Columbus voer naar het wésten en kwam in Amerika uit.", "Magellan wilde helemaal rond de aarde zeilen.", "Cook voer 250 jaar later naar Australië."],
       },
       {
         q: "Wie zeilde als **eerste rond de aarde**?",
         options: ["Magellan-expeditie", "Columbus-expeditie", "Cabot-expeditie", "Dias-expeditie"],
         answer: 0,
-        wrongHints: [null, "Niet rond.", "Niet rond.", "Niet."],
+        wrongHints: [null, "Columbus kwam in Amerika en voer weer terug — niet rond.", "Cabot voer naar Newfoundland (Canada) en terug.", "Dias ging als eerste om Kaap de Goede Hoop, maar keerde daarna om."],
       },
       {
         q: "Wanneer werd de **slavernij in NL afgeschaft**?",
         options: ["1863", "1700", "1492", "2022"],
         answer: 0,
-        wrongHints: [null, "Veel later.", "Begon kort daarna.", "Excuses, geen afschaffing."],
+        wrongHints: [null, "In 1700 was de slavenhandel juist in volle gang.", "1492 is het jaar van Columbus — daarna begón de slavernij in Amerika pas.", "In 2022 bood de premier excuses aan — dat is geen afschaffing."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is slavernij?", tekst: "**Slavernij** = mensen worden GEDWONGEN gehouden als 'eigendom' en moeten zonder loon werken. Mocht je niet gewoon stoppen. Werd vooral toegepast op Afrikanen in koloniën." },
@@ -148,13 +148,13 @@ const steps = [
         q: "Wanneer werd de **VOC** opgericht?",
         options: ["1602", "1492", "1700", "1800"],
         answer: 0,
-        wrongHints: [null, "Columbus.", "Te laat.", "Toen bestond de VOC al niet meer."],
+        wrongHints: [null, "1492 is het jaar van Columbus — Nederland deed toen nog niet mee aan de ontdekkingsreizen.", "In 1700 bestond de VOC al bijna 100 jaar.", "In 1800 was de VOC net failliet (1799)."],
       },
       {
         q: "Welke Europeaan ontdekte **Nieuw-Zeeland**?",
         options: ["Abel Tasman", "Columbus", "Magellan", "Cook"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Later — herontdekt."],
+        wrongHints: [null, "Columbus voer naar het Caribisch gebied, de andere kant van de wereld.", "Magellan stierf in 1521 op de Filipijnen, lang voordat Nieuw-Zeeland werd gevonden.", "Cook bracht Nieuw-Zeeland in 1769 in kaart — maar iemand anders was er in 1642 al."],
       },
       {
         q: "Wat werd **Nieuw-Amsterdam**?",
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Boston is door Engelsen gesticht, geen NL-koloniestad.", "Washington is later gesticht (1791) als hoofdstad.", "Chicago ligt midden in het binnenland."],
       },
       {
-        q: "**Paaseiland** ontdekt door?",
+        q: "Wie ontdekte **Paaseiland**?",
         options: ["Jacob Roggeveen", "Tasman", "Hudson", "Columbus"],
         answer: 0,
         wrongHints: [null, "Tasman ontdekte Tasmanië en Nieuw-Zeeland.", "Hudson voer in Noord-Amerika.", "Columbus was 1492, in het Caribisch gebied."],
@@ -174,12 +174,12 @@ const steps = [
     title: "Eind-toets — ontdekkingsreizen mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "In welk jaar kwam **Columbus** in Amerika?", options: ["1492", "1500", "1300", "1700"], answer: 0, wrongHints: [null, "Iets later.", "Te vroeg.", "Te laat."] },
-      { q: "Wie zeilde als **eerste rond de aarde**?", options: ["Magellan-expeditie", "Columbus-expeditie", "Cook-expeditie", "Hudson-expeditie"], answer: 0, wrongHints: [null, "Niet.", "Veel later.", "Niet."] },
-      { q: "**VOC** stond voor?", options: ["Verenigde Oostindische Compagnie", "Vereniging Oude Cargo", "Veiligheidsdienst", "Verbond van Oude Christenen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "In welk jaar kwam **Columbus** in Amerika?", options: ["1492", "1500", "1300", "1700"], answer: 0, wrongHints: [null, "In 1500 had Columbus zijn beroemde reis al gemaakt. Welk jaartal staat in de uitleg?", "In 1300 waren er nog geen ontdekkingsreizen. Die begonnen pas na 1450.", "In 1700 bestond de VOC al bijna 100 jaar. Columbus was veel eerder."] },
+      { q: "Wie zeilde als **eerste rond de aarde**?", options: ["Magellan-expeditie", "Columbus-expeditie", "Cook-expeditie", "Hudson-expeditie"], answer: 0, wrongHints: [null, "Columbus voer heen en weer naar Amerika, niet rond de aarde.", "Cook leefde 250 jaar later.", "Hudson zocht een route in het noorden en kwam om in Canada."] },
+      { q: "Waar staan de letters **VOC** voor?", options: ["Verenigde Oostindische Compagnie", "Vereniging Oost-China", "Verbond van Oceaan-Commandanten", "Vereniging van Oude Christenen"], answer: 0, wrongHints: [null, "China was niet het hoofddoel: denk aan Indonesië (Oost-Indië). En een 'vereniging' is geen handelsbedrijf.", "Het was geen leger, maar een handelsbedrijf. Waar staat de C voor?", "Met het geloof had de VOC weinig te maken: het ging om handel."] },
       { q: "Wat ontdekte **Abel Tasman**?", options: ["Nieuw-Zeeland + Tasmanië", "Amerika + de Cariben", "Zuid-Afrika + India", "Nova Zembla + Spitsbergen"], answer: 0, wrongHints: [null, "Dat was Columbus.", "Dat was de route van Vasco da Gama.", "Dat was Barentsz."] },
       { q: "**Verdrag van Tordesillas** deed wat?", options: ["Spanje en Portugal verdeelden de nieuw ontdekte landen (1494)", "Het maakte een einde aan de Tachtigjarige Oorlog (1648)", "Het verbood de slavenhandel in alle koloniën (1814)", "Het gaf Nederland een eigen handelscompagnie (1602)"], answer: 0, wrongHints: [null, "Dat was de Vrede van Münster.", "Tordesillas is veel ouder — het ging over pas ontdekte landen.", "In 1602 werd de VOC opgericht; dat was geen verdrag tussen landen."] },
-      { q: "**Slavernij in NL** afgeschaft?", options: ["1863", "1492", "2024", "Nooit"], answer: 0, wrongHints: [null, "Te vroeg.", "Veel te laat — de afschaffing was al in de 19e eeuw.", "Wel afgeschaft."] },
+      { q: "In welk jaar werd de **slavernij in de Nederlandse koloniën** afgeschaft?", options: ["1863", "1492", "2024", "1945"], answer: 0, wrongHints: [null, "1492 is het jaar van Columbus — toen begon het juist.", "Veel te laat — de afschaffing was al in de 19e eeuw.", "1945 is het einde van de Tweede Wereldoorlog. De slavernij was toen al ruim 80 jaar afgeschaft."] },
       {
         q: "Wat was het doel van **ontdekkingsreizen** (15e-17e eeuw)?",
         options: ["Nieuwe handelsroutes + grondstoffen vinden", "Nieuwe vakantieplekken + stranden vinden", "Zeilwedstrijden winnen + records breken", "Alleen sterren + dieren onderzoeken"],
@@ -208,9 +208,9 @@ const steps = [
       },
       {
         q: "Wat was de **rol van de VOC** (Verenigde Oostindische Compagnie)?",
-        options: ["Handelsbedrijf met eigen leger en bestuur", "Sportclub met eigen schepen en zeilers", "Universiteit met eigen kapiteins en leraren", "Kerk met eigen schepen en zendelingen"],
+        options: ["Handelsbedrijf met eigen leger en bestuur", "Leger van de koning met eigen schepen", "Groep ontdekkers die kaarten maakte", "Kerk die zendelingen naar Azië stuurde"],
         answer: 0,
-        wrongHints: [null, "Geen sport. De C in VOC staat voor Compagnie — wat is dat?", "Geen onderwijs.", "Geen kerk."],
+        wrongHints: [null, "Nederland had toen geen koning, en de VOC was geen leger — al had ze wel soldaten. Waar staat de C van VOC voor?", "Kaarten maken deden ze ook, maar waarmee verdiende de VOC haar geld?", "Geloof was niet het doel. Wat haalde de VOC uit Azië?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat was de VOC?", tekst: "De **VOC** (Verenigde Oostindische Compagnie) was een **Nederlands handelsbedrijf**, opgericht **1602**.\n\n**Doel**: handel in Azië (vooral huidig Indonesië) — specerijen kopen + verkopen in Europa. Maar VOC kreeg ook **politieke macht**:\n• Mocht **forten** bouwen\n• Mocht **oorlogen voeren**\n• Mocht **verdragen sluiten** met lokale heersers\n• Mocht **eigen geld slaan** (munten)\n\n→ VOC = 's werelds **eerste multinational** + **eerste aandelenmaatschappij**." },
@@ -234,9 +234,9 @@ const steps = [
       },
       {
         q: "Welke **gevolgen** had de ontdekking van Amerika voor inheemse volkeren?",
-        options: ["Massale sterfte door Europese ziektes + onderdrukking", "Alleen positief — handel + welvaart", "Niets — Europeanen lieten hen met rust", "Inheemse volken werden rijker"],
+        options: ["Massale sterfte en onderdrukking", "Alleen voordeel: handel en welvaart", "Niets: ze werden met rust gelaten", "Ze werden rijker door het goud"],
         answer: 0,
-        wrongHints: [null, "Niet — historische feiten zijn duidelijk donkerder.", "Niet — Europeanen vestigden kolonies en maakten mensen tot slaaf.", "Niet — meeste werden armer of dood."],
+        wrongHints: [null, "Denk aan wat de Spanjaarden kwamen halen. Was dat goed nieuws voor de mensen die er al woonden?", "Lees bij 'Wat gebeurde verder?' — werden ze met rust gelaten?", "Het goud ging naar Spanje. Wat bleef er over voor de inheemse volken?"],
         uitlegPad: {
           stappen: [
             { titel: "Het tragische verhaal", tekst: "Toen Europeanen in **1492** aankwamen in Amerika, woonden er al **~60-100 miljoen inheemse mensen** (Azteken, Maya's, Inka's, en veel kleine stammen).\n\nBinnen **150 jaar** waren er nog ~**6-10 miljoen** over. **80-90%** stierf. Belangrijkste oorzaken:" },
@@ -258,25 +258,25 @@ const steps = [
           niveaus: { basis: "Massale sterfte.", simpeler: "~90% van inheemse Amerikanen stierf in 150 jaar na Columbus. Vooral door Europese ziektes (pokken) + geweld + dwangarbeid. Beschavingen verloren.", nogSimpeler: "Massa-sterfte" },
         },
       },
-      { q: "In welk jaar **ontdekte Columbus Amerika**?", options: ["1492","1066","1776","1900"], answer: 0, wrongHints: [null, "Slag bij Hastings.", "Onafhankelijkheid VS.", "Te recent."] },
-      { q: "Wat is de **VOC**?", options: ["Verenigde Oost-Indische Compagnie", "Vereniging van Oude Cartografen", "Verbond van Oranje-Commandanten", "Vrije Oceaan-Compagnie"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Welke Nederlander ontdekte **Tasmanië**?", options: ["Abel Tasman","Columbus","Magellan","Barentsz"], answer: 0, wrongHints: [null, "Niet — Amerika.", "Wereldreis maar niet Tasmanië-eerst.", "Nova Zembla."] },
+      { q: "In welk jaar **ontdekte Columbus Amerika**?", options: ["1492","1066","1776","1900"], answer: 0, wrongHints: [null, "1066 is de Slag bij Hastings — Middeleeuwen, lang vóór de ontdekkingsreizen.", "1776 is de onafhankelijkheid van de VS — toen woonden er al lang Europeanen in Amerika.", "In 1900 waren er al stoomschepen. Columbus voer met zeilschepen."] },
+      { q: "Wat is de **VOC**?", options: ["Verenigde Oost-Indische Compagnie", "Vereniging van Oude Cartografen", "Verbond van Oranje-Commandanten", "Vrije Oceaan-Compagnie"], answer: 0, wrongHints: [null, "Cartografen maken kaarten. De VOC was een handelsbedrijf.", "Oranje-commandanten? De VOC was geen leger van de prins.", "Bijna — het was wel een compagnie, maar niet 'vrij' en niet van de oceaan. Naar welk werelddeel voer de VOC?"] },
+      { q: "Welke Nederlander ontdekte **Tasmanië**?", options: ["Abel Tasman","Columbus","Magellan","Barentsz"], answer: 0, wrongHints: [null, "Columbus voer naar Amerika, en hij was geen Nederlander.", "Magellan voer rond de wereld, maar kwam niet bij Australië.", "Barentsz zocht het hoge noorden (Nova Zembla)."] },
       { q: "Welke Amerikaanse stad heette eerst **Nieuw-Amsterdam**?", options: ["New York","Boston","Chicago","Philadelphia"], answer: 0, wrongHints: [null, "Boston is Engelse stichting.", "Chicago ligt diep in het binnenland.", "Philadelphia is later gesticht door Quakers."] },
-      { q: "Wie maakte de **eerste wereldreis** (1519-1522)?", options: ["Magellan's expeditie","Columbus","Vasco da Gama","Tasman"], answer: 0, wrongHints: [null, "Atlantische.", "India.", "Tasmanië."] },
-      { q: "**Vasco da Gama** bereikte als eerste?", options: ["India via zee","Amerika","Australië","Japan"], answer: 0, wrongHints: [null, "Columbus.", "Veel later.", "Te ver — zijn doel lag dichterbij."] },
-      { q: "Welke Spanjaard veroverde **Aztekenrijk** (Mexico)?", options: ["Cortés","Pizarro","Columbus","Magellan"], answer: 0, wrongHints: [null, "Inca's.", "Bahamas.", "Wereldreis."] },
-      { q: "Welke Spanjaard veroverde **Inca-rijk** (Peru)?", options: ["Pizarro","Cortés","Columbus","Magellan"], answer: 0, wrongHints: [null, "Azteken.", "Bahamas.", "Niet."] },
-      { q: "Wat is de **WIC**?", options: ["West-Indische Compagnie","Wereld-Import-Centrale","Westerse Indianen-Club","Waterschap In Curaçao"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Welk eiland in het Caribisch gebied hoort bij het Koninkrijk der Nederlanden?", options: ["Curaçao / Aruba","Hawaii","Sicilië","Cuba"], answer: 0, wrongHints: [null, "Niet.", "Italiaans.", "Een onafhankelijk land."] },
-      { q: "Welke nationaliteit had **Henry Hudson**?", options: ["Engels","Frans","Spaans","Portugees"], answer: 0, wrongHints: [null, "Geen Franse achternaam.", "Niet — Spaanse ontdekkers waren bv. Columbus.", "Niet — Portugezen waren bv. Vasco da Gama."] },
-      { q: "**Willem Barentsz** zocht naar?", options: ["Noordelijke route naar Azië", "Westelijke route naar Amerika", "Zuidelijke route naar Australië", "Oostelijke route rond Afrika"], answer: 0, wrongHints: [null, "Andere richting.", "Waar ligt Nova Zembla, waar hij overwinterde?", "De route om Afrika heen bestond al. Barentsz zocht een nieuwe."] },
+      { q: "Wie maakte de **eerste reis rond de wereld** (1519-1522)?", options: ["Magellans expeditie","Columbus","Vasco da Gama","Tasman"], answer: 0, wrongHints: [null, "Columbus stak alleen de Atlantische Oceaan over, heen en terug.", "Vasco da Gama voer naar India en weer terug.", "Tasman leefde 100 jaar later en voer voor de VOC."] },
+      { q: "Welk land bereikte **Vasco da Gama** als eerste Europeaan over zee?", options: ["India","Amerika","Australië","Japan"], answer: 0, wrongHints: [null, "Amerika was Columbus, naar het westen. Da Gama voer om Afrika heen — waarheen?", "Australië werd pas ruim 100 jaar later bereikt.", "Japan ligt nog veel verder dan het land waar hij specerijen wilde halen."] },
+      { q: "Welke Spanjaard veroverde **Aztekenrijk** (Mexico)?", options: ["Cortés","Pizarro","Columbus","Magellan"], answer: 0, wrongHints: [null, "Pizarro versloeg een ander rijk, in Peru.", "Columbus kwam op de Bahama's en veroverde geen rijk.", "Magellan voer rond de wereld en was geen veroveraar."] },
+      { q: "Welke Spanjaard veroverde **Inca-rijk** (Peru)?", options: ["Pizarro","Cortés","Columbus","Magellan"], answer: 0, wrongHints: [null, "Cortés versloeg de Azteken in Mexico.", "Columbus kwam op de Bahama's en veroverde geen rijk.", "Magellan voer rond de wereld; hij was Portugees en geen veroveraar."] },
+      { q: "Waar staan de letters **WIC** voor?", options: ["West-Indische Compagnie","Wereld-Import-Centrale","Westerse Inkoop-Centrale","Waterschap In Curaçao"], answer: 0, wrongHints: [null, "Een import-centrale? De WIC was een handelscompagnie, net als de VOC — maar voor welk werelddeel?", "Inkoop-centrale is een modern woord. Denk aan de tegenhanger van de VOC (Oost) — waar voer de WIC heen?", "Een waterschap zorgt voor dijken, niet voor handel."] },
+      { q: "Welk eiland in het Caribisch gebied hoort bij het Koninkrijk der Nederlanden?", options: ["Curaçao","Hawaii","Sicilië","Cuba"], answer: 0, wrongHints: [null, "Hawaii ligt in de Stille Oceaan en hoort bij de Verenigde Staten.", "Sicilië ligt in de Middellandse Zee en is Italiaans.", "Cuba ligt wel in het Caribisch gebied, maar is een onafhankelijk land."] },
+      { q: "Welke nationaliteit had **Henry Hudson**?", options: ["Engels","Frans","Spaans","Portugees"], answer: 0, wrongHints: [null, "Klinkt 'Hudson' als een Franse naam? Lees in de uitleg voor wie hij voer.", "Spaanse ontdekkers waren bijvoorbeeld Cortés en Pizarro.", "Portugese ontdekkers waren bijvoorbeeld Vasco da Gama en Magellan."] },
+      { q: "**Willem Barentsz** zocht naar?", options: ["Noordelijke route naar Azië", "Westelijke route naar Amerika", "Zuidelijke route naar Australië", "Oostelijke route rond Afrika"], answer: 0, wrongHints: [null, "Westwaarts naar Amerika — dat deden Columbus en Hudson. Welke kant ging Barentsz op?", "Waar ligt Nova Zembla, waar hij overwinterde?", "De route om Afrika heen bestond al. Barentsz zocht een nieuwe."] },
       { q: "**Verdrag van Tordesillas** (1494) verdeelde wat?", options: ["Wereld tussen Spanje en Portugal", "Europa tussen Nederland en België", "Wereld tussen Engeland en Frankrijk", "Afrika tussen Duitsland en Italië"], answer: 0, wrongHints: [null, "België bestond in 1494 nog niet eens.", "Engeland en Frankrijk kwamen later. Wie voeren in 1494 al ver over zee?", "Duitsland en Italië waren toen nog geen landen met grote vloten."] },
       { q: "Wat is **slavernij** in koloniale tijd?", options: ["Mensen gevangen + gedwongen werken zonder vrijheid", "Mensen die werken voor loon en vrij mogen gaan", "Mensen die vrijwillig meehelpen op een plantage", "Mensen die betaald werken als matroos op een schip"], answer: 0, wrongHints: [null, "Kregen slaafgemaakten loon en vrijheid?", "Was het vrijwillig?", "Werden ze betaald?"] },
-      { q: "**Keti Koti** is wat?", options: ["Herdenking afschaffing slavernij","Surinaams nieuwjaarsfeest","Een Surinaams gerecht","Een voetbaltoernooi"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is **Keti Koti**?", options: ["Herdenking afschaffing slavernij","Surinaams nieuwjaarsfeest","Een Surinaams gerecht","Een voetbaltoernooi"], answer: 0, wrongHints: [null, "Keti Koti valt op 1 juli, niet op 1 januari. Lees nog eens wat er op 1 juli 1863 gebeurde.", "Keti Koti kun je niet eten. De naam betekent 'ketenen gebroken' — waar herinnert dat aan?", "Geen sport. Denk aan de betekenis van de naam: 'ketenen gebroken'."] },
       { q: "Welke producten bracht de **VOC** mee terug?", options: ["Specerijen + thee + porselein", "Aardappels + tomaten + maïs", "Bont + hout uit Noord-Amerika", "Kaas + haring + wol uit Holland"], answer: 0, wrongHints: [null, "Die kwamen uit Amerika.", "Noord-Amerika was niet het werkgebied van de VOC. Waar voer de VOC heen?", "Dat kwam juist uit Nederland zelf. Wat haalde de VOC uit het Oosten?"] },
-      { q: "Wat is de **gouden eeuw** voor NL?", options: ["17e eeuw","20e eeuw","Middeleeuwen","19e eeuw"], answer: 0, wrongHints: [null, "Te recent.", "Te vroeg.", "Te laat."] },
-      { q: "Welke **dodelijke** ziekte verspreidden Europeanen in Amerika?", options: ["Pokken","Verkoudheid","Hooikoorts","Suikerziekte"], answer: 0, wrongHints: [null, "Niet dodelijk.", "Niet besmettelijk.", "Niet besmettelijk."] },
-      { q: "Wat is een **compagnie** (zoals VOC)?", options: ["Handelsorganisatie","Politieke partij","Soort schip","Leger van de koning"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke eeuw noemen we de **Gouden Eeuw** van Nederland?", options: ["17e eeuw","20e eeuw","Middeleeuwen","19e eeuw"], answer: 0, wrongHints: [null, "In de 20e eeuw waren er twee wereldoorlogen — geen Gouden Eeuw. Denk aan de tijd van de VOC.", "De Middeleeuwen zijn vóór de ontdekkingsreizen. De Gouden Eeuw kwam daarna, met de VOC.", "In de 19e eeuw was de VOC al failliet. Wanneer bloeide de handel?"] },
+      { q: "Welke **dodelijke ziekte** brachten Europeanen naar Amerika?", options: ["Pokken","Verkoudheid","Hooikoorts","Suikerziekte"], answer: 0, wrongHints: [null, "Aan een verkoudheid ga je niet dood. Welke ziekte uit de uitleg wel?", "Hooikoorts komt van pollen, niet van mensen. Kun je die meebrengen op een schip?", "Suikerziekte is niet besmettelijk."] },
+      { q: "Wat is een **compagnie** (zoals de VOC)?", options: ["Handelsorganisatie","Politieke partij","Soort schip","Leger van de koning"], answer: 0, wrongHints: [null, "Een partij wil regeren. Wat deed de VOC met specerijen?", "Een compagnie hád schepen, maar wás geen schip.", "De VOC had soldaten, maar was geen leger van een koning. Waar verdiende ze geld mee?"] },
     ],
   },
 ];
