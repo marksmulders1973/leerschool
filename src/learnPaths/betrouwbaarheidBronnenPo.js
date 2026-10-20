@@ -49,10 +49,10 @@ const steps = [
           "om te weten of die er verstand van heeft",
           "om te zien hoe lang de tekst is",
           "om de mooiste plaatjes te vinden",
-          "dat maakt niet uit",
+          "om te weten of de tekst nieuw is",
         ],
         answer: 0,
-        wrongHints: [null, "De lengte zegt niets over betrouwbaarheid.", "Plaatjes maken iets niet betrouwbaar.", "Het maakt juist veel uit wie het zegt."],
+        wrongHints: [null, "De lengte zegt niets over betrouwbaarheid.", "Plaatjes maken iets niet betrouwbaar.", "Of een tekst nieuw is, zie je aan de datum, niet aan de schrijver."],
         uitlegPad: {
           stappen: [{ titel: "Kennis van de schrijver", tekst: "Als de schrijver een deskundige is, is de informatie waarschijnlijk betrouwbaarder." }],
           niveaus: {
@@ -83,9 +83,9 @@ const steps = [
       },
       {
         q: "Een website zonder auteur en zonder bron is...",
-        options: ["minder betrouwbaar", "altijd betrouwbaar", "altijd waar", "een officiële bron"],
+        options: ["minder betrouwbaar", "altijd betrouwbaar", "net zo betrouwbaar als een museum", "een officiële bron"],
         answer: 0,
-        wrongHints: [null, "Juist niet — zonder bron weet je niet wie het zegt.", "Zonder bron kun je het niet controleren.", "Een officiële bron noemt juist wél wie erachter zit."],
+        wrongHints: [null, "Juist niet — zonder bron weet je niet wie het zegt.", "Een museum zet er juist bij wie het zegt. Doet deze website dat?", "Een officiële bron noemt juist wél wie erachter zit."],
         uitlegPad: {
           stappen: [{ titel: "Geen bron = voorzichtig", tekst: "Zonder auteur of bron weet je niet wie het zegt of hoe ze het weten. Dan is het minder betrouwbaar." }],
           niveaus: {
@@ -118,12 +118,12 @@ const steps = [
         q: "Twee websites zeggen iets anders. Welke vertrouw je eerder?",
         options: [
           "de site met een auteur én bronvermelding",
-          "de site zonder auteur",
-          "de site met de meeste reclame",
+          "de site zonder naam van een schrijver",
+          "de site met de meeste reclame erop",
           "de site met de grootste letters",
         ],
         answer: 0,
-        wrongHints: [null, "Zonder auteur weet je niet wie het zegt.", "Veel reclame is juist een waarschuwing.", "Lettergrootte zegt niets over betrouwbaarheid."],
+        wrongHints: [null, "Zonder naam weet je niet wie het zegt.", "Veel reclame is juist een waarschuwing.", "Lettergrootte zegt niets over betrouwbaarheid."],
         uitlegPad: {
           stappen: [{ titel: "Auteur + bron", tekst: "Een site die laat zien wie het schreef en waar de info vandaan komt, kun je controleren — dus betrouwbaarder." }],
           niveaus: {
@@ -143,7 +143,7 @@ const steps = [
           "een grappig filmpje over dieren",
         ],
         answer: 0,
-        wrongHints: [null, "Wil deze bron je misschien vooral iets verkopen?", null, null],
+        wrongHints: [null, "Wil deze bron je misschien vooral iets verkopen?", "Zonder naam weet je niet wie het schrijft en of die er verstand van heeft.", "Een grappig filmpje wil je laten lachen, niet iets leren."],
         uitlegPad: {
           stappen: [
             {
@@ -167,7 +167,7 @@ const steps = [
           "de lengte van de tekst",
         ],
         answer: 0,
-        wrongHints: [null, "Hoe de letters eruitzien, zegt niets over of het klopt.", null, null],
+        wrongHints: [null, "Hoe de letters eruitzien, zegt niets over of het klopt.", "Plaatjes zeggen niets over of het klopt.", "Een lange tekst kan net zo goed onzin zijn."],
         uitlegPad: {
           stappen: [
             {
@@ -236,12 +236,12 @@ const steps = [
         q: "Hoe herken je dat iets reclame is?",
         options: [
           "het wil je iets laten kopen",
-          "het noemt een datum",
-          "het heeft een auteur",
-          "het geeft een bron",
+          "het noemt een datum van kort geleden",
+          "het noemt de naam van de schrijver",
+          "het geeft een lijst met bronnen",
         ],
         answer: 0,
-        wrongHints: [null, "Een datum hoort juist bij betrouwbare info.", "Een auteur maakt iets juist betrouwbaarder.", "Een bron noemen is juist een goed teken."],
+        wrongHints: [null, "Een recente datum hoort juist bij betrouwbare info.", "Een schrijver met naam maakt iets juist betrouwbaarder.", "Bronnen noemen is juist een goed teken."],
         uitlegPad: {
           stappen: [{ titel: "Doel = verkopen", tekst: "Reclame wil je iets laten kopen en prijst het product overdreven aan." }],
           niveaus: {
@@ -318,7 +318,7 @@ const steps = [
           "Ik vind Amsterdam veel te druk.",
         ],
         answer: 0,
-        wrongHints: [null, "'Leukste' is wat iemand vindt.", null, null],
+        wrongHints: [null, "'Leukste' is wat iemand vindt.", "'Allermooiste' en 'kom naar': wil deze zin je ergens toe overhalen?", "'Ik vind': is dat een feit of een mening?"],
         uitlegPad: {
           stappen: [
             {
@@ -342,7 +342,7 @@ const steps = [
           "een lijst met bronnen",
         ],
         answer: 0,
-        wrongHints: [null, "Iets wat je kunt nakijken, is een feit.", null, null],
+        wrongHints: [null, "Iets wat je kunt nakijken, is een feit.", "Een tekst die je iets wil verkopen, is reclame.", "Een lijst met bronnen hoort bij een betrouwbare tekst, maar is geen mening."],
         uitlegPad: {
           stappen: [
             {
@@ -395,10 +395,10 @@ const steps = [
           "de informatie is verouderd",
           "er is niets mis mee",
           "het is reclame",
-          "er staat een auteur bij",
+          "het is een mening",
         ],
         answer: 0,
-        wrongHints: [null, "Computers zijn sindsdien veel sneller — dus wél een probleem.", "Het is niet per se reclame.", "Een auteur is juist goed; het gaat hier om de oude datum."],
+        wrongHints: [null, "Computers zijn sindsdien veel sneller — dus wél een probleem.", "Het is niet per se reclame.", "'De snelste' kon je toen gewoon meten, dus het is geen mening. Kijk naar het jaartal."],
         uitlegPad: {
           stappen: [{ titel: "Let op de datum", tekst: "Informatie uit 1995 over computers is achterhaald: de snelste computer is allang anders. De info is verouderd." }],
           niveaus: {
@@ -450,12 +450,12 @@ const steps = [
         q: "Waarom is de datum van een artikel belangrijk?",
         options: [
           "informatie kan na verloop van tijd verouderen",
-          "langere teksten zijn altijd beter",
-          "oude teksten zijn altijd fout",
-          "de datum maakt de tekst mooier",
+          "een tekst met een datum is altijd betrouwbaar",
+          "oude teksten zijn altijd helemaal fout",
+          "zo weet je hoe lang de schrijver bezig was",
         ],
         answer: 0,
-        wrongHints: [null, "Lengte zegt niets over of het klopt.", "Oud is niet automatisch fout, maar kan wel verouderd zijn.", "Een datum is voor controle, niet voor de sier."],
+        wrongHints: [null, "Een datum alleen maakt iets niet betrouwbaar. Waar helpt de datum je wél bij?", "Oud is niet automatisch fout, maar kan wel verouderd zijn.", "De datum zegt niets over hoe lang iemand schreef. Wat zegt hij wel?"],
         uitlegPad: {
           stappen: [{ titel: "Actueel?", tekst: "Met de datum zie je of informatie nog actueel is. Sommige feiten veranderen (records, techniek, prijzen)." }],
           niveaus: {
@@ -494,7 +494,7 @@ const steps = [
           "je spreekbeurt over iets anders doen",
         ],
         answer: 0,
-        wrongHints: [null, "Kijk naar het jaartal van het boek. Is het getal nog actueel?", null, null],
+        wrongHints: [null, "Kijk naar het jaartal van het boek. Is het getal nog actueel?", "Een schatting kan er flink naast zitten. Waar vind je het echte, nieuwe getal?", "Je hoeft je onderwerp niet op te geven. Wat kun je met het getal doen?"],
         uitlegPad: {
           stappen: [
             {
@@ -518,7 +518,7 @@ const steps = [
           "hoeveel maanden een jaar heeft",
         ],
         answer: 0,
-        wrongHints: [null, null, "Verandert het aantal poten van een spin in de loop van de jaren?", null],
+        wrongHints: [null, "Verandert het aantal dagen in een week ooit?", "Verandert het aantal poten van een spin in de loop van de jaren?", "Verandert het aantal maanden in een jaar ooit?"],
         uitlegPad: {
           stappen: [
             {
@@ -542,7 +542,7 @@ const steps = [
           "de websites maken reclame",
         ],
         answer: 0,
-        wrongHints: [null, "Waarom zou je het weglaten als drie bronnen hetzelfde zeggen?", null, null],
+        wrongHints: [null, "Waarom zou je het weglaten als drie bronnen hetzelfde zeggen?", "Een bouwjaar kun je nakijken. Is het dan een mening?", "Willen deze websites je iets verkopen? Ze noemen alleen een feit."],
         uitlegPad: {
           stappen: [
             {
@@ -649,7 +649,7 @@ const steps = [
       {
         q: "Voor een spreekbeurt over gezonde tanden, welke bron is het best?",
         options: [
-          "een tandarts of het Voedingscentrum",
+          "een tandarts",
           "een snoepreclame",
           "een grappig filmpje zonder uitleg",
           "een losse mening op social media",
@@ -657,9 +657,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een snoepreclame wil verkopen.", "Een grappig filmpje leert je niets betrouwbaars.", "Een losse mening is niet per se waar."],
         uitlegPad: {
-          stappen: [{ titel: "Deskundige bron", tekst: "Een tandarts of het Voedingscentrum heeft echte kennis over gezonde tanden en wil je niets verkopen." }],
+          stappen: [{ titel: "Deskundige bron", tekst: "Een tandarts heeft echte kennis over gezonde tanden en wil je niets verkopen." }],
           niveaus: {
-            basis: "Een tandarts/Voedingscentrum is de deskundige bron.",
+            basis: "Een tandarts is de deskundige bron.",
             simpeler: "Welke bron heeft er verstand van én verkoopt niets?",
             nogSimpeler: "Wie weet het meest over tanden: een tandarts of een reclame?",
           },
@@ -713,7 +713,7 @@ const steps = [
           "een reactie onder een filmpje",
         ],
         answer: 0,
-        wrongHints: [null, "Is een verzonnen film bedoeld om feiten te geven?", null, null],
+        wrongHints: [null, "Is een verzonnen film bedoeld om feiten te geven?", "Een advertentie wil je een telescoop verkopen.", "Een reactie kan iedereen schrijven, ook iemand die er niets van weet."],
         uitlegPad: {
           stappen: [
             {
