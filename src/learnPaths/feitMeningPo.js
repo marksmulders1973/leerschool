@@ -38,7 +38,7 @@ const steps = [
       },
       {
         q: "Wat kun je met een feit doen?",
-        options: ["het controleren of nakijken", "het per persoon anders vinden", "het veranderen als je wilt", "het uit je hoofd verzinnen"],
+        options: ["het nakijken of het klopt", "het per persoon anders vinden", "het veranderen als je wilt", "het uit je hoofd verzinnen"],
         answer: 0,
         wrongHints: [null, "Verschilt een feit per persoon, of is het voor iedereen hetzelfde?", "Kun je een feit zomaar veranderen omdat jij dat wilt?", "Is iets wat je verzint ook waar voor iedereen?"],
         uitlegPad: {
@@ -126,7 +126,7 @@ const steps = [
           "Iedereen zou spinnen met rust moeten laten.",
         ],
         answer: 0,
-        wrongHints: [null, "'De engste' vindt niet iedereen.", null, "'Zou moeten' zegt wat iemand vindt."],
+        wrongHints: [null, "'De engste' vindt niet iedereen.", "'Vreselijk' — vindt iedereen dat van een spin in huis?", "'Zou moeten' zegt wat iemand vindt."],
         uitlegPad: {
           stappen: [
             {
@@ -164,7 +164,7 @@ const steps = [
         q: "Welke manier hoort **niet** bij het controleren van een feit?",
         options: ["vragen wat je vriend ervan vindt", "het opzoeken in een boek", "het meten met een liniaal", "het zelf nog eens natellen"],
         answer: 0,
-        wrongHints: [null, null, "Met meten kun je juist iets nakijken.", null],
+        wrongHints: [null, "In een boek opzoeken is juist een manier om iets na te kijken.", "Met meten kun je juist iets nakijken.", "Natellen is juist een manier om te controleren."],
         uitlegPad: {
           stappen: [
             {
@@ -196,7 +196,7 @@ const steps = [
       {
         q: "Welke zin is een mening?",
         options: [
-          "Pizza is het lekkerste eten dat er is.",
+          "Pizza is het lekkerste eten.",
           "Pizza komt oorspronkelijk uit Italië.",
           "Een pizza is rond.",
           "Op een pizza zit vaak kaas.",
@@ -307,7 +307,7 @@ const steps = [
           "Ze geven allebei een feit.",
         ],
         answer: 0,
-        wrongHints: [null, "Kun je meten of spruitjes vies zijn?", null, "Kun je opzoeken of iets heerlijk is?"],
+        wrongHints: [null, "Kun je meten of spruitjes vies zijn?", "Is 'heerlijk' iets wat je kunt nameten, of iets wat opa vindt?", "Kun je opzoeken of iets heerlijk is?"],
         uitlegPad: {
           stappen: [
             {
@@ -326,7 +326,7 @@ const steps = [
         q: "Welke zin over de dierentuin is een mening?",
         options: ["De dierentuin is het fijnste uitje.", "In een dierentuin wonen dieren.", "Een giraf heeft een lange nek.", "Een olifant heeft een slurf."],
         answer: 0,
-        wrongHints: [null, "Dat kun je zien als je er bent.", null, "Dat kun je zien en nakijken."],
+        wrongHints: [null, "Dat kun je zien als je er bent.", "Kun je dat nakijken door naar een giraf te kijken?", "Dat kun je zien en nakijken."],
         uitlegPad: {
           stappen: [
             {
@@ -350,7 +350,7 @@ const steps = [
           "Je kunt het tellen of meten.",
         ],
         answer: 0,
-        wrongHints: [null, "Wat je kunt opzoeken, is een feit.", null, null],
+        wrongHints: [null, "Wat je kunt opzoeken, is een feit.", "Als iedereen hetzelfde antwoord krijgt, is het dan nog iets wat je vindt?", "Tellen en meten — hoort dat bij een feit of bij een mening?"],
         uitlegPad: {
           stappen: [
             {
@@ -411,7 +411,7 @@ const steps = [
         q: "De woorden 'ik vind dat...' wijzen op...",
         options: ["een mening", "een feit", "een telling", "een meting"],
         answer: 0,
-        wrongHints: [null, "Een feit zeg je niet met 'ik vind'.", "Tellen levert een feit op.", "Meten levert een feit op."],
+        wrongHints: [null, "Is wat je met 'ik vind' zegt voor iedereen waar, of alleen voor jou?", "Tel je iets als je zegt 'ik vind dat...'?", "Meet je iets als je zegt 'ik vind dat...'?"],
         uitlegPad: {
           stappen: [{ titel: "'Ik vind' = jouw oordeel", tekst: "Met 'ik vind dat...' geef je je eigen oordeel — dat is altijd een mening." }],
           niveaus: {
@@ -473,7 +473,7 @@ const steps = [
         q: "Welk woord in de zin *'Die tekenfilm was echt geweldig'* verraadt een mening?",
         options: ["geweldig", "tekenfilm", "die", "was"],
         answer: 0,
-        wrongHints: [null, "'Tekenfilm' zegt alleen wat voor film het is.", null, null],
+        wrongHints: [null, "'Tekenfilm' zegt alleen wat voor film het is.", "'Die' wijst alleen aan welke film. Zegt het wat iemand vindt?", "'Was' zegt alleen dat het al gebeurd is."],
         uitlegPad: {
           stappen: [
             {
@@ -497,7 +497,7 @@ const steps = [
           "Een bibliotheekboek breng je na een tijdje terug.",
         ],
         answer: 0,
-        wrongHints: [null, "Dat kun je gewoon nakijken.", null, null],
+        wrongHints: [null, "Dat kun je gewoon nakijken.", "Kun je dat zien als je er binnenloopt?", "Dat is een regel die je kunt nakijken. Zegt het wat iemand vindt?"],
         uitlegPad: {
           stappen: [
             {
@@ -524,7 +524,7 @@ const steps = [
         wrongHints: [
           null,
           "Reken 3 kilo om naar gram. Klopt het?",
-          null,
+          "Is 3 kilo meer dan 2 kilo? Dat kun je nakijken.",
           "Kun je dit nakijken met een weegschaal?",
         ],
         uitlegPad: {
@@ -550,7 +550,7 @@ const steps = [
           "De bus is een vreselijk vervoermiddel.",
         ],
         answer: 0,
-        wrongHints: [null, "Kijk naar 'ik vind' en 'te'.", null, "Zegt 'vreselijk' wat iemand vindt?"],
+        wrongHints: [null, "Kijk naar 'ik vind' en 'te'.", "Kijk naar de eerste twee woorden van deze zin.", "Zegt 'vreselijk' wat iemand vindt?"],
         uitlegPad: {
           stappen: [
             {
@@ -609,7 +609,7 @@ const steps = [
         q: "In een tekst staat: *Ons dorp heeft 4.000 inwoners. Het is het gezelligste dorp van de streek.* Welk deel is een mening?",
         options: ["Het is het gezelligste dorp van de streek.","Ons dorp heeft 4.000 inwoners.","Allebei de zinnen zijn een mening.","Allebei de zinnen zijn een feit."],
         answer: 0,
-        wrongHints: [null, "Het aantal inwoners kun je tellen — dat is juist een feit.", "Het inwoneraantal is een feit.", "'Gezelligste' is geen feit."],
+        wrongHints: [null, "Het aantal inwoners kun je tellen — dat is juist een feit.", "Het inwoneraantal is een feit.", "Kun je 'gezelligste' nameten?"],
         uitlegPad: {
           stappen: [{ titel: "Tel vs. oordeel", tekst: "4.000 inwoners kun je tellen (feit). 'Het gezelligste dorp' is wat iemand vindt (mening)." }],
           niveaus: {
@@ -704,7 +704,7 @@ const steps = [
           "Op het plein staan twee bankjes.",
         ],
         answer: 0,
-        wrongHints: [null, "De groepen kun je tellen.", null, "De bankjes kun je tellen."],
+        wrongHints: [null, "De groepen kun je tellen.", "De begintijd kun je nakijken op het rooster.", "De bankjes kun je tellen."],
         uitlegPad: {
           stappen: [
             {
@@ -728,7 +728,7 @@ const steps = [
           "Hij telt iets na.",
         ],
         answer: 0,
-        wrongHints: [null, "Wordt er in die zin iets gemeten?", null, null],
+        wrongHints: [null, "Wordt er in die zin iets gemeten?", "Kun je 'het mooiste' nakijken op een kaart of in een boek?", "Staat er een getal in de tweede zin?"],
         uitlegPad: {
           stappen: [
             {

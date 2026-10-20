@@ -40,7 +40,7 @@ const steps = [
       },
       {
         q: "Maak een vraag van *Tom fietst naar school.* Welk woord springt vooraan en is dus de persoonsvorm?",
-        options: ["Fietst", "Tom", "naar", "school"],
+        options: ["fietst", "Tom", "naar", "school"],
         answer: 0,
         wrongHints: [null, "Dat is degene die de handeling doet, niet de handeling zelf.", "Dat is een klein verbindingswoord.", "Dat is de plaats."],
         uitlegPad: {
@@ -84,7 +84,7 @@ const steps = [
         q: "Wat is de persoonsvorm? *De leraar schrijft iets op het bord.*",
         options: ["schrijft", "leraar", "bord", "iets"],
         answer: 0,
-        wrongHints: [null, "Dat is degene die iets doet, niet de handeling zelf.", "Dat is het voorwerp, geen werkwoord.", "Dat is een onbepaald voornaamwoord, geen werkwoord."],
+        wrongHints: [null, "Dat is degene die iets doet, niet de handeling zelf.", "Dat is het voorwerp, geen werkwoord.", "Dat zegt wát hij schrijft, niet wat hij doet."],
         uitlegPad: {
           stappen: [{ titel: "Maak een vraag", tekst: "Vraag: 'Schrijft de leraar iets op het bord?' → 'schrijft' springt vooraan. Dat is de persoonsvorm." }],
           niveaus: {
@@ -112,7 +112,7 @@ const steps = [
         q: "Wat is de persoonsvorm? *Gaan jullie morgen mee?*",
         options: ["Gaan", "jullie", "morgen", "mee"],
         answer: 0,
-        wrongHints: [null, "Dat is het onderwerp.", "Dat zegt wanneer.", "Dat zegt waarheen, geen werkwoord."],
+        wrongHints: [null, "Dat is het onderwerp.", "Dat zegt wanneer.", "Dat is een los stukje van 'meegaan'. Verandert het als je de tijd verandert?"],
         uitlegPad: {
           stappen: [{ titel: "Ja/nee-vraag: pv staat vooraan", tekst: "In een ja/nee-vraag staat de persoonsvorm altijd vooraan. 'Gaan' staat vooraan → persoonsvorm." }],
           niveaus: {
@@ -127,7 +127,7 @@ const steps = [
         q: "Er staan twee werkwoorden in: *De kinderen zijn naar huis gegaan.* Wat is de persoonsvorm?",
         options: ["zijn", "gegaan", "kinderen", "huis"],
         answer: 0,
-        wrongHints: [null, "Verandert dit woord als je de zin in de verleden tijd zet?", null, null],
+        wrongHints: [null, "Verandert dit woord als je de zin in de verleden tijd zet?", "Dat zijn wie het doen — het onderwerp, niet de persoonsvorm.", "Dat zegt waarheen ze gingen, geen werkwoord."],
         uitlegPad: {
           stappen: [
             {
@@ -150,7 +150,7 @@ const steps = [
           null,
           "Dat is een naam. Verandert een naam met de tijd?",
           "Dat zegt hoe het boek is, niet wat Lisa doet.",
-          null,
+          "Dat is wat ze leest. Verandert 'boek' met de tijd?",
         ],
         uitlegPad: {
           stappen: [
@@ -283,7 +283,7 @@ const steps = [
         q: "Wat is het onderwerp? *Op zaterdag gaat mijn vader vissen.*",
         options: ["mijn vader", "zaterdag", "gaat", "vissen"],
         answer: 0,
-        wrongHints: [null, "Dat zegt wannéér, niet wie het doet.", "Dat is de persoonsvorm.", null],
+        wrongHints: [null, "Dat zegt wannéér, niet wie het doet.", "Dat is de persoonsvorm.", "Dat is wat hij gaat doen, niet wie het doet."],
         uitlegPad: {
           stappen: [
             {
@@ -302,7 +302,7 @@ const steps = [
         q: "Wat is het onderwerp? *Na school fietsen Noor en Daan naar het zwembad.*",
         options: ["Noor en Daan", "het zwembad", "school", "fietsen"],
         answer: 0,
-        wrongHints: [null, "Dat is de plek waar ze naartoe gaan.", null, "Dat is de persoonsvorm."],
+        wrongHints: [null, "Dat is de plek waar ze naartoe gaan.", "Dat zegt wanneer (na school), niet wie er fietsen.", "Dat is de persoonsvorm."],
         uitlegPad: {
           stappen: [
             {
@@ -326,7 +326,7 @@ const steps = [
           "Wat doet de bus?",
         ],
         answer: 0,
-        wrongHints: [null, "Dat vraagt naar de tijd.", null, "Dan vind je wat er gebeurt, niet wie het doet."],
+        wrongHints: [null, "Dat vraagt naar de tijd.", "Dat vraagt naar de plaats.", "Dan vind je wat er gebeurt, niet wie het doet."],
         uitlegPad: {
           stappen: [
             {
@@ -486,7 +486,7 @@ const steps = [
           null,
           "Twee personen met 'en' ertussen: hoeveel zijn dat samen?",
           "Is opa één persoon of meer? Past 'wonen' daarbij?",
-          null,
+          "Is 'wonend' een persoonsvorm? Kun je er een vraag mee maken?",
         ],
         uitlegPad: {
           stappen: [
@@ -506,7 +506,7 @@ const steps = [
         q: "Welk onderwerp past in de zin? *___ rennen over het veld.*",
         options: ["De paarden", "Het paard", "Mijn hond", "Die jongen"],
         answer: 0,
-        wrongHints: [null, "Hoeveel paarden zijn dat? Past 'rennen' daarbij?", null, null],
+        wrongHints: [null, "Hoeveel paarden zijn dat? Past 'rennen' daarbij?", "Eén hond — past 'rennen' (meervoud) daarbij?", "Eén jongen — past 'rennen' (meervoud) daarbij?"],
         uitlegPad: {
           stappen: [
             {
@@ -647,7 +647,7 @@ const steps = [
         q: "Wat is het onderwerp? *Volgende week gaan wij op schoolreis.*",
         options: ["wij", "Volgende week", "gaan", "schoolreis"],
         answer: 0,
-        wrongHints: [null, "Dat zegt wannéér.", "Dat is de persoonsvorm.", null],
+        wrongHints: [null, "Dat zegt wannéér.", "Dat is de persoonsvorm.", "Dat is waar we heen gaan, niet wie er gaan."],
         uitlegPad: {
           stappen: [
             {

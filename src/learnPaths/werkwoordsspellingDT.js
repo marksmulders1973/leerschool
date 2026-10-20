@@ -23,8 +23,8 @@ const chapters = [
   { letter: "A", title: "Wat is een werkwoord?", emoji: "✍️", from: 0, to: 0 },
   { letter: "B", title: "Tegenwoordige tijd — d/t-regel", emoji: "🅰️", from: 1, to: 3 },
   { letter: "C", title: "Verleden tijd — 't kofschip", emoji: "⏪", from: 4, to: 5 },
-  { letter: "D", title: "Voltooid deelwoord", emoji: "🔍", from: 6, to: 7 },
-  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 8, to: 8 },
+  { letter: "D", title: "Word of wordt? — extra strikt", emoji: "🔍", from: 6, to: 6 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 7, to: 7 },
 ];
 
 // Vergelijking-tabel SVG voor werkwoordsvormen
@@ -83,9 +83,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **stam** van **werken**?",
-        options: ["werk","werken","wer","wert"],
+        options: ["werk","werken","wer","werkt"],
         answer: 0,
-        wrongHints: [null,"Dat is het hele werkwoord (infinitief).","Er mist een letter — haal alléén -en weg.","-t hoort er niet bij."],
+        wrongHints: [null,"Dat is het hele werkwoord (infinitief).","Er mist een letter — haal alléén -en weg.","Die t hoort bij hij of jij — niet bij de stam."],
         uitlegPad: {
           stappen: [
             { titel: "Stam vinden", tekst: "Hele werkwoord 'werken' minus -en = 'werk'. Klinker blijft kort want lettergreep blijft gesloten." },
@@ -101,7 +101,7 @@ const steps = [
         q: "Wat is de **stam** van **maken**?",
         options: ["maak","mak","make","maken"],
         answer: 0,
-        wrongHints: [null,"Klinker te kort — hoor je in ma-ken een korte of een lange a?","-e hoort er niet bij.","Dat is het hele werkwoord."],
+        wrongHints: [null,"Klinker te kort — hoor je in ma-ken een korte of een lange a?","Haal de hele uitgang -en weg, niet alleen de n.","Dat is het hele werkwoord."],
         uitlegPad: {
           stappen: [
             { titel: "Stam met klinker-verlengen", tekst: "Maken − en = mak. Maar 'mak' heeft korte a, terwijl 'ma-ken' lange a heeft. Verleng: maak." },
@@ -121,7 +121,7 @@ const steps = [
         wrongHints: [
           null,
           "Zeg lo-pen hardop. Hoor je een korte of een lange o?",
-          null,
+          "Dat is het hele werkwoord — haal -en weg.",
           "Die t hoort bij hij of jij — niet bij de stam.",
         ],
         uitlegPad: {
@@ -165,7 +165,7 @@ const steps = [
           null,
           "Eindigt een woord op twee l'en?",
           "Haal de hele uitgang -en weg, niet alleen de n.",
-          null,
+          "Dat is het hele werkwoord.",
         ],
         uitlegPad: {
           stappen: [
@@ -204,7 +204,7 @@ const steps = [
         q: "Wat is de **stam** van **hebben**?",
         options: ["heb", "hebb", "hebbe", "hebt"],
         answer: 0,
-        wrongHints: [null, "Eindigt een woord op twee b's?", null, "Die t hoort bij jij — niet bij de stam."],
+        wrongHints: [null, "Eindigt een woord op twee b's?", "Haal de hele uitgang -en weg, niet alleen de n.", "Die t hoort bij jij — niet bij de stam."],
         uitlegPad: {
           stappen: [
             {
@@ -245,7 +245,7 @@ const steps = [
         wrongHints: [
           null,
           "Zeg 'ik ...' — hoe schrijf je dat?",
-          null,
+          "Zeg 'ik ...' hardop. Hoor je daar een n?",
           "Die t hoort bij hij — niet bij de stam.",
         ],
         uitlegPad: {
@@ -285,7 +285,7 @@ const steps = [
         q: "Wat is de **stam** van **spelen**?",
         options: ["speel", "spel", "spelen", "speelt"],
         answer: 0,
-        wrongHints: [null, "Zeg spe-len hardop. Is de e kort of lang?", null, null],
+        wrongHints: [null, "Zeg spe-len hardop. Is de e kort of lang?", "Dat is het hele werkwoord — haal -en weg.", "Die t hoort bij hij of jij — niet bij de stam."],
         uitlegPad: {
           stappen: [
             {
@@ -326,7 +326,7 @@ const steps = [
         wrongHints: [
           null,
           "Haal alléén -en weg — niet meer.",
-          null,
+          "Haal de hele uitgang -en weg, niet alleen de n.",
           "Die t hoort bij hij of jij — niet bij de stam.",
         ],
         uitlegPad: {
@@ -366,7 +366,7 @@ const steps = [
         q: "Wat is de **stam** van **zwemmen**?",
         options: ["zwem", "zwemm", "zwemme", "zwemmen"],
         answer: 0,
-        wrongHints: [null, "Eindigt een woord op twee m'en?", null, null],
+        wrongHints: [null, "Eindigt een woord op twee m'en?", "Haal de hele uitgang -en weg, niet alleen de n.", "Dat is het hele werkwoord — haal -en weg."],
         uitlegPad: {
           stappen: [
             {
@@ -404,7 +404,7 @@ const steps = [
         q: "Welk woord is een **werkwoord**?",
         options: ["zwemmen", "tafel", "groen", "langzaam"],
         answer: 0,
-        wrongHints: [null, "Past dit in 'Ik ...'? Kun je dat doen?", null, null],
+        wrongHints: [null, "Past dit in 'Ik ...'? Kun je dat doen?", "Kun je 'groen' doen? Of zegt het hoe iets eruitziet?", "Kun je 'langzaam' doen? Of zegt het hóé je iets doet?"],
         uitlegPad: {
           stappen: [
             {
@@ -452,9 +452,9 @@ const steps = [
     checks: [
       {
         q: "Welke vorm is **goed**?",
-        options: ["Hij speelt","Hij speel","Hij speelen","Hij speelts"],
+        options: ["Hij speelt","Hij speel","Hij speelen","Hij speeld"],
         answer: 0,
-        wrongHints: [null,"Wie is 'hij'? Wat komt er bij hij achter de stam?","-en is voor wij/zij meervoud.","Zeg het hardop: hoor je een s achter 'speel'?"],
+        wrongHints: [null,"Wie is 'hij'? Wat komt er bij hij achter de stam?","-en is voor wij/zij meervoud.","Welke letter komt er bij hij achter de stam: een d of een t?"],
         uitlegPad: {
           stappen: [{ titel: "Hij + werkwoord", tekst: "Bij hij/zij/het: stam + t. Stam 'speel' + t = speelt." }],
           woorden: [{ woord: "stam + t", uitleg: "Hij/zij/het krijgt altijd een t achter de stam." }],
@@ -466,9 +466,9 @@ const steps = [
       },
       {
         q: "Welke vraag is **goed** geschreven?",
-        options: ["Werk jij hard?","Werkt jij hard?","Werken jij hard?","Werks jij hard?"],
+        options: ["Werk jij hard?","Werkt jij hard?","Werken jij hard?","Werkd jij hard?"],
         answer: 0,
-        wrongHints: [null,"Staat 'jij' hier vóór of achter het werkwoord? Wat betekent dat voor de t?","-en is voor meervoud.","Zeg het hardop: hoor je een s achter 'werk'?"],
+        wrongHints: [null,"Staat 'jij' hier vóór of achter het werkwoord? Wat betekent dat voor de t?","-en is voor meervoud.","Staat 'jij' achter het werkwoord? Komt er dan nog iets achter de stam?"],
         uitlegPad: {
           stappen: [
             { titel: "Jij ACHTER", tekst: "Vraag: 'Werk jij...' → jij staat ACHTER het werkwoord. Dan valt de t weg." },
@@ -483,9 +483,9 @@ const steps = [
       },
       {
         q: "Kies de goede vorm van **lopen**: '**Zij** (meervoud) ____ naar huis.'",
-        options: ["lopen","loopt","loops","loopen"],
+        options: ["lopen","loopt","loop","loopen"],
         answer: 0,
-        wrongHints: [null,"Dat is bij hij/zij ENKELVOUD.","-s is geen Nederlandse vervoeging.","Kijk naar de o: in lo-pen staat die aan het eind van de lettergreep. Hoeveel o's schrijf je dan?"],
+        wrongHints: [null,"Dat is bij hij/zij ENKELVOUD.","Dat is de ik-vorm. Is 'zij' (meervoud) één persoon?","Kijk naar de o: in lo-pen staat die aan het eind van de lettergreep. Hoeveel o's schrijf je dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Meervoud", tekst: "Wij/jullie/zij (meervoud) = stam + en. Lopen heeft hele werkwoord-vorm." },
@@ -507,7 +507,7 @@ const steps = [
           "Jij fietse naar school.",
         ],
         answer: 0,
-        wrongHints: [null, "Staat 'jij' hier vóór of achter het werkwoord?", null, null],
+        wrongHints: [null, "Staat 'jij' hier vóór of achter het werkwoord?", "-en is voor meervoud. Is 'jij' één persoon of meer?", "Hoor je een e aan het eind? Welke letter komt er bij jij achter de stam?"],
         uitlegPad: {
           stappen: [
             {
@@ -550,7 +550,7 @@ const steps = [
           "Spel jij vandaag buiten?",
         ],
         answer: 0,
-        wrongHints: [null, "Waar staat 'jij' in deze vraag?", null, "Zeg spe-len hardop: is de e kort of lang?"],
+        wrongHints: [null, "Waar staat 'jij' in deze vraag?", "-en is voor meervoud.", "Zeg spe-len hardop: is de e kort of lang?"],
         uitlegPad: {
           stappen: [
             {
@@ -588,7 +588,7 @@ const steps = [
         q: "Kies de juiste vorm van **koken**: 'Mijn opa ____ elke dag.'",
         options: ["kookt", "kook", "koken", "kookd"],
         answer: 0,
-        wrongHints: [null, "Mijn opa = hij. Wat komt er bij hij achter de stam?", null, null],
+        wrongHints: [null, "Mijn opa = hij. Wat komt er bij hij achter de stam?", "-en is voor meervoud. Is 'mijn opa' één persoon?", "Welke letter komt er bij hij achter de stam: een d of een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -630,7 +630,7 @@ const steps = [
         q: "Kies de juiste vorm van **doen**: 'Wat ____ hij?'",
         options: ["doet", "doe", "doen", "doed"],
         answer: 0,
-        wrongHints: [null, "Voor wie geldt de regel 'de t valt weg'? Alleen voor ...", null, null],
+        wrongHints: [null, "Voor wie geldt de regel 'de t valt weg'? Alleen voor ...", "-en is voor meervoud. Is 'hij' één persoon?", "Welke letter komt er bij hij achter de stam: een d of een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -668,7 +668,7 @@ const steps = [
         q: "Kies de juiste vorm van **bellen**: 'Jullie ____ de juf.'",
         options: ["bellen", "belt", "bel", "bellt"],
         answer: 0,
-        wrongHints: [null, "Is 'jullie' één persoon of meer?", null, null],
+        wrongHints: [null, "Is 'jullie' één persoon of meer?", "Dat is de ik-vorm. Is 'jullie' één persoon?", "Kijk naar de stam: bel. Hoeveel l'en heeft die?"],
         uitlegPad: {
           stappen: [
             {
@@ -706,7 +706,7 @@ const steps = [
         q: "Kies de juiste vorm van **hebben**: '____ jij een hond?'",
         options: ["Heb", "Hebt", "Hebben", "Hep"],
         answer: 0,
-        wrongHints: [null, "Waar staat 'jij' in deze vraag?", null, null],
+        wrongHints: [null, "Waar staat 'jij' in deze vraag?", "-en is voor meervoud. Is 'jij' één persoon?", "Zeg 'hebben' hardop. Hoor je een b of een p in de stam?"],
         uitlegPad: {
           stappen: [
             {
@@ -745,7 +745,7 @@ const steps = [
         q: "Kies de juiste vorm van **lachen**: 'Het meisje ____ hard om de grap.'",
         options: ["lacht", "lach", "lachen", "lachd"],
         answer: 0,
-        wrongHints: [null, "Het meisje = het. Komt er bij het iets achter de stam?", null, null],
+        wrongHints: [null, "Het meisje = het. Komt er bij het iets achter de stam?", "-en is voor meervoud. Is 'het meisje' één persoon?", "Welke letter komt er achter de stam: een d of een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -796,7 +796,7 @@ const steps = [
     ]),
     checks: [
       {
-        q: "**'Hij ____ boos'** — kies juiste vorm van **worden**:",
+        q: "'Hij ____ boos.' Welke vorm van **worden** past hier?",
         options: ["wordt","word","wort","wordd"],
         answer: 0,
         wrongHints: [null,"Wie is 'hij'? Komt er bij hij iets achter de stam?","Wat is de stam van worden? Staat die nog helemaal in 'wort'?","Een woord eindigt nooit op dd — welke letter hoort bij hij achter de stam?"],
@@ -813,10 +813,10 @@ const steps = [
         },
       },
       {
-        q: "**'Zij (meervoud) ____ een schat'** — kies juiste vorm van **vinden**:",
+        q: "'Zij (meervoud) ____ een schat.' Welke vorm van **vinden** past hier?",
         options: ["vinden","vindt","vind","vint"],
         answer: 0,
-        wrongHints: [null,"Dat is de vorm voor één persoon (hij of zij enkelvoud).","Dat is de ik-vorm: alleen de stam.","Mist de d van de stam."],
+        wrongHints: [null,"Dat is de vorm voor één persoon (hij of zij enkelvoud).","Dat is de ik-vorm: alleen de stam.","Wat is de stam van vinden? Staat die nog helemaal in 'vint'?"],
         uitlegPad: {
           stappen: [{ titel: "Meervoud = +en", tekst: "Zij meervoud = vinden (hele werkwoord)." }],
           woorden: [{ woord: "meervoud", uitleg: "Meer personen = werkwoord op -en." }],
@@ -845,7 +845,7 @@ const steps = [
         q: "Kies de juiste vorm van **binden**: 'De juf ____ de ballonnen aan het hek.'",
         options: ["bindt", "bind", "bint", "binden"],
         answer: 0,
-        wrongHints: [null, "De juf = zij. Krijgt zij een t achter de stam?", null, null],
+        wrongHints: [null, "De juf = zij. Krijgt zij een t achter de stam?", "Wat is de stam van binden? Staat die nog helemaal in 'bint'?", "-en is voor meervoud. Is de juf één persoon?"],
         uitlegPad: {
           stappen: [
             {
@@ -891,7 +891,7 @@ const steps = [
           null,
           "Haal alleen -en weg. Welke letter staat er dan aan het eind?",
           "Dat is de vorm bij hij of zij.",
-          null,
+          "Haal de hele uitgang -en weg, niet alleen de n.",
         ],
         uitlegPad: {
           stappen: [
@@ -972,7 +972,7 @@ const steps = [
           null,
           "Mijn broer = hij. Komt er een t achter de stam?",
           "Waar is de d van de stam gebleven?",
-          null,
+          "-en is voor meervoud. Is 'mijn broer' één persoon?",
         ],
         uitlegPad: {
           stappen: [
@@ -1016,7 +1016,7 @@ const steps = [
         q: "Kies de juiste vorm van **vinden**: 'Mijn vriend ____ een euro op straat.'",
         options: ["vindt", "vind", "vint", "vinden"],
         answer: 0,
-        wrongHints: [null, "Mijn vriend = hij. Komt er een t achter de stam?", null, null],
+        wrongHints: [null, "Mijn vriend = hij. Komt er een t achter de stam?", "Wat is de stam van vinden? Staat die nog helemaal in 'vint'?", "-en is voor meervoud. Is 'mijn vriend' één persoon?"],
         uitlegPad: {
           stappen: [
             {
@@ -1058,7 +1058,7 @@ const steps = [
         q: "Kies de juiste vorm van **worden**: 'Het ____ al donker buiten.'",
         options: ["wordt", "word", "wort", "wordd"],
         answer: 0,
-        wrongHints: [null, null, "Waar is de d van de stam gebleven?", null],
+        wrongHints: [null, "'Het' is net als hij: komt er dan iets achter de stam?", "Waar is de d van de stam gebleven?", "Een woord eindigt nooit op dd — welke letter hoort achter de stam?"],
         uitlegPad: {
           stappen: [
             {
@@ -1105,7 +1105,7 @@ const steps = [
           "Wij worden nat in de regen.",
         ],
         answer: 0,
-        wrongHints: [null, "Bij ik schrijf je alleen de stam. Klopt dat hier?", null, null],
+        wrongHints: [null, "Bij ik schrijf je alleen de stam. Klopt dat hier?", "De hond = hij. Hoort er bij hij een t achter de stam? Kijk of dat hier zo is.", "Wij is meervoud. Welke vorm hoort daarbij? Kijk of dat hier klopt."],
         uitlegPad: {
           stappen: [
             {
@@ -1153,9 +1153,9 @@ const steps = [
     checks: [
       {
         q: "Welke zin is **goed**?",
-        options: ["Hij zit op de stoel","Hij zitt op de stoel","Hij zits op de stoel","Hij zitten op de stoel"],
+        options: ["Hij zit op de stoel","Hij zitt op de stoel","Hij zitte op de stoel","Hij zitten op de stoel"],
         answer: 0,
-        wrongHints: [null,"Stam eindigt al op t — geen dubbele t.","Zeg het hardop: hoor je een s achter 'zit'?","-en is voor meervoud."],
+        wrongHints: [null,"Stam eindigt al op t — geen dubbele t.","Hoor je een e aan het eind? Bij hij schrijf je de stam, soms met een t erachter.","-en is voor meervoud."],
         uitlegPad: {
           stappen: [
             { titel: "Stam-op-t", tekst: "Zitten → stam = zit (eindigt al op t). Bij hij geen extra t (anders dubbele tt = bestaat niet)." },
@@ -1168,10 +1168,10 @@ const steps = [
         },
       },
       {
-        q: "**'Zij (meervoud) ____ pizza'** — kies juiste vorm van **eten**:",
+        q: "'Zij (meervoud) ____ pizza.' Welke vorm van **eten** past hier?",
         options: ["eten","eett","eet","etten"],
         answer: 0,
-        wrongHints: [null,"Bestaat een woord dat op tt eindigt? En is 'zij' hier één persoon?","Dat is enkelvoud.","Hoe schrijf je het hele werkwoord eten: met één t of met twee?"],
+        wrongHints: [null,"Bestaat een woord dat op tt eindigt? En is 'zij' hier één persoon?","Dat is de vorm bij één persoon. Is 'zij' hier één persoon?","Hoe schrijf je het hele werkwoord eten: met één t of met twee?"],
         uitlegPad: {
           stappen: [{ titel: "Meervoud = hele werkwoord", tekst: "Zij meervoud = eten (hele werkwoord)." }],
           woorden: [{ woord: "infinitief", uitleg: "Het hele werkwoord (eten, lopen, werken). Wordt gebruikt voor meervoud." }],
@@ -1186,7 +1186,7 @@ const steps = [
         q: "Kies de juiste vorm van **wachten**: 'Hij ____ op de bus.'",
         options: ["wacht", "wachtt", "wachten", "wachtd"],
         answer: 0,
-        wrongHints: [null, "De stam eindigt al op een t. Schrijf je dan nog een t?", null, null],
+        wrongHints: [null, "De stam eindigt al op een t. Schrijf je dan nog een t?", "-en is voor meervoud. Is 'hij' één persoon?", "Komt er bij hij een d achter de stam? En eindigt de stam al op een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -1231,7 +1231,7 @@ const steps = [
         wrongHints: [
           null,
           "De stam eindigt al op t. Komt er nog een t bij?",
-          null,
+          "-en is voor meervoud. Is 'mijn vader' één persoon?",
           "Zeg e-ten hardop: is de e kort of lang?",
         ],
         uitlegPad: {
@@ -1275,7 +1275,7 @@ const steps = [
         q: "Kies de juiste vorm van **moeten**: 'Jij ____ je tas inpakken.'",
         options: ["moet", "moett", "moeten", "moetd"],
         answer: 0,
-        wrongHints: [null, "De stam eindigt al op t. Hoeveel t's schrijf je dan?", null, null],
+        wrongHints: [null, "De stam eindigt al op t. Hoeveel t's schrijf je dan?", "-en is voor meervoud. Is 'jij' één persoon?", "Komt er bij jij een d achter de stam? En eindigt de stam al op een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -1317,7 +1317,7 @@ const steps = [
         q: "Kies de juiste vorm van **praten**: 'Oma ____ heel zacht.'",
         options: ["praat", "praatt", "praten", "prat"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de laatste letter van de stam. Komt er dan nog een t bij?", null, "Zeg pra-ten hardop: is de a kort of lang?"],
+        wrongHints: [null, "Kijk naar de laatste letter van de stam. Komt er dan nog een t bij?", "-en is voor meervoud. Is oma één persoon?", "Zeg pra-ten hardop: is de a kort of lang?"],
         uitlegPad: {
           stappen: [
             {
@@ -1362,8 +1362,8 @@ const steps = [
         wrongHints: [
           null,
           "Haal bij elk werkwoord -en weg. Op welke letter eindigt wat overblijft?",
-          null,
-          null,
+          "Haal -en weg en kijk naar de laatste letter van wat overblijft.",
+          "Zeg 'ik speel'. Op welke letter eindigt dat?",
         ],
         uitlegPad: {
           stappen: [
@@ -1407,7 +1407,7 @@ const steps = [
           "Zij wacht op haar vriendin.",
         ],
         answer: 0,
-        wrongHints: [null, "Kijk naar het eind van elk werkwoord. Zie je ergens iets dubbels?", null, null],
+        wrongHints: [null, "Kijk naar het eind van elk werkwoord. Zie je ergens iets dubbels?", "Eindigt de stam 'moet' al op een t? Komt er dan nog een t bij? Zoek de zin waar dat misgaat.", "Eindigt de stam 'wacht' al op een t? Komt er dan nog een t bij? Zoek de zin waar dat misgaat."],
         uitlegPad: {
           stappen: [
             {
@@ -1445,7 +1445,7 @@ const steps = [
         q: "Kies de juiste vorm van **gaan**: 'Hij ____ naar school.'",
         options: ["gaat", "ga", "gaatt", "gaan"],
         answer: 0,
-        wrongHints: [null, "Bij hij komt er iets achter de stam. Wat?", null, null],
+        wrongHints: [null, "Bij hij komt er iets achter de stam. Wat?", "De stam is ga. Hoeveel t's komen er bij hij achter?", "-n is voor meervoud. Is 'hij' één persoon?"],
         uitlegPad: {
           stappen: [
             {
@@ -1488,7 +1488,7 @@ const steps = [
         q: "Kies de juiste vorm van **zetten**: 'Papa ____ elke ochtend thee.'",
         options: ["zet", "zett", "zetten", "zetd"],
         answer: 0,
-        wrongHints: [null, "De stam eindigt al op een t. Hoeveel t's schrijf je dan?", null, null],
+        wrongHints: [null, "De stam eindigt al op een t. Hoeveel t's schrijf je dan?", "-en is voor meervoud. Is papa één persoon?", "Komt er bij hij een d achter de stam? En eindigt de stam al op een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -1592,7 +1592,7 @@ const steps = [
           null,
           "Op welke letter eindigt de stam stop? Zit die in 't kofschip?",
           "Dat is de tegenwoordige tijd.",
-          null,
+          "Hoe schrijf je de stam van stoppen: met één p of twee?",
         ],
         uitlegPad: {
           stappen: [
@@ -1639,7 +1639,7 @@ const steps = [
           null,
           "Stam lach eindigt op ch. Zit ch in 't kofschip?",
           "Dat is de tegenwoordige tijd.",
-          null,
+          "De stam is lach. Plak -te erachter: hoeveel t's krijg je dan?",
         ],
         uitlegPad: {
           stappen: [
@@ -1685,7 +1685,7 @@ const steps = [
         wrongHints: [
           null,
           "Stam droom eindigt op m. Zit m in 't kofschip?",
-          null,
+          "Dat is de tegenwoordige tijd (hij droomt). De zin gaat over vroeger.",
           "Zeg dro-men hardop. Is de o kort of lang?",
         ],
         uitlegPad: {
@@ -1732,7 +1732,7 @@ const steps = [
         wrongHints: [
           null,
           "Kijk naar de letter in het hele werkwoord reizen. Zit die in 't kofschip?",
-          null,
+          "Zeg 'ik reis'. Schrijf je dat met een s of een z? Die letter houd je in de verleden tijd.",
           "Dat is de tegenwoordige tijd.",
         ],
         uitlegPad: {
@@ -1781,7 +1781,7 @@ const steps = [
           "Koken is een sterk werkwoord.",
         ],
         answer: 0,
-        wrongHints: [null, "Doet een klinker mee in 't kofschip?", null, null],
+        wrongHints: [null, "Doet een klinker mee in 't kofschip?", "Wat is de stam van koken? Op welke letter eindigt die?", "Een sterk werkwoord verandert van klinker (lopen – liep). Doet koken dat?"],
         uitlegPad: {
           stappen: [
             {
@@ -1822,8 +1822,8 @@ const steps = [
         wrongHints: [
           null,
           "Zoek bij elk werkwoord de stam. Welke eindigt NIET op een kofschip-letter?",
-          null,
-          null,
+          "Stam hoop eindigt op p. Zit p in 't kofschip?",
+          "Stam mis eindigt op s. Zit s in 't kofschip?",
         ],
         uitlegPad: {
           stappen: [
@@ -1866,7 +1866,7 @@ const steps = [
           null,
           "Stam straf eindigt op f. Zit f in 't kofschip?",
           "Dat is de tegenwoordige tijd.",
-          null,
+          "Hoe schrijf je de stam van straffen: met één f of twee?",
         ],
         uitlegPad: {
           stappen: [
@@ -1913,10 +1913,10 @@ const steps = [
     svg: tKofschipSvg(),
     checks: [
       {
-        q: "**'Ik heb ____'** — voltooid deelwoord van **werken**:",
+        q: "Vul het voltooid deelwoord van **werken** in: 'Ik heb ____.'",
         options: ["gewerkt","gewerkd","gewerken","gewerk"],
         answer: 0,
-        wrongHints: [null,"Op welke letter eindigt de stam 'werk'? Zit die letter in 't kofschip?","Een voltooid deelwoord eindigt hier niet op -en. Denk aan ge + stam + ...","Mist de uitgang."],
+        wrongHints: [null,"Op welke letter eindigt de stam 'werk'? Zit die letter in 't kofschip?","Een voltooid deelwoord eindigt hier niet op -en. Denk aan ge + stam + ...","Er mist een letter aan het eind. Denk aan ge + stam + ..."],
         uitlegPad: {
           stappen: [
             { titel: "Voltooid deelwoord-formule", tekst: "ge + stam + t/d. Stam werk eindigt op k = kofschip → +t. Resultaat: gewerkt." },
@@ -1929,7 +1929,7 @@ const steps = [
         },
       },
       {
-        q: "**'Hij heeft ____'** — voltooid deelwoord van **leren**:",
+        q: "Vul het voltooid deelwoord van **leren** in: 'Hij heeft ____.'",
         options: ["geleerd","geleert","geleren","gegelerd"],
         answer: 0,
         wrongHints: [null,"Op welke letter eindigt de stam leer? Zit die letter in 't kofschip?","Een voltooid deelwoord eindigt hier niet op -en. Denk aan ge + stam + ...","Hoe vaak zet je 'ge' vooraan?"],
@@ -1946,13 +1946,13 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**'Hij is vroeg ____.'** — voltooid deelwoord van **stoppen**:",
+        q: "Vul het voltooid deelwoord van **stoppen** in: 'Hij is vroeg ____.'",
         options: ["gestopt", "gestopd", "gestoppt", "gestop"],
         answer: 0,
         wrongHints: [
           null,
           "Stam stop eindigt op p. Zit p in 't kofschip?",
-          null,
+          "Hoe schrijf je de stam van stoppen: met één p of twee?",
           "Er mist een letter aan het eind.",
         ],
         uitlegPad: {
@@ -1989,7 +1989,7 @@ const steps = [
         },
       },
       {
-        q: "**'Ik heb ____ over de zee.'** — voltooid deelwoord van **dromen**:",
+        q: "Vul het voltooid deelwoord van **dromen** in: 'Ik heb ____ over de zee.'",
         options: ["gedroomd", "gedroomt", "gedromd", "droomde"],
         answer: 0,
         wrongHints: [
@@ -2043,7 +2043,7 @@ const steps = [
         wrongHints: [
           null,
           "Stam fiets eindigt op s. Zit s in 't kofschip?",
-          null,
+          "Er mist een letter aan het eind.",
           "Wat komt er na 'hebben': de verleden tijd of het voltooid deelwoord?",
         ],
         uitlegPad: {
@@ -2080,10 +2080,10 @@ const steps = [
         },
       },
       {
-        q: "**'Opa heeft de auto ____.'** — voltooid deelwoord van **poetsen**:",
+        q: "Vul het voltooid deelwoord van **poetsen** in: 'Opa heeft de auto ____.'",
         options: ["gepoetst", "gepoetsd", "poetste", "gepoets"],
         answer: 0,
-        wrongHints: [null, "Stam poets eindigt op s. Zit s in 't kofschip?", "Wat komt er na 'heeft'?", null],
+        wrongHints: [null, "Stam poets eindigt op s. Zit s in 't kofschip?", "Wat komt er na 'heeft'?", "Er mist een letter aan het eind."],
         uitlegPad: {
           stappen: [
             {
@@ -2118,10 +2118,10 @@ const steps = [
         },
       },
       {
-        q: "**'Wij hebben een paard ____.'** — voltooid deelwoord van **tekenen**:",
+        q: "Vul het voltooid deelwoord van **tekenen** in: 'Wij hebben een paard ____.'",
         options: ["getekend", "getekent", "tekende", "getekenen"],
         answer: 0,
-        wrongHints: [null, "Stam teken eindigt op n. Zit n in 't kofschip?", "Wat komt er na 'hebben'?", null],
+        wrongHints: [null, "Stam teken eindigt op n. Zit n in 't kofschip?", "Wat komt er na 'hebben'?", "Een voltooid deelwoord eindigt hier niet op -en. Denk aan ge + stam + ..."],
         uitlegPad: {
           stappen: [
             {
@@ -2159,7 +2159,7 @@ const steps = [
         q: "Welk woord is een **voltooid deelwoord**?",
         options: ["gehoopt", "hoopte", "hoopt", "hopen"],
         answer: 0,
-        wrongHints: [null, "Welk woord past na 'ik heb ...'?", null, null],
+        wrongHints: [null, "Welk woord past na 'ik heb ...'?", "Dat is de tegenwoordige tijd (hij hoopt). Past het na 'ik heb ...'?", "Dat is het hele werkwoord. Past het na 'ik heb ...'?"],
         uitlegPad: {
           stappen: [
             {
@@ -2195,10 +2195,10 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**'Papa heeft soep ____.'** — voltooid deelwoord van **koken**:",
+        q: "Vul het voltooid deelwoord van **koken** in: 'Papa heeft soep ____.'",
         options: ["gekookt", "gekookd", "kookte", "gekoken"],
         answer: 0,
-        wrongHints: [null, "Stam kook eindigt op k. Zit k in 't kofschip?", "Wat komt er na 'heeft'?", null],
+        wrongHints: [null, "Stam kook eindigt op k. Zit k in 't kofschip?", "Wat komt er na 'heeft'?", "Koken is geen sterk werkwoord. Denk aan ge + stam + ..."],
         uitlegPad: {
           stappen: [
             {
@@ -2250,7 +2250,7 @@ const steps = [
     ]),
     checks: [
       {
-        q: "Kies de juiste: **'____ jij vandaag jarig?'**",
+        q: "Kies de juiste vorm van **worden**: '____ jij vandaag jarig?'",
         options: ["Word","Wordt","Wordd","Worden"],
         answer: 0,
         wrongHints: [null,"Staat 'jij' vóór of achter het werkwoord? Wat betekent dat voor de t?","Een woord eindigt nooit op dd.","Meervoud past niet bij jij."],
@@ -2266,7 +2266,7 @@ const steps = [
         },
       },
       {
-        q: "Kies de juiste: **'Hij ____ boos.'**",
+        q: "Kies de juiste vorm van **worden**: 'Hij ____ boos.'",
         options: ["wordt","word","wordd","worden"],
         answer: 0,
         wrongHints: [null,"Wie is 'hij'? Komt er bij hij iets achter de stam?","Een woord eindigt nooit op dd.","Meervoud — niet bij hij."],
@@ -2280,7 +2280,7 @@ const steps = [
         },
       },
       {
-        q: "Kies de juiste: **'Ik ____ ziek.'**",
+        q: "Kies de juiste vorm van **worden**: 'Ik ____ ziek.'",
         options: ["word","wordt","wordd","worden"],
         answer: 0,
         wrongHints: [null,"Komt er bij ik iets achter de stam, of schrijf je alleen de stam?","Een woord eindigt nooit op dd.","Meervoud past niet bij ik."],
@@ -2295,10 +2295,10 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Kies de juiste: **'Jij ____ steeds beter in rekenen.'**",
+        q: "Kies de juiste vorm van **worden**: 'Jij ____ steeds beter in rekenen.'",
         options: ["wordt", "word", "wordd", "worden"],
         answer: 0,
-        wrongHints: [null, "Staat 'jij' vóór of achter het werkwoord?", "Een woord eindigt nooit op dd.", null],
+        wrongHints: [null, "Staat 'jij' vóór of achter het werkwoord?", "Een woord eindigt nooit op dd.", "Meervoud past niet bij jij."],
         uitlegPad: {
           stappen: [
             {
@@ -2333,10 +2333,10 @@ const steps = [
         },
       },
       {
-        q: "Kies de juiste: **'____ jij dit een mooie tekening?'** (vinden)",
+        q: "Kies de juiste vorm van **vinden**: '____ jij dit een mooie tekening?'",
         options: ["Vind", "Vindt", "Vint", "Vinden"],
         answer: 0,
-        wrongHints: [null, "Waar staat 'jij' in deze vraag?", null, null],
+        wrongHints: [null, "Waar staat 'jij' in deze vraag?", "Wat is de stam van vinden? Staat die nog helemaal in 'vint'?", "Meervoud past niet bij jij."],
         uitlegPad: {
           stappen: [
             {
@@ -2371,10 +2371,10 @@ const steps = [
         },
       },
       {
-        q: "Kies de juiste: **'Wij ____ samen kampioen!'**",
+        q: "Kies de juiste vorm van **worden**: 'Wij ____ samen kampioen!'",
         options: ["worden", "wordt", "word", "worde"],
         answer: 0,
-        wrongHints: [null, "Is 'wij' één persoon of meer?", null, null],
+        wrongHints: [null, "Is 'wij' één persoon of meer?", "Dat is de ik-vorm. Is 'wij' één persoon?", "Haal je alleen de n weg? Bij wij hoort de hele uitgang -en."],
         uitlegPad: {
           stappen: [
             {
@@ -2410,10 +2410,10 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Kies de juiste: **'____ jij ook van pannenkoeken?'** (houden)",
+        q: "Kies de juiste vorm van **houden**: '____ jij ook van pannenkoeken?'",
         options: ["Houd", "Houdt", "Hout", "Houden"],
         answer: 0,
-        wrongHints: [null, "Staat 'jij' vóór of achter het werkwoord?", null, null],
+        wrongHints: [null, "Staat 'jij' vóór of achter het werkwoord?", "Waar is de d van de stam gebleven?", "Meervoud past niet bij jij."],
         uitlegPad: {
           stappen: [
             {
@@ -2459,7 +2459,7 @@ const steps = [
         wrongHints: [
           null,
           "Staat er 'jij' achter het werkwoord, of een ander woord?",
-          null,
+          "'Het' is één ding. Past meervoud daarbij?",
           "Waar is de d van de stam gebleven?",
         ],
         uitlegPad: {
@@ -2508,10 +2508,10 @@ const steps = [
     ]),
     checks: [
       {
-        q: "**'Hij ____ vroeg op'** — kies de juiste vorm van **staan** (tegenwoordige tijd):",
+        q: "'Hij ____ vroeg op.' Welke vorm van **staan** past hier? (tegenwoordige tijd)",
         options: ["staat","stat","stant","staan"],
         answer: 0,
-        wrongHints: [null,"Stam = sta, niet stat.","Er hoort geen n in.","'Staan' hoort bij meer personen. Is 'hij' één persoon?"],
+        wrongHints: [null,"Zeg sta-an hardop. Hoor je een korte of een lange a?","Zeg de zin hardop. Hoor je ergens een n in het werkwoord?","'Staan' hoort bij meer personen. Is 'hij' één persoon?"],
         uitlegPad: {
           stappen: [{ titel: "Sterk werkwoord", tekst: "Staan → stam = sta. Hij = sta + t = staat (er komt een t achter, dus de lettergreep is gesloten en de lange a schrijf je dan als aa)." }],
           woorden: [{ woord: "staan", uitleg: "Sterk/onregelmatig werkwoord. Stam = sta, hij = staat." }],
@@ -2539,7 +2539,7 @@ const steps = [
         q: "Wat is het voltooid deelwoord van **wandelen**?",
         options: ["gewandeld","gewandelt","wandeld","wandelden"],
         answer: 0,
-        wrongHints: [null,"Op welke letter eindigt de stam wandel? Zit die letter in 't kofschip?","Mist 'ge-' aan begin.","Verleden tijd, niet voltooid."],
+        wrongHints: [null,"Op welke letter eindigt de stam wandel? Zit die letter in 't kofschip?","Wat komt er vooraan bij een voltooid deelwoord? Denk aan gewerkt en geleerd.","Dat is de verleden tijd (wij wandelden). Wat zet je achter 'ik heb'?"],
         uitlegPad: {
           stappen: [
             { titel: "Voltooid + l-stam", tekst: "Wandelen → wandel. L zit NIET in 't kofschip → -d. Voltooid: ge + wandel + d = gewandeld." },
@@ -2624,21 +2624,21 @@ const steps = [
           niveaus: { basis: "wordt.", simpeler: "Hij-vorm = stam 'word' + t = wordt (dt-eindiging).", nogSimpeler: "Wordt" },
         },
       },
-      { q: "Vul in: 'Ik ___ je morgen.' (zien)", options: ["zie","ziet","ziende","gezien"], answer: 0, wrongHints: [null, "'Ziet' hoort bij hij of jij. Welke vorm hoort bij ik?", "'Ziende' is geen persoonsvorm. Welke vorm past achter 'ik'?", "'Gezien' gebruik je na 'heb'. Staat dat in de zin?"] },
+      { q: "Vul in: 'Ik ___ je morgen.' (zien)", options: ["zie","ziet","zien","gezien"], answer: 0, wrongHints: [null, "'Ziet' hoort bij hij of jij. Welke vorm hoort bij ik?", "'Zien' is het hele werkwoord. Welke vorm hoort bij ik?", "'Gezien' gebruik je na 'heb'. Staat dat in de zin?"] },
       { q: "Vul in: 'Hij ___ heel snel.' (lopen)", options: ["loopt","loop","loopd","loopen"], answer: 0, wrongHints: [null, "Dat is de ik-vorm. Past die bij hij?", "Waar zou die d vandaan komen? Wat komt er bij hij achter de stam?", "Zo schrijf je het hele werkwoord niet (lopen), en bij hij hoort geen -en."] },
       { q: "Vul de verleden tijd in: 'Ik ___ thuis.' (werken)", options: ["werkte","werkde","werk","werkten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam werk? Zit die letter in 't kofschip?", "'Ik werk' is nu. Hoe zeg je het als het gisteren was?", "'Werkten' hoort bij wij. Welke vorm hoort bij ik?"] },
       { q: "Vul de verleden tijd in: 'Wij ___ vrolijk.' (spelen)", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null, "'Speelde' hoort bij ik of hij. Wie spelen hier?", "Op welke letter eindigt de stam speel? Zit die letter in 't kofschip?", "'Wij spelen' is nu. Het moet de verleden tijd zijn."] },
       { q: "Wat is het voltooid deelwoord van 'werken'?", options: ["gewerkt","gewerkd","werkte","werkten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam werk? Zit die letter in 't kofschip?", "'Werkte' is de verleden tijd. Wat zet je achter 'ik heb'?", "'Werkten' is de verleden tijd bij wij. Wat zet je achter 'wij hebben'?"] },
       { q: "Wat is het voltooid deelwoord van 'leren'?", options: ["geleerd","geleert","leerde","leren"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam leer? Zit die letter in 't kofschip?", "'Leerde' is de verleden tijd. Wat zet je achter 'ik heb'?", "'Leren' is het hele werkwoord. Wat zet je achter 'ik heb'?"] },
-      { q: "Vul in: 'Hij ___ niet wat hij wil.' (weten, tegenwoordige tijd)", options: ["weet","weett","weeten","wist"], answer: 0, wrongHints: [null, "De stam weet eindigt al op t. Komt er dan nog een t bij?", "Bij hij geen -en, en let op de spelling.", "'Wist' is de verleden tijd. De zin gaat over nu."] },
-      { q: "Vul in: 'Ik ___ dat ik gelijk heb.' (vinden)", options: ["vind","vindt","vindde","vinden"], answer: 0, wrongHints: [null, "'Vindt' hoort bij hij. Komt er bij ik iets achter de stam?", "'Vindde' bestaat niet. En de zin gaat over nu, niet over gisteren.", "'Vinden' hoort bij wij of zij (meervoud). Past dat bij ik?"] },
-      { q: "Vul in: 'Zij ___ snel.' (rennen, hij/zij-vorm)", options: ["rent","rend","rennen","rende"], answer: 0, wrongHints: [null, "Stam van rennen is ren — waar komt die d vandaan?", "'Rennen' hoort bij meer personen. Is 'zij' hier één persoon?", "'Rende' is de verleden tijd. De zin gaat over nu."] },
+      { q: "Vul in: 'Hij ___ niet wat hij wil.' (weten, tegenwoordige tijd)", options: ["weet","weett","weeten","wist"], answer: 0, wrongHints: [null, "De stam weet eindigt al op t. Komt er dan nog een t bij?", "Bij hij hoort geen -en. En hoe schrijf je het hele werkwoord: weten of weeten?", "'Wist' is de verleden tijd. De zin gaat over nu."] },
+      { q: "Vul in: 'Ik ___ dat ik gelijk heb.' (vinden)", options: ["vind","vindt","vint","vinden"], answer: 0, wrongHints: [null, "'Vindt' hoort bij hij. Komt er bij ik iets achter de stam?", "Wat is de stam van vinden? Staat die nog helemaal in 'vint'?", "'Vinden' hoort bij wij of zij (meervoud). Past dat bij ik?"] },
+      { q: "Vul in: 'Kijk, zij ___ snel!' (rennen, tegenwoordige tijd)", options: ["rent","rend","rennen","rende"], answer: 0, wrongHints: [null, "Stam van rennen is ren — waar komt die d vandaan?", "'Rennen' hoort bij meer personen. Is 'zij' hier één persoon?", "'Rende' is de verleden tijd. De zin gaat over nu."] },
       { q: "Wat is het voltooid deelwoord van 'spelen'?", options: ["gespeeld","gespelt","speelde","gespeelde"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam speel? Zit die letter in 't kofschip?", "'Speelde' is de verleden tijd. Wat zet je achter 'ik heb'?", "Na 'ik heb' krijgt het voltooid deelwoord geen -e aan het eind."] },
       { q: "Vul in: 'Hij ___ niet boos.' (worden)", options: ["wordt","word","wordtt","worden"], answer: 0, wrongHints: [null, "Wie is 'hij'? Komt er bij hij iets achter de stam?", "Komt er bij hij één letter achter de stam, of twee?", "Is 'hij' één persoon of meer?"] },
-      { q: "Vul in: 'Wij ___ het verhaal.' (horen)", options: ["horen","hoort","horede","horeden"], answer: 0, wrongHints: [null, "'Hoort' gebruik je bij hij of zij. Past dat bij wij?", "Dat is geen goede vorm. En gaat de zin over nu of over vroeger?", "'Horeden' bestaat niet; vroeger is het 'hoorden'. Gaat deze zin over vroeger?"] },
+      { q: "Vul in: 'Wij ___ het verhaal.' (horen, tegenwoordige tijd)", options: ["horen","hoort","hoorde","hoor"], answer: 0, wrongHints: [null, "'Hoort' gebruik je bij hij of zij. Past dat bij wij?", "'Hoorde' is verleden tijd en hoort bij één persoon. Wie horen hier, en wanneer?", "'Hoor' is de ik-vorm. Is 'wij' één persoon?"] },
       { q: "Vul de verleden tijd in: 'Hij ___ snel.' (rennen)", options: ["rende","rendde","rend","rennen"], answer: 0, wrongHints: [null, "Wat is de stam van rennen? Plak daar de uitgang achter en tel de d's.", "'Rend' bestaat niet. Hoe maak je van de stam ren de verleden tijd?", "'Rennen' is het hele werkwoord. De zin gaat over vroeger."] },
       { q: "Wat is het voltooid deelwoord van 'gaan'?", options: ["gegaan","gegaand","gegan","gaan"], answer: 0, wrongHints: [null, "Gaan is een sterk werkwoord: 't kofschip werkt daar niet. Zeg hardop: 'Ik ben naar huis ...'", "Zeg het hardop: 'Ik ben naar huis gegan'? Hoor je een korte of een lange a?", "'Gaan' is het hele werkwoord. Wat zet je achter 'ik ben'?"] },
-      { q: "Vul in: 'Ik ___ aan een werkstuk.' (werken)", options: ["werk","werkt","gewerkt","werkte"], answer: 0, wrongHints: [null, "'Werkt' hoort bij hij of jij. Welke vorm hoort bij ik?", "'Gewerkt' gebruik je na 'heb'. Staat dat in de zin?", "'Werkte' is de verleden tijd. De zin gaat over nu."] },
+      { q: "Vul in: 'Ik ___ nu aan een werkstuk.' (werken)", options: ["werk","werkt","gewerkt","werkte"], answer: 0, wrongHints: [null, "'Werkt' hoort bij hij of jij. Welke vorm hoort bij ik?", "'Gewerkt' gebruik je na 'heb'. Staat dat in de zin?", "'Werkte' is de verleden tijd. De zin gaat over nu."] },
     ],
   },
 ];

@@ -23,9 +23,9 @@ const steps = [
     checks: [
       {
         q: "Hoe schrijf je het woord voor dit dier: 🐱?",
-        options: ["kat", "kad", "cat", "katt"],
+        options: ["kat", "kad", "ket", "katt"],
         answer: 0,
-        wrongHints: [null, "Luister naar de laatste klank: t of d?", "Zo schrijf je het in het Engels — wij zoeken het Nederlandse woord.", "Hoor je twee t's? Zeg het maar langzaam."],
+        wrongHints: [null, "Luister naar de laatste klank: t of d?", "Luister naar de middelste klank: a of e?", "Hoor je twee t's? Zeg het maar langzaam."],
         uitlegPad: {
           stappen: [{ titel: "Hakken en schrijven", tekst: "k... a... t... → drie klanken, drie letters: **kat**." }],
           niveaus: { basis: "Je schrijft: kat.", simpeler: "k-a-t.", nogSimpeler: "kat" },
@@ -69,7 +69,7 @@ const steps = [
         wrongHints: [
           null,
           "Luister naar de middelste klank: o of a?",
-          null,
+          "Luister naar de middelste klank: o of i?",
           "Hoor je twee n's? Zeg het maar langzaam.",
         ],
         uitlegPad: {
@@ -90,7 +90,7 @@ const steps = [
         q: "Zeg langzaam: **m - u - s**. Welk woord schrijf je?",
         options: ["mus", "mis", "mos", "muss"],
         answer: 0,
-        wrongHints: [null, "Luister naar de middelste klank: u of i?", null, "Hoor je twee s'en aan het einde?"],
+        wrongHints: [null, "Luister naar de middelste klank: u of i?", "Luister naar de middelste klank: u of o?", "Hoor je twee s'en aan het einde?"],
         uitlegPad: {
           stappen: [
             {
@@ -113,7 +113,7 @@ const steps = [
           null,
           "Luister naar de middelste klank: i of e?",
           "Luister naar de middelste klank: i of u?",
-          null,
+          "Hoor je twee p's? Zeg het maar langzaam.",
         ],
         uitlegPad: {
           stappen: [
@@ -135,7 +135,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Luister naar de middelste klank: a of e?",
           "Luister naar de middelste klank: a of o?",
           "Hoor je twee s'en? Zeg het maar langzaam.",
         ],
@@ -157,7 +157,7 @@ const steps = [
         q: "Je hakt een woord in stukjes: **d - a - k**. Welk woord schrijf je?",
         options: ["dak", "dek", "dok", "dakk"],
         answer: 0,
-        wrongHints: [null, "Luister naar de middelste klank: a of e?", null, "Hoor je twee k's aan het einde?"],
+        wrongHints: [null, "Luister naar de middelste klank: a of e?", "Luister naar de middelste klank: a of o?", "Hoor je twee k's aan het einde?"],
         uitlegPad: {
           stappen: [
             {
@@ -176,7 +176,7 @@ const steps = [
         q: "Zeg langzaam: **l - i - p**. Welk woord schrijf je?",
         options: ["lip", "lap", "lep", "lipp"],
         answer: 0,
-        wrongHints: [null, "Luister naar de middelste klank: i of a?", null, "Hoor je twee p's aan het einde?"],
+        wrongHints: [null, "Luister naar de middelste klank: i of a?", "Luister naar de middelste klank: i of e?", "Hoor je twee p's aan het einde?"],
         uitlegPad: {
           stappen: [
             {
@@ -249,7 +249,7 @@ const steps = [
           null,
           "Dat is de korte o — luister: kort of lang?",
           "Hoor je twee t's? Zeg het maar langzaam.",
-          null,
+          "Luister: is het een oo of een uu?",
         ],
         uitlegPad: {
           stappen: [
@@ -273,7 +273,7 @@ const steps = [
           null,
           "De aa is lang — hoeveel letters heeft een lange klank?",
           "Luister nog eens naar de klank in het midden.",
-          null,
+          "Daar staan te veel letters.",
         ],
         uitlegPad: {
           stappen: [
@@ -296,7 +296,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is de korte a — luister: kort of lang?",
-          null,
+          "Luister: is het een aa of een oo?",
           "Hoor je twee s'en aan het einde?",
         ],
         uitlegPad: {
@@ -317,7 +317,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor dit fruit: 🍐?",
         options: ["peer", "per", "pier", "puur"],
         answer: 0,
-        wrongHints: [null, "Luister: is de e kort of lang?", "Dat is de ie-klank — luister nog eens.", null],
+        wrongHints: [null, "Luister: is de e kort of lang?", "Dat is de ie-klank — luister nog eens.", "Luister: is het een ee of een uu?"],
         uitlegPad: {
           stappen: [
             {
@@ -343,9 +343,9 @@ const steps = [
     checks: [
       {
         q: "Hoe schrijf je het woord voor dit ding: 📖?",
-        options: ["boek", "book", "buk", "boec"],
+        options: ["boek", "poek", "buk", "boec"],
         answer: 0,
-        wrongHints: [null, "Zo schrijf je het in het Engels — de Nederlandse oe-klank schrijf je anders.", "Daar mist een letter — de oe heeft er twee.", "Luister naar de laatste klank: k of c?"],
+        wrongHints: [null, "Luister naar de eerste klank: b of p?", "Daar mist een letter — de oe heeft er twee.", "Luister naar de laatste klank: k of c?"],
         uitlegPad: {
           stappen: [{ titel: "De oe-klank", tekst: "b... oe... k... → **boek**. De oe-klank = de letters o en e samen." }],
           niveaus: { basis: "De oe schrijf je als o+e: boek.", simpeler: "b-oe-k.", nogSimpeler: "boek" },
@@ -390,7 +390,7 @@ const steps = [
           null,
           "Daar mist een letter — de oe heeft er twee.",
           "Dat is de ie-klank — luister nog eens.",
-          null,
+          "Kijk goed naar de volgorde van de letters.",
         ],
         uitlegPad: {
           stappen: [
@@ -413,7 +413,7 @@ const steps = [
         wrongHints: [
           null,
           "Daar mist een letter — luister naar de klank in het midden.",
-          null,
+          "Dat is de oe-klank — luister nog eens.",
           "Dat is de eu-klank — luister nog eens.",
         ],
         uitlegPad: {
@@ -434,7 +434,7 @@ const steps = [
         q: "Welk woord heeft de **ie**-klank?",
         options: ["mier", "meer", "muur", "maar"],
         answer: 0,
-        wrongHints: [null, "Zeg het hardop: m-ee-r. Welke klank hoor je in het midden?", null, null],
+        wrongHints: [null, "Zeg het hardop: m-ee-r. Welke klank hoor je in het midden?", "Zeg het hardop: m-uu-r. Welke klank hoor je in het midden?", "Zeg het hardop: m-aa-r. Welke klank hoor je in het midden?"],
         uitlegPad: {
           stappen: [
             {
@@ -457,7 +457,7 @@ const steps = [
           null,
           "Daar mist een letter — de eu heeft er twee.",
           "Dat is de oe-klank — luister nog eens.",
-          null,
+          "Dat is de ie-klank — luister nog eens.",
         ],
         uitlegPad: {
           stappen: [
@@ -480,7 +480,7 @@ const steps = [
         wrongHints: [
           null,
           "Daar mist een letter — de oe heeft er twee.",
-          null,
+          "Dat is de eu-klank — luister nog eens.",
           "Dat is de ie-klank — luister nog eens.",
         ],
         uitlegPad: {
@@ -501,7 +501,7 @@ const steps = [
         q: "Zeg langzaam: **p - oe - s**. Hoeveel **klanken** hoor je?",
         options: ["3", "4", "2", "5"],
         answer: 0,
-        wrongHints: [null, "Tel je nu de letters? Tel de klanken: p... oe... s...", null, null],
+        wrongHints: [null, "Tel je nu de letters? Tel de klanken: p... oe... s...", "Zeg het langzaam: p... oe... s... Tel nog eens.", "Zo veel? Zeg het langzaam en tel alleen de klanken."],
         uitlegPad: {
           stappen: [
             {
@@ -549,7 +549,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor dit sieraad om je vinger: 💍?",
         options: ["ring", "rink", "rin", "rig"],
         answer: 0,
-        wrongHints: [null, "Luister naar het einde: hoor je een k?", "Er mist een letter aan het einde.", "Er mist een letter — de eindklank heeft er twee: n + g."],
+        wrongHints: [null, "Luister naar het einde: hoor je een k?", "Er mist een letter aan het einde.", "Er mist een letter — zeg het langzaam en luister goed naar het einde."],
         uitlegPad: {
           stappen: [{ titel: "-ng aan het einde", tekst: "r-i-**ng** → ring. De eindklank schrijf je met n + g." }],
           niveaus: { basis: "Ring eindigt op -ng.", simpeler: "ri + ng.", nogSimpeler: "ring" },
@@ -570,7 +570,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor dit dier: 🐍?",
         options: ["slang", "slank", "slan", "slangg"],
         answer: 0,
-        wrongHints: [null, "Luister naar het einde: hoor je een k?", "Er mist een letter aan het einde.", null],
+        wrongHints: [null, "Luister naar het einde: hoor je een k?", "Er mist een letter aan het einde.", "Hoor je twee g's? Zeg het maar langzaam."],
         uitlegPad: {
           stappen: [
             {
@@ -593,7 +593,7 @@ const steps = [
           null,
           "Bijna — welke letters schrijf je aan het begin van dit woord?",
           "Er missen letters aan het begin.",
-          null,
+          "Hoor je twee p's? Zeg het maar langzaam.",
         ],
         uitlegPad: {
           stappen: [
@@ -613,7 +613,7 @@ const steps = [
         q: "Welk woord begint met **sch**?",
         options: ["schaar", "slak", "sok", "spin"],
         answer: 0,
-        wrongHints: [null, null, "Zeg het hardop: s-o-k. Welke letters komen na de s?", null],
+        wrongHints: [null, "Zeg het hardop: s-l-a-k. Welke letter komt na de s?", "Zeg het hardop: s-o-k. Welke letters komen na de s?", "Zeg het hardop: s-p-i-n. Welke letter komt na de s?"],
         uitlegPad: {
           stappen: [
             {
@@ -635,7 +635,7 @@ const steps = [
         wrongHints: [
           null,
           "Bijna — welke letters schrijf je aan het begin van dit woord?",
-          null,
+          "Er missen letters — hoor je alleen een s aan het begin?",
           "Er mist een letter aan het begin.",
         ],
         uitlegPad: {
@@ -665,7 +665,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor dit dier: 🐑?",
         options: ["schaap", "sgaap", "schap", "scaap"],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar het begin: welke drie letters horen daar?", "Luister: is de a kort of lang?", "Er mist een letter aan het begin."],
+        wrongHints: [null, "Bijna — welke letters schrijf je aan het begin van dit woord?", "Luister: is de a kort of lang?", "Er mist een letter aan het begin."],
         uitlegPad: {
           stappen: [{ titel: "Twee dingen tegelijk", tekst: "**sch** aan het begin + lange **aa** in het midden = schaap. 🐑" }],
           niveaus: { basis: "sch + aa + p = schaap.", simpeler: "sch... aaa... p.", nogSimpeler: "schaap" },
@@ -706,7 +706,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor deze knuffel: 🧸?",
         options: ["beer", "ber", "boer", "buur"],
         answer: 0,
-        wrongHints: [null, "Luister: is de e kort of lang?", "Dat is de oe-klank — luister nog eens.", null],
+        wrongHints: [null, "Luister: is de e kort of lang?", "Dat is de oe-klank — luister nog eens.", "Luister: is het een ee of een uu?"],
         uitlegPad: {
           stappen: [
             {
@@ -728,7 +728,7 @@ const steps = [
         wrongHints: [
           null,
           "Daar mist een letter — luister naar de klank in het midden.",
-          null,
+          "Dat is de oe-klank — luister nog eens.",
           "Dat is de ie-klank — luister nog eens.",
         ],
         uitlegPad: {
@@ -753,7 +753,7 @@ const steps = [
           null,
           "Luister: is het een oo of een oe?",
           "Daar mist een letter — de oe heeft er twee.",
-          null,
+          "Hoor je twee l'en? Zeg het maar langzaam.",
         ],
         uitlegPad: {
           stappen: [
