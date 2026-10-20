@@ -9,4 +9,4 @@
 //   een datum "kan lijken of de datum niet klopt" → vanaf nu een teller met drie
 //   cijfers die bij 001 begint: elke uitrol +1 ("001", "002", …). Nooit terug naar 001.
 export const BOUW_VERSIE = 971;
-export const BOUW_STEMPEL = "026";
+export const BOUW_STEMPEL = "027";
