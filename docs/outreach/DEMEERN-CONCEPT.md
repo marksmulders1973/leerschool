@@ -46,6 +46,8 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 
 ---
 
+## ✅ Verstuurd wo 21 okt 2026 11:10 (Resend 01a15dbc-4461-7ec4-b31c-0642fe3aa972)
+
 ## Na verzending
 - WACHT-OP.md: De Meern → "pakket verstuurd <datum>, scans op DEMEERN2027 volgen"
 - dagrapport: scans/claims DEMEERN2027 apart noemen (codes uitgedeeld ≠ gezinnen die oefenden)

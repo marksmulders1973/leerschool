@@ -137,3 +137,8 @@
 
 ## 🕰️ Later opvolgen (geen leden/nog niet actief)
 - **Quiet Community Weert** (Remon Veraart, secretaris, remon.veraart@quiet.nl) · wo 21 okt 10:33: "mooi initiatief", nog geen ledenbestand, nemen het mee zodra de community er is → opvolgen **1 mei 2027** (opvolgbronnen-cadans), niets sturen vóór die tijd.
+
+## 🧸 Speelgoedbank De Meern (Utrecht) — code DEMEERN2027
+- Jolanda Borst (info@speelgoedbankdemeern.nl) · di 20 okt 20:27 "Super, wat een mooi aanbod!! Ik ga het zeker met de gezinnen delen!" (spoor 1, gezinsorganisaties)
+- ✅ **wo 21 okt 11:10 VERSTUURD** (Mark "stuur nu"): bedankmail in de thread vanaf hallo@ (Resend 01a15dbc) met code DEMEERN2027, WhatsApp-deelbericht, flyer-PDF met hun logo (bijlage), nieuwsbrief-tekst/beeld + partnerlink. Script: scripts/outreach/stuur-demeern-20261021.mjs · concept: docs/outreach/DEMEERN-CONCEPT.md
+- Nu: scans/claims op DEMEERN2027 volgen in het dagrapport (codes uitgedeeld ≠ gezinnen die oefenden). Niets meer sturen; logo-origineel pas vragen als ze willen drukken.
