@@ -134,3 +134,6 @@
 - **14 okt:** Stichting NOB (info@stichtingnob.nl) — mail over /buitenland.html voor NTC-scholen/expat-gezinnen verstuurd (id 01a138c1). Wacht op: antwoord/vermelding; meten via bron deel:buitenland. Nudge: niet vóór ~4 nov.
 
 - **14 okt:** tester-oproep gemaild aan 35 Gmail-adressen (accounts + e-maillijst), allen vooraf op de Play-testerslijst (nu 50). Adreslijst + verzendlog: Desktop\Leerkwartier-dossiersndroid-testers (niet in git). Wacht op: aanmeldingen in Console (stand 9, nodig 12).
+
+## 🕰️ Later opvolgen (geen leden/nog niet actief)
+- **Quiet Community Weert** (Remon Veraart, secretaris, remon.veraart@quiet.nl) · wo 21 okt 10:33: "mooi initiatief", nog geen ledenbestand, nemen het mee zodra de community er is → opvolgen **1 mei 2027** (opvolgbronnen-cadans), niets sturen vóór die tijd.
