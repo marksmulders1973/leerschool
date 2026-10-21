@@ -5,6 +5,7 @@ import { GROEP_SETS } from "./groepen/index.js";
 // Groep 6-8 kan met de vaste set; lagere groepen pas zodra ze een eigen set hebben (anders breuken in groep 3).
 const GROEPEN = ["3", "4", "5", "6", "7", "8"].filter((g) => GROEP_SETS[g] || ["6", "7", "8"].includes(g));
 import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
+import DeelKlasAppKnop from "../../components/DeelKlasAppKnop.jsx";
 import { meldAntwoord, meldGevoel } from "../niveau/signalen.js";
 import { getVragenVoorConcept, nieuweVolgorde } from "./questions.js";
 import { track } from "../../utils.js";
@@ -599,6 +600,9 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
           </div>
         </div>
       )}
+
+      {/* Groeiplan punt 4 (21 okt 2026): de ouder kijkt hier mee naar de uitslag. */}
+      <DeelKlasAppKnop plek="kwartiercheck" compact />
 
       {/* Terugknop */}
       <div style={{ textAlign: "center" }}>

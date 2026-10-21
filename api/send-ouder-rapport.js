@@ -271,13 +271,20 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
   // 🤝 Deel-actie 2027 — vast blok in elke weekmail (Mark 29 jul 2026).
   // Mét persoonlijke link als de ouder een account/code heeft; anders generiek.
   const deelLink = vriendCode ? `${SITE}/?vriend=${vriendCode}` : null;
+  // 📲 Groeiplan punt 4 (21 okt 2026): één tik → kant-en-klaar bericht voor de
+  // groepsapp van de klas (zelfde tekst als DeelKlasAppKnop in de app). Een kale
+  // link werd niet gedeeld (60 dgn: 0 vriend-bezoeken); een klaar bericht wel.
+  const klasAppLink = `${deelLink || SITE + "/"}${deelLink ? "&" : "?"}utm_source=klas-app&utm_campaign=ouder-rapport`;
+  const klasAppTekst = `Tip voor ouders uit de klas: Leerkwartier is een gratis oefen-app voor groep 3 t/m 8. Een kwartier per dag rekenen, taal en lezen, met uitleg als het fout gaat. Geen account, geen reclame. ${klasAppLink}`;
+  const klasAppKnop = `<a href="https://wa.me/?text=${encodeURIComponent(klasAppTekst)}" style="display:block;text-align:center;background:#25D366;color:#062b14;text-decoration:none;font-weight:800;font-size:14px;padding:11px;border-radius:10px;margin:0 0 10px;">📲 Stuur door naar de klas-app</a>`;
   const deelHtml = deelLink
     ? `<div style="background:rgba(0,200,83,0.07);border:1px solid rgba(0,200,83,0.35);border-radius:12px;padding:14px 16px;margin:0 0 22px;">
         <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">🤝 Geef een ander gezin Familie gratis — en krijg het zelf ook</div>
+        ${klasAppKnop}
         <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Deel jouw persoonlijke link met een ander gezin uit de klas. Zodra iemand via jouw link écht oefent, krijgen jullie <strong style="color:#fff;">allebei</strong> <a href="${SITE}/abonnement.html#familie" style="color:#ffd54f;">Leerkwartier Familie</a> gratis tot augustus 2027 (straks € 39 voor 12 maanden).</p>
         <a href="${deelLink}&utm_source=email&utm_campaign=ouder-rapport-deel" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:13.5px;padding:10px;border-radius:10px;word-break:break-all;">${esc(deelLink)}</a>
       </div>`
-    : `<p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>`;
+    : `${klasAppKnop}<p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>`;
   const deelText = deelLink
     ? `Geef een ander gezin Familie gratis — en krijg het zelf ook. Deel jouw persoonlijke link; zodra iemand via jouw link oefent, krijgen jullie allebei Familie gratis tot augustus 2027: ${deelLink}`
     : `Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis: https://leerkwartier.app`;
