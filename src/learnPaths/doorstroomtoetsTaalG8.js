@@ -89,7 +89,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Het tegenovergestelde van een synoniem is een 'antoniem' — woord met juist andere betekenis." }],
           niveaus: {
             basis: "Heel groot.",
-            simpeler: "Enorm betekent zelfde als 'heel groot'.",
+            simpeler: "Enorm betekent hetzelfde als 'heel groot'.",
             nogSimpeler: "Heel groot",
           },
         },
