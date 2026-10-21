@@ -124,6 +124,7 @@
     { "source": "/nieuwkomers", "destination": "/_shell-nieuwkomers.html" },
     { "source": "/klassikaal", "destination": "/_shell-klassikaal.html" },
     { "source": "/klas", "destination": "/_shell-klas.html" },
+    { "source": "/weektaak", "destination": "/_shell-weektaak.html" },
     {
       "source": "/vlaanderen",
       "destination": "/vlaanderen.html"

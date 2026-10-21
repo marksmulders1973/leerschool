@@ -113,6 +113,7 @@ const SupporterGame = lazy(() => import("./components/SupporterGame.jsx"));
 const ZookwartierGame = lazy(() => import("./components/ZookwartierGame.jsx"));
 const MaatjePocket = lazy(() => import("./components/MaatjePocket.jsx"));
 const TakenlijstMaker = lazy(() => import("./components/TakenlijstMaker.jsx"));
+const WeektaakPagina = lazy(() => import("./components/WeektaakPagina.jsx")); // groeiplan punt 2, 21 okt 2026
 const WerkbladPagina = lazy(() => import("./features/werkblad/WerkbladPagina.jsx"));
 const ParkBezoek = lazy(() => import("./components/ParkBezoek.jsx"));
 const ParkGalerij = lazy(() => import("./components/ParkGalerij.jsx"));
@@ -2175,6 +2176,22 @@ export default function App() {
           onPlayReward={() => setPage("zoo")}
           onHome={goHome}
         />
+      )}
+      {page === "weektaak" && (
+        <Suspense fallback={<PageLoader />}>
+          <WeektaakPagina
+            userName={userName || ""}
+            onOpenLeerpad={(pathId) => {
+              if (!pathId) return;
+              setActiveLearnPathId(pathId);
+              setActiveLearnStepIdx(0);
+              setLearnPathReturnPage("weektaak");
+              setPage("learn-path");
+            }}
+            onPlayReward={() => setPage("zoo")}
+            onHome={goHome}
+          />
+        </Suspense>
       )}
       {page === "takenlijst-maker" && (
         <Suspense fallback={<PageLoader />}>

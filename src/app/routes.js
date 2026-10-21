@@ -124,6 +124,9 @@ export const PAGE_TO_PATH = {
   klas: "/klas",
   // Kant-en-klare setjes voor klassikaal op het digibord met A-B-C-D-kaartjes (25 sep 2026).
   klassikaal: "/klassikaal",
+  // Weektaak per groep (groeiplan punt 2, 21 okt 2026): één vast adres (?g=3..8) dat elke
+  // maandag vanzelf nieuwe taken toont; de juf deelt het één keer. src/data/weektaak.js.
+  weektaak: "/weektaak",
   // Het bord zelf (kliktest 26 sep 2026): eigen adres, zodat browser-terug midden in een
   // setje naar het overzicht gaat i.p.v. de site uit, en herladen het setje hervat.
   digibord: "/klassikaal/bord",

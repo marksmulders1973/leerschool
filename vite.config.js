@@ -75,6 +75,11 @@ const ROUTE_SHELLS = {
     titel: 'Klassikaal op het digibord — quiz met A-B-C-D-kaartjes, zonder accounts | Leerkwartier',
     omschrijving: 'Kant-en-klare setjes voor groep 6, 7 en 8 en de taalklas. Leerlingen houden een A-, B-, C- of D-kaartje omhoog; u ziet meteen hoeveel procent het goed had. Gratis, geen accounts.',
   },
+  // Groeiplan punt 2 (21 okt 2026): de juf plakt dit adres in de ouder-app.
+  weektaak: {
+    titel: 'Weektaak — elke maandag drie nieuwe oefentaken voor je groep | Leerkwartier',
+    omschrijving: 'Rekenen, taal en begrijpend lezen voor groep 3 tot en met 8. Elke maandag staan er vanzelf nieuwe taken klaar; doe er elke dag een, een kwartier is genoeg. Gratis, geen account.',
+  },
   klas: {
     titel: 'Voor de klas — 5 vragen meteen op het digibord | Leerkwartier',
     omschrijving: 'Zet leerkwartier.app/klas op het bord: meteen vijf vragen op groepsniveau, zonder inloggen, met uitleg bij elke fout. Gratis.',

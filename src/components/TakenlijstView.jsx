@@ -15,21 +15,35 @@ import { taakStatus, takenlijstVoortgang } from "../data/takenlijst.js";
 //   onOpenLeerpad — (pathId) => void  (opent het leerpad, met terugkeer hierheen)
 //   onPlayReward  — () => void        (naar het park / beloning)
 //   onHome        — () => void
-export default function TakenlijstView({ takenlijst, userName, onOpenLeerpad, onPlayReward, onHome }) {
+//   kop           — optioneel: tekst linksboven (standaard "📋 Taken van de juf/meester")
+//   onderaan      — optioneel: extra blok onder de taken (weektaak: juf-strook)
+
+// Kinderen zonder naam bewaren hun afgeronde delen op het apparaat (LearnPath.jsx,
+// sleutel lk_lp_klaar). Die telt hier ook mee, anders bleef bij een gast alles "open".
+function lokaleVoortgang() {
+  try {
+    const alle = JSON.parse(localStorage.getItem("lk_lp_klaar") || "{}");
+    const uit = {};
+    for (const [id, stappen] of Object.entries(alle)) if (Array.isArray(stappen)) uit[id] = new Set(stappen);
+    return uit;
+  } catch { return {}; }
+}
+
+export default function TakenlijstView({ takenlijst, userName, onOpenLeerpad, onPlayReward, onHome, kop, onderaan }) {
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      if (!userName) { setLoaded(true); return; }
+      if (!userName) { setProgressByPath(lokaleVoortgang()); setLoaded(true); return; }
       try {
         const { data } = await supabase
           .from("learn_progress")
           .select("learn_path_id, step_idx")
           .eq("player_name", userName);
         if (cancelled) return;
-        const grouped = {};
+        const grouped = lokaleVoortgang();
         if (Array.isArray(data)) {
           data.forEach((r) => {
             if (!grouped[r.learn_path_id]) grouped[r.learn_path_id] = new Set();
@@ -50,7 +64,7 @@ export default function TakenlijstView({ takenlijst, userName, onOpenLeerpad, on
     <div style={{ minHeight: "100dvh", background: "linear-gradient(160deg,#0f1729,#162033)", color: "#fff", padding: "24px 16px 96px" }}>
       <div style={{ maxWidth: 560, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
-          <span style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "#69f0ae", fontWeight: 700 }}>📋 Taken van de juf/meester</span>
+          <span style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "#69f0ae", fontWeight: 700 }}>{kop || "📋 Taken van de juf/meester"}</span>
           <button onClick={onHome} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.6)", fontSize: 13, cursor: "pointer" }}>✕ sluiten</button>
         </div>
 
@@ -123,6 +137,7 @@ export default function TakenlijstView({ takenlijst, userName, onOpenLeerpad, on
             </div>
           )}
         </div>
+        {onderaan}
       </div>
     </div>
   );

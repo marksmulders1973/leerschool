@@ -297,6 +297,14 @@ function PartnerStrook() {
 function JufStrook({ groep, stap, onGa }) {
   return (
     <div style={{ marginTop: 18, padding: "12px 14px", borderRadius: 12, background: "var(--color-bg-surface)", border: "1px dashed var(--color-border-soft)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted)" }}>
+      {/* Groeiplan punt 2 (21 okt 2026): weektaak = één adres per groep, elke maandag nieuw. */}
+      <div style={{ marginBottom: 8 }}>
+        <strong style={{ color: "var(--color-text)" }}>📅 Thuis verder?</strong> Deel één adres met je klas: elke maandag staan er vanzelf drie nieuwe taken voor groep {groep}. Geen account nodig.{" "}
+        <button type="button" onClick={() => { track("klas_naar_weektaak", { groep, stap }); try { localStorage.setItem("lk_weektaak_groep", String(groep)); } catch { /* */ } onGa("weektaak"); }}
+          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>
+          Bekijk de weektaak →
+        </button>
+      </div>
       <div style={{ marginBottom: 8 }}>
         <strong style={{ color: "var(--color-text)" }}>🙋 Met de hele klas tegelijk?</strong> Kinderen houden een A-, B-, C- of D-kaartje omhoog, jij telt, en je ziet meteen hoeveel procent het goed had.{" "}
         <button type="button" onClick={() => { track("klas_naar_klassikaal", { groep, stap }); onGa("klassikaal"); }}
