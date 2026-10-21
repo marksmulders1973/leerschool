@@ -11,13 +11,12 @@
 //   (de vandaag-motor gebruikt die al).
 
 import { voKeuzes, voLabel, isVoType } from "../../shared/voNiveau.js";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useLayoutEffect, useRef } from "react";
 import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import { vakOptiesVoor, wisselVakKeuze, MAX_FAVORIET, MAX_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
-import { koppelingVoor } from "../../shared/koppeling.js";
-import { koppelLijntjes, koppelKandidaten, groepUitNiveau } from "./profielKoppeling.js";
-import { bewaarKoppeling } from "../../shared/koppeling.js";
+import { koppelingVoor, bewaarKoppeling, KOPPELING_EVENT } from "../../shared/koppeling.js";
+import { koppelGraaf, groepUitNiveau } from "./profielKoppeling.js";
 import { leesVoorkeur } from "../vandaag/voorkeur.js";
 import supabase from "../../supabase.js";
 
@@ -110,9 +109,10 @@ const knopBasis = {
   cursor: "pointer", borderRadius: 14, fontFamily: "var(--font-display)", fontWeight: 800,
 };
 
-// `lijntje` (14 okt 2026): "gekoppeld met …" → oranje rand + regeltje onder de rol.
-// Het actieve profiel houdt zijn groene rand; het lijntje blijft dan oranje.
-function Tegel({ p, actief, onKies, lijntje = "" }) {
+// `lijntje` (14 okt 2026): "gekoppeld met …" → gekleurde rand + regeltje onder de rol.
+// 21 okt 2026: `kleur` = de kleur van de koppeling (ouder 1 oranje, ouder 2 blauw, leerkracht
+// paars), dezelfde als de lijntjes. Het actieve profiel houdt zijn groene rand.
+function Tegel({ p, actief, onKies, lijntje = "", kleur = "#ffb74d" }) {
   const config = loadAvatarConfig(p.naam);
   return (
     <button
@@ -121,9 +121,9 @@ function Tegel({ p, actief, onKies, lijntje = "" }) {
       data-gekoppeld={lijntje ? "1" : undefined}
       style={{
         ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
-        padding: "12px 6px", width: "100%", minHeight: 138,
-        border: actief ? "2px solid #00e676" : lijntje ? "2px solid #ffb74d" : "1px solid rgba(255,255,255,0.15)",
-        background: actief ? "rgba(0,230,118,0.08)" : lijntje ? "rgba(255,183,77,0.08)" : "rgba(255,255,255,0.04)", color: "#fff",
+        padding: "12px 6px", width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
+        border: actief ? "2px solid #00e676" : lijntje ? `2px solid ${kleur}` : "1px solid rgba(255,255,255,0.15)",
+        background: actief ? "rgba(0,230,118,0.08)" : lijntje ? `${kleur}14` : "rgba(255,255,255,0.04)", color: "#fff",
       }}
     >
       <span style={{ width: 56, height: 56, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
@@ -132,7 +132,7 @@ function Tegel({ p, actief, onKies, lijntje = "" }) {
       <span style={{ fontSize: 15, lineHeight: 1.2, wordBreak: "break-word" }}>{p.naam}</span>
       <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{rolWoord(p)}</span>
       {lijntje && (
-        <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: "#ffb74d", lineHeight: 1.25, wordBreak: "break-word" }}>🔗 {lijntje}</span>
+        <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: kleur, lineHeight: 1.25, wordBreak: "break-word" }}>🔗 {lijntje}</span>
       )}
     </button>
   );
@@ -278,10 +278,92 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
   );
 }
 
+// 〰️ Koppel-lijntjes tussen de tegels (Mark 21 okt 2026: "kunnen er lijntjes lopen tussen de
+// mensen wie met wie gekoppeld is"). Gebogen lijn van de onderkant van de volwassene naar de
+// bovenkant van het kind, in de kleur van die volwassene. Start- en eindpunt liggen op de
+// tegelranden en de controlepunten in de tussenruimte, dus de lijn loopt nooit door een tegel.
+// Gekoppeld met iemand die hier geen profiel heeft ("thuis", "school"): een kort stippellijntje
+// boven het kind met een open rondje; de tekst op de tegel zegt met wie.
+// Alles wordt gemeten na het tekenen en opnieuw bij elke maatverandering (draaien, lettertype).
+const LIJN_AFSTAND = 12; // px tussen lijnen die uit dezelfde tegel komen of erin aankomen
+function spreid(i, n) { return (i - (n - 1) / 2) * LIJN_AFSTAND; }
+function KoppelLijnen({ boxRef, lijnen, extern, kleur }) {
+  const [geo, setGeo] = useState(null);
+  useLayoutEffect(() => {
+    const box = boxRef.current;
+    if (!box) return undefined;
+    const meet = () => {
+      const b = box.getBoundingClientRect();
+      const r = {};
+      box.querySelectorAll("[data-tegel]").forEach((el) => {
+        // De kaart zelf meten (eerste kind), niet de rastercel: die kan hoger zijn dan de kaart.
+        const q = (el.firstElementChild || el).getBoundingClientRect();
+        r[el.getAttribute("data-tegel")] = { x: q.left - b.left, y: q.top - b.top, w: q.width, h: q.height };
+      });
+      const nieuw = { w: Math.round(b.width), h: Math.round(b.height), r };
+      setGeo((oud) => (JSON.stringify(oud) === JSON.stringify(nieuw) ? oud : nieuw));
+    };
+    meet();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(meet) : null;
+    if (ro) ro.observe(box);
+    window.addEventListener("resize", meet);
+    const t = setTimeout(meet, 400); // na het laden van lettertype en poppetjes
+    return () => { if (ro) ro.disconnect(); window.removeEventListener("resize", meet); clearTimeout(t); };
+  }, [boxRef, lijnen, extern]);
+  if (!geo || (!lijnen.length && !extern.length)) return null;
+  const k = (n) => String(n || "").trim().toLowerCase();
+  const R = geo.r;
+  // Volgorde van de lijnen per tegel op x-positie, zodat ze elkaar zo min mogelijk kruisen.
+  const zichtbaar = lijnen.filter((l) => R[k(l.van)] && R[k(l.naar)] && R[k(l.van)].y + R[k(l.van)].h <= R[k(l.naar)].y);
+  const uit = new Map(), aan = new Map();
+  for (const l of zichtbaar) {
+    (uit.get(k(l.van)) || uit.set(k(l.van), []).get(k(l.van))).push(l);
+    (aan.get(k(l.naar)) || aan.set(k(l.naar), []).get(k(l.naar))).push({ l });
+  }
+  for (const e of extern) if (R[k(e.kind)]) (aan.get(k(e.kind)) || aan.set(k(e.kind), []).get(k(e.kind))).push({ e });
+  for (const [, lijst] of uit) lijst.sort((a, b2) => R[k(a.naar)].x - R[k(b2.naar)].x);
+  for (const [, lijst] of aan) lijst.sort((a, b2) => (a.e ? 1 : 0) - (b2.e ? 1 : 0) || (a.l && b2.l ? R[k(a.l.van)].x - R[k(b2.l.van)].x : 0));
+  const paden = [];
+  for (const l of zichtbaar) {
+    const A = R[k(l.van)], K = R[k(l.naar)];
+    const ul = uit.get(k(l.van)), al = aan.get(k(l.naar));
+    const x1 = A.x + A.w / 2 + spreid(ul.indexOf(l), ul.length), y1 = A.y + A.h;
+    const x2 = K.x + K.w / 2 + spreid(al.findIndex((x) => x.l === l), al.length), y2 = K.y;
+    const ym = (y1 + y2) / 2;
+    paden.push({ sleutel: `${k(l.van)}>${k(l.naar)}`, d: `M ${x1} ${y1} C ${x1} ${ym}, ${x2} ${ym}, ${x2} ${y2}`, x1, y1, x2, y2, kleur: kleur.get(k(l.van)) || "#ffb74d" });
+  }
+  const stompjes = [];
+  for (const e of extern) {
+    const K = R[k(e.kind)];
+    if (!K) continue;
+    const al = aan.get(k(e.kind));
+    const x = K.x + K.w / 2 + spreid(al.findIndex((x2) => x2.e === e), al.length);
+    stompjes.push({ sleutel: `${k(e.kind)}~${e.soort}`, x, y1: K.y - 10, y2: K.y, kleur: e.soort === "leraar" ? "#ce93d8" : "#ffb74d" });
+  }
+  return (
+    <svg aria-hidden="true" data-koppel-lijnen={paden.length} width={geo.w} height={geo.h}
+      style={{ position: "absolute", left: 0, top: 0, zIndex: 1, pointerEvents: "none", overflow: "visible" }}>
+      {paden.map((p) => (
+        <g key={p.sleutel}>
+          <path d={p.d} fill="none" stroke={p.kleur} strokeWidth={2.5} strokeLinecap="round" opacity={0.9} />
+          <circle cx={p.x1} cy={p.y1} r={3.5} fill={p.kleur} />
+          <circle cx={p.x2} cy={p.y2} r={3.5} fill={p.kleur} />
+        </g>
+      ))}
+      {stompjes.map((s) => (
+        <g key={s.sleutel}>
+          <line x1={s.x} y1={s.y1} x2={s.x} y2={s.y2} stroke={s.kleur} strokeWidth={2} strokeDasharray="3 3" opacity={0.85} />
+          <circle cx={s.x} cy={s.y1} r={4} fill="#0f1a33" stroke={s.kleur} strokeWidth={2} />
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 function LegePlek({ plek, onKlik }) {
   return (
     <button type="button" onClick={onKlik} aria-label={`${plek.label}: nog invullen`} style={{
-      ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 6px", width: "100%", minHeight: 138,
+      ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 6px", width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
       border: "2px dashed rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.02)", color: "rgba(255,255,255,0.38)",
     }}>
       <span aria-hidden="true" style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(255,255,255,0.08)", display: "flex", alignItems: "flex-end", justifyContent: "center", overflow: "hidden" }}>
@@ -358,21 +440,44 @@ function KoppelBlok({ kandidaten, authUser, iemandGekoppeld, onGekoppeld }) {
 export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false, startRol = null, authUser = null }) {
   const [versie, setVersie] = useState(0);
   const profielen = useMemo(() => leesProfielen(), [versie]); // eslint-disable-line react-hooks/exhaustive-deps
-  // 🔗 Koppel-lijntjes (Mark 14 okt 2026): wat dit toestel weet + voor een
-  // ingelogde ouder de bevestigde kinderen van het account.
+  // 🔗 Koppelingen (14 okt, herbouwd 21 okt 2026): één bron van waarheid, koppelGraaf
+  // (profielKoppeling.js, met tests). Wat dit toestel weet + voor een ingelogde ouder de
+  // bevestigde kinderen van het account (met link-id, voor de sync hieronder).
+  const ingelogd = !!authUser?.id && !authUser.is_anonymous;
   const [accountKinderen, setAccountKinderen] = useState([]);
   useEffect(() => {
-    if (!authUser?.id || authUser.is_anonymous) { setAccountKinderen([]); return; }
+    if (!ingelogd) { setAccountKinderen([]); return; }
     let cancel = false;
-    supabase.from("parent_child_links").select("child_name, verified").eq("parent_user_id", authUser.id)
-      .then(({ data }) => { if (!cancel) setAccountKinderen((data || []).filter((c) => c.verified === true).map((c) => (c.child_name || "").trim()).filter(Boolean)); })
+    supabase.from("parent_child_links").select("id, child_name, verified").eq("parent_user_id", authUser.id)
+      .then(({ data }) => { if (!cancel) setAccountKinderen((data || []).filter((c) => c.verified === true && (c.child_name || "").trim()).map((c) => ({ naam: c.child_name.trim(), linkId: c.id }))); })
       .catch(() => { if (!cancel) setAccountKinderen([]); });
     return () => { cancel = true; };
-  }, [authUser]);
-  const lijntjes = useMemo(() => {
-    const heeftOuder = profielen.some((p) => p.role === "ouder");
-    return koppelLijntjes(profielen, koppelingVoor, heeftOuder ? accountKinderen : []);
-  }, [profielen, accountKinderen]);
+  }, [authUser, ingelogd]);
+  // Toestel-koppelingen veranderen (één-tik, sync, /koppelen) → opnieuw rekenen.
+  useEffect(() => {
+    const opnieuw = () => setVersie((v) => v + 1);
+    window.addEventListener(KOPPELING_EVENT, opnieuw);
+    return () => window.removeEventListener(KOPPELING_EVENT, opnieuw);
+  }, []);
+  const graaf = useMemo(
+    () => koppelGraaf(profielen, koppelingVoor, { ingelogd, accountKinderen, huidigeNaam }),
+    [profielen, accountKinderen, ingelogd, huidigeNaam, versie], // eslint-disable-line react-hooks/exhaustive-deps
+  );
+  // Account kent een koppeling die dit toestel nog niet kent → vastleggen op het toestel
+  // (precies wat de één-tik-knop doet; de server geeft dan hetzelfde link-id). Daarna draagt
+  // het oefenwerk van dit kind het link-id mee en ziet de ouder het in het dashboard.
+  const gesynct = useRef(new Set());
+  useEffect(() => {
+    for (const s of graaf.sync) {
+      const sleutel = `${s.kind.toLowerCase()}|${s.linkId}`;
+      if (gesynct.current.has(sleutel)) continue;
+      gesynct.current.add(sleutel);
+      bewaarKoppeling({ naam: s.kind, linkId: s.linkId, rol: "ouder", vanWie: s.vanWie });
+      try { track("koppeling_sync_account", { aantal: graaf.sync.length }); } catch { /* */ }
+    }
+  }, [graaf.sync]);
+  const lijntjes = graaf.labels;
+  const rasterRef = useRef(null);
   // Profielen verdelen over de vaste plekken; wat niet past (oude apparaten) komt onder "Andere profielen".
   const verdeling = useMemo(() => {
     const per = { kind: [], ouder: [], leraar: [] };
@@ -408,14 +513,19 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
 
   const sectie = (titel, groepen) => {
     const items = verdeling.plekken.filter((x) => groepen.includes(x.plek.groep));
+    const onderLijnen = groepen.includes("kind") && (graaf.lijnen.length > 0 || graaf.extern.length > 0);
     return (
       <div style={{ marginBottom: 18 }}>
-        <div style={{ textAlign: "left", fontSize: 12, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", margin: "0 0 8px 2px" }}>{titel}</div>
+        <div style={{ textAlign: "left", margin: `0 0 ${onderLijnen ? 20 : 8}px 2px` }}>
+          {/* Kop boven de kinderen: pilletje met achtergrond, de koppel-lijntjes lopen erachter langs;
+              met lijnen wat meer ruimte, zodat een stippellijntje ("thuis", "school") niet wegvalt. */}
+          <span style={{ position: "relative", zIndex: 2, display: "inline-block", fontSize: 12, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", ...(onderLijnen ? { padding: "2px 10px", marginLeft: -4, borderRadius: 999, background: "#16233f", border: "1px solid rgba(255,255,255,0.10)" } : {}) }}>{titel}</span>
+        </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
           {items.map(({ plek, profiel }, i) => (
-            <div key={plek.label + i} style={{ position: "relative" }}>
+            <div key={plek.label + i} data-tegel={profiel ? profiel.naam.trim().toLowerCase() : undefined} style={{ position: "relative", zIndex: 2 }}>
               {profiel
-                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} onKies={() => (beheren ? setWeg(profiel.naam) : kies(profiel.naam))} />
+                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} kleur={graaf.kleur.get(profiel.naam.trim().toLowerCase())} onKies={() => (beheren ? setWeg(profiel.naam) : kies(profiel.naam))} />
                 : (!beheren && <LegePlek plek={plek} onKlik={() => { try { track("profiel_plek_invullen", { groep: plek.groep }); } catch { /* */ } setNieuwRol(plek.rol); }} />)}
               {beheren && profiel && <span aria-hidden="true" style={{ position: "absolute", top: 6, right: 8, fontSize: 12, fontWeight: 800, color: "#ff8a80" }}>weghalen</span>}
             </div>
@@ -437,10 +547,13 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "4px 0 4px", color: "#fff" }}>Wie oefent er?</h2>
           <p style={{ margin: "0 0 18px", fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
           {/* Mark 14 okt 2026: ouders + leerkracht bovenaan in één rij, kinderen eronder. */}
-          {sectie("Ouders, verzorgers en leerkracht", ["ouder", "leraar"])}
-          {sectie("Kinderen", ["kind"])}
+          <div ref={rasterRef} style={{ position: "relative" }}>
+            <KoppelLijnen boxRef={rasterRef} lijnen={graaf.lijnen} extern={graaf.extern} kleur={graaf.kleur} />
+            {sectie("Ouders, verzorgers en leerkracht", ["ouder", "leraar"])}
+            {sectie("Kinderen", ["kind"])}
+          </div>
           {!beheren && profielen.length > 0 && (
-            <KoppelBlok kandidaten={koppelKandidaten(profielen, lijntjes)} authUser={authUser} iemandGekoppeld={lijntjes.size > 0} onGekoppeld={() => setVersie((v) => v + 1)} />
+            <KoppelBlok kandidaten={graaf.kandidaten} authUser={authUser} iemandGekoppeld={lijntjes.size > 0} onGekoppeld={() => setVersie((v) => v + 1)} />
           )}
 
           {verdeling.extra.length > 0 && (
