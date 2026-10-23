@@ -6,7 +6,7 @@
 // → 🎉. Ouder: drie stappen in beeld + "Loopt het vast?" met de vijf echte
 // valkuilen. Bewust géén AI-chat: de problemen zijn vijf vaste gevallen; een
 // klikbare lijst lost ze sneller en foutloos op.
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BRAND } from "../../brand.js";
 import { track } from "../../utils.js";
 import { claimKoppelcode, normaliseerKoppelcode, verbodenTekens, koppelFoutTekst as foutTekst } from "../../shared/koppelcode.js";
@@ -14,6 +14,7 @@ import supabase from "../../supabase.js";
 import { koppelingVoor } from "../../shared/koppeling.js";
 import { codeUitUrl } from "./koppelcodes.js";
 import KoppelFeedback from "./KoppelFeedback.jsx";
+import KoppelAiHulp from "./KoppelAiHulp.jsx";
 
 const F = {
   kop: { fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: "#fff", margin: 0 },
@@ -57,29 +58,43 @@ const NIEUWE_CODE_NODIG = new Set(["gebruiktAnderToestel", "gebruiktAnder", "ver
 
 // "Lukt het nog steeds niet?" → één tik, en de melding met alle gegevens komt bij ons binnen
 // (feedback-tabel, die bij de dagelijkse meldingen-check wordt nagelopen). Niemand blijft hangen.
-function HulpVragen({ code, naam, fout }) {
+async function stuurHulpMelding({ fout, code, naam, rol = "kind", gesprek = "" }) {
+  try {
+    const { error } = await supabase.from("feedback").insert({
+      message: `[Koppelhulp] koppelen lukt niet · rol=${rol} · fout=${fout || "?"} · code=${code || "-"} · naam=${naam || "-"}${gesprek ? `\n--- gesprek met de AI-koppelhulp ---\n${gesprek}` : ""}`.slice(0, 4000),
+      player_name: naam || null,
+      page_url: typeof window !== "undefined" ? window.location.href : null,
+      user_agent: typeof navigator !== "undefined" ? navigator.userAgent.slice(0, 300) : null,
+    });
+    if (error) throw error;
+    try { track("koppelhulp_melding", { fout, rol, metGesprek: !!gesprek }); } catch { /* */ }
+    return true;
+  } catch { return false; }
+}
+
+// "Lukt het nog steeds niet?" (23 okt 2026): eerst de AI-Koppelhulp (backup op de vaste regels), met
+// daarin altijd de weg naar een mens. Zonder AI kan de melding ook meteen.
+function HulpVragen({ code, naam, fout, rol = "kind", context = {}, onKnop }) {
+  const [ai, setAi] = useState(false);
   const [staat, setStaat] = useState("vraag"); // vraag | bezig | klaar | mis
-  const stuur = async () => {
+  const meld = async (gesprek = "") => {
     setStaat("bezig");
-    try {
-      const { error } = await supabase.from("feedback").insert({
-        message: `[Koppelhulp] koppelen lukt niet · fout=${fout || "?"} · code=${code || "-"} · naam=${naam || "-"}`,
-        player_name: naam || null,
-        page_url: typeof window !== "undefined" ? window.location.href : null,
-        user_agent: typeof navigator !== "undefined" ? navigator.userAgent.slice(0, 300) : null,
-      });
-      if (error) throw error;
-      try { track("koppelhulp_melding", { fout }); } catch { /* */ }
-      setStaat("klaar");
-    } catch { setStaat("mis"); }
+    const ok = await stuurHulpMelding({ fout, code, naam, rol, gesprek });
+    setStaat(ok ? "klaar" : "mis");
+    return ok;
   };
+  if (ai) return <KoppelAiHulp rol={rol} context={{ ...context, fout }} onKnop={onKnop} onMens={(gesprek) => stuurHulpMelding({ fout, code, naam, rol, gesprek })} />;
   if (staat === "klaar") return <div style={{ ...F.sub, fontSize: 13, marginTop: 10, color: "#69f0ae" }} data-koppelhulp-klaar>Bedankt, je melding is binnen. We kijken er vandaag naar en zorgen dat het lukt.</div>;
   return (
     <div style={{ marginTop: 12, ...F.sub, fontSize: 13 }}>
-      Lukt het nog steeds niet?{" "}
-      <button type="button" disabled={staat === "bezig"} onClick={stuur} data-koppelhulp-melden
-        style={{ background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
-        {staat === "bezig" ? "Even…" : "Laat het ons weten"}
+      <div style={{ marginBottom: 6 }}>Lukt het nog steeds niet?</div>
+      <button type="button" onClick={() => setAi(true)} data-koppel-ai-start
+        style={{ ...F.primair(false), background: "rgba(0,176,255,0.14)", color: "#fff", border: "1.5px solid #00b0ff" }}>
+        Vraag de Koppelhulp
+      </button>
+      <button type="button" disabled={staat === "bezig"} onClick={() => meld()} data-koppelhulp-melden
+        style={{ marginTop: 8, background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
+        {staat === "bezig" ? "Even…" : "Of laat het meteen een mens weten"}
       </button>
       {staat === "mis" && <> · of mail <a href={`mailto:${BRAND.email || "hallo@leerkwartier.app"}?subject=${encodeURIComponent("Koppelen lukt niet")}`} style={{ color: "#00b0ff" }}>{BRAND.email || "hallo@leerkwartier.app"}</a></>}
     </div>
@@ -94,6 +109,26 @@ const VALKUILEN = [
   { v: "Ik zie nog niks van mijn kind", a: <>Je ziet pas iets zodra je kind na het koppelen heeft geoefend. Het weekrapport komt elke vrijdag om 16:00 per mail.</> },
 ];
 
+// Ouder-kant: dezelfde AI-Koppelhulp, met de knoppen die bij een ouder of verzorger horen.
+function OuderAiHulp() {
+  const [open, setOpen] = useState(false);
+  if (!open) {
+    return (
+      <button type="button" onClick={() => setOpen(true)} data-koppel-ai-start-ouder
+        style={{ ...F.primair(false), background: "rgba(0,176,255,0.14)", color: "#fff", border: "1.5px solid #00b0ff", marginBottom: 10 }}>
+        Vraag de Koppelhulp: vertel waar je vastloopt
+      </button>
+    );
+  }
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <KoppelAiHulp rol="ouder" context={{ stap: "ouder of verzorger op /koppelen, tab 'Ik ben de ouder'" }}
+        onKnop={(k) => { if (k === "ouder-overzicht" || k === "kind-hier") window.location.href = "/ouder"; }}
+        onMens={(gesprek) => stuurHulpMelding({ rol: "ouder", gesprek })} />
+    </div>
+  );
+}
+
 export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, onMijn }) {
   // ?rol=ouder (uit het koppel-blok in de profielkiezer) opent de ouder-tab.
   const [tab, setTab] = useState(() => { try { return new URLSearchParams(window.location.search).get("rol") === "ouder" ? "ouder" : "kind"; } catch { return "kind"; } });
@@ -106,6 +141,12 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
   const [klaar, setKlaar] = useState(null); // { naam, vanWie, rol }
   const [suggestie, setSuggestie] = useState(null); // 🩺 koppelhulp: "bedoel je …?"
   const verboden = verbodenTekens(code);
+  const [pogingen, setPogingen] = useState(0);
+  const codeVeld = useRef(null);
+  const kindKnop = (k) => {
+    if (k === "nieuwe-code") { try { window.open(`https://wa.me/?text=${encodeURIComponent(VRAAG_THUIS)}`, "_blank", "noopener"); } catch { /* */ } }
+    if (k === "code-opnieuw") { setStap(1); setFout(""); setFoutCode(null); setSuggestie(null); setTimeout(() => { try { codeVeld.current?.focus(); codeVeld.current?.select(); } catch { /* */ } }, 50); }
+  };
 
   const namen = (() => {
     try {
@@ -134,6 +175,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
       return;
     }
     try { track("koppelen_fout", { fout: r.fout, suggestie: !!r.suggestie }); } catch { /* */ }
+    setPogingen((x) => x + 1);
     if (r.fout !== "alGekoppeld") setFoutCode(r.fout);
     setSuggestie(r.fout === "typfout" ? r.suggestie : null);
     setFout(foutTekst(r.fout, n));
@@ -181,7 +223,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                     onChange={(e) => { setCode(normaliseerKoppelcode(e.target.value)); setFout(""); setFoutCode(null); setSuggestie(null); if (stap > 1 && normaliseerKoppelcode(e.target.value).length < 4) setStap(1); }}
                     onKeyDown={(e) => { if (e.key === "Enter" && code.length >= 4) setStap(2); }}
                     placeholder="ABC123" autoCapitalize="characters" autoCorrect="off" spellCheck={false} inputMode="text" maxLength={8}
-                    aria-label="Koppelcode" data-koppel-code style={F.input}
+                    aria-label="Koppelcode" data-koppel-code style={F.input} ref={codeVeld}
                   />
                   {verboden.length > 0 && (
                     <div role="status" data-koppel-verboden style={{ ...F.sub, fontSize: 12.5, color: "#ffd54f", marginTop: 6 }}>
@@ -233,7 +275,8 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                           Vraag thuis om een nieuwe code (WhatsApp)
                         </a>
                       )}
-                      {foutCode && <HulpVragen code={code} naam={naam.trim()} fout={foutCode} />}
+                      {foutCode && <HulpVragen code={code} naam={naam.trim()} fout={foutCode} rol="kind" onKnop={kindKnop}
+                        context={{ pogingen, alGekoppeld: !!alGekoppeld, stap: "kind typt de code op /koppelen" }} />}
                       {fout && foutCode && <KoppelFeedback route="kind-fout" extra={{ fout: foutCode }} />}
                     </Stap>
                   </div>
@@ -291,6 +334,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
 
             <div style={F.kaart}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800, color: "#fff", marginBottom: 6 }}>Loopt het vast?</div>
+              <OuderAiHulp />
               <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                 {VALKUILEN.map((k) => (
                   <details key={k.v} style={{ borderRadius: 10, background: "rgba(255,255,255,0.04)", padding: "8px 12px" }} onToggle={(e) => { if (e.currentTarget.open) { try { track("koppelen_valkuil", { v: k.v }); } catch { /* */ } } }}>
