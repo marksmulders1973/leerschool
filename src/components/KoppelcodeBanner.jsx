@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { koppelingVoor } from "../shared/koppeling.js";
-import { claimKoppelcode, normaliseerKoppelcode } from "../shared/koppelcode.js";
+import { claimKoppelcode, normaliseerKoppelcode, koppelFoutTekst } from "../shared/koppelcode.js";
 
 // P0-3 (4-agent-audit 2026-05-18): kind-zijde van de WhatsApp-koppelcode-flow.
 //
@@ -69,6 +69,12 @@ export default function KoppelcodeBanner({ userName }) {
       setMsg({ ok: false, text: "Deze code werkt niet meer. Vraag thuis (of je juf/meester) om een nieuwe — die is zo weer aangemaakt." });
     } else if (r.fout === "geenVerbinding") {
       setMsg({ ok: false, text: "Even geen verbinding. Probeer het zo nog eens." });
+    } else if (r.fout === "typfout" && r.suggestie) {
+      // 🩺 Koppelhulp (23 okt 2026): typfout → de bijna-goede code alvast invullen.
+      setCode(r.suggestie);
+      setMsg({ ok: false, text: `Bijna goed! Bedoel je ${r.suggestie}? Die staat nu ingevuld: tik nog een keer op koppelen.` });
+    } else if (["gebruiktAnderToestel", "gebruiktAnder", "bestaatNiet"].includes(r.fout)) {
+      setMsg({ ok: false, text: `${koppelFoutTekst(r.fout, userName)} Hulp nodig? Ga naar leerkwartier.app/koppelen.` });
     } else {
       setMsg({ ok: false, text: "Er ging iets mis. Probeer het zo nog eens." });
     }

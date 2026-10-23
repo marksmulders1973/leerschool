@@ -9,7 +9,8 @@
 import { useEffect, useState } from "react";
 import { BRAND } from "../../brand.js";
 import { track } from "../../utils.js";
-import { claimKoppelcode, normaliseerKoppelcode } from "../../shared/koppelcode.js";
+import { claimKoppelcode, normaliseerKoppelcode, verbodenTekens, koppelFoutTekst as foutTekst } from "../../shared/koppelcode.js";
+import supabase from "../../supabase.js";
 import { koppelingVoor } from "../../shared/koppeling.js";
 import { codeUitUrl } from "./koppelcodes.js";
 import KoppelFeedback from "./KoppelFeedback.jsx";
@@ -49,6 +50,42 @@ function Stap({ nr, titel, children }) {
   );
 }
 
+// 🩺 Koppelhulp (Mark 23 okt 2026: "een koppel-assistent zodat het altijd lukt"). Geen chat: de server
+// zoekt uit WAT er mis is (koppel_diagnose) en hier staat per geval de uitleg + één knop die het oplost.
+const VRAAG_THUIS = `Mijn koppelcode voor ${BRAND.name} werkt niet. Kun je een nieuwe maken? Ga naar ${BRAND.domain}/ouder, bij Koppelcodes, en stuur me de link via WhatsApp. Dan staat de code meteen goed.`;
+const NIEUWE_CODE_NODIG = new Set(["gebruiktAnderToestel", "gebruiktAnder", "verlopen", "bestaatNiet"]);
+
+// "Lukt het nog steeds niet?" → één tik, en de melding met alle gegevens komt bij ons binnen
+// (feedback-tabel, die bij de dagelijkse meldingen-check wordt nagelopen). Niemand blijft hangen.
+function HulpVragen({ code, naam, fout }) {
+  const [staat, setStaat] = useState("vraag"); // vraag | bezig | klaar | mis
+  const stuur = async () => {
+    setStaat("bezig");
+    try {
+      const { error } = await supabase.from("feedback").insert({
+        message: `[Koppelhulp] koppelen lukt niet · fout=${fout || "?"} · code=${code || "-"} · naam=${naam || "-"}`,
+        player_name: naam || null,
+        page_url: typeof window !== "undefined" ? window.location.href : null,
+        user_agent: typeof navigator !== "undefined" ? navigator.userAgent.slice(0, 300) : null,
+      });
+      if (error) throw error;
+      try { track("koppelhulp_melding", { fout }); } catch { /* */ }
+      setStaat("klaar");
+    } catch { setStaat("mis"); }
+  };
+  if (staat === "klaar") return <div style={{ ...F.sub, fontSize: 13, marginTop: 10, color: "#69f0ae" }} data-koppelhulp-klaar>Bedankt, je melding is binnen. We kijken er vandaag naar en zorgen dat het lukt.</div>;
+  return (
+    <div style={{ marginTop: 12, ...F.sub, fontSize: 13 }}>
+      Lukt het nog steeds niet?{" "}
+      <button type="button" disabled={staat === "bezig"} onClick={stuur} data-koppelhulp-melden
+        style={{ background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
+        {staat === "bezig" ? "Even…" : "Laat het ons weten"}
+      </button>
+      {staat === "mis" && <> · of mail <a href={`mailto:${BRAND.email || "hallo@leerkwartier.app"}?subject=${encodeURIComponent("Koppelen lukt niet")}`} style={{ color: "#00b0ff" }}>{BRAND.email || "hallo@leerkwartier.app"}</a></>}
+    </div>
+  );
+}
+
 const VALKUILEN = [
   { v: "Ik zie geen code", a: <>Codes staan in het ouder-overzicht, bovenaan in het blok <strong>Koppelcodes</strong>. Je ziet ze alleen als je daar bent ingelogd (Google of e-mail). Staat er geen code? Tik op <strong>1</strong>, <strong>2</strong> of <strong>3</strong> — je krijgt er meteen één per kind.</> },
   { v: "Mijn kind oefent op mijn eigen telefoon", a: <>Dan is er géén code nodig. In het ouder-overzicht: <strong>voeg je kind hier toe</strong> (onder de koppelcodes). Je telefoon kent daarna beide: jij als ouder, je kind als leerling.</> },
@@ -67,6 +104,8 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
   const [fout, setFout] = useState("");
   const [foutCode, setFoutCode] = useState(null); // 18 okt: welke fout, voor de vraag 'wat ging er mis?'
   const [klaar, setKlaar] = useState(null); // { naam, vanWie, rol }
+  const [suggestie, setSuggestie] = useState(null); // 🩺 koppelhulp: "bedoel je …?"
+  const verboden = verbodenTekens(code);
 
   const namen = (() => {
     try {
@@ -80,11 +119,12 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
 
   const alGekoppeld = naam && (koppelingVoor(naam)?.ouder || koppelingVoor(naam)?.leraar);
 
-  const koppel = async () => {
+  const koppel = async (andereCode) => {
     const n = (naam || "").trim();
+    const c = typeof andereCode === "string" ? andereCode : code;
     if (!n) { setFout("Typ eerst je naam."); return; }
-    setBezig(true); setFout("");
-    const r = await claimKoppelcode(code, n);
+    setBezig(true); setFout(""); setFoutCode(null); setSuggestie(null);
+    const r = await claimKoppelcode(c, n);
     setBezig(false);
     if (r.ok) {
       try { sessionStorage.removeItem("lk_koppelcode_voorstel"); } catch { /* */ }
@@ -93,15 +133,16 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
       setKlaar({ naam: n, vanWie: r.vanWie, rol: r.rol });
       return;
     }
-    try { track("koppelen_fout", { fout: r.fout }); } catch { /* */ }
+    try { track("koppelen_fout", { fout: r.fout, suggestie: !!r.suggestie }); } catch { /* */ }
     if (r.fout !== "alGekoppeld") setFoutCode(r.fout);
-    setFout(
-      r.fout === "verlopen" ? "Deze code is al gebruikt of klopt niet. Vraag thuis om een nieuwe code (ouder-overzicht → Koppelcodes)."
-        : r.fout === "alGekoppeld" ? `Je bent op dit toestel al gekoppeld, ${n}. Je hoeft niets meer te doen.`
-          : r.fout === "geenVerbinding" ? "Geen verbinding. Probeer het zo nog eens."
-            : r.fout === "leeg" ? "De code is te kort. Kijk nog eens op de telefoon van thuis."
-              : "Dat lukte niet. Probeer het nog eens.",
-    );
+    setSuggestie(r.fout === "typfout" ? r.suggestie : null);
+    setFout(foutTekst(r.fout, n));
+  };
+  const gebruikSuggestie = () => {
+    try { track("koppelhulp_suggestie", {}); } catch { /* */ }
+    const s = suggestie;
+    setCode(s);
+    koppel(s);
   };
 
   return (
@@ -142,6 +183,11 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                     placeholder="ABC123" autoCapitalize="characters" autoCorrect="off" spellCheck={false} inputMode="text" maxLength={8}
                     aria-label="Koppelcode" data-koppel-code style={F.input}
                   />
+                  {verboden.length > 0 && (
+                    <div role="status" data-koppel-verboden style={{ ...F.sub, fontSize: 12.5, color: "#ffd54f", marginTop: 6 }}>
+                      Let op: in een code zit nooit een {verboden.map((t) => (t === "0" ? "nul (0)" : t === "1" ? "één (1)" : t)).join(" of ")}. Kijk nog eens goed: het is waarschijnlijk een andere letter.
+                    </div>
+                  )}
                   {stap === 1 && (
                     <button type="button" disabled={code.length < 4} onClick={() => setStap(2)} style={{ ...F.primair(code.length < 4), marginTop: 10 }} data-koppel-verder>Verder</button>
                   )}
@@ -174,7 +220,20 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                       <button type="button" disabled={bezig || !naam.trim()} onClick={koppel} style={{ ...F.primair(bezig || !naam.trim()), marginTop: 10 }} data-koppel-knop>
                         {bezig ? "Even…" : "Koppel mij"}
                       </button>
-                      {fout && <div role="alert" style={{ ...F.sub, color: "#ffab91", fontSize: 13, marginTop: 8 }} data-koppel-fout>{fout}</div>}
+                      {fout && <div role="alert" style={{ ...F.sub, color: "#ffab91", fontSize: 13, marginTop: 8 }} data-koppel-fout={foutCode || "ok"}>{fout}</div>}
+                      {suggestie && (
+                        <button type="button" disabled={bezig} onClick={gebruikSuggestie} data-koppel-suggestie={suggestie} style={{ ...F.primair(bezig), marginTop: 8, background: "#69f0ae" }}>
+                          Bedoel je <span style={{ letterSpacing: 3 }}>{suggestie}</span>? Ja, gebruik deze
+                        </button>
+                      )}
+                      {foutCode && NIEUWE_CODE_NODIG.has(foutCode) && (
+                        <a href={`https://wa.me/?text=${encodeURIComponent(VRAAG_THUIS)}`} target="_blank" rel="noopener noreferrer" data-koppel-vraag-thuis
+                          onClick={() => { try { track("koppelhulp_vraag_thuis", { fout: foutCode }); } catch { /* */ } }}
+                          style={{ ...F.primair(false), display: "block", textAlign: "center", textDecoration: "none", boxSizing: "border-box", marginTop: 8, background: "#25D366" }}>
+                          Vraag thuis om een nieuwe code (WhatsApp)
+                        </a>
+                      )}
+                      {foutCode && <HulpVragen code={code} naam={naam.trim()} fout={foutCode} />}
                       {fout && foutCode && <KoppelFeedback route="kind-fout" extra={{ fout: foutCode }} />}
                     </Stap>
                   </div>

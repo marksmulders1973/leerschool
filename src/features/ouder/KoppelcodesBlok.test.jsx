@@ -28,4 +28,14 @@ describe("KoppelcodesBlok", () => {
     render(<KoppelcodesBlok codes={[{ id: "a", code: "AAAAAA" }]} aantalKinderen={2} over={0} />);
     expect(screen.queryByText(/Nog een code/)).toBeNull();
   });
+  it("koppelhulp: hoe lang de code wacht, duwtje na een dag, QR-code op verzoek", async () => {
+    const gisteren = new Date(Date.now() - 2 * 86400000).toISOString();
+    render(<KoppelcodesBlok codes={[{ id: "a", code: "H7KP2Q", created_at: new Date().toISOString() }, { id: "b", code: "B5QWVU", created_at: gisteren }]} aantalKinderen={0} over={1} />);
+    expect(screen.getByText(/gemaakt vandaag/)).toBeTruthy();
+    expect(screen.getByText(/2 dagen niet gebruikt/)).toBeTruthy();
+    expect(screen.getAllByText(/Nog niet gebruikt\. Het makkelijkst/)).toHaveLength(1);
+    fireEvent.click(screen.getAllByText(/Toon QR-code/)[0]);
+    expect(await screen.findByAltText("QR-code voor koppelcode H7KP2Q", {}, { timeout: 4000 })).toBeTruthy();
+    expect(screen.getByText("QR-code verbergen")).toBeTruthy();
+  });
 });

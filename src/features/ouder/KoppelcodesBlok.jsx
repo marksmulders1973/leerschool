@@ -5,9 +5,43 @@
 // kind-kaart) of de ouder ze wist. Het kind kijkt mee op de telefoon van de
 // ouder en typt de code op het eigen toestel in op leerkwartier.app/koppelen.
 // Presentatie-component: alle server-werk zit in OuderInzicht.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BRAND } from "../../brand.js";
 import { MAX_CODES, koppelLink } from "./koppelcodes.js";
+import { track } from "../../utils.js";
+
+// 🩺 Koppelhulp ouder-kant (Mark 23 okt 2026). Meting: twee echte ouders maakten elk 3 codes,
+// en geen enkele werd ingetypt. Daarom: (1) een QR-code — zit het kind naast je, dan scant het
+// de code met de camera en hoeft het niets over te typen; (2) hoe lang de code al wacht, met
+// een duwtje als hij na een dag nog niet gebruikt is.
+function dagenGeleden(iso) {
+  const t = new Date(iso || "").getTime();
+  if (!t) return null;
+  return Math.max(0, Math.floor((Date.now() - t) / 86400000));
+}
+function wachtTekst(d) {
+  if (d === null) return "wacht op een kind";
+  if (d === 0) return "gemaakt vandaag · wacht op een kind";
+  return `${d === 1 ? "1 dag" : `${d} dagen`} niet gebruikt`;
+}
+function CodeQr({ code }) {
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    let levend = true;
+    import("qrcode")
+      .then((QR) => QR.toDataURL(koppelLink(code), { margin: 1, width: 220, color: { dark: "#111111", light: "#ffffff" } }))
+      .then((u) => { if (levend) setUrl(u); })
+      .catch(() => { /* geen QR: de code zelf staat er nog */ });
+    return () => { levend = false; };
+  }, [code]);
+  if (!url) return <div style={{ ...F.sub, fontSize: 12, textAlign: "center", padding: 12 }}>QR-code maken…</div>;
+  return (
+    <div data-koppel-qr={code} style={{ margin: "10px auto 0", width: 196, padding: 10, borderRadius: 12, background: "#fff", textAlign: "center", color: "#111" }}>
+      <img src={url} alt={`QR-code voor koppelcode ${code}`} width={176} height={176} style={{ display: "block", margin: "0 auto" }} />
+      <div style={{ fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.35, marginTop: 6 }}>Scan met de camera van je kind. De code staat dan al ingevuld.</div>
+    </div>
+  );
+}
 
 const F = {
   kop: { fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 8 },
@@ -17,6 +51,7 @@ const F = {
 
 export default function KoppelcodesBlok({ codes = [], aantalKinderen = 0, over = MAX_CODES, bezig = false, copiedCode = "", onMaak, onWis, onWhatsApp, onKopieer, onKindHier }) {
   const [wisVraag, setWisVraag] = useState(null); // id van de code waarvoor "echt wissen?" openstaat
+  const [qrOpen, setQrOpen] = useState(null); // code waarvan de QR openstaat
   const leeg = codes.length === 0 && aantalKinderen === 0;
 
   return (
@@ -45,7 +80,7 @@ export default function KoppelcodesBlok({ codes = [], aantalKinderen = 0, over =
       {codes.map((iv, i) => (
         <div key={iv.id} data-koppelcode={iv.code} style={{ marginTop: 10, padding: "12px 14px", borderRadius: 12, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-            <span style={{ ...F.sub, fontSize: 12 }}>Code {i + 1}{codes.length > 1 ? ` van ${codes.length}` : ""} · wacht op een kind</span>
+            <span style={{ ...F.sub, fontSize: 12 }} data-code-wacht={dagenGeleden(iv.created_at) ?? ""}>Code {i + 1}{codes.length > 1 ? ` van ${codes.length}` : ""} · {wachtTekst(dagenGeleden(iv.created_at))}</span>
             {wisVraag === iv.id ? (
               <span style={{ display: "flex", gap: 6 }}>
                 <button type="button" onClick={() => { setWisVraag(null); onWis?.(iv.id); }} style={F.knop({ padding: "5px 9px", fontSize: 11.5, background: "rgba(255,112,67,0.18)", border: "1px solid rgba(255,112,67,0.6)", color: "#ffab91" })}>Ja, wissen</button>
@@ -63,7 +98,17 @@ export default function KoppelcodesBlok({ codes = [], aantalKinderen = 0, over =
             <button type="button" onClick={() => onKopieer?.(koppelLink(iv.code))} style={F.knop({ flex: "1 1 110px", background: copiedCode === koppelLink(iv.code) ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: copiedCode === koppelLink(iv.code) ? "#69f0ae" : "#fff" })}>
               {copiedCode === koppelLink(iv.code) ? "✓ Link gekopieerd" : "Kopieer link"}
             </button>
+            <button type="button" data-toon-qr={iv.code} onClick={() => { const open = qrOpen === iv.code ? null : iv.code; setQrOpen(open); if (open) { try { track("koppel_qr_open", {}); } catch { /* */ } } }}
+              style={F.knop({ flex: "1 1 100%", background: qrOpen === iv.code ? "rgba(0,176,255,0.14)" : "rgba(255,255,255,0.05)" })}>
+              {qrOpen === iv.code ? "QR-code verbergen" : "Zit je kind naast je? Toon QR-code"}
+            </button>
           </div>
+          {qrOpen === iv.code && <CodeQr code={iv.code} />}
+          {(dagenGeleden(iv.created_at) ?? 0) >= 1 && (
+            <div data-code-duwtje style={{ ...F.sub, fontSize: 12.5, marginTop: 10, padding: "8px 10px", borderRadius: 10, background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.35)", color: "rgba(255,255,255,0.85)" }}>
+              Nog niet gebruikt. Het makkelijkst: stuur de link via WhatsApp naar de telefoon of tablet waar je kind op oefent. Eén tik en de code staat al ingevuld. Zit je kind naast je, laat het dan de QR-code scannen.
+            </div>
+          )}
         </div>
       ))}
 

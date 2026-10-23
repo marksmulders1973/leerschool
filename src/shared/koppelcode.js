@@ -23,10 +23,53 @@ export function lijktKoppelcode(ruw) {
   return /^[A-Z0-9]{4,8}$/.test(normaliseerKoppelcode(ruw));
 }
 
+/** Tekens die nooit in een koppelcode zitten (alfabet zonder 0/O/1/I/L). */
+export function verbodenTekens(ruw) {
+  return [...new Set(normaliseerKoppelcode(ruw).match(/[01OIL]/g) || [])];
+}
+
+/**
+ * 🩺 Koppelhulp (Mark 23 okt 2026: "een koppel-assistent zodat het altijd lukt"): uit de
+ * diagnose van de server (RPC koppel_diagnose) de fout halen waar het scherm een eigen
+ * uitleg + volgende stap voor heeft. Puur, los getest.
+ *  alGekoppeld           — gebruikt door deze naam, en dít toestel is al gekoppeld: niets te doen
+ *  gebruiktAnderToestel  — gebruikt door deze naam, maar op een ander toestel/browser: nieuwe code nodig
+ *  gebruiktAnder         — gebruikt door een andere naam: elke code werkt één keer
+ *  verlopen              — oude code (48-uursregel van vóór 14 okt)
+ *  typfout               — bestaat niet, maar er is precies één vrije code die één teken scheelt
+ *  bestaatNiet           — bestaat niet en lijkt nergens op
+ *  geenVerbinding        — code is wél geldig, de claim faalde om een andere reden
+ */
+export function foutUitDiagnose(diag, alGekoppeldHier = false) {
+  const s = diag?.status;
+  if (s === "gebruikt") {
+    if (diag.zelfde_naam) return alGekoppeldHier ? "alGekoppeld" : "gebruiktAnderToestel";
+    return "gebruiktAnder";
+  }
+  if (s === "verlopen") return "verlopen";
+  if (s === "onbekend") return diag.suggestie ? "typfout" : "bestaatNiet";
+  if (s === "geldig") return "geenVerbinding";
+  return alGekoppeldHier ? "alGekoppeld" : "verlopen"; // geen diagnose: oud gedrag
+}
+
+/** Uitleg bij elke koppelfout, gedeeld door /koppelen en de koppelcode-balk op de eigen pagina. */
+export function koppelFoutTekst(fout, n = "") {
+  switch (fout) {
+    case "alGekoppeld": return `Je bent op dit toestel al gekoppeld, ${n}. Je hoeft niets meer te doen.`;
+    case "gebruiktAnderToestel": return `Deze code is al gebruikt door ${n}, maar op een ander toestel of in een andere browser. Een code werkt één keer. Op dit toestel heb je dus een nieuwe code nodig.`;
+    case "gebruiktAnder": return "Deze code is al gebruikt, door een ander kind of met een andere naam. Een code werkt maar één keer. Vraag thuis om een nieuwe code.";
+    case "verlopen": return "Deze code is te oud. Vraag thuis om een nieuwe code: die blijft geldig tot je hem gebruikt.";
+    case "typfout": return "Bijna goed! Er zit één letter of cijfer anders in.";
+    case "bestaatNiet": return "Deze code bestaat niet. Kijk letter voor letter nog eens op de telefoon van thuis. Of vraag of ze je de link sturen: dan staat de code al ingevuld.";
+    case "geenVerbinding": return "Het lukte even niet om verbinding te maken. Controleer je internet en tik nog een keer op Koppel mij.";
+    case "leeg": return "De code is te kort. Kijk nog eens op de telefoon van thuis.";
+    default: return "Dat lukte niet. Probeer het nog eens.";
+  }
+}
 /**
  * Code claimen voor deze kindnaam.
  * → { ok: true, rol, vanWie, linkId, childName }
- * → { ok: false, fout: "leeg" | "verlopen" | "alGekoppeld" | "geenVerbinding" | "onbekend" }
+ * → { ok: false, fout, suggestie? } — fout: "leeg" | "onbekend" | "geenVerbinding" | één van foutUitDiagnose
  */
 export async function claimKoppelcode(ruweCode, naam) {
   const code = normaliseerKoppelcode(ruweCode);
@@ -34,7 +77,12 @@ export async function claimKoppelcode(ruweCode, naam) {
   if (code.length < 4) return { ok: false, fout: "leeg" };
   if (!kind) return { ok: false, fout: "onbekend" };
   try {
-    const { data, error } = await supabase.rpc("claim_link_code", { p_code: code, p_child_name: kind });
+    let { data, error } = await supabase.rpc("claim_link_code", { p_code: code, p_child_name: kind });
+    if (error) {
+      // Eén keer opnieuw: een haperende verbinding op een schooltablet is de meest voorkomende storing.
+      await new Promise((r) => setTimeout(r, 1500));
+      ({ data, error } = await supabase.rpc("claim_link_code", { p_code: code, p_child_name: kind }));
+    }
     if (error) return { ok: false, fout: "geenVerbinding" };
     if (data?.ok) {
       const rol = data.rol || "ouder";
@@ -42,8 +90,13 @@ export async function claimKoppelcode(ruweCode, naam) {
       return { ok: true, rol, vanWie: String(data.van_wie || "").trim(), linkId: data.link_id, childName: data.child_name || kind };
     }
     if (data?.error === "code_invalid_or_expired") {
-      // Al gekoppeld op dit apparaat? Dan is een "verlopen" code geen probleem.
-      return { ok: false, fout: koppelingVoor(kind)?.ouder || koppelingVoor(kind)?.leraar ? "alGekoppeld" : "verlopen" };
+      const hier = !!(koppelingVoor(kind)?.ouder || koppelingVoor(kind)?.leraar);
+      let diag = null;
+      try {
+        const r = await supabase.rpc("koppel_diagnose", { p_code: code, p_child_name: kind });
+        if (!r.error) diag = r.data;
+      } catch { /* zonder diagnose: oud gedrag */ }
+      return { ok: false, fout: foutUitDiagnose(diag, hier), suggestie: diag?.suggestie || null };
     }
     return { ok: false, fout: "onbekend" };
   } catch {
