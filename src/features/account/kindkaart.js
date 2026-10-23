@@ -103,3 +103,67 @@ export function tipVoorVanavond(kind, zwak = [], week = null) {
   const t = (eerste && TIPS[eerste]) || "Vraag {kind} om één ding van vandaag aan jou uit te leggen. Wie het kan uitleggen, snapt het echt.";
   return t.replace(/\{kind\}/g, naam);
 }
+
+// ── 🎯 Doorstroomtoets-meter (fase 3, Mark 23 okt 2026) ──────────────────────
+// Per toetsonderdeel hoeveel procent van de Doorstroomtoets-oefenvragen goed ging (laatste 60 dagen),
+// uit leaderboard.detail ([{ pad, goed }]). Indeling zoals de oefentoets (citoMixVragen): rekenen,
+// taal (lezen + taalverzorging), studievaardigheden. Eerlijk: een schatting uit onze eigen oefenvragen,
+// geen echte toetsuitslag. Onder MIN_VRAGEN zegt de meter "nog te weinig vragen".
+export const MIN_VRAGEN = 15;
+export const ONDERDELEN = [
+  { key: "rekenen", naam: "Rekenen" },
+  { key: "taal", naam: "Taal (lezen en taalverzorging)" },
+  { key: "studievaardigheden", naam: "Studievaardigheden" },
+];
+const VAK_NAAR_ONDERDEEL = {
+  rekenen: "rekenen", wiskunde: "rekenen", cito: "rekenen",
+  taal: "taal", spelling: "taal", "begrijpend-lezen": "taal",
+  aardrijkskunde: "studievaardigheden", natuur: "studievaardigheden",
+};
+export function onderdeelVoorPad(pad) {
+  if (!pad || !/^groep[1-8]/.test(String(pad.level || ""))) return null;
+  if (String(pad.sloThema || "").toLowerCase().startsWith("studievaardigheden")) return "studievaardigheden";
+  return VAK_NAAR_ONDERDEEL[pad.subject] || null;
+}
+export function oordeel(pct, aantal) {
+  if (aantal < MIN_VRAGEN) return { key: "weinig", tekst: "Nog te weinig vragen om iets te zeggen" };
+  if (pct >= 75) return { key: "sterk", tekst: "Sterk" };
+  if (pct >= 55) return { key: "opweg", tekst: "Op weg" };
+  return { key: "oefenen", tekst: "Hier valt het meeste te winnen" };
+}
+/**
+ * @param scores  leaderboard-rijen met { completed_at, detail }
+ * @param padVoor (id) => manifest-rij of undefined
+ * → { onderdelen: [{ key, naam, goed, aantal, pct, oordeel, gemist: [{ id, titel, emoji, fout }] }], totaal }
+ */
+export function doorstroomMeter(scores = [], padVoor = () => null, nu = new Date(), dagen = 60) {
+  const grens = new Date(nu).getTime() - dagen * DAG;
+  const per = Object.fromEntries(ONDERDELEN.map((o) => [o.key, { goed: 0, aantal: 0, fout: {} }]));
+  for (const r of scores || []) {
+    const t = r?.completed_at ? new Date(r.completed_at).getTime() : NaN;
+    if (!Number.isFinite(t) || t < grens) continue;
+    let detail = r.detail;
+    if (typeof detail === "string") { try { detail = JSON.parse(detail); } catch { detail = null; } }
+    if (!Array.isArray(detail)) continue;
+    for (const v of detail) {
+      const pad = v?.pad ? padVoor(v.pad) : null;
+      const ond = onderdeelVoorPad(pad);
+      if (!ond) continue;
+      const o = per[ond];
+      o.aantal += 1;
+      if (v.goed === true) o.goed += 1;
+      else o.fout[pad.id] = (o.fout[pad.id] || 0) + 1;
+    }
+  }
+  const onderdelen = ONDERDELEN.map(({ key, naam }) => {
+    const o = per[key];
+    const pct = o.aantal ? Math.round((o.goed / o.aantal) * 100) : 0;
+    const gemist = Object.entries(o.fout).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([id, fout]) => {
+      const p = padVoor(id) || {};
+      return { id, fout, titel: String(p.title || id).replace(/\s+—\s+groep.*$/i, "").replace(/\s*\(groep[^)]*\)\s*$/i, "").trim(), emoji: p.emoji || "📘" };
+    });
+    return { key, naam, goed: o.goed, aantal: o.aantal, pct, oordeel: oordeel(pct, o.aantal), gemist };
+  });
+  const totaal = onderdelen.reduce((s, o) => s + o.aantal, 0);
+  return { onderdelen, totaal };
+}

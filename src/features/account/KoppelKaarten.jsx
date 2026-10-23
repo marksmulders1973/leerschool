@@ -10,8 +10,9 @@ import { useEffect, useState } from "react";
 import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import supabase from "../../supabase.js";
 import { track } from "../../utils.js";
-import { haalKlaargezetVoorLink } from "../../shared/ouderKlaargezet.js";
-import { weekSamenvatting, wanneerTekst, sterkEnZwak, tipVoorVanavond } from "./kindkaart.js";
+import { haalKlaargezetVoorLink, zetKlaar } from "../../shared/ouderKlaargezet.js";
+import { weekSamenvatting, wanneerTekst, sterkEnZwak, tipVoorVanavond, doorstroomMeter, MIN_VRAGEN } from "./kindkaart.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { BERICHT_ZINNEN, MAX_BERICHT, stuurBericht, laatsteBerichtVoorLink, berichtenVoorKind, markeerBerichtGelezen } from "../../shared/thuisBericht.js";
 
 const F = {
@@ -112,6 +113,62 @@ export function BerichtBallon({ bericht, kind, kleur = "#ff9fb2", onGelezen }) {
   );
 }
 
+// ── 🎯 Doorstroomtoets-meter (fase 3, Mark 23 okt 2026) ───────────────────
+const PAD_PER_ID = new Map(pathManifest.map((x) => [x.id, x]));
+const METER_KLEUR = { sterk: "#69f0ae", opweg: "#ffd54f", oefenen: "#ff8a65", weinig: "rgba(255,255,255,0.35)" };
+function DoorstroomMeter({ kind, scores, linkId, ingelogd, kleur }) {
+  const m = doorstroomMeter(scores, (id) => PAD_PER_ID.get(id));
+  const [klaar, setKlaar] = useState({}); // pad-id → "bezig" | "ok" | "mis"
+  const zet = async (g) => {
+    setKlaar((k) => ({ ...k, [g.id]: "bezig" }));
+    const r = await zetKlaar(linkId, { id: g.id, titel: g.titel, emoji: g.emoji }, "ouder").catch(() => ({ ok: false }));
+    setKlaar((k) => ({ ...k, [g.id]: r?.ok ? "ok" : "mis" }));
+    try { track("meter_zetklaar", { ok: !!r?.ok }); } catch { /* */ }
+  };
+  return (
+    <div style={F.kaart} data-doorstroom-meter>
+      <div style={F.kop}>Doorstroomtoets-meter</div>
+      {m.totaal === 0 ? (
+        <div style={F.tekst}>{kind} heeft de afgelopen 2 maanden nog geen Doorstroomtoets-oefenvragen gemaakt. Na een paar oefentoetsjes zie je hier per onderdeel hoe het gaat.</div>
+      ) : (
+        <>
+          {m.onderdelen.map((o) => (
+            <div key={o.key} style={{ marginTop: 10 }} data-meter-onderdeel={o.key}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 8, ...F.tekst, fontSize: 13 }}>
+                <strong style={{ color: "#fff" }}>{o.naam}</strong>
+                <span style={{ color: METER_KLEUR[o.oordeel.key], fontWeight: 700, whiteSpace: "nowrap" }}>{o.aantal >= MIN_VRAGEN ? `${o.pct}% goed` : `${o.aantal} vragen`}</span>
+              </div>
+              <div style={{ height: 10, borderRadius: 6, background: "rgba(255,255,255,0.08)", marginTop: 4, overflow: "hidden" }} aria-hidden="true">
+                <div style={{ width: `${o.aantal >= MIN_VRAGEN ? Math.max(4, o.pct) : 0}%`, height: "100%", background: METER_KLEUR[o.oordeel.key] }} />
+              </div>
+              <div style={{ ...F.tekst, fontSize: 12.5, marginTop: 3 }}>{o.oordeel.tekst}{o.aantal >= MIN_VRAGEN ? ` · ${o.aantal} vragen` : ""}</div>
+              {o.aantal > 0 && o.gemist.length > 0 && (
+                <div style={{ ...F.tekst, fontSize: 12.5, marginTop: 4 }}>
+                  Meest gemist: {o.gemist.map((g, i) => (
+                    <span key={g.id}>
+                      {i > 0 ? ", " : ""}{g.titel}
+                      {ingelogd && linkId && (
+                        klaar[g.id] === "ok" ? <span style={{ color: "#69f0ae", fontWeight: 700 }}> (klaargezet)</span>
+                          : <button type="button" disabled={klaar[g.id] === "bezig"} onClick={() => zet(g)} data-meter-zetklaar={g.id}
+                              style={{ marginLeft: 6, padding: "2px 8px", borderRadius: 8, border: `1px solid ${kleur}`, background: "transparent", color: kleur, fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, cursor: "pointer" }}>
+                              {klaar[g.id] === "bezig" ? "…" : klaar[g.id] === "mis" ? "opnieuw" : "zet klaar"}
+                            </button>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </>
+      )}
+      <div style={{ ...F.tekst, fontSize: 11.5, marginTop: 10, color: "rgba(255,255,255,0.5)" }}>
+        Een schatting uit de oefenvragen in Leerkwartier van de laatste 2 maanden, geen echte toetsuitslag. Groen: sterk (75% of meer) · geel: op weg · oranje: hier valt het meeste te winnen.
+      </div>
+    </div>
+  );
+}
+
 // ── 📋 Kindkaart ─────────────────────────────────────────────────────────
 export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, onLaatOefenen }) {
   const [data, setData] = useState(null); // { scores, perPad, klaar, stappenGelezen }
@@ -121,7 +178,7 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
     (async () => {
       if (!linkId) { setData({ geenLink: true, scores: [], perPad: {}, klaar: [] }); return; }
       const [sc, lp, kl] = await Promise.all([
-        supabase.from("leaderboard").select("id, subject, percentage, completed_at, time_taken").eq("link_id", linkId).order("completed_at", { ascending: false }).limit(80),
+        supabase.from("leaderboard").select("id, subject, percentage, completed_at, time_taken, detail").eq("link_id", linkId).order("completed_at", { ascending: false }).limit(80),
         supabase.from("learn_progress").select("learn_path_id, step_idx, completed_at").eq("link_id", linkId).order("completed_at", { ascending: false }).limit(300),
         ingelogd ? haalKlaargezetVoorLink(linkId, "ouder") : Promise.resolve([]),
       ].map((p) => Promise.resolve(p).catch(() => ({ data: [] }))));
@@ -137,6 +194,8 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
 
   const week = data ? weekSamenvatting(data.scores, data.perPad) : null;
   const { sterk, zwak } = data ? sterkEnZwak(data.scores) : { sterk: [], zwak: [] };
+  // Geen zwak vak uit de toetsjes? Dan het zwakste Doorstroomtoets-onderdeel voor de tip van vanavond.
+  const meterZwak = data ? doorstroomMeter(data.scores, (id) => PAD_PER_ID.get(id)).onderdelen.filter((o) => o.oordeel.key === "oefenen").sort((a, b) => a.pct - b.pct).map((o) => ({ vak: o.key })) : [];
   const open = (data?.klaar || []).filter((x) => !x.gedaan);
   const gedaan = (data?.klaar || []).filter((x) => x.gedaan);
   const leeg = data && !week.laatste;
@@ -211,6 +270,8 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
 
       {data && ingelogd && linkId && <BerichtSturen kind={kind} linkId={linkId} kleur={kleur} />}
 
+      {data && !data.geenLink && <DoorstroomMeter kind={kind} scores={data.scores} linkId={linkId} ingelogd={ingelogd} kleur={kleur} />}
+
       {data && (sterk.length > 0 || zwak.length > 0) && (
         <div style={F.kaart} data-kindkaart-vakken>
           {sterk.length > 0 && <div style={F.tekst}><strong style={{ color: "#69f0ae" }}>Gaat goed:</strong> {sterk.map((x) => x.naam).join(", ")}</div>}
@@ -221,7 +282,7 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
       {data && (
         <div style={{ ...F.kaart, borderColor: "rgba(105,240,174,0.35)", background: "rgba(105,240,174,0.06)" }} data-kindkaart-tip>
           <div style={F.kop}>Tip voor vanavond</div>
-          <div style={F.tekst}>{tipVoorVanavond(kind, zwak, week)}</div>
+          <div style={F.tekst}>{tipVoorVanavond(kind, zwak.length ? zwak : meterZwak, week)}</div>
         </div>
       )}
 
