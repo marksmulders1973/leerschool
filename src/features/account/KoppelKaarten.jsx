@@ -12,6 +12,7 @@ import supabase from "../../supabase.js";
 import { track } from "../../utils.js";
 import { haalKlaargezetVoorLink } from "../../shared/ouderKlaargezet.js";
 import { weekSamenvatting, wanneerTekst, sterkEnZwak, tipVoorVanavond } from "./kindkaart.js";
+import { BERICHT_ZINNEN, MAX_BERICHT, stuurBericht, laatsteBerichtVoorLink, berichtenVoorKind, markeerBerichtGelezen } from "../../shared/thuisBericht.js";
 
 const F = {
   scherm: { maxWidth: 520, margin: "0 auto", textAlign: "left", color: "#fff" },
@@ -40,6 +41,76 @@ const naarOuderOverzicht = (kind, wat) => {
   try { localStorage.setItem("lk_ouder_kind", kind); } catch { /* */ }
   window.location.href = "/ouder";
 };
+
+// ── 💬 Berichtje sturen (fase 2, Mark 23 okt 2026: "ja perfect") ─────────
+function BerichtSturen({ kind, linkId, kleur }) {
+  const [laatste, setLaatste] = useState(undefined);
+  const [tekst, setTekst] = useState("");
+  const [staat, setStaat] = useState("schrijf"); // schrijf | bezig | verstuurd | mis
+  useEffect(() => {
+    let weg = false;
+    laatsteBerichtVoorLink(linkId).then((b) => { if (!weg) setLaatste(b); }).catch(() => { if (!weg) setLaatste(null); });
+    return () => { weg = true; };
+  }, [linkId, staat]);
+  const stuur = async () => {
+    if (!tekst.trim() || staat === "bezig") return;
+    setStaat("bezig");
+    const r = await stuurBericht(linkId, tekst);
+    setStaat(r.ok ? "verstuurd" : "mis");
+    if (r.ok) setTekst("");
+  };
+  return (
+    <div style={F.kaart} data-kindkaart-bericht>
+      <div style={F.kop}>Stuur {kind} een berichtje</div>
+      {laatste && (
+        <div style={{ ...F.tekst, fontSize: 12.5, marginBottom: 8 }} data-bericht-laatste>
+          Laatste: "{laatste.tekst}" · {wanneerTekst(laatste.created_at)} · {laatste.gelezen_at ? <span style={{ color: "#69f0ae", fontWeight: 700 }}>gelezen</span> : "nog niet gelezen"}
+        </div>
+      )}
+      {staat === "verstuurd" ? (
+        <div style={{ ...F.tekst, color: "#69f0ae" }} data-bericht-verstuurd>
+          Verstuurd! {kind} ziet het op de eigen pagina.{" "}
+          <button type="button" onClick={() => setStaat("schrijf")} style={{ background: "none", border: "none", padding: 0, color: "#00b0ff", fontWeight: 700, cursor: "pointer", textDecoration: "underline", fontSize: 13.5 }}>Nog een</button>
+        </div>
+      ) : (
+        <>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 8 }}>
+            {BERICHT_ZINNEN.map((z) => (
+              <button key={z} type="button" onClick={() => setTekst(z)} data-bericht-zin
+                style={{ padding: "7px 11px", borderRadius: 999, border: tekst === z ? `2px solid ${kleur}` : "1px solid rgba(255,255,255,0.22)", background: tekst === z ? `${kleur}22` : "transparent", color: "#fff", fontFamily: "var(--font-body)", fontSize: 13, cursor: "pointer" }}>{z}</button>
+            ))}
+          </div>
+          <textarea value={tekst} onChange={(e) => setTekst(e.target.value.slice(0, MAX_BERICHT))} rows={2} placeholder="Of typ zelf iets…" aria-label={`Berichtje aan ${kind}`} data-bericht-invoer
+            style={{ width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: "1.5px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.06)", color: "#fff", fontFamily: "var(--font-body)", fontSize: 15, resize: "none", outline: "none" }} />
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6 }}>
+            <span style={{ ...F.tekst, fontSize: 12, flex: 1 }}>{tekst.length}/{MAX_BERICHT}</span>
+            <button type="button" onClick={stuur} disabled={!tekst.trim() || staat === "bezig"} data-bericht-stuur
+              style={{ padding: "9px 16px", borderRadius: 10, border: "none", background: !tekst.trim() ? "rgba(255,255,255,0.12)" : kleur, color: "#08121f", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, cursor: tekst.trim() ? "pointer" : "default" }}>
+              {staat === "bezig" ? "Even…" : "Verstuur"}
+            </button>
+          </div>
+          {staat === "mis" && <div role="alert" style={{ ...F.tekst, color: "#ffab91", fontSize: 13 }}>Versturen lukte niet. Probeer het zo nog eens.</div>}
+        </>
+      )}
+    </div>
+  );
+}
+
+// Het kind ziet het bericht: tekstballon + "Dank je!" (= gelezen). Gedeeld door OuderWilKaart en de eigen pagina.
+export function BerichtBallon({ bericht, kind, kleur = "#ff9fb2", onGelezen }) {
+  const [klaar, setKlaar] = useState(!!bericht?.gelezen_at);
+  if (!bericht) return null;
+  const dank = async () => { setKlaar(true); await markeerBerichtGelezen(bericht.id, kind); onGelezen?.(bericht.id); };
+  return (
+    <div data-bericht-ballon style={{ padding: "12px 14px", borderRadius: "16px 16px 16px 4px", background: `${kleur}1f`, border: `1.5px solid ${kleur}`, color: "#fff" }}>
+      <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, color: kleur, marginBottom: 4 }}>Bericht van {bericht.van || "thuis"} · {wanneerTekst(bericht.created_at)}</div>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800, lineHeight: 1.3, wordBreak: "break-word" }}>{bericht.tekst}</div>
+      {klaar
+        ? <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "#69f0ae", marginTop: 6, fontWeight: 700 }}>Gelezen</div>
+        : <button type="button" onClick={dank} data-bericht-dank style={{ marginTop: 8, padding: "8px 14px", borderRadius: 10, border: "none", background: kleur, color: "#2a0a14", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>Dank je!</button>}
+    </div>
+  );
+}
 
 // ── 📋 Kindkaart ─────────────────────────────────────────────────────────
 export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, onLaatOefenen }) {
@@ -138,6 +209,8 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
         </div>
       )}
 
+      {data && ingelogd && linkId && <BerichtSturen kind={kind} linkId={linkId} kleur={kleur} />}
+
       {data && (sterk.length > 0 || zwak.length > 0) && (
         <div style={F.kaart} data-kindkaart-vakken>
           {sterk.length > 0 && <div style={F.tekst}><strong style={{ color: "#69f0ae" }}>Gaat goed:</strong> {sterk.map((x) => x.naam).join(", ")}</div>}
@@ -163,6 +236,13 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
 // ── 💛 OuderWilKaart ─────────────────────────────────────────────────────
 export function OuderWilKaart({ ouderNaam, kind, linkId, soort = "ouder", kleur = "#ffb74d", onTerug, onStart, onNaarMijn, onWissel }) {
   const [items, setItems] = useState(null);
+  const [bericht, setBericht] = useState(null);
+  useEffect(() => {
+    if (!linkId || soort === "leraar") return undefined;
+    let weg = false;
+    berichtenVoorKind(kind, [linkId]).then((l) => { if (!weg) setBericht(l[0] ? { ...l[0], van: ouderNaam } : null); }).catch(() => {});
+    return () => { weg = true; };
+  }, [kind, linkId, soort, ouderNaam]);
   useEffect(() => {
     let weg = false;
     try { track("ouderblok_open", { soort, link: !!linkId }); } catch { /* */ }
@@ -180,6 +260,7 @@ export function OuderWilKaart({ ouderNaam, kind, linkId, soort = "ouder", kleur 
   return (
     <div style={F.scherm} data-ouderwil={ouderNaam}>
       <Kop naam={ouderNaam} kleur={kleur} regel1={`${kind}, dit is van`} regel2={ouderNaam} onTerug={onTerug} />
+      {bericht && <div style={{ marginTop: 12 }}><BerichtBallon bericht={bericht} kind={kind} kleur={kleur} /></div>}
       <div style={F.kaart}>
         <div style={F.kop}>{ouderNaam} wil dat je werkt aan:</div>
         {!items && <div style={F.tekst}>Even kijken…</div>}

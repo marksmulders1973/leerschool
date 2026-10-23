@@ -4,7 +4,7 @@
 > zien hoe ze ervoor staat, wat ze nog moet doen, en duidelijk in beeld waar ik naar kijk.
 > En als een kind op een ouder klikt: 'papa wil dat je werkt aan …'."
 >
-> Status: **fase 1 live (v982 "037", 23 okt).** Antwoorden Mark: 1 direct zichtbaar · 2 geen slot · 3 bericht ja · 4 kind ziet niet dat ouder keek. Volgende: fase 2 (bericht van thuis).
+> Status: **fase 1 live (v982 "037", 23 okt).** Antwoorden Mark: 1 direct zichtbaar · 2 geen slot · 3 bericht ja · 4 kind ziet niet dat ouder keek. Fase 2 (bericht van thuis) live v984 "039". Volgende: fase 3 (Doorstroomtoets-meter).
 
 ## Wat er al is (hergebruiken, niet opnieuw bouwen)
 

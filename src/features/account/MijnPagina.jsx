@@ -30,6 +30,8 @@ import { bepaalPlan, planSamenvatting } from "../vandaag/vandaagPlan.js";
 import { leesVoorkeur, ververseVoorkeur, VOORKEUR_EVENT } from "../vandaag/voorkeur.js";
 import { startKwartierPlan, kwartierGedaanVandaag, kwartierActief, kwartierStand, stopKwartier } from "../vandaag/kwartier.js";
 import { haalKlaargezetVoorKind, markeerGedaan, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
+import { berichtenVoorKind, BERICHT_EVENT } from "../../shared/thuisBericht.js";
+import { BerichtBallon } from "./KoppelKaarten.jsx";
 import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
 import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
 
@@ -534,6 +536,16 @@ export default function MijnPagina({
     laad();
     window.addEventListener(KLAARGEZET_EVENT, laad);
     return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
+  }, [player]);
+  // 💬 Bericht van thuis (23 okt 2026, fase 2): ongelezen berichtjes van een gekoppelde ouder of verzorger.
+  const [thuisBerichten, setThuisBerichten] = useState([]);
+  useEffect(() => {
+    if (!player) { setThuisBerichten([]); return; }
+    let cancel = false;
+    const laad = async () => { const r = await berichtenVoorKind(player).catch(() => []); if (!cancel) setThuisBerichten(r.filter((b) => !b.gelezen_at)); };
+    laad();
+    window.addEventListener(BERICHT_EVENT, laad);
+    return () => { cancel = true; window.removeEventListener(BERICHT_EVENT, laad); };
   }, [player]);
   // 🏠 Gezinsstart-voorkeur (30 sep 2026): waar thuis de nadruk op ligt. Van
   // het toestel (lk_voorkeur) en, bij een ouder-koppeling, vers van de server.
@@ -2069,6 +2081,11 @@ export default function MijnPagina({
                   Nog niets voor je klaargezet. Je ouder, verzorger of juf kan hier oefeningen voor je klaarzetten.
                 </div>
               </Card>
+            )}
+            {thuisBerichten.length > 0 && (
+              <div data-mijn-thuisbericht style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: "var(--space-4)" }}>
+                {thuisBerichten.slice(0, 2).map((b) => <BerichtBallon key={b.id} bericht={b} kind={player} />)}
+              </div>
             )}
             {thuisKlaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
