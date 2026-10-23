@@ -178,7 +178,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                   <div style={{ ...F.sub, fontSize: 13, marginBottom: 8 }}>De code staat op de telefoon van je ouder, bij <strong>Koppelcodes</strong>. Zes letters en cijfers.</div>
                   <input
                     value={code}
-                    onChange={(e) => { setCode(normaliseerKoppelcode(e.target.value)); setFout(""); if (stap > 1 && normaliseerKoppelcode(e.target.value).length < 4) setStap(1); }}
+                    onChange={(e) => { setCode(normaliseerKoppelcode(e.target.value)); setFout(""); setFoutCode(null); setSuggestie(null); if (stap > 1 && normaliseerKoppelcode(e.target.value).length < 4) setStap(1); }}
                     onKeyDown={(e) => { if (e.key === "Enter" && code.length >= 4) setStap(2); }}
                     placeholder="ABC123" autoCapitalize="characters" autoCorrect="off" spellCheck={false} inputMode="text" maxLength={8}
                     aria-label="Koppelcode" data-koppel-code style={F.input}
@@ -202,7 +202,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                       {namen.length > 0 && (
                         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
                           {namen.map((n) => (
-                            <button key={n} type="button" onClick={() => { setNaam(n); setFout(""); }} data-koppel-naam={n}
+                            <button key={n} type="button" onClick={() => { setNaam(n); setFout(""); setFoutCode(null); setSuggestie(null); }} data-koppel-naam={n}
                               style={{ padding: "8px 14px", borderRadius: 999, border: naam === n ? "2px solid #00b0ff" : "1.5px solid rgba(255,255,255,0.25)", background: naam === n ? "rgba(0,176,255,0.16)" : "rgba(255,255,255,0.04)", color: "#fff", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
                               {n}
                             </button>
@@ -211,13 +211,13 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
                       )}
                       <input
                         value={naam}
-                        onChange={(e) => { setNaam(e.target.value); setFout(""); }}
+                        onChange={(e) => { setNaam(e.target.value); setFout(""); setFoutCode(null); setSuggestie(null); }}
                         onKeyDown={(e) => { if (e.key === "Enter") koppel(); }}
                         placeholder={namen.length ? "Of typ een andere naam" : "Typ je voornaam"}
                         aria-label="Je naam" data-koppel-naam-invoer autoComplete="given-name"
                         style={{ ...F.input, fontSize: 18, letterSpacing: 0, textAlign: "left", fontFamily: "var(--font-body)", fontWeight: 600 }}
                       />
-                      <button type="button" disabled={bezig || !naam.trim()} onClick={koppel} style={{ ...F.primair(bezig || !naam.trim()), marginTop: 10 }} data-koppel-knop>
+                      <button type="button" disabled={bezig || !naam.trim()} onClick={() => koppel()} style={{ ...F.primair(bezig || !naam.trim()), marginTop: 10 }} data-koppel-knop>
                         {bezig ? "Even…" : "Koppel mij"}
                       </button>
                       {fout && <div role="alert" style={{ ...F.sub, color: "#ffab91", fontSize: 13, marginTop: 8 }} data-koppel-fout={foutCode || "ok"}>{fout}</div>}
