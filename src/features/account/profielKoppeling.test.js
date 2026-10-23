@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { koppelGraaf, groepUitNiveau, KOPPEL_KLEUREN } from "./profielKoppeling.js";
+import { koppelGraaf, groepUitNiveau, koppelNaam, KOPPEL_KLEUREN } from "./profielKoppeling.js";
 
 const kv = (map) => (n) => map[String(n).toLowerCase()] || null;
 const lijn = (van, naar, soort = "ouder", bron = "toestel") => ({ van, naar, soort, bron });
@@ -14,14 +14,15 @@ describe("koppelGraaf — Marks telefoon 21 okt 2026 (de screenshot)", () => {
   const kop = kv({ brian: { ouder: { van_wie: "", link_id: "b1" } } });
   const g = koppelGraaf(profielen, kop, { ingelogd: true, huidigeNaam: "Olivia", accountKinderen: [{ naam: "Olivia", linkId: "d48c" }] });
 
-  it("lijn Marksmul → Olivia uit het account; Brian extern 'thuis'", () => {
+  it("lijn Marksmul → Olivia uit het account; Brian extern zonder naam → blokje 'Ander toestel'", () => {
     expect(g.lijnen).toEqual([lijn("Marksmul", "Olivia", "ouder", "account")]);
-    expect(g.extern).toEqual([{ kind: "Brian", soort: "ouder", label: "thuis" }]);
+    expect(g.extern).toEqual([{ kind: "Brian", soort: "ouder", label: "" }]);
+    expect(g.buiten).toEqual([{ sleutel: "buiten:ouder:onbekend", naam: "Ander toestel", soort: "ouder", kinderen: ["Brian"] }]);
   });
   it("label en kaart zeggen hetzelfde (de oude tegenstrijdigheid)", () => {
     expect(g.labels.get("marksmul")).toBe("gekoppeld met Olivia");
     expect(g.labels.get("olivia")).toBe("gekoppeld met Marksmul");
-    expect(g.labels.get("brian")).toBe("gekoppeld met thuis");
+    expect(g.labels.get("brian")).toBe("gekoppeld met een ander toestel");
     expect(g.labels.has("mark")).toBe(false);
   });
   it("geen knop 'Koppel Olivia' meer; alleen Mark (en Brian heeft al een ouder)", () => {
@@ -30,10 +31,11 @@ describe("koppelGraaf — Marks telefoon 21 okt 2026 (de screenshot)", () => {
   it("toestel krijgt Olivia's koppeling erbij (zelfde als de één-tik-knop)", () => {
     expect(g.sync).toEqual([{ kind: "Olivia", linkId: "d48c", vanWie: "Marksmul" }]);
   });
-  it("kleuren: ouder 1 oranje, Olivia dezelfde kleur, Brian extern", () => {
+  it("kleuren: ouder 1 oranje, Olivia dezelfde kleur, Brian de kleur van zijn blokje", () => {
     expect(g.kleur.get("marksmul")).toBe(KOPPEL_KLEUREN.ouder[0]);
     expect(g.kleur.get("olivia")).toBe(KOPPEL_KLEUREN.ouder[0]);
-    expect(g.kleur.get("brian")).toBe(KOPPEL_KLEUREN.extern);
+    expect(g.kleur.get("brian")).toBe(KOPPEL_KLEUREN.ouder[1]);
+    expect(g.kleur.get("buiten:ouder:onbekend")).toBe(KOPPEL_KLEUREN.ouder[1]);
     expect(g.kleur.has("mark")).toBe(false);
   });
   it("na de sync (toestel kent Olivia nu): zelfde plaatje, geen dubbele lijn, geen sync meer", () => {
@@ -123,11 +125,60 @@ describe("koppelGraaf — leerkracht, extern en randgevallen", () => {
       kv({ brian: { ouder: { van_wie: "" } } }), { ingelogd: true, accountKinderen: [{ naam: "Brian", linkId: "b2" }] });
     expect(g4.sync).toEqual([]);
     expect(g4.lijnen).toEqual([lijn("Mark", "Brian", "ouder", "account")]);
-    expect(g4.labels.get("brian")).toBe("gekoppeld met Mark en thuis");
+    expect(g4.labels.get("brian")).toBe("gekoppeld met Mark en een ander toestel");
   });
   it("lege of rare invoer crasht niet", () => {
     expect(koppelGraaf([], () => null).lijnen).toEqual([]);
     expect(koppelGraaf([{ naam: "  ", role: "ouder" }, null], () => null).kandidaten).toEqual([]);
+  });
+});
+
+describe("koppelGraaf — op een ander toestel (Mark 23 okt 2026)", () => {
+  const profielen = [
+    { naam: "Marksmul", role: "ouder" },
+    { naam: "Brian", role: "leerling" }, { naam: "Olivia", role: "leerling" }, { naam: "Mark", role: "leerling" },
+  ];
+  it("Deianera (naam opgezocht) kijkt mee bij Brian én Olivia → één blokje, twee pijlen", () => {
+    const kop = kv({
+      brian: { ouder: { link_id: "b1", van_wie: "", voornaam: "Deianera" } },
+      olivia: { ouders: [{ link_id: "o1", van_wie: "Deianera Meinders", voornaam: "Deianera" }], ouder: { link_id: "o1" } },
+    });
+    const g = koppelGraaf(profielen, kop);
+    expect(g.buiten).toEqual([{ sleutel: "buiten:ouder:deianera", naam: "Deianera", soort: "ouder", kinderen: ["Brian", "Olivia"] }]);
+    expect(g.labels.get("brian")).toBe("gekoppeld met Deianera");
+    expect(g.labels.get("olivia")).toBe("gekoppeld met Deianera");
+  });
+  it("twee ouders bij één kind: Pappa Mark op een ander toestel + Deianera; Mark maar één", () => {
+    const kop = kv({ brian: { ouders: [
+      { link_id: "b0", van_wie: "Pappa", voornaam: "Mark" },
+      { link_id: "b1", van_wie: "", voornaam: "Deianera" },
+    ] } });
+    const g = koppelGraaf(profielen, kop);
+    expect(g.buiten.map((b) => b.naam)).toEqual(["Pappa Mark", "Deianera"]);
+    expect(g.labels.get("brian")).toBe("gekoppeld met Pappa Mark en Deianera");
+    expect(g.kandidaten.map((k) => k.kind)).toEqual(["Olivia", "Mark"]);
+  });
+  it("naam van een ander toestel die hier ook een profiel heeft → gewone lijn, geen blokje", () => {
+    const g = koppelGraaf(profielen, kv({ brian: { ouders: [{ link_id: "x", van_wie: "", voornaam: "Marksmul" }] } }));
+    expect(g.lijnen).toEqual([lijn("Marksmul", "Brian")]);
+    expect(g.buiten).toEqual([]);
+  });
+  it("dezelfde koppeling dubbel opgeslagen → één lijn", () => {
+    const g = koppelGraaf(profielen, kv({ brian: { ouders: [{ van_wie: "Marksmul" }, { van_wie: "marksmul" }] } }));
+    expect(g.lijnen).toEqual([lijn("Marksmul", "Brian")]);
+  });
+});
+
+describe("koppelNaam", () => {
+  it("rolwoord + voornaam, anders de naam zelf", () => {
+    expect(koppelNaam("Pappa", "Mark")).toBe("Pappa Mark");
+    expect(koppelNaam("mama", "Deianera")).toBe("Mama Deianera");
+    expect(koppelNaam("Oma Truus", "Truus")).toBe("Oma Truus");
+    expect(koppelNaam("Deianera Meinders", "Deianera")).toBe("Deianera");
+    expect(koppelNaam("", "Deianera")).toBe("Deianera");
+    expect(koppelNaam("Papa", "")).toBe("Papa");
+    expect(koppelNaam("Tante Jo", "Joke")).toBe("Tante Jo");
+    expect(koppelNaam("", "")).toBe("");
   });
 });
 

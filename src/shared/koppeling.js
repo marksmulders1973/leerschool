@@ -13,6 +13,10 @@
 //
 // Opslag: localStorage "lk_koppelingen" = { "<naam lower>": { ouder?: {...}, leraar?: {...} } }
 // waarbij {...} = { link_id, van_wie, at }.
+// 23 okt 2026 (Mark: "sommige kinderen worden bekeken door 2 ouders"): naast `ouder` (= de
+// laatste koppeling, die gaat mee met het oefenwerk) bewaren we `ouders`: álle ouder-koppelingen
+// van dit kind op dit toestel, elk { link_id, van_wie, voornaam?, at }. Oude opslag zonder
+// `ouders` telt als [ouder].
 
 import supabase from "../supabase.js";
 
@@ -50,7 +54,14 @@ export function bewaarKoppeling({ naam, linkId, rol = "ouder", vanWie = "" }) {
   if (!k || !linkId) return;
   const alles = lees();
   const r = rol === "leraar" ? "leraar" : "ouder";
-  alles[k] = { ...(alles[k] || {}), [r]: { link_id: linkId, van_wie: String(vanWie || "").trim(), at: Date.now() } };
+  const nieuw = { link_id: linkId, van_wie: String(vanWie || "").trim(), at: Date.now() };
+  const oud = alles[k] || {};
+  const volgend = { ...oud, [r]: nieuw };
+  if (r === "ouder") {
+    const lijst = ouderLijst(oud).filter((x) => x.link_id !== linkId);
+    volgend.ouders = [...lijst, nieuw].slice(-6);
+  }
+  alles[k] = volgend;
   schrijf(alles);
   // Stap 2: geschiedenis van dít toestel (eigen sessie + deze naam) meteen aan
   // de koppeling hangen, zodat de ouder niet met een leeg dashboard begint.
@@ -61,7 +72,59 @@ export function bewaarKoppeling({ naam, linkId, rol = "ouder", vanWie = "" }) {
   }
 }
 
-/** Alle koppelingen van deze naam op dit toestel: { ouder?, leraar? } of null. */
+function ouderLijst(v) {
+  if (Array.isArray(v?.ouders) && v.ouders.length) return v.ouders.filter((x) => x && x.link_id);
+  return v?.ouder?.link_id ? [v.ouder] : [];
+}
+
+/** Alle ouder-koppelingen van deze naam op dit toestel (oudste eerst). */
+export function oudersVoor(naam) {
+  const k = sleutel(naam);
+  return k ? ouderLijst(lees()[k]) : [];
+}
+
+/** Alle link_id's op dit toestel (voor het opzoeken van de namen). */
+export function alleLinkIds() {
+  const ids = new Set();
+  for (const v of Object.values(lees())) {
+    for (const o of ouderLijst(v)) ids.add(o.link_id);
+    if (v?.leraar?.link_id) ids.add(v.leraar.link_id);
+  }
+  // Alleen geldige uuid's: één kapotte waarde laat de hele opvraag mislukken (400).
+  return [...ids].filter((id) => /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(String(id)));
+}
+
+/**
+ * Namen uit de server (RPC koppel_namen) bij de koppelingen op dit toestel zetten.
+ * rijen: [{ link_id, van_wie, voornaam }]. Een eigen "van wie" op het toestel blijft staan;
+ * alleen wat leeg is wordt aangevuld. Schrijft alleen als er iets verandert.
+ */
+export function zetKoppelNamen(rijen) {
+  const per = new Map((rijen || []).filter((r) => r && r.link_id).map((r) => [r.link_id, r]));
+  if (!per.size) return;
+  const alles = lees();
+  let veranderd = false;
+  const vul = (o) => {
+    const r = o && per.get(o.link_id);
+    if (!r) return o;
+    const n = { ...o };
+    if (!n.van_wie && r.van_wie) n.van_wie = String(r.van_wie).trim();
+    if (r.voornaam && n.voornaam !== r.voornaam) n.voornaam = String(r.voornaam).trim();
+    if (n.van_wie !== o.van_wie || n.voornaam !== o.voornaam) veranderd = true;
+    return n;
+  };
+  for (const [k, v] of Object.entries(alles)) {
+    const nv = { ...v };
+    if (v.ouder) nv.ouder = vul(v.ouder);
+    if (Array.isArray(v.ouders)) nv.ouders = v.ouders.map(vul);
+    else if (v.ouder) { nv.ouders = [nv.ouder]; veranderd = true; }
+    if (v.leraar) nv.leraar = vul(v.leraar);
+    alles[k] = nv;
+  }
+  if (veranderd) schrijf(alles);
+}
+
+/** Alle koppelingen van deze naam op dit toestel: { ouder?, ouders?, leraar? } of null. */
 export function koppelingVoor(naam) {
   const k = sleutel(naam);
   if (!k) return null;
@@ -81,7 +144,7 @@ export function vergeetKoppeling(naam, rol = null) {
   if (!k) return;
   const alles = lees();
   if (!alles[k]) return;
-  if (rol) delete alles[k][rol]; else delete alles[k];
+  if (rol) { delete alles[k][rol]; if (rol === "ouder") delete alles[k].ouders; } else delete alles[k];
   if (alles[k] && !alles[k].ouder && !alles[k].leraar) delete alles[k];
   schrijf(alles);
 }

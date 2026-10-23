@@ -15,7 +15,7 @@ import { useMemo, useState, useEffect, useLayoutEffect, useRef } from "react";
 import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import { vakOptiesVoor, wisselVakKeuze, MAX_FAVORIET, MAX_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
-import { koppelingVoor, bewaarKoppeling, KOPPELING_EVENT } from "../../shared/koppeling.js";
+import { koppelingVoor, bewaarKoppeling, KOPPELING_EVENT, alleLinkIds, zetKoppelNamen } from "../../shared/koppeling.js";
 import { koppelGraaf, groepUitNiveau } from "./profielKoppeling.js";
 import { leesVoorkeur } from "../vandaag/voorkeur.js";
 import supabase from "../../supabase.js";
@@ -279,15 +279,16 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
 }
 
 // 〰️ Koppel-lijntjes tussen de tegels (Mark 21 okt 2026: "kunnen er lijntjes lopen tussen de
-// mensen wie met wie gekoppeld is"). Gebogen lijn van de onderkant van de volwassene naar de
-// bovenkant van het kind, in de kleur van die volwassene. Start- en eindpunt liggen op de
-// tegelranden en de controlepunten in de tussenruimte, dus de lijn loopt nooit door een tegel.
-// Gekoppeld met iemand die hier geen profiel heeft ("thuis", "school"): een kort stippellijntje
-// boven het kind met een open rondje; de tekst op de tegel zegt met wie.
+// mensen wie met wie gekoppeld is"). Gebogen lijn van de volwassene naar het kind, in de kleur van
+// die volwassene. Start- en eindpunt liggen op de tegelranden en de controlepunten in de
+// tussenruimte, dus de lijn loopt nooit door een tegel.
+// 23 okt 2026 (Mark: "zet de lijntjes ook met pijlen van a naar b en c"): elke lijn eindigt in een
+// pijlpunt bij het kind = "kijkt mee bij". Wie op een ander toestel meekijkt heeft een eigen
+// blokje ónder de kinderen; die lijn loopt omhoog (bovenkant blokje → onderkant kind), gestippeld.
 // Alles wordt gemeten na het tekenen en opnieuw bij elke maatverandering (draaien, lettertype).
-const LIJN_AFSTAND = 12; // px tussen lijnen die uit dezelfde tegel komen of erin aankomen
+const LIJN_AFSTAND = 12; // px tussen lijnen die uit dezelfde tegelrand komen of erin aankomen
 function spreid(i, n) { return (i - (n - 1) / 2) * LIJN_AFSTAND; }
-function KoppelLijnen({ boxRef, lijnen, extern, kleur }) {
+function KoppelLijnen({ boxRef, lijnen, kleur }) {
   const [geo, setGeo] = useState(null);
   useLayoutEffect(() => {
     const box = boxRef.current;
@@ -309,54 +310,97 @@ function KoppelLijnen({ boxRef, lijnen, extern, kleur }) {
     window.addEventListener("resize", meet);
     const t = setTimeout(meet, 400); // na het laden van lettertype en poppetjes
     return () => { if (ro) ro.disconnect(); window.removeEventListener("resize", meet); clearTimeout(t); };
-  }, [boxRef, lijnen, extern]);
-  if (!geo || (!lijnen.length && !extern.length)) return null;
+  }, [boxRef, lijnen]);
+  if (!geo || !lijnen.length) return null;
   const k = (n) => String(n || "").trim().toLowerCase();
   const R = geo.r;
-  // Volgorde van de lijnen per tegel op x-positie, zodat ze elkaar zo min mogelijk kruisen.
-  const zichtbaar = lijnen.filter((l) => R[k(l.van)] && R[k(l.naar)] && R[k(l.van)].y + R[k(l.van)].h <= R[k(l.naar)].y);
-  const uit = new Map(), aan = new Map();
-  for (const l of zichtbaar) {
-    (uit.get(k(l.van)) || uit.set(k(l.van), []).get(k(l.van))).push(l);
-    (aan.get(k(l.naar)) || aan.set(k(l.naar), []).get(k(l.naar))).push({ l });
-  }
-  for (const e of extern) if (R[k(e.kind)]) (aan.get(k(e.kind)) || aan.set(k(e.kind), []).get(k(e.kind))).push({ e });
-  for (const [, lijst] of uit) lijst.sort((a, b2) => R[k(a.naar)].x - R[k(b2.naar)].x);
-  for (const [, lijst] of aan) lijst.sort((a, b2) => (a.e ? 1 : 0) - (b2.e ? 1 : 0) || (a.l && b2.l ? R[k(a.l.van)].x - R[k(b2.l.van)].x : 0));
-  const paden = [];
-  for (const l of zichtbaar) {
+  // Richting per lijn: volwassene boven het kind → omlaag; eronder (ander toestel) → omhoog.
+  const zichtbaar = [];
+  for (const l of lijnen) {
     const A = R[k(l.van)], K = R[k(l.naar)];
-    const ul = uit.get(k(l.van)), al = aan.get(k(l.naar));
-    const x1 = A.x + A.w / 2 + spreid(ul.indexOf(l), ul.length), y1 = A.y + A.h;
-    const x2 = K.x + K.w / 2 + spreid(al.findIndex((x) => x.l === l), al.length), y2 = K.y;
-    const ym = (y1 + y2) / 2;
-    paden.push({ sleutel: `${k(l.van)}>${k(l.naar)}`, d: `M ${x1} ${y1} C ${x1} ${ym}, ${x2} ${ym}, ${x2} ${y2}`, x1, y1, x2, y2, kleur: kleur.get(k(l.van)) || "#ffb74d" });
+    if (!A || !K) continue;
+    if (A.y + A.h <= K.y) zichtbaar.push({ l, A, K, omlaag: true });
+    else if (K.y + K.h <= A.y) zichtbaar.push({ l, A, K, omlaag: false });
   }
-  const stompjes = [];
-  for (const e of extern) {
-    const K = R[k(e.kind)];
-    if (!K) continue;
-    const al = aan.get(k(e.kind));
-    const x = K.x + K.w / 2 + spreid(al.findIndex((x2) => x2.e === e), al.length);
-    stompjes.push({ sleutel: `${k(e.kind)}~${e.soort}`, x, y1: K.y - 10, y2: K.y, kleur: e.soort === "leraar" ? "#ce93d8" : "#ffb74d" });
+  // Ankers per tegelrand, op x-volgorde van de andere kant, zodat lijnen elkaar zo min mogelijk kruisen.
+  const rand = new Map();
+  const zet = (sleutel, item, x) => (rand.get(sleutel) || rand.set(sleutel, []).get(sleutel)).push({ item, x });
+  for (const z of zichtbaar) {
+    zet(`${k(z.l.van)}|${z.omlaag ? "onder" : "boven"}`, z, z.K.x);
+    zet(`${k(z.l.naar)}|${z.omlaag ? "boven" : "onder"}`, z, z.A.x);
   }
+  for (const [, lijst] of rand) lijst.sort((a, b2) => a.x - b2.x);
+  const plek = (sleutel, z) => { const lijst = rand.get(sleutel); return spreid(lijst.findIndex((x) => x.item === z), lijst.length); };
+  const PIJL = 7;
+  const paden = zichtbaar.map((z) => {
+    const { l, A, K, omlaag } = z;
+    const x1 = A.x + A.w / 2 + plek(`${k(l.van)}|${omlaag ? "onder" : "boven"}`, z);
+    const y1 = omlaag ? A.y + A.h : A.y;
+    const x2 = K.x + K.w / 2 + plek(`${k(l.naar)}|${omlaag ? "boven" : "onder"}`, z);
+    const y2 = omlaag ? K.y : K.y + K.h;
+    const yp = omlaag ? y2 - PIJL : y2 + PIJL; // de lijn stopt bij de voet van de pijlpunt
+    const ym = (y1 + yp) / 2;
+    return {
+      sleutel: `${k(l.van)}>${k(l.naar)}`, kleur: kleur.get(k(l.van)) || "#ffb74d", x1, y1, stippel: l.bron === "buiten",
+      d: `M ${x1} ${y1} C ${x1} ${ym}, ${x2} ${ym}, ${x2} ${yp}`,
+      pijl: `${x2 - 5},${yp} ${x2 + 5},${yp} ${x2},${y2}`,
+    };
+  });
   return (
     <svg aria-hidden="true" data-koppel-lijnen={paden.length} width={geo.w} height={geo.h}
       style={{ position: "absolute", left: 0, top: 0, zIndex: 1, pointerEvents: "none", overflow: "visible" }}>
       {paden.map((p) => (
         <g key={p.sleutel}>
-          <path d={p.d} fill="none" stroke={p.kleur} strokeWidth={2.5} strokeLinecap="round" opacity={0.9} />
+          <path d={p.d} fill="none" stroke={p.kleur} strokeWidth={2.5} strokeLinecap="round" strokeDasharray={p.stippel ? "6 5" : undefined} opacity={0.9} />
           <circle cx={p.x1} cy={p.y1} r={3.5} fill={p.kleur} />
-          <circle cx={p.x2} cy={p.y2} r={3.5} fill={p.kleur} />
-        </g>
-      ))}
-      {stompjes.map((s) => (
-        <g key={s.sleutel}>
-          <line x1={s.x} y1={s.y1} x2={s.x} y2={s.y2} stroke={s.kleur} strokeWidth={2} strokeDasharray="3 3" opacity={0.85} />
-          <circle cx={s.x} cy={s.y1} r={4} fill="#0f1a33" stroke={s.kleur} strokeWidth={2} />
+          <polygon points={p.pijl} fill={p.kleur} />
         </g>
       ))}
     </svg>
+  );
+}
+
+// 📱 Iemand die op een ánder toestel meekijkt (Mark 23 okt 2026: "maak altijd een blokje";
+// "zeg liefst de naam, bv. pappa Mark, anders andere telefoon"). Heeft geen profiel op dit
+// toestel, dus niet aantikbaar; de stippelrand zegt: deze persoon zit ergens anders.
+function TelefoonIcoon({ kleur = "rgba(255,255,255,0.5)" }) {
+  return (
+    <svg width="26" height="34" viewBox="0 0 26 34" aria-hidden="true">
+      <rect x="2" y="1.5" width="22" height="31" rx="4" fill="none" stroke={kleur} strokeWidth="2.5" />
+      <line x1="9.5" y1="27" x2="16.5" y2="27" stroke={kleur} strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+function BuitenTegel({ b, kleur }) {
+  const n = b.kinderen.length;
+  const wie = n > 2 ? `${b.kinderen.slice(0, -1).join(", ")} en ${b.kinderen[n - 1]}` : b.kinderen.join(" en ");
+  return (
+    <div data-buiten-tegel={b.naam} style={{
+      display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 6px", width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
+      borderRadius: 14, border: `2px dashed ${kleur}`, background: `${kleur}10`, color: "#fff", fontFamily: "var(--font-display)", fontWeight: 800,
+    }}>
+      <span style={{ width: 56, height: 56, borderRadius: "50%", background: `${kleur}22`, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+        <TelefoonIcoon kleur={kleur} />
+      </span>
+      <span style={{ fontSize: 15, lineHeight: 1.2, wordBreak: "break-word" }}>{b.naam}</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{b.soort === "leraar" ? "leerkracht · " : ""}ander toestel</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: kleur, lineHeight: 1.25, wordBreak: "break-word" }}>kijkt mee bij {wie}</span>
+    </div>
+  );
+}
+function ReservePlek({ onKlik }) {
+  return (
+    <button type="button" onClick={onKlik} data-reserve-toestel aria-label="Nog een toestel koppelen" style={{
+      ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 6px", width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
+      border: "2px dashed rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.02)", color: "rgba(255,255,255,0.38)",
+    }}>
+      <span style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(255,255,255,0.08)", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+        <TelefoonIcoon kleur="rgba(255,255,255,0.28)" />
+      </span>
+      <span style={{ fontSize: 14.5, lineHeight: 1.2 }}>Ander toestel</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, fontStyle: "italic" }}>ouder of juf op eigen telefoon</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "rgba(105,240,174,0.75)" }}>+ koppelen</span>
+    </button>
   );
 }
 
@@ -476,6 +520,23 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
       try { track("koppeling_sync_account", { aantal: graaf.sync.length }); } catch { /* */ }
     }
   }, [graaf.sync]);
+  // Namen achter de koppelingen opzoeken (23 okt 2026): het toestel kent vaak alleen een link-id,
+  // de server weet wie het is ("Deianera", "Pappa" + "Mark"). Eén keer per openen; schrijft alleen
+  // als er iets nieuws is (dan rekent KOPPELING_EVENT het plaatje opnieuw).
+  useEffect(() => {
+    const ids = alleLinkIds().slice(-12); // de server geeft er max 12 per keer
+    if (!ids.length) return undefined;
+    let cancel = false;
+    supabase.rpc("koppel_namen", { p_link_ids: ids })
+      .then(({ data, error }) => { if (!cancel && !error && Array.isArray(data)) zetKoppelNamen(data); })
+      .catch(() => {});
+    return () => { cancel = true; };
+  }, []);
+  // Lijnen voor de tekening: op dit toestel + naar de blokjes "op een ander toestel".
+  const alleLijnen = useMemo(() => [
+    ...graaf.lijnen,
+    ...graaf.buiten.flatMap((b) => b.kinderen.map((kind) => ({ van: b.sleutel, naar: kind, soort: b.soort, bron: "buiten" }))),
+  ], [graaf]);
   const lijntjes = graaf.labels;
   const rasterRef = useRef(null);
   // Profielen verdelen over de vaste plekken; wat niet past (oude apparaten) komt onder "Andere profielen".
@@ -511,14 +572,15 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
     onKies(naam);
   };
 
+  const heeftKind = verdeling.plekken.some((x) => x.plek.groep === "kind" && x.profiel);
   const sectie = (titel, groepen) => {
     const items = verdeling.plekken.filter((x) => groepen.includes(x.plek.groep));
-    const onderLijnen = groepen.includes("kind") && (graaf.lijnen.length > 0 || graaf.extern.length > 0);
+    const onderLijnen = groepen.includes("kind") && graaf.lijnen.length > 0;
     return (
       <div style={{ marginBottom: 18 }}>
         <div style={{ textAlign: "left", margin: `0 0 ${onderLijnen ? 20 : 8}px 2px` }}>
           {/* Kop boven de kinderen: pilletje met achtergrond, de koppel-lijntjes lopen erachter langs;
-              met lijnen wat meer ruimte, zodat een stippellijntje ("thuis", "school") niet wegvalt. */}
+              met lijnen wat meer ruimte, zodat de pijlpunten niet tegen de kop aan zitten. */}
           <span style={{ position: "relative", zIndex: 2, display: "inline-block", fontSize: 12, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", ...(onderLijnen ? { padding: "2px 10px", marginLeft: -4, borderRadius: 999, background: "#16233f", border: "1px solid rgba(255,255,255,0.10)" } : {}) }}>{titel}</span>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
@@ -548,9 +610,30 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
           <p style={{ margin: "0 0 18px", fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
           {/* Mark 14 okt 2026: ouders + leerkracht bovenaan in één rij, kinderen eronder. */}
           <div ref={rasterRef} style={{ position: "relative" }}>
-            <KoppelLijnen boxRef={rasterRef} lijnen={graaf.lijnen} extern={graaf.extern} kleur={graaf.kleur} />
+            <KoppelLijnen boxRef={rasterRef} lijnen={alleLijnen} kleur={graaf.kleur} />
             {sectie("Ouders, verzorgers en leerkracht", ["ouder", "leraar"])}
             {sectie("Kinderen", ["kind"])}
+            {/* 📱 Mark 23 okt 2026: "maak altijd een blokje, en reserve-blokjes voor als mensen
+                meerdere apparaten hebben". Minstens 3 plekken, altijd minstens 1 lege. */}
+            {heeftKind && !beheren && (
+              <div data-ander-toestel style={{ marginBottom: 18 }}>
+                <div style={{ textAlign: "left", margin: `${graaf.buiten.length ? 26 : 0}px 0 8px 2px` }}>
+                  <span style={{ position: "relative", zIndex: 2, display: "inline-block", fontSize: 12, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", ...(graaf.buiten.length ? { padding: "2px 10px", marginLeft: -4, borderRadius: 999, background: "#16233f", border: "1px solid rgba(255,255,255,0.10)" } : {}) }}>Op een ander toestel</span>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+                  {graaf.buiten.map((b) => (
+                    <div key={b.sleutel} data-tegel={b.sleutel} style={{ position: "relative", zIndex: 2 }}>
+                      <BuitenTegel b={b} kleur={graaf.kleur.get(b.sleutel) || "#ffb74d"} />
+                    </div>
+                  ))}
+                  {Array.from({ length: Math.max(3, graaf.buiten.length + 1) - graaf.buiten.length }, (_, i) => (
+                    <div key={"reserve" + i} style={{ position: "relative", zIndex: 2 }}>
+                      <ReservePlek onKlik={() => { try { track("koppel_reserve_toestel", { aantal: graaf.buiten.length }); } catch { /* */ } window.location.href = "/koppelen"; }} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           {!beheren && profielen.length > 0 && (
             <KoppelBlok kandidaten={graaf.kandidaten} authUser={authUser} iemandGekoppeld={lijntjes.size > 0} onGekoppeld={() => setVersie((v) => v + 1)} />

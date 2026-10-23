@@ -46,7 +46,29 @@ function opsom(namen) {
 //             zodat het oefenwerk van dit kind voortaan het link_id meekrijgt (ouder ziet het in het dashboard)
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const KOPPEL_KLEUREN = { ouder: ["#ffb74d", "#64b5f6"], leraar: "#ce93d8", extern: "#ffb74d" };
+//  buiten   [{ sleutel, naam, soort, kinderen }] — (23 okt) wie op een ánder toestel meekijkt, gebundeld per
+//           naam: krijgt een eigen blokje in "Op een ander toestel", met een pijl naar elk kind
+//
+// 23 okt 2026 (Mark: "zeg liefst de naam, bv. pappa Mark, anders mijn toestel of andere telefoon";
+// "sommige kinderen worden bekeken door 2 ouders, andere maar door één"): een kind kan meerdere
+// ouder-koppelingen hebben (kop.ouders); de naam = koppelNaam(van_wie, voornaam).
+
+export const KOPPEL_KLEUREN = { ouder: ["#ffb74d", "#64b5f6", "#81c784", "#f48fb1", "#4dd0e1"], leraar: "#ce93d8" };
+export const ONBEKEND_TOESTEL = "Ander toestel";
+
+// "Pappa" + "Mark" → "Pappa Mark"; "Oma Truus" + "Truus" → "Oma Truus"; alleen "Deianera" → "Deianera".
+// Een rolwoord (papa, mama, opa, juf…) krijgt de voornaam erachter; een eigen naam blijft zoals hij is.
+const ROLWOORD = /^(pap+a|mam+a|pap|mam|pa|ma|opa|oma|opi|omi|vader|moeder|tante|oom|juf|meester|ouder|verzorger|voogd|pleeg\S*|stief\S*|papi|mami)$/i;
+const hoofd = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+export function koppelNaam(vanWie, voornaam) {
+  const vw = String(vanWie || "").trim().replace(/\s+/g, " ");
+  const vn = String(voornaam || "").trim();
+  if (!vw) return vn;
+  if (vn && laag(vw).startsWith(laag(vn) + " ") && !ROLWOORD.test(vw.split(" ")[0])) return vn; // "Deianera Meinders" → "Deianera"
+  if (!vn || laag(vw).includes(laag(vn)) || !ROLWOORD.test(vw)) return hoofd(vw);
+  return `${hoofd(vw)} ${vn}`;
+}
+const ouderKoppelingen = (kop) => (Array.isArray(kop?.ouders) && kop.ouders.length ? kop.ouders.filter(Boolean) : kop?.ouder ? [kop.ouder] : []);
 
 const isOuder = (p) => p.role === "ouder";
 const isLeraar = (p) => p.role === "teacher";
@@ -75,18 +97,21 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
   const heeftOuderKoppeling = new Set();
   for (const k of kinderen) {
     const kop = koppelingVoor(k.naam) || null;
-    if (kop?.ouder) {
+    for (const ko of ouderKoppelingen(kop)) {
       heeftOuderKoppeling.add(laag(k.naam));
-      const vw = String(kop.ouder.van_wie || "").trim();
-      const o = vw ? vind(ouders, vw) : null;
-      if (o) lijnen.push({ van: o.naam, naar: k.naam, soort: "ouder", bron: "toestel" });
-      else extern.push({ kind: k.naam, soort: "ouder", label: vw || "thuis" });
+      const naam = koppelNaam(ko.van_wie, ko.voornaam);
+      const o = [naam, ko.van_wie, ko.voornaam].map((n) => (String(n || "").trim() ? vind(ouders, n) : null)).find(Boolean);
+      if (o) {
+        if (!lijnen.some((x) => x.soort === "ouder" && x.van === o.naam && x.naar === k.naam)) lijnen.push({ van: o.naam, naar: k.naam, soort: "ouder", bron: "toestel" });
+      } else if (!extern.some((x) => x.kind === k.naam && x.soort === "ouder" && laag(x.label) === laag(naam))) {
+        extern.push({ kind: k.naam, soort: "ouder", label: naam });
+      }
     }
     if (kop?.leraar) {
-      const vw = String(kop.leraar.van_wie || "").trim();
-      const l = vw ? vind(leraren, vw) : null;
+      const naam = koppelNaam(kop.leraar.van_wie, kop.leraar.voornaam);
+      const l = [naam, kop.leraar.van_wie].map((n) => (String(n || "").trim() ? vind(leraren, n) : null)).find(Boolean);
       if (l) lijnen.push({ van: l.naam, naar: k.naam, soort: "leraar", bron: "toestel" });
-      else extern.push({ kind: k.naam, soort: "leraar", label: vw || "school" });
+      else extern.push({ kind: k.naam, soort: "leraar", label: naam || "school" });
     }
     const acc = accountOuder ? accountPer.get(laag(k.naam)) : null;
     if (acc) {
@@ -112,19 +137,33 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
   for (const k of kinderen) {
     const namen = [
       ...lijnen.filter((x) => laag(x.naar) === laag(k.naam)).map((x) => x.van),
-      ...extern.filter((x) => laag(x.kind) === laag(k.naam)).map((x) => x.label),
+      ...extern.filter((x) => laag(x.kind) === laag(k.naam)).map((x) => x.label || "een ander toestel"),
     ];
     if (namen.length) labels.set(laag(k.naam), `gekoppeld met ${opsom(namen)}`);
   }
 
-  // Kleuren: per volwassene vast op volgorde van de plekken (ouder 1, ouder 2, leerkracht).
+  // Wie op een ander toestel meekijkt: één blokje per naam (Deianera met Brian én Olivia = één blokje).
+  const buiten = [];
+  for (const e of extern) {
+    const sleutel = `buiten:${e.soort}:${laag(e.label) || "onbekend"}`;
+    let b = buiten.find((x) => x.sleutel === sleutel);
+    if (!b) { b = { sleutel, naam: e.label || ONBEKEND_TOESTEL, soort: e.soort, kinderen: [] }; buiten.push(b); }
+    if (!b.kinderen.includes(e.kind)) b.kinderen.push(e.kind);
+  }
+
+  // Kleuren: per volwassene vast op volgorde van de plekken (ouder 1, ouder 2, leerkracht),
+  // daarna de ouders op een ander toestel met de volgende kleuren.
   const kleur = new Map();
-  ouders.forEach((o, i) => kleur.set(laag(o.naam), KOPPEL_KLEUREN.ouder[i] || KOPPEL_KLEUREN.ouder[0]));
+  const pal = KOPPEL_KLEUREN.ouder;
+  ouders.forEach((o, i) => kleur.set(laag(o.naam), pal[i % pal.length]));
   leraren.forEach((l) => kleur.set(laag(l.naam), KOPPEL_KLEUREN.leraar));
+  let volgende = ouders.length;
+  for (const b of buiten) kleur.set(b.sleutel, b.soort === "leraar" ? KOPPEL_KLEUREN.leraar : pal[volgende++ % pal.length]);
   for (const k of kinderen) {
     const eerste = lijnen.find((x) => laag(x.naar) === laag(k.naam));
+    const eersteBuiten = buiten.find((b) => b.kinderen.some((n) => laag(n) === laag(k.naam)));
     if (eerste) kleur.set(laag(k.naam), kleur.get(laag(eerste.van)));
-    else if (extern.some((x) => laag(x.kind) === laag(k.naam))) kleur.set(laag(k.naam), KOPPEL_KLEUREN.extern);
+    else if (eersteBuiten) kleur.set(laag(k.naam), kleur.get(eersteBuiten.sleutel));
   }
 
   const kandidaatOuders = accountOuder ? ouders.filter((o) => laag(o.naam) === laag(accountOuder)) : ouders;
@@ -134,7 +173,7 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
     for (const o of kandidaatOuders) kandidaten.push({ kind: k.naam, ouder: o.naam });
   }
 
-  return { lijnen, extern, labels, kleur, kandidaten: kandidaten.slice(0, 6), sync, accountOuder };
+  return { lijnen, extern, buiten, labels, kleur, kandidaten: kandidaten.slice(0, 6), sync, accountOuder };
 }
 
 /** Groep-waarde voor de server ("8", "brugklas") uit een app-niveau ("groep8", "klas1|havo"). */
