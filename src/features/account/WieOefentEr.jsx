@@ -17,6 +17,7 @@ import { vakOptiesVoor, wisselVakKeuze, MAX_FAVORIET, MAX_VAKKEN, bewaarVoorkeur
 import { track } from "../../utils.js";
 import { koppelingVoor, bewaarKoppeling, KOPPELING_EVENT, alleLinkIds, zetKoppelNamen } from "../../shared/koppeling.js";
 import { koppelGraaf, groepUitNiveau } from "./profielKoppeling.js";
+import { Kindkaart, OuderWilKaart } from "./KoppelKaarten.jsx";
 import { leesVoorkeur } from "../vandaag/voorkeur.js";
 import supabase from "../../supabase.js";
 
@@ -371,11 +372,13 @@ function TelefoonIcoon({ kleur = "rgba(255,255,255,0.5)" }) {
     </svg>
   );
 }
-function BuitenTegel({ b, kleur }) {
+function BuitenTegel({ b, kleur, onTik = null }) {
   const n = b.kinderen.length;
   const wie = n > 2 ? `${b.kinderen.slice(0, -1).join(", ")} en ${b.kinderen[n - 1]}` : b.kinderen.join(" en ");
   return (
-    <div data-buiten-tegel={b.naam} style={{
+    <div data-buiten-tegel={b.naam} role={onTik ? "button" : undefined} tabIndex={onTik ? 0 : undefined}
+      onClick={onTik || undefined} onKeyDown={onTik ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onTik(); } } : undefined} style={{
+      cursor: onTik ? "pointer" : "default",
       display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 6px", width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
       borderRadius: 14, border: `2px dashed ${kleur}`, background: `${kleur}10`, color: "#fff", fontFamily: "var(--font-display)", fontWeight: 800,
     }}>
@@ -481,7 +484,7 @@ function KoppelBlok({ kandidaten, authUser, iemandGekoppeld, onGekoppeld }) {
   );
 }
 
-export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false, startRol = null, authUser = null }) {
+export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, onStartPad, startNieuw = false, startRol = null, authUser = null }) {
   const [versie, setVersie] = useState(0);
   const profielen = useMemo(() => leesProfielen(), [versie]); // eslint-disable-line react-hooks/exhaustive-deps
   // 🔗 Koppelingen (14 okt, herbouwd 21 okt 2026): één bron van waarheid, koppelGraaf
@@ -573,6 +576,34 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
   };
 
   const heeftKind = verdeling.plekken.some((x) => x.plek.groep === "kind" && x.profiel);
+  // 🔗 Tikken op een gekoppeld profiel (Mark 23 okt 2026): ouder actief + tik op zijn kind = Kindkaart;
+  // kind actief + tik op zijn ouder = "wil dat je werkt aan". Anders: gewoon wisselen, zoals altijd.
+  const [kaart, setKaart] = useState(null);
+  const laagN = (n) => String(n || "").trim().toLowerCase();
+  const actief = profielen.find((p) => laagN(p.naam) === laagN(huidigeNaam)) || null;
+  const actiefVolwassen = !!actief && (actief.role === "ouder" || actief.role === "teacher");
+  const heeftLijn = (van, naar) => graaf.lijnen.some((l) => laagN(l.van) === laagN(van) && laagN(l.naar) === laagN(naar));
+  const tikProfiel = (p) => {
+    if (beheren) { setWeg(p.naam); return; }
+    const isKind = p.role !== "ouder" && p.role !== "teacher";
+    if (actiefVolwassen && isKind && heeftLijn(actief.naam, p.naam)) {
+      setKaart({ soort: "kind", kind: p.naam, linkId: graaf.linkVoor.get(`${laagN(actief.naam)}>${laagN(p.naam)}`) || null, kleur: graaf.kleur.get(laagN(actief.naam)) });
+      return;
+    }
+    if (actief && !actiefVolwassen && !isKind && heeftLijn(p.naam, actief.naam)) {
+      setKaart({ soort: "ouder", ouderNaam: p.naam, kind: actief.naam, rol: p.role === "teacher" ? "leraar" : "ouder", linkId: graaf.linkVoor.get(`${laagN(p.naam)}>${laagN(actief.naam)}`) || null, kleur: graaf.kleur.get(laagN(p.naam)), wissel: p.naam });
+      return;
+    }
+    kies(p.naam);
+  };
+  const tikBuiten = (b) => {
+    if (!actief || actiefVolwassen || !b.kinderen.some((k) => laagN(k) === laagN(actief.naam))) return;
+    setKaart({ soort: "ouder", ouderNaam: b.naam, kind: actief.naam, rol: b.soort, linkId: graaf.linkVoor.get(`${b.sleutel}>${laagN(actief.naam)}`) || null, kleur: graaf.kleur.get(b.sleutel) });
+  };
+  const tikHint = actiefVolwassen
+    ? (graaf.lijnen.some((l) => laagN(l.van) === laagN(actief.naam)) ? "Tik op je kind om te zien hoe het gaat." : "")
+    : actief && (graaf.lijnen.some((l) => laagN(l.naar) === laagN(actief.naam)) || graaf.buiten.some((b) => b.kinderen.some((k) => laagN(k) === laagN(actief.naam))))
+      ? "Tik op wie met jou gekoppeld is: dan zie je wat er voor je klaarstaat." : "";
   const sectie = (titel, groepen) => {
     const items = verdeling.plekken.filter((x) => groepen.includes(x.plek.groep));
     const onderLijnen = groepen.includes("kind") && graaf.lijnen.length > 0;
@@ -587,7 +618,7 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
           {items.map(({ plek, profiel }, i) => (
             <div key={plek.label + i} data-tegel={profiel ? profiel.naam.trim().toLowerCase() : undefined} style={{ position: "relative", zIndex: 2 }}>
               {profiel
-                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} kleur={graaf.kleur.get(profiel.naam.trim().toLowerCase())} onKies={() => (beheren ? setWeg(profiel.naam) : kies(profiel.naam))} />
+                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} kleur={graaf.kleur.get(profiel.naam.trim().toLowerCase())} onKies={() => tikProfiel(profiel)} />
                 : (!beheren && <LegePlek plek={plek} onKlik={() => { try { track("profiel_plek_invullen", { groep: plek.groep }); } catch { /* */ } setNieuwRol(plek.rol); }} />)}
               {beheren && profiel && <span aria-hidden="true" style={{ position: "absolute", top: 6, right: 8, fontSize: 12, fontWeight: 800, color: "#ff8a80" }}>weghalen</span>}
             </div>
@@ -602,12 +633,21 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
       position: "fixed", inset: 0, zIndex: 1000, overflowY: "auto",
       background: "radial-gradient(circle at 50% 0%, #16264a, #0b1224 70%)", padding: "24px 14px 40px",
     }}>
-      {nieuwRol ? (
+      {kaart?.soort === "kind" ? (
+        <Kindkaart kind={kaart.kind} linkId={kaart.linkId} ingelogd={ingelogd} kleur={kaart.kleur} onTerug={() => setKaart(null)} onLaatOefenen={() => { setKaart(null); kies(kaart.kind); }} />
+      ) : kaart?.soort === "ouder" ? (
+        <OuderWilKaart ouderNaam={kaart.ouderNaam} kind={kaart.kind} linkId={kaart.linkId} soort={kaart.rol} kleur={kaart.kleur}
+          onTerug={() => setKaart(null)}
+          onStart={(pathId) => { setKaart(null); if (onStartPad) onStartPad(pathId); else kies(kaart.kind); }}
+          onNaarMijn={() => { setKaart(null); kies(kaart.kind); }}
+          onWissel={kaart.wissel ? () => { setKaart(null); kies(kaart.wissel); } : null} />
+      ) : nieuwRol ? (
         <ProfielKaart bestaand={profielen} vasteRol={nieuwRol} onKlaar={maak} onTerug={() => setNieuwRol(null)} />
       ) : (
         <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "4px 0 4px", color: "#fff" }}>Wie oefent er?</h2>
-          <p style={{ margin: "0 0 18px", fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
+          <p style={{ margin: `0 0 ${tikHint ? 6 : 18}px`, fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
+          {tikHint && <p data-tik-hint style={{ margin: "0 0 18px", fontSize: 13.5, fontWeight: 700, color: "#ffb74d" }}>{tikHint}</p>}
           {/* Mark 14 okt 2026: ouders + leerkracht bovenaan in één rij, kinderen eronder. */}
           <div ref={rasterRef} style={{ position: "relative" }}>
             <KoppelLijnen boxRef={rasterRef} lijnen={alleLijnen} kleur={graaf.kleur} />
@@ -623,7 +663,7 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
                   {graaf.buiten.map((b) => (
                     <div key={b.sleutel} data-tegel={b.sleutel} style={{ position: "relative", zIndex: 2 }}>
-                      <BuitenTegel b={b} kleur={graaf.kleur.get(b.sleutel) || "#ffb74d"} />
+                      <BuitenTegel b={b} kleur={graaf.kleur.get(b.sleutel) || "#ffb74d"} onTik={actief && !actiefVolwassen && b.kinderen.some((k) => laagN(k) === laagN(actief.naam)) ? () => tikBuiten(b) : null} />
                     </div>
                   ))}
                   {Array.from({ length: Math.max(3, graaf.buiten.length + 1) - graaf.buiten.length }, (_, i) => (

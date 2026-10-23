@@ -94,6 +94,10 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
   const accountPer = new Map((accountKinderen || []).filter((c) => c && String(c.naam || "").trim()).map((c) => [laag(c.naam), c]));
 
   const lijnen = [], extern = [], sync = [];
+  // Welke koppeling (link_id) hoort bij welke lijn: "van>naar" (laag) → link_id. Voor de Kindkaart
+  // en "wil dat je werkt aan" (23 okt 2026); "van" is bij een ander toestel de blok-sleutel.
+  const linkVoor = new Map();
+  const zetLink = (van, naar, id) => { if (id && !linkVoor.has(`${laag(van)}>${laag(naar)}`)) linkVoor.set(`${laag(van)}>${laag(naar)}`, id); };
   const heeftOuderKoppeling = new Set();
   for (const k of kinderen) {
     const kop = koppelingVoor(k.naam) || null;
@@ -103,15 +107,17 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
       const o = [naam, ko.van_wie, ko.voornaam].map((n) => (String(n || "").trim() ? vind(ouders, n) : null)).find(Boolean);
       if (o) {
         if (!lijnen.some((x) => x.soort === "ouder" && x.van === o.naam && x.naar === k.naam)) lijnen.push({ van: o.naam, naar: k.naam, soort: "ouder", bron: "toestel" });
-      } else if (!extern.some((x) => x.kind === k.naam && x.soort === "ouder" && laag(x.label) === laag(naam))) {
-        extern.push({ kind: k.naam, soort: "ouder", label: naam });
+        zetLink(o.naam, k.naam, ko.link_id);
+      } else {
+        if (!extern.some((x) => x.kind === k.naam && x.soort === "ouder" && laag(x.label) === laag(naam))) extern.push({ kind: k.naam, soort: "ouder", label: naam });
+        zetLink(`buiten:ouder:${laag(naam) || "onbekend"}`, k.naam, ko.link_id);
       }
     }
     if (kop?.leraar) {
       const naam = koppelNaam(kop.leraar.van_wie, kop.leraar.voornaam);
       const l = [naam, kop.leraar.van_wie].map((n) => (String(n || "").trim() ? vind(leraren, n) : null)).find(Boolean);
-      if (l) lijnen.push({ van: l.naam, naar: k.naam, soort: "leraar", bron: "toestel" });
-      else extern.push({ kind: k.naam, soort: "leraar", label: naam || "school" });
+      if (l) { lijnen.push({ van: l.naam, naar: k.naam, soort: "leraar", bron: "toestel" }); zetLink(l.naam, k.naam, kop.leraar.link_id); }
+      else { extern.push({ kind: k.naam, soort: "leraar", label: naam || "school" }); zetLink(`buiten:leraar:${laag(naam || "school")}`, k.naam, kop.leraar.link_id); }
     }
     const acc = accountOuder ? accountPer.get(laag(k.naam)) : null;
     if (acc) {
@@ -119,6 +125,8 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
       if (!lijnen.some((x) => x.soort === "ouder" && laag(x.van) === laag(accountOuder) && laag(x.naar) === laag(k.naam))) {
         lijnen.push({ van: accountOuder, naar: k.naam, soort: "ouder", bron: "account" });
       }
+      // Account-koppeling gaat vóór: die hoort zeker bij het ingelogde account (en mag dus gelezen worden).
+      if (acc.linkId) linkVoor.set(`${laag(accountOuder)}>${laag(k.naam)}`, acc.linkId);
       // Toestel kent nog geen ouder-koppeling → zelfde vastleggen als de één-tik-knop.
       // Een bestaande toestel-koppeling (bv. met een ouder op een ander toestel) nooit overschrijven.
       if (!kop?.ouder && acc.linkId) sync.push({ kind: k.naam, linkId: acc.linkId, vanWie: accountOuder });
@@ -173,7 +181,7 @@ export function koppelGraaf(profielen, koppelingVoor, { ingelogd = false, accoun
     for (const o of kandidaatOuders) kandidaten.push({ kind: k.naam, ouder: o.naam });
   }
 
-  return { lijnen, extern, buiten, labels, kleur, kandidaten: kandidaten.slice(0, 6), sync, accountOuder };
+  return { lijnen, extern, buiten, labels, kleur, kandidaten: kandidaten.slice(0, 6), sync, accountOuder, linkVoor };
 }
 
 /** Groep-waarde voor de server ("8", "brugklas") uit een app-niveau ("groep8", "klas1|havo"). */

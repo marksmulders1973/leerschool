@@ -1180,6 +1180,7 @@ export default function MijnPagina({
           }}
           onSluit={() => { setWieOpen(false); setWieNieuw(false); if (onBack) onBack(); }}
           onVerwijder={(naam) => { if (onVerwijderProfiel) onVerwijderProfiel(naam); setProfielVersie((v) => v + 1); }}
+          onStartPad={onPickPath ? (pathId) => { setWieOpen(false); setWieNieuw(false); try { sessionStorage.setItem("lk_wie_net", player || ""); } catch { /* */ } onPickPath(pathId); } : undefined}
         />
       )}
       {/* WhatsApp 13 aug 18:55: géén dubbel huisje (de functionele 🏠-knop

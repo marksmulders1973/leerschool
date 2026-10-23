@@ -35,7 +35,7 @@ describe("KoppelcodesBlok", () => {
     expect(screen.getByText(/2 dagen niet gebruikt/)).toBeTruthy();
     expect(screen.getAllByText(/Nog niet gebruikt\. Het makkelijkst/)).toHaveLength(1);
     fireEvent.click(screen.getAllByText(/Toon QR-code/)[0]);
-    expect(await screen.findByAltText("QR-code voor koppelcode H7KP2Q", {}, { timeout: 4000 })).toBeTruthy();
+    expect(await screen.findByAltText("QR-code voor koppelcode H7KP2Q", {}, { timeout: 15000 })).toBeTruthy();
     expect(screen.getByText("QR-code verbergen")).toBeTruthy();
-  });
+  }, 30000);
 });

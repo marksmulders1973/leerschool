@@ -169,6 +169,18 @@ describe("koppelGraaf — op een ander toestel (Mark 23 okt 2026)", () => {
   });
 });
 
+describe("koppelGraaf — linkVoor (welke koppeling hoort bij welke lijn)", () => {
+  it("toestel, ander toestel en account", () => {
+    const g = koppelGraaf(
+      [{ naam: "Marksmul", role: "ouder" }, { naam: "Brian", role: "leerling" }, { naam: "Olivia", role: "leerling" }],
+      kv({ brian: { ouders: [{ link_id: "b1", voornaam: "Deianera" }] }, olivia: { ouder: { link_id: "o-toestel", van_wie: "Marksmul" } } }),
+      { ingelogd: true, accountKinderen: [{ naam: "Olivia", linkId: "o-account" }] },
+    );
+    expect(g.linkVoor.get("buiten:ouder:deianera>brian")).toBe("b1");
+    expect(g.linkVoor.get("marksmul>olivia")).toBe("o-account");
+  });
+});
+
 describe("koppelNaam", () => {
   it("rolwoord + voornaam, anders de naam zelf", () => {
     expect(koppelNaam("Pappa", "Mark")).toBe("Pappa Mark");
