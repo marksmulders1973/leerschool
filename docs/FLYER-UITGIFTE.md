@@ -38,7 +38,7 @@
 | IMC Weekendschool | IMC2027 | ? | digitaal | 13 jul | 50 | |
 | Voedselbank Gorinchem | GORINCHEM2027 | ? | digitaal | 10 jul | 50 | |
 | Bibliotheek AanZet (Gorinchem) | AANZET2027 | ? | digitaal | 10 jul | 50 | |
-| Leergeld Apeldoorn-Voorst | APELDOORN2027 | ? | digitaal | 10 jul | 50 | |
+| Leergeld Apeldoorn-Voorst | APELDOORN2027 | nieuwsbrief | digitaal | 10 jul | onbeperkt | **oktober-nieuwsbrief vr 23 okt: 73 app in 2 dagen, 16 claims, 16 oefenden** (was slapend, weer actief 24 okt) |
 | De nieuwe bibliotheek (Almere) | ALMERE2027 | ? | digitaal | 10 jul | 50 | |
 | Westfriese Bibliotheken | WESTFRIES2027 | ? | digitaal | 10 jul | 50 | |
 | Voedselbank Maastricht | MAASTRICHT2027 | ? | digitaal | 10 jul | 50 | |
@@ -48,6 +48,7 @@
 | Voedselbank Nijmegen-Overbetuwe | NIJMEGEN2027 | ? | digitaal | 10 jul | 50 | |
 | Leergeld Maastricht en Heuvelland | HEUVELLAND2027 | ? | digitaal | 10 jul | 50 | |
 | Voedselbank Enschede-Haaksbergen | ENSCHEDE2027 | ? | digitaal | 10 jul | 50 | |
+| Quiet Maastricht (Leon) | QUIETMAASTRICHT2027 | digitaal (link in bedankmail) | digitaal, Facebookgroep | 24 okt | onbeperkt | plaatsing begin december in de gesloten Facebookgroep voor members; wilde een eigen link om te meten |
 | Arkel Christmas Village — kerstetalage (eigen actie Mark) | ARKEL2027 | 1 poster + 1 QR-bordje (gepland) | print, etalage | code klaar 29 sep; plaatsen ~14 dec | onbeperkt | Familie t/m 31-12-2028; verwacht duizenden passanten (op de lichtjesroute) |
 
 > **Deel-actie 2027** (DEELACTIE2027) = vrienden-werven, geen partner — buiten deze teller.

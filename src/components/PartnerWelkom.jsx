@@ -71,6 +71,7 @@ export const PARTNER_NAMEN = {
   BUURTGEZINNEN2027: "Buurtgezinnen",
   DONGEN2027: "Voedselbank Dongen",
   DEMEERN2027: "Speelgoedbank De Meern", // 21 okt 2026: spoor 1, Jolanda Borst zei ja
+  QUIETMAASTRICHT2027: "Quiet Maastricht", // 24 okt 2026: spoor 1, Leon zei ja (gesloten Facebookgroep, begin december)
   EINDHOVEN2027: "Bibliotheek Eindhoven",
   HAARLEMMERMEER2027: "Stichting Leergeld Haarlemmermeer (Spark Fest)",
   // 18 sep 2026: Leergeld Enschede en de voedselbank delen het pand De Vlecht
