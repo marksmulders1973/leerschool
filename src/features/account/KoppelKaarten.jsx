@@ -339,6 +339,15 @@ export function OuderWilKaart({ ouderNaam, kind, linkId, soort = "ouder", kleur 
           </div>
         ))}
       </div>
+      {/* Mark 24 okt 2026: "een kind moet weten dat het gekoppeld is, niet dat de ouders stiekem
+          kunnen meekijken" → op de kaart van het kind staat altijd in gewone woorden wat de ander ziet. */}
+      <div style={{ ...F.kaart, borderColor: "rgba(255,255,255,0.18)" }} data-ouderwil-uitleg>
+        <div style={F.tekst}>
+          {soort === "leraar"
+            ? <>Je bent gekoppeld met <strong style={{ color: "#fff" }}>{ouderNaam}</strong>. Je juf of meester ziet welke lessen je deed en hoe het ging, en kan lessen voor je klaarzetten.</>
+            : <>Je bent gekoppeld met <strong style={{ color: "#fff" }}>{ouderNaam}</strong>. {ouderNaam} ziet hoe het oefenen gaat: welke dagen je oefende, wat goed ging en wat nog lastig is. {ouderNaam} kan lessen voor je klaarzetten en je een berichtje sturen.</>}
+        </div>
+      </div>
       <div style={{ display: "grid", gap: 8, marginTop: 14 }}>
         <button type="button" onClick={onNaarMijn} style={F.knop(items && open.length === 0 ? "#00c853" : "rgba(255,255,255,0.08)", items && open.length === 0 ? "#08121f" : "#fff")} data-ouderwil-zelf>
           {items && open.length === 0 ? "Laat Leerkwartier iets kiezen" : "Naar mijn eigen pagina"}

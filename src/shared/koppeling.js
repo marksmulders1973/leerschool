@@ -104,6 +104,24 @@ export function zetKoppelNamen(rijen) {
   if (!per.size) return;
   const alles = lees();
   let veranderd = false;
+  // 24 okt 2026: de server meldt koppelingen die niet meer bestaan (rol "weg"). Die ruimen we op:
+  // anders gaat het oefenwerk naar een koppeling die niemand ziet, en toont de profielkiezer een
+  // spook-koppeling ("Brian — gekoppeld met Brian"). Daarna biedt de kiezer gewoon opnieuw koppelen aan.
+  const weg = new Set([...per.values()].filter((r) => r.rol === "weg").map((r) => r.link_id));
+  if (weg.size) {
+    for (const [k, v] of Object.entries(alles)) {
+      const nv = { ...v };
+      const lijst = (Array.isArray(v.ouders) ? v.ouders : v.ouder ? [v.ouder] : []).filter((o) => o && !weg.has(o.link_id));
+      if (Array.isArray(v.ouders) || v.ouder) {
+        if (lijst.length !== (Array.isArray(v.ouders) ? v.ouders.length : 1) || (v.ouder && weg.has(v.ouder.link_id))) veranderd = true;
+        nv.ouders = lijst;
+        if (v.ouder && weg.has(v.ouder.link_id)) { if (lijst.length) nv.ouder = lijst[lijst.length - 1]; else delete nv.ouder; }
+        if (!lijst.length) delete nv.ouders;
+      }
+      if (v.leraar && weg.has(v.leraar.link_id)) { delete nv.leraar; veranderd = true; }
+      if (!nv.ouder && !nv.leraar) delete alles[k]; else alles[k] = nv;
+    }
+  }
   const vul = (o) => {
     const r = o && per.get(o.link_id);
     if (!r) return o;
