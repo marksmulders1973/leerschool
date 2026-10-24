@@ -9,7 +9,7 @@ import Wereldbol from "../components/learn/geo/Wereldbol.jsx";
 
 const WERELD = { viewBox: WERELD_VIEWBOX, regios: WERELDDELEN };
 const OverzichtWereld = () => <GeoKaart data={WERELD} showLabels labelFontSize={22} maxHeight={360} />;
-const check = (type, doel) => makeGeoCheck({ data: WERELD, type, doel, naam: "werelddeel", labelFontSize: 20, maxHeight: 340 });
+const check = (type, doel) => makeGeoCheck({ data: WERELD, type, doel, naam: "werelddeel", meervoud: "werelddelen", labelFontSize: 20, maxHeight: 340 });
 
 const chapters = [
   { letter: "A", title: "De werelddelen", emoji: "🌍", from: 0, to: 2 },

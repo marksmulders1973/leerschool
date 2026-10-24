@@ -74,15 +74,26 @@ function schud(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--)
 function kiesAfleiders(juist, pool, n = 3) { return schud([juist, ...schud(pool.filter((x) => x !== juist)).slice(0, n)]); }
 
 /** Fabriek: maakt een topografie-check voor een leerpad-stap (step.interactiveComponent).
- *  Serie-modus + kruis-labels (Mark 11 aug) — zie makeTopoCheck in TopoKaartNL. */
-export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize, maxHeight }) {
+ *  Serie-modus + kruis-labels (Mark 11 aug) — zie makeTopoCheck in TopoKaartNL.
+ *  Rondes van 10 (Mark 24 okt: "hij begint gewoon opnieuw nadat je alle landen
+ *  gehad hebt"): na 10 vragen een score, dan zelf kiezen: nog 10 of stoppen. */
+const RONDE = 10;
+export function makeGeoCheck({ data, type, doel, naam = "gebied", meervoud, labelFontSize, maxHeight }) {
   const NAMEN = data.regios.map((r) => r.name);
   const CAP = Object.fromEntries(data.regios.map((r) => [r.name, r.hoofdstad]));
+  const rondeLengte = Math.min(RONDE, NAMEN.length);
+  const woordMv = meervoud || (naam === "land" ? "landen" : `${naam}en`);
   return function GeoCheck({ onAnswer }) {
-    const [serie] = useState(() => [doel, ...schud(NAMEN.filter((n) => n !== doel))]);
+    // Doorlopende lijst: is hij op, dan komt er een nieuw geschud blok achter
+    // (zonder dat hetzelfde gebied twee keer achter elkaar komt).
+    const [serie, setSerie] = useState(() => [doel, ...schud(NAMEN.filter((n) => n !== doel))]);
     const [serieIdx, setSerieIdx] = useState(0);
     const [aantalGedaan, setAantalGedaan] = useState(0);
-    const huidigDoel = serie[serieIdx % serie.length];
+    const [rondeGedaan, setRondeGedaan] = useState(0);
+    const [rondeGoed, setRondeGoed] = useState(0);
+    const [rondeNr, setRondeNr] = useState(1);
+    const [scoreScherm, setScoreScherm] = useState(false);
+    const huidigDoel = serie[serieIdx];
 
     const [gekozen, setGekozen] = useState(null);
     const beantwoord = gekozen !== null;
@@ -91,21 +102,75 @@ export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize,
       if (type === "noem-hoofdstad") return kiesAfleiders(CAP[huidigDoel], NAMEN.map((n) => CAP[n]).filter(Boolean));
       return null;
     }, [huidigDoel]);
-    const kies = (waarde) => { if (beantwoord) return; setGekozen(waarde); setAantalGedaan((n) => n + 1); };
-    const volgende = () => { setGekozen(null); setSerieIdx((i) => i + 1); };
+    const juisteWaarde = type === "noem-hoofdstad" ? CAP[huidigDoel] : huidigDoel;
+    const kies = (waarde) => {
+      if (beantwoord) return;
+      setGekozen(waarde);
+      setAantalGedaan((n) => n + 1);
+      setRondeGedaan((n) => n + 1);
+      if (waarde === juisteWaarde) setRondeGoed((n) => n + 1);
+    };
+    const schuifDoor = () => {
+      const volgendeIdx = serieIdx + 1;
+      if (volgendeIdx >= serie.length) {
+        const laatste = serie[serie.length - 1];
+        let blok = schud(NAMEN);
+        if (blok[0] === laatste && blok.length > 1) blok = [...blok.slice(1), blok[0]];
+        setSerie((s) => [...s, ...blok]);
+      }
+      setGekozen(null);
+      setSerieIdx(volgendeIdx);
+    };
+    const toonScore = () => {
+      setScoreScherm(true);
+      track("oefenserie_ronde", { serie: `geo-${type}`, ronde: rondeNr, goed: rondeGoed, gedaan: rondeGedaan });
+    };
+    const volgende = () => { if (rondeGedaan >= rondeLengte) toonScore(); else schuifDoor(); };
+    const nogEenRonde = () => {
+      setScoreScherm(false); setRondeGedaan(0); setRondeGoed(0); setRondeNr((r) => r + 1);
+      schuifDoor();
+    };
     const klaar = () => {
       track("oefenserie_klaar", { serie: `geo-${type}`, gedaan: aantalGedaan });
       onAnswer?.(true, `${aantalGedaan} geoefend`);
     };
+
+    if (scoreScherm) {
+      const alles = rondeGoed === rondeGedaan;
+      return (
+        <div style={{ padding: "0.5rem 0", textAlign: "center" }}>
+          <div style={{ fontSize: 40, marginBottom: 8 }}>{alles ? "🏆" : rondeGoed >= rondeGedaan / 2 ? "👍" : "💪"}</div>
+          <p style={{ fontSize: 17, fontWeight: 700, color: C.tekst, margin: "0 0 6px" }}>
+            Je had er <strong style={{ color: C.goed }}>{rondeGoed}</strong> van de {rondeGedaan} goed!
+          </p>
+          <p style={{ fontSize: 14, color: C.muted, margin: "0 0 14px" }}>
+            {alles ? "Allemaal goed, knap gedaan." : "Wil je nog een rondje? Oefenen maakt het makkelijker."}
+          </p>
+          <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
+            <button type="button" onClick={nogEenRonde}
+              style={{ padding: "12px 20px", borderRadius: 12, border: "none", background: C.goed, color: "#fff", fontSize: 15, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
+              Nog {rondeLengte} {woordMv} →
+            </button>
+            <button type="button" onClick={klaar}
+              style={{ padding: "12px 20px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
+              Stoppen
+            </button>
+          </div>
+        </div>
+      );
+    }
 
     const labelMode = type === "noem-hoofdstad" ? "namen" : "hoofdsteden";
     const vraag =
       type === "wijs" ? <>Klik op <strong style={{ color: C.highlight }}>{huidigDoel}</strong> op de kaart.</>
       : type === "noem" ? <>Welk {naam} is <span style={{ color: C.highlight }}>geel</span> gemaakt?</>
       : <>Wat is de hoofdstad van <strong style={{ color: C.highlight }}>{huidigDoel}</strong>?</>;
-    const juisteWaarde = type === "noem-hoofdstad" ? CAP[huidigDoel] : huidigDoel;
+    const vraagNr = Math.min(rondeGedaan + (beantwoord ? 0 : 1), rondeLengte);
     return (
       <div style={{ padding: "0.5rem 0" }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: C.muted, textAlign: "center", marginBottom: 4 }}>
+          Vraag {vraagNr} van {rondeLengte}
+        </div>
         <p style={{ textAlign: "center", fontSize: 16, fontWeight: 600, color: C.tekst, margin: "0 0 12px" }}>{vraag}</p>
         <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: 8 }}>
           <GeoKaart data={data} labelFontSize={labelFontSize} maxHeight={maxHeight}
@@ -146,12 +211,14 @@ export function makeGeoCheck({ data, type, doel, naam = "gebied", labelFontSize,
             <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12 }}>
               <button type="button" onClick={volgende}
                 style={{ padding: "11px 18px", borderRadius: 10, border: "none", background: C.goed, color: "#fff", fontSize: 14, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
-                Volgende →
+                {rondeGedaan >= rondeLengte ? "Bekijk je score →" : "Volgende →"}
               </button>
-              <button type="button" onClick={klaar}
-                style={{ padding: "11px 18px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
-                ✓ Klaar
-              </button>
+              {rondeGedaan < rondeLengte && (
+                <button type="button" onClick={toonScore}
+                  style={{ padding: "11px 18px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.05)", color: C.tekst, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
+                  Stoppen
+                </button>
+              )}
             </div>
           </>
         )}

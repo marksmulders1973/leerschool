@@ -8,7 +8,7 @@ import { EU_VIEWBOX, EU_LANDEN } from "../components/learn/geo/europaData.js";
 
 const EU = { viewBox: EU_VIEWBOX, regios: EU_LANDEN };
 const OverzichtEU = () => <GeoKaart data={EU} showLabels labelFontSize={18} maxHeight={520} />;
-const check = (type, doel) => makeGeoCheck({ data: EU, type, doel, naam: "land", labelFontSize: 16, maxHeight: 480 });
+const check = (type, doel) => makeGeoCheck({ data: EU, type, doel, naam: "land", meervoud: "landen", labelFontSize: 16, maxHeight: 480 });
 
 const chapters = [
   { letter: "A", title: "Europa & onze buren", emoji: "🗺️", from: 0, to: 1 },
