@@ -20,6 +20,7 @@ import TesterOproep from "../../components/TesterOproep.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
+import Rapport from "./Rapport.jsx";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
@@ -1004,6 +1005,27 @@ export default function MijnPagina({
       .slice(0, 6);
   }, [records]);
 
+  // 📒 Rapport (Mark 24 okt 2026): alle vakken van de groep met oefenstof + wat er verder geoefend is.
+  const rapportVakken = useMemo(() => {
+    const agg = {};
+    records.forEach((r) => {
+      let subj = r.path?.subject || "anders";
+      // Basisschool: wiskunde-paden (breuken e.d.) horen op het rapport bij rekenen.
+      if (subj === "wiskunde" && niveau?.soort === "groep") subj = "rekenen";
+      if (!agg[subj]) agg[subj] = { attempts: 0, correct: 0 };
+      agg[subj].attempts += r.attempts;
+      agg[subj].correct += r.correct;
+    });
+    const set = new Set(niveauPaden(niveau).map((p) => p.subject));
+    const curriculum = niveau ? (niveau.soort === "klas" ? vakkenVoorKlas(niveau.nr) : vakkenVoorGroep(niveau.nr)) : [];
+    const lijst = curriculum.filter((v) => set.has(v) || agg[v])
+      .map((v) => ({ subj: v, titel: vakMeta(v).titel || vakMeta(v).title || v, ...(agg[v] || { attempts: 0, correct: 0 }) }));
+    Object.entries(agg).filter(([subj]) => subj !== "anders" && !lijst.some((x) => x.subj === subj))
+      .sort((a, b) => b[1].attempts - a[1].attempts)
+      .forEach(([subj, v]) => lijst.push({ subj, titel: (SUBJECT_LABELS[subj] || {}).title || subj, ...v }));
+    return lijst;
+  }, [records, niveau]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Intake-antwoorden (💪/😅 per hoofdvak) — stuurt de klaargezette lijst.
   const [intake, setIntake] = useState(() => loadIntake(player));
   const zetIntake = (vak, waarde) => {
@@ -1913,6 +1935,9 @@ export default function MijnPagina({
 
             {weergave === "kind" && rolKey !== "teacher" && (<>
 
+            {/* ── 📒 Rapport bovenaan (Mark 24 okt 2026): ouderwets schoolrapport, stand van nu. ── */}
+            {!loading && <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak} />}
+
             {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))"), border: "1px solid rgba(0,200,83,0.4)" }}>
@@ -2132,6 +2157,67 @@ export default function MijnPagina({
               </Card>
             )}
 
+
+
+            {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
+                iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
+            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" && userRole !== "ouder" &&
+              !(kiesSoort === "klas" && niveau.nr >= 6) && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: kaartBg("rgba(0,200,83,0.06)") }}>
+                <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
+                  🎒 Nieuw schooljaar!
+                </div>
+                <div style={{ fontSize: 13, color: "var(--color-text, #e8edf5)", marginBottom: 10 }}>
+                  {kiesSoort === "groep" && niveau.nr >= 8
+                    ? "Zit je nu op de middelbare school?"
+                    : `Zit je nu in ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
+                </div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <button
+                    onClick={() => {
+                      if (kiesSoort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
+                      else kiesNiveau(kiesSoort, niveau.nr + 1);
+                      sluitSchooljaarKaart();
+                    }}
+                    style={{ padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "#00c853", color: "#08240f", fontWeight: 800, fontSize: 13.5, fontFamily: "inherit" }}
+                  >
+                    {kiesSoort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
+                  </button>
+                  <button
+                    onClick={sluitSchooljaarKaart}
+                    style={{ padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", cursor: "pointer", background: "rgba(255,255,255,0.05)", color: "var(--color-text, #e8edf5)", fontWeight: 700, fontSize: 13, fontFamily: "inherit" }}
+                  >
+                    Nee, klopt zo
+                  </button>
+                </div>
+              </Card>
+            )}
+
+            {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
+                de vakken-werkbank voor wie meteen wil oefenen. */}
+            {onBack && (
+              <button
+                onClick={onBack}
+                style={{
+                  width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer",
+                  border: "1px solid rgba(93,179,255,0.45)", background: kaartBg("rgba(93,179,255,0.1)"),
+                  color: "#5db3ff", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)",
+                  marginBottom: "var(--space-4)", textAlign: "center",
+                }}
+              >
+                📚 Alle vakken en oefeningen →
+              </button>
+            )}
+
+            {/* ── Drie blokken (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): kwartier,
+                "Hoe gaat het?" en je profiel staan open; de rest zit achter één knop. Niets weg. ── */}
+            <button type="button" onClick={() => { setMeerOpen((o) => !o); try { track("mijn_meer", { open: !meerOpen }); } catch { /* */ } }}
+              style={{ width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.04)", color: "var(--color-text)", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)", marginBottom: "var(--space-4)", textAlign: "center" }}
+              aria-expanded={meerOpen}
+            >
+              {meerOpen ? "Minder tonen ▲" : "Meer op je pagina ▼ (je vakken, doel, tafels, Charley, je lijstje, diploma's, account)"}
+            </button>
+            {meerOpen && (<>
             {/* ── Waar je staat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>{rolKey === "leerling" || rolKey === "student" ? "Hoe sta je ervoor?" : "Waar je staat"}</div>
@@ -2283,67 +2369,6 @@ export default function MijnPagina({
                 </button>
               )}
             </Card>
-
-
-            {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
-                iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
-            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" && userRole !== "ouder" &&
-              !(kiesSoort === "klas" && niveau.nr >= 6) && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: kaartBg("rgba(0,200,83,0.06)") }}>
-                <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
-                  🎒 Nieuw schooljaar!
-                </div>
-                <div style={{ fontSize: 13, color: "var(--color-text, #e8edf5)", marginBottom: 10 }}>
-                  {kiesSoort === "groep" && niveau.nr >= 8
-                    ? "Zit je nu op de middelbare school?"
-                    : `Zit je nu in ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
-                </div>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <button
-                    onClick={() => {
-                      if (kiesSoort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
-                      else kiesNiveau(kiesSoort, niveau.nr + 1);
-                      sluitSchooljaarKaart();
-                    }}
-                    style={{ padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "#00c853", color: "#08240f", fontWeight: 800, fontSize: 13.5, fontFamily: "inherit" }}
-                  >
-                    {kiesSoort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
-                  </button>
-                  <button
-                    onClick={sluitSchooljaarKaart}
-                    style={{ padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", cursor: "pointer", background: "rgba(255,255,255,0.05)", color: "var(--color-text, #e8edf5)", fontWeight: 700, fontSize: 13, fontFamily: "inherit" }}
-                  >
-                    Nee, klopt zo
-                  </button>
-                </div>
-              </Card>
-            )}
-
-            {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
-                de vakken-werkbank voor wie meteen wil oefenen. */}
-            {onBack && (
-              <button
-                onClick={onBack}
-                style={{
-                  width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer",
-                  border: "1px solid rgba(93,179,255,0.45)", background: kaartBg("rgba(93,179,255,0.1)"),
-                  color: "#5db3ff", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)",
-                  marginBottom: "var(--space-4)", textAlign: "center",
-                }}
-              >
-                📚 Alle vakken en oefeningen →
-              </button>
-            )}
-
-            {/* ── Drie blokken (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): kwartier,
-                "Hoe gaat het?" en je profiel staan open; de rest zit achter één knop. Niets weg. ── */}
-            <button type="button" onClick={() => { setMeerOpen((o) => !o); try { track("mijn_meer", { open: !meerOpen }); } catch { /* */ } }}
-              style={{ width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.04)", color: "var(--color-text)", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)", marginBottom: "var(--space-4)", textAlign: "center" }}
-              aria-expanded={meerOpen}
-            >
-              {meerOpen ? "Minder tonen ▲" : "Meer op je pagina ▼ (doel, tafels, Charley, je lijstje, diploma's, account)"}
-            </button>
-            {meerOpen && (<>
             {/* ── Jouw doel + countdown (niet voor leerkrachten — agent-test
                 12 aug: "overgaan naar het volgende jaar" is kind-taal).
                 Mark 14 aug 21:48: "belangrijk blok moet ergens bovenaan, wat
