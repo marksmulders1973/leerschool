@@ -71,7 +71,15 @@ for (const b of BRONNEN) {
   const m = doc.match(/^## Adressen[ \t]*$/m);
   if (!m) { console.error(`${b.uit}: geen '## Adressen'-kopregel — overgeslagen`); continue; }
   const kop = doc.slice(0, m.index) + "## Adressen\n\n| # | Organisatie | Soort | E-mail |\n|---|---|---|---|\n";
-  const tabel = schoon.map((r, i) => `| ${i + 1} | ${r.org.replace(/\|/g, "/")} | ${b.soort}${r.nieuwsbrief ? " · nieuwsbrief " + r.nieuwsbrief.toLowerCase() : ""} | ${r.email} |`).join("\n");
-  fs.writeFileSync(`${OUT}/${b.uit}`, kop + tabel + "\n");
+  // 24 okt 2026: aanvullen, nooit overschrijven — bestaande rijen + verzendlog blijven staan,
+  // alleen adressen die nog niet in het doc staan komen erbij (anders dubbel mailen na een herbouw).
+  const naKop = doc.slice(m.index).split("\n").slice(1);
+  const oudeRijen = naKop.filter((r) => /^\|\s*\d+\s*\|/.test(r));
+  const rest = naKop.filter((r) => !r.startsWith("|")).join("\n").trim();
+  const inDoc = new Set(oudeRijen.map((r) => (r.match(EMAIL_RE) || [""])[0].toLowerCase()));
+  const nieuw = schoon.filter((r) => !inDoc.has(r.email));
+  const tabel = oudeRijen.concat(nieuw.map((r, i) => `| ${oudeRijen.length + i + 1} | ${r.org.replace(/\|/g, "/")} | ${b.soort}${r.nieuwsbrief ? " · nieuwsbrief " + r.nieuwsbrief.toLowerCase() : ""} | ${r.email} |`)).join("\n");
+  console.log(`   → ${b.uit}: ${oudeRijen.length} stonden er al, ${nieuw.length} erbij`);
+  fs.writeFileSync(`${OUT}/${b.uit}`, kop + tabel + "\n" + (rest ? "\n" + rest + "\n" : ""));
 }
 console.log(`\nTotaal nieuw te mailen: ${totaal} · dubbel/al gemaild: ${dubbel} · verboden/afgemeld: ${overgeslagen} · bekende adressen: ${bekend.size}`);
