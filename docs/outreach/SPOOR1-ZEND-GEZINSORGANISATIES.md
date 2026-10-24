@@ -406,3 +406,28 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 168 · Stichting Move Den Haag · denhaag@stichtingmove.nl · OK · 01a15845-5090-7e73-a8fb-c048c4834355
   - 169 · Stichting Move Leiden · leiden@stichtingmove.nl · OK · 01a15845-5673-77d2-bde5-f3dce34528d3
 - **20-10-2026, 09:45:02** — klaar: 60/60 verstuurd (OK-regels staan hierboven).
+
+- **21-10-2026, 08:00:10** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 170 · Stichting Move Enschede · enschede@stichtingmove.nl · OK · 01a15d0b-b48c-75db-aed8-5a10709d701b
+  - 171 · Stichting Move Hengelo · hengelo@stichtingmove.nl · OK · 01a15d0b-bb08-7bb6-acc2-919d56c40cfb
+  - 172 · Stichting Move Leeuwarden · leeuwarden@stichtingmove.nl · OK · 01a15d0b-c187-7df0-adae-66fc33cd4a33
+  - 173 · Stichting Move Groningen · groningen@stichtingmove.nl · OK · 01a15d0b-c7f9-746e-ac32-e25a5f935ee0
+  - 174 · Stichting Move Nijmegen · nijmegen@stichtingmove.nl · OK · 01a15d0b-cdfe-733f-b141-f76e13540359
+  - 175 · Stichting Move Arnhem · arnhem@stichtingmove.nl · OK · 01a15d0b-d410-7ed3-bd8e-9e0dd1ea3605
+  - 176 · Stichting Move Eindhoven · eindhoven@stichtingmove.nl · OK · 01a15d0b-da56-7572-b2b2-764df4352952
+  - 177 · Stichting Move Tilburg · tilburg@stichtingmove.nl · OK · 01a15d0b-e05c-75eb-a55a-6792dc6ed2d5
+  - 178 · JINC (landelijk) · info@jinc.nl · OK · 01a15d0b-e65e-7d5f-bf7a-986eb34be945
+  - 179 · JINC Brabant · brabant@jinc.nl · OK · 01a15d0b-ec5c-7da9-822a-e8edb81cbfb0
+  - 180 · JINC Limburg · limburg@jinc.nl · OK · 01a15d0b-f255-73b9-9883-6c0eaa76d7f3
+  - 181 · JINC Haaglanden-Leiden · haaglanden-leiden@jinc.nl · OK · 01a15d0b-f812-773d-8fc6-95f307876f9f
+  - 182 · JINC Midden-Nederland · midden-nederland@jinc.nl · OK · 01a15d0b-fe64-7a28-99ef-0914d664d376
+  - 183 · JINC Noord · noord@jinc.nl · OK · 01a15d0c-0459-735d-9433-bae656788d57
+  - 184 · JINC Noord-Holland · noord-holland@jinc.nl · OK · 01a15d0c-0a53-7e45-9c59-a03cdf10b27a
+  - 185 · JINC Oost · oost@jinc.nl · OK · 01a15d0c-1056-7887-b799-42c81ddf6447
+  - 186 · JINC Rijnmond · rijnmond@jinc.nl · OK · 01a15d0c-165b-76f4-ba3d-2597139da6dd
+  - 187 · VGGM / GGD Gelderland-Midden (JGZ) · ggd@vggm.nl · OK · 01a15d0c-1c38-7be6-8fcf-b60e597250da
+  - 188 · Dienst Gezondheid & Jeugd Zuid-Holland Zuid · info@dgjzhz.nl · OK · 01a15d0c-2206-706e-90f6-03b69644a497
+  - 189 · GGD Gooi en Vechtstreek (Jeugd en Gezin) · info@ggdgv.nl · OK · 01a15d0c-27f3-72da-9b17-fa817a64ad47
+  - 190 · CJG043 (Maastricht-Heuvelland) · info@cjg043.nl · OK · 01a15d0c-2dcf-70b7-8885-4da18b3c3225
+  - 191 · Ouder- en Kindteams Amsterdam · info@oktamsterdam.nl · OK · 01a15d0c-33ed-7ba2-9da6-8cf1170010ce
+- **21-10-2026, 08:00:44** — klaar: 22/22 verstuurd (OK-regels staan hierboven).

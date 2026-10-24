@@ -2,6 +2,7 @@
 // Doc-opbouw: "## Onderwerp" (1 regel) · "## Tekst" (t/m de volgende "## ") met
 // [ORGANISATIE] als plaatshouder · een tabel "| # | Organisatie | Soort | E-mail |".
 // [CODE] (26 sep 2026) = partnercode uit de Soort-kolom ("voedselbank · ANTWERPEN2027"); ontbreekt die → rij overgeslagen.
+// "## Bijlage" (24 okt 2026, optioneel) = regels "- <pad in repo> | <bestandsnaam>" → als bijlage mee (bv. het nieuwsbrief-beeld).
 // Gebruik: node scripts/outreach-send-doc.mjs <max> <doc.md>   (DRY=1 = niet versturen)
 import fs from "node:fs";
 const env = fs.readFileSync("C:/Users/mark-/.claude/resend-lokaal.env", "utf8");
@@ -15,6 +16,7 @@ const DRY = process.env.DRY === "1";
 const doc = fs.readFileSync(DOC, "utf8").replace(/\r\n/g, "\n");
 const subject = (doc.split("## Onderwerp")[1] || "").split("\n").map(s => s.trim()).filter(Boolean)[0];
 const body = doc.split("## Tekst")[1].split(/\n## /)[0].replace(/^[^\n]*\n/, "").trim();
+const bijlagen = ((doc.split("## Bijlage")[1] || "").split(/\n## /)[0].match(/^- .+$/gm) || []).map(r => { const [pad, naam] = r.slice(2).split("|").map(x => x.trim()); return { filename: naam || pad.split("/").pop(), content: fs.readFileSync(pad).toString("base64") }; });
 const rows = [...doc.matchAll(/^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([\w.+-]+@[\w.-]+)\s*\|/gm)].map(m => ({ n: +m[1], org: m[2], soort: m[3], email: m[4] }));
 // Al verstuurd (OK in het log van dit doc) → overslaan, zodat een vervolg-run verder gaat.
 const alVerstuurd = new Set([...doc.matchAll(/^\s*- \d+ · .+? · ([\w.+-]+@[\w.-]+) · OK/gm)].map(m => m[1].toLowerCase()));
@@ -33,7 +35,7 @@ const ruimte = Math.max(0, DAGMAX - alVandaag);
 if (!DRY && ruimte === 0) { console.log(`Dagrem: vandaag al ${alVandaag} bulkmails (max ${DAGMAX}) — niets verstuurd; morgen verder.`); process.exit(0); }
 const todo = rows.filter(r => !alVerstuurd.has(r.email.toLowerCase()) && !nietMeer.has(r.email.toLowerCase())).slice(0, DRY ? MAX : Math.min(MAX, ruimte));
 if (!subject || !body || !todo.length) { console.error("doc onvolledig", { subject: !!subject, body: body.length, rows: rows.length }); process.exit(1); }
-console.log("onderwerp:", subject, "| tekst:", body.length, "tekens | adressen:", todo.length, DRY ? "| DRY" : "");
+console.log("onderwerp:", subject, "| tekst:", body.length, "tekens | adressen:", todo.length, "| bijlagen:", bijlagen.map(b => b.filename).join(", ") || "geen", DRY ? "| DRY" : "");
 const log = [];
 let kopGeschreven = false;
 for (const r of todo) {
@@ -43,7 +45,7 @@ for (const r of todo) {
   const html = "<div style=\"font-family:Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1a2233\">" + text.split(/\n\n/).map(p => "<p>" + (/(^|\n)- /.test(p) ? p.replace(/\n/g, "<br>") : p.replace(/\n/g, " ")).replace(/(leerkwartier\.(?:app|be)(?:[\w\/.\-?=]*[\w\/])?)/g, '<a href="https://$1">$1</a>') + "</p>").join("") + "</div>";
   if (DRY) { console.log(`${r.n}\t${r.org}\t${r.email}\tDRY`); continue; }
   const resp = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: "Mark Smulders — Leerkwartier <hallo@leerkwartier.app>", reply_to: "hallo@leerkwartier.app", to: [r.email], subject, text, html }) });
+    body: JSON.stringify({ from: "Mark Smulders — Leerkwartier <hallo@leerkwartier.app>", reply_to: "hallo@leerkwartier.app", to: [r.email], subject, text, html, ...(bijlagen.length ? { attachments: bijlagen } : {}) }) });
   const ok = resp.ok; let id = ""; try { id = (await resp.json()).id || ""; } catch {}
   log.push(`${r.n}\t${r.org}\t${r.email}\t${ok ? "OK" : "FOUT " + resp.status}\t${id}`);
   if (ok) { const nu = (fs.existsSync(TELLER) ? +fs.readFileSync(TELLER, "utf8") || 0 : 0) + 1; fs.writeFileSync(TELLER, String(nu)); }
