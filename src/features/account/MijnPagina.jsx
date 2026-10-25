@@ -2804,7 +2804,7 @@ export default function MijnPagina({
             </>)}
 
             {weergave === "ouder" && rolKey !== "teacher" && (<>
-            {/* 📒 Rapport ook in de ouder-bril (Mark 26 okt 2026: "ik kon het rapport niet vinden"):
+            {/* 📒 Rapport ook in de ouder-bril (Mark 25 okt 2026: "ik kon het rapport niet vinden"):
                 een ouder die op zijn kind tikt, landt hier; het rapport van dat kind hoort bovenaan. */}
             {rolKey !== "ouder" && !loading && <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak} />}
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:
