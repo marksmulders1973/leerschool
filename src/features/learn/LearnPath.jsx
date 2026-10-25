@@ -21,7 +21,7 @@ import {
   popDueRetrieval,
   peekDueRetrieval,
 } from "../../shared/adaptiveStore.js";
-import { recordRefAnswer } from "../mastery/mastery.js";
+import { recordRefAnswer, recordAnswerForPath } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
@@ -843,6 +843,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // 16 okt 2026: + stap en vraag (hash van de vraagtekst, zelfde als geziendeVragen) → moeilijkheidsgetal per vraag.
       try { track("question_answered", { bron: "leerpad", pad: pathId, stap: stepIdx, vraag: vraagSleutel(pathId, rawCheck?.q).split("|")[1], is_correct: i === currentCheck.answer, steuntaal: path?.steunTeksten ? leesSteuntaal() : undefined }); } catch { /* */ }
       try { meldAntwoord({ pathId, correct: i === currentCheck.answer, ms: Date.now() - vraagStartRef.current, hints: hintsRef.current, bron: "leerpad" }); } catch { /* */ }
+      // 📒 Rapport (Mark 25 okt 2026: "laat de leerpad vragen ook meetellen"): eerste poging per
+      // vraag telt mee in het cijfer van het vak (topic_mastery, incl. laatste-50-rijtje).
+      // Herkansingen met hint tellen niet, anders zakt het cijfer onterecht. Alleen met een naam.
+      if (player && player !== "Speler") {
+        recordAnswerForPath({ playerName: player, pathId, isCorrect: i === currentCheck.answer, userId: authUser?.id || null }).catch(() => {});
+      }
       if (i === currentCheck.answer) foutReeksRef.current = 0;
       else {
         foutReeksRef.current += 1;
