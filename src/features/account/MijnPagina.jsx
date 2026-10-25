@@ -1946,7 +1946,8 @@ export default function MijnPagina({
             {weergave === "kind" && rolKey !== "teacher" && (<>
 
             {/* ── 📒 Rapport bovenaan (Mark 24 okt 2026): ouderwets schoolrapport, stand van nu. ── */}
-            {!loading && <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak} />}
+            {!loading && <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak}
+              onKwartiercheck={!kwartiercheckGedaan && onKwartiercheck ? () => naarKwartiercheck("rapport") : null} />}
 
             {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}

@@ -58,11 +58,26 @@ function kiesStartVak(zonder) {
   return bezig[0] || zonder.find((v) => v.subj === "rekenen") || zonder[0];
 }
 
-function Opmerking({ naam, vakken, onVak }) {
+function KwartiercheckLink({ onKwartiercheck }) {
+  return (
+    <span role="button" tabIndex={0}
+      onClick={(e) => { e.stopPropagation(); onKwartiercheck(); }}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onKwartiercheck(); }}
+      style={{ textDecoration: "underline", textDecorationThickness: 1, textUnderlineOffset: 3, cursor: "pointer" }}>
+      de Kwartiercheck →
+    </span>
+  );
+}
+
+function Opmerking({ naam, vakken, onVak, onKwartiercheck }) {
   const metCijfer = vakken.filter((v) => v.cijfer !== null);
   const zonder = vakken.filter((v) => v.cijfer === null);
   const start = kiesStartVak(zonder);
   if (metCijfer.length === 0) {
+    // Mark 25 okt: Kwartiercheck als eerste tip (zolang hij niet gedaan is), daarna een vak.
+    if (onKwartiercheck) {
+      return <>Nog geen cijfers, {naam}. Begin maar met <KwartiercheckLink onKwartiercheck={onKwartiercheck} />: dan zie je waar je staat.{start ? <> Daarna <VakLink vak={start} onVak={onVak} /></> : null}</>;
+    }
     if (!start) return <>Nog geen cijfers, {naam}. Na {MIN_VRAGEN} vragen in een vak schrijf ik hier je cijfer op.</>;
     const nog = MIN_VRAGEN - (start.attempts || 0);
     return <>Nog geen cijfers, {naam}. Na {MIN_VRAGEN} vragen in een vak schrijf ik hier je cijfer op. Begin maar met <VakLink vak={start} onVak={onVak} />{start.attempts > 0 ? <> (nog {nog} {nog === 1 ? "vraag" : "vragen"})</> : null}</>;
@@ -77,7 +92,7 @@ function Opmerking({ naam, vakken, onVak }) {
 }
 
 /** vakken: [{ subj, titel, attempts, correct }] in rapport-volgorde. */
-export default function Rapport({ naam, niveauLabel, vakken, onVak }) {
+export default function Rapport({ naam, niveauLabel, vakken, onVak, onKwartiercheck = null }) {
   const rijen = vakken.map((v) => ({
     ...v,
     cijfer: (v.recentAantal || 0) >= VAST_VRAGEN ? cijferVoor(v.recentGoed, v.recentAantal) : cijferVoor(v.correct, v.attempts),
@@ -136,7 +151,7 @@ export default function Rapport({ naam, niveauLabel, vakken, onVak }) {
       <div style={{ borderTop: `2px solid ${LIJN}`, marginTop: 10, paddingTop: 8 }}>
         <div style={{ fontSize: 12.5, fontStyle: "italic", opacity: 0.8, marginBottom: 2 }}>Opmerking:</div>
         <div style={{ fontFamily: HAND, color: INKT, fontSize: 16, lineHeight: 1.55 }}>
-          <Opmerking naam={naam} vakken={rijen} onVak={onVak} />
+          <Opmerking naam={naam} vakken={rijen} onVak={onVak} onKwartiercheck={onKwartiercheck} />
         </div>
         <div style={{ fontFamily: HAND, color: INKT, fontSize: 15, textAlign: "right", marginTop: 4 }}>~ de meester</div>
       </div>
