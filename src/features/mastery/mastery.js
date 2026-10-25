@@ -141,6 +141,24 @@ async function supportsEaseColumn() {
   return _easeColumnSupported;
 }
 
+// Laatste 50 antwoorden per onderwerp ('1' goed / '0' fout, nieuwste achteraan) voor het
+// rapportcijfer (Mark 25 okt 2026: "laatste 50 vragen voor het cijfer"). Graceful zoals ease.
+export const RECENT_MAX = 50;
+export function volgendRecent(oud, isCorrect) {
+  return ((oud || "") + (isCorrect ? "1" : "0")).slice(-RECENT_MAX);
+}
+let _recentColumnSupported = null;
+async function supportsRecentColumn() {
+  if (_recentColumnSupported !== null) return _recentColumnSupported;
+  try {
+    const { error } = await supabase.from("topic_mastery").select("recent").limit(1);
+    _recentColumnSupported = !error;
+  } catch {
+    _recentColumnSupported = false;
+  }
+  return _recentColumnSupported;
+}
+
 // Zoek pathId voor een vraag-tekst (uit pre-getagde map).
 // Returnt null als de vraag niet getagd is.
 export function pathIdForQuestion(questionText) {
@@ -172,9 +190,10 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
 
   try {
     const easeOk = await supportsEaseColumn();
-    const selectCols = easeOk
+    const recentOk = await supportsRecentColumn();
+    const selectCols = (easeOk
       ? "attempts, correct, streak, ease_factor, interval_days"
-      : "attempts, correct, streak";
+      : "attempts, correct, streak") + (recentOk ? ", recent" : "");
     // Stap 2 (2 sep 2026): bestaande rij zoeken op dezelfde sleutel als de upsert
     // (owner_key): gekoppeld → link_id; anders legacy-rij zonder link_id op naam.
     const linkIdTm = linkIdVoor(player);
@@ -200,6 +219,7 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
       next_due_at: sr.nextDueAt.toISOString(),
       last_seen: new Date().toISOString(),
     };
+    if (recentOk) row.recent = volgendRecent(existing?.recent, isCorrect);
     if (resolvedUserId) row.user_id = resolvedUserId;
     if (easeOk) {
       row.ease_factor = sr.easeFactor;
@@ -233,7 +253,7 @@ async function safeUpsertMastery(rowIn) {
     // eslint-disable-next-line no-console
     console.warn("[mastery] ease-write faalde, retry zonder ease-velden:", error.message);
     _easeColumnSupported = false; // future-calls schrijven 'em niet meer
-    const { ease_factor, interval_days, ...stripped } = row;
+    const { ease_factor, interval_days, recent, ...stripped } = row;
     const { error: error2 } = await supabase
       .from("topic_mastery")
       .upsert(stripped, { onConflict: "owner_key,path_id" });
@@ -343,9 +363,10 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
 
   try {
     const easeOk = await supportsEaseColumn();
-    const selectCols = easeOk
+    const recentOk = await supportsRecentColumn();
+    const selectCols = (easeOk
       ? "attempts, correct, streak, ease_factor, interval_days"
-      : "attempts, correct, streak";
+      : "attempts, correct, streak") + (recentOk ? ", recent" : "");
     // Stap 2 (2 sep 2026): bestaande rij zoeken op dezelfde sleutel als de upsert
     // (owner_key): gekoppeld → link_id; anders legacy-rij zonder link_id op naam.
     const linkIdTm = linkIdVoor(player);
@@ -371,6 +392,7 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
       next_due_at: sr.nextDueAt.toISOString(),
       last_seen: new Date().toISOString(),
     };
+    if (recentOk) row.recent = volgendRecent(existing?.recent, isCorrect);
     if (resolvedUserId) row.user_id = resolvedUserId;
     if (easeOk) {
       row.ease_factor = sr.easeFactor;
@@ -422,9 +444,10 @@ export async function loadMasteryForPlayer(playerName, userId = null) {
   const player = (playerName || "").trim();
   if (!player) return [];
   try {
+    const recentOk = await supportsRecentColumn();
     let q = supabase
       .from("topic_mastery")
-      .select("path_id, attempts, correct, last_seen, next_due_at, streak")
+      .select("path_id, attempts, correct, last_seen, next_due_at, streak" + (recentOk ? ", recent" : ""))
       .eq("player_name", player);
     // Ingelogd? Filter ook op user_id, zodat twee kinderen met dezelfde naam
     // niet elkaars scores te zien krijgen.
@@ -436,6 +459,7 @@ export async function loadMasteryForPlayer(playerName, userId = null) {
       attempts: r.attempts || 0,
       correct: r.correct || 0,
       streak: r.streak || 0,
+      recent: r.recent || "",
       lastSeen: r.last_seen,
       nextDueAt: r.next_due_at,
       level: getMasteryLevel(r.attempts || 0, r.correct || 0),

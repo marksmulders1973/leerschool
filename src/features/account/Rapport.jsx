@@ -5,8 +5,8 @@
 // zoals vroeger), altijd de stand van nu, een cijfer pas vanaf 10 vragen per
 // vak, en een korte opmerking van de meester onderaan.
 // Mark 25 okt: "10 vragen is een begin voor een cijfer, voor een vast cijfer wel 50".
-// Het cijfer is het gemiddelde over álle vragen (10× een 5 + 10× een 7 = een 6, zoals
-// op school). 10-49 vragen = voorlopig (potlood), vanaf 50 = vast (inkt). Balkje toont
+// Vanaf 50 vragen telt alleen het gemiddelde van de LAATSTE 50 (Mark 25 okt: "ja, laatste
+// 50 vragen voor het cijfer"), zodat vooruitgang zichtbaar wordt; daarvoor alle vragen. 10-49 vragen = voorlopig (potlood), vanaf 50 = vast (inkt). Balkje toont
 // hoeveel vragen er nog nodig zijn.
 
 import { track } from "../../utils.js";
@@ -55,7 +55,10 @@ function opmerking(naam, vakken) {
 
 /** vakken: [{ subj, titel, attempts, correct }] in rapport-volgorde. */
 export default function Rapport({ naam, niveauLabel, vakken, onVak }) {
-  const rijen = vakken.map((v) => ({ ...v, cijfer: cijferVoor(v.correct, v.attempts) }));
+  const rijen = vakken.map((v) => ({
+    ...v,
+    cijfer: (v.recentAantal || 0) >= VAST_VRAGEN ? cijferVoor(v.recentGoed, v.recentAantal) : cijferVoor(v.correct, v.attempts),
+  }));
   const datum = new Date().toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
   return (
     <div style={{
@@ -115,7 +118,7 @@ export default function Rapport({ naam, niveauLabel, vakken, onVak }) {
         <div style={{ fontFamily: HAND, color: INKT, fontSize: 15, textAlign: "right", marginTop: 4 }}>~ de meester</div>
       </div>
       <div style={{ fontSize: 11, opacity: 0.6, marginTop: 8, textAlign: "center" }}>
-        Cijfer = gemiddeld hoeveel je goed had. Vanaf {MIN_VRAGEN} vragen een voorlopig cijfer (potlood), vanaf {VAST_VRAGEN} een vast cijfer (inkt). Tik op een vak om te oefenen.
+        Cijfer = gemiddeld hoeveel je goed had. Vanaf {MIN_VRAGEN} vragen een voorlopig cijfer (potlood), vanaf {VAST_VRAGEN} een vast cijfer (inkt) over je laatste {VAST_VRAGEN} vragen. Tik op een vak om te oefenen.
       </div>
     </div>
   );

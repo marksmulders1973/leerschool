@@ -1012,14 +1012,24 @@ export default function MijnPagina({
       let subj = r.path?.subject || "anders";
       // Basisschool: wiskunde-paden (breuken e.d.) horen op het rapport bij rekenen.
       if (subj === "wiskunde" && niveau?.soort === "groep") subj = "rekenen";
-      if (!agg[subj]) agg[subj] = { attempts: 0, correct: 0 };
+      if (!agg[subj]) agg[subj] = { attempts: 0, correct: 0, _rec: [] };
       agg[subj].attempts += r.attempts;
       agg[subj].correct += r.correct;
+      if (r.recent) agg[subj]._rec.push({ t: r.lastSeen || "", bits: r.recent });
+    });
+    // Laatste 50 antwoorden per vak (Mark 25 okt): nieuwste onderwerp eerst, binnen een
+    // onderwerp van achter naar voren. Benadering: onderwerpen lopen niet door elkaar heen.
+    Object.values(agg).forEach((v) => {
+      const bits = [];
+      v._rec.sort((x, y) => (y.t > x.t ? 1 : -1)).forEach((r) => { for (let i = r.bits.length - 1; i >= 0 && bits.length < 50; i--) bits.push(r.bits[i]); });
+      v.recentAantal = bits.length;
+      v.recentGoed = bits.filter((b) => b === "1").length;
+      delete v._rec;
     });
     const set = new Set(niveauPaden(niveau).map((p) => p.subject));
     const curriculum = niveau ? (niveau.soort === "klas" ? vakkenVoorKlas(niveau.nr) : vakkenVoorGroep(niveau.nr)) : [];
     const lijst = curriculum.filter((v) => set.has(v) || agg[v])
-      .map((v) => ({ subj: v, titel: vakMeta(v).titel || vakMeta(v).title || v, ...(agg[v] || { attempts: 0, correct: 0 }) }));
+      .map((v) => ({ subj: v, titel: vakMeta(v).titel || vakMeta(v).title || v, ...(agg[v] || { attempts: 0, correct: 0, recentAantal: 0, recentGoed: 0 }) }));
     Object.entries(agg).filter(([subj]) => subj !== "anders" && !lijst.some((x) => x.subj === subj))
       .sort((a, b) => b[1].attempts - a[1].attempts)
       .forEach(([subj, v]) => lijst.push({ subj, titel: (SUBJECT_LABELS[subj] || {}).title || subj, ...v }));
