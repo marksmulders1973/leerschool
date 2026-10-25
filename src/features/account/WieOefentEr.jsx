@@ -113,29 +113,52 @@ const knopBasis = {
 // `lijntje` (14 okt 2026): "gekoppeld met …" → gekleurde rand + regeltje onder de rol.
 // 21 okt 2026: `kleur` = de kleur van de koppeling (ouder 1 oranje, ouder 2 blauw, leerkracht
 // paars), dezelfde als de lijntjes. Het actieve profiel houdt zijn groene rand.
-function Tegel({ p, actief, onKies, lijntje = "", kleur = "#ffb74d" }) {
+// 25 okt 2026 (Mark: "maak in dit blok een blokje met 'ga naar mijn pagina'"): `onMijn` = knopje
+// onderin een kindtegel dat altijd meteen naar de eigen pagina van dat kind gaat (ook als een tik
+// op de tegel zelf bij een gekoppelde ouder de Kindkaart opent).
+function Tegel({ p, actief, onKies, onMijn = null, lijntje = "", kleur = "#ffb74d" }) {
   const config = loadAvatarConfig(p.naam);
   return (
-    <button
-      type="button"
-      onClick={onKies}
+    <div
       data-gekoppeld={lijntje ? "1" : undefined}
       style={{
-        ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
-        padding: "12px 6px", width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
+        display: "flex", flexDirection: "column", borderRadius: 14, overflow: "hidden",
+        width: "100%", minHeight: 138, height: "100%", boxSizing: "border-box",
         border: actief ? "2px solid #00e676" : lijntje ? `2px solid ${kleur}` : "1px solid rgba(255,255,255,0.15)",
-        background: actief ? "rgba(0,230,118,0.08)" : lijntje ? `${kleur}14` : "rgba(255,255,255,0.04)", color: "#fff",
+        background: actief ? "rgba(0,230,118,0.08)" : lijntje ? `${kleur}14` : "rgba(255,255,255,0.04)",
       }}
     >
-      <span style={{ width: 56, height: 56, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-        <AvatarSvg config={config} size={56} />
-      </span>
-      <span style={{ fontSize: 15, lineHeight: 1.2, wordBreak: "break-word" }}>{p.naam}</span>
-      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{rolWoord(p)}</span>
-      {lijntje && (
-        <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: kleur, lineHeight: 1.25, wordBreak: "break-word" }}>🔗 {lijntje}</span>
+      <button
+        type="button"
+        onClick={onKies}
+        style={{
+          ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, flex: 1,
+          padding: "12px 6px", width: "100%", border: "none", borderRadius: 0, background: "transparent", color: "#fff",
+        }}
+      >
+        <span style={{ width: 56, height: 56, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+          <AvatarSvg config={config} size={56} />
+        </span>
+        <span style={{ fontSize: 15, lineHeight: 1.2, wordBreak: "break-word" }}>{p.naam}</span>
+        <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{rolWoord(p)}</span>
+        {lijntje && (
+          <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: kleur, lineHeight: 1.25, wordBreak: "break-word" }}>🔗 {lijntje}</span>
+        )}
+      </button>
+      {onMijn && (
+        <button
+          type="button"
+          data-naar-mijn
+          onClick={onMijn}
+          style={{
+            ...knopBasis, margin: "0 6px 8px", padding: "7px 4px", fontSize: 12, lineHeight: 1.2,
+            border: "1px solid rgba(0,230,118,0.45)", borderRadius: 999, background: "rgba(0,230,118,0.10)", color: "#69f0ae",
+          }}
+        >
+          Ga naar mijn pagina
+        </button>
       )}
-    </button>
+    </div>
   );
 }
 
@@ -618,7 +641,8 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
           {items.map(({ plek, profiel }, i) => (
             <div key={plek.label + i} data-tegel={profiel ? profiel.naam.trim().toLowerCase() : undefined} style={{ position: "relative", zIndex: 2 }}>
               {profiel
-                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} kleur={graaf.kleur.get(profiel.naam.trim().toLowerCase())} onKies={() => tikProfiel(profiel)} />
+                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} lijntje={lijntjes.get(profiel.naam.trim().toLowerCase()) || ""} kleur={graaf.kleur.get(profiel.naam.trim().toLowerCase())} onKies={() => tikProfiel(profiel)}
+                    onMijn={plek.groep === "kind" && !beheren ? () => { try { track("profiel_naar_mijn", {}); } catch { /* */ } kies(profiel.naam); } : null} />
                 : (!beheren && <LegePlek plek={plek} onKlik={() => { try { track("profiel_plek_invullen", { groep: plek.groep }); } catch { /* */ } setNieuwRol(plek.rol); }} />)}
               {beheren && profiel && <span aria-hidden="true" style={{ position: "absolute", top: 6, right: 8, fontSize: 12, fontWeight: 800, color: "#ff8a80" }}>weghalen</span>}
             </div>
@@ -629,7 +653,7 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
   };
 
   return (
-    <div role="dialog" aria-modal="true" aria-label="Wie oefent er?" style={{
+    <div role="dialog" aria-modal="true" aria-label="Wie ben jij?" style={{
       position: "fixed", inset: 0, zIndex: 1000, overflowY: "auto",
       background: "radial-gradient(circle at 50% 0%, #16264a, #0b1224 70%)", padding: "24px 14px 40px",
     }}>
@@ -645,8 +669,8 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
         <ProfielKaart bestaand={profielen} vasteRol={nieuwRol} onKlaar={maak} onTerug={() => setNieuwRol(null)} />
       ) : (
         <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "4px 0 4px", color: "#fff" }}>Wie oefent er?</h2>
-          <p style={{ margin: `0 0 ${tikHint ? 6 : 18}px`, fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
+          <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "4px 0 4px", color: "#fff" }}>Wie ben jij?</h2>
+          <p style={{ margin: `0 0 ${tikHint ? 6 : 18}px`, fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen naam. Nieuw hier? Vul een lege plek in.</p>
           {tikHint && <p data-tik-hint style={{ margin: "0 0 18px", fontSize: 13.5, fontWeight: 700, color: "#ffb74d" }}>{tikHint}</p>}
           {/* Mark 14 okt 2026: ouders + leerkracht bovenaan in één rij, kinderen eronder. */}
           <div ref={rasterRef} style={{ position: "relative" }}>
