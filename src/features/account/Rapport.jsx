@@ -37,20 +37,43 @@ function Balkje({ nu, doel, kleur }) {
   );
 }
 
-function opmerking(naam, vakken) {
+// Opmerking van de meester. Mark 25 okt: niet "begin maar met een kwartiertje" maar een
+// concreet vak, altijd met een link ernaartoe.
+function VakLink({ vak, onVak }) {
+  if (!onVak) return <>{vak.titel.toLowerCase()}</>;
+  return (
+    <span role="button" tabIndex={0}
+      onClick={(e) => { e.stopPropagation(); try { track("mijn_rapport_meester_link", { vak: vak.subj }); } catch { /* */ } onVak(vak.subj); }}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onVak(vak.subj); }}
+      style={{ textDecoration: "underline", textDecorationThickness: 1, textUnderlineOffset: 3, cursor: "pointer" }}>
+      {vak.titel.toLowerCase()} →
+    </span>
+  );
+}
+
+function kiesStartVak(zonder) {
+  if (zonder.length === 0) return null;
+  // Het vak dat het dichtst bij een eerste cijfer is; anders rekenen; anders het eerste.
+  const bezig = zonder.filter((v) => (v.attempts || 0) > 0).sort((a, b) => b.attempts - a.attempts);
+  return bezig[0] || zonder.find((v) => v.subj === "rekenen") || zonder[0];
+}
+
+function Opmerking({ naam, vakken, onVak }) {
   const metCijfer = vakken.filter((v) => v.cijfer !== null);
   const zonder = vakken.filter((v) => v.cijfer === null);
+  const start = kiesStartVak(zonder);
   if (metCijfer.length === 0) {
-    return `Nog geen cijfers, ${naam}. Na ${MIN_VRAGEN} vragen in een vak schrijf ik hier je cijfer op. Begin maar met een kwartiertje!`;
+    if (!start) return <>Nog geen cijfers, {naam}. Na {MIN_VRAGEN} vragen in een vak schrijf ik hier je cijfer op.</>;
+    const nog = MIN_VRAGEN - (start.attempts || 0);
+    return <>Nog geen cijfers, {naam}. Na {MIN_VRAGEN} vragen in een vak schrijf ik hier je cijfer op. Begin maar met <VakLink vak={start} onVak={onVak} />{start.attempts > 0 ? <> (nog {nog} {nog === 1 ? "vraag" : "vragen"})</> : null}</>;
   }
   const best = metCijfer.reduce((a, b) => (b.cijfer > a.cijfer ? b : a));
   const zwak = metCijfer.reduce((a, b) => (b.cijfer < a.cijfer ? b : a));
-  let tekst;
-  if (zwak.cijfer >= 8) tekst = `Wat een mooi rapport, ${naam}! Ga zo door.`;
-  else if (zwak !== best && zwak.cijfer < 6) tekst = `${best.titel} gaat goed. Bij ${zwak.titel.toLowerCase()} valt nog wat te leren: een kwartiertje extra helpt echt.`;
-  else tekst = `Je werkt goed mee, ${naam}. ${best.titel} is je sterkste vak.`;
-  if (zonder.length > 0) tekst += ` Probeer ook eens ${zonder[0].titel.toLowerCase()}.`;
-  return tekst;
+  let zin;
+  if (zwak.cijfer >= 8) zin = <>Wat een mooi rapport, {naam}! Ga zo door.</>;
+  else if (zwak !== best && zwak.cijfer < 6) zin = <>{best.titel} gaat goed. Oefen nog wat met <VakLink vak={zwak} onVak={onVak} />, een kwartiertje extra helpt echt.</>;
+  else zin = <>Je werkt goed mee, {naam}. {best.titel} is je sterkste vak.</>;
+  return <>{zin}{start ? <> Probeer ook eens <VakLink vak={start} onVak={onVak} /></> : null}</>;
 }
 
 /** vakken: [{ subj, titel, attempts, correct }] in rapport-volgorde. */
@@ -113,7 +136,7 @@ export default function Rapport({ naam, niveauLabel, vakken, onVak }) {
       <div style={{ borderTop: `2px solid ${LIJN}`, marginTop: 10, paddingTop: 8 }}>
         <div style={{ fontSize: 12.5, fontStyle: "italic", opacity: 0.8, marginBottom: 2 }}>Opmerking:</div>
         <div style={{ fontFamily: HAND, color: INKT, fontSize: 16, lineHeight: 1.55 }}>
-          {opmerking(naam, rijen)}
+          <Opmerking naam={naam} vakken={rijen} onVak={onVak} />
         </div>
         <div style={{ fontFamily: HAND, color: INKT, fontSize: 15, textAlign: "right", marginTop: 4 }}>~ de meester</div>
       </div>
