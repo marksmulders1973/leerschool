@@ -2804,6 +2804,9 @@ export default function MijnPagina({
             </>)}
 
             {weergave === "ouder" && rolKey !== "teacher" && (<>
+            {/* 📒 Rapport ook in de ouder-bril (Mark 26 okt 2026: "ik kon het rapport niet vinden"):
+                een ouder die op zijn kind tikt, landt hier; het rapport van dat kind hoort bovenaan. */}
+            {rolKey !== "ouder" && !loading && <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak} />}
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:
                 "als je ouder bent, wie zijn dan de kinderen?"). Zacht model —
                 anders dan Squla/Junior Einstein, die eerst een (betaald) account
@@ -2815,7 +2818,7 @@ export default function MijnPagina({
                 {/* Mark 27 aug: "als ouder moet er simpel iets staan als
                     'bekijk de resultaten van…'" — tik = kind-profiel in de
                     ouder-bril (resultaten), niet de kind-weergave. */}
-                <div style={kaartTitelStijl}>{rolKey === "ouder" ? "Tik op je kind om te zien hoe het gaat" : "Bekijk de resultaten van…"}</div>
+                <div style={kaartTitelStijl}>{rolKey === "ouder" ? "Tik op je kind voor zijn of haar rapport" : "Bekijk het rapport van…"}</div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "6px 0 8px" }}>
                   {andereNamen.filter((n) => n.rol !== "ouder" && n.rol !== "teacher").map((n) => (
                     <button
@@ -2828,7 +2831,7 @@ export default function MijnPagina({
                         color: "#4fc3f7", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800,
                       }}
                     >
-                      {n.emoji} {n.naam}
+                      {n.emoji} Rapport van {n.naam}
                     </button>
                   ))}
                 </div>
