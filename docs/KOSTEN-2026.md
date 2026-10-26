@@ -24,6 +24,7 @@
 | 29 jul | Drukwerkdeal — 1.000 A5 Spark Fest (order 15653885) | €43,56 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
 | 17 sep | Drukwerkdeal — 3× A3-poster + 50× A4-flyer Voedselbank Dongen (order 15776792, gesatineerd 135 g, levering di 22 sep rechtstreeks bij Dongen) | €55,84 (€46,15 ex btw + €9,69 btw) | bevestiging in HOTMAIL 17 sep 12:57; factuur-PDF via Drukwerkdeal → Mijn account → Facturen | ✅ bedrag; 📥 factuur-PDF |
 | 1 sep | Anthropic API-tegoed ($20 + btw = $24,20) — **auto-reload aangezet** | ± €22,40 | Anthropic Console → Billing → Invoice history (1 sep) | ✅ door Mark bevestigd; 📥 factuur-PDF downloaden |
+| 26 okt | **Claude Max 20x** (upgrade; verlengt automatisch 26 nov) — bevat **$100/mnd API-tegoed** zodra de API-organisatie gekoppeld is → dekt de AI-bijles (Charley/tutor/leg-uit, ~€5-10/mnd) volledig | 📥 bedrag? (afschrift ~26 okt) | claude.ai → Instellingen → Abonnement + ICS-afschrift | 📥 Mark: bedrag van het afschrift; API-org koppelen |
 | 2026 | Grok (xAI / X Premium) — beelden voor de site en social (Grok beeld-upgrade) | 📥 bedrag? | abonnementsfacturen (X/xAI-account → Billing) | 📥 Mark: welk abonnement, sinds wanneer, bedrag/mnd; bij ook privégebruik alleen zakelijk deel opvoeren |
 
 **Totaal t/m augustus: ± €843.** Met het doorlopende abonnement (sep-dec = 4 × €108,90) en de
