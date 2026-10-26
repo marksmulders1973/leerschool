@@ -23,7 +23,7 @@ describe("startsets", () => {
         const [groep, vak] = sleutel.split("|");
         const regels = [`# Startset ${STARTSETS[sleutel].titel} — de eerste ${STARTSET_N} vragen`, "", `Gegenereerd door src/features/learn/startsets.test.js op ${new Date().toISOString().slice(0, 10)}. Bron: startsetsData.js. Aantal: ${set.length}.`, ""];
         set.forEach((q, i) => {
-          regels.push(`## ${i + 1}. ${q.padTitel} (${q.pathId}, stap ${(q.stapIdx ?? 0) + 1})`);
+          regels.push(`## ${i + 1}. ${q.padTitel} (${q.pathId}, stap ${(q.stapIdx ?? 0) + 1})${q.stapTekst ? " ⚠️ hoort bij een leestekst in de stap" : ""}${q.svg ? " 🖼️ met plaatje" : ""}`);
           regels.push(`**${String(q.q).replace(/\n/g, " ")}**`);
           q.options.forEach((o, k) => regels.push(`- ${k === q.answer ? "✅" : "▫️"} ${String(o).replace(/\n/g, " ")}`));
           regels.push("");
@@ -46,6 +46,8 @@ describe("startsets", () => {
         expect(q.options[q.answer]).toBeDefined();
         expect(q.pathId).toBeTruthy();
         expect(q.geziensleutel).toBeTruthy();
+        // Hoort de vraag bij een leestekst in de stap, dan moet die tekst meekomen (VraagKaart toont q.leesTekst).
+        if (q.stapTekst) expect(q.leesTekst, `${sleutel} vraag "${q.q.slice(0, 50)}" hoort bij een leestekst maar heeft er geen`).toBeTruthy();
         sleutels.add(q.geziensleutel);
       }
       expect(sleutels.size).toBe(STARTSET_N);
