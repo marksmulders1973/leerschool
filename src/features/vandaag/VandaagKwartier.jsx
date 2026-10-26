@@ -38,12 +38,13 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
     // elk uit zijn eigen pad (pathId per vraag, zodat het rapport per vak blijft kloppen).
     const laad = blok.startset
       ? startsetVolgende(blok.startset, blok.n)
-      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null })
+      // 🏫 Nu op school (26 okt 2026): een blokje kan op één stap van het pad wijzen (bv. het tijdvak "ridders").
+      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null, stapIndexen: blok.stapIndexen || null })
         .then(({ quiz, questions }) => questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title })));
     laad.then((vragen) => { if (!dood) setVragen(vragen); })
       .catch(() => { if (!dood) setVragen([]); });
     return () => { dood = true; };
-  }, [blok.pathId, blok.n, blok.startset]);
+  }, [blok.pathId, blok.n, blok.startset, blok.stapIndexen]);
   if (vragen === null) return <Card variant="study" padding="md"><p style={{ margin: 0 }}>⏳ Je vragen komen eraan…</p></Card>;
   if (!vragen.length) return <Card variant="study" padding="md"><p style={{ margin: "0 0 10px" }}>Dit onderwerp laadt nu even niet.</p><Button onClick={() => onKlaar({ goed: 0, totaal: 0, overgeslagen: true })}>Volgende blokje →</Button></Card>;
   const v = vragen[i];
@@ -58,7 +59,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
         score.current = { goed: score.current.goed + (goed ? 1 : 0), totaal: score.current.totaal + 1 };
         // 🎯 Meting startsets (Mark 26 okt 2026, "kunnen we meten of de nieuwe methode gebruikt wordt?"):
         // elk antwoord draagt de startset-sleutel; het antwoord dat de set van 20 volmaakt vuurt startset_klaar.
-        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed, startset: blok.startset || undefined }); } catch { /* */ }
+        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed, startset: blok.startset || undefined, school: blok.school || undefined }); } catch { /* */ }
         try { recordAnswerForPath({ playerName: userName || "Speler", pathId: v.pathId, isCorrect: goed, userId: authUser?.id || null }); } catch { /* */ }
         try { telAntwoordVoorVriend(); } catch { /* */ }
         // 👀 Beantwoord = gezien → volgende keer eerst andere vragen uit dit pad (geziendeVragen.js).

@@ -34,6 +34,17 @@ describe("Vandaag-motor — ladder", () => {
     const p = bepaalPlan({ level: "2", metSchoolvakken: true });
     expect(p.blokjes.every((b) => b.soort === "vragen")).toBe(true);
   });
+  it("nu op school: eerste blokje = het klas-onderwerp, daarna de rest; klaargezet gaat voor", () => {
+    const keuze = { vak: "geschiedenis", pathId: "tijdvakken-nederland-po", stapIndexen: [3], label: "Wereldoorlogen", emoji: "🕊️", sinds: Date.now() };
+    const p = bepaalPlan({ level: "8", vandaag: new Date(2026, 9, 27), nuOpSchool: [keuze], startsetOpen: ["8|rekenen"] });
+    expect(p.reden).toBe("school");
+    expect(p.blokjes[0]).toMatchObject({ soort: "vragen", pathId: "tijdvakken-nederland-po", stapIndexen: [3], school: true, groep: 8 });
+    expect(p.blokjes[1]).toMatchObject({ soort: "vragen", startset: "8|rekenen" });
+    expect(p.blokjes.length).toBeLessThanOrEqual(3);
+    expect(p.uitleg).toMatch(/Wereldoorlogen/);
+    const k = bepaalPlan({ level: "8", nuOpSchool: [keuze], klaargezet: [{ path_id: "breuken-po", titel: "Breuken", gedaan: false, bron: "leraar" }] });
+    expect(k.reden).toBe("klaargezet");
+  });
   it("samenvatting en toets-aftelling", () => {
     const p = bepaalPlan({ level: "6", vandaag: new Date(2026, 8, 10) });
     expect(planSamenvatting(p)).toMatch(/5 vragen/);

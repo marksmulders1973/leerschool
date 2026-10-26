@@ -40,7 +40,7 @@ export function GroepDropdown({ nr, onKies }) {
  * De vakken van deze groep als tegels met rapportcijfer.
  * vakken: dezelfde lijst als het rapport ([{ subj, titel, attempts, correct, recentAantal, recentGoed }]).
  */
-export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand = {}, groep = null }) {
+export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand = {}, groep = null, schoolKeuzes = {} }) {
   const rijen = rapportRijen(vakken);
   if (rijen.length === 0) return null;
   return (
@@ -52,6 +52,9 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand =
         // 🎯 Startset (26 okt 2026): zolang de eerste 20 vragen van dit vak niet af zijn, zegt de tegel dat.
         const ss = groep ? startsetStand[`${groep}|${v.subj === "wiskunde" ? "rekenen" : v.subj}`] : null;
         const ssOpen = ss && !ss.klaar;
+        // 🏫 Nu op school (26 okt 2026): staat er voor dit vak een klas-onderwerp, dan zegt de tegel dat.
+        const school = schoolKeuzes[v.subj];
+        const schoolAan = school?.pathId && school.sinds && Date.now() - school.sinds <= 42 * 86400000;
         return (
           <button key={v.subj} type="button"
             onClick={() => { try { track("mijn_vaktegel", { vak: v.subj, cijfer: v.cijfer }); } catch { /* */ } onVak(v.subj); }}
@@ -73,7 +76,9 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand =
               <span style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>nog geen cijfer</span>
             )}
             <span style={{ display: "flex", alignItems: "center", gap: 8, marginTop: "auto", fontSize: 11.5, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>
-              {ssOpen ? (
+              {schoolAan ? (
+                <span style={{ color: "#69f0ae" }}>🏫 nu op school: {school.label} →</span>
+              ) : ssOpen ? (
                 <span style={{ color: "#69f0ae" }}>{ss.gedaan > 0 ? `startset: ${ss.gedaan} van ${ss.totaal} →` : `Begin: de eerste ${ss.totaal} vragen →`}</span>
               ) : v.cijfer !== null ? (
                 <>

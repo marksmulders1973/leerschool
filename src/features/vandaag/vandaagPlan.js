@@ -16,6 +16,8 @@
 import { kiesZwakkeConcepten } from "../oefenboekje/opMaat.js";
 import { kiesStartPaden } from "../onboarding/startKwartier.js";
 import { startsetBlok, startsetPaden, startsetVan } from "../learn/startsetsData.js";
+import { titelVoorKind } from "../../shared/titelVoorKind.js";
+import { schoolBlok } from "../school/nuOpSchool.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 
 const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
@@ -42,7 +44,8 @@ function titelVan(pathId, fallback = "") {
   return p ? `${p.emoji ? p.emoji + " " : ""}${p.title}` : fallback || pathId;
 }
 function vragenBlok(pathId, n = ITEMS_PER_BLOK, groep = null) {
-  return { soort: "vragen", pathId, n, titel: titelVan(pathId), ...(groep ? { groep } : {}) };
+  // Titel met de groep van het kind i.p.v. het bereik van het pad (Mark 26 okt 2026: "echt groep 8 bij 8").
+  return { soort: "vragen", pathId, n, titel: titelVoorKind(titelVan(pathId), groep), ...(groep ? { groep } : {}) };
 }
 function dicteeBlok(groep, n = ITEMS_PER_BLOK, school = false) {
   return { soort: "dictee", groep, n, school, titel: school ? "✍️ Dictee met de woorden van school" : "✍️ Dictee met Charley" };
@@ -163,8 +166,21 @@ function conceptVoorVandaag(concepten, weekdag) {
 // van startsets die dit kind nog niet af heeft. Zolang er een open is, is het eerste blokje van het
 // kwartier de volgende 5 vragen daaruit; de andere blokjes komen van de gewone ladder (zonder de paden
 // waar de startset al uit put). Klaargezet werk gaat nog steeds voor.
+// 🏫 Nu op school (Mark 26 okt 2026): `nuOpSchool` = actieve keuzes [{ vak, pathId, stapIndexen?, label }].
+// Is er één, dan opent het kwartier met 5 vragen over wat de klas nu doet (elke dag een ander vak als
+// er meer zijn), daarna de startset of de gewone ladder. Klaargezet werk gaat nog steeds voor.
 export function bepaalPlan(args = {}) {
-  const plan = bepaalPlanBasis(args);
+  const plan = metStartset(bepaalPlanBasis(args), args);
+  const { nuOpSchool, metSchoolvakken, level, vandaag = new Date() } = args;
+  if (metSchoolvakken || !Array.isArray(nuOpSchool) || !nuOpSchool.length || plan.reden === "klaargezet") return plan;
+  const keuze = nuOpSchool[Math.floor(vandaag.getTime() / 86400000) % nuOpSchool.length];
+  const blok = schoolBlok(keuze, ITEMS_PER_BLOK, parseGroep(level));
+  if (!blok) return plan;
+  const rest = (plan.blokjes || []).filter((b) => !(b.soort === "vragen" && b.pathId === blok.pathId && !b.startset)).slice(0, 2);
+  return { ...plan, reden: "school", uitleg: `Eerst wat jullie nu op school doen: ${keuze.label}.`, blokjes: [blok, ...rest] };
+}
+
+function metStartset(plan, args) {
   const { startsetOpen, metSchoolvakken } = args;
   if (metSchoolvakken || !Array.isArray(startsetOpen) || !startsetOpen.length || plan.reden === "klaargezet") return plan;
   const sleutel = startsetOpen.find((s) => startsetVan(s));

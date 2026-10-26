@@ -21,6 +21,8 @@ import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
 import GroepPoort from "../onboarding/GroepPoort.jsx";
+import NuOpSchool from "../school/NuOpSchool.jsx";
+import { leesNuOpSchool, zetNuOpSchool, actieveKeuzes, schoolBlok, isVerlopen } from "../school/nuOpSchool.js";
 import Rapport, { MeesterOpmerking, rapportRijen } from "./Rapport.jsx";
 import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
 import { startsetSleutel, startsetVan, startsetBlok } from "../learn/startsetsData.js";
@@ -692,6 +694,10 @@ export default function MijnPagina({
   // 🎯 Startsets (26 okt 2026): welke "eerste 20 vragen"-sets van deze groep zijn nog niet af?
   // { "5|rekenen": { totaal, gedaan, klaar } }. Alleen voor de basisschool.
   const [startsetStand, setStartsetStand] = useState({});
+  // 🏫 Nu op school (Mark 26 okt 2026): per vak wat de klas nu doet; per profiel bewaard op het toestel.
+  const [nuOpSchool, setNuOpSchool] = useState(() => leesNuOpSchool(player));
+  useEffect(() => { setNuOpSchool(leesNuOpSchool(player)); }, [player]);
+  const kiesNuOpSchool = (vak, keuze) => setNuOpSchool({ ...zetNuOpSchool(player, vak, keuze) });
   // Compact kwartierblok (Mark 1 okt 2026: "dit groene blok is nog enorm groot"): eerste keuze achter een linkje.
   const [zelfKiezenOpen, setZelfKiezenOpen] = useState(false);
   // Kwartiercheck als aanbevolen eerste stap (Mark 1 okt 2026) zolang hij op dit apparaat niet gedaan is.
@@ -1182,6 +1188,16 @@ export default function MijnPagina({
   const naarVak = (subj) => {
     const sleutel = startsetSleutel(groep, subj);
     const st = sleutel ? startsetStand[sleutel] : null;
+    // 🏫 Nu op school gekozen voor dit vak → eerst 5 vragen daarover, dan (als die nog open is) de startset.
+    const school = nuOpSchool[subj];
+    if (school?.pathId && !isVerlopen(school) && onVandaagKwartier) {
+      const blokjes = [schoolBlok(school, 5, groep)];
+      if (sleutel && st && !st.klaar) blokjes.push(startsetBlok(sleutel, 5));
+      startKwartierPlan({ level: userLevel, reden: "school", uitleg: `Eerst wat jullie nu op school doen: ${school.label}.`, blokjes });
+      try { track("mijn_school_start", { vak: subj, groep, pad: school.pathId }); } catch { /* */ }
+      onVandaagKwartier();
+      return;
+    }
     if (sleutel && st && !st.klaar && onVandaagKwartier) {
       const s = startsetVan(sleutel);
       const n = Math.max(1, (st.totaal || 20) - (st.gedaan || 0));
@@ -2084,7 +2100,7 @@ export default function MijnPagina({
                       const bezig = kwartierActief();
                       const gedaan = kwartierGedaanVandaag();
                       const plan = { level: userLevel, ...bepaalPlan({
-                        level: userLevel, klaargezet: thuisKlaargezet, mastery: records, startsetOpen,
+                        level: userLevel, klaargezet: thuisKlaargezet, mastery: records, startsetOpen, nuOpSchool: actieveKeuzes(nuOpSchool),
                         dicteeSchool: (() => { try { return !!localStorage.getItem("lk_dictee_school"); } catch { return false; } })(),
                         wwSchool: (() => { try { return !!localStorage.getItem("lk_ww_school"); } catch { return false; } })(),
                         metSchoolvakken: niveau?.soort === "klas",
@@ -2166,7 +2182,7 @@ export default function MijnPagina({
             {!loading && rapportVakken.length > 0 && (
               <div style={{ marginBottom: "var(--space-4)" }}>
                 <div style={eyebrowStijl}>Je vakken{niveauLabel ? ` · ${niveauLabel}` : ""}</div>
-                <VakTegels vakken={rapportVakken} niveauLabel={niveauLabel || ""} vakMeta={vakMeta} onVak={naarVak} startsetStand={startsetStand} groep={groep} />
+                <VakTegels vakken={rapportVakken} niveauLabel={niveauLabel || ""} vakMeta={vakMeta} onVak={naarVak} startsetStand={startsetStand} groep={groep} schoolKeuzes={nuOpSchool} />
                 {/* Mark 26 okt 2026: "van nature klikte ik op dat rapport-venster" — tik op de opmerking
                     van de meester opent het hele rapport (de linkjes erin blijven werken). */}
                 <div role="button" tabIndex={0} title={rapportOpen ? "Tik om je rapport dicht te doen" : "Tik om je hele rapport te zien"}
@@ -2187,6 +2203,11 @@ export default function MijnPagina({
                   </div>
                 )}
               </div>
+            )}
+
+            {/* ── 🏫 Nu op school (Mark 26 okt 2026): per vak één tik wat de klas nu doet; het kwartier begint daarmee. ── */}
+            {!loading && groep && rapportVakken.length > 0 && (
+              <NuOpSchool vakken={rapportVakken} vakMeta={vakMeta} groep={groep} keuzes={nuOpSchool} onKies={kiesNuOpSchool} eyebrowStijl={eyebrowStijl} />
             )}
 
             {/* ── Werk aan: hooguit twee verbeterpunten, één tik = de uitleg/oefening daarvan. ── */}
@@ -2978,6 +2999,19 @@ export default function MijnPagina({
               />
             </div>
             {/* Netflix-achtige tegels met alles uit Familie (Mark 1 okt 2026) — alleen op de eigen ouderpagina. */}
+            {/* 🏫 Uitleg voor ouders (Mark 26 okt 2026: "leg het ook uit aan de ouders"). */}
+            {rolKey === "ouder" && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(105,240,174,0.25)" }}>
+                <div style={eyebrowStijl}>🏫 Nu op school</div>
+                <div style={kaartTitelStijl}>Oefenen met wat de klas nú doet</div>
+                <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6, marginTop: 6 }}>
+                  Elke school kiest een eigen methode en planning, dus wij weten niet wat de klas van uw kind deze weken behandelt — uw kind wél.
+                  Op zijn of haar eigen pagina staat onder de vakken de kaart <strong>"Nu op school"</strong>: per vak één tik ("breuken", "ridders", "werkwoorden").
+                  Daarna begint elk kwartier met vijf vragen over precies dat onderwerp en gaat het verder met de rest. Na een schoolperiode (zo'n zes weken) vraagt de app het één keer opnieuw.
+                  Tip: vraag bij het eten "waar zijn jullie nu mee bezig?" en tik het samen aan — twee minuten, en het oefenen sluit aan op school.
+                </div>
+              </Card>
+            )}
             {rolKey === "ouder" && <FamilieTegels onNaar={onNaar} onOuderDashboard={onOuderDashboard} />}
             {/* ── Pakket + waitlist (Mark-keuze 13 aug: informeren + waitlist).
                 Alleen voor de leraar-rol; paywall staat UIT tot 2027. Ouders

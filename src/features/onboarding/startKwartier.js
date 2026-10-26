@@ -42,10 +42,15 @@ export function opwarmVraag(groep) {
 export function onderwerpVan(v) {
   if (v?.onderwerp) return v.onderwerp;
   const id = String(v?.pathId || "");
-  if (/lezen|tekst|samenvat|hoofdgedachte|strategie/.test(id)) return "Lezen";
-  if (/reken|breuk|procent|tafel|getal|delen|klok|meten|geld|kommagetal|wiskunde/.test(id)) return "Rekenen";
-  if (/topo|kaart|dieren|natuur|seizoen|geschied|aardrijk|wereld/.test(id)) return "Wereld";
-  if (/taal|spelling|werkwoord|woord|zin|leesteken|rijm|letter/.test(id)) return "Taal";
+  // Volgorde telt: specifiek vóór algemeen (Mark 26 okt 2026: boven een Engels-vraag stond "Taal").
+  if (/engels|english/.test(id)) return "Engels";
+  if (/lezen|tekst|samenvat|hoofdgedachte|strategie|alinea|verwijswoord|conclusies|nieuwsbericht|brief-email|schema-tekst|tekstdoel|tekstverband|woordbetekenis|verhaal-diepte/.test(id)) return "Lezen";
+  if (/reken|breuk|procent|tafel|getal|delen|klok|meten|geld|kommagetal|wiskunde|verhouding|schatten|gemiddeld|grafiek|tabellen|maten|tijdsduur|kalender|volgorde-bewerk|vlakke-figuren|romeinse|deelsommen|omzetten|schaal-kaart/.test(id)) return "Rekenen";
+  if (/geschied|tijdvak|oudheid|ontdekking|industriele|koude-oorlog|politiek|kunstenaars|bekende-|olympische|klassieke-muziek|boeken-literatuur/.test(id)) return "Geschiedenis";
+  if (/topo|kaart|aardrijk|wereld|continent|vulkan|water-erfgoed/.test(id)) return "Aardrijkskunde";
+  if (/dieren|natuur|seizoen|sterren|planeet|lichaam|voeding|toestand|waterkringloop|weer|energie|recycl|evolutie|wetenschapper|ruimtevaart|pubert/.test(id)) return "Natuur";
+  if (/alfabet|woordenboek|inhoudsopgave|register|dienstregeling|rooster|plattegrond|folder-bon|betrouwbaarheid|studievaardig/.test(id)) return "Studievaardigheden";
+  if (/taal|spelling|werkwoord|woord|zin|leesteken|rijm|letter|interpunctie|synoniem|spreekwoord|trappen|signaalwoord|samenstelling|feit-mening|lettergre/.test(id)) return "Taal";
   return null;
 }
 
