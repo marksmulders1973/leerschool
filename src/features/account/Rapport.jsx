@@ -11,8 +11,8 @@
 
 import { track } from "../../utils.js";
 
-const MIN_VRAGEN = 10;
-const VAST_VRAGEN = 50;
+export const MIN_VRAGEN = 10;
+export const VAST_VRAGEN = 50;
 const POTLOOD = "#6b6457";
 const PAPIER = "#fbf6e6";
 const INKT = "#1f3a93";
@@ -91,12 +91,30 @@ function Opmerking({ naam, vakken, onVak, onKwartiercheck }) {
   return <>{zin}{start ? <> Probeer ook eens <VakLink vak={start} onVak={onVak} /></> : null}</>;
 }
 
-/** vakken: [{ subj, titel, attempts, correct }] in rapport-volgorde. */
-export default function Rapport({ naam, niveauLabel, vakken, onVak, onKwartiercheck = null }) {
-  const rijen = vakken.map((v) => ({
+/** Zelfde cijferregels voor het papieren rapport én de vak-tegels op Mijn pagina (26 okt 2026). */
+export function rapportRijen(vakken) {
+  return vakken.map((v) => ({
     ...v,
     cijfer: (v.recentAantal || 0) >= VAST_VRAGEN ? cijferVoor(v.recentGoed, v.recentAantal) : cijferVoor(v.correct, v.attempts),
   }));
+}
+
+/** De opmerking van de meester, los bruikbaar onder de vak-tegels (26 okt 2026). */
+export function MeesterOpmerking({ naam, vakken, onVak, onKwartiercheck = null }) {
+  return (
+    <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "10px 12px", borderRadius: 12, background: PAPIER, color: DONKER, border: `1px solid ${LIJN}` }}>
+      <span aria-hidden="true" style={{ fontSize: 20, flexShrink: 0 }}>✍️</span>
+      <div style={{ fontFamily: HAND, color: INKT, fontSize: 16, lineHeight: 1.5 }}>
+        <Opmerking naam={naam} vakken={rapportRijen(vakken)} onVak={onVak} onKwartiercheck={onKwartiercheck} />
+        <span style={{ display: "block", textAlign: "right", fontSize: 14, marginTop: 2 }}>~ de meester</span>
+      </div>
+    </div>
+  );
+}
+
+/** vakken: [{ subj, titel, attempts, correct }] in rapport-volgorde. */
+export default function Rapport({ naam, niveauLabel, vakken, onVak, onKwartiercheck = null }) {
+  const rijen = rapportRijen(vakken);
   const datum = new Date().toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
   return (
     <div style={{

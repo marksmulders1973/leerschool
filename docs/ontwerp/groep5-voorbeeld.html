@@ -1,0 +1,431 @@
+<title>Jouw groep 5</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&family=Caveat:wght@600&display=swap">
+<style>
+  /* Leerkwartier-tokens (src/shared/tokens.css): bewust één thema, het donkere van de app */
+  :root{
+    --bg:#0B1224; --surface:#131C33; --elevated:#1A2541; --overlay:#243149;
+    --border:#2D3F5F; --border-soft:rgba(255,255,255,.08);
+    --text-strong:#fff; --text:#E6EBF5; --muted:#9AA8C0; --subtle:#828FAC;
+    --groen:#00C853; --groen-700:#00A040; --groen-soft:rgba(0,200,83,.14);
+    --blauw:#3B82F6; --blauw-soft:rgba(59,130,246,.16);
+    --warm:#FFB74D; --rood:#FF5252; --rood-soft:rgba(255,82,82,.14);
+    --papier:#f6efdf; --papier-lijn:#c9b58f; --inkt:#1d2a52; --potlood:#5b5244; --papier-donker:#3b2f1e;
+    --display:"Fredoka","Nunito",system-ui,sans-serif; --body:"Nunito",system-ui,sans-serif; --hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+    color-scheme:dark;
+  }
+  html,body{height:100%}
+  body{margin:0;background:#070c19;color:var(--text);font-family:var(--body);font-size:15px;line-height:1.4;padding-inline:16px;padding-block:14px 24px}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+  button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--blauw);outline-offset:2px}
+
+  .uitleg{max-width:430px;margin:0 auto 12px;color:var(--muted);font-size:13px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .uitleg b{color:var(--text)}
+  .uitleg .demo{display:flex;gap:6px;flex-wrap:wrap}
+  .uitleg .demo button{border:1px solid var(--border);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;color:var(--muted)}
+  .uitleg .demo button[aria-pressed="true"]{background:var(--blauw-soft);border-color:var(--blauw);color:#fff}
+
+  /* de telefoon */
+  .tel{max-width:430px;margin:0 auto;background:var(--bg);border:1px solid var(--border);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;height:min(860px,calc(100vh - 90px));min-height:620px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .scherm{flex:1;overflow-y:auto;padding:18px 18px 24px;display:none;flex-direction:column;gap:18px}
+  .scherm.aan{display:flex}
+  .nav{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);background:var(--surface);padding:8px 6px calc(10px + env(safe-area-inset-bottom,0px))}
+  .nav.vijf{grid-template-columns:repeat(5,1fr)}
+  .nav button{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11.5px;font-weight:800;color:var(--subtle);padding:4px 0;border-radius:12px}
+  .nav button .ic{font-size:21px;line-height:1}
+  .nav button[aria-current="page"]{color:#fff;background:var(--elevated)}
+
+  /* koppen */
+  .kop{display:flex;align-items:center;gap:12px}
+  .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#ffb74d,#ff7043);display:grid;place-items:center;font-size:24px;flex:none}
+  .kop h1{font-family:var(--display);font-size:24px;font-weight:600;margin:0;line-height:1.1;color:var(--text-strong)}
+  .kop .sub{color:var(--muted);font-size:13px;font-weight:700}
+  h2{font-family:var(--display);font-size:15px;font-weight:600;margin:0;color:var(--muted);letter-spacing:.3px;text-transform:uppercase}
+  .terug{color:var(--muted);font-weight:800;font-size:14px;display:inline-flex;gap:6px;align-items:center}
+
+  /* Begin-knop */
+  .begin{background:var(--groen);color:#07210f;border-radius:20px;padding:18px 20px;display:flex;align-items:center;gap:14px;width:100%;box-shadow:0 8px 24px rgba(0,200,83,.28)}
+  .begin:active{background:var(--groen-700)}
+  .begin .groot{font-family:var(--display);font-size:26px;font-weight:700;line-height:1}
+  .begin .klein{font-size:13px;font-weight:800;opacity:.85;margin-top:4px}
+  .begin .pijl{margin-left:auto;font-size:28px;font-weight:700}
+
+  /* vak-tegels */
+  .vakken{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .vak{background:var(--elevated);border:1px solid var(--border-soft);border-radius:16px;padding:12px 12px 10px;display:flex;flex-direction:column;gap:6px;min-height:92px}
+  .vak:active{background:var(--overlay)}
+  .vak .naam{font-family:var(--display);font-size:15px;font-weight:600;color:var(--text-strong);display:flex;gap:6px;align-items:center}
+  .vak .cijfer{font-family:var(--hand);font-size:30px;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+  .vak .cijfer.potlood{color:#c8d0e0;opacity:.85}
+  .vak .cijfer.rood{color:var(--rood)}
+  .vak .onder{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;color:var(--subtle);margin-top:auto}
+  .balk{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden}
+  .balk i{display:block;height:100%;background:var(--groen);border-radius:3px}
+  .vak .start{color:var(--groen);font-weight:800;font-size:12.5px}
+
+  /* werk aan */
+  .werk{display:flex;flex-direction:column;gap:8px}
+  .punt{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--warm);border-radius:14px;padding:12px 14px;display:flex;gap:12px;align-items:center;width:100%}
+  .punt .t{font-weight:800;color:var(--text-strong)}
+  .punt .s{color:var(--muted);font-size:13px}
+  .punt .pijl{margin-left:auto;color:var(--warm);font-weight:900;font-size:20px}
+
+  .kaart{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px 16px}
+  .kaart.klaar{border-color:#6a5a2a;background:#1d1a12}
+  .knop{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:14px;padding:13px 18px;font-weight:800;font-size:15px}
+  .knop.groen{background:var(--groen);color:#07210f}
+  .knop.blauw{background:var(--blauw-soft);color:#bcd5ff;border:1px solid var(--blauw)}
+  .knop.stil{background:var(--elevated);color:var(--text);border:1px solid var(--border)}
+  .knop.breed{width:100%}
+
+  /* vak-scherm */
+  .groot-cijfer{display:flex;align-items:baseline;gap:12px}
+  .groot-cijfer .c{font-family:var(--hand);font-size:56px;line-height:1;color:#fff}
+  .groot-cijfer .c.rood{color:var(--rood)}
+  .onderwerp{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border-soft);width:100%}
+  .onderwerp:last-child{border-bottom:0}
+  .onderwerp .t{font-weight:800;color:var(--text-strong)}
+  .onderwerp .s{font-size:12.5px;color:var(--subtle)}
+  .onderwerp .r{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:11.5px;color:var(--subtle);font-weight:700;min-width:70px}
+  .onderwerp .balk{width:64px;flex:none}
+
+  /* vraag */
+  .vraag{font-family:var(--display);font-size:20px;font-weight:500;color:var(--text-strong);line-height:1.3;text-wrap:balance}
+  .opties{display:grid;gap:8px}
+  .optie{background:var(--elevated);border:1.5px solid var(--border);border-radius:14px;padding:13px 16px;font-size:17px;font-weight:800;width:100%;display:flex;justify-content:space-between;align-items:center}
+  .optie.goed{border-color:var(--groen);background:var(--groen-soft)}
+  .optie.fout{border-color:var(--rood);background:var(--rood-soft)}
+  .optie[disabled]{cursor:default}
+  .voortgang{display:flex;gap:4px}
+  .voortgang i{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.12)}
+  .voortgang i.af{background:var(--groen)}
+  .begrijp{background:var(--blauw-soft);border:1px solid var(--blauw);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+  .begrijp h3{margin:0;font-family:var(--display);font-weight:600;font-size:17px;color:#fff}
+  .begrijp p{margin:0}
+  .stap{display:flex;gap:10px;align-items:flex-start}
+  .stap b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--blauw);color:#fff;display:grid;place-items:center;font-size:13px}
+
+  /* rapport (papier) */
+  .papier{background:var(--papier);color:var(--papier-donker);border-radius:14px;padding:16px 16px 14px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+  .papier h3{margin:0 0 2px;font-family:Georgia,"Times New Roman",serif;font-size:20px;letter-spacing:1px;text-align:center}
+  .papier .datum{text-align:center;font-size:12px;color:#7a6a4e;margin-bottom:10px}
+  .papier table{width:100%;border-collapse:collapse;font-family:Georgia,serif;font-size:15px}
+  .papier td{padding:7px 2px;border-bottom:1px solid var(--papier-lijn);vertical-align:middle}
+  .papier td.c{text-align:right;font-family:var(--hand);font-size:24px;color:var(--inkt);width:60px;font-variant-numeric:tabular-nums}
+  .papier td.c.potlood{color:var(--potlood)}
+  .papier td.c.rood{color:#b71c1c}
+  .papier td.c.leeg{font-family:Georgia,serif;font-size:12px;color:#8a7a5e}
+  .papier .balk{background:rgba(160,130,80,.22);width:54px;display:inline-block;vertical-align:middle;margin-left:8px}
+  .papier .balk i{background:#8a7a5e}
+  .papier .meester{font-family:var(--hand);font-size:19px;color:var(--inkt);margin-top:12px;line-height:1.25}
+  .papier .meester u{cursor:pointer;text-underline-offset:3px}
+  .papier .wie{font-family:var(--hand);text-align:right;color:var(--inkt);font-size:16px}
+  .legenda{font-size:12px;color:var(--subtle)}
+
+  /* meer */
+  .lijst{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+  .lijst button{display:flex;gap:12px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--border-soft);font-weight:700;width:100%}
+  .lijst button:last-child{border-bottom:0}
+  .lijst .ic{width:28px;text-align:center;font-size:18px}
+  .lijst .s{margin-left:auto;color:var(--subtle);font-size:12px;font-weight:700}
+  .melding{position:absolute;left:50%;transform:translateX(-50%);bottom:90px;background:#fff;color:#07210f;font-weight:800;padding:10px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.4);display:none;font-size:14px;white-space:nowrap}
+  .melding.aan{display:block}
+  .telwrap{position:relative}
+  .spel{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .spel button{aspect-ratio:1;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:16px;color:#fff;max-width:100%}
+  @media (prefers-reduced-motion:no-preference){.scherm.aan{animation:in .18s ease-out}}
+  @keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}
+</style>
+
+<div class="uitleg">
+  <span><b>Voorbeeld, nog niet de echte app.</b> Tik rond zoals een kind van groep 5 dat zou doen.</span>
+  <span class="demo">
+    <button id="demo-g5" aria-pressed="true" onclick="zetGroep(5)">groep 5</button>
+    <button id="demo-g8" aria-pressed="false" onclick="zetGroep(8)">groep 8</button>
+    <button id="demo-klaar" aria-pressed="false" onclick="zetKlaar()">juf zette iets klaar</button>
+  </span>
+</div>
+
+<div class="telwrap">
+<div class="tel" id="tel">
+
+  <!-- ══ BEGIN (thuis) ══ -->
+  <section class="scherm aan" id="s-home">
+    <div class="kop">
+      <div class="avatar">🦊</div>
+      <div><h1>Hoi Sam</h1><div class="sub" id="groeplabel">groep 5</div></div>
+    </div>
+
+    <button class="begin" onclick="ga('kwartier')">
+      <div><div class="groot">Begin</div><div class="klein">je kwartier van vandaag · 15 min</div></div>
+      <span class="pijl">→</span>
+    </button>
+
+    <div class="kaart klaar" id="klaargezet" hidden>
+      <div style="font-weight:800;color:#ffd58a">💛 Juf Anne zette iets voor je klaar</div>
+      <div style="color:var(--muted);font-size:13px;margin:4px 0 10px">Spelling: woorden met -d of -t · 10 vragen</div>
+      <button class="knop stil" onclick="ga('vraag','Spelling · van juf Anne')">Doe het nu →</button>
+    </div>
+
+    <div class="kaart" id="aftelling" hidden style="border-color:#4a3f7a;background:#171634">
+      <div style="font-weight:800">🎯 Doorstroomtoets over <b>108 dagen</b></div>
+      <div style="color:var(--muted);font-size:13px;margin-top:4px">Alleen in groep 8 te zien. Oefen 3× per week, dan ben je er klaar voor.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <h2>Je vakken</h2>
+      <div class="vakken" id="vakken"></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <h2>Werk aan</h2>
+      <div class="werk">
+        <button class="punt" onclick="ga('leerpad','Spelling','Woorden met -d of -t','3')">
+          <span style="font-size:22px">📝</span>
+          <span><div class="t">Woorden met -d of -t</div><div class="s">Spelling · hier ging het 6 van de 10 keer mis</div></span>
+          <span class="pijl">›</span>
+        </button>
+        <button class="punt" onclick="ga('leerpad','Rekenen','Breuken: een deel van het geheel','2')">
+          <span style="font-size:22px">🔢</span>
+          <span><div class="t">Breuken: een deel van het geheel</div><div class="s">Rekenen · nieuw in groep 5</div></span>
+          <span class="pijl">›</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ KWARTIER ══ -->
+  <section class="scherm" id="s-kwartier">
+    <button class="terug" onclick="ga('home')">‹ terug</button>
+    <div class="kop"><div><h1>Je kwartier</h1><div class="sub">3 blokjes van 5 minuten</div></div></div>
+    <div class="voortgang"><i class="af"></i><i></i><i></i></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <button class="punt" style="border-left-color:var(--groen)" onclick="ga('vraag','Rekenen · blokje 2')">
+        <span style="font-size:22px">🔢</span><span><div class="t">Rekenen</div><div class="s">5 vragen · rekenen tot 1000</div></span><span class="pijl" style="color:var(--groen)">›</span>
+      </button>
+      <button class="punt" style="border-left-color:var(--border)" onclick="ga('vraag','Spelling · blokje 2')">
+        <span style="font-size:22px">📝</span><span><div class="t">Spelling</div><div class="s">5 vragen · -d of -t (je verbeterpunt)</div></span><span class="pijl" style="color:var(--subtle)">›</span>
+      </button>
+      <button class="punt" style="border-left-color:var(--border)" onclick="ga('vraag','Lezen · blokje 3')">
+        <span style="font-size:22px">📖</span><span><div class="t">Lezen</div><div class="s">1 tekst, 5 vragen</div></span><span class="pijl" style="color:var(--subtle)">›</span>
+      </button>
+    </div>
+    <div class="legenda">Na de drie blokjes wordt je rapport bijgewerkt. Meer hoeft niet; morgen weer een kwartier.</div>
+  </section>
+
+  <!-- ══ VAK ══ -->
+  <section class="scherm" id="s-vak">
+    <button class="terug" onclick="ga('home')">‹ terug</button>
+    <div class="kop"><div><h1 id="vak-titel">Rekenen</h1><div class="sub">groep 5</div></div></div>
+    <div class="groot-cijfer"><span class="c" id="vak-cijfer">7</span><span style="color:var(--muted);font-size:13px;font-weight:700" id="vak-uitleg">voorlopig cijfer · 23 van 50 vragen</span></div>
+    <button class="knop groen breed" onclick="ga('vraag','Rekenen')">Oefen nu →</button>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h2>Wat wil je oefenen?</h2>
+      <div class="kaart" style="padding:4px 16px" id="vak-onderwerpen"></div>
+    </div>
+    <div class="legenda">Alleen de onderwerpen van groep 5. Andere groepen zie je hier niet.</div>
+  </section>
+
+  <!-- ══ VRAAG ══ -->
+  <section class="scherm" id="s-vraag">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <button class="terug" onclick="ga('home')">‹ stop</button>
+      <span style="color:var(--subtle);font-size:12.5px;font-weight:800" id="vraag-kop">Rekenen</span>
+    </div>
+    <div class="voortgang"><i class="af"></i><i class="af"></i><i></i><i></i><i></i></div>
+    <div class="vraag">Op de Vuurtorenschool zitten 348 kinderen. Er komen 275 kinderen bij van een andere school. Hoeveel kinderen zijn er nu?</div>
+    <div class="opties" id="opties">
+      <button class="optie" onclick="antwoord(this,false)">613</button>
+      <button class="optie" onclick="antwoord(this,true)">623</button>
+      <button class="optie" onclick="antwoord(this,false)">523</button>
+      <button class="optie" onclick="antwoord(this,false)">633</button>
+    </div>
+    <div class="begrijp" id="begrijp" hidden>
+      <h3>Bijna. Begrijp je dit?</h3>
+      <div class="stap"><b>1</b><span>Splits 275 in <b>200</b>, <b>70</b> en <b>5</b>.</span></div>
+      <div class="stap"><b>2</b><span>348 + 200 = <b>548</b></span></div>
+      <div class="stap"><b>3</b><span>548 + 70 = <b>618</b>, en 618 + 5 = <b>623</b></span></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+        <button class="knop stil" onclick="volgende()">Snap ik, volgende →</button>
+        <button class="knop blauw" onclick="ga('leerpad','Rekenen','Optellen tot 1000','2')">Leer dit stap voor stap</button>
+      </div>
+    </div>
+    <div class="kaart" id="goed" hidden style="border-color:var(--groen);background:var(--groen-soft)">
+      <div style="font-weight:800;color:#8ff0b9">✓ Goed zo! 623.</div>
+      <button class="knop groen" style="margin-top:10px" onclick="volgende()">Volgende →</button>
+    </div>
+  </section>
+
+  <!-- ══ LEERPAD ══ -->
+  <section class="scherm" id="s-leerpad">
+    <button class="terug" onclick="terugUitLeerpad()">‹ terug naar je vraag</button>
+    <div>
+      <div style="color:var(--blauw);font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.4px" id="lp-vak">Rekenen · stap voor stap</div>
+      <h1 style="font-family:var(--display);font-weight:600;font-size:23px;margin:4px 0 0;color:#fff" id="lp-titel">Optellen tot 1000</h1>
+    </div>
+    <div class="voortgang" id="lp-stappen"><i class="af"></i><i class="af" style="background:var(--blauw)"></i><i></i><i></i></div>
+    <div style="color:var(--muted);font-size:13px;font-weight:700" id="lp-stap">stap 2 van 4 · splitsen</div>
+    <div class="kaart" style="border-color:var(--blauw);display:flex;flex-direction:column;gap:10px">
+      <p style="margin:0">Bij grote getallen tel je niet in één keer op. Je <b>splitst</b> het tweede getal in honderdtallen, tientallen en eenheden, en telt die één voor één erbij.</p>
+      <p style="margin:0;font-family:var(--display);font-size:20px;color:#fff">416 + 237 = ?</p>
+      <p style="margin:0">416 + 200 = 616 → 616 + 30 = 646 → 646 + 7 = <b>653</b></p>
+    </div>
+    <div class="vraag" style="font-size:18px">Probeer zelf: 532 + 149 = ?</div>
+    <div class="opties">
+      <button class="optie" onclick="lpAntwoord(this,false)">671</button>
+      <button class="optie" onclick="lpAntwoord(this,true)">681</button>
+      <button class="optie" onclick="lpAntwoord(this,false)">691</button>
+    </div>
+    <div class="legenda">Een leerpad zie je alleen als je er iets aan hebt: via een verbeterpunt, na een fout, of als je het zelf kiest bij een vak. Nooit als lijst van 100.</div>
+  </section>
+
+  <!-- ══ RAPPORT ══ -->
+  <section class="scherm" id="s-rapport">
+    <div class="kop"><div><h1>Rapport</h1><div class="sub">stand van vandaag</div></div></div>
+    <div class="papier">
+      <h3>RAPPORT</h3>
+      <div class="datum">Sam · groep 5 · 26 oktober 2026</div>
+      <table id="rapport-tabel"></table>
+      <div class="meester">Sam, rekenen en lezen gaan goed. Je spelling kan beter: oefen deze week twee keer <u onclick="ga('vak','spelling')">spelling →</u>. Breuken is nieuw, begin rustig.</div>
+      <div class="wie">~ de meester</div>
+    </div>
+    <div class="legenda">Potlood = voorlopig cijfer (10 tot 49 vragen). Inkt = vast cijfer (vanaf 50). Rood = onvoldoende. Tik op een vak om te oefenen.</div>
+  </section>
+
+  <!-- ══ SPELLETJE ══ -->
+  <section class="scherm" id="s-spel">
+    <div class="kop"><div><h1>Spelletje</h1><div class="sub">even iets anders</div></div></div>
+    <div class="spel">
+      <button style="background:linear-gradient(160deg,#1b5e20,#0d3d14)" onclick="melding('Park opent (voorbeeld)')"><span style="font-size:40px">🌳</span>Park</button>
+      <button style="background:linear-gradient(160deg,#4a148c,#1a0b3d)" onclick="melding('Imposter opent (voorbeeld)')"><span style="font-size:40px">🕵️</span>Imposter</button>
+    </div>
+    <div class="legenda">Spel en leren blijven gescheiden: hier geen cijfers, daar geen spelletjes.</div>
+  </section>
+
+  <!-- ══ MEER ══ -->
+  <section class="scherm" id="s-meer">
+    <div class="kop"><div><h1>Meer</h1><div class="sub">alles wat niet elke dag nodig is</div></div></div>
+    <div class="lijst">
+      <button onclick="melding('Diplomakast (voorbeeld)')"><span class="ic">🏆</span>Diplomakast<span class="s">3 diploma's</span></button>
+      <button onclick="melding('Mijn lijstje (voorbeeld)')"><span class="ic">⭐</span>Mijn lijstje<span class="s">2 bewaard</span></button>
+      <button onclick="melding('Tafels (voorbeeld)')"><span class="ic">✖️</span>Tafels oefenen</button>
+      <button onclick="melding('Achtergrond (voorbeeld)')"><span class="ic">🎨</span>Avatar en achtergrond</button>
+      <button onclick="melding('Charley (voorbeeld)')"><span class="ic">💬</span>Praten met Charley</button>
+    </div>
+    <div class="lijst">
+      <button onclick="melding('Wie ben jij? (voorbeeld)')"><span class="ic">👤</span>Wie ben jij?<span class="s">Sam · groep 5</span></button>
+      <button onclick="melding('Koppelen (voorbeeld)')"><span class="ic">🔗</span>Koppelen met papa of mama</button>
+      <button onclick="melding('Voor ouders (voorbeeld)')"><span class="ic">👨‍👩‍👧</span>Voor ouders en juf<span class="s">rapport, instellingen</span></button>
+    </div>
+    <div class="legenda">Alles wat hier staat, stond eerst op de startpagina. Een kind van 8 hoeft het niet elke dag te zien.</div>
+  </section>
+
+  <!-- ══ ONDERBALK ══ -->
+  <nav class="nav" id="nav">
+    <button id="n-home" aria-current="page" onclick="ga('home')"><span class="ic">▶️</span>Begin</button>
+    <button id="n-rapport" onclick="ga('rapport')"><span class="ic">📒</span>Rapport</button>
+    <button id="n-toets" hidden onclick="melding('Doorstroomtoets oefenen (groep 6-8)')"><span class="ic">🎯</span>Toets</button>
+    <button id="n-spel" onclick="ga('spel')"><span class="ic">🎮</span>Spelletje</button>
+    <button id="n-meer" onclick="ga('meer')"><span class="ic">•••</span>Meer</button>
+  </nav>
+</div>
+<div class="melding" id="melding"></div>
+</div>
+
+<script>
+  // ── voorbeeldgegevens: Sam, groep 5 (dezelfde vakken als VAKKEN_PER_GROEP in de app) ──
+  const VAK = {
+    rekenen:{t:"Rekenen",e:"🔢",c:7,n:23,ond:[["Tafels en deeltafels","alle tafels t/m 10",80],["Rekenen tot 1000","optellen, aftrekken, splitsen",55],["Breuken","een deel van het geheel",10],["Klokkijken","ook digitaal",70],["Geld","betalen en terugkrijgen",40]]},
+    taal:{t:"Taal & lezen",e:"✏️",c:8,n:54,ond:[["Woordenschat","wat betekent dit woord?",75],["Zinsbouw","wie doet wat?",60],["Lezen","vlot en met begrip",70]]},
+    spelling:{t:"Spelling",e:"📝",c:5.5,n:31,ond:[["Woorden met -d of -t","hond, krant, fiets",35],["Open en gesloten lettergreep","bomen, bommen",60],["Lange en korte klanken","maan, man",80]]},
+    "begrijpend-lezen":{t:"Begrijpend lezen",e:"📖",c:null,n:6,ond:[["Waar gaat de tekst over?","de hoofdgedachte",20],["Wat betekent dit woord hier?","uit de zin halen",10]]},
+    engels:{t:"Engels",e:"📕",c:null,n:0,ond:[["Eerste woorden","kleuren, dieren, getallen",0],["Zinnetjes","I am, you are",0]]},
+    natuur:{t:"Natuur & techniek",e:"🌱",c:7.5,n:18,ond:[["Planten en dieren","wat heeft een plant nodig?",65],["Je lichaam","skelet en spieren",40]]},
+    aardrijkskunde:{t:"Aardrijkskunde",e:"🌍",c:null,n:3,ond:[["Kaart van Nederland","provincies en steden",10],["Water en land","dijken en polders",0]]},
+    geschiedenis:{t:"Geschiedenis",e:"🏛️",c:null,n:0,ond:[["Jagers en boeren","hoe leefden ze?",0],["Ridders en kastelen","de middeleeuwen",0]]},
+  };
+  const VOLGORDE = ["rekenen","taal","spelling","begrijpend-lezen","engels","natuur","aardrijkskunde","geschiedenis"];
+  const cijferTxt = c => c == null ? "" : (Number.isInteger(c) ? String(c) : Math.floor(c) + "½");
+  const klasse = v => v.c == null ? "" : v.c < 6 ? "rood" : v.n < 50 ? "potlood" : "";
+
+  function bouwVakken(){
+    const box = document.getElementById("vakken"); box.innerHTML = "";
+    for(const id of VOLGORDE){
+      const v = VAK[id];
+      const b = document.createElement("button"); b.className = "vak"; b.onclick = () => ga("vak", id);
+      const onder = v.c == null
+        ? `<div class="onder"><span class="start">${v.n ? "nog " + (10 - v.n) + " vragen tot je cijfer" : "Begin →"}</span></div>`
+        : `<div class="onder"><span class="balk"><i style="width:${Math.min(100, Math.round(v.n / 50 * 100))}%"></i></span><span>${v.n < 50 ? v.n + "/50" : "vast"}</span></div>`;
+      b.innerHTML = `<div class="naam"><span>${v.e}</span>${v.t}</div><div class="cijfer ${klasse(v)}">${v.c == null ? "<span style='font-family:var(--body);font-size:12px;color:var(--subtle);font-weight:700'>nog geen cijfer</span>" : cijferTxt(v.c)}</div>${onder}`;
+      box.appendChild(b);
+    }
+    const t = document.getElementById("rapport-tabel"); t.innerHTML = "";
+    for(const id of VOLGORDE){
+      const v = VAK[id]; const tr = document.createElement("tr"); tr.style.cursor = "pointer"; tr.onclick = () => ga("vak", id);
+      const c = v.c == null ? `<td class="c leeg">${v.n ? "nog " + (10 - v.n) + " vragen" : "—"}</td>` : `<td class="c ${klasse(v)}">${cijferTxt(v.c)}</td>`;
+      tr.innerHTML = `<td>${v.t}<span class="balk"><i style="width:${Math.min(100, Math.round(v.n / 50 * 100))}%"></i></span></td>${c}`;
+      t.appendChild(tr);
+    }
+  }
+  bouwVakken();
+
+  // ── navigatie tussen de schermen ──
+  const TAB = {home:"n-home", kwartier:"n-home", vak:"n-home", vraag:"n-home", leerpad:"n-home", rapport:"n-rapport", spel:"n-spel", meer:"n-meer"};
+  let vorigeVoorLeerpad = "home";
+  function ga(naam, a, b, c){
+    if(naam === "vak"){
+      const v = VAK[a]; document.getElementById("vak-titel").textContent = v.t;
+      const ce = document.getElementById("vak-cijfer"); ce.textContent = v.c == null ? "–" : cijferTxt(v.c); ce.className = "c " + klasse(v);
+      document.getElementById("vak-uitleg").textContent = v.c == null ? (v.n ? `nog ${10 - v.n} vragen tot je eerste cijfer` : "nog geen vragen gedaan") : (v.n < 50 ? `voorlopig cijfer · ${v.n} van 50 vragen` : "vast cijfer");
+      const o = document.getElementById("vak-onderwerpen"); o.innerHTML = "";
+      for(const [t, s, p] of v.ond){ const bt = document.createElement("button"); bt.className = "onderwerp"; bt.onclick = () => ga("vraag", v.t + " · " + t); bt.innerHTML = `<span><div class="t">${t}</div><div class="s">${s}</div></span><span class="r"><span class="balk"><i style="width:${p}%"></i></span>${p ? p + "% goed" : "nieuw"}</span>`; o.appendChild(bt); }
+    }
+    if(naam === "vraag"){ document.getElementById("vraag-kop").textContent = a || "Rekenen"; resetVraag(); }
+    if(naam === "leerpad"){
+      vorigeVoorLeerpad = document.querySelector(".scherm.aan").id === "s-vraag" ? "vraag" : "home";
+      document.querySelector("#s-leerpad .terug").textContent = vorigeVoorLeerpad === "vraag" ? "‹ terug naar je vraag" : "‹ terug";
+      document.getElementById("lp-vak").textContent = (a || "Rekenen") + " · stap voor stap"; document.getElementById("lp-titel").textContent = b || "Optellen tot 1000";
+      document.getElementById("lp-stap").textContent = "stap " + (c || 2) + " van 4";
+    }
+    document.querySelectorAll(".scherm").forEach(s => s.classList.remove("aan"));
+    document.getElementById("s-" + naam).classList.add("aan");
+    document.querySelectorAll(".nav button").forEach(n => n.removeAttribute("aria-current"));
+    document.getElementById(TAB[naam]).setAttribute("aria-current", "page");
+    document.querySelector(".scherm.aan").scrollTop = 0;
+  }
+  function terugUitLeerpad(){ ga(vorigeVoorLeerpad === "vraag" ? "vraag" : "home", "Rekenen"); }
+
+  // ── de vraag ──
+  function resetVraag(){
+    document.querySelectorAll("#opties .optie").forEach(o => { o.className = "optie"; o.disabled = false; });
+    document.getElementById("begrijp").hidden = true; document.getElementById("goed").hidden = true;
+  }
+  function antwoord(el, goed){
+    document.querySelectorAll("#opties .optie").forEach(o => o.disabled = true);
+    el.classList.add(goed ? "goed" : "fout");
+    if(goed){ document.getElementById("goed").hidden = false; }
+    else { document.querySelectorAll("#opties .optie")[1].classList.add("goed"); document.getElementById("begrijp").hidden = false; }
+  }
+  function volgende(){ melding("Volgende vraag (voorbeeld)"); resetVraag(); }
+  function lpAntwoord(el, goed){
+    document.querySelectorAll("#s-leerpad .optie").forEach(o => o.disabled = true);
+    el.classList.add(goed ? "goed" : "fout");
+    melding(goed ? "✓ Goed! Stap 3 begint (voorbeeld)" : "Kijk nog eens naar het voorbeeld hierboven");
+    setTimeout(() => document.querySelectorAll("#s-leerpad .optie").forEach(o => { o.className = "optie"; o.disabled = false; }), 1600);
+  }
+
+  // ── demo-knoppen boven de telefoon ──
+  function zetGroep(g){
+    document.getElementById("demo-g5").setAttribute("aria-pressed", g === 5); document.getElementById("demo-g8").setAttribute("aria-pressed", g === 8);
+    document.getElementById("groeplabel").textContent = "groep " + g;
+    document.getElementById("aftelling").hidden = g !== 8;
+    document.getElementById("n-toets").hidden = g !== 8;
+    document.getElementById("nav").classList.toggle("vijf", g === 8);
+    ga("home");
+  }
+  let klaar = false;
+  function zetKlaar(){ klaar = !klaar; document.getElementById("demo-klaar").setAttribute("aria-pressed", klaar); document.getElementById("klaargezet").hidden = !klaar; ga("home"); }
+  let mt;
+  function melding(t){ const m = document.getElementById("melding"); m.textContent = t; m.classList.add("aan"); clearTimeout(mt); mt = setTimeout(() => m.classList.remove("aan"), 1800); }
+</script>

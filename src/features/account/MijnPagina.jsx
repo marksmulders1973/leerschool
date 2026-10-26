@@ -20,7 +20,8 @@ import TesterOproep from "../../components/TesterOproep.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
-import Rapport from "./Rapport.jsx";
+import Rapport, { MeesterOpmerking, rapportRijen } from "./Rapport.jsx";
+import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
@@ -681,6 +682,7 @@ export default function MijnPagina({
   // 👨‍👩‍👧 "Wie oefent er?" (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): bij openen
   // met 2+ profielen op dit apparaat eerst kiezen (zoals Netflix), daarna via "Wissel".
   const [meerOpen, setMeerOpen] = useState(false);
+  const [rapportOpen, setRapportOpen] = useState(false);   // 📒 papieren rapport, één tik onder de vak-tegels (26 okt 2026)
   // Compact kwartierblok (Mark 1 okt 2026: "dit groene blok is nog enorm groot"): eerste keuze achter een linkje.
   const [zelfKiezenOpen, setZelfKiezenOpen] = useState(false);
   // Kwartiercheck als aanbevolen eerste stap (Mark 1 okt 2026) zolang hij op dit apparaat niet gedaan is.
@@ -1154,6 +1156,29 @@ export default function MijnPagina({
     return uit;
   }, [records, niveau, klaargezet, kiesSoort]);
 
+  // 🧒 Werk aan (Mark 26 okt 2026, eenvoud): hooguit twee verbeterpunten. Eerst het zwakste vak
+  // met een onvoldoende/magere score (uit dezelfde cijfers als het rapport), dan wat de
+  // meting/intake/klaarzet aanwijst (de oude "Leerkwartier adviseert"-tegels), nieuwe stof als laatste.
+  const werkAan = useMemo(() => {
+    const uit = [];
+    const toon = (c) => (Number.isInteger(c) ? String(c) : `${Math.floor(c)}½`);
+    const metCijfer = rapportRijen(rapportVakken).filter((v) => v.cijfer !== null);
+    const zwak = metCijfer.filter((v) => v.cijfer < 6).sort((a, b) => a.cijfer - b.cijfer)[0];
+    if (zwak && onVak) {
+      uit.push({ soort: "vak", id: zwak.subj, emoji: vakMeta(zwak.subj).emoji || "📘", titel: `${zwak.titel}${niveauLabel ? ` · ${niveauLabel}` : ""}`,
+        sub: `cijfer ${toon(zwak.cijfer)} — hier valt het meest te winnen`, doe: () => onVak(zwak.subj) });
+    }
+    const redenTekst = { klaargezet: "voor je klaargezet", laatzien: "uit de Kwartiercheck", herhalen: "nog eens oefenen", nulmeting: "laat zien wat je kunt", nieuw: "nieuw voor jou", intake: "jij zei: dit vind ik lastig" };
+    const volgorde = [...onderwerpTegels].sort((a, b) => (a.reden === "nieuw" ? 1 : 0) - (b.reden === "nieuw" ? 1 : 0));
+    for (const { pad, reden } of volgorde) {
+      if (uit.length >= 2) break;
+      if (!onPickPath || uit.some((u) => u.id === pad.id) || (zwak && pad.subject === zwak.subj)) continue;
+      uit.push({ soort: "pad", id: pad.id, emoji: pad.emoji || "📘", titel: korteTitel(pad.title),
+        sub: `${vakMeta(pad.subject).titel || pad.subject} · ${redenTekst[reden] || reden}`, doe: () => onPickPath(pad.id) });
+    }
+    return uit;
+  }, [rapportVakken, onderwerpTegels, niveauLabel, onVak, onPickPath]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Doorstroomtoets-countdown (groep 7/8).
   const countdown = useMemo(() => {
     if (!groep || groep < 7) return null;
@@ -1573,6 +1598,11 @@ export default function MijnPagina({
                     ouder-rol verbergen we 'm; de groep hoort bij het kind-profiel. */}
                 {(userLevel || onSetLevel) && userRole !== "ouder" && (
                   <div style={{ marginTop: 2 }}>
+                    {/* Mark 26 okt 2026: de groep als dropdown ("groep 5 als dropdown, echt duidelijk
+                        dat dat voor dat kind, die groep is"). De middelbare school houdt de eigen kiezer. */}
+                    {kiesSoort !== "klas" && onSetLevel && userRole !== "teacher" ? (
+                      <GroepDropdown nr={niveau?.soort === "groep" ? niveau.nr : null} onKies={(n) => kiesNiveau("groep", n)} />
+                    ) : (
                     <button
                       onClick={() => onSetLevel && setGroepKiezerOpen((o) => !o)}
                       title={onSetLevel ? "Tik om je groep of klas aan te passen" : undefined}
@@ -1587,6 +1617,7 @@ export default function MijnPagina({
                         : (onSetLevel ? (kiesSoort === "klas" ? "Kies je klas" : "Kies je groep") : userLevel)}
                       {onSetLevel && <span style={{ marginLeft: 5 }}>✏️</span>}
                     </button>
+                    )}
                     {groepKiezerOpen && onSetLevel && (
                       <div style={{ marginTop: 8 }}>
                         {kiesSoort === "klas" && (() => {
@@ -1945,14 +1976,14 @@ export default function MijnPagina({
 
             {weergave === "kind" && rolKey !== "teacher" && (<>
 
-            {/* ── 📒 Rapport bovenaan (Mark 24 okt 2026): ouderwets schoolrapport, stand van nu. ── */}
-            {!loading && <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak}
-              onKwartiercheck={!kwartiercheckGedaan && onKwartiercheck ? () => naarKwartiercheck("rapport") : null} />}
+            {/* ── 🧒 Eenvoud (Mark 26 okt 2026, docs/PLAN-EENVOUD-KIND.md): bovenaan maar drie dingen —
+                Begin (het kwartier), je vakken mét cijfer (de tegels zíjn het rapport), Werk aan.
+                Het papieren rapport (24 okt) staat één tik verderop; de rest zit achter "Meer". ── */}
 
-            {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
-                mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
+            {/* ── Begin: het kwartier (naar het claude.ai-voorbeeld dat Mark
+                mooi vond — 20:56): minuten-blokjes + één grote knop. ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))"), border: "1px solid rgba(0,200,83,0.4)" }}>
-              <div style={eyebrowStijl}>{rolKey === "leerling" || rolKey === "student" ? "Wat moet je doen?" : "Vandaag"}</div>
+              <div style={eyebrowStijl}>Vandaag</div>
               {(() => {
                 const min = Math.min(minutenVandaag(), 15);
                 const klaarVandaag = min >= 15;
@@ -2043,36 +2074,18 @@ export default function MijnPagina({
                               boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
                             }}
                           >
-                            {bezig ? (klaarVandaag ? "▶ Maak je blokjes af (extra)" : "▶ Verder met je kwartier") : gedaan ? "▶ Nog een kwartier" : "▶ Start je kwartier van vandaag"}
+                            {bezig ? (klaarVandaag ? "▶ Maak je blokjes af (extra)" : "▶ Verder met je kwartier") : gedaan ? "▶ Nog een kwartier" : "▶ Begin: je kwartier van vandaag"}
                           </button>
-                          {onderwerpTegels.length > 0 && onPickPath && (
-                            <div style={{ marginTop: 12 }}>
-                              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Leerkwartier adviseert nu: {onderwerpTegels.map(({ pad }) => (vakMeta(pad.subject).titel || pad.subject).toLowerCase()).join(", ").replace(/^./, (c) => c.toUpperCase())}. Welke kies je?</div>
-                              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
-                                {onderwerpTegels.map(({ pad, reden }) => (
-                                  <button key={pad.id} type="button"
-                                    onClick={() => { try { track("mijn_onderwerp_tegel", { pad: pad.id, vak: pad.subject, reden, groep }); } catch { /* */ } onPickPath(pad.id); }}
-                                    style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 4, textAlign: "left", padding: "10px 9px", minHeight: 92, borderRadius: 12, cursor: "pointer", border: "1px solid rgba(66,165,245,0.35)", background: "rgba(66,165,245,0.08)", color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
-                                    <span aria-hidden="true" style={{ fontSize: 22, lineHeight: 1 }}>{pad.emoji || "📘"}</span>
-                                    <span style={{ fontSize: 12.5, fontWeight: 800, lineHeight: 1.25, color: "var(--color-text-strong, #fff)", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{korteTitel(pad.title)}</span>
-                                    <span style={{ marginTop: "auto", fontSize: 10.5, fontWeight: 700, color: reden === "nieuw" ? "#8fd3ff" : "#69f0ae" }}>{reden === "herhalen" ? "herhalen" : reden === "nieuw" ? ((vakMeta(pad.subject).titel || pad.subject) === korteTitel(pad.title) ? "nieuw voor jou" : (vakMeta(pad.subject).titel || pad.subject)) :"hier kun je groeien"}</span>
-                                  </button>
-                                ))}
-                              </div>
-                              {onGoLeren && (
-                                <button type="button" onClick={() => { try { track("mijn_onderwerp_anders", { groep }); } catch { /* */ } onGoLeren(); }}
-                                  style={{ display: "block", margin: "6px auto 0", background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", textDecoration: "underline", cursor: "pointer", fontSize: 12.5 }}>
-                                  of zoek iets anders
-                                </button>
-                              )}
-                            </div>
+                          {/* 26 okt 2026: de drie "Leerkwartier adviseert"-tegels staan nu onder "Werk aan";
+                              "alle onderwerpen bekijken" zit achter Meer. Alleen "verder waar je was" blijft. */}
+                          {resume && onResumePath && (
+                            <button
+                              onClick={() => onResumePath(resume.pathId, resume.stepIdx)}
+                              style={{ marginTop: 8, padding: "9px 14px", borderRadius: 10, border: "1px solid var(--color-border-soft)", background: "transparent", color: "var(--color-text)", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, width: "100%" }}
+                            >
+                              of: verder waar je was
+                            </button>
                           )}
-                          <button
-                            onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
-                            style={{ marginTop: 8, padding: "9px 14px", borderRadius: 10, border: "1px solid var(--color-border-soft)", background: "transparent", color: "var(--color-text)", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, width: "100%" }}
-                          >
-                            {resume ? "of: verder waar je was" : "of: alle onderwerpen bekijken"}
-                          </button>
                           {(rolKey === "leerling" || rolKey === "student") && !kwartiercheckGedaan && onKwartiercheck && !bezig && (
                             <button type="button" onClick={() => naarKwartiercheck("kind")} style={{ display: "block", width: "100%", marginTop: 8, padding: "9px 12px", borderRadius: 10, cursor: "pointer", border: "1px dashed rgba(255,140,66,0.6)", background: "rgba(255,107,53,0.08)", color: "#ff8c42", fontSize: 13, fontWeight: 700 }}>
                               Eerste keer? Doe eerst de Kwartiercheck, dan weten we waar je staat →
@@ -2092,6 +2105,36 @@ export default function MijnPagina({
               })()}
             </Card>
 
+            {/* ── Je vakken: alleen de vakken van deze groep, als tegels mét rapportcijfer ("Rekenen · groep 5").
+                De tegels zíjn het rapport; het papieren rapport staat één tik verderop. ── */}
+            {!loading && rapportVakken.length > 0 && (
+              <div style={{ marginBottom: "var(--space-4)" }}>
+                <div style={eyebrowStijl}>Je vakken{niveauLabel ? ` · ${niveauLabel}` : ""}</div>
+                <VakTegels vakken={rapportVakken} niveauLabel={niveauLabel || ""} vakMeta={vakMeta} onVak={(subj) => onVak && onVak(subj)} />
+                <div style={{ marginTop: 10 }}>
+                  <MeesterOpmerking naam={player} vakken={rapportVakken} onVak={onVak}
+                    onKwartiercheck={!kwartiercheckGedaan && onKwartiercheck ? () => naarKwartiercheck("rapport") : null} />
+                </div>
+                <button type="button" onClick={() => { setRapportOpen((o) => !o); try { track("mijn_rapport_toggle", { open: !rapportOpen }); } catch { /* */ } }} aria-expanded={rapportOpen}
+                  style={{ display: "block", margin: "8px auto 0", background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", textDecoration: "underline", cursor: "pointer", fontSize: 12.5, fontFamily: "inherit" }}>
+                  {rapportOpen ? "rapport dichtdoen" : "📒 bekijk je rapport"}
+                </button>
+                {rapportOpen && (
+                  <div style={{ marginTop: 10 }}>
+                    <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak}
+                      onKwartiercheck={!kwartiercheckGedaan && onKwartiercheck ? () => naarKwartiercheck("rapport") : null} />
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* ── Werk aan: hooguit twee verbeterpunten, één tik = de uitleg/oefening daarvan. ── */}
+            {!loading && werkAan.length > 0 && (
+              <div style={{ marginBottom: "var(--space-4)" }}>
+                <div style={eyebrowStijl}>Werk aan</div>
+                <WerkAan punten={werkAan} />
+              </div>
+            )}
 
             {/* 🎁 Koppelcode-invoer óók op Mijn pagina (1 sep 2026): de ouder-
                 én leraar-kaarten zeggen "vul 'm in op Mijn pagina", maar het
@@ -2109,15 +2152,7 @@ export default function MijnPagina({
                 via de klaarzet-modus koos. Cadeau-gevoel, geen huiswerk-druk;
                 "iemand thuis" i.p.v. papa/mama sluit niemand uit (voogd/pleeg-
                 gezin). Alleen tonen als er echt iets klaarstaat. ── */}
-            {/* Lege staat (1 okt 2026): een leerling ziet altijd wat er van thuis of school klaarstaat. */}
-            {thuisKlaargezet.length === 0 && (rolKey === "leerling" || rolKey === "student") && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.25)" }}>
-                <div style={eyebrowStijl}>Van thuis of school</div>
-                <div style={{ fontSize: 14, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-                  Nog niets voor je klaargezet. Je ouder, verzorger of juf kan hier oefeningen voor je klaarzetten.
-                </div>
-              </Card>
-            )}
+            {/* Lege staat weg (Mark 26 okt 2026, eenvoud): "Voor jou klaargezet" verschijnt alleen als er echt iets klaarstaat. */}
             {thuisBerichten.length > 0 && (
               <div data-mijn-thuisbericht style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: "var(--space-4)" }}>
                 {thuisBerichten.slice(0, 2).map((b) => <BerichtBallon key={b.id} bericht={b} kind={player} />)}
@@ -2204,8 +2239,17 @@ export default function MijnPagina({
               </Card>
             )}
 
+            {/* ── Meer (Mark 1 okt 2026 drie blokken; 26 okt 2026 eenvoud): alles wat een kind niet elke dag
+                nodig heeft zit achter één rustige knop. Niets weg. ── */}
+            <button type="button" onClick={() => { setMeerOpen((o) => !o); try { track("mijn_meer", { open: !meerOpen }); } catch { /* */ } }}
+              style={{ width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.04)", color: "var(--color-text)", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)", marginBottom: "var(--space-4)", textAlign: "center" }}
+              aria-expanded={meerOpen}
+            >
+              {meerOpen ? "Minder tonen ▲" : "Meer ▼"}
+            </button>
+            {meerOpen && (<>
             {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
-                de vakken-werkbank voor wie meteen wil oefenen. */}
+                de vakken-werkbank voor wie alles wil zien. 26 okt 2026: achter Meer. */}
             {onBack && (
               <button
                 onClick={onBack}
@@ -2219,16 +2263,6 @@ export default function MijnPagina({
                 📚 Alle vakken en oefeningen →
               </button>
             )}
-
-            {/* ── Drie blokken (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): kwartier,
-                "Hoe gaat het?" en je profiel staan open; de rest zit achter één knop. Niets weg. ── */}
-            <button type="button" onClick={() => { setMeerOpen((o) => !o); try { track("mijn_meer", { open: !meerOpen }); } catch { /* */ } }}
-              style={{ width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.04)", color: "var(--color-text)", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)", marginBottom: "var(--space-4)", textAlign: "center" }}
-              aria-expanded={meerOpen}
-            >
-              {meerOpen ? "Minder tonen ▲" : "Meer op je pagina ▼ (je vakken, doel, tafels, Charley, je lijstje, diploma's, account)"}
-            </button>
-            {meerOpen && (<>
             {/* ── Waar je staat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>{rolKey === "leerling" || rolKey === "student" ? "Hoe sta je ervoor?" : "Waar je staat"}</div>
