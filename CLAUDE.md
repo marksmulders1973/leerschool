@@ -493,12 +493,11 @@ Status 2026-05-13: paywall-infrastructuur is gebouwd maar `PAYWALL_ACTIVE = fals
 6. Test in Stripe test-mode (testkaart 4242 4242 4242 4242) → flip naar live keys.
 7. Stuur mail naar `upgrade_waitlist`-emails met 30-dagen-gratis-premium-coupon.
 
-**Prijsmodel (Mark akkoord 2026-07-25 — zie `docs/PRIJSPLAN.md`, bron-van-waarheid copy: `src/subscription/proPlan.js` LAGEN):**
-- **Gratis** — de leer-kern, blijft (gekwalificeerd) gratis; partner-codes = Familie-niveau gratis.
-- **Familie** (ouders, per gezín niet per kind): richtprijs €4,95/mnd of €39/jaar — dashboard, weekrapport, examen-simulatie, Kwartierplan.
-- **Pro** (leerkrachten/bijlesdocenten): richtprijs €6,95/mnd of €59/jaar; school €99/klas/jaar — logo op toetsen, onbeperkt toetsen, klasrapportage. Leerpaden klaarzetten blijft gratis (t/m zeker 2031).
-- **Kwartier-tegoed** (los, geen abonnement): extra AI-bijles per kwartier; ook cadeaukaart (decemberpiek). Prijs per kwartier vóór lancering bepalen.
-- Geen "Premium" als naam, nergens. Tier-mapping DB: familie=`parent_pro`, leerkracht=`teacher_pro`.
+**Prijsmodel (stand 26 okt 2026 — zie `docs/PRIJSPLAN.md` + memory `feedback_studiebol_prijsmodel`; bron-van-waarheid copy: `src/subscription/proPlan.js` LAGEN). Mark 26 okt: "leerkrachten en scholen hebben we gratis gemaakt" — reken daar nooit meer omzet op:**
+- **Gratis** — de leer-kern (oefenen t/m 2031), én **leerkrachten en scholen helemaal gratis t/m 2031** (besluit 2 okt 2026: geen schoollicentie, geen €99/klas; nieuwkomers-pakket ook gratis voor scholen). "Een school betaalt nooit."
+- **Familie** (ouders, per gezín tot 3 kinderen): **één product, €39 voor 12 maanden vanaf betalen, stopt vanzelf, verlengen €31** (30 sep 2026). Proefweek 7 dagen zonder betaalgegevens (4 okt). Ook in de Android-app via Google Play Billing als eenmalig product (4 okt, 15% geaccepteerd).
+- **Organisaties/gemeenten kopen plekken per gezin**: 10–99 gezinnen €34,50 · 100–249 €24,95 · 250+ in overleg (22 sep). Partner-codes die al zijn uitgegeven = Familie gratis t/m 31-12-2028; Ooievaarspas blijvend.
+- **Geschrapt:** Pro voor leerkrachten/bijlesdocenten (22 sep), schoollicentie (2 okt), Seizoenspas (30 sep), Kwartier-tegoed (on hold, 8 aug). Geen "Premium" als naam, nergens. Tier-mapping DB: familie=`parent_pro` (teacher_pro bestaat technisch nog, wordt niet verkocht).
 
 **Free-tier-quota** (`FREE_QUOTA`): 3 paden/dag, 0 AI-tutor-calls, 0 examen-modus.
 
