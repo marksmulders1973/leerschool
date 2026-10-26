@@ -14,7 +14,7 @@ import { useMemo, useState } from "react";
 import supabase from "../supabase.js";
 import { bewaarKoppeling } from "../shared/koppeling.js";
 import { normaliseerKoppelcode } from "../shared/koppelcode.js";
-import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig, codeUitUrl } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig, codeUitUrl, PARTNER_PRO_TOT } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
 import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
@@ -226,7 +226,10 @@ function EerScherm({ code, onVerder }) {
 // `rustig` (30 sep 2026, home-herschikking): zolang er geen code is, één gedempte
 // tekstregel i.p.v. de gele balk — opent op een tik naar hetzelfde invulveld.
 // Stand 2 (code actief) blijft ongewijzigd: die bevestiging moet dik blijven.
-export default function CodeBalk({ rustig = false }) {
+// `veld` (26 okt 2026, startpagina-vereenvoudiging): het invulveld staat meteen open,
+// met één korte kop en één zin over wat de code oplevert — een ouder met een flyer
+// moet 'm binnen vijf seconden zien (ouder-agent 26 okt). Stand 2 blijft gelijk.
+export default function CodeBalk({ rustig = false, veld = false }) {
   // 👀 Preview-modus (Mark 27 aug: "ik wil alle ere-pagina's persoonlijk zien
   // en goedkeuren"): /?erescherm=CODE toont het ere-scherm van die code ALTIJD,
   // puur als kijk-versie — er wordt niets op het apparaat gezet en niets gemeten.
@@ -427,11 +430,55 @@ export default function CodeBalk({ rustig = false }) {
 
   // Stand 1/3 — nog geen code: uitnodiging + invulveld.
   const rustigDicht = rustig && !open;
+  const veldOpen = veld || open;
   return (
     <div className="lk-content-wide" style={rustigDicht
       ? { maxWidth: 560, margin: "2px auto 2px", padding: 0 }
-      : { maxWidth: 560, margin: "10px auto 4px", background: "#fffaf0", border: "1.5px solid #e6c65a", borderRadius: 14, padding: open ? "12px 16px" : "9px 14px" }}>
-      {!open ? (
+      : { maxWidth: 560, margin: "10px auto 4px", background: "#fffaf0", border: "1.5px solid #e6c65a", borderRadius: 14, padding: veldOpen ? "12px 16px" : "9px 14px" }}>
+      {veld && !open ? (
+        <div>
+          <div style={{ font: "800 14px/1.4 system-ui", color: "#7a5b00", marginBottom: 2 }}>
+            🎟️ Code van je flyer of pas?
+          </div>
+          <div style={{ font: "600 12px/1.45 system-ui", color: "#8a7a3d", marginBottom: 8 }}>
+            Dan krijgt je gezin de Familie-extra&apos;s gratis, tot en met 31 december {PARTNER_PRO_TOT.slice(0, 4)}. Geen code? Oefenen is toch gratis.
+          </div>
+          <div style={{ display: "flex", gap: 8 }}>
+            <input
+              className="lk-codebalk-input"
+              value={invoer}
+              onChange={(e) => setInvoer(e.target.value.toUpperCase())}
+              onFocus={() => { try { track("code_balk_open", {}); } catch { /* */ } }}
+              onKeyDown={(e) => { if (e.key === "Enter") activeer(); }}
+              placeholder="JOUWCODE2027"
+              autoCapitalize="characters"
+              autoCorrect="off"
+              spellCheck={false}
+              style={{ flex: 1, minWidth: 0, border: "1.5px solid #d7c98a", borderRadius: 10, padding: "10px 12px", font: "800 14px system-ui", letterSpacing: 1, background: "#fff", color: "#1a2233", caretColor: "#0a7d43" }}
+            />
+            <button onClick={activeer} style={{ border: "none", borderRadius: 10, padding: "10px 16px", font: "800 13.5px system-ui", color: "#fff", background: "linear-gradient(135deg,#0a7d43,#0b6b39)", cursor: "pointer", whiteSpace: "nowrap" }}>
+              Activeren
+            </button>
+          </div>
+          {fout && <div style={{ font: "600 12px/1.4 system-ui", color: "#b42318", marginTop: 7 }}>{fout}</div>}
+          {koppelTip && (koppelTip.klaar ? (
+            <div style={{ marginTop: 8, background: "rgba(0,200,83,0.10)", border: "1.5px solid rgba(0,150,60,0.5)", borderRadius: 10, padding: "10px 12px" }}>
+              <div style={{ font: "700 13px/1.45 system-ui", color: "#0a7d43" }}>
+                ✓ Gekoppeld{koppelTip.naam ? ` als ${koppelTip.naam}` : ""}! {koppelTip.rol === "leraar"
+                  ? "Je juf of meester kan nu lessen voor je klaarzetten."
+                  : "Je ouder of verzorger kan nu je voortgang zien."}
+              </div>
+            </div>
+          ) : (
+            <div style={{ marginTop: 8, background: "rgba(124,58,237,0.08)", border: "1.5px solid rgba(124,58,237,0.4)", borderRadius: 10, padding: "10px 12px" }}>
+              <div style={{ font: "700 12.5px/1.45 system-ui", color: "#5b21b6" }}>
+                🔐 Dit is een <strong>koppelcode</strong> van thuis of school — die hoort bij jóuw naam.{" "}
+                <a href="/koppelen" style={{ color: "#5b21b6", fontWeight: 800 }}>Kies hier je naam →</a> De code staat daar al ingevuld.
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : !open ? (
         <button
           onClick={() => { setOpen(true); try { track("code_balk_open", {}); } catch { /* */ } }}
           style={rustigDicht
