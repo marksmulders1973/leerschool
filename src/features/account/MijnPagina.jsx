@@ -467,6 +467,9 @@ function LegeMijnPagina({ onStartKwartier, onNaamInvullen, onResumePath, onPickP
 export default function MijnPagina({
   userName,
   userLevel,
+  // 🧒 Onderbalk per groep (Mark 26 okt 2026, stap 2): "begin" = Mijn pagina (Begin · vakken · Werk aan),
+  // "rapport" = alleen het papieren rapport, "meer" = alles wat achter Meer zit. Zelfde gegevens, zelfde kop.
+  scherm = "begin",
   streak,
   subscription,
   onResumePath,
@@ -1978,7 +1981,15 @@ export default function MijnPagina({
 
             {/* ── 🧒 Eenvoud (Mark 26 okt 2026, docs/PLAN-EENVOUD-KIND.md): bovenaan maar drie dingen —
                 Begin (het kwartier), je vakken mét cijfer (de tegels zíjn het rapport), Werk aan.
-                Het papieren rapport (24 okt) staat één tik verderop; de rest zit achter "Meer". ── */}
+                Het papieren rapport (24 okt) heeft zijn eigen tab; de rest zit achter "Meer". ── */}
+
+            {/* 📒 Tab "Rapport": alleen het papieren rapport. */}
+            {scherm === "rapport" && !loading && (
+              <Rapport naam={player} niveauLabel={niveauLabel} vakken={rapportVakken} onVak={onVak}
+                onKwartiercheck={!kwartiercheckGedaan && onKwartiercheck ? () => naarKwartiercheck("rapport") : null} />
+            )}
+
+            {scherm === "begin" && (<>
 
             {/* ── Begin: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote knop. ── */}
@@ -2240,14 +2251,15 @@ export default function MijnPagina({
             )}
 
             {/* ── Meer (Mark 1 okt 2026 drie blokken; 26 okt 2026 eenvoud): alles wat een kind niet elke dag
-                nodig heeft zit achter één rustige knop. Niets weg. ── */}
+                nodig heeft zit achter één rustige knop — en sinds stap 2 ook onder de tab "Meer". Niets weg. ── */}
             <button type="button" onClick={() => { setMeerOpen((o) => !o); try { track("mijn_meer", { open: !meerOpen }); } catch { /* */ } }}
               style={{ width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.04)", color: "var(--color-text)", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)", marginBottom: "var(--space-4)", textAlign: "center" }}
               aria-expanded={meerOpen}
             >
               {meerOpen ? "Minder tonen ▲" : "Meer ▼"}
             </button>
-            {meerOpen && (<>
+            </>)}
+            {(meerOpen || scherm === "meer") && (<>
             {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
                 de vakken-werkbank voor wie alles wil zien. 26 okt 2026: achter Meer. */}
             {onBack && (

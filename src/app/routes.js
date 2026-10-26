@@ -19,6 +19,9 @@ export const PAGE_TO_PATH = {
   "my-mastery": "/voortgang",
   // Persoonlijke pagina (WhatsApp-feedback 11 aug): thuisbasis op naam.
   "mijn-pagina": "/mijn",
+  // Onderbalk per groep (26 okt 2026, stap 2 eenvoud): Rapport en Meer als eigen tab, zelfde onderdeel als /mijn.
+  rapport: "/rapport",
+  meer: "/meer",
   // Voortgang & kampioenen
   kampioenen: "/kampioenen",
   leaderboard: "/scorebord",

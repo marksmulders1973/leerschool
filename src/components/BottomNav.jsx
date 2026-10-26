@@ -66,7 +66,25 @@ function maakTabs(isTeacher) {
 }
 
 
+// 🧒 Onderbalk per groep (Mark 26 okt 2026, stap 2 van docs/PLAN-EENVOUD-KIND.md): een kind op de
+// basisschool ziet vier knoppen — Begin · Rapport · Spelletje · Meer — en vanaf groep 6 ook Toets
+// (de Doorstroomtoets speelt dan pas). "Leren" (de hub met ~100 onderwerpen) en "Home" zijn voor een
+// kind niet weg: ze zitten achter Meer en achter de vak-tegels. Ouders, leerkrachten, de middelbare
+// school en bezoekers zonder groep houden de bestaande balk.
+function kindTabs(groep) {
+  const tabs = [
+    { id: "mijn",    label: "Begin",   emoji: "▶️", target: "mijn-pagina" },
+    { id: "rapport", label: "Rapport", emoji: "📒", target: "rapport" },
+  ];
+  if (groep >= 6) tabs.push({ id: "toets-maken", label: "Toets", emoji: "📝", iconNode: <DoorstroomtoetsLogo size={24} />, target: "cito" });
+  tabs.push({ id: "park", label: "Spelletje", emoji: "🎮", target: "spelletje", gameRelated: true });
+  tabs.push({ id: "meer", label: "Meer", emoji: "•••", target: "meer" });
+  return tabs;
+}
+
 function bepaalActieveTab(page) {
+  if (page === "rapport") return "rapport";
+  if (page === "meer") return "meer";
   // student-home telt NIET als "Home" (Mark 7 aug 2026): de Home-tab lichtte
   // daar op alsof je al op de homepage stond — niemand tikte er dus nog op
   // en er leek geen weg naar de echte home. Nu is de tab daar gewoon tikbaar.
@@ -81,7 +99,7 @@ function bepaalActieveTab(page) {
   return null;
 }
 
-export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
+export default function BottomNav({ currentPage, onNavigate, authUser, role, level = "", schoolType = "" }) {
   const actief = bepaalActieveTab(currentPage);
   const kies = (tab) => {
     track("bottomnav_click", { tab: tab.id });
@@ -89,7 +107,10 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
   };
   // Rol-bewuste tabs: alleen leerkracht ziet "Toets maken" (→ teacher-home).
   const isTeacher = role === "teacher" || role === "leerkracht";
-  const ALL_TABS = maakTabs(isTeacher);
+  // Kind op de basisschool (groep 1-8, geen ouder/leerkracht/middelbare school) → de eenvoudige balk.
+  const groep = !schoolType && /^\d+$/.test(String(level || "")) ? Number(level) : 0;
+  const isKind = groep >= 1 && groep <= 8 && !isTeacher && role !== "ouder" && role !== "student";
+  const ALL_TABS = isKind ? kindTabs(groep) : maakTabs(isTeacher);
   // Filter game-related tabs voor niet-ingelogden als feature-flag aanstaat
   const gameZichtbaar = gameVisibleForUser(authUser, urlHasGameDeepLink());
   const TABS = gameZichtbaar ? ALL_TABS : ALL_TABS.filter((t) => !t.gameRelated);

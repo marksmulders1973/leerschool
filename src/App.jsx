@@ -195,7 +195,7 @@ const BOTTOMNAV_PAGES = new Set([
   "home",
   "learn-paths-hub",
   "learn-meebezig",
-  "my-mastery", "mijn-pagina",
+  "my-mastery", "mijn-pagina", "rapport", "meer",
   "kampioenen", "leaderboard", "student-progress", "teacher-progress",
   "student-home", "teacher-home",
   "self-study", "textbook", "cito", "tafels",
@@ -752,8 +752,9 @@ export default function App() {
   // vanaf Mijn pagina opende. Via de startpagina weer binnenkomen = opnieuw kiezen.
   const mijnTerugRef = useRef(false);
   useEffect(() => {
+    const MIJN = ["mijn-pagina", "rapport", "meer"];   // de tabs Rapport en Meer horen bij Mijn pagina (stap 2, 26 okt 2026)
     if (page === "home") mijnTerugRef.current = false;
-    else if (vorigePageRef.current === "mijn-pagina" && page !== "mijn-pagina") mijnTerugRef.current = true;
+    else if (MIJN.includes(vorigePageRef.current) && !MIJN.includes(page)) mijnTerugRef.current = true;
   }, [page]);
   const terugNaarVorige = (toegestaan, standaard = "home") => setPage(toegestaan.includes(vorigePageRef.current) ? vorigePageRef.current : standaard);
   // Familie-tegels op Mijn pagina (Mark 1 okt 2026: "fix de terug-knop"): kwam je via een tegel, dan brengt
@@ -1534,9 +1535,12 @@ export default function App() {
       {/* Lege staat /mijn (Mark 11 sep 2026): de pagina stuurde een bezoeker
           zónder naam weg naar de startpagina, zonder knop of link. Nu kan hij
           hier zelf starten — oefenen eerst, naam pas als hij die heeft. */}
-      {page === "mijn-pagina" && (
+      {/* 🧒 Stap 2 eenvoud (26 okt 2026): de tabs Rapport en Meer zijn hetzelfde onderdeel met een ander scherm —
+          zelfde gegevens, zelfde kop, geen herladen bij het wisselen van tab. */}
+      {(page === "mijn-pagina" || page === "rapport" || page === "meer") && (
         <MijnPagina
           key={userName || "geen-naam"}
+          scherm={page === "mijn-pagina" ? "begin" : page}
           userName={userName}
           userSchoolType={userSchoolType}
           userLevel={
@@ -2778,7 +2782,7 @@ export default function App() {
     </main>
     <KwartierTredenToast />
     {BOTTOMNAV_PAGES.has(page) && (
-      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} role={role} />
+      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} role={role} level={userLevel} schoolType={userSchoolType} />
     )}
     {/* 15-min "kwartier zit erop" toast — viert het bereiken van het
         dag-doel. Bouwt op de slogan "Een kwartier per dag, een leven lang
