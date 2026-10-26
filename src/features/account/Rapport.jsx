@@ -22,6 +22,17 @@ const LIJN = "#c9b58f";
 const HAND = "'Segoe Print', 'Bradley Hand', 'Comic Neue', cursive";
 const SCHOOL = "Georgia, 'Times New Roman', serif";
 
+// Kleur van een cijfer (Mark 26 okt 2026: "5,4/5,6 oranje? eronder rood, erboven groen"):
+// onder 5½ rood, precies 5½ oranje, vanaf 6 groen. Papier (rapport) en scherm (tegels)
+// krijgen elk hun eigen tinten, maar dezelfde grens.
+export function cijferKleur(c, waar = "papier") {
+  const p = waar === "papier";
+  if (c === null || c === undefined) return p ? INKT : "#c8d0e0";
+  if (c < 5.5) return p ? ROOD : "#ff5252";
+  if (c < 6) return p ? "#c76a12" : "#ffb74d";
+  return p ? "#1e7a3c" : "#69f0ae";
+}
+
 export function cijferVoor(correct, attempts) {
   if (!attempts || attempts < MIN_VRAGEN) return null;
   return Math.max(1, Math.round((correct / attempts) * 20) / 2);
@@ -146,14 +157,14 @@ export default function Rapport({ naam, niveauLabel, vakken, onVak, onKwartierch
           <span style={{ whiteSpace: "nowrap" }}>{v.titel}</span>
           <span aria-hidden="true" style={{ flex: 1, borderBottom: `2px dotted ${LIJN}`, transform: "translateY(-4px)", minWidth: 16 }} />
           {v.cijfer !== null && (v.attempts || 0) >= VAST_VRAGEN ? (
-            <span style={{ fontFamily: HAND, fontSize: 21, lineHeight: "30px", fontWeight: 700, color: v.cijfer < 5.5 ? ROOD : INKT, minWidth: 34, textAlign: "right" }}>
+            <span style={{ fontFamily: HAND, fontSize: 21, lineHeight: "30px", fontWeight: 700, color: cijferKleur(v.cijfer), minWidth: 34, textAlign: "right" }}>
               {toonCijfer(v.cijfer)}
             </span>
           ) : v.cijfer !== null ? (
             <span style={{ display: "flex", alignItems: "center", gap: 2, whiteSpace: "nowrap" }} title={`Voorlopig: nog ${VAST_VRAGEN - v.attempts} vragen tot een vast cijfer`}>
               <Balkje nu={v.attempts} doel={VAST_VRAGEN} kleur={POTLOOD} />
               <span style={{ fontSize: 10.5, fontStyle: "italic", opacity: 0.75, marginRight: 4 }}>voorlopig</span>
-              <span style={{ fontFamily: HAND, fontSize: 19, lineHeight: "30px", fontStyle: "italic", color: v.cijfer < 5.5 ? "#a0574e" : POTLOOD, minWidth: 30, textAlign: "right" }}>
+              <span style={{ fontFamily: HAND, fontSize: 19, lineHeight: "30px", fontStyle: "italic", color: cijferKleur(v.cijfer), opacity: 0.8, minWidth: 30, textAlign: "right" }}>
                 {toonCijfer(v.cijfer)}
               </span>
             </span>

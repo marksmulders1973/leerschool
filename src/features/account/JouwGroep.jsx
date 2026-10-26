@@ -10,7 +10,7 @@
 // (hooguit twee verbeterpunten). De Begin-knop blijft de bestaande vandaag-motor.
 
 import { track } from "../../utils.js";
-import { rapportRijen, MIN_VRAGEN, VAST_VRAGEN } from "./Rapport.jsx";
+import { rapportRijen, cijferKleur, MIN_VRAGEN, VAST_VRAGEN } from "./Rapport.jsx";
 
 const HAND = "'Segoe Print', 'Bradley Hand', 'Comic Neue', cursive";
 const toonCijfer = (c) => (Number.isInteger(c) ? String(c) : `${Math.floor(c)}½`);
@@ -48,7 +48,6 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak }) {
       {rijen.map((v) => {
         const meta = vakMeta(v.subj);
         const vast = v.cijfer !== null && (v.attempts || 0) >= VAST_VRAGEN;
-        const rood = v.cijfer !== null && v.cijfer < 5.5;
         const nog = MIN_VRAGEN - (v.attempts || 0);
         return (
           <button key={v.subj} type="button"
@@ -64,7 +63,7 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak }) {
             </span>
             <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>{niveauLabel}</span>
             {v.cijfer !== null ? (
-              <span style={{ fontFamily: HAND, fontSize: 30, lineHeight: 1, fontWeight: 700, color: rood ? "#ff5252" : vast ? "#fff" : "#c8d0e0", fontVariantNumeric: "tabular-nums" }}>
+              <span style={{ fontFamily: HAND, fontSize: 30, lineHeight: 1, fontWeight: 700, color: cijferKleur(v.cijfer, "scherm"), opacity: vast ? 1 : 0.8, fontVariantNumeric: "tabular-nums" }}>
                 {toonCijfer(v.cijfer)}
               </span>
             ) : (
