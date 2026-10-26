@@ -5,16 +5,16 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-10-26. Bron: start
 ## 1. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 2)
 Vraag: Wat is het meervoud van **stoel**?
 - ▫️ stoele
-- ▫️ stoeles
 - ▫️ stoels
 - ✅ stoelen
+- ▫️ stoeles
 
 ## 2. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 2)
 Vraag: Wat is het meervoud van **tafel**?
-- ▫️ tafel
 - ▫️ tafelen
-- ▫️ tafeles
+- ▫️ tafel
 - ✅ tafels
+- ▫️ tafeles
 
 ## 3. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 3)
 Vraag: Wat is het verkleinwoord van **bal**?
@@ -25,66 +25,66 @@ Vraag: Wat is het verkleinwoord van **bal**?
 
 ## 4. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 3)
 Vraag: Wat is het verkleinwoord van **boom**?
-- ✅ boompje
+- ▫️ boomtje
 - ▫️ bometje
 - ▫️ boomje
-- ▫️ boomtje
+- ✅ boompje
 
 ## 5. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 1)
 Vraag: Welk woord is een **zelfstandig naamwoord**?
-- ▫️ fietst
-- ▫️ mooi
 - ✅ fiets
+- ▫️ fietst
 - ▫️ snel
+- ▫️ mooi
 
 ## 6. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 1)
 Vraag: *'De dappere ridder vocht fel.'* — welk woord is een zelfstandig naamwoord?
-- ▫️ De
+- ▫️ dappere
 - ▫️ fel
 - ✅ ridder
-- ▫️ dappere
+- ▫️ De
 
 ## 7. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 1)
 Vraag: Welk woord is **GEEN** zelfstandig naamwoord?
+- ✅ loopt
+- ▫️ tafel
 - ▫️ verdriet
 - ▫️ Amsterdam
-- ▫️ tafel
-- ✅ loopt
 
 ## 8. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 2)
 Vraag: Welk woord is het **hele werkwoord**?
-- ✅ springen
 - ▫️ springer
-- ▫️ sprong
 - ▫️ sprongetje
+- ▫️ sprong
+- ✅ springen
 
 ## 9. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 2)
 Vraag: *'Tom **schopt** de **bal** weg.'* — welk woord is het werkwoord?
-- ▫️ bal
-- ✅ schopt
 - ▫️ Tom
+- ✅ schopt
 - ▫️ weg
+- ▫️ bal
 
 ## 10. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 2)
 Vraag: Wat is het **hele werkwoord** van 'liep'?
-- ✅ lopen
-- ▫️ lopend
 - ▫️ liepen
 - ▫️ loop
+- ▫️ lopend
+- ✅ lopen
 
 ## 11. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 1)
 Vraag: Wat is een **synoniem**?
-- ▫️ Een woord met dezelfde uitspraak
-- ✅ Een woord met bijna dezelfde betekenis
 - ▫️ Een woord met tegengestelde betekenis
 - ▫️ Een woord uit een vreemde taal
+- ✅ Een woord met bijna dezelfde betekenis
+- ▫️ Een woord met dezelfde uitspraak
 
 ## 12. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 1)
 Vraag: Welk woord is een **synoniem** van **'blij'**?
-- ▫️ Rustig
-- ▫️ Trots
 - ✅ Vrolijk
 - ▫️ Verdrietig
+- ▫️ Rustig
+- ▫️ Trots
 
 ## 13. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 3)
 Vraag: Wat is het **tegenovergestelde** van **'groot'**?
@@ -95,49 +95,49 @@ Vraag: Wat is het **tegenovergestelde** van **'groot'**?
 
 ## 14. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 3)
 Vraag: Wat is het **tegenovergestelde** van **'snel'**?
-- ✅ Langzaam
-- ▫️ Vlug
 - ▫️ Gauw
 - ▫️ Haastig
+- ▫️ Vlug
+- ✅ Langzaam
 
 ## 15. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 2)
 Vraag: Welke zin is **goed**?
+- ▫️ Vandaag ga ik naar amsterdam.
+- ▫️ vandaag ga ik naar Amsterdam.
 - ▫️ VANDAAG ga ik naar amsterdam.
 - ✅ Vandaag ga ik naar Amsterdam.
-- ▫️ vandaag ga ik naar Amsterdam.
-- ▫️ Vandaag ga ik naar amsterdam.
 
 ## 16. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 2)
 Vraag: Welk woord krijgt **wél een hoofdletter** in een zin?
 - ▫️ Een seizoen van het jaar
-- ✅ De naam van een persoon
-- ▫️ Een dag van de week
 - ▫️ Een maand van het jaar
+- ▫️ Een dag van de week
+- ✅ De naam van een persoon
 
 ## 17. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 2)
 Vraag: Welk woord schrijf je **ook midden in een zin** met een hoofdletter?
-- ✅ Frans
 - ▫️ Maandag
-- ▫️ Voorjaar
 - ▫️ December
+- ✅ Frans
+- ▫️ Voorjaar
 
 ## 18. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 3)
 Vraag: Welk leesteken **mist** er in: *'Wat een mooie auto'*?
-- ▫️ ? (vraagteken)
 - ✅ ! (uitroepteken)
-- ▫️ , (komma)
 - ▫️ . (punt)
+- ▫️ , (komma)
+- ▫️ ? (vraagteken)
 
 ## 19. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 3)
 Vraag: *'Heb je je tanden gepoetst'* — welk leesteken?
 - ✅ ?
-- ▫️ ,
 - ▫️ !
+- ▫️ ,
 - ▫️ .
 
 ## 20. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 3)
 Vraag: *'Ik ga vandaag fietsen'* — welk leesteken?
+- ▫️ !
 - ▫️ ,
 - ▫️ ?
 - ✅ .
-- ▫️ !

@@ -527,7 +527,7 @@ const steps = [
     svg: woordenTabelSvg("ij (lange)", "Voorbeelden", COLORS.ij, COLORS.warm, ["tijd","wij","jij","hij","zij","mij","bij","rijst","schrijven","rijden","prijs"], ["kijken","blijven","wijzer","fijn","dijk","vlijt"]),
     checks: [
       {
-        q: "Welk persoonlijk voornaamwoord is goed geschreven?",
+        q: "'Jij en ik samen' — welk woordje is dat, goed geschreven?",
         options: ["wij","wei","zei","mei"],
         answer: 0,
         wrongHints: [null,"'wei' is een grasland. Hoe schrijf je het voornaamwoord?","'zei' komt van zeggen. Hoe schrijf je het voornaamwoord?","'mei' is een maand. Hoe schrijf je het voornaamwoord?"],

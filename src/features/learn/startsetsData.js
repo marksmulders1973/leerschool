@@ -13,6 +13,94 @@
 export const STARTSET_N = 20;
 
 export const STARTSETS = {
+  // ───────────────────────── Groep 3 ─────────────────────────
+  // Dun: twee rekenpaden, één taal-, één spellingpad (plan B5). De sets putten uit wat er is.
+  "3|rekenen": {
+    titel: "Rekenen · groep 3",
+    emoji: "🔢",
+    items: [
+      { pad: "getallen-tot-20-po", stap: 1, n: 4 },
+      { pad: "getallen-tot-20-po", stap: 2, n: 4 },
+      { pad: "getallen-tot-20-po", stap: 3, n: 4 },
+      { pad: "getallen-tot-20-po", stap: 4, n: 4 },
+      { pad: "klokkijken", stap: 1, n: 2 },   // wat is een klok
+      { pad: "klokkijken", stap: 2, n: 2 },   // hele uren (vraag 3 = 24-uurs notatie, dat is groep 5-6)
+    ],
+  },
+  "3|taal": {
+    titel: "Taal & lezen · groep 3",
+    emoji: "✏️",
+    items: [
+      { pad: "taal-leren-lezen-g3", stap: 1, n: 4 },  // letters en klanken
+      { pad: "taal-leren-lezen-g3", stap: 2, n: 4 },  // rijmen
+      { pad: "taal-leren-lezen-g3", stap: 3, n: 4 },  // hakken en plakken
+      { pad: "taal-leren-lezen-g3", stap: 4, n: 4 },  // woordjes lezen
+      { pad: "taal-leren-lezen-g3", stap: 5, n: 4 },  // een zinnetje lezen
+    ],
+  },
+  "3|spelling": {
+    titel: "Spelling · groep 3",
+    emoji: "📝",
+    items: [
+      { pad: "spelling-eerste-woorden-g3", stap: 1, n: 5 },  // schrijf wat je hoort
+      { pad: "spelling-eerste-woorden-g3", stap: 2, n: 4 },  // lange klanken
+      { pad: "spelling-eerste-woorden-g3", stap: 3, n: 5 },  // oe, ie, eu
+      { pad: "spelling-eerste-woorden-g3", stap: 4, n: 3 },  // sch- en -ng
+      { pad: "spelling-eerste-woorden-g3", stap: 5, n: 3 },  // door elkaar
+    ],
+  },
+
+  // ───────────────────────── Groep 4 ─────────────────────────
+  // Natuur groep 4 heeft nog geen pad (plan B5) → geen set.
+  "4|rekenen": {
+    titel: "Rekenen · groep 4",
+    emoji: "🔢",
+    items: [
+      { pad: "getallen-tot-20-po", stap: 3, n: 2 },
+      { pad: "getallen-tot-20-po", stap: 4, n: 2 },
+      { pad: "tafels-po", stap: 1, n: 2 },   // wat is een tafel
+      { pad: "tafels-po", stap: 2, n: 5 },   // makkelijke tafels (2, 5, 10)
+      { pad: "tafels-po", stap: 3, n: 4 },   // tafels van 3 en 4
+      { pad: "klokkijken", stap: 2, n: 2 },  // hele uren
+      { pad: "klokkijken", stap: 3, n: 1 },  // halve uren (vraag 2 = 24-uurs notatie, groep 5-6)
+      { pad: "klokkijken", stap: 4, n: 2 },  // kwartieren
+    ],
+  },
+  "4|taal": {
+    titel: "Taal & lezen · groep 4",
+    emoji: "✏️",
+    items: [
+      { pad: "taal-woorden-zinnen-g4", stap: 1, n: 4 },  // het alfabet
+      { pad: "taal-woorden-zinnen-g4", stap: 2, n: 4 },  // meervoud
+      { pad: "taal-woorden-zinnen-g4", stap: 3, n: 4 },  // verkleinwoorden
+      { pad: "taal-woorden-zinnen-g4", stap: 4, n: 4 },  // tegenstellingen
+      { pad: "taal-woorden-zinnen-g4", stap: 5, n: 4 },  // zinnen maken
+    ],
+  },
+  "4|spelling": {
+    titel: "Spelling · groep 4",
+    emoji: "📝",
+    items: [
+      // stap 1 ("Wat zijn homofonen?") is te abstract voor groep 4 — meteen woorden schrijven.
+      { pad: "spelling-ei-ij-au-ou", stap: 2, n: 5 },  // ei
+      { pad: "spelling-ei-ij-au-ou", stap: 3, n: 5 },  // ij
+      { pad: "spelling-ei-ij-au-ou", stap: 4, n: 2 },  // trucjes
+      { pad: "spelling-ei-ij-au-ou", stap: 5, n: 4 },  // au
+      { pad: "spelling-ei-ij-au-ou", stap: 6, n: 4 },  // ou
+    ],
+  },
+  "4|begrijpend-lezen": {
+    titel: "Begrijpend lezen · groep 4",
+    emoji: "📖",
+    items: [
+      { pad: "korte-teksten-snappen-g4", stap: 1, n: 5 },  // één zin goed lezen
+      { pad: "korte-teksten-snappen-g4", stap: 2, n: 4 },  // drie zinnen
+      { pad: "korte-teksten-snappen-g4", stap: 3, n: 4 },  // het antwoord staat in de tekst
+      { pad: "korte-teksten-snappen-g4", stap: 4, n: 4 },  // volgorde
+      { pad: "korte-teksten-snappen-g4", stap: 5, n: 3 },  // een echt tekstje
+    ],
+  },
+
   // Groep 5 rekenen (curriculum: alle tafels en deeltafels, rekenen tot 1000, klokkijken, geld,
   // kennismaken met breuken). Van makkelijk naar lastig: tafels → deeltafels → klok → geld →
   // afronden → een redactiesom → de eerste breuken.

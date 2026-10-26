@@ -770,13 +770,13 @@ const steps = [
         },
       },
       {
-        q: "Lees: *mam en ik gaan naar de bus.* — **Waar** gaan we naartoe?",
-        options: ["naar de bus", "naar huis", "naar school", "naar oma"],
+        q: "Lees: *mam en ik gaan naar het bos.* — **Waar** gaan we naartoe?",
+        options: ["naar het bos", "naar huis", "naar school", "naar oma"],
         answer: 0,
         wrongHints: [null, "Lees het laatste woord nog eens.", "Lees het laatste woord nog eens.", "Lees het laatste woord nog eens."],
         uitlegPad: {
-          stappen: [{ titel: "Zoek in de zin", tekst: "mam - en - ik - gaan - naar - de - **bus**. We gaan naar de bus!" }],
-          niveaus: { basis: "We gaan naar de bus.", simpeler: "Het staat achteraan de zin.", nogSimpeler: "naar de bus" },
+          stappen: [{ titel: "Zoek in de zin", tekst: "mam - en - ik - gaan - naar - het - **bos**. We gaan naar het bos!" }],
+          niveaus: { basis: "We gaan naar het bos.", simpeler: "Het staat achteraan de zin.", nogSimpeler: "naar het bos" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
