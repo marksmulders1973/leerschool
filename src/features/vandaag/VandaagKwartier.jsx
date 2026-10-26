@@ -10,8 +10,8 @@ import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
 import { track } from "../../utils.js";
 import { buildTopicQuiz } from "../practice/buildTopicQuiz.js";
-import { startsetVolgende } from "../learn/startsets.js";
-import { markeerGezien } from "../../shared/geziendeVragen.js";
+import { startsetVolgende, startsetVoortgang } from "../learn/startsets.js";
+import { markeerGezien, isGezien } from "../../shared/geziendeVragen.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { VraagKaart } from "../onboarding/StartKwartier.jsx";
@@ -56,11 +56,19 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
       totaal={vragen.length}
       onBeantwoord={(goed) => {
         score.current = { goed: score.current.goed + (goed ? 1 : 0), totaal: score.current.totaal + 1 };
-        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed }); } catch { /* */ }
+        // 🎯 Meting startsets (Mark 26 okt 2026, "kunnen we meten of de nieuwe methode gebruikt wordt?"):
+        // elk antwoord draagt de startset-sleutel; het antwoord dat de set van 20 volmaakt vuurt startset_klaar.
+        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed, startset: blok.startset || undefined }); } catch { /* */ }
         try { recordAnswerForPath({ playerName: userName || "Speler", pathId: v.pathId, isCorrect: goed, userId: authUser?.id || null }); } catch { /* */ }
         try { telAntwoordVoorVriend(); } catch { /* */ }
         // 👀 Beantwoord = gezien → volgende keer eerst andere vragen uit dit pad (geziendeVragen.js).
-        if (v.geziensleutel) { try { markeerGezien(v.geziensleutel); } catch { /* */ } }
+        let nieuwGezien = false;
+        if (v.geziensleutel) { try { nieuwGezien = !isGezien(v.geziensleutel); markeerGezien(v.geziensleutel); } catch { /* */ } }
+        if (blok.startset && nieuwGezien) {
+          startsetVoortgang(blok.startset)
+            .then((st) => { if (st.klaar) track("startset_klaar", { startset: blok.startset, totaal: st.totaal }); })
+            .catch(() => { /* */ });
+        }
       }}
       onVerder={() => { if (i + 1 < vragen.length) setI(i + 1); else onKlaar(score.current); }}
     />
