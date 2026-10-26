@@ -27,11 +27,11 @@
 | Kado van de Sint | Amersfoort | ja | info@kadovandesint.nl | https://kadovandesint.nl/ |
 | Secret Sint (pakjesavond voor gezinnen) | landelijk | ja | info@secretsint.nl | https://www.secretsint.nl/ |
 | De Koepel (armoedecoalitie regio Alkmaar) | Alkmaar | ja | info@dekoepel.nl | https://dekoepel.nl/ |
-| Stichting Kwartiermakers (coördinator Kerst 050) | Groningen | onbekend | info@kwartiermakers.nl | https://kwartiermakers.nl/ |
+| Stichting Kwartiermakers (coördinator Kerst 050) | Groningen | onbekend | ❌ FOUT ADRES (24 okt: kwartiermakers.nl is een ander bedrijf, "wij zijn niet de stichting") — juiste adres nog zoeken, niet opnieuw sturen naar info@kwartiermakers.nl | https://kwartiermakers.nl/ |
 | Sint Deelt Uit | Zutphen/Lochem/Brummen/Eerbeek | ja | info@sintdeeltuit.nl | https://sintdeeltuit.nl/over-ons/ |
 | Stichting Kansarme Kinderen in Nederland (Sint/kerst-pakketten) | Maartensdijk / landelijk | ja | info@skkin.nl | https://skkin.nl/aanmelden |
 | Sint Nicolaas Comité Tilburg (Pakje van de Sint) | Tilburg | ja | info@sintintilburg.nl | https://www.sintintilburg.nl/pakje-van-de-sint/ |
-| Quiet (kerstpakket-actie minima) | Groningen / landelijk | ja | info@quiet.nl | https://quiet.nl/ |
+| Quiet Nederland (landelijk kantoor; kerstpakket-actie minima) | landelijk | ja | info@quiet.nl | https://quiet.nl/ |
 | Stichting Sintvoorieder1 | Leidschendam-Voorburg / landelijk | onbekend | info@sintvoorieder1.nl | https://www.sintvoorieder1.nl/nl/contact/ |
 | Present Dordrecht (Actie Kerstengel) | Dordrecht | ja | info@presentdordrecht.nl | https://stichtingpresent.nl/dordrecht/acties/actie-kerstengel/ |
 | Present Súdwest-Fryslân (Kerstengel/kerstpakketten) | Sneek e.o. | ja | info@presentswf.nl | https://stichtingpresent.nl/sudwestfryslan/acties/kerstengel/ |
@@ -55,3 +55,34 @@
 | Stichting ERMA (Sinterklaasfeest kinderen t/m 16) | Roosendaal | ja | info@stichtingerma.nl | https://stichtingerma.nl/ |
 | Stichting Paul (Actie Pepernoot Roosendaal) | Roosendaal | ja | info@stichtingpaul.nl | https://www.stichtingpaul.nl/ |
 | Quiet Roosendaal (Sinterklaaswinkel) | Roosendaal | ja | roosendaal@quiet.nl | https://quiet.nl/roosendaal |
+| Present Deventer (Sinterklaas-verrassingspakket) | Deventer | ja | info@presentdeventer.nl | https://stichtingpresent.nl/deventer/nieuws/sinterklaas-verrassingspakket/ |
+| Present Zoetermeer (Sinterklaasactie met Humanitas) | Zoetermeer | ja | info@presentzoetermeer.nl | https://stichtingpresent.nl/zoetermeer/ |
+| Quiet Breda | Breda | ja | breda@quiet.nl | https://quiet.nl/breda/ |
+| Quiet Den Bosch | 's-Hertogenbosch | ja | denbosch@quiet.nl | https://quiet.nl/denbosch/ |
+| Quiet Drechtsteden | Dordrecht e.o. | ja | drechtsteden@quiet.nl | https://quiet.nl/drechtsteden/ |
+| Quiet Eindhoven (Sinterklaascadeaus 600 gezinnen) | Eindhoven | ja | eindhoven@quiet.nl | https://quiet.nl/eindhoven/ |
+| Quiet Hilvarenbeek | Hilvarenbeek | ja | hilvarenbeek@quiet.nl | https://quiet.nl/hilvarenbeek/ |
+| Quiet Leeuwarden | Leeuwarden | ja | leeuwarden@quiet.nl | https://quiet.nl/leeuwarden/ |
+| Quiet Maastricht | Maastricht | ja | maastricht@quiet.nl | https://quiet.nl/maastricht/ |
+| Quiet Nijmegen | Nijmegen | ja | nijmegen@quiet.nl | https://quiet.nl/nijmegen/ |
+| Quiet Oss | Oss | ja | oss@quiet.nl | https://quiet.nl/oss/ |
+| Quiet Roermond | Roermond | ja | roermond@quiet.nl | https://quiet.nl/roermond/ |
+| Quiet Tilburg | Tilburg | ja | info-tilburg@quiet.nl | https://quiet.nl/tilburg/ |
+| Quiet Waalwijk | Waalwijk | ja | waalwijk@quiet.nl | https://quiet.nl/waalwijk/ |
+| Quiet Weert | Weert | ja | weert@quiet.nl | https://quiet.nl/weert/ |
+| Present Groningen (Sinterklaasproject, 415 kinderen) | Groningen | ja | info@presentgroningen.nl | https://stichtingpresent.nl/groningen/sinterklaasproject/ |
+| Present Zuidoost-Groningen (Sinterklaas) | Zuidoost-Groningen | ja | info@presentzuidoostgroningen.nl | https://stichtingpresent.nl/zuidoostgroningen/ |
+| Present Culemborg (Sinterklaas) | Culemborg | ja | info@presentculemborg.nl | https://stichtingpresent.nl/culemborg/ |
+| Present Utrecht (Kerstpakkettenactie) | Utrecht | ja | info@presentutrecht.nl | https://stichtingpresent.nl/utrecht/nieuws/kerstpakkettenactie/ |
+| Present Enschede (Kerstpakkettenactie) | Enschede | ja | info@presentenschede.nl | https://stichtingpresent.nl/enschede/acties/stichting-present-organiseert-kerstpakkettenactie/ |
+| Diaconaal Platform Capelle (Kerstpakkettenactie) | Capelle aan den IJssel | onbekend | info@diaconaalplatformcapelle.nl | https://www.diaconaalplatformcapelle.nl/ |
+| Armoedepact Almelo (netwerk armoedebestrijding) | Almelo | ja | info@armoedepact.nl | https://armoedepact.nl/privacyverklaring/ |
+| Diaconie Arnhem (werkgroep Verzet tegen Armoede) | Arnhem | ja | info@diaconiearnhem.nl | https://www.diaconiearnhem.nl/ |
+| Stichting Kinderfondsen Nederland (Sinterklaas-uitjes/cadeaus) | Leiden / landelijk | ja | info@kinderfondsennederland.nl | https://kinderfondsennederland.nl/sinterklaas/ |
+| Stichting Sinterklaas Kapoentje | Amersfoort | ja | info@sinterklaaskapoentje.org | https://sinterklaaskapoentje.org/ |
+| Present Heerenveen (Sinterklaasactie) | Heerenveen | ja | info@presentheerenveen.nl | https://stichtingpresent.nl/heerenveen/nieuws/sinterklaasactie/ |
+| Het Boodschappenhoekje (Sinterklaasfeest + kerstpakketten) | Almere | onbekend | info@hetboodschappenhoekje.nl | https://hetboodschappenhoekje.nl/contact |
+| Utrechtse Uitdaging (kerstpakketten minimagezinnen) | Utrecht | ja | info@utrechtseuitdaging.nl | https://utrechtseuitdaging.nl/kerstpakketten/ |
+| Present Woerden (Sinterklaasactie met Stadshart) | Woerden | ja | info@presentwoerden.nl | https://stichtingpresent.nl/woerden/ |
+| Vadercentrum Adam / Haagse Vaders (Sinterklaasfeest Laak) | Den Haag | ja | info@haagsevaders.nl | https://haagsevaders.nl/contact/ |
+| Stichting Kerstpakketten Minima Twente | Enschede (Twente) | onbekend | stichtingkerstpakkettentwente@hotmail.com (hotmail) | https://stichting-kerstpakketten-twente8.webnode.nl/ |

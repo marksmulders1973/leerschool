@@ -39,3 +39,29 @@ Alleen adressen die letterlijk op de eigen site staan (gecontroleerd via ophalen
 | Kledingbank Ede | Ede | ja (Facebook, WhatsApp) | info@kledingbank-ede.nl | https://www.kledingbank-ede.nl/ |
 | Kledingbank Doetinchem | Doetinchem | ja (Facebook) | kledingbankdoetinchem@gmail.com (gmail) | https://www.kledingbankdoetinchem.nl/ |
 | Kledingbank Hardenberg | Hardenberg | ja (nieuwsbrief) | kledingbankhardenberg@gmail.com (gmail) | https://www.kledingbankhardenberg.nl/ |
+| Kinderkledingbank Ede | Ede | onbekend | info@kinderkledingbank.nl | https://kinderkledingbank.nl/over-ons/ |
+| Kledingbank Zuid | Hoensbroek | ja (Facebook) | info@kledingbankzuid.nl | https://www.kledingbankzuid.nl/ |
+| Stichting Kledingbank Limburg | Maasbracht (heel Limburg) | ja (Facebook, WhatsApp) | info@kledingbank-limburg.nl | https://kledingbank-limburg.nl/ |
+| Kledingbank Zeeland | Middelburg | ja (Facebook, WhatsApp) | info@kledingbankzeeland.nl | https://kledingbankzeeland.nl/locaties |
+| Kledingbank Zeeland, Zeeuws-Vlaanderen | Terneuzen | ja (Facebook, WhatsApp) | infozv@kledingbankzeeland.nl | https://kledingbankzeeland.nl/locaties |
+| Kledingbank Maxima (7 vestigingen) | Groningen e.o. | onbekend | contact@kledingbankmaxima.nl | https://www.kledingbankmaxima.nl/ |
+| Kledingbank Zaanstreek | Zaanstad | ja (nieuwsbrief) | info@kledingbankzaanstreek.nl | https://kledingbankzaanstreek.nl/contact |
+| Stichting Kledingbank Amstelland | Amstelveen | ja (nieuwsbrief, Facebook, WhatsApp) | info@kledingbankamstelland.nl | https://kledingbankamstelland.nl/contact |
+| Stichting Sintvoorieder1 (landelijk, Sinterklaascadeaus) | landelijk | ja (nieuwsbrief, Facebook) | info@sintvoorieder1.nl | https://www.sintvoorieder1.nl/ |
+| Kledingbank Gemert | Gemert | ja (Facebook) | info@kledingbank-gemert.nl | https://www.kledingbank-gemert.nl/ |
+| Speelgoedbank Venray | Venray | ja (WhatsApp) | info@speelgoedbankvenray.nl | https://www.speelgoedbankvenray.nl/ |
+| Kledingbank Winterswijk e.o. | Winterswijk | ja (Facebook) | info@kledingbankwinterswijk.nl | https://www.kledingbankwinterswijk.nl/contact |
+| Kledingbank Ommen | Ommen | ja (Facebook, WhatsApp) | info@kledingbankommen.nl | https://www.kledingbankommen.nl/ |
+| Kledingbank Nieuwleusen | Nieuwleusen | onbekend | info@kledingbanknieuwleusen.nl | https://www.kledingbanknieuwleusen.nl/contact |
+| Stichting STRAK (kledingbanken Dieren en Velp) | Dieren | onbekend | info@stichtingstrak.nl | https://www.stichtingstrak.nl/ |
+| Stichting Help Elkaar (kledingbank) | Geldermalsen | ja (Facebook) | info@stichtinghelpelkaar.nl | https://www.stichtinghelpelkaar.nl/ |
+| Stichting Kledingbank Hardinxveld | Hardinxveld-Giessendam | ja (Facebook) | teamkledingbank@gmail.com (gmail) | https://kledingbankhardinxveld.nl/ |
+| Kledingbank Zuid-Hollandse Eilanden | Hellevoetsluis | ja (Facebook, WhatsApp) | kledingbankzuidhollandzuid@gmail.com (gmail) | https://kledingbankzhe.nl/ |
+| Kledingbank Wageningen | Wageningen | onbekend | info@kledingbank-wageningen.nl | https://www.kledingbank-wageningen.nl/contact |
+| Kledingbank Montferland | Didam | ja (WhatsApp) | kledingbankmontferland@gmail.com (gmail) | https://www.kledingbankmontferland.nl/ |
+| Kledingbank Groene Hart | Alphen aan den Rijn | ja (WhatsApp) | info@kledingbank-groenehart.nl | https://www.kledingbank-groenehart.nl/ |
+| Kledingbank IJmond | Beverwijk | ja (Facebook) | info@kledingbankijmond.nl | https://www.kledingbankijmond.nl/contact/ |
+| Kledingbank Stichtse Vecht | Stichtse Vecht | onbekend | kledingbank.stichtsevecht@gmail.com (gmail) | https://kledingbankstichtsevecht.nl/contact |
+| Kledingbank Kromme Rijnstreek | Houten | ja (nieuwsbrief) | kledingbankkrommerijnstreek@gmail.com (gmail) | https://www.kledingbankkrommerijnstreek.nl/ |
+| Stichting Speelgoedbank Rotterdam | Rotterdam | ja (Facebook) | info@speelgoedbank-rotterdam.nl | https://www.speelgoedbank-rotterdam.nl/ |
+| Speelgoedbank Heppie (Stichting Access) | Roosendaal | ja (Facebook) | sgbheppie@outlook.com (outlook) | https://www.speelgoedbankheppie.nl/ |

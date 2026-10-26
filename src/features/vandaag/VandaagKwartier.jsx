@@ -10,6 +10,7 @@ import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
 import { track } from "../../utils.js";
 import { buildTopicQuiz } from "../practice/buildTopicQuiz.js";
+import { startsetVolgende } from "../learn/startsets.js";
 import { markeerGezien } from "../../shared/geziendeVragen.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
@@ -33,11 +34,16 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
   const score = useRef({ goed: 0, totaal: 0 });
   useEffect(() => {
     let dood = false;
-    buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null })
-      .then(({ quiz, questions }) => { if (!dood) setVragen(questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title }))); })
+    // 🎯 Startset-blokje (26 okt 2026): de volgende vragen uit de vaste set van 20 van dit vak,
+    // elk uit zijn eigen pad (pathId per vraag, zodat het rapport per vak blijft kloppen).
+    const laad = blok.startset
+      ? startsetVolgende(blok.startset, blok.n)
+      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null })
+        .then(({ quiz, questions }) => questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title })));
+    laad.then((vragen) => { if (!dood) setVragen(vragen); })
       .catch(() => { if (!dood) setVragen([]); });
     return () => { dood = true; };
-  }, [blok.pathId, blok.n]);
+  }, [blok.pathId, blok.n, blok.startset]);
   if (vragen === null) return <Card variant="study" padding="md"><p style={{ margin: 0 }}>⏳ Je vragen komen eraan…</p></Card>;
   if (!vragen.length) return <Card variant="study" padding="md"><p style={{ margin: "0 0 10px" }}>Dit onderwerp laadt nu even niet.</p><Button onClick={() => onKlaar({ goed: 0, totaal: 0, overgeslagen: true })}>Volgende blokje →</Button></Card>;
   const v = vragen[i];

@@ -15,6 +15,7 @@
 
 import { kiesZwakkeConcepten } from "../oefenboekje/opMaat.js";
 import { kiesStartPaden } from "../onboarding/startKwartier.js";
+import { startsetBlok, startsetPaden, startsetVan } from "../learn/startsetsData.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 
 const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
@@ -158,7 +159,23 @@ function conceptVoorVandaag(concepten, weekdag) {
  * @param {object} [o.voorkeur]            Gezinsstart-voorkeur {vakken, vrij, tot, app_kiest} (zie voorkeur.js)
  * @returns {{reden:string, uitleg:string, blokjes:Array, voorkeur?:boolean}}
  */
-export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], mastery = [], dicteeSchool = false, wwSchool = false, metSchoolvakken = false, voorkeur = null, klasPaden = null } = {}) {
+// 🎯 Startsets (Mark 26 okt 2026, "eerst 20 vragen per vak"): `startsetOpen` = sleutels ("5|rekenen")
+// van startsets die dit kind nog niet af heeft. Zolang er een open is, is het eerste blokje van het
+// kwartier de volgende 5 vragen daaruit; de andere blokjes komen van de gewone ladder (zonder de paden
+// waar de startset al uit put). Klaargezet werk gaat nog steeds voor.
+export function bepaalPlan(args = {}) {
+  const plan = bepaalPlanBasis(args);
+  const { startsetOpen, metSchoolvakken } = args;
+  if (metSchoolvakken || !Array.isArray(startsetOpen) || !startsetOpen.length || plan.reden === "klaargezet") return plan;
+  const sleutel = startsetOpen.find((s) => startsetVan(s));
+  if (!sleutel) return plan;
+  const paden = new Set(startsetPaden(sleutel));
+  const rest = (plan.blokjes || []).filter((b) => !(b.soort === "vragen" && b.pathId && paden.has(b.pathId))).slice(0, 2);
+  const s = startsetVan(sleutel);
+  return { ...plan, reden: "startset", uitleg: `Eerst je startset ${s.titel.toLowerCase()}: de eerste 20 vragen, stap voor stap.`, blokjes: [startsetBlok(sleutel, ITEMS_PER_BLOK), ...rest] };
+}
+
+function bepaalPlanBasis({ level, vandaag = new Date(), klaargezet = [], mastery = [], dicteeSchool = false, wwSchool = false, metSchoolvakken = false, voorkeur = null, klasPaden = null } = {}) {
   // Elk vragen-blokje krijgt de groep mee, zodat stappen boven die groep wegvallen (vanafGroep).
   const vbGroep = metSchoolvakken || /klas/i.test(String(level)) ? null : parseGroep(level);
   const vb = (id, n = ITEMS_PER_BLOK) => vragenBlok(id, n, vbGroep);

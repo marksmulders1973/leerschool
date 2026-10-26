@@ -40,7 +40,7 @@ export function GroepDropdown({ nr, onKies }) {
  * De vakken van deze groep als tegels met rapportcijfer.
  * vakken: dezelfde lijst als het rapport ([{ subj, titel, attempts, correct, recentAantal, recentGoed }]).
  */
-export function VakTegels({ vakken, niveauLabel, vakMeta, onVak }) {
+export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand = {}, groep = null }) {
   const rijen = rapportRijen(vakken);
   if (rijen.length === 0) return null;
   return (
@@ -49,6 +49,9 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak }) {
         const meta = vakMeta(v.subj);
         const vast = v.cijfer !== null && (v.attempts || 0) >= VAST_VRAGEN;
         const nog = MIN_VRAGEN - (v.attempts || 0);
+        // 🎯 Startset (26 okt 2026): zolang de eerste 20 vragen van dit vak niet af zijn, zegt de tegel dat.
+        const ss = groep ? startsetStand[`${groep}|${v.subj === "wiskunde" ? "rekenen" : v.subj}`] : null;
+        const ssOpen = ss && !ss.klaar;
         return (
           <button key={v.subj} type="button"
             onClick={() => { try { track("mijn_vaktegel", { vak: v.subj, cijfer: v.cijfer }); } catch { /* */ } onVak(v.subj); }}
@@ -70,7 +73,9 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak }) {
               <span style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>nog geen cijfer</span>
             )}
             <span style={{ display: "flex", alignItems: "center", gap: 8, marginTop: "auto", fontSize: 11.5, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>
-              {v.cijfer !== null ? (
+              {ssOpen ? (
+                <span style={{ color: "#69f0ae" }}>{ss.gedaan > 0 ? `startset: ${ss.gedaan} van ${ss.totaal} →` : `Begin: de eerste ${ss.totaal} vragen →`}</span>
+              ) : v.cijfer !== null ? (
                 <>
                   <span aria-hidden="true" style={{ flex: 1, height: 5, borderRadius: 3, background: "rgba(255,255,255,0.1)", overflow: "hidden" }}>
                     <span style={{ display: "block", height: "100%", width: `${Math.min(100, Math.round(((v.attempts || 0) / VAST_VRAGEN) * 100))}%`, background: "#00c853" }} />

@@ -60,6 +60,9 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
       leesTekst: s.leesTekst ? String(s.leesTekst) : metTekst ? String(s.explanation).split(/\n\s*\n/).filter((p) => !/^\*.*beantwoord de \d+ vragen/i.test(p.trim())).join("\n\n") : undefined,
       stapIdx: alle.indexOf(s) }));
   });
+  // `volgnr` (26 okt 2026, startsets): de plek in het bestand, zodat een vaste set na het
+  // "ongezien eerst"-herschikken weer in de oorspronkelijke volgorde gezet kan worden.
+  alleChecks.forEach((c, i) => { c.volgnr = i; });
   const valide = alleChecks.filter(
     (c) => !c.disabled
       && Array.isArray(c.options)

@@ -125,3 +125,10 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 39 · Stichting Kinderarmoede (Sinterklaascadeautjes) · info@stichting-kinderarmoede.nl · OK · 01a16e0a-66f1-718e-8af2-467386e77e49
   - 40 · Stichting MBZ (steunt Minima Zwijndrecht Sint/kerst) · info@stmbz.nl · OK · 01a16e0a-6da0-763d-ba3a-dbd3822ae83a
 - **24-10-2026, 15:12:21** — klaar: 40/40 verstuurd (OK-regels staan hierboven).
+
+- **25-10-2026, 09:29:50** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 41 · Stichting Kerstpakketten Barneveld · info@kerstpakkettenbarneveld.nl · OK · 01a1722e-2ad7-78d0-8f9f-02185e6f75f5
+  - 42 · Stichting Social Klus (Sinterklaasfeest met ERMA) · info@socialklus.nl · OK · 01a1722e-314f-78d8-8862-22f6d512af85
+  - 43 · Stichting ERMA (Sinterklaasfeest kinderen t/m 16) · info@stichtingerma.nl · OK · 01a1722e-39a6-7423-95a8-b30d8fd52fc8
+  - 44 · Stichting Paul (Actie Pepernoot Roosendaal) · info@stichtingpaul.nl · OK · 01a1722e-41c5-7b0e-9bbc-daa47d96543f
+- **25-10-2026, 09:29:58** — klaar: 4/4 verstuurd (OK-regels staan hierboven).

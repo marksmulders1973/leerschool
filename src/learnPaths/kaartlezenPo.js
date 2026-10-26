@@ -43,7 +43,7 @@ const steps = [
         q: "Wat betekent **blauw** op een kaart meestal?",
         options: ["Water","Bergen","Bos","Steden"],
         answer: 0,
-        wrongHints: [null,"Bruin/grijs.","Groen.","Vaak grijs of zwart."],
+        wrongHints: [null,"Bergen zijn meestal bruin of geel getekend. Welke kleur hoort bij zee en rivieren?","Bos is meestal groen. Bij welke kleur denk je aan zee en rivieren?","Steden zijn vaak grijs of zwart. Waar staat blauw voor?"],
         uitlegPad: {
           stappen: [{ titel: "Blauw = water", tekst: "Universele kaart-conventie: blauw = water (zee, rivier, meer)." }],
           woorden: [{ woord: "kleurcodes", uitleg: "Kaarten gebruiken vaste kleuren voor terreinsoorten." }],
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "Wat doe je **eerst** als je een kaart krijgt?",
-        options: ["Titel en legenda lezen","Antwoorden gokken","Kompasroos draaien","Schaal verwijderen"],
+        options: ["Titel en legenda lezen","Meteen de vraag beantwoorden","De schaal uitrekenen","De kleinste symbolen tellen"],
         answer: 0,
-        wrongHints: [null,"Geen plan.","Kan niet.","Sloop niet de kaart."],
+        wrongHints: [null,"Weet je dan al waar de kaart over gaat en wat de symbolen betekenen?","Dat kan later nodig zijn. Maar weet je dan al wat de kaart laat zien?","Tellen heeft pas zin als je weet wat een symbool betekent. Waar lees je dat?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst oriënteren", tekst: "Lees titel (waar gaat het over?) en legenda (wat betekenen symbolen?). Dan begin je." }],
           woorden: [{ woord: "kaart-strategie", uitleg: "Eerst overzicht, dan details lezen." }],
@@ -75,7 +75,7 @@ const steps = [
         wrongHints: [
           null,
           "Zie je dan waar alle straten en huizen liggen?",
-          null,
+          "Van onderaf zie je alleen de grond. Zie je dan de straten en huizen liggen?",
           "Denk aan een vogel die over de stad vliegt.",
         ],
         uitlegPad: {
@@ -115,7 +115,7 @@ const steps = [
         q: "Welk onderdeel van een kaart vertelt je **waar de kaart over gaat**?",
         options: ["De titel", "De schaal", "De kompasroos", "De legenda"],
         answer: 0,
-        wrongHints: [null, "Die gaat over afstanden.", "Die gaat over richtingen.", null],
+        wrongHints: [null, "Die gaat over afstanden.", "Die gaat over richtingen.", "Die legt de symbolen en kleuren uit."],
         uitlegPad: {
           stappen: [
             {
@@ -153,7 +153,7 @@ const steps = [
         q: "Welk onderdeel van een kaart vertelt je hoeveel **km** 1 cm op de kaart is?",
         options: ["De schaal", "De titel", "De legenda", "De kompasroos"],
         answer: 0,
-        wrongHints: [null, "Die zegt alleen waar de kaart over gaat.", null, "Die wijst richtingen aan."],
+        wrongHints: [null, "Die zegt alleen waar de kaart over gaat.", "Die legt de symbolen uit, niet de afstanden.", "Die wijst richtingen aan."],
         uitlegPad: {
           stappen: [
             {
@@ -191,7 +191,7 @@ const steps = [
         q: "Sommige kaarten hebben een raster met letters en cijfers, zoals **B3** of **C5**. Hoe heet dat?",
         options: ["Coördinaten", "Legenda", "Schaal", "Kompasroos"],
         answer: 0,
-        wrongHints: [null, "Die legt de kleuren en symbolen uit.", null, null],
+        wrongHints: [null, "Die legt de kleuren en symbolen uit.", "Die gaat over afstanden, niet over vakjes.", "Die wijst de richtingen aan."],
         uitlegPad: {
           stappen: [
             {
@@ -229,7 +229,7 @@ const steps = [
         q: "Wat betekent **geel of bruin** op een kaart meestal?",
         options: ["Bergen of hoogland", "Water", "Weiland of laagland", "Hoofdwegen"],
         answer: 0,
-        wrongHints: [null, "Welke kleur heeft water op een kaart?", null, "Hoofdwegen zijn meestal rood."],
+        wrongHints: [null, "Welke kleur heeft water op een kaart?", "Laag land is op een kaart meestal groen. Hier gaat het om geel of bruin.", "Hoofdwegen zijn meestal rood."],
         uitlegPad: {
           stappen: [
             {
@@ -271,10 +271,10 @@ const steps = [
     explanation: "**Kompasroos** = symbool dat **windrichtingen** aanwijst.\n\n**4 hoofdrichtingen**:\n• **N** = Noord (boven)\n• **Z** = Zuid (onder)\n• **O** = Oost (rechts)\n• **W** = West (links)\n\n**Engelse versie**:\n• N (north), S (south), E (east), W (west).\n• 'S' staat dus voor Zuid op Engelse kaarten.\n\n**Tussenrichtingen**:\n• **NO** = Noordoost (boven-rechts)\n• **ZO** = Zuidoost (onder-rechts)\n• **ZW** = Zuidwest (onder-links)\n• **NW** = Noordwest (boven-links)\n\n**Trucje om te onthouden**:\n*'**N**ooit **O**p **Z**ondag **W**erken'* — N-O-Z-W met de klok mee (bovenaan beginnen, dan oost, zuid, west).\n\n**Op een kaart**:\n• **Boven** = Noord (meestal).\n• **Onder** = Zuid.\n• **Rechts** = Oost.\n• **Links** = West.\n\n**toetsvraag-typen**:\n• 'In welke richting ligt stad X t.o.v. stad Y?'\n• 'Loop je naar het noorden, kom je aan bij...?'\n\n**Voorbeeld**:\nAmsterdam ligt **ten noorden** van Rotterdam (zit hogerop op de kaart).\nRotterdam ligt dus **ten zuiden** van Amsterdam.\n\n**Toets-tip**:\nKijk altijd waar de **N-pijl** wijst. Soms is 'noord' niet boven (op vakantie-kaarten of plattegronden).",
     checks: [
       {
-        q: "Op een normale kaart, **N** ligt aan de:",
+        q: "Aan welke kant van een normale kaart ligt **N** (noord)?",
         options: ["bovenkant","onderkant","linkerkant","rechterkant"],
         answer: 0,
-        wrongHints: [null,"Dat is Z.","Dat is W.","Dat is O."],
+        wrongHints: [null,"Onderaan ligt zuid (Z). Waar ligt noord dan?","Links ligt west (W). Waar ligt noord dan?","Rechts ligt oost (O). Waar ligt noord dan?"],
         uitlegPad: {
           stappen: [{ titel: "N = boven", tekst: "Standaard: Noord = boven, Zuid = onder, Oost = rechts, West = links." }],
           woorden: [{ woord: "windrichtingen", uitleg: "N (Noord), Z (Zuid), O (Oost), W (West)." }],
@@ -288,7 +288,7 @@ const steps = [
         q: "Amsterdam ligt **boven** Rotterdam op de kaart. Dus Amsterdam ligt:",
         options: ["Ten noorden van Rotterdam","Ten zuiden van Rotterdam","Ten oosten van Rotterdam","Ten westen van Rotterdam"],
         answer: 0,
-        wrongHints: [null,"Andersom.","Dat is rechts.","Dat is links."],
+        wrongHints: [null,"Boven op de kaart: is dat noord of zuid?","Oost ligt rechts op de kaart. Ligt Amsterdam rechts van Rotterdam?","West ligt links op de kaart. Ligt Amsterdam links van Rotterdam?"],
         uitlegPad: {
           stappen: [{ titel: "Boven = Noord", tekst: "Boven op kaart = Noord. Amsterdam boven Rotterdam = Amsterdam ten noorden van Rotterdam." }],
           woorden: [{ woord: "X ligt ten noorden van Y", uitleg: "X ligt hogerop op kaart dan Y." }],
@@ -302,7 +302,7 @@ const steps = [
         q: "Welke richting ligt **rechts-onder** op een kaart?",
         options: ["Zuidoost","Noordoost","Zuidwest","Noordwest"],
         answer: 0,
-        wrongHints: [null,"Rechts-boven.","Links-onder.","Links-boven."],
+        wrongHints: [null,"Noordoost is rechts-bóven. Gaat het hier om boven of om onder?","Zuidwest is links-onder. Gaat het hier om links of om rechts?","Noordwest is links-boven: twee keer de andere kant."],
         uitlegPad: {
           stappen: [{ titel: "Rechts + onder", tekst: "Rechts = Oost. Onder = Zuid. Rechts-onder = ZuidOost (ZO)." }],
           woorden: [{ woord: "tussenrichting", uitleg: "Combinatie van twee hoofdrichtingen: NO, ZO, ZW, NW." }],
@@ -313,7 +313,7 @@ const steps = [
         },
       },
       {
-        q: "Tussen N en O ligt:",
+        q: "Welke richting ligt tussen N en O?",
         options: ["NO (Noordoost)","NW (Noordwest)","ZO (Zuidoost)","ZW (Zuidwest)"],
         answer: 0,
         wrongHints: [null,"Dat ligt tussen N en W.","Tussen Z en O.","Tussen Z en W."],
@@ -331,7 +331,7 @@ const steps = [
         q: "Op een normale kaart: welke richting ligt aan de **linkerkant**?",
         options: ["West", "Oost", "Noord", "Zuid"],
         answer: 0,
-        wrongHints: [null, "Die ligt aan de andere kant.", "Die ligt bovenaan.", null],
+        wrongHints: [null, "Die ligt aan de andere kant.", "Die ligt bovenaan.", "Die ligt onderaan."],
         uitlegPad: {
           stappen: [
             {
@@ -369,7 +369,7 @@ const steps = [
         q: "Op een **Engelse** kaart staat de letter **S**. Welke richting is dat?",
         options: ["Zuid", "Oost", "West", "Noord"],
         answer: 0,
-        wrongHints: [null, "Oost is in het Engels 'east'.", null, "Noord is in het Engels 'north'."],
+        wrongHints: [null, "Oost is in het Engels 'east'.", "West is in het Engels ook 'west', met een W.", "Noord is in het Engels 'north'."],
         uitlegPad: {
           stappen: [
             {
@@ -407,7 +407,7 @@ const steps = [
         q: "Utrecht ligt **rechts** van Den Haag op de kaart. In welke richting reis je van Den Haag naar Utrecht?",
         options: ["Naar het oosten", "Naar het westen", "Naar het noorden", "Naar het zuiden"],
         answer: 0,
-        wrongHints: [null, "Dat is naar links.", null, null],
+        wrongHints: [null, "Dat is naar links.", "Noord is boven. Ligt Utrecht bóven Den Haag?", "Zuid is onder. Ligt Utrecht ónder Den Haag?"],
         uitlegPad: {
           stappen: [
             {
@@ -448,7 +448,7 @@ const steps = [
         wrongHints: [
           null,
           "Kijk naar de woorden van het trucje: wat komt na 'Zondag'?",
-          null,
+          "Noord is het bégin van het rijtje. Wat komt ná 'Zondag'?",
           "Zit er een tussenrichting in het trucje?",
         ],
         uitlegPad: {
@@ -488,7 +488,7 @@ const steps = [
         q: "Waar op een normale kaart ligt **ZW** (zuidwest)?",
         options: ["Links-onder", "Rechts-onder", "Links-boven", "Rechts-boven"],
         answer: 0,
-        wrongHints: [null, "Is rechts west of oost?", null, "Ligt zuid boven of onder?"],
+        wrongHints: [null, "Is rechts west of oost?", "Links klopt. Maar ligt zuid boven of onder?", "Ligt zuid boven of onder?"],
         uitlegPad: {
           stappen: [
             {
@@ -533,7 +533,7 @@ const steps = [
         q: "Schaal **1:100.000**. 1 cm op kaart = ___ in het echt.",
         options: ["1 km","100 m","10 km","100 km"],
         answer: 0,
-        wrongHints: [null,"Te klein.","Te groot.","Veel te groot."],
+        wrongHints: [null,"Te klein: 100 m is maar 10.000 cm. Hoeveel is 100.000 cm?","Te groot: reken 100.000 cm om naar meter (deel door 100) en dan naar kilometer (deel door 1.000).","Veel te groot: 100 km is 10 miljoen cm. Reken 100.000 cm stap voor stap om."],
         uitlegPad: {
           stappen: [{ titel: "100.000 cm = 1 km", tekst: "1 cm op kaart × 100.000 = 100.000 cm werkelijk = 1.000 m = 1 km." }],
           woorden: [{ woord: "1:100.000", uitleg: "Standaard kaart-schaal voor regio's." }],
@@ -547,7 +547,7 @@ const steps = [
         q: "Schaal 1:100.000. **5 cm** op kaart = ___ in het echt.",
         options: ["5 km","500 m","50 km","0,5 km"],
         answer: 0,
-        wrongHints: [null,"Veel te klein.","Te groot.","Te klein."],
+        wrongHints: [null,"Reken eerst uit wat 1 cm is bij 1:100.000, en doe dat dan 5 keer.","Dat is tien keer te veel. 5 × 100.000 cm = 500.000 cm. Hoeveel km is dat?","Dat is tien keer te weinig. Hoeveel km is 1 cm bij deze schaal? En dan keer 5."],
         uitlegPad: {
           stappen: [{ titel: "5 × 1 km", tekst: "Bij 1:100.000: 1cm = 1km. Dus 5 cm = 5 km." }],
           woorden: [{ woord: "schaal-truc", uitleg: "Bij 1:100.000 is cm op kaart direct km werkelijk." }],
@@ -561,7 +561,7 @@ const steps = [
         q: "Schaal **1:50.000**. 2 cm = ___ in het echt.",
         options: ["1 km","100 m","10 km","2 km"],
         answer: 0,
-        wrongHints: [null,"Te klein.","Te groot.","Bij 1:100.000 zou dat kloppen."],
+        wrongHints: [null,"2 × 50.000 = 100.000 cm. Hoeveel meter is dat?","Veel te groot: 10 km is 1 miljoen cm. Reken 2 × 50.000 cm om.","Bij 1:100.000 zou dat kloppen."],
         uitlegPad: {
           stappen: [{ titel: "2 × 50.000", tekst: "2 cm × 50.000 = 100.000 cm = 1.000 m = 1 km." }],
           woorden: [{ woord: "1:50.000", uitleg: "Tweemaal zo gedetailleerd als 1:100.000. 1cm = 0,5 km." }],
@@ -575,7 +575,7 @@ const steps = [
         q: "Een **wereldkaart** heeft welke schaal?",
         options: ["1:50.000.000","1:1.000","1:50","1:200"],
         answer: 0,
-        wrongHints: [null,"Te klein voor wereld.","Veel te klein.","Te klein."],
+        wrongHints: [null,"Bij 1:1.000 is 1 cm maar 10 m. Past de hele wereld dan op één vel?","Bij 1:50 is 1 cm maar 50 cm: dat is een tekening van een huis.","Bij 1:200 is 1 cm maar 2 m. Past daar een wereld in?"],
         uitlegPad: {
           stappen: [{ titel: "Groot getal = groot gebied", tekst: "Wereld is gigantisch → schaal-getal moet enorm groot zijn (50 miljoen)." }],
           woorden: [{ woord: "wereldkaart-schaal", uitleg: "Heel kleine schaal (groot getal achter :), bv. 1:50.000.000." }],
@@ -590,7 +590,7 @@ const steps = [
         q: "Schaal **1:1.000.000**. 1 cm op de kaart = ___ in het echt.",
         options: ["10 km", "1 km", "100 km", "1.000 km"],
         answer: 0,
-        wrongHints: [null, "Dat hoort bij 1:100.000.", null, "Te groot."],
+        wrongHints: [null, "Dat hoort bij 1:100.000.", "Dat is tien keer te veel. 1.000.000 cm: deel door 100 voor meters, dan door 1.000 voor kilometers.", "Dat is honderd keer te veel. Reken 1.000.000 cm stap voor stap om."],
         uitlegPad: {
           stappen: [
             {
@@ -628,7 +628,7 @@ const steps = [
         q: "Schaal **1:25.000**. **4 cm** op de kaart = ___ in het echt.",
         options: ["1 km", "4 km", "100 m", "10 km"],
         answer: 0,
-        wrongHints: [null, "Reken eerst uit: hoeveel meter is 1 cm bij schaal 1:25.000?", null, null],
+        wrongHints: [null, "Reken eerst uit: hoeveel meter is 1 cm bij schaal 1:25.000?", "100 m is maar 10.000 cm. Hoeveel is 4 × 25.000 cm?", "10 km is 1 miljoen cm. Hoeveel is 4 × 25.000 cm?"],
         uitlegPad: {
           stappen: [
             {
@@ -666,7 +666,7 @@ const steps = [
         q: "Op een **schaalbalk** is elk stukje **1 km**. Tussen twee huizen passen precies **3 stukjes**. Hoe ver liggen de huizen uit elkaar?",
         options: ["3 km", "1 km", "30 km", "300 m"],
         answer: 0,
-        wrongHints: [null, "Dat is maar één stukje.", null, null],
+        wrongHints: [null, "Dat is maar één stukje.", "Elk stukje is 1 km, geen 10 km. Tel opnieuw.", "Een stukje is een hele kilometer, geen 100 meter."],
         uitlegPad: {
           stappen: [
             {
@@ -707,7 +707,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat hoort bij een wegenkaart van een provincie.",
-          null,
+          "Bij 1:1.000.000 is 1 cm al 10 km. Past een huis daarbij?",
           "Daarmee past de hele wereld op het papier.",
         ],
         uitlegPad: {
@@ -766,9 +766,9 @@ const steps = [
       },
       {
         q: "Een **rode lijn** op een wegenkaart is meestal:",
-        options: ["Snelweg / hoofdweg","Rivier","Wandelpad","Spoor"],
+        options: ["Hoofdweg","Rivier","Wandelpad","Spoor"],
         answer: 0,
-        wrongHints: [null,"Blauw.","Stippeltjes.","Zwart met streepjes."],
+        wrongHints: [null,"Een rivier is op de kaart blauw. Welke kleur wordt hier gevraagd?","Een wandelpad is een stippellijn. Voor welke weg kiest de kaartmaker een opvallende kleur?","Een spoorlijn is zwart met streepjes. Wat tekent de kaartmaker in het rood?"],
         uitlegPad: {
           stappen: [{ titel: "Rood = hoofdweg", tekst: "Op wegenkaart: rode lijn = hoofdweg/snelweg (om op te vallen)." }],
           woorden: [{ woord: "rode lijn", uitleg: "Belangrijke wegen — vaak snelwegen." }],
@@ -779,10 +779,10 @@ const steps = [
         },
       },
       {
-        q: "Op een atlas, **ster** = ?",
+        q: "Wat betekent een **ster** op een atlaskaart?",
         options: ["Hoofdstad","Bos","Berg","Vliegveld"],
         answer: 0,
-        wrongHints: [null,"Geen ster.","Driehoek.","Vliegtuig-symbool."],
+        wrongHints: [null,"Een bos wordt met boompjes of groen getekend, niet met een ster.","Een berg is een driehoekje.","Een vliegveld krijgt een vliegtuigje."],
         uitlegPad: {
           stappen: [{ titel: "Ster = hoofdstad", tekst: "Op landkaart: ster (★) markeert de hoofdstad van een land." }],
           woorden: [{ woord: "hoofdstad", uitleg: "Belangrijkste stad van een land. Met ster gemarkeerd." }],
@@ -794,9 +794,9 @@ const steps = [
       },
       {
         q: "Wat doe je als je een **onbekend symbool** ziet?",
-        options: ["Legenda checken","Gokken","Negeren","Symbool overschrijven"],
+        options: ["Legenda checken","Gokken wat het is","Het symbool overslaan","De titel nog eens lezen"],
         answer: 0,
-        wrongHints: [null,"Niet zinvol.","Mis je info.","Mag niet."],
+        wrongHints: [null,"Gokken kost punten. Waar staat de uitleg van elk symbool?","Dan mis je misschien precies wat de vraag vraagt.","De titel zegt waar de kaart over gaat, niet wat één symbool betekent."],
         uitlegPad: {
           stappen: [{ titel: "Legenda = naslagwerk", tekst: "Onbekend symbool? → Legenda kijken (uitleg-tabel met alle symbolen)." }],
           woorden: [{ woord: "legenda", uitleg: "Uitleg-vakje met betekenis van symbolen op kaart." }],
@@ -818,7 +818,7 @@ const steps = [
         q: "Schaal 1:100.000. **8 cm** op de kaart = ___ km.",
         options: ["8 km","80 km","0,8 km","800 km"],
         answer: 0,
-        wrongHints: [null,"Te groot.","Te klein.","Veel te groot."],
+        wrongHints: [null,"Dat is tien keer te veel. 8 × 100.000 cm = 800.000 cm. Hoeveel km is dat?","Dat is tien keer te weinig. Hoeveel km is 1 cm bij 1:100.000? En dan keer 8.","Dat is honderd keer te veel. Reken 800.000 cm stap voor stap om."],
         uitlegPad: {
           stappen: [{ titel: "8 × 1 km", tekst: "Bij 1:100.000 = 1cm op kaart = 1km werkelijk. 8 cm = 8 km." }],
           woorden: [{ woord: "schaal-truc", uitleg: "Bij 1:100.000 valt cm-op-kaart samen met km-werkelijk." }],
@@ -832,7 +832,7 @@ const steps = [
         q: "Stad A ligt links-boven. Stad B ligt rechts-onder. Welke richting moet je lopen van A naar B?",
         options: ["Zuidoost","Noordwest","Zuidwest","Noordoost"],
         answer: 0,
-        wrongHints: [null,"Andersom.","Andersom horizontaal.","Andersom verticaal."],
+        wrongHints: [null,"Dat is precies de andere kant op. B ligt rechts en onder: welke richtingen zijn dat?","Zuid klopt, want B ligt lager. Maar ligt B links of rechts van A?","Oost klopt, want B ligt rechts. Maar ligt B boven of onder A?"],
         uitlegPad: {
           stappen: [{ titel: "Naar rechts + onder", tekst: "Van links-boven naar rechts-onder = naar O (rechts) + Z (onder) = Zuidoost." }],
           woorden: [{ woord: "richting volgen", uitleg: "Combineer horizontaal (O/W) en verticaal (N/Z) richting." }],
@@ -843,10 +843,10 @@ const steps = [
         },
       },
       {
-        q: "**Blauwe vlek** op kaart =?",
+        q: "Wat is een **blauwe vlek** op een kaart meestal?",
         options: ["meer/zee","bos","berg","stad"],
         answer: 0,
-        wrongHints: [null,"Groen.","Bruin.","Punt of cirkel."],
+        wrongHints: [null,"Een bos is groen. Welke kleur wordt hier gevraagd?","Bergen zijn bruin of geel.","Een stad is een punt of cirkel, geen vlek."],
         uitlegPad: {
           stappen: [{ titel: "Blauw = water", tekst: "Vlek = vlak. Blauwe vlek = water-oppervlak = meer of zee." }],
           woorden: [{ woord: "blauwe vlek", uitleg: "Gevuld blauw vlak = waterlichaam." }],
@@ -872,9 +872,9 @@ const steps = [
       },
       {
         q: "Op een kaart staat **N-pijl** naar links. Wat betekent dat?",
-        options: ["Noord ligt aan de linkerkant","Kaart is verkeerd","Noord is altijd boven","Kompas is kapot"],
+        options: ["Noord ligt aan de linkerkant","De kaart is fout gedrukt","Noord is altijd boven","West ligt aan de linkerkant"],
         answer: 0,
-        wrongHints: [null,"Niet per se.","Niet altijd.","Geen reden."],
+        wrongHints: [null,"Een kaart mag gedraaid staan. Wat vertelt de pijl je dan?","Niet op elke kaart. Waarom staat er anders een pijl bij?","Links is west als noord bóven staat. Waar wijst de pijl nu naartoe?"],
         uitlegPad: {
           stappen: [{ titel: "Pijl = oriëntatie", tekst: "N-pijl wijst altijd naar Noord. Pijl naar links = kaart gedraaid, Noord is links." }],
           woorden: [{ woord: "N-pijl", uitleg: "Symbool dat aangeeft welke richting op de kaart Noord is." }],
@@ -888,7 +888,7 @@ const steps = [
         q: "Welke schaal toont een **groter gebied**?",
         options: ["1:1.000.000","1:10.000","1:1.000","1:100"],
         answer: 0,
-        wrongHints: [null,"Kleiner gebied.","Veel kleiner.","Heel klein."],
+        wrongHints: [null,"Bij 1:10.000 is 1 cm maar 100 m. Bij welke schaal is 1 cm het meest in het echt?","Bij 1:1.000 is 1 cm maar 10 m: een gebouw, geen gebied.","Bij 1:100 is 1 cm maar 1 m: dat is een kamer."],
         uitlegPad: {
           stappen: [{ titel: "Groter getal = groter gebied", tekst: "Hoe GROTER het getal achter ':' hoe meer wereld op de kaart past." }],
           woorden: [{ woord: "schaal-grootte", uitleg: "1:1.000.000 toont meer dan 1:100." }],
@@ -902,7 +902,7 @@ const steps = [
         q: "Wat is een **legenda** op een kaart?",
         options: ["Uitleg van symbolen + kleuren", "Naam van kaart-maker", "Schaal: hoeveel cm per km", "Datum waarop de kaart gemaakt is"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is bronvermelding.", "Niet — schaal apart.", "Niet — datum apart."],
+        wrongHints: [null, "Wie de kaart maakte staat bij de bron. Daar gaat de legenda niet over.", "De schaal is een apart onderdeel, naast de legenda.", "De datum staat apart bij de bron."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een legenda?", tekst: "Een **legenda** is een klein vakje op de kaart (vaak hoek onderaan) dat **uitlegt wat de symbolen, kleuren + lijnen betekenen**. Zonder legenda snap je de kaart niet." },
@@ -925,9 +925,9 @@ const steps = [
       },
       {
         q: "Een kaart toont **hoogtelijnen** dicht bij elkaar. Wat betekent dat?",
-        options: ["Een steile helling","Plat landschap","Water","Bos"],
+        options: ["Een steile helling","Een vlak landschap","Een diep meer","Een dicht bos"],
         answer: 0,
-        wrongHints: [null, "Niet — vlak gebied heeft hoogtelijnen ver uit elkaar.", "Niet — water meestal blauw + zonder hoogtelijnen.", "Niet — bos meestal groen, niet hoogtelijnen."],
+        wrongHints: [null, "Bij vlak land liggen de lijnen juist ver uit elkaar. Wat zeggen lijnen die dicht op elkaar zitten?", "Water is blauw en heeft geen hoogtelijnen.", "Bos is groen; hoogtelijnen gaan over hoogte, niet over bomen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn hoogtelijnen?", tekst: "**Hoogtelijnen** (ook 'contourlijnen') zijn **lijnen op een topografische kaart die punten van DEZELFDE hoogte verbinden**.\n\nElke lijn = bepaalde hoogte boven zeespiegel. Bv:\n• 50 m hoogtelijn\n• 100 m hoogtelijn\n• 150 m hoogtelijn" },
@@ -950,9 +950,9 @@ const steps = [
       },
       {
         q: "Wat is de **windroos** op een kaart?",
-        options: ["Symbool dat noord, oost, zuid, west aanwijst","Versiering in de vorm van een bloem","Teken dat laat zien hoe hard het waait","Soort kaart"],
+        options: ["Symbool dat noord, oost, zuid, west aanwijst","Versiering in de vorm van een bloem","Teken dat laat zien hoe hard het waait","Kaart met alleen de kustlijn erop"],
         answer: 0,
-        wrongHints: [null, "Niet — hij lijkt op een bloem, maar heeft een taak.", "Niet — over hoe hard het waait zegt hij niets.", "Niet — onderdeel van kaart, niet kaart-type."],
+        wrongHints: [null, "Hij lijkt op een bloem, maar heeft een taak. Welke?", "Over hoe hard het waait zegt hij niets. Waar komt 'wind' in de naam dan vandaan?", "Een windroos is een onderdeel ván een kaart, geen kaart zelf."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een windroos?", tekst: "Een **windroos** is een **klein kompas-symbool** in een hoek van de kaart. Toont:\n• **Noord (N)** — meestal boven (pijl ↑)\n• **Oost (O)** — rechts\n• **Zuid (Z)** — onder\n• **West (W)** — links\n\nOok soms 8 of 16 tussen-richtingen (NO, ZO, ZW, NW)." },
@@ -973,9 +973,9 @@ const steps = [
       },
       {
         q: "Met **Google Maps** of een **navigatie-app** in de auto — welk principe lijkt op een papieren kaart?",
-        options: ["Toont gebied met schaal + symbolen + jouw locatie","Maakt foto's van de omgeving","Filmt wat er onderweg gebeurt","Stuurt berichten naar andere auto's"],
+        options: ["Toont gebied met schaal + symbolen + jouw locatie","Maakt foto's van alles wat je onderweg ziet","Filmt de weg en bewaart dat als een video","Stuurt berichten naar auto's in de buurt"],
         answer: 0,
-        wrongHints: [null, "Niet — foto's apart (Google Street View wel).", "Niet — film is video.", "Niet — geen berichten-app."],
+        wrongHints: [null, "Foto's zijn Street View. Wat laat de kaart zelf zien?", "Een film laat zien wat er gebeurt, niet wáár je bent.", "Berichten sturen is geen taak van een kaart."],
         uitlegPad: {
           stappen: [
             { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauwe stip)\n• **Live verkeer** + werkzaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
@@ -997,19 +997,19 @@ const steps = [
         },
       },
       { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null, "Dat is zuid.", "Dat is oost.", "Dat is west."] },
-      { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null, "Niet — boven.", "Niet — onder.", "Niet — tussen."] },
-      { q: "Een **legenda** is?", options: ["Uitleg van symbolen op de kaart", "De titel bovenaan de kaart", "Lijst van alle landen op de kaart", "Aantal pagina's van de atlas"], answer: 0, wrongHints: [null, "Dat is de titel.", "Niet inhoud legenda.", "Niet."] },
-      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["10 m","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig — hoeveel centimeter is één meter? Gebruik dat om de schaalverhouding te begrijpen.", "Te veel.", "Dat getal hoort bij een andere schaalverhouding."] },
-      { q: "Op kaart 5 cm bij schaal 1:50.000 = welke afstand?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null, "Niet — bereken nogmaals.", "Te veel.", "Niet."] },
-      { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null, "Dat is berg/driehoek.", "Dat is water/golf.", "Niet."] },
-      { q: "Tussen N en O ligt?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null, "Niet — W links van N.", "Niet — onder.", "Niet."] },
-      { q: "Welke kant is **zuid** op de meeste kaarten?", options: ["Onderkant","Bovenkant","Links","Rechts"], answer: 0, wrongHints: [null, "Dat is noord.", "West.", "Oost."] },
+      { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null, "Noord ligt boven. Oost ligt rechts: wat ligt recht tegenover rechts?", "Zuid ligt onder, niet tegenover rechts.", "Noordoost ligt vlak náást oost, niet ertegenover."] },
+      { q: "Wat is een **legenda**?", options: ["Uitleg van symbolen op de kaart", "De titel bovenaan de kaart", "Lijst van alle landen op de kaart", "Aantal pagina's van de atlas"], answer: 0, wrongHints: [null, "Dat is de titel.", "In de legenda staan geen landen, maar iets anders. Wat?", "Dat zou in de inhoudsopgave van een atlas staan, niet op de kaart."] },
+      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["10 m","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig. 1 cm op de kaart is 1.000 cm in het echt. Hoeveel meter is dat?", "Te veel: 1 km is 100.000 cm. Hier is het maar 1.000 cm.", "100 cm is maar 1 m. Hoeveel is 1.000 cm?"] },
+      { q: "Op een kaart met schaal 1:50.000 meet je 5 cm. Hoe ver is dat in het echt?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null, "Tien keer te weinig. 5 × 50.000 = 250.000 cm. Hoeveel meter is dat, en hoeveel km?", "Tien keer te veel. Reken 250.000 cm om naar meters en dan naar kilometers.", "Veel te weinig: 50 m is maar 5.000 cm. Hoeveel is 5 × 50.000 cm?"] },
+      { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null, "Een driehoekje is een berg of camping.", "Een golfje staat voor water.", "Een hekje gebruik je op kaarten niet voor een gebouw."] },
+      { q: "Welke richting ligt tussen N en O?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null, "West ligt links, niet tussen noord en oost.", "Zuid ligt onder. Hier gaat het om noord.", "Zuidwest ligt precies aan de andere kant."] },
+      { q: "Welke kant is **zuid** op de meeste kaarten?", options: ["Onderkant","Bovenkant","Links","Rechts"], answer: 0, wrongHints: [null, "Dat is noord.", "Links is west.", "Rechts is oost."] },
       { q: "Op een kaart met schaal 1:25.000 is 1 cm in het echt hoeveel?", options: ["250 m","2,5 km","25 m","2,5 m"], answer: 0, wrongHints: [null, "Te veel. 1 cm op de kaart is 25.000 cm in het echt. Hoeveel meter is dat? (100 cm = 1 m)", "Te weinig. Reken 25.000 cm om naar meters: deel door 100.", "Veel te weinig. 25.000 cm is veel meer dan 2,5 m. Deel 25.000 door 100 om meters te krijgen."] },
-      { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","Onder"], answer: 0, wrongHints: [null, "Dat is wit/andere kant.", "Niet relevant.", "Niet."] },
-      { q: "Een **plattegrond** is?", options: ["Kaart van een klein gebied", "Kaart van de hele wereld", "Boek met heel veel kaarten", "Tekening die geen kaart is"], answer: 0, wrongHints: [null, "Veel groter.", "Dat is een atlas.", "Wel een kaart."] },
-      { q: "Wat is de afkorting van **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Kn hoort niet bij kilometer.", "Niet."] },
+      { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","West"], answer: 0, wrongHints: [null, "Daar wijst de andere, witte kant van de naald heen.", "Een kompasnaald wijst nooit naar oost; hij wijst naar een pool.", "Een kompasnaald wijst nooit naar west; hij wijst naar een pool."] },
+      { q: "Een **plattegrond** is?", options: ["Kaart van een klein gebied", "Kaart van de hele wereld", "Boek met heel veel kaarten", "Tekening die geen kaart is"], answer: 0, wrongHints: [null, "Een plattegrond is juist van een klein stuk, zoals een gebouw of een wijk.", "Dat is een atlas.", "Een plattegrond is wél een kaart, alleen van iets kleins."] },
+      { q: "Wat is de afkorting van **kilometer**?", options: ["km","kg","kl","m"], answer: 0, wrongHints: [null, "Dat is de afkorting van kilogram, een gewicht.", "Dat is kiloliter: een inhoud, geen afstand.", "Dat is de afkorting van meter. Een kilometer is duizend keer zoveel."] },
       { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Draai beide helften om: zuid→noord én oost→west.", "De zuid/noord-helft draait wél, maar de oost/west-helft ook.", "Tegenover een diagonaal ligt weer een diagonaal, geen rechte richting."] },
-      { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten", "Niets, hij staat er voor de sier", "Tekenen om een route te maken", "Inkleuren om gebieden te zien"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Kleuren helpt je niet om een afstand te weten."] },
+      { q: "Wat doe je met een **schaalbalk** op een kaart?", options: ["Meten met liniaal om afstand te weten", "Aflezen hoeveel km het hele gebied is", "Kijken welke kant noord is", "Tellen hoeveel steden erop staan"], answer: 0, wrongHints: [null, "De balk zegt hoe lang één stukje is, niet hoe groot de hele kaart is.", "Richting lees je af aan de kompasroos.", "Steden tel je op de kaart zelf; de balk gaat over hoe ver iets is."] },
       { q: "Welke schaal heeft een atlas-kaart van NL meestal?", options: ["1:500.000 of meer", "1:5.000 of minder", "1:1.000 of minder", "1:100 of minder"], answer: 0, wrongHints: [null, "Bij die schaalverhouding zou één centimeter op de kaart maar een heel klein stukje in werkelijkheid zijn — past heel Nederland dan op één kaart?", "Ook bij die schaalverhouding kom je er niet mee — hoe groot moet het tweede getal zijn voor een landskaart?", "Hoe groter het tweede getal van de schaal, hoe meer werkelijk gebied op de kaart past."] },
     ],
   },

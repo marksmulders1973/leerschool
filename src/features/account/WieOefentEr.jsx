@@ -192,6 +192,9 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
     if (n.length > 20) { setFout("Kies een kortere naam (max 20 tekens)."); return; }
     if (n.toLowerCase() === "speler") { setFout("Kies een eigen naam."); return; }
     if (bestaand.some((p) => p.naam.toLowerCase() === n.toLowerCase())) { setFout("Die naam bestaat al op dit apparaat."); return; }
+    // Mark 26 okt 2026: een kind zónder groep of klas ziet niet welke vakken erbij horen ("maak verplicht
+    // dat je in alle gevallen een groep of klas of ouderrol invult, ook zonder account").
+    if (role === "leerling" && !level) { setFout("Kies je groep of klas, dan weten we welke vakken bij jou horen."); return; }
     const isKlas = /^klas/.test(level);
     const echteRol = role === "leerling" && isKlas ? "student" : role;
     onKlaar({ naam: n, role: echteRol, level: role === "teacher" || role === "ouder" ? (role === "teacher" ? level : "") : level, leeftijd: role === "leerling" ? leeftijd : "", vakken, favoriet });
@@ -207,7 +210,9 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
       <h2 style={{ fontFamily: "var(--font-display)", fontSize: 24, margin: "0 0 4px", color: "#fff" }}>
         {vasteRol === "ouder" ? "Nieuw profiel: ouder of verzorger" : vasteRol === "teacher" ? "Nieuw profiel: leerkracht" : vasteRol ? "Nieuw profiel: kind" : "Nieuw profiel"}
       </h2>
-      <p style={{ margin: 0, fontSize: 13.5, color: "rgba(255,255,255,0.6)" }}>Alleen een naam is nodig. De rest kan later.</p>
+      <p style={{ margin: 0, fontSize: 13.5, color: "rgba(255,255,255,0.6)" }}>
+        {role === "leerling" ? "Een naam en je groep of klas zijn nodig — dan kloppen je vakken meteen. De rest kan later." : "Alleen een naam is nodig. De rest kan later."}
+      </p>
 
       {!vasteRol && <span style={label}>Wie ben je?</span>}
       {!vasteRol && <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>

@@ -93,3 +93,8 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 24 · Kledingbank Deventer · info@kledingbankdeventer.nl · OK · 01a16e0b-0dd5-7d38-82e2-1ee8a87b6dfc
   - 25 · Kledingbank Enschede · info@kledingbankenschede.nl · OK · 01a16e0b-1425-7b9c-af71-5e7043e02bfa
 - **24-10-2026, 15:13:04** — klaar: 25/25 verstuurd (OK-regels staan hierboven).
+
+- **25-10-2026, 09:29:59** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 26 · Kledingbank Nijmegen · info@kledingbanknijmegen.nl · OK · 01a1722e-4990-705b-97a7-0ee446177275
+  - 27 · Kledingbank Ede · info@kledingbank-ede.nl · OK · 01a1722e-50f3-74fd-8015-7c409b31bbf9
+- **25-10-2026, 09:30:01** — klaar: 2/2 verstuurd (OK-regels staan hierboven).
