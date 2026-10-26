@@ -95,7 +95,9 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
   const startRef = useRef(Date.now()); // 📈 niveaulijn: tijd per vraag
   // Alleen voor wie als nieuwkomer binnenkwam (Mark 30 sep 2026): vlag lk_nieuwkomer (code of taalkeuze op
   // /nieuwkomers) én een gekozen thuistaal ≠ Nederlands.
-  const taal = (() => { try { return localStorage.getItem("lk_nieuwkomer") === "1" && localStorage.getItem("lk_steuntaal") ? leesSteuntaal() : null; } catch { return null; } })();
+  // Melding 13 + 21 okt 2026 ("waarom een Engelse vertaling?"): wie op /nieuwkomers weer "Nederlands" kiest,
+  // krijgt hier geen vertaalknop meer (steuntaal "nl" telde eerst nog als thuistaal).
+  const taal = (() => { try { const t = localStorage.getItem("lk_nieuwkomer") === "1" && localStorage.getItem("lk_steuntaal") ? leesSteuntaal() : null; return t && t !== "nl" ? t : null; } catch { return null; } })();
   const [vert, setVert] = useState(null);     // { q, options } in de thuistaal
   const [vertBezig, setVertBezig] = useState(false);
   const rtl = taal === "ar";

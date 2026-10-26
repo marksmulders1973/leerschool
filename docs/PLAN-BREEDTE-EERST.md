@@ -45,7 +45,7 @@ lezen, groep 5 aardrijkskunde/geschiedenis. Kwaliteit: laatste eindmeting 13 okt
 
 | # | Stap | Wie | Status |
 |---|------|-----|--------|
-| B1 | De 4 open meldingen afhandelen + bedanken | Claude | ⏳ |
+| B1 | Open meldingen afhandelen + bedanken | Claude | ✅ 26 okt: alle 12 (niet 4) wensenbord-meldingen beantwoord met "Dank van de maker"; 3 begrijpend-lezen-vragen zonder vakwoorden herschreven, breukvraag ⁴⁄₈ uitgelegd, vertaalknop in /start weg na keuze "Nederlands" (v1002 "057") |
 | B2 | **Startset van 20 per groep × vak** vastleggen: welke 20 vragen krijgt een kind als eerste (uit de bestaande paden, SLO-passend, oplopend in moeilijkheid). Technisch: een `startset`-lijst per groep × vak in de code, die het Begin-kwartier en "Oefen nu" als eerste gebruiken. | Claude (bouwen), Mark (steekproef op telefoon) | ⏳ |
 | B3 | **Startsets nakijken**: elk van de ~40 sets (6 groepen × 5-9 vakken) door twee blinde nakijkers; fouten herstellen; twijfel naar `docs/audit/TWIJFEL-STARTSETS.md`. Eindmeting per groep op de startsets: doel 0 fout van 20. | Claude | ⏳ |
 | B4 | **Vakscherm (ontwerp stap 3), minimaal**: tik op tegel → "Rekenen · groep 5", groot cijfer, **Oefen nu** (= de startset, daarna de rest), en alleen de onderwerpen van die groep. Geen Leren-hub meer voor het kind. | Claude | ⏳ |
