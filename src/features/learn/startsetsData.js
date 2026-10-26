@@ -89,6 +89,16 @@ export const STARTSETS = {
       { pad: "spelling-ei-ij-au-ou", stap: 6, n: 4 },  // ou
     ],
   },
+  "4|natuur": {
+    titel: "Natuur & techniek · groep 4",
+    emoji: "🌱",
+    items: [
+      { pad: "natuur-seizoenen-dieren-g4", stap: 1, n: 5 },  // de vier seizoenen
+      { pad: "natuur-seizoenen-dieren-g4", stap: 2, n: 5 },  // dieren om je heen
+      { pad: "natuur-seizoenen-dieren-g4", stap: 3, n: 5 },  // van zaadje tot plant
+      { pad: "natuur-seizoenen-dieren-g4", stap: 4, n: 5 },  // het weer
+    ],
+  },
   "4|begrijpend-lezen": {
     titel: "Begrijpend lezen · groep 4",
     emoji: "📖",
@@ -180,6 +190,18 @@ export const STARTSETS = {
       // tekst) — voor de eerste 20 van groep 5 korte tekstjes die in de vraag zelf staan; als slot één
       // echt tekstje van zes zinnen met drie vragen.
       { pad: "korte-teksten-snappen-g4", stap: 5, n: 3 },       // een echt tekstje
+    ],
+  },
+
+  // Groep 5 Engels (op veel scholen de start): het nieuwe groep-5-pad, alle 20 vragen.
+  "5|engels": {
+    titel: "Engels · groep 5",
+    emoji: "📕",
+    items: [
+      { pad: "engels-eerste-woorden-g5", stap: 1, n: 5 },  // hello — groeten
+      { pad: "engels-eerste-woorden-g5", stap: 2, n: 5 },  // kleuren en tellen
+      { pad: "engels-eerste-woorden-g5", stap: 3, n: 5 },  // dieren
+      { pad: "engels-eerste-woorden-g5", stap: 4, n: 5 },  // in de klas
     ],
   },
 

@@ -12,7 +12,7 @@ describe("startsets", () => {
     expect(startsetSleutel(5, "wiskunde")).toBe("5|rekenen");
     expect(startsetSleutel(9, "rekenen")).toBeNull();
     expect(startsetBlok("5|rekenen", 5)).toMatchObject({ soort: "vragen", startset: "5|rekenen", n: 5 });
-    expect(startsetBlok("5|engels", 5)).toBeNull();
+    expect(startsetBlok("5|verkeer", 5)).toBeNull();
   });
 
   for (const sleutel of Object.keys(STARTSETS)) {

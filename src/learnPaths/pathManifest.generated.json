@@ -118,18 +118,18 @@
       "code",
       "coderen",
       "Scratch",
-      "Python",
-      "JavaScript",
-      "variabele",
+      "robot",
+      "herhalen",
+      "lus",
       "loop",
-      "if-else",
-      "functie"
+      "als-dan",
+      "if-else"
     ],
-    "intro": "Algoritmen + programmeren voor groep 6-8, Doorstroomtoets-stof — wat is algoritme (stappenplan, recept, GPS-Dijkstra-NL'er) + bouwstenen (variabele/if/loop/functie/lijst) + Ada Lovelace + talen (Scrat",
+    "intro": "Programmeren voor groep 6-8 met Robot Rob: wat een algoritme (stappenplan) is, herhalen, als-dan, onthouden en fouten (bugs) zoeken. Zonder computer te snappen, ~15 min.",
     "stepCount": 4,
-    "checkCount": 40,
+    "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "algoritmen-pseudocode-informatica",
@@ -1962,6 +1962,35 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "engels-eerste-woorden-g5",
+    "file": "./engelsEersteWoordenG5.js",
+    "title": "Engels — eerste woorden en zinnetjes (groep 5)",
+    "subject": "engels",
+    "level": "groep5",
+    "emoji": "🇬🇧",
+    "referentieNiveau": "pre-A1",
+    "sloThema": "Engels — eerste woorden (Early-English groep 5)",
+    "triggerKeywords": [
+      "engels groep 5",
+      "eerste woorden engels",
+      "engels beginners",
+      "hello",
+      "colours",
+      "numbers",
+      "animals",
+      "classroom",
+      "kleuren engels",
+      "tellen engels",
+      "dieren engels",
+      "klas engels"
+    ],
+    "intro": "De allereerste Engelse woorden voor groep 5: hallo zeggen, kleuren en tellen tot 10, dieren en de klas. De woorden staan er steeds bij — je hoeft niets uit je hoofd te weten om mee te doen.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "engels-literatuur-havo-vwo",
@@ -5460,6 +5489,35 @@
     "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 15
+  },
+  {
+    "id": "natuur-seizoenen-dieren-g4",
+    "file": "./natuurSeizoenenDierenG4.js",
+    "title": "Natuur — seizoenen, dieren en planten (groep 4)",
+    "subject": "natuur",
+    "level": "groep4",
+    "emoji": "🌱",
+    "referentieNiveau": "PO-kerndoel",
+    "sloThema": "Wereldoriëntatie — natuur groep 4: seizoenen, dieren, planten, weer",
+    "triggerKeywords": [
+      "natuur groep 4",
+      "seizoenen",
+      "lente zomer herfst winter",
+      "jonge dieren",
+      "kalf veulen lam kuiken",
+      "wat eten dieren",
+      "zaadje plant",
+      "wortel stengel blad bloem",
+      "loofboom naaldboom",
+      "weer",
+      "regen wind sneeuw",
+      "regenboog"
+    ],
+    "intro": "Natuur voor groep 4: de vier seizoenen, dieren en hun jongen, hoe een plant groeit en wat het weer doet. Twintig vragen in gewone woorden, met uitleg bij elke stap.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "nederland-water-vo",
