@@ -15,7 +15,7 @@ export const SNELKOPPELINGEN = [
     woorden: ["dictee printen", "dictees", "voorleesblad", "dictee thuis", "printdictee"] },
   // 3 okt 2026: "groep 3/groep 4/beginners" eruit (mengde gewone groep-3-zoekers met nieuwkomers); NT2-woorden erbij.
   { id: "nieuwkomers", emoji: "🌍", label: "Startpunt voor nieuwkomers", uitleg: "Voor kinderen die nog Nederlands leren: eerste woorden, klaszinnen, rekenen en lezen, met voorlezen en steun in zes talen.", pad: "/nieuwkomers",
-    woorden: ["welkomnieuwkomer", "nieuwkomer", "nieuwkomers", "startpunt", "nt2", "nederlands leren", "taalklas", "schakelklas", "anderstalig", "anderstalige", "isk", "okan", "vluchteling", "oekraïens", "oekraiens", "arabisch", "turks", "roemeens", "bulgaars", "eerste woorden"] },
+    woorden: ["welkomnieuwkomer", "nieuwkomer", "nieuwkomers", "nieuw in nederland", "new", "learn dutch", "dutch", "english", "startpunt", "nt2", "nederlands leren", "taalklas", "schakelklas", "anderstalig", "anderstalige", "isk", "okan", "vluchteling", "oekraïens", "oekraiens", "arabisch", "turks", "roemeens", "bulgaars", "eerste woorden"] },
   { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Kies: het Park of Bedrieger (de witte kamer, in aanbouw).", pad: "/spelletje",
     woorden: ["spelletje", "spelletjes", "imposter", "bedrieger", "game"] },
   { id: "park", emoji: "🐾", label: "Mijn Park", uitleg: "Je eigen 3D-park: bouwen, dieren, leren bij elke plek.", pad: "/dierentuin",

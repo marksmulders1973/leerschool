@@ -517,8 +517,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             >
               <span aria-hidden="true" style={{ fontSize: 28, lineHeight: 1 }}>🌍</span>
               <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 17 }}>Ik ben nieuwkomer</span>
-                <span style={{ display: "block", fontSize: 13, color: "rgba(255,255,255,0.72)", marginTop: 2 }}>Nederlands leren, met voorlezen en hulp in zes talen</span>
+                {/* Mark 26 okt 2026: "nieuwkomer" leest iemand die net in Nederland is niet —
+                    dus gewone woorden, de Engelse zin erbij, en de steuntalen in eigen schrift
+                    zodat je het herkent zonder Nederlands te lezen. */}
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 17 }}>Ik ben nieuw in Nederland</span>
+                <span style={{ display: "block", fontSize: 13, color: "rgba(255,255,255,0.85)", marginTop: 2 }}>I&apos;m new in the Netherlands → learn Dutch</span>
+                <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.62)", marginTop: 3 }}>English · العربية · Українська · Türkçe · Română · Български</span>
               </span>
               <span aria-hidden="true" style={{ fontSize: 20, color: "#00d4ff" }}>→</span>
             </button>
