@@ -56,6 +56,15 @@ const steps = [
   // ── Stap 1 ──────────────────────────────────────────────────────
   {
     title: "Zo lees je een tabel of lijst",
+    // De vragen van deze stap gaan over deze lijst → gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026).
+    leesTekst: `**Openingstijden Bibliotheek De Boekenberg**
+
+— Maandag: 13.00 – 17.00 uur
+— Woensdag: 10.00 – 16.00 uur
+— Vrijdag: 13.00 – 20.00 uur
+— Zaterdag: 10.00 – 13.00 uur
+
+Op de andere dagen is de bibliotheek dicht.`,
     explanation: `Op de Doorstroomtoets krijg je vaak een tekst mét een tabel erbij: een prijslijst, een rooster of een dienstregeling. Een **tabel** zet informatie netjes op een rij. Een echte tabel heeft **rijen** (van links naar rechts), **kolommen** (van boven naar beneden) en **koppen** (de titeltjes erboven). In deze les zie je zo'n tabel als een nette lijst: elke regel is één rij, en wat achter de dubbele punt staat, zijn de gegevens.
 
 Kijk maar naar de openingstijden van Bibliotheek De Boekenberg:
@@ -345,6 +354,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Oefenen: tekst + prijslijst van het zwembad",
+    leesTekst: tekstZwembad, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstZwembad + `
 
 Nu echt oefenen! Hierboven staat een tekst over zwembad De Blauwe Golf, met een prijslijst erin. Precies zo'n opdracht kun je op de Doorstroomtoets krijgen.
@@ -1139,6 +1149,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — het buurtfeest",
+    leesTekst: tekstBuurtfeest, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstBuurtfeest + `
 
 Dit is de eindoefening, precies in toets-stijl: een tekst met een programma-lijst, en vragen door elkaar. Soms staat het antwoord in de lijst, soms in de tekst — en bij de slimste vragen moet je allebei gebruiken.

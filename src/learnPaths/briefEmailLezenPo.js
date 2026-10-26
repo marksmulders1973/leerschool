@@ -425,6 +425,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Oefenen met een echte brief",
+    leesTekst: tekstSportdag, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstSportdag + `
 
 Hierboven staat een echte schoolbrief. Zo'n brief krijg je op de Doorstroomtoets ook, met vragen erbij. Gebruik dit vaste stappenplan:
@@ -1105,6 +1106,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de mix",
+    leesTekst: tekstZwemvierdaagse, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstZwemvierdaagse + `
 
 Dit is 'm: een echte e-mail met vragen zoals je ze op de Doorstroomtoets krijgt. Alles komt samen: de onderdelen, het doel, de datums én dé vraag 'wat moet ik doen?'.

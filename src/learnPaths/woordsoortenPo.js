@@ -515,17 +515,17 @@ const steps = [
         },
       },
       {
-        q: "Wat is de vergelijkende trap van **'snel'**?",
+        q: "Wat is de vergrotende trap van **'snel'**?",
         options: ["sneller","snelheid","snelste","meer snel"],
         answer: 0,
         wrongHints: [null, "Dat is een zelfstandig naamwoord, geen trap van 'snel'.", "Dat is 'overtreffende' trap.", "Bij een kort woord als 'snel' zet je er geen 'meer' voor. Hoe maak je het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Vergelijkend = +er", tekst: "Stam (snel) + er = sneller. Vergelijkende trap." }],
-          woorden: [{ woord: "vergelijkende trap", uitleg: "Trap waarmee je dingen vergelijkt: -er-vorm." }],
-          theorie: "3 trappen: stellend (snel), vergelijkend (sneller), overtreffend (snelst).",
+          woorden: [{ woord: "vergrotende trap", uitleg: "Trap waarmee je dingen vergelijkt: -er-vorm (ook wel 'vergelijkende trap')." }],
+          theorie: "3 trappen: stellend (snel), vergrotend (sneller), overtreffend (snelst).",
           voorbeelden: [{ type: "tabel", tekst: "Mooi-mooier-mooist. Snel-sneller-snelst. Goed-beter-best (onregelmatig)." }],
           basiskennis: [{ onderwerp: "Snellere is verbogen", uitleg: "Snellere = sneller + e (vóór de auto). Maar trap-naam = sneller." }],
-          niveaus: { basis: "sneller.", simpeler: "Vergelijkende trap = stam + -er. Snel + er = sneller. Snelste = overtreffend.", nogSimpeler: "Sneller" },
+          niveaus: { basis: "sneller.", simpeler: "Vergrotende trap = stam + -er. Snel + er = sneller. Snelste = overtreffend.", nogSimpeler: "Sneller" },
         },
       },
       {

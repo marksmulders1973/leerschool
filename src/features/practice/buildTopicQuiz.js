@@ -50,6 +50,9 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   const alleChecks = stappen.flatMap((s) => {
     // `s.leesTekst` (4 okt 2026, meldingen lange-toets-teksten-g8-po): een stap kan zijn leestekst
     // ook expliciet meegeven — dan hangt het niet af van een zinnetje in de uitleg.
+    // NB (26 okt 2026): een check-veld `evidence` is géén signaal dat de vraag een leestekst nodig heeft —
+    // bij weetjes-paden (tijdvakken) zou de hele stap-uitleg mét het antwoord boven de vraag komen. Een stap
+    // waarvan de vragen een lijst/tabel uit de uitleg nodig hebben, geeft die expliciet mee via `leesTekst`.
     const metTekst = !!s.leesTekst || STAP_MET_TEKST.test(String(s.explanation || ""));
     return (s.checks || []).filter(pastBijGroep).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null,
       // Vraag hoort bij een leestekst in de stap-uitleg (kliktest 26 sep 2026: "Wat heb je nodig om de
@@ -57,7 +60,7 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
       stapTekst: metTekst || undefined,
       // Mark 29 sep 2026 (Kwartier van vandaag): "Wat betekent 'pedaalomwenteling' in deze tekst?" zonder
       // tekst → de tekst gaat nu mee (zonder de slotregel "Beantwoord de 4 vragen…", die klopt los niet).
-      leesTekst: s.leesTekst ? String(s.leesTekst) : metTekst ? String(s.explanation).split(/\n\s*\n/).filter((p) => !/^\*.*beantwoord de \d+ vragen/i.test(p.trim())).join("\n\n") : undefined,
+      leesTekst: s.leesTekst ? String(s.leesTekst) : metTekst ? String(s.explanation || "").split(/\n\s*\n/).filter((p) => !/^\*.*beantwoord de \d+ vragen/i.test(p.trim())).join("\n\n") : undefined,
       stapIdx: alle.indexOf(s) }));
   });
   // `volgnr` (26 okt 2026, startsets): de plek in het bestand, zodat een vaste set na het

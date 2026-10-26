@@ -156,7 +156,7 @@ const steps = [
       "Naast 7 continenten heeft de wereld **5 oceanen** *(grote zeeën)*.\n\n**De 5 oceanen** *(uit je hoofd!)*:\n1. **Stille Oceaan** *(Pacific)* — grootst.\n2. **Atlantische Oceaan** — tussen Europa/Afrika en Amerika.\n3. **Indische Oceaan** — onder India.\n4. **Noordelijke IJszee** *(Arctische)* — bij de Noordpool.\n5. **Zuidelijke IJszee** *(Antarctische)* — bij de Zuidpool.\n\n**Grootste — Stille Oceaan**:\n• Beslaat ongeveer **een derde van de aarde**.\n• Tussen Azië/Oceanië en Amerika.\n• 'Stille' = leek rustig bij ontdekkers, niet altijd zo!\n\n**Atlantische Oceaan**:\n• Tussen Europa/Afrika (rechts) en Amerika (links).\n• Hier ligt Nederland aan *(via de Noordzee, die deel uitmaakt van de Atlantische Oceaan)*.\n\n**Indische Oceaan**:\n• Onder Azië, tussen Afrika en Australië.\n• Veel tropische eilanden zoals Madagaskar.\n\n**De 2 IJszeeën**:\n• **Noordelijke** — bij de Noordpool, ijs het hele jaar.\n• **Zuidelijke** — om Antarctica heen.\n\n**Toets-truc**:\nOnthoud op alfabet: **A**tlantisch, **I**ndisch, **N**oordelijke IJszee, **S**tille, **Z**uidelijke IJszee → AINSZ.\n\nOf onthoud: '5 oceanen, 2 bij de polen, 3 in het 'midden': Atlantisch, Indisch, Stille'.",
     checks: [
       {
-        q: "Hoeveel **oceanen** zijn er?",
+        q: "Hoeveel **oceanen** zijn er volgens de nieuwste indeling (mét de Zuidelijke Oceaan rond Antarctica)?",
         options: ["5", "7", "6", "3"],
         answer: 0,
         wrongHints: [null, "Te veel — dat is het aantal continenten.", "Te veel.", "Te weinig — vergeet de 2 IJszeeën bij de polen niet."],

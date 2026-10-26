@@ -420,6 +420,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "De functie van een alinea",
+    leesTekst: tekstEgel, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstEgel + `
 
 Elke alinea heeft een **taak** in de tekst. Dat noemen we de **functie** van de alinea. Op de Doorstroomtoets krijg je vragen als: *"Wat doet de schrijver in de derde alinea?"* Dit zijn de vijf functies die je moet kennen:
@@ -1168,6 +1169,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de vuurtoren",
+    leesTekst: tekstVuurtoren, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstVuurtoren + `
 
 Dit is 'm: een informatieve tekst met vragen zoals je ze écht op de Doorstroomtoets krijgt. Alles wat je geleerd hebt komt samen: de kernzin vinden, de functie van een alinea herkennen én het beste tussenkopje kiezen.

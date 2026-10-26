@@ -316,6 +316,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Gevoelens en bedoelingen afleiden",
+    leesTekst: tekstNoor, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstNoor + "\n\n*In verhalen staat bijna nooit letterlijk hoe iemand zich voelt. De schrijver laat het zíén: slikken, aarzelen, wegkijken. Beantwoord de 6 vragen — zoek steeds de aanwijzingen waaruit het blijkt.*",
     checks: [
       {
@@ -955,6 +956,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-mix — de mussentekst",
+    leesTekst: tekstMussen, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstMussen + "\n\n*Dit is een tekst zoals op de Doorstroomtoets. De 9 vragen hieronder zijn allemaal afleid-vragen: het antwoord staat nergens letterlijk. Verzamel aanwijzingen, doe de wijs-test, en kies de conclusie die je kunt onderbouwen.*",
     checks: [
       {

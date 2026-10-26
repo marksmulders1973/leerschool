@@ -364,6 +364,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Verwijswoorden in een tekst",
+    leesTekst: tekstSnuffel, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstSnuffel + `
 
 Nu ga je de strategie gebruiken in een echte tekst. Dat is precies wat je op de Doorstroomtoets ook doet. In een tekst staan veel meer namen en dingen dan in één losse zin — dus terugzoeken wordt belangrijker!
@@ -1003,6 +1004,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de mix",
+    leesTekst: tekstBoerderij, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstBoerderij + `
 
 Dit is 'm: een tekst met vragen zoals je ze écht op de Doorstroomtoets krijgt. Alle soorten door elkaar — terugwijzen, een plek, een hele gebeurtenis, en natuurlijk een paar slimme valstrikken met twee kandidaten.

@@ -1466,7 +1466,7 @@ const steps = [
         },
       },
       {
-        q: "Hoe vind je antwoord op een **inferentie-vraag** (tussen de regels)?",
+        q: "Hoe vind je het antwoord op een vraag waarbij het antwoord **niet letterlijk** in de tekst staat (lezen tussen de regels)?",
         options: ["Letten op aanwijzingen en signaalwoorden in de tekst","Het letterlijke woord in de tekst opzoeken","Kijken welk antwoord het langst is","Je eigen mening over het onderwerp geven"],
         answer: 0,
         wrongHints: [null,"Staat het antwoord van een 'tussen-de-regels' vraag letterlijk in de tekst?","Zegt de lengte van een antwoord iets over of het klopt?","Waar haal je bij zo'n vraag je aanwijzingen vandaan: uit jezelf of uit de tekst?"],

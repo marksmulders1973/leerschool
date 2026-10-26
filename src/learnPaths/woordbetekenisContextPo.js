@@ -289,6 +289,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
   // ── Stap 2: oefentekst diepzee ────────────────────────────────────
   {
     title: "Oefentekst — leven in de diepzee",
+    leesTekst: tekstDiepzee, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstDiepzee + "\n\n*In deze tekst staan vijf lastige woorden. Gebruik de vier trucs uit stap 1: kijk om het woord heen, zoek voorbeelden, let op tegenstellingen, of haal het woord uit elkaar. Beantwoord de 7 vragen.*",
     checks: [
       {
@@ -1133,6 +1134,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
   // ── Stap 4: Doorstroomtoets-mix vulkanen ──────────────────────────
   {
     title: "Doorstroomtoets-mix — vulkanen",
+    leesTekst: tekstVulkanen, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstVulkanen + "\n\n*Dit is de generale repetitie: zeven vragen precies zoals op de Doorstroomtoets. Gebruik alle vier de trucs door elkaar. Lees eerst de hele tekst, lees dan per vraag de zin met het woord nog één keer terug.*",
     checks: [
       {

@@ -385,6 +385,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Door wiens ogen? — perspectief",
+    leesTekst: tekstDuik, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstDuik + `
 
 Dit verhaal is een **ik-verhaal**: je leest steeds 'ik' en 'mijn'. Dat betekent dat je het verhaal beleeft **door de ogen van één personage** — hier Noa, die boven op de duikplank staat. Dat noemen we het **perspectief**: de bril waardoor jij als lezer meekijkt.
@@ -433,7 +434,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         },
       },
       {
-        q: "Welk woordje in de zin *\"Milan hangt lui over de rand, alsof het niks is\"* verklapt dat Noa raadt?",
+        q: "Welk woordje in de zin *\"Hij hangt lui over de rand van het bad, alsof het niks is\"* verklapt dat Noa raadt wat Milan denkt?",
         options: ["Alsof", "Lui", "Over", "Niks"],
         answer: 0,
         wrongHints: [
@@ -1135,6 +1136,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de mix",
+    leesTekst: tekstCadeau, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstCadeau + `
 
 Dit is de eindoefening: een verhaal met vragen zoals je ze écht op de Doorstroomtoets krijgt. Alles wat je geleerd hebt komt terug — door elkaar, net als op de toets:

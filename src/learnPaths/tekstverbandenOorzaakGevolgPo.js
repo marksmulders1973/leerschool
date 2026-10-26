@@ -402,6 +402,7 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Speuren in een tekst",
+    leesTekst: tekstLekkeBand, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstLekkeBand + `
 
 Zet nu je leesbril op! In deze tekst zit een hele **keten** van oorzaken en gevolgen verstopt: het één leidt tot het ander, en dát leidt weer tot iets nieuws.
@@ -1141,6 +1142,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de mix",
+    leesTekst: tekstKastanjeboom, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstKastanjeboom + `
 
 Dit is 'm: een tekst met vragen zoals je ze écht op de Doorstroomtoets krijgt. De vraag begint dan vaak met *"Waardoor kwam het dat...?"* of *"Wat was het gevolg van...?"*.

@@ -917,7 +917,7 @@ const steps = [
         },
       },
       {
-        q: "**Schat 39 × 21** (afgerond op 10):",
+        q: "**Schat 39 × 21**: rond eerst allebei de getallen af op tientallen en reken dan uit.",
         options: ["800","600","1000","900"],
         answer: 0,
         wrongHints: [null,"Te weinig — rond 39 en 21 af op tientallen en vermenigvuldig die.","1000 = 50 × 20. Rond je 39 af naar 50 of naar 40?","Te veel — heb je 30 ipv 20 gerekend?"],

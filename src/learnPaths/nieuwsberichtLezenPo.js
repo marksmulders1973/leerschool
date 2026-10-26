@@ -467,6 +467,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "De vragenbril op een echt bericht",
+    leesTekst: tekstSpeeltoren, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstSpeeltoren + `
 
 Zet je vragenbril op! Hierboven staat een nieuwsbericht zoals je het in een dorpskrant zou kunnen lezen. Nu ga je de zes gouden vragen gebruiken om er informatie uit te halen — precies wat je op de Doorstroomtoets ook doet.
@@ -1176,6 +1177,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de mix",
+    leesTekst: tekstAlpaca, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstAlpaca + `
 
 Dit is 'm: de eindoefening, met vragen zoals je ze écht op de Doorstroomtoets krijgt. Alles komt terug — de zes gouden vragen, feit of mening, de overdrijvende kop en de twee tijden in één bericht.

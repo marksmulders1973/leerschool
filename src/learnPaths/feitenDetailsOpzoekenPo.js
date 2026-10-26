@@ -333,6 +333,7 @@ Oefen de strategie met de vragen hieronder.`,
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Zoeken in een tekst",
+    leesTekst: tekstBijen, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstBijen + `
 
 Nu ga je de zoekstrategie gebruiken in een echte tekst — precies zoals op de Doorstroomtoets. Je hoeft de tekst niet uit je hoofd te leren: **terugkijken in de tekst mag altijd en is juist slim.**
@@ -971,6 +972,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-oefening — de museumfolder",
+    leesTekst: tekstUilenfort, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekstUilenfort + `
 
 Dit is 'm: een informatieve folder met vragen zoals je ze écht op de Doorstroomtoets krijgt. Alles wat je geleerd hebt komt langs: scannen op zoekwoorden, synoniemen herkennen, bijna-goed-antwoorden ontwijken en details exact overnemen.

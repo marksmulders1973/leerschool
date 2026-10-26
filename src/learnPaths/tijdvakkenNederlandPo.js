@@ -350,7 +350,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is het **feodaal stelsel**?",
+        q: "Wat is het **leenstelsel** (ook wel het feodale stelsel)?",
         options: [
           "Koning gaf grond als leen aan ridders en graven",
           "Boeren kochten grond van de koning met geld",
@@ -672,7 +672,7 @@ const steps = [
         },
       },
       {
-        q: "Wanneer werd de **Republiek officieel onafhankelijk**?",
+        q: "Wanneer **erkende Spanje** de Republiek officieel als onafhankelijk land?",
         options: ["1648 (Vrede van Münster)", "1581 (Plakkaat)", "1568 (begin oorlog)", "1795 (Franse tijd)"],
         answer: 0,
         wrongHints: [null, "Plakkaat verklaarde wel onafhankelijkheid, maar vrede met Spanje pas in 1648.", "Dat was het BEGIN.", "In 1795 veroverden de Fransen de Republiek juist."],
@@ -961,8 +961,8 @@ const steps = [
         },
       },
       {
-        q: "Was Nederland **neutraal** in WO1?",
-        options: ["Ja, het vocht niet mee", "Nee, het vocht met Engeland mee", "Nee, het vocht met Duitsland mee", "Nee, het werd bezet door Duitsland"],
+        q: "Wat deed Nederland in de **Eerste Wereldoorlog** (1914-1918)?",
+        options: ["Het bleef neutraal en vocht niet mee", "Het vocht mee aan de kant van Engeland", "Het vocht mee aan de kant van Duitsland", "Het werd bezet door Duitsland"],
         answer: 0,
         evidence: "Nederland was neutraal, maar economisch zwaar geraakt.",
         wrongHints: [null, "Engeland vocht wel in WO1 — maar stuurde Nederland ook soldaten naar het front?", "Vochten Nederlandse soldaten in WO1 echt tegen Engeland en Frankrijk? Kijk in de les.", "Kijk nog eens naar het verschil tussen WO1 en WO2 — in welke oorlog werd Nederland bezet?"],

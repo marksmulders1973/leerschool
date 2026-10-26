@@ -24,7 +24,8 @@ describe("startsets", () => {
         const regels = [`# Startset ${STARTSETS[sleutel].titel} — de eerste ${STARTSET_N} vragen`, "", `Gegenereerd door src/features/learn/startsets.test.js op ${new Date().toISOString().slice(0, 10)}. Bron: startsetsData.js. Aantal: ${set.length}.`, ""];
         set.forEach((q, i) => {
           regels.push(`## ${i + 1}. ${q.padTitel} (${q.pathId}, stap ${(q.stapIdx ?? 0) + 1})${q.stapTekst ? " ⚠️ hoort bij een leestekst in de stap" : ""}${q.svg ? " 🖼️ met plaatje" : ""}`);
-          regels.push(`**${String(q.q).replace(/\n/g, " ")}**`);
+          if (q.leesTekst) regels.push(`> Leestekst bij deze vraag: ${String(q.leesTekst).replace(/\s*\n\s*/g, " ")}`, "");
+          regels.push(`Vraag: ${String(q.q).replace(/\n/g, " ")}`);
           q.options.forEach((o, k) => regels.push(`- ${k === q.answer ? "✅" : "▫️"} ${String(o).replace(/\n/g, " ")}`));
           regels.push("");
         });

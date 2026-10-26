@@ -80,6 +80,7 @@ const steps = [
   // ── Stap 1 ──────────────────────────────────────────────────────
   {
     title: "Zakelijke tekst — informeren",
+    leesTekst: tekst1, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekst1 + "\n\n*Beantwoord de 4 vragen op basis van de tekst hierboven.*",
     checks: [
       {
@@ -633,6 +634,7 @@ const steps = [
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Instructieve tekst — uitleggen",
+    leesTekst: tekst2, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekst2 + "\n\n*Beantwoord de 4 vragen op basis van de tekst.*",
     checks: [
       {
@@ -1172,6 +1174,7 @@ const steps = [
   // ── Stap 3 ──────────────────────────────────────────────────────
   {
     title: "Betogende tekst — mening herkennen",
+    leesTekst: tekst3, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekst3 + "\n\n*Bij betogende teksten geeft de schrijver zijn mening + argumenten. Beantwoord de 4 vragen.*",
     checks: [
       {
@@ -1734,6 +1737,7 @@ const steps = [
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Verhalende tekst — gevoelens en motieven",
+    leesTekst: tekst4, // gaat mee naar Kwartier van vandaag / losse oefenvragen (26 okt 2026)
     explanation: tekst4 + "\n\n*Bij verhalen gaat het vaak om wat personages voelen of waarom ze iets doen. Beantwoord de 4 vragen.*",
     checks: [
       {

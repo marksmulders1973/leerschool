@@ -134,7 +134,7 @@ const steps = [
     explanation: "**Familieleden**:\n• mother / mum = moeder / mama\n• father / dad = vader / papa\n• sister = zus\n• brother = broer\n• grandma / grandmother = oma\n• grandpa / grandfather = opa\n• aunt = tante\n• uncle = oom\n• cousin = neef / nicht\n• son = zoon\n• daughter = dochter\n• husband = echtgenoot\n• wife = echtgenote\n\n**Bezit aanduiden** met 's:\n• Tom's sister = Toms zus\n• My mother's car = de auto van mijn moeder\n\n**Family** zelf = familie / gezin.",
     checks: [
       { q: "Wat betekent **brother**?", options: ["broer", "zus", "neef", "oom"], answer: 0, wrongHints: [null, "sister = zus.", "cousin = neef/nicht.", "uncle = oom."] },
-      { q: "Wat is **grandma**?", options: ["oma", "tante", "moeder", "zus"], answer: 0, wrongHints: [null, "aunt = tante.", "mother = moeder.", "sister = zus."] },
+      { q: "Wat betekent **grandma**?", options: ["oma", "tante", "moeder", "zus"], answer: 0, wrongHints: [null, "aunt = tante.", "mother = moeder.", "sister = zus."] },
       { q: "Wat betekent **daughter**?", options: ["dochter", "zoon", "moeder", "vrouw"], answer: 0, wrongHints: [null, "son = zoon.", "mother = moeder.", "wife = vrouw/echtgenote."] },
       { q: "Hoe zeg je *'mijn vader'*?", options: ["my father", "me father", "mine father", "my mother"], answer: 0, wrongHints: [null, "'Me' betekent 'mij', niet 'mijn'. Kijk in de uitleg bij 'Bezit aanduiden'.", "'Mine' gebruik je los, zonder woord erachter ('It is mine'). Welke vorm zet je vóór 'father'?", "Mother = moeder."] },
       { q: "Wat is **cousin**?", options: ["neef of nicht", "broer of zus", "oom of tante", "opa of oma"], answer: 0, wrongHints: [null, "brother = broer, sister = zus.", "uncle = oom, aunt = tante.", "grandpa = opa, grandma = oma."] },
