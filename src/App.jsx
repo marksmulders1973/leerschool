@@ -680,6 +680,19 @@ export default function App() {
     setPage("home");
   };
 
+  // Groep/klas aanpassen (Mijn pagina, Mark 13 aug: "dat moet je op je persoonlijke pagina
+  // kunnen aanpassen"; sinds 26 okt ook de groep-poort in het Start-kwartier). App bewaart het
+  // niveau als los cijfer; klas-zijn hangt aan userSchoolType.
+  const wijzigNiveau = ({ soort, nr, schoolType }, via = "mijn") => {
+    const lvl = String(nr);
+    const st = soort === "klas" ? (schoolType || userSchoolType || "brugklas") : "";
+    setUserLevel(lvl);
+    setUserSchoolType(st);
+    try { localStorage.setItem("ls_user", JSON.stringify({ name: userName, level: lvl, role, schoolType: st })); } catch {}
+    if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: lvl, role, schoolType: st });
+    track("groep_gewijzigd", { via, soort, nr });
+  };
+
   // Bottom-nav navigatie. "_home" = altijd de marketing-HomePage (Mark wens).
   const handleBottomNavNavigate = (target) => {
     // Bottom-tab "Leren" opent altijd de volledige hub — geen vakfilter
@@ -1576,18 +1589,7 @@ export default function App() {
             if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: userLevel, role: nieuweRol, schoolType: userSchoolType || "" });
             track("rol_gewijzigd", { via: "mijn", rol: nieuweRol });
           }}
-          onSetLevel={({ soort, nr, schoolType }) => {
-            // Groep/klas aanpassen op Mijn pagina (Mark 13 aug: "dat moet je
-            // op je persoonlijke pagina kunnen aanpassen"). App bewaart het
-            // niveau als los cijfer; klas-zijn hangt aan userSchoolType.
-            const lvl = String(nr);
-            const st = soort === "klas" ? (schoolType || userSchoolType || "brugklas") : "";
-            setUserLevel(lvl);
-            setUserSchoolType(st);
-            try { localStorage.setItem("ls_user", JSON.stringify({ name: userName, level: lvl, role, schoolType: st })); } catch {}
-            if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: lvl, role, schoolType: st });
-            track("groep_gewijzigd", { via: "mijn", soort, nr });
-          }}
+          onSetLevel={(keuze) => wijzigNiveau(keuze, "mijn")}
           onResumePath={(id, stepIdx) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);
@@ -2718,9 +2720,11 @@ export default function App() {
       )}
       {page === "start-kwartier" && (
         <StartKwartier
+          key={"start-" + (userLevel || "")}
           userName={userName}
           userLevel={userLevel || (/[?&](k|g)=/.test(window.location.search) ? "groep" + klasGroep : userLevel)}
           authUser={authUser}
+          onKiesGroep={role === "ouder" || role === "teacher" ? null : (n) => wijzigNiveau({ soort: "groep", nr: n }, "start-kwartier")}
           onStop={() => setPage("mijn-pagina")}
           onGa={(p) => {
             if (p === "learn-paths-hub") { setLearnInitialSearch(""); setEntryContext("leren"); }

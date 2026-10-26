@@ -20,6 +20,7 @@ import TesterOproep from "../../components/TesterOproep.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
+import GroepPoort from "../onboarding/GroepPoort.jsx";
 import Rapport, { MeesterOpmerking, rapportRijen } from "./Rapport.jsx";
 import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
 import { startsetSleutel, startsetVan, startsetBlok } from "../learn/startsetsData.js";
@@ -2028,22 +2029,10 @@ export default function MijnPagina({
                 profiel geen groep had): eerst kiezen, dan pas Begin, vakken en Werk aan. Ouders en
                 leerkrachten hebben geen groep nodig. */}
             {!niveau && onSetLevel && rolKey !== "ouder" && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "2px solid rgba(255,183,77,0.7)", background: kaartBg("rgba(255,183,77,0.08)") }}>
-                <div style={eyebrowStijl}>Eerst even dit</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 19, fontWeight: 700, color: "var(--color-text-strong, #fff)", margin: "2px 0 4px" }}>In welke groep zit je?</div>
-                <div style={{ fontSize: 13.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 12 }}>Dan laat ik precies de vakken en vragen zien die bij jouw groep horen.</div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                    <button key={n} type="button" onClick={() => { kiesNiveau("groep", n); try { track("mijn_groep_verplicht", { groep: n }); } catch { /* */ } }}
-                      style={{ padding: "14px 0", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.22)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong, #fff)", fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700 }}>
-                      groep {n}
-                    </button>
-                  ))}
-                </div>
-                <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginTop: 12, lineHeight: 1.5 }}>
-                  Zit je op de middelbare school? Tik bovenaan op <strong style={{ color: "var(--color-text)" }}>wissel</strong> en maak een profiel met je klas. Ben je een ouder of verzorger? Kies dan daar "ouder of verzorger".
-                </div>
-              </Card>
+              <GroepPoort
+                onKies={(n) => { kiesNiveau("groep", n); try { track("mijn_groep_verplicht", { groep: n }); } catch { /* */ } }}
+                voetnoot={<>Zit je op de middelbare school? Tik bovenaan op <strong style={{ color: "var(--color-text)" }}>wissel</strong> en maak een profiel met je klas. Ben je een ouder of verzorger? Kies dan daar "ouder of verzorger".</>}
+              />
             )}
             {(niveau || !onSetLevel || rolKey === "ouder") && (<>
             {/* ── Begin: het kwartier (naar het claude.ai-voorbeeld dat Mark

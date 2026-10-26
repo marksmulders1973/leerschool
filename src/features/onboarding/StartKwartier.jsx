@@ -42,6 +42,7 @@ import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
 import { bouwStartVragen, markeerStartKwartierGedaan, parseGroep, onderwerpVan } from "./startKwartier.js";
 import { klasId, thuisLink } from "../../shared/klasQr.js";
 import { markeerGezien } from "../../shared/geziendeVragen.js";
+import GroepPoort from "./GroepPoort.jsx";
 
 // Three.js pas laden als het park-kaartje in beeld komt (zelfde patroon als BuddyPicker).
 const MaatjeMini3D = lazy(() => import("../zoo/MaatjeMini3D.jsx"));
@@ -503,7 +504,12 @@ function KlaarKaart({ goed, totaal, groep, userName, onGa, klas = false }) {
 // geen 'start-kwartier gedaan'-vlag; groep uit de URL of de groepskiezer;
 // eigen events klas_open / klas_vraag / klas_klaar / klas_naar_juf zodat het
 // dagrapport klasgebruik los van het start-kwartier kan tellen (klasgolf.sql).
-export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa, klas = false, klasGroep, onKlasGroep }) {
+export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa, klas = false, klasGroep, onKlasGroep, onKiesGroep = null }) {
+  // Groep-poort (Mark 26 okt 2026, "ook zonder account verplicht een groep invullen"): een gast
+  // zonder groep kreeg hier stil groep 6. Geeft App een onKiesGroep mee en is er geen groep, dan
+  // eerst kiezen; App rendert dit scherm met key=userLevel, dus na de keuze laadt het opnieuw
+  // met de juiste vragen. Klas-stand en ouder/leerkracht (App geeft dan geen onKiesGroep) slaan dit over.
+  const poort = !klas && !!onKiesGroep && parseGroep(userLevel) == null;
   const groep = klas ? (klasGroep || 7) : (parseGroep(userLevel) ?? 6);
   // /klas op een breed digibord (kliktest 26 sep 2026): de smalle telefoonkolom was op 3-5 meter
   // onleesbaar (vraag ~20px). Op brede schermen alles evenredig vergroten, telefoon blijft gelijk.
@@ -524,6 +530,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const afgemeldRef = useRef(false);
 
   useEffect(() => {
+    if (poort) { track("startkwartier_groep_poort", {}); return undefined; }
     let dood = false;
     track(klas ? "klas_open" : "startkwartier_start", { groep, level: String(userLevel || "") });
     const t0 = Date.now();
@@ -615,6 +622,22 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
     if (i > stapIdx) return "later";
     return st.type === "show" ? "show" : "gedaan";
   };
+
+  if (poort) {
+    return (
+      <div style={S.wrap}>
+        <div style={S.top}>
+          <h2 style={S.titel}>{"🚀 Start-kwartier" + (naam ? " van " + naam : "")}</h2>
+          <Button variant="ghost" size="sm" onClick={() => { track("startkwartier_groep_poort_stop", {}); onStop(); }} aria-label="Stop het start-kwartier">Stop ✕</Button>
+        </div>
+        <GroepPoort
+          uitleg="Dan krijg je meteen vragen die bij jouw groep passen. Geen account nodig."
+          onKies={(n) => { track("startkwartier_groep_gekozen", { groep: n }); onKiesGroep(n); }}
+          voetnoot={<>Zit je op de middelbare school, of ben je ouder, verzorger of leerkracht? Ga dan naar <button type="button" onClick={() => { track("startkwartier_groep_poort_profiel", {}); onStop(); }} style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-text)", fontWeight: 700, fontFamily: "inherit", fontSize: "inherit", textDecoration: "underline" }}>Mijn pagina</button> en maak daar je profiel.</>}
+        />
+      </div>
+    );
+  }
 
   return (
     <div style={bordZoom > 1 ? { ...S.wrap, zoom: bordZoom } : S.wrap}>
