@@ -1,0 +1,352 @@
+[
+ {
+  "nr": 1,
+  "waar": "alfabet-woordenboek-po stap 4 vraag 4",
+  "eigenKeuze": "krokus",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 2,
+  "waar": "alfabet-woordenboek-po stap 4 vraag 5",
+  "eigenKeuze": "arend",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 3,
+  "waar": "algoritmen-programmeren-po stap 3 vraag 2",
+  "eigenKeuze": "Er moet 'herhaal 3 keer' staan",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 4,
+  "waar": "begrijpend-lezen-strategie stap 2 vraag 6",
+  "eigenKeuze": "Er zijn personages en er gebeurt iets",
+  "oordeel": "twijfel",
+  "reden": "Hint bij optie mening (\"je meenemen in wat er gebeurt\") omschrijft al half het goede antwoord."
+ },
+ {
+  "nr": 5,
+  "waar": "begrijpend-lezen-strategie stap 3 vraag 5",
+  "eigenKeuze": "zoals",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 6,
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 2",
+  "eigenKeuze": "Letten op aanwijzingen en signaalwoorden in de tekst",
+  "oordeel": "twijfel",
+  "reden": "Afleider \"Kijken welk antwoord het langst is\" is absurd; blijven 3 echte opties over."
+ },
+ {
+  "nr": 7,
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 10",
+  "eigenKeuze": "daarom",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 8,
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 11",
+  "eigenKeuze": "Snel zoeken naar één woord of feit",
+  "oordeel": "fout",
+  "reden": "Hints bij hardop voorlezen en samenvatten (\"Vind je zo snel één ding terug\") zeggen bijna letterlijk het goede antwoord (snel zoeken naar één woord of feit)."
+ },
+ {
+  "nr": 9,
+  "waar": "begrijpend-lezen-teksten-po stap 1 vraag 2",
+  "eigenKeuze": "Omdat je met één pedaalomwenteling dan meer afstand aflegde",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 10,
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 4",
+  "eigenKeuze": "Stap voor stap uitleggen hoe je een paperclip-armband maakt",
+  "oordeel": "fout",
+  "reden": "Hint bij \"argumenteren\" zegt \"alleen instructies\": dat is het antwoord."
+ },
+ {
+  "nr": 11,
+  "waar": "bekende-boeken-literatuur-po stap 4 vraag 9",
+  "eigenKeuze": "Plek waar je boeken kunt lenen",
+  "oordeel": "twijfel",
+  "reden": "Niveaus in telegramstijl (\"Boeken lenen gratis kind.\"), \"gratis in heel NL voor <18\" te stellig (zo is het niet overal)."
+ },
+ {
+  "nr": 12,
+  "waar": "bekende-wetenschappers-po stap 3 vraag 2",
+  "eigenKeuze": "HMS Beagle",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 13,
+  "waar": "bekende-wetenschappers-po stap 5 vraag 15",
+  "eigenKeuze": "Watson + Crick",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 14,
+  "waar": "belasting-po stap 4 vraag 9",
+  "eigenKeuze": "€255",
+  "oordeel": "twijfel",
+  "reden": "Hint bij €265 geeft de som voor (\"€300 − €45\"), en de bewerking kiezen is juist de hele opgave."
+ },
+ {
+  "nr": 15,
+  "waar": "beroepen-werk-po stap 1 vraag 3",
+  "eigenKeuze": "Werkt zonder dat hij betaald wordt",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 16,
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 3",
+  "eigenKeuze": "het wil je iets laten kopen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 17,
+  "waar": "breuken-po stap 4 vraag 1",
+  "eigenKeuze": "3/4",
+  "oordeel": "twijfel",
+  "reden": "Hint bij 2/8 klopt niet (2/8 komt niet van tellers en noemers optellen, dat geeft 3/8) en zegt hetzelfde als de hint bij 3/8."
+ },
+ {
+  "nr": 18,
+  "waar": "breuken-po stap 5 vraag 7",
+  "eigenKeuze": "15",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 19,
+  "waar": "brief-email-lezen-po stap 3 vraag 5",
+  "eigenKeuze": "Ze kennen elkaar niet goed; de schrijver gebruikt een formele toon",
+  "oordeel": "fout",
+  "reden": "Hint bij \"ruzie\" noemt \"hoe goed je iemand kent\" en verraadt zo het antwoord. Daarbij is \"kennen elkaar niet goed\" te stellig, want \"Geachte\" zegt vooral iets over een formele toon."
+ },
+ {
+  "nr": 20,
+  "waar": "brief-email-lezen-po stap 3 vraag 7",
+  "eigenKeuze": "20 maart",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 21,
+  "waar": "brugklas-orientatie stap 3 vraag 8",
+  "eigenKeuze": "Lezen en jezelf vragen stellen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 22,
+  "waar": "brugklas-orientatie stap 5 vraag 6",
+  "eigenKeuze": "30-60 minuten",
+  "oordeel": "fout",
+  "reden": "Feit/twee antwoorden: de beweegrichtlijn voor kinderen is minstens 60 min per dag (30-60 klopt daar niet mee), en 10-15 min helpt het brein en de stemming ook al."
+ },
+ {
+  "nr": 23,
+  "waar": "cijferend-rekenen stap 2 vraag 9",
+  "eigenKeuze": "13",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 24,
+  "waar": "cijferend-rekenen stap 6 vraag 6",
+  "eigenKeuze": "1565",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 25,
+  "waar": "cito-strategieen-groep8 stap 3 vraag 9",
+  "eigenKeuze": "Vlot, maar wel zorgvuldig lezen",
+  "oordeel": "fout",
+  "reden": "Vorm verraadt het: het goede antwoord is het gematigde midden, tussen extremen aan beide kanten (zo snel mogelijk/heel rustig/bewaren)."
+ },
+ {
+  "nr": 26,
+  "waar": "cito-strategieen-groep8 stap 4 vraag 3",
+  "eigenKeuze": "'altijd' of 'nooit'",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 27,
+  "waar": "cito-strategieen-groep8 stap 6 vraag 10",
+  "eigenKeuze": "2.000 liter",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 28,
+  "waar": "cito-strategieen-groep8 stap 7 vraag 6",
+  "eigenKeuze": "Rustig aan doen en op tijd naar bed",
+  "oordeel": "twijfel",
+  "reden": "Uit algemene kennis te weten; \"Veel cola drinken om fit te blijven\" is bijna absurd."
+ },
+ {
+  "nr": 29,
+  "waar": "cito-strategieen-groep8 stap 7 vraag 18",
+  "eigenKeuze": "Een goed ontbijt, zoals brood of havermout",
+  "oordeel": "twijfel",
+  "reden": "Uit algemene kennis te weten (afleiders wel van dezelfde soort)."
+ },
+ {
+  "nr": 30,
+  "waar": "conclusies-trekken-po stap 2 vraag 7",
+  "eigenKeuze": "Noor verhuist met haar vader naar een ander huis",
+  "oordeel": "fout",
+  "reden": "Hint bij \"logeren\" citeert de sleutelaanwijzing \"Papa praat over het nieuwe huis\" en geeft zo het antwoord (verhuizen)."
+ },
+ {
+  "nr": 31,
+  "waar": "conclusies-trekken-po stap 4 vraag 6",
+  "eigenKeuze": "Ruud Blom denkt dat bewoners de mus kunnen helpen",
+  "oordeel": "fout",
+  "reden": "Hint bij \"mus al verdwenen\" citeert \"we hopen dat de bewoners meedoen\" en verraadt zo het antwoord (bewoners kunnen helpen)."
+ },
+ {
+  "nr": 32,
+  "waar": "conclusies-trekken-po stap 4 vraag 7",
+  "eigenKeuze": "In Zonnehof leven nu maar weinig mussen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 33,
+  "waar": "continenten-wereld-po stap 4 vraag 4",
+  "eigenKeuze": "Later (vooruit)",
+  "oordeel": "dubbelzinnig",
+  "reden": "Direct ten oosten (Duitsland, Polen) is het even laat, de hint geeft dat zelf toe. \"Hetzelfde\" is dus ook te verdedigen."
+ },
+ {
+  "nr": 34,
+  "waar": "continenten-wereld-po stap 6 vraag 4",
+  "eigenKeuze": "22:00",
+  "oordeel": "twijfel",
+  "reden": "Hints bij 10:00 en 07:00 geven samen de som voor (15 + 7), en de bewerking kiezen is de hele opgave."
+ },
+ {
+  "nr": 35,
+  "waar": "deelsommen-met-rest-po stap 1 vraag 2",
+  "eigenKeuze": "5 rest 3",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 36,
+  "waar": "deelsommen-met-rest-po stap 2 vraag 7",
+  "eigenKeuze": "8 tenten",
+  "oordeel": "fout",
+  "reden": "Hint bij \"9 tenten\" zegt \"Reken 8 × 4\" en noemt zo het antwoord 8."
+ },
+ {
+  "nr": 37,
+  "waar": "delen-po stap 1 vraag 7",
+  "eigenKeuze": "6 ÷ 0",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 38,
+  "waar": "delen-po stap 2 vraag 8",
+  "eigenKeuze": "25",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 39,
+  "waar": "dienstregeling-roosters-po stap 2 vraag 2",
+  "eigenKeuze": "woensdag",
+  "oordeel": "fout",
+  "reden": "Antwoord staat letterlijk in de vraag (\"woensdag gym\"), dus er wordt niets getoetst. De vraag begint in telegramstijl (\"1e uur: maandag rekenen, ...\")."
+ },
+ {
+  "nr": 40,
+  "waar": "dierenklassen-po stap 4 vraag 3",
+  "eigenKeuze": "Vlinder",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 41,
+  "waar": "digitale-geletterdheid-po stap 4 vraag 19",
+  "eigenKeuze": "De chip die alle berekeningen doet",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 10",
+  "eigenKeuze": "3/4",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 19",
+  "eigenKeuze": "1",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 45",
+  "eigenKeuze": "0,6",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 2",
+  "eigenKeuze": "€30",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 10",
+  "eigenKeuze": "10",
+  "oordeel": "twijfel",
+  "reden": "Hint bij 5 (\"Dat is 1 deel\") rekent het half voor: 2 delen = 10."
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 44",
+  "eigenKeuze": "10%",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 24",
+  "eigenKeuze": "35 mm",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 25",
+  "eigenKeuze": "20 m²",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 50,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 15",
+  "eigenKeuze": "€12",
+  "oordeel": "goed",
+  "reden": ""
+ }
+]

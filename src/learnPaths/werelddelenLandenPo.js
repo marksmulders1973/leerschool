@@ -14,13 +14,13 @@ const steps = [
   {
     title: "7 werelddelen + 5 oceanen",
     explanation:
-      "**Werelddelen / continenten** = grote landmassa's op aarde.\n\nDe **7 werelddelen** *(in volgorde van groot naar klein)*:\n\n**1. Azië** *(44 mln km², 60% wereldbevolking)*:\n• Grootste werelddeel.\n• ~4,8 miljard mensen.\n• Land: Mount Everest *(hoogste berg)*, woestijnen, regenwouden.\n• Beroemde landen: China, India, Japan, Indonesië.\n\n**2. Afrika** *(30 mln km², 1,4 miljard mensen)*:\n• Wieg van mensheid *(oudste mens-fossielen)*.\n• Sahara *(grootste woestijn)*.\n• Nijl *(langste rivier)*.\n• 54 landen.\n\n**3. Noord-Amerika** *(24 mln km², 580 mln mensen)*:\n• Vooral VS + Canada + Mexico.\n• Grote rotsbergen, Niagara, woestijnen, prairies.\n\n**4. Zuid-Amerika** *(18 mln km², 430 mln mensen)*:\n• Amazone-regenwoud *(grootste ter wereld)*.\n• Andes-bergen *(2e hoogste keten)*.\n• Brazilië, Argentinië, Chili.\n\n**5. Antarctica** *(14 mln km², geen permanente bewoners)*:\n• Bevroren land om Zuidpool.\n• Tot -89°C koud.\n• Geen landen *(wetenschap-stations)*.\n• ~70% van wereld-zoetwater *(in ijs)*.\n\n**6. Europa** *(10 mln km², 750 mln mensen)*:\n• Op één na kleinste continent.\n• 50 landen.\n• Vele talen + culturen.\n• EU *(27 landen)*.\n\n**7. Oceanië / Australië** *(9 mln km², 45 mln mensen)*:\n• Kleinste werelddeel.\n• Australië + Nieuw-Zeeland + eilanden Pacific.\n\n**Geheugensteun** *(volgorde grootte)*:\n*A-A-N-Z-A-E-O* = Azië-Afrika-NoordAmerika-ZuidAmerika-Antarctica-Europa-Oceanië.\n\n**5 oceanen** *(in volgorde van groot)*:\n\n**1. Stille Oceaan / Pacific** *(165 mln km²)*: tussen Azië + Amerika. Grootste!\n**2. Atlantische Oceaan** *(106 mln km²)*: tussen Amerika + Europa/Afrika.\n**3. Indische Oceaan** *(75 mln km²)*: tussen Afrika + Azië + Australië.\n**4. Zuidelijke Oceaan** *(20 mln km²)*: rond Antarctica.\n**5. Noordelijke IJszee / Arctische Oceaan** *(14 mln km²)*: rond Noordpool.\n\n**Vergelijken**:\n• Land: 30% van aardoppervlak.\n• Water: 70%.\n• Stille Oceaan alleen al groter dan alle land samen!\n\n**Verschil tussen continent + land**:\n• **Continent** = grote landmassa.\n• **Land** = politieke eenheid met grenzen + regering.\n• 1 continent kan vele landen hebben.\n• Bv. Europa = 50 landen.\n\n**Wereldbevolking**:\n• **8,1 miljard** mensen *(2024)*.\n• Groeit nog steeds — maar trager.\n• Verwacht piek rond **10 miljard** *(2080)*.\n• Daarna langzame daling *(minder geboorten)*.\n\n**Toets-feitje**:\n**Rusland** = grootste land ter wereld qua oppervlak *(17 mln km²)*. Strekt over **11 tijdzones** — als het 12 uur 's middags is in Moskou, is het al 7 uur 's avonds in Vladivostok.",
+      "**Werelddelen / continenten** = grote landmassa's op aarde.\n\nDe **7 werelddelen** *(in volgorde van groot naar klein)*:\n\n**1. Azië** *(44 mln km², 60% wereldbevolking)*:\n• Grootste werelddeel.\n• ~4,8 miljard mensen.\n• Land: Mount Everest *(hoogste berg)*, woestijnen, regenwouden.\n• Beroemde landen: China, India, Japan, Indonesië.\n\n**2. Afrika** *(30 mln km², 1,4 miljard mensen)*:\n• Wieg van mensheid *(oudste mens-fossielen)*.\n• Sahara *(grootste woestijn)*.\n• Nijl *(langste rivier)*.\n• 54 landen.\n\n**3. Noord-Amerika** *(24 mln km², 580 mln mensen)*:\n• Vooral VS + Canada + Mexico.\n• Grote rotsbergen, Niagara, woestijnen, prairies.\n\n**4. Zuid-Amerika** *(18 mln km², 430 mln mensen)*:\n• Amazone-regenwoud *(grootste ter wereld)*.\n• Andes-bergen *(2e hoogste keten)*.\n• Brazilië, Argentinië, Chili.\n\n**5. Antarctica** *(14 mln km², geen permanente bewoners)*:\n• Bevroren land om Zuidpool.\n• Tot -89°C koud.\n• Geen landen *(wetenschap-stations)*.\n• ~70% van wereld-zoetwater *(in ijs)*.\n\n**6. Europa** *(10 mln km², 750 mln mensen)*:\n• Op één na kleinste continent.\n• 50 landen.\n• Vele talen + culturen.\n• EU *(27 landen)*.\n\n**7. Oceanië / Australië** *(9 mln km², 45 mln mensen)*:\n• Kleinste werelddeel.\n• Australië + Nieuw-Zeeland + eilanden Pacific.\n\n**Geheugensteun** *(volgorde grootte)*:\n*A-A-N-Z-A-E-O* = Azië-Afrika-NoordAmerika-ZuidAmerika-Antarctica-Europa-Oceanië.\n\n**5 oceanen** *(in volgorde van groot)*:\n\n**1. Stille Oceaan / Pacific** *(165 mln km²)*: tussen Azië + Amerika. Grootste!\n**2. Atlantische Oceaan** *(106 mln km²)*: tussen Amerika + Europa/Afrika.\n**3. Indische Oceaan** *(75 mln km²)*: tussen Afrika + Azië + Australië.\n**4. Zuidelijke Oceaan** *(20 mln km²)*: rond Antarctica.\n**5. Noordelijke IJszee / Arctische Oceaan** *(14 mln km²)*: rond Noordpool.\n\n**Vergelijken**:\n• Land: 30% van aardoppervlak.\n• Water: 70%.\n• Stille Oceaan alleen al groter dan alle land samen!\n\n**Verschil tussen continent + land**:\n• **Continent** = grote landmassa.\n• **Land** = politieke eenheid met grenzen + regering.\n• 1 continent kan vele landen hebben.\n• Bv. Europa = 50 landen.\n\n**Wereldbevolking**:\n• **8,1 miljard** mensen *(2024)*.\n• Groeit nog steeds — maar trager.\n• Verwacht piek rond **10 miljard** *(2080)*.\n• Daarna langzame daling *(minder geboorten)*.\n\n**Toets-feitje**:\n**Rusland** = grootste land ter wereld qua oppervlak *(17 mln km²)*. Strekt over **11 tijdzones** — als het 12 uur 's middags is in Moskou, is het al 7 uur 's avonds in Vladivostok. Moskou (ruim 13 miljoen mensen) is de grootste stad die helemaal in Europa ligt.",
     checks: [
       {
         q: "Hoeveel **werelddelen** zijn er als je Noord- en Zuid-Amerika apart telt en Antarctica meetelt?",
-        options: ["7", "5", "10", "3"],
+        options: ["7", "5", "6", "8"],
         answer: 0,
-        wrongHints: [null, "Dat is de telling waarbij Amerika één werelddeel is en Antarctica niet meedoet. Tel nu Noord- en Zuid-Amerika apart én Antarctica mee.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Dat is de telling waarbij Amerika één werelddeel is en Antarctica niet meedoet. Tel nu Noord- en Zuid-Amerika apart én Antarctica mee.", "Zo tel je als Amerika één werelddeel is, of als Antarctica niet meedoet. Noem ze eens één voor één op.", "Zoveel zijn het er niet. Noem ze eens op, van groot naar klein."],
         uitlegPad: {
           stappen: [
             { titel: "7 werelddelen (continenten)", tekst: "De wereld wordt verdeeld in **7 werelddelen**: 1) Azië, 2) Afrika, 3) Noord-Amerika, 4) Zuid-Amerika, 5) Antarctica, 6) Europa, 7) Oceanië (Australië)." },
@@ -39,72 +39,72 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "7 werelddelen. Antarctica is helemaal aan zuidpool — bijna geen mensen wonen er." }],
           niveaus: {
-            basis: "7 werelddelen: Azië, Afrika, NA, ZA, Antarctica, Europa, Oceanië.",
+            basis: "7 werelddelen: Azië, Afrika, Noord-Amerika, Zuid-Amerika, Antarctica, Europa, Oceanië.",
             simpeler: "Azië grootste, Antarctica koudste, Oceanië kleinste.",
             nogSimpeler: "7 werelddelen.",
           },
         },
       },
       {
-        q: "**Grootste werelddeel**?",
+        q: "Welk werelddeel is het **grootste**?",
         options: ["Azië", "Afrika", "Europa", "Antarctica"],
         answer: 0,
-        wrongHints: [null, "Tweede.", "Klein.", "Wel groot maar niet grootst."],
+        wrongHints: [null, "Afrika is groot, maar in de rij van groot naar klein staat het op plek twee.", "Europa is juist een van de kleinste werelddelen.", "Antarctica is groot, maar staat in de rij van groot naar klein pas op plek vijf."],
       },
       {
-        q: "**Grootste oceaan**?",
-        options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"],
+        q: "Wat is de **grootste oceaan** van de wereld?",
+        options: ["Stille Oceaan", "Atlantische Oceaan", "Indische Oceaan", "Noordelijke IJszee"],
         answer: 0,
-        wrongHints: [null, "Tweede.", "Derde.", "Vijfde."],
+        wrongHints: [null, "Deze oceaan tussen Amerika en Europa is groot, maar niet de grootste.", "Deze oceaan tussen Afrika en Australië staat op plek drie.", "Dit is juist de kleinste oceaan, rond de Noordpool."],
       },
       {
         q: "Hoeveel mensen wonen er op de wereld (2024)?",
-        options: ["~8 miljard", "1 miljard", "100 miljard", "500 miljoen"],
+        options: ["Ongeveer 8 miljard", "Ongeveer 5 miljard", "Ongeveer 12 miljard", "Ongeveer 1,4 miljard"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Onmogelijk.", "Te weinig."],
+        wrongHints: [null, "Zoveel mensen wonen er alleen al in Azië. Op de hele wereld zijn het er meer.", "Zoveel worden het er zelfs niet als de wereldbevolking rond 2080 het hoogst is.", "Zoveel mensen wonen er alleen al in Afrika, of alleen in India. De hele wereld heeft er veel meer."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Welke oceaan ligt **rond Antarctica**?",
         options: ["Zuidelijke Oceaan", "Noordelijke IJszee", "Indische Oceaan", "Atlantische Oceaan"],
         answer: 0,
-        wrongHints: [null, "Die ligt juist rond de Noordpool.", null, null],
+        wrongHints: [null, "Die ligt juist rond de Noordpool.", "Deze oceaan ligt tussen Afrika, Azië en Australië, niet rond Antarctica.", "Deze oceaan ligt tussen Amerika aan de ene kant en Europa en Afrika aan de andere kant."],
       },
       {
         q: "Welk deel van het aardoppervlak is **water**?",
         options: ["70%", "30%", "50%", "90%"],
         answer: 0,
-        wrongHints: [null, "Dat is het deel dat land is.", null, null],
+        wrongHints: [null, "Kijk eens naar een wereldbol: zie je meer land of meer water?", "Dan zou er evenveel land als water zijn. Klopt dat met een wereldbol?", "Zoveel is het niet: er is best veel land, met zeven werelddelen erop."],
       },
       {
         q: "Wat is het verschil tussen een **continent** en een **land**?",
         options: [
-          "Een land heeft grenzen en een regering",
-          "Een continent is kleiner dan een land",
-          "Een land ligt altijd op een eiland",
-          "Er is helemaal geen verschil",
+          "Een continent is een groot stuk land, een land heeft eigen grenzen en een regering",
+          "Een continent is een groep landen met één munt, een land heeft eigen geld",
+          "Een continent heeft één regering voor iedereen, een land is een provincie daarvan",
+          "Een continent is een groot eiland in zee, een land is een stuk vasteland",
         ],
         answer: 0,
-        wrongHints: [null, "Hoeveel landen liggen er in Europa?", null, null],
+        wrongHints: [null, "Denk aan de euro: betaalt heel Azië met één munt? En heel Afrika?", "Denk aan Azië: heeft dat werelddeel één regering voor China, India en Japan samen?", "Europa en Azië liggen aan elkaar vast. Zijn het dan eilanden?"],
       },
       {
         q: "Welk land is qua **oppervlakte** het grootste ter wereld?",
         options: ["Rusland", "China", "Canada", "Brazilië"],
         answer: 0,
-        wrongHints: [null, "Dit land heeft heel veel inwoners, maar is kleiner van oppervlakte.", null, null],
+        wrongHints: [null, "Dit land heeft heel veel inwoners, maar is kleiner van oppervlakte.", "Canada is heel groot, maar staat op de tweede plaats.", "Brazilië is het grootste land van Zuid-Amerika, maar wereldwijd zijn er grotere."],
       },
     ],
   },
   {
     title: "Europa + Azië",
     explanation:
-      "**EUROPA** 🇪🇺:\n\nNL ligt hier. **50 landen** + ~750 miljoen mensen.\n\n**EU (Europese Unie)**:\n• Sinds **1957** *(toen EEG)*.\n• **27 landen** lid *(2024)*.\n• Open grenzen *(Schengen)*.\n• **Euro** *(€)* sinds 2002.\n• Brussel = hoofdkwartier.\n\n**Grote Europese landen + hoofdsteden**:\n• **Frankrijk** *(Parijs)* — 65 mln mensen.\n• **Duitsland** *(Berlijn)* — 84 mln, grootste EU-land.\n• **Italië** *(Rome)* — 59 mln.\n• **Spanje** *(Madrid)* — 47 mln.\n• **Polen** *(Warschau)* — 38 mln.\n• **Verenigd Koninkrijk** *(Londen)* — 67 mln *(geen EU sinds Brexit 2020)*.\n• **Nederland** *(Amsterdam — hoofdstad, Den Haag — regering)* — 18 mln.\n• **België** *(Brussel)* — 11,7 mln.\n• **Rusland** *(Moskou)* — grootste land, deels Europa-deels Azië.\n\n**Skandinavië**:\n• **Noorwegen** *(Oslo)*, **Zweden** *(Stockholm)*, **Denemarken** *(Kopenhagen)*, **Finland** *(Helsinki)*, **IJsland** *(Reykjavik)*.\n• Welvarende landen, koud, sociaal.\n\n**Andere**:\n• Portugal, Griekenland, Ierland, Oostenrijk, Zwitserland *(buiten EU)*, Tsjechië, Hongarije, Roemenië, etc.\n\n**Bekende meren + rivieren**:\n• **Donau** *(2.860 km, door 10 landen)*.\n• **Volga** *(3.530 km, in Rusland, langste Europa)*.\n• **Rijn** *(door NL en 5 landen)*.\n• **Theems** *(Engeland)*.\n• **Seine** *(Frankrijk)*.\n\n**Bekende bergen**:\n• **Alpen** *(o.a. Frankrijk/Italië/Zwitserland)*: **Mont Blanc** 4810 m hoogste.\n• **Pyreneeën** *(Spanje/Frankrijk)*.\n• **Karpaten** *(Oost-Europa)*.\n• **Kaukasus** *(Rusland/Georgië)*: Elbrus 5642 m, Europa's hoogste berg.\n\n**AZIË** 🌏:\n\n**~4,8 miljard** mensen *(60% wereldbevolking!)* + 48 landen.\n\n**Grote Aziatische landen + hoofdsteden**:\n• **China** *(Beijing)* — 1,41 miljard mensen, 2e van wereld.\n• **India** *(New Delhi)* — 1,43 miljard, grootste land qua mensen *(sinds 2023)*.\n• **Indonesië** *(Jakarta)* — 280 mln, oud-NL-kolonie.\n• **Pakistan** *(Islamabad)*, **Bangladesh** *(Dhaka)*.\n• **Japan** *(Tokio)* — 125 mln, eilanden.\n• **Filipijnen** *(Manila)*.\n• **Vietnam, Thailand, Maleisië**.\n• **Rusland** *(deels)*.\n\n**Midden-Oosten** *(Azië)*:\n• **Saoedi-Arabië** *(Riyad)* — Mekka + Medina.\n• **Iran** *(Teheran)*.\n• **Israël** *(Jeruzalem)*, **Palestina**.\n• **Turkije** *(Ankara)* — deels Azië-deels Europa.\n• **Verenigde Arabische Emiraten** *(Abu Dhabi, Dubai)*.\n\n**Beroemde plekken**:\n• **Mount Everest** *(8.849 m, Nepal/Tibet)* — hoogste berg.\n• **Dode Zee** *(Israël)* — laagste punt op land *(-430 m)*.\n• **Gobi-woestijn** *(China/Mongolië)*.\n• **Yangtze** *(China)* — 3e langste rivier wereldwijd.\n• **Taj Mahal** *(India, 17e eeuw)*.\n• **Grote Muur China** *(20.000+ km)*.\n\n**Religies in Azië**:\n• Boeddhisme, hindoeïsme, islam, christendom, jodendom — allemaal **ontstaan** in Azië!\n\n**Toets-feitje**:\nDe **Stille Oceaan** *(Pacific)* is zo groot dat alle continenten samen er in zouden passen — met nog ruimte over. Genoemd '**stille**' door Magellan in 1520 omdat hij rustig water vond — vaak is hij juist niet stil.",
+      "**EUROPA** 🇪🇺:\n\nNL ligt hier. **50 landen** + ~750 miljoen mensen.\n\n**EU (Europese Unie)**:\n• Sinds **1957** *(toen EEG)*.\n• **27 landen** lid *(2024)*.\n• Open grenzen *(Schengen)*.\n• **Euro** *(€)* sinds 2002.\n• Brussel = hoofdkwartier.\n\n**Grote Europese landen + hoofdsteden**:\n• **Frankrijk** *(Parijs)* — 65 mln mensen.\n• **Duitsland** *(Berlijn)* — 84 mln, grootste EU-land.\n• **Italië** *(Rome)* — 59 mln.\n• **Spanje** *(Madrid)* — 47 mln.\n• **Polen** *(Warschau)* — 38 mln.\n• **Verenigd Koninkrijk** *(Londen)* — 67 mln *(geen EU sinds Brexit 2020)*.\n• **Nederland** *(Amsterdam — hoofdstad, Den Haag — regering)* — 18 mln.\n• **België** *(Brussel)* — 11,7 mln.\n• **Rusland** *(Moskou)* — grootste land, deels Europa-deels Azië.\n\n**Skandinavië**:\n• **Noorwegen** *(Oslo)*, **Zweden** *(Stockholm)*, **Denemarken** *(Kopenhagen)*, **Finland** *(Helsinki)*, **IJsland** *(Reykjavik)*.\n• Welvarende landen, koud, sociaal.\n\n**Andere**:\n• Portugal, Griekenland, Ierland, Oostenrijk, Zwitserland *(buiten EU)*, Tsjechië, Hongarije, Roemenië, etc.\n\n**Bekende meren + rivieren**:\n• **Donau** *(2.860 km, door 10 landen)*.\n• **Volga** *(3.530 km, in Rusland, langste Europa)*.\n• **Rijn** *(door NL en 5 landen)*.\n• **Theems** *(Engeland)*.\n• **Seine** *(Frankrijk)*.\n\n**Bekende bergen**:\n• **Alpen** *(o.a. Frankrijk/Italië/Zwitserland)*: **Mont Blanc** ± 4805 m hoogste.\n• **Pyreneeën** *(Spanje/Frankrijk)*.\n• **Karpaten** *(Oost-Europa)*.\n• **Kaukasus** *(Rusland/Georgië)*: Elbrus 5642 m, Europa's hoogste berg.\n\n**AZIË** 🌏:\n\n**~4,8 miljard** mensen *(60% wereldbevolking!)* + 48 landen.\n\n**Grote Aziatische landen + hoofdsteden**:\n• **China** *(Peking, ook wel Beijing)* — 1,41 miljard mensen, 2e van wereld.\n• **India** *(New Delhi)* — 1,43 miljard, grootste land qua mensen *(sinds 2023)*.\n• **Indonesië** *(Jakarta)* — 280 mln, oud-NL-kolonie.\n• **Pakistan** *(Islamabad)*, **Bangladesh** *(Dhaka)*.\n• **Japan** *(Tokio)* — 125 mln, eilanden.\n• **Filipijnen** *(Manila)*.\n• **Vietnam, Thailand, Maleisië**.\n• **Rusland** *(deels)*.\n\n**Midden-Oosten** *(Azië)*:\n• **Saoedi-Arabië** *(Riyad)* — Mekka + Medina.\n• **Iran** *(Teheran)*.\n• **Israël** *(Jeruzalem)*, **Palestina**.\n• **Turkije** *(Ankara)* — deels Azië-deels Europa.\n• **Verenigde Arabische Emiraten** *(Abu Dhabi, Dubai)*.\n\n**Beroemde plekken**:\n• **Mount Everest** *(8.849 m, Nepal/Tibet)* — hoogste berg.\n• **Dode Zee** *(Israël)* — laagste punt op land *(-430 m)*.\n• **Gobi-woestijn** *(China/Mongolië)*.\n• **Yangtze** *(China)* — 3e langste rivier wereldwijd.\n• **Taj Mahal** *(India, 17e eeuw)*.\n• **Grote Muur China** *(20.000+ km)*.\n\n**Religies in Azië**:\n• Boeddhisme, hindoeïsme, islam, christendom, jodendom — allemaal **ontstaan** in Azië!\n\n**Toets-feitje**:\nDe **Stille Oceaan** *(Pacific)* is zo groot dat alle continenten samen er in zouden passen — met nog ruimte over. Genoemd '**stille**' door Magellan in 1520 omdat hij rustig water vond — vaak is hij juist niet stil.",
     checks: [
       {
-        q: "Hoofdstad van **Frankrijk**?",
+        q: "Wat is de hoofdstad van **Frankrijk**?",
         options: ["Parijs", "Lyon", "Marseille", "Bordeaux"],
         answer: 0,
-        wrongHints: [null, "Steden niet hoofdstad.", "Niet.", "Niet."],
+        wrongHints: [null, "Lyon is een grote stad aan de Rhône, maar de regering zit er niet.", "Marseille is een grote havenstad aan de Middellandse Zee, maar geen hoofdstad.", "Bordeaux is bekend van de wijn, maar de regering zit in een andere stad."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een hoofdstad?", tekst: "De **hoofdstad** is de belangrijkste stad van een land. Vaak zit daar de regering, het parlement en koning/president." },
@@ -129,16 +129,16 @@ const steps = [
         },
       },
       {
-        q: "**Grootste land** qua bevolking 2024?",
-        options: ["India", "China", "VS", "Rusland"],
+        q: "Welk land had in 2024 de **meeste inwoners**?",
+        options: ["India", "China", "Verenigde Staten", "Rusland"],
         answer: 0,
-        wrongHints: [null, "Recent niet meer.", "Veel minder.", "Veel minder."],
+        wrongHints: [null, "Dit land stond lang op één, maar is in 2023 ingehaald.", "De VS heeft ruim 330 miljoen inwoners. Twee landen in Azië hebben er meer dan een miljard.", "Rusland is het grootste land qua oppervlakte, maar heeft maar zo'n 145 miljoen inwoners."],
       },
       {
-        q: "**Hoogste berg** ter wereld?",
+        q: "Welke berg is de **hoogste** op aarde?",
         options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"],
         answer: 0,
-        wrongHints: [null, "Europa.", "Afrika.", "Zuid-Amerika."],
+        wrongHints: [null, "De Mont Blanc is de hoogste berg van de Alpen, maar nog geen 5 km hoog.", "De Kilimanjaro is de hoogste berg van Afrika. Heeft Afrika ook de hoogste berg van de wereld?", "De Aconcagua is de hoogste berg van Amerika, bijna 7 km. Er bestaat een nog hogere."],
         uitlegPad: {
           stappen: [
             { titel: "Mount Everest is hoogste", tekst: "**Mount Everest** in de **Himalaya** (grens Nepal/Tibet) is met **8.849 meter** de hoogste berg van de wereld. Hoger dan de wolken!" },
@@ -156,17 +156,17 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Everest = #1 wereld. Mont Blanc = #1 Europa. Per werelddeel een topper." }],
           niveaus: {
-            basis: "Mount Everest (Himalaya, Nepal) is hoogste berg: 8.849 m.",
+            basis: "Mount Everest (Himalaya, op de grens van Nepal en China) is de hoogste berg: 8.849 m.",
             simpeler: "Everest ≈ 9 km hoog, bijna zo hoog als vliegtuigen vliegen.",
             nogSimpeler: "Everest = hoogste.",
           },
         },
       },
       {
-        q: "Hoeveel **landen in EU** (2024)?",
-        options: ["27", "50", "10", "100"],
+        q: "Hoeveel landen zijn er lid van de **EU** (Europese Unie)?",
+        options: ["27", "28", "50", "25"],
         answer: 0,
-        wrongHints: [null, "Heel Europa is meer.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Zoveel waren het in 2013. Wat veranderde er in 2020?", "Zoveel landen liggen er in heel Europa. Zijn die allemaal lid van de EU?", "Zoveel waren het in 2004. Daarna kwamen er nog landen bij."],
         uitlegPad: {
           stappen: [
             { titel: "EU vs Europa", tekst: "Let op het verschil:\n• **Europa** = werelddeel (~50 landen totaal)\n• **EU** = Europese Unie = club van **27 landen** die samenwerken op handel, wetten, geld.\nNiet alle Europese landen zijn EU-lid (bv. Noorwegen, Zwitserland, UK niet)." },
@@ -196,7 +196,7 @@ const steps = [
         q: "Welke rivier is de **langste van Europa**?",
         options: ["Volga", "Donau", "Rijn", "Seine"],
         answer: 0,
-        wrongHints: [null, "Die rivier stroomt door 10 landen, maar is korter.", null, null],
+        wrongHints: [null, "Die rivier stroomt door 10 landen, maar is korter.", "De Rijn is belangrijk voor Nederland, maar veel korter dan de langste.", "De Seine stroomt door Parijs en is een stuk korter."],
         uitlegPad: {
           stappen: [
             {
@@ -236,9 +236,9 @@ const steps = [
       },
       {
         q: "Waar ligt het **laagste punt op land** van de hele wereld?",
-        options: ["Bij de Dode Zee", "In de Zuidplaspolder", "In de Gobi-woestijn", "Op de Mont Blanc"],
+        options: ["Bij de Dode Zee", "In de Zuidplaspolder", "In de Gobi-woestijn", "Bij de Kaspische Zee"],
         answer: 0,
-        wrongHints: [null, "Dat is het laagste punt van Nederland, niet van de wereld.", null, null],
+        wrongHints: [null, "Dat is het laagste punt van Nederland, niet van de wereld.", "De Gobi is een woestijn in China en Mongolië, op een hoge vlakte.", "De Kaspische Zee ligt ook onder zeeniveau, maar maar zo'n 28 meter. Het laagste punt ligt veel dieper."],
         uitlegPad: {
           stappen: [
             {
@@ -247,7 +247,7 @@ const steps = [
             },
             {
               titel: "Hoog en laag",
-              tekst: "De **Mont Blanc** is juist een hoge berg (4.810 m). De **Gobi** is een woestijn in China en Mongolië.",
+              tekst: "De **Kaspische Zee** ligt ook onder zeeniveau (ongeveer -28 m), maar lang niet zo laag. De **Gobi** is een woestijn in China en Mongolië.",
             },
           ],
           woorden: [
@@ -271,7 +271,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Dode Zee (-430 m).",
-            simpeler: "Bij de Dode Zee in Israël is het land het laagst van de hele wereld.",
+            simpeler: "Bij de Dode Zee, tussen Israël en Jordanië, is het land het laagst van de hele wereld.",
             nogSimpeler: "Dode Zee.",
           },
         },
@@ -284,7 +284,7 @@ const steps = [
           null,
           "In dat jaar begon de samenwerking die later de EU werd.",
           "In dat jaar ging het Verenigd Koninkrijk uit de EU.",
-          null,
+          "Toen betaalde je in Nederland nog met de gulden. De euro kwam veel later.",
         ],
         uitlegPad: {
           stappen: [
@@ -332,19 +332,19 @@ const steps = [
   {
     title: "Amerika + Afrika + Oceanië",
     explanation:
-      "**NOORD-AMERIKA** 🌎:\n\n**Verenigde Staten (VS)** *(Washington D.C.)*:\n• 333 miljoen mensen.\n• 50 staten *(Californië, Texas, Florida, New York, etc.)*.\n• Beroemd: Statue of Liberty, Grand Canyon, Hollywood, NASA, Disney.\n• Vlag = 'Stars and Stripes' *(50 sterren + 13 strepen)*.\n\n**Canada** *(Ottawa)*:\n• 2e grootste land in **oppervlak** *(9,98 mln km²)*.\n• Maar weinig bevolking *(40 mln)* — vooral natuur.\n• Toronto, Vancouver, Montreal.\n• Talen: Engels + Frans.\n\n**Mexico** *(Mexico-Stad)*:\n• 130 mln mensen.\n• Spaans-talig.\n• Maya + Azteken-erfgoed.\n• Cancun, Tulum *(toerisme)*.\n\n**Caribisch gebied**:\n• **Cuba** *(Havana)*, **Jamaica**, **Haïti**, **Dominicaanse Republiek**.\n• **Aruba, Curaçao, Bonaire, St. Maarten, Saba, St. Eustatius** = NL-Caribisch *(deel van Koninkrijk NL)*.\n\n**ZUID-AMERIKA** 🌎:\n\n**Brazilië** *(Brasília)*:\n• Grootste ZA-land.\n• 215 mln mensen.\n• Portugees-talig *(rest van ZA: vooral Spaans)*.\n• Amazone-regenwoud — grootste regenwoud ter wereld.\n• Rio de Janeiro met **Christus de Verlosser**-standbeeld.\n• Beroemd carnaval.\n• Voetbal-grootmacht.\n\n**Argentinië** *(Buenos Aires)*:\n• Tango.\n• Voetbal *(Messi)*.\n• Pampas *(grasvlakten)*.\n• Patagonië *(zuidpunt)*.\n\n**Chili** *(Santiago)*:\n• Lange smalle vorm langs Andes.\n• Atacama-woestijn *(droogste)*.\n\n**Peru** *(Lima)*:\n• Machu Picchu *(Inca-stad)*.\n• Andes.\n\n**Andere**: Colombia, Venezuela, Ecuador, Bolivia, Paraguay, Uruguay, Guyana, Suriname *(NL-kolonie tot 1975, NL-talig)*.\n\n**AFRIKA** 🌍:\n\n**54 landen**! Veel verscheidenheid.\n\n**Noord-Afrika** *(Arabisch + islam vooral)*:\n• **Egypte** *(Caïro)*: piramides, Nijl-rivier, Sphinx.\n• **Marokko** *(Rabat)*: Sahara, Berberse cultuur.\n• **Algerije, Tunesië, Libië**.\n\n**West-Afrika**:\n• **Nigeria** *(Abuja)*: grootste land Afrika qua bevolking *(220 mln)*, Lagos-megastad.\n• **Senegal, Ghana, Ivoorkust, Mali**.\n\n**Oost-Afrika**:\n• **Ethiopië** *(Addis Abeba)*: oudste mens-fossielen.\n• **Kenia** *(Nairobi)*: safari + Masai.\n• **Tanzania** *(Dodoma)*: Kilimanjaro, Serengeti.\n\n**Zuid-Afrika** *(Pretoria/Kaapstad/Bloemfontein — 3 hoofdsteden)*:\n• 60 mln.\n• Nelson Mandela.\n• Apartheid-verleden tot 1994.\n• Afrikaans-taal *(uit Nederlands)*.\n• Tafelberg.\n\n**Sahara**: grootste hete woestijn *(9 mln km²)*.\n**Nijl**: langste rivier ter wereld *(6.650 km)*.\n**Victoria-meer**: groot meer Oost-Afrika.\n**Kilimanjaro** *(Tanzania)*: 5895 m, hoogste Afrika.\n\n**Dieren-erfgoed**:\nGiraffes, olifanten, leeuwen, neushoorns, gorilla's, chimpansees, zebra's, krokodillen.\n\n**OCEANIË / AUSTRALIË** 🇦🇺:\n\n**Australië** *(Canberra)*:\n• 26 mln mensen.\n• Eiland-continent.\n• Bekende plekken: Sydney *(Opera House)*, Great Barrier Reef, Uluru *(Ayers Rock)*.\n• Dieren: kangoeroe, koala, vogelbekdier, krokodil.\n• Bevolking: 80% **aan kust** *(binnenland = woestijn 'outback')*.\n\n**Nieuw-Zeeland** *(Wellington)*:\n• 2 grote eilanden.\n• Lord of the Rings-filmlocaties.\n• Schapen-grootmacht *(meer schapen dan mensen)*.\n• Maori-cultuur.\n\n**Eilanden Pacific**:\n• **Papoea-Nieuw-Guinea, Fiji, Samoa, Tonga, Vanuatu**.\n• Vele kleine eilanden.\n\n**Hawaï** *(VS-staat)*: vulkanische eilanden in Pacific.\n\n**Antarctica** ❄️:\n• Geen vaste bewoners.\n• 70 onderzoeksstations van verschillende landen.\n• Bevroren land.\n• Pinguïns, zeehonden.\n• Miljoenen jaren geleden was er bos!\n• Klimaatverandering = ijs smelt.\n\n**Toets-feitje**:\nIn **Australië** rij je **links** op de weg *(zoals UK, Japan, India, Zuid-Afrika)*. In meeste landen rechts. Zo'n derde van de mensen rijdt links.",
+      "**NOORD-AMERIKA** 🌎:\n\n**Verenigde Staten (VS)** *(Washington D.C.)*:\n• 333 miljoen mensen.\n• 50 staten *(Californië, Texas, Florida, New York, etc.)*.\n• Beroemd: Statue of Liberty, Grand Canyon, Hollywood, NASA, Disney.\n• Vlag = 'Stars and Stripes' *(50 sterren + 13 strepen)*.\n\n**Canada** *(Ottawa)*:\n• 2e grootste land in **oppervlak** *(9,98 mln km²)*.\n• Maar weinig bevolking *(40 mln)* — vooral natuur.\n• Toronto, Vancouver, Montreal.\n• Talen: Engels + Frans.\n\n**Mexico** *(Mexico-Stad)*:\n• 130 mln mensen.\n• Spaans-talig.\n• Maya + Azteken-erfgoed.\n• Cancun, Tulum *(toerisme)*.\n\n**Caribisch gebied**:\n• **Cuba** *(Havana)*, **Jamaica**, **Haïti**, **Dominicaanse Republiek**.\n• **Aruba, Curaçao, Bonaire, St. Maarten, Saba, St. Eustatius** = NL-Caribisch *(deel van Koninkrijk NL)*.\n\n**ZUID-AMERIKA** 🌎:\n\n**Brazilië** *(Brasília)*:\n• Grootste land van Zuid-Amerika.\n• Hoofdstad **Brasília** werd speciaal gebouwd, midden in het land, en is de hoofdstad sinds **1960** *(daarvoor was dat Rio de Janeiro)*. Van bovenaf lijkt de stad op een vliegtuig.\n• 215 mln mensen.\n• Portugees-talig *(rest van Zuid-Amerika: vooral Spaans)*.\n• Amazone-regenwoud — grootste regenwoud ter wereld.\n• Rio de Janeiro met **Christus de Verlosser**-standbeeld.\n• Beroemd carnaval.\n• Voetbal-grootmacht.\n\n**Argentinië** *(Buenos Aires)*:\n• Tango.\n• Voetbal *(Messi)*.\n• Pampas *(grasvlakten)*.\n• Patagonië *(zuidpunt)*.\n\n**Chili** *(Santiago)*:\n• Lange smalle vorm langs Andes.\n• Atacama-woestijn *(droogste)*.\n\n**Peru** *(Lima)*:\n• Machu Picchu *(Inca-stad)*.\n• Andes.\n\n**Andere**: Colombia, Venezuela, Ecuador, Bolivia, Paraguay, Uruguay, Guyana, Suriname *(NL-kolonie tot 1975, NL-talig)*.\n\n**AFRIKA** 🌍:\n\n**54 landen**! Veel verscheidenheid.\n\n**Noord-Afrika** *(Arabisch + islam vooral)*:\n• **Egypte** *(Caïro)*: piramides, Nijl-rivier, Sphinx.\n• **Marokko** *(Rabat)*: Sahara, Berberse cultuur.\n• **Algerije, Tunesië, Libië**.\n\n**West-Afrika**:\n• **Nigeria** *(Abuja)*: grootste land Afrika qua bevolking *(220 mln)*, Lagos-megastad.\n• **Senegal, Ghana, Ivoorkust, Mali**.\n\n**Oost-Afrika**:\n• **Ethiopië** *(Addis Abeba)*: oudste mens-fossielen.\n• **Kenia** *(Nairobi)*: safari + Masai.\n• **Tanzania** *(Dodoma)*: Kilimanjaro, Serengeti.\n\n**Zuid-Afrika** *(Pretoria/Kaapstad/Bloemfontein — 3 hoofdsteden)*:\n• 60 mln.\n• Nelson Mandela.\n• Apartheid-verleden tot 1994.\n• Afrikaans-taal *(uit Nederlands)*.\n• Tafelberg.\n\n**Sahara**: grootste hete woestijn *(9 mln km²)*.\n**Nijl**: langste rivier ter wereld *(6.650 km)*.\n**Victoria-meer**: groot meer Oost-Afrika.\n**Kilimanjaro** *(Tanzania)*: 5895 m, hoogste Afrika.\n\n**Dieren-erfgoed**:\nGiraffes, olifanten, leeuwen, neushoorns, gorilla's, chimpansees, zebra's, krokodillen.\n\n**OCEANIË / AUSTRALIË** 🇦🇺:\n\n**Australië** *(Canberra)*:\n• 26 mln mensen.\n• Eiland-continent.\n• Bekende plekken: Sydney *(Opera House)*, Great Barrier Reef, Uluru *(Ayers Rock)*.\n• Dieren: kangoeroe, koala, vogelbekdier, krokodil.\n• Bevolking: 80% **aan kust** *(binnenland = woestijn 'outback')*.\n\n**Nieuw-Zeeland** *(Wellington)*:\n• 2 grote eilanden.\n• Lord of the Rings-filmlocaties.\n• Schapen-grootmacht *(meer schapen dan mensen)*.\n• Maori-cultuur.\n\n**Eilanden Pacific**:\n• **Papoea-Nieuw-Guinea, Fiji, Samoa, Tonga, Vanuatu**.\n• Vele kleine eilanden.\n\n**Hawaï** *(VS-staat)*: vulkanische eilanden in Pacific.\n\n**Antarctica** ❄️:\n• Geen vaste bewoners.\n• 70 onderzoeksstations van verschillende landen.\n• Bevroren land.\n• Pinguïns, zeehonden.\n• Miljoenen jaren geleden was er bos!\n• Klimaatverandering = ijs smelt.\n\n**Toets-feitje**:\nIn **Australië** rij je **links** op de weg *(zoals UK, Japan, India, Zuid-Afrika)*. In meeste landen rechts. Zo'n derde van de mensen rijdt links.",
     checks: [
       {
-        q: "Hoofdstad van **Brazilië**?",
-        options: ["Brasília", "Rio de Janeiro", "São Paulo", "Buenos Aires"],
+        q: "Welke stad is de hoofdstad van het grootste land van **Zuid-Amerika**?",
+        options: ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"],
         answer: 0,
-        wrongHints: [null, "Bekend maar niet hoofdstad.", "Bekend maar niet hoofdstad.", "Argentinië."],
+        wrongHints: [null, "Rio de Janeiro was tot 1960 de hoofdstad. Daarna werd er een nieuwe hoofdstad gebouwd.", "São Paulo is de stad met de meeste inwoners, maar de regering zit er niet.", "Salvador was heel lang geleden de eerste hoofdstad, maar dat is het al sinds 1763 niet meer."],
       },
       {
-        q: "**Langste rivier** ter wereld?",
+        q: "Welke rivier geldt als de **langste** ter wereld?",
         options: ["Nijl", "Amazone", "Yangtze", "Mississippi"],
         answer: 0,
-        wrongHints: [null, "Tweede — Amazone.", "Derde — China.", "Vierde — VS."],
+        wrongHints: [null, "De Amazone heeft het meeste water. Volgens de meeste metingen is hij net iets korter.", "De Yangtze is de langste rivier van Azië, maar niet van de wereld.", "De Mississippi is de langste rivier van de VS, maar er zijn langere."],
         uitlegPad: {
           stappen: [
             { titel: "De Nijl: 6.650 km", tekst: "De **Nijl** is de **langste rivier ter wereld**: ongeveer **6.650 km**. Loopt door **11 landen** in Afrika, voornamelijk **Egypte + Sudan + Ethiopië + Uganda**." },
@@ -363,23 +363,23 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Nijl = #1 lengte. Amazone = #1 water-volume. Allebei top, maar verschillende rangordes." }],
           niveaus: {
-            basis: "De Nijl is langste rivier ter wereld.",
-            simpeler: "De Nijl (Egypte/Afrika) is ~6.650 km lang — langste ooit.",
+            basis: "De Nijl geldt als de langste rivier ter wereld.",
+            simpeler: "De Nijl (Egypte/Afrika) is ~6.650 km lang: volgens de meeste metingen de langste rivier ter wereld.",
             nogSimpeler: "Nijl",
           },
         },
       },
       {
-        q: "Welk land heeft **Tafelberg** + Mandela?",
-        options: ["Zuid-Afrika", "Nigeria", "Egypte", "Brazilië"],
+        q: "In welk land ligt de **Tafelberg**, en waar was **Nelson Mandela** president?",
+        options: ["Zuid-Afrika", "Nigeria", "Egypte", "Kenia"],
         answer: 0,
-        wrongHints: [null, "Andere.", "Andere.", "Niet."],
+        wrongHints: [null, "Nigeria ligt in West-Afrika en heeft de meeste inwoners van Afrika, maar de Tafelberg ligt er niet.", "In Egypte vind je piramides en de Nijl, geen Tafelberg.", "Kenia is bekend van safari's en de Masai. Mandela kwam uit een ander land."],
       },
       {
-        q: "Welk dier is **typisch Australië**?",
+        q: "Welk dier is **typisch** voor Australië?",
         options: ["Kangoeroe", "Leeuw", "Tijger", "Olifant"],
         answer: 0,
-        wrongHints: [null, "Afrika.", "Azië.", "Afrika/Azië."],
+        wrongHints: [null, "Leeuwen leven in het wild op de savanne van Afrika.", "Tijgers leven in het wild in de bossen van Azië.", "Olifanten leven in het wild in Afrika en Azië."],
         uitlegPad: {
           stappen: [
             { titel: "Australië = uniek dieren", tekst: "Australië is een **eiland-continent** — al miljoenen jaren afgezonderd van rest van wereld. Daarom evolueerden er **unieke dieren** die nergens anders voorkomen." },
@@ -409,37 +409,37 @@ const steps = [
         q: "**Ottawa** is de hoofdstad van welk land?",
         options: ["Canada", "Mexico", "Verenigde Staten", "Cuba"],
         answer: 0,
-        wrongHints: [null, null, "De hoofdstad van dit land is Washington D.C.", null],
+        wrongHints: [null, "De hoofdstad van Mexico heeft bijna dezelfde naam als het land zelf.", "De hoofdstad van dit land is Washington D.C.", "Cuba is een eiland in de Caribische Zee. Ottawa ligt veel noordelijker."],
       },
       {
         q: "Welke taal spreken de meeste mensen in **Brazilië**?",
         options: ["Portugees", "Spaans", "Engels", "Frans"],
         answer: 0,
-        wrongHints: [null, "Die taal spreken ze vooral in de andere landen van Zuid-Amerika.", null, null],
+        wrongHints: [null, "Die taal spreken ze vooral in de andere landen van Zuid-Amerika.", "Engels spreken ze in de VS en Canada, niet in Brazilië.", "Frans spreek je in Frankrijk en in een deel van Canada."],
       },
       {
-        q: "Welk land in Zuid-Amerika was tot **1975** een Nederlandse kolonie?",
+        q: "Welk land in Zuid-Amerika werd in **1975** onafhankelijk van Nederland?",
         options: ["Suriname", "Guyana", "Venezuela", "Colombia"],
         answer: 0,
-        wrongHints: [null, null, null, null],
+        wrongHints: [null, "Guyana was ooit deels Nederlands, maar werd al in 1814 Engels en in 1966 onafhankelijk van Engeland.", "Venezuela was een Spaanse kolonie; daar spreken ze Spaans.", "In Colombia spreken ze Spaans. In welk land spreken veel mensen Nederlands?"],
       },
       {
         q: "Wat is de grootste **hete woestijn** ter wereld?",
         options: ["Sahara", "Gobi", "Atacama", "Kalahari"],
         answer: 0,
-        wrongHints: [null, null, "Die woestijn is de droogste, niet de grootste.", null],
+        wrongHints: [null, "De Gobi ligt in Azië en kan in de winter juist heel koud worden.", "Die woestijn is de droogste, niet de grootste.", "De Kalahari ligt in het zuiden van Afrika en is veel kleiner."],
       },
       {
         q: "Hoeveel **strepen** staan er op de vlag van de VS?",
-        options: ["13", "50", "27", "7"],
+        options: ["13", "50", "15", "7"],
         answer: 0,
-        wrongHints: [null, "Dat is het aantal sterren.", null, null],
+        wrongHints: [null, "Dat is het aantal sterren.", "Te veel. Elke streep staat voor een van de eerste staten. Hoeveel waren dat?", "Dat zijn alleen de rode strepen. Tel de witte strepen er ook bij."],
       },
       {
         q: "Hoeveel **hoofdsteden** heeft Zuid-Afrika?",
         options: ["3", "1", "2", "5"],
         answer: 0,
-        wrongHints: [null, "De meeste landen hebben er één, maar Zuid-Afrika is anders.", null, null],
+        wrongHints: [null, "De meeste landen hebben er één, maar Zuid-Afrika is anders.", "Zuid-Afrika verdeelt het werk van de regering over meer steden. Kijk in de uitleg bij Zuid-Afrika.", "Zoveel zijn het er niet. Kijk in de uitleg bij Zuid-Afrika."],
       },
     ],
   },
@@ -447,17 +447,17 @@ const steps = [
     title: "Eind-toets — wereld mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Hoeveel **werelddelen** telt de indeling die je op school leert?", options: ["7", "5", "10", "3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
-      { q: "**Grootste** werelddeel?", options: ["Azië", "Afrika", "Europa", "Australië"], answer: 0, wrongHints: [null, "Tweede.", "Klein.", "Kleinst."] },
-      { q: "**Hoogste berg** ter wereld?", options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"], answer: 0, wrongHints: [null, "Europa.", "Afrika.", "Zuid-Amerika."] },
-      { q: "Hoofdstad **Frankrijk**?", options: ["Parijs", "Lyon", "Berlijn", "Madrid"], answer: 0, wrongHints: [null, "Niet.", "Duitsland.", "Spanje."] },
-      { q: "**Hoofdstad** Brazilië?", options: ["Brasília", "Rio", "Buenos Aires", "Lima"], answer: 0, wrongHints: [null, "Stad maar geen hoofdstad.", "Argentinië.", "Peru."] },
-      { q: "**Grootste oceaan**?", options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"], answer: 0, wrongHints: [null, "Tweede.", "Derde.", "Klein."] },
+      { q: "De vijf Olympische ringen tellen Amerika als één werelddeel en laten Antarctica weg. Hoeveel **werelddelen** krijg je als je Noord- en Zuid-Amerika apart telt en Antarctica meetelt?", options: ["7", "5", "6", "9"], answer: 0, wrongHints: [null, "Dat is het aantal ringen. Lees de vraag nog eens: wat moet je anders tellen?", "Dan heb je maar één van de twee dingen gedaan. Wat moet er nog bij?", "Zoveel zijn het er niet. Noem ze eens op, van groot naar klein."] },
+      { q: "Op welk werelddeel woont **ruim de helft** van alle mensen op aarde?", options: ["Azië", "Afrika", "Noord-Amerika", "Zuid-Amerika"], answer: 0, wrongHints: [null, "In Afrika wonen zo'n 1,4 miljard mensen. Dat is lang niet de helft van ruim 8 miljard.", "In Noord-Amerika wonen zo'n 580 miljoen mensen, veel minder dan de helft.", "In Zuid-Amerika wonen zo'n 430 miljoen mensen. Dat is maar een klein deel."] },
+      { q: "Welke berg ligt op de grens van **Nepal** en **Tibet** (China)?", options: ["Mount Everest", "Fuji", "Elbrus", "Kilimanjaro"], answer: 0, wrongHints: [null, "De Fuji ligt ook in Azië, maar op een eiland: in Japan.", "De Elbrus ligt in Rusland, in het Kaukasus-gebergte.", "De Kilimanjaro ligt in Tanzania, in Afrika."] },
+      { q: "In welke Franstalige stad staat de **Eiffeltoren**?", options: ["Parijs", "Brussel", "Genève", "Luxemburg"], answer: 0, wrongHints: [null, "In Brussel staat het Atomium, niet de Eiffeltoren.", "Genève in Zwitserland is bekend van het grote meer met de hoge fontein.", "Luxemburg is de hoofdstad van een klein buurland. De Eiffeltoren staat in een groter land."] },
+      { q: "Welke stad werd speciaal gebouwd om in **1960** de nieuwe hoofdstad van een land in Zuid-Amerika te worden?", options: ["Brasília", "Rio de Janeiro", "Buenos Aires", "Lima"], answer: 0, wrongHints: [null, "Rio de Janeiro is al ruim 450 jaar oud. Werd die stad pas in 1960 gebouwd?", "Buenos Aires is al ruim 400 jaar oud en al heel lang een hoofdstad.", "Lima werd al in 1535 gesticht door de Spanjaarden."] },
+      { q: "In welke oceaan zou al het land van de aarde samen passen, met nog ruimte over?", options: ["Stille Oceaan", "Atlantische Oceaan", "Indische Oceaan", "Zuidelijke Oceaan"], answer: 0, wrongHints: [null, "De Atlantische Oceaan is de tweede in grootte. Al het land samen is groter.", "De Indische Oceaan is de derde in grootte. Al het land samen past er niet in.", "De oceaan rond Antarctica is juist een van de kleinste."] },
       {
         q: "Welke **rivier** stroomt door **Egypte**?",
-        options: ["Nijl", "Amazone", "Rijn", "Donau"],
+        options: ["Nijl", "Tigris", "Jordaan", "Kongo"],
         answer: 0,
-        wrongHints: [null, "Amazone = Zuid-Amerika.", "Rijn = Europa (Duitsland-NL).", "Donau = Europa (Oost)."],
+        wrongHints: [null, "De Tigris stroomt door Turkije en Irak, niet door Egypte.", "De Jordaan stroomt langs Israël en Jordanië, niet door Egypte.", "De Kongo stroomt door Midden-Afrika, ver ten zuiden van Egypte."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Nijl?", tekst: "De **Nijl** is een **gigantische rivier in Afrika**. ~6.650 km lang — vaak genoemd als langste rivier ter wereld (debat met Amazone). Stroomt door **11 landen**, eindigt in Egypte → Middellandse Zee." },
@@ -479,10 +479,10 @@ const steps = [
         },
       },
       {
-        q: "Welk **buurland** grenst aan de **noordkant** van Nederland?",
-        options: ["Geen enkel land", "België", "Duitsland", "Frankrijk"],
+        q: "Welk water ligt op de kaart direct boven de **Waddeneilanden**?",
+        options: ["De Noordzee", "De Waddenzee", "De Oostzee", "Het IJsselmeer"],
         answer: 0,
-        wrongHints: [null, "België ligt ZUIDEN van NL.", "Duitsland ligt OOSTEN.", "Frankrijk ligt veel zuidelijker."],
+        wrongHints: [null, "De Waddenzee ligt tussen de eilanden en het vasteland, dus eronder.", "De Oostzee ligt aan de andere kant van Denemarken, ver van Nederland.", "Het IJsselmeer ligt nog verder naar het zuiden, achter de Afsluitdijk."],
         uitlegPad: {
           stappen: [
             { titel: "NL buurlanden + windstreken", tekst: "Nederland heeft maar **2 landen-buren**:\n• **België** in het **zuiden**\n• **Duitsland** in het **oosten**\n\nIn het **noorden** + **westen** ligt de **Noordzee**. Aan de overkant van de Noordzee: **Engeland/Schotland** (westen) en **Noorwegen** (noorden)." },
@@ -500,14 +500,14 @@ const steps = [
             { type: "feit", tekst: "Caribische deel: Aruba, Curaçao, Sint Maarten zijn LANDEN binnen het Koninkrijk NL. Bonaire/Saba/Sint Eustatius zijn 'bijzondere gemeentes'." },
           ],
           basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Frankrijk grenst NIET aan NL — daar zit België tussen. Toets-instinker." }],
-          niveaus: { basis: "Noordzee.", simpeler: "Ten noorden van NL ligt de Noordzee (water, geen land). Verder weg over zee: Engeland/Schotland.", nogSimpeler: "Noordzee" },
+          niveaus: { basis: "Noordzee.", simpeler: "Ten noorden van Nederland, boven de Waddeneilanden, ligt de Noordzee (water, geen land). Verder weg over zee liggen Schotland en Noorwegen.", nogSimpeler: "Noordzee" },
         },
       },
       {
         q: "Wat is een **continent**?",
-        options: ["Een heel groot stuk land", "Een land met een eigen vlag", "Een hoge berg met sneeuw", "Een grote zee tussen landen"],
+        options: ["Een heel groot stuk vasteland", "Een land met een eigen vlag", "Een groep landen met één munt", "Een grote zee tussen landen"],
         answer: 0,
-        wrongHints: [null, "Een continent BEVAT landen, IS niet een land.", "Niet — wel staan er bergen OP continenten.", "Niet — tegenovergesteld: continent = land, oceaan = water."],
+        wrongHints: [null, "Een continent is veel groter dan één land: er liggen meestal veel landen op.", "Dat lijkt meer op de euro-landen in de EU. Een continent is iets anders.", "Een groot stuk water heet een oceaan of zee. Waar gaat een continent over?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een continent?", tekst: "Een **continent** (of **werelddeel**) is een **gigantisch stuk land** op de aarde. Er zijn **7 continenten** wereldwijd:\n1. **Azië** (grootste, 4,8 miljard mensen)\n2. **Afrika** (snelst groeiend)\n3. **Noord-Amerika**\n4. **Zuid-Amerika**\n5. **Antarctica** (zuidpool — geen permanente bewoners)\n6. **Europa** (waar NL ligt)\n7. **Australië/Oceanië** (kleinste)" },
@@ -528,25 +528,25 @@ const steps = [
           niveaus: { basis: "Werelddeel — 7 stuks.", simpeler: "Een continent is een heel groot stuk land. Er zijn 7 continenten op aarde: Azië, Afrika, Europa, Noord-Amerika, Zuid-Amerika, Antarctica, Oceanië.", nogSimpeler: "Werelddeel" },
         },
       },
-      { q: "Wat is de **hoofdstad van Frankrijk**?", options: ["Parijs","Berlijn","Madrid","Londen"], answer: 0, wrongHints: [null, "Duitsland.", "Spanje.", "VK."] },
-      { q: "Op welk werelddeel ligt **Egypte**?", options: ["Afrika","Azië","Europa","Australië"], answer: 0, wrongHints: [null, "Sinaï-schiereiland is wel deels Azië — maar het grootste deel ligt elders.", "Te ver noord.", "Heel ver weg — andere oceaan."] },
-      { q: "Welke oceaan ligt tussen **Europa en Amerika**?", options: ["Atlantische Oceaan","Stille Oceaan","Indische Oceaan","Noordzee"], answer: 0, wrongHints: [null, "Tussen Amerika + Azië.", "Tussen Afrika + Australië.", "Tussen NL + VK."] },
-      { q: "Wat is de **hoogste berg ter wereld**?", options: ["Mount Everest","Mont Blanc","Kilimanjaro","Fuji"], answer: 0, wrongHints: [null, "Alpen, lager.", "Afrika, lager.", "Japan, lager."] },
-      { q: "Hoofdstad van **Duitsland**?", options: ["Berlijn","Hamburg","München","Frankfurt"], answer: 0, wrongHints: [null, "Wel grote havenstad, maar geen hoofdstad.", "Wel grote zuid-stad, maar geen hoofdstad.", "Wel financieel centrum (ECB), maar geen hoofdstad."] },
-      { q: "Hoofdstad van **Spanje**?", options: ["Madrid","Barcelona","Valencia","Sevilla"], answer: 0, wrongHints: [null, "Wel grote stad in Catalonië, maar geen hoofdstad.", "Wel grote oostkust-stad, maar geen hoofdstad.", "Wel grote zuid-stad, maar geen hoofdstad."] },
-      { q: "Hoofdstad van **Italië**?", options: ["Rome","Milaan","Napels","Venetië"], answer: 0, wrongHints: [null, "Wel grote stad in noord-Italië, maar geen hoofdstad.", "Wel grote zuid-stad, maar geen hoofdstad.", "Wel beroemd watertoerisme, maar geen hoofdstad."] },
-      { q: "Hoofdstad van **Verenigd Koninkrijk**?", options: ["Londen","Manchester","Edinburgh","Liverpool"], answer: 0, wrongHints: [null, "Niet.", "Schotland-hoofdstad.", "Niet."] },
-      { q: "Hoofdstad van **VS**?", options: ["Washington D.C.","New York","Los Angeles","Chicago"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Niet.", "Niet."] },
-      { q: "Hoofdstad van **Rusland**?", options: ["Moskou","Sint-Petersburg","Kiev","Minsk"], answer: 0, wrongHints: [null, "Andere stad.", "Oekraïne.", "Wit-Rusland."] },
-      { q: "Hoofdstad van **Japan**?", options: ["Tokio","Kyoto","Osaka","Seoul"], answer: 0, wrongHints: [null, "Vorige.", "Niet.", "Zuid-Korea."] },
-      { q: "Hoofdstad van **China**?", options: ["Peking","Shanghai","Hong Kong","Taipei"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Andere.", "Taiwan."] },
-      { q: "Hoofdstad van **Brazilië**?", options: ["Brasília","Rio de Janeiro","São Paulo","Lima"], answer: 0, wrongHints: [null, "Vroeger.", "Grootste.", "Peru."] },
-      { q: "Welke woestijn is in **Afrika**?", options: ["Sahara","Gobi","Mojave","Atacama"], answer: 0, wrongHints: [null, "Azië.", "VS.", "Zuid-Amerika."] },
-      { q: "Welke is **grootste** Europese stad?", options: ["Moskou","Londen","Parijs","Madrid"], answer: 0, wrongHints: [null, "Tweede.", "Niet.", "Niet."] },
-      { q: "Welk land heeft **Acropolis**?", options: ["Griekenland","Italië","Egypte","Turkije"], answer: 0, wrongHints: [null, "Romeins erfgoed.", "Egyptisch.", "Niet."] },
-      { q: "Welke **brug** is bekend in San Francisco?", options: ["Golden Gate","Tower Bridge","Brooklyn","Erasmusbrug"], answer: 0, wrongHints: [null, "Londen.", "New York.", "Rotterdam."] },
-      { q: "**Taj Mahal** ligt in?", options: ["India","Egypte","China","Japan"], answer: 0, wrongHints: [null, "Egypte heeft piramides, geen Taj Mahal.", "China heeft de Muur, geen Taj Mahal.", "Japan heeft Fuji, geen Taj Mahal."] },
-      { q: "**Christus de Verlosser**-standbeeld ligt in?", options: ["Rio de Janeiro","Madrid","Rome","Buenos Aires"], answer: 0, wrongHints: [null, "Spanje — daar staat hij niet.", "Italië — daar staat hij niet.", "Argentinië — daar staat hij niet."] },
+      { q: "Welke van deze hoofdsteden ligt aan de rivier de **Seine**?", options: ["Parijs","Berlijn","Madrid","Londen"], answer: 0, wrongHints: [null, "Door Berlijn stroomt de Spree, in Duitsland.", "Madrid ligt in Spanje, ver ten zuiden van de Seine.", "Door Londen stroomt de Theems."] },
+      { q: "Op welk werelddeel ligt het **grootste deel** van Egypte?", options: ["Afrika","Azië","Europa","Australië"], answer: 0, wrongHints: [null, "Een klein stukje van Egypte, het Sinaï-schiereiland, ligt in Azië. Het grootste deel ligt elders.", "Europa ligt aan de overkant van de Middellandse Zee.", "Australië ligt aan de andere kant van de wereld. Zoek de Nijl eens op de kaart."] },
+      { q: "Over welke oceaan vaart een schip van **Rotterdam** naar **New York**?", options: ["Atlantische Oceaan","Stille Oceaan","Indische Oceaan","Noordelijke IJszee"], answer: 0, wrongHints: [null, "De Stille Oceaan ligt aan de westkant van Amerika, richting Azië.", "De Indische Oceaan ligt tussen Afrika, Azië en Australië.", "De Noordelijke IJszee ligt helemaal in het noorden, rond de Noordpool. Daar vaar je niet langs op weg naar New York."] },
+      { q: "Welke berg is bijna **twee keer zo hoog** als de Mont Blanc (ruim 4,8 km)?", options: ["Mount Everest","Aconcagua","Kilimanjaro","Fuji"], answer: 0, wrongHints: [null, "De Aconcagua is bijna 7 km hoog. Is dat al bijna twee keer 4,8 km?", "De Kilimanjaro is bijna 6 km hoog, dus maar een stukje hoger dan de Mont Blanc.", "De Fuji is nog geen 4 km hoog, dus zelfs lager dan de Mont Blanc."] },
+      { q: "Wat is de hoofdstad van **Duitsland**?", options: ["Berlijn","Hamburg","München","Frankfurt"], answer: 0, wrongHints: [null, "Hamburg is een grote havenstad, maar geen hoofdstad.", "München is een grote stad in het zuiden, maar geen hoofdstad.", "Frankfurt is een belangrijke stad voor banken, maar geen hoofdstad."] },
+      { q: "Wat is de hoofdstad van **Spanje**?", options: ["Madrid","Barcelona","Valencia","Sevilla"], answer: 0, wrongHints: [null, "Barcelona is een grote stad in Catalonië, maar geen hoofdstad.", "Valencia is een grote stad aan de oostkust, maar geen hoofdstad.", "Sevilla is een grote stad in het zuiden, maar geen hoofdstad."] },
+      { q: "Wat is de hoofdstad van **Italië**?", options: ["Rome","Milaan","Napels","Venetië"], answer: 0, wrongHints: [null, "Milaan is een grote stad in het noorden, maar geen hoofdstad.", "Napels is een grote stad in het zuiden, maar geen hoofdstad.", "Venetië is beroemd om zijn grachten, maar geen hoofdstad."] },
+      { q: "Wat is de hoofdstad van het **Verenigd Koninkrijk**?", options: ["Londen","Manchester","Edinburgh","Liverpool"], answer: 0, wrongHints: [null, "Manchester is een grote stad in het noorden van Engeland, maar geen hoofdstad.", "Edinburgh is de hoofdstad van Schotland, één deel van het Verenigd Koninkrijk. Waar zit de regering van het hele land?", "Liverpool is een havenstad, bekend van de Beatles, maar geen hoofdstad."] },
+      { q: "Wat is de hoofdstad van de **Verenigde Staten**?", options: ["Washington D.C.","New York","Los Angeles","Chicago"], answer: 0, wrongHints: [null, "New York is de grootste stad, maar de regering zit er niet.", "Los Angeles is bekend van Hollywood, maar geen hoofdstad.", "Chicago is een grote stad bij de meren in het noorden, maar geen hoofdstad."] },
+      { q: "Wat is de hoofdstad van **Rusland**?", options: ["Moskou", "Sint-Petersburg", "Kyiv (Kiev)", "Minsk"], answer: 0, wrongHints: [null, "Sint-Petersburg was vroeger de hoofdstad, maar nu niet meer.", "Kyiv is de hoofdstad van het buurland Oekraïne.", "Minsk is de hoofdstad van het buurland Belarus (Wit-Rusland)."] },
+      { q: "Wat is de hoofdstad van **Japan**?", options: ["Tokio","Kyoto","Osaka","Seoul"], answer: 0, wrongHints: [null, "Kyoto was vroeger de hoofdstad, maar nu niet meer.", "Osaka is een grote handelsstad, maar geen hoofdstad.", "Seoul is wel een hoofdstad, maar van Zuid-Korea."] },
+      { q: "Wat is de hoofdstad van **China**?", options: ["Peking","Shanghai","Hong Kong","Taipei"], answer: 0, wrongHints: [null, "Shanghai is de grootste stad, maar de regering zit er niet.", "Hong Kong is een bekende havenstad in het zuiden, maar geen hoofdstad.", "Taipei is de hoofdstad van Taiwan, het eiland voor de kust."] },
+      { q: "Welke hoofdstad in Zuid-Amerika lijkt van bovenaf gezien op een **vliegtuig**?", options: ["Brasília","Santiago","Bogotá","Montevideo"], answer: 0, wrongHints: [null, "Santiago, de hoofdstad van Chili, is een oude stad die vanzelf is gegroeid, tegen de Andes aan.", "Bogotá, de hoofdstad van Colombia, is al bijna 500 jaar oud en vanzelf gegroeid.", "Montevideo, de hoofdstad van Uruguay, is een oude havenstad aan het water."] },
+      { q: "Welke woestijn ligt in **Afrika**?", options: ["Sahara","Gobi","Mojave","Atacama"], answer: 0, wrongHints: [null, "De Gobi ligt in China en Mongolië.", "De Mojave ligt in de Verenigde Staten.", "De Atacama ligt in Chili, in Zuid-Amerika."] },
+      { q: "Welke van deze Europese steden heeft de **meeste inwoners**?", options: ["Moskou","Londen","Parijs","Madrid"], answer: 0, wrongHints: [null, "Londen is heel groot, maar er is een stad in Europa met nog meer inwoners.", "Parijs is groot, maar er zijn grotere steden in Europa.", "Madrid is de grootste stad van Spanje, maar niet van Europa."] },
+      { q: "In welk land staat de **Acropolis**?", options: ["Griekenland","Italië","Egypte","Turkije"], answer: 0, wrongHints: [null, "In Italië vind je Romeinse bouwwerken, zoals het Colosseum.", "In Egypte staan de piramides.", "Turkije heeft ook oude ruïnes, maar de Acropolis staat in de hoofdstad van een ander land."] },
+      { q: "Welke **brug** is bekend in San Francisco?", options: ["Golden Gate Bridge","Tower Bridge","Brooklyn Bridge","Erasmusbrug"], answer: 0, wrongHints: [null, "De Tower Bridge staat in Londen, over de Theems.", "De Brooklyn Bridge staat in New York.", "De Erasmusbrug staat in Rotterdam."] },
+      { q: "In welk land staat de **Taj Mahal**?", options: ["India","Egypte","China","Japan"], answer: 0, wrongHints: [null, "Egypte heeft piramides, geen Taj Mahal.", "China heeft de Muur, geen Taj Mahal.", "Japan heeft Fuji, geen Taj Mahal."] },
+      { q: "In welke stad staat het beeld **Christus de Verlosser**?", options: ["Rio de Janeiro","Madrid","Rome","Buenos Aires"], answer: 0, wrongHints: [null, "Madrid is de hoofdstad van Spanje. Dit beeld staat op een ander werelddeel.", "In Rome staan veel kerken, maar dit grote beeld staat op een ander werelddeel.", "Buenos Aires is de hoofdstad van Argentinië. Dit beeld staat niet in Argentinië."] },
     ],
   },
 ];

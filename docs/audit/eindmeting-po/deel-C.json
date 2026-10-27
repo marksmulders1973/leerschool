@@ -1,0 +1,1276 @@
+[
+ {
+  "nr": 101,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 5 vraag 9",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "Mira springt **1,35 m** ver. Tom springt **1,2 m**. Hoeveel meter **verder** springt Mira?",
+  "options": [
+   "0,15 m",
+   "1,23 m",
+   "0,33 m",
+   "2,55 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staan de komma's recht onder elkaar? Schrijf 1,2 als 1,20.",
+   "Reken terug: 1,2 + 0,33 = ? Is dat 1,35?",
+   "Hoeveel verder vraagt om het verschil, niet om de twee sprongen samen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1,35 − 1,20 = 0,15 m.",
+   "simpeler": "Schrijf 1,2 als 1,20. Trek af: 1,35 − 1,20 = 0,15 m. Dat is 15 cm.",
+   "nogSimpeler": "0,15 m"
+  }
+ },
+ {
+  "nr": 102,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 6 vraag 14",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "Rond 7,38 af op één decimaal",
+  "options": [
+   "7,4",
+   "7,3",
+   "7,0",
+   "8,0"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar het cijfer na de 3. Rond je dan naar boven of naar beneden af?",
+   "Je moet op één cijfer ná de komma afronden, niet op een heel getal.",
+   "Dat is afgerond op een heel getal. Hoeveel cijfers ná de komma moeten er blijven?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 103,
+  "bron": "leerpaden",
+  "waar": "korte-teksten-snappen-g4 stap 1 vraag 4",
+  "file": "./korteTekstenSnappenG4.js",
+  "level": "groep4-5",
+  "q": "*Sam geeft de vissen elke ochtend eten.*\n\n**Wat** doet Sam?",
+  "options": [
+   "de vissen eten geven",
+   "zelf ontbijten",
+   "de vissen tellen",
+   "het water verversen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wie krijgt er eten in de zin?",
+   "Staat dat er echt?",
+   "Staat dat er echt?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Sam geeft de vissen eten.",
+   "simpeler": "Sam geeft de vissen…",
+   "nogSimpeler": "eten geven"
+  }
+ },
+ {
+  "nr": 104,
+  "bron": "leerpaden",
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 1",
+  "file": "./korteTekstenSnappenG4.js",
+  "level": "groep4-5",
+  "q": "*Eerst was het ei. Toen kwam er een kuiken uit. Het kuiken groeide en werd een kip.*\n\nWat was er het **eerst**?",
+  "options": [
+   "het ei",
+   "het kuiken",
+   "de kip",
+   "het nest"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die kwam ergens úít — waaruit?",
+   "Die was er op het laatst.",
+   "Die staat niet in de tekst."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Het ei was er het eerst.",
+   "simpeler": "Welke zin begint met 'Eerst'?",
+   "nogSimpeler": "het ei"
+  }
+ },
+ {
+  "nr": 105,
+  "bron": "leerpaden",
+  "waar": "kritisch-denken-po stap 4 vraag 3",
+  "file": "./kritischDenkenPo.js",
+  "level": "groep6-8",
+  "q": "Wat zijn **drogredenen**?",
+  "options": [
+   "Slechte argumenten die goed lijken",
+   "Sterke argumenten die goed kloppen",
+   "Feiten die door onderzoek bewezen zijn",
+   "Ruzies over wie er gelijk heeft"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kloppen drogredenen echt?",
+   "Een feit is geen argument dat slecht kan zijn.",
+   "Een drogreden is geen ruzie, maar een soort argument."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 106,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 2",
+  "file": "./leestekensHoofdlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welke zin is een **uitroep** en hoort dus een uitroepteken?",
+  "options": [
+   "Wat is dat een enorme hond",
+   "Ik loop naar de winkel",
+   "Hoe heet jouw broer",
+   "De les begint om negen uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit is een rustige mededeling.",
+   "Dit is een vraag.",
+   "Dit is een mededeling."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een uitroep laat een sterk gevoel of verbazing zien. Die krijgt een uitroepteken.",
+   "simpeler": "Welke zin roep je uit van verbazing, in plaats van rustig te vertellen of te vragen?",
+   "nogSimpeler": "Zoek de zin met verbazing erin ('Wat een …')."
+  }
+ },
+ {
+  "nr": 107,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 6",
+  "file": "./leestekensHoofdlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welke zin heeft het goede eindteken?",
+  "options": [
+   "Ik ga morgen naar school.",
+   "Ik ga morgen naar school?",
+   "Ik ga morgen naar school!",
+   "Ik ga morgen naar school,"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is geen vraag — er wordt niets gevraagd.",
+   "Het is geen uitroep met nadruk.",
+   "Een komma sluit geen zin af."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een gewone mededeling eindigt op een punt.",
+   "simpeler": "Wordt er iets gevraagd? Nee. Wordt er iets uitgeroepen? Nee. Dan: punt.",
+   "nogSimpeler": "Is het een rustige mededeling? Dan eindigt de zin op een punt."
+  }
+ },
+ {
+  "nr": 108,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 7",
+  "file": "./leestekensHoofdlettersPo.js",
+  "level": "groep7-8",
+  "q": "Waar hoort de komma? *Ja dat vind ik ook.*",
+  "options": [
+   "Ja, dat vind ik ook.",
+   "Ja dat, vind ik ook.",
+   "Ja dat vind, ik ook.",
+   "Ja dat vind ik, ook."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin hardop: waar haal je echt even adem?",
+   null,
+   "Zou je vlak voor het laatste woord pauzeren?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Na een tussenwerpsel (ja, nee, nou, oké) zet je een komma.",
+   "simpeler": "Zeg de zin hardop. Na 'Ja' wacht je heel even. Daar hoort de komma.",
+   "nogSimpeler": "Komt de komma direct na 'Ja'?"
+  }
+ },
+ {
+  "nr": 109,
+  "bron": "leerpaden",
+  "waar": "lichaam-gezondheid-po stap 4 vraag 3",
+  "file": "./lichaamGezondheidPo.js",
+  "level": "groep6-8",
+  "q": "Wat staat **niet** in de Schijf van Vijf?",
+  "options": [
+   "Snoep",
+   "Pindakaas",
+   "Halvarine",
+   "Aardappelen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Pindakaas van 100% pinda's staat in het vak met noten, vis en vlees.",
+   "Halvarine hoort in het vak smeer- en kookvetten.",
+   "Aardappelen staan in het vak met brood en graan."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 110,
+  "bron": "leerpaden",
+  "waar": "lichaam-gezondheid-po stap 6 vraag 10",
+  "file": "./lichaamGezondheidPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel **botten** heeft een volwassen mens ongeveer?",
+  "options": [
+   "206",
+   "100",
+   "500",
+   "300"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alleen je handen en voeten hebben samen al ruim 100 botjes.",
+   "Zoveel botten heeft een mens niet.",
+   "Ongeveer 300 botjes heeft een baby. Als je ouder wordt, groeien er botjes aan elkaar vast."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 111,
+  "bron": "leerpaden",
+  "waar": "lichaam-gezondheid-po stap 6 vraag 12",
+  "file": "./lichaamGezondheidPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel **uur slaap** heeft een 10-jarige nodig?",
+  "options": [
+   "9-11 uur",
+   "4-5 uur",
+   "12-14 uur",
+   "7-8 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zo weinig slaap is voor niemand genoeg.",
+   "Zoveel slaapt een baby of peuter.",
+   "Dat is het advies voor volwassenen. Een kind heeft meer nodig."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 112,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 2 vraag 4",
+  "file": "./matenEenheden.js",
+  "level": "groep6-8",
+  "q": "**7 m** is hoeveel **mm**?",
+  "options": [
+   "7000",
+   "700",
+   "70",
+   "70.000"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het aantal cm. mm is nog kleiner.",
+   null,
+   "Te veel — tel de stapjes van m naar mm nog eens."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "7000.",
+   "simpeler": "1 m = 1000 mm. 7 m = 7 × 1000 = 7000 mm.",
+   "nogSimpeler": "7000"
+  }
+ },
+ {
+  "nr": 113,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 8 vraag 3",
+  "file": "./matenEenheden.js",
+  "level": "groep6-8",
+  "q": "Een fles cola van **1,5 L** kost **€ 1,80**. Wat is de **prijs per mL**?",
+  "options": [
+   "€ 0,0012",
+   "€ 1,20",
+   "€ 0,12",
+   "€ 0,012"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel te veel — dat is de prijs per L, niet per mL.",
+   "Te veel — reken eerst de hoeveelheid om naar mL voordat je de prijs deelt.",
+   "Te veel — heb je 1 plek komma verkeerd?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€0,0012.",
+   "simpeler": "1,5 L = 1500 mL. €1,80 ÷ 1500 = €0,0012 per mL.",
+   "nogSimpeler": "0,0012"
+  }
+ },
+ {
+  "nr": 114,
+  "bron": "leerpaden",
+  "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 1",
+  "file": "./matenOmtrekOppervlaktePo.js",
+  "level": "groep6-8",
+  "q": "Een driehoek heeft een **basis van 10 cm** en een **hoogte van 6 cm**. Wat is de oppervlakte?",
+  "options": [
+   "30 cm²",
+   "60 cm²",
+   "16 cm²",
+   "60 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je deed basis × hoogte. Is een driehoek zo groot als de hele rechthoek?",
+   "Je telde 10 en 6 op. Moet je optellen of vermenigvuldigen?",
+   "Je deed basis × hoogte. En welke eenheid hoort bij een oppervlakte?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "½·10·6=30 cm².",
+   "simpeler": "Half van b×h = 30.",
+   "nogSimpeler": "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?"
+  }
+ },
+ {
+  "nr": 115,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 6 vraag 2",
+  "file": "./meetkundeBouwsels.js",
+  "level": "groep6-8",
+  "q": "Balk **5 cm × 4 cm × 3 cm**. Volume?",
+  "options": [
+   "60 cm³",
+   "12 cm³",
+   "20 cm³",
+   "15 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — dat is 5 + 4 + 3. Volume is keer.",
+   "Te weinig — alleen 5 × 4 gedaan, hoogte vergeten.",
+   "Te weinig — alleen 5 × 3 gedaan, breedte vergeten."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 116,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 3",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "**3 ons** kaas is hoeveel gram?",
+  "options": [
+   "300 g",
+   "30 g",
+   "3000 g",
+   "150 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — 1 ons is al 100 g.",
+   "Dat zou 3 kilo zijn.",
+   "150 g is anderhalf ons. Hoeveel gram is 1 ons?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Elke ons is 100 g. Tel 3 keer 100 op.",
+   "simpeler": "1 ons = 100 g, 2 ons = 200 g … ga zo door tot 3 ons.",
+   "nogSimpeler": "100 + 100 + 100 = ?"
+  }
+ },
+ {
+  "nr": 117,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 3",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "**180 seconden** is hoeveel minuten?",
+  "options": [
+   "3 min",
+   "18 min",
+   "30 min",
+   "1,8 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deel door 60, niet door 10.",
+   "30 minuten is een half uur. Hoeveel seconden heeft 1 minuut?",
+   "Je deelde door 100. Een minuut heeft 60 seconden."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Elke 60 seconden is 1 minuut. Hoe vaak past 60 in 180?",
+   "simpeler": "60, 120, 180 — dat is drie keer 60.",
+   "nogSimpeler": "180 ÷ 60 = ?"
+  }
+ },
+ {
+  "nr": 118,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 9",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "Een zak met **8 appels** weegt **1,2 kg**. Alle appels zijn even zwaar. Hoeveel gram weegt één appel?",
+  "options": [
+   "150 g",
+   "15 g",
+   "120 g",
+   "960 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Klopt het dat een appel zo licht is als een paar suikerklontjes?",
+   "Deel je door het aantal appels in de zak?",
+   "Je deed keer 8. Moet je hier niet delen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1,2 kg = 1200 g. 1200 ÷ 8 = het gewicht van één appel.",
+   "simpeler": "Halveer drie keer: 1200 → 600 → 300 → 150.",
+   "nogSimpeler": "1200 ÷ 8 = ?"
+  }
+ },
+ {
+  "nr": 119,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 2 vraag 8",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "Je staat op **−4** op de getalslijn. Je loopt **3 stappen naar links**. Waar kom je uit?",
+  "options": [
+   "−7",
+   "−1",
+   "+1",
+   "+7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Links is de kant van de kleinere getallen.",
+   "Links lopen vanaf −4 brengt je verder onder nul, niet erboven.",
+   "Je begint onder nul en gaat naar links. Kom je dan boven nul?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "−7.",
+   "simpeler": "Vanaf −4 tellen: −5, −6, −7.",
+   "nogSimpeler": "−7"
+  }
+ },
+ {
+  "nr": 120,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 4 vraag 7",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "Een meeuw vliegt **7 m boven** de zeespiegel. Een vis zwemt **5 m onder** de zeespiegel. Hoeveel meter zit er **tussen** de meeuw en de vis?",
+  "options": [
+   "12 m",
+   "2 m",
+   "−2 m",
+   "−12 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De zeespiegel is 0. Tel het stuk erboven en het stuk eronder.",
+   "Een afstand is nooit negatief. En tel je het stuk onder de zeespiegel mee?",
+   "Kan een afstand negatief zijn?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "12 m.",
+   "simpeler": "7 m tot het water, en nog 5 m onder water. 7 + 5 = 12 m.",
+   "nogSimpeler": "12 m"
+  }
+ },
+ {
+  "nr": 121,
+  "bron": "leerpaden",
+  "waar": "olympische-spelen-po stap 4 vraag 12",
+  "file": "./olympischeSpelenPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel jaar zit er tussen twee **Zomerspelen**?",
+  "options": [
+   "4 jaar",
+   "1 jaar",
+   "2 jaar",
+   "10 jaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Elk jaar Spelen? Dan waren er na Parijs 2024 ook Spelen in 2025. Klopt dat?",
+   "Om de 2 jaar zijn er wél Spelen, maar afwisselend zomer en winter. Hoeveel jaar zit er tussen twee Zómerspelen?",
+   "Tien jaar is te lang. Kijk naar de jaartallen in de uitleg: Parijs, Los Angeles, Brisbane."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 122,
+  "bron": "leerpaden",
+  "waar": "ontdekkingsreizen-po stap 4 vraag 8",
+  "file": "./ontdekkingsreizenPo.js",
+  "level": "groep6-8",
+  "q": "Wat was de **rol van de VOC** (Verenigde Oostindische Compagnie)?",
+  "options": [
+   "Handelsbedrijf met eigen leger en bestuur",
+   "Leger van de koning met eigen schepen",
+   "Groep ontdekkers die kaarten maakte",
+   "Kerk die zendelingen naar Azië stuurde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nederland had toen geen koning, en de VOC was geen leger — al had ze wel soldaten. Waar staat de C van VOC voor?",
+   "Kaarten maken deden ze ook, maar waarmee verdiende de VOC haar geld?",
+   "Geloof was niet het doel. Wat haalde de VOC uit Azië?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Handelsbedrijf 1602-1799.",
+   "simpeler": "VOC = Verenigde Oostindische Compagnie. NL handelsbedrijf 1602-1799. Eerste multinational ter wereld. Handelde in specerijen uit Indonesië + bestuurde kolonie.",
+   "nogSimpeler": "Handelsbedrijf Indonesië"
+  }
+ },
+ {
+  "nr": 123,
+  "bron": "leerpaden",
+  "waar": "ontdekkingsreizen-po stap 4 vraag 16",
+  "file": "./ontdekkingsreizenPo.js",
+  "level": "groep6-8",
+  "q": "Welke Spanjaard veroverde **Aztekenrijk** (Mexico)?",
+  "options": [
+   "Cortés",
+   "Pizarro",
+   "Columbus",
+   "Magellan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Pizarro versloeg een ander rijk, in Peru.",
+   "Columbus kwam op de Bahama's en veroverde geen rijk.",
+   "Magellan voer rond de wereld en was geen veroveraar."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 124,
+  "bron": "leerpaden",
+  "waar": "opdrachtwoorden-nieuwkomers stap 1 vraag 5",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Op je blad staat: trek een lijn van de hond naar het hok. Wat doe je?",
+  "options": [
+   "Ik trek een lijn van de hond naar het hok.",
+   "Ik teken een nieuwe hond.",
+   "Ik kleur het hok.",
+   "Ik zet een kruisje op de hond."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een lijn trekken = twee dingen met elkaar verbinden.",
+   "Een lijn trekken = twee dingen met elkaar verbinden.",
+   "Een lijn trekken = twee dingen met elkaar verbinden."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 125,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 1",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Een tuin is 8 m lang en 5 m breed. Hoeveel meter **hek** heb je nodig om alle 4 de zijden af te zetten?",
+  "options": [
+   "13 m",
+   "26 m",
+   "40 m",
+   "21 m"
+  ],
+  "answer": 1,
+  "wrongHints": [
+   "Je telde 8 + 5: dat zijn maar 2 zijden. Hoeveel zijden heeft de tuin?",
+   null,
+   "Je deed 8 × 5. Zet je een hek over het vlak of langs de rand?",
+   "Je telde 8 + 8 + 5. Heb je alle 4 de zijden meegeteld?"
+  ],
+  "explanation": "**Omtrek = 2× lengte + 2× breedte** = 2×8 + 2×5 = 16 + 10 = **26 m**. Een tuin heeft 4 zijden — niet 2.",
+  "niveaus": {
+   "basis": "Omtrek = 2×(8+5) = 26 m.",
+   "simpeler": "Hek rondom 4 zijden: 8+8+5+5 = 26 m.",
+   "nogSimpeler": "26 m"
+  }
+ },
+ {
+  "nr": 126,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 4",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Je wilt een **tuin omheinen**. De tuin is **10 m lang** en **4 m breed**. Hoeveel meter hek heb je nodig?",
+  "options": [
+   "28 m",
+   "14 m",
+   "40 m",
+   "24 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je telt maar 2 zijden op — een tuin heeft 4 zijden.",
+   "Dat is de oppervlakte (lengte × breedte), niet de rand. Een hek gaat rondom.",
+   "Je telde 10 + 10 + 4. Mis je nog een zijde?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Omtrek 2(10+4) = 28 m.",
+   "simpeler": "10+4+10+4 = 28 m hek.",
+   "nogSimpeler": "28 m"
+  }
+ },
+ {
+  "nr": 127,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 7",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Sem zegt: \"Mijn slaapkamer is **12 m²**.\" Wat vertelt hij dan?",
+  "options": [
+   "hoeveel vloer er in zijn kamer is",
+   "hoe lang de rand van zijn vloer is",
+   "hoe hoog zijn kamer is",
+   "hoe breed zijn deur is"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar het teken ² achter de m. Hoort dat bij een lengte of bij een vlak?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "12 m² gaat over het vlak: de vloer.",
+   "simpeler": "Het ² betekent: vlak, niet lengte.",
+   "nogSimpeler": "de vloer"
+  }
+ },
+ {
+  "nr": 128,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 9",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Rechthoek A is **6 m × 2 m**. Rechthoek B is **4 m × 3 m**. Wat klopt?",
+  "options": [
+   "Ze hebben dezelfde oppervlakte, maar A heeft een grotere omtrek.",
+   "Ze hebben dezelfde omtrek, maar B heeft een grotere oppervlakte.",
+   "Ze hebben dezelfde omtrek en dezelfde oppervlakte.",
+   "A heeft een grotere oppervlakte en een grotere omtrek."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken voor allebei de omtrek uit: tel alle 4 de zijden op.",
+   null,
+   "Reken voor allebei de oppervlakte uit: lengte keer breedte."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Opp: 12 en 12. Omtrek: 16 en 14.",
+   "simpeler": "Reken eerst 6×2 en 4×3. Tel daarna de randen op.",
+   "nogSimpeler": "A heeft meer rand"
+  }
+ },
+ {
+  "nr": 129,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 7",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Een driehoek heeft een basis van **10 cm** en een hoogte van **4 cm**. Eén **schuine zijde** is **5 cm**. Wat is de **oppervlakte**?",
+  "options": [
+   "20 cm²",
+   "25 cm²",
+   "40 cm²",
+   "50 cm²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je gebruikte de schuine zijde. Staat die haaks op de basis?",
+   "Ben je de ÷ 2 vergeten?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "10 × 4 = 40. 40 ÷ 2 = 20 cm².",
+   "simpeler": "Gebruik 10 en 4. De 5 heb je niet nodig.",
+   "nogSimpeler": "20"
+  }
+ },
+ {
+  "nr": 130,
+  "bron": "leerpaden",
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 4",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is de **Eed van Hippocrates**?",
+  "options": [
+   "Belofte van artsen",
+   "Belofte van soldaten",
+   "Belofte van politici",
+   "Belofte van sporters"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hippocrates was geen legeraanvoerder — waar stond hij om bekend?",
+   "Hippocrates was geen politicus — denk aan zijn vak.",
+   "Hippocrates was geen atleet — welk vak hoort bij hem?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 131,
+  "bron": "leerpaden",
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 2",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "level": "groep6-8",
+  "q": "In welke stad mochten rond 508 v.Chr. alle mannelijke burgers in de **volksvergadering** meestemmen over wetten?",
+  "options": [
+   "Athene",
+   "Sparta",
+   "Rome",
+   "Thebe"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In Sparta hadden twee koningen en een raad van oude mannen de macht.",
+   "Rome was toen net een republiek met een senaat. De macht lag bij rijke families, niet bij alle burgers.",
+   "Thebe was een andere Griekse stadstaat. In welke stad werd deze manier van stemmen bedacht?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 132,
+  "bron": "leerpaden",
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 17",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "level": "groep6-8",
+  "q": "Wie ontcijferde de tekst op de **Steen van Rosetta**?",
+  "options": [
+   "Champollion",
+   "Napoleon",
+   "Carter",
+   "Erasmus"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De soldaten van Napoleon vonden de steen in 1799, maar wie kon hem lezen?",
+   "Carter vond in 1922 het graf van Toetanchamon.",
+   "Erasmus was een geleerde uit Rotterdam, maar hij leefde lang vóór 1799."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 133,
+  "bron": "leerpaden",
+  "waar": "plattegrond-legenda-po stap 4 vraag 8",
+  "file": "./plattegrondLegendaPo.js",
+  "level": "groep7-8",
+  "q": "Plattegrond van een dierentuin (het noorden is boven):\nDe stip 'je bent hier' staat bij de ingang, onderaan. Links van de ingang liggen de leeuwen. Recht boven de ingang ligt het restaurant (🍴). Rechts van de ingang zijn de toiletten (🚻).\n\nJe wilt naar de leeuwen. Welke kant loop je op vanaf de stip?",
+  "options": [
+   "naar links",
+   "naar rechts",
+   "naar boven",
+   "terug naar buiten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat ligt er rechts van de ingang?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De leeuwen liggen links van de stip → naar links.",
+   "simpeler": "Waar staat de stip, en aan welke kant liggen de leeuwen?",
+   "nogSimpeler": "Liggen de leeuwen links of rechts?"
+  }
+ },
+ {
+  "nr": 134,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 4 vraag 25",
+  "file": "./recyclenAfvalPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **duurzaam** kopen?",
+  "options": [
+   "Spullen die lang meegaan",
+   "Zoveel mogelijk spullen",
+   "Spullen die goedkoop zijn",
+   "Spullen met een mooie kleur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is meer kopen goed voor de aarde?",
+   "Gaat iets goedkoops ook altijd lang mee?",
+   "Maakt de kleur iets uit voor de aarde?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 135,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 1 vraag 5",
+  "file": "./redactiesommen.js",
+  "level": "groep5-8",
+  "q": "Waarom is een redactiesom vaak **moeilijker** dan een kale som?",
+  "options": [
+   "Je moet zelf bedenken welke som je maakt",
+   "De getallen zijn groter dan bij een kale som",
+   "Je mag geen kladpapier gebruiken",
+   "Je moet het antwoord in een hele zin geven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk eens naar de getallen in een redactiesom. Zijn die groter dan bij een kale som?",
+   null,
+   "Een antwoord met de eenheid erbij is genoeg. Wat moet je vóór het rekenen zelf doen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Je moet zelf kiezen welke som je maakt.",
+   "simpeler": "Er staat geen + of − bij. Dat bedenk jij.",
+   "nogSimpeler": "Zelf kiezen."
+  }
+ },
+ {
+  "nr": 136,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 5 vraag 7",
+  "file": "./redactiesommen.js",
+  "level": "groep5-8",
+  "q": "*'4 vrienden bestellen pizza voor **€ 38**. De bezorgkosten zijn **€ 4**. Iedereen betaalt evenveel. Hoeveel betaalt **ieder**?'*",
+  "options": [
+   "€ 10,50",
+   "€ 9,50",
+   "€ 8,50",
+   "€ 42"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — heb je bezorgkosten meegerekend?",
+   "Te weinig — de bezorgkosten komen erbij, niet eraf.",
+   "Dat is totaal, niet per persoon."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€42 ÷ 4 = €10,50.",
+   "simpeler": "Eerst totaal: €38 + €4 = €42. Dan delen: €42 ÷ 4 = €10,50.",
+   "nogSimpeler": "€10,50"
+  }
+ },
+ {
+  "nr": 137,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 5 vraag 11",
+  "file": "./redactiesommen.js",
+  "level": "groep5-8",
+  "q": "Lisa heeft 36 stickers. Ze geeft 1/4 weg. Hoeveel houdt ze over?",
+  "options": [
+   "27",
+   "9",
+   "32",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is wat ze WEG geeft.",
+   "Te veel — niet alleen 4 weg.",
+   "Dat is 1/3 van 36. Welk deel geeft ze weg?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 138,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 5 vraag 21",
+  "file": "./redactiesommen.js",
+  "level": "groep5-8",
+  "q": "Een klas heeft 30 leerlingen. 12 daarvan zijn meisjes. Hoeveel jongens zitten er in de klas?",
+  "options": [
+   "18",
+   "12",
+   "22",
+   "42"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zijn de meisjes. Hoeveel kinderen zijn géén meisje?",
+   "Kijk bij de enen: 0 − 2 gaat niet zomaar. Moet je een tiental lenen?",
+   "Dat is 30 + 12. Komen er kinderen bij?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 139,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-100-nieuwkomers stap 1 vraag 5",
+  "file": "./rekenenTot100Nieuwkomers.js",
+  "level": "groep4-5",
+  "q": "**8 tientallen** en **5 eenheden**. Welk getal is dat?",
+  "options": [
+   "58",
+   "95",
+   "85",
+   "13"
+  ],
+  "answer": 2,
+  "wrongHints": [
+   "Nee, je draaide de cijfers om. Eerst de tientallen: 80. 8 tientallen = 80. Dan 5 erbij.",
+   "Nee, 95 is tien te veel. Kijk goed naar de tientallen. 8 tientallen = 80. Dan 5 erbij.",
+   null,
+   "Nee, je telde 8 + 5. Maar 8 tientallen is 80. 8 tientallen = 80. Dan 5 erbij."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 140,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-100-nieuwkomers stap 5 vraag 5",
+  "file": "./rekenenTot100Nieuwkomers.js",
+  "level": "groep4-5",
+  "q": "Een boek kost **23 euro**. Een pen kost **8 euro**. Hoeveel euro samen?",
+  "options": [
+   "21",
+   "15",
+   "30",
+   "31"
+  ],
+  "answer": 3,
+  "wrongHints": [
+   "Nee, 21 is tien te weinig. Kijk goed naar de tientallen. Lees de som nog een keer. Samen = plus. Weg, uit, over = min.",
+   "Nee, 15 is 23 − 8. Maar hier komt er iets bij (+). Lees de som nog een keer. Samen = plus. Weg, uit, over = min.",
+   "Nee, 30 is één te weinig. Tel nog eens precies. Lees de som nog een keer. Samen = plus. Weg, uit, over = min.",
+   null
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 141,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-20-nieuwkomers stap 3 vraag 1",
+  "file": "./rekenenTot20Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "**5 − 2 =** ?",
+  "options": [
+   "4",
+   "7",
+   "2",
+   "3"
+  ],
+  "answer": 3,
+  "wrongHints": [
+   "Nee, 4 is één te veel. Tel nog eens precies. Begin bij 5. Tel 2 terug.",
+   "Nee, 7 is 5 + 2. Maar hier gaat er iets af (−). Begin bij 5. Tel 2 terug.",
+   "Nee, 2 staat al in de vraag. Je moet nog rekenen. Begin bij 5. Tel 2 terug.",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Tel het tweede getal terug.",
+   "simpeler": "Begin bij het eerste getal. Tel terug.",
+   "nogSimpeler": "Eraf = terug tellen."
+  }
+ },
+ {
+  "nr": 142,
+  "bron": "leerpaden",
+  "waar": "rekenverhaaltjes-nieuwkomers stap 3 vraag 2",
+  "file": "./rekenverhaaltjesNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Ahmed is 9 jaar. Zijn zus is 6 jaar. Hoeveel jaar is Ahmed ouder?",
+  "options": [
+   "3",
+   "15",
+   "6",
+   "2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 15 is 9 + 6. Maar hier gaat er iets af (−). Hoeveel moet er bij het kleine getal, tot het grote getal?",
+   "Nee, 6 staat al in de vraag. Je moet nog rekenen. Hoeveel moet er bij het kleine getal, tot het grote getal?",
+   "Nee, 2 is één te weinig. Tel nog eens precies. Hoeveel moet er bij het kleine getal, tot het grote getal?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 143,
+  "bron": "leerpaden",
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
+  "file": "./samenstellingenTussenlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welk woord is een samenstelling?",
+  "options": [
+   "speelgoedwinkel",
+   "verschrikkelijk",
+   "temperatuur",
+   "bibliotheek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kun je 'verschrikkelijk' knippen in twee echte woorden?",
+   "Kun je 'temperatuur' knippen in twee echte woorden?",
+   "Kun je 'bibliotheek' knippen in twee echte woorden?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "speelgoedwinkel (speelgoed + winkel) is een samenstelling.",
+   "simpeler": "Welk woord kun je in twee woorden knippen?",
+   "nogSimpeler": "In welk woord zitten twee woorden?"
+  }
+ },
+ {
+  "nr": 144,
+  "bron": "leerpaden",
+  "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 1",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "level": "groep5-8",
+  "q": "Wat is een **hoofdgedachte**?",
+  "options": [
+   "De kernboodschap",
+   "De titel",
+   "Een klein detail",
+   "Het onderwerp"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De titel geeft soms een hint, maar zegt die alles wat de schrijver wil vertellen?",
+   "Een detail is een klein stukje. Gaat de hoofdgedachte over een klein stukje of over de hele tekst?",
+   "Het onderwerp zegt alleen waaróver de tekst gaat. Wat zegt de tekst erover?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Hoofdgedachte = kernboodschap van de hele tekst.",
+   "simpeler": "Wat zou je in 1 zin tegen een vriend zeggen = hoofdgedachte.",
+   "nogSimpeler": "Kern in 1 zin."
+  }
+ },
+ {
+  "nr": 145,
+  "bron": "leerpaden",
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 20",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "level": "groep5-8",
+  "q": "Waar helpen tussentitels je bij?",
+  "options": [
+   "Snel de opbouw en de onderwerpen zien",
+   "Zelf sneller een tekst schrijven",
+   "De tekst mooier laten klinken",
+   "De moeilijke woorden begrijpen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tussentitels staan in een tekst die al af is. Helpen ze je bij schrijven, of bij lezen?",
+   "Gaat een tussentitel over mooi klinken, of over overzicht?",
+   "Legt een tussentitel moeilijke woorden uit?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 146,
+  "bron": "leerpaden",
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 9",
+  "file": "./schaalKaartRekenenPo.js",
+  "level": "groep7-8",
+  "q": "Schaal 1 : 2.000. Op de plattegrond is een straat 9 cm. Hoe lang is de straat in het echt?",
+  "options": [
+   "180 m",
+   "18 m",
+   "1.800 m",
+   "90 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — controleer de omrekening van cm naar m.",
+   "Te veel — hoeveel cm gaan er in 1 m?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1 cm = 20 m, dus 9 cm = 180 m.",
+   "simpeler": "Hoeveel meter is 1 cm? Doe dat 9 keer.",
+   "nogSimpeler": "9 × 20 m = ?"
+  }
+ },
+ {
+  "nr": 147,
+  "bron": "leerpaden",
+  "waar": "schema-tekst-combi-po stap 4 vraag 7",
+  "file": "./schemaTekstCombiPo.js",
+  "level": "groep6-8",
+  "q": "Waar moet je om 10.30 uur zijn voor de kinderspelen?",
+  "options": [
+   "Op het grasveld",
+   "Op het plein",
+   "In de feesttent",
+   "Op het podium"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar begon om 10.00 uur de opening — maar de kinderspelen zijn ergens anders. Kijk tussen de haakjes achter 'kinderspelen'.",
+   "In de feesttent eet je pannenkoeken. Kijk tussen de haakjes achter 'kinderspelen'.",
+   "Op het podium is de talentenjacht. Kijk tussen de haakjes achter 'kinderspelen'."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek de regel van de kinderspelen in het programma. De plek staat tussen de haakjes.",
+   "simpeler": "Vind eerst de regel met '10.30 uur' of 'kinderspelen'. Lees dan wat er tussen de haakjes staat — dat is de plek.",
+   "nogSimpeler": "Zoek het woord 'kinderspelen' in de lijst en lees de woorden tussen de haakjes erachter."
+  }
+ },
+ {
+  "nr": 148,
+  "bron": "leerpaden",
+  "waar": "schema-tekst-combi-po stap 4 vraag 8",
+  "file": "./schemaTekstCombiPo.js",
+  "level": "groep6-8",
+  "q": "Wat kost de toegang tot het buurtfeest in de Vlinderwijk?",
+  "options": [
+   "Niets, de toegang is vrij",
+   "€ 1,00 per persoon",
+   "Eén muntje per kind",
+   "€ 2,00 per gezin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat bedrag hoort bij iets anders op het feest. Wat zegt de eerste alinea over de toegang?",
+   "Muntjes zijn voor de pannenkoeken. Wat zegt de eerste alinea over de toegang?",
+   "Staat er ergens een prijs per gezin? Lees de laatste zin van de eerste alinea."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees de eerste alinea. Wat staat er over de toegang?",
+   "simpeler": "Het woord 'vrij' staat bij de toegang. Wat betekent dat?",
+   "nogSimpeler": "Toegang vrij betekent dat je iets niet hoeft te betalen. Wat kost het dus?"
+  }
+ },
+ {
+  "nr": 149,
+  "bron": "leerpaden",
+  "waar": "schemas-stappenplannen-po stap 5 vraag 7",
+  "file": "./schemasStappenplannenPo.js",
+  "level": "groep5-8",
+  "q": "**Beslisboom voor schooladvies VMBO/HAVO/VWO**:\n• Toetsscore 525-535 → VMBO-GL/TL\n• 536-545 → HAVO\n• 546+ → VWO\n\n**Welk advies bij score 540**?",
+  "options": [
+   "HAVO",
+   "VMBO-GL/TL",
+   "VWO",
+   "VMBO-GL/TL of HAVO"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te laag — 540 zit hoger dan VMBO-grens.",
+   "Te hoog — VWO begint pas bij 546.",
+   "Een score valt in precies één vakje. In welk vakje valt 540?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "HAVO.",
+   "simpeler": "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535).",
+   "nogSimpeler": "HAVO"
+  }
+ },
+ {
+  "nr": 150,
+  "bron": "leerpaden",
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
+  "file": "./signaalwoordenVerbandenPo.js",
+  "level": "groep7-8",
+  "q": "Welk woord past? *Ik zet de wekker, ___ ik op tijd wakker word.*",
+  "options": [
+   "zodat",
+   "hoewel",
+   "doordat",
+   "maar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Botst wakker worden met de wekker zetten?",
+   "Word je wakker en zet je dáárom de wekker? Of andersom?",
+   "Zet 'maar' twee dingen tegenover elkaar? Lees de zin nog eens."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Het tweede deel is wat er dán gebeurt → gevolg: zodat.",
+   "simpeler": "Wat gebeurt er doordat je de wekker zet?",
+   "nogSimpeler": "Wekker aan … en dan word ik op tijd wakker. Welk woord hoort bij 'en dan'?"
+  }
+ }
+]
