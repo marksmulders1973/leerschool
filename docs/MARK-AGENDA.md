@@ -20,6 +20,7 @@
 | 5 | **Stripe-backupcode** op papier bij het wachtwoordblad (5 min) | zo snel mogelijk | ☐ |
 
 - **za 17 okt (Claude + Mark)**: v963 "018" + v964 "019" uitrollen (meting moeilijkheid per vraag + herschreven topografievraag "laagste land" na 🚩-melding 16 okt, staan klaar) + verder met de ladder: (1) betere foute antwoorden Delen, (2) twee vragen per tree, (3) makkelijker deel overslaan pas na meting. Mark beslist welke mee gaan.
+- **wo 28 okt (Mark)**: Play Store dag 14 → productie-aanvraag; eerst Play-app geforceerd stoppen (groene balk weg door assetlinks-fix 27 okt). · **vr 30 okt (Claude)**: meetpunt startpagina 066 (foto's, code-veld, prijzen achter Meer). · **ma 2 nov (Claude)**: evaluatie startsets + Nu op school + vakscherm, eerste week.
 - **za 1 nov (Claude)**: klikbare link toevoegen aan de Facebook-post "Hij vroeg wat ik dacht" (Meta-linklimiet weer vrij).
 
 ## 🔴🔴 PRIORITEIT OKTOBER 2026 — "een kloppend verdienmodel"
