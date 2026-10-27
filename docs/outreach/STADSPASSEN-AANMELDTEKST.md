@@ -53,6 +53,22 @@ Mark Smulders
 Leerkwartier — Een kwartier per dag leren, een leven lang slimmer.
 leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 
+## Bij elke pas die ja zegt: meteen dit meesturen (Mark 28 okt: "zet dat erin")
+Een vermelding op de aanbodpagina alleen levert 5-20 apparaten per maand; een melding in nieuwsbrief of app levert 50-150 in de eerste week (Kinderhulp-effect). Daarom bij elke ja direct, in dezelfde mail als de bevestiging, drie kant-en-klare stukjes meesturen plus het beeld `public/drukwerk/Leerkwartier-nieuwsbrief-beeld.pdf` (of een variant met de pascode):
+
+**1. Nieuwsbriefblokje (± 80 woorden)**
+> **Nieuw voor pashouders: gratis oefenen voor school**
+> Leerkwartier is een Nederlandse oefen-app voor kinderen van groep 3 t/m 8: rekenen, taal, begrijpend lezen en de Doorstroomtoets, een kwartier per dag, met uitleg in gewone taal. Oefenen is gratis. Met de <PAS> krijgt uw kind tot en met 2028 ook de extra's voor ouders gratis: elke vrijdag een berichtje over hoe het gaat, en werk klaarzetten. Geen account, geen reclame.
+> Ga naar leerkwartier.app en typ de code <CODE>, of scan de QR-code.
+
+**2. App-melding / pushbericht (± 25 woorden)**
+> Nieuw: gratis oefenen voor school met Leerkwartier (groep 3 t/m 8). Open leerkwartier.app en typ <CODE>. Een kwartier per dag, uitleg in gewone taal.
+
+**3. Social-bericht (Facebook/Instagram van de pas)**
+> Nieuwe partner van de <PAS>: Leerkwartier 📚 Gratis oefenen voor kinderen van groep 3 t/m 8, met uitleg als het fout gaat. Pashouders krijgen tot en met 2028 ook alle extra's voor ouders gratis. Code <CODE> op leerkwartier.app.
+
+Regels: altijd de slogan op beeld ("Een kwartier per dag leren, een leven lang slimmer."); geen concurrenten noemen; niets fysieks beloven; B1-taal; code en QR in beeld. Vraag erbij: "Mogen we een seintje krijgen op welke dag het meegaat? Dan kijken we die week mee hoeveel gezinnen via de <PAS> komen en sturen we u het cijfer."
+
 ## Meedenk-punten (27 okt)
 1. **Niet alleen passen, ook de uitvoerders**: in veel gemeenten loopt het kindpakket via de lokale Stichting Leergeld of via Sam& (Leergeld + Jeugdfonds Sport & Cultuur + Kinderhulp + Jarige Job). Leergeld-afdelingen hebben vaak een nieuwsbrief of intake-gesprek: zelfde aanbod, zelfde code-model, vraag "mag het op jullie 'wat kunnen wij voor u doen'-pagina".
 2. **Koepels eerst** (les van vandaag): bij een keten eerst het landelijke bureau vragen (Leergeld Nederland, Sam&), dan pas afdelingen.
