@@ -90,3 +90,6 @@ Nieuwe codes direct in `partner_codes` én `PARTNER_NAMEN` zetten.
 
 ## Logboek aanmeldingen
 - 27 okt 2026 23:40 · **Stadspas Apeldoorn** · formulier ingediend ("Uw registratie is succesvol voltooid") · code APELDOORNPAS2027 klaar · zij nemen contact op; aanbodtekst klaarhouden (STADSPASSEN-AANMELDTEKST.md).
+- 28 okt 2026 00:35 · **Rotterdampas** · partnerregistratie ingediend via rotterdampas.passcloud.nl (KvK-check ok, soort: Kortingsacties, registratiewijze: WEBTERMINAL, voorwaarden akkoord) · activatiemail ontvangen en **account geactiveerd** (login hallo@, wachtwoord in Desktop\Leerkwartier-dossiers\Stadspassen) · volgende stap: inloggen op het portaal en de kortingsactie (100 %, code ROTTERDAMPAS2027, t/m 31-12-2028) opvoeren.
+- 28 okt 2026 00:50 · **U-pas** · partnerregistratie ingediend via upas.passcloud.nl (Kortingsacties, Tegoedbestedingen uitgezet; categorie niet gekozen) · "gegevens ontvangen, bevestigingsmail volgt" · activatiemail nog niet binnen om 00:55 → morgen activeren, dan KYC (Intersolve) afwachten en actie opvoeren (UPAS2027).
+- 28 okt 2026 00:55 · **Stadspas Amsterdam** · portaal stadspas.passcloud.nl kent alleen tegoed-categorieën (Sportclubs, Winkel, Electronica & Witgoed), geen kortingsacties → registratie NIET afgemaakt; de mail van 08:00 stelt de vraag hoe een online aanbod bij hen past.

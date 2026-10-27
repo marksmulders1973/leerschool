@@ -28,7 +28,7 @@
 |---|---|
 | Bank | Knab, zakelijke betaalrekening (zzp/eenmanszaak) |
 | Aangevraagd / open | 29 sep 2026 14:54 aangevraagd; 15:03 digitale betaalpas aangemaakt → rekening open |
-| Rekening | eindigt op **009** — volledig IBAN: ☐ door Mark uit de Knab-app halen en hier invullen: `NL__ KNAB ____ ____ __` |
+| Rekening | eindigt op **009** — volledig IBAN: ☐ door Mark uit de Knab-app halen en hier invullen: `NL66 KNAB 0800 8730 09` (Mark 28 okt 2026) |
 | Tenaamstelling | zoals op je ID (Stripe vergelijkt met de KvK) |
 | E-mail bij Knab | hallo@leerkwartier.app · roepnaam Mark |
 | Kosten | €0 eerste 12 maanden (+€100 starterstegoed), daarna €7/mnd |
