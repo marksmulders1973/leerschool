@@ -14,7 +14,6 @@ import Kabelbaan, { KABEL_DAL, KABEL_BERG } from "./Kabelbaan";
 import Sleebaan, { SLEE_START } from "./Sleebaan";
 import Autos, { AUTO_PLEK } from "./Autos";
 import MedeSpelers from "./MedeSpelers";
-import ImposterGame from "./game/ImposterGame";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -1364,7 +1363,7 @@ function SnackInHand({ playerPos, playerFace, snack, verborgen, onOp }) {
   );
 }
 
-export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null, onZeppelinRit = null, hierRef = null, posRefOut = null, faceRefOut = null, peersRef = null, gameModus = false, gameGroep = "6", gameKey = 0, onGameKlaar = null, onGameStop = null, gameNet = null, gameHost = true, gameAuto = null }) {
+export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null, onZeppelinRit = null, hierRef = null, posRefOut = null, faceRefOut = null, peersRef = null }) {
   const [ghost, setGhost] = useState(null);
   const [zeppelinRit, setZeppelinRit] = useState(false); // 🛩️ aan boord van de instap-zeppelin
   const [bergRit, setBergRit] = useState(false);         // 🚠🛷 aan boord van kabelbaan of slee (6 sep)
@@ -1802,7 +1801,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <WandelStopWachter doel={wandelDoel} playerPos={playerPos} onBereikt={onWandelBereikt} />
         {/* 🧙 Uitvinders-kabouters: leerzame diorama's langs de ingangslaan
             (Newton-appelboom, piramidebouw, bliksemkooi) — tik = praatje + leer-link. */}
-        {!gameModus && <UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />}
+        {<UitvindersTaferelen heightRef={heightFnRef} onTafereel={onTafereel} actief={!placingAsset && !sculptMode && !waterMode && !groundMode} />}
         {/* Ingang-poort + gele/blauwe "Kies je kant"-wegwijzer verwijderd (Mark
             23 aug: "het begin is veel te druk"). De entree is nu rustig. */}
         {/* Toegangslaan naar het starter-plein — nu zwart asfalt (Mark 23 aug:
@@ -1833,8 +1832,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <BuddyEyeCamera buddyPosRef={buddyPos} playerPosRef={playerPos} active={buddyEye && !firstPerson && !!buddyId} />
         {/* Droom-maatje dat met je meeloopt en praat (verborgen in eerstepersoons;
             in buddy-cam blijft het vliegen maar onzichtbaar zodat de camera vrij kijkt). */}
-        {/* 🕵️ Mark 18 okt 2026: tijdens "Wie is de bedrieger?" alleen wie meedoet (bots + medespelers) — geen maatje, bezoekers of taferelen. */}
-        {buddyId && !firstPerson && rideIdx == null && !gameModus && (
+        {buddyId && !firstPerson && rideIdx == null && (
           <Suspense fallback={null}>
             <Buddy kind={buddyId} posRef={playerPos} faceRef={playerFace} heightRef={heightFnRef} factsRef={factsRef} groei={buddyGroei} buddyNaam={buddyNaam} onPraat={onBuddyPraat} posOutRef={buddyPos} verborgen={buddyEye} onBubbleTap={onLeermoment} />
           </Suspense>
@@ -1861,8 +1859,6 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <Autos playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} inputRef={inputRef} teleportRef={teleportRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         {/* 👥 medespelers in een gedeeld park (posities via Realtime, zie parkRoom.js) */}
         {peersRef ? <MedeSpelers peersRef={peersRef} heightRef={heightFnRef} /> : null}
-        {/* 🎮 Game-modus: Wie is de bedrieger? (Mark 9 sep) — bots, taakposten en HUD in de scène */}
-        {gameModus ? <ImposterGame key={gameKey} playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} teleportRef={teleportRef} spelerNaam={spelerNaam} avatarUrl={avatarUrl} level={gameGroep} onKlaar={onGameKlaar} onStop={onGameStop} net={gameNet} host={gameHost} autoStart={gameAuto} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} /> : null}
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         {/* Samenhang-plan 2 sep 2026: gids en poorten óók aan in bouw-modus —
@@ -1871,7 +1867,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit && !bergRit} onGids={onGidsMoment} hierRef={hierRef} factsRef={factsRef} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
         <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit && !bergRit} onDoor={onPoortDoor} />
-        {!gameModus && <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />}
+        {<Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />}
 
         {placing && (
           <gridHelper args={[GRID_SIZE, GRID_DIV, "#3f6b2a", "#6fa34a"]} position={[0, 0.02, 0]} />

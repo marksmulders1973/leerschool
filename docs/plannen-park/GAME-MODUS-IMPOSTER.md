@@ -1,3 +1,5 @@
+> ⛔ **VERWIJDERD 27 okt 2026** — Mark: "het hele bedrieger-element uit het park halen, dat is gewoon te slecht. Wel het park houden." Code weg in v1017 (ImposterKamer, zoo/game/*, SpelletjeKeuze, /spelletje → park). Dit document blijft als geschiedenis.
+
 # 🎮 Game-modus in het park — "Wie is de imposter?"
 
 *Mark, 9 sep 2026: "ik wil het park in gewone modus en game modus. In game modus kun je met meerdere spelers in je veld (na uitnodiging) imposter. Laat de bots meedoen. Laat als opdracht voor punten de sommen of taken in het park maken. Denk mee, dit gaan we doen."*

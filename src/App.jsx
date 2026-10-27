@@ -26,12 +26,7 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
-const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
 const NieuwkomersPage = lazy(() => import("./components/NieuwkomersPage.jsx"));
-const ImposterKamer = lazy(() => import("./components/ImposterKamer.jsx"));
-// 🕵️ Bedrieger-kamer → park: de loting uit de witte kamer (rol, aantal bots) reist mee
-// naar het parkspel via deze ref (Marks ontwerp 24 sep 2026). ZookwartierGame leest en wist hem.
-const bedriegerAutoRef = { current: null };
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const WishesBoard = lazy(() => import("./components/WishesBoard.jsx"));
@@ -203,7 +198,6 @@ const BOTTOMNAV_PAGES = new Set([
   "redactiesommen", "spelling", "woordenschat", "begrijpend-lezen",
   "create-quiz", "quiz-preview", "class-manager", "lobby",
   "ouder-dashboard",
-  "spelletje", // Brian 23 sep: keuzescherm Park/Imposter (de kamer zelf is fullscreen, zonder balk)
 ]);
 
 // Pagina's waar de 15-min sessie-timer telt. Niet op home (wachtruimte)
@@ -400,7 +394,7 @@ export default function App() {
     // redirecten, anders verliezen we de vraag-id.
     if (page === "vraag") return;
     const expected = pathForPage(page);
-    // Staat de echte URL al goed (navigate(url) vlak vóór setPage, bv. de Bedrieger-kamer → /dierentuin?samen=…),
+    // Staat de echte URL al goed (navigate(url) vlak vóór setPage, bv. een deel-link → /dierentuin?samen=…),
     // dan niet opnieuw navigeren: de router-locatie loopt soms één render achter en zou ?samen= wegschrijven.
     if (expected && expected === window.location.pathname) return;
     if (expected && expected !== location.pathname) {
@@ -1744,26 +1738,12 @@ export default function App() {
             }} />
         </Suspense>
       )}
-      {page === "spelletje" && (
-        <Suspense fallback={<PageLoader />}>
-          {/* 27 okt 2026 (kliktest groep 3): "Terug" bracht een kind met naam naar de startpagina met
-              Leerling/Student — plek kwijt. Een kind gaat terug naar zijn eigen pagina. */}
-          <SpelletjeKeuze onPark={() => setPage("zoo")} onImposter={() => setPage("imposter")}
-            onHome={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
-        </Suspense>
-      )}
-      {page === "imposter" && (
-        <Suspense fallback={<PageLoader />}>
-          <ImposterKamer onTerug={() => setPage("spelletje")} spelerNaam={userName || ""} userLevel={userLevel}
-            onNaarPark={(opties, url) => { bedriegerAutoRef.current = opties; if (url) navigate(url); setPage("zoo"); }} />
-        </Suspense>
-      )}
       {page === "zoo" && (
         <Suspense fallback={<PageLoader />}>
           {new URLSearchParams(window.location.search).get("bezoek") ? (
             <ParkBezoek code={new URLSearchParams(window.location.search).get("bezoek")} onHome={() => { window.location.href = "/dierentuin"; }} />
           ) : (
-            <ZookwartierGame autoBedrieger={bedriegerAutoRef} onHome={goHome} userName={userName || ""} authUser={authUser} roomCode={new URLSearchParams(window.location.search).get("samen") || null} onPlayObliterator={() => setPage("obliteratorPlay")}
+            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} roomCode={new URLSearchParams(window.location.search).get("samen") || null} onPlayObliterator={() => setPage("obliteratorPlay")}
               onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
               onOpenLeerpaden={() => { setLearnHubReturnPage("zoo"); setPage("learn-paths-hub"); }} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
           )}

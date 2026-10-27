@@ -16,8 +16,8 @@ export const SNELKOPPELINGEN = [
   // 3 okt 2026: "groep 3/groep 4/beginners" eruit (mengde gewone groep-3-zoekers met nieuwkomers); NT2-woorden erbij.
   { id: "nieuwkomers", emoji: "🌍", label: "Startpunt voor nieuwkomers", uitleg: "Voor kinderen die nog Nederlands leren: eerste woorden, klaszinnen, rekenen en lezen, met voorlezen en steun in zes talen.", pad: "/nieuwkomers",
     woorden: ["welkomnieuwkomer", "nieuwkomer", "nieuwkomers", "nieuw in nederland", "new", "learn dutch", "dutch", "english", "startpunt", "nt2", "nederlands leren", "taalklas", "schakelklas", "anderstalig", "anderstalige", "isk", "okan", "vluchteling", "oekraïens", "oekraiens", "arabisch", "turks", "roemeens", "bulgaars", "eerste woorden"] },
-  { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Kies: het Park of Bedrieger (de witte kamer, in aanbouw).", pad: "/spelletje",
-    woorden: ["spelletje", "spelletjes", "imposter", "bedrieger", "game"] },
+  { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Het Park: bouwen, dieren en leren bij elke plek.", pad: "/dierentuin",
+    woorden: ["spelletje", "spelletjes", "game"] },
   { id: "park", emoji: "🐾", label: "Mijn Park", uitleg: "Je eigen 3D-park: bouwen, dieren, leren bij elke plek.", pad: "/dierentuin",
     woorden: ["park", "mijn park", "dierentuin", "zoo", "bouwen", "dieren", "spel", "spelen", "munten", "zeppelin", "vulkaan", "auto", "kabelbaan"] },
   { id: "samen", emoji: "🏫", label: "Samen bouwen met een parkcode", uitleg: "Eén code, iedereen in hetzelfde park. Ook met de hele klas.", pad: "/dierentuin",
@@ -28,8 +28,6 @@ export const SNELKOPPELINGEN = [
     woorden: ["weektaak", "weektaken", "huiswerk", "taken", "weekplanning", "weekplan", "thuis oefenen", "opdracht", "klas thuis", "juf"] },
   { id: "digibord-klassikaal", emoji: "🙋", label: "Klassikaal op het digibord (handen tellen)", uitleg: "Kies een kant-en-klaar setje (of je eigen toets), zet het op het digibord en tel per antwoord de A-B-C-D-kaartjes: je ziet meteen hoeveel procent van de klas het goed had.", pad: "/klassikaal",
     woorden: ["handen", "handen opsteken", "abcd", "a b c d", "kaartjes", "stemkaarten", "klassikaal", "digibord toets", "procent goed", "hele klas"] },
-  { id: "imposter", emoji: "🎮", label: "Wie is de bedrieger?", uitleg: "Game in het park: taken zijn sommen, één speler doet alsof. ☰ → 🎮.", pad: "/dierentuin",
-    woorden: ["bedrieger", "wie is de bedrieger", "imposter", "impostor", "wie is de imposter", "game", "among us", "verrader", "bots", "spelleider"] },
   { id: "klassenregels", emoji: "🖼️", label: "Klassenregels met plaatjes (printen)", uitleg: "kaartjes voor de taalklas: stil zijn, zelf werken, samen werken", pad: "/klassenregels.html",
     woorden: ["klassenregels", "regels", "pictogrammen", "picto", "plaatjes", "poster", "taalklas", "afspraken"] },
   // 14 okt 2026: nieuwe doelgroep — Nederlandse kinderen in het buitenland (NTC/expat).
