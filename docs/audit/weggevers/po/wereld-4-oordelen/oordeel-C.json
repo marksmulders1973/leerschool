@@ -1,0 +1,397 @@
+[
+ {
+  "nr": 1,
+  "waar": "wereldorientatie-mix-po stap 1 vraag 1",
+  "eigenKeuze": "Tijd van regenten en vorsten",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt. Klein punt: niveaus.simpeler 'Gouden Eeuw = 1600s' is Engels ('1600s'), geen Nederlands.",
+  "voorstel": {
+   "niveaus": {
+    "basis": "Regenten + vorsten.",
+    "simpeler": "Gouden Eeuw = 17e eeuw",
+    "nogSimpeler": "1600-1700."
+   }
+  }
+ },
+ {
+  "nr": 2,
+  "waar": "wereldorientatie-mix-po stap 1 vraag 2",
+  "eigenKeuze": "1953",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 3,
+  "waar": "wereldorientatie-mix-po stap 1 vraag 3",
+  "eigenKeuze": "VOC",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt (VOC 1602, WIC 1621, Noordse Compagnie 1614). Maar de vraag zegt 'handelscompagnie' en 'Amsterdamse Wisselbank' is een bank: afleider van een andere soort, valt op vorm af.",
+  "voorstel": {
+   "options": [
+    "VOC",
+    "WIC",
+    "Noordse Compagnie",
+    "Compagnie van Verre"
+   ],
+   "wrongHints": [
+    null,
+    "De WIC handelde op Amerika en West-Afrika, maar werd pas in 1621 opgericht, bijna twintig jaar later. Welk bedrijf staat in de uitleg bij 1602?",
+    "De Noordse Compagnie ving walvissen in de zee bij de Noordpool. Welk bedrijf staat in de uitleg bij 1602?",
+    "De Compagnie van Verre was een kleine compagnie die al in 1594 naar Azië voer, nog vóór 1602. Welk bedrijf staat in de uitleg bij 1602?"
+   ]
+  }
+ },
+ {
+  "nr": 4,
+  "waar": "wereldorientatie-mix-po stap 1 vraag 4",
+  "eigenKeuze": "Een Joods meisje dat onderdook",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 5,
+  "waar": "wereldorientatie-mix-po stap 1 vraag 5",
+  "eigenKeuze": "5 mei 1945",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 6,
+  "waar": "wereldorientatie-mix-po stap 2 vraag 1",
+  "eigenKeuze": "12",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 7,
+  "waar": "wereldorientatie-mix-po stap 2 vraag 2",
+  "eigenKeuze": "Amsterdam",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 8,
+  "waar": "wereldorientatie-mix-po stap 2 vraag 3",
+  "eigenKeuze": "Azië",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 9,
+  "waar": "wereldorientatie-mix-po stap 2 vraag 4",
+  "eigenKeuze": "27",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 10,
+  "waar": "wereldorientatie-mix-po stap 2 vraag 5",
+  "eigenKeuze": "CO₂ van fossiele brandstoffen",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 11,
+  "waar": "wereldorientatie-mix-po stap 3 vraag 1",
+  "eigenKeuze": "Walvis",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 12,
+  "waar": "wereldorientatie-mix-po stap 3 vraag 2",
+  "eigenKeuze": "CO₂ + water + zonlicht → suiker + zuurstof",
+  "oordeel": "fout",
+  "reden": "Antwoord klopt, maar de hint bij optie 1 ('Dat is ademhaling — precies het omgekeerde') geeft het antwoord per omkering: draai de formule om en je hebt letterlijk de goede optie.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Zo halen mensen en dieren energie uit hun eten: dat heet ademhaling. Wat heeft een plant nodig om zélf voedsel te maken?",
+    "Planten halen water en mineralen uit de grond, maar hun voedsel maken ze zelf. Wat hebben ze daarvoor nodig?",
+    "Kijk goed welk gas een plant opneemt en welk gas hij afgeeft. Welk gas ademen wij in?"
+   ]
+  }
+ },
+ {
+  "nr": 13,
+  "waar": "wereldorientatie-mix-po stap 3 vraag 3",
+  "eigenKeuze": "Ongeveer 206",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 14,
+  "waar": "wereldorientatie-mix-po stap 3 vraag 4",
+  "eigenKeuze": "Nee, een spin heeft 8 poten",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 15,
+  "waar": "wereldorientatie-mix-po stap 3 vraag 5",
+  "eigenKeuze": "Plant",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 16,
+  "waar": "wereldorientatie-mix-po stap 4 vraag 1",
+  "eigenKeuze": "Isaac Newton",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 17,
+  "waar": "wereldorientatie-mix-po stap 4 vraag 2",
+  "eigenKeuze": "20 juli 1969",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 18,
+  "waar": "wereldorientatie-mix-po stap 4 vraag 3",
+  "eigenKeuze": "Pluto",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 19,
+  "waar": "wereldorientatie-mix-po stap 4 vraag 4",
+  "eigenKeuze": "Water",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 20,
+  "waar": "wereldorientatie-mix-po stap 4 vraag 5",
+  "eigenKeuze": "Marie Curie",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 21,
+  "waar": "wereldorientatie-mix-po stap 5 vraag 1",
+  "eigenKeuze": "Lees eerst de vraag en zoek dan het stuk tekst dat erbij hoort",
+  "oordeel": "twijfel",
+  "reden": "Geen wereldoriëntatie en niet te vinden in de lesstof (mix-toets heeft alleen 'Veel succes!'); de afleiders zijn duidelijk 'luie' strategieën (o.a. 'alleen de eerste zin'), dus raadbaar op gezond verstand. De niveaus ('Stap voor stap') sluiten niet aan op het goede antwoord (eerst de vraag lezen).",
+  "voorstel": {
+   "niveaus": {
+    "basis": "Lees eerst de vraag; dan weet je waar je in de tekst op moet letten.",
+    "simpeler": "Eerst de vraag, dan het stukje tekst.",
+    "nogSimpeler": "Eerst de vraag."
+   }
+  }
+ },
+ {
+  "nr": 22,
+  "waar": "wereldorientatie-mix-po stap 5 vraag 2",
+  "eigenKeuze": "Europa",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 23,
+  "waar": "wereldorientatie-mix-po stap 5 vraag 3",
+  "eigenKeuze": "1939-1945 in de wereld, 1940-1945 in Nederland",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 24,
+  "waar": "wereldorientatie-mix-po stap 5 vraag 4",
+  "eigenKeuze": "Vleeseter",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 25,
+  "waar": "wereldorientatie-mix-po stap 5 vraag 5",
+  "eigenKeuze": "27 april",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 26,
+  "waar": "godsdiensten-culturen-po stap 1 vraag 1",
+  "eigenKeuze": "Geloof, rituelen en regels",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 27,
+  "waar": "godsdiensten-culturen-po stap 1 vraag 2",
+  "eigenKeuze": "Christendom",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 28,
+  "waar": "godsdiensten-culturen-po stap 1 vraag 3",
+  "eigenKeuze": "Iemand die niet in een god gelooft",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 29,
+  "waar": "godsdiensten-culturen-po stap 1 vraag 4",
+  "eigenKeuze": "Ongeveer 55%",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 30,
+  "waar": "godsdiensten-culturen-po stap 2 vraag 1",
+  "eigenKeuze": "Jezus",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 31,
+  "waar": "godsdiensten-culturen-po stap 2 vraag 2",
+  "eigenKeuze": "De opstanding van Jezus uit de dood",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 32,
+  "waar": "godsdiensten-culturen-po stap 2 vraag 3",
+  "eigenKeuze": "Paus",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 33,
+  "waar": "godsdiensten-culturen-po stap 2 vraag 4",
+  "eigenKeuze": "Reformatie",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 34,
+  "waar": "godsdiensten-culturen-po stap 3 vraag 1",
+  "eigenKeuze": "5",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 35,
+  "waar": "godsdiensten-culturen-po stap 3 vraag 2",
+  "eigenKeuze": "Jodendom",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 36,
+  "waar": "godsdiensten-culturen-po stap 3 vraag 3",
+  "eigenKeuze": "Ramadan",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt. 'Tijd van het jaar' is onnauwkeurig: de ramadan schuift elk jaar ongeveer 11 dagen op en valt dus niet in een vast seizoen; het is een maand. Zelfde kennispunt komt terug in vraag 46.",
+  "voorstel": {
+   "q": "In welke **maand** vasten moslims overdag?"
+  }
+ },
+ {
+  "nr": 37,
+  "waar": "godsdiensten-culturen-po stap 3 vraag 4",
+  "eigenKeuze": "Eten dat volgens joodse regels mag",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 38,
+  "waar": "godsdiensten-culturen-po stap 4 vraag 1",
+  "eigenKeuze": "Een prins die in India een nieuwe leer begon",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 39,
+  "waar": "godsdiensten-culturen-po stap 4 vraag 2",
+  "eigenKeuze": "Wat je doet, komt op je terug",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 40,
+  "waar": "godsdiensten-culturen-po stap 4 vraag 3",
+  "eigenKeuze": "Hindoeïstisch lichtfeest",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 41,
+  "waar": "godsdiensten-culturen-po stap 4 vraag 4",
+  "eigenKeuze": "Bevrijding uit lijden en wedergeboorte",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 42,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 1",
+  "eigenKeuze": "Christendom",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt (31% ≈ een op de drie). Zelfde kennispunt en zelfde antwoord als vraag 27 (meeste aanhangers = christendom); in de eindtoets bewust herhaald, maar een kind dat 27 deed weet dit meteen. Geen tekstwijziging nodig; alleen ter overweging (eventueel vervangen door een nieuw kennispunt)."
+ },
+ {
+  "nr": 43,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 2",
+  "eigenKeuze": "Koran",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 44,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 3",
+  "eigenKeuze": "Mohammed",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 45,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 4",
+  "eigenKeuze": "Ganges",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 46,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 5",
+  "eigenKeuze": "Ramadan",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt, hints kloppen met de lesstof (Jom Kippoer, veertigdagentijd, Navaratri). Maar dit is dezelfde vraag als 36 (vastentijd islam = ramadan). Voorstel: zelfde antwoord, ander aanknopingspunt (Suikerfeest).",
+  "voorstel": {
+   "q": "Na welke **vastentijd** vieren moslims het **Suikerfeest**?"
+  }
+ },
+ {
+  "nr": 47,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 6",
+  "eigenKeuze": "Gelooft niet in een god",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt, hints verwijzen terecht naar deel 'Wat is godsdienst?'. Maar inhoudelijk dezelfde vraag als 28 (wat is een atheïst), met hetzelfde antwoord. Binnen de regels (antwoord blijft) is alleen de vraag anders te stellen; overweeg de vraag te vervangen door een nieuw kennispunt.",
+  "voorstel": {
+   "q": "Lotte zegt: 'Ik ben **atheïst**.' Wat bedoelt ze daarmee?"
+  }
+ },
+ {
+  "nr": 48,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 7",
+  "eigenKeuze": "Hindoeïsme en boeddhisme",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 49,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 8",
+  "eigenKeuze": "Moskee",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ },
+ {
+  "nr": 50,
+  "waar": "godsdiensten-culturen-po stap 5 vraag 9",
+  "eigenKeuze": "Joods",
+  "oordeel": "goed",
+  "reden": "Eigen keuze = answer; afleiders zelfde soort; hints kloppen inhoudelijk en verraden niets; geen feitfout."
+ }
+]

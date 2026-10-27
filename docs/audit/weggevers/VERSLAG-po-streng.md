@@ -30,6 +30,9 @@ Volledige lijst: `docs/audit/eindmeting-po/oordeel-A..D.json` (nr, waar, eigenKe
 2. **Dekkende blinde controle per batch** met de maatstaf van deze eindmeting, te beginnen bij doorstroomtoets-studievaardigheden-g8, begrijpend lezen (strategie, teksten, conclusies, brief) en de nieuwkomer-paden.
 3. Eindmeting opnieuw (nieuwe seed) pas daarna.
 
+## Register van goedgekeurde vragen (sinds 27 okt)
+`docs/audit/goedgekeurd.json` (429 vragen: 360 goed, 69 twijfel; 394 nog geldig) via `scripts/audit/goedgekeurd.mjs`. Elke vraag die een blinde nakijker "goed" of "twijfel" gaf staat erin met een hash van vraag/opties/hints; verandert de vraag, dan vervalt de goedkeuring vanzelf. **Elke herstelronde slaat goedgekeurde vragen over** (`goedgekeurd.mjs filter <lijst.json>`), en elke nieuwe controle voegt haar oordelen toe (`toevoegen`). Eindmetingen blijven over álle vragen (anders meet je je eigen selectie). De oordelen van de 25 eerdere batches zijn niet bewaard (cloud-rondes); het register begint dus bij wereld-4 + deze eindmeting.
+
 ## Controles (stand branch audit3/wereld-4, 27 okt 22:30)
 - `node scripts/audit/vergelijk-met-main.mjs origin/main --q-mag`: 8 bestanden · 269 checks gewijzigd · 177 vraagteksten · **0 afwijkingen**
 - `npm run audit:vragen`: 355 paden · 18758 vragen · 633 kale sommen nagerekend · 0 meldingen

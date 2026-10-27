@@ -1,0 +1,755 @@
+[
+ {
+  "nr": 1,
+  "waar": "werelddelen-landen-po stap 1 vraag 1",
+  "eigenKeuze": "7",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 2,
+  "waar": "werelddelen-landen-po stap 1 vraag 2",
+  "eigenKeuze": "Azië",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 3,
+  "waar": "werelddelen-landen-po stap 1 vraag 3",
+  "eigenKeuze": "Stille Oceaan",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 4,
+  "waar": "werelddelen-landen-po stap 1 vraag 4",
+  "eigenKeuze": "Ongeveer 8 miljard",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 5,
+  "waar": "werelddelen-landen-po stap 1 vraag 5",
+  "eigenKeuze": "Zuidelijke Oceaan",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 6,
+  "waar": "werelddelen-landen-po stap 1 vraag 6",
+  "eigenKeuze": "70%",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 7,
+  "waar": "werelddelen-landen-po stap 1 vraag 7",
+  "eigenKeuze": "Een continent is een groot stuk land, een land heeft eigen grenzen en een regering",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 8,
+  "waar": "werelddelen-landen-po stap 1 vraag 8",
+  "eigenKeuze": "Rusland",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 9,
+  "waar": "werelddelen-landen-po stap 2 vraag 1",
+  "eigenKeuze": "Parijs",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 10,
+  "waar": "werelddelen-landen-po stap 2 vraag 2",
+  "eigenKeuze": "India",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 11,
+  "waar": "werelddelen-landen-po stap 2 vraag 3",
+  "eigenKeuze": "Mount Everest",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 12,
+  "waar": "werelddelen-landen-po stap 2 vraag 4",
+  "eigenKeuze": "27",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 13,
+  "waar": "werelddelen-landen-po stap 2 vraag 5",
+  "eigenKeuze": "Volga",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 14,
+  "waar": "werelddelen-landen-po stap 2 vraag 6",
+  "eigenKeuze": "Bij de Dode Zee",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 15,
+  "waar": "werelddelen-landen-po stap 2 vraag 7",
+  "eigenKeuze": "2002",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 16,
+  "waar": "werelddelen-landen-po stap 3 vraag 1",
+  "eigenKeuze": "Brasília",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 17,
+  "waar": "werelddelen-landen-po stap 3 vraag 2",
+  "eigenKeuze": "Nijl",
+  "oordeel": "twijfel",
+  "reden": "Nijl vs Amazone is omstreden (sommige metingen maken de Amazone langer); hint 'net iets korter' en niveau 'langste ooit' zijn te stellig.",
+  "voorstel": {
+   "q": "Welke rivier geldt als de **langste** ter wereld?",
+   "wrongHints": [
+    null,
+    "De Amazone heeft het meeste water. Volgens de meeste metingen is hij net iets korter.",
+    "De Yangtze is de langste rivier van Azië, maar niet van de wereld.",
+    "De Mississippi is de langste rivier van de VS, maar er zijn langere."
+   ],
+   "niveaus": {
+    "basis": "De Nijl geldt als de langste rivier ter wereld.",
+    "simpeler": "De Nijl (Egypte/Afrika) is ~6.650 km lang: volgens de meeste metingen de langste rivier ter wereld.",
+    "nogSimpeler": "Nijl"
+   }
+  }
+ },
+ {
+  "nr": 18,
+  "waar": "werelddelen-landen-po stap 3 vraag 3",
+  "eigenKeuze": "Zuid-Afrika",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 19,
+  "waar": "werelddelen-landen-po stap 3 vraag 4",
+  "eigenKeuze": "Kangoeroe",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 20,
+  "waar": "werelddelen-landen-po stap 3 vraag 5",
+  "eigenKeuze": "Canada",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 21,
+  "waar": "werelddelen-landen-po stap 3 vraag 6",
+  "eigenKeuze": "Portugees",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 22,
+  "waar": "werelddelen-landen-po stap 3 vraag 7",
+  "eigenKeuze": "Suriname",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 23,
+  "waar": "werelddelen-landen-po stap 3 vraag 8",
+  "eigenKeuze": "Sahara",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 24,
+  "waar": "werelddelen-landen-po stap 3 vraag 9",
+  "eigenKeuze": "13",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 25,
+  "waar": "werelddelen-landen-po stap 3 vraag 10",
+  "eigenKeuze": "3",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 26,
+  "waar": "werelddelen-landen-po stap 4 vraag 1",
+  "eigenKeuze": "7",
+  "oordeel": "fout",
+  "reden": "Tweede verdedigbaar antwoord: 'hoeveel werelddelen leer je op school' – veel NL-methodes leren 6 (Amerika als één). De vraag stuurt bovendien met de Olympische ringen naar 5. Inhoudelijk ook dubbel met nr 1.",
+  "voorstel": {
+   "q": "De vijf Olympische ringen tellen Amerika als één werelddeel en laten Antarctica weg. Hoeveel **werelddelen** krijg je als je Noord- en Zuid-Amerika apart telt en Antarctica meetelt?",
+   "wrongHints": [
+    null,
+    "Dat is het aantal ringen. Lees de vraag nog eens: wat moet je anders tellen?",
+    "Dan heb je maar één van de twee dingen gedaan. Wat moet er nog bij?",
+    "Zoveel zijn het er niet. Noem ze eens op, van groot naar klein."
+   ]
+  }
+ },
+ {
+  "nr": 27,
+  "waar": "werelddelen-landen-po stap 4 vraag 2",
+  "eigenKeuze": "Azië",
+  "oordeel": "twijfel",
+  "reden": "Vrijwel dezelfde vraag als nr 2 (grootste werelddeel). Voorstel: ander lesstof-feit (60% wereldbevolking) met hetzelfde antwoord.",
+  "voorstel": {
+   "q": "Op welk werelddeel woont **ruim de helft** van alle mensen op aarde?",
+   "wrongHints": [
+    null,
+    "In Afrika wonen zo'n 1,4 miljard mensen. Dat is lang niet de helft van ruim 8 miljard.",
+    "In Noord-Amerika wonen zo'n 580 miljoen mensen, veel minder dan de helft.",
+    "In Zuid-Amerika wonen zo'n 430 miljoen mensen. Dat is maar een klein deel."
+   ]
+  }
+ },
+ {
+  "nr": 28,
+  "waar": "werelddelen-landen-po stap 4 vraag 3",
+  "eigenKeuze": "Mount Everest",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 29,
+  "waar": "werelddelen-landen-po stap 4 vraag 4",
+  "eigenKeuze": "Parijs",
+  "oordeel": "twijfel",
+  "reden": "Zelfde feit als nr 9 (hoofdstad/regering Frankrijk). Voorstel: ander feit met dezelfde Franstalige afleiders.",
+  "voorstel": {
+   "q": "In welke Franstalige stad staat de **Eiffeltoren**?",
+   "wrongHints": [
+    null,
+    "In Brussel staat het Atomium, niet de Eiffeltoren.",
+    "Genève in Zwitserland is bekend van het grote meer met de hoge fontein.",
+    "Luxemburg is de hoofdstad van een klein buurland. De Eiffeltoren staat in een groter land."
+   ]
+  }
+ },
+ {
+  "nr": 30,
+  "waar": "werelddelen-landen-po stap 4 vraag 5",
+  "eigenKeuze": "Brasília",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 31,
+  "waar": "werelddelen-landen-po stap 4 vraag 6",
+  "eigenKeuze": "Stille Oceaan",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 32,
+  "waar": "werelddelen-landen-po stap 4 vraag 7",
+  "eigenKeuze": "Nijl",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 33,
+  "waar": "werelddelen-landen-po stap 4 vraag 8",
+  "eigenKeuze": "De Noordzee",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 34,
+  "waar": "werelddelen-landen-po stap 4 vraag 9",
+  "eigenKeuze": "Een heel groot stuk land",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 35,
+  "waar": "werelddelen-landen-po stap 4 vraag 10",
+  "eigenKeuze": "Parijs",
+  "oordeel": "fout",
+  "reden": "Dubbele vraag: derde keer 'hoofdstad van Frankrijk' (nr 9 stap 2, nr 29 in dezelfde stap 4). Voorstel vraagt een ander feit uit de lesstof (Seine) met hetzelfde antwoord.",
+  "voorstel": {
+   "q": "Welke van deze hoofdsteden ligt aan de rivier de **Seine**?",
+   "wrongHints": [
+    null,
+    "Door Berlijn stroomt de Spree, in Duitsland.",
+    "Madrid ligt in Spanje, ver ten zuiden van de Seine.",
+    "Door Londen stroomt de Theems."
+   ]
+  }
+ },
+ {
+  "nr": 36,
+  "waar": "werelddelen-landen-po stap 4 vraag 11",
+  "eigenKeuze": "Afrika",
+  "oordeel": "twijfel",
+  "reden": "Egypte ligt deels in Azië (Sinaï); de hint erkent dat al, de vraag niet.",
+  "voorstel": {
+   "q": "Op welk werelddeel ligt het **grootste deel** van Egypte?"
+  }
+ },
+ {
+  "nr": 37,
+  "waar": "werelddelen-landen-po stap 4 vraag 12",
+  "eigenKeuze": "Atlantische Oceaan",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 38,
+  "waar": "werelddelen-landen-po stap 4 vraag 13",
+  "eigenKeuze": "Mount Everest",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 39,
+  "waar": "werelddelen-landen-po stap 4 vraag 14",
+  "eigenKeuze": "Berlijn",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 40,
+  "waar": "werelddelen-landen-po stap 4 vraag 15",
+  "eigenKeuze": "Madrid",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 41,
+  "waar": "werelddelen-landen-po stap 4 vraag 16",
+  "eigenKeuze": "Rome",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 42,
+  "waar": "werelddelen-landen-po stap 4 vraag 17",
+  "eigenKeuze": "Londen",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 43,
+  "waar": "werelddelen-landen-po stap 4 vraag 18",
+  "eigenKeuze": "Washington D.C.",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 44,
+  "waar": "werelddelen-landen-po stap 4 vraag 19",
+  "eigenKeuze": "Moskou",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 45,
+  "waar": "werelddelen-landen-po stap 4 vraag 20",
+  "eigenKeuze": "Tokio",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 46,
+  "waar": "werelddelen-landen-po stap 4 vraag 21",
+  "eigenKeuze": "Peking",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 47,
+  "waar": "werelddelen-landen-po stap 4 vraag 22",
+  "eigenKeuze": "Brasília",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 48,
+  "waar": "werelddelen-landen-po stap 4 vraag 23",
+  "eigenKeuze": "Sahara",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 49,
+  "waar": "werelddelen-landen-po stap 4 vraag 24",
+  "eigenKeuze": "Moskou",
+  "oordeel": "twijfel",
+  "reden": "'Grootste' is dubbelzinnig (oppervlakte of inwoners); de hints gaan over inwoners.",
+  "voorstel": {
+   "q": "Welke van deze Europese steden heeft de **meeste inwoners**?"
+  }
+ },
+ {
+  "nr": 50,
+  "waar": "werelddelen-landen-po stap 4 vraag 25",
+  "eigenKeuze": "Griekenland",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 51,
+  "waar": "werelddelen-landen-po stap 4 vraag 26",
+  "eigenKeuze": "Golden Gate Bridge",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 52,
+  "waar": "werelddelen-landen-po stap 4 vraag 27",
+  "eigenKeuze": "India",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 53,
+  "waar": "werelddelen-landen-po stap 4 vraag 28",
+  "eigenKeuze": "Rio de Janeiro",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 54,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 1",
+  "eigenKeuze": "Nijl",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 55,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 2",
+  "eigenKeuze": "Koning van Egypte, die als god werd gezien",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 56,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 3",
+  "eigenKeuze": "Jonge farao van Egypte",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 57,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 4",
+  "eigenKeuze": "Een steen met één tekst in drie schriften",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 58,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 1",
+  "eigenKeuze": "Athene",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 59,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 2",
+  "eigenKeuze": "Aristoteles",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 60,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 3",
+  "eigenKeuze": "Alexander de Grote",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 61,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 4",
+  "eigenKeuze": "Belofte van artsen",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 62,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 1",
+  "eigenKeuze": "Romulus en Remus",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 63,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 2",
+  "eigenKeuze": "Julius Caesar",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 64,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 3",
+  "eigenKeuze": "Rijn",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 65,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 4",
+  "eigenKeuze": "476 n.Chr.",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 66,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 1",
+  "eigenKeuze": "Nijl",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 67,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 2",
+  "eigenKeuze": "Athene",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 68,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 3",
+  "eigenKeuze": "Aristoteles",
+  "oordeel": "twijfel",
+  "reden": "Zelfde feit als nr 59 (Aristoteles leraar van Alexander), alleen omschreven. Voorstel: ander lesstof-feit.",
+  "voorstel": {
+   "q": "Welke Griekse denker schreef over **logica, biologie en politiek**?",
+   "wrongHints": [
+    null,
+    "Archimedes is bekend van de hefboom en van dingen die drijven in water.",
+    "Hippocrates was arts; hij schreef over ziektes en genezen.",
+    "Socrates schreef zelf niets op; hij stelde vooral vragen."
+   ]
+  }
+ },
+ {
+  "nr": 69,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 4",
+  "eigenKeuze": "Caesar",
+  "oordeel": "twijfel",
+  "reden": "Zelfde vraag als nr 63, alleen vertaald ('Veni, vidi, vici'). Voorstel: ander Caesar-feit uit de lesstof.",
+  "voorstel": {
+   "q": "Welke Romein stak met zijn leger de rivier de **Rubicon** over, waarna een burgeroorlog begon?",
+   "wrongHints": [
+    null,
+    "Augustus werd later de eerste keizer. Deze oversteek was van iemand vóór hem.",
+    "Nero leefde ruim honderd jaar later en is bekend van de brand in Rome.",
+    "Brutus is bekend van een moord in de Senaat, niet van deze oversteek."
+   ]
+  }
+ },
+ {
+  "nr": 70,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 5",
+  "eigenKeuze": "Cheops",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 71,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 6",
+  "eigenKeuze": "476 n.Chr.",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 72,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 7",
+  "eigenKeuze": "Schrift met plaatjes",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 73,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 8",
+  "eigenKeuze": "Griekenland, rond 776 v.Chr.",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 74,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 9",
+  "eigenKeuze": "Verhalen over goden en helden",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 75,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 10",
+  "eigenKeuze": "De Nijl",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 76,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 11",
+  "eigenKeuze": "Athene",
+  "oordeel": "fout",
+  "reden": "Dubbele vraag in dezelfde stap: nr 67 vraagt al in welke stad de democratie/volksvergadering ontstond (en nr 58 in stap 2). Voorstel vraagt een ander lesstof-feit (Parthenon) met hetzelfde antwoord; pas dan ook hint Parthenon bij nr 77 aan.",
+  "voorstel": {
+   "q": "In welke stad staat het **Parthenon**, de beroemde marmeren tempel van de Grieken?",
+   "wrongHints": [
+    null,
+    "Mycene was een oudere Griekse stad met machtige koningen. Deze tempel staat in een andere stad.",
+    "In Rome staat het Pantheon. Die naam lijkt erop, maar het is een ander gebouw.",
+    "Alexandrië in Egypte werd pas gesticht toen deze tempel al lang klaar was."
+   ]
+  }
+ },
+ {
+  "nr": 77,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 12",
+  "eigenKeuze": "Colosseum",
+  "oordeel": "twijfel",
+  "reden": "Alleen als voorstel nr 76 (Parthenon) wordt overgenomen: de hint bij Parthenon noemt dan het antwoord van nr 76 ('in Athene').",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Het Pantheon is een Romeinse tempel met een enorme koepel, geen arena.",
+    "Het Forum was het plein voor politiek en handel.",
+    "Het Parthenon is een Griekse tempel, geen Romeinse arena."
+   ]
+  }
+ },
+ {
+  "nr": 78,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 13",
+  "eigenKeuze": "476 n.Chr.",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 79,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 14",
+  "eigenKeuze": "Toetanchamon",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 80,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 15",
+  "eigenKeuze": "Grafmonument voor een farao",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 81,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 16",
+  "eigenKeuze": "Bij de Egyptenaren",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 82,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 17",
+  "eigenKeuze": "Champollion",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 83,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 18",
+  "eigenKeuze": "Romeinse veldheer en dictator",
+  "oordeel": "twijfel",
+  "reden": "Hint bij 'Macedonische koning' zegt 'Caesar kwam uit een andere stad', maar Macedonië was geen stad.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Hij had wel iets met Cleopatra, maar was zelf geen Egyptenaar.",
+    "Caesar schreef wel boeken, maar daar werd hij niet beroemd om.",
+    "Dat was Alexander de Grote, ruim 200 jaar eerder. Caesar kwam niet uit Macedonië."
+   ]
+  }
+ },
+ {
+  "nr": 84,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 19",
+  "eigenKeuze": "Romeinse keizer",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 85,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 20",
+  "eigenKeuze": "Griekse filosoof",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 86,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 21",
+  "eigenKeuze": "Aristoteles",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 87,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 22",
+  "eigenKeuze": "Macedonië",
+  "oordeel": "twijfel",
+  "reden": "'Uit welk land': het oude koninkrijk Macedonië is niet het huidige land Noord-Macedonië (lag grotendeels in het huidige Griekenland); kan verwarren.",
+  "voorstel": {
+   "q": "Waar kwam **Alexander de Grote** vandaan?"
+  }
+ },
+ {
+  "nr": 88,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 23",
+  "eigenKeuze": "Olympia, 776 v.Chr.",
+  "oordeel": "twijfel",
+  "reden": "Zelfde feit als nr 73 in dezelfde stap (eerste Olympische Spelen, 776 v.Chr.); alleen plaats i.p.v. land. Binnen de regels (zelfde antwoord) niet echt te herschrijven; overweeg een van beide te vervangen."
+ },
+ {
+  "nr": 89,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 24",
+  "eigenKeuze": "De Limes langs de Rijn",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 90,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 25",
+  "eigenKeuze": "Veel verschillende goden",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 91,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 26",
+  "eigenKeuze": "Romeinse arena-vechter",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 92,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 27",
+  "eigenKeuze": "Latijn",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ },
+ {
+  "nr": 93,
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 28",
+  "eigenKeuze": "Sparta",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders zelfde soort, hints kloppen en verraden niets."
+ }
+]

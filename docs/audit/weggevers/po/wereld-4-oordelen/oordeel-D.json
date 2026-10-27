@@ -1,0 +1,498 @@
+[
+ {
+  "nr": 1,
+  "waar": "beroepen-werk-po stap 1 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "fout",
+  "reden": "Tweede verdedigbaar antwoord volgens de lesstof: de eerste regel zegt 'Beroep = wat je voor werk doet (om geld te verdienen). Ook wel ... baan', dat is precies optie B ('wat je op dit moment voor geld doet'). Twee regels later zegt de les juist dat baan iets anders is. De lesstof spreekt zichzelf tegen.",
+  "voorstel": {
+   "lesstofZin": "**Beroep** = wat je voor werk doet *(om geld te verdienen)*.\nOok wel **vak**, **functie**, **professie**, **baan**. → **Beroep** = het werk dat je geleerd hebt om te doen *(je vak)*.\nOok wel **vak** of **professie**."
+  }
+ },
+ {
+  "nr": 2,
+  "waar": "beroepen-werk-po stap 1 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 3,
+  "waar": "beroepen-werk-po stap 1 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 4,
+  "waar": "beroepen-werk-po stap 1 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "Vraag/antwoord kloppen (AOW-leeftijd 2026 = 67). Lesstof zegt 'stijgt naar 68 in komende jaren'. Vastgesteld is 67 jaar en 3 maanden in 2028, dus 68 klopt niet.",
+  "voorstel": {
+   "lesstofZin": "• **Pensioenleeftijd**: 67 jaar *(stijgt naar 68 in komende jaren)*. → • **Pensioenleeftijd**: 67 jaar *(vanaf 2028 iets hoger: 67 jaar en 3 maanden)*."
+  }
+ },
+ {
+  "nr": 5,
+  "waar": "beroepen-werk-po stap 2 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "fout",
+  "reden": "Hint bij B noemt het antwoord letterlijk ('Moet er niet eerst iets uit de natuur komen?', terwijl de goede optie 'Werk in de natuur' is). De hints bij C en D ('allereerste grondstoffen', 'allereerste stap in de keten') wijzen alle drie dezelfde kant op. D verwijst ook naar een 'keten' die niet in de les staat.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Iets maken in een fabriek hoort bij de secundaire sector. Wat staat er in de les bij primair?",
+    "Klanten helpen in een winkel hoort bij de tertiaire sector. Wat staat er in de les bij primair?",
+    "Zorg, onderwijs en overheid horen bij de quartaire sector. Wat staat er in de les bij primair?"
+   ]
+  }
+ },
+ {
+  "nr": 6,
+  "waar": "beroepen-werk-po stap 2 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "De hints bij C en D eindigen met 'Welk beroep maakt of bouwt iets?'. Van de opties bouwt alleen de timmerman, dus de hint wijst het antwoord bijna aan. Beter is om terug te verwijzen naar de definitie.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Een verkoper helpt klanten in een winkel: dat is de tertiaire sector. Wat doe je in de secundaire sector volgens de les?",
+    "Een leerkracht hoort bij onderwijs: dat is de quartaire sector. Wat doe je in de secundaire sector volgens de les?",
+    "Een boer haalt iets uit de natuur: dat is de primaire sector. Wat doe je in de secundaire sector volgens de les?"
+   ]
+  }
+ },
+ {
+  "nr": 7,
+  "waar": "beroepen-werk-po stap 2 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 8,
+  "waar": "beroepen-werk-po stap 2 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 9,
+  "waar": "beroepen-werk-po stap 3 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 10,
+  "waar": "beroepen-werk-po stap 3 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 11,
+  "waar": "beroepen-werk-po stap 3 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "De VMBO-hint ('Waar leer je daarna het vak echt?') en de lesstof ('VMBO leidt naar mbo') samen geven het antwoord MBO direct.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Op de universiteit leer je vooral theorie en onderzoek. Is loodgieter zo'n beroep?",
+    "Het vmbo is nog middelbare school; daar word je nog geen loodgieter. Bij welke opleiding staat loodgieter in de les?",
+    "Op het hbo (hogeschool) leer je voor beroepen als leraar of ingenieur. Bij welke opleiding staat loodgieter in de les?"
+   ]
+  }
+ },
+ {
+  "nr": 12,
+  "waar": "beroepen-werk-po stap 3 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "De vraag zegt zelf 'de pabo, de opleiding voor juf of meester'. Dat is precies het antwoord van nr 39 ('Voor welk beroep ga je naar de pabo?') in hetzelfde pad. Het feit pabo = leerkracht staat ook al in de lesstof (HBO-beroepen), dus de toelichting in de vraag is niet nodig.",
+  "voorstel": {
+   "q": "Op welk niveau is de **pabo**?"
+  }
+ },
+ {
+  "nr": 13,
+  "waar": "beroepen-werk-po stap 4 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 14,
+  "waar": "beroepen-werk-po stap 4 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; €14,71 ≈ €15; de hints over de jeugdlonen kloppen (16 jr €5,07; 18-19 jr €7,36-€8,83)."
+ },
+ {
+  "nr": 15,
+  "waar": "beroepen-werk-po stap 4 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 16,
+  "waar": "beroepen-werk-po stap 4 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 17,
+  "waar": "beroepen-werk-po stap 5 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 18,
+  "waar": "beroepen-werk-po stap 5 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed. Hetzelfde feit (leerkracht = hbo/pabo) komt 3x voor (12, 18, 39), maar met verschillende vraagvormen."
+ },
+ {
+  "nr": 19,
+  "waar": "beroepen-werk-po stap 5 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 20,
+  "waar": "beroepen-werk-po stap 5 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; herhaling van nr 4 in de mix-toets, met andere invalshoek."
+ },
+ {
+  "nr": 21,
+  "waar": "beroepen-werk-po stap 5 vraag 5",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 22,
+  "waar": "beroepen-werk-po stap 5 vraag 6",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; herhaling van nr 13 als toepassing."
+ },
+ {
+  "nr": 23,
+  "waar": "beroepen-werk-po stap 5 vraag 7",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 24,
+  "waar": "beroepen-werk-po stap 5 vraag 8",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 25,
+  "waar": "beroepen-werk-po stap 5 vraag 9",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "Antwoord 13 klopt. De hint bij B zegt 'Vanaf 15 mag je zwaarder werk doen, zoals vakken vullen'. Volgens de Rijksoverheid mogen 13-14-jarigen al helpen bij vakken vullen, en vanaf 15 mag dat zelfstandig. De tilgrens blijft 10 kg, dus 'zwaarder' klopt niet. Inhoudelijk is dit dezelfde vraag als nr 16 (herhaling in stap 5, mag).",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Op je 15e mag je meer, zoals zelf kranten bezorgen. Is helpen in de tuin zulk werk, of een licht klusje dat eerder mag?",
+    "Vanaf 16 mag je een echte bijbaan. Is helpen in de tuin al een bijbaan?",
+    "Op je 12e ben je volgens de wet nog te jong voor betaald werk. Hoeveel ouder moet je zijn?"
+   ]
+  }
+ },
+ {
+  "nr": 26,
+  "waar": "beroepen-werk-po stap 5 vraag 10",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; CV staat niet in de lesstof, maar is algemeen bekend en de afleiders zijn gelijkwaardig."
+ },
+ {
+  "nr": 27,
+  "waar": "beroepen-werk-po stap 5 vraag 11",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 28,
+  "waar": "beroepen-werk-po stap 5 vraag 12",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 29,
+  "waar": "beroepen-werk-po stap 5 vraag 13",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 30,
+  "waar": "beroepen-werk-po stap 5 vraag 14",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 31,
+  "waar": "beroepen-werk-po stap 5 vraag 15",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 32,
+  "waar": "beroepen-werk-po stap 5 vraag 16",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 33,
+  "waar": "beroepen-werk-po stap 5 vraag 17",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; herhaling van nr 3 als situatie."
+ },
+ {
+  "nr": 34,
+  "waar": "beroepen-werk-po stap 5 vraag 18",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 35,
+  "waar": "beroepen-werk-po stap 5 vraag 19",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 36,
+  "waar": "beroepen-werk-po stap 5 vraag 20",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 37,
+  "waar": "beroepen-werk-po stap 5 vraag 21",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 38,
+  "waar": "beroepen-werk-po stap 5 vraag 22",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "De hint bij B ('een extraatje bovenop iets anders. Waarop?') stuurt het kind direct naar 'gewoon geld voor je werk' = de goede optie.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Dat is een bonus: die krijg je soms, maar niet altijd. Wat staat er in de les bij salaris?",
+    "Dat is belasting: die betaal je juist.",
+    "Dat is een uitkering, zoals de WW."
+   ]
+  }
+ },
+ {
+  "nr": 39,
+  "waar": "beroepen-werk-po stap 5 vraag 23",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed zodra de vraag van nr 12 is aangepast (die verklapt nu dit antwoord)."
+ },
+ {
+  "nr": 40,
+  "waar": "beroepen-werk-po stap 5 vraag 24",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 41,
+  "waar": "vulkanen-po stap 1 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "Vraag, antwoord en hints kloppen. De lesstof wekt de indruk dat magma meer dan 1000 graden is ('meer dan 1000 graden. Zo heet dat steen vloeibaar wordt'). Magma is 700-1200 °C.",
+  "voorstel": {
+   "lesstofZin": "Diep in de aarde is het gloeiend heet: meer dan **1000 graden**. → Diep in de aarde is het gloeiend heet: magma is **700 tot 1200 graden**."
+  }
+ },
+ {
+  "nr": 42,
+  "waar": "vulkanen-po stap 1 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 43,
+  "waar": "vulkanen-po stap 1 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "fout",
+  "reden": "Deze vraag noemt 'kegelvulkaan' plus 'een nieuw laagje op de berg'. Direct daarna vraagt nr 44 hoe een vulkaan van laagjes heet (antwoord: kegelvulkaan). Het antwoord van 44 staat dus letterlijk in vraag 43. De hint bij D verwijst ook naar de snelheid van aardplaten, en die komt pas in stap 2.",
+  "voorstel": {
+   "q": "Waardoor wordt een vulkaan na uitbarstingen vaak een stukje **groter**?",
+   "wrongHints": [
+    null,
+    "Steen zwelt niet blijvend op als een ballon. Wat valt er bij een uitbarsting op de helling?",
+    "Water hoort er niet bij. Denk aan wat er uit de krater komt.",
+    "Aardplaten duwen een berg niet bij elke uitbarsting omhoog. Wat komt er bij een uitbarsting óp de berg terecht?"
+   ]
+  }
+ },
+ {
+  "nr": 44,
+  "waar": "vulkanen-po stap 1 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed zodra de vraag van nr 43 is aangepast (die verklapt nu 'kegelvulkaan')."
+ },
+ {
+  "nr": 45,
+  "waar": "vulkanen-po stap 2 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 46,
+  "waar": "vulkanen-po stap 2 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 47,
+  "waar": "vulkanen-po stap 2 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 48,
+  "waar": "vulkanen-po stap 2 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; Mount Scenery 887 m klopt, de hints over Posbank en Hoge Berg (ijstijd) kloppen."
+ },
+ {
+  "nr": 49,
+  "waar": "vulkanen-po stap 3 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 50,
+  "waar": "vulkanen-po stap 3 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt. De hint bij B zegt 'Gassen blijven dicht bij de berg', maar dat klopt niet: zwavelgas dreef in 2010 ook ver weg. Het punt is dat gas niet de reden was om vliegtuigen aan de grond te houden.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Zwavelgas stinkt en kan giftig zijn, maar daarom bleven de vliegtuigen niet staan. Wat kan wél dagenlang in de lucht blijven hangen?",
+    "De aardbevingen bleven op IJsland. Wat dreef er over Europa heen?",
+    "Zien was niet het probleem; iets in de lucht was het probleem."
+   ]
+  }
+ },
+ {
+  "nr": 51,
+  "waar": "vulkanen-po stap 3 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 52,
+  "waar": "vulkanen-po stap 3 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 53,
+  "waar": "vulkanen-po stap 4 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 54,
+  "waar": "vulkanen-po stap 4 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 55,
+  "waar": "vulkanen-po stap 4 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 56,
+  "waar": "vulkanen-po stap 4 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 57,
+  "waar": "vulkanen-po stap 5 vraag 1",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 58,
+  "waar": "vulkanen-po stap 5 vraag 2",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 59,
+  "waar": "vulkanen-po stap 5 vraag 3",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 60,
+  "waar": "vulkanen-po stap 5 vraag 4",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, opties zijn gelijkwaardig, hints zijn denkprikkels zonder het antwoord, geen feitfout."
+ },
+ {
+  "nr": 61,
+  "waar": "vulkanen-po stap 5 vraag 5",
+  "eigenKeuze": 0,
+  "oordeel": "goed",
+  "reden": "Goed; 'slapend' wordt in de les niet uitgelegd, maar de afleiders zijn eerlijk en de hints kloppen."
+ }
+]

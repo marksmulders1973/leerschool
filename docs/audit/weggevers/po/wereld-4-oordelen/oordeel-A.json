@@ -1,0 +1,636 @@
+[
+ {
+  "nr": 1,
+  "waar": "kaartlezen-po stap 1 vraag 1",
+  "eigenKeuze": "Inhoudsopgave",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 2,
+  "waar": "kaartlezen-po stap 1 vraag 2",
+  "eigenKeuze": "Water",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 3,
+  "waar": "kaartlezen-po stap 1 vraag 3",
+  "eigenKeuze": "De titel en de legenda lezen",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 4,
+  "waar": "kaartlezen-po stap 1 vraag 4",
+  "eigenKeuze": "Van bovenaf",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 5,
+  "waar": "kaartlezen-po stap 1 vraag 5",
+  "eigenKeuze": "De titel",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 6,
+  "waar": "kaartlezen-po stap 1 vraag 6",
+  "eigenKeuze": "De schaal",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 7,
+  "waar": "kaartlezen-po stap 1 vraag 7",
+  "eigenKeuze": "Coördinaten",
+  "oordeel": "twijfel",
+  "reden": "Vraag noemt het raster ('Hoe heet dat?'), maar 'coördinaten' zijn de letter-cijfercodes zelf, niet het raster. Afleiders zijn kaartonderdelen die duidelijk iets anders zijn; kleine verwarring.",
+  "voorstel": {
+   "q": "Op sommige kaarten wijs je een vakje aan met een letter en een cijfer, zoals **B3** of **C5**. Hoe heet zo'n plaatsaanduiding?"
+  }
+ },
+ {
+  "nr": 8,
+  "waar": "kaartlezen-po stap 1 vraag 8",
+  "eigenKeuze": "Bergen of hoogland",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 9,
+  "waar": "kaartlezen-po stap 2 vraag 1",
+  "eigenKeuze": "Bovenkant",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 10,
+  "waar": "kaartlezen-po stap 2 vraag 2",
+  "eigenKeuze": "Ten noorden van Rotterdam",
+  "oordeel": "twijfel",
+  "reden": "Hint bij 'Ten zuiden' is een tweekeuze ('noord of zuid?') nadat het kind zuid koos: geeft het antwoord feitelijk weg.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Waar ligt zuid op een normale kaart: boven of onder? En waar ligt Amsterdam?",
+    "Oost ligt rechts op de kaart. Ligt Amsterdam rechts van Rotterdam?",
+    "West ligt links op de kaart. Ligt Amsterdam links van Rotterdam?"
+   ]
+  }
+ },
+ {
+  "nr": 11,
+  "waar": "kaartlezen-po stap 2 vraag 3",
+  "eigenKeuze": "Zuidoost",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 12,
+  "waar": "kaartlezen-po stap 2 vraag 4",
+  "eigenKeuze": "NO (Noordoost)",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 13,
+  "waar": "kaartlezen-po stap 2 vraag 5",
+  "eigenKeuze": "West",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 14,
+  "waar": "kaartlezen-po stap 2 vraag 6",
+  "eigenKeuze": "Zuid",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 15,
+  "waar": "kaartlezen-po stap 2 vraag 7",
+  "eigenKeuze": "Naar het oosten",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 16,
+  "waar": "kaartlezen-po stap 2 vraag 8",
+  "eigenKeuze": "West",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 17,
+  "waar": "kaartlezen-po stap 2 vraag 9",
+  "eigenKeuze": "Links-onder",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 18,
+  "waar": "kaartlezen-po stap 3 vraag 1",
+  "eigenKeuze": "1 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 19,
+  "waar": "kaartlezen-po stap 3 vraag 2",
+  "eigenKeuze": "5 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 20,
+  "waar": "kaartlezen-po stap 3 vraag 3",
+  "eigenKeuze": "1 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 21,
+  "waar": "kaartlezen-po stap 3 vraag 4",
+  "eigenKeuze": "1:50.000.000",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 22,
+  "waar": "kaartlezen-po stap 3 vraag 5",
+  "eigenKeuze": "10 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 23,
+  "waar": "kaartlezen-po stap 3 vraag 6",
+  "eigenKeuze": "1 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 24,
+  "waar": "kaartlezen-po stap 3 vraag 7",
+  "eigenKeuze": "3 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 25,
+  "waar": "kaartlezen-po stap 3 vraag 8",
+  "eigenKeuze": "1:50",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 26,
+  "waar": "kaartlezen-po stap 4 vraag 1",
+  "eigenKeuze": "Een driehoekje, zoals een tentje",
+  "oordeel": "fout",
+  "reden": "Vorm verraadt: alleen bij de goede optie past het 'zoals ...'-deel bij een camping (tentje); kerk, gebouw en haven hebben niets met kamperen te maken. Antwoord staat zo in de optie.",
+  "voorstel": {
+   "options": [
+    "Een driehoekje",
+    "Een kruisje",
+    "Een vierkantje",
+    "Een rondje"
+   ],
+   "wrongHints": [
+    null,
+    "Een kruisje staat meestal voor een kerk. Waar slaap je in op een camping, en welke vorm heeft dat?",
+    "Een vierkantje is meestal een gebouw of station. Een camping heeft geen grote gebouwen.",
+    "Een rondje staat meestal voor een stad. Hoe groter het rondje, hoe groter de stad."
+   ],
+   "niveaus": {
+    "basis": "Driehoekje.",
+    "simpeler": "Camping = driehoekje (tent-vorm). Kruisje is kerk, vierkantje is gebouw of station.",
+    "nogSimpeler": "Driehoekje"
+   }
+  }
+ },
+ {
+  "nr": 27,
+  "waar": "kaartlezen-po stap 4 vraag 2",
+  "eigenKeuze": "Een hoofdweg",
+  "oordeel": "twijfel",
+  "reden": "Niveaus zeggen 'Snelweg' terwijl de goede optie 'Een hoofdweg' is; kind ziet een ander woord dan het antwoord.",
+  "voorstel": {
+   "niveaus": {
+    "basis": "Een hoofdweg.",
+    "simpeler": "Op een wegenkaart is een rode lijn meestal een hoofdweg of snelweg. Een rivier is blauw, een spoorlijn zwart met streepjes.",
+    "nogSimpeler": "Hoofdweg"
+   }
+  }
+ },
+ {
+  "nr": 28,
+  "waar": "kaartlezen-po stap 4 vraag 3",
+  "eigenKeuze": "Hoofdstad",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 29,
+  "waar": "kaartlezen-po stap 4 vraag 4",
+  "eigenKeuze": "In de legenda kijken",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 30,
+  "waar": "kaartlezen-po stap 5 vraag 1",
+  "eigenKeuze": "8 km",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 31,
+  "waar": "kaartlezen-po stap 5 vraag 2",
+  "eigenKeuze": "Zuidoost",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 32,
+  "waar": "kaartlezen-po stap 5 vraag 3",
+  "eigenKeuze": "Een meer of zee",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 33,
+  "waar": "kaartlezen-po stap 5 vraag 4",
+  "eigenKeuze": "250 m",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 34,
+  "waar": "kaartlezen-po stap 5 vraag 5",
+  "eigenKeuze": "Aan de bovenkant",
+  "oordeel": "twijfel",
+  "reden": "Hint bij 'Aan de onderkant' ('Welke richting ligt tegenover oost?') is verwarrend: kind moet dan bedenken dat west onder ligt, niet waar oost ligt.",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Dat klopt alleen als noord boven staat. Draai de windroos een kwart mee: waar komt oost dan?",
+    "Draai de windroos zo dat de N naar links wijst. Komt de O dan onder, of ergens anders?",
+    "Naar links wijst de N-pijl zelf. Welke richting is dat dus?"
+   ]
+  }
+ },
+ {
+  "nr": 35,
+  "waar": "kaartlezen-po stap 5 vraag 6",
+  "eigenKeuze": "1:1.000.000",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 36,
+  "waar": "kaartlezen-po stap 5 vraag 7",
+  "eigenKeuze": "Uitleg van de symbolen en kleuren",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 37,
+  "waar": "kaartlezen-po stap 5 vraag 8",
+  "eigenKeuze": "Een steile helling",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 38,
+  "waar": "kaartlezen-po stap 5 vraag 9",
+  "eigenKeuze": "Teken dat de richtingen aanwijst",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 39,
+  "waar": "kaartlezen-po stap 5 vraag 10",
+  "eigenKeuze": "Ze tonen een gebied kleiner, met tekentjes",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 40,
+  "waar": "kaartlezen-po stap 5 vraag 11",
+  "eigenKeuze": "Bovenkant",
+  "oordeel": "fout",
+  "reden": "Dubbele vraag: zelfde vraag, opties en antwoord als nr 9 (noord = bovenkant van een normale kaart).",
+  "voorstel": {
+   "q": "Op een plattegrond wijst de **N-pijl** naar beneden. Welke kant van die plattegrond is dan noord?",
+   "options": [
+    "Onderkant",
+    "Bovenkant",
+    "Linkerkant",
+    "Rechterkant"
+   ],
+   "wrongHints": [
+    null,
+    "Boven is alleen noord als de pijl omhoog wijst. Waar wijst deze pijl heen?",
+    "Wijst de pijl naar links? Volg de pijl: waar kom je uit?",
+    "Wijst de pijl naar rechts? Volg de pijl: waar kom je uit?"
+   ],
+   "niveaus": {
+    "basis": "Onderkant.",
+    "simpeler": "De N-pijl wijst altijd naar het noorden. Wijst hij naar beneden, dan ligt noord onder.",
+    "nogSimpeler": "Onder"
+   }
+  }
+ },
+ {
+  "nr": 41,
+  "waar": "kaartlezen-po stap 5 vraag 12",
+  "eigenKeuze": "West",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 42,
+  "waar": "kaartlezen-po stap 5 vraag 13",
+  "eigenKeuze": "Uitleg van de symbolen op de kaart",
+  "oordeel": "fout",
+  "reden": "Dubbele vraag: zelfde inhoud en antwoord als nr 36 ('Wat is een legenda?' / 'Uitleg van de symbolen').",
+  "voorstel": {
+   "q": "Waar staat de **legenda** meestal op een kaart?",
+   "options": [
+    "In een hoek of langs de rand",
+    "Precies in het midden",
+    "Op de achterkant van de kaart",
+    "Bovenaan, als titel"
+   ],
+   "wrongHints": [
+    null,
+    "In het midden staat juist het gebied zelf. Zou de kaartmaker daar een vakje overheen zetten?",
+    "Dan moet je de kaart steeds omdraaien. Waar kun je de uitleg zien terwijl je naar de kaart kijkt?",
+    "Bovenaan staat de titel: waar de kaart over gaat. De legenda is een ander onderdeel."
+   ],
+   "niveaus": {
+    "basis": "In een hoek of langs de rand.",
+    "simpeler": "De legenda is een vakje in een hoek of langs de rand, zodat het de kaart niet bedekt.",
+    "nogSimpeler": "Hoek of rand"
+   }
+  }
+ },
+ {
+  "nr": 43,
+  "waar": "kaartlezen-po stap 5 vraag 14",
+  "eigenKeuze": "10 m",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 44,
+  "waar": "kaartlezen-po stap 5 vraag 15",
+  "eigenKeuze": "2,5 km",
+  "oordeel": "twijfel",
+  "reden": "Hint bij '25 km' rekent de tussenstap voor (250.000 cm).",
+  "voorstel": {
+   "wrongHints": [
+    null,
+    "Tien keer te weinig. Hoeveel cm is 5 × 50.000? Reken dat om naar meters en dan naar km.",
+    "Tien keer te veel. Hoeveel cm is 5 × 50.000? Reken dat om naar meters en dan naar kilometers.",
+    "Veel te weinig: 50 m is maar 5.000 cm. Hoeveel is 5 × 50.000 cm?"
+   ]
+  }
+ },
+ {
+  "nr": 45,
+  "waar": "kaartlezen-po stap 5 vraag 16",
+  "eigenKeuze": "†",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 46,
+  "waar": "kaartlezen-po stap 5 vraag 17",
+  "eigenKeuze": "Noordoost",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 47,
+  "waar": "kaartlezen-po stap 5 vraag 18",
+  "eigenKeuze": "Onderkant",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 48,
+  "waar": "kaartlezen-po stap 5 vraag 19",
+  "eigenKeuze": "250 m",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 49,
+  "waar": "kaartlezen-po stap 5 vraag 20",
+  "eigenKeuze": "Noord",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 50,
+  "waar": "kaartlezen-po stap 5 vraag 21",
+  "eigenKeuze": "Kaart van een klein gebied",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 51,
+  "waar": "kaartlezen-po stap 5 vraag 22",
+  "eigenKeuze": "km",
+  "oordeel": "fout",
+  "reden": "Antwoord zit in de vraag: 'kilometer' geeft de beginletters k en m; geen kaartleesvraag. Afleiders kg/kl vallen af omdat ze geen m bevatten.",
+  "voorstel": {
+   "q": "Op een schaalbalk staat **0 — 1 — 2 km**. Hoeveel meter is 1 km?",
+   "options": [
+    "1.000 m",
+    "100 m",
+    "10.000 m",
+    "10 m"
+   ],
+   "wrongHints": [
+    null,
+    "Een voetbalveld is al ongeveer 100 m lang. Is een kilometer net zo kort?",
+    "Dat is tien keer te veel. Hoeveel meter past er in één kilometer?",
+    "10 m is ongeveer de lengte van een bus. Is een kilometer zo kort?"
+   ],
+   "niveaus": {
+    "basis": "1.000 m.",
+    "simpeler": "Kilo betekent duizend. Een kilometer is duizend meter.",
+    "nogSimpeler": "1.000 m"
+   }
+  }
+ },
+ {
+  "nr": 52,
+  "waar": "kaartlezen-po stap 5 vraag 23",
+  "eigenKeuze": "Noordwest",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 53,
+  "waar": "kaartlezen-po stap 5 vraag 24",
+  "eigenKeuze": "Afstanden op de kaart meten",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 54,
+  "waar": "kaartlezen-po stap 5 vraag 25",
+  "eigenKeuze": "Ongeveer 1:1.000.000",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 55,
+  "waar": "wereldreligies-po stap 1 vraag 1",
+  "eigenKeuze": "Christendom",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 56,
+  "waar": "wereldreligies-po stap 1 vraag 2",
+  "eigenKeuze": "Monotheïstisch",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 57,
+  "waar": "wereldreligies-po stap 1 vraag 3",
+  "eigenKeuze": "Hindoeïsme",
+  "oordeel": "twijfel",
+  "reden": "Vraag zegt 'de oudste van de 5 wereldreligies', maar jodendom (een van de 5) staat er niet bij; de explanation noemt jodendom bovendien ~1800 v.Chr. (ouder dan 'ruim 3500 jaar'), wat met de vraag botst.",
+  "voorstel": {
+   "q": "Welke van deze vier religies is het **oudst**?"
+  }
+ },
+ {
+  "nr": 58,
+  "waar": "wereldreligies-po stap 2 vraag 1",
+  "eigenKeuze": "Bijbel",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 59,
+  "waar": "wereldreligies-po stap 2 vraag 2",
+  "eigenKeuze": "Kerk",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 60,
+  "waar": "wereldreligies-po stap 2 vraag 3",
+  "eigenKeuze": "Maarten Luther",
+  "oordeel": "fout",
+  "reden": "Vorm verraadt: Jezus (1500 jaar eerder) en Paus Franciscus (21e eeuw) vallen meteen af op tijd; alleen Willem van Oranje blijft als concurrent.",
+  "voorstel": {
+   "options": [
+    "Willem van Oranje",
+    "Paus Leo X",
+    "Maarten Luther",
+    "Keizer Karel V"
+   ],
+   "wrongHints": [
+    "Willem van Oranje leidde later de opstand in Nederland. Wie begon al eerder, in 1517, met de Reformatie?",
+    "Paus Leo X was in 1517 juist het hoofd van de rooms-katholieke kerk. Zou hij zich van zijn eigen kerk afsplitsen?",
+    null,
+    "Keizer Karel V regeerde toen over een groot rijk en bleef katholiek. Wie kwam in opstand tegen de kerk?"
+   ]
+  }
+ },
+ {
+  "nr": 61,
+  "waar": "wereldreligies-po stap 3 vraag 1",
+  "eigenKeuze": "Mohammed",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 62,
+  "waar": "wereldreligies-po stap 3 vraag 2",
+  "eigenKeuze": "Koran",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 63,
+  "waar": "wereldreligies-po stap 3 vraag 3",
+  "eigenKeuze": "Een maand lang overdag niet eten en drinken",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 64,
+  "waar": "wereldreligies-po stap 4 vraag 1",
+  "eigenKeuze": "India",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 65,
+  "waar": "wereldreligies-po stap 4 vraag 2",
+  "eigenKeuze": "Prins die het boeddhisme stichtte",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 66,
+  "waar": "wereldreligies-po stap 4 vraag 3",
+  "eigenKeuze": "Je wordt opnieuw geboren",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 67,
+  "waar": "wereldreligies-po stap 5 vraag 1",
+  "eigenKeuze": "Davidster",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 68,
+  "waar": "wereldreligies-po stap 5 vraag 2",
+  "eigenKeuze": "Jeruzalem",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 69,
+  "waar": "wereldreligies-po stap 5 vraag 3",
+  "eigenKeuze": "Zaterdag",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 70,
+  "waar": "wereldreligies-po stap 6 vraag 1",
+  "eigenKeuze": "Christendom, islam en jodendom",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 71,
+  "waar": "wereldreligies-po stap 6 vraag 2",
+  "eigenKeuze": "India",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ },
+ {
+  "nr": 72,
+  "waar": "wereldreligies-po stap 6 vraag 3",
+  "eigenKeuze": "Boeddhisme",
+  "oordeel": "goed",
+  "reden": "Antwoord klopt, afleiders van dezelfde soort, hints zijn denkprikkels zonder het antwoord."
+ }
+]
