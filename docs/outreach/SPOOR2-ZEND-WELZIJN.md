@@ -398,3 +398,36 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 163 · SchuldHulpMaatje Westland · info@schuldhulpmaatjewestland.nl · OK · 01a17807-ada5-799b-8257-585593dd0c8e
   - 164 · SchuldHulpMaatje Wierden · coordinator@stichtingbowie.nl · OK · 01a17807-b3ff-7907-bf3c-1f1408d6282c
 - **26-10-2026, 12:45:34** — klaar: 85/85 verstuurd (OK-regels staan hierboven).
+
+- **27-10-2026, 07:00:02** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 165 · SchuldHulpMaatje Wijk Bij Duurstede · contact@wijkbijduurstede.schuldhulpmaatje.nl · OK · 01a17bf1-bf66-7a39-aba4-abcf1c00b074
+  - 166 · SchuldHulpMaatje Woerden · contact@woerden.schuldhulpmaatje.nl · OK · 01a17bf1-c5ac-7e54-8064-851564cc588c
+  - 167 · SchuldHulpMaatje Zaanstad · contact@zaanstad.schuldhulpmaatje.nl · OK · 01a17bf1-cbf8-7340-94be-396825ea5985
+  - 168 · SchuldHulpMaatje Zeist · info@shmzeist.nl · OK · 01a17bf1-d3f4-7d21-b14d-71b7bcdeb0bb
+  - 169 · SchuldHulpMaatje Zevenaar · contact@zevenaar.schuldhulpmaatje.nl · OK · 01a17bf1-da47-70f2-b6cb-939693b865aa
+  - 170 · SchuldHulpMaatje Zoetermeer · info@shmzoetermeer.nl · OK · 01a17bf1-e08f-78e7-bce0-3f0f88542d63
+  - 171 · SchuldHulpMaatje Zuid Kennemerland · coordinator@zuidkennemerland.schuldhulpmaatje.nl · OK · 01a17bf1-e6d7-75e3-80f5-8a237ad41e59
+  - 172 · SchuldHulpMaatje Zuidplas · contact@zuidplas.schuldhulpmaatje.nl · OK · 01a17bf1-ee56-78ff-9a5e-8b50cefda8a2
+  - 173 · SchuldHulpMaatje Zwartewaterland · contact@zwartewaterland.schuldhulpmaatje.nl · OK · 01a17bf1-f4c0-7b5c-904a-ae3c709f1d8e
+  - 174 · SchuldHulpMaatje Zwijndrecht · coordinator@zwijndrecht.schuldhulpmaatje.nl · OK · 01a17bf1-fb0d-720d-baa7-966b908949e8
+  - 175 · SchuldHulpMaatje Zwolle · schuldhulpmaatje@voorelkaarzwolle.nl · OK · 01a17bf2-019f-73da-9a4d-38f7fd82b296
+  - 176 · Avedan (welzijn en maatschappelijk werk) · info@avedan.nl · OK · 01a17bf2-07ee-774b-a33f-a70b85477838
+  - 177 · Farent Sociaal Werk · info@farent.nl · OK · 01a17bf2-0e33-7b6c-aab2-49c153b747d1
+  - 178 · Participe · info@participe.nl · OK · 01a17bf2-14db-78f0-a61a-b2962702a7d8
+  - 179 · Stichting Surplus · info@stichtingsurplus.nl · OK · 01a17bf2-1b2e-761b-aa76-97d7252a5a57
+  - 180 · Surplus (sociaal werk West-Brabant) · klantenservice@surplus.nl · OK · 01a17bf2-2188-75b4-a1ec-6c27586e1926
+  - 181 · WijZijn Traverse · info@wijzijn.nl · OK · 01a17bf2-27f7-718a-bb32-412f5ab82db4
+  - 182 · Buurt- en Speeltuinwerk Rotterdam (BSW) · info@bsw-rotterdam.nl · OK · 01a17bf2-2e4d-7433-bfca-8f44718d1f62
+  - 183 · De Speeltuinbende · info@speeltuinbende.nl · OK · 01a17bf2-35ac-761a-8d77-29251b1ba936
+  - 184 · Speeltuincentrale Groningen (koepel) · info@speeltuincentrale.nl · OK · 01a17bf2-3bfc-7778-852e-8017063e1959
+  - 185 · BSV De Apenkooi (Vinkhuizen) · info@bsv-vinkhuizen.nl · OK · 01a17bf2-4269-74ab-9c0c-1b4953f89832
+  - 186 · BSV Corpus den Hoorn (Semmelstee) · info@semmelstee.nl · OK · 01a17bf2-4939-792b-9768-2cd8cf6bf000
+  - 187 · BSV Helpman-Oost · info@helpmanoost.nl · OK · 01a17bf2-4f83-75b1-8d53-188b309a1788
+  - 188 · BSV Oosterpoort · info@bsvdeoosterpoort.nl · OK · 01a17bf2-560f-745a-bc69-d0c883f61521
+  - 189 · BSV Selwerd · info@bsvselwerd.nl · OK · 01a17bf2-5cb6-7c9d-868a-4faab7082282
+  - 190 · MFC De Wijert · info@mfcgroningen.nl · OK · 01a17bf2-6327-798f-a65e-eb39106e2e86
+- **27-10-2026, 07:00:45** — klaar: 26/26 verstuurd (OK-regels staan hierboven).
+
+## Antwoorden
+
+- 27 okt 18:10 · **SchuldHulpMaatje Nieuwkoop (118) → NEE**: geen nieuwsbrief, vrijwilligers 1-op-1. Netjes bedankt (verstuurd 27 okt 22:55). Niet opnieuw benaderen.

@@ -132,3 +132,7 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 43 · Stichting ERMA (Sinterklaasfeest kinderen t/m 16) · info@stichtingerma.nl · OK · 01a1722e-39a6-7423-95a8-b30d8fd52fc8
   - 44 · Stichting Paul (Actie Pepernoot Roosendaal) · info@stichtingpaul.nl · OK · 01a1722e-41c5-7b0e-9bbc-daa47d96543f
 - **25-10-2026, 09:29:58** — klaar: 4/4 verstuurd (OK-regels staan hierboven).
+
+## Antwoorden
+
+- 27 okt 20:08 · **Rocking Up X-Mas (landelijk bestuur, bestuur@rockingupxmas.nl) → NEE** voor alle 9 afdelingen (Den Haag, Eindhoven, Noordwijk, Amersfoort, Zeist, Zwolle, Leiden, Heemskerk, Dijk en Waard): "delen van externe diensten past niet binnen onze filosofie". Netjes bedankt (verstuurd 27 okt 22:55). **Niet opnieuw benaderen, ook geen afdelingen.**
