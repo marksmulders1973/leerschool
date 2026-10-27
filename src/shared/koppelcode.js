@@ -63,6 +63,9 @@ export function koppelFoutTekst(fout, n = "") {
     case "bestaatNiet": return "Deze code bestaat niet. Kijk letter voor letter nog eens op de telefoon van thuis. Of vraag of ze je de link sturen: dan staat de code al ingevuld.";
     case "geenVerbinding": return "Het lukte even niet om verbinding te maken. Controleer je internet en tik nog een keer op Koppel mij.";
     case "leeg": return "De code is te kort. Kijk nog eens op de telefoon van thuis.";
+    // 27 okt 2026: nieuwe antwoorden van claim_link_code (migratie koppel_privacy).
+    case "maxKinderen": return "Bij dit account staan al drie kinderen. Vraag thuis om er eerst één weg te halen in het ouder-overzicht.";
+    case "naamLeeg": return "Typ eerst je naam.";
     default: return "Dat lukte niet. Probeer het nog eens.";
   }
 }
@@ -86,9 +89,13 @@ export async function claimKoppelcode(ruweCode, naam) {
     if (error) return { ok: false, fout: "geenVerbinding" };
     if (data?.ok) {
       const rol = data.rol || "ouder";
-      bewaarKoppeling({ naam: kind, linkId: data.link_id, rol, vanWie: data.van_wie });
-      return { ok: true, rol, vanWie: String(data.van_wie || "").trim(), linkId: data.link_id, childName: data.child_name || kind };
+      // 27 okt 2026: de naam óp de code (herstelcode "Brian") wint op de server; het toestel volgt die naam.
+      const naamServer = String(data.naam || data.child_name || kind).trim() || kind;
+      bewaarKoppeling({ naam: naamServer, linkId: data.link_id, rol, vanWie: data.van_wie });
+      return { ok: true, rol, vanWie: String(data.van_wie || "").trim(), linkId: data.link_id, childName: naamServer };
     }
+    if (data?.error === "max_kinderen") return { ok: false, fout: "maxKinderen" };
+    if (data?.error === "naam_leeg") return { ok: false, fout: "naamLeeg" };
     if (data?.error === "code_invalid_or_expired") {
       const hier = !!(koppelingVoor(kind)?.ouder || koppelingVoor(kind)?.leraar);
       let diag = null;

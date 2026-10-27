@@ -12,7 +12,6 @@
 // "🎟️ Ik heb een code"-veld in het pakket-scherm blijft ook gewoon werken.
 import { useMemo, useState } from "react";
 import supabase from "../supabase.js";
-import { bewaarKoppeling } from "../shared/koppeling.js";
 import { normaliseerKoppelcode } from "../shared/koppelcode.js";
 import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig, codeUitUrl, PARTNER_PRO_TOT } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
@@ -334,33 +333,15 @@ export default function CodeBalk({ rustig = false, veld = false }) {
     // Audit 7 okt 2026: "ABC 123" / "ABC-123" (overgetypt uit WhatsApp) is ook een koppelcode.
     const koppelKaal = normaliseerKoppelcode(kaal);
     if (/^[A-Z0-9]{4,8}$/.test(koppelKaal) && !koppelKaal.includes("2027")) {
-      // 🔐 Koppelcode (thuis/school). Fix 27 aug: een harde sprong naar
-      // /leerling kaatst bij een koude landing bewust terug naar home
-      // (Mark-besluit 7 aug) — dus als er al een kind-naam op dit apparaat
-      // staat, koppelen we hier DIRECT via dezelfde RPC als de leerling-pagina.
-      // Zonder naam: vriendelijk uitleggen wat eerst moet (+ de code onthouden,
-      // zodat de leerling-pagina hem alsnog vooringevuld oppakt).
-      let naam = null;
-      try { naam = (JSON.parse(localStorage.getItem("ls_user") || "{}").name || "").trim() || null; } catch { /* */ }
-      if (naam) {
-        try {
-          const { data, error } = await supabase.rpc("claim_link_code", { p_code: koppelKaal, p_child_name: naam });
-          if (!error && data?.ok) {
-            bewaarKoppeling({ naam, linkId: data.link_id, rol: data.rol || "ouder", vanWie: data.van_wie });
-            setKoppelTip({ klaar: true, rol: data.rol, naam });
-            setInvoer("");
-            return;
-          }
-          if (!error && data?.error === "code_invalid_or_expired") {
-            if (await probeerWeekpakket(koppelKaal)) return;
-            setFout("Deze code herkennen we niet. Kijk de spelling even na. Let op: de code uit de wekelijkse mail wisselt elke week.");
-            return;
-          }
-        } catch { /* val terug op de uitleg-route hieronder */ }
-      }
+      // 🔐 Koppelcode (thuis/school). Tot 27 okt 2026 claimde de balk hier direct met de naam uit
+      // ls_user — dat is het ACTIEVE profiel, dus typte een ouder de code op de eigen telefoon, dan
+      // werd de code verbruikt op de naam van de ouder (code-review koppelketen, A3). Nu: eerst
+      // kijken of het een weekpakket-code is, anders altijd naar /koppelen, waar het kind zijn
+      // eigen naam kiest (de code staat daar vooringevuld).
       if (await probeerWeekpakket(koppelKaal)) return;
       try { sessionStorage.setItem("lk_koppelcode_voorstel", koppelKaal); } catch { /* */ }
-      setKoppelTip({ klaar: false });
+      try { track("code_balk_koppelcode", {}); } catch { /* */ }
+      window.location.href = "/koppelen?code=" + encodeURIComponent(koppelKaal);
       return;
     }
     const r = await zetPartnerCodeHandmatig(invoer);

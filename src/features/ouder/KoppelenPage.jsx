@@ -169,12 +169,16 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
     setBezig(false);
     if (r.ok) {
       try { sessionStorage.removeItem("lk_koppelcode_voorstel"); } catch { /* */ }
-      try { onNaamInvullen?.(n); } catch { /* */ }
-      try { track("koppelen_klaar", { rol: r.rol }); } catch { /* */ }
-      setKlaar({ naam: n, vanWie: r.vanWie, rol: r.rol });
+      // 27 okt 2026: de server kan een andere naam teruggeven (naam op de code) — die wordt het profiel.
+      const naamKlaar = r.childName || n;
+      try { onNaamInvullen?.(naamKlaar); } catch { /* */ }
+      try { track("koppelen_klaar", { rol: r.rol, naamAnders: naamKlaar !== n }); } catch { /* */ }
+      setKlaar({ naam: naamKlaar, vanWie: r.vanWie, rol: r.rol });
       return;
     }
     try { track("koppelen_fout", { fout: r.fout, suggestie: !!r.suggestie }); } catch { /* */ }
+    // 27 okt 2026 (code-review): een fout voorstel uit de codebalk bleef anders de hele sessie vooringevuld.
+    try { sessionStorage.removeItem("lk_koppelcode_voorstel"); } catch { /* */ }
     setPogingen((x) => x + 1);
     if (r.fout !== "alGekoppeld") setFoutCode(r.fout);
     setSuggestie(r.fout === "typfout" ? r.suggestie : null);
@@ -201,6 +205,14 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
           <button type="button" onClick={() => setTab("kind")} style={F.tab(tab === "kind")} data-tab="kind">Ik ben het kind</button>
           <button type="button" onClick={() => setTab("ouder")} style={F.tab(tab === "ouder")} data-tab="ouder">Ik ben de ouder</button>
         </div>
+
+        {/* 27 okt 2026 (kliktest koppelketen, uit de data): ouders tikken hun eigen WhatsApp-link aan en komen hier
+            mét code terecht — op hun eigen telefoon, als ouder. Dan één zin die zegt wat de bedoeling is. */}
+        {code && (() => { try { return (JSON.parse(localStorage.getItem("ls_user") || "{}").role || "") === "ouder"; } catch { return false; } })() && (
+          <div data-koppel-ouderhint style={{ marginTop: 10, padding: "10px 12px", borderRadius: 12, background: "rgba(255,183,77,0.12)", border: "1px solid rgba(255,183,77,0.5)", fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.45, color: "#fff" }}>
+            👋 Dit is de link voor je <strong>kind</strong>. Stuur hem door naar de telefoon of tablet waarop je kind oefent, of open hem daar zelf. Oefent je kind op déze telefoon? Kies dan hierboven "Ik ben het kind" en de naam van je kind.
+          </div>
+        )}
 
         {tab === "kind" && (
           <div style={F.kaart}>

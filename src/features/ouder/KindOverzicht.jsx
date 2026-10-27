@@ -145,7 +145,8 @@ export default function KindOverzicht({ child, onBack, onKlaarzetten }) {
         {rows != null && rows.length === 0 && (
           <div style={kaart}>
             <div style={kop}>Nog geen resultaten</div>
-            <div style={body}>Zodra {child.child_name} (ingelogd op het gekoppelde account) een toets of oefenronde afrondt, verschijnt hier het overzicht.</div>
+            {/* 27 okt 2026 (kliktest koppelketen): een kind logt nooit in — de oude zin zette ouders op het verkeerde been. */}
+            <div style={body}>Zodra {child.child_name} een oefentoets afrondt, verschijnt hier het overzicht. Losse oefenvragen zie je in de kindkaart op Mijn pagina.</div>
           </div>
         )}
 

@@ -475,12 +475,20 @@ function KoppelBlok({ kandidaten, authUser, iemandGekoppeld, onGekoppeld }) {
       try { track("koppel_blok_ok", { via: "zelfde_toestel" }); } catch { /* */ }
       setMelding({ soort: "ok", tekst: `Gelukt! ${kind} is gekoppeld aan ${ouder}.` });
       onGekoppeld?.();
-    } catch {
-      setMelding({ soort: "fout", tekst: "Dat lukte niet. Probeer het zo nog eens, of ga via de knop hieronder." });
+    } catch (e) {
+      // 27 okt 2026 (code-review): de ouder kreeg alleen "Dat lukte niet" — nu de echte reden in gewone taal.
+      const m = String(e?.message || e || "");
+      const reden = /max|3|drie/i.test(m) ? "Er staan al drie kinderen bij dit account. Haal er eerst één weg in het ouder-overzicht."
+        : /jwt|token|expired|sessie|session/i.test(m) ? "Je bent niet meer ingelogd. Log opnieuw in als ouder en probeer het dan."
+        : /ouder|parent|rol/i.test(m) ? "Dit account staat niet als ouder. Kies in het ouder-overzicht eerst 'ouder of verzorger'."
+        : "Dat lukte niet. Probeer het zo nog eens, of ga via de knop hieronder.";
+      try { track("koppel_blok_fout", { reden: m.slice(0, 80) }); } catch { /* */ }
+      setMelding({ soort: "fout", tekst: reden });
     }
     setBezig(null);
   };
-  const ga = (wat, pad) => { try { track("koppel_blok_klik", { wat }); } catch { /* */ } window.location.href = pad; };
+  // 27 okt 2026: eigen event voor de knoppen eronder — `koppel_blok_klik` telde ze mee als één-tik-pogingen ("2 van 18").
+  const ga = (wat, pad) => { try { track("koppel_blok_knop", { wat }); } catch { /* */ } window.location.href = pad; };
   return (
     <div data-koppel-blok style={{ textAlign: "left", marginTop: 6, marginBottom: 18, padding: "14px 14px 12px", borderRadius: 16, border: "2px solid #ffb74d", background: "rgba(255,183,77,0.10)" }}>
       <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 2 }}>🔗 {iemandGekoppeld ? "Nog iemand koppelen?" : "Koppelen"}</div>

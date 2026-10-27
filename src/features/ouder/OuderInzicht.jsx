@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
 import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
+import { BerichtSturen } from "../account/KoppelKaarten.jsx";
 import LesVoortgang, { PATHS_BY_ID } from "../../shared/ui/LesVoortgang.jsx";
 import LesDetail from "../../shared/ui/LesDetail.jsx";
 import ToetsDetail from "../../shared/ui/ToetsDetail.jsx";
@@ -884,6 +885,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 )}
                 {c && voorkeurEditId === c.id && (
                   <VoorkeurEditor groep={c.groep} voorkeur={c.voorkeur} bezig={voorkeurSaving} onOpslaan={(v) => bewaarVoorkeurVan(c, v)} onAnnuleer={() => setVoorkeurEditId(null)} />
+                )}
+
+                {/* 💬 Berichtje sturen — 27 okt 2026 (kliktest koppelketen): stond alleen in de Kindkaart op Mijn pagina,
+                    die alleen opent voor een kind op het eigen toestel; een kind op een ander toestel kreeg nooit een berichtje. */}
+                {c && gekoppeld && (
+                  <div style={{ marginTop: 10 }} onClick={(e) => e.stopPropagation()}>
+                    <BerichtSturen kind={naam} linkId={c.id} kleur="#ffb74d" />
+                  </div>
                 )}
 
                 {/* Nog niet gekoppeld: code + delen */}

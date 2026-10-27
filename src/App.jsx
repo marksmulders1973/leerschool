@@ -179,7 +179,8 @@ import KwartierTreden, { KwartierTredenToast } from "./shared/ui/KwartierTreden.
 // 🪜 Op deze pagina's telt de dagteller en staat het treden-balkje (15 sep 2026).
 const OEFENPAGINAS = new Set(["play", "learn-path", "start-kwartier", "vandaag-kwartier", "dictee", "werkwoorden", "spelling", "tafels", "woordenschat", "redactiesommen", "results", "cito", "examens", "textbook", "self-study"]);
 import { isStartKwartierGedaan } from "./features/onboarding/startKwartier.js";
-import { bewaarKoppeling, linkIdVoor, TERUG_NAAR_OUDER_KEY } from "./shared/koppeling.js";
+import { bewaarKoppeling, linkIdVoor, TERUG_NAAR_OUDER_KEY, kindWisselActief } from "./shared/koppeling.js";
+import { stopKwartier } from "./features/vandaag/kwartier.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
 // Deze constant blijft tijdelijk voor backwards-compat met code die alleen
@@ -290,6 +291,9 @@ export default function App() {
       }
     } catch { /* negeer — gewone start */ }
     const p = getInitialPage();
+    // 27 okt 2026 (Mark: "bij mij opent steeds de koppelpagina"): een hervatte tab/PWA of een herlaad
+    // bleef op /koppelen staan. Koud openen op /koppelen zónder code = gewone start (home → eigen pagina).
+    if (p === "koppelen" && typeof window !== "undefined" && !/[?&]code=/.test(window.location.search)) return "home";
     if (p === "home" && typeof window !== "undefined" && window.location.pathname !== "/") {
       const byPath = pageForPath(window.location.pathname);
       // Mark 7 aug 2026: iedereen start altijd op dezélfde home. Een koude
@@ -297,7 +301,12 @@ export default function App() {
       // opende het leerling-dashboard i.p.v. de homepage — bezoekers dachten
       // dat dát de site was en zagen geen weg terug. Cold load → altijd
       // HomePage; bínnen de app blijft /leerling gewoon bereikbaar.
-      if (byPath && byPath !== "home" && byPath !== "student-home") return byPath;
+      if (byPath && byPath !== "home" && byPath !== "student-home") {
+        // 27 okt 2026 (Mark: "bij mij opent steeds de koppelpagina"): een hervatte tab/PWA of een
+        // herlaad bleef op /koppelen staan. Koud openen op /koppelen zónder code = gewone start.
+        if (byPath === "koppelen" && !/[?&]code=/.test(window.location.search)) return "home";
+        return byPath;
+      }
     }
     return p;
   })();
@@ -344,6 +353,13 @@ export default function App() {
       // Cold load op /leerling → altijd de echte homepage (Mark 7 aug 2026,
       // zie initialPage hierboven). URL meteen gelijktrekken naar "/".
       if (fromUrl === "student-home") {
+        navigate("/", { replace: true });
+        if (page !== "home") setPage("home");
+        return;
+      }
+      // 27 okt 2026 (Mark: "bij mij opent steeds de koppelpagina"): koude start op /koppelen zonder
+      // code = gewone start; de URL meteen naar "/" zodat een hervatte tab er niet in blijft hangen.
+      if (fromUrl === "koppelen" && !/[?&]code=/.test(location.search || window.location.search)) {
         navigate("/", { replace: true });
         if (page !== "home") setPage("home");
         return;
@@ -693,7 +709,10 @@ export default function App() {
     setUserLevel(lvl);
     setUserSchoolType(st);
     try { localStorage.setItem("ls_user", JSON.stringify({ name: userName, level: lvl, role, schoolType: st })); } catch {}
-    if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: lvl, role, schoolType: st });
+    // 27 okt 2026 (code-review koppelketen A2): staat het toestel op het kind (ouder is ingelogd, kind
+    // oefent), dan NIET het server-profiel van de ouder overschrijven met naam/groep van het kind —
+    // zo werd Marks account "Olivia/student" en zag het kind "gekoppeld met Olivia".
+    if (authUser && !kindWisselActief()) upsertProfile({ userId: authUser.id, displayName: userName, level: lvl, role, schoolType: st });
     track("groep_gewijzigd", { via, soort, nr });
   };
 
@@ -755,7 +774,9 @@ export default function App() {
       localStorage.setItem("ls_user", JSON.stringify({ name: naam, level: userLevel || "", role: rolNu, schoolType: userSchoolType || "" }));
     } catch { /* lokaal opslaan is best-effort */ }
     if (!role) setRole(rolNu);
-    if (authUser?.id) {
+    // 27 okt 2026 (code-review koppelketen A2): na /koppelen komt hier de náám van het kind binnen; op het
+    // toestel van een ingelogde ouder mag die het ouder-profiel op de server niet overschrijven.
+    if (authUser?.id && !kindWisselActief() && !(role === "ouder" && rolNu !== "ouder")) {
       try { upsertProfile({ userId: authUser.id, displayName: naam, level: userLevel || "", role: rolNu, schoolType: userSchoolType || "" }); } catch { /* server is een extraatje */ }
     }
   };
@@ -815,6 +836,9 @@ export default function App() {
     }
     let p = {};
     try { p = JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}"); } catch {}
+    // 27 okt 2026 (kliktest koppelketen): het Kwartier van vandaag stond per toestel, niet per naam —
+    // een ander profiel zag "Je bent bezig: Rekenen … 5 gedaan" van zijn broer of zus. Bij wisselen weg.
+    if (n.toLowerCase() !== (userName || "").trim().toLowerCase()) { try { stopKwartier(); } catch { /* */ } }
     setUserName(n);
     setUserLevel(p.level || "");
     setRole(p.role || "leerling");

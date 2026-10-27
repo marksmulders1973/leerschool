@@ -44,7 +44,7 @@ const naarOuderOverzicht = (kind, wat) => {
 };
 
 // ── 💬 Berichtje sturen (fase 2, Mark 23 okt 2026: "ja perfect") ─────────
-function BerichtSturen({ kind, linkId, kleur }) {
+export function BerichtSturen({ kind, linkId, kleur }) {
   const [laatste, setLaatste] = useState(undefined);
   const [tekst, setTekst] = useState("");
   const [staat, setStaat] = useState("schrijf"); // schrijf | bezig | verstuurd | mis

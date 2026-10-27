@@ -2069,6 +2069,12 @@ export default function MijnPagina({
             {/* 🧒 Zonder groep geen kinderscherm (Mark 26 okt 2026: Brian zag het nieuwe scherm niet omdat zijn
                 profiel geen groep had): eerst kiezen, dan pas Begin, vakken en Werk aan. Ouders en
                 leerkrachten hebben geen groep nodig. */}
+            {/* 💬 Bericht van thuis bovenaan, ook vóór de groep-poort (27 okt 2026, kliktest: de ballon stond 2,5 scherm naar beneden). */}
+            {thuisBerichten.length > 0 && (
+              <div data-mijn-thuisbericht style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: "var(--space-4)" }}>
+                {thuisBerichten.slice(0, 2).map((b) => <BerichtBallon key={b.id} bericht={b} kind={player} />)}
+              </div>
+            )}
             {!niveau && onSetLevel && rolKey !== "ouder" && (
               <GroepPoort
                 onKies={(n) => { kiesNiveau("groep", n); try { track("mijn_groep_verplicht", { groep: n }); } catch { /* */ } }}
@@ -2284,11 +2290,6 @@ export default function MijnPagina({
                 "iemand thuis" i.p.v. papa/mama sluit niemand uit (voogd/pleeg-
                 gezin). Alleen tonen als er echt iets klaarstaat. ── */}
             {/* Lege staat weg (Mark 26 okt 2026, eenvoud): "Voor jou klaargezet" verschijnt alleen als er echt iets klaarstaat. */}
-            {thuisBerichten.length > 0 && (
-              <div data-mijn-thuisbericht style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: "var(--space-4)" }}>
-                {thuisBerichten.slice(0, 2).map((b) => <BerichtBallon key={b.id} bericht={b} kind={player} />)}
-              </div>
-            )}
             {thuisKlaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
                 <div style={eyebrowStijl}>Van thuis of school</div>
