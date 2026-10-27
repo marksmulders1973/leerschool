@@ -36,18 +36,21 @@ export async function handlePartnerUitnodiging(req, res) {
   // Wie vraagt dit?
   const jwt = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
   if (!jwt) return res.status(401).json({ error: "geen-token" });
-  let uid = null, ouderEmail = null;
+  let uid = null, ouderEmail = null, anoniem = false;
   try {
     const u = await fetch(`${base}/auth/v1/user`, { headers: { apikey: anon, Authorization: `Bearer ${jwt}` } });
-    if (u.ok) { const j = await u.json(); uid = j?.id || null; ouderEmail = j?.email || null; if (j?.is_anonymous) uid = null; }
+    if (u.ok) { const j = await u.json(); uid = j?.id || null; ouderEmail = j?.email || null; anoniem = !!j?.is_anonymous; }
   } catch { /* → 401 */ }
-  if (!uid || !ouderEmail) return res.status(401).json({ error: "sessie-ongeldig" });
+  // 27 okt 2026 (Mark "doe B"): een ouder die zónder account op één toestel koppelde, heeft geen
+  // e-mail in auth.users. Die vult zelf een adres in voor het weekrapport; dat gaat via dezelfde
+  // kolommen (partner_email + token + bevestiging) en dezelfde bevestig-link, maar met een eigen mail.
+  if (!uid || (!anoniem && !ouderEmail)) return res.status(401).json({ error: "sessie-ongeldig" });
 
   let body = req.body;
   if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
   const email = String(body?.email || "").trim().toLowerCase().slice(0, 120);
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return res.status(400).json({ error: "email" });
-  if (email === String(ouderEmail).toLowerCase()) return res.status(400).json({ error: "eigen-adres" });
+  if (!anoniem && email === String(ouderEmail).toLowerCase()) return res.status(400).json({ error: "eigen-adres" });
 
   // Adres + vers token op alle koppelingen van deze ouder; bevestiging op null.
   const token = randomUUID();
@@ -67,6 +70,32 @@ export async function handlePartnerUitnodiging(req, res) {
 
   const namen = kinderen.length ? kinderen.join(" en ") : "een kind";
   const bevestig = `${SITE}/api/bevestig?partner=${encodeURIComponent(token)}`;
+  if (anoniem) {
+    // Eigen adres van een ouder zonder account: "bevestig je adres", niet "iemand wil delen".
+    const onderwerpA = `📬 Bevestig je adres voor het weekrapport van ${namen}`;
+    const htmlA = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
+  <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
+    <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag leren, een leven lang slimmer.</div>
+    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;">Je hebt ${esc(namen)} gekoppeld op leerkwartier.app en wilt elke vrijdag een mailtje over hoe het gaat.</p>
+    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">Eén tik en het staat: elke vrijdag om 16:00 wat er geoefend is, wat al goed gaat en wat aandacht verdient. Doe je niets, dan krijg je verder geen mail van ons.</p>
+    <a href="${esc(bevestig)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:22px;">✅ Ja, stuur het weekrapport</a>
+    ${mailTaglineHtml()}
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je kreeg deze mail omdat dit adres is ingevuld op leerkwartier.app. Dit is de enige mail zonder jouw bevestiging.</p>
+  </div></body></html>`;
+    const textA = `Je hebt ${namen} gekoppeld op leerkwartier.app en wilt elke vrijdag een mailtje over hoe het gaat.\n\nBevestig hier: ${bevestig}\n\nDoe je niets, dan krijg je verder geen mail van ons.`;
+    try {
+      const r = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ from: FROM, to: [email], subject: onderwerpA, html: htmlA, text: textA }),
+      });
+      if (!r.ok) return res.status(502).json({ error: "mail-mislukt" });
+    } catch {
+      return res.status(502).json({ error: "mail-exception" });
+    }
+    return res.status(200).json({ ok: true, kinderen, eigen: true });
+  }
   const onderwerp = `👥 ${ouderEmail} wil het weekrapport van ${namen} met je delen`;
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">

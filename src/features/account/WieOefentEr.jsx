@@ -462,17 +462,43 @@ function KoppelBlok({ kandidaten, authUser, iemandGekoppeld, onGekoppeld }) {
   const [melding, setMelding] = useState(null); // { tekst, soort: "ok" | "login" | "fout" }
   const ingelogd = !!authUser?.id && !authUser.is_anonymous;
   const groot = (extra) => ({ ...knopBasis, display: "block", width: "100%", padding: "14px 12px", fontSize: 16, border: "none", color: "#08121f", textAlign: "left", ...extra });
+  // 27 okt 2026 (Mark "doe B"): koppelen zonder account — de anonieme sessie van dit toestel is de
+  // ouder. Daarna, als één regel: wil je elke vrijdag een mailtje? (adres → bevestig-mail).
+  const [mailVoor, setMailVoor] = useState(null); // { kind } na een anonieme koppeling
+  const [mailAdres, setMailAdres] = useState("");
+  const [mailStaat, setMailStaat] = useState("idle"); // idle | bezig | ok | fout
+  const stuurMailAdres = async () => {
+    const email = mailAdres.trim().toLowerCase();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { setMailStaat("fout"); return; }
+    setMailStaat("bezig");
+    try {
+      const { data: sess } = await supabase.auth.getSession();
+      const token = sess?.session?.access_token;
+      const r = await fetch("/api/partner-uitnodiging", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` }, body: JSON.stringify({ email }) });
+      if (!r.ok) throw new Error("mail");
+      setMailStaat("ok");
+      try { track("koppel_anon_mailadres", {}); } catch { /* */ }
+    } catch { setMailStaat("fout"); }
+  };
   const tikKoppel = async ({ kind, ouder }) => {
     try { track("koppel_blok_klik", { wat: "zelfde_toestel", ingelogd }); } catch { /* */ }
-    if (!ingelogd) { setMelding({ soort: "login", tekst: `Log eerst één keer in als ouder (Google of e-mail). Daarna koppel je ${kind} met één tik.` }); return; }
-    setBezig(kind); setMelding(null);
+    setBezig(kind); setMelding(null); setMailVoor(null);
     try {
       let v = {}; try { v = leesVoorkeur(kind) || {}; } catch { /* */ }
       let level = ""; try { level = (JSON.parse(localStorage.getItem(`lk_profiel:${kind}`) || "{}") || {}).level || ""; } catch { /* */ }
       const { data, error } = await supabase.rpc("gezin_koppel_zelfde_apparaat", { p_child_name: kind, p_groep: v.groep || groepUitNiveau(level), p_voorkeur: v.voorkeur || null, p_verified: true });
       if (error || !data) throw error || new Error("geen link");
       bewaarKoppeling({ naam: kind, linkId: data, rol: "ouder", vanWie: ouder });
-      try { track("koppel_blok_ok", { via: "zelfde_toestel" }); } catch { /* */ }
+      if (!ingelogd && authUser?.id) {
+        // onthouden voor de overname bij een latere echte login (useAuth → gezin_koppelingen_overnemen)
+        try {
+          const oud = JSON.parse(localStorage.getItem("lk_koppel_anon") || "null") || { uid: authUser.id, linkIds: [] };
+          if (oud.uid === authUser.id && !oud.linkIds.includes(data)) oud.linkIds.push(data);
+          localStorage.setItem("lk_koppel_anon", JSON.stringify({ uid: authUser.id, linkIds: (oud.uid === authUser.id ? oud.linkIds : [data]).slice(-12) }));
+        } catch { /* */ }
+        setMailVoor({ kind });
+      }
+      try { track("koppel_blok_ok", { via: "zelfde_toestel", ingelogd }); } catch { /* */ }
       setMelding({ soort: "ok", tekst: `Gelukt! ${kind} is gekoppeld aan ${ouder}.` });
       onGekoppeld?.();
     } catch (e) {
@@ -497,13 +523,29 @@ function KoppelBlok({ kandidaten, authUser, iemandGekoppeld, onGekoppeld }) {
         <button key={k.kind + "|" + k.ouder} type="button" disabled={bezig === k.kind} onClick={() => tikKoppel(k)} data-koppel-tik={k.kind}
           style={groot({ background: "#ffb74d", marginBottom: 8, opacity: bezig === k.kind ? 0.6 : 1 })}>
           {bezig === k.kind ? "Even…" : <>Koppel <b>{k.kind}</b> aan <b>{k.ouder}</b> →</>}
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(0,0,0,0.6)", marginTop: 2 }}>{ingelogd ? "Allebei op deze telefoon: één tik, geen code nodig." : "Allebei op deze telefoon — na één keer inloggen als ouder is dit één tik."}</div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(0,0,0,0.6)", marginTop: 2 }}>Allebei op deze telefoon: één tik, geen code en geen account nodig.</div>
         </button>
       ))}
       {melding && (
         <div role={melding.soort === "fout" ? "alert" : "status"} data-koppel-melding style={{ fontFamily: "var(--font-body)", fontSize: 13, lineHeight: 1.45, padding: "9px 12px", borderRadius: 10, marginBottom: 8, color: "#fff", background: melding.soort === "ok" ? "rgba(0,230,118,0.15)" : "rgba(255,255,255,0.08)", border: `1px solid ${melding.soort === "ok" ? "rgba(0,230,118,0.5)" : "rgba(255,255,255,0.2)"}` }}>
           {melding.tekst}
-          {melding.soort === "login" && <div style={{ marginTop: 6 }}><button type="button" onClick={() => ga("login", "/ouder")} style={{ ...knopBasis, padding: "9px 14px", border: "none", background: "#00b0ff", color: "#08121f", fontSize: 14 }}>Inloggen als ouder →</button></div>}
+          {melding.soort === "ok" && mailVoor && (
+            <div data-koppel-mailvraag style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid rgba(255,255,255,0.15)" }}>
+              {mailStaat === "ok" ? (
+                <span>📬 Bijna klaar: er staat een mailtje voor je klaar bij <b>{mailAdres.trim()}</b>. Tik daarin op "Ja, stuur het weekrapport" en elke vrijdag krijg je een berichtje over {mailVoor.kind}.</span>
+              ) : (
+                <>
+                  <div style={{ marginBottom: 6 }}>Wil je elke vrijdag een mailtje over hoe het met <b>{mailVoor.kind}</b> gaat? Vul je adres in. Niet nodig? Dan sla je dit gewoon over.</div>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <input type="email" value={mailAdres} onChange={(e) => { setMailAdres(e.target.value); if (mailStaat === "fout") setMailStaat("idle"); }} placeholder="jouw@adres.nl" inputMode="email" autoCapitalize="off" aria-label="Je e-mailadres"
+                      style={{ flex: 1, minWidth: 0, padding: "9px 10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(0,0,0,0.25)", color: "#fff", fontFamily: "var(--font-body)", fontSize: 14 }} />
+                    <button type="button" onClick={stuurMailAdres} disabled={mailStaat === "bezig"} style={{ ...knopBasis, padding: "9px 14px", border: "none", background: "#00e676", color: "#08121f", fontSize: 14, whiteSpace: "nowrap" }}>{mailStaat === "bezig" ? "Even…" : "Ja, graag"}</button>
+                  </div>
+                  {mailStaat === "fout" && <div style={{ marginTop: 4, color: "#ffab91" }}>Dat lukte niet. Kijk het adres even na en probeer het nog eens.</div>}
+                </>
+              )}
+            </div>
+          )}
         </div>
       )}
       <div style={{ display: "grid", gap: 8 }}>
@@ -526,16 +568,19 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
   // 🔗 Koppelingen (14 okt, herbouwd 21 okt 2026): één bron van waarheid, koppelGraaf
   // (profielKoppeling.js, met tests). Wat dit toestel weet + voor een ingelogde ouder de
   // bevestigde kinderen van het account (met link-id, voor de sync hieronder).
-  const ingelogd = !!authUser?.id && !authUser.is_anonymous;
+  // 27 okt 2026 (Mark "doe B"): ook een anonieme toestel-sessie kan kinderen hebben (één-tik zonder
+  // account) → altijd laden zodra er een sessie is; "ingelogd" voor de graaf = echt account óf
+  // anonieme sessie mét koppelingen.
   const [accountKinderen, setAccountKinderen] = useState([]);
   useEffect(() => {
-    if (!ingelogd) { setAccountKinderen([]); return; }
+    if (!authUser?.id) { setAccountKinderen([]); return; }
     let cancel = false;
     supabase.from("parent_child_links").select("id, child_name, verified").eq("parent_user_id", authUser.id)
       .then(({ data }) => { if (!cancel) setAccountKinderen((data || []).filter((c) => c.verified === true && (c.child_name || "").trim()).map((c) => ({ naam: c.child_name.trim(), linkId: c.id }))); })
       .catch(() => { if (!cancel) setAccountKinderen([]); });
     return () => { cancel = true; };
-  }, [authUser, ingelogd]);
+  }, [authUser, versie]); // eslint-disable-line react-hooks/exhaustive-deps
+  const ingelogd = !!authUser?.id && (!authUser.is_anonymous || accountKinderen.length > 0);
   // Toestel-koppelingen veranderen (één-tik, sync, /koppelen) → opnieuw rekenen.
   useEffect(() => {
     const opnieuw = () => setVersie((v) => v + 1);

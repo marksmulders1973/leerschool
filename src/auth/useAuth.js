@@ -4,7 +4,7 @@ import { ensureSession } from "../auth.js";
 import { signInWithGoogleIdToken } from "./googleSignIn.js";
 import { initDailyGoalSync, stopDailyGoalSync } from "../shared/dailyGoal.js";
 import { kindWisselActief, TERUG_NAAR_OUDER_KEY } from "../shared/koppeling.js";
-import { zetKindGroep } from "../utils.js";
+import { zetKindGroep, track } from "../utils.js";
 
 // Auth-state + bootstrap. Élke bezoeker krijgt een sessie (anonymous sign-in
 // als nog geen Google-login), zodat RLS strikt op user_id kan en geen RLS-fails
@@ -60,6 +60,24 @@ export function useAuth() {
         return;
       }
       if (u) {
+        // 27 okt 2026 (Mark "doe B"): koppelde dit toestel eerder zónder account (anonieme sessie als
+        // ouder), zet die koppelingen dan bij de eerste echte login over naar het account.
+        if (!u.is_anonymous) {
+          try {
+            const raw = localStorage.getItem("lk_koppel_anon");
+            const oud = raw ? JSON.parse(raw) : null;
+            if (oud?.uid && oud.uid !== u.id && Array.isArray(oud.linkIds) && oud.linkIds.length) {
+              supabase.rpc("gezin_koppelingen_overnemen", { p_oud_uid: oud.uid, p_link_ids: oud.linkIds.slice(0, 12) })
+                .then(({ data, error }) => {
+                  if (error) return;
+                  try { localStorage.removeItem("lk_koppel_anon"); } catch { /* */ }
+                  try { window.dispatchEvent(new CustomEvent("lk-koppeling")); } catch { /* */ }
+                  try { track("koppeling_overgenomen", { n: data || 0 }); } catch { /* */ }
+                })
+                .catch(() => {});
+            }
+          } catch { /* */ }
+        }
         supabase
           .from("subscriptions")
           .select("*")

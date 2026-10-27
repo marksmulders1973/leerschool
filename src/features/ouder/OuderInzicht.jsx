@@ -634,7 +634,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // ouder koppelingen/doelen aan een wegwerp-anon-account kon hangen die na
   // een echte Google-login onbereikbaar zijn. Ouder-inzicht = altijd met
   // echt account.
-  if (!authUser || authUser.is_anonymous) {
+  // 27 okt 2026 (Mark "doe B"): een ouder die zónder account op één toestel koppelde, mag hier wél
+  // naar binnen zolang dit toestel kinderen aan zijn anonieme sessie heeft hangen. Zonder
+  // koppelingen blijft de login-muur staan (anders hang je doelen aan een wegwerp-sessie).
+  const anoniemMetKinderen = !!authUser?.is_anonymous && children.length > 0;
+  if (!authUser || (authUser.is_anonymous && !anoniemMetKinderen)) {
     return (
       <div style={{ padding: embedded ? "8px 0" : 32, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
         <div style={{ fontSize: 56 }}>👨‍👩‍👧</div>
@@ -693,7 +697,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           type="email"
           value={partnerEmail}
           onChange={(e) => { setPartnerEmail(e.target.value); setPartnerSaved(false); setPartnerError(""); }}
-          placeholder="partner@voorbeeld.nl"
+          placeholder={authUser?.is_anonymous ? "jouw@adres.nl" : "partner@voorbeeld.nl"}
           style={{
             flex: "1 1 180px",
             padding: "10px 12px",
@@ -789,20 +793,23 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         <div style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "10px 12px", borderRadius: 12, background: "rgba(105,240,174,0.06)", border: "1px solid rgba(105,240,174,0.25)" }}>
           <Bolletje kleur="#69f0ae" size={16} />
           <div style={{ minWidth: 0 }}>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 14, fontWeight: 700, color: "var(--color-text-strong)", overflowWrap: "anywhere" }}>{authUser.email || "je account"}</div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Hier komen het weekrapport en de rekening.</div>
+            {/* 27 okt 2026 (Mark "doe B"): zonder account is dit toestel de ouder — zeg dat eerlijk. */}
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 14, fontWeight: 700, color: "var(--color-text-strong)", overflowWrap: "anywhere" }}>{authUser.is_anonymous ? "Deze telefoon of tablet" : (authUser.email || "je account")}</div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>{authUser.is_anonymous ? "Gekoppeld zonder account. Wil je dit ook op een ander toestel zien? Log dan in met Google — je koppelingen gaan mee." : "Hier komen het weekrapport en de rekening."}</div>
           </div>
         </div>
         <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 12, background: "rgba(0,176,255,0.05)", border: "1px solid rgba(0,176,255,0.22)" }}>
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 2 }}>Tweede ouder of verzorger</div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 2 }}>{authUser.is_anonymous ? "Weekrapport per mail" : "Tweede ouder of verzorger"}</div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 8, lineHeight: 1.5 }}>
             {partnerStatus === "bevestigd" && !partnerSaved
-              ? <span style={{ color: "#69f0ae" }}>{partnerEmail} leest mee met het weekrapport.</span>
+              ? <span style={{ color: "#69f0ae" }}>{partnerEmail} {authUser.is_anonymous ? "krijgt elke vrijdag het weekrapport." : "leest mee met het weekrapport."}</span>
               : partnerStatus === "wacht" && !partnerSaved
-                ? <span style={{ color: "#ffd54f" }}>Uitnodiging verstuurd naar {partnerEmail} — wacht op "Ja, ik lees mee". Opnieuw opslaan = opnieuw versturen.</span>
+                ? <span style={{ color: "#ffd54f" }}>{authUser.is_anonymous ? `Mailtje verstuurd naar ${partnerEmail} — tik daarin op "Ja, stuur het weekrapport".` : `Uitnodiging verstuurd naar ${partnerEmail} — wacht op "Ja, ik lees mee".`} Opnieuw opslaan = opnieuw versturen.</span>
                 : children.length === 0
                   ? "Koppel eerst een kind; daarna kun je iemand laten meelezen."
-                  : "Die krijgt één uitnodiging en zegt zelf \"ja\". Laat leeg om het weer uit te zetten."}
+                  : authUser.is_anonymous
+                    ? "Vul je adres in: je krijgt één mailtje om te bevestigen, daarna elke vrijdag het weekrapport. Laat leeg om het uit te zetten."
+                    : "Die krijgt één uitnodiging en zegt zelf \"ja\". Laat leeg om het weer uit te zetten."}
           </div>
           {children.length > 0 && partnerInvoer}
         </div>
