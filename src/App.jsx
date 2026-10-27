@@ -215,6 +215,10 @@ const LEARN_PAGES = new Set([
   "cito", "tafels", "redactiesommen",
   "spelling", "woordenschat", "begrijpend-lezen",
   "play", "quiz-preview",
+  // 27 okt 2026 (kliktest groep 3): het Start-kwartier, het Kwartier van vandaag, dictee en
+  // werkwoorden telden niet mee → Mijn pagina zei "nog niet geoefend" terwijl de balk
+  // "Kwartier gehaald" zei. Zelfde pagina's als waar een kind echt oefent.
+  "start-kwartier", "vandaag-kwartier", "dictee", "werkwoorden", "kwartiercheck",
 ]);
 
 const KWARTIER_TARGET_MIN = 15;
@@ -1718,7 +1722,10 @@ export default function App() {
       )}
       {page === "spelletje" && (
         <Suspense fallback={<PageLoader />}>
-          <SpelletjeKeuze onPark={() => setPage("zoo")} onImposter={() => setPage("imposter")} onHome={goHome} />
+          {/* 27 okt 2026 (kliktest groep 3): "Terug" bracht een kind met naam naar de startpagina met
+              Leerling/Student — plek kwijt. Een kind gaat terug naar zijn eigen pagina. */}
+          <SpelletjeKeuze onPark={() => setPage("zoo")} onImposter={() => setPage("imposter")}
+            onHome={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
         </Suspense>
       )}
       {page === "imposter" && (
@@ -2725,10 +2732,12 @@ export default function App() {
           userLevel={userLevel || (/[?&](k|g)=/.test(window.location.search) ? "groep" + klasGroep : userLevel)}
           authUser={authUser}
           onKiesGroep={role === "ouder" || role === "teacher" ? null : (n) => wijzigNiveau({ soort: "groep", nr: n }, "start-kwartier")}
-          onStop={() => setPage("mijn-pagina")}
+          // 27 okt 2026 (kliktest): het kind typte net zijn naam → Mijn pagina niet nog eens "Wie ben jij?" vragen.
+          onStop={() => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); }}
           onGa={(p) => {
             if (p === "learn-paths-hub") { setLearnInitialSearch(""); setEntryContext("leren"); }
             if (p === "cito") setEntryContext("cito");
+            if (p === "mijn-pagina") { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } }
             setPage(p);
             try { window.scrollTo({ top: 0 }); } catch { /* */ }
           }}

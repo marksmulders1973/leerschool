@@ -173,11 +173,18 @@ export function bepaalPlan(args = {}) {
   const plan = metStartset(bepaalPlanBasis(args), args);
   const { nuOpSchool, metSchoolvakken, level, vandaag = new Date() } = args;
   if (metSchoolvakken || !Array.isArray(nuOpSchool) || !nuOpSchool.length || plan.reden === "klaargezet") return plan;
-  const keuze = nuOpSchool[Math.floor(vandaag.getTime() / 86400000) % nuOpSchool.length];
-  const blok = schoolBlok(keuze, ITEMS_PER_BLOK, parseGroep(level));
-  if (!blok) return plan;
-  const rest = (plan.blokjes || []).filter((b) => !(b.soort === "vragen" && b.pathId === blok.pathId && !b.startset)).slice(0, 2);
-  return { ...plan, reden: "school", uitleg: `Eerst wat jullie nu op school doen: ${keuze.label}.`, blokjes: [blok, ...rest] };
+  // 27 okt 2026 (kliktest groep 8): met twee of meer keuzes kwam alleen de keuze-van-de-dag in het kwartier
+  // ("ik koos geschiedenis én Engels, maar kreeg alleen Engels"). Nu: twee schoolblokjes (de dag-keuze en
+  // de volgende), daarna één blokje uit de gewone ladder. Met één keuze: één schoolblokje + twee gewone.
+  const g = parseGroep(level);
+  const start = Math.floor(vandaag.getTime() / 86400000) % nuOpSchool.length;
+  const keuzes = nuOpSchool.length >= 2 ? [nuOpSchool[start], nuOpSchool[(start + 1) % nuOpSchool.length]] : [nuOpSchool[start]];
+  const school = keuzes.map((k) => schoolBlok(k, ITEMS_PER_BLOK, g)).filter(Boolean);
+  if (!school.length) return plan;
+  const schoolIds = new Set(school.map((b) => b.pathId));
+  const rest = (plan.blokjes || []).filter((b) => !(b.soort === "vragen" && schoolIds.has(b.pathId) && !b.startset)).slice(0, 3 - school.length);
+  const labels = keuzes.map((k) => k.label).join(" en ");
+  return { ...plan, reden: "school", uitleg: `Eerst wat jullie nu op school doen: ${labels}.`, blokjes: [...school, ...rest] };
 }
 
 function metStartset(plan, args) {

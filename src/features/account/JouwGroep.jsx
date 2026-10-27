@@ -79,7 +79,7 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand =
               {schoolAan ? (
                 <span style={{ color: "#69f0ae" }}>🏫 nu op school: {school.label} →</span>
               ) : ssOpen ? (
-                <span style={{ color: "#69f0ae" }}>{ss.gedaan > 0 ? `startset: ${ss.gedaan} van ${ss.totaal} →` : `Begin: de eerste ${ss.totaal} vragen →`}</span>
+                <span style={{ color: "#69f0ae" }}>{ss.gedaan > 0 ? `eerste ${ss.totaal} vragen: ${ss.gedaan} gedaan →` : `Begin: de eerste ${ss.totaal} vragen →`}</span>
               ) : v.cijfer !== null ? (
                 <>
                   <span aria-hidden="true" style={{ flex: 1, height: 5, borderRadius: 3, background: "rgba(255,255,255,0.1)", overflow: "hidden" }}>

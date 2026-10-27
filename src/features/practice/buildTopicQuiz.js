@@ -36,7 +36,9 @@ const STAP_MET_TEKST = /(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog 
 // `groep` (8 okt 2026, Mark: "zit je in groep 5, dan alleen groep-5-stof"): stappen en vragen met
 // `vanafGroep` hoger dan de groep van het kind vallen weg. Zonder groep (middelbare school, of
 // onbekend) blijft alles staan. Valt alles weg, dan toch het hele pad (liever iets dan niets).
-export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "bij-verwijzing", groep = null }) {
+// `zoek` (27 okt 2026, Nu op school "Wereldoorlogen"): alleen vragen waarvan de tekst op deze regex past —
+// voor een tijdvak dat maar een deel van een stap beslaat. Levert het te weinig op, dan toch de hele stap.
+export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "bij-verwijzing", groep = null, zoek = null }) {
   const pad = await getLearnPath(pathId);
   if (!pad) {
     throw new Error(`buildTopicQuiz: leerpad '${pathId}' niet gevonden`);
@@ -66,12 +68,19 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   // `volgnr` (26 okt 2026, startsets): de plek in het bestand, zodat een vaste set na het
   // "ongezien eerst"-herschikken weer in de oorspronkelijke volgorde gezet kan worden.
   alleChecks.forEach((c, i) => { c.volgnr = i; });
-  const valide = alleChecks.filter(
+  let valide = alleChecks.filter(
     (c) => !c.disabled
       && Array.isArray(c.options)
       && c.options.length >= 2
       && typeof c.answer === "number"
   );
+  if (zoek) {
+    try {
+      const re = zoek instanceof RegExp ? zoek : new RegExp(zoek, "i");
+      const passend = valide.filter((c) => re.test(String(c.q || "")) || re.test(String(c.explanation || "")));
+      if (passend.length >= Math.min(5, aantal || 5)) valide = passend;
+    } catch { /* ongeldige regex: alles laten staan */ }
+  }
   if (valide.length === 0) {
     throw new Error(`buildTopicQuiz: geen geldige vragen in '${pathId}'`);
   }

@@ -39,7 +39,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
     const laad = blok.startset
       ? startsetVolgende(blok.startset, blok.n)
       // 🏫 Nu op school (26 okt 2026): een blokje kan op één stap van het pad wijzen (bv. het tijdvak "ridders").
-      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null, stapIndexen: blok.stapIndexen || null })
+      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null, stapIndexen: blok.stapIndexen || null, zoek: blok.zoek || null })
         .then(({ quiz, questions }) => questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title })));
     laad.then((vragen) => { if (!dood) setVragen(vragen); })
       .catch(() => { if (!dood) setVragen([]); });
@@ -172,7 +172,13 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
         <h2 style={S.titel}>⏱️ Kwartier van vandaag</h2>
         <Button variant="ghost" size="sm" onClick={() => { try { track("vandaag_stop", { idx: stand.idx }); } catch { /* */ } onMijn(); }} aria-label="Stop">Stop ✕</Button>
       </div>
-      <p style={S.sub}>{stand.uitleg} · blokje {stand.idx + 1} van {n}: <b>{blok?.titel}</b></p>
+      {/* 27 okt 2026 (kliktest groep 3): "Rekenen · groep 3: de eerste 20 vragen · blokje 1 van 1: 🔢 Rekenen · groep 3 · startset"
+          was onleesbaar voor een kind van 6. Eén blokje = alleen de titel; meer blokjes = "blokje 2 van 3: titel"; de uitleg
+          alleen als die iets toevoegt (Nu op school / klaargezet), niet als herhaling van de startset-titel. */}
+      <p style={S.sub}>
+        {n > 1 ? `blokje ${stand.idx + 1} van ${n}: ` : ""}<b>{blok?.titel}</b>
+        {stand.uitleg && stand.reden !== "startset" && n > 1 ? <span style={{ opacity: 0.8 }}> · {stand.uitleg}</span> : null}
+      </p>
       <div style={S.dots}>{stand.blokjes.map((_, i) => <div key={i} style={S.dot(i < stand.idx ? "gedaan" : i === stand.idx ? "nu" : "later")} />)}</div>
       {blok?.soort === "vragen" && <VragenBlok key={stand.idx} blok={blok} userName={userName} authUser={authUser} onKlaar={klaar} />}
       {blok?.soort === "klaargezet" && <KlaargezetBlok blok={blok} onPickPath={onPickPath} onKlaar={klaar} />}

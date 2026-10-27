@@ -711,5 +711,7 @@ export function startsetPaden(sleutel) {
 export function startsetBlok(sleutel, n = 5) {
   const s = startsetVan(sleutel);
   if (!s) return null;
-  return { soort: "vragen", startset: sleutel, pathId: null, n, titel: `${s.emoji} ${s.titel} · startset` };
+  // 27 okt 2026 (kliktest): "startset" is geen kinderwoord → "de eerste 20 vragen".
+  const totaal = (s.items || []).reduce((a, it) => a + (it.n || 0), 0) || 20;
+  return { soort: "vragen", startset: sleutel, pathId: null, n, titel: `${s.emoji} ${s.titel} · de eerste ${totaal} vragen` };
 }

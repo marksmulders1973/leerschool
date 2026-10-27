@@ -530,7 +530,7 @@ const steps = [
     explanation: "**Schaal** = verhouding tussen **afstand op de kaart** en **werkelijke afstand**.\n\n**Voorbeeld**:\n• Schaal **1:100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt.\n• 100.000 cm = 1.000 m = **1 km**.\n• Dus 1 cm op kaart = 1 km in het echt.\n\n**Andere schalen**:\n• 1:50.000 → 1 cm = 0,5 km = 500 m.\n• 1:25.000 → 1 cm = 250 m.\n• 1:1.000.000 → 1 cm = 10 km.\n\n**Hoe rekenen**:\n1. Meet de afstand op de kaart in cm.\n2. Vermenigvuldig met de schaal.\n3. Reken om naar km of m.\n\n**Voorbeeld**:\nSchaal 1:100.000. Afstand op kaart = 5 cm.\n• 5 cm × 100.000 = 500.000 cm.\n• 500.000 cm = 5.000 m = **5 km**.\n\n**Schaalbalk**:\nSommige kaarten hebben een **balk** met streepjes en getallen, bijv:\n```\n0  1  2  3  4 km\n|--|--|--|--|\n```\nDan meet je hoe vaak die balk past tussen 2 punten.\n\n**Soorten kaarten + schaal**:\n• **Plattegrond huis**: 1:50 of 1:100 (heel klein gebied).\n• **Stadsplan**: 1:10.000.\n• **Wegenkaart provincie**: 1:200.000.\n• **Wereldkaart**: 1:50.000.000.\n\n**Toets-tip**:\nGroter getal achter de ':' = **groter** stuk wereld zichtbaar. 1:1.000.000 toont meer dan 1:1.000.",
     checks: [
       {
-        q: "Schaal **1:100.000**. 1 cm op kaart = ___ in het echt.",
+        vanafGroep: 6, q: "Schaal **1:100.000**. 1 cm op kaart = ___ in het echt.",
         options: ["1 km","100 m","10 km","100 km"],
         answer: 0,
         wrongHints: [null,"Te klein: 100 m is maar 10.000 cm. Hoeveel is 100.000 cm?","Te groot: reken 100.000 cm om naar meter (deel door 100) en dan naar kilometer (deel door 1.000).","Veel te groot: 100 km is 10 miljoen cm. Reken 100.000 cm stap voor stap om."],
@@ -544,7 +544,7 @@ const steps = [
         },
       },
       {
-        q: "Schaal 1:100.000. **5 cm** op kaart = ___ in het echt.",
+        vanafGroep: 6, q: "Schaal 1:100.000. **5 cm** op kaart = ___ in het echt.",
         options: ["5 km","500 m","50 km","0,5 km"],
         answer: 0,
         wrongHints: [null,"Reken eerst uit wat 1 cm is bij 1:100.000, en doe dat dan 5 keer.","Dat is tien keer te veel. 5 × 100.000 cm = 500.000 cm. Hoeveel km is dat?","Dat is tien keer te weinig. Hoeveel km is 1 cm bij deze schaal? En dan keer 5."],
@@ -558,7 +558,7 @@ const steps = [
         },
       },
       {
-        q: "Schaal **1:50.000**. 2 cm = ___ in het echt.",
+        vanafGroep: 6, q: "Schaal **1:50.000**. 2 cm = ___ in het echt.",
         options: ["1 km","100 m","10 km","2 km"],
         answer: 0,
         wrongHints: [null,"2 × 50.000 = 100.000 cm. Hoeveel meter is dat?","Veel te groot: 10 km is 1 miljoen cm. Reken 2 × 50.000 cm om.","Bij 1:100.000 zou dat kloppen."],
@@ -587,7 +587,7 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Schaal **1:1.000.000**. 1 cm op de kaart = ___ in het echt.",
+        vanafGroep: 6, q: "Schaal **1:1.000.000**. 1 cm op de kaart = ___ in het echt.",
         options: ["10 km", "1 km", "100 km", "1.000 km"],
         answer: 0,
         wrongHints: [null, "Dat hoort bij 1:100.000.", "Dat is tien keer te veel. 1.000.000 cm: deel door 100 voor meters, dan door 1.000 voor kilometers.", "Dat is honderd keer te veel. Reken 1.000.000 cm stap voor stap om."],
@@ -625,7 +625,7 @@ const steps = [
         },
       },
       {
-        q: "Schaal **1:25.000**. **4 cm** op de kaart = ___ in het echt.",
+        vanafGroep: 6, q: "Schaal **1:25.000**. **4 cm** op de kaart = ___ in het echt.",
         options: ["1 km", "4 km", "100 m", "10 km"],
         answer: 0,
         wrongHints: [null, "Reken eerst uit: hoeveel meter is 1 cm bij schaal 1:25.000?", "100 m is maar 10.000 cm. Hoeveel is 4 × 25.000 cm?", "10 km is 1 miljoen cm. Hoeveel is 4 × 25.000 cm?"],
@@ -815,7 +815,7 @@ const steps = [
     explanation: "Mix-toets: kompasroos, schaal, legenda, kaartlezen-totaal.",
     checks: [
       {
-        q: "Schaal 1:100.000. **8 cm** op de kaart = ___ km.",
+        vanafGroep: 6, q: "Schaal 1:100.000. **8 cm** op de kaart = ___ km.",
         options: ["8 km","80 km","0,8 km","800 km"],
         answer: 0,
         wrongHints: [null,"Dat is tien keer te veel. 8 × 100.000 cm = 800.000 cm. Hoeveel km is dat?","Dat is tien keer te weinig. Hoeveel km is 1 cm bij 1:100.000? En dan keer 8.","Dat is honderd keer te veel. Reken 800.000 cm stap voor stap om."],
@@ -857,7 +857,7 @@ const steps = [
         },
       },
       {
-        q: "Schaal 1:25.000. **1 cm** = ___ m.",
+        vanafGroep: 6, q: "Schaal 1:25.000. **1 cm** = ___ m.",
         options: ["250 m","25 m","2.500 m","25 km"],
         answer: 0,
         wrongHints: [null,"Reken opnieuw — 1 cm op kaart × 25.000 = ?","Dat is tien keer te veel — 25.000 cm is hoeveel meter?","Veel te veel — 25.000 cm is geen 25 kilometer."],
@@ -999,7 +999,7 @@ const steps = [
       { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null, "Dat is zuid.", "Dat is oost.", "Dat is west."] },
       { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null, "Noord ligt boven. Oost ligt rechts: wat ligt recht tegenover rechts?", "Zuid ligt onder, niet tegenover rechts.", "Noordoost ligt vlak náást oost, niet ertegenover."] },
       { q: "Wat is een **legenda**?", options: ["Uitleg van symbolen op de kaart", "De titel bovenaan de kaart", "Lijst van alle landen op de kaart", "Aantal pagina's van de atlas"], answer: 0, wrongHints: [null, "Dat is de titel.", "In de legenda staan geen landen, maar iets anders. Wat?", "Dat zou in de inhoudsopgave van een atlas staan, niet op de kaart."] },
-      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["10 m","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig. 1 cm op de kaart is 1.000 cm in het echt. Hoeveel meter is dat?", "Te veel: 1 km is 100.000 cm. Hier is het maar 1.000 cm.", "100 cm is maar 1 m. Hoeveel is 1.000 cm?"] },
+      { vanafGroep: 6, q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["10 m","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig. 1 cm op de kaart is 1.000 cm in het echt. Hoeveel meter is dat?", "Te veel: 1 km is 100.000 cm. Hier is het maar 1.000 cm.", "100 cm is maar 1 m. Hoeveel is 1.000 cm?"] },
       { q: "Op een kaart met schaal 1:50.000 meet je 5 cm. Hoe ver is dat in het echt?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null, "Tien keer te weinig. 5 × 50.000 = 250.000 cm. Hoeveel meter is dat, en hoeveel km?", "Tien keer te veel. Reken 250.000 cm om naar meters en dan naar kilometers.", "Veel te weinig: 50 m is maar 5.000 cm. Hoeveel is 5 × 50.000 cm?"] },
       { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null, "Een driehoekje is een berg of camping.", "Een golfje staat voor water.", "Een hekje gebruik je op kaarten niet voor een gebouw."] },
       { q: "Welke richting ligt tussen N en O?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null, "West ligt links, niet tussen noord en oost.", "Zuid ligt onder. Hier gaat het om noord.", "Zuidwest ligt precies aan de andere kant."] },

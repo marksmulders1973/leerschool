@@ -44,7 +44,9 @@ export const TIJDVAKKEN = [
   { id: "tv6", label: "Regenten en vorsten (Gouden Eeuw)", emoji: "👑", pathId: "tijdvakken-nederland-po", stapIndexen: [2] },
   { id: "tv7", label: "Pruiken en revoluties", emoji: "🎩", pathId: "politiek-democratie-po" },
   { id: "tv8", label: "Burgers en stoommachines", emoji: "🚂", pathId: "industriele-revolutie-po" },
-  { id: "tv9", label: "Wereldoorlogen", emoji: "🕊️", pathId: "tijdvakken-nederland-po", stapIndexen: [3] },
+  // 27 okt 2026 (kliktest groep 8): stap 3 gaat over 1795 tot nu → maar 1 van 5 vragen ging over de oorlogen.
+  // Nu: stap 3 + de tijdlijn-mix, alleen de vragen die echt over WO1/WO2 gaan (9 stuks).
+  { id: "tv9", label: "Wereldoorlogen", emoji: "🕊️", pathId: "tijdvakken-nederland-po", stapIndexen: [3, 4], zoek: "oorlog|1914|1918|1939|1940|1945|bevrijd|bezet|hitler|jood|verzet|hongerwinter|anne frank" },
   { id: "tv10", label: "Moderne wereld (na 1945)", emoji: "📺", pathId: "koude-oorlog-modern-po" },
 ];
 
@@ -66,11 +68,36 @@ export function korteTitel(t) {
 export function onderwerpenVoorVak(vak, groep, manifest = pathManifest) {
   const g = Number(groep);
   if (vak === "geschiedenis" && g >= 5) return TIJDVAKKEN;
+  return padenVoorVak(vak, g, manifest);
+}
+
+/** Alleen de leerpaden van dit vak voor deze groep (ook voor het vakscherm, 27 okt 2026). */
+export function padenVoorVak(vak, groep, manifest = pathManifest) {
+  const g = Number(groep);
   const subj = vak === "wiskunde" ? "rekenen" : vak;
   return manifest
     .filter((p) => p.subject === subj && padBijGroep(p.level, g) && !/-nieuwkomers$/.test(p.id))
     .sort((a, b) => String(a.title).localeCompare(String(b.title), "nl"))
-    .map((p) => ({ id: p.id, label: korteTitel(p.title), emoji: p.emoji || "📘", pathId: p.id }));
+    .map((p) => ({ id: p.id, label: onderwerpLabel(p.title, subj), emoji: p.emoji || "📘", pathId: p.id }));
+}
+
+// Hoe een pad-titel het vak zelf kan noemen vóór het streepje ("Engels — eerste woorden …").
+const VAK_NAMEN = {
+  rekenen: /^(rekenen|wiskunde)$/i, taal: /^(taal|taal & lezen|nederlands)$/i, spelling: /^spelling$/i,
+  "begrijpend-lezen": /^(begrijpend lezen|lezen)$/i, engels: /^(engels|english)$/i, natuur: /^(natuur|natuur & techniek|natuur en techniek)$/i,
+  aardrijkskunde: /^(aardrijkskunde|topografie)$/i, geschiedenis: /^geschiedenis$/i, studievaardigheden: /^studievaardigheden$/i,
+};
+
+/** "Engels — eerste woorden en zinnetjes (groep 5)" → "Eerste woorden en zinnetjes" (alleen als het stuk vóór
+ *  het streepje het vák is; "Klokkijken — analoog + digitaal" blijft "Klokkijken"). */
+export function onderwerpLabel(title, vak = null) {
+  const delen = String(title || "").split(/ — | – /);
+  const isVak = vak && VAK_NAMEN[vak] ? VAK_NAMEN[vak].test(delen[0].trim()) : false;
+  if (delen.length >= 2 && isVak) {
+    const rest = delen.slice(1).join(" — ").replace(/\s*\([^)]*(groep|klas|doorstroomtoets|po\b)[^)]*\)\s*$/i, "").replace(/,?\s*Doorstroomtoets-stof$/i, "").trim();
+    if (rest && !/^groep\s*\d/i.test(rest)) return rest.charAt(0).toUpperCase() + rest.slice(1);
+  }
+  return korteTitel(title);
 }
 
 /** Het kwartier-blokje: 5 vragen over wat de klas nu doet. */
@@ -79,6 +106,7 @@ export function schoolBlok(keuze, n = 5, groep = null) {
   return {
     soort: "vragen", pathId: keuze.pathId, n, school: true, titel: `🏫 Nu op school: ${keuze.label}`,
     ...(keuze.stapIndexen ? { stapIndexen: keuze.stapIndexen } : {}),
+    ...(keuze.zoek ? { zoek: keuze.zoek } : {}),
     ...(groep ? { groep } : {}),
   };
 }

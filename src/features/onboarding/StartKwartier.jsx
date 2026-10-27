@@ -86,8 +86,10 @@ function stripSvg(svg) {
   }));
 }
 
+// 27 okt 2026 (kliktest groep 8): de basis-laag van het uitlegpad is vaak een denkvraag ("wat moet je dóén
+// om…?") — na "Goed zo!" stond er dan een vraag als uitleg. Eerst de echte uitleg, de denkvraag als laatste.
 function uitlegVan(v) {
-  return v?.uitlegPad?.niveaus?.basis || v?.uitleg || v?.explanation || null;
+  return v?.explanation || v?.uitleg || v?.uitlegPad?.niveaus?.basis || null;
 }
 
 // ── Vraag ─────────────────────────────────────────────────────────
@@ -565,7 +567,9 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const stappen = useMemo(() => {
     if (!vragen) return [];
     const s = [];
-    const shows = klas ? [] : SHOWCASES.slice();
+    // 27 okt 2026 (kliktest groep 3): het toetsen-kaartje ("In groep 7 en 8 oefen je hier de Doorstroomtoets…
+    // echte eindexamens vmbo/havo/vwo") zegt een kind van groep 3-6 niets → alleen vanaf groep 7.
+    const shows = klas ? [] : SHOWCASES.filter((id) => id !== "toetsen" || groep >= 7);
     vragen.forEach((v, i) => {
       s.push({ type: "vraag", vraag: v, nummer: i + 1 });
       if (shows.length && i < vragen.length - 1) s.push({ type: "show", id: shows.shift() });

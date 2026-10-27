@@ -22,7 +22,8 @@ import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
 import GroepPoort from "../onboarding/GroepPoort.jsx";
 import NuOpSchool from "../school/NuOpSchool.jsx";
-import { leesNuOpSchool, zetNuOpSchool, actieveKeuzes, schoolBlok, isVerlopen } from "../school/nuOpSchool.js";
+import { leesNuOpSchool, zetNuOpSchool, actieveKeuzes, schoolBlok, isVerlopen, padenVoorVak } from "../school/nuOpSchool.js";
+import VakScherm from "./VakScherm.jsx";
 import Rapport, { MeesterOpmerking, rapportRijen } from "./Rapport.jsx";
 import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
 import { startsetSleutel, startsetVan, startsetBlok } from "../learn/startsetsData.js";
@@ -691,13 +692,25 @@ export default function MijnPagina({
   // met 2+ profielen op dit apparaat eerst kiezen (zoals Netflix), daarna via "Wissel".
   const [meerOpen, setMeerOpen] = useState(false);
   const [rapportOpen, setRapportOpen] = useState(false);   // 📒 papieren rapport, één tik onder de vak-tegels (26 okt 2026)
+  // 🧒 Vakscherm (27 okt 2026, ontwerp-stap 3): tik op een tegel → "Rekenen · groep 5" met cijfer, Oefen nu en
+  // de onderwerpen van die groep. Alleen basisschool (groep); de middelbare school houdt de Leren-lijst.
+  const [vakOpen, setVakOpen] = useState(null);
+  useEffect(() => { setVakOpen(null); }, [scherm, player]);
   // 🎯 Startsets (26 okt 2026): welke "eerste 20 vragen"-sets van deze groep zijn nog niet af?
   // { "5|rekenen": { totaal, gedaan, klaar } }. Alleen voor de basisschool.
   const [startsetStand, setStartsetStand] = useState({});
   // 🏫 Nu op school (Mark 26 okt 2026): per vak wat de klas nu doet; per profiel bewaard op het toestel.
   const [nuOpSchool, setNuOpSchool] = useState(() => leesNuOpSchool(player));
   useEffect(() => { setNuOpSchool(leesNuOpSchool(player)); }, [player]);
-  const kiesNuOpSchool = (vak, keuze) => setNuOpSchool({ ...zetNuOpSchool(player, vak, keuze) });
+  const kiesNuOpSchool = (vak, keuze) => {
+    setNuOpSchool({ ...zetNuOpSchool(player, vak, keuze) });
+    // 27 okt 2026 (kliktest groep 5 en 8): de kaart belooft "je kwartier begint hiermee", maar een half
+    // kwartier bleef vóórgaan ("▶ Verder met je kwartier"). Een nieuwe keuze maakt het plan opnieuw;
+    // alleen een kwartier dat door thuis/school is klaargezet blijft staan.
+    try {
+      if (keuze && kwartierActief()) { const st = kwartierStand(); if (st?.reden !== "klaargezet") stopKwartier(); }
+    } catch { /* */ }
+  };
   // Compact kwartierblok (Mark 1 okt 2026: "dit groene blok is nog enorm groot"): eerste keuze achter een linkje.
   const [zelfKiezenOpen, setZelfKiezenOpen] = useState(false);
   // Kwartiercheck als aanbevolen eerste stap (Mark 1 okt 2026) zolang hij op dit apparaat niet gedaan is.
@@ -1205,6 +1218,18 @@ export default function MijnPagina({
       try { track("mijn_startset_start", { vak: subj, groep, gedaan: st.gedaan || 0 }); } catch { /* */ }
       onVandaagKwartier();
       return;
+    }
+    // 27 okt 2026 (kliktest groep 5): na de startset kwam het kind in de Leren-lijst (3 tikken tot een vraag).
+    // Nu: meteen een kwartier met vragen uit een pad van dit vak voor deze groep (per dag een ander pad).
+    if (groep && onVandaagKwartier) {
+      const paden = padenVoorVak(subj, groep);
+      if (paden.length) {
+        const p = paden[Math.floor(Date.now() / 86400000) % paden.length];
+        startKwartierPlan({ level: userLevel, reden: "vak", uitleg: `${vakMeta(subj).titel} · groep ${groep}`, blokjes: [{ soort: "vragen", pathId: p.pathId, n: 10, groep, titel: `${p.emoji} ${p.label}` }] });
+        try { track("mijn_vak_start", { vak: subj, groep, pad: p.pathId }); } catch { /* */ }
+        onVandaagKwartier();
+        return;
+      }
     }
     if (onVak) onVak(subj);
   };
@@ -2050,11 +2075,31 @@ export default function MijnPagina({
                 voetnoot={<>Zit je op de middelbare school? Tik bovenaan op <strong style={{ color: "var(--color-text)" }}>wissel</strong> en maak een profiel met je klas. Ben je een ouder of verzorger? Kies dan daar "ouder of verzorger".</>}
               />
             )}
-            {(niveau || !onSetLevel || rolKey === "ouder") && (<>
+            {(niveau || !onSetLevel || rolKey === "ouder") && (vakOpen && groep ? (
+              <VakScherm
+                vak={vakOpen}
+                meta={vakMeta(vakOpen)}
+                groep={groep}
+                niveauLabel={niveauLabel || ""}
+                rij={rapportRijen(rapportVakken).find((v) => v.subj === vakOpen) || null}
+                startset={(() => { const s = startsetSleutel(groep, vakOpen); return s ? startsetStand[s] || null : null; })()}
+                school={nuOpSchool[vakOpen] && !isVerlopen(nuOpSchool[vakOpen]) ? nuOpSchool[vakOpen] : null}
+                onderwerpen={padenVoorVak(vakOpen, groep)}
+                onOefenNu={() => naarVak(vakOpen)}
+                onPad={(pathId) => { if (onPickPath) onPickPath(pathId); }}
+                onTerug={() => { setVakOpen(null); try { track("mijn_vakscherm_terug", { vak: vakOpen }); } catch { /* */ } }}
+              />
+            ) : (<>
             {/* ── Begin: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote knop. ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))"), border: "1px solid rgba(0,200,83,0.4)" }}>
               <div style={eyebrowStijl}>Vandaag</div>
+              {/* 27 okt 2026 (kliktest groep 8): de aftelling stond alleen achter Meer; het plan zegt zichtbaar bij groep 7-8. */}
+              {countdown && groep >= 7 && (
+                <div style={{ fontSize: 12.5, fontWeight: 700, color: "#ffb74d", marginBottom: 6 }}>
+                  📝 Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de Doorstroomtoets
+                </div>
+              )}
               {(() => {
                 const min = Math.min(minutenVandaag(), 15);
                 const klaarVandaag = min >= 15;
@@ -2112,7 +2157,7 @@ export default function MijnPagina({
                         <>
                           {bezig && stand && <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 8, lineHeight: 1.4 }}>
                             {bezig && stand
-                              ? <>Je bent bezig: blokje {stand.idx + 1} van {stand.blokjes.length} · <strong style={{ color: "var(--color-text)" }}>{stand.blokjes[stand.idx]?.titel}</strong></>
+                              ? <>Je bent bezig{stand.blokjes.length > 1 ? ` met blokje ${stand.idx + 1} van ${stand.blokjes.length}` : ""}: <strong style={{ color: "var(--color-text)" }}>{stand.blokjes[stand.idx]?.titel}</strong></>
                               : <>{gedaan ? "Nog een rondje? " : "Vandaag: "}<strong style={{ color: "var(--color-text)" }}>{planSamenvatting(plan)}</strong>{plan.reden === "klaargezet" ? "" : ` · ${plan.uitleg}`}</>}
                           </div>}
                           {/* Mark 10 sep 2026: "kan het kind ook zijn eerste keuze kiezen?" — de blokjes zijn
@@ -2175,14 +2220,18 @@ export default function MijnPagina({
                 );
               })()}
             </Card>
-            </>)}
+            </>))}
 
+            {/* Vakscherm open (27 okt 2026): dan alleen dat scherm, de rest van het kinderscherm even niet. */}
+            {!(vakOpen && groep) && (<>
             {/* ── Je vakken: alleen de vakken van deze groep, als tegels mét rapportcijfer ("Rekenen · groep 5").
                 De tegels zíjn het rapport; het papieren rapport staat één tik verderop. ── */}
             {!loading && rapportVakken.length > 0 && (
               <div style={{ marginBottom: "var(--space-4)" }}>
                 <div style={eyebrowStijl}>Je vakken{niveauLabel ? ` · ${niveauLabel}` : ""}</div>
-                <VakTegels vakken={rapportVakken} niveauLabel={niveauLabel || ""} vakMeta={vakMeta} onVak={naarVak} startsetStand={startsetStand} groep={groep} schoolKeuzes={nuOpSchool} />
+                <VakTegels vakken={rapportVakken} niveauLabel={niveauLabel || ""} vakMeta={vakMeta}
+                  onVak={groep ? (subj) => { setVakOpen(subj); try { track("mijn_vakscherm_open", { vak: subj, groep }); } catch { /* */ } try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ } } : naarVak}
+                  startsetStand={startsetStand} groep={groep} schoolKeuzes={nuOpSchool} />
                 {/* Mark 26 okt 2026: "van nature klikte ik op dat rapport-venster" — tik op de opmerking
                     van de meester opent het hele rapport (de linkjes erin blijven werken). */}
                 <div role="button" tabIndex={0} title={rapportOpen ? "Tik om je rapport dicht te doen" : "Tik om je hele rapport te zien"}
@@ -2329,6 +2378,7 @@ export default function MijnPagina({
             >
               {meerOpen ? "Minder tonen ▲" : "Meer ▼"}
             </button>
+            </>)}
             </>)}
             {(meerOpen || scherm === "meer") && (<>
             {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
@@ -2599,8 +2649,8 @@ export default function MijnPagina({
 
             {/* ── 🔢 Snelkoppeling tafels (Mark 17 aug): de tafels zijn de basis
                 van bijna elke rekenvraag; één tik weg vanaf je eigen pagina.
-                Vanaf groep 3 (tafels beginnen daar; kleuters nog niet). ── */}
-            {groep >= 3 && (
+                Vanaf groep 4 (daar beginnen de tafels; 27 okt 2026 kliktest: groep 3 zag "tafel 1 t/m 12"). ── */}
+            {groep >= 4 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <span style={{ fontSize: 30, flexShrink: 0 }} aria-hidden="true">🔢</span>

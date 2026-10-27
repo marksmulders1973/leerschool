@@ -98,6 +98,8 @@ function Opmerking({ naam, vakken, onVak, onKwartiercheck }) {
   let zin;
   if (zwak.cijfer >= 8) zin = <>Wat een mooi rapport, {naam}! Ga zo door.</>;
   else if (zwak !== best && zwak.cijfer < 6) zin = <>{best.titel} gaat goed. Oefen nog wat met <VakLink vak={zwak} onVak={onVak} />, een kwartiertje extra helpt echt.</>;
+  // 27 okt 2026 (kliktest groep 5): "Engels is je sterkste vak" bij een 3 — als het beste cijfer zelf onvoldoende is, zeg dat eerlijk.
+  else if (best.cijfer < 6) zin = <><VakLink vak={best} onVak={onVak} /> is nog lastig, {naam}. Een kwartiertje per dag en je ziet het cijfer stijgen.</>;
   else zin = <>Je werkt goed mee, {naam}. {best.titel} is je sterkste vak.</>;
   return <>{zin}{start ? <> Probeer ook eens <VakLink vak={start} onVak={onVak} /></> : null}</>;
 }

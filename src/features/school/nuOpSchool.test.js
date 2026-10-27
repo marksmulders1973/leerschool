@@ -44,8 +44,30 @@ describe("nuOpSchool", () => {
 
   it("schoolBlok is een vragen-blokje met titel, stappen en groep", () => {
     const b = schoolBlok({ ...TIJDVAKKEN[8], sinds: Date.now() }, 5, 8);
-    expect(b).toMatchObject({ soort: "vragen", pathId: "tijdvakken-nederland-po", stapIndexen: [3], n: 5, groep: 8, school: true });
+    // 27 okt 2026: Wereldoorlogen = stap 3 + tijdlijn-mix, gefilterd op oorlogs-vragen (`zoek`).
+    expect(b).toMatchObject({ soort: "vragen", pathId: "tijdvakken-nederland-po", stapIndexen: [3, 4], n: 5, groep: 8, school: true });
+    expect(b.zoek).toMatch(/oorlog/);
     expect(b.titel).toMatch(/Nu op school: Wereldoorlogen/);
     expect(schoolBlok(null)).toBeNull();
+  });
+});
+
+// 27 okt 2026 — vakscherm: onderwerpnamen zonder het vak ervoor, alleen paden van die groep.
+import { onderwerpLabel, padenVoorVak } from "./nuOpSchool.js";
+describe("vakscherm-onderwerpen", () => {
+  it("laat het vak weg als de titel ermee begint", () => {
+    expect(onderwerpLabel("Engels — eerste woorden en zinnetjes (groep 5)", "engels")).toBe("Eerste woorden en zinnetjes");
+    expect(onderwerpLabel("Natuur — seizoenen, dieren en planten (groep 4)", "natuur")).toBe("Seizoenen, dieren en planten");
+    expect(onderwerpLabel("Kaartlezen — groep 5-8, Doorstroomtoets-stof", "aardrijkskunde")).toBe("Kaartlezen");
+    expect(onderwerpLabel("Klokkijken — analoog + digitaal", "rekenen")).toBe("Klokkijken");
+    expect(onderwerpLabel("Breuken (groep 6-8)", "rekenen")).toBe("Breuken");
+  });
+  it("geeft alleen paden van die groep, zonder nieuwkomers-paden", () => {
+    const g5 = padenVoorVak("rekenen", 5);
+    expect(g5.length).toBeGreaterThan(5);
+    expect(g5.every((o) => !/-nieuwkomers$/.test(o.pathId))).toBe(true);
+    expect(padenVoorVak("engels", 5).map((o) => o.pathId)).toContain("engels-eerste-woorden-g5");
+    expect(padenVoorVak("engels", 3)).toEqual([]);
+    expect(padenVoorVak("geschiedenis", 8).length).toBeGreaterThan(3);
   });
 });

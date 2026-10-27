@@ -55,8 +55,10 @@ export default function NuOpSchool({ vakken, vakMeta, groep, keuzes = {}, onKies
                   {onderwerpenVoorVak(v.subj, groep).map((o) => {
                     const aan = k?.id === o.id;
                     return (
+                      // 27 okt 2026 (kliktest): nog eens tikken op je keuze haalde die stil weg. Nu: de keuze
+                      // blijft, het lijstje klapt dicht; weghalen kan alleen via "weet ik niet / overslaan".
                       <button key={o.id} type="button" style={knop(aan)}
-                        onClick={() => { onKies(v.subj, aan ? null : o); setOpen(null); try { track("nu_op_school_gekozen", { vak: v.subj, pad: o.pathId, groep, weg: aan }); } catch { /* */ } }}>
+                        onClick={() => { if (!aan) onKies(v.subj, o); setOpen(null); try { track("nu_op_school_gekozen", { vak: v.subj, pad: o.pathId, groep, weg: false, zelfde: aan }); } catch { /* */ } }}>
                         {o.emoji} {o.label}
                       </button>
                     );
