@@ -81,3 +81,11 @@ Elke fase: één geteste uitrol, drie schermformaten, kliktocht, daarna pas de v
    onschuldig, klaarzetten vraagt al inloggen); later optioneel.
 3. **Berichtje van ouder aan kind:** ja? Voorstel: ja, kort, met een paar kant-en-klare zinnen + zelf typen.
 4. **Ziet het kind dat de ouder heeft meegekeken?** Voorstel: nee.
+
+## Besluit Mark 27 okt 2026 — één-tik koppelen ZONDER account (optie B)
+
+Aanleiding: ouder uit Apeldoorn (24 okt) tikte 5× op "Koppel X aan Y", strandde op "log eerst in" (maillink). Mark: "ja doe B".
+- Het oranje blok "Koppel Brian aan Mark" werkt ook zonder ingelogde ouder: koppeling meteen vast, geen mail, geen link.
+- Technisch: anonieme Supabase-sessie van het toestel = `parent_user_id`; `gezin_koppel_zelfde_apparaat` moet dat toestaan (nu alleen echte accounts); later inloggen = koppelingen overzetten naar het account (migratie-RPC).
+- Daarna pas, als één regel onder de koppeling: "Wil je elke vrijdag een mailtje over Brian? Vul je adres in." → weekmail alleen met adres.
+- Bouwen als één geteste uitrol (langzaam en goed), kliktest op twee toestellen + privacy-test opnieuw.
