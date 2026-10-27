@@ -32,6 +32,7 @@ spoor van een echte ouder uit Apeldoorn (24 okt). Daarna 17 herstellingen in v10
 - **Twee ouders, één kind**: oefenwerk krijgt alleen het link_id van de láátste ouder; ouder 1 ziet daarna niets nieuws meer (`koppeling.js`, `kindData.js`). Vraagt een schemawijziging (meerdere link_ids per rij). Apart oppakken.
 - **KindOverzicht toont alleen toetsen (leaderboard)**, losse oefenvragen (topic_mastery) niet → ouder ziet "nog geen resultaten" na 5 vragen.
 - **Inloggen als ouder = magic link**; dat is waar de Apeldoornse ouder afhaakte. Overweging: Google-knop prominenter in het koppelblok, of de één-tik-koppeling ook zonder account (dan geen weekmail).
+  - ✅ **Opgelost 27 okt v1016 "071" (Mark: "ja doe B"):** één-tik koppelen werkt zonder account; weekmail via eigen bevestigd adres (`partner_email`), koppelingen gaan mee bij latere login (`gezin_koppelingen_overnemen`). Live getest incl. mail + bevestig-link.
 - Startset-voortgang en "gezien" staan per toestel, niet per kind (broer/zus zien elkaars "5 gedaan").
 - `koppel_diagnose` verraadt bij een gebruikte code of die ouder een kind met die naam heeft (klein).
 - Typfout-suggestie kan een vrije code van een ándere ouder voorstellen (10/uur-limiet staat erop).
