@@ -28,3 +28,4 @@ android/local.properties
 android/app/build/
 # Agent-werkmappen van Claude Code (eigen git-checkouts, nooit meecommitten)
 .claude/worktrees/
+scripts/klanken/kandidaten/

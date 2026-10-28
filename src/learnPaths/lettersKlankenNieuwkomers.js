@@ -125,6 +125,8 @@ const lettersKlankenNieuwkomers = {
   prerequisites: [],
   intro: "Welke klank hoor je? Hakken en plakken: t-a-s wordt tas. En twee letters die samen één klank maken: aa, oo, oe. Met steun in je eigen taal. ~10 min.",
   triggerKeywords: ["nieuwkomers", "letters", "klanken", "hakken en plakken", "leren lezen", "nt2"],
+  // 28 okt 2026 (CSG De Waard): losse letters worden als klank voorgelezen (opname), niet als "tee"/"em".
+  klankzuiver: true,
   chapters,
   steps,
   steunTeksten: { ...NIEUWKOMERS_STEUN, ...TEKST_STEUN }, // alles tikbaar in de eigen taal (SteunTik.jsx)

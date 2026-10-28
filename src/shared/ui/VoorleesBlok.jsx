@@ -6,7 +6,8 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { SteunTekst } from "./SteunTik.jsx";
-import { spreekMetMeelezen, nlStemmen, gekozenStemNaam, zetGekozenStem } from "../spraakTekst.js";
+import { nlStemmen, gekozenStemNaam, zetGekozenStem } from "../spraakTekst.js";
+import { spreek as spreekMetMeelezen } from "../klanken.js"; // klank-laag als die aanstaat, anders de gewone stem (28 okt 2026)
 import MeeleesTekst from "./MeeleesTekst.jsx";
 
 // Inklapbare strook (Mark 15 okt 2026: "neemt veel te veel plaats in" → standaard ingeklapt).

@@ -12,6 +12,7 @@ import MdInline from "../shared/ui/MdInline.jsx";
 import MeldFout from "../shared/ui/MeldFout.jsx";
 import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
 import { useVoorleesAltijd, useVanzelfZeggen, zeg, ZEG } from "../shared/voorleesModus.js";
+import { zetKlankStand } from "../shared/klanken.js";
 
 // 🔊 Wat de stem zegt (29 sep 2026): "8 − 3 = ?" → "8 min 3 is hoeveel?", "___" als korte pauze.
 const alsSpraak = (t) => String(t ?? "").replace(/_{2,}/g, "…").replace(/\s*=\s*\?/g, " is hoeveel?").replace(/−/g, " min ").replace(/\s*·\s*/g, ", ");
@@ -19,6 +20,8 @@ const alsSpraak = (t) => String(t ?? "").replace(/_{2,}/g, "…").replace(/\s*=\
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
 export default function NieuwkomersHerhaal({ onKlaar }) {
+  // 🔤 Klankzuiver voorlezen (28 okt 2026): gemiste lettervragen zeggen "t" als klank, niet als "tee".
+  useEffect(() => { zetKlankStand(true); return () => zetKlankStand(false); }, []);
   const [vragen, setVragen] = useState(null);
   const [map, setMap] = useState(null);
   const [idx, setIdx] = useState(0);

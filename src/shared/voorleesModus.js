@@ -5,6 +5,7 @@
 // aan te zetten op /nieuwkomers ("Ik kan nog niet lezen") of in een leerpad.
 import { useEffect, useState } from "react";
 import { spreekMetMeelezen } from "./spraakTekst.js";
+import { spreekMetKlanken, klankStandAan } from "./klanken.js";
 
 const KEY = "lk_voorlees_altijd";
 const EVENT = "lk-voorlees-altijd";
@@ -39,11 +40,14 @@ export function stopZeggen() {
 }
 
 /** Spreek een korte tekst uit (rustig tempo). Geeft een stop-functie terug. */
-export function zeg(tekst, { rate = 0.9, onEnd, onWoord } = {}) {
+export function zeg(tekst, { rate = 0.9, onEnd, onWoord, klanken = null } = {}) {
   const t = String(tekst ?? "").trim();
   if (!t || typeof window === "undefined" || !window.speechSynthesis) { onEnd && onEnd(false); return () => {}; }
   stopZeggen();
-  const stop = spreekMetMeelezen(t, {
+  // Klank-laag (28 okt 2026, CSG De Waard: "de 'tee' i.p.v. de t"): in klankzuivere schermen klinken
+  // losse letters als klank (opname), niet als lettertitel. Zie src/shared/klanken.js.
+  const metKlanken = klanken === null ? klankStandAan() : !!klanken;
+  const stop = (metKlanken ? spreekMetKlanken : spreekMetMeelezen)(t, {
     rate,
     pitch: 1.05,
     onWoord,

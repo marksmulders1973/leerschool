@@ -54,6 +54,7 @@ import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, UI_GETAL, maakS
 import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
 import VoorleesSchakelaar from "../../shared/ui/VoorleesSchakelaar.jsx";
 import { useVoorleesAltijd, useVanzelfZeggen, zeg, stopZeggen, ZEG } from "../../shared/voorleesModus.js";
+import { zetKlankStand } from "../../shared/klanken.js";
 
 // Nieuwkomerpaden: korte titel ("Woorden" i.p.v. "Woorden — je eerste … (nieuwkomers)"), zodat hij
 // vertaalbaar is en niet over twee regels loopt (kliktest 26 sep 2026).
@@ -706,6 +707,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const voorleesAan = useVoorleesAltijd();
   const isNieuwkomerPad = /-nieuwkomers$/.test(String(pathId || ""));
   const luisterStand = voorleesAan || isNieuwkomerPad;
+  // 🔤 Klankzuiver pad (28 okt 2026, CSG De Waard: "de 'tee' i.p.v. de t"): losse letters klinken als
+  // klank via een opname, niet als lettertitel. Alleen aan zolang dit pad open is.
+  const klankzuiver = !!path?.klankzuiver;
+  useEffect(() => { zetKlankStand(klankzuiver); return () => zetKlankStand(false); }, [klankzuiver]);
   // Eén sleutel per scherm: een vraag (ook na fout/goed/deel-klaar) of de uitleg van een deel.
   const vraagFase = mode === "checking" || mode === "wrong" || mode === "correctEvidence" || mode === "stepDone";
   const schermSleutel = mode === "reading" ? `u${stepIdx}` : vraagFase ? `v${stepIdx}-${checkIdx}` : mode;

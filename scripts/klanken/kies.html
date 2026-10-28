@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klanken kiezen</title>
+<style>
+  body{margin:0;background:#0b1224;color:#eef2ff;font-family:system-ui,Segoe UI,Arial,sans-serif}
+  .wrap{max-width:980px;margin:0 auto;padding:20px 16px 80px}
+  h1{font-size:24px;margin:0 0 4px} .sub{color:#9fb0d0;font-size:14px;margin:0 0 16px;line-height:1.5}
+  .rij{display:grid;grid-template-columns:90px 1fr 150px;gap:12px;align-items:center;padding:10px 12px;border-bottom:1px solid #1f2a44}
+  .rij.klaar{background:rgba(0,200,83,0.08)}
+  .klank{font-size:34px;font-weight:800;color:#ffd166;text-align:center}
+  .kands{display:flex;flex-wrap:wrap;gap:6px}
+  button{border:0;border-radius:10px;padding:9px 12px;font-weight:700;font-size:14px;cursor:pointer;background:#1e2a47;color:#eef2ff}
+  button:hover{background:#2a3a63} button.gekozen{background:#00c853;color:#06250f}
+  button.rec{background:#e53935;color:#fff} button.rec.bezig{background:#ff8a80;color:#5b0000}
+  button.klein{padding:6px 9px;font-size:13px;background:#132040}
+  .status{font-size:13px;color:#9fb0d0;text-align:right}
+  .kop{position:sticky;top:0;background:#0b1224;padding:8px 0;z-index:2;border-bottom:1px solid #1f2a44;margin-bottom:6px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .kop input{padding:8px 10px;border-radius:8px;border:1px solid #2a3a63;background:#132040;color:#fff;font-size:15px;width:220px}
+  .tel{margin-left:auto;font-weight:700;color:#00c853}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🔤 Klanken kiezen</h1>
+  <p class="sub">Per klank: tik op een kandidaat om te luisteren, dan <b>Kies</b>. Klinkt niets goed? <b>Opnemen</b>: tik, zeg de klank zoals in de klas (t = "t", niet "tee"), tik nog eens om te stoppen. De opname wordt meteen gebruikt. Groen = gekozen. Daarna: bouwen + pushen (dat doet Claude).</p>
+  <div class="kop">
+    <input id="reeks" value="t - a - s" placeholder="reeks om te testen">
+    <button id="speelReeks" class="klein">▶ Reeks afspelen met gekozen klanken</button>
+    <span class="tel" id="tel"></span>
+  </div>
+  <div id="lijst"></div>
+</div>
+<script>
+const KLANKEN = ["a","e","i","o","u","aa","ee","oo","uu","ie","oe","eu","ui","ei","ij","au","ou","b","d","f","g","h","j","k","l","m","n","p","r","s","t","v","w","z","ch","ng","nk","sch"];
+const VOORBEELD = {a:"bak",e:"bek",i:"vis",o:"bos",u:"bus",aa:"maan",ee:"been",oo:"boom",uu:"vuur",ie:"vies",oe:"boek",eu:"deur",ui:"huis",ei:"ei",ij:"ijs",au:"blauw",ou:"hout",b:"bal",d:"dak",f:"fiets",g:"gat",h:"hok",j:"jas",k:"kip",l:"lip",m:"maan",n:"nat",p:"pen",r:"roos",s:"sok",t:"tas",v:"vis",w:"wol",z:"zon",ch:"lach",ng:"ring",nk:"bank",sch:"schip"};
+let data = { kandidaten: [], gekozen: {} };
+let audio = null;
+const speel = (src) => new Promise((ok) => { if (audio) { audio.pause(); } audio = new Audio(src + "?t=" + Date.now()); audio.onended = ok; audio.onerror = ok; audio.play().catch(ok); });
+async function laad() { data = await (await fetch("/kandidaten.json")).json(); teken(); }
+function teken() {
+  const el = document.getElementById("lijst"); el.innerHTML = "";
+  let n = 0;
+  for (const k of KLANKEN) {
+    const g = data.gekozen[k]; if (g) n++;
+    const rij = document.createElement("div"); rij.className = "rij" + (g ? " klaar" : "");
+    rij.innerHTML = `<div class="klank">${k}<div style="font-size:12px;color:#9fb0d0;font-weight:400">${VOORBEELD[k]||""}</div></div><div class="kands"></div><div class="status"></div>`;
+    const kands = rij.querySelector(".kands");
+    for (const c of data.kandidaten.filter((x) => x.klank === k)) {
+      const b = document.createElement("button"); b.textContent = `${c.nr} ${c.stem} (${c.spelling})`;
+      if (g && g.bron === c.bestand) b.classList.add("gekozen");
+      b.onclick = () => speel("/kandidaten/" + c.bestand);
+      const kies = document.createElement("button"); kies.className = "klein"; kies.textContent = "Kies";
+      kies.onclick = async () => { await fetch("/kies", { method: "POST", body: JSON.stringify({ klank: k, bestand: c.bestand }) }); await laad(); };
+      const span = document.createElement("span"); span.style.display = "inline-flex"; span.style.gap = "2px"; span.append(b, kies); kands.append(span);
+    }
+    const rec = document.createElement("button"); rec.className = "rec"; rec.textContent = "🎙 Opnemen";
+    rec.onclick = () => opnemen(k, rec);
+    kands.append(rec);
+    const st = rij.querySelector(".status");
+    if (g) {
+      st.innerHTML = `✔ ${g.bron.includes("eigen") ? "eigen opname" : g.bron.replace(/\.mp3$/, "")}<br>`;
+      const h = document.createElement("button"); h.className = "klein"; h.textContent = "▶ gekozen"; h.onclick = () => speel("/gekozen/" + k + ".mp3");
+      const w = document.createElement("button"); w.className = "klein"; w.textContent = "wis"; w.onclick = async () => { await fetch("/wis", { method: "POST", body: JSON.stringify({ klank: k }) }); await laad(); };
+      st.append(h, " ", w);
+    } else st.textContent = "nog niet gekozen";
+    el.append(rij);
+  }
+  document.getElementById("tel").textContent = `${n} / ${KLANKEN.length} gekozen`;
+}
+let recorder = null, chunks = [], recKlank = null, recKnop = null;
+async function opnemen(k, knop) {
+  if (recorder && recorder.state === "recording") { recorder.stop(); return; }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: true } });
+    recorder = new MediaRecorder(stream, { mimeType: "audio/webm" }); chunks = []; recKlank = k; recKnop = knop;
+    recorder.ondataavailable = (e) => chunks.push(e.data);
+    recorder.onstop = async () => {
+      stream.getTracks().forEach((t) => t.stop());
+      knop.classList.remove("bezig"); knop.textContent = "🎙 Opnemen";
+      const blob = new Blob(chunks, { type: "audio/webm" });
+      const r = await fetch("/opname?klank=" + k, { method: "POST", body: blob });
+      const j = await r.json();
+      if (!j.ok) alert("Opname mislukt: " + (j.fout || "?"));
+      await laad();
+      speel("/gekozen/" + k + ".mp3");
+    };
+    recorder.start(); knop.classList.add("bezig"); knop.textContent = "■ Stop";
+  } catch (e) { alert("Microfoon niet beschikbaar: " + e.message); }
+}
+document.getElementById("speelReeks").onclick = async () => {
+  const delen = document.getElementById("reeks").value.split(/[\s-]+/).filter(Boolean);
+  for (const d of delen) {
+    const k = d.toLowerCase();
+    if (data.gekozen[k]) await speel("/gekozen/" + k + ".mp3"); else { const u = new SpeechSynthesisUtterance(k); u.lang = "nl-NL"; speechSynthesis.speak(u); await new Promise((ok) => { u.onend = ok; u.onerror = ok; }); }
+    await new Promise((ok) => setTimeout(ok, 260));
+  }
+};
+laad();
+</script>
+</body>
+</html>
