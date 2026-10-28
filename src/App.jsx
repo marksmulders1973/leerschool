@@ -2792,6 +2792,8 @@ export default function App() {
         <a href="/over.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Over {BRAND.name}</a>
         <a href="/weekpakket.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>📬 Weekpakket</a>
         <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Privacybeleid</a>
+        <a href="/privacy.html#cookies" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Cookies</a>
+        <a href="/voorwaarden.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Voorwaarden</a>
       </div>
       <div>© Leerkwartier · KvK 42176244</div>
     </footer>

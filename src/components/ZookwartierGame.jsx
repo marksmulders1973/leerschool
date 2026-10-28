@@ -2183,7 +2183,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Header. */}
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, zIndex: 10, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8, padding: "10px 12px", background: "linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0))", pointerEvents: "none" }}>
         <div style={{ color: "#fff", font: "800 16px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.35)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "38vw" }}>🐾 {parkNaam}</div>
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        {/* 28 okt 2026 (kliktest): op een telefoon van 390 px vielen 🏆, 🔊, ☰ en Terug rechts buiten beeld → de knoppenrij mag nu omlopen. */}
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "flex-end", maxWidth: "100%" }}>
           {/* Voeren = de enige dagelijkse zorgactie → altijd zichtbaar, met hint bij honger. */}
           <button onClick={voerAlles} title="Dieren voeren" style={{ position: "relative", pointerEvents: "auto", border: enigDierHongerig ? "2px solid #d9853b" : "none", borderRadius: 999, width: 38, height: 38, font: "700 16px system-ui", color: "#234", background: alleGevoerd ? "#cdeccb" : "rgba(255,255,255,0.92)", boxShadow: "0 2px 8px rgba(0,0,0,.18)", cursor: "pointer" }}>
             🌾
