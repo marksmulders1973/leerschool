@@ -2608,7 +2608,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 📚 Leer-invite: het maatje maakt van het park actief een brug naar
           leren — met muntjes-beloning als motief (P1 dagrapport 18 jul). */}
-      {leerTip && !bouwTip && !menuOpen && !placing && !dialoog && !buddyChatOpen && pyrIdx == null && (
+      {leerTip && !bouwTip && !menuOpen && !placing && !dialoog && !buddyChatOpen && !(versPark && !welkomWeg) && pyrIdx == null && ( /* 28 okt: nooit over de welkom-tip heen (Mark-foto) */
         <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>

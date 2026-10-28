@@ -827,7 +827,7 @@ function koopKans(prijs, fair) {
 // zin krijgt). Mark-wens: het denken voornamelijk bij wie langs je poppetje loopt.
 const DENK_STRAAL = 2.2;
 
-function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef, crowdRef, idx, zeppelinRef }) {
+function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, factsRef, onTap, isSolid, padsRef, dierenRef, pretRef, bankjesRef, crowdRef, claimsRef, idx, zeppelinRef }) {
   const g = useRef();
   const coin = useRef();
   const moving = useRef(false);
@@ -854,7 +854,13 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     // blijven kijken. chatCd start gespreid zodat niet iedereen tegelijk klets.
     chatT: 0, chatCd: 6 + (seed % 12), chatFace: null, chatPing: null, chatScan: 0.3,
     face: null, faceT: 0, glanceT: 5 + (seed % 7),
+    // Mark 28 okt 2026 (foto): "bots staan in clusters bij een tent stil maar lopen wel" ->
+    // een bezoeker per kraampje tegelijk (claim), na het kopen doorlopen, en pas weer naar
+    // hetzelfde kraampje na een poos. claim = sleutel van het geclaimde kraampje.
+    claim: null, lastStand: null, lastStandT: 0,
   });
+  const standKey = (kind, p) => `${kind}@${Math.round(p[0] * 2)},${Math.round(p[1] * 2)}`;
+  const laatClaimLos = () => { const c = claimsRef?.current; const st0 = st.current; if (c && st0.claim && c[st0.claim] === st0) c[st0.claim] = null; st0.claim = null; };
   const shirt = BEZOEKER_KLEUREN[seed % BEZOEKER_KLEUREN.length];
   const toon = (b, dur) => { setBubble(b); st.current.bt = dur; };
 
@@ -865,6 +871,7 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     crowdRef.current[idx] = st.current;
     return () => {
       crowdRef.current[idx] = null;
+      laatClaimLos();
       // 🎈 rij-plek/passagiersstoel weer vrijgeven als dit poppetje verdwijnt.
       const zep = zeppelinRef?.current; const s = st.current;
       if (zep) {
@@ -878,6 +885,8 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
     const s = st.current; const node = g.current; if (!node) return;
     const stands = standsRef?.current || {};
     const kr = kraamRef?.current || {};
+    let bewogen = false; // 28 okt: alleen 'lopen' animeren als het poppetje deze frame echt verplaatst is
+    if (s.lastStandT > 0) s.lastStandT -= dt;
 
     // Denkwolkje vanzelf laten verdwijnen.
     if (s.bt > 0) { s.bt -= dt; if (s.bt <= 0) setBubble(null); }
@@ -913,7 +922,9 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
       if (s.needT <= 0) {
         const pp = playerRef?.current;
         const dichtbij = pp && Math.hypot(pp.x - s.x, pp.z - s.z) <= DENK_STRAAL;
-        const beschikbaar = KRAAM_KEYS.filter((k) => (stands[k] || []).length);
+        const claims = claimsRef?.current || {};
+        const vrijePlekken = (k) => (stands[k] || []).filter((p) => { const key = standKey(k, p); return !claims[key] && !(s.lastStand === key && s.lastStandT > 0); });
+        const beschikbaar = KRAAM_KEYS.filter((k) => vrijePlekken(k).length);
         // Loop je vlak langs een bezoeker? Dan groet die je vaak persoonlijk.
         if (dichtbij && Math.random() < 0.5) {
           toon(maakBegroeting(factsRef?.current), 3.6);
@@ -926,11 +937,16 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           // Er zijn kraampjes → ga vaak iets kopen (zo zijn je kramen ook echt druk).
           const kind = beschikbaar[Math.floor(Math.random() * beschikbaar.length)];
           const soort = KRAAM_SOORTEN[kind];
-          const lijst = stands[kind] || [];
+          const lijst = vrijePlekken(kind);
           let best = lijst[0], bd = Infinity;
           for (const p of lijst) { const d = Math.hypot(p[0] - s.x, p[1] - s.z); if (d < bd) { bd = d; best = p; } }
-          const dx = s.x - best[0], dz = s.z - best[1]; const dd = Math.hypot(dx, dz) || 1;
-          s.tx = best[0] + (dx / dd) * 2.6; s.tz = best[1] + (dz / dd) * 2.6;
+          // aanlooppunt: eerst vanaf de eigen kant, anders een vrije kant rondom (niet op spoor/hek)
+          const solidK = solidRef.current; const basis = Math.atan2(s.x - best[0], s.z - best[1]);
+          let gekozen = null;
+          for (let k = 0; k < 8 && !gekozen; k++) { const a = basis + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * (Math.PI / 4); const px = best[0] + Math.sin(a) * 2.6, pz = best[1] + Math.cos(a) * 2.6; if (!solidK || !solidK(px, pz)) gekozen = [px, pz]; }
+          if (!gekozen) gekozen = [best[0] + 2.6, best[1]];
+          s.tx = gekozen[0]; s.tz = gekozen[1];
+          s.claim = standKey(kind, best); if (claimsRef?.current) claimsRef.current[s.claim] = s;
           s.need = kind; s.acting = true; s.resting = false;
           toon({ e: soort.cravingEmoji, t: soort.craving }, 4);
         } else if (!beschikbaar.length && Math.random() < 0.25) {
@@ -1063,7 +1079,10 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           } else {
             toon({ e: "😖", t: "Te duur!" }, 2.2);
           }
+          s.lastStand = s.claim; s.lastStandT = 45 + Math.random() * 30; laatClaimLos();
           s.acting = false; s.need = null; s.needT = 7 + Math.random() * 9;
+          // doorlopen i.p.v. bij de tent blijven hangen: korte pauze, daarna meteen weer op pad
+          s.intent = "weg";
         } else if (s.intent === "pet" && s.subj) {
           // 🐾 dier aaien: draai naar het dier + blije bubbel, even blijven.
           node.rotation.y = Math.atan2(s.subj[0] - s.x, s.subj[1] - s.z);
@@ -1083,6 +1102,7 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         s.rest = klaarMet === "pet" ? 2 + Math.random() * 1.5
           : klaarMet === "photo" ? 1.8 + Math.random() * 1.4
           : klaarMet === "sit" ? 4.5 + Math.random() * 3.5
+          : klaarMet === "weg" ? 0.5 + Math.random() * 0.6
           : 1 + Math.random() * 2.5;
         }
       } else {
@@ -1155,6 +1175,7 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
           if (!solid(nx, s.z)) { s.x = nx; moved = true; }
           if (!solid(s.x, nz)) { s.z = nz; moved = true; }
         }
+        bewogen = moved;
         // Vloeiend naar de looprichting draaien i.p.v. instant snappen.
         const doelHoek = Math.atan2(dx, dz);
         let draaiDiff = doelHoek - node.rotation.y;
@@ -1180,11 +1201,13 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
               // Waarschijnlijk opgesloten in een verblijf → loop in een rechte lijn
               // naar buiten (tijdelijk dwars door het hek heen).
               s.penHits = 0; s.escape = 2.6;
+              laatClaimLos();
               s.acting = false; s.need = null; s.needT = 5 + Math.random() * 6;
               const ang = (s.x || s.z) ? Math.atan2(s.z, s.x) : Math.random() * Math.PI * 2;
               s.tx = Math.cos(ang) * 32; s.tz = Math.sin(ang) * 32; s.resting = false;
             } else {
               // Gewone klem tegen een hek → nieuw wandeldoel kiezen.
+              laatClaimLos();
               s.acting = false; s.need = null; s.needT = 4 + Math.random() * 6;
               const a = Math.random() * Math.PI * 2, r = 4 + Math.random() * 16;
               s.tx = Math.cos(a) * r; s.tz = Math.sin(a) * r;
@@ -1195,7 +1218,7 @@ function Visitor({ seed, standsRef, kraamRef, onBuy, heightRef, playerRef, facts
         if (s.penTimer > 0) { s.penTimer -= dt; if (s.penTimer <= 0) s.penHits = 0; }
       }
     }
-    moving.current = !s.resting;
+    moving.current = !s.resting && bewogen;
     node.position.set(s.x, heightRef?.current ? heightRef.current(s.x, s.z) : 0, s.z);
 
     // Muntje-pop bij een aankoop (zweeft omhoog en vervaagt).
@@ -1241,9 +1264,10 @@ export function Visitors({ count = 4, standsRef, kraamRef, onBuy, heightRef, pla
   // Gedeelde menigte-lijst: elk poppetje registreert z'n state-object zodat
   // bezoekers elkaar kunnen ontwijken en met elkaar kunnen kletsen.
   const crowdRef = useRef([]);
+  const claimsRef = useRef({}); // een bezoeker per kraampje tegelijk (28 okt 2026)
   return (
     <group>
-      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} idx={i} crowdRef={crowdRef} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinRef} />)}
+      {Array.from({ length: count }).map((_, i) => <Visitor key={i} seed={i * 13 + 5} idx={i} crowdRef={crowdRef} claimsRef={claimsRef} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightRef} playerRef={playerRef} factsRef={factsRef} onTap={onTap} isSolid={isSolid} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinRef} />)}
     </group>
   );
 }
