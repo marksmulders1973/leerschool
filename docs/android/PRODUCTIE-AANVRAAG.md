@@ -19,3 +19,6 @@ Stand 28 okt 07:40: dashboard "12 testers zijn op dit moment voor **13** achtere
 - [ ] Na goedkeuring: Productie → release maken → bundel uit Alpha kiezen (1 (1.0.0)) of nieuwe .aab; landen NL + BE; release-opmerkingen nl-NL.
 - [ ] Winkelvermelding: standaardtaal nl-NL (open sinds 7 okt), teksten uit PLAY-STORE.md.
 - [ ] Na publicatie: link in bedankt.html, voor-organisaties, Ooievaarspas-pagina (1 jan), socials; TesterOproep in de app uitzetten.
+
+## ✅ Ingediend wo 28 okt 2026 ~13:15 (Claude via Chrome-voor-Claude, Mark: "kun je kijken of playstore nu al lukt")
+Dashboard toonde alle drie de taken "voltooid" (14 dagen was al vol op de 28e). Formulier in 3 stappen ingevuld met de antwoorden hierboven, ingekort tot max 300 tekens per veld: werving (Moeilijk), betrokkenheid, feedback · doelgroep, waarde, verwachte installaties "0 - 10.000" · wijzigingen, waarom klaar. Bevestiging: "We hebben je aanvraag voor productietoegang gekregen. Je aanvraagformulier wordt beoordeeld. We sturen de accounteigenaar een e-mail met een update. Meestal binnen 7 dagen." → mail op marksmulders1973@gmail.com in de gaten houden (uiterlijk ~4 nov). Daarna: productie-release maken (checklist hierboven).
