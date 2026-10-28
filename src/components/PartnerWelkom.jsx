@@ -72,6 +72,13 @@ export const PARTNER_NAMEN = {
   DONGEN2027: "Voedselbank Dongen",
   DEMEERN2027: "Speelgoedbank De Meern", // 21 okt 2026: spoor 1, Jolanda Borst zei ja
   QUIETMAASTRICHT2027: "Quiet Maastricht", // 24 okt 2026: spoor 1, Leon zei ja (gesloten Facebookgroep, begin december)
+  // 27 okt 2026 (Mark "doe de passen"): stadspassen en kindpakketten, Den Haag-model; Familie gratis t/m 31-12-2028
+  ROTTERDAMPAS2027: "de Rotterdampas",
+  UPAS2027: "de U-pas",
+  STADJERSPAS2027: "de Stadjerspas",
+  APELDOORNPAS2027: "de Stadspas Apeldoorn",
+  AMSTERDAMPAS2027: "de Stadspas Amsterdam",
+  MEEDOEN0102027: "Meedoen in Rotterdam",
   EINDHOVEN2027: "Bibliotheek Eindhoven",
   HAARLEMMERMEER2027: "Stichting Leergeld Haarlemmermeer (Spark Fest)",
   // 18 sep 2026: Leergeld Enschede en de voedselbank delen het pand De Vlecht

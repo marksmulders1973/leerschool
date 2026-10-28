@@ -2272,7 +2272,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* ☰-menu: volledig scherm, frosted-glass, alle extra functies gegroepeerd.
           Tik buiten de inhoud of op ✕ = terug het park in. */}
-
+      {menuOpen && (
         <div onClick={sluitMenu} style={{ position: "absolute", inset: 0, zIndex: 14, background: "rgba(8,16,10,0.55)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", overflowY: "auto", animation: "zooMenuFade .18s ease-out" }}>
           <style>{`@keyframes zooMenuFade{from{opacity:0}to{opacity:1}}@keyframes zooMenuIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}`}</style>
           <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 620, margin: "0 auto", padding: "16px 16px calc(28px + env(safe-area-inset-bottom))", animation: "zooMenuIn .22s ease-out" }}>
@@ -3606,7 +3606,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
 
- + aantal spelers (Mark 8 sep) */}
+      {/* 🏫 Gedeeld park: pil met code + aantal spelers (Mark 8 sep) */}
       {samen && room && (
         <button onClick={openDelen} style={{ position: "absolute", top: 54, left: 12, zIndex: 6, border: "2px solid #fff", borderRadius: 999, padding: "6px 12px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", boxShadow: "0 3px 10px rgba(0,0,0,.3)", cursor: "pointer" }}>
           🏫 {room.code} · 👥 {peerCount}
