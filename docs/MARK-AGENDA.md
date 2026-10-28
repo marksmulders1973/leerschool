@@ -13,7 +13,7 @@
 
 | # | Wat | Uiterlijk | Stand |
 |---|---|---|---|
-| 1 | **KOR aanmelden** op belastingdienst.nl (btw-id nodig, komt per post — is de brief "≤20 okt" die?) | eind nov (4 wk vóór 1-1-2027) | ☐ |
+| 1 | **KOR aanmelden** — brief is binnen (28 okt gezien): "Mededeling vaststelling belastingplicht" 8 okt 2026, kenmerk 4473067-01, omzetbelastingnummer 189237831B01, aangiftetijdvak kwartaal. Aanmelden via **Mijn Belastingdienst Zakelijk** (DigiD) → Omzetbelasting → "Kleineondernemersregeling aanmelden", ingang **1 jan 2027**. Q4 2026 nog gewoon btw-aangifte (vóór 31 jan 2027; btw op aanloopkosten mag je daarin terugvragen, daarna niet meer). | **uiterlijk wo 3 dec 2026** (4 wk vóór 1-1-2027) | ☐ |
 | 2 | **Ooievaarspas live 1 nov ↔ kwaliteitsronde stil** (7% fout, doel ≤2%) — keuze deel 2 cloud/lokaal | nu (vóór 1 nov) | ☐ |
 | 3 | **Spark Fest zo 18 okt** — HAARLEMMERMEER2027 meten ma/di (≥25 scans = goodybag-model) · bedankt-toestemming Inez · LinkedIn-post | ma 19 okt | ☐ |
 | 4 | **Vercel Pro** vóór de eerste euro (Hobby = niet-commercieel; Stripe live nov) | vóór Stripe live | ☐ |

@@ -127,3 +127,11 @@ digitale methode kost per leerling € 60-75 per jaar, een woordenschatmethode �
 - Vertaalknop in de gewone app na de overstap (steuntaal blijft bewaard in `lk_steuntaal`) — ontwerp eerst, is architectuur.
 - Moedertaalcheck AR/UK/TR van alle teksten van 26-27 sep (N5) — wacht op een moedertaalspreker.
 - Meten: nieuwkomers.sql blok 8-10 + event nk_overstap in het dagrapport; na de eerste echte klas: bijsturen.
+
+## 🔤 Klank-laag (28 okt 2026, na klas-test CSG De Waard)
+
+Feedback: "met klanken worden de letters uit het ABC gebruikt i.p.v. de klanken die wij aanleren (de 'tee' i.p.v. de t)". Oorzaak: de browserstem leest een losse letter als lettertitel. Oplossing v1021: `src/shared/klanken.js` haalt losse klanken uit de voorleestekst en speelt een opname af (`public/audio/klanken/<klank>.mp3`, manifest `src/shared/klankenManifest.js`); zonder opname een schijn-spelling via de stem ("mmm", "tə"). Alleen aan in klankzuivere schermen (pad `klankzuiver: true`, trede-test, herhalen).
+
+**Opnames kiezen (Mark, op gehoor):** `node scripts/klanken/kies-server.mjs` → http://localhost:4190. Kandidaten komen uit `scripts/klanken/maak-kandidaten.py` (edge-tts, Microsoft-stemmen Fenna/Maarten; fonetische SSML wordt geweigerd, daarom schijn-spellingen) of je spreekt de klank zelf in. Daarna `npx vite build` + push; mp3's en manifest meecommitten.
+
+**Nog open uit dezelfde feedback:** "verkeerd uitgesproken" (toestelstem) → vaste nieuwkomersteksten (dictee-woorden, luister-kies-zinnen, letterpad) vooraf laten inspreken met edge-tts en als mp3 serveren; "onoverzichtelijk / super AI" → versimpeling 26 okt (v1011) was na hun test, opnieuw laten kijken.
