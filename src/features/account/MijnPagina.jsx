@@ -1331,8 +1331,9 @@ export default function MijnPagina({
         />
       )}
       {/* WhatsApp 13 aug 18:55: géén dubbel huisje (de functionele 🏠-knop
-          zit rechts in de Header) + persoonlijke titel. */}
-      <Header title={player ? `${player}’s Leerkwartier` : "Mijn Leerkwartier"} subtitle="" onBack={onBack} onHome={onHome} />
+          zit rechts in de Header). 29 okt: titel "Mijn kwartier" — de naam staat
+          al groot in de kop eronder, dat was dubbelop. */}
+      <Header title="Mijn kwartier" subtitle="" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {!player && (
           <LegeMijnPagina onStartKwartier={onStartKwartier} onNaamInvullen={onNaamInvullen} onResumePath={onResumePath} onPickPath={onPickPath} streak={streak} />
