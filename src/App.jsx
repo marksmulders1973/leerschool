@@ -2795,7 +2795,7 @@ export default function App() {
         <a href="/privacy.html#cookies" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Cookies</a>
         <a href="/voorwaarden.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Voorwaarden</a>
       </div>
-      <div>© Leerkwartier · KvK 42176244</div>
+      <div>© Leerkwartier · KvK 42176244 · btw-id NL005559830B23</div>
     </footer>
     </Suspense>
     </main>
