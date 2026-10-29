@@ -8,6 +8,7 @@
 
 import { track } from "../../utils.js";
 import { cijferKleur, MIN_VRAGEN, VAST_VRAGEN } from "./Rapport.jsx";
+import { startsetOmvang } from "../learn/startsetsData.js";
 
 const HAND = "'Segoe Print', 'Bradley Hand', 'Comic Neue', cursive";
 const toonCijfer = (c) => (Number.isInteger(c) ? String(c) : `${Math.floor(c)}½`);
@@ -36,7 +37,7 @@ export default function VakScherm({ vak, meta, groep, niveauLabel, rij, startset
   const knopSub = school?.label
     ? `eerst wat jullie nu op school doen: ${school.label}`
     : ssOpen
-      ? (startset.gedaan > 0 ? `verder met de eerste ${startset.totaal} vragen (${startset.gedaan} gedaan)` : `de eerste ${startset.totaal} vragen`)
+      ? (startset.gedaan > 0 ? `verder: nog ${Math.max(0, startset.totaal - startset.gedaan)} van ${startsetOmvang(startset.totaal)}` : startsetOmvang(startset.totaal))
       : "een kwartier met vragen van jouw groep";
 
   return (

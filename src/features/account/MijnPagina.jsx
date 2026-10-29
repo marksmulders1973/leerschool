@@ -26,7 +26,7 @@ import { leesNuOpSchool, zetNuOpSchool, actieveKeuzes, schoolBlok, isVerlopen, p
 import VakScherm from "./VakScherm.jsx";
 import Rapport, { MeesterOpmerking, rapportRijen } from "./Rapport.jsx";
 import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
-import { startsetSleutel, startsetVan, startsetBlok } from "../learn/startsetsData.js";
+import { startsetSleutel, startsetVan, startsetBlok, startsetPortie, startsetOmvang } from "../learn/startsetsData.js";
 import { startsetVoortgang } from "../learn/startsets.js";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
@@ -1213,9 +1213,10 @@ export default function MijnPagina({
     }
     if (sleutel && st && !st.klaar && onVandaagKwartier) {
       const s = startsetVan(sleutel);
-      const n = Math.max(1, (st.totaal || 20) - (st.gedaan || 0));
-      startKwartierPlan({ level: userLevel, reden: "startset", uitleg: `${s.titel}: de eerste ${st.totaal || 20} vragen`, blokjes: [startsetBlok(sleutel, n)] });
-      try { track("mijn_startset_start", { vak: subj, groep, gedaan: st.gedaan || 0 }); } catch { /* */ }
+      // 29 okt 2026 (Mark): niet alle 20 in één keer, maar 10; na 10 kiest het kind "Nog 10" of "Klaar voor nu".
+      const n = startsetPortie(st);
+      startKwartierPlan({ level: userLevel, reden: "startset", uitleg: `${s.titel}: ${startsetOmvang(st.totaal || 20)}`, blokjes: [startsetBlok(sleutel, n)] });
+      try { track("mijn_startset_start", { vak: subj, groep, gedaan: st.gedaan || 0, portie: n }); } catch { /* */ }
       onVandaagKwartier();
       return;
     }

@@ -707,11 +707,29 @@ export function startsetPaden(sleutel) {
   return s ? [...new Set(s.items.map((it) => it.pad))] : [];
 }
 
+/** 29 okt 2026 (Mark: "kreeg direct 20 vragen, is 10 niet beter, dan een pauze of doorgaan knop?"):
+ *  een startset (20 vragen) gaat in porties van 10. Na 10 krijgt het kind een klaar-scherm met
+ *  "Nog 10" of "Klaar voor nu"; de voortgang staat per vraag vast, dus stoppen kost niets. */
+export const STARTSET_PER_KEER = 10;
+
+/** Hoeveel vragen nu: de rest van de startset, maar nooit meer dan STARTSET_PER_KEER en minstens 1. */
+export function startsetPortie(st, perKeer = STARTSET_PER_KEER) {
+  const totaal = Number(st?.totaal) || 20;
+  const gedaan = Number(st?.gedaan) || 0;
+  return Math.max(1, Math.min(perKeer, totaal - gedaan));
+}
+
+/** Eén zin voor het kind over de omvang: "20 vragen, 10 per keer". */
+export function startsetOmvang(totaal = 20, perKeer = STARTSET_PER_KEER) {
+  return totaal > perKeer ? `${totaal} vragen, ${perKeer} per keer` : `${totaal} vragen`;
+}
+
 /** Een kwartier-blokje dat de volgende `n` nog niet beantwoorde vragen van de startset geeft. */
 export function startsetBlok(sleutel, n = 5) {
   const s = startsetVan(sleutel);
   if (!s) return null;
   // 27 okt 2026 (kliktest): "startset" is geen kinderwoord → "de eerste 20 vragen".
+  // 29 okt 2026: eerlijk over de portie → "20 vragen, 10 per keer".
   const totaal = (s.items || []).reduce((a, it) => a + (it.n || 0), 0) || 20;
-  return { soort: "vragen", startset: sleutel, pathId: null, n, titel: `${s.emoji} ${s.titel} · de eerste ${totaal} vragen` };
+  return { soort: "vragen", startset: sleutel, pathId: null, n, titel: `${s.emoji} ${s.titel} · ${startsetOmvang(totaal)}` };
 }

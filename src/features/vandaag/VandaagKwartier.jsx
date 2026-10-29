@@ -11,11 +11,12 @@ import Card from "../../shared/ui/Card.jsx";
 import { track } from "../../utils.js";
 import { buildTopicQuiz } from "../practice/buildTopicQuiz.js";
 import { startsetVolgende, startsetVoortgang } from "../learn/startsets.js";
+import { startsetBlok, startsetPortie, STARTSET_PER_KEER } from "../learn/startsetsData.js";
 import { markeerGezien, isGezien } from "../../shared/geziendeVragen.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { VraagKaart } from "../onboarding/StartKwartier.jsx";
-import { kwartierStand, huidigBlok, blokKlaar, stopKwartier } from "./kwartier.js";
+import { kwartierStand, huidigBlok, blokKlaar, stopKwartier, startKwartierPlan } from "./kwartier.js";
 import TrouweGastKaart from "../account/TrouweGastKaart.jsx";
 import { meldKwartierKlaar, meldGevoel } from "../niveau/signalen.js";
 
@@ -108,6 +109,30 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
   // 📈 Niveaulijn fase 1: elk 3e kwartier vragen we het kind hoe het was (signalen.js).
   const [vraagGevoel, setVraagGevoel] = useState(false);
   const [gevoel, setGevoel] = useState(null);
+  // 29 okt 2026 (Mark: "is 10 niet beter, dan een pauze of doorgaan knop?"): zat er een startset-blokje in
+  // dit kwartier en is die set nog niet af, dan krijgt het klaar-scherm "Nog 10" naast "Klaar voor nu".
+  const [startsetRest, setStartsetRest] = useState(null); // { sleutel, rest, totaal } of null
+  useEffect(() => {
+    if (!stand?.klaar) { setStartsetRest(null); return undefined; }
+    const sb = (stand.blokjes || []).find((b) => b?.startset);
+    if (!sb) { setStartsetRest(null); return undefined; }
+    let dood = false;
+    startsetVoortgang(sb.startset)
+      .then((st) => { if (!dood) setStartsetRest(st && !st.klaar ? { sleutel: sb.startset, rest: st.totaal - st.gedaan, totaal: st.totaal } : null); })
+      .catch(() => { if (!dood) setStartsetRest(null); });
+    return () => { dood = true; };
+  }, [stand?.klaar, stand?.blokjes]);
+  const nogTien = () => {
+    if (!startsetRest) return;
+    const n = startsetPortie({ totaal: startsetRest.totaal, gedaan: startsetRest.totaal - startsetRest.rest });
+    const blok = startsetBlok(startsetRest.sleutel, n);
+    if (!blok) return;
+    try { track("startset_doorgaan", { startset: startsetRest.sleutel, rest: startsetRest.rest, portie: n }); } catch { /* */ }
+    startKwartierPlan({ level: stand?.level ?? userLevel ?? null, reden: "startset", uitleg: blok.titel, blokjes: [blok] });
+    setStartsetRest(null);
+    setStand(kwartierStand());
+    try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ }
+  };
   const klaar = (res) => { const k = blokKlaar(res); setStand(k ? { ...k } : kwartierStand()); if (k?.klaar) { try { if (meldKwartierKlaar()) setVraagGevoel(true); } catch { /* */ } } try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ } };
 
   if (!stand) {
@@ -128,8 +153,8 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
       <div style={S.wrap}>
         <div style={{ textAlign: "center", padding: "10px 0" }}>
           <div style={{ fontSize: 54 }}>{totaal && goed === totaal ? "🏆" : "🎉"}</div>
-          <h2 style={{ ...S.titel, fontSize: 24 }}>Je kwartier van vandaag zit erop!</h2>
-          {totaal > 0 && <div style={{ color: "var(--color-text-muted)", marginTop: 4 }}>{goed} van de {totaal} goed</div>}
+          <h2 style={{ ...S.titel, fontSize: 24 }}>{startsetRest ? `De eerste ${totaal || STARTSET_PER_KEER} zitten erop!` : "Je kwartier van vandaag zit erop!"}</h2>
+          {totaal > 0 && <div style={{ color: "var(--color-text-muted)", marginTop: 4 }}>{goed} van de {totaal} goed{startsetRest ? ` · nog ${startsetRest.rest} van je ${startsetRest.totaal} vragen` : ""}</div>}
         </div>
         {vraagGevoel && (
           <Card variant="study" padding="md">
@@ -156,10 +181,17 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
         <div style={{ marginTop: 12 }}>
           <TrouweGastKaart userName={userName} onNaamInvullen={onNaamInvullen} plek="kwartier" />
         </div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
-          <Button size="lg" onClick={onKlaar}>🏅 Naar mijn pagina</Button>
-          <Button variant="ghost" onClick={() => { stopKwartier(); onMijn(); }}>Nog een rondje</Button>
-        </div>
+        {startsetRest ? (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
+            <Button size="lg" onClick={nogTien}>▶ Nog {Math.min(STARTSET_PER_KEER, startsetRest.rest)} → maak je set af</Button>
+            <Button variant="ghost" onClick={() => { try { track("startset_klaar_voor_nu", { startset: startsetRest.sleutel, rest: startsetRest.rest }); } catch { /* */ } onKlaar(); }}>Klaar voor nu</Button>
+          </div>
+        ) : (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
+            <Button size="lg" onClick={onKlaar}>🏅 Naar mijn pagina</Button>
+            <Button variant="ghost" onClick={() => { stopKwartier(); onMijn(); }}>Nog een rondje</Button>
+          </div>
+        )}
         <p style={{ fontSize: 12.5, color: "var(--color-text-muted)", marginTop: 12 }}>Je scores tellen mee op je pagina en in het weekrapport voor thuis. Morgen staat er weer een nieuw kwartier klaar.</p>
       </div>
     );

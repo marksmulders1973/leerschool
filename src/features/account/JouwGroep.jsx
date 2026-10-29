@@ -11,6 +11,7 @@
 
 import { track } from "../../utils.js";
 import { rapportRijen, cijferKleur, MIN_VRAGEN, VAST_VRAGEN } from "./Rapport.jsx";
+import { startsetOmvang } from "../learn/startsetsData.js";
 
 const HAND = "'Segoe Print', 'Bradley Hand', 'Comic Neue', cursive";
 const toonCijfer = (c) => (Number.isInteger(c) ? String(c) : `${Math.floor(c)}½`);
@@ -79,7 +80,7 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand =
               {schoolAan ? (
                 <span style={{ color: "#69f0ae" }}>🏫 nu op school: {school.label} →</span>
               ) : ssOpen ? (
-                <span style={{ color: "#69f0ae" }}>{ss.gedaan > 0 ? `eerste ${ss.totaal} vragen: ${ss.gedaan} gedaan →` : `Begin: de eerste ${ss.totaal} vragen →`}</span>
+                <span style={{ color: "#69f0ae" }}>{ss.gedaan > 0 ? `${ss.totaal} vragen: ${ss.gedaan} gedaan, nog ${Math.max(0, ss.totaal - ss.gedaan)} →` : `Begin: ${startsetOmvang(ss.totaal)} →`}</span>
               ) : v.cijfer !== null ? (
                 <>
                   <span aria-hidden="true" style={{ flex: 1, height: 5, borderRadius: 3, background: "rgba(255,255,255,0.1)", overflow: "hidden" }}>

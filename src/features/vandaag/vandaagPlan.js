@@ -195,7 +195,7 @@ function metStartset(plan, args) {
   const paden = new Set(startsetPaden(sleutel));
   const rest = (plan.blokjes || []).filter((b) => !(b.soort === "vragen" && b.pathId && paden.has(b.pathId))).slice(0, 2);
   const s = startsetVan(sleutel);
-  return { ...plan, reden: "startset", uitleg: `Eerst je startset ${s.titel.toLowerCase()}: de eerste 20 vragen, stap voor stap.`, blokjes: [startsetBlok(sleutel, ITEMS_PER_BLOK), ...rest] };
+  return { ...plan, reden: "startset", uitleg: `Eerst je startset ${s.titel.toLowerCase()}: 20 vragen, ${ITEMS_PER_BLOK} per dag erbij.`, blokjes: [startsetBlok(sleutel, ITEMS_PER_BLOK), ...rest] };
 }
 
 function bepaalPlanBasis({ level, vandaag = new Date(), klaargezet = [], mastery = [], dicteeSchool = false, wwSchool = false, metSchoolvakken = false, voorkeur = null, klasPaden = null } = {}) {
