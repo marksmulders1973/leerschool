@@ -18,3 +18,4 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - olympischeSpelenPo.js regel ~114 (eindtoets, buiten B1/B2): 'meeste olympische medailles' met afleider Phelps (geen Nederlander).
 - pubertijd-groei-po stap 3 vraag 3: afleider 0800-0113 (113 Zelfmoordpreventie) zwaar voor groep 7-8, maar de stap-uitleg noemt het nummer bewust (8 okt) → Mark beoordeelt.
 - evolutieMensPo.js chimpansee-vraag: hint '50% DNA met een bananenplant' dubieus (bij de muis-vraag al vervangen).
+- begrijpend-lezen-teksten-po stap 5 (eindopdracht): vragen verwezen naar teksten die niet in de stap staan; nu zelfdragend gemaakt. Structurele fix = leesTekst per check (app-code buildTopicQuiz/LearnPath) → Mark/later.

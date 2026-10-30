@@ -447,8 +447,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Op een nood-moment: tel 5-stappen van 5 tot je het getal bereikt, tel hoeveel stappen. Bij 35: 5-10-15-20-25-30-35 = 7 stappen." }],
           niveaus: {
-            basis: "35 ÷ 5 = 7 (7 × 5 = 35).",
-            simpeler: "Tafel-5 terug: welk getal × 5 = 35? Antwoord 7.",
+            basis: "Delen door 5 is de tafel van 5 terugzoeken: welk getal keer 5 geeft 35?",
+            simpeler: "Tel in stappen van 5 tot je bij 35 bent: 5, 10, 15, 20, 25, 30, 35. Dat zijn 7 stappen, dus 35 ÷ 5 = 7.",
             nogSimpeler: "7",
           },
         },
@@ -468,7 +468,7 @@ const steps = [
           null,
           "Dat is aftrekking, niet delen — hoe verander je een getal als je het door 10 deelt?",
           "Dat is vermenigvuldigen, niet delen — bij ÷ 10 wordt het getal kleiner.",
-          null,
+          "Dat is optelling, niet delen — bij ÷ 10 wordt het getal kleiner.",
         ],
         uitlegPad: {
           stappen: [
@@ -505,7 +505,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "70 ÷ 10 = 7.",
+            basis: "Delen door 10: haal de laatste nul weg.",
             simpeler: "Haal de 0 weg: 70 wordt 7.",
             nogSimpeler: "7",
           },
@@ -519,7 +519,7 @@ const steps = [
           null,
           "Dat is aftrekking, niet delen — welke bewerking hoort bij '÷ 2'?",
           "Dat is vermenigvuldigen, niet delen — bij ÷ 2 wordt het getal kleiner.",
-          null,
+          "Dat is optelling, niet delen — bij ÷ 2 wordt het getal kleiner.",
         ],
         uitlegPad: {
           stappen: [
@@ -560,7 +560,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 ÷ 2 = 15 (helft).",
+            basis: "Delen door 2 is de helft nemen. Wat is de helft van 30?",
             simpeler: "Helft van 30 = 15.",
             nogSimpeler: "15",
           },
@@ -573,7 +573,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is aftrekking, niet delen — welk getal maal 5 geeft 45?",
-          null,
+          "Dat is optelling, niet delen — bij ÷ 5 wordt het getal kleiner.",
           "Dat is vermenigvuldigen, niet delen — bij ÷ 5 wordt het getal kleiner.",
         ],
         uitlegPad: {
@@ -615,7 +615,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "45 ÷ 5 = 9.",
+            basis: "Zoek in de tafel van 5: welk getal keer 5 geeft 45?",
             simpeler: "9 × 5 = 45, dus 45 ÷ 5 = 9.",
             nogSimpeler: "9",
           },
@@ -679,7 +679,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is aftrekking, niet delen — welk getal maal 5 geeft 60?",
-          null,
+          "Dat is optelling, niet delen — bij ÷ 5 wordt het getal kleiner.",
           "Dat is vermenigvuldigen, niet delen — bij ÷ 5 wordt het getal kleiner.",
         ],
         uitlegPad: {
@@ -721,7 +721,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "60 ÷ 5 = 12.",
+            basis: "Deel eerst door 10 en verdubbel dan. Of zoek: welk getal keer 5 geeft 60?",
             simpeler: "60 ÷ 10 = 6, en 6 × 2 = 12.",
             nogSimpeler: "12",
           },
@@ -731,7 +731,7 @@ const steps = [
         q: "Welke deling heeft als uitkomst **8**?",
         options: ["80 ÷ 10", "60 ÷ 10", "18 ÷ 2", "50 ÷ 5"],
         answer: 0,
-        wrongHints: [null, "Haal de 0 weg. Welk getal hou je over?", null, "Wat keer 5 is 50?"],
+        wrongHints: [null, "Haal de 0 weg. Welk getal hou je over?", "Delen door 2 is de helft nemen. Wat is de helft van 18?", "Wat keer 5 is 50?"],
         uitlegPad: {
           stappen: [
             {
@@ -771,7 +771,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "80 ÷ 10 = 8.",
+            basis: "Reken elke deling kort uit: bij ÷ 10 haal je de nul weg, bij ÷ 2 neem je de helft, bij ÷ 5 zoek je in de tafel van 5.",
             simpeler: "Haal de 0 van 80 weg: 8.",
             nogSimpeler: "80 ÷ 10",
           },

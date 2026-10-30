@@ -2224,9 +2224,9 @@ const steps = [
     checks: [
       {
         // van tekst 1 — zakelijke
-        q: "Stelling: 'In Nederland zijn er meer fietsen dan inwoners.' Wat zegt de eerste tekst hierover?",
+        q: "Uit de fietstekst: 'Tegenwoordig fietst bijna iedere Nederlander. Er zijn meer fietsen dan inwoners. Dat is uniek in de wereld.'\n\nStelling: 'In Nederland zijn er meer fietsen dan inwoners.' Wat zegt de tekst hierover?",
         options: [
-          "Dat klopt, en dat is uniek in de wereld",
+          "Dat klopt, en geen ander land heeft dat",
           "Dat klopt, en zo is het in heel Europa",
           "De tekst zegt hier niets over",
           "Dat klopt alleen voor Amsterdam",
@@ -2234,34 +2234,34 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Lees de laatste zin van de fietstekst. Wordt Europa daar genoemd?",
-          "Lees de laatste alinea nog eens — daar staat iets over fietsen en inwoners.",
-          "Wordt Amsterdam in de fietstekst genoemd? Over welk gebied gaat de laatste alinea?",
+          "Lees de laatste zin van het stukje nog eens. Staat daar iets over Europa?",
+          "Lees het stukje nog eens: er staat een zin over fietsen en inwoners.",
+          "Wordt Amsterdam genoemd? Over welk land gaat het stukje?",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Stelling-vraag", tekst: "Een stelling staat in de vraag — jij moet checken: KLOPT die volgens de tekst?" },
-            { titel: "Zoek aantallen in tekst 1", tekst: "Laatste alinea: 'Er zijn meer fietsen dan inwoners. Dat is uniek in de wereld.' Klopt + alleen NL." },
+            { titel: "Zoek de zin in de tekst", tekst: "In het stukje staat: 'Er zijn meer fietsen dan inwoners. Dat is uniek in de wereld.' De stelling klopt dus, en 'uniek in de wereld' betekent: nergens anders is het zo." },
           ],
           woorden: [
             { woord: "stelling", uitleg: "Een uitspraak die juist of fout kan zijn. Vaak in de vorm: 'X is zo'." },
             { woord: "uniek", uitleg: "Niet ergens anders zo — alleen op deze plek." },
           ],
-          theorie: "Bij stelling-vragen: zoek de zin in de tekst die de stelling bevestigt of weerlegt. Hier: 'uniek in de wereld' = alleen NL →",
+          theorie: "Bij stelling-vragen: zoek de zin in de tekst die de stelling bevestigt of weerlegt. Hier bevestigt de tekst de stelling, en 'uniek in de wereld' zegt erbij dat geen ander land dit heeft.",
           voorbeelden: [
             { type: "match", tekst: "Tekst noemt EXACT 'meer fietsen dan inwoners' + 'uniek in de wereld'. Dat past bij het goede antwoord." },
           ],
           basiskennis: [{ onderwerp: "Lees de tekst nogmaals", uitleg: "Bij een mix-quiz mag je teruglezen. Doe dat ook." }],
           niveaus: {
-            basis: "Tekst zegt 'uniek in de wereld' = alleen NL.",
-            simpeler: "Lees de laatste alinea van tekst 1. Daar staat: 'er zijn meer fietsen dan inwoners' + 'uniek in de wereld'. Dus stelling klopt + alleen NL",
-            nogSimpeler: "Klopt + alleen NL",
+            basis: "Zoek in het stukje de zin over fietsen en inwoners. Lees ook de zin erna: die zegt hoe bijzonder dit is.",
+            simpeler: "De tekst zegt dat er meer fietsen dan inwoners zijn, dus de stelling klopt. Daarna staat 'uniek in de wereld': dat betekent dat geen enkel ander land dit heeft.",
+            nogSimpeler: "De stelling klopt, en geen ander land heeft dat.",
           },
         },
       },
       {
         // van tekst 2 — instructie
-        q: "In de paperclip-armband-tekst staat de zin: 'Trek lichtjes om te controleren'. Waarom 'lichtjes'?",
+        q: "Uit de paperclip-tekst: 'Schuif er een tweede paperclip doorheen, zodat ze in elkaar haken. Doe dit voorzichtig: je wilt niet dat de eerste clip openbuigt. Doe dit nogmaals met een derde, vierde en vijfde paperclip. Trek lichtjes om te controleren.'\n\nWaarom staat er 'lichtjes'?",
         options: [
           "Anders schiet de keten misschien los",
           "Zodat de armband iets langer wordt",
@@ -2271,14 +2271,14 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Wordt een keten van metalen clips langer als je eraan trekt? Lees de hele zin.",
-          "Het meten om je pols komt pas in alinea 3. Wat wil je hier controleren?",
-          "Staat er iets over je vingers in de tekst? Lees wat je met 'lichtjes trekken' controleert.",
+          "Wordt een ketting van paperclips langer als je eraan trekt? Lees waarom je voorzichtig moet zijn.",
+          "Over je pols staat in dit stukje niets. Wat wil je met trekken controleren?",
+          "Staat er iets over je vingers? Lees de zin over voorzichtig zijn nog eens.",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Waarom-vraag op detail", tekst: "Tekst gebruikt 'lichtjes' als TIP. Waarom zou je niet hard trekken?" },
-            { titel: "Eerdere context", tekst: "Tekst zei al: 'als je gehaast bent gaan de clips uit elkaar.' Hard trekken = clip openbuigen = keten schiet los." },
+            { titel: "Zoek de reden in de tekst", tekst: "In het stukje staat: 'Doe dit voorzichtig: je wilt niet dat de eerste clip openbuigt.' Als je hard trekt, buigt een clip open en schiet de ketting los." },
           ],
           woorden: [
             { woord: "lichtjes", uitleg: "Met weinig kracht — voorzichtig." },
@@ -2286,31 +2286,31 @@ const steps = [
           ],
           theorie: "Bij instructies: TIPS hebben altijd een reden. Vaak gaat het om iets KAPOT GAAN (paperclips uit elkaar) of MISLOPEN (verkeerde maat).",
           voorbeelden: [
-            { type: "verbinden", tekst: "'Lichtjes trekken om te controleren' + eerder 'gehaast = clips uit elkaar' = je test of het stevig is, ZONDER het kapot te trekken." },
+            { type: "verbinden", tekst: "'Lichtjes trekken om te controleren' hoort bij 'voorzichtig, anders buigt de clip open': je test of de ketting stevig is, zonder hem kapot te trekken." },
           ],
           basiskennis: [{ onderwerp: "Tekst-context", uitleg: "Wat eerder in de tekst stond, helpt vaak om latere zinnen te begrijpen." }],
           niveaus: {
-            basis: "Hard trekken = clips uit elkaar (eerder genoemd). Lichtjes = niet kapot.",
-            simpeler: "Stel: jij hebt een ketting van paperclips. Trek je hard? Dan trek je 'm uit elkaar. Dus 'lichtjes' = om de ketting niet te breken.",
-            nogSimpeler: "Lichtjes = niet kapot",
+            basis: "In het stukje staat dat je voorzichtig moet zijn, omdat een clip anders openbuigt. Daar hoort 'lichtjes trekken' bij.",
+            simpeler: "Stel je hebt een ketting van paperclips. Trek je hard, dan trek je hem uit elkaar. Daarom trek je zachtjes: zo zie je of hij heel blijft.",
+            nogSimpeler: "Lichtjes trekken, zodat de ketting niet losschiet.",
           },
         },
       },
       {
         // van tekst 3 — betoog
-        q: "Welke zin is in de telefoon-tekst een ARGUMENT voor het standpunt van de schrijver?",
+        q: "De schrijver van de telefoon-tekst vindt: 'Telefoons horen niet thuis op de basisschool.' Welke zin is een ARGUMENT vóór dit standpunt?",
         options: ["Notificaties zorgen voor minutenlange afleiding","Kinderen kunnen op een telefoon snel iets opzoeken","Sommige scholen laten telefoons in de klas toe","Kinderen moeten leren omgaan met technologie"],
         answer: 0,
         wrongHints: [
           null,
           "Helpt deze zin om te laten zien dat telefoons weg moeten, of juist niet?",
           "Dit vertelt hoe het op sommige scholen gaat. Is dat een reden vóór het standpunt van de schrijver?",
-          "Wie zegt dit in de tekst: de schrijver of de tegenstanders?",
+          "Is dit een reden om telefoons weg te doen, of juist een reden om ze toe te laten?",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een argument?", tekst: "Een REDEN die het standpunt ondersteunt. Bij betoog 'telefoons niet op school' = redenen waarom dat WAAR is." },
-            { titel: "Toets opties", tekst: "'Notificaties = afleiding (onderzoek)' = ja, ondersteunt standpunt. De andere zinnen beschrijven hoe het nu gaat, zijn een tegenargument, of pleiten juist vóór telefoons." },
+            { titel: "Toets de opties", tekst: "'Notificaties leiden af' steunt het standpunt: het is een reden waarom telefoons niet op school horen. De andere zinnen beschrijven alleen hoe het nu gaat, of pleiten juist vóór telefoons." },
           ],
           woorden: [
             { woord: "argument", uitleg: "Reden die je mening bewijst." },
@@ -2322,27 +2322,27 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Argument vs feit", uitleg: "Een feit kan WAAR zijn maar geen argument zijn — als het niets te maken heeft met het standpunt." }],
           niveaus: {
-            basis: "Argument = onderbouwt standpunt + heeft bewijs. Het goede antwoord heeft 'onderzoek toont'.",
+            basis: "Een argument is een reden die het standpunt steunt. Vraag bij elke zin: helpt dit om te laten zien dat telefoons niet op school horen?",
             simpeler: "Welke reden helpt om het standpunt 'telefoons niet op school' te bewijzen? 'Notificaties leiden af tijdens de les' helpt. De andere opties helpen het standpunt niet: ze beschrijven alleen iets, of pleiten juist vóór telefoons.",
-            nogSimpeler: "Met onderzoek + over school",
+            nogSimpeler: "De zin over afleiding door notificaties steunt het standpunt.",
           },
         },
       },
       {
         // van tekst 4 — verhaal
-        q: "In het verhaal van Sara: wat laten het briefje en het hartje van haar moeder vooral zien?",
-        options: ["Sara's moeder Tom wil bedanken","Sara's moeder Sara wil troosten","Sara's moeder vindt dat Sara beter moet opletten","Sara's moeder Tom wil uitnodigen om te spelen"],
+        q: "Uit het verhaal van Sara: Sara was haar lunchtrommel vergeten. Tom brak zijn boterham doormidden en gaf haar de helft. Thuis vertelde Sara het aan haar moeder. Die schreef een briefje, tekende er een hartje bij en zei: 'Geef dit morgen aan Tom.'\n\nWat laten het briefje en het hartje vooral zien?",
+        options: ["Dat haar moeder Tom wil bedanken","Dat haar moeder Sara wil troosten","Dat haar moeder vindt dat Sara beter moet opletten","Dat haar moeder Tom wil uitnodigen om te spelen"],
         answer: 0,
         wrongHints: [
           null,
-          "Aan wie moest Sara het briefje geven?",
-          "Staat er in het briefje iets over opletten? Lees wat erop staat.",
-          "Staat er in het briefje een uitnodiging? Lees welk woord erop staat.",
+          "Voor wie is het briefje: voor Sara zelf of voor Tom?",
+          "Zegt de moeder iets over opletten of beter je best doen? Lees wat Tom voor Sara deed.",
+          "Staat er iets over spelen of langskomen? Bedenk waarom juist Tom het briefje krijgt.",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Symboliek-vraag", tekst: "Een briefje + hartje = SYMBOOL. Wat betekenen die hier?" },
-            { titel: "Wat doet moeder?", tekst: "Sara vertelt dat Tom haar boterham gaf. Moeder schrijft 'Bedankt!' met hartje. = ze wil DANKBAARHEID overbrengen aan Tom." },
+            { titel: "Wat doet moeder?", tekst: "Sara vertelt dat Tom zijn boterham met haar deelde. Haar moeder schrijft een briefje met een hartje, speciaal voor Tom. Zo laat ze Tom merken dat ze hem dankbaar is." },
           ],
           woorden: [
             { woord: "symboliek", uitleg: "Een teken dat IETS ANDERS betekent. Hartje = liefde of dankbaarheid (afhankelijk van context)." },
@@ -2354,15 +2354,15 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Hartje is niet altijd liefde", uitleg: "Symbolen veranderen van betekenis afhankelijk van situatie. Lees de hele scene." }],
           niveaus: {
-            basis: "Hartje + 'bedankt' na vriendelijke daad = dankbaarheid.",
-            simpeler: "Wat doet je moeder met dat briefje? Ze schrijft 'bedankt' + hartje. Voor wie? Voor Tom die brood deelde. Dat is bedanken voor zijn aardigheid.",
-            nogSimpeler: "Bedankt + hartje = dankbaarheid",
+            basis: "Tom heeft Sara geholpen. Daarna maakt haar moeder een briefje met een hartje, speciaal voor Tom. Wat zeg je tegen iemand die je geholpen heeft?",
+            simpeler: "Als iemand jou helpt, zeg je 'dank je wel'. Precies dat wil Sara's moeder tegen Tom zeggen: met een briefje en een hartje.",
+            nogSimpeler: "Het briefje met het hartje is een bedankje voor Tom.",
           },
         },
       },
       {
         // tekst-soort herkennen
-        q: "Welke van de vier teksten in dit pad is BETOGEND?",
+        q: "Welke van deze vier teksten is BETOGEND?",
         options: [
           "Telefoons horen niet thuis op de basisschool",
           "De geschiedenis van de fiets",
@@ -2401,7 +2401,7 @@ const steps = [
       },
       {
         // strategie-vraag
-        q: "Wat doe je als je een woord in een tekst niet kent?",
+        q: "Je leest bij een toets een woord dat je niet kent. Wat doe je?",
         options: [
           "De zinnen eromheen lezen en zo de betekenis raden",
           "Het woord overslaan en gewoon verder lezen",
@@ -2412,7 +2412,7 @@ const steps = [
         wrongHints: [
           null,
           "Dan mis je misschien juist wat de vraag wil weten. Wat kan je helpen de betekenis te vinden?",
-          "Mag je bij de Doorstroomtoets een woordenboek gebruiken? Wat heb je wél altijd bij de hand?",
+          "Bij een toets heb je meestal geen woordenboek. Wat heb je wél altijd bij de hand?",
           "Een optie die op het woord lijkt, is vaak een valkuil. Wat vertelt je wat het woord híér betekent?",
         ],
         uitlegPad: {
@@ -2430,8 +2430,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Toets-tactiek", uitleg: "Een gok = 25% kans op punt. Leeg = 0%. Altijd invullen!" }],
           niveaus: {
-            basis: "Context lezen = beste strategie.",
-            simpeler: "Stel je leest een woord dat je niet kent. Wat doe je? Niet overslaan. Geen woordenboek (mag niet). Lees de zinnen eromheen — die helpen je het te raden.",
+            basis: "De zinnen rondom het woord geven vaak een hint over wat het betekent.",
+            simpeler: "Stel je leest een woord dat je niet kent. Sla het niet over, en een woordenboek heb je bij een toets meestal niet. Lees de zinnen eromheen: die helpen je de betekenis te raden.",
             nogSimpeler: "Context lezen",
           },
         },
@@ -2457,7 +2457,7 @@ const steps = [
             { type: "stap", tekst: "'Het kind keek SCHUW naar de hond.' Context: kind + hond = bang/voorzichtig → 'schuw' = verlegen, bang." },
           ],
           basiskennis: [{ onderwerp: "Bijwoord = emotie", uitleg: "Bijwoorden zoals 'wanhopig/blij/snel/rustig' beschrijven de manier of emotie van een actie." }],
-          niveaus: { basis: "Bang + verdrietig.", simpeler: "Jongen rent naar moeder = nood. Wanhopig = zonder hoop + bang.", nogSimpeler: "In nood" },
+          niveaus: { basis: "Kijk naar de situatie: een jongen rent naar zijn moeder. Dat doe je als er iets ernstigs is.", simpeler: "De jongen rent naar zijn moeder omdat hij in nood is. Wanhopig betekent: zonder hoop en heel bang.", nogSimpeler: "Wanhopig betekent zonder hoop en heel bang." },
         },
       },
       {
@@ -2479,7 +2479,7 @@ const steps = [
             { type: "stap", tekst: "'Honden zijn aardig. MAAR sommige bijten.' Tegenstelling met 'maar'." },
           ],
           basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Bij begrijpend lezen voor de toets: signaalwoorden zijn TOP-tip om snel structuur te zien." }],
-          niveaus: { basis: "Maar = tegenstelling.", simpeler: "'Maar' signaleert tegenstelling. 'Daarom' = conclusie, 'bijvoorbeeld' = voorbeeld, 'eerst' = volgorde.", nogSimpeler: "Maar" },
+          niveaus: { basis: "Bij een tegenstelling draait de zin om: eerst het ene, dan iets wat daar tegenin gaat. Welk woord doet dat?", simpeler: "'Maar' geeft een tegenstelling aan. 'Daarom' geeft een conclusie, 'bijvoorbeeld' een voorbeeld en 'eerst' een volgorde.", nogSimpeler: "Het signaalwoord voor een tegenstelling is 'maar'." },
         },
       },
       {
@@ -2503,7 +2503,7 @@ const steps = [
             { type: "stap", tekst: "'Dieren reageren anders op kou dan mensen.' Voorspelling: hoe? Welke dieren? Voorbeelden komen." },
           ],
           basiskennis: [{ onderwerp: "Niet altijd correct", uitleg: "Voorspelling klopt niet altijd. Goed: je let extra op = brein actief." }],
-          niveaus: { basis: "Vervolg over fietsen vroeger/nu.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe ze lichter werden, welke materialen, etc.", nogSimpeler: "Past bij thema" },
+          niveaus: { basis: "De eerste zin vergelijkt fietsen van vroeger met fietsen van nu. Het vervolg gaat daarover door.", simpeler: "De eerste zin geeft het thema: fietsen waren vroeger zwaar. Het vervolg gaat daarover door, bijvoorbeeld hoe ze lichter werden en van welke materialen ze gemaakt werden.", nogSimpeler: "Het vervolg gaat over hoe fietsen lichter werden." },
         },
       },
       { q: "Welke vraag stel je het eerst bij een tekst om de **structuur** te zien?", options: ["Waar gaat elke alinea over?","Hoeveel zinnen staan er in de tekst?","Welke moeilijke woorden staan erin?","Wie heeft de tekst geschreven?"], answer: 0, wrongHints: [null, "Zegt het aantal zinnen hoe de tekst is opgebouwd?", "Helpen moeilijke woorden je om de opbouw van de tekst te zien?", "Zegt de naam van de schrijver iets over hoe de tekst is opgebouwd?"] },
@@ -2521,7 +2521,7 @@ const steps = [
       { q: "*'Hoewel het regende, gingen ze door.'* Welk soort signaalwoord?", options: ["Tegenstelling","Reden","Opsomming","Conclusie"], answer: 0, wrongHints: [null, "Een reden herken je aan 'want' of 'omdat'. Staat dat hier?", "Worden er dingen opgesomd?", "Rondt de zin iets af, zoals met 'dus' of 'kortom'?"] },
       { q: "Wat is een **citaat** in een tekst?", options: ["Letterlijke woorden van iemand","Je eigen mening over de tekst","Een extra lange zin in de tekst","De titel boven aan de tekst"], answer: 0, wrongHints: [null,"Is een citaat iets wat jij vindt, of iets wat een ander zei of schreef?","Gaat een citaat over de lengte van een zin, of over wie iets zei?","Heeft een titel iets te maken met wat iemand gezegd heeft?"] },
       { q: "*'Volgens experts is de aarde steeds warmer.'* Welk woord toont een **bron**?", options: ["volgens","is","de","steeds"], answer: 0, wrongHints: [null, "'Is' is een werkwoord. Zegt het wie iets beweert?", "'De' is een lidwoord. Zegt het wie iets beweert?", "'Steeds' zegt hoe vaak, niet wie het beweert."] },
-      { q: "Welke alinea-functie heeft een **voorbeeld-alinea**?", options: ["De hoofdgedachte concreet maken","Een mening geven over iets","Een nieuwe regel beginnen","De tekst kort samenvatten"], answer: 0, wrongHints: [null,"Geeft een voorbeeld een mening, of laat het iets zien?","Gaat het om de inhoud, of om hoe de tekst eruitziet?","Doet een samenvatting hetzelfde als een voorbeeld?"] },
+      { q: "Wat doet een **voorbeeld-alinea** in een tekst?", options: ["De hoofdgedachte concreet maken","Een mening geven over iets","Een nieuwe regel beginnen","De tekst kort samenvatten"], answer: 0, wrongHints: [null,"Geeft een voorbeeld een mening, of laat het iets zien?","Gaat het om de inhoud, of om hoe de tekst eruitziet?","Doet een samenvatting hetzelfde als een voorbeeld?"] },
       { q: "Welke tekst is het meest **objectief** (zonder eigen mening)?", options: ["Encyclopedie","Reclame","Column in de krant","Persoonlijke brief"], answer: 0, wrongHints: [null, "Reclame wil dat je iets koopt. Is dat neutraal?", "In een column schrijft iemand zijn eigen kijk op iets. Is dat neutraal?", "In een persoonlijke brief schrijf je over je eigen gevoel. Is dat neutraal?"] },
       { q: "*'Verbazingwekkend!'* — wat zegt het woord over de **toon**?", options: ["Verrast","Rustig","Verveeld","Boos"], answer: 0, wrongHints: [null, "Een sterk woord met een uitroepteken: klinkt dat rustig?", "Klinkt 'verbazingwekkend!' alsof iemand zich verveelt?", "Klinkt 'verbazingwekkend!' boos, of eerder als iets anders?"] },
     ],
