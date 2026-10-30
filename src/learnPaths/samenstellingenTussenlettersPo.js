@@ -233,8 +233,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Meervoud op -en", tekst: "Kun je van het eerste woord een meervoud op -en maken (pan → pannen)? Dan schrijf je vaak -en- in de samenstelling." }],
           niveaus: {
-            basis: "Tussen-n als het eerste woord meervoud op -en heeft.",
-            simpeler: "Helpt het meervoud van het eerste woord? Ja.",
+            basis: "Kijk naar de voorbeelden pannenkoek en krantenwijk. Wat is het meervoud van het eerste woord?",
+            simpeler: "Het meervoud van het eerste woord helpt je: hoor je dat meervoud terug in het lange woord?",
             nogSimpeler: "pan → pannen → pannenkoek: zie je het -en-?",
           },
         },
@@ -247,7 +247,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "boek → boeken → boekenkast", tekst: "Het meervoud van 'boek' is 'boeken'. Daarom boekenkast, met tussen-n." }],
           niveaus: {
-            basis: "boek → boeken, dus boekenkast.",
+            basis: "Wat is het meervoud van 'boek'? Hoor je dat meervoud terug in het lange woord?",
             simpeler: "Meervoud van 'boek'? Dat -en- komt erin.",
             nogSimpeler: "boeken + kast = ?",
           },
@@ -261,7 +261,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "keuken + tafel = keukentafel", tekst: "Het meervoud van 'keuken' is 'keukens' (op -s), maar het woord zelf eindigt al op -en. Daarom: keukentafel, met het -en- van het eerste woord." }],
           niveaus: {
-            basis: "keuken + tafel = keukentafel.",
+            basis: "Schrijf eerst 'keuken' helemaal op en zet 'tafel' er direct achter. Komt er iets tussen?",
             simpeler: "Zet de twee woorden aan elkaar: keuken en tafel.",
             nogSimpeler: "keuken + tafel = ?",
           },
@@ -271,11 +271,11 @@ const steps = [
         q: "Hoeveel lettergrepen heeft het woord 'bloemenwinkel'?",
         options: ["4", "3", "5", "2"],
         answer: 0,
-        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan twee."],
+        wrongHints: [null, "Klap het woord langzaam en tel elke klap. Telde je het stukje in het midden mee?", "Telde je misschien een klap dubbel? Eén lettergreep is één klap.", "Telde je alleen de woorden 'bloem' en 'winkel'? Klap elk woord apart."],
         uitlegPad: {
           stappen: [{ titel: "bloe-men-win-kel", tekst: "Bloe (1), men (2), win (3), kel (4): vier klappen, dus 4 lettergrepen." }],
           niveaus: {
-            basis: "bloe-men-win-kel = 4 lettergrepen.",
+            basis: "Zeg het woord langzaam en klap bij elk stukje. Elke klap is één lettergreep.",
             simpeler: "Klap mee bij 'bloemenwinkel'.",
             nogSimpeler: "bloe — men — win — kel: hoeveel klappen?",
           },
@@ -295,7 +295,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "kip → kippen, dus kippenhok.",
+            basis: "Wat is het meervoud van 'kip'? Hoor je dat meervoud terug in het lange woord?",
             simpeler: "Meervoud van 'kip'? Dat -en- komt erin.",
             nogSimpeler: "kippen + hok = ?",
           },
@@ -319,7 +319,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "tand → tanden, dus tandenborstel.",
+            basis: "Wat is het meervoud van 'tand'? En schrijf je een samenstelling aan elkaar of los?",
             simpeler: "Meervoud van 'tand'? Dat -en- komt erin.",
             nogSimpeler: "tanden + borstel = ?",
           },
@@ -338,7 +338,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "eend → eenden, dus eendenvijver heeft een tussen-n.",
+            basis: "Knip elk woord in twee stukken. Zit er bij één woord een -en- tussen de twee stukken?",
             simpeler: "Zoek het woord met -en- in het midden.",
             nogSimpeler: "eenden + vijver = ?",
           },

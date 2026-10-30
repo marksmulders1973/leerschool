@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "interpunctie-po stap 5 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij \"Anna zei: ik kom morgen\" zei dat de dubbele punt mist, terwijl die er staat (feitelijk fout); hints waren telegramzinnen",
+  "hersteld": true,
+  "wijziging": "alle drie de wrongHints herschreven als volledige denkvragen, zonder feitfout"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "antwoord en hints kloppen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler noemde ook het antwoord; nagerekend 6552",
+  "hersteld": true,
+  "wijziging": "basis + simpeler herschreven (stappenplan/schatten zonder eindantwoord)"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 843",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 3861",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 6403",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 708",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; nogSimpeler was telegramzin",
+  "hersteld": true,
+  "wijziging": "basis herschreven (\"Tel eerst 6 + 8...\"), nogSimpeler volledige zin"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 901",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "bron staat in vraag; hints en niveaus zijn echte hulpstappen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "bron staat in vraag; klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "bron staat in vraag; klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "bron staat in vraag; klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "bron staat in vraag; hint bij leeftijd benoemt de denkfout goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin (\"... Ja.\")",
+  "hersteld": true,
+  "wijziging": "basis + simpeler herschreven"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (boekkast wordt in Vlaanderen wel gebruikt, maar boekenkast is de standaardvorm)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHints samen gaven het antwoord per uitsluiting (\"meer dan 3\", \"niet 5\", \"meer dan 2\" → 4); basis gaf antwoord",
+  "hersteld": true,
+  "wijziging": "drie wrongHints herschreven naar de denkfout (midden-stuk overgeslagen / dubbel geteld / alleen de twee woorden geteld); basis herschreven"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "antwoord \"het restaurant\" stond letterlijk in de vraag en was de enige andere genoemde plek (raadbaar)",
+  "hersteld": true,
+  "wijziging": "vraag herschreven: pad ingang → apen → restaurant → olifanten, vraag langs welke plekken je komt; nieuwe opties (zelfde aantal, antwoord index 0), wrongHints, stap-uitleg en niveaus aangepast"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin",
+  "hersteld": true,
+  "wijziging": "basis + simpeler herschreven"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "antwoord stond bijna letterlijk in de vraag (\"🚻 = toilet\" → \"🚻-teken zoeken\")",
+  "hersteld": true,
+  "wijziging": "vraag herschreven zonder het teken; antwoord nu \"in de legenda kijken welk teken bij het toilet hoort\", afleiders even lang gemaakt, hint D, stap-uitleg en niveaus aangepast"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "antwoord stond bijna letterlijk in de vraag (\"glijbaan-symbool in de legenda\" → \"glijbaan-teken zoeken\")",
+  "hersteld": true,
+  "wijziging": "vraag herschreven zonder het symbool; opties gelijk van lengte; hint A zonder \"Wat zegt de legenda?\"; niveaus herschreven"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHints samen gaven het antwoord per uitsluiting (boven = noord, links = west, rechts = oost → onder = zuid); basis telegram met antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven als denkvragen zonder windrichtingen toe te wijzen; basis herschreven"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was een vreemde zin",
+  "hersteld": true,
+  "wijziging": "basis + simpeler herschreven"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHints omschreven het antwoord (\"vak leren voor je werk\" = beroepsonderwijs); twee absurde afleiders (Meer boeken oefenen, Mijn beste opleiding)",
+  "hersteld": true,
+  "wijziging": "afleiders B/C vervangen door plausibele (Middelbaar bedrijfsonderwijs, Modern beroepsonderwijs); alle wrongHints herschreven zonder omschrijving van het antwoord"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt (havo → meestal hbo)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "raadbaar door de vorm (enige ja-optie, drie keer \"Nee, alleen...\"); waardenvraag, inhoud klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "absurde afleider \"Heel belangrijke opleiding\"",
+  "hersteld": true,
+  "wijziging": "afleider vervangen door \"Hogere bedrijfsopleiding\" + passende wrongHint"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "mbo heeft niveau 1 t/m 4; klopt met uitleg",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint D omschreef het antwoord (\"Je gaat er iets leren door mee te werken\"); antwoordoptie was telegramstijl en korter dan de rest",
+  "hersteld": true,
+  "wijziging": "wrongHint D herschreven (verwijst naar uitleg); antwoord \"Meewerken bij een bedrijf om het vak te leren\""
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 3",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 17",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 18",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord; simpeler met spaties"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 2+6×3=20, overige 15/12/16",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 19",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin",
+  "hersteld": true,
+  "wijziging": "basis, simpeler en nogSimpeler als volledige zinnen herschreven"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "betekenis staat bijna in de zin (\"ofwel een heel harde storm\"); bewust: de stap oefent de signaalwoord-strategie; basis gaf antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord; vraag zelf bewust gelaten"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; contextvraag met tegenstelling is bedoeld",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "twee bijna goede antwoorden: \"het nog een keer maken\" levert in deze zin ook twee taarten op",
+  "hersteld": true,
+  "wijziging": "afleider vervangen door \"het recept veranderen\" + nieuwe wrongHint; basis herschreven"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; aanwijzend vnw is aan de pittige kant voor groep 5, maar het pad is groep 5-8",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; vragend vnw pittig voor groep 5",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord"
+ }
+]

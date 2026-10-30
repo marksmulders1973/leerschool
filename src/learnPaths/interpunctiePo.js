@@ -890,7 +890,7 @@ const steps = [
         q: "Welke schrijfwijze is **correct**?",
         options: ["Anna zei: \"Ik kom morgen.\"", "Anna zei: ik kom morgen", "anna zei \"Ik kom morgen\"", "Anna zei \"Ik kom morgen\""],
         answer: 0,
-        wrongHints: [null, "Mist aanhalingstekens, dubbele punt, hoofdletters.", "Mist hoofdletter aan begin zin + dubbele punt.", "Mist dubbele punt na 'zei'."],
+        wrongHints: [null, "Staan de woorden van Anna tussen aanhalingstekens? En hoe begint en eindigt wat ze zegt?", "Kijk naar de eerste letter van de zin. En wat hoort er direct na 'zei' te staan?", "Wat hoort er direct na 'zei' te staan? En waarmee eindigt wat Anna zegt?"],
       },
       {
         q: "Waar zet je het **uitroepteken** in: *Tom roept: \"Pas op\"*?",
@@ -912,7 +912,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Mama zei: \"Kom maar mee.\" — netjes opgebouwd." }],
           basiskennis: [{ onderwerp: "5 onderdelen", uitleg: "Hoofdletter / dubbele punt / aanhalen / hoofdletter / leesteken." }],
           niveaus: {
-            basis: "Mama zei: \"Kom maar mee.\"",
+            basis: "Controleer elke zin: staat er een dubbele punt na 'zei', staan de woorden van mama tussen aanhalingstekens en staat de punt binnen?",
             simpeler: "5 dingen nodig: Hoofdletter / dubbele punt / aanhalingstekens / hoofdletter / leesteken binnen. Het goede antwoord heeft alles.",
             nogSimpeler: "Truc: Wie zei : \"Inhoud .\" — 5 dingen op rij.",
           },
@@ -951,7 +951,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het aanhalingsteken na 'eens' mist.",
+            basis: "Aanhalingstekens komen altijd in paren. Tel hoeveel aanhalingstekens je in de zin ziet.",
             simpeler: "Er is er één geopend vóór 'Kijk', maar na het uitroepteken is hij niet gesloten.",
             nogSimpeler: "Sluit-teken mist.",
           },
@@ -1003,7 +1003,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Noor zei: 'Ik ben klaar.'",
+            basis: "Kijk naar het eerste en het laatste aanhalingsteken: zijn ze hetzelfde? En staat de punt binnen of buiten?",
             simpeler: "Begin en eind zijn allebei enkele aanhalingstekens, en de punt staat binnen.",
             nogSimpeler: "' ... .'",
           },
@@ -1041,7 +1041,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "roept",
+            basis: "Zoek het woord dat vertelt dát iemand praat. Daarna komt de dubbele punt.",
             simpeler: "'Roept' vertelt dat iemand praat. Daarna komt de dubbele punt.",
             nogSimpeler: "roept:",
           },
@@ -1079,7 +1079,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bram zegt: ik heb dorst.",
+            basis: "Zoek de zin waarin je precies leest wat Bram zelf zegt, met zijn eigen woorden.",
             simpeler: "Daar staan Brams eigen woorden. Die moeten tussen aanhalingstekens: Bram zegt: \"Ik heb dorst.\"",
             nogSimpeler: "Bram zegt: \"...\"",
           },

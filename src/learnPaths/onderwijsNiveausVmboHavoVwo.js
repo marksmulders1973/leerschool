@@ -254,9 +254,9 @@ const steps = [
     checks: [
       {
         q: "Waar staat **mbo** voor?",
-        options: ["Middelbaar beroepsonderwijs", "Meer boeken oefenen", "Mijn beste opleiding", "Middelbare basis-opleiding"],
+        options: ["Middelbaar beroepsonderwijs", "Middelbaar bedrijfsonderwijs", "Modern beroepsonderwijs", "Middelbare basis-opleiding"],
         answer: 0,
-        wrongHints: [null, "De b in mbo gaat over een vak leren voor je werk — hoe heet dat soort onderwijs?", "Het is geen mening over jezelf — het is een sóórt onderwijs.", "Bijna — maar de b staat niet voor 'basis'. Wat leer je op het mbo voor je latere werk?"],
+        wrongHints: [null, "Bijna! Maar op het mbo leer je niet alleen voor werk bij een bedrijf. Kijk in de uitleg welk woord bij de b hoort.", "Staat de m echt voor 'modern'? Kijk nog eens in de uitleg bij 'Na het vmbo → mbo'.", "Staat de b echt voor 'basis'? De basisschool heb je dan al lang gehad."],
       },
       {
         q: "Na de **havo** ga je meestal naar...",
@@ -282,11 +282,11 @@ const steps = [
         options: [
           "Hoger beroepsonderwijs",
           "Hoger basisonderwijs",
-          "Heel belangrijke opleiding",
+          "Hogere bedrijfsopleiding",
           "Havo-bovenbouwopleiding",
         ],
         answer: 0,
-        wrongHints: [null, "Ga je na de havo nog naar de basisschool?", "De letters staan voor een soort onderwijs, niet voor een mening erover.", "Het hbo komt ná de havo; het is geen deel van de havo. Waar staat de h voor?"],
+        wrongHints: [null, "Ga je na de havo nog naar de basisschool?", "Bijna! Maar op het hbo leer je niet alleen voor werk bij een bedrijf. Kijk in de uitleg welk woord bij de b hoort.", "Het hbo komt ná de havo; het is geen deel van de havo. Waar staat de h voor?"],
       },
       {
         q: "Hoeveel **niveaus** heeft het mbo?",
@@ -297,13 +297,13 @@ const steps = [
       {
         q: "Wat is een **stage**?",
         options: [
-          "Werken om te leren",
+          "Meewerken bij een bedrijf om het vak te leren",
           "Een podium voor toneel",
           "Een toets aan het eind van het jaar",
           "Een schoolreis in de vakantie",
         ],
         answer: 0,
-        wrongHints: [null, "Het woord lijkt op het Engelse woord voor podium. Maar wat betekent het op het mbo?", "Een toets maak je op school. Bij een stage ga je juist ergens naartoe.", "Een stage is geen uitje. Je gaat er iets leren door mee te werken."],
+        wrongHints: [null, "Het woord lijkt op het Engelse woord voor podium. Maar wat betekent het op het mbo?", "Een toets maak je op school. Bij een stage ga je juist ergens naartoe.", "Een stage is geen uitje met de klas. Kijk in de uitleg wat je bij een stage doet."],
       },
       {
         q: "Welk beroep hoort bij de route **vwo → universiteit**?",

@@ -560,7 +560,7 @@ const steps = [
           theorie: "Uit-geput = uit + putten (water uit put halen tot leeg). Beeld voor 'helemaal leeg'.",
           voorbeelden: [{ type: "uitgeput", tekst: "Na 4 uur sporten ben je uitgeput = totaal moe." }],
           basiskennis: [{ onderwerp: "Marathon = vermoeiend", uitleg: "Marathon (42 km lopen) maakt iedereen moe — context geeft betekenis." }],
-          niveaus: { basis: "Uitgeput = heel moe.", simpeler: "Na marathon = vermoeid. 'Uitgeput' = HELEMAAL leeg, geen energie. = heel moe", nogSimpeler: "Moe" },
+          niveaus: { basis: "Een marathon is een hardloopwedstrijd van 42 kilometer. Hoe voel je je als je dat net hebt gelopen?", simpeler: "Na zo'n lange race heb je bijna geen energie meer. Welk woord past bij dat gevoel?", nogSimpeler: "Uitgeput betekent heel moe." },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -600,7 +600,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hevig = heel sterk.",
+            basis: "Lees wat er na 'ofwel' staat. Dat zegt hetzelfde als 'hevig', maar met andere woorden.",
             simpeler: "Na 'ofwel' staat: een heel harde storm. Dus hevig = heel sterk.",
             nogSimpeler: "Sterk",
           },
@@ -638,7 +638,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Opgeruimd = netjes.",
+            basis: "De zin zegt eerst wat de kamer níét was. Wat is het tegenovergestelde van rommelig?",
             simpeler: "De kamer was NIET rommelig. Het omgekeerde van rommelig is netjes.",
             nogSimpeler: "Netjes",
           },
@@ -646,9 +646,9 @@ const steps = [
       },
       {
         q: "*'De bakker **verdubbelde** het recept: in plaats van één taart maakte hij er twee.'* Wat betekent 'verdubbelen'?",
-        options: ["twee keer zo veel maken", "de helft ervan maken", "het nog een keer maken", "het recept weggooien"],
+        options: ["twee keer zo veel maken", "de helft ervan maken", "het recept veranderen", "het recept weggooien"],
         answer: 0,
-        wrongHints: [null, "Hoeveel taarten maakte hij eerst, en hoeveel daarna?", "Deed hij het opnieuw, of maakte hij méér?", "Gooide de bakker iets weg? Lees de zin nog eens."],
+        wrongHints: [null, "Hoeveel taarten maakte hij eerst, en hoeveel daarna?", "Gaat de zin over wát hij erin deed, of over hoeveel hij maakte?", "Gooide de bakker iets weg? Lees de zin nog eens."],
         uitlegPad: {
           stappen: [
             {
@@ -676,7 +676,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Verdubbelen = twee keer zo veel.",
+            basis: "Lees wat er na de dubbele punt staat. Hoeveel taarten waren het eerst, en hoeveel daarna?",
             simpeler: "Eerst 1 taart, daarna 2 taarten. Dat is twee keer zo veel.",
             nogSimpeler: "Dubbel",
           },
@@ -714,7 +714,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Nauwelijks = bijna niet.",
+            basis: "Denk aan het begin van de zin: het was zo donker. Hoeveel kun je dan zien?",
             simpeler: "Het was heel donker. Dan zie je bijna niets. Nauwelijks = bijna niet.",
             nogSimpeler: "Bijna niet",
           },

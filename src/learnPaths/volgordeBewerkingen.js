@@ -414,7 +414,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3.",
+            basis: "Er staan alleen deeltekens. Die zijn even sterk, dus je rekent van links naar rechts.",
             simpeler: "Eerst 36 ÷ 6 = 6. Dan 6 ÷ 2 = 3.",
             nogSimpeler: "3",
           },
@@ -457,7 +457,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "17.",
+            basis: "Plus en min zijn even sterk. Reken daarom van links naar rechts: begin met 15 − 4.",
             simpeler: "15 − 4 = 11. Dan + 6 = 17.",
             nogSimpeler: "17",
           },
@@ -500,8 +500,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18.",
-            simpeler: "12÷4 = 3. 3×2 = 6. 24 − 6 = 18.",
+            basis: "Delen en keer gaan vóór min. Reken eerst 12 ÷ 4 × 2 uit, van links naar rechts, en haal dat daarna van 24 af.",
+            simpeler: "12 ÷ 4 = 3. 3 × 2 = 6. 24 − 6 = 18.",
             nogSimpeler: "18",
           },
         },
@@ -543,7 +543,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 + 6 × 3.",
+            basis: "Reken elke som uit en doe keer altijd vóór plus en min. Welke som komt dan op 20 uit?",
             simpeler: "6 × 3 = 18. 18 + 2 = 20.",
             nogSimpeler: "2 + 6 × 3",
           },
@@ -586,7 +586,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "19.",
+            basis: "Keer en delen gaan vóór min. Reken eerst 3 × 8 en 10 ÷ 2 uit, en trek die twee daarna van elkaar af.",
             simpeler: "3×8 = 24. 10÷2 = 5. 24 − 5 = 19.",
             nogSimpeler: "19",
           },

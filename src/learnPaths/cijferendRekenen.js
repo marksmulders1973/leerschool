@@ -289,7 +289,7 @@ const steps = [
           theorie: "Bij grote sommen: schat eerst, reken nauwkeurig, vergelijk.",
           voorbeelden: [{ type: "schatting", tekst: "5000+1500=6500. Antwoord moet rond 6500 liggen — niet 5552." }],
           basiskennis: [{ onderwerp: "Schatten = check", uitleg: "Schatting beschermt tegen rekenfouten." }],
-          niveaus: { basis: "4985+1567=6552.", simpeler: "Schat: 5000+1500=6500. Echt antwoord moet daar rond zitten. Reken nauwkeurig: 6552.", nogSimpeler: "6552" },
+          niveaus: { basis: "Zet de getallen netjes onder elkaar en begin rechts bij de eenheden. Neem elk onthoudje mee naar de volgende kolom.", simpeler: "Schat eerst: 5000 + 1500 = 6500. Het echte antwoord ligt daar dicht bij. Begin dan rechts: 5 + 7 = 12, dus je schrijft 2 op en onthoudt 1.", nogSimpeler: "6552" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -338,7 +338,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "568 + 275 = 843.",
+            basis: "Zet de getallen netjes onder elkaar en begin rechts bij de eenheden. Neem elk onthoudje mee naar de volgende kolom.",
             simpeler: "8 + 5 = 13. Schrijf 3, onthoud 1. 6 + 7 + 1 = 14. Schrijf 4, onthoud 1. 5 + 2 + 1 = 8. Antwoord: 843.",
             nogSimpeler: "843",
           },
@@ -393,7 +393,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2475 + 1386 = 3861.",
+            basis: "Zet de getallen netjes onder elkaar en begin rechts bij de eenheden. Neem elk onthoudje mee naar de volgende kolom.",
             simpeler: "5 + 6 = 11. Schrijf 1, onthoud 1. 7 + 8 + 1 = 16. Schrijf 6, onthoud 1. 4 + 3 + 1 = 8. Schrijf 8. 2 + 1 = 3. Antwoord: 3861.",
             nogSimpeler: "3861",
           },
@@ -448,7 +448,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3608 + 2795 = 6403.",
+            basis: "Zet de getallen netjes onder elkaar en begin rechts bij de eenheden. Neem elk onthoudje mee naar de volgende kolom.",
             simpeler: "8 + 5 = 13. Schrijf 3, onthoud 1. 0 + 9 + 1 = 10. Schrijf 0, onthoud 1. 6 + 7 + 1 = 14. Schrijf 4, onthoud 1. 3 + 2 + 1 = 6. Antwoord: 6403.",
             nogSimpeler: "6403",
           },
@@ -499,7 +499,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "134 + 258 + 316 = 708.",
+            basis: "Zet de drie getallen onder elkaar. Tel per kolom alle drie de cijfers op, en neem het onthoudje mee naar de volgende kolom.",
             simpeler: "4 + 8 + 6 = 18. Schrijf 8, onthoud 1. 3 + 5 + 1 + 1 = 10. Schrijf 0, onthoud 1. 1 + 2 + 3 + 1 = 7. Antwoord: 708.",
             nogSimpeler: "708",
           },
@@ -551,9 +551,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Schrijf 4, onthoud 1.",
+            basis: "Tel eerst de eenheden: 6 + 8. Past die uitkomst in één kolom?",
             simpeler: "6 + 8 = 14. Dat is te veel voor één kolom. De 4 schrijf je op, de 1 neem je mee naar de tientallen.",
-            nogSimpeler: "4 op, 1 mee",
+            nogSimpeler: "Je schrijft 4 op en onthoudt 1.",
           },
         },
       },
@@ -650,7 +650,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "612 + 289 = 901.",
+            basis: "Reken de som zelf uit, kolom voor kolom. Vergelijk je uitkomst daarna met die van Sanne.",
             simpeler: "Schat: 600 + 300 = 900. Dan kan 801 niet. Bij de honderdtallen komt nog een onthoudje: 6 + 2 + 1 = 9. Antwoord 901.",
             nogSimpeler: "901",
           },

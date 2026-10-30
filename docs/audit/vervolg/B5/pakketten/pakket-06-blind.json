@@ -1,0 +1,277 @@
+[
+ {
+  "waar": "interpunctie-po stap 5 vraag 1",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 2",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 3",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 4",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 5",
+  "eigenKeuze": "B",
+  "opmerking": "Punt hoort binnen de aanhalingstekens; alleen B goed."
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 6",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 7",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 3",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 4",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 5",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 6",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 7",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 8",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 10",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 1",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 2",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 3",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 4",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 5",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 6",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 8",
+  "eigenKeuze": "A",
+  "opmerking": "Optie C (hoe oud Lotte wordt) staat ook in het briefje, maar doel is uitnodigen."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 3",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 4",
+  "eigenKeuze": "B",
+  "opmerking": "boekkast wordt ook gebruikt (vooral Belgisch); twee bijna goede antwoorden?"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 5",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 6",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 7",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 8",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 9",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 1",
+  "eigenKeuze": "A",
+  "opmerking": "Wat is een kapper-symbool; D stadskaart is duidelijk minder goed, oké."
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 2",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 3",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 4",
+  "eigenKeuze": "B",
+  "opmerking": "Antwoord staat bijna letterlijk in de vraag (🚻 = toilet → zoek 🚻); raadbaar."
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 5",
+  "eigenKeuze": "C",
+  "opmerking": "Zelfde patroon: glijbaan-symbool → glijbaan-teken zoeken; raadbaar."
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 6",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 7",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 1",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 2",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 3",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 4",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 5",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 6",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 7",
+  "eigenKeuze": "D",
+  "opmerking": "Optie D telegramstijl, korter dan de rest."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 4",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 5",
+  "eigenKeuze": "D",
+  "opmerking": ""
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 6",
+  "eigenKeuze": "C",
+  "opmerking": "12÷4×2 = 6, 24−6 = 18."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 7",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 8",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 3",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 4",
+  "eigenKeuze": "D",
+  "opmerking": "Contextzin geeft betekenis (heel harde storm → heel sterk): bedoelde contextvraag maar bijna letterlijk."
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 5",
+  "eigenKeuze": "A",
+  "opmerking": ""
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 6",
+  "eigenKeuze": "B",
+  "opmerking": "Contextzin legt verdubbelen al uit."
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 7",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 4",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 5",
+  "eigenKeuze": "B",
+  "opmerking": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 6",
+  "eigenKeuze": "C",
+  "opmerking": ""
+ }
+]

@@ -2458,11 +2458,60 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "brief-email-lezen-po stap 3 vraag 1",
+  "hash": "c49015e00caf5f9b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 2",
+  "hash": "abf796e9639ab334",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 3",
+  "hash": "6e073fb25adba17d",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 4",
+  "hash": "b06978c396a9e82c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 5",
+  "hash": "8dc53c908bd5c434",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 6",
+  "hash": "597a840d0ca9b6f6",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "brief-email-lezen-po stap 3 vraag 7",
   "hash": "cdf54e0815bed158",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 8",
+  "hash": "575637fa319b79fd",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "brugklas-orientatie stap 1 vraag 1",
@@ -2585,6 +2634,62 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 10",
+  "hash": "e61a4173aabad0cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 901"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 3",
+  "hash": "83656bad0d2de8c3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler noemde ook het antwoord; nagerekend 6552"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 4",
+  "hash": "8407c3cd18c569ac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 843"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 5",
+  "hash": "8e2331c79758a3b1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 3861"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 6",
+  "hash": "4fa010f1f340722f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 6403"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 7",
+  "hash": "6d9b401717c87acf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 708"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 8",
+  "hash": "89c3540203db5ce4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nogSimpeler was telegramzin"
  },
  {
   "waar": "cijferend-rekenen stap 2 vraag 9",
@@ -7710,6 +7815,53 @@
   "reden": "Antwoord klopt; niveaus basis was alleen de foute zin."
  },
  {
+  "waar": "interpunctie-po stap 5 vraag 2",
+  "hash": "9b13ed14c4cb16b0",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 3",
+  "hash": "784ca6e2915d46a3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 4",
+  "hash": "f53b1249c8f3e31e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 5",
+  "hash": "220fc14d3422c089",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 6",
+  "hash": "89cfe057cef6c812",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 7",
+  "hash": "caebc336ae481364",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "kaartlezen-po stap 1 vraag 1",
   "hash": "dd8491bfc7194ddc",
   "oordeel": "goed",
@@ -10467,6 +10619,43 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 2",
+  "hash": "24c92b09322b9ac6",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 3",
+  "hash": "1dc14d1e24da6b5a",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 4",
+  "hash": "4cab63b09dae8598",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "raadbaar door de vorm (enige ja-optie, drie keer \"Nee, alleen...\"); waardenvraag, inhoud klopt"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 5",
+  "hash": "545b10ffba6a863f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "absurde afleider \"Heel belangrijke opleiding\""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 6",
+  "hash": "43acab1b9e77c523",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 1 vraag 1",
   "hash": "6ae81cf26d8293a7",
   "oordeel": "twijfel",
@@ -11078,6 +11267,30 @@
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 1",
+  "hash": "e64e5fd0aadbeac0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 3",
+  "hash": "589f2dada4b79513",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 7",
+  "hash": "8386b17fb7358d72",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was een vreemde zin"
  },
  {
   "waar": "plattegrond-legenda-po stap 4 vraag 8",
@@ -11951,6 +12164,54 @@
   "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord en hints goed; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 3",
+  "hash": "f838c5ef60d3905a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin (\"... Ja.\")"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 4",
+  "hash": "f08e4d4db7580348",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (boekkast wordt in Vlaanderen wel gebruikt, maar boekenkast is de standaardvorm)"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 5",
+  "hash": "2d7c918411dede09",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 7",
+  "hash": "3a0175baf4932458",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 8",
+  "hash": "8c3a121a366353c6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 9",
+  "hash": "afb2ffd13f6a2eda",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
@@ -16511,6 +16772,46 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "volgorde-bewerkingen stap 2 vraag 4",
+  "hash": "ba1b3df2cae0ef90",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 3"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 5",
+  "hash": "609bc2093a55dda9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 17"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 6",
+  "hash": "e39c7ac12e7dd720",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 18"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 7",
+  "hash": "1a85386a61073a1b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 2+6×3=20, overige 15/12/16"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 8",
+  "hash": "c0a752a30fa39234",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; nagerekend 19"
+ },
+ {
   "waar": "vulkanen-po stap 1 vraag 1",
   "hash": "96687a25d0b8bbdd",
   "oordeel": "twijfel",
@@ -18935,6 +19236,38 @@
   "reden": "Hint 1 ('context zegt erg klein') omschrijft het antwoord 'heel erg'."
  },
  {
+  "waar": "woordenschat-po stap 4 vraag 3",
+  "hash": "79662e9bfbbc14ff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 4",
+  "hash": "a9a766d971175e38",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "betekenis staat bijna in de zin (\"ofwel een heel harde storm\"); bewust: de stap oefent de signaalwoord-strategie; basis gaf antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 5",
+  "hash": "bd6d97518b790d56",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; contextvraag met tegenstelling is bedoeld"
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 7",
+  "hash": "7eaeb6b339116811",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "woordenschat-po stap 5 vraag 10",
   "hash": "f8cd154f7f1e1a38",
   "oordeel": "goed",
@@ -19047,6 +19380,30 @@
   "bron": "vervolg B3 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt ('rode'); hints goed; basis-niveau was het antwoord zelf ('de rode fiets.')."
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 4",
+  "hash": "4ea3ec2eb3feb409",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; aanwijzend vnw is aan de pittige kant voor groep 5, maar het pad is groep 5-8"
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 5",
+  "hash": "9e169b980ada6d88",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 4 vraag 6",
+  "hash": "842c13da56890d6b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; vragend vnw pittig voor groep 5"
  },
  {
   "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 4",

@@ -717,7 +717,7 @@ const steps = [
           theorie: "Aanwijzende voornaamwoorden: deze/dit (dichtbij), die/dat (verder weg).",
           voorbeelden: [{ type: "lijst", tekst: "Deze appel (de-woord, dichtbij). Dit huis (het-woord, dichtbij). Die boom. Dat raam." }],
           basiskennis: [{ onderwerp: "Niet lidwoord", uitleg: "Lidwoord = de/het/een. Aanwijzend = deze/die/dit/dat." }],
-          niveaus: { basis: "aanwijzend.", simpeler: "Deze/die/dit/dat = aanwijzende voornaamwoorden (wijzen iets aan). Niet 'de/het/een'.", nogSimpeler: "Aanwijzend" },
+          niveaus: { basis: "Wat doet 'deze' in de zin: zegt het hoe de appel eruitziet, van wie hij is, of wijs je er een appel mee aan?", simpeler: "Deze/die/dit/dat = aanwijzende voornaamwoorden (wijzen iets aan). Niet 'de/het/een'.", nogSimpeler: "Aanwijzend" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -753,7 +753,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tom → hij.",
+            basis: "Het woord op de lege plek staat in de plaats van 'Tom'. Is Tom een jongen of een meisje, en is hij alleen?",
             simpeler: "Tom is een jongen. In plaats van 'Tom' zeg je 'hij'.",
             nogSimpeler: "Hij",
           },
@@ -796,7 +796,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "welke = vragend vnw.",
+            basis: "Kijk naar het teken aan het eind van de zin. Wat doe je met 'welke': iets aanwijzen of iets vragen?",
             simpeler: "Welke kleur? Je vraagt iets. Dus vragend voornaamwoord.",
             nogSimpeler: "Vragend",
           },
