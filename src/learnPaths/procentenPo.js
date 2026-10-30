@@ -897,9 +897,10 @@ const steps = [
     checks: [
       {
         q: "Een schoen kost normaal **€ 80**. Er is **25% korting**. Hoeveel **betaal je**?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 60","€ 20","€ 40","€ 75"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — €40 is de halve prijs; bij 25% korting gaat er minder af.", "Je haalde maar € 5 eraf. Hoeveel euro is 25% van € 80?"],
+        wrongHints: [null, "Dat is het bedrag dat je bespaart, niet wat je betaalt.", "Te weinig — €40 is de halve prijs; bij 25% korting gaat er minder af.", "Je haalde maar € 5 eraf. Hoeveel euro is 25% van € 80?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — de toets test of je dit verschil herkent." },
@@ -918,27 +919,30 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Betaal je = oud bedrag − korting. Of: betaal je = (100% − korting%) van oude prijs. Beide werken." },
           ],
           niveaus: {
-            basis: "€60 (€80 − €20 korting).",
-            simpeler: "25% korting = ¼ aftrek. ¼ van €80 = €20. €80 − €20 = €60.",
+            basis: "Reken eerst uit hoeveel euro 25% van € 80 is. Haal dat bedrag van € 80 af.",
+            simpeler: "25% is een kwart. Een kwart van € 80 is € 20. € 80 − € 20 = € 60.",
             nogSimpeler: "€60",
           },
         },
       },
       {
         q: "Een tas van **€ 50** heeft **50% korting**. Wat **betaal** je?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 25","€ 50","€ 0","€ 75"],
         answer: 0,
-        wrongHints: [null,"Geen korting toegepast — heb je 50% wel gerekend?","Je haalde € 50 eraf. Maar de korting is 50 procent, niet 50 euro.","Bij korting wordt het goedkoper. Kan het dan meer kosten dan € 50?"],
+        wrongHints: [null,"Dan heb je de korting niet van de prijs afgehaald.","Je haalde € 50 eraf. Maar de korting is 50 procent, niet 50 euro.","Bij korting wordt het goedkoper. Kan het dan meer kosten dan € 50?"],
       },
       {
         q: "Een t-shirt van **€ 30** heeft **10% korting**. Wat is de **nieuwe prijs**?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 27","€ 3","€ 33","€ 20"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is alleen het korting-bedrag, niet de nieuwe prijs.","Bij korting wordt het goedkoper, niet duurder.","Je haalde € 10 eraf. Maar het is 10 procent, niet 10 euro."],
+        wrongHints: [null,"Dat is alleen het bedrag dat eraf gaat, niet de nieuwe prijs.","Bij korting wordt het goedkoper, niet duurder.","Je haalde € 10 eraf. Maar het is 10 procent, niet 10 euro."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Een jas kost **€ 100**. Er is **30% korting**. Wat **betaal** je?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 70", "€ 30", "€ 130", "€ 97"],
         answer: 0,
         wrongHints: [
@@ -982,7 +986,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je betaalt € 70.",
+            basis: "Bij 30% korting betaal je nog 70% van de prijs. Hoeveel is 70% van € 100?",
             simpeler: "€ 100 − € 30 korting = € 70.",
             nogSimpeler: "€ 70",
           },
@@ -990,6 +994,7 @@ const steps = [
       },
       {
         q: "Een spel kost **€ 40**. Er is **75% korting**. Wat **betaal** je?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 10", "€ 30", "€ 20", "€ 40"],
         answer: 0,
         wrongHints: [
@@ -1033,7 +1038,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je betaalt € 10.",
+            basis: "Bij 75% korting betaal je nog 25% van de prijs. Dat is een kwart.",
             simpeler: "Een kwart van € 40 = € 10.",
             nogSimpeler: "€ 10",
           },
@@ -1041,6 +1046,7 @@ const steps = [
       },
       {
         q: "Bij **10% korting** betaal je nog…",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["90% van de prijs", "10% van de prijs", "100% van de prijs", "110% van de prijs"],
         answer: 0,
         wrongHints: [null, "Dat deel gaat er juist af.", "Dan heb je geen korting gekregen.", "Wordt iets duurder als er korting is?"],
@@ -1079,7 +1085,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je betaalt 90% van de prijs.",
+            basis: "De hele prijs is 100%. Haal de korting daarvan af.",
             simpeler: "100% − 10% = 90%.",
             nogSimpeler: "90%",
           },
@@ -1087,6 +1093,7 @@ const steps = [
       },
       {
         q: "Een pet kost **€ 16**. Er is **50% korting**. Wat **betaal** je?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 8", "€ 16", "€ 4", "€ 12"],
         answer: 0,
         wrongHints: [
@@ -1130,7 +1137,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je betaalt € 8.",
+            basis: "Bij 50% korting gaat de helft van de prijs eraf.",
             simpeler: "De helft van € 16 = € 8.",
             nogSimpeler: "€ 8",
           },
@@ -1138,6 +1145,7 @@ const steps = [
       },
       {
         q: "Een lamp kost **€ 90**. Er is **20% korting**. Hoeveel **bespaar** je?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 18", "€ 72", "€ 9", "€ 20"],
         answer: 0,
         wrongHints: [
@@ -1181,7 +1189,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je bespaart € 18.",
+            basis: "Reken eerst 10% van € 90 uit. 20% is twee keer zoveel.",
             simpeler: "10% = € 9, dus 20% = € 18.",
             nogSimpeler: "€ 18",
           },
@@ -1189,6 +1197,7 @@ const steps = [
       },
       {
         q: "Een skateboard van **€ 120** heeft **25% korting**. Wat is de **nieuwe prijs**?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 90", "€ 30", "€ 95", "€ 60"],
         answer: 0,
         wrongHints: [
@@ -1232,14 +1241,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De nieuwe prijs is € 90.",
-            simpeler: "€ 120 − € 30 = € 90.",
+            basis: "Reken eerst uit hoeveel euro 25% van € 120 is. Haal dat van € 120 af.",
+            simpeler: "25% is een kwart: € 120 ÷ 4 = € 30. € 120 − € 30 = € 90.",
             nogSimpeler: "€ 90",
           },
         },
       },
       {
         q: "Welke trui is het **goedkoopst**?",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): procenten zijn groep-6-stof
         options: [
           "€ 40 met 50% korting",
           "€ 30 met 10% korting",
@@ -1288,8 +1298,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 40 met 50% korting = € 20. Dat is het goedkoopst.",
-            simpeler: "Reken elke prijs uit. € 20 is het laagst.",
+            basis: "Reken voor elke trui uit wat je echt betaalt. Vergelijk daarna de vier bedragen.",
+            simpeler: "€ 40 met 50% korting = € 20. € 30 met 10% korting = € 27. € 28 met 25% korting = € 21. De andere trui kost € 24. Welk bedrag is het laagst?",
             nogSimpeler: "€ 20 is het minst.",
           },
         },

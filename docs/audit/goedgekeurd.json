@@ -8418,12 +8418,134 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "industriele-revolutie-po stap 6 vraag 1",
+  "hash": "4b03b01c4aadda9a",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 10",
+  "hash": "18deac49bce71896",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 11",
+  "hash": "c96a6126bbcfe45c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 12",
+  "hash": "ba9b739f314d265e",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 13",
+  "hash": "db111bfcd84461a5",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 14",
+  "hash": "800a0d2beb0b49a4",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 16",
+  "hash": "3e079f8201bab64e",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 17",
+  "hash": "78d984bdd46e0aff",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 18",
+  "hash": "66b2a182722032a5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Betere voeding' klopt voor arbeiders pas op lange termijn (les: eerst loon amper genoeg om te eten); les noemt goedkopere kleding/gereedschap/voedsel"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 2",
+  "hash": "6d3406c34396cc1b",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "industriele-revolutie-po stap 6 vraag 20",
   "hash": "6b362cbae77cf7c9",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Goede optie is de langste en de meest specifieke; 'massa' in de vraag geeft 'veel' al prijs."
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 3",
+  "hash": "08482486b6911fde",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 4",
+  "hash": "cdcd2bde45d90835",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 5",
+  "hash": "89f04faea008c6b3",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 6",
+  "hash": "10d812c3bd30aead",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 7",
+  "hash": "ead7ad1a2685f074",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 8",
+  "hash": "b2319e3018e9dda0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties in telegramstijl met pijltjes; hint bij 'boeren helpen' ('urbs betekent stad') stuurt bijna rechtstreeks naar het antwoord"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 9",
+  "hash": "18c727bd2e538330",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij 'stroom' ('Denk aan rails: wat rijdt daarover?') verraadt in feite het antwoord treinen"
  },
  {
   "waar": "informatiebronnen-po stap 1 vraag 1",
@@ -13652,6 +13774,89 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "politiek-democratie-po stap 6 vraag 1",
+  "hash": "b44c3cb38c5c6f3a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties in telegramstijl ('Volk beslist', 'Eén leider')"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 10",
+  "hash": "497ac632a7e45825",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 14",
+  "hash": "3773df190d4e6e3c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Raadbaar: alleen het antwoord bevat 'grond' (Grondwet)"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 2",
+  "hash": "a8e1a5c044df0a18",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint met vakjargon 'plenaire zaal'"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 3",
+  "hash": "9bd49be8018880bf",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 4",
+  "hash": "469e26bdb22a59b0",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 5",
+  "hash": "4a35da5f9a236ba6",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 6",
+  "hash": "c14fbde656ba262a",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 7",
+  "hash": "a74663add62ee9f6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties in telegramstijl met cijfers ('3 machten gescheiden')"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 8",
+  "hash": "20ceca3f91ee4d16",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Wetgevende (parlement)' spreekt de les tegen: daar is de wetgevende macht Tweede + Eerste Kamer + regering"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 9",
+  "hash": "9f75732b54f276c2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Zelfde: afleider 'Wetgevende (parlement)' week af van de les"
+ },
+ {
   "waar": "procenten-po stap 1 vraag 1",
   "hash": "ddb74629141f1262",
   "oordeel": "goed",
@@ -13795,6 +14000,86 @@
   "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord."
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 1",
+  "hash": "85b24832c47ff805",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 60 klopt; niveaus.basis gaf het antwoord; procenten zijn groep-6-stof maar set is groep 5"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 10",
+  "hash": "b237ca9f7c695d01",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 20 (40 met 50%) klopt, nagerekend 20/27/24/21; niveaus.basis gaf het antwoord; niveau"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 2",
+  "hash": "eff4e4c5bfe6d5b0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 25 klopt; niveau groep 5 te vroeg; hint B telegramstijl"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 3",
+  "hash": "c3b208744f5fc956",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 27 klopt; niveau; 'korting-bedrag' spelling"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 4",
+  "hash": "a797d1ffaf18ca6a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 70 klopt; niveaus.basis gaf het antwoord; niveau"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 5",
+  "hash": "de87c25cea920dc5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 10 klopt; niveaus.basis gaf het antwoord; niveau"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 6",
+  "hash": "e02445e805fc57d5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "90% klopt; niveaus.basis gaf het antwoord; niveau"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 7",
+  "hash": "ec61b9f257db9c46",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 8 klopt; niveaus.basis gaf het antwoord; niveau"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 8",
+  "hash": "50fed807f057d03f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 18 klopt; niveaus.basis gaf het antwoord; niveau"
+ },
+ {
+  "waar": "procenten-po stap 4 vraag 9",
+  "hash": "dcd24926db627315",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 90 klopt; niveaus.basis gaf het antwoord; niveau"
  },
  {
   "waar": "pubertijd-groei-po stap 1 vraag 1",
@@ -24265,6 +24550,96 @@
   "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord; vragend vnw pittig voor groep 5"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 1",
+  "hash": "d23d8583be4a5949",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord ('rijdt.')"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 10",
+  "hash": "288fd1ae46129d8d",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 11",
+  "hash": "069e8150e3fd0a9b",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 12",
+  "hash": "c2fa40fb31549782",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 2",
+  "hash": "aaeedb0a5d6930d6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord; hint B telegramzin"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 3",
+  "hash": "fe8998d21621c7c5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 4",
+  "hash": "d77093b77042abff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 5",
+  "hash": "d91ccc4842d8c162",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag 'Welke is een...' onaf; niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 6",
+  "hash": "b7cd75df4526b3e7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 7",
+  "hash": "ab6688974cc38440",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 8",
+  "hash": "df539a7f6391bbad",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 9",
+  "hash": "639cef52a669e2e7",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 4",
