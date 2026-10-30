@@ -309,7 +309,7 @@ const steps = [
         q: "*'Hoe oud ben je___'* — welk leesteken?",
         options: ["?",".","!",","],
         answer: 0,
-        wrongHints: [null,"Maar dit is een vraag.","Geen sterk gevoel — gewone vraag.","Komma is voor pauze in zin."],
+        wrongHints: [null,"Een punt hoort bij een zin die iets vertelt. Vertelt deze zin iets, of wil iemand iets weten?","Roept hier iemand iets uit, of wil hij iets weten?","Een komma staat midden in een zin, voor een korte pauze. Dit is het einde van de zin."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is dit?", tekst: "'Hoe oud ben je' = vraag → vraagteken (?)." },
@@ -319,9 +319,9 @@ const steps = [
           voorbeelden: [{ type: "vraag", tekst: "'Wat is je naam?', 'Hoe heet je?', 'Ga je mee?' — allemaal ?." }],
           basiskennis: [{ onderwerp: "Stem omhoog", uitleg: "Bij vraag gaat je stem omhoog aan het eind. Hoor je dat → ?." }],
           niveaus: {
-            basis: "Vraag = ?.",
+            basis: "Lees de zin hardop. Gaat je stem aan het eind omhoog?",
             simpeler: "'Hoe oud ben je' is een vraag. Bij vragen schrijf je een vraagteken: ?.",
-            nogSimpeler: "Vraag = ?",
+            nogSimpeler: "Een vraag krijgt een vraagteken: ?",
           },
         },
       },
@@ -329,7 +329,7 @@ const steps = [
         q: "*'Wauw___ Wat een mooi cadeau___'* — welke twee leestekens?",
         options: ["! en !","? en ?",". en .",", en ."],
         answer: 0,
-        wrongHints: [null,"Geen vraag.","Te neutraal voor een sterk gevoel.","Kijk naar de hoofdletter van Wat: wat moet er dan vóór staan?"],
+        wrongHints: [null,"Wordt hier echt iets gevraagd? Lees de zin hardop.","Een punt past bij een rustige mededeling. Zegt iemand 'Wauw' rustig?","Kijk naar de hoofdletter van Wat: wat moet er dan vóór staan?"],
         uitlegPad: {
           stappen: [
             { titel: "Sterk gevoel", tekst: "'Wauw' = uitroep van verbazing. 'Wat een mooi cadeau' = uitroep van blijheid. Beide = !." },
@@ -339,9 +339,9 @@ const steps = [
           voorbeelden: [{ type: "!", tekst: "Wauw! / Pas op! / Wat fijn! — allemaal !." }],
           basiskennis: [{ onderwerp: "Niet overdrijven", uitleg: "Niet ELKE zin met !, alleen sterke gevoelens." }],
           niveaus: {
-            basis: "Uitroep + uitroep = ! + !.",
+            basis: "Beide zinnen zijn uitroepen: van verbazing en van blijheid.",
             simpeler: "Wauw is een verbaasde uitroep — !. 'Wat een mooi cadeau' is ook een uitroep van blijheid — !. Dus ! en !.",
-            nogSimpeler: "Twee uitroepen = !!",
+            nogSimpeler: "Twee uitroepen, dus twee keer een !",
           },
         },
       },
@@ -359,9 +359,9 @@ const steps = [
           voorbeelden: [{ type: "opsomming", tekst: "Goed: 'rood, geel, groen en blauw'. Fout: 'rood geel groen en blauw'." }],
           basiskennis: [{ onderwerp: "Komma = pauze", uitleg: "Komma = kleine pauze in lezen. Bij opsomming pauzeer je tussen items." }],
           niveaus: {
-            basis: "Opsomming zonder komma's = fout.",
+            basis: "Een opsomming zonder komma's is fout.",
             simpeler: "Lees die zin hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. Dus die zin is fout.",
-            nogSimpeler: "Geen komma's = fout",
+            nogSimpeler: "De zin zonder komma's is fout.",
           },
         },
       },
@@ -398,7 +398,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Mededeling = punt.",
+            basis: "Een mededeling eindigt met een punt.",
             simpeler: "Deze zin vertelt iets, zonder vraag en zonder uitroep. Dus een punt.",
             nogSimpeler: "Punt",
           },
@@ -436,9 +436,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bevel/waarschuwing = !.",
+            basis: "Bij een bevel of een waarschuwing hoort een uitroepteken.",
             simpeler: "Je roept 'Kijk uit!' om iemand te waarschuwen. Dat is een uitroep: !.",
-            nogSimpeler: "Uitroep = !",
+            nogSimpeler: "Een uitroep krijgt een !",
           },
         },
       },
@@ -474,7 +474,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Afkorting → punten: a.u.b.",
+            basis: "Bij een afkorting horen punten.",
             simpeler: "Bij een afkorting horen punten. Dus a.u.b. met drie punten.",
             nogSimpeler: "a.u.b.",
           },
@@ -512,7 +512,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Opsomming → komma.",
+            basis: "Bij een opsomming zet je komma's tussen de dingen.",
             simpeler: "Kaas, ham en jam is een rijtje. Na 'kaas' komt een komma.",
             nogSimpeler: "Komma",
           },
@@ -529,7 +529,7 @@ const steps = [
         q: "Welke is **goed** geschreven?",
         options: ["pannenkoek","pannekoek","panne koek","panne-koek"],
         answer: 0,
-        wrongHints: [null,"Bijna — wat is het meervoud van pan?","Niet los.","Geen streepje."],
+        wrongHints: [null,"Bijna — wat is het meervoud van pan?","Een samenstelling schrijf je als één woord, zonder spatie.","Een streepje is hier niet nodig: de delen plakken gewoon aan elkaar."],
         uitlegPad: {
           stappen: [
             { titel: "Tussen-n", tekst: "Pan → meervoud pannen → samenstelling = pannenkoek." },
@@ -559,9 +559,9 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "Voetbal schoen ✗ → voetbalschoen ✓. Net als tandarts en zonnebril." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET klopt." }],
           niveaus: {
-            basis: "Voetbal schoen los = fout.",
-            simpeler: "In NL plak je samenstellingen aaneen. 'Voetbal schoen' met spatie = fout. Moet 'voetbalschoen' zijn.",
-            nogSimpeler: "Spatie = fout",
+            basis: "'Voetbal schoen' met een spatie is fout.",
+            simpeler: "In het Nederlands schrijf je samenstellingen aan elkaar. 'Voetbal schoen' met een spatie is fout; het moet 'voetbalschoen' zijn.",
+            nogSimpeler: "Het woord met de spatie is fout.",
           },
         },
       },
@@ -569,7 +569,7 @@ const steps = [
         q: "Waarom staat er **-en-** in het woord **boekenkast**?",
         options: ["Het meervoud van boek is boeken", "Zo spreek je het makkelijker uit", "Het eerste woord eindigt op een k", "Het tweede woord begint met een k"],
         answer: 0,
-        wrongHints: [null, "Er is een echte spellingregel voor. Hoe zeg je het als er meer boeken zijn?", "Is het de letter k die het doet, of iets anders aan het woord boek?", "In 'boekenrek' begint het tweede woord met een r, en toch staat er -en-."],
+        wrongHints: [null, "Of het makkelijk klinkt, is geen spellingregel. De tussen-n volgt een regel over het eerste woord.", "Is het de letter k die het doet, of iets anders aan het woord boek?", "In 'boekenrek' begint het tweede woord met een r, en toch staat er -en-."],
         uitlegPad: {
           stappen: [
             { titel: "Tussen-n-regel", tekst: "Boek heeft meervoud op -en (boeken). Daarom tussen-n in samenstellingen: boekenkast." },
@@ -579,9 +579,9 @@ const steps = [
           voorbeelden: [{ type: "tussen-n", tekst: "boekenkast (boeken), pannenkoek (pannen), paddenstoel (padden)." }],
           basiskennis: [{ onderwerp: "Niet altijd", uitleg: "Niet alle samenstellingen krijgen -en-. Alleen als eerste woord meervoud op -en heeft." }],
           niveaus: {
-            basis: "Tussen-n want meervoud boeken.",
+            basis: "De tussen-n hangt af van het meervoud van het eerste woord.",
             simpeler: "Een 'boekenkast' is een kast VOOR meerdere boeken. Meervoud van boek = boeken. Daarom -en- ertussen.",
-            nogSimpeler: "Meervoud → -en-",
+            nogSimpeler: "Boek, boeken: daarom -en-.",
           },
         },
       },
@@ -589,7 +589,7 @@ const steps = [
         q: "Welke is **goed** geschreven?",
         options: ["zonnebril","zonne bril","zonne-bril","zonenbril"],
         answer: 0,
-        wrongHints: [null,"Niet los.","Geen streepje.","Niet 'zonen'."],
+        wrongHints: [null,"Een samenstelling schrijf je als één woord, zonder spatie.","Een streepje is hier niet nodig: de twee delen plakken gewoon aan elkaar.","'Zonen' zijn kinderen van ouders; dit woord gaat over de zon."],
         uitlegPad: {
           stappen: [
             { titel: "Aaneen", tekst: "Zonnebril = 1 woord (samenstelling). Geen spatie, geen streepje." },
@@ -599,7 +599,7 @@ const steps = [
           voorbeelden: [{ type: "aaneen", tekst: "zonnebril, schoolboek, fietsenrek." }],
           basiskennis: [{ onderwerp: "Geen 'zonen'", uitleg: "Zonen = meervoud van zoon (kind). Geen relatie met zon." }],
           niveaus: {
-            basis: "Aaneen = zonnebril.",
+            basis: "Een samenstelling schrijf je aan elkaar.",
             simpeler: "Zon + bril = zonnebril, aaneen. (Niet 'zonen' — dat zijn kinderen, niet de zon).",
             nogSimpeler: "Zonnebril",
           },
@@ -812,7 +812,7 @@ const steps = [
         q: "Welke zin is **goed**?",
         options: ["Tom ging naar Amsterdam op maandag.","tom ging naar amsterdam op maandag.","Tom Ging Naar Amsterdam Op Maandag.","Tom ging naar amsterdam op Maandag."],
         answer: 0,
-        wrongHints: [null,"Eerste woord en eigennamen vergeten.","Niet ELK woord met hoofdletter.","'amsterdam' wel met hoofdletter, 'maandag' niet."],
+        wrongHints: [null,"Het eerste woord van de zin en de namen staan hier allemaal klein.","Niet elk woord krijgt een hoofdletter; alleen waar een regel dat zegt.","Een plaatsnaam krijgt een hoofdletter, een dag van de week niet."],
         uitlegPad: {
           stappen: [
             { titel: "Check elk woord", tekst: "Tom (eigennaam ✓), Amsterdam (eigennaam ✓), maandag (dag = klein ✓), Op (begin = hoofd ✓)." },
@@ -822,9 +822,9 @@ const steps = [
           voorbeelden: [{ type: "goed", tekst: "Tom (naam) + Amsterdam (plaats) = hoofd. Maandag (dag) = klein." }],
           basiskennis: [{ onderwerp: "Niet alles hoofd", uitleg: "Niet ELK woord met hoofdletter zoals in titels — alleen waar regels zeggen." }],
           niveaus: {
-            basis: "Tom + Amsterdam hoofd, maandag klein.",
+            basis: "Tom en Amsterdam krijgen een hoofdletter, maandag niet.",
             simpeler: "Tom (naam = hoofdletter), Amsterdam (plaats = hoofdletter), maandag (dag = klein). Eén zin heeft alle 3 goed.",
-            nogSimpeler: "Naam + plaats hoofd",
+            nogSimpeler: "Een naam en een plaats krijgen een hoofdletter.",
           },
         },
       },
@@ -842,9 +842,9 @@ const steps = [
           voorbeelden: [{ type: "hoofd", tekst: "Nederland, Anna, Amsterdam = hoofd. maandag, mei, kerstboom = klein." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "Engels: Monday, December. NL: maandag, december." }],
           niveaus: {
-            basis: "Land = hoofdletter. Nederland.",
-            simpeler: "Welke is een land? Nederland — krijgt hoofdletter. De rest (dagen/maanden/feestdag) klein.",
-            nogSimpeler: "Land = hoofd",
+            basis: "Een land krijgt een hoofdletter.",
+            simpeler: "Welke is een land? Nederland krijgt een hoofdletter. De rest (een dag, een maand en een gewoon ding) schrijf je klein.",
+            nogSimpeler: "Nederland is een land, dus een hoofdletter.",
           },
         },
       },
@@ -852,7 +852,7 @@ const steps = [
         q: "*Hij spreekt vloeiend frans en engels.* Hoe schrijf je de twee talen goed?",
         options: ["Frans, Engels","frans, engels","FRANS, ENGELS","Frans, engels"],
         answer: 0,
-        wrongHints: [null,"Bijna — hoe schrijf je de naam van een taal?","Geen reden voor hoofdletters overal.","Bijna — kijk nog eens naar het tweede woord."],
+        wrongHints: [null,"Bijna — hoe schrijf je de naam van een taal?","Een woord helemaal in hoofdletters gebruik je alleen om te schreeuwen, niet voor een naam.","Bijna — kijk nog eens naar het tweede woord."],
         uitlegPad: {
           stappen: [
             { titel: "Talen = hoofdletter", tekst: "In NL: namen van talen krijgen hoofdletter. Frans, Engels, Duits, Spaans." },
@@ -862,9 +862,9 @@ const steps = [
           voorbeelden: [{ type: "talen", tekst: "Frans, Engels, Duits, Spaans, Italiaans, Chinees — allemaal hoofdletter." }],
           basiskennis: [{ onderwerp: "Niet ALLE caps", uitleg: "Niet 'FRANS' in hoofdletters — gewoon eerste letter hoofdletter." }],
           niveaus: {
-            basis: "Talen = hoofdletter.",
+            basis: "Namen van talen krijgen een hoofdletter.",
             simpeler: "Frans en Engels zijn TALEN. Talen krijgen in NL hoofdletter (anders dan dagen/maanden). Dus: Frans, Engels.",
-            nogSimpeler: "Talen = hoofd",
+            nogSimpeler: "Talen krijgen een hoofdletter: Frans, Engels.",
           },
         },
       },
@@ -884,7 +884,7 @@ const steps = [
           niveaus: {
             basis: "Die zin heeft 3 fouten (Mijn, Sara, punt).",
             simpeler: "Loop die zin langs: 'mijn' (FOUT, begin zin moet hoofdletter), 'sara' (FOUT, eigennaam moet hoofdletter), geen punt aan eind (FOUT). 3 fouten = duidelijk fout.",
-            nogSimpeler: "Geen hoofdletters/punt",
+            nogSimpeler: "De zin zonder hoofdletters en zonder punt is fout.",
           },
         },
       },
@@ -923,7 +923,7 @@ const steps = [
           niveaus: {
             basis: "Onze + Pip met hoofdletter.",
             simpeler: "Begin van de zin: Onze. Naam van de kat: Pip. De rest klein.",
-            nogSimpeler: "Begin + naam",
+            nogSimpeler: "Het eerste woord en de naam: Onze en Pip.",
           },
         },
       },

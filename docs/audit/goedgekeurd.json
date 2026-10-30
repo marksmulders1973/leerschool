@@ -1486,6 +1486,86 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "geld-rekenen stap 1 vraag 1",
+  "hash": "58eef3cf31240bb3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "275 klopt; hint 'ipv' afkorting, notatie '€2,75' inconsequent. Startset-vraag: alleen hints/niveaus."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 10",
+  "hash": "de04d20f3eb7dcca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "510 > 509 > 501 > 499 klopt; notatie '€5,10' inconsequent, basis gaf meteen het antwoord."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 2",
+  "hash": "a83db62aaf05dc48",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 3,50 klopt; niveaus '€3,50 met 2 decimalen.' jargon + notatie."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 3",
+  "hash": "86cf47f6ce61ab86",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "450 : 100 = 4,50 klopt; niveaus '450c ÷100 = €4,50.' telegram/notatie."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 4",
+  "hash": "e3d6d345e0fab86b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "A = 1,75 klopt (B telt ook op tot 1,75 maar 25 ct bestaat niet — bewust leerdoel, hint benoemt dat); notatie '€1'/'50c' in opties en hints inconsequent."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 5",
+  "hash": "c75eacc3acbe062b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "608 klopt (6 × 100 + 8); niveaus '€6,08' zonder spatie terwijl de vraag '€ 6,08' schrijft."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 6",
+  "hash": "16b8ed7d63932d48",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "920 : 100 = 9,20 klopt; notatie '€9,20' inconsequent."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 7",
+  "hash": "f2c6c46ceca11c1b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 8,09 klopt; niveaus basis was alleen '€8,09.' (geen hulpstap) en notatie inconsequent."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 8",
+  "hash": "ab91344af5cf55b5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€ 5 is het kleinste biljet; notatie '€5' inconsequent."
+ },
+ {
+  "waar": "geld-rekenen stap 1 vraag 9",
+  "hash": "c67a522eaa3db540",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "3 × 200 = 600 klopt; notatie '€6' inconsequent."
+ },
+ {
   "waar": "geld-rekenen stap 4 vraag 7",
   "hash": "5a7f9a115ee94f88",
   "oordeel": "goed",
@@ -3919,6 +3999,159 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "spelling-overige-po stap 2 vraag 2",
+  "hash": "6039e6d313692b71",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints 'Geen vraag.' en niveaus 'Uitroep + uitroep = ! + !.' zijn telegramstijl."
+ },
+ {
+  "waar": "spelling-overige-po stap 2 vraag 3",
+  "hash": "98458cb9d7b33587",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Inhoud klopt; niveaus basis/nogSimpeler telegramstijl ('= fout')."
+ },
+ {
+  "waar": "spelling-overige-po stap 2 vraag 4",
+  "hash": "0332e7caa12303e1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus basis 'Mededeling = punt.' telegram."
+ },
+ {
+  "waar": "spelling-overige-po stap 2 vraag 5",
+  "hash": "3791fdd11e33915a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus telegram."
+ },
+ {
+  "waar": "spelling-overige-po stap 2 vraag 6",
+  "hash": "1141ecd70123a122",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus basis gaf het antwoord in telegramstijl."
+ },
+ {
+  "waar": "spelling-overige-po stap 2 vraag 7",
+  "hash": "bba1d6262256440a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus basis telegram."
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 1",
+  "hash": "f4055a937f87693a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints 'Niet los.' / 'Geen streepje.' telegram. Startset-vraag: alleen hints."
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 2",
+  "hash": "f25ba79b7009419f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Niveaus telegram ('Spatie = fout', 'In NL'). Startset-vraag: alleen niveaus."
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 4",
+  "hash": "3aa009a8118be9ff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints 'Niet los.' / 'Geen streepje.' / 'Niet zonen.' benoemen de denkfout niet."
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 5",
+  "hash": "cb533fa96ba0a67d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 6",
+  "hash": "39d5701e0f3a3253",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 7",
+  "hash": "33cb48656822b7e9",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 8",
+  "hash": "222656b41f7e1864",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-overige-po stap 3 vraag 9",
+  "hash": "c70ee222e0a9f57f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-overige-po stap 4 vraag 1",
+  "hash": "979d26ed5e8ceff3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints B/C telegram ('Eerste woord en eigennamen vergeten.', 'Niet ELK woord'). Startset-vraag: alleen hints."
+ },
+ {
+  "waar": "spelling-overige-po stap 4 vraag 3",
+  "hash": "40ff6faa16710660",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint C en niveaus telegram."
+ },
+ {
+  "waar": "spelling-overige-po stap 4 vraag 4",
+  "hash": "628374e76fc0122d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; nogSimpeler 'Geen hoofdletters/punt' telegram."
+ },
+ {
+  "waar": "spelling-overige-po stap 4 vraag 5",
+  "hash": "b57700aadb5539de",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; nogSimpeler 'Begin + naam' telegram."
+ },
+ {
+  "waar": "spelling-overige-po stap 4 vraag 6",
+  "hash": "cfc23a8f6b566bab",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-overige-po stap 4 vraag 7",
+  "hash": "79eb074977b5cc5c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "spelling-overige-po stap 5 vraag 8",
   "hash": "aa4756a9ebf99cdd",
   "oordeel": "goed",
@@ -3947,6 +4180,126 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Twee letterlijke/kinderachtige afleiders ('Een echte kat kopen', 'Een cadeau voor een huisdier kopen'); wrongHint bij D ('het gaat erom dat je niet goed keek wat je kocht') geeft de betekenis vrijwel "
+ },
+ {
+  "waar": "sterren-planeten stap 1 vraag 2",
+  "hash": "8256ba143d8c26ab",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "8 minuten klopt; hints telegram, niveaus 'Acht.'."
+ },
+ {
+  "waar": "sterren-planeten stap 1 vraag 3",
+  "hash": "8b62eb463d8b490f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Melkweg klopt; hint met HOOFDLETTERS, niveaus 'Melkweg.' tweemaal."
+ },
+ {
+  "waar": "sterren-planeten stap 4 vraag 3",
+  "hash": "dc11e7450f80b889",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "27,3 dagen klopt; hint D jargon ('rotatie om zijn eigen as') en niveaus telegram. Startset: alleen hints."
+ },
+ {
+  "waar": "sterren-planeten stap 5 vraag 1",
+  "hash": "15ee2137b0beb321",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Roest klopt; niveaus 'Roest.'/'IJzer-oxide.'/'Roodroest.' — simpeler was moeilijker dan basis. Startset: alleen hints."
+ },
+ {
+  "waar": "sterren-planeten stap 5 vraag 2",
+  "hash": "daa0eb6723368f38",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Feit klopt (hoogste vulkaan); hints telegram ('Geen planeet.'), niveaus 'Mars-berg.'. Startset: opties ongemoeid."
+ },
+ {
+  "waar": "sterren-planeten stap 5 vraag 3",
+  "hash": "64ad526345938dfa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2 manen klopt; niveaus '2.'/'Twee.'/'Twee. → 2.' zijn geen hulpstappen."
+ },
+ {
+  "waar": "sterren-planeten stap 6 vraag 1",
+  "hash": "c52c7ef0df59e5a8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Jupiter klopt; afleider 'Zon' is geen planeet (feitelijk 3 opties). Startset-vraag: opties mogen niet; niveaus 'Reus #1.' onbruikbaar."
+ },
+ {
+  "waar": "sterren-planeten stap 6 vraag 2",
+  "hash": "c38301331d96ef7a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Ringen klopt; optie 'ijs + steen' met plusteken (startset: niet gewijzigd); niveaus 'Ringen.' driemaal."
+ },
+ {
+  "waar": "sterren-planeten stap 6 vraag 3",
+  "hash": "b2b180a4f9bf6d05",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Ganymedes klopt; afleider 'Maan' (onze maan) is een vreemde afleider; hints telegram met HOOFDLETTERS."
+ },
+ {
+  "waar": "sterren-planeten stap 7 vraag 2",
+  "hash": "d6dc9dc53e718d34",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Neptunus (~2.100 km/u) klopt; hints telegram, niveaus 'Verste planeet.'."
+ },
+ {
+  "waar": "sterren-planeten stap 7 vraag 3",
+  "hash": "2bd82600620f61e0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Uranus/Herschel 1781 klopt; hints 'Mars zelfs in oudheid bekend.' en 'Pluto … + nu geen planeet.' telegram; niveaus '1781.'."
+ },
+ {
+  "waar": "sterren-planeten stap 8 vraag 1",
+  "hash": "73abbff8b1aa193a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Reden klopt (IAU 2006); optie met plusteken (startset: ongemoeid); niveaus 'Te klein.' te mager."
+ },
+ {
+  "waar": "sterren-planeten stap 8 vraag 2",
+  "hash": "d441b45f20986336",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Komeet-definitie klopt; hint C telegram ('Geen planeet, te klein + andere samenstelling.'); niveaus 'IJs + staart.'. Startset: optie ongemoeid."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 2",
+  "hash": "da96f53c46157ad6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Titan klopt; 'methaan-meren' hoort aaneen; niveaus 'Titan.'."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 4",
+  "hash": "111df795fa83d66a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Maan klopt; niveaus 'Maan-zwaartekracht.'/'Maan trekt water.'/'Maan.' telegram."
  },
  {
   "waar": "synoniemen-tegenstellingen-po stap 1 vraag 1",
