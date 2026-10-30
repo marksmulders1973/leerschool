@@ -366,8 +366,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eindrijm = klank aan EIND. Alliteratie = letter aan BEGIN. Verschillende dingen." }],
           niveaus: {
             basis: "Eindrijm = woorden klinken hetzelfde aan eind (kat-pad).",
-            simpeler: "Hardop lezen — zelfde klank? = rijm.",
-            nogSimpeler: "Eind-klank gelijk = rijm.",
+            simpeler: "Lees de woorden hardop. Klinken ze aan het eind hetzelfde? Dan rijmen ze.",
+            nogSimpeler: "Als de klank aan het eind gelijk is, dan rijmt het.",
           },
         },
       },
@@ -394,8 +394,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Alliteratie = AAN het begin. Eindrijm = aan het einde. Vergeet dat niet." }],
           niveaus: {
             basis: "Alliteratie = woorden BEGINNEN met zelfde letter.",
-            simpeler: "Mooie Mette: M-M-M. Begin-rijm.",
-            nogSimpeler: "Begin-letter gelijk = alliteratie.",
+            simpeler: "Denk aan 'Mooie Mette mocht mee': alle woorden beginnen met een M. Dat is rijm aan het begin.",
+            nogSimpeler: "Als de eerste letter van de woorden gelijk is, heet dat alliteratie.",
           },
         },
       },
@@ -423,8 +423,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Zelfde letter = die regels rijmen met elkaar. Verschillende letters = ze rijmen NIET met elkaar." }],
           niveaus: {
             basis: "AABB = paarrijm (regel 1+2 rijmen, regel 3+4 rijmen).",
-            simpeler: "Direct na elkaar rijmen = paarrijm = AABB.",
-            nogSimpeler: "Paren rijmen = AABB.",
+            simpeler: "Twee regels direct na elkaar rijmen op elkaar. Dat heet paarrijm, met schema AABB.",
+            nogSimpeler: "Bij AABB rijmen de regels per paar: dat is paarrijm.",
           },
         },
       },

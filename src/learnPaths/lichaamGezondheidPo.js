@@ -120,7 +120,7 @@ const steps = [
         q: "Wat is het **grootste bot**?",
         options: ["Dijbeen", "Schedel", "Wervelkolom", "Sleutelbeen"],
         answer: 0,
-        wrongHints: [null, "De schedel bestaat uit meerdere samengegroeide botten — tel je hem als 1 bot?", "Wervelkolom = ketting van wervels (niet 1 bot).", "Sleutelbeen is veel kleiner — bij je schouder."],
+        wrongHints: [null, "De schedel bestaat uit meerdere samengegroeide botten — tel je hem als 1 bot?", "De wervelkolom is een ketting van losse wervels, niet één bot.", "Het sleutelbeen bij je schouder is veel kleiner."],
         uitlegPad: {
           stappen: [
             { titel: "Dijbeen = grootste", tekst: "Het **dijbeen** (de bovenkant van je been, tussen heup en knie) is het grootste, langste en sterkste bot in je lichaam — ongeveer **46 cm** bij een volwassene." },
@@ -136,7 +136,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste bot = dijbeen (een kwart van je lengte!). Kleinste = stijgbeugel in oor." }],
           niveaus: {
             basis: "Dijbeen = grootste bot.",
-            simpeler: "Het dijbeen (bovenbeen) is langste + zwaarste bot — ~46 cm.",
+            simpeler: "Het dijbeen in je bovenbeen is het langste en zwaarste bot: ongeveer 46 cm bij een volwassene.",
             nogSimpeler: "Dijbeen",
           },
         },
@@ -145,7 +145,7 @@ const steps = [
         q: "Wat **beschermt** de **schedel**?",
         options: ["Hersenen", "Hart", "Longen", "Maag"],
         answer: 0,
-        wrongHints: [null, "Hart zit in borst — beschermd door ribben + borstbeen.", "Longen zitten in borst — beschermd door ribben.", "De maag zit in je buik, ver van je hoofd."],
+        wrongHints: [null, "Je hart zit in je borst en wordt beschermd door je ribben en je borstbeen.", "Je longen zitten in je borst en worden beschermd door je ribben.", "De maag zit in je buik, ver van je hoofd."],
         uitlegPad: {
           stappen: [
             { titel: "Schedel = beschermkap", tekst: "De **schedel** (Latijn: cranium) is het bot rond je hoofd. Functie: **bescherming van de hersenen** — het kwetsbaarste orgaan dat we hebben." },
@@ -216,7 +216,7 @@ const steps = [
         q: "Wat doet je **hart**?",
         options: ["Bloed pompen door je lichaam", "Eten verteren in je buik", "Zuurstof maken voor je bloed", "Je hersenen koel houden"],
         answer: 0,
-        wrongHints: [null, "Maag doet dat.", "Longen halen zuurstof binnen, niet maken.", "Niet de taak van het hart."],
+        wrongHints: [null, "Eten verteren doet je maag, niet je hart.", "Je longen halen zuurstof uit de lucht; ze maken geen zuurstof.", "Je hersenen koel houden is geen taak van het hart. Wat stroomt er door je hele lichaam?"],
         uitlegPad: {
           stappen: [
             { titel: "Het hart = pomp", tekst: "Het **hart** is een spier die werkt als een **pomp**. Het pompt bloed rond door je hele lichaam — net als een waterpomp die water rondpompt in een huis." },

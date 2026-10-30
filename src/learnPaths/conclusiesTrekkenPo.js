@@ -194,7 +194,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
         evidence: "Paraplu + regenjas + bezorgd naar buiten kijken.",
         wrongHints: [
           null,
-          "Bij een zwembad heb je geen paraplu nodig — of juist wél? En wat doet een regenjas bij een zwembad?",
+          "Heb je bij een zwembad een paraplu nodig? En waarom zou ze dan een regenjas aantrekken?",
           "Welke aanwijzing wijst op kou binnenshuis? Kijk naar wáár ze naartoe kijkt.",
           "Staat er iets over toneel? En waarom kijkt ze dan bezorgd naar buiten?",
         ],

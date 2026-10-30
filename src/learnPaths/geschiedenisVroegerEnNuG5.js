@@ -231,7 +231,7 @@ const steps = [
         q: "Hoeveel jaar is een **eeuw**?",
         options: ["100 jaar", "10 jaar", "1000 jaar", "50 jaar"],
         answer: 0,
-        wrongHints: [null, "Dat is korter — dat heet een decennium.", "Dat is véél langer — dat heet een millennium.", "Dat is een halve eeuw."],
+        wrongHints: [null, "Dat is korter — dat heet een decennium.", "Dat is véél langer — dat heet een millennium.", "Iemand van 50 is nog lang geen eeuw oud. Hoeveel jaar is een eeuw dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Eeuw = 100", tekst: "Een **eeuw** duurt **100 jaar**. Van 1900 tot 2000 is precies één eeuw." }],
           woorden: [{ woord: "eeuw", uitleg: "Een tijd van honderd jaar." }],

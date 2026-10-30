@@ -11,3 +11,5 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - folder-bon-advertentie-po stap 1 vraag 1: brood 3 × €1,20 staat letterlijk in de bon-tabel van de uitleg (zelfde euvel als vraag 5, die wel is herschreven).
 - industriele-revolutie-po stap 1 vraag 4: afleider 'goed weer en veel zon' zwak.
 - topografieNederland.js regel ~2176: zelfde verradende Flevoland-hint bij een losse quizvraag buiten B1.
+- topografie-nederland-provincies-po stap 1 vraag 1: 'noordwesten' + Amsterdam maakt Noord-Holland raadbaar.
+- pubertijd-groei-po stap 1 vraag 3: opties telegramzinnen ('Ziekte die jongens krijgen').

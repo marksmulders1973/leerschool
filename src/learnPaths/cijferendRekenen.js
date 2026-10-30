@@ -77,8 +77,8 @@ const steps = [
         },
       },
       {
-        q: "Bij **23 + 14** (hoofdrekenen of cijferen?) — wat is logisch?",
-        options: ["Hoofdrekenen — eenvoudig","Cijferen op papier","Calculator","Maakt niks uit"],
+        q: "Je moet **23 + 14** uitrekenen. Welke manier is hier het handigst?",
+        options: ["Uit je hoofd rekenen","Cijferen op papier","Een rekenmachine gebruiken","Dat maakt niet uit"],
         answer: 0,
         wrongHints: [null,"Opschrijven kost hier meer tijd dan het oplevert. Hoe groot zijn de getallen?","Een rekenmachine pakken duurt langer dan deze som. Kun je 20 + 10 en 3 + 4 zelf?","Het maakt wél uit — kies de snelste manier per som."],
         uitlegPad: {
@@ -87,7 +87,7 @@ const steps = [
           theorie: "Bij kleine sommen (~tot 100) = hoofdrekenen sneller. Cijferen heeft pas zin bij grote getallen.",
           voorbeelden: [{ type: "klein", tekst: "5+3, 12+8, 23+14 — allemaal hoofdrekenen. 487+326 = cijferen." }],
           basiskennis: [{ onderwerp: "Kies wijs", uitleg: "Snelste methode = beste methode." }],
-          niveaus: { basis: "Klein = hoofd.", simpeler: "23+14 = 37, kun je direct in je hoofd. Cijferen op papier zou tijd verspillen.", nogSimpeler: "Klein = hoofd" },
+          niveaus: { basis: "Kleine getallen reken je uit je hoofd.", simpeler: "23 + 14 = 37, dat kun je direct in je hoofd. Cijferen op papier zou tijd verspillen.", nogSimpeler: "Kleine som? Dan uit je hoofd." },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.

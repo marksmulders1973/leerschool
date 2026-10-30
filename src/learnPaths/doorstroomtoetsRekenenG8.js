@@ -125,9 +125,9 @@ const steps = [
       },
       {
         q: "Vereenvoudig **6/9** zo ver mogelijk. Wat krijg je?",
-        options: ["2/3", "3/4", "6/9 al kleinst", "1/3"],
+        options: ["2/3", "3/4", "6/9 kan niet kleiner", "1/3"],
         answer: 0,
-        wrongHints: [null, "Reken terug: 3/4 is 9/12 — is dat hetzelfde als 6/9?", "Beide getallen kunnen door 3 gedeeld. Probeer.", "1/3 is 3/9 — dat is maar de helft van 6/9."],
+        wrongHints: [null, "Reken terug: 3/4 is 9/12 — is dat hetzelfde als 6/9?", "Het kan wél kleiner. Zoek een getal waar je 6 én 9 allebei door kunt delen.", "1/3 is 3/9 — dat is maar de helft van 6/9."],
         uitlegPad: {
           stappen: [{ titel: "Door GGD delen", tekst: "Vereenvoudigen = teller én noemer door zelfde getal delen. GGD (grootste gemene deler) van 6 en 9 is 3. Dus 6/9 = (6÷3)/(9÷3) = 2/3." }],
           woorden: [{ woord: "GGD", uitleg: "Grootste Gemene Deler. Grootste getal waar beide getallen door deelbaar zijn." }, { woord: "vereenvoudigen", uitleg: "Breuk in kleinste vorm zetten zonder waarde te veranderen." }],
@@ -141,7 +141,7 @@ const steps = [
         q: "Hoeveel is **1/4 in decimalen**?",
         options: ["0,25", "0,14", "0,4", "0,75"],
         answer: 0,
-        wrongHints: [null, "Een kwart is kleiner dan dat — deel 1 door 4.", "Dat lijkt op de breuk-cijfers; reken echt 1 ÷ 4 uit.", "Te groot — dat is drie kwart, niet één kwart."],
+        wrongHints: [null, "Dat zijn de cijfers 1 en 4 achter elkaar gezet, maar zo werkt een breuk niet. Hoeveel is een kwart van 1?", "Dat is vier tiende. Is een kwart hetzelfde als vier tiende?", "Te groot — dat is drie kwart, niet één kwart."],
         uitlegPad: {
           stappen: [
             { titel: "Breuk = deling", tekst: "Een breuk is eigenlijk een deling. 1/4 betekent: '1 gedeeld door 4'." },

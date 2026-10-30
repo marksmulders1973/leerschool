@@ -188,9 +188,9 @@ const steps = [
       },
       {
         q: "Wat is een **waterschap**?",
-        options: ["Overheid speciaal voor water", "Rivier die door de polder stroomt", "Soort dijk langs de zee", "Pretpark met glijbanen en water"],
+        options: ["Overheid speciaal voor water", "Rivier die door de polder stroomt", "Soort dijk langs de zee", "Bedrijf dat drinkwater levert"],
         answer: 0,
-        wrongHints: [null, "Is een waterschap zelf water, of iets anders?", "Geen dijk — al zorgt een waterschap wel voor dijken.", "Geen pretpark."],
+        wrongHints: [null, "Is een waterschap zelf water, of iets anders?", "Geen dijk — al zorgt een waterschap wel voor dijken.", "Drinkwater uit de kraan komt van een waterbedrijf. Een waterschap regelt iets anders: dijken, sloten en de waterstand."],
       },
       {
         q: "Welke is een beroemde **stormvloedkering**?",

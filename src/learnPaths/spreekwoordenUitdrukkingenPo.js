@@ -79,7 +79,7 @@ const steps = [
         q: "Wat is een **vergelijking**?",
         options: ["Een zin als 'zo sterk als een beer'", "Een zin als 'hij is een beer'", "Een zin als 'wie wat bewaart, heeft wat'", "Een zin als 'ik eet een appel'"],
         answer: 0,
-        wrongHints: [null, "Dat is een metafoor — er staat geen 'als'.", "Dat is een spreekwoord met een les.", "Dat is letterlijk taalgebruik."],
+        wrongHints: [null, "Hier wórdt hij een beer genoemd; er wordt niets naast elkaar gezet. Dat heet een metafoor.", "Dat is een spreekwoord met een les.", "Dat is letterlijk taalgebruik."],
       },
       {
         q: "*'Ze is een engel'* — wat voor soort beeldspraak is dit?",
@@ -179,7 +179,7 @@ const steps = [
           "Ik heb heel erge honger",
         ],
         answer: 0,
-        wrongHints: [null, "Kan dat echt? Denk figuurlijk.", "Gaat het over eten? Denk aan het kriebelige gevoel in je buik.", "Gaat het over eten? Denk aan het kriebelige gevoel in je buik."],
+        wrongHints: [null, "Kan dat echt? Denk figuurlijk.", "Buikpijn is letterlijk gedacht. Deze uitdrukking gaat over een gevoel, niet over eten.", "Honger gaat over eten. Deze uitdrukking gaat over een ander gevoel in je buik."],
         uitlegPad: {
           stappen: [
             {
@@ -283,7 +283,7 @@ const steps = [
         q: "*'Het loopt in de papieren.'* Wat betekent dit?",
         options: ["Het wordt duur", "Er is veel papier nodig", "Het gaat heel snel", "Het wordt makkelijk"],
         answer: 0,
-        wrongHints: [null, "Dat is letterlijk gedacht.", "Gaat het om snelheid? Denk aan papiergeld.", "Is het makkelijk als iets 'in de papieren loopt'? Denk aan papiergeld."],
+        wrongHints: [null, "Dat is letterlijk gedacht; een uitdrukking bedoel je figuurlijk.", "Snelheid heeft er niets mee te maken. 'Oplopen' betekent hier dat iets steeds méér wordt.", "'Oplopen' betekent hier dat iets steeds méér wordt. Is dat makkelijk?"],
         uitlegPad: {
           stappen: [
             {

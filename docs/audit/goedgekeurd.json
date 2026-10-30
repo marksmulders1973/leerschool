@@ -960,6 +960,49 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "cijferend-rekenen stap 1 vraag 1",
+  "hash": "798f2cc57dd5c4c9",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "cijferend-rekenen stap 1 vraag 2",
+  "hash": "834a521d949d800f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "cijferend-rekenen stap 1 vraag 3",
+  "hash": "fe976dc9411315a2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; vraagtekst rommelig '(hoofdrekenen of cijferen?) - wat is logisch?' en opties telegram ('Hoofdrekenen - eenvoudig', 'Calculator', 'Maakt niks uit'); niveaus 'Klein = hoofd.'"
+ },
+ {
+  "waar": "cijferend-rekenen stap 1 vraag 4",
+  "hash": "5efbdda25539a8c3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "cijferend-rekenen stap 1 vraag 5",
+  "hash": "91569b203bfef441",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "cijferend-rekenen stap 1 vraag 6",
+  "hash": "2298525cfd6df724",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "cijferend-rekenen stap 2 vraag 9",
   "hash": "a6e5512e2e1878df",
   "oordeel": "goed",
@@ -1002,6 +1045,49 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Uit algemene kennis te weten; \"Veel cola drinken om fit te blijven\" is bijna absurd."
+ },
+ {
+  "waar": "conclusies-trekken-po stap 1 vraag 1",
+  "hash": "74b96f40039fcc42",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 1 vraag 2",
+  "hash": "0c2c57fd1755af05",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 1 vraag 3",
+  "hash": "f8ecf8146eaa040d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 1 vraag 4",
+  "hash": "a57667624f8beac8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; hint zwembad 'geen paraplu nodig - of juist wel?' is verwarrend voor een kind"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 1 vraag 5",
+  "hash": "2642ac6013fd8586",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 1 vraag 6",
+  "hash": "e448243c3bf395ca",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "conclusies-trekken-po stap 4 vraag 7",
@@ -1219,6 +1305,93 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 1",
+  "hash": "e8813cbc04324c46",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord en hints kloppen; niveaus simpeler/nogSimpeler waren telegram ('Eind-klank gelijk = rijm.')"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 2",
+  "hash": "b6a71da0f9b6528e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord en hints kloppen; niveaus telegram ('Mooie Mette: M-M-M. Begin-rijm.')"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 3",
+  "hash": "edd7a583092f6ead",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord en hints kloppen; niveaus telegram ('Paren rijmen = AABB.')"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 4",
+  "hash": "175424523a4f2baf",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 5",
+  "hash": "88c6a0df6ab95253",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 6",
+  "hash": "3af5957d89fde358",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 1 vraag 10",
+  "hash": "987f1f01d26d175a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 1 vraag 5",
+  "hash": "6dd136670a6d189a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 1 vraag 6",
+  "hash": "6907ae3cd80cf5b6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 1 vraag 7",
+  "hash": "c93f6bbb211b1e23",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 1 vraag 8",
+  "hash": "91c1bae3332d9e0e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 1 vraag 9",
+  "hash": "e0c0195a60519112",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "dieren-seizoenen-natuur stap 2 vraag 1",
   "hash": "1971b580f5cf0e40",
   "oordeel": "twijfel",
@@ -1431,6 +1604,35 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 6",
+  "hash": "525fc11dac328132",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord 0,25 klopt; hints 'deel 1 door 4' / 'reken echt 1 : 4 uit' laten de som direct uitkomen op het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 7",
+  "hash": "b5cf76f8c036d067",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 8",
+  "hash": "8326b8571c9c4f9d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 9",
+  "hash": "8cf2f317289d8cb0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 10",
@@ -2110,11 +2312,46 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 1",
+  "hash": "e608a9c9247de93f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 3",
+  "hash": "88a226af029c20c9",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 3",
   "hash": "27fafb2db3813a8c",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 6",
+  "hash": "f80fa583393bab8a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 7",
+  "hash": "498a00eedb2e131f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 8",
+  "hash": "ccbefd360acbdb51",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "getallen-tot-20-po stap 1 vraag 1",
@@ -3787,6 +4024,58 @@
   "hash": "391bfd0e821c15c5",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 1 vraag 1",
+  "hash": "db6aa83c1f92f5ef",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 1 vraag 2",
+  "hash": "26ea142117908458",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; hint wervelkolom en niveau simpeler waren telegramzinnen (startset: alleen hints/niveaus)"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 1 vraag 3",
+  "hash": "41a2c8dd522ab865",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; twee wrongHints waren telegramzinnen (startset: alleen hints aangepast)"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 1 vraag 4",
+  "hash": "68d2fa0c4749b391",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 2 vraag 1",
+  "hash": "1f53bfefff7ecac7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 2 vraag 2",
+  "hash": "5a4693933999e852",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; hints 'Maag doet dat.' en 'Niet de taak van het hart.' waren telegram en nietszeggend (startset: alleen hints)"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 2 vraag 3",
+  "hash": "e5eb7f787b24d330",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -5474,6 +5763,51 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 3",
+  "hash": "129b69aedb157e6e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; hint 'er staat geen als' omschrijft het kenmerk van het goede antwoord (de enige optie met 'als')"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 4",
+  "hash": "4e1e02e581a630e7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 5",
+  "hash": "02ec85a9f9c29c52",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 6",
+  "hash": "f19c4bd042548222",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; hints voor buikpijn en honger waren identiek en 'kriebelige gevoel' omschrijft het antwoord bijna"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 7",
+  "hash": "1d1a6f50317ef92e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 8",
+  "hash": "7cb04b40a1bfbaf6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; 'Denk aan papiergeld' (2x) wijst vrijwel direct naar 'duur'"
+ },
+ {
   "waar": "spreekwoorden-uitdrukkingen-po stap 3 vraag 4",
   "hash": "49545bd0bf393839",
   "oordeel": "twijfel",
@@ -6405,6 +6739,57 @@
   "oordeel": "goed",
   "bron": "wereld-4 dekkende blinde controle 27 okt",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 1",
+  "hash": "a9004c7043005151",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord en hints kloppen; opties zijn telegramzinnen ('Dijk hoger dan duin altijd') - startsetvraag, opties alleen bij echte fout aanpassen"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 2",
+  "hash": "e95541fcb62d84e4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 3",
+  "hash": "0b45be0cf65b9f06",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt; afleider 'Pretpark met glijbanen en water' absurd + hint 'Geen pretpark.' nietszeggend"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 4",
+  "hash": "fb4d724cb126da0c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 5",
+  "hash": "ef0e2922a598254d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 6",
+  "hash": "ddcfc655954b5a1d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 2 vraag 7",
+  "hash": "1a4d4de8d78a8a24",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
