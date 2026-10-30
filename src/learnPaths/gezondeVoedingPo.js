@@ -150,10 +150,10 @@ const steps = [
         wrongHints: [null, "Vis is gezond, maar het advies is niet elke dag.", "Drie keer per week is meer dan het advies van de Schijf van Vijf.", "Eens per maand is minder dan het advies van de Schijf van Vijf."],
       },
       {
-        q: "Welke maaltijd moet je niet overslaan, omdat hij je **energie voor de ochtend op school** geeft?",
+        q: "Na een nacht slapen heeft je lichaam al uren niets gekregen. Welke maaltijd vult je **energie** dan weer aan, zodat je op school goed kunt opletten?",
         options: ["Ontbijt", "Lunch", "Avondeten", "Snack"],
         answer: 0,
-        wrongHints: [null, "Die eet je pas halverwege de schooldag.", "Die eet je pas na school.", "Een tussendoortje is geen hoofdmaaltijd."],
+        wrongHints: [null, "Die eet je pas halverwege de schooldag; dan heb je al uren les gehad.", "Die eet je pas na school, aan het einde van de dag.", "Een tussendoortje is geen hoofdmaaltijd."],
       },
       {
         q: "Wat is **vegetarisch**?",

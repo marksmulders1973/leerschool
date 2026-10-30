@@ -775,11 +775,25 @@
   "reden": "Antwoord 13 klopt. De hint bij B zegt 'Vanaf 15 mag je zwaarder werk doen, zoals vakken vullen'. Volgens de Rijksoverheid mogen 13-14-jarigen al helpen bij vakken vullen, en vanaf 15 mag dat zelfstand"
  },
  {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 2",
+  "hash": "ccc8ad37e2e1dd4f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 3",
   "hash": "f90afa8f95aa5c47",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 4",
+  "hash": "1d07057dc0735c13",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "breuken-po stap 4 vraag 1",
@@ -1203,6 +1217,30 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 2 vraag 1",
+  "hash": "1971b580f5cf0e40",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt. Hints waren etiketten ('Haai is een vis.') zonder denkfout; niveaus telegram ('walvis.', 'Haai=vis, ...'). Startsetvraag: alleen hints/niveaus aangepast."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 2 vraag 2",
+  "hash": "dd50b8cc00df6e77",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt. Hints 1-2 waren telegram ('Eieren = vogels, vissen, reptielen.'); niveaus telegram. Startsetvraag: alleen hints/niveaus aangepast."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 6 vraag 2",
+  "hash": "421cfc81fff258b3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt. Hints waren kaal ('Kleur is iets anders.') zonder denkfout te benoemen; niveaus telegramzinnen met pijlen."
  },
  {
   "waar": "dierenklassen-po stap 2 vraag 1",
@@ -1738,6 +1776,13 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "feit-mening-po stap 1 vraag 2",
+  "hash": "5bf65ca12a0328fe",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "feit-mening-po stap 3 vraag 1",
@@ -2346,6 +2391,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "gezonde-voeding-po stap 2 vraag 4",
+  "hash": "f4485326902b77ff",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "godsdiensten-culturen-po stap 1 vraag 1",
   "hash": "6d3ce94b9a6d19ad",
   "oordeel": "goed",
@@ -2843,19 +2895,19 @@
  },
  {
   "waar": "kaartlezen-po stap 2 vraag 2",
-  "hash": "93658b15d03503e5",
+  "hash": "446cb4be14788834",
   "oordeel": "twijfel",
-  "bron": "wereld-4 dekkende blinde controle 27 okt",
-  "datum": "2026-10-27",
-  "reden": "Hint bij 'Ten zuiden' is een tweekeuze ('noord of zuid?') nadat het kind zuid koos: geeft het antwoord feitelijk weg."
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Geen kaart nodig ('boven' staat in de vraag); antwoord en hints kloppen. Niveaus waren telegram met hoofdletters en pijl. Startsetvraag: alleen niveaus aangepast."
  },
  {
   "waar": "kaartlezen-po stap 2 vraag 3",
-  "hash": "923e07610ec8282a",
+  "hash": "5f4ae9556cc51e23",
   "oordeel": "twijfel",
-  "bron": "wereld-4 steekproef 8 (27 okt)",
-  "datum": "2026-10-27",
-  "reden": "Zelfde punt als 21: 'op een kaart' zonder 'noord is boven', terwijl lesstof waarschuwt dat dat niet altijd zo is."
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Geen kaart nodig (begripsvraag over de kompasroos); antwoord en hints kloppen. Niveaus waren telegram ('Rechts (=O) + onder (=Z) = Zuidoost'). Startsetvraag: alleen niveaus aangepast."
  },
  {
   "waar": "kaartlezen-po stap 2 vraag 4",
@@ -3587,6 +3639,14 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 2 vraag 3",
+  "hash": "c93e55ce27cfd843",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (Noord-Vietnam; Saigon 1975; Frankrijk 1954 Dien Bien Phu); hints feitelijk juist. Niveau basis was telegramzin."
  },
  {
   "waar": "kritisch-denken-po stap 4 vraag 3",
@@ -4461,6 +4521,37 @@
   "hash": "c8323875030cd39f",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "pubertijd-groei-po stap 1 vraag 1",
+  "hash": "4813cea836f3cc4f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (meisjes gemiddeld ~11 jaar); niveaus simpeler/nogSimpeler waren telegramzinnen. Startsetvraag: opties ongemoeid."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 1 vraag 2",
+  "hash": "d1a6a4f8cce4feba",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus waren telegramzinnen ('Hormonen = signaal-stoffen', 'Lichaams-signalen.')."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 1 vraag 3",
+  "hash": "05a36e9f390c0d9e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, hints benoemen de denkfout zonder het antwoord. Opties zijn korte telegramzinnen ('Ziekte die jongens krijgen'); startsetvraag, dus opties niet aangeraakt."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 1 vraag 4",
+  "hash": "7be102acc02d4da8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -6109,6 +6200,14 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "topografie-nederland-provincies-po stap 1 vraag 1",
+  "hash": "7f4e16f74443cd0f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'noordwesten' en Amsterdam in de vraag maken Noord-Holland erg raadbaar, maar het antwoord klopt en hints/niveaus zijn in orde. Startsetvraag, al blind nagekeken: vraagtekst bewust niet aangeraakt."
+ },
+ {
   "waar": "trappen-van-vergelijking-po stap 1 vraag 5",
   "hash": "348e451fc314b9bd",
   "oordeel": "goed",
@@ -6172,6 +6271,13 @@
   "oordeel": "goed",
   "bron": "wereld-4 dekkende blinde controle 27 okt",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 1 vraag 3",
+  "hash": "44cd054c9347f0f7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "vulkanen-po stap 1 vraag 4",
@@ -6308,11 +6414,27 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "waterkringloop-po stap 1 vraag 2",
+  "hash": "fe88728f3167f61e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (condensatie/neerslag/smelten); niveaus waren telegram met '='-notatie. Opties met pijlen zijn consequent; startsetvraag, dus ongemoeid."
+ },
+ {
   "waar": "waterkringloop-po stap 1 vraag 3",
   "hash": "66a136df470fd2ad",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "waterkringloop-po stap 1 vraag 4",
+  "hash": "f3baf68f9044119f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord (~9 dagen verblijftijd) en hints kloppen; optiestijl was ongelijk ('~8-10 dagen' naast 'Ongeveer een jaar' en '1 uur')."
  },
  {
   "waar": "werelddelen-landen-po stap 1 vraag 1",
@@ -7478,6 +7600,30 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordsoorten-po stap 1 vraag 4",
+  "hash": "432fbfe07c76b804",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveau basis was telegramzin ('Lisa = eigennaam.')."
+ },
+ {
+  "waar": "woordsoorten-po stap 1 vraag 5",
+  "hash": "5423982791f94a9a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveau basis was telegramzin met afkorting ('park = zelfst. naamwoord.')."
+ },
+ {
+  "waar": "woordsoorten-po stap 1 vraag 6",
+  "hash": "846bea38c7b9ed61",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord (juf + boek = 2) en hints kloppen; niveau basis was telegramzin."
  },
  {
   "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 6",

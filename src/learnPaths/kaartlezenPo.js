@@ -295,7 +295,7 @@ const steps = [
           theorie: "Richting-aanduiding: hoger op kaart = noordelijker.",
           voorbeelden: [{ type: "feit", tekst: "Amsterdam (hoger op kaart) ligt ten noorden van Rotterdam (lager)." }],
           basiskennis: [{ onderwerp: "NL-feit", uitleg: "Amsterdam (provincie Noord-Holland) ligt boven Rotterdam (Zuid-Holland)." }],
-          niveaus: { basis: "Ten noorden van Rotterdam.", simpeler: "Amsterdam BOVEN Rotterdam → Amsterdam ligt TEN NOORDEN van Rotterdam.", nogSimpeler: "Noord" },
+          niveaus: { basis: "Amsterdam ligt ten noorden van Rotterdam.", simpeler: "Boven op de kaart is noord. Amsterdam staat boven Rotterdam, dus Amsterdam ligt ten noorden van Rotterdam.", nogSimpeler: "Noord" },
         },
       },
       {
@@ -309,7 +309,7 @@ const steps = [
           theorie: "Diagonale hoeken: NO=rechts-boven, ZO=rechts-onder, ZW=links-onder, NW=links-boven.",
           voorbeelden: [{ type: "kompas", tekst: "NW | NO. ZW | ZO. (rechts-onder = ZO)." }],
           basiskennis: [{ onderwerp: "Volgorde", uitleg: "Verticaal eerst (Z/N), dan horizontaal (O/W). 'Zuid' + 'Oost' = ZuidOost." }],
-          niveaus: { basis: "Zuidoost.", simpeler: "Rechts (=O) + onder (=Z) = Zuidoost (ZO).", nogSimpeler: "ZO" },
+          niveaus: { basis: "Rechts-onder op de kaart is zuidoost.", simpeler: "Rechts is oost en onder is zuid. Samen is dat zuidoost (ZO).", nogSimpeler: "ZO" },
         },
       },
       {

@@ -173,7 +173,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Les van Vietnam", uitleg: "Een grote militaire macht kan een oorlog verliezen tegen een kleinere tegenstander die volk + tijd + thuisvoordeel heeft." }],
           niveaus: {
-            basis: "Vietnam-oorlog gewonnen door Noord-Vietnam (communistisch).",
+            basis: "De Vietnam-oorlog is gewonnen door Noord-Vietnam, het communistische noorden.",
             simpeler: "De VS verloor de Vietnam-oorlog. Noord-Vietnam veroverde Saigon in 1975 en verenigde het land.",
             nogSimpeler: "Noord-Vietnam won, VS trok zich terug.",
           },

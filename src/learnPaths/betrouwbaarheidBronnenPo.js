@@ -198,16 +198,16 @@ const steps = [
         q: "Een website zegt: 'Ons product is het allerbeste ter wereld!' Is dat betrouwbare informatie?",
         options: [
           "nee, het is reclame",
-          "ja, het staat op internet",
+          "nee, want op internet is nooit iets waar",
           "ja, want het klinkt zeker",
           "ja, het is een feit",
         ],
         answer: 0,
-        wrongHints: [null, "Niet alles op internet is waar.", "Zeker klinken maakt iets niet waar.", "'Allerbeste' kun je niet bewijzen — geen feit."],
+        wrongHints: [null, "Op internet staat ook veel dat wél klopt. Kijk liever naar wie dit zegt: wat wil deze website van je?", "Zeker klinken maakt iets niet waar.", "'Allerbeste' kun je niet bewijzen — geen feit."],
         uitlegPad: {
           stappen: [{ titel: "Verkopen = reclame", tekst: "De site wil het product verkopen en gebruikt overdreven woorden. Dat is reclame, geen betrouwbaar feit." }],
           niveaus: {
-            basis: "'Het allerbeste!' van de verkoper zelf = reclame.",
+            basis: "Als een verkoper zelf zegt dat zijn product het allerbeste is, is dat reclame en geen feit.",
             simpeler: "Wil deze bron je iets verkopen? Dan is het reclame.",
             nogSimpeler: "Is 'wij zijn de beste' een feit of reclame?",
           },

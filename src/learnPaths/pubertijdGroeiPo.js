@@ -39,8 +39,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Meisjes ~11, jongens ~12-13. Geen vast moment — iedereen eigen tempo." }],
           niveaus: {
             basis: "Puberteit begint bij meisjes gemiddeld rond 11 jaar.",
-            simpeler: "Meisjes 8-13 jaar, jongens 9-14 jaar.",
-            nogSimpeler: "Meisjes ~11, jongens iets later.",
+            simpeler: "Bij meisjes begint de puberteit meestal tussen 8 en 13 jaar, bij jongens meestal tussen 9 en 14 jaar.",
+            nogSimpeler: "Meisjes beginnen gemiddeld rond 11 jaar, jongens iets later.",
           },
         },
       },
@@ -66,9 +66,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Hormoon = boodschapper in je bloed. Je lichaam maakt het zelf." }],
           niveaus: {
-            basis: "Hormonen = signaal-stoffen in het lichaam.",
-            simpeler: "Ze zeggen organen wat ze moeten doen.",
-            nogSimpeler: "Lichaams-signalen.",
+            basis: "Hormonen zijn signaalstoffen die je lichaam zelf maakt en via het bloed rondstuurt.",
+            simpeler: "Hormonen vertellen je organen wat ze moeten doen, bijvoorbeeld groeien.",
+            nogSimpeler: "Hormonen zijn boodschappers in je bloed.",
           },
         },
       },

@@ -100,7 +100,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lisa = eigennaam.",
+            basis: "Lisa is een eigennaam, en een eigennaam is een zelfstandig naamwoord.",
             simpeler: "Lisa is een persoon. Namen van personen zijn zelfstandige naamwoorden.",
             nogSimpeler: "Lisa",
           },
@@ -138,7 +138,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "park = zelfst. naamwoord.",
+            basis: "Park is een zelfstandig naamwoord: je kunt er 'het' voor zetten.",
             simpeler: "Het park is een plaats. 'Het park' kan, dus zelfstandig naamwoord.",
             nogSimpeler: "Park",
           },
@@ -176,7 +176,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "juf + boek = 2.",
+            basis: "Juf en boek zijn zelfstandige naamwoorden, dus het zijn er twee.",
             simpeler: "Juf is een persoon, boek is een ding. Dat zijn er twee.",
             nogSimpeler: "Twee",
           },

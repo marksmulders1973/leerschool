@@ -20,7 +20,7 @@ const steps = [
         q: "Hoeveel procent van al het water op aarde is **zoet** water?",
         options: ["~3%", "~30%", "~97%", "~10%"],
         answer: 0,
-        wrongHints: [null, "Het is veel minder. Denk aan hoe groot de zeeën en oceanen zijn.", "97% is juist het zoute water in zeeën en oceanen.", "Zoveel is het niet. Denk aan hoe groot de zeeën en oceanen zijn."],
+        wrongHints: [null, "Het is veel minder. Denk aan hoe groot de zeeën en oceanen zijn.", "Dat is bijna al het water op aarde. Is het meeste water op aarde zoet of zout?", "Zoveel is het niet. Denk aan hoe groot de zeeën en oceanen zijn."],
         uitlegPad: {
           stappen: [
             { titel: "97% zout / 3% zoet", tekst: "Van al het water op aarde is **97% ZOUT** water (zeeën + oceanen). Slechts **3% is ZOET** water — dat is waar we van drinken, koken, douchen." },
@@ -38,8 +38,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 3% zoet (slechts!). 97% is zout. Wij zijn allemaal afhankelijk van die kleine 3%." }],
           niveaus: {
-            basis: "~3% zoet water.",
-            simpeler: "97% van aarde-water = zout. Slechts 3% is zoet (drinkbaar).",
+            basis: "Ongeveer 3% van al het water op aarde is zoet water.",
+            simpeler: "Bijna al het water op aarde is zout zeewater. Maar een heel klein deel is zoet, zoals in rivieren, meren en ijs.",
             nogSimpeler: "3%",
           },
         },
@@ -67,9 +67,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Verdamping = water wordt gas (door warmte). Condensatie = gas wordt water (door afkoeling). Omgekeerde processen." }],
           niveaus: {
-            basis: "Verdamping = vloeibaar water wordt damp/gas.",
-            simpeler: "Natte plas droogt op door zon = verdampt.",
-            nogSimpeler: "Water → gas.",
+            basis: "Verdamping is dat vloeibaar water verandert in damp, een gas.",
+            simpeler: "Een natte plas droogt op in de zon: het water verdampt en gaat als damp de lucht in.",
+            nogSimpeler: "Water wordt gas.",
           },
         },
       },
@@ -81,7 +81,7 @@ const steps = [
       },
       {
         q: "Hoe lang blijft water **gemiddeld** in de lucht?",
-        options: ["~8-10 dagen", "1 uur", "Eeuwen", "Ongeveer een jaar"],
+        options: ["Ongeveer 8-10 dagen", "Ongeveer 1 uur", "Eeuwen", "Ongeveer een jaar"],
         answer: 0,
         wrongHints: [null, "Zo snel regent damp meestal niet uit. Het duurt wat langer.", "Eeuwen kan water in de oceaan blijven, maar niet in de lucht.", "Zo lang blijft water niet in de lucht; het regent er veel eerder uit."],
       },
