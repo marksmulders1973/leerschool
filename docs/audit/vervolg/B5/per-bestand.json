@@ -1,0 +1,5302 @@
+{
+ "src/learnPaths/volgordeBewerkingen.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 181,
+   "waar": "volgorde-bewerkingen stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 182,
+   "waar": "volgorde-bewerkingen stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 183,
+   "waar": "volgorde-bewerkingen stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 184,
+   "waar": "volgorde-bewerkingen stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 185,
+   "waar": "volgorde-bewerkingen stap 2 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 209,
+   "waar": "volgorde-bewerkingen stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 210,
+   "waar": "volgorde-bewerkingen stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 211,
+   "waar": "volgorde-bewerkingen stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 212,
+   "waar": "volgorde-bewerkingen stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 213,
+   "waar": "volgorde-bewerkingen stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 214,
+   "waar": "volgorde-bewerkingen stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 215,
+   "waar": "volgorde-bewerkingen stap 1 vraag 7",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/breukenPo.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 186,
+   "waar": "breuken-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 187,
+   "waar": "breuken-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 188,
+   "waar": "breuken-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 189,
+   "waar": "breuken-po stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 190,
+   "waar": "breuken-po stap 3 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 191,
+   "waar": "breuken-po stap 3 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 192,
+   "waar": "breuken-po stap 3 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 201,
+   "waar": "breuken-po stap 2 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 202,
+   "waar": "breuken-po stap 2 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 203,
+   "waar": "breuken-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 204,
+   "waar": "breuken-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 205,
+   "waar": "breuken-po stap 2 vraag 5",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/delenPo.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 193,
+   "waar": "delen-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 194,
+   "waar": "delen-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 195,
+   "waar": "delen-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 196,
+   "waar": "delen-po stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 197,
+   "waar": "delen-po stap 3 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 198,
+   "waar": "delen-po stap 3 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 199,
+   "waar": "delen-po stap 3 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 214,
+   "waar": "delen-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 215,
+   "waar": "delen-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 216,
+   "waar": "delen-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 217,
+   "waar": "delen-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 218,
+   "waar": "delen-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 219,
+   "waar": "delen-po stap 2 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 220,
+   "waar": "delen-po stap 2 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/geldRekenen.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 200,
+   "waar": "geld-rekenen stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 201,
+   "waar": "geld-rekenen stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 202,
+   "waar": "geld-rekenen stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 203,
+   "waar": "geld-rekenen stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 204,
+   "waar": "geld-rekenen stap 3 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 205,
+   "waar": "geld-rekenen stap 3 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 206,
+   "waar": "geld-rekenen stap 3 vraag 9",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/getallenTot20Po.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 207,
+   "waar": "getallen-tot-20-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 208,
+   "waar": "getallen-tot-20-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 209,
+   "waar": "getallen-tot-20-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 210,
+   "waar": "getallen-tot-20-po stap 3 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 211,
+   "waar": "getallen-tot-20-po stap 3 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/klokkijken.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 212,
+   "waar": "klokkijken stap 3 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 213,
+   "waar": "klokkijken stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 214,
+   "waar": "klokkijken stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 215,
+   "waar": "klokkijken stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 216,
+   "waar": "klokkijken stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 217,
+   "waar": "klokkijken stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 218,
+   "waar": "klokkijken stap 3 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/negatieveGetallenPo.js": [
+  {
+   "set": "5|rekenen",
+   "nr": 219,
+   "waar": "negatieve-getallen-po stap 3 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|rekenen",
+   "nr": 220,
+   "waar": "negatieve-getallen-po stap 3 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 212,
+   "waar": "negatieve-getallen-po stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 213,
+   "waar": "negatieve-getallen-po stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 214,
+   "waar": "negatieve-getallen-po stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 215,
+   "waar": "negatieve-getallen-po stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 216,
+   "waar": "negatieve-getallen-po stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 217,
+   "waar": "negatieve-getallen-po stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 218,
+   "waar": "negatieve-getallen-po stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 219,
+   "waar": "negatieve-getallen-po stap 1 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 220,
+   "waar": "negatieve-getallen-po stap 1 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/woordenschatPo.js": [
+  {
+   "set": "5|taal",
+   "nr": 181,
+   "waar": "woordenschat-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 182,
+   "waar": "woordenschat-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 183,
+   "waar": "woordenschat-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 184,
+   "waar": "woordenschat-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 185,
+   "waar": "woordenschat-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 181,
+   "waar": "woordenschat-po stap 3 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 182,
+   "waar": "woordenschat-po stap 3 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 183,
+   "waar": "woordenschat-po stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 184,
+   "waar": "woordenschat-po stap 3 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 185,
+   "waar": "woordenschat-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 186,
+   "waar": "woordenschat-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 187,
+   "waar": "woordenschat-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 188,
+   "waar": "woordenschat-po stap 3 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/woordsoortenPo.js": [
+  {
+   "set": "5|taal",
+   "nr": 186,
+   "waar": "woordsoorten-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 187,
+   "waar": "woordsoorten-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 188,
+   "waar": "woordsoorten-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 189,
+   "waar": "woordsoorten-po stap 3 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 190,
+   "waar": "woordsoorten-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 191,
+   "waar": "woordsoorten-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 192,
+   "waar": "woordsoorten-po stap 3 vraag 7",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/dichtenPoezieRijmenPo.js": [
+  {
+   "set": "5|taal",
+   "nr": 189,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 190,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 191,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 192,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 193,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 194,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 195,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 196,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 197,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 198,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 199,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 200,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 201,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 202,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 203,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 15",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 204,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 205,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 206,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 207,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 208,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 209,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 21",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 210,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 22",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 211,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 23",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 212,
+   "waar": "dichten-poezie-rijmen-po stap 5 vraag 24",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 193,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 194,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 195,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 196,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 197,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 198,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 199,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 200,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 201,
+   "waar": "dichten-poezie-rijmen-po stap 4 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|taal",
+   "nr": 181,
+   "waar": "dichten-poezie-rijmen-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|taal",
+   "nr": 182,
+   "waar": "dichten-poezie-rijmen-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|taal",
+   "nr": 183,
+   "waar": "dichten-poezie-rijmen-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|taal",
+   "nr": 184,
+   "waar": "dichten-poezie-rijmen-po stap 2 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|taal",
+   "nr": 185,
+   "waar": "dichten-poezie-rijmen-po stap 2 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/interpunctiePo.js": [
+  {
+   "set": "5|taal",
+   "nr": 213,
+   "waar": "interpunctie-po stap 5 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 214,
+   "waar": "interpunctie-po stap 5 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 215,
+   "waar": "interpunctie-po stap 5 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 216,
+   "waar": "interpunctie-po stap 5 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 217,
+   "waar": "interpunctie-po stap 5 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 218,
+   "waar": "interpunctie-po stap 5 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|taal",
+   "nr": 219,
+   "waar": "interpunctie-po stap 5 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 211,
+   "waar": "interpunctie-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 212,
+   "waar": "interpunctie-po stap 4 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 213,
+   "waar": "interpunctie-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 214,
+   "waar": "interpunctie-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 215,
+   "waar": "interpunctie-po stap 4 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 216,
+   "waar": "interpunctie-po stap 4 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/schemasStappenplannenPo.js": [
+  {
+   "set": "5|taal",
+   "nr": 220,
+   "waar": "schemas-stappenplannen-po stap 5 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 217,
+   "waar": "schemas-stappenplannen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 218,
+   "waar": "schemas-stappenplannen-po stap 4 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 219,
+   "waar": "schemas-stappenplannen-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|taal",
+   "nr": 220,
+   "waar": "schemas-stappenplannen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 196,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 197,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 198,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 199,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 200,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 201,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 202,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 203,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 204,
+   "waar": "schemas-stappenplannen-po stap 2 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/begrijpendLezenStrategie.js": [
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 181,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 182,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 183,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 184,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 185,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 15",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 186,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 187,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 188,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 189,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 190,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 191,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 21",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 192,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 22",
+   "goedgekeurd": false
+  },
+  {
+   "set": "5|begrijpend-lezen",
+   "nr": 193,
+   "waar": "begrijpend-lezen-strategie stap 7 vraag 23",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 185,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 186,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 187,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 208,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 209,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 210,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 220,
+   "waar": "begrijpend-lezen-strategie stap 3 vraag 4",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/meetkundeBouwsels.js": [
+  {
+   "set": "6|rekenen",
+   "nr": 181,
+   "waar": "meetkunde-bouwsels stap 1 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 216,
+   "waar": "meetkunde-bouwsels stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 217,
+   "waar": "meetkunde-bouwsels stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 218,
+   "waar": "meetkunde-bouwsels stap 1 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 219,
+   "waar": "meetkunde-bouwsels stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 220,
+   "waar": "meetkunde-bouwsels stap 1 vraag 5",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/winstRekenenPo.js": [
+  {
+   "set": "6|rekenen",
+   "nr": 182,
+   "waar": "winst-rekenen-po stap 1 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 183,
+   "waar": "winst-rekenen-po stap 1 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 184,
+   "waar": "winst-rekenen-po stap 1 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 185,
+   "waar": "winst-rekenen-po stap 1 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 186,
+   "waar": "winst-rekenen-po stap 1 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 187,
+   "waar": "winst-rekenen-po stap 1 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 188,
+   "waar": "winst-rekenen-po stap 1 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 189,
+   "waar": "winst-rekenen-po stap 1 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 190,
+   "waar": "winst-rekenen-po stap 1 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 191,
+   "waar": "winst-rekenen-po stap 1 vraag 10",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/belastingPo.js": [
+  {
+   "set": "6|rekenen",
+   "nr": 192,
+   "waar": "belasting-po stap 2 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 193,
+   "waar": "belasting-po stap 2 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 194,
+   "waar": "belasting-po stap 2 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 195,
+   "waar": "belasting-po stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 196,
+   "waar": "belasting-po stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 197,
+   "waar": "belasting-po stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 198,
+   "waar": "belasting-po stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 199,
+   "waar": "belasting-po stap 2 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 200,
+   "waar": "belasting-po stap 2 vraag 9",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/cijferendRekenen.js": [
+  {
+   "set": "6|rekenen",
+   "nr": 206,
+   "waar": "cijferend-rekenen stap 2 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 207,
+   "waar": "cijferend-rekenen stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 208,
+   "waar": "cijferend-rekenen stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 209,
+   "waar": "cijferend-rekenen stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 210,
+   "waar": "cijferend-rekenen stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 211,
+   "waar": "cijferend-rekenen stap 2 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 212,
+   "waar": "cijferend-rekenen stap 2 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|rekenen",
+   "nr": 213,
+   "waar": "cijferend-rekenen stap 2 vraag 10",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/informatiebronnenPo.js": [
+  {
+   "set": "6|taal",
+   "nr": 202,
+   "waar": "informatiebronnen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 203,
+   "waar": "informatiebronnen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 204,
+   "waar": "informatiebronnen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 205,
+   "waar": "informatiebronnen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 206,
+   "waar": "informatiebronnen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 207,
+   "waar": "informatiebronnen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 208,
+   "waar": "informatiebronnen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 209,
+   "waar": "informatiebronnen-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|taal",
+   "nr": 210,
+   "waar": "informatiebronnen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/begrijpendLezenTekstenPo.js": [
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 181,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 182,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 183,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 184,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 10",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 198,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 199,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 200,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 201,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 202,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 203,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 204,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 205,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 206,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 207,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 10",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 210,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 211,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 212,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 213,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 214,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 215,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 216,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 217,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 218,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 219,
+   "waar": "begrijpend-lezen-teksten-po stap 3 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/briefEmailLezenPo.js": [
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 188,
+   "waar": "brief-email-lezen-po stap 3 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 189,
+   "waar": "brief-email-lezen-po stap 3 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 190,
+   "waar": "brief-email-lezen-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 191,
+   "waar": "brief-email-lezen-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 192,
+   "waar": "brief-email-lezen-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 193,
+   "waar": "brief-email-lezen-po stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 194,
+   "waar": "brief-email-lezen-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 195,
+   "waar": "brief-email-lezen-po stap 3 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 216,
+   "waar": "brief-email-lezen-po stap 3 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 217,
+   "waar": "brief-email-lezen-po stap 3 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 218,
+   "waar": "brief-email-lezen-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 219,
+   "waar": "brief-email-lezen-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 220,
+   "waar": "brief-email-lezen-po stap 3 vraag 5",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/nieuwsberichtLezenPo.js": [
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 196,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 197,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 198,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 199,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 200,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 201,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 202,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 203,
+   "waar": "nieuwsbericht-lezen-po stap 3 vraag 8",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/feitenDetailsOpzoekenPo.js": [
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 204,
+   "waar": "feiten-details-opzoeken-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 205,
+   "waar": "feiten-details-opzoeken-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 206,
+   "waar": "feiten-details-opzoeken-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 207,
+   "waar": "feiten-details-opzoeken-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 208,
+   "waar": "feiten-details-opzoeken-po stap 3 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 209,
+   "waar": "feiten-details-opzoeken-po stap 3 vraag 8",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/tekstverbandenOorzaakGevolgPo.js": [
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 210,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 211,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 212,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 213,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 214,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 215,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 216,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 217,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 218,
+   "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 9",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/samenvattenHoofdgedachtePo.js": [
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 219,
+   "waar": "samenvatten-hoofdgedachte-po stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|begrijpend-lezen",
+   "nr": 220,
+   "waar": "samenvatten-hoofdgedachte-po stap 3 vraag 4",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/recyclenAfvalPo.js": [
+  {
+   "set": "6|natuur",
+   "nr": 181,
+   "waar": "recyclen-afval-po stap 4 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 182,
+   "waar": "recyclen-afval-po stap 4 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 183,
+   "waar": "recyclen-afval-po stap 4 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 184,
+   "waar": "recyclen-afval-po stap 4 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 185,
+   "waar": "recyclen-afval-po stap 4 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 186,
+   "waar": "recyclen-afval-po stap 4 vraag 21",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 187,
+   "waar": "recyclen-afval-po stap 4 vraag 22",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 188,
+   "waar": "recyclen-afval-po stap 4 vraag 23",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 189,
+   "waar": "recyclen-afval-po stap 4 vraag 24",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 190,
+   "waar": "recyclen-afval-po stap 4 vraag 25",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|natuur",
+   "nr": 191,
+   "waar": "recyclen-afval-po stap 4 vraag 26",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 192,
+   "waar": "recyclen-afval-po stap 4 vraag 27",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 193,
+   "waar": "recyclen-afval-po stap 4 vraag 28",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 191,
+   "waar": "recyclen-afval-po stap 4 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 192,
+   "waar": "recyclen-afval-po stap 4 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 193,
+   "waar": "recyclen-afval-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 194,
+   "waar": "recyclen-afval-po stap 4 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 195,
+   "waar": "recyclen-afval-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 196,
+   "waar": "recyclen-afval-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 197,
+   "waar": "recyclen-afval-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 198,
+   "waar": "recyclen-afval-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 199,
+   "waar": "recyclen-afval-po stap 4 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 200,
+   "waar": "recyclen-afval-po stap 4 vraag 10",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 201,
+   "waar": "recyclen-afval-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 202,
+   "waar": "recyclen-afval-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 203,
+   "waar": "recyclen-afval-po stap 4 vraag 13",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 204,
+   "waar": "recyclen-afval-po stap 4 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 205,
+   "waar": "recyclen-afval-po stap 4 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 206,
+   "waar": "recyclen-afval-po stap 4 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 207,
+   "waar": "recyclen-afval-po stap 4 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 208,
+   "waar": "recyclen-afval-po stap 4 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 209,
+   "waar": "recyclen-afval-po stap 4 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 210,
+   "waar": "recyclen-afval-po stap 4 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 211,
+   "waar": "recyclen-afval-po stap 4 vraag 21",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 212,
+   "waar": "recyclen-afval-po stap 4 vraag 22",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 213,
+   "waar": "recyclen-afval-po stap 4 vraag 23",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 214,
+   "waar": "recyclen-afval-po stap 4 vraag 24",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 215,
+   "waar": "recyclen-afval-po stap 4 vraag 25",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 216,
+   "waar": "recyclen-afval-po stap 4 vraag 26",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 217,
+   "waar": "recyclen-afval-po stap 4 vraag 27",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 218,
+   "waar": "recyclen-afval-po stap 4 vraag 28",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 188,
+   "waar": "recyclen-afval-po stap 4 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 189,
+   "waar": "recyclen-afval-po stap 4 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 190,
+   "waar": "recyclen-afval-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 191,
+   "waar": "recyclen-afval-po stap 4 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 192,
+   "waar": "recyclen-afval-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 193,
+   "waar": "recyclen-afval-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 194,
+   "waar": "recyclen-afval-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 195,
+   "waar": "recyclen-afval-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 196,
+   "waar": "recyclen-afval-po stap 4 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 197,
+   "waar": "recyclen-afval-po stap 4 vraag 10",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 198,
+   "waar": "recyclen-afval-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 199,
+   "waar": "recyclen-afval-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 200,
+   "waar": "recyclen-afval-po stap 4 vraag 13",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 201,
+   "waar": "recyclen-afval-po stap 4 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 202,
+   "waar": "recyclen-afval-po stap 4 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 203,
+   "waar": "recyclen-afval-po stap 4 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 204,
+   "waar": "recyclen-afval-po stap 4 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 205,
+   "waar": "recyclen-afval-po stap 4 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 206,
+   "waar": "recyclen-afval-po stap 4 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 207,
+   "waar": "recyclen-afval-po stap 4 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 208,
+   "waar": "recyclen-afval-po stap 4 vraag 21",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 209,
+   "waar": "recyclen-afval-po stap 4 vraag 22",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 210,
+   "waar": "recyclen-afval-po stap 4 vraag 23",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 211,
+   "waar": "recyclen-afval-po stap 4 vraag 24",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 212,
+   "waar": "recyclen-afval-po stap 4 vraag 25",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|natuur",
+   "nr": 213,
+   "waar": "recyclen-afval-po stap 4 vraag 26",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 214,
+   "waar": "recyclen-afval-po stap 4 vraag 27",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 215,
+   "waar": "recyclen-afval-po stap 4 vraag 28",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/ruimtevaartPo.js": [
+  {
+   "set": "6|natuur",
+   "nr": 194,
+   "waar": "ruimtevaart-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 195,
+   "waar": "ruimtevaart-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 196,
+   "waar": "ruimtevaart-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 197,
+   "waar": "ruimtevaart-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 198,
+   "waar": "ruimtevaart-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 199,
+   "waar": "ruimtevaart-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 200,
+   "waar": "ruimtevaart-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 201,
+   "waar": "ruimtevaart-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 202,
+   "waar": "ruimtevaart-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 203,
+   "waar": "ruimtevaart-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 204,
+   "waar": "ruimtevaart-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 205,
+   "waar": "ruimtevaart-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 219,
+   "waar": "ruimtevaart-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 220,
+   "waar": "ruimtevaart-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 216,
+   "waar": "ruimtevaart-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 217,
+   "waar": "ruimtevaart-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 218,
+   "waar": "ruimtevaart-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 219,
+   "waar": "ruimtevaart-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 220,
+   "waar": "ruimtevaart-po stap 4 vraag 5",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/sterrenPlaneten.js": [
+  {
+   "set": "6|natuur",
+   "nr": 206,
+   "waar": "sterren-planeten stap 4 vraag 3",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/toestandStoffenPo.js": [
+  {
+   "set": "6|natuur",
+   "nr": 207,
+   "waar": "toestand-stoffen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 208,
+   "waar": "toestand-stoffen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/waterkringloopPo.js": [
+  {
+   "set": "6|natuur",
+   "nr": 209,
+   "waar": "waterkringloop-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 210,
+   "waar": "waterkringloop-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 211,
+   "waar": "waterkringloop-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 212,
+   "waar": "waterkringloop-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 213,
+   "waar": "waterkringloop-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 214,
+   "waar": "waterkringloop-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 215,
+   "waar": "waterkringloop-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 216,
+   "waar": "waterkringloop-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 217,
+   "waar": "waterkringloop-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 218,
+   "waar": "waterkringloop-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 219,
+   "waar": "waterkringloop-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|natuur",
+   "nr": 220,
+   "waar": "waterkringloop-po stap 4 vraag 12",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/continentenWereldPo.js": [
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 181,
+   "waar": "continenten-wereld-po stap 6 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 182,
+   "waar": "continenten-wereld-po stap 6 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 183,
+   "waar": "continenten-wereld-po stap 6 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 181,
+   "waar": "continenten-wereld-po stap 6 vraag 13",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 182,
+   "waar": "continenten-wereld-po stap 6 vraag 14",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 183,
+   "waar": "continenten-wereld-po stap 6 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 184,
+   "waar": "continenten-wereld-po stap 6 vraag 16",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 185,
+   "waar": "continenten-wereld-po stap 6 vraag 17",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 186,
+   "waar": "continenten-wereld-po stap 6 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 187,
+   "waar": "continenten-wereld-po stap 6 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 188,
+   "waar": "continenten-wereld-po stap 6 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 181,
+   "waar": "continenten-wereld-po stap 6 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 182,
+   "waar": "continenten-wereld-po stap 6 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 183,
+   "waar": "continenten-wereld-po stap 6 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 184,
+   "waar": "continenten-wereld-po stap 6 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 185,
+   "waar": "continenten-wereld-po stap 6 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 186,
+   "waar": "continenten-wereld-po stap 6 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 187,
+   "waar": "continenten-wereld-po stap 6 vraag 11",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 188,
+   "waar": "continenten-wereld-po stap 6 vraag 12",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 189,
+   "waar": "continenten-wereld-po stap 6 vraag 13",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 190,
+   "waar": "continenten-wereld-po stap 6 vraag 14",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 191,
+   "waar": "continenten-wereld-po stap 6 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 192,
+   "waar": "continenten-wereld-po stap 6 vraag 16",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 193,
+   "waar": "continenten-wereld-po stap 6 vraag 17",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 194,
+   "waar": "continenten-wereld-po stap 6 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 195,
+   "waar": "continenten-wereld-po stap 6 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 196,
+   "waar": "continenten-wereld-po stap 6 vraag 20",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/waterErfgoedNederlandPo.js": [
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 184,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 185,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 186,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 187,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 188,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 189,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 190,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 191,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 192,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 193,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 194,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 195,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 196,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 197,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 198,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 199,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 200,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 201,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 202,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 203,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 189,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 190,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 191,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 192,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 193,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 194,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 195,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 196,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 197,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 198,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 199,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 200,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 201,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 202,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 203,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 204,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 205,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 206,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 207,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 208,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 197,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 198,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 199,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 200,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 201,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 202,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 203,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 204,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 205,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 206,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 207,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 208,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 209,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 210,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 211,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 212,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 213,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 214,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 215,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 216,
+   "waar": "water-erfgoed-nederland-po stap 6 vraag 20",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/topografieNederland.js": [
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 204,
+   "waar": "topografie-nederland stap 6 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 205,
+   "waar": "topografie-nederland stap 6 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 206,
+   "waar": "topografie-nederland stap 6 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 207,
+   "waar": "topografie-nederland stap 6 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 208,
+   "waar": "topografie-nederland stap 6 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 209,
+   "waar": "topografie-nederland stap 6 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 210,
+   "waar": "topografie-nederland stap 6 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 211,
+   "waar": "topografie-nederland stap 7 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 212,
+   "waar": "topografie-nederland stap 7 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 213,
+   "waar": "topografie-nederland stap 7 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 214,
+   "waar": "topografie-nederland stap 7 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 215,
+   "waar": "topografie-nederland stap 7 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 216,
+   "waar": "topografie-nederland stap 7 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 217,
+   "waar": "topografie-nederland stap 7 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 218,
+   "waar": "topografie-nederland stap 8 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 219,
+   "waar": "topografie-nederland stap 8 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|aardrijkskunde",
+   "nr": 220,
+   "waar": "topografie-nederland stap 8 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 210,
+   "waar": "topografie-nederland stap 6 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 211,
+   "waar": "topografie-nederland stap 6 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 212,
+   "waar": "topografie-nederland stap 6 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 213,
+   "waar": "topografie-nederland stap 6 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 214,
+   "waar": "topografie-nederland stap 6 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 215,
+   "waar": "topografie-nederland stap 6 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 216,
+   "waar": "topografie-nederland stap 6 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 217,
+   "waar": "topografie-nederland stap 7 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 218,
+   "waar": "topografie-nederland stap 7 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 219,
+   "waar": "topografie-nederland stap 7 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 220,
+   "waar": "topografie-nederland stap 7 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 219,
+   "waar": "topografie-nederland stap 6 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 220,
+   "waar": "topografie-nederland stap 6 vraag 3",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/klassiekeMuziekPo.js": [
+  {
+   "set": "6|geschiedenis",
+   "nr": 181,
+   "waar": "klassieke-muziek-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 182,
+   "waar": "klassieke-muziek-po stap 4 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 183,
+   "waar": "klassieke-muziek-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 184,
+   "waar": "klassieke-muziek-po stap 4 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 185,
+   "waar": "klassieke-muziek-po stap 4 vraag 10",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 186,
+   "waar": "klassieke-muziek-po stap 4 vraag 11",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 187,
+   "waar": "klassieke-muziek-po stap 4 vraag 12",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 188,
+   "waar": "klassieke-muziek-po stap 4 vraag 13",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/nederlandseKunstenaarsPo.js": [
+  {
+   "set": "6|geschiedenis",
+   "nr": 189,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 190,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 191,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 192,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 192,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 193,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 194,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 195,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 192,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 193,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 194,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 195,
+   "waar": "nederlandse-kunstenaars-po stap 4 vraag 4",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/olympischeSpelenPo.js": [
+  {
+   "set": "6|geschiedenis",
+   "nr": 193,
+   "waar": "olympische-spelen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 194,
+   "waar": "olympische-spelen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 195,
+   "waar": "olympische-spelen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 196,
+   "waar": "olympische-spelen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 197,
+   "waar": "olympische-spelen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 198,
+   "waar": "olympische-spelen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 199,
+   "waar": "olympische-spelen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 200,
+   "waar": "olympische-spelen-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 201,
+   "waar": "olympische-spelen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 202,
+   "waar": "olympische-spelen-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 203,
+   "waar": "olympische-spelen-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 204,
+   "waar": "olympische-spelen-po stap 4 vraag 12",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 196,
+   "waar": "olympische-spelen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 197,
+   "waar": "olympische-spelen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 198,
+   "waar": "olympische-spelen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 199,
+   "waar": "olympische-spelen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 200,
+   "waar": "olympische-spelen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 201,
+   "waar": "olympische-spelen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 202,
+   "waar": "olympische-spelen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 203,
+   "waar": "olympische-spelen-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 204,
+   "waar": "olympische-spelen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 205,
+   "waar": "olympische-spelen-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 206,
+   "waar": "olympische-spelen-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 207,
+   "waar": "olympische-spelen-po stap 4 vraag 12",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 196,
+   "waar": "olympische-spelen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 197,
+   "waar": "olympische-spelen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 198,
+   "waar": "olympische-spelen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 199,
+   "waar": "olympische-spelen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 200,
+   "waar": "olympische-spelen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 201,
+   "waar": "olympische-spelen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 202,
+   "waar": "olympische-spelen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 203,
+   "waar": "olympische-spelen-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 204,
+   "waar": "olympische-spelen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 205,
+   "waar": "olympische-spelen-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 206,
+   "waar": "olympische-spelen-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 207,
+   "waar": "olympische-spelen-po stap 4 vraag 12",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/ontdekkingsreizenPo.js": [
+  {
+   "set": "6|geschiedenis",
+   "nr": 205,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 206,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 207,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 208,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 209,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 210,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 211,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 212,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 213,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 214,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 215,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 216,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 217,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 218,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 219,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 15",
+   "goedgekeurd": false
+  },
+  {
+   "set": "6|geschiedenis",
+   "nr": 220,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 208,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 209,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 210,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 211,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 212,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 213,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 214,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 215,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 216,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 217,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 218,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 219,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 220,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 208,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 209,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 210,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 211,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 212,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 213,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 214,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 215,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 216,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 217,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 218,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 219,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 220,
+   "waar": "ontdekkingsreizen-po stap 4 vraag 13",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/tijdSnelheidAfstandPo.js": [
+  {
+   "set": "7|rekenen",
+   "nr": 181,
+   "waar": "tijd-snelheid-afstand-po stap 1 vraag 10",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/tijdsduurRekenenPo.js": [
+  {
+   "set": "7|rekenen",
+   "nr": 182,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 183,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 184,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 185,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 186,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 187,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 188,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 189,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 190,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 191,
+   "waar": "tijdsduur-rekenen-po stap 1 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/verhoudingenPo.js": [
+  {
+   "set": "7|rekenen",
+   "nr": 192,
+   "waar": "verhoudingen-po stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 193,
+   "waar": "verhoudingen-po stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 194,
+   "waar": "verhoudingen-po stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 195,
+   "waar": "verhoudingen-po stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 196,
+   "waar": "verhoudingen-po stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 197,
+   "waar": "verhoudingen-po stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 198,
+   "waar": "verhoudingen-po stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 199,
+   "waar": "verhoudingen-po stap 1 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/vlakkeFigurenPo.js": [
+  {
+   "set": "7|rekenen",
+   "nr": 200,
+   "waar": "vlakke-figuren-po stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 201,
+   "waar": "vlakke-figuren-po stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 202,
+   "waar": "vlakke-figuren-po stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 203,
+   "waar": "vlakke-figuren-po stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 204,
+   "waar": "vlakke-figuren-po stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 205,
+   "waar": "vlakke-figuren-po stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 206,
+   "waar": "vlakke-figuren-po stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 207,
+   "waar": "vlakke-figuren-po stap 1 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|rekenen",
+   "nr": 208,
+   "waar": "vlakke-figuren-po stap 1 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/lettergrepenKlemtoonPo.js": [
+  {
+   "set": "7|taal",
+   "nr": 181,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 182,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 183,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 184,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 185,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 186,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 187,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 188,
+   "waar": "lettergrepen-klemtoon-po stap 2 vraag 10",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/samenstellingenTussenlettersPo.js": [
+  {
+   "set": "7|taal",
+   "nr": 189,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 190,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 191,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 192,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 193,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 194,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 195,
+   "waar": "samenstellingen-tussenletters-po stap 2 vraag 9",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/schrijvenTekstenPo.js": [
+  {
+   "set": "7|taal",
+   "nr": 205,
+   "waar": "schrijven-teksten-po stap 2 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 206,
+   "waar": "schrijven-teksten-po stap 2 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 207,
+   "waar": "schrijven-teksten-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 208,
+   "waar": "schrijven-teksten-po stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 209,
+   "waar": "schrijven-teksten-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 210,
+   "waar": "schrijven-teksten-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 211,
+   "waar": "schrijven-teksten-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 212,
+   "waar": "schrijven-teksten-po stap 2 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 213,
+   "waar": "schrijven-teksten-po stap 2 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 214,
+   "waar": "schrijven-teksten-po stap 2 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/signaalwoordenVerbandenPo.js": [
+  {
+   "set": "7|taal",
+   "nr": 215,
+   "waar": "signaalwoorden-verbanden-po stap 2 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 216,
+   "waar": "signaalwoorden-verbanden-po stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 217,
+   "waar": "signaalwoorden-verbanden-po stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 218,
+   "waar": "signaalwoorden-verbanden-po stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|taal",
+   "nr": 219,
+   "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|taal",
+   "nr": 220,
+   "waar": "signaalwoorden-verbanden-po stap 2 vraag 8",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/verwijswoordenBegrijpendLezenPo.js": [
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 181,
+   "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 189,
+   "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 190,
+   "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 191,
+   "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 192,
+   "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 193,
+   "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 7",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/woordbetekenisContextPo.js": [
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 182,
+   "waar": "woordbetekenis-context-po stap 2 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 183,
+   "waar": "woordbetekenis-context-po stap 2 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 184,
+   "waar": "woordbetekenis-context-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 185,
+   "waar": "woordbetekenis-context-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 186,
+   "waar": "woordbetekenis-context-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 187,
+   "waar": "woordbetekenis-context-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 188,
+   "waar": "woordbetekenis-context-po stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 189,
+   "waar": "woordbetekenis-context-po stap 2 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 190,
+   "waar": "woordbetekenis-context-po stap 2 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 191,
+   "waar": "woordbetekenis-context-po stap 2 vraag 10",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 194,
+   "waar": "woordbetekenis-context-po stap 2 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 195,
+   "waar": "woordbetekenis-context-po stap 2 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 196,
+   "waar": "woordbetekenis-context-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 197,
+   "waar": "woordbetekenis-context-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 198,
+   "waar": "woordbetekenis-context-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 199,
+   "waar": "woordbetekenis-context-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 200,
+   "waar": "woordbetekenis-context-po stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 201,
+   "waar": "woordbetekenis-context-po stap 2 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 202,
+   "waar": "woordbetekenis-context-po stap 2 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 203,
+   "waar": "woordbetekenis-context-po stap 2 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/alineaFunctiesTussenkopjesPo.js": [
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 192,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 193,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 194,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 195,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 196,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 197,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 204,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 205,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 206,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 207,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 208,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 209,
+   "waar": "alinea-functies-tussenkopjes-po stap 3 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/conclusiesTrekkenPo.js": [
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 211,
+   "waar": "conclusies-trekken-po stap 3 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 212,
+   "waar": "conclusies-trekken-po stap 3 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 213,
+   "waar": "conclusies-trekken-po stap 3 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 214,
+   "waar": "conclusies-trekken-po stap 3 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|begrijpend-lezen",
+   "nr": 215,
+   "waar": "conclusies-trekken-po stap 3 vraag 7",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/inhoudsopgaveRegisterPo.js": [
+  {
+   "set": "7|studievaardigheden",
+   "nr": 181,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 197,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 198,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 199,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 200,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 201,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 202,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 203,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 204,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 205,
+   "waar": "inhoudsopgave-register-po stap 4 vraag 9",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/plattegrondLegendaPo.js": [
+  {
+   "set": "7|studievaardigheden",
+   "nr": 182,
+   "waar": "plattegrond-legenda-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 183,
+   "waar": "plattegrond-legenda-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 184,
+   "waar": "plattegrond-legenda-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 185,
+   "waar": "plattegrond-legenda-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 186,
+   "waar": "plattegrond-legenda-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 187,
+   "waar": "plattegrond-legenda-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 188,
+   "waar": "plattegrond-legenda-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|studievaardigheden",
+   "nr": 189,
+   "waar": "plattegrond-legenda-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 206,
+   "waar": "plattegrond-legenda-po stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 207,
+   "waar": "plattegrond-legenda-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 208,
+   "waar": "plattegrond-legenda-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 209,
+   "waar": "plattegrond-legenda-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 210,
+   "waar": "plattegrond-legenda-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 211,
+   "waar": "plattegrond-legenda-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 212,
+   "waar": "plattegrond-legenda-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 213,
+   "waar": "plattegrond-legenda-po stap 4 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/pubertijdGroeiPo.js": [
+  {
+   "set": "7|natuur",
+   "nr": 181,
+   "waar": "pubertijd-groei-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 182,
+   "waar": "pubertijd-groei-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "7|natuur",
+   "nr": 183,
+   "waar": "pubertijd-groei-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 184,
+   "waar": "pubertijd-groei-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 185,
+   "waar": "pubertijd-groei-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 186,
+   "waar": "pubertijd-groei-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 187,
+   "waar": "pubertijd-groei-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 188,
+   "waar": "pubertijd-groei-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 189,
+   "waar": "pubertijd-groei-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|natuur",
+   "nr": 190,
+   "waar": "pubertijd-groei-po stap 4 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 181,
+   "waar": "pubertijd-groei-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 182,
+   "waar": "pubertijd-groei-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 183,
+   "waar": "pubertijd-groei-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 184,
+   "waar": "pubertijd-groei-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 185,
+   "waar": "pubertijd-groei-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 186,
+   "waar": "pubertijd-groei-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|natuur",
+   "nr": 187,
+   "waar": "pubertijd-groei-po stap 4 vraag 13",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/topografieNederlandProvinciesPo.jsx": [
+  {
+   "set": "7|aardrijkskunde",
+   "nr": 209,
+   "waar": "topografie-nederland-provincies-po stap 6 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 218,
+   "waar": "topografie-nederland-provincies-po stap 6 vraag 1",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/koudeOorlogModernPo.js": [
+  {
+   "set": "7|geschiedenis",
+   "nr": 181,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 182,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 183,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 184,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 185,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 186,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 187,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 188,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 189,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 190,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "7|geschiedenis",
+   "nr": 191,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 181,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 182,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 183,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 184,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 185,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 186,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 187,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 188,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 189,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 190,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|geschiedenis",
+   "nr": 191,
+   "waar": "koude-oorlog-modern-po stap 4 vraag 12",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/kommagetallenPo.js": [
+  {
+   "set": "8|rekenen",
+   "nr": 181,
+   "waar": "kommagetallen-po stap 1 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 182,
+   "waar": "kommagetallen-po stap 1 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/matenOmtrekOppervlaktePo.js": [
+  {
+   "set": "8|rekenen",
+   "nr": 183,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 184,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 185,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 186,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 187,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 188,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 189,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 190,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 191,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 192,
+   "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/matenEenheden.js": [
+  {
+   "set": "8|rekenen",
+   "nr": 193,
+   "waar": "maten-eenheden stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 194,
+   "waar": "maten-eenheden stap 1 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 195,
+   "waar": "maten-eenheden stap 1 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 196,
+   "waar": "maten-eenheden stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 197,
+   "waar": "maten-eenheden stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 198,
+   "waar": "maten-eenheden stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 199,
+   "waar": "maten-eenheden stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 200,
+   "waar": "maten-eenheden stap 1 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 201,
+   "waar": "maten-eenheden stap 1 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/metenGewichtInhoudTijdPo.js": [
+  {
+   "set": "8|rekenen",
+   "nr": 202,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 203,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 204,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 205,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 206,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 207,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 208,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 209,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 210,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|rekenen",
+   "nr": 211,
+   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/doorstroomtoetsTaalG8.js": [
+  {
+   "set": "8|taal",
+   "nr": 186,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 187,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 188,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 189,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 190,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 191,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 192,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 7",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 193,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 8",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 194,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 9",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 195,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 10",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 196,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 11",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 197,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 12",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 198,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 13",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 199,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 14",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 200,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 15",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 201,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 16",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 202,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 17",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 203,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 18",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 204,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 19",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 205,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 20",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 206,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 21",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 207,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 22",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 208,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 23",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 209,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 24",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 210,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 25",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 211,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 26",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 212,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 27",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 213,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 28",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 214,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 29",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 215,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 30",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 216,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 31",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 217,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 32",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 218,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 33",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 219,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 34",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|taal",
+   "nr": 220,
+   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 35",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/tekstdoelSchrijversdoelPo.js": [
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 181,
+   "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 182,
+   "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/verhaalDiepteLezenPo.js": [
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 183,
+   "waar": "verhaal-diepte-lezen-po stap 2 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 184,
+   "waar": "verhaal-diepte-lezen-po stap 2 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 185,
+   "waar": "verhaal-diepte-lezen-po stap 2 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 186,
+   "waar": "verhaal-diepte-lezen-po stap 2 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 187,
+   "waar": "verhaal-diepte-lezen-po stap 2 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|begrijpend-lezen",
+   "nr": 188,
+   "waar": "verhaal-diepte-lezen-po stap 2 vraag 8",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/dienstregelingRoostersPo.js": [
+  {
+   "set": "8|studievaardigheden",
+   "nr": 181,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 182,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 183,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 184,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 185,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 186,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 9",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 187,
+   "waar": "dienstregeling-roosters-po stap 4 vraag 10",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/folderBonAdvertentiePo.js": [
+  {
+   "set": "8|studievaardigheden",
+   "nr": 188,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 1",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 189,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 2",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 190,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 3",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 191,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 4",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 192,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 5",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 193,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 6",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 194,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 7",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 195,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 8",
+   "goedgekeurd": true
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 196,
+   "waar": "folder-bon-advertentie-po stap 4 vraag 9",
+   "goedgekeurd": true
+  }
+ ],
+ "src/learnPaths/onderwijsNiveausVmboHavoVwo.js": [
+  {
+   "set": "8|studievaardigheden",
+   "nr": 214,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 1",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 215,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 2",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 216,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 3",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 217,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 4",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 218,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 5",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 219,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 6",
+   "goedgekeurd": false
+  },
+  {
+   "set": "8|studievaardigheden",
+   "nr": 220,
+   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 7",
+   "goedgekeurd": false
+  }
+ ],
+ "src/learnPaths/topografieEuropaPo.jsx": [
+  {
+   "set": "8|aardrijkskunde",
+   "nr": 217,
+   "waar": "topografie-europa-landen-po stap 6 vraag 1",
+   "goedgekeurd": false
+  }
+ ]
+}
