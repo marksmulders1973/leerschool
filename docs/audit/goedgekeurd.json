@@ -2643,11 +2643,59 @@
   "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
+  "waar": "breuken-po stap 5 vraag 1",
+  "hash": "067d8e04168cdd30",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 2",
+  "hash": "00aa7a8a21958117",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord; simpeler was een telegramzin."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 4",
+  "hash": "6c32485693ff73aa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord; breuk x heel getal is in groep 5 één groep vroeg (laten staan)."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 5",
+  "hash": "49103d3308bd77f5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 6",
+  "hash": "797c211ad594a48e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
   "waar": "breuken-po stap 5 vraag 7",
   "hash": "be957526e34a7ed0",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 8",
+  "hash": "460e63c2622658fe",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord; breuk x heel getal in groep 5 is één groep vroeg (laten staan)."
  },
  {
   "waar": "brief-email-lezen-po stap 1 vraag 1",
@@ -6214,6 +6262,68 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 10",
+  "hash": "164addb1b5722925",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramstijl in vraag en hints ('Meervoud.', 'Voltooid deelwoord.')."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 12",
+  "hash": "44743e4afbe3c969",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij 'antwoorden' was een telegramzin."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 13",
+  "hash": "84caa3207dfe58d8",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 14",
+  "hash": "2cfb46f97bfd974e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 15",
+  "hash": "9482dd6f2ad7554f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints 'Enkelvoud-vorm.' en 'Stam zonder uitgang.' waren telegramzinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 17",
+  "hash": "f4f77336c3ff9c2b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramstijl in vraag en hints ('Meervoud.', '1e persoon.')."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 21",
+  "hash": "f77d6f2d1d061e3a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord; hints in telegramstijl."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 22",
+  "hash": "2d6f71bcfb85f17d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij 't was kort ('geen NL')."
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 39",
   "hash": "c954f458519b59b2",
   "oordeel": "goed",
@@ -6226,6 +6336,21 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 8",
+  "hash": "f26746d3f51aa7d9",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 9",
+  "hash": "3cc296aa99097180",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis noemde het antwoord (pauw = au); afleider 'boud' kennen de meeste kinderen niet."
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 4 vraag 4",
@@ -11869,6 +11994,14 @@
   "reden": "Beweegrichtlijn kinderen: minstens 1 uur per dag; optie '~1 uur' botste met 'minstens' en tilde is geen kindertaal."
  },
  {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 1",
+  "hash": "627220391f67edf1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints zonder lidwoorden ('Schedel beschermt hersenen.')."
+ },
+ {
   "waar": "lichaam-gezondheid-po stap 6 vraag 10",
   "hash": "eec2abe38be1f34b",
   "oordeel": "goed",
@@ -11876,11 +12009,116 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 11",
+  "hash": "44e02a38f753d800",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "lichaam-gezondheid-po stap 6 vraag 12",
   "hash": "5ce2093356a37541",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 13",
+  "hash": "94f414b6551c6a48",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint 'Hartziekte heeft eigen naam (bv. infarct)' was een telegramzin en vreemd."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 14",
+  "hash": "2ee5f0eca5574967",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 15",
+  "hash": "47966ccba5e3b2ff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Continu' is een moeilijk woord voor groep 6."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 16",
+  "hash": "6ef15229f6684647",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 18",
+  "hash": "a4a1e3497aacc497",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 2",
+  "hash": "7d5c7a04d711211f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Welk orgaan ademt?' klinkt vreemd; hints waren telegramzinnen."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 3",
+  "hash": "62cdd445e26e59d5",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 4",
+  "hash": "59779b376d70befd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis gaf alleen '3.'."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 5",
+  "hash": "dc13b235ee40e826",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 6",
+  "hash": "20550300515c4e17",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 7",
+  "hash": "9e72becdf7fde6fc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleider 'Filtert de lucht' met hint 'Dat doen je longen' klopt feitelijk niet (longen filteren geen lucht)."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 8",
+  "hash": "877833d1be4c408c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties met '+' in plaats van een zin."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 9",
+  "hash": "6206e516adc64f3a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Te makkelijk voor groep 6."
  },
  {
   "waar": "maten-eenheden stap 1 vraag 1",
@@ -22346,11 +22584,117 @@
   "reden": "A: omtrek 16 m, opp. 7 m²; B: omtrek 16 m, opp. 16 m² — klopt, alle maten in de tekst (geen plaatje nodig); niveaus waren telegramzinnen."
  },
  {
+  "waar": "vlakke-figuren-po stap 2 vraag 1",
+  "hash": "c4b34b0cd69673f5",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 2",
+  "hash": "13a6144e10498f57",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 3",
+  "hash": "750fc1b93e450261",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 4",
+  "hash": "1f9f4ae0ece679f8",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 5",
+  "hash": "34863b4013247b93",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleider '32 m' viel af op de eenheid, want de vraag vraagt m²."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 6",
+  "hash": "deaf9f89674f1be5",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 7",
+  "hash": "e93506236d527dad",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 8",
+  "hash": "549a9653c09dcc87",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 9",
+  "hash": "4210765f37c7984f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis en simpeler = antwoord."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 10",
+  "hash": "96deeeedee7cff1b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Oppervlakte van een driehoek is groep 7/8-stof, maar zit in de set van groep 5; basis = antwoord."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 5",
+  "hash": "1a01ab6cc2712889",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 6",
+  "hash": "5ddee7b5228a12ad",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
   "waar": "vlakke-figuren-po stap 4 vraag 7",
   "hash": "0c4975da5fded82e",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 8",
+  "hash": "e371d43d36a66865",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 9",
+  "hash": "f16b636085d8fdea",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Basis = antwoord."
  },
  {
   "waar": "vlakke-figuren-po stap 5 vraag 25",

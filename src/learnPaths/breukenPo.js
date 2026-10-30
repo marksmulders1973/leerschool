@@ -1047,7 +1047,7 @@ const steps = [
           theorie: "Voor breuk × geheel getal: pak eerst 1/Y deel, dan keer teller.",
           voorbeelden: [{ type: "stap", tekst: "20÷4=5 (1/4). 5×3=15 (3/4). Of: 20×3=60, 60÷4=15." }],
           basiskennis: [{ onderwerp: "Eenheids-breuk eerst", uitleg: "Eerst 1-deel uitrekenen, dan keer aantal. Werkt altijd." }],
-          niveaus: { basis: "15.", simpeler: "1/4 van 20 = 5. 3/4 = 3×5 = 15.", nogSimpeler: "15" },
+          niveaus: { basis: "Reken eerst 1/4 van 20 uit: deel 20 door 4. Hoeveel van die stukken heb je nodig?", simpeler: "1/4 van 20 = 5. 3/4 = 3×5 = 15.", nogSimpeler: "15" },
         },
       },
       {
@@ -1061,21 +1061,21 @@ const steps = [
           theorie: "Eenheidsbreuk 1/Y: gewoon delen door Y.",
           voorbeelden: [{ type: "klok", tekst: "60 min ÷ 3 = 20 min. 1/3 uur = 20 minuten." }],
           basiskennis: [{ onderwerp: "Klok-breuken", uitleg: "1/2 uur=30, 1/3 uur=20, 1/4 uur=15, 1/6 uur=10 min." }],
-          niveaus: { basis: "20 min.", simpeler: "60 min ÷ 3 = 20 min. 1/3 van uur.", nogSimpeler: "20" },
+          niveaus: { basis: "Een uur heeft 60 minuten. Verdeel die in 3 gelijke stukken.", simpeler: "60 minuten ÷ 3 = 20 minuten. Dat is 1/3 van een uur.", nogSimpeler: "20" },
         },
       },
       {
         q: "**4 × 3/5** = ?",
         options: ["12/5","12/20","7/5","4/5"],
         answer: 0,
-        wrongHints: [null,"Moet de noemer ook keer 4? Vijfden blijven vijfden.","Heb je 4 bij de teller opgeteld? Hier moet je keer 4 doen.","Je zette de 4 in de teller. Hoeveel is 4 keer 3?"],
+        wrongHints: [null,"Moet de noemer ook keer 4? Vijfden blijven vijfden.","Heb je 4 bij de teller opgeteld? Hier moet je keer 4 doen.","Je zette de 4 in de teller. Maar bij 'keer 4' moet je iets mét de teller doen. Wat?"],
         uitlegPad: {
           stappen: [{ titel: "Alleen teller × 4", tekst: "4 × 3/5: 4 × 3 = 12 (teller). Noemer blijft 5. → 12/5." }],
           woorden: [{ woord: "geheel × breuk", uitleg: "Vermenigvuldig alleen TELLER met het hele getal. Noemer blijft." }],
           theorie: "Geheel × breuk: heel getal × teller, noemer blijft. 4 × 3/5 = 12/5.",
           voorbeelden: [{ type: "som", tekst: "2 × 1/4 = 2/4. 3 × 2/7 = 6/7. 4 × 3/5 = 12/5 = 2 2/5." }],
           basiskennis: [{ onderwerp: "Niet noemer ook", uitleg: "Foute aanpak: 4 × 3/5 = 12/20 ❌. Noemer blijft 5." }],
-          niveaus: { basis: "12/5.", simpeler: "4 × 3 = 12 (teller). Noemer 5 blijft. → 12/5.", nogSimpeler: "12/5" },
+          niveaus: { basis: "Bij keer een heel getal doe je alleen de teller keer dat getal. De noemer blijft hetzelfde.", simpeler: "4 × 3 = 12 (teller). Noemer 5 blijft. → 12/5.", nogSimpeler: "12/5" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1116,7 +1116,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2/5.",
+            basis: "Twee keer een vijfde: hoeveel vijfden heb je dan samen?",
             simpeler: "Twee keer een vijfde = twee vijfden = 2/5.",
             nogSimpeler: "2/5",
           },
@@ -1159,7 +1159,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8.",
+            basis: "1/4 van iets betekent: verdeel het in 4 gelijke groepjes. Hoeveel zitten er in één groepje?",
             simpeler: "32 in 4 gelijke groepjes = 8 per groepje.",
             nogSimpeler: "8",
           },
@@ -1201,7 +1201,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12.",
+            basis: "Reken eerst 1/3 van 18 uit: 18 ÷ 3. Hoeveel van die stukken heb je nodig?",
             simpeler: "1/3 van 18 = 6. 2/3 = 6 + 6 = 12.",
             nogSimpeler: "12",
           },
@@ -1281,7 +1281,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6/7.",
+            basis: "3 × 2/7 is drie keer twee zevende. Tel de zevenden bij elkaar op.",
             simpeler: "3 keer 2 zevende = 6 zevende = 6/7.",
             nogSimpeler: "6/7",
           },
@@ -1293,7 +1293,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dan krijg je minder dan één vijfde. Je wilt er twee.",
+          "Delen maakt het stuk nog kleiner dan één vijfde. Wil je minder of meer dan één vijfde?",
           null,
           "Dan krijg je weer het hele getal terug.",
         ],
@@ -1324,7 +1324,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Keer 2.",
+            basis: "45 ÷ 5 is één vijfde van 45. Hoeveel vijfden wil je hebben?",
             simpeler: "45 ÷ 5 = 9 is één vijfde. Je wilt twee vijfden, dus 9 × 2.",
             nogSimpeler: "Keer 2",
           },

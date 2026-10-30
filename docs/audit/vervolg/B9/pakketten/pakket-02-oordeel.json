@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 'dinstag' schreef het goede woord voluit ('Dinsdag is een samenstelling met dag'); basis/simpeler gaven alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint: 'Dit woord is een samenstelling met dag'; basis en simpeler herschreven tot hulpstappen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Basis noemde het antwoord (pauw = au); afleider 'boud' kennen de meeste kinderen niet.",
+  "hersteld": true,
+  "wijziging": "Optie 'boud' -> 'goud' (ook in de uitleglijst); basis en simpeler herschreven."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramstijl in vraag en hints ('Meervoud.', 'Voltooid deelwoord.').",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Welke vorm van lopen hoort op de puntjes?'; hints als hele zinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 11",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 'zonnenbloem' noemde het antwoord ('Zonnebloem is een uitzondering: geen tussen-n').",
+  "hersteld": true,
+  "wijziging": "Hint noemt nu alleen dat er een uitzondering op de tussen-n-regel geldt; spatie-hint en simpeler herschreven."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 12",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Hint bij 'antwoorden' was een telegramzin.",
+  "hersteld": true,
+  "wijziging": "Hint: 'Antwoorden is de meervoudsvorm. In deze zin gaat het om ik.'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 15",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Hints 'Enkelvoud-vorm.' en 'Stam zonder uitgang.' waren telegramzinnen.",
+  "hersteld": true,
+  "wijziging": "Hints herschreven tot hele zinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 16",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij 'beschuid' schreef het goede woord voluit ('beschuiten').",
+  "hersteld": true,
+  "wijziging": "Hint: 'Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramstijl in vraag en hints ('Meervoud.', '1e persoon.').",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Welke vorm van zijn in de tegenwoordige tijd hoort op de puntjes?'; hints als hele zinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 18",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint bij 'wandelten' gaf de regel inclusief '+den' en verraadde met de enkelvoud-hint samen 'wandelden'; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint vraagt nu alleen naar de laatste letter van de stam en 't kofschip; andere hints, basis en simpeler herschreven."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 19",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij 'compjuter' begon met het goede woord ('Computer is een Engels woord'); 'Eén t.' is een telegramzin.",
+  "hersteld": true,
+  "wijziging": "Beide hints herschreven zonder het woord te noemen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 20",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Twee goede antwoorden: 'Het kind had drie ijsjes gegeten' is ook goed Nederlands. Hints waren telegramzinnen.",
+  "hersteld": true,
+  "wijziging": "Optie 'had' -> 'heb' met passende hint; overige hints als hele zinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord; hints in telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Hints en basis herschreven."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Hint bij 't was kort ('geen NL').",
+  "hersteld": true,
+  "wijziging": "Hint: ''t is spreektaal. In een nette geschreven zin schrijf je het hele woord.'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 23",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij 'eilant' schreef het goede woord voluit ('eilanden'); basis/simpeler = antwoord.",
+  "hersteld": true,
+  "wijziging": "Verleng-hint zonder het woord; basis en simpeler herschreven."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Hints zonder lidwoorden ('Schedel beschermt hersenen.').",
+  "hersteld": true,
+  "wijziging": "Hints als hele zinnen."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "'Welk orgaan ademt?' klinkt vreemd; hints waren telegramzinnen.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Met welk orgaan adem je?'; hints als hele zinnen."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt met de Schijf van Vijf (volkoren, 100% pindakaas en olijfolie staan erin).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Basis gaf alleen '3.'.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven tot hulpstap (noem en tel de soorten)."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Afleider 'Filtert de lucht' met hint 'Dat doen je longen' klopt feitelijk niet (longen filteren geen lucht).",
+  "hersteld": true,
+  "wijziging": "Optie -> 'Haalt zuurstof uit de lucht' (hint klopt nu)."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Opties met '+' in plaats van een zin.",
+  "hersteld": true,
+  "wijziging": "'+' vervangen door 'en' in drie opties."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Te makkelijk voor groep 6.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Hint 'Hartziekte heeft eigen naam (bv. infarct)' was een telegramzin en vreemd.",
+  "hersteld": true,
+  "wijziging": "Hint herschreven."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 15",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "'Continu' is een moeilijk woord voor groep 6.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'werkt altijd door, ook als je slaapt?'"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 17",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint bij 'laten bloeden' zei 'bij een flinke bloeding druk je met een schone doek', terwijl het goede antwoord 'schoonspoelen + verband' was: tegenspraak, en niet volgens de EHBO-richtlijn voor kinderen. Opties met '+'.",
+  "hersteld": true,
+  "wijziging": "Vraag gaat nu over een kleine schaafwond; goed = 'Spoelen met lauw water en dan een pleister erop'; afleiders even lang en als hele zin; hints passend gemaakt."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven (omtrek of oppervlakte?)."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Oppervlakte van een driehoek is groep 7/8-stof, maar zit in de set van groep 5; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; basis herschreven."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord, hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord, hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord, hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord, hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Afleider '32 m' viel af op de eenheid, want de vraag vraagt m².",
+  "hersteld": true,
+  "wijziging": "Optie -> '32 m²' (de hint over de rand blijft kloppen)."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord, hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord, hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven (tegels in lengte en breedte, 50 cm = halve meter)."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Basis en simpeler = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis en simpeler herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord; simpeler was een telegramzin.",
+  "hersteld": true,
+  "wijziging": "Basis en simpeler herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij 4/5 rekende voor ('Hoeveel is 4 keer 3?'); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint benoemt nu de denkfout zonder de som; basis herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Basis = antwoord; breuk x heel getal is in groep 5 één groep vroeg (laten staan).",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Basis = antwoord; breuk x heel getal in groep 5 is één groep vroeg (laten staan).",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 'Gedeeld door 2' verraadde het antwoord ('Je wilt er twee'); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint vraagt nu of het meer of minder dan één vijfde moet worden; basis herschreven."
+ }
+]

@@ -449,7 +449,7 @@ const steps = [
       },
       {
         q: "Een grasveld is **9 m** lang en **7 m** breed. Hoeveel m² **graszoden** heb je nodig?",
-        options: ["63 m²", "32 m", "16 m²", "72 m²"],
+        options: ["63 m²", "32 m²", "16 m²", "72 m²"],
         answer: 0,
         wrongHints: [
           null,
@@ -608,7 +608,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16 tegels.",
+            basis: "Reken uit hoeveel tegels er in de lengte passen en hoeveel in de breedte. Let op: 50 cm is een halve meter.",
             simpeler: "In de lengte passen 8 tegels, in de breedte 2. 8 × 2 = 16.",
             nogSimpeler: "16",
           },
@@ -651,8 +651,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "82 m.",
-            simpeler: "Lijn rondom = omtrek = 2 × (25 + 16) = 82 m.",
+            basis: "De lijn gaat rondom het veld, langs alle vier de zijden: twee lange en twee korte.",
+            simpeler: "Lijn rondom = omtrek = 2 × (25 + 16). Reken dat uit.",
             nogSimpeler: "82",
           },
         },
@@ -1071,7 +1071,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 150.",
+            basis: "Een hek gaat om de tuin heen. Heb je dan de omtrek of de oppervlakte nodig?",
             simpeler: "Hek = omtrek = 30 m. 30 × € 5 = € 150.",
             nogSimpeler: "€ 150",
           },
@@ -1109,7 +1109,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 300.",
+            basis: "Tapijt ligt op de hele vloer. Reken eerst uit hoeveel m² de vloer is.",
             simpeler: "Tapijt = 15 m². 15 × € 20 = € 300.",
             nogSimpeler: "€ 300",
           },
@@ -1195,7 +1195,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 48.",
+            basis: "De planken gaan rondom de zandbak. Reken eerst uit hoeveel meter dat is.",
             simpeler: "Rand = 4 × 3 = 12 m. 12 × € 4 = € 48.",
             nogSimpeler: "€ 48",
           },
@@ -1238,7 +1238,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "14 pakken.",
+            basis: "Laminaat ligt op de hele vloer. Reken eerst uit hoeveel m² de vloer is.",
             simpeler: "Vloer = 28 m². Elk pak doet 2 m². 28 ÷ 2 = 14.",
             nogSimpeler: "14",
           },
@@ -1246,6 +1246,7 @@ const steps = [
       },
       {
         q: "Een **driehoekig** stuk muur heeft een **basis van 6 m** en een **hoogte van 4 m**. Met **1 liter** verf doe je **4 m²**. Hoeveel liter verf heb je nodig?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): oppervlakte van een driehoek is groep 7/8-stof, niet groep 5
         options: ["3 L", "6 L", "12 L", "24 L"],
         answer: 0,
         wrongHints: [null, "Heb je de oppervlakte van de driehoek door 2 gedeeld?", null, null],
@@ -1276,7 +1277,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 L.",
+            basis: "Reken eerst de oppervlakte van de driehoek uit: basis × hoogte, en daarvan de helft.",
             simpeler: "Driehoek = 12 m². Elke liter doet 4 m². 12 ÷ 4 = 3 liter.",
             nogSimpeler: "3",
           },

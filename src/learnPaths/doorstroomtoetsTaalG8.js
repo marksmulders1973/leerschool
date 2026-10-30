@@ -1605,7 +1605,7 @@ const steps = [
         q: "*'Op ___ heb ik gym.'* Welk woord is **goed** geschreven?",
         options: ["dinsdag", "Dinsdag", "dinstag", "dingsdag"],
         answer: 0,
-        wrongHints: [null, "Midden in een zin krijgen dagen van de week geen hoofdletter.", "Dinsdag is een samenstelling met 'dag'. Hoe schrijf je 'dag'?", "Zeg het langzaam: hoor je echt een g na 'din'?"],
+        wrongHints: [null, "Midden in een zin krijgen dagen van de week geen hoofdletter.", "Dit woord is een samenstelling met 'dag'. Hoe schrijf je 'dag'?", "Zeg het langzaam: hoor je echt een g na 'din'?"],
         uitlegPad: {
           stappen: [
             { titel: "Weekdagen klein", tekst: "In het Nederlands schrijven we weekdagen + maanden + jaargetijden met een **kleine letter**. Anders dan in het Engels!" },
@@ -1615,8 +1615,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "EN: 'Monday in March' (beide hoofdletters). NL: 'maandag in maart' (beide klein)." }],
           basiskennis: [{ onderwerp: "Verschil EN-NL", uitleg: "Engels gebruikt veel meer hoofdletters dan Nederlands. Daarom goed opletten." }],
           niveaus: {
-            basis: "dinsdag (klein).",
-            simpeler: "Weekdagen in NL krijgen GEEN hoofdletter. Dus 'dinsdag', niet 'Dinsdag'.",
+            basis: "Staat het woord aan het begin van de zin? Zo nee: krijgt een dag van de week dan een hoofdletter?",
+            simpeler: "Dagen van de week krijgen in het Nederlands geen hoofdletter, behalve aan het begin van een zin. Kijk daarna goed naar de letters na 'din'.",
             nogSimpeler: "dinsdag",
           },
         },
@@ -1629,14 +1629,14 @@ const steps = [
       },
       {
         q: "Welk woord schrijf je **met 'au'** (niet ou)?",
-        options: ["pauw", "boud", "houd", "stout"],
+        options: ["pauw", "goud", "houd", "stout"],
         answer: 0,
         wrongHints: [null, null, "Werkwoord 'houden' (au of ou?) — denk aan 'koud' en 'oud' in dezelfde groep.", null],
         uitlegPad: {
           stappen: [
             { titel: "au/ou: geen vaste regel", tekst: "Voor 'au' en 'ou' bestaat geen automatische regel. Je moet de woorden uit je hoofd leren — net als bij ei/ij." },
             { titel: "Klassieke 'au'-woorden", tekst: "pauw, kabouter, paus, blauw, dauw, klauw, gauw, auto — leer ze als groep." },
-            { titel: "Klassieke 'ou'-woorden", tekst: "hout, houd, koud, stout, oud, boud, vouw, gouden, schouder — leer ze als groep." },
+            { titel: "Klassieke 'ou'-woorden", tekst: "hout, houd, koud, stout, oud, goud, vouw, schouder — leer ze als groep." },
           ],
           woorden: [
             { woord: "au", uitleg: "pauw, blauw, klauw, kabouter, paus, auto." },
@@ -1649,23 +1649,23 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Lees veel — zo onthoud je vanzelf welk woord welke vorm heeft." }],
           niveaus: {
-            basis: "Au/ou: geen regel, alleen uit hoofd. pauw = au. stout = ou.",
-            simpeler: "'Pauw' = de blauwe vogel met grote staart. 'Stout' = niet braaf.",
+            basis: "Voor au en ou bestaat geen regel. Vraag je bij elk woord af: hoe heb ik dit woord vaak zien staan?",
+            simpeler: "Denk aan rijtjes die je kent: koud, oud en hout schrijf je met ou; blauw en gauw met au. Bij welk rijtje hoort elk woord?",
             nogSimpeler: "Au/ou: leer per woord.",
           },
         },
       },
       {
-        q: "**'Hij ___ snel'** — welk werkwoord?",
+        q: "*'Hij ___ snel.'* Welke vorm van *lopen* hoort op de puntjes?",
         options: ["loopt", "loop", "lopen", "gelopen"],
         answer: 0,
-        wrongHints: [null, "Voor 'ik' (1e pers).", "Meervoud.", "Voltooid deelwoord."],
+        wrongHints: [null, "'Loop' gebruik je bij 'ik'. Over wie gaat deze zin?", "'Lopen' is het hele werkwoord of de meervoudsvorm. 'Hij' is maar één persoon.", "'Gelopen' gebruik je samen met 'heeft' of 'is'. Staat dat in de zin?"],
       },
       {
         q: "Welke **samenstelling** is goed geschreven?",
         options: ["zonnebloem", "zonne bloem", "zonnenbloem", "zonebloem"],
         answer: 0,
-        wrongHints: [null, "Spatie = fout — moet aan elkaar.", "Zonnebloem is een uitzondering: daar komt geen tussen-n in.", "Zon heeft een korte o. Hoeveel n's heb je dan nodig?"],
+        wrongHints: [null, "Een samenstelling schrijf je nooit met een spatie ertussen.", "Bij dit woord geldt een uitzondering op de gewone regel van de tussen-n. Ken je die uitzondering?", "Zon heeft een korte o. Hoeveel n's heb je dan nodig?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een samenstelling?", tekst: "Een samenstelling is een nieuw woord dat je maakt door 2 woorden AAN ELKAAR te schrijven." },
@@ -1684,7 +1684,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag jezelf: kan ik het ook als 1 begrip lezen? Ja → aan elkaar." }],
           niveaus: {
             basis: "Samenstelling = 2 woorden vast aan elkaar, geen spatie.",
-            simpeler: "zon + bloem = zonnebloem. Geen spatie. Geen streepje.",
+            simpeler: "Schrijf de twee delen als één woord, zonder spatie of streepje. Kijk dan naar het stukje tussen 'zon' en 'bloem': welke letters horen daar?",
             nogSimpeler: "Plak ze vast: 1 woord!",
           },
         },
@@ -1693,7 +1693,7 @@ const steps = [
         q: "Welke zin is **goed**?",
         options: ["Ik antwoordde 'ja'.", "Ik antwoorde 'ja'.", "Ik anwoordde 'ja'.", "Ik antwoorden 'ja'."],
         answer: 0,
-        wrongHints: [null, "De stam 'antwoord' eindigt al op een d — wat komt er in de verleden tijd nog achter?", "Zeg het woord langzaam: ant-woord. Mist er een letter?", "Meervoud — vraag is ik (enkelvoud)."],
+        wrongHints: [null, "De stam 'antwoord' eindigt al op een d — wat komt er in de verleden tijd nog achter?", "Zeg het woord langzaam: ant-woord. Mist er een letter?", "'Antwoorden' is de meervoudsvorm. In deze zin gaat het om 'ik'."],
       },
       {
         q: "*'Gisteren **...** ik thuis.'* Welk woord hoort op de puntjes?",
@@ -1711,25 +1711,25 @@ const steps = [
         q: "Wat is de **tegenwoordige tijd** van 'lopen' bij 'wij'?",
         options: ["wij lopen", "wij loopt", "wij liepen", "wij loop"],
         answer: 0,
-        wrongHints: [null, "Enkelvoud-vorm.", "Verleden tijd — gevraagd is de tegenwoordige tijd.", "Stam zonder uitgang."],
+        wrongHints: [null, "'Loopt' hoort bij hij, zij of het. 'Wij' zijn meer personen.", "Dat is verleden tijd. Gevraagd is de tegenwoordige tijd.", "'Loop' is de stam. Die gebruik je bij 'ik', niet bij 'wij'."],
       },
       {
         q: "Welk woord is **goed gespeld**?",
         options: ["beschuit", "beschuid", "beshuit", "bescuit"],
         answer: 0,
-        wrongHints: [null, "Verleng het woord: 'beschuiten'. Hoor je een t of een d?", "Zeg het langzaam: be-SCH-uit. Welke klank hoor je na de s?", "Je hoort 'sch' zoals in 'school'. Hoe schrijf je die klank?"],
+        wrongHints: [null, "Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?", "Zeg het langzaam: be-SCH-uit. Welke klank hoor je na de s?", "Je hoort 'sch' zoals in 'school'. Hoe schrijf je die klank?"],
       },
       {
-        q: "**'Het kind ___ blij'** — welk werkwoord (tegenwoordige tijd)?",
+        q: "*'Het kind ___ blij.'* Welke vorm van *zijn* in de tegenwoordige tijd hoort op de puntjes?",
         options: ["is", "zijn", "was", "ben"],
         answer: 0,
-        wrongHints: [null, "Meervoud.", "Verleden tijd.", "1e persoon."],
+        wrongHints: [null, "'Zijn' is het hele werkwoord of de meervoudsvorm. 'Het kind' is maar één kind.", "'Was' is verleden tijd. Gevraagd is de tegenwoordige tijd.", "'Ben' hoort bij 'ik'. Over wie gaat deze zin?"],
       },
       {
         q: "*'Gisteren **...** we naar opa.'* Welke vorm van *wandelen* hoort op de puntjes?",
         options: ["wandelden", "wandelde", "wandelten", "wandelt"],
         answer: 0,
-        wrongHints: [null, "Enkelvoud — 'we' is meervoud.", "Stam 'wandel' eindigt niet op kofschip-letter → +den, niet +ten.", "Tegenwoordige tijd, hier verleden."],
+        wrongHints: [null, "'Wandelde' is de vorm voor één persoon. 'We' zijn meer personen.", "Kijk naar de laatste letter van de stam. Zit die letter in 't kofschip?", "'Wandelt' is tegenwoordige tijd. 'Gisteren' vraagt om verleden tijd."],
         uitlegPad: {
           stappen: [
             { titel: "Meervoud + verleden", tekst: "'We' is meervoud (wij/we). In verleden tijd: stam + de/te → meervoud krijgt +n: 'den' of 'ten'." },
@@ -1743,8 +1743,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Enkelvoud vs meervoud", uitleg: "Enkelvoud: wandelde. Meervoud: wandelden." }],
           niveaus: {
-            basis: "wandelden.",
-            simpeler: "We = meervoud + verleden. 'l' geen kofschip → +den.",
+            basis: "Zoek eerst de stam van 'wandelen'. Kijk dan: gaat de zin over één persoon of over meer?",
+            simpeler: "De stam is 'wandel'. De l zit niet in 't kofschip, dus er komt -de achter. 'We' is meervoud: wat komt er dan nog bij?",
             nogSimpeler: "Meervoud verleden = +den.",
           },
         },
@@ -1753,19 +1753,19 @@ const steps = [
         q: "Welk woord is **goed gespeld**?",
         options: ["computer", "compjuter", "konputer", "computter"],
         answer: 0,
-        wrongHints: [null, "Computer is een Engels woord. Hoe schrijf je het in het Engels?", "Twee dingen: het woord begint niet met een k, en voor de p hoort een m.", "Eén t."],
+        wrongHints: [null, "Dit is een leenwoord uit het Engels. Schrijf je de 'joe'-klank in dat woord ook met een j?", "Twee dingen: het woord begint niet met een k, en voor de p hoort een m.", "Kijk naar de t in het midden. Hoeveel t's schrijf je in dit Engelse woord?"],
       },
       {
         q: "*'Het kind **...** drie ijsjes gegeten.'* Welk woord hoort op de puntjes?",
-        options: ["heeft", "hebben", "hebt", "had"],
+        options: ["heeft", "hebben", "hebt", "heb"],
         answer: 0,
-        wrongHints: [null, "Meervoud.", "2e persoon.", "Verleden tijd — gevraagd is de voltooid tegenwoordige tijd."],
+        wrongHints: [null, "'Hebben' is het hele werkwoord of de meervoudsvorm. 'Het kind' is maar één kind.", "'Hebt' hoort bij 'jij'. Over wie gaat deze zin?", "'Heb' gebruik je bij 'ik'. Gaat deze zin over jezelf?"],
       },
       {
         q: "Welk woord is **goed gespeld**?",
         options: ["fietspad", "fiets pad", "fietzpad", "fietspat"],
         answer: 0,
-        wrongHints: [null, "Samengesteld woord — aan elkaar.", "Eindigt op s, niet z.", "Verleng: 'paden'. Hoor je een d of een t?"],
+        wrongHints: [null, "Twee woorden die samen één ding zijn, schrijf je niet los.", "Het eerste deel is het gewone woord 'fiets'. Hoe schrijf je dat woord?", "Verleng het laatste deel eens: maak er meer dan één van. Hoor je dan een d of een t?"],
         uitlegPad: {
           stappen: [
             { titel: "Samenstelling = aan elkaar", tekst: "Twee woorden die samen iets nieuws betekenen schrijf je aan elkaar: fiets + pad = fietspad." },
@@ -1779,7 +1779,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Twee woorden → één betekenis → aan elkaar." }],
           niveaus: {
-            basis: "fietspad — samenstelling.",
+            basis: "Twee woorden die samen één ding zijn, schrijf je aan elkaar. Voor de laatste letter verleng je het woord.",
             simpeler: "Fiets + pad = 1 ding = aan elkaar.",
             nogSimpeler: "Aan elkaar",
           },
@@ -1789,13 +1789,13 @@ const steps = [
         q: "Welke zin is **goed gespeld**?",
         options: ["Wij vinden het leuk.", "Wij vind het leuk.", "Wij vindt het leuk.", "Wij vinden t leuk."],
         answer: 0,
-        wrongHints: [null, "'Vind' is de ik-vorm. 'Wij' is meervoud.", "'Vindt' hoort bij hij/zij/het. 'Wij' is meervoud.", "'t' is geen NL — gebruik 'het'."],
+        wrongHints: [null, "'Vind' is de ik-vorm. 'Wij' is meervoud.", "'Vindt' hoort bij hij/zij/het. 'Wij' is meervoud.", "'t is spreektaal. In een nette geschreven zin schrijf je het hele woord."],
       },
       {
         q: "Welk woord is **goed gespeld**?",
         options: ["eiland", "ijland", "eilant", "ijlant"],
         answer: 0,
-        wrongHints: [null, "Dit moet je uit je hoofd leren. Welke spelling zie je vaker in boeken?", "Verleng: 'eilanden'. Hoor je een t of een d?", "Twee dingen: ei of ij, en d of t aan het eind."],
+        wrongHints: [null, "Dit moet je uit je hoofd leren. Welke spelling zie je vaker in boeken?", "Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?", "Twee dingen: ei of ij, en d of t aan het eind."],
         uitlegPad: {
           stappen: [
             { titel: "ei of ij?", tekst: "Voor ei/ij bestaat geen regel. Je moet woorden gewoon UIT JE HOOFD kennen. 'Eiland' schrijf je met ei." },
@@ -1809,8 +1809,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Geheugentruc", uitleg: "Soms helpt het: 'lijn' (recht) heeft ij. 'plein' (waar mensen samenkomen) heeft ei. Maar er zijn veel uitzonderingen." }],
           niveaus: {
-            basis: "eiland.",
-            simpeler: "'Eiland' kennen we, 'ijland' niet.",
+            basis: "Of je ei of ij schrijft, moet je uit je hoofd kennen. Voor de laatste letter verleng je het woord.",
+            simpeler: "Denk aan woorden als klein en plein: die schrijf je met ei. Verleng daarna het woord: hoor je een d of een t?",
             nogSimpeler: "eiland",
           },
         },
