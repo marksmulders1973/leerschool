@@ -63,3 +63,18 @@ regel per vraag uit je pakket (allemaal, ook de goede):
 **Eindrapport (kort, Nederlands):** aantallen goed/fout/twijfel, lijst van alle fouten met `waar` + wat je
 deed, welke bestanden je bewerkte, en wat je bewust NIET hebt opgelost (met reden). Geen "alles is goed"
 zonder de telling.
+
+## Startset-vragen in je pakket (toegevoegd na golf 1)
+
+Sommige vragen in B1 zitten óók in de startset (eerste 20) van een andere groep en zijn daar al blind
+nagekeken op antwoord en niveau (maar niet op hints met de maatstaf hierboven). Voor die vragen geldt:
+hints (`wrongHints`, `niveaus`) mag je herstellen; vraagtekst of opties ALLEEN bij een echte fout (fout
+antwoord, antwoord in de vraag, twee goede antwoorden); en zet er NOOIT `vanafGroep` of `disabled` op —
+dat verschuift de startset. Per pakket:
+- 09: nieuwsbericht-lezen-po stap 1 vraag 1-2 · topografie-nederland stap 1 vraag 1-8 · leestekens-hoofdletters-po stap 1 vraag 1-2 · tijdvakken-nederland-po stap 1 vraag 1-4
+- 10: tekstverbanden-oorzaak-gevolg-po stap 1 vraag 1-2 · deelsommen-met-rest-po stap 1 vraag 1
+- 11: industriele-revolutie-po stap 1 vraag 4, stap 2 vraag 1-2 · feiten-details-opzoeken-po stap 1 vraag 1-2 · folder-bon-advertentie-po stap 1 vraag 1-2 · inhoudsopgave-register-po stap 1 vraag 1-2
+- 12: klassieke-muziek-po stap 1 vraag 1-4 · omzetten-breuk-procent-komma-po stap 1 vraag 3-5
+- 13: lichaam-gezondheid-po stap 1 vraag 1-4, stap 2 vraag 1-2 · geschiedenis-vroeger-en-nu-g5 stap 2 vraag 1-3 · cijferend-rekenen stap 1 vraag 1-2 · dienstregeling-roosters-po stap 1 vraag 5-8 · water-erfgoed-nederland-po stap 2 vraag 1-2 · conclusies-trekken-po stap 1 vraag 1-2
+- 14: bekende-wetenschappers-po stap 2 vraag 1 · energiebronnen-po stap 2 vraag 1 · evolutie-mens-po stap 2 vraag 1-2 · nederlandse-kunstenaars-po stap 1 vraag 1-4 · olympische-spelen-po stap 1 vraag 1 · ontdekkingsreizen-po stap 1 vraag 1 · politiek-democratie-po stap 1 vraag 1-2 · toestand-stoffen-po stap 1 vraag 1-2 · weersvoorspelling-po stap 1 vraag 1-2
+- 15: dieren-seizoenen-natuur stap 2 vraag 1-2 · vulkanen-po stap 1 vraag 3 · kaartlezen-po stap 2 vraag 2-3 · pubertijd-groei-po stap 1 vraag 1-3 · waterkringloop-po stap 1 vraag 1-2 · topografie-nederland-provincies-po stap 1 vraag 1
