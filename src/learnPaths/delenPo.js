@@ -1416,7 +1416,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "'Hoeveel per kind?' = deel-teken. Schrijf elke redactiesom om naar een gewone som met getallen + ÷." }],
           niveaus: {
-            basis: "32 ÷ 8 = 4 koekjes per kind.",
+            basis: "Je verdeelt 32 koekjes over 8 kinderen. Welke deelsom hoort daarbij? Denk aan de tafel van 8.",
             simpeler: "32 koekjes verdelen over 8 kinderen = 32 ÷ 8 = 4.",
             nogSimpeler: "4",
           },
@@ -1490,7 +1490,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€6 ÷ 3 = €2 per schrift.",
+            basis: "Je verdeelt €6 over 3 schriften. Welke deelsom hoort daarbij?",
             simpeler: "€6 verdelen over 3 schriften = €2.",
             nogSimpeler: "€2",
           },
@@ -1540,7 +1540,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "160 ÷ 40 = 4 bussen.",
+            basis: "Hoe vaak past 40 in 160? Tel in sprongen van 40.",
             simpeler: "40, 80, 120, 160: 4 bussen.",
             nogSimpeler: "4 bussen",
           },
@@ -1595,7 +1595,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 ÷ 5 = 6 groepjes.",
+            basis: "Hoe vaak past 5 in 30? Denk aan de tafel van 5.",
             simpeler: "30 kinderen, steeds 5 bij elkaar: 6 groepjes.",
             nogSimpeler: "6 groepjes",
           },
@@ -1646,7 +1646,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 dozen.",
+            basis: "Hoeveel ballen passen in 4 dozen? Blijven er dan nog ballen over?",
             simpeler: "34 ÷ 8 = 4 rest 2. Die 2 ballen ook in een doos: 5 dozen.",
             nogSimpeler: "5 dozen",
           },
@@ -1705,7 +1705,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "42 ÷ 7 = 6 dropjes per kind.",
+            basis: "Je verdeelt 42 dropjes over 7 kinderen. Denk aan de tafel van 7.",
             simpeler: "42 dropjes over 7 kinderen: elk kind krijgt 6.",
             nogSimpeler: "6 dropjes",
           },

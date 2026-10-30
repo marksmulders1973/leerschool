@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap); hints B/C telegramstijl",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (\"Hoe vaak past 30 minuten in een heel uur?\"); hints B en C als hele zinnen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "vraag liep stroef (gedachtestreepje); niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "vraag: \"Je krijgt 25% korting. Hoeveel betaal je?\"; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "40% van 200 = 80; hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "20% van 30 = 6; hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (eerst 10% in euro, dan optellen)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 11",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (helft van een halve pizza)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "30/120 = 25%; hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "2/(2+5) = 2/7; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 14",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij 20 rekende het antwoord voor (\"80% is twee keer zoveel\" -> 2 x 20)",
+  "hersteld": true,
+  "wijziging": "hint C: \"20 is 40% van 50. Je zoekt een groter percentage.\""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "150% van 20 = 30; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 16",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHints bij 10 en 5 rekenden het antwoord voor (meisjes = 10 -> 25-10; \"jongens hebben er 3\" -> 3 x 5); niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "hints B en D herschreven tot denkfout zonder uitkomst; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "20/50 = 40%; hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "10% van 350 = 35",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 19",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "antwoord klopt (1:3 = 25%:75%); hint D was telegramzin",
+  "hersteld": true,
+  "wijziging": "hint D: \"Dan zouden beide delen even groot zijn. Zijn 1 en 3 even groot?\""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "\"snel\" bij werkwoord = bijwoord (schoolgrammatica)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "bijwoord van tijd; hint noemt ook \"de morgen\" als zn",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "traditionele schoolindeling: 10 woordsoorten",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 22",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 23",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (eerst omrekenen, dan vergelijken)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (tafel van 8)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "2,50 / 5 = 0,50; hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "delen-po stap 5 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "56/7 = 8",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "delen-po stap 5 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "40/6 = 6 rest 4 -> 7 dozen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "delen-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap) (\"5 dozen.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (hoeveel passen in 4 dozen, blijft er iets over?)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (tafel van 7)"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 12 rekende voor (\"2 x 2 x ...?\"); telegramvraag; niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin; hint D zonder som; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHints bij 25 (\"Doe nog x 5\") en 75 (\"met 3 of met 5?\") rekenden het antwoord voor; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin; hints B en D benoemen de denkfout zonder de laatste rekenstap"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 9 (\"Nog een keer x 3\") rekende het antwoord voor; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin; hint B benoemt de vergeten hoogte"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 100 (\"Nog een keer x 10\") rekende voor; hint bij 10.000 gaf de complete som; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin; hints B en D herschreven"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 147 (\"x 7 in plaats van x 3\") rekende de laatste stap voor; niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "hint D: \"147 is 49 x 3. Waar komt die 3 vandaan?\"; basis herschreven"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 192 (\"x 8 in plaats van x 3\") rekende de laatste stap voor; niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "hint D herschreven; basis herschreven"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 400 (\"Nog een keer x 20\") rekende het antwoord voor; niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "hint B benoemt vergeten hoogte; basis herschreven (eerst zonder nullen)"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "telegramvraag; hint D verklapte grootte (\"meerdere kilometers\"); niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin (weg van 4 cm); hints B en D herschreven; basis herschreven"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 0,5 km verklapte de rekenstap (\"hoort 0,5 km bij 1 cm of bij 2 cm?\" -> 2 x 0,5); telegramvraag; niveaus.basis gaf alleen het antwoord (geen hulpstap)",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin; hint C herschreven; basis herschreven"
+ }
+]

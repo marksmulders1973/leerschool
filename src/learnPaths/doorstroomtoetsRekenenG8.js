@@ -712,7 +712,7 @@ const steps = [
         ref: "S",
         options: ["30 km/u", "15 km/u", "45 km/u", "7,5 km/u"],
         answer: 0,
-        wrongHints: [null, "15 = aantal km, niet snelheid per uur.", "45 zou betekenen 22,5 km in 30 min — meer.", "Dan zou Tom in een héél uur maar 7,5 km halen — hij fietst in een half uur al 15 km."],
+        wrongHints: [null, "Dat is de afstand in een half uur. Hoe ver komt Tom in een heel uur?", "Bij 45 km per uur zou Tom in een half uur 22,5 km fietsen. Hij fietst minder ver.", "Dan zou Tom in een héél uur maar 7,5 km halen — hij fietst in een half uur al 15 km."],
         uitlegPad: {
           stappen: [
             { titel: "Verdubbelen", tekst: "30 minuten = een half uur. In een half uur 15 km. In een heel uur: 15 × 2 = 30 km/u." },
@@ -722,11 +722,11 @@ const steps = [
           theorie: "Formule: snelheid (v) = afstand (s) ÷ tijd (t). Onthouden via 'vst-driehoek': v = s/t / s = v×t / t = s/v.",
           voorbeelden: [{ type: "vergelijk", tekst: "Lopen: ~5 km/u. Fietsen: 15-30 km/u. Auto stad: 30-50 km/u. Auto snelweg: 100-130 km/u." }],
           basiskennis: [{ onderwerp: "Tijd in uren", uitleg: "30 min = 0,5 uur (niet 30!). 15 min = 0,25 uur. 45 min = 0,75 uur." }],
-          niveaus: { basis: "30 km/u (×2 want 30 min).", simpeler: "30 min = half uur. 15 km in half uur = 30 km in een heel uur.", nogSimpeler: "30" },
+          niveaus: { basis: "Hoe vaak past 30 minuten in een heel uur? Zo vaak fietst Tom 15 km.", simpeler: "30 min = half uur. 15 km in half uur = 30 km in een heel uur.", nogSimpeler: "30" },
         },
       },
       {
-        q: "Een jas kost €80. Met **25% korting** — wat betaal je?",
+        q: "Een jas kost €80. Je krijgt **25% korting**. Hoeveel betaal je?",
         options: ["€60", "€55", "€20", "€105"],
         answer: 0,
         wrongHints: [null, "25% van €80 is geen €25 — reken een kwart van €80 uit.", "Dat is het kortingsbedrag, niet de eindprijs.", "Bij korting wordt de prijs lager, niet hoger."],
@@ -739,7 +739,7 @@ const steps = [
           theorie: "Eindprijs = oude prijs × (1 − percentage/100). 80 × (1 − 0,25) = 80 × 0,75 = €60.",
           voorbeelden: [{ type: "snelle-truc", tekst: "25% korting = ¾ overhouden. 80 × ¾ = 60." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "€60 < €80 (klopt: korting), en €60 > €40 (niet half af). ✓" }],
-          niveaus: { basis: "€60 (€80 − 25%).", simpeler: "25% van €80 = €20. €80 − €20 = €60.", nogSimpeler: "€60" },
+          niveaus: { basis: "Reken eerst uit hoeveel euro de korting is. Haal dat bedrag daarna van €80 af.", simpeler: "25% van €80 = €20. €80 − €20 = €60.", nogSimpeler: "€60" },
         },
       },
       {
@@ -791,7 +791,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "10% van €80 = €8. Verhoogd: €80+€8=€88. Korting: €80−€8=€72." }],
           basiskennis: [{ onderwerp: "Verhoging vs korting", uitleg: "Verhoging = + (groter). Korting = − (kleiner). Beide gebruiken hetzelfde % maar tegenovergesteld." }],
           niveaus: {
-            basis: "€66 (€60 + 10%).",
+            basis: "Reken eerst uit hoeveel euro 10% van €60 is. Tel dat bedrag daarna bij €60 op.",
             simpeler: "10% van €60 = €6. €60 + €6 = €66.",
             nogSimpeler: "€66",
           },
@@ -818,7 +818,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "50% van 1/2 = 1/2 × 1/2 = 1/4. 25% van 1/2 = 1/4 × 1/2 = 1/8." }],
           basiskennis: [{ onderwerp: "Visualiseer", uitleg: "Pizza in 2 = halve. Half daarvan = kwart. Klopt." }],
           niveaus: {
-            basis: "1/4 (helft van helft).",
+            basis: "50% betekent de helft. Hoeveel is de helft van een halve pizza?",
             simpeler: "50% = 1/2. 1/2 × 1/2 = 1/4.",
             nogSimpeler: "1/4",
           },
@@ -840,7 +840,7 @@ const steps = [
         q: "Hoeveel is **80% van 50**?",
         options: ["40", "30", "20", "100"],
         answer: 0,
-        wrongHints: [null, "30 is 60% van 50 — reken eerst 10% uit.", "20 is 40% van 50 — 80% is twee keer zoveel.", "100 is meer dan 50 — kan 80% van 50 groter zijn dan 50?"],
+        wrongHints: [null, "30 is 60% van 50 — reken eerst 10% uit.", "20 is 40% van 50. Je zoekt een groter percentage.", "100 is meer dan 50 — kan 80% van 50 groter zijn dan 50?"],
       },
       {
         q: "Hoeveel is **150% van 20**?",
@@ -852,7 +852,7 @@ const steps = [
         q: "De verhouding **jongens : meisjes is 3 : 2**. Er zijn 25 leerlingen. Hoeveel jongens zijn er?",
         options: ["15", "10", "12", "5"],
         answer: 0,
-        wrongHints: [null, "10 hoort bij de meisjes (2 delen) — hoeveel zijn de jongens?", "Tel de delen op: 3 + 2. Hoeveel leerlingen zijn er per deel?", "5 is één deel — de jongens hebben er 3."],
+        wrongHints: [null, "Je rekende met de 2 delen uit de verhouding. Hoeveel delen horen bij de jongens?", "Tel de delen op: 3 + 2. Hoeveel leerlingen zijn er per deel?", "Dat is het aantal leerlingen in één deel. De jongens hebben meer dan één deel."],
         uitlegPad: {
           stappen: [
             { titel: "Tel delen op", tekst: "3 + 2 = 5 delen totaal." },
@@ -864,7 +864,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Verhouding 1:4 totaal 20 → 20÷5 = 4 per deel. 1 deel = 4, 4 delen = 16." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "15 jongens + 10 meisjes = 25 ✓. Verhouding 15:10 = 3:2 ✓." }],
           niveaus: {
-            basis: "15 (3×5).",
+            basis: "Tel eerst de delen van de verhouding op. Hoeveel leerlingen horen dan bij één deel?",
             simpeler: "3+2=5 delen, 25÷5=5 per deel, jongens 3×5=15.",
             nogSimpeler: "15",
           },
@@ -886,7 +886,7 @@ const steps = [
         q: "Hoe schrijf je de verhouding **1 : 3** in **procenten**?",
         options: ["25% : 75%", "33% : 67%", "10% : 90%", "50% : 50%"],
         answer: 0,
-        wrongHints: [null, "33% : 67% hoort bij 1 : 2 (samen 3 delen). Hoeveel delen heeft 1 : 3 samen?", "10% : 90% is de verhouding 1 : 9. Hoeveel delen zijn er bij 1 : 3 samen?", "Verhouding zou dan 1:1 zijn (gelijke delen)."],
+        wrongHints: [null, "33% : 67% hoort bij 1 : 2 (samen 3 delen). Hoeveel delen heeft 1 : 3 samen?", "10% : 90% is de verhouding 1 : 9. Hoeveel delen zijn er bij 1 : 3 samen?", "Dan zouden beide delen even groot zijn. Zijn 1 en 3 even groot?"],
       },
       {
         q: "Een spel kost **€100 zonder btw** (belasting). Er komt **21% btw** bij. Wat betaal je in totaal?",

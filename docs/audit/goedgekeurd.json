@@ -3944,6 +3944,75 @@
   "reden": "7 auto's klopt (naar boven afronden); niveaus.basis gaf alleen het antwoord."
  },
  {
+  "waar": "delen-po stap 5 vraag 1",
+  "hash": "a097c10181de3dc2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 2",
+  "hash": "e69fe34060f6d0e5",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 3",
+  "hash": "28ab03c672b2e2e1",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 4",
+  "hash": "c432c2decd5e9535",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 5",
+  "hash": "6e3a100b985d331f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 6",
+  "hash": "83b3402469dcafec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 7",
+  "hash": "05a2cd0f0532f660",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 8",
+  "hash": "dc03eec1338e2ef1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap) (\"5 dozen.\")"
+ },
+ {
+  "waar": "delen-po stap 5 vraag 9",
+  "hash": "5e4d987d7188a393",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
   "waar": "dichten-poezie-rijmen-po stap 2 vraag 1",
   "hash": "e8813cbc04324c46",
   "oordeel": "twijfel",
@@ -5172,6 +5241,57 @@
   "reden": "Hint bij 5 (\"Dat is 1 deel\") rekent het half voor: 2 delen = 10."
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 11",
+  "hash": "560975b575766312",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 12",
+  "hash": "ec61ac81d7b0b2d3",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 13",
+  "hash": "6bc66a4cdad64b28",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 15",
+  "hash": "e2f41f8816edb443",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 17",
+  "hash": "d0cf6891825ed12b",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 18",
+  "hash": "bd0324237393b7aa",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 19",
+  "hash": "5d45bb2b0bd299bf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt (1:3 = 25%:75%); hint D was telegramzin"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 2",
   "hash": "df60e90ac5dbb292",
   "oordeel": "goed",
@@ -5184,6 +5304,44 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 5",
+  "hash": "a57c6c1a7c54ecf4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap); hints B/C telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 6",
+  "hash": "4b86d58a1102e0be",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "vraag liep stroef (gedachtestreepje); niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 7",
+  "hash": "85423be7d25ef6b6",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 8",
+  "hash": "196effe9a6a2b967",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 9",
+  "hash": "1c1dbeb07366a29d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 24",
@@ -12031,6 +12189,22 @@
   "reden": "Nagerekend: 1000 / 900 / 500 / 800 liter, dus het antwoord klopt. basis én simpeler noemden het antwoord."
  },
  {
+  "waar": "meetkunde-bouwsels stap 2 vraag 8",
+  "hash": "3c9635ae4737c0d5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 9",
+  "hash": "8e3e76205335be9f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 1",
   "hash": "45ad2f210f954ba7",
   "oordeel": "goed",
@@ -15064,6 +15238,86 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "romeinse-cijfers-po stap 2 vraag 1",
+  "hash": "55d5eaade1ca4b8e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 10",
+  "hash": "0cb2a648b3b9a2e1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 2",
+  "hash": "67488c8a9631b3e6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 3",
+  "hash": "e6a06f8cfc92eb56",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 4",
+  "hash": "19562bff2b42898e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 5",
+  "hash": "92fcf420bc43bc9f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 6",
+  "hash": "b5912e882e75d3cf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 7",
+  "hash": "0e0251c50a225da4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 8",
+  "hash": "1aa432dd5261f212",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 2 vraag 9",
+  "hash": "c0c073f73c91cdff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
   "waar": "ruimtevaart-po stap 1 vraag 1",
   "hash": "bd2177fc56d25608",
   "oordeel": "goed",
@@ -15825,6 +16079,14 @@
   "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt (200.000 cm = 2 km); basis gaf uitkomst en 200 km (gedeeld door 1.000) had geen hint."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 3",
+  "hash": "cde46afcc7f96439",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramvraag; hint D verklapte grootte (\"meerdere kilometers\"); niveaus.basis gaf alleen het antwoord (geen hulpstap)"
  },
  {
   "waar": "schaal-kaart-rekenen-po stap 2 vraag 9",
@@ -25573,12 +25835,89 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "woordsoorten-po stap 5 vraag 15",
+  "hash": "53e448fb6d4c0457",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 16",
+  "hash": "bf2a9d12c4ba176f",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 17",
+  "hash": "9f3f854c07e962c5",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 18",
+  "hash": "d228b6fd9b57b9b3",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 19",
+  "hash": "f0f3ccf003b24bf0",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "woordsoorten-po stap 5 vraag 2",
   "hash": "aaeedb0a5d6930d6",
   "oordeel": "twijfel",
   "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis was alleen het antwoord; hint B telegramzin"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 20",
+  "hash": "a39dfad67ab8ebf3",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 21",
+  "hash": "6011d75962b4a82c",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 22",
+  "hash": "fbffaa4ae3effa3b",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 23",
+  "hash": "8735316a6f57d424",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 24",
+  "hash": "842015344a80fe8f",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 25",
+  "hash": "14277f6fe2f19cb4",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "woordsoorten-po stap 5 vraag 3",

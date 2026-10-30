@@ -295,10 +295,10 @@ const steps = [
         },
       },
       {
-        q: "Schaal 1 : 100.000. Op de kaart 4 cm. Hoeveel km in het echt?",
+        q: "Een kaart heeft schaal 1 : 100.000. Op de kaart is een weg 4 cm lang. Hoeveel km is die weg in het echt?",
         options: ["4 km", "40 km", "40 m", "0,4 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — reken cm goed naar km.", "40 m is maar 4.000 cm. Hoeveel cm is 4 × 100.000?", "Te weinig — het is meerdere kilometers."],
+        wrongHints: [null, "Te veel — controleer hoeveel cm er in 1 km gaan.", "40 m is maar 4.000 cm. Hoeveel cm is 4 × 100.000?", "Te weinig — je hebt bij het omrekenen van cm naar km te veel nullen weggestreept."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig met het schaalgetal", tekst: "Neem de kaart-afstand keer honderdduizend om de echte afstand in centimeter te vinden." },
@@ -309,17 +309,17 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Op een fietskaart met schaal 1 : 100.000 kun je meteen de kilometers aflezen door het aantal centimeters van de route te tellen." }],
           basiskennis: [{ onderwerp: "100.000 cm = 1 km", uitleg: "Honderdduizend centimeter is gelijk aan duizend meter, en dat is precies 1 kilometer." }],
           niveaus: {
-            basis: "4 × 100.000 = 400.000 cm = 4 km.",
+            basis: "Vermenigvuldig de 4 cm eerst met het schaalgetal. Reken de uitkomst in cm daarna om naar km.",
             simpeler: "Bij schaal 1 : 100.000 is 1 cm = 1 km. Dus 4 cm = 4 km.",
             nogSimpeler: "1 cm = 1 km, hoeveel is 4 cm?",
           },
         },
       },
       {
-        q: "Schaal 1 : 50.000. Op de kaart 2 cm. Hoeveel km in het echt?",
+        q: "Een kaart heeft schaal 1 : 50.000. Op de kaart is een pad 2 cm lang. Hoeveel km is dat pad in het echt?",
         options: ["1 km", "2 km", "0,5 km", "10 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Hoort 0,5 km bij 1 cm of bij 2 cm op de kaart?", "Hoeveel km hoort bij 1 cm op deze kaart? Is dat 5 km?"],
+        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Te weinig — heb je met de hele afstand op de kaart gerekend?", "Hoeveel km hoort bij 1 cm op deze kaart? Is dat 5 km?"],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig eerst in centimeter", tekst: "Neem de kaart-afstand keer vijftigduizend om de echte afstand in centimeter te krijgen." },
@@ -330,7 +330,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Op een wandelroutekaart met schaal 1 : 50.000 kun je met deze vuistregel snel inschatten hoe lang een wandeling in het echt wordt." }],
           basiskennis: [{ onderwerp: "cm naar km", uitleg: "Honderdduizend centimeter is gelijk aan één kilometer." }],
           niveaus: {
-            basis: "2 × 50.000 = 100.000 cm = 1 km.",
+            basis: "Vermenigvuldig de 2 cm eerst met 50.000. Hoeveel cm gaan er in 1 km?",
             simpeler: "1 cm = 50.000 cm = 0,5 km. Dus 2 cm = 1 km.",
             nogSimpeler: "0,5 km + 0,5 km = ?",
           },

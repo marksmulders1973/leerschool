@@ -277,10 +277,10 @@ const steps = [
     svg: kubusSvg("4 cm", "Kubus met zijde 4 cm — V = 4 × 4 × 4 = 64 cm³"),
     checks: [
       {
-        q: "Volume kubus met zijde **2 cm** = ?",
+        q: "Een kubus heeft een zijde van **2 cm**. Wat is het volume?",
         options: ["8 cm³", "6 cm³", "4 cm³", "12 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je 2 + 2 + 2 gedaan? Het is keer-keer, niet plus-plus.", "Te weinig — heb je per ongeluk 2 × 2 gedaan?", "Hoe kom je aan 12? Vermenigvuldig lengte, breedte en hoogte: 2 × 2 × …?"],
+        wrongHints: [null, "Te weinig — heb je 2 + 2 + 2 gedaan? Het is keer-keer, niet plus-plus.", "Te weinig — heb je per ongeluk 2 × 2 gedaan?", "Hoe kom je aan 12? Bij een kubus zijn lengte, breedte en hoogte allemaal even lang. Welke getallen vermenigvuldig je dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule kubus", tekst: "V = zijde × zijde × zijde = 2 cm × 2 cm × 2 cm = 8 cm³." },
@@ -290,29 +290,29 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Zijde 2 → 2 × 2 = 4 → 4 × 2 = 8 cm³." }],
           basiskennis: [{ onderwerp: "Niet × 3", uitleg: "Het is keer-keer-keer (3 keer), niet plus-plus of × 3." }],
           niveaus: {
-            basis: "2 × 2 × 2 = 8 cm³.",
+            basis: "Een kubus heeft lengte, breedte en hoogte, allemaal 2 cm. Vermenigvuldig die drie met elkaar.",
             simpeler: "Eerst 2 × 2 = 4. Dan 4 × 2 = 8. Dus 8 cm³.",
             nogSimpeler: "8 cm³",
           },
         },
       },
       {
-        q: "Volume kubus met zijde **5 cm** = ?",
+        q: "Een kubus heeft een zijde van **5 cm**. Wat is het volume?",
         options: ["125 cm³", "25 cm³", "15 cm³", "75 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 5 × 5 (alleen 2 keer). Doe nog × 5.", "Te weinig — dat is 5 + 5 + 5. Volume is keer-keer-keer.", "75 is 25 × 3. Moet je de laatste keer met 3 of met 5 vermenigvuldigen?"],
+        wrongHints: [null, "Te weinig — dat is 5 × 5. Je vergat de hoogte: een kubus heeft drie richtingen.", "Te weinig — dat is 5 + 5 + 5. Volume is keer-keer-keer.", "75 is 25 × 3. Waar komt die 3 vandaan? Heeft deze kubus een zijde van 3 cm?"],
       },
       {
-        q: "Een ijsblokje is een kubus van **3 cm**. Volume?",
+        q: "Een ijsblokje heeft de vorm van een kubus met een zijde van **3 cm**. Wat is het volume?",
         options: ["27 cm³", "9 cm³", "6 cm³", "12 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 3 × 3. Nog één keer × 3.", "Te weinig — dat is 3 + 3.", "12 is 3 × 4. Welke drie getallen vermenigvuldig je bij een kubus van 3 cm?"],
+        wrongHints: [null, "Te weinig — dat is 3 × 3. Je vergat de hoogte: een kubus heeft drie richtingen.", "Te weinig — dat is 3 + 3.", "12 is 3 × 4. Welke drie getallen vermenigvuldig je bij een kubus van 3 cm?"],
       },
       {
-        q: "Een speelblokje is een kubus van **10 cm**. Volume?",
+        q: "Een speelblokje heeft de vorm van een kubus met een zijde van **10 cm**. Wat is het volume?",
         options: ["1000 cm³", "100 cm³", "30 cm³", "10.000 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 10 × 10. Nog één keer × 10.", "Te weinig — dat is 10 + 10 + 10.", "Tel de nullen: hoeveel nullen krijg je bij 10 × 10 × 10?"],
+        wrongHints: [null, "Te weinig — dat is 10 × 10. Je vergat de hoogte: een kubus heeft drie richtingen.", "Te weinig — dat is 10 + 10 + 10.", "Te veel — hoe vaak heb je met 10 vermenigvuldigd? Een kubus heeft drie richtingen."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -323,7 +323,7 @@ const steps = [
           null,
           "Te weinig — heb je maar 2 keer met 7 vermenigvuldigd?",
           "Te weinig — is dat 7 + 7 + 7? Volume is keer.",
-          "Heb je ergens × 3 gedaan in plaats van × 7?",
+          "147 is 49 × 3. Waar komt die 3 vandaan? Heeft deze kubus een zijde van 3 cm?",
         ],
         uitlegPad: {
           stappen: [
@@ -360,7 +360,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 × 7 × 7 = 343 cm³.",
+            basis: "Een kubus heeft lengte, breedte en hoogte, allemaal 7 cm. Vermenigvuldig die drie met elkaar, in twee stappen.",
             simpeler: "Eerst 7 × 7 = 49. Dan 49 × 7 = 343. Dus 343 cm³.",
             nogSimpeler: "343 cm³",
           },
@@ -374,7 +374,7 @@ const steps = [
           null,
           "Te weinig — dat is 8 × 8. Hoe vaak moet je met 8 vermenigvuldigen?",
           null,
-          "Heb je ergens × 3 gedaan in plaats van × 8?",
+          "192 is 64 × 3. Waar komt die 3 vandaan? Heeft deze kubus een zijde van 3 cm?",
         ],
         uitlegPad: {
           stappen: [
@@ -411,7 +411,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 × 8 × 8 = 512 cm³.",
+            basis: "Een kubus heeft lengte, breedte en hoogte, allemaal 8 cm. Vermenigvuldig die drie met elkaar, in twee stappen.",
             simpeler: "Eerst 8 × 8 = 64. Dan 64 × 8 = 512. Dus 512 cm³.",
             nogSimpeler: "512 cm³",
           },
@@ -423,7 +423,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Te weinig — dat is 20 × 20. Nog één keer × 20.",
+          "Te weinig — dat is 20 × 20. Je vergat de hoogte: een kubus heeft drie richtingen.",
           null,
           "Te veel — tel de nullen nog eens na.",
         ],
@@ -458,7 +458,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20 × 20 × 20 = 8000 cm³.",
+            basis: "Slim rekenen: doe eerst de som zonder nullen. Hoeveel nullen komen er daarna achter?",
             simpeler: "20 × 20 = 400. 400 × 20 = 8000. Dus 8000 cm³.",
             nogSimpeler: "8000 cm³",
           },
@@ -501,7 +501,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 × 9 × 9.",
+            basis: "Een kubus heeft drie richtingen: lengte, breedte en hoogte. Hoe lang is elke richting hier, en reken je met plus of met keer?",
             simpeler: "Een kubus: 3 keer de zijde keer elkaar. Dus 9 × 9 × 9.",
             nogSimpeler: "9 × 9 × 9",
           },
@@ -544,7 +544,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Volume schrijf je in cm³.",
+            basis: "Bij volume vermenigvuldig je drie lengtes in cm met elkaar. Wat gebeurt er dan met de eenheid?",
             simpeler: "cm × cm × cm = cm³. Volume heeft altijd een ³.",
             nogSimpeler: "cm³",
           },

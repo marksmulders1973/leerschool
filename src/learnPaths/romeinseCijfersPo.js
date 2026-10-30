@@ -216,7 +216,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "5 + 1", tekst: "I staat ná V, dus optellen: 5 + 1 = 6." }],
           niveaus: {
-            basis: "V = 5, I = 1, samen 6.",
+            basis: "Zoek op wat V en I waard zijn. Staat de I vóór of ná de V?",
             simpeler: "De I staat achter de V, dus erbij optellen.",
             nogSimpeler: "5 + 1 = ?",
           },
@@ -230,7 +230,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "10 + 5", tekst: "X = 10, V = 5. V staat erachter, dus 10 + 5 = 15." }],
           niveaus: {
-            basis: "X = 10, V = 5, samen 15.",
+            basis: "Zoek op wat X en V waard zijn. Staat het kleinste symbool achteraan, dan tel je op.",
             simpeler: "Tel de twee symbolen op.",
             nogSimpeler: "10 + 5 = ?",
           },
@@ -244,7 +244,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "10 + 1 + 1", tekst: "12 = 10 + 1 + 1 = X + I + I = XII." }],
           niveaus: {
-            basis: "12 = X (10) + II (2) = XII.",
+            basis: "Splits 12 in een tiental en enen. Welk symbool hoort bij 10, en welk bij 1?",
             simpeler: "Eerst de 10 (X), dan twee keer 1 (II).",
             nogSimpeler: "Welke begint met X en dan twee I'tjes?",
           },
@@ -258,7 +258,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "50 + 10", tekst: "L = 50, X = 10. X staat erachter, dus 50 + 10 = 60." }],
           niveaus: {
-            basis: "L = 50, X = 10, samen 60.",
+            basis: "Zoek op wat L en X waard zijn. Staat de X vóór of ná de L?",
             simpeler: "De X staat achter de L → optellen.",
             nogSimpeler: "50 + 10 = ?",
           },
@@ -272,7 +272,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "5 + 3", tekst: "V = 5, III = 3. V staat links van de I's, dus optellen: 5 + 3 = 8." }],
           niveaus: {
-            basis: "VIII = V (5) + III (3) = 8.",
+            basis: "Zoek op wat V waard is. Tel daarna de I'tjes achter de V erbij.",
             simpeler: "Tel: 5 + 1 + 1 + 1 = ?",
             nogSimpeler: "5 + 3 = ?",
           },
@@ -286,7 +286,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "20 + 5", tekst: "25 = 20 + 5 = XX (20) + V (5) = XXV." }],
           niveaus: {
-            basis: "25 = XX (20) + V (5) = XXV.",
+            basis: "Splits 25 in tientallen en een vijf. Schrijf eerst de tientallen, dan de vijf.",
             simpeler: "Eerst twee X'en (20), dan een V (5).",
             nogSimpeler: "Welke begint met XX en dan een V?",
           },
@@ -311,7 +311,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "XXX = 30 en I = 1, samen 31.",
+            basis: "Zoek op wat X en I waard zijn. Alles staat van groot naar klein, dus je telt alles op.",
             simpeler: "Elke X is 10. Tel de drie X'en en dan de I erbij.",
             nogSimpeler: "10 + 10 + 10 + 1 = ?",
           },
@@ -335,7 +335,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "XX (20) + III (3) = XXIII.",
+            basis: "Splits 23 in tientallen en enen. Hoeveel X'en en hoeveel I'tjes heb je nodig?",
             simpeler: "Eerst de tientallen (X'en), dan de enen (I'tjes).",
             nogSimpeler: "Twee keer X en drie keer I.",
           },
@@ -359,7 +359,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "C + L + V = 100 + 50 + 5 = 155.",
+            basis: "Zoek op wat C, L en V waard zijn. Ze staan van groot naar klein, dus je telt ze op.",
             simpeler: "Zoek de waarde van elke letter op en tel ze bij elkaar.",
             nogSimpeler: "100 + 50 + 5 = ?",
           },
@@ -383,7 +383,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "22 is meer dan 21, 18 en 16.",
+            basis: "Reken elk Romeins getal om naar een gewoon getal. Welk getal is dan het grootst?",
             simpeler: "Maak van elk Romeins getal eerst een gewoon getal.",
             nogSimpeler: "Wat is het meest: 22, 18, 21 of 16?",
           },
