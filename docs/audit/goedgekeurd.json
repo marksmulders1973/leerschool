@@ -10798,6 +10798,38 @@
   "reden": "Het rekenwerk klopt (−10), maar het is geen groep-5-stof. De hint bij −2 schreef de som al om tot '−4 − 6' (deels voorrekenen); basis gaf alleen '−10.'"
  },
  {
+  "waar": "negatieve-getallen-po stap 3 vraag 6",
+  "hash": "62ce88b1d200e8ca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord; min een minus is geen groep-5-stof."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 7",
+  "hash": "9a8f399141d8fc86",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord; twee negatieve getallen is geen groep-5-stof."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 8",
+  "hash": "bf1e1627bec9017e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord; min een minus is geen groep-5-stof."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 9",
+  "hash": "5ce6154ef4f62c5e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord; min een minus is geen groep-5-stof."
+ },
+ {
   "waar": "negatieve-getallen-po stap 4 vraag 7",
   "hash": "ef78375519df23a3",
   "oordeel": "goed",
@@ -11325,6 +11357,77 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 8",
+  "hash": "87b9ff757727ef1a",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 9",
+  "hash": "684bb202a089613e",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 1",
+  "hash": "886f35b9fd5217bf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"Vaak met goede cijfers\" is niet precies: sinds 2020 mag je met een tl-diploma (meestal met een extra vak) door naar havo 4."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 2",
+  "hash": "15b30606b5358abc",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 3",
+  "hash": "a01cf4def6999cf9",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 5",
+  "hash": "13a16e095c0c016c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 6",
+  "hash": "d602ee2869dd53f3",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 7",
+  "hash": "62e268838798c416",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 8",
+  "hash": "4f81837428490a11",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 9",
+  "hash": "5388a09d0fbea7c8",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 1 vraag 1",
   "hash": "6ae81cf26d8293a7",
   "oordeel": "twijfel",
@@ -11418,12 +11521,88 @@
   "reden": "Lidwoord ontbrak ('veroverde Aztekenrijk')."
  },
  {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 17",
+  "hash": "0e31b16c29557bf2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Lidwoord ontbreekt (\"veroverde Inca-rijk\")."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 19",
+  "hash": "0bf9a820dc2b9785",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hawaii en Sicilië zijn absurde afleiders, raadbaar."
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 4 vraag 2",
   "hash": "e48aa5c2ca2969de",
   "oordeel": "twijfel",
   "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "'Wie zeilde' terwijl de opties expedities zijn (Magellan kwam onderweg om); hint over Cook onnauwkeurig."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 20",
+  "hash": "da4fc51efefb3db5",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 21",
+  "hash": "cf30e6b7eca7e9de",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag (\"zocht naar?\")."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 22",
+  "hash": "e3de749e7929a750",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag en absurde afleiders (Nederland/België, Duitsland/Italië in 1494)."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 23",
+  "hash": "eca7b7cbc76900b7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord in telegramstijl met \"+\"."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 25",
+  "hash": "e2929cdb8ee08daa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramopties met \"+\"."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 26",
+  "hash": "36fb56c80575b8a9",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 27",
+  "hash": "a52f2155132f6e4d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 28",
+  "hash": "150b5f2de5441cc3",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "ontdekkingsreizen-po stap 4 vraag 4",
@@ -14341,6 +14520,86 @@
   "bron": "vervolg B4 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "antwoord klopt; niveaus telegram (\"Niet kopiëren\")"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 1",
+  "hash": "17bc72f0e24c5ee9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord; telegramvraag/hints; argument-soorten zijn volgens de uitleg groep-7-8-stof, sets = groep 6."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 10",
+  "hash": "30fd2c5f70f2a4fa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis was een telegramzin met de antwoordvorm."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 2",
+  "hash": "3583b91671875544",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf het antwoord; hints telegram; drogredenen = groep 7-8."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 3",
+  "hash": "706ff394f6158de7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis telegram met antwoord; hints labelden categorieën."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 4",
+  "hash": "4ccdf48b5a3a12f5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = letterlijk het antwoord; hints \"Niet — ...\"."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 5",
+  "hash": "e3479558d08718a9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf het antwoord; hint B wees naar \"of … of\"."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 6",
+  "hash": "20f6132b448ffcfa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis telegram, simpeler gaf het antwoord."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 7",
+  "hash": "3984fa6d648439d6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis/simpeler gaven het antwoord."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 8",
+  "hash": "37eae17c16babe0e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf het antwoord."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 9",
+  "hash": "421076dfff23e2a5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf het antwoord."
  },
  {
   "waar": "signaalwoorden-verbanden-po stap 1 vraag 3",
@@ -18906,6 +19165,124 @@
   "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt, maar wrongHints waren telegramzinnen ('Mooi weer.', 'Grijze grond-laag.'); dubbel met vraag 2."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 13",
+  "hash": "83d1fd1d9c09207c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 15",
+  "hash": "44f5743cc8744727",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramopties met \"+\"."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 16",
+  "hash": "73a4f8e70c0f7fbe",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 17",
+  "hash": "d163398fa6795069",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramopties met \"+\"."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 18",
+  "hash": "b7e233e3d2d993f5",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 19",
+  "hash": "4dc8d9c57e02948e",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 2",
+  "hash": "e343feff0feee88c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 20",
+  "hash": "d9cab60094cf2f95",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 21",
+  "hash": "2113d1608fed01dd",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 22",
+  "hash": "fb0840bb51e3b924",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 23",
+  "hash": "e27bb688dbb9f382",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraagzin zonder werkwoord."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 24",
+  "hash": "27b50e580acb8ae3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij kraanwater was een telegramzin (\"Soms uit grondwater gemaakt.\")."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 25",
+  "hash": "9b7a31208190aca8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord mist lidwoord (\"naar rivier\")."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 26",
+  "hash": "c1c68b1f6a55c628",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 27",
+  "hash": "cc542044d3e0d4f8",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 28",
+  "hash": "b2b0be5813213892",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties zonder onderwerp passen niet bij \"Wat is vervuild water?\"."
  },
  {
   "waar": "waterkringloop-po stap 4 vraag 3",

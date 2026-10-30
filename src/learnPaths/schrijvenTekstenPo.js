@@ -760,73 +760,77 @@ const steps = [
       "Een **mening** geven kan iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en precies wat de toets test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (groep 7-8, Doorstroomtoets-stof)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — iemand zégt het alleen).\n\n**Toets-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in de Doorstroomtoets):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
     checks: [
       {
-        q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Welk argument-soort?",
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): argument-soorten zijn volgens de uitleg groep-7-8-stof
+        q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Wat voor soort argument is dit?",
         options: ["Feit","Voorbeeld","Gevoel","Autoriteit"],
         answer: 0,
-        wrongHints: [null, "Geen concreet geval — algemeen 'gezond houden'.", "Zegt de schrijver hoe hij zich voelt, of iets wat je kunt nagaan?", "Geen expert wordt aangehaald."],
+        wrongHints: [null, "Wordt er een echt geval verteld, iets wat iemand meemaakte?", "Zegt de schrijver hoe hij zich voelt, of iets wat je kunt nagaan?", "Wordt er een deskundige genoemd, zoals een dokter of de meester?"],
         uitlegPad: {
           stappen: [{ titel: "Bewijsbaar = feit", tekst: "'Voetbal houdt je gezond' is **bewijsbaar** via onderzoek/cijfers. Dus feit-argument — sterk type. Beter dan 'omdat ik het leuk vind' (gevoel)." }],
           woorden: [{ woord: "argument", uitleg: "Reden achter een mening." }],
           theorie: "Sterkste argumenten: feit > voorbeeld > autoriteit > gevoel. De toets waardeert feit/voorbeeld het meest.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Feit: 'De WHO raadt kinderen 60 minuten beweging per dag aan' → te controleren." }],
           basiskennis: [{ onderwerp: "Bewijsbaarheid", uitleg: "Feit = kan worden gecheckt. Gevoel = alleen jouw beleving." }],
-          niveaus: { basis: "Gezond = bewijsbaar = feit.", simpeler: "'Gezond' kun je meten → feit-argument.", nogSimpeler: "Bewijsbaar = feit" },
+          niveaus: { basis: "Kijk naar het stukje na 'want'. Kun je dat nagaan, of gaat het over hoe iemand zich voelt?", simpeler: "Of sporten je gezond houdt, kun je onderzoeken en meten. Een argument dat je kunt nagaan, is een feit-argument.", nogSimpeler: "Feit" },
         },
       },
       {
-        q: "*'Iedereen weet dat broccoli vies is.'* — welke drogreden?",
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): drogredenen zijn volgens de uitleg groep-7-8-stof
+        q: "*'Iedereen weet dat broccoli vies is.'* Welke drogreden is dit?",
         options: ["Generaliseren","Persoonlijke aanval","Vals dilemma","Goed argument"],
         answer: 0,
-        wrongHints: [null, "Geen aanval op een persoon.", "Geen of-of-keuze.", "Niet — dit is juist een fout argument."],
+        wrongHints: [null, "Wordt er iemand persoonlijk aangevallen?", "Moet je hier kiezen tussen twee dingen?", "Is dit echt een bewijs dat broccoli vies is?"],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen weet' = generaliseren", tekst: "'Iedereen' = **iedereen ter wereld**? Nee. Dit is een **generalisatie** — een uitspraak alsof alles voor iedereen geldt. Drogreden — Toets-val." }],
           woorden: [{ woord: "drogreden", uitleg: "Foute reden — lijkt logisch maar is het niet." }, { woord: "generaliseren", uitleg: "Iets over 'iedereen' zeggen zonder bewijs." }],
           theorie: "Let op: 'iedereen', 'alle mensen', 'niemand', 'altijd', 'nooit' → drogreden-signalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Alle kinderen houden van pizza' → niet waar — er zijn kinderen die geen pizza lusten." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Vraag: ken ik 1 voorbeeld dat tégen deze uitspraak ingaat? Zo ja → generalisatie." }],
-          niveaus: { basis: "'Iedereen' = generaliseren.", simpeler: "'Iedereen weet' is geen bewijs — drogreden.", nogSimpeler: "Iedereen" },
+          niveaus: { basis: "Lees het eerste woord van de zin. Vindt echt iedereen broccoli vies?", simpeler: "Doet iemand alsof iets voor iedereen geldt, terwijl dat niet zo is? Dan heet dat generaliseren.", nogSimpeler: "Generaliseren" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): argument-soorten zijn volgens de uitleg groep-7-8-stof
         q: "Welke zin is een **voorbeeld-argument** voor 'lezen is belangrijk'?",
         options: ["Ik las laatst een boek over de oceaan en weet nu wat plankton is.","Ik vind lezen het allerleukste wat er is om te doen.","Mijn juf zegt altijd dat lezen heel belangrijk is voor later.","Iedereen in de hele wereld leest elke dag een boek."],
         answer: 0,
-        wrongHints: [null, "Dat is een mening, geen voorbeeld.", "Dat is autoriteit-argument (juf zegt).", "Dat is generaliseren — drogreden."],
+        wrongHints: [null, "Deze zin vertelt wat je vindt. Vertelt hij ook iets wat echt gebeurde?", "Hier beroep je je op wat de juf zegt. Welk soort argument is dat?", "Leest echt iedereen in de hele wereld elke dag een boek?"],
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld = concreet geval", tekst: "Een voorbeeld-argument geeft een **specifieke ervaring**: 'Ik las... over... en leerde...'. Dat is sterker dan 'lezen is leuk' (mening) of 'iedereen leest' (drogreden)." }],
           woorden: [{ woord: "voorbeeld-argument", uitleg: "Bewijs uit een concrete situatie." }],
           theorie: "Toets-tip: een voorbeeld-argument begint vaak met 'Ik las...', 'Laatst zag ik...', 'Bij ons in de klas...'.",
           voorbeelden: [{ type: "controle", tekst: "Goed voorbeeld: 'Door mijn dyslexie vond ik lezen lastig, maar met de juiste hulp lukt het nu wel.'" }],
           basiskennis: [{ onderwerp: "Persoonlijk maar concreet", uitleg: "Voorbeeld-argument = jouw ervaring met FEITEN. Niet alleen je gevoel." }],
-          niveaus: { basis: "Concrete ervaring = voorbeeld.", simpeler: "Boek + plankton geleerd = voorbeeld.", nogSimpeler: "Eigen ervaring" },
+          niveaus: { basis: "Zoek de zin waarin iemand iets vertelt wat hij zelf echt heeft meegemaakt.", simpeler: "Een voorbeeld-argument vertelt een echt geval, zoals 'Ik las laatst ...'. Welke zin begint zo?", nogSimpeler: "De zin over het boek over de oceaan." },
         },
       },
       {
         q: "Bij een goed opiniestuk: wat doe je met een **tegenargument**?",
         options: ["Noemen en weerleggen","Negeren","Alleen kort noemen","Er gelijk in geven"],
         answer: 0,
-        wrongHints: [null, "Niet — je stuk wordt juist sterker als je het noemt.", "Alleen noemen is niet genoeg. Wat doe je daarna met het tegenargument?", "Niet — dan verlies je je eigen punt."],
+        wrongHints: [null, "Je stuk wordt juist sterker als je het tegenargument niet overslaat.", "Alleen noemen is niet genoeg. Wat doe je daarna met het tegenargument?", "Als je de ander gelijk geeft, wat blijft er dan over van je eigen mening?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument toelaten = sterker", tekst: "Toets-truc: noem de **tegenargumenten** ('Sommigen denken dat...'), **weerleg** ze ('...maar dat klopt niet omdat...'), en kom terug naar jouw mening. Dat toont dat je doordenkt." }],
           woorden: [{ woord: "weerleggen", uitleg: "Tegenargument onderuit halen met bewijs." }],
           theorie: "Opbouw opiniestuk: mening → 2-3 argumenten → tegenargument + weerlegging → herhaalde mening (slot).",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Sommigen vinden een schooluniform saai, maar het voorkomt dat kinderen om hun kleren gepest worden.'" }],
           basiskennis: [{ onderwerp: "Niet drogreden-weerlegging", uitleg: "Weerleg met FEIT/voorbeeld, niet met 'jij hebt ongelijk' (= persoonlijke aanval-drogreden)." }],
-          niveaus: { basis: "Noemen en weerleggen.", simpeler: "'Sommigen denken... MAAR...' = sterke opbouw.", nogSimpeler: "Weerleggen" },
+          niveaus: { basis: "Een sterk stuk laat zien dat je ook aan de andere kant hebt gedacht. Wat doe je dan met dat tegenargument?", simpeler: "Je schrijft: 'Sommigen denken ..., maar ...'. Na 'maar' leg je uit waarom het tegenargument niet klopt.", nogSimpeler: "Noemen en weerleggen" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): drogredenen zijn volgens de uitleg groep-7-8-stof
         q: "*'Of je bent VOOR een uniform op school, of je bent tegen vrijheid.'* Welke drogreden is dit?",
         options: ["Vals dilemma","Generaliseren","Persoonlijke aanval","Goed argument"],
         answer: 0,
-        wrongHints: [null, "Staat er een 'iedereen'-uitspraak? Kijk naar 'of … of'.", "Geen aanval op een persoon.", "Niet — wel degelijk een drogreden."],
+        wrongHints: [null, "Staat er een 'iedereen'-uitspraak in de zin?", "Wordt er iemand persoonlijk aangevallen?", "Is dit een eerlijke reden vóór een uniform?"],
         uitlegPad: {
           stappen: [{ titel: "Vals dilemma = nep-keuze", tekst: "Deze zin zegt: óf A, óf B. Er is geen middenweg. Maar in werkelijkheid kun je tégen uniformen zijn ÉN voor vrijheid (= optie 3). Dat is een **vals dilemma**." }],
           woorden: [{ woord: "vals dilemma", uitleg: "Drogreden: doen alsof er maar 2 keuzes zijn terwijl er meer mogelijk zijn." }],
           theorie: "Signaal: 'óf...óf...', 'wie niet voor is, is tegen', 'er is geen andere optie'. Vaak drogreden.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Of je bent vegan, of je bent dieronvriendelijk.' → 3e optie: minder vlees eten." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Kun je een 3e of 4e optie verzinnen? Ja → vals dilemma." }],
-          niveaus: { basis: "Of...of zonder middenweg = vals dilemma.", simpeler: "Nep-keuze tussen 2 dingen = vals dilemma.", nogSimpeler: "Vals dilemma" },
+          niveaus: { basis: "Hoeveel keuzes geeft de zin je? Zijn er in het echt meer mogelijkheden?", simpeler: "Doet iemand alsof je maar uit twee dingen kunt kiezen, terwijl er meer kan? Dan heet dat een vals dilemma.", nogSimpeler: "Vals dilemma" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -871,13 +875,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Argument = reden.",
-            simpeler: "Welke zin zegt WAAROM buiten gymmen beter is? Want frisse lucht is gezond.",
-            nogSimpeler: "Want ...",
+            basis: "Een argument is een reden. Welke zin zegt waarom buiten gymmen beter is?",
+            simpeler: "Zet 'want' voor elke zin. Welke zin is dan een reden vóór buiten gymmen, en niet ertegen?",
+            nogSimpeler: "Want frisse lucht is gezond.",
           },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): argument-soorten zijn volgens de uitleg groep-7-8-stof
         q: "*'Snoep is slecht voor je tanden, want de tandarts zegt het.'* Welk soort argument is dit?",
         options: ["Autoriteit", "Gevoel", "Voorbeeld", "Vals dilemma"],
         answer: 0,
@@ -909,13 +914,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tandarts zegt het = autoriteit.",
-            simpeler: "Wie wordt er genoemd? De tandarts. 'Want iemand zegt het' = autoriteit.",
-            nogSimpeler: "Zegt het",
+            basis: "Kijk naar het stukje na 'want'. Wie wordt daar genoemd?",
+            simpeler: "Zeg je 'want iemand die er veel van weet, zegt het'? Dan heet dat een autoriteit-argument.",
+            nogSimpeler: "Autoriteit",
           },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): argument-soorten zijn volgens de uitleg groep-7-8-stof
         q: "*'Ik wil een hond, want ik word er heel blij van.'* Welk soort argument is dit?",
         options: ["Gevoel", "Autoriteit", "Feit", "Voorbeeld"],
         answer: 0,
@@ -947,13 +953,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Blij = gevoel.",
+            basis: "Kijk naar het stukje na 'want'. Kun je dat nakijken, of gaat het over hoe iemand zich voelt?",
             simpeler: "'Ik word blij' gaat over een gevoel. Dus is het een gevoel-argument.",
-            nogSimpeler: "Voelen",
+            nogSimpeler: "Gevoel",
           },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B6 (30 okt 2026): drogredenen zijn volgens de uitleg groep-7-8-stof
         q: "*'Luister niet naar Tim, die snapt er toch niks van.'* Welke drogreden is dit?",
         options: ["Persoonlijke aanval", "Vals dilemma", "Generaliseren", "Het is een goed argument"],
         answer: 0,
@@ -989,9 +996,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tim afkraken = persoonlijke aanval.",
+            basis: "Gaat de zin over wat Tim vindt, of over Tim zelf?",
             simpeler: "Gaat het over wat Tim zegt, of over Tim zelf? Over Tim zelf. Dat is een persoonlijke aanval.",
-            nogSimpeler: "Aanval",
+            nogSimpeler: "Persoonlijke aanval",
           },
         },
       },
@@ -1041,7 +1048,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Sommigen ... maar ...",
+            basis: "Zoek de zin die eerst zegt wat anderen vinden, en daarna uitlegt waarom dat niet klopt.",
             simpeler: "Je noemt eerst wat anderen vinden, en zegt dan met 'maar' waarom je het er niet mee eens bent.",
             nogSimpeler: "maar",
           },

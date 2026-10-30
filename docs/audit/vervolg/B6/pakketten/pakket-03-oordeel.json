@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "waterkringloop-po stap 4 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 14",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij ~30% (\"30% is juist land\") laat het kind 100−30 voorrekenen.",
+  "hersteld": true,
+  "wijziging": "Hint herschreven naar wereldbol-denkprikkel zonder getal."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 15",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Telegramopties met \"+\".",
+  "hersteld": true,
+  "wijziging": "Opties: \"Water in rivieren en meren\" / \"Water in zeeën en oceanen\"."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramopties met \"+\".",
+  "hersteld": true,
+  "wijziging": "Opties als opsomming met komma en \"en\"."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 22",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Vraagzin zonder werkwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Wat zijn de vier fases van de waterkringloop, op volgorde?\""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 24",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Hint bij kraanwater was een telegramzin (\"Soms uit grondwater gemaakt.\").",
+  "hersteld": true,
+  "wijziging": "Hint tot volledige denkprikkel herschreven."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 25",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord mist lidwoord (\"naar rivier\").",
+  "hersteld": true,
+  "wijziging": "\"naar een rivier\"."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 27",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 28",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Opties zonder onderwerp passen niet bij \"Wat is vervuild water?\".",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Wanneer noem je water vervuild?\", opties beginnen met \"Als ...\"."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Lidwoord ontbreekt (\"veroverde Inca-rijk\").",
+  "hersteld": true,
+  "wijziging": "\"veroverde het Inca-rijk in Peru\"."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 18",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hints verraden het antwoord: \"handelscompagnie\" (alleen het goede antwoord bevat Compagnie) en \"tegenhanger van de VOC (Oost)\" → West.",
+  "hersteld": true,
+  "wijziging": "Twee hints herschreven zonder Compagnie/West."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 19",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Hawaii en Sicilië zijn absurde afleiders, raadbaar.",
+  "hersteld": true,
+  "wijziging": "Afleiders Jamaica en Puerto Rico (Caribisch, niet Nederlands) + hints aangepast."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Telegramvraag (\"zocht naar?\").",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Welke route zocht Willem Barentsz?\""
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Telegramvraag en absurde afleiders (Nederland/België, Duitsland/Italië in 1494).",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; afleiders nu allemaal \"De wereld tussen X en Y\" met plausibele landen; hints aangepast."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord in telegramstijl met \"+\".",
+  "hersteld": true,
+  "wijziging": "\"Mensen die gevangen zijn en zonder loon moeten werken\"."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 24",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hints omschrijven het antwoord (\"ketenen gebroken — waar herinnert dat aan?\") en het antwoord was de enige serieuze optie.",
+  "hersteld": true,
+  "wijziging": "Opties even lang en specifiek gemaakt; twee hints zonder betekenis van de naam."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 25",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Telegramopties met \"+\".",
+  "hersteld": true,
+  "wijziging": "Opties met komma en \"en\"; hint D zonder \"uit het Oosten\"."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 27",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 28",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "\"Vaak met goede cijfers\" is niet precies: sinds 2020 mag je met een tl-diploma (meestal met een extra vak) door naar havo 4.",
+  "hersteld": true,
+  "wijziging": "Antwoord \"Ja, bijvoorbeeld na je tl-diploma\"; zin in stap-uitleg (Opstromen) en hint C aangepast."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Antwoord stond in de vraag (\"dat beter past\" → \"wat bij je past\") en de afleiders waren extreem (raadbaar).",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven als situatie (Mila); opties kort en gelijkwaardig; hints aangepast."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en opties in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; \"volgens de uitleg\" verwijst naar de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord; telegramvraag/hints; argument-soorten zijn volgens de uitleg groep-7-8-stof, sets = groep 6.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; vraag, twee hints en basis/simpeler herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "basis gaf het antwoord; hints telegram; drogredenen = groep 7-8.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; vraag, hints en niveaus herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "basis telegram met antwoord; hints labelden categorieën.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; hints en niveaus herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "basis = letterlijk het antwoord; hints \"Niet — ...\".",
+  "hersteld": true,
+  "wijziging": "Hints en basis/simpeler herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis gaf het antwoord; hint B wees naar \"of … of\".",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; hints en niveaus herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "basis telegram, simpeler gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis/simpeler als hulpstap, nogSimpeler = antwoord."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis/simpeler gaven het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; basis/simpeler herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; basis herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7; basis herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 4 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "basis was een telegramzin met de antwoordvorm.",
+  "hersteld": true,
+  "wijziging": "Basis als zoekopdracht herschreven."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij +3 (\"Het getal klopt, ...onder nul?\") verraadt −3. Niveau: haakjes-notatie is zwaar voor groep 5 (gelijk gehouden met 5 + (−2) uit B5).",
+  "hersteld": true,
+  "wijziging": "Hint herschreven zonder getal; basis tot hulpstap."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis = antwoord; min een minus is geen groep-5-stof.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8; basis herschreven."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "basis = antwoord; twee negatieve getallen is geen groep-5-stof.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8; basis herschreven."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis = antwoord; min een minus is geen groep-5-stof.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8; basis herschreven."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis = antwoord; min een minus is geen groep-5-stof.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8; basis herschreven."
+ }
+]

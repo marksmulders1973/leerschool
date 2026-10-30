@@ -327,14 +327,14 @@ const steps = [
   {
     title: "Stapelen & switchen — niets ligt vast",
     explanation:
-      "Misschien wel het belangrijkste om te onthouden: het niveau dat je in de brugklas krijgt, ligt **niet voor altijd vast**. In Nederland kun je **stapelen** en **switchen**. Je kunt dus altijd hoger klimmen als je dat wilt en aankunt.\n\n**1. Opstromen tijdens de middelbare school**\n• Haal je goede cijfers op het vmbo-tl? Dan kun je vaak door naar de **havo**.\n• Gaat havo heel makkelijk? Dan kun je soms naar het **vwo**.\n• Veel scholen hebben in klas 1-2 een **'brugklas'** waarin je niveau nog kan veranderen.\n\n**2. Stapelen na je diploma**\nJe kunt diploma's **op elkaar stapelen**:\n• **vmbo-tl → havo → vwo** *(steeds een stapje hoger)*.\n• Of via het beroepsonderwijs: **mbo → hbo → universiteit**.\n• Zo kun je dus, beginnend op het vmbo, **uiteindelijk zelfs op de universiteit** komen. Het duurt wat langer, maar het kan!\n\n**3. Afstromen mag ook — en is niet erg**\n• Past het tempo van vwo of havo toch niet zo lekker? Dan kun je naar een niveau waar je je **prettiger** voelt en betere cijfers haalt.\n• Dat is **geen mislukking** — het is slim kiezen wat bij je past. Met een fijn gevoel leren werkt veel beter.\n\n**4. Op tijd kiezen hoeft niet perfect**\n• Je hoeft in groep 8 nog **niet te weten** wat je later wilt worden.\n• Je leert jezelf steeds beter kennen. Wat je leuk vindt en goed kunt, ontdek je **onderweg**.\n\n**Onthoud**:\n> Welk niveau je ook begint — er is altijd een weg omhoog en een route die bij jou past. Je keuze na de Doorstroomtoets is een **start**, geen eindpunt. 🌱",
+      "Misschien wel het belangrijkste om te onthouden: het niveau dat je in de brugklas krijgt, ligt **niet voor altijd vast**. In Nederland kun je **stapelen** en **switchen**. Je kunt dus altijd hoger klimmen als je dat wilt en aankunt.\n\n**1. Opstromen tijdens de middelbare school**\n• Haal je je diploma op het vmbo-tl? Dan mag je meestal door naar de **havo** (vaak met één extra vak).\n• Gaat havo heel makkelijk? Dan kun je soms naar het **vwo**.\n• Veel scholen hebben in klas 1-2 een **'brugklas'** waarin je niveau nog kan veranderen.\n\n**2. Stapelen na je diploma**\nJe kunt diploma's **op elkaar stapelen**:\n• **vmbo-tl → havo → vwo** *(steeds een stapje hoger)*.\n• Of via het beroepsonderwijs: **mbo → hbo → universiteit**.\n• Zo kun je dus, beginnend op het vmbo, **uiteindelijk zelfs op de universiteit** komen. Het duurt wat langer, maar het kan!\n\n**3. Afstromen mag ook — en is niet erg**\n• Past het tempo van vwo of havo toch niet zo lekker? Dan kun je naar een niveau waar je je **prettiger** voelt en betere cijfers haalt.\n• Dat is **geen mislukking** — het is slim kiezen wat bij je past. Met een fijn gevoel leren werkt veel beter.\n\n**4. Op tijd kiezen hoeft niet perfect**\n• Je hoeft in groep 8 nog **niet te weten** wat je later wilt worden.\n• Je leert jezelf steeds beter kennen. Wat je leuk vindt en goed kunt, ontdek je **onderweg**.\n\n**Onthoud**:\n> Welk niveau je ook begint — er is altijd een weg omhoog en een route die bij jou past. Je keuze na de Doorstroomtoets is een **start**, geen eindpunt. 🌱",
     svg: stapelSvg(),
     checks: [
       {
         q: "Kun je van **vmbo-tl** doorstromen naar de havo?",
-        options: ["Ja, vaak met goede cijfers", "Nee, dat mag nooit", "Alleen als je verhuist", "Alleen op je 18e"],
+        options: ["Ja, bijvoorbeeld na je tl-diploma", "Nee, dat mag nooit", "Alleen als je verhuist", "Alleen op je 18e"],
         answer: 0,
-        wrongHints: [null, "Het kan juist wel. Lees de uitleg bij 'Opstromen'.", "Verhuizen verandert niets aan je cijfers. Waar hangt doorstromen van af?", "Je hoeft niet op een leeftijd te wachten. Waar hangt doorstromen van af?"],
+        wrongHints: [null, "Het kan juist wel. Lees de uitleg bij 'Opstromen'.", "Verhuizen verandert niets aan je niveau. Waar hangt doorstromen van af?", "Je hoeft niet op een leeftijd te wachten. Waar hangt doorstromen van af?"],
       },
       {
         q: "Wat betekent **stapelen** van opleidingen?",
@@ -349,10 +349,10 @@ const steps = [
         wrongHints: [null, "Het kan juist wel. Lees de uitleg bij 'Stapelen na je diploma'.", "Vwo is niet de enige weg. Welke route noemt de uitleg vanaf het mbo?", "Dat kan gewoon in Nederland. Hoe heet die route?"],
       },
       {
-        q: "Naar een lager niveau gaan dat beter past, is...",
-        options: ["Slim kiezen wat bij je past", "Altijd een mislukking", "Verboden op elke school", "Alleen voor luie kinderen"],
+        q: "Mila gaat van de havo naar het vmbo-tl, omdat ze daar beter kan leren. Hoe noem je dat het best?",
+        options: ["Een verstandige keuze", "Een grote mislukking", "Een straf van school", "Iets wat niet mag"],
         answer: 0,
-        wrongHints: [null, "Is een schoen die knelt houden slimmer dan een maat wisselen die wél past?", "Wisselen mag gewoon — scholen helpen er zelfs bij. Wat zegt dat over deze keuze?", "Iemand die kiest voor een plek waar hij beter leert — klinkt dat lui of juist slim?"],
+        wrongHints: [null, "Is een schoen die knelt houden slimmer dan een maat wisselen die wél past?", "Mila kiest dit zelf. Een straf krijg je, die kies je niet.", "Wisselen mag gewoon: scholen helpen er zelfs bij."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {

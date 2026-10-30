@@ -789,7 +789,7 @@ const steps = [
         q: "**2 + (−5)** = ?",
         options: ["−3", "+7", "+3", "−7"],
         answer: 0,
-        wrongHints: [null, "Plus en min op rij worden samen…?", "Het getal klopt, maar 5 is meer dan 2. Kom je boven of onder nul uit?", "Begin je op 2 of op −2?"],
+        wrongHints: [null, "Plus en min op rij worden samen…?", "Je gaat vanaf 2 vijf stappen naar links. Kom je dan boven of onder nul uit?", "Begin je op 2 of op −2?"],
         uitlegPad: {
           stappen: [
             {
@@ -817,13 +817,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−3.",
+            basis: "Plus een min-getal is hetzelfde als aftrekken. Hoeveel stappen ga je vanaf 2 naar links?",
             simpeler: "+(−5) wordt −5. 2 − 5 = −3.",
             nogSimpeler: "−3",
           },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B6 (30 okt 2026): min een minus met haakjes is geen groep-5-stof
         q: "**−3 − (−1)** = ?",
         options: ["−2", "−4", "+2", "+4"],
         answer: 0,
@@ -855,13 +856,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−2.",
+            basis: "Twee min-tekens op rij worden plus. Ga je vanaf −3 dan naar links of naar rechts?",
             simpeler: "Twee minnen worden plus: −3 + 1 = −2.",
             nogSimpeler: "−2",
           },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B6 (30 okt 2026): rekenen met twee negatieve getallen is geen groep-5-stof
         q: "**−5 + (−2)** = ?",
         options: ["−7", "−3", "+7", "+3"],
         answer: 0,
@@ -893,13 +895,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−7.",
+            basis: "Je hebt al een schuld en er komt nog een schuld bij. Wordt je schuld groter of kleiner?",
             simpeler: "+(−2) wordt −2. −5 − 2 = −7.",
             nogSimpeler: "−7",
           },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B6 (30 okt 2026): min een minus met haakjes is geen groep-5-stof
         q: "**9 − (−1)** = ?",
         options: ["10", "8", "−10", "−8"],
         answer: 0,
@@ -931,13 +934,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10.",
+            basis: "Je haalt een min-getal weg. Wordt het getal dan kleiner of groter?",
             simpeler: "Twee minnen worden plus: 9 + 1 = 10.",
             nogSimpeler: "10",
           },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B6 (30 okt 2026): min een minus met haakjes is geen groep-5-stof
         q: "**10 − (−6)** kun je ook schrijven als…",
         options: ["10 + 6", "10 − 6", "−10 + 6", "−10 − 6"],
         answer: 0,
@@ -974,7 +978,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 + 6.",
+            basis: "Kijk alleen naar de twee tekens tussen 10 en 6. Wat worden twee min-tekens op rij samen?",
             simpeler: "Min een minus = plus. Dus 10 − (−6) = 10 + 6.",
             nogSimpeler: "10 + 6",
           },
