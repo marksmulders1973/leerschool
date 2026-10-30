@@ -1,0 +1,107 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/interpunctiePo.js",
+   "src/learnPaths/energiebronnenPo.js",
+   "src/learnPaths/volgordeBewerkingen.js",
+   "src/learnPaths/werkwoordTijdenPo.js"
+  ],
+  "sets": [
+   "5|taal",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "5|rekenen",
+   "6|rekenen",
+   "6|taal"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsTaalG8.js",
+   "src/learnPaths/lichaamGezondheidPo.js",
+   "src/learnPaths/vlakkeFigurenPo.js",
+   "src/learnPaths/breukenPo.js"
+  ],
+  "sets": [
+   "8|taal",
+   "6|natuur",
+   "5|rekenen",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsRekenenG8.js",
+   "src/learnPaths/woordsoortenPo.js",
+   "src/learnPaths/romeinseCijfersPo.js",
+   "src/learnPaths/delenPo.js",
+   "src/learnPaths/meetkundeBouwsels.js",
+   "src/learnPaths/schaalKaartRekenenPo.js"
+  ],
+  "sets": [
+   "8|rekenen",
+   "5|taal",
+   "7|rekenen",
+   "5|rekenen",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "04",
+  "n": 55,
+  "files": [
+   "src/learnPaths/winstRekenenPo.js",
+   "src/learnPaths/woordbetekenisContextPo.js",
+   "src/learnPaths/politiekDemocratiePo.js",
+   "src/learnPaths/signaalwoordenVerbandenPo.js",
+   "src/learnPaths/soortenTekstenPo.js",
+   "src/learnPaths/langeToetsTekstenG8Po.js",
+   "src/learnPaths/dierenklassenPo.js"
+  ],
+  "sets": [
+   "6|rekenen",
+   "6|begrijpend-lezen",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|taal",
+   "8|begrijpend-lezen",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur"
+  ]
+ },
+ {
+  "pakket": "05",
+  "n": 41,
+  "files": [
+   "src/learnPaths/geldRekenen.js",
+   "src/learnPaths/brugklasOrientatie.js",
+   "src/learnPaths/belastingPo.js",
+   "src/learnPaths/verwijswoordenBegrijpendLezenPo.js",
+   "src/learnPaths/begrijpendLezenTekstenPo.js",
+   "src/learnPaths/trappenVanVergelijkingPo.js",
+   "src/learnPaths/metenGewichtInhoudTijdPo.js",
+   "src/learnPaths/deelsommenMetRestPo.js",
+   "src/learnPaths/schrijvenTekstenPo.js",
+   "src/learnPaths/feitenDetailsOpzoekenPo.js"
+  ],
+  "sets": [
+   "5|rekenen",
+   "8|rekenen",
+   "6|rekenen",
+   "6|begrijpend-lezen",
+   "7|taal",
+   "7|rekenen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen"
+  ]
+ }
+]
