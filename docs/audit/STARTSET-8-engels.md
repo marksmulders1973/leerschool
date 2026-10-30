@@ -4,140 +4,140 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: start
 
 ## 1. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 1)
 Vraag: Wat betekent **Good morning**?
-- ▫️ Welterusten
-- ✅ Goedemorgen
 - ▫️ Tot ziens
+- ✅ Goedemorgen
+- ▫️ Welterusten
 - ▫️ Hallo
 
 ## 2. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 1)
 Vraag: Wat betekent **Goodbye**?
-- ✅ Tot ziens
 - ▫️ Hoe gaat het?
-- ▫️ Dank je
 - ▫️ Hallo
+- ✅ Tot ziens
+- ▫️ Dank je
 
 ## 3. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **red**?
-- ▫️ groen
-- ✅ rood
-- ▫️ geel
 - ▫️ blauw
+- ▫️ groen
+- ▫️ geel
+- ✅ rood
 
 ## 4. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **black**?
+- ▫️ bruin
 - ▫️ blauw
 - ▫️ wit
-- ▫️ bruin
 - ✅ zwart
 
 ## 5. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 7)
-Vraag: Wat is **eye**?
-- ▫️ oor
-- ✅ oog
+Vraag: Wat betekent **eye**?
 - ▫️ mond
 - ▫️ neus
+- ▫️ oor
+- ✅ oog
 
 ## 6. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 7)
 Vraag: Wat betekent **finger**?
 - ▫️ arm
-- ▫️ voet
 - ✅ vinger
 - ▫️ hand
+- ▫️ voet
 
 ## 7. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 2)
 Vraag: Wat is het meervoud van **book**?
 - ✅ books
+- ▫️ book
 - ▫️ bookes
 - ▫️ booken
-- ▫️ book
 
 ## 8. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 2)
 Vraag: Wat is het meervoud van **box**?
-- ✅ boxes
 - ▫️ boxs
-- ▫️ boxen
 - ▫️ box
+- ✅ boxes
+- ▫️ boxen
 
 ## 9. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'I __ books.' (read)
-- ✅ read
 - ▫️ reads
-- ▫️ reading
+- ✅ read
 - ▫️ readed
+- ▫️ reading
 
 ## 10. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'She __ the piano.' (play)
-- ▫️ play
-- ▫️ played
 - ▫️ playing
+- ▫️ play
 - ✅ plays
+- ▫️ played
 
 ## 11. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'We __ to school.' (go)
 - ▫️ gone
-- ▫️ goes
 - ✅ go
+- ▫️ goes
 - ▫️ going
 
 ## 12. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'He __ chess.' (play)
-- ▫️ playing
-- ▫️ play
 - ▫️ played
+- ▫️ play
 - ✅ plays
+- ▫️ playing
 
 ## 13. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de vraag af: *'__ you like apples?'*
-- ✅ Do
+- ▫️ Are
 - ▫️ Does
 - ▫️ Is
-- ▫️ Are
+- ✅ Do
 
 ## 14. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de vraag af: *'__ she play tennis?'*
 - ▫️ Do
-- ▫️ Is
-- ✅ Does
 - ▫️ Are
+- ✅ Does
+- ▫️ Is
 
 ## 15. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de ontkenning af: *'I __ like fish.'*
-- ✅ don't
 - ▫️ isn't
 - ▫️ am not
 - ▫️ doesn't
+- ✅ don't
 
 ## 16. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Wat betekent **Where**?
-- ▫️ waarom
+- ▫️ wat
 - ▫️ wanneer
 - ✅ waar
-- ▫️ wat
+- ▫️ waarom
 
 ## 17. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Welke is **fout**?
 - ▫️ They play piano.
-- ▫️ I play piano.
 - ✅ She play piano.
 - ▫️ She plays piano.
+- ▫️ I play piano.
 
 ## 18. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Vul in: '__ apple a day keeps the doctor away.'
 - ▫️ The
-- ▫️ A
-- ▫️ Some
 - ✅ An
+- ▫️ Some
+- ▫️ A
 
 ## 19. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Wat is het meervoud van **woman**?
-- ▫️ womens
-- ▫️ womans
-- ✅ women
 - ▫️ woman
+- ▫️ womens
+- ✅ women
+- ▫️ womans
 
 ## 20. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Vul in: 'My brother __ tall.' (to be)
-- ✅ is
-- ▫️ be
-- ▫️ am
 - ▫️ are
+- ▫️ am
+- ▫️ be
+- ✅ is

@@ -3300,6 +3300,62 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "cijferend-rekenen stap 3 vraag 10",
+  "hash": "32c371119ee46189",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2999-1475+1 klopt (1525); niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 4",
+  "hash": "da857fac41106cf6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "743-278=465 klopt, hints kloppen; niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 5",
+  "hash": "5772f3dc2542a847",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "6000-2348=3652 klopt, hints kloppen; niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 6",
+  "hash": "e17e2e0350968c33",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "5203-1867=3336 klopt, hints kloppen; niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 7",
+  "hash": "ea617c81bd908fac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "900-456=444 klopt, hints kloppen; niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 8",
+  "hash": "5833a02adb4fb50a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "12 klopt, hints kloppen; niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 9",
+  "hash": "12a46f8e5e528061",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "5 klopt, hints kloppen; niveaus.basis = antwoord."
+ },
+ {
   "waar": "cijferend-rekenen stap 6 vraag 6",
   "hash": "36c2e7857b1505b3",
   "oordeel": "goed",
@@ -4813,6 +4869,22 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "dieren-seizoenen-natuur stap 10 vraag 3",
+  "hash": "956b3c14904b6f70",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus telegram en basis = antwoord."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 1",
+  "hash": "5d80942312cb204f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus.basis = antwoord."
+ },
+ {
   "waar": "dieren-seizoenen-natuur stap 11 vraag 10",
   "hash": "9c0576e5a80df4b2",
   "oordeel": "twijfel",
@@ -4976,6 +5048,38 @@
   "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt. Hints waren kaal ('Kleur is iets anders.') zonder denkfout te benoemen; niveaus telegramzinnen met pijlen."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 7 vraag 2",
+  "hash": "3cf369ced5da3bda",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord verdedigbaar maar onnauwkeurig (\"staat naar de zon\"); hints en niveaus telegram."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 9 vraag 1",
+  "hash": "e5be8d0e3ce284c0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus telegram en basis = antwoord."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 9 vraag 2",
+  "hash": "4bcac690a1de298f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints en niveaus telegram."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 9 vraag 3",
+  "hash": "0008c090ddb3159a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag \"Welke is een\" en hints \"Eik = loofboom.\" telegram; theorie te stellig (naaldbomen altijd groen)."
  },
  {
   "waar": "dierenklassen-po stap 2 vraag 1",
@@ -6814,6 +6918,114 @@
   "reden": "Hint bij 't was kort ('geen NL')."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 24",
+  "hash": "f97184cccc26de48",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints waren telegramzinnen met alleen een woordsoort-label."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 25",
+  "hash": "dfa13032eeacfd90",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 26",
+  "hash": "abd0c295321b148b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord; uitleg zei \"sinds 1995\" terwijl pannenkoek pas sinds 2005 de spelling is."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 27",
+  "hash": "f87c10a65ece2dd7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag \"Welke tijd?\" was telegramzin, twee hints telegramstijl."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 28",
+  "hash": "8d7831f469a7d78c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis = antwoord, simpeler telegramzin."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 29",
+  "hash": "1df5945784eb9236",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints waren losse woorden (\"Verleden.\")."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 31",
+  "hash": "f47d669dcd9c815b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints waren telegramwoorden."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 32",
+  "hash": "b1e99f9344c84681",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 33",
+  "hash": "358bc084e3f8086e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag was een som-achtige telegramzin, hints telegram."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 34",
+  "hash": "c61c242b0983e5d0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis = antwoord, simpeler telegram."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 35",
+  "hash": "1b2c55f4c04b0145",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint B telegramzin (\"1e persoon = stam zonder t\")."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 36",
+  "hash": "34d2167aa8aa85c2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis begon met het antwoord."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 37",
+  "hash": "6a1b83fa22b52ca1",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 38",
+  "hash": "223cfd67bcb40be0",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 39",
   "hash": "c954f458519b59b2",
   "oordeel": "goed",
@@ -6821,11 +7033,90 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 40",
+  "hash": "b59ece500f3ac808",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 41",
+  "hash": "4d0c2e3d78891b56",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 42",
+  "hash": "ab580e7315bcca80",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 43",
+  "hash": "416ba0c552d7aa57",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 44",
+  "hash": "7fd80747ae941a3b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag had geen vraagzin (alleen zin + haakjes)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 45",
+  "hash": "650eb3801848a7f4",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 46",
+  "hash": "83aeee8dc5b5961c",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 47",
+  "hash": "9e28a7c83c27ee9d",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 48",
+  "hash": "96f3d19da345b375",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 49",
+  "hash": "067607b721ac5399",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 5",
   "hash": "9782c856d63f2fc1",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 50",
+  "hash": "707f18353e2e45bb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraagzin \"de trui van ... (meervoud van dame)\" was vreemd."
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 8",
@@ -20125,6 +20416,13 @@
   "reden": "Ganymedes klopt; afleider 'Maan' (onze maan) is een vreemde afleider; hints telegram met HOOFDLETTERS."
  },
  {
+  "waar": "sterren-planeten stap 7 vraag 1",
+  "hash": "6a4c0d75b14f37e9",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "sterren-planeten stap 7 vraag 2",
   "hash": "d6dc9dc53e718d34",
   "oordeel": "twijfel",
@@ -20155,6 +20453,37 @@
   "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Komeet-definitie klopt; hint C telegram ('Geen planeet, te klein + andere samenstelling.'); niveaus 'IJs + staart.'. Startset: optie ongemoeid."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 10",
+  "hash": "b8b8e7021ca30f48",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 11",
+  "hash": "06e1619654e9c8a5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar ook Jupiter/Uranus/Neptunus hebben ringen; hints telegram."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 12",
+  "hash": "cef2f95aeccdf524",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint bij 100 rekende het antwoord bijna voor (12 x ca. 30 dagen)."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 13",
+  "hash": "f0a6749b78873e01",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; afleiders \"365 dagen\" en \"1 jaar\" betekenden hetzelfde en waren absurd."
  },
  {
   "waar": "sterren-planeten stap 9 vraag 14",
@@ -20189,12 +20518,57 @@
   "reden": "Titan klopt; 'methaan-meren' hoort aaneen; niveaus 'Titan.'."
  },
  {
+  "waar": "sterren-planeten stap 9 vraag 3",
+  "hash": "dd90f307e97b68da",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "sterren-planeten stap 9 vraag 4",
   "hash": "111df795fa83d66a",
   "oordeel": "twijfel",
   "bron": "vervolg B1 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Maan klopt; niveaus 'Maan-zwaartekracht.'/'Maan trekt water.'/'Maan.' telegram."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 5",
+  "hash": "9289a0ef66490cee",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 6",
+  "hash": "54dc377236380de7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag was telegramzin zonder werkwoord."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 7",
+  "hash": "f9a94b52c4a3f3cb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; \"is dichtst bij\" mist \"het\"."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 8",
+  "hash": "120d16106c309a69",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 9",
+  "hash": "fbb7359e6b1493a8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; \"is grootst\" mist \"het\"."
  },
  {
   "waar": "synoniemen-tegenstellingen-po stap 1 vraag 1",

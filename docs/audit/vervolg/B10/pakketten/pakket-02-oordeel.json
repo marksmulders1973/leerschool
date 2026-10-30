@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 24",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; wrongHints waren telegramzinnen met alleen een woordsoort-label.",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven tot denkprikkels in hele zinnen (verleden-tijd-proef)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 26",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord; uitleg zei \"sinds 1995\" terwijl pannenkoek pas sinds 2005 de spelling is.",
+  "hersteld": true,
+  "wijziging": "basis/simpeler herschreven tot hulpstap; \"Sinds 1995\" -> \"Sinds 2005\"."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 27",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; vraag \"Welke tijd?\" was telegramzin, twee hints telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"In welke tijd staat deze zin?\"; hints C en D als hele zinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 28",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus.basis = antwoord, simpeler telegramzin.",
+  "hersteld": true,
+  "wijziging": "Hint B, basis en simpeler herschreven (verwijzing naar vakantie/informatie zonder het woord)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 29",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; wrongHints waren losse woorden (\"Verleden.\").",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven tot hele zinnen met denkprikkel."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 30",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij \"polisie\" (\"Si-klank, maar ti-spelling\") gaf de juiste spelling weg; hint C telegram.",
+  "hersteld": true,
+  "wijziging": "Hints B en C herschreven: benoemen de denkfout (klank vs spelling, ie-klank) zonder de spelling te noemen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 31",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; wrongHints waren telegramwoorden.",
+  "hersteld": true,
+  "wijziging": "wrongHints als hele zinnen."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 32",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 33",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; vraag was een som-achtige telegramzin, hints telegram.",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven tot volledige zin; hints A en D herschreven."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 34",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; niveaus.basis = antwoord, simpeler telegram.",
+  "hersteld": true,
+  "wijziging": "basis/simpeler herschreven tot hulpstap."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 35",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; hint B telegramzin (\"1e persoon = stam zonder t\").",
+  "hersteld": true,
+  "wijziging": "Hint B als hele zin."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 36",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; niveaus.basis begon met het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis en simpeler herschreven tot hulpstap."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 37",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 38",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 40",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; hint D noemde de juiste letters (l en ei) iets te direct.",
+  "hersteld": true,
+  "wijziging": "Hint D vager gemaakt (kijk naar begin en eind van het woord)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 41",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 42",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 43",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 44",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; vraag had geen vraagzin (alleen zin + haakjes).",
+  "hersteld": true,
+  "wijziging": "Vraagzin toegevoegd: \"Welke verleden tijd van blaffen hoort op de puntjes?\""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 45",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen; explanation meldt dat rechter voor man en vrouw geldt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 46",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 47",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "ringetje klopt (korte klank + ng); hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 48",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 49",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 50",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; vraagzin \"de trui van ... (meervoud van dame)\" was vreemd.",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"Wat is het juiste meervoud van 'dame'?\""
+ },
+ {
+  "waar": "sterren-planeten stap 7 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Feiten kloppen (bijna 30 manen, ca. -200 graden, dag ca. 17 uur).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "sterren-planeten stap 8 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij \"Een komeet\" omschreef het antwoord (\"wat er in de gordel tussen Mars en Jupiter rondzweeft\" = asteroiden); voorbeeld zei dat krokodillen overlevende dinosaurussen zijn.",
+  "hersteld": true,
+  "wijziging": "Hint herschreven (brok was van ander materiaal, zonder het antwoord); voorbeeld gecorrigeerd: krokodillen overleefden, maar zijn geen dinosaurussen."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij \"Mars - Saturnus - Jupiter\" zei \"de twee reuzen staan andersom\" = het antwoord; hints C en D gaven ook de plek van Mars/Saturnus.",
+  "hersteld": true,
+  "wijziging": "Alle drie de wrongHints herschreven tot vragen over afstand tot de zon."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "4,2 lichtjaar klopt; hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; vraag was telegramzin zonder werkwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"Hoeveel planeten heeft ons zonnestelsel?\""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; \"is dichtst bij\" mist \"het\".",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"Welke planeet staat het dichtst bij de zon?\""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; \"is grootst\" mist \"het\".",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"Welke planeet is het grootst?\""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen (eenvoudig voor groep 8, maar prima).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 11",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, maar ook Jupiter/Uranus/Neptunus hebben ringen; hints telegram.",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"grote, goed zichtbare ringen\"; hints als hele zinnen."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 12",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; hint bij 100 rekende het antwoord bijna voor (12 x ca. 30 dagen).",
+  "hersteld": true,
+  "wijziging": "Hints bij 100 en 1000 herschreven (100 dagen is nog geen derde jaar; 1000 dagen is bijna drie jaar)."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; afleiders \"365 dagen\" en \"1 jaar\" betekenden hetzelfde en waren absurd.",
+  "hersteld": true,
+  "wijziging": "Optie \"1 jaar\" -> \"48 uur\" met passende hint (zon gaat twee keer op en onder); answer-index ongewijzigd."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "632-184=448 klopt; wrongHint bij 568 rekende de schatting voor (\"ongeveer 450\"), vlak bij het antwoord; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint laat het kind zelf schatten; basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "1000-376=624 klopt; wrongHint bij 724 was misleidend (\"1000 min 400, wat moet er dan nog af?\": er moet juist iets bij); basis = uitwerking met antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint benoemt nu de echte fout (uitlenen bij honderdtallen vergeten); basis herschreven."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "4567-2389=2178 klopt; wrongHint bij 2188 wees naar de eenheden terwijl de fout in de tientallen zit; hint bij 2278 sloot niet aan op de fout; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hints bij 2278 en 2188 sluiten nu aan op de echte denkfout (buur niet verlaagd); basis herschreven."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "743-278=465 klopt, hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "6000-2348=3652 klopt, hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "5203-1867=3336 klopt, hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "900-456=444 klopt, hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "12 klopt, hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "5 klopt, hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "2999-1475+1 klopt (1525); niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 9 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; niveaus telegram en basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven (foto = licht, synthese = maken)."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 9 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; wrongHints en niveaus telegram.",
+  "hersteld": true,
+  "wijziging": "wrongHints als hele zinnen met denkprikkel; niveaus herschreven."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 9 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; vraag \"Welke is een\" en hints \"Eik = loofboom.\" telegram; theorie te stellig (naaldbomen altijd groen).",
+  "hersteld": true,
+  "wijziging": "Vraag -> \"Welke boom is een naaldboom?\"; hints als zinnen; theorie met \"meestal\"; niveaus herschreven."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 10 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; niveaus telegram en basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven (regenworm/paddenstoel)."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen; niveaus.basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 7 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord verdedigbaar maar onnauwkeurig (\"staat naar de zon\"); hints en niveaus telegram.",
+  "hersteld": true,
+  "wijziging": "Optie A -> \"Onze kant van de aarde helt naar de zon toe\"; hint bij afstand feitelijk aangescherpt (in onze zomer staat de aarde het verst van de zon); hint bij wolken als vraag; stap-uitleg en niveaus herschreven (zon hoger, dagen langer)."
+ }
+]

@@ -113,7 +113,7 @@ const steps = [
     checks: [
       { q: "Wat betekent **red**?", options: ["rood", "groen", "blauw", "geel"], answer: 0, wrongHints: [null, "green = groen.", "blue = blauw.", "yellow = geel."] },
       { q: "Wat betekent **black**?", options: ["zwart", "wit", "bruin", "blauw"], answer: 0, wrongHints: [null, "white = wit.", "brown = bruin.", "blue = blauw."] },
-      { q: "Wat is **pink**?", options: ["roze", "rood", "paars", "geel"], answer: 0, wrongHints: [null, "red = rood.", "purple = paars.", "yellow = geel."] },
+      { q: "Wat betekent **pink**?", options: ["roze", "rood", "paars", "geel"], answer: 0, wrongHints: [null, "red = rood.", "purple = paars.", "yellow = geel."] },
       { q: "Hoe zeg je *'een groene appel'* in het Engels?", options: ["a green apple", "a apple green", "an green apple", "green a apple"], answer: 0, wrongHints: [null, "Kijk naar de volgorde: waar staat 'blue' in 'the blue sky'?", "Begint 'green' met een klinkerklank? Zeg het eens hardop.", "Kijk naar 'a red car' in de uitleg. Wat staat daar vooraan?"] },
       { q: "Welke kleur is **brown**?", options: ["bruin", "zwart", "grijs", "blauw"], answer: 0, wrongHints: [null, "black = zwart.", "grey = grijs.", "blue = blauw."] },
     ],
@@ -137,7 +137,7 @@ const steps = [
       { q: "Wat betekent **grandma**?", options: ["oma", "tante", "moeder", "zus"], answer: 0, wrongHints: [null, "aunt = tante.", "mother = moeder.", "sister = zus."] },
       { q: "Wat betekent **daughter**?", options: ["dochter", "zoon", "moeder", "vrouw"], answer: 0, wrongHints: [null, "son = zoon.", "mother = moeder.", "wife = vrouw/echtgenote."] },
       { q: "Hoe zeg je *'mijn vader'*?", options: ["my father", "me father", "mine father", "my mother"], answer: 0, wrongHints: [null, "'Me' betekent 'mij', niet 'mijn'. Kijk in de uitleg bij 'Bezit aanduiden'.", "'Mine' gebruik je los, zonder woord erachter ('It is mine'). Welke vorm zet je vóór 'father'?", "Mother = moeder."] },
-      { q: "Wat is **cousin**?", options: ["neef of nicht", "broer of zus", "oom of tante", "opa of oma"], answer: 0, wrongHints: [null, "brother = broer, sister = zus.", "uncle = oom, aunt = tante.", "grandpa = opa, grandma = oma."] },
+      { q: "Wat betekent **cousin**?", options: ["neef of nicht", "broer of zus", "oom of tante", "opa of oma"], answer: 0, wrongHints: [null, "brother = broer, sister = zus.", "uncle = oom, aunt = tante.", "grandpa = opa, grandma = oma."] },
     ],
   },
   {
@@ -145,9 +145,9 @@ const steps = [
     explanation: "**Eten**:\n• bread = brood\n• cheese = kaas\n• meat = vlees\n• fish = vis\n• egg = ei\n• apple = appel\n• banana = banaan\n• potato = aardappel\n• rice = rijst\n• pasta = pasta\n• soup = soep\n• salad = salade\n\n**Drinken**:\n• water = water\n• milk = melk\n• juice = sap\n• tea = thee\n• coffee = koffie\n• cola = cola\n\n**Maaltijden**:\n• breakfast = ontbijt\n• lunch = lunch\n• dinner = avondmaal\n\n**Vraag**: *'Are you hungry?'* = heb je honger? · *'Are you thirsty?'* = heb je dorst?",
     checks: [
       { q: "Wat betekent **bread**?", options: ["brood", "kaas", "ei", "vlees"], answer: 0, wrongHints: [null, "cheese = kaas.", "egg = ei.", "meat = vlees."] },
-      { q: "Wat is **milk**?", options: ["melk", "water", "sap", "koffie"], answer: 0, wrongHints: [null, "water = water.", "juice = sap.", "coffee = koffie."] },
+      { q: "Wat betekent **milk**?", options: ["melk", "water", "sap", "koffie"], answer: 0, wrongHints: [null, "water = water.", "juice = sap.", "coffee = koffie."] },
       { q: "Wat betekent **breakfast**?", options: ["ontbijt", "lunch", "avondeten", "tussendoortje"], answer: 0, wrongHints: [null, "lunch = lunch.", "dinner = avondeten.", "Een tussendoortje is 'a snack'. Breakfast is een echte maaltijd."] },
-      { q: "Wat is **apple**?", options: ["appel", "banaan", "aardappel", "ei"], answer: 0, wrongHints: [null, "banana = banaan.", "potato = aardappel.", "egg = ei."] },
+      { q: "Wat betekent **apple**?", options: ["appel", "banaan", "aardappel", "ei"], answer: 0, wrongHints: [null, "banana = banaan.", "potato = aardappel.", "egg = ei."] },
       { q: "Hoe vraag je *'heb je dorst?'* in het Engels?", options: ["Are you thirsty?", "Are you hungry?", "Do you eat?", "Is it cold?"], answer: 0, wrongHints: [null, "'Hungry' betekent honger, niet dorst.", "'Do you eat?' betekent 'eet je?'. Dat vraagt niet naar dorst.", "'Is it cold?' betekent 'is het koud?'. Dat vraagt niet naar dorst."] },
     ],
   },
@@ -155,11 +155,11 @@ const steps = [
     title: "Body parts — lichaamsdelen",
     explanation: "**Hoofd en gezicht**:\n• head = hoofd\n• hair = haar\n• face = gezicht\n• eye(s) = oog (ogen)\n• ear(s) = oor (oren)\n• nose = neus\n• mouth = mond\n• teeth = tanden (1 tand = tooth)\n• tongue = tong\n\n**Lijf**:\n• neck = nek\n• shoulder(s) = schouder(s)\n• arm(s) = arm(en)\n• hand(s) = hand(en)\n• finger(s) = vinger(s)\n• leg(s) = been (benen)\n• foot / feet = voet (voeten)\n• toe(s) = teen (tenen)\n• back = rug\n• stomach / belly = buik\n• heart = hart\n\n**Onregelmatig meervoud**:\n• 1 tooth → 2 teeth\n• 1 foot → 2 feet\n• 1 man → 2 men\n• 1 woman → 2 women",
     checks: [
-      { q: "Wat is **eye**?", options: ["oog", "oor", "neus", "mond"], answer: 0, wrongHints: [null, "ear = oor.", "nose = neus.", "mouth = mond."] },
+      { q: "Wat betekent **eye**?", options: ["oog", "oor", "neus", "mond"], answer: 0, wrongHints: [null, "ear = oor.", "nose = neus.", "mouth = mond."] },
       { q: "Wat betekent **finger**?", options: ["vinger", "hand", "arm", "voet"], answer: 0, wrongHints: [null, "hand = hand.", "arm = arm.", "foot = voet."] },
       { q: "Wat is het meervoud van **tooth** (tand)?", options: ["teeth", "tooths", "toothes", "teeths"], answer: 0, wrongHints: [null, "Tooth is onregelmatig: je plakt er geen -s achter. Denk aan foot → feet.", "-es komt na s, x, ch of sh. Tooth is bovendien onregelmatig: kijk bij foot → feet.", "Bijna! Maar er zit één letter te veel aan het eind."] },
       { q: "Wat is **leg** in het Nederlands?", options: ["been", "arm", "voet", "hoofd"], answer: 0, wrongHints: [null, "arm = arm.", "foot = voet.", "head = hoofd."] },
-      { q: "Wat is **heart**?", options: ["hart", "hoofd", "hand", "haar"], answer: 0, wrongHints: [null, "head = hoofd.", "hand = hand.", "hair = haar."] },
+      { q: "Wat betekent **heart**?", options: ["hart", "hoofd", "hand", "haar"], answer: 0, wrongHints: [null, "head = hoofd.", "hand = hand.", "hair = haar."] },
     ],
   },
   {
@@ -175,7 +175,7 @@ const steps = [
       { q: "Welk **familielid** is **uncle**?", options: ["oom", "tante", "neef", "opa"], answer: 0, wrongHints: [null, "aunt = tante.", "cousin = neef.", "grandpa = opa."] },
       { q: "Welke kleur is **white**?", options: ["wit", "zwart", "grijs", "blauw"], answer: 0, wrongHints: [null, "black = zwart.", "grey = grijs.", "blue = blauw."] },
       { q: "Welke maand komt **na** July?", options: ["August", "June", "September", "May"], answer: 0, wrongHints: [null, "June komt VOOR July.", "September komt 2 maanden later.", "May komt eerder."] },
-      { q: "Wat is **goodbye**?", options: ["tot ziens", "hallo", "dank je", "alsjeblieft"], answer: 0, wrongHints: [null, "hello = hallo.", "thanks = dank je.", "please = alsjeblieft."] },
+      { q: "Wat betekent **goodbye**?", options: ["tot ziens", "hallo", "dank je", "alsjeblieft"], answer: 0, wrongHints: [null, "hello = hallo.", "thanks = dank je.", "please = alsjeblieft."] },
     ],
   },
 ];

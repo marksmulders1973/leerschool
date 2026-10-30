@@ -1819,7 +1819,7 @@ const steps = [
         q: "Wat is de **persoonsvorm** in *'Tom wandelt door het park.'*?",
         options: ["wandelt", "Tom", "door", "park"],
         answer: 0,
-        wrongHints: [null, "Dat is onderwerp.", "Voorzetsel.", "Zelfstandig naamwoord."],
+        wrongHints: [null, "Tom is degene die iets doet. Is dat het werkwoord van de zin?", "Dit woord vertelt waar iets gebeurt. Verandert het als je de zin in de verleden tijd zet?", "Dit is een ding of plek. Zet de zin eens in de verleden tijd: welk woord verandert dan?"],
       },
       {
         q: "Wanneer schrijf je **'gebeurde'** en wanneer **'gebeurden'**?",
@@ -1835,7 +1835,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Tussen-n regel", tekst: "Bij sommige samenstellingen komt 'en' tussen de delen: pan + koek = pannenkoek (n erbij)." },
-            { titel: "Wanneer?", tekst: "Sinds 1995 schrijven we 'tussen-n' als het eerste woord een meervouds-'en' heeft." },
+            { titel: "Wanneer?", tekst: "Sinds 2005 schrijf je een tussen-n als het eerste woord een meervoud op '-en' heeft." },
           ],
           woorden: [{ woord: "tussen-n", uitleg: "Extra letter 'en' tussen 2 woorden bij samenstelling." }],
           theorie: "Toets-truc: woorden zoals 'pannenkoek', 'rozenstruik', 'boekenkast' — altijd met tussen-n. Bij twijfel: kan het eerste woord een meervoud op '-en' krijgen (pannen, rozen, boeken)? Ja → tussen-n.",
@@ -1845,23 +1845,23 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Geen tussen-n bij woorden als zonnebloem en zonneschijn (er is maar één zon, dus alleen -e)." }],
           niveaus: {
-            basis: "pannenkoek met tussen-n.",
-            simpeler: "Pannen + koek = pannenkoek.",
+            basis: "Het eerste deel is 'pan'. Bedenk het meervoud van 'pan' en zet daar 'koek' achter.",
+            simpeler: "Het meervoud van pan is 'pannen'. Dat deel schrijf je in de samenstelling helemaal, aan elkaar met 'koek'.",
             nogSimpeler: "Tussen-n",
           },
         },
       },
       {
-        q: "*'Het kind **was** ziek.'* Welke **tijd**?",
+        q: "*'Het kind **was** ziek.'* In welke **tijd** staat deze zin?",
         options: ["Verleden tijd", "Tegenwoordige tijd", "Toekomstige tijd", "Voltooide tijd"],
         answer: 0,
-        wrongHints: [null, "Is het kind nú ziek? Kijk goed naar het woord 'was'.", "Niet — 'was' wijst niet op toekomst.", "Voltooide = 'is geweest'."],
+        wrongHints: [null, "Is het kind nú ziek? Kijk goed naar het woord 'was'.", "Gaat het over iets dat nog moet komen? Dan zou er 'zal' of 'gaat' in de zin staan.", "Bij de voltooide tijd hoort een hulpwerkwoord met een voltooid deelwoord, zoals 'is geweest'. Staat dat hier?"],
       },
       {
         q: "Welk woord is **goed gespeld**?",
         options: ["station", "stasion", "stasjon", "statsjon"],
         answer: 0,
-        wrongHints: [null, "Niet — hoe je 't uitspreekt is anders dan hoe je het schrijft.", "Je hoort 'sjon', maar zo schrijf je het niet. Hoe schrijf je het einde van 'informatie'?", "Je hoort 'sjon', maar in dit woord staat geen j."],
+        wrongHints: [null, "Je schrijft het zoals je het hoort, maar bij dit woord klopt de klank niet met de spelling.", "Je hoort 'sjon', maar zo schrijf je het niet. Hoe schrijf je het einde van 'informatie'?", "Je hoort 'sjon', maar in dit woord staat geen j."],
         uitlegPad: {
           stappen: [
             { titel: "ti vs si", tekst: "In veel Nederlandse woorden klinkt 'ti' als 'si': station, informatie, vakantie. Maar je schrijft 'ti'." },
@@ -1871,8 +1871,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "vakantie (vak-an-sie), informatie, adoptie — allemaal 'ti'." }],
           basiskennis: [{ onderwerp: "Geheugen", uitleg: "Bijna alle '-sie'-klinkende achtervoegsels schrijf je '-tie'." }],
           niveaus: {
-            basis: "station.",
-            simpeler: "Sie-klank, maar ti-spelling = station.",
+            basis: "Denk aan woorden als vakantie en informatie. Je hoort daar een s-klank, maar welke letters schrijf je?",
+            simpeler: "In vakantie en informatie schrijf je de s-klank als 'ti'. Bij dit woord gaat het net zo.",
             nogSimpeler: "station",
           },
         },
@@ -1881,19 +1881,19 @@ const steps = [
         q: "Welke werkwoordsvorm staat in de **tegenwoordige tijd**?",
         options: ["loopt", "liep", "gelopen", "zal lopen"],
         answer: 0,
-        wrongHints: [null, "Verleden.", "Voltooid.", "Toekomstig."],
+        wrongHints: [null, "Dit gebeurde al eerder. Is dat nu?", "Dit woord heeft een hulpwerkwoord nodig, zoals 'heeft' of 'is'. Is het dan nog de tegenwoordige tijd?", "Met 'zal' gaat het over later. Is dat nu?"],
       },
       {
         q: "Welk woord is **goed gespeld**?",
         options: ["politie", "polisie", "polietie", "policie"],
         answer: 0,
-        wrongHints: [null, "Si-klank, maar ti-spelling.", "Niet — geen extra 'e'.", "De sie-klank schrijf je in dit woord niet met een c."],
+        wrongHints: [null, "Je schrijft de s-klank zoals je hem hoort, maar bij dit soort woorden klopt dat niet. Denk aan 'vakantie'.", "Je hoort een lange ie-klank. Schrijf je die in dit woord echt met 'ie'?", "De sie-klank schrijf je in dit woord niet met een c."],
       },
       {
         q: "*'Wij ___ in het bos.'* Welk werkwoord past (tegenwoordige tijd)?",
         options: ["wandelen", "wandelt", "wandelden", "wandelde"],
         answer: 0,
-        wrongHints: [null, "Enkelvoud.", "Meervoud verleden.", "Enkelvoud verleden."],
+        wrongHints: [null, "Dit is de vorm voor hij of zij. Past die bij 'wij'?", "Dit is de verleden tijd. De zin moet in de tegenwoordige tijd.", "Dit is de verleden tijd, en ook nog de vorm voor één persoon."],
       },
       {
         q: "Welk woord heeft **een hoofdletter** nodig?",
@@ -1902,10 +1902,10 @@ const steps = [
         wrongHints: [null, "Dagen van de week krijgen geen hoofdletter.", "Seizoenen krijgen geen hoofdletter.", "Maanden krijgen geen hoofdletter."],
       },
       {
-        q: "**'rood'** + **'kapje'** = de naam van het meisje uit het sprookje: ___?",
+        q: "Je maakt van **'rood'** en **'kapje'** de naam van het meisje uit het sprookje. Hoe schrijf je die naam?",
         options: ["Roodkapje", "Rood kapje", "Rotkapje", "Rood-kapje"],
         answer: 0,
-        wrongHints: [null, "Samenstelling = aan elkaar.", "Rood schrijf je met een d, ook al hoor je een t.", "Geen koppelteken bij samengestelde naam."],
+        wrongHints: [null, "Je maakt van twee woorden één nieuwe naam. Schrijf je die dan als twee losse woorden?", "Rood schrijf je met een d, ook al hoor je een t.", "Een koppelteken gebruik je alleen in speciale gevallen. Is dat bij deze naam nodig?"],
       },
       {
         q: "Welk **verkleinwoord** van *muis* is goed gespeld?",
@@ -1923,8 +1923,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Schrijftaal", uitleg: "'-ie' (muisie, autie) is spreektaal — de toets wil schrijftaal." }],
           niveaus: {
-            basis: "muisje.",
-            simpeler: "Verkleinwoord NL = -je.",
+            basis: "Een verkleinwoord schrijf je met een uitgang zoals -je, -tje of -pje. Welke past achter 'muis'?",
+            simpeler: "Na een s plak je er meestal alleen -je achter, net als bij huis en vis.",
             nogSimpeler: "muisje",
           },
         },
@@ -1933,7 +1933,7 @@ const steps = [
         q: "Welk **werkwoord** is **goed gespeld** (tegenwoordige tijd)?",
         options: ["ik leef", "ik leeft", "ik leefd", "ik leeven"],
         answer: 0,
-        wrongHints: [null, "Niet — 1e persoon = stam zonder t.", "Ik-vorm = alleen de stam. Komt er dan een d achter?", "Bij 'ik' schrijf je alleen de stam, zonder -en."],
+        wrongHints: [null, "Bij 'ik' komt er geen t achter de stam. Die t hoort bij hij, zij en het.", "Ik-vorm = alleen de stam. Komt er dan een d achter?", "Bij 'ik' schrijf je alleen de stam, zonder -en."],
       },
       {
         q: "*'**...** jij morgen mee naar de film?'* Welk woord hoort op de puntjes?",
@@ -1951,8 +1951,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Jij loopt → Loop jij? | Jij wordt → Word jij? | Hij gaat → Gaat hij? (t blijft!)" }],
           basiskennis: [{ onderwerp: "Controle-truc", uitleg: "Vervang door 'lopen': 'Loop jij mee?' klinkt goed, 'Loopt jij mee?' niet." }],
           niveaus: {
-            basis: "Ga — de t valt weg als 'jij' erachter staat.",
-            simpeler: "Jij achter het werkwoord = geen t. 'Ga jij?'",
+            basis: "Kijk waar 'jij' staat: vóór of áchter het werkwoord? Dat bepaalt of er een t komt.",
+            simpeler: "Staat 'jij' achter het werkwoord, dan valt de t weg. Vergelijk: 'Loop jij mee?'",
             nogSimpeler: "Ga",
           },
         },
@@ -1986,7 +1986,7 @@ const steps = [
         ref: "1F",
         options: ["allebei", "alebei", "allebij", "alebij"],
         answer: 0,
-        wrongHints: [null, "Denk aan 'alle' — met dubbele l.", "Dit woord eindigt op -ei, niet op -ij. Uit je hoofd leren!", "Twee fouten tegelijk — check de l én de ei."],
+        wrongHints: [null, "Denk aan 'alle' — met dubbele l.", "Dit woord eindigt op -ei, niet op -ij. Uit je hoofd leren!", "Hier zitten twee fouten in. Kijk naar het begin én naar het eind van het woord."],
         explanation: "**Allebei** = alle + bei(de). Dubbele l, en -ei aan het eind. Ei/ij-woorden moet je uit je hoofd kennen.",
       },
       {
@@ -2014,7 +2014,7 @@ const steps = [
         explanation: "**Onmiddellijk** = on + middel + lijk: dubbele d én dubbele l. Een klassieke instinker.",
       },
       {
-        q: "*'De hond **...** de hele nacht.'* (verleden tijd van 'blaffen')",
+        q: "*'De hond **...** de hele nacht.'* Welke verleden tijd van **'blaffen'** hoort op de puntjes?",
         ref: "1F",
         options: ["blafte", "blafde", "blaftte", "blafften"],
         answer: 0,
@@ -2062,7 +2062,7 @@ const steps = [
         explanation: "'Het gebeur**d** vaak' is fout: tegenwoordige tijd = stam + t → 'het gebeur**t** vaak'. 'Gebeurd' (met d) is alleen het voltooid deelwoord: 'het is gebeurd'.",
       },
       {
-        q: "Hoe schrijf je: *'de trui van **...** (meervoud van 'dame')'*?",
+        q: "Wat is het juiste **meervoud** van *'dame'*?",
         ref: "1F",
         options: ["dames", "dame's", "damens", "damees"],
         answer: 0,

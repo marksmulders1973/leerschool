@@ -668,7 +668,7 @@ const steps = [
         q: "**632 − 184** = ?",
         options: ["448","458","568","552"],
         answer: 0,
-        wrongHints: [null,"Na het lenen bij de eenheden is de 3 een 2 geworden. Heb je dat bij de tientallen gedaan?","Schat eens: 630 − 180 is ongeveer 450. Past jouw antwoord daarbij?","Heb je in een kolom het kleine cijfer van het grote afgehaald, ook als het onderste groter was?"],
+        wrongHints: [null,"Na het lenen bij de eenheden is de 3 een 2 geworden. Heb je dat bij de tientallen gedaan?","Schat eerst: rond beide getallen af op tientallen en trek ze af. Is jouw antwoord dan niet veel te groot?","Heb je in een kolom het kleine cijfer van het grote afgehaald, ook als het onderste groter was?"],
         uitlegPad: {
           stappen: [
             { titel: "Lenen bij aftrekken", tekst: "Eenheden: 2−4 → leen. 12−4=8. Tientallen wordt 2 (was 3)." },
@@ -678,14 +678,14 @@ const steps = [
           theorie: "Aftrekken kolomsgewijs. Te weinig? Leen 1 van links — die kolom wordt 1 minder.",
           voorbeelden: [{ type: "lenen", tekst: "632−184: 12−4=8 (na lenen), 12−8=4 (na lenen), 5−1=4. Antwoord 448." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "Schat: 630−180=450. Antwoord 448 past. Geen 568 (te ver weg)." }],
-          niveaus: { basis: "632−184=448.", simpeler: "Lenen-truc: bij elke kolom waar je tekort komt, leen 1 van links. 12−4=8, 12−8=4, 5−1=4. Antwoord 448.", nogSimpeler: "448" },
+          niveaus: { basis: "Begin rechts bij de eenheden: 2 − 4 kan niet. Leen 1 van de tientallen en vergeet niet dat die buur dan 1 minder wordt.", simpeler: "Lenen-truc: bij elke kolom waar je tekort komt, leen 1 van links. 12−4=8, 12−8=4, 5−1=4. Antwoord 448.", nogSimpeler: "448" },
         },
       },
       {
         q: "**1000 − 376** = ?",
         options: ["624","623","634","724"],
         answer: 0,
-        wrongHints: [null,"Nét te weinig — als je de 999-truc gebruikt: vergeet de allerlaatste stap niet.","Te veel — heb je correct door alle nullen geleend?","Veel te veel — schat globaal: hoeveel is 1000 min 400, en wat moet er dan nóg af?"],
+        wrongHints: [null,"Nét te weinig — als je de 999-truc gebruikt: vergeet de allerlaatste stap niet.","Te veel — heb je correct door alle nullen geleend?","Veel te veel. Je leent door alle nullen heen: heb je bij de honderdtallen ook bijgehouden dat er 1 is uitgeleend?"],
         uitlegPad: {
           stappen: [
             { titel: "999-truc", tekst: "Bij 1000-iets: doe 999-iets, dan +1. Veel makkelijker dan door nullen lenen." },
@@ -695,14 +695,14 @@ const steps = [
           theorie: "1000=999+1. Door nullen lenen is foutgevoelig. Bij 999 hoef je niet te lenen (elk cijfer is 9). Veiliger.",
           voorbeelden: [{ type: "truc", tekst: "5000−1234: doe 4999−1234=3765, dan +1=3766." }],
           basiskennis: [{ onderwerp: "Vermijd nullen-lenen", uitleg: "Door 1000 lenen kost 3 leen-stappen — fout-gevoelig." }],
-          niveaus: { basis: "999−376=623, +1=624.", simpeler: "Truc voor 1000-: doe 999-376 (geen lenen nodig)=623. Plus 1 = 624.", nogSimpeler: "624" },
+          niveaus: { basis: "Door drie nullen heen lenen is lastig. Maak van 1000 eerst 999 + 1 en reken dan 999 − 376.", simpeler: "Truc voor 1000-: doe 999-376 (geen lenen nodig)=623. Plus 1 = 624.", nogSimpeler: "624" },
         },
       },
       {
         q: "**4567 − 2389** = ?",
         options: ["2178","2278","2188","2168"],
         answer: 0,
-        wrongHints: [null,"Te veel — schat globaal: hoeveel is 4500 min 2400 ongeveer?","Te veel — tel de eenheden na: hoeveel houd je over als je in de eenheden-kolom leent?","Reken de tientallen-kolom nog eens na: wat staat daar na het lenen?"],
+        wrongHints: [null,"Bij de tientallen moest je lenen van de honderdtallen. Is de 5 daarna nog 5?","Na het lenen bij de eenheden is de 6 van de tientallen 1 minder geworden. Heb je dat meegenomen?","Reken de tientallen-kolom nog eens na: wat staat daar na het lenen?"],
         uitlegPad: {
           stappen: [
             { titel: "Stappen", tekst: "7−9→leen. 17−9=8. 6−1−8→leen. 15−8=7. 5−1−3=1. 4−2=2. Antwoord 2178." },
@@ -711,7 +711,7 @@ const steps = [
           theorie: "Schat: 4500−2400=2100. Antwoord 2178 past in die buurt.",
           voorbeelden: [{ type: "schat", tekst: "4567−2389. Schat ~2100. Reken nauwkeurig: 2178." }],
           basiskennis: [{ onderwerp: "Lenen achter elkaar", uitleg: "Soms moet je in opvolgende kolommen lenen — blijf zorgvuldig." }],
-          niveaus: { basis: "4567−2389=2178.", simpeler: "Schat: 4500−2400=2100. Antwoord rond 2100. Reken: 2178.", nogSimpeler: "2178" },
+          niveaus: { basis: "Werk kolom voor kolom van rechts naar links. Bij de eenheden én bij de tientallen moet je lenen; de buur wordt dan steeds 1 minder.", simpeler: "Schat: 4500−2400=2100. Antwoord rond 2100. Reken: 2178.", nogSimpeler: "2178" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -760,7 +760,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "743 − 278 = 465.",
+            basis: "Begin bij de eenheden: 3 − 8 kan niet, dus je leent 1 van de 4. Doe daarna de tientallen en let op dat die nu 1 minder zijn.",
             simpeler: "3 − 8 kan niet. Leen 1: 13 − 8 = 5. De 4 wordt 3. 3 − 7 kan niet. Leen 1: 13 − 7 = 6. De 7 wordt 6. 6 − 2 = 4. Antwoord: 465.",
             nogSimpeler: "465",
           },
@@ -811,7 +811,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6000 − 2348 = 3652.",
+            basis: "Door drie nullen heen lenen is lastig. Maak van 6000 eerst 5999 + 1.",
             simpeler: "6000 = 5999 + 1. 5999 − 2348 = 3651. Hier hoef je niet te lenen. 3651 + 1 = 3652.",
             nogSimpeler: "3652",
           },
@@ -866,7 +866,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5203 − 1867 = 3336.",
+            basis: "Begin bij de eenheden: 3 − 7 kan niet. De buur is een 0, dus je moet een kolom verder lenen.",
             simpeler: "3 − 7 kan niet. De 0 kan niets lenen, dus leen bij de 2: die wordt 1. De 0 wordt 10, daarna 9. De 3 wordt 13: 13 − 7 = 6. 9 − 6 = 3. 1 − 8 kan niet. Leen 1: 11 − 8 = 3. De 5 wordt 4. 4 − 1 = 3. Antwoord: 3336.",
             nogSimpeler: "3336",
           },
@@ -917,7 +917,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "900 − 456 = 444.",
+            basis: "Door twee nullen heen lenen is lastig. Maak van 900 eerst 899 + 1.",
             simpeler: "900 = 899 + 1. 899 − 456 = 443. 443 + 1 = 444.",
             nogSimpeler: "444",
           },
@@ -964,7 +964,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De 2 wordt 12.",
+            basis: "Lenen betekent dat je 1 tiental van de buur pakt. Hoeveel eenheden is één tiental?",
             simpeler: "Je leent 1 tiental. Dat zijn 10 eenheden. 2 + 10 = 12. Nu kun je 12 − 7 doen.",
             nogSimpeler: "12",
           },
@@ -1011,7 +1011,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De 6 wordt 5.",
+            basis: "Wie iets uitleent, heeft daarna minder. Hoeveel houdt de 6 over als hij 1 uitleent?",
             simpeler: "Je leent 1 van de 6. Dan blijft er 5 over. Schrijf die 5 klein boven de 6, dan vergeet je het niet.",
             nogSimpeler: "5",
           },
@@ -1067,7 +1067,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2999 − 1475, dan + 1.",
+            basis: "Bij 2999 hoef je niet te lenen. Maar 2999 is 1 minder dan 3000: wat betekent dat voor je antwoord?",
             simpeler: "Eerst 1 eraf (3000 wordt 2999), dan aftrekken zonder lenen, en die 1 er op het eind weer bij.",
             nogSimpeler: "Eraf, dan erbij",
           },
