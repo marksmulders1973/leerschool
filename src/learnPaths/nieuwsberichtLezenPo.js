@@ -874,11 +874,11 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           "De kop is een grapje; de tekst gaat over iets anders",
         ],
         answer: 0,
-        evidence: "Neem een kop dus nooit letterlijk: de precieze informatie staat in de tekst.",
+        evidence: "Een kop moet kort en pakkend zijn.",
         wrongHints: [
           null,
           "Vergelijk met de tekst: hoeveel gaten worden er écht genoemd, en in hoeveel straten?",
-          "Kop en tekst horen bij hetzelfde nieuws — de één is alleen wat schreeuweriger. Waarvoor dient een kop ook alweer?",
+          "Twaalf gaten is geen hele wijk — maar is het bericht daarom fout? Waarvoor dient een kop ook alweer?",
           "Gaan de kop en de tekst allebei over gaten in de weg?",
         ],
         uitlegPad: {
@@ -955,12 +955,12 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
           "Volgens veel bezoekers was de muziek prachtig",
         ],
         answer: 0,
-        evidence: "Een feit kun je controleren of natellen: \"Er kwamen driehonderd bezoekers.\"",
+        evidence: "Een feit kun je controleren of natellen.",
         wrongHints: [
           null,
           "Aanhalingstekens plus het woord 'leukste' — kun je dat nameten, of vindt iemand dat?",
           "'Geweldig geslaagd' is wat de organisator vindt. Kun je dat nameten?",
-          "'Prachtig' — bestaat er een meetlat voor? Zoek de zin met iets wat je écht kunt natellen.",
+          "'Prachtig' — bestaat er een meetlat voor? Kun je dat nameten, of vinden mensen dat?",
         ],
         uitlegPad: {
           stappen: [
@@ -1012,13 +1012,13 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
       },
       {
         q: "Welke zin uit een nieuwsbericht is een **mening**?",
-        options: ["\"De nieuwe speeltuin is het mooiste project van dit jaar\", zegt buurtbewoner Kim.", "Vorig jaar bezochten 1.200 kinderen het park, meldt de gemeente op haar website.", "Het park is elke dag open van 8 tot 21 uur, ook in de weekenden en vakanties.", "Er zijn drie nieuwe bankjes geplaatst bij de ingang, aan de kant van de vijver."],
+        options: ["\"De nieuwe speeltuin is het mooiste project van dit jaar\", zegt buurtbewoner Kim.", "Vorig jaar bezochten 1.200 kinderen het park, meldt de gemeente op haar website.", "Het park is elke dag open van 8 tot 21 uur, ook in de weekenden en vakanties.", "\"Er staan drie nieuwe bankjes bij de ingang, aan de kant van de vijver\", vertelt beheerder Joris."],
         answer: 0,
         wrongHints: [null, "Dat getal kun je natellen. Is het dan een mening of een feit?", "Openingstijden kun je nakijken — feit of mening?", "Kun je dit controleren door te gaan kijken? Feit of mening?"],
         uitlegPad: {
           stappen: [
             { titel: "Doe de controleer-test", tekst: "Kun je nameten of de speeltuin 'het mooiste project van dit jaar' is? Nee — 'mooiste' is een vind-woord. Niet controleerbaar." },
-            { titel: "Citaat = verpakte mening", tekst: "Het staat in een citaat ('zegt Kim'). Het zijn haar woorden en haar oordeel. Dat maakt het een mening, ook al staat het in een nieuwsbericht." },
+            { titel: "Citaat: kijk wát er gezegd wordt", tekst: "Het staat in een citaat ('zegt Kim'). Een citaat kan een feit of een mening zijn. Kim geeft hier haar oordeel met het woord 'mooiste'. Dat maakt het een mening, ook al staat het in een nieuwsbericht." },
             { titel: "De andere opties zijn feiten", tekst: "Aantallen (1.200 kinderen), tijden (8 tot 21 uur) en meetbare dingen (drie bankjes) kun je natellen of nakijken. Dat zijn feiten." },
           ],
           niveaus: {
@@ -1127,8 +1127,8 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
         wrongHints: [
           null,
           "Dat woord vertelt wanneer iets gebeurde. Kun je dat controleren?",
-          "Wie er speelde, kun je nagaan. Welk woord zegt hoe mooi het was?",
-          "Waar het was, kun je controleren. Welk woord zegt hoe mooi het was?",
+          "Wie er speelde, kun je nagaan. Welk woord kun je níét controleren?",
+          "Waar het was, kun je controleren. Welk woord zou een andere luisteraar misschien anders kiezen?",
         ],
         uitlegPad: {
           stappen: [
@@ -1165,7 +1165,7 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
             },
           ],
           niveaus: {
-            basis: "Welk woord zegt iets over hoe mooi het concert was?",
+            basis: "Doe bij elk woord de controleer-test: kun je het nagaan, of is het wat iemand vindt?",
             simpeler: "Kun je nameten of een concert prachtig is? En kun je controleren wanneer en waar het was?",
             nogSimpeler: "Zoek het woord dat iemand anders misschien niet zou kiezen, omdat hij het concert saai vond.",
           },

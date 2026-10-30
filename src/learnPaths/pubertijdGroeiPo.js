@@ -182,9 +182,9 @@ const steps = [
       { q: "Tot ongeveer welke leeftijd **ontwikkelen je hersenen** zich nog flink?", options: ["Tot ongeveer 25 jaar", "Tot ongeveer 12 jaar", "Tot ongeveer 8 jaar", "Tot ongeveer 60 jaar"], answer: 0, wrongHints: [null, "Te jong — in de puberteit veranderen je hersenen juist volop.", "Veel te jong — dan begint de puberteit nog niet eens.", "Veel te oud. Dan zijn je hersenen al lang volgroeid."] },
       {
         q: "Wat is een **groeispurt**?",
-        options: ['Periode waarin je snel langer wordt', 'Pijn in je benen als je groeit', 'Extra trainen om langer te worden', 'Extra veel eten om te groeien'],
+        options: ['Een periode waarin je snel langer wordt', 'Pijn in je benen als je groeit', 'Extra trainen om langer te worden', 'Extra veel eten om te groeien'],
         answer: 0,
-        wrongHints: [null, "Groeipijnen bestaan WEL maar dat is iets anders.", "Niet — groei is genetisch + hormonaal.", "Eten helpt maar IS niet de groeispurt zelf."],
+        wrongHints: [null, "Groeipijn bestaat wel, maar dat is iets anders. Gaat dit woord over pijn of over groeien?", "Door extra trainen word je niet langer. Je lengte hangt vooral af van je genen en je hormonen.", "Goed eten helpt bij het groeien, maar het is niet de groeispurt zelf."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een groeispurt?", tekst: "Een **groeispurt** is een **periode waarin je lichaam plotseling veel sneller groeit** dan normaal. In **één jaar** kun je 8-12 cm langer worden — bijna een centimeter per maand.\n\nMensen hebben **twee grote groeispurten** in hun leven:\n1. **Babyjaar** (0-1 jr): groei van ~50 cm naar 75 cm (50% in lengte!)\n2. **Puberteit**: meisjes ~11-13, jongens ~13-15" },
@@ -202,19 +202,19 @@ const steps = [
             { type: "feit", tekst: "Voeten groeien vaak vóór benen — daarom kun je in 1 jaar 2-3 schoenmaten verschillen." },
           ],
           basiskennis: [{ onderwerp: "Niet bezorgd", uitleg: "Alle kinderen groeien in eigen tempo. Klasgenoten ver voor of achter lopen = normaal." }],
-          niveaus: { basis: "Snelle groeiperiode.", simpeler: "Groeispurt = periode (bv. in puberteit) waarin je heel snel langer wordt — soms 10+ cm/jaar. Door hormonen.", nogSimpeler: "Snelle groei" },
+          niveaus: { basis: "Een spurt is een stukje heel snel gaan, zoals bij hardlopen. Wat zou een groei-spurt dan zijn?", simpeler: "In de puberteit kun je in één jaar wel 8 tot 12 centimeter langer worden. Daar gaat dit woord over.", nogSimpeler: "Een groeispurt is een periode waarin je heel snel langer wordt." },
         },
       },
       {
         q: "Wat helpt **botten sterk** maken tijdens groei?",
-        options: ['Calcium, vitamine D en bewegen', 'Snoep, frisdrank en chips', 'Lang stilzitten en gamen', 'Ontbijt en lunch overslaan'],
+        options: ['Calcium, vitamine D en bewegen', 'Veel snoep en frisdrank voor energie', 'Zo veel mogelijk stilzitten en rusten', 'Ontbijt en lunch overslaan'],
         answer: 0,
         wrongHints: [null, 'Zoetigheid bouwt geen sterke botten op.', 'Botten worden sterker als je ze gebruikt. Doe je dat zo?', 'Je botten hebben bouwstoffen uit eten nodig. Krijgen ze die zo?'],
         uitlegPad: {
           stappen: [
             { titel: "Botten in puberteit", tekst: "In puberteit groeien je botten enorm — in lengte ÉN sterkte. Dit is het **belangrijkste moment in je leven** om sterke botten op te bouwen. Wat je nu in je botten 'opslaat' bepaalt risico op botbreuken/osteoporose op latere leeftijd." },
             { titel: "De 3 bouwstenen", tekst: "Voor sterke botten heb je nodig:\n1. **Calcium** — de hoofdbouwstof van botten. Zit in: melk, yoghurt, kaas, broccoli, amandelen, sardientjes.\n2. **Vitamine D** — helpt lichaam calcium opnemen. Maakt huid zelf in zonlicht (15-30 min/dag). Ook in vis, eieren.\n3. **Bewegen** — vooral '**impact-bewegingen**' zoals rennen, springen, basketbal. Dit stimuleert botgroei." },
-            { titel: "Toets-feit: 90% van botten gevormd vóór 18", tekst: "Je piek-botmassa wordt bereikt rond **18-25 jaar**. Daarna kun je nog wel onderhouden maar nieuwe botmassa opbouwen wordt steeds moeilijker. **NU goed eten + bewegen = sterke botten levenslang**.\n\nNL-aanbeveling voor kinderen 9-13 jr: **1100 mg calcium per dag** = ~3 zuivelporties (melk, yoghurt, kaas)." },
+            { titel: "Toets-feit: nu bouw je je botten op", tekst: "Je piek-botmassa wordt bereikt rond **18-25 jaar**. Daarna kun je nog wel onderhouden maar nieuwe botmassa opbouwen wordt steeds moeilijker. **NU goed eten + bewegen = sterke botten levenslang**.\n\nNL-aanbeveling voor kinderen 9-13 jr: **1100 mg calcium per dag** = ~3 zuivelporties (melk, yoghurt, kaas)." },
           ],
           woorden: [
             { woord: "calcium", uitleg: "Mineraal. Hoofdbouwstof botten + tanden. 99% van calcium in lichaam zit in botten." },
@@ -226,19 +226,19 @@ const steps = [
             { type: "feit", tekst: "1 glas melk (250 ml) = ~300 mg calcium = 27% van dagelijkse behoefte." },
             { type: "feit", tekst: "Cola + frisdrank bevatten fosforzuur dat calcium-opname kan blokkeren bij grote hoeveelheden." },
           ],
-          basiskennis: [{ onderwerp: "Botten bouwen = nu", uitleg: "Toets-feit: je hebt 1 kans in je leven om sterke botten op te bouwen — tussen 10-20 jaar. Daarna alleen onderhoud mogelijk." }],
-          niveaus: { basis: "Calcium + vit D + bewegen.", simpeler: "Sterke botten in groei: melk/kaas (calcium) + zonlicht (vit D) + bewegen (impact-sporten).", nogSimpeler: "Calcium + zon + bewegen" },
+          basiskennis: [{ onderwerp: "Botten bouwen = nu", uitleg: "Tussen je 10e en 20e bouw je de meeste botmassa op. Daarna houd je vooral op peil wat je hebt." }],
+          niveaus: { basis: "Botten hebben bouwstof uit eten nodig. En worden ze sterker van rust, of juist van gebruiken?", simpeler: "Melk en kaas geven je botten bouwstof. Zonlicht helpt je lichaam die bouwstof op te nemen. En rennen en springen maken botten sterker.", nogSimpeler: "Calcium, vitamine D en bewegen maken je botten sterk." },
         },
       },
       {
-        q: "Het **brein in puberteit** — wat is uniek?",
-        options: ['Het keuze-deel is als laatste klaar', 'Het hele brein wordt kleiner', 'Het brein groeit niet meer verder', 'Het brein blijft precies hetzelfde'],
+        q: "Wat is bijzonder aan het **brein in de puberteit**?",
+        options: ['Het deel voor plannen en keuzes is als laatste klaar', 'Het deel voor gevoelens is als laatste klaar', 'Het brein is rond je twaalfde al helemaal klaar', 'Het brein blijft in de puberteit precies hetzelfde'],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — het brein verandert juist sterk.", "Tegenovergesteld — veel groei in de puberteit.", "Nee — in de puberteit verandert het brein juist enorm."],
+        wrongHints: [null, "Het deel voor gevoelens werkt in de puberteit juist al heel sterk. Klopt 'als laatste klaar' dan?", "Je hersenen ontwikkelen zich nog lang na je twaalfde. Weet je tot ongeveer welke leeftijd?", "In de puberteit verandert het brein juist heel veel."],
         uitlegPad: {
           stappen: [
             { titel: "Twee verschillende brein-delen", tekst: "Je brein heeft (heel grof gezegd) twee delen die anders ontwikkelen:\n• **Emotie-deel (limbisch systeem)** — vroeg klaar, ~13 jaar. Dit is waarom je in puberteit intens kunt voelen.\n• **Beslissings-deel (prefrontale cortex)** — pas klaar rond **25 jaar**. Dit deel doet: lange-termijn-plannen, impuls-controle, gevolgen overzien." },
-            { titel: "Wat dit verklaart", tekst: "**Emotie sterk + beslissings-controle nog niet klaar = soms impulsieve keuzes** in puberteit:\n• Risico-gedrag (te hard fietsen, dingen proberen zonder na te denken)\n• Sterke emoties (snel boos, snel verliefd, snel verdrietig)\n• Drukke groep aantrekkelijk (peer pressure werkt sterker)\n• Moeite met opletten in les (focus-deel groeit nog)\n\n**Dit is normaal + tijdelijk**." },
+            { titel: "Wat dit verklaart", tekst: "**Emotie sterk + beslissings-controle nog niet klaar = soms impulsieve keuzes** in puberteit:\n• Risico-gedrag (te hard fietsen, dingen proberen zonder na te denken)\n• Sterke emoties (snel boos, snel verliefd, snel verdrietig)\n• Drukke groep aantrekkelijk (groepsdruk werkt sterker)\n• Moeite met opletten in les (focus-deel groeit nog)\n\n**Dit is normaal + tijdelijk**." },
             { titel: "Toets-feit: brein-onderzoek + tips", tekst: "**Eveline Crone** (NL-hoogleraar) deed beroemd onderzoek naar tiener-brein. Conclusie: tieners zijn niet 'moeilijk' — ze zijn **biologisch ontworpen** om te experimenteren + risico's nemen.\n\nTips voor tieners zelf:\n• **8-10 uur slaap** = brein heeft tijd nodig om te ontwikkelen\n• **Geen alcohol/drugs** vóór 18 = kan brein-ontwikkeling blijvend schaden\n• **Sport + sociale contacten** = brein wordt slimmer\n• **Stress-managen** = langdurige stress is slecht voor brein" },
           ],
           woorden: [
@@ -252,13 +252,13 @@ const steps = [
             { type: "feit", tekst: "Alcohol vóór 25 kan permanent brein-ontwikkeling schaden — daarom 18+-grens in NL." },
           ],
           basiskennis: [{ onderwerp: "Niet 'verkeerd'", uitleg: "Tiener-brein is niet 'mis' ontworpen — het werkt zoals het hoort. Volwassenen zijn niet 'beter' maar gewoon ANDERE fase." }],
-          niveaus: { basis: "Beslissings-deel laatst klaar.", simpeler: "Brein in puberteit: emotie-deel werkt al sterk, maar beslissings-deel (plannen + impuls-controle) pas klaar rond 25.", nogSimpeler: "Beslissings-deel laat klaar" },
+          niveaus: { basis: "Je brein heeft een deel voor gevoelens en een deel voor plannen en nadenken. Die worden niet tegelijk klaar.", simpeler: "In de puberteit voel je dingen vaak heel sterk, maar eerst nadenken en dan pas doen is soms nog lastig. Welk deel is dan nog niet klaar?", nogSimpeler: "Het deel voor plannen en keuzes maken is pas rond je 25e klaar." },
         },
       },
       { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in de puberteit.", "Te veel — zo lang slaapt een baby.", "Juist niet — in de puberteit heb je veel slaap nodig om te groeien en te leren."] },
       { q: "Welk **hormoon** speelt vooral een rol bij **jongens in de puberteit**?", options: ["Testosteron", "Oestrogeen", "Insuline", "Adrenaline"], answer: 0, wrongHints: [null, "Speelt vooral bij meisjes een grote rol.", "Insuline regelt je bloedsuiker, niet de puberteit.", "Adrenaline is het stresshormoon, voor schrik en spanning."] },
       { q: "Wat is **acne** (jeugdpuistjes)?", options: ["Ontstoken talgklieren in de huid", "Een ziekte van de longen", "Schade aan tanden", "Een verkleuring van de ogen"], answer: 0, wrongHints: [null, "Puistjes zitten niet in je longen — waar zie je ze?", "Tanden hebben er niets mee te maken.", "Ogen hebben er niets mee te maken."] },
-      { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ['Gezond eten, sport, voldoende slaap', 'Gamen, snoepen en laat opblijven', 'Niet leren en veel binnen zitten', 'Veel stress en weinig slaap'], answer: 0, wrongHints: [null, 'Is dat goed voor je lijf en je slaap?', 'Binnen zitten is niet goed voor je lijf. Wat heeft je lichaam nodig?', 'Stress en weinig slaap maken je juist moe en prikkelbaar.'] },
+      { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ['Gezond eten, sporten en genoeg slapen', 'Gamen, snoepen en laat opblijven', 'Niet leren en veel binnen zitten', 'Veel stress en weinig slaap'], answer: 0, wrongHints: [null, 'Is dat goed voor je lijf en je slaap?', 'Binnen zitten is niet goed voor je lijf. Wat heeft je lichaam nodig?', 'Stress en weinig slaap maken je juist moe en prikkelbaar.'] },
     ],
   },
 ];

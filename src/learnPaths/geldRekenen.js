@@ -731,32 +731,32 @@ const steps = [
         },
       },
       {
-        q: "Een speelgoed van **€ 17,40** met **2 × € 10-biljetten**. Wisselgeld?",
+        q: "Een stuk speelgoed kost **€ 17,40**. Je betaalt met **twee biljetten van € 10**. Hoeveel **wisselgeld** krijg je?",
         options: ["€ 2,60","€ 2,40","€ 3,60","€ 7,60"],
         answer: 0,
-        wrongHints: [null,"Te weinig — tel vooruit vanaf 17,40: hoeveel naar 18, hoeveel van 18 naar 20?","Tel vooruit vanaf € 17,40 naar € 18. Hoeveel cent is dat?","Te veel — heb je 1 biljet ipv 2 gerekend?"],
+        wrongHints: [null,"Te weinig. Tel nog eens vooruit vanaf € 17,40 tot het bedrag dat je betaalt.","Tel vooruit vanaf € 17,40 naar € 18. Hoeveel cent is dat?","Te veel. Tel je antwoord op bij € 17,40: kom je dan uit op wat je betaalde?"],
         uitlegPad: {
           stappen: [
-            { titel: "Betaald", tekst: "2 × €10 = €20." },
-            { titel: "Wisselgeld", tekst: "Vooruit-tellen: 17,40 → 18 = +0,60. 18 → 20 = +2. Totaal €2,60." },
+            { titel: "Betaald", tekst: "2 × € 10 = € 20." },
+            { titel: "Wisselgeld", tekst: "Vooruit-tellen: 17,40 → 18 = +0,60. 18 → 20 = +2. Totaal € 2,60." },
           ],
           woorden: [{ woord: "vooruit-tellen", uitleg: "Vanaf de prijs naar het betaalde bedrag tellen." }],
           theorie: "Wisselgeld via vooruit-tellen werkt vaak snel: van prijs → ronde getal → betaalde bedrag.",
           voorbeelden: [{ type: "vooruit", tekst: "17,40 → 18 (+0,60). 18 → 20 (+2). Totaal: 2,60." }],
-          basiskennis: [{ onderwerp: "2 biljetten = €20", uitleg: "Niet 1 biljet! 2×10=20." }],
-          niveaus: { basis: "20−17,40=€2,60.", simpeler: "2 biljetten van 10 = €20. Wisselgeld vanaf 17,40 → 18 (+0,60) → 20 (+2) = €2,60.", nogSimpeler: "€2,60" },
+          basiskennis: [{ onderwerp: "Twee biljetten = € 20", uitleg: "Je betaalt met twee biljetten: 2 × € 10 = € 20." }],
+          niveaus: { basis: "Hoeveel geld geef je in totaal? Tel daarna vooruit vanaf € 17,40.", simpeler: "Twee biljetten van € 10 is € 20. Tel vooruit: van € 17,40 naar € 18, en dan naar € 20.", nogSimpeler: "€ 2,60" },
         },
       },
       {
-        q: "Patatje **€ 2,80**, frisdrank **€ 1,75**. Je betaalt met **€ 10**. Wisselgeld?",
+        q: "Je koopt een patatje van **€ 2,80** en een frisdrank van **€ 1,75**. Je betaalt met **€ 10**. Hoeveel **wisselgeld** krijg je?",
         options: ["€ 5,45","€ 6,45","€ 5,55","€ 4,55"],
         answer: 0,
-        wrongHints: [null, "Te veel — heb je de frisdrank meegerekend?", "Reken terug: € 5,55 + € 4,55 = ? Is dat € 10?", "Dat is het totaal, niet het wisselgeld."],
+        wrongHints: [null, "Te veel. Tel de twee prijzen nog eens precies op: klopt je totaal?", "Reken terug: tel je antwoord op bij wat je kocht. Kom je dan precies op € 10?", "Dat is wat je samen moet betalen, niet wat je terugkrijgt."],
         uitlegPad: {
           stappen: [
-            { titel: "Stap 1: totale kosten", tekst: "Patatje + frisdrank = €2,80 + €1,75. Cent: 80+75=155 (=€1,55). Euro: 2+1+1=4. Totaal **€4,55**." },
-            { titel: "Stap 2: wisselgeld", tekst: "Betaald €10 − kosten €4,55 = wisselgeld. Vooruit-tellen: 4,55 → 5 = +0,45. Van 5 → 10 = +5. Totaal **€5,45**." },
-            { titel: "Toets-truc bij twee-stappen-vragen", tekst: "De toets gebruikt vaak vragen met 2 stappen: eerst kosten optellen, dan aftrekken van betaald bedrag. Schat eerst om grove fouten te vermijden: kosten ~€5, betaald €10, dus wisselgeld ~€5. €5,45 past." },
+            { titel: "Stap 1: totale kosten", tekst: "Patatje + frisdrank = € 2,80 + € 1,75. Cent: 80+75=155 (=€ 1,55). Euro: 2+1+1=4. Totaal **€ 4,55**." },
+            { titel: "Stap 2: wisselgeld", tekst: "Betaald € 10 − kosten € 4,55 = wisselgeld. Vooruit-tellen: 4,55 → 5 = +0,45. Van 5 → 10 = +5. Totaal **€ 5,45**." },
+            { titel: "Toets-truc bij twee-stappen-vragen", tekst: "De toets gebruikt vaak vragen met 2 stappen: eerst kosten optellen, dan aftrekken van betaald bedrag. Schat eerst om grove fouten te vermijden: kosten ~€ 5, betaald € 10, dus wisselgeld ~€ 5. € 5,45 past." },
           ],
           woorden: [
             { woord: "twee-stappen-vraag", uitleg: "Vraag waarin je eerst iets uitrekent (totaal), dan iets anders (wisselgeld)." },
@@ -764,11 +764,11 @@ const steps = [
           ],
           theorie: "Bij meerdere producten + wisselgeld: stappenplan altijd:\n1. Tel alle producten op = totaalkosten\n2. Trek totaalkosten af van betaalde bedrag = wisselgeld",
           voorbeelden: [
-            { type: "stap", tekst: "IJsje €1,80 + drinken €2,20 = €4. Betaald €5: wisselgeld €1." },
-            { type: "stap", tekst: "Boek €7,95 + pen €2,05 = €10. Betaald €10: wisselgeld €0 precies." },
+            { type: "stap", tekst: "IJsje € 1,80 + drinken € 2,20 = € 4. Betaald € 5: wisselgeld € 1." },
+            { type: "stap", tekst: "Boek € 7,95 + pen € 2,05 = € 10. Betaald € 10: wisselgeld € 0 precies." },
           ],
           basiskennis: [{ onderwerp: "Niet 1 product vergeten", uitleg: "Bij de Doorstroomtoets staan vaak meerdere producten — lees alles voor je rekent." }],
-          niveaus: { basis: "Kosten €4,55. Wisselgeld €5,45.", simpeler: "Eerst optellen: €2,80 + €1,75 = €4,55. Dan: €10 − €4,55 = €5,45.", nogSimpeler: "€5,45" },
+          niveaus: { basis: "Tel eerst de twee prijzen op. Trek dat daarna af van € 10.", simpeler: "€ 2,80 + € 1,75 = € 4,55. Tel nu vooruit van € 4,55 naar € 10.", nogSimpeler: "€ 5,45" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -786,7 +786,7 @@ const steps = [
           stappen: [
             {
               titel: "Vooruit-tellen",
-              tekst: "€6,35 → €7 = +€0,65. €7 → €10 = +€3. Samen €3,65.",
+              tekst: "€ 6,35 → € 7 = +€ 0,65. € 7 → € 10 = +€ 3. Samen € 3,65.",
             },
           ],
           woorden: [
@@ -795,23 +795,23 @@ const steps = [
               uitleg: "Wat je TERUGKRIJGT als je meer betaalt dan de prijs.",
             },
           ],
-          theorie: "Wisselgeld = betaald − prijs. €10 − €6,35 = €3,65.",
+          theorie: "Wisselgeld = betaald − prijs. € 10 − € 6,35 = € 3,65.",
           voorbeelden: [
             {
               type: "wisselgeld",
-              tekst: "Prijs €6,35, biljet €10: tel vooruit 0,65 + 3 = 3,65.",
+              tekst: "Prijs € 6,35, biljet € 10: tel vooruit 0,65 + 3 = 3,65.",
             },
           ],
           basiskennis: [
             {
               onderwerp: "Check",
-              uitleg: "€3,65 + €6,35 = €10 ✓.",
+              uitleg: "€ 3,65 + € 6,35 = € 10 ✓.",
             },
           ],
           niveaus: {
-            basis: "€10 − €6,35 = €3,65.",
-            simpeler: "Van €6,35 tot €7 is 65 cent. Van €7 tot €10 is €3. Samen €3,65.",
-            nogSimpeler: "€3,65",
+            basis: "Tel vooruit vanaf € 6,35: eerst naar een hele euro, dan naar € 10.",
+            simpeler: "Van € 6,35 tot € 7 is 65 cent. Hoeveel is het nog van € 7 tot € 10?",
+            nogSimpeler: "€ 3,65",
           },
         },
       },
@@ -829,7 +829,7 @@ const steps = [
           stappen: [
             {
               titel: "Vooruit-tellen",
-              tekst: "€1,40 → €2 = +€0,60.",
+              tekst: "€ 1,40 → € 2 = +€ 0,60.",
             },
           ],
           woorden: [
@@ -838,23 +838,23 @@ const steps = [
               uitleg: "Het wisselgeld: betaald − prijs.",
             },
           ],
-          theorie: "Wisselgeld = betaald − prijs. €2,00 − €1,40 = €0,60.",
+          theorie: "Wisselgeld = betaald − prijs. € 2,00 − € 1,40 = € 0,60.",
           voorbeelden: [
             {
               type: "wisselgeld",
-              tekst: "Prijs €1,40, munt €2: 60 cent terug.",
+              tekst: "Prijs € 1,40, munt € 2: 60 cent terug.",
             },
           ],
           basiskennis: [
             {
               onderwerp: "Check",
-              uitleg: "€0,60 + €1,40 = €2,00 ✓.",
+              uitleg: "€ 0,60 + € 1,40 = € 2,00 ✓.",
             },
           ],
           niveaus: {
-            basis: "€2 − €1,40 = €0,60.",
-            simpeler: "Van €1,40 tot €2 tel je 60 cent. Dat krijg je terug.",
-            nogSimpeler: "€0,60",
+            basis: "Tel vooruit vanaf € 1,40 tot € 2.",
+            simpeler: "Van € 1,40 naar € 1,50 is 10 cent. Hoeveel is het nog van € 1,50 tot € 2?",
+            nogSimpeler: "€ 0,60",
           },
         },
       },
@@ -872,11 +872,11 @@ const steps = [
           stappen: [
             {
               titel: "Stap 1: kosten",
-              tekst: "2 × €4,50 = €9,00.",
+              tekst: "2 × € 4,50 = € 9,00.",
             },
             {
               titel: "Stap 2: wisselgeld",
-              tekst: "€20 − €9 = €11,00.",
+              tekst: "€ 20 − € 9 = € 11,00.",
             },
           ],
           woorden: [
@@ -889,7 +889,7 @@ const steps = [
           voorbeelden: [
             {
               type: "2-stappen",
-              tekst: "2 × €4,50 = €9. €20 − €9 = €11.",
+              tekst: "2 × € 4,50 = € 9. € 20 − € 9 = € 11.",
             },
           ],
           basiskennis: [
@@ -899,9 +899,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kosten €9. Wisselgeld €11.",
-            simpeler: "2 kaartjes = €4,50 + €4,50 = €9. €20 − €9 = €11.",
-            nogSimpeler: "€11,00",
+            basis: "Reken eerst uit wat twee kaartjes samen kosten. Trek dat daarna af van € 20.",
+            simpeler: "€ 4,50 + € 4,50 = € 9. Hoeveel is € 20 − € 9?",
+            nogSimpeler: "€ 11,00",
           },
         },
       },
@@ -914,11 +914,11 @@ const steps = [
           stappen: [
             {
               titel: "Omdraaien",
-              tekst: "Prijs = betaald − wisselgeld. €5 − €1,15 = €3,85.",
+              tekst: "Prijs = betaald − wisselgeld. € 5 − € 1,15 = € 3,85.",
             },
             {
               titel: "Check",
-              tekst: "€3,85 + €1,15 = €5,00 ✓.",
+              tekst: "€ 3,85 + € 1,15 = € 5,00 ✓.",
             },
           ],
           woorden: [
@@ -935,7 +935,7 @@ const steps = [
           voorbeelden: [
             {
               type: "omgekeerd",
-              tekst: "Betaald €5, terug €1,15: prijs €3,85.",
+              tekst: "Betaald € 5, terug € 1,15: prijs € 3,85.",
             },
           ],
           basiskennis: [
@@ -945,9 +945,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€5 − €1,15 = €3,85.",
-            simpeler: "Van €1,15 tel je vooruit tot €2: 85 cent. Van €2 tot €5: €3. Samen €3,85.",
-            nogSimpeler: "€3,85",
+            basis: "Wat je betaalt = prijs + wisselgeld. Dus de prijs = € 5 − € 1,15.",
+            simpeler: "Tel vooruit van € 1,15 tot € 2, en dan tot € 5. Tel de stukjes op.",
+            nogSimpeler: "€ 3,85",
           },
         },
       },
@@ -957,7 +957,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Van € 4 naar € 5 is één euro. Hoeveel komt er van € 3,70 naar € 4 bij?",
+          "Te veel. Tel elk stukje nog eens na: eerst tot € 4, en daarna tot € 5.",
           "Hoeveel cent is het van € 3,70 naar € 4?",
           "Dat is alleen het stukje tot € 4. Er komt nog een stukje bij.",
         ],
@@ -965,15 +965,15 @@ const steps = [
           stappen: [
             {
               titel: "Tot € 4",
-              tekst: "€3,70 → €4 = +€0,30.",
+              tekst: "€ 3,70 → € 4 = +€ 0,30.",
             },
             {
               titel: "Tot € 5",
-              tekst: "€4 → €5 = +€1.",
+              tekst: "€ 4 → € 5 = +€ 1.",
             },
             {
               titel: "Samen",
-              tekst: "€0,30 + €1 = €1,30.",
+              tekst: "€ 0,30 + € 1 = € 1,30.",
             },
           ],
           woorden: [
@@ -996,9 +996,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€5 − €3,70 = €1,30.",
-            simpeler: "30 cent tot €4. Dan €1 tot €5. Samen €1,30.",
-            nogSimpeler: "€1,30",
+            basis: "Tel de twee stukjes van de verkoper op: van € 3,70 tot € 4, en van € 4 tot € 5.",
+            simpeler: "Van € 3,70 tot € 4 is 30 cent. Van € 4 tot € 5 is € 1. Tel ze op.",
+            nogSimpeler: "€ 1,30",
           },
         },
       },

@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints benoemen de denkfout. Kanttekening: zin is hetzelfde voorbeeld als in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij 'geen verband' schreef de oorzaak-gevolgzin voluit ('Het vroor. Daardoor lag er ijs.') = antwoord omschreven; goede optie was ook duidelijk langer dan de afleiders.",
+  "hersteld": true,
+  "wijziging": "Hint D herschreven (zelf een signaalwoord invoegen, zonder de zin voor te zeggen); afleiders B/C/D even lang en plausibeler gemaakt (o.a. omgekeerde pijl 'het vriezen kwam door het ijs')."
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; hints en niveaus prima. Zelfde voorbeeld als in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints wijzen naar 'doordat' zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen; niveaus.simpeler noemde letterlijk de Lotte-optie als het geval zonder oorzaak.",
+  "hersteld": true,
+  "wijziging": "niveaus.simpeler herschreven tot algemene doordat-vraag per paar."
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt (ongeveer elke 4 weken); veilig en kindgericht. Zelfde vraag staat ook in stap 1.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt (gangbare vereenvoudiging: rond 25 jaar).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; goede optie was een telegramzin, hints in hoofdletters/telegramstijl ('Niet — groei is genetisch + hormonaal'), niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "Optie A 'Een periode waarin...'; drie wrongHints tot volledige zinnen herschreven; niveaus basis/simpeler tot echte hulpstappen, nogSimpeler als hele zin."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; afleiders waren cartoonesk (raadbaar), niveaus.basis gaf alleen het antwoord in telegramstijl ('Calcium + vit D + bewegen'); uitleg-titel '90% vóór 18' sprak de tekst (piek 18-25) tegen en basiskennis was te stellig ('1 kans in je leven').",
+  "hersteld": true,
+  "wijziging": "Afleiders B/C plausibeler ('Veel snoep en frisdrank voor energie', 'Zo veel mogelijk stilzitten en rusten'); niveaus herschreven; stap-titel en basiskennis feitelijk rechtgezet."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Telegramvraag ('Het brein in puberteit — wat is uniek?'), vaag 'keuze-deel', zwakke afleiders; hint 'Tegenovergesteld' bij 'brein wordt kleiner' is feitelijk wankel; niveaus telegram.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is bijzonder aan het brein in de puberteit?'; opties herschreven (deel voor plannen en keuzes / deel voor gevoelens / rond je twaalfde klaar / blijft hetzelfde); hints en niveaus herschreven; 'peer pressure' -> 'groepsdruk'."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt (8-10 uur).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt maar was een opsomming zonder 'en'; afleiders absurd en dus raadbaar.",
+  "hersteld": true,
+  "wijziging": "Goede optie: 'Gezond eten, sporten en genoeg slapen'. Afleiders bewust gelaten (gezondheidsvraag, foute opties moeten eenduidig fout blijven)."
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "De evidence-regel (na een foute poging getoond als 'Hint — kijk hier in de tekst') was letterlijk het goede antwoord ('de precieze informatie staat in de tekst'); wrongHint bij 'tegenspreken' omschreef het antwoord ('de één is alleen wat schreeuweriger').",
+  "hersteld": true,
+  "wijziging": "evidence -> 'Een kop moet kort en pakkend zijn.'; hint C herschreven zonder het antwoord."
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "De evidence-regel citeerde precies de goede optie ('Er kwamen driehonderd bezoekers'); hint D stuurde naar 'de zin die je kunt natellen'.",
+  "hersteld": true,
+  "wijziging": "evidence ingekort tot de regel 'Een feit kun je controleren of natellen.'; hint D herschreven."
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt (woensdag min één dag = dinsdag).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, maar alleen de goede optie was een citaat: raadbaar op vorm; uitleg suggereerde 'citaat = mening'.",
+  "hersteld": true,
+  "wijziging": "Optie D omgezet naar een citaat met een feit (beheerder Joris, drie bankjes); uitlegstap 2 aangepast: een citaat kan feit of mening zijn."
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; tekst staat in de vraag.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; goede valkuil-vraag (citaat met feit).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHints bij 'schoolband' en 'aula' vroegen 'Welk woord zegt hoe mooi het was?' = omschrijving van 'prachtig'; basis idem.",
+  "hersteld": true,
+  "wijziging": "Hints C/D herschreven (welk woord kun je níét controleren / wat kiest een ander misschien anders); niveaus.basis = controleer-test per woord."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHints lieten de splitsing 'ta-fel' zien (en 'nadruk op ta ... bij welk stukje staat de f'), waarmee de regel al voorgedaan werd; niveaus.basis = de regel zelf.",
+  "hersteld": true,
+  "wijziging": "Hints B en D herschreven (zelf 'tafel' klappen; klemtoon bepaalt de splitsing niet); niveaus basis/simpeler herschreven (tafel, beker)."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; hints '2 = meer' en '4 = zo veel niet' samen gaven per uitsluiting 3.",
+  "hersteld": true,
+  "wijziging": "Hint bij 4 neutraal gemaakt (precies natellen); niveaus basis/simpeler tot klap-hulpstappen."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord ('win-ter'); simpeler ook.",
+  "hersteld": true,
+  "wijziging": "Basis = twee-medeklinkersregel als vraag, simpeler = zelf klappen, oude simpeler als nogSimpeler; vage hint bij 'wint-er' verbeterd."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord ('mu-ziek').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; nogSimpeler = 'Klap mee: mu — ziek.'"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord ('ko-ning').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; oude simpeler als nogSimpeler."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord ('le-pel').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; oude simpeler als nogSimpeler."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord ('bak-ker').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; oude simpeler als nogSimpeler."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord ('pan-nen-koek').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; nogSimpeler = 'Klap mee: pan — nen — koek.'"
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord ('3/4.'); wrongHints C/D telegramstijl; woord 'GGD' is vakjargon (en ook de naam van de gezondheidsdienst).",
+  "hersteld": true,
+  "wijziging": "Hints C/D tot hele zinnen met de denkfout; 'GGD' -> 'gemeenschappelijke deler'; niveaus basis/simpeler tot hulpstappen."
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord ('2/3.').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler tot hulpstappen (tafel van 5)."
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 3/4 rekende voor ('Deel 14 en 16 allebei door 2. Wat krijg je?') = direct het antwoord; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint B benoemt nu de denkfout (is 3/4 even groot als 14/16? omrekenen naar zestienden); niveaus herschreven."
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord ('3/9 = 1/3').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven."
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord ('Door 10.').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven."
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; nogSimpeler was telegramstijl.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; nogSimpeler als hele zin."
+ },
+ {
+  "waar": "breuken-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord ('1/4.').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven."
+ },
+ {
+  "waar": "delen-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord ('7.'); simpeler gaf het ook.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler: tafel van 9 opzoeken / optellen zonder de uitkomst."
+ },
+ {
+  "waar": "delen-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints benoemen de denkfout (min/plus/rekenfout).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "delen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven (tafel van 7)."
+ },
+ {
+  "waar": "delen-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler gaf ook de 8.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven (tafel van 4, twee keer halveren zonder uitkomst)."
+ },
+ {
+  "waar": "delen-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven (tafel van 6)."
+ },
+ {
+  "waar": "delen-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven (tafel van 3)."
+ },
+ {
+  "waar": "delen-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven (tafel van 6)."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Vraag was een telegramzin met taalfout ('Een speelgoed van ... met 2 × € 10-biljetten. Wisselgeld?'); hint bij € 7,60 gaf een foute verklaring ('1 biljet ipv 2' levert geen € 7,60 op); hint bij € 2,40 rekende de stappen voor; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Een stuk speelgoed kost € 17,40. Je betaalt met twee biljetten van € 10. Hoeveel wisselgeld krijg je?'; hints B/D herschreven; niveaus herschreven; euro-notatie overal '€ 2,60'."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Telegramvraag ('Patatje € 2,80, frisdrank € 1,75 ... Wisselgeld?'); hint bij € 6,45 klopte niet (frisdrank vergeten geeft € 7,20); hint bij € 5,55 rekende het totaal € 4,55 voor; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin; hints B/C/D herschreven (optelling controleren, terugrekenen zonder totaal, 'wat je samen moet betalen'); niveaus herschreven; euro-notatie gelijkgetrokken."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie in de uitleg zonder spatie ('€10').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; '€ ' consequent in uitlegPad."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie inconsequent.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; '€ ' consequent."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie inconsequent.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; '€ ' consequent."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie inconsequent.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven; '€ ' consequent."
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint bij € 2,30 rekende één van de twee stukjes voor; euro-notatie inconsequent.",
+  "hersteld": true,
+  "wijziging": "Hint B herschreven; niveaus basis/simpeler herschreven; '€ ' consequent."
+ }
+]

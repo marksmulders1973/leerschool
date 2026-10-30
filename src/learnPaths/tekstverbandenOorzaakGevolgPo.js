@@ -844,9 +844,9 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
         q: "*\"Het vroor de hele nacht. De vijver lag 's ochtends vol ijs.\"* — Er staat geen signaalwoord. Wat is hier waar?",
         options: [
           "Er is tóch oorzaak en gevolg: het ijs kwam door het vriezen",
-          "Zonder signaalwoord kan er geen verband zijn",
-          "Het ijs is de oorzaak van het vriezen",
-          "De twee zinnen hebben niets met elkaar te maken",
+          "Zonder signaalwoord kan er nooit een verband tussen de zinnen zijn",
+          "Er is oorzaak en gevolg: het vriezen kwam door het ijs",
+          "De zinnen gaan over iets anders, dus er is geen verband",
         ],
         answer: 0,
         evidence: "Het vroor de hele nacht. De vijver lag 's ochtends vol ijs.",
@@ -854,7 +854,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
           null,
           "Probeer de waardoor-vraag: waardoor lag er ijs? Kun je die vraag beantwoorden met de eerste zin?",
           "Welke van de twee gebeurde éérst — de nacht met vorst, of de ochtend met ijs? De oorzaak komt altijd eerst.",
-          "Zet er zelf 'daardoor' tussen: 'Het vroor. Daardoor lag er ijs.' Klinkt dat logisch?",
+          "Gaan de zinnen echt over iets anders? Zet zelf een signaalwoord tussen de twee zinnen en lees ze opnieuw.",
         ],
         uitlegPad: {
           stappen: [
@@ -1075,7 +1075,7 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
           ],
           niveaus: {
             basis: "Zet bij elk paar 'doordat' ertussen. Bij welk paar klinkt het raar?",
-            simpeler: "Brak Tom zijn been, en moest hij dáárdoor op krukken? Trok Lotte haar jas aan dóór het tandenpoetsen?",
+            simpeler: "Stel bij elk paar de vraag: gebeurde het tweede dóór het eerste, of alleen erna?",
             nogSimpeler: "Bij welk paar staat het tijd-woord 'daarna' en is er geen echte oorzaak?",
           },
         },
