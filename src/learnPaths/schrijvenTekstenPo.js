@@ -292,31 +292,31 @@ const steps = [
       "Een **brief** of **e-mail** schrijven is een toetsvraag-favoriet. Belangrijk: kies de **juiste toon** (register).\n\n**Formeel** = beleefd, voor mensen die je NIET goed kent (bv. juf, gemeente, bedrijf).\n• Aanhef: *Geachte heer / mevrouw* of *Beste meneer/mevrouw [achternaam]*.\n• U-vorm: *u*, *uw*.\n• Afsluiting: *Met vriendelijke groet, [voornaam achternaam]*.\n\n**Informeel** = vrij, voor familie/vrienden.\n• Aanhef: *Hoi / Hallo [voornaam]*.\n• Je-vorm: *je*, *jouw*.\n• Afsluiting: *Groetjes, [voornaam]* of *Doei, [voornaam]*.\n\n**Toets-valkuilen**:\n• 'Beste' kan formeel of informeel zijn — kijk naar wat erna komt (achternaam = formeel, voornaam = informeel).\n• Een e-mail aan de docent gebruikt **u-vorm** ook al ben je een kind.\n• Geen smileys of afkortingen in formele post.",
     checks: [
       {
-        q: "Je schrijft de **gemeente** voor een vraag. Welke aanhef past?",
-        options: ['Geachte heer/mevrouw', 'Hoi lieve mensen', 'Beste vrienden', 'Hé daar, gemeente'],
+        q: "Je schrijft een brief aan de **gemeente** met een vraag. Welke aanhef past?",
+        options: ['Geachte heer/mevrouw', 'Hoi meneer/mevrouw', 'Beste gemeente', 'Hallo allemaal'],
         answer: 0,
-        wrongHints: [null, "Niet — gemeente is een formele instantie.", "Niet — je kent ze niet persoonlijk.", "Niet — niet beleefd genoeg voor instantie."],
+        wrongHints: [null, "'Hoi' zeg je tegen vrienden en familie — aan een officiële organisatie schrijf je beleefder.", "'Beste' is vriendelijk, maar niet formeel genoeg voor een organisatie waar je niemand kent.", "'Hallo allemaal' is voor een groep bekenden, niet voor een officiële brief."],
         uitlegPad: {
           stappen: [{ titel: "Gemeente = formeel", tekst: "De gemeente is een **instantie** — geen vriend, geen familie. Bij instanties: altijd **formeel**. Aanhef: **'Geachte heer/mevrouw'** (zonder naam als je 'm niet weet) of 'Geachte mevrouw De Vries' (als je de naam weet)." }],
           woorden: [{ woord: "formeel", uitleg: "Beleefd, voor mensen die je niet goed kent." }, { woord: "instantie", uitleg: "Officiële organisatie (gemeente, school, bedrijf)." }],
           theorie: "Test: ken ik deze persoon? Nee → formeel. Twijfel? → formeel (kan geen kwaad).",
           voorbeelden: [{ type: "controle", tekst: "Brief aan de schooldirecteur → 'Geachte mevrouw [naam]'. Brief aan beste vriend → 'Hoi Tim'." }],
           basiskennis: [{ onderwerp: "Veilig kiezen", uitleg: "Bij twijfel altijd 'Geachte heer/mevrouw' — fout maken kan amper." }],
-          niveaus: { basis: "Gemeente = formeel = Geachte.", simpeler: "Gemeente is geen vriend — schrijf beleefd: 'Geachte heer/mevrouw'.", nogSimpeler: "Formeel = Geachte." },
+          niveaus: { basis: "De gemeente is een officiële organisatie, dus je schrijft formeel: 'Geachte heer/mevrouw'.", simpeler: "De gemeente is geen vriend — schrijf beleefd: 'Geachte heer/mevrouw'.", nogSimpeler: "Officieel? Dan begin je met 'Geachte'." },
         },
       },
       {
         q: "In een formele brief: welk woord gebruik je voor **'jij'**?",
         options: ["u","jij","jouw","je"],
         answer: 0,
-        wrongHints: [null, "Niet — 'jij' is informeel.", "Bezittelijk + niet de juiste vorm.", "Niet — 'je' is informeel."],
+        wrongHints: [null, "'Jij' is informeel — dat zeg je tegen vrienden, niet in een officiële brief.", "'Jouw' is een bezittelijk woord (jouw fiets) en bovendien niet beleefd genoeg.", "'Je' is informeel — in een officiële brief schrijf je beleefder."],
         uitlegPad: {
           stappen: [{ titel: "Formeel = U-vorm", tekst: "In formele brieven: 'u' (onderwerp) en 'uw' (bezit). Bv. 'Ik schrijf u over uw besluit'. Niet 'jij' of 'je'." }],
           woorden: [{ woord: "U-vorm", uitleg: "Beleefde aanspreekvorm in NL: u (jij) en uw (jouw)." }],
           theorie: "Toets-regel: formele brief → altijd u/uw. Informele brief → je/jouw of jij.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Formeel: 'Hoe gaat het met u?' Informeel: 'Hoe gaat het met jou?'" }],
           basiskennis: [{ onderwerp: "Kleine letter u", uitleg: "In brieven schrijf je 'u' altijd met een kleine letter. Alleen in religieuze teksten (voor God) zie je een hoofdletter U." }],
-          niveaus: { basis: "Formeel = u.", simpeler: "Beleefd → u en uw (niet jij/je).", nogSimpeler: "U-vorm = formeel." },
+          niveaus: { basis: "In een formele brief schrijf je 'u' in plaats van 'jij'.", simpeler: "Beleefd schrijven is 'u' en 'uw', niet 'jij' of 'je'.", nogSimpeler: "Beleefd is 'u'." },
         },
       },
       {

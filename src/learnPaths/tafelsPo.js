@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "**3 × 4** = **4 × 3** — klopt dat?",
-        options: ["Ja, allebei is het 12", "Nee, 3 × 4 is groter", "Nee, 4 × 3 is groter", "Nee, 3 × 4 is 7"],
+        options: ["Ja, allebei is het 12", "Nee, 3 × 4 is groter", "Nee, 4 × 3 is groter", "Ja, allebei is het 7"],
         answer: 0,
-        wrongHints: [null, "Reken 3 × 4 én 4 × 3 uit en vergelijk.", "Reken 4 × 3 = 3 + 3 + 3 + 3 uit. Wat komt eruit?", "3 + 4 is 7. Wat is 3 keer 4?"],
+        wrongHints: [null, "Reken 3 × 4 én 4 × 3 uit en vergelijk.", "Reken 4 × 3 = 3 + 3 + 3 + 3 uit. Wat komt eruit?", "Dat ze gelijk zijn klopt, maar 7 is 3 + 4. Wat is 3 keer 4?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat zegt de wisselregel?", tekst: "Bij **vermenigvuldigen** (keer) maakt de **volgorde niet uit**. 3 × 4 geeft hetzelfde antwoord als 4 × 3. Dit heet de **wisselregel**." },
@@ -141,9 +141,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij elke ×-som mag je de getallen omdraaien. Pak de makkelijkere kant." }],
           niveaus: {
-            basis: "Ja — wisselregel.",
+            basis: "Ja, dat klopt. Bij keersommen maakt de volgorde niet uit; dat heet de wisselregel.",
             simpeler: "3 × 4 = 12 én 4 × 3 = 12. Allebei 12. Volgorde maakt niets uit.",
-            nogSimpeler: "Ja",
+            nogSimpeler: "Ja, allebei 12.",
           },
         },
       },

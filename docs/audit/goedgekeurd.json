@@ -1765,6 +1765,13 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 18",
+  "hash": "866c1591f601fc0e",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 19",
   "hash": "0f63c99849e30d0f",
   "oordeel": "goed",
@@ -1772,11 +1779,226 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 20",
+  "hash": "5e6f9745d64f5ba2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord 1 klopt; hint 4/8 en nogSimpeler waren telegramzinnen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 21",
+  "hash": "44e0d158a8397094",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 22",
+  "hash": "43645620cb5e6a6c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "30 klopt; hints waren telegramzinnen ('Geheel — niet de helft.')"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 23",
+  "hash": "c340716818f5e154",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 24",
+  "hash": "1cfdcdffef2aa837",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 25",
+  "hash": "f9d862e9e45133ee",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 26",
+  "hash": "9776b008551be4c6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2/3 (0,667) > 3/5 (0,6) klopt; afleider 'Niet te bepalen' is geen echte denkfout, feitelijk 3 opties"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 27",
+  "hash": "ed2214a12ae65a36",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 28",
+  "hash": "127fbd946b60fe3a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 29",
+  "hash": "75c9c03b6590af87",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 30",
+  "hash": "164f6d78399302fc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt (3/8 is onvereenvoudigbaar), maar raadbaar door vorm: enige optie zonder 'Wordt' + telegramzin 'Kan niet kleiner'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 31",
+  "hash": "9fcfae66579a17c9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "0,01 klopt; hint 0,2 was telegramzin 'Vermenigvuldigen ≠ optellen.'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 32",
+  "hash": "b6225a4576ff5a46",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 33",
+  "hash": "c8df8a40a8e5886e",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 34",
+  "hash": "ef191fe305c2ab1a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 35",
+  "hash": "7e89e7192fdbd1b6",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 36",
+  "hash": "2f1075a4523054cd",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 37",
+  "hash": "a229656513a751a3",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 38",
+  "hash": "3e76e3701eb056fa",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 39",
+  "hash": "0785e59c2fd4af81",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 40",
+  "hash": "83a1b765792638c0",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 41",
+  "hash": "9a34827735a40be2",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 42",
+  "hash": "c5ad7150eeece7bc",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 44",
+  "hash": "c02e58850855bd30",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 45",
   "hash": "86b16509ae1666a6",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 46",
+  "hash": "475bc09b686bb088",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 47",
+  "hash": "5b5a2d0751cac32a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 48",
+  "hash": "104d981d48d9938d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 49",
+  "hash": "5ac733555787ca27",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 50",
+  "hash": "fef8606b969ee9d9",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 51",
+  "hash": "a0fc9d2083f00ea6",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 6",
@@ -5925,6 +6147,14 @@
   "reden": "Antwoord klopt met de toets-truc in de staptekst; niveaus basis was het antwoord ('Eerste en laatste zin.') en nogSimpeler een telegramzin."
  },
  {
+  "waar": "schrijven-teksten-po stap 2 vraag 2",
+  "hash": "9b6d0dd19539dc17",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'u' klopt; hints en niveaus waren telegramzinnen ('Bezittelijk + niet de juiste vorm.')"
+ },
+ {
   "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
   "hash": "7009f4466bd8c73a",
   "oordeel": "goed",
@@ -6989,6 +7219,21 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "tafels-po stap 1 vraag 3",
+  "hash": "a3265d024c1276c2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord klopt (wisselregel), maar raadbaar: enige 'Ja'-optie; basis/nogSimpeler telegramzinnen"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 4",
+  "hash": "57f1273868aad9ae",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tafels-po stap 1 vraag 5",
   "hash": "98a60c1ec5cffc3a",
   "oordeel": "goed",
@@ -7073,11 +7318,144 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "tafels-po stap 4 vraag 7",
+  "hash": "efbe8df7080eb09c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 4 vraag 8",
+  "hash": "3e36a4de10844b33",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 1",
+  "hash": "88fb8597c6c4e222",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 2",
+  "hash": "85c40be857a82035",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 3",
+  "hash": "c796f6096ba679f2",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 4",
+  "hash": "33150a494fc7bc78",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 5",
+  "hash": "bbfd51597fca6e3c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 6",
+  "hash": "321a55edf0c016fc",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 7",
+  "hash": "75a8832f3c23afc5",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 8",
+  "hash": "75ea3abdc17193c0",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 9",
+  "hash": "b9cbd3964837745f",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 1",
+  "hash": "9f74abb436268754",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tafels-po stap 6 vraag 14",
   "hash": "7b20863503f51874",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 2",
+  "hash": "691ec3737ca29381",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 3",
+  "hash": "1c6b2da92c03adbd",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 4",
+  "hash": "568907efc28fb273",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 5",
+  "hash": "ea50216aeee2847a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 6",
+  "hash": "0445bff0a7ac00d8",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 7",
+  "hash": "f5f0c17f57d9331e",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 8",
+  "hash": "a21f9b53c2cf97d4",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 8",

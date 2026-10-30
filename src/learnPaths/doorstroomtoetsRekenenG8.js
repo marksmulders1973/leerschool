@@ -293,7 +293,7 @@ const steps = [
         q: "Wat is **3/4 + 1/4**?",
         options: ["1", "4/8", "3/8", "1/2"],
         answer: 0,
-        wrongHints: [null, "Zelfde noemer optellen — tellers samen.", "Hoe kom je aan 3/8? Bij optellen met dezelfde noemer blijft de noemer 4.", "3/4 is al meer dan 1/2 — en je telt er nog iets bij."],
+        wrongHints: [null, "De noemer blijft 4 als je kwarten optelt — alleen de tellers tel je samen.", "Hoe kom je aan 3/8? Bij optellen met dezelfde noemer blijft de noemer 4.", "3/4 is al meer dan 1/2 — en je telt er nog iets bij."],
         uitlegPad: {
           stappen: [
             { titel: "Zelfde noemer", tekst: "Bij optellen met dezelfde noemer (hier 4): tel de tellers op, noemer blijft hetzelfde." },
@@ -309,7 +309,7 @@ const steps = [
           niveaus: {
             basis: "3/4 + 1/4 = 4/4 = 1.",
             simpeler: "Zelfde noemer → tellers samen: 3+1 = 4. → 4/4 = 1.",
-            nogSimpeler: "Allebei 'kwart' → samen = heel.",
+            nogSimpeler: "Drie kwarten en nog een kwart zijn samen één hele.",
           },
         },
       },
@@ -323,7 +323,7 @@ const steps = [
         q: "Wat is **1/2 van 60**?",
         options: ["30", "60", "120", "6"],
         answer: 0,
-        wrongHints: [null, "Geheel — niet de helft.", "Verdubbeld in plaats van gehalveerd.", "10× te klein."],
+        wrongHints: [null, "Dat is het hele getal, niet de helft ervan.", "Je hebt verdubbeld in plaats van gehalveerd.", "Dat is tien keer te klein — je hebt door 10 gedeeld, niet door 2."],
         uitlegPad: {
           stappen: [
             { titel: "'Van' = keer", tekst: "In rekentaal betekent 'van' meestal *keer*. 1/2 van 60 = 1/2 × 60." },
@@ -377,10 +377,10 @@ const steps = [
         },
       },
       {
-        q: "Welke breuk is **groter**: **2/3** of **3/5**?",
-        options: ["2/3", "3/5", "Gelijk", "Niet te bepalen"],
+        q: "Welke breuk is het **grootst**: 2/3, 3/5, 7/12 of 5/9?",
+        options: ["2/3", "3/5", "7/12", "5/9"],
         answer: 0,
-        wrongHints: [null, "Maak er allebei kommagetallen van — welke komt hoger uit?", "Maak er kommagetallen van — zijn die echt hetzelfde?", "Met kommagetallen kun je ze wél vergelijken."],
+        wrongHints: [null, "Maak er kommagetallen van — komt 3/5 echt het hoogst uit?", "Schrijf alle breuken als twaalfden — is 7/12 dan nog de grootste?", "5/9 zit net boven de helft — is er een breuk die verder boven de helft zit?"],
       },
       {
         q: "Wat is **0,25 × 4**?",
@@ -415,10 +415,10 @@ const steps = [
         },
       },
       {
-        q: "Vereenvoudig **3/8** zo ver mogelijk. Wat krijg je?",
-        options: ["Kan niet kleiner", "Wordt 1/2", "Wordt 3/4", "Wordt 1/8"],
+        q: "Welke breuk kun je **niet** verder vereenvoudigen?",
+        options: ["3/8", "2/4", "6/8", "2/16"],
         answer: 0,
-        wrongHints: [null, "3/8 is minder dan 4/8 — kan het dan 1/2 zijn?", "3/4 is 6/8 — is dat evenveel als 3/8?", "1/8 is maar één achtste — waar zijn de andere twee gebleven?"],
+        wrongHints: [null, "2 en 4 kun je allebei door hetzelfde getal delen — dan kan het dus simpeler.", "6 en 8 zijn allebei even — probeer teller en noemer door 2 te delen.", "Teller en noemer zijn allebei even — dan is de breuk nog niet zo simpel mogelijk."],
         uitlegPad: {
           stappen: [
             { titel: "Vereenvoudigen = delen", tekst: "Een breuk vereenvoudig je door teller én noemer te delen door dezelfde deler. 3 en 8 hebben geen gemene deler > 1." },
@@ -428,9 +428,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "8/12: beide door 4 = 2/3." }],
           basiskennis: [{ onderwerp: "Onvereenvoudigbaar", uitleg: "Breuken zoals 3/8, 5/7, 2/9: geen gemene deler — al simpelst." }],
           niveaus: {
-            basis: "Niet te vereenvoudigen.",
-            simpeler: "3 en 8 hebben geen gemene deler.",
-            nogSimpeler: "Niet kleiner",
+            basis: "3 en 8 hebben geen gemene deler groter dan 1, dus 3/8 kun je niet vereenvoudigen.",
+            simpeler: "Kijk of teller en noemer allebei door hetzelfde getal deelbaar zijn. Bij 2/4, 6/8 en 2/16 lukt dat (door 2), bij 3/8 niet.",
+            nogSimpeler: "3/8",
           },
         },
       },
@@ -438,7 +438,7 @@ const steps = [
         q: "Hoeveel is **0,1 × 0,1**?",
         options: ["0,01", "0,1", "1", "0,2"],
         answer: 0,
-        wrongHints: [null, "0,1 × 1 is 0,1 — maar je neemt nu een tiende ván 0,1.", "Een tiende keer een tiende wordt kleiner, niet 1.", "Vermenigvuldigen ≠ optellen."],
+        wrongHints: [null, "0,1 × 1 is 0,1 — maar je neemt nu een tiende ván 0,1.", "Een tiende keer een tiende wordt kleiner, niet 1.", "Dat is 0,1 + 0,1 — maar dit is een keersom, geen optelsom."],
       },
       {
         q: "Wat is **1/3 als procent** (afgerond)?",
@@ -535,7 +535,7 @@ const steps = [
         ref: "S",
         options: ["0,375", "0,38", "3,8", "0,335"],
         answer: 0,
-        wrongHints: [null, "Bijna — maar 0,38 is afgerond. Reken 3 ÷ 8 precies uit.", "Dat is bijna 4 — kan dat als 3/8 minder dan een half is?", "Reken stap voor stap: als je weet hoeveel 1/8 is, hoeveel is dan 3/8?"],
+        wrongHints: [null, "Dat is een schatting — deel 3 echt door 8 en ga door tot er geen rest meer is.", "Dat is bijna 4 — kan dat als 3/8 minder dan een half is?", "Reken stap voor stap: als je weet hoeveel 1/8 is, hoeveel is dan 3/8?"],
         explanation: "1/8 = 0,125 → 3/8 = 3 × 0,125 = **0,375**.",
         uitlegPad: {
           stappen: [
