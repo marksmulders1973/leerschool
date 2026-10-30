@@ -103,7 +103,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Zet elke optie in een zin: 'Ik ben blij met mijn cadeau.' Welk woord kun je in de plaats van 'blij' zetten zonder dat de zin iets anders betekent?" }],
           niveaus: {
             basis: "Vrolijk = synoniem van blij.",
-            simpeler: "Blij + vrolijk = beide positief gevoel. Dus synoniem.",
+            simpeler: "Blij en vrolijk zijn allebei een fijn gevoel. Daarom zijn het synoniemen.",
             nogSimpeler: "Vrolijk",
           },
         },

@@ -461,7 +461,7 @@ const steps = [
           theorie: "Tegenwoordige tijd hij/zij/het = stam + t. Vergeet die t nooit.",
           voorbeelden: [{ type: "speelt", tekst: "spelen → speel (stam) + t = speelt." }],
           basiskennis: [{ onderwerp: "Lopen-test", uitleg: "Vervang door 'loopt' — past zelfde structuur." }],
-          niveaus: { basis: "Hij = stam + t = speelt.", simpeler: "Bij 'hij' altijd een -t achter de stam. Stam van spelen = speel. Hij speel + t = speelt.", nogSimpeler: "Hij + t = speelt" },
+          niveaus: { basis: "Hij = stam + t = speelt.", simpeler: "Bij 'hij' komt er een t achter de stam (behalve als de stam al op een t eindigt). Stam van spelen = speel. Hij speel + t = speelt.", nogSimpeler: "Hij + t = speelt" },
         },
       },
       {

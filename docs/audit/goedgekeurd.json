@@ -21,6 +21,199 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "basis-grammatica-engels-po stap 3 vraag 5",
+  "hash": "6689c30ddca494a2",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 4 vraag 1",
+  "hash": "70ab53efe32f5d3e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints B en C waren telegramzinnen."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 4 vraag 2",
+  "hash": "5c825ea56f05914b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints B en C waren telegramzinnen."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 4 vraag 3",
+  "hash": "d58735f0fa16d491",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints B en C waren telegramzinnen."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 4 vraag 4",
+  "hash": "bd20be21c835e811",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints waren telegram ('Apostrof vergeten.', 'Niet samengetrokken.') en de eerste zei het antwoord bijna voor."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 4 vraag 5",
+  "hash": "a306b746596a5a19",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints waren telegramzinnen ('Niet — is = enkelvoud.')."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 5 vraag 1",
+  "hash": "094bdc272667d5f7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 5 vraag 2",
+  "hash": "956c693072af49c7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 5 vraag 3",
+  "hash": "5d3349ac969ed91a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 5 vraag 4",
+  "hash": "933c216490dc6d9a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 5 vraag 5",
+  "hash": "337efff21f67ba01",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 6 vraag 1",
+  "hash": "b8631f28da478a23",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 6 vraag 2",
+  "hash": "b41af8912ccc88da",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 6 vraag 3",
+  "hash": "041fc72159cccca6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 6 vraag 4",
+  "hash": "a30a19fc350bd16b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 6 vraag 5",
+  "hash": "a5fecb7c17f51c14",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag was een telegramzin ('Antwoord op ...') en hints waren telegram ('Niet — bij to be-vraag.')."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 1",
+  "hash": "4eb598433e54fd4d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'Welke is fout?' mist het zelfstandig naamwoord ('Welke zin'). Startset-vraag zonder echte fout: vraagtekst bewust NIET gewijzigd (eerst wel, daarna teruggezet)."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 10",
+  "hash": "7bf80e8e1d9fbc4d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 2",
+  "hash": "cf5c3398cf4df3af",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 3",
+  "hash": "b239731b93c3cb71",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 4",
+  "hash": "04c97e4f34aa75e3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints B en C waren telegramzinnen."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 5",
+  "hash": "72d7ee97350d0976",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag begon met 'Vraag:' (op het scherm 'Vraag: Vraag: ...')."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 6",
+  "hash": "0482a4322a206e87",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 7",
+  "hash": "b8d25194c5504d7e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; kromme vraagzin ('Welk woord wijst aan op afstand')."
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 8",
+  "hash": "1f887abf0c5106c3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "basis-grammatica-engels-po stap 7 vraag 9",
+  "hash": "bd13e39cf3c914d4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag was telegram ('Ontkenning: ...')."
+ },
+ {
   "waar": "begrijpend-lezen-strategie stap 1 vraag 2",
   "hash": "53eb6cfd020f1f8d",
   "oordeel": "twijfel",
@@ -572,11 +765,166 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "dierenklassen-po stap 2 vraag 1",
+  "hash": "9182ae6f03206ee9",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 2 vraag 2",
+  "hash": "6f53d3fa230f4893",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus basis/simpeler waren formules zonder zin ('Olifant = zoogdier (zoogt + haren + warmbloedig).'). Beschermde startset-vraag: alleen niveaus aangepast."
+ },
+ {
+  "waar": "dierenklassen-po stap 2 vraag 3",
+  "hash": "5f70fdcface1ece5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint B begon als fragment ('Geen typisch zoogdier-kenmerk (uitzondering vogelbekdier).') en niveaus.simpeler was 'Naam = zoog-dier = melk-geven.'"
+ },
+ {
+  "waar": "dierenklassen-po stap 2 vraag 4",
+  "hash": "49f17f5b1ef9ecf1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus.basis 'Pinguïn = niet-vliegende vogel.' is geen zin."
+ },
+ {
   "waar": "dierenklassen-po stap 4 vraag 3",
   "hash": "1ac1687c4c3ae9a8",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 10",
+  "hash": "86981e9dd7ac4dd3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 11",
+  "hash": "1753559cb9db0874",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 12",
+  "hash": "1e6c457422d14ce4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 13",
+  "hash": "bda2b35fe10698f2",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 14",
+  "hash": "88c00657a6e86481",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 15",
+  "hash": "b2700a4c4151c124",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Inhoud klopt, maar het goede antwoord was de enige ontkennende optie ('Het is geen insect') tegenover drie insect-achtige beweringen: raadbaar door de vorm."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 16",
+  "hash": "2f231da97a5609a2",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 17",
+  "hash": "db42cf6b36a492c4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 18",
+  "hash": "95d21de4777589c9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (vraag zegt niet 'alle'); hint B was een telegramfragment 'Vogel/reptiel/vis (...)'."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 20",
+  "hash": "f51427f5c9466487",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; '(predator)' is onnodig vakjargon voor groep 5."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 3",
+  "hash": "f7ef83fdeffbbea4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints in telegramstijl ('Geen schubben.', '4 poten, niet 6.') maar nog te volgen."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 4",
+  "hash": "28f515b3dc2a2ae6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 5",
+  "hash": "daa3d245ff20c2f8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 6",
+  "hash": "fecd5596e1f7809d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (krokodil = reptiel); hints zonder lidwoorden ('Hond is wel zoogdier — heeft vacht')."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 7",
+  "hash": "afb308836b0122db",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 8",
+  "hash": "f3f7d53d1c318320",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 9",
+  "hash": "ff65ade2e16b6485",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "digitale-geletterdheid-po stap 4 vraag 19",
@@ -3311,6 +3659,63 @@
   "reden": "Twee letterlijke/kinderachtige afleiders ('Een echte kat kopen', 'Een cadeau voor een huisdier kopen'); wrongHint bij D ('het gaat erom dat je niet goed keek wat je kocht') geeft de betekenis vrijwel "
  },
  {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 1",
+  "hash": "5160d622e6c5f9fe",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 2",
+  "hash": "75e28e6af2629e32",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vrolijk klopt, hints goed; niveaus.simpeler was telegramstijl ('Blij + vrolijk = beide positief gevoel. Dus synoniem.'). Beschermde startset-vraag: alleen niveaus aangepast."
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 3",
+  "hash": "5519da4f95926041",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 4",
+  "hash": "ed33799b72e60545",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 5",
+  "hash": "cbce92f0911f2184",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 6",
+  "hash": "892959eeed8421b0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 7",
+  "hash": "f8f446a23c027441",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 8",
+  "hash": "184c06ee84b1e879",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "synoniemen-tegenstellingen-po stap 5 vraag 22",
   "hash": "668e8c0a338a120d",
   "oordeel": "goed",
@@ -4362,6 +4767,84 @@
   "reden": "Antwoord klopt; 'geen god in de westerse zin' kan ook op hindoeisme slaan (geen enkele God), alleen de toevoeging tussen haakjes maakt het eenduidig."
  },
  {
+  "waar": "werkwoordsspelling-dt stap 1 vraag 10",
+  "hash": "ed63c1232f5054c1",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 1 vraag 7",
+  "hash": "b710e8c7d0711563",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 1 vraag 8",
+  "hash": "2cdb5a1a5a07fee2",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 1 vraag 9",
+  "hash": "344eb699662c4d27",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 1",
+  "hash": "edf17d2065b0046b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hij speelt klopt, hints goed; niveaus.simpeler zei 'Bij hij altijd een -t achter de stam' — te stellig (hij eet, hij zit). Beschermde startset-vraag: alleen niveaus aangepast."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 10",
+  "hash": "fab2ec38e7e99d57",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 2",
+  "hash": "3d93bf74404470c6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 3",
+  "hash": "7f66aa719062afef",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 4",
+  "hash": "aee72903e6e374ad",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 5",
+  "hash": "3ff08e2887eb09bf",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 6",
+  "hash": "61174d721e683b64",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werkwoordsspelling-dt stap 2 vraag 7",
   "hash": "186fc736003cc9bb",
   "oordeel": "goed",
@@ -4369,11 +4852,96 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 8",
+  "hash": "44a7a3b5afe9b3c0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 9",
+  "hash": "4fc3877b4722c1a5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 1",
+  "hash": "5b8f776b4333c804",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 10",
+  "hash": "e2c1672477f9538a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 2",
+  "hash": "a0fe94b553ae4fdf",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 3",
+  "hash": "0e6b087195c0ac6f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hij houdt klopt, hints goed; de vier opties zijn zinnen zonder punt (interpunctie). Beschermde startset-vraag: geen echte fout, dus opties bewust niet aangepast."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 4",
+  "hash": "bdd2bb1568f28da7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 5",
+  "hash": "9e9939e7d9d3a917",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 6",
+  "hash": "c6db8ef4bb1c2f40",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 7",
+  "hash": "213dd59a816dc69f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 8",
+  "hash": "07acb92631e27cda",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werkwoordsspelling-dt stap 3 vraag 9",
   "hash": "c793c1e58a14f198",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 4 vraag 4",
+  "hash": "7bd7042cd13d8a26",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "werkwoordsspelling-dt stap 5 vraag 2",
@@ -4446,6 +5014,206 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 3 vraag 2",
+  "hash": "5403ee4cc809985f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 3 vraag 3",
+  "hash": "6cade32c3fb81456",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 3 vraag 4",
+  "hash": "7f3c79afeb39ccdb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; taalfout in de vraag ('in Engels' i.p.v. 'in het Engels'). Startset-vraag zonder echte fout: vraagtekst bewust NIET gewijzigd (eerst wel, daarna teruggezet)."
+ },
+ {
+  "waar": "woordenschat-engels-po stap 3 vraag 5",
+  "hash": "1da844f8617380c6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 4 vraag 1",
+  "hash": "24877b526eed4342",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 4 vraag 2",
+  "hash": "c57f84da59fd8f57",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 4 vraag 3",
+  "hash": "8e489994bdbd0692",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 4 vraag 4",
+  "hash": "f9e5ca5246c8de0a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 4 vraag 5",
+  "hash": "a48ab8c5465ecc0c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 5 vraag 1",
+  "hash": "26f152f578ced8a1",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 5 vraag 2",
+  "hash": "5e5129f689480b64",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 5 vraag 3",
+  "hash": "e42cf25998af2e48",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 5 vraag 4",
+  "hash": "41f17639c81ba5c5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 5 vraag 5",
+  "hash": "cfbf00588a113fba",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 6 vraag 1",
+  "hash": "65e2b0518880f8d7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 6 vraag 2",
+  "hash": "da1e8ca1be84851e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 6 vraag 3",
+  "hash": "e1345c8b8ed10ce3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 6 vraag 4",
+  "hash": "a736bb8f7b33fb5b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 6 vraag 5",
+  "hash": "f8f9ac4f04df2532",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar de vraag had een taalfout ('in Engels') en de hints waren telegramzinnen ('Eet je? — niet dorst.')."
+ },
+ {
+  "waar": "woordenschat-engels-po stap 7 vraag 1",
+  "hash": "fd4f0d924d6170fb",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 7 vraag 3",
+  "hash": "9a6399e70abad7c3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 7 vraag 4",
+  "hash": "f80a640cfe8ba7a8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 7 vraag 5",
+  "hash": "85eab2746603943d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 8 vraag 1",
+  "hash": "717471a4982d8bce",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 8 vraag 2",
+  "hash": "59b86059df16c830",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 8 vraag 3",
+  "hash": "76c3aced8b4b5885",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 8 vraag 4",
+  "hash": "b72bd3e2a238b93d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; taalfout in de vraag ('naar Engels')."
+ },
+ {
+  "waar": "woordenschat-engels-po stap 8 vraag 5",
+  "hash": "d6366edfb55e965e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag stijf ('Wat hoort bij maaltijd?') en hints telegram ('Monday = dag.')."
  },
  {
   "waar": "woordenschat-engels-po stap 8 vraag 8",
