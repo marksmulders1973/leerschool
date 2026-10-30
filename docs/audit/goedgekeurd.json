@@ -1766,6 +1766,70 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "belasting-po stap 2 vraag 1",
+  "hash": "f786645dfb315c6c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 2",
+  "hash": "b57205709bee817b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (100-20=80); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 3",
+  "hash": "64643d9a6ba64538",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (20% van 1000 = 200); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 5",
+  "hash": "abe1dce8b46276f9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (200-50=150); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 6",
+  "hash": "48dbe8b7fe5b9f33",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (10% van 300 = 30); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 7",
+  "hash": "eda8e94381c32ef3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (400-90=310); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 8",
+  "hash": "4e45b574c7d71edd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (20% van 500 = 100); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 9",
+  "hash": "9fc9d4451b1bd8af",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (600-60=540); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
   "waar": "belasting-po stap 4 vraag 9",
   "hash": "4171aedd7fa12dcd",
   "oordeel": "twijfel",
@@ -7179,6 +7243,78 @@
   "reden": "Inhoudsopgave klopt; drie telegram-hints ('Bibliografie = boekenlijst.') en telegram-niveaus; nogSimpeler 'Hoofdstuk' was vreemd"
  },
  {
+  "waar": "informatiebronnen-po stap 4 vraag 1",
+  "hash": "abd648fdfa510a20",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goed antwoord, maar raadbaar (drie overduidelijk slechte afleiders), hints telegramstijl, basis = antwoord, NIOD-naam in uitleg verouderd + jargon 'peer-reviewed'."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 2",
+  "hash": "cfa72c27a8e20e44",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; hints en niveaus telegramstijl ('Niet — ... (secundair).')."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 3",
+  "hash": "e31d5616d26097b5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; vraag 'Welke is een fake news-signaal?' is Engels + rare zin, opties met '+'."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 4",
+  "hash": "21be8d593f994980",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Raadbaar: afleiders absurd (doorsturen, op TikTok zetten) en twee identieke hints."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 5",
+  "hash": "3ccbca3d52d5a70e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Raadbaar en twee afleiders bijna gelijk ('zonder bronnen'); 'het MEEST' in hoofdletters; hints telegramstijl."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 6",
+  "hash": "2a724077320e9fd1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 7",
+  "hash": "b99a2fc7b59a6cc3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 8",
+  "hash": "df8dd14f6e31ec96",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 9",
+  "hash": "f394287c031a6b74",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
   "waar": "inhoudsopgave-register-po stap 1 vraag 1",
   "hash": "0d7400f3c706ae57",
   "oordeel": "goed",
@@ -9010,6 +9146,76 @@
   "reden": "Antwoord klopt, maar de opties waren telegramzinnen zonder lidwoord en 'Oorlog in de winter' was een absurd korte afleider."
  },
  {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 10",
+  "hash": "9262e5da08c59712",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 11",
+  "hash": "0de23f3e011edbbf",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 12",
+  "hash": "e908b9a134f08f84",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 2",
+  "hash": "492d8e64f2b81a5c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 3",
+  "hash": "7a6d72a4eab0a001",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 4",
+  "hash": "f3ca53f35402e70b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 5",
+  "hash": "0732005b92f680ce",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 7",
+  "hash": "e39cf1e6f97354fd",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 8",
+  "hash": "3c9f4833e187750d",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 9",
+  "hash": "0c75fa8300faafba",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "kritisch-denken-po stap 4 vraag 3",
   "hash": "a3e0eac8c20cbd6d",
   "oordeel": "goed",
@@ -9650,6 +9856,28 @@
   "hash": "64636af92f9ff6a4",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 1",
+  "hash": "a26142a5857cab67",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 3",
+  "hash": "ed85c0ab0fc716f4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (ruim 500 musea), maar telegramopties en het goede antwoord als enige met getal '500+'."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 4",
+  "hash": "95d1522303f50214",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -16412,6 +16640,87 @@
   "reden": "Antwoord klopt; afleiders 'grote stad' en 'groot meer' zijn weinig plausibel, maar voor groep 6 acceptabel; opties mogen niet herschikt worden."
  },
  {
+  "waar": "waterkringloop-po stap 4 vraag 1",
+  "hash": "a84eeb0fe415bfbe",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 10",
+  "hash": "000b151fc02e686c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 11",
+  "hash": "8989380d7ba25f57",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 12",
+  "hash": "26ba1cab0ac8336f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar wrongHints waren telegramzinnen ('Mooi weer.', 'Grijze grond-laag.'); dubbel met vraag 2."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 3",
+  "hash": "d5eda2487ec9e0e4",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 4",
+  "hash": "636306a3e89889d4",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 5",
+  "hash": "311229b19d046964",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 6",
+  "hash": "234616575c81232b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 7",
+  "hash": "d37f08c69d05af7f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = het antwoord in telegramstijl; simpeler/nogSimpeler telegramstijl."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 8",
+  "hash": "d96ac729c8e6ff45",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord ('Water tegenhouden.'); twee wrongHints telegramstijl ('Niet — dat is een haven/pier.')."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 9",
+  "hash": "af6293c86d05e0a7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis telegram met antwoord; simpeler telegram en 'waterzuiveringsinstallaties' is de verkeerde term (dat is rioolwater)."
+ },
+ {
   "waar": "weersvoorspelling-po stap 1 vraag 1",
   "hash": "99714ed70e12bd4c",
   "oordeel": "twijfel",
@@ -17705,6 +18014,85 @@
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 1",
+  "hash": "48f460e9b9ed72a6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf de formule = het antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 10",
+  "hash": "30f11a48a9e0c2db",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (20-14=6); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 2",
+  "hash": "de72ba3d7fe980fe",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (7-4=3); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 3",
+  "hash": "0890131f183ef509",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 4",
+  "hash": "58e0aa4691b283d8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (5-6=-1, €1 verlies); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 5",
+  "hash": "9d477d300d246c0a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (€0); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 6",
+  "hash": "412964253731a001",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (15+3=18); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 7",
+  "hash": "d64b8ed0f08db9ae",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 8",
+  "hash": "7693459946191926",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (€10 < €11); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 9",
+  "hash": "4060a60b211357dc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Winsten 5/4/3/2 nagerekend; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
  },
  {
   "waar": "winst-rekenen-po stap 3 vraag 12",

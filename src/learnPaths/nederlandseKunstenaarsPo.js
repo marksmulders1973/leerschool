@@ -120,11 +120,11 @@ const steps = [
         q: "In welk museum hangt **Het Meisje met de Parel**?",
         options: ["Mauritshuis", "Rijksmuseum", "Louvre", "Stedelijk Museum"],
         answer: 0,
-        wrongHints: [null, "Het Rijksmuseum heeft wel werk van Vermeer (het Melkmeisje), maar dit beroemde meisje hangt in Den Haag.", "Het Louvre staat in Parijs; dit schilderij hangt in Nederland.", "Het Stedelijk is voor moderne kunst (Mondriaan, Appel), niet voor de Gouden Eeuw."],
+        wrongHints: [null, "Het Rijksmuseum heeft wel werk van Vermeer, zoals Het Melkmeisje. Dit schilderij hangt ergens anders.", "Het Louvre staat in Parijs; dit schilderij hangt in Nederland.", "Het Stedelijk is voor moderne kunst (Mondriaan, Appel), niet voor de Gouden Eeuw."],
       },
       {
         q: "Wat is een **Museumkaart**?",
-        options: ["Jaarkaart voor 500+ musea", "App met museumroutes", "Kaartje voor één museumbezoek", "Tijdschrift over musea"],
+        options: ["Een jaarkaart voor honderden musea", "Een app met routes door musea", "Een kaartje voor één museumbezoek", "Een tijdschrift over musea"],
         answer: 0,
         wrongHints: [null, "Het heet een kaart. Is het een app?", "Kun je hem maar één keer gebruiken?", "Lees je een museumkaart, of laat je hem zien bij de kassa?"],
       },

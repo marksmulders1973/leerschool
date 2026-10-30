@@ -83,7 +83,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Verkoop staat vooraan in de som, inkoop gaat eraf. Verkoop − inkoop = winst." }],
           niveaus: {
-            basis: "Winst = verkoopprijs − inkoopprijs.",
+            basis: "Je krijgt geld bij de verkoop, maar je was eerst geld kwijt aan de inkoop. Moet je die twee optellen of van elkaar aftrekken?",
             simpeler: "Trek van wat je krijgt (verkoop) af wat het je kostte (inkoop). Dat is je winst.",
             nogSimpeler: "Verkoop − inkoop.",
           },
@@ -110,7 +110,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Winst is altijd kleiner dan de verkoopprijs (want de inkoop gaat eraf)." }],
           niveaus: {
-            basis: "€3 (€7 − €4).",
+            basis: "Je krijgt €7, maar de knuffel kostte jou eerst €4. Haal wat het kostte af van wat je krijgt.",
             simpeler: "Verkoop €7 min inkoop €4 = €3 winst.",
             nogSimpeler: "€3",
           },
@@ -143,7 +143,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Is de verkoopprijs lager dan de inkoop? Dan maak je verlies, geen winst." }],
           niveaus: {
-            basis: "€1 verlies (€5 − €6 = −€1).",
+            basis: "Vergelijk de twee prijzen: is de verkoopprijs hoger of lager dan de inkoopprijs? Reken daarna het verschil uit.",
             simpeler: "Je betaalde €6 maar kreeg €5. Dus €1 kwijt = verlies.",
             nogSimpeler: "€1 verlies",
           },
@@ -160,7 +160,7 @@ const steps = [
             { titel: "Quitte", tekst: "Een winst van €0 betekent dat je precies terugkrijgt wat het jou kostte. Je bent 'quitte' — geen winst, geen verlies." },
           ],
           niveaus: {
-            basis: "Winst = €9 − €9 = €0. Je bent quitte.",
+            basis: "Zijn de inkoopprijs en de verkoopprijs hier even hoog? Wat houd je dan over?",
             simpeler: "Verkoop en inkoop zijn gelijk, dus je verdient niets extra's.",
             nogSimpeler: "€0 — quitte.",
           },
@@ -177,7 +177,7 @@ const steps = [
             { titel: "Reken uit", tekst: "€15 + €3 = **€18**. Check: €18 − €15 = €3 winst. Klopt!" },
           ],
           niveaus: {
-            basis: "€18 (€15 + €3).",
+            basis: "De verkoopprijs moet de inkoop terugbetalen én de winst opleveren die je wilt. Tel die twee bij elkaar op.",
             simpeler: "Inkoop + winst die je wilt = verkoopprijs: €15 + €3 = €18.",
             nogSimpeler: "€18",
           },
@@ -194,7 +194,7 @@ const steps = [
             { titel: "Quitte", tekst: "€0 winst én €0 verlies heet 'quitte'. Je hebt niets verdiend maar ook niets verloren." },
           ],
           niveaus: {
-            basis: "Quitte: verkoop = inkoop, winst = €0.",
+            basis: "Als verkoop en inkoop even hoog zijn, is het verschil €0. Er is een apart woord voor 'geen winst en geen verlies'.",
             simpeler: "Je krijgt terug precies wat het je kostte — niets over, niets kwijt.",
             nogSimpeler: "Quitte.",
           },
@@ -250,7 +250,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€10, want dat is minder dan de inkoop van €11 (€10 − €11 = −€1).",
+            basis: "Verlies maak je als je minder terugkrijgt dan het jou kostte. Zoek de prijs die lager is dan de inkoop.",
             simpeler: "De bal kostte jou €11. Krijg je er maar €10 voor? Dan ben je €1 kwijt.",
             nogSimpeler: "€10",
           },
@@ -310,7 +310,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Inkoop €3, verkoop €8: winst €5. De andere maken €4, €3 en €2.",
+            basis: "Reken bij elk kraampje uit: verkoopprijs min inkoopprijs. Welk verschil is het grootst?",
             simpeler: "Reken bij elk: verkoop min inkoop. Het grootste antwoord is €5.",
             nogSimpeler: "€8 − €3 = €5",
           },
@@ -365,7 +365,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€6 verlies (€14 − €20 = −€6).",
+            basis: "Je betaalde €20 en kreeg €14 terug. Reken het verschil tussen die twee bedragen uit: zoveel ben je kwijt.",
             simpeler: "Je betaalde €20 en kreeg maar €14. Je bent €6 kwijt.",
             nogSimpeler: "€6",
           },

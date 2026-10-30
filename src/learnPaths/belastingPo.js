@@ -358,7 +358,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bruto = alles. Netto = wat overblijft. Het verschil is de belasting." }],
           niveaus: {
-            basis: "Netto = wat je overhoudt nadat de belasting eraf is.",
+            basis: "Denk aan de volgorde: eerst je hele loon, dan gaat er belasting af. Bij welk blokje hoort het woord netto?",
             simpeler: "Eerst bruto, dan belasting eraf, en wat overblijft is netto.",
             nogSimpeler: "Wat je echt krijgt.",
           },
@@ -385,7 +385,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Netto is altijd KLEINER dan bruto. Kom je op een groter getal uit? Dan heb je opgeteld in plaats van afgetrokken." }],
           niveaus: {
-            basis: "€80 (€100 − €20).",
+            basis: "Netto is wat er overblijft. Komt de belasting erbij, of gaat hij van het brutoloon af?",
             simpeler: "Trek de belasting eraf: €100 − €20 = €80.",
             nogSimpeler: "€80",
           },
@@ -412,7 +412,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "10% = delen door 10. Daarna keer het aantal tientallen-procenten." }],
           niveaus: {
-            basis: "€200 (20% van €1000).",
+            basis: "Reken eerst 10% van €1000 uit: dat is een tiende deel. Hoe vaak heb je dat nodig voor 20%?",
             simpeler: "10% van €1000 = €100. 20% = 2 × €100 = €200.",
             nogSimpeler: "€200",
           },
@@ -422,7 +422,7 @@ const steps = [
         q: "Wie haalt de **belasting van je loon** af?",
         options: ["Je werkgever, vóórdat je het loon krijgt", "Jij zelf, aan het eind van het jaar", "De bank, als het loon binnenkomt", "De gemeente, één keer per maand"],
         answer: 0,
-        wrongHints: [null, "Moet je zelf iets uitrekenen voordat je je loon krijgt? Wie maakt je loon over?", "De bank zet het loon alleen op je rekening. Wie rekent je loon uit?", "Wie betaalt jou je loon uit? Die weet hoeveel je verdient."],
+        wrongHints: [null, "Je hoeft de belasting op je loon niet zelf af te dragen: die is er al af als het geld op je rekening staat.", "De bank zet het geld alleen op je rekening. De bank weet niet hoeveel belasting jij moet betalen.", "De gemeente heft andere belastingen, zoals voor het ophalen van afval, maar niet de belasting op je loon."],
       },
       {
         q: "Brutoloon **€200**, belasting **€50**. Hoeveel is het **nettoloon**?",
@@ -434,7 +434,7 @@ const steps = [
             { titel: "Netto = bruto − belasting", tekst: "€200 − €50 = **€150** netto." },
           ],
           niveaus: {
-            basis: "€150 (€200 − €50).",
+            basis: "Het brutoloon is je hele loon. Haal de belasting daar vanaf.",
             simpeler: "Trek de belasting van het brutoloon af: €200 − €50 = €150.",
             nogSimpeler: "€150",
           },
@@ -450,7 +450,7 @@ const steps = [
             { titel: "10% van €300", tekst: "10% = een tiende. €300 ÷ 10 = **€30**." },
           ],
           niveaus: {
-            basis: "€30 (10% van €300 = €300 ÷ 10).",
+            basis: "10% is een tiende deel. Deel het brutoloon door 10.",
             simpeler: "Streep één nul weg: 300 → 30.",
             nogSimpeler: "€30",
           },
@@ -510,7 +510,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Netto = bruto − belasting = €400 − €90 = €310.",
+            basis: "Netto = bruto − belasting. Tip: haal eerst €100 van €400 af en tel daarna €10 terug.",
             simpeler: "Je hele loon is €400. Er gaat €90 af. Je houdt €310 over.",
             nogSimpeler: "€400 − €90 = €310.",
           },
@@ -569,7 +569,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20% van €500 = 2 × 10% = 2 × €50 = €100.",
+            basis: "Reken eerst 10% van €500 uit door te delen door 10. 20% is twee keer zoveel.",
             simpeler: "Een tiende van €500 is €50. Twee keer zoveel is €100.",
             nogSimpeler: "€50 + €50 = €100.",
           },
@@ -628,7 +628,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10% van €600 = €60. Netto = €600 − €60 = €540.",
+            basis: "Doe het in twee stappen: reken eerst uit hoeveel 10% van €600 is, en haal dat daarna van €600 af.",
             simpeler: "Eerst kijk je hoeveel belasting eraf gaat: €60. Dan haal je dat van €600 af.",
             nogSimpeler: "€600 − €60 = €540.",
           },

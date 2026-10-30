@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "waterkringloop-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; hints benoemen de andere faseovergang.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Alle drie de wrongHints omschreven het goede antwoord ('zoek de torenhoge stapelwolk', 'wolk die omhoog tórent').",
+  "hersteld": true,
+  "wijziging": "Drie wrongHints herschreven: benoemen wat die wolk is en waarom die geen onweer geeft, zonder het antwoord te omschrijven."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "~3% zoet water klopt; hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Afsluitdijk gesloten 1932; hints (1918 Zuiderzeewet, Deltawerken) kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis = het antwoord in telegramstijl; simpeler/nogSimpeler telegramstijl.",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven: basis als hulpvraag, simpeler in hele zinnen, nogSimpeler = antwoord."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "basis = antwoord ('Water tegenhouden.'); twee wrongHints telegramstijl ('Niet — dat is een haven/pier.').",
+  "hersteld": true,
+  "wijziging": "wrongHints C en D in hele zinnen; niveaus herschreven (basis = hulpstap, 'NL' voluit)."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis telegram met antwoord; simpeler telegram en 'waterzuiveringsinstallaties' is de verkeerde term (dat is rioolwater).",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven in hele zinnen; 'drinkwaterbedrijven maken het schoon'."
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; wel inhoudelijk dubbel met vraag 1 (niet te verhelpen zonder vragen te schrappen).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "waterkringloop-po stap 4 vraag 12",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt, maar wrongHints waren telegramzinnen ('Mooi weer.', 'Grijze grond-laag.'); dubbel met vraag 2.",
+  "hersteld": true,
+  "wijziging": "Drie wrongHints herschreven tot hele zinnen."
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "'Wanneer was 9/11?' met volledige data als opties: de naam bevat de datum (11 september), antwoord staat in de vraag.",
+  "hersteld": true,
+  "wijziging": "Vraag nu 'In welk jaar waren de aanslagen van 9/11 in de Verenigde Staten?', opties 2001/1989/1945/2022 (zelfde volgorde, answer 0); hints aangepast."
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "West-Duitsland NAVO-lid sinds 1955.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Opheffing USSR december 1991.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 4 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf de formule = het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Som klopt (7-4=3); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; vraag, opties en hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Som klopt (5-6=-1, €1 verlies); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Som klopt (€0); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Som klopt (15+3=18); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (€10 < €11); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Winsten 5/4/3/2 nagerekend; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "winst-rekenen-po stap 1 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Som klopt (20-14=6); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Som klopt (100-20=80); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Som klopt (20% van 1000 = 200); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Klopt inhoudelijk (werkgever houdt loonheffing in), maar alle drie de wrongHints wezen het antwoord aan ('Wie maakt je loon over?', 'Wie betaalt jou je loon uit? Die weet hoeveel je verdient.').",
+  "hersteld": true,
+  "wijziging": "Drie wrongHints herschreven: benoemen waarom jij zelf / de bank / de gemeente het niet doen, zonder de werkgever te omschrijven."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Som klopt (200-50=150); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Som klopt (10% van 300 = 30); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Som klopt (400-90=310); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Som klopt (20% van 500 = 100); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Som klopt (600-60=540); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Goed antwoord, maar raadbaar (drie overduidelijk slechte afleiders), hints telegramstijl, basis = antwoord, NIOD-naam in uitleg verouderd + jargon 'peer-reviewed'.",
+  "hersteld": true,
+  "wijziging": "Afleiders verleidelijker (veel volgers / duizenden likes / schrijver zonder naam), hints in hele zinnen, uitlegstap NIOD herschreven, niveaus herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints en niveaus telegramstijl ('Niet — ... (secundair).').",
+  "hersteld": true,
+  "wijziging": "wrongHints en niveaus in hele zinnen; basis als hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; vraag 'Welke is een fake news-signaal?' is Engels + rare zin, opties met '+'.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is een signaal dat een bericht nepnieuws (fake news) kan zijn?'; opties in gewone taal; hints en niveaus herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Raadbaar: afleiders absurd (doorsturen, op TikTok zetten) en twee identieke hints.",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven ('Een AI-chatbot zoals ChatGPT vertelt je iets voor je werkstuk'); afleiders C/D nu echte denkfouten (nog eens vragen aan de chatbot / geloven als het zeker klinkt); hints en niveaus herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Raadbaar en twee afleiders bijna gelijk ('zonder bronnen'); 'het MEEST' in hoofdletters; hints telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Afleiders: heel lang artikel zonder bronnen / waarschuwing 'omstreden' / van gisteren zonder bronnen; hints en niveaus in hele zinnen; 'meest' kleine letters."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap. Telegram-simpeler vervangen."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Dick Bruna, Nijntje 1955.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, maar de wrongHint bij Rijksmuseum verraadt de stad ('hangt in Den Haag') en daarmee het Mauritshuis.",
+  "hersteld": true,
+  "wijziging": "wrongHint Rijksmuseum herschreven zonder plaatsnaam."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt (ruim 500 musea), maar telegramopties en het goede antwoord als enige met getal '500+'.",
+  "hersteld": true,
+  "wijziging": "Opties als hele zinsdelen van gelijke vorm: 'Een jaarkaart voor honderden musea' enz."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Anton Pieck ontwierp het Sprookjesbos (1952, met Peter Reijnders).",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]
