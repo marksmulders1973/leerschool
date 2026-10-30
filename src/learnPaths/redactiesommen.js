@@ -822,12 +822,14 @@ const steps = [
     checks: [
       {
         q: "*'Een fles van 1,5 L kost € 2,10. Hoeveel kost één glas van 250 mL?'*",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): liters/milliliters en delen met kommagetallen zijn groep-6-stof
         options: ["€ 0,35","€ 0,30","€ 0,40","€ 1,40"],
         answer: 0,
-        wrongHints: [null,"Te weinig — hoeveel glazen passen er in de fles? Deel daarna de prijs door dat aantal.","Te veel — controleer aantal glazen.","Veel te veel — heb je per liter gerekend?"],
+        wrongHints: [null,"Hoeveel glazen van 250 mL passen er in de fles? Reken dat eerst uit en deel dan de prijs door dat aantal.","Tel nog eens hoeveel glazen er in de fles passen: 1,5 L is 1500 mL.","Dat is veel te duur voor één glas. Heb je de prijs echt door het aantal glazen gedeeld?"],
       },
       {
         q: "*'Een klas heeft € 200. Ze kopen 12 boeken van € 14,50 per stuk. Hoeveel geld houden ze over?'*",
+        vanafGroep: 6, // nakijkronde B8 (30 okt 2026): 12 × € 14,50 (vermenigvuldigen met kommagetal) is groep-6-stof
         options: ["€ 26","€ 174","€ 32","€ 20"],
         answer: 0,
         wrongHints: [null,"Dat is wat ze betalen (12 × €14,50), niet wat er over is.","Vergat je de 50 cent per boek? Reken 12 × € 14,50.","Rekende je met € 15 per boek? Dat is te veel per boek."],

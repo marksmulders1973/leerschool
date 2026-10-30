@@ -14736,6 +14736,63 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "redactiesommen-pad stap 4 vraag 2",
+  "hash": "c086724178ec1765",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (12 × 14,50 = 174; 200 − 174 = 26) en hints kloppen (32 = met €14, 20 = met €15), maar vermenigvuldigen met kommagetal is groep-6-stof"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 3",
+  "hash": "98cb52f048a9d1b5",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 4",
+  "hash": "0e4b2402b6e3d396",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 5",
+  "hash": "89a3e357addb9359",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 6",
+  "hash": "17f6d136b8c2b903",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 7",
+  "hash": "709bb1a51dce619b",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 8",
+  "hash": "eefece5f4051edda",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 4 vraag 9",
+  "hash": "ea0f59a8fd593c17",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "redactiesommen-pad stap 5 vraag 11",
   "hash": "662c0d951692ea20",
   "oordeel": "goed",
@@ -20264,10 +20321,120 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "toestand-stoffen-po stap 5 vraag 10",
+  "hash": "4cf98cce7a83b735",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 11",
+  "hash": "0f0c779eedf4bc04",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar dezelfde vraag als vraag 8 (smelt ijs bij 0 °C) in dezelfde set"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 12",
+  "hash": "b758d63171bed130",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt en hints goed, maar zelfde vraag als vraag 7 (kookpunt water)"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 13",
+  "hash": "ec342391c14f38ef",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints waren losse woorden ('Stollen.')"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 14",
+  "hash": "0fa6158be68fa69f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 15",
+  "hash": "251108b41aa5a69b",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 16",
+  "hash": "ec9d998d3907bbb9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (vast), maar vreemde situatie 'ijs op een koud glas' (daar verwacht je druppels of rijp)"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 17",
+  "hash": "23a2c2c87178756f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 18",
+  "hash": "3a6219155788368f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 19",
+  "hash": "03510bb884ee9ec3",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "toestand-stoffen-po stap 5 vraag 2",
   "hash": "673dc95446117904",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 20",
+  "hash": "9c937b154c73c668",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 21",
+  "hash": "24668b761a936384",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 22",
+  "hash": "e5bb48aa06002f67",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 23",
+  "hash": "841e5e08b82098f2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar hints waren losse woorden ('Rijp.' cryptisch); dubbel met vraag 6"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 24",
+  "hash": "ef043928232bfbb9",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -20277,6 +20444,43 @@
   "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; vraag en hints waren telegramzinnen ('Welke is…', 'is dus vloeibaar')."
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 4",
+  "hash": "57589890675cf7ea",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 5",
+  "hash": "f1318effcfbb81ae",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 6",
+  "hash": "4267f4ed874b9f48",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 8",
+  "hash": "852ded492144d84e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (0 °C); telegram-hints ('Niet — kookpunt.'); basis = antwoord"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 9",
+  "hash": "d967049895a4ccdd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraagzin 'Condenseren is wat?' houterig; telegram-hints; basis = antwoord"
  },
  {
   "waar": "topografie-europa-landen-po stap 3 vraag 1",
@@ -24785,11 +24989,180 @@
   "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
+  "waar": "woordenschat-po stap 5 vraag 1",
+  "hash": "0bbd651dcbb843e4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (enorm); niveaus.basis 'Gigantisch = enorm.' gaf alleen het antwoord"
+ },
+ {
   "waar": "woordenschat-po stap 5 vraag 10",
   "hash": "f8cd154f7f1e1a38",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 11",
+  "hash": "8134112fd81a529c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties zonder onderwerp ('Verwacht het slechtste'); 'pessimistisch' te moeilijk voor groep 5 (enige set)"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 12",
+  "hash": "efba0b8d78d33f4d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties zonder lidwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 13",
+  "hash": "5f0835136c83876b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties ongelijk van vorm ('Tegengestelde betekenis' vs 'Woord dat hetzelfde klinkt' vs 'Spreekwoord')"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 14",
+  "hash": "079f239955fb5750",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt maar letterlijk dezelfde vraag als vraag 4 (synoniem van snel = vlug) in dezelfde set"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 15",
+  "hash": "4863e21056371101",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 16",
+  "hash": "ed404cd28e473949",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 18",
+  "hash": "68006d86d8f8b7a5",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 19",
+  "hash": "d0d153480b4e7166",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 2",
+  "hash": "685db9ab4c927abc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (oneerlijk); basis 'Eerlijk ↔ oneerlijk.' gaf het antwoord; on- in het antwoord is de leerstof zelf"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 21",
+  "hash": "3d0293b1519eecfa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'discreet' te moeilijk voor groep 5 (enige set)"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 22",
+  "hash": "1e437beb76e41edf",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 23",
+  "hash": "2a12e49e83d1018a",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 24",
+  "hash": "9197bb3ce218096d",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 25",
+  "hash": "0488d72107fd11ca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint bij 'Geen interesse' omschreef half het antwoord ('dat iemand je wél iets kan schelen')"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 3",
+  "hash": "b043313b8a666941",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (blij); basis gaf het antwoord; hint bij 'verbaasd' begon met 'Verbaasd kan' (suggereert twee goede)"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 4",
+  "hash": "5553716c24d4d034",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (vlug); basis 'Snel = vlug.' gaf het antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 5",
+  "hash": "95890566a4ba540f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (heel); basis 'Uiterst = heel.' gaf het antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 6",
+  "hash": "3d9ae7658cdeaca7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (lelijk); basis was een telegramzin met het antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 7",
+  "hash": "681623ccd1f7af8d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis 'Afwachten + observeren.' was een telegramzin met het antwoord"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 8",
+  "hash": "cbf6753a8b8057ff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis 'Makkelijk te begrijpen.' gaf het antwoord; nogSimpeler 'Doorzichtig' sloot slecht aan"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 9",
+  "hash": "93869e4079b57415",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (tekort); basis 'Tekort.' = antwoord; hints begonnen met telegram-'Niet —'"
  },
  {
   "waar": "woordsoorten-po stap 1 vraag 4",
