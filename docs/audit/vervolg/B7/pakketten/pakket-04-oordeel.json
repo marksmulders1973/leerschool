@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "geld-rekenen stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie in uitlegPad zonder spatie",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; nogSimpeler hele zin; euro-notatie in check gelijkgetrokken (€ 0,20)"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin \"Voordeligst?\"; hint \"Wel — beide is rijst\" taalfout; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag tot hele zin; hint D herschreven; basis herschreven tot hulpstap; euro-notatie gelijkgetrokken"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin \"Voordeligst per stuk?\"; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag tot hele zin; basis herschreven tot hulpstap; euro-notatie gelijkgetrokken"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin \"Goedkoper per liter?\"; hint D telegram; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag tot hele zin; hint D herschreven; basis herschreven tot hulpstap; euro-notatie gelijkgetrokken"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; euro-notatie gelijkgetrokken"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; euro-notatie gelijkgetrokken"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "euro-notatie \"€ 4\"/\"€ 35\" naast opties \"€ 4,00\"; hint D rekende de deling voor; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "bedragen overal € x,xx; hint D benoemt nu de kommafout zonder deling; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie zonder spatie",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; euro-notatie gelijkgetrokken"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "telegramzin \"Zakgeld 4 vrienden ... Gemiddeld zakgeld?\"; telegram-hints; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag tot hele zin; 3 hints herschreven; basis herschreven tot hulpstap; € met spatie"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "telegramzin \"Gemiddeld km per keer?\"; telegram-hints; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag tot hele zin; 3 hints herschreven; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (volledige som)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (volledige som)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; € met spatie"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (volledige som)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (volledige som)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (volledige som)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; € met spatie"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (volledige som)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"... Wij.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (persoonsvorm + wie-of-wat-vraag)"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"... De kat.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"... Een oude boom.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis telegramzin met pijlen die het antwoord geeft",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt; hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"Binnenste eerst.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap met voorbeeldsom"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"2.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"6.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "breuken-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "hint bij 2/6 rekende de tellerstap voor (\"reken 5 − 2\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hint D herschreven; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "breuken-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "breuken-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "breuken-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "breuken-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 25",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "afleider \"Sneeuw\" is bij lage druk in de winter ook goed (neerslag); hint \"alleen bij vorst\" te stellig; \"Altijd windstil\" absurd; vraag krom",
+  "hersteld": true,
+  "wijziging": "vraag herschreven (\"Welk weer krijg je vaak bij lage luchtdruk?\"); opties: \"Bewolkt weer met regen\" / \"Zonnig en droog weer\" / \"Heldere, droge vrieskou\" / \"Weinig of geen wind\"; hints aangepast"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 27",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "\"N, E, S, W\" is ook een juiste (internationale) notatie; vraag zei niet dat het om Nederlands ging",
+  "hersteld": true,
+  "wijziging": "vraag: \"... gebruik je in het Nederlands voor de windrichtingen?\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 28",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegram \"in NL\"",
+  "hersteld": true,
+  "wijziging": "vraag: \"Welke maanden zijn in Nederland meestal het warmst?\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt voor groep 7-8",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (tijdvak 500-1500)"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij \"de eerste auto\" noemde het antwoord (\"ridders zijn veel ouder\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hint herschreven zonder antwoord; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"180.\")",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 0,6 rekende het antwoord voor (\"Hoe vaak past 10 in 60?\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hint benoemt nu de denkfout (door 100 gedeeld); basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 150 cm noemde het goede antwoord (\"Hoeveel cm is 2 m?\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hint herschreven zonder antwoord; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint feitelijk fout: \"daardoor\" staat in de derde zin van alinea 2, niet de tweede",
+  "hersteld": true,
+  "wijziging": "\"tweede zin\" -> \"derde zin\""
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; zoekwoord in de tekst is hier de bedoelde leesvaardigheid",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij \"Het was zwaar werk\" omschreef het antwoord (\"zin die de persoon voorstelt\"); kernzin verder verdedigbaar",
+  "hersteld": true,
+  "wijziging": "hint herschreven naar paraplu-vraag zonder antwoord"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij \"Dinsdag\" verraadde het antwoord (de dag vóór dinsdag is de dichte dag)",
+  "hersteld": true,
+  "wijziging": "hint herschreven: open of dichte dagen in het rijtje?"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; omrekenen kwartier -> minuten",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

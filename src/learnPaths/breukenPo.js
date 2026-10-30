@@ -829,14 +829,14 @@ const steps = [
         q: "**5/6 − 2/6** = ?",
         options: ["1/2","3/12","7/6","2/6"],
         answer: 0,
-        wrongHints: [null,"Je rekende ook met de noemers — de noemer blijft 6, alleen de tellers trek je af.","Je hebt opgeteld — maar het is een min-som.","Verkeerde aftrekking — reken 5 − 2 in de teller."],
+        wrongHints: [null,"Je rekende ook met de noemers — de noemer blijft 6, alleen de tellers trek je af.","Je hebt opgeteld — maar het is een min-som.","Kijk nog eens naar je aftreksom in de teller: klopt die?"],
         uitlegPad: {
           stappen: [{ titel: "Trek af + vereenvoudig", tekst: "5-2=3. Noemer blijft 6 → 3/6. Vereenvoudig: 3/6 → 1/2." }],
           woorden: [{ woord: "vereenvoudigen na", uitleg: "Antwoord altijd zo simpel mogelijk maken." }],
           theorie: "Aftrekken bij gelijke noemer: tellers aftrekken, dan vereenvoudigen.",
           voorbeelden: [{ type: "stap", tekst: "5/6 - 2/6 = 3/6 = 1/2 (beide ÷3)." }],
           basiskennis: [{ onderwerp: "De toets wil simpelste vorm", uitleg: "Antwoord 3/6 is goed, maar de toets vraagt de vereenvoudigde vorm: 1/2." }],
-          niveaus: { basis: "1/2.", simpeler: "5/6 - 2/6 = 3/6. Vereenvoudig: 3 en 6 beide ÷3 → 1/2.", nogSimpeler: "1/2" },
+          niveaus: { basis: "De noemers zijn gelijk. Trek de tellers af en kijk daarna of je de breuk kunt vereenvoudigen.", simpeler: "5/6 - 2/6 = 3/6. Vereenvoudig: 3 en 6 beide ÷3 → 1/2.", nogSimpeler: "1/2" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -881,7 +881,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7/10.",
+            basis: "Maak eerst gelijke noemers. Welk getal zit in de tafel van 2 én in de tafel van 5?",
             simpeler: "1/2 = 5/10. 1/5 = 2/10. Samen 7/10.",
             nogSimpeler: "7/10",
           },
@@ -928,7 +928,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7/12.",
+            basis: "Maak eerst gelijke noemers. Welk getal zit in de tafel van 3 én in de tafel van 4?",
             simpeler: "1/3 = 4/12. 1/4 = 3/12. 4 + 3 = 7, dus 7/12.",
             nogSimpeler: "7/12",
           },
@@ -975,7 +975,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1/4.",
+            basis: "Schrijf 1/2 eerst als een aantal kwarten. Trek daarna de tellers af.",
             simpeler: "3 kwart min 2 kwart (= een half) = 1 kwart.",
             nogSimpeler: "1/4",
           },
@@ -1023,7 +1023,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij telde de noemers ook op.",
+            basis: "Bij gelijke noemers tel je alleen de tellers op. Kijk nu naar de noemer van zijn antwoord.",
             simpeler: "6 + 6 = 12 is fout. De noemer blijft 6. Goed is 5/6.",
             nogSimpeler: "Noemers opgeteld",
           },

@@ -429,7 +429,7 @@ const steps = [
           theorie: "Kleinere eenheid → groter getal. Cm naar mm = ×10.",
           voorbeelden: [{ type: "stap", tekst: "18 × 10 = 180 mm. Of: komma 1 plek rechts: 18 → 180." }],
           basiskennis: [{ onderwerp: "Logica-check", uitleg: "Mm is kleiner dan cm → er passen méér mm in dezelfde lengte." }],
-          niveaus: { basis: "180.", simpeler: "1 cm = 10 mm. 18 cm × 10 = 180 mm.", nogSimpeler: "180" },
+          niveaus: { basis: "1 cm is 10 mm. Hoeveel mm zijn dan 18 cm?", simpeler: "1 cm = 10 mm. 18 cm × 10 = 180 mm.", nogSimpeler: "180" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -484,7 +484,7 @@ const steps = [
           null,
           "Andersom — cm is groter dan mm, dus je krijgt een kleiner getal.",
           null,
-          "Te weinig — 1 cm is 10 mm. Hoe vaak past 10 in 60?",
+          "Te weinig — je hebt door 100 gedeeld. Hoeveel mm gaan er in 1 cm?",
         ],
         uitlegPad: {
           stappen: [
@@ -513,7 +513,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6.",
+            basis: "Een cm is groter dan een mm, dus het getal wordt kleiner. Hoeveel mm gaan er in 1 cm?",
             simpeler: "1 cm = 10 mm. 60 ÷ 10 = 6 cm.",
             nogSimpeler: "6",
           },
@@ -551,7 +551,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10.",
+            basis: "De stapjes zijn m → dm → cm → mm. Elk stapje naar een kleinere eenheid is × 10.",
             simpeler: "dm staat één stapje onder m. 1 stapje = × 10. Dus 10 dm.",
             nogSimpeler: "10",
           },
@@ -563,7 +563,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Zet alles om naar cm. Hoeveel cm is 2 m?",
+          "Zet alle maten om naar cm en vergelijk ze dan pas.",
           "Zet 1900 mm om naar cm en vergelijk.",
           null,
         ],
@@ -594,7 +594,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 m.",
+            basis: "Zet alle maten om naar dezelfde eenheid, bijvoorbeeld cm. Welke is dan het grootst?",
             simpeler: "Zet alles om naar cm: 200, 150, 190 en 180. Het langst is 200 cm = 2 m.",
             nogSimpeler: "2 m",
           },

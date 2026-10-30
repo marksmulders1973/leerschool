@@ -230,7 +230,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie hebben gewonnen?", tekst: "Persoonsvorm = 'hebben'. Vraag: wie hebben gewonnen? Antwoord: 'wij'. Dat is het onderwerp." }],
           niveaus: {
-            basis: "Vraag bij 'hebben': wie hebben er gewonnen? Wij.",
+            basis: "Zoek eerst de persoonsvorm (hebben). Vraag dan: wie of wat hebben er gewonnen?",
             simpeler: "Wie wonnen er?",
             nogSimpeler: "Wie hebben gewonnen? …",
           },
@@ -244,7 +244,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie of wat slaapt?", tekst: "Persoonsvorm = 'slaapt'. Vraag: wie of wat slaapt? Antwoord: 'de kat' = onderwerp." }],
           niveaus: {
-            basis: "Vraag bij 'slaapt': wie slaapt er? De kat.",
+            basis: "Zoek eerst de persoonsvorm (slaapt). Vraag dan: wie of wat slaapt er?",
             simpeler: "Wie is er aan het slapen?",
             nogSimpeler: "Wie slaapt er? De …",
           },
@@ -258,7 +258,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat staat er?", tekst: "Persoonsvorm = 'staat'. Vraag: wat staat er? Antwoord: 'een oude boom' — ook al staat het achteraan in de zin." }],
           niveaus: {
-            basis: "Vraag bij 'staat': wat staat er naast de school? Een oude boom.",
+            basis: "Zoek eerst de persoonsvorm (staat). Vraag dan: wie of wat staat er naast de school?",
             simpeler: "Wat staat er? Het onderwerp hoeft niet vooraan.",
             nogSimpeler: "Wat staat er naast de school? Een …",
           },
@@ -272,7 +272,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie of wat + persoonsvorm?", tekst: "Stap 1: zoek de persoonsvorm. Stap 2: stel de vraag 'wie of wat + persoonsvorm?' Het antwoord is het onderwerp." }],
           niveaus: {
-            basis: "Zoek persoonsvorm → vraag: wie of wat … ? → dat is het onderwerp.",
+            basis: "Zoek eerst de persoonsvorm. Welke vraag kun je met dat woord stellen om te weten wie het doet?",
             simpeler: "Welke vraag gebruik je om het onderwerp te vinden?",
             nogSimpeler: "Wie of wat doet de handeling?",
           },

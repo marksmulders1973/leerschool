@@ -987,7 +987,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
         wrongHints: [
           null,
           "Die dag staat in het rijtje 'van dinsdag tot en met...' — zijn dat de open dagen of de dichte dagen?",
-          "Op die dag gaat het museum juist ópen na de dichte dag. Scan op het woord 'gesloten'.",
+          "Kijk naar het rijtje 'van dinsdag tot en met zondag'. Zijn dat de open dagen of de dichte dagen? Scan op het woord 'gesloten'.",
           "Woensdag valt tussen dinsdag en zondag. Is het museum dan open of dicht?",
         ],
         uitlegPad: {

@@ -687,7 +687,7 @@ const steps = [
         wrongHints: [null, "Die horen bij school van ongeveer honderd jaar geleden.", "Die kwamen pas eeuwen na de ridders.", "Die horen bij de prehistorie, nog veel eerder."],
         uitlegPad: {
           stappen: [{ titel: "Terugdenken", tekst: "De middeleeuwen = de tijd van **ridders en kastelen**. Mammoeten leefden veel eerder; stoomtreinen, fabrieken en de lei kwamen pas eeuwen later." }],
-          niveaus: { basis: "Middeleeuwen = ridders en kastelen.", simpeler: "Denk aan harnassen en ophaalbruggen.", nogSimpeler: "ridders" },
+          niveaus: { basis: "De middeleeuwen duurden ongeveer van het jaar 500 tot 1500. Welk rijtje past bij die tijd?", simpeler: "Denk aan harnassen en ophaalbruggen.", nogSimpeler: "ridders" },
         },
       },
       {
@@ -697,7 +697,7 @@ const steps = [
         wrongHints: [null, "Tien jaar is een decennium — reken: 2025 min 1925.", "Duizend jaar is veel langer — reken nog eens.", "Vijftig jaar is een halve eeuw — reken: 2025 min 1925."],
         uitlegPad: {
           stappen: [{ titel: "Rekenen met jaren", tekst: "2025 − 1925 = **100 jaar** = één **eeuw**." }],
-          niveaus: { basis: "100 jaar = een eeuw.", simpeler: "2025 min 1925 = 100.", nogSimpeler: "een eeuw" },
+          niveaus: { basis: "Reken eerst uit: 2025 min 1925. Hoe noem je zo'n aantal jaren?", simpeler: "2025 min 1925 = 100.", nogSimpeler: "een eeuw" },
         },
       },
       {
@@ -708,17 +708,17 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bronnen", tekst: "**Oude foto's** en **familieverhalen** komen echt uit die tijd — dat zijn de beste sporen uit het verleden." }],
           woorden: [{ woord: "bron", uitleg: "Iets waaruit je informatie haalt: een foto, brief, verhaal of voorwerp." }],
-          niveaus: { basis: "Oude foto's en verhalen zijn echte bronnen.", simpeler: "Wat komt écht uit die oude tijd?", nogSimpeler: "oude foto's" },
+          niveaus: { basis: "Je overgrootouders leefden ongeveer honderd jaar geleden. Welke bron komt echt uit hun tijd en uit jouw eigen familie?", simpeler: "Wat komt écht uit die oude tijd?", nogSimpeler: "oude foto's" },
         },
       },
       {
         q: "Wat kwam **het eerst**?",
         options: ["kastelen met ridders", "de eerste auto", "de eerste computer", "de eerste mobiele telefoon"],
         answer: 0,
-        wrongHints: [null, "De auto is ruim honderd jaar oud — ridders zijn veel ouder.", "Computers zijn nog jonger dan auto's.", "Mobieltjes zijn het nieuwst van alles."],
+        wrongHints: [null, "De auto is ruim honderd jaar oud. Staat er iets in het rijtje dat nog veel ouder is?", "Computers zijn nog jonger dan auto's.", "Mobieltjes zijn het nieuwst van alles."],
         uitlegPad: {
           stappen: [{ titel: "Op de tijdbalk", tekst: "Kastelen: middeleeuwen, honderden jaren geleden. Auto: ruim 100 jaar. Computer: ~80 jaar. Mobieltje: nog nieuwer. **Kastelen** staan het meest links op de tijdbalk." }],
-          niveaus: { basis: "Kastelen zijn het oudst van dit rijtje.", simpeler: "Wat is het állerlangst geleden?", nogSimpeler: "kastelen" },
+          niveaus: { basis: "Zet de vier dingen op volgorde van oud naar nieuw. Wat staat dan vooraan?", simpeler: "Wat is het állerlangst geleden?", nogSimpeler: "kastelen" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -741,7 +741,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een halve eeuw is 50 jaar.",
+            basis: "Een eeuw is 100 jaar. Hoeveel is de helft daarvan?",
             simpeler: "Helft van 100 = 50.",
             nogSimpeler: "50",
           },

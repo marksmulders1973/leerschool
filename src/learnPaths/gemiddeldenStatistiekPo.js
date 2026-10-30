@@ -283,31 +283,31 @@ const steps = [
         },
       },
       {
-        q: "Zakgeld 4 vrienden: **€5, €4, €6, €5**. Gemiddeld zakgeld?",
-        options: ["€5", "€20", "€4", "€6"],
+        q: "Vier vrienden krijgen zakgeld: **€ 5, € 4, € 6 en € 5**. Hoeveel zakgeld krijgen ze **gemiddeld**?",
+        options: ["€ 5", "€ 20", "€ 4", "€ 6"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is de som. Nog ÷ 4.", "Dat is de laagste.", "Dat is de hoogste."],
+        wrongHints: [null, "Dat is het zakgeld van de vier samen. Wat moet je daarna nog doen?", "Dat is het laagste bedrag, niet het gemiddelde.", "Dat is het hoogste bedrag, niet het gemiddelde."],
         uitlegPad: {
           stappen: [
-            { titel: "Som", tekst: "€5 + €4 + €6 + €5 = **€20**." },
-            { titel: "Delen", tekst: "Gemiddelde = €20 ÷ 4 = **€5 per persoon**." },
+            { titel: "Som", tekst: "€ 5 + € 4 + € 6 + € 5 = **€ 20**." },
+            { titel: "Delen", tekst: "Gemiddelde = € 20 ÷ 4 = **€ 5 per persoon**." },
           ],
           woorden: [{ woord: "gemiddelde", uitleg: "Som ÷ aantal." }],
           theorie: "Tip: vergeet de euro-eenheid niet — het antwoord is in geld.",
-          voorbeelden: [{ type: "check", tekst: "Check: 4 × €5 = €20 ✓ (de oorspronkelijke som). Klopt." }],
-          basiskennis: [{ onderwerp: "Tussen min en max", uitleg: "€5 ligt tussen €4 en €6 → range klopt." }],
+          voorbeelden: [{ type: "check", tekst: "Check: 4 × € 5 = € 20 ✓ (de oorspronkelijke som). Klopt." }],
+          basiskennis: [{ onderwerp: "Tussen min en max", uitleg: "€ 5 ligt tussen € 4 en € 6 → range klopt." }],
           niveaus: {
-            basis: "(5+4+6+5) ÷ 4 = 20 ÷ 4 = €5.",
-            simpeler: "Som €20 ÷ 4 vrienden = €5 elk.",
-            nogSimpeler: "€5",
+            basis: "Tel eerst alle bedragen op. Deel die som daarna door het aantal vrienden.",
+            simpeler: "Samen is het € 20. Verdeel dat over 4 vrienden: dan krijgt ieder € 5.",
+            nogSimpeler: "€ 5",
           },
         },
       },
       {
-        q: "Een loper rent **5 keer**: 8, 9, 10, 9, 9 km. **Gemiddeld km per keer**?",
+        q: "Een loper rent **5 keer**: 8, 9, 10, 9 en 9 km. Hoeveel km rent hij **gemiddeld per keer**?",
         options: ["9 km", "10 km", "45 km", "8 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is alleen de hoogste keer.", "Dat is de som — nog ÷ 5.", "Dat is de laagste."],
+        wrongHints: [null, "Dat is alleen de langste keer, niet het gemiddelde.", "Dat zijn alle kilometers samen. Wat moet je daarna nog doen?", "Dat is de kortste keer, niet het gemiddelde."],
         uitlegPad: {
           stappen: [
             { titel: "Som", tekst: "8 + 9 + 10 + 9 + 9 = **45 km** in totaal." },
@@ -318,7 +318,7 @@ const steps = [
           voorbeelden: [{ type: "check", tekst: "5 × 9 = 45 ✓ — de som klopt." }],
           basiskennis: [{ onderwerp: "Tussen min en max", uitleg: "9 ligt tussen 8 (laagst) en 10 (hoogst) → klopt." }],
           niveaus: {
-            basis: "(8+9+10+9+9) ÷ 5 = 45 ÷ 5 = 9 km.",
+            basis: "Tel de 5 afstanden op. Deel die som daarna door het aantal keren.",
             simpeler: "Som 45 km ÷ 5 keer = 9 km gemiddeld per keer.",
             nogSimpeler: "9 km",
           },
@@ -374,15 +374,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "(12 + 15 + 18) ÷ 3 = 45 ÷ 3 = 15 meter.",
+            basis: "Tel de drie worpen op. Deel die som daarna door het aantal worpen.",
             simpeler: "Tel op: 12 + 15 + 18 = 45. Er zijn 3 worpen. 45 ÷ 3 = 15. Gemiddeld 15 meter.",
             nogSimpeler: "15 meter",
           },
         },
       },
       {
-        q: "Drie boeken kosten **€6, €9 en €15**. Wat is de **gemiddelde** prijs?",
-        options: ["€10", "€30", "€9", "€15"],
+        q: "Drie boeken kosten **€ 6, € 9 en € 15**. Wat is de **gemiddelde** prijs?",
+        options: ["€ 10", "€ 30", "€ 9", "€ 15"],
         answer: 0,
         wrongHints: [
           null,
@@ -394,7 +394,7 @@ const steps = [
           stappen: [
             {
               titel: "Som",
-              tekst: "€6 + €9 + €15 = **€30**.",
+              tekst: "€ 6 + € 9 + € 15 = **€ 30**.",
             },
             {
               titel: "Aantal",
@@ -402,7 +402,7 @@ const steps = [
             },
             {
               titel: "Delen",
-              tekst: "€30 ÷ 3 = **€10**.",
+              tekst: "€ 30 ÷ 3 = **€ 10**.",
             },
           ],
           woorden: [
@@ -419,19 +419,19 @@ const steps = [
           voorbeelden: [
             {
               type: "stap",
-              tekst: "Check: €10 ligt tussen €6 en €15. Dat klopt.",
+              tekst: "Check: € 10 ligt tussen € 6 en € 15. Dat klopt.",
             },
           ],
           basiskennis: [
             {
               onderwerp: "Middelste ≠ gemiddelde",
-              uitleg: "Het middelste getal (€9) is niet hetzelfde als het gemiddelde (€10).",
+              uitleg: "Het middelste getal (€ 9) is niet hetzelfde als het gemiddelde (€ 10).",
             },
           ],
           niveaus: {
-            basis: "(€6 + €9 + €15) ÷ 3 = €30 ÷ 3 = €10.",
-            simpeler: "Alle prijzen samen: €30. Drie boeken. €30 ÷ 3 = €10 per boek gemiddeld.",
-            nogSimpeler: "€10",
+            basis: "Tel de drie prijzen op. Deel die som daarna door het aantal boeken.",
+            simpeler: "Alle prijzen samen: € 30. Drie boeken. € 30 ÷ 3 = € 10 per boek gemiddeld.",
+            nogSimpeler: "€ 10",
           },
         },
       },
@@ -484,7 +484,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "(2 + 5 + 3 + 6) ÷ 4 = 16 ÷ 4 = 4.",
+            basis: "Tel alle doelpunten op. Deel dat totaal daarna door het aantal wedstrijden.",
             simpeler: "Alle doelpunten samen: 16. Er waren 4 wedstrijden. 16 ÷ 4 = 4.",
             nogSimpeler: "4",
           },
@@ -539,15 +539,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "(6 + 9 + 13 + 8 + 14) ÷ 5 = 50 ÷ 5 = 10.",
+            basis: "Tel alle bladzijden op. Deel die som daarna door het aantal kinderen.",
             simpeler: "Tel op: 50. Er zijn 5 kinderen. 50 ÷ 5 = 10.",
             nogSimpeler: "10",
           },
         },
       },
       {
-        q: "Drie vriendinnen sparen per week **€3, €4 en €8**. Hoeveel sparen ze **gemiddeld**?",
-        options: ["€5", "€15", "€4", "€7,50"],
+        q: "Drie vriendinnen sparen per week **€ 3, € 4 en € 8**. Hoeveel sparen ze **gemiddeld**?",
+        options: ["€ 5", "€ 15", "€ 4", "€ 7,50"],
         answer: 0,
         wrongHints: [
           null,
@@ -559,7 +559,7 @@ const steps = [
           stappen: [
             {
               titel: "Som",
-              tekst: "€3 + €4 + €8 = **€15**.",
+              tekst: "€ 3 + € 4 + € 8 = **€ 15**.",
             },
             {
               titel: "Aantal",
@@ -567,7 +567,7 @@ const steps = [
             },
             {
               titel: "Delen",
-              tekst: "€15 ÷ 3 = **€5**.",
+              tekst: "€ 15 ÷ 3 = **€ 5**.",
             },
           ],
           woorden: [
@@ -584,7 +584,7 @@ const steps = [
           voorbeelden: [
             {
               type: "stap",
-              tekst: "Check: €5 ligt tussen €3 en €8. Dat klopt.",
+              tekst: "Check: € 5 ligt tussen € 3 en € 8. Dat klopt.",
             },
           ],
           basiskennis: [
@@ -594,9 +594,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "(€3 + €4 + €8) ÷ 3 = €15 ÷ 3 = €5.",
-            simpeler: "Samen sparen ze €15. Het zijn 3 vriendinnen. €15 ÷ 3 = €5 per persoon.",
-            nogSimpeler: "€5",
+            basis: "Tel op wat de drie samen per week sparen. Deel dat daarna door het aantal vriendinnen.",
+            simpeler: "Samen sparen ze € 15. Het zijn 3 vriendinnen. € 15 ÷ 3 = € 5 per persoon.",
+            nogSimpeler: "€ 5",
           },
         },
       },
@@ -649,7 +649,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "(5 + 7 + 8 + 8 + 9) ÷ 5 = 37 ÷ 5 = 7,4.",
+            basis: "Tel de 5 cijfers op. Deel die som daarna door het aantal cijfers.",
             simpeler: "Tel op: 37. Er zijn 5 cijfers. 37 ÷ 5 = 7,4. Gemiddeld een 7,4.",
             nogSimpeler: "7,4",
           },

@@ -642,7 +642,7 @@ const steps = [
           theorie: "Werk-richting: van binnen naar buiten (meest diepe eerst).",
           voorbeelden: [{ type: "stap", tekst: "((2+3)×4) → eerst (2+3)=5 → dan (5×4)=20." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Binnenste haakjes maken klaar voor buitenste." }],
-          niveaus: { basis: "Binnenste eerst.", simpeler: "Bij haakjes-in-haakjes: doe altijd eerst de binnenste, daarna buitenste.", nogSimpeler: "Binnen" },
+          niveaus: { basis: "Probeer het met 2 × (3 + (4 − 1)). Welk stukje kun je meteen uitrekenen?", simpeler: "Bij haakjes-in-haakjes: doe altijd eerst de binnenste, daarna buitenste.", nogSimpeler: "Binnen" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -683,7 +683,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 + (3 × 4).",
+            basis: "Reken elke som twee keer uit: met en zonder haakjes. Weet je nog wat voorgaat: × of +?",
             simpeler: "De × gaat toch al eerst. De haakjes veranderen dus niets: het blijft 14.",
             nogSimpeler: "2 + (3 × 4)",
           },
@@ -726,7 +726,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2.",
+            basis: "Reken eerst allebei de haakjes uit. Deel daarna de eerste uitkomst door de tweede.",
             simpeler: "8 ÷ 4 = 2.",
             nogSimpeler: "2",
           },
@@ -769,7 +769,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6.",
+            basis: "Begin bij de haakjes die het diepst zitten en werk daarna naar buiten.",
             simpeler: "3 + 4 = 7. 2 × 7 = 14. 20 − 14 = 6.",
             nogSimpeler: "6",
           },
@@ -812,7 +812,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 + 5.",
+            basis: "Kijk welke haakjes helemaal binnenin staan. Daar begin je.",
             simpeler: "De binnenste haakjes eerst: 2 + 5.",
             nogSimpeler: "2 + 5",
           },

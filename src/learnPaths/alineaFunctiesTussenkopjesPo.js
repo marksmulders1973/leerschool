@@ -1315,7 +1315,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
           null,
           "Staat er een naam van een schipper in alinea 2? Gaat de alinea over één concreet geval?",
           "Staat er een vraag in alinea 2? Nieuwsgierig maken gebeurt meestal in de eerste alinea.",
-          "'Kortom' staat nergens in alinea 2. Wat doet het woordje 'daardoor' in de tweede zin?",
+          "'Kortom' staat nergens in alinea 2. Wat doet het woordje 'daardoor' in de derde zin?",
         ],
         uitlegPad: {
           stappen: [
@@ -1371,7 +1371,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
         wrongHints: [
           null,
           "Olie en lenzen zijn twee losse taken. Onder welke zin passen ál die taken?",
-          "Dat is één detail: hoe zwaar het werk was. Welke zin stelt de persoon voor die al dat werk deed?",
+          "Dat is één detail: hoe zwaar het werk was. Welke zin is de paraplu waar alle andere zinnen onder passen?",
           "De lamp en de wacht zijn ook taken — details dus. Welke zin is de paraplu waar alle taken onder passen?",
         ],
         uitlegPad: {

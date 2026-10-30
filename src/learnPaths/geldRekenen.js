@@ -1016,57 +1016,57 @@ const steps = [
         wrongHints: [null,"Reken per koekje: deel bij elk pak de prijs door het aantal.","Niet hetzelfde — reken per koekje.","Wel te zeggen — deel prijs door aantal."],
         uitlegPad: {
           stappen: [
-            { titel: "Per koekje", tekst: "A: 1,20÷6 = €0,20/koekje. B: 2,40÷10 = €0,24/koekje. A is goedkoper." },
+            { titel: "Per koekje", tekst: "A: 1,20÷6 = € 0,20/koekje. B: 2,40÷10 = € 0,24/koekje. A is goedkoper." },
           ],
           woorden: [{ woord: "per stuk", uitleg: "Prijs gedeeld door aantal = prijs per individueel item." }],
           theorie: "Voordelig vergelijken: deel prijs door aantal. Laagste prijs per stuk = winnaar.",
-          voorbeelden: [{ type: "per-stuk", tekst: "A: €0,20/k. B: €0,24/k. A wint." }],
+          voorbeelden: [{ type: "per-stuk", tekst: "A: € 0,20/k. B: € 0,24/k. A wint." }],
           basiskennis: [{ onderwerp: "Niet de totaalprijs", uitleg: "Hoogste totaalprijs ≠ duurder per stuk. Reken per stuk!" }],
-          niveaus: { basis: "A: €0,20. B: €0,24. A wint.", simpeler: "Reken per stuk: A €1,20÷6=€0,20. B €2,40÷10=€0,24. A is goedkoper per koekje.", nogSimpeler: "A goedkoper" },
+          niveaus: { basis: "Deel bij elk pak de prijs door het aantal koekjes. Welk pak heeft de laagste prijs per koekje?", simpeler: "Reken per stuk: A € 1,20 ÷ 6 = € 0,20. B € 2,40 ÷ 10 = € 0,24. A is goedkoper per koekje.", nogSimpeler: "Pak A is goedkoper per koekje." },
         },
       },
       {
-        q: "Pak A: **500 g rijst € 1,50**. Pak B: **1 kg rijst € 2,80**. **Voordeligst**?",
+        q: "Pak A: **500 g rijst voor € 1,50**. Pak B: **1 kg rijst voor € 2,80**. Welk pak is **het voordeligst**?",
         options: ["B","A","Hetzelfde","Niet vergelijkbaar"],
         answer: 0,
-        wrongHints: [null,"Reken voor allebei de prijs per 100 g uit — 1 kg is 1000 g.","Niet hetzelfde — reken per 100 g.","Wel — beide is rijst."],
+        wrongHints: [null,"Reken voor allebei de prijs per 100 g uit — 1 kg is 1000 g.","Niet hetzelfde — reken per 100 g.","Het is allebei rijst. Je kunt ze dus wel vergelijken."],
         uitlegPad: {
           stappen: [
-            { titel: "Per 100 g", tekst: "A: 500g €1,50 → 100g = €0,30. B: 1000g €2,80 → 100g = €0,28. B goedkoper." },
+            { titel: "Per 100 g", tekst: "A: 500g € 1,50 → 100g = € 0,30. B: 1000g € 2,80 → 100g = € 0,28. B goedkoper." },
           ],
           woorden: [{ woord: "per gewicht", uitleg: "Vergelijk altijd per zelfde eenheid (100g, kg, liter)." }],
           theorie: "Verschillende verpakkingsgrootten? Reken per 100g (of per kg). Anders vergelijk je niet eerlijk.",
-          voorbeelden: [{ type: "per-100g", tekst: "A €0,30/100g. B €0,28/100g. B 2 cent goedkoper per 100g." }],
+          voorbeelden: [{ type: "per-100g", tekst: "A € 0,30/100g. B € 0,28/100g. B 2 cent goedkoper per 100g." }],
           basiskennis: [{ onderwerp: "kg ≠ g", uitleg: "1 kg = 1000 g. Even omrekenen voor je vergelijkt." }],
-          niveaus: { basis: "A €0,30/100g. B €0,28/100g. B wint.", simpeler: "Per 100g vergelijken. A: 500g voor 1,50 → 100g voor 0,30. B: 1000g voor 2,80 → 100g voor 0,28. B 2 cent goedkoper.", nogSimpeler: "B goedkoper" },
+          niveaus: { basis: "Maak de hoeveelheden gelijk: wat kost 100 g bij pak A, en wat kost 100 g bij pak B?", simpeler: "Per 100g vergelijken. A: 500g voor 1,50 → 100g voor 0,30. B: 1000g voor 2,80 → 100g voor 0,28. B 2 cent goedkoper.", nogSimpeler: "Pak B is voordeliger." },
         },
       },
       {
-        q: "Pak A: **4 yoghurts € 2,00**. Pak B: **6 yoghurts € 2,40**. **Voordeligst per stuk**?",
+        q: "Pak A: **4 yoghurts voor € 2,00**. Pak B: **6 yoghurts voor € 2,40**. Welk pak is **per yoghurt het voordeligst**?",
         options: ["B","A","Hetzelfde","Niet te zeggen"],
         answer: 0,
         wrongHints: [null,"Reken per yoghurt: deel bij elk pak de prijs door het aantal.","Niet hetzelfde — reken per stuk.","Wel te zeggen — deel prijs door aantal."],
         uitlegPad: {
           stappen: [
-            { titel: "Per stuk", tekst: "A: 2,00÷4=€0,50. B: 2,40÷6=€0,40. B is €0,10 goedkoper per yoghurt." },
+            { titel: "Per stuk", tekst: "A: 2,00÷4=€ 0,50. B: 2,40÷6=€ 0,40. B is € 0,10 goedkoper per yoghurt." },
           ],
           woorden: [{ woord: "vergelijken", uitleg: "Reken altijd per zelfde eenheid." }],
           theorie: "Groter pak ≠ altijd voordeliger — reken NA om te checken.",
-          voorbeelden: [{ type: "per-stuk", tekst: "A €0,50/stuk. B €0,40/stuk. B wint." }],
+          voorbeelden: [{ type: "per-stuk", tekst: "A € 0,50/stuk. B € 0,40/stuk. B wint." }],
           basiskennis: [{ onderwerp: "Reken altijd na", uitleg: "Niet vertrouwen op intuïtie — reken het uit." }],
-          niveaus: { basis: "B €0,40/stuk. A €0,50/stuk. B wint.", simpeler: "A: €2 voor 4 = €0,50/stuk. B: €2,40 voor 6 = €0,40/stuk. B is goedkoper.", nogSimpeler: "B goedkoper" },
+          niveaus: { basis: "Deel bij elk pak de prijs door het aantal yoghurts. Welk pak is per yoghurt het goedkoopst?", simpeler: "A: € 2,00 voor 4 = € 0,50/stuk. B: € 2,40 voor 6 = € 0,40/stuk. B is goedkoper.", nogSimpeler: "Pak B is voordeliger per yoghurt." },
         },
       },
       {
-        q: "Pak A: **2 L melk € 2,40**. Pak B: **1 L melk € 1,30**. **Goedkoper per liter**?",
+        q: "Pak A: **2 L melk voor € 2,40**. Pak B: **1 L melk voor € 1,30**. Welk pak is **goedkoper per liter**?",
         options: ["A","B","Hetzelfde","Te weinig info"],
         answer: 0,
-        wrongHints: [null, "Reken per liter: wat kost 1 liter uit pak A?", "Niet hetzelfde — reken na per liter.", "Wel — beide vermelden prijs én hoeveelheid."],
+        wrongHints: [null, "Reken per liter: wat kost 1 liter uit pak A?", "Niet hetzelfde — reken na per liter.", "Bij allebei staan de prijs én de hoeveelheid. Je kunt het dus uitrekenen."],
         uitlegPad: {
           stappen: [
-            { titel: "Per liter berekenen", tekst: "A: 2 L voor €2,40 → 1 L = €2,40 ÷ 2 = **€1,20**. B: 1 L voor €1,30 → 1 L = **€1,30**." },
-            { titel: "Vergelijken", tekst: "A €1,20/L < B €1,30/L. A is **10 cent goedkoper per liter**. Hoewel A duurder TOTAAL lijkt, krijg je meer voor je geld." },
-            { titel: "Toets-instinker: hoogste totaalprijs ≠ duurste", tekst: "A kost €2,40 (hoger dan B's €1,30). Maar je krijgt 2L (dubbele hoeveelheid). Reken altijd per L of per kg om eerlijk te vergelijken." },
+            { titel: "Per liter berekenen", tekst: "A: 2 L voor € 2,40 → 1 L = € 2,40 ÷ 2 = **€ 1,20**. B: 1 L voor € 1,30 → 1 L = **€ 1,30**." },
+            { titel: "Vergelijken", tekst: "A € 1,20/L < B € 1,30/L. A is **10 cent goedkoper per liter**. Hoewel A duurder TOTAAL lijkt, krijg je meer voor je geld." },
+            { titel: "Toets-instinker: hoogste totaalprijs ≠ duurste", tekst: "A kost € 2,40 (hoger dan B's € 1,30). Maar je krijgt 2L (dubbele hoeveelheid). Reken altijd per L of per kg om eerlijk te vergelijken." },
           ],
           woorden: [
             { woord: "per liter", uitleg: "Prijs gedeeld door het aantal liters." },
@@ -1074,11 +1074,11 @@ const steps = [
           ],
           theorie: "Voordeel-vergelijking-stappenplan:\n1. Bepaal de eenheid (stuk / liter / 100g)\n2. Reken prijs per eenheid voor beide pakken\n3. Laagste prijs/eenheid = winnaar\n4. Negeer totaalprijs als hoeveelheden verschillen",
           voorbeelden: [
-            { type: "per-L", tekst: "Cola: 1L €1,50 vs 2L €2,50 → 1L=€1,50, per-L bij 2L=€1,25. 2L-fles voordeliger." },
-            { type: "per-stuk", tekst: "Appel: 1 los €0,50 vs 5-pak €2,00 → per stuk €0,40. 5-pak voordeliger." },
+            { type: "per-L", tekst: "Cola: 1L € 1,50 vs 2L € 2,50 → 1L=€ 1,50, per-L bij 2L=€ 1,25. 2L-fles voordeliger." },
+            { type: "per-stuk", tekst: "Appel: 1 los € 0,50 vs 5-pak € 2,00 → per stuk € 0,40. 5-pak voordeliger." },
           ],
           basiskennis: [{ onderwerp: "Familiepak", uitleg: "Vaak (niet altijd!) is groter pak voordeliger per eenheid. De toets test of je kunt NA-rekenen." }],
-          niveaus: { basis: "A €1,20/L. B €1,30/L. A wint.", simpeler: "A: 2 liter voor €2,40 → 1 liter = €1,20. B: 1 liter = €1,30. A is goedkoper per liter.", nogSimpeler: "A goedkoper" },
+          niveaus: { basis: "Reken eerst uit wat 1 liter kost bij pak A. Vergelijk dat daarna met pak B.", simpeler: "A: 2 liter voor € 2,40 → 1 liter = € 1,20. B: 1 liter = € 1,30. A is goedkoper per liter.", nogSimpeler: "Pak A is goedkoper per liter." },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1096,7 +1096,7 @@ const steps = [
           stappen: [
             {
               titel: "Per appel",
-              tekst: "A: €2,00 ÷ 5 = €0,40. B: €2,80 ÷ 8 = €0,35. B is goedkoper.",
+              tekst: "A: € 2,00 ÷ 5 = € 0,40. B: € 2,80 ÷ 8 = € 0,35. B is goedkoper.",
             },
           ],
           woorden: [
@@ -1109,7 +1109,7 @@ const steps = [
           voorbeelden: [
             {
               type: "per-stuk",
-              tekst: "A €0,40 per appel. B €0,35 per appel. B wint.",
+              tekst: "A € 0,40 per appel. B € 0,35 per appel. B wint.",
             },
           ],
           basiskennis: [
@@ -1119,7 +1119,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "A €0,40. B €0,35. B wint.",
+            basis: "Reken in centen: deel bij elke zak het aantal centen door het aantal appels.",
             simpeler: "A: 200 cent ÷ 5 = 40 cent. B: 280 cent ÷ 8 = 35 cent. B is goedkoper per appel.",
             nogSimpeler: "Zak B",
           },
@@ -1134,11 +1134,11 @@ const steps = [
           stappen: [
             {
               titel: "Per pen",
-              tekst: "A: €3,00 ÷ 2 = €1,50. B: €6,00 ÷ 4 = €1,50.",
+              tekst: "A: € 3,00 ÷ 2 = € 1,50. B: € 6,00 ÷ 4 = € 1,50.",
             },
             {
               titel: "Vergelijken",
-              tekst: "Allebei €1,50 per pen. Ze zijn even duur.",
+              tekst: "Allebei € 1,50 per pen. Ze zijn even duur.",
             },
           ],
           woorden: [
@@ -1151,7 +1151,7 @@ const steps = [
           voorbeelden: [
             {
               type: "per-stuk",
-              tekst: "A €1,50 per pen. B €1,50 per pen. Gelijk.",
+              tekst: "A € 1,50 per pen. B € 1,50 per pen. Gelijk.",
             },
           ],
           basiskennis: [
@@ -1161,8 +1161,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Allebei €1,50 per pen.",
-            simpeler: "A: €3 voor 2 pennen = €1,50 per pen. B: €6 voor 4 pennen = €1,50 per pen. Even duur.",
+            basis: "Reken bij elk pak uit wat één pen kost en vergelijk die twee bedragen.",
+            simpeler: "A: € 3,00 voor 2 pennen = € 1,50 per pen. B: € 6,00 voor 4 pennen = € 1,50 per pen. Even duur.",
             nogSimpeler: "Even duur",
           },
         },
@@ -1215,24 +1215,24 @@ const steps = [
         },
       },
       {
-        q: "Een los zwemkaartje kost **€ 4**. Een kaart voor **10 keer** zwemmen kost **€ 35**. Wat kost **1 keer** zwemmen met de kaart voor 10 keer?",
+        q: "Een los zwemkaartje kost **€ 4,00**. Een kaart voor **10 keer** zwemmen kost **€ 35,00**. Wat kost **1 keer** zwemmen met de kaart voor 10 keer?",
         options: ["€ 3,50", "€ 4,00", "€ 3,00", "€ 0,35"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is de prijs van een los kaartje. Reken met de kaart voor 10 keer.",
-          "Reken na: 10 × € 3 = ? Is dat € 35?",
-          "Let op de komma: € 35 delen door 10.",
+          "Reken na: 10 × € 3,00 = ? Is dat € 35,00?",
+          "Let op de komma: kan één keer zwemmen echt minder dan een halve euro kosten?",
         ],
         uitlegPad: {
           stappen: [
             {
               titel: "Per keer",
-              tekst: "€35 ÷ 10 = €3,50 per keer.",
+              tekst: "€ 35,00 ÷ 10 = € 3,50 per keer.",
             },
             {
               titel: "Vergelijken",
-              tekst: "Los €4,00. Met de kaart €3,50. Met de kaart ben je 50 cent per keer goedkoper uit.",
+              tekst: "Los € 4,00. Met de kaart € 3,50. Met de kaart ben je 50 cent per keer goedkoper uit.",
             },
           ],
           woorden: [
@@ -1241,23 +1241,23 @@ const steps = [
               uitleg: "Prijs gedeeld door het aantal keren.",
             },
           ],
-          theorie: "Delen door 10: de komma schuift 1 plek naar links. €35 → €3,50.",
+          theorie: "Delen door 10: de komma schuift 1 plek naar links. € 35,00 → € 3,50.",
           voorbeelden: [
             {
               type: "per-keer",
-              tekst: "€35 voor 10 keer = €3,50 per keer.",
+              tekst: "€ 35,00 voor 10 keer = € 3,50 per keer.",
             },
           ],
           basiskennis: [
             {
               onderwerp: "Check",
-              uitleg: "10 × €3,50 = €35 ✓.",
+              uitleg: "10 × € 3,50 = € 35,00 ✓.",
             },
           ],
           niveaus: {
-            basis: "€35 ÷ 10 = €3,50.",
-            simpeler: "€35 verdelen over 10 keer. 10 × €3 = €30, en de €5 die over is wordt 50 cent per keer. Samen €3,50.",
-            nogSimpeler: "€3,50",
+            basis: "Verdeel de prijs van de kaart over de 10 keer zwemmen. Bij delen door 10 schuift de komma één plek.",
+            simpeler: "€ 35,00 verdelen over 10 keer. 10 × € 3,00 = € 30, en de € 5,00 die over is wordt 50 cent per keer. Samen € 3,50.",
+            nogSimpeler: "€ 3,50",
           },
         },
       },
@@ -1275,11 +1275,11 @@ const steps = [
           stappen: [
             {
               titel: "Per pakje",
-              tekst: "3 voor €1,50 = €0,50. 2 voor €1,20 = €0,60. 4 voor €2,80 = €0,70. 5 voor €2,75 = €0,55.",
+              tekst: "3 voor € 1,50 = € 0,50. 2 voor € 1,20 = € 0,60. 4 voor € 2,80 = € 0,70. 5 voor € 2,75 = € 0,55.",
             },
             {
               titel: "Vergelijken",
-              tekst: "€0,50 is het laagst: 3 pakjes voor €1,50.",
+              tekst: "€ 0,50 is het laagst: 3 pakjes voor € 1,50.",
             },
           ],
           woorden: [
@@ -1302,9 +1302,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 voor €1,50 = €0,50 per pakje.",
-            simpeler: "Per pakje: 50, 60, 70 en 55 cent. De goedkoopste is 50 cent: 3 pakjes voor €1,50.",
-            nogSimpeler: "3 pakjes voor €1,50",
+            basis: "Reken bij elke aanbieding uit wat één pakje kost, in centen. Welk bedrag is het laagst?",
+            simpeler: "Per pakje: 50, 60, 70 en 55 cent. De goedkoopste is 50 cent: 3 pakjes voor € 1,50.",
+            nogSimpeler: "3 pakjes voor € 1,50",
           },
         },
       },
