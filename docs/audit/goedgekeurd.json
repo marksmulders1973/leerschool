@@ -2865,11 +2865,178 @@
   "reden": "Hints samen wijzen de bus van 10:12 aan en de hint bij '7 minuten' zet het interval 9:55-10:12 al klaar; tellen blijft wel over."
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 12",
+  "hash": "6869109770d1c5dd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Alleen twee echte opties (groter/kleiner); 'Gelijk' en 'Niet te vergelijken' zijn zwakke afleiders. Hints en niveaus kloppen."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 13",
+  "hash": "7bc2e08ee7389507",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 14",
+  "hash": "e3fedc6f47b986ff",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 16",
+  "hash": "e60fc9bfdc0ad698",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag over 'fietsroute' terwijl de stapuitleg zegt 'stippellijn = wandelpad'; geen legenda bij de vraag; twee telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 17",
+  "hash": "f66bebd2809963bc",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 18",
+  "hash": "a5bfc67bae18bcad",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramzin 'Werkelijk in meter?'; som en hints kloppen."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 20",
+  "hash": "bcbd55001604c21a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som en hints kloppen; niveau 'basis' was alleen het antwoord ('4 km.')."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 21",
+  "hash": "da74d383ca46c525",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar bijna identiek aan vraag 34 (legenda) in dezelfde stap."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 22",
+  "hash": "9da1e2595c1abb5b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveau 'basis' was alleen het antwoord ('O (oost).')."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 23",
+  "hash": "6e65ea379a34b0d6",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 24",
+  "hash": "873674862bab3c5a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 25",
+  "hash": "6ef3b9c19cc0d254",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'De schaal heel klein is' is vakjargon (groot schaalgetal = kleine schaal), maar het staat zo in de stapuitleg en is groep 8-stof."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 28",
+  "hash": "923af7c96a64b79c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveau 'basis' was alleen het antwoord."
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 29",
   "hash": "6289590b758a5ea9",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 30",
+  "hash": "c7fa9ba5c98f20db",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramzin 'toont vooral?'."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 31",
+  "hash": "d2b547b13063d920",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 32",
+  "hash": "df9ce98b49b2c337",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vreemde zin met '___?'."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 33",
+  "hash": "f3c30a80051af821",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 34",
+  "hash": "3763f2f8b7d7934e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar dubbel met vraag 21 in dezelfde stap."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 35",
+  "hash": "d4b333036fedc64a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 36",
+  "hash": "83dd78030f2a5ab1",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 38",
+  "hash": "f7bcc39e89cb3e0f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Engels woord 'grid' in vraag en explanation."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 39",
+  "hash": "148b1fede92d39ee",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveau 'basis' was alleen het antwoord; overlapt met vraag 12."
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 4",
@@ -2878,6 +3045,28 @@
   "bron": "vervolg B2 pakket 09 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "klopt ('meestal'); niveaus waren telegramstijl en gaven alle drie het antwoord ('Boven = N!')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 40",
+  "hash": "eafcfb9ff37bc163",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Topografiekennis (Maastricht) zonder kaart in de stap; verdedigbaar als groep 8-kernstof, hints kloppen."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 41",
+  "hash": "bd6ced84ea20182e",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 42",
+  "hash": "033a01c5cae61305",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 5",
@@ -9755,6 +9944,54 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 10",
+  "hash": "e265d1f611cc9657",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord ('bloempje = een kleine bloem.')."
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 5",
+  "hash": "41dd67e9621c0f24",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveau 'basis' was alleen het antwoord ('huis → huisje.')."
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 6",
+  "hash": "e4d299ae587f886a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis was alleen het antwoord."
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 7",
+  "hash": "cbed7ce080b7bba6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis was alleen het antwoord."
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 8",
+  "hash": "20f135c764523752",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis was alleen het antwoord."
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 9",
+  "hash": "e1fa1377e1c735e3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis was alleen het antwoord."
+ },
+ {
   "waar": "taal-woorden-zinnen-g4 stap 4 vraag 9",
   "hash": "a46601da66ebe26b",
   "oordeel": "goed",
@@ -12452,6 +12689,28 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 10",
+  "hash": "4b51f58266d3909c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 11",
+  "hash": "7aa72842b72187f4",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 12",
+  "hash": "c61e08478012c1cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar dubbel met vraag 6 in dezelfde stap."
+ },
+ {
   "waar": "werkwoordsspelling-dt stap 8 vraag 13",
   "hash": "117f78f56e2d237e",
   "oordeel": "goed",
@@ -12466,6 +12725,35 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 15",
+  "hash": "c50091c40a966209",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 17",
+  "hash": "0ed2941c60182ccd",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 18",
+  "hash": "6dc9ea35bb259771",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleider 'wordtt' absurd en vraag bijna dubbel met vraag 7 ('Hij ___ ... (worden)')."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 19",
+  "hash": "637e6197f915da4c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werkwoordsspelling-dt stap 8 vraag 2",
   "hash": "b5ddfad6548bad32",
   "oordeel": "goed",
@@ -12473,10 +12761,77 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 20",
+  "hash": "2b4c557621fc10bb",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 21",
+  "hash": "f9b38e36fd46957a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 22",
+  "hash": "b09f074f53fe3893",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werkwoordsspelling-dt stap 8 vraag 3",
   "hash": "e9e8d0714044f4ee",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 4",
+  "hash": "686b5a6e97ed2684",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; nogSimpeler 'Werk + ?  = jij' was onbegrijpelijk."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 5",
+  "hash": "a39c631dfd303ecb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveau 'basis' was alleen het antwoord ('Vindt (dt).')."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 6",
+  "hash": "a3d2d2c14afb11ac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; dubbel met vraag 12 (zelfde voltooid deelwoord); basis was alleen het antwoord."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 7",
+  "hash": "11efb66d81fdf785",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis was alleen het antwoord ('wordt.')."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 8",
+  "hash": "af9a8b3574efa4e4",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 9",
+  "hash": "637bc3836d8cbf77",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

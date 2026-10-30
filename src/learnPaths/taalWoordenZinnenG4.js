@@ -407,7 +407,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "huis → huisje.",
+            basis: "Een verkleinwoord maak je met -je, -tje of -pje erachter. Zeg het hardop: wat klinkt goed?",
             simpeler: "Doe -je erachter.",
             nogSimpeler: "huisje",
           },
@@ -431,7 +431,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "duim → duimpje.",
+            basis: "Een verkleinwoord maak je met -je, -tje of -pje erachter. Zeg het hardop: wat klinkt goed?",
             simpeler: "Na een m komt -pje.",
             nogSimpeler: "duimpje",
           },
@@ -455,7 +455,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ei → eitje.",
+            basis: "Een verkleinwoord maak je met -je, -tje of -pje erachter. Zeg het hardop: wat klinkt goed?",
             simpeler: "Zeg maar: ei-tje.",
             nogSimpeler: "eitje",
           },
@@ -474,7 +474,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "boek → boekje.",
+            basis: "Een verkleinwoord maak je met -je, -tje of -pje erachter. Zeg het hardop: wat klinkt goed?",
             simpeler: "Doe -je erachter.",
             nogSimpeler: "boekje",
           },
@@ -498,7 +498,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "wiel → wieltje.",
+            basis: "Een verkleinwoord maak je met -je, -tje of -pje erachter. Zeg het hardop: wat klinkt goed?",
             simpeler: "Zeg maar: wiel-tje.",
             nogSimpeler: "wieltje",
           },
@@ -522,7 +522,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "bloempje = een kleine bloem.",
+            basis: "Een verkleinwoord maakt iets klein en eindigt op -je, -tje of -pje.",
             simpeler: "Welk woord eindigt op -je?",
             nogSimpeler: "bloempje",
           },

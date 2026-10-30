@@ -252,16 +252,16 @@ const steps = [
         wrongHints: [null, "1 km = 100.000 cm. Is 5 × 200.000 cm zo weinig?", "100 km = 10.000.000 cm. Reken 5 × 200.000 nog eens uit en tel de nullen.", "5 km: heb je alleen de 5 cm overgenomen? Vermenigvuldig eerst met 200.000."],
       },
       {
-        q: "Op kompas: **ZW** ligt tussen welke twee?",
+        q: "Op een windroos staat **N bovenaan**. Je kijkt schuin naar **linksonder**. Tussen welke twee hoofdrichtingen kijk je?",
         options: ["Z en W", "N en W", "N en O", "Z en O"],
         answer: 0,
-        wrongHints: [null, "N en W samen geven NW. Lees de letters van ZW nog eens: welke twee zijn dat?", "N en O samen geven NO. Welke twee letters staan er in ZW?", "Z en O samen geven ZO. Kijk naar de tweede letter van ZW."],
+        wrongHints: [null, "Je koos N, maar N staat bovenaan en jij kijkt naar onder. Welke richting staat tegenover N?", "N staat bovenaan en O staat rechts. Jij kijkt juist naar linksonder: welke twee richtingen staan daar?", "O staat rechts, maar jij kijkt naar links. Welke richting staat tegenover O?"],
       },
       {
-        q: "Tussen welke richtingen ligt **NO**?",
+        q: "Op een windroos staat **N bovenaan**. Je kijkt schuin naar **rechtsboven**. Tussen welke twee hoofdrichtingen kijk je?",
         options: ["N en O", "Z en O", "N en W", "Z en W"],
         answer: 0,
-        wrongHints: [null, "Z en O samen geven ZO. Welke twee letters staan er in NO?", "N en W samen geven NW. Kijk naar de tweede letter van NO.", "Z en W samen geven ZW. Lees de letters van NO nog eens."],
+        wrongHints: [null, "Z staat onderaan op de windroos, maar jij kijkt omhoog. Welke richting staat tegenover Z?", "W staat links, maar jij kijkt naar rechts. Welke richting staat tegenover W?", "Z staat onder en W staat links. Jij kijkt juist naar rechtsboven: welke twee richtingen staan daar?"],
       },
       {
         q: "Is schaal **1:10.000** **groter of kleiner** dan schaal 1:100.000?",
@@ -344,16 +344,16 @@ const steps = [
         },
       },
       {
-        q: "Op kompas: **tussen N en W** ligt?",
+        q: "Op een kaart wijst **N omhoog**. Een meer ligt schuin **linksboven** van het dorp. In welke richting ligt het meer?",
         options: ['NW (noord-west)', 'ZW (zuid-west)', 'NO (noord-oost)', 'ZO (zuid-oost)'],
         answer: 0,
-        wrongHints: [null, "ZW ligt tussen Zuid en West. Welke twee richtingen noemt de vraag?", "NO ligt tussen Noord en Oost. Welke twee richtingen noemt de vraag?", "ZO ligt tussen Zuid en Oost. Welke twee richtingen noemt de vraag?"],
+        wrongHints: [null, "Zuid staat onderaan als N boven is. Ligt het meer boven of onder het dorp?", "Oost staat rechts als N boven is. Ligt het meer links of rechts van het dorp?", "Zuid is onder en oost is rechts. Het meer ligt juist boven en links: welke twee richtingen zijn dat samen?"],
       },
       {
-        q: "Hoe staat een **fietsroute** meestal op een kaart aangegeven?",
+        q: "Hoe staat een **fiets- of wandelroute** meestal op een kaart aangegeven?",
         options: ["Stippellijn", "Doorgetrokken lijn", "Dikke lijn", "Blauwe lijn"],
         answer: 0,
-        wrongHints: [null, "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Een blauwe lijn is op een kaart meestal water: een rivier of kanaal."],
+        wrongHints: [null, "Een gewone doorgetrokken lijn is op een kaart meestal een weg voor auto's.", "Een dikke lijn is meestal een snelweg met veel verkeer.", "Een blauwe lijn is op een kaart meestal water: een rivier of kanaal."],
         uitlegPad: {
           stappen: [
             { titel: "Lijnsoorten op kaarten", tekst: "Op een kaart staan verschillende lijnsoorten. Elk soort heeft een vaste betekenis." },
@@ -406,7 +406,7 @@ const steps = [
         },
       },
       {
-        q: "Op een kaart van **schaal 1:10.000** is een park **5 cm**. **Werkelijk in meter**?",
+        q: "Op een kaart met **schaal 1:10.000** is een park **5 cm** lang. Hoe lang is het park **in werkelijkheid, in meters**?",
         options: ["500 m", "50 m", "5 km", "50 km"],
         answer: 0,
         wrongHints: [null, "50 m = 5.000 cm. Is 5 × 10.000 zo weinig?", "5 km = 500.000 cm. Is 5 × 10.000 zo veel? Tel de nullen.", "50 km = 5.000.000 cm. Is 5 × 10.000 zo veel?"],
@@ -415,7 +415,7 @@ const steps = [
         q: "Welk **windstreek-symbool** staat meestal **bovenaan** op een kaart?",
         options: ["N (noord)", "Z (zuid)", "O (oost)", "W (west)"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de noordpijl op een kaart: welke letter staat bij die pijl?", "Op een kaart wijst één pijl naar boven. Welke letter hoort bij die pijl?", "Welke letter staat bij de pijl die op de kaart omhoog wijst?"],
+        wrongHints: [null, "Z staat op een kaart meestal onderaan. Welke letter hoort bij de pijl die omhoog wijst?", "Op een kaart wijst één pijl naar boven. Welke letter hoort bij die pijl?", "Welke letter staat bij de pijl die op de kaart omhoog wijst?"],
       },
       {
         q: "Een kaart heeft schaal **1:200.000**. Hoe groot is **2 cm in werkelijkheid** in **km**?",
@@ -432,7 +432,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1:100.000 — 5 cm = 5 km." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schuif komma in schaal-getal 5 plekken naar links voor km: 200.000 cm → 2 km." }],
           niveaus: {
-            basis: "4 km.",
+            basis: "Vermenigvuldig de 2 cm met het schaalgetal en reken de centimeters daarna om naar kilometers.",
             simpeler: "2 × 200.000 = 400.000 cm = 4 km.",
             nogSimpeler: "4 km",
           },
@@ -458,7 +458,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vanuit Amsterdam ligt Duitsland in het oosten." }],
           basiskennis: [{ onderwerp: "Tussen-richtingen", uitleg: "NO = noord-oost (tussen N en O). ZW = zuid-west. Etc." }],
           niveaus: {
-            basis: "O (oost).",
+            basis: "Draai vanaf N een kwartslag met de klok mee: dat is de richting die rechts staat.",
             simpeler: "Klok: N→O→Z→W.",
             nogSimpeler: "Rechts van N = O",
           },
@@ -483,16 +483,16 @@ const steps = [
         wrongHints: [null, "Het aantal inwoners verandert de grootte op de kaart niet.", "Ook op een nieuwe wereldkaart is Nederland klein — waardoor?", "Het aantal steden bepaalt niet hoe groot een land getekend wordt."],
       },
       {
-        q: "Welke richting ligt **tussen Noord en Oost**?",
+        q: "Een boot vaart naar het **zuidwesten**. Welke richting ligt precies **tegenover** de vaarrichting?",
         options: ["Noordoost (NO)", "Noordwest (NW)", "Zuidoost (ZO)", "Oost (O)"],
         answer: 0,
-        wrongHints: [null, "NW ligt tussen Noord en West. Welke twee richtingen noemt de vraag?", "ZO ligt tussen Zuid en Oost. Welke twee richtingen noemt de vraag?", "Oost is zelf een hoofdrichting. Wat ligt er precies tússen Noord en Oost?"],
+        wrongHints: [null, "Noordwest ligt tegenover zuidoost, niet tegenover zuidwest. Draai beide delen van de richting om.", "Zuidoost heeft nog steeds 'zuid' in zich. Wat ligt er tegenover zuid?", "Oost ligt tegenover west, dat klopt. Maar de boot vaart ook een stukje naar het zuiden: wat ligt daar tegenover?"],
       },
       {
-        q: "Op een **topografische kaart** in **Nederland** staan vaak ___?",
-        options: ["Steden, rivieren, snelwegen", "Het weer van morgen", "Temperaturen per maand", "Prijzen van huizen"],
+        q: "Wat staat er meestal op een **topografische kaart** van Nederland?",
+        options: ["Steden, rivieren, snelwegen", "Het weer van vandaag", "Hoe warm het per maand is", "Hoeveel mensen er wonen"],
         answer: 0,
-        wrongHints: [null, "Het weer zie je op een weerkaart.", "Temperaturen zie je op een klimaatkaart.", "Een topografische kaart laat plekken zien, geen prijzen."],
+        wrongHints: [null, "Het weer zie je op een weerkaart, niet op een topografische kaart.", "Temperaturen per maand zie je op een klimaatkaart.", "Het aantal inwoners zie je op een bevolkingskaart."],
       },
       {
         q: "Een **schaal 1:1.000.000** (1 op miljoen) is een...",
@@ -509,7 +509,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Wandelroute: 1:10.000 (grote schaal). Atlas van Europa: 1:5.000.000." }],
           basiskennis: [{ onderwerp: "Klein vs groot", uitleg: "Grote schaal = klein getal (1:100) = klein gebied groot getekend. Kleine schaal = groot getal = veel land in kleine ruimte." }],
           niveaus: {
-            basis: "Kaart van een heel land.",
+            basis: "Hoe groter het getal achter de 1, hoe meer er is verkleind en hoe groter het gebied dat op de kaart past.",
             simpeler: "1:1 miljoen = veel land op 1 kaart.",
             nogSimpeler: "Groot gebied",
           },
@@ -522,7 +522,7 @@ const steps = [
         wrongHints: [null, 'Hoogte zie je op een hoogtekaart.', 'De kaart weet niet waar jij woont. Waarom krijgt elke provincie een eigen kleur?', 'Hoofdsteden staan meestal met een stip of ster. Waar is de kleur voor?'],
       },
       {
-        q: "Een **klimaatkaart** toont vooral?",
+        q: "Wat laat een **klimaatkaart** vooral zien?",
         options: ['Temperatuur en neerslag per gebied', 'Wegen en snelwegen per gebied', 'Aantal inwoners per gebied', 'Inkomen van mensen per gebied'],
         answer: 0,
         wrongHints: [null, 'Daarvoor heb je een wegenkaart.', 'Daarvoor heb je een bevolkingskaart.', 'Geld of inkomen zie je op een andere themakaart.'],
@@ -534,7 +534,7 @@ const steps = [
         wrongHints: [null, "Zuid ligt een kwartslag van west af, niet ertegenover. Wat ligt er recht tegenover?", "Noord ligt ook een kwartslag van west af. Wat ligt er een halve slag verder?", "Zuidwest ligt juist vlak naast west."],
       },
       {
-        q: "**Een plaats in een atlas** zoek je snel op via ___?",
+        q: "Waarmee zoek je **een plaats in een atlas** snel op?",
         options: ["Het register", "De legenda", "De schaalbalk", "De kompasroos"],
         answer: 0,
         wrongHints: [null, "De legenda legt symbolen uit, geen plaatsnamen.", "De schaalbalk gebruik je voor afstanden.", "De kompasroos geeft richtingen."],
@@ -568,18 +568,18 @@ const steps = [
         explanation: "4 × 25.000 = 100.000 cm = **1.000 m** (= 1 km).",
       },
       {
-        q: "Welke kaart gebruik je om te zien **hoe hoog de bergen** in Oostenrijk zijn?",
+        q: "Je wilt weten of een gebied in Oostenrijk **vlak of bergachtig** is. Welke kaart gebruik je?",
         options: ["Een hoogtekaart", "Een wegenkaart", "Een plattegrond van Wenen", "Een weerkaart"],
         answer: 0,
         wrongHints: [null, "Een wegenkaart toont snelwegen, geen bergtoppen.", "Een stadsplattegrond toont straten van één stad.", "Een weerkaart toont temperatuur en regen van vandaag."],
         explanation: "Een **hoogtekaart** gebruikt kleuren voor hoogte: groen = laag, bruin = hoog gebergte.",
       },
       {
-        q: "Het vakkensysteem op een kaart (A1, A2, B1...) heet een **grid**. Waarvoor gebruik je het?",
+        q: "Op veel kaarten staan **vakken met een letter en een cijfer** (A1, A2, B1...). Waarvoor gebruik je die?",
         options: ['Om snel een plek op te zoeken', 'Om afstanden te meten', 'Om de kaart op te vouwen', 'Om hoogtes af te lezen'],
         answer: 0,
         wrongHints: [null, "Voor afstanden gebruik je de schaal.", "De vouwlijnen staan er los van.", "Daarvoor heb je kleuren of hoogtelijnen."],
-        explanation: "De index zegt bv. 'Zwolle → C4': zoek vak C4 op en je vindt Zwolle meteen. Het **grid** maakt zoeken snel.",
+        explanation: "De index zegt bv. 'Zwolle → C4': zoek vak C4 op en je vindt Zwolle meteen. Zo'n **vakkenverdeling** maakt zoeken snel.",
       },
       {
         q: "Een kaart heeft schaal **1 : 100.000**, een andere **1 : 10.000**. Welke kaart toont **meer detail**?",
@@ -596,7 +596,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Fietsroute plannen in je dorp? 1 : 10.000. Autorit door Frankrijk? 1 : 1.000.000." }],
           basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "Groot getal = groot gebied = grove kaart. Klein getal = klein gebied = fijne kaart." }],
           niveaus: {
-            basis: "1 : 10.000 toont meer detail.",
+            basis: "Kijk welk schaalgetal het kleinst is: die kaart is het minst verkleind.",
             simpeler: "Minder verkleind = beter ingezoomd = meer te zien.",
             nogSimpeler: "1 : 10.000",
           },
