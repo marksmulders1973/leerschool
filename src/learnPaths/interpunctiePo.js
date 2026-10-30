@@ -79,7 +79,7 @@ const steps = [
         q: "Welk leesteken hoort bij een **vraag**?",
         options: ["?", ".", "!", ","],
         answer: 0,
-        wrongHints: [null, "Punt is voor een gewone zin.", "Uitroepteken is voor verbazing.", "Komma zit midden in een zin."],
+        wrongHints: [null, "Een punt is voor een gewone zin die iets vertelt.", "Een uitroepteken is voor verbazing of een uitroep.", "Een komma staat midden in een zin, niet aan het eind."],
         uitlegPad: {
           stappen: [
             { titel: "Vraagteken (?) hoort bij vragen", tekst: "Een **vraag** = zin waarop je een **antwoord verwacht**. Aan het eind komt altijd een **vraagteken (?)**. Geen punt, geen uitroepteken." },

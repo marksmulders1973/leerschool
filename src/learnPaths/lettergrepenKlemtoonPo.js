@@ -23,13 +23,13 @@ const steps = [
     checks: [
       {
         q: "Wat is een lettergreep?",
-        options: ["een deel van een woord in één klap","de eerste letter van een woord","een woord met een hoofdletter","het hele woord van begin tot eind"],
+        options: ["een stukje van een woord dat je in één klap zegt","alleen de allereerste letter van een woord","een woord dat met een hoofdletter begint","het hele woord van het begin tot het eind"],
         answer: 0,
         wrongHints: [null, "Dat is maar één letter, geen lettergreep.", "Een hoofdletter heeft er niets mee te maken.", "Een woord kan meerdere lettergrepen hebben."],
         uitlegPad: {
           stappen: [{ titel: "Eén klap", tekst: "Een lettergreep spreek je in één keer uit, als één klap: ba-naan = 2 lettergrepen." }],
           niveaus: {
-            basis: "Een lettergreep is een 'klap' van een woord.",
+            basis: "Een lettergreep is een stukje van een woord dat je in één klap uitspreekt.",
             simpeler: "Klap mee bij 'banaan': hoeveel stukjes?",
             nogSimpeler: "Is een lettergreep een stukje van een woord?",
           },

@@ -81,7 +81,7 @@ const steps = [
         wrongHints: [null, "Vier jaar is het vmbo. Het vwo duurt langer.", "Twee jaar is korter dan elk niveau op de middelbare school.", "Acht jaar duurt de basisschool. Het vwo is wel het langste niveau, maar zó lang niet."],
       },
       {
-        q: "Bij welk niveau hoort **veel praktijk + leren met je handen**?",
+        q: "Bij welk niveau hoort **veel praktijk en leren met je handen**?",
         options: ["vmbo", "vwo", "universiteit", "havo"],
         answer: 0,
         wrongHints: [null, "Het vwo heeft juist de meeste theorie. Welk niveau werkt veel met de handen?", "De universiteit komt pas na de middelbare school.", "Havo heeft veel theorie. Welk niveau heeft de meeste praktijk?"],
@@ -108,7 +108,7 @@ const steps = [
         q: "Naar welke vervolgopleiding gaan vmbo-leerlingen **meestal**?",
         options: ["Het mbo", "De universiteit", "Het hbo", "Havo"],
         answer: 0,
-        wrongHints: [null, "Dat is de route via vwo.", "Dat gaat via havo.", "Dat kan vanuit de tl, maar lees de vraag: 'meestal'. Waar gaan de meeste vmbo'ers heen?"],
+        wrongHints: [null, "Dat is de route via vwo.", "Dat gaat via havo.", "Dat kan vanuit de theoretische leerweg (tl), maar lees de vraag: 'meestal'. Waar gaan de meeste vmbo'ers heen?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -121,12 +121,12 @@ const steps = [
         q: "Waarin verschillen vmbo, havo en vwo **vooral**?",
         options: [
           "In hoe snel en hoe theoretisch de stof gaat",
-          "In hoe slim of dom de leerlingen zijn",
+          "In hoe slim de leerlingen zijn",
           "In hoe groot het schoolgebouw is",
           "In hoe laat de lessen beginnen",
         ],
         answer: 0,
-        wrongHints: [null, "Noemt de uitleg een niveau 'slim' of 'dom'?", "Een schoolgebouw kan groot of klein zijn bij elk niveau. Waar gaat het verschil écht over?", "De lessen beginnen op elk niveau ongeveer even laat. Waarin verschilt de stóf?"],
+        wrongHints: [null, "Op elk niveau zitten slimme leerlingen. Waar gaat het verschil volgens de uitleg écht over?", "Een schoolgebouw kan groot of klein zijn bij elk niveau. Waar gaat het verschil écht over?", "De lessen beginnen op elk niveau ongeveer even laat. Waarin verschilt de stóf?"],
       },
       {
         q: "Na welk niveau kun je **meteen** naar de universiteit?",

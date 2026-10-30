@@ -2704,6 +2704,57 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "interpunctie-po stap 1 vraag 1",
+  "hash": "e28788f4efd72c97",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Strikt is interpunctie alleen leestekens; 'leestekens en hoofdletters' is de gangbare schoolse koppeling en de afleiders bevatten alle iets wat er niet bij hoort. Verdedigbaar; niet gewijzigd."
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 2",
+  "hash": "34a9cec8c463da38",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 3",
+  "hash": "bd31466254b9c26b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints zonder lidwoord ('Punt is voor...', 'Komma zit...')."
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 4",
+  "hash": "de18226f10c4edfe",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 5",
+  "hash": "eac1a97591c967cb",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 6",
+  "hash": "ee2e533a457034f5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 7",
+  "hash": "1ee0d97ea699cccd",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "interpunctie-po stap 1 vraag 8",
   "hash": "f52d131d93cddbd3",
   "oordeel": "goed",
@@ -3090,6 +3141,13 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "kalender-rekenen-po stap 1 vraag 1",
+  "hash": "a8ccf5ca08bec5ae",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "kalender-rekenen-po stap 2 vraag 3",
   "hash": "65bbe04f2ab1f0b2",
   "oordeel": "goed",
@@ -3109,6 +3167,42 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 1 vraag 1",
+  "hash": "5e16e5c080a489be",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 1 vraag 2",
+  "hash": "1fda320027b60f76",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 1 vraag 3",
+  "hash": "0174d03141ca1683",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 1 vraag 4",
+  "hash": "108ed79341db2e18",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (Romantiek ca. 1820-1900). Hint bij 1100-1600 noemde 'gregoriaans gezang' — dat is vooral vroeger (vanaf ca. 900); 1100-1600 = middeleeuwen + renaissance. Startset: alleen hint aangepas"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 2 vraag 1",
+  "hash": "03952c7209429a5a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "klokkijken stap 1 vraag 1",
@@ -3587,6 +3681,55 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 2",
+  "hash": "de4e2ad3bb37167d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 3",
+  "hash": "6eb0bfbf3d424c7b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 4",
+  "hash": "9ca8516f835e3aeb",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 5",
+  "hash": "a104bbc4885fd04c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 6",
+  "hash": "f263ae842783bda6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 7",
+  "hash": "943cce39a13c4c7a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 8",
+  "hash": "391bfd0e821c15c5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "lichaam-gezondheid-po stap 4 vraag 3",
   "hash": "1e7edba125bcc246",
   "oordeel": "goed",
@@ -3786,6 +3929,121 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Hint bij \"2 jaar\" (afwisselend zomer en winter) rekent het antwoord bijna voor; hint bij \"10 jaar\" verwijst naar \"de uitleg\" terwijl er geen explanation is."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 10",
+  "hash": "e5c61dabe7fe7ab4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 3",
+  "hash": "d7f8029d41ba462d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 4",
+  "hash": "b04d50a3a561b247",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 5",
+  "hash": "30dd42a9ab5d60c6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 6",
+  "hash": "24712b80d262d458",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 7",
+  "hash": "4f0e7b8227d8d55d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 8",
+  "hash": "a70cc19908148040",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 9",
+  "hash": "3ead6052731693a0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 1",
+  "hash": "05937a7d86210a08",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 2",
+  "hash": "77e3918a2e2c4a7e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; '+' in de vraagtekst in plaats van 'en'."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 3",
+  "hash": "168d120b059157b1",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 4",
+  "hash": "51fc16a68dd60e4c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 5",
+  "hash": "f73f59f1c11ffc96",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 6",
+  "hash": "fa73f486ec9cbb8b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "mbo klopt; hint bij 'Havo' gebruikte de afkorting 'tl' die in stap 1 nog niet is uitgelegd."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 7",
+  "hash": "3129115ed9092a6d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 8",
+  "hash": "7a617255bb187b0d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; afleider 'hoe slim of dom de leerlingen zijn' was kwetsend en te absurd (raadbaar)."
  },
  {
   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
@@ -4116,6 +4374,58 @@
   "oordeel": "goed",
   "bron": "wereld-4 dekkende blinde controle 27 okt",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 1",
+  "hash": "a8e1351a21cf7dbe",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 2",
+  "hash": "2a5ee68970ba6cc3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar vraag 1, 2 en 6 van deze stap toetsen drie keer hetzelfde ('van bovenaf'); het antwoord staat als optie in de buurvragen. Niveau laag voor groep 7/8. Niet gewijzigd: inhoud herschrijven va"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 3",
+  "hash": "c9e69973172fdbe0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 4",
+  "hash": "4ac83bdc8f4b1831",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord staat bijna in de vraag ('je bent hier' -> 'waar jij nu staat'), maar het is een bewuste begripsvraag. Hint bij 'waar je naartoe moet' noemde 'startplek' = bijna het antwoord."
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 5",
+  "hash": "21b58d29da8fa024",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 6",
+  "hash": "60f7db74c3bf408f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Herhaling van vraag 1 en 2 (bovenaf); verdedigbaar maar niet mooi. Niet gewijzigd."
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 1 vraag 8",
+  "hash": "668a3f9194e460da",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "plattegrond-legenda-po stap 4 vraag 8",
@@ -5287,11 +5597,60 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "taal-leren-lezen-g3 stap 4 vraag 10",
+  "hash": "ad8bfef5184aa9fb",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 4 vraag 8",
+  "hash": "63e67eb27dc5e1d4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "taal-leren-lezen-g3 stap 4 vraag 9",
   "hash": "a7e69083cfbb8f58",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 5 vraag 5",
+  "hash": "eb1c2a63ed97001d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 5 vraag 6",
+  "hash": "dea29d00882c3e9b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 5 vraag 7",
+  "hash": "a6625dae21f4a3ec",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 5 vraag 8",
+  "hash": "efb3fc96a167a4dc",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 5 vraag 9",
+  "hash": "1b87994609e9a9a2",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "taal-woorden-zinnen-g4 stap 1 vraag 1",

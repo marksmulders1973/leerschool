@@ -70,7 +70,7 @@ const steps = [
         q: "Op een plattegrond staat een stip met 'je bent hier'. Wat betekent dat?",
         options: ["waar jij nu staat", "waar de uitgang is", "waar het toilet is", "waar je naartoe moet"],
         answer: 0,
-        wrongHints: [null, "De uitgang heeft een eigen teken.", "Het toilet heeft een eigen symbool.", "Het is je startplek, niet je doel."],
+        wrongHints: [null, "De uitgang heeft een eigen teken.", "Het toilet heeft een eigen symbool.", "'Je bent hier' zegt iets over nú, niet over waar je nog heen wilt."],
         uitlegPad: {
           stappen: [{ titel: "Jouw startplek", tekst: "De 'je bent hier'-stip laat zien waar jij op dit moment staat. Vanaf daar plan je je route." }],
           niveaus: {
@@ -120,21 +120,21 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Plattegrond van de bibliotheek:\nLinks is de ingang met de stip 'je bent hier'. Vlak naast de ingang is de balie. In het midden staan de boekenkasten. Helemaal rechts zijn de toiletten.\n\nWaar sta je als je naar deze plattegrond kijkt?",
-        options: ["bij de ingang", "bij de balie", "bij de boekenkasten", "bij de toiletten"],
+        q: "Plattegrond van de bibliotheek:\nLinks is de ingang met de stip 'je bent hier'. Vlak naast de ingang is de balie. In het midden staan de boekenkasten. Helemaal rechts zijn de toiletten.\n\nWelke andere plek ligt het dichtst bij de stip 'je bent hier'?",
+        options: ["de balie", "de ingang", "de boekenkasten", "de toiletten"],
         answer: 0,
-        wrongHints: [null, "Waar staat de stip precies?", null, null],
+        wrongHints: [null, "Daar staat de stip zelf. De vraag gaat over een ándere plek, vlak in de buurt.", "Die staan in het midden. Is het midden het dichtst bij de linkerkant?", "Die zijn helemaal rechts, dus juist het verst van de stip."],
         uitlegPad: {
           stappen: [
             {
-              titel: "De stip = jouw plek",
-              tekst: "De stip 'je bent hier' staat bij de ingang. Daar sta jij dus.",
+              titel: "Vanaf de stip kijken",
+              tekst: "De stip 'je bent hier' staat links, bij de ingang. Vlak naast de ingang is de balie. Die ligt dus het dichtst bij de stip.",
             },
           ],
           niveaus: {
-            basis: "Je staat bij de ingang, want daar is de stip.",
-            simpeler: "Waar staat 'je bent hier'?",
-            nogSimpeler: "Staat de stip bij de ingang?",
+            basis: "De balie ligt vlak naast de ingang, dus het dichtst bij de stip.",
+            simpeler: "De stip staat bij de ingang. Welke plek is vlak naast de ingang?",
+            nogSimpeler: "Wat staat er vlak naast de ingang?",
           },
         },
       },

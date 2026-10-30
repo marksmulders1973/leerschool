@@ -8,3 +8,6 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - grammatica-engels stap 7 vraag 1 "Welke is **fout**?" (stijl).
 - Set-indeling: getallen-tot-20-po (telrij) komt in 5|rekenen (te makkelijk); korte-teksten-snappen-g4 stap 1 in 5|begrijpend-lezen; brugklas-orientatie in 8|rekenen (subject?). → padBijGroep/level van die paden nakijken.
 - 4|natuur en 5|engels hebben 0 vragen na de startset (pad = precies 20) → D2 aanvullen.
+- folder-bon-advertentie-po stap 1 vraag 1: brood 3 × €1,20 staat letterlijk in de bon-tabel van de uitleg (zelfde euvel als vraag 5, die wel is herschreven).
+- industriele-revolutie-po stap 1 vraag 4: afleider 'goed weer en veel zon' zwak.
+- topografieNederland.js regel ~2176: zelfde verradende Flevoland-hint bij een losse quizvraag buiten B1.
