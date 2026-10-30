@@ -88,7 +88,7 @@ const steps = [
         q: "Welk getal is **M**?",
         options: ["1000", "500", "100", "2000"],
         answer: 0,
-        wrongHints: [null, "Dat is D.", "Dat is C.", "Dat zouden twee M'en zijn: MM."],
+        wrongHints: [null, "Dat is D.", "Dat is C.", "Zo'n groot getal schrijf je met meer dan één symbool."],
         uitlegPad: {
           stappen: [{ titel: "M = 1000", tekst: "De letter M (van 'mille', duizend) staat voor 1.000." }],
           niveaus: {

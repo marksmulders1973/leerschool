@@ -602,7 +602,7 @@ const steps = [
         q: "Een film begint om 19:45 en duurt 1 uur en 50 minuten. Hoe laat is de film afgelopen?",
         options: ["21:35", "21:05", "20:35", "21:55"],
         answer: 0,
-        wrongHints: [null, "Dat zou maar 1 uur en 20 min duren.", "Dat is maar 50 minuten erbij.", "Iets te veel."],
+        wrongHints: [null, "Dat zou maar 1 uur en 20 min duren.", "Dat is maar 50 minuten erbij.", "Dan ben je te ver doorgeteld. Tel de 50 minuten nog eens precies."],
         uitlegPad: {
           stappen: [{ titel: "Eerst de uren, dan de minuten", tekst: "19:45 + 1 uur = 20:45. Dan + 50 min: 20:45 → 21:00 is 15 min, nog 35 min over → 21:35." }],
           niveaus: {

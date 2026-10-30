@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "21:35 klopt; hint bij 21:55 was telegramzin (\"Iets te veel.\")",
+  "hersteld": true,
+  "wijziging": "wrongHint D herschreven tot volledige zin die de denkfout noemt"
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "14:45 klopt, hints benoemen denkfouten",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "14:55 klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "13:10 klopt (14:00 - 10 - 40)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "45 minuten klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "11:16 aankomst, 4 min te vroeg klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "8:45 + 2x50 = 10:25 klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dienstregeling-roosters-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "13:52 bij halte, bus 14:05 klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "antwoord klopt; hints \"Niet — ...\" en niveaus telegramstijl (\"Eerst lezen.\")",
+  "hersteld": true,
+  "wijziging": "wrongHints B/C en alle niveaus herschreven tot hele zinnen; nogSimpeler verklapt niet meer"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "antwoord klopt; hints en niveaus telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints B/C/D en niveaus herschreven tot hele zinnen"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "antwoord klopt; hints \"Hoort wel — dat IS de essentie\" en niveaus telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints en niveaus herschreven tot hele zinnen"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "20-30% klopt als vuistregel; vraag te stellig (\"moet\"), niveaus telegram",
+  "hersteld": true,
+  "wijziging": "vraag: \"Hoe lang is een goede samenvatting ongeveer...\"; niveaus hele zinnen"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "antwoord stond letterlijk in de vraag (enige zin die gegeven werd); afleiders kwamen niet uit de tekst",
+  "hersteld": true,
+  "wijziging": "vraag uitgebreid met twee detailzinnen + kortom-zin; afleiders B/C zijn nu die detailzinnen, D over sporten; hints en niveaus herschreven"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "hints bij C en D waren identiek en wezen naar \"één hond als voorbeeld\" = omschrijving van het goede antwoord; nogSimpeler telegram (\"Bobby weg\")",
+  "hersteld": true,
+  "wijziging": "hints C/D benoemen nu dat die zin over alle honden gaat (kern); basis/nogSimpeler hele zinnen"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "antwoord klopt; niveaus telegram (\"Niet kopiëren\")",
+  "hersteld": true,
+  "wijziging": "basis en nogSimpeler herschreven tot hele zinnen"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 2 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij 2000 (\"Dat zouden twee M'en zijn: MM\") rekent het antwoord voor (M = 1000)",
+  "hersteld": true,
+  "wijziging": "hint D: \"Zo'n groot getal schrijf je met meer dan één symbool.\""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "antwoord klopt (standpunt = titel, hoort bij vraagtype); niveaus telegram",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven tot hele zinnen"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "antwoord klopt; nogSimpeler \"Niet in tekst\" telegram",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "antwoord klopt; niveaus telegram (\"ipv\", \"Erkent + verschuift\")",
+  "hersteld": true,
+  "wijziging": "basis en nogSimpeler herschreven"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "nogSimpeler \"Beslissende woorden = stellig\" wordt vóór de eerste poging als denkhint getoond en noemt het antwoord; hints C/D telegram",
+  "hersteld": true,
+  "wijziging": "nogSimpeler wordt vraag zonder antwoord; simpeler zonder antwoordwoorden; hints C/D hele zinnen"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "antwoord klopt; nogSimpeler telegram",
+  "hersteld": true,
+  "wijziging": "nogSimpeler herschreven"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "antwoord klopt; nogSimpeler telegram",
+  "hersteld": true,
+  "wijziging": "nogSimpeler herschreven"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "gemiddeld rond 10-11 jaar, alle opties zelfde vorm, veilig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "antwoord klopt; opties waren telegramzinnen zonder lidwoord",
+  "hersteld": true,
+  "wijziging": "alle vier opties met lidwoord en volledige formulering (zelfde volgorde)"
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "9-10 uur past bij advies voor 10-13 jaar; hints kloppen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "raadbaar: alleen het goede antwoord had \"~\"; hints telegram",
+  "hersteld": true,
+  "wijziging": "opties: \"Elke 4 weken\" / \"Elke dag\" / \"Eén keer per jaar\" / \"Elke 2 weken\"; hints hele zinnen"
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "nummer 0800-0432 klopt; vraag was telegramzin",
+  "hersteld": true,
+  "wijziging": "vraag: \"Welk telefoonnummer heeft de **Kindertelefoon**?\""
+ },
+ {
+  "waar": "pubertijd-groei-po stap 4 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "raadbaar: alleen het goede antwoord had \"~\"; vraag en opties telegram (\"jr\")",
+  "hersteld": true,
+  "wijziging": "vraag: \"Tot ongeveer welke leeftijd ontwikkelen je hersenen zich nog flink?\"; alle opties \"Tot ongeveer N jaar\"; hints aangepast"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "blinde keuze = antwoord; hints en niveaus kloppen, tekst staat in de stap waar nodig",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

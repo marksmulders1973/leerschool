@@ -1213,9 +1213,9 @@ const steps = [
             { onderwerp: "Standpunt vs argument", uitleg: "Standpunt = WAT je vindt. Argument = WAAROM je dat vindt. Een tekst heeft 1 standpunt en meerdere argumenten." },
           ],
           niveaus: {
-            basis: "Tekst zegt: 'telefoons horen niet thuis op de basisschool' (mening).",
-            simpeler: "Wat vindt de schrijver? Lees de eerste alinea. 'Ik ben van mening... telefoons NIET op basisschool'. Dat is zijn standpunt",
-            nogSimpeler: "Mening = telefoons niet op school",
+            basis: "De schrijver zegt: 'Telefoons horen niet thuis op de basisschool.' Dat is zijn mening.",
+            simpeler: "Lees de eerste alinea. Na 'Ik ben van mening' staat wat de schrijver vindt. Dat is zijn standpunt.",
+            nogSimpeler: "Wat vindt de schrijver zelf? Zoek de zin na 'Ik ben van mening'.",
           },
         },
       },
@@ -1253,9 +1253,9 @@ const steps = [
             { onderwerp: "Lees de vraag goed", uitleg: "'NIET' kan je makkelijk over het hoofd zien. Onderstreep het mentaal — anders kies je het verkeerde." },
           ],
           niveaus: {
-            basis: "Drie argumenten staan in tekst (afleiding, sociaal, thuis-ouders). 'Te duur' staat er niet → dat is het antwoord.",
-            simpeler: "Vink elk antwoord af in de tekst. Welke staat er NIET? 'Te duur' staat nergens — dat is je antwoord.",
-            nogSimpeler: "Niet in tekst",
+            basis: "De tekst noemt afleiding, het sociale leven en begeleiding door ouders thuis. Dat telefoons te duur zijn, staat er niet.",
+            simpeler: "Zoek elke optie op in de tekst. Welke staat er niet? Over de prijs van telefoons staat nergens iets.",
+            nogSimpeler: "Zoek elke optie op in de tekst. Welke kun je nergens vinden?",
           },
         },
       },
@@ -1295,9 +1295,9 @@ const steps = [
             { onderwerp: "Genuanceerd standpunt", uitleg: "De schrijver is niet 'zwart-wit'. Hij erkent een gedeelte van wat de tegenstander zegt, maar verfijnt het." },
           ],
           niveaus: {
-            basis: "Schrijver: 'klopt, maar thuis ipv school' = erkennen + verschuiven.",
+            basis: "De schrijver zegt: 'Dat klopt, maar dat hoeft niet op school.' Hij geeft het tegenargument dus toe, maar vindt dat het thuis kan.",
             simpeler: "De schrijver zegt: 'ja, dat klopt' (= erkent het) maar voegt toe 'thuis kan dat ook' (= niet op school). Hij negeert het niet, hij denkt mee.",
-            nogSimpeler: "Erkent + verschuift naar thuis",
+            nogSimpeler: "Lees wat de schrijver zegt na 'Dat klopt, maar'. Waar moet het volgens hem gebeuren?",
           },
         },
       },
@@ -1314,8 +1314,8 @@ const steps = [
         wrongHints: [
           null,
           "De schrijver twijfelt nergens — woorden als 'daarom' en 'onze kinderen hebben recht op' zijn beslist.",
-          "Geen ironie of spot — ernstig betoog.",
-          "Wel onderzoek genoemd, maar de schrijver geeft duidelijk persoonlijke mening.",
+          "Er staat geen spot of grapje in de tekst. De schrijver meent het serieus.",
+          "De schrijver noemt wel onderzoek, maar geeft vooral duidelijk zijn eigen mening.",
         ],
         uitlegPad: {
           stappen: [
@@ -1337,9 +1337,9 @@ const steps = [
             { onderwerp: "Toon vs inhoud", uitleg: "De TOON is hoe de schrijver schrijft. De INHOUD is wat hij zegt. Beide kun je los van elkaar beoordelen." },
           ],
           niveaus: {
-            basis: "Tekst gebruikt 'daarom', 'moet', 'recht op' = stellige toon.",
-            simpeler: "Klinkt de schrijver zeker of twijfelend? Lees: 'Ik ben van mening DAT...', 'Daarom: laat de telefoon thuis'. Dat zijn beslissende woorden. Stellig en overtuigd",
-            nogSimpeler: "Beslissende woorden = stellig",
+            basis: "De tekst gebruikt woorden als 'daarom', 'moet' en 'recht op'. Zo klinkt de schrijver stellig en overtuigd.",
+            simpeler: "Klinkt de schrijver zeker of twijfelend? Lees 'Ik ben van mening dat...' en 'Daarom: laat de telefoon thuis'. Dat zijn beslissende woorden.",
+            nogSimpeler: "Twijfelt de schrijver ergens, of weet hij precies wat hij vindt?",
           },
         },
       },
@@ -1408,7 +1408,7 @@ const steps = [
           niveaus: {
             basis: "Alinea 2: ook uitgeschakeld zorgt een telefoon voor afleiding.",
             simpeler: "Zoek 'uitgeschakelde telefoon'. De schrijver zegt dat kinderen er toch aan denken. Dus de telefoon leidt nog steeds af.",
-            nogSimpeler: "Uit = toch afleiding",
+            nogSimpeler: "Lees de zin met 'zelfs' in alinea 2. Wat doet de telefoon daar nog steeds?",
           },
         },
       },
@@ -1467,7 +1467,7 @@ const steps = [
           niveaus: {
             basis: "Alinea 3 begint met 'Ten tweede'.",
             simpeler: "Het eerste argument begint met 'De eerste reden'. Het volgende argument begint met 'Ten tweede'. Dat telt door: één, twee.",
-            nogSimpeler: "Tweede = ten tweede",
+            nogSimpeler: "Het eerste argument begint met 'De eerste reden'. Met welke woorden begint dan het volgende argument?",
           },
         },
       },
