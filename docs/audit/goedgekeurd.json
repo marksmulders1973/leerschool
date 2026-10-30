@@ -741,11 +741,146 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "brief-email-lezen-po stap 1 vraag 1",
+  "hash": "2066a6c1baef4842",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 2",
+  "hash": "72151fb4731619eb",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 3",
+  "hash": "a2b6f14a50ec560a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 4",
+  "hash": "3356071274cafdc4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 5",
+  "hash": "f630bbd9e968812f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 6",
+  "hash": "7f935e3603a6be75",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 7",
+  "hash": "01690d8d40b2e7fd",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 8",
+  "hash": "5a81ecebbaa0cc80",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 1 vraag 9",
+  "hash": "26c890406b17a270",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "brief-email-lezen-po stap 3 vraag 7",
   "hash": "cdf54e0815bed158",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 1",
+  "hash": "1e9f71db76e1f04b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 10",
+  "hash": "0ac92c0b0c38384a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 2",
+  "hash": "248b7fe98f139d17",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 3",
+  "hash": "1fb01127519e45f1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Veel scholen geven 2 of 3 rapporten; vraag was te stellig zonder 'meestal'."
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 4",
+  "hash": "6e27548d5917d0f5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 5",
+  "hash": "5773ab0ee2a4a323",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar de afleider 'aula' had geen hint (null)."
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 6",
+  "hash": "19a52345711620fb",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 7",
+  "hash": "3b3a690e3ca1353a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 8",
+  "hash": "f55030ffce4dd9e6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 1 vraag 9",
+  "hash": "fc55d12135073321",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "brugklas-orientatie stap 3 vraag 8",
@@ -814,11 +949,75 @@
   "reden": "Hints bij 10:00 en 07:00 geven samen de som voor (15 + 7), en de bewerking kiezen is de hele opgave."
  },
  {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 1",
+  "hash": "fa11609b8177a089",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Startset-vraag; 17 ÷ 5 = 3 rest 2 nagerekend, hints kloppen; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 10",
+  "hash": "3b968f6cbb3d11bb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "62 ÷ 8 = 7 rest 6 nagerekend (7×8=56); hints kloppen; niveaus basis gaf het antwoord, nogSimpeler was een telegramsom."
+ },
+ {
   "waar": "deelsommen-met-rest-po stap 1 vraag 2",
   "hash": "a871c664491e28a7",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 3",
+  "hash": "e7238842ff17c89b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis was letterlijk het antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 4",
+  "hash": "bc22826ae3bacee1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "30 ÷ 6 = 5 rest 0 nagerekend, hints kloppen (6×6=36>30); niveaus basis gaf het antwoord, nogSimpeler was een telegramvraag."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 5",
+  "hash": "700042bdd43e016c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "41 ÷ 7 = 5 rest 6 nagerekend (5×7=35, 41−35=6), hints kloppen; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 6",
+  "hash": "2931c6b8edeb7270",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "50 ÷ 8 = 6 rest 2 nagerekend (6×8=48), hints kloppen; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 8",
+  "hash": "274cd7eb35024b54",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "38 ÷ 9 = 4 rest 2 nagerekend (4×9=36); hints kloppen (4×9+4=40, 5×9=45>38, 3×9+8=35); niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 9",
+  "hash": "d5d4f3cede4ea3b9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "42÷7=6 r0; 43÷6=7 r1, 26÷4=6 r2, 33÷5=6 r3 nagerekend; niveaus basis gaf het antwoord."
  },
  {
   "waar": "delen-po stap 1 vraag 7",
@@ -3477,6 +3676,78 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 1",
+  "hash": "d5f4151e491b816f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis en simpeler gaven het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 2",
+  "hash": "b25ae7a3469db39c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 3",
+  "hash": "533054bf35734324",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 4",
+  "hash": "1c2d0367b9119829",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint 'Geen hoofdletter midden in een woord.' was een telegramzin; niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 5",
+  "hash": "04bb876e7ca43c40",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed (hint bij 3 stukken benoemt 'twee woorden'); niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 6",
+  "hash": "47e22c34e1fd8eec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis en simpeler gaven het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 7",
+  "hash": "bbd84ac9558d9eae",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar afleiders 'zan + dkasteel' en 'zandka + steel' waren absurde knipsels (raadbaar); niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 8",
+  "hash": "4965da8fc3a45384",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed (afleiders zijn echte fouten: volgorde, spatie, tussen-s); niveaus basis gaf het antwoord."
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 1 vraag 9",
+  "hash": "491f662f2a2bbc27",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis gaf het antwoord."
+ },
+ {
   "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
   "hash": "cefcb9dd1b4da98b",
   "oordeel": "goed",
@@ -3659,6 +3930,78 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Fictief schema, maar suggereert dat schooladvies uit een toetsscore 525-550 volgt; stand 2026 geeft de leerkracht het advies en heeft de Doorstroomtoets geen Cito-schaal 501-550."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 1",
+  "hash": "bf4aa629af0db59b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt. Hint bij 'informeren' was een telegramzin die het antwoord omschreef; niveaus basis/simpeler gaven het antwoord in telegramstijl."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 2",
+  "hash": "6ba6ef9ab1aac877",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus waren telegramzinnen met het antwoord in basis ('Reclame = Overtuigen.')."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 3",
+  "hash": "80aea5b79aadfa5c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus telegramstijl met antwoord in basis."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 4",
+  "hash": "68d14345cdb8852c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus telegramstijl ('Gedicht = A.')."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 5",
+  "hash": "144ae2f5fb60cb89",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vreemde vraagzin ('welk tekstdoel start hier?'); niveaus telegramstijl met antwoord in basis."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 6",
+  "hash": "da0d2e44c61654c2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis/simpeler gaven het antwoord ('Recept = Instrueren.', 'Stappen = I')."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 7",
+  "hash": "e06b3499bfa8fe83",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus telegramstijl met antwoord in basis."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 8",
+  "hash": "a2c5ea90bbd5811b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus basis/simpeler gaven het antwoord."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 1 vraag 9",
+  "hash": "43769faf7e013b1b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt met de toets-truc in de staptekst; niveaus basis was het antwoord ('Eerste en laatste zin.') en nogSimpeler een telegramzin."
  },
  {
   "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
@@ -4581,6 +4924,71 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 1",
+  "hash": "45d2b62ccac594a5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 2",
+  "hash": "22b4f15f2b5322b4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 3",
+  "hash": "4d50e015a8d91f16",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 4",
+  "hash": "c402f53a7be3f2b3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 5",
+  "hash": "6d82cd9ee7049be2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar afleider 'De vloer' stond niet in de zin en was absurd; samen met 'De keuken' werd de vraag 50/50 raadbaar."
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 6",
+  "hash": "8c5b4d54c605f4e4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 7",
+  "hash": "f74fb16a681999fd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie was veel langer dan de rest en bevatte zelf het woord 'oorzaak' (raadbaar door vorm)."
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 8",
+  "hash": "931db17566be8e95",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 9",
+  "hash": "cb5334fe634189c3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "tijd-snelheid-afstand-po stap 5 vraag 6",

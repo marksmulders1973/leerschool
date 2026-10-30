@@ -65,7 +65,7 @@ const steps = [
         wrongHints: [null, "5,0 is nog onvoldoende.", "Een 4 of een 5 is nog onvoldoende. Waar begint voldoende?", "Een 5,8 is ook al een voldoende. Waar ligt de grens dan precies?"],
       },
       {
-        q: "Hoeveel **rapporten** krijg je per jaar op de middelbare school?",
+        q: "Hoeveel **rapporten** krijg je meestal per jaar op de middelbare school?",
         options: ["3-4", "1", "8-10", "2"],
         answer: 0,
         wrongHints: [null, "Hoor je dan maar één keer per jaar hoe je ervoor staat?", "Dan kreeg je bijna elke maand een rapport. Is dat zo?", "Na elke periode van het jaar komt er een rapport. Hoeveel periodes zijn er?"],
@@ -89,7 +89,7 @@ const steps = [
         wrongHints: [
           null,
           "Zo gaat het vaak op de basisschool. Wat volg je op de middelbare school?",
-          null,
+          "In de aula zit je in de pauze of bij een grote bijeenkomst. Waar krijg je de gewone lessen?",
           "Wie bepaalt waar je les hebt? Kijk naar je rooster.",
         ],
       },

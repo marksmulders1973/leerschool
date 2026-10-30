@@ -1,0 +1,10 @@
+# Na B1 nog nalopen (startset-vragen die nakijkers bewust lieten staan, 30 okt 2026)
+Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze opties/vraagteksten verdienen alsnog een fix (met startsets-test erna):
+- sterren-planeten stap 6 vraag 1: afleider "Zon" is geen planeet → feitelijk 3 opties.
+- sterren-planeten stap 4 vraag 2: afleider "Columbus" absurd; stap 6 vraag 2 en stap 8 vraag 1-2: opties met "+".
+- recyclen-afval-po stap 1 vraag 1-2: telegramzinnen in vraag + absurde afleiders.
+- werkwoordsspelling-dt stap 3 vraag 3: opties zijn zinnen zonder punt.
+- woordenschat-engels-po stap 3 vraag 4 "in Engels" → ✅ al hersteld door coördinator.
+- grammatica-engels stap 7 vraag 1 "Welke is **fout**?" (stijl).
+- Set-indeling: getallen-tot-20-po (telrij) komt in 5|rekenen (te makkelijk); korte-teksten-snappen-g4 stap 1 in 5|begrijpend-lezen; brugklas-orientatie in 8|rekenen (subject?). → padBijGroep/level van die paden nakijken.
+- 4|natuur en 5|engels hebben 0 vragen na de startset (pad = precies 20) → D2 aanvullen.

@@ -35,9 +35,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee woorden samen", tekst: "Een samenstelling bestaat uit twee losse woorden die samen één nieuw woord vormen, zoals voet + bal = voetbal." }],
           niveaus: {
-            basis: "Een samenstelling = twee woorden samengevoegd tot één.",
-            simpeler: "Uit hoeveel woorden bestaat een samenstelling? Uit twee.",
-            nogSimpeler: "Is 'voetbal' gemaakt van voet + bal?",
+            basis: "Denk aan 'voetbal': kun je dat woord in twee stukken knippen die allebei een echt woord zijn?",
+            simpeler: "'Voet' is een woord en 'bal' is een woord. Samen vormen ze één nieuw woord. Wat is een samenstelling dan?",
+            nogSimpeler: "Een samenstelling is één woord dat gemaakt is van twee losse woorden, zoals voet + bal.",
           },
         },
       },
@@ -49,7 +49,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee echte woorden", tekst: "Voetbal = voet + bal. Allebei zijn het op zichzelf een woord." }],
           niveaus: {
-            basis: "voet + bal samen = voetbal.",
+            basis: "Zeg 'voetbal' langzaam. Welke twee echte woorden hoor je?",
             simpeler: "Welke twee échte woorden zitten erin?",
             nogSimpeler: "Voet en … bal?",
           },
@@ -63,8 +63,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee woorden erin", tekst: "Tafelpoot = tafel + poot, dus een samenstelling. 'olifant', 'vakantie' en 'limonade' kun je niet in twee echte woorden knippen." }],
           niveaus: {
-            basis: "tafelpoot (tafel + poot) is een samenstelling.",
-            simpeler: "Welk woord kun je in twee woorden knippen?",
+            basis: "Probeer elk woord in twee stukken te knippen. Bij welk woord zijn allebei de stukken een echt woord?",
+            simpeler: "Is 'oli' een woord? Is 'va' een woord? Is 'limo' een woord? En 'tafel'?",
             nogSimpeler: "In welk woord zitten twee woorden: tafelpoot?",
           },
         },
@@ -73,11 +73,11 @@ const steps = [
         q: "Hoe schrijf je een samenstelling?",
         options: ["aan elkaar, als één woord", "met een streepje tussen de woorden", "los, met een spatie ertussen", "met een hoofdletter in het midden"],
         answer: 0,
-        wrongHints: [null, "Schrijf je 'voet-bal'? Kijk hoe 'voetbal' in de les staat.", "Zie je een spatie in 'tafelpoot'?", "Geen hoofdletter midden in een woord."],
+        wrongHints: [null, "Schrijf je 'voet-bal'? Kijk hoe 'voetbal' in de les staat.", "Zie je een spatie in 'tafelpoot'?", "Een hoofdletter midden in een woord gebruiken we in het Nederlands niet."],
         uitlegPad: {
           stappen: [{ titel: "Eén woord", tekst: "Een samenstelling schrijf je aan elkaar: voetbal, tafelpoot — niet 'voet bal'." }],
           niveaus: {
-            basis: "Een samenstelling schrijf je als één woord, aan elkaar.",
+            basis: "Kijk naar 'voetbal' en 'tafelpoot' in de les: zie je daar een spatie of een streepje?",
             simpeler: "Schrijf je 'voetbal' los of aan elkaar?",
             nogSimpeler: "Is 'voetbal' één woord?",
           },
@@ -91,7 +91,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee echte woorden", tekst: "Speelgoedwinkel = speelgoed + winkel. Allebei zijn het echte woorden." }],
           niveaus: {
-            basis: "speelgoed + winkel = speelgoedwinkel.",
+            basis: "Zoek de plek waar je 'speelgoedwinkel' kunt knippen in twee stukken die allebei een echt woord zijn.",
             simpeler: "Welke twee échte woorden zitten erin?",
             nogSimpeler: "Speelgoed en … winkel?",
           },
@@ -105,18 +105,18 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eén woord is geen samenstelling", tekst: "'Bloemen' is het meervoud van bloem — één woord, geen twee samengevoegde woorden." }],
           niveaus: {
-            basis: "'Bloemen' is één woord, geen twee woorden samengevoegd.",
-            simpeler: "Kun je 'bloemen' in twee echte woorden knippen? Nee.",
-            nogSimpeler: "Bij welk woord kun je geen twee losse woorden vinden?",
+            basis: "Knip elk woord in twee stukken. Bij welk woord vind je géén twee echte woorden?",
+            simpeler: "Bloembol, bloemkool en bloemperk kun je knippen in bloem + iets. Kun je dat bij 'bloemen' ook?",
+            nogSimpeler: "'Bloemen' is het meervoud van bloem: één woord, dus geen samenstelling.",
           },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Uit welke twee woorden bestaat 'zandkasteel'?",
-        options: ["zand + kasteel", "zan + dkasteel", "zandkas + teel", "zandka + steel"],
+        options: ["zand + kasteel", "zand + kas + teel", "zandkas + teel", "zand + kastelen"],
         answer: 0,
-        wrongHints: [null, "Is 'zan' een echt woord?", "Is 'teel' een echt woord?", "Zijn allebei de stukjes echte woorden?"],
+        wrongHints: [null, "'Kas' is wel een woord, maar is 'teel' dat ook? En hoeveel woorden zoek je?", "Is 'teel' een echt woord?", "Staat er 'kastelen' in 'zandkasteel'? Kijk naar het eind van het woord."],
         uitlegPad: {
           stappen: [
             {
@@ -125,9 +125,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "zandkasteel = zand + kasteel: twee echte woorden.",
+            basis: "Knip 'zandkasteel' op de plek waar twee echte woorden ontstaan. Zijn allebei de stukken een woord?",
             simpeler: "Waar bouw je een kasteel van op het strand? Van zand.",
-            nogSimpeler: "zand + kasteel = ?",
+            nogSimpeler: "zand + kasteel = zandkasteel.",
           },
         },
       },
@@ -149,9 +149,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "boom + hut = boomhut, aan elkaar.",
+            basis: "Een samenstelling schrijf je aan elkaar, zonder spatie en zonder extra letters. Welk woord komt eerst?",
             simpeler: "Een hut in een boom heet een ...",
-            nogSimpeler: "boom + hut = ?",
+            nogSimpeler: "boom + hut = boomhut, aan elkaar.",
           },
         },
       },
@@ -178,9 +178,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "huis + deur = huisdeur: twee woorden samen.",
+            basis: "Knip 'huisdeur' in twee stukken. Zijn allebei de stukken een echt woord?",
             simpeler: "Welke twee woorden zie je in 'huisdeur'?",
-            nogSimpeler: "huis + deur = ?",
+            nogSimpeler: "huis + deur = huisdeur: twee woorden samen, dus een samenstelling.",
           },
         },
       },

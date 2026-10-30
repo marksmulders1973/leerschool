@@ -203,14 +203,14 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           "De kraan bleef lekken",
           "De keuken stond vol water",
           "De keuken",
-          "De vloer",
+          "Niemand draaide de kraan dicht",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat is het gevolg — het water stond er dóór. Kijk wat er achter het woord 'doordat' staat.",
           "De keuken is een plek, geen oorzaak of gevolg. Stel de waardoor-vraag.",
-          "Staat de vloer in de zin? Zoek wat er achter 'doordat' staat.",
+          "Dat staat niet in de zin. Blijf bij wat er echt staat en kijk wat er achter 'doordat' staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -256,9 +256,9 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
       {
         q: "Wat is een oorzaak?",
         options: [
-          "Waardoor iets komt — de oorzaak gebeurt eerst",
-          "Wat er helemaal op het laatst gebeurt",
-          "De mening van de schrijver",
+          "Iets waardoor iets anders gebeurt",
+          "Iets wat er helemaal als laatste gebeurt",
+          "Iets wat de schrijver ervan vindt",
           "Een moeilijk woord in de tekst",
         ],
         answer: 0,
