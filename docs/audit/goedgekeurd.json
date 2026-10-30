@@ -4785,11 +4785,257 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 1",
+  "hash": "2dbea4a62f0779ec",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 10",
+  "hash": "33f3f7c211809a1c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 11",
+  "hash": "1ba61645a98f57aa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties in telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 12",
+  "hash": "4cff42ba43c7476a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties zonder lidwoord; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 14",
+  "hash": "06cd086a909d15d6",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 15",
+  "hash": "b3fa548e192c0ccd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 16",
+  "hash": "b9909c7ad3952fb6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 17",
+  "hash": "e7371e56b994927a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint 'mag niet' te stellig"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 18",
+  "hash": "d65b0ab55999b15e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 19",
+  "hash": "b8ee6850e875de96",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 2",
+  "hash": "c7159d12e90d8a17",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 20",
+  "hash": "18ec4994379c6540",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 21",
+  "hash": "f52539fcba910563",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 22",
+  "hash": "8a090b05abda229b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 23",
+  "hash": "89ba4a9f142f6153",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 24",
+  "hash": "bfdd12e996898621",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 25",
+  "hash": "93424fba7bc391d5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 27",
+  "hash": "7af5c43f34a23451",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 28",
+  "hash": "0c7901993ea5e593",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints te stellig/onnauwkeurig ('Verhaal is fictie')"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 29",
+  "hash": "59479a254b8433cb",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 3",
+  "hash": "d180b906991b626d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 30",
+  "hash": "7f7ebc441b4a9ed4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 31",
+  "hash": "56b3c305553e90d3",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 32",
+  "hash": "cea7d8496242ebe1",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 33",
+  "hash": "0536ae789116a0b6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 34",
+  "hash": "8e092c8f896e1e93",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 35",
+  "hash": "cfd4e06713e7053c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 4",
+  "hash": "bc88d43f7e58bc4d",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 5",
+  "hash": "457e982a9b191510",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 54",
   "hash": "33e00a084ff34cc2",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 6",
+  "hash": "2f05577d1d183627",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 7",
+  "hash": "3ea35a690965f510",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 8",
+  "hash": "49a73517c91678c3",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 9",
+  "hash": "d984b655ebe70a28",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 39",
@@ -14500,6 +14746,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "tijd-snelheid-afstand-po stap 1 vraag 10",
+  "hash": "29158abe15366a8f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Twee foute opties zonder wrongHint; antwoord klopt (november 30 dagen)"
+ },
+ {
   "waar": "tijd-snelheid-afstand-po stap 1 vraag 2",
   "hash": "5b081749304e4a12",
   "oordeel": "twijfel",
@@ -15982,11 +16236,112 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 1",
+  "hash": "da5dd00b2bf87dd2",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 10",
+  "hash": "74525dff375cbe7b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+  "hash": "6f8a6d80c627c4b1",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 12",
+  "hash": "a96b8546d4d22c9c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
   "hash": "6bb3739ac1d20352",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 16",
+  "hash": "06ce274a9e0b92a7",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 17",
+  "hash": "f3f1fa90da6b4763",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 18",
+  "hash": "394776479a1500df",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 19",
+  "hash": "62e3590274fff220",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 20",
+  "hash": "49a8590168f91867",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramopties, 'ZONDER' en 'NL'"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 3",
+  "hash": "9a89c8d93d6ff399",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 5",
+  "hash": "159657caad9d9a94",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Ongrammaticale vraagzin en '+'-opties"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 6",
+  "hash": "2eed02659f1c2b8a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Welke is een gemaal?' vreemde zin; opties zonder lidwoord"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 8",
+  "hash": "890eba5d1eda368f",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+  "hash": "7ec44554487d1156",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "waterkringloop-po stap 1 vraag 2",

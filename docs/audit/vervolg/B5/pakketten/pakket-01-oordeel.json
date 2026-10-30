@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 11",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Opties in telegramstijl",
+  "hersteld": true,
+  "wijziging": "'In de' toegevoegd aan opties A en B"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 12",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Opties zonder lidwoord; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "Lidwoord 'Een' bij opties A en D; niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 13",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord stond in de vraag ('bijvoorbeeld' -> 'een voorbeeld')",
+  "hersteld": true,
+  "wijziging": "Vraag gaat nu over 'zoals' in een voorbeeldzin; wrongHints aangepast"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 15",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot proefzin-vraag"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 16",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot proefzin-vraag"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint 'mag niet' te stellig",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven; hint D: 'stoort anderen'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 19",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 22",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 25",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven met vergelijkingsvoorbeeld"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 26",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Antwoord stond in de vraag ('voorbeeld' -> 'Bijvoorbeeld')",
+  "hersteld": true,
+  "wijziging": "Optie A 'Bijvoorbeeld' -> 'Zoals'; vraag: 'Welk signaalwoord kondigt een voorbeeld aan?'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 27",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 28",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Hints te stellig/onnauwkeurig ('Verhaal is fictie')",
+  "hersteld": true,
+  "wijziging": "wrongHints verslag en verhaal herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 29",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 30",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 31",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 32",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 33",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 34",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 35",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint feitelijk onjuist: Friesland heeft wel polders; Drenthe-hint vaag",
+  "hersteld": true,
+  "wijziging": "wrongHints Friesland en Drenthe herschreven"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Hint onjuist: Brouwersdam ligt op de grens Zuid-Holland/Zeeland, niet 'in Zeeland'",
+  "hersteld": true,
+  "wijziging": "Brouwersdam-hint: tussen Goeree-Overflakkee en Schouwen-Duiveland"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Ongrammaticale vraagzin en '+'-opties",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Waarvoor werd een windmolen vroeger gebruikt?'; '+' -> 'en', lidwoorden"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "'Welke is een gemaal?' vreemde zin; opties zonder lidwoord",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is een gemaal?'; opties met 'Een'"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Telegramzin en hint feitelijk onjuist ('aardbevingen nauwelijks in NL', Groningen)",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Waartegen beschermen de Deltawerken Nederland?'; opties meervoud; hints aardbeving en lawine herschreven"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 13",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Hint 'hij bouwde juist' omschreef het goede antwoord",
+  "hersteld": true,
+  "wijziging": "Hint C herschreven (tijd + achternaam als denkprikkel)"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 14",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Hint bij optie C verraadde het antwoord; onnette vraagzin",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is het verschil tussen een windmolen en een windturbine?'; hint C herschreven"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en niveaus in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 20",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramopties, 'ZONDER' en 'NL'",
+  "hersteld": true,
+  "wijziging": "Vraag en opties als volledige zinnen"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 1 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Twee foute opties zonder wrongHint; antwoord klopt (november 30 dagen)",
+  "hersteld": true,
+  "wijziging": "wrongHints voor augustus en januari toegevoegd (31 dagen)"
+ }
+]

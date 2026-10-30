@@ -870,7 +870,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vraag noemt 'vleermuis-tijd' → zoek 'avond' of 'nacht' in de tekst." }],
           basiskennis: [{ onderwerp: "Slim lezen", uitleg: "Niet alles even diep lezen — focus waar je het antwoord verwacht." }],
           niveaus: {
-            basis: "Lees eerst de vragen.",
+            basis: "Bedenk: als je al weet wat er gevraagd wordt, waar let je dan op tijdens het lezen?",
             simpeler: "Toets-tip: kijk eerst even welke vragen er gesteld worden. Dan weet je waar je naar moet zoeken.",
             nogSimpeler: "De vragen",
           },
@@ -926,7 +926,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Soorten: oorzaak/gevolg (omdat, daardoor), tegenstelling (maar, toch), opsomming (en, ook)." }],
           basiskennis: [{ onderwerp: "Verbanden", uitleg: "Snel signaalwoorden vinden = snel verbanden begrijpen = sneller Toets-tekst-vragen oplossen." }],
           niveaus: {
-            basis: "Toch.",
+            basis: "Zoek het woord dat de twee zinnen verbindt en iets onverwachts aankondigt: weinig regen, en tóch leven er dieren.",
             simpeler: "'Toch' betekent 'maar' — geeft een tegenstelling aan. In de Sahara valt bijna geen regen, MAAR (toch) leven er kamelen.",
             nogSimpeler: "Toch = tegenstelling",
           },
@@ -962,14 +962,14 @@ const steps = [
       {
         q: "Waar vind je meestal de **hoofdgedachte** van een tekst?",
         ref: "1F",
-        options: ["Eerste of laatste alinea", "Tweede of derde alinea", "Onder het plaatje of de foto", "In de voetnoot onderaan"],
+        options: ["In de eerste of laatste alinea", "In de tweede of derde alinea", "Onder het plaatje of de foto", "In de voetnoot onderaan"],
         answer: 0,
         wrongHints: [null, "Soms, maar meestal niet. Waar zet een schrijver het belangrijkste?", "Een plaatje hoort niet bij de tekst zelf.", "Een voetnoot is een klein detail."],
       },
       {
         q: "Wat is een **alinea**?",
         ref: "1F",
-        options: ["Groep zinnen over één onderwerp", "Eén lange zin met veel komma's", "De hele tekst van begin tot eind", "Plaatje met een onderschrift"],
+        options: ["Een groep zinnen over één onderwerp", "Eén lange zin met veel komma's", "De hele tekst van begin tot eind", "Een plaatje met een onderschrift"],
         answer: 0,
         wrongHints: [null, "Een alinea heeft meer dan één zin.", "Een tekst heeft meestal meerdere alinea's.", "Een plaatje is geen tekst."],
         uitlegPad: {
@@ -989,18 +989,18 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tel met je vinger: hoe vaak springt de tekst in / staat er een witregel? Zoveel alinea's zijn er." }],
           niveaus: {
-            basis: "Alinea = groep zinnen over één onderwerp.",
+            basis: "Kijk naar een bladzijde in een boek: de tekst is verdeeld in stukjes met een witregel of inspringing ertussen. Hoe noem je zo'n stukje?",
             simpeler: "Tekst-stukje met witregel ervoor en erna.",
             nogSimpeler: "Stukje tekst over 1 ding.",
           },
         },
       },
       {
-        q: "Wat kondigt het signaalwoord **'bijvoorbeeld'** aan?",
+        q: "Wat kondigt het signaalwoord **'zoals'** aan in de zin: 'Ik hou van fruit, zoals appels en peren.'?",
         ref: "1F",
         options: ["Een voorbeeld", "Een tegenstelling", "Een gevolg", "Een conclusie"],
         answer: 0,
-        wrongHints: [null, "Zet 'bijvoorbeeld' twee dingen tegenover elkaar? Probeer: 'Ik hou van fruit, bijvoorbeeld appels.'", "Vertelt het woord wat er dóór iets gebeurt? Probeer: 'Ik hou van fruit, bijvoorbeeld appels.'", "Een conclusie vat alles samen aan het eind. Doet 'bijvoorbeeld' dat?"],
+        wrongHints: [null, "Zet 'zoals' hier twee dingen tegenover elkaar? Kijk of fruit en appels elkaars tegendeel zijn.", "Vertelt het woord wat er dóór iets gebeurt? Lees de zin nog eens.", "Een conclusie vat alles samen aan het eind. Doet 'zoals' dat in deze zin?"],
       },
       {
         q: "Toets-strik: er staat **'NIET'** in een vraag. Wat doe je?",
@@ -1031,7 +1031,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Omdat = waarom? Daardoor = wat gebeurt er dan?" }],
           niveaus: {
-            basis: "'Omdat' = de REDEN. 'Daardoor' = het GEVOLG.",
+            basis: "Maak een zin: 'Ik blijf binnen, omdat het regent.' Vertelt het stuk na 'omdat' wat er daarna gebeurt, of waaróm ik binnen blijf?",
             simpeler: "Omdat hij ziek IS → reden. Daardoor blijft hij THUIS → gevolg.",
             nogSimpeler: "Omdat = waarom. Daardoor = dus.",
           },
@@ -1060,7 +1060,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Daardoor = dus = vandaar. Allemaal gevolg-woorden." }],
           niveaus: {
-            basis: "Daardoor = gevolg-signaal.",
+            basis: "Maak een zin: 'Het regende hard. Daardoor werd ik nat.' Vertelt het stuk na 'daardoor' waaróm het gebeurde, of wat er daarna gebeurde?",
             simpeler: "Wat gebeurde DOOR die actie? = daardoor.",
             nogSimpeler: "Daardoor = dus.",
           },
@@ -1070,7 +1070,7 @@ const steps = [
         q: "*Toets-tip*: een **lange tekst** lees je **eerst** ...?",
         options: ["Globaal", "Woord voor woord", "Alleen het einde", "Hardop"],
         answer: 0,
-        wrongHints: [null, "Woord voor woord kost veel tijd. Wat wil je bij de eerste keer lezen weten?", "Alleen het einde mist de rest. Wat wil je bij de eerste keer lezen weten?", "Hardop lezen mag niet in de toetsklas en kost tijd."],
+        wrongHints: [null, "Woord voor woord kost veel tijd. Wat wil je bij de eerste keer lezen weten?", "Alleen het einde mist de rest. Wat wil je bij de eerste keer lezen weten?", "Hardop lezen stoort anderen in de toetsklas en kost tijd."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst overzicht, dan details", tekst: "Bij een lange Toets-tekst NIET meteen woord-voor-woord lezen. Eerst snel een overzicht maken." },
@@ -1085,7 +1085,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Tekst van 4 alinea's: lees titel + alinea 1 + alinea 4 voor overzicht. Vraag 2 gaat over alinea 3? → lees alleen die alinea grondig." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij Toets-leestoetsen zit veel info IN de tekst maar je hoeft niet alles te onthouden. Zoek per vraag." }],
           niveaus: {
-            basis: "Eerst globaal (titel + koppen). Dan per vraag gericht lezen.",
+            basis: "Bij de eerste keer lezen wil je alleen weten waar de tekst ongeveer over gaat. Hoe lees je dan: snel of heel precies?",
             simpeler: "Snel overzicht eerst, dan per vraag het stukje zoeken.",
             nogSimpeler: "Snel kijken, dan zoeken.",
           },
@@ -1120,7 +1120,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Detail-vraag = vraag naar feit dat ergens precies in de tekst staat. Vinger erbij." }],
           niveaus: {
-            basis: "Detail-vraag = vraag naar specifieke info uit de tekst.",
+            basis: "Het woord 'detail' betekent: een klein onderdeel. Gaat zo'n vraag over de hele tekst, of over één klein stukje?",
             simpeler: "Zoek in tekst, niet raden of eigen mening.",
             nogSimpeler: "Feit in tekst opzoeken.",
           },
@@ -1148,7 +1148,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik ben moe doordat ik laat naar bed ging.' → reden = laat naar bed." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'WAAROM gebeurde het?' Antwoord = reden." }],
           niveaus: {
-            basis: "Te weinig water.",
+            basis: "Na 'doordat' staat waaróm iets gebeurt. Lees wat er in de zin achter 'doordat' staat.",
             simpeler: "Doordat = reden. Wat staat erna? Te weinig water.",
             nogSimpeler: "Reden = wat erna staat = water.",
           },
@@ -1177,7 +1177,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Tekst over hond uitlaten met regen: hoofdgedachte = 'ook bij slecht weer is uitlaten nodig'. NIET: 'het regende veel'." }],
           basiskennis: [{ onderwerp: "Anders dan", uitleg: "Onderwerp ≠ hoofdgedachte. Onderwerp = WAAR de tekst over gaat. Hoofdgedachte = WAT de schrijver erover zegt." }],
           niveaus: {
-            basis: "Belangrijkste boodschap.",
+            basis: "Stel je voor dat je de tekst in één zin aan een vriend moet navertellen. Wat vertel je dan?",
             simpeler: "Wat zegt de tekst écht? = hoofdgedachte",
             nogSimpeler: "Belangrijkste",
           },
@@ -1213,16 +1213,16 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Feit = waar voor iedereen. Mening = waar voor één persoon." }],
           niveaus: {
-            basis: "Feit kun je controleren, mening niet.",
+            basis: "Vergelijk: 'Amsterdam ligt in Nederland' en 'Amsterdam is de mooiste stad'. Welke zin kun je opzoeken, en welke zin is wat iemand vindt?",
             simpeler: "Feit = bewijsbaar. Mening = persoonlijk.",
             nogSimpeler: "Controleerbaar",
           },
         },
       },
       {
-        q: "Welk woord wijst op een **voorbeeld**?",
+        q: "Welk signaalwoord kondigt een **voorbeeld** aan?",
         ref: "1F",
-        options: ["Bijvoorbeeld", "Daardoor", "Bovendien", "Echter"],
+        options: ["Zoals", "Daardoor", "Bovendien", "Echter"],
         answer: 0,
         wrongHints: [null, "Probeer: 'Ik eet graag fruit, ... appels.' Past dit woord op de puntjes?", "Probeer: 'Ik eet graag fruit, ... appels.' Past dit woord op de puntjes?", "Probeer: 'Ik eet graag fruit, ... appels.' Past dit woord op de puntjes?"],
       },
@@ -1241,7 +1241,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Alinea over honden — kernzin: 'Honden zijn loyale dieren.' De rest geeft voorbeelden." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofdgedachte = boodschap van HELE tekst. Kernzin = boodschap van ÉÉN alinea." }],
           niveaus: {
-            basis: "Kernzin = de zin met de hoofdgedachte van de alinea.",
+            basis: "Als je maar één zin van de alinea mocht houden, welke zin zou je dan kiezen?",
             simpeler: "Belangrijkste zin in alinea = kernzin.",
             nogSimpeler: "Belangrijkste zin",
           },
@@ -1252,7 +1252,7 @@ const steps = [
         ref: "S",
         options: ["Betoog", "Verslag", "Verhaal", "Recept"],
         answer: 0,
-        wrongHints: [null, "Verslag geeft feiten, geen mening.", "Verhaal is fictie.", "Een recept vertelt hoe je iets maakt."],
+        wrongHints: [null, "Een verslag vertelt wat er gebeurd is, zonder je te willen overhalen.", "Een verhaal wil je vooral vermaken, niet overhalen.", "Een recept vertelt hoe je iets maakt."],
       },
       {
         q: "*'Bovendien is er nog een **belangrijk argument**...'* — welk verband geeft 'bovendien' aan?",
@@ -1276,7 +1276,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Reclame: 'Onze pasta is het lekkerst!' → mening van fabrikant. Niet betrouwbaar als feit." }],
           basiskennis: [{ onderwerp: "Bronnen", uitleg: "Wetenschappers, officiële instanties (CBS, RIVM) zijn betrouwbaarder dan reclame of social-media-posts." }],
           niveaus: {
-            basis: "Klopt dit en waarom denkt de schrijver dat?",
+            basis: "Kritisch lezen betekent: niet alles zomaar geloven. Welke vraag stel je dan aan de tekst?",
             simpeler: "Kritisch = vragen naar bewijs.",
             nogSimpeler: "Bewijs zoeken",
           },
@@ -1311,7 +1311,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Receptenboek = volgorde-structuur. Politiek artikel = vaak voor/tegen-structuur." }],
           basiskennis: [{ onderwerp: "Andere structuren", uitleg: "Voorbeeld-opsomming, vergelijking, oorzaak-gevolg." }],
           niveaus: {
-            basis: "Volgorde / stappen.",
+            basis: "Lees de drie woorden achter elkaar: allereerst, vervolgens, ten slotte. Zetten die woorden dingen tegenover elkaar, of zetten ze dingen na elkaar?",
             simpeler: "Eerst/vervolgens/ten slotte = stappen.",
             nogSimpeler: "Stappen",
           },

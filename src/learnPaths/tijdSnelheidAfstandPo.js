@@ -313,7 +313,7 @@ const steps = [
         q: "Welke van deze maanden heeft **30 dagen**?",
         options: ["november", "oktober", "augustus", "januari"],
         answer: 0,
-        wrongHints: [null, "Denk aan het rijmpje over de maanden met 30 dagen.", null, null],
+        wrongHints: [null, "Denk aan het rijmpje over de maanden met 30 dagen.", "Juli en augustus hebben allebei 31 dagen. Denk aan het rijmpje over de maanden met 30 dagen.", "Januari is de eerste maand en heeft 31 dagen. Denk aan het rijmpje over de maanden met 30 dagen."],
         uitlegPad: {
           stappen: [
             {
