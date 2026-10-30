@@ -216,7 +216,7 @@ const steps = [
         q: "Uit welke vorm **verdampt water het snelst**?",
         options: ["Vlakke schaal", "Diep glas", "Gesloten fles", "Theekop"],
         answer: 0,
-        wrongHints: [null, "Klein oppervlak = traag.", "Helemaal niet — gesloten.", "Klein oppervlak."],
+        wrongHints: [null, "In een diep glas raakt maar een klein rondje water de lucht. Gaat verdampen daar snel of langzaam?", "Uit een gesloten fles kan de waterdamp niet weg. Verdampt het water daar dan veel?", "Een theekop is smal: maar een klein stukje water raakt de lucht. Is er een vorm waar meer water de lucht raakt?"],
         uitlegPad: {
           stappen: [
             { titel: "Oppervlak telt", tekst: "Verdampen gebeurt aan het oppervlak. Veel oppervlak = meer plek waar moleculen kunnen vertrekken. Vlakke schaal heeft meer oppervlak dan diep glas." },
@@ -227,7 +227,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Oppervlak", uitleg: "Hoe meer oppervlak, hoe sneller verdamping." }],
           niveaus: {
             basis: "Vlakke schaal.",
-            simpeler: "Verdampen gebeurt aan het oppervlak. Een vlakke schaal heeft meer oppervlak (water-lucht contact) dan een diep glas. Dus verdampt sneller.",
+            simpeler: "Verdampen gebeurt alleen bovenop, waar het water de lucht raakt. In een vlakke schaal raakt veel meer water de lucht dan in een diep glas. Daarom verdampt het daar sneller.",
             nogSimpeler: "Vlakke schaal",
           },
         },

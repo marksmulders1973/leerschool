@@ -301,7 +301,7 @@ const steps = [
         q: "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Welk vak heb je vrijdag het 3e uur?",
         options: ["tekenen", "taal", "gym", "muziek"],
         answer: 0,
-        wrongHints: [null, null, "Dat is vrijdag het 2e uur.", null],
+        wrongHints: [null, "Dat is vrijdag het 1e uur, niet het 3e.", "Dat is vrijdag het 2e uur.", "Dat vak staat niet op vrijdag."],
         uitlegPad: {
           stappen: [
             {
@@ -320,7 +320,7 @@ const steps = [
         q: "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Wanneer heb je muziek?",
         options: ["donderdag het 2e uur", "vrijdag het 2e uur", "donderdag het 1e uur", "vrijdag het 3e uur"],
         answer: 0,
-        wrongHints: [null, "Op vrijdag heb je het 2e uur een ander vak.", null, null],
+        wrongHints: [null, "Op vrijdag heb je het 2e uur een ander vak.", "Op donderdag heb je het 1e uur een ander vak.", "Op vrijdag heb je het 3e uur een ander vak."],
         uitlegPad: {
           stappen: [
             {
@@ -339,7 +339,7 @@ const steps = [
         q: "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Welk vak heb je zowel op donderdag als op vrijdag?",
         options: ["taal", "rekenen", "gym", "muziek"],
         answer: 0,
-        wrongHints: [null, "Kijk of dit vak ook bij vrijdag staat.", null, null],
+        wrongHints: [null, "Kijk of dit vak ook bij vrijdag staat.", "Kijk of dit vak ook bij donderdag staat.", "Kijk of dit vak ook bij vrijdag staat."],
         uitlegPad: {
           stappen: [
             {
@@ -358,7 +358,7 @@ const steps = [
         q: "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Welk vak heb je op vrijdag direct na taal?",
         options: ["gym", "tekenen", "muziek", "rekenen"],
         answer: 0,
-        wrongHints: [null, "Dat is het 3e uur; welk uur komt direct na het 1e uur?", null, null],
+        wrongHints: [null, "Dat is het 3e uur; welk uur komt direct na het 1e uur?", "Dat vak staat niet op vrijdag.", "Dat vak staat niet op vrijdag."],
         uitlegPad: {
           stappen: [
             {

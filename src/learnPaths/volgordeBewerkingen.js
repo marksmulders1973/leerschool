@@ -78,7 +78,7 @@ const steps = [
         q: "**2 + 3 × 4** = ?",
         options: ["14","20","11","24"],
         answer: 0,
-        wrongHints: [null,"Welke bewerking gaat eerst — × of +? Probeer in die volgorde.","Te weinig — heb je de × wel meegenomen?","Te veel — kijk of je niet eerst optelt voor je vermenigvuldigt."],
+        wrongHints: [null,"Welke bewerking gaat eerst — × of +? Probeer in die volgorde.","Te weinig — heb je de × wel meegenomen?","Te veel — heb je de + per ongeluk ook als × gerekend? Kijk goed welk teken waar staat."],
         uitlegPad: {
           stappen: [{ titel: "× eerst", tekst: "× sterker dan +. Eerst 3×4=12, dan 2+12=14." }],
           woorden: [{ woord: "HMVDOA", uitleg: "Haakjes-Machten-Vermenigvuldigen-Delen-Optellen-Aftrekken." }],

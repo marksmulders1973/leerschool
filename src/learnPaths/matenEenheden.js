@@ -113,7 +113,7 @@ const steps = [
         q: "Welke eenheid past bij **het gewicht van een appel**?",
         options: ["g","mm","mL","ton"],
         answer: 0,
-        wrongHints: [null,"Dat is lengte, geen gewicht.","Dat is inhoud (voor vloeistof).","Te groot — een ton is 1000 kg, een appel ligt rond 200 g."],
+        wrongHints: [null,"Dat is lengte, geen gewicht.","Dat is inhoud (voor vloeistof).","Te groot — een ton is 1000 kg, zo zwaar als een kleine auto. Is een appel zo zwaar?"],
         uitlegPad: {
           stappen: [{ titel: "Appel ~ 200 g", tekst: "Een appel weegt ongeveer 200 g. Kies eenheid passend bij afmeting." }],
           woorden: [{ woord: "gram", uitleg: "Eenheid van gewicht. 1000 g = 1 kg." }],
@@ -127,7 +127,7 @@ const steps = [
         q: "**1 km is hoeveel meter?**",
         options: ["1000","100","10","10.000"],
         answer: 0,
-        wrongHints: [null,"Dat is 1 m in cm — andere eenheid.","Te weinig. Denk: 1 km is veel groter dan 10 m.","Te veel — 10.000 m is 10 km."],
+        wrongHints: [null,"Dat is 1 m in cm — andere eenheid.","Te weinig. Denk: 1 km is veel groter dan 10 m.","Te veel. Denk aan 'kilo' in kilogram: hoeveel gram zit daarin? Precies zo veel meters zitten er in één kilometer."],
         uitlegPad: {
           stappen: [{ titel: "1 km = 1000 m", tekst: "Vaste regel: 1 km = 1000 m. Onthoud als kerngetal." }],
           woorden: [{ woord: "km", uitleg: "Kilometer. Kilo = 1000. Dus 1000 m." }],

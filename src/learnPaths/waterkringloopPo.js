@@ -96,7 +96,7 @@ const steps = [
         q: "Welke wolk brengt **onweer**?",
         options: ["Cumulonimbus", "Cirrus", "Stratus", "Altostratus"],
         answer: 0,
-        wrongHints: [null, "Hoog veer.", "Lage laag.", "Middelhoog."],
+        wrongHints: [null, "Een cirrus is een hoge, dunne veerwolk. Daar komt geen regen of onweer uit.", "Een stratus is een lage, grijze laagwolk. Die geeft hooguit wat motregen.", "Een altostratus is een middelhoge grijze sluier. Die geeft hooguit lichte regen, geen onweer."],
         uitlegPad: {
           stappen: [
             { titel: "Cumulonimbus = onweerswolk", tekst: "De **cumulonimbus** is de **grootste + krachtigste** wolksoort. 'Cumulo' = stapel, 'nimbus' = regen. Dus letterlijk: 'stapel-regen-wolk'. Kan **tot 15 km hoog** worden — hoger dan de Mount Everest!" },
@@ -114,8 +114,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Cumulo-NIMBUS = NIMBUS = regen. Plus stapel-vorm. Onthoud die combinatie." }],
           niveaus: {
-            basis: "Cumulonimbus = onweerswolk.",
-            simpeler: "De grote stapel-wolk (tot 15 km hoog) brengt onweer + regen + hagel.",
+            basis: "De onweerswolk is een reusachtige stapelwolk die tot 15 km hoog kan worden.",
+            simpeler: "De grootste stapelwolk, met een platte top als een aambeeld, brengt onweer, regen en hagel.",
             nogSimpeler: "Cumulonimbus",
           },
         },
@@ -130,7 +130,7 @@ const steps = [
         q: "Wat is **ijzel**?",
         options: ['Regen die bevriest bij contact', 'Sneeuw in zachte witte vlokken', 'Hagel in harde ijsbolletjes', 'Mist die laag boven de grond hangt'],
         answer: 0,
-        wrongHints: [null, "Sneeuw valt als zachte vlokken — ijzel maakt de weg spekglad. Hoe komt dat?", "Hagel valt als harde bolletjes uit de lucht — ijzel wordt pas ijs als het de grónd raakt.", "Mist is een wolk aan de grond, er valt niets — bij ijzel valt er wél iets. Wat?"],
+        wrongHints: [null, "Sneeuw valt als zachte vlokken — ijzel maakt de weg spekglad. Hoe komt dat?", "Hagel hoor je als harde bolletjes tikken. Bij ijzel hoor je niets vallen, maar wordt de weg wel glad. Wat valt er dan?", "Mist is een wolk aan de grond, er valt niets — bij ijzel valt er wél iets. Wat?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is ijzel?", tekst: "IJzel is regen die WEL vloeibaar uit de wolk valt, MAAR meteen bevriest zodra het de grond, bomen of auto's raakt." },
@@ -150,7 +150,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "IJzel = regen die WORDT ijs. Hagel = al ijs als het valt. Sneeuw = al ijs (zacht en wit) in wolk." }],
           niveaus: {
             basis: "IJzel = regen die bevriest bij contact met koude grond.",
-            simpeler: "Vloeibare regen + koude grond = ijslaag.",
+            simpeler: "De regen valt als water, maar de grond is ijskoud. Zo wordt de regen meteen een laagje ijs.",
             nogSimpeler: "IJzel = glad ijs.",
           },
         },
@@ -178,7 +178,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "7 kleuren, ROYGBIV. Buiten = rood, binnen = violet. Onthoud volgorde." }],
           niveaus: {
             basis: "7 kleuren (rood-oranje-geel-groen-blauw-indigo-violet).",
-            simpeler: "Regenboog heeft altijd 7 kleuren in vaste volgorde.",
+            simpeler: "Een regenboog heeft altijd 7 kleuren, in een vaste volgorde.",
             nogSimpeler: "7",
           },
         },
@@ -213,9 +213,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Een kwart = 25% = 1/4 van NL. Dus 1 op de 4 stukjes NL ligt onder zeeniveau." }],
           niveaus: {
-            basis: "~25% van NL ligt onder zeeniveau, beschermd door dijken.",
-            simpeler: "Een kwart van NL is lager dan de zee. Dijken houden water tegen.",
-            nogSimpeler: "1/4 onder zee, dijken redden.",
+            basis: "Ongeveer 25% van Nederland ligt onder zeeniveau en wordt beschermd door dijken.",
+            simpeler: "Een kwart van Nederland is lager dan de zee. Dijken houden het water tegen.",
+            nogSimpeler: "Een kwart ligt lager dan de zee. Dijken houden het water buiten.",
           },
         },
       },

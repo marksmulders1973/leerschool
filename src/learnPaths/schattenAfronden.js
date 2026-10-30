@@ -49,7 +49,7 @@ const steps = [
           niveaus: {
             basis: "Schatten = afronden + dan rekenen.",
             simpeler: "28 → 30. 41 → 40. 30 × 40 = 1200.",
-            nogSimpeler: "Afronden, dan keer.",
+            nogSimpeler: "Rond eerst af en doe dan de keersom.",
           },
         },
       },
@@ -69,7 +69,7 @@ const steps = [
       {
         q: "Wat betekent **schatten**?",
         options: [
-          "Een antwoord bijna goed geven, niet precies",
+          "Een antwoord ongeveer uitrekenen, niet precies",
           "Een antwoord tot op de cent precies uitrekenen",
           "Een antwoord opschrijven zonder na te denken",
           "Een getal afronden met een vaste regel",
@@ -85,7 +85,7 @@ const steps = [
           stappen: [
             {
               titel: "Wat is schatten?",
-              tekst: "**Schatten** = een getal **bijna goed** opgeven. Niet helemaal precies, maar wel in de buurt.",
+              tekst: "**Schatten** = een antwoord **ongeveer** uitrekenen. Niet helemaal precies, maar wel in de buurt.",
             },
             {
               titel: "Hoe doe je dat?",
@@ -124,9 +124,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Schatten = bijna goed, niet precies.",
+            basis: "Schatten is ongeveer uitrekenen, niet precies.",
             simpeler: "Je rekent met ronde getallen en krijgt een ongeveer-antwoord.",
-            nogSimpeler: "Schatten = ongeveer.",
+            nogSimpeler: "Schatten is ongeveer uitrekenen.",
           },
         },
       },
@@ -185,7 +185,7 @@ const steps = [
           niveaus: {
             basis: "599 ligt dicht bij 600.",
             simpeler: "Schatting 600. Alleen 599 ligt daar dichtbij.",
-            nogSimpeler: "599 ≈ 600.",
+            nogSimpeler: "599 ligt vlak bij 600.",
           },
         },
       },

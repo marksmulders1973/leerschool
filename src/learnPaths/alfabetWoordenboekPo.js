@@ -486,7 +486,7 @@ const steps = [
           "bel – bloem – bus – brug",
         ],
         answer: 0,
-        wrongHints: [null, "Vergelijk de tweede letters van 'bloem' en 'bel'.", null, null],
+        wrongHints: [null, "Vergelijk de tweede letters van 'bloem' en 'bel'.", "Vergelijk de tweede letters van 'brug' en 'bloem': welke komt eerder in het alfabet?", "Kijk naar de laatste twee woorden: komt de u vóór de r in het alfabet?"],
         uitlegPad: {
           stappen: [
             {
@@ -505,7 +505,7 @@ const steps = [
         q: "Welk woord komt het laatst: regen, raam, rups of roos?",
         options: ["rups", "roos", "regen", "raam"],
         answer: 0,
-        wrongHints: [null, null, "Alle vier beginnen met r. Kijk dus naar de tweede letter.", null],
+        wrongHints: [null, "Vergelijk de tweede letters: is er een letter die nog ná de o komt?", "Alle vier beginnen met r. Kijk dus naar de tweede letter.", "De a is juist de eerste letter van het alfabet. Welk woord komt dan het laatst?"],
         uitlegPad: {
           stappen: [
             {
@@ -524,7 +524,7 @@ const steps = [
         q: "Zet op alfabet: trein, trap, trui, tros. Welk woord komt het eerst?",
         options: ["trap", "trein", "trui", "tros"],
         answer: 0,
-        wrongHints: [null, null, null, "Vergelijk de derde letters. Komt de o het eerst?"],
+        wrongHints: [null, "Vergelijk de derde letters. Komt de e het eerst, of is er een vroegere letter?", "Vergelijk de derde letters. Komt de u vroeg of laat in het alfabet?", "Vergelijk de derde letters. Komt de o het eerst?"],
         uitlegPad: {
           stappen: [
             {
@@ -543,7 +543,7 @@ const steps = [
         q: "Zet op alfabet: kraal, kraan, kraag, kraam. Welk woord komt het eerst?",
         options: ["kraag", "kraal", "kraam", "kraan"],
         answer: 0,
-        wrongHints: [null, "Alle vier beginnen met 'kraa'. Kijk dus naar de vijfde letter.", null, null],
+        wrongHints: [null, "Alle vier beginnen met 'kraa'. Kijk dus naar de vijfde letter.", "Kijk naar de vijfde letter: komt de m het eerst, of is er een vroegere letter?", "Kijk naar de vijfde letter: komt de n het eerst, of is er een vroegere letter?"],
         uitlegPad: {
           stappen: [
             {

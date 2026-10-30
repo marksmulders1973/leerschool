@@ -860,7 +860,7 @@ const steps = [
         q: "Welke truc helpt om te zien of een zin een hoofdzaak of een bijzaak is?",
         options: ["Schrap de zin — verandert de boodschap?", "Tel de woorden — is de zin het langst?", "Kijk naar de kleur — is hij vetgedrukt?", "Kijk naar het plaatje — past de zin erbij?"],
         answer: 0,
-        wrongHints: [null, "Aantal woorden zegt niets over belangrijkheid.", "Vetgedrukt zegt iets over de opmaak, niet over de boodschap.", "Plaatjes ondersteunen, maar zijn niet de truc."],
+        wrongHints: [null, "Het aantal woorden zegt niets over hoe belangrijk een zin is.", "Vetgedrukt zegt iets over de opmaak, niet over de boodschap.", "Plaatjes ondersteunen, maar zijn niet de truc."],
         uitlegPad: {
           stappen: [
             { titel: "De schrap-test", tekst: "Voor elke zin: lees de tekst MET zin → lees de tekst ZONDER die zin → vergelijk.\n• **Hoofdboodschap verandert?** → die zin is een **hoofdzaak** (kan niet weg)\n• **Hoofdboodschap blijft hetzelfde?** → die zin is een **bijzaak** (kan weg)" },
@@ -878,7 +878,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap-test = de mentale truc. Niet woorden tellen, kleur kijken of plaatje — gewoon zin mentaal weghalen + check boodschap." }],
           niveaus: {
-            basis: "Schrap-test: lees zonder zin, verandert boodschap?",
+            basis: "Schrap-test: lees de tekst zonder die zin. Verandert de boodschap?",
             simpeler: "Doe alsof je de zin weglaat. Kun je de tekst nog snappen? Dan bijzaak. Niet meer snappen? Hoofdzaak.",
             nogSimpeler: "Schrap-test",
           },
@@ -950,7 +950,7 @@ const steps = [
         },
       },
       {
-        q: "Welke soort zin is meestal een **bijzaak**?",
+        q: "Welk stukje van een tekst is meestal een **bijzaak**?",
         options: [
           "Een kort verhaaltje over iemand die je kent",
           "De zin met de hoofdgedachte",
@@ -1003,8 +1003,8 @@ const steps = [
           ],
           niveaus: {
             basis: "Een verhaaltje over iemand = bijzaak.",
-            simpeler: "Anekdotes kun je weglaten. De kern blijft dan hetzelfde.",
-            nogSimpeler: "Verhaaltje = bij",
+            simpeler: "Zo'n verhaaltje tussendoor kun je weglaten. De kern van de tekst blijft dan hetzelfde.",
+            nogSimpeler: "Een verhaaltje tussendoor is een bijzaak.",
           },
         },
       },
@@ -1068,12 +1068,12 @@ const steps = [
         },
       },
       {
-        q: "Tekst: 'Een zebra leeft in een groep. In een groep is hij veiliger voor leeuwen. Samen letten ze goed op gevaar. Elke zebra heeft een eigen strepenpatroon.'\n\nWelke informatie is **NIET essentieel**?",
+        q: "Tekst: 'Een zebra leeft in een groep. In een groep is hij veiliger voor leeuwen. Samen letten ze goed op gevaar. Elke zebra heeft een eigen strepenpatroon.'\n\nWelke zin is **niet nodig** voor de boodschap?",
         options: [
-          "Elke zebra heeft een eigen strepenpatroon",
-          "Een zebra leeft in een groep",
-          "In een groep is hij veiliger voor leeuwen",
-          "Samen letten ze goed op gevaar",
+          "Elke zebra heeft een eigen strepenpatroon.",
+          "Een zebra leeft in een groep.",
+          "In een groep is hij veiliger voor leeuwen.",
+          "Samen letten ze goed op gevaar.",
         ],
         answer: 0,
         wrongHints: [
@@ -1125,9 +1125,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De strepen-zin is niet essentieel.",
-            simpeler: "De tekst gaat over de groep. Strepen = zijweg.",
-            nogSimpeler: "Strepen = bij",
+            basis: "De zin over de strepen is niet nodig voor de boodschap.",
+            simpeler: "De tekst gaat over leven in een groep. De strepen hebben daar niets mee te maken.",
+            nogSimpeler: "De zin over de strepen is een bijzaak.",
           },
         },
       },
@@ -1202,7 +1202,7 @@ const steps = [
         q: "Wat hoort **NIET** in een goede samenvatting?",
         options: ["Eigen mening","Hoofdgedachte","Hoofdzaken","Eigen woorden"],
         answer: 0,
-        wrongHints: [null, "Hoort wel — kern van de samenvatting.", "Hoort wel — belangrijke punten.", "Hoort wel — eigen woorden voorkomen kopiëren."],
+        wrongHints: [null, "Dit hoort er juist wel in: het is de kern van de samenvatting.", "Dit hoort er juist wel in: de belangrijke punten van de tekst.", "Dit hoort er juist wel in: met eigen woorden kopieer je niet."],
         uitlegPad: {
           stappen: [
             { titel: "Samenvatting = wat de tekst zegt", tekst: "Een goede samenvatting bevat:\n✓ **Hoofdgedachte** (kern in 1 zin)\n✓ **Hoofdzaken** (belangrijke punten)\n✓ **Eigen woorden** (niet kopiëren)\n\nWat NIET:\n✗ **Eigen mening** (wat JIJ ervan vindt — hoort er niet in)\n✗ **Bijzaken** (anekdotes)\n✗ **Letterlijke kopie** uit tekst" },
@@ -1223,15 +1223,15 @@ const steps = [
           niveaus: {
             basis: "Eigen mening hoort NIET in samenvatting.",
             simpeler: "Samenvatting = wat tekst zegt. Mening = wat JIJ vindt. Niet mixen.",
-            nogSimpeler: "Eigen mening = A (mag niet).",
+            nogSimpeler: "Je eigen mening hoort er niet in.",
           },
         },
       },
       {
         q: "Hoe lang is een **goede** samenvatting meestal?",
-        options: ["Korter dan origineel","Langer dan origineel","Even lang","Heel lang"],
+        options: ["Korter dan de tekst zelf","Langer dan de tekst zelf","Even lang als de tekst zelf","Heel lang, met alle details"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — dat zou een uitbreiding zijn.", "Als hij even lang is, heb je dan iets samengevat?", "Heel lang is het tegenovergestelde van samenvatten."],
+        wrongHints: [null, "Dan maak je de tekst juist langer. Is dat samenvatten?", "Als hij even lang is, heb je dan iets samengevat?", "Alle details bewaren is het tegenovergestelde van samenvatten."],
         uitlegPad: {
           stappen: [
             { titel: "Samen-vatten = korter maken", tekst: "Het woord **'samenvatten'** zegt het al: vat de tekst SAMEN in een korter geheel. Een samenvatting die even lang of langer is, is geen samenvatting." },
@@ -1250,7 +1250,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Mik op een KWART tot DERDE van origineel. Kortere kan, langere zelden." }],
           niveaus: {
-            basis: "Korter dan origineel (~25-30%).",
+            basis: "Korter dan de tekst zelf (ongeveer een kwart tot een derde van de lengte).",
             simpeler: "Een samenvatting is een KORTERE versie van de tekst. Niet even lang, niet langer.",
             nogSimpeler: "Korter",
           },

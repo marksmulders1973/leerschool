@@ -112,13 +112,13 @@ const steps = [
         q: "Welk kommagetal is **gelijk aan ¼**?",
         options: ["0,25", "0,4", "0,5", "0,75"],
         answer: 0,
-        wrongHints: [null, "0,4 zijn 4 tienden — is dat hetzelfde als ¼? Hoeveel tienden heeft een kwart?", "0,5 is de helft (½), niet een kwart.", "0,75 is ¾, niet ¼."],
+        wrongHints: [null, "0,4 is vier tienden, dat is bijna de helft. Is een kwart bijna de helft?", "0,5 is de helft (½), niet een kwart.", "0,75 is ¾, niet ¼."],
       },
       {
         q: "Welk getal is **groter**: 0,9 of 0,12?",
-        options: ["0,9", "0,12", "Even groot", "Kan je niet zeggen"],
+        options: ["0,9", "0,12", "Even groot", "Dat kun je niet zeggen"],
         answer: 0,
-        wrongHints: [null, "Meer cijfers betekent niet automatisch groter — vergelijk de tienden-positie na de komma.", "Niet hetzelfde — vergelijk per plek.", "Wél te zeggen: zet beide getallen op gelijk aantal decimalen en vergelijk."],
+        wrongHints: [null, "Meer cijfers betekent niet automatisch groter. Vergelijk eerst het cijfer direct ná de komma.", "Ze zijn niet even groot. Vergelijk de cijfers plek voor plek.", "Dat kun je wél zeggen: geef beide getallen even veel cijfers achter de komma en vergelijk dan."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk per plek", tekst: "Schrijf gelijk aantal cijfers: 0,90 vs 0,12. Eerste plek: 9 > 1. Dus 0,9 > 0,12." },

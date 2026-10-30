@@ -758,7 +758,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Gelderland**?",
         options: ["Arnhem","Nijmegen","Utrecht","Apeldoorn"],
         answer: 0,
-        wrongHints: [null,"Nijmegen is groter qua bevolking, maar niet de hoofdstad.","Utrecht is in een andere provincie.","Apeldoorn is grote stad in Gelderland maar geen hoofdstad."],
+        wrongHints: [null,"Nijmegen heeft meer inwoners, maar is niet de hoofdstad.","Utrecht is in een andere provincie.","Apeldoorn is een grote stad in Gelderland, maar niet de hoofdstad."],
         uitlegPad: {
           stappen: [{ titel: "Arnhem — niet Nijmegen", tekst: "Arnhem is hoofdstad van Gelderland (grootste provincie qua oppervlak). Veel mensen denken Nijmegen — maar Nijmegen is wel GROTER, niet hoofdstad. Examen-val. Arnhem bekend van Slag om Arnhem (WO2, 1944, 'A Bridge Too Far')." }],
           woorden: [{ woord: "Arnhem", uitleg: "Hoofdstad Gelderland. ~165.000 inwoners. Stad aan de Rijn." }, { woord: "Slag om Arnhem", uitleg: "September 1944. Geallieerde luchtlanding mislukte. Brug niet veroverd. Beroemde film + boek." }],
@@ -821,7 +821,7 @@ const steps = [
           "Drenthe en Flevoland",
         ],
         answer: 0,
-        wrongHints: [null, "Wat is de hoofdstad van Friesland? Heet die ook Friesland?", "Utrecht klopt. Maar hoe heet de hoofdstad van Gelderland?", "Drenthe heeft Assen en Flevoland heeft Lelystad. Heten die hetzelfde als de provincie?"],
+        wrongHints: [null, "Wat is de hoofdstad van Friesland? Heet die ook Friesland?", "Hoe heet de hoofdstad van Gelderland? Heet die ook Gelderland?", "Drenthe heeft Assen en Flevoland heeft Lelystad. Heten die hetzelfde als de provincie?"],
         uitlegPad: {
           stappen: [
             {
@@ -858,7 +858,7 @@ const steps = [
       {
         q: "Naar wie of wat verwijst **'Lely'** in de naam **Lelystad**?",
         options: [
-          "Naar de man van het plan voor de Zuiderzeewerken",
+          "Naar de man die het plan voor de Zuiderzeewerken maakte",
           "Naar een bloem die daar heel veel groeit",
           "Naar een rivier die door Flevoland stroomt",
           "Naar een koning die daar vroeger woonde",
@@ -893,7 +893,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Naar Cornelis Lely.",
-            simpeler: "Lely = de man van het plan voor nieuw land.",
+            simpeler: "Lely was de man die het plan voor het nieuwe land maakte.",
             nogSimpeler: "Cornelis Lely",
           },
         },
@@ -923,7 +923,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Zeeland**?",
         options: ["Middelburg","Vlissingen","Goes","Terneuzen"],
         answer: 0,
-        wrongHints: [null,"Vlissingen is een grote havenstad in Zeeland maar geen hoofdstad.","Goes is in Zeeland maar geen hoofdstad.","Terneuzen ook in Zeeland maar niet de hoofdstad."],
+        wrongHints: [null,"Vlissingen is een grote havenstad in Zeeland, maar niet de hoofdstad.","Goes ligt in Zeeland, maar is niet de hoofdstad.","Terneuzen ligt ook in Zeeland, maar is niet de hoofdstad."],
         uitlegPad: {
           stappen: [{ titel: "Middelburg — historische stad", tekst: "Middelburg is hoofdstad van Zeeland (provincie met eilanden). Ligt op Walcheren. ~50.000 inwoners, eeuwenoude stad uit Gouden Eeuw met grachten + abdij. Hier zit ook Provinciale Staten van Zeeland." }],
           woorden: [{ woord: "Middelburg", uitleg: "Hoofdstad Zeeland. Op eiland Walcheren. Historisch centrum + abdij." }, { woord: "Walcheren", uitleg: "Vroeger zelfstandig eiland Zeeland, nu via Deltawerken met vasteland verbonden." }],

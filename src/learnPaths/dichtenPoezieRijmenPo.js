@@ -720,7 +720,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **personificatie**?",
-        options: ['Een ding doet als een mens', 'Woorden die op elkaar rijmen', 'Ander woord, zelfde betekenis', 'Woord met omgekeerde betekenis'],
+        options: ['Een ding doet als een mens', 'Woorden die op elkaar rijmen', 'Een ander woord met dezelfde betekenis', 'Een woord met de omgekeerde betekenis'],
         answer: 0,
         wrongHints: [null, "Rijm gaat over klank. Kijk naar het woord: 'persoon' zit erin. Wat doet het ding?", "Dat is een synoniem. Kijk naar het woord: 'persoon' zit erin.", "Dat zou een tegenstelling zijn — 'persoon' zit in het woord. Wat doet het ding?"],
         uitlegPad: {

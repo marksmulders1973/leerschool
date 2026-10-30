@@ -58,7 +58,7 @@ const steps = [
         q: "**75 mm** is hoeveel cm?",
         options: ["7,5 cm", "750 cm", "0,75 cm", "0,075 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — je moet delen, niet vermenigvuldigen.", "Je deelde door 100. Hoeveel millimeter gaan er in één centimeter?", "Je deelde door 1000. Hoeveel mm is 1 cm?"],
+        wrongHints: [null, "Je hebt vermenigvuldigd, maar van millimeter naar centimeter moet je delen.", "Je deelde door 100. Hoeveel millimeter gaan er in één centimeter?", "Je deelde door 1000. Hoeveel mm is 1 cm?"],
         uitlegPad: {
           stappen: [
             { titel: "Millimeter naar centimeter", tekst: "Millimeter is nog kleiner dan centimeter. Ga je naar een grotere eenheid, dan deel je." },
@@ -85,7 +85,7 @@ const steps = [
           theorie: "Bij een som met meerdere lengte-eenheden (zoals kilometer, meter en centimeter door elkaar) reken je **eerst alles om naar één eenheid**, en tel je pas daarna op. Doe je dat niet, dan tel je eigenlijk appels en peren bij elkaar op.",
           voorbeelden: [{ type: "thuis", tekst: "Je legt een route van 2 km, dan nog 400 m, en tot slot 25 cm tot de deur — voor de totale afstand zet je alles eerst om naar meter." }],
           basiskennis: [{ onderwerp: "Niet zomaar optellen", uitleg: "1 km en 1 cm zijn geen 'gelijke stukken' — eerst allebei omzetten naar dezelfde eenheid, dan pas optellen." }],
-          niveaus: { basis: "1000+250+0,5=1250,5.", simpeler: "Alles m → optellen.", nogSimpeler: "Zet kilometer en centimeter allebei om naar meter — wat krijg je als je alles optelt?" },
+          niveaus: { basis: "1000+250+0,5=1250,5.", simpeler: "Zet alles om naar meter en tel dan op.", nogSimpeler: "Zet kilometer en centimeter allebei om naar meter — wat krijg je als je alles optelt?" },
         },
       },
       {
