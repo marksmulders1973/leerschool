@@ -639,7 +639,7 @@ const steps = [
           niveaus: {
             basis: "Volg het pad: dorst = geen honger → 'Nee' → drink water.",
             simpeler: "Beantwoord 'heb je honger?' met nee → volg nee-pad.",
-            nogSimpeler: "Nee = water.",
+            nogSimpeler: "Je zegt nee, dus je drinkt water.",
           },
         },
       },
@@ -711,7 +711,7 @@ const steps = [
           niveaus: {
             basis: "Niet in een team → nee-pijl. Wel water → ja-pijl → zwemmen.",
             simpeler: "Nee bij team, ja bij water: zwemmen.",
-            nogSimpeler: "Nee, ja = zwemmen.",
+            nogSimpeler: "Nee bij team, ja bij water: dan kom je bij zwemmen uit.",
           },
         },
       },
@@ -770,7 +770,7 @@ const steps = [
           niveaus: {
             basis: "Twee keer nee → strip.",
             simpeler: "Steeds de nee-pijl volgen: strip.",
-            nogSimpeler: "Nee, nee = strip.",
+            nogSimpeler: "Twee keer nee: dan kom je bij strip uit.",
           },
         },
       },
@@ -829,7 +829,7 @@ const steps = [
           niveaus: {
             basis: "Ja bij spanning, nee bij eng → detective.",
             simpeler: "Ja, dan nee = detective.",
-            nogSimpeler: "Ja, nee = detective.",
+            nogSimpeler: "Ja bij spanning, nee bij eng: dan kom je bij detective uit.",
           },
         },
       },
@@ -883,7 +883,7 @@ const steps = [
           niveaus: {
             basis: "Ja bij zon, nee bij bal → tikkertje.",
             simpeler: "Zon ja, bal nee = tikkertje.",
-            nogSimpeler: "Ja, nee = tikkertje.",
+            nogSimpeler: "Ja bij zon, nee bij bal: dan kom je bij tikkertje uit.",
           },
         },
       },
@@ -947,7 +947,7 @@ const steps = [
           niveaus: {
             basis: "Bij een beslisboom volg je alleen het pad van jouw keuzes.",
             simpeler: "Beslisboom: alleen jouw pad. Stappenplan: alles.",
-            nogSimpeler: "Eigen pad = beslisboom.",
+            nogSimpeler: "Bij een beslisboom volg je alleen je eigen pad.",
           },
         },
       },
@@ -1011,7 +1011,7 @@ const steps = [
           niveaus: {
             basis: "Klaar bij een vak zonder vraag: het eindvak.",
             simpeler: "Geen vraag meer? Dan ben je klaar.",
-            nogSimpeler: "Eindvak = klaar.",
+            nogSimpeler: "Kom je bij een vak zonder vraag? Dan ben je klaar.",
           },
         },
       },

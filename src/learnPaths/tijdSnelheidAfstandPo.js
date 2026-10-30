@@ -56,7 +56,7 @@ const steps = [
             { type: "sport", tekst: "Een training start om 16:50 en duurt tot 18:15 — eerst naar 17:00, dan de rest." },
           ],
           basiskennis: [{ onderwerp: "1 uur = 60 minuten", uitleg: "Nodig om te weten hoeveel minuten er tussen twee hele uren zitten." }],
-          niveaus: { basis: "2h35min.", simpeler: "Stap voor stap optellen.", nogSimpeler: "2:35" },
+          niveaus: { basis: "Van 14:45 naar 15:00 is 15 minuten, dan 2 uur naar 17:00, dan nog 20 minuten: samen 2 uur en 35 minuten.", simpeler: "Tel stap voor stap op: eerst naar het hele uur, dan de hele uren, dan de rest.", nogSimpeler: "2 uur en 35 minuten" },
         },
       },
       {
@@ -96,7 +96,7 @@ const steps = [
             { type: "sport", tekst: "Een nachtdienst van 23:00 tot 06:00 werkt volgens hetzelfde principe." },
           ],
           basiskennis: [{ onderwerp: "24-uursklok", uitleg: "Na 23:59 begint de klok weer bij 00:00 — dat is een nieuwe dag." }],
-          niveaus: { basis: "3h45min.", simpeler: "Over middernacht splitsen.", nogSimpeler: "3:45" },
+          niveaus: { basis: "Van 22:45 naar 24:00 is 1 uur en 15 minuten, dan nog 2 uur en 30 minuten tot 02:30: samen 3 uur en 45 minuten.", simpeler: "Splits de rit bij middernacht: eerst tot 24:00, dan verder tot 02:30.", nogSimpeler: "3 uur en 45 minuten" },
         },
       },
       {

@@ -578,7 +578,7 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         },
       },
       {
-        q: "*\"Er kwamen kleine belletjes omhoog, waardoor ze precies zagen waar het lek zat.\"* — Wat is het gevolg van de belletjes?",
+        q: "Bij het plakken kwamen er kleine belletjes omhoog uit het water. Wat was het **gevolg** van die belletjes?",
         options: [
           "Ze zagen precies waar het lek zat",
           "De binnenband ging onder water",
@@ -589,13 +589,13 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         evidence: "Er kwamen kleine belletjes omhoog, waardoor ze precies zagen waar het lek zat.",
         wrongHints: [
           null,
-          "Dat deden ze juist éérst, vóórdat de belletjes kwamen. Kijk wat er achter 'waardoor' staat.",
+          "Dat deden ze juist éérst, vóórdat de belletjes kwamen. Zoek in de tekst de zin over de belletjes en kijk wat er achter 'waardoor' staat.",
           "Dat gebeurde 's ochtends al. Kwam dat door de belletjes?",
           "Dat gebeurde pas daarná, als laatste stap. Zoek wat er diréct door de belletjes kwam.",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Vind de wegwijzer", tekst: "Midden in de zin staat 'waardoor'. Net als 'daardoor' wijst dat woord naar het gevolg: wat erachter staat, kwam door de belletjes." },
+            { titel: "Vind de wegwijzer", tekst: "Zoek in de tekst de zin over de belletjes. Midden in die zin staat 'waardoor'. Net als 'daardoor' wijst dat woord naar het gevolg: wat erachter staat, kwam door de belletjes." },
             { titel: "Lees wat erachter staat", tekst: "Achter 'waardoor' staat: 'ze precies zagen waar het lek zat'. Dat is dus het gevolg van de opstijgende belletjes." },
             { titel: "Snap ook het waarom", tekst: "Waarom werkt dit? Lucht ontsnapt door het gaatje. Onder water zie je die lucht als belletjes — precies op de plek van het lek. Slim trucje van fietsenmakers!" },
           ],

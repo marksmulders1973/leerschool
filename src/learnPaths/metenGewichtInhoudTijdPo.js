@@ -59,7 +59,7 @@ const steps = [
         q: "Hoeveel gram is **1 pond**?",
         options: ["500 g", "1000 g", "100 g", "250 g"],
         answer: 0,
-        wrongHints: [null, "Dat is een hele kilo — een pond is de helft daarvan.", "Dat is een ons.", "250 g is een half pond. Hoe zwaar is een heel pond?"],
+        wrongHints: [null, "Dat is een hele kilo. Is een pond een hele kilo, of minder?", "Dat is een ons. Een pond is een stuk zwaarder.", "Dat is te licht: 250 g is maar een kwart kilo. Welk deel van een kilo is een pond?"],
         uitlegPad: {
           stappen: [
             { titel: "Pond is een oude maat", tekst: "Een pond is een gewicht dat je vooral bij groente, fruit en vlees tegenkomt. Het is de helft van een kilo." },

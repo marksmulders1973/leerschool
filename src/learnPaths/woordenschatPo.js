@@ -309,7 +309,7 @@ const steps = [
         q: "Wat is de tegenstelling van **'zwaar'**?",
         options: ["licht","groot","klein","donker"],
         answer: 0,
-        wrongHints: [null,"Niet — past bij groot/klein (afmeting), zwaar gaat over gewicht.","Past bij groot/klein, niet bij zwaar.","Dat hoort bij helderheid (donker/...), niet bij gewicht."],
+        wrongHints: [null,"Groot gaat over afmeting, zwaar gaat over gewicht. Zoek het omgekeerde van zwaar.","Klein gaat over afmeting, niet over gewicht.","Donker gaat over hoe helder het is, niet over gewicht."],
         uitlegPad: {
           stappen: [{ titel: "Zwaar ↔ licht", tekst: "Zwaar = veel gewicht. Tegenovergesteld = licht (weinig gewicht)." }],
           woorden: [{ woord: "licht", uitleg: "Twee betekenissen: weinig gewicht (↔ zwaar) of veel helderheid (↔ donker)." }],

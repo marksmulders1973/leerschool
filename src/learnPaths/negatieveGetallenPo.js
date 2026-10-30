@@ -454,7 +454,7 @@ const steps = [
         wrongHints: [
           null,
           "Kom je met 4 stappen naar rechts vanaf −6 al voorbij 0?",
-          "Plus = welke kant op?",
+          "Bij plus loop je naar rechts. Waarom kom je dan verder naar links uit?",
           "Je telde 6 en 4 op. Begin je op +6 of op −6?",
         ],
         uitlegPad: {
@@ -496,7 +496,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Ga je bij min naar links of naar rechts?",
+          "Begin je op 1 of op −1? Kijk goed naar het teken vooraan.",
           "Het teken klopt niet: je begint onder nul en loopt verder naar links.",
           "Kom je ooit boven nul als je naar links loopt vanaf −1?",
         ],
@@ -621,7 +621,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel eerst de stappen tot 0, en dan de stappen onder nul.",
-          "3 stappen brengen je van 0 naar −3. Hoeveel stappen zijn er van 2 naar 0?",
+          "Dat zijn alleen de stappen onder nul. Je begint niet op 0, maar op 2.",
           "Vergeet je de stap van 0 naar −1 niet?",
         ],
         uitlegPad: {
