@@ -553,7 +553,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd Ã
         answer: 0,
         wrongHints: [
           null,
-          "14 uur is de tijd van de prijs-uitreiking, niet de start. Zoek de zin met het woord 'beginnen'.",
+          "14 uur is de tijd van de prijsuitreiking, niet de start. Zoek de zin met het woord 'beginnen'.",
           "12 uur staat nergens in de brief. Zoek de zin met het woord 'beginnen'.",
           "Staat 10 uur ergens in de brief? Scan op het woord 'beginnen'.",
         ],
@@ -581,7 +581,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd Ã
         answer: 0,
         wrongHints: [
           null,
-          "Over geld staat niets in de brief. Wat zegt de brief over de gevolgen als er geen hulpouders zijn?",
+          "Over geld staat niets in de brief. Lees de zin nÃ¡ de vraag over het strookje nog eens.",
           "Het strookje is geen toegangskaart â€” alle kinderen van de groepen doen al mee. Wat vraagt de school aan de ouders?",
           "Alle kinderen van groep 6, 7 en 8 doen al mee. Over wie gaat het strookje?",
         ],

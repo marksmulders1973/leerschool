@@ -24,9 +24,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn de drie trappen van 'snel'?",
-        options: ["snel – sneller – snelst", "snel – snelst – sneller", "snel – snel – snel", "snelle – sneller – snelst"],
+        options: ["snel – sneller – snelst", "snel – snelst – sneller", "snel – meer snel – meest snel", "snelle – sneller – snelst"],
         answer: 0,
-        wrongHints: [null, "De vergrotende (-er) komt vóór de overtreffende (-st).", "Een trap maakt het woord juist sterker.", "De stellende trap is gewoon 'snel', zonder -e."],
+        wrongHints: [null, "De vergrotende (-er) komt vóór de overtreffende (-st).", "In het Nederlands plak je -er en -st aan het woord zelf; 'meer snel' zeggen we niet.", "De stellende trap is gewoon 'snel', zonder -e."],
         uitlegPad: {
           stappen: [{ titel: "Gewoon – -er – -st", tekst: "Stellend: snel. Vergrotend: sneller (-er). Overtreffend: snelst (-st)." }],
           niveaus: {
@@ -96,7 +96,7 @@ const steps = [
         q: "Hoeveel trappen van vergelijking zijn er?",
         options: ["drie", "twee", "vier", "vijf"],
         answer: 0,
-        wrongHints: [null, "Er is er eentje meer dan twee: stellend, vergrotend én overtreffend.", "Dat zijn er te veel.", "Dat zijn er te veel."],
+        wrongHints: [null, "Te weinig — de gewone vorm (zonder -er of -st) telt óók als trap.", "Te veel — de vorm met -e (zoals 'snelle') is geen aparte trap.", "Te veel — tel alleen de vormen die een eigen naam hebben."],
         uitlegPad: {
           stappen: [{ titel: "Altijd drie trappen", tekst: "Er zijn altijd drie trappen: stellend (de gewone vorm), vergrotend (-er) en overtreffend (-st)." }],
           niveaus: {

@@ -52,7 +52,7 @@ const steps = [
         q: "*De hond rent door de tuin. Hij blaft hard.* Wat is het verwijswoord?",
         options: ["Hij", "hond", "tuin", "blaft"],
         answer: 0,
-        wrongHints: [null, "Dat is waar 'Hij' naar verwijst, niet het verwijswoord zelf.", "Wijst 'tuin' terug naar iets eerder, of is het gewoon een plek?", "'Blaft' zegt wat de hond doet. Wijst het ergens naar terug?"],
+        wrongHints: [null, "Dat is het dier waar het over gaat, niet het korte woordje dat ernaar terugwijst.", "Wijst 'tuin' terug naar iets eerder, of is het gewoon een plek?", "'Blaft' zegt wat de hond doet. Wijst het ergens naar terug?"],
         uitlegPad: {
           stappen: [{ titel: "Welk woord wijst terug?", tekst: "'Hij' is het korte woord dat terugwijst naar 'de hond'. Dat is het verwijswoord." }],
           niveaus: {

@@ -374,7 +374,7 @@ const steps = [
           theorie: "Praktijkbreuken: half = ÷2. Kwart = ÷4. Tiende = ÷10.",
           voorbeelden: [{ type: "praktijk", tekst: "1/2 L = 500 mL. 1/4 L = 250 mL. 1/10 L = 100 mL." }],
           basiskennis: [{ onderwerp: "1 L = 1000 mL", uitleg: "Liter ÷ 1000 = milliliter. Onthoud deze omrekening." }],
-          niveaus: { basis: "500 mL.", simpeler: "1 L = 1000 mL. De helft = 1000 ÷ 2 = 500 mL.", nogSimpeler: "500" },
+          niveaus: { basis: "Een halve liter is de helft van 1 liter, en 1 liter is 1000 mL.", simpeler: "1 L = 1000 mL. De helft = 1000 ÷ 2 = 500 mL.", nogSimpeler: "500" },
         },
       },
       {
@@ -388,7 +388,7 @@ const steps = [
           theorie: "X/Y van iets: deel door Y, keer X. Voor 2/3 van 60: 60÷3 dan ×2.",
           voorbeelden: [{ type: "stap", tekst: "1/3 van 60 = 20. 2/3 = 40. 3/3 = 60 (geheel)." }],
           basiskennis: [{ onderwerp: "Klok 60 min", uitleg: "1 uur = 60 minuten. Daarom is 1/3 uur = 20 min." }],
-          niveaus: { basis: "40 min.", simpeler: "Uur = 60 min. 1/3 = 20 min. 2/3 = 40 min.", nogSimpeler: "40" },
+          niveaus: { basis: "Een uur heeft 60 minuten; verdeel die in drie gelijke stukken en neem er twee.", simpeler: "Uur = 60 min. 1/3 = 20 min. 2/3 = 40 min.", nogSimpeler: "40" },
         },
       },
       {
@@ -402,7 +402,7 @@ const steps = [
           theorie: "X/Y van getal: deel ÷Y, keer ×X. Hier: 24÷4 ×3.",
           voorbeelden: [{ type: "stap", tekst: "1/4 van 24 = 6. 2/4 = 12. 3/4 = 18. 4/4 = 24." }],
           basiskennis: [{ onderwerp: "Tafel van 4", uitleg: "24÷4 = 6 (uit tafel van 6: 4×6=24)." }],
-          niveaus: { basis: "18 leerlingen.", simpeler: "1/4 van 24 = 24÷4 = 6. Drie-kwart = 3×6 = 18.", nogSimpeler: "18" },
+          niveaus: { basis: "Verdeel de klas eerst in vier gelijke groepjes en tel er dan drie van bij elkaar.", simpeler: "1/4 van 24 = 24÷4 = 6. Drie-kwart = 3×6 = 18.", nogSimpeler: "18" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -443,7 +443,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "250 gram.",
+            basis: "Een kilo is 1000 gram; een kwart daarvan is 1000 gedeeld door 4.",
             simpeler: "1000 gram in 4 gelijke stukken: 1000 ÷ 4 = 250.",
             nogSimpeler: "250 g",
           },
@@ -481,7 +481,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1/100.",
+            basis: "Een honderdste is één stukje als je iets in 100 gelijke stukjes verdeelt.",
             simpeler: "Iets in 100 gelijke stukjes. Eén stukje = 1/100.",
             nogSimpeler: "1/100",
           },

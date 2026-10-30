@@ -390,43 +390,43 @@ const steps = [
         },
       },
       {
-        q: "Mam koopt **brood € 2,15**, **kaas € 4,80**, **fruit € 3,55**. Totaal?",
+        q: "Mam koopt **brood € 2,15**, **kaas € 4,80** en **fruit € 3,55**. Hoeveel betaalt ze in totaal?",
         options: ["€ 10,50","€ 9,50","€ 11,50","€ 10,40"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je een product overgeslagen?","Te veel — tel de centen nog eens precies: 15 + 80 + 55.","Te weinig — controleer cent-totaal."],
+        wrongHints: [null,"Te weinig — heb je een product overgeslagen?","Te veel — tel eerst de euro's apart (2 + 4 + 3) en kijk dan pas wat de centen samen maken.","Net te weinig — tel de centen nog eens precies: 15 + 80 + 55."],
         uitlegPad: {
           stappen: [
-            { titel: "Tel op", tekst: "Cent: 15+80+55=150 (=€1,50). Euro: 2+4+3+1(onthoud)=10. Totaal €10,50." },
+            { titel: "Tel op", tekst: "Cent: 15+80+55=150 (=€ 1,50). Euro: 2+4+3+1(onthoud)=10. Totaal € 10,50." },
           ],
           woorden: [{ woord: "boodschappen-totaal", uitleg: "Alles bij elkaar optellen." }],
           theorie: "Bij 3+ items: tel ze allemaal op. Centen tellen kan vaak in hoofd (afronden helpt).",
-          voorbeelden: [{ type: "totaal", tekst: "Schat: 2+5+4=11. Echt: €10,50. Past." }],
+          voorbeelden: [{ type: "totaal", tekst: "Schat: 2+5+4=11. Echt: € 10,50. Past." }],
           basiskennis: [{ onderwerp: "Schat eerst", uitleg: "Schatting helpt om dom-foute antwoorden uit te sluiten." }],
-          niveaus: { basis: "Totaal €10,50.", simpeler: "Centen: 15+80+55=150 (= €1,50). Euro: 2+4+3=9. Plus de €1,50 = €10,50.", nogSimpeler: "€10,50" },
+          niveaus: { basis: "Tel eerst alle euro's bij elkaar en daarna alle centen; zijn de centen samen meer dan een euro, dan komt die euro erbij.", simpeler: "Centen: 15+80+55=150 (= € 1,50). Euro: 2+4+3=9. Plus de € 1,50 = € 10,50.", nogSimpeler: "€ 10,50" },
         },
       },
       {
         q: "**€ 2,99 + € 4,99** = ?",
         options: ["€ 7,98","€ 6,98","€ 7,99","€ 8,98"],
         answer: 0,
-        wrongHints: [null, "Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8 — maar hoeveel cent er net af?", "Verkeerd afgerond. Tel de centen op: 99 + 99 = ? cent, en reken dan verder.", "Te veel — schat 3 + 5: het antwoord moet net onder die schatting liggen."],
+        wrongHints: [null, "Te weinig — 99 + 99 cent is meer dan één euro. Heb je die extra euro bij de euro's gedaan?", "Dat is maar één cent onder € 8. Tel de centen precies: 99 + 99.", "Te veel — € 2,99 is nog geen € 3 en € 4,99 nog geen € 5. Als je naar boven afrondt, moet je dat verschil er ook weer af halen."],
         uitlegPad: {
           stappen: [
-            { titel: "Toets-truc: bijna-rond-getal", tekst: "€2,99 ≈ €3 en €4,99 ≈ €5. Reken eerst met de ronde getallen: €3 + €5 = €8. Dan corrigeren voor de 'bijna-eurootjes'." },
-            { titel: "Correctie toepassen", tekst: "Elke 'X,99' is 1 cent minder dan X+1 hele euro's. Twee keer 'bijna-euro' = 2 cent minder. €8 − €0,02 = **€7,98**." },
-            { titel: "Of: cent-stijl", tekst: "Cent: 99 + 99 = 198 → €1,98 → onthoudje 1. Euro: 2 + 4 + 1 = 7. Antwoord €7,98. Beide trucs werken." },
+            { titel: "Toets-truc: bijna-rond-getal", tekst: "€ 2,99 ≈ € 3 en € 4,99 ≈ € 5. Reken eerst met de ronde getallen: € 3 + € 5 = € 8. Dan corrigeren voor de 'bijna-eurootjes'." },
+            { titel: "Correctie toepassen", tekst: "Elke 'X,99' is 1 cent minder dan X+1 hele euro's. Twee keer 'bijna-euro' = 2 cent minder. € 8 − € 0,02 = **€ 7,98**." },
+            { titel: "Of: cent-stijl", tekst: "Cent: 99 + 99 = 198 → € 1,98 → onthoudje 1. Euro: 2 + 4 + 1 = 7. Antwoord € 7,98. Beide trucs werken." },
           ],
           woorden: [
-            { woord: "bijna-rond", uitleg: "Prijzen als €X,99 of €X,98 — bijna heel getal." },
-            { woord: "winkel-truc", uitleg: "Winkels gebruiken X,99-prijzen omdat het lijkt op '€2 iets' ipv '€3'." },
+            { woord: "bijna-rond", uitleg: "Prijzen als € X,99 of € X,98 — bijna heel getal." },
+            { woord: "winkel-truc", uitleg: "Winkels gebruiken X,99-prijzen omdat het lijkt op '€ 2 iets' ipv '€ 3'." },
           ],
           theorie: "Bij ',99'-prijzen: rond AF naar boven, reken in hele euro's, trek dan 1 cent per ',99' weer af. Veel sneller dan cijferen.",
           voorbeelden: [
-            { type: "stap", tekst: "€1,99 + €2,99 = €5 − €0,02 = €4,98." },
-            { type: "stap", tekst: "€4,99 + €4,99 + €4,99 = €15 − €0,03 = €14,97." },
+            { type: "stap", tekst: "€ 1,99 + € 2,99 = € 5 − € 0,02 = € 4,98." },
+            { type: "stap", tekst: "€ 4,99 + € 4,99 + € 4,99 = € 15 − € 0,03 = € 14,97." },
           ],
           basiskennis: [{ onderwerp: "Toets-instinker", uitleg: "Winkelprijzen eindigen vaak op ,99 zodat ze goedkoper lijken. Het echte verschil met het hele bedrag is maar 1 cent." },],
-          niveaus: { basis: "€2,99+€4,99=€7,98.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98.", nogSimpeler: "€7,98" },
+          niveaus: { basis: "Tel eerst de centen bij elkaar; 99 + 99 is meer dan een euro, dus die euro komt bij de euro's.", simpeler: "€ 2,99 ≈ € 3. € 4,99 ≈ € 5. Samen € 8. Min 2 cent (twee 'bijna') = € 7,98.", nogSimpeler: "€ 7,98" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -444,7 +444,7 @@ const steps = [
           stappen: [
             {
               titel: "Cent + cent",
-              tekst: "Cent: 65 + 50 = 115 cent = €1,15. Euro: 1 + 2 + 1 (onthouden) = 4. Totaal €4,15.",
+              tekst: "Cent: 65 + 50 = 115 cent = € 1,15. Euro: 1 + 2 + 1 (onthouden) = 4. Totaal € 4,15.",
             },
           ],
           woorden: [
@@ -457,19 +457,19 @@ const steps = [
           voorbeelden: [
             {
               type: "stap",
-              tekst: "€1,65 + €2,50: cent 65+50=115 (€1,15). Euro 1+2+1=4. = €4,15.",
+              tekst: "€ 1,65 + € 2,50: cent 65+50=115 (€ 1,15). Euro 1+2+1=4. = € 4,15.",
             },
           ],
           basiskennis: [
             {
               onderwerp: "Schat",
-              uitleg: "Schat: €1,50 + €2,50 = €4. Antwoord net boven €4.",
+              uitleg: "Schat: € 1,50 + € 2,50 = € 4. Antwoord net boven € 4.",
             },
           ],
           niveaus: {
-            basis: "€1,65 + €2,50 = €4,15.",
-            simpeler: "Centen: 65 + 50 = 115 (= €1,15). Euro's: 1 + 2 = 3. Plus €1,15 = €4,15.",
-            nogSimpeler: "€4,15",
+            basis: "Tel eerst de centen op (65 + 50); komt dat boven de 100, dan heb je een extra euro.",
+            simpeler: "Centen: 65 + 50 = 115 (= € 1,15). Euro's: 1 + 2 = 3. Plus € 1,15 = € 4,15.",
+            nogSimpeler: "€ 4,15",
           },
         },
       },
@@ -487,7 +487,7 @@ const steps = [
           stappen: [
             {
               titel: "Vooruit-tellen",
-              tekst: "Van €2,70 naar €3 = +€0,30. Van €3 naar €6 = +€3. Samen €3,30.",
+              tekst: "Van € 2,70 naar € 3 = +€ 0,30. Van € 3 naar € 6 = +€ 3. Samen € 3,30.",
             },
           ],
           woorden: [
@@ -506,13 +506,13 @@ const steps = [
           basiskennis: [
             {
               onderwerp: "Check",
-              uitleg: "€3,30 + €2,70 = €6,00 ✓.",
+              uitleg: "€ 3,30 + € 2,70 = € 6,00 ✓.",
             },
           ],
           niveaus: {
-            basis: "€6,00 − €2,70 = €3,30.",
-            simpeler: "Van €2,70 tel je €0,30 tot €3. Dan nog €3 tot €6. Samen €3,30.",
-            nogSimpeler: "€3,30",
+            basis: "Tel vanaf € 2,70 vooruit: eerst naar een hele euro, dan verder naar € 6,00.",
+            simpeler: "Van € 2,70 tel je € 0,30 tot € 3. Dan nog € 3 tot € 6. Samen € 3,30.",
+            nogSimpeler: "€ 3,30",
           },
         },
       },
@@ -525,7 +525,7 @@ const steps = [
           stappen: [
             {
               titel: "Tel op",
-              tekst: "Cent: 85 + 65 = 150 cent = €1,50. Euro: 1 + 0 = 1. Samen €1 + €1,50 = €2,50.",
+              tekst: "Cent: 85 + 65 = 150 cent = € 1,50. Euro: 1 + 0 = 1. Samen € 1 + € 1,50 = € 2,50.",
             },
           ],
           woorden: [
@@ -538,7 +538,7 @@ const steps = [
           voorbeelden: [
             {
               type: "stap",
-              tekst: "185 cent + 65 cent = 250 cent = €2,50.",
+              tekst: "185 cent + 65 cent = 250 cent = € 2,50.",
             },
           ],
           basiskennis: [
@@ -548,9 +548,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€1,85 + €0,65 = €2,50.",
-            simpeler: "185 cent + 65 cent = 250 cent. Dat is €2,50.",
-            nogSimpeler: "€2,50",
+            basis: "Tel de centen op: 85 + 65 is meer dan een euro, dus die euro komt bij de hele euro's.",
+            simpeler: "185 cent + 65 cent = 250 cent. Dat is € 2,50.",
+            nogSimpeler: "€ 2,50",
           },
         },
       },
@@ -568,11 +568,11 @@ const steps = [
           stappen: [
             {
               titel: "Aftrekken",
-              tekst: "In cent: 825 − 360 = 465 cent = €4,65.",
+              tekst: "In cent: 825 − 360 = 465 cent = € 4,65.",
             },
             {
               titel: "Check",
-              tekst: "€4,65 + €3,60 = €8,25 ✓.",
+              tekst: "€ 4,65 + € 3,60 = € 8,25 ✓.",
             },
           ],
           woorden: [
@@ -585,19 +585,19 @@ const steps = [
           voorbeelden: [
             {
               type: "stap",
-              tekst: "€8,25 − €3,60: €8,25 − €3 = €5,25. €5,25 − €0,60 = €4,65.",
+              tekst: "€ 8,25 − € 3,60: € 8,25 − € 3 = € 5,25. € 5,25 − € 0,60 = € 4,65.",
             },
           ],
           basiskennis: [
             {
               onderwerp: "Terugrekenen",
-              uitleg: "Tel het antwoord en de uitgave op: komt er €8,25 uit? Dan klopt het.",
+              uitleg: "Tel het antwoord en de uitgave op: komt er € 8,25 uit? Dan klopt het.",
             },
           ],
           niveaus: {
-            basis: "€8,25 − €3,60 = €4,65.",
-            simpeler: "Eerst €3 eraf: €5,25. Dan nog 60 cent eraf: €4,65.",
-            nogSimpeler: "€4,65",
+            basis: "Haal eerst de hele euro's eraf en daarna pas de centen.",
+            simpeler: "Eerst € 3 eraf: € 5,25. Dan nog 60 cent eraf: € 4,65.",
+            nogSimpeler: "€ 4,65",
           },
         },
       },
@@ -614,7 +614,7 @@ const steps = [
             },
             {
               titel: "Euro's samen",
-              tekst: "2 + 2 = 4, plus de 100 cent = €1. Samen €5,00.",
+              tekst: "2 + 2 = 4, plus de 100 cent = € 1. Samen € 5,00.",
             },
           ],
           woorden: [
@@ -627,7 +627,7 @@ const steps = [
           voorbeelden: [
             {
               type: "rond maken",
-              tekst: "€2,60 + €2,40 = €5,00. €1,70 + €1,30 = €3,00.",
+              tekst: "€ 2,60 + € 2,40 = € 5,00. € 1,70 + € 1,30 = € 3,00.",
             },
           ],
           basiskennis: [
@@ -637,9 +637,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€2,60 + €2,40 = €5,00.",
-            simpeler: "60 + 40 cent = 100 cent = €1. 2 + 2 + 1 = €5.",
-            nogSimpeler: "€2,60 + €2,40",
+            basis: "Kijk bij elke som of de centen samen precies 100 cent (een hele euro) maken.",
+            simpeler: "60 + 40 cent = 100 cent = € 1. 2 + 2 + 1 = € 5.",
+            nogSimpeler: "€ 2,60 + € 2,40",
           },
         },
       },
@@ -657,11 +657,11 @@ const steps = [
           stappen: [
             {
               titel: "In cent",
-              tekst: "420 cent − 85 cent = 335 cent = €3,35.",
+              tekst: "420 cent − 85 cent = 335 cent = € 3,35.",
             },
             {
               titel: "Check",
-              tekst: "€3,35 + €0,85 = €4,20 ✓.",
+              tekst: "€ 3,35 + € 0,85 = € 4,20 ✓.",
             },
           ],
           woorden: [
@@ -670,11 +670,11 @@ const steps = [
               uitleg: "Een bedrag eraf halen.",
             },
           ],
-          theorie: "Truc: 85 cent eraf = 1 euro eraf en 15 cent er weer bij. €4,20 − €1 = €3,20. + €0,15 = €3,35.",
+          theorie: "Truc: 85 cent eraf = 1 euro eraf en 15 cent er weer bij. € 4,20 − € 1 = € 3,20. + € 0,15 = € 3,35.",
           voorbeelden: [
             {
               type: "truc",
-              tekst: "€4,20 − €0,85 = €4,20 − €1 + €0,15 = €3,35.",
+              tekst: "€ 4,20 − € 0,85 = € 4,20 − € 1 + € 0,15 = € 3,35.",
             },
           ],
           basiskennis: [
@@ -684,9 +684,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€4,20 − €0,85 = €3,35.",
-            simpeler: "Haal 1 euro weg: €3,20. Je haalde 15 cent te veel weg, dus erbij: €3,35.",
-            nogSimpeler: "€3,35",
+            basis: "Haal eerst een hele euro weg en kijk dan hoeveel je te veel hebt weggehaald.",
+            simpeler: "Haal 1 euro weg: € 3,20. Je haalde 15 cent te veel weg, dus erbij: € 3,35.",
+            nogSimpeler: "€ 3,35",
           },
         },
       },

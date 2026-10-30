@@ -451,7 +451,7 @@ const steps = [
         q: "Een snackbar is open van 12:00 tot 21:00. Hoeveel uur is dat?",
         options: ["9 uur", "8 uur", "10 uur", "7 uur"],
         answer: 0,
-        wrongHints: [null, "Tel nog eens van 12 naar 21.", "Iets te veel.", "Te weinig — tel de uren opnieuw."],
+        wrongHints: [null, "Tel nog eens van 12 naar 21; sla geen uur over.", "Te veel — tel je het beginuur 12 óók mee als een heel uur?", "Te weinig — tel de uren opnieuw."],
         uitlegPad: {
           stappen: [{ titel: "Sluiting − opening", tekst: "Van 12:00 tot 21:00 = 21 − 12 = 9 uur." }],
           niveaus: {
