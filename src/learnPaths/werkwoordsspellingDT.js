@@ -1407,7 +1407,7 @@ const steps = [
           "Zij wacht op haar vriendin.",
         ],
         answer: 0,
-        wrongHints: [null, "Kijk naar het eind van elk werkwoord. Zie je ergens iets dubbels?", "Eindigt de stam 'moet' al op een t? Komt er dan nog een t bij? Zoek de zin waar dat misgaat.", "Eindigt de stam 'wacht' al op een t? Komt er dan nog een t bij? Zoek de zin waar dat misgaat."],
+        wrongHints: [null, "Eindigt de stam 'vecht' al op een t? Bij ik komt er niets bij, dus deze zin klopt. Zoek de zin waar het misgaat.", "Eindigt de stam 'moet' al op een t? Komt er dan nog een t bij? Zoek de zin waar dat misgaat.", "Eindigt de stam 'wacht' al op een t? Komt er dan nog een t bij? Zoek de zin waar dat misgaat."],
         uitlegPad: {
           stappen: [
             {
@@ -1488,7 +1488,7 @@ const steps = [
         q: "Kies de juiste vorm van **zetten**: 'Papa ____ elke ochtend thee.'",
         options: ["zet", "zett", "zetten", "zetd"],
         answer: 0,
-        wrongHints: [null, "De stam eindigt al op een t. Hoeveel t's schrijf je dan?", "-en is voor meervoud. Is papa één persoon?", "Komt er bij hij een d achter de stam? En eindigt de stam al op een t?"],
+        wrongHints: [null, "De stam eindigt al op een t. Hoeveel t's schrijf je dan?", "-en is voor meervoud. Is papa één persoon?", "Komt er bij papa (hij) een d achter de stam? En eindigt de stam al op een t?"],
         uitlegPad: {
           stappen: [
             {
@@ -1731,7 +1731,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Kijk naar de letter in het hele werkwoord reizen. Zit die in 't kofschip?",
+          "Kijk naar de letter vóór -en in het hele werkwoord reizen. Zit die letter in 't kofschip?",
           "Zeg 'ik reis'. Schrijf je dat met een s of een z? Die letter houd je in de verleden tijd.",
           "Dat is de tegenwoordige tijd.",
         ],

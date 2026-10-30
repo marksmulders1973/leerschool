@@ -169,7 +169,7 @@ const steps = [
       "Sommige dingen lekker, maar **te veel = niet gezond**.\n\n**SUIKER** 🍬:\n• **Maximaal 25 g** suiker per dag *(WHO-advies kind)*.\n• 1 glas frisdrank = ~30 g suiker = al boven.\n• 1 Mars-reep = ~30 g.\n• 1 ijsje = ~20 g.\n• Snel **op** maar daarna **moe** *('sugar crash')*.\n• Veroorzaakt: **gaatjes** in tanden, **overgewicht**, **diabetes-risico**.\n• Verborgen suikers: ketchup, brood, zuivel met smaak, ontbijtgranen.\n• Lees **etiket** — 'koolhydraten waarvan suikers'.\n\n**ZOUT** 🧂:\n• **Maximaal 5 g** zout per dag *(kind 6-12: 4 g)*.\n• 1 zakje chips kan al 1-2 g hebben.\n• Te veel = **hoge bloeddruk** + hart-vat-ziektes.\n• Verborgen zout: kant-en-klaar maaltijden, kaas, soep, brood.\n\n**TRANSVET / VERZADIGD VET** 🍔:\n• In frituur, koek, chips, gefrituurde snacks.\n• Verhoogt slecht cholesterol.\n• Veroorzaakt hart-vatziektes.\n• Vervangen door **olijfolie + noten** = beter.\n\n**ALCOHOL** 🍷:\n• Onder 18 jaar: **0,0** *(verboden)*.\n• Volwassenen: max 1 glas per dag.\n• Geen-alcohol-aanbeveling is beter *(WHO 2023)*.\n• Schadelijk voor lever + hersenen.\n• Bij kinderen kan al 1 glas hersenen beschadigen.\n\n**FRISDRANK + ENERGIEDRANKEN** 🥤:\n• Veel suiker + soms cafeïne.\n• 1 blikje cola = 7 suikerklontjes.\n• Energiedrankjes: cafeïne + suiker — niet voor kinderen onder 18.\n\n**KANT-EN-KLAAR EN FAST FOOD** 🍕:\n• Vaak veel zout + vet + suiker.\n• Conserveermiddelen + smaakversterkers (E-nummers).\n• Niet 'fout' maar liever beperkt.\n\n**Wat te eten als je trek hebt?**\n• In plaats van chips → handvol noten.\n• In plaats van frisdrank → water + citroen.\n• In plaats van snoep → fruit.\n• In plaats van koek → volkoren-cracker met hummus.\n\n**Eten + emoties**:\n• Eten bij stress = vaak ongezond.\n• Eet **bewust** — wat heb je echt nodig?\n• Eten is sociaal *(samen eten met familie)* — niet alleen.\n\n**Overgewicht** *(NL kids)*:\n• ~14% van NL-kinderen *(2024)* heeft overgewicht.\n• Risico's: diabetes, hartziekte, depressie.\n• Belangrijk: **gezond eten + bewegen** *(beweegnorm 1 uur per dag)*.\n\n**Hulp nodig?**\n• Praat met je ouder of verzorger, schoolarts, huisarts.\n• Niet je vergelijken met sociale media-influencers — die laten 'ideaal' zien dat vaak nep is.\n\n**Toets-feitje**:\n**Ultraprocessed food** *(zwaar bewerkt voedsel — koek, chips, zoete ontbijtgranen, kant-en-klaar)*: meer dan de helft van wat NL-kinderen eten. Onderzoekers waarschuwen — minder = beter. Vers + zelf koken = altijd beter.",
     checks: [
       {
-        q: "Hoeveel toegevoegde **suiker** mag een kind volgens de WHO hooguit per dag?",
+        q: "Hoeveel toegevoegde **suiker** per dag is volgens het WHO-advies ongeveer het maximum voor een kind?",
         options: ["25 gram", "100 gram", "5 gram", "75 gram"],
         answer: 0,
         wrongHints: [null, "100 gram is 25 suikerklontjes — veel te veel.", "5 gram is maar ongeveer één klontje. Het advies is ruimer.", "75 gram is bijna 19 klontjes — ver boven het advies."],
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Hoeveel **alcohol** mag een kind van 12 drinken?",
-        options: ["Helemaal niets", "1 glas per week", "Alleen op feestjes", "Alleen bier"],
+        options: ["Helemaal niets", "1 glas per week", "Alleen op feestjes", "Een slokje om te proeven"],
         answer: 0,
-        wrongHints: [null, "Ook één glas is schadelijk voor hersenen die nog groeien.", "Ook op een feestje geldt dezelfde wet.", "Vroeger mocht bier vanaf 16. Nu is de grens hoger, voor alle soorten alcohol."],
+        wrongHints: [null, "Ook één glas is schadelijk voor hersenen die nog groeien.", "Ook op een feestje is alcohol slecht voor een lichaam dat nog groeit.", "Ook een slokje went je aan de smaak, terwijl je hersenen nog volop groeien."],
       },
       {
         q: "Hoeveel **suikerklontjes** zitten er in 1 glas frisdrank?",

@@ -1327,10 +1327,10 @@ const steps = [
     svg: klokSvg(14, 30, { showLabels: true }),
     checks: [
       {
-        q: "**21:00** in 12-uurs format is...",
+        q: "Hoe schrijf je **21:00** op een 12-uursklok (met AM en PM)?",
         options: ["9:00 PM","9:00 AM","21:00 PM","12:00 PM"],
         answer: 0,
-        wrongHints: [null,"AM is 's ochtends.","Bij PM tel je maar tot 12. Hoeveel is 21 min 12?","12:00 PM is middag."],
+        wrongHints: [null,"AM is 's ochtends.","PM klopt, maar op een 12-uursklok staat nooit een getal boven de 12: na de middag begint het tellen opnieuw bij 1.","12:00 PM is middag."],
         uitlegPad: {
           stappen: [{ titel: "21 - 12 = 9 PM", tekst: "21:00 → 21-12 = 9. Avond → PM. Dus 9:00 PM." }],
           woorden: [{ woord: "PM", uitleg: "Post Meridiem (Latijn) = na het middaguur. 12-23 uur." }, { woord: "AM", uitleg: "Ante Meridiem = vóór het middaguur. 0-11 uur." }],
@@ -1415,7 +1415,7 @@ const steps = [
     svg: tweeKlokSvg(9, 30, 11, 45, "begin: 09:30", "eind: 11:45"),
     checks: [
       {
-        q: "Hoe lang van **08:00** tot **14:00**?",
+        q: "Hoe lang is het van **08:00** tot **14:00**?",
         options: ["6 uur","8 uur","12 uur","2 uur"],
         answer: 0,
         wrongHints: [null,"Trek eind- en begintijd van elkaar af — klopt jouw aftreksom?","Te lang — klopt het dat het meer dan een halve dag is?","Te kort — hoe ver is het van 8 uur 's ochtends tot 2 uur 's middags?"],
@@ -1429,7 +1429,7 @@ const steps = [
         },
       },
       {
-        q: "Hoe lang van **15:30** tot **17:45**?",
+        q: "Hoe lang is het van **15:30** tot **17:45**?",
         options: ["2 uur 15 min","2 uur","3 uur 15 min","1 uur 45 min"],
         answer: 0,
         wrongHints: [null,"Je hebt de hele uren goed — kijk nu ook naar de minuten.","Tel de hele uren nog eens: van 15 naar 17.","Te kort — tel eerst de hele uren, dan de minuten."],
@@ -1443,7 +1443,7 @@ const steps = [
         },
       },
       {
-        q: "Naar bed **22:00**, opstaan **07:00**. Hoe lang slapen?",
+        q: "Je gaat om **22:00** naar bed en staat om **07:00** op. Hoe lang heb je geslapen?",
         options: ["9 uur","8 uur","12 uur","15 uur"],
         answer: 0,
         wrongHints: [null,"Je passeert middernacht — splits de berekening in twee delen: voor en na middernacht.","Tel per uur verder vanaf 22:00: 23:00, 00:00, 01:00 … Kom je bij 07:00 op 12 uur uit?","Je trok 7 van 22 af. Tel liever per uur verder vanaf 22:00: hoeveel stappen zijn het tot 07:00?"],
@@ -1642,7 +1642,7 @@ const steps = [
         },
       },
       {
-        q: "De grote wijzer op **6**, kleine net voor **8**. Hoe laat is het?",
+        q: "De grote wijzer staat op de **6** en de kleine wijzer staat net voor de **8**. Hoe laat is het?",
         svg: klokSvg(7, 30),
         options: ["Half 8","Half 9","8:30","9 uur"],
         answer: 0,
@@ -1657,7 +1657,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is **kwart voor 7** 's avonds in 24-uurs?",
+        q: "Hoe schrijf je **kwart voor 7** 's avonds in cijfers op een 24-uursklok?",
         options: ["18:45","06:45","19:15","18:15"],
         answer: 0,
         wrongHints: [null,"06:45 is 's ochtends.","Dat is kwart over 7.","Dat is kwart over 6."],
@@ -1671,10 +1671,10 @@ const steps = [
         },
       },
       {
-        q: "Hoe lang van **13:15** tot **15:00**?",
+        q: "Hoe lang is het van **13:15** tot **15:00**?",
         options: ["1 uur 45 minuten","2 uur","2 uur 15 min","45 minuten"],
         answer: 0,
-        wrongHints: [null,"Te lang — 13:15 is geen heel uur. Tel eerst tot 14:00.","2 uur 15 zou tot 15:30 zijn.","45 minuten brengt je van 13:15 naar 14:00. Hoe ver is het daarna nog tot 15:00?"],
+        wrongHints: [null,"Te lang — 13:15 is geen heel uur. Tel eerst tot 14:00.","2 uur 15 zou tot 15:30 zijn.","Dan ben je pas bij het volgende hele uur en nog niet bij 15:00. Hoeveel tijd komt er daarna nog bij?"],
         uitlegPad: {
           stappen: [{ titel: "Tel vooruit", tekst: "13:15 → 14:00 = 45 min. 14:00 → 15:00 = 1 uur. Totaal: 1 uur 45 min." }],
           woorden: [{ woord: "tel-vooruit truc", uitleg: "Tel in stappen: tot heel uur, dan hele uren, dan rest." }],
@@ -1685,10 +1685,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel minuten = **3 kwartieren**?",
+        q: "Hoeveel minuten zijn **3 kwartieren**?",
         options: ["45","30","60","15"],
         answer: 0,
-        wrongHints: [null,"Dat zijn maar 2 kwartieren — het gaat om 3.","Dat zijn 4 kwartieren — maar de vraag gaat over 3.","Dat is slechts 1 kwartier — vermenigvuldig dit nog met 3."],
+        wrongHints: [null,"Dat zijn maar 2 kwartieren — het gaat om 3.","Dat zijn 4 kwartieren — maar de vraag gaat over 3.","Dat is maar één kwartier. De vraag gaat over drie kwartieren."],
         uitlegPad: {
           stappen: [{ titel: "3 × 15 = 45", tekst: "1 kwartier = 15 min. 3 × 15 = 45 minuten." }],
           woorden: [{ woord: "kwartier", uitleg: "15 minuten. 4 kwartieren = 1 uur." }],
@@ -1699,10 +1699,10 @@ const steps = [
         },
       },
       {
-        q: "**08:30** in Nederlandse spreektaal:",
+        q: "Hoe zeg je **08:30** in gewone Nederlandse spreektaal?",
         options: ["Half 9","Half 8","8:30 uur","Acht en half"],
         answer: 0,
-        wrongHints: [null,"Half 8 = 7:30.","In cijfers klopt het, maar hoe zég je het in gewone spreektaal?","In het Engels zeg je 'half past eight'. Hoe zeg je in het Nederlands een half uur vóór 9?"],
+        wrongHints: [null,"Half 8 = 7:30.","In cijfers klopt het, maar hoe zég je het in gewone spreektaal?","'Acht en half' zeggen we in het Nederlands niet. Bij een half uur kijk je naar het hele uur dat nog komt."],
         uitlegPad: {
           stappen: [{ titel: "08:30 = half 9", tekst: "Nederlandse spreektaal: minuten op 30 = 'half X+1'. 08:30 → half 9." }],
           woorden: [{ woord: "half 9", uitleg: "= 8:30 = 30 min vóór 9 uur." }],
@@ -1713,10 +1713,10 @@ const steps = [
         },
       },
       { q: "De film begint om 19:15 en duurt 90 minuten. Hoe laat is hij afgelopen?", options: ["20:45","20:15","21:00","19:45"], answer: 0, wrongHints: [null, "20:15 is één uur later. Hoeveel is 90 minuten: 1 uur en hoeveel minuten nog?", "21:00 is 1 uur en 45 minuten later. Duurt de film zo lang?", "19:45 is maar 30 minuten later. Hoeveel uur zit er ook nog in 90 minuten?"] },
-      { q: "**Kwart over 3** = welke tijd?", options: ["3:15","3:45","2:45","3:30"], answer: 0, wrongHints: [null, "Kwart voor 4.", "Kwart voor 3.", "Half 4."] },
-      { q: "**Kwart voor 8** = welke tijd?", options: ["7:45","8:15","8:45","7:15"], answer: 0, wrongHints: [null, "8:15 is kwart óver 8. Ligt kwart vóór 8 eerder of later?", "8:45 is kwart voor 9. Welk uur hoort bij kwart voor 8?", "7:15 is kwart over 7. Hoeveel minuten is het dan nog tot 8 uur?"] },
-      { q: "**Half 5** = welke tijd?", options: ["4:30","5:30","4:45","5:00"], answer: 0, wrongHints: [null, "Half 5 betekent: halverwege op weg naar 5 uur. Is 5:30 vóór of na 5 uur?", "4:45 is kwart voor 5. Wat betekent 'half' op de klok?", "5:00 is precies 5 uur. Komt half 5 een half uur eerder of later?"] },
-      { q: "**21:00** in 12-uurs?", options: ["9:00 's avonds","9:00 's morgens","11:00 's avonds","1:00 's nachts"], answer: 0, wrongHints: [null, "Dat is 09:00.", "11:00 's avonds is 23:00. Hoeveel is 21 min 12?", "1:00 's nachts is 01:00. Hoeveel is 21 min 12?"] },
+      { q: "Hoe schrijf je **kwart over 3** in cijfers?", options: ["3:15","3:45","2:45","3:30"], answer: 0, wrongHints: [null, "3:45 is kwart voor 4.", "2:45 is kwart voor 3.", "3:30 is half 4."] },
+      { q: "Hoe schrijf je **kwart voor 8** in cijfers?", options: ["7:45","8:15","8:45","7:15"], answer: 0, wrongHints: [null, "8:15 is kwart óver 8. Ligt kwart vóór 8 eerder of later?", "8:45 is kwart voor 9. Welk uur hoort bij kwart voor 8?", "7:15 is kwart over 7. Hoeveel minuten is het dan nog tot 8 uur?"] },
+      { q: "Hoe schrijf je **half 5** in cijfers?", options: ["4:30","5:30","4:45","5:00"], answer: 0, wrongHints: [null, "Half 5 betekent: halverwege op weg naar 5 uur. Is 5:30 vóór of na 5 uur?", "4:45 is kwart voor 5. Wat betekent 'half' op de klok?", "5:00 is precies 5 uur. Komt half 5 een half uur eerder of later?"] },
+      { q: "Hoe laat is **21:00** op een gewone klok met 12 uren?", options: ["9:00 's avonds","9:00 's morgens","11:00 's avonds","1:00 's nachts"], answer: 0, wrongHints: [null, "Dat is 09:00, 's ochtends.", "11:00 's avonds is 23:00. Dat is twee uur later dan 21:00.", "1:00 's nachts is 01:00. Dat is al na middernacht."] },
       { q: "Hoeveel **minuten** in 1 uur?", options: ["60","100","30","24"], answer: 0, wrongHints: [null, "Tijd rekent niet met honderd zoals geld. Hoeveel streepjes loopt de grote wijzer in één rondje?", "30 minuten is een half uur. Hoeveel minuten heeft een heel uur?", "24 is het aantal uren in een dag. Hoeveel minuten heeft één uur?"] },
       { q: "Hoeveel **seconden** in 1 minuut?", options: ["60","30","100","24"], answer: 0, wrongHints: [null, "30 seconden is een halve minuut. Hoeveel seconden zijn er in een hele?", "Tijd rekent niet met honderd, zoals centimeters. Hoeveel tikken maakt de secondewijzer in één rondje?", "24 is het aantal uren in een dag. Hoeveel streepjes loopt de secondewijzer in één rondje?"] },
       { q: "School begint om 8:30 en eindigt om 14:45. Hoe lang duurt de schooldag?", options: ["6 uur 15 min","6 uur","5 uur 45 min","7 uur"], answer: 0, wrongHints: [null, "Je hebt de uren — kijk ook naar de minuten: :30 en :45.", "Tel 5 uur en 45 minuten op bij 8:30. Kom je dan op 14:45 uit?", "Tel 7 uur op bij 8:30. Hoe laat is het dan? Is dat 14:45?"] },
@@ -1727,7 +1727,7 @@ const steps = [
       { q: "Hoe laat is 'half 11'?", options: ["10:30","11:30","10:45","11:00"], answer: 0, wrongHints: [null, "Half 11 betekent halverwege op weg naar 11 uur. Is 11:30 vóór of na 11 uur?", "10:45 is kwart voor 11. Wat betekent 'half' op de klok?", "11:00 is precies 11 uur. Komt half 11 een half uur eerder of later?"] },
       { q: "Hoe zeg je **15:30** in spreektaal?", options: ["Half 4","Half 5","Kwart over 3","Kwart voor 4"], answer: 0, wrongHints: [null, "Dat is 16:30.", "Dat is 15:15.", "Dat is 15:45."] },
       { q: "Hoeveel uur tussen 22:00 en 06:00 's morgens?", options: ["8 uur","4 uur","12 uur","6 uur"], answer: 0, wrongHints: [null, "Tel per uur vanaf 22:00: 23:00, 00:00, 01:00 … Hoeveel stappen zijn het tot 06:00?", "12 uur na 22:00 is het 10:00 's ochtends. Is 06:00 zo laat?", "Hoeveel uur is het van 22:00 tot middernacht? Heb je die uren meegeteld?"] },
-      { q: "**5 voor half 3** = welke tijd?", options: ["14:25","14:35","2:35","15:25"], answer: 0, wrongHints: [null, "Dat is 5 óver half 3.", "Dat is 5 óver half 3, en dan 's nachts.", "Dat is 5 voor half 4."] },
+      { q: "Het is 's middags **5 voor half 3**. Hoe schrijf je dat in cijfers?", options: ["14:25","14:35","2:35","15:25"], answer: 0, wrongHints: [null, "Dat is 5 óver half 3.", "Dat is 5 óver half 3, en dan 's nachts.", "Dat is 5 voor half 4."] },
     ],
   },
 ];
