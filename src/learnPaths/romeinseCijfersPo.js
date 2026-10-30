@@ -88,13 +88,13 @@ const steps = [
         q: "Welk getal is **M**?",
         options: ["1000", "500", "100", "2000"],
         answer: 0,
-        wrongHints: [null, "Dat is D.", "Dat is C.", "Zo'n groot getal schrijf je met meer dan één symbool."],
+        wrongHints: [null, "500 schrijf je met de letter D, niet met M.", "100 schrijf je met de letter C, niet met M.", "Zo'n groot getal schrijf je met meer dan één symbool."],
         uitlegPad: {
           stappen: [{ titel: "M = 1000", tekst: "De letter M (van 'mille', duizend) staat voor 1.000." }],
           niveaus: {
-            basis: "M is het symbool voor 1.000.",
-            simpeler: "Denk aan 'millennium': 1.000 jaar. M = 1.000.",
-            nogSimpeler: "Welke waarde hoort bij M?",
+            basis: "M komt van het Latijnse woord 'mille'. Weet je wat dat betekent?",
+            simpeler: "Denk aan het woord 'millennium': een periode van duizend jaar. Welk getal is M dan?",
+            nogSimpeler: "M = 1.000.",
           },
         },
       },

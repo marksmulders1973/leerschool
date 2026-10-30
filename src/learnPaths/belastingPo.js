@@ -422,7 +422,7 @@ const steps = [
         q: "Wie haalt de **belasting van je loon** af?",
         options: ["Je werkgever, vóórdat je het loon krijgt", "Jij zelf, aan het eind van het jaar", "De bank, als het loon binnenkomt", "De gemeente, één keer per maand"],
         answer: 0,
-        wrongHints: [null, "Je hoeft de belasting op je loon niet zelf af te dragen: die is er al af als het geld op je rekening staat.", "De bank zet het geld alleen op je rekening. De bank weet niet hoeveel belasting jij moet betalen.", "De gemeente heft andere belastingen, zoals voor het ophalen van afval, maar niet de belasting op je loon."],
+        wrongHints: [null, "Dan zou je de belasting zelf moeten uitrekenen en betalen. Zo werkt het bij gewoon loon niet.", "De bank zet het geld alleen op je rekening. De bank weet niet hoeveel belasting jij moet betalen.", "De gemeente heft andere belastingen, zoals voor het ophalen van afval, maar niet de belasting op je loon."],
       },
       {
         q: "Brutoloon **€200**, belasting **€50**. Hoeveel is het **nettoloon**?",

@@ -532,7 +532,7 @@ const steps = [
         q: "Marie was 's ochtends verdrietig om een zes op haar rapport. 's Middags kreeg ze een lieve brief van oma. Welk spreekwoord past?",
         options: ["Na regen komt zonneschijn", "Goedkoop is duurkoop", "Vele handen maken licht werk", "Hoge bomen vangen veel wind"],
         answer: 0,
-        wrongHints: [null, "Niet over geld.", "Niet over samen.", "Niet over kritiek."],
+        wrongHints: [null, "Er wordt in dit verhaal niets gekocht. Waar gaat het verhaal dan wél over?", "Er werkt hier niemand samen. Waar gaat het verhaal dan wél over?", "Marie is niet beroemd en krijgt geen kritiek. Lees het verhaal nog eens."],
       },
       {
         q: "Tien klasgenoten ruimden samen het lokaal op. Het duurde 10 minuten in plaats van 1 uur. Welk spreekwoord past?",
@@ -544,7 +544,7 @@ const steps = [
         q: "Tom kocht 6 paar goedkope schoenen. Alle 6 waren binnen 2 maanden kapot. Welk spreekwoord past?",
         options: ["Goedkoop is duurkoop", "Beter een goede buur dan een verre vriend", "Op rozen zitten", "Vele handen maken licht werk"],
         answer: 0,
-        wrongHints: [null, "Gaat dit verhaal over vrienden? Kijk wat Tom overkomt met zijn géld.", "Lees het verhaal nog eens: wat gebeurt er met Toms schoenen?", "Er helpt hier niemand mee. Waar gaat het verhaal over?"],
+        wrongHints: [null, "Gaat dit verhaal over vrienden of buren? Lees nog eens wat er met de schoenen gebeurt.", "Lees het verhaal nog eens: wat gebeurt er met Toms schoenen?", "Er helpt hier niemand mee. Waar gaat het verhaal over?"],
       },
       {
         q: "Anna's broer werd wereldberoemd. Daarna kreeg hij veel boze berichten en kritiek. Welk spreekwoord past?",

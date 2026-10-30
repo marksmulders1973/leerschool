@@ -327,7 +327,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Na 'want' staat de reden → de clown valt om is de oorzaak.",
+            basis: "Zoek het signaalwoord 'want'. Wat staat er vóór dat woord, en wat staat erna? Welk stuk is de reden?",
             simpeler: "Vraag 'waarom moet Lisa lachen?'. Het antwoord is de oorzaak.",
             nogSimpeler: "Wat gebeurde er eerst, waardoor Lisa ging lachen?",
           },

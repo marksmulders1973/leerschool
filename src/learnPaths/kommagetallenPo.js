@@ -465,13 +465,13 @@ const steps = [
         q: "**4,5 + 1,75** = ?",
         options: ["6,25", "6,2", "5,75", "62,5"],
         answer: 0,
-        wrongHints: [null, "Net niet — schrijf 4,5 als 4,50 zodat je 2 decimalen onder elkaar hebt, en tel dan op.", "Te weinig — controleer of je 4,5 als 4,50 noteert.", "Komma verkeerd geplaatst — werk met 2 decimalen."],
+        wrongHints: [null, "Bijna. Schrijf 4,5 als 4,50, zet de komma's onder elkaar en tel dan op.", "Te weinig. Heb je de 0,5 van 4,5 wel meegeteld?", "De komma staat op de verkeerde plek. Zet de komma's precies onder elkaar."],
       },
       {
         q: "**10 − 2,75** = ?",
         options: ["7,25", "7,75", "8,25", "12,75"],
         answer: 0,
-        wrongHints: [null, "Net niet — schrijf 10 als 10,00 zodat je decimalen onder elkaar hebt en trek dan af.", "Te veel — controleer de aftrekking nog eens.", "Niet 12,75 — dat is optellen, niet aftrekken."],
+        wrongHints: [null, "Bijna. Schrijf 10 als 10,00, zet de komma's onder elkaar en trek dan af.", "Te veel. Reken terug: is 8,25 + 2,75 echt 10?", "Niet 12,75 — dat is optellen, niet aftrekken."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -515,7 +515,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6,3 + 2,45 = 8,75.",
+            basis: "Schrijf 6,3 als 6,30. Zet de komma's onder elkaar en tel eerst de cijfers achter de komma op.",
             simpeler: "Schrijf 6,30 + 2,45 onder elkaar. 30 + 45 = 75, 6 + 2 = 8. Dus 8,75.",
             nogSimpeler: "8,75",
           },
@@ -566,7 +566,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9,4 − 3,6 = 5,8.",
+            basis: "Je kunt 6 tienden niet van 4 tienden afhalen. Leen dan 1 van de 9 en reken verder.",
             simpeler: "Reken 94 − 36 = 58 en zet de komma terug: 5,8.",
             nogSimpeler: "5,8",
           },
@@ -613,7 +613,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 + 0,6 = 3,6.",
+            basis: "Een heel getal kun je schrijven met ,0 erachter: 3 is 3,0. Zet de komma's onder elkaar en tel op.",
             simpeler: "Schrijf 3 als 3,0. Zet onder 0,6. Tel op: 3,6.",
             nogSimpeler: "3,6",
           },

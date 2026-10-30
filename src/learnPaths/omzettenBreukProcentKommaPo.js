@@ -402,7 +402,7 @@ const steps = [
         q: "Wat is 0,1 in procent?",
         options: ["10%", "1%", "0,1%", "100%"],
         answer: 0,
-        wrongHints: [null, "Te weinig — schuif 2 plaatsen.", "Heb je de komma wel verschoven? Hoeveel plaatsen moet hij naar rechts?", "Dat is het hele getal (1,0)."],
+        wrongHints: [null, "Je schoof de komma maar één plaats. Hoeveel plaatsen moet hij naar rechts?", "Heb je de komma wel verschoven? Hoeveel plaatsen moet hij naar rechts?", "100% is het hele getal 1. Is 0,1 een heel getal?"],
         uitlegPad: {
           stappen: [
             { titel: "× 100", tekst: "Om van kommagetal naar procent te gaan vermenigvuldig je met 100 — de komma schuift twee plaatsen naar rechts." },
@@ -413,7 +413,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Van een klas van 30 is 0,3 jongens — reken zelf uit hoeveel procent dat is met dezelfde truc." }],
           basiskennis: [{ onderwerp: "Komma twee plaatsen", uitleg: "×100 = komma twee plaatsen naar rechts. Vergeet je dit, dan reken je fout." }],
           niveaus: {
-            basis: "0,1 × 100 = 10%.",
+            basis: "Van een kommagetal naar procent doe je keer 100. Wat krijg je als je dat met 0,1 doet?",
             simpeler: "Komma 2 naar rechts: 0,1 → 10.",
             nogSimpeler: "Eén tiende is hoeveel procent?",
           },
@@ -423,7 +423,7 @@ const steps = [
         q: "Hoe ga je van een kommagetal naar procent?",
         options: ["keer 100", "deel door 100", "keer 10", "deel door 10"],
         answer: 0,
-        wrongHints: [null, "Dat is juist andersom (procent → kommagetal).", "Dat is maar 1 plaats.", "Ook maar 1 plaats."],
+        wrongHints: [null, "Dat is juist andersom (procent → kommagetal).", "Keer 10 schuift de komma maar één plaats. Is dat genoeg?", "Delen maakt het getal kleiner. Wordt een getal groter of kleiner als je naar procent gaat?"],
         uitlegPad: {
           stappen: [
             { titel: "Denk aan een voorbeeld", tekst: "Je weet dat 0,5 hetzelfde is als 50%. Bedenk welke rekenstap je nodig hebt om van 0,5 naar 50 te komen." },
@@ -434,7 +434,7 @@ const steps = [
           voorbeelden: [{ type: "geld", tekst: "0,25 euro extra spaargeld en 25% korting gebruiken allebei dezelfde soort rekenstap om van vorm te wisselen." }],
           basiskennis: [{ onderwerp: "Tegenovergestelde bewerkingen", uitleg: "Twee bewerkingen kunnen elkaars tegenovergestelde zijn, zoals optellen/aftrekken of vermenigvuldigen/delen." }],
           niveaus: {
-            basis: "Kommagetal × 100 = procent.",
+            basis: "Denk aan 0,5: dat is de helft, en de helft is 50%. Hoe kom je van 0,5 bij 50?",
             simpeler: "0,3 wordt 30%. Wat deed je: × 100 of ÷ 100?",
             nogSimpeler: "Wordt het getal groter of kleiner als je naar procent gaat?",
           },
@@ -455,7 +455,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Van een klas doet 0,04 mee aan een wedstrijd — reken met dezelfde regel uit hoeveel procent dat is." }],
           basiskennis: [{ onderwerp: "Nullen tellen mee", uitleg: "Een nul direct na de komma is een plek die je niet mag overslaan bij het schuiven." }],
           niveaus: {
-            basis: "0,07 × 100 = 7%.",
+            basis: "Van een kommagetal naar procent doe je keer 100. Schuif de komma in 0,07 twee plaatsen naar rechts.",
             simpeler: "Komma 2 naar rechts: 0,07 → 07 → 7.",
             nogSimpeler: "Hoeveel cijfers staan er achter de komma?",
           },
@@ -465,7 +465,7 @@ const steps = [
         q: "Wat is 40% als kommagetal?",
         options: ["0,4", "4,0", "0,04", "40"],
         answer: 0,
-        wrongHints: [null, "Dat is veel te groot — deel door 100.", "Je schoof 3 plaatsen in plaats van 2.", "Dat is het getal zonder komma."],
+        wrongHints: [null, "Je schoof de komma maar één plaats. Hoeveel plaatsen moet hij naar links?", "Je schoof 3 plaatsen in plaats van 2.", "Je hebt alleen het %-teken weggelaten. Moet de komma ook nog verschuiven?"],
         uitlegPad: {
           stappen: [
             { titel: "÷ 100", tekst: "Om van procent naar kommagetal te gaan deel je door 100 — de komma schuift twee plaatsen naar links." },
@@ -476,7 +476,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Een jas heeft 70% korting — als kommagetal reken je dat op dezelfde manier uit." }],
           basiskennis: [{ onderwerp: "Delen door 100", uitleg: "Delen door 100 maakt een getal honderd keer kleiner, en de komma schuift twee plaatsen naar links." }],
           niveaus: {
-            basis: "40 ÷ 100 = 0,4.",
+            basis: "Van procent naar kommagetal doe je gedeeld door 100: de komma schuift twee plaatsen naar links.",
             simpeler: "Komma 2 naar links: 40 → 0,40 = 0,4.",
             nogSimpeler: "Is 40% meer of minder dan 1?",
           },
@@ -490,7 +490,7 @@ const steps = [
         wrongHints: [
           null,
           "Je schoof de komma maar 1 plaats. Hoeveel plaatsen moet het zijn?",
-          null,
+          "Je zette alleen een %-teken achter het getal. Moet de komma ook nog verschuiven?",
           "Dat is meer dan het geheel.",
         ],
         uitlegPad: {
@@ -524,7 +524,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,35 × 100 = 35, dus 35%.",
+            basis: "Van een kommagetal naar procent doe je keer 100. Wat krijg je als je 0,35 keer 100 doet?",
             simpeler: "Schuif de komma in 0,35 twee plaatsen naar rechts.",
             nogSimpeler: "0,35 × 100 = ?",
           },
@@ -534,7 +534,7 @@ const steps = [
         q: "Wat is 9% als kommagetal?",
         options: ["0,09", "0,9", "9,0", "0,009"],
         answer: 0,
-        wrongHints: [null, "Dat is 90% — let op de nul.", "Dat is het hele getal 9.", null],
+        wrongHints: [null, "Dat is 90% — let op de nul.", "9,0 is gewoon het getal 9. Heb je de komma wel verschoven?", "Je schoof de komma drie plaatsen. Hoeveel plaatsen moet het zijn?"],
         uitlegPad: {
           stappen: [
             {
@@ -566,7 +566,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 ÷ 100 = 0,09.",
+            basis: "Van procent naar kommagetal doe je gedeeld door 100. De komma schuift dus twee plaatsen naar links.",
             simpeler: "Schuif de komma in 9 twee plaatsen naar links (zet een nul ervoor).",
             nogSimpeler: "9 cent = € 0,0?",
           },
@@ -580,7 +580,7 @@ const steps = [
           null,
           "Schuif de komma twee plaatsen, niet één.",
           "Dat is meer dan het geheel — 0,12 is veel minder dan 1.",
-          null,
+          "Je zette alleen een %-teken achter het getal. Moet de komma ook nog verschuiven?",
         ],
         uitlegPad: {
           stappen: [
@@ -613,7 +613,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,12 × 100 = 12, dus 12%.",
+            basis: "Van een kommagetal naar procent doe je keer 100. Schuif de komma in 0,12 twee plaatsen naar rechts.",
             simpeler: "0,12 euro is 12 cent. Hoeveel van de 100 is dat?",
             nogSimpeler: "0,12 × 100 = ?",
           },

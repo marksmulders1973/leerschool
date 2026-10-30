@@ -222,7 +222,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat is er kapot?", tekst: "De auto is kapot. 'Hij' verwijst naar de auto (een 'de'-woord)." }],
           niveaus: {
-            basis: "'Hij' verwijst naar de auto.",
+            basis: "Kijk in de zin vóór 'hij': welk ding kan kapot zijn?",
             simpeler: "Wat staat er stil omdat het kapot is?",
             nogSimpeler: "Waar gaat 'hij' over: de auto of de weg?",
           },
@@ -250,7 +250,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat slaapt er?", tekst: "De kat slaapt. 'Hij' verwijst naar de kat (een 'de'-woord)." }],
           niveaus: {
-            basis: "'Hij' verwijst naar de kat.",
+            basis: "Kijk in de zin vóór 'hij': wie of wat kan lekker slapen?",
             simpeler: "Wat ligt er lekker te slapen?",
             nogSimpeler: "Waar gaat 'hij' over: de kat of de bank?",
           },
@@ -264,7 +264,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee verwijswoorden", tekst: "'Ze' = Sophie (die draagt). 'Hem' = de jas (die gedragen wórdt). 'Hem' verwijst naar de jas." }],
           niveaus: {
-            basis: "'Hem' verwijst naar de jas; 'ze' naar Sophie.",
+            basis: "'Ze' is Sophie. Wat wordt er door haar gedragen? Zoek dat woord in de eerste zin.",
             simpeler: "Wat draagt Sophie vaak?",
             nogSimpeler: "Wat wordt er gedragen: Sophie of de jas?",
           },
@@ -284,7 +284,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Het' verwijst naar het konijn.",
+            basis: "Kijk in de eerste zin: wie of wat kan een blaadje sla eten?",
             simpeler: "Wat zit er in het hok en eet een blaadje sla?",
             nogSimpeler: "Wie eet er: het konijn of het hok?",
           },
@@ -303,7 +303,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij 'het boek' hoort het verwijswoord 'het'.",
+            basis: "Kijk of 'boek' een de-woord of een het-woord is. Daar hangt het verwijswoord van af.",
             simpeler: "Zeg je 'de boek' of 'het boek'?",
             nogSimpeler: "Het boek … ___ is dik. Welk woordje past bij 'het boek'?",
           },
@@ -322,7 +322,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Ze' verwijst naar de juf.",
+            basis: "Kijk wie er in de eerste zin iets doet. 'Ze' past bij een vrouw of een meisje.",
             simpeler: "Wie geeft er een sticker en plakt die op het schrift?",
             nogSimpeler: "Wie is een vrouw: de juf of Bas?",
           },
@@ -341,7 +341,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij 'de bal' hoort 'hij'.",
+            basis: "Kijk of 'bal' een de-woord of een het-woord is. Bij een de-woord hoort een ander verwijswoord dan bij een het-woord.",
             simpeler: "Is 'bal' een 'de'-woord of een 'het'-woord?",
             nogSimpeler: "De stoel → hij. De bal → …?",
           },

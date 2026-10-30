@@ -1,0 +1,418 @@
+[
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; wrongHints waren telegramzinnen ('Niet over geld.').",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven tot hele zinnen die de denkfout benoemen."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 4 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij 'goede buur' stuurde naar 'géld' — de enige geld-optie is het goede antwoord.",
+  "hersteld": true,
+  "wijziging": "wrongHint B herschreven: wijst op vrienden/buren en terug naar het verhaal, zonder geld te noemen."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; hints benoemen denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; hints feitelijk juist.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt (Cheops ~3800 jaar hoogste bouwwerk).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; Alexander ruim 200 jaar eerder klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 22",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 28",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; Sparta is de standaardkennis.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; wrongHints B/D telegramachtig.",
+  "hersteld": true,
+  "wijziging": "basis wordt hulpstap (keer 100); hints B en D herschreven tot hele zinnen."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; hints C/D telegram ('Ook maar 1 plaats.').",
+  "hersteld": true,
+  "wijziging": "basis wordt hulpstap via 0,5 = 50%; hints C en D herschreven."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint B rekende de bewerking voor, hint D vaag.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; hints B (één plaats geschoven) en D (alleen %-teken weg) benoemen de denkfout."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; wrongHint bij 0,35% ontbrak (null).",
+  "hersteld": true,
+  "wijziging": "basis herschreven; hint voor 0,35% toegevoegd."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; wrongHint bij 0,009 ontbrak (null).",
+  "hersteld": true,
+  "wijziging": "basis herschreven; hint voor 0,009 (drie plaatsen) en 9,0 toegevoegd/verbeterd."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; wrongHint bij 0,12% ontbrak (null).",
+  "hersteld": true,
+  "wijziging": "basis herschreven; hint voor 0,12% toegevoegd."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (kijk in de zin ervóór)."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven: de-/het-woord bepalen."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven: de-/het-woord bepalen."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; hints telegramachtig, jargon 'decimalen' voor groep 6, hint bij 5,75 benoemde niet de echte fout (0,5 vergeten).",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; hints met jargon 'decimalen' en vage hint bij 8,25.",
+  "hersteld": true,
+  "wijziging": "hints B en C herschreven (komma's onder elkaar; terugrekenen)."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (6,30 onder 2,45)."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (lenen)."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (3 = 3,0)."
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints en niveaus goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt, maar erg kinderachtig voor groep 8 (vraagteken na 'Wanneer ben je jarig').",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; 'toch wel' maakt het een passende groep-8-vraag.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "topografie-wereld-werelddelen-po stap 6 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; wrongHints telegramzinnen.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; hints tot hele zinnen."
+ },
+ {
+  "waar": "topografie-wereld-werelddelen-po stap 7 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHints rekenden het antwoord voor: 'Eentje vergeten — tel Oceanië ook mee' (5+1) en 'Antarctica staat niet op deze kaart' (7−1); basis gaf antwoord.",
+  "hersteld": true,
+  "wijziging": "hints B en C herschreven (natellen; alleen bewoonde werelddelen tellen); basis tot hulpstap."
+ },
+ {
+  "waar": "geld-rekenen stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt (2,99 + 4,99 = 7,98); hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordenschat-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; contextclue in de zin is bewust (stap 'Woorden in zinnen begrijpen').",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij 'Jij zelf' zei 'die is er al af als het geld op je rekening staat' = het tweede deel van het goede antwoord.",
+  "hersteld": true,
+  "wijziging": "wrongHint B herschreven zonder het moment of de werkgever te noemen."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven: zoek 'want', wat staat ervoor/erna."
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis en simpeler gaven het antwoord, nogSimpeler juist niet; hints 'Dat is D.' kaal.",
+  "hersteld": true,
+  "wijziging": "niveaus omgedraaid (mille → millennium → M = 1.000); hints B/C tot hele zinnen."
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt (kaal: l vóór r en s).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "topografie-europa-landen-po stap 7 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint 'Grenst niet aan Nederland.' telegram.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; hint C tot hele zin."
+ }
+]
