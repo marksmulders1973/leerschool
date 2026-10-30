@@ -1163,11 +1163,11 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
           stappen: [
             { titel: "Zoekwoord", tekst: "De vraag gaat over gratis toegang. Scan op 'gratis' onder het kopje 'Prijzen'." },
             { titel: "Precies lezen", tekst: "De zin luidt: 'Kinderen jonger dan vier jaar mogen gratis naar binnen.' De grens voor gratis is dus: jonger dan vier. Wie vier jaar óf ouder is, betaalt." },
-            { titel: "Begrijp 'tot'", tekst: "'Tot vier jaar' = jonger dan vier. Op de verjaardag dat je vier wordt, is de gratis-periode voorbij. Dat is de leeftijdsgrens die de vraag bedoelt." },
+            { titel: "Begrijp 'jonger dan'", tekst: "'Jonger dan vier jaar' betekent: nog geen vier. Op de verjaardag dat je vier wordt, is de gratis-periode voorbij. Dat is de leeftijdsgrens die de vraag bedoelt." },
           ],
           niveaus: {
             basis: "Kijk bij het kopje 'Prijzen'. Lees de zin over gratis. Welke leeftijdsgrens noemt die zin?",
-            simpeler: "'Tot vier jaar' — op welke leeftijd begin je dan wel te betalen?",
+            simpeler: "De folder noemt een leeftijd waaronder kinderen gratis naar binnen mogen. Wie die leeftijd heeft bereikt, moet wel betalen.",
             nogSimpeler: "Zoek het woord 'gratis' in de folder en lees welk getal ernaast staat.",
           },
         },

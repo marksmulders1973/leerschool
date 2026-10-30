@@ -389,27 +389,27 @@ const steps = [
         q: "Welk woord heeft een tussen-s?",
         options: ["scheepsbel", "pannenkoek", "boekenkast", "tafelpoot"],
         answer: 0,
-        wrongHints: [null, "Dat heeft juist een tussen-n.", "Ook een tussen-n.", "Die heeft helemaal geen tussenletter."],
+        wrongHints: [null, "Zeg het hardop: hoor je tussen 'pan' en 'koek' een s, of iets anders?", "Zeg het hardop: hoor je tussen 'boek' en 'kast' een s, of iets anders?", "Zeg het hardop: hoor je tussen 'tafel' en 'poot' iets extra's?"],
         uitlegPad: {
           stappen: [{ titel: "scheeps-bel", tekst: "Bij 'scheepsbel' hoor je een -s- tussen scheeps en bel. De andere hebben -en- of geen tussenletter." }],
           niveaus: {
-            basis: "'scheepsbel' heeft een tussen-s.",
+            basis: "Zeg elk woord langzaam hardop. Hoor je tussen de twee delen een s, de klank -en-, of niets?",
             simpeler: "Bij welk woord hoor je een -s- ertussen?",
             nogSimpeler: "Welke heeft een s: scheepsbel?",
           },
         },
       },
       {
-        q: "Hoor je in 'stadsplein' een tussen-n of een tussen-s?",
-        options: ["een tussen-s", "een tussen-n", "geen van beide", "een tussen-e"],
+        q: "Je maakt één woord van 'station' en 'plein'. Welke tussenletter hoor je tussen de twee delen?",
+        options: ["een tussen-s", "een tussen-n", "geen tussenletter", "een tussen-e"],
         answer: 0,
-        wrongHints: [null, "Spreek het woord eens langzaam uit — welke letter hoor je tussen 'stad' en 'plein'?", "Er zit wél een tussenletter — luister nog eens goed.", "Zeg je 'stade-plein'? Luister welke klank je echt hoort."],
+        wrongHints: [null, "Zeg het woord eens langzaam hardop — hoor je echt '-en-' tussen 'station' en 'plein'?", "Zeg het hardop: ga je meteen van 'station' naar 'plein', of hoor je er een klank tussen?", "Hoor je een losse e-klank tussen 'station' en 'plein'? Luister welke klank je echt hoort."],
         uitlegPad: {
-          stappen: [{ titel: "stads-plein", tekst: "Zeg 'stad...plein': je hoort een s. Dus stadsplein, met tussen-s." }],
+          stappen: [{ titel: "stations-plein", tekst: "Zeg 'station...plein': je hoort een s. Dus stationsplein, met tussen-s." }],
           niveaus: {
-            basis: "Je hoort een -s-: stadsplein (tussen-s).",
-            simpeler: "Hoor je 'staden' of 'stads'? Een s dus.",
-            nogSimpeler: "Klinkt er een s tussen stad en plein?",
+            basis: "Zeg het woord langzaam hardop: station ... plein. Welke klank hoor je tussen de twee delen?",
+            simpeler: "Denk aan de grote klok op het station. Hoe noem je die in één woord? Welke letter staat daar na 'station'?",
+            nogSimpeler: "station + s + plein = stationsplein.",
           },
         },
       },
@@ -421,7 +421,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "stad + s + markt = stadsmarkt", tekst: "Zeg 'stad...markt': je hoort een s ertussen. Dus stadsmarkt, met tussen-s." }],
           niveaus: {
-            basis: "Je hoort een -s-: stadsmarkt.",
+            basis: "Zeg 'stad' en 'markt' achter elkaar hardop. Hoor je er een klank tussen, en welke?",
             simpeler: "Hoor je een s tussen stad en markt?",
             nogSimpeler: "stads + markt = ?",
           },
@@ -435,7 +435,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "verjaardags-taart", tekst: "Bij 'verjaardagstaart' hoor je een -s- tussen verjaardag en taart. Bij de andere woorden hoort de s bij het woord zelf, of hoor je geen s." }],
           niveaus: {
-            basis: "'verjaardagstaart' heeft een tussen-s.",
+            basis: "Let op: een s aan het eind van het eerste deel (zoals in 'kerst' of 'post') is geen tussen-s. Bij welk woord hoor je een extra s tussen de twee delen?",
             simpeler: "Hoor je bij welk woord een -s- ertussen?",
             nogSimpeler: "Bij welk woord hoor je 'verjaardags' (met s) ertussen?",
           },
@@ -460,7 +460,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je hoort een -s-: volkslied.",
+            basis: "Zeg 'volk' en 'lied' achter elkaar hardop. Hoor je er een klank tussen?",
             simpeler: "Zeg het hardop: 'volkslied'. Hoor je de s?",
             nogSimpeler: "volk + s + lied = ?",
           },
@@ -484,7 +484,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "oorlog + s + schip = oorlogsschip. Daar ontbreekt de s.",
+            basis: "Zeg elk woord hardop en kijk dan of elke s die je hoort ook in het woord staat.",
             simpeler: "Zeg 'oorlogsschip' hardop. Staat die s in het woord?",
             nogSimpeler: "Hoor je een s na 'oorlog'?",
           },

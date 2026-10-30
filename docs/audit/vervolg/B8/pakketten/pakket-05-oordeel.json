@@ -1,0 +1,306 @@
+[
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hints bij kwart/helft zeiden letterlijk \"het is maar een klein deel\" = omschrijving van het goede antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints B en C herschreven tot denkvraag over hoeveel onderdelen taal heeft, zonder het antwoord"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord stond in de vraag (\"letterlijk uitsluiten\" -> streep letterlijke weg) en hint C verklapte het",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven zonder de term; opties B-D herschreven tot plausibele denkfouten; hints aangepast"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Hints waren telegramzinnen (\"Niet — geen geweld.\") en hint D omschreef bijna het antwoord",
+  "hersteld": true,
+  "wijziging": "Drie wrongHints herschreven tot volledige denkvragen"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "2 x 1000 = 2000 ml klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "50 cl = 0,5 l klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "1 dl = 100 ml klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt (1500/250 = 6), maar telegramzin \"Hoeveel volle glazen?\"",
+  "hersteld": true,
+  "wijziging": "Vraag aangevuld: \"Hoeveel volle glazen kun je schenken?\""
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt (300+200 = 500), maar telegramzin met + en hint bij 320 ml paste niet bij die fout",
+  "hersteld": true,
+  "wijziging": "Vraag als hele zin; wrongHint 320 ml herschreven"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "33 cl = 330 ml klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord, hints telegramachtig",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; wrongHints als uitspreek-vragen"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord stond in de vraag: het woord stadsplein toont de s al",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven naar station + plein (zonder geschreven antwoord), opties/hints/niveaus/stap aangepast; C wordt \"geen tussenletter\""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt (oorlogsschip); niveaus.basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Staat in de tekst",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt (jonger dan vier gratis); simpeler en stap citeerden de tekst verkeerd als \"tot vier jaar\"",
+  "hersteld": true,
+  "wijziging": "simpeler en stap-uitleg kloppend gemaakt met \"jonger dan vier jaar\""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 27",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 28",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Dolfijn = zoogdier, hints feitelijk juist",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Pinguin = vogel met veren, hints juist",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "A (na zien diagram: 67)",
+  "reden": "Diagram klopte niet bij de vraag: balk \"geel\" was blauwgroen, balk \"groen\" was geel, balk \"blauw\" oranje",
+  "hersteld": true,
+  "wijziging": "Kleuren in de svg van deze vraag gelijkgemaakt aan de teamnamen; 38+29=67 nagerekend"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt (Jesse 9 = hoogst), maar afleiders langste/oudste kind waren absurd en raadbaar",
+  "hersteld": true,
+  "wijziging": "Afleiders C/D vervangen door plausibele leesfouten (9 uur meer dan Daan; elke dag tv) met passende hints"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "60/10 = 6",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "200/150/190/180 cm: 2 m langst",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Eerste zin als kernzin is verdedigbaar; hints passen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en uitleg in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "belasting-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Loonheffing via werkgever klopt",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

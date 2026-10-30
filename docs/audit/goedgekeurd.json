@@ -310,10 +310,24 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 4",
+  "hash": "9bd7df5c5310cae9",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 5",
   "hash": "346b83d5e90323ff",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 4 vraag 6",
+  "hash": "f14244170898d50b",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -1994,6 +2008,13 @@
   "reden": "Som klopt (20% van 1000 = 200); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
  },
  {
+  "waar": "belasting-po stap 2 vraag 4",
+  "hash": "56e92d316cdcde81",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "belasting-po stap 2 vraag 5",
   "hash": "abe1dce8b46276f9",
   "oordeel": "twijfel",
@@ -2817,6 +2838,13 @@
   "hash": "a83a57d31fc040d7",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 3",
+  "hash": "4dc9d26d4ac6519e",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -4719,6 +4747,13 @@
   "reden": "Antwoord klopt; pinguïn-hint was telegramstijl met schuine streep."
  },
  {
+  "waar": "dierenklassen-po stap 6 vraag 1",
+  "hash": "dbf3ead121271ddb",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "dierenklassen-po stap 6 vraag 10",
   "hash": "86981e9dd7ac4dd3",
   "oordeel": "goed",
@@ -4782,6 +4817,13 @@
   "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt (vraag zegt niet 'alle'); hint B was een telegramfragment 'Vogel/reptiel/vis (...)'."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 2",
+  "hash": "1af39e459754fa04",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "dierenklassen-po stap 6 vraag 20",
@@ -6708,6 +6750,42 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 5",
+  "hash": "8e7cf6a5937be9e2",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 6",
+  "hash": "127c6a63d4ab5c88",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (jonger dan vier gratis); simpeler en stap citeerden de tekst verkeerd als \"tot vier jaar\""
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 7",
+  "hash": "904de8fd1ac117ad",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 8",
+  "hash": "096e0b0a79d457b6",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 9",
+  "hash": "bbc1316cfc72479c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "financiele-vorming-po stap 1 vraag 1",
   "hash": "ba2790f2ff867329",
   "oordeel": "goed",
@@ -8386,6 +8464,14 @@
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 9",
+  "hash": "4d7f9bf1e2052d94",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (Jesse 9 = hoogst), maar afleiders langste/oudste kind waren absurd en raadbaar"
  },
  {
   "waar": "grafieken-lezen-po stap 6 vraag 16",
@@ -11719,12 +11805,26 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "maten-eenheden stap 2 vraag 5",
+  "hash": "de1a64d62acdccf1",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "maten-eenheden stap 2 vraag 6",
   "hash": "c8093697736dc62e",
   "oordeel": "twijfel",
   "bron": "vervolg B7 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 7",
+  "hash": "8e69d575cdcb32ea",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "maten-eenheden stap 8 vraag 3",
@@ -11998,6 +12098,50 @@
   "hash": "a3295e640ed5e857",
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 1",
+  "hash": "b546baf51e2b93eb",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 2",
+  "hash": "c705963280731d91",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 3",
+  "hash": "01a323733f858c0f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 4",
+  "hash": "4ec35c772f85d137",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (1500/250 = 6), maar telegramzin \"Hoeveel volle glazen?\""
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 5",
+  "hash": "c6dd36ae72829f2b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (300+200 = 500), maar telegramzin met + en hint bij 320 ml paste niet bij die fout"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 6",
+  "hash": "2e5afa078a5fa97c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -12593,6 +12737,13 @@
   "hash": "e23cf22cd55f34cb",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 7",
+  "hash": "7f8090454f175ab9",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -15176,6 +15327,46 @@
   "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 3",
+  "hash": "3dec546c057de1db",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord, hints telegramachtig"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 5",
+  "hash": "3e7dda348d05e9b8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 6",
+  "hash": "500401dc650ee8ec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 7",
+  "hash": "506574e6164cc9b3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 8",
+  "hash": "c4493f83fb5f9880",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (oorlogsschip); niveaus.basis gaf het antwoord"
  },
  {
   "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
@@ -17900,6 +18091,35 @@
   "hash": "5a1c4ca455089d17",
   "oordeel": "goed",
   "bron": "vervolg B6 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 3",
+  "hash": "d0936db897d33f31",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints waren telegramzinnen (\"Niet — geen geweld.\") en hint D omschreef bijna het antwoord"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 4",
+  "hash": "b5b858f0d71193f8",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 5",
+  "hash": "38ff915b8e8c073f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 6",
+  "hash": "543e2ead49043d52",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -21637,6 +21857,20 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 1",
+  "hash": "5d7ea69a1f9b6e8f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 2",
+  "hash": "eeb279c632c44f16",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 4",
   "hash": "9880d1350ee82466",
   "oordeel": "goed",
@@ -23759,6 +23993,20 @@
   "hash": "970b62888530ac38",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 27",
+  "hash": "f3d556a84b0b57f1",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 28",
+  "hash": "1e9dba804d2953dd",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

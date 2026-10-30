@@ -442,7 +442,7 @@ const steps = [
         },
       },
       {
-        q: "Een pak melk is **1,5 l**. Je schenkt glazen van **250 ml**. Hoeveel volle glazen?",
+        q: "Een pak melk is **1,5 l**. Je schenkt glazen van **250 ml**. Hoeveel volle glazen kun je schenken?",
         options: ["6", "4", "7", "5"],
         answer: 0,
         wrongHints: [null, "Reken eerst de liters om naar ml voor je deelt.", "Reken na: hoeveel ml is 7 glazen van 250 ml? Past dat in het pak?", "Is het pak na 5 glazen al leeg? Reken 5 × 250 ml."],
@@ -467,10 +467,10 @@ const steps = [
         },
       },
       {
-        q: "In een recept: **3 dl** water + **200 ml** melk. Hoeveel milliliter vocht samen?",
+        q: "In een recept staat **3 dl** water en **200 ml** melk. Hoeveel milliliter vocht is dat samen?",
         options: ["500 ml", "320 ml", "230 ml", "3200 ml"],
         answer: 0,
-        wrongHints: [null, "Let op: 3 dl is niet 3 ml.", "Reken 3 dl eerst om naar ml.", "3 dl is geen 3000 ml. Hoeveel ml is 1 dl?"],
+        wrongHints: [null, "Heb je 3 dl goed omgerekend? Hoeveel ml is 1 dl?", "Reken 3 dl eerst om naar ml.", "3 dl is geen 3000 ml. Hoeveel ml is 1 dl?"],
         uitlegPad: {
           stappen: [
             { titel: "Zet om naar dezelfde eenheid", tekst: "Je kunt deciliter en milliliter niet zomaar optellen — reken de 3 dl eerst om naar ml." },

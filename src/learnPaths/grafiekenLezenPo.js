@@ -767,7 +767,7 @@ const steps = [
       },
       {
         q: "Bekijk het staafdiagram 'Punten per team'. Hoeveel punten hebben **geel en blauw samen**?",
-        svg: staafSvg([{ l: "rood", v: 45, c: COLORS.bar }, { l: "geel", v: 38, c: COLORS.bar2 }, { l: "groen", v: 52, c: COLORS.bar3 }, { l: "blauw", v: 29, c: COLORS.bar4 }], "Punten per team"),
+        svg: staafSvg([{ l: "rood", v: 45, c: "#ef5350" }, { l: "geel", v: 38, c: "#ffd54f" }, { l: "groen", v: 52, c: "#69f0ae" }, { l: "blauw", v: 29, c: "#64b5f6" }], "Punten per team"),
         options: ["67 punten", "83 punten", "9 punten", "81 punten"],
         answer: 0,
         wrongHints: [
@@ -819,15 +819,15 @@ const steps = [
         options: [
           "Jesse keek de meeste uren tv",
           "Jesse keek de minste uren tv",
-          "Jesse is het langste kind",
-          "Jesse is het oudste kind",
+          "Jesse keek 9 uur meer tv dan Daan",
+          "Jesse keek elke dag van de week tv",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Betekent een hoge balk veel of weinig?",
-          null,
-          "Lees de titel: wat wordt er geteld?",
+          "Het getal boven de balk is het aantal uren van Jesse zelf, geen verschil. Kijk ook naar de balk van Daan.",
+          "Lees de titel: er staat 'per week'. Zie je in het diagram iets over losse dagen?",
         ],
         uitlegPad: {
           stappen: [
