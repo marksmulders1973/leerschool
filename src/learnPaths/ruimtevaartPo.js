@@ -88,7 +88,7 @@ const steps = [
         q: "Welke **rover** is sinds 2012 actief op Mars?",
         options: ["Curiosity", "Sojourner", "Perseverance", "Ingenuity"],
         answer: 0,
-        wrongHints: [null, "1997.", "2021.", "Helikopter."],
+        wrongHints: [null, "Sojourner was de allereerste Marsrover, al in 1997.", "Perseverance landde pas in 2021.", "Ingenuity is een kleine helikopter op Mars, geen rover."],
       },
       {
         q: "Welk **bedrijf** wil met de raket Starship mensen naar Mars brengen?",

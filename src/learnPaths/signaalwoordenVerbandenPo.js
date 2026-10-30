@@ -58,7 +58,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Sterk ↔ niet snel = tegenstelling", tekst: "Sterk zijn en niet snel zijn botsen een beetje met elkaar. Dat vraagt om 'maar'." }],
           niveaus: {
-            basis: "De twee eigenschappen staan tegenover elkaar → 'maar'.",
+            basis: "Sterk zijn en niet snel zijn passen niet zomaar bij elkaar. Welk woord gebruik je als twee dingen tegenover elkaar staan?",
             simpeler: "Welk woord past tussen twee dingen die botsen?",
             nogSimpeler: "Sterk … niet snel. Welk woordje hoort daar?",
           },
@@ -72,7 +72,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Echter = maar", tekst: "'Echter' betekent ongeveer hetzelfde als 'maar': het geeft een tegenstelling aan. De andere woorden voegen juist iets toe." }],
           niveaus: {
-            basis: "'Echter' is een tegenstelling-woord, net als 'maar'.",
+            basis: "Drie van de vier woorden betekenen 'er komt nog iets bij'. Welk woord doet dat niet en geeft juist een botsing aan?",
             simpeler: "Welk woord botst met de vorige zin in plaats van iets toe te voegen?",
             nogSimpeler: "Welk woord lijkt op 'maar'?",
           },
@@ -86,7 +86,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Allebei leuk → opsomming", tekst: "Je houdt van twee dingen; het tweede komt erbij. Dat is een opsomming: 'en'." }],
           niveaus: {
-            basis: "Er wordt iets toegevoegd (allebei leuk) → 'en'.",
+            basis: "Je houdt van twee dingen; het tweede komt er gewoon bij. Welk woord gebruik je om iets toe te voegen?",
             simpeler: "Komt er iets bij, of botst het? Het komt erbij.",
             nogSimpeler: "Zwemmen … voetballen — welk woord telt op?",
           },
@@ -100,7 +100,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee pluspunten → opsomming", tekst: "Aardig én behulpzaam zijn allebei positief; het tweede komt erbij. Opsomming: 'en'." }],
           niveaus: {
-            basis: "Twee eigenschappen die bij elkaar passen → 'en'.",
+            basis: "Aardig en behulpzaam zijn allebei positief en passen bij elkaar. Welk woord gebruik je als het tweede er gewoon bij komt?",
             simpeler: "Botsen 'aardig' en 'behulpzaam'? Nee → er komt iets bij.",
             nogSimpeler: "aardig … behulpzaam — welk woordje telt op?",
           },
@@ -125,7 +125,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Er komt iets bij → opsomming: daarnaast.",
+            basis: "Eerst de boeken, dan nog iets in de tas. Er komt iets bij: dat is een opsomming. Welk woord hoort bij een opsomming?",
             simpeler: "Boeken én een etui. Botst dat, of is het een rijtje?",
             nogSimpeler: "Boeken … en nog iets. Welk woord betekent 'er komt nog iets bij'?",
           },
@@ -149,7 +149,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het tweede deel is anders dan je verwacht → tegenstelling: toch.",
+            basis: "Het tweede deel is anders dan je verwacht: het is koud, en toch geen jas? Zoek het woord dat zo'n verrassing aangeeft.",
             simpeler: "Wat doe je normaal als het koud is? En wat doet Sanne?",
             nogSimpeler: "Koud … geen jas. Dat klopt niet met elkaar. Welk woordje past daarbij?",
           },

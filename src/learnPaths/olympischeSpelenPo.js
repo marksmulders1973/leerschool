@@ -61,15 +61,15 @@ const steps = [
       },
       {
         q: "Wat is **doping**?",
-        options: ["Verboden stoffen voor betere prestatie", "Een nieuwe sport op de Olympische Spelen", "Een gouden medaille voor de winnaar", "Een soort snelle schoen voor sprinters"],
+        options: ["Verboden middelen die je sneller of sterker maken", "Een nieuwe sport op de Olympische Spelen", "Een gouden medaille voor de winnaar", "Een soort snelle schoen voor sprinters"],
         answer: 0,
         wrongHints: [null, "Doping is geen sport.", "Een medaille win je. Doping is iets anders.", "Doping draag je niet aan je voeten."],
       },
       {
         q: "Welke sporter won de **meeste olympische medailles ooit**?",
-        options: ["Michael Phelps", "Tom Daley", "Latynina", "Sven Kramer"],
+        options: ["Michael Phelps", "Tom Daley", "Larisa Latynina", "Sven Kramer"],
         answer: 0,
-        wrongHints: [null, "Tom Daley is een Britse schoonspringer met een handvol medailles, geen recordhouder.", "Latynina stond lang bovenaan, maar werd later ingehaald. Door wie, volgens het toets-feitje?", "Sven Kramer is een Nederlandse topschaatser, maar wereldwijd zijn er sporters met véél meer medailles."],
+        wrongHints: [null, "Tom Daley is een Britse schoonspringer met een handvol medailles, geen recordhouder.", "Larisa Latynina stond lang bovenaan met 18 medailles, maar is later ingehaald.", "Sven Kramer is een Nederlandse topschaatser, maar wereldwijd zijn er sporters met véél meer medailles."],
       },
     ],
   },
@@ -79,10 +79,10 @@ const steps = [
       "**NL deed mee** aan bijna alle OS sinds 1900.\n\n**NL's beste sporten**:\n\n**1. Schaatsen** *(winter)* ⛸️:\n• **Sven Kramer**: 4 goud, 2 zilver, 3 brons (5000m, 10.000m, ploegenachtervolging).\n• **Ireen Wüst**: 6 goud, 5 zilver, 2 brons — **MEEST GEDECOREERDE NL-atleet ooit**.\n• **Yvonne van Gennip**: 3 goud 1988 *(Calgary)*.\n• **Marianne Timmer, Esmee Visser, Suzanne Schulting** — andere kampioenen.\n• In 2014 *(Sotsji)*: NL won **23 van de 36 schaatsmedailles**.\n\n**2. Hockey** 🏑:\n• Vrouwen-team **'Oranje Hockey'** = vaak goud.\n• Mannen-team ook sterk.\n• Bekende speelsters: **Naomi van As, Maartje Paumen**.\n\n**3. Zwemmen** 🏊:\n• **Inge de Bruijn**: 4 goud, 2 zilver, 2 brons.\n• **Pieter van den Hoogenband**: 3 goud, 2 zilver, 2 brons.\n• **Ranomi Kromowidjojo**: 3 goud.\n\n**4. Wielrennen** 🚴:\n• **Leontien van Moorsel**: 4 goud, 1 zilver.\n• **Anna van der Breggen**.\n• **Mathieu van der Poel** *(veelvoudig wereldkampioen veldrijden)*.\n\n**5. Atletiek** 🏃:\n• **Femke Bol** (huidige): 400m horden, 4x400m estafette — wereldtop.\n• **Sifan Hassan**: marathon-goud 2024 Parijs.\n• **Dafne Schippers**: 200m wereldkampioen.\n• **Nelli Cooman, Ellen van Langen**: vroegere kampioenen.\n\n**6. Roeien** 🚣:\n• Vele goud-medailles.\n• 'Holland Acht' team.\n\n**7. Beachvolleybal** 🏐:\n• **Alexander Brouwer + Robert Meeuwsen**: brons 2016.\n\n**8. Turnen** 🤸:\n• **Epke Zonderland**: rekstok-goud 2012.\n• **Sanne Wevers**: balk-goud 2016.\n\n**9. BMX** 🚴:\n• **Niek Kimmann**: goud 2020.\n• **Laura Smulders**: brons.\n\n**Bij Parijs 2024**:\nNL behaalde **34 medailles** (15 goud, 7 zilver, 12 brons) — recordstand.\nNL **6e** op medaillespiegel.\n\n**Sven Kramer + Ireen Wüst** zijn iconen:\n• Beide **vlaggedragers** in opening of sluiting van OS.\n• Beide **\"Sportman/-vrouw van het Jaar\"** in NL.\n\n**Andere bekende NL-sporters** *(buiten OS)*:\n• **Max Verstappen** *(Formule 1, 4x wereldkampioen 2021-2024)*.\n• **Virgil van Dijk, Frenkie de Jong** *(voetbal)*.\n• **Tom Dumoulin** *(wielrennen, Giro d'Italia 2017)*.\n• **Bas Dost** *(voetbal)*.\n• **Vivianne Miedema** *(voetbal, topscorer aller tijden van de Oranjevrouwen)*.\n\n**Toets-feitje**:\nNederland **Oranje** — kleuren komen van **Oranje-Nassau** *(koninklijke familie)*. Vandaar oranje shirts + 'Hup Holland Hup'. Bij OS draagt NL altijd oranje.",
     checks: [
       {
-        q: "Wie is de **meest gedecoreerde NL-atleet** ooit?",
-        options: ["Ireen Wüst", "Sven Kramer", "Phelps", "Femke Bol"],
+        q: "Wie heeft van alle Nederlandse sporters de **meeste olympische medailles** gewonnen?",
+        options: ["Ireen Wüst", "Sven Kramer", "Inge de Bruijn", "Femke Bol"],
         answer: 0,
-        wrongHints: [null, "Sven Kramer won 9 medailles — knap, maar niet het Nederlandse record.", "Michael Phelps is Amerikaans. De vraag gaat over een Nederlander.", "Femke Bol is nog jong en heeft nog maar een paar olympische medailles."],
+        wrongHints: [null, "Sven Kramer won 9 medailles — knap, maar niet het Nederlandse record.", "Inge de Bruijn won 8 zwemmedailles — veel, maar het Nederlandse record ligt hoger.", "Femke Bol is nog jong en heeft nog maar een paar olympische medailles."],
       },
       {
         q: "In welke **wintersport** hoort Nederland bij de wereldtop?",
@@ -91,7 +91,7 @@ const steps = [
         wrongHints: [null, "Heeft Nederland een ijshockeyteam dat vaak olympisch goud wint?", "Skeleton — op een slee met je hoofd vooruit. Hoeveel Nederlandse kampioenen ken je daarin?", "Curling komt vooral uit Schotland en Canada. Welke wintersport is in Nederland volkssport?"],
       },
       {
-        q: "**Femke Bol** is sterk in?",
+        q: "In welke onderdelen is **Femke Bol** sterk?",
         options: ["400m horden / 4x400m", "Zwemmen / schoolslag", "Schaatsen / 1500 meter", "Tennis / dubbelspel"],
         answer: 0,
         wrongHints: [null, "Femke Bol traint niet in het zwembad.", "Femke Bol staat niet op het ijs.", "Femke Bol slaat geen ballen."],

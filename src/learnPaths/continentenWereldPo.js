@@ -330,7 +330,7 @@ const steps = [
         },
       },
       {
-        q: "Ten **oosten** van Nederland loopt de klok ... ?",
+        q: "Hoe staat de klok in landen ten **oosten** van Nederland, vergeleken met bij ons?",
         options: ["Later (vooruit)", "Eerder (achteruit)", "Hetzelfde", "Een hele dag anders"],
         answer: 0,
         wrongHints: [null, "Kijk in de uitleg bij Athene (ten oosten van ons): is het daar 13:00 of 11:00 als het hier 12:00 is?", "Duitsland zit toevallig in onze zone, maar Griekenland al niet meer. Wat gebeurt er verder naar het oosten?", "Een hele dag verschil is er alleen bij de datumlijn in de Stille Oceaan, niet bij elke buurzone."],
@@ -346,7 +346,7 @@ const steps = [
         q: "Je belt om **09:00** Nederlandse tijd met je oom in **Beijing** (7 uur later). Hoe laat is het bij hem?",
         options: ["16:00", "02:00", "15:00", "17:00"],
         answer: 0,
-        wrongHints: [null, "Bij je oom loopt de klok vóór, niet achter.", "Reken nog eens: 9 + 7.", "Reken nog eens: 9 + 7."],
+        wrongHints: [null, "Bij je oom loopt de klok vóór, niet achter.", "Je hebt te weinig uren opgeteld. Tel het verschil nog eens uur voor uur na.", "Je hebt te veel uren opgeteld. Tel het verschil nog eens uur voor uur na."],
       },
       {
         q: "Waarom is het ergens **dag** terwijl het ergens anders **nacht** is?",
@@ -363,7 +363,7 @@ const steps = [
         q: "Je oma in **New York** (6 uur eerder) belt jou om **08:00** haar tijd. Hoe laat is het dan bij jou in Nederland?",
         options: ["14:00", "02:00", "08:00", "12:00"],
         answer: 0,
-        wrongHints: [null, "Bij jou is het later dan bij oma, niet eerder.", "Het is bij jou niet even laat als bij oma — er zit 6 uur tussen.", "Reken nog eens: 8 + 6."],
+        wrongHints: [null, "Bij jou is het later dan bij oma, niet eerder.", "Het is bij jou niet even laat als bij oma — er zit 6 uur tussen.", "Je hebt te weinig uren opgeteld. Hoeveel uur zit er tussen oma en jou? Tel die uur voor uur bij 08:00 op."],
       },
       {
         q: "Waarom gebruiken we **tijdzones**?",
