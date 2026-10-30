@@ -64,7 +64,7 @@ const steps = [
         q: "Wat is **12 ÷ 4**?",
         options: ["3", "8", "16", "48"],
         answer: 0,
-        wrongHints: [null, "Aftrekking — maar de opgave vraagt om delen, niet aftrekken.", "Optelling — maar de opgave vraagt om delen, niet optellen.", "Dat is 12 × 4. Bij delen wordt het getal kleiner, niet groter."],
+        wrongHints: [null, "Dat is 12 − 4. De opgave vraagt om delen, niet om aftrekken.", "Dat is 12 + 4. De opgave vraagt om delen, niet om optellen.", "Dat is 12 × 4. Bij delen wordt het getal kleiner, niet groter."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 12 ÷ 4?", tekst: "**12 ÷ 4** = '**12 verdelen over 4**'. Bijvoorbeeld: je hebt 12 snoepjes en 4 vriendjes. Elk vriendje krijgt evenveel. Hoeveel per vriendje?" },
@@ -83,8 +83,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Delen = tafel terug. Vermenigvuldigen + delen zijn elkaars tegen-bewerking. Eén oefenen helpt ook de andere." }],
           niveaus: {
             basis: "12 ÷ 4 = 3.",
-            simpeler: "12 verdeeld over 4 gelijke groepen = 3 per groep.",
-            nogSimpeler: "3",
+            simpeler: "12 verdeeld over 4 gelijke groepen is 3 per groep.",
+            nogSimpeler: "12 ÷ 4 = 3, want 3 × 4 = 12.",
           },
         },
       },
@@ -98,7 +98,7 @@ const steps = [
         q: "Wat is **9 ÷ 1**?",
         options: ["9", "1", "0", "10"],
         answer: 0,
-        wrongHints: [null, "9 ÷ 9, niet 9 ÷ 1.", "Als je 9 dingen aan 1 persoon geeft, krijgt die persoon dan niets?", "Dat is 9 + 1. Komt er bij delen iets bij?"],
+        wrongHints: [null, "Dat is de uitkomst van 9 ÷ 9. Hier deel je door 1: alles gaat naar één persoon.", "Als je 9 dingen aan 1 persoon geeft, krijgt die persoon dan niets?", "Dat is 9 + 1. Komt er bij delen iets bij?"],
       },
       {
         q: "Wat is **8 ÷ 8**?",
@@ -158,7 +158,7 @@ const steps = [
           niveaus: {
             basis: "5 × 3 = 15.",
             simpeler: "15 ÷ 3 = 5, dus 5 keer 3 is weer 15.",
-            nogSimpeler: "5 × 3 = 15",
+            nogSimpeler: "De keersom is 5 × 3 = 15.",
           },
         },
       },
@@ -213,7 +213,7 @@ const steps = [
           niveaus: {
             basis: "0 ÷ 5 = 0.",
             simpeler: "Niets verdelen over 5 kinderen: elk kind krijgt 0.",
-            nogSimpeler: "0",
+            nogSimpeler: "Elk kind krijgt niets, dus 0 ÷ 5 = 0.",
           },
         },
       },
@@ -318,7 +318,7 @@ const steps = [
           niveaus: {
             basis: "14 ÷ 2 = 7 knikkers per kind.",
             simpeler: "14 knikkers over 2 kinderen: elk kind krijgt 7.",
-            nogSimpeler: "7",
+            nogSimpeler: "Elk kind krijgt 7 knikkers, want 7 × 2 = 14.",
           },
         },
       },
@@ -368,7 +368,7 @@ const steps = [
           niveaus: {
             basis: "20 : 4 = 20 ÷ 4.",
             simpeler: "Het teken : betekent delen.",
-            nogSimpeler: "20 ÷ 4",
+            nogSimpeler: "20 : 4 is dezelfde som als 20 ÷ 4.",
           },
         },
       },

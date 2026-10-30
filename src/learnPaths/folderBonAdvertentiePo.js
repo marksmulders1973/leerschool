@@ -64,7 +64,7 @@ const steps = [
           stappen: [{ titel: "BTW = belasting over de toegevoegde waarde", tekst: "BTW is belasting die de overheid heft. Die zit al in de prijs die je betaalt." }],
           niveaus: {
             basis: "BTW is belasting die al in de prijs verwerkt zit.",
-            simpeler: "Is BTW een korting of juist belasting? Het is belasting.",
+            simpeler: "BTW gaat naar de overheid, niet naar de winkel. Wordt je bon daar goedkoper of juist duurder van?",
             nogSimpeler: "BTW is een soort … (belasting/korting?).",
           },
         },
@@ -84,16 +84,16 @@ const steps = [
         },
       },
       {
-        q: "Je koopt 2 pakken melk van €0,90 per stuk. Hoeveel kost de melk samen?",
-        options: ["€1,80", "€0,90", "€2,70", "€1,60"],
+        q: "Je koopt 2 bekers yoghurt van €0,95 per stuk. Hoeveel kost de yoghurt samen?",
+        options: ["€1,90", "€0,95", "€2,85", "€1,80"],
         answer: 0,
-        wrongHints: [null, "Dat is de prijs van één pak.", "Dat zijn er drie.", "Reken nog eens: 2 × €0,90."],
+        wrongHints: [null, "Dat is de prijs van één beker.", "Dat zijn er drie.", "Reken nog eens: 2 × €0,95. Let op de centen."],
         uitlegPad: {
-          stappen: [{ titel: "Aantal × prijs", tekst: "2 × €0,90 = €1,80 (0,90 + 0,90)." }],
+          stappen: [{ titel: "Aantal × prijs", tekst: "2 × €0,95 = €1,90 (0,95 + 0,95)." }],
           niveaus: {
-            basis: "2 pakken × €0,90 = €1,80.",
-            simpeler: "Tel twee keer €0,90 op.",
-            nogSimpeler: "0,90 + 0,90 = ?",
+            basis: "2 bekers × €0,95 = €1,90.",
+            simpeler: "Tel twee keer €0,95 op.",
+            nogSimpeler: "0,95 + 0,95 = ?",
           },
         },
       },

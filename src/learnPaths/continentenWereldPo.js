@@ -156,10 +156,10 @@ const steps = [
       "Naast 7 continenten heeft de wereld **5 oceanen** *(grote zeeën)*.\n\n**De 5 oceanen** *(uit je hoofd!)*:\n1. **Stille Oceaan** *(Pacific)* — grootst.\n2. **Atlantische Oceaan** — tussen Europa/Afrika en Amerika.\n3. **Indische Oceaan** — onder India.\n4. **Noordelijke IJszee** *(Arctische)* — bij de Noordpool.\n5. **Zuidelijke IJszee** *(Antarctische)* — bij de Zuidpool.\n\n**Grootste — Stille Oceaan**:\n• Beslaat ongeveer **een derde van de aarde**.\n• Tussen Azië/Oceanië en Amerika.\n• 'Stille' = leek rustig bij ontdekkers, niet altijd zo!\n\n**Atlantische Oceaan**:\n• Tussen Europa/Afrika (rechts) en Amerika (links).\n• Hier ligt Nederland aan *(via de Noordzee, die deel uitmaakt van de Atlantische Oceaan)*.\n\n**Indische Oceaan**:\n• Onder Azië, tussen Afrika en Australië.\n• Veel tropische eilanden zoals Madagaskar.\n\n**De 2 IJszeeën**:\n• **Noordelijke** — bij de Noordpool, ijs het hele jaar.\n• **Zuidelijke** — om Antarctica heen.\n\n**Toets-truc**:\nOnthoud op alfabet: **A**tlantisch, **I**ndisch, **N**oordelijke IJszee, **S**tille, **Z**uidelijke IJszee → AINSZ.\n\nOf onthoud: '5 oceanen, 2 bij de polen, 3 in het 'midden': Atlantisch, Indisch, Stille'.",
     checks: [
       {
-        q: "Hoeveel **oceanen** zijn er volgens de nieuwste indeling (mét de Zuidelijke Oceaan rond Antarctica)?",
+        q: "Hoeveel **oceanen** zijn er volgens de nieuwste indeling (mét de Zuidelijke IJszee, ook wel Zuidelijke Oceaan, rond Antarctica)?",
         options: ["5", "7", "6", "3"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is het aantal continenten.", "Te veel.", "Te weinig — vergeet de 2 IJszeeën bij de polen niet."],
+        wrongHints: [null, "Te veel — dat is het aantal continenten.", "Te veel — zo veel oceanen zijn er niet.", "Te weinig — je telt dan alleen de grote oceanen in het midden. De oceanen bij de polen tellen ook mee."],
       },
       {
         q: "Welke oceaan is **grootst**?",
@@ -183,9 +183,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste oceaan = Stille = 1/3 van de aarde. Onthoud dit kerncijfer." }],
           niveaus: {
-            basis: "Stille Oceaan = grootst.",
-            simpeler: "Volgorde: Stille > Atlantische > Indische. Grootst = Stille.",
-            nogSimpeler: "Stille",
+            basis: "De Stille Oceaan is de grootste oceaan.",
+            simpeler: "Van groot naar klein: eerst de Stille Oceaan, dan de Atlantische, dan de Indische.",
+            nogSimpeler: "De Stille Oceaan is de grootste.",
           },
         },
       },
@@ -193,13 +193,13 @@ const steps = [
         q: "Welke oceaan ligt **tussen Nederland en Amerika**?",
         options: ["Atlantische Oceaan", "Stille Oceaan", "Indische Oceaan", "Zuidelijke IJszee"],
         answer: 0,
-        wrongHints: [null, "Andere kant van de wereld.", "Onder Azië.", "Bij Antarctica."],
+        wrongHints: [null, "De Stille Oceaan ligt aan de andere kant van de wereld, tussen Azië en Amerika.", "De Indische Oceaan ligt onder Azië, ver van Nederland.", "Die oceaan ligt helemaal in het zuiden, rond Antarctica."],
       },
       {
         q: "Welke 2 oceanen zijn bij de **polen**?",
-        options: ["Noordelijke en Zuidelijke IJszee", "Stille en Atlantische", "Indische en Stille", "Atlantische en Indische"],
+        options: ["Noordelijke en Zuidelijke IJszee", "Stille Oceaan en Noordelijke IJszee", "Indische en Stille Oceaan", "Atlantische Oceaan en Zuidelijke IJszee"],
         answer: 0,
-        wrongHints: [null, "De Stille en de Atlantische liggen in het midden, tussen de continenten.", "De Indische ligt onder Azië, ver van de polen.", "De Atlantische en de Indische liggen allebei in het 'midden'. Welke twee liggen bij een pool?"],
+        wrongHints: [null, "De Stille Oceaan ligt in het midden, tussen Azië en Amerika — niet bij een pool.", "De Indische en de Stille Oceaan liggen allebei in het midden, ver van de polen.", "De Atlantische Oceaan loopt door het midden, tussen Europa/Afrika en Amerika — niet bij een pool."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -224,12 +224,12 @@ const steps = [
         q: "Waarom heet de Stille Oceaan **'stil'**?",
         options: [
           "Hij leek rustig toen ontdekkers er kwamen",
-          "Er leven geen dieren in",
-          "Er varen nooit schepen",
-          "Het water is altijd bevroren",
+          "Er zijn nooit stormen of hoge golven",
+          "Er varen maar weinig schepen",
+          "Het water stroomt er bijna niet",
         ],
         answer: 0,
-        wrongHints: [null, "In de oceaan leven juist heel veel dieren.", "Er varen juist heel veel schepen, bijvoorbeeld tussen Azië en Amerika.", "Bij de evenaar is het water tropisch warm — niet bevroren."],
+        wrongHints: [null, "Er komen juist zware stormen voor, zoals tyfoons.", "Er varen juist heel veel schepen, bijvoorbeeld tussen Azië en Amerika.", "Het water beweegt wel: er zijn golven, stromingen en eb en vloed."],
       },
     ],
   },

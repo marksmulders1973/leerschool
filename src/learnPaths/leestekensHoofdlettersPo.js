@@ -55,7 +55,7 @@ const steps = [
           "Komende dinsdag is Bram jarig.",
         ],
         answer: 0,
-        wrongHints: [null, "Een plaats hoort groot — klopt deze.", "Een taal hoort groot — klopt deze.", "Een naam hoort groot — klopt deze."],
+        wrongHints: [null, "Almere is een plaats, en plaatsnamen krijgen een hoofdletter. Deze zin klopt dus.", "Spaans is een taal, en talen krijgen een hoofdletter. Deze zin klopt dus.", "Bram is een naam, en namen krijgen een hoofdletter. Deze zin klopt dus."],
         uitlegPad: {
           stappen: [{ titel: "'Sport' is een gewoon woord", tekst: "Sport is geen naam, plaats of taal — het is een gewoon zelfstandig naamwoord midden in de zin en hoort dus klein: *sport*." }],
           niveaus: {

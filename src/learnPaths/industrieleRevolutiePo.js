@@ -117,8 +117,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Watt klinkt als 'wat?' — wat is stoom? — antwoord = Watt." }],
           niveaus: {
             basis: "James Watt verbeterde de stoommachine in 1769.",
-            simpeler: "Watt = stoom-uitvinder. Edison = lamp. Bell = telefoon.",
-            nogSimpeler: "Watt = stoom.",
+            simpeler: "James Watt maakte de stoommachine veel beter. Edison maakte de gloeilamp en Bell de telefoon.",
+            nogSimpeler: "Watt hoort bij de stoommachine.",
           },
         },
       },
@@ -135,7 +135,7 @@ const steps = [
         wrongHints: [null, "Andere route — de eerste lijn was maar kort.", "Dat zou meteen een enorme afstand zijn — de eerste lijn was juist kort.", "Schiphol als vliegveld bestond in 1839 nog lang niet!"],
       },
       {
-        q: "Wie maakte de **gloeilamp**?",
+        q: "Wie maakte de eerste goed werkende **gloeilamp**?",
         options: ["Thomas Edison", "James Watt", "Graham Bell", "Samuel Morse"],
         answer: 0,
         wrongHints: [null, "Watt werkte aan machines, niet aan licht.", "Bell werkte aan geluid over een draad.", "Morse bedacht een code met puntjes en streepjes."],

@@ -190,9 +190,9 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         answer: 0,
         wrongHints: [
           null,
-          "'Hoeveel' is een detail. Mis je hier geen vraag naar de manier waarop iets gebeurde?",
-          "Mis je hier niet een vraag naar de plek van het nieuws?",
-          "Mis je hier niet een vraag naar de reden?",
+          "'Hoeveel' is geen gouden vraag maar een detail. Welke gouden vraag ontbreekt in dit rijtje?",
+          "'Welke' is geen gouden vraag. Welke gouden vraag ontbreekt in dit rijtje?",
+          "'Hoelang' is geen gouden vraag maar een detail. Welke gouden vraag ontbreekt in dit rijtje?",
         ],
         uitlegPad: {
           stappen: [
@@ -208,7 +208,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         },
       },
       {
-        q: "*\"De elfjarige Noa uit Vissersdam won het NK schaken voor kinderen.\"* — Op welke twee gouden vragen geeft deze ene zin antwoord?",
+        q: "*\"De elfjarige Noa won het NK schaken voor kinderen.\"* — Op welke twee gouden vragen geeft deze ene zin antwoord?",
         options: [
           "Wie en wat",
           "Waar en waarom",
@@ -218,18 +218,18 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         answer: 0,
         wrongHints: [
           null,
-          "Staat er een plek of een reden in de zin? Kijk wat de zin inhoudelijk zegt.",
-          "Staat er een manier of een dag in de zin? Kijk naar de persoon en naar wat ze deed.",
+          "Staat er een plek of een reden in de zin? Lees nog eens goed wat er echt staat.",
+          "Staat er een manier of een dag in de zin? Lees nog eens goed wat er echt staat.",
           "Er staat geen reden ('omdat') in de zin. Maar je kunt wél twee andere vragen beantwoorden.",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Ontleed de zin", tekst: "'De elfjarige Noa' — dat is een persoon = wie. 'Won het NK schaken' — dat is de gebeurtenis = wat. Twee gouden vragen in één zin." },
-            { titel: "Wat staat er niet in?", tekst: "De plek (Vissersdam staat erbij als herkomst, niet als locatie van de wedstrijd), de reden en de manier ontbreken. Die staan verderop in het bericht." },
+            { titel: "Wat staat er niet in?", tekst: "De plek, de dag, de reden en de manier ontbreken in deze zin. Die staan verderop in het bericht." },
             { titel: "Gebruik dit bij de toets", tekst: "Weet je welke gouden vraag de toets stelt? Kijk dan of het antwoord in de eerste zin staat of dat je verder moet zoeken." },
           ],
           niveaus: {
-            basis: "Zoek in de zin: wie is de persoon, en wat deed die persoon? Welke twee vragen kun je daarmee beantwoorden?",
+            basis: "Zoek in de zin naar een naam, een gebeurtenis, een plek, een dag, een reden en een manier. Welke twee staan er echt in?",
             simpeler: "Een 'wie'-antwoord is een naam. Een 'wat'-antwoord is een gebeurtenis. Zitten die allebei in de zin?",
             nogSimpeler: "Beantwoord met de zin: over wie gaat het? En wat deed hij of zij?",
           },
@@ -247,7 +247,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         wrongHints: [
           null,
           "De details staan juist verderop, niet in de kop. En meningen horen niet in een nieuwsbericht thuis.",
-          "Is het niet net andersom? Hoeveel nieuws past er in een paar woorden?",
+          "Hoeveel nieuws past er in een paar woorden? Kan een kop echt het hele nieuws geven?",
           "Een kop is maar een paar woorden en de eerste alinea is al een stuk langer. Kan daar hetzelfde in staan?",
         ],
         uitlegPad: {
