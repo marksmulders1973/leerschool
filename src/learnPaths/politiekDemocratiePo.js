@@ -139,7 +139,7 @@ const steps = [
         wrongHints: [null, "Een minister hoort bij de uitvoerende macht. Welke macht controleert en straft?", "De burgemeester bestuurt de gemeente. Welke macht controleert en straft?", "De politie houdt iemand aan, maar bepaalt zelf geen straf. Wie doet dat wel?"],
       },
       {
-        q: "Hoeveel zetels voor **meerderheid** Tweede Kamer?",
+        q: "Hoeveel zetels heb je nodig voor een **meerderheid** in de Tweede Kamer?",
         options: ["76", "150", "50", "100"],
         answer: 0,
         uitlegPad: {
@@ -159,9 +159,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Helft + 1. Bij 150: 75 + 1 = 76." }],
           niveaus: {
-            basis: "Meerderheid Tweede Kamer = 76 (van 150).",
-            simpeler: "Meer dan de helft van 150 = 76+.",
-            nogSimpeler: "76 = meerderheid.",
+            basis: "De Tweede Kamer heeft 150 zetels. Een meerderheid heb je als je meer dan de helft van die zetels hebt.",
+            simpeler: "De helft van 150 is 75. Voor een meerderheid heb je er minstens één meer nodig.",
+            nogSimpeler: "Een meerderheid in de Tweede Kamer is 76 zetels.",
           },
         },
         wrongHints: [null, "Dat is alle zetels — je zoekt MEER dan de helft, niet allemaal.", "Helemaal te weinig — bereken eerst de helft van 150.", "100 is wel meer dan de helft, maar je zoekt het kleinste aantal dat nét meer dan de helft is."],

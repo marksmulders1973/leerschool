@@ -85,7 +85,7 @@ const steps = [
         q: "Welk Zuid-Europees land heeft de vorm van een laars?",
         options: ["Italië", "Spanje", "Griekenland", "Portugal"],
         answer: 0,
-        wrongHints: [null, "Groot, vierkant land in het westen.", "Ligt helemaal in het zuidoosten, veel eilanden.", "Smal land aan de westkust."],
+        wrongHints: [null, "Spanje is een groot, bijna vierkant land in het zuidwesten.", "Griekenland ligt helemaal in het zuidoosten en heeft veel eilanden.", "Portugal is een smal land aan de westkust."],
         uitlegPad: { stappen: [{ titel: "De laars = Italië", tekst: "Italië heeft de herkenbare vorm van een laars." }],
           niveaus: { basis: "Het laars-land is Italië.", simpeler: "Welk land lijkt op een laars?", nogSimpeler: "Begint met Ita…?" } },
       },

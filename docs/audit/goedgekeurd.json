@@ -2830,6 +2830,13 @@
   "reden": "~50 jaar is de gangbare reserve/productie-schatting, maar schattingen verschillen en verouderen; 'naar schatting' staat er al bij. Niet aangepast."
  },
  {
+  "waar": "energiebronnen-po stap 3 vraag 4",
+  "hash": "206d601b2807e8a8",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
   "hash": "acef806a46f32508",
   "oordeel": "goed",
@@ -3196,6 +3203,13 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 5",
+  "hash": "d8abdf414f06cc37",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "gemiddelden-statistiek-po stap 6 vraag 4",
@@ -5446,6 +5460,22 @@
   "reden": "Antwoord klopt (Noord-Vietnam; Saigon 1975; Frankrijk 1954 Dien Bien Phu); hints feitelijk juist. Niveau basis was telegramzin."
  },
  {
+  "waar": "koude-oorlog-modern-po stap 3 vraag 3",
+  "hash": "b9260e645fcc74b3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus waren telegramzinnen ('11 september 2001: terreuraanslag Twin Towers New York.') en bevatten Engels ('War on Terror') in een NL-vraag voor groep 7/8."
+ },
+ {
+  "waar": "koude-oorlog-modern-po stap 3 vraag 4",
+  "hash": "ed69d36db34102cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "24 februari 2022 klopt; afleiders zijn echte data (Krim 18-3-2014, onafhankelijkheid 24-8-1991, Muur 9-11-1989) en de hints kloppen feitelijk. 'annexeerde' is vakjargon voor groep 7."
+ },
+ {
   "waar": "kritisch-denken-po stap 4 vraag 3",
   "hash": "a3e0eac8c20cbd6d",
   "oordeel": "goed",
@@ -5536,6 +5566,13 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 1 vraag 1",
+  "hash": "c00ca96a5b9240b7",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "lettergrepen-klemtoon-po stap 1 vraag 2",
@@ -6132,6 +6169,13 @@
   "reden": "Antwoord klopt; afleider 'hoe slim of dom de leerlingen zijn' was kwetsend en te absurd (raadbaar)."
  },
  {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 1",
+  "hash": "fe76e5806ddc454d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 1 vraag 1",
   "hash": "6ae81cf26d8293a7",
   "oordeel": "twijfel",
@@ -6627,6 +6671,13 @@
   "reden": "Vraag miste lidwoord ('Wat is coalitie?'); inhoud en hints goed."
  },
  {
+  "waar": "politiek-democratie-po stap 2 vraag 3",
+  "hash": "36a7c32cb0a44e8b",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "procenten-po stap 1 vraag 1",
   "hash": "ddb74629141f1262",
   "oordeel": "goed",
@@ -6706,6 +6757,13 @@
   "hash": "f4794fd275fb21f7",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "recyclen-afval-po stap 3 vraag 3",
+  "hash": "31a22cafa7e8356a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -9085,6 +9143,21 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "topografie-europa-landen-po stap 3 vraag 1",
+  "hash": "7fc234c3f5dadeb4",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-europa-landen-po stap 4 vraag 1",
+  "hash": "b73665e67e2a4ae7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Italië klopt. Hints waren telegramzinnen ('Smal land aan de westkust.')."
+ },
+ {
   "waar": "topografie-nederland stap 1 vraag 1",
   "hash": "1bf18d0bbc988473",
   "oordeel": "twijfel",
@@ -9229,6 +9302,37 @@
   "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "'noordwesten' en Amsterdam in de vraag maken Noord-Holland erg raadbaar, maar het antwoord klopt en hints/niveaus zijn in orde. Startsetvraag, al blind nagekeken: vraagtekst bewust niet aangeraakt."
+ },
+ {
+  "waar": "topografie-nederland-provincies-po stap 3 vraag 1",
+  "hash": "2b45fb005459123e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord Gelderland klopt; de vraag geeft drie aanwijzingen maar blijft een kennisvraag. Hints waren telegramzinnen zonder onderwerp ('Klein provincietje in het midden.')."
+ },
+ {
+  "waar": "topografie-nederland-provincies-po stap 4 vraag 1",
+  "hash": "ce6e0bb6acb1d1ea",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-wereld-werelddelen-po stap 3 vraag 1",
+  "hash": "3e2714d106cf3cf9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Europa klopt. Hint bij Azië was misleidend ('Nederland ligt er net niet in' – Nederland ligt ver van Azië) en de andere hints waren telegramzinnen."
+ },
+ {
+  "waar": "topografie-wereld-werelddelen-po stap 4 vraag 1",
+  "hash": "317ce26ec33734a9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Azië klopt; Afrika is inderdaad het op één na grootste. Hints waren telegramzinnen ('Aan de overkant van de oceaan.')."
  },
  {
   "waar": "trappen-van-vergelijking-po stap 1 vraag 5",
@@ -9574,11 +9678,10 @@
  },
  {
   "waar": "vulkanen-po stap 3 vraag 2",
-  "hash": "ffb9e6128b9fa948",
-  "oordeel": "twijfel",
-  "bron": "wereld-4 dekkende blinde controle 27 okt",
-  "datum": "2026-10-27",
-  "reden": "Antwoord klopt. De hint bij B zegt 'Gassen blijven dicht bij de berg', maar dat klopt niet: zwavelgas dreef in 2010 ook ver weg. Het punt is dat gas niet de reden was om vliegtuigen aan de grond te ho"
+  "hash": "2d96988d4a354e81",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 11 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "vulkanen-po stap 3 vraag 3",

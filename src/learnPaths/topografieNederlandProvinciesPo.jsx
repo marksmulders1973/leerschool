@@ -89,7 +89,7 @@ const steps = [
         q: "Hoe heet de grootste provincie van Nederland, in het oosten, met de Veluwe?",
         options: ["Gelderland", "Overijssel", "Utrecht", "Noord-Brabant"],
         answer: 0,
-        wrongHints: [null, "Ligt erboven, ook in het oosten, maar kleiner.", "Klein provincietje in het midden.", "Grote provincie, maar in het zuiden."],
+        wrongHints: [null, "Overijssel ligt ook in het oosten, maar erboven en het is kleiner.", "Utrecht is een kleine provincie in het midden van het land.", "Noord-Brabant is wel groot, maar ligt in het zuiden."],
         uitlegPad: {
           stappen: [{ titel: "Oosten + Veluwe = Gelderland", tekst: "Gelderland is de grootste provincie; de Veluwe ligt erin." }],
           niveaus: {

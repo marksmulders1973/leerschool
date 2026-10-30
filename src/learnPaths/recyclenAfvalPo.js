@@ -232,10 +232,10 @@ const steps = [
         wrongHints: [null, "In de Atlantische Oceaan drijft ook plastic, maar niet het grootste 'eiland'.", "Ook daar drijft plastic, maar de grootste plek ligt in een andere oceaan.", "De Noordzee is veel te klein en te druk bevaren voor zo'n groot plastic-'eiland'."],
       },
       {
-        q: "**Tips** om plastic te verminderen?",
-        options: ["Stoffen tas en eigen waterfles", "Plastic tasjes en flesjes kopen", "Niets veranderen aan wat je koopt", "Plastic afval zelf thuis verbranden"],
+        q: "Wat is een goede **tip** om minder plastic te gebruiken?",
+        options: ["Een stoffen tas en een eigen waterfles meenemen", "Elke dag een nieuw plastic flesje kopen en recyclen", "Bij elke boodschap een nieuw plastic tasje nemen", "Plastic afval thuis in de kachel verbranden"],
         answer: 0,
-        wrongHints: [null, "Wordt het plastic zo minder?", "Wordt het plastic zo minder?", "Verbranden geeft vieze rook en CO₂. Gebruik je zo minder plastic?"],
+        wrongHints: [null, "Recyclen is goed, maar zo koop je nog steeds elke dag nieuw plastic. Wordt het zo minder?", "Zo gebruik je juist elke keer een nieuw tasje. Hoe kun je dat voorkomen?", "Verbranden geeft vieze rook, en het plastic is dan al gekocht. Gebruik je zo minder plastic?"],
       },
     ],
   },
