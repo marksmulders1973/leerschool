@@ -399,28 +399,28 @@ const steps = [
       "Voorbeelden: een advertentie, een ingezonden brief, een poster 'stem op...'. Kenmerken: een mening + argumenten ('want', 'daarom moet je...').",
     checks: [
       {
-        q: "Een verzonnen verhaal dat je wil vermaken, is een...",
+        q: "Een verzonnen tekst die jou wil vermaken, is een...",
         options: ["verhalende tekst", "informatieve tekst", "instructieve tekst", "betogende tekst"],
         answer: 0,
-        wrongHints: [null, "Die geeft feiten, geen verhaal.", "Die geeft stappen om iets te doen.", "Die wil je overtuigen."],
+        wrongHints: [null, "Die geeft echte feiten. Is dat verzonnen?", "Die geeft stappen om iets te doen.", "Die wil je overtuigen van een mening."],
         uitlegPad: {
           stappen: [{ titel: "Vermaken = verhaal", tekst: "Een tekst om je te vermaken met een verhaal is een verhalende tekst." }],
           niveaus: {
-            basis: "Een verhaal om te vermaken = verhalende tekst.",
+            basis: "Waarom lees je zo'n tekst: om iets te leren, om iets te doen, om overgehaald te worden of voor de lol?",
             simpeler: "Lees je het voor de lol (een verhaal) of om iets te weten?",
             nogSimpeler: "Welk woord lijkt op 'verhaal'?",
           },
         },
       },
       {
-        q: "Een tekst die je wil overtuigen van een mening, is een...",
+        q: "Een tekst die jou wil overtuigen van een mening, is een...",
         options: ["betogende tekst", "verhalende tekst", "instructieve tekst", "informatieve tekst"],
         answer: 0,
         wrongHints: [null, "Die wil je vermaken, niet overtuigen.", "Die geeft stappen.", "Die geeft alleen feiten."],
         uitlegPad: {
           stappen: [{ titel: "Overtuigen = betogen", tekst: "Een betogende tekst wil je overtuigen van een mening, met argumenten." }],
           niveaus: {
-            basis: "Overtuigen van een mening = betogende tekst.",
+            basis: "Een tekst die jouw mening wil veranderen, geeft argumenten. Welke soort tekst doet dat?",
             simpeler: "Wil de tekst dat jij iets gáát vinden? Dan is het betogend.",
             nogSimpeler: "Welke tekst wil je mening veranderen?",
           },
@@ -435,11 +435,11 @@ const steps = [
           "Er was eens een dorp zonder afval.",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is een feit/uitleg → informatief.", "Dat zijn stappen → instructief.", "Dat begint als een verhaal."],
+        wrongHints: [null, "Deze zin legt alleen uit wat recyclen is. Zo'n tekst is informatief.", "Deze zin geeft stappen om iets te doen. Zo'n tekst is instructief.", "Deze zin begint als een verhaal."],
         uitlegPad: {
           stappen: [{ titel: "Mening + argument", tekst: "'Iedereen zou moeten recyclen, want...' geeft een mening met een argument → betogend." }],
           niveaus: {
-            basis: "De zin met 'zou moeten' + 'want' wil je overtuigen → betogend.",
+            basis: "Zoek de zin die vertelt wat de schrijver vindt, en die daar ook een reden bij geeft.",
             simpeler: "Welke tekst geeft een mening en wil je overhalen?",
             nogSimpeler: "Welke zin zegt wat jij zou móéten doen?",
           },
@@ -453,8 +453,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Er was eens' = verhaal", tekst: "'Er was eens...' is de start van een verzonnen verhaal → verhalende tekst." }],
           niveaus: {
-            basis: "'Er was eens' hoort bij een verhaal → verhalend.",
-            simpeler: "Begint dit als een sprookje/verhaal?",
+            basis: "Met welke woorden begint deze zin? Waar heb je die woorden al vaak gehoord?",
+            simpeler: "Begint dit als een sprookje of als een lijst met feiten?",
             nogSimpeler: "Is dit een verhaal of een lijst met feiten?",
           },
         },
@@ -467,21 +467,21 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mening + argumenten = betogend", tekst: "Een betogende tekst heeft altijd een mening plus argumenten (woorden als 'want', 'omdat', 'daarom moet je')." }],
           niveaus: {
-            basis: "Mening + argumenten = kenmerk van betogende tekst.",
+            basis: "Een betogende tekst wil je ergens van overtuigen. Wat heeft de schrijver daarvoor nodig?",
             simpeler: "Probeert de tekst je ergens van te overtuigen?",
             nogSimpeler: "Staat er 'jij moet..., want...' in?",
           },
         },
       },
       {
-        q: "Een strip-verhaal over twee kinderen die op avontuur gaan is een...",
+        q: "Een strip over twee kinderen die op avontuur gaan, is een...",
         options: ["verhalende tekst", "betogende tekst", "instructieve tekst", "informatieve tekst"],
         answer: 0,
         wrongHints: [null, "Er is geen mening of argument in.", "Er zijn geen stappen.", "Het geeft geen feiten om te leren."],
         uitlegPad: {
           stappen: [{ titel: "Strip = verhalend", tekst: "Een strip vertelt een verzonnen verhaal met personages → verhalende tekst." }],
           niveaus: {
-            basis: "Een strip met personages en avontuur = verhalende tekst.",
+            basis: "Zitten er personages in die iets meemaken? Bij welke soort tekst hoort dat?",
             simpeler: "Zijn er personages die iets meemaken?",
             nogSimpeler: "Is het een verhaal?",
           },
@@ -495,7 +495,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Betogen = overtuigen", tekst: "De vier soorten teksten hebben elk een doel. Betogend → overtuigen. Informatief → informeren. Verhalend → vermaken. Instructief → instrueren." }],
           niveaus: {
-            basis: "Betogende tekst = overtuigen van een mening.",
+            basis: "Wat wil de schrijver van een betogende tekst dat jij na het lezen vindt of doet?",
             simpeler: "Wat probeert een betogende tekst te doen?",
             nogSimpeler: "Welk woord lijkt op 'betogen' (overtuigen)?",
           },
@@ -520,7 +520,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De poster wil je overtuigen om op Jayden te stemmen.",
+            basis: "Lees de poster: wat wil de schrijver dat jij gaat doen, en welke reden geeft hij daarvoor?",
             simpeler: "Wil de poster dat jij iets gaat vinden of doen?",
             nogSimpeler: "Wil de schrijver dat je op Jayden stemt?",
           },
@@ -544,7 +544,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Mening + argument (met 'want') → betogend.",
+            basis: "Is dit iets wat zeker waar is voor iedereen, of iets wat de schrijver vindt? En wat staat er na 'want'?",
             simpeler: "Vindt de schrijver iets, of vertelt hij iets wat zeker waar is?",
             nogSimpeler: "Staat er 'want' achter een mening?",
           },

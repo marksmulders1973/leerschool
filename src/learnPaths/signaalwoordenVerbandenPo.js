@@ -353,7 +353,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "De eerste stap", tekst: "Er staat 'daarna' in het tweede deel, dus het eerste deel is de éérste stap: 'Eerst'." }],
           niveaus: {
-            basis: "Het is de eerste handeling, gevolgd door 'daarna' → 'Eerst'.",
+            basis: "In de zin staat al 'daarna': dat is de tweede stap. Welk woord hoort bij de stap die daarvóór komt?",
             simpeler: "Welk woord betekent 'om mee te beginnen'?",
             nogSimpeler: "Wat doe je als állereerste? Welk woord hoort daarbij?",
           },
@@ -367,7 +367,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Ten slotte = als laatste", tekst: "'Ten slotte' betekent 'als laatste'. 'Eerst' is het begin, 'vervolgens/daarna' zijn tussenstappen." }],
           niveaus: {
-            basis: "'Ten slotte' wijst op de laatste stap.",
+            basis: "Denk aan een recept. Welk woord zet je voor de stap waarna je helemaal klaar bent?",
             simpeler: "Welk woord betekent 'aan het eind'?",
             nogSimpeler: "Welk woord komt bij de allerlaatste stap?",
           },
@@ -381,7 +381,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vervolgens = daarna", tekst: "'Vervolgens' betekent 'daarna' — het wijst op de volgende stap in een reeks." }],
           niveaus: {
-            basis: "'Vervolgens' hoort bij volgorde: het is een volgende stap.",
+            basis: "Zet het woord in een zin: 'Ik poetste mijn tanden. Vervolgens ging ik slapen.' Wat vertelt 'vervolgens' je daar?",
             simpeler: "Komt 'vervolgens' bij tijd/volgorde of bij een tegenstelling?",
             nogSimpeler: "'Vervolgens' lijkt op welk woord: daarna, of maar?",
           },
@@ -395,7 +395,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Volgende stap in een recept", tekst: "Na het mengen komt de volgende stap. 'Daarna' geeft die volgorde aan." }],
           niveaus: {
-            basis: "Het is de volgende stap in het recept → 'Daarna'.",
+            basis: "Je leest een recept. Komt er nu een reden, een tegenstelling of gewoon de stap die erna komt?",
             simpeler: "Welk woord betekent 'als volgende stap'?",
             nogSimpeler: "Eerst mengen, … de eieren erbij. Welk woord betekent 'vervolgens'?",
           },
@@ -409,7 +409,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Volgende stap", tekst: "Na de soep komt de volgende gang. 'Daarna' geeft die volgorde aan." }],
           niveaus: {
-            basis: "Het is de volgende stap in de tijd → 'Daarna'.",
+            basis: "Eerst de soep, dan het hoofdgerecht. Gaat het om een reden, een tegenstelling of om wat erna komt?",
             simpeler: "Welk woord betekent 'als volgende'?",
             nogSimpeler: "Eerst soep, … hoofdgerecht. Welk woord betekent 'vervolgens'?",
           },
@@ -423,8 +423,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Echter = tegenstelling", tekst: "'Echter' geeft een tegenstelling, geen volgorde. 'Eerst/daarna/ten slotte' horen wél bij tijd/volgorde." }],
           niveaus: {
-            basis: "'Echter' hoort bij tegenstelling, niet bij volgorde.",
-            simpeler: "Welk woord betekent 'maar' i.p.v. een stap in de tijd?",
+            basis: "Drie van de woorden vertellen wanneer iets gebeurt. Welk woord doet iets anders?",
+            simpeler: "Welk woord betekent ongeveer hetzelfde als 'maar', in plaats van een stap in de tijd?",
             nogSimpeler: "Drie woorden zijn stappen; welke is dat niet?",
           },
         },
@@ -448,7 +448,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Intussen = terwijl het andere gebeurt → op hetzelfde moment.",
+            basis: "Lees de twee zinnen. Was papa al klaar met koken toen jij de tafel dekte?",
             simpeler: "Kookt papa nog als jij de tafel dekt?",
             nogSimpeler: "Papa kookt … en ik dek de tafel. Is dat na elkaar of tegelijk?",
           },
@@ -472,7 +472,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Eerst was de film klaar, toen gingen we naar huis → nadat.",
+            basis: "Wat kwam eerst: de film die afliep, of naar huis gaan? Kies een woord dat die volgorde laat zien én midden in de zin past.",
             simpeler: "Wat gebeurde er eerst: de film afgelopen of naar huis gaan?",
             nogSimpeler: "We gingen naar huis toen de film … klaar wás. Welk woord betekent 'na het moment dat'?",
           },
@@ -496,7 +496,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Twee dingen tegelijk → terwijl.",
+            basis: "Doen oma en opa hun klusje na elkaar of op hetzelfde moment? Het woord moet ook midden in de zin passen.",
             simpeler: "Gebeuren het krant lezen en de afwas na elkaar of tegelijk?",
             nogSimpeler: "Oma leest … en op hetzelfde moment wast opa af. Welk woord betekent 'op hetzelfde moment'?",
           },

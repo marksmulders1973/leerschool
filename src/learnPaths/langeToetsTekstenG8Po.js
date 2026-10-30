@@ -1215,7 +1215,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Een lang antwoord is niet automatisch het juiste. Wat helpt je écht kiezen?",
           "Lengte zegt niets over inhoud. Wat heeft de tekst je te vertellen?",
-          "Voor altijd overslaan levert zeker geen punt op. Wat kun je nog doen met de zin in de tekst?",
+          "Voor altijd overslaan levert zeker geen punt op. Kun je nog iets controleren voordat je kiest?",
         ],
         uitlegPad: {
           stappen: [
@@ -1252,30 +1252,30 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
             { titel: "Waarom maakt dat uit?", tekst: "Bij een feitenvraag scan je naar het zoekwoord. Bij een conclusievraag lees je een alinea en redeneer je. Weet je welke soort het is, dan kies je de juiste aanpak." },
           ],
           niveaus: {
-            basis: "Feit = opzoeken. Conclusie = feiten + één redeneerstap. Welke optie zegt dit?",
+            basis: "Bij de ene soort vraag staat het antwoord gewoon in de tekst. Bij de andere moet je zelf iets bedenken. Welke is welke?",
             simpeler: "Hoeveel staat er letterlijk in de tekst en hoeveel moet je zelf bedenken — hangt dat af van wat voor vraag het is?",
             nogSimpeler: "Bij welk type vraag moet je zelf iets uitrekenen of bedenken?",
           },
         },
       },
       {
-        q: "Sanne kijkt in het verhaal 'de nacht van de vallende sterren' naar de hemel. Wat voor vraag is 'Hoe laat klopte opa op de deur'?",
+        q: "In een verhaal staat: *\"Om elf uur klopte opa zachtjes op haar deur.\"* Bij dat verhaal hoort de vraag: *'Hoe laat klopte opa op de deur?'* Wat voor soort vraag is dat?",
         options: ['Een opzoekvraag — het tijdstip staat letterlijk in de tekst', 'Een conclusievraag — je moet het tijdstip zelf berekenen', 'Een hoofdgedachte-vraag — het gaat om het hele verhaal', 'Een verwijswoord-vraag — je zoekt waar \'hij\' naar verwijst'],
         answer: 0,
         wrongHints: [
           null,
-          "Reken je hier iets uit, of zoek je gewoon een getal in de tekst?",
+          "Moet je hier echt iets uitrekenen of bedenken? Lees de zin uit het verhaal nog eens.",
           "Gaat de vraag over het thema van het hele verhaal, of over één moment?",
-          "Staat er een verwijswoord zoals 'hij' of 'die' in de vraag? Of zoek je gewoon een tijdstip?",
+          "Staat er een verwijswoord zoals 'hij' of 'die' in de vraag?",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Herken het vraagtype", tekst: "Een tijdstip vragen = zoek een getal in de tekst. Dat is de definitie van een opzoekvraag." },
-            { titel: "Aanpak", tekst: "Gebruik je plattegrond: het kloppen op de deur is aan het begin. Scan de eerste alinea's op een tijdstip." },
+            { titel: "Aanpak", tekst: "In het hele verhaal 'De nacht van de vallende sterren' gebruik je je plattegrond: het kloppen op de deur is aan het begin. Scan de eerste alinea's op een tijdstip." },
             { titel: "Pas op voor afleidende getallen", tekst: "De tekst heeft meer getallen (honderd sterren per uur, ver na middernacht). Koppel elk getal aan de juiste gebeurtenis." },
           ],
           niveaus: {
-            basis: "Het tijdstip staat letterlijk in de tekst — wat voor vraag is dit dan?",
+            basis: "Lees de zin uit het verhaal. Moet je het antwoord zelf bedenken, of kun je het gewoon aanwijzen?",
             simpeler: "Zoek je het antwoord op, of reken je het uit?",
             nogSimpeler: "Staat het antwoord woordelijk in de tekst?",
           },
@@ -1355,7 +1355,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
         answer: 0,
         wrongHints: [
           null,
-          "Dan mis je alle vragen bij die tekst. Wat kun je doen met de zinnen rond het woord?",
+          "Dan mis je alle vragen bij die tekst. Is er een manier om het woord toch uit te zoeken?",
           "Gokken kan altijd nog. Is er eerst een manier om het in de tekst zelf te ontdekken?",
           "Zegt de lengte van een woord iets over wat het betekent?",
         ],
@@ -1469,7 +1469,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
           null,
           "Kan één zin vertellen waar de héle tekst over gaat?",
           "Een leuk detail komt vaak maar één keer voor. Gaat de hele tekst daarover?",
-          "Een moeilijk woord zegt niets over de inhoud. Waar gaat bijna elke alinea over?",
+          "Een moeilijk woord zegt niets over de inhoud. Waar moet een hoofdgedachte bij passen?",
         ],
         uitlegPad: {
           stappen: [

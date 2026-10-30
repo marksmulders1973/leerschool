@@ -402,7 +402,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "'Per stuk' is een signaalwoord voor keer (×) het aantal." }],
           niveaus: {
-            basis: "€10 (€2 × 5).",
+            basis: "Elk stuk levert dezelfde winst op. Moet je de winst per stuk en het aantal optellen of keer elkaar doen?",
             simpeler: "5 stuks, elk €2 winst: €2 × 5 = €10.",
             nogSimpeler: "€10",
           },
@@ -412,7 +412,7 @@ const steps = [
         q: "Je koopt iets in voor **€3** en wilt **€2 winst** maken. Voor hoeveel moet je het **verkopen**?",
         options: ["€5", "€1", "€2", "€6"],
         answer: 0,
-        wrongHints: [null, "Aftrekken klopt niet — je wilt juist méér krijgen dan je inkoop.", "Dat is alleen de winst, de inkoop moet er nog bij.", "Dat is de inkoop verdubbeld; reken inkoop + gewenste winst."],
+        wrongHints: [null, "Aftrekken klopt niet — je wilt juist méér krijgen dan je inkoop.", "Dat is alleen de winst, de inkoop moet er nog bij.", "Dat is twee keer de inkoop. Maar je wilde maar €2 winst maken — klopt dat dan nog?"],
         uitlegPad: {
           stappen: [
             { titel: "Andersom rekenen", tekst: "Je weet de inkoop en de winst die je wilt. Je zoekt de verkoopprijs." },
@@ -429,7 +429,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Verkoopprijs = inkoopprijs + winst. De verkoopprijs is altijd hoger dan de inkoop." }],
           niveaus: {
-            basis: "€5 (€3 + €2).",
+            basis: "De verkoopprijs moet eerst je inkoop terugverdienen. Wat moet daar dan nog bij komen?",
             simpeler: "Tel je inkoop en de winst die je wilt op: €3 + €2 = €5.",
             nogSimpeler: "€5",
           },
@@ -456,7 +456,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Reken in centen bij kleine bedragen, dan hoef je niet met de komma te puzzelen." }],
           niveaus: {
-            basis: "€0,70 (€1,20 − €0,50).",
+            basis: "Winst is wat je overhoudt: het verschil tussen verkoopprijs en inkoopprijs. Reken het makkelijkst in centen.",
             simpeler: "120 cent − 50 cent = 70 cent = €0,70.",
             nogSimpeler: "€0,70",
           },
@@ -484,7 +484,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Opbrengst = verkoopprijs × aantal. Pas daarna trek je de inkoop eraf voor de winst." }],
           niveaus: {
-            basis: "€12 (€3 × 4).",
+            basis: "Elk patatje brengt evenveel geld op. Hoe reken je uit wat 4 patatjes samen opbrengen?",
             simpeler: "4 patatjes × €3 = €12 dat binnenkomt.",
             nogSimpeler: "€12",
           },
@@ -501,7 +501,7 @@ const steps = [
             { titel: "Totale winst", tekst: "Totale winst = €0,25 × 8 = **€2**." },
           ],
           niveaus: {
-            basis: "€2 (winst per stuk €0,25 × 8).",
+            basis: "Reken eerst uit hoeveel winst één sticker oplevert. Doe dat daarna keer het aantal stickers.",
             simpeler: "Elke sticker levert 25 cent op. 8 × 25 cent = 200 cent = €2.",
             nogSimpeler: "€2",
           },
@@ -511,14 +511,14 @@ const steps = [
         q: "Je verkoopt **10 koekjes** voor **€0,40** per stuk. De inkoop was **€0,15** per koekje. Wat is de **totale winst**?",
         options: ["€2,50", "€4", "€1,50", "€0,25"],
         answer: 0,
-        wrongHints: [null, "Dat is de totale opbrengst (10 × €0,40) — trek de totale inkoop er nog af.", "Reken de winst per koekje en vermenigvuldig dan met 10.", "Dat is de winst per koekje, niet de totale winst."],
+        wrongHints: [null, "Dat is de totale opbrengst (10 × €0,40) — trek de totale inkoop er nog af.", "Dat is wat alle 10 koekjes samen bij de inkoop kostten. Is dat ook wat je overhoudt?", "Dat is de winst per koekje, niet de totale winst."],
         uitlegPad: {
           stappen: [
             { titel: "Winst per koekje", tekst: "€0,40 − €0,15 = €0,25 per koekje." },
             { titel: "Totale winst", tekst: "€0,25 × 10 = **€2,50** totale winst." },
           ],
           niveaus: {
-            basis: "€2,50 (winst per koekje €0,25 × 10).",
+            basis: "Reken eerst de winst op één koekje uit: verkoopprijs min inkoopprijs. Doe dat daarna keer 10.",
             simpeler: "Elk koekje levert 25 cent op. 10 × 25 cent = 250 cent = €2,50.",
             nogSimpeler: "€2,50",
           },
@@ -535,7 +535,7 @@ const steps = [
             { titel: "Check", tekst: "€0,50 × 12 = €6 totale winst. Klopt!" },
           ],
           niveaus: {
-            basis: "€0,50 (€6 ÷ 12).",
+            basis: "Je weet de winst van alles samen en het aantal stuks. Moet je dan keer doen of delen?",
             simpeler: "Deel de totale winst door het aantal: €6 ÷ 12 = €0,50.",
             nogSimpeler: "€0,50",
           },
@@ -595,7 +595,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€7 (€2 × 6 = €12, en €12 − €5 = €7).",
+            basis: "Reken eerst uit hoeveel geld er binnenkomt. Haal daarna weg wat de armbandjes samen kostten.",
             simpeler: "Er komt €12 binnen. Je had €5 betaald. €12 − €5 = €7 over.",
             nogSimpeler: "€7",
           },
@@ -654,7 +654,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€6 (€0,40 winst per flesje × 15).",
+            basis: "Reken eerst de winst op één flesje uit. Doe dat daarna keer het aantal flesjes. In centen is het makkelijker.",
             simpeler: "Elk flesje levert 40 cent op. 15 × 40 cent = 600 cent = €6.",
             nogSimpeler: "€6",
           },

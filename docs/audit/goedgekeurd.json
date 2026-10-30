@@ -4936,6 +4936,13 @@
   "reden": "Antwoord klopt (vraag zegt niet 'alle'); hint B was een telegramfragment 'Vogel/reptiel/vis (...)'."
  },
  {
+  "waar": "dierenklassen-po stap 6 vraag 19",
+  "hash": "4e6386b4530944a5",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "dierenklassen-po stap 6 vraag 2",
   "hash": "1af39e459754fa04",
   "oordeel": "goed",
@@ -11805,6 +11812,50 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 1",
+  "hash": "a6e77e68bdcd2d65",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 2",
+  "hash": "a39f04ae776277d5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; hint D wees naar 'de zin in de tekst' (= het antwoord)."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 3",
+  "hash": "e34def4cf779a43c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis zei de goede optie vrijwel voor."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 5",
+  "hash": "fad86c558870778d",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 6",
+  "hash": "1541141b31dd8b5e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 8",
+  "hash": "de91f7bb142d3a9e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "leestekens-hoofdletters-po stap 1 vraag 1",
   "hash": "cc002c04bfc325bf",
   "oordeel": "goed",
@@ -14767,6 +14818,28 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "politiek-democratie-po stap 6 vraag 11",
+  "hash": "fcb156b5ab2e4d8d",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 12",
+  "hash": "45b186656aefafff",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 13",
+  "hash": "dade4c83bb36ab51",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; vraag zonder lidwoord, hint over het koningshuis vaag."
+ },
+ {
   "waar": "politiek-democratie-po stap 6 vraag 14",
   "hash": "3773df190d4e6e3c",
   "oordeel": "twijfel",
@@ -14775,12 +14848,50 @@
   "reden": "Raadbaar: alleen het antwoord bevat 'grond' (Grondwet)"
  },
  {
+  "waar": "politiek-democratie-po stap 6 vraag 16",
+  "hash": "aa568e2446fe30de",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; telegramvraag en opties zonder lidwoord."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 17",
+  "hash": "4f8394e67e636c9d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; telegramopties, de goede optie was de enige met een werkwoord."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 18",
+  "hash": "a3749eb146148286",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; telegramvraag, afkorting EU niet voluit, telegramhints."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 19",
+  "hash": "82cc7de38104ddc3",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "politiek-democratie-po stap 6 vraag 2",
   "hash": "a8e1a5c044df0a18",
   "oordeel": "twijfel",
   "bron": "vervolg B8 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Hint met vakjargon 'plenaire zaal'"
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 20",
+  "hash": "8ee9b982b29da3bf",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "politiek-democratie-po stap 6 vraag 3",
@@ -17935,6 +18046,78 @@
   "reden": "niveaus.basis gaf alleen het antwoord."
  },
  {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 1",
+  "hash": "63b65870b135c6c3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 2",
+  "hash": "6e60c25f9256ea66",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 3",
+  "hash": "861cfefb5b97804b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 4",
+  "hash": "2cd25b862ae04f62",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 5",
+  "hash": "a41efafca1c87073",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord; lijkt sterk op vraag 4."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 6",
+  "hash": "8784fc76a2f05b0b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord; 'i.p.v.' in simpeler."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 7",
+  "hash": "e2b8bc514dcf712a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 8",
+  "hash": "397bae573b7e65d4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 9",
+  "hash": "becddc6cc8a2a51e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis gaf het antwoord."
+ },
+ {
   "waar": "signaalwoorden-verbanden-po stap 4 vraag 6",
   "hash": "a5f01d642da189d0",
   "oordeel": "goed",
@@ -18090,6 +18273,62 @@
   "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 2",
+  "hash": "7c2a273b2627c4ec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; 'die je wil overtuigen' dubbelzinnig; basis = antwoord."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 3",
+  "hash": "49dbe61ff6b97580",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis = antwoord; telegramhints met pijl."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 4",
+  "hash": "3d7215681d41f411",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis = antwoord."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 5",
+  "hash": "09e007bcaaa74781",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis = antwoord."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 7",
+  "hash": "92cafa8a27ef496b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis = antwoord."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 8",
+  "hash": "3f486de747a92b46",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis = antwoord."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 9",
+  "hash": "b6ce9d0d4a28787e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis = antwoord."
  },
  {
   "waar": "spelling-eerste-woorden-g3 stap 5 vraag 5",
@@ -25637,6 +25876,78 @@
   "reden": "Winsten 5/4/3/2 nagerekend; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
  },
  {
+  "waar": "winst-rekenen-po stap 2 vraag 1",
+  "hash": "87523402bbda75d7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (2 x 5 = 10); basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 2",
+  "hash": "7cd883352d78508f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (3 + 2 = 5); basis = antwoord; hint bij €6 rekende de methode voor."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 3",
+  "hash": "8a755b546b9bc735",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (1,20 − 0,50 = 0,70); basis = antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 4",
+  "hash": "e467ac4a22f73b9c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (4 x 3 = 12); basis = antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 5",
+  "hash": "8e6570cce37ef003",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (8 x 0,25 = 2); basis = antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 6",
+  "hash": "97fa333f0d54d027",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (10 x 0,25 = 2,50); basis = antwoord; hint bij €1,50 benoemde de denkfout niet."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 7",
+  "hash": "f197fcd5ce768093",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (6 : 12 = 0,50); basis = antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 8",
+  "hash": "2beb535155c3a8c3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (12 − 5 = 7); basis = antwoord."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 9",
+  "hash": "e7dc7bd8dacbbf50",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (15 x 0,40 = 6); basis = antwoord."
+ },
+ {
   "waar": "winst-rekenen-po stap 3 vraag 12",
   "hash": "f75e6cffaa7aa118",
   "oordeel": "goed",
@@ -25790,6 +26101,63 @@
   "hash": "a729e850ecb278b0",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 1",
+  "hash": "8346bba1c489849a",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 2",
+  "hash": "419e5a063c133895",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 3",
+  "hash": "6de2cbe1c547fef7",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 4",
+  "hash": "cf6314338622631a",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 5",
+  "hash": "8c0db38f5178a707",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 6",
+  "hash": "e854ea3a1cd6132f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar bijna dezelfde vraag als vraag 4 (bedolven worden) in dezelfde stap."
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 8",
+  "hash": "a1bd5c4ad960f16b",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 9",
+  "hash": "517d639d578f5b3d",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

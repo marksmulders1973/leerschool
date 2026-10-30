@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt (2 x 5 = 10); basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (optellen of keer?)."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (3 + 2 = 5); basis = antwoord; hint bij €6 rekende de methode voor.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; wrongHint D benoemt nu de denkfout (twee keer de inkoop) zonder de som voor te rekenen."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (1,20 − 0,50 = 0,70); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven (verschil, reken in centen)."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (4 x 3 = 12); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (8 x 0,25 = 2); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven (eerst winst per stuk, dan keer aantal)."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt (10 x 0,25 = 2,50); basis = antwoord; hint bij €1,50 benoemde de denkfout niet.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; wrongHint C: €1,50 is de totale inkoop."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt (6 : 12 = 0,50); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven (keer of delen?)."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (12 − 5 = 7); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "winst-rekenen-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt (15 x 0,40 = 6); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; de definitie in de tekst hoort bij deze vraagvorm, hints sturen naar de zin.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt, hints en niveaus netjes.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt, maar bijna dezelfde vraag als vraag 4 (bedolven worden) in dezelfde stap.",
+  "hersteld": true,
+  "wijziging": "Vraag vervangen door een woord uit dezelfde tekst: 'spuwt' (antwoord index 0: met kracht naar buiten gooit); nieuwe afleiders, hints, evidence en uitlegPad."
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "De geciteerde zin ('boeren halen er grote oogsten vandaan') staat niet in de leestekst; bovendien dubbel met vraag 3 (vruchtbaar).",
+  "hersteld": true,
+  "wijziging": "Vraag vervangen door een woord uit de tekst: 'gevoelige' apparaten (antwoord index 0: merken heel kleine dingen al); nieuwe afleiders, hints, evidence en uitlegPad."
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "18 klopt; hint (21 tot 1972) klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; vraag zonder lidwoord, hint over het koningshuis vaag.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is de oppositie in de politiek?'; hint C herschreven."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 15",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Telegramvraag ('politiek (NL)') en telegram-antwoord met '+'; goede optie raadbaar door afwijkende vorm.",
+  "hersteld": true,
+  "wijziging": "Vraag en alle 4 opties als volledige, even lange zinnen; hints C en D herschreven."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 16",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; telegramvraag en opties zonder lidwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag en opties met lidwoord; hints feitelijk aangescherpt (Noordeinde = werkpaleis, Huis ten Bosch = woonpaleis, Hoge Raad eigen gebouw); bewust geen 'vergadert' vanwege de renovatie."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; telegramopties, de goede optie was de enige met een werkwoord.",
+  "hersteld": true,
+  "wijziging": "4 opties als even lange volledige zinnen; hints aangepast zodat ze het antwoord niet omschrijven."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 18",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; telegramvraag, afkorting EU niet voluit, telegramhints.",
+  "hersteld": true,
+  "wijziging": "Vraag met 'Europese Unie (EU)' voluit; hints C en D als volledige zinnen."
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "politiek-democratie-po stap 6 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; basis gaf het antwoord; lijkt sterk op vraag 4.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; basis gaf het antwoord; 'i.p.v.' in simpeler.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap; simpeler: 'in plaats van' voluit."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis gaf alleen het antwoord; herschreven tot hulpstap."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Het woord 'verhaal' in de vraag verraadt 'verhalende tekst'; 'dat je wil vermaken' is dubbelzinnig.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Een verzonnen tekst die jou wil vermaken, is een...'; hints B en D iets scherper; basis herschreven."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; 'die je wil overtuigen' dubbelzinnig; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "'jou' in plaats van 'je' in de vraag; basis herschreven."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; basis = antwoord; telegramhints met pijl.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; wrongHints als volledige zinnen."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; simpeler zonder schuine streep."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "'strip-verhaal' is een spelfout (stripverhaal) en het woord 'verhaal' verraadt het antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Een strip over twee kinderen die op avontuur gaan, is een...'; basis herschreven."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; hint D wees naar 'de zin in de tekst' (= het antwoord).",
+  "hersteld": true,
+  "wijziging": "wrongHint D herschreven zonder het antwoord."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; basis zei de goede optie vrijwel voor.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Het verhaal staat niet in deze stap (stap 4 heeft geen leestekst); hints B en D zeiden 'zoek je gewoon een getal/tijdstip' (= antwoord).",
+  "hersteld": true,
+  "wijziging": "Vraag citeert nu de zin uit het verhaal ('Om elf uur klopte opa zachtjes op haar deur.'); hints B en D herschreven; basis herschreven; uitlegPad-stap noemt het verhaal."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt; de gymschoen-vergelijking staat in de eigen uitlegPad.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint B noemde het antwoord ('de zinnen rond het woord').",
+  "hersteld": true,
+  "wijziging": "wrongHint B herschreven."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; nogSimpeler = antwoord mag.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 4 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij 'moeilijkste woord' noemde het antwoord ('waar gaat bijna elke alinea over').",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven."
+ },
+ {
+  "waar": "dierenklassen-po stap 6 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Amfibieën klopt; kleine verbetering.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'met longen én door de huid'; vissen-hint: 'De meeste vissen' (longvissen bestaan)."
+ }
+]
