@@ -14,3 +14,4 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - topografie-nederland-provincies-po stap 1 vraag 1: 'noordwesten' + Amsterdam maakt Noord-Holland raadbaar.
 - pubertijd-groei-po stap 1 vraag 3: opties telegramzinnen ('Ziekte die jongens krijgen').
 - water-erfgoed-nederland-po stap 2 vraag 1: opties telegramzinnen ('Dijk hoger dan duin altijd').
+- doorstroomtoetsRekenenG8.js regels ~211 en ~235 (startset): afleider 'Niet te bepalen' is geen echte denkfout.

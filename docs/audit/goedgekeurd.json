@@ -1565,6 +1565,124 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 10",
+  "hash": "9c0576e5a80df4b2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (egel); hints 'Blijft actief.' x3 zijn telegramzinnen zonder uitleg."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 11",
+  "hash": "0694907113b26330",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 12",
+  "hash": "d6eee7260260a020",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 13",
+  "hash": "9e55281a1d069f95",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (ooievaar is de klassieke trekvogel); hint 'Mussen blijven heel jaar in NL — standvogel.' is een telegramzin."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 14",
+  "hash": "b0babdadaffe7516",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 15",
+  "hash": "b37cf0e91edda568",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 16",
+  "hash": "db1d90662f81e587",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 17",
+  "hash": "2ac67e5491ed26ad",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 2",
+  "hash": "1dd45efea3b1cf10",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 3",
+  "hash": "0fd4bf25a46e967c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar afleiders 'rups' en 'pop' horen bij de vlinder en zijn absurd voor een kikker (raadbaar); hint 'Rups = vlinder.' is een telegramzin."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 4",
+  "hash": "499bb131c614476f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints 'Herfst = blaadjes vallen juist.' en 'Winter = bomen helemaal kaal.' zijn telegramzinnen, niveaus ook."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 5",
+  "hash": "57a103a8df6caccc",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 6",
+  "hash": "281e8d600a228c13",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 7",
+  "hash": "1c9b021231031a7e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag 'Welk seizoen heeft bladval?' is stijf voor groep 5 en de hints 'Bloesem.' / 'Volle bladeren.' / 'Geen bladeren meer.' zijn telegramzinnen."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 8",
+  "hash": "5a487c1626c98092",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 11 vraag 9",
+  "hash": "2eb7f082469b6865",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar 'Langdurige rust met lage activiteit' is te formeel voor groep 5 en valt op als enige definitie-zin."
+ },
+ {
   "waar": "dieren-seizoenen-natuur stap 2 vraag 1",
   "hash": "1971b580f5cf0e40",
   "oordeel": "twijfel",
@@ -1579,6 +1697,13 @@
   "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt. Hints 1-2 waren telegram ('Eieren = vogels, vissen, reptielen.'); niveaus telegram. Startsetvraag: alleen hints/niveaus aangepast."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 4 vraag 3",
+  "hash": "f489cb3b63d2ffcb",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "dieren-seizoenen-natuur stap 6 vraag 2",
@@ -3398,6 +3523,27 @@
   "reden": "Goede optie is de langste en de meest specifieke; 'massa' in de vraag geeft 'veel' al prijs."
  },
  {
+  "waar": "informatiebronnen-po stap 1 vraag 1",
+  "hash": "528520ef49805f7c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 1 vraag 2",
+  "hash": "1cf839719c1831af",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 1 vraag 3",
+  "hash": "4d7a4b926b82293d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "informatiebronnen-po stap 1 vraag 4",
   "hash": "291d2c2bf8d5b06b",
   "oordeel": "twijfel",
@@ -3428,6 +3574,72 @@
   "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord en hints goed; niveaus telegramstijl."
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 10",
+  "hash": "f8a8e1069639c324",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 2",
+  "hash": "88d9f762c463dc29",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (kok); afleider 'loek' is geen Nederlands woord."
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 3",
+  "hash": "00a3a95ac349f610",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (lopen); hint 'Niet — ander werkwoord.' is een telegramzin zonder richting."
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 4",
+  "hash": "9160e86f34409e9f",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 5",
+  "hash": "a2ee95c8bd202c5b",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 6",
+  "hash": "c5b33bb0ebd027f9",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 7",
+  "hash": "0998d7164b4f7fc2",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 8",
+  "hash": "09f7af3c79d95988",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (boom); hint bij 'bom' ('één ..., twee bomen') is onbegrijpelijk geformuleerd."
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 9",
+  "hash": "a80e54f6dae5135f",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "inhoudsopgave-register-po stap 1 vraag 1",
@@ -3550,6 +3762,29 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "interpunctie-po stap 2 vraag 4",
+  "hash": "8abdab43c8eadfb2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints 'Klopt qua schrijven.' / 'Klopt — Lisa is naam.' / 'Klopt — Spanje is land.' zijn telegramzinnen."
+ },
+ {
+  "waar": "interpunctie-po stap 2 vraag 5",
+  "hash": "b0e6c1a63e90f6ab",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 2 vraag 6",
+  "hash": "14a4aa32e35932a4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (In, Tom en Spanje); de foute optie 'In en Spanje' had geen hint (null)."
  },
  {
   "waar": "interpunctie-po stap 4 vraag 1",
@@ -4584,6 +4819,41 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "korte-teksten-snappen-g4 stap 3 vraag 5",
+  "hash": "4897cba109d78747",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 3 vraag 6",
+  "hash": "dbf45f79a9235dae",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 3 vraag 7",
+  "hash": "a3f61c3b21d01143",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 3 vraag 8",
+  "hash": "cdddb6393c37f207",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 3 vraag 9",
+  "hash": "c7a3a3703341f87a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "korte-teksten-snappen-g4 stap 4 vraag 1",
   "hash": "5bc32a2997bd5bcb",
   "oordeel": "goed",
@@ -4597,6 +4867,41 @@
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "'Na het handen wassen' is strikt genomen ook waar voor optie B (opeten); hint B zei al 'meteen na'."
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 5",
+  "hash": "34fc8e2fc7ed8689",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 6",
+  "hash": "c527cb05eedff339",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 7",
+  "hash": "0bb010b940057f20",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 8",
+  "hash": "f79ac282deffd4bc",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 9",
+  "hash": "d70d24de293514cf",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "korte-teksten-snappen-g4 stap 5 vraag 4",
@@ -8003,6 +8308,81 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 3 vraag 4",
+  "hash": "cd4dcc47557fabd7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; alle opties zijn telegramzinnen ('Pompt water uit polder') en hints 'Dat is korenmolen.' / 'Niet drinkwater.' ook."
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 3 vraag 5",
+  "hash": "3994437b25c14b0d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 3 vraag 6",
+  "hash": "507d3d7c1fbf6df6",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 3 vraag 7",
+  "hash": "0fa484b97d62a0ff",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 3 vraag 8",
+  "hash": "8a17dda4a25a6b4a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 4",
+  "hash": "49a5e815c8daddbf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (Deltawerken); vraag noemt niet welke ramp; hints 'Niet de hoofdreactie.' en 'Land werd juist beschermd.' zijn telegramzinnen."
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 5",
+  "hash": "c07ad51d5b0f40ce",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 6",
+  "hash": "4ddcdcba05880d7b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (circa 72.000 geëvacueerd → 70.000); hints kloppen (150.000 hectare, 1.836 doden); vraag zei alleen 'bij de ramp'."
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 7",
+  "hash": "7b2a4794c0033e46",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (radio zond 's nachts niets uit); hints kloppen; vraag zei alleen 'de nacht van de ramp'."
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 8",
+  "hash": "1218662db4132374",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints kloppen; vraag zei alleen 'na de ramp'."
  },
  {
   "waar": "water-erfgoed-nederland-po stap 6 vraag 15",

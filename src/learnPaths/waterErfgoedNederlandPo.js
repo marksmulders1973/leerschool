@@ -271,9 +271,9 @@ const steps = [
       },
       {
         q: "Wat doet een **poldermolen**?",
-        options: ["Pompt water uit polder", "Maalt graan", "Maakt elektriciteit", "Pompt drinkwater"],
+        options: ["Hij pompt water uit de polder", "Hij maalt graan", "Hij maakt elektriciteit", "Hij pompt drinkwater omhoog"],
         answer: 0,
-        wrongHints: [null, "Dat is korenmolen.", "Moderne windturbines doen dat, niet poldermolens.", "Niet drinkwater."],
+        wrongHints: [null, "Graan malen doet een korenmolen.", "Moderne windturbines doen dat, niet poldermolens.", "Drinkwater komt uit de waterleiding, niet uit een molen."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -349,16 +349,16 @@ const steps = [
         wrongHints: [null, "Friesland, Groningen en Drenthe liggen in het noorden; de storm sloeg toe in het zuidwesten.", "Limburg, Gelderland en Overijssel liggen in het oosten, ver van de Noordzeekust.", "Noord-Holland en Utrecht kregen wel hoog water, maar de dijken braken vooral zuidelijker."],
       },
       {
-        q: "Hoeveel **doden** waren er ongeveer?",
-        options: ["~1.836", "~100", "~10.000", "~500"],
+        q: "Hoeveel **doden** waren er ongeveer bij de Watersnoodramp van 1953?",
+        options: ["ongeveer 1.800", "ongeveer 100", "ongeveer 10.000", "ongeveer 500"],
         answer: 0,
-        wrongHints: [null, "100? Er verdronken hele dorpen. Kijk in de toets-tip naar het getal dat op een jaartal lijkt.", "10.000 is te veel — al was het echte aantal al vreselijk genoeg.", "500 is te weinig. Kijk in de toets-tip naar het getal dat op een jaartal lijkt."],
+        wrongHints: [null, "Honderd? Er verdronken hele dorpen. Het waren veel meer mensen.", "Tienduizend is te veel, al was het echte aantal al vreselijk genoeg.", "Vijfhonderd is te weinig. Er verdronken hele dorpen."],
       },
       {
-        q: "Wat was de **reactie** op de ramp?",
+        q: "Wat was de **reactie** van Nederland op de Watersnoodramp van 1953?",
         options: ["Deltawerken bouwen", "Alleen de dijken repareren", "Mensen verhuizen", "Land opgeven"],
         answer: 0,
-        wrongHints: [null, "Repareren alleen was niet genoeg. 'Dit nooit meer' — wat werd er gebouwd?", "Niet de hoofdreactie.", "Land werd juist beschermd."],
+        wrongHints: [null, "Repareren alleen was niet genoeg. Nederland zei: 'Dit nooit meer.' Wat werd er gebouwd?", "Sommige mensen verhuisden wel, maar dat was niet het grote plan van Nederland.", "Nederland gaf het land niet op, maar wilde het juist beter beschermen."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -368,13 +368,13 @@ const steps = [
         wrongHints: [null, "Nederland heeft bijna nooit zware aardbevingen.", "Droogte en hitte horen bij de zomer; de ramp was in de winter, met hoog water.", "Sneeuw en vorst geven geen overstroming vanuit zee."],
       },
       {
-        q: "Hoeveel mensen moesten bij de ramp **hun huis ontvluchten**?",
+        q: "Hoeveel mensen moesten bij de Watersnoodramp van 1953 **hun huis ontvluchten**?",
         options: ["70.000", "1.836", "150.000", "500"],
         answer: 0,
         wrongHints: [null, "Dat getal hoort wel bij de ramp, maar het gaat over iets anders.", "150.000 hoort bij de hectare land die onderliep.", "500 is veel te weinig voor zoveel verwoeste dorpen."],
       },
       {
-        q: "Waarom kwamen de waarschuwingen in de nacht van de ramp **niet aan**?",
+        q: "Waarom kwamen de waarschuwingen in de nacht van de Watersnoodramp (1953) **niet aan**?",
         options: [
           "De radio zond 's nachts niets uit",
           "Er bestonden nog geen telefoons",
@@ -390,7 +390,7 @@ const steps = [
         ],
       },
       {
-        q: "Wat gebeurde er **na** de ramp met de dijken langs zee en grote rivieren?",
+        q: "Wat gebeurde er **na** de Watersnoodramp van 1953 met de dijken langs zee en grote rivieren?",
         options: [
           "Ze werden hoger en sterker",
           "Ze werden weggehaald",

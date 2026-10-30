@@ -375,7 +375,7 @@ const steps = [
         q: "Welke zin is **fout**?",
         options: ["Ik woon in nederland.", "Ik woon in Nederland.", "Mijn naam is Lisa.", "We gaan op vakantie naar Spanje."],
         answer: 0,
-        wrongHints: [null, "Klopt qua schrijven.", "Klopt — Lisa is naam.", "Klopt — Spanje is land."],
+        wrongHints: [null, "Deze zin is goed geschreven. Vergelijk hem eens met de andere zinnen.", "Deze zin is goed: Lisa is een naam en krijgt een hoofdletter.", "Deze zin is goed: Spanje is een land en krijgt een hoofdletter."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -424,7 +424,7 @@ const steps = [
         q: "Welke woorden krijgen een hoofdletter in: *'in juli fietst tom naar spanje'*?",
         options: ["In, Tom en Spanje", "In, Juli, Tom en Spanje", "Tom en Spanje", "In en Spanje"],
         answer: 0,
-        wrongHints: [null, "Krijgt een maand een hoofdletter?", "Kijk ook naar het eerste woord.", null],
+        wrongHints: [null, "Krijgt een maand een hoofdletter?", "Kijk ook naar het eerste woord van de zin.", "Tom is een naam. Krijgt een naam een hoofdletter?"],
         uitlegPad: {
           stappen: [
             {

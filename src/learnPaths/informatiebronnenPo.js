@@ -192,7 +192,7 @@ const steps = [
         q: "In het woordenboek: welk woord komt **eerst** alfabetisch?",
         options: ["aap","appel","auto","azijn"],
         answer: 0,
-        wrongHints: [null, "Bijna — vergelijk 2e letter: aa vs ap. Aa < ap.", "Vergelijk: a-a vs a-u. Aa < au.", "Vergelijk: a-a vs a-z. Aa < az."],
+        wrongHints: [null, "Appel begint met a-p. Is er een woord waarvan de tweede letter nog eerder in het alfabet komt?", "Auto begint met a-u. De u staat ver achter in het alfabet. Kijk naar de tweede letter van de andere woorden.", "Azijn begint met a-z. De z is de laatste letter van het alfabet, dus azijn komt juist achteraan."],
         uitlegPad: {
           stappen: [{ titel: "Tweede letter vergelijken", tekst: "Alle 4 beginnen met **a**. Kijk dan naar 2e letter: aap (**a**), appel (**p**), auto (**u**), azijn (**z**). A < P < U < Z dus 'aap' eerst." }],
           woorden: [{ woord: "alfabetisch", uitleg: "Volgorde A-B-C-D...Z." }],
@@ -204,9 +204,9 @@ const steps = [
       },
       {
         q: "Op een bladzijde staan bovenaan: *'koers — komkommer'*. Welk woord vind je op deze bladzijde?",
-        options: ["kok","kameel","krant","loek"],
+        options: ["kok","kameel","krant","koe"],
         answer: 0,
-        wrongHints: [null, "'Kameel' start met 'ka' — komt VOOR 'koers' in het alfabet.", "'Krant' komt NA 'komkommer' (kr > kom).", "'Loek' begint met 'l' — andere bladzijde."],
+        wrongHints: [null, "'Kameel' start met 'ka' — komt VOOR 'koers' in het alfabet.", "'Krant' komt NA 'komkommer' (kr > kom).", "'Koe' is korter dan 'koers' en komt er net vóór. Dus hij staat op de bladzijde ervoor."],
         uitlegPad: {
           stappen: [{ titel: "Tussen 2 trefwoorden", tekst: "Bovenaan staan **eerste + laatste woord** van die bladzijde. 'koers — komkommer' → ergens daartussen vind je 'kok' (koers < kok < komkommer in alfabet)." }],
           woorden: [{ woord: "trefwoord", uitleg: "Eerste/laatste woord bovenaan een woordenboek-bladzijde." }],
@@ -220,7 +220,7 @@ const steps = [
         q: "Je zoekt **'liep'** in het woordenboek. Onder welk woord vind je het?",
         options: ["lopen","lieg","liep","leven"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is een vorm van 'liegen', een ander werkwoord.", "Niet — als losse vorm staat 't er meestal niet in; kijk naar het hele werkwoord.", "Niet — ander werkwoord."],
+        wrongHints: [null, "Niet — dat is een vorm van 'liegen', een ander werkwoord.", "Niet — als losse vorm staat 't er meestal niet in; kijk naar het hele werkwoord.", "'Leven' is een ander werkwoord. Van welk werkwoord is 'liep' een vorm?"],
         uitlegPad: {
           stappen: [{ titel: "Hele werkwoord opzoeken", tekst: "Vervoegde werkwoorden (liep, loop, lopen) staan onder **hele werkwoord = 'lopen'**. Vergeet niet: 'kat-katten' staat onder 'kat' (enkelvoud)." }],
           woorden: [{ woord: "hele werkwoord", uitleg: "Vorm op -en: lopen, denken, zwemmen." }],
@@ -341,7 +341,7 @@ const steps = [
         q: "In een verhaal lees je het woord **'bomen'**. Welk woord zoek je op in het woordenboek?",
         options: ["boom", "bom", "boon", "bodem"],
         answer: 0,
-        wrongHints: [null, "Zeg het eens hardop: één ..., twee bomen. Klopt dat?", "Eén boon, twee bonen. Is dat hetzelfde als bomen?", "Eén bodem, twee bodems. Past dat bij 'bomen'?"],
+        wrongHints: [null, "Eén bom, twee bommen. Is dat hetzelfde als bomen?", "Eén boon, twee bonen. Is dat hetzelfde als bomen?", "Eén bodem, twee bodems. Past dat bij 'bomen'?"],
         uitlegPad: {
           stappen: [
             {
