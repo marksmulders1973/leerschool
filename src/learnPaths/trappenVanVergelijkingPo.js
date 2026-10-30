@@ -481,7 +481,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'de …ste van' = overtreffend", tekst: "'De langste straat van de stad' — dat is het meest van allemaal → overtreffende trap." }],
           niveaus: {
-            basis: "De …ste van … = overtreffende trap.",
+            basis: "Vergelijk je iets met alle andere dingen en gebruik je 'de …ste', dan is het de overtreffende trap. Welke zin doet dat?",
             simpeler: "Welke zin vergelijkt iets met alles van de stad?",
             nogSimpeler: "Welke zin zegt 'de langste'?",
           },
@@ -501,7 +501,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De minste fouten = overtreffende trap van 'weinig', met -e.",
+            basis: "Daan wordt vergeleken met de hele klas. Welke trap hoort daarbij? Let op: 'weinig' is een onregelmatig woord.",
             simpeler: "Gaat het om twee kinderen of om de hele klas?",
             nogSimpeler: "weinig, minder, …?",
           },
@@ -525,7 +525,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Overtreffende trap = het meest van allemaal.",
+            basis: "De overtreffende trap gebruik je als iets het meest is van allemaal.",
             simpeler: "Vergelijk je Sem met één kind of met iedereen?",
             nogSimpeler: "Is Sem de allergrootste?",
           },

@@ -496,10 +496,10 @@ const steps = [
     svg: tijdsverschilSvg(),
     checks: [
       {
-        q: "Van **9:30** tot **10:00** is hoe lang?",
-        options: ["30 min", "1 uur", "10 min", "60 min"],
+        q: "Hoe lang duurt het van **9:30** tot **10:00**?",
+        options: ["30 min", "1 uur", "10 min", "40 min"],
         answer: 0,
-        wrongHints: [null, "Te veel — hoeveel minuten zitten er van 9:30 tot 10:00?", "Te weinig — van 9:30 tot 9:40 is 10 minuten. Ben je dan al bij 10:00?", "Te veel — dat zou van 9:30 naar 10:30 zijn."],
+        wrongHints: [null, "Te veel — een heel uur na 9:30 is het al 10:30.", "Te weinig — van 9:30 tot 9:40 is 10 minuten. Ben je dan al bij 10:00?", "Te veel — 40 minuten na 9:30 is het al 10:10."],
       },
       {
         q: "Van **8:45** tot **10:15** is hoe lang?",

@@ -585,8 +585,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Op te zoeken", tekst: "Waar de Eiffeltoren staat kun je opzoeken op een kaart — voor iedereen hetzelfde. Dat is een feit." }],
           niveaus: {
-            basis: "Te controleren op een kaart → feit.",
-            simpeler: "Kun je opzoeken waar de toren staat? Dan is het een feit.",
+            basis: "Een feit kun je controleren, bijvoorbeeld op een kaart. Kan dat bij deze zin?",
+            simpeler: "Kun je opzoeken in welke stad de toren staat? Wat voor soort zin is het dan?",
             nogSimpeler: "Is dit voor iedereen waar?",
           },
         },
@@ -599,8 +599,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Mooiste' = oordeel", tekst: "Of het het mooiste bouwwerk is, vindt niet iedereen. 'Mooiste' verraadt de mening." }],
           niveaus: {
-            basis: "'Mooiste' is een oordeel → mening.",
-            simpeler: "Vindt iedereen dit het mooiste? Nee → mening.",
+            basis: "Kijk naar het woord 'mooiste'. Kun je dat meten, of is het iets wat iemand vindt?",
+            simpeler: "Vindt iedereen hetzelfde bouwwerk het mooiste? Wat zegt dat over deze zin?",
             nogSimpeler: "Welk woord zegt dat iemand het 't mooist vindt?",
           },
         },

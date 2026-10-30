@@ -2629,6 +2629,13 @@
   "reden": "niveaus.basis gaf alleen het antwoord ('2/3.')."
  },
  {
+  "waar": "breuken-po stap 3 vraag 5",
+  "hash": "81924ab3453f964b",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "breuken-po stap 3 vraag 6",
   "hash": "eb9ec3d343e920cc",
   "oordeel": "twijfel",
@@ -7164,6 +7171,22 @@
   "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 1",
+  "hash": "c560a24cf8cf8405",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis en simpeler gaven het antwoord ('→ feit', 'Dan is het een feit')."
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 2",
+  "hash": "596dfd5deb17dca1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis en simpeler gaven het antwoord ('→ mening')."
  },
  {
   "waar": "feiten-details-opzoeken-po stap 1 vraag 1",
@@ -12581,10 +12604,24 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 17",
+  "hash": "4587a2bb786c81a2",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "lichaam-gezondheid-po stap 6 vraag 18",
   "hash": "a4a1e3497aacc497",
   "oordeel": "goed",
   "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 19",
+  "hash": "a9b1224c87a900c1",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -12594,6 +12631,14 @@
   "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "'Welk orgaan ademt?' klinkt vreemd; hints waren telegramzinnen."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 20",
+  "hash": "65e1f0801b417dec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "~1,5 liter klopt met het Voedingscentrum-advies (ca. 1,5 liter, ook in de stap-uitleg), maar 'liter water ... moet' was te stellig: het advies geldt voor al het drinken."
  },
  {
   "waar": "lichaam-gezondheid-po stap 6 vraag 3",
@@ -20806,6 +20851,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 7",
+  "hash": "9d4dc0c3fb404fd9",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 8",
   "hash": "6e2dd8338ac85608",
   "oordeel": "goed",
@@ -22627,6 +22679,30 @@
   "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "klopt; basis gaf het rijtje met het antwoord, nogSimpeler was een vreemde zin"
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 7",
+  "hash": "5241a5888e33577a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus.basis was een telegramzin ('De …ste van … = overtreffende trap.')."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 8",
+  "hash": "0927f16aafc5fbf5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord 'minste' klopt; niveaus.basis gaf het antwoord letterlijk ('De minste fouten = ...')."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 9",
+  "hash": "731fdecbbfd694f9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis was een telegramzin."
  },
  {
   "waar": "verhaal-diepte-lezen-po stap 1 vraag 4",
@@ -26434,6 +26510,13 @@
   "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt, maar bijna dezelfde vraag als vraag 4 (bedolven worden) in dezelfde stap."
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 4 vraag 7",
+  "hash": "6e7623b4b67e48b3",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "woordbetekenis-context-po stap 4 vraag 8",

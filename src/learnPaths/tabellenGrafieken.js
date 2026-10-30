@@ -358,7 +358,7 @@ const steps = [
 
   {
     title: "Tabellen lezen",
-    explanation: "Een **tabel** is opgebouwd uit **rijen** (horizontaal) en **kolommen** (verticaal). Bovenin de kolomtitels, links de rij-labels.\n\n**Voorbeeld** — verkochte ijsjes per smaak per week:\n\n| smaak | ma | di | wo | do | vr |\n|-------|----|----|----|----|----|\n| vanille | 5 | 8 | 4 | 6 | 9 |\n| chocolade | 7 | 10 | 5 | 9 | 13 |\n| aardbei | 3 | 6 | 3 | 5 | 7 |\n\n**Lees-aanpak**:\n• **'Hoeveel chocolade-ijsjes op woensdag?'**\n  → Vind rij 'chocolade' + kolom 'wo' → kruispunt = **5**.\n• **'Welke smaak verkocht meest op vrijdag?'**\n  → Vind kolom 'vr' → vergelijk: 9, 13, 7 → **chocolade**.\n• **'Hoeveel chocolade in de hele week?'**\n  → Tel rij 'chocolade': 7 + 10 + 5 + 9 + 13 = **44**.\n\n**Toetsvraag-typen bij tabellen**:\n1. **Aflezen** — 1 cel zoeken.\n2. **Vergelijken** — 'meer/minder/meest/minst'.\n3. **Optellen** — totalen per rij/kolom.\n4. **Verschil** — 'hoeveel meer X dan Y?'.\n5. **Gemiddelde** — som ÷ aantal.\n\n**Toets-tip**:\nWijs met je vinger of pen — anders lees je de verkeerde rij of kolom. **Gegarandeerd dé fout** als je vlug doet.",
+    explanation: "Een **tabel** is opgebouwd uit **rijen** (horizontaal) en **kolommen** (verticaal). Bovenin de kolomtitels, links de rij-labels.\n\n**Voorbeeld** — verkochte ijsjes per smaak per week:\n\n| smaak | ma | di | wo | do | vr |\n|-------|----|----|----|----|----|\n| vanille | 5 | 8 | 4 | 6 | 9 |\n| chocolade | 7 | 10 | 5 | 9 | 13 |\n| aardbei | 3 | 6 | 3 | 5 | 7 |\n\n**Lees-aanpak**:\n• **'Hoeveel chocolade-ijsjes op woensdag?'**\n  → Vind rij 'chocolade' + kolom 'wo' → kruispunt = **5**.\n• **'Welke smaak verkocht meest op vrijdag?'**\n  → Vind kolom 'vr' → vergelijk: 9, 13, 7 → **chocolade**.\n• **'Hoeveel aardbei-ijsjes in de hele week?'**\n  → Tel rij 'aardbei': 3 + 6 + 3 + 5 + 7 = **24**.\n\n**Toetsvraag-typen bij tabellen**:\n1. **Aflezen** — 1 cel zoeken.\n2. **Vergelijken** — 'meer/minder/meest/minst'.\n3. **Optellen** — totalen per rij/kolom.\n4. **Verschil** — 'hoeveel meer X dan Y?'.\n5. **Gemiddelde** — som ÷ aantal.\n\n**Toets-tip**:\nWijs met je vinger of pen — anders lees je de verkeerde rij of kolom. **Gegarandeerd dé fout** als je vlug doet.",
     svg: tabelSvg(
       [
         ["vanille", "5", "8", "4", "6", "9"],
@@ -411,7 +411,7 @@ const steps = [
           theorie: "Slim optellen: zoek combinaties die ronde getallen geven. 7+13=20, 10+5=15. Sneller dan links-naar-rechts: 7+10=17, 17+5=22, 22+9=31, 31+13=44.",
           voorbeelden: [{ type: "check", tekst: "Vergelijking: vanille = 5+8+4+6+9 = 32. Aardbei = 3+6+3+5+7 = 24. Chocolade meest (44) — past." }],
           basiskennis: [{ onderwerp: "Tellen", uitleg: "Tel niet 'gevoel'-matig. Pen + papier of vingers gebruiken. De toets waardeert nauwkeurigheid." }],
-          niveaus: { basis: "Zoek de rij chocolade en tel alle vijf de dagen bij elkaar op.", simpeler: "7+10+5+9+13 = 44.", nogSimpeler: "44" },
+          niveaus: { basis: "Zoek de rij chocolade en tel alle vijf de dagen bij elkaar op.", simpeler: "Tel slim in stukjes: 7 + 13 = 20 en 10 + 5 = 15. Tel die twee bij elkaar en doe de 9 er nog bij.", nogSimpeler: "44" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
