@@ -116,6 +116,27 @@
   "reden": "trap klopt; twee foute opties zonder hint."
  },
  {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 1",
+  "hash": "348fc998b176db0b",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 2",
+  "hash": "cbc224b945ca8bfd",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 3",
+  "hash": "2c16e902d306ca47",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "alfabet-woordenboek-po stap 4 vraag 4",
   "hash": "a1a9ff5876e600f8",
   "oordeel": "goed",
@@ -537,6 +558,29 @@
   "hash": "56490345d3cdb9d2",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 5 vraag 3",
+  "hash": "0091601aab98267e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed, maar het was de enige optie met drie stappen (raadbaar door vorm); basis 'Skim → vragen → scan.' was telegram"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 5 vraag 4",
+  "hash": "8b7f4ff5cf8173cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Scannen klopt; basis 'Eén specifiek ding zoeken = scannen.' was telegram"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 5 vraag 5",
+  "hash": "a1e529724585d727",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -1183,6 +1227,36 @@
   "reden": "Antwoord en hints kloppen (Cruijff overleed 2016); niveau 'simpeler' was een telegramzin met 'NL-uitvinder'."
  },
  {
+  "waar": "bekende-nederlanders-po stap 4 vraag 1",
+  "hash": "91266d4ad2675f8a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 4 vraag 2",
+  "hash": "892ef36349ca7d2f",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 4 vraag 3",
+  "hash": "048a71aca8d6b4e5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Cruijff is de consensus; Max Verstappen was een absurde afleider (geen voetballer) → 3 echte opties"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 4 vraag 4",
+  "hash": "aa435dbdd4e12ebc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Rutte 2010-2024 klopt; hints waren telegramzinnen ('Premier in 1994-2002 (PvdA).') en opties inconsistent (wel/geen voornaam)"
+ },
+ {
   "waar": "bekende-wetenschappers-po stap 2 vraag 1",
   "hash": "594b971d973a71cc",
   "oordeel": "twijfel",
@@ -1226,6 +1300,20 @@
   "bron": "vervolg B2 pakket 09 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "klopt; niveaus waren telegram ('Radium + radioactiviteit.', 'Radium') en basis gaf het antwoord"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 4 vraag 3",
+  "hash": "922ae768356f1f70",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 4 vraag 4",
+  "hash": "8e2390fee6858d20",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "bekende-wetenschappers-po stap 5 vraag 15",
@@ -2160,6 +2248,37 @@
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 09 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "continenten-wereld-po stap 5 vraag 1",
+  "hash": "ad1041e04ed1bea5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; hints 'Big Ben staat daar.' / 'Colosseum staat daar.' waren telegramzinnen zonder lidwoord"
+ },
+ {
+  "waar": "continenten-wereld-po stap 5 vraag 2",
+  "hash": "e49ed9bf472acc24",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "continenten-wereld-po stap 5 vraag 3",
+  "hash": "eab7eca7b040ea80",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; twee identieke telegram-hints 'Grote stad maar geen hoofdstad.'"
+ },
+ {
+  "waar": "continenten-wereld-po stap 5 vraag 4",
+  "hash": "c2791f2c56de3dcf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; hints waren telegramzinnen ('Hoofdstad Peru.') en 'Andere Braziliaanse stad' gaf per uitsluiting Rio weg"
  },
  {
   "waar": "continenten-wereld-po stap 6 vraag 4",
@@ -3851,6 +3970,21 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "energiebronnen-po stap 4 vraag 3",
+  "hash": "acbe33e49b39602b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Frankrijk klopt (~65% kernstroom), maar 'kernenergie-koploper' zegt niet waarin; hint België noemde 'de koploper' terug"
+ },
+ {
+  "waar": "energiebronnen-po stap 4 vraag 4",
+  "hash": "0da2409a1a6e3ac1",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
   "hash": "acef806a46f32508",
   "oordeel": "goed",
@@ -5536,6 +5670,30 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "informatiebronnen-po stap 3 vraag 1",
+  "hash": "814abd70115eb11b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Inhoudsopgave klopt; hint 'Index is alfabetisch + achterin.' en niveaus waren telegramzinnen"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 2",
+  "hash": "d476108205f9d3ce",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Index klopt; basis 'Index.' en simpeler 'Specifieke naam → index achteraan.' waren telegram"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 3",
+  "hash": "aeae1e5977d06434",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Inhoudsopgave klopt; drie telegram-hints ('Bibliografie = boekenlijst.') en telegram-niveaus; nogSimpeler 'Hoofdstuk' was vreemd"
+ },
+ {
   "waar": "inhoudsopgave-register-po stap 1 vraag 1",
   "hash": "0d7400f3c706ae57",
   "oordeel": "goed",
@@ -6048,11 +6206,27 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "kaartlezen-po stap 5 vraag 11",
+  "hash": "efa597adb9d39386",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Onderkant klopt; niveau basis was het blote antwoord 'Onderkant.'"
+ },
+ {
   "waar": "kaartlezen-po stap 5 vraag 12",
   "hash": "a35ad65b01386f32",
   "oordeel": "goed",
   "bron": "wereld-4 dekkende blinde controle 27 okt",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 13",
+  "hash": "077c5c547bfc24b5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hoek of rand klopt; niveau basis herhaalde letterlijk het antwoord"
  },
  {
   "waar": "kaartlezen-po stap 5 vraag 14",
@@ -6099,11 +6273,11 @@
  },
  {
   "waar": "kaartlezen-po stap 5 vraag 2",
-  "hash": "829a3dff82cbf235",
+  "hash": "671ca2586ceedf11",
   "oordeel": "twijfel",
-  "bron": "wereld-4 steekproef 8 (27 okt)",
-  "datum": "2026-10-27",
-  "reden": "Klopt alleen als noord boven is; lesstof zegt zelf 'meestal' en 'kijk waar de N-pijl wijst', vraag noemt dat niet."
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Zuidoost klopt, geen kaart nodig; niveau basis was alleen het antwoord 'Zuidoost.' en simpeler had spelfout 'ZuidOost'"
  },
  {
   "waar": "kaartlezen-po stap 5 vraag 20",
@@ -6163,11 +6337,11 @@
  },
  {
   "waar": "kaartlezen-po stap 5 vraag 5",
-  "hash": "70fb7caf497853bf",
+  "hash": "a55bffab0d8f50f4",
   "oordeel": "twijfel",
-  "bron": "wereld-4 dekkende blinde controle 27 okt",
-  "datum": "2026-10-27",
-  "reden": "Hint bij 'Aan de onderkant' ('Welke richting ligt tegenover oost?') is verwarrend: kind moet dan bedenken dat west onder ligt, niet waar oost ligt."
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "N links → O boven klopt (nagerekend met windroos); niveau basis was alleen het antwoord 'Oost ligt boven.'"
  },
  {
   "waar": "kaartlezen-po stap 5 vraag 6",
@@ -6684,6 +6858,13 @@
   "reden": "4:30 klopt; vraag telegram."
  },
  {
+  "waar": "klokkijken stap 8 vraag 11",
+  "hash": "29bf54b96ff4199c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "klokkijken stap 8 vraag 12",
   "hash": "8b4327eecec08b58",
   "oordeel": "goed",
@@ -6784,6 +6965,22 @@
   "bron": "vervolg B2 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "1 uur 45 min klopt; telegramzin, en de hint bij '45 minuten' rekende het eerste deel voor (13:15→14:00)."
+ },
+ {
+  "waar": "klokkijken stap 8 vraag 5",
+  "hash": "db708fe666c37d05",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "3 × 15 = 45 nagerekend; geen plaatje nodig; basis was '45 min.' (bloot antwoord)"
+ },
+ {
+  "waar": "klokkijken stap 8 vraag 6",
+  "hash": "dd2475551c174bd9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Half 9 klopt; basis was 'Half 9.' en simpeler een telegramzin met '='"
  },
  {
   "waar": "klokkijken stap 8 vraag 7",
@@ -8174,6 +8371,13 @@
   "reden": "Antwoord en hints kloppen (Washington 1791); hint bevatte afkorting 'NL-koloniestad'."
  },
  {
+  "waar": "ontdekkingsreizen-po stap 3 vraag 4",
+  "hash": "51307bc6e905d59d",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
   "hash": "3ad2490fa89d4190",
   "oordeel": "goed",
@@ -8687,6 +8891,20 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "politiek-democratie-po stap 3 vraag 3",
+  "hash": "e38e7b2f0f484004",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 3 vraag 4",
+  "hash": "b5444a5ff2337989",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "procenten-po stap 1 vraag 1",
   "hash": "ddb74629141f1262",
   "oordeel": "goed",
@@ -8955,6 +9173,27 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 1",
+  "hash": "cd5938aae102d47a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 2",
+  "hash": "f52af3e590b19d3c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 3",
+  "hash": "ca8ca8ac22a3521d",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "ruimtevaart-po stap 1 vraag 1",
@@ -10109,6 +10348,14 @@
   "reden": "rijdt klopt, maar vraag noemde al 'rijd / rijdt' terwijl opties C en D daar niet bij pasten; stam + t is werkwoordspelling (groep 5+), geen ei/ij-stof voor groep 4. Hint B 'kale stam' en niveau simpel"
  },
  {
+  "waar": "spelling-ei-ij-au-ou stap 7 vraag 3",
+  "hash": "05629bfd9c1a3b7c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Nou klopt; basis 'Nou = ou.' was telegram en gaf het antwoord"
+ },
+ {
   "waar": "spelling-ei-ij-au-ou stap 7 vraag 4",
   "hash": "e727c8d1f4a66e95",
   "oordeel": "goed",
@@ -10150,6 +10397,14 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-ei-ij-au-ou stap 8 vraag 3",
+  "hash": "33d488c50aa97b2c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "gouden klopt; basis 'gouden = ou.' was telegram met antwoord"
  },
  {
   "waar": "spelling-ei-ij-au-ou stap 8 vraag 4",
@@ -13266,6 +13521,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "werelddelen-landen-po stap 4 vraag 10",
+  "hash": "344624dcd6003679",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werelddelen-landen-po stap 4 vraag 11",
   "hash": "49186b6624fe447b",
   "oordeel": "goed",
@@ -13365,11 +13627,10 @@
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 24",
-  "hash": "4b83567bc3dcc4d8",
-  "oordeel": "twijfel",
-  "bron": "wereld-4 dekkende blinde controle 27 okt",
-  "datum": "2026-10-27",
-  "reden": "'Grootste' is dubbelzinnig (oppervlakte of inwoners); de hints gaan over inwoners."
+  "hash": "b7a66a20ba6412e8",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 25",
@@ -13408,11 +13669,11 @@
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 4",
-  "hash": "145345989d4e2ece",
+  "hash": "e4d0f776839d704b",
   "oordeel": "twijfel",
-  "bron": "wereld-4 dekkende blinde controle 27 okt",
-  "datum": "2026-10-27",
-  "reden": "Zelfde feit als nr 9 (hoofdstad/regering Frankrijk). Voorstel: ander feit met dezelfde Franstalige afleiders."
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar 'Franstalige stad' is een vreemde toevoeging (wel functioneel: maakt Brussel/Genève/Luxemburg plausibel) en de vraag is bijna gelijk aan continenten-wereld-po stap 5 vraag 1 in een ander p"
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 5",
@@ -13444,11 +13705,11 @@
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 9",
-  "hash": "54236713fb9ea277",
+  "hash": "2e14968b93dbde63",
   "oordeel": "twijfel",
-  "bron": "wereld-4 steekproef 8 (27 okt)",
-  "datum": "2026-10-27",
-  "reden": "Klopt, maar 'stuk land' botst met de hint 'Is het dan zelf een land?' (land = staat); verwarrend voor kinderen; 'bevat juist veel landen' klopt niet voor Antarctica/Australie."
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveau basis was telegramzin 'Werelddeel — 7 stuks.'"
  },
  {
   "waar": "wereldorientatie-mix-po stap 1 vraag 1",
@@ -14820,10 +15081,31 @@
   "reden": "Antwoord klopt ('rode'); hints goed; basis-niveau was het antwoord zelf ('de rode fiets.')."
  },
  {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 5",
+  "hash": "a4898102eb5bbd10",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 6",
   "hash": "5fd0fafac3165106",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 7",
+  "hash": "419c99ede9b5e6cd",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 8",
+  "hash": "f69b587cbc4091d5",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  }
 ]

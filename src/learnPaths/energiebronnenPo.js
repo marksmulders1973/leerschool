@@ -260,10 +260,10 @@ const steps = [
         wrongHints: [null, "Niet in de hoofdstad — zoek een plaats in Zeeland.", "Groningen is bekend van gas, niet van kernenergie.", "Nederland heeft er wél één, sinds 1973."],
       },
       {
-        q: "Welk land is **kernenergie-koploper**?",
+        q: "Welk land haalt het **grootste deel van zijn stroom** uit kernenergie?",
         options: ["Frankrijk", "Nederland", "België", "Duitsland"],
         answer: 0,
-        wrongHints: [null, "Nederland heeft maar één kerncentrale (~3% van de stroom).", "België heeft kerncentrales, maar lang niet zoveel als de koploper.", "Duitsland heeft al zijn kerncentrales juist gesloten (2023)."],
+        wrongHints: [null, "Nederland heeft maar één kerncentrale (~3% van de stroom).", "België haalt een flink deel van zijn stroom uit kerncentrales, maar er is een land dat nog veel meer kernstroom gebruikt.", "Duitsland heeft al zijn kerncentrales juist gesloten (2023)."],
       },
       {
         q: "Wat is een groot **nadeel** van kernenergie?",

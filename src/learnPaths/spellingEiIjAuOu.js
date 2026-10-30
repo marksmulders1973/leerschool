@@ -1506,7 +1506,7 @@ const steps = [
           theorie: "Korte ou-woorden: nou, jou, kou → eindigen op -ou.",
           voorbeelden: [{ type: "context", tekst: "'Nou ja!' = informele uitroep. 'Nu' = formele variant." }],
           basiskennis: [{ onderwerp: "Niet 'now'", uitleg: "'Now' is Engels. Nederlandse versie altijd met ou." }],
-          niveaus: { basis: "Nou = ou.", simpeler: "Nou is een losse manier om 'nu' te zeggen. Je schrijft het met ou, niet met au.", nogSimpeler: "Nou" },
+          niveaus: { basis: "Dit woordje is een losse vorm van 'nu'. Au of ou kun je niet horen, dus dit moet je onthouden: het hoort bij hetzelfde rijtje als 'jou' en 'kou'.", simpeler: "Nou is een losse manier om 'nu' te zeggen. Je schrijft het met ou, niet met au.", nogSimpeler: "Nou" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1739,14 +1739,14 @@ const steps = [
         q: "**'De ____ van de bakker heeft een nieuwe jas'** (= zijn echtgenote):",
         options: ["vrouw","vrau","vrouwt","frouw"],
         answer: 0,
-        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Vrouw is geen werkwoord. Hoort er dan een t achter?","Begint dit woord met een v of een f? Zeg het hardop, net als bij 'vader'."],
+        wrongHints: [null,"Bijna — kies nog eens tussen au en ou.","Dit woord is geen werkwoord. Hoort er dan een t achter?","Begint dit woord met een v of een f? Zeg het hardop, net als bij 'vader'."],
         uitlegPad: {
           stappen: [{ titel: "vrouw = ou", tekst: "Vrouw hoort in -ouw-rijtje: vrouw, mouw, jouw, bouwen — allemaal ou." }],
           woorden: [{ woord: "vrouw", uitleg: "Vrouwelijk persoon. Met ou." }],
           theorie: "-ouw-woorden: vrouw, mouw, jouw, bouwen, trouwen — ou-spelling.",
           voorbeelden: [{ type: "rijm", tekst: "Mijn vrouw heeft een gat in haar mouw." }],
           basiskennis: [{ onderwerp: "V niet F", uitleg: "Beginletter is V (vrouw), niet F (frouw bestaat niet)." }],
-          niveaus: { basis: "vrouw = ou.", simpeler: "Vrouw schrijf je met ou, net als mouw, jouw en bouwen. Het begint met een v.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Dit woord hoort in hetzelfde rijtje als mouw, jouw en bouwen.", simpeler: "Vrouw schrijf je met ou, net als mouw, jouw en bouwen. Het begint met een v.", nogSimpeler: "Ou" },
         },
       },
       {
@@ -1760,7 +1760,7 @@ const steps = [
           theorie: "goud → gouden (van goud) → goudkleurig. Stam blijft ou.",
           voorbeelden: [{ type: "vorm", tekst: "Een gouden ring, een gouden ketting, een gouden kroon." }],
           basiskennis: [{ onderwerp: "Engels gold ≠ NL goud", uitleg: "Engels heeft 'golden', Nederlands 'gouden'. Verschillende stam." }],
-          niveaus: { basis: "gouden = ou.", simpeler: "Gouden komt van goud. Goud schrijf je met ou, dus gouden ook. Geen au, en in het midden een d.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Dit woord komt van de naam van het metaal zelf. Hoe schrijf je die naam?", simpeler: "Gouden komt van goud. Goud schrijf je met ou, dus gouden ook. Geen au, en in het midden een d.", nogSimpeler: "Ou" },
         },
       },
       {

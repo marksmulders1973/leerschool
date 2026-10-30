@@ -525,7 +525,7 @@ const steps = [
             { type: "feit", tekst: "Azië heeft 30% van wereld-landoppervlak maar 60% van wereldbevolking." },
           ],
           basiskennis: [{ onderwerp: "Niet land", uitleg: "De toets test soms: 'Is Frankrijk een continent?' Antwoord: NEE — Frankrijk is een LAND in continent Europa." }],
-          niveaus: { basis: "Werelddeel — 7 stuks.", simpeler: "Een continent is een heel groot stuk land. Er zijn 7 continenten op aarde: Azië, Afrika, Europa, Noord-Amerika, Zuid-Amerika, Antarctica, Oceanië.", nogSimpeler: "Werelddeel" },
+          niveaus: { basis: "Een continent is een ander woord voor werelddeel; de aarde heeft er zeven.", simpeler: "Een continent is een heel groot stuk land. Er zijn 7 continenten op aarde: Azië, Afrika, Europa, Noord-Amerika, Zuid-Amerika, Antarctica, Oceanië.", nogSimpeler: "Werelddeel" },
         },
       },
       { q: "Welke van deze hoofdsteden ligt aan de rivier de **Seine**?", options: ["Parijs","Berlijn","Madrid","Londen"], answer: 0, wrongHints: [null, "Door Berlijn stroomt de Spree, in Duitsland.", "Madrid ligt in Spanje, ver ten zuiden van de Seine.", "Door Londen stroomt de Theems."] },

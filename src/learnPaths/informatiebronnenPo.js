@@ -469,12 +469,12 @@ const steps = [
         q: "Welk **deel van een boek** geeft een lijst van hoofdstukken vooraf?",
         options: ["Inhoudsopgave","Index","Voorwoord","Glossarium"],
         answer: 0,
-        wrongHints: [null, "Index is alfabetisch + achterin.", "Voorwoord is een tekst, geen lijst.", "Glossarium is een woordenlijst met betekenissen."],
+        wrongHints: [null, "De index staat achterin en is alfabetisch, geen lijst van hoofdstukken op volgorde.", "Een voorwoord is een tekst van de schrijver, geen lijst.", "Een glossarium is een woordenlijst met betekenissen."],
         uitlegPad: {
           stappen: [{ titel: "Vooraan = inhoudsopgave", tekst: "Vooraan in een boek staat de **inhoudsopgave** met hoofdstukken + paginanummers in volgorde. Achteraan staat de **index** (trefwoorden alfabetisch)." }],
           woorden: [{ woord: "inhoudsopgave", uitleg: "Lijst hoofdstukken met paginanummers vooraan in boek." }],
           theorie: "Vooraan = inhoudsopgave (volgorde). Achteraan = index (alfabetisch).",
-          niveaus: { basis: "Inhoudsopgave.", simpeler: "Lijst hoofdstukken vooraf = inhoudsopgave.", nogSimpeler: "Inhoudsopgave" },
+          niveaus: { basis: "Vooraan in een boek staat een lijst met de hoofdstukken op volgorde en hun bladzijden.", simpeler: "De lijst van hoofdstukken vooraan in een boek heet de inhoudsopgave.", nogSimpeler: "Inhoudsopgave" },
         },
       },
       {
@@ -486,17 +486,17 @@ const steps = [
           stappen: [{ titel: "Specifiek = index", tekst: "Wil je **ALLE plekken** waar 'Karel V' voorkomt? → index (achteraan). 'Karel V ... 47, 89-91, 156' = drie verspreide plekken in het boek." }],
           theorie: "Index = trefwoorden + paginanummers, alfabetisch. Beste zoek-tool voor specifieke namen/begrippen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Zoek 'Anne Frank' in een WO2-boek → kijk in de index achteraan." }],
-          niveaus: { basis: "Index.", simpeler: "Specifieke naam → index achteraan.", nogSimpeler: "Index" },
+          niveaus: { basis: "Voor één naam die op veel plekken kan staan, kijk je achterin het boek in de alfabetische lijst.", simpeler: "Zoek je een specifieke naam, dan kijk je in de index achteraan.", nogSimpeler: "Index" },
         },
       },
       {
         q: "*'Hoofdstuk 4 — Middeleeuwen ... blz 58'* — bij welk deel van een boek hoort dit?",
         options: ["Inhoudsopgave","Index","Bibliografie","Voetnoot"],
         answer: 0,
-        wrongHints: [null, "Niet — index is alfabetisch.", "Bibliografie = boekenlijst.", "Voetnoot = uitleg onderaan bladzijde."],
+        wrongHints: [null, "De index staat op alfabet, niet op hoofdstuknummer.", "Een bibliografie is een lijst van gebruikte boeken.", "Een voetnoot is een korte uitleg onderaan een bladzijde."],
         uitlegPad: {
           stappen: [{ titel: "Hoofdstuk + pagina = inhoudsopgave", tekst: "**'Hoofdstuk 4 — Onderwerp ... blz N'** = klassieke inhoudsopgave-stijl. Volgorde: hoofdstuk 1, 2, 3, 4...." }],
-          niveaus: { basis: "Inhoudsopgave.", simpeler: "'Hoofdstuk N ... blz N' = inhoudsopgave.", nogSimpeler: "Hoofdstuk" },
+          niveaus: { basis: "Een rij met hoofdstuknummers op volgorde en hun bladzijden staat vooraan in het boek.", simpeler: "'Hoofdstuk 4 ... blz 58' is een regel uit de inhoudsopgave.", nogSimpeler: "Inhoudsopgave" },
         },
       },
       {

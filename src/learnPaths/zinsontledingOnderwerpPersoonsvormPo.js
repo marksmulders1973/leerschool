@@ -70,11 +70,11 @@ const steps = [
         q: "Er staan twee werkwoorden in: *Sara heeft haar huiswerk gemaakt.* Wat is de persoonsvorm?",
         options: ["heeft", "gemaakt", "huiswerk", "Sara"],
         answer: 0,
-        wrongHints: [null, "Bijna — maar verandert dít woord met de tijd? 'Sara had gemaakt' …", "Dat is het ding dat af is, geen werkwoord.", "Dat is degene die het deed."],
+        wrongHints: [null, "Bijna — maar verandert dít woord als je de zin in de verleden tijd zet, of blijft het hetzelfde?", "Dat is het ding dat af is, geen werkwoord.", "Dat is degene die het deed."],
         uitlegPad: {
           stappen: [{ titel: "Welk werkwoord verandert met de tijd?", tekst: "Zet in verleden tijd: 'Sara had haar huiswerk gemaakt.' Alleen 'heeft' wordt 'had' — dat is de persoonsvorm. 'Gemaakt' blijft hetzelfde." }],
           niveaus: {
-            basis: "Van de twee werkwoorden is de persoonsvorm degene die verandert met de tijd: heeft → had.",
+            basis: "Van de twee werkwoorden is de persoonsvorm degene die verandert als je de zin in de verleden tijd zet.",
             simpeler: "'Gemaakt' blijft altijd 'gemaakt'. Welk ander werkwoord verandert wél?",
             nogSimpeler: "Welk woord wordt 'had' in de verleden tijd?",
           },

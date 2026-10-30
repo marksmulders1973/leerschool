@@ -1306,7 +1306,7 @@ const steps = [
       },
       {
         q: "Welke is de **ideale** leesvolgorde voor de Doorstroomtoets?",
-        options: ["Skimmen → vragen lezen → scannen voor antwoord","Hele tekst woord voor woord → dan de vragen","Tekst skimmen → meteen antwoorden kiezen","Laatste alinea lezen → dan de vragen"],
+        options: ["Skimmen → vragen lezen → scannen voor antwoord","Hele tekst woord voor woord lezen → vragen lezen → antwoord kiezen","Tekst skimmen → antwoord kiezen → tekst nog eens lezen","Laatste alinea lezen → vragen lezen → antwoord kiezen"],
         answer: 0,
         wrongHints: [null,"Lukt het je in de tijd om elke zin woord voor woord te lezen?","Weet je na één snelle blik al precies wat er staat?","Waarom zou je bij het einde van de tekst beginnen?"],
         uitlegPad: {
@@ -1321,7 +1321,7 @@ const steps = [
           voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen lezen 30 sec + scannen ~3 min = ~4 min. Je hebt 1-3 min over voor twijfelvragen." }],
           basiskennis: [{ onderwerp: "Strategie wint van snelheid", uitleg: "Slim aanpakken > snel lezen. Een goede strategie scheelt minuten." }],
           niveaus: {
-            basis: "Skim → vragen → scan.",
+            basis: "Eerst snel een overzicht krijgen, dan weten wat je moet zoeken, en pas dan gericht zoeken.",
             simpeler: "Stappen voor de Doorstroomtoets: (1) snel overzicht tekst (skim), (2) lees wat je moet vinden (vragen), (3) zoek elk antwoord gericht (scan). Dat is de slimste volgorde.",
             nogSimpeler: "Skim → vragen → scan",
           },
@@ -1373,7 +1373,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Eén specifiek ding zoeken = scannen.",
+            basis: "Als je één specifiek ding zoekt, zoals een jaartal, hoef je niet de hele tekst te lezen.",
             simpeler: "Je wilt alleen een jaartal weten. Dan laat je je ogen snel zoeken naar een getal. Dat is scannen.",
             nogSimpeler: "Scan naar het jaartal",
           },

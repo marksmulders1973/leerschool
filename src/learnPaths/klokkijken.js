@@ -1695,7 +1695,7 @@ const steps = [
           theorie: "Kwartier-tabel: 1=15, 2=30, 3=45, 4=60 min.",
           voorbeelden: [{ type: "tabel", tekst: "1 kw = 15 min. 2 kw = 30 min (half uur). 3 kw = 45 min (3/4 uur). 4 kw = 60 min (uur)." }],
           basiskennis: [{ onderwerp: "Tafel 15", uitleg: "15-30-45-60 — leer dit ritme." }],
-          niveaus: { basis: "45 min.", simpeler: "1 kwartier = 15 min. 3 × 15 = 45 minuten.", nogSimpeler: "45" },
+          niveaus: { basis: "Eén kwartier is 15 minuten. Tel drie keer 15 bij elkaar op.", simpeler: "1 kwartier = 15 min. 3 × 15 = 45 minuten.", nogSimpeler: "45" },
         },
       },
       {
@@ -1709,7 +1709,7 @@ const steps = [
           theorie: "NL halfregel: minuten 30 → half (volgend uur). 8:30 → half 9. 7:30 → half 8.",
           voorbeelden: [{ type: "tabel", tekst: "06:30 = half 7. 08:30 = half 9. 11:30 = half 12. 23:30 = half 12 's nachts." }],
           basiskennis: [{ onderwerp: "Anders dan Engels", uitleg: "EN 'half past eight' = 8:30. NL 'half 9' = 8:30 (kijkt vooruit naar 9)." }],
-          niveaus: { basis: "Half 9.", simpeler: "08:30 = halve uur, vooruit kijken naar 9 = 'half 9'. (Half 8 zou 7:30 zijn).", nogSimpeler: "Half 9" },
+          niveaus: { basis: "Bij een half uur kijk je in het Nederlands vooruit naar het hele uur dat nog komt.", simpeler: "Om 08:30 is het halve uur voorbij en kijk je vooruit naar 9 uur: 'half 9'. Half 8 zou 7:30 zijn.", nogSimpeler: "Half 9" },
         },
       },
       { q: "De film begint om 19:15 en duurt 90 minuten. Hoe laat is hij afgelopen?", options: ["20:45","20:15","21:00","19:45"], answer: 0, wrongHints: [null, "20:15 is één uur later. Hoeveel is 90 minuten: 1 uur en hoeveel minuten nog?", "21:00 is 1 uur en 45 minuten later. Duurt de film zo lang?", "19:45 is maar 30 minuten later. Hoeveel uur zit er ook nog in 90 minuten?"] },
