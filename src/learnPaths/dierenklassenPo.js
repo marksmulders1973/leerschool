@@ -365,7 +365,7 @@ const steps = [
         q: "Welke is een **reptiel**?",
         options: ["Krokodil", "Kikker", "Spin", "Walvis"],
         answer: 0,
-        wrongHints: [null, "Amfibie.", "Spinachtige.", "Zoogdier."],
+        wrongHints: [null, "Een kikker begint als kikkervisje in het water en heeft een natte, gladde huid. Dat is een amfibie.", "Een spin heeft acht poten en geen ruggengraat. Dat is een spinachtige, geen reptiel.", "Een walvis ademt lucht, is warmbloedig en geeft melk. Dat is een zoogdier."],
       },
       {
         q: "Een **rups** wordt later ... ?",

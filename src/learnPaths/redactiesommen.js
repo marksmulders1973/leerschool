@@ -58,7 +58,7 @@ const steps = [
         q: "*'Een doos heeft 12 koeken. Sven eet 5. Hoeveel **over**?'* — welke bewerking?",
         options: ["Aftrekken","Optellen","Vermenigvuldigen","Delen"],
         answer: 0,
-        wrongHints: [null,"Niet samenvoegen — vraag is wat over is.","Worden er groepjes van hetzelfde aantal gemaakt? Kijk wat Sven met de koeken doet.","Worden de koeken eerlijk verdeeld? Of eet Sven er een paar op?"],
+        wrongHints: [null,"Bij optellen komen er koeken bij. Komen er hier koeken bij, of eet Sven er een paar op?","Worden er groepjes van hetzelfde aantal gemaakt? Kijk wat Sven met de koeken doet.","Worden de koeken eerlijk verdeeld? Of eet Sven er een paar op?"],
       },
       {
         q: "*'In 4 dozen zitten **elk** 12 koeken.'* Welke bewerking gebruik je om het totaal te vinden?",

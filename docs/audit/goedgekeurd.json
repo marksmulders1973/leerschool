@@ -2760,11 +2760,26 @@
   "reden": "Koudbloedig klopt; hint 'Amfibieën leven als volwassene vooral op land' was te stellig (kikkers/salamanders leven ook veel in water)."
  },
  {
+  "waar": "dierenklassen-po stap 4 vraag 2",
+  "hash": "9b349e7b46bc69f9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Krokodil = reptiel klopt; de klassen in de hints (amfibie, spinachtige, zoogdier) kloppen, maar het waren hints van één woord zonder uitleg."
+ },
+ {
   "waar": "dierenklassen-po stap 4 vraag 3",
   "hash": "1ac1687c4c3ae9a8",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "dierenklassen-po stap 4 vraag 4",
+  "hash": "58bb3c4d53504f20",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "dierenklassen-po stap 6 vraag 10",
@@ -4325,6 +4340,63 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 1",
+  "hash": "e86410bb18f02ddf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, hints goed. Vorm is raadbaar: drie opties beginnen met 'een feit', één met 'een mening'. Inherent aan een feit/mening-vraag; een tweede 'mening'-afleider zou de vaardigheid zelf (menin"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 2",
+  "hash": "7cc722f4099678af",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 3",
+  "hash": "a2734230955b0dde",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 4",
+  "hash": "8b70f854093c7ec0",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 5",
+  "hash": "517b39381fa308d7",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 6",
+  "hash": "300cf744992b85d1",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 7",
+  "hash": "93772e593a45e2cd",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 3 vraag 8",
+  "hash": "aef0e5d2c9cb2d97",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "geld-rekenen stap 1 vraag 1",
   "hash": "58eef3cf31240bb3",
   "oordeel": "twijfel",
@@ -5416,6 +5488,56 @@
   "hash": "ef9c7b45159cfb4a",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 1",
+  "hash": "1781ba8a0a62013e",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 2",
+  "hash": "8cad617e3bc6f505",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 4",
+  "hash": "dc20169ad4759030",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 5",
+  "hash": "5e13465e91fb6c2c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 6",
+  "hash": "72ce86c0c39a57d0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar is bijna identiek aan vraag 1 van dezelfde stap (alleen 'gletsjer' → 'magneet'). Niet schadelijk, wel weinig toegevoegde waarde."
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 7",
+  "hash": "5eec566eacb2852e",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 8",
+  "hash": "6618b58ee89fb352",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -7707,6 +7829,58 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 2",
+  "hash": "608cc24c411b7d7b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen, maar de optietekst '(tl/mavo)' verklapte vraag 6 van dezelfde stap ('welke leerweg heet ook mavo?')."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 3",
+  "hash": "d9f1e4b67dc6e6be",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 4",
+  "hash": "5444117139c4aa5d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar afleiders waren absurd ('alleen voor wie niets kan', 'precies hetzelfde') en daardoor raadbaar."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 5",
+  "hash": "dc1c5adeacc31ba2",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 7",
+  "hash": "6a0e626500ebf62d",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 8",
+  "hash": "02eb0941bf54ca5d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (techniek staat als richting in de uitleg), maar alle afleiders waren schooltypes (gymnasium, atheneum, universiteit) → raadbaar."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 9",
+  "hash": "5aed141125651850",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 1 vraag 1",
   "hash": "6ae81cf26d8293a7",
   "oordeel": "twijfel",
@@ -8186,6 +8360,41 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "plattegrond-legenda-po stap 3 vraag 10",
+  "hash": "80d535199cc82c44",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 3 vraag 4",
+  "hash": "a34a814f3b74ac8a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 3 vraag 5",
+  "hash": "9c252869240809ad",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 3 vraag 7",
+  "hash": "bab084cf404a905b",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 3 vraag 9",
+  "hash": "2cf0d2126664ae71",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "plattegrond-legenda-po stap 4 vraag 8",
   "hash": "9789f26884372008",
   "oordeel": "twijfel",
@@ -8366,11 +8575,61 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "redactiesommen-pad stap 1 vraag 2",
+  "hash": "15d6fc453138a959",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (12 − 5 = 7, aftrekken). Hint B was een telegramzin ('Niet samenvoegen — vraag is wat over is.')."
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 3",
+  "hash": "7d1babaf50c93e44",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 4",
+  "hash": "38703de77b37089a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "redactiesommen-pad stap 1 vraag 5",
   "hash": "0f7022badaee12e1",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 6",
+  "hash": "cff41fdad41a5df0",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 7",
+  "hash": "24625fd3b347805c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 8",
+  "hash": "d4b8f2234679272a",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 9",
+  "hash": "c83b0287315ee2a6",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "redactiesommen-pad stap 5 vraag 11",
@@ -10332,6 +10591,56 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 3",
+  "hash": "49cd631bf9cf884e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt. Hint D was nietszeggend ('Niet helemaal het tegenovergestelde') en niveau basis was alleen het kale antwoord."
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 4",
+  "hash": "5b4c9fce3a1641bc",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 5",
+  "hash": "260f7a9041a76d41",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 6",
+  "hash": "2d922672b52e673c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 7",
+  "hash": "e3a7d7dc3a410901",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 8",
+  "hash": "679f59c11f022326",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 3 vraag 9",
+  "hash": "72aa6e1e4e89cc4c",
+  "oordeel": "goed",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "synoniemen-tegenstellingen-po stap 5 vraag 22",
   "hash": "668e8c0a338a120d",
   "oordeel": "goed",
@@ -10574,6 +10883,62 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 1",
+  "hash": "05e47a307d4e6437",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus waren geen hele zinnen (basis = kaal antwoord, nogSimpeler 'Staaf')."
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 2",
+  "hash": "3bcaac4b06e1e6cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus telegramstijl (nogSimpeler 'Lijn')."
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 3",
+  "hash": "5c6ddafcfc5ca410",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus telegramstijl ('Titel + assen eerst.', 'Eerst lezen')."
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 4",
+  "hash": "d5a56afbb0dc562e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus telegramstijl (basis 'Tabel.')."
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 5",
+  "hash": "65ca5426a0ebab5d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hint kloppen. Niveaus telegramstijl (basis 'Taartdiagram.', nogSimpeler 'Taart')."
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 6",
+  "hash": "98705c7241c8c6bc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus telegramstijl (basis 'Aftrekken.', nogSimpeler 'Min')."
+ },
+ {
+  "waar": "tabellen-grafieken stap 1 vraag 7",
+  "hash": "61f71fa1bb018b4d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen. Niveaus: basis was het kale antwoord, nogSimpeler zonder punt."
  },
  {
   "waar": "tabellen-grafieken stap 3 vraag 1",

@@ -394,7 +394,7 @@ const steps = [
         },
       },
       {
-        q: "Wat is het verschil in volgorde?",
+        q: "Wat is het verschil in volgorde tussen de inhoudsopgave en het register?",
         options: [
           "inhoudsopgave op boekvolgorde, register op alfabet",
           "allebei op alfabet",
@@ -402,7 +402,7 @@ const steps = [
           "inhoudsopgave op alfabet, register op boekvolgorde",
         ],
         answer: 0,
-        wrongHints: [null, "De inhoudsopgave is niet alfabetisch.", "Het register is wél alfabetisch.", "Het is precies andersom."],
+        wrongHints: [null, "Hoofdstuk 1 staat vóór hoofdstuk 2, ook als het over 'Zebra's' gaat. Staat de inhoudsopgave dan echt op alfabet?", "Zoek in gedachten het woord 'appel' op in het register: hoe vind je dat zo snel? Op volgorde van het boek lukt dat niet.", "Bedenk hoe je een los woord opzoekt en hoe de hoofdstukken staan. Je hebt de twee lijsten door elkaar gehaald."],
         uitlegPad: {
           stappen: [{ titel: "Voor vs achter", tekst: "Inhoudsopgave (voor) volgt het boek; register (achter) is alfabetisch." }],
           niveaus: {

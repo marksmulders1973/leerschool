@@ -741,7 +741,7 @@ const steps = [
         q: "Wat is het tegenovergestelde van **'mogelijk'**?",
         options: ["Onmogelijk", "Mogelijkheid", "Mogen", "Soms mogelijk"],
         answer: 0,
-        wrongHints: [null, "Dat is hetzelfde woord, nu zelfstandig.", "Mogen is een werkwoord: iets wel mogen doen. Is dat het omgekeerde van mogelijk?", "Niet helemaal het tegenovergestelde."],
+        wrongHints: [null, "Dat is hetzelfde woord, nu als zelfstandig naamwoord. Het betekent niet het omgekeerde.", "Mogen is een werkwoord: iets wel mogen doen. Is dat het omgekeerde van mogelijk?", "Als iets soms mogelijk is, kan het nog steeds. Zoek een woord waarbij het helemaal niet kan."],
         uitlegPad: {
           stappen: [
             { titel: "On-truc", tekst: "Voor veel woorden geldt: voeg 'on-' toe → tegenstelling. Mogelijk → onmogelijk." },
@@ -751,9 +751,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vriendelijk → onvriendelijk. Zichtbaar → onzichtbaar. Mogelijk → onmogelijk." }],
           basiskennis: [{ onderwerp: "Niet altijd", uitleg: "On-weer en on-kruid zijn specifieke woorden, niet zomaar 'geen weer/kruid'." }],
           niveaus: {
-            basis: "Onmogelijk.",
-            simpeler: "Mogelijk → met 'on-' voor → onmogelijk = het tegenovergestelde.",
-            nogSimpeler: "Onmogelijk",
+            basis: "Met 'on-' voor een woord maak je vaak het tegenovergestelde, zoals bij vriendelijk en onvriendelijk.",
+            simpeler: "Mogelijk betekent: het kan. Welk woord uit de opties betekent: het kan niet?",
+            nogSimpeler: "Onmogelijk.",
           },
         },
       },

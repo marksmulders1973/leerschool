@@ -149,7 +149,7 @@ const steps = [
       },
       {
         q: "Welke leerweg heeft **het meeste theorie** en lijkt op havo?",
-        options: ["Theoretische leerweg (tl/mavo)", "Basisberoepsgericht (bb)", "Kaderberoepsgericht (kb)", "Gemengd (gl)"],
+        options: ["Theoretische leerweg (tl)", "Basisberoepsgericht (bb)", "Kaderberoepsgericht (kb)", "Gemengd (gl)"],
         answer: 0,
         wrongHints: [null, "Bb heeft juist de meeste praktijk. Welke leerweg zit aan de andere kant?", "Kb heeft ook veel praktijk. Welke leerweg heeft bijna alleen theorie?", "Gl is een mix met één praktijkvak. Welke leerweg heeft nog minder praktijk?"],
       },
@@ -161,9 +161,9 @@ const steps = [
       },
       {
         q: "Klopt het dat vmbo een **'laag' niveau** is?",
-        options: ["Nee — het is praktisch en leidt naar veel beroepen", "Ja — het is alleen voor wie niets kan", "Nee — vmbo en havo zijn precies hetzelfde", "Ja — na het vmbo kun je niet verder leren"],
+        options: ["Nee — het is praktisch en leidt naar veel beroepen", "Ja — je leert er alleen met je handen, niet met je hoofd", "Nee — vmbo en havo zijn even moeilijk, alleen de naam verschilt", "Ja — na het vmbo kun je niet verder leren"],
         answer: 0,
-        wrongHints: [null, "Denk aan de monteur, de kapper en de kok. Kunnen die niets?", "Kijk naar wat het vmbo anders doet dan de havo.", "Wat komt er na het vmbo? Kijk in de uitleg bij 'Wat komt erna?'."],
+        wrongHints: [null, "Denk aan de monteur, de kapper en de kok. Gebruiken die hun hoofd niet?", "Kijk in de uitleg naar wat het vmbo anders doet dan de havo. Is het echt alleen een andere naam?", "Wat komt er na het vmbo? Kijk in de uitleg bij 'Wat komt erna?'."],
       },
       {
         q: "Welke vmbo-leerweg heeft **het meest praktijk** van de vier?",
@@ -175,7 +175,7 @@ const steps = [
         q: "Welke vmbo-afdeling noem je ook wel **mavo**?",
         options: ["Theoretische leerweg (tl)", "Basisberoepsgerichte leerweg (bb)", "Gemengde leerweg (gl)", "Kaderberoepsgerichte leerweg (kb)"],
         answer: 0,
-        wrongHints: [null, "Bb is de leerweg met de meeste praktijk. De mavo van vroeger was juist een school met vooral boeken.", "Gl heeft een mix met één praktijkvak. De mavo van vroeger had vooral boeken.", "Kb heeft veel praktijk. De mavo van vroeger had vooral boeken."],
+        wrongHints: [null, "Bb is de leerweg met de meeste praktijk. Kijk in de uitleg bij welke leerweg de naam 'mavo' staat.", "Gl is een mix met één praktijkvak. Kijk in de uitleg bij welke leerweg de naam 'mavo' staat.", "Kb heeft veel praktijk. Kijk in de uitleg bij welke leerweg de naam 'mavo' staat."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -186,9 +186,9 @@ const steps = [
       },
       {
         q: "Welke van deze is een **richting** die je op het vmbo kunt kiezen?",
-        options: ["Techniek", "Gymnasium", "Atheneum", "Universiteit"],
+        options: ["Techniek", "Mavo", "Wiskunde", "Universiteit"],
         answer: 0,
-        wrongHints: [null, "Gymnasium is een soort vwo, geen vmbo-richting. Welke richtingen noemt de uitleg?", "Atheneum is een soort vwo, geen vmbo-richting. Welke richtingen noemt de uitleg?", "Hoort de universiteit bij de middelbare school?"],
+        wrongHints: [null, "Mavo is een andere naam voor een leerweg (de tl), niet voor een richting. Welke richtingen noemt de uitleg?", "Wiskunde is een gewoon vak dat iedereen krijgt, geen richting die je kiest. Welke richtingen noemt de uitleg?", "Hoort de universiteit bij de middelbare school?"],
       },
       {
         q: "Wat leer je op het **mbo**, na je vmbo-diploma?",
