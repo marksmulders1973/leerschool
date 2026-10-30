@@ -98,7 +98,7 @@ const steps = [
         },
       },
       {
-        q: "Op de Doorstroomtoets — hoe wordt begrijpend lezen getest?",
+        q: "Hoe wordt begrijpend lezen getest op de Doorstroomtoets?",
         options: ["Losse zinnen lezen zonder tekst eromheen","Teksten lezen en er vragen over beantwoorden","Een tekst samenvatten in eigen woorden","Een tekst hardop voorlezen aan de juf"],
         answer: 1,
         wrongHints: ["Test een toets begrijpend lezen met losse zinnen, of met echte teksten?",null,"Schrijf je op de toets zelf stukken tekst, of kies je uit antwoorden?","Kan een toets op papier of op de computer horen hoe jij voorleest?"],
@@ -114,7 +114,7 @@ const steps = [
           voorbeelden: [{ type: "Toets-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
           basiskennis: [{ onderwerp: "De toets = breed", uitleg: "De toets test lezen, taalverzorging en rekenen — niet alleen lezen." }],
           niveaus: {
-            basis: "De toets = lange teksten + vragen.",
+            basis: "Op de toets lees je lange teksten en beantwoord je er vragen over.",
             simpeler: "Stel je voor: je krijgt een artikel uit de krant en daarna een paar vragen over wat erin stond. Dat is wat de toets doet bij begrijpend lezen.",
             nogSimpeler: "Lange teksten + vragen",
           },
@@ -166,7 +166,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Letters → woorden → zinnen = technisch lezen.",
+            basis: "Van letters woorden maken en van woorden zinnen: dat is technisch lezen.",
             simpeler: "Als je letters aan elkaar plakt tot een woord, ben je technisch aan het lezen. Snappen wat het betekent komt daarna.",
             nogSimpeler: "Letters lezen = technisch",
           },
@@ -217,7 +217,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Onthouden voor een toets = studerend lezen.",
+            basis: "Lezen om iets te onthouden voor een toets heet studerend lezen.",
             simpeler: "Lees je om iets te leren en te onthouden? Dan ben je aan het studeren. Dat heet studerend lezen.",
             nogSimpeler: "Onthouden = studerend",
           },
@@ -508,7 +508,7 @@ const steps = [
         },
       },
       {
-        q: "Welk woord helpt herkennen dat een tekst **betogend** is?",
+        q: "Aan welke woorden herken je dat een tekst **betogend** is?",
         options: ["'bijvoorbeeld' of 'zoals'","'fantastisch' of 'verschrikkelijk'","'gisteren' of 'daarna'","'er was eens' of 'op een dag'"],
         answer: 1,
         wrongHints: ["Komt 'bijvoorbeeld' alleen voor als iemand je wil overtuigen, of ook bij gewone uitleg?",null,"Wijst 'gisteren' naar een mening, of vooral naar wanneer iets gebeurde?","Bij welke tekstsoort lees je zulke woorden vaak aan het begin?"],
@@ -525,7 +525,7 @@ const steps = [
           voorbeelden: [{ type: "emotioneel", tekst: "'Het is FANTASTISCH om te helpen' = mening (positief) → betogend." }],
           basiskennis: [{ onderwerp: "Toon = signaal", uitleg: "Hoe een schrijver woorden kiest, vertelt vaak meer dan WAT hij zegt." }],
           niveaus: {
-            basis: "Emotioneel woord = mening = betogend.",
+            basis: "Woorden die een gevoel laten zien, verraden een mening. Een mening hoort bij een betogende tekst.",
             simpeler: "Welk woord laat een GEVOEL zien? 'Fantastisch' (super positief) of 'verschrikkelijk' (super negatief). Die woorden gebruikt iemand alleen als hij een mening heeft. Dus = betogend.",
             nogSimpeler: "Emotie = mening",
           },
@@ -586,7 +586,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Feiten = informatief = informatie geven.",
+            basis: "De tekst geeft alleen feiten. Dan wil de schrijver je informatie geven.",
             simpeler: "De tekst vertelt alleen hoe het zit met de giraf. Geen mening, geen verhaal. Dus: de schrijver geeft je informatie.",
             nogSimpeler: "Feiten = informatie",
           },
@@ -641,7 +641,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Mening + argumenten = betogend.",
+            basis: "Een mening met argumenten erbij: dat is een betogende tekst.",
             simpeler: "De schrijver vindt dat scholen een moestuin moeten krijgen en geeft redenen. Hij wil jou overtuigen. Dat is betogend.",
             nogSimpeler: "Moeten! = betogend",
           },
@@ -748,7 +748,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Sprookje = verhalend.",
+            basis: "Een sprookje vertelt een verhaal, dus het is verhalend.",
             simpeler: "Bij een sprookje hoor je een verhaal: er was eens... Dat is verhalend.",
             nogSimpeler: "Er was eens = verhaal",
           },
@@ -804,7 +804,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Betogend → let op mening + argumenten.",
+            basis: "Bij een betogende tekst let je op de mening en de argumenten van de schrijver.",
             simpeler: "Iemand wil je overtuigen. Dan wil je weten: wat vindt hij, en welke redenen geeft hij daarvoor?",
             nogSimpeler: "Mening + redenen",
           },

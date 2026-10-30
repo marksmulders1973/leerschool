@@ -56,14 +56,14 @@ const steps = [
         },
       },
       {
-        q: "Welk getal is **kleiner**: 8 of 12?",
-        options: ["8","12","Ze zijn even groot","Dat kun je niet zeggen"],
+        q: "Welk getal is het **kleinst**?",
+        options: ["8","12","10","9"],
         answer: 0,
-        wrongHints: [null, "Dat is groter — 12 komt later in de telrij.", "Staan 8 en 12 op dezelfde plek in de telrij?", "Dat kan wel: kijk welk getal eerder komt in de telrij."],
+        wrongHints: [null, "Dat is juist het grootste getal — 12 komt het laatst in de telrij.", "Dat is niet het kleinste — er komt nog een getal eerder in de telrij.", "Bijna — er is nog een getal dat eerder komt in de telrij."],
         uitlegPad: {
-          stappen: [{ titel: "In telrij", tekst: "8 komt EERDER dan 12 in telrij (1-2-3-4-5-6-7-**8**-9-10-11-**12**). Eerder = kleiner." }],
-          woorden: [{ woord: "kleiner", uitleg: "Minder dan iets anders." }],
-          niveaus: { basis: "8 < 12.", simpeler: "8 komt eerst, dus 8 is kleiner.", nogSimpeler: "8" },
+          stappen: [{ titel: "In de telrij", tekst: "Kijk naar de telrij: 1-2-3-4-5-6-7-**8**-9-10-11-**12**. Het getal dat je het eerst tegenkomt, is het kleinste." }],
+          woorden: [{ woord: "kleinst", uitleg: "Het minste van allemaal." }],
+          niveaus: { basis: "Het getal dat het eerst komt in de telrij, is het kleinste.", simpeler: "Tel maar: 7, 8, 9, 10, 11, 12. Welk van de vier getallen zeg je het eerst?", nogSimpeler: "8" },
         },
       },
       {
@@ -216,9 +216,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te veel — er kwam niets bij.", "Bij plus 0 gaat er niets af — hoeveel had je al?", "Plus 0 betekent: er komt niets bij. Hoeveel had je al?"],
         uitlegPad: {
-          stappen: [{ titel: "Plus 0 = niets erbij", tekst: "**+0 = blijft hetzelfde**. 7 + 0 = 7. 100 + 0 = 100. Altijd zo." }],
-          theorie: "Wiskundig: 0 is 'neutraal' bij optellen. Bij vermenigvuldigen anders (X × 0 = 0).",
-          niveaus: { basis: "7.", simpeler: "Plus 0 = niets erbij.", nogSimpeler: "7" },
+          stappen: [{ titel: "Plus 0 = niets erbij", tekst: "**Plus 0 verandert niets.** 7 + 0 = 7 en 100 + 0 = 100. Dat is altijd zo." }],
+          theorie: "Bij plus 0 komt er niets bij, dus je houdt precies wat je al had.",
+          niveaus: { basis: "Plus 0 betekent: er komt niets bij. Je houdt wat je had.", simpeler: "Je had 7 en er komt niets bij. Dan heb je nog steeds 7.", nogSimpeler: "7" },
         },
       },
       {
@@ -227,10 +227,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "10 is de uitkomst. Welk getal moet er vóór de + 3 staan?", "Dan staat er 3 + 3 — is dat hetzelfde als 3 + 7?", "Reken na: is 4 + 3 hetzelfde als 3 + 7?"],
         uitlegPad: {
-          stappen: [{ titel: "Wisselen mag", tekst: "Bij optellen: **volgorde maakt niet uit**. 3 + 7 = 7 + 3 = 10. Wisselen heet 'commutatief'. Maakt sommen vaak makkelijker." }],
-          woorden: [{ woord: "wisselen", uitleg: "Getallen verwisselen — bij plus altijd OK." }],
-          theorie: "Tip: zet grootste getal vooraan, tel kleinste erbij. 3 + 7 = 7 + 3. Vanaf 7 tellen: 8, 9, 10.",
-          niveaus: { basis: "7 + 3 = 3 + 7 = 10.", simpeler: "Volgorde mag wisselen.", nogSimpeler: "7" },
+          stappen: [{ titel: "Omdraaien mag", tekst: "Bij optellen mag je de getallen **omdraaien**. 3 + 7 is hetzelfde als 7 + 3, allebei 10. Zo maak je sommen vaak makkelijker." }],
+          woorden: [{ woord: "omdraaien", uitleg: "De twee getallen van plek wisselen. Bij een plus-som mag dat altijd." }],
+          theorie: "Tip: zet het grootste getal vooraan en tel het kleinste erbij. 3 + 7 = 7 + 3. Vanaf 7 tellen: 8, 9, 10.",
+          niveaus: { basis: "Bij een plus-som mag je de getallen omdraaien. De uitkomst blijft hetzelfde.", simpeler: "3 + 7 is hetzelfde als 7 + 3. Welk getal staat dan vóór de + 3?", nogSimpeler: "7" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -308,9 +308,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is 8 + 3.", "Te weinig — tel eens van 3 naar 8: hoeveel stappen zijn dat?", "Te veel — dat is 8 - 2."],
         uitlegPad: {
-          stappen: [{ titel: "Verschil = aftrekken", tekst: "**Verschil** = groot min klein = 8 - 3 = **5**. Dus: 'wat is het verschil tussen X en Y?' altijd aftrekken." }],
-          woorden: [{ woord: "verschil", uitleg: "Hoeveel meer/minder de ene is dan de ander." }],
-          niveaus: { basis: "Verschil 8-3 = 5.", simpeler: "Verschil = groot - klein = 5.", nogSimpeler: "5" },
+          stappen: [{ titel: "Verschil = aftrekken", tekst: "Het **verschil** is hoeveel meer het grote getal is dan het kleine. Groot min klein: 8 - 3 = **5**. Hoor je 'wat is het verschil tussen …'? Dan trek je af." }],
+          woorden: [{ woord: "verschil", uitleg: "Hoeveel meer of minder het ene getal is dan het andere." }],
+          niveaus: { basis: "Het verschil is hoeveel meer 8 is dan 3. Dat reken je uit met 8 - 3.", simpeler: "Tel van 3 naar 8: 4, 5, 6, 7, 8. Dat zijn 5 stappen.", nogSimpeler: "5" },
         },
       },
       {
@@ -320,17 +320,17 @@ const steps = [
         wrongHints: [null, "Je haalt er 9 af van 9 — blijft er dan nog eentje over?", "Dan is er niets afgegaan — maar je haalt er 9 af.", "Dat is 9 + 9 — hier staat min."],
         uitlegPad: {
           stappen: [{ titel: "Iets - zichzelf = 0", tekst: "Als je alles eraf haalt blijft er niets over. 9 - 9 = **0**. Werkt voor elk getal: 5 - 5 = 0, 100 - 100 = 0." }],
-          niveaus: { basis: "9 - 9 = 0.", simpeler: "Alles weg = 0.", nogSimpeler: "0" },
+          niveaus: { basis: "Je haalt van 9 precies 9 weg. Dan is alles weg.", simpeler: "Als je alles weghaalt, blijft er niets over: 0.", nogSimpeler: "0" },
         },
       },
       {
         q: "Vul in: **7 - ?** = 3",
         options: ["4","10","3","2"],
         answer: 0,
-        wrongHints: [null, "Te veel — kan 7 - 10 nog een positief getal zijn?", "Reken na: hoeveel is 7 - 3? Is dat 3?", "Te weinig — controleer: wat krijg je als je 7 - 2 uitrekent?"],
+        wrongHints: [null, "Te veel — je kunt geen 10 weghalen als je maar 7 hebt.", "Reken na: hoeveel is 7 - 3? Is dat 3?", "Te weinig — controleer: wat krijg je als je 7 - 2 uitrekent?"],
         uitlegPad: {
-          stappen: [{ titel: "Familie-som omkeren", tekst: "7 - ? = 3 → wat moet er weg om 3 over te houden? 7 - **4** = 3. Familie: 3 + 4 = 7, dus 7 - 4 = 3 en 7 - 3 = 4." }],
-          niveaus: { basis: "4.", simpeler: "7 - 4 = 3", nogSimpeler: "4" },
+          stappen: [{ titel: "Familie-som omkeren", tekst: "7 - ? = 3. Wat moet er weg om 3 over te houden? 7 - **4** = 3. Dit hoort bij elkaar: 3 + 4 = 7, dus 7 - 4 = 3 en 7 - 3 = 4." }],
+          niveaus: { basis: "Welk getal haal je van 7 weg om 3 over te houden? Denk aan de plus-som: 3 + ? = 7.", simpeler: "3 + 4 = 7, dus 7 - 4 = 3.", nogSimpeler: "4" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -453,7 +453,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Splits 14", tekst: "14 = 10 + 4. Dus 14 + 5 = 10 + 4 + 5 = 10 + 9 = **19**." }],
           theorie: "Of: 4 + 5 = 9, en dan 10 + 9 = 19. Hetzelfde resultaat.",
-          niveaus: { basis: "14+5 = 19.", simpeler: "14+5 = 10+4+5 = 19.", nogSimpeler: "19" },
+          niveaus: { basis: "14 is 10 en 4. Reken eerst 4 + 5 uit en zet de 10 er weer bij.", simpeler: "4 + 5 = 9, en 10 + 9 = 19.", nogSimpeler: "19" },
         },
       },
       {
@@ -462,19 +462,19 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig — je hebt 3 erbij geteld, maar de som vraagt om 4.", "Te veel — je hebt 5 erbij geteld, maar de som vraagt om 4.", "Dat is 9 - 4 — maar Tom krijgt er stickers bij."],
         uitlegPad: {
-          stappen: [{ titel: "Redactiesom = plus", tekst: "Krijgt 4 erbij → plus-som. 9 + 4 = 9 + 1 + 3 = 10 + 3 = **13**." }],
-          theorie: "Toets-trucs voor redactiesom: zoek signaalwoorden. 'Krijgt erbij' = plus. 'Geeft weg' / 'verliest' = min.",
-          niveaus: { basis: "9+4 = 13.", simpeler: "Plus-som: 9+4=13.", nogSimpeler: "13" },
+          stappen: [{ titel: "Erbij krijgen = plus", tekst: "Tom krijgt er 4 bij, dus het is een plus-som. 9 + 4 = 9 + 1 + 3 = 10 + 3 = **13**." }],
+          theorie: "Let op de woorden in het verhaal: 'krijgt erbij' is een plus-som, 'geeft weg' of 'eet op' is een min-som.",
+          niveaus: { basis: "Erbij krijgen is een plus-som: 9 + 4.", simpeler: "9 + 1 = 10, en dan nog 3 erbij: 13.", nogSimpeler: "13" },
         },
       },
       {
-        q: "**Welk getal komt eerst** in de telrij: 13 of 17?",
-        options: ["13","17","Ze komen tegelijk","Dat kun je niet zeggen"],
+        q: "Welk getal komt **het eerst** in de telrij?",
+        options: ["13","17","15","19"],
         answer: 0,
-        wrongHints: [null, "Tel vanaf 10: kom je 17 eerst tegen, of een ander getal?", "Kunnen twee verschillende getallen op dezelfde plek in de telrij staan?", "Dat kan wel: tel vanaf 10 — welk getal kom je eerst tegen?"],
+        wrongHints: [null, "Tel vanaf 10: kom je 17 eerst tegen, of een ander getal?", "Tel vanaf 10: kom je 15 eerst tegen, of een ander getal?", "Dat getal komt juist het laatst van de vier."],
         uitlegPad: {
-          stappen: [{ titel: "Tellen 11-20", tekst: "Telrij: 11, 12, **13**, 14, 15, 16, **17**, 18, 19, 20. **13 komt eerst**." }],
-          niveaus: { basis: "13.", simpeler: "13 < 17.", nogSimpeler: "13" },
+          stappen: [{ titel: "Tellen 11-20", tekst: "De telrij: 11, 12, **13**, 14, 15, 16, 17, 18, 19, 20. Van 13, 15, 17 en 19 kom je **13** het eerst tegen." }],
+          niveaus: { basis: "Het getal dat je het eerst zegt als je telt, komt het eerst in de telrij.", simpeler: "Tel maar vanaf 10: 11, 12, 13, 14 … Welk van de vier getallen zeg je het eerst?", nogSimpeler: "13" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -570,7 +570,7 @@ const steps = [
         wrongHints: [null, "Te weinig — je hebt 6 bij 6 opgeteld, maar de som vraagt om 7.", "Te veel — je hebt 8 bij 6 opgeteld, maar de som vraagt om 7.", "Te weinig — je hebt 5 bij 6 opgeteld, maar de som vraagt om 7."],
         uitlegPad: {
           stappen: [{ titel: "Maak 10", tekst: "6 + 7 = 6 + 4 + 3 = 10 + 3 = **13**." }],
-          niveaus: { basis: "13.", simpeler: "6+7=13.", nogSimpeler: "13" },
+          niveaus: { basis: "Maak eerst 10: 6 + 4 = 10. Dan nog 3 erbij.", simpeler: "Tel vanaf 6 nog 7 verder: 7, 8, 9, 10, 11, 12, 13.", nogSimpeler: "13" },
         },
       },
       {
@@ -580,7 +580,7 @@ const steps = [
         wrongHints: [null, "Te veel — je hebt te weinig afgetrokken.", "Te weinig — je hebt te veel afgetrokken.", "Te veel — je hebt 7 afgetrokken in plaats van 9."],
         uitlegPad: {
           stappen: [{ titel: "Familie-som", tekst: "17 - 9 = **8** (want 9 + 8 = 17). Of: 17 - 7 = 10, 10 - 2 = 8." }],
-          niveaus: { basis: "8.", simpeler: "17-9 = 8.", nogSimpeler: "8" },
+          niveaus: { basis: "Haal eerst 7 weg: 17 - 7 = 10. Dan nog 2 weg.", simpeler: "Denk aan de plus-som: 9 + ? = 17. Tel vanaf 9 door tot 17.", nogSimpeler: "8" },
         },
       },
       {
@@ -590,7 +590,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dat is 5+5.", "Te veel — 5+5+5+5.", "Tel in sprongen van 5: 5, 10, ... kom je dan op 12 uit?"],
         uitlegPad: {
           stappen: [{ titel: "Driemaal vijf", tekst: "5 + 5 = 10. 10 + 5 = **15**. Drie keer 5 = 15. Dit ga je later '3 × 5' noemen — vermenigvuldigen!" }],
-          niveaus: { basis: "15.", simpeler: "5+5+5 = 15.", nogSimpeler: "15" },
+          niveaus: { basis: "Doe het in twee stappen: eerst 5 + 5, dan nog 5 erbij.", simpeler: "Tel in sprongen van 5: 5, 10, 15.", nogSimpeler: "15" },
         },
       },
       {
@@ -600,7 +600,7 @@ const steps = [
         wrongHints: [null, "Te weinig — je hebt te veel afgetrokken.", "Te veel — je hebt 3 afgetrokken in plaats van 4.", "Te veel — je hebt 2 afgetrokken in plaats van 4."],
         uitlegPad: {
           stappen: [{ titel: "Opeten = min", tekst: "'Eet op' → min-som. 12 - 4 = 12 - 2 - 2 = 10 - 2 = **8**." }],
-          niveaus: { basis: "12-4 = 8.", simpeler: "12-4 = 8 snoepjes over.", nogSimpeler: "8" },
+          niveaus: { basis: "Opeten is eraf halen. Dus je rekent 12 - 4.", simpeler: "Haal eerst 2 weg: 12 - 2 = 10. Dan nog 2 weg: 10 - 2 = 8.", nogSimpeler: "8" },
         },
       },
       {
@@ -610,7 +610,7 @@ const steps = [
         wrongHints: [null, "Dat is het dubbele van 4.", "Dat is het dubbele van 5.", "Dat is het dubbele van 8."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele 6", tekst: "Dubbele = 2x. 6 + 6 = **12**. Of: 2 × 6 = 12 (vermenigvuldigen later)." }],
-          niveaus: { basis: "12.", simpeler: "Dubbele 6 = 12.", nogSimpeler: "12" },
+          niveaus: { basis: "Dubbel zo veel betekent: nog een keer hetzelfde erbij. Dus 6 + 6.", simpeler: "Zes en nog eens zes: 6 + 6 = 12.", nogSimpeler: "12" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -627,8 +627,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "17.",
-            simpeler: "9+8=17.",
+            basis: "Maak eerst 10: 9 + 1 = 10. Dan nog 7 erbij.",
+            simpeler: "9 + 1 = 10, en 10 + 7 = 17.",
             nogSimpeler: "17",
           },
         },
@@ -646,8 +646,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8.",
-            simpeler: "14-6=8.",
+            basis: "Wegvliegen is eraf halen. Dus je rekent 14 - 6.",
+            simpeler: "Haal eerst 4 weg: 14 - 4 = 10. Dan nog 2 weg: 10 - 2 = 8.",
             nogSimpeler: "8",
           },
         },
@@ -665,8 +665,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18.",
-            simpeler: "11+7=18.",
+            basis: "11 is 10 en 1. Reken eerst 1 + 7 uit en zet de 10 er weer bij.",
+            simpeler: "1 + 7 = 8, en 10 + 8 = 18.",
             nogSimpeler: "18",
           },
         },

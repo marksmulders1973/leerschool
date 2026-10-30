@@ -73,7 +73,7 @@ const steps = [
           theorie: "Getalslijn-regel: rechts = groter. −3 ligt rechts van −7.",
           voorbeelden: [{ type: "thermometer", tekst: "−3°C is warmer dan −7°C. Warmer = hoger = groter." }],
           basiskennis: [{ onderwerp: "Min-teken misleidt", uitleg: "7 > 3, maar −7 < −3 (omdat verder van 0 aan min-kant)." }],
-          niveaus: { basis: "−3.", simpeler: "Op thermometer: −3°C is warmer dan −7°C. Warmer = groter.", nogSimpeler: "−3" },
+          niveaus: { basis: "−3.", simpeler: "Op een thermometer is −3 °C warmer dan −7 °C. Warmer betekent hier: een groter getal.", nogSimpeler: "−3" },
         },
       },
       {
@@ -87,7 +87,7 @@ const steps = [
           theorie: "Temperatuur: positief = boven 0 (warm). Negatief = onder 0 (vries).",
           voorbeelden: [{ type: "tabel", tekst: "+20°C zomer. 0°C vriespunt. −5°C lichte vorst. −12°C strenge vorst." }],
           basiskennis: [{ onderwerp: "Bestaat zeker", uitleg: "Bij ons in de winter, en op de Noordpool of in Siberië nog veel kouder (−40°C)." }],
-          niveaus: { basis: "12 graden onder nul.", simpeler: "Min-teken voor 12 = onder nul. Dus −12°C = 12 graden onder vriespunt.", nogSimpeler: "Onder nul" },
+          niveaus: { basis: "12 graden onder nul.", simpeler: "Het min-teken voor de 12 betekent: onder nul. Dus −12 °C is 12 graden onder het vriespunt.", nogSimpeler: "Onder nul" },
         },
       },
       {
@@ -101,7 +101,7 @@ const steps = [
           theorie: "Volgorde groot→klein: +5 > 0 > −1 > −10.",
           voorbeelden: [{ type: "lijn", tekst: "−10 ← −1 ← 0 ← +5. Hoe verder links, hoe kleiner." }],
           basiskennis: [{ onderwerp: "Min-getallen omgekeerd", uitleg: "Bij positieven: groter getal = groter. Bij negatieven: groter cijfer = kleiner." }],
-          niveaus: { basis: "−10.", simpeler: "Op getalslijn: −10 ← −1 ← 0 ← +5. Kleinst = verste links = −10.", nogSimpeler: "−10" },
+          niveaus: { basis: "−10.", simpeler: "Op de getallenlijn staan ze zo: −10, −1, 0, +5. Het kleinste getal staat het verst naar links: −10.", nogSimpeler: "−10" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -152,7 +152,7 @@ const steps = [
         q: "Hoe schrijf je **'min vijftien'** als getal?",
         options: ["−15", "+15", "−50", "−5"],
         answer: 0,
-        wrongHints: [null, "'Min' hoort bij een getal onder nul.", "Luister goed: vijftien of vijftig?", null],
+        wrongHints: [null, "'Min' hoort bij een getal onder nul.", "Lees goed: staat er vijftien of vijftig?", null],
         uitlegPad: {
           stappen: [
             {

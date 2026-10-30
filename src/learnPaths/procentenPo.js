@@ -146,7 +146,7 @@ const steps = [
         q: "Op een school zitten **100 leerlingen**. **45** daarvan zijn meisjes. Welk percentage is dat?",
         options: ["45%","50%","55%","4,5%"],
         answer: 0,
-        wrongHints: [null,"Niet automatisch de helft. Hoeveel meisjes zijn er van de 100?","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig — hoeveel per 100 zijn het?"],
+        wrongHints: [null,"Niet automatisch de helft. Hoeveel meisjes zijn er van de 100?","Dat is het aantal jongens, niet het aantal meisjes.","Kijk goed naar de komma. Bij 100 leerlingen is het aantal per 100 gewoon het aantal zelf."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -208,7 +208,7 @@ const steps = [
           null,
           "Dat deel heb je weggegeven. De vraag gaat over wat er over is.",
           "100% is de hele zak. Heb je dan niets weggegeven?",
-          "Er zijn 70 van de 100 over. Hoeveel per 100 is dat?",
+          "Je bent een nul vergeten. Reken eerst uit hoeveel snoepjes er over zijn van de 100.",
         ],
         uitlegPad: {
           stappen: [

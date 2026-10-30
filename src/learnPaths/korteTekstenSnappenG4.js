@@ -677,7 +677,7 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "*Eerst wast Lisa haar handen. Daarna snijdt ze een appel. Ten slotte eet ze de stukjes op.*\n\nWat doet Lisa **na** het handen wassen?",
+        q: "*Eerst wast Lisa haar handen. Daarna snijdt ze een appel. Ten slotte eet ze de stukjes op.*\n\nWat doet Lisa **meteen na** het handen wassen?",
         options: ["een appel snijden", "de stukjes opeten", "haar handen afdrogen", "de appel wassen"],
         answer: 0,
         wrongHints: [

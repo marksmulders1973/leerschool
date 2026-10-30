@@ -372,8 +372,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Uitzonderlijk is POSITIEF in context (knap, mooi, zeldzaam). Niet 'slecht'." }],
           niveaus: {
-            basis: "Uitzonderlijk = bijzonder/zeldzaam.",
-            simpeler: "Niet gewoon, knap, indrukwekkend.",
+            basis: "Uitzonderlijk betekent: niet zoals gewoonlijk, dus iets wat zelden voorkomt.",
+            simpeler: "Een prestatie die niet gewoon is, maar heel knap en indrukwekkend.",
             nogSimpeler: "Bijzonder!",
           },
         },
@@ -410,7 +410,7 @@ const steps = [
         q: "*'De jongen was **uitgeput** na de race.'* Wat betekent uitgeput?",
         options: ["Heel moe", "Hongerig", "Boos", "Verbaasd"],
         answer: 0,
-        wrongHints: [null, "Honger gaat over eten, niet over energie.", "Boos gaat over emotie, niet over moeheid.", "Verbaasd gaat over verrassing."],
+        wrongHints: [null, "Honger heeft met eten te maken. Staat er iets over eten in de zin?", "Boos ben je op iemand of iets. Daar staat niets over in de zin.", "Verbaasd ben je als er iets onverwachts gebeurt. Is een race onverwacht?"],
         uitlegPad: {
           stappen: [
             { titel: "Letterlijk: leeg", tekst: "Uitgeput = energie 'uit' + 'put' = leeg van energie. Lijkt op een leeggepompte waterput." },
@@ -421,9 +421,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Uitgeput ↔ uitgerust. Beide met 'uit-' maar tegengesteld." }],
           basiskennis: [{ onderwerp: "Letterlijke/figuurlijke betekenis", uitleg: "Een put kan ook 'uitgeput' zijn = leeg = geen water meer. Zelfde idee voor mensen: geen energie." }],
           niveaus: {
-            basis: "Heel moe.",
-            simpeler: "Uitgeput = leeg van energie = heel moe.",
-            nogSimpeler: "Moe",
+            basis: "Denk aan een put die leeg is: er zit niets meer in. Zo voelt de jongen zich na de race.",
+            simpeler: "Uitgeput betekent dat je energie helemaal op is: je bent heel moe.",
+            nogSimpeler: "Heel moe.",
           },
         },
       },
@@ -431,7 +431,7 @@ const steps = [
         q: "Welk woord is een **tegenstelling** van **'voorzichtig'**?",
         options: ["Roekeloos", "Behoedzaam", "Langzaam", "Bang"],
         answer: 0,
-        wrongHints: [null, "Behoedzaam betekent juist hetzelfde als voorzichtig.", "Langzaam past juist bij voorzichtig zijn. Je zoekt de andere kant.", "Bang zijn hoort eerder bij voorzichtig. Wie neemt juist grote risico's?"],
+        wrongHints: [null, "Behoedzaam betekent juist hetzelfde als voorzichtig.", "Langzaam past juist bij voorzichtig zijn. Je zoekt de andere kant.", "Bang zijn hoort eerder bij voorzichtig dan bij het tegenovergestelde ervan."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een tegenstelling?", tekst: "Een tegenstelling (antoniem) heeft de OMGEKEERDE betekenis. Voorzichtig en roekeloos = elkaars tegendeel." },
@@ -449,9 +449,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'het OMGEKEERDE van X is...?' Niet 'iets anders dan X'." }],
           niveaus: {
-            basis: "Voorzichtig ↔ roekeloos.",
-            simpeler: "Voorzichtig = oppassen. Roekeloos = niet oppassen.",
-            nogSimpeler: "Tegenstelling = omgekeerd.",
+            basis: "Het tegenovergestelde van voorzichtig is roekeloos.",
+            simpeler: "Voorzichtig is goed oppassen; roekeloos is helemaal niet oppassen.",
+            nogSimpeler: "Een tegenstelling is het omgekeerde.",
           },
         },
       },
@@ -459,7 +459,7 @@ const steps = [
         q: "*'Ze verzon een **leugen**.'* Wat betekent leugen?",
         options: ["Iets wat niet waar is", "Iets wat geheim is", "Iets wat grappig is", "Iets van lang geleden"],
         answer: 0,
-        wrongHints: [null, "Geheim = wel waar maar niet verteld.", "Grap = niet bedoeld te misleiden.", "Een leugen kan ook over vandaag gaan. Wat doet Pinokkio als zijn neus groeit?"],
+        wrongHints: [null, "Een geheim is iets wat je niet vertelt. Dat is iets anders dan iets verzinnen.", "Een grap is bedoeld om te lachen. Zegt de zin iets grappigs?", "Een leugen kan ook over vandaag gaan. Het woord zegt niets over hoelang geleden."],
         uitlegPad: {
           stappen: [
             { titel: "Context-hint", tekst: "'Verzon' = bedenken zonder dat het waar is. Dus 'leugen' = iets bedacht/niet waar." },
@@ -472,9 +472,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij vertelde een leugen over zijn rapport' = hij gaf bewust een verkeerd cijfer door." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Leugen = bewust niet-waar. Vergissing = niet-waar maar niet bewust. Geheim = waar maar achtergehouden." }],
           niveaus: {
-            basis: "Iets wat niet waar is.",
-            simpeler: "Verzon = bedacht. Leugen = niet waar.",
-            nogSimpeler: "Niet-waar",
+            basis: "Kijk naar het werkwoord 'verzon': iets verzinnen is iets bedenken wat niet echt gebeurd is.",
+            simpeler: "Verzon betekent bedacht. Een leugen is iets wat niet waar is.",
+            nogSimpeler: "Niet waar.",
           },
         },
       },
@@ -492,8 +492,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Wat een briljant plan!' = wat een geweldig plan." }],
           basiskennis: [{ onderwerp: "Synoniemen", uitleg: "Briljant ≈ schitterend, geniaal, geweldig (in betekenis 'heel goed')." }],
           niveaus: {
-            basis: "Heel slim / schitterend.",
-            simpeler: "Briljant = top-slim.",
+            basis: "Denk aan een briljant: een diamant die schittert. Zo'n idee is het ook.",
+            simpeler: "Een briljant idee is een heel goed, heel slim idee.",
             nogSimpeler: "Schitterend",
           },
         },
@@ -518,9 +518,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Het doelpunt was doorslaggevend voor de wedstrijd' = dat doelpunt bepaalde de uitslag." }],
           basiskennis: [{ onderwerp: "Familie", uitleg: "'Beslissend' is een goed synoniem. Tegenover: 'onbelangrijk' of 'bijzaak'." }],
           niveaus: {
-            basis: "Bepalend / beslissend.",
-            simpeler: "Doorslaggevend = wat de keuze maakt.",
-            nogSimpeler: "Bepalend",
+            basis: "Iets wat de doorslag geeft, bepaalt hoe het afloopt.",
+            simpeler: "Doorslaggevend betekent: dit maakt de keuze, hierdoor wordt besloten.",
+            nogSimpeler: "Beslissend.",
           },
         },
       },
@@ -528,7 +528,7 @@ const steps = [
         q: "Welk woord is een **synoniem** van **'vermoeid'**?",
         options: ["Moe", "Uitgerust", "Ziek", "Verveeld"],
         answer: 0,
-        wrongHints: [null, "Uitgerust is juist het tegenovergestelde.", "Ziek gaat over een ziekte. Hoe voel je je na een lange wandeling?", "Verveeld ben je als er niets te doen is."],
+        wrongHints: [null, "Uitgerust is juist het tegenovergestelde.", "Ziek gaat over een ziekte. Vermoeid zegt niets over ziek zijn.", "Verveeld ben je als er niets te doen is."],
       },
       {
         q: "*'Het was een **hachelijke** situatie.'* Wat betekent **hachelijk**?",
@@ -544,8 +544,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'In een hachelijke positie' = in een lastige/gevaarlijke positie." }],
           basiskennis: [{ onderwerp: "Synoniemen", uitleg: "Hachelijk ≈ riskant, gevaarlijk, netelig, kritiek." }],
           niveaus: {
-            basis: "Gevaarlijk / riskant.",
-            simpeler: "Hachelijk = kan misgaan.",
+            basis: "Een hachelijke situatie is een situatie waarin het mis kan gaan.",
+            simpeler: "Hachelijk betekent dat het gevaarlijk kan worden.",
             nogSimpeler: "Gevaarlijk",
           },
         },
@@ -554,7 +554,7 @@ const steps = [
         q: "Wat betekent de **uitdrukking** *'De kat uit de boom kijken'*?",
         options: ["Afwachten", "Een kat opjagen", "Naar boven kijken", "Snel ingrijpen"],
         answer: 0,
-        wrongHints: [null, "Letterlijk lijkt het zo, maar het is figuurlijk.", "Het gaat niet écht over een kat.", "Bijna het omgekeerde."],
+        wrongHints: [null, "Letterlijk lijkt het zo, maar het is figuurlijk.", "Het gaat niet écht over een kat.", "Dat is bijna het omgekeerde van wat de uitdrukking bedoelt."],
         uitlegPad: {
           stappen: [
             { titel: "Spreekwoord = figuurlijk", tekst: "Spreekwoorden hebben een betekenis die je niet aan de woorden zelf kunt aflezen. 'De kat uit de boom kijken' = afwachten hoe iets afloopt." },
@@ -568,8 +568,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Spreekwoord = vaste zin. Uitdrukking = vaak vaste woordcombi (bv 'in de wolken zijn' = blij)." }],
           niveaus: {
-            basis: "Eerst rustig kijken.",
-            simpeler: "Afwachten = kat uit de boom.",
+            basis: "Je kijkt eerst rustig hoe het gaat, voordat je zelf iets doet.",
+            simpeler: "Iemand die de kat uit de boom kijkt, doet nog even niets en wacht af.",
             nogSimpeler: "Afwachten",
           },
         },
@@ -603,8 +603,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "gelovig ↔ ongelovig. Sociaal ↔ asociaal." }],
           basiskennis: [{ onderwerp: "Familie", uitleg: "Synoniem optimist ≈ positief, hoopvol. Synoniem pessimist ≈ negatief, somber." }],
           niveaus: {
-            basis: "Pessimistisch.",
-            simpeler: "Tegenover hoopvol staat somber = pessimistisch.",
+            basis: "Een optimist verwacht dat het goed komt. Je zoekt het woord voor iemand die juist het slechte verwacht.",
+            simpeler: "Tegenover hoopvol staat somber: dat is pessimistisch.",
             nogSimpeler: "Pessimistisch",
           },
         },
@@ -622,10 +622,10 @@ const steps = [
         wrongHints: [null, "Dat is een synoniem.", "Woorden die hetzelfde klinken, zoals 'hart' en 'hard', hebben een andere naam.", "Dat is een afkorting."],
       },
       {
-        q: "*'De jongen is **gehaast**.'* Wat betekent **gehaast**?",
-        options: ["Heeft veel haast / snel", "Is erg verlegen / stil", "Is heel slim / handig", "Verveelt zich / sloom"],
+        q: "*'De jongen liep **gehaast** naar school.'* Wat betekent **gehaast**?",
+        options: ["Snel, want hij heeft weinig tijd", "Stil, want hij is verlegen", "Handig, want hij is slim", "Sloom, want hij verveelt zich"],
         answer: 0,
-        wrongHints: [null, "Verlegen gaat over hoe je je voelt bij anderen. Welk woord zit er in 'gehaast'?", "Geen verband. Welk woord zit er in 'gehaast'?", "Geen verband. Welk woord zit er in 'gehaast'?"],
+        wrongHints: [null, "Verlegen gaat over hoe je je voelt bij andere mensen. Welk woord herken je in 'gehaast'?", "Slim zijn heeft niets met dit woord te maken. Welk woord herken je in 'gehaast'?", "Je vervelen heeft niets met dit woord te maken. Welk woord herken je in 'gehaast'?"],
       },
       {
         q: "*'Een **kostbare** vaas'* — wat betekent **kostbaar**?",
@@ -637,7 +637,7 @@ const steps = [
         q: "Welk **bijvoeglijk naamwoord** betekent hetzelfde als **'snel'**?",
         options: ["rap", "traag", "vroeg", "ver"],
         answer: 0,
-        wrongHints: [null, "Traag is juist het tegenovergestelde.", "Vroeg gaat over het tijdstip, niet over de snelheid.", "Andere dimensie — afstand niet snelheid."],
+        wrongHints: [null, "Traag is juist het tegenovergestelde.", "Vroeg gaat over het tijdstip, niet over de snelheid.", "Ver gaat over afstand, niet over snelheid."],
         uitlegPad: {
           stappen: [
             { titel: "Synoniem-pairs", tekst: "'Snel' en 'rap' betekenen hetzelfde. De toets vraagt vaak synoniemen tussen bijvoeglijke naamwoorden." },
@@ -647,8 +647,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Snel = vlug = rap = vlot." }],
           basiskennis: [{ onderwerp: "Andere synoniemen voor snel", uitleg: "vlug, vlot, gauw." }],
           niveaus: {
-            basis: "rap.",
-            simpeler: "Synoniem snel = rap.",
+            basis: "Je zoekt een woord dat precies hetzelfde betekent als snel.",
+            simpeler: "Welk woord gebruik je ook als iets vlug gaat?",
             nogSimpeler: "rap",
           },
         },
@@ -663,7 +663,7 @@ const steps = [
         q: "*'Het was een **uitputtende** dag.'* Wat betekent **uitputtend**?",
         options: ["Heel vermoeiend", "Heel saai", "Heel spannend", "Heel lang"],
         answer: 0,
-        wrongHints: [null, "Saai betekent dat er weinig gebeurt. Hoe voel je je als je 'uitgeput' bent?", "Spannend zegt iets over de sfeer. Hoe voel je je als je 'uitgeput' bent?", "Een lange dag hoeft niet zwaar te zijn. Hoe voel je je als je 'uitgeput' bent?"],
+        wrongHints: [null, "Saai betekent dat er weinig gebeurt. Welk woord herken je in 'uitputtend'?", "Spannend zegt iets over de sfeer. Welk woord herken je in 'uitputtend'?", "Een lange dag kan ook leuk en licht zijn. Welk woord herken je in 'uitputtend'?"],
       },
       {
         q: "Welk woord is **synoniem** met **'bang'**?",
@@ -675,21 +675,21 @@ const steps = [
         q: "*'De burgemeester nam een **omstreden** besluit.'* Wat betekent **omstreden**?",
         options: ["Waar veel mensen het oneens over zijn", "Dat heel slim en verstandig is bedacht", "Dat stiekem en geheim is gehouden", "Dat heel snel en zonder overleg is genomen"],
         answer: 0,
-        wrongHints: [null, "Kijk naar 'strijd' in het woord — gaat dit over slim zijn, of over ruzie erover?", "Een geheim besluit ken je niet — over een omstreden besluit praat juist iedereen.", "Het woord zegt niets over tempo. Welk woord zit erin verstopt?"],
+        wrongHints: [null, "Kijk naar het woord 'strijd' dat erin zit. Heeft strijd iets met slim zijn te maken?", "Een geheim besluit ken je niet — over een omstreden besluit praat juist iedereen.", "Het woord zegt niets over tempo. Welk woord zit erin verstopt?"],
         explanation: "**Omstreden** = waar 'strijd' over is: veel mensen zijn het er niet mee eens. Denk aan: om-STRIJD-en.",
       },
       {
         q: "*'Na de regen was het veld **drassig**.'* Wat betekent **drassig**?",
         options: ["Nat en modderig", "Hard en droog", "Vol met bloemen", "Pas gemaaid"],
         answer: 0,
-        wrongHints: [null, "Lees de zin nog eens: het komt dóór de regen. Wordt een veld daar droog van?", "De zin gaat over regen, niet over planten.", "Maaien staat nergens in de zin — wat doet regen met een veld?"],
+        wrongHints: [null, "Lees de zin nog eens: het veld is zo geworden dóór de regen. Past 'hard en droog' daarbij?", "De zin gaat over regen, niet over planten.", "Maaien staat nergens in de zin. Kijk naar wat er wél staat: de regen."],
         explanation: "**Drassig** = doorweekt, nat en modderig. De zin geeft de hint: het komt door de regen.",
       },
       {
         q: "Wat betekent de uitdrukking *'**de knoop doorhakken**'*?",
         options: ["Eindelijk een beslissing nemen", "Iets met een bijl kapotmaken", "Een touw losmaken of doorsnijden", "Een ruzie met iemand beginnen"],
         answer: 0,
-        wrongHints: [null, "Het is een uitdrukking — er gaat niets écht kapot. Waar twijfel je over vóór je 'doorhakt'?", "Denk niet letterlijk aan touw. Wat 'zit vast' als je lang twijfelt?", "Een knoop doorhakken lucht juist op — het beëindigt het getwijfel."],
+        wrongHints: [null, "Het is een uitdrukking — er gaat niets écht kapot. Waar twijfel je over vóór je 'doorhakt'?", "Denk niet letterlijk aan touw. Wat 'zit vast' als je lang twijfelt?", "Een knoop doorhakken doe je bij jezelf, niet tegen iemand anders. Het is geen ruzie."],
         explanation: "**De knoop doorhakken** = na lang twijfelen eindelijk kiezen. De 'knoop' is het lastige besluit.",
         uitlegPad: {
           stappen: [
@@ -700,7 +700,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik twijfel al weken over welke sport ik kies… nu hak ik de knoop door: voetbal!'" }],
           basiskennis: [{ onderwerp: "Figuurlijk", uitleg: "Figuurlijk = niet echt zo bedoeld. 'Het regent pijpenstelen' = geen echte pijpenstelen." }],
           niveaus: {
-            basis: "Eindelijk beslissen.",
+            basis: "Je neemt eindelijk een beslissing na lang twijfelen.",
             simpeler: "Je twijfelt lang en dán kies je: dat is de knoop doorhakken.",
             nogSimpeler: "Beslissen",
           },
@@ -731,21 +731,21 @@ const steps = [
         q: "Wat betekent het spreekwoord *'**Wie het laatst lacht, lacht het best**'*?",
         options: ["Wie aan het eind wint, heeft echt gewonnen", "Lachen is goed voor je gezondheid", "De laatste grap is het grappigst", "Je moet vaak lachen en vrolijk blijven"],
         answer: 0,
-        wrongHints: [null, "Het spreekwoord gaat niet over gezondheid — wannéér lach je 'het laatst'?", "Het gaat niet om grappen, maar om wie er aan het einde gelijk krijgt.", "Het zegt niet dat je móét lachen — het waarschuwt tegen te vroeg juichen."],
+        wrongHints: [null, "Het spreekwoord gaat niet over gezondheid — wannéér lach je 'het laatst'?", "Het gaat niet om grappen. Een spreekwoord bedoel je niet letterlijk.", "Het zegt niet dat je móét lachen. Een spreekwoord bedoel je niet letterlijk; let op het woordje 'laatst'."],
         explanation: "Betekenis: juich niet te vroeg — wie aan het **einde** als winnaar overblijft, heeft pas echt gewonnen.",
       },
       {
         q: "*'De wandelaars zochten **beschutting** tegen de hagel.'* Wat is **beschutting**?",
-        options: ["Een plek om te schuilen", "Een soort dikke regenjas", "Een beker warme chocomel", "Een kortere wandelroute"],
+        options: ["Een plek om te schuilen", "Een soort dikke regenjas", "Een plek om uit te rusten", "Een kortere wandelroute"],
         answer: 0,
-        wrongHints: [null, "Het is geen kledingstuk — je zóékt het ergens, je draagt het niet.", "Tegen hagel helpt iets boven je hoofd meer dan iets in je maag.", "Ze lopen al een route — waarom zouden ze die zoeken?"],
+        wrongHints: [null, "Het is geen kledingstuk — je zóékt het ergens, je draagt het niet.", "Ze zoeken niet iets om uit te rusten, maar iets tégen de hagel.", "Ze lopen al een route — waarom zouden ze die zoeken?"],
         explanation: "**Beschutting** = een plek die je beschermt tegen weer of gevaar, zoals onder een afdak of tussen bomen.",
       },
       {
         q: "*'Het oude kasteel werd **gerestaureerd**.'* Wat gebeurde er met het kasteel?",
         options: ["Het werd weer opgeknapt", "Het werd helemaal afgebroken", "Het werd aan iemand verkocht", "Het werd een restaurant"],
         answer: 0,
-        wrongHints: [null, "Restaureren is juist het tegenovergestelde van slopen.", "Over geld of een koper zegt de zin niets.", "Pas op: het lijkt op 'restaurant', maar het komt van 'herstellen'."],
+        wrongHints: [null, "Afbreken is iets anders; een oud kasteel wil je juist bewaren.", "Over geld of een koper zegt de zin niets.", "Pas op: het lijkt op 'restaurant', maar dat is een ander woord. Kijk naar wat er met een oud kasteel kan gebeuren."],
         explanation: "**Restaureren** = een oud gebouw of voorwerp herstellen zodat het weer wordt zoals vroeger. Niet verwarren met 'restaurant'!",
         uitlegPad: {
           stappen: [
@@ -756,7 +756,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Het schilderij was beschadigd en werd gerestaureerd — nu ziet het er weer uit als 300 jaar geleden." }],
           basiskennis: [{ onderwerp: "Context", uitleg: "De woorden om een moeilijk woord heen geven bijna altijd een hint over de betekenis." }],
           niveaus: {
-            basis: "Hersteld in oude staat.",
+            basis: "Het kasteel is hersteld, zodat het weer is zoals vroeger.",
             simpeler: "Gerestaureerd = gerepareerd zodat het weer als vroeger is.",
             nogSimpeler: "Hersteld",
           },
@@ -766,21 +766,21 @@ const steps = [
         q: "Wat betekent de uitdrukking *'**met de deur in huis vallen**'*?",
         options: ["Meteen zeggen waar het om gaat", "Per ongeluk iets omstoten", "Onuitgenodigd binnenkomen", "Heel hard de deur dichtgooien"],
         answer: 0,
-        wrongHints: [null, "Er valt niets écht om — het gaat over hoe je een gesprek begint.", "Het gaat niet over binnenkomen zelf, maar over wat je meteen dóét in een gesprek.", "Dat is boos weglopen. Het gaat hier over hoe je een gesprek begint."],
+        wrongHints: [null, "Er valt niets écht om; het is een uitdrukking, die bedoel je niet letterlijk.", "Het gaat niet over écht binnenkomen; het is een uitdrukking.", "Dat is boos weglopen. Een uitdrukking bedoel je niet letterlijk."],
         explanation: "**Met de deur in huis vallen** = zonder inleiding meteen vertellen waar het om gaat.",
       },
       {
         q: "*'De **toeschouwers** klapten na de voorstelling.'* Wie zijn de **toeschouwers**?",
         options: ["De mensen die kijken", "De acteurs", "De kaartverkopers", "De regisseurs"],
         answer: 0,
-        wrongHints: [null, "Acteurs spélen — wie zit er in de zaal?", "Welk woord zit er in 'toeSCHOUWers' verstopt? ('schouwen' = kijken)", "De regisseur bedenkt de voorstelling — wie klapt er meestal?"],
+        wrongHints: [null, "Acteurs spélen — wie zit er in de zaal?", "Kaartverkopers staan bij de ingang. Welk oud woord herken je in 'toeSCHOUWers'?", "De regisseur bedenkt de voorstelling — wie klapt er meestal?"],
         explanation: "**Toeschouwers** = de mensen die toekijken (het publiek). 'Schouwen' is een oud woord voor kijken.",
       },
       {
         q: "Welk woord betekent hetzelfde als **'gigantisch'**?",
         options: ["Reusachtig", "Piepklein", "Gevaarlijk", "Onzichtbaar"],
         answer: 0,
-        wrongHints: [null, "Precies het tegenovergestelde — denk aan een 'gigant' (een reus).", "Groot is niet automatisch gevaarlijk.", "Iets gigantisch zie je juist heel goed."],
+        wrongHints: [null, "Precies het tegenovergestelde. Denk aan het woord 'gigant': is dat iets kleins?", "Groot is niet automatisch gevaarlijk.", "Iets gigantisch zie je juist heel goed."],
         explanation: "**Gigantisch** komt van 'gigant' = reus. Synoniem: reusachtig, enorm.",
       },
       {
@@ -794,7 +794,7 @@ const steps = [
         q: "Wat betekent *'iets **uitstellen**'*?",
         options: ["Het later doen dan gepland", "Het meteen doen", "Het aan iemand anders geven", "Het vergeten"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — bij uitstellen schuif je iets juist vooruit in de tijd.", "Dat heet 'uitbesteden' — let op het verschil.", "Bij uitstellen wéét je het nog wel, je doet het alleen later."],
+        wrongHints: [null, "Dat is juist het tegenovergestelde van uitstellen.", "Dat heet 'uitbesteden' — let op het verschil.", "Bij uitstellen vergeet je het niet; je kiest er zelf voor."],
         explanation: "**Uitstellen** = naar een later moment verschuiven. Vergelijk: 'uitbesteden' = door een ander laten doen.",
       },
       {

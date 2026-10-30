@@ -87,23 +87,23 @@ const steps = [
     checks: [
       {
         q: "Wat is de **kleine wijzer** van een klok?",
-        options: ["De uurwijzer","De minutenwijzer","De secondewijzer","De wekkerwijzer"],
+        options: ["De uurwijzer","De minutenwijzer","De secondewijzer","De datumwijzer"],
         answer: 0,
-        wrongHints: [null,"Andersom — de minutenwijzer is groot.","De secondewijzer is meestal heel dun.","Een wekkerwijzer heeft niet elke klok. Welke korte wijzer heeft elke gewone klok wel?"],
+        wrongHints: [null,"Andersom — de minutenwijzer is groot.","De secondewijzer is meestal heel dun.","Een datumwijzer hebben maar weinig klokken, en die wijst geen tijd aan. Welke korte wijzer heeft elke gewone klok?"],
         uitlegPad: {
           stappen: [{ titel: "Klein = uur, groot = minuten", tekst: "Kleine wijzer beweegt langzaam (12 uur = 1 rondje). Grote wijzer snel (1 uur = 1 rondje)." }],
           woorden: [{ woord: "uurwijzer", uitleg: "Korte/kleine wijzer. Wijst naar het uur." }],
           theorie: "3 wijzers: uurwijzer (klein), minutenwijzer (groot), secondewijzer (heel dun, snelste).",
           voorbeelden: [{ type: "groot", tekst: "Klein = klein aantal (12 uren). Groot = groot aantal (60 minuten)." }],
           basiskennis: [{ onderwerp: "Truc onthouden", uitleg: "Korte wijzer, kort woord: 'uur'. Lange wijzer, lang woord: 'minuten'." }],
-          niveaus: { basis: "Kleine = uurwijzer.", simpeler: "Kleine wijzer = de korte. Wijst naar uur. Grote wijzer = lang, wijst naar minuten.", nogSimpeler: "Klein=uur" },
+          niveaus: { basis: "De kleine wijzer is de uurwijzer.", simpeler: "De kleine wijzer is de korte wijzer. Die wijst naar het uur. De grote wijzer is lang en wijst naar de minuten.", nogSimpeler: "Klein = uur" },
         },
       },
       {
         q: "Hoeveel minuten zitten er in 1 uur?",
         options: ["60","30","100","24"],
         answer: 0,
-        wrongHints: [null,"30 = een half uur.","Tijden gebruiken geen 100-systeem.","24 = uren in een dag."],
+        wrongHints: [null,"30 = een half uur.","Een uur is niet in 100 stukjes verdeeld. Dat lijkt logisch, maar zo werkt de klok niet.","24 = uren in een dag."],
         uitlegPad: {
           stappen: [{ titel: "1 uur = 60 min", tekst: "Vaste regel: 1 uur = 60 minuten. 1 minuut = 60 seconden." }],
           woorden: [{ woord: "minuut", uitleg: "1/60 deel van een uur." }],
@@ -159,9 +159,9 @@ const steps = [
       },
       {
         q: "Hoe heet een klok **met wijzers**?",
-        options: ["Een analoge klok", "Een digitale klok", "Een cijferklok", "Een schermklok"],
+        options: ["Een analoge klok", "Een digitale klok", "Een wekker", "Een zandloper"],
         answer: 0,
-        wrongHints: [null, "Die klok laat de tijd zien met getallen, zonder wijzers.", null, null],
+        wrongHints: [null, "Die klok laat de tijd zien met getallen, zonder wijzers.", "Een wekker kan wijzers hebben, maar ook alleen cijfers. Het woord zegt niets over wijzers.", "Een zandloper heeft helemaal geen wijzers, alleen zand dat doorloopt."],
         uitlegPad: {
           stappen: [
             {
@@ -239,7 +239,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **cijfers** staan er langs de rand van een analoge klok?",
+        q: "Hoeveel **cijfers** staan er langs de rand van een gewone analoge klok?",
         options: ["12", "24", "60", "10"],
         answer: 0,
         wrongHints: [
@@ -331,7 +331,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is één rondje van de grote wijzer.",
-          "Dat is een hele dag. Hoeveel cijfers staan er op de klok?",
+          "Dat is een hele dag. Gaat de kleine wijzer in één dag één keer rond, of vaker?",
           null,
         ],
         uitlegPad: {
@@ -375,7 +375,7 @@ const steps = [
           null,
           "Zo lang doet de grote wijzer over een rondje.",
           null,
-          "Bij elk cijfer is de secondewijzer 5 seconden verder. Hoeveel cijfers gaat hij langs?",
+          "Na 12 seconden is de secondewijzer nog lang niet rond. Hoeveel seconden duurt een heel rondje?",
         ],
         uitlegPad: {
           stappen: [
@@ -447,7 +447,7 @@ const steps = [
         },
       },
       {
-        q: "Hoe is **9 uur 's avonds** in 24-uurs format?",
+        q: "Hoe schrijf je **9 uur 's avonds** op een digitale klok?",
         options: ["21:00","09:00","19:00","12:00"],
         answer: 0,
         wrongHints: [null,"Dat is 9 uur 's ochtends.","Dat is 7 uur 's avonds.","Dat is 12 uur (middag of nacht)."],
@@ -641,10 +641,10 @@ const steps = [
         },
       },
       {
-        q: "Hoe heet **half 3** in digitaal?",
+        q: "Hoe schrijf je **half 3** op een digitale klok?",
         options: ["02:30 of 14:30","03:30 of 15:30","02:00 of 14:00","03:00 of 15:00"],
         answer: 0,
-        wrongHints: [null,"Half 3 betekent 30 min VÓÓR 3 — dus uur 2 nog.","Bij half 3 staan de minuten op 30, niet op 00.","Bij een half uur staan de minuten op 30."],
+        wrongHints: [null,"Bij half 3 is het nog geen 3 uur geweest. Welk uur staat er dan vóór de dubbele punt?","Bij half 3 staan de minuten op 30, niet op 00.","Bij een half uur staan de minuten op 30."],
         uitlegPad: {
           stappen: [{ titel: "Half 3 = 2:30", tekst: "Half 3 = 30 min vóór 3 = uur 2 + 30 min = 02:30. 's Middags = 14:30." }],
           woorden: [{ woord: "half X = X-1:30", uitleg: "Half X = uur(X-1):30." }],
@@ -699,7 +699,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "In het Nederlands kijk je bij 'half' naar het volgende cijfer. Welk cijfer komt na de 3?",
+          "Bij 'half' noem je in het Nederlands het uur dat nog kómt, niet het uur dat al voorbij is.",
           "De grote wijzer staat niet op de 12. Is het dan een heel uur?",
           null,
         ],
@@ -824,7 +824,7 @@ const steps = [
         svg: klokSvg(4, 45),
         options: ["Kwart voor 5","Kwart over 4","Kwart over 5","Half 5"],
         answer: 0,
-        wrongHints: [null,"Kwart over = grote wijzer op 3 (rechts). Deze staat links — wat betekent dat?","De kleine wijzer is bijna bij de 5, niet net voorbij — dus we zijn bijna bij het volgende uur.","Half = grote wijzer op 6 (onder). Waar staat hij hier?"],
+        wrongHints: [null,"Kwart over = grote wijzer op 3 (rechts). Deze staat links — wat betekent dat?","Bij kwart over is de kleine wijzer het uur al een beetje voorbij. Is dat hier zo? En waar staat de grote wijzer?","Half = grote wijzer op 6 (onder). Waar staat hij hier?"],
         uitlegPad: {
           stappen: [{ titel: "Groot op 9 = kwart voor", tekst: "Grote wijzer op 9 (links) = kwart voor. Kleine wijzer bijna bij 5 → kwart voor 5." }],
           woorden: [{ woord: "kwart voor 5", uitleg: "= 4:45. Nog 15 minuten tot 5 uur." }],
@@ -838,7 +838,7 @@ const steps = [
         q: "Hoeveel minuten zitten in een **kwartier**?",
         options: ["15","30","60","20"],
         answer: 0,
-        wrongHints: [null,"Dat is een half uur.","Dat is een heel uur.","Bij een kwartier deel je het uur in 4 gelijke stukken. Hoeveel minuten is één stuk?"],
+        wrongHints: [null,"Dat is een half uur.","Dat is een heel uur.","Kwart betekent: één van vier gelijke stukken. Past 20 wel precies vier keer in 60?"],
         uitlegPad: {
           stappen: [{ titel: "Kwartier = 15 min", tekst: "Kwart = 1/4. Een kwart van 60 min = 60÷4 = 15 min." }],
           woorden: [{ woord: "kwartier", uitleg: "1/4 uur = 15 minuten." }],
@@ -852,18 +852,18 @@ const steps = [
         q: "Bij **kwart over 6** staat de grote wijzer op...",
         options: ["3","6","9","12"],
         answer: 0,
-        wrongHints: [null,"Dat is half uur.","Dat is kwart voor.","Dat is heel uur."],
+        wrongHints: [null,"Dan is het een half uur.","Dan is het kwart voor.","Dan is het een heel uur."],
         uitlegPad: {
           stappen: [{ titel: "Kwart over = grote op 3", tekst: "Minutenwijzer op 3 = 15 min over heel uur = kwart over." }],
           woorden: [{ woord: "kwart over", uitleg: "15 minuten na heel uur. Grote op 3 (rechts)." }],
           theorie: "Klok-posities minutenwijzer: 12=heel uur (00). 3=kwart over (15). 6=half (30). 9=kwart voor (45).",
           voorbeelden: [{ type: "kompas", tekst: "12=boven (heel), 3=rechts (kwart over), 6=onder (half), 9=links (kwart voor)." }],
           basiskennis: [{ onderwerp: "Hoeveel minuten?", uitleg: "Cijfer × 5 = aantal minuten. 3 × 5 = 15 min." }],
-          niveaus: { basis: "Op 3.", simpeler: "Kwart over = 15 min over uur. Minutenwijzer wijst naar 3 (rechts op klok).", nogSimpeler: "3" },
+          niveaus: { basis: "Op de 3.", simpeler: "Kwart over is 15 minuten na het hele uur. De grote wijzer wijst dan naar de 3, rechts op de klok.", nogSimpeler: "3" },
         },
       },
       {
-        q: "Wat is **kwart voor 9** in 24-uurs format ('s avonds)?",
+        q: "Hoe schrijf je **kwart voor 9** 's avonds op een digitale klok?",
         options: ["20:45","21:15","21:45","20:15"],
         answer: 0,
         wrongHints: [null,"Dat is kwart over 9.","Dat is kwart voor 10.","Dat is kwart over 8."],
@@ -1118,7 +1118,7 @@ const steps = [
         q: "Hoeveel minuten zitten tussen **2 cijfers** op de klok?",
         options: ["5","10","12","15"],
         answer: 0,
-        wrongHints: [null,"Te veel — er zijn 60 minuten op de hele klok en 12 cijfers. Wat krijg je dan per cijfer?","12 is hoeveel cijfers er staan, niet minuten. Hoeveel minuten ZIJN er totaal?","Dat is een kwartier. Hoeveel cijfers verder is een kwartier?"],
+        wrongHints: [null,"Als elk stukje 10 minuten was, zouden er maar 6 cijfers op de klok staan. Hoeveel cijfers staan er echt?","12 is hoeveel cijfers er staan, niet minuten. Hoeveel minuten ZIJN er totaal?","Dat is een kwartier. Hoeveel cijfers verder is een kwartier?"],
         uitlegPad: {
           stappen: [{ titel: "60 ÷ 12 = 5", tekst: "60 minuten op klok ÷ 12 cijfers = 5 minuten per cijfer." }],
           woorden: [{ woord: "5-stappen-truc", uitleg: "Elke cijfer-positie = 5 min verder dan vorige." }],
@@ -1132,7 +1132,7 @@ const steps = [
         q: "Als de grote wijzer op **2** staat: hoeveel minuten is het dan over het hele uur?",
         options: ["10","2","20","12"],
         answer: 0,
-        wrongHints: [null,"De grote wijzer is in minuten, niet uren.","Dat is bij wijzer op 4.","Je gebruikte het cijfer 12. Bij elk cijfer gaat de grote wijzer 5 minuten verder. Hoeveel is 2 keer 5?"],
+        wrongHints: [null,"Het cijfer waar de grote wijzer op staat, is niet meteen het aantal minuten.","Zoveel minuten is het als de grote wijzer op de 4 staat.","12 is het aantal cijfers op de klok, niet het aantal minuten. Hoeveel minuten gaat de grote wijzer per cijfer verder?"],
         uitlegPad: {
           stappen: [{ titel: "2 × 5 = 10", tekst: "Elke cijfer-positie = 5 min. 2 × 5 = 10 minuten." }],
           woorden: [{ woord: "minuten-positie", uitleg: "Cijfer × 5 = minuten over." }],
@@ -1143,10 +1143,10 @@ const steps = [
         },
       },
       {
-        q: "Wat is **10 over 7** in 24-uurs ('s avonds)?",
+        q: "Hoe schrijf je **10 over 7** 's avonds op een digitale klok?",
         options: ["19:10","07:10","19:50","18:50"],
         answer: 0,
-        wrongHints: [null,"'s ochtends, niet 's avonds.","Dat is 10 voor 8.","Dat is 10 voor 7."],
+        wrongHints: [null,"Dat is 's ochtends, niet 's avonds.","Dat is 10 voor 8.","Dat is 10 voor 7."],
         uitlegPad: {
           stappen: [{ titel: "10 over 7 = 7:10", tekst: "10 over 7 = 10 min na 7 = 07:10. 's Avonds: 7+12=19 → 19:10." }],
           woorden: [{ woord: "X over Y", uitleg: "X minuten ná heel uur Y. Tijd = Y:XX." }],
@@ -1165,7 +1165,7 @@ const steps = [
           null,
           null,
           "Zoveel minuten is het óver het hele uur. De vraag is: hoeveel nog tot het volgende uur?",
-          "Kijk naar de 10: dan is het nog 10 minuten. De 11 is een cijfer verder.",
+          "Van de 11 naar de 12 is nog maar één stapje, geen twee.",
         ],
         uitlegPad: {
           stappen: [
