@@ -245,7 +245,7 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt", "Roald Dahl", "Jacques Vriens", "Carry Slee"], answer: 0, wrongHints: [null, "Roald Dahl schreef in het Engels — Jip en Janneke is een Nederlands boek.", "Jacques Vriens schreef boeken voor oudere kinderen, veel later.", "Carry Slee schrijft voor tieners, over moeilijke onderwerpen."] },
-      { q: "Wie tekende de plaatjes bij de boeken van **Annie M.G. Schmidt**?", options: ["Fiep Westendorp", "Dick Bruna", "Anton Pieck", "Marten Toonder"], answer: 0, wrongHints: [null, "Dick Bruna tekende vooral bij zijn eigen boeken.", "Anton Pieck tekende ouderwetse, sprookjesachtige platen.", "Marten Toonder tekende strips, zoals Tom Poes."] },
+      { q: "Wie tekende de plaatjes bij veel boeken van **Annie M.G. Schmidt**?", options: ["Fiep Westendorp", "Dick Bruna", "Anton Pieck", "Marten Toonder"], answer: 0, wrongHints: [null, "Dick Bruna tekende vooral bij zijn eigen boeken.", "Anton Pieck tekende ouderwetse, sprookjesachtige platen.", "Marten Toonder tekende strips, zoals Tom Poes."] },
       { q: "In welke stad zat **Anne Frank** ondergedoken?", options: ["Amsterdam", "Den Haag", "Rotterdam", "Frankfurt"], answer: 0, wrongHints: [null, "Den Haag is de stad van de regering — zat het Achterhuis daar?", "Rotterdam is de havenstad — zat het Achterhuis daar?", "Daar werd Anne geboren — het gezin vluchtte er juist weg."] },
       { q: "Wie schreef **Max Havelaar**?", options: ["Multatuli", "Harry Mulisch", "Hildebrand", "Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Harry Mulisch leefde in de 20e eeuw — Max Havelaar is van 1860.", "Hildebrand schreef de Camera Obscura.", "Annie M.G. Schmidt schreef boeken voor kinderen."] },
       { q: "In welke maand is de **Kinderboekenweek**?", options: ["Oktober", "Januari", "Mei", "December"], answer: 0, wrongHints: [null, "In januari zijn de Nationale Voorleesdagen — dat is iets anders.", "In mei is het lente — de Kinderboekenweek is in de herfst.", "In december vieren we Sinterklaas en Kerstmis."] },
@@ -270,7 +270,7 @@ const steps = [
             { type: "feit", tekst: "'Kruistocht in Spijkerbroek' werd ook verfilmd (2006). Het boek wordt nog steeds op scholen gelezen — toetsstof." },
           ],
           basiskennis: [{ onderwerp: "Niet sprookje", uitleg: "Historische roman = échte gebeurtenis met verzonnen hoofdpersoon. Niet hetzelfde als sprookje." }],
-          niveaus: { basis: "Tijdreis Middeleeuwen.", simpeler: "Boek door Thea Beckman: jongen reist terug naar 1212 voor de kinderkruistocht. Historische roman.", nogSimpeler: "Tijdreis" },
+          niveaus: { basis: "Het woord kruistocht hoort bij de middeleeuwen, maar de hoofdpersoon komt uit onze tijd.", simpeler: "In dit boek van Thea Beckman reist een jongen uit onze tijd terug naar het jaar 1212 en gaat hij mee met de kinderkruistocht.", nogSimpeler: "Een jongen reist terug in de tijd naar de middeleeuwen." },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
             { type: "feit", tekst: "Netflix-serie 'The Letter for the King' (2020): wereldwijd te zien. Diende als marketing voor het oorspronkelijke boek." },
           ],
           basiskennis: [{ onderwerp: "Niet Beckman", uitleg: "Beckman = 'Kruistocht in Spijkerbroek'. Dragt = 'De brief voor de koning'. Beide historische jeugdverhalen, maar verschillende schrijvers." }],
-          niveaus: { basis: "Tonke Dragt.", simpeler: "Tonke Dragt schreef 'De brief voor de koning' (1962). Werd Kinderboek van het Jaar, verfilmd door Netflix 2020.", nogSimpeler: "Tonke Dragt" },
+          niveaus: { basis: "De schrijfster van dit ridderboek schreef ook 'Geheimen van het Wilde Woud'.", simpeler: "Tonke Dragt schreef 'De brief voor de koning' in 1962. Het werd in 1963 Kinderboek van het Jaar en Netflix maakte er in 2020 een serie van.", nogSimpeler: "Tonke Dragt" },
         },
       },
       {
@@ -329,7 +329,7 @@ const steps = [
       { q: "Welk boekenfeest vieren **scholen** elk jaar, met steeds een nieuw thema?", options: ["Kinderboekenweek","Boekenweek","Poëzieweek","Koningsspelen"], answer: 0, wrongHints: [null, "De Boekenweek is vooral voor volwassenen, in de boekwinkel.", "De Poëzieweek gaat alleen over gedichten.", "De Koningsspelen zijn een sportdag, geen boekenfeest."] },
       { q: "Wie schreef *Harry Potter*?", options: ["J.K. Rowling","Roald Dahl","Annie M.G. Schmidt","C.S. Lewis"], answer: 0, wrongHints: [null, "Roald Dahl overleed al in 1990 — Harry Potter kwam later.", "Annie M.G. Schmidt schreef in het Nederlands.", "C.S. Lewis schreef Narnia, lang vóór Harry Potter."] },
       { q: "Wie schreef *Pluk van de Petteflet*?", options: ["Annie M.G. Schmidt","Tonke Dragt","Jacques Vriens","Carry Slee"], answer: 0, wrongHints: [null, "Tonke Dragt schreef dikke avonturenboeken.", "Jacques Vriens schreef vooral over oudere schoolkinderen.", "Carry Slee schrijft voor tieners."] },
-      { q: "*De brief voor de koning* is van?", options: ["Tonke Dragt","Annie M.G. Schmidt","Roald Dahl","J.K. Rowling"], answer: 0, wrongHints: [null, "Schmidt schreef vooral korte, grappige boeken (Jip en Janneke) — dit is een dik ridderavontuur.", "Dahl was Brits — dit ridderboek is oer-Nederlands (en op Netflix verfilmd).", "Rowling schreef Harry Potter — dit boek is ouder en Nederlands."] },
+      { q: "Wie schreef *De brief voor de koning*?", options: ["Tonke Dragt","Annie M.G. Schmidt","Roald Dahl","J.K. Rowling"], answer: 0, wrongHints: [null, "Schmidt schreef vooral korte, grappige boeken (Jip en Janneke) — dit is een dik ridderavontuur.", "Dahl was Brits — dit ridderboek is oer-Nederlands (en op Netflix verfilmd).", "Rowling schreef Harry Potter — dit boek is ouder en Nederlands."] },
       { q: "Wie schreef *Sjakie en de Chocoladefabriek*?", options: ["Roald Dahl","Annie M.G. Schmidt","Tonke Dragt","Astrid Lindgren"], answer: 0, wrongHints: [null, "Annie M.G. Schmidt schreef in het Nederlands — dit boek is vertaald uit het Engels.", "Tonke Dragt is een Nederlandse schrijfster — dit boek komt uit Engeland.", "Astrid Lindgren kwam uit Zweden en schreef Pippi Langkous."] },
       { q: "Wat is **proza**?", options: ["Gewone tekst, zoals een verhaal","Tekst op rijm in versregels","Tekst om op toneel te spelen","Een tekst met alleen plaatjes"], answer: 0, wrongHints: [null, "Tekst op rijm in versregels heet poëzie.", "Tekst om te spelen heet een toneelstuk.", "Proza bestaat juist uit woorden."] },
       { q: "Waar gaat **Max Havelaar** van Multatuli over?", options: ["Oneerlijke behandeling van mensen op Java", "Een verboden liefde in Amsterdam", "De reizen van de VOC-schepen", "Het zware leven van boeren in Drenthe"], answer: 0, wrongHints: [null, "Kijk in de les: waar speelt Max Havelaar?", "De VOC bestond in 1860 al lang niet meer.", "Max Havelaar speelt niet in Nederland zelf."] },
@@ -341,7 +341,7 @@ const steps = [
       { q: "Wie schreef het fantasyboek *De Hobbit*?", options: ["J.R.R. Tolkien","Roald Dahl","C.S. Lewis","Tonke Dragt"], answer: 0, wrongHints: [null, "Roald Dahl schreef grappige boeken, niet over Midden-aarde.", "C.S. Lewis schreef de verhalen over Narnia.", "Tonke Dragt schreef in het Nederlands — De Hobbit is vertaald uit het Engels."] },
       { q: "Wat is een **leesclub**?", options: ["Groep mensen die samen lezen en bespreken", "Groep schrijvers die samen een boek maken", "Winkel waar je boeken kunt kopen", "School waar je leert boeken schrijven"], answer: 0, wrongHints: [null, "Zit in het woord leesclub iets over schrijven?", "Een club is geen winkel — wat doen de leden samen?", "Het gaat om lezen, niet om schrijven leren."] },
       { q: "Wat doet een **bibliothecaris**?", options: ["De bibliotheek bijhouden en lezers helpen", "Boeken schrijven en laten uitgeven", "Boeken drukken in een drukkerij", "Boeken verkopen in een boekwinkel"], answer: 0, wrongHints: [null, "Wie boeken schrijft, heet een schrijver.", "Boeken drukken doet een drukker.", "Een bibliothecaris werkt niet in een winkel — waar dan?"] },
-      { q: "Welke twee bekende prijzen zijn er voor Nederlandse kinderboeken?", options: ["Gouden en Zilveren Griffel","Pulitzer en Booker","Oscar en Gouden Kalf","Nobelprijs en Edison"], answer: 0, wrongHints: [null, "Dat zijn prijzen voor Engelse boeken voor volwassenen.", "Dat zijn filmprijzen.", "Dat zijn geen jeugdboekenprijzen."] },
+      { q: "Welke twee bekende prijzen zijn er voor Nederlandse kinderboeken?", options: ["Gouden en Zilveren Griffel","Gouden en Zilveren Pen","Gouden en Zilveren Kalf","Gouden en Zilveren Veer"], answer: 0, wrongHints: [null, "Een pen klinkt logisch, maar zo heten deze prijzen niet.", "Het Gouden Kalf is een prijs voor films, niet voor boeken.", "Die prijzen bestaan niet voor kinderboeken."] },
     ],
   },
 ];
