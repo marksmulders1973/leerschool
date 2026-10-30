@@ -705,12 +705,103 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 11",
+  "hash": "67253869410f199e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 12",
+  "hash": "e2c9de39ba72cbe7",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 13",
+  "hash": "ee4472c8b7e9034d",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 14",
+  "hash": "adfa8112a752764e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 15",
+  "hash": "e71ddd9e7558f300",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 16",
+  "hash": "2a5e4cb3424e15c6",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 17",
+  "hash": "3a5409ece4641442",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 18",
+  "hash": "9cf508e2f468d65e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 19",
+  "hash": "3a3c556e6e3494cf",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "begrijpend-lezen-strategie stap 7 vraag 2",
   "hash": "34a8d20f6506ccd9",
   "oordeel": "twijfel",
   "bron": "vervolg B4 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt; niveaus telegramstijl ('Boodschap = hoofdgedachte')."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 20",
+  "hash": "8e2ba1d7a4783a34",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 21",
+  "hash": "41227276f0b7570c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 22",
+  "hash": "46d6f16b50001961",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 23",
+  "hash": "671234b84630704b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "begrijpend-lezen-strategie stap 7 vraag 3",
@@ -3168,6 +3259,176 @@
   "hash": "c3c6df95c2c52ef3",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 1",
+  "hash": "693789c35df311d4",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 10",
+  "hash": "abcab13014067781",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 11",
+  "hash": "251fbddf059fd75f",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 12",
+  "hash": "8f5b83ecf3a6dc14",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 13",
+  "hash": "f7ea264eff77593f",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 14",
+  "hash": "79df61caa0fdce52",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 15",
+  "hash": "d598b8b2ef506551",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 16",
+  "hash": "5ad636edbe18d4dc",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 17",
+  "hash": "0018acc4304ec58e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 18",
+  "hash": "44cde8867b7028e3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Sonnet is pittig voor groep 5, maar wordt in het pad uitgelegd en de hints zijn goed."
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 19",
+  "hash": "6a74ea144e1ec1a0",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 2",
+  "hash": "4ac11745462f2ad8",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 20",
+  "hash": "50543238de721081",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 21",
+  "hash": "39cd4b323741b456",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties waren telegramzinnen zonder lidwoord."
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 22",
+  "hash": "946aeb1118af31ab",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 23",
+  "hash": "23a93470199fb6a1",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 24",
+  "hash": "8d1cb6e42e6b98cd",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 3",
+  "hash": "b74acf8a0e1bb9a6",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 4",
+  "hash": "cd1f48a98a69ebb7",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 5",
+  "hash": "7d22886b40402fb9",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 6",
+  "hash": "ba97ecd7cbda49c4",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 7",
+  "hash": "513dded291bf62d3",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 8",
+  "hash": "95fb8c42dc607df4",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 9",
+  "hash": "f115caf94121c42f",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -10504,12 +10765,42 @@
   "reden": "Telegramzin 'Statiegeld krijg je terug bij?' en opties zonder lidwoorden."
  },
  {
+  "waar": "recyclen-afval-po stap 4 vraag 14",
+  "hash": "1085cae2bc46a847",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "recyclen-afval-po stap 4 vraag 15",
   "hash": "e608085451625005",
   "oordeel": "twijfel",
   "bron": "vervolg B4 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Hint 2 en 3 identiek ('Past een koffer in de gewone bak?') terwijl PMD-bak een andere denkfout is."
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 16",
+  "hash": "ef4e75b376c86ad7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag (\"in standaard bak\") en telegramhints."
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 17",
+  "hash": "9aca81fdfba80d54",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 18",
+  "hash": "59f10cd1b6b46934",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie was telegramzin; afleider \"gezond voer voor vissen\" absurd (raadbaar)."
  },
  {
   "waar": "recyclen-afval-po stap 4 vraag 2",
@@ -10519,11 +10810,49 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "recyclen-afval-po stap 4 vraag 21",
+  "hash": "48e6d6913f2c179e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 23",
+  "hash": "be9364e4ccd23e99",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Feit klopt, maar \"in NL\" en hard getal \"minder dan 2%\" (pad zegt elders <1%) en \"te vies om te recyclen\" te stellig."
+ },
+ {
   "waar": "recyclen-afval-po stap 4 vraag 25",
   "hash": "e4d18c773665db4e",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 26",
+  "hash": "57df695420e8085f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Optie met schuine streep; hints onbegrijpelijke telegram (\"recycle-tak\")."
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 27",
+  "hash": "babb20d0d9689200",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 28",
+  "hash": "bc9592430bf2c0e9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Taalfout: \"beter voor milieu\" zonder lidwoord."
  },
  {
   "waar": "recyclen-afval-po stap 4 vraag 3",
@@ -10553,6 +10882,20 @@
   "hash": "dce72f015863796e",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 7",
+  "hash": "84487ab264bb795a",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 8",
+  "hash": "aea6e7d05a0d07e6",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -17100,6 +17443,13 @@
   "bron": "vervolg B4 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Dubbel: zelfde woord ('onherbergzaam') met bijna dezelfde goede optie als vraag 4 in dezelfde stap, dus de tweede keer gratis; de geciteerde zin stond niet in de leestekst."
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 2 vraag 7",
+  "hash": "1c84be25e0bb96d1",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "woordbetekenis-context-po stap 2 vraag 8",
