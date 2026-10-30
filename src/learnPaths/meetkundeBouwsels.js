@@ -117,7 +117,7 @@ const steps = [
         q: "**1 m³** is hetzelfde als ... liter?",
         options: ["1000 liter", "100 liter", "10 liter", "10.000 liter"],
         answer: 0,
-        wrongHints: [null, "Te weinig — denk groter. Een m³ is een kubus van 1 m × 1 m × 1 m.", "Veel te weinig — een douchecabine alleen al is meer.", "10.000 liter is 10 m³. Hoeveel dm³ past er in een kubus van 10 × 10 × 10 dm?"],
+        wrongHints: [null, "Te weinig — denk groter. Een m³ is een kubus van 1 m × 1 m × 1 m.", "Veel te weinig — een douchecabine alleen al is meer.", "10.000 liter is 10 m³, dat is te veel. Reken uit hoeveel blokjes van 1 dm³ er in één kubus van 1 m passen."],
         uitlegPad: {
           stappen: [
             { titel: "Reken het uit", tekst: "1 m = 10 dm. Dus 1 m³ = 10 × 10 × 10 = 1000 dm³. En 1 dm³ = 1 liter. Dus 1 m³ = 1000 liter." },
@@ -127,9 +127,9 @@ const steps = [
           voorbeelden: [{ type: "kalender", tekst: "Een kleine douchecabine = ~1 m³ = ~1000 liter water als hij vol zou zitten." }],
           basiskennis: [{ onderwerp: "Trap van 1000", uitleg: "Bij volume gaat het in stappen van 1000, niet 10 zoals bij lengte." }],
           niveaus: {
-            basis: "1 m³ = 1000 liter.",
-            simpeler: "1 m = 10 dm. Dus 1 m³ = 10 × 10 × 10 = 1000 dm³ = 1000 liter.",
-            nogSimpeler: "1000 liter",
+            basis: "1 liter past precies in een blokje van 1 dm³. Hoeveel van die blokjes passen in 1 m³?",
+            simpeler: "1 m = 10 dm. In de kubus passen dus 10 × 10 × 10 blokjes van 1 dm³.",
+            nogSimpeler: "10 × 10 × 10 = 1000, dus 1 m³ = 1000 liter.",
           },
         },
       },
@@ -171,9 +171,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een zwembad meet je in m³.",
-            simpeler: "Een zwembad is heel groot. Grote dingen meet je in kubieke meters: m³.",
-            nogSimpeler: "m³",
+            basis: "Een zwembad is heel groot. Kies een eenheid voor veel ruimte, geen lengte.",
+            simpeler: "mL en cm³ zijn piepkleine eenheden. Met meter meet je alleen een lengte.",
+            nogSimpeler: "Een zwembad meet je in kubieke meters (m³).",
           },
         },
       },
@@ -218,9 +218,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een halve liter = 500 mL.",
-            simpeler: "1 liter is 1000 mL. De helft van 1000 is 500. Dus 500 mL.",
-            nogSimpeler: "500 mL",
+            basis: "Weet je hoeveel mL er in een hele liter zit? Neem daar de helft van.",
+            simpeler: "1 liter is 1000 mL. Wat is de helft van 1000?",
+            nogSimpeler: "De helft van 1000 is 500, dus een halve liter is 500 mL.",
           },
         },
       },

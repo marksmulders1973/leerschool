@@ -406,9 +406,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Wie nodigt de school op een ouderavond uit — de leerlingen, of degenen die voor hen zorgen?",
+          "Wie gaat er naar een avond die de school voor thuis organiseert? Lees de aanhef nog eens.",
           "Leraren zouden intern een mail krijgen — voor wie is dit bericht bedoeld?",
-          "Er staat 'Beste ouders'. Is dat voor iedereen?",
+          "Kijk naar de aanhef bovenaan. Spreekt de school daarin iedereen aan?",
         ],
         uitlegPad: {
           stappen: [

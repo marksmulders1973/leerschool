@@ -659,7 +659,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Woordenboek = spelling + betekenis", tekst: "In een woordenboek staat hoe je een woord schrijft én wat het betekent." }],
           niveaus: {
-            basis: "Voor de spelling van een woord gebruik je een woordenboek.",
+            basis: "Je zoekt hoe je een woord schrijft. Welk boek staat vol woorden met hun schrijfwijze?",
             simpeler: "Welk boek geeft de schrijfwijze van woorden?",
             nogSimpeler: "Waar zoek je hoe een woord geschreven wordt?",
           },
@@ -673,7 +673,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hele werkwoord = trefwoord", tekst: "Werkwoorden staan in het woordenboek onder het hele werkwoord (de vorm met -en). 'liep' zoek je dus onder 'lopen'." }],
           niveaus: {
-            basis: "Werkwoorden staan onder het hele werkwoord → 'lopen'.",
+            basis: "Een werkwoord staat in het woordenboek maar één keer, onder één vaste vorm.",
             simpeler: "Onder welke vorm staat een werkwoord: de verleden tijd of het hele werkwoord?",
             nogSimpeler: "Zoek je 'liep' onder 'liep' of onder 'lopen'?",
           },
@@ -693,7 +693,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'melk' (me…) komt vóór 'molen' (mo…), dus het staat niet op deze pagina.",
+            basis: "Alle woorden op de pagina liggen in het alfabet tussen 'molen' en 'mug'. Vergelijk elk woord met die twee.",
             simpeler: "Vergelijk de tweede letter van elk woord met die van 'molen'.",
             nogSimpeler: "Komt 'me' vóór of ná 'mo'?",
           },
@@ -717,7 +717,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Met de kopwoorden zie je snel of jouw woord op die bladzijde staat.",
+            basis: "Kopwoorden zijn het eerste en het laatste woord van de bladzijde.",
             simpeler: "Kopwoorden zijn het eerste en laatste woord van de bladzijde. Wat kun je daarmee snel zien?",
             nogSimpeler: "Helpen kopwoorden je om snel de goede bladzijde te vinden?",
           },
@@ -741,7 +741,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het trefwoord staat vet vooraan; daarachter staat de betekenis.",
+            basis: "Een stukje in het woordenboek begint met het woord dat je zoekt. Daarna komt de uitleg.",
             simpeler: "Waar begint een stukje in het woordenboek: met het trefwoord of met de uitleg?",
             nogSimpeler: "Staat het trefwoord vooraan of achteraan?",
           },

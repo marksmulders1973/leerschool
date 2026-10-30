@@ -598,9 +598,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kastelen waren van steen.",
-            simpeler: "Steen is sterk.",
-            nogSimpeler: "steen",
+            basis: "Een kasteel moest vijanden buiten houden. Het moest dus van iets heel sterks zijn.",
+            simpeler: "Stro brandt, glas breekt en ijzer was veel te duur. Wat blijft er over?",
+            nogSimpeler: "Kastelen werden van steen gebouwd.",
           },
         },
       },
@@ -608,7 +608,7 @@ const steps = [
         q: "Wat had een kasteel met een gracht er vaak bij?",
         options: ["een ophaalbrug", "een vuurtoren", "een windmolen", "een sluis"],
         answer: 0,
-        wrongHints: [null, "Een vuurtoren staat aan zee, voor de schepen.", "Hoe kwam je over het water van de gracht naar binnen?", "Een sluis is voor boten — hoe kwam een ridder te paard naar binnen?"],
+        wrongHints: [null, "Een vuurtoren staat aan zee, voor de schepen.", "Een windmolen maalt graan. Helpt die je om over de gracht te komen?", "Een sluis is voor boten — hoe kwam een ridder te paard naar binnen?"],
         uitlegPad: {
           stappen: [
             {
@@ -617,9 +617,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een ophaalbrug over de gracht.",
-            simpeler: "Brug over het water.",
-            nogSimpeler: "ophaalbrug",
+            basis: "Om een kasteel lag water. Hoe kwamen bezoekers daaroverheen naar binnen?",
+            simpeler: "Bij gevaar wilden de bewoners de weg over het water kunnen weghalen.",
+            nogSimpeler: "Een kasteel met een gracht had vaak een ophaalbrug.",
           },
         },
       },
@@ -641,9 +641,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een ridder was een soldaat te paard.",
-            simpeler: "Soldaat op een paard.",
-            nogSimpeler: "soldaat",
+            basis: "Een ridder droeg een harnas en vocht voor zijn heer.",
+            simpeler: "Een ridder vocht in de strijd en reed op een paard.",
+            nogSimpeler: "Een ridder was een soldaat te paard.",
           },
         },
       },
@@ -665,9 +665,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ridders leefden in de middeleeuwen.",
-            simpeler: "Ridders = middeleeuwen.",
-            nogSimpeler: "middeleeuwen",
+            basis: "Ridders leefden heel lang geleden, in de tijd van kastelen en kloosters.",
+            simpeler: "Die tijd ligt tussen de Romeinen en de tijd van de ontdekkingsreizen.",
+            nogSimpeler: "Ridders leefden in de middeleeuwen.",
           },
         },
       },

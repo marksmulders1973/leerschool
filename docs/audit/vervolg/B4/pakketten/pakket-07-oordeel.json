@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; afleider 'Geen verschil: ze zijn precies hetzelfde' is zwak/raadbaar, hints wel goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Vwo 6 jaar; hints kloppen (havo 5, vmbo 4).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Hint bij N&T noemde het goede antwoord ('N&G heeft als extra de nadruk op biologie en gezondheid').",
+  "hersteld": true,
+  "wijziging": "Hint N&T herschreven: benoemt techniek/natuurkunde en vraagt of dat past bij lichaam, dieren en planten, zonder N&G te noemen."
+ },
+ {
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "procenten-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen; kommagetallen/procenten te vroeg voor groep 5.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6 op de check gezet (kommagetallen/procenten zijn groep-6-stof; sets was alleen groep 5)"
+ },
+ {
+  "waar": "procenten-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; te vroeg voor groep 5; niveaus telegramstijl (basis = antwoord).",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6 op de check gezet (kommagetallen/procenten zijn groep-6-stof; sets was alleen groep 5); niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "procenten-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; te vroeg voor groep 5; niveaus telegramstijl.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6 op de check gezet (kommagetallen/procenten zijn groep-6-stof; sets was alleen groep 5); niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "procenten-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; te vroeg voor groep 5; niveaus telegramstijl.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6 op de check gezet (kommagetallen/procenten zijn groep-6-stof; sets was alleen groep 5); niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "procenten-po stap 2 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Hint bij 0,7% was feitelijk fout ('verkeerde kant op'; de komma ging wel naar rechts, maar maar 1 plek); ook te vroeg voor groep 5.",
+  "hersteld": true,
+  "wijziging": "Hint: 'Je schoof de komma maar 1 plek naar rechts. Bij × 100 gaat hij 2 plekken.'; vanafGroep: 6 op de check gezet (kommagetallen/procenten zijn groep-6-stof; sets was alleen groep 5); niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Alleen 'Anna en Tom gaan naar school.' heeft geen komma nodig; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord 2 klopt; niveaus basis was alleen '2'.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; niveaus basis was letterlijk de goede zin, nogSimpeler '..., omdat ...'.",
+  "hersteld": true,
+  "wijziging": "basis en nogSimpeler als hele zinnen"
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; niveaus telegramstijl ('Na gaat.', 'gaat, ruimen').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus basis was alleen de foute zin.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 1 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 1 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "1 L = 1000 mL; hints kloppen (100 mL = 1 dL, 10 mL = 1 cL).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 1 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint bij 10.000 liter rekende het antwoord voor ('hoeveel dm³ in 10×10×10 dm').",
+  "hersteld": true,
+  "wijziging": "Hint herschreven (benoemt 10 m³ = te veel, vraagt zelf te rekenen zonder de som voor te zeggen); niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 1 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus basis = antwoord, nogSimpeler alleen 'm³'.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 1 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord 500 mL klopt; niveaus basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Weerbericht is voor iedereen; hints en niveaus goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Hints verrieden het antwoord: 'degenen die voor hen zorgen' en 'Er staat Beste ouders'.",
+  "hersteld": true,
+  "wijziging": "Hints bij Kinderen en Iedereen herschreven: verwijzen naar de aanhef zonder het antwoord te noemen."
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "'Die' = de dierenarts; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "'Er' = in het brokje; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "'Daar' = het bed van Fenna (citaat noemt het, inherent aan dit vraagtype).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "'Dat' = het prikje; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "'Haar' = Fenna; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; niveaus basis gaf het antwoord letterlijk.",
+  "hersteld": true,
+  "wijziging": "niveaus basis als denkstap"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus basis gaf het antwoord ('→ lopen').",
+  "hersteld": true,
+  "wijziging": "niveaus basis als denkstap"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Melk komt vóór molen, klopt; niveaus basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis als denkstap"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; niveaus basis was letterlijk het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis als denkstap"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; niveaus basis was letterlijk het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis als denkstap"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Beweegbaar klopt; niveaus telegramstijl ('Beweegbaar.', 'in Oosterschelde' zonder lidwoord).",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 5 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Hints rekenden het antwoord voor ('Reken van 1958 tot 1997', 'reken 1997 − 1958').",
+  "hersteld": true,
+  "wijziging": "Hints bij 5 en 10 jaar herschreven zonder jaartallen/som; feit (1958-1997, ~40 jaar) gecontroleerd."
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 5 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Hint bij 'te weinig geld' noemde het antwoord ('het ging om de natuur in de Oosterschelde').",
+  "hersteld": true,
+  "wijziging": "Hint: 'Geld was niet de reden. Denk aan wat er met de zeearm zou gebeuren als hij helemaal dicht ging.'"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 5 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Zuidwest-Nederland klopt; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Steen klopt; niveaus telegramstijl ('steen').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Hint bij windmolen omschreef het antwoord ('Hoe kwam je over het water van de gracht naar binnen?' = brug).",
+  "hersteld": true,
+  "wijziging": "Hint: 'Een windmolen maalt graan. Helpt die je om over de gracht te komen?'; niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Soldaat te paard klopt (versimpeld); niveaus telegramstijl.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Middeleeuwen klopt; niveaus telegramstijl ('Ridders = middeleeuwen').",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "3 klopt, maar de vraag gaf zelf de regel ('ligt altijd tussen...') en 'rij tussen 5 en 9' was onduidelijk.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'In een rij getallen is 5 het kleinste en 9 het grootste getal. Welk getal kan nooit het gemiddelde van die rij zijn?'; niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; niveaus basis/simpeler citeerden het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Liep klopt; telegramzin ('Verleden tijd van lopen voor ik:') en niveaus 'liep.'.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is de verleden tijd van lopen bij ik?'; niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Las klopt; telegramzin met haakjes-instructie; hint 'Niet — ...' en niveaus telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Vul de verleden tijd van lezen in: Hij ____ een mooi boek.'; hint leesde herschreven; niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Gingen klopt; telegramzin; afleider 'gaden' absurd; niveaus telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is de verleden tijd van gaan bij wij?'; afleider 'gaden' → 'gingden' (echte overgeneralisatie); niveaus basis/simpeler als denkstap in hele zinnen; nogSimpeler als hele zin met antwoord"
+ }
+]

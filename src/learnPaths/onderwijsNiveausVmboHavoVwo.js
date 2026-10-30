@@ -236,7 +236,7 @@ const steps = [
         q: "Welk profiel past het best als je later **arts of bioloog** wil worden?",
         options: ["Natuur & Gezondheid (N&G)", "Cultuur & Maatschappij (C&M)", "Economie & Maatschappij (E&M)", "Natuur & Techniek (N&T)"],
         answer: 0,
-        wrongHints: [null, "C&M gaat over talen en kunst — minder wis- en scheikunde.", "E&M gaat over economie en maatschappij — niet over biologie of geneeskunde.", "N&T is meer gericht op techniek en wiskunde; N&G heeft als extra de nadruk op biologie en gezondheid."],
+        wrongHints: [null, "C&M gaat over talen en kunst — minder wis- en scheikunde.", "E&M gaat over economie en maatschappij — niet over biologie of geneeskunde.", "N&T is vooral gericht op techniek en natuurkunde. Past dat het best bij werken met het menselijk lichaam, dieren en planten?"],
       },
       {
         q: "Hoe heten de twee smaken van het **vwo**?",

@@ -355,6 +355,7 @@ const steps = [
         wrongHints: [null,"Je hebt de komma maar 1 plek verschoven — keer 100 betekent 2 plaatsen naar rechts.","Veel te veel — dat zou meer dan het geheel zijn.","Je moet de komma nog verschuiven: keer 100 = hoeveel plaatsen?"],
       },
       {
+        vanafGroep: 6, // nakijkronde B4 (30 okt 2026): kommagetallen en procenten zijn groep-6-stof
         q: "Schrijf **60%** als kommagetal.",
         options: ["0,6","0,06","6","60"],
         answer: 0,
@@ -362,6 +363,7 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
+        vanafGroep: 6, // nakijkronde B4 (30 okt 2026): kommagetallen en procenten zijn groep-6-stof
         q: "Schrijf **45%** als kommagetal.",
         options: ["0,45", "4,5", "0,045", "45"],
         answer: 0,
@@ -406,13 +408,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "45% = 0,45.",
-            simpeler: "45 ÷ 100 = 0,45.",
-            nogSimpeler: "0,45",
+            basis: "Procent betekent per 100. Je deelt 45 dus door 100.",
+            simpeler: "Delen door 100 betekent: de komma schuift 2 plekken naar links.",
+            nogSimpeler: "45 ÷ 100 = 0,45, dus 45% = 0,45.",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B4 (30 okt 2026): kommagetallen en procenten zijn groep-6-stof
         q: "Schrijf **4%** als kommagetal.",
         options: ["0,04", "0,4", "40", "0,004"],
         answer: 0,
@@ -457,13 +460,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4% = 0,04.",
-            simpeler: "4 ÷ 100 = 0,04.",
-            nogSimpeler: "0,04",
+            basis: "Procent betekent per 100. Je deelt 4 dus door 100.",
+            simpeler: "Schuif de komma 2 plekken naar links. Er komt dan een nul vóór de 4.",
+            nogSimpeler: "4 ÷ 100 = 0,04, dus 4% = 0,04.",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B4 (30 okt 2026): kommagetallen en procenten zijn groep-6-stof
         q: "Schrijf **0,3** als percentage.",
         options: ["30%", "3%", "0,3%", "300%"],
         answer: 0,
@@ -508,20 +512,21 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,3 = 30%.",
-            simpeler: "0,3 × 100 = 30%.",
-            nogSimpeler: "30%",
+            basis: "Van kommagetal naar procent: je doet keer 100.",
+            simpeler: "Keer 100 betekent: de komma schuift 2 plekken naar rechts.",
+            nogSimpeler: "0,3 × 100 = 30, dus 0,3 = 30%.",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B4 (30 okt 2026): kommagetallen en procenten zijn groep-6-stof
         q: "Schrijf **0,07** als percentage.",
         options: ["7%", "70%", "0,7%", "700%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat zou 0,7 zijn. Kijk naar de nul na de komma.",
-          "Je schoof de komma de verkeerde kant op. Bij × 100 gaat hij naar rechts.",
+          "Je schoof de komma maar 1 plek naar rechts. Bij × 100 gaat hij 2 plekken.",
           "Veel te veel: dat is meer dan alles.",
         ],
         uitlegPad: {
@@ -559,9 +564,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,07 = 7%.",
-            simpeler: "0,07 × 100 = 7.",
-            nogSimpeler: "7%",
+            basis: "Van kommagetal naar procent: je doet keer 100.",
+            simpeler: "Schuif de komma 2 plekken naar rechts. De nul vooraan valt dan weg.",
+            nogSimpeler: "0,07 × 100 = 7, dus 0,07 = 7%.",
           },
         },
       },

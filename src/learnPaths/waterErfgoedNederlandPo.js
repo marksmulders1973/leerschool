@@ -463,9 +463,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "65 pijlers, met de dammen erbij zo'n 9 km lang. Sluit gemiddeld ongeveer 1× per jaar." }],
           basiskennis: [{ onderwerp: "Compromis", uitleg: "Veiligheid + natuur beide gewogen." }],
           niveaus: {
-            basis: "Beweegbaar.",
-            simpeler: "Bijzonder: hij is niet permanent dicht (zoals andere dammen) maar beweegbaar. Sluit alleen bij storm — om de natuur in Oosterschelde te sparen.",
-            nogSimpeler: "Beweegbaar",
+            basis: "Een gewone dam is altijd dicht. De Oosterscheldekering is anders.",
+            simpeler: "Meestal stroomt het zeewater gewoon door de kering. Alleen bij een zware storm gaan de schuiven dicht.",
+            nogSimpeler: "De Oosterscheldekering is beweegbaar: open als het kan, dicht bij storm.",
           },
         },
       },
@@ -473,7 +473,7 @@ const steps = [
         q: "Hoe lang duurden de **Deltawerken** ongeveer?",
         options: ["~40 jaar", "~5 jaar", "~100 jaar", "~10 jaar"],
         answer: 0,
-        wrongHints: [null, "5 jaar: zoveel dammen en keringen bouw je niet zo snel. Reken van 1958 tot 1997.", "100 jaar: dan waren ze nu nog niet klaar.", "10 jaar: reken 1997 − 1958."],
+        wrongHints: [null, "5 jaar is veel te kort voor zoveel dammen en keringen. Zoek in de uitleg wanneer ze begonnen en wanneer ze klaar waren.", "100 jaar: dan waren ze nu nog niet klaar.", "10 jaar is te kort. Tussen het begin en het laatste stuk zat veel meer tijd."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -485,7 +485,7 @@ const steps = [
           "Omdat de koning dat zo wilde",
         ],
         answer: 0,
-        wrongHints: [null, "Geld was niet het probleem — het ging om de natuur in de Oosterschelde.", "Zand was er genoeg. Waarom wilden mensen de zeearm open houden?", "Wie besliste over de Deltawerken: de koning of de regering?"],
+        wrongHints: [null, "Geld was niet de reden. Denk aan wat er met de zeearm zou gebeuren als hij helemaal dicht ging.", "Zand was er genoeg. Waarom wilden mensen de zeearm open houden?", "Wie besliste over de Deltawerken: de koning of de regering?"],
       },
       {
         q: "Welk deel van Nederland moesten de Deltawerken vooral **beschermen**?",
