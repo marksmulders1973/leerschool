@@ -4,129 +4,129 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: start
 
 ## 1. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 1)
 Vraag: Wat betekent **Good morning**?
-- ▫️ Tot ziens
-- ▫️ Hallo
 - ▫️ Welterusten
+- ▫️ Hallo
 - ✅ Goedemorgen
+- ▫️ Tot ziens
 
 ## 2. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 1)
 Vraag: Wat betekent **Goodbye**?
-- ▫️ Hoe gaat het?
-- ▫️ Hallo
-- ✅ Tot ziens
 - ▫️ Dank je
+- ▫️ Hallo
+- ▫️ Hoe gaat het?
+- ✅ Tot ziens
 
 ## 3. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 2)
 Vraag: Wat is **5** in het Engels?
-- ▫️ fifteen
-- ✅ five
-- ▫️ four
 - ▫️ six
+- ✅ five
+- ▫️ fifteen
+- ▫️ four
 
 ## 4. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 2)
 Vraag: Wat is **12** in het Engels?
 - ▫️ two
 - ✅ twelve
-- ▫️ ten
 - ▫️ twenty
+- ▫️ ten
 
 ## 5. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **red**?
-- ▫️ groen
 - ▫️ geel
+- ▫️ groen
 - ▫️ blauw
 - ✅ rood
 
 ## 6. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **black**?
-- ✅ zwart
 - ▫️ wit
 - ▫️ bruin
+- ✅ zwart
 - ▫️ blauw
 
 ## 7. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 4)
 Vraag: Wat is **Friday** in het Nederlands?
+- ▫️ zaterdag
 - ✅ vrijdag
 - ▫️ maandag
 - ▫️ donderdag
-- ▫️ zaterdag
 
 ## 8. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 4)
 Vraag: Wat is **Wednesday** in het Nederlands?
-- ▫️ dinsdag
-- ▫️ maandag
 - ▫️ donderdag
+- ▫️ dinsdag
 - ✅ woensdag
+- ▫️ maandag
 
 ## 9. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 5)
 Vraag: Wat betekent **brother**?
-- ▫️ neef
-- ✅ broer
-- ▫️ oom
 - ▫️ zus
+- ▫️ neef
+- ▫️ oom
+- ✅ broer
 
 ## 10. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 5)
 Vraag: Wat betekent **grandma**?
+- ▫️ zus
 - ▫️ tante
 - ▫️ moeder
-- ▫️ zus
 - ✅ oma
 
 ## 11. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 6)
 Vraag: Wat betekent **bread**?
 - ▫️ vlees
-- ✅ brood
-- ▫️ kaas
 - ▫️ ei
+- ▫️ kaas
+- ✅ brood
 
 ## 12. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 6)
 Vraag: Wat is **milk**?
-- ▫️ water
+- ▫️ sap
 - ▫️ koffie
 - ✅ melk
-- ▫️ sap
+- ▫️ water
 
 ## 13. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 1)
 Vraag: Welk lidwoord zet je voor **één** apple?
-- ▫️ a
-- ▫️ the
 - ▫️ geen
 - ✅ an
+- ▫️ the
+- ▫️ a
 
 ## 14. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 1)
 Vraag: Welk lidwoord zet je voor **één** book?
-- ▫️ an
 - ▫️ any
-- ▫️ the
 - ✅ a
+- ▫️ the
+- ▫️ an
 
 ## 15. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 2)
 Vraag: Wat is het meervoud van **book**?
-- ✅ books
-- ▫️ bookes
 - ▫️ book
 - ▫️ booken
+- ▫️ bookes
+- ✅ books
 
 ## 16. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 2)
 Vraag: Wat is het meervoud van **box**?
+- ✅ boxes
+- ▫️ box
 - ▫️ boxs
 - ▫️ boxen
-- ▫️ box
-- ✅ boxes
 
 ## 17. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 3)
 Vraag: Vul in: *'__ is my book.'* Het gaat om het boek dat ik vasthoud.
-- ✅ This
 - ▫️ These
-- ▫️ Those
 - ▫️ That
+- ✅ This
+- ▫️ Those
 
 ## 18. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 3)
 Vraag: Vul in: *'Look at __ birds in the tree.'* Het gaat om meerdere vogels ver weg.
-- ▫️ these
-- ▫️ that
 - ✅ those
+- ▫️ that
 - ▫️ this
+- ▫️ these
 
 ## 19. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 4)
 Vraag: Vul in: 'I __ a student.'
@@ -137,7 +137,7 @@ Vraag: Vul in: 'I __ a student.'
 
 ## 20. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 4)
 Vraag: Vul in: 'She __ my sister.'
+- ✅ is
+- ▫️ be
 - ▫️ am
 - ▫️ are
-- ▫️ be
-- ✅ is

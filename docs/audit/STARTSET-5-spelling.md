@@ -4,24 +4,24 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: start
 
 ## 1. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: het voertuig op rails?
-- ▫️ trijn
 - ✅ trein
 - ▫️ treijn
 - ▫️ tren
+- ▫️ trijn
 
 ## 2. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: niet groot?
-- ▫️ kleijn
-- ▫️ klijn
-- ✅ klein
 - ▫️ kleen
+- ✅ klein
+- ▫️ klijn
+- ▫️ kleijn
 
 ## 3. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Jij en ik samen' — welk woordje is dat, goed geschreven?
 - ▫️ zei
 - ✅ wij
-- ▫️ wei
 - ▫️ mei
+- ▫️ wei
 
 ## 4. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: Hoe schrijf je: het voedsel uit Azië (witte korreltjes)?
@@ -32,112 +32,112 @@ Vraag: Hoe schrijf je: het voedsel uit Azië (witte korreltjes)?
 
 ## 5. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 4)
 Vraag: Hoe schrijf je: op elk moment, steeds?
+- ▫️ alteid
 - ▫️ altijt
 - ▫️ alteit
 - ✅ altijd
-- ▫️ alteid
 
 ## 6. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 4)
 Vraag: Hoe schrijf je: wat iets kost?
+- ▫️ prijz
+- ▫️ preiz
 - ✅ prijs
 - ▫️ preis
-- ▫️ preiz
-- ▫️ prijz
 
 ## 7. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: een **voertuig op vier wielen**?
+- ▫️ outo
 - ▫️ outoo
 - ▫️ autoo
 - ✅ auto
-- ▫️ outo
 
 ## 8. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: de **maand 8** van het jaar?
+- ✅ augustus
 - ▫️ augustes
 - ▫️ ougustes
-- ✅ augustus
 - ▫️ ougustus
 
 ## 9. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het **gele metaal** voor sieraden?
-- ▫️ gout
 - ▫️ gaud
 - ▫️ gaut
+- ▫️ gout
 - ✅ goud
 
 ## 10. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: 'Is dat ___ boek?' (bezittelijk):
+- ▫️ jou
 - ✅ jouw
 - ▫️ jau
 - ▫️ jauw
-- ▫️ jou
 
 ## 11. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 3)
 Vraag: Welke is **goed** geschreven?
-- ▫️ panne koek
-- ✅ pannenkoek
 - ▫️ pannekoek
+- ▫️ panne koek
 - ▫️ panne-koek
+- ✅ pannenkoek
 
 ## 12. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 3)
 Vraag: Welke is **fout** geschreven?
-- ✅ voetbal schoen
-- ▫️ voetbalschoen
 - ▫️ zonnebril
 - ▫️ tandarts
+- ✅ voetbal schoen
+- ▫️ voetbalschoen
 
 ## 13. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 3)
 Vraag: Waarom staat er **-en-** in het woord **boekenkast**?
+- ▫️ Het tweede woord begint met een k
 - ▫️ Het eerste woord eindigt op een k
 - ▫️ Zo spreek je het makkelijker uit
-- ▫️ Het tweede woord begint met een k
 - ✅ Het meervoud van boek is boeken
 
 ## 14. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 4)
 Vraag: Welke zin is **goed**?
-- ✅ Tom ging naar Amsterdam op maandag.
-- ▫️ tom ging naar amsterdam op maandag.
 - ▫️ Tom Ging Naar Amsterdam Op Maandag.
+- ▫️ tom ging naar amsterdam op maandag.
 - ▫️ Tom ging naar amsterdam op Maandag.
+- ✅ Tom ging naar Amsterdam op maandag.
 
 ## 15. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 4)
 Vraag: Welk woord moet je met een **hoofdletter** schrijven?
+- ▫️ maandag
+- ▫️ kerstboom
 - ▫️ januari
 - ✅ nederland
-- ▫️ kerstboom
-- ▫️ maandag
 
 ## 16. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 1)
 Vraag: *In het regenwoud is het ___ warm.* Welk woord is **goed** gespeld?
-- ✅ tropisch
 - ▫️ tropich
-- ▫️ tropies
+- ✅ tropisch
 - ▫️ tropiesch
+- ▫️ tropies
 
 ## 17. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 1)
 Vraag: *Is het ___ dat je morgen komt?* Welk woord is **goed** gespeld?
-- ▫️ mogeluk
 - ▫️ mogelijck
-- ✅ mogelijk
 - ▫️ mogelik
+- ▫️ mogeluk
+- ✅ mogelijk
 
 ## 18. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 7)
 Vraag: **'Het is heel ____ buiten'** (= zeer lage temperatuur):
-- ▫️ kaud
-- ▫️ kouwd
-- ▫️ koudt
 - ✅ koud
+- ▫️ koudt
+- ▫️ kouwd
+- ▫️ kaud
 
 ## 19. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 1)
 Vraag: Wat is de **stam** van **werken**?
-- ▫️ wer
-- ✅ werk
 - ▫️ werkt
 - ▫️ werken
+- ▫️ wer
+- ✅ werk
 
 ## 20. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 2)
 Vraag: Welke vorm is **goed**?
-- ▫️ Hij speelen
 - ✅ Hij speelt
-- ▫️ Hij speeld
 - ▫️ Hij speel
+- ▫️ Hij speelen
+- ▫️ Hij speeld

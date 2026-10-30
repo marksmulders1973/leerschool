@@ -4,79 +4,79 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: start
 
 ## 1. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 1)
 Vraag: Welke letter komt **na de d**?
+- ✅ e
 - ▫️ c
 - ▫️ f
 - ▫️ b
-- ✅ e
 
 ## 2. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 1)
 Vraag: Welk woord staat **het eerst** in het woordenboek?
-- ✅ appel
-- ▫️ druif
 - ▫️ citroen
 - ▫️ banaan
+- ▫️ druif
+- ✅ appel
 
 ## 3. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 1)
 Vraag: Welke letter hoort op de plek van het vraagteken? **k — l — ? — n**
-- ✅ m
-- ▫️ o
-- ▫️ p
 - ▫️ j
+- ▫️ o
+- ✅ m
+- ▫️ p
 
 ## 4. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 1)
 Vraag: Hoeveel letters heeft het alfabet?
-- ▫️ 30
 - ▫️ 16
-- ✅ 26
+- ▫️ 30
 - ▫️ 20
+- ✅ 26
 
 ## 5. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 2)
 Vraag: Wat is het meervoud van **stoel**?
-- ▫️ stoels
+- ✅ stoelen
 - ▫️ stoeles
 - ▫️ stoele
-- ✅ stoelen
+- ▫️ stoels
 
 ## 6. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 2)
 Vraag: Wat is het meervoud van **tafel**?
 - ▫️ tafelen
-- ▫️ tafel
 - ✅ tafels
+- ▫️ tafel
 - ▫️ tafeles
 
 ## 7. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 2)
 Vraag: Wat is het meervoud van **huis**?
-- ▫️ huisen
-- ▫️ huises
 - ✅ huizen
 - ▫️ huizes
+- ▫️ huisen
+- ▫️ huises
 
 ## 8. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 2)
 Vraag: Wat is het meervoud van **kind**?
-- ▫️ kindes
-- ✅ kinderen
-- ▫️ kinden
 - ▫️ kinds
+- ▫️ kinden
+- ✅ kinderen
+- ▫️ kindes
 
 ## 9. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 3)
 Vraag: Wat is het verkleinwoord van **bal**?
+- ▫️ balje
 - ✅ balletje
 - ▫️ balpje
-- ▫️ balje
 - ▫️ ballertje
 
 ## 10. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 3)
 Vraag: Wat is het verkleinwoord van **boom**?
-- ▫️ boomje
-- ✅ boompje
-- ▫️ boomtje
 - ▫️ bometje
+- ✅ boompje
+- ▫️ boomje
+- ▫️ boomtje
 
 ## 11. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 3)
 Vraag: Wat is het verkleinwoord van **stoel**?
+- ✅ stoeltje
 - ▫️ stoeletje
 - ▫️ stoelje
-- ✅ stoeltje
 - ▫️ stoelpje
 
 ## 12. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 3)
@@ -89,55 +89,55 @@ Vraag: Van welk woord is **poesje** het verkleinwoord?
 ## 13. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 4)
 Vraag: Wat is de tegenstelling van **warm**?
 - ✅ koud
-- ▫️ zacht
 - ▫️ lauw
+- ▫️ zacht
 - ▫️ heet
 
 ## 14. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 4)
 Vraag: Wat is de tegenstelling van **vol**?
 - ▫️ half
 - ✅ leeg
-- ▫️ groot
 - ▫️ zwaar
+- ▫️ groot
 
 ## 15. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 4)
 Vraag: **Snel** hoort bij de haas. Welk woord hoort bij de slak?
-- ▫️ vlug
 - ▫️ haastig
 - ▫️ druk
 - ✅ langzaam
+- ▫️ vlug
 
 ## 16. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 4)
 Vraag: Welke twee woorden zijn een **tegenstelling**?
 - ▫️ nat en vochtig
 - ▫️ blij en vrolijk
-- ▫️ groot en reusachtig
 - ✅ dag en nacht
+- ▫️ groot en reusachtig
 
 ## 17. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 5)
 Vraag: Welke zin is **goed** geschreven?
 - ▫️ de kat slaapt
+- ▫️ De kat slaapt
 - ✅ De kat slaapt.
 - ▫️ de kat slaapt.
-- ▫️ De kat slaapt
 
 ## 18. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 5)
 Vraag: Wat hoort er aan het eind van deze zin? **Hoe heet jouw juf of meester**
 - ▫️ een punt (.)
+- ▫️ een komma (,)
 - ▫️ een uitroepteken (!)
 - ✅ een vraagteken (?)
-- ▫️ een komma (,)
 
 ## 19. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 5)
 Vraag: Zet de woorden in de goede volgorde: **rent — hond — de — hard**
-- ▫️ Rent de hond hard.
-- ▫️ Hard hond de rent.
 - ▫️ Hond de rent hard.
 - ✅ De hond rent hard.
+- ▫️ Rent de hond hard.
+- ▫️ Hard hond de rent.
 
 ## 20. Taal — woorden en zinnen (groep 4) (taal-woorden-zinnen-g4, stap 5)
 Vraag: Welke woorden in deze zin moeten een **hoofdletter** hebben? **gisteren ging lisa naar school.**
-- ▫️ lisa én school
+- ▫️ gisteren én school
 - ▫️ alleen lisa
 - ✅ gisteren én lisa
-- ▫️ gisteren én school
+- ▫️ lisa én school

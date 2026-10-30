@@ -53,18 +53,23 @@ const plat = (t) => String(t ?? "").replace(/\s*\n\s*/g, " ").trim();
 const lijst = [];
 const perBestand = {};
 const overzicht = [];
+// Startset-vragen van ÁLLE sets (zelfde selectie als startsets.js: per item de eerste n geldige vragen van die
+// stap). Wereldwijd uitsluiten: een pad als getallen-tot-20-po is startset voor groep 3 én vervolg voor groep 5;
+// die vragen zijn al nagekeken en de startset moet stabiel blijven (les golf 1, 30 okt 2026).
+const startset = new Set();
 for (const [sleutel, set] of Object.entries(STARTSETS)) {
-  const [g, vak] = sleutel.split("|");
-  const groep = Number(g);
-  const subj = vak === "wiskunde" ? "rekenen" : vak;
-  // Startset-vragen (zelfde selectie als startsets.js: per item de eerste n geldige vragen van die stap).
-  const startset = new Set();
+  const groep = Number(sleutel.split("|")[0]);
   for (const it of set.items) {
     const L = await laadPad(it.pad); if (!L) continue;
     const s = (L.pad.steps || [])[it.stap - 1]; if (!s) continue;
     const valide = (s.checks || []).map((c, ci) => ({ c, ci })).filter(({ c }) => geldig(c, groep));
     valide.slice(0, it.n).forEach(({ ci }) => startset.add(`${it.pad}|${it.stap - 1}|${ci}`));
   }
+}
+for (const [sleutel, set] of Object.entries(STARTSETS)) {
+  const [g, vak] = sleutel.split("|");
+  const groep = Number(g);
+  const subj = vak === "wiskunde" ? "rekenen" : vak;
   const paden = manifest.filter((p) => p.subject === subj && padBijGroep(p.level, groep) && !/-nieuwkomers$/.test(p.id))
     .sort((a, b) => String(a.title).localeCompare(String(b.title), "nl"));
   const geladen = [];
