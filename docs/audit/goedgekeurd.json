@@ -3548,6 +3548,62 @@
   "reden": "42÷7=6 r0; 43÷6=7 r1, 26÷4=6 r2, 33÷5=6 r3 nagerekend; niveaus basis gaf het antwoord."
  },
  {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 1",
+  "hash": "9def5d5071293f95",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (50:8 = 6 rest 2, dus 7). Basis rekende het hele antwoord voor."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 2",
+  "hash": "46291e94b4c916bd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt. Basis telegramstijl met het antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 3",
+  "hash": "8179a896630a1038",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (12:5 = 2 rest 2, dus 3). Basis = antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 4",
+  "hash": "0a7079c9989566be",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (38:5 = 7,6, dus 8 weken). Basis = antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 5",
+  "hash": "f863f6655ddd0708",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (33:9 = 3 rest 6, dus 4). Basis = antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 8",
+  "hash": "17bb8c3de781407b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (50:6 = 8 rest 2, dus 9). Hint \"een week eerder\" wees naar het antwoord; basis = antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 9",
+  "hash": "a7d6725948ea3488",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (40:6 = 6 rest 4, dus 7). Basis = antwoord."
+ },
+ {
   "waar": "delen-po stap 1 vraag 1",
   "hash": "6e86a1106e9a1e1b",
   "oordeel": "twijfel",
@@ -8520,6 +8576,34 @@
   "reden": "Inhoudsopgave klopt; drie telegram-hints ('Bibliografie = boekenlijst.') en telegram-niveaus; nogSimpeler 'Hoofdstuk' was vreemd"
  },
  {
+  "waar": "informatiebronnen-po stap 3 vraag 4",
+  "hash": "25155737d0cc16ba",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 5",
+  "hash": "0c6dffa1e9b8fa01",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 6",
+  "hash": "d32a7aaf2068d837",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 7",
+  "hash": "98fa687bb1768632",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "informatiebronnen-po stap 4 vraag 1",
   "hash": "abd648fdfa510a20",
   "oordeel": "twijfel",
@@ -8590,6 +8674,54 @@
   "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt; niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 1",
+  "hash": "c237f5f0c778ac0b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus telegramstijl."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 2",
+  "hash": "a1c9fd87cb9919aa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (kraan, kralen, krant). Hint \"Bijna\" bij kralen gaf aan dat het antwoord ernaast lag; basis = antwoord."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 3",
+  "hash": "874e62d27090f1b5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar raadbaar door absurde afleider (\"Op Wikipedia zetten\"); Engels \"fake\" in niveaus."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 4",
+  "hash": "1f8654c11ccd3431",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (index). Hints telegramstijl, basis = antwoord."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 5",
+  "hash": "709e28e5828ee05d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt. Telegramvraag; hint \"Atlas heeft geen woorden\" niet juist; basis = antwoord."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 6",
+  "hash": "395072a01f33a75e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (vitamine). Basis gaf het antwoord."
  },
  {
   "waar": "inhoudsopgave-register-po stap 1 vraag 1",
@@ -10293,6 +10425,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "kommagetallen-po stap 2 vraag 10",
+  "hash": "9705d68f21dffb8f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (8,50 − 2,25 = 6,25). Basis = antwoord."
+ },
+ {
   "waar": "kommagetallen-po stap 2 vraag 3",
   "hash": "09ada9ba4296f753",
   "oordeel": "twijfel",
@@ -10331,6 +10471,22 @@
   "bron": "vervolg B6 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 8",
+  "hash": "1ad1d9bcfe3a0920",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (1,35 + 2,40 = 3,75). Basis = som met antwoord."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 9",
+  "hash": "0e92ee65f649b0f2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (7,3 = 7,30). Basis = antwoord."
  },
  {
   "waar": "kommagetallen-po stap 3 vraag 8",
@@ -17446,6 +17602,41 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 15",
+  "hash": "32777236b6685abd",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 16",
+  "hash": "4da49c448e5ce6be",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 17",
+  "hash": "2bf4269d05c5b46c",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 18",
+  "hash": "49c9db4daf17da1a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 19",
+  "hash": "05f55e9db435009a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "synoniemen-tegenstellingen-po stap 5 vraag 2",
   "hash": "cb7162f071e84713",
   "oordeel": "goed",
@@ -17453,11 +17644,47 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 20",
+  "hash": "552193462b2e2fb1",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 21",
+  "hash": "2f91a70c3d9df0b6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"Talloos\" is moeilijk voor groep 5 en betekent eigenlijk \"ontelbaar veel\"."
+ },
+ {
   "waar": "synoniemen-tegenstellingen-po stap 5 vraag 22",
   "hash": "668e8c0a338a120d",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 23",
+  "hash": "8920cebec0b47c17",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 24",
+  "hash": "d9bf9e326e6a4def",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 25",
+  "hash": "4fe9f499ffe1745e",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "synoniemen-tegenstellingen-po stap 5 vraag 3",
@@ -18802,12 +19029,146 @@
   "reden": "Antwoord klopt; hints feitelijk juist (VOC 1602, Engeland bondgenoot); afleiders anachronistisch maar verdedigbaar als tijdvak-oefening; niveaus telegram."
  },
  {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 4",
+  "hash": "cd5d6bb7c8618e33",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (2002). Basis gaf alleen het antwoord; hints/simpeler telegramstijl."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 5",
+  "hash": "a0c38b8a9db81dd5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt. Basis noemde het antwoord, simpeler telegramzin."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 6",
+  "hash": "bd499c8180e4a26c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt. Basis noemde het antwoord; slingerklok had geen hint."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 7",
+  "hash": "2ad7cc3781e2ae64",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (1795 Fransen/Bataafse Republiek). Basis noemde het antwoord; geen hint bij Willem van Oranje."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 8",
+  "hash": "fc13df0857da20d7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt. Basis noemde het antwoord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 10",
+  "hash": "e1510206534d0f52",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (1940-1945 in NL; 1939 is goed opgevangen in de hint). Telegramvraag."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 11",
+  "hash": "6754f25d4344cd09",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (Amsterdam). Telegramvraag; hints (\"gracht\", \"museum\") wezen sterk naar de goede stad."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 13",
+  "hash": "7d19617d8d01608a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 14",
+  "hash": "a7eeffee8498c123",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"Het langst\" is discutabel (Suriname was ook ruim 300 jaar kolonie); telegramvraag."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 16",
+  "hash": "11e736a13f6ba6f8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (5 mei). Telegramvraag met \"=\", hints van één woord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 17",
+  "hash": "06c000bbc6e36605",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 2",
+  "hash": "580fedd0cabe3e32",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (Floris V). Hint \"drie eeuwen later\" plaatste het antwoord in de tijd; hints telegramstijl; basis = antwoord."
+ },
+ {
   "waar": "tijdvakken-nederland-po stap 5 vraag 22",
   "hash": "e07f020ca5bef0fa",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Afkorting 'NL' in de vraag voor groep 6-8; inhoud klopt."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 3",
+  "hash": "09ad29c832838b49",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (17e eeuw). Hints telegramstijl (\"Middeleeuwen.\"), basis = antwoord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 4",
+  "hash": "f337d56ca74b49e1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt. Afkorting WO2 in de vraag, telegramopties waardoor het goede antwoord als enige een volzin was; basis = antwoord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 5",
+  "hash": "b6eafbca193bd51e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (Vrede van Münster). Telegramopties en -hints, basis = antwoord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 8",
+  "hash": "dc910f99c51e227c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (1940-1945). Hint WO1 telegramstijl, basis = antwoord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 9",
+  "hash": "bed3bcd8e3b4c99e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt inhoudelijk, maar telegramvraag en vage opties (\"Eind 1800 / begin 1900\"); basis = antwoord."
  },
  {
   "waar": "toestand-stoffen-po stap 1 vraag 1",

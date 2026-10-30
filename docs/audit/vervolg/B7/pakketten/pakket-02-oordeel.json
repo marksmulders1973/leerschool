@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (2002). Basis gaf alleen het antwoord; hints/simpeler telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Basis/simpeler/nogSimpeler herschreven tot hulpstappen; hints 1999 en 1985 als hele zinnen."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt. Basis noemde het antwoord, simpeler telegramzin.",
+  "hersteld": true,
+  "wijziging": "Niveaus herschreven tot hulpstappen."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt. Basis noemde het antwoord; slingerklok had geen hint.",
+  "hersteld": true,
+  "wijziging": "Niveaus herschreven; hint bij slingerklok toegevoegd (Huygens, Gouden Eeuw)."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (1795 Fransen/Bataafse Republiek). Basis noemde het antwoord; geen hint bij Willem van Oranje.",
+  "hersteld": true,
+  "wijziging": "Niveaus herschreven; hint 1584 bij Willem van Oranje toegevoegd."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt. Basis noemde het antwoord.",
+  "hersteld": true,
+  "wijziging": "Niveaus herschreven tot hulpstappen."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, maar hint bij Karel de Grote (\"Romeinen waren al weg\") verraadde het antwoord; opties en hints telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Opties tot volledige zinnen (zelfde volgorde), hints herschreven zonder het antwoord, niveaus herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (Floris V). Hint \"drie eeuwen later\" plaatste het antwoord in de tijd; hints telegramstijl; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hints als hele zinnen zonder verwijzing naar het antwoord; niveaus herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (17e eeuw). Hints telegramstijl (\"Middeleeuwen.\"), basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hints en niveaus herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt. Afkorting WO2 in de vraag, telegramopties waardoor het goede antwoord als enige een volzin was; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag: \"de Tweede Wereldoorlog\"; opties met lidwoord gelijkgetrokken; hints en niveaus als hele zinnen."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (Vrede van Münster). Telegramopties en -hints, basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Opties met lidwoord (\"Het begin van ...\"), hints en niveaus herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Te stellig/feitelijk onjuist: Lodewijk Napoleon was in 1806 al koning (van Holland); de eigen simpeler-uitleg noemde hem ook.",
+  "hersteld": true,
+  "wijziging": "Vraag gepreciseerd tot \"het Koninkrijk der Nederlanden\"; hints als hele zinnen; niveaus herschreven (Lodewijk Napoleon kort uitgelegd)."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Strikvraag met een verzonnen woord; leert geen geschiedenis en alle hints wezen naar \"verzonnen\".",
+  "hersteld": true,
+  "wijziging": "disabled: true op de check gezet (met reden in commentaar)."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (1940-1945). Hint WO1 telegramstijl, basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint 1914-1918 en niveaus herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt inhoudelijk, maar telegramvraag en vage opties (\"Eind 1800 / begin 1900\"); basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag als volzin; opties \"Tussen 1850 en 1900\" enz. (zelfde volgorde); hints en niveaus herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (1940-1945 in NL; 1939 is goed opgevangen in de hint). Telegramvraag.",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven: \"Van welk jaar tot welk jaar duurde ... in Nederland?\""
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 11",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (Amsterdam). Telegramvraag; hints (\"gracht\", \"museum\") wezen sterk naar de goede stad.",
+  "hersteld": true,
+  "wijziging": "Vraag als volzin; hints benoemen wat de foute stad is, zonder kenmerken van het antwoord."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 12",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Hint bij 1500 rekende het antwoord voor (\"1648 min tachtig jaar\"); telegramvraag.",
+  "hersteld": true,
+  "wijziging": "Vraag als volzin; hint vervangen door \"In 1500 was Willem van Oranje nog niet eens geboren ...\"."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt (17e eeuw), hints benoemen de eeuwen correct.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 14",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "\"Het langst\" is discutabel (Suriname was ook ruim 300 jaar kolonie); telegramvraag.",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Welk land was meer dan honderd jaar een kolonie van Nederland?\"; hint Brazilie als hele zin."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 15",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Te stellig: Lodewijk Napoleon was al koning (1806, Koninkrijk Holland).",
+  "hersteld": true,
+  "wijziging": "Vraag gepreciseerd: \"eerste koning van het Koninkrijk der Nederlanden\"."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 16",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (5 mei). Telegramvraag met \"=\", hints van één woord.",
+  "hersteld": true,
+  "wijziging": "Vraag als volzin; hints als hele zinnen (4 mei Dodenherdenking, 27 april Koningsdag, 11 november Sint-Maarten)."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt (Limes), hints feitelijk juist.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt, hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "\"Talloos\" is moeilijk voor groep 5 en betekent eigenlijk \"ontelbaar veel\".",
+  "hersteld": true,
+  "wijziging": "Goede optie vervangen door \"massa's\" (staat ook in de uitleg van het pad)."
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 23",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Niveaus herschreven; hint woordenboek/atlas/stripboek als hele zin."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (kraan, kralen, krant). Hint \"Bijna\" bij kralen gaf aan dat het antwoord ernaast lag; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hints kraan/kralen herschreven; niveaus tot hulpstappen."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt, maar raadbaar door absurde afleider (\"Op Wikipedia zetten\"); Engels \"fake\" in niveaus.",
+  "hersteld": true,
+  "wijziging": "Afleider D vervangen door \"Delen, maar er 'misschien' bij zetten\" + passende hint; niveaus herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (index). Hints telegramstijl, basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hints hoofdstuk 1/voorwoord en niveaus herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt. Telegramvraag; hint \"Atlas heeft geen woorden\" niet juist; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag als volzin; hints atlas/krant en niveaus herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (vitamine). Basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis en simpeler tot hulpstappen herschreven."
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; hints en niveaus zijn al goede hulpstappen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (50:8 = 6 rest 2, dus 7). Basis rekende het hele antwoord voor.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt. Basis telegramstijl met het antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (12:5 = 2 rest 2, dus 3). Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (38:5 = 7,6, dus 8 weken). Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (33:9 = 3 rest 6, dus 4). Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt (45:6 = 7 rest 3, dus 8), maar hint bij 9 dozen (\"Reken 8 × 6\") gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint 9 dozen herschreven zonder getal; basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt (31:4 = 7 rest 3, dus 8), maar hint bij 9 tenten (\"Reken 8 × 4\") gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint 9 tenten herschreven zonder getal; basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (50:6 = 8 rest 2, dus 9). Hint \"een week eerder\" wees naar het antwoord; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint 10 weken en basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (40:6 = 6 rest 4, dus 7). Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 10",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt (23:5 = 4 rest 3, dus 5), maar hint bij 6 zakken noemde \"5 zakken\".",
+  "hersteld": true,
+  "wijziging": "Hint 6 zakken herschreven zonder het antwoord; basis herschreven."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (1,35 + 2,40 = 3,75). Basis = som met antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (7,3 = 7,30). Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "kommagetallen-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (8,50 − 2,25 = 6,25). Basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Basis herschreven tot hulpstap."
+ }
+]

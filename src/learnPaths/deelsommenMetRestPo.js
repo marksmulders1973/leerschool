@@ -333,7 +333,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Een sportclub vervoert spelers in busjes van 9 plaatsen voor een groep van 34 spelers: ook de laatste, kleinere groep spelers heeft een busje nodig." }],
           basiskennis: [{ onderwerp: "Delen met rest", uitleg: "Je moet eerst een deelsom met rest kunnen uitrekenen voordat je kunt bepalen hoeveel bussen nodig zijn." }],
           niveaus: {
-            basis: "6 bussen vol (48 kinderen), 2 over → nog 1 bus = 7.",
+            basis: "Reken eerst uit hoeveel bussen helemaal vol raken: hoe vaak past 8 in 50? Kijk daarna of er nog kinderen overblijven.",
             simpeler: "Passen alle kinderen in 6 bussen? Nee, er blijven er 2 over. Dus eentje extra.",
             nogSimpeler: "6 bussen is niet genoeg voor iedereen — hoeveel dan wel?",
           },
@@ -354,7 +354,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Als je verhuisdozen nodig hebt voor je spullen, tel je de half-gevulde doos ook mee — die spullen moeten immers ook mee verhuizen." }],
           basiskennis: [{ onderwerp: "Rest verdient ook aandacht", uitleg: "Bij 'nodig hebben'-vragen telt de rest altijd mee, want die moet ook een plek krijgen." }],
           niveaus: {
-            basis: "De rest (kinderen) heeft ook een bus nodig → naar boven.",
+            basis: "Na de deling blijven er een paar kinderen over. Denk na over wat er met die kinderen moet gebeuren.",
             simpeler: "Mogen er kinderen achterblijven? Nee, dus extra bus.",
             nogSimpeler: "Moeten de overgebleven kinderen ook mee?",
           },
@@ -375,7 +375,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Een pakketbezorger heeft een busje voor 6 dozen tegelijk en moet 17 dozen bezorgen: ook de laatste, kleinere lading heeft nog een rit nodig." }],
           basiskennis: [{ onderwerp: "Rest = extra beurt", uitleg: "Bij 'hoe vaak minstens' telt de rest als een extra beurt, ook al is die niet vol." }],
           niveaus: {
-            basis: "2 volle ritten (10 mensen), 2 over → nog 1 rit = 3.",
+            basis: "Reken uit hoe vaak 5 in 12 past. Staan er daarna nog mensen beneden te wachten?",
             simpeler: "Passen 12 mensen in 2 ritten van 5? Nee, 2 blijven over.",
             nogSimpeler: "10 mensen in 2 ritten, en die laatste 2?",
           },
@@ -396,7 +396,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Je zusje spaart €4 per week voor een knuffel van €27: ook bij haar moet je kijken na hoeveel volle weken ze genoeg heeft." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigen en vergelijken", uitleg: "Je moet per week kunnen uitrekenen hoeveel geld er al is, en dat vergelijken met het bedrag dat nodig is." }],
           niveaus: {
-            basis: "7 weken = €35 (te weinig), 8 weken = €40 (genoeg).",
+            basis: "Tel elke week €5 erbij: €5, €10, €15, enzovoort. Stop pas als je €38 of meer hebt.",
             simpeler: "Heb je na 7 weken (€35) genoeg voor €38? Nee, dus eentje erbij.",
             nogSimpeler: "Is €35 genoeg voor €38? Hoeveel weken dan wel?",
           },
@@ -417,7 +417,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Een school regelt busjes van 7 plaatsen voor 30 leerlingen op schoolreis: ook de laatste, kleinere groep heeft een busje nodig." }],
           basiskennis: [{ onderwerp: "Naar boven afronden", uitleg: "Bij 'hoeveel nodig'-vragen rond je altijd naar boven af als er nog een rest is." }],
           niveaus: {
-            basis: "3 volle ritten (27 mensen), 6 over → nog 1 rit = 4.",
+            basis: "Reken uit hoe vaak 9 in 33 past. Blijven er daarna nog mensen over die ook mee moeten?",
             simpeler: "Passen alle 33 mensen in 3 ritten van 9? Nee, er blijven er 6 over.",
             nogSimpeler: "27 mensen in 3 ritten, en die laatste 6?",
           },
@@ -427,7 +427,7 @@ const steps = [
         q: "In een doos passen 6 boeken. Je wilt 45 boeken verzenden. Hoeveel dozen heb je nodig?",
         options: ["8 dozen", "7 dozen", "7 rest 3", "9 dozen"],
         answer: 0,
-        wrongHints: [null, "In 7 dozen passen maar 42 boeken — 3 blijven over.", "Een aantal dozen is een heel getal.", "Passen 45 boeken al in minder dozen? Reken 8 × 6."],
+        wrongHints: [null, "In 7 dozen passen maar 42 boeken — 3 blijven over.", "Een aantal dozen is een heel getal.", "Passen alle 45 boeken ook al in minder dozen? Zoek het kleinste aantal dat genoeg is."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel volle dozen kun je vullen?", tekst: "45 ÷ 6 vertelt je hoeveel dozen je helemaal kunt vullen, en hoeveel boeken daarna nog over zijn." },
@@ -438,7 +438,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Een winkel verpakt 29 mokken in dozen van 4: ook de laatste, half-gevulde doos gaat mee de verzending in." }],
           basiskennis: [{ onderwerp: "Rest krijgt een eigen doos", uitleg: "Bij 'hoeveel dozen nodig' telt de rest altijd als een extra, niet-volle doos." }],
           niveaus: {
-            basis: "7 volle dozen (42), 3 over → nog 1 doos = 8.",
+            basis: "Reken uit hoe vaak 6 in 45 past. Blijven er boeken over? Die moeten ook in een doos.",
             simpeler: "Passen 45 boeken in 7 dozen (42)? Nee, dus eentje extra.",
             nogSimpeler: "42 boeken in 7 dozen, en die laatste 3?",
           },
@@ -452,7 +452,7 @@ const steps = [
         wrongHints: [
           null,
           "Dan hebben 3 kinderen geen slaapplek.",
-          "Passen 31 kinderen al in minder tenten? Reken 8 × 4.",
+          "Passen alle 31 kinderen ook al in minder tenten? Zoek het kleinste aantal dat genoeg is.",
           "Een aantal tenten is een heel getal.",
         ],
         uitlegPad: {
@@ -486,7 +486,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 volle tenten (28 kinderen), 3 over → nog 1 tent = 8.",
+            basis: "Reken uit hoe vaak 4 in 31 past. Heeft dan elk kind een slaapplek?",
             simpeler: "Passen 31 kinderen in 7 tenten van 4? Nee, er blijven er 3 over.",
             nogSimpeler: "28 kinderen in 7 tenten, en die laatste 3?",
           },
@@ -499,7 +499,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel euro heb je na 8 weken? Is dat al €50?",
-          "Had je een week eerder ook al genoeg?",
+          "Is dat echt de eerste week waarin je genoeg hebt?",
           "Een aantal weken is een heel getal.",
         ],
         uitlegPad: {
@@ -533,7 +533,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 weken = €48 (te weinig), 9 weken = €54 (genoeg).",
+            basis: "Reken voor een paar weken uit hoeveel je hebt: aantal weken × €6. Zoek de eerste week waarin je €50 of meer hebt.",
             simpeler: "Heb je na 8 weken (€48) genoeg voor €50? Nee, dus eentje erbij.",
             nogSimpeler: "Is €48 genoeg voor €50?",
           },
@@ -580,7 +580,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 volle tafels (36 gasten), 4 over → nog 1 tafel = 7.",
+            basis: "Reken uit hoe vaak 6 in 40 past. Blijven er daarna nog gasten staan?",
             simpeler: "Passen 40 gasten aan 6 tafels van 6? Nee, er blijven er 4 over.",
             nogSimpeler: "36 gasten aan 6 tafels, en die laatste 4?",
           },
@@ -593,7 +593,7 @@ const steps = [
         wrongHints: [
           null,
           "Dan krijgen niet alle leerlingen een krentenbol.",
-          "Hoeveel krentenbollen heb je met 5 zakken? Is dat al genoeg?",
+          "Is dat het kleinste aantal zakken dat genoeg is?",
           "Je koopt een heel aantal zakken.",
         ],
         uitlegPad: {
@@ -627,7 +627,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 zakken = 20 krentenbollen (te weinig), 5 zakken = 25 (genoeg).",
+            basis: "Reken uit hoe vaak 5 in 23 past. Heeft dan elke leerling een krentenbol?",
             simpeler: "Heeft de juf met 4 zakken (20 stuks) genoeg voor 23 leerlingen? Nee.",
             nogSimpeler: "Is 20 genoeg voor 23?",
           },

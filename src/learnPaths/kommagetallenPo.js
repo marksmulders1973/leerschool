@@ -660,7 +660,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 1,35 + € 2,40 = € 3,75.",
+            basis: "Zet de komma's recht onder elkaar. Tel eerst de centen bij elkaar op en daarna de hele euro's.",
             simpeler: "Tel de centen: 35 + 40 = 75. Tel de euro's: 1 + 2 = 3. Samen € 3,75.",
             nogSimpeler: "€ 3,75",
           },
@@ -707,7 +707,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7,3 = 7,30.",
+            basis: "In 7,3 staat de 3 op de plek van de tienden. Bij welk getal staat de 3 nog steeds op die plek, zonder dat er iets anders verandert?",
             simpeler: "Een nul achteraan verandert niets. Dus 7,3 en 7,30 zijn even groot.",
             nogSimpeler: "7,30",
           },
@@ -754,7 +754,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8,5 − 2,25 = 6,25.",
+            basis: "Schrijf 8,5 als 8,50, zodat beide getallen twee cijfers achter de komma hebben. Zet de komma's onder elkaar en trek dan af.",
             simpeler: "Schrijf 8,50 − 2,25. 50 − 25 = 25, 8 − 2 = 6. Dus 6,25.",
             nogSimpeler: "6,25",
           },
