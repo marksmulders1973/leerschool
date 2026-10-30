@@ -190,16 +190,16 @@ const steps = [
     checks: [
       {
         q: "In het woordenboek: welk woord komt **eerst** alfabetisch?",
-        options: ["aap","appel","auto","azijn"],
+        options: ["kaal","kaars","kaart","kaas"],
         answer: 0,
-        wrongHints: [null, "Appel begint met a-p. Is er een woord waarvan de tweede letter nog eerder in het alfabet komt?", "Auto begint met a-u. De u staat ver achter in het alfabet. Kijk naar de tweede letter van de andere woorden.", "Azijn begint met a-z. De z is de laatste letter van het alfabet, dus azijn komt juist achteraan."],
+        wrongHints: [null, "Alle woorden beginnen met kaa-. Vergelijk de vierde letter van elk woord. Is de r de vroegste letter?", "Kaars en kaart beginnen allebei met kaar-. Kaars komt al vóór kaart. Kan kaart dan het eerst komen?", "De s staat ver achter in het alfabet. Kijk naar de vierde letter van de andere woorden."],
         uitlegPad: {
-          stappen: [{ titel: "Tweede letter vergelijken", tekst: "Alle 4 beginnen met **a**. Kijk dan naar 2e letter: aap (**a**), appel (**p**), auto (**u**), azijn (**z**). A < P < U < Z dus 'aap' eerst." }],
+          stappen: [{ titel: "Tweede letter vergelijken", tekst: "Alle vier de woorden beginnen met **kaa**. Kijk dan naar de vierde letter: kaal (**l**), kaars (**r**), kaart (**r**), kaas (**s**). De l komt vóór de r en de s in het alfabet, dus 'kaal' komt eerst." }],
           woorden: [{ woord: "alfabetisch", uitleg: "Volgorde A-B-C-D...Z." }],
           theorie: "Eerste letter hetzelfde? → tweede letter. Tweede ook hetzelfde? → derde letter. Etc.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'kat' < 'koe' want a < o in 2e letter." }],
           basiskennis: [{ onderwerp: "Alfabet onthouden", uitleg: "Bij twijfel: zing het ABC-liedje door. a-b-c-d-e-f-g, h-i-j-k-l-m-n-o-p..." }],
-          niveaus: { basis: "aap eerst (aa<ap<au<az).", simpeler: "Alle a-, dan 2e letter: a<p<u<z. → aap.", nogSimpeler: "Aap." },
+          niveaus: { basis: "De eerste drie letters zijn bij alle woorden hetzelfde. Vergelijk daarom de vierde letter.", simpeler: "De vierde letters zijn l, r, r en s. Welke letter komt het eerst in het alfabet?", nogSimpeler: "Kaal." },
         },
       },
       {
@@ -503,24 +503,24 @@ const steps = [
         q: "In een bibliotheek vind je **een spannende roman over een speurder**. Waar zoek je?",
         options: ["Bij fictie","Bij non-fictie","Bij naslag","Bij stripboeken"],
         answer: 0,
-        wrongHints: [null, "Non-fictie = waar gebeurd. Roman = verzonnen.", "Naslag = woordenboeken/encyclopedieën.", "Is een roman een strip met plaatjes?"],
+        wrongHints: [null, "Bij non-fictie staan boeken over echte dingen. Is een roman over een speurder echt gebeurd?", "Bij naslag staan boeken om iets in op te zoeken, zoals een woordenboek. Lees je een roman zo?", "Is een roman een strip met plaatjes?"],
         uitlegPad: {
           stappen: [{ titel: "Roman = fictie", tekst: "Romans = **verhalen, verzonnen** = fictie-afdeling. Daar staan ze **alfabetisch op achternaam schrijver**. Bv. 'A. Achterberg' bij A, 'B. de Beer' bij B." }],
           woorden: [{ woord: "fictie", uitleg: "Verzonnen verhaal (roman, sprookje, sciencefiction)." }, { woord: "non-fictie", uitleg: "Echt gebeurd / feiten (geschiedenis, biografie, naslag)." }],
           theorie: "Fictie → alfabetisch schrijver. Non-fictie → onderwerp/classificatie-nummer.",
-          niveaus: { basis: "Fictie, alfabetisch schrijver.", simpeler: "Verzonnen verhaal = fictie.", nogSimpeler: "Fictie" },
+          niveaus: { basis: "Is een roman een echt gebeurd verhaal of een verzonnen verhaal?", simpeler: "Verzonnen verhalen staan in de bibliotheek bij elkaar. Hoe heet die afdeling?", nogSimpeler: "Fictie" },
         },
       },
       {
         q: "Wat staat er in een **glossarium** van een schoolboek?",
-        options: ["Moeilijke woorden + uitleg","De hoofdstukken op volgorde","De namen van de schrijvers","Kaarten van alle landen"],
+        options: ["Moeilijke woorden met uitleg","De hoofdstukken op volgorde","De namen van de schrijvers","Kaarten van alle landen"],
         answer: 0,
-        wrongHints: [null, "Hoofdstukken zijn in inhoudsopgave.", "Schrijvers in bibliografie.", "Kaarten zijn in atlas of bijlage."],
+        wrongHints: [null, "De hoofdstukken op volgorde vind je vooraan in het boek. Heet dat deel een glossarium?", "Wie het boek schreef, staat op de kaft of op de eerste bladzijden. Is dat een glossarium?", "Kaarten van landen zoek je in een atlas. Is een glossarium een atlas?"],
         uitlegPad: {
           stappen: [{ titel: "Glossarium = mini-woordenboek", tekst: "Een **glossarium** is een **woordenlijst** achterin een boek met de **moeilijke vak-woorden** + **uitleg**. Bv. bij geschiedenis-boek: 'feodalisme = systeem waarbij...'" }],
-          woorden: [{ woord: "glossarium", uitleg: "Lijst van moeilijke woorden + uitleg in een boek (vakwoordenboek)." }],
+          woorden: [{ woord: "glossarium", uitleg: "Lijst van moeilijke woorden met hun uitleg, achterin een boek (een soort klein woordenboek)." }],
           theorie: "toetsvraag-soms: 'Wat is het verschil tussen glossarium en index?' → glossarium geeft BETEKENIS van vakwoord, index geeft PAGINA.",
-          niveaus: { basis: "Glossarium = vakwoorden + uitleg.", simpeler: "Moeilijke woorden achterin = glossarium.", nogSimpeler: "Vakwoorden" },
+          niveaus: { basis: "Een glossarium lijkt op een klein woordenboek achterin het boek. Wat staat er in een woordenboek?", simpeler: "In een woordenboek zoek je op wat een woord betekent. Welk antwoord past daarbij?", nogSimpeler: "Moeilijke woorden met uitleg" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -549,8 +549,8 @@ const steps = [
           ],
           theorie: "Hoofdstuk + bladzijde = inhoudsopgave. Trefwoord + bladzijden = index.",
           niveaus: {
-            basis: "Index.",
-            simpeler: "Woord met bladzijden erachter = index.",
+            basis: "Achter het woord 'vulkaan' staan alleen bladzijden. In welk deel van een boek zoek je op waar een woord voorkomt?",
+            simpeler: "Achterin een boek staat een lijst met woorden van A tot Z en bladzijden erachter. Hoe heet die lijst?",
             nogSimpeler: "Index",
           },
           voorbeelden: [
@@ -581,8 +581,8 @@ const steps = [
           ],
           theorie: "In welk hoofdstuk staat iets? → inhoudsopgave (vooraan).",
           niveaus: {
-            basis: "Inhoudsopgave.",
-            simpeler: "Hoofdstukken zoeken = inhoudsopgave.",
+            basis: "Je zoekt een hoofdstuk. In welk deel van een boek staan alle hoofdstukken op een rij?",
+            simpeler: "Vooraan in een boek staat een lijst met alle hoofdstukken en hun bladzijde. Hoe heet die lijst?",
             nogSimpeler: "Inhoudsopgave",
           },
           voorbeelden: [
@@ -613,8 +613,8 @@ const steps = [
           ],
           theorie: "Vooraan = inhoudsopgave. Achterin = index.",
           niveaus: {
-            basis: "Achterin.",
-            simpeler: "Index = achteraan in het boek.",
+            basis: "Vooraan in een boek staat de inhoudsopgave. De index is een andere lijst. Waar zou die dan staan?",
+            simpeler: "Je zoekt 'olifant' op in de index van een dierenboek. Blader je dan naar de eerste of naar de laatste bladzijden?",
             nogSimpeler: "Achterin",
           },
           voorbeelden: [
@@ -650,8 +650,8 @@ const steps = [
           ],
           theorie: "Inhoudsopgave = op volgorde van het boek. Index = op alfabet.",
           niveaus: {
-            basis: "Op alfabet.",
-            simpeler: "Index werkt als een woordenboek: A tot Z.",
+            basis: "Je wilt in een index snel één woord vinden. Hoe zijn de woorden in een woordenboek geordend?",
+            simpeler: "In een woordenboek staat 'appel' vóór 'banaan'. Welke volgorde is dat?",
             nogSimpeler: "Alfabet",
           },
           voorbeelden: [
@@ -687,8 +687,8 @@ const steps = [
           ],
           theorie: "Fictie (verzonnen) → op schrijver, alfabetisch. Non-fictie (echt) → op onderwerp.",
           niveaus: {
-            basis: "Op onderwerp.",
-            simpeler: "Echte-dingen-boek = non-fictie = op onderwerp.",
+            basis: "Een boek over planeten is non-fictie: het gaat over echte dingen. Hoe vind je zulke boeken het snelst terug?",
+            simpeler: "Je zoekt boeken óver planeten, niet van een bepaalde schrijver. Waarop zijn ze dan geordend?",
             nogSimpeler: "Onderwerp",
           },
           voorbeelden: [

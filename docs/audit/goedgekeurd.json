@@ -2063,6 +2063,70 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 1",
+  "hash": "6b34dca21c575e8d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar raadbaar door absurde afleiders (meme, forum); basis noemde KNMI."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 2",
+  "hash": "63113f17fad14775",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar raadbaar door absurde afleiders (grapje, verzonnen verhaal, reclamefolder); basis noemde antwoord."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 3",
+  "hash": "189d394f2ad6d5b9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis was de juiste optie."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 4",
+  "hash": "ad1d12359211e283",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis was de juiste optie."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 5",
+  "hash": "f369a76018b6f50b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar raadbaar door absurde afleiders (snoepreclame, grappig filmpje zonder uitleg); basis noemde tandarts."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 6",
+  "hash": "a70adc27f381daea",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde het antwoord."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 7",
+  "hash": "38692ff4be495895",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis was de juiste optie."
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 8",
+  "hash": "989eff102e9323dc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; 'verzonnen film' maakt het raadbaar; basis noemde encyclopedie."
+ },
+ {
   "waar": "breuken-po stap 2 vraag 1",
   "hash": "f478d1f0a4634756",
   "oordeel": "twijfel",
@@ -4846,6 +4910,70 @@
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 09 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 2",
+  "hash": "93175fb6cd4af4b7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis was letterlijk de juiste optie."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 3",
+  "hash": "f001104c0854800f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde de juiste zin als mening."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 4",
+  "hash": "e613973e137f6087",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; hint 'Een zin is óf feit óf mening' is te stellig; basis/simpeler gaven 'mening'."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 5",
+  "hash": "7673a8bdaff4bb79",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde 'spannender' als mening."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 6",
+  "hash": "9b6451a2852767dd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis/simpeler gaven de reden (= juiste optie)."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 7",
+  "hash": "5f79a506b7ccf511",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf 'allebei een mening'."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 8",
+  "hash": "ceee093087dbce32",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde de juiste zin."
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 9",
+  "hash": "47de4ec8619589f1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis was de juiste optie."
  },
  {
   "waar": "feit-mening-po stap 3 vraag 1",
@@ -8509,6 +8637,44 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 4",
+  "hash": "c071d625378d9914",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (punt bij waarschuwing is zwakker, niet fout); basis/simpeler noemden uitroepteken."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 6",
+  "hash": "e6f2b24259fae80d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis/simpeler noemden 'punt'."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 7",
+  "hash": "a448006e939cb7fa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis/simpeler noemden 'vraagteken'."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 8",
+  "hash": "ca9343452373f6e9",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 9",
+  "hash": "df5392f8c85ab828",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "leestekens-hoofdletters-po stap 3 vraag 7",
   "hash": "b88db51995ffc944",
   "oordeel": "goed",
@@ -11148,6 +11314,70 @@
   "reden": "Antwoord klopt; niveaus telegramstijl ('Dus/daarom')."
  },
  {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 1",
+  "hash": "9dc07efae97844bf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis rekende het antwoord (100 cm) al voor."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 2",
+  "hash": "a14196b134e7711e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde 1.000 als antwoord."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 3",
+  "hash": "2fc049c298dad0a4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (50.000 cm = 500 m); niveaus.basis gaf de uitkomst."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 4",
+  "hash": "74c8c8f98d0c9d70",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde 1 : 100.000."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 5",
+  "hash": "a8eafc0ba9226bf9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis noemde 200 als antwoord."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 6",
+  "hash": "8b79560b3eb2d9c4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (10.000 cm = 100 m); niveaus.basis gaf de uitkomst."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 7",
+  "hash": "edfd996725480453",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (500 cm = 5 m); basis gaf uitkomst en de meest gemaakte fout (500 m, niet omgerekend) had geen hint."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 8",
+  "hash": "33604ca89412c00e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (200.000 cm = 2 km); basis gaf uitkomst en 200 km (gedeeld door 1.000) had geen hint."
+ },
+ {
   "waar": "schaal-kaart-rekenen-po stap 2 vraag 9",
   "hash": "371b9de30fc0fbf3",
   "oordeel": "goed",
@@ -13011,6 +13241,55 @@
   "hash": "72aa6e1e4e89cc4c",
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 10",
+  "hash": "df29219f6e09be8e",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 3",
+  "hash": "7cf0fe4c921dafd9",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 5",
+  "hash": "9bff54dfb42d054e",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 6",
+  "hash": "ea9f7eceb392869c",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 7",
+  "hash": "a6e72ffeec1bc7e3",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 8",
+  "hash": "313febc7e6d602e4",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 9",
+  "hash": "9711581173f2647b",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

@@ -836,15 +836,15 @@ const steps = [
             { woord: "gangbaar", uitleg: "Wat normaal of vaak wordt gezegd in het Nederlands." },
             { woord: "bijvoeglijk naamwoord", uitleg: "Woord dat iets vertelt over een ander woord (mooi huis, oude man)." },
           ],
-          theorie: "Toets-truc 'past het beste': bedenk welke combi je het vaakst in een boek of krant zou lezen. *'Oude man'* = duizenden boeken. *'Drukke man'* die voorzichtig oversteekt = vreemd. Kies de natuurlijkste, niet de meest letterlijk-kloppende.",
+          theorie: "Toets-truc 'past het beste': bedenk welke combi je het vaakst in een boek of krant zou lezen. *'Oude man'* = duizenden boeken. Een *'drukke man'* die voorzichtig oversteekt, klinkt vreemd. Kies de natuurlijkste, niet de meest letterlijk-kloppende.",
           voorbeelden: [
             { type: "stap", tekst: "*'De ___ kat sliep op de bank.'* Opties: dikke / boze / snelle / luide. **Dikke** past het beste — dat is een gangbaar beeld bij slapende kat." },
             { type: "stap", tekst: "*'Het was een ___ feest.'* Opties: gezellig / koud / klein / vies. **Gezellig** past het beste — typisch woord bij een feest." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Lees in je hoofd elke optie in de zin. Klinkt het natuurlijk — alsof je het zo in een verhaal zou kunnen vertellen? Kies die optie." }],
           niveaus: {
-            basis: "Oude man = gangbaar beeld bij oversteken.",
-            simpeler: "Welke past in een echt verhaal? 'Oude man steekt straat over' = ja, vaak. De andere: zelden of nooit.",
+            basis: "Lees de hele zin nog eens. Hoe steekt de man de straat over?",
+            simpeler: "Welk woord past bij iemand die langzaam en voorzichtig loopt?",
             nogSimpeler: "Oude",
           },
         },

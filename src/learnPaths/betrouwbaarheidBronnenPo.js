@@ -574,18 +574,18 @@ const steps = [
         q: "Je maakt een werkstuk over het weer en klimaat. Welke bron is het best?",
         options: [
           "het weerinstituut KNMI",
-          "een mening op een forum",
+          "een blog van een hobbyweerman",
           "een advertentie voor regenjassen",
-          "een grappig weer-meme",
+          "een filmpje van een vlogger",
         ],
         answer: 0,
-        wrongHints: [null, "Een mening op een forum is niet per se juist.", "Een advertentie wil verkopen.", "Een meme is voor de lol, geen betrouwbare info."],
+        wrongHints: [null, "Een hobbyweerman weet misschien veel, maar wie controleert wat hij schrijft?", "Een advertentie wil verkopen.", "Een vlogger wil vooral dat je kijkt. Is hij een deskundige?"],
         uitlegPad: {
           stappen: [{ titel: "Officieel instituut", tekst: "Het KNMI is het officiële weer- en klimaatinstituut met deskundige, gecontroleerde informatie." }],
           niveaus: {
-            basis: "Het KNMI is de officiële, deskundige bron over het weer.",
+            basis: "Kies een bron die deskundig is en haar informatie controleert.",
             simpeler: "Welke bron heeft er echt verstand van het weer?",
-            nogSimpeler: "Wie weet het meest over het weer: het KNMI of een forum?",
+            nogSimpeler: "Wie weet het meest over het weer: het KNMI of een vlogger?",
           },
         },
       },
@@ -593,17 +593,17 @@ const steps = [
         q: "Voor de hoofdstad van een land, welke bron is het betrouwbaarst?",
         options: [
           "een atlas of encyclopedie",
-          "een grapje van een klasgenoot",
-          "een reclamefolder",
-          "een verzonnen verhaal",
+          "wat een klasgenoot denkt",
+          "een vakantiefolder",
+          "een spannend avonturenboek",
         ],
         answer: 0,
-        wrongHints: [null, "Een grapje is geen betrouwbare bron.", "Reclame gaat niet over aardrijkskunde-feiten.", "Een verhaal is verzonnen."],
+        wrongHints: [null, "Een klasgenoot kan zich vergissen. Heeft hij het nagekeken?", "Een vakantiefolder wil je een reis verkopen. Is dat een boek om feiten in op te zoeken?", "Een avonturenboek is een verzonnen verhaal. Klopt alles daarin?"],
         uitlegPad: {
           stappen: [{ titel: "Naslagwerk", tekst: "Een atlas of encyclopedie geeft gecontroleerde, feitelijke informatie over landen en hoofdsteden." }],
           niveaus: {
-            basis: "Een atlas/encyclopedie is betrouwbaar voor zulke feiten.",
-            simpeler: "Waar zoek je een hoofdstad op: een atlas of een grapje?",
+            basis: "Zoek een bron waarin feiten over landen gecontroleerd zijn opgeschreven.",
+            simpeler: "Zoek je een hoofdstad op in een naslagwerk, of in iets wat iemand zomaar zegt?",
             nogSimpeler: "Welke is een naslagwerk met feiten?",
           },
         },
@@ -621,7 +621,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Gecontroleerde info", tekst: "Officiële bronnen controleren hun informatie en zijn verantwoordelijk voor wat ze publiceren — daarom betrouwbaar." }],
           niveaus: {
-            basis: "Officiële bronnen controleren hun informatie zorgvuldig.",
+            basis: "Denk aan de mensen achter een officiële website. Wat doen zij voordat ze iets op de site zetten?",
             simpeler: "Waarom vertrouw je de overheid eerder dan een willekeurige site?",
             nogSimpeler: "Controleert een officiële bron zijn informatie?",
           },
@@ -640,7 +640,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie & waarom", tekst: "De belangrijkste vraag is: wie heeft het geschreven en met welk doel (informeren of verkopen)?" }],
           niveaus: {
-            basis: "Vraag eerst: wie zegt dit en waarom?",
+            basis: "Wat zegt het meest over of een bron klopt: hoe hij eruitziet, of van wie hij komt?",
             simpeler: "Wat zegt het meest over betrouwbaarheid: de auteur of de kleur?",
             nogSimpeler: "Is 'wie schreef het?' een goede eerste vraag?",
           },
@@ -650,17 +650,17 @@ const steps = [
         q: "Voor een spreekbeurt over gezonde tanden, welke bron is het best?",
         options: [
           "een tandarts",
-          "een snoepreclame",
-          "een grappig filmpje zonder uitleg",
-          "een losse mening op social media",
+          "een tandpastareclame",
+          "een vlog van een influencer",
+          "een reactie op social media",
         ],
         answer: 0,
-        wrongHints: [null, "Een snoepreclame wil verkopen.", "Een grappig filmpje leert je niets betrouwbaars.", "Een losse mening is niet per se waar."],
+        wrongHints: [null, "Een reclame wil je iets verkopen. Is dat de beste bron?", "Een influencer wil vooral kijkers. Weet hij echt veel over tanden?", "Een reactie kan iedereen schrijven, ook iemand die er niets van weet."],
         uitlegPad: {
           stappen: [{ titel: "Deskundige bron", tekst: "Een tandarts heeft echte kennis over gezonde tanden en wil je niets verkopen." }],
           niveaus: {
-            basis: "Een tandarts is de deskundige bron.",
-            simpeler: "Welke bron heeft er verstand van én verkoopt niets?",
+            basis: "Kies iemand die er echt voor heeft geleerd en je niets wil verkopen.",
+            simpeler: "Wie heeft voor zijn werk elke dag met tanden te maken?",
             nogSimpeler: "Wie weet het meest over tanden: een tandarts of een reclame?",
           },
         },
@@ -678,8 +678,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Reclame-taal = waarschuwing", tekst: "Uitroeptekens en 'koop nu!' horen bij reclame. Auteur, bronvermelding en een recente datum zijn juist góede tekens." }],
           niveaus: {
-            basis: "'Koop nu!' met uitroeptekens is geen teken van betrouwbaarheid.",
-            simpeler: "Welk kenmerk hoort bij reclame in plaats van bij een betrouwbare bron?",
+            basis: "Drie van de kenmerken horen bij een goede bron. Welk kenmerk hoort juist bij reclame?",
+            simpeler: "Wat zie je vaak in een reclamefolder?",
             nogSimpeler: "Is 'koop nu!!!' een teken van een betrouwbare bron?",
           },
         },
@@ -697,7 +697,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Controleerbaar", tekst: "Met een bronnenlijst kun je zelf nakijken waar de informatie vandaan komt — dat maakt het betrouwbaarder." }],
           niveaus: {
-            basis: "Een bronnenlijst laat je nacontroleren waar de info vandaan komt.",
+            basis: "Stel dat je wilt weten of het artikel klopt. Wat kun je dan met zo'n lijst doen?",
             simpeler: "Helpt een bronnenlijst om de informatie te checken?",
             nogSimpeler: "Kun je met bronnen nakijken of iets klopt?",
           },
@@ -708,12 +708,12 @@ const steps = [
         q: "Je spreekbeurt gaat over de planeet Mars. Welke bron kies je?",
         options: [
           "een encyclopedie over het heelal",
-          "een verzonnen film over Mars",
+          "een sciencefictionfilm over Mars",
           "een advertentie voor een telescoop",
           "een reactie onder een filmpje",
         ],
         answer: 0,
-        wrongHints: [null, "Is een verzonnen film bedoeld om feiten te geven?", "Een advertentie wil je een telescoop verkopen.", "Een reactie kan iedereen schrijven, ook iemand die er niets van weet."],
+        wrongHints: [null, "Een sciencefictionfilm is verzonnen. Is hij bedoeld om feiten te geven?", "Een advertentie wil je een telescoop verkopen.", "Een reactie kan iedereen schrijven, ook iemand die er niets van weet."],
         uitlegPad: {
           stappen: [
             {
@@ -722,7 +722,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een encyclopedie geeft gecontroleerde feiten over Mars.",
+            basis: "Kies een bron die feiten geeft en controleert, en die niets wil verkopen.",
             simpeler: "Welke bron controleert haar informatie?",
             nogSimpeler: "Waar vind je feiten: in een encyclopedie of in een advertentie?",
           },

@@ -362,7 +362,7 @@ const steps = [
     explanation: "Praktijk-sommen waar je omtrek en oppervlakte gebruikt:\n\n**Voorbeeld 1 — hek om tuin**:\n*'Een tuin is 12 m × 8 m. Hoeveel meter hek heb je nodig?'*\n• Hek = **omtrek** = 2 × (12 + 8) = **40 m**.\n\n**Voorbeeld 2 — gras zaaien**:\n*'Een grasveld 15 m × 10 m. Hoeveel m² gras nodig?'*\n• Gras = **oppervlakte** = 15 × 10 = **150 m²**.\n\n**Voorbeeld 3 — rand om foto**:\n*'Een foto 20 cm × 15 cm wordt omlijnd. Hoeveel cm lijst nodig?'*\n• Lijst = **omtrek** = 2 × (20 + 15) = **70 cm**.\n\n**Voorbeeld 4 — tegels**:\n*'Een vloer 6 m × 4 m wordt betegeld met tegels van 50 × 50 cm. Hoeveel tegels nodig?'*\n• Vloer = 6 × 4 = 24 m² = 240.000 cm².\n• Tegel = 50 × 50 = 2.500 cm².\n• Aantal: 240.000 ÷ 2.500 = **96 tegels**.\n\n**toetsvraag — kies juiste maat**:\n• 'Hek', 'lijst', 'rand' → **omtrek**.\n• 'Gras', 'tegels', 'verf', 'tapijt' → **oppervlakte**.\n\n**Veel-voorkomende fout**:\nOmtrek en oppervlakte verwarren. Vraag: meet je *langs de rand* (omtrek) of *over het hele vlak* (oppervlakte)?",
     checks: [
       {
-        q: "Een **tuin van 18 × 12 m** krijgt een hek eromheen. Hoeveel **meter hek** is nodig?",
+        q: "Een tuin is **18 m** lang en **12 m** breed. Er komt een hek omheen. Hoeveel **meter hek** is nodig?",
         options: ["60 m","216 m","30 m","6 m"],
         answer: 0,
         wrongHints: [null,"Dat is oppervlakte, niet omtrek.","Dat zijn maar twee zijden. Het hek gaat rondom de hele tuin.","Dat is 18 − 12. Het hek gaat rondom: moet je dan aftrekken?"],
@@ -372,11 +372,11 @@ const steps = [
           theorie: "Praktijk-truc: 'rondom' = omtrek. Rechthoek-omtrek = 2(L+B).",
           voorbeelden: [{ type: "stap", tekst: "18+12 = 30 (halve omtrek). ×2 = 60 m hek." }],
           basiskennis: [{ onderwerp: "Niet oppervlakte", uitleg: "Hek = lengte (m), niet vlak (m²). 18×12 = oppervlakte." }],
-          niveaus: { basis: "60 m.", simpeler: "Hek = omtrek. Omtrek = 2×(18+12) = 2×30 = 60 m.", nogSimpeler: "60" },
+          niveaus: { basis: "Het hek gaat langs alle vier de zijden van de tuin. Dat is de omtrek.", simpeler: "Omtrek = 2 × (lengte + breedte). Vul 18 en 12 in.", nogSimpeler: "60 m" },
         },
       },
       {
-        q: "Een **kamer 5 × 4 m** krijgt een nieuwe vloer. Hoeveel **m² vloer**?",
+        q: "Een kamer is **5 m** lang en **4 m** breed. Hij krijgt een nieuwe vloer. Hoeveel **m² vloer** is nodig?",
         options: ["20 m²","18 m²","9 m²","40 m²"],
         answer: 0,
         wrongHints: [null,"Heb je de zijden opgeteld? Dat is de rand, niet de vloer.","Dat is 5 + 4. Bij oppervlakte tel je niet op.","Heb je nog eens × 2 gedaan? Dat hoort niet bij oppervlakte."],
@@ -386,7 +386,7 @@ const steps = [
           theorie: "Praktijk-truc: 'vloer/gras/verf/tegels' = oppervlakte. Rechthoek = L×B.",
           voorbeelden: [{ type: "stap", tekst: "5×4 = 20 m² vloer (oppervlakte)." }],
           basiskennis: [{ onderwerp: "Eenheid", uitleg: "Oppervlakte ALTIJD m². 'm' zonder ² = lengte (omtrek)." }],
-          niveaus: { basis: "20 m².", simpeler: "Vloer = oppervlakte = L×B = 5×4 = 20 m² (let op eenheid m²).", nogSimpeler: "20 m²" },
+          niveaus: { basis: "Een vloer bedekt het hele vlak. Dan reken je de oppervlakte uit: lengte × breedte.", simpeler: "Reken 5 × 4 uit en schrijf er m² achter.", nogSimpeler: "20 m²" },
         },
       },
       {
@@ -400,7 +400,7 @@ const steps = [
           theorie: "Vierkant-omtrek = 4 × zijde.",
           voorbeelden: [{ type: "stap", tekst: "4 × 6 = 24 m." }],
           basiskennis: [{ onderwerp: "Niet oppervlakte", uitleg: "36 m² = oppervlakte (6×6). Vraag wil omtrek (m)." }],
-          niveaus: { basis: "24 m.", simpeler: "Vierkant 4 × zijde = 4×6 = 24 m omtrek.", nogSimpeler: "24" },
+          niveaus: { basis: "Een vierkant heeft vier even lange zijden. De omtrek is alle zijden bij elkaar.", simpeler: "Omtrek van een vierkant = 4 × zijde. Reken 4 × 6 uit.", nogSimpeler: "24 m" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -441,8 +441,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een rand van lint om een prikbord.",
-            simpeler: "Lint gaat rondom, langs de rand. Dat is omtrek.",
+            basis: "Bij omtrek ga je langs de rand. Bij welke klus werk je alleen langs de rand?",
+            simpeler: "Stel je elke klus voor. Bij welke ga je alleen langs de buitenkant, en niet over het hele vlak?",
             nogSimpeler: "Lint",
           },
         },
@@ -455,7 +455,7 @@ const steps = [
           null,
           "Dat is de lengte van de rand. Gras ligt op het hele veld.",
           "Bij oppervlakte tel je niet op.",
-          null,
+          "Heb je de goede tafel gebruikt? Reken de keersom nog eens rustig na.",
         ],
         uitlegPad: {
           stappen: [
@@ -484,9 +484,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "63 m².",
-            simpeler: "Gras = oppervlakte = 9 × 7 = 63 m².",
-            nogSimpeler: "63",
+            basis: "Graszoden bedekken het hele veld. Dan reken je de oppervlakte uit: lengte × breedte.",
+            simpeler: "Reken 9 × 7 uit en schrijf er m² achter.",
+            nogSimpeler: "63 m²",
           },
         },
       },
@@ -494,7 +494,7 @@ const steps = [
         q: "Een foto is **30 cm × 20 cm**. Er komt een lijst **rondom**. Hoeveel cm lijst heb je nodig?",
         options: ["100 cm", "600 cm", "50 cm", "80 cm"],
         answer: 0,
-        wrongHints: [null, "Dat is de oppervlakte van de foto.", "Dat is maar de helft van de rand.", null],
+        wrongHints: [null, "Dat is de oppervlakte van de foto.", "Dat is maar de helft van de rand.", "Tel je alle vier de zijden mee, twee lange en twee korte?"],
         uitlegPad: {
           stappen: [
             {
@@ -522,9 +522,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "100 cm.",
-            simpeler: "Lijst = omtrek = 2 × (30 + 20) = 100 cm.",
-            nogSimpeler: "100",
+            basis: "De lijst gaat langs alle vier de zijden van de foto: twee lange en twee korte.",
+            simpeler: "Omtrek = 2 × (lengte + breedte). Vul 30 en 20 in.",
+            nogSimpeler: "100 cm",
           },
         },
       },
@@ -535,7 +535,7 @@ const steps = [
         wrongHints: [
           null,
           "Hoeveel zijden heeft een vierkant?",
-          null,
+          "Dat zijn maar drie zijden. Tape je echt langs alle zijden?",
           "Tape gaat langs de rand, niet over het vlak.",
         ],
         uitlegPad: {
@@ -565,9 +565,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "320 cm.",
-            simpeler: "Vierkant heeft 4 zijden van 80 cm: 4 × 80 = 320 cm.",
-            nogSimpeler: "320",
+            basis: "Het tafelblad heeft vier even lange zijden. De tape gaat langs alle vier.",
+            simpeler: "Omtrek van een vierkant = 4 × zijde. Reken 4 × 80 uit.",
+            nogSimpeler: "320 cm",
           },
         },
       },

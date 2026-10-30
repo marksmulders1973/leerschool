@@ -37,7 +37,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Op een plattegrond van school staat de gang 1 cm lang. Bij schaal 1 : 500 reken je uit hoe lang de gang in het echt is door met 500 te vermenigvuldigen." }],
           basiskennis: [{ onderwerp: "Verhoudingen", uitleg: "Een schaal is een verhouding tussen twee lengtes: kaart-lengte staat tot echte lengte." }],
           niveaus: {
-            basis: "Het tweede getal (100) zegt hoeveel cm echt bij 1 cm op de kaart hoort: 100 cm.",
+            basis: "Het getal na de dubbele punt zegt hoeveel cm in het echt bij 1 cm op de kaart hoort.",
             simpeler: "1 cm op de kaart = … cm echt? Kijk naar het getal achter de dubbele punt.",
             nogSimpeler: "Wat staat er na de '1 :' ?",
           },
@@ -58,7 +58,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Een speelgoedauto op schaal 1 : 18 is achttien keer kleiner dan de echte auto — elk onderdeel is even vaak verkleind." }],
           basiskennis: [{ onderwerp: "Verhoudingsgetal", uitleg: "Het getal ná de dubbele punt bij een schaal staat los van de eenheid — het is gewoon een aantal keer." }],
           niveaus: {
-            basis: "Het tweede getal (1.000) is het aantal keer verkleind.",
+            basis: "Het getal na de dubbele punt vertelt hoe vaak alles op de kaart kleiner is gemaakt.",
             simpeler: "Welk getal staat er na de dubbele punt?",
             nogSimpeler: "1 : 1.000 → hoeveel keer kleiner?",
           },
@@ -79,7 +79,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Op een plattegrond van een sportpark met schaal 1 : 20.000 reken je een afstand van 2 cm eerst om naar centimeter in het echt, en pas daarna naar meter." }],
           basiskennis: [{ onderwerp: "Lengte-eenheden", uitleg: "100 centimeter = 1 meter; 1.000 meter = 1 kilometer." }],
           niveaus: {
-            basis: "50.000 cm = 500 m (100 cm = 1 m).",
+            basis: "Bij 1 : 50.000 hoort bij 1 cm op de kaart 50.000 cm in het echt. Reken dat om naar meter: 100 cm is 1 m.",
             simpeler: "1 cm = 50.000 cm. Hoeveel meter is 50.000 cm?",
             nogSimpeler: "50.000 ÷ 100 = ?",
           },
@@ -100,7 +100,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Een wereldkaart heeft een veel groter schaalgetal dan een plattegrond van je eigen straat, want de wereldkaart moet veel meer werkelijkheid op hetzelfde vel papier laten passen." }],
           basiskennis: [{ onderwerp: "Grote getallen vergelijken", uitleg: "Bij getallen zoals 100.000 en 1.000: tel hoeveel cijfers elk getal heeft. Meer cijfers = groter getal." }],
           niveaus: {
-            basis: "1 : 100.000 heeft het grootste getal → het meest verkleind.",
+            basis: "Hoe groter het getal na de dubbele punt, hoe meer de kaart is verkleind.",
             simpeler: "Welk schaalgetal is het grootst?",
             nogSimpeler: "Welk getal is groter: 100.000 of 100?",
           },
@@ -121,7 +121,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Een bouwtekening van een keuken met schaal 1 : 50 laat zien hoe je een kastje van 3 cm op papier omrekent naar de echte breedte." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigen", uitleg: "Kaart-afstand × schaalgetal = echte afstand, allebei in dezelfde eenheid (meestal cm)." }],
           niveaus: {
-            basis: "Het getal na de dubbele punt (200) is de echte lengte in cm bij 1 cm op de kaart.",
+            basis: "Het getal na de dubbele punt zegt hoeveel cm in het echt bij 1 cm op de kaart hoort.",
             simpeler: "1 cm op de kaart = ? cm echt. Kijk naar het getal achter de '1 :'.",
             nogSimpeler: "Wat staat er na de '1 :' in schaal 1 : 200?",
           },
@@ -142,7 +142,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Op een wandelkaart met schaal 1 : 10.000 stelt 3 cm een pad voor dat je in het echt moet omrekenen naar meters om te weten hoe ver je loopt." }],
           basiskennis: [{ onderwerp: "cm naar m", uitleg: "Om van centimeter naar meter te gaan, deel je door 100." }],
           niveaus: {
-            basis: "10.000 cm = 100 m (100 cm = 1 m).",
+            basis: "Bij 1 : 10.000 hoort bij 1 cm op de kaart 10.000 cm in het echt. Reken dat om naar meter: 100 cm is 1 m.",
             simpeler: "1 cm = 10.000 cm. Hoeveel meter is 10.000 cm?",
             nogSimpeler: "10.000 ÷ 100 = ?",
           },
@@ -153,7 +153,7 @@ const steps = [
         q: "Schaal 1 : 500 — 1 cm op de kaart is hoeveel meter in het echt?",
         options: ["5 m", "50 m", "500 m", "0,5 m"],
         answer: 0,
-        wrongHints: [null, "Te veel — hoeveel cm gaan er in 1 m?", null, "Te weinig — 500 cm is meer dan 1 m."],
+        wrongHints: [null, "Te veel — hoeveel cm gaan er in 1 m?", "500 is het aantal centimeters. Heb je dat al omgerekend naar meters?", "Te weinig — 500 cm is meer dan 1 m."],
         uitlegPad: {
           stappen: [
             {
@@ -185,7 +185,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 cm = 500 cm = 5 m.",
+            basis: "Bij 1 : 500 hoort bij 1 cm op de kaart 500 cm in het echt. Hoeveel meter is dat?",
             simpeler: "500 cm is hoeveel meter? Deel door 100.",
             nogSimpeler: "500 ÷ 100 = ?",
           },
@@ -198,7 +198,7 @@ const steps = [
         wrongHints: [
           null,
           "Te veel — hoeveel cm gaan er in 1 km?",
-          null,
+          "Je hebt gedeeld door 1.000. Hoeveel cm gaan er in 1 km?",
           "Te weinig — 200.000 cm is meer dan 1 km.",
         ],
         uitlegPad: {
@@ -232,7 +232,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "200.000 cm = 2 × 100.000 cm = 2 km.",
+            basis: "Bij 1 : 200.000 hoort bij 1 cm op de kaart 200.000 cm in het echt. Onthoud: 100.000 cm is 1 km.",
             simpeler: "Hoe vaak past 100.000 in 200.000?",
             nogSimpeler: "200.000 ÷ 100.000 = ?",
           },

@@ -251,11 +251,11 @@ const steps = [
         q: "Welk leesteken hoort hier? *Wanneer ben je jarig___*",
         options: ["?", ".", "!", ","],
         answer: 0,
-        wrongHints: [null, "Het is geen mededeling — er wordt iets gevraagd.", "Het is geen uitroep.", "Een komma sluit geen zin af."],
+        wrongHints: [null, "Lees de zin hardop. Vertel je iets, of wil je iets weten?", "Het is geen uitroep.", "Een komma sluit geen zin af."],
         uitlegPad: {
           stappen: [{ titel: "Vraagwoord = vraag", tekst: "De zin begint met 'Wanneer', een vraagwoord. Dat maakt het een vraag, dus eindig met een vraagteken." }],
           niveaus: {
-            basis: "Begint de zin met wie/wat/waar/wanneer/hoe/waarom? Dan is het een vraag → vraagteken.",
+            basis: "Begint de zin met wie, wat, waar, wanneer, hoe of waarom? Wat voor soort zin is het dan?",
             simpeler: "Iemand wil iets weten ('wanneer'). Welk teken hoort bij een vraag?",
             nogSimpeler: "Wat zet je achter een vraag?",
           },
@@ -284,11 +284,11 @@ const steps = [
         q: "*Je hebt je tas toch wel mee___* Welk teken past?",
         options: ["?", ".", "!", ":"],
         answer: 0,
-        wrongHints: [null, "Er wordt iets gevraagd, ook al klinkt het zeker.", "Het is geen uitroep.", "Een dubbele punt sluit geen zin af."],
+        wrongHints: [null, "Let op de woorden 'toch wel'. Wacht de spreker op een antwoord van jou?", "Het is geen uitroep.", "Een dubbele punt sluit geen zin af."],
         uitlegPad: {
           stappen: [{ titel: "Het is een vraag", tekst: "Met 'toch wel' vraag je om bevestiging. Het is dus een vraag en eindigt op een vraagteken, ook al lijkt het een mededeling." }],
           niveaus: {
-            basis: "De spreker wil iets weten (een bevestiging). Dat is een vraag → vraagteken.",
+            basis: "De spreker wil zeker weten of je tas mee is. Wat voor soort zin is het dan?",
             simpeler: "Verwacht de spreker een antwoord (ja/nee)? Dan is het een vraag.",
             nogSimpeler: "Iemand vraagt om zeker te weten of de tas mee is. Welk teken hoort bij vragen?",
           },
@@ -307,8 +307,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Waarschuwing = uitroepteken + hoofdletter", tekst: "'Pas op' is een waarschuwing met gevoel → uitroepteken. En de zin begint met een hoofdletter." }],
           niveaus: {
-            basis: "Een waarschuwing roep je met nadruk → uitroepteken. Zinsbegin met hoofdletter.",
-            simpeler: "Welke zin heeft én een hoofdletter aan het begin én een uitroepteken?",
+            basis: "Een waarschuwing roep je met nadruk. En elke zin begint met een hoofdletter. Kijk naar het begin én het eind van elke zin.",
+            simpeler: "Welk eindteken hoort bij iets wat je roept? En welke zin begint goed?",
             nogSimpeler: "Een waarschuwing klinkt fel. Welk teken past en welke begint goed?",
           },
         },
@@ -317,11 +317,11 @@ const steps = [
         q: "Welk leesteken hoort hier? *Hoe laat begint de film___*",
         options: ["?", ".", "!", ","],
         answer: 0,
-        wrongHints: [null, "Er wordt iets gevraagd — het is geen mededeling.", "Het is geen uitroep.", "Een komma sluit geen zin af."],
+        wrongHints: [null, "Lees de zin hardop. Vertel je iets, of wil je iets weten?", "Het is geen uitroep.", "Een komma sluit geen zin af."],
         uitlegPad: {
           stappen: [{ titel: "Vraagwoord = vraagteken", tekst: "'Hoe laat' is een vraagwoord. De zin is een vraag, dus eindigt op een vraagteken." }],
           niveaus: {
-            basis: "Begint de zin met wie/wat/waar/wanneer/hoe/waarom? Dan is het een vraag → vraagteken.",
+            basis: "Begint de zin met wie, wat, waar, wanneer, hoe of waarom? Wat voor soort zin is het dan?",
             simpeler: "Iemand wil iets weten (hoe laat). Welk teken hoort bij een vraag?",
             nogSimpeler: "Wat zet je achter een vraag?",
           },
@@ -340,8 +340,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mededeling = punt", tekst: "Dit is een gewone mededeling zonder vraag of uitroep. Een gewone mededeling eindigt op een punt." }],
           niveaus: {
-            basis: "Een gewone mededeling eindigt op een punt.",
-            simpeler: "Wordt er iets gevraagd? Nee. Wordt er iets uitgeroepen? Nee. Dan: punt.",
+            basis: "Vraagt de zin iets, roept hij iets uit, of vertelt hij gewoon iets?",
+            simpeler: "Wordt er iets gevraagd? Nee. Wordt er iets uitgeroepen? Nee. Welk teken hoort bij een gewone mededeling?",
             nogSimpeler: "Is het een rustige mededeling? Dan eindigt de zin op een punt.",
           },
         },
@@ -365,8 +365,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Staat het werkwoord vooraan, dan is het vaak een vraag: vraagteken.",
-            simpeler: "Wil de spreker iets te weten komen? Dan is het een vraag en zet je een vraagteken.",
+            basis: "Staat het werkwoord vooraan? Dan is het vaak een vraag.",
+            simpeler: "Wil de spreker iets te weten komen? Welk teken hoort daarbij?",
             nogSimpeler: "Wordt hier iets gevraagd? Welk teken hoort bij een vraag?",
           },
         },

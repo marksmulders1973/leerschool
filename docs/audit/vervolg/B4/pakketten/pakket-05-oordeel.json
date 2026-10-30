@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt; hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, maar niveaus basis/simpeler geven het antwoord in telegramstijl ('Oude man = gangbaar beeld').",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord; telegramzin in theorie verbeterd"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Hint bij non-fictie ('Roman = verzonnen') verraadt fictie; hints en niveaus zijn telegramzinnen en basis noemt het antwoord.",
+  "hersteld": true,
+  "wijziging": "wrongHints non-fictie/naslag herschreven als denkvraag; niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Juiste optie in telegramstijl ('+'); hints telegram en 'Schrijvers in bibliografie' klopt niet voor de schrijvers van het boek; niveaus noemen antwoord.",
+  "hersteld": true,
+  "wijziging": "optie -> 'Moeilijke woorden met uitleg'; 3 wrongHints herschreven; woorden-uitleg en niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, maar niveaus.basis is letterlijk 'Index.' (antwoord als eerste hulpstap).",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, maar niveaus.basis is letterlijk 'Inhoudsopgave.'.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, maar niveaus.basis is letterlijk 'Achterin.'.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, maar niveaus.basis is letterlijk 'Op alfabet.'.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 10",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, maar niveaus.basis is letterlijk 'Op onderwerp.'; simpeler telegram.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "informatiebronnen-po stap 2 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Voor groep 7 te makkelijk (aap/appel/auto/azijn, alleen 2e letter); niveaus telegram en noemen antwoord.",
+  "hersteld": true,
+  "wijziging": "opties -> kaal/kaars/kaart/kaas (4e letter vergelijken, answer 0 blijft kaal); wrongHints, uitlegstap en niveaus aangepast"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis rekende het antwoord (100 cm) al voor.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder getal-antwoord"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; niveaus.basis noemde 1.000 als antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt (50.000 cm = 500 m); niveaus.basis gaf de uitkomst.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis: alleen tussenstap + omrekenregel"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis noemde 1 : 100.000.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis als regel zonder antwoord"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis noemde 200 als antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt (10.000 cm = 100 m); niveaus.basis gaf de uitkomst.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis: tussenstap + omrekenregel"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt (500 cm = 5 m); basis gaf uitkomst en de meest gemaakte fout (500 m, niet omgerekend) had geen hint.",
+  "hersteld": true,
+  "wijziging": "hint bij 500 m toegevoegd; niveaus.basis zonder uitkomst"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 1 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt (200.000 cm = 2 km); basis gaf uitkomst en 200 km (gedeeld door 1.000) had geen hint.",
+  "hersteld": true,
+  "wijziging": "hint bij 200 km toegevoegd; niveaus.basis zonder uitkomst"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; niveaus.basis was letterlijk de juiste optie.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis -> voorbeeldvraag"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis noemde de juiste zin als mening.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; hint 'Een zin is óf feit óf mening' is te stellig; basis/simpeler gaven 'mening'.",
+  "hersteld": true,
+  "wijziging": "2 wrongHints herschreven; niveaus basis/simpeler zonder antwoord"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis noemde 'spannender' als mening.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; basis/simpeler gaven de reden (= juiste optie).",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler herschreven"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis gaf 'allebei een mening'.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis noemde de juiste zin.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "feit-mening-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; niveaus.basis was de juiste optie.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis -> vergelijkingsvoorbeeld"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, maar wrongHint bij punt zegt 'er wordt iets gevraagd' (verraadt het vraagteken); basis noemde vraagteken.",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven als denkvraag; niveaus.basis zonder teken"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, maar wrongHint bij punt zegt 'Er wordt iets gevraagd' (verraadt); basis noemde vraagteken.",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven; niveaus.basis zonder teken"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt (punt bij waarschuwing is zwakker, niet fout); basis/simpeler noemden uitroepteken.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler zonder teken"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, maar wrongHint bij punt zegt 'Er wordt iets gevraagd' (verraadt); basis noemde vraagteken.",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven; niveaus.basis zonder teken"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; basis/simpeler noemden 'punt'.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler zonder teken"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; basis/simpeler noemden 'vraagteken'.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler zonder teken"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; hints en niveaus helpen zonder te verraden.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt, maar raadbaar door absurde afleiders (meme, forum); basis noemde KNMI.",
+  "hersteld": true,
+  "wijziging": "afleiders -> blog van hobbyweerman / filmpje van vlogger; hints en niveaus aangepast"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt, maar raadbaar door absurde afleiders (grapje, verzonnen verhaal, reclamefolder); basis noemde antwoord.",
+  "hersteld": true,
+  "wijziging": "afleiders -> wat een klasgenoot denkt / vakantiefolder / spannend avonturenboek; hints en niveaus aangepast"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt; niveaus.basis was de juiste optie.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; niveaus.basis was de juiste optie.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Klopt, maar raadbaar door absurde afleiders (snoepreclame, grappig filmpje zonder uitleg); basis noemde tandarts.",
+  "hersteld": true,
+  "wijziging": "afleiders -> tandpastareclame / vlog van een influencer / reactie op social media; hints en niveaus aangepast"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Klopt; niveaus.basis noemde het antwoord.",
+  "hersteld": true,
+  "wijziging": "niveaus basis/simpeler zonder antwoord"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Klopt; niveaus.basis was de juiste optie.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Klopt; 'verzonnen film' maakt het raadbaar; basis noemde encyclopedie.",
+  "hersteld": true,
+  "wijziging": "afleider -> sciencefictionfilm over Mars, hint aangepast; niveaus.basis zonder antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Antwoord 60 m klopt (2 × (18 + 12)); maar niveaus.basis is letterlijk '60 m.' en vraag is telegramachtig.",
+  "hersteld": true,
+  "wijziging": "vraag: '18 m lang en 12 m breed'; niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord 20 m² klopt; telegramzin ('Een kamer 5 × 4 m') en niveaus.basis is letterlijk '20 m².'.",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin; niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord 24 m klopt (4 × 6); niveaus.basis is letterlijk '24 m.'.",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; niveaus.basis is het antwoord ('Een rand van lint om een prikbord.').",
+  "hersteld": true,
+  "wijziging": "niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord 63 m² klopt (9 × 7); niveaus.basis is letterlijk '63 m².'; 72 m² had geen hint.",
+  "hersteld": true,
+  "wijziging": "hint bij 72 m² toegevoegd; niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord 100 cm klopt (2 × (30 + 20)); niveaus.basis is letterlijk '100 cm.'; 80 cm had geen hint.",
+  "hersteld": true,
+  "wijziging": "hint bij 80 cm toegevoegd; niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 2 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord 320 cm klopt (4 × 80); niveaus.basis is letterlijk '320 cm.'; 240 cm had geen hint.",
+  "hersteld": true,
+  "wijziging": "hint bij 240 cm toegevoegd; niveaus.basis/simpeler herschreven tot hulpvraag zonder het antwoord"
+ }
+]

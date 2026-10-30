@@ -220,7 +220,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mening = oordeel/gevoel", tekst: "Een mening is wat iemand vindt. Een ander mag er anders over denken." }],
           niveaus: {
-            basis: "Een mening is wat iemand ergens van vindt.",
+            basis: "Denk aan de zin 'Spinazie is vies.' Kun je dat meten, of zegt iemand iets over zichzelf?",
             simpeler: "Gaat een mening over feiten of over wat je vindt?",
             nogSimpeler: "Wat is een mening: een gevoel/oordeel of een gemeten getal?",
           },
@@ -239,7 +239,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Te lang' = oordeel", tekst: "'Te lang' is wat iemand vindt; een ander vindt 'm misschien precies goed. Dat maakt het een mening." }],
           niveaus: {
-            basis: "'Te lang' is een oordeel → mening. De rest is te controleren.",
+            basis: "Zoek de zin waarover mensen het oneens kunnen zijn. De andere zinnen kun je nakijken.",
             simpeler: "Welke zin zegt wat iemand van de film vindt?",
             nogSimpeler: "Welke zin heeft het woordje 'te' (te lang)?",
           },
@@ -249,12 +249,12 @@ const steps = [
         q: "Feit of mening? *Honden zijn liever dan katten.*",
         options: ["mening", "feit", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null,"Kun je dit meten of opzoeken, of denkt niet iedereen hetzelfde?","Elke zin is óf iets wat je kunt nakijken, óf iets wat iemand vindt. Welke van de twee past hier?","Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je dit meten of opzoeken, of denkt niet iedereen hetzelfde?","Lees de zin nog eens. Kun je hem nakijken, of zegt iemand wat hij vindt? Een van die twee past hier.","Kan deze zin tegelijk iets zijn wat je kunt nakijken én iets wat iemand vindt? Kies welke van de twee hier past."],
         uitlegPad: {
           stappen: [{ titel: "Niet iedereen is het eens", tekst: "Of honden liever zijn dan katten, vindt niet iedereen. Het is een mening." }],
           niveaus: {
-            basis: "Mensen denken hier verschillend over → mening.",
-            simpeler: "Kun je dit nameten? Nee. Dan is het een mening.",
+            basis: "Kun je opzoeken of meten welk dier liever is? Of denken mensen daar verschillend over?",
+            simpeler: "Kun je dit nameten? Nee. Wat is het dan?",
             nogSimpeler: "Vindt iedereen honden liever? Nee — dus mening.",
           },
         },
@@ -272,7 +272,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Spannender' = oordeel", tekst: "Of basketbal spannender is dan zwemmen, vindt niet iedereen. 'Spannender' is een vergelijkend oordeel — dat maakt het een mening." }],
           niveaus: {
-            basis: "'Spannender' is een oordeel → mening. De rest is te controleren.",
+            basis: "Zoek de zin waarover mensen het oneens kunnen zijn. De andere zinnen kun je meten of opzoeken.",
             simpeler: "Welke zin zegt wat iemand van een sport vindt?",
             nogSimpeler: "Welke zin vergelijkt wat iemand leuker vindt?",
           },
@@ -291,8 +291,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Oordeel = mening", tekst: "De een vindt kaas lekker, de ander pindakaas. Omdat mensen er anders over denken, is het een mening." }],
           niveaus: {
-            basis: "'Lekkerste' is wat iemand vindt — niet voor iedereen hetzelfde → mening.",
-            simpeler: "Kan een ander er anders over denken? Ja → mening.",
+            basis: "Zou iedereen kaas het lekkerst vinden? Denk aan iemand die liever pindakaas eet.",
+            simpeler: "Kan een ander hier heel anders over denken dan jij?",
             nogSimpeler: "Vindt iedereen kaas het lekkerst? Nee — mening.",
           },
         },
@@ -316,7 +316,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vies en heerlijk zijn oordelen → allebei een mening.",
+            basis: "Kun je meten of iets vies of heerlijk is? Of zeggen ze allebei wat ze zelf vinden?",
             simpeler: "Gaat het hier over wat iemand vindt of over iets wat je kunt meten?",
             nogSimpeler: "Kunnen Sanne en opa het oneens zijn en toch allebei hun mening geven?",
           },
@@ -335,7 +335,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Het fijnste' is wat iemand vindt → mening.",
+            basis: "Zoek de zin waarover mensen het oneens kunnen zijn. De andere zinnen kun je zien en nakijken.",
             simpeler: "Welke zin zegt wat iemand van een uitje vindt?",
             nogSimpeler: "Vindt iedereen de dierentuin het fijnst?",
           },
@@ -359,7 +359,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij een mening kan een ander er anders over denken.",
+            basis: "Vergelijk 'Voetbal is saai.' met 'Een voetbal is rond.' Wat is er anders aan de eerste zin?",
             simpeler: "Hoort opzoeken, tellen en meten bij een feit of bij een mening?",
             nogSimpeler: "Kunnen twee mensen bij een mening iets anders vinden?",
           },
