@@ -1313,7 +1313,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "De schrijver twijfelt nergens — woorden als 'daarom' en 'onze kinderen hebben recht op' zijn beslist.",
+          "Zoek in de tekst een zin waarin de schrijver twijfelt of 'misschien' zegt. Kun je die vinden?",
           "Er staat geen spot of grapje in de tekst. De schrijver meent het serieus.",
           "De schrijver noemt wel onderzoek, maar geeft vooral duidelijk zijn eigen mening.",
         ],
@@ -1337,7 +1337,7 @@ const steps = [
             { onderwerp: "Toon vs inhoud", uitleg: "De TOON is hoe de schrijver schrijft. De INHOUD is wat hij zegt. Beide kun je los van elkaar beoordelen." },
           ],
           niveaus: {
-            basis: "De tekst gebruikt woorden als 'daarom', 'moet' en 'recht op'. Zo klinkt de schrijver stellig en overtuigd.",
+            basis: "Let op woorden als 'daarom', 'moet' en 'recht op'. Klinkt de schrijver daarmee onzeker, grappig, neutraal of juist zeker van zijn zaak?",
             simpeler: "Klinkt de schrijver zeker of twijfelend? Lees 'Ik ben van mening dat...' en 'Daarom: laat de telefoon thuis'. Dat zijn beslissende woorden.",
             nogSimpeler: "Twijfelt de schrijver ergens, of weet hij precies wat hij vindt?",
           },

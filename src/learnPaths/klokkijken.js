@@ -651,7 +651,7 @@ const steps = [
           theorie: "Half-formule: half X → (X-1):30. Half 3 → 2:30. Half 12 → 11:30.",
           voorbeelden: [{ type: "tabel", tekst: "Half 3 = 02:30 / 14:30. Half 6 = 05:30 / 17:30. Half 12 = 11:30 / 23:30." }],
           basiskennis: [{ onderwerp: "Twee tijden", uitleg: "Cijfertijd kan 2× per dag voorkomen — 's ochtends + 's middags." }],
-          niveaus: { basis: "02:30 of 14:30.", simpeler: "Half 3 = 30 min VÓÓR 3 = uur 2 + 30 min = 02:30 of 14:30.", nogSimpeler: "2:30/14:30" },
+          niveaus: { basis: "Half 3 is een half uur vóór 3 uur. Welk uur is het dan nog, en hoeveel minuten staan er?", simpeler: "Half 3 is 30 minuten vóór 3 uur. Het is dus nog 2 uur en 30 minuten: 02:30 of 14:30.", nogSimpeler: "02:30 of 14:30" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -701,7 +701,7 @@ const steps = [
           null,
           "Bij 'half' noem je in het Nederlands het uur dat nog kómt, niet het uur dat al voorbij is.",
           "De grote wijzer staat niet op de 12. Is het dan een heel uur?",
-          null,
+          "De grote wijzer staat niet op de 12, dus het is geen heel uur. En de kleine wijzer is ook nog niet bij de 4.",
         ],
         uitlegPad: {
           stappen: [
@@ -730,7 +730,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Half 4.",
+            basis: "De grote wijzer op de 6 betekent 'half'. Naar welk uur is de kleine wijzer onderweg?",
             simpeler: "De kleine wijzer is de 3 voorbij maar nog niet bij de 4. Grote op 6: half. Dus half 4.",
             nogSimpeler: "Half 4",
           },

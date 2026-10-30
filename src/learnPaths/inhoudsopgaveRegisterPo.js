@@ -571,11 +571,11 @@ const steps = [
         q: "Waar staat het register en in welke volgorde?",
         options: ["achteraan, op alfabet", "vooraan, op alfabet", "achteraan, op boekvolgorde", "vooraan, op boekvolgorde"],
         answer: 0,
-        wrongHints: [null, "De volgorde klopt, de plek niet. Blader in gedachten door een boek: waar vind je het register?", "De plek klopt, de volgorde niet. Hoe zoek je snel een los woord op in een lange lijst?", "Vooraan + boekvolgorde is juist de inhoudsopgave."],
+        wrongHints: [null, "Blader in gedachten door een boek. Wat vind je vooraan meestal: het register of iets anders?", "Hoe zoek je snel één los woord op in een lange lijst? Helpt de volgorde van het boek je daarbij?", "Vooraan en op boekvolgorde: dat is juist de inhoudsopgave."],
         uitlegPad: {
           stappen: [{ titel: "Achter + alfabet", tekst: "Het register staat achteraan en is alfabetisch geordend." }],
           niveaus: {
-            basis: "Register: achteraan, op alfabet.",
+            basis: "De inhoudsopgave staat vooraan, op de volgorde van het boek. Het register is iets anders: waar staat het, en hoe zoek je er snel een woord in op?",
             simpeler: "Waar staat het register, en hoe is het geordend?",
             nogSimpeler: "Achteraan en op alfabet — klopt dat voor het register?",
           },
@@ -671,7 +671,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Supernova → pagina 30 → hoofdstuk 2 (begint op 21).",
+            basis: "Zoek 'supernova' eerst op in het register. Kijk daarna in de inhoudsopgave tussen welke beginpagina's die pagina valt.",
             simpeler: "Kijk eerst in het register voor de pagina. Kijk dan in de inhoudsopgave in welk hoofdstuk die pagina valt.",
             nogSimpeler: "Is 30 meer dan 21?",
           },

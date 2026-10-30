@@ -782,7 +782,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
             { onderwerp: "Willen is niet kunnen", uitleg: "Aanwijzingen over wat iemand graag doet of wil, bewijzen nooit hoe goed iemand ergens in is." },
           ],
           niveaus: {
-            basis: "Alle aanwijzingen gaan over houden van voetbal — geen enkele over hoe goed ze is of over haar ouders.",
+            basis: "Zet de drie aanwijzingen op een rij: kijken, oefenen en posters. Waar gaan ze alle drie over?",
             simpeler: "Vraag bij elk antwoord: welke van de drie aanwijzingen (kijken, oefenen, posters) bewijst dit? Eén antwoord wordt door alle drie gesteund.",
             nogSimpeler: "Wat bewijzen posters boven je bed over jou?",
           },
@@ -822,7 +822,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
             { onderwerp: "Hoe preciezer, hoe verdachter", uitleg: "Een optie vol precieze details (gisteren, fiets) zonder tekst-bewijs gaat bijna altijd te ver." },
           ],
           niveaus: {
-            basis: "Drie opties blijven bij 'er was iets met die knie'. Eén optie verzint een oorzaak, een dag én een fiets.",
+            basis: "Een pleister vertelt je alleen dát er iets met de knie is. Welke optie weet ook nog hóé en wánneer het gebeurde?",
             simpeler: "Onderstreep in elk antwoord de dingen die je uit de tekst kunt bewijzen. Bij welk antwoord kun je bijna niets onderstrepen?",
             nogSimpeler: "In welke optie staan dingen die nérgens in de zin over Sem staan?",
           },

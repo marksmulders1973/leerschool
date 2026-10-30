@@ -117,7 +117,7 @@ const steps = [
         q: "**1 m³** is hetzelfde als ... liter?",
         options: ["1000 liter", "100 liter", "10 liter", "10.000 liter"],
         answer: 0,
-        wrongHints: [null, "Te weinig — denk groter. Een m³ is een kubus van 1 m × 1 m × 1 m.", "Veel te weinig — een douchecabine alleen al is meer.", "10.000 liter is 10 m³, dat is te veel. Reken uit hoeveel blokjes van 1 dm³ er in één kubus van 1 m passen."],
+        wrongHints: [null, "Te weinig — denk groter. Een m³ is een kubus van 1 m × 1 m × 1 m.", "Veel te weinig: 10 liter is maar één emmer water. Past er in een kubus van 1 m hoog, breed en diep maar één emmer?", "10.000 liter is 10 m³, dat is te veel. Reken uit hoeveel blokjes van 1 dm³ er in één kubus van 1 m passen."],
         uitlegPad: {
           stappen: [
             { titel: "Reken het uit", tekst: "1 m = 10 dm. Dus 1 m³ = 10 × 10 × 10 = 1000 dm³. En 1 dm³ = 1 liter. Dus 1 m³ = 1000 liter." },
@@ -260,8 +260,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 m³ is het grootst: 1000 liter.",
-            simpeler: "Zet alles in liters: 1000, 900, 500 en 800. 1 m³ komt het hoogst uit: 1000 liter.",
+            basis: "Reken alles om naar liters. 1 dm³ is 1 liter en 1000 cm³ is ook 1 liter.",
+            simpeler: "500 dm³ = 500 liter en 800.000 cm³ = 800 liter. Hoeveel liter is 1 m³? Vergelijk dan alle vier.",
             nogSimpeler: "1 m³",
           },
         },

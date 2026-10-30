@@ -450,7 +450,7 @@ const steps = [
         wrongHints: [null, "Veel groter dan een stad — er liggen grote steden ín, zoals Sydney.", "Een oceaan is water; Australië is land.", "Geen berg — het is een heel werelddeel."],
       },
       {
-        q: "**Antarctica** is bekend om ... ?",
+        q: "Waar is **Antarctica** vooral bekend om?",
         options: ["IJs en pinguïns", "Tropisch regenwoud", "Grote steden", "Lange rivieren"],
         answer: 0,
         wrongHints: [null, "Op Antarctica is het veel te koud voor een regenwoud.", "Er wonen geen mensen vast op Antarctica, dus steden zijn er niet.", "Water stroomt daar niet als rivier — denk aan hoe koud het er is."],
@@ -466,9 +466,9 @@ const steps = [
       { q: "Op welk werelddeel ligt **Nederland**?", options: ["Europa","Azië","Afrika","Amerika"], answer: 0, wrongHints: [null, "Azië ligt ten oosten van ons, voorbij Rusland.", "Afrika ligt ten zuiden van de Middellandse Zee.", "Amerika ligt aan de overkant van de Atlantische Oceaan."] },
       { q: "Welk continent heeft de **Mount Everest**?", options: ["Azië","Afrika","Zuid-Amerika","Noord-Amerika"], answer: 0, wrongHints: [null, "Afrika heeft de Kilimanjaro, maar die is een stuk lager.", "Zuid-Amerika heeft de Andes, maar niet de Everest.", "Noord-Amerika heeft de Rocky Mountains, maar niet de hoogste berg ter wereld."] },
       { q: "Welke landengroep ligt in **Oceanië**?", options: ["Australië + Nieuw-Zeeland","Nederland + België + Duitsland","China + Japan","Brazilië + Argentinië"], answer: 0, wrongHints: [null, "Nederland, België en Duitsland liggen in Europa.", "China en Japan liggen in Azië.", "Brazilië en Argentinië liggen in Zuid-Amerika."] },
-      { q: "Welk continent is dichtstbevolkt?", options: ["Azië","Afrika","Europa","Antarctica"], answer: 0, wrongHints: [null, "Afrika is nummer twee.", "Europa is vol, maar heeft minder mensen per km² dan Azië.", "Op Antarctica woont niemand permanent."] },
-      { q: "Hoeveel uur verschil is er tussen **Nederland en Sydney**?", options: ["+8 tot +10 uur","+5 uur","Geen verschil","−8 uur"], answer: 0, wrongHints: [null, "+5 uur is ongeveer India. Australië ligt nog veel verder naar het oosten.", "Sydney ligt bijna aan de andere kant van de wereld — dan is er zeker verschil.", "Sydney ligt ten óósten van ons. Loopt de klok daar dan voor of achter?"] },
-      { q: "Welk continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika","Antarctica","Europa","Noord-Amerika"], answer: 0, wrongHints: [null, "Antarctica ligt helemaal op het zuidelijk halfrond.", "Europa ligt helemaal op het noordelijk halfrond.", "Noord-Amerika ligt helemaal op het noordelijk halfrond."] },
+      { q: "Op welk continent wonen de **meeste mensen**?", options: ["Azië","Afrika","Europa","Antarctica"], answer: 0, wrongHints: [null, "Afrika heeft heel veel inwoners, maar het staat op de tweede plaats.", "Europa voelt druk, maar er wonen veel minder mensen dan op de nummer één.", "Op Antarctica woont niemand permanent."] },
+      { q: "Hoeveel uur verschil is er tussen **Nederland en Sydney**?", options: ["+8 tot +10 uur","+5 uur","Geen verschil","−8 uur"], answer: 0, wrongHints: [null, "+5 uur hoort ongeveer bij Thailand in onze zomer. Australië ligt nog veel verder naar het oosten.", "Sydney ligt bijna aan de andere kant van de wereld — dan is er zeker verschil.", "Sydney ligt ten óósten van ons. Loopt de klok daar dan voor of achter?"] },
+      { q: "Welk continent ligt deels op het **noordelijk** en deels op het **zuidelijk** halfrond?", options: ["Afrika","Antarctica","Europa","Noord-Amerika"], answer: 0, wrongHints: [null, "Antarctica ligt helemaal op het zuidelijk halfrond.", "Europa ligt helemaal op het noordelijk halfrond.", "Noord-Amerika ligt helemaal op het noordelijk halfrond."] },
     ],
   },
 ];

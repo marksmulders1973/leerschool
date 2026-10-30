@@ -817,7 +817,7 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
         wrongHints: [
           null,
           "Dat is de vertrektijd van de bus. Scan op 'trein' en lees die zin.",
-          "Let op de volgorde van de cijfers: heb je de uren en minuten misschien omgedraaid?",
+          "Kijk nog eens precies naar de minuten in de trein-zin. Staat daar echt een 0?",
           "Staat 11 ergens in de zinnen? Scan op 'trein' en neem de tijd exact over.",
         ],
         uitlegPad: {

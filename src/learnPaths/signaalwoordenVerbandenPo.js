@@ -203,11 +203,11 @@ const steps = [
         q: "Welk woord wijst op een **gevolg**?",
         options: ["dus", "omdat", "want", "doordat"],
         answer: 0,
-        wrongHints: [null, "Dat geeft juist de reden/oorzaak.", "Ook een reden-woord.", "Ook een oorzaak-woord."],
+        wrongHints: [null, "Dit woord vertelt waaróm iets gebeurt. Zoek je dat hier?", "Dit woord zet je vóór een reden. Is dat wat de vraag zoekt?", "Dit woord vertelt wat de oorzaak is. Zoek je de oorzaak of wat er daarna gebeurt?"],
         uitlegPad: {
           stappen: [{ titel: "Dus = conclusie/gevolg", tekst: "'Dus' trekt een conclusie: er volgt een gevolg. 'Omdat/want/doordat' geven juist de reden ervoor." }],
           niveaus: {
-            basis: "'Dus' wijst op het gevolg. De andere woorden geven de oorzaak.",
+            basis: "Een gevolg is wat er dáárna gebeurt. Maak een zinnetje met elk woord: welk woord zet je vóór wat er daarna gebeurt?",
             simpeler: "Welk woord betekent 'daarom' / 'het resultaat is'?",
             nogSimpeler: "Welk woord komt vlak vóór een conclusie?",
           },
@@ -217,11 +217,11 @@ const steps = [
         q: "Welk woord past? *Ik oefen elke dag, ___ ik wil een goed cijfer halen.*",
         options: ["want", "maar", "dus", "toch"],
         answer: 0,
-        wrongHints: [null, "Dat is een tegenstelling; hier komt een reden.", "Dat geeft een gevolg, geen reden.", "Ook een tegenstelling."],
+        wrongHints: [null, "Dat woord geeft een tegenstelling. Spreekt het tweede deel het eerste tegen?", "Dat woord geeft een gevolg. Is het cijfer een gevolg van het oefenen, of de reden ervoor?", "Ook dat woord geeft een tegenstelling. Spreken de twee delen elkaar tegen?"],
         uitlegPad: {
           stappen: [{ titel: "Want geeft de reden", tekst: "Waarom oefen ik elke dag? Want ik wil een goed cijfer. 'Want' geeft de reden." }],
           niveaus: {
-            basis: "Het tweede deel is de reden om te oefenen → 'want'.",
+            basis: "Het tweede deel vertelt waaróm je oefent. Welk woord zet je vóór een reden?",
             simpeler: "Welk woord geeft antwoord op 'waarom oefen je?'",
             nogSimpeler: "… ik oefen, … ik wil een goed cijfer. Welk woord betekent 'omdat'?",
           },
@@ -231,11 +231,11 @@ const steps = [
         q: "Welk woord past? *Ze was moe, ___ ging ze vroeg naar bed.*",
         options: ["daarom", "maar", "hoewel", "of"],
         answer: 0,
-        wrongHints: [null, "Dat is een tegenstelling; hier komt een gevolg.", "Ook een tegenstelling.", "Dat geeft een keuze."],
+        wrongHints: [null, "Dat woord geeft een tegenstelling. Spreekt 'vroeg naar bed' het moe-zijn tegen?", "Ook dat woord geeft een tegenstelling. Past dat bij moe zijn en vroeg naar bed gaan?", "Dat woord geeft een keuze. Moet ze hier kiezen tussen twee dingen?"],
         uitlegPad: {
           stappen: [{ titel: "Moe → vroeg naar bed (gevolg)", tekst: "Het moe-zijn had een gevolg: vroeg naar bed. 'Daarom' wijst op dat gevolg." }],
           niveaus: {
-            basis: "Het tweede deel is het gevolg van het eerste → 'daarom'.",
+            basis: "Het tweede deel is wat er gebeurt omdat ze moe was. Welk woord zet je vóór zo'n gevolg?",
             simpeler: "Wat is het gevolg van moe zijn? Welk woord wijst daarop?",
             nogSimpeler: "Welk woord betekent 'om die reden'?",
           },
@@ -245,11 +245,11 @@ const steps = [
         q: "Welk woord geeft een **reden/oorzaak** aan (waaróm)?",
         options: ["doordat", "daardoor", "dus", "daarom"],
         answer: 0,
-        wrongHints: [null, "Dat wijst juist op het gevolg.", "Ook een gevolg-woord.", "Ook een gevolg-woord."],
+        wrongHints: [null, "Dit woord vertelt wat er daarna gebeurt. Zoek je dat hier?", "Dit woord zet je vóór een gevolg. Zoek je het gevolg of de oorzaak?", "Dit woord zet je vóór wat er daarna gebeurt. Vertelt het waaróm?"],
         uitlegPad: {
           stappen: [{ titel: "Doordat = oorzaak", tekst: "'Doordat' geeft de oorzaak/reden. 'Daardoor/dus/daarom' wijzen juist op het gevolg." }],
           niveaus: {
-            basis: "'Doordat' geeft de oorzaak; de andere drie geven het gevolg.",
+            basis: "Maak met elk woord een zinnetje. Na welk woord volgt het antwoord op de vraag 'waarom?'?",
             simpeler: "Welk woord geeft antwoord op 'waarom?' i.p.v. 'en wat dan?'",
             nogSimpeler: "Welk woord lijkt op 'omdat'?",
           },

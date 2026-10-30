@@ -171,7 +171,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Nederland = 12 provincies", tekst: "Van Groningen bovenin tot Limburg onderin: Nederland heeft 12 provincies." }],
           niveaus: {
-            basis: "Nederland heeft 12 provincies.",
+            basis: "Tel de provincies op de kaart, van Groningen bovenin tot Limburg onderin.",
             simpeler: "Het zijn er evenveel als maanden in een jaar.",
             nogSimpeler: "Twaalf — 12.",
           },

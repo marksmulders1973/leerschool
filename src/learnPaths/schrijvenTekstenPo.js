@@ -302,7 +302,7 @@ const steps = [
           theorie: "Test: ken ik deze persoon? Nee → formeel. Twijfel? → formeel (kan geen kwaad).",
           voorbeelden: [{ type: "controle", tekst: "Brief aan de schooldirecteur → 'Geachte mevrouw [naam]'. Brief aan beste vriend → 'Hoi Tim'." }],
           basiskennis: [{ onderwerp: "Veilig kiezen", uitleg: "Bij twijfel altijd 'Geachte heer/mevrouw' — fout maken kan amper." }],
-          niveaus: { basis: "De gemeente is een officiële organisatie, dus je schrijft formeel: 'Geachte heer/mevrouw'.", simpeler: "De gemeente is geen vriend — schrijf beleefd: 'Geachte heer/mevrouw'.", nogSimpeler: "Officieel? Dan begin je met 'Geachte'." },
+          niveaus: { basis: "De gemeente is een officiële organisatie en je kent de lezer niet. Welke aanhef is het netst?", simpeler: "De gemeente is geen vriend. Kies de aanhef die je ook in een officiële brief van de school ziet.", nogSimpeler: "Officieel? Dan begin je met 'Geachte'." },
         },
       },
       {

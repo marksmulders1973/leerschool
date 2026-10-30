@@ -703,6 +703,7 @@ const steps = [
     explanation: "Een **lastige** maar belangrijke regel:\n\n**Twee min-tekens op rij worden plus**.\n\n**Voorbeeld**: 5 − (−3) = ?\n\nDe '−(−3)' betekent: je trekt een negatief getal af. Dat is hetzelfde als **er drie bij optellen**.\n\nDus: 5 − (−3) = 5 + 3 = **8**.\n\n**Waarom?**\nStel je hebt geld: € 5. Een 'schuld' van € 3 betekent dat je in totaal € 5 − € 3 = € 2 hebt. Maar als die schuld **wegvalt** *(wordt afgetrokken)*, krijg je € 3 erbij. Dus 5 − (−3) = 8.\n\n**Andere voorbeelden**:\n• −2 − (−5) = −2 + 5 = **+3**.\n• 4 + (−6) = 4 − 6 = **−2** *(plus een negatief = aftrekken)*.\n• −7 + (−3) = −7 − 3 = **−10**.\n\n**Toets-truc — tekens-regel**:\nKijk naar de **2 tekens op rij**:\n• + + = **plus**\n• + − = **min**\n• − + = **min**\n• − − = **plus**\n\nVoorbeeld: 8 − − 5 = 8 + 5 = **13** *(want −− = +)*.\n\n**Toetsvraag-vorm**:\n*'In een spel kun je punten verliezen. Sven had +12 en verliest dan −5 (dus krijgt 5 erbij). Wat is zijn nieuwe score?'*\n• Niet aftrekken want 'verliest' van negatief = krijgt erbij.\n• 12 − (−5) = 12 + 5 = **17**.",
     checks: [
       {
+        vanafGroep: 8, // nakijkronde B5 (30 okt 2026): min een minus met haakjes is geen groep-5-stof
         q: "**8 − (−3)** = ?",
         options: ["11","5","−11","−5"],
         answer: 0,
@@ -713,21 +714,22 @@ const steps = [
           theorie: "Tekens-regel: −− = +, ++ = +, +− = −, −+ = −.",
           voorbeelden: [{ type: "stap", tekst: "8 − (−3) = 8 + 3 = 11." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Saldo €8, schuld van €3 valt weg → €8 + €3 erbij = €11." }],
-          niveaus: { basis: "11.", simpeler: "Twee minnen worden plus: 8 − (−3) = 8 + 3 = 11.", nogSimpeler: "11" },
+          niveaus: { basis: "Je haalt een min-getal weg. Wordt het getal dan kleiner of groter?", simpeler: "Twee minnen worden plus: 8 − (−3) = 8 + 3 = 11.", nogSimpeler: "11" },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B5 (30 okt 2026): rekenen met twee negatieve getallen is geen groep-5-stof
         q: "**−4 + (−6)** = ?",
         options: ["−10","+10","−2","+2"],
         answer: 0,
-        wrongHints: [null,"Niet plus — kijk hoe de twee tekens samen werken.","Te dichtbij — heb je 4 − 6 gedaan in plaats van −4 − 6?","Kijk naar de tekens: kan het antwoord boven nul uitkomen?"],
+        wrongHints: [null,"Niet plus — kijk hoe de twee tekens samen werken.","Je hebt het eerste minteken overgeslagen. Allebei de getallen zijn onder nul: kom je dan dicht bij nul uit?","Kijk naar de tekens: kan het antwoord boven nul uitkomen?"],
         uitlegPad: {
           stappen: [{ titel: "+− = −", tekst: "+(−6) wordt −6. Dus −4 + (−6) = −4 − 6 = −10." }],
           woorden: [{ woord: "plus een minus", uitleg: "Plus voor minus-getal = aftrekken." }],
           theorie: "Tekens-regel: +− = −. Dus +(−6) = −6.",
           voorbeelden: [{ type: "stap", tekst: "−4 + (−6) = −4 − 6 = −10." }],
           basiskennis: [{ onderwerp: "Schuld-stapelen", uitleg: "Schuld €4 + schuld €6 = schuld €10 = saldo −€10." }],
-          niveaus: { basis: "−10.", simpeler: "+(−6) wordt −6. Dus −4 − 6 = −10.", nogSimpeler: "−10" },
+          niveaus: { basis: "Je hebt al een schuld en er komt nog een schuld bij. Wordt je schuld groter of kleiner?", simpeler: "+(−6) wordt −6. Dus −4 − 6 = −10.", nogSimpeler: "−10" },
         },
       },
       {

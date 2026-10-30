@@ -1109,7 +1109,7 @@ const steps = [
     explanation: "Mix-toets: stappenplan, beslisboom, schema-interpretatie.",
     checks: [
       {
-        q: "Recept-stappen: 1) Boter smelten. 2) Eieren breken in kom. 3) Klutsen. 4) Bakken in pan.\n\n**Wat doe je direct na klutsen**?",
+        q: "Recept-stappen: 1) Boter smelten. 2) Eieren breken in kom. 3) Klutsen. 4) Bakken in pan.\n\n**Wat doe je direct na het klutsen?**",
         options: ["Bakken in pan","Boter smelten","Eieren breken","Klutsen"],
         answer: 0,
         wrongHints: [null,"Dat is stap 1. Komt die vóór of ná klutsen?","Dat is stap 2. Wat komt er ná klutsen?","Dat is de stap zelf. Welke stap staat erna?"],

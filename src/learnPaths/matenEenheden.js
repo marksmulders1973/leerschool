@@ -120,7 +120,7 @@ const steps = [
           theorie: "Gewicht-keuze: mg=medicijn, g=etenswaar/appel, kg=mens/boodschappen, ton=vrachtwagen.",
           voorbeelden: [{ type: "tabel", tekst: "Appel 200 g. Brood 800 g. Mens 70 kg. Auto 1500 kg = 1,5 ton." }],
           basiskennis: [{ onderwerp: "Eenheid match", uitleg: "Niet alle opties zijn gewichten — schrap mm/mL meteen." }],
-          niveaus: { basis: "g.", simpeler: "Appel ~200 g. Gewicht-eenheid g past het best. (mm=lengte, mL=inhoud, ton=te groot).", nogSimpeler: "g" },
+          niveaus: { basis: "Zoek eerst de eenheden die bij gewicht horen. Welke daarvan past bij iets wat je in één hand houdt?", simpeler: "Een appel weegt ongeveer 200 gram. mm is lengte, mL is inhoud en een ton is veel te zwaar.", nogSimpeler: "g" },
         },
       },
       {
@@ -134,7 +134,7 @@ const steps = [
           theorie: "Kilo-prefix: kilo = 1000. Geldt voor km/kg/kL.",
           voorbeelden: [{ type: "tabel", tekst: "1 km = 1000 m. 1 kg = 1000 g. 1 kL = 1000 L." }],
           basiskennis: [{ onderwerp: "100 niet 1000", uitleg: "1 m = 100 cm (anders). 1 km = 1000 m." }],
-          niveaus: { basis: "1000.", simpeler: "Kilo = 1000. Dus 1 km = 1000 m. (1 m = 100 cm — andere eenheid).", nogSimpeler: "1000" },
+          niveaus: { basis: "Denk aan het woordje 'kilo'. Hoeveel gram zit er in 1 kilogram? Zoveel meter zit er in 1 kilometer.", simpeler: "Kilo betekent 1000. Dus 1 km = 1000 m. (1 m = 100 cm is een andere omrekening.)", nogSimpeler: "1000" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.

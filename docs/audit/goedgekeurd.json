@@ -2821,6 +2821,43 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "conclusies-trekken-po stap 3 vraag 3",
+  "hash": "ea52fa7c49916f24",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis zei vrijwel letterlijk 'houden van voetbal' (= antwoord)."
+ },
+ {
+  "waar": "conclusies-trekken-po stap 3 vraag 4",
+  "hash": "a84cf31d5bb58bf8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis omschreef het antwoord (oorzaak, dag, fiets)."
+ },
+ {
+  "waar": "conclusies-trekken-po stap 3 vraag 5",
+  "hash": "4feecad61bb079da",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 3 vraag 6",
+  "hash": "b533df7b19eba809",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 3 vraag 7",
+  "hash": "4c7f3872cc991475",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "conclusies-trekken-po stap 4 vraag 7",
   "hash": "4171b6dbde0a2154",
   "oordeel": "goed",
@@ -2965,6 +3002,13 @@
   "reden": "Hints zijn telegramzinnen ('Te oostelijk.', 'Andere kant van de wereld.')."
  },
  {
+  "waar": "continenten-wereld-po stap 6 vraag 10",
+  "hash": "1a0b4f5181360187",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "continenten-wereld-po stap 6 vraag 11",
   "hash": "dc953ef2a3181f8b",
   "oordeel": "goed",
@@ -3016,11 +3060,27 @@
   "reden": "Goede optie langer/specifieker ('+ eilanden'); 'landen-groep' is geen correcte spelling."
  },
  {
+  "waar": "continenten-wereld-po stap 6 vraag 19",
+  "hash": "db2bf3fffa47a352",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (+8 in de NL-zomer, +10 in de NL-winter); hint '+5 uur is ongeveer India' klopt niet (India ligt +3,5/+4,5 uur)."
+ },
+ {
   "waar": "continenten-wereld-po stap 6 vraag 2",
   "hash": "2a0562ac6be9de43",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "continenten-wereld-po stap 6 vraag 20",
+  "hash": "fa3f223956d665d3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; '+' in de vraag is telegramstijl."
  },
  {
   "waar": "continenten-wereld-po stap 6 vraag 4",
@@ -3036,6 +3096,14 @@
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "continenten-wereld-po stap 6 vraag 6",
+  "hash": "133b672d1609ceeb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Invulzin '... is bekend om ... ?' is geen nette vraag."
  },
  {
   "waar": "continenten-wereld-po stap 6 vraag 7",
@@ -5750,12 +5818,48 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 3",
+  "hash": "ef47afa7f9fda222",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 4",
+  "hash": "bcfb65e5b7dfa542",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 5",
+  "hash": "e166f35a70038dc8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; de hint bij 10:05 sprak over 'uren en minuten omgedraaid', wat niet bij die fout past."
+ },
+ {
   "waar": "feiten-details-opzoeken-po stap 3 vraag 6",
   "hash": "4a093438148e119b",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Afleider '2' (treden) is onwaarschijnlijk; de rest is wel van dezelfde soort."
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 7",
+  "hash": "d70062ed6ddb2e12",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 8",
+  "hash": "2311c492cea1f60e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "financiele-vorming-po stap 1 vraag 1",
@@ -7647,6 +7751,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 9",
+  "hash": "96b8969594a56df6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (30 > 21, dus hoofdstuk 2); regelafbrekingen staan in de bron. basis gaf het antwoord."
+ },
+ {
   "waar": "interpunctie-po stap 1 vraag 1",
   "hash": "e28788f4efd72c97",
   "oordeel": "twijfel",
@@ -8595,11 +8707,27 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "klokkijken stap 3 vraag 4",
+  "hash": "ade49fe1e6ad7e97",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf alleen het antwoord '02:30 of 14:30'."
+ },
+ {
   "waar": "klokkijken stap 3 vraag 5",
   "hash": "091bf5566a739d6e",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "klokkijken stap 3 vraag 6",
+  "hash": "410f08fd15d616cd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Er is geen plaatje nodig (de stand staat in de tekst). basis gaf alleen het antwoord 'Half 4'; de foute optie '4 uur' had geen hint."
  },
  {
   "waar": "klokkijken stap 3 vraag 7",
@@ -9712,6 +9840,22 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "maten-eenheden stap 1 vraag 2",
+  "hash": "cded2b7168f04049",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf alleen 'g.' Voor groep 8 is de vraag erg makkelijk."
+ },
+ {
+  "waar": "maten-eenheden stap 1 vraag 3",
+  "hash": "39c95d7e13e34522",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf alleen '1000.' Voor groep 8 is de vraag erg makkelijk."
+ },
+ {
   "waar": "maten-eenheden stap 1 vraag 4",
   "hash": "fa279bc632346088",
   "oordeel": "goed",
@@ -9861,6 +10005,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "meetkunde-bouwsels stap 1 vraag 3",
+  "hash": "3137a18874253bea",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; de hint 'een douchecabine alleen al is meer' was vreemd."
+ },
+ {
   "waar": "meetkunde-bouwsels stap 1 vraag 4",
   "hash": "ace27619903123e3",
   "oordeel": "twijfel",
@@ -9877,6 +10029,14 @@
   "reden": "Antwoord 500 mL klopt; niveaus basis = antwoord."
  },
  {
+  "waar": "meetkunde-bouwsels stap 1 vraag 6",
+  "hash": "433e67613b839e45",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Nagerekend: 1000 / 900 / 500 / 800 liter, dus het antwoord klopt. basis én simpeler noemden het antwoord."
+ },
+ {
   "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 1",
   "hash": "45ad2f210f954ba7",
   "oordeel": "goed",
@@ -9888,6 +10048,13 @@
   "hash": "c35a14bfd23d8780",
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 2",
+  "hash": "5c45ce5262640983",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -10163,6 +10330,22 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 1",
+  "hash": "f7ef5f995fbb75e1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Het rekenwerk klopt (11), maar min-een-minus met haakjes is geen groep-5-stof (sets: alleen groep 5). basis gaf alleen '11.'"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 2",
+  "hash": "410c1443f98c9e16",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Het rekenwerk klopt (−10), maar het is geen groep-5-stof. De hint bij −2 schreef de som al om tot '−4 − 6' (deels voorrekenen); basis gaf alleen '−10.'"
  },
  {
   "waar": "negatieve-getallen-po stap 4 vraag 7",
@@ -13118,6 +13301,13 @@
   "reden": "eindvak klopt; nogSimpeler was telegramzin"
  },
  {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 1",
+  "hash": "41bce5ab6293d694",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "schemas-stappenplannen-po stap 4 vraag 2",
   "hash": "852860b3664e3749",
   "oordeel": "twijfel",
@@ -13130,6 +13320,13 @@
   "hash": "d5adf95d628e857b",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 4",
+  "hash": "4a3578e078ba68ee",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -13159,6 +13356,14 @@
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 1",
+  "hash": "595a849aedc2a1f7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; 'direct na klutsen**?' was een rommelige zin (vraagteken buiten het vet, lidwoord miste). Receptstijl in de stappen mag blijven."
  },
  {
   "waar": "schemas-stappenplannen-po stap 5 vraag 7",
@@ -13241,6 +13446,14 @@
   "reden": "Antwoord klopt met de toets-truc in de staptekst; niveaus basis was het antwoord ('Eerste en laatste zin.') en nogSimpeler een telegramzin."
  },
  {
+  "waar": "schrijven-teksten-po stap 2 vraag 1",
+  "hash": "dbd1eb681fe63e43",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis en simpeler citeerden allebei het antwoord."
+ },
+ {
   "waar": "schrijven-teksten-po stap 2 vraag 10",
   "hash": "9381d9d4635e8c3f",
   "oordeel": "twijfel",
@@ -13263,6 +13476,13 @@
   "bron": "vervolg B3 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "antwoord klopt; hint 'alleen voor zakelijke brief' en niveaus ('Oma = informeel = Groetjes') waren telegramzinnen"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 2 vraag 4",
+  "hash": "4e1b62ae63680a2b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "schrijven-teksten-po stap 2 vraag 5",
@@ -13393,11 +13613,50 @@
   "reden": "klopt; niveau 'basis' noemde het antwoord ('tegenstelling: toch')"
  },
  {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 3",
+  "hash": "f46a0b72062c5103",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis noemde het antwoord ('Dus' wijst op het gevolg); de hints waren telegramzinnen."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 4",
+  "hash": "43ca3be5370bfc50",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis eindigde op '→ want' (= antwoord); de hints waren telegramstijl."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 5",
+  "hash": "e37f192b1b7f54b4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis eindigde op '→ daarom' (= antwoord); de hints waren telegramstijl."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 6",
+  "hash": "a62743000042a5ac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis noemde 'Doordat' als antwoord; de hints waren telegramstijl."
+ },
+ {
   "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
   "hash": "7009f4466bd8c73a",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 8",
+  "hash": "57de35ab730cec40",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "signaalwoorden-verbanden-po stap 4 vraag 6",
@@ -15850,6 +16109,20 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "toestand-stoffen-po stap 4 vraag 3",
+  "hash": "068e6a8e8471d726",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 4 vraag 4",
+  "hash": "fde95504a54f6b68",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "topografie-europa-landen-po stap 3 vraag 1",
   "hash": "7fc234c3f5dadeb4",
   "oordeel": "goed",
@@ -15870,6 +16143,14 @@
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-europa-landen-po stap 6 vraag 1",
+  "hash": "64e24fb1b898d9d7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; de hints waren telegramzinnen en basis noemde het antwoord."
  },
  {
   "waar": "topografie-nederland stap 1 vraag 1",
@@ -16158,6 +16439,14 @@
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland-provincies-po stap 6 vraag 1",
+  "hash": "a9c5f5aa2cae950c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis gaf het antwoord."
  },
  {
   "waar": "topografie-wereld-werelddelen-po stap 3 vraag 1",
