@@ -11216,6 +11216,52 @@
   "reden": "niveaus.basis gaf alleen het antwoord ('bak-ker')."
  },
  {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 1",
+  "hash": "ca0a0f9a66510a31",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 2",
+  "hash": "665bea9204cd25e9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 6",
+  "hash": "87dab717423c1250",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis noemde de goede afbreekplekken (na bi, bibli, biblio); hint B noemde \"bli\""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 7",
+  "hash": "cd6868cdd0406f1a",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 8",
+  "hash": "899162861d6d9846",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 9",
+  "hash": "c75cd441fcede804",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "lichaam-gezondheid-po stap 1 vraag 1",
   "hash": "db6aa83c1f92f5ef",
   "oordeel": "goed",
@@ -12022,11 +12068,75 @@
   "reden": "basis = antwoord; min een minus is geen groep-5-stof."
  },
  {
+  "waar": "negatieve-getallen-po stap 4 vraag 1",
+  "hash": "6a981cc3a43830c7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin in de vraag; basis = antwoord; hint B verklapte \"onder nul\""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 2",
+  "hash": "ae4098894542a85a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 3",
+  "hash": "17d0d0a690cace5e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord; hint C verklapte \"naar plus\""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 4",
+  "hash": "d87350c06cb65e85",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 5",
+  "hash": "20ddbf78d63ea7b2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 6",
+  "hash": "b9a03d695068d2d5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "negatieve-getallen-po stap 4 vraag 7",
   "hash": "ef78375519df23a3",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 8",
+  "hash": "7f35525c8e78a9cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 9",
+  "hash": "00c8af7844161ba1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "nieuwsbericht-lezen-po stap 1 vraag 1",
@@ -15237,6 +15347,44 @@
   "reden": "niveaus.basis gaf het antwoord."
  },
  {
+  "waar": "schatten-afronden stap 4 vraag 1",
+  "hash": "2835526873baed5d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Schat:\""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 3",
+  "hash": "4fe6714e335448e6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"— schat (rond af ...):\""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 4",
+  "hash": "7b973eb0a0d55aa0",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 6",
+  "hash": "bc33298184c641b4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Schat:\""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 7",
+  "hash": "1d3bc2e7efbc88fb",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "schema-tekst-combi-po stap 1 vraag 3",
   "hash": "fd601b3bebc62009",
   "oordeel": "goed",
@@ -18059,6 +18207,62 @@
   "reden": "Antwoord en hints kloppen. Niveaus: basis was het kale antwoord, nogSimpeler zonder punt."
  },
  {
+  "waar": "tabellen-grafieken stap 2 vraag 1",
+  "hash": "037a222095150315",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt met tabel in stap-svg (vanille do = 6); basis = antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 2",
+  "hash": "82e630485399e206",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt met tabel (vr = 29); basis = antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 4",
+  "hash": "2c67f24a8568c5b1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Tabel '...'.\" (en de stap toont een andere tabel); basis = antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 5",
+  "hash": "733a1f7d5a7667b2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Tabel '...':\"; basis = antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 6",
+  "hash": "f53f572a71787606",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Tabel '...':\"; basis = antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 7",
+  "hash": "9df5222861ce3470",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Tabel '...':\"; basis = antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 8",
+  "hash": "10122ad2db18f7d8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin \"Tabel '...'.\"; basis = antwoord"
+ },
+ {
   "waar": "tabellen-grafieken stap 3 vraag 1",
   "hash": "102e500a11420fdb",
   "oordeel": "goed",
@@ -18782,6 +18986,70 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 1",
+  "hash": "1064146e8564e1ec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt, maar omrekenen km/h naar m/s (÷ 3,6) is geen groep-6-stof; basis telegram met antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 2",
+  "hash": "4f2d7813b61f6adb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt, maar omrekenen m/s naar km/h is geen groep-6-stof; basis telegram met antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 3",
+  "hash": "2f61d59935dd29a1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 4",
+  "hash": "5eb9c26e5eadda73",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt (100 km in 3 uur), maar gemiddelde snelheid over ongelijke tijden is te moeilijk voor groep 6; basis = antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 5",
+  "hash": "ff3d24ae21a942cf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "basis = antwoord; nogSimpeler \"300k\" is Engelse notatie"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 6",
+  "hash": "9663e29e0bbf29bd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 7",
+  "hash": "ae49c8fb636039f3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 8",
+  "hash": "20e9a5de293a8837",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "tijd-snelheid-afstand-po stap 5 vraag 6",
   "hash": "1bb40f885ccdfc0b",
   "oordeel": "goed",
@@ -18857,6 +19125,76 @@
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 10",
+  "hash": "2f1ca17abbafab74",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 2",
+  "hash": "f2a5f0ef1deb2c1f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 3",
+  "hash": "23c6c8a3d6683542",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 4",
+  "hash": "314b53566cc2265d",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 5",
+  "hash": "3ae6f794dccb819f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 6",
+  "hash": "bf336e8c0e44b70f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 7",
+  "hash": "1e3f99112d66c14a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 8",
+  "hash": "d843d332ea9edce0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 9",
+  "hash": "4b0ae43bedd92650",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "tijdsduur-rekenen-po stap 6 vraag 7",
@@ -20266,6 +20604,30 @@
   "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 1",
+  "hash": "b37d5f8783b60e88",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 2",
+  "hash": "dc04346dba04f689",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 4",
+  "hash": "9d637e5f0c733c87",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "vraag zonder werkwoord (\"Hoeveel water voor 2 personen?\"); basis = antwoord"
  },
  {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 3",

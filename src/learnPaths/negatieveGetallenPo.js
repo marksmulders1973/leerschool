@@ -992,17 +992,17 @@ const steps = [
     explanation: "Negatieve getallen zie je vooral in:\n\n**Temperatuur**:\n*'In de winter daalde de temperatuur van +3 °C overdag naar −7 °C 's nachts. Hoeveel graden was 't gedaald?'*\n\n• Verschil = +3 − (−7) = 3 + 7 = **10 graden**.\n\nOf op de thermometer: van +3 → 0 = 3 omlaag. Van 0 → −7 = 7 omlaag. Totaal **10 omlaag**.\n\n**Geld** *(schuld + saldo)*:\n*'Mark heeft € 25 op zijn rekening. Hij betaalt € 40 boodschappen. Wat is zijn saldo nu?'*\n\n• 25 − 40 = **−€ 15** *(roodstand)*.\n\n*'Hij krijgt zijn loon van € 100. Wat is zijn saldo?'*\n• −15 + 100 = **+€ 85**.\n\n**Diepte / hoogte** *(zeespiegel)*:\nNederland ligt deels onder zeespiegel.\n• Schiphol: −3 m *(3 meter onder zeespiegel)*.\n• Mont Blanc: ongeveer +4.800 m *(boven zeespiegel)*.\n\n**Toets-tip — verschil van temperaturen**:\nVerschil = grootste − kleinste *(uitkomst altijd positief)*.\n• Tussen +5 en −3: verschil = 5 − (−3) = 5 + 3 = **8**.\n• Tussen +20 en −10: verschil = 20 − (−10) = 20 + 10 = **30**.\n\n**Slimme aanpak**: tel apart het 'positieve deel' (tot 0) en het 'negatieve deel' (van 0 omlaag). Dan tel je beide samen.",
     checks: [
       {
-        q: "Temperatuur is **+5 °C**, daalt **8 graden**. **Nieuwe temperatuur**?",
+        q: "Het is **+5 °C**. De temperatuur daalt **8 graden**. Wat is de **nieuwe temperatuur**?",
         options: ["−3 °C","+3 °C","−13 °C","+13 °C"],
         answer: 0,
-        wrongHints: [null,"Andersom — daalt naar onder nul, niet erboven.","Te ver — dalen met 8 graden vanaf 5 gaat minder ver dan je denkt.","Andersom — de temperatuur daalt, gaat omlaag, niet omhoog."],
+        wrongHints: [null,"Je deed 8 − 5. Maar je begint op +5 en gaat 8 graden omlaag. Tel de stapjes op de thermometer.","Te ver — dalen met 8 graden vanaf 5 gaat minder ver dan je denkt.","Andersom — de temperatuur daalt, gaat omlaag, niet omhoog."],
         uitlegPad: {
           stappen: [{ titel: "5 − 8 = −3", tekst: "Dalen = aftrekken. 5 − 8 = −3 (3 onder nul)." }],
           woorden: [{ woord: "dalen", uitleg: "Temperatuur omlaag = aftrekken." }],
           theorie: "Stijgen = +. Dalen = −. Daal je meer dan 5 → onder nul.",
           voorbeelden: [{ type: "stap", tekst: "5 − 5 = 0. Nog 3 verder omlaag = −3." }],
           basiskennis: [{ onderwerp: "Thermometer", uitleg: "Kwik daalt 8 streepjes vanaf +5 → komt op −3." }],
-          niveaus: { basis: "−3 °C.", simpeler: "Dalen 8 graden van +5: 5 − 8 = −3 (3 graden onder nul).", nogSimpeler: "−3" },
+          niveaus: { basis: "Begin op +5 op de thermometer en tel 8 graden omlaag. Na 5 stapjes ben je bij 0.", simpeler: "Dalen 8 graden van +5: 5 − 8 = −3 (3 graden onder nul).", nogSimpeler: "−3" },
         },
       },
       {
@@ -1016,21 +1016,21 @@ const steps = [
           theorie: "Verschil bij negatief: tel positieve deel + negatieve deel. Of: groter − kleiner.",
           voorbeelden: [{ type: "stap", tekst: "+12 − (−5) = 12 + 5 = 17 graden." }],
           basiskennis: [{ onderwerp: "Altijd positief", uitleg: "Verschil = afstand op getalslijn = altijd ≥0." }],
-          niveaus: { basis: "17.", simpeler: "Van +12 naar 0 = 12 stappen. Van 0 naar −5 = 5 stappen. Totaal 17.", nogSimpeler: "17" },
+          niveaus: { basis: "Tel van +12 omlaag naar 0, en daarna van 0 verder naar −5. Tel die twee stukken op.", simpeler: "Van +12 naar 0 = 12 stappen. Van 0 naar −5 = 5 stappen. Totaal 17.", nogSimpeler: "17" },
         },
       },
       {
         q: "Anna staat **€ 30 rood** (saldo −€ 30). Ze krijgt **€ 80 zakgeld**. Wat is haar saldo nu?",
         options: ["+€ 50","+€ 110","−€ 50","−€ 110"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je rood vergeten?","Andersom — krijgt erbij, dus stijgt naar plus.","Ze krijgt geld erbij. Kan haar schuld dan groter worden?"],
+        wrongHints: [null,"Te veel — heb je rood vergeten?","Ze krijgt geld erbij. Tel vanaf −€ 30 eerst omhoog tot € 0, en kijk wat er dan nog over is.","Ze krijgt geld erbij. Kan haar schuld dan groter worden?"],
         uitlegPad: {
           stappen: [{ titel: "Schuld eerst weg", tekst: "−30 + 80: eerst 30 om bij 0 te komen, dan nog 50 over. → +50." }],
           woorden: [{ woord: "rood saldo", uitleg: "Negatief saldo = schuld bij bank." }],
           theorie: "Negatief + positief: positief eet eerst de schuld op, rest is plus.",
           voorbeelden: [{ type: "stap", tekst: "−30 + 30 = 0 (schuld weg). +50 over. Totaal +€50." }],
           basiskennis: [{ onderwerp: "Echt geld", uitleg: "Eerst schuld terugbetalen, dan kun je nog €50 uitgeven." }],
-          niveaus: { basis: "+€50.", simpeler: "Schuld €30 + zakgeld €80 = €30 schuld weg + €50 over = +€50.", nogSimpeler: "+€50" },
+          niveaus: { basis: "Met het zakgeld betaalt Anna eerst haar schuld van € 30 terug. Hoeveel blijft er dan over?", simpeler: "Schuld €30 + zakgeld €80 = €30 schuld weg + €50 over = +€50.", nogSimpeler: "+€50" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1071,7 +1071,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 graden.",
+            basis: "Tel van +4 omlaag naar 0, en dan verder naar −5. Tel die twee stukken op.",
             simpeler: "Eerst 4 graden omlaag naar 0, dan nog 5 graden omlaag naar −5. Samen 9.",
             nogSimpeler: "9 graden",
           },
@@ -1114,7 +1114,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−€ 8.",
+            basis: "Met de eerste € 10 is haar geld op. Hoeveel moet ze daarna nog betalen?",
             simpeler: "€ 10 is op na € 10 betalen. Er moet nog € 8 betaald worden: −€ 8.",
             nogSimpeler: "−€ 8",
           },
@@ -1152,7 +1152,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "+€ 13.",
+            basis: "Met de eerste € 12 is de schuld van Joris weg. Hoeveel van de € 25 blijft er dan over?",
             simpeler: "€ 12 gaat naar de schuld. Er blijft € 13 over: +€ 13.",
             nogSimpeler: "+€ 13",
           },
@@ -1238,7 +1238,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−1 °C.",
+            basis: "Warmer is omhoog op de thermometer. Tel vanaf −6 vijf stapjes omhoog.",
             simpeler: "Vanaf −6 vijf graden omhoog: −5, −4, −3, −2, −1.",
             nogSimpeler: "−1 °C",
           },
@@ -1276,7 +1276,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−8 °C.",
+            basis: "Kouder is omlaag op de thermometer. Tel vanaf −2 zes stapjes omlaag.",
             simpeler: "Al 2 graden onder nul, nog 6 erbij onder nul: 8 graden onder nul.",
             nogSimpeler: "−8 °C",
           },

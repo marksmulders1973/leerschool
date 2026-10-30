@@ -366,6 +366,7 @@ const steps = [
     checks: [
       {
         q: "Hoeveel m/s is **90 km/h**?",
+        vanafGroep: 8, // nakijkronde B8 (30 okt 2026): omrekenen km/h naar m/s (÷ 3,6) is geen groep-6-stof
         options: ["25 m/s", "50 m/s", "324 m/s", "9 m/s"],
         answer: 0,
         wrongHints: [null, "Hoeveel meter is 90 km, en hoeveel seconden zitten er in een uur?", "Heb je × 3,6 gedaan? Van km/h naar m/s wordt het getal kleiner.", "Heb je door 10 gedeeld? Een uur heeft 3600 seconden."],
@@ -381,11 +382,12 @@ const steps = [
             { type: "thuis", tekst: "Een fietser van 36 km/h gaat 36 ÷ 3,6 = 10 m/s." },
           ],
           basiskennis: [{ onderwerp: "1 km = 1000 m, 1 uur = 3600 s", uitleg: "Deze twee omrekeningen samen geven de factor 3,6 tussen km/h en m/s." }],
-          niveaus: { basis: "90÷3,6=25.", simpeler: "km/h gedeeld door 3,6.", nogSimpeler: "25" },
+          niveaus: { basis: "Een uur heeft 3600 seconden en een km is 1000 meter. Van km/h naar m/s deel je daarom door 3,6.", simpeler: "km/h gedeeld door 3,6.", nogSimpeler: "25" },
         },
       },
       {
         q: "Hoeveel km/h is **12 m/s**?",
+        vanafGroep: 8, // nakijkronde B8 (30 okt 2026): omrekenen m/s naar km/h (× 3,6) is geen groep-6-stof
         options: ["43,2 km/h", "33 km/h", "3,3 km/h", "120 km/h"],
         answer: 0,
         wrongHints: [null, "Hoeveel meter leg je af in een uur (3600 seconden)? Reken dat om naar km.", "Heb je gedeeld? Van m/s naar km/h wordt het getal groter.", "Heb je × 10 gedaan? Reken met 3600 seconden in een uur."],
@@ -401,7 +403,7 @@ const steps = [
             { type: "thuis", tekst: "Een hond die 3 m/s rent, rent 3 × 3,6 = 10,8 km/h." },
           ],
           basiskennis: [{ onderwerp: "Omrekenfactor 3,6", uitleg: "km/h ÷ 3,6 = m/s, en m/s × 3,6 = km/h. Dit getal komt van 1000 m / 3600 s." }],
-          niveaus: { basis: "12·3,6=43,2.", simpeler: "m/s keer 3,6 = km/h.", nogSimpeler: "43,2" },
+          niveaus: { basis: "Van m/s naar km/h doe je het omgekeerde van delen door 3,6: je doet keer 3,6.", simpeler: "m/s keer 3,6 = km/h.", nogSimpeler: "43,2" },
         },
       },
       {
@@ -421,11 +423,12 @@ const steps = [
             { type: "thuis", tekst: "Een gezin rijdt op vakantie 1 uur 50 km/h en 1 uur 70 km/h — de gemiddelde snelheid reken je via de totale afstand en tijd." },
           ],
           basiskennis: [{ onderwerp: "S = V × T", uitleg: "Afstand = snelheid × tijd. Nodig om per uur de afgelegde afstand te berekenen." }],
-          niveaus: { basis: "75 km/h.", simpeler: "Optellen + delen 2.", nogSimpeler: "75" },
+          niveaus: { basis: "Reken uit hoeveel km de auto in totaal rijdt, en deel dat door het aantal uren.", simpeler: "Optellen + delen 2.", nogSimpeler: "75" },
         },
       },
       {
         q: "Een renner fietst **50 km met 25 km/h** en daarna **50 km met 50 km/h**. Wat is zijn gemiddelde snelheid?",
+        vanafGroep: 8, // nakijkronde B8 (30 okt 2026): gemiddelde snelheid over ongelijke tijden is geen groep-6-stof
         options: [
           "33,3 km/h",
           "37,5 km/h",
@@ -446,7 +449,7 @@ const steps = [
             { type: "thuis", tekst: "Een fietstocht van twee gelijke stukken met verschillend tempo werkt op dezelfde manier." },
           ],
           basiskennis: [{ onderwerp: "T = S/V", uitleg: "Tijd = afstand gedeeld door snelheid. Nodig om de tijd per stuk uit te rekenen." }],
-          niveaus: { basis: "33,3 km/h.", simpeler: "Langzame stuk telt zwaarder.", nogSimpeler: "33,3" },
+          niveaus: { basis: "Reken eerst per stuk uit hoeveel uur de renner erover doet. Deel daarna de totale afstand door de totale tijd.", simpeler: "Langzame stuk telt zwaarder.", nogSimpeler: "33,3" },
         },
       },
       {
@@ -471,7 +474,7 @@ const steps = [
             { type: "thuis", tekst: "Als je een lichtflits van de maan zou zien, zou die er ruim 1 seconde over doen om aan te komen." },
           ],
           basiskennis: [{ onderwerp: "km/s vs km/h", uitleg: "km/s (per seconde) is een veel groter getal dan km/h (per uur) voor dezelfde snelheid, omdat een uur 3600 seconden heeft." }],
-          niveaus: { basis: "300 000 km/s.", simpeler: "Bijna 300 000 km per seconde.", nogSimpeler: "300k" },
+          niveaus: { basis: "Licht is het snelste wat er bestaat: in één seconde gaat het ruim 7 keer rond de aarde.", simpeler: "Bijna 300 000 km per seconde.", nogSimpeler: "300 000 km/s" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -525,7 +528,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "60 km per uur.",
+            basis: "Lees km/h als 'kilometer per uur'. Wat staat er vóór de streep en wat erachter?",
             simpeler: "Per = in elk.",
             nogSimpeler: "60 km in 1 uur",
           },
@@ -571,7 +574,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lopen ≈ 5 km/h.",
+            basis: "Een fiets gaat zo'n 15 km/h. Wandelen gaat een stuk langzamer dan fietsen.",
             simpeler: "Veel langzamer dan fietsen.",
             nogSimpeler: "5 km/h",
           },
@@ -617,7 +620,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "80 km = afstand.",
+            basis: "Een snelheid is altijd een afstand per tijd, zoals km per uur. Bij welke optie staat er geen tijd bij?",
             simpeler: "Geen tijd erbij.",
             nogSimpeler: "80 km",
           },

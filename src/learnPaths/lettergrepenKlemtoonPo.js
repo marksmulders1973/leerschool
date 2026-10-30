@@ -386,7 +386,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Op de lettergreepgrens", tekst: "Tafel = ta-fel. Je breekt af tussen ta en fel: ta-fel." }],
           niveaus: {
-            basis: "Afbreken: ta-fel (tussen de twee lettergrepen).",
+            basis: "Klap het woord langzaam mee. Je breekt af op de grens tussen twee klappen.",
             simpeler: "Waar zit de grens tussen de klappen van 'tafel'?",
             nogSimpeler: "ta … fel — breek daar af.",
           },
@@ -396,7 +396,7 @@ const steps = [
         q: "Mag je het woord 'aap' afbreken aan het eind van een regel?",
         options: ["nee, het is maar één lettergreep","ja, als a-ap, tussen de twee a's","ja, als aa-p, voor de laatste letter","nee, je breekt alleen samenstellingen af"],
         answer: 0,
-        wrongHints: [null, "Eén lettergreep splits je niet.", "Ook niet — er is geen tweede lettergreep.", "Ook 'ta-fel' mag je afbreken, en dat is geen samenstelling. Waarom mag 'aap' dan niet?"],
+        wrongHints: [null, "Klap het woord mee: hoor je twee klappen of maar één?", "Mag er één losse letter op de volgende regel staan? Klap het woord eens mee.", "Ook 'ta-fel' mag je afbreken, en dat is geen samenstelling. Waarom mag 'aap' dan niet?"],
         uitlegPad: {
           stappen: [{ titel: "Eén lettergreep = niet afbreken", tekst: "'Aap' is één klap (1 lettergreep), dus je kunt het niet afbreken." }],
           niveaus: {
@@ -410,11 +410,11 @@ const steps = [
         q: "Welke afbreking van 'vakantie' is goed?",
         options: ["va-kantie", "vak-antie", "vakant-ie", "v-akantie"],
         answer: 0,
-        wrongHints: [null, "Dat knipt midden in de eerste lettergreep (va-).", "Dat knipt midden in een lettergreep.", "Een losse v mag niet."],
+        wrongHints: [null, "Klap mee: hoort de k bij de eerste klap of bij de tweede?", "Dat knipt midden in een lettergreep.", "Een losse v mag niet."],
         uitlegPad: {
           stappen: [{ titel: "va-kan-tie", tekst: "Vakantie = va-kan-tie. Je mag afbreken tussen lettergrepen, dus 'va-kantie' is goed." }],
           niveaus: {
-            basis: "va-kantie breekt af op een lettergreepgrens.",
+            basis: "Klap het woord langzaam mee en zoek de grens tussen twee klappen.",
             simpeler: "Spreek uit: va — kan — tie. Breek op zo'n grens af.",
             nogSimpeler: "Welke begint met de hele lettergreep 'va-'?",
           },
@@ -424,7 +424,7 @@ const steps = [
         q: "Mag je het woord 'zon' afbreken aan het eind van een regel?",
         options: ["nee, het is maar één lettergreep","ja, als zo-n, na de klinker","ja, als z-on, na de eerste letter","nee, want het eindigt op een medeklinker"],
         answer: 0,
-        wrongHints: [null, "Eén lettergreep splits je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "'Tafel' eindigt ook op een medeklinker, en ta-fel mag wel. Wat is het echte verschil?"],
+        wrongHints: [null, "Mag er één losse letter op de volgende regel staan? Klap het woord eens mee.", "Klap het woord mee: hoor je twee klappen of maar één?", "'Tafel' eindigt ook op een medeklinker, en ta-fel mag wel. Wat is het echte verschil?"],
         uitlegPad: {
           stappen: [{ titel: "Eén lettergreep = niet afbreken", tekst: "'Zon' is één klap (1 lettergreep). Je kunt het niet afbreken." }],
           niveaus: {
@@ -438,11 +438,11 @@ const steps = [
         q: "Welke afbreking van 'bibliotheek' is goed?",
         options: ["bi-bliotheek", "bib-liotheek", "bibliot-heek", "bibliothe-ek"],
         answer: 0,
-        wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('bli').", "Dat knipt de th uit elkaar. Zeg je 't' en 'heek' apart?", "Dat knipt midden in de klank 'theek'."],
+        wrongHints: [null, "Dat knipt midden in een lettergreep. Klap het woord langzaam mee.", "Dat knipt de th uit elkaar. Zeg je 't' en 'heek' apart?", "Dat knipt midden in de klank 'theek'."],
         uitlegPad: {
           stappen: [{ titel: "bi-bliotheek", tekst: "Bibliotheek = bi-bli-o-theek. Je mag afbreken na de eerste lettergreep: bi-bliotheek." }],
           niveaus: {
-            basis: "bi-bli-o-theek: breek af na 'bi', 'bibli' of 'biblio'.",
+            basis: "Klap het woord langzaam mee en tel de klappen. Afbreken mag alleen op de grens tussen twee klappen.",
             simpeler: "Klap mee: bi — bli — o — theek. Je breekt af op zo'n grens.",
             nogSimpeler: "Welke knipt af na de eerste lettergreep 'bi-'?",
           },
@@ -486,7 +486,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Afbreken: kik-ker (tussen de twee lettergrepen).",
+            basis: "Klap het woord langzaam mee. Je breekt af op de grens tussen twee klappen.",
             simpeler: "Waar zit de grens tussen de klappen van 'kikker'?",
             nogSimpeler: "kik … ker — breek daar af.",
           },
@@ -510,7 +510,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "appel-sap breekt af op een lettergreepgrens.",
+            basis: "Klap het woord mee en kijk uit welke twee woorden het bestaat. Afbreken mag alleen tussen twee klappen.",
             simpeler: "Klap mee: ap — pel — sap. Breek op zo'n grens af.",
             nogSimpeler: "Bij welke staat 'sap' heel op de volgende regel?",
           },

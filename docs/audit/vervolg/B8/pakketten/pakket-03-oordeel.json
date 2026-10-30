@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij \"10 min\" noemde het goede antwoord (\"een half uur is 30\")",
+  "hersteld": true,
+  "wijziging": "wrongHint C herschreven (denkfout zonder antwoord)"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt, hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt, hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHints bij a-ap en aa-p zeiden \"één lettergreep / geen tweede lettergreep\" = letterlijk het goede antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints B en C herschreven (klappen tellen / losse letter)"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij vak-antie noemde de goede afbreking \"va-\"; basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHint B en basis herschreven"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHints bij zo-n en z-on zeiden \"één lettergreep\" = het goede antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints B en C herschreven"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "basis noemde de goede afbreekplekken (na bi, bibli, biblio); hint B noemde \"bli\"",
+  "hersteld": true,
+  "wijziging": "basis en wrongHint B herschreven"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt, hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "telegramzin in de vraag; basis = antwoord; hint B verklapte \"onder nul\"",
+  "hersteld": true,
+  "wijziging": "vraag tot volledige zinnen herschreven, wrongHint B en basis herschreven"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis = antwoord; hint C verklapte \"naar plus\"",
+  "hersteld": true,
+  "wijziging": "wrongHint C en basis herschreven"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin \"Schat:\"",
+  "hersteld": true,
+  "wijziging": "vraag aangevuld: \"Schat hoeveel je samen moet betalen.\""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 3 uur 15 was feitelijk fout (\"een kwartier te ver\", het zijn er twee); vraag telegramstijl",
+  "hersteld": true,
+  "wijziging": "vraag herschreven, wrongHint D herschreven"
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin \"— schat (rond af ...):\"",
+  "hersteld": true,
+  "wijziging": "vraag tot volledige zinnen herschreven"
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt (8,80 is ongeveer 9)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHint bij \"een half uur\" rekende het antwoord voor (\"van negen tot bijna elf uur\")",
+  "hersteld": true,
+  "wijziging": "wrongHint D herschreven"
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "telegramzin \"Schat:\"",
+  "hersteld": true,
+  "wijziging": "vraag aangevuld: \"Schat hoeveel je samen moet betalen.\""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt (10 - 6,05 is ongeveer 4)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schatten-afronden stap 4 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij \"1 uur\" rekende voor tot het aantal hele uren (13:05 tot bijna 16:00)",
+  "hersteld": true,
+  "wijziging": "wrongHint D herschreven"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "?",
+  "reden": "klopt met tabel in stap-svg (vanille do = 6); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "?",
+  "reden": "klopt met tabel (vr = 29); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "?",
+  "reden": "wrongHint bij 52 rekende de rij chocolade voor (7 + 10 + 5 + 9 + 13); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHint C en basis herschreven"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "telegramzin \"Tabel '...'.\" (en de stap toont een andere tabel); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin herschreven, basis herschreven"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "telegramzin \"Tabel '...':\"; basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin herschreven, basis herschreven"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telegramzin \"Tabel '...':\"; basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin herschreven, basis herschreven"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin \"Tabel '...':\"; basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin herschreven, basis herschreven"
+ },
+ {
+  "waar": "tabellen-grafieken stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telegramzin \"Tabel '...'.\"; basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als hele zin herschreven, basis herschreven"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "klopt, maar omrekenen km/h naar m/s (÷ 3,6) is geen groep-6-stof; basis telegram met antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 gezet; basis herschreven"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "klopt, maar omrekenen m/s naar km/h is geen groep-6-stof; basis telegram met antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 gezet; basis herschreven"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "klopt (100 km in 3 uur), maar gemiddelde snelheid over ongelijke tijden is te moeilijk voor groep 6; basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 gezet; basis herschreven"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "basis = antwoord; nogSimpeler \"300k\" is Engelse notatie",
+  "hersteld": true,
+  "wijziging": "basis herschreven, nogSimpeler \"300 000 km/s\""
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "kaartschaal is geen groep-5-stof (sets 5) en uitleg was misleidend (\"werkelijke km direct als cm op kaart\"); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet; theorie, basis en simpeler herschreven (1 cm = 100.000 cm = 1 km)"
+ },
+ {
+  "waar": "verhoudingen-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "vraag zonder werkwoord (\"Hoeveel water voor 2 personen?\"); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "vraag aangevuld met \"heb je nodig\"; basis herschreven"
+ }
+]

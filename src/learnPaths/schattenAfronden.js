@@ -1297,19 +1297,19 @@ const steps = [
     explanation: "Schatten is overal handig in praktijk:\n\n**Voorbeeld 1 — winkel-budget**:\n*'Heb ik genoeg geld? Met € 25 kunnen we kopen: brood € 2,15 + kaas € 4,30 + appels € 3,80 + chips € 1,50 + koek € 2,90.'*\n\nSchatten:\n• 2 + 4 + 4 + 2 + 3 = 15. Genoeg!\n\n**Voorbeeld 2 — reistijd**:\n*'Trein vertrekt 14:18, aankomst 16:47. Hoe lang duurt de reis ongeveer?'*\n• Afronden: 14:20 → 16:50 = **2,5 uur**.\n• Echte tijd: 2 uur 29 min ≈ 2,5 uur. Klopt.\n\n**Voorbeeld 3 — afstand schatten**:\n*'Sven loopt naar school. Hij doet er 28 minuten over. Hoe ver is dat ongeveer?'*\n• Mensen lopen ~5 km/uur, dus ~80 m/min.\n• 28 min × 80 m/min ≈ 2200 m = **~2 km**.\n\n**Toets-tip — controle achter elke som**:\nNa elke berekening — schat het antwoord. Klopt het qua grootte? Zo nee → fout gemaakt, opnieuw kijken.",
     checks: [
       {
-        q: "Een kassabon: **€ 4,85 + € 7,15 + € 12,40 + € 3,60**. Schat:",
+        q: "Een kassabon: **€ 4,85 + € 7,15 + € 12,40 + € 3,60**. Schat hoeveel je samen moet betalen.",
         options: ["€ 28","€ 25","€ 30","€ 22"],
         answer: 0,
         wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel ze alle vier op.","Welke vier hele euro's krijg je na afronden? Tel die nog eens op.","Heb je alle vier de bedragen meegeteld? Ook € 3,60 hoort erbij."],
       },
       {
-        q: "Een rit duurt **2 uur 47 min**. Afgerond op kwartiers — hoeveel?",
+        q: "Een rit duurt **2 uur 47 min**. Rond die tijd af op een kwartier. Hoe lang duurt de rit dan ongeveer?",
         options: ["2 uur 45 min","3 uur","2 uur 30 min","3 uur 15 min"],
         answer: 0,
-        wrongHints: [null,"Te veel — welk kwartier (0, 15, 30 of 45 minuten) ligt het dichtst bij 47 minuten?","Te weinig — 47 minuten ligt dichter bij een ander kwartier.","Je bent een kwartier te ver doorgeschoten. Hoeveel minuten liggen er tussen 2 uur 47 en 3 uur 15?"],
+        wrongHints: [null,"Te veel — welk kwartier (0, 15, 30 of 45 minuten) ligt het dichtst bij 47 minuten?","Te weinig — 47 minuten ligt dichter bij een ander kwartier.","Te veel — dat is bijna een half uur langer dan de rit. Welk kwartier ligt het dichtst bij 2 uur 47?"],
       },
       {
-        q: "**€ 49,80 + € 24,30** — schat (rond af op hele euro's):",
+        q: "Rond **€ 49,80** en **€ 24,30** af op hele euro's. Hoeveel is het samen ongeveer?",
         options: ["€ 74","€ 70","€ 80","€ 75"],
         answer: 0,
         wrongHints: [null,"Te weinig — rond elk bedrag af op hele euro's en tel op.","€ 80 krijg je als je € 24,30 naar € 30 afrondt. Is dat afronden op hele euro's?","€ 75 = € 50 + € 25. Rond je € 24,30 af naar € 25 of naar € 24?"],
@@ -1339,11 +1339,11 @@ const steps = [
           null,
           "Te weinig — rond de tijden af: 9:12 is ongeveer 9:10, 10:58 is bijna 11:00.",
           null,
-          "Veel te weinig — de bus rijdt van negen uur tot bijna elf uur.",
+          "Veel te weinig — een half uur na 9:12 is het pas 9:42. Is de bus dan al aangekomen?",
         ],
       },
       {
-        q: "Een kassabon: **€ 1,10 + € 5,90 + € 2,95 + € 8,05**. Schat:",
+        q: "Een kassabon: **€ 1,10 + € 5,90 + € 2,95 + € 8,05**. Schat hoeveel je samen moet betalen.",
         options: ["€ 18", "€ 16", "€ 20", "€ 15"],
         answer: 0,
         wrongHints: [
@@ -1368,7 +1368,7 @@ const steps = [
         q: "Noor speelt 's middags buiten van **13:05** tot **15:55**. Hoe lang is dat ongeveer?",
         options: ["Ongeveer 3 uur", "Ongeveer 2 uur", "Ongeveer 4 uur", "Ongeveer 1 uur"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 15:55 is bijna 16:00.", null, "Van 13:05 tot 14:05 is al een uur, en Noor speelt tot bijna 16:00. Hoeveel hele uren zijn dat?"],
+        wrongHints: [null, "Te weinig — 15:55 is bijna 16:00.", null, "Veel te weinig — één uur na 13:05 is het pas 14:05. Is Noor dan al klaar met spelen?"],
       },
     ],
   },

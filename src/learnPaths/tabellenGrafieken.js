@@ -380,7 +380,7 @@ const steps = [
           theorie: "Standaard-methode tabel lezen: (1) zoek juiste rij, (2) zoek juiste kolom, (3) kruispunt = antwoord. Wijs MET VINGER om niet te verschuiven naar verkeerde rij.",
           voorbeelden: [{ type: "stap", tekst: "Vanille-rij: 5 8 4 6 9. Dagen: ma di wo do vr. Donderdag = 4e positie. Vanille-do = 6. ✓" }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Verschuif niet per ongeluk naar verkeerde rij. Pen erbij houden helpt." }],
-          niveaus: { basis: "6 (vanille×do).", simpeler: "Rij vanille + kolom do = 6 ijsjes.", nogSimpeler: "6" },
+          niveaus: { basis: "Zoek met je vinger de rij vanille en ga naar rechts tot de kolom do (donderdag).", simpeler: "Rij vanille + kolom do = 6 ijsjes.", nogSimpeler: "6" },
         },
       },
       {
@@ -397,26 +397,26 @@ const steps = [
           theorie: "Voor 'meeste/minste totaal'-vragen: tel alle rij-getallen voor elke kolom op, dan vergelijk. Niet 1 rij vergelijken — som van álle.",
           voorbeelden: [{ type: "weekend-trend", tekst: "Kan logisch zijn: vrijdag = begin van het weekend, dan eten mensen vaker ijs." }],
           basiskennis: [{ onderwerp: "Eerst optellen", uitleg: "Veel mensen kijken alleen 1 rij (bv. chocolade-top) en denken die wint. Maar vraag is over ALLE smaken samen." }],
-          niveaus: { basis: "Vrijdag (29 stuks).", simpeler: "Som per dag. Vr=29 hoogst.", nogSimpeler: "Vr" },
+          niveaus: { basis: "Tel per dag de drie smaken bij elkaar op. Vergelijk daarna de totalen.", simpeler: "Som per dag. Vr=29 hoogst.", nogSimpeler: "Vr" },
         },
       },
       {
         q: "Hoeveel **chocolade-ijsjes** werden er in de **hele week** verkocht?",
         options: ["44","32","52","48"],
         answer: 0,
-        wrongHints: [null,"32 is het totaal van vanille. Zit je in de goede rij?","Tel de rij chocolade nog eens na: 7 + 10 + 5 + 9 + 13.","Tel de rij chocolade nog eens na, dag voor dag."],
+        wrongHints: [null,"32 is het totaal van vanille. Zit je in de goede rij?","Te veel — tel de rij chocolade nog eens na. Heb je misschien een getal twee keer meegeteld?","Tel de rij chocolade nog eens na, dag voor dag."],
         uitlegPad: {
           stappen: [{ titel: "Rij optellen", tekst: "Hele rij chocolade: 7+10+5+9+13. Groepeer slim: (7+13)+(10+5)+9 = 20+15+9 = 44." }],
           woorden: [{ woord: "rij-som", uitleg: "Som van alle getallen in 1 rij = totaal voor die categorie." }],
           theorie: "Slim optellen: zoek combinaties die ronde getallen geven. 7+13=20, 10+5=15. Sneller dan links-naar-rechts: 7+10=17, 17+5=22, 22+9=31, 31+13=44.",
           voorbeelden: [{ type: "check", tekst: "Vergelijking: vanille = 5+8+4+6+9 = 32. Aardbei = 3+6+3+5+7 = 24. Chocolade meest (44) — past." }],
           basiskennis: [{ onderwerp: "Tellen", uitleg: "Tel niet 'gevoel'-matig. Pen + papier of vingers gebruiken. De toets waardeert nauwkeurigheid." }],
-          niveaus: { basis: "44 (rij choco).", simpeler: "7+10+5+9+13 = 44.", nogSimpeler: "44" },
+          niveaus: { basis: "Zoek de rij chocolade en tel alle vijf de dagen bij elkaar op.", simpeler: "7+10+5+9+13 = 44.", nogSimpeler: "44" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Tabel 'gelezen boeken'. **Sanne**: september 3, oktober 5, november 2. **Daan**: september 4, oktober 1, november 6. Hoeveel boeken las **Daan in oktober**?",
+        q: "In een tabel over gelezen boeken staat: **Sanne**: september 3, oktober 5, november 2. **Daan**: september 4, oktober 1, november 6. Hoeveel boeken las **Daan in oktober**?",
         options: ["1", "5", "4", "6"],
         answer: 0,
         wrongHints: [null, "Zit je wel in de rij van Daan?", null, "Welke kolom hoort bij oktober?"],
@@ -451,14 +451,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 boek.",
+            basis: "Zoek eerst alle getallen van Daan. Kies daarna het getal dat bij oktober hoort.",
             simpeler: "Rij Daan + kolom oktober = 1.",
             nogSimpeler: "1",
           },
         },
       },
       {
-        q: "Tabel 'bezoekers zwembad': woensdag 95, vrijdag 120, zaterdag 140, zondag 165. Op welke dag kwamen er **de minste** bezoekers?",
+        q: "In een tabel over de bezoekers van het zwembad staat: woensdag 95, vrijdag 120, zaterdag 140, zondag 165. Op welke dag kwamen er **de minste** bezoekers?",
         options: ["woensdag", "vrijdag", "zaterdag", "zondag"],
         answer: 0,
         wrongHints: [
@@ -498,14 +498,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Woensdag (95).",
+            basis: "Bij 'de minste' zoek je het kleinste getal. Welke dag hoort daarbij?",
             simpeler: "Kleinste getal = 95 = woensdag.",
             nogSimpeler: "Woensdag",
           },
         },
       },
       {
-        q: "Tabel 'fruit verkocht op dinsdag': appels 14, peren 9, bananen 17. Hoeveel stuks fruit werden er **samen** verkocht?",
+        q: "In een tabel staat hoeveel fruit er op dinsdag is verkocht: appels 14, peren 9, bananen 17. Hoeveel stuks fruit werden er **samen** verkocht?",
         options: ["40", "31", "26", "42"],
         answer: 0,
         wrongHints: [null, "Heb je alle drie de soorten meegeteld?", null, "Reken nog eens na: 14 + 9 + 17."],
@@ -544,14 +544,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "40.",
+            basis: "Samen betekent: alle getallen bij elkaar optellen. Begin met de twee grootste.",
             simpeler: "14 + 9 + 17 = 40.",
             nogSimpeler: "40",
           },
         },
       },
       {
-        q: "Tabel 'lengte in cm': Iris 142, Bram 135, Lotte 150. Hoeveel cm is **Lotte langer dan Bram**?",
+        q: "In een tabel staat hoe lang drie kinderen zijn (in cm): Iris 142, Bram 135, Lotte 150. Hoeveel cm is **Lotte langer dan Bram**?",
         options: ["15", "8", "7", "285"],
         answer: 0,
         wrongHints: [
@@ -595,14 +595,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15 cm.",
+            basis: "Hoeveel langer betekent: het verschil. Haal de lengte van Bram af van die van Lotte.",
             simpeler: "Lotte 150 − Bram 135 = 15.",
             nogSimpeler: "15",
           },
         },
       },
       {
-        q: "Tabel 'kinderen die overblijven'. **Groep 6**: maandag 12, dinsdag 15. **Groep 7**: maandag 10, dinsdag 18. Hoeveel kinderen bleven er **op dinsdag** meer over in groep 7 dan in groep 6?",
+        q: "In een tabel staat hoeveel kinderen er overblijven. **Groep 6**: maandag 12, dinsdag 15. **Groep 7**: maandag 10, dinsdag 18. Hoeveel kinderen bleven er **op dinsdag** meer over in groep 7 dan in groep 6?",
         options: ["3", "2", "33", "8"],
         answer: 0,
         wrongHints: [
@@ -646,7 +646,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3.",
+            basis: "Kijk alleen naar dinsdag. Hoeveel is het verschil tussen groep 7 en groep 6?",
             simpeler: "Dinsdag: 18 − 15 = 3.",
             nogSimpeler: "3",
           },

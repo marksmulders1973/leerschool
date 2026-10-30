@@ -499,7 +499,7 @@ const steps = [
         q: "Van **9:30** tot **10:00** is hoe lang?",
         options: ["30 min", "1 uur", "10 min", "60 min"],
         answer: 0,
-        wrongHints: [null, "Te veel — hoeveel minuten zitten er van 9:30 tot 10:00?", "Te weinig — een half uur is 30, niet 10.", "Te veel — dat zou van 9:30 naar 10:30 zijn."],
+        wrongHints: [null, "Te veel — hoeveel minuten zitten er van 9:30 tot 10:00?", "Te weinig — van 9:30 tot 9:40 is 10 minuten. Ben je dan al bij 10:00?", "Te veel — dat zou van 9:30 naar 10:30 zijn."],
       },
       {
         q: "Van **8:45** tot **10:15** is hoe lang?",
@@ -518,7 +518,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "8:45 → 10:15 in 3 stappen: 15+60+15 = 90 min = 1u 30 min." }],
           basiskennis: [{ onderwerp: "Niet zomaar aftrekken", uitleg: "15 − 45 gaat niet — leen via het uur." }],
           niveaus: {
-            basis: "1 uur 30 min.",
+            basis: "Klim op: reken eerst van 8:45 naar 9:00, dan het hele uur tot 10:00 en dan de minuten tot 10:15.",
             simpeler: "Opklimmen: 8:45 → 9:00 (15 min), 9:00 → 10:00 (1 uur), 10:00 → 10:15 (15 min). Totaal: 15+60+15 = 90 min = 1u 30 min.",
             nogSimpeler: "1u 30m",
           },
@@ -582,7 +582,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "40 minuten.",
+            basis: "Tel eerst van 15:35 door tot het hele uur 16:00. Tel daarna de minuten tot 16:15 erbij.",
             simpeler: "Van 15:35 tot 16:00 is 25 minuten. Van 16:00 tot 16:15 is 15 minuten. Samen 40 minuten.",
             nogSimpeler: "40 min",
           },
@@ -632,7 +632,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 uur 25 min.",
+            basis: "Klim op: van 6:40 naar 7:00, dan de hele uren tot 9:00 en dan de minuten tot 9:05.",
             simpeler: "20 minuten tot 7:00, dan 2 hele uren tot 9:00, dan nog 5 minuten. Samen 2 uur 25 min.",
             nogSimpeler: "2u 25m",
           },
@@ -683,7 +683,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Van 9:40 tot 10:30.",
+            basis: "Reken bij elke rit uit hoeveel minuten het is: eerst tot 10:00, dan de minuten na 10:00.",
             simpeler: "Van 9:40 tot 10:00 is 20 minuten, van 10:00 tot 10:30 is 30 minuten. Samen 50.",
             nogSimpeler: "9:40 – 10:30",
           },
@@ -733,7 +733,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Van 10:55 tot 12:05.",
+            basis: "Reken elke wandeling uit: eerst tot het hele uur, dan de hele uren en dan de minuten die overblijven.",
             simpeler: "5 minuten tot 11:00, 1 uur tot 12:00, nog 5 minuten tot 12:05. Samen 1 uur 10 min.",
             nogSimpeler: "10:55 – 12:05",
           },
@@ -779,7 +779,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 uur 25 min.",
+            basis: "Tel eerst van 11:35 door tot 12:00. Tel daarna het hele uur tot 13:00 erbij.",
             simpeler: "Tot 12:00 is 25 minuten. Van 12:00 tot 13:00 is 1 uur. Samen 1 uur 25 min.",
             nogSimpeler: "1u 25m",
           },
@@ -829,7 +829,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 uur 35 min.",
+            basis: "Klim op: van 16:40 naar 17:00, dan het hele uur tot 18:00 en dan de minuten tot 18:15.",
             simpeler: "20 minuten tot 17:00, 1 uur tot 18:00, 15 minuten tot 18:15. Samen 1 uur 35 min.",
             nogSimpeler: "1u 35m",
           },

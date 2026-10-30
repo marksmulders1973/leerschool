@@ -953,7 +953,7 @@ const steps = [
           theorie: "Recept omrekenen: per-persoon (÷oude aantal) × nieuwe aantal.",
           voorbeelden: [{ type: "stap", tekst: "4 personen=300g. 1 persoon=75g. 6 personen=450g." }],
           basiskennis: [{ onderwerp: "Niet ×2", uitleg: "6/4 = 1,5 (niet 2). Per-persoon-truc voorkomt fouten." }],
-          niveaus: { basis: "450 g.", simpeler: "Per persoon: 300÷4 = 75g. 6 mensen: 6×75 = 450g.", nogSimpeler: "450" },
+          niveaus: { basis: "Reken eerst uit hoeveel gram pasta één persoon krijgt.", simpeler: "Per persoon: 300÷4 = 75g. 6 mensen: 6×75 = 450g.", nogSimpeler: "450" },
         },
       },
       {
@@ -967,10 +967,11 @@ const steps = [
           theorie: "Recept-aanpassen: L→mL, dan ÷oud aantal × nieuw.",
           voorbeelden: [{ type: "stap", tekst: "8 mensen=1000mL. 1=125mL. 3=375mL." }],
           basiskennis: [{ onderwerp: "L → mL eerst", uitleg: "Werk in mL voor delen — 1L÷8 wordt 0,125L = lastiger." }],
-          niveaus: { basis: "375 mL.", simpeler: "1L = 1000mL. Per persoon: 1000÷8 = 125mL. 3 personen: 3×125 = 375mL.", nogSimpeler: "375" },
+          niveaus: { basis: "Reken 1 L om naar mL en deel door 8. Zoveel water hoort bij één persoon.", simpeler: "1L = 1000mL. Per persoon: 1000÷8 = 125mL. 3 personen: 3×125 = 375mL.", nogSimpeler: "375" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B8 (30 okt 2026): rekenen met kaartschaal is geen groep-5-stof
         q: "Een kaart heeft **schaal 1 : 100.000**. In het echt is een afstand **5 km**. Hoeveel **cm** is dat op de kaart?",
         options: ["5 cm","50 cm","500 cm","0,5 cm"],
         answer: 0,
@@ -978,15 +979,15 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Schaal-truc 1:100.000", tekst: "Bij schaal 1:100.000 geldt: 1 cm op kaart = 1 km werkelijk. Dus 5 km = 5 cm op kaart." }],
           woorden: [{ woord: "schaal", uitleg: "Verhouding kaart-afstand : werkelijke afstand." }],
-          theorie: "Bij kaart-schaal: werkelijke km direct als cm op kaart (bij 1:100.000-stijl).",
+          theorie: "Bij schaal 1 : 100.000 is 1 cm op de kaart 100.000 cm in het echt. 100.000 cm = 1000 m = 1 km.",
           voorbeelden: [{ type: "stap", tekst: "5 km werkelijk → 5 cm op kaart (kaart-schaal)." }],
           basiskennis: [{ onderwerp: "Eenheid let op", uitleg: "Werk in dezelfde eenheid (cm met cm, km met km)." }],
-          niveaus: { basis: "5 cm.", simpeler: "Op kaart wordt werkelijke afstand veel kleiner. 5 km in werkelijkheid → 5 cm op kaart.", nogSimpeler: "5" },
+          niveaus: { basis: "Reken eerst uit hoeveel km 1 cm op deze kaart is: dat is 100.000 cm in het echt.", simpeler: "1 cm op de kaart = 100.000 cm = 1000 m = 1 km in het echt. Hoeveel cm op de kaart hoort dan bij 5 km?", nogSimpeler: "5 cm" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Soep voor **4 personen** gebruikt **800 mL** water. Hoeveel water voor **2 personen**?",
+        q: "Soep voor **4 personen** gebruikt **800 mL** water. Hoeveel water heb je nodig voor **2 personen**?",
         options: ["400 mL", "200 mL", "600 mL", "1600 mL"],
         answer: 0,
         wrongHints: [
@@ -1022,7 +1023,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "400 mL.",
+            basis: "2 personen is de helft van 4 personen. Wat gebeurt er dan met het water?",
             simpeler: "2 is de helft van 4. De helft van 800 is 400 mL.",
             nogSimpeler: "400",
           },
