@@ -1,0 +1,270 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/klokkijken.js",
+   "src/learnPaths/begrijpendLezenTekstenPo.js",
+   "src/learnPaths/gezondeVoedingPo.js"
+  ],
+  "sets": [
+   "3|rekenen",
+   "4|rekenen",
+   "5|begrijpend-lezen",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsRekenenG8.js",
+   "src/learnPaths/tafelsPo.js",
+   "src/learnPaths/schrijvenTekstenPo.js"
+  ],
+  "sets": [
+   "8|rekenen",
+   "4|rekenen",
+   "5|rekenen",
+   "6|taal"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 55,
+  "files": [
+   "src/learnPaths/werkwoordsspellingDT.js",
+   "src/learnPaths/spellingOverigePo.js",
+   "src/learnPaths/taalWoordenZinnenG4.js"
+  ],
+  "sets": [
+   "5|spelling",
+   "6|spelling",
+   "7|spelling",
+   "8|spelling",
+   "5|taal"
+  ]
+ },
+ {
+  "pakket": "04",
+  "n": 55,
+  "files": [
+   "src/learnPaths/dierenSeizoenenNatuur.js",
+   "src/learnPaths/informatiebronnenPo.js",
+   "src/learnPaths/waterErfgoedNederlandPo.js",
+   "src/learnPaths/korteTekstenSnappenG4.js",
+   "src/learnPaths/interpunctiePo.js"
+  ],
+  "sets": [
+   "5|natuur",
+   "6|natuur",
+   "6|taal",
+   "8|taal",
+   "6|aardrijkskunde",
+   "7|aardrijkskunde",
+   "8|aardrijkskunde",
+   "5|begrijpend-lezen",
+   "5|taal"
+  ]
+ },
+ {
+  "pakket": "05",
+  "n": 55,
+  "files": [
+   "src/learnPaths/matenOmtrekOppervlaktePo.js",
+   "src/learnPaths/soortenTekstenPo.js",
+   "src/learnPaths/schattenAfronden.js",
+   "src/learnPaths/vlakkeFigurenPo.js",
+   "src/learnPaths/schemasStappenplannenPo.js",
+   "src/learnPaths/verhoudingenPo.js"
+  ],
+  "sets": [
+   "6|rekenen",
+   "7|rekenen",
+   "7|taal",
+   "5|rekenen",
+   "5|taal",
+   "6|taal"
+  ]
+ },
+ {
+  "pakket": "06",
+  "n": 55,
+  "files": [
+   "src/learnPaths/matenEenheden.js",
+   "src/learnPaths/topografieNederland.js",
+   "src/learnPaths/dichtenPoezieRijmenPo.js",
+   "src/learnPaths/samenvattenHoofdgedachtePo.js",
+   "src/learnPaths/kalenderRekenenPo.js",
+   "src/learnPaths/kommagetallenPo.js",
+   "src/learnPaths/woordenschatPo.js"
+  ],
+  "sets": [
+   "6|rekenen",
+   "7|rekenen",
+   "6|aardrijkskunde",
+   "7|aardrijkskunde",
+   "8|aardrijkskunde",
+   "5|taal",
+   "6|taal",
+   "5|begrijpend-lezen"
+  ]
+ },
+ {
+  "pakket": "07",
+  "n": 55,
+  "files": [
+   "src/learnPaths/waterkringloopPo.js",
+   "src/learnPaths/toestandStoffenPo.js",
+   "src/learnPaths/dienstregelingRoostersPo.js",
+   "src/learnPaths/inhoudsopgaveRegisterPo.js",
+   "src/learnPaths/alfabetWoordenboekPo.js",
+   "src/learnPaths/volgordeBewerkingen.js",
+   "src/learnPaths/woordsoortenPo.js",
+   "src/learnPaths/getallenTot20Po.js"
+  ],
+  "sets": [
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "7|studievaardigheden",
+   "8|studievaardigheden",
+   "5|rekenen",
+   "5|taal",
+   "4|rekenen"
+  ]
+ },
+ {
+  "pakket": "08",
+  "n": 55,
+  "files": [
+   "src/learnPaths/begrijpendLezenStrategie.js",
+   "src/learnPaths/sterrenPlaneten.js",
+   "src/learnPaths/alineaFunctiesTussenkopjesPo.js",
+   "src/learnPaths/verhaalDiepteLezenPo.js",
+   "src/learnPaths/betrouwbaarheidBronnenPo.js",
+   "src/learnPaths/plattegrondLegendaPo.js",
+   "src/learnPaths/synoniemenTegenstellingenPo.js",
+   "src/learnPaths/schemaTekstCombiPo.js",
+   "src/learnPaths/werkwoordTijdenPo.js"
+  ],
+  "sets": [
+   "5|begrijpend-lezen",
+   "5|natuur",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "7|studievaardigheden",
+   "8|studievaardigheden",
+   "5|taal"
+  ]
+ },
+ {
+  "pakket": "09",
+  "n": 55,
+  "files": [
+   "src/learnPaths/verwijswoordenBegrijpendLezenPo.js",
+   "src/learnPaths/continentenWereldPo.js",
+   "src/learnPaths/olympischeSpelenPo.js",
+   "src/learnPaths/signaalwoordenVerbandenPo.js",
+   "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+   "src/learnPaths/feitMeningPo.js",
+   "src/learnPaths/tekstdoelSchrijversdoelPo.js",
+   "src/learnPaths/weersvoorspellingPo.js",
+   "src/learnPaths/bekendeWetenschappersPo.js",
+   "src/learnPaths/ruimtevaartPo.js"
+  ],
+  "sets": [
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "6|aardrijkskunde",
+   "7|aardrijkskunde",
+   "8|aardrijkskunde",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|taal",
+   "8|rekenen",
+   "8|taal",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur"
+  ]
+ },
+ {
+  "pakket": "10",
+  "n": 55,
+  "files": [
+   "src/learnPaths/tijdvakkenNederlandPo.js",
+   "src/learnPaths/folderBonAdvertentiePo.js",
+   "src/learnPaths/ontdekkingsreizenPo.js",
+   "src/learnPaths/bekendeBoekenLiteratuurPo.js",
+   "src/learnPaths/bekendeNederlandersPo.js",
+   "src/learnPaths/klassiekeMuziekPo.js",
+   "src/learnPaths/nederlandseKunstenaarsPo.js",
+   "src/learnPaths/pubertijdGroeiPo.js",
+   "src/learnPaths/spellingEiIjAuOu.js",
+   "src/learnPaths/woordbetekenisContextPo.js",
+   "src/learnPaths/werelddelenLandenPo.js",
+   "src/learnPaths/geschiedenisVroegerEnNuG5.js",
+   "src/learnPaths/industrieleRevolutiePo.js",
+   "src/learnPaths/dierenklassenPo.js",
+   "src/learnPaths/evolutieMensPo.js",
+   "src/learnPaths/lichaamGezondheidPo.js"
+  ],
+  "sets": [
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|studievaardigheden",
+   "8|studievaardigheden",
+   "7|natuur",
+   "8|natuur",
+   "5|spelling",
+   "6|spelling",
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "6|aardrijkskunde",
+   "7|aardrijkskunde",
+   "6|natuur"
+  ]
+ },
+ {
+  "pakket": "11",
+  "n": 17,
+  "files": [
+   "src/learnPaths/recyclenAfvalPo.js",
+   "src/learnPaths/politiekDemocratiePo.js",
+   "src/learnPaths/topografieNederlandProvinciesPo.jsx",
+   "src/learnPaths/koudeOorlogModernPo.js",
+   "src/learnPaths/topografieEuropaPo.jsx",
+   "src/learnPaths/topografieWereldWerelddelenPo.jsx",
+   "src/learnPaths/energiebronnenPo.js",
+   "src/learnPaths/vulkanenPo.js",
+   "src/learnPaths/gemiddeldenStatistiekPo.js",
+   "src/learnPaths/lettergrepenKlemtoonPo.js",
+   "src/learnPaths/onderwijsNiveausVmboHavoVwo.js"
+  ],
+  "sets": [
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|aardrijkskunde",
+   "8|aardrijkskunde",
+   "6|aardrijkskunde",
+   "7|rekenen",
+   "8|taal",
+   "8|studievaardigheden"
+  ]
+ }
+]
