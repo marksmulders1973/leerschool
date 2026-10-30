@@ -1160,7 +1160,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         },
       },
       {
-        q: "Teller Ruud Blom deelt gratis nestkasten uit én geeft tips voor groenere tuinen. Wat kun je hieruit concluderen?",
+        q: "De vogelwerkgroep van teller Ruud Blom deelt gratis nestkasten uit én geeft tips voor groenere tuinen. Wat kun je hieruit concluderen?",
         options: [
           "Ruud Blom denkt dat bewoners de mus kunnen helpen",
           "Ruud Blom wil later nestkasten gaan verkopen",

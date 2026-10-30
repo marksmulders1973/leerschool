@@ -528,7 +528,7 @@ const steps = [
           "Ze kocht melk, brood, en, boter.",
         ],
         answer: 0,
-        wrongHints: [null, "In een rijtje van drie of meer hoor je pauzes — die worden komma's.", "Na het eerste woord van de zin pauzeer je niet.", "Vlak vóór 'en' hoef je geen komma te zetten."],
+        wrongHints: [null, "In een rijtje van drie of meer hoor je pauzes — die worden komma's.", "Pauzeer je na 'kocht'? Daar begint het rijtje pas.", "Vlak vóór 'en' en vlak erna hoef je geen komma te zetten."],
         uitlegPad: {
           stappen: [{ titel: "Komma's in een opsomming", tekst: "Tussen de dingen in het rijtje (melk, brood) komt een komma. Vlak vóór 'en' laat je de komma meestal weg." }],
           niveaus: {
@@ -596,7 +596,7 @@ const steps = [
           "Als het morgen sneeuwt bouwen, we een sneeuwpop.",
         ],
         answer: 0,
-        wrongHints: [null, "Is het eerste zinsdeel daar al klaar?", null, "Pauzeer je tussen 'bouwen' en 'we'?"],
+        wrongHints: [null, "Is het eerste zinsdeel daar al klaar?", "Is het stukje met 'Als' na één woord al af? Lees hardop of je daar pauzeert.", "Pauzeer je tussen 'bouwen' en 'we'?"],
         uitlegPad: {
           stappen: [
             {
@@ -620,7 +620,7 @@ const steps = [
           "Juf mag ik even, naar buiten?",
         ],
         answer: 0,
-        wrongHints: [null, "Wie spreek je hier aan, en waar staat dat woord?", null, null],
+        wrongHints: [null, "Wie spreek je hier aan, en waar staat dat woord?", "Pauzeer je echt tussen 'ik' en 'even'? Kijk naar het woord waarmee je iemand aanspreekt.", "Pauzeer je echt tussen 'even' en 'naar'? Kijk naar het woord waarmee je iemand aanspreekt."],
         uitlegPad: {
           stappen: [
             {
@@ -648,7 +648,7 @@ const steps = [
           null,
           "Wat doe je na een tussenwerpsel zoals 'Nou'?",
           "Wordt hier iemand aangesproken?",
-          null,
+          "Deze zin bestaat uit twee stukken. Haal je adem tussen 'werd' en 'gingen'?",
         ],
         uitlegPad: {
           stappen: [

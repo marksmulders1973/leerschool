@@ -3206,11 +3206,68 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "conclusies-trekken-po stap 4 vraag 1",
+  "hash": "e836091759c33a7c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 2",
+  "hash": "dd534785638599bd",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 3",
+  "hash": "a88635c8b7fafd27",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 4",
+  "hash": "f700e23dc4538280",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 5",
+  "hash": "9001c09ecbe0185e",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 6",
+  "hash": "a439bb177e9bd32b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag zei dat teller Ruud Blom de nestkasten uitdeelt; in de tekst doet de vogelwerkgroep dat."
+ },
+ {
   "waar": "conclusies-trekken-po stap 4 vraag 7",
   "hash": "4171b6dbde0a2154",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 8",
+  "hash": "ea6ca88b2f1505eb",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 9",
+  "hash": "9837f896337e8be1",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "continenten-wereld-po stap 2 vraag 2",
@@ -8682,6 +8739,13 @@
   "reden": "Inhoudsopgave klopt; hint 'Index is alfabetisch + achterin.' en niveaus waren telegramzinnen"
  },
  {
+  "waar": "informatiebronnen-po stap 3 vraag 10",
+  "hash": "7689d9972fe70973",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "informatiebronnen-po stap 3 vraag 2",
   "hash": "d476108205f9d3ce",
   "oordeel": "twijfel",
@@ -8723,6 +8787,20 @@
   "hash": "98fa687bb1768632",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 8",
+  "hash": "d4ecc36941b5bc3b",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 9",
+  "hash": "2a08a57383ea4102",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -9742,6 +9820,13 @@
   "hash": "f019bede455efe4b",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 1",
+  "hash": "9974da2a3a79d0fd",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -11212,11 +11297,64 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 10",
+  "hash": "c8dbedb3f71a8d02",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Foute optie D had geen wrongHint (null)."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 3",
+  "hash": "5c5d81cfa0eba62f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 4",
+  "hash": "02124cb4c3e2c05f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 5",
+  "hash": "3de1fc752f45115e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint 'Na het eerste woord van de zin' klopte niet (de komma staat na 'kocht', het tweede woord)."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 6",
+  "hash": "105d34e50271e156",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "leestekens-hoofdletters-po stap 3 vraag 7",
   "hash": "b88db51995ffc944",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 8",
+  "hash": "3523997bcd96d96d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Foute optie C had geen wrongHint (null)."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 9",
+  "hash": "7dff6681b4edf281",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Twee foute opties hadden geen wrongHint (null)."
  },
  {
   "waar": "lettergrepen-klemtoon-po stap 1 vraag 1",
@@ -15827,6 +15965,48 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "schema-tekst-combi-po stap 4 vraag 1",
+  "hash": "481c4a97c9971fe5",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 2",
+  "hash": "641e249e1aab86cc",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 3",
+  "hash": "ed2ba6b1aa236e22",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 4",
+  "hash": "f1d709fe20ed05fd",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 5",
+  "hash": "d5cf7de7c387ec99",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 6",
+  "hash": "fb552b3b8d487c49",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "schema-tekst-combi-po stap 4 vraag 7",
   "hash": "112304fc0415658c",
   "oordeel": "goed",
@@ -15839,6 +16019,13 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 9",
+  "hash": "080f73b1e6ba392c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "schemas-stappenplannen-po stap 1 vraag 1",
@@ -16571,6 +16758,54 @@
   "bron": "vervolg B6 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "basis gaf het antwoord."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 1",
+  "hash": "50b388f8f32cc811",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints en niveaus waren telegramzinnen; basis gaf het antwoord, nogSimpeler 'Opbouw 1' onbegrijpelijk."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 2",
+  "hash": "36f0baf55660e891",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints telegramstijl ('Niet — informeel.'); niveaus.basis = alleen het antwoord; staptekst kromme zin."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 3",
+  "hash": "9b5530368fff5c48",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Niveaus.basis gaf alleen het antwoord; hints met cijfer '1 argument'."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 5",
+  "hash": "021c9b7dfa7b2aae",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Gegeneraliseerd' en 'grammaticaal' te moeilijk voor groep 6; vraag 'wat klopt niet?' kort; niveaus telegram met 'drogreden'."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 6",
+  "hash": "92cdbf4137233ccb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Niveaus.basis = alleen het antwoord, nogSimpeler 'Beleefd'; staptekst noemde 'Beste' formeel."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 7",
+  "hash": "12467af85e77b612",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Niveaus.basis 'Ik vind = mening.' telegram; drie identieke hints."
  },
  {
   "waar": "signaalwoorden-verbanden-po stap 1 vraag 3",
@@ -19006,6 +19241,56 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 1",
+  "hash": "49580a977631fe67",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 2",
+  "hash": "78d8c8f71ad10720",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 3",
+  "hash": "17854bfc23f3c94c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 4",
+  "hash": "a816aaaa3bee3b2f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 5",
+  "hash": "39418130f15efd18",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar de goede optie was veel langer/specifieker dan de afleiders; hint B wees naar de alinea-telling."
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 6",
+  "hash": "23e8cd2e798bd1f5",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 8",
+  "hash": "6e2dd8338ac85608",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 1",
   "hash": "45d2b62ccac594a5",
   "oordeel": "goed",
@@ -19195,6 +19480,55 @@
   "hash": "2f62cabd45db8246",
   "oordeel": "goed",
   "bron": "vervolg B5 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 1",
+  "hash": "f9c3bd494202662c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 2",
+  "hash": "9f5050f5fc62f93f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 3",
+  "hash": "62b8b0946a7d17e8",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 4",
+  "hash": "e69515ad69613ff8",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 5",
+  "hash": "4598160917d3df3c",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 6",
+  "hash": "8cb1654fcd7fb248",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 7",
+  "hash": "7c8812fbd6014bc1",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -19723,6 +20057,13 @@
   "reden": "\"Het langst\" is discutabel (Suriname was ook ruim 300 jaar kolonie); telegramvraag."
  },
  {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 15",
+  "hash": "5c5e291a41ad7372",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tijdvakken-nederland-po stap 5 vraag 16",
   "hash": "11e736a13f6ba6f8",
   "oordeel": "twijfel",
@@ -19738,6 +20079,22 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 18",
+  "hash": "8274cd24aa78bc5c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afkorting 'NL' in de vraag."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 19",
+  "hash": "3c106df50c9ba851",
+  "oordeel": "twijfel",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties in telegramstijl zonder lidwoord; hint met afkorting 'WO1'."
+ },
+ {
   "waar": "tijdvakken-nederland-po stap 5 vraag 2",
   "hash": "580fedd0cabe3e32",
   "oordeel": "twijfel",
@@ -19746,12 +20103,26 @@
   "reden": "Klopt (Floris V). Hint \"drie eeuwen later\" plaatste het antwoord in de tijd; hints telegramstijl; basis = antwoord."
  },
  {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 20",
+  "hash": "3e877544b5b7547f",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tijdvakken-nederland-po stap 5 vraag 22",
   "hash": "e07f020ca5bef0fa",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Afkorting 'NL' in de vraag voor groep 6-8; inhoud klopt."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 23",
+  "hash": "e8d24ad57c5afa03",
+  "oordeel": "goed",
+  "bron": "vervolg B8 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "tijdvakken-nederland-po stap 5 vraag 3",

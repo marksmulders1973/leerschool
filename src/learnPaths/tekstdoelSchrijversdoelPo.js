@@ -1135,14 +1135,14 @@ const steps = [
         q: "Stel: de egel-tekst eindigt zo: *'Wil je meer lezen over egels? Kijk op egelbeschermers.nl!'* Verandert dat het hoofddoel van de tekst?",
         options: [
           "Nee — drie alinea's informeren blijven het zwaarste deel",
-          "Ja — de tekst wordt nu een reclametekst",
-          "Ja — het doel wordt instrueren",
-          "Nee — dan is er helemaal geen doel meer",
+          "Ja — door die link wordt de hele tekst een reclametekst",
+          "Ja — door die slotzin wordt het hoofddoel nu instrueren",
+          "Nee — met een link erin heeft de tekst helemaal geen doel meer",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Eén oproep maakt nog geen reclametekst. Wordt er iets verkocht? Kijk hoeveel alinea's informeren.",
+          "Eén oproep maakt nog geen reclametekst. Wordt er in de tekst iets verkocht of aangeprezen?",
           "Is er een stappenplan in deze slotzin?",
           "Elke tekst heeft een doel. Verdwijnt dat door één extra zin?",
         ],
@@ -1197,9 +1197,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je leert hier geen nieuwe feiten. Je krijgt een opdracht. Welk tekstdoel hoort bij opdrachten en stappen?",
-          "Er is geen mening of argument. Je hoeft niets te geloven — je moet iets uitvoeren.",
-          "Grappig is het niet. Welk doel past bij 'doe dit en dan dat'?",
+          "Leer je hier iets nieuws over toetsen, of zegt de zin wat jij moet doen? Kijk naar het eerste woord van de zin.",
+          "Staat er een mening of een argument in de zin? Zoek een woord als 'vind' of 'moet echt'.",
+          "Moet je om deze zin lachen? Kijk wat de zin van jou vraagt.",
         ],
         uitlegPad: {
           stappen: [

@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen; egeltekst staat in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen; egeltekst staat in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen; egeltekst staat in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen; egeltekst staat in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, maar de goede optie was veel langer/specifieker dan de afleiders; hint B wees naar de alinea-telling.",
+  "hersteld": true,
+  "wijziging": "Drie afleiders even lang en specifiek gemaakt; hint B herschreven zonder verwijzing naar het antwoord."
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen; egeltekst staat in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "WrongHints ('opdrachten en stappen', 'doe dit en dan dat', 'je moet iets uitvoeren') omschreven het goede antwoord.",
+  "hersteld": true,
+  "wijziging": "Drie wrongHints herschreven tot denkprikkels over de foute keuze."
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen; egeltekst staat in de stap-uitleg.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Vraag zei dat teller Ruud Blom de nestkasten uitdeelt; in de tekst doet de vogelwerkgroep dat.",
+  "hersteld": true,
+  "wijziging": "Vraag: 'De vogelwerkgroep van teller Ruud Blom deelt ...'."
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Hints en niveaus waren telegramzinnen; basis gaf het antwoord, nogSimpeler 'Opbouw 1' onbegrijpelijk.",
+  "hersteld": true,
+  "wijziging": "WrongHints en niveaus herschreven tot hele zinnen met echte hulpstappen."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Hints telegramstijl ('Niet — informeel.'); niveaus.basis = alleen het antwoord; staptekst kromme zin.",
+  "hersteld": true,
+  "wijziging": "WrongHints, niveaus en staptekst herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Niveaus.basis gaf alleen het antwoord; hints met cijfer '1 argument'.",
+  "hersteld": true,
+  "wijziging": "WrongHints en niveaus herschreven tot hulpstappen."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "NogSimpeler 'B van OBIA (beschrijven/informeren)' is feitelijk onjuist; basis gaf alleen het antwoord; hints telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Niveaus, wrongHints en staptekst herschreven; OBIA-fout verwijderd."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "'Gegeneraliseerd' en 'grammaticaal' te moeilijk voor groep 6; vraag 'wat klopt niet?' kort; niveaus telegram met 'drogreden'.",
+  "hersteld": true,
+  "wijziging": "Vraag als hele zin, opties in kindertaal (antwoord-index gelijk), niveaus en staptekst herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Niveaus.basis = alleen het antwoord, nogSimpeler 'Beleefd'; staptekst noemde 'Beste' formeel.",
+  "hersteld": true,
+  "wijziging": "Niveaus en staptekst herschreven."
+ },
+ {
+  "waar": "schrijven-teksten-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Niveaus.basis 'Ik vind = mening.' telegram; drie identieke hints.",
+  "hersteld": true,
+  "wijziging": "Basis en nogSimpeler herschreven; hints per optie specifiek gemaakt."
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 18",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Afkorting 'NL' in de vraag.",
+  "hersteld": true,
+  "wijziging": "'in NL' -> 'in Nederland'."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 19",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Opties in telegramstijl zonder lidwoord; hint met afkorting 'WO1'.",
+  "hersteld": true,
+  "wijziging": "Opties met lidwoord ('Het einde van de Tachtigjarige Oorlog' enz.); hint voluit 'De Eerste Wereldoorlog'."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 21",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Jaartal niet strikt: het verdrag werd in 1957 getekend, de EEG werkt pas sinds 1958, dus 'lid sinds 1957' klopt niet. 'NL', 'o.a. Engeland' (het was het Verenigd Koninkrijk) en hints die samen naar 1957 wezen.",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven naar het jaar van de ondertekening van het verdrag (1957 klopt); alle drie hints herschreven."
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 23",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 24",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint bij 1980 ('het was in de jaren '50') verraadt het antwoord (enige optie in de jaren 50); vraag was telegramzin.",
+  "hersteld": true,
+  "wijziging": "Vraag als hele zin ('In welk jaar was de Watersnoodramp in Zeeland en Zuid-Holland?'); drie hints herschreven zonder het tijdvak te noemen."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Hint 'Na het eerste woord van de zin' klopte niet (de komma staat na 'kocht', het tweede woord).",
+  "hersteld": true,
+  "wijziging": "Hints C en D preciezer gemaakt."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Foute optie C had geen wrongHint (null).",
+  "hersteld": true,
+  "wijziging": "Hint voor optie C toegevoegd."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Twee foute opties hadden geen wrongHint (null).",
+  "hersteld": true,
+  "wijziging": "Hints voor opties C en D toegevoegd."
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Foute optie D had geen wrongHint (null).",
+  "hersteld": true,
+  "wijziging": "Hint voor optie D toegevoegd."
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "informatiebronnen-po stap 3 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze komt op inhoud overeen met het antwoord; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

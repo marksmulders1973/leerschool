@@ -1067,50 +1067,50 @@ const steps = [
         q: "Welke opbouw past bij een goed **opiniestuk**?",
         options: ["Mening → argumenten → tegenargument weerleggen → slot","Inleiding → midden → einde zonder mening","Feit → feit → feit → samenvatting","Stap 1 → stap 2 → stap 3 → klaar"],
         answer: 0,
-        wrongHints: [null, "Niet — opiniestuk MOET een mening hebben.", "Waar is de mening? Een opiniestuk gaat juist over wat jij vindt.", "Dat is de opbouw van een handleiding."],
+        wrongHints: [null, "In deze opbouw staat nergens wat de schrijver zelf vindt. Kan een opiniestuk zonder mening?", "Alleen feiten achter elkaar: waar laat de schrijver dan zien wat hij vindt?", "Stappen op een rij horen bij een handleiding. Wil een opiniestuk je iets laten maken?"],
         uitlegPad: {
           stappen: [{ titel: "Opiniestuk-structuur", tekst: "Goede opbouw: 1) Mening (1 zin); 2) 2-3 argumenten met voorbeeld; 3) Tegenargument noemen + weerleggen; 4) Slot-zin (mening herhalen). De toets kijkt naar deze 4 elementen." }],
-          niveaus: { basis: "4 stappen: mening, argumenten, tegen weerleggen, slot.", simpeler: "Opiniestuk = jouw mening + redenen + tegenargument-weerleggen.", nogSimpeler: "Opbouw 1" },
+          niveaus: { basis: "In een opiniestuk laat je zien wat jij vindt en waarom. Welke opbouw begint met wat de schrijver vindt?", simpeler: "Een opiniestuk begint met je mening. Daarna geef je redenen. Je noemt ook wat anderen ertegen kunnen zeggen, en je eindigt met een slot.", nogSimpeler: "De opbouw die begint met 'mening' is de goede." },
         },
       },
       {
         q: "Hoe begin je een formele e-mail aan iemand wiens **achternaam je niet weet**?",
         options: ['Geachte heer/mevrouw', 'Hoi meneer of mevrouw', 'Lieve meneer/mevrouw', 'Hey, beste mensen'],
         answer: 0,
-        wrongHints: [null, "Niet — informeel.", "Niet — 'Lieve' gebruik je voor familie en vrienden.", "Niet — veel te informeel."],
+        wrongHints: [null, "'Hoi' zeg je tegen iemand die je goed kent. Past dat in een formele e-mail?", "'Lieve' gebruik je voor familie en vrienden. Ken je deze persoon zo goed?", "'Hey' zeg je tegen vrienden. Past dat bij een formele e-mail?"],
         uitlegPad: {
-          stappen: [{ titel: "Algemene formele aanhef", tekst: "Zonder naam → 'Geachte heer/mevrouw' is het veiligste. 'Beste' werkt ook maar minder formeel-genoeg voor instanties." }],
-          niveaus: { basis: "Geachte heer/mevrouw.", simpeler: "Naam onbekend + formeel = 'Geachte heer/mevrouw'.", nogSimpeler: "Geachte." },
+          stappen: [{ titel: "Algemene formele aanhef", tekst: "Weet je de naam niet, dan is 'Geachte heer/mevrouw' het veiligst. 'Beste' kan ook, maar dat is minder formeel. Voor een bedrijf of instantie kies je liever 'Geachte'." }],
+          niveaus: { basis: "Een formele e-mail schrijf je beleefd en netjes. Welke aanhef gebruik je niet bij vrienden, maar wel bij een bedrijf?", simpeler: "Je weet niet of je een man of een vrouw schrijft, en ook de naam niet. Zoek de netste aanhef die allebei noemt.", nogSimpeler: "De goede aanhef begint met 'Geachte'." },
         },
       },
       {
         q: "Tekst: *'Sport is belangrijk. Het houdt je gezond. Bovendien leer je samenwerken. Tot slot maakt het je vrolijk.'* Wat is de **hoofdgedachte**?",
         options: ["Sport is belangrijk","Sport maakt je vrolijk","Sport leert je samenwerken","Sport houdt je gezond"],
         answer: 0,
-        wrongHints: [null, "Dat is 1 argument, niet de hoofdgedachte.", "Dat is 1 argument, niet de hoofdgedachte.", "Dat is 1 argument, niet de hoofdgedachte."],
+        wrongHints: [null, "Dit is één van de redenen die de tekst geeft. Waar gaan álle zinnen samen over?", "Dit is één van de redenen die de tekst geeft. Waar gaan álle zinnen samen over?", "Dit is één van de redenen die de tekst geeft. Waar gaan álle zinnen samen over?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste zin = vaak hoofdgedachte", tekst: "'Sport is belangrijk' = de stelling. De zinnen erna geven argumenten (gezond, samenwerken, vrolijk). Hoofdgedachte = de stelling." }],
-          niveaus: { basis: "Sport is belangrijk.", simpeler: "Eerste zin = stelling = hoofdgedachte.", nogSimpeler: "Eerste zin." },
+          niveaus: { basis: "De hoofdgedachte is het belangrijkste wat de schrijver wil zeggen. De andere zinnen geven redenen daarvoor.", simpeler: "Drie zinnen geven een reden (gezond, samenwerken, vrolijk). Waarvoor zijn dat redenen? Die zin is de hoofdgedachte.", nogSimpeler: "Hier staat de hoofdgedachte in de eerste zin." },
         },
       },
       {
         q: "Welk tekstdoel hoort bij een **schoolboek-paragraaf** over de Tweede Wereldoorlog?",
         options: ["Informeren","Overtuigen","Amuseren","Instrueren"],
         answer: 0,
-        wrongHints: [null, "Schoolboek geeft geen mening — feiten.", "Niet — niet bedoeld als grap.", "Niet — geen stappen."],
+        wrongHints: [null, "Wil een schoolboek jou overhalen tot een mening over de oorlog?", "Is een stuk over de oorlog in een schoolboek bedoeld om je te laten lachen?", "Moet je na het lezen iets maken of stap voor stap iets doen?"],
         uitlegPad: {
-          stappen: [{ titel: "Schoolboek = feiten", tekst: "Schoolboek-paragraaf geeft feiten (data, mensen, gebeurtenissen). Geen mening, geen reclame, geen stappen. → Informeren." }],
-          niveaus: { basis: "Schoolboek = informeren.", simpeler: "Feiten zonder mening = Informeren.", nogSimpeler: "B van OBIA (beschrijven/informeren)." },
+          stappen: [{ titel: "Schoolboek = feiten", tekst: "Een paragraaf in een schoolboek geeft feiten: jaartallen, mensen en gebeurtenissen. Er staat geen mening of reclame in en er zijn geen stappen. Het doel is dus informeren." }],
+          niveaus: { basis: "Wat wil een schoolboek dat jij na het lezen hebt: een mening, een lach, iets gemaakt, of nieuwe kennis?", simpeler: "In een schoolboek staan feiten, zodat je iets te weten komt. Welk tekstdoel hoort bij feiten geven?", nogSimpeler: "Een schoolboek wil je iets leren: het doel is informeren." },
         },
       },
       {
-        q: "*'Iedereen wil meer huiswerk, dus de school moet het verplichten.'* — wat klopt niet?",
-        options: ["Er wordt gegeneraliseerd","De zin is grammaticaal fout","De school heeft geen recht","Er wordt iemand persoonlijk aangevallen"],
+        q: "Lees deze zin: *'Iedereen wil meer huiswerk, dus de school moet het verplichten.'* Wat klopt er niet aan deze redenering?",
+        options: ["Er staat dat iedereen het wil, maar dat is niet zo","Er staat een taalfout in de zin","De school mag geen huiswerk geven","Er wordt iemand persoonlijk aangevallen"],
         answer: 0,
-        wrongHints: [null, "Niet — grammaticaal klopt het.", "Zegt de zin iets over wat de school mag?", "Wordt hier een persoon uitgescholden?"],
+        wrongHints: [null, "Kijk naar de woorden en de volgorde: staat er echt een taalfout in de zin?", "Zegt de zin iets over wat de school mag?", "Wordt hier een persoon uitgescholden?"],
         uitlegPad: {
-          stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' is een **generalisatie** — niet bewijsbaar (er zijn vast leerlingen die GEEN extra huiswerk willen). Drogreden, Toets-val." }],
-          niveaus: { basis: "Iedereen = generaliseren.", simpeler: "'Iedereen' is geen bewijs = drogreden.", nogSimpeler: "Generaliseren" },
+          stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' kun je niet bewijzen: er zijn vast leerlingen die géén extra huiswerk willen. Zo'n zin over 'iedereen' heet een **generalisatie**. Het is een oneerlijke reden, een drogreden. Daar let de toets graag op." }],
+          niveaus: { basis: "Lees het woord 'iedereen'. Klopt dat echt, of zijn er kinderen die iets anders willen?", simpeler: "Denk aan je eigen klas. Wil echt elk kind meer huiswerk? Als dat niet zo is, klopt de reden niet.", nogSimpeler: "Niet iedereen wil meer huiswerk. De zin doet alsof iedereen het wil." },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1123,13 +1123,13 @@ const steps = [
           stappen: [
             {
               titel: "Formele aanhef",
-              tekst: "Meneer Smit ken je niet, dus je schrijft formeel. 'Beste' + meneer + achternaam is formeel.",
+              tekst: "Meneer Smit ken je niet, dus je schrijft netjes en beleefd. 'Beste meneer' met zijn achternaam is een nette aanhef.",
             },
           ],
           niveaus: {
-            basis: "Beste meneer Smit.",
-            simpeler: "Iemand die je niet kent spreek je beleefd aan: Beste meneer + achternaam.",
-            nogSimpeler: "Beleefd",
+            basis: "Je kent meneer Smit niet. Kies een aanhef die netjes is, niet een die je tegen vrienden of familie gebruikt.",
+            simpeler: "Iemand die je niet kent spreek je beleefd aan: met 'meneer' en zijn achternaam erbij.",
+            nogSimpeler: "De goede aanhef is 'Beste meneer Smit,'.",
           },
         },
       },
@@ -1142,7 +1142,7 @@ const steps = [
           "Een jaar heeft twaalf maanden.",
         ],
         answer: 0,
-        wrongHints: [null, "Kun je dit nakijken in een boek?", "Kun je dit nakijken in een boek?", "Kun je dit nakijken in een boek?"],
+        wrongHints: [null, "Dit kun je nakijken in een boek of atlas. Is het dan een mening of een feit?", "Dit kun je nakijken op een kalender. Is het dan een mening of een feit?", "Dit kun je nakijken op een kalender. Is het dan een mening of een feit?"],
         uitlegPad: {
           stappen: [
             {
@@ -1151,9 +1151,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ik vind = mening.",
+            basis: "Een mening is wat iemand vindt. Een feit kun je nakijken. Welke zin kun je niet nakijken?",
             simpeler: "Zoek de zin met 'ik vind'. Die gaat over wat iemand vindt, niet over iets wat je kunt controleren.",
-            nogSimpeler: "Ik vind",
+            nogSimpeler: "De zin met 'Ik vind' is de mening.",
           },
         },
       },
