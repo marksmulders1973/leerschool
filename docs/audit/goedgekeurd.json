@@ -6433,6 +6433,159 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "energiebronnen-po stap 6 vraag 1",
+  "hash": "f2afbaa7257014bf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag en -hints"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 10",
+  "hash": "e071769d769e6f1f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 11",
+  "hash": "ef49d8a8454ab703",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties zonder onderwerp (telegram)"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 12",
+  "hash": "6e673e75a470df4b",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 13",
+  "hash": "037792c25e734765",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag; 'Warmte' (zelfst. nw.) tussen bijvoeglijke vormen valt op"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 14",
+  "hash": "bc897c4060f12b10",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'warmte vasthoudt' onnauwkeurig"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 15",
+  "hash": "21cea36a682b8a71",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 16",
+  "hash": "85f663db744a75b4",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 17",
+  "hash": "72250a15ae717172",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Enige optie met twee bronnen = raadbaar; 'gratis' te stellig; telegram-hints"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 18",
+  "hash": "f7e064c8c8f38a9c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'~50%+' afwijkende vorm, raadbaar"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 19",
+  "hash": "568ec0518c127831",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 2",
+  "hash": "99a265f821f2ecc8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag; 'Zonnepaneel' is een apparaat, geen bron, en valt op tussen brandstoffen"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 20",
+  "hash": "152e1d2b97d302f7",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 3",
+  "hash": "b97c4e6eaef624d8",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 4",
+  "hash": "5162b48d7a5df060",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleiders absurd (bus, stoommachine) = raadbaar; '+' telegram"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 5",
+  "hash": "4324781e18896ffc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag en -opties ('Borssele is wat?', 'NL kerncentrale'); vage afleiders"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 6",
+  "hash": "1e55c18eb4afb848",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties en hints telegramstijl"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 7",
+  "hash": "f37a3e28d30ad9b8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag en -hints"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 8",
+  "hash": "44fd5c7e5b7772a9",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 9",
+  "hash": "6ae594b9e46dff50",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Pijl in optie; telegram-hint"
+ },
+ {
   "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
   "hash": "acef806a46f32508",
   "oordeel": "goed",
@@ -9748,6 +9901,130 @@
   "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 1",
+  "hash": "b7581b3f6f22c504",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints telegramstijl"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 10",
+  "hash": "c3fb507dd0a0192e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 12",
+  "hash": "1c9680a2f25f5ed3",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 13",
+  "hash": "f866b5f8ce82747f",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 14",
+  "hash": "8fd1c337215a3b63",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegram-hints ('Niet gesloten.')"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 15",
+  "hash": "37cd0d99c7875556",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 16",
+  "hash": "76215677ee2cf700",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 19",
+  "hash": "ecbad1ccd3c9c525",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 20",
+  "hash": "d28a0337a3e14cc7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints 'mist komma vóór/ná' geven per optie de oplossing"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 21",
+  "hash": "ef5ac0bca0d4af71",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 22",
+  "hash": "d73bbdee94834f87",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegram-hints"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 3",
+  "hash": "4ff6c91a20d2cb39",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 5",
+  "hash": "19da08e59c638492",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 6",
+  "hash": "946afca104ce5da6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij \"ik kom morgen\" somt de oplossing op (hoofdletter + punt binnen aanhalingstekens)"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 7",
+  "hash": "92975ac0c39e0e9a",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 8",
+  "hash": "6825d1f3a3b0d069",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 9",
+  "hash": "38b92b1b2c4ffd77",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "kaartlezen-po stap 1 vraag 1",
@@ -22755,6 +23032,30 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "volgorde-bewerkingen stap 2 vraag 1",
+  "hash": "26cada5b45b98959",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (nagerekend); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 2",
+  "hash": "fa87090375c6a135",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (nagerekend); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 3",
+  "hash": "bb35a722acef7913",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (nagerekend); niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "volgorde-bewerkingen stap 2 vraag 4",
   "hash": "ba1b3df2cae0ef90",
   "oordeel": "twijfel",
@@ -22833,6 +23134,70 @@
   "bron": "vervolg B7 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 1",
+  "hash": "462d4f599baf5fcd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 2",
+  "hash": "247126da4e17a5ec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 3",
+  "hash": "20035f2f3a91fd52",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 4",
+  "hash": "ad7e5d2481de2152",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 5",
+  "hash": "9a5b131063d2342d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 6",
+  "hash": "ed45666fa1a31f3d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 7",
+  "hash": "00bdeb617b49eb2d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 8",
+  "hash": "5e87ed4e4ba6b1df",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "vulkanen-po stap 1 vraag 1",
@@ -24509,6 +24874,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "werkwoord-tijden-po stap 5 vraag 13",
+  "hash": "42d5c3feb6530389",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werkwoord-tijden-po stap 5 vraag 14",
   "hash": "bbc9b1cbcf007fc6",
   "oordeel": "goed",
@@ -24557,6 +24929,13 @@
   "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; telegramvraag, niveaus.basis = alleen antwoord, simpeler in pijltjesstijl"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 20",
+  "hash": "0e441175ee80dea4",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "werkwoord-tijden-po stap 5 vraag 21",

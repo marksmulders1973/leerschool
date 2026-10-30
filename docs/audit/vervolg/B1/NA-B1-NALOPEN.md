@@ -24,3 +24,4 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - nederlandseKunstenaarsPo.js Van Gogh-stap: uitleg + startvraag 'slechts 1 schilderij verkocht' (antwoord '1') is een mythe; gedocumenteerd is De Rode Wijngaard, historici noemen er meer → 'heel weinig' (consistent met herstelde B7-vraag).
 - tabellenGrafieken.js stap 2 vraag 4-8: vraag geeft eigen tabel in tekst, maar stap toont het ijsjes-plaatje (past niet) → per vraag svg:null of eigen plaatje (app-gedrag: check zonder svg krijgt stap-svg als vraag 'tabel/grafiek' noemt).
 - meetkundeBouwsels.js ~regel 1150 (dobbelsteenvraag, buiten vervolg): hint '2 × 2 × …?' rekent voor.
+- volgordeBewerkingen.js stap 4 (machten, 8 vragen) kreeg vanafGroep 7 → valt nu voor iedereen weg (alleen in 5|rekenen); misschien de stap in een groep-7/8-set opnemen.

@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "interpunctie-po stap 6 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; wrongHints telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven tot hele zinnen (denkfout per optie)"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint bij ! ('Niet boos genoeg.') is inhoudelijk misleidend; overige hints telegram",
+  "hersteld": true,
+  "wijziging": "alle wrongHints herschreven"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Hint bij 'Pas op er rijdt een auto.' verraadt de oplossing ('Mist uitroepteken na op'); vraag is telegramzin",
+  "hersteld": true,
+  "wijziging": "vraag: 'Hoe schrijf je ... netjes op?'; wrongHints zonder oplossing"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Hint bij \"ik kom morgen\" somt de oplossing op (hoofdletter + punt binnen aanhalingstekens)",
+  "hersteld": true,
+  "wijziging": "wrongHints 1 en 2 herschreven als denkprikkel"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 11",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Alle drie hints omschrijven het goede antwoord ('zoek de zin zonder hoofdletter aan het begin')",
+  "hersteld": true,
+  "wijziging": "wrongHints neutraal: zin klopt, controleer de andere zinnen"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 14",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegram-hints ('Niet gesloten.')",
+  "hersteld": true,
+  "wijziging": "wrongHints 1 en 3 herschreven"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 17",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Hints omschrijven het goede antwoord ('zoek de zin die een mededeling is')",
+  "hersteld": true,
+  "wijziging": "wrongHints neutraal herschreven"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 18",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Vraag 'Welke hoofdletter is fout?' vreemd (opties zijn zinnen); hints omschrijven het antwoord ('hoofdletter midden in de zin')",
+  "hersteld": true,
+  "wijziging": "vraag: 'In welke zin staat een hoofdletter op een verkeerde plek?'; hints neutraal, hint bij 'Ik eet brood' noemt dat alleen de punt mist"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 20",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Hints 'mist komma vóór/ná' geven per optie de oplossing",
+  "hersteld": true,
+  "wijziging": "hints B en D: 'maar aan één kant een komma'"
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegram-hints",
+  "hersteld": true,
+  "wijziging": "wrongHints 2 en 3 hele zinnen"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramvraag en -hints",
+  "hersteld": true,
+  "wijziging": "vraag 'Welke energiebron is fossiel?'; hints hele zinnen"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Telegramvraag; 'Zonnepaneel' is een apparaat, geen bron, en valt op tussen brandstoffen",
+  "hersteld": true,
+  "wijziging": "vraag 'Welke energiebron is duurzaam?'; optie 'Zonne-energie'; hints hele zinnen, Groningen-feit voorzichtig ('al dicht')"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Afleiders absurd (bus, stoommachine) = raadbaar; '+' telegram",
+  "hersteld": true,
+  "wijziging": "vraag 'Wat gebeurt er bij CCS?'; vier even lange plausibele opties (batterijen, aardwarmte, gas oppompen); hints herschreven"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramvraag en -opties ('Borssele is wat?', 'NL kerncentrale'); vage afleiders",
+  "hersteld": true,
+  "wijziging": "vraag 'Waar is Borssele in Zeeland bekend om?'; opties kerncentrale/stuwdam/gasveld/zonnepanelenfabriek (bewust geen wind-afleider: windpark Borssele op zee); hints herschreven"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Opties en hints telegramstijl",
+  "hersteld": true,
+  "wijziging": "vraag 'Kun je nieuwe energie maken?'; opties hele zinnen; hints herschreven"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramvraag en -hints",
+  "hersteld": true,
+  "wijziging": "vraag 'Welke energiebron is hernieuwbaar?'; hints hele zinnen"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Pijl in optie; telegram-hint",
+  "hersteld": true,
+  "wijziging": "optie 'Cellen die licht omzetten in stroom'; hint 3 hele zin"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag 'Wat voor stroom komt er in Nederland uit het stopcontact?'; hints hele zinnen"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 11",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Opties zonder onderwerp (telegram)",
+  "hersteld": true,
+  "wijziging": "opties 'Een centrale die stroom maakt met ...'"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Telegramvraag; 'Warmte' (zelfst. nw.) tussen bijvoeglijke vormen valt op",
+  "hersteld": true,
+  "wijziging": "vraag 'Welke energie krijg je vooral uit een gasfornuis?'; opties Warmte/Elektriciteit/Beweging/Magnetisme"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 14",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "'warmte vasthoudt' onnauwkeurig",
+  "hersteld": true,
+  "wijziging": "optie 'Materiaal dat de warmte binnenhoudt'"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Enige optie met twee bronnen = raadbaar; 'gratis' te stellig; telegram-hints",
+  "hersteld": true,
+  "wijziging": "vraag 'kosten geen brandstof, maar hangen af van het weer'; alle opties paren; hints herschreven"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 18",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "'~50%+' afwijkende vorm, raadbaar",
+  "hersteld": true,
+  "wijziging": "opties 'Ongeveer 50% / Ongeveer 5% / Precies 100% / Ongeveer 20%' (CBS 2024 ca. de helft)"
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "energiebronnen-po stap 6 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt (nagerekend); machten zijn groep-7/8-stof, 2+ groepen te hoog voor groep 5; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 op de check; niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord en hints kloppen (nagerekend); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen (nagerekend); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord en hints kloppen (nagerekend); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot echte hulpstap"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en zin in orde",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

@@ -345,7 +345,7 @@ const steps = [
           theorie: "Volgorde-regel onafhankelijk van positie: × eerst, dan +.",
           voorbeelden: [{ type: "stap", tekst: "5×4+3 = 20+3 = 23." }],
           basiskennis: [{ onderwerp: "Niet (5×4+3)", uitleg: "Geen haakjes om hele som — gewoon volgorde." }],
-          niveaus: { basis: "23.", simpeler: "5×4=20, +3=23. (Niet eerst 4+3.)", nogSimpeler: "23" },
+          niveaus: { basis: "Kijk eerst welke bewerking sterker is: × of +. Reken dat stukje eerst uit.", simpeler: "5×4=20, +3=23. (Niet eerst 4+3.)", nogSimpeler: "23" },
         },
       },
       {
@@ -359,7 +359,7 @@ const steps = [
           theorie: "× en ÷ even sterk, samen niveau 3. + en − samen niveau 4.",
           voorbeelden: [{ type: "stap", tekst: "12 − 6÷3 = 12 − 2 = 10." }],
           basiskennis: [{ onderwerp: "Niet links→rechts", uitleg: "12-6 eerst geeft 6, ÷3=2 (fout). Volgorde houden!" }],
-          niveaus: { basis: "10.", simpeler: "÷ eerst: 6÷3=2. Dan -: 12-2=10.", nogSimpeler: "10" },
+          niveaus: { basis: "Zoek de ÷ in de som. Die reken je uit vóór de −.", simpeler: "÷ eerst: 6÷3=2. Dan -: 12-2=10.", nogSimpeler: "10" },
         },
       },
       {
@@ -373,7 +373,7 @@ const steps = [
           theorie: "Bij meerdere × in 1 som: doe ze ALLE eerst, dan +.",
           voorbeelden: [{ type: "stap", tekst: "6×2 + 4×3 = 12 + 12 = 24." }],
           basiskennis: [{ onderwerp: "Niet 6×2+4", uitleg: "+ zonder haakjes scheidt × niet — × bindt sterker." }],
-          niveaus: { basis: "24.", simpeler: "Twee maal-stukken eerst: 6×2=12, 4×3=12. Som: 24.", nogSimpeler: "24" },
+          niveaus: { basis: "Er staan twee keersommen in. Reken ze allebei eerst uit en tel ze daarna op.", simpeler: "Twee maal-stukken eerst: 6×2=12, 4×3=12. Som: 24.", nogSimpeler: "24" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -831,6 +831,7 @@ const steps = [
     checks: [
       {
         q: "**3²** = ?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["9","6","5","12"],
         answer: 0,
         wrongHints: [null,"Niet 3×2 — een macht is herhaald vermenigvuldigen.","Niet 3+2 — een macht is geen optelling.","Het kleine getal zegt hoe vaak je het grote getal met zichzelf vermenigvuldigt."],
@@ -840,11 +841,12 @@ const steps = [
           theorie: "Macht: kleine getal zegt HOE VAAK je vermenigvuldigt. 3² = 2 keer 3 vermenigvuldigen.",
           voorbeelden: [{ type: "tabel", tekst: "2²=4. 3²=9. 4²=16. 5²=25. 10²=100." }],
           basiskennis: [{ onderwerp: "Niet 3×2", uitleg: "3² ≠ 3×2 = 6. Macht = het getal met zichzelf vermenigvuldigen." }],
-          niveaus: { basis: "9.", simpeler: "3² = 3×3 = 9 (NIET 3+3 of 3×2).", nogSimpeler: "9" },
+          niveaus: { basis: "Een macht betekent: het grote getal keer zichzelf. Hoe vaak? Dat zegt het kleine getal.", simpeler: "3² = 3×3 = 9 (NIET 3+3 of 3×2).", nogSimpeler: "9" },
         },
       },
       {
         q: "**2³** = ?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["8","6","9","16"],
         answer: 0,
         wrongHints: [null,"Niet 2×3 — een macht is herhaald vermenigvuldigen.","Dat is 3², niet 2³.","Dat is 2⁴, één keer te veel."],
@@ -854,11 +856,12 @@ const steps = [
           theorie: "Machten van 2 onthouden: 2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2¹⁰=1024.",
           voorbeelden: [{ type: "tabel", tekst: "2³ = 2×2×2 = 8. 2⁴ = 2×2×2×2 = 16. 2⁵ = 32." }],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "Machten van 2 zijn handig (computer-wereld!): 1,2,4,8,16,32,64..." }],
-          niveaus: { basis: "8.", simpeler: "2³ = 2×2×2 = 4×2 = 8.", nogSimpeler: "8" },
+          niveaus: { basis: "Schrijf de 2 zo vaak op als het kleine getal zegt, met × ertussen.", simpeler: "2³ = 2×2×2 = 4×2 = 8.", nogSimpeler: "8" },
         },
       },
       {
         q: "**4 + 5²** = ?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["29","81","20","9"],
         answer: 0,
         wrongHints: [null,"Dat zou je krijgen als er haakjes stonden — maar er zijn geen haakjes, dus de volgorde is anders.","Doe eerst de macht, dan pas +.","Doe eerst de macht, dan pas +."],
@@ -868,12 +871,13 @@ const steps = [
           theorie: "HMVDOA: H-M-V-D-O-A. Macht (M) komt op nr 2 — vóór alles behalve haakjes.",
           voorbeelden: [{ type: "stap", tekst: "4 + 5² = 4 + 25 = 29. (Niet (4+5)² = 81 — geen haakjes)." }],
           basiskennis: [{ onderwerp: "Niet 9² of 9×2", uitleg: "Eerst macht apart uitrekenen, dan optellen." }],
-          niveaus: { basis: "29.", simpeler: "5² = 25 (eerst). Dan 4+25 = 29.", nogSimpeler: "29" },
+          niveaus: { basis: "Reken eerst de macht uit. Tel daarna pas de 4 erbij op.", simpeler: "5² = 25 (eerst). Dan 4+25 = 29.", nogSimpeler: "29" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "**10³** = ?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["1.000", "30", "100", "13"],
         answer: 0,
         wrongHints: [
@@ -909,7 +913,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1.000.",
+            basis: "Schrijf 10 × 10 × 10 op en reken het stap voor stap uit.",
             simpeler: "10 × 10 = 100. 100 × 10 = 1.000.",
             nogSimpeler: "1.000",
           },
@@ -917,6 +921,7 @@ const steps = [
       },
       {
         q: "Wat betekent **2⁴**?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["2 × 2 × 2 × 2", "2 × 4", "2 + 2 + 2 + 2", "4 + 4"],
         answer: 0,
         wrongHints: [
@@ -952,7 +957,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 × 2 × 2 × 2.",
+            basis: "Het grote getal wordt vermenigvuldigd. Het kleine getal zegt hoe vaak het in de keersom staat.",
             simpeler: "De 2 staat er 4 keer, met ×-tekens ertussen.",
             nogSimpeler: "2×2×2×2",
           },
@@ -960,6 +965,7 @@ const steps = [
       },
       {
         q: "**30 − 4²** = ?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["14", "22", "26", "16"],
         answer: 0,
         wrongHints: [
@@ -995,7 +1001,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "14.",
+            basis: "Reken eerst 4² uit. Haal die uitkomst daarna van 30 af.",
             simpeler: "4² = 16. 30 − 16 = 14.",
             nogSimpeler: "14",
           },
@@ -1003,6 +1009,7 @@ const steps = [
       },
       {
         q: "Een vierkant plein is **7 tegels lang** en **7 tegels breed**. Hoeveel tegels liggen er, en welke macht hoort erbij?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["7² = 49", "7² = 14", "7³ = 49", "7 × 2 = 49"],
         answer: 0,
         wrongHints: [
@@ -1038,7 +1045,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7² = 49.",
+            basis: "Een vierkant van 7 bij 7 heeft 7 rijen van 7 tegels. Welke keersom hoort daarbij?",
             simpeler: "7 × 7 = 49 tegels. Dat is 7².",
             nogSimpeler: "49",
           },
@@ -1046,6 +1053,7 @@ const steps = [
       },
       {
         q: "Welke macht heeft de **grootste** uitkomst?",
+        vanafGroep: 7, // nakijkronde B9 (30 okt 2026): machten zijn groep-7/8-stof, te vroeg voor groep 5
         options: ["3²", "2³", "4¹", "1⁵"],
         answer: 0,
         wrongHints: [
@@ -1081,7 +1089,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3².",
+            basis: "Reken elke macht apart uit en vergelijk daarna de uitkomsten.",
             simpeler: "3² = 9 is meer dan 2³ = 8.",
             nogSimpeler: "3²",
           },
