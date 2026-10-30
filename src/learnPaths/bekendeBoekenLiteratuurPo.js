@@ -221,7 +221,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Multatuli + 1860 + Max Havelaar + NL-Indië = de combinatie. Pseudoniem = schuilnaam, Latijn voor 'ik heb veel geleden'." }],
           niveaus: {
             basis: "Multatuli.",
-            simpeler: "Multatuli (schuilnaam Eduard Douwes Dekker) schreef Max Havelaar in 1860 — aanklacht NL-koloniaal beleid in Indonesië.",
+            simpeler: "Multatuli (de schuilnaam van Eduard Douwes Dekker) schreef Max Havelaar in 1860. Het boek klaagt aan hoe Nederland de mensen in Indonesië behandelde.",
             nogSimpeler: "Multatuli",
           },
         },

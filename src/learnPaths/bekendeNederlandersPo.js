@@ -224,7 +224,7 @@ const steps = [
         wrongHints: [null, "In 2000 was zijn moeder Beatrix nog koningin.", "In 2020 was hij al een paar jaar koning.", "In 1980 werd Beatrix koningin; Willem-Alexander was toen 13."],
       },
       {
-        q: "Wie regisseerde de films **Robocop** en **Basic Instinct**?",
+        q: "Wie regisseerde de films **Robocop** en **Total Recall**?",
         options: ["Paul Verhoeven", "Anton Corbijn", "Carice van Houten", "Famke Janssen"],
         answer: 0,
         wrongHints: [null, "Corbijn maakte films over muzikanten, geen actiefilms.", "Carice van Houten speelt in films — ze regisseert ze niet.", "Famke Janssen is actrice (X-Men), geen regisseur."],
@@ -252,7 +252,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Modern jong NL-held = Boyan Slat. Niet verwarren met politiek (Rutte) of sport (Verstappen/Cruijff). Slat = ocean + plastic." }],
           niveaus: {
             basis: "Boyan Slat.",
-            simpeler: "Jonge NL-uitvinder die op zijn 16e Ocean Cleanup bedacht om plastic uit zee te halen.",
+            simpeler: "Boyan Slat is een jonge Nederlandse uitvinder. Op zijn zestiende bedacht hij The Ocean Cleanup, om plastic uit de zee te halen.",
             nogSimpeler: "Boyan Slat",
           },
         },

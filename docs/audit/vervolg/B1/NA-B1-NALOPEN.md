@@ -15,3 +15,6 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - pubertijd-groei-po stap 1 vraag 3: opties telegramzinnen ('Ziekte die jongens krijgen').
 - water-erfgoed-nederland-po stap 2 vraag 1: opties telegramzinnen ('Dijk hoger dan duin altijd').
 - doorstroomtoetsRekenenG8.js regels ~211 en ~235 (startset): afleider 'Niet te bepalen' is geen echte denkfout.
+- olympischeSpelenPo.js regel ~114 (eindtoets, buiten B1/B2): 'meeste olympische medailles' met afleider Phelps (geen Nederlander).
+- pubertijd-groei-po stap 3 vraag 3: afleider 0800-0113 (113 Zelfmoordpreventie) zwaar voor groep 7-8, maar de stap-uitleg noemt het nummer bewust (8 okt) → Mark beoordeelt.
+- evolutieMensPo.js chimpansee-vraag: hint '50% DNA met een bananenplant' dubieus (bij de muis-vraag al vervangen).

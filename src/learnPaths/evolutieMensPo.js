@@ -233,7 +233,7 @@ const steps = [
         q: "Hoeveel **DNA** hebben mens en muis ongeveer gemeen?",
         options: ["~85%", "~10%", "~100%", "~50%"],
         answer: 0,
-        wrongHints: [null, "Veel meer — een muis is een zoogdier, net als wij.", "Bij 100% zou een muis een mens zijn.", "Meer — ongeveer de helft delen we al met een bananenplant."],
+        wrongHints: [null, "Veel meer — een muis is een zoogdier, net als wij.", "Bij 100% zou een muis een mens zijn.", "Meer. Mens en muis zijn allebei zoogdieren met dezelfde soort botten, hart en longen — dan deel je veel meer dan de helft."],
       },
     ],
   },

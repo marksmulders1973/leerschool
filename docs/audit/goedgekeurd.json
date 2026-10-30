@@ -745,6 +745,36 @@
   "reden": "Oktober klopt; niveau basis en uitlegstap zeiden '2 weken', de Kinderboekenweek duurt tien dagen (woensdag t/m zondag week erna)."
  },
  {
+  "waar": "bekende-boeken-literatuur-po stap 3 vraag 1",
+  "hash": "d0b5855355eb5354",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-boeken-literatuur-po stap 3 vraag 2",
+  "hash": "ec9ad44d3bfea4f3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (Hildebrand = Camera Obscura); niveau 'simpeler' was een telegramzin met 'NL-koloniaal beleid'."
+ },
+ {
+  "waar": "bekende-boeken-literatuur-po stap 3 vraag 3",
+  "hash": "b5cc3b71599ffe29",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Amsterdam klopt; afleider 'Bergen-Belsen' is een kamp, geen stad — valt uit de toon maar de hint legt het netjes uit. Niet gewijzigd."
+ },
+ {
+  "waar": "bekende-boeken-literatuur-po stap 3 vraag 4",
+  "hash": "f9e778fd2681f8de",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "bekende-boeken-literatuur-po stap 4 vraag 9",
   "hash": "2003fa896fcc5dc0",
   "oordeel": "twijfel",
@@ -781,6 +811,36 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 3 vraag 1",
+  "hash": "d60851edbe07bd73",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 3 vraag 2",
+  "hash": "96371108e9d740e5",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 3 vraag 3",
+  "hash": "b8ebf643ee3b7168",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar 'Basic Instinct' (18+-erotische thriller) hoort niet in een vraag voor groep 6-8."
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 3 vraag 4",
+  "hash": "b2c3c9654e9465ca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (Cruijff overleed 2016); niveau 'simpeler' was een telegramzin met 'NL-uitvinder'."
  },
  {
   "waar": "bekende-wetenschappers-po stap 2 vraag 1",
@@ -2127,6 +2187,22 @@
   "reden": "Antwoord en hints kloppen; niveaus.basis 'Pinguïn = niet-vliegende vogel.' is geen zin."
  },
  {
+  "waar": "dierenklassen-po stap 3 vraag 3",
+  "hash": "95cca9d6f3adec38",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints waren losse woorden ('Reptiel.', 'Vis.', 'Insect.') zonder uitleg."
+ },
+ {
+  "waar": "dierenklassen-po stap 3 vraag 4",
+  "hash": "eb5b9fb9df655999",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Koudbloedig klopt; hint 'Amfibieën leven als volwassene vooral op land' was te stellig (kikkers/salamanders leven ook veel in water)."
+ },
+ {
   "waar": "dierenklassen-po stap 4 vraag 3",
   "hash": "1ac1687c4c3ae9a8",
   "oordeel": "goed",
@@ -2965,6 +3041,21 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "evolutie-mens-po stap 3 vraag 3",
+  "hash": "455c6abc45482c2f",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "evolutie-mens-po stap 3 vraag 4",
+  "hash": "7debc7e5b7f8c3c1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "~85% (eiwitcoderende genen) klopt; hint '50% delen we met een bananenplant' is een dubieus populair feitje."
+ },
+ {
   "waar": "evolutie-mens-po stap 4 vraag 10",
   "hash": "1c0c072c0c1fe19c",
   "oordeel": "goed",
@@ -3259,6 +3350,41 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "folder-bon-advertentie-po stap 2 vraag 3",
+  "hash": "f9c94e54216f8eda",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 2 vraag 4",
+  "hash": "fe0d197df97d9a9e",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 2 vraag 5",
+  "hash": "fcc3b536507ec92c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 2 vraag 6",
+  "hash": "2e87d018cc818521",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 2 vraag 7",
+  "hash": "e9658a4ddc7c029b",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "geld-rekenen stap 1 vraag 1",
   "hash": "58eef3cf31240bb3",
   "oordeel": "twijfel",
@@ -3372,6 +3498,28 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 13 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 6",
+  "hash": "b2fda2ffb0fb02ad",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 7",
+  "hash": "2dafab094c23514e",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 8",
+  "hash": "87a1aa05611c1555",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Kaars klopt; niveau 'Geen stroom, dus een kaars' was te stellig (rond 1926 hadden veel stadshuizen al stroom)."
  },
  {
   "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 3",
@@ -4004,6 +4152,28 @@
   "bron": "vervolg B1 pakket 11 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Edison is het gangbare schoolantwoord, maar 'maakte de gloeilamp' is te stellig: er waren eerdere gloeilampen (o.a. Swan); Edison maakte de eerste praktisch bruikbare (1879)."
+ },
+ {
+  "waar": "industriele-revolutie-po stap 3 vraag 2",
+  "hash": "694146dae16a312d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus waren telegramzinnen ('Bourgeoisie = nieuwe rijke groep ...'). Zelfde optieset als vraag 4 (proletariaat) — geaccepteerd."
+ },
+ {
+  "waar": "industriele-revolutie-po stap 3 vraag 3",
+  "hash": "9b4f4cf8503df849",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 3 vraag 4",
+  "hash": "218b99678a60039d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "industriele-revolutie-po stap 6 vraag 20",
@@ -4830,6 +5000,35 @@
   "hash": "03952c7209429a5a",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 3 vraag 1",
+  "hash": "3ccf1d6b282ad4a9",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 3 vraag 2",
+  "hash": "7ddc105cc2aef101",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 3 vraag 3",
+  "hash": "b976729a09d52a4d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Raadbaar: 'Nederlands' in de vraag en alleen Concertgebouworkest heeft een Nederlandse naam. Nederlandse afleiders (Rotterdams Philharmonisch, Residentie Orkest) zouden 'twee goede antwoorden' riskere"
+ },
+ {
+  "waar": "klassieke-muziek-po stap 3 vraag 4",
+  "hash": "c87e6af14bacb78e",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -5817,6 +6016,20 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "lichaam-gezondheid-po stap 3 vraag 3",
+  "hash": "81bd3f52899be1e7",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 3 vraag 4",
+  "hash": "9399f7bd5f96c351",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "lichaam-gezondheid-po stap 4 vraag 3",
   "hash": "1e7edba125bcc246",
   "oordeel": "goed",
@@ -6026,6 +6239,35 @@
   "hash": "54a406c9fb4b3f02",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 3 vraag 1",
+  "hash": "69fd995a5c28e4c6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; vraag was een telegramzin ('Mondriaan is bekend om?') en de opties gebruikten '+'."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 3 vraag 2",
+  "hash": "4a2aaa1e5d7f4f8b",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 3 vraag 3",
+  "hash": "bc250c0637751ff8",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 3 vraag 4",
+  "hash": "64636af92f9ff6a4",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -6377,6 +6619,29 @@
   "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Vraag miste het lidwoord ('het Verdrag'), opties in telegramstijl met '+'; hint D ('veel meer dan Afrika alleen') wees richting 'wereld'."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 2 vraag 3",
+  "hash": "fa220293029226ab",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 2 vraag 4",
+  "hash": "598bd5b5123f8ca1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "1863 klopt, maar 'in NL' was onnauwkeurig (afschaffing gold de koloniën Suriname/Antillen) en de niveaus waren telegramzinnen met 'NL'."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 3 vraag 3",
+  "hash": "063288b88e57c4c6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen (Washington 1791); hint bevatte afkorting 'NL-koloniestad'."
  },
  {
   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
@@ -6914,6 +7179,37 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "pubertijd-groei-po stap 3 vraag 1",
+  "hash": "390a3d121ffb1ead",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "pubertijd-groei-po stap 3 vraag 2",
+  "hash": "d7be1c2d6cca56e6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; afleider 'Er is eigenlijk helemaal geen oorzaak' was absurd (raadbaar)."
+ },
+ {
+  "waar": "pubertijd-groei-po stap 3 vraag 3",
+  "hash": "b4d07b96a398a4bd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "0800-0432 klopt; afleider 0800-0113 (113 Zelfmoordpreventie) is zwaar voor groep 7-8, maar de stap-uitleg (buiten mijn pakket) noemt dit nummer zelf ook; voor consistentie niet gewijzigd — ter beoorde"
+ },
+ {
+  "waar": "pubertijd-groei-po stap 3 vraag 4",
+  "hash": "4140a51614f2cc1c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kindgericht en juist; afleider 'besmettelijke ziekte' naast LHBTQ+ was ongelukkig."
  },
  {
   "waar": "recyclen-afval-po stap 1 vraag 1",
@@ -7879,6 +8175,27 @@
   "hash": "5b77dcd6680a5d1b",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-ei-ij-au-ou stap 4 vraag 8",
+  "hash": "cbcde4d64bd39fe8",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-ei-ij-au-ou stap 5 vraag 5",
+  "hash": "42fe9b7c0507c104",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "spelling-ei-ij-au-ou stap 5 vraag 6",
+  "hash": "2bffad85af0e0543",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -9341,11 +9658,39 @@
   "reden": "Antwoord en hints kloppen; basis-niveau was het antwoord, simpeler telegramzin."
  },
  {
+  "waar": "tijdvakken-nederland-po stap 2 vraag 5",
+  "hash": "165140d9496272cc",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 2 vraag 6",
+  "hash": "c6e0a4dc743ad5ab",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 2 vraag 7",
+  "hash": "497d5ce0a21f81c1",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tijdvakken-nederland-po stap 2 vraag 8",
   "hash": "0dae029bcb07d64e",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 2 vraag 9",
+  "hash": "270ec42cacdc357d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "tijdvakken-nederland-po stap 5 vraag 22",
@@ -10524,6 +10869,13 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "werelddelen-landen-po stap 4 vraag 1",
+  "hash": "279ab5e1328f6803",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "werelddelen-landen-po stap 4 vraag 11",
   "hash": "49186b6624fe447b",
   "oordeel": "goed",
@@ -10588,11 +10940,10 @@
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 2",
-  "hash": "6f6dfda99013ce39",
-  "oordeel": "twijfel",
-  "bron": "wereld-4 dekkende blinde controle 27 okt",
-  "datum": "2026-10-27",
-  "reden": "Vrijwel dezelfde vraag als nr 2 (grootste werelddeel). Voorstel: ander lesstof-feit (60% wereldbevolking) met hetzelfde antwoord."
+  "hash": "3896d0ab8f3d020c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "werelddelen-landen-po stap 4 vraag 20",
@@ -11436,12 +11787,33 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "woordbetekenis-context-po stap 1 vraag 3",
+  "hash": "9be20f7c95b29384",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 1 vraag 4",
+  "hash": "ee6f0e327b38c872",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "woordbetekenis-context-po stap 1 vraag 5",
   "hash": "7941130fdb452d00",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Antwoord uniek binnen de opties, maar 'uit + geput' is een zwakke truc (kinderen kennen 'putten' niet); de zin zelf legt het woord uit ('urenlang geklommen' = truc 1), waar niveaus.nogSimpeler ook naa"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 1 vraag 6",
+  "hash": "568d61318f733ba3",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 10 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "woorden-2-nieuwkomers stap 3 vraag 1",

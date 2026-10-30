@@ -152,9 +152,9 @@ const steps = [
       },
       {
         q: "Waarom heb je in de puberteit **stemmingswisselingen**?",
-        options: ['Je brein is nog volop in ontwikkeling', 'Door wat je elke dag eet en drinkt', 'Er is eigenlijk helemaal geen oorzaak', 'Door het weer en de seizoenen'],
+        options: ['Je brein is nog volop in ontwikkeling', 'Door wat je elke dag eet en drinkt', 'Omdat je te weinig buiten speelt', 'Door het weer en de seizoenen'],
         answer: 0,
-        wrongHints: [null, 'Eten is niet de hoofdoorzaak.', 'Er is wél een oorzaak. Wat verandert er van binnen?', 'Het weer is niet de oorzaak.'],
+        wrongHints: [null, 'Eten is niet de hoofdoorzaak.', 'Buiten zijn is goed voor je humeur, maar dat is niet de oorzaak. Wat verandert er van binnen?', 'Het weer is niet de oorzaak.'],
       },
       {
         q: "Welk **telefoonnummer** heeft de Kindertelefoon?",
@@ -164,9 +164,9 @@ const steps = [
       },
       {
         q: "Wat is **LHBTQ+**?",
-        options: ['Afkorting over liefde en wie je bent', 'Naam van een besmettelijke ziekte', 'Afkorting van een nieuwe sportclub', 'Naam van een tehuis voor jongeren'],
+        options: ['Afkorting over liefde en wie je bent', 'Naam van een popgroep', 'Afkorting van een nieuwe sportclub', 'Naam van een tehuis voor jongeren'],
         answer: 0,
-        wrongHints: [null, 'Zeker geen ziekte. De L staat voor lesbisch. Waar gaat het dan over?', 'Geen sportclub. De H staat voor homo. Waar gaat het dan over?', 'Geen gebouw. De B staat voor biseksueel. Waar gaat het dan over?'],
+        wrongHints: [null, 'Geen popgroep. De L staat voor lesbisch. Waar gaat het dan over?', 'Geen sportclub. De H staat voor homo. Waar gaat het dan over?', 'Geen gebouw. De B staat voor biseksueel. Waar gaat het dan over?'],
       },
     ],
   },

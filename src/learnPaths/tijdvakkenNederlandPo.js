@@ -601,7 +601,7 @@ const steps = [
         q: "Hoe lang duurden de **middeleeuwen** ongeveer?",
         options: ["duizend jaar", "honderd jaar", "tachtig jaar", "vijfhonderd jaar"],
         answer: 0,
-        wrongHints: [null, null, "Tachtig jaar duurde een oorlog uit een latere tijd.", "Reken het uit: van ongeveer 500 tot 1500 — hoeveel jaar is dat?"],
+        wrongHints: [null, null, "Tachtig jaar duurde een oorlog uit een latere tijd.", "Dat is te kort. De middeleeuwen begonnen na de Romeinse tijd en eindigden pas rond de eerste ontdekkingsreizen — tel eens hoeveel eeuwen daartussen zitten."],
         uitlegPad: {
           stappen: [
             {

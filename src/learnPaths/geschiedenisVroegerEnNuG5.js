@@ -511,7 +511,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Een kaars gaf licht.",
-            simpeler: "Geen stroom, dus een kaars.",
+            simpeler: "Veel huizen hadden nog geen stroom, dus brandde er een kaars of een olielamp.",
             nogSimpeler: "kaars",
           },
         },

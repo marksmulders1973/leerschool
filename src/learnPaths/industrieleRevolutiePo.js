@@ -198,8 +198,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bourgeoisie = rijke. Proletariaat = arme. Allebei woorden uit Frans/Latijn — de toets kent ze allebei." }],
           niveaus: {
-            basis: "Rijke burgerij (fabriekseigenaren, kooplui).",
-            simpeler: "Bourgeoisie = nieuwe rijke groep door Industriële Revolutie.",
+            basis: "De bourgeoisie is de rijke burgerij: fabriekseigenaren en kooplieden.",
+            simpeler: "Door de Industriële Revolutie werden deze rijke burgers steeds rijker en machtiger.",
             nogSimpeler: "Rijke burgers",
           },
         },
