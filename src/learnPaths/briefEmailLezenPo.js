@@ -1191,7 +1191,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
         options: ['Uitnodigen en vragen je aan te melden', 'Klagen over het drukke zwembad', 'Bedanken voor de medailles van vorig jaar', 'Informeren en vragen geld over te maken'],
         answer: 0,
         evidence: "Wil je meedoen? Meld je dan aan vóór vrijdag 12 juni.",
-        wrongHints: [null, "=", "Wordt er bedankt voor vorig jaar? Lees de eerste alinea nog eens.", "="],
+        wrongHints: [null, "Staat er ergens een klacht in de e-mail? Let op de toon: klinkt de schrijver boos of juist vrolijk?", "Wordt er bedankt voor vorig jaar? Lees de eerste alinea nog eens.", "Lees de zin over het geld nog eens: moet je nu al iets overmaken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat kondigt de e-mail aan?", tekst: "Een evenement: de Zwemvierdaagse, vier avonden zwemmen met een medaille als beloning. De club hoopt op veel deelnemers — dit is een uitnodiging." },

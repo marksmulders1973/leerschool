@@ -1391,7 +1391,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
         wrongHints: [
           null,
           "Kun je in de tekst aanwijzen dat álle inwoners zochten? Er staat 'buurtbewoners hielpen mee' — is dat hetzelfde als iedereen?",
-          "De tekst noemt juist zoekende buurtbewoners en posters. Wat maakt een kop graag groter dan de tekst?",
+          "De tekst noemt juist zoekende buurtbewoners en posters. Wisten de mensen in het dorp dan echt van niets?",
           "De storm is de oorzaak van de ontsnapping. Maar waar gaat de kop over: de storm, of de alpaca?",
         ],
         uitlegPad: {
@@ -1482,7 +1482,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
         wrongHints: [
           null,
           "Berry verdween op maandag. Wanneer werd hij teruggevonden?",
-          "Een paar uur? Berry verdween op maandag en werd pas op woensdag gevonden.",
+          "Een paar uur is heel kort. Zoek op welke dag Berry verdween en op welke dag hij werd teruggevonden.",
           "Drie weken is veel te lang. Lees de eerste zin van het bericht nog eens.",
         ],
         uitlegPad: {

@@ -1,0 +1,442 @@
+[
+  {
+    "waar": "delen-po stap 4 vraag 1",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "3 × 3 = 9, rest 2; hints benoemen de denkfout.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "delen-po stap 4 vraag 2",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "5 × 3 = 15, rest 2.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "delen-po stap 4 vraag 3",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "20 = 3 × 6 + 2.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "delen-po stap 4 vraag 4",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Antwoord 4 dozen klopt; niveaus.basis gaf alleen het antwoord en simpeler rekende alles voor.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven tot hulpstappen (hoeveel dozen vol, wat met de rest)."
+  },
+  {
+    "waar": "delen-po stap 4 vraag 5",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "5 rest 2 klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven (sprongen van 4 tot 22)."
+  },
+  {
+    "waar": "delen-po stap 4 vraag 6",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "4 rest 3 klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven (sprongen van 4 tot 19)."
+  },
+  {
+    "waar": "delen-po stap 4 vraag 7",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "4 rest 2 klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven (sprongen van 7 tot 30)."
+  },
+  {
+    "waar": "delen-po stap 4 vraag 8",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Rest 5 klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven (4 × 6 = 24, hoeveel nog tot 29)."
+  },
+  {
+    "waar": "delen-po stap 4 vraag 9",
+    "oordeel": "twijfel",
+    "eigenKeuze": "C",
+    "reden": "7 auto's klopt (naar boven afronden); niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven tot vragende hulpstappen."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 1",
+    "oordeel": "twijfel",
+    "eigenKeuze": "C",
+    "reden": "20 m klopt; basis/simpeler waren formule-telegrammen met het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven tot hele zinnen zonder uitkomst."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 2",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "49 cm² klopt; basis/simpeler gaven het antwoord als telegram.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 3",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "25 000 cm² klopt; m² naar cm² omrekenen is groep 7/8-stof (pad zelf is groep 7-8, set is groep 6); basis gaf antwoord.",
+    "hersteld": true,
+    "wijziging": "vanafGroep: 7 op de check; basis en simpeler herschreven."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 4",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "54 m² klopt (60 − 6); tekst is zonder plaatje duidelijk genoeg; basis gaf antwoord, simpeler was telegram ('Heel min hoekje.').",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven tot hele zinnen."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 5",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "20 000 m² klopt; hectare omrekenen is groep 7/8-stof; basis gaf antwoord, simpeler telegram.",
+    "hersteld": true,
+    "wijziging": "vanafGroep: 7 op de check; basis en simpeler herschreven."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 6",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "36 cm klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 7",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "24 m klopt; basis en simpeler gaven allebei de uitkomst.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven (rand = omtrek, vier zijden optellen)."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 8",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "3 cm klopt; basis en simpeler gaven de uitkomst.",
+    "hersteld": true,
+    "wijziging": "basis en simpeler herschreven (delen + controle)."
+  },
+  {
+    "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 9",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "5 × 5 = 25 is het grootst (24, 20, 22); basis gaf alle uitkomsten en het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven tot werkwijze."
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 1",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Onderwerpregel; hints en niveaus netjes.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 2",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Karin van Dijk van de zwemclub.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 3",
+    "oordeel": "fout",
+    "eigenKeuze": "C",
+    "reden": "Antwoord klopt, maar twee wrongHints waren alleen '=' (kapotte, onbegrijpelijke hint voor het kind).",
+    "hersteld": true,
+    "wijziging": "wrongHints voor 'Klagen' en 'Informeren en geld overmaken' geschreven als denkprikkels zonder het antwoord."
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 4",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Aanmelden vóór 12 juni.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 5",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Vrijdag 12 juni.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 6",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Kassa, eerste avond.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 7",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Maandag 22 juni.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 8",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Echte medaille.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "brief-email-lezen-po stap 4 vraag 9",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Een halfuur.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 1",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Alpaca Berry.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 2",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Storm, hek omgewaaid.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 3",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Woensdagmiddag.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 4",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Mening van buurvrouw De Wit.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 5",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Twee voetballende kinderen.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 6",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Posters met foto.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 7",
+    "oordeel": "fout",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt, maar de hint bij 'kop klopt niet, niemand wist het' ('Wat maakt een kop graag groter dan de tekst?') omschrijft het goede antwoord (overdrijven).",
+    "hersteld": true,
+    "wijziging": "Hint herschreven: 'Wisten de mensen in het dorp dan echt van niets?'"
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 8",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Moestuin van de familie Vos.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 9",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Twee dagen klopt; hint bij 'een paar uur' gaf maandag én woensdag samen (bijna voorgerekend).",
+    "hersteld": true,
+    "wijziging": "Hint herschreven: het kind zoekt zelf de dag van verdwijnen en terugvinden op."
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 1",
+    "oordeel": "twijfel",
+    "eigenKeuze": "C",
+    "reden": "Rembrandt klopt; hint '200 jaar eerder' is onnauwkeurig (1642 tegenover 1880-1890).",
+    "hersteld": true,
+    "wijziging": "Hint: 'ruim 200 jaar eerder'."
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 2",
+    "oordeel": "fout",
+    "eigenKeuze": "B",
+    "reden": "Van Gogh klopt, maar de hint 'Mondriaan schilderde alleen rechte lijnen en vlakken' is feitelijk onjuist (hij schilderde eerst ook landschappen en bloemen).",
+    "hersteld": true,
+    "wijziging": "Hint: 'Mondriaan is vooral beroemd om zijn rechte lijnen en kleurvlakken, niet om een bos felgele bloemen.'"
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 3",
+    "oordeel": "fout",
+    "eigenKeuze": "A",
+    "reden": "Vermeer klopt, maar de hint bij Rembrandt ('Wie schilderde kleine, stille tafereeltjes in Delft?') omschrijft het goede antwoord.",
+    "hersteld": true,
+    "wijziging": "Hint herschreven zonder Vermeer te omschrijven."
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 4",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt; opties in telegramstijl met '+', 'primaire kleuren' is vaktaal; drie identieke hints; Mondriaan maakte vroeger wél landschappen.",
+    "hersteld": true,
+    "wijziging": "Vraag: 'Waaraan herken je de bekendste schilderijen van Mondriaan?'; opties met 'en' in plaats van '+', 'rood, geel en blauw'; drie eigen hints."
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 5",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Dick Bruna.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 6",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Rijksmuseum; 'grootste museum' is stellig (Openluchtmuseum is qua terrein groter); hints zwak of tautologisch.",
+    "hersteld": true,
+    "wijziging": "Vraag: 'grootste kunstmuseum'; drie hints herschreven."
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 7",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Annie M.G. Schmidt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 8",
+    "oordeel": "fout",
+    "eigenKeuze": "D",
+    "reden": "'Slechts één' verkocht schilderij is te stellig (bekende mythe; er zijn meer verkopen en ruilen bekend); vraagzin 'Hoe verkocht hij' past niet bij de opties.",
+    "hersteld": true,
+    "wijziging": "Vraag: 'Hoeveel schilderijen verkocht hij toen hij nog leefde?'; antwoord 'Bijna geen: heel weinig in zijn hele leven'; afleiders 'Geen: ...' parallel gemaakt. answer-index ongewijzigd."
+  },
+  {
+    "waar": "nederlandse-kunstenaars-po stap 5 vraag 9",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "De Stijl klopt; hint 'Mondriaan was van de 20e eeuw' onnauwkeurig (geboren 1872).",
+    "hersteld": true,
+    "wijziging": "Hint: 'maakte zijn bekendste werk in de 20e eeuw'."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 2",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 3",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Klopt; vraag was een half afgemaakte zin; basis gaf antwoord.",
+    "hersteld": true,
+    "wijziging": "Vraag: 'Waar wijzen de woorden 'ik vind dat...' op?'; basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 4",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 5",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 6",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Klopt ('waarschijnlijk' als signaalwoord gangbaar); niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 7",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 8",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 9",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Klopt; niveaus.basis gaf alleen het antwoord.",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "feit-mening-po stap 3 vraag 10",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Klopt; basis wees het antwoord aan (vertrektijd).",
+    "hersteld": true,
+    "wijziging": "basis herschreven."
+  },
+  {
+    "waar": "getallen-tot-20-po stap 4 vraag 5",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "13 komt eerst; eenvoudig en passend.",
+    "hersteld": false,
+    "wijziging": ""
+  }
+]

@@ -401,21 +401,21 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Volgens mij' = mening", tekst: "'Volgens mij' zegt: dit is wat ik denk/vind. Dat maakt het een mening, geen zeker feit." }],
           niveaus: {
-            basis: "'Volgens mij' verraadt een mening.",
+            basis: "Een mening-signaalwoord laat zien dat iemand iets denkt of vindt. Zoek in elke zin naar zulke woorden.",
             simpeler: "Welke zin begint met wat iemand zelf denkt?",
             nogSimpeler: "Welke zin heeft de woorden 'volgens mij'?",
           },
         },
       },
       {
-        q: "De woorden 'ik vind dat...' wijzen op...",
+        q: "Waar wijzen de woorden 'ik vind dat...' op?",
         options: ["een mening", "een feit", "een telling", "een meting"],
         answer: 0,
         wrongHints: [null, "Is wat je met 'ik vind' zegt voor iedereen waar, of alleen voor jou?", "Tel je iets als je zegt 'ik vind dat...'?", "Meet je iets als je zegt 'ik vind dat...'?"],
         uitlegPad: {
           stappen: [{ titel: "'Ik vind' = jouw oordeel", tekst: "Met 'ik vind dat...' geef je je eigen oordeel — dat is altijd een mening." }],
           niveaus: {
-            basis: "'Ik vind dat...' leidt altijd een mening in.",
+            basis: "Denk na: vertel je met 'ik vind dat...' iets wat je kunt nakijken, of wat jij ervan denkt?",
             simpeler: "Geef je met 'ik vind' een feit of je eigen mening?",
             nogSimpeler: "Is 'ik vind' van jou persoonlijk, of voor iedereen waar?",
           },
@@ -434,7 +434,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Te duur' = oordeel", tekst: "Of 40 euro 'te duur' is, vindt niet iedereen. Het woordje 'te' verraadt de mening." }],
           niveaus: {
-            basis: "'Te duur' is een oordeel → mening. De prijs zelf is een feit.",
+            basis: "Een feit kun je nakijken, bijvoorbeeld op het prijskaartje. Welke zin kun je niet nakijken?",
             simpeler: "Welke zin zegt wat iemand van de prijs vindt?",
             nogSimpeler: "Welke zin heeft 'te' (te duur) erin?",
           },
@@ -448,7 +448,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Supermoeilijk' = oordeel", tekst: "'Supermoeilijk' zegt wat iemand van wiskunde vindt. Dat vinden niet alle kinderen — het is een mening." }],
           niveaus: {
-            basis: "'Supermoeilijk' is een oordeel → signaalwoord voor mening.",
+            basis: "Zoek het woord dat een oordeel geeft. Vindt iedereen hetzelfde over dat woord?",
             simpeler: "Welk woord zegt hoe iemand wiskunde beleeft?",
             nogSimpeler: "Welk woord laat zien wat iemand van wiskunde vindt?",
           },
@@ -462,7 +462,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Waarschijnlijk' = onzekerheid/mening", tekst: "'Waarschijnlijk' geeft aan dat iemand dit denkt maar niet zeker weet. Dat is een mening-signaalwoord." }],
           niveaus: {
-            basis: "'Waarschijnlijk' zegt dat iemand iets denkt, niet dat het zeker is → mening.",
+            basis: "Zoek het woord dat laat zien dat de schrijver het niet zeker weet, maar iets denkt.",
             simpeler: "Welk woord zegt dat iemand het niet zeker weet?",
             nogSimpeler: "Welk woord betekent 'ik denk van wel, maar weet het niet zeker'?",
           },
@@ -482,7 +482,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Geweldig' is een oordeel → signaalwoord.",
+            basis: "Zoek het woord dat een oordeel over de film geeft. Zou iemand anders er iets anders over kunnen vinden?",
             simpeler: "Welk woord zegt hoe goed iemand de film vond?",
             nogSimpeler: "Welk woord zou een ander kunnen vervangen door 'saai'?",
           },
@@ -506,7 +506,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Saai' verraadt een mening.",
+            basis: "Drie zinnen kun je nakijken in de bibliotheek. Welke zin zegt wat iemand ervan vindt?",
             simpeler: "Welke zin heeft een woord dat zegt wat iemand vindt?",
             nogSimpeler: "Vindt iedereen bibliotheekboeken saai?",
           },
@@ -535,7 +535,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Te' + iets (te zwaar) is een signaalwoord → mening.",
+            basis: "Drie zinnen kun je controleren met een weegschaal. Welke zin vertelt wat iemand ervan vindt?",
             simpeler: "Welke zin kun je NIET nakijken met een weegschaal?",
             nogSimpeler: "Welke zin heeft het woordje 'te' erin?",
           },
@@ -559,7 +559,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een feit gebruikt geen signaalwoorden: de vertrektijd kun je nakijken.",
+            basis: "Een mening-signaalwoord laat zien dat iemand iets vindt of denkt. Lees elke zin en kijk of er zo'n woord in staat.",
             simpeler: "In welke zin staat geen 'ik vind', 'volgens mij', 'te' of 'vreselijk'?",
             nogSimpeler: "Welke zin kun je controleren op het bord bij de bushalte?",
           },

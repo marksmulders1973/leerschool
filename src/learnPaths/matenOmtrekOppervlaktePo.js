@@ -359,7 +359,7 @@ const steps = [
           theorie: "Bij een **rechthoek** met lengte L en breedte B bereken je de omtrek met **2 × (L + B)**, omdat een rechthoek twee lange en twee korte zijden heeft. Een vierkant is een bijzondere rechthoek waarbij alle zijden even lang zijn.",
           voorbeelden: [{ type: "thuis", tekst: "Om te weten hoeveel plint je nodig hebt langs de rand van een kamer van 5 bij 3 meter, bereken je eerst de omtrek." }],
           basiskennis: [{ onderwerp: "Vier zijden", uitleg: "Een rechthoek heeft twee lange en twee korte zijden — bij de omtrek tel je ze allemaal mee." }],
-          niveaus: { basis: "2(6+4)=20.", simpeler: "6+4+6+4=20.", nogSimpeler: "Tel lengte en breedte op en verdubbel dat — wat kom je uit?" },
+          niveaus: { basis: "De omtrek is de lengte van de hele rand. Tel alle vier de zijden bij elkaar op.", simpeler: "Een rechthoek heeft twee zijden van 6 m en twee zijden van 4 m. Tel ze alle vier op.", nogSimpeler: "Tel lengte en breedte op en verdubbel dat — wat kom je uit?" },
         },
       },
       {
@@ -376,10 +376,11 @@ const steps = [
           theorie: "De oppervlakte van een **vierkant** met zijde z bereken je met **z × z**. De uitkomst staat altijd in vierkante eenheden, zoals cm², omdat je een lengte met een lengte vermenigvuldigt.",
           voorbeelden: [{ type: "school", tekst: "Een vierkant tegeltje van 10 cm bij 10 cm gebruik je om te berekenen hoeveel ruimte het inneemt op tafel." }],
           basiskennis: [{ onderwerp: "Vierkante eenheid", uitleg: "Oppervlakte reken je altijd in vierkante eenheden zoals cm² of m², niet in gewone cm of m." }],
-          niveaus: { basis: "7²=49 cm².", simpeler: "Zijde keer zijde = 49.", nogSimpeler: "Vermenigvuldig de zijde met zichzelf — wat kom je uit?" },
+          niveaus: { basis: "Oppervlakte is lengte keer breedte. Bij een vierkant zijn die twee even lang.", simpeler: "Reken 7 × 7 uit. Vergeet niet cm² achter je antwoord te zetten.", nogSimpeler: "Vermenigvuldig de zijde met zichzelf — wat kom je uit?" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B7 (30 okt 2026): oppervlaktematen omrekenen (m² naar cm²) is groep 7/8-stof
         q: "Hoeveel **cm²** is 2,5 m²?",
         options: ["25 000 cm²", "250 cm²", "2500 cm²", "250 000 cm²"],
         answer: 0,
@@ -393,7 +394,7 @@ const steps = [
           theorie: "Omdat oppervlakte **twee richtingen** tegelijk heeft (lengte én breedte), is de stap tussen twee oppervlakte-eenheden **honderd** keer zo groot, in plaats van tien zoals bij lengte. Dit is een veelgemaakte fout op de toets.",
           voorbeelden: [{ type: "thuis", tekst: "Een woonkamer van 20 m² reken je om naar cm² om te zien hoeveel kleine tegeltjes van 1 cm² er theoretisch in zouden passen." }],
           basiskennis: [{ onderwerp: "Factor honderd", uitleg: "Tussen twee opeenvolgende oppervlakte-eenheden (zoals cm² en dm²) zit altijd een factor honderd." }],
-          niveaus: { basis: "2,5 × 10000 = 25000.", simpeler: "Per m² is 10000 cm².", nogSimpeler: "Hoeveel cm² gaan er in 1 m²? Vermenigvuldig dat met 2,5." },
+          niveaus: { basis: "1 m² is een vierkant van 100 cm bij 100 cm. Reken eerst uit hoeveel cm² dat is.", simpeler: "In 1 m² passen 100 × 100 vierkante centimeters. Reken dat aantal daarna keer 2,5.", nogSimpeler: "Hoeveel cm² gaan er in 1 m²? Vermenigvuldig dat met 2,5." },
         },
       },
       {
@@ -410,10 +411,11 @@ const steps = [
           theorie: "Bij een **samengestelde figuur** (geen gewone rechthoek) splits je de vorm op in eenvoudige rechthoeken. Je telt de oppervlaktes bij elkaar op, of trekt een ontbrekend stuk af van een groter geheel — beide manieren geven hetzelfde antwoord.",
           voorbeelden: [{ type: "thuis", tekst: "Een L-vormige woonkamer bereken je door 'm op te delen in twee rechthoeken en de oppervlaktes op te tellen." }],
           basiskennis: [{ onderwerp: "Twee manieren", uitleg: "Je kunt optellen (twee rechthoeken samen) of aftrekken (groot geheel min een hoekje) — kies wat handiger uitrekent." }],
-          niveaus: { basis: "60−6=54.", simpeler: "Heel min hoekje.", nogSimpeler: "Bereken de hele rechthoek, en trek daar het hoekje van af — wat kom je uit?" },
+          niveaus: { basis: "Reken eerst de oppervlakte van de hele rechthoek uit. Haal daarna het hoekje eraf.", simpeler: "De hele tuin is 10 × 6 m². Het hoekje is 3 × 2 m². Trek het hoekje van de hele tuin af.", nogSimpeler: "Bereken de hele rechthoek, en trek daar het hoekje van af — wat kom je uit?" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B7 (30 okt 2026): hectare omrekenen is groep 7/8-stof
         q: "Een park is **2 hectare** groot. Hoeveel m² is dat?",
         options: ["20 000 m²", "200 m²", "2000 m²", "2 000 000 m²"],
         answer: 0,
@@ -427,7 +429,7 @@ const steps = [
           theorie: "De **hectare** (ha) is een handige eenheid voor grote oppervlaktes zoals velden en parken. Eén hectare komt overeen met een vierkant van honderd meter bij honderd meter. Een voetbalveld (~7140 m²) is ongeveer 0,7 hectare.",
           voorbeelden: [{ type: "buiten", tekst: "Een boer met 5 hectare land rekent dat om naar vierkante meter om te weten hoeveel gewas erop past." }],
           basiskennis: [{ onderwerp: "Vierkant van 100 bij 100", uitleg: "Eén hectare is de oppervlakte van een vierkant van 100 meter bij 100 meter." }],
-          niveaus: { basis: "2 × 10 000 = 20 000.", simpeler: "1 ha = 10 000 m².", nogSimpeler: "Hoeveel m² gaan er in 1 hectare? Vermenigvuldig dat met 2." },
+          niveaus: { basis: "Een hectare is een veld van 100 m bij 100 m. Reken eerst uit hoeveel m² dat is.", simpeler: "1 hectare is 100 × 100 m². Reken dat aantal daarna keer 2.", nogSimpeler: "Hoeveel m² gaan er in 1 hectare? Vermenigvuldig dat met 2." },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -472,8 +474,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 9 = 36 cm.",
-            simpeler: "9 + 9 + 9 + 9 = 36 cm.",
+            basis: "De omtrek is de lengte van de rand. Een vierkant heeft vier zijden die even lang zijn.",
+            simpeler: "Reken 4 × 9 uit: dat zijn alle vier de zijden samen.",
             nogSimpeler: "Tel vier keer de 9 bij elkaar op. Wat krijg je?",
           },
         },
@@ -519,8 +521,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 × (7 + 5) = 24 m.",
-            simpeler: "7 + 5 + 7 + 5 = 24 m.",
+            basis: "Het hek komt langs de hele rand van de tuin. Je zoekt dus de omtrek.",
+            simpeler: "Een rechthoek heeft twee lange zijden van 7 m en twee korte zijden van 5 m. Tel ze alle vier op.",
             nogSimpeler: "Loop in gedachten om de tuin: 7, dan 5, dan weer 7, dan weer 5. Hoeveel samen?",
           },
         },
@@ -566,8 +568,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "24 ÷ 8 = 3 cm.",
-            simpeler: "8 × 3 = 24, dus de breedte is 3 cm.",
+            basis: "Oppervlakte is lengte keer breedte. Je weet de oppervlakte en de lengte; de breedte zoek je met delen.",
+            simpeler: "Reken 24 ÷ 8 uit. Controleer daarna: 8 keer jouw antwoord moet 24 zijn.",
             nogSimpeler: "Welk getal keer 8 geeft 24?",
           },
         },
@@ -608,7 +610,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "25 cm², 24 cm², 20 cm² en 22 cm². 5 × 5 is het grootst.",
+            basis: "Reken bij elke rechthoek de oppervlakte uit: lengte keer breedte. Vergelijk daarna de vier uitkomsten.",
             simpeler: "Reken uit: 5 × 5, 8 × 3, 10 × 2 en 11 × 2. Welke is het meest?",
             nogSimpeler: "Hoeveel is 5 keer 5? Is dat meer dan 8 keer 3?",
           },

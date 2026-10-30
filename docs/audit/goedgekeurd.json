@@ -2806,6 +2806,62 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "brief-email-lezen-po stap 4 vraag 1",
+  "hash": "2effb16f5678d80a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 2",
+  "hash": "a83a57d31fc040d7",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 4",
+  "hash": "3e0f22661e42a43b",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 5",
+  "hash": "e2b6964565aa7ffd",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 6",
+  "hash": "283ec2c5d1d2bda0",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 7",
+  "hash": "cf630ec03eb13a57",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 8",
+  "hash": "ba61dc58458c81ca",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 4 vraag 9",
+  "hash": "6233df69df9285b3",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "brugklas-orientatie stap 1 vraag 1",
   "hash": "1e9f71db76e1f04b",
   "oordeel": "goed",
@@ -3676,6 +3732,75 @@
   "bron": "vervolg B5 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "delen-po stap 4 vraag 1",
+  "hash": "d9465a657ec9c812",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "delen-po stap 4 vraag 2",
+  "hash": "33abaf9571b9abee",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "delen-po stap 4 vraag 3",
+  "hash": "20e69e6cd6f3e03b",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "delen-po stap 4 vraag 4",
+  "hash": "82cd0b79e410687c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord 4 dozen klopt; niveaus.basis gaf alleen het antwoord en simpeler rekende alles voor."
+ },
+ {
+  "waar": "delen-po stap 4 vraag 5",
+  "hash": "cc1320f9e8b7b241",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "5 rest 2 klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "delen-po stap 4 vraag 6",
+  "hash": "71d15a8453eaacf0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "4 rest 3 klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "delen-po stap 4 vraag 7",
+  "hash": "dff3c7788c6f99c5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "4 rest 2 klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "delen-po stap 4 vraag 8",
+  "hash": "45d04b31c48eedc9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Rest 5 klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "delen-po stap 4 vraag 9",
+  "hash": "ef2695517059357d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "7 auto's klopt (naar boven afronden); niveaus.basis gaf alleen het antwoord."
  },
  {
   "waar": "dichten-poezie-rijmen-po stap 2 vraag 1",
@@ -6197,6 +6322,78 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "feit-mening-po stap 3 vraag 10",
+  "hash": "6875a58b8991dd35",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; basis wees het antwoord aan (vertrektijd)."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 2",
+  "hash": "e3e12cf563bb8498",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 3",
+  "hash": "5c886403ac0d8d58",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; vraag was een half afgemaakte zin; basis gaf antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 4",
+  "hash": "026d0363c3219e55",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 5",
+  "hash": "73d83376b0c67e6c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 6",
+  "hash": "eaf0d90b8d8f4617",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt ('waarschijnlijk' als signaalwoord gangbaar); niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 7",
+  "hash": "69081bd2e777b9ad",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 8",
+  "hash": "0b8ddae0b9b8ea5f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 9",
+  "hash": "73109f505ca14b4d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
   "waar": "feiten-details-opzoeken-po stap 1 vraag 1",
   "hash": "50cf6c20160a556b",
   "oordeel": "goed",
@@ -7403,6 +7600,13 @@
   "bron": "vervolg B1 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "9 + 4 = 13 klopt; theorie had jargon ('redactiesom', 'signaalwoorden', 'toets-trucs') en niveaus waren telegram."
+ },
+ {
+  "waar": "getallen-tot-20-po stap 4 vraag 5",
+  "hash": "e6c649708f1e0256",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "getallen-tot-20-po stap 4 vraag 6",
@@ -11017,6 +11221,78 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 1",
+  "hash": "e7a5833054415d62",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "20 m klopt; basis/simpeler waren formule-telegrammen met het antwoord."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 2",
+  "hash": "b29e6dd16a78e18d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "49 cm² klopt; basis/simpeler gaven het antwoord als telegram."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 3",
+  "hash": "f619495de6d6b219",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "25 000 cm² klopt; m² naar cm² omrekenen is groep 7/8-stof (pad zelf is groep 7-8, set is groep 6); basis gaf antwoord."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 4",
+  "hash": "b7762bd2efe67ca8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "54 m² klopt (60 − 6); tekst is zonder plaatje duidelijk genoeg; basis gaf antwoord, simpeler was telegram ('Heel min hoekje.')."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 5",
+  "hash": "3441eb17b64da1f9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "20 000 m² klopt; hectare omrekenen is groep 7/8-stof; basis gaf antwoord, simpeler telegram."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 6",
+  "hash": "c62d6cb1271bc9f3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "36 cm klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 7",
+  "hash": "f1bc80fc1f30d53b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "24 m klopt; basis en simpeler gaven allebei de uitkomst."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 8",
+  "hash": "72075e1420ed619a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "3 cm klopt; basis en simpeler gaven de uitkomst."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 2 vraag 9",
+  "hash": "168026b5038034fb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "5 × 5 = 25 is het grootst (24, 20, 22); basis gaf alle uitkomsten en het antwoord."
+ },
+ {
   "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 1",
   "hash": "1f50938340b1a87d",
   "oordeel": "goed",
@@ -11231,6 +11507,52 @@
   "oordeel": "goed",
   "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 5 vraag 1",
+  "hash": "747c314331f4c28e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Rembrandt klopt; hint '200 jaar eerder' is onnauwkeurig (1642 tegenover 1880-1890)."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 5 vraag 4",
+  "hash": "5c82449627a3b3be",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties in telegramstijl met '+', 'primaire kleuren' is vaktaal; drie identieke hints; Mondriaan maakte vroeger wél landschappen."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 5 vraag 5",
+  "hash": "e318e1b5db01c593",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 5 vraag 6",
+  "hash": "6ff4ed97d96d9350",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Rijksmuseum; 'grootste museum' is stellig (Openluchtmuseum is qua terrein groter); hints zwak of tautologisch."
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 5 vraag 7",
+  "hash": "69164d75aefbef13",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 5 vraag 9",
+  "hash": "8cf09f6bdeb3d937",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "De Stijl klopt; hint 'Mondriaan was van de 20e eeuw' onnauwkeurig (geboren 1872)."
  },
  {
   "waar": "negatieve-getallen-po stap 1 vraag 1",
@@ -11573,6 +11895,63 @@
   "oordeel": "goed",
   "bron": "vervolg B6 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 1",
+  "hash": "36ada8bed0e6ca4f",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 2",
+  "hash": "b47c04e5ec757ec2",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 3",
+  "hash": "60bbd1b031348f23",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 4",
+  "hash": "ed632a82aec912d1",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 5",
+  "hash": "028acec77e7830c7",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 6",
+  "hash": "e23cf22cd55f34cb",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 8",
+  "hash": "f31e9f99df726486",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 9",
+  "hash": "528b7c1117ca843a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Twee dagen klopt; hint bij 'een paar uur' gaf maandag én woensdag samen (bijna voorgerekend)."
  },
  {
   "waar": "olympische-spelen-po stap 1 vraag 1",
