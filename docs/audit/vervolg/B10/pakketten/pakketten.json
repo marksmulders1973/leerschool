@@ -1,0 +1,84 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsRekenenG8.js",
+   "src/learnPaths/negatieveGetallenPo.js",
+   "src/learnPaths/belastingPo.js"
+  ],
+  "sets": [
+   "8|rekenen",
+   "5|rekenen",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsTaalG8.js",
+   "src/learnPaths/sterrenPlaneten.js",
+   "src/learnPaths/cijferendRekenen.js",
+   "src/learnPaths/dierenSeizoenenNatuur.js"
+  ],
+  "sets": [
+   "8|taal",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 55,
+  "files": [
+   "src/learnPaths/geldRekenen.js",
+   "src/learnPaths/verhaalDiepteLezenPo.js",
+   "src/learnPaths/verwijswoordenPo.js",
+   "src/learnPaths/zinsontledingOnderwerpPersoonsvormPo.js",
+   "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+   "src/learnPaths/schaalKaartRekenenPo.js",
+   "src/learnPaths/financieleVormingPo.js",
+   "src/learnPaths/samenvattenHoofdgedachtePo.js",
+   "src/learnPaths/woordenschatPo.js",
+   "src/learnPaths/begrijpendLezenStrategie.js"
+  ],
+  "sets": [
+   "5|rekenen",
+   "6|rekenen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "7|taal",
+   "8|rekenen",
+   "7|rekenen",
+   "6|begrijpend-lezen",
+   "6|taal"
+  ]
+ },
+ {
+  "pakket": "04",
+  "n": 13,
+  "files": [
+   "src/learnPaths/lichaamGezondheidPo.js",
+   "src/learnPaths/trappenVanVergelijkingPo.js",
+   "src/learnPaths/feitMeningPo.js",
+   "src/learnPaths/breukenPo.js",
+   "src/learnPaths/tabellenGrafieken.js",
+   "src/learnPaths/tijdsduurRekenenPo.js",
+   "src/learnPaths/tekstdoelSchrijversdoelPo.js",
+   "src/learnPaths/woordbetekenisContextPo.js"
+  ],
+  "sets": [
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "7|taal",
+   "6|rekenen",
+   "7|rekenen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen"
+  ]
+ }
+]
