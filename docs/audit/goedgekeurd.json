@@ -345,6 +345,76 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 1",
+  "hash": "0fdd4328d3f6769e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 10",
+  "hash": "7a72373019b846b9",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 2",
+  "hash": "c9954f0d3cec903c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 3",
+  "hash": "53eefa3d8b83ce79",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 4",
+  "hash": "181cdb7b11c60f3a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 5",
+  "hash": "9d42291b60402134",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 6",
+  "hash": "a3161eef62043137",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 7",
+  "hash": "44c894b0666ab985",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 8",
+  "hash": "77f3166ba25c9e2b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 2 vraag 9",
+  "hash": "2eabd9d7f5fc4e3f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "bekende-boeken-literatuur-po stap 4 vraag 9",
   "hash": "2003fa896fcc5dc0",
   "oordeel": "twijfel",
@@ -1313,6 +1383,69 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Afleider '2' (treden) is onwaarschijnlijk; de rest is wel van dezelfde soort."
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 1",
+  "hash": "ba2790f2ff867329",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 10",
+  "hash": "90b5af0b9a87539e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 3",
+  "hash": "b7f61f557ccafeab",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 4",
+  "hash": "1fdc3fe892f3c9c6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 5",
+  "hash": "8847f02af9bfed62",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 6",
+  "hash": "4f9625cd79834ad0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 7",
+  "hash": "faf3fcde998e27d3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 8",
+  "hash": "e843a99e0f171c75",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 1 vraag 9",
+  "hash": "08e057d93e36e03b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "financiele-vorming-po stap 2 vraag 1",
@@ -3171,6 +3304,29 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "recyclen-afval-po stap 1 vraag 1",
+  "hash": "4b8abcc8abd8bbad",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin ('maakt gemiddelde Nederlander' zonder 'een') en absurde afleiders (10/100/10.000 kg, alleen goede optie met '~'); cijfer ~480 kg klopt (CBS ca. 470-490 kg). Startset-vraag van een andere "
+ },
+ {
+  "waar": "recyclen-afval-po stap 1 vraag 2",
+  "hash": "b80c11461fc52c25",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telegramzin ('in GFT-bak' zonder 'de'); inhoud en hints kloppen. Startset-vraag van een andere groep → vraagtekst bewust NIET aangepast."
+ },
+ {
+  "waar": "recyclen-afval-po stap 1 vraag 3",
+  "hash": "f4794fd275fb21f7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "recyclen-afval-po stap 4 vraag 25",
   "hash": "e4d18c773665db4e",
   "oordeel": "goed",
@@ -3255,6 +3411,69 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 5",
+  "hash": "a69e532575af0ef0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 6",
+  "hash": "fb781a48ec5d03e5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 7",
+  "hash": "d7dd964fa6acb88f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 8",
+  "hash": "8230967ca5988596",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 1",
+  "hash": "bdc2dd56ad28d79b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 2",
+  "hash": "201001f688d9a3c4",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 4",
+  "hash": "6e8138f332c072d0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 5",
+  "hash": "c3bf15b25263a2a0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 6",
+  "hash": "d375bb4fb85f68f0",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 20",
   "hash": "88019f3537cc9ac5",
   "oordeel": "goed",
@@ -3281,6 +3500,77 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 1",
+  "hash": "607d0bda83e6683d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 10",
+  "hash": "853d55862cf1bcef",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 2",
+  "hash": "ee92fde5df835a1d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "vraag en hints goed, maar niveaus gebruikten jargon ('elementen', 'relatie') en telegramstijl voor groep 6"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 3",
+  "hash": "82bfb49c1689c21d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 4",
+  "hash": "b8522b657940e02a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 5",
+  "hash": "284a9620835721a5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 6",
+  "hash": "408a384c86820d6b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 7",
+  "hash": "0224462aaba7f3e6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 8",
+  "hash": "a1aeb0ef3e9457d8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 1 vraag 9",
+  "hash": "bc95e3fb901fea9f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "schemas-stappenplannen-po stap 5 vraag 7",
@@ -3842,11 +4132,88 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "tafels-po stap 1 vraag 5",
+  "hash": "98a60c1ec5cffc3a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 6",
+  "hash": "f438f1e16437f503",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 7",
+  "hash": "dbe31316983e522a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 8",
+  "hash": "d82f809f1aa0c322",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 9",
+  "hash": "94412bda637cfb6a",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tafels-po stap 2 vraag 1",
   "hash": "c9c1eff28800e103",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 6",
+  "hash": "86b926fb43d1296f",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 7",
+  "hash": "cf5902ea50832592",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 8",
+  "hash": "cf1ddccfb17d2a33",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 5",
+  "hash": "dc1462c15e3703a8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 6",
+  "hash": "681f0f80bf61503b",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 7",
+  "hash": "712e4ab90ea9c251",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "tafels-po stap 6 vraag 14",

@@ -509,7 +509,7 @@ const steps = [
           niveaus: {
             basis: "Een detail uit de tekst is GEEN hoofdgedachte.",
             simpeler: "Detail = klein stukje uit 1 zin. Hoofdgedachte = rode draad door HELE tekst.",
-            nogSimpeler: "Detail = A (geen hoofdgedachte).",
+            nogSimpeler: "Een detail is geen hoofdgedachte.",
           },
         },
       },

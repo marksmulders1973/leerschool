@@ -75,9 +75,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Pijl = van A naar B = hetzij volgorde, hetzij soort-van-relatie." }],
           niveaus: {
-            basis: "Pijlen tonen verband of volgorde tussen elementen.",
-            simpeler: "Pijl van A naar B = A leidt naar B (of A is soort van B).",
-            nogSimpeler: "Pijl = relatie.",
+            basis: "Pijlen laten zien wat bij elkaar hoort of wat na elkaar komt.",
+            simpeler: "Een pijl van A naar B betekent: na A komt B, of B is een soort van A.",
+            nogSimpeler: "Een pijl laat een verband of een volgorde zien.",
           },
         },
       },

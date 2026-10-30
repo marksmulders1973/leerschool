@@ -85,7 +85,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **landen** gebruiken de euro?",
+        q: "Hoeveel landen van de **Europese Unie (EU)** gebruiken de euro?",
         options: ["21", "19", "27", "12"],
         answer: 0,
         wrongHints: [null, "Zoveel waren het een paar jaar geleden. Kwamen er sindsdien landen bij?", "Dat zijn alle landen van de Europese Unie (EU). Gebruiken die allemaal de euro?", "Met zoveel landen begon de euro in 2002. Daarna kwamen er meer bij."],
@@ -106,9 +106,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eurozone is een KLEINERE groep BINNEN de EU." }],
           niveaus: {
-            basis: "21 landen gebruiken euro (eurozone).",
-            simpeler: "EU heeft 27 landen. Maar slechts 21 daarvan gebruiken euro.",
-            nogSimpeler: "21 met euro!",
+            basis: "21 EU-landen gebruiken de euro. Samen heten ze de eurozone.",
+            simpeler: "De EU heeft 27 landen. Daarvan gebruiken er 21 de euro.",
+            nogSimpeler: "21 landen met de euro.",
           },
         },
       },
