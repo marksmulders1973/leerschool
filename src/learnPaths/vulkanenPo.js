@@ -20,16 +20,16 @@ const steps = [
   {
     title: "Wat is een vulkaan?",
     explanation:
-      "Een **vulkaan** is een berg met een **gat** erin. Door dat gat komt **gesmolten steen** uit de aarde naar buiten.\n\n**Hoe kan steen smelten?** Diep in de aarde is het gloeiend heet: meer dan **1000 graden**. Zo heet dat steen vloeibaar wordt, als dikke stroop. Dat gesmolten steen heet **magma** zolang het nog **onder** de grond zit.\n\n**Zo zit een vulkaan in elkaar:**\n• **Magmakamer** — een 'zak' vol magma, diep onder de berg.\n• **Kraterpijp** — de schoorsteen waardoor het magma omhoog gaat.\n• **Krater** — de opening bovenop, vaak een kom.\n• **Lava** — magma dat **buiten** is. Zelfde spul, andere naam!\n\n**Onthoud-truc:** **M**agma zit **M**ooi verstopt (onder), **L**ava **L**oopt naar buiten.\n\nDe berg zelf is gemaakt van oude, afgekoelde lava en as: elke uitbarsting legt een nieuw laagje op de berg. Daarom worden vulkanen elke keer een stukje groter. Zo'n spitse laagjes-berg (zoals de Mayon op de Filipijnen of de vulkaan in het Leerkwartier-park) heet een **kegelvulkaan**.",
+      "Een **vulkaan** is een berg met een **gat** erin. Door dat gat komt **gesmolten steen** uit de aarde naar buiten.\n\n**Hoe kan steen smelten?** Diep in de aarde is het gloeiend heet: zo'n **700 tot 1200 graden**. Zo heet dat steen vloeibaar wordt, als dikke stroop. Dat gesmolten steen heet **magma** zolang het nog **onder** de grond zit.\n\n**Zo zit een vulkaan in elkaar:**\n• **Magmakamer** — een 'zak' vol magma, diep onder de berg.\n• **Kraterpijp** — de schoorsteen waardoor het magma omhoog gaat.\n• **Krater** — de opening bovenop, vaak een kom.\n• **Lava** — magma dat **buiten** is. Zelfde spul, andere naam!\n\n**Onthoud-truc:** **M**agma zit **M**ooi verstopt (onder), **L**ava **L**oopt naar buiten.\n\nDe berg zelf is gemaakt van oude, afgekoelde lava en as: elke uitbarsting legt een nieuw laagje op de berg. Daarom worden vulkanen elke keer een stukje groter. Zo'n spitse laagjes-berg (zoals de Mayon op de Filipijnen of de vulkaan in het Leerkwartier-park) heet een **kegelvulkaan**.",
     checks: [
       {
         q: "Wat is het **verschil** tussen magma en lava?",
-        options: ["Magma zit onder de grond, lava is naar buiten gekomen", "Magma is koud, lava is heet", "Lava is steen, magma is water", "Er is geen verschil, het zijn twee woorden voor as"],
+        options: ["Magma zit onder de grond, lava is naar buiten gekomen", "Magma is gloeiend heet, lava is al bijna afgekoeld", "Magma is dun en vloeibaar, lava is dik en stroperig", "Magma is gesmolten steen, lava is hete as en gas"],
         answer: 0,
-        wrongHints: [null, "Allebei zijn gloeiend heet — kijk naar wáár het spul zit.", "Allebei zijn gesmolten steen.", "As is iets anders (fijne stukjes). Denk aan onder/boven de grond."],
+        wrongHints: [null, "Ook lava is nog gloeiend heet als het uit de krater stroomt. Wat is dan wél het verschil?", "Lava kan dun én dik zijn. Wat is dan wél het verschil?", "Lava is ook gesmolten steen; as en gas zijn iets anders. Wat is dan wél het verschil?"],
         uitlegPad: {
           stappen: [
-            { titel: "Zelfde spul", tekst: "Magma en lava zijn allebei gesmolten steen van meer dan 1000 graden." },
+            { titel: "Zelfde spul", tekst: "Magma en lava zijn allebei gesmolten steen van zo'n 700 tot 1200 graden." },
             { titel: "De plek bepaalt de naam", tekst: "Zit het nog ONDER de grond, in de magmakamer of de kraterpijp? Dan heet het **magma**. Is het uit de krater naar BUITEN gestroomd? Dan heet het **lava**." },
             { titel: "Truc", tekst: "Magma = Mooi verstopt. Lava = Loopt naar buiten." },
           ],
@@ -57,16 +57,16 @@ const steps = [
         wrongHints: [null, "Die zit juist diep ónder de berg.", "Dat is de 'schoorsteen' ín de berg, niet de opening erbovenop.", "Dat is lava die over de helling stroomt, geen opening."],
       },
       {
-        q: "Waarom wordt een vulkaan bij elke uitbarsting een stukje **groter**?",
-        options: ["De lava en as koelen af en vormen een nieuw laagje op de berg", "De berg zwelt op door de hitte en blijft daarna zo dik", "Er komt bij elke uitbarsting meer regenwater in de krater", "Dat is niet zo, vulkanen worden juist kleiner bij elke uitbarsting"],
+        q: "Waardoor wordt een vulkaan na uitbarstingen vaak een stukje **groter**?",
+        options: ["De lava en as koelen af en vormen een nieuw laagje op de berg", "De berg zwelt op door de hitte en blijft daarna zo dik", "Er komt bij elke uitbarsting meer regenwater in de krater", "Botsende aardplaten duwen de berg bij elke uitbarsting hoger"],
         answer: 0,
-        wrongHints: [null, "Steen zwelt niet op als een ballon. Wat gebeurt er met lava als die afkoelt?", "Water hoort er niet bij. Denk aan wat er uit de krater komt.", "Lees de laatste alinea nog eens: elke keer komt er iets bij."],
+        wrongHints: [null, "Steen zwelt niet blijvend op als een ballon. Wat valt er bij een uitbarsting op de helling?", "Water hoort er niet bij. Denk aan wat er uit de krater komt.", "Aardplaten duwen een berg niet bij elke uitbarsting omhoog. Wat komt er bij een uitbarsting óp de berg terecht?"],
       },
       {
-        q: "Hoe heet zo'n spitse berg die uit laagjes lava en as is opgebouwd?",
-        options: ["Kegelvulkaan", "Heuvelvulkaan", "Kratermeer", "Aardbeving"],
+        q: "Hoe heet een vulkaan die, net als de Mayon, uit laagjes lava en as is opgebouwd?",
+        options: ["Kegelvulkaan", "Koepelvulkaan", "Schildvulkaan", "Spleetvulkaan"],
         answer: 0,
-        wrongHints: [null, "Die naam bestaat niet — welke vorm heeft een spitse berg?", "Dat is een meer ín een oude krater, geen berg.", "Dat is het schudden van de grond, geen berg."],
+        wrongHints: [null, "Een koepelvulkaan is een ronde bult van taaie lava, zonder laagjes. Hoe heet de vulkaan uit de les?", "Een schildvulkaan is juist plat en breed, als een schild dat op de grond ligt.", "Bij een spleetvulkaan komt lava uit een lange scheur in de grond. Hoe heet de vulkaan uit de les?"],
       },
     ],
   },
@@ -77,9 +77,9 @@ const steps = [
     checks: [
       {
         q: "Waarom liggen de meeste vulkanen op de **randen** van aardplaten?",
-        options: ["Daar kan magma omhoog komen waar de platen botsen of uit elkaar schuiven", "Daar is de grond het zachtst en het makkelijkst te doorboren", "Daar regent het het meest, zodat er meer water in de grond zit", "Omdat de platen daar het dikst en het zwaarst zijn"],
+        options: ["Daar kan magma omhoog, waar platen botsen of uit elkaar gaan", "Daar is de grond het zachtst en het makkelijkst te doorboren", "Daar staan de hoogste bergen, en elke hoge berg is een vulkaan", "Daar zijn de platen het dikst en houden ze de meeste warmte vast"],
         answer: 0,
-        wrongHints: [null, "Bijna goed gedacht, maar het gaat om wat de platen dóén op die randen.", "Regen heeft niets met magma te maken.", "Op een dikke plaat komt magma juist moeilijker omhoog."],
+        wrongHints: [null, "Zachte grond is het punt niet. Lees nog eens wat er gebeurt waar platen elkaar raken.", "Niet elke hoge berg is een vulkaan: de Alpen bijvoorbeeld niet. Lees nog eens wat er gebeurt waar platen elkaar raken.", "Dikte en warmte zijn het punt niet. Lees nog eens wat er gebeurt waar platen elkaar raken."],
         uitlegPad: {
           stappen: [
             { titel: "De aarde is een puzzel", tekst: "De buitenkant van de aarde bestaat uit grote stukken: aardplaten. Ze bewegen een paar centimeter per jaar." },
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Wat zorgt ervoor dat een vulkaan echt **uitbarst** (de 'boem')?",
-        options: ["Gassen in het magma die eruit willen als de druk minder wordt", "Regenwater dat de krater vult tot hij overstroomt", "De wind die hard over de krater waait en de lava opzuigt", "Dieren die diep in de krater graven en de berg openmaken"],
+        options: ["Gassen in het magma die eruit willen als de druk daalt", "Botsende aardplaten die de berg in elkaar drukken", "Lava die overkookt, zoals melk in een te volle pan", "Heet magma dat de berg van binnenuit laat smelten"],
         answer: 0,
-        wrongHints: [null, "Water komt niet van binnenuit. Denk aan het flesje cola.", "Wind zit buiten, de kracht komt van binnen.", "Dieren komen niet in de buurt van magma. Denk aan het flesje cola."],
+        wrongHints: [null, "Platen bepalen wáár vulkanen liggen, niet waarom ze knallen. Lees het stukje over de boem nog eens.", "Overkoken gaat langzaam en zonder knal. Lees het stukje over de boem nog eens.", "Steen smelt niet met een knal. Wat lees je in de les over het flesje cola?"],
         uitlegPad: {
           stappen: [
             { titel: "Prik in het magma", tekst: "In magma zitten gassen, zoals de prik in cola. Diep onder de grond zijn ze samengeperst." },
@@ -127,15 +127,15 @@ const steps = [
       },
       {
         q: "Hoe snel bewegen aardplaten ongeveer?",
-        options: ["Een paar centimeter per jaar", "Een paar meter per dag", "Ze bewegen niet", "Honderd kilometer per jaar"],
+        options: ["Een paar centimeter per jaar", "Een paar meter per dag", "Een paar millimeter per eeuw", "Een paar kilometer per jaar"],
         answer: 0,
-        wrongHints: [null, "Dat zou je voelen! Denk aan hoe snel je nagels groeien.", "Ze bewegen wél, alleen heel langzaam.", "Veel te snel — dan zouden landen elk jaar verhuizen."],
+        wrongHints: [null, "Dat zou je voelen! Denk aan hoe snel je nagels groeien.", "Dat is nog veel langzamer dan je nagels groeien. Kijk naar de vergelijking in de les.", "Veel te snel — dan zouden landen elk jaar verhuizen."],
       },
       {
         q: "Waar in het Koninkrijk der Nederlanden staat een (slapende) vulkaan?",
-        options: ["Op Saba: Mount Scenery", "In Limburg: de Vaalserberg", "In Friesland", "Op Texel"],
+        options: ["Op Saba: Mount Scenery", "In Limburg: de Vaalserberg", "In Gelderland: de Posbank", "Op Texel: de Hoge Berg"],
         answer: 0,
-        wrongHints: [null, "De Vaalserberg is een gewone heuvel, geen vulkaan.", "Friesland ligt midden op een aardplaat.", "Texel is een zandeiland uit de zee."],
+        wrongHints: [null, "De Vaalserberg is een gewone heuvel, geen vulkaan.", "De Posbank is een heuvel van zand en stenen, opgeduwd door ijs in de ijstijd.", "De Hoge Berg op Texel is een heuvel uit de ijstijd, geen vulkaan."],
       },
     ],
   },
@@ -146,15 +146,15 @@ const steps = [
     checks: [
       {
         q: "Wat komt er uit een vulkaan als hij uitbarst?",
-        options: ["Lava, as en gassen", "Alleen lava", "Alleen rook en vuur", "Water en modder"],
+        options: ["Lava, as en gassen", "Lava, vuur en vlammen", "Lava, zand en water", "As, modder en ijs"],
         answer: 0,
-        wrongHints: [null, "Lava is er één van — maar er komen nog twee dingen mee.", "Vuur is het niet echt: het gloeit omdat het gesmolten steen is.", "Water is er meestal niet, al kan gesmolten sneeuw wel modderstromen geven."],
+        wrongHints: [null, "Vuur is het niet echt: het gloeit omdat het gesmolten steen is.", "Zand en water komen niet uit de krater. Lees de drie dingen in de les nog eens.", "IJs komt er niet uit, al kan gesmolten sneeuw wel modderstromen geven. Wat komt er uit de krater zelf?"],
       },
       {
         q: "Waarom bleven in 2010 bijna alle vliegtuigen in Europa aan de grond?",
-        options: ["Een aswolk van een IJslandse vulkaan was gevaarlijk voor de motoren", "Er stroomde lava uit IJsland over de startbanen in Europa", "Het was door de vulkaan te heet in de lucht om te vliegen", "De piloten konden door de rook de vulkaan zelf niet zien"],
+        options: ["As van een IJslandse vulkaan was gevaarlijk voor de motoren", "Giftig zwavelgas van de vulkaan dreef boven heel Europa", "Aardbevingen door de vulkaan beschadigden de vliegvelden", "De piloten konden door de rook de vulkaan zelf niet zien"],
         answer: 0,
-        wrongHints: [null, "Lava komt niet zo ver: IJsland ligt duizenden kilometers weg. Wat kan wél zo ver drijven?", "De hitte blijft bij de berg. Denk aan wat er in de lucht hing.", "Zien was niet het probleem; iets in de lucht was het probleem."],
+        wrongHints: [null, "Zwavelgas stinkt en kan giftig zijn, maar daarom bleven de vliegtuigen niet staan. Wat kan wél dagenlang in de lucht blijven hangen?", "De aardbevingen bleven op IJsland. Wat dreef er over Europa heen?", "Zien was niet het probleem; iets in de lucht was het probleem."],
         uitlegPad: {
           stappen: [
             { titel: "As is fijn steen", tekst: "Vulkaan-as bestaat uit piepkleine stukjes steen en glas. Het is dus geen zachte kampvuur-as." },
@@ -174,15 +174,15 @@ const steps = [
       },
       {
         q: "Wat gebeurt er met lava als het **afkoelt**?",
-        options: ["Het wordt weer hard steen", "Het wordt water", "Het verdwijnt", "Het wordt zand"],
+        options: ["Het wordt weer hard steen", "Het wordt weer magma", "Het wordt een hoop fijne as", "Het wordt zacht zand"],
         answer: 0,
-        wrongHints: [null, "Lava was steen vóórdat het smolt. Wat wordt het dan weer?", "Steen verdwijnt niet zomaar.", "Zand ontstaat pas na heel lang afslijten — eerst is het iets anders."],
+        wrongHints: [null, "Magma is gesmolten steen ónder de grond. Is afgekoelde lava nog gesmolten?", "As ontstaat bij de knal, als steen in stukjes de lucht in vliegt. Wat gebeurt er met een lavastroom die stilligt?", "Zand ontstaat pas na heel lang afslijten — eerst is het iets anders."],
       },
       {
         q: "Welke uitbarsting geeft de **grootste knal**?",
-        options: ["Dikke, stroperige lava met veel gas", "Dunne lava die rustig stroomt", "Een vulkaan zonder gas", "Een vulkaan met bijna geen magma"],
+        options: ["Dikke, stroperige lava met veel gas", "Dunne, vloeibare lava met weinig gas", "Dikke, stroperige lava met weinig gas", "Dunne, vloeibare lava met veel gas"],
         answer: 0,
-        wrongHints: [null, "Rustig stromen = weinig gas = weinig knal.", "Zonder gas is er niets dat kan knallen.", "Zonder magma is er weinig dat naar buiten kan schieten."],
+        wrongHints: [null, "Dun en weinig gas: zo gaat het op Hawaï. Knalt dat hard?", "Lees in de les nog eens wat er bij een explosieve uitbarsting hoort.", "Kijk in de les naar Hawaï: hoe ziet de lava daar eruit, en knalt het?"],
       },
     ],
   },
@@ -193,9 +193,9 @@ const steps = [
     checks: [
       {
         q: "Waarom wonen veel mensen **vlak bij** een vulkaan, ondanks het gevaar?",
-        options: ["De grond is er heel vruchtbaar en er is warmte uit de aarde", "Ze weten meestal niet dat die berg een echte vulkaan is", "Het is er het hele jaar door mooi weer en nooit koud", "De huizen en de grond zijn er gratis voor iedereen"],
+        options: ["De grond is er heel vruchtbaar voor gewassen", "Ze weten meestal niet dat die berg een vulkaan is", "Rond een vulkaan regent het minder, dus het is er droog", "De as van de vulkaan houdt muggen en ongedierte weg"],
         answer: 0,
-        wrongHints: [null, "Mensen weten het meestal heel goed. Wat levert de vulkaan hun op?", "Het weer heeft er weinig mee te maken. Denk aan de grond en aan energie.", "Gratis is het niet. Waarom kiezen boeren juist deze plek?"],
+        wrongHints: [null, "Mensen weten het meestal heel goed. Wat levert de vulkaan hun op?", "Een vulkaan verandert het weer bijna niet. Lees de redenen in de les nog eens.", "As helpt niet tegen muggen. Wat doet as met de grond?"],
         uitlegPad: {
           stappen: [
             { titel: "As is mest", tekst: "Vulkaan-as zit vol mineralen. Planten groeien er extra goed op: sinaasappels bij de Etna, rijst op Java." },
@@ -210,7 +210,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Rondom de Vesuvius wonen heel veel mensen — de grond is er goud waard." }],
           basiskennis: [{ onderwerp: "Mineralen", uitleg: "Stofjes in de grond die planten nodig hebben om te groeien." }],
           niveaus: {
-            basis: "De as maakt de grond vruchtbaar en de warmte uit de aarde is gratis energie.",
+            basis: "De as maakt de grond heel vruchtbaar; daarom wonen er boeren.",
             simpeler: "De grond is er heel goed voor planten, en er is warmte.",
             nogSimpeler: "De grond is er goed.",
           },
@@ -218,21 +218,21 @@ const steps = [
       },
       {
         q: "Wat gebeurde er met de stad **Pompeï** in het jaar 79?",
-        options: ["Ze werd bedolven onder de as van de Vesuvius", "Ze werd overstroomd door de zee", "Ze werd verwoest door een aardbeving", "Ze werd gebouwd op een vulkaan"],
+        options: ["Ze werd bedolven onder de as van de Vesuvius", "Ze werd overspoeld door een vloedgolf uit zee", "Ze werd verwoest door een zware aardbeving", "Ze werd verbrand door de lava van de Etna"],
         answer: 0,
-        wrongHints: [null, "Water was het niet. Wat kwam er uit de Vesuvius?", "De grond trilde wel, maar iets anders bedekte de stad meters dik.", "De stad bestond al lang — wat gebeurde ermee?"],
+        wrongHints: [null, "Water was het niet. Wat vonden mensen later meters dik bovenop de huizen?", "De grond trilde wel, maar iets anders bedekte de stad meters dik.", "De Etna ligt op Sicilië, en Pompeï ligt bij een andere vulkaan. Was het lava of iets anders?"],
       },
       {
         q: "Wat doet een **vulkanoloog**?",
-        options: ["De vulkaan meten en op tijd waarschuwen", "De afgekoelde lava opruimen van de wegen", "Toeristen rondleiden en foto's laten maken", "De krater dichtmaken met beton en stenen"],
+        options: ["De vulkaan meten en op tijd waarschuwen", "De afgekoelde lava opruimen van de wegen", "Toeristen rondleiden en foto's laten maken", "Boeren leren hoe ze de vruchtbare grond gebruiken"],
         answer: 0,
-        wrongHints: [null, "Lava ruim je niet op — het wordt steen.", "Dat doet een gids. Een vulkanoloog is een wetenschapper.", "Een krater dichtmaken kan niet; de druk zoekt altijd een weg."],
+        wrongHints: [null, "Dat doen wegwerkers na een uitbarsting. Een vulkanoloog is een wetenschapper: wat onderzoekt die?", "Dat doet een gids. Een vulkanoloog is een wetenschapper.", "Dat weten de boeren zelf al. Een vulkanoloog is een wetenschapper: wat onderzoekt die?"],
       },
       {
         q: "Waarom is **aardwarmte** een slimme energiebron?",
-        options: ["Het is schoon en raakt niet op", "Het is fossiel", "Het maakt lava", "Het werkt alleen in Nederland"],
+        options: ["Het is schone energie die nooit opraakt", "Het is een fossiele brandstof, net als gas", "Het werkt het best in landen zonder vulkanen", "Het komt van de zon, net als zonne-energie"],
         answer: 0,
-        wrongHints: [null, "Fossiel = olie, gas, kool. Aardwarmte komt niet uit dode planten.", "Andersom: de warmte kómt van het hete gesteente.", "Juist op vulkaan-eilanden als IJsland werkt het het best."],
+        wrongHints: [null, "Fossiel = olie, gas, kolen. Aardwarmte komt niet uit dode planten.", "Juist op vulkaan-eilanden als IJsland werkt het het best.", "Zonne-energie komt van de zon. Waar komt aardwarmte vandaan?"],
       },
     ],
   },
@@ -241,11 +241,11 @@ const steps = [
     explanation:
       "Je weet nu:\n• **Magma** zit onder de grond, **lava** komt naar buiten.\n• Vulkanen liggen op de **randen van aardplaten** (Ring van Vuur, IJsland).\n• **Gas** in het magma zorgt voor de knal (het cola-flesje).\n• Uit een vulkaan komen **lava, as en gassen**.\n• Vulkanen zijn gevaarlijk, maar geven **vruchtbare grond, aardwarmte en werk**.\n\nLoop na de toets nog eens door het park: bij de vulkaan aan de kust zie je alles wat je net las — de kegel van laagjes, de krater met het lavameer, de rookpluim en om de paar minuten een uitbarsting met lavabommen. Kijk of je de geulen op de helling herkent: dat zijn oude lavastromen.",
     checks: [
-      { q: "Gesmolten steen dat **buiten** de vulkaan stroomt heet…", options: ["Lava", "Magma", "As", "Gas"], answer: 0, wrongHints: [null, "Dat is de naam ónder de grond.", "As is fijn stof, geen vloeibaar steen.", "Gas is onzichtbaar en niet vloeibaar."] },
-      { q: "De ketting van vulkanen rondom de Grote Oceaan heet…", options: ["De Ring van Vuur", "De Vuurlinie", "De Lavaketen", "De Aardplaat"], answer: 0, wrongHints: [null, null, "Klinkt logisch, maar zo heet hij niet.", "Een aardplaat is een stuk aardkorst, geen ketting van vulkanen."] },
-      { q: "Wat maakt een uitbarsting **explosief**?", options: ["Veel gas in dik magma", "Veel bomen op de helling", "Een hoge berg", "Weinig lava"], answer: 0, wrongHints: [null, "Bomen op de helling zeggen niets over wat er ín de berg gebeurt.", "De hoogte van de berg zegt niets over de knal.", null] },
-      { q: "Welk **voordeel** hebben vulkanen voor boeren?", options: ["De as maakt de grond vruchtbaar", "De lava geeft schaduw", "Er valt meer regen", "De grond wordt harder"], answer: 0, wrongHints: [null, "Schaduw is geen voordeel voor gewassen. Denk aan mest.", "Regen komt van wolken, niet van de vulkaan.", "Harde grond is juist slecht voor planten."] },
-      { q: "Wat betekent het als een vulkaan **slapend** is?", options: ["Hij is lang niet uitgebarsten, maar kan dat nog wel", "Hij kan nooit meer uitbarsten, want hij is uitgedoofd", "Hij barst elke nacht een klein beetje uit", "Hij is nog nooit uitgebarsten, en dat blijft zo"], answer: 0, wrongHints: [null, "Dat heet een 'dode' of uitgedoofde vulkaan.", "Het woord 'slapend' gaat niet over de nacht. Waar gaat het dan over?", "Slapend betekent dat hij het vroeger wél deed."] },
+      { q: "Gesmolten steen die **buiten** de vulkaan stroomt, heet…", options: ["Lava", "Magma", "As", "Gas"], answer: 0, wrongHints: [null, "Dat is de naam ónder de grond.", "As is fijn stof, geen vloeibaar steen.", "Gas is geen gesmolten steen. Het ontsnapt als damp of rook."] },
+      { q: "De ketting van vulkanen rondom de Grote Oceaan heet…", options: ["De Ring van Vuur", "De Vuurlinie", "De Lavaketen", "De Kraterkring"], answer: 0, wrongHints: [null, "Die naam bestaat niet. Lees de alinea over de Grote Oceaan nog eens.", "Klinkt logisch, maar zo heet hij niet.", "Die naam lijkt er wel op, maar bestaat niet. Lees de alinea over de Grote Oceaan nog eens."] },
+      { q: "Waarom barst de Vesuvius veel **explosiever** uit dan de vulkanen op Hawaï?", options: ["Veel gas in dik magma", "Een veel grotere magmakamer", "Een bredere krater bovenop", "Hetere lava dan op Hawaï"], answer: 0, wrongHints: [null, "Een grote magmakamer zegt niet hoe hard het knalt. Lees nog eens wat er bij een explosieve uitbarsting hoort.", "De krater is alleen de opening. Lees nog eens wat er bij een explosieve uitbarsting hoort.", "De lava op Hawaï is juist heel heet en dun. Wat is er anders aan het magma van de Vesuvius?"] },
+      { q: "Welk **voordeel** hebben vulkanen voor boeren?", options: ["De as maakt de grond vruchtbaar", "De aswolk geeft schaduw op het land", "De gassen zorgen voor meer regen", "De lava maakt de grond extra hard"], answer: 0, wrongHints: [null, "Planten hebben juist zon nodig om te groeien.", "Regen komt van wolken, niet van de vulkaan.", "Harde grond is juist slecht voor planten."] },
+      { q: "Wat betekent het als een vulkaan **slapend** is?", options: ["Hij is lang niet uitgebarsten, maar dat kan nog wel", "Hij is uitgedoofd en kan niet meer uitbarsten", "Hij barst nu uit, maar heel rustig en langzaam", "Hij is net uitgebarsten en rust nu een paar dagen"], answer: 0, wrongHints: [null, "Dat heet een 'dode' of uitgedoofde vulkaan.", "Een vulkaan die nu uitbarst, slaapt niet. Hoe lang is het stil bij een slapende vulkaan?", "Een paar dagen is heel kort. Hoe lang moet het stil zijn voordat je zegt dat hij slaapt?"] },
     ],
   },
 ];

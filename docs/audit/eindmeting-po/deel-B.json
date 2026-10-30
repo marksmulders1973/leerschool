@@ -1,0 +1,1224 @@
+[
+ {
+  "nr": 51,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 4",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "De bus naar het zwembad vertrekt **elk uur om :12 en om :42**. Je bent om **9:55** bij de halte. Hoe lang moet je wachten?",
+  "options": [
+   "17 minuten",
+   "47 minuten",
+   "13 minuten",
+   "7 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hoeft niet op de bus van :42 te wachten — er komt eerder al één om :12.",
+   "De bus van 9:42 is al wég als jij om 9:55 aankomt.",
+   "Van 9:55 tot 10:12 — tel via 10:00."
+  ],
+  "explanation": "De eerstvolgende bus is die van 10:12. Van 9:55 → 10:00 = 5 min, → 10:12 = nog 12 min. Samen **17 minuten**.",
+  "niveaus": null
+ },
+ {
+  "nr": 52,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 29",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Een **kaart van Nederland** met **provincies in kleur**: wat doet de **kleurcode**?",
+  "options": [
+   "De provincies uit elkaar houden",
+   "Laten zien hoe hoog het land ligt",
+   "Laten zien waar jij precies woont",
+   "De hoofdsteden van Nederland tonen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoogte zie je op een hoogtekaart.",
+   "De kaart weet niet waar jij woont. Waarom krijgt elke provincie een eigen kleur?",
+   "Hoofdsteden staan meestal met een stip of ster. Waar is de kleur voor?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 53,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 12",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "In een tabel staan de getallen 100, 200, 300, 400 en 500. Wat is het **gemiddelde**?",
+  "options": [
+   "300",
+   "250",
+   "350",
+   "1500"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alles samen is 1.500. Deel je dat door 5 of door 6?",
+   "350: tel alles eerst op en deel dan door het aantal getallen.",
+   "1.500 is alles samen. Wat moet je daarna nog doen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Gemiddelde = som ÷ aantal.",
+   "simpeler": "Tel alles op (1500), deel door 5. = 300.",
+   "nogSimpeler": "Optellen, dan delen."
+  }
+ },
+ {
+  "nr": 54,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 22",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Bij **'als-dan'-schema**: 'als regen, dan paraplu'. Wat is de **conclusie**?",
+  "options": [
+   "Paraplu",
+   "Regen",
+   "Zon",
+   "Thuisblijven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de voorwaarde (het 'als'-deel), niet de conclusie.",
+   "Zon staat niet in dit schema. Wat staat er na 'dan'?",
+   "Thuisblijven staat niet in het schema. Wat volgt er na 'dan'?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 55,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 14",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Staat de **inhoudsopgave** voorin of achterin een boek?",
+  "options": [
+   "Voorin",
+   "Achterin",
+   "In het midden",
+   "Op de achterkant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Achterin staat meestal de index.",
+   "In het midden staat de tekst zelf. Waar vind je het overzicht van alle hoofdstukken?",
+   "Op de achterkant staat een korte tekst over het boek."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 56,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 26",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Schaal **1:25.000**, 4 cm op kaart = werkelijk in **m**?",
+  "options": [
+   "1.000 m",
+   "100 m",
+   "10.000 m",
+   "10 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "100 m = 10.000 cm. Is 4 × 25.000 zo weinig?",
+   "10.000 m is 10 km. Heb je bij cm → m wel door 100 gedeeld?",
+   "10 m is nog geen klaslokaal lang. Reken 4 × 25.000 cm uit."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 57,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 36",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Op de kaart staat de camping in vak **D3**, het strand in vak **D5**. De vakken zijn 2 km bij 2 km. Hoe ver ligt het strand ongeveer, gemeten van het midden van het ene vak naar het midden van het andere?",
+  "options": [
+   "4 km",
+   "2 km",
+   "8 km",
+   "10 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "D3 → D4 is al één stap — maar je moet nog verder tot D5.",
+   "Hoeveel stappen ga je van D3 naar D5, en hoe ver is elke stap?",
+   "Dat zou 5 vakken zijn — tel de stappen op de kaart nog eens."
+  ],
+  "explanation": "Van het midden van D3 naar het midden van D5 = 2 vakken × 2 km = **4 km**.",
+  "niveaus": null
+ },
+ {
+  "nr": 58,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 10",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Je staat op het schoolplein. De kerk ligt **tussen het noorden en het oosten** in. In welke windrichting ligt de kerk?",
+  "options": [
+   "Noordoosten",
+   "Zuidoosten",
+   "Noordwesten",
+   "Zuidwesten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zuid zit er niet bij — welke twee richtingen noemt de vraag?",
+   "West zit er niet bij — lees de vraag nog eens.",
+   "Geen van deze twee letters komt in de vraag voor."
+  ],
+  "explanation": "Tussen noord en oost ligt het **noordoosten** (NO) — de naam combineert de twee richtingen.",
+  "niveaus": null
+ },
+ {
+  "nr": 59,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "De zon komt op in het **oosten**. Je ziet 's ochtends vroeg de zon precies vóór je opkomen. In welke windrichting kijk je?",
+  "options": [
+   "Naar het oosten",
+   "Naar het westen",
+   "Naar het noorden",
+   "Naar het zuiden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar gaat de zon 's avonds juist ónder.",
+   "In Nederland staat de zon nooit in die richting.",
+   "Denk aan waar de zon ópkomt — dat staat in de eerste zin."
+  ],
+  "explanation": "De zon komt op in het oosten en jij kijkt er recht tegenaan: je kijkt **naar het oosten**.",
+  "niveaus": null
+ },
+ {
+  "nr": 60,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 1",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "**Bus 12 vertrekt van het station:** 8:05 — 8:25 — 8:45 — 9:05. Je bent om **8:30** op het station. Welke bus kun je als eerstvolgende nemen?",
+  "options": [
+   "De bus van 8:45",
+   "De bus van 8:25",
+   "De bus van 8:05",
+   "De bus van 9:05"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die bus is al vertrokken als jij om 8:30 aankomt.",
+   "Die was er al lang vandoor.",
+   "Er vertrekt eerder nog een bus — kijk in het rijtje."
+  ],
+  "explanation": "Om 8:30 zijn de bussen van 8:05 en 8:25 al weg. De eerstvolgende is die van **8:45**.",
+  "niveaus": null
+ },
+ {
+  "nr": 61,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Bovenaan de zoekresultaten staat een blokje met het label **'Gesponsord'**. Wat betekent dat?",
+  "options": [
+   "Iemand heeft betaald voor die plek",
+   "Dit is het beste zoekresultaat",
+   "Deze site is door school goedgekeurd",
+   "Deze site is gratis te gebruiken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die plek bovenaan is gekócht, niet verdiend met kwaliteit.",
+   "Scholen keuren geen zoekresultaten goed.",
+   "Bijna alle sites zijn gratis te bekijken — daar gaat dat label niet over."
+  ],
+  "explanation": "**Gesponsord** = betaalde reclame. De maker betaalde om bovenaan te staan; het zegt niets over hoe goed of betrouwbaar de site is.",
+  "niveaus": null
+ },
+ {
+  "nr": 62,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 17",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welk woord betekent **hetzelfde als** **'mooi'**?",
+  "options": [
+   "Prachtig",
+   "Lelijk",
+   "Lief",
+   "Gezellig"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lelijk is het tegenovergestelde.",
+   "Lief gaat over hoe iemand doet, niet over hoe iets eruitziet.",
+   "Gezellig gaat over de sfeer, niet over hoe iets eruitziet."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Mooi = prachtig (synoniem).",
+   "simpeler": "Beide betekenen ongeveer hetzelfde: iets positiefs.",
+   "nogSimpeler": "Mooi = prachtig."
+  }
+ },
+ {
+  "nr": 63,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 42",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welk woord is het **antoniem** (tegenovergestelde) van **'zelden'**?",
+  "options": [
+   "Vaak",
+   "Nooit",
+   "Soms",
+   "Misschien"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Nooit' is nóg minder dan zelden — je zoekt juist de andere kant op.",
+   "'Soms' zit te dicht bij 'zelden' — zoek het échte tegenovergestelde.",
+   "'Misschien' zegt iets over onzekerheid, niet over hoe váák iets gebeurt."
+  ],
+  "explanation": "**Zelden** = bijna nooit. Het tegenovergestelde is **vaak**.",
+  "niveaus": null
+ },
+ {
+  "nr": 64,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 54",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "*'Sara spaarde drie maanden voor nieuwe schaatsen. Toen ze eindelijk genoeg had, bleek de winkel ze niet meer te verkopen.'*\n\nWelk gevoel past het best bij Sara aan het einde?",
+  "options": [
+   "Teleurgesteld",
+   "Opgelucht",
+   "Trots",
+   "Verveeld"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Opgelucht ben je als iets juist góéd afloopt.",
+   "Trots past bij het sparen — maar hoe loopt het áf?",
+   "Verveeld? Er gebeurt juist iets heftigs."
+  ],
+  "explanation": "Drie maanden sparen en dan misgrijpen: dat voelt **teleurgesteld**. Gevoelens-vragen los je op door je in de persoon te verplaatsen.",
+  "niveaus": null
+ },
+ {
+  "nr": 65,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 5",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welk woord schrijf je **met 'ei'**?",
+  "options": [
+   "trein",
+   "vlijtig",
+   "lijden",
+   "blijven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vlijtig komt van 'vlijt' — net als 'pijn' met lange ij.",
+   null,
+   "Blijven, blijf, bleef — dit werkwoord schrijf je met de lange ij. Uit je hoofd leren!"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "trein.",
+   "simpeler": "Trein = ei. Vlijtig/lijden/blijven = ij.",
+   "nogSimpeler": "trein"
+  }
+ },
+ {
+  "nr": 66,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 39",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Hoe schrijf je het **voltooid deelwoord** van *'verhuizen'*?",
+  "options": [
+   "verhuisd",
+   "verhuist",
+   "verhuizd",
+   "verhuisdt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Pas op: dit is de hij-vorm tegenwoordige tijd. Maak de verleden tijd ('ik ...') en luister: hoor je een d of een t?",
+   "De z verandert in een s in de stam.",
+   "Een d én een t samen kan alleen bij 'stam-op-d + t' (zoals 'hij wordt')."
+  ],
+  "explanation": "Verlengingstruc: 'het verhuis**de** gezin' — je hoort een **d**, dus voltooid deelwoord = verhuis**d**. ('Hij verhuist' = tegenwoordige tijd!)",
+  "niveaus": null
+ },
+ {
+  "nr": 67,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 4",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welke zin is **geen complete zin**?",
+  "options": [
+   "Het rennende paard.",
+   "Het paard rent.",
+   "Het paard rent snel.",
+   "Het paard rent door de wei."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heeft een werkwoord — is dus een echte zin.",
+   "Werkwoord aanwezig + ook nog 'snel' als bijwoord.",
+   "Werkwoord + voorzetselgroep — alles aanwezig."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 68,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 51",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welke zin zegt dat het feest **misschien** niet doorgaat?",
+  "options": [
+   "Het feest gaat mogelijk niet door.",
+   "Het feest gaat zeker niet door.",
+   "Het feest gaat nooit door.",
+   "Het feest ging niet door."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Zeker' laat geen twijfel over.",
+   "'Nooit' is nog stelliger.",
+   "Deze zin staat in de verleden tijd — het is al gebeurd."
+  ],
+  "explanation": "**Mogelijk** = misschien. Let op zulke nuance-woorden: zeker/mogelijk/nooit veranderen de hele betekenis.",
+  "niveaus": null
+ },
+ {
+  "nr": 69,
+  "bron": "leerpaden",
+  "waar": "eetcultuur-nederland-po stap 4 vraag 6",
+  "file": "./eetcultuurNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Uit welke stad komt de **stroopwafel**?",
+  "options": [
+   "Gouda",
+   "Amsterdam",
+   "Leiden",
+   "Volendam"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In de hoofdstad kwamen ze pas later — waar stond de éérste stroopwafelbakker?",
+   "Leiden is bekend van de hutspot (Leidens Ontzet), niet van stroopwafels.",
+   "Volendam is bekend van gerookte paling, niet van stroopwafels."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 70,
+  "bron": "leerpaden",
+  "waar": "energiebronnen-po stap 6 vraag 13",
+  "file": "./energiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Welke energie uit **gas-fornuis**?",
+  "options": [
+   "Warmte",
+   "Elektrisch",
+   "Mechanisch",
+   "Magnetisch"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Er gaat geen stroom door de gasvlam.",
+   "Er beweegt niets dat iets aandrijft.",
+   "Er zit geen magneet in een gasfornuis."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 71,
+  "bron": "leerpaden",
+  "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
+  "file": "./engelsEersteWoordenG5.js",
+  "level": "groep5",
+  "q": "Welk woord hoort bij een **raam**?",
+  "options": [
+   "window",
+   "door",
+   "table",
+   "chair"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Door' is een deur.",
+   "'Table' is een tafel.",
+   "'Chair' is een stoel."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "window.",
+   "simpeler": "Raam = window.",
+   "nogSimpeler": "window"
+  }
+ },
+ {
+  "nr": 72,
+  "bron": "leerpaden",
+  "waar": "evolutie-mens-po stap 4 vraag 10",
+  "file": "./evolutieMensPo.js",
+  "level": "groep6-8",
+  "q": "Wie bedacht de **evolutie-theorie**?",
+  "options": [
+   "Charles Darwin",
+   "Isaac Newton",
+   "Albert Einstein",
+   "Galileo"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Newton is van de zwaartekracht, geen biologie.",
+   "Einstein is van de relativiteit, geen biologie.",
+   "Galileo keek door zijn telescoop naar planeten."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 73,
+  "bron": "leerpaden",
+  "waar": "evolutie-mens-po stap 4 vraag 12",
+  "file": "./evolutieMensPo.js",
+  "level": "groep6-8",
+  "q": "Op welke eilanden onderzocht Darwin **vinken**?",
+  "options": [
+   "Galapagos",
+   "Hawaï",
+   "IJsland",
+   "Cuba"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hawaï ligt midden in de Grote Oceaan bij Amerika — maar Darwin voer met de Beagle langs de kust van Zuid-Amerika. Klopt dat?",
+   "IJsland ligt koud in het hoge noorden — passen kleine zangvogeltjes bij zo'n ijzige plek?",
+   "Cuba ligt in de Caraïbische Zee — maar Darwins eilanden liggen vlak bij de evenaar aan de westkant van Zuid-Amerika. Welke groep is dat?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 74,
+  "bron": "leerpaden",
+  "waar": "feit-mening-po stap 1 vraag 1",
+  "file": "./feitMeningPo.js",
+  "level": "groep7-8",
+  "q": "Welke zin is een feit?",
+  "options": [
+   "Water kookt bij 100 graden.",
+   "Soep is lekkerder dan water.",
+   "Zwemmen is de leukste sport.",
+   "De zomer is het mooiste seizoen."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lekkerder vinden verschilt per persoon — dat is een mening.",
+   "'De leukste' vindt niet iedereen — dat kun je niet nameten.",
+   "Het mooiste? Dat vindt niet iedereen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een feit kun je controleren en is voor iedereen waar: water kookt bij 100 graden.",
+   "simpeler": "Welke zin kun je nameten of opzoeken?",
+   "nogSimpeler": "Welke zin is voor iedereen hetzelfde, of je 't nu leuk vindt of niet?"
+  }
+ },
+ {
+  "nr": 75,
+  "bron": "leerpaden",
+  "waar": "feit-mening-po stap 3 vraag 1",
+  "file": "./feitMeningPo.js",
+  "level": "groep7-8",
+  "q": "Welk woord verraadt vaak een **mening**?",
+  "options": [
+   "prachtig",
+   "drie",
+   "maandag",
+   "meter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een getal is meestal een feit.",
+   "Een dag is een feit.",
+   "Een maat is een feit."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'Prachtig' is een oordeel → mening-signaalwoord.",
+   "simpeler": "Welk woord gaat over mooi/lelijk vinden?",
+   "nogSimpeler": "Welk woord zegt dat iets mooi is?"
+  }
+ },
+ {
+  "nr": 76,
+  "bron": "leerpaden",
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 6",
+  "file": "./feitenDetailsOpzoekenPo.js",
+  "level": "groep6-8",
+  "q": "*\"De uitkijktoren is 48 meter hoog. De wenteltrap naar boven telt 212 treden.\"* — Hoeveel treden heeft de trap?",
+  "options": [
+   "212",
+   "48",
+   "221",
+   "2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat getal gaat over meters, niet over treden. Scan op het woord 'treden'.",
+   "Heb je de cijfers misschien omgedraaid? Lees het getal in de tekst nog eens cijfer voor cijfer.",
+   "Staat er '2'? Neem het hele getal in de zin met 'treden' over."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Scan op het woord 'treden' en lees het getal in díé zin, cijfer voor cijfer.",
+   "simpeler": "Er staan twee getallen: eentje bij 'meter' en eentje bij 'treden'. Jij zoekt het getal bij 'treden' — lees het heel precies.",
+   "nogSimpeler": "Zoek het woord 'treden' en lees het getal ervoor cijfer voor cijfer op."
+  }
+ },
+ {
+  "nr": 77,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 2 vraag 1",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Vanaf welke leeftijd mag je in NL in de vakantie **licht werk** doen?",
+  "options": [
+   "13 jaar",
+   "12 jaar",
+   "18 jaar",
+   "16 jaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op je twaalfde mag het nog niet. Wanneer wel?",
+   "Zo lang hoef je niet te wachten: ook tieners mogen al licht werk doen.",
+   "Vanaf 16 mag je meer soorten werk doen. Licht werk mag al eerder."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 78,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 3 vraag 8",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Je spaart voor een **noodgeval**. Waarvoor is dat geld bedoeld?",
+  "options": [
+   "Voor als er onverwacht iets stukgaat",
+   "Voor snoep bij de kassa",
+   "Voor een uitje dit weekend",
+   "Voor een nieuwe game die net uit is"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is dat een noodgeval, of iets leuks?",
+   "Is een uitje onverwacht, of iets leuks dat je plant?",
+   "Een nieuwe game is leuk. Is het een noodgeval?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Voor als er onverwacht iets stukgaat.",
+   "simpeler": "Noodgeld gebruik je als er iets kapotgaat wat je niet had verwacht.",
+   "nogSimpeler": "Iets kapot."
+  }
+ },
+ {
+  "nr": 79,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 6 vraag 11",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Wat wil **reclame** vooral dat je doet?",
+  "options": [
+   "Iets kopen",
+   "Iets nieuws leren",
+   "Geld opsparen",
+   "Prijzen vergelijken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Soms leer je er iets van. Maar wat wil het bedrijf achter de reclame?",
+   "Wil een winkel dat je je geld bewaart?",
+   "Wil een winkel dat je bij een ander gaat kijken?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 80,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 6 vraag 13",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **BNPL** (Buy Now Pay Later)?",
+  "options": [
+   "Een vorm van lenen",
+   "Een soort spaarrekening",
+   "Een soort cadeaubon",
+   "Een soort korting"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Spaar je bij BNPL, of betaal je later?",
+   "Een cadeaubon is al betaald. Wanneer betaal je bij BNPL?",
+   "Wordt het goedkoper, of betaal je alleen later?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 81,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 6 vraag 20",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Op welk product zit **statiegeld** in Nederland?",
+  "options": [
+   "Plastic flessen",
+   "Melkpakken",
+   "Glazen jampotten",
+   "Chipszakken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk eens op een pak melk: staat daar statiegeld op?",
+   "Een lege jampot gooi je in de glasbak. Krijg je daar geld voor?",
+   "Een lege chipszak gaat bij het plastic afval. Krijg je daar geld voor?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 82,
+  "bron": "leerpaden",
+  "waar": "geld-rekenen stap 4 vraag 7",
+  "file": "./geldRekenen.js",
+  "level": "groep5-8",
+  "q": "Kaas A: **200 g voor € 2,40**. Kaas B: **400 g voor € 4,40**. Wat kost **100 g** van kaas B?",
+  "options": [
+   "€ 1,10",
+   "€ 1,20",
+   "€ 2,20",
+   "€ 0,44"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de prijs per 100 g van kaas A. Je zoekt kaas B.",
+   "Dat is de prijs van 200 g. Hoe vaak past 100 g in 400 g?",
+   "Let op de komma: hoe vaak past 100 g in 400 g?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€4,40 ÷ 4 = €1,10.",
+   "simpeler": "400 g is 4 stukjes van 100 g. €4,40 verdelen in 4 stukjes = €1,10 per stukje.",
+   "nogSimpeler": "€1,10"
+  }
+ },
+ {
+  "nr": 83,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 6 vraag 4",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "level": "groep7-8",
+  "q": "Het was 4 dagen 18, 20, 22 en 20 °C. Wat is de **gemiddelde** temperatuur?",
+  "options": [
+   "20 °C",
+   "18 °C",
+   "80 °C",
+   "22 °C"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — tel alle temperaturen bij elkaar op en deel dan door het aantal dagen.",
+   "Dat is de som — je moet nog door het aantal metingen delen.",
+   "Dat is de hoogste temperatuur. Ligt het gemiddelde zo hoog?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 84,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 2",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "level": "groep5-6",
+  "q": "Waarom hadden kastelen **dikke muren**?",
+  "options": [
+   "om vijanden buiten te houden",
+   "omdat dat veel mooier stond",
+   "om er schilderijen aan te hangen",
+   "omdat dunne stenen niet bestonden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mooi was meegenomen — maar er was een belangrijkere reden.",
+   "Daarvoor was een dunne muur ook goed genoeg.",
+   "Dunne muren konden ze best bouwen — maar wilden ze dat?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Dikke muren = bescherming tegen vijanden.",
+   "simpeler": "Dikke muur, vijand komt er niet door.",
+   "nogSimpeler": "bescherming"
+  }
+ },
+ {
+  "nr": 85,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 3",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "level": "groep5-6",
+  "q": "Wat is een **gracht** bij een kasteel?",
+  "options": [
+   "water rondom het kasteel",
+   "de grote eetzaal",
+   "de hoogste toren",
+   "de stal voor de paarden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar werd gegeten — dat is binnen.",
+   "Die stak de lucht in — een gracht ligt juist laag.",
+   "Daar stonden de paarden."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een gracht is water om het kasteel.",
+   "simpeler": "Een sloot rondom, tegen vijanden.",
+   "nogSimpeler": "water rondom"
+  }
+ },
+ {
+  "nr": 86,
+  "bron": "leerpaden",
+  "waar": "grafieken-lezen-po stap 6 vraag 16",
+  "file": "./grafiekenLezenPo.js",
+  "level": "groep6-8",
+  "q": "Welke grafiek past het best bij **'temperatuur per uur'**?",
+  "options": [
+   "Lijngrafiek",
+   "Taartdiagram",
+   "Staafdiagram",
+   "Tijdlijn"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zijn de temperaturen delen van één geheel?",
+   "Dat kan, maar wat laat beter zien hoe het van uur tot uur verandert?",
+   "Een tijdlijn zet gebeurtenissen op volgorde. Zie je daarop ook hoe warm het was?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 87,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-2-nieuwkomers stap 3 vraag 4",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "De juf heeft nu geen tijd. Wat doe je met je vraag?",
+  "options": [
+   "Ik wacht tot de juf tijd heeft.",
+   "Ik ga schreeuwen.",
+   "Ik ga naar huis.",
+   "Ik doe niets meer."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De juf komt straks. Even geduld.",
+   "Nee, 'Ik ga naar huis.' zeg je als de school uit is. De juf komt straks. Even geduld.",
+   "De juf komt straks. Even geduld."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 88,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-nieuwkomers stap 1 vraag 2",
+  "file": "./inDeKlasNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Je snapt de uitleg niet. Wat zeg je?",
+  "options": [
+   "Ik snap het niet.",
+   "Dank je wel.",
+   "Tot morgen!",
+   "Ik ben er."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 'Dank je wel.' zeg je als iemand je helpt of iets geeft. Je begrijpt het niet. Zeg dat eerlijk.",
+   "Nee, 'Tot morgen!' zeg je als je naar huis gaat. Je begrijpt het niet. Zeg dat eerlijk.",
+   "Nee, 'Ik ben er.' zeg je als de juf je naam noemt. Je begrijpt het niet. Zeg dat eerlijk."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 89,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 6 vraag 20",
+  "file": "./industrieleRevolutiePo.js",
+  "level": "groep6-8",
+  "q": "Wat is **massa-productie**?",
+  "options": [
+   "Veel producten snel maken met machines",
+   "Eén product heel precies maken",
+   "Producten met de hand maken",
+   "Kapotte producten weer repareren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat betekent het woord 'massa'?",
+   "Wat doen machines?",
+   "Het gaat om maken."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 90,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 4 vraag 3",
+  "file": "./informatiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Welke is een **fake news-signaal**?",
+  "options": [
+   "Sensationele kop + geen bronvermelding",
+   "Krantenartikel met datum + auteur",
+   "Wetenschappelijk artikel met bronnenlijst",
+   "Wikipedia met 20 verwijzingen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — datum + auteur = juist betrouwbaar.",
+   "Niet — bronnenlijst = teken van degelijkheid.",
+   "Niet — veel bronnen = beter te checken."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Sensationeel + geen bron = fake.",
+   "simpeler": "Schreeuwerig + anoniem = waarschuwing.",
+   "nogSimpeler": "Geen bron"
+  }
+ },
+ {
+  "nr": 91,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 1 vraag 8",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Hoeveel woorden krijgen een **hoofdletter** in: *'mijn tante woont in leiden'*?",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "0"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar het begin van de zin én naar namen van plaatsen.",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "2 (Mijn en Leiden).",
+   "simpeler": "Het eerste woord en de stad Leiden krijgen een hoofdletter.",
+   "nogSimpeler": "Mijn + Leiden."
+  }
+ },
+ {
+  "nr": 92,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 4 vraag 1",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Welke zin heeft komma's op de **juiste plek**?",
+  "options": [
+   "Ik kocht appels, peren en druiven.",
+   "Ik kocht appels peren, en druiven.",
+   "Ik kocht appels, peren, en druiven.",
+   "Ik, kocht appels peren en druiven."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk waar de komma staat: tussen twee dingen uit het lijstje, of vlak vóór 'en'?",
+   "Geen komma vóór het laatste 'en'.",
+   "Geen komma na werkwoord zonder reden."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'Ik kocht appels, peren en druiven.'",
+   "simpeler": "Komma tussen items van opsomming. Voor laatste 'en' geen komma.",
+   "nogSimpeler": "Appels, peren en druiven."
+  }
+ },
+ {
+  "nr": 93,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 4 vraag 4",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "*'Lisa zei ___ ik kom morgen.'* Welk leesteken hoort op de lege plek?",
+  "options": [
+   ": (dubbele punt)",
+   ", (komma)",
+   ". (punt)",
+   "geen leesteken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een komma is een pauze in de zin — welk teken kondigt aan wat iemand gaat zeggen?",
+   "Punt sluit zin te vroeg af.",
+   "Lees de zin hardop: wat zegt Lisa precies, en hoe laat je zien dat dat begint?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 94,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 2 vraag 3",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "**Vandaag is het 10 maart**. Welke datum is het **5 dagen later**?",
+  "options": [
+   "15 maart",
+   "5 maart",
+   "14 maart",
+   "20 maart"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 5 dagen eerder. Moet je vooruit of terug tellen?",
+   "Tel je 10 maart zelf als eerste dag? Begin te tellen bij 11 maart.",
+   "Dat is 10 dagen later. Hoeveel dagen moest je verder?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 95,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 3 vraag 8",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Hoe vaak is er een **29 februari** in de jaren **2025 tot en met 2032**?",
+  "options": [
+   "2 keer",
+   "1 keer",
+   "3 keer",
+   "8 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Doet 2032 ook mee?",
+   null,
+   "29 februari is er niet elk jaar."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "2 keer.",
+   "simpeler": "Alleen in schrikkeljaren is er 29 februari. Dat zijn 2028 en 2032. Dus 2 keer.",
+   "nogSimpeler": "2 keer"
+  }
+ },
+ {
+  "nr": 96,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 6 vraag 14",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Op welke datum is **Koningsdag**?",
+  "options": [
+   "27 april",
+   "30 april",
+   "5 mei",
+   "30 maart"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat was vroeger Koninginnedag.",
+   "Dat is Bevrijdingsdag.",
+   "Dan is het nog maart. Koningsdag valt later in het voorjaar."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 97,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 3 vraag 2",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "Wat is **half 5** in 24-uurs format ('s middags)?",
+  "options": [
+   "16:30",
+   "17:30",
+   "04:30",
+   "15:30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is half 6.",
+   "04:30 is 's nachts, niet 's middags.",
+   "Dat is half 4."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "16:30.",
+   "simpeler": "Half 5 = 30 min vóór 5 = uur 4 + 30 min = 04:30. 's Middags +12 = 16:30.",
+   "nogSimpeler": "16:30"
+  }
+ },
+ {
+  "nr": 98,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 7 vraag 7",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "Het is **08:50**. Over **20 minuten** begint school. Hoe laat begint school?",
+  "options": [
+   "09:10",
+   "09:00",
+   "09:20",
+   "08:30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is maar 10 minuten later.",
+   "Dat is 30 minuten later.",
+   "Dat is 20 minuten eerder."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "09:10.",
+   "simpeler": "Van 08:50 naar 09:00 is 10 minuten. Nog 10 minuten erbij: 09:10.",
+   "nogSimpeler": "09:10"
+  }
+ },
+ {
+  "nr": 99,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 3 vraag 8",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "Bij **1,25 × 0,3** reken je eerst 125 × 3 = 375. Wat is het **antwoord**?",
+  "options": [
+   "0,375",
+   "3,75",
+   "37,5",
+   "0,0375"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel de cijfers ná de komma in 1,25 én in 0,3.",
+   "Schat: 1,25 × 0,3 is minder dan 1,25. Kan het dan 37,5 zijn?",
+   "Tel nog eens: hoeveel cijfers staan er samen ná de komma?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "375 met 3 decimalen = 0,375.",
+   "simpeler": "Stap 1: 125 × 3 = 375. Stap 2: 1,25 heeft 2 cijfers ná de komma en 0,3 heeft er 1, samen 3. Stap 3: komma 3 plaatsen van rechts → 0,375.",
+   "nogSimpeler": "0,375"
+  }
+ },
+ {
+  "nr": 100,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 4 vraag 3",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "**3,6 ÷ 0,4** = ?",
+  "options": [
+   "9",
+   "0,9",
+   "14,4",
+   "0,09"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — heb je de komma's wel verschoven? (36 ÷ 4)",
+   "Dat is 3,6 × 4 — je moet juist delen.",
+   "Hoe vaak past 0,4 in 3,6? Meer of minder dan 1 keer?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ }
+]

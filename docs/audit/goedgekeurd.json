@@ -1,0 +1,3074 @@
+[
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 4",
+  "hash": "a1a9ff5876e600f8",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "alfabet-woordenboek-po stap 4 vraag 5",
+  "hash": "fc48116a1b02d75f",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "algoritmen-programmeren-po stap 3 vraag 2",
+  "hash": "5bb428823b08435e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 2 vraag 6",
+  "hash": "8389b68a638b3784",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hint bij optie mening (\"je meenemen in wat er gebeurt\") omschrijft al half het goede antwoord."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 3 vraag 5",
+  "hash": "dcaefe32c2e208aa",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 2",
+  "hash": "588a639eef88aae0",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Afleider \"Kijken welk antwoord het langst is\" is absurd; blijven 3 echte opties over."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 10",
+  "hash": "61149e277af4acde",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 1 vraag 2",
+  "hash": "2ce4cfa6a2b2b707",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "bekende-boeken-literatuur-po stap 4 vraag 9",
+  "hash": "2003fa896fcc5dc0",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Niveaus in telegramstijl (\"Boeken lenen gratis kind.\"), \"gratis in heel NL voor <18\" te stellig (zo is het niet overal)."
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 3 vraag 2",
+  "hash": "452071269f000828",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 15",
+  "hash": "7f47a6675e37e891",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "belasting-po stap 4 vraag 9",
+  "hash": "4171aedd7fa12dcd",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hint bij €265 geeft de som voor (\"€300 − €45\"), en de bewerking kiezen is juist de hele opgave."
+ },
+ {
+  "waar": "beroepen-werk-po stap 1 vraag 2",
+  "hash": "d63e548c04c8b1c3",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 1 vraag 3",
+  "hash": "1dbe22b67863c379",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 1 vraag 4",
+  "hash": "0ac7e32495ef9e23",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Vraag/antwoord kloppen (AOW-leeftijd 2026 = 67). Lesstof zegt 'stijgt naar 68 in komende jaren'. Vastgesteld is 67 jaar en 3 maanden in 2028, dus 68 klopt niet."
+ },
+ {
+  "waar": "beroepen-werk-po stap 2 vraag 2",
+  "hash": "022b4eb94c2ae86b",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "De hints bij C en D eindigen met 'Welk beroep maakt of bouwt iets?'. Van de opties bouwt alleen de timmerman, dus de hint wijst het antwoord bijna aan. Beter is om terug te verwijzen naar de definitie"
+ },
+ {
+  "waar": "beroepen-werk-po stap 2 vraag 3",
+  "hash": "7fb74678a15f65fb",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 2 vraag 4",
+  "hash": "eea63a2edeab0b81",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 3 vraag 1",
+  "hash": "b4cef2f72894b013",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 3 vraag 2",
+  "hash": "6ca4e5e3aa12f1d8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 3 vraag 3",
+  "hash": "6c4b4c39c1398db4",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "De VMBO-hint ('Waar leer je daarna het vak echt?') en de lesstof ('VMBO leidt naar mbo') samen geven het antwoord MBO direct."
+ },
+ {
+  "waar": "beroepen-werk-po stap 3 vraag 4",
+  "hash": "8d89ce7d4d8b0be2",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "De vraag zegt zelf 'de pabo, de opleiding voor juf of meester'. Dat is precies het antwoord van nr 39 ('Voor welk beroep ga je naar de pabo?') in hetzelfde pad. Het feit pabo = leerkracht staat ook al"
+ },
+ {
+  "waar": "beroepen-werk-po stap 4 vraag 1",
+  "hash": "915803bd1b228262",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 4 vraag 2",
+  "hash": "bdbd40391beb2129",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 4 vraag 3",
+  "hash": "425201b1b49475b7",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 4 vraag 4",
+  "hash": "d275be029bff289a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 1",
+  "hash": "7964b3440d1ec9e0",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 10",
+  "hash": "a58da1fe404bd7ba",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 11",
+  "hash": "048876c0f889fe1e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 12",
+  "hash": "486489772a99c569",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Verpleegkundige kun je ook op mbo-4 worden; hints verwijzen naar 'de les bij het hbo' die in deze mix-stap niet te zien is."
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 13",
+  "hash": "3694f26e4b5f4555",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 14",
+  "hash": "440915c75d9a3b23",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 15",
+  "hash": "1f6ff5bbfbc395f5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 16",
+  "hash": "f25483d5976fe6bb",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 17",
+  "hash": "87e3bd3a081ccfba",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 18",
+  "hash": "49d107a8e86829b8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 19",
+  "hash": "cef0aa9dee396407",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 2",
+  "hash": "d0c8090528268c68",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 20",
+  "hash": "2405e55c5808aeea",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 21",
+  "hash": "71f3758918536aa6",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 22",
+  "hash": "9231bd8267906682",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "De hint bij B ('een extraatje bovenop iets anders. Waarop?') stuurt het kind direct naar 'gewoon geld voor je werk' = de goede optie."
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 23",
+  "hash": "83eb19690d65be0a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 24",
+  "hash": "e703ef7f8003c638",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 3",
+  "hash": "2ae1fe9633974870",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 4",
+  "hash": "85cb1e7160546c34",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 5",
+  "hash": "892c3a00110cd719",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 6",
+  "hash": "1efe19bd64f72ae9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 7",
+  "hash": "6230d03240d00bea",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Inhoud goed; spelling MBO/HBO/WO met hoofdletters wijkt af van de officiele spelling mbo/hbo/wo en van vraag 20."
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 8",
+  "hash": "568a00e88ed9db09",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "beroepen-werk-po stap 5 vraag 9",
+  "hash": "02ac4c4e8b9d0dc7",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord 13 klopt. De hint bij B zegt 'Vanaf 15 mag je zwaarder werk doen, zoals vakken vullen'. Volgens de Rijksoverheid mogen 13-14-jarigen al helpen bij vakken vullen, en vanaf 15 mag dat zelfstand"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 3",
+  "hash": "f90afa8f95aa5c47",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "breuken-po stap 4 vraag 1",
+  "hash": "173d8bd7ed539282",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hint bij 2/8 klopt niet (2/8 komt niet van tellers en noemers optellen, dat geeft 3/8) en zegt hetzelfde als de hint bij 3/8."
+ },
+ {
+  "waar": "breuken-po stap 5 vraag 7",
+  "hash": "be957526e34a7ed0",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "brief-email-lezen-po stap 3 vraag 7",
+  "hash": "cdf54e0815bed158",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "brugklas-orientatie stap 3 vraag 8",
+  "hash": "45fec7f3338361af",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "cijferend-rekenen stap 2 vraag 9",
+  "hash": "a6e5512e2e1878df",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "cijferend-rekenen stap 6 vraag 6",
+  "hash": "36c2e7857b1505b3",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "cito-strategieen-groep8 stap 4 vraag 3",
+  "hash": "c7baec03ef375153",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "cito-strategieen-groep8 stap 6 vraag 10",
+  "hash": "75ef66d035117fad",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "cito-strategieen-groep8 stap 7 vraag 18",
+  "hash": "e317be6ba73504a0",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Uit algemene kennis te weten (afleiders wel van dezelfde soort)."
+ },
+ {
+  "waar": "cito-strategieen-groep8 stap 7 vraag 6",
+  "hash": "7f693b0d11c7ae61",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Uit algemene kennis te weten; \"Veel cola drinken om fit te blijven\" is bijna absurd."
+ },
+ {
+  "waar": "conclusies-trekken-po stap 4 vraag 7",
+  "hash": "4171b6dbde0a2154",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "continenten-wereld-po stap 6 vraag 4",
+  "hash": "d8cefb7f6c48c228",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hints bij 10:00 en 07:00 geven samen de som voor (15 + 7), en de bewerking kiezen is de hele opgave."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 1 vraag 2",
+  "hash": "a871c664491e28a7",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "delen-po stap 1 vraag 7",
+  "hash": "b9444c128578854b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "delen-po stap 2 vraag 8",
+  "hash": "b5aac5a9ef356034",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "dierenklassen-po stap 4 vraag 3",
+  "hash": "1ac1687c4c3ae9a8",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "digitale-geletterdheid-po stap 4 vraag 19",
+  "hash": "93df64d6766165a8",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 10",
+  "hash": "86870e04a680a20e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 19",
+  "hash": "0f63c99849e30d0f",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 45",
+  "hash": "86b16509ae1666a6",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 10",
+  "hash": "dbd6c30216703f7f",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hint bij 5 (\"Dat is 1 deel\") rekent het half voor: 2 delen = 10."
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 2",
+  "hash": "df60e90ac5dbb292",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 44",
+  "hash": "494e0bce6ed2e0ae",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 24",
+  "hash": "9597ccd5b50e9eab",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 25",
+  "hash": "425ac4cbb5d2d6d9",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 15",
+  "hash": "d6bd3c2436f6a80d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 4",
+  "hash": "ff57f9e4205ba87d",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hints samen wijzen de bus van 10:12 aan en de hint bij '7 minuten' zet het interval 9:55-10:12 al klaar; tellen blijft wel over."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 29",
+  "hash": "6289590b758a5ea9",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 14",
+  "hash": "225cdaaaa82aa5f0",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Vraag noemt zelf 'voorin of achterin' maar geeft 4 opties; 'in het midden' is een zwakke afleider; te weten uit algemene kennis."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 36",
+  "hash": "a81e80f259d45ed9",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 1",
+  "hash": "d90f6c9e0d28d56c",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 17",
+  "hash": "9ec801f896f74166",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 42",
+  "hash": "b12958d34a159f87",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 54",
+  "hash": "33e00a084ff34cc2",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 39",
+  "hash": "c954f458519b59b2",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 5",
+  "hash": "9782c856d63f2fc1",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 4",
+  "hash": "32ef7ca449ac51ea",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Goede optie valt op als enige zonder 'Het paard rent'; hints zeggen 'heeft een werkwoord', terwijl 'rennende' ook een werkwoordsvorm is (bedoeld: persoonsvorm)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 51",
+  "hash": "1a65650d7ea525d7",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "eetcultuur-nederland-po stap 4 vraag 6",
+  "hash": "539a5580f500600d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
+  "hash": "acef806a46f32508",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "evolutie-mens-po stap 4 vraag 10",
+  "hash": "1c0c072c0c1fe19c",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "feit-mening-po stap 1 vraag 1",
+  "hash": "36314d8c5e8afbe8",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "feit-mening-po stap 3 vraag 1",
+  "hash": "2e37e43b6201bb2c",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 6",
+  "hash": "4a093438148e119b",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Afleider '2' (treden) is onwaarschijnlijk; de rest is wel van dezelfde soort."
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 1",
+  "hash": "4b18e6c165ae78a3",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hints bij 12 ('nog niet') en 16 ('mag al eerder') sluiten samen het antwoord in tussen 12 en 16."
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 8",
+  "hash": "bbe875f25d8fd357",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Alle afleiders zijn 'leuke dingen' en duidelijk geen noodgeval; te weten uit algemene kennis."
+ },
+ {
+  "waar": "financiele-vorming-po stap 6 vraag 11",
+  "hash": "ad60815a10ed8d4d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "financiele-vorming-po stap 6 vraag 13",
+  "hash": "a33759bed2ca8b5f",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Goede optie is de enige met 'vorm van', de afleiders zijn allemaal 'Een soort ...'."
+ },
+ {
+  "waar": "financiele-vorming-po stap 6 vraag 20",
+  "hash": "40613236200219b5",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "geld-rekenen stap 4 vraag 7",
+  "hash": "5a7f9a115ee94f88",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "gemiddelden-statistiek-po stap 6 vraag 4",
+  "hash": "70490b85eb4143b2",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 3",
+  "hash": "27fafb2db3813a8c",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 1 vraag 1",
+  "hash": "6d3ce94b9a6d19ad",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 1 vraag 2",
+  "hash": "db619f598149aaf9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 1 vraag 3",
+  "hash": "8677a6d4f82d0ae7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 1 vraag 4",
+  "hash": "eacbf6cbd920e5f5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 2 vraag 1",
+  "hash": "b5c496f73f297686",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 2 vraag 2",
+  "hash": "cf10b9649b74688e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 2 vraag 3",
+  "hash": "66b4e5bf13bd6cc7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 2 vraag 4",
+  "hash": "b54d00f3cea8193b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 3 vraag 1",
+  "hash": "7c0e308cb997390e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 3 vraag 2",
+  "hash": "9e4010aaef3cef30",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 3 vraag 3",
+  "hash": "15ac6922ce685596",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt. 'Tijd van het jaar' is onnauwkeurig: de ramadan schuift elk jaar ongeveer 11 dagen op en valt dus niet in een vast seizoen; het is een maand. Zelfde kennispunt komt terug in vraag 46."
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 3 vraag 4",
+  "hash": "2043f246d9740d1b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 4 vraag 1",
+  "hash": "259222aac0a98514",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 4 vraag 2",
+  "hash": "983bb93bc3cbc4d7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 4 vraag 3",
+  "hash": "9d7d5cca3af92d1a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 4 vraag 4",
+  "hash": "6065b5119369b92c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 1",
+  "hash": "5ff0e19c5391c5ef",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt (31% ≈ een op de drie). Zelfde kennispunt en zelfde antwoord als vraag 27 (meeste aanhangers = christendom); in de eindtoets bewust herhaald, maar een kind dat 27 deed weet dit meteen. "
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 2",
+  "hash": "913cb8a6b5a97a53",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 3",
+  "hash": "30a98d9b77fd5115",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 4",
+  "hash": "ea31c05c068abf0d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 5",
+  "hash": "7f7c40fb654838c8",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 6",
+  "hash": "bba02f25d1de8ff4",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt, hints verwijzen terecht naar deel 'Wat is godsdienst?'. Maar inhoudelijk dezelfde vraag als 28 (wat is een atheïst), met hetzelfde antwoord. Binnen de regels (antwoord blijft) is allee"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 7",
+  "hash": "52a389ebd2216ae0",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 8",
+  "hash": "3b76cbcd98dffe07",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "godsdiensten-culturen-po stap 5 vraag 9",
+  "hash": "2234c66a18e623a9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 6 vraag 16",
+  "hash": "8bd3e54b1fe85a88",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 6 vraag 20",
+  "hash": "6b362cbae77cf7c9",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Goede optie is de langste en de meest specifieke; 'massa' in de vraag geeft 'veel' al prijs."
+ },
+ {
+  "waar": "interpunctie-po stap 1 vraag 8",
+  "hash": "f52d131d93cddbd3",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 1",
+  "hash": "c2980ce132e1eb81",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Komma voor 'en' (optie 3) is volgens Taaladvies niet strikt fout, alleen ongebruikelijk; de hints zijn telegramstijl."
+ },
+ {
+  "waar": "interpunctie-po stap 4 vraag 4",
+  "hash": "fa24f08b9df1222d",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Zin zonder aanhalingstekens ('Lisa zei ___ ik kom morgen.') is een onvolledig model van directe rede; de hint 'Punt sluit zin te vroeg af.' is telegramstijl."
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 1",
+  "hash": "dd8491bfc7194ddc",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 2",
+  "hash": "4882ce3f53d4dd99",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 3",
+  "hash": "19c931358b8d6186",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 4",
+  "hash": "260b5456f552603e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 5",
+  "hash": "9935b0698b70a911",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 6",
+  "hash": "4dbcdd0854760f03",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 7",
+  "hash": "f9a02e1bf5d0115e",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Vraag noemt het raster ('Hoe heet dat?'), maar 'coördinaten' zijn de letter-cijfercodes zelf, niet het raster. Afleiders zijn kaartonderdelen die duidelijk iets anders zijn; kleine verwarring."
+ },
+ {
+  "waar": "kaartlezen-po stap 1 vraag 8",
+  "hash": "9c06a096362cde0a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 1",
+  "hash": "432da03ba35cfb7c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 2",
+  "hash": "93658b15d03503e5",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Hint bij 'Ten zuiden' is een tweekeuze ('noord of zuid?') nadat het kind zuid koos: geeft het antwoord feitelijk weg."
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 3",
+  "hash": "923e07610ec8282a",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Zelfde punt als 21: 'op een kaart' zonder 'noord is boven', terwijl lesstof waarschuwt dat dat niet altijd zo is."
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 4",
+  "hash": "f770d74b7d65c7aa",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 5",
+  "hash": "beccfd2a950c6171",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 6",
+  "hash": "1b3b0dcc36d10ef6",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 7",
+  "hash": "ff5877a8b65496ca",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 8",
+  "hash": "fc26eb47e2751cb1",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 2 vraag 9",
+  "hash": "dd6b5e0fc83c83a3",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 1",
+  "hash": "28d52eb20b92b711",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 2",
+  "hash": "5e82c8736481702d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 3",
+  "hash": "0f3e3f256e365d9d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 4",
+  "hash": "ebcd4f1e5bcb3523",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 5",
+  "hash": "0b1240d103488d92",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 6",
+  "hash": "9451f6211e8871f0",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 7",
+  "hash": "aa09a1ebd37b1ae1",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 3 vraag 8",
+  "hash": "a38e9af22be896bb",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 4 vraag 2",
+  "hash": "7d3e209a045805a5",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 4 vraag 3",
+  "hash": "3f7ff90dee5a1ea2",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 4 vraag 4",
+  "hash": "b1b0e69a931dcd8f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 1",
+  "hash": "8cd0933626998ce0",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 10",
+  "hash": "f835c6406902a2ed",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 12",
+  "hash": "a35ad65b01386f32",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 14",
+  "hash": "3413e2024779b098",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 15",
+  "hash": "8e8bcbc9015ccaf0",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Hint bij '25 km' rekent de tussenstap voor (250.000 cm)."
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 16",
+  "hash": "b60df1e39a1987cb",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 17",
+  "hash": "8ada20cf074166d5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 18",
+  "hash": "cde21f999fc8142e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 19",
+  "hash": "9ad0ea03854de608",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 2",
+  "hash": "829a3dff82cbf235",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Klopt alleen als noord boven is; lesstof zegt zelf 'meestal' en 'kijk waar de N-pijl wijst', vraag noemt dat niet."
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 20",
+  "hash": "e24011a6b2cafc55",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 21",
+  "hash": "1f847bf17cb5fc66",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 22",
+  "hash": "4bfe3707777c275b",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 23",
+  "hash": "4811ea6aca8cdcac",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 24",
+  "hash": "bb11ddc0f49d9b7e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 25",
+  "hash": "1bbc5647e1b57ac5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 3",
+  "hash": "291c2625ae188cba",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 4",
+  "hash": "858576a7941f2d5b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 5",
+  "hash": "70fb7caf497853bf",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Hint bij 'Aan de onderkant' ('Welke richting ligt tegenover oost?') is verwarrend: kind moet dan bedenken dat west onder ligt, niet waar oost ligt."
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 6",
+  "hash": "27c0d78d7162bedf",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 7",
+  "hash": "3c7c8a755d8a03c7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 8",
+  "hash": "e658d2bdf07a88dc",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kaartlezen-po stap 5 vraag 9",
+  "hash": "f92787f6a965762b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 3",
+  "hash": "65bbe04f2ab1f0b2",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 8",
+  "hash": "f9e292c8f28da728",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 6 vraag 14",
+  "hash": "b5783ed292583b14",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "klokkijken stap 3 vraag 2",
+  "hash": "81e6f7e4a4acdad0",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Anglicisme '24-uurs format' in de vraag (beter: notatie/klok)."
+ },
+ {
+  "waar": "klokkijken stap 7 vraag 7",
+  "hash": "c24f23764a61b5cd",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 8",
+  "hash": "fd9c24b6ceef3e6f",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kommagetallen-po stap 5 vraag 9",
+  "hash": "56c2429c1f3a26d1",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kommagetallen-po stap 6 vraag 14",
+  "hash": "6d38af6a9c35460d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 1 vraag 4",
+  "hash": "8c5df2d3751d774e",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Goede optie staat bijna letterlijk in de tekstzin (\"geeft de vissen eten\"); bij letterlijk begrijpend lezen groep 4 bedoeld, maar raadbaar door woordherkenning."
+ },
+ {
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 1",
+  "hash": "5bc32a2997bd5bcb",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "kritisch-denken-po stap 4 vraag 3",
+  "hash": "a3e0eac8c20cbd6d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 2",
+  "hash": "18e73668d44d8c93",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 7",
+  "hash": "b88db51995ffc944",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 4 vraag 3",
+  "hash": "1e7edba125bcc246",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 10",
+  "hash": "eec2abe38be1f34b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 6 vraag 12",
+  "hash": "5ce2093356a37541",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "maten-eenheden stap 2 vraag 4",
+  "hash": "33f2595fe6ad25c3",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "maten-eenheden stap 8 vraag 3",
+  "hash": "f66c2356674f2ef3",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 1",
+  "hash": "1f50938340b1a87d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 3",
+  "hash": "1fdba62a816ce151",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 3",
+  "hash": "26673b3eacb991d6",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 9",
+  "hash": "183b19e8135df10c",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 8",
+  "hash": "35505e814ccd53e4",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 7",
+  "hash": "ef78375519df23a3",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 12",
+  "hash": "1d37687ba56d0a39",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Hint bij \"2 jaar\" (afwisselend zomer en winter) rekent het antwoord bijna voor; hint bij \"10 jaar\" verwijst naar \"de uitleg\" terwijl er geen explanation is."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 8",
+  "hash": "3ad2490fa89d4190",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 1",
+  "hash": "12d93a2db8a53936",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 4",
+  "hash": "e4ba5714203a77b0",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 7",
+  "hash": "8c63961a2a8f005b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 9",
+  "hash": "3c5e6ab7152b1f64",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 7",
+  "hash": "222534e48c68f67b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 1",
+  "hash": "23d44b29dd3f9197",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 2",
+  "hash": "54e1792cd6e1b9ef",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 3",
+  "hash": "c7c81fbb5b9ac5f5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 1 vraag 4",
+  "hash": "2a0039e87ed41b44",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 1",
+  "hash": "b24b780797b24873",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 2",
+  "hash": "2e98a3e29f2315a8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 3",
+  "hash": "a3cbb6e592c86116",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 2 vraag 4",
+  "hash": "266850b93b70b73d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 1",
+  "hash": "2bd245056b8e555d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 2",
+  "hash": "f62aca15653fe9a8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 3",
+  "hash": "94c59b97a0ebb33f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 3 vraag 4",
+  "hash": "5e4fc1cd6a0ec022",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 1",
+  "hash": "f7ff6012b698533e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 10",
+  "hash": "bbaeedc5ca63e120",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 11",
+  "hash": "9996679f32722a49",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 12",
+  "hash": "14b551ac91ef2e7c",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Alleen als voorstel nr 76 (Parthenon) wordt overgenomen: de hint bij Parthenon noemt dan het antwoord van nr 76 ('in Athene')."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 13",
+  "hash": "3b8691ef3e814a03",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 14",
+  "hash": "5770b16ab34878be",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 15",
+  "hash": "badfb52f29500d0c",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 16",
+  "hash": "297d3b1379da67d5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 17",
+  "hash": "d893d15a74a13f3a",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 18",
+  "hash": "ceff12ae1bb7b171",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Hint bij 'Macedonische koning' zegt 'Caesar kwam uit een andere stad', maar Macedonië was geen stad."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 19",
+  "hash": "6b2c8691cb15af9a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 2",
+  "hash": "4772eeb93bde9624",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 20",
+  "hash": "03e0768193d6a511",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 21",
+  "hash": "e90d22146129846b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 22",
+  "hash": "6036ba37711ba72e",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "'Uit welk land': het oude koninkrijk Macedonië is niet het huidige land Noord-Macedonië (lag grotendeels in het huidige Griekenland); kan verwarren."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 23",
+  "hash": "5db461b740922e78",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Zelfde feit als nr 73 in dezelfde stap (eerste Olympische Spelen, 776 v.Chr.); alleen plaats i.p.v. land. Binnen de regels (zelfde antwoord) niet echt te herschrijven; overweeg een van beide te vervan"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 24",
+  "hash": "367a411b3fd1083c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 25",
+  "hash": "8e66e581fd49131d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 26",
+  "hash": "79b7c13a3328e06d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 27",
+  "hash": "d0e0fba1eb5b8f97",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 28",
+  "hash": "8660408116966639",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Inhoud goed; 'stad ... om zijn leger' terwijl stad vrouwelijk is (haar), taalkundig zwak."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 3",
+  "hash": "5c57cb621655204f",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Zelfde feit als nr 59 (Aristoteles leraar van Alexander), alleen omschreven. Voorstel: ander lesstof-feit."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 4",
+  "hash": "fddedb09adfc7105",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Zelfde vraag als nr 63, alleen vertaald ('Veni, vidi, vici'). Voorstel: ander Caesar-feit uit de lesstof."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 5",
+  "hash": "4b70017eb04b0b1a",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Inhoud klopt, maar namen gemengd: Cheops in Griekse/Nederlandse vorm, Khafre/Menkaure in Engelse vorm; de enige vertrouwde naam valt op."
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 6",
+  "hash": "356a363b1fb483a3",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 7",
+  "hash": "9e818e0c5c0590c0",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 8",
+  "hash": "39269e0ce7a15471",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 9",
+  "hash": "ec50e0c6e7291238",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 4 vraag 8",
+  "hash": "9789f26884372008",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Antwoord staat letterlijk in de beschrijving (\"Links van de ingang liggen de leeuwen\"); afleider \"terug naar buiten\" is van een andere soort."
+ },
+ {
+  "waar": "recyclen-afval-po stap 4 vraag 25",
+  "hash": "e4d18c773665db4e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "redactiesommen-pad stap 1 vraag 5",
+  "hash": "0f7022badaee12e1",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "redactiesommen-pad stap 5 vraag 11",
+  "hash": "662c0d951692ea20",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "redactiesommen-pad stap 5 vraag 21",
+  "hash": "1b5c3a78a493e80e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "redactiesommen-pad stap 5 vraag 7",
+  "hash": "23eb7e93b1ff8761",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "rekenen-tot-100-nieuwkomers stap 1 vraag 5",
+  "hash": "b66aee215b6aa4d1",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "rekenen-tot-100-nieuwkomers stap 5 vraag 5",
+  "hash": "0ed6fe3cadc99fd5",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "rekenen-tot-20-nieuwkomers stap 3 vraag 1",
+  "hash": "237583889fd11407",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "rekenverhaaltjes-nieuwkomers stap 3 vraag 2",
+  "hash": "bc1ac12e0adf0949",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
+  "hash": "cefcb9dd1b4da98b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 1",
+  "hash": "454272be2e7804d4",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 20",
+  "hash": "88019f3537cc9ac5",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 9",
+  "hash": "371b9de30fc0fbf3",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 7",
+  "hash": "112304fc0415658c",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 4 vraag 8",
+  "hash": "84dcec4ea766e486",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 7",
+  "hash": "a9eb4a5c22b85722",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Fictief schema, maar suggereert dat schooladvies uit een toetsscore 525-550 volgt; stand 2026 geeft de leerkracht het advies en heeft de Doorstroomtoets geen Cito-schaal 501-550."
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
+  "hash": "7009f4466bd8c73a",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 6",
+  "hash": "a5f01d642da189d0",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "spelling-overige-po stap 5 vraag 8",
+  "hash": "aa4756a9ebf99cdd",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 3 vraag 4",
+  "hash": "49545bd0bf393839",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "wrongHint bij 'Wie groot is, is sterk' ('het gaat om opvallen en wat je dan over je heen krijgt') verwoordt vrijwel de betekenis van het goede antwoord."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 4 vraag 2",
+  "hash": "7f0494b2643fa033",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 14",
+  "hash": "ed629910481b189b",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Twee letterlijke/kinderachtige afleiders ('Een echte kat kopen', 'Een cadeau voor een huisdier kopen'); wrongHint bij D ('het gaat erom dat je niet goed keek wat je kocht') geeft de betekenis vrijwel "
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 22",
+  "hash": "668e8c0a338a120d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 4 vraag 1",
+  "hash": "a575fb6f822b1fa8",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "taal-leren-lezen-g3 stap 4 vraag 9",
+  "hash": "a7e69083cfbb8f58",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 1",
+  "hash": "102e500a11420fdb",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tabellen-grafieken stap 5 vraag 7",
+  "hash": "73328fee22e7b46f",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 1",
+  "hash": "c9c1eff28800e103",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tafels-po stap 6 vraag 14",
+  "hash": "7b20863503f51874",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 8",
+  "hash": "717afced94290345",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 5 vraag 6",
+  "hash": "1bb40f885ccdfc0b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tijdsduur-rekenen-po stap 6 vraag 7",
+  "hash": "5ed55bd9d00e423e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 2 vraag 8",
+  "hash": "0dae029bcb07d64e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "tijdvakken-nederland-po stap 5 vraag 22",
+  "hash": "e07f020ca5bef0fa",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Afkorting 'NL' in de vraag voor groep 6-8; inhoud klopt."
+ },
+ {
+  "waar": "topografie-nederland stap 5 vraag 4",
+  "hash": "2340a9a687452af9",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 1 vraag 5",
+  "hash": "348e451fc314b9bd",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 4",
+  "hash": "a0aa6f29dc1cb622",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 4",
+  "hash": "9880d1350ee82466",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 8",
+  "hash": "c8814ed870fbb317",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "verwijswoorden-po stap 2 vraag 4",
+  "hash": "68c74e456cfad964",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 4 vraag 7",
+  "hash": "0c4975da5fded82e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 25",
+  "hash": "184ac298f31c1d02",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "wrongHints bij 90° ('Dat is maar één rechte hoek. Er zijn er vier.') en 270° (rechthoek: graden per hoek × aantal) rekenen 4 × 90 = 360 vrijwel voor; didactisch bedoeld."
+ },
+ {
+  "waar": "vulkanen-po stap 1 vraag 1",
+  "hash": "96687a25d0b8bbdd",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Vraag, antwoord en hints kloppen. De lesstof wekt de indruk dat magma meer dan 1000 graden is ('meer dan 1000 graden. Zo heet dat steen vloeibaar wordt'). Magma is 700-1200 °C."
+ },
+ {
+  "waar": "vulkanen-po stap 1 vraag 2",
+  "hash": "30d8b695a00bf070",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 1 vraag 4",
+  "hash": "8d1410a3b456a707",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 2 vraag 1",
+  "hash": "3eaa110534d00fd9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 2 vraag 2",
+  "hash": "fdae868d5d18f08a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 2 vraag 3",
+  "hash": "a2410e7a65c6cdff",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 2 vraag 4",
+  "hash": "fe595875fa96924f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 3 vraag 1",
+  "hash": "376262d4bd10476f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 3 vraag 2",
+  "hash": "ffb9e6128b9fa948",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt. De hint bij B zegt 'Gassen blijven dicht bij de berg', maar dat klopt niet: zwavelgas dreef in 2010 ook ver weg. Het punt is dat gas niet de reden was om vliegtuigen aan de grond te ho"
+ },
+ {
+  "waar": "vulkanen-po stap 3 vraag 3",
+  "hash": "b93e68ecb42fc1fb",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 3 vraag 4",
+  "hash": "766db5bd6b6e956d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 4 vraag 1",
+  "hash": "239517873bfc78e9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 4 vraag 2",
+  "hash": "94a9567d9c29ecfe",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 4 vraag 3",
+  "hash": "807f3753da52ce1f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 4 vraag 4",
+  "hash": "27c86f17c65b16e3",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 5 vraag 1",
+  "hash": "6a8690bbeff7e62c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 5 vraag 2",
+  "hash": "1a10b67c1f06f20f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 5 vraag 3",
+  "hash": "6ce883e859f2aaaf",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 5 vraag 4",
+  "hash": "66963e7283947def",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "vulkanen-po stap 5 vraag 5",
+  "hash": "49b057647d7da079",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
+  "hash": "6bb3739ac1d20352",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "waterkringloop-po stap 1 vraag 3",
+  "hash": "66a136df470fd2ad",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 1",
+  "hash": "c93c68e2b283c11c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 2",
+  "hash": "f44be2a70a04144e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 3",
+  "hash": "8f77671fd6b1518e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 4",
+  "hash": "70a9d2e585d67c3b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 5",
+  "hash": "97c8b8fcdee80397",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 6",
+  "hash": "1c789c58400f3f70",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 7",
+  "hash": "8e83200784f1b269",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 1 vraag 8",
+  "hash": "48e8b821eb147c28",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 1",
+  "hash": "c6aa317abb9a2c6f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 2",
+  "hash": "337dcf321e42b3f6",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 3",
+  "hash": "dda55bf1ffa0869b",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Vraag en hints goed; lesstof noemt Mont Blanc 4810 m, gemeten hoogte is sinds 2021 ca. 4805-4806 m."
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 4",
+  "hash": "2035ff43620b6bff",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 5",
+  "hash": "e3d0d98dcf3f7a66",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 6",
+  "hash": "cdc2f30767a461c1",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 2 vraag 7",
+  "hash": "e0d91bbefb3525a8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 1",
+  "hash": "c0f0e06703d90a28",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 10",
+  "hash": "f9b99a53afd48f3e",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 2",
+  "hash": "968fd8cee7d88e53",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Nijl vs Amazone is omstreden (sommige metingen maken de Amazone langer); hint 'net iets korter' en niveau 'langste ooit' zijn te stellig."
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 3",
+  "hash": "4cbc5c1f24869665",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 4",
+  "hash": "ce57134dd2945e4f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 5",
+  "hash": "99e605456b279543",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 6",
+  "hash": "5400637085572494",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 7",
+  "hash": "295e7b41127a600e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 8",
+  "hash": "2b9f336b102337db",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 3 vraag 9",
+  "hash": "cb916975a91002f5",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 11",
+  "hash": "49186b6624fe447b",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 12",
+  "hash": "a6f274d8e9f0d73b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 13",
+  "hash": "baa0aa8166702695",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 14",
+  "hash": "cf49fae6634b1360",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 15",
+  "hash": "25f1ba71fbd230b1",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 16",
+  "hash": "3e4a5820fd20c7b3",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 17",
+  "hash": "614b13d5a34f972e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 18",
+  "hash": "bb59942fd11ab94a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 19",
+  "hash": "cfe592a99943cbbd",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 2",
+  "hash": "6f6dfda99013ce39",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Vrijwel dezelfde vraag als nr 2 (grootste werelddeel). Voorstel: ander lesstof-feit (60% wereldbevolking) met hetzelfde antwoord."
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 20",
+  "hash": "e4d914375de43130",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 21",
+  "hash": "146da9ef862f2aa8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 22",
+  "hash": "0702353e3075eaa9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 23",
+  "hash": "a2b02ffa8d134235",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 24",
+  "hash": "4b83567bc3dcc4d8",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "'Grootste' is dubbelzinnig (oppervlakte of inwoners); de hints gaan over inwoners."
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 25",
+  "hash": "861e7165df7b95d1",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 26",
+  "hash": "746775ab8189766f",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 27",
+  "hash": "ba360ef9e8a61b87",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 28",
+  "hash": "e2bed8d1d400eaff",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 3",
+  "hash": "0d29352ba2165fa3",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 4",
+  "hash": "145345989d4e2ece",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Zelfde feit als nr 9 (hoofdstad/regering Frankrijk). Voorstel: ander feit met dezelfde Franstalige afleiders."
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 5",
+  "hash": "22df6ed273123494",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 6",
+  "hash": "93fa5233bc596321",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 7",
+  "hash": "ee05aa1402bb9822",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 8",
+  "hash": "fd2445ba03842a99",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werelddelen-landen-po stap 4 vraag 9",
+  "hash": "54236713fb9ea277",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Klopt, maar 'stuk land' botst met de hint 'Is het dan zelf een land?' (land = staat); verwarrend voor kinderen; 'bevat juist veel landen' klopt niet voor Antarctica/Australie."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 1",
+  "hash": "a82810246909004a",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt. Klein punt: niveaus.simpeler 'Gouden Eeuw = 1600s' is Engels ('1600s'), geen Nederlands."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 2",
+  "hash": "4f2784d6ce5f3157",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 3",
+  "hash": "5862d75fc9d9f01d",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt (VOC 1602, WIC 1621, Noordse Compagnie 1614). Maar de vraag zegt 'handelscompagnie' en 'Amsterdamse Wisselbank' is een bank: afleider van een andere soort, valt op vorm af."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 4",
+  "hash": "213f7214a304afb7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 5",
+  "hash": "2b4f94c8359b8e5b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 1",
+  "hash": "a9bef6256933ac6a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 2",
+  "hash": "c646cac742c0aa6b",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 3",
+  "hash": "817c55c0455bcd62",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 4",
+  "hash": "064c04cc205f2462",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 5",
+  "hash": "9d491834a807277e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 1",
+  "hash": "9e39c16b54a2fc61",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 2",
+  "hash": "9289b4fa5a7ad24b",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 3",
+  "hash": "9805efad56ccfbbe",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 4",
+  "hash": "296ef9995cc5f7c1",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 5",
+  "hash": "716bcd7d91813c1c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 1",
+  "hash": "ac6814f1a558d373",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 2",
+  "hash": "a9690c4077bfe883",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 3",
+  "hash": "e1139a9acdcff3c9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 4",
+  "hash": "3190bb6450a9719b",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 5",
+  "hash": "31432310c286993c",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 1",
+  "hash": "64507e40c56c82e7",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Geen wereldoriëntatie en niet te vinden in de lesstof (mix-toets heeft alleen 'Veel succes!'); de afleiders zijn duidelijk 'luie' strategieën (o.a. 'alleen de eerste zin'), dus raadbaar op gezond vers"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 2",
+  "hash": "71fc4ff1387a2dc8",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 3",
+  "hash": "3dd1ba89829f0e11",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 4",
+  "hash": "b6bb67039adc580a",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 5",
+  "hash": "630db631efc3682d",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 1 vraag 1",
+  "hash": "b42dd7c857a1b877",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 1 vraag 2",
+  "hash": "330ef4191fbdb307",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 1 vraag 3",
+  "hash": "2ba7da1471fe5c59",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27",
+  "reden": "Vraag zegt 'de oudste van de 5 wereldreligies', maar jodendom (een van de 5) staat er niet bij; de explanation noemt jodendom bovendien ~1800 v.Chr. (ouder dan 'ruim 3500 jaar'), wat met de vraag bots"
+ },
+ {
+  "waar": "wereldreligies-po stap 2 vraag 1",
+  "hash": "e7044a4bf030d6b7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 2 vraag 2",
+  "hash": "9c38cd050afe4f9b",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 3 vraag 1",
+  "hash": "ab55e2c1728f40a9",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 3 vraag 2",
+  "hash": "96a5ad59efa04191",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 3 vraag 3",
+  "hash": "2c95771efa976c91",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 4 vraag 1",
+  "hash": "a1f9d030e70c0abc",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 4 vraag 2",
+  "hash": "71d2f63f228c044e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 4 vraag 3",
+  "hash": "10d8eecbdaa2cbb7",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 5 vraag 1",
+  "hash": "88964d7a2d1e53eb",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 5 vraag 2",
+  "hash": "4b223d3b39f9c49e",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 5 vraag 3",
+  "hash": "cc58bd84f3ecae53",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 6 vraag 1",
+  "hash": "e9bb257f485d8fa8",
+  "oordeel": "goed",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 6 vraag 2",
+  "hash": "7c492a490858a328",
+  "oordeel": "goed",
+  "bron": "wereld-4 dekkende blinde controle 27 okt",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "wereldreligies-po stap 6 vraag 3",
+  "hash": "642eacd76a8a5149",
+  "oordeel": "twijfel",
+  "bron": "wereld-4 steekproef 8 (27 okt)",
+  "datum": "2026-10-27",
+  "reden": "Antwoord klopt; 'geen god in de westerse zin' kan ook op hindoeisme slaan (geen enkele God), alleen de toevoeging tussen haakjes maakt het eenduidig."
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 2 vraag 7",
+  "hash": "186fc736003cc9bb",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 3 vraag 9",
+  "hash": "c793c1e58a14f198",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 5 vraag 2",
+  "hash": "f378ea8d7e913ae6",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 13",
+  "hash": "117f78f56e2d237e",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "werkwoordsspelling-dt stap 8 vraag 14",
+  "hash": "c91ec7d176b50c01",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "winst-rekenen-po stap 3 vraag 12",
+  "hash": "f75e6cffaa7aa118",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "winst-rekenen-po stap 3 vraag 5",
+  "hash": "958ea97ae2b3791b",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 1 vraag 5",
+  "hash": "7941130fdb452d00",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Antwoord uniek binnen de opties, maar 'uit + geput' is een zwakke truc (kinderen kennen 'putten' niet); de zin zelf legt het woord uit ('urenlang geklommen' = truc 1), waar niveaus.nogSimpeler ook naa"
+ },
+ {
+  "waar": "woorden-2-nieuwkomers stap 3 vraag 1",
+  "hash": "7968a0f00bb2a918",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Twee afleiders zijn geen kamer ('de kast', 'de lamp') bij 'In welke kamer kook je?' — van een andere soort, waardoor alleen badkamer/keuken overblijven."
+ },
+ {
+  "waar": "woorden-3-nieuwkomers stap 2 vraag 3",
+  "hash": "ad1337835268e25d",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "woorden-nieuwkomers stap 5 vraag 5",
+  "hash": "7f8b7e71b52ad235",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 2 vraag 1",
+  "hash": "07ebdd64fbd4b941",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordenschat-engels-po stap 8 vraag 8",
+  "hash": "19eee4ae17397c75",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "woordenschat-po stap 1 vraag 6",
+  "hash": "a04dbd332e7b21c0",
+  "oordeel": "twijfel",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27",
+  "reden": "Te weten uit algemene kennis: de drie afleiders zijn duidelijk slechte strategieën (overslaan, 'alleen' bekende woorden, heel snel lezen)."
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 10",
+  "hash": "f8cd154f7f1e1a38",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 6",
+  "hash": "5fd0fafac3165106",
+  "oordeel": "goed",
+  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
+  "datum": "2026-10-27"
+ }
+]
