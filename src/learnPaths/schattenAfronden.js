@@ -476,6 +476,17 @@ const steps = [
         options: ["5000","4000","4500","5500"],
         answer: 0,
         wrongHints: [null,"Het cijfer van de honderdtallen is een 5. Rond je bij een 5 naar boven of naar beneden af?","4500 is het getal zelf. Bij afronden op 1000 moet het op 000 eindigen.","Te veel — bij afronden op 1000 eindigt het getal op 000."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: welk cijfer telt?", tekst: "Bij afronden op **1000** kijk je naar de **honderdtallen**: de 5 in 4500." },
+            { titel: "Stap 2: regel toepassen", tekst: "Bij een **5** ga je naar **boven**. 4500 → **5000**." },
+          ],
+          niveaus: {
+            basis: "5 in de honderdtallen = omhoog. 4500 → 5000.",
+            simpeler: "4500 ligt precies in het midden van 4000 en 5000. Bij een 5 ga je altijd naar boven.",
+            nogSimpeler: "4500 → 5000.",
+          },
+        },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -486,7 +497,7 @@ const steps = [
           null,
           "Kijk naar de eenheden: is 3 klein of groot?",
           "Geen tussen-getal — kies een getal dat op 0 eindigt.",
-          null,
+          "Dat is afgerond op 100, niet op 10. Welke twee tientallen liggen om 83 heen?",
         ],
         uitlegPad: {
           stappen: [
@@ -599,7 +610,7 @@ const steps = [
           null,
           "Kijk naar de tientallen: is 4 klein of groot?",
           "Dat is afgerond op 10, niet op 100.",
-          null,
+          "Dat is geen heel honderdtal. Bij afronden op 100 eindigt het getal op 00.",
         ],
         uitlegPad: {
           stappen: [
@@ -658,7 +669,7 @@ const steps = [
           null,
           "Kijk naar de honderdtallen: is 2 klein of groot?",
           "Dat is afgerond op 100, niet op 1000.",
-          null,
+          "Dat eindigt niet op 000. Welke twee duizendtallen liggen om 6280 heen?",
         ],
         uitlegPad: {
           stappen: [
@@ -716,7 +727,7 @@ const steps = [
         wrongHints: [
           null,
           "Kijk alleen naar de honderdtallen — de negens erachter tellen niet mee.",
-          null,
+          "Dat is afgerond op 100, niet op 1000.",
           "Dat eindigt niet op 000.",
         ],
         uitlegPad: {
@@ -775,7 +786,7 @@ const steps = [
         wrongHints: [
           null,
           "Rond dit getal zelf af op 10: krijg je dan 40?",
-          null,
+          "Rond dit getal zelf af op 10. Het laatste cijfer is een 4: ga je dan omhoog of omlaag?",
           "Wat zegt de regel bij een 5?",
         ],
         uitlegPad: {
@@ -831,7 +842,7 @@ const steps = [
         q: "Welk getal wordt **NIET 500** als je het afrondt op 100?",
         options: ["560", "549", "451", "512"],
         answer: 0,
-        wrongHints: [null, "Kijk bij dit getal naar het cijfer in de tientallen.", null, null],
+        wrongHints: [null, "Kijk bij dit getal naar het cijfer in de tientallen.", "Rond dit getal zelf af op 100. De tientallen zijn een 5: wordt het dan 500 of niet?", "Rond dit getal zelf af op 100. De tientallen zijn een 1: wordt het dan 500 of niet?"],
         uitlegPad: {
           stappen: [
             {

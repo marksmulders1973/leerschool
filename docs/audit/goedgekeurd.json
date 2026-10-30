@@ -2602,6 +2602,63 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 2",
+  "hash": "497b0755359b076b",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 3",
+  "hash": "c08f8a5739e822ef",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 4",
+  "hash": "af2274e9eb712752",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 5",
+  "hash": "762a8a0c58b5cdee",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 6",
+  "hash": "9140d8fe2ef157a5",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 7",
+  "hash": "2e706fd09a69aa23",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 8",
+  "hash": "e926b5ea83cb5a0b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Inhoudelijk juist en de stap legt kwatrijn/terzine uit, maar 'twee kwatrijnen en twee terzinen' is zwaar vakjargon voor groep 5. niveaus.simpeler ('twee groepjes van 4 en twee van 3') vangt dat op. Ni"
+ },
+ {
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 9",
+  "hash": "c3c6df95c2c52ef3",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "dienstregeling-roosters-po stap 1 vraag 10",
   "hash": "987f1f01d26d175a",
   "oordeel": "goed",
@@ -4651,6 +4708,71 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 1",
+  "hash": "68dba5211df98fe2",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 2",
+  "hash": "17d68d2625b68173",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 3",
+  "hash": "a915b431fb685d93",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 4",
+  "hash": "320eddfe7db04de0",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 5",
+  "hash": "7d44bd2b7d05b9b2",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 6",
+  "hash": "93d7ca23d8ff574a",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 7",
+  "hash": "ee7a785ddd1b8d02",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 8",
+  "hash": "b90cc9d5c1964b66",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2 x 1,10 = 2,20 klopt; folderregel staat als bron in de vraag (met regelbreuken in de bron). Twee foute opties hadden geen hint."
+ },
+ {
+  "waar": "folder-bon-advertentie-po stap 4 vraag 9",
+  "hash": "cac286342e3c09ed",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2 x 7 = 14 klopt; bron in de vraag. Twee foute opties hadden geen hint."
+ },
+ {
   "waar": "geld-rekenen stap 1 vraag 1",
   "hash": "58eef3cf31240bb3",
   "oordeel": "twijfel",
@@ -5828,6 +5950,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "inhoudsopgave-register-po stap 3 vraag 3",
+  "hash": "ff8c11d08850753e",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "inhoudsopgave-register-po stap 3 vraag 4",
   "hash": "dc20169ad4759030",
   "oordeel": "goed",
@@ -5861,6 +5990,56 @@
   "hash": "6618b58ee89fb352",
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 1",
+  "hash": "05dc48dead022ed0",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 2",
+  "hash": "bd040e130cc63352",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar twee afleiders waren absurd ('maakt het boek dikker', 'vertelt het einde') en maakten de vraag raadbaar."
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 3",
+  "hash": "314936f064cac504",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 5",
+  "hash": "9a3992823a4d125d",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 6",
+  "hash": "25384cabea8e0d8b",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 7",
+  "hash": "cfced499d8ea2433",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "inhoudsopgave-register-po stap 4 vraag 8",
+  "hash": "524b8716f2086a41",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -9625,6 +9804,69 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "schatten-afronden stap 2 vraag 10",
+  "hash": "391480efec23cdbd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "560 -> 600 klopt, 451/512/549 -> 500. Opties 451 en 512 hadden geen hint."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 3",
+  "hash": "c9739307ff766466",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "4500 -> 5000 klopt; hints kloppen. Als enige vraag in de reeks zonder uitlegPad/niveaus."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 4",
+  "hash": "595d000ec93e972c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "83 -> 80 klopt. Optie 100 had geen hint."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 5",
+  "hash": "9ee888d87ea9902c",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 6",
+  "hash": "7ac91530fc432800",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "641 -> 600 klopt. Optie 650 had geen hint."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 7",
+  "hash": "064a51c8ceb1ee6d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "6280 -> 6000 klopt. Optie 6200 had geen hint."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 8",
+  "hash": "b34998b0f1f8b50c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "3499 -> 3000 klopt. Optie 3500 had geen hint."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 9",
+  "hash": "77e8b21210534db9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "36 -> 40 klopt (45/46 -> 50, 34 -> 30). Optie 34 had geen hint."
+ },
+ {
   "waar": "schema-tekst-combi-po stap 1 vraag 3",
   "hash": "fd601b3bebc62009",
   "oordeel": "goed",
@@ -9884,6 +10126,49 @@
   "bron": "vervolg B3 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "eindvak klopt; nogSimpeler was telegramzin"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 2",
+  "hash": "852860b3664e3749",
+  "oordeel": "twijfel",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar afleiders 'Zaden krijgen meer te eten' en 'Konijnen komen in de plaats' waren absurd en maakten de vraag raadbaar."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 3",
+  "hash": "d5adf95d628e857b",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 5",
+  "hash": "c15f419143df32be",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 6",
+  "hash": "bdad508e7d955bb5",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 7",
+  "hash": "cb3b13150571baa1",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 4 vraag 8",
+  "hash": "c00819e665d82226",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "schemas-stappenplannen-po stap 5 vraag 7",
@@ -11403,6 +11688,34 @@
   "reden": "Klopt; basis was alleen het antwoord."
  },
  {
+  "waar": "taal-woorden-zinnen-g4 stap 4 vraag 5",
+  "hash": "a599ebdf324760f6",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 4 vraag 6",
+  "hash": "ce2effd024126faa",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 4 vraag 7",
+  "hash": "9638ed85f34a1d26",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "taal-woorden-zinnen-g4 stap 4 vraag 8",
+  "hash": "ebdefe76f3f0c83c",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "taal-woorden-zinnen-g4 stap 4 vraag 9",
   "hash": "a46601da66ebe26b",
   "oordeel": "goed",
@@ -12677,6 +12990,69 @@
   "bron": "vervolg B2 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "busjes : auto's = 10 : 30 = 1 : 3 klopt (volgorde omgekeerd t.o.v. de zin, hints wijzen daarop); niveaus telegramstijl."
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 1",
+  "hash": "401be8e4def2a859",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 2",
+  "hash": "63d0df57c612ec94",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 3",
+  "hash": "edaaecc7ae2b6ce1",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 4",
+  "hash": "9d56d444c5a20936",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 5",
+  "hash": "60e64a8e970f7114",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 6",
+  "hash": "a54da2fa1a812da6",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 7",
+  "hash": "175b8933eb33fe29",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 8",
+  "hash": "17863ab0a5557933",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhoudingen-po stap 2 vraag 9",
+  "hash": "83d62bc6d10e49a2",
+  "oordeel": "goed",
+  "bron": "vervolg B4 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 3",

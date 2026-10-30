@@ -533,12 +533,12 @@ const steps = [
         q: "Waarom is een register handig?",
         options: [
           "je vindt snel een onderwerp",
-          "het maakt het boek dikker",
-          "het vertelt het einde van het verhaal",
+          "je ziet welke hoofdstukken er zijn",
+          "je weet waar het boek over gaat",
           "je leest zo het hele boek sneller",
         ],
         answer: 0,
-        wrongHints: [null, "Een dikker boek is niet handiger. Waar helpt het register je bij?", "Een register verklapt geen einde.", "Je leest er niet sneller door. Je hoeft alleen niet álles te lezen om iets te vinden."],
+        wrongHints: [null, "Dat zie je in de inhoudsopgave, vooraan. Het register helpt je bij iets anders.", "Dat lees je op de achterflap. Het register helpt je bij iets anders.", "Je leest er niet sneller door. Je hoeft alleen niet álles te lezen om iets te vinden."],
         uitlegPad: {
           stappen: [{ titel: "Snel vinden", tekst: "Met het register vind je een onderwerp meteen, zonder het hele boek door te bladeren." }],
           niveaus: {
@@ -571,7 +571,7 @@ const steps = [
         q: "Waar staat het register en in welke volgorde?",
         options: ["achteraan, op alfabet", "vooraan, op alfabet", "achteraan, op boekvolgorde", "vooraan, op boekvolgorde"],
         answer: 0,
-        wrongHints: [null, "Vooraan staat de inhoudsopgave.", "Het register is niet op boekvolgorde.", "Vooraan + boekvolgorde is juist de inhoudsopgave."],
+        wrongHints: [null, "De volgorde klopt, de plek niet. Blader in gedachten door een boek: waar vind je het register?", "De plek klopt, de volgorde niet. Hoe zoek je snel een los woord op in een lange lijst?", "Vooraan + boekvolgorde is juist de inhoudsopgave."],
         uitlegPad: {
           stappen: [{ titel: "Achter + alfabet", tekst: "Het register staat achteraan en is alfabetisch geordend." }],
           niveaus: {

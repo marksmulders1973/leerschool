@@ -1023,16 +1023,16 @@ const steps = [
     explanation: "Bij de Doorstroomtoets krijg je vaak een **schema/diagram met tekst en pijlen** en moet je een **vraag beantwoorden**.\n\n**Aanpak**:\n1. **Lees titel** — waar gaat het over?\n2. **Lees legenda** — wat betekenen de symbolen/kleuren?\n3. **Scan het schema** globaal.\n4. **Lees pas dan de vraag**.\n5. **Vind het juiste vakje** of pad.\n6. **Antwoord**.\n\n**Voorbeeld — voedselketen**:\n```\nGras → Konijn → Vos\n```\n• Gras wordt door konijn gegeten.\n• Konijn wordt door vos gegeten.\n• Pijl = 'wordt gegeten door'.\n\n**Vragen**:\n• 'Wat eet vos?' → konijn.\n• 'Wat eet konijn?' → gras.\n• 'Wat gebeurt als alle vossen weg zijn?' → konijnen worden niet meer gegeten → meer konijnen → minder gras.\n\n**Soorten schema's bij de Doorstroomtoets**:\n• **Stamboom** *(familie)*: opa-oma → vader → kind.\n• **Voedselketen** *(natuur)*: planten → planteneter → vleeseter.\n• **Productie-keten** *(spullen)*: katoen → garen → kleren.\n• **Tijdslijn**: jaartal-overzicht.\n\n**Toets-tip**:\nVeel schema-vragen vereisen logisch nadenken: 'wat als X wegvalt?'. Volg de pijlen na om het effect te bepalen.",
     checks: [
       {
-        q: "Voedselketen: gras → konijn → vos.\n\n**Wat eet de vos**?",
-        options: ["konijn","gras","vlinder","het konijn en het gras"],
+        q: "Voedselketen: blad → slak → egel.\n(De pijl betekent 'wordt gegeten door'.)\n\n**Wat eet de egel?**",
+        options: ["slak","blad","vlinder","de slak en het blad"],
         answer: 0,
-        wrongHints: [null,"Kijk welk dier direct vóór de vos in de keten staat.","Staat er een vlinder in dit schema?","Volg de pijl die naar de vos wijst. Van welk dier komt die?"],
+        wrongHints: [null,"Kijk welk dier direct vóór de egel in de keten staat.","Staat er een vlinder in dit schema?","Volg de pijl die naar de egel wijst. Van welk dier komt die?"],
       },
       {
         q: "Voedselketen: zaad → muis → uil.\n\nWat gebeurt er als de **muizen verdwijnen**?",
-        options: ["Uilen krijgen minder voedsel", "Zaden krijgen meer te eten", "Er verandert niets aan de keten", "Konijnen komen in de plaats"],
+        options: ["Uilen krijgen minder voedsel", "Er blijven minder zaden over", "Er verandert niets aan de keten", "Uilen gaan dan zaden eten"],
         answer: 0,
-        wrongHints: [null,"Kunnen zaden iets eten? Kijk welke kant de pijl op gaat.","Wel iets — kijk wie er van de muizen afhankelijk is.","Konijnen staan niet in deze keten."],
+        wrongHints: [null,"Muizen eten zaden. Als er geen muizen zijn, worden er dan meer of minder zaden opgegeten?","Wel iets — kijk wie er van de muizen afhankelijk is.","Kijk naar de keten: staat er een pijl van zaad naar uil?"],
       },
       {
         q: "Productieketen: katoen → garen → kleren.\n\nWat gebeurt er **eerst**?",
@@ -1041,10 +1041,10 @@ const steps = [
         wrongHints: [null,"Kleren staan aan het eind van de keten. Wat staat vooraan?","Kijk wat er vóór garen staat in de keten.","Staat verkopen in deze keten?"],
       },
       {
-        q: "Stamboom: Opa Jan → Vader Piet → Kind Tom.\n\n**Wie is opa van Tom**?",
+        q: "Stamboom (de pijl betekent 'heeft als kind'):\nJan → Piet\nPiet → Tom\n\n**Wie is de opa van Tom?**",
         options: ["Jan","Piet","Tom","Jan én Piet"],
         answer: 0,
-        wrongHints: [null,"Piet is de vader van Tom. Wie is de vader van Piet?","Tom is het kind zelf. Volg de pijlen terug.","Eén van de twee is Toms vader. Wie is de vader van die vader?"],
+        wrongHints: [null,"Piet heeft Tom als kind, dus Piet is de vader van Tom. Een opa is de vader van je vader.","Tom is het kind zelf. Volg de pijlen terug.","Eén van de twee is Toms vader, niet zijn opa. Wie heeft die vader als kind?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {

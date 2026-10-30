@@ -572,7 +572,7 @@ const steps = [
         q: "Folder:\nYoghurt €1,10 per pak — 3 halen, 2 betalen\n\nJe neemt 3 pakken. Wat betaal je?",
         options: ["€2,20", "€3,30", "€1,10", "€4,40"],
         answer: 0,
-        wrongHints: [null, "Dan betaal je voor alle drie de pakken.", null, null],
+        wrongHints: [null, "Dan betaal je voor alle drie de pakken.", "Dat is de prijs van één pak. Voor hoeveel pakken moet je wél betalen?", "Dat is meer dan drie pakken vol betalen. Bij deze aanbieding betaal je juist minder."],
         uitlegPad: {
           stappen: [
             {
@@ -591,7 +591,7 @@ const steps = [
         q: "Folder:\nRugzak — van €35 voor €28\n\nJe koopt er 2: één voor jou en één voor je broer. Hoeveel bespaar je samen?",
         options: ["€14", "€7", "€56", "€70"],
         answer: 0,
-        wrongHints: [null, "Voor hoeveel rugzakken krijg je de korting?", null, null],
+        wrongHints: [null, "Voor hoeveel rugzakken krijg je de korting?", "Dat is wat je bétaalt voor twee rugzakken, niet wat je bespaart.", "Dat is de oude prijs van twee rugzakken samen, niet wat je bespaart."],
         uitlegPad: {
           stappen: [
             {
