@@ -10184,12 +10184,77 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "olympische-spelen-po stap 4 vraag 1",
+  "hash": "b1faffe3007b41b2",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 10",
+  "hash": "47586f03d6b7cb5a",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 11",
+  "hash": "cdace6da29710ed3",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "olympische-spelen-po stap 4 vraag 12",
   "hash": "1d37687ba56d0a39",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Hint bij \"2 jaar\" (afwisselend zomer en winter) rekent het antwoord bijna voor; hint bij \"10 jaar\" verwijst naar \"de uitleg\" terwijl er geen explanation is."
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 3",
+  "hash": "270c43545e541f1a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint 'een goede loper loopt 10 km in een half uur' klopt alleen voor toplopers."
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 4",
+  "hash": "99494d55afd59a67",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt (Wüst 13 medailles); afleider 'Phelps' is geen Nederlander en absurd."
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 5",
+  "hash": "736da290a2678cac",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 6",
+  "hash": "580575a99ac20ccd",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 7",
+  "hash": "9e3423ca21b04cc1",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 4 vraag 8",
+  "hash": "691b87c4ea7016bb",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 10",
@@ -10456,11 +10521,82 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 10",
+  "hash": "e13424104610c56e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt, maar inhoudelijk dubbel met stap 4 vraag 1 (Columbus 1492)."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 13",
+  "hash": "f2c7abae1ffcad76",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; hint 'Boston is Engelse stichting' telegramstijl."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 14",
+  "hash": "be1c455dc47c809f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Raadbaar: alleen het goede antwoord had de vorm 'Magellans expeditie'; Tasman-hint onnauwkeurig."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 15",
+  "hash": "e0d1a97d9871646c",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 16",
+  "hash": "4ad21e4bea2a3e06",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Lidwoord ontbrak ('veroverde Aztekenrijk')."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 2",
+  "hash": "e48aa5c2ca2969de",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Wie zeilde' terwijl de opties expedities zijn (Magellan kwam onderweg om); hint over Cook onnauwkeurig."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 4",
+  "hash": "eb3652e84e17cb6c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramstijl met '+' in opties en hints; 'ontdekte' terwijl er al mensen woonden."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 7",
+  "hash": "815320f69d8c6938",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramstijl met '+' in opties en niveaus; basis = antwoord."
+ },
+ {
   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
   "hash": "3ad2490fa89d4190",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 4 vraag 9",
+  "hash": "b745077f4d2195af",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus telegramstijl en basis = antwoord."
  },
  {
   "waar": "oppervlakte-omtrek-po stap 1 vraag 1",
@@ -11662,6 +11798,86 @@
   "hash": "a062107fa95aa055",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 09 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 1",
+  "hash": "a7d12164a0db1d0b",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 10",
+  "hash": "b3989caa624c5dab",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 11",
+  "hash": "a96c730c1803eb0f",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 12",
+  "hash": "aaf8cf6c2e93a50e",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 2",
+  "hash": "9a1ecdd7dff722fd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint 'Armstrong ging pas in de jaren 60' misleidend: Gagarin ging ook in de jaren 60 (1961)."
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 3",
+  "hash": "077c78694642992a",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 4",
+  "hash": "3acb83b4c2ecae71",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 5",
+  "hash": "e2c776c3ac5f71a8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties in telegramstijl ('in baan', zonder lidwoorden)."
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 6",
+  "hash": "c27d4b4c92d50d70",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 8",
+  "hash": "79c63f20f8796eba",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints 'Grootste — bruin.' / 'Helderste — geelwit.' telegramstijl."
+ },
+ {
+  "waar": "ruimtevaart-po stap 4 vraag 9",
+  "hash": "0b3cb86e96751e80",
+  "oordeel": "goed",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -15531,6 +15747,126 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "topografie-nederland stap 6 vraag 2",
+  "hash": "b8563e5984fe64fa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord ~26% klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 6 vraag 4",
+  "hash": "a20b0dad13fc384b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 6 vraag 6",
+  "hash": "f0772bd80c643c9b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 6 vraag 7",
+  "hash": "6f08b661ecc0076e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleiders skien en bergbeklimmen waren absurd (raadbaar); basis = antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 6 vraag 8",
+  "hash": "0b66efeaf4cc12fd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus telegramstijl/alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 10",
+  "hash": "72c38dcd2820fd80",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 4",
+  "hash": "589b9bb84607fe4c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 5",
+  "hash": "39714112ff0da300",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 6",
+  "hash": "b63ad458796f5a30",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 7",
+  "hash": "4dc9b3a60c1f4b54",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 8",
+  "hash": "771922b15ceb0ed9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Welke drie talen spreken mensen' is te stellig (er worden meer talen gesproken); bedoeld zijn de officiele talen. Hint 'Italiaans spreken ze niet' onnauwkeurig."
+ },
+ {
+  "waar": "topografie-nederland stap 7 vraag 9",
+  "hash": "386df30ded947c5b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus telegramstijl."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 3",
+  "hash": "a7199e6d1dd210c8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 4",
+  "hash": "49ec7f575af4dc07",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; niveaus.basis = alleen antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 5",
+  "hash": "3ab0a23fe0df3903",
+  "oordeel": "twijfel",
+  "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Klopt; afleiders Volendam en Giethoorn waren zwak (geen kustplaats); basis = antwoord."
  },
  {
   "waar": "topografie-nederland-provincies-po stap 1 vraag 1",

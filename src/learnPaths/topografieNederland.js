@@ -1230,21 +1230,21 @@ const steps = [
           theorie: "Reden NL is bijzonder: groot deel hoort eigenlijk onder water. Door 1000+ jaar dijken bouwen + bedijking + droogmaling: bewoonbaar geworden. Vandaar 'water-management' is NL-specialiteit (Deltawerken export wereldwijd).",
           voorbeelden: [{ type: "vergelijk", tekst: "Wereld: meeste landen 100% boven zeeniveau. NL: 26% onder. Bangladesh ook risicovol maar net niet onder. Malediven (gemiddeld 1,5 m) bedreigd door zeespiegelstijging." }],
           basiskennis: [{ onderwerp: "Examen-feit", uitleg: "Klassieke Cito/Doorstroomtoets-vraag: ~26% van NL onder zeeniveau. Onthoud dit getal." }],
-          niveaus: { basis: "~26%.", simpeler: "~26% (een kwart) van NL ligt onder zeeniveau, beschermd door dijken.", nogSimpeler: "26%" },
+          niveaus: { basis: "Niet het hele land ligt laag, en ook niet de helft. Denk aan de polders achter de dijken in het westen.", simpeler: "Ongeveer een kwart van Nederland ligt onder zeeniveau. Dijken en gemalen houden dat deel droog.", nogSimpeler: "26%" },
         },
       },
       {
-        q: "Wat is het **hoogste punt** van Nederland?",
-        options: ["Vaalserberg","Mont Blanc","Zuiderzeeweg","Tafelberg"],
+        q: "Wat is het **hoogste punt** van Nederland in Europa?",
+        options: ["Vaalserberg","Amerongse Berg","Holterberg","Sint-Pietersberg"],
         answer: 0,
-        wrongHints: [null,"Mont Blanc is in Frankrijk!","De Zuiderzeeweg is een straatnaam, geen berg.","Tafelberg is in Zuid-Afrika of Suriname."],
+        wrongHints: [null,"De Amerongse Berg ligt op de Utrechtse Heuvelrug en is nog geen 70 meter hoog. Er is een veel hogere heuvel.","De Holterberg in Overijssel is een heuvel van zand van nog geen 70 meter. Er is een veel hogere heuvel.","De Sint-Pietersberg bij Maastricht is een bekende heuvel, maar er ligt in Nederland nog een heuvel die veel hoger is."],
         uitlegPad: {
-          stappen: [{ titel: "Vaalserberg 322 m", tekst: "Hoogste punt NL = Vaalserberg, 322,4 m boven NAP. Ligt in Limburg, dorp Vaals. Drielandenpunt — hier raken NL, België én Duitsland elkaar. Niet groots als alpen-berg, maar voor plat NL relatief hoog." }],
+          stappen: [{ titel: "Vaalserberg 322 m", tekst: "Het hoogste punt van Nederland in Europa is de Vaalserberg, 322,4 m boven NAP. Hij ligt in Limburg, bij het dorp Vaals. (Op het eiland Saba in de Cariben, dat ook bij Nederland hoort, is de Mount Scenery nog hoger: 887 m.) Drielandenpunt — hier raken NL, België én Duitsland elkaar. Niet groots als alpen-berg, maar voor plat NL relatief hoog." }],
           woorden: [{ woord: "Vaalserberg", uitleg: "Hoogste punt NL. 322,4 m. Bij Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen samenkomen. Bij Vaalserberg: NL+BE+DE." }],
           theorie: "Hoogste punten andere landen ter vergelijking: Duitsland Zugspitze 2962 m. Frankrijk Mont Blanc 4810 m. NL Vaalserberg 322 m. NL is plat omdat we op delta-vlakte liggen (zand-sediment van rivieren).",
           voorbeelden: [{ type: "binnen NL", tekst: "Veluwe (Gelderland) hoogste ~110 m. Drenthe heuvels max ~30 m. Vaalserberg eenzaam de top met 322 m." }],
-          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Mont Blanc = Frankrijk. Zuiderzeeweg = straatnaam (geen berg). Tafelberg = Zuid-Afrika of Suriname." }],
-          niveaus: { basis: "Vaalserberg 322 m.", simpeler: "Hoogste NL = Vaalserberg (322 m, Limburg).", nogSimpeler: "Vaalserberg" },
+          basiskennis: [{ onderwerp: "Niet de andere heuvels", uitleg: "De Amerongse Berg (Utrechtse Heuvelrug) en de Holterberg (Overijssel) zijn nog geen 70 meter hoog. De Sint-Pietersberg bij Maastricht is ook een stuk lager dan de Vaalserberg." }],
+          niveaus: { basis: "Het hoogste punt ligt in de heuvels van Zuid-Limburg, bij het Drielandenpunt.", simpeler: "Het hoogste punt van Nederland in Europa is de Vaalserberg (322 m) in Limburg.", nogSimpeler: "Vaalserberg" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1280,8 +1280,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Texel.",
-            simpeler: "Grootste eiland = Texel.",
+            basis: "Kijk op de kaart naar het eiland dat het meest naar het westen ligt, bij Noord-Holland.",
+            simpeler: "Texel is het grootste Waddeneiland. Het ligt het meest naar het westen.",
             nogSimpeler: "Texel",
           },
         },
@@ -1298,8 +1298,8 @@ const steps = [
         wrongHints: [
           null,
           "Welk eiland ligt het meest naar het westen? Staat dat vooraan?",
-          "Vlieland en Terschelling staan hier omgewisseld. Welke komt eerst, na Texel?",
-          "Dit is de goede rij, maar dan precies omgekeerd. Welke kant begin je?",
+          "Kijk nog eens naar het midden van de rij: welk eiland ligt op de kaart direct naast Texel?",
+          "Je begint hier aan de oostkant. West is links op de kaart: met welk eiland begin je dan?",
         ],
         uitlegPad: {
           stappen: [
@@ -1328,8 +1328,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog.",
-            simpeler: "T-V-T-A-S, van links naar rechts.",
+            basis: "Begin links op de kaart, bij Noord-Holland, en ga naar rechts. Het ezelsbruggetje 'Toen Vroeg Truus Aan Schelden?' helpt je.",
+            simpeler: "Van links naar rechts: T-V-T-A-S, dus Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog.",
             nogSimpeler: "T-V-T-A-S",
           },
         },
@@ -1371,20 +1371,20 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De Veluwe.",
-            simpeler: "Bos en heide in Gelderland = Veluwe.",
+            basis: "Zoek een gebied dat hoog ligt, met veel bos en heide, en dat niet tussen de rivieren ligt.",
+            simpeler: "Het grote bos- en heidegebied in Gelderland heet de Veluwe.",
             nogSimpeler: "Veluwe",
           },
         },
       },
       {
         q: "Wat kun je in de **Waddenzee** doen als het water bij **eb** weg is?",
-        options: ["Wadlopen", "Skiën", "Bergbeklimmen", "Duiken"],
+        options: ["Wadlopen", "Zwemmen", "Zeilen", "Duiken"],
         answer: 0,
         wrongHints: [
           null,
-          "Daarvoor heb je sneeuw en bergen nodig.",
-          "Bergen zijn er niet in de Waddenzee. Wat kun je doen op de droge zeebodem?",
+          "Om te zwemmen heb je water nodig. Wat kun je doen als de bodem droog ligt?",
+          "Een zeilboot heeft water nodig. Bij eb ligt hij vast op de bodem. Wat kun je dan wél doen?",
           "Daarvoor heb je juist diep water nodig.",
         ],
         uitlegPad: {
@@ -1414,8 +1414,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wadlopen.",
-            simpeler: "Eb = wadlopen.",
+            basis: "Bij eb ligt de zeebodem droog. Wat kun je dan doen zonder boot en zonder water?",
+            simpeler: "Bij eb kun je met een gids over de droge bodem van de Waddenzee lopen. Dat heet wadlopen.",
             nogSimpeler: "Wadlopen",
           },
         },
@@ -1469,8 +1469,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In het westen en noorden.",
-            simpeler: "Laag land = west en noord.",
+            basis: "Denk aan de kant waar Nederland aan de zee ligt. Daar liggen de polders achter dijken en duinen.",
+            simpeler: "Het laagste land ligt in het westen en noorden: in Noord- en Zuid-Holland, Friesland en Groningen.",
             nogSimpeler: "West en noord",
           },
         },
@@ -1557,8 +1557,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Amsterdam.",
-            simpeler: "Nummer 1 = Amsterdam.",
+            basis: "Denk aan de stad met de grachten, het Rijksmuseum en het Anne Frank Huis.",
+            simpeler: "Amsterdam is de grootste stad én de hoofdstad van Nederland.",
             nogSimpeler: "Amsterdam",
           },
         },
@@ -1595,8 +1595,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Rotterdam.",
-            simpeler: "Grootste haven = Rotterdam.",
+            basis: "Zoek een grote stad in Zuid-Holland die via de Nieuwe Waterweg met de Noordzee verbonden is.",
+            simpeler: "Rotterdam heeft de grootste haven van Europa. Grote zeeschepen komen er aan.",
             nogSimpeler: "Rotterdam",
           },
         },
@@ -1633,8 +1633,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Brussel.",
-            simpeler: "België → Brussel.",
+            basis: "In de hoofdstad van België zitten de regering en ook de Europese Unie.",
+            simpeler: "De hoofdstad van België is Brussel.",
             nogSimpeler: "Brussel",
           },
         },
@@ -1671,14 +1671,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Berlijn.",
-            simpeler: "Duitsland → Berlijn.",
+            basis: "De hoofdstad van Duitsland ligt in het oosten van het land. Daar zit de regering.",
+            simpeler: "De hoofdstad van Duitsland is Berlijn.",
             nogSimpeler: "Berlijn",
           },
         },
       },
       {
-        q: "Welke **drie talen** spreken mensen in België?",
+        q: "Wat zijn de **drie officiële talen** van België?",
         options: [
           "Nederlands, Frans en Duits",
           "Nederlands, Frans en Engels",
@@ -1686,7 +1686,7 @@ const steps = [
           "Nederlands, Engels en Duits",
         ],
         answer: 0,
-        wrongHints: [null, "Twee talen kloppen. Welke derde taal spreekt een kleine groep?", "Italiaans spreken ze in België niet. Welke taal spreken de Vlamingen?", "Engels is geen officiële taal in België. Welke taal spreken ze in Wallonië?"],
+        wrongHints: [null, "Twee talen kloppen. Welke derde taal spreekt een kleine groep?", "Italiaans is geen officiële taal van België. Welke taal spreken de Vlamingen?", "Engels is geen officiële taal in België. Welke taal spreken ze in Wallonië?"],
         uitlegPad: {
           stappen: [
             {
@@ -1714,9 +1714,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Nederlands, Frans en Duits.",
-            simpeler: "België: Nederlands, Frans, Duits.",
-            nogSimpeler: "NL, Frans, Duits",
+            basis: "Denk aan de Vlamingen in het noorden, de Walen in het zuiden en een kleine groep in het oosten, vlak bij Duitsland.",
+            simpeler: "De officiële talen van België zijn Nederlands, Frans en Duits.",
+            nogSimpeler: "Nederlands, Frans en Duits",
           },
         },
       },
@@ -1757,8 +1757,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Utrecht.",
-            simpeler: "Midden + Dom = Utrecht.",
+            basis: "Zoek de stad die precies in het midden van de kaart ligt, met een heel hoge kerktoren: de Domtoren.",
+            simpeler: "Utrecht ligt in het midden van Nederland en heeft de Domkerk.",
             nogSimpeler: "Utrecht",
           },
         },
@@ -1795,8 +1795,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Eindhoven.",
-            simpeler: "Randstad: Amsterdam, Rotterdam, Den Haag, Utrecht.",
+            basis: "De vier grote steden van de Randstad liggen in het westen en midden van het land. Welke stad ligt veel verder naar het zuiden?",
+            simpeler: "De vier grote steden van de Randstad zijn Amsterdam, Rotterdam, Den Haag en Utrecht.",
             nogSimpeler: "Eindhoven",
           },
         },
@@ -1847,7 +1847,7 @@ const steps = [
           theorie: "Naam 'Venetië van NL' is marketing. Giethoorn is veel kleiner dan Venetië (Italië) maar idee hetzelfde: water als hoofd-vervoer. Andere 'Venetiën': Brugge (België), Stockholm (Zweden), Suzhou (China).",
           voorbeelden: [{ type: "bezoek", tekst: "1 miljoen bezoekers/jaar voor 2.600 inwoners. Overbelasting heeft regels gebracht: geen drones, geen luide muziek, beperkte bootverhuur." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Volendam = visserij + paling. Kinderdijk = molens. Marken = klederdracht/visserij. Allemaal toeristisch maar geen 'Venetië'." }],
-          niveaus: { basis: "Giethoorn.", simpeler: "'Venetië van NL' = Giethoorn (Overijssel, dorp met grachten).", nogSimpeler: "Giethoorn" },
+          niveaus: { basis: "Zoek een dorp waar je niet over straten, maar over grachten en bruggetjes van huis naar huis gaat.", simpeler: "Giethoorn in Overijssel heeft grachten in plaats van straten. Daarom heet het 'Venetië van Nederland'.", nogSimpeler: "Giethoorn" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1888,17 +1888,17 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De Afsluitdijk.",
-            simpeler: "Noord-Holland ↔ Friesland = Afsluitdijk.",
+            basis: "Deze dijk is 32 km lang en sloot in 1932 de Zuiderzee af.",
+            simpeler: "De Afsluitdijk ligt tussen Noord-Holland en Friesland.",
             nogSimpeler: "Afsluitdijk",
           },
         },
       },
       {
         q: "Vanaf welke plaats bij **Rotterdam** varen veerboten naar **Engeland**?",
-        options: ["Hoek van Holland", "Den Helder", "Volendam", "Giethoorn"],
+        options: ["Hoek van Holland", "Den Helder", "Vlissingen", "Scheveningen"],
         answer: 0,
-        wrongHints: [null, "Deze plaats ligt in het noorden van Noord-Holland, niet bij Rotterdam.", "Volendam ligt aan het Markermeer, niet aan zee bij Rotterdam.", "Giethoorn ligt in Overijssel, ver van de zee."],
+        wrongHints: [null, "Deze plaats ligt in het noorden van Noord-Holland, niet bij Rotterdam.", "Vlissingen ligt in Zeeland, een stuk verder naar het zuiden. Daar vertrekken geen veerboten naar Engeland.", "Scheveningen hoort bij Den Haag. Het heeft een strand en een vissershaven, maar geen veerboot naar Engeland."],
         uitlegPad: {
           stappen: [
             {
@@ -1926,8 +1926,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hoek van Holland.",
-            simpeler: "Veerboot naar Engeland = Hoek van Holland.",
+            basis: "Zoek de plaats aan de kust waar de Nieuwe Waterweg van Rotterdam in de Noordzee uitkomt.",
+            simpeler: "Vanaf Hoek van Holland varen veerboten naar Engeland.",
             nogSimpeler: "Hoek van Holland",
           },
         },
