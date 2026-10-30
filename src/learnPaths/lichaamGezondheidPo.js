@@ -297,13 +297,13 @@ const steps = [
       "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Zuivel, noten, vis, peulvruchten, vlees + ei** — eiwitten (bouwstof) + calcium voor botten.\n4. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie en zachte margarine).\n5. **Dranken** — water, thee en koffie zonder suiker (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Toets-strikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Toets-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
     checks: [
       {
-        q: "Hoeveel vakken heeft de **Schijf van Vijf**?",
-        options: ["5", "3", "7", "10"],
+        q: "Eén vak van de **Schijf van Vijf** is niet voor eten. Waarvoor is dat vak?",
+        options: ["Voor drinken, zoals water en thee", "Voor snoep en koek als traktatie", "Voor sporten en buiten spelen", "Voor vitaminepillen uit de winkel"],
         answer: 0,
-        wrongHints: [null, "Het zijn er meer dan drie. Kijk naar de naam van de schijf.", "Het zijn er minder dan zeven. Kijk naar de naam van de schijf.", "Het zijn er veel minder. Kijk naar de naam van de schijf."],
+        wrongHints: [null, "Snoep en koek heten 'extra's'. Staan die wel in de Schijf van Vijf?", "Bewegen is gezond, maar de Schijf van Vijf gaat over wat je binnenkrijgt.", "De Schijf van Vijf gaat over gewone voeding, niet over pillen uit de winkel."],
         uitlegPad: {
           stappen: [
-            { titel: "De naam zegt het al — 'Vijf'", tekst: "De **Schijf van Vijf** heet zo omdat hij **5 vakken** heeft. Vandaar 'Vijf' in de naam. Elke dag eet je iets uit alle 5 vakken om gezond te blijven." },
+            { titel: "Vijf vakken", tekst: "De **Schijf van Vijf** heeft **5 vakken**. Vier vakken gaan over eten. Elke dag neem je iets uit alle 5 vakken om gezond te blijven." },
             { titel: "De 5 vakken kort", tekst: "1) **Groente + fruit** (vitamines)\n2) **Brood/aardappel/pasta/rijst** (energie)\n3) **Zuivel/noten/vis/peulvruchten/vlees/ei** (eiwit + calcium, bouwstof)\n4) **Smeer- + bereidingsvet** (gezond vet, bv. olijfolie)\n5) **Dranken** (water, thee, koffie zonder suiker)." },
             { titel: "Vak 5 = drinken", tekst: "Water drinken is dus óók een vak van de Schijf: **~1,5 liter per dag** water, thee of koffie zonder suiker. Frisdrank en sap horen er niet bij." },
           ],
@@ -316,11 +316,11 @@ const steps = [
             { type: "stap", tekst: "Per dag: 250 gram groente + 2 stuks fruit. Beide tellen samen in vak 1." },
             { type: "stap", tekst: "Aardappel zit in vak 2 (koolhydraten), NIET in groente-vak. Toets-instinker!" },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Schijf van **Vijf** = **5** vakken. Letterlijk in de naam." }],
+          basiskennis: [{ onderwerp: "Extra's", uitleg: "Snoep, koek, chips en frisdrank staan niet in de Schijf van Vijf. Ze heten 'extra's'." }],
           niveaus: {
-            basis: "5 vakken.",
-            simpeler: "De naam 'Schijf van Vijf' verklapt het al: 5.",
-            nogSimpeler: "5",
+            basis: "Vier vakken van de Schijf zijn voor eten. Wat heeft je lichaam elke dag nog meer nodig, naast eten?",
+            simpeler: "Je lichaam heeft elke dag ook iets nodig dat je uit een glas of een kopje neemt.",
+            nogSimpeler: "Voor drinken.",
           },
         },
       },
@@ -337,8 +337,8 @@ const steps = [
         wrongHints: [null, "Pindakaas van 100% pinda's staat in het vak met noten, vis en vlees.", "Halvarine hoort in het vak smeer- en kookvetten.", "Aardappelen staan in het vak met brood en graan."],
       },
       {
-        q: "Hoeveel **water** moet je drinken per dag?",
-        options: ["~1,5 liter", "~3 liter", "~0,5 liter", "~5 liter"],
+        q: "Hoeveel moet een kind ongeveer per dag **drinken** (water, thee en ander drinken samen)?",
+        options: ["ongeveer 1,5 liter", "ongeveer 3 liter", "ongeveer 0,5 liter", "ongeveer 5 liter"],
         answer: 0,
         wrongHints: [null, "Drie liter is 12 glazen — meer dan een kind nodig heeft.", "Een halve liter is maar 2 glazen. Je verliest elke dag meer vocht.", "Vijf liter is 20 glazen — veel meer dan je nodig hebt."],
       },

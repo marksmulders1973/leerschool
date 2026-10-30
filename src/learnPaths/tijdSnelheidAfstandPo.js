@@ -349,9 +349,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "November: 30 dagen.",
-            simpeler: "Rijmpje: sept, april, juni, nov.",
-            nogSimpeler: "november",
+            basis: "Zeg het rijmpje op over de maanden met 30 dagen. Welke maand uit de vraag hoor je daarin?",
+            simpeler: "Het rijmpje gaat zo: dertig dagen hebben september, april, juni en november.",
+            nogSimpeler: "November.",
           },
         },
       },

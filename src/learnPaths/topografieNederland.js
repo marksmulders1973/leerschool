@@ -1118,7 +1118,7 @@ const steps = [
           theorie: "Deltawerken hebben dubbel doel: (1) HOOFDDOEL = bescherming tegen zee, (2) economische bonus = land verbonden via dammen, makkelijker verkeer. Maar veiligheid is reden #1.",
           voorbeelden: [{ type: "schaal", tekst: "Oosterscheldekering 9 km lang, 62 schuiven die elk 350 ton wegen. Sluit bij extreme storm (~1× per paar jaar). Anders blijft hij open voor zoutwater-getij." }],
           basiskennis: [{ onderwerp: "Niet andere doelen", uitleg: "Geen drinkwater (komt uit duinen). Geen stroom (paar werken kleinschalig wel). Geen scheepvaart-versnelling (juist sluizen voor scheepvaart)." }],
-          niveaus: { basis: "Bescherming overstroming.", simpeler: "Deltawerken = beschermen Zeeland tegen overstromingen, na 1953-ramp.", nogSimpeler: "Bescherming" },
+          niveaus: { basis: "Denk aan de ramp van 1953. Wat wilde Nederland daarna nooit meer laten gebeuren?", simpeler: "In 1953 liep een groot deel van Zeeland onder water. De Deltawerken zijn daarna gebouwd om dat te voorkomen.", nogSimpeler: "Beschermen tegen overstromingen." },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1192,9 +1192,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Laag, drooggemalen land.",
-            simpeler: "Polder = laag land dat eerst water was.",
-            nogSimpeler: "Drooggemalen land",
+            basis: "Denk aan molens en gemalen. Wat pompen die weg, en wat blijft er dan over?",
+            simpeler: "Een polder ligt laag. Er stond eerst water, maar dat is weggepompt.",
+            nogSimpeler: "Laag land dat is drooggemalen.",
           },
         },
       },

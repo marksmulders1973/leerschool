@@ -259,9 +259,9 @@ const steps = [
       },
       {
         q: "Wie schreef '**Het Kapitaal**'?",
-        options: ["Karl Marx", "James Watt", "Napoleon", "Edison"],
+        options: ["Karl Marx", "James Watt", "Napoleon", "Thomas Edison"],
         answer: 0,
-        wrongHints: [null, "Watt was de uitvinder van de stoommachine — wie schreef juist óver arbeiders en kapitaal?", "Napoleon was veldheer en keizer (overleden 1821) — zoek een denker over de arbeidersklasse.", "Edison was de uitvinder van de gloeilamp — zoek een filosoof/econoom."],
+        wrongHints: [null, "Watt maakte de stoommachine veel beter — maar wie schreef juist óver arbeiders en kapitaal?", "Napoleon was veldheer en keizer (overleden 1821) — zoek een denker over de arbeidersklasse.", "Edison was de uitvinder van de gloeilamp — zoek een filosoof/econoom."],
       },
       {
         q: "In welk jaar mochten vrouwen in Nederland voor het eerst **stemmen**?",
