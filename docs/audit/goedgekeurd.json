@@ -723,12 +723,35 @@
   "reden": "Afleider \"Kijken welk antwoord het langst is\" is absurd; blijven 3 echte opties over."
  },
  {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 3",
+  "hash": "144f873c0c2ab45a",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "begrijpend-lezen-strategie stap 6 vraag 4",
   "hash": "ca301d74570d1369",
   "oordeel": "twijfel",
   "bron": "vervolg B4 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord en hints kloppen; niveaus basis/nogSimpeler telegramstijl ('Staat erin = letterlijk')."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 5",
+  "hash": "0742c42bde9584cb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Probleem-oplossing klopt; basis gaf het antwoord als telegram."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 6",
+  "hash": "85f10a0e3cde6bcc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Voor en tegen klopt; basis gaf het antwoord."
  },
  {
   "waar": "begrijpend-lezen-strategie stap 6 vraag 7",
@@ -6083,6 +6106,53 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 4",
+  "hash": "f936c980a8f725ab",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramzin in de vraag en basis gaf het antwoord. Geen plaatje nodig: de getallen staan in de vraag (stap heeft geen svg)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 5",
+  "hash": "00b3c21f9441dd86",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "30 − 18 = 12 klopt; telegramzin \"Tabel: …\"."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 6",
+  "hash": "aa71ebbc9bd3cf0b",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 7",
+  "hash": "34995366dd79d012",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Staafdiagram klopt; basis was een telegramzin die het antwoord gaf."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 8",
+  "hash": "e694df5ded43bf25",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "30 ÷ 80 = 37,5% klopt; telegramzin in de vraag, hint bij 60% begon met \"Niet —\"."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 9",
+  "hash": "d59360ce48fa9574",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "100 − 85 = 15% klopt; telegramzin."
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 14",
   "hash": "225cdaaaa82aa5f0",
   "oordeel": "twijfel",
@@ -7807,6 +7877,37 @@
   "reden": "niveaus.basis was alleen het antwoord"
  },
  {
+  "waar": "financiele-vorming-po stap 3 vraag 1",
+  "hash": "aef4b832b7b29cdb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 2",
+  "hash": "494ff6f738ef6f9f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€102 klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 3",
+  "hash": "3573b8f24048c084",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 4",
+  "hash": "696eba72e3a2cd4c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt inhoudelijk, maar de optie \"Vooraf opzij zetten, niet wachten\" was een vage telegramzin (vooraf aan wat?); niveaus telegram."
+ },
+ {
   "waar": "financiele-vorming-po stap 3 vraag 8",
   "hash": "bbe875f25d8fd357",
   "oordeel": "twijfel",
@@ -8203,6 +8304,20 @@
   "reden": "klopt (2,60+2,40=5,00; andere 5,20/4,80/5,10); basis gaf meteen de goede som; notatie"
  },
  {
+  "waar": "geld-rekenen stap 3 vraag 3",
+  "hash": "002a9d7524289704",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 4",
+  "hash": "3e78d33215df0607",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "geld-rekenen stap 3 vraag 5",
   "hash": "ba0f90cdaa5a5cb1",
   "oordeel": "twijfel",
@@ -8322,12 +8437,62 @@
   "reden": "antwoord 7,55 klopt; hints in telegramstijl, hint bij 7,65 zei niet dat het te veel is; niveaus.basis gaf alleen het antwoord"
  },
  {
+  "waar": "geld-rekenen stap 5 vraag 18",
+  "hash": "e9518b3600195bac",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 19",
+  "hash": "804aa21f8bc07d44",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "geld-rekenen stap 5 vraag 2",
   "hash": "432328005b45deb9",
   "oordeel": "twijfel",
   "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "29,75 klopt; niveaus.basis gaf alleen de som met antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 20",
+  "hash": "f5bd4537947c2686",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 21",
+  "hash": "171effb3eac74572",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 22",
+  "hash": "7065ec3710f57d66",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (€121), maar 21% btw is procentrekenen, voor groep 5 twee groepen te hoog."
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 23",
+  "hash": "589ebf5e42fc0220",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 24",
+  "hash": "d2bc49c9b02db800",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "geld-rekenen stap 5 vraag 3",
@@ -17180,6 +17345,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 2",
+  "hash": "c51c81a65eab74ec",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 20",
   "hash": "88019f3537cc9ac5",
   "oordeel": "goed",
@@ -17253,6 +17425,13 @@
   "reden": "Antwoord klopt; niveaus waren telegramzinnen ('Kopiëren fout', '≠ samenvatten')."
  },
  {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 4",
+  "hash": "b73b8a18785cf808",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 5",
   "hash": "ffa3a3c56d8d4b6d",
   "oordeel": "twijfel",
@@ -17275,6 +17454,21 @@
   "bron": "vervolg B4 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; niveaus telegramstijl ('Dus/daarom')."
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 8",
+  "hash": "a5e4d15d648800f4",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 9",
+  "hash": "07299fd710675a38",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties waren telegram (\"als origineel\", \"25-30% van origineel\")."
  },
  {
   "waar": "schaal-kaart-rekenen-po stap 1 vraag 1",
@@ -17341,12 +17535,52 @@
   "reden": "Klopt (200.000 cm = 2 km); basis gaf uitkomst en 200 km (gedeeld door 1.000) had geen hint."
  },
  {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 10",
+  "hash": "22c2951fc43c9f5a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "4 × 250.000 = 1.000.000 cm = 10 km klopt; foute optie 100 km had geen hint, basis gaf antwoord."
+ },
+ {
   "waar": "schaal-kaart-rekenen-po stap 2 vraag 3",
   "hash": "cde46afcc7f96439",
   "oordeel": "twijfel",
   "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "telegramvraag; hint D verklapte grootte (\"meerdere kilometers\"); niveaus.basis gaf alleen het antwoord (geen hulpstap)"
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 5",
+  "hash": "877d67603be30451",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "8 × 25.000 = 200.000 cm = 2 km klopt; telegramzin \"Op de kaart 8 cm\" en basis gaf antwoord."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 6",
+  "hash": "b400ed8b60b2bdaf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "12 × 100 = 1.200 cm = 12 m klopt; basis gaf antwoord."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 7",
+  "hash": "4aa725da6ffacca5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "7 × 500 = 3.500 cm = 35 m klopt; foute optie 350 m had geen hint (null), basis gaf antwoord."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 8",
+  "hash": "8cbd349798ff6fac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "5 × 40.000 = 200.000 cm = 2 km klopt; telegramzin, foute optie 0,2 km had geen hint, basis gaf antwoord."
  },
  {
   "waar": "schaal-kaart-rekenen-po stap 2 vraag 9",
@@ -23214,6 +23448,63 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 1",
+  "hash": "2f6349684467a0f1",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 2",
+  "hash": "b8d936e02f1c53ce",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 3",
+  "hash": "5dfe44089db05c8b",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 4",
+  "hash": "6f101630f5c43a59",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 5",
+  "hash": "5b8daf3719038f0a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag \"hoe de klas dit besliste\" verklapte al half dat de klas het besliste."
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 6",
+  "hash": "686b7684d0d1959b",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 7",
+  "hash": "88071aa86957d964",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 8",
+  "hash": "858b42fa65dd7604",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "verhoudingen-po stap 1 vraag 1",
   "hash": "67693e0d9c7e4768",
   "oordeel": "twijfel",
@@ -23765,6 +24056,62 @@
   "bron": "vervolg B6 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 3",
+  "hash": "c3fde27d994d77cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 4",
+  "hash": "a72e5b5c48c0240d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 5",
+  "hash": "526e542ffbf49d05",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 6",
+  "hash": "a173b8d9cac93fbf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 7",
+  "hash": "59558ed2f1b0eb49",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 8",
+  "hash": "be7ae665e86b92d9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 9",
+  "hash": "88af74cc7859cc86",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord."
  },
  {
   "waar": "vlakke-figuren-po stap 1 vraag 1",
@@ -27397,6 +27744,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "woordenschat-po stap 5 vraag 17",
+  "hash": "f57cfc3a3c62d954",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "woordenschat-po stap 5 vraag 18",
   "hash": "68006d86d8f8b7a5",
   "oordeel": "goed",
@@ -27417,6 +27771,13 @@
   "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt (oneerlijk); basis 'Eerlijk ↔ oneerlijk.' gaf het antwoord; on- in het antwoord is de leerstof zelf"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 20",
+  "hash": "84e9143ca0a122c6",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "woordenschat-po stap 5 vraag 21",
@@ -27454,6 +27815,13 @@
   "bron": "vervolg B8 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; hint bij 'Geen interesse' omschreef half het antwoord ('dat iemand je wél iets kan schelen')"
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 26",
+  "hash": "19178f0c99642e6f",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "woordenschat-po stap 5 vraag 3",
@@ -27902,6 +28270,29 @@
   "hash": "b516184d4853a454",
   "oordeel": "goed",
   "bron": "vervolg B7 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 5",
+  "hash": "4556f20a2764bd93",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 8",
+  "hash": "ed888846221818df",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis gaf het antwoord."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 9",
+  "hash": "aaaafac8f3b9967f",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
  }
 ]

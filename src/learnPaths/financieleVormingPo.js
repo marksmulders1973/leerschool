@@ -824,7 +824,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Rente = % extra. Bij sparen = krijgen. Bij lenen = betalen. Een procent (%) op een bedrag." }],
           niveaus: {
-            basis: "Rente = extra geld over je spaargeld.",
+            basis: "Denk aan je spaarrekening bij de bank. Wat geeft de bank je elk jaar omdat jouw geld daar staat?",
             simpeler: "De bank betaalt jou rente omdat jij geld bij hen bewaart.",
             nogSimpeler: "Extra geld",
           },
@@ -853,7 +853,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Rente komt BOVENOP je spaargeld. Niet alleen 'de rente' is antwoord, maar TOTAAL (oud + rente)." }],
           niveaus: {
-            basis: "€102 (€100 + €2 rente).",
+            basis: "Reken eerst uit hoeveel 2% van €100 is. Tel dat daarna op bij je spaargeld.",
             simpeler: "2% van €100 = €2. Totaal = €100 + €2 = €102.",
             nogSimpeler: "€102",
           },
@@ -867,7 +867,7 @@ const steps = [
       },
       {
         q: "Wanneer zet je het best geld opzij om **te sparen**?",
-        options: ["Vooraf opzij zetten, niet wachten", "Aan het einde van de maand sparen", "Sparen zodra je iets duurs wilt kopen", "Sparen vanaf dat je een baan hebt"],
+        options: ["Meteen als je geld krijgt", "Aan het einde van de maand sparen", "Sparen zodra je iets duurs wilt kopen", "Sparen vanaf dat je een baan hebt"],
         answer: 0,
         wrongHints: [null, "Is er aan het einde van de maand nog wat over?", "Dan begin je pas laat. Hoe lang moet je dan nog wachten?", "Ook met zakgeld kun je al sparen. Waarom wachten?"],
         uitlegPad: {
@@ -888,9 +888,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "VOORAF opzij = werkt. ACHTERAF hopen = werkt niet. Volgorde maakt het verschil." }],
           niveaus: {
-            basis: "Vooraf opzij zetten, niet wachten.",
-            simpeler: "Krijg je geld? Direct deel in spaarpot. Rest blijft voor uitgaven.",
-            nogSimpeler: "Direct opzij",
+            basis: "Denk na: als je eerst alles uitgeeft wat je wilt, blijft er dan nog geld over om te sparen?",
+            simpeler: "Krijg je geld? Stop dan meteen een deel in je spaarpot. De rest kun je uitgeven.",
+            nogSimpeler: "Meteen opzij zetten, zodra je geld krijgt.",
           },
         },
       },

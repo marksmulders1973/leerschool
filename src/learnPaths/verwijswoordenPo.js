@@ -397,7 +397,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'het'-woord → dat", tekst: "Bij een 'het'-woord (het huis) past 'dat'. Bij 'de'-woorden (de boom, de hond, de tafel) past 'die'." }],
           niveaus: {
-            basis: "'het huis' → 'dat'. 'de'-woorden krijgen 'die'.",
+            basis: "Zet 'de' of 'het' voor elk woord. Bij een 'het'-woord hoort 'dat', bij een 'de'-woord hoort 'die'.",
             simpeler: "Welk woord is een 'het'-woord? Daar hoort 'dat' bij.",
             nogSimpeler: "Zeg je 'het huis' of 'de huis'? Dan hoort 'dat' erbij.",
           },
@@ -411,7 +411,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Welk ding is van mij?", tekst: "'Deze' wijst naar één van de pennen — die dichtbij is. 'Deze' verwijst dus naar een pen." }],
           niveaus: {
-            basis: "'Deze' verwijst naar een pen.",
+            basis: "Lees de eerste zin nog eens. Wat ligt er op tafel, en hoeveel? Over hoeveel daarvan gaat 'Deze is van mij'?",
             simpeler: "Wat ligt er op tafel waarvan er eentje van jou is?",
             nogSimpeler: "Waar gaat 'deze' over: een pen of de tafel?",
           },
@@ -425,7 +425,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat lees je nu?", tekst: "Je leest het boek. 'Dit' verwijst naar het boek (een 'het'-woord, dus 'dit')." }],
           niveaus: {
-            basis: "'Dit' verwijst naar het boek.",
+            basis: "Een verwijswoord wijst terug naar een ding dat al eerder genoemd is. Welk ding staat in de eerste zin?",
             simpeler: "Wat heb je gekocht en lees je nu?",
             nogSimpeler: "Waar gaat 'dit' over: het boek of nu?",
           },
@@ -439,7 +439,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'de'-woord → die", tekst: "Bij een 'de'-woord (de fiets) past 'die'. Bij 'het'-woorden (het huis, het kind, het raam) past 'dat'." }],
           niveaus: {
-            basis: "'de fiets' → 'die'. 'het'-woorden krijgen 'dat'.",
+            basis: "Zet 'de' of 'het' voor elk woord. Bij een 'de'-woord hoort 'die', bij een 'het'-woord hoort 'dat'.",
             simpeler: "Welk woord is een 'de'-woord? Daar hoort 'die' bij.",
             nogSimpeler: "Zeg je 'de fiets' of 'het fiets'? Dan hoort 'die' erbij.",
           },
@@ -459,7 +459,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij 'het spel' past 'dat'.",
+            basis: "Het lege plekje verwijst terug naar 'spel'. Zeg je 'de spel' of 'het spel'? Kies daarna het verwijswoord dat daarbij hoort.",
             simpeler: "Is 'spel' een 'de'-woord of een 'het'-woord?",
             nogSimpeler: "Het touw → dat. Het spel → …?",
           },
@@ -483,7 +483,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'De vogel' → 'die'. Dat stukje klopt.",
+            basis: "Kijk bij elk stukje: is het dier een 'de'-woord of een 'het'-woord? Past het verwijswoord in de tweede zin daarbij?",
             simpeler: "Bij welk woord hoort 'die': bij een 'de'-woord of bij een 'het'-woord?",
             nogSimpeler: "De vogel → die of dat?",
           },
@@ -502,7 +502,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Die' verwijst naar de meloen.",
+            basis: "Een verwijswoord wijst terug naar iets wat al genoemd is. Wat in de eerste zin kan heel zoet zijn?",
             simpeler: "Wat koopt oma dat zoet kan zijn?",
             nogSimpeler: "Wat is zoet: de meloen of de markt?",
           },

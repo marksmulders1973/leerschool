@@ -337,7 +337,7 @@ const steps = [
         },
       },
       {
-        q: "Schaal 1 : 25.000. Op de kaart 8 cm. Hoeveel km is dat in het echt?",
+        q: "Een kaart heeft schaal 1 : 25.000. Op de kaart is een afstand 8 cm. Hoeveel km is dat in het echt?",
         options: ["2 km", "8 km", "0,2 km", "20 km"],
         answer: 0,
         wrongHints: [null, "Te veel — bij 1 : 25.000 is 1 cm géén hele km.", "Te weinig — reken de cm goed om.", "Te veel — controleer hoeveel km bij 1 cm hoort."],
@@ -351,7 +351,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Bij een topografische kaart in de klas met schaal 1 : 25.000 reken je de afstand tussen twee dorpen stap voor stap om naar kilometers." }],
           basiskennis: [{ onderwerp: "cm naar km", uitleg: "Honderdduizend centimeter is gelijk aan één kilometer." }],
           niveaus: {
-            basis: "8 × 25.000 = 200.000 cm = 2 km.",
+            basis: "Reken eerst uit hoeveel cm het in het echt is: kaartafstand × schaalgetal. Zet daarna de cm om naar km.",
             simpeler: "1 cm = 25.000 cm = 0,25 km. Dus 8 cm = 8 × 0,25 = 2 km.",
             nogSimpeler: "200.000 ÷ 100.000 = ?",
           },
@@ -372,7 +372,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Op de plattegrond van een sportveld met schaal 1 : 100 reken je de lengte van een looppad om naar de echte afstand in meter." }],
           basiskennis: [{ onderwerp: "Twee keer rekenen", uitleg: "Eerst kaart-afstand × schaalgetal, dan pas cm omzetten naar meter." }],
           niveaus: {
-            basis: "12 × 100 = 1.200 cm = 12 m.",
+            basis: "Reken eerst uit hoeveel cm de weg in het echt is. Hoeveel cm gaan er in 1 meter?",
             simpeler: "Reken de cm uit (1.200), dan deel door 100 voor meters.",
             nogSimpeler: "1.200 ÷ 100 = ?",
           },
@@ -386,7 +386,7 @@ const steps = [
         wrongHints: [
           null,
           "Te weinig — controleer de omrekening van cm naar m.",
-          null,
+          "Te veel — hoeveel cm gaan er in 1 m?",
           "Dat zijn centimeters, niet meters.",
         ],
         uitlegPad: {
@@ -420,21 +420,21 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 × 500 = 3.500 cm = 35 m.",
+            basis: "Reken eerst uit hoeveel cm de sloot in het echt is. Zet die cm daarna om naar meter.",
             simpeler: "Reken eerst 7 × 500, deel dan door 100.",
             nogSimpeler: "3.500 ÷ 100 = ?",
           },
         },
       },
       {
-        q: "Schaal 1 : 40.000. Op de kaart is een weg 5 cm. Hoeveel km is de weg in het echt?",
+        q: "Een kaart heeft schaal 1 : 40.000. Op de kaart is een weg 5 cm lang. Hoeveel km is de weg in het echt?",
         options: ["2 km", "20 km", "5 km", "0,2 km"],
         answer: 0,
         wrongHints: [
           null,
           "Te veel — hoeveel cm gaan er in 1 km?",
           "Dat zou kloppen bij schaal 1 : 100.000 — kijk nog eens naar het schaalgetal.",
-          null,
+          "Te weinig — hoeveel cm gaan er in 1 km? Tel de nullen goed.",
         ],
         uitlegPad: {
           stappen: [
@@ -467,7 +467,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 × 40.000 = 200.000 cm = 2 km.",
+            basis: "Reken eerst uit hoeveel cm de weg in het echt is. Zet die cm daarna om naar km.",
             simpeler: "Reken 5 × 40.000 en deel dan door 100.000.",
             nogSimpeler: "200.000 ÷ 100.000 = ?",
           },
@@ -527,7 +527,7 @@ const steps = [
         wrongHints: [
           null,
           "Te weinig — reken de cm goed om naar km.",
-          null,
+          "Te veel — hoeveel cm gaan er in 1 km? Tel de nullen goed.",
           "Dat zou kloppen bij schaal 1 : 100.000.",
         ],
         uitlegPad: {
@@ -561,7 +561,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 250.000 = 1.000.000 cm = 10 km.",
+            basis: "Reken eerst uit hoeveel cm de afstand in het echt is. Zet die cm daarna om naar km.",
             simpeler: "Reken 4 × 250.000 en deel door 100.000.",
             nogSimpeler: "1.000.000 ÷ 100.000 = ?",
           },

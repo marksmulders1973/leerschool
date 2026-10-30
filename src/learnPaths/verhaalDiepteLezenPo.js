@@ -1310,7 +1310,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         },
       },
       {
-        q: "*\"Op de laatste schooldag mocht Ties de vaas naar school brengen.\"* — Wat zegt het woord 'mocht' over hoe de klas dit besliste?",
+        q: "*\"Op de laatste schooldag mocht Ties de vaas naar school brengen.\"* — Wat vertelt het woord 'mocht' je hier?",
         options: [
           "Ties kreeg die speciale taak van de klas",
           "Ties dwong de klas om hem de vaas te laten brengen",

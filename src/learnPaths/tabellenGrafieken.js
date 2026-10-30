@@ -370,7 +370,7 @@ const steps = [
     ),
     checks: [
       {
-        q: "Hoeveel **vanille-ijsjes** werden er op **donderdag** verkocht?",
+        q: "Kijk in de tabel 'IJsjes-verkoop per dag'. Hoeveel **vanille-ijsjes** werden er op **donderdag** verkocht?",
         options: ["6","8","9","4"],
         answer: 0,
         wrongHints: [null,"Verkeerde dag — dat is dinsdag.","Verkeerde dag — dat is vrijdag.","Verkeerde dag — dat is woensdag."],
@@ -384,7 +384,7 @@ const steps = [
         },
       },
       {
-        q: "Op welke dag werden **de meeste ijsjes** verkocht (totaal alle smaken)?",
+        q: "Kijk in de tabel 'IJsjes-verkoop per dag'. Op welke dag werden **de meeste ijsjes** verkocht (alle smaken samen)?",
         options: ["vrijdag","dinsdag","maandag","woensdag"],
         answer: 0,
         wrongHints: [null,"Dinsdag-totaal is 24 — een andere dag heeft meer.","Maandag-totaal is maar 15.","Woensdag-totaal is maar 12."],
@@ -401,7 +401,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **chocolade-ijsjes** werden er in de **hele week** verkocht?",
+        q: "Kijk in de tabel 'IJsjes-verkoop per dag'. Hoeveel **chocolade-ijsjes** werden er in de **hele week** verkocht?",
         options: ["44","32","52","48"],
         answer: 0,
         wrongHints: [null,"32 is het totaal van vanille. Zit je in de goede rij?","Te veel — tel de rij chocolade nog eens na. Heb je misschien een getal twee keer meegeteld?","Tel de rij chocolade nog eens na, dag voor dag."],
@@ -667,7 +667,7 @@ const steps = [
     ], "Sport-keuze van 85 leerlingen", "leerlingen"),
     checks: [
       {
-        q: "Welke sport is het **populairst**?",
+        q: "Kijk naar het staafdiagram 'Sport-keuze van 85 leerlingen'. Welke sport is het **populairst**?",
         options: ["Voetbal","Zwemmen","Tennis","Hockey"],
         answer: 0,
         wrongHints: [null,"Is de balk van zwemmen echt de hoogste? Vergelijk hem met de andere balken.","Leg je vinger op de top van elke balk. Welke komt het hoogst?","Is de balk van hockey hoog of laag vergeleken met de rest?"],
@@ -681,7 +681,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel kinderen **meer** kozen voetbal dan judo?",
+        q: "Kijk naar het staafdiagram. Hoeveel kinderen **meer** kozen voetbal dan judo?",
         options: ["20","8","36","12"],
         answer: 0,
         wrongHints: [null,"Dat is het aantal voor judo. Hoeveel kozen er méér voor voetbal?","Je telde voetbal en judo op. Moet je bij 'hoeveel meer' optellen of aftrekken?","Dat is het aantal voor hockey, niet het verschil."],
@@ -698,7 +698,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel kinderen kozen **niet** voor voetbal en ook **niet** voor zwemmen?",
+        q: "Kijk naar het staafdiagram. Hoeveel kinderen kozen **niet** voor voetbal en ook **niet** voor zwemmen?",
         options: ["35","57","85","43"],
         answer: 0,
         wrongHints: [null,"Haal je zowel voetbal als zwemmen eraf?","Dat is het totaal van alle sporten — maar de vraag vraagt alleen die zonder voetbal of zwemmen.","Welke sporten tel je mee? Kijk of voetbal erbij zit."],
@@ -918,7 +918,7 @@ const steps = [
         // citoMix-sample-flow verloren gaat. Mark melding 2026-05-18: vraag
         // verscheen in Doorstroomtoets-simulator zonder grafiek-context.
         disabled: true,
-        q: "Op welke dag was het **het warmst**?",
+        q: "Kijk naar de lijngrafiek met de temperatuur van deze week. Op welke dag was het **het warmst**?",
         options: ["zaterdag","vrijdag","woensdag","zondag"],
         answer: 0,
         wrongHints: [null,"Bijna — vrijdag was 24, maar er was een dag hoger.","Ligt woensdag op het hoogste punt van de lijn?","Zondag is lager dan de dag ervoor. Welk punt ligt het hoogst?"],
@@ -933,7 +933,7 @@ const steps = [
       },
       {
         disabled: true, // leunt op step.svg (lijngrafiek temperaturen ma-zo).
-        q: "Hoeveel graden is het **verschil** tussen maandag en zaterdag?",
+        q: "Kijk naar de lijngrafiek. Hoeveel graden is het **verschil** tussen maandag en zaterdag?",
         options: ["11","27","16","10"],
         answer: 0,
         wrongHints: [null,"Dat is de temperatuur op zaterdag. Hoeveel graden scheelt dat met maandag?","Dat is de temperatuur op maandag. Hoeveel graden scheelt dat met zaterdag?","Reken 27 − 16 nog eens na."],
@@ -951,7 +951,7 @@ const steps = [
       },
       {
         disabled: true, // leunt op step.svg (lijngrafiek temperaturen ma-zo).
-        q: "Op welke dagen **daalde** de temperatuur vergeleken met de dag ervoor?",
+        q: "Kijk naar de lijngrafiek. Op welke dagen **daalde** de temperatuur vergeleken met de dag ervoor?",
         options: ["Donderdag en zondag","Maandag en dinsdag","Woensdag en zondag","Donderdag en zaterdag"],
         answer: 0,
         wrongHints: [null,"Op die dagen steeg de temperatuur juist — kijk goed naar de lijn-richting.","Kijk bij woensdag: gaat de lijn van dinsdag naar woensdag omhoog of omlaag?","Kijk bij zaterdag: gaat de lijn van vrijdag naar zaterdag omhoog of omlaag?"],
@@ -2033,7 +2033,7 @@ const steps = [
     checks: [
       {
         disabled: true, // leunt op step.svg (staafdiagram Tom/Eva/Ali/Lisa).
-        q: "Welk kind liep **de meeste** rondjes?",
+        q: "Kijk naar het diagram van de sponsorloop. Welk kind liep **de meeste** rondjes?",
         options: ["Eva","Tom","Ali","Lisa"],
         answer: 0,
         wrongHints: [null,"Is de balk van Tom de hoogste? Vergelijk hem met de andere balken.","Is de balk van Ali hoog of laag vergeleken met de rest?","Leg je vinger op de top van elke balk. Welke komt het hoogst?"],
@@ -2048,7 +2048,7 @@ const steps = [
       },
       {
         disabled: true, // leunt op step.svg (staafdiagram Tom/Eva/Ali/Lisa).
-        q: "Hoeveel rondjes liepen **Tom en Lisa samen**?",
+        q: "Kijk naar het diagram van de sponsorloop. Hoeveel rondjes liepen **Tom en Lisa samen**?",
         options: ["52","56","48","60"],
         answer: 0,
         wrongHints: [null,"Tel de rondjes van Tom en Lisa nog eens precies op.","Heb je de goede twee kinderen opgeteld?","Lees de balken van Tom en Lisa precies af. Heb je afgerond?"],

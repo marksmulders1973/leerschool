@@ -1625,7 +1625,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Probleem (afval) → oplossing (schoonmaken).",
+            basis: "Kijk wat alinea 1 vertelt: is dat iets wat mis is? En wat doet alinea 2 daarmee?",
             simpeler: "Eerst hoor je wat er mis is: afval. Daarna hoor je wat eraan gedaan wordt. Dat is probleem-oplossing.",
             nogSimpeler: "Eerst iets wat mis is, daarna wat eraan gedaan wordt.",
           },
@@ -1684,7 +1684,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Eerst redenen voor, dan redenen tegen: dat is de opbouw 'voor en tegen'.",
+            basis: "Kijk naar de twee delen van de tekst. Wat staat er in het eerste deel over een hond nemen, en wat in het tweede deel?",
             simpeler: "De tekst vertelt eerst wat goed is aan een hond, en dan wat minder handig is. Zo zet je voor en tegen naast elkaar.",
             nogSimpeler: "Eerst de redenen voor, dan de redenen tegen.",
           },

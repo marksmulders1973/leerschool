@@ -715,7 +715,7 @@ const steps = [
         },
       },
       {
-        q: "Lijngrafiek temperatuur: 18, 22, 25, 23, 19 °C *(over 5 dagen)*. Wat is het **patroon**?",
+        q: "Een lijngrafiek laat de temperatuur over 5 dagen zien: 18, 22, 25, 23 en 19 °C. Wat is het **patroon**?",
         uitlegPad: {
           stappen: [
             { titel: "Kijk per stap", tekst: "18 → 22 (stijgt), 22 → 25 (stijgt), 25 → 23 (daalt), 23 → 19 (daalt)." },
@@ -729,7 +729,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Temperatuur door dag: vroeg laag, midden hoog, avond weer laag → klassiek 'piek'-patroon." }],
           basiskennis: [{ onderwerp: "Top of dal", uitleg: "Top = hoogste punt midden in. Dal = laagste punt midden in." }],
           niveaus: {
-            basis: "Eerst stijgen, dan dalen (piek in midden).",
+            basis: "Vergelijk elke dag met de dag ervoor: wordt het getal groter of kleiner?",
             simpeler: "Tot dag 3 omhoog (25 = piek), daarna omlaag.",
             nogSimpeler: "Op-neer",
           },
@@ -739,7 +739,7 @@ const steps = [
         wrongHints: [null, "Kijk naar álle getallen, ook die aan het eind. Worden ze steeds groter?", "Kijk naar álle getallen, ook die aan het begin. Worden ze steeds kleiner?", "Zet de getallen op een rij en kijk wanneer ze groter en wanneer ze kleiner worden."],
       },
       {
-        q: "Tabel: ma 22, di 18, wo 26, do 30, vr 24. **Hoeveel meer op donderdag dan dinsdag**?",
+        q: "In een tabel staat: ma 22, di 18, wo 26, do 30, vr 24. **Hoeveel meer is het op donderdag dan op dinsdag**?",
         options: ["12", "8", "6", "48"],
         answer: 0,
         wrongHints: [null, "Welke twee getallen heb je van elkaar afgetrokken? Zoek donderdag en dinsdag op.", "Is 24 wel het getal van dinsdag? Kijk nog eens in de tabel.", "Je hebt opgeteld. Hoeveel méér is iets: optellen of aftrekken?"],
@@ -775,17 +775,17 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vergelijken groepen → staaf. Tijd → lijn. Verdeling → cirkel." }],
           niveaus: {
-            basis: "Staaf = vergelijken. Lijn = tijd. Cirkel = verdeling %.",
+            basis: "Elke grafiek heeft een eigen doel: groepen vergelijken, een verandering door de tijd laten zien of een geheel verdelen. Welk doel heb je hier?",
             simpeler: "Klassen vergelijken? → staafdiagram (hoogte = aantal).",
             nogSimpeler: "Vergelijken = staaf!",
           },
         },
       },
       {
-        q: "Lijngrafiek: aantal lezers daalde van 80 naar 50 in 5 jaar. Hoeveel **% afname**?",
+        q: "Een lijngrafiek laat zien dat het aantal lezers in 5 jaar daalde van 80 naar 50. Met hoeveel **procent** nam het aantal af?",
         options: ["37,5%", "30%", "50%", "60%"],
         answer: 0,
-        wrongHints: [null, "30 is het aantal lezers minder, nog geen percentage. Deel het verschil door de beginwaarde.", "Dat zou betekenen 40 lezers minder.", "Niet — dan deel je door de eindwaarde (50) in plaats van de beginwaarde."],
+        wrongHints: [null, "30 is het aantal lezers minder, nog geen percentage. Deel het verschil door de beginwaarde.", "Dat zou betekenen 40 lezers minder.", "Door welk getal heb je gedeeld? Bij een afname deel je door het getal van het begin, niet door het getal van het eind."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: bereken het verschil", tekst: "Van 80 lezers naar 50 lezers. Verschil = 80 − 50 = **30** lezers afname." },
@@ -810,7 +810,7 @@ const steps = [
         },
       },
       {
-        q: "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. Hoeveel procent is de **rest**?",
+        q: "In een cirkeldiagram is blauw 35%, rood 25% en groen 25%. Hoeveel procent is de **rest**?",
         options: ["15%", "20%", "10%", "25%"],
         answer: 0,
         wrongHints: [null, "Tel 35 + 25 + 25 nog eens op. Hoeveel blijft er over van 100?", "10%? Kijk of je goed hebt opgeteld: 35 + 25 + 25 = ?", "25% is het stuk van rood of groen. Wat blijft er over?"],

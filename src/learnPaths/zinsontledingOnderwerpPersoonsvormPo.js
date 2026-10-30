@@ -410,11 +410,11 @@ const steps = [
         q: "Wat is het onderwerp? *Achter het huis staat een grote boom.*",
         options: ["een grote boom", "het huis", "staat", "Achter"],
         answer: 0,
-        wrongHints: [null, "Dat zegt wáár, niet wat er staat.", "Dat is de persoonsvorm.", "Dat is een verbindingswoord."],
+        wrongHints: [null, "Dat zegt wáár, niet wat er staat.", "Dat is de persoonsvorm.", "'Achter' is maar één woordje dat zegt wáár iets is. Wie of wat staat daar?"],
         uitlegPad: {
           stappen: [{ titel: "Wat staat er?", tekst: "Persoonsvorm = 'staat'. Vraag: wie of wat staat? Antwoord: 'een grote boom' — ook al staat het achteraan." }],
           niveaus: {
-            basis: "Vraag bij 'staat': wat staat er achter het huis? Een grote boom.",
+            basis: "Zoek eerst de persoonsvorm. Vraag dan: wie of wat doet dat? Het onderwerp hoeft niet vooraan in de zin te staan.",
             simpeler: "Wat staat daar? Het onderwerp hoeft niet vooraan te staan.",
             nogSimpeler: "Wat staat er achter het huis? Een grote …",
           },
@@ -433,21 +433,21 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Enkelvoud → enkelvoudswerkwoord", tekst: "'De vogel' is enkelvoud → 'zingt' (enkelvoud). Dat klopt." }],
           niveaus: {
-            basis: "Eén vogel → 'zingt'. Onderwerp en werkwoord passen bij elkaar.",
+            basis: "Kijk eerst of het onderwerp over één vogel of over meer vogels gaat. Past de persoonsvorm daarbij?",
             simpeler: "Is het één vogel of meerdere? Check dan het werkwoord.",
             nogSimpeler: "Eén vogel: de vogel … (enkelvoud van zingen).",
           },
         },
       },
       {
-        q: "Vul goed in: *Mijn broer en ik ___ elke avond samen tv.* (kijken)",
+        q: "Welk woord past op de lege plek? *Mijn broer en ik ___ elke avond samen tv.*",
         options: ["kijken", "kijkt", "kijkend", "keek"],
         answer: 0,
         wrongHints: [null, "Mijn broer én ik: hoeveel personen zijn dat samen?", "Dat is geen persoonsvorm.", "Ook in de verleden tijd telt het aantal: is 'keek' enkelvoud of meervoud?"],
         uitlegPad: {
           stappen: [{ titel: "'A en ik' = meervoud", tekst: "'Mijn broer en ik' zijn samen twee personen → meervoud → 'kijken' (niet 'kijkt')." }],
           niveaus: {
-            basis: "Twee personen met 'en' tellen mee als meervoud → 'kijken'.",
+            basis: "Tel hoeveel personen het onderwerp zijn. Is dat één persoon of meer? Kies dan de vorm die daarbij past.",
             simpeler: "Hoeveel mensen kijken er? Tel ze.",
             nogSimpeler: "Broer + ik = meer dan één → kijken.",
           },
@@ -462,11 +462,11 @@ const steps = [
           "onderwerp: spelen — persoonsvorm: De kinderen",
         ],
         answer: 0,
-        wrongHints: [null, "De regen doet niets — wie spelen er?", "'regen' is geen werkwoord.", "Onderwerp en persoonsvorm zijn hier omgewisseld."],
+        wrongHints: [null, "De regen doet niets — wie spelen er?", "'regen' is geen werkwoord.", "Is 'De kinderen' een werkwoord? De persoonsvorm is het woord dat verandert als je de zin in een andere tijd zet."],
         uitlegPad: {
           stappen: [{ titel: "Pv = spelen; ow = de kinderen", tekst: "Persoonsvorm = 'spelen' (verandert: speelden). Wie spelen? 'De kinderen' = onderwerp." }],
           niveaus: {
-            basis: "Persoonsvorm 'spelen'; vraag wie spelen → de kinderen.",
+            basis: "Zoek eerst de persoonsvorm: zet de zin in een andere tijd en kijk welk woord verandert. Vraag dan: wie doet dat?",
             simpeler: "Welk woord is het werkwoord, en wie doet dat?",
             nogSimpeler: "Wie spelen er? En welk woord is 'spelen'?",
           },
@@ -496,7 +496,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Twee personen met 'en' ertussen tellen als meervoud → wonen.",
+            basis: "Kijk bij elke zin: gaat het onderwerp over één persoon of over meer personen? Past de persoonsvorm daarbij?",
             simpeler: "Hoeveel mensen wonen er in de flat? Tel ze.",
             nogSimpeler: "Opa + oma = meer dan één → wonen.",
           },

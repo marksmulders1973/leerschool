@@ -914,7 +914,7 @@ const steps = [
         },
       },
       {
-        q: "Zelfde grafiek. Hoeveel **graden warmer** om 14u dan om 8u?",
+        q: "Een lijngrafiek van de temperatuur: om 8u 12 °C, om 14u 22 °C, om 20u 16 °C. Hoeveel **graden warmer** was het om 14u dan om 8u?",
         options: ["10 °C", "12 °C", "22 °C", "8 °C"],
         answer: 0,
         wrongHints: [null, "Dat is de temperatuur om 8u zelf. Je zoekt het verschil.", "Dat is de temperatuur om 14u zelf. Je zoekt het verschil.", "Te weinig — lees beide temperaturen nog eens goed af."],
@@ -1619,7 +1619,7 @@ const steps = [
         },
       },
       {
-        q: "Zelfde tabel. Hoeveel ijsjes zijn er in de hele week **samen** verkocht?",
+        q: "Een tabel met verkochte ijsjes: ma 12, di 8, wo 18, do 22, vr 30. Hoeveel ijsjes zijn er in de hele week **samen** verkocht?",
         options: ["90 ijsjes", "70 ijsjes", "60 ijsjes", "100 ijsjes"],
         answer: 0,
         wrongHints: [null, "Te weinig — controleer optelling 12+8+18+22+30.", "Te weinig — niet alle 5 dagen meegeteld.", "Tel de vijf getallen nog eens één voor één op."],
@@ -1647,7 +1647,7 @@ const steps = [
         },
       },
       {
-        q: "Zelfde tabel. Hoeveel ijsjes zijn er op vrijdag **meer** verkocht dan op maandag?",
+        q: "Een tabel met verkochte ijsjes: ma 12, di 8, wo 18, do 22, vr 30. Hoeveel ijsjes zijn er op vrijdag **meer** verkocht dan op maandag?",
         options: ["18 ijsjes", "42 ijsjes", "12 ijsjes", "30 ijsjes"],
         answer: 0,
         wrongHints: [null, "Te veel — dat is opgeteld. 'Meer' = aftrekken.", "Te weinig — dat is maandag zelf.", "Te veel — dat is vrijdag zelf."],

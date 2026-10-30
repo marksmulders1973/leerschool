@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "geld-rekenen stap 5 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "€25 ÷ 5 = €5; hints benoemen de rekenfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "100 − 18 − 25 = 57; hints wijzen richting zonder antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "120 ÷ 8 = 15; hints laten narekenen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Definitie klopt; hints in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (€121), maar 21% btw is procentrekenen, voor groep 5 twee groepen te hoog.",
+  "hersteld": true,
+  "wijziging": "Vraag vereenvoudigd: \"Er komt €21 btw (belasting) bij\" in plaats van \"21% btw\"; opties en hints blijven kloppen."
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 23",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "2 + 0,50 + 0,20 + 0,05 = 2,75; afleiders 2,72 / 2,65 / 2,95.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "4 × €2,50 = €10.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "€20 − €17,40 = €2,60; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "geld-rekenen stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "€10 − €4,55 = €5,45; hints en niveaus kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Hij/zij-verhaal; leestekst bij de stap aanwezig, hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Gespannen; hints wijzen naar de tekst.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Beeldspraak schaamte; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Juf troost Ties; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Vraag \"hoe de klas dit besliste\" verklapte al half dat de klas het besliste.",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven naar \"Wat vertelt het woord 'mocht' je hier?\"."
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Van verwachtingsvol naar geschrokken.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Opgewonden; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Opgelucht en warm.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (de/het ervoor zetten)."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "verwijswoorden-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij \"Achter\" noemde het een verbindingswoord; dat is feitelijk fout (voorzetsel). basis gaf ook het antwoord.",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven (\"'Achter' is maar één woordje dat zegt wáár iets is. Wie of wat staat daar?\"); basis tot hulpstap herschreven."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Het goede antwoord \"kijken\" stond letterlijk tussen haakjes in de vraag.",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven naar \"Welk woord past op de lege plek? …\" zonder (kijken); basis tot hulpstap herschreven."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint \"Onderwerp en persoonsvorm zijn hier omgewisseld\" gaf per omdraaiing het goede antwoord weg; basis gaf ook het antwoord.",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven naar denkfout ('De kinderen' is geen werkwoord, persoonsvorm verandert van tijd); basis tot hulpstap."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "De paarden (meervoud); hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; telegramzin in de vraag en basis gaf het antwoord. Geen plaatje nodig: de getallen staan in de vraag (stap heeft geen svg).",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin; basis tot hulpstap."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "30 − 18 = 12 klopt; telegramzin \"Tabel: …\".",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "90 ÷ 5 = 18; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Staafdiagram klopt; basis was een telegramzin die het antwoord gaf.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "30 ÷ 80 = 37,5% klopt; telegramzin in de vraag, hint bij 60% begon met \"Niet —\".",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin; hint bij 60% herschreven."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "100 − 85 = 15% klopt; telegramzin.",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "8 × 25.000 = 200.000 cm = 2 km klopt; telegramzin \"Op de kaart 8 cm\" en basis gaf antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin; basis tot hulpstap."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "12 × 100 = 1.200 cm = 12 m klopt; basis gaf antwoord.",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "7 × 500 = 3.500 cm = 35 m klopt; foute optie 350 m had geen hint (null), basis gaf antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint voor 350 m toegevoegd; basis tot hulpstap."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "5 × 40.000 = 200.000 cm = 2 km klopt; telegramzin, foute optie 0,2 km had geen hint, basis gaf antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige zin; hint voor 0,2 km toegevoegd; basis tot hulpstap."
+ },
+ {
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "4 × 250.000 = 1.000.000 cm = 10 km klopt; foute optie 100 km had geen hint, basis gaf antwoord.",
+  "hersteld": true,
+  "wijziging": "Hint voor 100 km toegevoegd; basis tot hulpstap."
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap."
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "€102 klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap."
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Rente over rente; hints goed. Concept pittig voor groep 6 maar zonder rekenwerk te doen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "financiele-vorming-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt inhoudelijk, maar de optie \"Vooraf opzij zetten, niet wachten\" was een vage telegramzin (vooraf aan wat?); niveaus telegram.",
+  "hersteld": true,
+  "wijziging": "Optie herschreven naar \"Meteen als je geld krijgt\"; basis/simpeler/nogSimpeler als hele zinnen."
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Persoonlijke zin is de bijzaak; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Gevaarlijk is een nadeel; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Conclusie na \"dus\"; hints goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; opties waren telegram (\"als origineel\", \"25-30% van origineel\").",
+  "hersteld": true,
+  "wijziging": "Opties herschreven (\"als de tekst\", \"een kwart van de tekst\"); hint bij die optie aangepast."
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; hints geven richting zonder antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; hints geven richting zonder antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordenschat-po stap 5 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Klopt; hints geven richting zonder antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Klopt; hints geven richting zonder antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Probleem-oplossing klopt; basis gaf het antwoord als telegram.",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Voor en tegen klopt; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap."
+ }
+]

@@ -1887,9 +1887,9 @@ const steps = [
       },
       {
         q: "Wanneer is een samenvatting **TE LANG**?",
-        options: ["Wanneer hij bijna even lang is als origineel", "Wanneer hij 25-30% van origineel is", "Wanneer hij maar uit 1 korte zin bestaat", "Nooit, een samenvatting is nooit te lang"],
+        options: ["Wanneer hij bijna even lang is als de tekst", "Wanneer hij een kwart van de tekst is", "Wanneer hij maar uit 1 korte zin bestaat", "Nooit, een samenvatting is nooit te lang"],
         answer: 0,
-        wrongHints: [null, "Een kwart tot een derde van de tekst: is dat te lang?", "Is één korte zin te lang, of juist te kort?", "Kan een samenvatting echt nooit te lang worden? Denk aan het doel: de tekst korter maken."],
+        wrongHints: [null, "Een kwart van de tekst: is dat te lang?", "Is één korte zin te lang, of juist te kort?", "Kan een samenvatting echt nooit te lang worden? Denk aan het doel: de tekst korter maken."],
         uitlegPad: {
           stappen: [
             { titel: "Doel van samenvatten", tekst: "Een **samenvatting** vat in **eigen woorden** + **kort** een tekst samen. Hoort:\n• **20-30% van origineel** (vuistregel)\n• Alle **hoofdpunten** bevatten\n• Geen **details / voorbeelden** uitgebreid\n• Geen **eigen mening** toevoegen\n• Lopende tekst (geen lijst)" },
