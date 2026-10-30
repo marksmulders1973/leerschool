@@ -737,7 +737,7 @@ const steps = [
         q: "*'Sven loopt 8 dagen lang elke dag 4 km. Hoeveel km loopt hij in **totaal**?'*",
         options: ["32 km","12 km","4 km","36 km"],
         answer: 0,
-        wrongHints: [null,"Niet optellen — 'per dag' = vermenigvuldigen.","Dat loopt hij op één dag. Hoeveel dagen loopt hij?","Reken nog eens: 8 × 4."],
+        wrongHints: [null,"Je telde 8 en 4 op. Maar hij loopt élke dag opnieuw 4 km.","Dat loopt hij op één dag. Hoeveel dagen loopt hij?","Dat is wat hij in 9 dagen loopt. Hoeveel dagen loopt Sven?"],
       },
       {
         q: "*'Een klas heeft € 96 gespaard en verdeelt dat eerlijk over 6 kinderen. Hoeveel krijgt **elk kind**?'*",
@@ -788,7 +788,7 @@ const steps = [
           null,
           "Je telde 4 en 9 op. Hoeveel kaartjes van € 4 koop je?",
           null,
-          "Reken nog eens: 9 × 4.",
+          "Dat betaal je voor 10 kaartjes. Hoeveel kaartjes koop je?",
         ],
       },
       {

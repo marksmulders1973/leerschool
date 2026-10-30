@@ -364,13 +364,13 @@ const steps = [
         q: "Welke dag is het **7 dagen na maandag**?",
         options: ["Maandag", "Dinsdag", "Zondag", "Zaterdag"],
         answer: 0,
-        wrongHints: [null, "Dat is dag erna.", "Dat is 1 dag ervoor.", "Dat is 2 dagen ervoor."],
+        wrongHints: [null, "Dinsdag komt maar 1 dag na maandag. Tel nog eens alle 7 dagen door.", "Tel je maandag zelf mee? Begin te tellen bij dinsdag.", "Tel nog eens op je vingers. Begin bij dinsdag en tel tot 7."],
       },
       {
         q: "Welke dag is het **10 dagen na dinsdag**?",
         options: ["Vrijdag", "Donderdag", "Zaterdag", "Dinsdag"],
         answer: 0,
-        wrongHints: [null, "Te weinig — di+9 dagen, niet 10.", "Dat is 11 dagen verder. Tel eerst een hele week door: welke dag is het dan?", "Dat is +7 of +14, niet +10."],
+        wrongHints: [null, "Donderdag is maar 9 dagen na dinsdag. Tel je dinsdag zelf mee?", "Dat is 11 dagen verder. Tel eerst een hele week door: welke dag is het dan?", "Na precies 7 of 14 dagen is het weer dinsdag. Hoeveel dagen moest je verder?"],
         uitlegPad: {
           stappen: [
             { titel: "10 = 7 + 3", tekst: "10 dagen = 1 hele week (7) + 3 dagen extra. Dinsdag + 7 = dinsdag. + 3 = vrijdag." },
@@ -380,7 +380,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Di + 7 = di. Di + 1 = wo. Wo + 1 = do. Do + 1 = vr. Totaal: vr." }],
           basiskennis: [{ onderwerp: "Niet alle 10 één voor één", uitleg: "Slim is groepjes van 7 dagen wegtrekken." }],
           niveaus: {
-            basis: "Vrijdag.",
+            basis: "Splits de 10 dagen: eerst een hele week, dan nog een paar dagen. Welke dag is het na een hele week?",
             simpeler: "10 dagen = 1 week + 3 dagen. Dinsdag + 1 week = dinsdag. + 3 dagen = vrijdag.",
             nogSimpeler: "Vrijdag",
           },
@@ -393,10 +393,10 @@ const steps = [
         wrongHints: [null, "Dat is 5 dagen eerder. Moet je vooruit of terug tellen?", "Tel je 10 maart zelf als eerste dag? Begin te tellen bij 11 maart.", "Dat is 10 dagen later. Hoeveel dagen moest je verder?"],
       },
       {
-        q: "**Vandaag is het 28 februari (gewoon jaar)**. Welke datum is het **3 dagen later**?",
+        q: "Vandaag is het **28 februari**. Het is geen schrikkeljaar. Welke datum is het **3 dagen later**?",
         options: ["3 maart", "31 februari", "1 maart", "5 maart"],
         answer: 0,
-        wrongHints: [null, "31 februari bestaat niet.", "Te weinig — dat is +1.", "Dat is 5 dagen later. Hoeveel dagen heeft februari in een gewoon jaar?"],
+        wrongHints: [null, "Bestaat 31 februari wel? Hoeveel dagen heeft februari in een gewoon jaar?", "1 maart is maar 1 dag na 28 februari. Hoeveel dagen moest je verder?", "Dat is 5 dagen later. Hoeveel dagen heeft februari in een gewoon jaar?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -440,7 +440,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vrijdag 16 oktober.",
+            basis: "Een week heeft 7 dagen. Welke dagnaam heb je na precies een week? En welke datum krijg je als je 7 bij 9 optelt?",
             simpeler: "Een week later is het weer vrijdag. 9 + 7 = 16. Dus vrijdag 16 oktober.",
             nogSimpeler: "Vrijdag 16 oktober",
           },
@@ -486,7 +486,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Donderdag.",
+            basis: "Splits de 9 dagen: eerst een hele week terug, dan nog een paar dagen terug.",
             simpeler: "9 dagen = 1 week + 2 dagen. Een week terug is weer zaterdag. Nog 2 dagen terug: donderdag.",
             nogSimpeler: "Donderdag",
           },
@@ -528,7 +528,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "27 maart.",
+            basis: "Tel eerst terug tot het einde van maart. Maart heeft 31 dagen.",
             simpeler: "Eerst 6 dagen terug: dan ben je op 31 maart. Nog 4 dagen terug: 27 maart.",
             nogSimpeler: "27 maart",
           },
@@ -575,7 +575,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 december.",
+            basis: "November heeft 30 dagen. Tel eerst tot het einde van november en tel daarna verder in december.",
             simpeler: "Tot 30 november zijn 5 dagen. Er blijven 5 dagen over. Dus 5 december.",
             nogSimpeler: "5 december",
           },
@@ -585,7 +585,7 @@ const steps = [
         q: "Vandaag is **woensdag 1 juli**. Welke dag is **16 juli**?",
         options: ["Donderdag", "Woensdag", "Vrijdag", "Dinsdag"],
         answer: 0,
-        wrongHints: [null, "Is 16 − 1 een veelvoud van 7?", null, null],
+        wrongHints: [null, "Tel vanaf 1 juli steeds 7 dagen verder. Kom je dan precies op 16 juli uit?", null, null],
         uitlegPad: {
           stappen: [
             {
@@ -617,7 +617,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Donderdag.",
+            basis: "Tel vanaf woensdag 1 juli steeds 7 dagen verder. Welke data zijn dan ook woensdag?",
             simpeler: "1, 8 en 15 juli zijn woensdagen. 16 juli is een dag later: donderdag.",
             nogSimpeler: "Donderdag",
           },
@@ -664,7 +664,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "28 februari.",
+            basis: "Tel dag voor dag terug vanaf 2 maart. Let op: in een schrikkeljaar heeft februari 29 dagen.",
             simpeler: "Tel terug: 1 maart, 29 februari, 28 februari. In 2028 is er een 29 februari.",
             nogSimpeler: "28 februari",
           },

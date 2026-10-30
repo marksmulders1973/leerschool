@@ -6166,6 +6166,70 @@
   "reden": "Hints bij 12 ('nog niet') en 16 ('mag al eerder') sluiten samen het antwoord in tussen 12 en 16."
  },
  {
+  "waar": "financiele-vorming-po stap 2 vraag 2",
+  "hash": "d0674f7543d2baac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl); simpeler telegramstijl"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 3",
+  "hash": "40de201ab28d7d17",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "vraag was een telegramzin (\"€0,25 statiegeld is voor:\"); feit klopt"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 4",
+  "hash": "523845d702121a09",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"+\" in de goede optie (telegram)"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 5",
+  "hash": "af0eea95f6bc9559",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 6",
+  "hash": "1f1c2371dad2617b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 7",
+  "hash": "41eba73aa2d13b3b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 8",
+  "hash": "7b1335cd7e965495",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 9",
+  "hash": "8e649786669284d8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
   "waar": "financiele-vorming-po stap 3 vraag 8",
   "hash": "bbe875f25d8fd357",
   "oordeel": "twijfel",
@@ -8682,11 +8746,75 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "kalender-rekenen-po stap 2 vraag 10",
+  "hash": "e866d9115eb3b59f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 2",
+  "hash": "cbac57113f115ba0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord; wrongHints in telegramstijl (\"di+9\", \"+7 of +14\")"
+ },
+ {
   "waar": "kalender-rekenen-po stap 2 vraag 3",
   "hash": "65bbe04f2ab1f0b2",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 4",
+  "hash": "c5b4fda144c7426f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"(gewoon jaar)\" telegram in vraag; hints \"Te weinig — dat is +1\" telegram"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 5",
+  "hash": "981af54cddc42d70",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 6",
+  "hash": "127900e1ec343461",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 7",
+  "hash": "de35d9c9d38e8305",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 8",
+  "hash": "c03b3cd46f3f9644",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 9",
+  "hash": "c44dd96ea3086f5d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord; hint met \"veelvoud\" te vaktalig voor groep 6"
  },
  {
   "waar": "kalender-rekenen-po stap 3 vraag 8",
@@ -12451,6 +12579,55 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "redactiesommen-pad stap 3 vraag 10",
+  "hash": "8b780172f38c816b",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 3",
+  "hash": "b43a8cf89188f7cd",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 4",
+  "hash": "1f1e255a603fd2b6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 5",
+  "hash": "28c55d31b0be9f2f",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 6",
+  "hash": "a8f5c17c47a23559",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 7",
+  "hash": "e0edf9b6f25da298",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 9",
+  "hash": "0efa05a46d46ec6f",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "redactiesommen-pad stap 5 vraag 11",
   "hash": "662c0d951692ea20",
   "oordeel": "goed",
@@ -14335,6 +14512,86 @@
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 1",
+  "hash": "82926a10a6b2f6b8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 10",
+  "hash": "1b0c93f98759260e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 2",
+  "hash": "ebc4277630b9fd51",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 3",
+  "hash": "a294a0059e385500",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl); hints met pijl-telegram"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 4",
+  "hash": "b8e70ff83912eb61",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 5",
+  "hash": "3f174d334b9294c3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 6",
+  "hash": "12744f5b56bc002c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 7",
+  "hash": "1f6d61a6a6634a2a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 8",
+  "hash": "5fbbc076727d4ac4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 9",
+  "hash": "33b1d271791dadc3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
  },
  {
   "waar": "spelling-eerste-woorden-g3 stap 5 vraag 5",
@@ -17684,6 +17941,70 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "verhoudingen-po stap 3 vraag 1",
+  "hash": "82f70bf135997db5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord; euro-notatie zonder spatie"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 2",
+  "hash": "c728cdc47d2c648f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 3",
+  "hash": "bcd48b4aadf88636",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 4",
+  "hash": "20f156aabbd19b95",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 5",
+  "hash": "a4546a1656ec75e9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 7",
+  "hash": "48d453cbddfa05b9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 8",
+  "hash": "7cf52a5a1fec6b3b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 9",
+  "hash": "105e1543245b33f9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord"
+ },
+ {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 3",
   "hash": "03ea8efd42685bd0",
   "oordeel": "goed",
@@ -17758,6 +18079,76 @@
   "hash": "1d0d7cc8dd7f88b4",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 07 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 1",
+  "hash": "4860088013d5c275",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 10",
+  "hash": "20ad018e5569a65c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 2",
+  "hash": "8898c319b5714b01",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 3",
+  "hash": "7c633721e9bc4732",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 4",
+  "hash": "27187129306a95fe",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 5",
+  "hash": "05c25f883ffaf6ba",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 6",
+  "hash": "6ab5505856e6b2cb",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 7",
+  "hash": "3f0f36b91b7a71a6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 8",
+  "hash": "123ace8762ed487b",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 9",
+  "hash": "3600e525035e0d26",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

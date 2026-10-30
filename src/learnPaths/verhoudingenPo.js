@@ -640,12 +640,12 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Wat kost 1 brood? Neem dat 5 keer.","Dat kosten 6 broden. Hoeveel broden wil je?","Je telde er € 2 bij op. Hoeveel broden komen er bij, en wat kost 1 brood?"],
         uitlegPad: {
-          stappen: [{ titel: "Via 1 brood", tekst: "1 brood: €6÷3 = €2. 5 broden: 5 × €2 = €10." }],
+          stappen: [{ titel: "Via 1 brood", tekst: "1 brood: € 6 ÷ 3 = € 2. 5 broden: 5 × € 2 = € 10." }],
           woorden: [{ woord: "stuksprijs", uitleg: "Prijs per 1 stuk = totaal ÷ aantal." }],
           theorie: "Verhoudingstabel: deel naar 1 (stuksprijs), keer naar nieuw aantal.",
-          voorbeelden: [{ type: "tabel", tekst: "3 broden=€6. 1 brood=€2. 5 broden=€10." }],
+          voorbeelden: [{ type: "tabel", tekst: "3 broden = € 6. 1 brood = € 2. 5 broden = € 10." }],
           basiskennis: [{ onderwerp: "Snelheid", uitleg: "Tussenstap '1 stuk' is bijna altijd handig bij verhoudingen." }],
-          niveaus: { basis: "€10.", simpeler: "Per brood: €6÷3 = €2. 5 broden = 5×€2 = €10.", nogSimpeler: "€10" },
+          niveaus: { basis: "Reken eerst uit wat 1 brood kost. Daarna weet je ook wat 5 broden kosten.", simpeler: "Per brood: € 6 ÷ 3 = € 2. 5 broden = 5 × € 2 = € 10.", nogSimpeler: "€ 10" },
         },
       },
       {
@@ -659,7 +659,7 @@ const steps = [
           theorie: "Verhoudingstabel: zelfde × of ÷ aan beide kanten. Hier ×20 op beide.",
           voorbeelden: [{ type: "tabel", tekst: "2:5. ×20 → 40:100. Beide ×20." }],
           basiskennis: [{ onderwerp: "Check verhouding", uitleg: "40:100 ÷ 20 = 2:5 ✓." }],
-          niveaus: { basis: "100.", simpeler: "2 → 40 = ×20 (40÷2). Andere kant ook ×20: 5×20=100.", nogSimpeler: "100" },
+          niveaus: { basis: "Kijk eerst hoe je van 2 naar 40 komt. Wat je met het eerste getal doet, doe je ook met het tweede.", simpeler: "2 → 40 = ×20 (40÷2). Andere kant ook ×20: 5×20=100.", nogSimpeler: "100" },
         },
       },
       {
@@ -673,7 +673,7 @@ const steps = [
           theorie: "Verhouding 4:3. Eerst 1 deel uitrekenen (200÷4=50). Dan keer ander aantal delen (3×50)." ,
           voorbeelden: [{ type: "stap", tekst: "4 delen meel = 200g. 1 deel = 50g. 3 delen suiker = 150g." }],
           basiskennis: [{ onderwerp: "Check verhouding", uitleg: "200:150 ÷ 50 = 4:3 ✓." }],
-          niveaus: { basis: "150 g.", simpeler: "1 deel meel = 200÷4 = 50g. Suiker = 3 delen × 50 = 150g.", nogSimpeler: "150" },
+          niveaus: { basis: "Hoeveel gram is één deel meel? Je hebt 4 delen meel en 3 delen suiker.", simpeler: "1 deel meel = 200÷4 = 50g. Suiker = 3 delen × 50 = 150g.", nogSimpeler: "150" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -714,7 +714,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 15.",
+            basis: "Reken eerst uit wat 1 schrift kost. Neem dat daarna 10 keer.",
             simpeler: "Per schrift € 1,50. 10 × € 1,50 = € 15.",
             nogSimpeler: "€ 15",
           },
@@ -757,7 +757,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 5.",
+            basis: "Hoe kom je van 8 pakken naar 4 pakken? Doe hetzelfde met het geld.",
             simpeler: "4 is de helft van 8. De helft van € 10 is € 5.",
             nogSimpeler: "€ 5",
           },
@@ -769,8 +769,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Water is 4 keer zoveel als siroop. Is dit 4 keer 150?",
-          "Water is 4 keer zoveel als siroop. Is dit 4 keer 150?",
+          "Je telde er iets bij op. Bij een verhouding doe je keer of gedeeld door.",
+          "Dat is 3 keer zoveel als de siroop. Kijk nog eens naar de verhouding 1 : 4.",
           "Dat is siroop en water samen. De vraag is alleen het water.",
         ],
         uitlegPad: {
@@ -800,7 +800,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "600 mL.",
+            basis: "Bij 1 deel siroop horen 4 delen water. Hoeveel mL is één deel hier?",
             simpeler: "Water is 4 × zoveel. 4 × 150 = 600 mL.",
             nogSimpeler: "600",
           },
@@ -843,7 +843,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20.",
+            basis: "Reken eerst uit hoeveel bladzijden de printer in 1 minuut maakt.",
             simpeler: "In 1 minuut 4 bladzijden. In 5 minuten 5 × 4 = 20.",
             nogSimpeler: "20",
           },
@@ -886,7 +886,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 en 21.",
+            basis: "In een verhoudingstabel doe je aan beide kanten hetzelfde keer-getal. Optellen mag niet.",
             simpeler: "2 × 3 = 6 en 7 × 3 = 21. Beide × 3.",
             nogSimpeler: "6 en 21",
           },
@@ -929,7 +929,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 14.",
+            basis: "Reken eerst uit wat 1 kaartje kost. Neem dat daarna 2 keer.",
             simpeler: "1 kaartje € 7. 2 kaartjes € 14.",
             nogSimpeler: "€ 14",
           },

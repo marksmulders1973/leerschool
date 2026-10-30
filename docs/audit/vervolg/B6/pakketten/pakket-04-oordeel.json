@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "antwoord klopt, hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt; afleider \"de gymtas\" goed gekozen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt; vooruitverwijzing goed uitgelegd",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag (recept: om te weten, lachen of maken?)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven (denk aan recept/bouwbeschrijving: hoe ziet die eruit?)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl); hints met pijl-telegram",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag; wrongHints als hele zinnen zonder \"→ informatief\""
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 36 km rekende het antwoord voor (\"Reken nog eens: 8 × 4\")",
+  "hersteld": true,
+  "wijziging": "hint 36 km: \"Dat is wat hij in 9 dagen loopt...\"; hint 12 km als hele zin"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "96 : 6 = 16, hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "46 + 27 = 73",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "52 - 38 = 14",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "6 x 7 = 42",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "40 : 5 = 8",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij € 40 rekende het antwoord voor (\"Reken nog eens: 9 × 4\")",
+  "hersteld": true,
+  "wijziging": "hint € 40: \"Dat betaal je voor 10 kaartjes. Hoeveel kaartjes koop je?\""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "64 - 25 = 39; leeftijd als bewuste ruis",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "36 : 4 = 9",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis was alleen het antwoord; euro-notatie zonder spatie",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (eerst prijs van 1 brood); euro-notatie in stappen/voorbeeld/niveaus naar \"€ 10\""
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (hoe kom je van 2 naar 40)"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (gram per deel)"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (eerst prijs per schrift)"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (van 8 naar 4 pakken)"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "twee wrongHints rekenden de oplossing voor (\"Is dit 4 keer 150?\"); basis was het antwoord",
+  "hersteld": true,
+  "wijziging": "hints 200 mL en 450 mL benoemen nu de denkfout (optellen / 3 keer); basis = hulpstap"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (bladzijden per minuut)"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (zelfde keer-getal, niet optellen)"
+ },
+ {
+  "waar": "verhoudingen-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (eerst prijs per kaartje)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "wrongHints \"1 dag ervoor\"/\"2 dagen ervoor\" verklapten via de afstand tot het goede antwoord welke dag het is; \"Dat is dag erna\" telegram",
+  "hersteld": true,
+  "wijziging": "alle drie wrongHints herschreven tot denkfout-hints zonder het antwoord"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis was alleen het antwoord; wrongHints in telegramstijl (\"di+9\", \"+7 of +14\")",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (week + rest); hints als hele zinnen"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "\"(gewoon jaar)\" telegram in vraag; hints \"Te weinig — dat is +1\" telegram",
+  "hersteld": true,
+  "wijziging": "vraag: \"Het is geen schrikkeljaar.\"; hints 31 februari en 1 maart als hele zinnen"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (dagnaam na een week, 9 + 7)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (week terug + rest)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (eerst tot einde maart, maart 31 dagen)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (november 30 dagen)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis was alleen het antwoord; hint met \"veelvoud\" te vaktalig voor groep 6",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap; hint woensdag: \"Tel vanaf 1 juli steeds 7 dagen verder...\""
+ },
+ {
+  "waar": "kalender-rekenen-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (dag voor dag terug, 29 februari)"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl); simpeler telegramstijl",
+  "hersteld": true,
+  "wijziging": "basis = hulpvraag (statiegeldautomaat); simpeler als hele zinnen"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "vraag was een telegramzin (\"€0,25 statiegeld is voor:\"); feit klopt",
+  "hersteld": true,
+  "wijziging": "vraag: \"Voor welke verpakking betaal je **€0,25** statiegeld?\""
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "\"+\" in de goede optie (telegram)",
+  "hersteld": true,
+  "wijziging": "optie: \"Bijhouden wat je uitgeeft en doelen stellen\""
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis = hulpvraag"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis = hulpvraag"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord (telegramstijl)",
+  "hersteld": true,
+  "wijziging": "basis = hulpvraag"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (reken in centen)"
+ },
+ {
+  "waar": "financiele-vorming-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis = hulpstap (licht werk); simpeler kreeg een onderwerp (\"Kranten bezorgen is licht werk\")"
+ }
+]

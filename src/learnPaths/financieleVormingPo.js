@@ -498,21 +498,21 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Statiegeld = jouw eigen geld in bewaring. Niet vergeten in te leveren!" }],
           niveaus: {
-            basis: "Statiegeld = geld terug bij inleveren fles/blikje.",
-            simpeler: "Je betaalt extra, krijgt terug bij inleveren = goed voor milieu.",
+            basis: "Denk aan de automaat in de supermarkt waar je lege flessen in stopt. Wat krijg je daar?",
+            simpeler: "Bij het kopen betaal je een beetje extra. Lever je de lege fles in, dan krijg je dat geld terug. Zo komen minder flessen in het milieu.",
             nogSimpeler: "Inleveren = geld terug.",
           },
         },
       },
       {
-        q: "**€0,25** statiegeld is voor:",
+        q: "Voor welke verpakking betaal je **€0,25** statiegeld?",
         options: ["Grote plastic fles (meer dan 1 liter)", "Kleine plastic fles (tot 1 liter)", "Blikje frisdrank (0,33 liter)", "Glazen bierflesje (0,3 liter)"],
         answer: 0,
         wrongHints: [null, "Voor kleine flesjes krijg je minder terug.", "Voor een blikje krijg je €0,15.", "Glazen bierflesjes hebben een eigen, lager bedrag."],
       },
       {
         q: "Hoe leer je **geld beheren**?",
-        options: ["Bijhouden wat je uitgeeft + doelen stellen", "Al je geld op de bank zetten en niet aankomen", "Je ouder of verzorger alles laten regelen", "Pas met geld beginnen als je volwassen bent"],
+        options: ["Bijhouden wat je uitgeeft en doelen stellen", "Al je geld op de bank zetten en niet aankomen", "Je ouder of verzorger alles laten regelen", "Pas met geld beginnen als je volwassen bent"],
         answer: 0,
         wrongHints: [null, "Dan is je geld veilig. Maar leer je ermee omgaan als je er nooit naar kijkt?", "Dan regelt een ander het. Leer jij het dan zelf?", "Hoe eerder je oefent, hoe beter je het later kunt. Waarom wachten?"],
       },
@@ -566,7 +566,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je leert zelf kiezen wat je met je geld doet.",
+            basis: "Met zakgeld mag jij zelf iets doen. Wat beslis jij dan?",
             simpeler: "Met zakgeld beslis jij: kopen of sparen?",
             nogSimpeler: "Zelf kiezen.",
           },
@@ -621,7 +621,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Thuis helpen lijkt dan op betaald werk.",
+            basis: "Denk aan helpen in huis, zoals de tafel dekken. Doe je dat nog vanzelf als je er steeds geld voor krijgt?",
             simpeler: "Als je voor alles geld krijgt, help je misschien alleen nog voor geld.",
             nogSimpeler: "Helpen wordt werk.",
           },
@@ -676,7 +676,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je krijgt het niet terug.",
+            basis: "Statiegeld krijg je pas terug als je de fles inlevert. Lever je de fles nu nog in?",
             simpeler: "Alleen als je de fles inlevert, krijg je je geld terug.",
             nogSimpeler: "Weggooien = geld weg.",
           },
@@ -731,7 +731,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€0,60.",
+            basis: "Reken in centen: één blikje is 15 cent. Hoeveel is dat bij 4 blikjes?",
             simpeler: "4 × 15 cent = 60 cent.",
             nogSimpeler: "60 cent.",
           },
@@ -786,8 +786,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kranten bezorgen.",
-            simpeler: "Dat is licht werk. Dat mag vanaf 13 jaar.",
+            basis: "Met 13 jaar mag je alleen licht werk doen: werk dat niet zwaar of gevaarlijk is en niet 's nachts. Welk werk past daarbij?",
+            simpeler: "Kranten bezorgen is licht werk. Dat mag vanaf 13 jaar.",
             nogSimpeler: "Krant.",
           },
         },

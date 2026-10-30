@@ -218,7 +218,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stappen om te doen", tekst: "Een recept/handleiding vertelt stap voor stap hoe je iets doet → instructieve tekst." }],
           niveaus: {
-            basis: "Stappen om iets te doen → instructieve tekst.",
+            basis: "Denk aan een recept dat je in de keuken gebruikt. Lees je het om iets te weten, om te lachen, of om iets te maken?",
             simpeler: "Moet je iets dóén terwijl je leest? Dan is het instructief.",
             nogSimpeler: "Welk woord lijkt op 'instructie' (opdracht)?",
           },
@@ -232,7 +232,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stappen", tekst: "Instructieve teksten staan vol stappen en opdracht-werkwoorden (pak, meng, knip)." }],
           niveaus: {
-            basis: "Genummerde stappen om uit te voeren = kenmerk van instructie.",
+            basis: "Denk aan een recept of een bouwbeschrijving van Lego. Hoe zien die bladzijden eruit?",
             simpeler: "Staan er stappen in die je moet doen?",
             nogSimpeler: "Wat hoort bij een recept: stappen of een spannend einde?",
           },
@@ -247,11 +247,11 @@ const steps = [
           "De mooiste vlieger die ik ooit zag, was rood.",
         ],
         answer: 0,
-        wrongHints: [null, "Dat begint als een verhaal.", "Dat is een feit → informatief.", "Dat is een mening."],
+        wrongHints: [null, "Deze zin begint als een verhaal.", "Deze zin geeft een feit over vroeger. Moet je daar zelf iets mee doen?", "Deze zin geeft een mening van de schrijver."],
         uitlegPad: {
           stappen: [{ titel: "'Zo maak je...' + stappen", tekst: "'Zo maak je een vlieger: pak..., vouw...' geeft stappen om te doen → instructief." }],
           niveaus: {
-            basis: "De tekst met stappen om een vlieger te maken is instructief.",
+            basis: "Lees elke zin en vraag je af: zegt deze zin wat ík moet doen?",
             simpeler: "Welke tekst zegt wat je moet doen, stap voor stap?",
             nogSimpeler: "Welke begint met 'Zo maak je...'?",
           },
@@ -265,7 +265,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Regels = doen", tekst: "Spelregels vertellen hoe je het spel speelt, stap voor stap → instructief." }],
           niveaus: {
-            basis: "Spelregels zeggen wat je moet doen → instructief.",
+            basis: "Waarom lees je de spelregels voordat je gaat spelen? Om een verhaal te horen, of om te weten wat je moet doen?",
             simpeler: "Leg je spelregels uit om te spelen (doen) of om te weten?",
             nogSimpeler: "Vertel je met spelregels hoe je iets dóét?",
           },
@@ -279,7 +279,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Opdracht-werkwoorden = instructief", tekst: "In een instructieve tekst staan werkwoorden die een opdracht geven: pak, vouw, meng, druk op. Dat zijn signaalwoorden voor instructief." }],
           niveaus: {
-            basis: "Opdracht-werkwoorden (pak, meng) = kenmerk van instructieve tekst.",
+            basis: "Een instructieve tekst praat tegen jou en zegt wat je moet doen. Welke woorden klinken als een opdracht?",
             simpeler: "Zegt de tekst wat jij moet dóén met opdracht-woorden?",
             nogSimpeler: "Staat er 'pak' of 'vouw' in? Dan is het een opdracht.",
           },
@@ -293,7 +293,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stap-voor-stap aanwijzingen = instructief", tekst: "De veiligheidskaart laat in stappen zien hoe je iets doet → instructief." }],
           niveaus: {
-            basis: "Aanwijzingen die je uitvoert → instructieve tekst.",
+            basis: "Wat doe je met de veiligheidskaart: lees je hem voor de gezelligheid, of volg je wat erop staat?",
             simpeler: "Moet je iets dóén terwijl je de kaart leest?",
             nogSimpeler: "Legt het uit hóé je iets doet?",
           },
@@ -307,7 +307,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Instructie = leren HOE", tekst: "Een instructieve tekst heeft als doel te laten zien hoe iets gedaan wordt, stap voor stap." }],
           niveaus: {
-            basis: "Doel van instructief = uitleggen hoe je iets dóét.",
+            basis: "Denk aan een handleiding of een recept. Wat kun je nadat je het gelezen hebt?",
             simpeler: "Lees je het om iets te doen of om iets te weten?",
             nogSimpeler: "Wat doet een instructie?",
           },
@@ -332,7 +332,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Om iets te kunnen doen lees je een handleiding (instructief).",
+            basis: "Je wilt iets dóén. Welke tekst vertelt je stap voor stap wat je moet doen?",
             simpeler: "Welke tekst vertelt je wat je moet doen, stap voor stap?",
             nogSimpeler: "Welke tekst helpt je de tent op te zetten?",
           },
@@ -356,7 +356,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Meng' en 'roer' zijn opdrachten → die zin komt uit een recept.",
+            basis: "Een recept zegt wat jij moet doen. Zoek de zin die begint met een opdracht.",
             simpeler: "In welke zin staat wat jij moet doen?",
             nogSimpeler: "Welke zin begint met een opdracht?",
           },
@@ -380,7 +380,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een stappenplan lees je om iets te kunnen doen.",
+            basis: "Wat heb je in je handen als je klaar bent met het stappenplan?",
             simpeler: "Ga je na het lezen zelf iets vouwen?",
             nogSimpeler: "Lees je het om te doen of om te lachen?",
           },
