@@ -35,7 +35,7 @@ const steps = [
           theorie: "Werkwoord = wat onderwerp doet. Vraag 'wat doet Tom?' → danst.",
           voorbeelden: [{ type: "ontleed", tekst: "Tom (eigennaam) danst (ww) op (vz) het (lidw) plein (zelfst nw)." }],
           basiskennis: [{ onderwerp: "Test ik+ww", uitleg: "'Ik dans' ✓ → ww. 'Ik Tom' ✗ → geen ww." }],
-          niveaus: { basis: "danst.", simpeler: "Wat doet Tom? Hij danst. Danst = werkwoord.", nogSimpeler: "Danst" },
+          niveaus: { basis: "Een werkwoord zegt wat iemand doet. Vraag jezelf: wat doet Tom?", simpeler: "Wat doet Tom? Hij danst. Het woord 'danst' is dus het werkwoord.", nogSimpeler: "Danst." },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
           theorie: "Hele werkwoord = infinitief op -en. Lopend (deelwoord), liep (vt), loopt (3e pers) zijn vormen.",
           voorbeelden: [{ type: "tabel", tekst: "lopend → lopen. Schreef → schrijven. At → eten." }],
           basiskennis: [{ onderwerp: "Hele = woordenboek", uitleg: "Hele werkwoord = vorm in woordenboek (lopen, niet loopt)." }],
-          niveaus: { basis: "lopen.", simpeler: "Lopend komt van lopen. Hele werkwoord eindigt op -en = lopen.", nogSimpeler: "Lopen" },
+          niveaus: { basis: "Het hele werkwoord is de vorm die in het woordenboek staat en eindigt meestal op -en.", simpeler: "Lopend komt van lopen. Het hele werkwoord eindigt op -en, dus het is lopen.", nogSimpeler: "Lopen." },
         },
       },
       {
@@ -63,7 +63,7 @@ const steps = [
           theorie: "Echte zin heeft minstens één werkwoord. 'Auto rood' mist 'is' (toestand-ww).",
           voorbeelden: [{ type: "test", tekst: "De auto rood ✗ → 'is' ontbreekt. De auto IS rood ✓." }],
           basiskennis: [{ onderwerp: "Toestands-ww", uitleg: "'Is/zijn/wordt' zijn ook werkwoorden — zonder die woorden is de zin incompleet." }],
-          niveaus: { basis: "Zin 1 = geen ww.", simpeler: "Zin 1 mist 'is' tussen auto en rood. De andere zinnen hebben rijdt/fiets/loopt = ww.", nogSimpeler: "Zin 1" },
+          niveaus: { basis: "Zoek in elke zin het woord dat zegt wat iemand of iets doet. In één zin ontbreekt zo'n woord.", simpeler: "In 'De auto rood en groot' mist het woord 'is'. De andere zinnen hebben wel een werkwoord: rijdt, fiets en loopt.", nogSimpeler: "'De auto rood en groot' heeft geen werkwoord." },
         },
       },
     ],

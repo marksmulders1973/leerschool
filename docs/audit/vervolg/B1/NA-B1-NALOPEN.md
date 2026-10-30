@@ -13,3 +13,4 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - topografieNederland.js regel ~2176: zelfde verradende Flevoland-hint bij een losse quizvraag buiten B1.
 - topografie-nederland-provincies-po stap 1 vraag 1: 'noordwesten' + Amsterdam maakt Noord-Holland raadbaar.
 - pubertijd-groei-po stap 1 vraag 3: opties telegramzinnen ('Ziekte die jongens krijgen').
+- water-erfgoed-nederland-po stap 2 vraag 1: opties telegramzinnen ('Dijk hoger dan duin altijd').

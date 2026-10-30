@@ -134,7 +134,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Kinderboekenweek?", tekst: "De **Kinderboekenweek** is een jaarlijks evenement in NL om kinderen aan het LEZEN te krijgen. Sinds 1955 elk jaar in oktober." },
-            { titel: "2 weken in oktober", tekst: "Loopt altijd ongeveer 2 weken in **oktober**. Elk jaar een ander thema (2024 was 'Lekker eigenwijs!'). Op scholen + in bibliotheken veel activiteiten." },
+            { titel: "Tien dagen in oktober", tekst: "Loopt altijd tien dagen in **oktober**, van woensdag tot en met de zondag van de week erna. Elk jaar een ander thema (2024 was 'Lekker eigenwijs!'). Op scholen + in bibliotheken veel activiteiten." },
             { titel: "Kinderboekenweekgeschenk", tekst: "Bij aankoop van €15 boeken krijg je GRATIS een speciaal boekje dat speciaal voor die week is geschreven. Ook prijzen: Gouden Griffel (beste tekst), Gouden Penseel (beste illustratie)." },
           ],
           woorden: [
@@ -149,7 +149,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: oktober + 2 weken + gratis boek bij €15 aankoop." }],
           niveaus: {
-            basis: "Kinderboekenweek = jaarlijks in oktober (2 weken).",
+            basis: "De Kinderboekenweek is elk jaar in oktober en duurt tien dagen.",
             simpeler: "Oktober-evenement om lezen leuk te maken.",
             nogSimpeler: "Oktober!",
           },
@@ -159,7 +159,7 @@ const steps = [
         q: "Uit hoeveel boeken bestaat de **Harry Potter**-serie?",
         options: ["7", "5", "6", "9"],
         answer: 0,
-        wrongHints: [null, "Elk boek is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?", "Elk boek is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?", "Elk boek is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?"],
+        wrongHints: [null, "Dat zijn er te weinig. De serie loopt door tot Harry bijna volwassen is.", "Dat zijn er te weinig. Na het zesde boek komt er nog een groot slotdeel.", "Dat zijn er te veel. Je denkt misschien aan de films, maar ook die zijn er geen negen."],
       },
     ],
   },

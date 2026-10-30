@@ -160,9 +160,9 @@ const steps = [
     checks: [
       {
         q: "Wie wordt gezien als de **grootste Nederlandse voetballer** ooit?",
-        options: ["Johan Cruijff", "Max Verstappen", "Jordi Cruijff", "Memphis Depay"],
+        options: ["Johan Cruijff", "Arjen Robben", "Jordi Cruijff", "Memphis Depay"],
         answer: 0,
-        wrongHints: [null, "Verstappen racet in de Formule 1 — hij is geen voetballer.", "Jordi Cruijff was ook voetballer, maar lang niet zo groot als zijn vader.", "Memphis is een goede speler van nu, maar won nooit de Gouden Bal."],
+        wrongHints: [null, "Robben was een topspeler bij Oranje en Bayern, maar won nooit de Gouden Bal.", "Jordi Cruijff was ook voetballer, maar lang niet zo groot als zijn vader.", "Memphis is een goede speler van nu, maar won nooit de Gouden Bal."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Cruijff?", tekst: "**Johan Cruijff** (1947-2016) was een NL-voetballer die wereldberoemd werd om zijn techniek + creativiteit. Speelde bij **Ajax** + **FC Barcelona** + Feyenoord." },
@@ -180,9 +180,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Cruijff = #14 = grootste NL-voetballer. Niet verwarren met zoon Jordi Cruijff (ook voetballer, minder bekend)." }],
           niveaus: {
-            basis: "Johan Cruijff = grootste NL-voetballer (3x Gouden Bal).",
-            simpeler: "Cruijff van Ajax + Barcelona, drie keer beste van Europa.",
-            nogSimpeler: "Cruijff = grootste.",
+            basis: "Johan Cruijff wordt gezien als de grootste Nederlandse voetballer: hij won drie keer de Gouden Bal.",
+            simpeler: "Cruijff speelde bij Ajax en Barcelona en werd drie keer gekozen tot beste voetballer van Europa.",
+            nogSimpeler: "Johan Cruijff.",
           },
         },
       },
@@ -193,10 +193,10 @@ const steps = [
         wrongHints: [null, "Dumoulin won de Giro (2017), niet de Tour.", "Van Vleuten won bij de vrouwen, en veel later.", "Jan Janssen won de Tour wél — maar in 1968."],
       },
       {
-        q: "Welke Nederlander werd **vier keer wereldkampioen Formule 1**?",
+        q: "Welke Nederlander werd **wereldkampioen Formule 1** (voor het eerst in 2021)?",
         options: ["Max Verstappen", "Jos Verstappen", "Nyck de Vries", "Geen enkele Nederlander"],
         answer: 0,
-        wrongHints: [null, "Jos Verstappen reed wel Formule 1, maar werd nooit kampioen.", "Nyck de Vries reed maar kort in de Formule 1.", "Er is wél een Nederlander die vier keer kampioen werd (2021-2024)."],
+        wrongHints: [null, "Jos Verstappen reed wel Formule 1, maar werd nooit kampioen.", "Nyck de Vries reed maar kort in de Formule 1.", "Er is wél een Nederlander die kampioen werd, en zelfs meerdere keren."],
       },
       {
         q: "Welke Nederlander heeft de **meeste Olympische medailles** ooit gewonnen?",

@@ -117,7 +117,7 @@ const steps = [
         q: "Stamt mens **af van aap** zoals nu?",
         options: ["Nee, ze delen een voorouder", "Ja, van de chimpansee", "Nee, helemaal niet verwant", "Niet bekend"],
         answer: 0,
-        wrongHints: [null, "De chimpansee is een neef, geen opa. Van wie stammen beide af?", "Mens en chimpansee delen 98,8% van hun DNA — dat is juist heel verwant.", "Wetenschappers weten dit wel."],
+        wrongHints: [null, "De chimpansee leeft nu, net als wij. Kan een dier dat nu leeft onze voorouder zijn?", "Mens en chimpansee lijken enorm op elkaar, ook in hun DNA. Dat is juist heel verwant.", "Hier is wel veel over bekend, uit fossielen en DNA-onderzoek."],
         uitlegPad: {
           stappen: [
             { titel: "Veelvoorkomend misverstand", tekst: "Veel mensen denken: 'mens stamt af van aap'. Maar dat klopt NIET. Mens en chimpansee zijn **NEEFJES**, niet **kind-en-ouder**." },
@@ -135,9 +135,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Mens + aap = NEEFJES. Niet ouder-kind." }],
           niveaus: {
-            basis: "Mens en aap hebben gemeenschappelijke voorouder ~7 mln jr geleden.",
-            simpeler: "Mens stamt NIET af van moderne aap, ze zijn neefjes.",
-            nogSimpeler: "Mens + aap = neefjes.",
+            basis: "De mens stamt niet af van de apen van nu. Mens en chimpansee hebben wel een gemeenschappelijke voorouder, zo'n 7 miljoen jaar geleden.",
+            simpeler: "De mens komt niet van de chimpansee. Ze hebben dezelfde over-over-overgrootouder van heel lang geleden, dus ze zijn een soort neefjes.",
+            nogSimpeler: "Mens en aap zijn neefjes met dezelfde voorouder.",
           },
         },
       },
@@ -145,7 +145,7 @@ const steps = [
         q: "Wie was **Lucy**?",
         options: ["Een oud skelet uit Ethiopië", "Eerste mens op maan", "Een beroemd schilderij", "Een snelle sportauto"],
         answer: 0,
-        wrongHints: [null, "Lucy hoort bij het verhaal van de mens miljoenen jaren geleden — bestond ruimtevaart toen al?", "Lucy is iets wat wetenschappers hebben opgegraven — hang je zoiets aan de muur?", "Deze naam hoort bij onderzoek naar waar de mens vandaan komt — heeft een auto daarmee te maken?"],
+        wrongHints: [null, "De eerste mens op de maan was Neil Armstrong, in 1969. Lucy is iets heel anders en veel ouder.", "Lucy is geen kunstwerk. Lees in de uitleg nog eens waar de naam vandaan komt.", "Lucy is geen auto. Lees in de uitleg nog eens waar de naam vandaan komt."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Lucy?", tekst: "**Lucy** is de bijnaam van een beroemd **3,2 miljoen jaar oud skelet** van een **Australopithecus afarensis** — een vroege mens-voorouder. Gevonden in **Ethiopië** in **1974**." },
@@ -163,9 +163,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Lucy + Ethiopië + 1974 + Australopithecus = de combinatie. Beroemd skelet, bekendste fossiel mens-voorouder." }],
           niveaus: {
-            basis: "Lucy = Australopithecus-skelet uit Ethiopië (1974).",
-            simpeler: "3,2 miljoen jaar oud skelet, 1 meter lang, liep al rechtop. Gevonden in 1974, bijnaam uit Beatles-lied.",
-            nogSimpeler: "Lucy = oud skelet Ethiopië",
+            basis: "Lucy is de bijnaam van een 3,2 miljoen jaar oud skelet van een Australopithecus, gevonden in Ethiopië in 1974.",
+            simpeler: "In 1974 vonden onderzoekers in Ethiopië een heel oud skelet van een mensachtige die al rechtop liep. Ze noemden haar Lucy, naar een liedje van de Beatles.",
+            nogSimpeler: "Lucy is een heel oud skelet uit Ethiopië.",
           },
         },
       },

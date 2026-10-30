@@ -185,9 +185,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "3 toestanden onthoud: V-V-G (vast-vloeibaar-gas). Komt er een 4e woord bij dat eindigt op -heid? = eigenschap, niet toestand." }],
           niveaus: {
-            basis: "Vloeibaarheid (geen toestand, maar eigenschap).",
-            simpeler: "3 toestanden: vast / vloeibaar / gas. 'Vloeibaarheid' is een eigenschap, geen toestand.",
-            nogSimpeler: "Vloeibaarheid",
+            basis: "Er zijn drie toestanden: vast, vloeibaar en gas. Een woord dat eindigt op -heid is een eigenschap van een stof, geen toestand.",
+            simpeler: "Vast, vloeibaar en gas zijn de drie toestanden. Vloeibaarheid zegt hoe makkelijk iets stroomt; dat is een eigenschap, geen toestand.",
+            nogSimpeler: "Vloeibaarheid is geen toestand.",
           },
         },
       },

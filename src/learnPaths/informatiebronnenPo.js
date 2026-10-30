@@ -79,17 +79,17 @@ const steps = [
         wrongHints: [null, "Daar vind je woorden en kaarten. Staat er een verhaal over de Romeinen in?", "Kaarten en nieuws van nu. Vertellen die hoe de Romeinen leefden?", "Woordbetekenis en nieuws van vandaag. Vind je daar de geschiedenis?"],
         uitlegPad: {
           stappen: [{ titel: "Werkstuk = brede bron", tekst: "Een werkstuk vraagt **brede info** + **structuur**. Combineer **encyclopedie** (Wikipedia of Winkler Prins) voor algemeen + **schoolboek** voor jouw-niveau-uitleg. Atlas erbij als je kaarten nodig hebt." }],
-          niveaus: { basis: "Encyclopedie en schoolboek.", simpeler: "Werkstuk → brede info → encyclopedie.", nogSimpeler: "Encyclopedie" },
+          niveaus: { basis: "Voor een werkstuk over geschiedenis gebruik je een encyclopedie en je schoolboek.", simpeler: "Voor een werkstuk heb je veel informatie over één onderwerp nodig. Die vind je in een encyclopedie.", nogSimpeler: "Encyclopedie en schoolboek." },
         },
       },
       {
-        q: "Welke informatie krijg je het BESTE van **een expert/leerkracht**?",
+        q: "Welke informatie krijg je het **beste** van een expert of leerkracht?",
         options: ["Uitleg die past bij jouw vraag","Een lijst van alle feiten","Een kaart van de hele wereld","De spelling van een woord"],
         answer: 0,
         wrongHints: [null, "Daarvoor pak je een naslag-bron, geen mens.", "Daarvoor is een atlas.", "Daarvoor is een woordenboek."],
         uitlegPad: {
           stappen: [{ titel: "Mens = persoonlijke uitleg", tekst: "Een expert kan **luisteren naar JOUW vraag** en uitleg geven op JOUW niveau — beter dan een boek dat alles vertelt. Vraag de juf voor uitleg, niet voor spelling." }],
-          niveaus: { basis: "Expert = persoonlijke uitleg.", simpeler: "Mens kan luisteren en jouw vraag aanpakken.", nogSimpeler: "Expert" },
+          niveaus: { basis: "Een expert of leerkracht kan uitleg geven die precies past bij jouw vraag.", simpeler: "Een mens kan naar je luisteren en antwoord geven op precies wat jij wilt weten. Een boek kan dat niet.", nogSimpeler: "Uitleg die bij jouw vraag past." },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -130,9 +130,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kaart nodig = atlas.",
-            simpeler: "Wil je iets op een kaart zien? Pak de atlas.",
-            nogSimpeler: "Atlas",
+            basis: "Heb je een kaart nodig, dan pak je een atlas.",
+            simpeler: "Wil je iets op een kaart zien, zoals een rivier door landen? Dan pak je de atlas.",
+            nogSimpeler: "De atlas.",
           },
         },
       },
@@ -173,9 +173,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vak-uitleg op jouw niveau = schoolboek.",
-            simpeler: "Rekenen niet snappen? Kijk in je rekenboek.",
-            nogSimpeler: "Rekenboek",
+            basis: "Uitleg over schoolstof op jouw niveau vind je in je eigen schoolboek.",
+            simpeler: "Snap je iets van rekenen niet? Kijk dan in je rekenboek, dat is geschreven voor jouw groep.",
+            nogSimpeler: "Je rekenboek.",
           },
         },
       },

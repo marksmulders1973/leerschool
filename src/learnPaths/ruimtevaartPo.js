@@ -23,16 +23,16 @@ const steps = [
         wrongHints: [null, "De 1e wet gaat over iets dat stil blijft liggen of doorrolt. Welke wet gaat over duwen en terugduwen?", "Archimedes gaat over drijven in water. Een raket drijft niet.", "De zwaartekracht trekt de raket juist naar beneden."],
       },
       {
-        q: "Wat is **ontsnappingssnelheid** vanaf aarde?",
+        q: "Wat is de **ontsnappingssnelheid** vanaf de aarde?",
         options: ["~11,2 km/s", "~1,1 km/s", "~112 km/s", "~11,2 km/u"],
         answer: 0,
-        wrongHints: [null, "Zo traag kom je niet los van de aarde: dat is nog geen 4000 km per uur.", "Zo snel hoeft het niet. Kijk nog eens naar de komma.", "11,2 km per uur is fietstempo! Kijk naar de eenheid."],
+        wrongHints: [null, "Zo traag kom je niet los van de aarde: dat is nog geen 4000 km per uur.", "Zo snel hoeft het niet. Kijk nog eens naar de komma.", "Dat is fietstempo. Daarmee kom je nooit los van de aarde."],
       },
       {
         q: "Wie was de **eerste mens in de ruimte**?",
         options: ["Joeri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Valentina Teresjkova"],
         answer: 0,
-        wrongHints: [null, "Neil Armstrong ging pas in de jaren '60 voor het eerst de ruimte in. Iemand anders was eerder.", "Buzz Aldrin ging pas in 1966 voor het eerst de ruimte in.", "Valentina Teresjkova was in 1963 de eerste vrouw in de ruimte. Een man was nog eerder."],
+        wrongHints: [null, "Neil Armstrong ging pas in 1966 voor het eerst de ruimte in en in 1969 naar de maan. Iemand anders was jaren eerder.", "Buzz Aldrin ging pas in 1966 voor het eerst de ruimte in.", "Valentina Teresjkova was in 1963 de eerste vrouw in de ruimte. Een man was nog eerder."],
       },
       {
         q: "Waarom lanceer je een raket het liefst **dicht bij de evenaar**?",

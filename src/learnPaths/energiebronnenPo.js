@@ -101,7 +101,7 @@ const steps = [
         wrongHints: [null, "Aardgas is een gas — denk aan de vlam op het fornuis.", "Steenkool is een vaste, zwarte steen.", "Uranium is een metaal en geen fossiele brandstof."],
       },
       {
-        q: "In welk jaar werd de gaswinning uit het **Groningen-gasveld** gestopt?",
+        q: "In welk jaar ging het **Groningen-gasveld** definitief dicht?",
         options: ["2024", "2018", "1959", "2050"],
         answer: 0,
         wrongHints: [null, "In 2018 besloot de regering te stoppen, maar de kraan ging toen nog niet dicht.", "In 1959 werd het gas juist ontdekt.", "2050 is het klimaatdoel voor heel Nederland, niet het jaar dat het veld sloot."],
@@ -122,9 +122,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Groningen-gas: ontdekt 1959, gestopt 2024 wegens aardbevingen. Politiek en ethisch issue — 'energie vs. veiligheid bewoners'." }],
           niveaus: {
-            basis: "2024 (dichtgedraaid wegens aardbevingen).",
-            simpeler: "Groningen-gasveld is per 2023-2024 gesloten omdat gaswinning aardbevingen veroorzaakt.",
-            nogSimpeler: "2024",
+            basis: "In 2024 ging het Groningen-gasveld voorgoed dicht, omdat de gaswinning aardbevingen veroorzaakte.",
+            simpeler: "De gaskraan ging in oktober 2023 dicht. In 2024 besloot de regering dat het veld nooit meer opengaat.",
+            nogSimpeler: "In 2024.",
           },
         },
       },

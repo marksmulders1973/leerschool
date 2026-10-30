@@ -94,14 +94,14 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Newton = appel + zwaartekracht (legende maar makkelijk te onthouden)." }],
           niveaus: {
-            basis: "Newton ontdekte zwaartekracht (rond 1687).",
-            simpeler: "Newton + appel = zwaartekracht.",
-            nogSimpeler: "Newton = zwaartekracht.",
+            basis: "Isaac Newton beschreef in 1687 als eerste de wet van de zwaartekracht.",
+            simpeler: "Het verhaal gaat dat Newton een appel zag vallen en zich afvroeg waarom. Zo kwam hij op de zwaartekracht.",
+            nogSimpeler: "Newton.",
           },
         },
       },
       {
-        q: "Wat is **Newton's eerste wet**?",
+        q: "Wat is **Newtons eerste wet**?",
         options: ["Traagheid", "F = m × a", "Actie = reactie", "Energiebehoud"],
         answer: 0,
         wrongHints: [null, "Dat is de 2e wet.", "Dat is de 3e wet.", "Dat is geen wet van Newton."],

@@ -471,12 +471,94 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 1",
+  "hash": "b62ea867da66d353",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 2",
+  "hash": "d62e33c330b91f24",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 3",
+  "hash": "4fca9574d3b3587d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Oktober klopt; niveau basis en uitlegstap zeiden '2 weken', de Kinderboekenweek duurt tien dagen (woensdag t/m zondag week erna)."
+ },
+ {
   "waar": "bekende-boeken-literatuur-po stap 4 vraag 9",
   "hash": "2003fa896fcc5dc0",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Niveaus in telegramstijl (\"Boeken lenen gratis kind.\"), \"gratis in heel NL voor <18\" te stellig (zo is het niet overal)."
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 2 vraag 1",
+  "hash": "003660fbb74419f5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Wordt gezien als' dekt de stelligheid; afleider Max Verstappen is geen voetballer (absurd); niveaus telegramstijl."
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 2 vraag 2",
+  "hash": "022d9f26d1265089",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 2 vraag 3",
+  "hash": "e15b83a964ed7e37",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Vier keer' is nu juist (2021-2024) maar veroudert bij elke nieuwe titel; hint D herhaalde het getal."
+ },
+ {
+  "waar": "bekende-nederlanders-po stap 2 vraag 4",
+  "hash": "8eacc7074831274d",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 2 vraag 1",
+  "hash": "594b971d973a71cc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Ontdekte zwaartekracht' is een schoolvereenvoudiging (Newton beschreef de wet); startset-vraag, dus vraagtekst niet aangeraakt. Niveaus waren telegramstijl."
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 2 vraag 2",
+  "hash": "dc5b0df0edf7ace9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Taalfout: 'Newton's' moet in het Nederlands 'Newtons' zijn. Inhoud klopt."
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 2 vraag 3",
+  "hash": "8fd7e377674473e5",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 2 vraag 4",
+  "hash": "566e2c3a4546be6e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "bekende-wetenschappers-po stap 3 vraag 2",
@@ -1959,11 +2041,55 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "energiebronnen-po stap 2 vraag 1",
+  "hash": "5337353c3c0f5752",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 2 vraag 3",
+  "hash": "2f93f2266b9b19b2",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 2 vraag 4",
+  "hash": "d31b82c252aa3a15",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "~50 jaar is de gangbare reserve/productie-schatting, maar schattingen verschillen en verouderen; 'naar schatting' staat er al bij. Niet aangepast."
+ },
+ {
   "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
   "hash": "acef806a46f32508",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "evolutie-mens-po stap 2 vraag 2",
+  "hash": "b9eafaa24bf66ed2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleiders zijn absurd (sportauto, schilderij) en de hints omschreven het antwoord ('opgegraven', 'onderzoek naar waar de mens vandaan komt'). Startset-vraag: opties niet aangeraakt."
+ },
+ {
+  "waar": "evolutie-mens-po stap 2 vraag 3",
+  "hash": "1f7419f436d9aed8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "evolutie-mens-po stap 2 vraag 4",
+  "hash": "98b3fcc59df58ba9",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "evolutie-mens-po stap 4 vraag 10",
@@ -2927,6 +3053,38 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Goede optie is de langste en de meest specifieke; 'massa' in de vraag geeft 'veel' al prijs."
+ },
+ {
+  "waar": "informatiebronnen-po stap 1 vraag 4",
+  "hash": "291d2c2bf8d5b06b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus telegramstijl met pijlen en basis = kaal antwoord."
+ },
+ {
+  "waar": "informatiebronnen-po stap 1 vraag 5",
+  "hash": "a438ccb29da8b63c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag had 'het BESTE' in kapitalen en 'expert/leerkracht' met schuine streep; niveaus telegramstijl."
+ },
+ {
+  "waar": "informatiebronnen-po stap 1 vraag 6",
+  "hash": "775f324d29756781",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus telegramstijl."
+ },
+ {
+  "waar": "informatiebronnen-po stap 1 vraag 7",
+  "hash": "8dfb88ea39e954db",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveaus telegramstijl."
  },
  {
   "waar": "inhoudsopgave-register-po stap 1 vraag 1",
@@ -4142,6 +4300,34 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "nederlandse-kunstenaars-po stap 1 vraag 1",
+  "hash": "5ebd71e5a5494c71",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 1 vraag 2",
+  "hash": "5bf62e9ccffffec8",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 1 vraag 3",
+  "hash": "c5f58783126b0ece",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "nederlandse-kunstenaars-po stap 1 vraag 4",
+  "hash": "54a406c9fb4b3f02",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "negatieve-getallen-po stap 1 vraag 1",
   "hash": "2973fa4e48d864a5",
   "oordeel": "twijfel",
@@ -4272,6 +4458,34 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "olympische-spelen-po stap 1 vraag 1",
+  "hash": "60f5403395a31874",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 1 vraag 2",
+  "hash": "84fc08bb7fe7acf7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 1 vraag 3",
+  "hash": "dab1988c8cc7f282",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "olympische-spelen-po stap 1 vraag 4",
+  "hash": "0f6fa2c73a96251c",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "olympische-spelen-po stap 4 vraag 12",
   "hash": "1d37687ba56d0a39",
   "oordeel": "twijfel",
@@ -4393,6 +4607,30 @@
   "bron": "vervolg B1 pakket 12 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; afleider 'hoe slim of dom de leerlingen zijn' was kwetsend en te absurd (raadbaar)."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 1 vraag 1",
+  "hash": "6ae81cf26d8293a7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie 'Specerijen + goud + handel' is telegramstijl en specifieker dan de afleiders; startset-vraag, dus opties niet aangeraakt. Niveaus waren telegramstijl."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 1 vraag 3",
+  "hash": "e413484d54c4bb12",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie 'Vitamine C-tekort ziekte' was geen nette zin; inhoud en hints kloppen."
+ },
+ {
+  "waar": "ontdekkingsreizen-po stap 1 vraag 4",
+  "hash": "1fd013d3b6e9153d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag miste het lidwoord ('het Verdrag'), opties in telegramstijl met '+'; hint D ('veel meer dan Afrika alleen') wees richting 'wereld'."
  },
  {
   "waar": "ontdekkingsreizen-po stap 4 vraag 8",
@@ -4785,6 +5023,37 @@
   "reden": "Antwoord staat letterlijk in de beschrijving (\"Links van de ingang liggen de leeuwen\"); afleider \"terug naar buiten\" is van een andere soort."
  },
  {
+  "waar": "politiek-democratie-po stap 1 vraag 1",
+  "hash": "1b7a6271f982240d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Korte opties zijn acceptabel; hints goed. Niveaus waren telegramstijl. Startset-vraag."
+ },
+ {
+  "waar": "politiek-democratie-po stap 1 vraag 2",
+  "hash": "49dc27029f0204e6",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 1 vraag 3",
+  "hash": "44dc5b7f94ee10f4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord 18 klopt; hint bij 21 noemde '1971', maar de kiesgerechtigde leeftijd ging in 1972 van 21 naar 18."
+ },
+ {
+  "waar": "politiek-democratie-po stap 1 vraag 4",
+  "hash": "a4a1395eec925dd6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag miste lidwoord ('Wat is coalitie?'); inhoud en hints goed."
+ },
+ {
   "waar": "procenten-po stap 1 vraag 1",
   "hash": "ddb74629141f1262",
   "oordeel": "goed",
@@ -4935,6 +5204,28 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "ruimtevaart-po stap 1 vraag 1",
+  "hash": "bd2177fc56d25608",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "ruimtevaart-po stap 1 vraag 3",
+  "hash": "b3a304ac968425c5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij Armstrong zei 'pas in de jaren '60', maar Gagarin vloog ook in de jaren '60 (1961): verwarrend, niet onderscheidend."
+ },
+ {
+  "waar": "ruimtevaart-po stap 1 vraag 4",
+  "hash": "01266323ea2591ad",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "samenstellingen-tussenletters-po stap 1 vraag 1",
@@ -6455,6 +6746,35 @@
   "reden": "Afkorting 'NL' in de vraag voor groep 6-8; inhoud klopt."
  },
  {
+  "waar": "toestand-stoffen-po stap 1 vraag 1",
+  "hash": "d941db1207ed13f7",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 1 vraag 2",
+  "hash": "03af9c8e5a154452",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 1 vraag 3",
+  "hash": "811e62559517e89e",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 1 vraag 4",
+  "hash": "4d38e5f68cf5a65c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "'Vloeibaarheid' is raadbaar door de vorm (-heid), maar het uitlegPad is bewust rond deze toets-truc gebouwd; verdedigbaar. Niveaus waren telegramstijl en basis gaf meteen het antwoord."
+ },
+ {
   "waar": "topografie-nederland stap 1 vraag 1",
   "hash": "1bf18d0bbc988473",
   "oordeel": "twijfel",
@@ -6820,6 +7140,21 @@
   "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord (~9 dagen verblijftijd) en hints kloppen; optiestijl was ongelijk ('~8-10 dagen' naast 'Ongeveer een jaar' en '1 uur')."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 1 vraag 1",
+  "hash": "99714ed70e12bd4c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag en hints goed; niveaus waren telegramstijl ('NU = weer', 'decennia')."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 1 vraag 3",
+  "hash": "3c34663b9b97b9a3",
+  "oordeel": "goed",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "werelddelen-landen-po stap 1 vraag 1",
@@ -7482,6 +7817,30 @@
   "bron": "wereld-4 steekproef 8 (27 okt)",
   "datum": "2026-10-27",
   "reden": "Antwoord klopt; 'geen god in de westerse zin' kan ook op hindoeisme slaan (geen enkele God), alleen de toevoeging tussen haakjes maakt het eenduidig."
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 1 vraag 1",
+  "hash": "b4f03257235a5317",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveau basis was alleen 'danst.' (kaal antwoord, geen hulpstap)."
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 1 vraag 2",
+  "hash": "2a3c02fca31d2f83",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints goed; niveau basis was alleen 'lopen.'."
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 1 vraag 3",
+  "hash": "55fe463d07576e2e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord goed; niveaus verwezen naar 'Zin 1', wat niet klopt zodra opties in een andere volgorde getoond worden."
  },
  {
   "waar": "werkwoordsspelling-dt stap 1 vraag 10",
