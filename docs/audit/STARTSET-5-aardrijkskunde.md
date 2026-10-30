@@ -1,143 +1,143 @@
 # Startset Aardrijkskunde · groep 5 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-10-26. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
-Vraag: Welke is **GEEN** onderdeel van een kaart?
+Vraag: Wat is **geen** onderdeel van een kaart?
 - ▫️ Schaal
 - ▫️ Legenda
-- ✅ Geluid
 - ▫️ Kompasroos
+- ✅ Inhoudsopgave
 
 ## 2. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
 Vraag: Wat betekent **blauw** op een kaart meestal?
-- ✅ Water
-- ▫️ Bergen
 - ▫️ Steden
+- ▫️ Bergen
 - ▫️ Bos
+- ✅ Water
 
 ## 3. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
 Vraag: Wat doe je **eerst** als je een kaart krijgt?
-- ▫️ De kleinste symbolen tellen
-- ▫️ De schaal uitrekenen
-- ▫️ Meteen de vraag beantwoorden
-- ✅ Titel en legenda lezen
+- ✅ De titel en de legenda lezen
+- ▫️ Het noorden op de kompasroos zoeken
+- ▫️ De afstanden met de schaal uitrekenen
+- ▫️ De plaatsnamen op de kaart opzoeken
 
 ## 4. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
 Vraag: Een kaart is een tekening van een stuk van de wereld. Vanaf welke kant kijk je dan?
-- ▫️ Van binnenuit
+- ▫️ Vanaf een heuvel
 - ✅ Van bovenaf
-- ▫️ Van onderaf
+- ▫️ Vanaf de straat
 - ▫️ Van opzij
 
 ## 5. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
 Vraag: Welk onderdeel van een kaart vertelt je **waar de kaart over gaat**?
+- ▫️ De kompasroos
 - ▫️ De legenda
 - ▫️ De schaal
-- ▫️ De kompasroos
 - ✅ De titel
 
 ## 6. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
 Vraag: Welk onderdeel van een kaart vertelt je hoeveel **km** 1 cm op de kaart is?
-- ▫️ De titel
-- ✅ De schaal
-- ▫️ De kompasroos
 - ▫️ De legenda
+- ▫️ De titel
+- ▫️ De kompasroos
+- ✅ De schaal
 
 ## 7. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
-Vraag: Sommige kaarten hebben een raster met letters en cijfers, zoals **B3** of **C5**. Hoe heet dat?
+Vraag: Op sommige kaarten wijs je een vakje aan met een letter en een cijfer, zoals **B3** of **C5**. Hoe heet zo'n plaatsaanduiding?
 - ▫️ Schaal
-- ▫️ Kompasroos
 - ✅ Coördinaten
+- ▫️ Kompasroos
 - ▫️ Legenda
 
 ## 8. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 1)
 Vraag: Wat betekent **geel of bruin** op een kaart meestal?
-- ✅ Bergen of hoogland
+- ▫️ Zee of rivier
+- ▫️ Snelweg of hoofdweg
 - ▫️ Weiland of laagland
-- ▫️ Hoofdwegen
-- ▫️ Water
+- ✅ Bergen of hoogland
 
 ## 9. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
 Vraag: Aan welke kant van een normale kaart ligt **N** (noord)?
-- ▫️ rechterkant
-- ▫️ onderkant
-- ✅ bovenkant
-- ▫️ linkerkant
+- ▫️ Linkerkant
+- ▫️ Onderkant
+- ✅ Bovenkant
+- ▫️ Rechterkant
 
 ## 10. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
-Vraag: Amsterdam ligt **boven** Rotterdam op de kaart. Dus Amsterdam ligt:
+Vraag: Amsterdam ligt op de kaart **boven** Rotterdam. Hoe zeg je dat met een windrichting?
 - ▫️ Ten oosten van Rotterdam
-- ✅ Ten noorden van Rotterdam
-- ▫️ Ten westen van Rotterdam
 - ▫️ Ten zuiden van Rotterdam
+- ▫️ Ten westen van Rotterdam
+- ✅ Ten noorden van Rotterdam
 
 ## 11. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
-Vraag: Welke richting ligt **rechts-onder** op een kaart?
-- ▫️ Noordoost
-- ▫️ Zuidwest
-- ✅ Zuidoost
+Vraag: Welke richting ligt **rechts-onder** op een kaart waar het noorden boven is?
 - ▫️ Noordwest
+- ▫️ Zuidwest
+- ▫️ Noordoost
+- ✅ Zuidoost
 
 ## 12. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
-Vraag: Welke richting ligt tussen N en O?
+Vraag: Welke tussenrichting ligt op een normale kaart tussen **boven** en **rechts**?
 - ▫️ ZW (Zuidwest)
+- ▫️ ZO (Zuidoost)
 - ✅ NO (Noordoost)
 - ▫️ NW (Noordwest)
-- ▫️ ZO (Zuidoost)
 
 ## 13. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
 Vraag: Op een normale kaart: welke richting ligt aan de **linkerkant**?
-- ▫️ Zuid
-- ▫️ Noord
 - ▫️ Oost
+- ▫️ Noord
 - ✅ West
+- ▫️ Zuid
 
 ## 14. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
 Vraag: Op een **Engelse** kaart staat de letter **S**. Welke richting is dat?
-- ✅ Zuid
-- ▫️ West
 - ▫️ Oost
+- ▫️ West
+- ✅ Zuid
 - ▫️ Noord
 
 ## 15. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 2)
 Vraag: Utrecht ligt **rechts** van Den Haag op de kaart. In welke richting reis je van Den Haag naar Utrecht?
-- ▫️ Naar het westen
-- ✅ Naar het oosten
 - ▫️ Naar het zuiden
+- ✅ Naar het oosten
 - ▫️ Naar het noorden
+- ▫️ Naar het westen
 
 ## 16. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 3)
-Vraag: Schaal **1:100.000**. 1 cm op kaart = ___ in het echt.
-- ✅ 1 km
-- ▫️ 100 m
-- ▫️ 10 km
-- ▫️ 100 km
+Vraag: Welke schaal past bij een **wereldkaart**?
+- ✅ 1:50.000.000
+- ▫️ 1:200.000
+- ▫️ 1:10.000
+- ▫️ 1:50
 
 ## 17. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 4)
 Vraag: Welke vorm hoort meestal bij het kaart-symbool voor een **camping**?
-- ▫️ Een anker
-- ▫️ Een rechthoek
-- ✅ Een driehoekje
 - ▫️ Een kruisje
+- ✅ Een driehoekje
+- ▫️ Een rondje
+- ▫️ Een vierkantje
 
 ## 18. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 4)
-Vraag: Een **rode lijn** op een wegenkaart is meestal:
-- ✅ Hoofdweg
-- ▫️ Spoor
-- ▫️ Wandelpad
-- ▫️ Rivier
+Vraag: Wat is een **rode lijn** op een wegenkaart meestal?
+- ▫️ Een rivier
+- ▫️ Een spoorlijn
+- ▫️ Een wandelpad
+- ✅ Een hoofdweg
 
 ## 19. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 4)
 Vraag: Wat betekent een **ster** op een atlaskaart?
 - ▫️ Vliegveld
+- ✅ Hoofdstad
 - ▫️ Bos
 - ▫️ Berg
-- ✅ Hoofdstad
 
 ## 20. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 4)
-Vraag: Wat doe je als je een **onbekend symbool** ziet?
-- ✅ Legenda checken
-- ▫️ Gokken wat het is
-- ▫️ Het symbool overslaan
-- ▫️ De titel nog eens lezen
+Vraag: Je ziet op een kaart een **symbool** dat je niet kent. Waar kijk je om te weten wat het betekent?
+- ✅ In de legenda kijken
+- ▫️ In de titel kijken
+- ▫️ Bij de schaalbalk kijken
+- ▫️ Bij de kompasroos kijken

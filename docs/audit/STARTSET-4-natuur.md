@@ -1,143 +1,143 @@
 # Startset Natuur & techniek · groep 4 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-10-26. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 1)
 Vraag: In welk seizoen **vallen de bladeren** van de bomen?
+- ▫️ zomer
 - ✅ herfst
 - ▫️ winter
 - ▫️ lente
-- ▫️ zomer
 
 ## 2. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 1)
 Vraag: Welk seizoen komt **na de winter**?
+- ▫️ zomer
+- ▫️ herfst
 - ✅ lente
 - ▫️ nog een winter
-- ▫️ herfst
-- ▫️ zomer
 
 ## 3. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 1)
 Vraag: Wat hoort bij de **lente**?
-- ▫️ het sneeuwt vaak
-- ✅ jonge dieren worden geboren
 - ▫️ de zomervakantie begint
+- ✅ jonge dieren worden geboren
+- ▫️ het sneeuwt vaak
 - ▫️ de bladeren vallen
 
 ## 4. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 1)
 Vraag: Welke maanden horen bij de **zomer**?
 - ▫️ maart, april, mei
 - ▫️ december, januari, februari
-- ✅ juni, juli, augustus
 - ▫️ september, oktober, november
+- ✅ juni, juli, augustus
 
 ## 5. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 1)
 Vraag: Wanneer zijn de dagen het **kortst** (het is vroeg donker)?
-- ▫️ in de zomer
-- ✅ in de winter
-- ▫️ elk seizoen even lang
 - ▫️ in de lente
+- ▫️ in de zomer
+- ▫️ elk seizoen even lang
+- ✅ in de winter
 
 ## 6. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 2)
 Vraag: Hoe heet een **jong schaap**?
 - ▫️ veulen
 - ▫️ kalf
-- ✅ lam
 - ▫️ big
+- ✅ lam
 
 ## 7. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 2)
 Vraag: Wat eet een **koe**?
+- ✅ gras
 - ▫️ slakken
 - ▫️ vis
 - ▫️ muizen
-- ✅ gras
 
 ## 8. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 2)
 Vraag: Welk dier komt uit een **ei**?
-- ▫️ kitten
-- ▫️ pup
-- ▫️ kalf
 - ✅ kuiken
+- ▫️ kitten
+- ▫️ kalf
+- ▫️ pup
 
 ## 9. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 2)
 Vraag: Waar woont een **vogel** met zijn jongen?
-- ▫️ in een hol onder de grond
 - ▫️ in een bijenkorf
-- ▫️ in het water
 - ✅ in een nest
+- ▫️ in het water
+- ▫️ in een hol onder de grond
 
 ## 10. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 2)
 Vraag: Welk dier eet **andere dieren** (bijvoorbeeld muizen)?
-- ▫️ konijn
 - ▫️ schaap
-- ✅ uil
+- ▫️ konijn
 - ▫️ koe
+- ✅ uil
 
 ## 11. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 3)
 Vraag: Waar begint een plant mee?
-- ✅ een zaadje
-- ▫️ een blad
-- ▫️ een appel
 - ▫️ een bloem
+- ✅ een zaadje
+- ▫️ een appel
+- ▫️ een blad
 
 ## 12. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 3)
 Vraag: Welk deel van de plant zit **onder de grond**?
+- ✅ de wortel
 - ▫️ het blad
 - ▫️ de stengel
-- ✅ de wortel
 - ▫️ de bloem
 
 ## 13. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 3)
 Vraag: Wat heeft een plant nodig om te groeien?
-- ▫️ wind
-- ✅ water en licht
 - ▫️ alleen donker
 - ▫️ snoep
+- ✅ water en licht
+- ▫️ wind
 
 ## 14. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 3)
 Vraag: Welke boom verliest in de **herfst** zijn bladeren?
 - ▫️ de spar
+- ✅ de eik
 - ▫️ de den
 - ▫️ de kerstboom
-- ✅ de eik
 
 ## 15. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 3)
 Vraag: Waar komen **nieuwe zaadjes** vandaan?
-- ▫️ uit de wortel
-- ▫️ uit de grond
-- ▫️ uit de stengel
 - ✅ uit de bloem
+- ▫️ uit de grond
+- ▫️ uit de wortel
+- ▫️ uit de stengel
 
 ## 16. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 4)
 Vraag: Waar komt **regen** uit?
-- ▫️ uit bomen
-- ▫️ uit de grond
-- ▫️ uit de zon
 - ✅ uit wolken
+- ▫️ uit de grond
+- ▫️ uit bomen
+- ▫️ uit de zon
 
 ## 17. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 4)
 Vraag: Wanneer kun je een **regenboog** zien?
-- ✅ als de zon schijnt terwijl het regent
 - ▫️ als het sneeuwt en alles wit is
+- ✅ als de zon schijnt terwijl het regent
 - ▫️ als het heel hard waait zonder regen
 - ▫️ als het 's nachts heel donker is
 
 ## 18. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 4)
 Vraag: Bij welke temperatuur wordt water **ijs**?
-- ▫️ bij 100 graden
-- ✅ onder 0 graden
-- ▫️ als de zon schijnt
 - ▫️ bij 20 graden
+- ▫️ bij 100 graden
+- ▫️ als de zon schijnt
+- ✅ onder 0 graden
 
 ## 19. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 4)
 Vraag: Waarmee **meet** je hoe warm het is?
-- ✅ met een thermometer
-- ▫️ met een klok
 - ▫️ met een liniaal
+- ▫️ met een klok
 - ▫️ met een weegschaal
+- ✅ met een thermometer
 
 ## 20. Natuur — seizoenen, dieren en planten (groep 4) (natuur-seizoenen-dieren-g4, stap 4)
 Vraag: Wat zie je aan de bomen als het **hard waait**?
 - ▫️ er groeien appels aan
+- ▫️ de bomen worden kleiner
 - ✅ de takken bewegen heen en weer
 - ▫️ de bladeren worden geel
-- ▫️ de bomen worden kleiner

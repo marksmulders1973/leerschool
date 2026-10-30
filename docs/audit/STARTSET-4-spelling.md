@@ -1,143 +1,143 @@
 # Startset Spelling · groep 4 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-10-26. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: het voertuig op rails?
-- ✅ trein
-- ▫️ tren
 - ▫️ trijn
+- ▫️ tren
+- ✅ trein
 - ▫️ treijn
 
 ## 2. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: niet groot?
-- ✅ klein
-- ▫️ klijn
 - ▫️ kleijn
+- ▫️ klijn
+- ✅ klein
 - ▫️ kleen
 
 ## 3. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: een open ruimte in een stad?
-- ▫️ plien
 - ✅ plein
 - ▫️ plijn
 - ▫️ pleijn
+- ▫️ plien
 
 ## 4. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: 'Het ____ speelt met haar pop.' Welk woord is goed?
-- ✅ meisje
+- ▫️ mijsje
 - ▫️ meissje
 - ▫️ maisje
-- ▫️ mijsje
+- ✅ meisje
 
 ## 5. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: 'De les gaat om drie uur ____.' (= ophouden)
 - ▫️ eintigen
+- ▫️ eindiegen
 - ▫️ ijndigen
 - ✅ eindigen
-- ▫️ eindiegen
 
 ## 6. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Jij en ik samen' — welk woordje is dat, goed geschreven?
-- ▫️ mei
-- ▫️ zei
 - ✅ wij
+- ▫️ zei
+- ▫️ mei
 - ▫️ wei
 
 ## 7. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: Hoe schrijf je: het voedsel uit Azië (witte korreltjes)?
-- ▫️ reist
+- ▫️ rijsd
 - ✅ rijst
 - ▫️ reijst
-- ▫️ rijsd
+- ▫️ reist
 
 ## 8. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: Hoe schrijf je: hoeveel uur het is?
-- ✅ tijd
-- ▫️ teit
-- ▫️ tijt
 - ▫️ teid
+- ▫️ teit
+- ✅ tijd
+- ▫️ tijt
 
 ## 9. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Ik ga een brief ____ aan opa.' Welk woord is goed?
 - ✅ schrijven
-- ▫️ schreiven
 - ▫️ sgrijven
+- ▫️ schreiven
 - ▫️ schrijfen
 
 ## 10. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Wij ____ vandaag lekker thuis.' Welk woord is goed?
 - ▫️ blijfen
-- ▫️ bleifen
-- ✅ blijven
 - ▫️ bleiven
+- ✅ blijven
+- ▫️ bleifen
 
 ## 11. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 4)
 Vraag: Hoe schrijf je: op elk moment, steeds?
 - ✅ altijd
-- ▫️ alteid
-- ▫️ altijt
 - ▫️ alteit
+- ▫️ altijt
+- ▫️ alteid
 
 ## 12. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 4)
 Vraag: Hoe schrijf je: wat iets kost?
-- ▫️ prijz
-- ▫️ preis
-- ▫️ preiz
 - ✅ prijs
+- ▫️ preiz
+- ▫️ preis
+- ▫️ prijz
 
 ## 13. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: een **voertuig op vier wielen**?
+- ✅ auto
+- ▫️ outoo
 - ▫️ outo
 - ▫️ autoo
-- ▫️ outoo
-- ✅ auto
 
 ## 14. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: de **maand 8** van het jaar?
-- ▫️ ougustes
 - ▫️ ougustus
-- ▫️ augustes
 - ✅ augustus
+- ▫️ augustes
+- ▫️ ougustes
 
 ## 15. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: niet sterk gekruid eten?
 - ▫️ flou
-- ✅ flauw
 - ▫️ flauwt
 - ▫️ flouw
+- ✅ flauw
 
 ## 16. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: even rust tussen de lessen?
 - ▫️ pouze
-- ▫️ pouse
 - ▫️ pause
+- ▫️ pouse
 - ✅ pauze
 
 ## 17. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het **gele metaal** voor sieraden?
-- ▫️ gout
-- ✅ goud
-- ▫️ gaud
 - ▫️ gaut
+- ✅ goud
+- ▫️ gout
+- ▫️ gaud
 
 ## 18. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: 'Is dat ___ boek?' (bezittelijk):
-- ▫️ jou
-- ▫️ jauw
-- ✅ jouw
 - ▫️ jau
+- ▫️ jou
+- ✅ jouw
+- ▫️ jauw
 
 ## 19. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het deel van je jas om je arm?
-- ▫️ mauwe
 - ▫️ mouwe
 - ▫️ mauw
 - ✅ mouw
+- ▫️ mauwe
 
 ## 20. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het materiaal van een boomstam?
-- ▫️ haut
 - ✅ hout
-- ▫️ houd
+- ▫️ haut
 - ▫️ hauwt
+- ▫️ houd
