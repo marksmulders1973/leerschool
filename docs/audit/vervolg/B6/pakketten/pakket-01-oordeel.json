@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Beslisboom correct gevolgd; hints benoemen de denkfout.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Vraag in telegramstijl (\"Maak schets\", \"Controleer antwoord\"); niveaus.basis gaf alleen het antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag in volledige zinnen; basis en simpeler herschreven tot echte hulpstappen."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis was alleen het antwoord (\"Voedselketen.\").",
+  "hersteld": true,
+  "wijziging": "basis en simpeler herschreven tot hulpstappen zonder het antwoord."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Goede optie had een taalfout (\"vragen die leidt naar antwoord\").",
+  "hersteld": true,
+  "wijziging": "Optie: \"Schema met ja/nee-vragen dat je naar een antwoord leidt\"."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Pijlrichting klopt met de theorie (A wordt door B gegeten).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 14",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Ruit is een stroomdiagram-afspraak, vraag zei \"in beslisboom\" (zonder lidwoord) terwijl de hint over stroomdiagram ging; hints waren telegram.",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Welke vorm gebruik je in een stroomdiagram voor een ja/nee-vraag?\"; hints rechthoek/cirkel als hele zinnen."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "wrongHints waren telegramzinnen (\"Tijdslijn = volgorde van data\").",
+  "hersteld": true,
+  "wijziging": "Drie wrongHints als hele zinnen met denkvraag."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Vreemde vraagzin (\"Wat is de zin ... in een tekst?\").",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Wat voor zin is 'Kijk in tabel 2.' in een tekst?\""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 24",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Goede optie telegram (\"in organisatie\") en herhaalde stam van \"organogram\"; hints telegram.",
+  "hersteld": true,
+  "wijziging": "Optie: \"Wie de baas is van wie in een bedrijf\"; drie hints als hele zinnen."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 25",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Goede optie zonder lidwoord (\"Wijst naar volgende stap\").",
+  "hersteld": true,
+  "wijziging": "\"Wijst naar de volgende stap\"."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 27",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Opties telegram; hints \"Te lang om snel te zien\" en \"Tekst helpt ook\" zijn zwak.",
+  "hersteld": true,
+  "wijziging": "Opties als nette woordgroepen (zelfde volgorde/betekenis); twee hints herschreven tot denkvragen."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Weer vs klimaat klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramvraag \"KNMI zit in?\" en afkorting zonder uitleg.",
+  "hersteld": true,
+  "wijziging": "Vraag: \"In welke plaats zit het KNMI, het weerinstituut van Nederland?\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Hoge druk = goed weer; hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Hint \"Matige wind is Beaufort 3\" te stellig: volgens het KNMI is matige wind windkracht 3 en 4.",
+  "hersteld": true,
+  "wijziging": "Hint: \"Matige wind is Beaufort 3 of 4, veel lager op de schaal.\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Ongeveer een week klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Goede optie zonder lidwoord; hints telegram (\"Niet — klimaat is wetenschappelijk fenomeen\"); basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "Opties \"De aarde warmt op...\"/\"Wisseling van het weer per dag\"; drie hints herschreven; basis en simpeler als hulpstappen in hele zinnen."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis was alleen het antwoord (\"NOZW.\").",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (kompas, onafhankelijk van hoe je staat)."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler telegram. Feit (windkracht 9, 75 km/u) klopt.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpvraag; simpeler als hele zinnen."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 14",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Raadbaar: \"luchtdruk\" → \"Kracht waarmee lucht drukt\" herhaalt het woord uit de vraag.",
+  "hersteld": true,
+  "wijziging": "Goede optie: \"Gewicht van de lucht boven ons\"; hints als \"Dat beschrijft de wind/temperatuur/luchtvochtigheid.\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 15",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Telegramvraag (\"Hoge luchtdruk = welk weer?\"), optie \"Mooi/droog\"; \"lágedruk\" is geen goede spelling. Inhoud dubbelt met vraag 3 (laten staan).",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Wat voor weer krijg je meestal bij hoge luchtdruk?\"; optie \"Droog en vaak zonnig\"; hints met \"lage luchtdruk\"."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 16",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Vraag \"Welke windrichting waait\" is scheef (de wind waait uit een richting); afkorting NL.",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Uit welke richting waait de wind in Nederland het vaakst?\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "KNMI-definitie klopt, maar vraag was telegram (\"= ?\") en opties in ≥-notatie, lastig voor groep 6.",
+  "hersteld": true,
+  "wijziging": "Vraag \"Wanneer noemt het KNMI het een hittegolf?\"; alle opties in woorden (zelfde inhoud en volgorde)."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "\"Wat doet een front\" klopt niet bij een definitie; \"luchtmassa's\" is moeilijk voor groep 6.",
+  "hersteld": true,
+  "wijziging": "Vraag \"Wat is een front bij het weer?\"; optie \"Grens tussen warme en koude lucht\"."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Telegramvraag (\"Code rood bij KNMI betekent?\").",
+  "hersteld": true,
+  "wijziging": "Vraag: \"Wat betekent code rood van het KNMI?\""
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, blinde keuze gelijk; hints verraden niets.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Context verklaart kop zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Context verklaart blad.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Context verklaart vertrouwen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Context (gevroren, ijsbloemen) verklaart vorst.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Context (muziekles, notenbalk) verklaart noot.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Twee verdedigbare antwoorden: \"zo spannend dat ik het boek niet kon wegleggen\" past net zo goed bij het begin als bij het einde.",
+  "hersteld": true,
+  "wijziging": "Zin: \"Ik las het boek in één avond uit. Pas in het slot van het verhaal bleek wie de dief was.\"; hint bij \"Het begin\" verwijst naar het woordje \"pas\"; uitleg-stappen 2-3 en niveaus.simpeler aangepast aan de nieuwe zin."
+ }
+]

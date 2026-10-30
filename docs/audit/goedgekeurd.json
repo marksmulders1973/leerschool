@@ -13660,12 +13660,196 @@
   "reden": "Antwoord goed; 'direct na klutsen**?' was een rommelige zin (vraagteken buiten het vet, lidwoord miste). Receptstijl in de stappen mag blijven."
  },
  {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 10",
+  "hash": "91056272cc33feba",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 11",
+  "hash": "74d42ea09482a6b6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 12",
+  "hash": "c092d29d3409cbd7",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 13",
+  "hash": "bb3995b883e24392",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 14",
+  "hash": "2e60c541434555af",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Ruit is een stroomdiagram-afspraak, vraag zei \"in beslisboom\" (zonder lidwoord) terwijl de hint over stroomdiagram ging; hints waren telegram."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 15",
+  "hash": "48c7b998c215d7b4",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 16",
+  "hash": "fa0b5225a78e7e6e",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 17",
+  "hash": "5fc9119b33c9feb8",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 18",
+  "hash": "309a501eb11239f7",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 19",
+  "hash": "1167fe9dc3789625",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 2",
+  "hash": "4e4ac72e68cb6b27",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 20",
+  "hash": "1f0be0cd413ad6b0",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 21",
+  "hash": "1a6542cebe583da4",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 22",
+  "hash": "6cd3332c90cca72c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "wrongHints waren telegramzinnen (\"Tijdslijn = volgorde van data\")."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 23",
+  "hash": "346ec4491ffe732f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vreemde vraagzin (\"Wat is de zin ... in een tekst?\")."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 24",
+  "hash": "53d741e6685bbdb0",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie telegram (\"in organisatie\") en herhaalde stam van \"organogram\"; hints telegram."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 25",
+  "hash": "e0a568e7d22d13dd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie zonder lidwoord (\"Wijst naar volgende stap\")."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 26",
+  "hash": "03b0d039f0b11a2a",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 27",
+  "hash": "3ee08ffba6438c67",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties telegram; hints \"Te lang om snel te zien\" en \"Tekst helpt ook\" zijn zwak."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 3",
+  "hash": "e254eb47f8aac6be",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 4",
+  "hash": "7369b6a1a1cba6a1",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 5",
+  "hash": "ffe8f48582b759c7",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 6",
+  "hash": "adf10033577ac814",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag in telegramstijl (\"Maak schets\", \"Controleer antwoord\"); niveaus.basis gaf alleen het antwoord."
+ },
+ {
   "waar": "schemas-stappenplannen-po stap 5 vraag 7",
   "hash": "a9eb4a5c22b85722",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Fictief schema, maar suggereert dat schooladvies uit een toetsscore 525-550 volgt; stand 2026 geeft de leerkracht het advies en heeft de Doorstroomtoets geen Cito-schaal 501-550."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 8",
+  "hash": "1aa366136869d035",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord (\"Voedselketen.\")."
+ },
+ {
+  "waar": "schemas-stappenplannen-po stap 5 vraag 9",
+  "hash": "bad43593deebb0e5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie had een taalfout (\"vragen die leidt naar antwoord\")."
  },
  {
   "waar": "schrijven-teksten-po stap 1 vraag 1",
@@ -18050,6 +18234,177 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "weersvoorspelling-po stap 4 vraag 1",
+  "hash": "1cb3d8aa89cce21f",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 10",
+  "hash": "24804cb3e51f36a6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 11",
+  "hash": "7b298b6f4c0b7468",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 12",
+  "hash": "c11c60e076a5ef5f",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 13",
+  "hash": "ae93f715440fb5ea",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 15",
+  "hash": "8cabbc0642a48708",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag (\"Hoge luchtdruk = welk weer?\"), optie \"Mooi/droog\"; \"lágedruk\" is geen goede spelling. Inhoud dubbelt met vraag 3 (laten staan)."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 16",
+  "hash": "336059ff0eed3c3d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag \"Welke windrichting waait\" is scheef (de wind waait uit een richting); afkorting NL."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 17",
+  "hash": "cffbce763293ad87",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 18",
+  "hash": "36d837aea2962657",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 19",
+  "hash": "02e1e26c8514e98d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 2",
+  "hash": "399571fe76444268",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag \"KNMI zit in?\" en afkorting zonder uitleg."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 20",
+  "hash": "08be418cdb0d5c54",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 21",
+  "hash": "6ea0b712c12baf7d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "KNMI-definitie klopt, maar vraag was telegram (\"= ?\") en opties in ≥-notatie, lastig voor groep 6."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 22",
+  "hash": "c7126d096cc469fa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"Wat doet een front\" klopt niet bij een definitie; \"luchtmassa's\" is moeilijk voor groep 6."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 23",
+  "hash": "b222f2f7f859f9fa",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Telegramvraag (\"Code rood bij KNMI betekent?\")."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 24",
+  "hash": "e6824e884ebde25e",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 3",
+  "hash": "c70d09772d456aa1",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 4",
+  "hash": "38051804f225208c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint \"Matige wind is Beaufort 3\" te stellig: volgens het KNMI is matige wind windkracht 3 en 4."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 5",
+  "hash": "4143f4af7c2cda4b",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 6",
+  "hash": "48bdd7d5460de3fa",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 7",
+  "hash": "fd9f973ba9059520",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie zonder lidwoord; hints telegram (\"Niet — klimaat is wetenschappelijk fenomeen\"); basis gaf het antwoord."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 8",
+  "hash": "30ec2011f58b0d2f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis was alleen het antwoord (\"NOZW.\")."
+ },
+ {
+  "waar": "weersvoorspelling-po stap 4 vraag 9",
+  "hash": "b10d05ee3822f2f6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler telegram. Feit (windkracht 9, 75 km/u) klopt."
+ },
+ {
   "waar": "werelddelen-landen-po stap 1 vraag 1",
   "hash": "c93c68e2b283c11c",
   "oordeel": "goed",
@@ -19483,6 +19838,41 @@
   "hash": "fec3098047de58ff",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 4",
+  "hash": "b7c758bae12bd6d6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 5",
+  "hash": "a20a9b74c77323e6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 6",
+  "hash": "d35caa8a24c1ea87",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 7",
+  "hash": "2d066f48ccb8691d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 8",
+  "hash": "c37d6f2ac144a73b",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

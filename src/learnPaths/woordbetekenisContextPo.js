@@ -1073,14 +1073,14 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         },
       },
       {
-        q: "Lees: *\"Het slot van het verhaal was zo spannend dat ik het boek niet kon wegleggen.\"* — Wat betekent 'slot' in deze zin?",
+        q: "Lees: *\"Ik las het boek in één avond uit. Pas in het slot van het verhaal bleek wie de dief was.\"* — Wat betekent 'slot' in deze zin?",
         options: ["Het einde", "Een sluiting op een deur", "Een kasteel", "Het begin"],
         answer: 0,
         wrongHints: [
           null,
           "Een deur heeft een slot, maar heeft een verhaal een deur? Kijk naar 'van het verhaal'.",
           "Een slot kan een kasteel zijn, maar past dat bij 'van het verhaal'?",
-          "Leg je een boek weg omdat het begin spannend is? Wanneer kom je bij het slot?",
+          "Kijk naar het woordje 'pas' in de zin. Weet je in het begin van een verhaal al wie de dief is?",
         ],
         uitlegPad: {
           stappen: [
@@ -1090,11 +1090,11 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
             },
             {
               titel: "Vul ze in de zin in",
-              tekst: "'De sluiting van het verhaal'? Raar. 'Het kasteel van het verhaal'? Ook raar. 'Het einde van het verhaal was zo spannend'? Dat klopt.",
+              tekst: "'Pas in de sluiting van het verhaal'? Raar. 'Pas in het kasteel van het verhaal'? Ook raar. 'Pas in het begin van het verhaal bleek wie de dief was'? Dat past niet bij 'pas' en 'uitlezen'. 'Pas aan het einde van het verhaal bleek wie de dief was'? Dat klopt.",
             },
             {
               titel: "Kijk naar de buurwoorden",
-              tekst: "'Verhaal', 'spannend' en 'boek' horen bij lezen. Bij een verhaal past het einde.",
+              tekst: "'Boek uitlezen', 'pas' en 'bleek wie de dief was' horen bij de laatste bladzijden van een verhaal. Daar past het einde bij.",
             },
           ],
           woorden: [
@@ -1122,7 +1122,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
           ],
           niveaus: {
             basis: "Vul de drie betekenissen in. Welke past bij 'het ... van het verhaal'?",
-            simpeler: "Een verhaal heeft een begin en een ... Welk deel kan zo spannend zijn dat je doorleest?",
+            simpeler: "Een verhaal heeft een begin, een midden en een ... In welk deel kom je meestal te weten wie de dader is?",
             nogSimpeler: "Heeft een verhaal een deur met een slot?",
           },
         },
