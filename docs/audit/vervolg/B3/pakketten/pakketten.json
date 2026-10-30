@@ -1,0 +1,195 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+   "src/learnPaths/werkwoordsspellingDT.js",
+   "src/learnPaths/taalWoordenZinnenG4.js"
+  ],
+  "sets": [
+   "8|rekenen",
+   "5|spelling",
+   "6|spelling",
+   "7|spelling",
+   "8|spelling",
+   "5|taal"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/evolutieMensPo.js",
+   "src/learnPaths/bekendeBoekenLiteratuurPo.js",
+   "src/learnPaths/werkwoordTijdenPo.js"
+  ],
+  "sets": [
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "5|taal"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 55,
+  "files": [
+   "src/learnPaths/begrijpendLezenTekstenPo.js",
+   "src/learnPaths/tafelsPo.js",
+   "src/learnPaths/samenvattenHoofdgedachtePo.js",
+   "src/learnPaths/delenPo.js"
+  ],
+  "sets": [
+   "5|begrijpend-lezen",
+   "4|rekenen",
+   "6|begrijpend-lezen",
+   "5|rekenen"
+  ]
+ },
+ {
+  "pakket": "04",
+  "n": 55,
+  "files": [
+   "src/learnPaths/negatieveGetallenPo.js",
+   "src/learnPaths/schemasStappenplannenPo.js",
+   "src/learnPaths/woordenschatPo.js",
+   "src/learnPaths/tijdSnelheidAfstandPo.js",
+   "src/learnPaths/tekstverbandenOorzaakGevolgPo.js",
+   "src/learnPaths/metenGewichtInhoudTijdPo.js",
+   "src/learnPaths/dichtenPoezieRijmenPo.js"
+  ],
+  "sets": [
+   "5|rekenen",
+   "5|taal",
+   "7|taal",
+   "6|rekenen",
+   "6|begrijpend-lezen",
+   "7|rekenen"
+  ]
+ },
+ {
+  "pakket": "05",
+  "n": 55,
+  "files": [
+   "src/learnPaths/trappenVanVergelijkingPo.js",
+   "src/learnPaths/verwijswoordenPo.js",
+   "src/learnPaths/geldRekenen.js",
+   "src/learnPaths/schrijvenTekstenPo.js",
+   "src/learnPaths/briefEmailLezenPo.js",
+   "src/learnPaths/dienstregelingRoostersPo.js",
+   "src/learnPaths/breukenPo.js"
+  ],
+  "sets": [
+   "7|taal",
+   "8|taal",
+   "5|rekenen",
+   "6|taal",
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "7|studievaardigheden",
+   "8|studievaardigheden"
+  ]
+ },
+ {
+  "pakket": "06",
+  "n": 55,
+  "files": [
+   "src/learnPaths/folderBonAdvertentiePo.js",
+   "src/learnPaths/inhoudsopgaveRegisterPo.js",
+   "src/learnPaths/plattegrondLegendaPo.js",
+   "src/learnPaths/onderwijsNiveausVmboHavoVwo.js",
+   "src/learnPaths/synoniemenTegenstellingenPo.js",
+   "src/learnPaths/redactiesommen.js",
+   "src/learnPaths/tabellenGrafieken.js",
+   "src/learnPaths/dierenklassenPo.js"
+  ],
+  "sets": [
+   "7|studievaardigheden",
+   "8|studievaardigheden",
+   "5|taal",
+   "6|rekenen",
+   "7|rekenen",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur"
+  ]
+ },
+ {
+  "pakket": "07",
+  "n": 55,
+  "files": [
+   "src/learnPaths/nieuwsberichtLezenPo.js",
+   "src/learnPaths/gezondeVoedingPo.js",
+   "src/learnPaths/feitenDetailsOpzoekenPo.js",
+   "src/learnPaths/tijdvakkenNederlandPo.js",
+   "src/learnPaths/conclusiesTrekkenPo.js",
+   "src/learnPaths/spreekwoordenUitdrukkingenPo.js",
+   "src/learnPaths/betrouwbaarheidBronnenPo.js",
+   "src/learnPaths/procentenPo.js",
+   "src/learnPaths/interpunctiePo.js",
+   "src/learnPaths/woordsoortenPo.js",
+   "src/learnPaths/schemaTekstCombiPo.js"
+  ],
+  "sets": [
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "6|natuur",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "6|taal",
+   "7|studievaardigheden",
+   "8|studievaardigheden",
+   "5|rekenen",
+   "6|rekenen",
+   "7|rekenen",
+   "5|taal"
+  ]
+ },
+ {
+  "pakket": "08",
+  "n": 45,
+  "files": [
+   "src/learnPaths/werelddelenLandenPo.js",
+   "src/learnPaths/continentenWereldPo.js",
+   "src/learnPaths/kaartlezenPo.js",
+   "src/learnPaths/zinsontledingOnderwerpPersoonsvormPo.js",
+   "src/learnPaths/bekendeNederlandersPo.js",
+   "src/learnPaths/klokkijken.js",
+   "src/learnPaths/spellingEiIjAuOu.js",
+   "src/learnPaths/begrijpendLezenStrategie.js",
+   "src/learnPaths/informatiebronnenPo.js",
+   "src/learnPaths/romeinseCijfersPo.js",
+   "src/learnPaths/alfabetWoordenboekPo.js",
+   "src/learnPaths/energiebronnenPo.js",
+   "src/learnPaths/politiekDemocratiePo.js",
+   "src/learnPaths/bekendeWetenschappersPo.js",
+   "src/learnPaths/ontdekkingsreizenPo.js"
+  ],
+  "sets": [
+   "6|aardrijkskunde",
+   "7|aardrijkskunde",
+   "8|aardrijkskunde",
+   "7|taal",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "4|rekenen",
+   "5|spelling",
+   "6|spelling",
+   "5|begrijpend-lezen",
+   "6|taal",
+   "7|rekenen",
+   "7|studievaardigheden",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "6|geschiedenis"
+  ]
+ }
+]
