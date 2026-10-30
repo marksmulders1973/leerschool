@@ -519,7 +519,7 @@ const steps = [
         q: "Hoeveel liter is **750 ml**?",
         options: ["0,75 l", "7,5 l", "75 l", "0,075 l"],
         answer: 0,
-        wrongHints: [null, "Dat zou 7500 ml zijn — veel te veel.", "75 liter is meer dan zeven emmers vol. Hoeveel ml is 1 liter?", "De komma gaat 3 plaatsen naar links, niet 4."],
+        wrongHints: [null, "Dat zou 7500 ml zijn — veel te veel.", "75 liter is meer dan zeven emmers vol. Hoeveel ml is 1 liter?", "Dat is veel te weinig: 0,075 l is maar een slokje. Hoeveel ml past er in 1 liter?"],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar liter", tekst: "Van milliliter naar liter ga je naar een grotere eenheid, dus je deelt door 1000." },
@@ -546,7 +546,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Hoeveel stappen zit er tussen dl en cl in het rijtje l → dl → cl → ml?",
+          "Hoeveel stappen zitten er tussen dl en cl in het rijtje l → dl → cl → ml?",
           "4 cl is veel minder dan 4 dl. Hoeveel cl past er in 1 dl?",
           "Is cl een kleinere of een grotere eenheid dan dl?",
         ],

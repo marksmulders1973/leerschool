@@ -1108,6 +1108,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "begrijpend-lezen-teksten-po stap 5 vraag 1",
+  "hash": "f8b44db98afc8a58",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "begrijpend-lezen-teksten-po stap 5 vraag 10",
   "hash": "664011395b110912",
   "oordeel": "goed",
@@ -1178,6 +1185,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "begrijpend-lezen-teksten-po stap 5 vraag 2",
+  "hash": "5729f3049b88546e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "begrijpend-lezen-teksten-po stap 5 vraag 20",
   "hash": "273c4612f705265a",
   "oordeel": "goed",
@@ -1211,6 +1225,20 @@
   "hash": "c2d1d543463e6c7d",
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 03 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 5 vraag 3",
+  "hash": "42380369fc9f8d85",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-teksten-po stap 5 vraag 4",
+  "hash": "a97ed7a878a02992",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -2053,6 +2081,44 @@
   "bron": "vervolg B5 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Som klopt (600-60=540); niveaus.basis gaf alleen het antwoord (met som); herschreven tot echte hulpstap."
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 1",
+  "hash": "99803e925f84cc7e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 2",
+  "hash": "b237ef1922c24632",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "9% klopt, maar 'eten en drinken' is te stellig (alcohol valt onder 21%)"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 3",
+  "hash": "e5ef2505271bb165",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "8,26 klopt (€10 bij 21% geeft €1,74 btw); basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 4",
+  "hash": "d63261a8f146bae3",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 5",
+  "hash": "5150ece76f8c321a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "9% klopt; basis gaf het antwoord en zei te stellig 'al het andere: 21%'"
  },
  {
   "waar": "belasting-po stap 4 vraag 9",
@@ -3010,6 +3076,48 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "brugklas-orientatie stap 2 vraag 1",
+  "hash": "2069a231f73bc94e",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 2 vraag 2",
+  "hash": "3564ed04b12fd100",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 2 vraag 3",
+  "hash": "cd5090976da1a016",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 2 vraag 4",
+  "hash": "ec00fe5e9eedbb2f",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 2 vraag 5",
+  "hash": "298f9d015efc975c",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "brugklas-orientatie stap 2 vraag 6",
+  "hash": "49587261cdfabd44",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "brugklas-orientatie stap 3 vraag 8",
   "hash": "45fec7f3338361af",
   "oordeel": "goed",
@@ -3689,6 +3797,13 @@
   "reden": "Klopt (50:8 = 6 rest 2, dus 7). Basis rekende het hele antwoord voor."
  },
  {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 10",
+  "hash": "b116110bf9f4b4ae",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "deelsommen-met-rest-po stap 2 vraag 2",
   "hash": "46291e94b4c916bd",
   "oordeel": "twijfel",
@@ -3719,6 +3834,20 @@
   "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt (33:9 = 3 rest 6, dus 4). Basis = antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 6",
+  "hash": "5103634b732f6617",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 2 vraag 7",
+  "hash": "51c652ceb1caf595",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "deelsommen-met-rest-po stap 2 vraag 8",
@@ -7172,6 +7301,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 1",
+  "hash": "f6d3c70f723f9a73",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "feiten-details-opzoeken-po stap 4 vraag 2",
   "hash": "89bbc7c089c59bb1",
   "oordeel": "goed",
@@ -7876,6 +8012,70 @@
   "bron": "vervolg B7 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord; euro-notatie zonder spatie"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 1",
+  "hash": "bb94ff7dd1f8a69a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "antwoord 7,55 klopt; hints in telegramstijl, hint bij 7,65 zei niet dat het te veel is; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 2",
+  "hash": "432328005b45deb9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "29,75 klopt; niveaus.basis gaf alleen de som met antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 3",
+  "hash": "fea98f3ef34b1b2a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "B klopt (2,00 vs 1,60 per paar); vraag was een telegramzin, hint 'Wel — reken per paar.' ook, basis gaf het antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 4",
+  "hash": "6e61d80bb33aefd2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "3,75 klopt; 'Hoeveel over?' telegram, hint 'controleer som van boeken' telegram, basis gaf het antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 5",
+  "hash": "45bb434f0cd5fec4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "1,80 klopt; vraag was een telegramzin zonder werkwoord; basis gaf het antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 6",
+  "hash": "daae3e506acace36",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "60 klopt; basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 7",
+  "hash": "e9227d15512391b6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2,60 klopt; basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "geld-rekenen stap 5 vraag 8",
+  "hash": "37516b92066ad4ba",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "0,70 klopt; hint bij 1,30 schreef de hele berekening voor ('reken €5 − (2 × €2,15)')"
  },
  {
   "waar": "gemiddelden-statistiek-po stap 1 vraag 1",
@@ -12885,6 +13085,21 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 8",
+  "hash": "972fb1534b8329f6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "40 cl klopt; taalfout in hint ('Hoeveel stappen zit er')"
+ },
+ {
+  "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 9",
+  "hash": "5f5592694f8cb32a",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 3",
   "hash": "26673b3eacb991d6",
   "oordeel": "goed",
@@ -17808,6 +18023,20 @@
   "reden": "20-30% klopt als vuistregel; vraag te stellig (\"moet\"), niveaus telegram"
  },
  {
+  "waar": "schrijven-teksten-po stap 3 vraag 5",
+  "hash": "6c028ce0a4828bc8",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schrijven-teksten-po stap 3 vraag 6",
+  "hash": "4c3f64ee9effde26",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "schrijven-teksten-po stap 3 vraag 7",
   "hash": "5958f6ab76b020bb",
   "oordeel": "twijfel",
@@ -22376,6 +22605,30 @@
   "reden": "niveaus.basis gaf het antwoord."
  },
  {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 3",
+  "hash": "9676f277ec50280a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt; basis gaf het rijtje met het antwoord, nogSimpeler was een vreemde zin"
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 4",
+  "hash": "046bea1778ad0c12",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt; hint 'De trap mist.' is een telegramzin, basis gaf het antwoord"
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 5",
+  "hash": "dbda27e1595a9799",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt; basis gaf het rijtje met het antwoord, nogSimpeler was een vreemde zin"
+ },
+ {
   "waar": "verhaal-diepte-lezen-po stap 1 vraag 4",
   "hash": "af8c3daa35fd640d",
   "oordeel": "goed",
@@ -22887,6 +23140,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 3",
+  "hash": "45bfb840f2223bfd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "klopt; hint bij 'Het dorp' omschreef het antwoord ('één plek aan de rand ervan')"
+ },
+ {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 4",
   "hash": "9880d1350ee82466",
   "oordeel": "goed",
@@ -22894,11 +23155,39 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 5",
+  "hash": "f957ef38a9591198",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 6",
+  "hash": "b509014b827c12e9",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 7",
+  "hash": "949e6e5f30b35934",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 8",
   "hash": "c8814ed870fbb317",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 9",
+  "hash": "e1b9f463a19c6151",
+  "oordeel": "goed",
+  "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "verwijswoorden-po stap 1 vraag 1",

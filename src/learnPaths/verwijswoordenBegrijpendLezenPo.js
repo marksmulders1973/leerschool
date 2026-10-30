@@ -1086,7 +1086,7 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
         evidence: "Meester Ruben had een uitje geregeld naar de kinderboerderij aan de rand van het dorp. Daar wonen geiten, kippen, konijnen en een oude ezel.",
         wrongHints: [
           null,
-          "Het dorp wordt wel genoemd, maar wonen de geiten en de ezel in het hele dorp — of op één plek aan de rand ervan?",
+          "Het dorp wordt wel genoemd, maar wonen de geiten en de ezel echt overal in het hele dorp? Kijk welke plek er nog meer in de zin ervoor staat.",
           "De school komt in deze zinnen niet voor. Waar was het uitje naartoe?",
           "De bus komt pas aan het einde van de tekst. Waar ging het uitje naartoe?",
         ],

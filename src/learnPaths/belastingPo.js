@@ -672,7 +672,7 @@ const steps = [
         },
       },
       {
-        q: "Welk **btw-tarief** geldt voor **eten en drinken**?",
+        q: "Welk **btw-tarief** geldt voor **eten en drinken** zoals brood, melk en sap?",
         options: ["9%", "21%", "6%", "0%"],
         answer: 0,
         wrongHints: [null, "Dat is het hoge tarief. Hoort eten daarbij?", "Zo hoog was het lage tarief vroeger, tot 2019. Hoeveel is het nu?", "Zit er op eten echt helemaal geen btw?"],
@@ -698,7 +698,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Product zelf = totaalprijs − btw. Het antwoord is altijd kleiner dan de totaalprijs." }],
           niveaus: {
-            basis: "€8,26 (€10 − €1,74 btw).",
+            basis: "De btw zit al in de € 10. Haal de btw van de prijs af, dan houd je over wat de knuffel zelf kost.",
             simpeler: "Haal de btw eraf: €10 − €1,74 = €8,26.",
             nogSimpeler: "€8,26",
           },
@@ -721,7 +721,7 @@ const steps = [
             { titel: "Fruit = eten", tekst: "Fruit is eten, dus het lage tarief van 9% geldt." },
           ],
           niveaus: {
-            basis: "Eten: 9% btw (laag tarief). Al het andere: 21% (hoog).",
+            basis: "Er is een laag tarief voor eten, drinken en boeken en een hoog tarief voor bijna al het andere. Is fruit eten of een spul?",
             simpeler: "Fruit is eten → 9%.",
             nogSimpeler: "9%",
           },

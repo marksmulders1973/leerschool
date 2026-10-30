@@ -415,9 +415,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: veel → meer → meest", tekst: "'Veel' is onregelmatig: meer (vergrotend), meest (overtreffend)." }],
           niveaus: {
-            basis: "veel → meer → meest.",
+            basis: "'Veel' is onregelmatig: de vormen lijken niet op 'veel'. Denk aan de zin: 'Wie heeft de ___ punten van iedereen?'",
             simpeler: "Wat is het meest van veel: 'veelst' of 'meest'?",
-            nogSimpeler: "Meest is de overtreffing van …?",
+            nogSimpeler: "veel → meer → meest",
           },
         },
       },
@@ -430,11 +430,11 @@ const steps = [
           "Zij is de slimst dan de klas.",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is de vergrotende trap; 'van de klas' vraagt de overtreffende.", "De trap mist.", "'Dan' hoort bij de vergrotende trap, niet hier."],
+        wrongHints: [null, "Dat is de vergrotende trap; 'van de klas' vraagt de overtreffende.", "Hier staat de gewone vorm. Bij 'van de klas' vergelijk je met iedereen.", "'Dan' hoort bij de vergrotende trap, niet hier."],
         uitlegPad: {
           stappen: [{ titel: "de …ste van", tekst: "'Van de klas' betekent het meest van allemaal → overtreffende trap: de slimste." }],
           niveaus: {
-            basis: "'de slimste van de klas' is juist (overtreffend).",
+            basis: "Met 'van de klas' vergelijk je iemand met alle anderen. Dan hoort de overtreffende trap erbij.",
             simpeler: "Welke heeft de -ste-vorm bij 'van de klas'?",
             nogSimpeler: "Welke zegt 'de slimste'?",
           },
@@ -448,9 +448,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: goed → beter → best", tekst: "'Goed' is onregelmatig. De overtreffende trap is 'best' (niet 'goedst')." }],
           niveaus: {
-            basis: "goed → beter → best. Uit je hoofd leren.",
+            basis: "'Goed' is onregelmatig: de vormen lijken niet op 'goed'. Die moet je uit je hoofd leren.",
             simpeler: "Wat zeg je: 'goedst' of 'best'?",
-            nogSimpeler: "Best is de overtreffing van …?",
+            nogSimpeler: "goed → beter → best",
           },
         },
       },
@@ -458,11 +458,11 @@ const steps = [
         q: "Vul in: *Van alle renners is hij het ___.* (snel)",
         options: ["snelst", "sneller", "snel", "snels"],
         answer: 0,
-        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "'Snels' bestaat niet — de overtreffende trap eindigt op -st."],
+        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "'Snels' is geen woord. Denk aan een ander voorbeeld, zoals 'het mooist': welke letters komen achter het woord?"],
         uitlegPad: {
           stappen: [{ titel: "'het …st van alle'", tekst: "'Van alle renners' = hij is de allersnelste → overtreffende trap: het snelst." }],
           niveaus: {
-            basis: "het snelst van alle = overtreffende trap.",
+            basis: "Bij 'van alle renners' vergelijk je hem met iedereen. Dan hoort de overtreffende trap erbij.",
             simpeler: "Wie is het allersnelst? Zoek de overtreffende trap.",
             nogSimpeler: "snel + st = ?",
           },
