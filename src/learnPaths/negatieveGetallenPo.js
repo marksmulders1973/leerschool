@@ -651,7 +651,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 stappen.",
+            basis: "Tel eerst de stappen van 2 naar 0. Tel daarna de stappen van 0 naar −3. Tel die twee aantallen bij elkaar op.",
             simpeler: "2 stappen naar 0, dan 3 stappen naar −3. 2 + 3 = 5.",
             nogSimpeler: "5",
           },

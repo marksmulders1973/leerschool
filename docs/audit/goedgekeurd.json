@@ -4498,6 +4498,22 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "dieren-seizoenen-natuur stap 5 vraag 1",
+  "hash": "ec6272de7de84a92",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord en hints kloppen; niveaus.basis gaf alleen het antwoord, simpeler was telegramstijl."
+ },
+ {
+  "waar": "dieren-seizoenen-natuur stap 5 vraag 2",
+  "hash": "3215e34786cebdb9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; wrongHints telegramzinnen, niveaus.basis gaf alleen het antwoord."
+ },
+ {
   "waar": "dieren-seizoenen-natuur stap 6 vraag 2",
   "hash": "421cfc81fff258b3",
   "oordeel": "twijfel",
@@ -4573,6 +4589,21 @@
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 5 vraag 3",
+  "hash": "9d5a7240d7928e20",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "dierenklassen-po stap 5 vraag 4",
+  "hash": "dac84e59ec60a1b4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; pinguïn-hint was telegramstijl met schuine streep."
  },
  {
   "waar": "dierenklassen-po stap 6 vraag 10",
@@ -5947,6 +5978,20 @@
   "hash": "0da2409a1a6e3ac1",
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 5 vraag 3",
+  "hash": "c4a3d3d0e4c7d66e",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "energiebronnen-po stap 5 vraag 4",
+  "hash": "c5207cfba1b4e1ad",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -8194,12 +8239,40 @@
   "reden": "Staafdiagram klopt, hints goed; niveaus één woord."
  },
  {
+  "waar": "grafieken-lezen-po stap 2 vraag 3",
+  "hash": "03a4a97adf366e26",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "grafieken-lezen-po stap 2 vraag 4",
   "hash": "eba9ab08183685db",
   "oordeel": "twijfel",
   "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "\"Zelfde staafdiagram\" verwijst naar een vorige vraag; basis = antwoord."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 5",
+  "hash": "02e5829f70ef440f",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 6",
+  "hash": "dfad739e40c64caa",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 7",
+  "hash": "b8cd7ecb71e788b9",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "grafieken-lezen-po stap 6 vraag 16",
@@ -8272,6 +8345,20 @@
   "hash": "194cab1ac2f11d3e",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 5 vraag 3",
+  "hash": "db9c8f6a04d55702",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "industriele-revolutie-po stap 5 vraag 4",
+  "hash": "7ed36598bd59e169",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -8906,6 +8993,13 @@
   "bron": "vervolg B4 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; niveaus basis was alleen de foute zin."
+ },
+ {
+  "waar": "interpunctie-po stap 5 vraag 1",
+  "hash": "70d9fe6159786734",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "interpunctie-po stap 5 vraag 2",
@@ -10803,6 +10897,13 @@
   "reden": "Klopt (punt bij waarschuwing is zwakker, niet fout); basis/simpeler noemden uitroepteken."
  },
  {
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 5",
+  "hash": "172121b7fea876c2",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "leestekens-hoofdletters-po stap 2 vraag 6",
   "hash": "e6f2b24259fae80d",
   "oordeel": "twijfel",
@@ -10902,6 +11003,13 @@
   "bron": "vervolg B5 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord ('pan-nen-koek')."
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 2 vraag 3",
+  "hash": "591e0cd37e8b2d3d",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "lettergrepen-klemtoon-po stap 2 vraag 4",
@@ -11038,6 +11146,21 @@
   "bron": "vervolg B4 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt, maar '~'-notatie is onhandig voor kinderen en 'water' is te smal (het advies van ongeveer 1,5 liter geldt voor al het drinken)."
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 5 vraag 3",
+  "hash": "ea45a0af617c01be",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lichaam-gezondheid-po stap 5 vraag 4",
+  "hash": "f914107e846722d9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Beweegrichtlijn kinderen: minstens 1 uur per dag; optie '~1 uur' botste met 'minstens' en tilde is geen kindertaal."
  },
  {
   "waar": "lichaam-gezondheid-po stap 6 vraag 10",
@@ -11685,6 +11808,14 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 9",
+  "hash": "d49852664e7af532",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "2 → −3 = 5 klopt; niveaus.basis gaf alleen het antwoord."
  },
  {
   "waar": "negatieve-getallen-po stap 3 vraag 1",
@@ -13233,6 +13364,28 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "politiek-democratie-po stap 4 vraag 3",
+  "hash": "d6a87c0b53e8607d",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "politiek-democratie-po stap 4 vraag 4",
+  "hash": "eb7f3d824bcfbf8f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag was telegramzin zonder lidwoord."
+ },
+ {
+  "waar": "politiek-democratie-po stap 5 vraag 4",
+  "hash": "e0ce98a3ba27a1be",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "procenten-po stap 1 vraag 1",
   "hash": "ddb74629141f1262",
   "oordeel": "goed",
@@ -13321,6 +13474,13 @@
   "bron": "vervolg B4 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; te vroeg voor groep 5; niveaus telegramstijl."
+ },
+ {
+  "waar": "procenten-po stap 2 vraag 7",
+  "hash": "581e9422f5e3cc63",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "procenten-po stap 3 vraag 3",
@@ -14239,6 +14399,13 @@
   "bron": "vervolg B5 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 6",
+  "hash": "b7e90b72417eedec",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "samenstellingen-tussenletters-po stap 2 vraag 7",
@@ -18735,6 +18902,28 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "toestand-stoffen-po stap 5 vraag 1",
+  "hash": "c2f0d6bf1618af44",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 2",
+  "hash": "673dc95446117904",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "toestand-stoffen-po stap 5 vraag 3",
+  "hash": "2a39ab4de0522161",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag en hints waren telegramzinnen ('Welke is…', 'is dus vloeibaar')."
+ },
+ {
   "waar": "topografie-europa-landen-po stap 3 vraag 1",
   "hash": "7fc234c3f5dadeb4",
   "oordeel": "goed",
@@ -22778,6 +22967,13 @@
   "hash": "c37d6f2ac144a73b",
   "oordeel": "goed",
   "bron": "vervolg B6 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "woordbetekenis-context-po stap 3 vraag 9",
+  "hash": "a729e850ecb278b0",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {

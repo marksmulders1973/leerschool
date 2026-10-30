@@ -411,7 +411,7 @@ const steps = [
         q: "Welk dier leeft op de **Noordpool**?",
         options: ["IJsbeer", "Pinguïn", "Panda", "Sneeuwluipaard"],
         answer: 0,
-        wrongHints: [null, "Pinguïns wonen op Zuidpool / Zuidelijk halfrond.", "Een panda woont in de bergbossen van China en eet bamboe.", "Een sneeuwluipaard leeft in de besneeuwde bergen van Azië, niet op het ijs bij de pool."],
+        wrongHints: [null, "Pinguïns wonen op het zuidelijk halfrond, bijvoorbeeld bij de Zuidpool. Welke pool noemt de vraag?", "Een panda woont in de bergbossen van China en eet bamboe.", "Een sneeuwluipaard leeft in de besneeuwde bergen van Azië, niet op het ijs bij de pool."],
       },
     ],
   },

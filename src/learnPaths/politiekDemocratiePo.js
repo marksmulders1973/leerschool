@@ -269,7 +269,7 @@ const steps = [
         wrongHints: [null, "In 1957 begon de EEG, de voorloper van de EU. De euro kwam veel later.", "In 1990 betaalden we nog met de gulden.", "In 2010 hadden we de euro al een paar jaar."],
       },
       {
-        q: "Wat doet **waterschap**?",
+        q: "Wat doet een **waterschap**?",
         options: ["Dijken en water beheren", "Treinen laten rijden", "Paspoorten maken", "Scholen bouwen"],
         answer: 0,
         wrongHints: [null, "Treinen hebben niets met het waterschap te maken — kijk naar de naam.", "Paspoorten haal je bij de gemeente.", "Scholen bouwen doet de gemeente. Kijk naar de naam: water-schap."],
@@ -297,7 +297,7 @@ const steps = [
         q: "Wat is **briefgeheim**?",
         options: ["Je post mag niet zomaar gelezen worden", "Een brief in geheimschrift", "Een verbod om brieven te schrijven", "Een brief zonder afzender"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om een soort brief, maar om een recht dat jij hebt.", "Een verbod is het tegenovergestelde van een recht. Briefgeheim is een recht. Welk?", "Het gaat om een grondrecht — wie mag jouw post lezen?"],
+        wrongHints: [null, "Het gaat niet om een soort brief, maar om een recht dat jij hebt.", "Een verbod is het tegenovergestelde van een recht. Briefgeheim is een recht. Welk?", "Een brief zonder afzender is een soort brief. Briefgeheim is geen brief, maar een recht uit de Grondwet."],
       },
       {
         q: "Sinds welk jaar mogen **alle mannen** in Nederland stemmen (algemeen mannenkiesrecht)?",

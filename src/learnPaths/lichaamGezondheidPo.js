@@ -371,7 +371,7 @@ const steps = [
       },
       {
         q: "Hoe lang moet een kind per dag minstens **bewegen**?",
-        options: ["~1 uur", "10 minuten", "3 uur", "30 minuten"],
+        options: ["1 uur", "10 minuten", "3 uur", "30 minuten"],
         answer: 0,
         wrongHints: [null, "Tien minuten is maar kort. De norm vraagt meer.", "Drie uur is veel meer dan de norm vraagt.", "Een halfuur is het advies voor volwassenen. Kinderen hebben meer nodig."],
       },

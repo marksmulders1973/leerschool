@@ -371,10 +371,10 @@ const steps = [
         wrongHints: [null,"Kan een wolk smelten zoals een ijsje?","Verdampen is omgekeerd.","Barst een wolk echt open? Waar bestaat een wolk eigenlijk uit?"],
       },
       {
-        q: "Welke is **GEEN vloeistof**?",
+        q: "Welke stof is **GEEN vloeistof**?",
         options: ["IJs", "Water", "Olie", "Melk"],
         answer: 0,
-        wrongHints: [null, "Water stroomt — is dus vloeibaar.", "Olie stroomt — is dus vloeibaar.", "Melk stroomt — is dus vloeibaar."],
+        wrongHints: [null, "Water stroomt, dus water is een vloeistof.", "Olie stroomt, dus olie is een vloeistof.", "Melk stroomt, dus melk is een vloeistof."],
       },
       {
         q: "Welk deel van een ruimte vult een **gas**?",
