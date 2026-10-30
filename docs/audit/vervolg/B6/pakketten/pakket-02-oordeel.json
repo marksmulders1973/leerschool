@@ -1,0 +1,442 @@
+[
+  {
+    "waar": "topografie-nederland stap 8 vraag 6",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord, simpeler was een telegramzin.",
+    "hersteld": true,
+    "wijziging": "niveaus.basis herschreven tot hulpstap, simpeler tot hele zin."
+  },
+  {
+    "waar": "topografie-nederland stap 8 vraag 7",
+    "oordeel": "twijfel",
+    "eigenKeuze": "C",
+    "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord, simpeler telegramzin.",
+    "hersteld": true,
+    "wijziging": "niveaus.basis herschreven tot hulpstap, simpeler tot hele zin."
+  },
+  {
+    "waar": "topografie-nederland stap 8 vraag 8",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord klopt, maar afleiders (berg, luchthaven, rivier) waren absurd en dus raadbaar; hint 'wat lag er vroeger om Marken heen' stuurde sterk; basis = antwoord.",
+    "hersteld": true,
+    "wijziging": "Afleiders vervangen door vestingstad/duingebied/meer met nieuwe denkfout-hints; niveaus basis+simpeler herschreven."
+  },
+  {
+    "waar": "topografie-nederland stap 8 vraag 9",
+    "oordeel": "twijfel",
+    "eigenKeuze": "B",
+    "reden": "Antwoord klopt; basis = antwoord, simpeler telegramzin.",
+    "hersteld": true,
+    "wijziging": "niveaus.basis en simpeler herschreven."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 1",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord klopt; basis = antwoord, simpeler telegramzin; uitleg 'Aan de IJssel-rivier' onnauwkeurig.",
+    "hersteld": true,
+    "wijziging": "niveaus herschreven; 'ligt vlak bij de IJssel'."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 2",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt; telegramzin met '3' en 'NL' in vraag en hints; basis = antwoord.",
+    "hersteld": true,
+    "wijziging": "Vraag 'Welke drie grote rivieren stromen door Nederland?'; hints als hele zinnen; niveaus herschreven."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 3",
+    "oordeel": "fout",
+    "eigenKeuze": "B",
+    "reden": "Antwoord klopt, maar wrongHint 'Groningen heeft geen eilanden' is feitelijk onjuist (Rottumeroog/Rottumerplaat); uitleg noemde Lauwersoog als Friese haven en 'Drenthe + Groningen = geen eilanden'; basis = antwoord.",
+    "hersteld": true,
+    "wijziging": "Hints Friesland/Drenthe/Groningen herschreven (feitelijk juist); '5 bewoonde Waddeneilanden'; theorie en basiskennis gecorrigeerd (Lauwersoog = Groningen); niveaus herschreven, 'N-Holland' voluit."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 4",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord klopt; hint 'Waddeneilanden zijn in Noord-Holland en Friesland' onvolledig (ook Groningen); hint bij 'oudste' noemde 1986; inwonertal ~425.000 verouderd; basis telegramzin.",
+    "hersteld": true,
+    "wijziging": "Hints herschreven; inwoners 'ruim 440.000'; basiskennis met Groningen; niveaus herschreven."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 5",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt (~18 miljoen); hints telegramstijl; basis = antwoord; 'uitgezonderd Malta, Monaco' te stellig.",
+    "hersteld": true,
+    "wijziging": "Hints als hele zinnen; niveaus.basis tot hulpstap; dichtheid-zin genuanceerd."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 6",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt; hints benoemen denkfout.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 7",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 8",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt; hint '11 vóór 1986' feitelijk juist.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 9",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 10",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt; Rijn-hint erkent terecht het Rijnwater zonder het antwoord te noemen.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 11",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt; 'NL' en '+' (telegramstijl) in vraag en opties; 'Luxemburg ligt onder België' onnauwkeurig.",
+    "hersteld": true,
+    "wijziging": "Vraag 'aan Nederland', opties met 'en', Luxemburg-hint 'ten zuidoosten van België'."
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 12",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 13",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 14",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt (Afsluitdijk 1932).",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 15",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt; inhoudelijk dubbel met stap 9 vraag 4, maar niet fout.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 16",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Klopt (Vaalserberg).",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 9 vraag 17",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt; Friesland staat niet bij de opties.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "topografie-nederland stap 6 vraag 5",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt; hints en ezelsbrug in orde.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 36",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 37",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord klopt; opties zonder lidwoord (telegramstijl); hint 'Dat is de inleiding.' kaal; basis = antwoord.",
+    "hersteld": true,
+    "wijziging": "Opties met lidwoord; hint als hele zin; niveaus herschreven."
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 38",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 39",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord stond letterlijk in de leestekst ('om vet op te slaan'); verdedigbaar als detailvraag maar te makkelijk.",
+    "hersteld": true,
+    "wijziging": "Antwoord geparafraseerd: 'Om een voorraad op te bouwen voor de winterslaap'; explanation aangepast."
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 40",
+    "oordeel": "twijfel",
+    "eigenKeuze": "C",
+    "reden": "Antwoord klopt; basis = antwoord.",
+    "hersteld": true,
+    "wijziging": "niveaus.basis en simpeler herschreven."
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 41",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 42",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 43",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 44",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 45",
+    "oordeel": "fout",
+    "eigenKeuze": "C",
+    "reden": "Antwoord klopt, maar 'maar' stond vet in de vraag (verraadt het signaalwoord) en de hint bij 'Niet' zei 'het signaalwoord dat twee dingen tegenover elkaar zet' = omschrijving van het antwoord.",
+    "hersteld": true,
+    "wijziging": "Vet op 'maar' weggehaald; hints bij 'Niet' en 'Dit jaar' herschreven zonder het antwoord."
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 46",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord klopt; basis = antwoord.",
+    "hersteld": true,
+    "wijziging": "niveaus.basis en simpeler herschreven tot hulpstappen."
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 47",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 48",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt (drie redenen).",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 49",
+    "oordeel": "goed",
+    "eigenKeuze": "B",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 50",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 51",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 52",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 53",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt; 'de tandjes' is een goede afleider.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 1",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 2",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 3",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 4",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt; 'lopen' = wandelen in het Nederlands.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 5",
+    "oordeel": "twijfel",
+    "eigenKeuze": "A",
+    "reden": "Antwoord klopt; twee hints waren telegramzinnen ('Starten = synoniem van beginnen.').",
+    "hersteld": true,
+    "wijziging": "Hints als hele zinnen."
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 6",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 7",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 8",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt; hint 'Direct = meteen, ...' telegramzin.",
+    "hersteld": true,
+    "wijziging": "Hint als hele zin."
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 9",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 10",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 11",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 12",
+    "oordeel": "goed",
+    "eigenKeuze": "D",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 13",
+    "oordeel": "twijfel",
+    "eigenKeuze": "D",
+    "reden": "Antwoord klopt, maar 'essentieel' is een moeilijk woord voor groep 5; bewust niet aangepast (geen eenvoudiger synoniem van één woord dat even goed past).",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 14",
+    "oordeel": "goed",
+    "eigenKeuze": "C",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "waar": "synoniemen-tegenstellingen-po stap 4 vraag 4",
+    "oordeel": "goed",
+    "eigenKeuze": "A",
+    "reden": "Klopt; niveaus zijn echte hulpstappen.",
+    "hersteld": false,
+    "wijziging": ""
+  }
+]

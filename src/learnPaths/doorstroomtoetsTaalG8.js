@@ -1341,9 +1341,9 @@ const steps = [
       {
         q: "Wat is een **citaat** in een tekst?",
         ref: "1F",
-        options: ["Letterlijke aanhaling van iemand", "Eerste alinea van de tekst", "Een afbeelding met onderschrift", "Bronvermelding onderaan de pagina"],
+        options: ["Een letterlijke aanhaling van iemand", "De eerste alinea van de tekst", "Een afbeelding met onderschrift", "Een bronvermelding onderaan de pagina"],
         answer: 0,
-        wrongHints: [null, "Dat is de inleiding.", "Een afbeelding is geen tekst.", "Dat is een voetnoot — een bron, geen citaat."],
+        wrongHints: [null, "De eerste alinea is meestal de inleiding van een tekst.", "Een afbeelding is geen tekst.", "Dat is een voetnoot — een bron, geen citaat."],
         uitlegPad: {
           stappen: [
             { titel: "Citaat = letterlijk", tekst: "Een citaat is wat iemand letterlijk heeft gezegd of geschreven. Staat tussen aanhalingstekens." },
@@ -1354,9 +1354,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De aarde draait,' zei Galileo. → citaat van Galileo." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Citaat = letterlijke woorden. Parafrase = navertelling in eigen woorden." }],
           niveaus: {
-            basis: "Letterlijke aanhaling.",
-            simpeler: "Citaat = woorden tussen aanhalingstekens.",
-            nogSimpeler: "Letterlijke aanhaling",
+            basis: "Denk aan de aanhalingstekens in een krantenartikel. Wat staat daartussen?",
+            simpeler: "Een citaat zijn de woorden die iemand zelf zei, tussen aanhalingstekens.",
+            nogSimpeler: "Een letterlijke aanhaling",
           },
         },
       },
@@ -1370,10 +1370,10 @@ const steps = [
       {
         q: "*'Egels houden een winterslaap. In de herfst eten ze extra veel om vet op te slaan. Van november tot maart slapen ze in een nest van bladeren.'*\n\nWaarom eten egels in de herfst extra veel?",
         ref: "1F",
-        options: ["Om vet op te slaan voor de winter", "Omdat er in de herfst meer eten is", "Omdat ze dan jongen krijgen", "Omdat bladeren lekker zijn"],
+        options: ["Om een voorraad op te bouwen voor de winterslaap", "Omdat er in de herfst meer eten is", "Omdat ze dan jongen krijgen", "Omdat bladeren lekker zijn"],
         answer: 0,
         wrongHints: [null, "Mogelijk waar, maar staat dát in de tekst? Zoek het woordje 'om'.", "Over jongen zegt de tekst niets.", "De bladeren zijn voor het nest, niet om te eten."],
-        explanation: "De tekst zegt het letterlijk: 'ze eten extra veel **om vet op te slaan**'. Detail-vraag: het antwoord staat altijd ín de tekst.",
+        explanation: "De tekst zegt: 'ze eten extra veel **om vet op te slaan**'. Dat vet is hun voorraad voor de winterslaap. Bij een detail-vraag zoek je het antwoord terug in de tekst.",
       },
       {
         q: "*'Steeds meer scholen verbieden mobieltjes in de klas. Leerlingen blijken zich beter te concentreren zonder telefoon. Ook praten kinderen in de pauze meer met elkaar.'*\n\nWat is de **hoofdgedachte** van deze tekst?",
@@ -1391,8 +1391,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Eerste zin: 'Steeds meer scholen verbieden mobieltjes' + twee voordelen erna = de boodschap." }],
           basiskennis: [{ onderwerp: "Detail ≠ hoofdgedachte", uitleg: "Een antwoord dat maar over één zin gaat, is bijna nooit de hoofdgedachte." }],
           niveaus: {
-            basis: "Een mobielverbod heeft voordelen.",
-            simpeler: "Alle zinnen gaan over hoe goed het verbod uitpakt.",
+            basis: "Lees alle drie de zinnen. Waar gaan ze samen over?",
+            simpeler: "Alle zinnen vertellen wat er beter wordt als mobieltjes in de klas verboden zijn.",
             nogSimpeler: "Verbod = goed",
           },
         },
@@ -1430,11 +1430,11 @@ const steps = [
         explanation: "Stappen in volgorde (eerst, vervolgens, daarna, ten slotte) die zeggen wat jij moet doen = een **instructie** (recept).",
       },
       {
-        q: "*'Het schoolreisje gaat dit jaar niet naar de Efteling **maar** naar een klimpark.'*\n\nWelk signaalwoord zit in deze zin en wat geeft het aan?",
+        q: "*'Het schoolreisje gaat dit jaar niet naar de Efteling maar naar een klimpark.'*\n\nWelk signaalwoord zit in deze zin en wat geeft het aan?",
         ref: "1F",
         options: ["'Maar' — een tegenstelling", "'Maar' — een opsomming", "'Niet' — een oorzaak", "'Dit jaar' — een gevolg"],
         answer: 0,
-        wrongHints: [null, "Bij een opsomming komen dingen erbíj — hier wordt iets juist vervangen.", "'Niet' ontkent alleen; het signaalwoord dat twee dingen tegenover elkaar zet is een ander woord.", "'Dit jaar' zegt alleen wanneer — welk woord draait de zin om?"],
+        wrongHints: [null, "Bij een opsomming komen dingen erbíj — hier wordt iets juist vervangen.", "'Niet' ontkent alleen iets. Zoek het woord dat de twee delen van de zin aan elkaar verbindt.", "'Dit jaar' zegt alleen wanneer. Welk woord verbindt de twee delen van de zin?"],
         explanation: "**Maar** zet twee dingen tegenover elkaar: niet de Efteling ↔ wél het klimpark. Dat heet een tegenstelling.",
       },
       {
@@ -1453,8 +1453,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Zwarte huid' → staat in de tekst ✓. 'Witte haren' → tekst zegt 'doorzichtig' ✗. Gevonden!" }],
           basiskennis: [{ onderwerp: "Lijken vs zijn", uitleg: "'Lijken wit' betekent niet 'zijn wit' — let op zulke kleine verschillen." }],
           niveaus: {
-            basis: "De haren zijn doorzichtig, niet wit.",
-            simpeler: "De tekst zegt: haren = doorzichtig. Dus 'witte haren' klopt niet.",
+            basis: "Zoek elke zin terug in de tekst. Bij welke zin zegt de tekst iets anders?",
+            simpeler: "Kijk goed wat de tekst over de haren zegt: zíjn ze wit, of lijken ze alleen wit?",
             nogSimpeler: "Doorzichtig, niet wit",
           },
         },

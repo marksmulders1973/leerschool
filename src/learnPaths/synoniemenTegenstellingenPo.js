@@ -923,7 +923,7 @@ const steps = [
         q: "Wat is de tegenstelling van **'beginnen'**?",
         options: ["Stoppen", "Doorgaan", "Starten", "Aanvang"],
         answer: 0,
-        wrongHints: [null, "Doorgaan is voortzetten, geen tegenstelling.", "Starten = synoniem van beginnen.", "Aanvang = synoniem van beginnen (zelfstandig naamwoord)."],
+        wrongHints: [null, "Doorgaan is voortzetten, geen tegenstelling.", "Starten betekent juist hetzelfde als beginnen.", "De aanvang is het begin van iets. Is dat het omgekeerde van beginnen?"],
       },
       {
         q: "Welk woord past het beste? *'Anna voelde zich ___ na haar uitstekende cijfer.'*",
@@ -932,7 +932,7 @@ const steps = [
         wrongHints: [null, "Word je boos van een uitstekend cijfer?", "Ben je teleurgesteld als je cijfer heel goed is?", "Ben je bang na een goed cijfer?"],
       },
       { q: "Welk woord is een synoniem van **groot**?", options: ["enorm","klein","zwaar","breed"], answer: 0, wrongHints: [null, "Klein is juist het omgekeerde.", "Zwaar gaat over gewicht. Een grote ballon is niet zwaar.", "Breed gaat alleen over hoe wijd iets is."] },
-      { q: "Wat is de tegenstelling van **snel**?", options: ["langzaam","vlug","direct","laat"], answer: 0, wrongHints: [null, "Vlug betekent juist ook snel.", "Direct = meteen, niet het tegenovergestelde.", "Laat gaat over de tijd op de klok, niet over hoe snel iets gaat."] },
+      { q: "Wat is de tegenstelling van **snel**?", options: ["langzaam","vlug","direct","laat"], answer: 0, wrongHints: [null, "Vlug betekent juist ook snel.", "Direct betekent meteen. Is dat het omgekeerde van snel?", "Laat gaat over de tijd op de klok, niet over hoe snel iets gaat."] },
       { q: "Welk woord is een synoniem van **mooi**?", options: ["prachtig","lelijk","gewoon","duur"], answer: 0, wrongHints: [null, "Lelijk is juist het omgekeerde.", "Gewoon is niets bijzonders. Is dat mooi?", "Is iets wat duur is altijd mooi?"] },
       { q: "Wat is de tegenstelling van **vol**?", options: ["leeg","gevuld","volop","zwaar"], answer: 0, wrongHints: [null, "Gevuld betekent juist hetzelfde als vol.", "Volop = heel veel, niet het tegenovergestelde.", "Een tas kan zwaar zijn, ook met maar één ding erin. Is zwaar het omgekeerde van vol?"] },
       { q: "Welk woord betekent hetzelfde als **hard** in *'de muziek staat hard'*?", options: ["luid","zacht","snel","hoog"], answer: 0, wrongHints: [null, "Zacht is juist het omgekeerde.", "Hard rijden is snel rijden. Maar gaat het hier over muziek?", "Hoog gaat over een toon, zoals bij een fluitje. Is dat hetzelfde als hard?"] },

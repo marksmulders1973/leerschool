@@ -5328,6 +5328,36 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 36",
+  "hash": "0832d6ba5441f15d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 37",
+  "hash": "f9e190cb4570143e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties zonder lidwoord (telegramstijl); hint 'Dat is de inleiding.' kaal; basis = antwoord."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 38",
+  "hash": "2962106df7195be5",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 39",
+  "hash": "cac50f40fdf1a509",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord stond letterlijk in de leestekst ('om vet op te slaan'); verdedigbaar als detailvraag maar te makkelijk."
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 4",
   "hash": "bc88d43f7e58bc4d",
   "oordeel": "goed",
@@ -5335,10 +5365,103 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 40",
+  "hash": "2697033ba554417d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis = antwoord."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 41",
+  "hash": "7e7e75de542bc59a",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 42",
+  "hash": "05886ff4f0a1e017",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 43",
+  "hash": "2df2cce0fb664591",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 44",
+  "hash": "a3fd10468b19ffb1",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 46",
+  "hash": "b3b4ffb89b30e206",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis = antwoord."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 47",
+  "hash": "674fece174c9011c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 48",
+  "hash": "e7bc8284628e22e6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 49",
+  "hash": "10012b3a74a317be",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 5",
   "hash": "457e982a9b191510",
   "oordeel": "goed",
   "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 50",
+  "hash": "7563a37de071861c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 51",
+  "hash": "50f6b994b016cdb1",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 52",
+  "hash": "4f4a1a6c75aa9b47",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 53",
+  "hash": "46506cd6b032fe86",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -15289,6 +15412,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "synoniemen-tegenstellingen-po stap 4 vraag 4",
+  "hash": "5e9692c324ce06b6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "synoniemen-tegenstellingen-po stap 4 vraag 5",
   "hash": "9bff54dfb42d054e",
   "oordeel": "goed",
@@ -15324,11 +15454,112 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 1",
+  "hash": "fe33ca60fcc17dec",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 10",
+  "hash": "fa2ad03026a8c9dd",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 11",
+  "hash": "7bebb65fdcfea889",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 12",
+  "hash": "39aedac2d77bc25b",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 13",
+  "hash": "7bcd0962b5f57864",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar 'essentieel' is een moeilijk woord voor groep 5; bewust niet aangepast (geen eenvoudiger synoniem van één woord dat even goed past)."
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 14",
+  "hash": "a398b22bec5e54e7",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 2",
+  "hash": "cb7162f071e84713",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "synoniemen-tegenstellingen-po stap 5 vraag 22",
   "hash": "668e8c0a338a120d",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 3",
+  "hash": "83bc79a8de39a267",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 4",
+  "hash": "b47ed3387b59172c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 5",
+  "hash": "af90050e9ab5f700",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; twee hints waren telegramzinnen ('Starten = synoniem van beginnen.')."
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 6",
+  "hash": "a710efeef0586974",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 7",
+  "hash": "869a889f891f5830",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 8",
+  "hash": "76ae6805604c263d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint 'Direct = meteen, ...' telegramzin."
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 9",
+  "hash": "e09e1f749ed22863",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "taal-leren-lezen-g3 stap 4 vraag 1",
@@ -16842,6 +17073,13 @@
   "reden": "Klopt; niveaus.basis = alleen antwoord."
  },
  {
+  "waar": "topografie-nederland stap 6 vraag 5",
+  "hash": "72866a91a13a9e9c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "topografie-nederland stap 6 vraag 6",
   "hash": "f0772bd80c643c9b",
   "oordeel": "twijfel",
@@ -16944,6 +17182,155 @@
   "bron": "vervolg B5 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt; afleiders Volendam en Giethoorn waren zwak (geen kustplaats); basis = antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 6",
+  "hash": "9899fc658c39ee91",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord, simpeler was een telegramzin."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 7",
+  "hash": "71580b61570e144e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; niveaus.basis gaf alleen het antwoord, simpeler telegramzin."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 8",
+  "hash": "ac3ba222f329571d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar afleiders (berg, luchthaven, rivier) waren absurd en dus raadbaar; hint 'wat lag er vroeger om Marken heen' stuurde sterk; basis = antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 8 vraag 9",
+  "hash": "687e2d38161e0ce4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis = antwoord, simpeler telegramzin."
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 1",
+  "hash": "ee4346a76d8446ec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis = antwoord, simpeler telegramzin; uitleg 'Aan de IJssel-rivier' onnauwkeurig."
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 10",
+  "hash": "3025f5a0aaf79433",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 11",
+  "hash": "3cb59f42b06cd43a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'NL' en '+' (telegramstijl) in vraag en opties; 'Luxemburg ligt onder België' onnauwkeurig."
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 12",
+  "hash": "bba6c249c3ce21a9",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 13",
+  "hash": "de5b073000a003ef",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 14",
+  "hash": "bde74388c19499f0",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 15",
+  "hash": "0d668ba458b360cf",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 16",
+  "hash": "10b4b08d852c13f1",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 17",
+  "hash": "47d4465ba984841a",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 2",
+  "hash": "a40848d516ec4c7b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramzin met '3' en 'NL' in vraag en hints; basis = antwoord."
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 4",
+  "hash": "25586fc3d006bb21",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint 'Waddeneilanden zijn in Noord-Holland en Friesland' onvolledig (ook Groningen); hint bij 'oudste' noemde 1986; inwonertal ~425.000 verouderd; basis telegramzin."
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 5",
+  "hash": "a80545e9b77a46d7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt (~18 miljoen); hints telegramstijl; basis = antwoord; 'uitgezonderd Malta, Monaco' te stellig."
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 6",
+  "hash": "c51f99094f3c9b35",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 7",
+  "hash": "28cb68b7e00996e0",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 8",
+  "hash": "6621c79123c83f26",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "topografie-nederland stap 9 vraag 9",
+  "hash": "13e6cf37d5e8f6da",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 02 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "topografie-nederland-provincies-po stap 1 vraag 1",
