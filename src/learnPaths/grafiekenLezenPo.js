@@ -566,10 +566,10 @@ const steps = [
         },
       },
       {
-        q: "Zelfde staafdiagram. Hoeveel kinderen kwamen er in de hele week **samen**?",
+        q: "Bekijk het staafdiagram 'Aantal kinderen op overblijf'. Hoeveel kinderen kwamen er in de hele week **samen**?",
         options: ["120 kinderen", "100 kinderen", "30 kinderen", "150 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Tel de vijf getallen nog eens rustig op."],
+        wrongHints: [null, "Te weinig — heb je alle vijf de dagen meegeteld?", "Te weinig — dat is alleen donderdag.", "Tel de vijf getallen nog eens rustig op."],
         uitlegPad: {
           stappen: [
             { titel: "'Totaal' = optellen", tekst: "Bij de Doorstroomtoets: woord **'totaal'** of **'samen'** of **'in totaal'** → ALLE balken bij elkaar **optellen**." },
@@ -587,14 +587,14 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Signaalwoord lezen vóór rekenen. 'Totaal' = ALLES bij elkaar optellen." }],
           niveaus: {
-            basis: "120 kinderen (22+18+26+30+24).",
+            basis: "'Samen' betekent optellen. Lees bij elke dag het getal af en tel alle vijf de getallen op.",
             simpeler: "Tel alle 5 balken op: 22+18+26+30+24 = 120 kinderen.",
             nogSimpeler: "120",
           },
         },
       },
       {
-        q: "Zelfde staafdiagram. **Op welke dag** kwamen er **de meeste kinderen**?",
+        q: "Bekijk het staafdiagram 'Aantal kinderen op overblijf'. **Op welke dag** kwamen er **de meeste kinderen**?",
         options: ["Donderdag", "Maandag", "Woensdag", "Vrijdag"],
         answer: 0,
         wrongHints: [null, "Dat is 22 — zoek het hoogste getal.", "Dat is 26 — hoger bestaat nog.", "Dat is 24 — hoger bestaat nog."],
@@ -615,7 +615,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag-startwoord bepaalt antwoord-vorm: 'Welke...' = naam/categorie. 'Hoeveel...' = getal. 'Wanneer...' = tijd." },],
           niveaus: {
-            basis: "Donderdag = 30 = hoogste.",
+            basis: "'De meeste' betekent: zoek de hoogste balk. Bij welke dag staat die?",
             simpeler: "Zoek hoogste getal: 30 op donderdag. Vraag: 'welke dag?' → antwoord = donderdag.",
             nogSimpeler: "Donderdag",
           },
@@ -623,7 +623,8 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Staafdiagram 'Gelezen boeken': Sam 7, Noor 11, Ali 4, Fien 9. Hoeveel boeken las **Fien**?",
+        q: "Bekijk het staafdiagram 'Gelezen boeken'. Hoeveel boeken las **Fien**?",
+        svg: staafSvg([{ l: "Sam", v: 7, c: COLORS.bar }, { l: "Noor", v: 11, c: COLORS.bar2 }, { l: "Ali", v: 4, c: COLORS.bar3 }, { l: "Fien", v: 9, c: COLORS.bar4 }], "Gelezen boeken"),
         options: ["9 boeken", "7 boeken", "11 boeken", "4 boeken"],
         answer: 0,
         wrongHints: [null, "Dat is de balk van Sam. Zoek de naam Fien.", null, "Dat is de balk van Ali."],
@@ -658,14 +659,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Fien = 9 boeken.",
+            basis: "Zoek onderaan de naam Fien en kijk tot welk getal haar balk komt.",
             simpeler: "Zoek Fien onderaan. Haar balk komt tot 9.",
             nogSimpeler: "9 boeken",
           },
         },
       },
       {
-        q: "Staafdiagram fietsen in de stalling: ma 35, di 42, wo 28, do 40. Hoeveel fietsen **minder** op woensdag dan op dinsdag?",
+        q: "Bekijk het staafdiagram 'Fietsen in de stalling'. Hoeveel fietsen stonden er op woensdag **minder** dan op dinsdag?",
+        svg: staafSvg([{ l: "ma", v: 35, c: COLORS.bar }, { l: "di", v: 42, c: COLORS.bar2 }, { l: "wo", v: 28, c: COLORS.bar3 }, { l: "do", v: 40, c: COLORS.bar4 }], "Fietsen in de stalling"),
         options: ["14 fietsen", "70 fietsen", "12 fietsen", "7 fietsen"],
         answer: 0,
         wrongHints: [
@@ -705,14 +707,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "42 − 28 = 14 fietsen.",
+            basis: "'Hoeveel minder' betekent: het verschil uitrekenen. Lees dinsdag en woensdag af en trek het kleine getal van het grote af.",
             simpeler: "Dinsdag 42, woensdag 28. Het verschil is 42 − 28 = 14.",
             nogSimpeler: "14 fietsen",
           },
         },
       },
       {
-        q: "Staafdiagram verkochte broodjes: kaas 24, ham 8, ei 12, tonijn 6. Hoeveel **keer zo veel** kaas als ham?",
+        q: "Bekijk het staafdiagram 'Verkochte broodjes'. Hoeveel **keer zo veel** kaasbroodjes als hambroodjes werden er verkocht?",
+        svg: staafSvg([{ l: "kaas", v: 24, c: COLORS.bar }, { l: "ham", v: 8, c: COLORS.bar2 }, { l: "ei", v: 12, c: COLORS.bar3 }, { l: "tonijn", v: 6, c: COLORS.bar4 }], "Verkochte broodjes"),
         options: ["3 keer", "16 keer", "2 keer", "4 keer"],
         answer: 0,
         wrongHints: [
@@ -756,14 +759,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "24 ÷ 8 = 3 keer.",
+            basis: "'Keer zo veel' betekent delen. Lees kaas en ham af en kijk hoe vaak het kleine getal in het grote past.",
             simpeler: "Hoe vaak past 8 in 24? 8, 16, 24 → 3 keer.",
             nogSimpeler: "3 keer",
           },
         },
       },
       {
-        q: "Staafdiagram punten per team: rood 45, geel 38, groen 52, blauw 29. Hoeveel punten hebben **geel en blauw samen**?",
+        q: "Bekijk het staafdiagram 'Punten per team'. Hoeveel punten hebben **geel en blauw samen**?",
+        svg: staafSvg([{ l: "rood", v: 45, c: COLORS.bar }, { l: "geel", v: 38, c: COLORS.bar2 }, { l: "groen", v: 52, c: COLORS.bar3 }, { l: "blauw", v: 29, c: COLORS.bar4 }], "Punten per team"),
         options: ["67 punten", "83 punten", "9 punten", "81 punten"],
         answer: 0,
         wrongHints: [
@@ -803,14 +807,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "38 + 29 = 67 punten.",
+            basis: "'Samen' betekent optellen. Lees alleen de balken van geel en blauw af en tel ze op.",
             simpeler: "Geel heeft 38, blauw 29. Samen: 38 + 29 = 67.",
             nogSimpeler: "67 punten",
           },
         },
       },
       {
-        q: "Staafdiagram 'Uren tv kijken per week'. De balk van **Jesse** is het **hoogst**. Wat betekent dat?",
+        q: "Bekijk het staafdiagram 'Uren tv kijken per week'. De balk van **Jesse** is het **hoogst**. Wat betekent dat?",
+        svg: staafSvg([{ l: "Mila", v: 5, c: COLORS.bar }, { l: "Jesse", v: 9, c: COLORS.bar2 }, { l: "Daan", v: 6, c: COLORS.bar3 }, { l: "Sofie", v: 4, c: COLORS.bar4 }], "Uren tv kijken per week"),
         options: [
           "Jesse keek de meeste uren tv",
           "Jesse keek de minste uren tv",
@@ -855,7 +860,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hoogste balk = meeste uren tv.",
+            basis: "Lees de titel: wat wordt er geteld? Een hoge balk betekent dan veel van dát.",
             simpeler: "Een hoge balk betekent veel. De titel gaat over uren tv. Dus Jesse keek het meest.",
             nogSimpeler: "Meeste uren tv",
           },

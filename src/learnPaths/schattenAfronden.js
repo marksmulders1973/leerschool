@@ -993,7 +993,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "300 + 500 = 800.",
+            basis: "Rond elk getal af op het dichtstbijzijnde honderdtal en tel die ronde getallen op.",
             simpeler: "312 → 300. 489 → 500. Samen 800.",
             nogSimpeler: "Ongeveer 800.",
           },
@@ -1052,7 +1052,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "90 − 50 = 40.",
+            basis: "Rond beide getallen af op het dichtstbijzijnde tiental en trek ze daarna van elkaar af.",
             simpeler: "91 → 90. 48 → 50. 90 − 50 = 40.",
             nogSimpeler: "Ongeveer 40.",
           },
@@ -1111,7 +1111,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "800 − 400 = 400.",
+            basis: "Rond beide getallen af op het dichtstbijzijnde honderdtal en trek ze daarna van elkaar af.",
             simpeler: "803 → 800. 397 → 400. 800 − 400 = 400.",
             nogSimpeler: "Ongeveer 400.",
           },
@@ -1170,7 +1170,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 4 + € 5 + € 2 = € 11.",
+            basis: "Rond elk bedrag af op hele euro's: kijk of de centen onder of boven de 50 zitten. Tel daarna op.",
             simpeler: "€ 3,90 → € 4. € 5,20 → € 5. € 1,95 → € 2. Samen € 11.",
             nogSimpeler: "Ongeveer € 11.",
           },
@@ -1224,7 +1224,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 + 40 + 50 = 120.",
+            basis: "Rond alle drie de getallen af op tientallen en tel ze daarna op.",
             simpeler: "29 → 30, 38 → 40, 52 → 50. Samen 120.",
             nogSimpeler: "Ongeveer 120.",
           },
@@ -1283,7 +1283,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3.000 + 2.000 = 5.000.",
+            basis: "Rond beide getallen af op duizendtallen: kijk naar het cijfer van de honderdtallen. Tel daarna op.",
             simpeler: "2.870 → 3.000. 1.940 → 2.000. Samen 5.000.",
             nogSimpeler: "Ongeveer 5.000.",
           },

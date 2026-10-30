@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Vraag zegt \"per kind\", maar twee opties gaven een totaal: door de vorm te raden.",
+  "hersteld": true,
+  "wijziging": "Opties C/D naar \"€ 22,50 per kind\" (alles samen) en \"€ 3,00 per kind\" (entree-regel); wrongHints meeverhuisd."
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Hints en niveaus verwezen naar \"Sam\" uit een andere vraag; in een losse set onbegrijpelijk.",
+  "hersteld": true,
+  "wijziging": "\"Denk aan Sam\" vervangen door \"een bezoeker die vandaag jarig is\" (3 hints + basis + nogSimpeler)."
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Afleiders absurd (recept, ruzie, luchtbed opblazen): raadbaar.",
+  "hersteld": true,
+  "wijziging": "Drie plausibele afleiders uit het verhaal zelf (opa vroeger, briefje, bang in het donker) + hints en nogSimpeler aangepast."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Toegevoegde zin \"de kilte van de nacht naar binnen latend\" is een stijve, onnatuurlijke constructie.",
+  "hersteld": true,
+  "wijziging": "Zin wordt: \"Sanne stond op en deed het raam open, ook al was het buiten koud.\""
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Goede optie bijna letterlijk gelijk aan die van vraag 3; afleider \"per ongeluk\" absurd.",
+  "hersteld": true,
+  "wijziging": "Goede optie: \"Zo klinkt het pak gezond, waardoor je het eerder koopt\"; afleider D: \"Omdat de folder anders te kort zou zijn\"; hint D aangepast."
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf het antwoord (goed → beter → best); hint D telegramstijl.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; hint \"Dat bestaat niet.\" → \"'Goedst' bestaat niet, en met -st maak je bovendien de overtreffende trap.\""
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord; hints C/D telegramstijl.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; hints C en D als volledige zinnen."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (\"Tom is langer dan Sara: hoeveel dingen?\")."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Procenten in set groep 5 (groep-6-stof); basis gaf het antwoord; hint B rekende bijna voor.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis herschreven; hint B benoemt nu de denkfout (percentage ≠ bedrag)."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Hint bij 25 (\"75% is meer dan de helft\") klopt niet als uitleg: 25 ís al meer dan de helft van 40. Hint bij 20 (\"75% is bijna alles\") onjuist. Groep 5 te vroeg.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; hints B en D herschreven (driekwart vs. helft)."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Blinde keuze = goede antwoord; bron staat in de stap; hints benoemen de denkfout zonder het antwoord.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord (300 + 500 = 800).",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij 100 rekende voor (\"22+18+26+30+24\"); \"Zelfde staafdiagram\" verwijst naar een vorige vraag; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag noemt nu het diagram bij naam; hint zonder de som; basis herschreven."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "\"Zelfde staafdiagram\" verwijst naar een vorige vraag; basis = antwoord.",
+  "hersteld": true,
+  "wijziging": "Vraag noemt nu het diagram bij naam; basis herschreven."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Antwoord stond letterlijk in de vraag (\"Fien 9\"); er werd het overblijf-diagram van de stap getoond, dat er niet bij hoort.",
+  "hersteld": true,
+  "wijziging": "Eigen staafdiagram (svg) \"Gelezen boeken\" bij de vraag; getallen uit de vraagtekst gehaald; basis herschreven."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Vraag noemt \"staafdiagram\" zonder eigen diagram: het (verkeerde) overblijf-diagram van de stap werd getoond.",
+  "hersteld": true,
+  "wijziging": "Eigen staafdiagram \"Fietsen in de stalling\"; getallen uit de vraag; basis herschreven."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Zelfde probleem: verkeerd diagram bij de vraag; \"kaas als ham\" telegramstijl.",
+  "hersteld": true,
+  "wijziging": "Eigen staafdiagram \"Verkochte broodjes\"; vraag als hele zin; basis herschreven."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Zelfde probleem: verkeerd diagram bij de vraag.",
+  "hersteld": true,
+  "wijziging": "Eigen staafdiagram \"Punten per team\"; getallen uit de vraag; basis herschreven."
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Vraag noemt \"staafdiagram\" maar toonde het overblijf-diagram: Jesse komt daar niet in voor.",
+  "hersteld": true,
+  "wijziging": "Eigen staafdiagram \"Uren tv kijken per week\" (Jesse hoogst); basis herschreven."
+ }
+]

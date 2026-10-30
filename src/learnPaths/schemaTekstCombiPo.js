@@ -897,14 +897,14 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
       },
       {
         q: "Drie kinderen doen samen één ponyles bij 't Hoefje. Wat betalen ze per kind?",
-        options: ["€ 7,50 per kind", "€ 2,50 per kind", "€ 7,50 in totaal", "€ 10,00 in totaal"],
+        options: ["€ 7,50 per kind", "€ 2,50 per kind", "€ 22,50 per kind", "€ 3,00 per kind"],
         answer: 0,
         evidence: "Ponyles (30 minuten, per kind): € 7,50",
         wrongHints: [
           null,
           "Kijk wat er op de ponyles-regel tussen de haakjes staat: 'per groepje' of 'per kind'?",
-          "Vergelijk de ponyles-regel met de speurtocht-regel: staat er ook 'per groepje' bij de ponyles?",
-          "Waar komt € 10,00 vandaan? Kijk op de ponyles-regel wat er tussen de haakjes staat.",
+          "Je rekende uit wat de drie kinderen samen betalen. De vraag gaat over wat één kind betaalt.",
+          "Dat is het bedrag om binnen te komen. Zoek de regel die met 'Ponyles' begint.",
         ],
         uitlegPad: {
           stappen: [
@@ -924,7 +924,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
         options: ["Omdat de tekst uitzonderingen kan noemen die de prijs veranderen", "Omdat de lijst vaak oude prijzen bevat die niet meer kloppen", "Omdat de tekst dezelfde getallen nog een keer noemt, als controle", "Omdat alleen de tekst de prijzen voor volwassenen noemt"],
         answer: 0,
         evidence: "Wie jarig is, mag die dag gratis naar binnen.",
-        wrongHints: [null, "De lijst klopt heus wel — maar vertelt de lijst je álles? Denk aan Sam, die vandaag jarig was.", "Als de tekst precies hetzelfde zei, waarom zou je hem dan lezen? Denk aan Sam.", "Staan de prijzen voor volwassenen niet gewoon in de lijst? Denk aan Sam, die vandaag jarig was."],
+        wrongHints: [null, "De lijst klopt heus wel — maar vertelt de lijst je álles? Denk aan een bezoeker die vandaag jarig is.", "Als de tekst precies hetzelfde zei, waarom zou je hem dan lezen? Denk aan een bezoeker die jarig is.", "Staan de prijzen voor volwassenen niet gewoon in de lijst? Denk aan een bezoeker die vandaag jarig is."],
         uitlegPad: {
           stappen: [
             { titel: "Wat de lijst kan", tekst: "De lijst geeft je de gewone prijzen en gegevens, snel en overzichtelijk. Voor de meeste vragen is dat het startpunt." },
@@ -942,9 +942,9 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
             { onderwerp: "Twee bronnen, één antwoord", uitleg: "Bij een opgave met tekst én tabel komt het antwoord vaak pas als je beide gebruikt hebt." },
           ],
           niveaus: {
-            basis: "Denk aan de vraag over de jarige Sam: stond zijn echte prijs in de lijst of ergens anders?",
+            basis: "Denk aan een bezoeker die vandaag jarig is: staat de echte prijs voor die bezoeker in de lijst of ergens anders?",
             simpeler: "De lijst geeft de gewone situatie. Waar staan de bijzondere gevallen, zoals een verjaardag of een regen-regel?",
-            nogSimpeler: "Wat miste je bij Sam als je alléén de lijst las?",
+            nogSimpeler: "Wat mis je bij een jarige bezoeker als je alléén de lijst leest?",
           },
         },
       },

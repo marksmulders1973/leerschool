@@ -733,17 +733,17 @@ const steps = [
       {
         q: "Waarom is de zin 'Ochtendkracht bevat zes verschillende granen' in een reclame-folder opgenomen?",
         options: [
-          "Zo klinkt de folder betrouwbaar, waardoor je het eerder koopt",
+          "Zo klinkt het pak gezond, waardoor je het eerder koopt",
           "Omdat de schrijver kinderen graag iets over granen wil leren",
           "Omdat de wet verplicht om dit op verpakkingen te zetten",
-          "Omdat de schrijver per ongeluk te veel informatie heeft gegeven",
+          "Omdat de folder anders te kort zou zijn",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een schoolboek leert je over granen — maar wat wil een reclame-folder bereiken?",
           "Verpakkingstekst en een folder zijn verschillende dingen. Kijk naar het doel van de folder.",
-          "Reclamemakers kiezen elke zin bewust. Waarom zou dit feit erin staan?",
+          "Reclamemakers kiezen elke zin bewust, niet om de folder te vullen. Waarom zou dit feit erin staan?",
         ],
         uitlegPad: {
           stappen: [

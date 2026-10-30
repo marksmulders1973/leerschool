@@ -592,9 +592,10 @@ const steps = [
       },
       {
         q: "Een fiets kost **€ 200**. **25% korting**. Hoeveel **bespaar je**?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["€ 50","€ 25","€ 75","€ 175"],
         answer: 0,
-        wrongHints: [null,"Te weinig — 25% is een vierde. Wat is een vierde van € 200?","Te veel — dat zou 37,5% zijn.","Klopt niet — dat is wat de fiets nu KOST, niet wat je bespaart. Lees de vraag."],
+        wrongHints: [null,"25 is het percentage, niet het bedrag in euro's. Welk deel van de prijs is 25%?","Te veel — dat zou 37,5% zijn.","Klopt niet — dat is wat de fiets nu KOST, niet wat je bespaart. Lees de vraag."],
         uitlegPad: {
           stappen: [
             { titel: "Lees de vraag goed", tekst: "Wat wordt gevraagd? **Hoeveel bespaar je?** (= hoeveel KORTING). Niet: 'wat is de nieuwe prijs?' Pas op — die staat ook tussen de antwoorden om je te misleiden!" },
@@ -612,7 +613,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Lees of vraag is: KORTING (=besparing) OF NIEUWE PRIJS. Anders verkeerd antwoord." }],
           niveaus: {
-            basis: "25% korting van €200 = €50 besparing.",
+            basis: "25% is een kwart. De korting is dus een kwart van de prijs. Hoeveel euro is dat?",
             simpeler: "¼ van €200 = €50 = de korting.",
             nogSimpeler: "€200 ÷ 4 = €50.",
           },
@@ -620,13 +621,15 @@ const steps = [
       },
       {
         q: "Op een toets van **40 vragen** maakt Lisa er **75% goed**. Hoeveel zijn dat?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["30","25","35","20"],
         answer: 0,
-        wrongHints: [null,"Te weinig — 75% is meer dan de helft.","Te veel — 75% is driekwart. Hoeveel is een kwart van 40?","Te weinig — 75% is bijna alles, 50% is 20."],
+        wrongHints: [null,"Te weinig — 75% is driekwart, en 25 is nog geen driekwart van 40. Reken eerst uit wat een kwart van 40 is.","Te veel — 75% is driekwart. Hoeveel is een kwart van 40?","Te weinig — 20 is de helft van 40, dus 50%. 75% is meer dan de helft."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "**10% van 70** = ?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["7", "70", "0,7", "10"],
         answer: 0,
         wrongHints: [
@@ -670,7 +673,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10% van 70 = 7.",
+            basis: "10% is één tiende deel. Verdeel 70 in tien gelijke stukjes: hoe groot is één stukje?",
             simpeler: "70 ÷ 10 = 7.",
             nogSimpeler: "7",
           },
@@ -678,6 +681,7 @@ const steps = [
       },
       {
         q: "**25% van 40** = ?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["10", "25", "20", "4"],
         answer: 0,
         wrongHints: [
@@ -721,7 +725,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "25% van 40 = 10.",
+            basis: "25% is een kwart. Verdeel 40 in vier gelijke stukken: hoe groot is één stuk?",
             simpeler: "40 ÷ 4 = 10.",
             nogSimpeler: "10",
           },
@@ -729,6 +733,7 @@ const steps = [
       },
       {
         q: "**30% van 50** = ?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["15", "30", "5", "20"],
         answer: 0,
         wrongHints: [
@@ -772,7 +777,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30% van 50 = 15.",
+            basis: "Reken eerst 10% van 50 uit. 30% is drie keer zoveel.",
             simpeler: "10% = 5, dus 30% = 3 × 5 = 15.",
             nogSimpeler: "15",
           },
@@ -780,6 +785,7 @@ const steps = [
       },
       {
         q: "**70% van 30** = ?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["21", "7", "3", "27"],
         answer: 0,
         wrongHints: [
@@ -823,7 +829,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "70% van 30 = 21.",
+            basis: "Reken eerst 10% van 30 uit. 70% is zeven keer zoveel.",
             simpeler: "10% = 3, dus 70% = 7 × 3 = 21.",
             nogSimpeler: "21",
           },
@@ -831,6 +837,7 @@ const steps = [
       },
       {
         q: "Op een camping staan **200 tenten**. **20%** is groen. Hoeveel tenten zijn **groen**?",
+        vanafGroep: 6, // nakijkronde B6 (30 okt 2026): procenten zijn groep-6-stof
         options: ["40", "20", "10", "160"],
         answer: 0,
         wrongHints: [
@@ -874,7 +881,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20% van 200 = 40 tenten.",
+            basis: "Reken eerst 10% van 200 uit. 20% is twee keer zoveel.",
             simpeler: "10% = 20, dus 20% = 40.",
             nogSimpeler: "40",
           },

@@ -230,11 +230,11 @@ const steps = [
         q: "De vergrotende trap van 'goed' is...",
         options: ["beter", "goeder", "best", "goedst"],
         answer: 0,
-        wrongHints: [null, "'Goeder' bestaat niet — dit woord is onregelmatig.", "Dat is de overtreffende trap.", "Dat bestaat niet."],
+        wrongHints: [null, "'Goeder' bestaat niet — dit woord is onregelmatig.", "Dat is de overtreffende trap.", "'Goedst' bestaat niet, en met -st maak je bovendien de overtreffende trap."],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: goed → beter", tekst: "'Goed' is onregelmatig: de vergrotende trap is 'beter' (niet 'goeder')." }],
           niveaus: {
-            basis: "goed → beter → best. Onregelmatig, uit je hoofd leren.",
+            basis: "'Goed' is onregelmatig: de vergrotende trap is een heel ander woord. Denk aan de zin 'Mijn tekening is … dan die van jou.'",
             simpeler: "Wat zeg je: 'goeder' of 'beter'?",
             nogSimpeler: "Beter is de vergroting van …?",
           },
@@ -249,11 +249,11 @@ const steps = [
           "Deze fiets is duurder als die.",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is de overtreffende trap; bij vergelijken hoort -er.", "De vergrotende trap mist (-er).", "Het is 'dan', niet 'als'."],
+        wrongHints: [null, "Dat is de overtreffende trap; bij het vergelijken van twee dingen hoort -er.", "Bij 'duur' zonder -er vergelijk je nog niets.", "Na een woord met -er gebruik je in goed Nederlands niet 'als'."],
         uitlegPad: {
           stappen: [{ titel: "duurder + dan", tekst: "Twee fietsen vergelijken: 'duurder' (-er) met 'dan'. Dus 'duurder dan die'." }],
           niveaus: {
-            basis: "'duurder dan' is juist (-er + dan).",
+            basis: "Je vergelijkt twee fietsen. Dan heb je de -er-vorm nodig én het goede vergelijkingswoord. Welke zin heeft allebei?",
             simpeler: "Welke heeft de -er-vorm én het woordje 'dan'?",
             nogSimpeler: "Welke zin zegt 'duurder dan'?",
           },
@@ -267,7 +267,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: weinig → minder", tekst: "'Weinig' is onregelmatig. De vergrotende trap is 'minder', niet 'weiniger'." }],
           niveaus: {
-            basis: "weinig → minder (vergrotend) → minst (overtreffend).",
+            basis: "'Weinig' is onregelmatig, net als 'veel' en 'goed'. Welk woord zeg je in de zin 'Ik heb … snoep dan jij'?",
             simpeler: "Zeg je 'weiniger' of 'minder'?",
             nogSimpeler: "Beter is de vergroting van goed; minder is de vergroting van …?",
           },
@@ -286,7 +286,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vergrotend + dan", tekst: "Twee rugzakken vergelijken: 'zwaarder' (-er) + 'dan'. Dat is de juiste combinatie." }],
           niveaus: {
-            basis: "zwaarder dan = vergrotende trap + juiste vergelijkingswoord.",
+            basis: "Je vergelijkt twee rugzakken. Dan heb je de -er-vorm nodig én het goede vergelijkingswoord. Welke zin heeft allebei?",
             simpeler: "Welke vorm vergelijkt twee dingen met 'dan'?",
             nogSimpeler: "zwaar + er = zwaarder. En dan welk woordje?",
           },
@@ -300,7 +300,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: veel → meer", tekst: "'Veel' is onregelmatig. De vergrotende trap is 'meer', niet 'veeler'." }],
           niveaus: {
-            basis: "veel → meer (vergrotend) → meest (overtreffend).",
+            basis: "'Veel' is onregelmatig: er komt geen -er achter. Welk woord zeg je in de zin 'Ik heb … knikkers dan jij'?",
             simpeler: "Zeg je 'veeler appels' of 'meer appels'?",
             nogSimpeler: "Welke vorm gebruik je als je twee hoeveelheden vergelijkt?",
           },
@@ -320,7 +320,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij 'dan' hoort de vergrotende trap: veel → meer.",
+            basis: "Bij 'dan' vergelijk je twee mensen, dus hoort de vergrotende trap erbij. 'Veel' is onregelmatig: welke vorm is dat?",
             simpeler: "Je vergelijkt twee mensen met 'dan'. Welke vorm van 'veel' past?",
             nogSimpeler: "veel → … dan mijn zus?",
           },
@@ -339,7 +339,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "goed → beter (vergrotend, met 'dan').",
+            basis: "Ayla vergelijkt zichzelf met vorig jaar en er staat 'dan'. Welke trap hoort bij 'dan', en hoe ziet die eruit bij het onregelmatige woord 'goed'?",
             simpeler: "Welke vorm van 'goed' hoort bij 'dan'?",
             nogSimpeler: "goed, …, best?",
           },
@@ -358,7 +358,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vergrotende trap = twee dingen vergelijken.",
+            basis: "Kijk naar de zin 'Tom is langer dan Sara'. Hoeveel dingen worden daar met elkaar vergeleken?",
             simpeler: "Hoeveel dingen vergelijk je in 'Tom is langer dan Sara'?",
             nogSimpeler: "Twee of allemaal?",
           },

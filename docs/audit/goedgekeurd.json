@@ -7586,6 +7586,14 @@
   "reden": "Staafdiagram klopt, hints goed; niveaus één woord."
  },
  {
+  "waar": "grafieken-lezen-po stap 2 vraag 4",
+  "hash": "eba9ab08183685db",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "\"Zelfde staafdiagram\" verwijst naar een vorige vraag; basis = antwoord."
+ },
+ {
   "waar": "grafieken-lezen-po stap 6 vraag 16",
   "hash": "8bd3e54b1fe85a88",
   "oordeel": "goed",
@@ -10021,6 +10029,71 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 1",
+  "hash": "06a33067510ccaf3",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 2",
+  "hash": "bb16799d8a2afe08",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 3",
+  "hash": "33598ed0e4038589",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 4",
+  "hash": "3794d5e23d896c3c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 5",
+  "hash": "8f09a0abfe388302",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 6",
+  "hash": "8daa942dc0f293a3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleiders absurd (recept, ruzie, luchtbed opblazen): raadbaar."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 7",
+  "hash": "47addea2e9fd43a9",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 8",
+  "hash": "737793695f5bdbe5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Toegevoegde zin \"de kilte van de nacht naar binnen latend\" is een stijve, onnatuurlijke constructie."
+ },
+ {
+  "waar": "lange-toets-teksten-g8-po stap 3 vraag 9",
+  "hash": "bd2b9c2f95c356e6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "leestekens-hoofdletters-po stap 1 vraag 1",
   "hash": "cc002c04bfc325bf",
   "oordeel": "goed",
@@ -12451,6 +12524,54 @@
   "reden": "Antwoord klopt; te vroeg voor groep 5; niveaus telegramstijl."
  },
  {
+  "waar": "procenten-po stap 3 vraag 3",
+  "hash": "41b971f2bb39c511",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Procenten in set groep 5 (groep-6-stof); basis gaf het antwoord; hint B rekende bijna voor."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 5",
+  "hash": "8d96bffe322c681f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 6",
+  "hash": "c6505bab7014f087",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 7",
+  "hash": "4201d0e8c2850b3d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 8",
+  "hash": "f3f8a5c198cf956a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord."
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 9",
+  "hash": "22db8b4273aa1dc2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Groep-6-stof in set groep 5; basis gaf het antwoord."
+ },
+ {
   "waar": "pubertijd-groei-po stap 1 vraag 1",
   "hash": "4813cea836f3cc4f",
   "oordeel": "twijfel",
@@ -13939,6 +14060,61 @@
   "reden": "36 -> 40 klopt (45/46 -> 50, 34 -> 30). Optie 34 had geen hint."
  },
  {
+  "waar": "schatten-afronden stap 3 vraag 3",
+  "hash": "c20b011592b5792a",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 4",
+  "hash": "7dab3b07b035785b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (300 + 500 = 800)."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 5",
+  "hash": "583be9422630768a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 6",
+  "hash": "f376f9baa77f5300",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 7",
+  "hash": "434c98931c01de48",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 8",
+  "hash": "2dc2cc64e7971e11",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 9",
+  "hash": "3a69c9f450620019",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
   "waar": "schema-tekst-combi-po stap 1 vraag 3",
   "hash": "fd601b3bebc62009",
   "oordeel": "goed",
@@ -14028,6 +14204,71 @@
   "hash": "d246b829d50f0a24",
   "oordeel": "goed",
   "bron": "vervolg B4 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 1",
+  "hash": "d2fd37c85fb5ae0c",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 2",
+  "hash": "f23441ee035d6a13",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 3",
+  "hash": "fe1079bffde10fd3",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 4",
+  "hash": "9acb1bba2fadf35b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Vraag zegt \"per kind\", maar twee opties gaven een totaal: door de vorm te raden."
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 5",
+  "hash": "f8f3a0b2ca7f66df",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints en niveaus verwezen naar \"Sam\" uit een andere vraag; in een losse set onbegrijpelijk."
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 6",
+  "hash": "f05248b6e4b0109d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 7",
+  "hash": "d51ae6c912c25aa6",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 8",
+  "hash": "ece3003009a2c18d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 3 vraag 9",
+  "hash": "399759fb8d490ffb",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -17026,6 +17267,63 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 1",
+  "hash": "933b99226f53d56a",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 2",
+  "hash": "b016d53f4d3a4fca",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 3",
+  "hash": "458bdb1c4e0445f9",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 4",
+  "hash": "6436d4ad6eed56cf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Goede optie bijna letterlijk gelijk aan die van vraag 3; afleider \"per ongeluk\" absurd."
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 5",
+  "hash": "8b113be5c0ebf863",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 6",
+  "hash": "11820c90f6a55e6b",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 7",
+  "hash": "1469f5b61161b60d",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 8",
+  "hash": "8c699c81e90689d4",
+  "oordeel": "goed",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 1",
   "hash": "45d2b62ccac594a5",
   "oordeel": "goed",
@@ -18229,6 +18527,70 @@
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 10",
+  "hash": "5259f7ed9cb3e7eb",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 3",
+  "hash": "e8a8c1cc564cebf1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord (goed → beter → best); hint D telegramstijl."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 4",
+  "hash": "c28a4eddea5e6951",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord; hints C/D telegramstijl."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 5",
+  "hash": "902afce6dc7184a4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 6",
+  "hash": "32deca9773eb54ed",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 7",
+  "hash": "0f73cf69c6ba81e8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 8",
+  "hash": "e996b75c4d6d73ca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 2 vraag 9",
+  "hash": "9fc145bcc07802ea",
+  "oordeel": "twijfel",
+  "bron": "vervolg B6 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "niveaus.basis gaf het antwoord."
  },
  {
   "waar": "verhaal-diepte-lezen-po stap 1 vraag 4",

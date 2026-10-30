@@ -20,3 +20,4 @@ Regel tijdens B1: bij startset-vragen alleen hints/niveaus aanpassen. Deze optie
 - evolutieMensPo.js chimpansee-vraag: hint '50% DNA met een bananenplant' dubieus (bij de muis-vraag al vervangen).
 - begrijpend-lezen-teksten-po stap 5 (eindopdracht): vragen verwezen naar teksten die niet in de stap staan; nu zelfdragend gemaakt. Structurele fix = leesTekst per check (app-code buildTopicQuiz/LearnPath) → Mark/later.
 - recyclenAfvalPo.js stap-uitleg: percentages spreken elkaar tegen (64% / ruim 60% / Duitsland 67%; storten <2% vs <1%) → één bron kiezen.
+- grafiekenLezenPo stap 2 vraag 2: vraag noemt diagram 'leesclub', stapplaatje heet 'overblijf'.
