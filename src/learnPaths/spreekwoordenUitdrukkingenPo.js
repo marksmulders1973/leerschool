@@ -397,13 +397,13 @@ const steps = [
         q: "*'De koe bij de horens vatten'* — wat betekent dit?",
         options: ["Een probleem direct aanpakken", "Een probleem uit de weg gaan", "Heel sterk zijn", "Een dier vastpakken"],
         answer: 0,
-        wrongHints: [null, "Andersom — wie de koe bij de horens vat, loopt niet weg.", "Niet — het gaat om hoe je iets aanpakt.", "Dat is letterlijk — denk figuurlijk."],
+        wrongHints: [null, "Je hebt de betekenis precies omgedraaid.", "Het gaat niet om spierkracht, maar om wat je met een lastige klus doet.", "Dat is de letterlijke betekenis. Denk figuurlijk."],
       },
       {
         q: "*'Wolf in schaapskleren'* — wat betekent dit?",
         options: ["Een slecht persoon die aardig doet", "Een aardig persoon die eng lijkt", "Iemand die heel bang is", "Iemand die zich verkleedt voor een feest"],
         answer: 0,
-        wrongHints: [null, "Andersom — wie lijkt hier aardig?", "Niet — het gaat om iemand die anders is dan hij lijkt.", "Dat is te letterlijk gedacht."],
+        wrongHints: [null, "Je hebt het omgedraaid. Wie is hier het gevaarlijke dier, en wat trekt hij aan?", "Het gaat niet om bang zijn, maar om iemand die anders is dan hij lijkt.", "Dat is te letterlijk gedacht. Denk figuurlijk."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -412,16 +412,16 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is letterlijk — denk figuurlijk.",
-          "Moet je iets onthouden, of bedenk je iets wat niet echt gebeurd is?",
-          "Is wat je uit je duim zuigt echt gebeurd?",
+          "Dat is de letterlijke betekenis. Denk figuurlijk.",
+          "Onthouden gaat over iets wat al in je hoofd zit. Deze uitdrukking gaat over iets wat nog niet bestond.",
+          "Deze uitdrukking gebruik je juist als iets níet waar is.",
         ],
       },
       {
         q: "*'De kat uit de boom kijken'* — wat betekent dit?",
         options: ["Afwachten", "Meteen ingrijpen", "Naar dieren kijken", "Iemand redden"],
         answer: 0,
-        wrongHints: [null, "Andersom — de kat kijkt eerst rustig wat er gebeurt.", "Dat is te letterlijk.", "Wordt er iemand gered? De kat blijft juist zitten en kijkt."],
+        wrongHints: [null, "Je hebt de betekenis precies omgedraaid.", "Dat is te letterlijk gedacht. Denk figuurlijk.", "Er wordt niemand gered. De kat blijft juist in de boom zitten."],
       },
       {
         q: "*'Met de mond vol tanden staan'* — wat betekent dit?",
@@ -432,7 +432,7 @@ const steps = [
           "Met volle mond eten",
         ],
         answer: 0,
-        wrongHints: [null, "Andersom — wie met de mond vol tanden staat, krijgt geen woord uit.", "Dat is letterlijk gedacht.", "Dat is te letterlijk gedacht — denk figuurlijk."],
+        wrongHints: [null, "Je hebt de betekenis precies omgedraaid.", "Dat is te letterlijk gedacht. Denk figuurlijk.", "Dat is te letterlijk gedacht. Het gaat niet over eten."],
       },
     ],
   },

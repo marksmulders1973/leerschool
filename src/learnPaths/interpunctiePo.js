@@ -513,7 +513,7 @@ const steps = [
         q: "*'STOP'* — welk leesteken hoort hier?",
         options: ["!", ".", "?", ","],
         answer: 0,
-        wrongHints: [null, "Te rustig voor 'STOP'.", "Geen vraag.", "Komma sluit niet af."],
+        wrongHints: [null, "Een punt is te rustig voor een woord dat je roept.", "'STOP' is geen vraag: je verwacht geen antwoord.", "Een komma sluit een zin niet af."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -553,9 +553,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "?",
-            simpeler: "Het is een vraag (begint met 'Hoe'), dus een vraagteken.",
-            nogSimpeler: "?",
+            basis: "Lees de zin hardop. Verwacht je na deze zin een antwoord van iemand?",
+            simpeler: "De zin begint met 'Hoe'. Zinnen die met een vraagwoord beginnen, zijn vragen. Welk teken hoort achter een vraag?",
+            nogSimpeler: "Het is een vraag, dus er hoort een vraagteken (?) achter.",
           },
         },
       },
@@ -591,9 +591,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wil je een koekje",
-            simpeler: "Het werkwoord 'Wil' staat vooraan en je verwacht ja of nee. Dus een vraag.",
-            nogSimpeler: "Wil je ...?",
+            basis: "Bij welke zin verwacht je een antwoord, zoals 'ja' of 'nee'?",
+            simpeler: "Kijk waar het werkwoord staat. Bij een vraag staat het werkwoord vaak helemaal vooraan.",
+            nogSimpeler: "'Wil je een koekje?' is de vraag: het werkwoord 'wil' staat vooraan en je verwacht ja of nee.",
           },
         },
       },
@@ -629,9 +629,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het werkwoord staat vooraan.",
-            simpeler: "'Gaat' staat vooraan. Dat is hoe een vraag begint.",
-            nogSimpeler: "Werkwoord eerst.",
+            basis: "Vergelijk met de gewone zin 'De bus gaat om acht uur.' Wat is er anders aan de volgorde van de woorden?",
+            simpeler: "Kijk naar het eerste woord: 'Gaat'. Wat voor soort woord is dat?",
+            nogSimpeler: "Het werkwoord 'gaat' staat vooraan. Daaraan herken je een vraag.",
           },
         },
       },

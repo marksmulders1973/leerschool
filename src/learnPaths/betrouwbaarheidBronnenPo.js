@@ -450,12 +450,12 @@ const steps = [
         q: "Waarom is de datum van een artikel belangrijk?",
         options: [
           "informatie kan na verloop van tijd verouderen",
-          "een tekst met een datum is altijd betrouwbaar",
-          "oude teksten zijn altijd helemaal fout",
+          "een tekst met een datum is door een echte schrijver gemaakt",
+          "oude teksten kun je beter niet lezen",
           "zo weet je hoe lang de schrijver bezig was",
         ],
         answer: 0,
-        wrongHints: [null, "Een datum alleen maakt iets niet betrouwbaar. Waar helpt de datum je wél bij?", "Oud is niet automatisch fout, maar kan wel verouderd zijn.", "De datum zegt niets over hoe lang iemand schreef. Wat zegt hij wel?"],
+        wrongHints: [null, "Een datum zegt niets over wie de tekst schreef. Waar helpt de datum je wél bij?", "Oude teksten zijn niet automatisch slecht. Maar wat kan er in de tussentijd veranderd zijn?", "De datum zegt niets over hoe lang iemand schreef. Wat zegt hij wel?"],
         uitlegPad: {
           stappen: [{ titel: "Actueel?", tekst: "Met de datum zie je of informatie nog actueel is. Sommige feiten veranderen (records, techniek, prijzen)." }],
           niveaus: {
