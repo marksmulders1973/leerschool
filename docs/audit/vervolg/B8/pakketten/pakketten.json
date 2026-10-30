@@ -1,0 +1,109 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/woordenschatPo.js",
+   "src/learnPaths/toestandStoffenPo.js",
+   "src/learnPaths/redactiesommen.js"
+  ],
+  "sets": [
+   "5|taal",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "5|rekenen"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/industrieleRevolutiePo.js",
+   "src/learnPaths/politiekDemocratiePo.js",
+   "src/learnPaths/woordsoortenPo.js",
+   "src/learnPaths/procentenPo.js"
+  ],
+  "sets": [
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "5|taal",
+   "5|rekenen"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 55,
+  "files": [
+   "src/learnPaths/tijdsduurRekenenPo.js",
+   "src/learnPaths/lettergrepenKlemtoonPo.js",
+   "src/learnPaths/negatieveGetallenPo.js",
+   "src/learnPaths/schattenAfronden.js",
+   "src/learnPaths/tabellenGrafieken.js",
+   "src/learnPaths/tijdSnelheidAfstandPo.js",
+   "src/learnPaths/verhoudingenPo.js"
+  ],
+  "sets": [
+   "6|rekenen",
+   "7|taal",
+   "5|rekenen"
+  ]
+ },
+ {
+  "pakket": "04",
+  "n": 55,
+  "files": [
+   "src/learnPaths/tekstdoelSchrijversdoelPo.js",
+   "src/learnPaths/conclusiesTrekkenPo.js",
+   "src/learnPaths/schrijvenTekstenPo.js",
+   "src/learnPaths/tekstverbandenOorzaakGevolgPo.js",
+   "src/learnPaths/schemaTekstCombiPo.js",
+   "src/learnPaths/tijdvakkenNederlandPo.js",
+   "src/learnPaths/leestekensHoofdlettersPo.js",
+   "src/learnPaths/informatiebronnenPo.js",
+   "src/learnPaths/kalenderRekenenPo.js"
+  ],
+  "sets": [
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen",
+   "6|taal",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|taal",
+   "7|rekenen"
+  ]
+ },
+ {
+  "pakket": "05",
+  "n": 38,
+  "files": [
+   "src/learnPaths/spreekwoordenUitdrukkingenPo.js",
+   "src/learnPaths/metenGewichtInhoudTijdPo.js",
+   "src/learnPaths/samenstellingenTussenlettersPo.js",
+   "src/learnPaths/feitenDetailsOpzoekenPo.js",
+   "src/learnPaths/werkwoordTijdenPo.js",
+   "src/learnPaths/verwijswoordenBegrijpendLezenPo.js",
+   "src/learnPaths/dierenklassenPo.js",
+   "src/learnPaths/grafiekenLezenPo.js",
+   "src/learnPaths/matenEenheden.js",
+   "src/learnPaths/alineaFunctiesTussenkopjesPo.js",
+   "src/learnPaths/briefEmailLezenPo.js",
+   "src/learnPaths/nieuwsberichtLezenPo.js",
+   "src/learnPaths/belastingPo.js"
+  ],
+  "sets": [
+   "6|taal",
+   "7|rekenen",
+   "7|taal",
+   "6|begrijpend-lezen",
+   "5|taal",
+   "6|natuur",
+   "8|begrijpend-lezen",
+   "7|begrijpend-lezen",
+   "8|rekenen"
+  ]
+ }
+]
