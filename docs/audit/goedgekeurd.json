@@ -1780,11 +1780,180 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 1",
+  "hash": "e9da6a9698fd1e9e",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 10",
+  "hash": "2f7411d078139cd8",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'Wie ontdekte de zwaartekracht?' te stellig"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 11",
+  "hash": "fea0adc3b087a714",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 12",
+  "hash": "3630e5f264e6baad",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 13",
+  "hash": "8ebb36293293138e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'ontwierp de gloeilamp' te stellig (Swan e.a. eerder), hint Einstein onnauwkeurig"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 14",
+  "hash": "a8d267d1c8d6d8dd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'ontwikkelde wisselstroom (AC)' te stellig + Engelse afkorting; alleen Tesla voluit (raadbaar)"
+ },
+ {
   "waar": "bekende-wetenschappers-po stap 5 vraag 15",
   "hash": "7f47a6675e37e891",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 16",
+  "hash": "e17d2fd851494fa2",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 17",
+  "hash": "7d6cb4f13e14ed07",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; 'bedacht de telefoon' te stellig (Meucci e.a.)"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 18",
+  "hash": "3fc726009c0bfebd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; raadbaar (alleen Turing voluit), 'enigma'/'WO2' slordig, hint Curie onnauwkeurig"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 19",
+  "hash": "14a22de634eb271a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 2",
+  "hash": "87c6e8e4df14ff77",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; opties waren telegramzinnen ('Zon in midden')"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 20",
+  "hash": "e4e6fb6bb2e50c72",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; Engelse titel in NL-vraag, raadbaar (alleen Darwin voluit), telegramhints"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 21",
+  "hash": "8c7b0f304bb78238",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; raadbaar: alleen Drais voluit en afleiders absurd (Newton, Tesla)"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 22",
+  "hash": "aeffe4a0a82b4516",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramzin ('NL-er', 'met microscoop')"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 23",
+  "hash": "a0955af8066800ca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; alleen het goede antwoord voluit"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 24",
+  "hash": "4ab16f5095828485",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints telegramstijl"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 3",
+  "hash": "f3908f4f6c2605f4",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 4",
+  "hash": "cc78b5984272836d",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 5",
+  "hash": "a81dae9cba4502c3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints telegramstijl ('Darwin = evolutie + Galápagos.')"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 6",
+  "hash": "24f6549798676cb4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt binnen de opties, maar 'Wie kreeg 2 Nobelprijzen?' te stellig (ook o.a. Pauling, Bardeen, Sanger)"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 7",
+  "hash": "f2668d876e5840e9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hints telegramstijl, basis = antwoord"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 8",
+  "hash": "ae0e25496735f607",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag, 'ontdekte zwaartekracht' te stellig, hints telegram, basis = antwoord"
  },
  {
   "waar": "belasting-po stap 2 vraag 1",
@@ -18677,11 +18846,55 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 3",
+  "hash": "9fe44b27bfc5d5c6",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "verhaal-diepte-lezen-po stap 3 vraag 4",
   "hash": "a0aa6f29dc1cb622",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 5",
+  "hash": "efd7128237487314",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord verdedigbaar, maar 'piepend' staat niet in het gedicht en hoort niet bij gapen"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 6",
+  "hash": "95202e0bce54434e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt, maar de honingzin is het uitgewerkte voorbeeld in de stap-uitleg (die zegt al hoe de stem klonk); het kind herhaalt de uitleg"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 7",
+  "hash": "ef13a09c0cb57ffe",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 8",
+  "hash": "6e8dce149cffca9a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 9",
+  "hash": "153cd129c73e857a",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "verhoudingen-po stap 1 vraag 1",
@@ -20961,6 +21174,184 @@
   "bron": "vervolg B4 pakket 07 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Gingen klopt; telegramzin; afleider 'gaden' absurd; niveaus telegramstijl."
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 1",
+  "hash": "2c2fc537022db0ff",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; vraag was een telegramzin, hint C miste lidwoord, niveaus.basis = alleen antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 10",
+  "hash": "bfb6d54f7489bac6",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 11",
+  "hash": "cffb57b3ec185ca3",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 12",
+  "hash": "72c2b3b23d01dfe5",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 14",
+  "hash": "bbc9b1cbcf007fc6",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 15",
+  "hash": "29b8436a68b7a8c8",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 16",
+  "hash": "dce08301a757c5be",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 17",
+  "hash": "0628e41e756c983d",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 18",
+  "hash": "1d80531158e2ee92",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 19",
+  "hash": "4b7749659c13771b",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 2",
+  "hash": "9127f8c69fc745ac",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag, niveaus.basis = alleen antwoord, simpeler in pijltjesstijl"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 21",
+  "hash": "d14c1874fd35e270",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; hint B gebruikte vakterm 'lijdende vorm' (te moeilijk voor groep 5)"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 22",
+  "hash": "90d96262a3357506",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 23",
+  "hash": "cc42861beff6c564",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 24",
+  "hash": "716515c0b5357ebb",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 25",
+  "hash": "c5a8e8ffa4cc4a38",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 26",
+  "hash": "970b62888530ac38",
+  "oordeel": "goed",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 3",
+  "hash": "6d8ccec5972f1acf",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag ('zij-enkelvoud'), hint C begon met 'Niet —', basis = antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 4",
+  "hash": "b41701251e814988",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 5",
+  "hash": "9225804326aa69b7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord, simpeler in pijltjesstijl"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 6",
+  "hash": "6c12e48861f0a802",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 7",
+  "hash": "1a12dcc44123bc8d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 8",
+  "hash": "887678b33beb9a5e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; basis = antwoord, simpeler met afkorting VTT"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 9",
+  "hash": "345a3cb54f6889cd",
+  "oordeel": "twijfel",
+  "bron": "vervolg B7 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord klopt; telegramvraag; hints met afkorting TT en misleidende regel 'schrijf zoals je hoort'; basis = antwoord"
  },
  {
   "waar": "werkwoordsspelling-dt stap 1 vraag 10",

@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; vraag was een telegramzin, hint C miste lidwoord, niveaus.basis = alleen antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag als volledige invulopdracht; hint 'Dat is het hele werkwoord.'; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; telegramvraag, niveaus.basis = alleen antwoord, simpeler in pijltjesstijl",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; telegramvraag ('zij-enkelvoud'), hint C begon met 'Niet —', basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven (zij is hier één persoon); hints B en C als hele zinnen; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord, simpeler in pijltjesstijl",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; telegramvraag, basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; basis = antwoord, simpeler met afkorting VTT",
+  "hersteld": true,
+  "wijziging": "niveaus herschreven zonder afkorting; niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; telegramvraag; hints met afkorting TT en misleidende regel 'schrijf zoals je hoort'; basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven; hints B en D herschreven (denkfout zonder afkorting); niveaus.basis gaf alleen het antwoord; herschreven tot echte hulpstap, simpeler als hele zin, nogSimpeler = volledige zin met antwoord"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "werkte, hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "speelden",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "t-k-f-s-ch-p",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 13",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord stond vet in de vraag: 'Ik **bak** brood. Wat is de stam van bakken?'",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wat is de **stam** van het werkwoord bakken?'"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "zijn",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "bent",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "lees",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "fietste (s in 't kofschip)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "liep",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "gefietst",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 20",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Hint bij 'gelopt' was feitelijk onjuist: 'Hier mist een o' (gelopen heeft ook één o)",
+  "hersteld": true,
+  "wijziging": "Hint B: 'Zeg je ik heb gelopt? Lopen is een sterk werkwoord. Hoe klinkt het echt?'"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; hint B gebruikte vakterm 'lijdende vorm' (te moeilijk voor groep 5)",
+  "hersteld": true,
+  "wijziging": "Hint B zonder vakterm herschreven"
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 22",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "ging",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 23",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "leest",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "stam + te/de",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klinker verandert",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 5 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "zijn",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Galileo",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt; opties waren telegramzinnen ('Zon in midden')",
+  "hersteld": true,
+  "wijziging": "Opties als hele zinnen ('De zon staat in het midden' enz.), volgorde gelijk"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "3; hints geven richting zonder getal",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Darwin",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; hints telegramstijl ('Darwin = evolutie + Galápagos.')",
+  "hersteld": true,
+  "wijziging": "Hints als hele zinnen"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt binnen de opties, maar 'Wie kreeg 2 Nobelprijzen?' te stellig (ook o.a. Pauling, Bardeen, Sanger)",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wie van deze vier wetenschappers kreeg twee Nobelprijzen?'"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; hints telegramstijl, basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Hints als hele zinnen; niveaus herschreven tot hulpstappen"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; telegramvraag, 'ontdekte zwaartekracht' te stellig, hints telegram, basis = antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag: verhaal van de vallende appel; hints als hele zinnen; niveaus herschreven"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "Feitfouten in uitlegPad/niveaus: Curie 'ontdekte radioactiviteit' (Becquerel 1896), '3 Nobelprijzen in 1 familie' (het waren er meer), 'enige met 2 Nobelprijzen in verschillende vakken' (Pauling: scheikunde + vrede); ook telegramvraag en -hints",
+  "hersteld": true,
+  "wijziging": "Vraag als hele zin; hints als hele zinnen; stap 'Wat ontdekte ze?' en familie-zin gecorrigeerd; niveaus herschreven zonder feitfouten"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; 'Wie ontdekte de zwaartekracht?' te stellig",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wie schreef als eerste de wet van de zwaartekracht op?'; hint B aangepast"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Einstein (dubbel met vraag 7, maar correct)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Ada Lovelace",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; 'ontwierp de gloeilamp' te stellig (Swan e.a. eerder), hint Einstein onnauwkeurig",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Welke uitvinder werd wereldberoemd door de gloeilamp?'; hint D aangepast"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 14",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; 'ontwikkelde wisselstroom (AC)' te stellig + Engelse afkorting; alleen Tesla voluit (raadbaar)",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven zonder AC; afleiders voluit (Thomas Edison, Marie Curie, Alexander Graham Bell); '(DC)' uit hint"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Jane Goodall",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 17",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; 'bedacht de telefoon' te stellig (Meucci e.a.)",
+  "hersteld": true,
+  "wijziging": "Vraag: 'Wie wordt meestal de uitvinder van de telefoon genoemd?'"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 18",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; raadbaar (alleen Turing voluit), 'enigma'/'WO2' slordig, hint Curie onnauwkeurig",
+  "hersteld": true,
+  "wijziging": "Vraag met Tweede Wereldoorlog en Enigma-code; afleiders voluit; hints aangepast (Curie overleed 1934)"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Neil Armstrong",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 20",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; Engelse titel in NL-vraag, raadbaar (alleen Darwin voluit), telegramhints",
+  "hersteld": true,
+  "wijziging": "Vraag: boek over evolutie uit 1859; afleiders voluit; hints als hele zinnen"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; raadbaar: alleen Drais voluit en afleiders absurd (Newton, Tesla)",
+  "hersteld": true,
+  "wijziging": "Vraag: loopfiets 1817; afleiders Karl Benz, James Watt, Thomas Edison met passende hints"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt; telegramzin ('NL-er', 'met microscoop')",
+  "hersteld": true,
+  "wijziging": "Vraag als hele zin, met uitleg van micro-organismen"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; alleen het goede antwoord voluit",
+  "hersteld": true,
+  "wijziging": "Afleiders voluit (Isaac Newton, Anton van Leeuwenhoek, Desiderius Erasmus)"
+ },
+ {
+  "waar": "bekende-wetenschappers-po stap 5 vraag 24",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; hints telegramstijl",
+  "hersteld": true,
+  "wijziging": "Hints als hele zinnen"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Gedicht staat in de stap-uitleg; rustig en slaperig",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord verdedigbaar, maar 'piepend' staat niet in het gedicht en hoort niet bij gapen",
+  "hersteld": true,
+  "wijziging": "Antwoord: 'Een deur gaat langzaam en wijd open'; nogSimpeler aangepast"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, maar de honingzin is het uitgewerkte voorbeeld in de stap-uitleg (die zegt al hoe de stem klonk); het kind herhaalt de uitleg",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Laatste regel staat in het gedicht in de stap",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "zwaar en moe",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "geen geluid",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

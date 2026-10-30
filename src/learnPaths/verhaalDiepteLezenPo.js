@@ -892,7 +892,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
       {
         q: "*\"Ergens gaapt een deur, dan wordt het stil.\"* — Wat is de betekenis van 'een deur gaapt'?",
         options: [
-          "Een deur gaat langzaam piepend open",
+          "Een deur gaat langzaam en wijd open",
           "Een deur is heel erg groot en breed",
           "Iemand gooit een deur hard dicht",
           "Een deur hangt scheef en is kapot",
@@ -913,7 +913,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
           niveaus: {
             basis: "Wat doet je mond als je gaapt — gaat die snel of langzaam open? Vertaal dat naar een deur.",
             simpeler: "Denk aan iemand die slaperig gaapt: langzaam en groot. Wat doet een deur die hetzelfde 'doet'?",
-            nogSimpeler: "Hoe klinkt een deur die langzaam, piepend opengaat op een stille avond?",
+            nogSimpeler: "Een gapende mond gaat langzaam en wijd open. Zo gaat de deur in het gedicht ook open.",
           },
         },
       },
