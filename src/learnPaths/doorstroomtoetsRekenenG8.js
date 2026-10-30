@@ -906,7 +906,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Voor €50: 50 × 1,21 = €60,50." }],
           basiskennis: [{ onderwerp: "Soorten BTW", uitleg: "21% = meeste goederen. 9% = voedsel, boeken, kapper. 0% = export." }],
           niveaus: {
-            basis: "€121.",
+            basis: "Reken eerst uit hoeveel 21% van €100 is. Tel dat daarna op bij de prijs zonder btw.",
             simpeler: "21% van €100 = €21. €100 + €21 = €121.",
             nogSimpeler: "€121",
           },
@@ -922,7 +922,7 @@ const steps = [
         q: "Een jas kost **€80** en gaat **25% in de uitverkoop**. Wat is de **korting in euro's**?",
         options: ["€20", "€25", "€60", "€100"],
         answer: 0,
-        wrongHints: [null, "€25 is het percentage als bedrag — 25% van €80 is iets anders.", "Dat is de prijs na korting, geen korting.", "Dat is €80 + €20 — maar gevraagd is alleen de korting."],
+        wrongHints: [null, "€25 is het percentage als bedrag — 25% van €80 is iets anders.", "Dat is de prijs na korting, geen korting.", "Je telde de korting bij de prijs op — maar gevraagd is alleen hoeveel euro eraf gaat."],
         uitlegPad: {
           stappen: [
             { titel: "25% = 1/4", tekst: "25% betekent 25 van 100. Dat is hetzelfde als 1/4 of de helft van de helft." },
@@ -937,17 +937,17 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst 10% berekenen, dan vermenigvuldigen of optellen." }],
           niveaus: {
-            basis: "€20 korting.",
+            basis: "25% is hetzelfde als een kwart. Hoeveel is een kwart van €80?",
             simpeler: "25% = 1/4. €80 ÷ 4 = €20.",
             nogSimpeler: "Kwart van €80 = €20",
           },
         },
       },
       {
-        q: "**Verhouding** appels : peren = **3 : 2**. Bij **12 appels**: hoeveel **peren**?",
+        q: "De verhouding appels : peren is **3 : 2**. Er zijn **12 appels**. Hoeveel **peren** zijn er?",
         options: ["8", "6", "4", "10"],
         answer: 0,
-        wrongHints: [null, "12 ÷ 2 — let op verhouding 3:2.", "Dat is het aantal sets van 3 appels — maar hoeveel peren horen bij elke set?", "10 peren bij 12 appels is bijna 1 : 1 — klopt dat met 3 : 2?"],
+        wrongHints: [null, "Je deelde 12 door 2. Maar bij 3 appels horen 2 peren: hoe vaak past 3 in 12?", "Dat is het aantal sets van 3 appels — maar hoeveel peren horen bij elke set?", "10 peren bij 12 appels is bijna 1 : 1 — klopt dat met 3 : 2?"],
         uitlegPad: {
           stappen: [
             { titel: "Verhouding-stappen", tekst: "Verhouding 3:2 betekent: voor elke 3 appels horen 2 peren. Zoek hoeveel sets van 3 er in 12 zitten." },
@@ -961,7 +961,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Volgorde", uitleg: "Eerst delen door het getal aan jouw kant, dan keer het andere." }],
           niveaus: {
-            basis: "8 peren.",
+            basis: "Kijk eerst hoe vaak het groepje van 3 appels in 12 appels past. Bij elk groepje horen 2 peren.",
             simpeler: "12 ÷ 3 = 4 sets. 4 × 2 = 8 peren.",
             nogSimpeler: "4 sets × 2 = 8",
           },
@@ -980,7 +980,7 @@ const steps = [
         wrongHints: [null, "Je deed er €15 bij — maar 15% van €200 is meer.", "De fiets wordt duurder, dus de prijs gaat omhoog.", "€100 erbij is 50% — reken 10% en 5% van €200 uit."],
       },
       {
-        q: "**Verhouding** suiker : meel = **1 : 4**. Bij **500 g meel**: hoeveel **suiker**?",
+        q: "De verhouding suiker : meel is **1 : 4**. Je gebruikt **500 g meel**. Hoeveel **suiker** heb je nodig?",
         options: ["125 g", "100 g", "250 g", "500 g"],
         answer: 0,
         wrongHints: [null, "Te weinig — hoeveel delen meel horen bij 1 deel suiker?", "Bij 1 : 4 is er 4 keer zoveel meel als suiker. Is 500 g 4 keer 250 g?", "Evenveel suiker als meel past bij 1 : 1."],
@@ -1003,17 +1003,17 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1% = / 100. 10% = / 10. 50% = / 2. 25% = / 4. 75% = 3/4." }],
           niveaus: {
-            basis: "25.",
+            basis: "10% is een tiende deel. Deel 250 door 10.",
             simpeler: "250 / 10 = 25.",
             nogSimpeler: "Komma 1 links: 25",
           },
         },
       },
       {
-        q: "**Verhouding melk : water = 2 : 5**. Bij **15 L water**: hoeveel **melk**?",
+        q: "De verhouding melk : water is **2 : 5**. Er is **15 L water**. Hoeveel **melk** hoort daarbij?",
         options: ["6 L", "3 L", "10 L", "30 L"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is maar één deel; melk heeft er twee.", "Te veel — hoeveel liter is één deel als 5 delen water samen 15 L zijn?", "Dan zou er meer melk dan water zijn — klopt dat met 2 : 5?"],
+        wrongHints: [null, "Te weinig — je weet nu hoe groot één deel is. Kijk nog eens hoeveel delen melk er in de verhouding staan.", "Te veel — hoeveel liter is één deel als 5 delen water samen 15 L zijn?", "Dan zou er meer melk dan water zijn — klopt dat met 2 : 5?"],
       },
       {
         q: "Een **boek** kost €15 en is in de zomer **5% goedkoper**. Hoeveel korting krijg je in euro's?",
@@ -1036,7 +1036,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "25% van 80 = 0,25 × 80 = 20." }],
           basiskennis: [{ onderwerp: "Snel uit het hoofd", uitleg: "50% = helft. 10% = /10. Bouw andere % daaruit op." }],
           niveaus: {
-            basis: "40.",
+            basis: "Reken eerst 10% van 50 uit. 80% is acht keer zoveel.",
             simpeler: "10% van 50 = 5. 8 × 5 = 40.",
             nogSimpeler: "0,8 × 50 = 40",
           },
@@ -1052,7 +1052,7 @@ const steps = [
         q: "Een **broek** van **€40** is **15% afgeprijsd**. Wat is de **nieuwe prijs**?",
         options: ["€34", "€36", "€25", "€46"],
         answer: 0,
-        wrongHints: [null, "Bijna — 15% van €40 is geen €4. Reken 10% + 5% uit.", "€15 korting is meer dan 15% van €40 — reken 10% en 5% van €40 uit.", "Verhoogd, niet afgeprijsd."],
+        wrongHints: [null, "Bijna — 15% van €40 is geen €4. Reken 10% + 5% uit.", "€15 korting is meer dan 15% van €40 — reken 10% en 5% van €40 uit.", "Je telde de korting erbij op. Bij afprijzen gaat er geld áf."],
         uitlegPad: {
           stappen: [
             { titel: "2-stappen", tekst: "Stap 1: 15% van €40 = €6. Stap 2: €40 − €6 = €34." },
@@ -1063,7 +1063,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "20% korting op €50 = €50 × 0,80 = €40." }],
           basiskennis: [{ onderwerp: "Verhoging", uitleg: "Verhoging 15%: (100+15)% = 115% × oud bedrag." }],
           niveaus: {
-            basis: "€34.",
+            basis: "Reken 10% en 5% van €40 uit en tel die op: dat is de korting. Haal de korting van €40 af.",
             simpeler: "15% van €40 = €6. €40 − €6 = €34.",
             nogSimpeler: "€34",
           },
@@ -1073,7 +1073,7 @@ const steps = [
         q: "De verhouding appels : peren is **5 : 3**. Er zijn **40 stuks** fruit. Hoeveel **appels** zijn er?",
         options: ["25", "15", "20", "10"],
         answer: 0,
-        wrongHints: [null, "Dat is het aantal peren.", "Helft — verhouding is niet gelijk.", "Hoeveel stuks is één deel als 5 + 3 = 8 delen samen 40 zijn?"],
+        wrongHints: [null, "Dat is het aantal peren.", "Dat is de helft van 40 — maar de verhouding 5 : 3 is niet gelijk verdeeld.", "Hoeveel stuks is één deel als 5 + 3 = 8 delen samen 40 zijn?"],
       },
       {
         q: "Je krijgt **3% rente** per jaar op **€1000** spaargeld. Hoeveel rente krijg je na een jaar?",
@@ -1096,8 +1096,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Recept 4 pers = 8 eieren. Per pers = 2. Voor 6 pers = 12 eieren." }],
           basiskennis: [{ onderwerp: "Direct evenredig", uitleg: "Bij dit type vraag: ratio blijft gelijk. 2× zoveel personen = 2× zoveel materiaal." }],
           niveaus: {
-            basis: "300 g.",
-            simpeler: "Per pers 50 g. 6 × 50 = 300.",
+            basis: "Reken eerst uit hoeveel gram pasta één persoon krijgt. Doe dat daarna keer 6.",
+            simpeler: "200 g voor 4 personen is 50 g per persoon. 6 × 50 g = 300 g.",
             nogSimpeler: "50 × 6 = 300",
           },
         },
@@ -1117,7 +1117,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "200% van 50 = 100. 175% van 20 = 35." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij verhogingen > 100%: pak hele + extra deel apart." }],
           niveaus: {
-            basis: "60.",
+            basis: "150% is 100% plus 50%. Neem het hele getal en tel de helft erbij.",
             simpeler: "40 + helft (20) = 60.",
             nogSimpeler: "1,5 × 40 = 60",
           },
@@ -1127,13 +1127,13 @@ const steps = [
         q: "**Hoeveel is 75% van 200**?",
         options: ["150", "125", "75", "100"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 75% is drie kwart van het getal.", "75 is het percentage, niet het antwoord. Reken eerst 25% van 200 uit.", "Helft, dat is 50%."],
+        wrongHints: [null, "Te weinig — 75% is drie kwart van het getal.", "75 is het percentage, niet het antwoord. Reken eerst 25% van 200 uit.", "Dat is de helft van 200, dus 50%. 75% is meer."],
       },
       {
         q: "**Een prijs ging van €40 naar €50**. Hoeveel **procent stijging**?",
         options: ["25%", "10%", "20%", "50%"],
         answer: 0,
-        wrongHints: [null, "€10 is het verschil in euro's — hoeveel procent van €40 is dat?", "Je deelt het verschil door de óude prijs (€40), niet door de nieuwe.", "50% van €40 is €20 — de prijs steeg maar €10."],
+        wrongHints: [null, "€10 is het verschil in euro's — hoeveel procent van €40 is dat?", "Je deelde het verschil door de nieuwe prijs. Deel het verschil door de óude prijs.", "50% van €40 is €20 — de prijs steeg maar €10."],
       },
       {
         q: "Uit hoeveel delen bestaat de verhouding **2 : 7** samen?",
@@ -1157,7 +1157,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "10% van €80 = €8 → 25% = 2,5 × €8 = €20 korting → €60 betalen." }],
           basiskennis: [{ onderwerp: "Lees wat er gevraagd wordt", uitleg: "'Wat kost hij nu?' = nieuwe prijs. 'Hoeveel korting?' = het kortingsbedrag. Twee verschillende antwoorden!" }],
           niveaus: {
-            basis: "€80 − €20 korting = €60.",
+            basis: "Reken eerst uit hoeveel 25% van €80 is. Haal die korting daarna van €80 af.",
             simpeler: "25% = kwart. Kwart van €80 = €20 eraf. Blijft €60 over.",
             nogSimpeler: "€60",
           },
@@ -1208,7 +1208,7 @@ const steps = [
         ref: "1F",
         options: ["€7,50", "€6,00", "€9,00", "€22,50"],
         answer: 0,
-        wrongHints: [null, "Reken eerst de prijs van één croissant uit: €4,50 ÷ 3.", "Dat is de prijs van 6 — net te veel.", "Je hebt €4,50 met 5 vermenigvuldigd — maar €4,50 is de prijs van drie."],
+        wrongHints: [null, "Reken eerst de prijs van één croissant uit: €4,50 ÷ 3.", "Te veel — heb je de prijs voor meer dan 5 croissants uitgerekend?", "Je hebt €4,50 met 5 vermenigvuldigd — maar €4,50 is de prijs van drie."],
         explanation: "1 croissant = €4,50 ÷ 3 = €1,50. Dan 5 × €1,50 = **€7,50**. (Verhoudingstabel!)",
       },
       {

@@ -2090,6 +2090,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "belasting-po stap 3 vraag 10",
+  "hash": "ede9ec094364bf01",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "belasting-po stap 3 vraag 2",
   "hash": "b237ef1922c24632",
   "oordeel": "twijfel",
@@ -2119,6 +2126,38 @@
   "bron": "vervolg B9 pakket 05 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "9% klopt; basis gaf het antwoord en zei te stellig 'al het andere: 21%'"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 6",
+  "hash": "534b9add984ae558",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€20,66 klopt (25/1,21 = 20,66, btw 4,34); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 7",
+  "hash": "9c8bfd5967735415",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "telefoon 21% klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 8",
+  "hash": "5d566b2a11e58695",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "9% klopt (laag tarief sinds 2019, daarvoor 6%); vraag niet afgebakend tot Nederland, niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 9",
+  "hash": "3d764c9354d58528",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€3,00 klopt (3,27/1,09 = 3,00); niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "belasting-po stap 4 vraag 9",
@@ -5490,11 +5529,221 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 20",
+  "hash": "0b57e36dda0be117",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Som klopt (€121); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 21",
+  "hash": "7ffe32fe8600b254",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 23",
+  "hash": "257c657c30be2f6b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "8 klopt; telegramzin in vraag, telegram-hint, niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 24",
+  "hash": "77b07efe3c76f667",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 25",
+  "hash": "b385ef917b399650",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 26",
+  "hash": "5f39ad6efa0ef98e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "125 g klopt; telegramzin in vraag"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 27",
+  "hash": "74d8353c8459c171",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "25 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 28",
+  "hash": "bfe12a6211c93de9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "6 L klopt; telegramzin; hint bij 3 L rekende de laatste stap bijna voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 29",
+  "hash": "358f27d3fe1ad968",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 30",
+  "hash": "c9ce57e0f7d5491f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "40 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 31",
+  "hash": "bd5cf89cea8cb0da",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 32",
+  "hash": "ef10c0fcedcaf4f1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€34 klopt; telegram-hint (\"Verhoogd, niet afgeprijsd.\"), niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 33",
+  "hash": "326caf9be3496a23",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "25 klopt; telegram-hint \"Helft — verhouding is niet gelijk.\""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 34",
+  "hash": "5d73f16f2ddaf7f9",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 35",
+  "hash": "bf3da5c9861586f5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "300 g klopt; niveaus.basis gaf alleen het antwoord; simpeler met afkorting \"pers\""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 36",
+  "hash": "0ee05f98585ebb10",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "60 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 37",
+  "hash": "a24cdee05bbfe57f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "150 klopt; telegram-hint \"Helft, dat is 50%.\""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 38",
+  "hash": "ba658326cd76c27f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "25% klopt; hint bij 20% beschreef de fout verkeerd om (klonk als instructie, niet als denkfout)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 39",
+  "hash": "35e39015155499cf",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 40",
+  "hash": "aaff3cfb2f228395",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€60 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 41",
+  "hash": "051022029b529a45",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 42",
+  "hash": "2551fdeac0c890fc",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 43",
+  "hash": "b2ecf2e8999e9571",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 44",
   "hash": "494e0bce6ed2e0ae",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 45",
+  "hash": "a2b5de0248f49e7e",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 46",
+  "hash": "7e580bf4c252bc19",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "€7,50 klopt; hint bij €9 (\"prijs van 6 — net te veel\") maakte het antwoord bijna af"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 47",
+  "hash": "7584bae3c1eeeca5",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 48",
+  "hash": "1167b0486b3fce72",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 49",
+  "hash": "77fff9ff7fba805b",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 5",
@@ -5503,6 +5752,34 @@
   "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap); hints B/C telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 50",
+  "hash": "aabc2a7faf210739",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 51",
+  "hash": "f61508f52b08faba",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 52",
+  "hash": "d1c461fe8abaf9aa",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 53",
+  "hash": "277cd178ae3ab855",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 6",
@@ -13541,6 +13818,103 @@
   "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 1",
+  "hash": "2a108203150b10f4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "−3 klopt; telegram-hints (\"Andersom — ...\", \"kijk richting\"), niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 10",
+  "hash": "d03da2bc362ad753",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 11",
+  "hash": "c274d74be9d1ffdf",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 13",
+  "hash": "4fe6bce487545c29",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 14",
+  "hash": "24bc1dac57509d3e",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 15",
+  "hash": "089fcf2184681889",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 16",
+  "hash": "5acf3aa3f15770f0",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 17",
+  "hash": "5dae80386c078d73",
+  "oordeel": "goed",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 2",
+  "hash": "0f412c89e69b689d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "+5 °C klopt; telegramzin in vraag, niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 3",
+  "hash": "18e99c4b06299739",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "0 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 6",
+  "hash": "cb6ebe35710c9bce",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "17 klopt; hint bij −17 (\"zonder min ervoor\") stuurde rechtstreeks naar 17, niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 7",
+  "hash": "7c70bb5d1ed5d155",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "−4 m klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 8",
+  "hash": "06db84c7e9ed441e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "−9, −3, 0, +4 klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "nieuwsbericht-lezen-po stap 1 vraag 1",

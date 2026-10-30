@@ -737,7 +737,7 @@ const steps = [
             { titel: "Prijs zelf = totaal − btw", tekst: "€25 − €4,34 = **€20,66** voor het speelgoed zelf." },
           ],
           niveaus: {
-            basis: "€20,66 (€25 − €4,34).",
+            basis: "De btw zit al in de €25. Haal de btw van de totaalprijs af.",
             simpeler: "Trek de btw van de totaalprijs af: 25 − 4,34 = 20,66.",
             nogSimpeler: "€20,66",
           },
@@ -797,14 +797,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een telefoon heeft 21% btw. Brood, melk en boeken hebben 9%.",
+            basis: "Er is een laag tarief voor eten, drinken en boeken en een hoog tarief voor bijna al het andere. Welk ding is geen eten, drinken of boek?",
             simpeler: "Brood en melk zijn eten en drinken: 9%. Een boek ook: 9%. Een telefoon niet: 21%.",
             nogSimpeler: "Telefoon = 21%.",
           },
         },
       },
       {
-        q: "Je koopt een **leesboek**. Welk btw-tarief zit in de prijs?",
+        q: "Je koopt in Nederland een **leesboek**. Welk btw-tarief zit in de prijs?",
         options: ["9%", "21%", "0%", "6%"],
         answer: 0,
         wrongHints: [
@@ -856,7 +856,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Op een leesboek zit 9% btw (laag tarief).",
+            basis: "Voor boeken geldt hetzelfde tarief als voor eten en drinken. Is dat het hoge of het lage tarief?",
             simpeler: "Boeken horen bij het lage tarief, net als eten en drinken: 9%.",
             nogSimpeler: "Boek = 9%.",
           },
@@ -915,7 +915,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Sap zelf = €3,27 − €0,27 = €3,00.",
+            basis: "De btw zit al in de €3,27. Haal de btw van de prijs af, dan houd je over wat het sap zelf kost.",
             simpeler: "Het kaartje is sap + btw samen. Haal de btw (€0,27) eraf, dan hou je €3,00 over.",
             nogSimpeler: "€3,27 − €0,27 = €3,00.",
           },

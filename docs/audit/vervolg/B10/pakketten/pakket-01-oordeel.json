@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 20",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Som klopt (€121); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "50% = helft, 40 klopt; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 22",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij €100 noemde het goede antwoord (\"€80 + €20\")",
+  "hersteld": true,
+  "wijziging": "wrongHint €100 herschreven zonder bedrag; basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "8 klopt; telegramzin in vraag, telegram-hint, niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als volledige zinnen; hint bij 6 herschreven; basis hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 24",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "3/8 van 24 = 9; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "€200 + €30 = €230; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 26",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "125 g klopt; telegramzin in vraag",
+  "hersteld": true,
+  "wijziging": "vraag als volledige zinnen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 27",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "25 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 28",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "6 L klopt; telegramzin; hint bij 3 L rekende de laatste stap bijna voor",
+  "hersteld": true,
+  "wijziging": "vraag als volledige zinnen; hint 3 L herschreven"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 29",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "5% van €15 = €0,75; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 30",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "40 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 31",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "1% van €500 = €5; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 32",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "€34 klopt; telegram-hint (\"Verhoogd, niet afgeprijsd.\"), niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hint €46 als zin; basis hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 33",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "25 klopt; telegram-hint \"Helft — verhouding is niet gelijk.\"",
+  "hersteld": true,
+  "wijziging": "hint bij 20 als volledige zin"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 34",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "3% van €1000 = €30; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 35",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "300 g klopt; niveaus.basis gaf alleen het antwoord; simpeler met afkorting \"pers\"",
+  "hersteld": true,
+  "wijziging": "basis hulpstap; simpeler als nette zin"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 36",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "60 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 37",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "150 klopt; telegram-hint \"Helft, dat is 50%.\"",
+  "hersteld": true,
+  "wijziging": "hint bij 100 als zin"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 38",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "25% klopt; hint bij 20% beschreef de fout verkeerd om (klonk als instructie, niet als denkfout)",
+  "hersteld": true,
+  "wijziging": "hint 20% herschreven: je deelde door de nieuwe prijs"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 39",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "2 + 7 = 9; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 40",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "€60 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 41",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "15% van 60 = 9; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 42",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "7/28 = 25%; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 43",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "4 × 200 = 800 ml; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 45",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "3/5 = 60%; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 46",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "€7,50 klopt; hint bij €9 (\"prijs van 6 — net te veel\") maakte het antwoord bijna af",
+  "hersteld": true,
+  "wijziging": "hint €9 herschreven zonder voorrekenen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 47",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "40% van 250 = 100; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 48",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "€25 + €5 = €30; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 49",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "12 ÷ 3 × 4 = 16; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 50",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "30% = €15 is meer dan €12,50/€12/€10; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 51",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "400 + 80 = 480 g; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 52",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "52 × €2,50 = €130; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 53",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "30 ÷ 5 × 2 = 12; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "−3 klopt; telegram-hints (\"Andersom — ...\", \"kijk richting\"), niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hints bij +3 en −13 als volledige denkvragen; basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "+5 °C klopt; telegramzin in vraag, niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vraag als volledige zinnen; basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "0 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "+10 klopt, maar min-een-min is geen groep-5-stof (sets 5); hint bij −10 zei \"min een min wordt plus\" en verraadde zo het teken",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 (zoals B5/B6 in dit pad); hints bij −10 en +4 herschreven; basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "−€7 klopt; hint bij +€7 (\"Andersom — gaat onder nul\") gaf het antwoord weg",
+  "hersteld": true,
+  "wijziging": "hints bij +€7, −€37 en +€37 herschreven als denkfout; basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "17 klopt; hint bij −17 (\"zonder min ervoor\") stuurde rechtstreeks naar 17, niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "hint −17 herschreven; basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "−4 m klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "−9, −3, 0, +4 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "−15 klopt, maar vermenigvuldigen met negatieve getallen is brugklasstof (uitleg zegt dat zelf), sets 5; hint bij +15 (\"Het getal klopt\") verraadde het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8; hint +15 herschreven; basis hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "−3 + 8 = 5; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "−20 + 35 = 15; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 12",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "−10 klopt; hint bij 10 (\"Het getal 10 klopt, maar kijk naar het teken\") verraadde het antwoord",
+  "hersteld": true,
+  "wijziging": "hint bij 10 herschreven zonder het getal"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "−8 kleinst; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "5 − 8 = −3; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "3 grootst; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "van −10 naar −3 = 7 graden; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "0 − 4 = −4; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "€20,66 klopt (25/1,21 = 20,66, btw 4,34); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telefoon 21% klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "9% klopt (laag tarief sinds 2019, daarvoor 6%); vraag niet afgebakend tot Nederland, niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "\"in Nederland\" in de vraag; basis hulpstap"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "€3,00 klopt (3,27/1,09 = 3,00); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis hulpstap"
+ },
+ {
+  "waar": "belasting-po stap 3 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "de winkel draagt btw af; hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]
