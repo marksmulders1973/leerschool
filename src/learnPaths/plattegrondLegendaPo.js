@@ -234,7 +234,7 @@ const steps = [
         },
       },
       {
-        q: "In de legenda staat 🚻 = toilet. Je ziet 🚻 op de plattegrond. Wat is daar?",
+        q: "In de legenda staat: 🍴 = restaurant, 🚻 = toilet, ➡️ = ingang, 🅿️ = parkeerplaats. Je ziet 🚻 op de plattegrond. Wat is daar?",
         options: ["een toilet", "een restaurant", "de ingang", "een parkeerplaats"],
         answer: 0,
         wrongHints: [null, "Een restaurant heeft het mes-en-vork-teken.", "De ingang heeft een eigen pijl.", "Parkeren heeft het 🅿️-teken."],

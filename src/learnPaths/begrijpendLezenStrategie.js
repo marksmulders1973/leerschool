@@ -898,7 +898,7 @@ const steps = [
         wrongHints: [
           null,
           "Blijft een school open OMDAT het hard sneeuwt?",
-          "Komt er na de puntjes een voorbeeld van sneeuw? Of gebeurt er iets wat je niet verwacht?",
+          "Een voorbeeld laat zien hóé iets is. Is de tweede zin een voorbeeld van het sneeuwen, of gebeurt er iets heel anders?",
           "Begint hier een rijtje met redenen?",
         ],
         uitlegPad: {
@@ -936,7 +936,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Toch' = tegenstelling.",
+            basis: "Het woord op de puntjes moet een tegenstelling aangeven: er gebeurt iets anders dan je verwacht.",
             simpeler: "Hard sneeuwen en dan blijft de school open: dat verwacht je niet. Bij iets onverwachts past 'toch'.",
             nogSimpeler: "Onverwacht = toch",
           },
@@ -1127,9 +1127,9 @@ const steps = [
           voorbeelden: [{ type: "skim", tekst: "4 alinea's? 4 eerste zinnen + 1 laatste = 5 zinnen lezen. In 30 sec heb je de boodschap." }],
           basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "De toets heeft 5-7 min per tekst. Skimmen = sneller, niet minder grondig." }],
           niveaus: {
-            basis: "Eerste + laatste zin per alinea.",
+            basis: "Lees van elke alinea de eerste en de laatste zin.",
             simpeler: "Niet alle 200 woorden lezen. Lees alleen de eerste zin van elke alinea — daar staat meestal het hoofdpunt. Plus de laatste zin (die vat vaak samen).",
-            nogSimpeler: "Skim eerste/laatste zinnen",
+            nogSimpeler: "Lees alleen de eerste en de laatste zin van elke alinea.",
           },
         },
       },
@@ -1138,16 +1138,16 @@ const steps = [
         q: "Uit welke **drie delen** bestaat een tekst meestal?",
         options: [
           "Inleiding, kern en slot",
-          "Titel, plaatje en naam",
+          "Titel, tussenkopjes en plaatjes",
           "Vraag, antwoord en uitleg",
-          "Woord, zin en letter",
+          "Zinnen, alinea's en bladzijden",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Zijn een plaatje en een naam delen van de tekst zelf?",
+          "Dat zijn dingen die je óm de tekst heen ziet. De vraag gaat over de drie stukken waarin de inhoud zelf is verdeeld: begin, midden en eind.",
           "Dat lijkt op een toets, niet op een tekst. Hoe heten het begin, het midden en het eind van een tekst?",
-          "Gaat dit over de opbouw van een tekst, of over kleine stukjes taal?",
+          "Dat zijn stukjes tekst van klein naar groot. De vraag gaat over de opbouw van begin tot eind.",
         ],
         uitlegPad: {
           stappen: [

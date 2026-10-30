@@ -137,6 +137,55 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 3",
+  "hash": "019e15c2a6daaa00",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 4",
+  "hash": "c90b419d02e20660",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 5",
+  "hash": "b91262e8db80b412",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 6",
+  "hash": "f0fa8a24d6ed4dcc",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 7",
+  "hash": "c5cd668b30e6ec34",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 8",
+  "hash": "679f182c8ccca56a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 9",
+  "hash": "d38274fee9790f59",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "basis-grammatica-engels-po stap 3 vraag 5",
   "hash": "6689c30ddca494a2",
   "oordeel": "goed",
@@ -432,11 +481,63 @@
   "reden": "Basis-niveau telegram (pijl + plus)."
  },
  {
+  "waar": "begrijpend-lezen-strategie stap 3 vraag 4",
+  "hash": "85ec84321f235895",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij 'Bijvoorbeeld' omschreef het goede antwoord ('gebeurt er iets wat je niet verwacht?'); basis-niveau was een telegramzin."
+ },
+ {
   "waar": "begrijpend-lezen-strategie stap 3 vraag 5",
   "hash": "dcaefe32c2e208aa",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 3 vraag 6",
+  "hash": "8ffc58c951395462",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 1",
+  "hash": "ba2772591e3663c5",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 2",
+  "hash": "6d68b98a6d8d55ce",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 3",
+  "hash": "0b725a3d0114ac97",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Engels woord 'Skim' in nogSimpeler; basis was een telegramzin."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 4",
+  "hash": "444926b4ad874d1f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleiders 'Titel, plaatje en naam' en 'Woord, zin en letter' waren absurd; raadbaar door vorm."
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 5",
+  "hash": "56490345d3cdb9d2",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "begrijpend-lezen-strategie stap 6 vraag 2",
@@ -1008,6 +1109,13 @@
   "reden": "Antwoord 13 klopt. De hint bij B zegt 'Vanaf 15 mag je zwaarder werk doen, zoals vakken vullen'. Volgens de Rijksoverheid mogen 13-14-jarigen al helpen bij vakken vullen, en vanaf 15 mag dat zelfstand"
  },
  {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 1",
+  "hash": "284c7be381cd1490",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 2",
   "hash": "ccc8ad37e2e1dd4f",
   "oordeel": "goed",
@@ -1026,6 +1134,48 @@
   "hash": "1d07057dc0735c13",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 15 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 5",
+  "hash": "7ded81a9c834db72",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 6",
+  "hash": "dc526dadcb7a4cd2",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 7",
+  "hash": "7c0c2414dc8900c9",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 8",
+  "hash": "7c6654f3467027ac",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 3 vraag 3",
+  "hash": "b8c74cbdabb7ac5a",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "betrouwbaarheid-bronnen-po stap 3 vraag 4",
+  "hash": "dc5358e27e060095",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -6388,6 +6538,56 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "plattegrond-legenda-po stap 2 vraag 3",
+  "hash": "0fe1ee2128a2ad20",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 2 vraag 4",
+  "hash": "cbf055adf5bafeea",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 2 vraag 5",
+  "hash": "5ebb48f12633438a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Antwoord stond letterlijk in de vraag ('🚻 = toilet') zonder enige opzoekstap; te makkelijk voor groep 7-8."
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 2 vraag 6",
+  "hash": "0d4702e50803e427",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 2 vraag 7",
+  "hash": "fde6d4baeac28899",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 2 vraag 8",
+  "hash": "7d9b7b5ec9c8890f",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "plattegrond-legenda-po stap 2 vraag 9",
+  "hash": "38c1ff5756c1b83b",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
   "waar": "plattegrond-legenda-po stap 4 vraag 8",
   "hash": "9789f26884372008",
   "oordeel": "twijfel",
@@ -6888,6 +7088,42 @@
   "hash": "6afe9b17807d0323",
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 05 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 1 vraag 3",
+  "hash": "fd601b3bebc62009",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 1 vraag 4",
+  "hash": "fdad935caac367bc",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleider 'Zoek eerst het gegeven dat je wilt weten' was bijna even goed als het antwoord (de uitleg leert wel rij → gegeven → kruispunt, dus verdedigbaar)."
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 1 vraag 5",
+  "hash": "2817c9d22ed85f34",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 1 vraag 6",
+  "hash": "d16727d2c3ed37df",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "schema-tekst-combi-po stap 1 vraag 8",
+  "hash": "2e0951e54b69fb86",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -7890,6 +8126,30 @@
   "reden": "Melkweg klopt; hint met HOOFDLETTERS, niveaus 'Melkweg.' tweemaal."
  },
  {
+  "waar": "sterren-planeten stap 3 vraag 1",
+  "hash": "ecff6e12a0becaca",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hints in code-stijl ('Venus is #2.'), niveaus telegram ('Eerste. → #1.')."
+ },
+ {
+  "waar": "sterren-planeten stap 3 vraag 2",
+  "hash": "03b05dc0b0fa3020",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Feit klopt (Venus ~465 °C), maar niveaus waren telegram ('Broeikas-planeet.') en hint Jupiter was telegram."
+ },
+ {
+  "waar": "sterren-planeten stap 3 vraag 3",
+  "hash": "fdab2417af5a93a1",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Hint bij Jupiter noemde 'avondster' (bijnaam van het antwoord); niveaus telegram."
+ },
+ {
   "waar": "sterren-planeten stap 4 vraag 3",
   "hash": "dc11e7450f80b889",
   "oordeel": "twijfel",
@@ -7978,6 +8238,30 @@
   "reden": "Komeet-definitie klopt; hint C telegram ('Geen planeet, te klein + andere samenstelling.'); niveaus 'IJs + staart.'. Startset: optie ongemoeid."
  },
  {
+  "waar": "sterren-planeten stap 9 vraag 14",
+  "hash": "666a4f18e628660a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties waren telegramzinnen ('Zon beweegt', 'Wolken')."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 15",
+  "hash": "053cd677529a1d12",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Opties waren telegramzinnen met plusjes."
+ },
+ {
+  "waar": "sterren-planeten stap 9 vraag 16",
+  "hash": "810523e964f8e772",
+  "oordeel": "twijfel",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30",
+  "reden": "Afleider 'De zon gaat even uit' was absurd."
+ },
+ {
   "waar": "sterren-planeten stap 9 vraag 2",
   "hash": "da96f53c46157ad6",
   "oordeel": "twijfel",
@@ -8048,6 +8332,48 @@
   "hash": "184c06ee84b1e879",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 06 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 3",
+  "hash": "9524367d888a1f3d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 4",
+  "hash": "2d78f0025798d1e4",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 5",
+  "hash": "a283f244f479fa32",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 6",
+  "hash": "e8346528854a40c2",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 7",
+  "hash": "1c130bb6f8548ad0",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 8",
+  "hash": "14a4705731445572",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
   "datum": "2026-10-30"
  },
  {
@@ -8910,6 +9236,48 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 1 vraag 4",
+  "hash": "af8c3daa35fd640d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 1 vraag 5",
+  "hash": "50d6f28482401888",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 1 vraag 6",
+  "hash": "cbba5f685af1cf0c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 1 vraag 7",
+  "hash": "cec455b594c4fc9c",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 1 vraag 8",
+  "hash": "35c6ac868322212d",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
+ },
+ {
+  "waar": "verhaal-diepte-lezen-po stap 1 vraag 9",
+  "hash": "125b42876deabda3",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "verhaal-diepte-lezen-po stap 3 vraag 4",
@@ -10190,6 +10558,13 @@
   "bron": "vervolg B1 pakket 14 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord goed; niveaus verwezen naar 'Zin 1', wat niet klopt zodra opties in een andere volgorde getoond worden."
+ },
+ {
+  "waar": "werkwoord-tijden-po stap 2 vraag 3",
+  "hash": "0b569ec9c0ca4559",
+  "oordeel": "goed",
+  "bron": "vervolg B2 pakket 08 (blind, 30 okt)",
+  "datum": "2026-10-30"
  },
  {
   "waar": "werkwoordsspelling-dt stap 1 vraag 10",

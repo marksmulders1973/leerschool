@@ -196,14 +196,14 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           "Zoek de rij die bij jouw vraag hoort",
           "Lees de hele lijst van boven naar beneden",
           "Kijk eerst in de tekst boven de lijst",
-          "Zoek eerst het gegeven dat je wilt weten",
+          "Lees meteen het getal op het kruispunt af",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Zo verlies je tijd. Je hebt maar één hokje nodig — hoe vind je dat het snelst?",
           "De tekst lees je ook, maar de eerste stap bij een tabel is gericht zoeken in de tabel zelf.",
-          "Dat is ook een stap van kruispunt-lezen, maar is het de eerste? Denk aan de bibliotheek-oefening.",
+          "Het kruispunt is juist de láátste stap: dat kun je pas aflezen als je weet waar je in de tabel moet kijken. Waarmee begin je?",
         ],
         uitlegPad: {
           stappen: [
@@ -303,7 +303,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           niveaus: {
             basis: "Bereken per dag: sluitingstijd min openingstijd. Welke dag heeft het grootste verschil?",
             simpeler: "Trek bij elke dag de openingstijd af van de sluitingstijd. Welke dag geeft het hoogste getal?",
-            nogSimpeler: "Kijk welke dag de vroegste openingstijd heeft én de laatste sluitingstijd.",
+            nogSimpeler: "Tel per dag op je vingers van de openingstijd naar de sluitingstijd. Vrijdag: van 13.00 tot 20.00 uur is 7 uur. Welke dag komt daar nog boven?",
           },
         },
       },

@@ -152,7 +152,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         answer: 0,
         wrongHints: [
           null,
-          "'Nooit' zegt iets over de kans — maar 'lachend' bepaalt de toon. Wat voelt anders als iemand lacht bij wat ze zegt?",
+          "'Nooit' klinkt streng, maar let op hóé de zus het zegt. Zegt ze het boos, of staat er iets anders over haar gezicht?",
           "Maakt 'toch' de zin twijfelend, of alleen wat sterker? Kijk hoe de zus het zegt.",
           "Wie ze aanspreekt zegt iets over het doelwit, niet over de bedoeling. Kijk hoe het gezegd wordt.",
         ],
