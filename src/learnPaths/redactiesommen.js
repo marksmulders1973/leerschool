@@ -431,7 +431,7 @@ const steps = [
         q: "*'Een fles van 1,5 liter kost € 2,40. Hoeveel kost het **per liter**?'* Welke bewerking past?",
         options: ["Delen","Vermenigvuldigen","Optellen","Aftrekken"],
         answer: 0,
-        wrongHints: [null,"Niet vermenigvuldigen — je gaat van groot naar 'per stuk'.","Komt er iets bij? Je zoekt de prijs van één liter.","Niet aftrekken — vraag is per-eenheid-prijs."],
+        wrongHints: [null,"Niet vermenigvuldigen — je gaat van groot naar 'per stuk'.","Komt er iets bij? Je zoekt de prijs van één liter.","Niet aftrekken — er gaat niets af. Je zoekt de prijs van één liter."],
         uitlegPad: {
           stappen: [
             { titel: "Wat vraagt 'per liter'?", tekst: "'Per liter' betekent: **prijs voor 1 liter**. Je krijgt: 1,5 L = €2,40. Vraag: 1 L = ?" },
@@ -449,8 +449,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Per stuk = delen. Totaal = vermenigvuldigen. Tegengesteld!" }],
           niveaus: {
-            basis: "Per-stuk-prijs = totaal ÷ aantal eenheden.",
-            simpeler: "€2,40 ÷ 1,5 = €1,60 per liter.",
+            basis: "De prijs van één liter vind je door de totale prijs te delen door het aantal liters.",
+            simpeler: "Je deelt: € 2,40 gedeeld door 1,5 is € 1,60 per liter.",
             nogSimpeler: "Delen voor 'per stuk'.",
           },
         },

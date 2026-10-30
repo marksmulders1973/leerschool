@@ -539,7 +539,7 @@ const steps = [
         q: "*'Mijn drinken was al op na drie slokken — wat een belachelijk klein bekertje!'* Wat betekent 'belachelijk' hier?",
         options: ["heel erg","grappig","een beetje","niet waar"],
         answer: 0,
-        wrongHints: [null,"Niet de letterlijke betekenis — context zegt 'erg klein'.","Andersom — belachelijk maakt 'klein' juist sterker.","Kijk naar de zin: het bekertje was écht klein. Wat doet 'belachelijk' dan met 'klein'?"],
+        wrongHints: [null,"Dat is de letterlijke betekenis (om te lachen). Lees de zin: is er iets grappigs aan het bekertje, of doet het woord iets met 'klein'?","Andersom — belachelijk maakt 'klein' juist sterker, niet zwakker.","Kijk naar de zin: het bekertje was écht klein. Wat doet 'belachelijk' dan met 'klein'?"],
         uitlegPad: {
           stappen: [{ titel: "Context: 'klein bekertje'", tekst: "Belachelijk versterkt 'klein' = HEEL ERG klein. Niet de letterlijke betekenis 'om te lachen'." }],
           woorden: [{ woord: "belachelijk", uitleg: "Letterlijk: om te lachen. In context: extreem, overdreven." }],

@@ -1493,7 +1493,7 @@ const steps = [
         q: "Wat is een **strikvraag**?",
         options: ["Een vraag die je op het verkeerde been zet","Een grappige vraag om je aan het lachen te maken","Een heel korte vraag van een paar woorden","Een vraag waarbij meer antwoorden goed zijn"],
         answer: 0,
-        wrongHints: [null,"Is een strikvraag bedoeld om je te laten lachen, of om je in de val te lokken?","Heeft een strikvraag iets met de lengte te maken, of met de inhoud?","Is er bij een meerkeuzevraag meestal één goed antwoord, of meer?"],
+        wrongHints: [null,"Een grappige vraag is een mop. Is een strikvraag bedoeld om je te laten lachen?","Heeft een strikvraag iets met de lengte te maken, of met de inhoud?","Is er bij een meerkeuzevraag meestal één goed antwoord, of meer?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een strik?", tekst: "Een val die je vangt. Een strikvraag is bedoeld om je in de VAL te lokken — verleiden om het verkeerde antwoord te kiezen." },
@@ -1508,9 +1508,9 @@ const steps = [
           voorbeelden: [{ type: "strik", tekst: "Vraag: 'Welk argument noemt schrijver NIET?' — als je 'NIET' mist, kies je het verkeerde antwoord." }],
           basiskennis: [{ onderwerp: "Lees zorgvuldig", uitleg: "Bij de Doorstroomtoets: liever 30 sec extra lezen dan strik missen." }],
           niveaus: {
-            basis: "Strikvraag = bedoeld om je af te leiden.",
+            basis: "Een strikvraag is bedoeld om je af te leiden, zodat je een fout maakt.",
             simpeler: "Stel: een vraag is zo geformuleerd dat je het verkeerde antwoord kiest. Dat heet strikvraag. Niet om je te plagen — om te testen of je goed leest.",
-            nogSimpeler: "Misleidend = strik",
+            nogSimpeler: "Een strikvraag is een vraag die je misleidt.",
           },
         },
       },
@@ -1565,9 +1565,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Letterlijke vraag: het antwoord staat erin.",
+            basis: "Bij een letterlijke vraag staat het antwoord gewoon in de tekst.",
             simpeler: "Je zoekt één getal dat gewoon in de tekst staat. Dan is het een letterlijke vraag.",
-            nogSimpeler: "Staat erin = letterlijk",
+            nogSimpeler: "Staat het antwoord in de tekst? Dan is het een letterlijke vraag.",
           },
         },
       },
@@ -1583,7 +1583,7 @@ const steps = [
         wrongHints: [
           null,
           "Staan er argumenten vóór en tegen iets in?",
-          "Begint alinea 1 met een algemene regel en geeft alinea 2 daar voorbeelden bij? Of is er iets mis dat opgelost wordt?",
+          "Begint alinea 1 met een algemene regel en geeft alinea 2 daar voorbeelden bij?",
           "Geeft de schrijver een mening met redenen?",
         ],
         uitlegPad: {
@@ -1627,7 +1627,7 @@ const steps = [
           niveaus: {
             basis: "Probleem (afval) → oplossing (schoonmaken).",
             simpeler: "Eerst hoor je wat er mis is: afval. Daarna hoor je wat eraan gedaan wordt. Dat is probleem-oplossing.",
-            nogSimpeler: "Probleem → oplossing",
+            nogSimpeler: "Eerst iets wat mis is, daarna wat eraan gedaan wordt.",
           },
         },
       },
@@ -1639,7 +1639,7 @@ const steps = [
           null,
           "Gaat deze tekst over dingen die na elkaar gebeurden?",
           "Wordt er een probleem opgelost?",
-          "Gaat de tekst van een hoofdregel naar voorbeelden? Of staan er twee kanten tegenover elkaar?",
+          "Begint de tekst met een algemene regel en komen daarna de voorbeelden?",
         ],
         uitlegPad: {
           stappen: [
@@ -1684,9 +1684,9 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Redenen voor + redenen tegen = voor en tegen.",
+            basis: "Eerst redenen voor, dan redenen tegen: dat is de opbouw 'voor en tegen'.",
             simpeler: "De tekst vertelt eerst wat goed is aan een hond, en dan wat minder handig is. Zo zet je voor en tegen naast elkaar.",
-            nogSimpeler: "Voor + tegen",
+            nogSimpeler: "Eerst de redenen voor, dan de redenen tegen.",
           },
         },
       },
@@ -1737,7 +1737,7 @@ const steps = [
           niveaus: {
             basis: "Lotte is boos.",
             simpeler: "Hard gooien en een deur dichtslaan: zo doe je als je boos bent. Dat staat er niet, maar je snapt het wel.",
-            nogSimpeler: "Deur dicht = boos",
+            nogSimpeler: "Een deur hard dichtslaan doe je als je boos bent.",
           },
         },
       },
@@ -1765,9 +1765,9 @@ const steps = [
           voorbeelden: [{ type: "synoniem", tekst: "'De wedstrijd werd afgelast OMDAT het regende' = 'De wedstrijd werd afgelast DOORDAT het regende'." }],
           basiskennis: [{ onderwerp: "Synoniemen kennen", uitleg: "Verschillende woorden voor hetzelfde — handig om te herkennen." }],
           niveaus: {
-            basis: "'Doordat' = synoniem van 'omdat'.",
+            basis: "'Doordat' is een ander woord voor 'omdat': het geeft de oorzaak aan.",
             simpeler: "'Omdat' en 'doordat' betekenen praktisch hetzelfde: ze geven de REDEN aan.",
-            nogSimpeler: "Doordat = omdat",
+            nogSimpeler: "'Doordat' betekent hetzelfde als 'omdat'.",
           },
         },
       },
@@ -1788,9 +1788,9 @@ const steps = [
           voorbeelden: [{ type: "boodschap", tekst: "'Wat is de boodschap van het verhaal?' = hoofdgedachte. 'Hoe oud is Sara?' = detail." }],
           basiskennis: [{ onderwerp: "Boodschap vs detail", uitleg: "Boodschap = hele tekst. Detail = klein deel." }],
           niveaus: {
-            basis: "'Boodschap' = hoofdgedachte.",
+            basis: "De boodschap van een tekst is de hoofdgedachte.",
             simpeler: "Welke vraag gaat over de HELE tekst en niet één klein feit? 'Wat is de boodschap?' Andere vragen gaan over kleine details.",
-            nogSimpeler: "Boodschap = hoofdgedachte",
+            nogSimpeler: "Boodschap is een ander woord voor hoofdgedachte.",
           },
         },
       },
@@ -1811,20 +1811,21 @@ const steps = [
           voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen 30 sec = 1 min. Daarna scan je per vraag. Totaal sneller dan alles woord-voor-woord." }],
           basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "De toets heeft strakke tijd per onderdeel. Strategie wint." }],
           niveaus: {
-            basis: "Skim + vragen lezen = eerste stap.",
+            basis: "Eerst snel de tekst bekijken (skimmen) en de vragen lezen.",
             simpeler: "Stel: je krijgt een lange tekst. Begin je woord-voor-woord? Nee — eerst even snel kijken wat erin staat (skim) + bekijk de vragen. Daarna gericht zoeken.",
-            nogSimpeler: "Skim eerst",
+            nogSimpeler: "Eerst snel kijken waar de tekst over gaat, dan pas echt lezen.",
           },
         },
       },
       {
-        q: "Hoeveel tijd heb je ongeveer per tekst (3-5 vragen) op de Doorstroomtoets?",
-        options: ["5 tot 7 minuten","30 seconden","30 minuten","2 minuten"],
+        q: "Hoeveel tijd heb je ongeveer per tekst (met 3 tot 5 vragen) op de Doorstroomtoets?",
+        vanafGroep: 7, // nakijkronde B4 (30 okt 2026): toets-tijd van de Doorstroomtoets is groep 7/8-stof
+        options: ["5 tot 7 minuten","1 tot 2 minuten","15 tot 20 minuten","30 tot 40 minuten"],
         answer: 0,
-        wrongHints: [null,"Lukt het je in een halve minuut om een tekst én 3-5 vragen te doen?","Krijg je echt 30 minuten voor maar één tekst?","Lukt het je om een lange tekst te lezen én 3-5 vragen te maken in 2 minuten?"],
+        wrongHints: [null,"Lukt het je om in één of twee minuten een hele tekst te lezen én 3 tot 5 vragen te maken?","Dan zou je voor vier teksten al meer dan een uur bezig zijn. Krijg je zoveel tijd?","Krijg je echt een half uur of meer voor maar één tekst?"],
         uitlegPad: {
           stappen: [
-            { titel: "Toets-tijd per tekst", tekst: "Bij begrijpend lezen krijg je ~5-7 minuten per tekst-met-vragen. Niet meer, niet minder." },
+            { titel: "Toets-tijd per tekst", tekst: "Bij begrijpend lezen heb je ongeveer 5 tot 7 minuten per tekst met vragen. Dat is een richtlijn, geen harde regel." },
             { titel: "Hoe verdeel je dat?", tekst: "~30 sec skim + ~30 sec vragen lezen + ~1 min per vraag voor scannen = past in 5-7 min." },
           ],
           woorden: [
@@ -1834,9 +1835,9 @@ const steps = [
           voorbeelden: [{ type: "verdeling", tekst: "Tekst met 4 vragen: 30s skim + 30s vragen + 4×1min scan = 5 min. Past." }],
           basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
           niveaus: {
-            basis: "5-7 min per tekst.",
+            basis: "Je hebt ongeveer 5 tot 7 minuten per tekst.",
             simpeler: "Bij de Doorstroomtoets: ongeveer een minuut of 5-7 voor een tekst plus de vragen erover. Je moet dus strak op tijd werken.",
-            nogSimpeler: "5-7 min",
+            nogSimpeler: "Ongeveer 5 tot 7 minuten per tekst.",
           },
         },
       },
@@ -1859,7 +1860,7 @@ const steps = [
           niveaus: {
             basis: "Onderstreep 'NIET'.",
             simpeler: "'NIET' is een klein woord, makkelijk te missen. Onderstreep 'm — dan vergeet je niet dat je het TEGENOVERGESTELDE zoekt.",
-            nogSimpeler: "Markeer NIET",
+            nogSimpeler: "Zet een streep onder het woord NIET.",
           },
         },
       },
@@ -1883,7 +1884,7 @@ const steps = [
             { type: "stap", tekst: "Tekst zegt: 'Plastic vervuilt zeeën.' Vraag: 'Volgens tekst, wat doet plastic?' → 'Vervuilt zeeën' (niet 'beschermt vissen' of jouw eigen mening)." },
           ],
           basiskennis: [{ onderwerp: "Niet je eigen kennis", uitleg: "De toets test of je TEKST kunt lezen, niet of je veel weet. 'Volgens de tekst' is grens." }],
-          niveaus: { basis: "Alleen tekst.", simpeler: "'Volgens de tekst' = je antwoord moet uit DE TEKST komen, geen eigen mening. Tekst is de baas.", nogSimpeler: "Tekst-alleen" },
+          niveaus: { basis: "Gebruik alleen wat in de tekst staat.", simpeler: "'Volgens de tekst' = je antwoord moet uit DE TEKST komen, geen eigen mening. Tekst is de baas.", nogSimpeler: "Alleen de tekst telt." },
         },
       },
       {
@@ -1907,7 +1908,7 @@ const steps = [
             { type: "stap", tekst: "Bij vraag 'wat zegt alinea 3?' = lees alinea 3 goed. Niet hele tekst." },
           ],
           basiskennis: [{ onderwerp: "Niet alles even grondig", uitleg: "Goed lezen kost tijd. Bij de Doorstroomtoets: leer WANNEER goed lezen + wanneer scannen. Mix is sleutel." }],
-          niveaus: { basis: "Stuk voor stuk + begrip.", simpeler: "Goed lezen: zin voor zin, alle woorden snappen, verband leggen. Nodig bij detail-vragen op de toets.", nogSimpeler: "Grondig" },
+          niveaus: { basis: "Lees de zin stuk voor stuk en snap elk stuk.", simpeler: "Goed lezen: zin voor zin, alle woorden snappen, verband leggen. Nodig bij detail-vragen op de toets.", nogSimpeler: "Lees de zin stukje voor stukje." },
         },
       },
       {
@@ -1931,7 +1932,7 @@ const steps = [
             { type: "feit", tekst: "Internationaal leesonderzoek (zoals PISA) laat zien: kinderen die vaak voor hun plezier lezen, scoren gemiddeld hoger op begrijpend lezen." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen voor toets", uitleg: "Lezen voor levenslange vaardigheid — niet alleen de toets. Hoogopgeleide volwassenen lezen gemiddeld meer dan laagopgeleide." }],
-          niveaus: { basis: "Veel lezen.", simpeler: "Leesvaardigheid groeit door VEEL lezen — boeken + tijdschriften + jeugd-encyclopedie. 30 min/dag = grote sprong.", nogSimpeler: "Lezen" },
+          niveaus: { basis: "Door veel te lezen.", simpeler: "Je leesvaardigheid groeit door veel te lezen: boeken, tijdschriften, een jeugdencyclopedie. Een half uur per dag maakt al een groot verschil.", nogSimpeler: "Veel lezen helpt het meest." },
         },
       },
       { q: "Welk signaalwoord wijst op een **tegenstelling**?", options: ["maar","want","ook","dus"], answer: 0, wrongHints: [null, "Wat komt er na 'want': een reden, of iets wat ertegenin gaat?", "Voegt 'ook' iets toe, of zet het iets tegenover elkaar?", "Trekt 'dus' een conclusie, of zet het iets tegenover elkaar?"] },
