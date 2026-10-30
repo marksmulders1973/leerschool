@@ -1,0 +1,122 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/werkwoordTijdenPo.js",
+   "src/learnPaths/bekendeWetenschappersPo.js",
+   "src/learnPaths/verhaalDiepteLezenPo.js"
+  ],
+  "sets": [
+   "5|taal",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "7|begrijpend-lezen",
+   "8|begrijpend-lezen"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/tijdvakkenNederlandPo.js",
+   "src/learnPaths/synoniemenTegenstellingenPo.js",
+   "src/learnPaths/informatiebronnenPo.js",
+   "src/learnPaths/deelsommenMetRestPo.js",
+   "src/learnPaths/kommagetallenPo.js"
+  ],
+  "sets": [
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "5|taal",
+   "6|taal",
+   "7|taal",
+   "7|rekenen",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 55,
+  "files": [
+   "src/learnPaths/delenPo.js",
+   "src/learnPaths/matenOmtrekOppervlaktePo.js",
+   "src/learnPaths/briefEmailLezenPo.js",
+   "src/learnPaths/nieuwsberichtLezenPo.js",
+   "src/learnPaths/nederlandseKunstenaarsPo.js",
+   "src/learnPaths/feitMeningPo.js",
+   "src/learnPaths/getallenTot20Po.js"
+  ],
+  "sets": [
+   "5|rekenen",
+   "6|rekenen",
+   "6|begrijpend-lezen",
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|taal"
+  ]
+ },
+ {
+  "pakket": "04",
+  "n": 55,
+  "files": [
+   "src/learnPaths/geldRekenen.js",
+   "src/learnPaths/gemiddeldenStatistiekPo.js",
+   "src/learnPaths/zinsontledingOnderwerpPersoonsvormPo.js",
+   "src/learnPaths/volgordeBewerkingen.js",
+   "src/learnPaths/breukenPo.js",
+   "src/learnPaths/weersvoorspellingPo.js",
+   "src/learnPaths/geschiedenisVroegerEnNuG5.js",
+   "src/learnPaths/matenEenheden.js",
+   "src/learnPaths/alineaFunctiesTussenkopjesPo.js",
+   "src/learnPaths/feitenDetailsOpzoekenPo.js"
+  ],
+  "sets": [
+   "5|rekenen",
+   "7|rekenen",
+   "7|taal",
+   "6|natuur",
+   "7|natuur",
+   "8|natuur",
+   "6|geschiedenis",
+   "6|rekenen",
+   "6|begrijpend-lezen",
+   "7|begrijpend-lezen"
+  ]
+ },
+ {
+  "pakket": "05",
+  "n": 28,
+  "files": [
+   "src/learnPaths/politiekDemocratiePo.js",
+   "src/learnPaths/grafiekenLezenPo.js",
+   "src/learnPaths/toestandStoffenPo.js",
+   "src/learnPaths/dierenSeizoenenNatuur.js",
+   "src/learnPaths/dierenklassenPo.js",
+   "src/learnPaths/energiebronnenPo.js",
+   "src/learnPaths/lichaamGezondheidPo.js",
+   "src/learnPaths/industrieleRevolutiePo.js",
+   "src/learnPaths/negatieveGetallenPo.js",
+   "src/learnPaths/procentenPo.js",
+   "src/learnPaths/interpunctiePo.js",
+   "src/learnPaths/woordbetekenisContextPo.js",
+   "src/learnPaths/leestekensHoofdlettersPo.js",
+   "src/learnPaths/lettergrepenKlemtoonPo.js",
+   "src/learnPaths/samenstellingenTussenlettersPo.js"
+  ],
+  "sets": [
+   "6|geschiedenis",
+   "7|geschiedenis",
+   "8|geschiedenis",
+   "7|rekenen",
+   "6|natuur",
+   "6|rekenen",
+   "6|taal",
+   "7|begrijpend-lezen",
+   "8|taal"
+  ]
+ }
+]

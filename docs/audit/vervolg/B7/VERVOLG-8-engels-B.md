@@ -1,0 +1,4 @@
+# Vervolgset Engels · groep 8 — vraag 261 t/m 300 (deel B: met antwoord, hints en uitleg)
+
+Zelfde vragen als deel A. ✔ = stond al als goed/twijfel in docs/audit/goedgekeurd.json (hash klopt nog).
+
