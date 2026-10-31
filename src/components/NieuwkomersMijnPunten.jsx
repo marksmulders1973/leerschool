@@ -19,6 +19,7 @@ const L = {
   tr: { kop: "Puanlarım", pt: "puan", naam: "Adın ne?", ok: "Tamam", laat: "Öğretmene göster", rec: "Rekorlarım", dip: "Diplomalar", trede: "Basamak", terug: "Geri", leeg: "Henüz puan yok. Resimli dikteyi ya da dinle ve seç'i yap!", wijzig: "adı değiştir", dictee: "Dikte", luister: "Dinle ve seç" },
   ro: { kop: "Punctele mele", pt: "puncte", naam: "Cum te cheamă?", ok: "Gata", laat: "Arată-i doamnei", rec: "Recordurile mele", dip: "Diplome", trede: "Treapta", terug: "Înapoi", leeg: "Încă nu ai puncte. Fă dictarea cu imagini sau ascultă și alege!", wijzig: "schimbă numele", dictee: "Dictare", luister: "Ascultă și alege" },
   bg: { kop: "Моите точки", pt: "точки", naam: "Как се казваш?", ok: "Готово", laat: "Покажи на учителката", rec: "Моите рекорди", dip: "Дипломи", trede: "Стъпало", terug: "Назад", leeg: "Още нямаш точки. Направи диктовката с картинки или „Слушай и избери“!", wijzig: "промени името", dictee: "Диктовка", luister: "Слушай и избери" },
+  fa: { kop: "امتیازهای من", pt: "امتیاز", naam: "اسمت چیست؟", ok: "تمام", laat: "به خانم معلم نشان بده", rec: "رکوردهای من", dip: "گواهی‌نامه‌ها", trede: "پله", terug: "برگشت", leeg: "هنوز امتیازی نداری. «دیکتهٔ تصویری» یا «گوش کن و انتخاب کن» را انجام بده!", wijzig: "تغییر اسم", dictee: "دیکته", luister: "گوش کن و انتخاب کن" },
 };
 
 const themaNaam = (id) => {

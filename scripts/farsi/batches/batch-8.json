@@ -1,0 +1,1103 @@
+[
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3164",
+  "nl": "de school",
+  "en": "the school",
+  "ar": "المدرسة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3266",
+  "nl": "de auto",
+  "en": "the car",
+  "ar": "السيارة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3372",
+  "nl": "de tuin",
+  "en": "the garden",
+  "ar": "الحديقة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3474",
+  "nl": "de melk",
+  "en": "the milk",
+  "ar": "الحليب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3579",
+  "nl": "de appel",
+  "en": "the apple",
+  "ar": "التفاحة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3675",
+  "nl": "het water",
+  "en": "the water",
+  "ar": "الماء"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3777",
+  "nl": "het brood",
+  "en": "the bread",
+  "ar": "الخبز"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3882",
+  "nl": "de kaas",
+  "en": "the cheese",
+  "ar": "الجبن"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3986",
+  "nl": "de banaan",
+  "en": "the banana",
+  "ar": "الموزة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4085",
+  "nl": "de vader",
+  "en": "the father",
+  "ar": "الأب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4192",
+  "nl": "de zus",
+  "en": "the sister",
+  "ar": "الأخت"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4293",
+  "nl": "het hoofd",
+  "en": "the head",
+  "ar": "الرأس"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4404",
+  "nl": "de hand",
+  "en": "the hand",
+  "ar": "اليد"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4515",
+  "nl": "de voet",
+  "en": "the foot",
+  "ar": "القدم"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4616",
+  "nl": "de buik",
+  "en": "the belly",
+  "ar": "البطن"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4710",
+  "nl": "het oog",
+  "en": "the eye",
+  "ar": "العين"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4808",
+  "nl": "het oor",
+  "en": "the ear",
+  "ar": "الأذن"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4904",
+  "nl": "de neus",
+  "en": "the nose",
+  "ar": "الأنف"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|4999",
+  "nl": "de mond",
+  "en": "the mouth",
+  "ar": "الفم"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5093",
+  "nl": "rood",
+  "en": "red",
+  "ar": "أحمر"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5184",
+  "nl": "blauw",
+  "en": "blue",
+  "ar": "أزرق"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5276",
+  "nl": "geel",
+  "en": "yellow",
+  "ar": "أصفر"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5370",
+  "nl": "groen",
+  "en": "green",
+  "ar": "أخضر"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5456",
+  "nl": "wit",
+  "en": "white",
+  "ar": "أبيض"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5641",
+  "nl": "schrijven",
+  "en": "to write",
+  "ar": "يكتب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5737",
+  "nl": "lezen",
+  "en": "to read",
+  "ar": "يقرأ"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|5894",
+  "nl": "knippen",
+  "en": "to cut (with scissors)",
+  "ar": "يقصّ"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6008",
+  "nl": "plakken",
+  "en": "to glue / to stick",
+  "ar": "يلصق"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6119",
+  "nl": "luisteren",
+  "en": "to listen",
+  "ar": "يستمع"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6221",
+  "nl": "kijken",
+  "en": "to look",
+  "ar": "ينظر"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6353",
+  "nl": "opruimen",
+  "en": "to tidy up",
+  "ar": "يرتّب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6464",
+  "nl": "tekenen",
+  "en": "to draw",
+  "ar": "يرسم"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6581",
+  "nl": "kleuren",
+  "en": "to colour",
+  "ar": "يلوّن"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6683",
+  "nl": "tellen",
+  "en": "to count",
+  "ar": "يعدّ"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|6973",
+  "nl": "blij",
+  "en": "happy",
+  "ar": "سعيد"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|7069",
+  "nl": "verdrietig",
+  "en": "sad",
+  "ar": "حزين"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|7167",
+  "nl": "boos",
+  "en": "angry",
+  "ar": "غاضب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|7269",
+  "nl": "bang",
+  "en": "scared",
+  "ar": "خائف"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|7366",
+  "nl": "moe",
+  "en": "tired",
+  "ar": "متعب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|7464",
+  "nl": "ziek",
+  "en": "ill / sick",
+  "ar": "مريض"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|8310",
+  "nl": "Waar zit je aan als je eet of werkt?",
+  "en": "What do you sit at when you eat or work?",
+  "ar": "أين تجلس عندما تأكل أو تعمل؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|8499",
+  "nl": "Waar zit je op?",
+  "en": "What do you sit on?",
+  "ar": "على ماذا تجلس؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|8861",
+  "nl": "Daar staan verhalen in. Je leest erin. Wat is het?",
+  "en": "It has stories in it. You read it. What is it?",
+  "ar": "فيه قصص وأنت تقرأ فيه. ما هو؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|9041",
+  "nl": "Waarmee schrijf je?",
+  "en": "What do you write with?",
+  "ar": "بماذا تكتب؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|9413",
+  "nl": "Een vrouw geeft les in de klas. Hoe noem je haar?",
+  "en": "A woman teaches in the class. What do you call her?",
+  "ar": "امرأة تدرّس في الصف. ماذا تسمّيها؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|9681",
+  "nl": "Waar woon je met je familie?",
+  "en": "Where do you live with your family?",
+  "ar": "أين تسكن مع عائلتك؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|9935",
+  "nl": "Waar maak je een boterham van?",
+  "en": "What do you make a sandwich from?",
+  "ar": "من ماذا تصنع شطيرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|10279",
+  "nl": "Wat komt er uit de kraan? Je kunt het drinken.",
+  "en": "What comes out of the tap? You can drink it.",
+  "ar": "ماذا يخرج من الحنفية؟ يمكنك أن تشربه."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|10626",
+  "nl": "Welk fruit is rond en rood of groen?",
+  "en": "Which fruit is round and red or green?",
+  "ar": "أيّ فاكهة مستديرة وحمراء أو خضراء؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|10892",
+  "nl": "Een ander woord voor mama is …",
+  "en": "Another word for mum is …",
+  "ar": "كلمة أخرى لـ«ماما» هي …"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|11122",
+  "nl": "Waar zet je een pet op?",
+  "en": "What do you put a cap on?",
+  "ar": "على ماذا تضع القبعة؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|11346",
+  "nl": "Waarmee pak je iets?",
+  "en": "What do you pick something up with?",
+  "ar": "بماذا تمسك شيئًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|11527",
+  "nl": "Waarmee kijk je?",
+  "en": "What do you look with?",
+  "ar": "بماذا تنظر؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|11757",
+  "nl": "Welke kleur heeft een aardbei?",
+  "en": "What colour is a strawberry?",
+  "ar": "ما لون الفراولة؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|12110",
+  "nl": "Welke kleur heeft de lucht als de zon schijnt?",
+  "en": "What colour is the sky when the sun shines?",
+  "ar": "ما لون السماء عندما تشرق الشمس؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|12453",
+  "nl": "Je maakt letters met je pen. Wat doe je?",
+  "en": "You make letters with your pen. What are you doing?",
+  "ar": "تصنع حروفًا بقلمك. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|12833",
+  "nl": "Je hebt een schaar en papier in je hand. Wat doe je?",
+  "en": "You have scissors and paper in your hand. What do you do?",
+  "ar": "في يدك مقصّ وورقة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|13364",
+  "nl": "De juf praat. Je bent stil en hoort wat ze zegt. Wat doe je?",
+  "en": "The teacher talks. You are quiet and hear what she says. What are you doing?",
+  "ar": "المعلّمة تتكلّم. أنت هادئ وتسمع ما تقوله. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|13724",
+  "nl": "Je legt alles terug op zijn plek. Wat doe je?",
+  "en": "You put everything back in its place. What are you doing?",
+  "ar": "تعيد كل شيء إلى مكانه. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|14114",
+  "nl": "Je lacht. Je hebt een fijne dag. Hoe voel je je?",
+  "en": "You laugh. You are having a nice day. How do you feel?",
+  "ar": "أنت تضحك. يومك جميل. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|14624",
+  "nl": "Je beste vriend gaat verhuizen. Je moet huilen. Hoe voel je je?",
+  "en": "Your best friend is moving away. You have to cry. How do you feel?",
+  "ar": "صديقك المفضّل سينتقل إلى مكان آخر. أنت تبكي. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|15125",
+  "nl": "Iemand duwt je in de rij. Je stampt met je voet. Hoe voel je je?",
+  "en": "Someone pushes you in the line. You stamp your foot. How do you feel?",
+  "ar": "أحدهم يدفعك في الطابور. تضرب الأرض بقدمك. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|15632",
+  "nl": "Er zit een grote spin op je arm. Je wilt weglopen. Hoe voel je je?",
+  "en": "There is a big spider on your arm. You want to run away. How do you feel?",
+  "ar": "على ذراعك عنكبوت كبير. تريد أن تهرب. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|16024",
+  "nl": "Je gaapt. Je ogen vallen dicht. Hoe voel je je?",
+  "en": "You yawn. Your eyes are closing. How do you feel?",
+  "ar": "أنت تتثاءب. عيناك تنغلقان. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|16498",
+  "nl": "Je maakt een tekening vol met rood, blauw en geel. Wat doe je?",
+  "en": "You fill a drawing with red, blue and yellow. What are you doing?",
+  "ar": "تملأ رسمة بالأحمر والأزرق والأصفر. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|17350",
+  "nl": "Hoe voel je je? **Blij**, **verdrietig**, **boos**, **bang**, **moe** of **ziek**.",
+  "en": "How do you feel? **Happy**, **sad**, **angry**, **scared**, **tired** or **ill**.",
+  "ar": "كيف تشعر؟ **سعيد**، **حزين**، **غاضب**، **خائف**، **متعب** أو **مريض**."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|18327",
+  "nl": "Zeg het tegen de juf of meester: **Ik ben blij.** **Ik ben moe.** **Ik voel me niet lekker.**",
+  "en": "Tell the teacher: **Ik ben blij.** (I am happy.) **Ik ben moe.** (I am tired.) **Ik voel me niet lekker.** (I don't feel well.)",
+  "ar": "قلها للمعلّمة أو المعلّم: **Ik ben blij.** (أنا سعيد.) **Ik ben moe.** (أنا متعب.) **Ik voel me niet lekker.** (لا أشعر أنني بخير.)"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|18916",
+  "nl": "Ben je **verdrietig** of **bang**? Zeg het. De juf of meester wil het weten.",
+  "en": "Are you **sad** or **scared**? Say it. The teacher wants to know.",
+  "ar": "هل أنت **حزين** أو **خائف**؟ قلها. المعلّمة أو المعلّم يريد أن يعرف."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|19158",
+  "nl": "Je lacht, je hebt het fijn.",
+  "en": "You laugh, you feel good.",
+  "ar": "تضحك، وتشعر بالراحة."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|19344",
+  "nl": "Je moet huilen.",
+  "en": "You feel like crying.",
+  "ar": "تريد أن تبكي."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|19855",
+  "nl": "Ik ben … + het gevoel. Ik voel me niet lekker = ik ben een beetje ziek.",
+  "en": "Ik ben … + the feeling. Ik voel me niet lekker = I am a bit ill.",
+  "ar": "Ik ben … + الشعور. Ik voel me niet lekker = أنا مريض قليلًا."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|19998",
+  "nl": "Ik ben blij.",
+  "en": "I am happy.",
+  "ar": "أنا سعيد."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|20145",
+  "nl": "Ik ben bang.",
+  "en": "I am scared.",
+  "ar": "أنا خائف."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|20526",
+  "nl": "Wijs naar je gezicht en zeg het gevoel hardop.",
+  "en": "Point to your face and say the feeling out loud.",
+  "ar": "أشر إلى وجهك وقل الشعور بصوت عالٍ."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|20766",
+  "nl": "Kies het Nederlandse woord.",
+  "en": "Choose the Dutch word.",
+  "ar": "اختر الكلمة الهولندية."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|20987",
+  "nl": "Je lacht = je bent blij.",
+  "en": "You laugh = you are happy.",
+  "ar": "تضحك = أنت سعيد."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|21111",
+  "nl": "Gevoelens",
+  "en": "Feelings",
+  "ar": "المشاعر"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|21221",
+  "nl": "Zeg het",
+  "en": "Say it",
+  "ar": "قلها"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|21412",
+  "nl": "Dat mag altijd",
+  "en": "That is always allowed",
+  "ar": "هذا مسموح دائمًا"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|21520",
+  "nl": "Truc",
+  "en": "Trick",
+  "ar": "حيلة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|22529",
+  "nl": "Lees de vraag. Kies het **Nederlandse** woord dat past. Ken je een woord niet? **Tik** op het knopje ernaast: dan zie je het in jouw taal.",
+  "en": "Read the question. Choose the **Dutch** word that fits. Don't know a word? **Tap** the small button next to it: then you see it in your language.",
+  "ar": "اقرأ السؤال. اختر الكلمة **الهولندية** المناسبة. لا تعرف كلمة؟ **اضغط** على الزر الصغير بجانبها: فتراها بلغتك."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|22846",
+  "nl": "Aan de tafel eet je. Op de stoel zit je.",
+  "en": "You eat at the table. You sit on the chair.",
+  "ar": "على الطاولة تأكل. على الكرسي تجلس."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|24347",
+  "nl": "Lees de vraag en kies het **Nederlandse** woord dat past.\n\nLeer elk woord met **de** of **het** ervoor: de tafel, het boek.\n\nKen je een woord niet? Tik op het knopje ernaast, dan zie je het in jouw taal.",
+  "en": "Read the question and choose the **Dutch** word that fits.\n\nLearn every word with **de** or **het** in front: de tafel, het boek.\n\nDon't know a word? Tap the small button next to it to see it in your language.",
+  "ar": "اقرأ السؤال واختر الكلمة **الهولندية** المناسبة.\n\nتعلّم كل كلمة مع **de** أو **het** قبلها: de tafel، het boek.\n\nلا تعرف كلمة؟ اضغط على الزر الصغير بجانبها لتراها بلغتك."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|25689",
+  "nl": "Vijfentwintig woorden voor school, thuis, eten, lichaam, kleuren, doe-woorden en gevoelens. Lees de vraag en kies het goede woord. Ken je een woord niet? Tik op het knopje ernaast. ~15 min.",
+  "en": "Twenty-five words for school, home, food, body, colours, action words and feelings. Read the question and choose the right word. Don't know a word? Tap the small button next to it. ~15 min.",
+  "ar": "خمس وعشرون كلمة للمدرسة والبيت والطعام والجسم والألوان وكلمات الأفعال والمشاعر. اقرأ السؤال واختر الكلمة الصحيحة. لا تعرف كلمة؟ اضغط على الزر الصغير بجانبها. ~15 دقيقة."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|27864",
+  "nl": "Woorden voor hoe je je **voelt**: **blij**, **verdrietig**, **boos**, **bang**, **moe**, **ziek**.\n\nZeg het tegen de juf of meester: **Ik ben moe.** **Ik voel me niet lekker.**\n\nBen je verdrietig of bang? Zeg het. Dat mag altijd.",
+  "en": "Words for how you **feel**: **blij** (happy), **verdrietig** (sad), **boos** (angry), **bang** (scared), **moe** (tired), **ziek** (ill).\n\nTell the teacher: **Ik ben moe.** (I am tired.) **Ik voel me niet lekker.** (I don't feel well.)\n\nAre you sad or scared? Say it. That is always allowed.",
+  "ar": "كلمات تقول كيف **تشعر**: **blij** (سعيد)، **verdrietig** (حزين)، **boos** (غاضب)، **bang** (خائف)، **moe** (متعب)، **ziek** (مريض).\n\nقل للمعلّم أو المعلّمة: **Ik ben moe.** (أنا متعب.) **Ik voel me niet lekker.** (لا أشعر أنني بخير.)\n\nهل أنت حزين أو خائف؟ قل ذلك. هذا مسموح دائمًا."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|32025",
+  "en": "No, '${o}' means: ${t.en}. Try again.",
+  "ar": "لا، «${o}» معناها: ${t.ar}. حاول مرة أخرى."
+ },
+ {
+  "id": "A|src/shared/voorleesModus.js|5653",
+  "nl": "nl",
+  "en": "en",
+  "ar": "ar"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|1675",
+  "en": "EN",
+  "ar": "AR"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|1998",
+  "nl": "Naar de vragen ▶",
+  "en": "To the questions ▶",
+  "ar": "إلى الأسئلة ◀"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|2153",
+  "nl": "Naar de vraag ▶",
+  "en": "To the question ▶",
+  "ar": "إلى السؤال ◀"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|2316",
+  "nl": "Volgend deel ▶",
+  "en": "Next part ▶",
+  "ar": "الجزء التالي ◀"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|2442",
+  "nl": "Dat is juist!",
+  "en": "That is right!",
+  "ar": "هذا صحيح!"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|2885",
+  "nl": "Dit is lastig, hè? Zullen we eerst de uitleg samen doen?",
+  "en": "This is hard, isn't it? Shall we do the explanation together first?",
+  "ar": "هذا صعب، أليس كذلك؟ هل نقرأ الشرح معًا أولًا؟"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|3091",
+  "nl": "Ja, eerst de uitleg",
+  "en": "Yes, the explanation first",
+  "ar": "نعم، الشرح أولًا"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|3305",
+  "nl": "Nee, ik probeer verder",
+  "en": "No, I'll keep trying",
+  "ar": "لا، سأواصل المحاولة"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|3460",
+  "nl": "Nog niet helemaal",
+  "en": "Not quite yet",
+  "ar": "ليس تمامًا بعد"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|3875",
+  "nl": "Probeer het nog eens, kijk goed naar de uitleg hierboven.",
+  "en": "Try again. Look carefully at the explanation above.",
+  "ar": "حاول مرة أخرى. انظر جيدًا إلى الشرح في الأعلى."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|4021",
+  "nl": "Probeer opnieuw",
+  "en": "Try again",
+  "ar": "حاول مرة أخرى"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|4187",
+  "nl": "Hier is de uitleg",
+  "en": "Here is the explanation",
+  "ar": "هذا هو الشرح"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|4407",
+  "nl": "Lees uitleg opnieuw",
+  "en": "Read the explanation again",
+  "ar": "اقرأ الشرح مرة أخرى"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|4575",
+  "nl": "Klopt er iets niet?",
+  "en": "Is something wrong?",
+  "ar": "هل هناك خطأ؟"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|4723",
+  "nl": "Wat klopt er niet?",
+  "en": "What is wrong?",
+  "ar": "ما الخطأ؟"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|4900",
+  "nl": "De vraag klopt niet",
+  "en": "The question is wrong",
+  "ar": "السؤال خطأ"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|5127",
+  "nl": "Het goede antwoord klopt niet",
+  "en": "The right answer is wrong",
+  "ar": "الجواب الصحيح خطأ"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|5314",
+  "nl": "De vertaling klopt niet",
+  "en": "The translation is wrong",
+  "ar": "الترجمة خطأ"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|5443",
+  "nl": "Iets anders",
+  "en": "Something else",
+  "ar": "شيء آخر"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|5546",
+  "nl": "Verstuur",
+  "en": "Send",
+  "ar": "أرسل"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|5799",
+  "nl": "Dank je! Mark kijkt ernaar.",
+  "en": "Thank you! Mark will look at it.",
+  "ar": "شكرًا! سينظر مارك في الأمر."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6093",
+  "nl": "Ik begrijp de vraag niet — help mij",
+  "en": "I don't understand the question — help me",
+  "ar": "لا أفهم السؤال — ساعدني"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6262",
+  "nl": "Terug naar de tekst",
+  "en": "Back to the text",
+  "ar": "العودة إلى النص"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6402",
+  "nl": "Verberg tekst",
+  "en": "Hide text",
+  "ar": "إخفاء النص"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6546",
+  "nl": "Vraag hulp",
+  "en": "Ask for help",
+  "ar": "اطلب المساعدة"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6697",
+  "nl": "Lees voor",
+  "en": "Read aloud",
+  "ar": "اقرأ بصوت عالٍ"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6785",
+  "nl": "Stem",
+  "en": "Voice",
+  "ar": "الصوت"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|6943",
+  "nl": "Stap voltooid!",
+  "en": "Part finished!",
+  "ar": "انتهى الجزء!"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|7186",
+  "nl": "Goed bezig. Wat wil je nu?",
+  "en": "Well done. What do you want now?",
+  "ar": "أحسنت. ماذا تريد الآن؟"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|7503",
+  "nl": "Helemaal klaar — laatste stap geweest!",
+  "en": "All done — that was the last part!",
+  "ar": "انتهيت تمامًا — كان هذا الجزء الأخير!"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|7628",
+  "nl": "Mini-toets",
+  "en": "Mini test",
+  "ar": "اختبار صغير"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|7860",
+  "nl": "3 vragen over deze stap",
+  "en": "3 questions about this part",
+  "ar": "3 أسئلة عن هذا الجزء"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|8009",
+  "nl": "Volgend deel",
+  "en": "Next part",
+  "ar": "الجزء التالي"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|8211",
+  "nl": "Doorgaan met dit onderwerp",
+  "en": "Go on with this topic",
+  "ar": "تابع هذا الموضوع"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|8441",
+  "nl": "Klaar — bekijk je resultaat",
+  "en": "Done — see your result",
+  "ar": "انتهيت — شاهد نتيجتك"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|8731",
+  "nl": "Je score + wat je hierna kunt doen",
+  "en": "Your score + what you can do next",
+  "ar": "نتيجتك + ما يمكنك فعله بعد ذلك"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|8908",
+  "nl": "Terug naar paden",
+  "en": "Back to the lessons",
+  "ar": "العودة إلى الدروس"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|9088",
+  "nl": "Andere stap kiezen",
+  "en": "Choose another part",
+  "ar": "اختر جزءًا آخر"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|9293",
+  "nl": "Goed gedaan! Je bent klaar.",
+  "en": "Well done! You are finished.",
+  "ar": "أحسنت! لقد انتهيت."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|9534",
+  "nl": "Terug naar het startpunt",
+  "en": "Back to the starting point",
+  "ar": "العودة إلى نقطة البداية"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|9664",
+  "nl": "Nog een keer",
+  "en": "One more time",
+  "ar": "مرة أخرى"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|9868",
+  "nl": "Denk eerst hierover",
+  "en": "Think about this first",
+  "ar": "فكّر في هذا أولًا"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|10039",
+  "nl": "Begin bij deel 1",
+  "en": "Start with part 1",
+  "ar": "ابدأ بالجزء 1"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|10151",
+  "nl": "Doorgaan",
+  "en": "Continue",
+  "ar": "تابع"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|10362",
+  "nl": "Hulp bij deze vraag",
+  "en": "Help with this question",
+  "ar": "مساعدة في هذا السؤال"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|10520",
+  "nl": "Korte uitleg",
+  "en": "Short explanation",
+  "ar": "شرح قصير"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|10763",
+  "nl": "Stap voor stap door de vraag",
+  "en": "Step by step through the question",
+  "ar": "خطوة بخطوة في السؤال"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|10913",
+  "nl": "Moeilijke woorden",
+  "en": "Difficult words",
+  "ar": "كلمات صعبة"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|11125",
+  "nl": "Theorie achter de vraag",
+  "en": "The idea behind the question",
+  "ar": "الفكرة وراء السؤال"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|11332",
+  "nl": "Voorbeelden uit het echte leven",
+  "en": "Examples from real life",
+  "ar": "أمثلة من الحياة"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|11577",
+  "nl": "Basiskennis die je hierbij nodig hebt",
+  "en": "What you need to know first",
+  "ar": "ما تحتاج أن تعرفه أولًا"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|11889",
+  "nl": "Lees de uitleg van deze stap nog eens",
+  "en": "Read the explanation of this part again",
+  "ar": "اقرأ شرح هذا الجزء مرة أخرى"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|12678",
+  "nl": "Probeer het straks eerst zelf.",
+  "en": "First try it yourself. Below is help to understand the question. The short explanation with the answer comes after your first try.",
+  "ar": "جرّب بنفسك أولًا. في الأسفل مساعدة لفهم السؤال. الشرح القصير مع الجواب يظهر بعد محاولتك الأولى."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|12839",
+  "nl": "Vandaag herhalen",
+  "en": "Practise again today",
+  "ar": "مراجعة اليوم"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|13253",
+  "nl": "Woorden en zinnen van eerder. Zo onthoud je ze.",
+  "en": "Words and sentences from before. This way you remember them.",
+  "ar": "كلمات وجمل من قبل. هكذا تتذكّرها."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|13439",
+  "nl": "Klaar met herhalen!",
+  "en": "Done practising!",
+  "ar": "انتهيت من المراجعة!"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|13713",
+  "nl": "Morgen komen er weer een paar terug.",
+  "en": "Tomorrow a few will come back again.",
+  "ar": "غدًا ستعود بعضها مرة أخرى."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|13816",
+  "nl": "Volgende",
+  "en": "Next",
+  "ar": "التالي"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|13907",
+  "nl": "Terug",
+  "en": "Back",
+  "ar": "رجوع"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|14006",
+  "nl": "Sluit",
+  "en": "Close",
+  "ar": "إغلاق"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|14251",
+  "nl": "← Vorig deel",
+  "en": "← Previous part",
+  "ar": "→ الجزء السابق"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|14414",
+  "nl": "Volgend deel →",
+  "en": "Next part →",
+  "ar": "الجزء التالي ←"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|14641",
+  "nl": "⏸ stop",
+  "en": "⏸ pause (your place is saved)",
+  "ar": "⏸ توقّف (يُحفظ مكانك)"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|14737",
+  "nl": "Begin",
+  "en": "Start",
+  "ar": "ابدأ"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|14863",
+  "nl": "Overzicht",
+  "en": "Overview",
+  "ar": "نظرة عامة"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|15070",
+  "nl": "Terug naar het overzicht",
+  "en": "Back to the overview",
+  "ar": "العودة إلى النظرة العامة"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|15251",
+  "nl": "Kies een ander deel",
+  "en": "Choose another part",
+  "ar": "اختر جزءًا آخر"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|15440",
+  "nl": "Je plek is bewaard!",
+  "en": "Your place is saved!",
+  "ar": "تم حفظ مكانك!"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|15809",
+  "nl": "Tot straks — je gaat verder waar je nu bent.",
+  "en": "See you soon — you will continue where you are now.",
+  "ar": "إلى اللقاء — ستكمل من حيث أنت الآن."
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|16016",
+  "nl": "In de klas",
+  "en": "In class",
+  "ar": "في الصف"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|16116",
+  "nl": "Woorden",
+  "en": "Words",
+  "ar": "كلمات"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|16282",
+  "nl": "Rekentaal",
+  "en": "Maths words",
+  "ar": "كلمات الحساب"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|16444",
+  "nl": "Rekenen tot 20",
+  "en": "Counting to 20",
+  "ar": "الحساب حتى 20"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|16612",
+  "nl": "Rekenen tot 100",
+  "en": "Counting to 100",
+  "ar": "الحساب حتى 100"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|16922",
+  "en": "Part ${a} / ${b}",
+  "ar": "الجزء ${a} / ${b}"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|17155",
+  "en": "${x} of ${y} parts done",
+  "ar": "أنهيت ${x} من ${y} أجزاء"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|17296",
+  "en": "Chapter ${n}",
+  "ar": "الفصل ${n}"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|17481",
+  "en": "Part ${n} done!",
+  "ar": "انتهى الجزء ${n}!"
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|18363",
+  "en": "${v ? ",
+  "ar": "${v ? "
+ },
+ {
+  "id": "A|src/shared/ui/SteunTik.jsx|18736",
+  "en": "${n} of ${m} correct",
+  "ar": "${n} من ${m} صحيحة"
+ },
+ {
+  "id": "A|api/tutor-chat.js|23672",
+  "en": "Engels",
+  "ar": "Arabisch"
+ },
+ {
+  "id": "B|src/components/NieuwkomersLuisterKies.jsx|3383",
+  "nl_blok": "{ zinnen: \"Zinnen\", zinkaarten: \"Zinkaarten\", dictee: \"Plaatjesdictee\", kaarten: \"Woordkaarten\", kies: \"Luister en kies\", onderwerp: \"Kies een onderwerp\", terug: \"Terug\", nogEens: \"Nog een keer\", klaar: \"Klaar!\" }",
+  "en_blok": "{ zinnen: \"Sentences\", zinkaarten: \"Sentence cards\", dictee: \"Picture dictation\", kaarten: \"Word cards\", kies: \"Listen and choose\", onderwerp: \"Choose a topic\", terug: \"Back\", nogEens: \"Again\", klaar: \"Done!\" }"
+ },
+ {
+  "id": "B|src/components/NieuwkomersMijnPunten.jsx|2976",
+  "nl_blok": "{ kop: \"Mijn punten\", pt: \"punten\", naam: \"Hoe heet je?\", ok: \"Klaar\", laat: \"Laat zien aan de juf\", rec: \"Mijn records\", dip: \"Diploma's\", trede: \"Trede\", terug: \"Terug\", leeg: \"Nog geen punten. Doe het plaatjesdictee of luister en kies!\", wijzig: \"naam wijzigen\", dictee: \"Dictee\", luister: \"Luister en kies\" }",
+  "en_blok": "{ kop: \"My points\", pt: \"points\", naam: \"What is your name?\", ok: \"Done\", laat: \"Show the teacher\", rec: \"My records\", dip: \"Certificates\", trede: \"Step\", terug: \"Back\", leeg: \"No points yet. Do the picture dictation or listen and choose!\", wijzig: \"change name\", dictee: \"Dictation\", luister: \"Listen and choose\" }"
+ },
+ {
+  "id": "C|src/components/NieuwkomersPage.jsx|2760",
+  "nl_blok": "[\"Kijken en luisteren\", \"Ook als je nog niet kunt lezen.\", \"Woordkaarten\", \"Luister en kies\", \"Plaatjesdictee\", \"Zinnen\"]",
+  "en_blok": "[\"Look and listen\", \"Also if you cannot read yet.\", \"Word cards\", \"Listen and choose\", \"Picture dictation\", \"Sentences\"]"
+ },
+ {
+  "id": "B|src/components/NieuwkomersPage.jsx|32379",
+  "nl_blok": "{\n    kop: \"Leerkwartier, het startpunt voor nieuwkomers\", // Mark 3 okt 2026\n    sub: \"Gratis. Geen account. Korte zinnen. Elke som met uitleg.\",\n    taalvraag: \"Welke taal spreek je thuis?\",\n    taaluitleg: \"Alles blijft Nederlands. Tik op een zin of op het knopje bij een antwoord. Dan zie je jouw taal.\",\n    intro: \"Dit is voor kinderen die nog Nederlands leren. Begin bij 1. Doe elke dag een beetje.\",\n    tegels: [\n      { id: \"in-de-klas-nieuwkomers\", soort: \"pad\", titel: \"In de klas\", uitleg: \"Wat zeg je tegen de juf? Hoe maak je vrienden?\" },\n      { id: \"woorden-nieuwkomers\", soort: \"pad\", titel: \"Woorden\", uitleg: \"Je eerste Nederlandse woorden. Tik op het knopje naast een woord: dan zie je het in jouw taal.\" },\n      { id: \"rekentaal-nieuwkomers\", soort: \"pad\", titel: \"Rekentaal\", uitleg: \"Meer, minder, samen, weg, verdelen: de woorden in elke rekenles.\" },\n      { id: \"rekenen-tot-20-nieuwkomers\", soort: \"pad\", titel: \"Rekenen tot 20\", uitleg: \"Tellen, erbij en eraf. Met je vingers mag.\" },\n      { id: \"letters-klanken-nieuwkomers\", soort: \"pad\", titel: \"Letters en klanken\", uitleg: \"Welke klank hoor je? t-a-s wordt tas.\" },\n      { id: \"woorden-2-nieuwkomers\", soort: \"pad\", titel: \"Meer woorden\", uitleg: \"Kleding, eten, thuis, buiten en je lichaam.\" },\n      { id: \"dictee\", soort: \"pagina\", nk: true, titel: \"Dictee\", uitleg: \"Charley zegt een woord. Jij schrijft het. Elke letter is een klank.\" },\n      { id: \"in-de-klas-2-nieuwkomers\", soort: \"pad\", titel: \"In de klas 2\", uitleg: \"Zelf werken, klaar en wat nu, de juf is bezig, en fijne gevoelens.\" },\n      { id: \"woorden-3-nieuwkomers\", soort: \"pad\", titel: \"Woorden 3\", uitleg: \"Kleuren, vormen, groot en klein, gisteren en vandaag, denken en vertellen.\" },\n      { id: \"rekenen-tot-100-nieuwkomers\", soort: \"pad\", titel: \"Rekenen tot 100\", uitleg: \"Tientallen en eenheden. Sprongen van 10.\" },\n      { id: \"leesladder\", soort: \"pagina\", titel: \"Lezen\", uitleg: \"Begin met vijf korte zinnen. De knop leest voor.\" },\n      { id: \"tafels\", soort: \"pagina\", titel: \"Tafels\", uitleg: \"Steeds een stukje.\" },\n      // 3 okt 2026 — trede 3 \"De brug naar de klas\" (index 12-13; vertalingen in tegels[] per taal, zelfde volgorde).\n      { id: \"opdrachtwoorden-nieuwkomers\", soort: \"pad\", titel: \"Opdrachtwoorden\", uitleg: \"Wat staat er op je blad? Omcirkel, vul in, kruis aan en meer.\" },\n      { id: \"rekenverhaaltjes-nieuwkomers\", soort: \"pad\", titel: \"Rekenverhaaltjes\", uitleg: \"Sommen in een kort verhaal. Komt er iets bij of gaat er iets af?\" },\n    ],\n    // 29 sep 2026: de oude zin (\"overal een knop Lees voor\") klopte niet → nu wat er echt is.\n    voorlees: \"Kun je nog niet (goed) lezen? Zet bovenaan de knop 'Ik kan nog niet (goed) lezen' aan. Dan leest de app de vragen voor. Tik op een luidspreker: dan hoor je het nog een keer.\",\n    luisterTip: \"Tik op een luidspreker: dan hoor je wat er staat.\",\n    juf: \"Voor de leerkracht: alles op deze pagina is gratis, ook op het digibord, gegarandeerd tot en met 2031. Zet de code WELKOMNIEUWKOMER op het bord; ieder kind komt dan hier.\",\n    terug: \"← Terug\",\n    herhaalKop: \"Vandaag herhalen\",\n    herhaalUitleg: \"Woorden en zinnen van eerder. Zo onthoud je ze.\",\n    trede1: \"Trede 1 · Welkom\",\n    trede2: \"Trede 2 · Letters en woorden\",\n    verder: \"Verder oefenen\",\n    testKop: \"Trede-testje\",\n    testUitleg: \"Klaar met 1 tot en met 4? Doe het testje en haal je diploma.\",\n    testGehaald: \"Trede 1 gehaald! Je mag het testje altijd opnieuw doen.\",\n    testUitleg2: \"Klaar met 5 tot en met 7? Doe het testje en haal je diploma.\",\n    instapKop: \"Nieuw hier? Doe het instap-testje\",\n    overKop: \"Klaar voor de gewone Leerkwartier?\",\n    overUitleg: \"Rekenen en taal zoals in je klas. Alles staat in het Nederlands. Bij de eerste vragen kun je nog op de vertaalknop tikken. Je kunt altijd terug naar deze pagina.\",\n    // 3 okt 2026 — trede 3 \"De brug\", doelen (\"wat kan ik al?\") en de aanbevolen overstap.\n    trede3: \"Trede 3 · De brug naar de klas\",\n    testUitleg3: \"Klaar met 13 en 14? Doe het brugtestje: ben je klaar voor de gewone Leerkwartier?\",\n    testGehaald3: \"Brugtestje gehaald! Je bent klaar voor de gewone Leerkwartier.\",\n    overStart: \"Start in de gewone Leerkwartier\",\n    overZelf: \"Of kies zelf je groep:\",\n    doelKop: \"Wat kan ik al?\",\n    doelBalk: \"Trede {n} van 3 · daarna de gewone Leerkwartier\",\n    doelKlaar: \"Alle drie de treden gehaald. Je bent klaar voor de gewone Leerkwartier!\",\n    doelen: [\n      [\"Ik kan vragen wat ik nodig heb in de klas.\", \"Ik ken mijn eerste Nederlandse woorden.\", \"Ik ken rekenwoorden als meer, minder en samen.\", \"Ik kan rekenen tot 20.\"],\n      [\"Ik hoor de klanken in een woord.\", \"Ik kan korte woorden lezen.\", \"Ik kan korte woorden schrijven.\"],\n      [\"Ik snap wat er op mijn werkblad staat.\", \"Ik snap een som in een verhaaltje.\", \"Ik kan vragen uit de gewone app maken.\"],\n    ],\n    overGroep: \"In welke groep zit je?\",\n    instapUitleg: \"Een paar vragen. Dan weet je waar je begint.\",\n    hierBegin: \"Hier begin je\",\n    thuisbrief: \"Voor de leerkracht: print het briefje voor thuis (5 talen)\",\n    deelKop: \"Ken je een school of gezin voor wie dit handig is? Deel deze pagina:\",\n    tipKop: \"💬 Tip, wens, of klopt er iets niet?\",\n    tipIk: \"Ik ben:\",\n    tipRollen: [\"leerkracht\", \"ouder\", \"leerling\"],\n    tipVoorbeeld: \"Bijvoorbeeld: deze Arabische zin klopt niet · wij missen de taal Tigrinya · graag meer rekenen\",\n    tipStuur: \"Verstuur\",\n    tipDank: \"Dank je wel! We lezen elke tip. Wil je een antwoord? Mail naar hallo@leerkwartier.app.\",\n    deelTekst: \"Gratis Nederlands leren voor nieuwkomers, met hulp in de eigen taal (Arabisch, Oekraïens, Turks, Roemeens, Bulgaars, Engels). Zonder account.\",\n    deelKopieer: \"Deel of kopieer link\",\n    deelGekopieerd: \"Link gekopieerd\",\n    testGehaald2: \"Trede 2 gehaald! Je mag het testje altijd opnieuw doen.\",\n  }",
+  "en_blok": "{ trede3: \"Step 3 · The bridge to the class\", testUitleg3: \"Done with 13 and 14? Do the bridge test: are you ready for the normal Leerkwartier?\", testGehaald3: \"Bridge test passed! You are ready for the normal Leerkwartier.\", overStart: \"Start in the normal Leerkwartier\", overZelf: \"Or choose your class (groep) yourself:\", doelKop: \"What can I do already?\", doelBalk: \"Step {n} of 3 · then the normal Leerkwartier\", doelKlaar: \"All three steps passed. You are ready for the normal Leerkwartier!\", doelen: [[\"I can ask for what I need in class.\", \"I know my first Dutch words.\", \"I know maths words like more, less and together.\", \"I can do sums up to 20.\"], [\"I hear the sounds in a word.\", \"I can read short words.\", \"I can write short words.\"], [\"I understand what my worksheet says.\", \"I understand a sum in a story.\", \"I can do questions from the normal app.\"]], tipKop: \"Tip, wish, or is something wrong? Write it here (any language is fine).\", overKop: \"Ready for the normal Leerkwartier?\", overUitleg: \"Maths and language like in your class. Everything is in Dutch. At the first questions you can still tap the translate button. You can always come back to this page.\", overGroep: \"Which class (groep) are you in?\", instapKop: \"New here? Do the starting test\", instapUitleg: \"A few questions. Then you know where to start.\", hierBegin: \"Start here\", testUitleg2: \"Done with 5 to 7? Do the test and get your certificate.\", testGehaald2: \"Step 2 passed! You can always do the test again.\", trede1: \"Step 1 · Welcome\", trede2: \"Step 2 · Letters and words\", verder: \"Keep practising\", testKop: \"Step test\", testUitleg: \"Done with 1 to 4? Do the test and get your certificate.\", testGehaald: \"Step 1 passed! You can always do the test again.\", herhaalKop: \"Practise again today\", herhaalUitleg: \"Words and sentences from before. This way you remember them.\", sub: \"Free. No account. Short sentences. Every sum with an explanation.\", juf: \"For the teacher: everything on this page is free, also on the classroom board, guaranteed until 2031. Write the code WELKOMNIEUWKOMER on the board; every child will come here.\", tegels: [[\"In class\",\"What do you say to the teacher? How do you make friends?\"],[\"Words\",\"Your first Dutch words. Tap the small button next to a word to see it in your language.\"],[\"Maths words\",\"More, less, together, away, sharing: the words in every maths lesson.\"],[\"Counting to 20\",\"Counting, adding and taking away. You may use your fingers.\"],[\"Letters and sounds\",\"Which sound do you hear? t-a-s becomes tas.\"],[\"More words\",\"Clothes, food, home, outside and your body.\"],[\"Dictation\",\"Charley says a word. You write it. Every letter is a sound.\"],[\"In class 2\",\"Working on your own, finished and what now, the teacher is busy, and good feelings.\"],[\"Words 3\",\"Colours, shapes, big and small, yesterday and today, thinking and telling.\"],[\"Counting to 100\",\"Tens and ones. Jumps of 10.\"],[\"Reading\",\"Start with five short sentences. The button reads them aloud.\"],[\"Times tables\",\"A little bit at a time.\"],[\"Task words\", \"What does your sheet say? Circle, fill in, tick and more.\"],[\"Maths stories\", \"Sums in a short story. Is something added or taken away?\"]], taalvraag: \"Which language do you speak at home?\", taaluitleg: \"Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.\", intro: \"This is for children who are still learning Dutch. Start at 1. Do a little every day.\", voorlees: \"Can't read (well) yet? Turn on the button 'Ik kan nog niet (goed) lezen' (I can't read well yet) at the top. Then the app reads the questions aloud. Tap a speaker to hear it again.\", schakelaar: \"Can't read (well) yet? Tap this button: then the app reads the questions and answers aloud.\" }"
+ },
+ {
+  "id": "B|src/components/NieuwkomersPlaatjesDictee.jsx|4270",
+  "nl_blok": "{ nl: \"Nederlands\", eigen: \"Mijn taal\", typen: \"Zelf typen\", tegels: \"Letters\", welk: \"de of het?\", nogEens: \"Nog een keer\", klaar: \"Klaar!\", check: \"Klaar\", pt: \"punten\", uit: \"Je hebt {a} van de {b} punten verdiend!\", rec: \"Je record: {r} punten\", nieuw: \"Nieuw record!\", lof: [\"Super gedaan!\",\"Goed bezig!\",\"Goed geoefend! Probeer het nog eens.\"] }",
+  "en_blok": "{ nl: \"Dutch\", eigen: \"My language\", typen: \"Type it\", tegels: \"Letters\", welk: \"de or het?\", nogEens: \"Again\", klaar: \"Done!\", check: \"Done\", pt: \"points\", uit: \"You earned {a} of {b} points!\", rec: \"Your record: {r} points\", nieuw: \"New record!\", lof: [\"Great job!\",\"Well done!\",\"Good practice! Try again.\"] }"
+ },
+ {
+  "id": "B|src/components/nieuwkomersPunten.jsx|1731",
+  "nl_blok": "{ pt: \"punten\", uit: \"Je hebt {a} van de {b} punten verdiend!\", rec: \"Je record: {r} punten\", nieuw: \"Nieuw record!\", lof: [\"Super gedaan!\", \"Goed bezig!\", \"Goed geoefend! Probeer het nog eens.\"] }",
+  "en_blok": "{ pt: \"points\", uit: \"You earned {a} of {b} points!\", rec: \"Your record: {r} points\", nieuw: \"New record!\", lof: [\"Great job!\", \"Well done!\", \"Good practice! Try again.\"] }"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|10891",
+  "en_blok": "[\"May I go to the toilet?\", \"I am done.\", \"Where is my coat?\", \"I am hungry.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|11293",
+  "en_blok": "[\"I don't understand.\", \"Thank you.\", \"See you tomorrow!\", \"I am here.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|11871",
+  "en_blok": "[\"Can you say it again?\", \"May I go outside?\", \"Where is the ball?\", \"I am going home.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|12406",
+  "en_blok": "[\"What does this word mean?\", \"What time is it?\", \"May I play?\", \"Is it break time?\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|12928",
+  "en_blok": "[\"I am done.\", \"I don't understand.\", \"May I go to the toilet?\", \"Where do you live?\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|13349",
+  "en_blok": "[\"To the gym hall.\", \"To the toilet.\", \"Home.\", \"To the shop.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|13965",
+  "en_blok": "[\"The break starts or ends.\", \"You must go home.\", \"There is a fire.\", \"You get food.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|14264",
+  "en_blok": "[\"coat rack\", \"table\", \"window\", \"board\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|14747",
+  "en_blok": "[\"In the playground.\", \"In the gym hall.\", \"In the toilet.\", \"In the car.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|15266",
+  "en_blok": "[\"I forgot my book.\", \"I have a dog.\", \"The weather is nice.\", \"I am eight years old.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|15751",
+  "en_blok": "[\"My name is … (your name).\", \"Thank you.\", \"Goodbye.\", \"I don't understand.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|16243",
+  "en_blok": "[\"May I join?\", \"I am done.\", \"Where is the teacher?\", \"It is cold.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|16703",
+  "en_blok": "[\"Thank you.\", \"My name is Ali.\", \"May I go to the toilet?\", \"No.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|17159",
+  "en_blok": "[\"No, I don't want that.\", \"Yes, okay.\", \"Thank you.\", \"See you tomorrow.\"]"
+ },
+ {
+  "id": "C|src/learnPaths/inDeKlasNieuwkomers.js|17644",
+  "en_blok": "[\"See you tomorrow!\", \"Good morning!\", \"May I join?\", \"I don't understand.\"]"
+ },
+ {
+  "id": "C|src/shared/ui/KwartierTreden.jsx|3528",
+  "en_blok": "[`Your quarter hour · ${min} min left`, `⭐ 5 minutes done · ${min} min left`, `⭐⭐ 10 minutes done · ${min} min left`, \"🏆 Quarter hour done — the rest is extra\"]"
+ },
+ {
+  "id": "C|api/tutor-chat.js|14923",
+  "en_blok": "[\"Engels\", \"(the bed = you sleep in it.)\"]"
+ },
+ {
+  "id": "B|scripts/buildNieuwkomersTalen.mjs|14919",
+  "en_blok": "{\n    naam: \"English\", hreflang: \"en\",\n    titel: \"Free Dutch for your child — Leerkwartier, the starting point for newcomers\",\n    omschrijving: \"Free app for children who are learning Dutch: classroom sentences, first words, letters and sounds, dictation and maths words. Tap any sentence to see it in English. No account, no ads.\",\n    h1: \"Learn Dutch for school — free, with help in English\",\n    intro: \"Is your child new in the Netherlands or Belgium? Leerkwartier helps children aged about 6 to 12 with the Dutch they need at school. Everything stays in Dutch, but your child can tap a sentence to see it in English, and the app can read everything aloud.\",\n    stappenKop: \"Three steps to the normal class\",\n    stappen: [\"Step 1 · Welcome: classroom sentences (\\\"May I go to the toilet?\\\"), first words, maths words and counting to 20.\", \"Step 2 · Letters and words: sounds, short words, more words and a simple dictation.\", \"Step 3 · The bridge to the class: the words on worksheets (circle, fill in, tick) and sums in a short story. Then a bridge test with questions from the normal app.\"],\n    stappenNa: \"Every step ends with a short test and a certificate to print. On the page your child sees \\\"What can I do already?\\\" with ticks.\",\n    beginKop: \"How to start\",\n    begin: [\"Open the page with the button below (English is set automatically).\", `Or go to leerkwartier.app and type the code ${CODE}.`, \"Choose the language you speak at home. Start at 1. A quarter of an hour a day is enough.\"],\n    knop: \"Open the starting point in English\",\n    jufKop: \"For the teacher\",\n    juf: `Free for schools, guaranteed until 2031. Write the code ${CODE} on the board or show the QR code on the interactive whiteboard. There is a guide for the language class (in Dutch).`,\n    faq: [[\"Is it really free?\", \"Yes. Practising is free for children, parents and schools, guaranteed until 2031. There are no ads and no subscription.\"], [\"Does my child need an account or an e-mail address?\", \"No. Your child opens the page and starts. Progress is saved on the device.\"], [\"Is everything translated?\", \"No, on purpose: everything stays in Dutch, because that is what your child is learning. Your child can tap a sentence to see it in English, Arabic, Ukrainian, Turkish, Romanian or Bulgarian.\"]],\n    meer: \"More in Dutch\", contact: \"Contact\",\n  }"
+ }
+]

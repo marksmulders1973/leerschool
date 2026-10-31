@@ -1,0 +1,980 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10043",
+  "nl": "de bank",
+  "en": "sofa",
+  "ar": "كنبة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10165",
+  "nl": "de televisie",
+  "en": "television",
+  "ar": "تلفاز"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10261",
+  "nl": "de sleutel",
+  "en": "key",
+  "ar": "مفتاح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10378",
+  "nl": "de koelkast",
+  "en": "fridge",
+  "ar": "ثلاجة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10476",
+  "nl": "de trap",
+  "en": "stairs",
+  "ar": "درج"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10574",
+  "nl": "het bad",
+  "en": "bath",
+  "ar": "حوض استحمام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10662",
+  "nl": "de douche",
+  "en": "shower",
+  "ar": "دُش"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10767",
+  "nl": "de wasbak",
+  "en": "sink",
+  "ar": "مغسلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10868",
+  "nl": "de handdoek",
+  "en": "towel",
+  "ar": "منشفة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|10961",
+  "nl": "de zeep",
+  "en": "soap",
+  "ar": "صابون"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11107",
+  "nl": "de tandenborstel",
+  "en": "toothbrush",
+  "ar": "فرشاة أسنان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11235",
+  "nl": "de hond",
+  "en": "dog",
+  "ar": "كلب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11323",
+  "nl": "de kat",
+  "en": "cat",
+  "ar": "قطة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11415",
+  "nl": "de vogel",
+  "en": "bird",
+  "ar": "طائر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11505",
+  "nl": "de vis",
+  "en": "fish",
+  "ar": "سمكة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11593",
+  "nl": "het paard",
+  "en": "horse",
+  "ar": "حصان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11683",
+  "nl": "de koe",
+  "en": "cow",
+  "ar": "بقرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11778",
+  "nl": "het varken",
+  "en": "pig",
+  "ar": "خنزير"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11873",
+  "nl": "het schaap",
+  "en": "sheep",
+  "ar": "خروف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|11971",
+  "nl": "de kip",
+  "en": "chicken",
+  "ar": "دجاجة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12063",
+  "nl": "de eend",
+  "en": "duck",
+  "ar": "بطة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12163",
+  "nl": "het konijn",
+  "en": "rabbit",
+  "ar": "أرنب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12256",
+  "nl": "de muis",
+  "en": "mouse",
+  "ar": "فأر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12385",
+  "nl": "de leeuw",
+  "en": "lion",
+  "ar": "أسد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12482",
+  "nl": "de olifant",
+  "en": "elephant",
+  "ar": "فيل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12583",
+  "nl": "de giraf",
+  "en": "giraffe",
+  "ar": "زرافة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12672",
+  "nl": "de beer",
+  "en": "bear",
+  "ar": "دب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12767",
+  "nl": "de tijger",
+  "en": "tiger",
+  "ar": "نمر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12867",
+  "nl": "de zebra",
+  "en": "zebra",
+  "ar": "حمار وحشي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|12965",
+  "nl": "de aap",
+  "en": "monkey",
+  "ar": "قرد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13059",
+  "nl": "de slang",
+  "en": "snake",
+  "ar": "ثعبان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13156",
+  "nl": "de kikker",
+  "en": "frog",
+  "ar": "ضفدع"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13267",
+  "nl": "de vlinder",
+  "en": "butterfly",
+  "ar": "فراشة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13358",
+  "nl": "de bij",
+  "en": "bee",
+  "ar": "نحلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13459",
+  "nl": "de spin",
+  "en": "spider",
+  "ar": "عنكبوت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13552",
+  "nl": "de uil",
+  "en": "owl",
+  "ar": "بومة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13652",
+  "nl": "de bal",
+  "en": "ball",
+  "ar": "كرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13762",
+  "nl": "de ballon",
+  "en": "balloon",
+  "ar": "بالون"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13869",
+  "nl": "de schommel",
+  "en": "swing",
+  "ar": "أرجوحة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|13977",
+  "nl": "de glijbaan",
+  "en": "slide",
+  "ar": "زلّاقة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14107",
+  "nl": "de wip",
+  "en": "seesaw",
+  "ar": "أرجوحة التوازن"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14226",
+  "nl": "de trampoline",
+  "en": "trampoline",
+  "ar": "ترامبولين"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14343",
+  "nl": "de vlieger",
+  "en": "kite",
+  "ar": "طائرة ورقية"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14445",
+  "nl": "de pop",
+  "en": "doll",
+  "ar": "دمية"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14580",
+  "nl": "de knuffelbeer",
+  "en": "teddy bear",
+  "ar": "دب محشو"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14678",
+  "nl": "de trommel",
+  "en": "drum",
+  "ar": "طبل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14780",
+  "nl": "de gitaar",
+  "en": "guitar",
+  "ar": "غيتار"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14878",
+  "nl": "de piano",
+  "en": "piano",
+  "ar": "بيانو"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|14997",
+  "nl": "de auto",
+  "en": "car",
+  "ar": "السيارة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15098",
+  "nl": "de bus",
+  "en": "bus",
+  "ar": "الحافلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15211",
+  "nl": "de fiets",
+  "en": "bicycle",
+  "ar": "الدرّاجة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15303",
+  "nl": "de trein",
+  "en": "train",
+  "ar": "قطار"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15405",
+  "nl": "het vliegtuig",
+  "en": "plane",
+  "ar": "طائرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15498",
+  "nl": "de boot",
+  "en": "boat",
+  "ar": "قارب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15618",
+  "nl": "de motor",
+  "en": "motorbike",
+  "ar": "دراجة نارية"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15728",
+  "nl": "de vrachtwagen",
+  "en": "truck",
+  "ar": "شاحنة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15835",
+  "nl": "de tractor",
+  "en": "tractor",
+  "ar": "جرار"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|15990",
+  "nl": "de brandweerauto",
+  "en": "fire engine",
+  "ar": "سيارة إطفاء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16110",
+  "nl": "de ambulance",
+  "en": "ambulance",
+  "ar": "سيارة إسعاف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16265",
+  "nl": "de politieauto",
+  "en": "police car",
+  "ar": "سيارة شرطة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16366",
+  "nl": "de straat",
+  "en": "street",
+  "ar": "الشارع"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16496",
+  "nl": "het stoplicht",
+  "en": "traffic light",
+  "ar": "إشارة مرور"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16651",
+  "nl": "het zebrapad",
+  "en": "zebra crossing",
+  "ar": "ممر مشاة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16755",
+  "nl": "de winkel",
+  "en": "shop",
+  "ar": "المتجر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16857",
+  "nl": "de school",
+  "en": "school",
+  "ar": "المدرسة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|16975",
+  "nl": "de zon",
+  "en": "sun",
+  "ar": "شمس"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17067",
+  "nl": "de regen",
+  "en": "rain",
+  "ar": "مطر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17179",
+  "nl": "de regenboog",
+  "en": "rainbow",
+  "ar": "قوس قزح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17273",
+  "nl": "de ster",
+  "en": "star",
+  "ar": "نجمة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17382",
+  "nl": "de paraplu",
+  "en": "umbrella",
+  "ar": "مظلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17475",
+  "nl": "de boom",
+  "en": "tree",
+  "ar": "شجرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17573",
+  "nl": "de bloem",
+  "en": "flower",
+  "ar": "زهرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17667",
+  "nl": "het strand",
+  "en": "beach",
+  "ar": "شاطئ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17787",
+  "nl": "schrijven",
+  "en": "write",
+  "ar": "يكتب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17880",
+  "nl": "lezen",
+  "en": "read",
+  "ar": "يقرأ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|17994",
+  "nl": "kleuren",
+  "en": "colour",
+  "ar": "يلوّن"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18128",
+  "nl": "knippen",
+  "en": "cut",
+  "ar": "يقصّ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18228",
+  "nl": "plakken",
+  "en": "glue",
+  "ar": "يلصق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18327",
+  "nl": "tellen",
+  "en": "count",
+  "ar": "يعدّ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18426",
+  "nl": "kijken",
+  "en": "look",
+  "ar": "ينظر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18534",
+  "nl": "luisteren",
+  "en": "listen",
+  "ar": "يستمع"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18652",
+  "nl": "opruimen",
+  "en": "tidy up",
+  "ar": "يرتّب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18755",
+  "nl": "praten",
+  "en": "talk",
+  "ar": "يتكلّم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18859",
+  "nl": "zingen",
+  "en": "sing",
+  "ar": "يغنّي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|18981",
+  "nl": "klappen",
+  "en": "clap",
+  "ar": "يصفّق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19095",
+  "nl": "wijzen",
+  "en": "point",
+  "ar": "يشير"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19202",
+  "nl": "eten",
+  "en": "eat",
+  "ar": "يأكل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19293",
+  "nl": "drinken",
+  "en": "drink",
+  "ar": "يشرب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19387",
+  "nl": "slapen",
+  "en": "sleep",
+  "ar": "ينام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19528",
+  "nl": "handen wassen",
+  "en": "wash hands",
+  "ar": "يغسل يديه"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19681",
+  "nl": "tanden poetsen",
+  "en": "brush teeth",
+  "ar": "ينظّف أسنانه"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19785",
+  "nl": "koken",
+  "en": "cook",
+  "ar": "يطبخ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19885",
+  "nl": "lachen",
+  "en": "laugh",
+  "ar": "يضحك"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|19977",
+  "nl": "geven",
+  "en": "give",
+  "ar": "يعطي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20088",
+  "nl": "knuffelen",
+  "en": "hug",
+  "ar": "يعانق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20203",
+  "nl": "rennen",
+  "en": "run",
+  "ar": "يركض"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20305",
+  "nl": "springen",
+  "en": "jump",
+  "ar": "يقفز"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20402",
+  "nl": "zitten",
+  "en": "sit",
+  "ar": "يجلس"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20501",
+  "nl": "zwemmen",
+  "en": "swim",
+  "ar": "يسبح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20612",
+  "nl": "klimmen",
+  "en": "climb",
+  "ar": "يتسلّق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20768",
+  "nl": "fietsen",
+  "en": "ride a bike",
+  "ar": "يركب الدراجة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20883",
+  "nl": "schoppen",
+  "en": "kick",
+  "ar": "يركل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|20986",
+  "nl": "vangen",
+  "en": "catch",
+  "ar": "يلتقط"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21108",
+  "nl": "schommelen",
+  "en": "swing",
+  "ar": "يتأرجح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21240",
+  "nl": "rijden",
+  "en": "drive",
+  "ar": "يقود السيارة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21390",
+  "nl": "tekenen",
+  "en": "draw",
+  "ar": "يرسم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21489",
+  "nl": "de dokter",
+  "en": "doctor",
+  "ar": "طبيب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21597",
+  "nl": "de lolly",
+  "en": "lollipop",
+  "ar": "مصاصة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21702",
+  "nl": "de chips",
+  "en": "chips",
+  "ar": "رقائق البطاطا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|2470",
+  "en": "May I go to the toilet?",
+  "ar": "هل يمكنني الذهاب إلى الحمّام؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|2756",
+  "en": "May I drink water?",
+  "ar": "هل يمكنني أن أشرب ماء؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|3038",
+  "en": "May I have a pen?",
+  "ar": "هل يمكنني أن آخذ قلمًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|3365",
+  "en": "Can you say it again?",
+  "ar": "هل يمكنك أن تقولها مرة أخرى؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|3629",
+  "en": "I don't understand.",
+  "ar": "لا أفهم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|3946",
+  "en": "May I ask something?",
+  "ar": "هل يمكنني أن أسأل شيئًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|4197",
+  "en": "Good morning!",
+  "ar": "صباح الخير!"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|4410",
+  "en": "I am done.",
+  "ar": "لقد انتهيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|4659",
+  "en": "Where is my bag?",
+  "ar": "أين حقيبتي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|4949",
+  "en": "May I go outside?",
+  "ar": "هل يمكنني الخروج؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|5272",
+  "en": "May I wash my hands?",
+  "ar": "هل يمكنني أن أغسل يديّ؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|5562",
+  "en": "May I get my coat?",
+  "ar": "هل يمكنني أن آخذ معطفي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|5865",
+  "en": "May I join?",
+  "ar": "هل يمكنني المشاركة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|6151",
+  "en": "Stop, I don't want that.",
+  "ar": "توقّف، لا أريد ذلك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|6470",
+  "en": "May I go on the swing?",
+  "ar": "هل يمكنني أن ألعب على الأرجوحة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|6732",
+  "en": "May I have the ball?",
+  "ar": "هل يمكنني أن آخذ الكرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|6992",
+  "en": "I have pain.",
+  "ar": "عندي ألم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|7262",
+  "en": "I am going to be sick.",
+  "ar": "سأتقيّأ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|7471",
+  "en": "I am ill.",
+  "ar": "أنا مريض."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|7682",
+  "en": "I am tired.",
+  "ar": "أنا متعب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|7918",
+  "en": "I am hungry.",
+  "ar": "أنا جائع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|8154",
+  "en": "I am thirsty.",
+  "ar": "أنا عطشان."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|8499",
+  "en": "I am quiet.",
+  "ar": "أنا هادئ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|8995",
+  "en": "I put my finger up.",
+  "ar": "أرفع إصبعي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|9297",
+  "en": "I listen to the teacher.",
+  "ar": "أستمع إلى المعلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|9566",
+  "en": "I work on my own.",
+  "ar": "أعمل بنفسي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|9828",
+  "en": "We work together.",
+  "ar": "نعمل معًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|10079",
+  "en": "I talk quietly.",
+  "ar": "أتكلم بهدوء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|10337",
+  "en": "I think for a moment.",
+  "ar": "أفكر قليلًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|10658",
+  "en": "I get my workbook.",
+  "ar": "آخذ كتاب التمارين."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|10913",
+  "en": "I read a book.",
+  "ar": "أقرأ كتابًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|11122",
+  "en": "I am done.",
+  "ar": "انتهيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|11371",
+  "en": "I stand in line.",
+  "ar": "أقف في الطابور."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersZinnen.js|11585",
+  "en": "I tidy up.",
+  "ar": "أرتّب."
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|2433",
+  "en": "${t} tens and ${e} ones. Which number is that?",
+  "ar": "${t} عشرات و ${e} آحاد. ما هو العدد؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|3026",
+  "en": "Count on in tens. What comes after ${n}?",
+  "ar": "عُدّ بالعشرات. ماذا يأتي بعد ${n}؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|9823",
+  "en": "A ball costs 12 euros. A cap costs 15 euros. How many euros together?",
+  "ar": "الكرة ثمنها 12 يورو. القبعة ثمنها 15 يورو. كم يورو معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|10414",
+  "en": "You have 50 euros. You buy shoes for 35 euros. How many euros do you have left?",
+  "ar": "عندك 50 يورو. تشتري حذاءً بـ 35 يورو. كم يورو بقي معك؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|10991",
+  "en": "There are 40 chairs. 25 more chairs are added. How many chairs are there now?",
+  "ar": "هناك 40 كرسيًا. يُضاف 25 كرسيًا. كم كرسيًا هناك الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|11598",
+  "en": "There are 48 people on the bus. 19 people get off. How many people are still on the bus?",
+  "ar": "في الحافلة 48 شخصًا. ينزل 19 شخصًا. كم شخصًا بقي؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot100Nieuwkomers.js|12158",
+  "en": "A book costs 23 euros. A pen costs 8 euros. How many euros together?",
+  "ar": "الكتاب ثمنه 23 يورو. القلم ثمنه 8 يورو. كم يورو معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot20Nieuwkomers.js|2840",
+  "en": "Count on. What comes after ${n}?",
+  "ar": "عُدّ. ماذا يأتي بعد ${n}؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot20Nieuwkomers.js|9218",
+  "en": "There are 6 children in the class. 3 more children come. How many children are there now?",
+  "ar": "في الصف 6 أطفال. يأتي 3 أطفال آخرون. كم طفلًا هناك الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot20Nieuwkomers.js|9746",
+  "en": "You have 10 pencils. You give 4 away. How many pencils do you have left?",
+  "ar": "عندك 10 أقلام رصاص. تعطي 4 منها. كم قلمًا بقي معك؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot20Nieuwkomers.js|10286",
+  "en": "There are 7 books in the bag. You add 5. How many books are there now?",
+  "ar": "في الحقيبة 7 كتب. تضيف 5. كم كتابًا هناك الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot20Nieuwkomers.js|10819",
+  "en": "There are 15 chairs. 8 chairs are taken. How many chairs are empty?",
+  "ar": "هناك 15 كرسيًا. 8 كراسٍ مشغولة. كم كرسيًا فارغًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/rekenenTot20Nieuwkomers.js|11360",
+  "en": "Sara has 9 marbles. Ali has 9 marbles. How many marbles together?",
+  "ar": "عند سارة 9 كرات زجاجية. عند علي 9 كرات زجاجية. كم كرة معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/woorden2Nieuwkomers.js|13290",
+  "en": "No, '${o}' means: ${t.en}. Try again.",
+  "ar": "لا، «${o}» معناها: ${t.ar}. حاول مرة أخرى."
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|1620",
+  "nl": "de tafel",
+  "en": "the table",
+  "ar": "الطاولة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|1729",
+  "nl": "de stoel",
+  "en": "the chair",
+  "ar": "الكرسي"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|1826",
+  "nl": "de deur",
+  "en": "the door",
+  "ar": "الباب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|1940",
+  "nl": "het raam",
+  "en": "the window",
+  "ar": "النافذة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2041",
+  "nl": "de tas",
+  "en": "the bag",
+  "ar": "الحقيبة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2143",
+  "nl": "de pen",
+  "en": "the pen",
+  "ar": "القلم"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2247",
+  "nl": "het boek",
+  "en": "the book",
+  "ar": "الكتاب"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2385",
+  "nl": "het bord",
+  "en": "the board (in class)",
+  "ar": "السبّورة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2483",
+  "nl": "de jas",
+  "en": "the coat",
+  "ar": "المعطف"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2620",
+  "nl": "de juf",
+  "en": "the (female) teacher",
+  "ar": "المعلّمة"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2753",
+  "nl": "de meester",
+  "en": "the (male) teacher",
+  "ar": "المعلّم"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2857",
+  "nl": "het kind",
+  "en": "the child",
+  "ar": "الطفل"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|2957",
+  "nl": "de moeder",
+  "en": "the mother",
+  "ar": "الأم"
+ },
+ {
+  "id": "A|src/learnPaths/woordenNieuwkomers.js|3056",
+  "nl": "het huis",
+  "en": "the house",
+  "ar": "البيت"
+ }
+]

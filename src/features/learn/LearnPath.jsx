@@ -2454,7 +2454,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             </MetLuister>
             {/* Nieuwkomerpad: eigen taal ín de knop (niet als los vak eronder). */}
             {startKnopEigen && (
-              <span dir={steunTaal === "ar" ? "rtl" : "ltr"} lang={steunTaal} style={{ display: "block", marginTop: 6, fontSize: 14, fontWeight: 700, opacity: 0.92 }}>{startKnopEigen}</span>
+              <span dir={steunTaal === "ar" || steunTaal === "fa" ? "rtl" : "ltr"} lang={steunTaal} style={{ display: "block", marginTop: 6, fontSize: 14, fontWeight: 700, opacity: 0.92 }}>{startKnopEigen}</span>
             )}
           </button></SteunTekst>
         )}
@@ -2856,7 +2856,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
 function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick, steunTitel, luister = null }) {
   // 🌍 Nieuwkomerpaden: taalknopje naast de kaart met eyebrow — titel — hint vertaald.
   const se = useSteun(eyebrow), st = useSteun(steunTitel ?? title), sh = useSteun(hint);
-  const combi = st || sh ? Object.fromEntries(["en", "ar", "uk", "tr", "ro", "bg"].map((k) => [k, [se?.[k], st?.[k], sh?.[k]].filter(Boolean).join(" — ")])) : null;
+  const combi = st || sh ? Object.fromEntries(["en", "ar", "uk", "tr", "ro", "bg", "fa"].map((k) => [k, [se?.[k], st?.[k], sh?.[k]].filter(Boolean).join(" — ")])) : null;
   const kaart = (
     <button
       onClick={onClick}

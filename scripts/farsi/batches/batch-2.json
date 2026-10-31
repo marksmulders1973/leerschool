@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|41758",
+  "nl": "Zeg elke dag één woord hardop in huis.",
+  "en": "Say one word out loud at home every day.",
+  "ar": "قل كل يوم كلمة واحدة بصوت عالٍ في البيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|42073",
+  "nl": "Waar je woont = het huis.",
+  "en": "Where you live = \"het huis\" (the house).",
+  "ar": "حيث تسكن = «het huis» (البيت)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|42766",
+  "nl": "Woorden voor je **lichaam** en voor **kleuren**.\n\nWijs aan wat je zegt. Zo onthoud je het.",
+  "en": "Words for your **body** and for **colours**.\n\nPoint at what you say. That way you remember it.",
+  "ar": "كلمات عن **جسمك** وعن **الألوان**.\n\nأشِر إلى ما تقوله. هكذا تتذكره."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|42908",
+  "nl": "Je lichaam",
+  "en": "Your body",
+  "ar": "جسمك"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|43817",
+  "nl": "**Hoofd** (boven), **buik** (midden), **voet** (onder). **Hand**: daar pak je mee.",
+  "en": "**Hoofd** (head, at the top), **buik** (tummy, in the middle), **voet** (foot, at the bottom). **Hand** (hand): you hold things with it.",
+  "ar": "**Hoofd** (الرأس، في الأعلى)، **buik** (البطن، في الوسط)، **voet** (القدم، في الأسفل). **Hand** (اليد): بها تمسك الأشياء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|43947",
+  "nl": "Kleuren",
+  "en": "Colours",
+  "ar": "الألوان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|44755",
+  "nl": "**Rood**, **blauw**, **geel**, **groen**. Kijk om je heen: wat is rood?",
+  "en": "**Rood** (red), **blauw** (blue), **geel** (yellow), **groen** (green). Look around you: what is red?",
+  "ar": "**Rood** (أحمر)، **blauw** (أزرق)، **geel** (أصفر)، **groen** (أخضر). انظر حولك: ما الشيء الأحمر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|44877",
+  "nl": "Wijs aan",
+  "en": "Point",
+  "ar": "أشِر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|45362",
+  "nl": "Zeg het woord en **wijs** het aan. Zo onthoud je het sneller.",
+  "en": "Say the word and **point** at it. That way you remember it faster.",
+  "ar": "قل الكلمة و**أشِر** إليها. هكذا تتذكرها أسرع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|45487",
+  "nl": "het hoofd",
+  "en": "the head",
+  "ar": "الرأس"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|45723",
+  "nl": "Bovenaan je lichaam.",
+  "en": "At the top of your body.",
+  "ar": "في أعلى جسمك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|45840",
+  "nl": "de hand",
+  "en": "the hand",
+  "ar": "اليد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|46033",
+  "nl": "Daar pak je mee.",
+  "en": "You hold things with it.",
+  "ar": "بها تمسك الأشياء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|46262",
+  "nl": "Wijs aan wat je zegt.",
+  "en": "Point at what you say.",
+  "ar": "أشِر إلى ما تقوله."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|46473",
+  "nl": "Dit is mijn hand.",
+  "en": "This is my hand.",
+  "ar": "«Dit is mijn hand.» = هذه يدي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|46688",
+  "nl": "De appel is rood.",
+  "en": "The apple is red.",
+  "ar": "«De appel is rood.» = التفاحة حمراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|46886",
+  "nl": "Woord + aanwijzen.",
+  "en": "Word + pointing.",
+  "ar": "كلمة + إشارة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|47260",
+  "nl": "Bovenaan je lichaam = het hoofd.",
+  "en": "At the top of your body = \"het hoofd\" (the head).",
+  "ar": "في أعلى جسمك = «het hoofd» (الرأس)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|47620",
+  "nl": "Rekenen tot 20 (nieuwkomers, groep 3-4)",
+  "en": "Maths up to 20 (newcomers, year 1-2)",
+  "ar": "الحساب حتى 20 (للقادمين الجدد، الصف 3-4)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|48903",
+  "nl": "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
+  "en": "Counting to 20, adding and taking away up to 10, going past 10, and word sums. Short sentences, every sum explained. Also for children who are still learning Dutch. ~10 min.",
+  "ar": "العدّ حتى 20، الجمع والطرح حتى 10، تجاوز الـ10، ومسائل بالكلمات. جمل قصيرة، وكل مسألة مع شرح. أيضًا للأطفال الذين ما زالوا يتعلمون الهولندية. ~10 دقائق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|49083",
+  "nl": "Tellen tot 20",
+  "en": "Counting to 20",
+  "ar": "العدّ حتى 20"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|49268",
+  "nl": "Erbij tot 10",
+  "en": "Adding up to 10",
+  "ar": "الجمع حتى 10"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|49460",
+  "nl": "Eraf tot 10",
+  "en": "Taking away up to 10",
+  "ar": "الطرح حتى 10"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|49615",
+  "nl": "Over de 10 heen",
+  "en": "Going past 10",
+  "ar": "تجاوز الـ10"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|49809",
+  "nl": "Sommen uit de klas",
+  "en": "Sums from class",
+  "ar": "مسائل من الصف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|51195",
+  "nl": "We tellen van **1 tot 20**.\n\nTellen is steeds **één erbij**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nZeg de rij hardop. Gebruik je vingers.",
+  "en": "We count from **1 to 20**.\n\nCounting is always **one more**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nSay the row out loud. Use your fingers.",
+  "ar": "نعدّ من **1 إلى 20**.\n\nالعدّ هو دائمًا **زيادة واحد**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nقل الأرقام بصوت عالٍ. استعمل أصابعك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|51463",
+  "nl": "Tel: 3, en dan één erbij.",
+  "en": "Count: 3, and then one more.",
+  "ar": "عُدّ: 3، ثم زِد واحدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|51700",
+  "nl": "Tellen is één erbij",
+  "en": "Counting is one more",
+  "ar": "العدّ هو زيادة واحد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|52285",
+  "nl": "Als je telt, doe je steeds **één erbij**. Na 5 komt 6. Na 6 komt 7.",
+  "en": "When you count, you always add **one more**. After 5 comes 6. After 6 comes 7.",
+  "ar": "عندما تعدّ، تضيف دائمًا **واحدًا**. بعد 5 يأتي 6. بعد 6 يأتي 7."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|52491",
+  "nl": "Gebruik je vingers",
+  "en": "Use your fingers",
+  "ar": "استعمل أصابعك"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|52984",
+  "nl": "Zeg het getal. Doe **één vinger** omhoog. Zeg het volgende getal.",
+  "en": "Say the number. Put **one finger** up. Say the next number.",
+  "ar": "قل الرقم. ارفع **إصبعًا واحدًا**. قل الرقم التالي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|53161",
+  "nl": "De rij tot 20",
+  "en": "The row to 20",
+  "ar": "الأرقام حتى 20"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|53271",
+  "nl": "na",
+  "en": "after",
+  "ar": "بعد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|53570",
+  "nl": "Wat erna komt. Na 3 komt 4.",
+  "en": "What comes next. After 3 comes 4.",
+  "ar": "ما يأتي بعده. بعد 3 يأتي 4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|53697",
+  "nl": "tellen",
+  "en": "counting",
+  "ar": "العدّ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|53992",
+  "nl": "1, 2, 3, 4… steeds één erbij.",
+  "en": "1, 2, 3, 4… always one more.",
+  "ar": "1, 2, 3, 4… كل مرة زيادة واحد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|54268",
+  "nl": "Tellen = steeds één erbij.",
+  "en": "Counting = always one more.",
+  "ar": "العدّ = كل مرة زيادة واحد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|54460",
+  "nl": "Na 9 komt 10.",
+  "en": "After 9 comes 10.",
+  "ar": "بعد 9 يأتي 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|54659",
+  "nl": "Na 14 komt 15.",
+  "en": "After 14 comes 15.",
+  "ar": "بعد 14 يأتي 15."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|55182",
+  "nl": "Zeg de rij hardop. Het getal dat je daarna zegt, is het antwoord.",
+  "en": "Say the row out loud. The number you say next is the answer.",
+  "ar": "قل الأرقام بصوت عالٍ. الرقم الذي تقوله بعده هو الجواب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|55396",
+  "nl": "Tel één verder.",
+  "en": "Count one further.",
+  "ar": "عُدّ واحدًا إلى الأمام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|55730",
+  "nl": "Zeg het getal en dan het volgende getal.",
+  "en": "Say the number and then the next number.",
+  "ar": "قل الرقم ثم الرقم التالي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|55885",
+  "nl": "Eén erbij.",
+  "en": "One more.",
+  "ar": "زيادة واحد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|56160",
+  "nl": "Tel: 15, en dan één erbij.",
+  "en": "Count: 15, and then one more.",
+  "ar": "عُدّ: 15، ثم زِد واحدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|56428",
+  "nl": "Tel: 4, en dan één erbij.",
+  "en": "Count: 4, and then one more.",
+  "ar": "عُدّ: 4، ثم زِد واحدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|56703",
+  "nl": "Tel: 10, en dan één erbij.",
+  "en": "Count: 10, and then one more.",
+  "ar": "عُدّ: 10، ثم زِد واحدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|57933",
+  "nl": "**Plus** (+) is **erbij**.\n\n3 + 2: begin bij 3, tel 2 verder: 4, 5. Het antwoord is **5**.\n\nBegin bij het **grootste** getal. Dan tel je korter.",
+  "en": "**Plus** (+) is **erbij** (adding).\n\n3 + 2: start at 3, count 2 further: 4, 5. The answer is **5**.\n\nStart at the **biggest** number. Then you count less.",
+  "ar": "**Plus** (+) يعني **erbij** (= نضيف).\n\n3 + 2: ابدأ من 3، وعُدّ 2 إلى الأمام: 4, 5. الجواب هو **5**.\n\nابدأ من الرقم **الأكبر**. هكذا تعدّ أقل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|58163",
+  "nl": "Begin bij 4. Tel er 3 bij.",
+  "en": "Start at 4. Add 3.",
+  "ar": "ابدأ من 4. أضف 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|58404",
+  "nl": "Erbij = tellen",
+  "en": "Adding = counting",
+  "ar": "الإضافة («erbij») = العدّ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|59218",
+  "nl": "**Plus** (+) betekent **erbij**. 3 + 2: begin bij 3 en tel 2 verder: 4, 5. Het antwoord is 5.",
+  "en": "**Plus** (+) means **erbij** (adding). 3 + 2: start at 3 and count 2 further: 4, 5. The answer is 5.",
+  "ar": "**Plus** (+) يعني **erbij** (= نضيف). 3 + 2: ابدأ من 3 وعُدّ 2 إلى الأمام: 4, 5. الجواب هو 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|59380",
+  "nl": "Met je vingers",
+  "en": "With your fingers",
+  "ar": "بأصابعك"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|59818",
+  "nl": "Doe 3 vingers omhoog. Doe er 2 bij. Tel alle vingers.",
+  "en": "Put 3 fingers up. Add 2 more. Count all the fingers.",
+  "ar": "ارفع 3 أصابع. أضف 2. عُدّ كل الأصابع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|60016",
+  "nl": "Het grootste eerst",
+  "en": "The biggest first",
+  "ar": "الأكبر أولًا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|60528",
+  "nl": "Begin altijd bij het **grootste** getal. Dat is korter tellen.",
+  "en": "Always start at the **biggest** number. Then you count less.",
+  "ar": "ابدأ دائمًا من الرقم **الأكبر**. هكذا يكون العدّ أقصر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|60638",
+  "nl": "plus",
+  "en": "plus",
+  "ar": "زائد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|60846",
+  "nl": "Het teken +. Erbij.",
+  "en": "The sign +. Adding.",
+  "ar": "العلامة +. نضيف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|60969",
+  "nl": "erbij",
+  "en": "adding",
+  "ar": "نضيف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|61149",
+  "nl": "Meer maken.",
+  "en": "Making more.",
+  "ar": "نجعله أكثر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|61520",
+  "nl": "Plus = erbij = verder tellen.",
+  "en": "\"Plus\" = \"erbij\" (adding) = counting on.",
+  "ar": "«plus» = «erbij» = نعدّ إلى الأمام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|61783",
+  "nl": "4 + 3: 5, 6, 7. Antwoord 7.",
+  "en": "4 + 3: 5, 6, 7. Answer 7.",
+  "ar": "4 + 3: 5, 6, 7. الجواب 7."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|62025",
+  "nl": "6 + 2: 7, 8. Antwoord 8.",
+  "en": "6 + 2: 7, 8. Answer 8.",
+  "ar": "6 + 2: 7, 8. الجواب 8."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|62436",
+  "nl": "Begin bij het grootste getal en tel het kleinste erbij.",
+  "en": "Start at the biggest number and add the smallest.",
+  "ar": "ابدأ من الرقم الأكبر وأضف إليه الأصغر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|62665",
+  "nl": "Tel het tweede getal erbij.",
+  "en": "Add the second number.",
+  "ar": "أضف الرقم الثاني."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|63006",
+  "nl": "Begin bij het eerste getal. Tel verder.",
+  "en": "Start at the first number. Count on.",
+  "ar": "ابدأ من الرقم الأول. عُدّ إلى الأمام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|63294",
+  "nl": "Erbij = verder tellen.",
+  "en": "Adding = counting on.",
+  "ar": "الإضافة («erbij») = العدّ إلى الأمام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|63524",
+  "nl": "Begin bij 1. Tel er 1 bij.",
+  "en": "Start at 1. Add 1.",
+  "ar": "ابدأ من 1. أضف 1."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|63754",
+  "nl": "Begin bij 2. Tel er 6 bij.",
+  "en": "Start at 2. Add 6.",
+  "ar": "ابدأ من 2. أضف 6."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|63984",
+  "nl": "Begin bij 5. Tel er 3 bij.",
+  "en": "Start at 5. Add 3.",
+  "ar": "ابدأ من 5. أضف 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|64214",
+  "nl": "Begin bij 6. Tel er 4 bij.",
+  "en": "Start at 6. Add 4.",
+  "ar": "ابدأ من 6. أضف 4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|65324",
+  "nl": "**Min** (−) is **eraf**.\n\n7 − 2: begin bij 7, tel 2 terug: 6, 5. Het antwoord is **5**.\n\nBij eraf wordt het getal **kleiner**.",
+  "en": "**Min** (−) is **eraf** (taking away).\n\n7 − 2: start at 7, count back 2: 6, 5. The answer is **5**.\n\nWhen you take away, the number gets **smaller**.",
+  "ar": "**Min** (−) يعني **eraf** (= ننقص).\n\n7 − 2: ابدأ من 7، وعُدّ 2 إلى الوراء: 6, 5. الجواب هو **5**.\n\nعند الطرح يصبح الرقم **أصغر**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|65592",
+  "nl": "Begin bij 3. Tel 2 terug.",
+  "en": "Start at 3. Count back 2.",
+  "ar": "ابدأ من 3. عُدّ 2 إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|65880",
+  "nl": "Eraf = terug tellen",
+  "en": "Taking away = counting back",
+  "ar": "الطرح («eraf») = العدّ إلى الوراء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|66682",
+  "nl": "**Min** (−) betekent **eraf**. 7 − 2: begin bij 7 en tel 2 terug: 6, 5. Het antwoord is 5.",
+  "en": "**Min** (−) means **eraf** (taking away). 7 − 2: start at 7 and count back 2: 6, 5. The answer is 5.",
+  "ar": "**Min** (−) يعني **eraf** (= ننقص). 7 − 2: ابدأ من 7 وعُدّ 2 إلى الوراء: 6, 5. الجواب هو 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|67235",
+  "nl": "Doe 7 vingers omhoog. Doe er 2 naar beneden. Tel de vingers die nog omhoog zijn.",
+  "en": "Put 7 fingers up. Put 2 down. Count the fingers that are still up.",
+  "ar": "ارفع 7 أصابع. أنزل 2 منها. عُدّ الأصابع التي ما زالت مرفوعة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|67399",
+  "nl": "Het wordt minder",
+  "en": "It gets less",
+  "ar": "يصبح أقل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|68098",
+  "nl": "Bij eraf wordt het getal altijd **kleiner**. Is je antwoord groter? Dan klopt het niet.",
+  "en": "When you take away, the number always gets **smaller**. Is your answer bigger? Then it is wrong.",
+  "ar": "عند الطرح يصبح الرقم دائمًا **أصغر**. هل جوابك أكبر؟ إذن هو غير صحيح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|68211",
+  "nl": "min",
+  "en": "minus",
+  "ar": "ناقص"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|68426",
+  "nl": "Het teken −. Eraf.",
+  "en": "The sign −. Taking away.",
+  "ar": "العلامة −. ننقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|68556",
+  "nl": "eraf",
+  "en": "taking away",
+  "ar": "ننقص"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|68738",
+  "nl": "Minder maken.",
+  "en": "Making less.",
+  "ar": "نجعله أقل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|69110",
+  "nl": "Min = eraf = terug tellen.",
+  "en": "\"Min\" (minus) = \"eraf\" (taking away) = counting back.",
+  "ar": "«min» = «eraf» = نعدّ إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|69373",
+  "nl": "9 − 3: 8, 7, 6. Antwoord 6.",
+  "en": "9 − 3: 8, 7, 6. Answer 6.",
+  "ar": "9 − 3: 8, 7, 6. الجواب 6."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|69623",
+  "nl": "5 − 5 = 0. Alles eraf.",
+  "en": "5 − 5 = 0. All taken away.",
+  "ar": "5 − 5 = 0. نأخذ الكل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|69873",
+  "nl": "Tel terug op je vingers.",
+  "en": "Count back on your fingers.",
+  "ar": "عُدّ إلى الوراء على أصابعك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|70145",
+  "nl": "Tel het tweede getal terug.",
+  "en": "Count back the second number.",
+  "ar": "عُدّ الرقم الثاني إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|70480",
+  "nl": "Begin bij het eerste getal. Tel terug.",
+  "en": "Start at the first number. Count back.",
+  "ar": "ابدأ من الرقم الأول. عُدّ إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|70763",
+  "nl": "Eraf = terug tellen.",
+  "en": "Taking away = counting back.",
+  "ar": "الطرح («eraf») = العدّ إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|71031",
+  "nl": "Begin bij 6. Tel 3 terug.",
+  "en": "Start at 6. Count back 3.",
+  "ar": "ابدأ من 6. عُدّ 3 إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|71299",
+  "nl": "Begin bij 2. Tel 1 terug.",
+  "en": "Start at 2. Count back 1.",
+  "ar": "ابدأ من 2. عُدّ 1 إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|71567",
+  "nl": "Begin bij 2. Tel 2 terug.",
+  "en": "Start at 2. Count back 2.",
+  "ar": "ابدأ من 2. عُدّ 2 إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|71835",
+  "nl": "Begin bij 5. Tel 1 terug.",
+  "en": "Start at 5. Count back 1.",
+  "ar": "ابدأ من 5. عُدّ 1 إلى الوراء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|73245",
+  "nl": "8 + 5 is meer dan 10. Dat doen we in **twee stapjes**.\n\nStap 1: maak 10 vol. 8 + 2 = 10.\nStap 2: de rest erbij. 10 + 3 = **13**.\n\nBij eraf: ga eerst naar 10, dan de rest eraf.",
+  "en": "8 + 5 is more than 10. We do that in **two small steps**.\n\nStep 1: fill up 10. 8 + 2 = 10.\nStep 2: add the rest. 10 + 3 = **13**.\n\nWhen taking away: go to 10 first, then take away the rest.",
+  "ar": "8 + 5 أكثر من 10. نحلّها في **خطوتين صغيرتين**.\n\nالخطوة 1: أكمل الـ10. 8 + 2 = 10.\nالخطوة 2: أضف الباقي. 10 + 3 = **13**.\n\nعند الطرح: اذهب أولًا إلى 10، ثم اطرح الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|73629",
+  "nl": "Maak eerst 10: 5 + 5 = 10. Dan nog 3 erbij.",
+  "en": "Make 10 first: 5 + 5 = 10. Then add 3 more.",
+  "ar": "اصنع 10 أولًا: 5 + 5 = 10. ثم أضف 3 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|73796",
+  "nl": "Eerst naar 10",
+  "en": "First to 10",
+  "ar": "أولًا إلى 10"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|74526",
+  "nl": "8 + 5. Maak eerst **10**: 8 + 2 = 10. Je had 5, je hebt 2 gebruikt. Er blijft 3 over. 10 + 3 = **13**.",
+  "en": "8 + 5. Make **10** first: 8 + 2 = 10. You had 5, you used 2. 3 are left. 10 + 3 = **13**.",
+  "ar": "8 + 5. اصنع **10** أولًا: 8 + 2 = 10. كان عندك 5، استعملت 2. يبقى 3. 10 + 3 = **13**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|74696",
+  "nl": "In twee stukjes",
+  "en": "In two pieces",
+  "ar": "في قطعتين"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|75396",
+  "nl": "Knip het tweede getal in **twee stukjes**. Eén stukje maakt 10 vol. Het andere stukje komt erbij.",
+  "en": "Cut the second number into **two pieces**. One piece fills up 10. The other piece gets added.",
+  "ar": "قسّم الرقم الثاني إلى **قطعتين**. قطعة تكمل الـ10. والقطعة الأخرى تضيفها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|75970",
+  "nl": "10 vingers vol? Dan begin je opnieuw en tel je verder: 11, 12, 13.",
+  "en": "10 fingers full? Then start again and count on: 11, 12, 13.",
+  "ar": "امتلأت 10 أصابع؟ إذن ابدأ من جديد وعُدّ إلى الأمام: 11, 12, 13."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|76129",
+  "nl": "tien vol",
+  "en": "ten full",
+  "ar": "إكمال العشرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|76446",
+  "nl": "Eerst tot 10 tellen. Dan verder.",
+  "en": "First count to 10. Then go on.",
+  "ar": "عُدّ أولًا حتى 10. ثم تابع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|76876",
+  "nl": "Over de 10: eerst 10 vol maken, dan de rest erbij.",
+  "en": "Past 10: first fill up 10, then add the rest.",
+  "ar": "تجاوز الـ10: أكمل 10 أولًا، ثم أضف الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|77210",
+  "nl": "7 + 6: 7 + 3 = 10, dan 10 + 3 = 13.",
+  "en": "7 + 6: 7 + 3 = 10, then 10 + 3 = 13.",
+  "ar": "7 + 6: 7 + 3 = 10، ثم 10 + 3 = 13."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|77551",
+  "nl": "14 − 6: 14 − 4 = 10, dan 10 − 2 = 8.",
+  "en": "14 − 6: 14 − 4 = 10, then 10 − 2 = 8.",
+  "ar": "14 − 6: 14 − 4 = 10، ثم 10 − 2 = 8."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|77921",
+  "nl": "10 is een tussenstop. Ga eerst naar 10.",
+  "en": "10 is a stop on the way. Go to 10 first.",
+  "ar": "10 محطة في الطريق. اذهب أولًا إلى 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|78235",
+  "nl": "Maak eerst 10 vol, dan de rest.",
+  "en": "Fill up 10 first, then the rest.",
+  "ar": "أكمل 10 أولًا، ثم الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|78647",
+  "nl": "Knip het getal in twee stukjes. Eén stukje tot 10.",
+  "en": "Cut the number into two pieces. One piece up to 10.",
+  "ar": "قسّم الرقم إلى قطعتين. قطعة حتى 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|78821",
+  "nl": "Eerst naar 10.",
+  "en": "First to 10.",
+  "ar": "أولًا إلى 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|79255",
+  "nl": "Ga eerst naar 10: 11 − 1 = 10. Dan nog 3 eraf.",
+  "en": "Go to 10 first: 11 − 1 = 10. Then take away 3 more.",
+  "ar": "اذهب أولًا إلى 10: 11 − 1 = 10. ثم اطرح 3 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|79639",
+  "nl": "Maak eerst 10: 7 + 3 = 10. Dan nog 5 erbij.",
+  "en": "Make 10 first: 7 + 3 = 10. Then add 5 more.",
+  "ar": "اصنع 10 أولًا: 7 + 3 = 10. ثم أضف 5 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|80073",
+  "nl": "Ga eerst naar 10: 18 − 8 = 10. Dan nog 1 eraf.",
+  "en": "Go to 10 first: 18 − 8 = 10. Then take away 1 more.",
+  "ar": "اذهب أولًا إلى 10: 18 − 8 = 10. ثم اطرح 1 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|80457",
+  "nl": "Maak eerst 10: 6 + 4 = 10. Dan nog 4 erbij.",
+  "en": "Make 10 first: 6 + 4 = 10. Then add 4 more.",
+  "ar": "اصنع 10 أولًا: 6 + 4 = 10. ثم أضف 4 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|81561",
+  "nl": "Nu sommen met **woorden**.\n\nLees goed. **Komen er dingen bij?** Dan plus. **Gaan er dingen weg?** Dan min.\n\nSchrijf de som op. Reken uit.",
+  "en": "Now sums with **words**.\n\nRead carefully. **Are things added?** Then plus. **Do things go away?** Then minus.\n\nWrite the sum down. Work it out.",
+  "ar": "الآن مسائل **بالكلمات**.\n\nاقرأ جيدًا. **هل تأتي أشياء أكثر؟** إذن زائد («plus»). **هل تذهب أشياء؟** إذن ناقص («min»).\n\nاكتب المسألة. احسبها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|82015",
+  "nl": "Lees de som nog een keer. Is het erbij of eraf?",
+  "en": "Read the sum one more time. Is it adding or taking away?",
+  "ar": "اقرأ المسألة مرة أخرى. هل هي إضافة («erbij») أم طرح («eraf»)؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|82249",
+  "nl": "Erbij of eraf?",
+  "en": "Adding or taking away?",
+  "ar": "إضافة («erbij») أم طرح («eraf»)؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|83024",
+  "nl": "Lees de som. **Komen er kinderen bij?** Dan is het **plus**. **Gaan er weg?** Dan is het **min**.",
+  "en": "Read the sum. **Do more children come?** Then it is **plus**. **Do some go away?** Then it is **minus**.",
+  "ar": "اقرأ المسألة. **هل يأتي أطفال أكثر؟** إذن هي **زائد** («plus»). **هل يذهب بعضهم؟** إذن هي **ناقص** («min»)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|83208",
+  "nl": "Schrijf de som op",
+  "en": "Write the sum down",
+  "ar": "اكتب المسألة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|83600",
+  "nl": "6 kinderen, 3 komen erbij: **6 + 3**. Dat is 9.",
+  "en": "6 children, 3 more come: **6 + 3**. That is 9.",
+  "ar": "6 أطفال، ويأتي 3 آخرون: **6 + 3**. هذا 9."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|83806",
+  "nl": "Woorden die helpen",
+  "en": "Words that help",
+  "ar": "كلمات تساعد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|84605",
+  "nl": "**Erbij, komen, samen** = plus. **Weg, eten, geven** = min.",
+  "en": "**Erbij, komen, samen** (more, come, together) = plus. **Weg, eten, geven** (away, eat, give) = minus.",
+  "ar": "**Erbij, komen, samen** (= إضافة، يأتون، معًا) = زائد. **Weg, eten, geven** (= يذهب، يأكل، يعطي) = ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|84731",
+  "nl": "samen",
+  "en": "together",
+  "ar": "معًا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|84953",
+  "nl": "Alles bij elkaar. Plus.",
+  "en": "All together. Plus.",
+  "ar": "الكل مع بعض. زائد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|85067",
+  "nl": "weg",
+  "en": "away",
+  "ar": "ذهب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|85285",
+  "nl": "Niet meer. Min.",
+  "en": "Not there anymore. Minus.",
+  "ar": "لم يعد موجودًا. ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|85640",
+  "nl": "Zoek het woord dat zegt: plus of min.",
+  "en": "Find the word that says: plus or minus.",
+  "ar": "ابحث عن الكلمة التي تقول: زائد أو ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|85885",
+  "nl": "3 komen erbij → +3.",
+  "en": "3 more come → +3.",
+  "ar": "يأتي 3 آخرون («erbij») → +3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|86116",
+  "nl": "4 geef je weg → −4.",
+  "en": "You give away 4 → −4.",
+  "ar": "تعطي 4 («weg») → −4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|86561",
+  "nl": "Onderstreep het woord: erbij of weg.",
+  "en": "Underline the word: \"erbij\" (more) or \"weg\" (away).",
+  "ar": "ضع خطًا تحت الكلمة: «erbij» أو «weg»."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|86830",
+  "nl": "Kijk of het plus of min is.",
+  "en": "Check if it is plus or minus.",
+  "ar": "انظر هل هي زائد أم ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|87179",
+  "nl": "Komen erbij = plus. Gaan weg = min.",
+  "en": "More come = plus. Go away = minus.",
+  "ar": "يأتون («komen erbij») = زائد. يذهبون («gaan weg») = ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|87384",
+  "nl": "Erbij = plus.",
+  "en": "More = plus.",
+  "ar": "«erbij» = زائد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|87736",
+  "nl": "Rekenen tot 100 (nieuwkomers, groep 4)",
+  "en": "Maths up to 100 (newcomers, year 2)",
+  "ar": "الحساب حتى 100 (للقادمين الجدد، الصف 4)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|89090",
+  "nl": "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
+  "en": "Tens and ones, adding and taking away in jumps, going past the ten, and sums with money. Short sentences, every sum explained. Also for children who are still learning Dutch. ~10 min.",
+  "ar": "العشرات والآحاد، الجمع والطرح بالقفزات، تجاوز العشرة، ومسائل بالنقود. جمل قصيرة، وكل مسألة مع شرح. أيضًا للأطفال الذين ما زالوا يتعلمون الهولندية. ~10 دقائق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|89293",
+  "nl": "Tientallen en eenheden",
+  "en": "Tens and ones",
+  "ar": "العشرات والآحاد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|89485",
+  "nl": "Erbij tot 100",
+  "en": "Adding up to 100",
+  "ar": "الجمع حتى 100"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|89684",
+  "nl": "Eraf tot 100",
+  "en": "Taking away up to 100",
+  "ar": "الطرح حتى 100"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|89868",
+  "nl": "Over het tiental heen",
+  "en": "Going past the ten",
+  "ar": "تجاوز العشرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|90080",
+  "nl": "Sommen uit de winkel",
+  "en": "Sums from the shop",
+  "ar": "مسائل من المتجر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|91376",
+  "nl": "Een getal tot 100 heeft **twee cijfers**.\n\nHet eerste cijfer zijn de **tientallen** (groepjes van 10). Het tweede cijfer zijn de **eenheden** (losse).\n\n**34** = 3 tientallen en 4 eenheden = 30 + 4.",
+  "en": "A number up to 100 has **two digits**.\n\nThe first digit is the **tens** (groups of 10). The second digit is the **ones** (single ones).\n\n**34** = 3 tens and 4 ones = 30 + 4.",
+  "ar": "العدد حتى 100 له **رقمان**.\n\nالرقم الأول هو **العشرات** (مجموعات من 10). الرقم الثاني هو **الآحاد** (المفردة).\n\n**34** = 3 عشرات و4 آحاد = 30 + 4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|91647",
+  "nl": "3 tientallen = 30. Dan 3 erbij.",
+  "en": "3 tens = 30. Then add 3.",
+  "ar": "3 عشرات = 30. ثم أضف 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|91901",
+  "nl": "Tientallen zijn groepjes van 10",
+  "en": "Tens are groups of 10",
+  "ar": "العشرات مجموعات من 10"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|92411",
+  "nl": "**Een tiental** is 10. **3 tientallen** is 10, 20, 30. Dus 30.",
+  "en": "**One ten** is 10. **3 tens** is 10, 20, 30. So 30.",
+  "ar": "**عشرة واحدة** («een tiental») هي 10. **3 عشرات** هي 10, 20, 30. إذن 30."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|92624",
+  "nl": "Eenheden zijn losse",
+  "en": "Ones are single",
+  "ar": "الآحاد مفردة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|93161",
+  "nl": "**Eenheden** zijn losse. 3 tientallen en 4 eenheden: 30 en 4 = **34**.",
+  "en": "**Ones** are single. 3 tens and 4 ones: 30 and 4 = **34**.",
+  "ar": "**الآحاد** («eenheden») مفردة. 3 عشرات و4 آحاد: 30 و4 = **34**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|93350",
+  "nl": "Zo schrijf je het",
+  "en": "This is how you write it",
+  "ar": "هكذا تكتبه"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|93976",
+  "nl": "Het eerste cijfer = tientallen. Het tweede cijfer = eenheden. **34** = 3 tientallen, 4 eenheden.",
+  "en": "The first digit = tens. The second digit = ones. **34** = 3 tens, 4 ones.",
+  "ar": "الرقم الأول = العشرات. الرقم الثاني = الآحاد. **34** = 3 عشرات، 4 آحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|94096",
+  "nl": "tiental",
+  "en": "ten",
+  "ar": "عشرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|94278",
+  "nl": "Een groepje van 10.",
+  "en": "A group of 10.",
+  "ar": "مجموعة من 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|94401",
+  "nl": "eenheid",
+  "en": "one",
+  "ar": "واحد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|94564",
+  "nl": "Eén losse.",
+  "en": "One single.",
+  "ar": "واحد مفرد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|94826",
+  "nl": "Getal = tientallen en eenheden.",
+  "en": "Number = tens and ones.",
+  "ar": "العدد = عشرات وآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|95079",
+  "nl": "5 tientallen, 2 eenheden = 52.",
+  "en": "5 tens, 2 ones = 52.",
+  "ar": "5 عشرات، 2 آحاد = 52."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|95332",
+  "nl": "70 = 7 tientallen, 0 eenheden.",
+  "en": "70 = 7 tens, 0 ones.",
+  "ar": "70 = 7 عشرات، 0 آحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|95749",
+  "nl": "Tel de tientallen: 10, 20, 30… Dan de eenheden erbij.",
+  "en": "Count the tens: 10, 20, 30… Then add the ones.",
+  "ar": "عُدّ العشرات: 10, 20, 30… ثم أضف الآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|96066",
+  "nl": "Tientallen × 10, dan eenheden erbij.",
+  "en": "Tens × 10, then add the ones.",
+  "ar": "العشرات × 10، ثم أضف الآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|96377",
+  "nl": "3 tientallen = 30. Dan 4 erbij = 34.",
+  "en": "3 tens = 30. Then add 4 = 34.",
+  "ar": "3 عشرات = 30. ثم أضف 4 = 34."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|96584",
+  "nl": "Eerst 30, dan 4.",
+  "en": "First 30, then 4.",
+  "ar": "أولًا 30، ثم 4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|96803",
+  "nl": "Tien erbij: 40 + 10.",
+  "en": "Add ten: 40 + 10.",
+  "ar": "أضف عشرة: 40 + 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|97080",
+  "nl": "7 tientallen = 70. Dan 6 erbij.",
+  "en": "7 tens = 70. Then add 6.",
+  "ar": "7 عشرات = 70. ثم أضف 6."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|97299",
+  "nl": "Tien erbij: 60 + 10.",
+  "en": "Add ten: 60 + 10.",
+  "ar": "أضف عشرة: 60 + 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|97576",
+  "nl": "8 tientallen = 80. Dan 5 erbij.",
+  "en": "8 tens = 80. Then add 5.",
+  "ar": "8 عشرات = 80. ثم أضف 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|98392",
+  "nl": "Erbij doen we in **sprongen**.\n\nEerst sprongen van **10**: 34 + 20 = 54.\nDan sprongen van **1**: 54 + 3 = 57.",
+  "en": "We add in **jumps**.\n\nFirst jumps of **10**: 34 + 20 = 54.\nThen jumps of **1**: 54 + 3 = 57.",
+  "ar": "نجمع **بالقفزات**.\n\nأولًا قفزات من **10**: 34 + 20 = 54.\nثم قفزات من **1**: 54 + 3 = 57."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|98696",
+  "nl": "Eerst de tientallen, dan de eenheden.",
+  "en": "First the tens, then the ones.",
+  "ar": "أولًا العشرات، ثم الآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|98885",
+  "nl": "Eerst de tientallen",
+  "en": "First the tens",
+  "ar": "أولًا العشرات"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|99336",
+  "nl": "34 + 20. Tel eerst de **tientallen**: 34 + 20 = **54**.",
+  "en": "34 + 20. First count the **tens**: 34 + 20 = **54**.",
+  "ar": "34 + 20. عُدّ أولًا **العشرات**: 34 + 20 = **54**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|99512",
+  "nl": "Dan de eenheden",
+  "en": "Then the ones",
+  "ar": "ثم الآحاد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|100041",
+  "nl": "34 + 5. Tel de **eenheden** erbij: 34 + 5 = **39**. De 3 blijft staan.",
+  "en": "34 + 5. Add the **ones**: 34 + 5 = **39**. The 3 stays the same.",
+  "ar": "34 + 5. أضف **الآحاد**: 34 + 5 = **39**. الـ3 تبقى كما هي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|100195",
+  "nl": "Met sprongen",
+  "en": "With jumps",
+  "ar": "بالقفزات"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|100609",
+  "nl": "Spring met 10: 34, 44, 54. Spring met 1: 54, 55, 56.",
+  "en": "Jump by 10: 34, 44, 54. Jump by 1: 54, 55, 56.",
+  "ar": "اقفز 10: 34, 44, 54. اقفز 1: 54, 55, 56."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|100773",
+  "nl": "sprong van 10",
+  "en": "jump of 10",
+  "ar": "قفزة من 10"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|101012",
+  "nl": "Tien erbij in één keer.",
+  "en": "Add ten in one go.",
+  "ar": "إضافة عشرة مرة واحدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|101599",
+  "nl": "Tientallen erbij: het eerste cijfer wordt groter. Eenheden erbij: het tweede cijfer.",
+  "en": "Adding tens: the first digit gets bigger. Adding ones: the second digit.",
+  "ar": "إضافة العشرات: الرقم الأول يكبر. إضافة الآحاد: الرقم الثاني يكبر."
+ }
+]

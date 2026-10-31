@@ -346,34 +346,34 @@ function metGat(zin, woord) {
 // 🌍 Nieuwkomer-dictee tikbaar (doorgroeiplan § 8, 27 sep 2026): alle schermtekst in de stand
 // voor nieuwkomers krijgt een vertaling op tik, net als in de nieuwkomerpaden. Buiten die stand
 // is er geen map → SteunTekst toont gewoon de Nederlandse tekst.
-const S4 = (en, ar, uk, tr, ro, bg) => ({ en, ar, uk, tr, ro, bg });
+const S4 = (en, ar, uk, tr, ro, bg, fa) => ({ en, ar, uk, tr, ro, bg, fa });
 const DICTEE_UI = {
-  "Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.": S4("Charley says a sentence. Then he says one word. You write that word.", "تشارلي يقول جملة. ثم يقول كلمة واحدة. أنت تكتب تلك الكلمة.", "Чарлі каже речення. Потім він каже одне слово. Ти пишеш це слово.", "Charley bir cümle söyler. Sonra bir kelime söyler. Sen o kelimeyi yazarsın.", "Charley spune o propoziție. Apoi spune un cuvânt. Tu scrii acel cuvânt.", "Чарли казва изречение. После казва една дума. Ти пишеш тази дума."),
-  "10 korte woorden. Luister goed. Elke letter is een klank: t-a-s. Tik op de zin: dan zie je hem in jouw taal.": S4("10 short words. Listen carefully. Every letter is a sound: t-a-s. Tap the sentence to see it in your language.", "10 كلمات قصيرة. استمع جيدًا. كل حرف هو صوت: t-a-s. اضغط على الجملة لتراها بلغتك.", "10 коротких слів. Слухай уважно. Кожна літера — це звук: t-a-s. Натисни на речення, щоб побачити його своєю мовою.", "10 kısa kelime. İyi dinle. Her harf bir sestir: t-a-s. Cümleye dokun, kendi dilinde gör.", "10 cuvinte scurte. Ascultă cu atenție. Fiecare literă este un sunet: t-a-s. Apasă pe propoziție ca s-o vezi în limba ta.", "10 кратки думи. Слушай внимателно. Всяка буква е звук: t-a-s. Докосни изречението, за да го видиш на твоя език."),
-  "Start": S4("Start", "ابدأ", "Почати", "Başla", "Start", "Старт"),
-  "Terug": S4("Back", "رجوع", "Назад", "Geri", "Înapoi", "Назад"),
-  "Stop": S4("Stop", "توقّف", "Стоп", "Dur", "Stop", "Стоп"),
-  "Hoi, ik ben Charley! Hoor je mij?": S4("Hi, I am Charley! Can you hear me?", "مرحبًا، أنا تشارلي! هل تسمعني؟", "Привіт, я Чарлі! Ти мене чуєш?", "Merhaba, ben Charley! Beni duyuyor musun?", "Salut, eu sunt Charley! Mă auzi?", "Здравей, аз съм Чарли! Чуваш ли ме?"),
-  "Zet je geluid aan en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.": S4("Turn on the sound and take the phone off silent. Charley will say a sentence and then the word you must write.", "شغّل الصوت وأوقف الوضع الصامت. سيقول تشارلي جملة ثم الكلمة التي يجب أن تكتبها.", "Увімкни звук і вимкни беззвучний режим. Чарлі скаже речення, а потім слово, яке треба написати.", "Sesi aç ve telefonu sessizden çıkar. Charley bir cümle ve sonra yazman gereken kelimeyi söyleyecek.", "Pornește sunetul și scoate telefonul de pe silențios. Charley va spune o propoziție și apoi cuvântul pe care trebuie să-l scrii.", "Включи звука и махни телефона от беззвучен режим. Чарли ще каже изречение и после думата, която трябва да напишеш."),
-  "Ik hoor Charley, start!": S4("I can hear Charley, start!", "أسمع تشارلي، ابدأ!", "Я чую Чарлі, почнімо!", "Charley'i duyuyorum, başla!", "Îl aud pe Charley, start!", "Чувам Чарли, старт!"),
-  "Nog een keer": S4("Once more", "مرة أخرى", "Ще раз", "Bir kez daha", "Încă o dată", "Още веднъж"),
-  "Ik hoor niets → lees-dictee": S4("I hear nothing → reading dictation", "لا أسمع شيئًا ← إملاء بالقراءة", "Я нічого не чую → диктант для читання", "Hiçbir şey duymuyorum → okuma diktesi", "Nu aud nimic → dictare de citit", "Не чувам нищо → диктовка за четене"),
-  "Luister goed…": S4("Listen carefully…", "استمع جيدًا…", "Слухай уважно…", "İyi dinle…", "Ascultă cu atenție…", "Слушай внимателно…"),
-  "Charley komt eraan…": S4("Charley is coming…", "تشارلي قادم…", "Чарлі вже йде…", "Charley geliyor…", "Charley vine…", "Чарли идва…"),
-  "Schrijf het woord op dat je hoorde.": S4("Write the word you heard.", "اكتب الكلمة التي سمعتها.", "Напиши слово, яке ти почув.", "Duyduğun kelimeyi yaz.", "Scrie cuvântul pe care l-ai auzit.", "Напиши думата, която чу."),
-  "Goed zo!": S4("Well done!", "أحسنت!", "Молодець!", "Aferin!", "Bravo!", "Браво!"),
-  "Controleer": S4("Check", "تحقّق", "Перевірити", "Kontrol et", "Verifică", "Провери"),
-  "Volgende": S4("Next", "التالي", "Далі", "Sonraki", "Următoarea", "Напред"),
-  "Klaar": S4("Done", "انتهيت", "Готово", "Bitti", "Gata", "Готово"),
-  "Nieuw dictee": S4("New dictation", "إملاء جديد", "Новий диктант", "Yeni dikte", "Dictare nouă", "Нова диктовка"),
-  "Fouten nog een keer": S4("Mistakes once more", "الأخطاء مرة أخرى", "Помилки ще раз", "Hataları bir kez daha", "Greșelile încă o dată", "Грешките още веднъж"),
-  "Nog even kijken:": S4("Let's look again:", "لننظر مرة أخرى:", "Подивімося ще раз:", "Bir daha bakalım:", "Hai să ne uităm din nou:", "Да погледнем пак:"),
+  "Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.": S4("Charley says a sentence. Then he says one word. You write that word.", "تشارلي يقول جملة. ثم يقول كلمة واحدة. أنت تكتب تلك الكلمة.", "Чарлі каже речення. Потім він каже одне слово. Ти пишеш це слово.", "Charley bir cümle söyler. Sonra bir kelime söyler. Sen o kelimeyi yazarsın.", "Charley spune o propoziție. Apoi spune un cuvânt. Tu scrii acel cuvânt.", "Чарли казва изречение. После казва една дума. Ти пишеш тази дума.", "چارلی یک جمله می‌گوید. بعد یک کلمه می‌گوید. تو آن کلمه را می‌نویسی."),
+  "10 korte woorden. Luister goed. Elke letter is een klank: t-a-s. Tik op de zin: dan zie je hem in jouw taal.": S4("10 short words. Listen carefully. Every letter is a sound: t-a-s. Tap the sentence to see it in your language.", "10 كلمات قصيرة. استمع جيدًا. كل حرف هو صوت: t-a-s. اضغط على الجملة لتراها بلغتك.", "10 коротких слів. Слухай уважно. Кожна літера — це звук: t-a-s. Натисни на речення, щоб побачити його своєю мовою.", "10 kısa kelime. İyi dinle. Her harf bir sestir: t-a-s. Cümleye dokun, kendi dilinde gör.", "10 cuvinte scurte. Ascultă cu atenție. Fiecare literă este un sunet: t-a-s. Apasă pe propoziție ca s-o vezi în limba ta.", "10 кратки думи. Слушай внимателно. Всяка буква е звук: t-a-s. Докосни изречението, за да го видиш на твоя език.", "10 کلمهٔ کوتاه. خوب گوش کن. هر حرف یک صداست: t-a-s. روی جمله بزن تا آن را به زبان خودت ببینی."),
+  "Start": S4("Start", "ابدأ", "Почати", "Başla", "Start", "Старт", "شروع"),
+  "Terug": S4("Back", "رجوع", "Назад", "Geri", "Înapoi", "Назад", "برگشت"),
+  "Stop": S4("Stop", "توقّف", "Стоп", "Dur", "Stop", "Стоп", "توقف"),
+  "Hoi, ik ben Charley! Hoor je mij?": S4("Hi, I am Charley! Can you hear me?", "مرحبًا، أنا تشارلي! هل تسمعني؟", "Привіт, я Чарлі! Ти мене чуєш?", "Merhaba, ben Charley! Beni duyuyor musun?", "Salut, eu sunt Charley! Mă auzi?", "Здравей, аз съм Чарли! Чуваш ли ме?", "سلام، من چارلی هستم! صدایم را می‌شنوی؟"),
+  "Zet je geluid aan en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.": S4("Turn on the sound and take the phone off silent. Charley will say a sentence and then the word you must write.", "شغّل الصوت وأوقف الوضع الصامت. سيقول تشارلي جملة ثم الكلمة التي يجب أن تكتبها.", "Увімкни звук і вимкни беззвучний режим. Чарлі скаже речення, а потім слово, яке треба написати.", "Sesi aç ve telefonu sessizden çıkar. Charley bir cümle ve sonra yazman gereken kelimeyi söyleyecek.", "Pornește sunetul și scoate telefonul de pe silențios. Charley va spune o propoziție și apoi cuvântul pe care trebuie să-l scrii.", "Включи звука и махни телефона от беззвучен режим. Чарли ще каже изречение и после думата, която трябва да напишеш.", "صدا را روشن کن و گوشی را از حالت بی‌صدا دربیاور. چارلی کمی بعد یک جمله می‌گوید و بعد کلمه‌ای را که باید بنویسی."),
+  "Ik hoor Charley, start!": S4("I can hear Charley, start!", "أسمع تشارلي، ابدأ!", "Я чую Чарлі, почнімо!", "Charley'i duyuyorum, başla!", "Îl aud pe Charley, start!", "Чувам Чарли, старт!", "صدای چارلی را می‌شنوم، شروع!"),
+  "Nog een keer": S4("Once more", "مرة أخرى", "Ще раз", "Bir kez daha", "Încă o dată", "Още веднъж", "یک بار دیگر"),
+  "Ik hoor niets → lees-dictee": S4("I hear nothing → reading dictation", "لا أسمع شيئًا ← إملاء بالقراءة", "Я нічого не чую → диктант для читання", "Hiçbir şey duymuyorum → okuma diktesi", "Nu aud nimic → dictare de citit", "Не чувам нищо → диктовка за четене", "چیزی نمی‌شنوم → دیکته با خواندن"),
+  "Luister goed…": S4("Listen carefully…", "استمع جيدًا…", "Слухай уважно…", "İyi dinle…", "Ascultă cu atenție…", "Слушай внимателно…", "خوب گوش کن…"),
+  "Charley komt eraan…": S4("Charley is coming…", "تشارلي قادم…", "Чарлі вже йде…", "Charley geliyor…", "Charley vine…", "Чарли идва…", "چارلی دارد می‌آید…"),
+  "Schrijf het woord op dat je hoorde.": S4("Write the word you heard.", "اكتب الكلمة التي سمعتها.", "Напиши слово, яке ти почув.", "Duyduğun kelimeyi yaz.", "Scrie cuvântul pe care l-ai auzit.", "Напиши думата, която чу.", "کلمه‌ای را که شنیدی بنویس."),
+  "Goed zo!": S4("Well done!", "أحسنت!", "Молодець!", "Aferin!", "Bravo!", "Браво!", "آفرین!"),
+  "Controleer": S4("Check", "تحقّق", "Перевірити", "Kontrol et", "Verifică", "Провери", "بررسی کن"),
+  "Volgende": S4("Next", "التالي", "Далі", "Sonraki", "Următoarea", "Напред", "بعدی"),
+  "Klaar": S4("Done", "انتهيت", "Готово", "Bitti", "Gata", "Готово", "تمام"),
+  "Nieuw dictee": S4("New dictation", "إملاء جديد", "Новий диктант", "Yeni dikte", "Dictare nouă", "Нова диктовка", "دیکتهٔ تازه"),
+  "Fouten nog een keer": S4("Mistakes once more", "الأخطاء مرة أخرى", "Помилки ще раз", "Hataları bir kez daha", "Greșelile încă o dată", "Грешките още веднъж", "اشتباه‌ها یک بار دیگر"),
+  "Nog even kijken:": S4("Let's look again:", "لننظر مرة أخرى:", "Подивімося ще раз:", "Bir daha bakalım:", "Hai să ne uităm din nou:", "Да погледнем пак:", "یک بار دیگر نگاه کنیم:"),
 };
 function klankVertaling(regel, w) {
   const m1 = regel.match(/^Luister naar elke klank: (\S+)\.$/);
-  if (m1) return S4(`Listen to each sound: ${m1[1]}.`, `استمع إلى كل صوت: ${m1[1]}.`, `Слухай кожен звук: ${m1[1]}.`, `Her sesi dinle: ${m1[1]}.`, `Ascultă fiecare sunet: ${m1[1]}.`, `Слушай всеки звук: ${m1[1]}.`);
+  if (m1) return S4(`Listen to each sound: ${m1[1]}.`, `استمع إلى كل صوت: ${m1[1]}.`, `Слухай кожен звук: ${m1[1]}.`, `Her sesi dinle: ${m1[1]}.`, `Ascultă fiecare sunet: ${m1[1]}.`, `Слушай всеки звук: ${m1[1]}.`, `به هر صدا گوش کن: ${m1[1]}.`);
   const m2 = regel.match(/^Twee letters, één klank: (\S+)\. Je hoort (\w+), je schrijft (.+)\.$/);
-  if (m2) return S4(`Two letters, one sound: ${m2[1]}. You hear ${m2[2]}, you write ${m2[3].replace(" en ", " and ")}.`, `حرفان، صوت واحد: ${m2[1]}. تسمع ${m2[2]}، وتكتب ${m2[3].replace(" en ", " و ")}.`, `Дві літери — один звук: ${m2[1]}. Ти чуєш ${m2[2]}, пишеш ${m2[3].replace(" en ", " і ")}.`, `İki harf, bir ses: ${m2[1]}. ${m2[2]} duyarsın, ${m2[3].replace(" en ", " ve ")} yazarsın.`, `Două litere, un sunet: ${m2[1]}. Auzi ${m2[2]}, scrii ${m2[3].replace(" en ", " și ")}.`, `Две букви, един звук: ${m2[1]}. Чуваш ${m2[2]}, пишеш ${m2[3].replace(" en ", " и ")}.`);
+  if (m2) return S4(`Two letters, one sound: ${m2[1]}. You hear ${m2[2]}, you write ${m2[3].replace(" en ", " and ")}.`, `حرفان، صوت واحد: ${m2[1]}. تسمع ${m2[2]}، وتكتب ${m2[3].replace(" en ", " و ")}.`, `Дві літери — один звук: ${m2[1]}. Ти чуєш ${m2[2]}, пишеш ${m2[3].replace(" en ", " і ")}.`, `İki harf, bir ses: ${m2[1]}. ${m2[2]} duyarsın, ${m2[3].replace(" en ", " ve ")} yazarsın.`, `Două litere, un sunet: ${m2[1]}. Auzi ${m2[2]}, scrii ${m2[3].replace(" en ", " și ")}.`, `Две букви, един звук: ${m2[1]}. Чуваш ${m2[2]}, пишеш ${m2[3].replace(" en ", " и ")}.`, `دو حرف، یک صدا: ${m2[1]}. ${m2[2]} را می‌شنوی، ${m2[3].replace(" en ", " و ")} را می‌نویسی.`);
   return null;
 }
 // NL → vertaling voor alle schermteksten + per woord "Bijna! Het is tas. Luister naar elke klank: t-a-s."
@@ -383,7 +383,7 @@ function dicteeSteunMap() {
     const r = klankVertaling(it.regel, it.woord);
     if (!r) continue;
     extra[it.regel] = r;
-    extra[`Bijna! Het is ${it.woord}. ${it.regel}`] = S4(`Almost! It is ${it.woord}. ${r.en}`, `تقريبًا! إنها ${it.woord}. ${r.ar}`, `Майже! Це ${it.woord}. ${r.uk}`, `Neredeyse! ${it.woord}. ${r.tr}`, `Aproape! Este ${it.woord}. ${r.ro}`, `Почти! Това е ${it.woord}. ${r.bg}`);
+    extra[`Bijna! Het is ${it.woord}. ${it.regel}`] = S4(`Almost! It is ${it.woord}. ${r.en}`, `تقريبًا! إنها ${it.woord}. ${r.ar}`, `Майже! Це ${it.woord}. ${r.uk}`, `Neredeyse! ${it.woord}. ${r.tr}`, `Aproape! Este ${it.woord}. ${r.ro}`, `Почти! Това е ${it.woord}. ${r.bg}`, `تقریباً! کلمه ${it.woord} است. ${r.fa}`);
   }
   return maakSteunMap(UI_STEUN, DICTEE_UI, extra);
 }

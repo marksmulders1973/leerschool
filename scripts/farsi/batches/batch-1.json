@@ -1,0 +1,987 @@
+[
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|3132",
+  "en": "Which word is spelled correctly?",
+  "ar": "أي كلمة مكتوبة بشكل صحيح؟"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|4843",
+  "nl": "Trede-testje",
+  "en": "Step test",
+  "ar": "اختبار الدرجة"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|5193",
+  "nl": "Geen hulp, één keer kiezen. Doe je best!",
+  "en": "No help, choose once. Do your best!",
+  "ar": "بدون مساعدة، اختر مرة واحدة. ابذل جهدك!"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|5294",
+  "nl": "Goed",
+  "en": "Correct",
+  "ar": "صحيح"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|5414",
+  "nl": "Niet goed",
+  "en": "Not correct",
+  "ar": "غير صحيح"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|5517",
+  "nl": "Volgende",
+  "en": "Next",
+  "ar": "التالي"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|5750",
+  "nl": "Gehaald! Trede 1 is klaar.",
+  "en": "Passed! Step 1 is done.",
+  "ar": "نجحت! الدرجة 1 انتهت."
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|6211",
+  "nl": "Gehaald! Trede 3 is klaar.",
+  "en": "Passed! Step 3 is done. You are ready for the normal Leerkwartier.",
+  "ar": "نجحت! الدرجة 3 انتهت. أنت جاهز لـ Leerkwartier العادي."
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|6463",
+  "nl": "Trede 3 · De brug naar de klas",
+  "en": "Step 3 · The bridge to the class",
+  "ar": "الدرجة 3 · الجسر إلى الصف"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|6696",
+  "nl": "Gehaald! Trede 2 is klaar.",
+  "en": "Passed! Step 2 is done.",
+  "ar": "نجحت! الدرجة 2 انتهت."
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|7177",
+  "nl": "Bijna! Oefen nog even en probeer het over een paar dagen opnieuw.",
+  "en": "Almost! Practise a bit more and try again in a few days.",
+  "ar": "تقريبًا! تدرّب قليلًا وحاول مرة أخرى بعد بضعة أيام."
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|7606",
+  "nl": "De vragen die je miste, komen morgen terug bij herhalen.",
+  "en": "The questions you missed come back tomorrow in practice again.",
+  "ar": "الأسئلة التي أخطأت فيها تعود غدًا في المراجعة."
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|7792",
+  "nl": "Print je diploma",
+  "en": "Print your certificate",
+  "ar": "اطبع شهادتك"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|7883",
+  "nl": "Terug",
+  "en": "Back",
+  "ar": "رجوع"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|8038",
+  "nl": "Instap-testje",
+  "en": "Starting test",
+  "ar": "اختبار البداية"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|8436",
+  "nl": "Dit is geen toets. Zo weet je waar je begint.",
+  "en": "This is not an exam. This way you know where to start.",
+  "ar": "هذا ليس امتحانًا. هكذا تعرف من أين تبدأ."
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|8590",
+  "nl": "Jij begint bij:",
+  "en": "You start at:",
+  "ar": "تبدأ من:"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|8791",
+  "nl": "Trede 1 · Welkom",
+  "en": "Step 1 · Welcome",
+  "ar": "الدرجة 1 · أهلًا"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|9042",
+  "nl": "Trede 2 · Letters en woorden",
+  "en": "Step 2 · Letters and words",
+  "ar": "الدرجة 2 · الحروف والكلمات"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|9218",
+  "nl": "Verder oefenen",
+  "en": "Keep practising",
+  "ar": "تابع التدريب"
+ },
+ {
+  "id": "A|src/components/NieuwkomersTredeTest.jsx|9552",
+  "nl": "Deze plek is groen gemaakt op de pagina.",
+  "en": "This place is now marked green on the page.",
+  "ar": "هذا المكان أصبح باللون الأخضر في الصفحة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|25287",
+  "en": "I have a bag.",
+  "ar": "عندي حقيبة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|25512",
+  "en": "The pen is blue.",
+  "ar": "القلم أزرق."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|25760",
+  "en": "We play with the ball.",
+  "ar": "نلعب بالكرة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|25974",
+  "en": "The fish swims.",
+  "ar": "السمكة تسبح."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|26200",
+  "en": "The chicken is white.",
+  "ar": "الدجاجة بيضاء."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|26435",
+  "en": "I go by bus.",
+  "ar": "أذهب بالحافلة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|26665",
+  "en": "The sun is shining.",
+  "ar": "الشمس مشرقة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|26903",
+  "en": "My coat is red.",
+  "ar": "معطفي أحمر."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|27154",
+  "en": "The teacher is kind.",
+  "ar": "المعلّمة لطيفة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|27366",
+  "en": "I have a folder.",
+  "ar": "عندي ملف."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|27583",
+  "en": "The cat is sleeping.",
+  "ar": "القطة نائمة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|27820",
+  "en": "My sock is wet.",
+  "ar": "جوربي مبلّل."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|28093",
+  "en": "The cat sits on the roof.",
+  "ar": "القطة على السطح."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|28303",
+  "en": "We have a lesson.",
+  "ar": "عندنا درس."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|28512",
+  "en": "I drink milk.",
+  "ar": "أشرب الحليب."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|28799",
+  "en": "The tree is big.",
+  "ar": "الشجرة كبيرة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|29081",
+  "en": "The moon is yellow.",
+  "ar": "القمر أصفر."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|29387",
+  "en": "The window is open.",
+  "ar": "النافذة مفتوحة."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|29668",
+  "en": "I am reading a book.",
+  "ar": "أقرأ كتابًا."
+ },
+ {
+  "id": "A|src/features/dictee/dicteeData.js|29955",
+  "en": "My foot hurts.",
+  "ar": "قدمي تؤلمني."
+ },
+ {
+  "id": "A|src/features/learn/AITutor.jsx|2237",
+  "en": "What does this word mean?",
+  "ar": "ماذا تعني هذه الكلمة؟"
+ },
+ {
+  "id": "A|src/features/learn/AITutor.jsx|2411",
+  "en": "Say it more simply",
+  "ar": "قلها بشكل أسهل"
+ },
+ {
+  "id": "A|src/features/learn/AITutor.jsx|2563",
+  "en": "Give an example",
+  "ar": "أعطني مثالًا"
+ },
+ {
+  "id": "A|src/features/learn/AITutor.jsx|5552",
+  "en": "Hi! I am ${naam}. I will help you. What don't you understand?",
+  "ar": "مرحبًا! أنا ${naam}. سأساعدك. ما الذي لا تفهمه؟"
+ },
+ {
+  "id": "A|src/features/onboarding/StartKwartier.jsx|1301",
+  "en": "English",
+  "ar": "العربية"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|1610",
+  "en": "You need the toilet. What do you say?",
+  "ar": "تحتاج إلى الحمّام. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|2916",
+  "en": "You don't understand the explanation. What do you say?",
+  "ar": "لم تفهم الشرح. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|3410",
+  "en": "The teacher speaks too fast. What do you ask?",
+  "ar": "المعلّمة تتكلّم بسرعة. ماذا تسأل؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|3837",
+  "en": "You don't know a word. What do you ask?",
+  "ar": "لا تعرف كلمة. ماذا تسأل؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|4222",
+  "en": "You finished your work. What do you say?",
+  "ar": "أنهيت عملك. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|4649",
+  "en": "It is time for PE (gym). Where do you go?",
+  "ar": "حان وقت الرياضة. إلى أين تذهب؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|6077",
+  "en": "It is 10 o'clock. The bell rings. What does that mean?",
+  "ar": "الساعة العاشرة. يرنّ الجرس. ماذا يعني ذلك؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|6426",
+  "en": "Your coat hangs on the…",
+  "ar": "معطفك معلّق على…"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|6789",
+  "en": "It is break time. Where do you play?",
+  "ar": "حان وقت الاستراحة. أين تلعب؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|7200",
+  "en": "You forgot your book. What do you say?",
+  "ar": "نسيت كتابك. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|7675",
+  "en": "A child says: 'What is your name?' What do you say?",
+  "ar": "يقول طفل: 'ما اسمك؟' ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|8945",
+  "en": "You want to join the game. What do you ask?",
+  "ar": "تريد أن تلعب معهم. ماذا تسأل؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|9309",
+  "en": "Someone helps you. What do you say?",
+  "ar": "شخص يساعدك. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|9735",
+  "en": "You don't want something. What may you say?",
+  "ar": "لا تريد شيئًا. ماذا يمكنك أن تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|10202",
+  "en": "School is over. What do you say to the teacher?",
+  "ar": "انتهت المدرسة. ماذا تقول للمعلّمة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersFoutUitleg.js|744",
+  "nl": "Nee,",
+  "en": "No,",
+  "ar": "لا،"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|1147",
+  "nl": "In de klas — Nederlands voor de eerste weken (nieuwkomers)",
+  "en": "In class — Dutch for the first weeks (newcomers)",
+  "ar": "في الصف — الهولندية للأسابيع الأولى (للقادمين الجدد)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|2084",
+  "nl": "De zinnen die je de eerste weken op school nodig hebt: vragen, plekken, vrienden maken. Met steun in je eigen taal. ~10 min.",
+  "en": "The sentences you need in your first weeks at school: asking things, places, making friends. With help in your own language. ~10 min.",
+  "ar": "الجمل التي تحتاجها في الأسابيع الأولى في المدرسة: أسئلة، أماكن، تكوين أصدقاء. مع مساعدة بلغتك. ~10 دقائق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|2362",
+  "nl": "Vragen aan de juf of meester",
+  "en": "Asking the teacher",
+  "ar": "أسئلة للمعلمة أو المعلم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|2503",
+  "nl": "Op school",
+  "en": "At school",
+  "ar": "في المدرسة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|2693",
+  "nl": "Met andere kinderen",
+  "en": "With other children",
+  "ar": "مع أطفال آخرين"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|3954",
+  "nl": "Op school mag je **altijd** iets vragen.\n\nBegin met **Mag ik…?** of **Kunt u…?**\n\nSteek je hand op. Wacht. Zeg de zin. Dat is genoeg.",
+  "en": "At school you may **always** ask something.\n\nStart with **Mag ik…?** (= May I…?) or **Kunt u…?** (= Can you…?)\n\nPut your hand up. Wait. Say the sentence. That is enough.",
+  "ar": "في المدرسة يمكنك **دائمًا** أن تسأل.\n\nابدأ بـ **Mag ik…?** (= هل يمكنني…؟) أو **Kunt u…?** (= هل يمكنك…؟)\n\nارفع يدك. انتظر. قل الجملة. هذا يكفي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|4262",
+  "nl": "Je wilt naar de wc. Vraag het.",
+  "en": "You want to go to the toilet. Ask.",
+  "ar": "تريد الذهاب إلى الحمام. اسأل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|4486",
+  "nl": "Vragen mag altijd",
+  "en": "You may always ask",
+  "ar": "السؤال مسموح دائمًا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|5143",
+  "nl": "Op school mag je altijd iets **vragen**. Je begint met: **Mag ik…?**",
+  "en": "At school you may always **ask** something. You start with: **Mag ik…?** (= May I…?)",
+  "ar": "في المدرسة يمكنك دائمًا أن **تسأل**. تبدأ بـ: **Mag ik…?** (= هل يمكنني…؟)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|5282",
+  "nl": "De zin",
+  "en": "The sentence",
+  "ar": "الجملة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|6008",
+  "nl": "**Mag ik naar de wc?** Dat is genoeg. De juf of meester zegt ja.",
+  "en": "**Mag ik naar de wc?** (= May I go to the toilet?) That is enough. The teacher says yes.",
+  "ar": "**Mag ik naar de wc?** (= هل يمكنني الذهاب إلى الحمام؟) هذا يكفي. المعلمة أو المعلم يقول نعم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|6180",
+  "nl": "Zeg het rustig",
+  "en": "Say it calmly",
+  "ar": "قلها بهدوء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|6559",
+  "nl": "Steek je hand op. Wacht even. Zeg de zin.",
+  "en": "Put your hand up. Wait a bit. Say the sentence.",
+  "ar": "ارفع يدك. انتظر قليلًا. قل الجملة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|6703",
+  "nl": "mag ik",
+  "en": "may I",
+  "ar": "هل يمكنني"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|7059",
+  "nl": "Zo begin je een vraag om iets te doen.",
+  "en": "This is how you start asking to do something.",
+  "ar": "هكذا تبدأ سؤالًا لتفعل شيئًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|7183",
+  "nl": "wc",
+  "en": "toilet",
+  "ar": "الحمام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|7319",
+  "nl": "Toilet.",
+  "en": "Toilet.",
+  "ar": "المرحاض."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|7682",
+  "nl": "Iets vragen = Mag ik…?",
+  "en": "Asking something = \"Mag ik…?\" (= May I…?)",
+  "ar": "أن تطلب شيئًا = «Mag ik…?» (هل يمكنني…؟)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|7958",
+  "nl": "Mag ik water drinken?",
+  "en": "\"Mag ik water drinken?\" (= May I drink water?)",
+  "ar": "«Mag ik water drinken?» = هل يمكنني أن أشرب ماء؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|8258",
+  "nl": "Mag ik mijn jas pakken?",
+  "en": "\"Mag ik mijn jas pakken?\" (= May I get my coat?)",
+  "ar": "«Mag ik mijn jas pakken?» = هل يمكنني أن آخذ معطفي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|8378",
+  "nl": "Truc",
+  "en": "Trick",
+  "ar": "حيلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|8647",
+  "nl": "Hand omhoog, dan de zin.",
+  "en": "Hand up, then the sentence.",
+  "ar": "اليد إلى أعلى، ثم الجملة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|9088",
+  "nl": "Zeg: Mag ik naar de wc?",
+  "en": "Say: \"Mag ik naar de wc?\" (= May I go to the toilet?)",
+  "ar": "قل: «Mag ik naar de wc?» (هل يمكنني الذهاب إلى الحمام؟)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|9494",
+  "nl": "Begin met 'Mag ik'. Dan wat je wilt.",
+  "en": "Start with \"Mag ik\" (= May I). Then what you want.",
+  "ar": "ابدأ بـ «Mag ik». ثم ما تريده."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|9767",
+  "nl": "Mag ik naar de wc?",
+  "en": "May I go to the toilet?",
+  "ar": "«Mag ik naar de wc?» = هل يمكنني الذهاب إلى الحمام؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|10074",
+  "nl": "Je begrijpt het niet. Zeg dat eerlijk.",
+  "en": "You don't understand. Say so honestly.",
+  "ar": "أنت لا تفهم. قل ذلك بصدق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|10354",
+  "nl": "Je wilt het nog een keer horen.",
+  "en": "You want to hear it one more time.",
+  "ar": "تريد أن تسمعه مرة أخرى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|10675",
+  "nl": "Je wilt weten wat het woord betekent.",
+  "en": "You want to know what the word is.",
+  "ar": "تريد أن تعرف ما هي الكلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|10873",
+  "nl": "Je werk is af.",
+  "en": "Your work is done.",
+  "ar": "عملك انتهى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|12414",
+  "nl": "Op school zijn plekken en regels.\n\nDe **klas**: leren. De **gymzaal**: sport. Het **plein**: buiten spelen.\n\nDe **bel** zegt: nu begint iets, of nu is iets klaar.",
+  "en": "At school there are places and rules.\n\nThe **klas** (classroom): learning. The **gymzaal** (gym hall): sport. The **plein** (playground): playing outside.\n\nThe **bel** (bell) says: now something starts, or now something ends.",
+  "ar": "في المدرسة أماكن وقواعد.\n\n**الصف** («de klas»): للتعلم. **صالة الرياضة** («de gymzaal»): للرياضة. **الساحة** («het plein»): للعب في الخارج.\n\n**الجرس** («de bel») يقول: الآن يبدأ شيء، أو الآن ينتهي شيء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|12798",
+  "nl": "Gym doe je in de gymzaal.",
+  "en": "You do gym in the gym hall.",
+  "ar": "تمارس الرياضة («gym») في صالة الرياضة («gymzaal»)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|12988",
+  "nl": "Plekken op school",
+  "en": "Places at school",
+  "ar": "أماكن في المدرسة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|13921",
+  "nl": "De **klas** is waar je leert. De **gymzaal** is waar je sport. Het **plein** is buiten.",
+  "en": "The **klas** (classroom) is where you learn. The **gymzaal** (gym hall) is where you do sport. The **plein** (playground) is outside.",
+  "ar": "**الصف** («klas») هو مكان التعلم. **صالة الرياضة** («gymzaal») هي مكان الرياضة. **الساحة** («plein») في الخارج."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|14062",
+  "nl": "Gym",
+  "en": "Gym",
+  "ar": "الرياضة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|14845",
+  "nl": "**Gym** is sport op school. Je doet gymkleren aan. Je gaat naar de **gymzaal**.",
+  "en": "**Gym** is sport at school. You put on gym clothes. You go to the **gymzaal** (gym hall).",
+  "ar": "**Gym** هي الرياضة في المدرسة. تلبس ملابس الرياضة. تذهب إلى **صالة الرياضة** («gymzaal»)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|14980",
+  "nl": "Onthoud",
+  "en": "Remember",
+  "ar": "تذكّر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|15344",
+  "nl": "gym = sport · gymzaal = de zaal voor sport.",
+  "en": "gym = sport · gymzaal = the hall for sport.",
+  "ar": "gym = رياضة · gymzaal = القاعة للرياضة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|15502",
+  "nl": "gymzaal",
+  "en": "gym hall",
+  "ar": "صالة الرياضة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|15761",
+  "nl": "De zaal waar je sport.",
+  "en": "The hall where you do sport.",
+  "ar": "القاعة التي تمارس فيها الرياضة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|15915",
+  "nl": "plein",
+  "en": "playground",
+  "ar": "الساحة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|16237",
+  "nl": "Buiten, waar je speelt in de pauze.",
+  "en": "Outside, where you play at break time.",
+  "ar": "في الخارج، حيث تلعب في الاستراحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|16715",
+  "nl": "Elke les heeft een plek: klas, gymzaal, plein.",
+  "en": "Every lesson has a place: klas (classroom), gymzaal (gym hall), plein (playground).",
+  "ar": "لكل درس مكان: الصف، صالة الرياضة، الساحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|16922",
+  "nl": "Pauze → plein.",
+  "en": "Break → playground.",
+  "ar": "الاستراحة → الساحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|17131",
+  "nl": "Rekenen → klas.",
+  "en": "Maths → classroom.",
+  "ar": "الحساب → الصف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|17426",
+  "nl": "Gym hoort bij gymzaal.",
+  "en": "Gym goes with the gym hall.",
+  "ar": "الرياضة مكانها صالة الرياضة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|17707",
+  "nl": "Gym is in de gymzaal.",
+  "en": "Gym is in the gym hall.",
+  "ar": "الرياضة في صالة الرياضة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|17995",
+  "nl": "Sport op school = gymzaal.",
+  "en": "Sport at school = gym hall.",
+  "ar": "الرياضة في المدرسة = صالة الرياضة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|18160",
+  "nl": "Gymzaal.",
+  "en": "Gym hall.",
+  "ar": "صالة الرياضة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|18559",
+  "nl": "De bel zegt: nu begint of eindigt iets.",
+  "en": "The bell says: now something starts or ends.",
+  "ar": "الجرس يقول: الآن يبدأ شيء أو ينتهي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|18823",
+  "nl": "Jassen hangen aan een haak.",
+  "en": "Coats hang on a hook.",
+  "ar": "المعاطف تُعلَّق على علّاقة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|19095",
+  "nl": "In de pauze ga je naar buiten.",
+  "en": "At break time you go outside.",
+  "ar": "في الاستراحة تخرج إلى الخارج."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|19316",
+  "nl": "Zeg wat je vergeten bent.",
+  "en": "Say what you forgot.",
+  "ar": "قل ما نسيته."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|21153",
+  "nl": "Zo maak je vrienden.\n\n**Hoe heet je?** → **Ik heet …**\n**Mag ik meedoen?** → dan speel je mee.\n**Dank je wel** als iemand je helpt.\n\nEn: **nee** zeggen mag altijd.",
+  "en": "This is how you make friends.\n\n**Hoe heet je?** (= What is your name?) → **Ik heet …** (= My name is …)\n**Mag ik meedoen?** (= Can I join?) → then you play along.\n**Dank je wel** (= Thank you) when someone helps you.\n\nAnd: saying **nee** (= no) is always okay.",
+  "ar": "هكذا تكوّن أصدقاء.\n\n**Hoe heet je?** (= ما اسمك؟) → **Ik heet …** (= اسمي …)\n**Mag ik meedoen?** (= هل يمكنني أن ألعب معكم؟) → ثم تلعب معهم.\n**Dank je wel** (= شكرًا) عندما يساعدك أحد.\n\nو: قول **nee** (= لا) مسموح دائمًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|21327",
+  "nl": "Zeg je naam.",
+  "en": "Say your name.",
+  "ar": "قل اسمك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|21508",
+  "nl": "Jezelf voorstellen",
+  "en": "Saying who you are",
+  "ar": "تعرّف بنفسك"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|22258",
+  "nl": "**Hoe heet je?** = wat is je naam. Je zegt: **Ik heet …** en dan je naam.",
+  "en": "**Hoe heet je?** = what is your name. You say: **Ik heet …** (= My name is …) and then your name.",
+  "ar": "**Hoe heet je?** = ما اسمك. تقول: **Ik heet …** (= اسمي …) ثم اسمك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|22428",
+  "nl": "Meer vragen",
+  "en": "More questions",
+  "ar": "أسئلة أخرى"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|23525",
+  "nl": "**Hoe oud ben je?** → **Ik ben … jaar.** **Waar kom je vandaan?** → **Ik kom uit …**",
+  "en": "**Hoe oud ben je?** (= How old are you?) → **Ik ben … jaar.** (= I am … years old.) **Waar kom je vandaan?** (= Where are you from?) → **Ik kom uit …** (= I am from …)",
+  "ar": "**Hoe oud ben je?** (= كم عمرك؟) → **Ik ben … jaar.** (= عمري … سنوات.) **Waar kom je vandaan?** (= من أين أنت؟) → **Ik kom uit …** (= أنا من …)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|23665",
+  "nl": "Vriendelijk",
+  "en": "Friendly",
+  "ar": "بلطف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|24144",
+  "nl": "Kijk het kind aan. Lach. Dat helpt meer dan woorden.",
+  "en": "Look at the child. Smile. That helps more than words.",
+  "ar": "انظر إلى الطفل. ابتسم. هذا يساعد أكثر من الكلمات."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|24285",
+  "nl": "heten",
+  "en": "to be called",
+  "ar": "يُسمّى"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|24610",
+  "nl": "Je naam hebben. Ik heet Sam.",
+  "en": "To have your name. \"Ik heet Sam.\" (= My name is Sam.)",
+  "ar": "أن يكون لك اسم. «Ik heet Sam» = اسمي سام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|25084",
+  "nl": "Hoe heet je? → Ik heet …",
+  "en": "\"Hoe heet je?\" (= What is your name?) → \"Ik heet …\" (= My name is …)",
+  "ar": "«Hoe heet je?» (ما اسمك؟) → «Ik heet …» (اسمي …)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|25437",
+  "nl": "Hoe heet je? Ik heet Amira.",
+  "en": "\"Hoe heet je? Ik heet Amira.\" (= What is your name? My name is Amira.)",
+  "ar": "«Hoe heet je? Ik heet Amira.» = ما اسمك؟ اسمي أميرة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|25833",
+  "nl": "Hoe oud ben je? Ik ben negen jaar.",
+  "en": "\"Hoe oud ben je? Ik ben negen jaar.\" (= How old are you? I am nine years old.)",
+  "ar": "«Hoe oud ben je? Ik ben negen jaar.» = كم عمرك؟ عمري تسع سنوات."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|26079",
+  "nl": "Ik heet + naam.",
+  "en": "\"Ik heet\" + name.",
+  "ar": "«Ik heet» + الاسم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|26447",
+  "nl": "Zeg: Ik heet … en je naam.",
+  "en": "Say: \"Ik heet …\" (= My name is …) and your name.",
+  "ar": "قل: «Ik heet …» ثم اسمك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|26640",
+  "nl": "Ik heet Sam.",
+  "en": "My name is Sam.",
+  "ar": "«Ik heet Sam.» = اسمي سام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|26809",
+  "nl": "Ik heet …",
+  "en": "My name is …",
+  "ar": "«Ik heet …» = اسمي …"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|27105",
+  "nl": "Vraag of je mee mag doen.",
+  "en": "Ask if you can join in.",
+  "ar": "اسأل إن كان يمكنك أن تلعب معهم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|27315",
+  "nl": "Je bedankt iemand.",
+  "en": "You thank someone.",
+  "ar": "تشكر شخصًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|27583",
+  "nl": "Je mag altijd nee zeggen.",
+  "en": "You may always say no.",
+  "ar": "يمكنك دائمًا أن تقول لا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|27917",
+  "nl": "Aan het eind van de dag zeg je dag.",
+  "en": "At the end of the day you say bye.",
+  "ar": "في نهاية اليوم تقول «dag» (مع السلامة)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|28350",
+  "nl": "Woorden — je eerste Nederlandse woorden (nieuwkomers)",
+  "en": "Words — your first Dutch words (newcomers)",
+  "ar": "كلمات — أول كلماتك الهولندية (للقادمين الجدد)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|29382",
+  "nl": "Twintig woorden voor school, thuis, eten, lichaam, kleuren en doe-woorden. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~12 min.",
+  "en": "Twenty words for school, home, food, body, colours and action words. The word is in your language; you pick the Dutch word. ~12 min.",
+  "ar": "عشرون كلمة للمدرسة والبيت والطعام والجسم والألوان وكلمات الأفعال. الكلمة مكتوبة بلغتك؛ وأنت تختار الكلمة الهولندية. ~12 دقيقة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|29552",
+  "nl": "Thuis en eten",
+  "en": "Home and food",
+  "ar": "البيت والطعام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|29740",
+  "nl": "Lichaam en kleuren",
+  "en": "Body and colours",
+  "ar": "الجسم والألوان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|30898",
+  "nl": "Je ziet een woord in **jouw taal**. Kies het **Nederlandse** woord.\n\nLeer elk woord met **de** of **het** ervoor: de tafel, het boek.",
+  "en": "You see a word in **your language**. Pick the **Dutch** word.\n\nLearn each word with **de** or **het** in front: \"de tafel\" (the table), \"het boek\" (the book).",
+  "ar": "ترى كلمة **بلغتك**. اختر الكلمة **الهولندية**.\n\nتعلّم كل كلمة مع **de** أو **het** قبلها: «de tafel» (الطاولة)، «het boek» (الكتاب)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|31406",
+  "nl": "Kijk naar het woord in jouw taal. Welk Nederlands woord past?",
+  "en": "Look at the word in your language. Which Dutch word fits?",
+  "ar": "انظر إلى الكلمة بلغتك. أي كلمة هولندية تناسبها؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|31579",
+  "nl": "Zo werkt dit",
+  "en": "How this works",
+  "ar": "هكذا يعمل هذا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|32245",
+  "nl": "Je ziet een woord in **jouw taal**. Kies het **Nederlandse** woord dat hetzelfde betekent.",
+  "en": "You see a word in **your language**. Pick the **Dutch** word that means the same.",
+  "ar": "ترى كلمة **بلغتك**. اختر الكلمة **الهولندية** التي لها نفس المعنى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|32408",
+  "nl": "De tafel",
+  "en": "The table",
+  "ar": "الطاولة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|32916",
+  "nl": "Aan een **tafel** zit je. Je werkt eraan. Je eet eraan.",
+  "en": "You sit at a **tafel** (table). You work at it. You eat at it.",
+  "ar": "تجلس إلى **الطاولة** («tafel»). تعمل عليها. تأكل عليها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|33070",
+  "nl": "de en het",
+  "en": "de and het",
+  "ar": "«de» و«het»"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|33970",
+  "nl": "In het Nederlands hoort **de** of **het** bij een woord. Leer ze samen: **de tafel**, **het raam**.",
+  "en": "In Dutch, **de** or **het** goes with a word. Learn them together: **de tafel** (the table), **het raam** (the window).",
+  "ar": "في الهولندية تأتي **de** أو **het** مع الكلمة. تعلّمهما معًا: **de tafel** (الطاولة)، **het raam** (النافذة)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|34094",
+  "nl": "de tafel",
+  "en": "the table",
+  "ar": "الطاولة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|34280",
+  "nl": "Daar zit je aan.",
+  "en": "You sit at it.",
+  "ar": "تجلس إليها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|34413",
+  "nl": "de stoel",
+  "en": "the chair",
+  "ar": "الكرسي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|34599",
+  "nl": "Daar zit je op.",
+  "en": "You sit on it.",
+  "ar": "تجلس عليه."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|34957",
+  "nl": "Leer het woord altijd mét de of het.",
+  "en": "Always learn the word with \"de\" or \"het\".",
+  "ar": "تعلّم الكلمة دائمًا مع «de» أو «het»."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|35359",
+  "nl": "de tafel, de stoel, de deur",
+  "en": "the table, the chair, the door",
+  "ar": "«de tafel, de stoel, de deur» = الطاولة، الكرسي، الباب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|35780",
+  "nl": "het raam, het boek, het bord",
+  "en": "the window, the book, the board",
+  "ar": "«het raam, het boek, het bord» = النافذة، الكتاب، اللوح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|36192",
+  "nl": "Zeg het woord hardop met de of het ervoor.",
+  "en": "Say the word out loud with \"de\" or \"het\" in front.",
+  "ar": "قل الكلمة بصوت عالٍ مع «de» أو «het» قبلها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|36451",
+  "nl": "Kies het Nederlandse woord.",
+  "en": "Pick the Dutch word.",
+  "ar": "اختر الكلمة الهولندية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|36886",
+  "nl": "Kijk naar jouw taal. Welk woord is dat in het Nederlands?",
+  "en": "Look at your language. What is that word in Dutch?",
+  "ar": "انظر إلى لغتك. ما هذه الكلمة بالهولندية؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|37497",
+  "nl": "Woorden voor **thuis** en **eten**.\n\nZeg ze hardop. Wijs ze aan in huis.",
+  "en": "Words for **home** and **food**.\n\nSay them out loud. Point at them in the house.",
+  "ar": "كلمات عن **البيت** و**الطعام**.\n\nقلها بصوت عالٍ. أشِر إليها في البيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|37611",
+  "nl": "Thuis",
+  "en": "Home",
+  "ar": "في البيت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|38158",
+  "nl": "**Thuis** is waar je woont. Dat is je **huis**.",
+  "en": "**Thuis** (home) is where you live. That is your **huis** (house).",
+  "ar": "**البيت** («thuis») هو المكان الذي تسكن فيه. هذا **بيتك** («huis»)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|38294",
+  "nl": "In huis",
+  "en": "In the house",
+  "ar": "داخل البيت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|39166",
+  "nl": "In huis zijn de **keuken** (koken), de **kamer** (zitten) en de **slaapkamer** (slapen).",
+  "en": "In the house there is the **keuken** (kitchen, for cooking), the **kamer** (room, for sitting) and the **slaapkamer** (bedroom, for sleeping).",
+  "ar": "في البيت يوجد **المطبخ** («keuken») للطبخ، و**الغرفة** («kamer») للجلوس، و**غرفة النوم** («slaapkamer») للنوم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|39282",
+  "nl": "Eten",
+  "en": "Food",
+  "ar": "الطعام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|40073",
+  "nl": "**Brood**, **water**, **melk**, **appel**: woorden die je elke dag hoort.",
+  "en": "**Brood** (bread), **water** (water), **melk** (milk), **appel** (apple): words you hear every day.",
+  "ar": "**Brood** (خبز)، **water** (ماء)، **melk** (حليب)، **appel** (تفاحة): كلمات تسمعها كل يوم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|40192",
+  "nl": "het huis",
+  "en": "the house",
+  "ar": "البيت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|40367",
+  "nl": "Waar je woont.",
+  "en": "Where you live.",
+  "ar": "حيث تسكن."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|40502",
+  "nl": "de keuken",
+  "en": "the kitchen",
+  "ar": "المطبخ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|40687",
+  "nl": "Waar je kookt.",
+  "en": "Where you cook.",
+  "ar": "حيث تطبخ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|40938",
+  "nl": "Huis = waar je woont.",
+  "en": "House = where you live.",
+  "ar": "«huis» = حيث تسكن."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|41148",
+  "nl": "Ik ga naar huis.",
+  "en": "I am going home.",
+  "ar": "«Ik ga naar huis.» = أنا ذاهب إلى البيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|41383",
+  "nl": "Mama is in de keuken.",
+  "en": "Mum is in the kitchen.",
+  "ar": "«Mama is in de keuken.» = ماما في المطبخ."
+ }
+]

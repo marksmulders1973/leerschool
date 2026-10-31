@@ -1,0 +1,126 @@
+[
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|117308",
+    "oordeel": "verbeterd",
+    "was": "حساب با **کلمه‌ها** و **پول**.\n\n**Samen** (با هم) = جمع. **Uitgeven, weg, over** (خرج کردن، رفته، باقی‌مانده) = تفریق.\n\nحساب را بنویس. قدم به قدم حساب کن.",
+    "nu": "مسئله با **کلمه‌ها** و **پول**.\n\n**Samen** (با هم) = جمع. **Uitgeven, weg, over** (خرج کردن، رفته، باقی‌مانده) = تفریق.\n\nمسئله را بنویس. قدم به قدم حساب کن.",
+    "reden": "som = مسئله (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|118049",
+    "oordeel": "verbeterd",
+    "was": "سؤال را یک بار دیگر بخوان. \"Samen\" (با هم) = جمع. \"Weg, uit, over\" (رفته، خرج، باقی‌مانده) = تفریق.",
+    "nu": "مسئله را یک بار دیگر بخوان. \"Samen\" (با هم) = جمع. \"Weg, uit, over\" (رفته، خرج، باقی‌مانده) = تفریق.",
+    "reden": "som = مسئله (vaste lijst); bron zegt \"de som\", niet \"de vraag\""
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|143846",
+    "oordeel": "verbeterd",
+    "was": "کلمه‌های ریاضی — کلمه‌های پشت حساب‌ها (تازه‌واردها)",
+    "nu": "کلمه‌های ریاضی — کلمه‌های پشت مسئله‌ها (تازه‌واردها)",
+    "reden": "sommen = مسئله‌ها (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|160959",
+    "oordeel": "verbeterd",
+    "was": "کلمه‌های ریاضی می‌گویند چه حسابی باید بکنی.\n\n**Samen** (با هم) و **erbij** (اضافه) = جمع (+).\n**Weg** (رفته)، **eraf** (کم شده) و **over** (باقی‌مانده) = تفریق (−).\n\nاول کلمه ریاضی را پیدا کن. بعد می‌دانی چه حسابی است.",
+    "nu": "کلمه‌های ریاضی می‌گویند کدام مسئله را باید حل کنی.\n\n**Samen** (با هم) و **erbij** (اضافه) = جمع (+).\n**Weg** (رفته)، **eraf** (کم شده) و **over** (باقی‌مانده) = تفریق (−).\n\nاول کلمه ریاضی را پیدا کن. بعد می‌دانی مسئله چیست.",
+    "reden": "som = مسئله (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|124542",
+    "oordeel": "verbeterd",
+    "was": "گفتن این‌که چه **حسی** داری **همیشه** اشکالی ندارد.\n\n**Ik ben** (من هستم) خوشحال · ترسیده · عصبانی · خسته · غمگین.\n**Ik heb** (من دارم) درد · گرسنگی.\n**Ik voel me niet goed.** (حالم خوب نیست.)\n\nمعلم می‌خواهد بداند و به تو کمک می‌کند.",
+    "nu": "گفتن این‌که چه **حسی** داری **همیشه** اشکالی ندارد.\n\n**Ik ben** (من هستم) خوشحال · ترسیده · عصبانی · خسته · غمگین.\n**Ik heb** (من دارم) درد · گرسنگی.\n**Ik voel me niet goed.** (حالم خوب نیست.)\n\nخانم معلم یا آقای معلم می‌خواهند بداند و به تو کمک می‌کند.",
+    "reden": "\"de juf of meester\" = خانم معلم یا آقای معلم (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|126268",
+    "oordeel": "verbeterd",
+    "was": "گفتن این‌که چه **حسی** داری همیشه اشکالی ندارد. معلم می‌خواهد بداند و به تو کمک می‌کند.",
+    "nu": "گفتن این‌که چه **حسی** داری همیشه اشکالی ندارد. خانم معلم یا آقای معلم می‌خواهند بداند و به تو کمک می‌کند.",
+    "reden": "\"de juf of meester\" volgens vaste lijst"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|124917",
+    "oordeel": "verbeterd",
+    "was": "سرت درد می‌کند. به معلم چه می‌گویی؟",
+    "nu": "سرت درد می‌کند. به خانم معلم چه می‌گویی؟",
+    "reden": "de juf = خانم معلم"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|125356",
+    "oordeel": "verbeterd",
+    "was": "zeer doen = pijn (درد). این را به معلم بگو.",
+    "nu": "zeer doen = pijn (درد). این را به خانم معلم بگو.",
+    "reden": "de juf = خانم معلم"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|132379",
+    "oordeel": "verbeterd",
+    "was": "مریض هستی. به معلم چه می‌گویی؟",
+    "nu": "مریض هستی. به خانم معلم چه می‌گویی؟",
+    "reden": "de juf = خانم معلم"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|138262",
+    "oordeel": "verbeterd",
+    "was": "معلم اغلب می‌گوید چه کاری باید **انجام بدهی**.\n\n**Schrijf** (بنویس)، **knip** (قیچی کن)، **luister** (گوش کن)، **ruim op** (مرتب کن)، **kleur** (رنگ کن).\n\nکلمه را فوراً انجام بده: وقتی **schrijven** (نوشتن) را می‌شنوی، یک خودکار بردار. این‌طوری یادت می‌ماند.",
+    "nu": "خانم معلم یا آقای معلم اغلب می‌گویند چه کاری باید **انجام بدهی**.\n\n**Schrijf** (بنویس)، **knip** (قیچی کن)، **luister** (گوش کن)، **ruim op** (مرتب کن)، **kleur** (رنگ کن).\n\nکلمه را فوراً انجام بده: وقتی **schrijven** (نوشتن) را می‌شنوی، یک قلم بردار. این‌طوری یادت می‌ماند.",
+    "reden": "juf of meester volgens vaste lijst; pen = قلم"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|140098",
+    "oordeel": "verbeterd",
+    "was": "**schrijven** (نوشتن) را می‌شنوی؟ خودکارت را بردار. **luisteren** (گوش دادن) را می‌شنوی؟ ساکت باش و به معلم نگاه کن.",
+    "nu": "**schrijven** (نوشتن) را می‌شنوی؟ قلمت را بردار. **luisteren** (گوش دادن) را می‌شنوی؟ ساکت باش و به خانم معلم نگاه کن.",
+    "reden": "pen = قلم; de juf = خانم معلم"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|141071",
+    "oordeel": "verbeterd",
+    "was": "معلم اغلب می‌گوید: اسمت را **بنویس** (Schrijf). آن را **قیچی کن** (Knip). میزت را **مرتب کن** (Ruim op).",
+    "nu": "خانم معلم اغلب می‌گوید: اسمت را **بنویس** (Schrijf). آن را **قیچی کن** (Knip). میزت را **مرتب کن** (Ruim op).",
+    "reden": "de juf = خانم معلم"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|141534",
+    "oordeel": "verbeterd",
+    "was": "درست کردن حرف‌ها با خودکار یا مداد.",
+    "nu": "درست کردن حرف‌ها با قلم یا مداد.",
+    "reden": "pen = قلم (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|143369",
+    "oordeel": "verbeterd",
+    "was": "درست کردن حرف‌ها با خودکار = نوشتن.",
+    "nu": "درست کردن حرف‌ها با قلم = نوشتن.",
+    "reden": "pen = قلم (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|155788",
+    "oordeel": "verbeterd",
+    "was": "نور 4 خودکار دارد. آدم 4 خودکار دارد. کدام درست است؟",
+    "nu": "نور 4 قلم دارد. آدام 4 قلم دارد. کدام درست است؟",
+    "reden": "pen = قلم; naam Adam als آدام (آدم = \"mens/iemand\", verwarrend)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|156527",
+    "oordeel": "verbeterd",
+    "was": "آدم بیشتر دارد.",
+    "nu": "آدام بیشتر دارد.",
+    "reden": "naam Adam als آدام (آدم betekent \"mens\")"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|133194",
+    "oordeel": "verbeterd",
+    "was": "می‌توانم من هم شرکت کنم؟",
+    "nu": "من هم می‌توانم شرکت کنم؟",
+    "reden": "natuurlijker woordvolgorde"
+  },
+  {
+    "id": "_telling",
+    "goed": 154,
+    "verbeterd": 17
+  }
+]

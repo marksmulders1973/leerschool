@@ -1,0 +1,133 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|48903",
+  "oordeel": "verbeterd",
+  "was": "شمردن تا 20، اضافه کردن و کم کردن تا 10، رد شدن از 10، و حساب‌های کلمه‌ای. جمله‌های کوتاه، هر حساب با توضیح. برای بچه‌هایی هم که هنوز هلندی یاد می‌گیرند. ~10 دقیقه.",
+  "nu": "شمردن تا 20، اضافه کردن و کم کردن تا 10، رد شدن از 10، و مسئله‌هایی با کلمه‌ها. جمله‌های کوتاه، هر مسئله با توضیح. برای بچه‌هایی هم که هنوز هلندی یاد می‌گیرند. ~10 دقیقه.",
+  "reden": "Vast woord: som = مسئله"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|49809",
+  "oordeel": "verbeterd",
+  "was": "حساب‌هایی از کلاس",
+  "nu": "مسئله‌هایی از کلاس",
+  "reden": "Vast woord: som = مسئله"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|60016",
+  "oordeel": "verbeterd",
+  "was": "اول بزرگ‌ترین",
+  "nu": "اول عدد بزرگ‌تر",
+  "reden": "Gelijk aan de uitleg (عدد بزرگ‌تر); 'بزرگ‌ترین' zonder zelfstandig naamwoord was vaag"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|74526",
+  "oordeel": "verbeterd",
+  "was": "8 + 5. اول **10** بساز: 8 + 2 = 10. 5 تا داشتی، 2 تا را استفاده کردی. 3 تا مانده. 10 + 3 = **13**.",
+  "nu": "8 + 5. اول **10** بساز: 8 + 2 = 10. 5 تا داشتی، از 2 تا استفاده کردی. 3 تا مانده. 10 + 3 = **13**.",
+  "reden": "'استفاده کردن' vraagt 'از'; '2 تا را استفاده کردی' is fout"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|75970",
+  "oordeel": "verbeterd",
+  "was": "10 انگشت پر شد؟ پس دوباره شروع کن و جلوتر بشمار: 11, 12, 13.",
+  "nu": "10 انگشت تمام شد؟ پس دوباره شروع کن و جلوتر بشمار: 11, 12, 13.",
+  "reden": "'انگشت پر شد' is onnatuurlijk; 'تمام شد' = alle 10 vingers op"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|81561",
+  "oordeel": "verbeterd",
+  "was": "حالا حساب با **کلمه‌ها**.\n\nخوب بخوان. **چیزی اضافه می‌شود؟** پس به‌علاوه. **چیزهایی می‌روند؟** پس منها.\n\nحساب را بنویس. حلش کن.",
+  "nu": "حالا مسئله با **کلمه‌ها**.\n\nخوب بخوان. **چیزی اضافه می‌شود؟** پس جمع. **چیزهایی می‌روند؟** پس تفریق.\n\nمسئله را بنویس. حلش کن.",
+  "reden": "Vast woord som = مسئله; 'Dan plus/min' als bewerking natuurlijker als جمع/تفریق (gelijk aan pakket 3)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|82015",
+  "oordeel": "verbeterd",
+  "was": "حساب را یک بار دیگر بخوان. اضافه کردن است یا کم کردن؟",
+  "nu": "مسئله را یک بار دیگر بخوان. اضافه کردن است یا کم کردن؟",
+  "reden": "Vast woord: som = مسئله"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|83024",
+  "oordeel": "verbeterd",
+  "was": "حساب را بخوان. **بچه‌های بیشتری می‌آیند؟** پس **به‌علاوه** است. **چند تا می‌روند؟** پس **منها** است.",
+  "nu": "مسئله را بخوان. **بچه‌های بیشتری می‌آیند؟** پس **جمع** است. **چند تا می‌روند؟** پس **تفریق** است.",
+  "reden": "Vast woord som = مسئله; 'پس به‌علاوه است' is onnatuurlijk, bewerking = جمع/تفریق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|83208",
+  "oordeel": "verbeterd",
+  "was": "حساب را بنویس",
+  "nu": "مسئله را بنویس",
+  "reden": "Vast woord: som = مسئله"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|84605",
+  "oordeel": "verbeterd",
+  "was": "**Erbij, komen, samen** (بیشتر، آمدن، با هم) = به‌علاوه. **Weg, eten, geven** (رفته، خوردن، دادن) = منها.",
+  "nu": "**Erbij, komen, samen** (بیشتر، آمدن، با هم) = جمع. **Weg, eten, geven** (رفته، خوردن، دادن) = تفریق.",
+  "reden": "Bewerking als جمع/تفریق, natuurlijker en gelijk aan pakket 3"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|84953",
+  "oordeel": "verbeterd",
+  "was": "همه با هم. به‌علاوه.",
+  "nu": "همه با هم. جمع.",
+  "reden": "Bewerking als جمع (natuurlijker, gelijk aan pakket 3)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|85285",
+  "oordeel": "verbeterd",
+  "was": "دیگر نیست. منها.",
+  "nu": "دیگر نیست. تفریق.",
+  "reden": "Bewerking als تفریق (natuurlijker, gelijk aan pakket 3)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|85640",
+  "oordeel": "verbeterd",
+  "was": "کلمه‌ای را پیدا کن که می‌گوید: به‌علاوه یا منها.",
+  "nu": "کلمه‌ای را پیدا کن که می‌گوید: جمع یا تفریق.",
+  "reden": "Bewerking als جمع/تفریق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|86830",
+  "oordeel": "verbeterd",
+  "was": "ببین به‌علاوه است یا منها.",
+  "nu": "ببین جمع است یا تفریق.",
+  "reden": "'به‌علاوه است یا منها' is onnatuurlijk; bewerking = جمع/تفریق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|87179",
+  "oordeel": "verbeterd",
+  "was": "بیشتر می‌آیند = به‌علاوه. می‌روند = منها.",
+  "nu": "بیشتر می‌آیند = جمع. می‌روند = تفریق.",
+  "reden": "Bewerking als جمع/تفریق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|87384",
+  "oordeel": "verbeterd",
+  "was": "بیشتر = به‌علاوه.",
+  "nu": "بیشتر = جمع.",
+  "reden": "Bewerking als جمع"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|89090",
+  "oordeel": "verbeterd",
+  "was": "دهگان و یکان، اضافه کردن و کم کردن با پرش، رد شدن از دهگان، و حساب با پول. جمله‌های کوتاه، هر حساب با توضیح. برای بچه‌هایی هم که هنوز هلندی یاد می‌گیرند. ~10 دقیقه.",
+  "nu": "دهگان و یکان، اضافه کردن و کم کردن با پرش، رد شدن از دهگان، و مسئله با پول. جمله‌های کوتاه، هر مسئله با توضیح. برای بچه‌هایی هم که هنوز هلندی یاد می‌گیرند. ~10 دقیقه.",
+  "reden": "Vast woord: som = مسئله"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|90080",
+  "oordeel": "verbeterd",
+  "was": "حساب‌هایی از مغازه",
+  "nu": "مسئله‌هایی از مغازه",
+  "reden": "Vast woord: som = مسئله"
+ },
+ {
+  "id": "_telling",
+  "goed": 153,
+  "verbeterd": 18
+ }
+]

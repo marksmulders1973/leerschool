@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|267781",
+  "nl": "Ik zeg mijn naam hardop.",
+  "en": "I say my name out loud.",
+  "ar": "أقول اسمي بصوت عالٍ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|268016",
+  "nl": "Ik schrijf de naam van de juf.",
+  "en": "I write the teacher's name.",
+  "ar": "أكتب اسم المعلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|268412",
+  "nl": "Op je blad staat: schrijf het antwoord op. Wat doe je?",
+  "en": "Your sheet says: write down the answer. What do you do?",
+  "ar": "مكتوب في ورقتك: اكتب الجواب. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|268682",
+  "nl": "Ik schrijf het antwoord met mijn potlood.",
+  "en": "I write the answer with my pencil.",
+  "ar": "أكتب الجواب بقلم الرصاص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|268937",
+  "nl": "Ik zeg het antwoord tegen een vriend.",
+  "en": "I tell the answer to a friend.",
+  "ar": "أقول الجواب لصديق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|269137",
+  "nl": "Ik denk aan het antwoord.",
+  "en": "I think about the answer.",
+  "ar": "أفكر في الجواب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|269360",
+  "nl": "Ik wijs het antwoord aan.",
+  "en": "I point to the answer.",
+  "ar": "أشير إلى الجواب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|269929",
+  "nl": "Op je blad staat: maak de zin af. De zin is: Ik eet een … Wat doe je?",
+  "en": "Your sheet says: finish the sentence. The sentence is: I eat a … What do you do?",
+  "ar": "مكتوب في ورقتك: أكمل الجملة. الجملة هي: آكل … ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|270274",
+  "nl": "Ik schrijf een woord aan het eind, bijvoorbeeld appel.",
+  "en": "I write a word at the end, for example apple.",
+  "ar": "أكتب كلمة في النهاية، مثلًا تفاحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|270490",
+  "nl": "Ik begin een nieuwe zin.",
+  "en": "I start a new sentence.",
+  "ar": "أبدأ جملة جديدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|270752",
+  "nl": "Ik lees de zin en ga verder.",
+  "en": "I read the sentence and carry on.",
+  "ar": "أقرأ الجملة وأكمل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|271133",
+  "nl": "De juf zegt: sla de bladzijde om. Wat doe je?",
+  "en": "The teacher says: turn the page. What do you do?",
+  "ar": "تقول المعلمة: اقلب الصفحة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|271385",
+  "nl": "Ik ga naar de volgende bladzijde.",
+  "en": "I go to the next page.",
+  "ar": "أنتقل إلى الصفحة التالية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|271567",
+  "nl": "Ik doe mijn boek dicht.",
+  "en": "I close my book.",
+  "ar": "أغلق كتابي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|271770",
+  "nl": "Ik scheur de bladzijde eruit.",
+  "en": "I tear the page out.",
+  "ar": "أمزّق الصفحة وأخرجها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|272059",
+  "nl": "Ik begin weer bij de eerste bladzijde.",
+  "en": "I start again at the first page.",
+  "ar": "أبدأ من جديد من الصفحة الأولى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|272447",
+  "nl": "Op je blad staat: lees de zin. Wat doe je?",
+  "en": "Your sheet says: read the sentence. What do you do?",
+  "ar": "مكتوب في ورقتك: اقرأ الجملة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|272711",
+  "nl": "Ik kijk naar de woorden en lees ze.",
+  "en": "I look at the words and read them.",
+  "ar": "أنظر إلى الكلمات وأقرأها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|272904",
+  "nl": "Ik schrijf de zin over.",
+  "en": "I copy the sentence.",
+  "ar": "أنسخ الجملة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|273079",
+  "nl": "Ik teken de zin.",
+  "en": "I draw the sentence.",
+  "ar": "أرسم الجملة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|273266",
+  "nl": "Ik sla de zin over.",
+  "en": "I skip the sentence.",
+  "ar": "أتخطى الجملة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|273643",
+  "nl": "Op je blad staat: tel de ballen. Wat doe je?",
+  "en": "Your sheet says: count the balls. What do you do?",
+  "ar": "مكتوب في ورقتك: عُدّ الكرات. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|273880",
+  "nl": "Ik tel hoeveel ballen er zijn.",
+  "en": "I count how many balls there are.",
+  "ar": "أعدّ كم كرة هناك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|274057",
+  "nl": "Ik kleur de ballen.",
+  "en": "I colour the balls.",
+  "ar": "ألوّن الكرات."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|274265",
+  "nl": "Ik teken een bal erbij.",
+  "en": "I draw one more ball.",
+  "ar": "أرسم كرة إضافية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|274518",
+  "nl": "Ik zet een kruisje op één bal.",
+  "en": "I put a cross on one ball.",
+  "ar": "أضع علامة إكس على كرة واحدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|274930",
+  "nl": "Op je blad staat: reken uit. 4 + 3 = … Wat doe je?",
+  "en": "Your sheet says: work it out. 4 + 3 = … What do you do?",
+  "ar": "مكتوب في ورقتك: احسب. 4 + 3 = … ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|275195",
+  "nl": "Ik reken het antwoord uit en schrijf 7.",
+  "en": "I work out the answer and write 7.",
+  "ar": "أحسب الجواب وأكتب 7."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|275389",
+  "nl": "Ik schrijf de som over.",
+  "en": "I copy the sum.",
+  "ar": "أنسخ العملية الحسابية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|275633",
+  "nl": "Ik zet een rondje om de 4.",
+  "en": "I draw a circle around the 4.",
+  "ar": "أرسم دائرة حول الرقم 4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|275801",
+  "nl": "Ik laat het leeg.",
+  "en": "I leave it empty.",
+  "ar": "أتركه فارغًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|276283",
+  "nl": "Op je blad staat: vergelijk. Welke toren is hoger? Wat doe je?",
+  "en": "Your sheet says: compare. Which tower is taller? What do you do?",
+  "ar": "مكتوب في ورقتك: قارن. أي برج أعلى؟ ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|276613",
+  "nl": "Ik kijk naar allebei en zoek de hoogste.",
+  "en": "I look at both and find the tallest.",
+  "ar": "أنظر إلى الاثنين وأبحث عن الأعلى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|276870",
+  "nl": "Ik kijk alleen naar de eerste toren.",
+  "en": "I only look at the first tower.",
+  "ar": "أنظر فقط إلى البرج الأول."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|277067",
+  "nl": "Ik teken een nieuwe toren.",
+  "en": "I draw a new tower.",
+  "ar": "أرسم برجًا جديدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|277230",
+  "nl": "Ik tel de torens.",
+  "en": "I count the towers.",
+  "ar": "أعدّ الأبراج."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|277856",
+  "nl": "Op je blad staat: hoeveel meer? Tim heeft 5 knikkers. Sara heeft 3. Wat reken je uit?",
+  "en": "Your sheet says: how many more? Tim has 5 marbles. Sara has 3. What do you work out?",
+  "ar": "مكتوب في ورقتك: كم أكثر؟ عند تيم 5 كرات زجاجية. عند سارة 3. ماذا تحسب؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|278150",
+  "nl": "Hoeveel Tim er meer heeft dan Sara.",
+  "en": "How many more Tim has than Sara.",
+  "ar": "كم عند تيم أكثر من سارة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|278401",
+  "nl": "Hoeveel knikkers ze samen hebben.",
+  "en": "How many marbles they have together.",
+  "ar": "كم كرة عندهما معًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|278621",
+  "nl": "Hoeveel knikkers Sara heeft.",
+  "en": "How many marbles Sara has.",
+  "ar": "كم كرة عند سارة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|278806",
+  "nl": "Hoe oud Tim is.",
+  "en": "How old Tim is.",
+  "ar": "كم عمر تيم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|279231",
+  "nl": "Op je blad staat: kies het goede woord. Wat doe je?",
+  "en": "Your sheet says: choose the right word. What do you do?",
+  "ar": "مكتوب في ورقتك: اختر الكلمة الصحيحة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|279491",
+  "nl": "Ik kies één woord dat past.",
+  "en": "I choose one word that fits.",
+  "ar": "أختار كلمة واحدة مناسبة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|279705",
+  "nl": "Ik schrijf alle woorden op.",
+  "en": "I write down all the words.",
+  "ar": "أكتب كل الكلمات."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|279915",
+  "nl": "Ik kies geen woord.",
+  "en": "I don't choose a word.",
+  "ar": "لا أختار أي كلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|280124",
+  "nl": "Ik verzin een nieuw woord.",
+  "en": "I make up a new word.",
+  "ar": "أخترع كلمة جديدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|280764",
+  "nl": "Op je blad staat: welke hoort er niet bij? Appel, peer, banaan, schoen. Wat zoek je?",
+  "en": "Your sheet says: which one does not belong? Apple, pear, banana, shoe. What are you looking for?",
+  "ar": "مكتوب في ورقتك: أيّها لا ينتمي إلى المجموعة؟ تفاحة، كمثرى، موزة، حذاء. عمّ تبحث؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|281060",
+  "nl": "Het ding dat anders is dan de rest.",
+  "en": "The thing that is different from the rest.",
+  "ar": "الشيء المختلف عن الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|281309",
+  "nl": "Het ding dat ik het lekkerst vind.",
+  "en": "The thing I like eating most.",
+  "ar": "الشيء الذي أحبه أكثر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|281463",
+  "nl": "Het eerste woord.",
+  "en": "The first word.",
+  "ar": "الكلمة الأولى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|281633",
+  "nl": "Het langste woord.",
+  "en": "The longest word.",
+  "ar": "أطول كلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|282137",
+  "nl": "Op je blad staat: is het goed of fout? 2 + 2 = 5. Wat doe je?",
+  "en": "Your sheet says: is it right or wrong? 2 + 2 = 5. What do you do?",
+  "ar": "مكتوب في ورقتك: هل هذا صحيح أم خطأ؟ 2 + 2 = 5. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|282439",
+  "nl": "Ik kijk of het klopt. Het is fout.",
+  "en": "I check if it is right. It is wrong.",
+  "ar": "أتحقق إن كان صحيحًا. إنه خطأ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|282638",
+  "nl": "Ik schrijf 2 + 2 = 5 over.",
+  "en": "I copy 2 + 2 = 5.",
+  "ar": "أنسخ 2 + 2 = 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|282841",
+  "nl": "Ik zeg dat het goed is.",
+  "en": "I say that it is right.",
+  "ar": "أقول إنه صحيح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|283026",
+  "nl": "Ik sla de vraag over.",
+  "en": "I skip the question.",
+  "ar": "أتخطى السؤال."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|283538",
+  "nl": "Op je blad staat: zet in de goede volgorde. 3, 1, 2. Wat doe je?",
+  "en": "Your sheet says: put them in the right order. 3, 1, 2. What do you do?",
+  "ar": "مكتوب في ورقتك: رتّبها بالترتيب الصحيح. 3، 1، 2. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|283774",
+  "nl": "Ik zet ze zo neer: 1, 2, 3.",
+  "en": "I put them like this: 1, 2, 3.",
+  "ar": "أرتبها هكذا: 1، 2، 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|283987",
+  "nl": "Ik laat ze zo staan.",
+  "en": "I leave them as they are.",
+  "ar": "أتركها كما هي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|284151",
+  "nl": "Ik tel ze bij elkaar op.",
+  "en": "I add them together.",
+  "ar": "أجمعها معًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|284387",
+  "nl": "Ik zet ze zo neer: 3, 2, 1.",
+  "en": "I put them like this: 3, 2, 1.",
+  "ar": "أرتبها هكذا: 3، 2، 1."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|284801",
+  "nl": "De juf zegt: leg uit hoe je het weet. Wat doe je?",
+  "en": "The teacher says: explain how you know. What do you do?",
+  "ar": "تقول المعلمة: اشرح كيف عرفت. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|285102",
+  "nl": "Ik vertel waarom mijn antwoord klopt.",
+  "en": "I say why my answer is right.",
+  "ar": "أقول لماذا جوابي صحيح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|285311",
+  "nl": "Ik zeg alleen het antwoord.",
+  "en": "I only say the answer.",
+  "ar": "أقول الجواب فقط."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|285491",
+  "nl": "Ik zeg: ik weet het niet.",
+  "en": "I say: I don't know.",
+  "ar": "أقول: لا أعرف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|285617",
+  "nl": "Ik ben stil.",
+  "en": "I stay quiet.",
+  "ar": "أبقى صامتًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|286109",
+  "nl": "Tim heeft 5 knikkers. Hij krijgt er 3 bij. Hoeveel knikkers heeft hij nu?",
+  "en": "Tim has 5 marbles. He gets 3 more. How many marbles does he have now?",
+  "ar": "عند تيم 5 كرات زجاجية. يحصل على 3 أخرى. كم كرة عنده الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|286698",
+  "nl": "Sara heeft 7 stiften. Ahmed heeft 6 stiften. Hoeveel stiften hebben ze samen?",
+  "en": "Sara has 7 markers. Ahmed has 6 markers. How many markers do they have together?",
+  "ar": "عند سارة 7 أقلام تلوين. عند أحمد 6 أقلام تلوين. كم قلمًا عندهما معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|287183",
+  "nl": "In de klas zitten 12 meisjes en 11 jongens. Hoeveel kinderen zijn het samen?",
+  "en": "There are 12 girls and 11 boys in the class. How many children are there together?",
+  "ar": "في الصف 12 بنتًا و11 ولدًا. كم طفلًا معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|287729",
+  "nl": "Olena heeft 20 stickers. Ze krijgt er 15 bij. Hoeveel stickers heeft ze nu?",
+  "en": "Olena has 20 stickers. She gets 15 more. How many stickers does she have now?",
+  "ar": "عند أولينا 20 ملصقًا. تحصل على 15 أخرى. كم ملصقًا عندها الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|288305",
+  "nl": "Er staan 30 stoelen in de zaal. De juf zet er 8 bij. Hoeveel stoelen staan er nu?",
+  "en": "There are 30 chairs in the hall. The teacher adds 8 more. How many chairs are there now?",
+  "ar": "في القاعة 30 كرسيًا. تضيف المعلمة 8 كراسٍ. كم كرسيًا هناك الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|288804",
+  "nl": "Mehmet heeft 9 snoepjes. Hij eet er 4 op. Hoeveel snoepjes heeft hij nog over?",
+  "en": "Mehmet has 9 sweets. He eats 4. How many sweets does he have left?",
+  "ar": "عند محمد 9 حلويات. يأكل 4 منها. كم حلوى بقيت عنده؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|289328",
+  "nl": "Er zitten 15 vogels op het dak. Er vliegen 6 vogels weg. Hoeveel vogels zijn er over?",
+  "en": "There are 15 birds on the roof. 6 birds fly away. How many birds are left?",
+  "ar": "على السطح 15 طائرًا. يطير 6 طيور بعيدًا. كم طائرًا بقي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|289870",
+  "nl": "Ana heeft 20 euro. Ze koopt een boek van 8 euro. Hoeveel euro heeft ze over?",
+  "en": "Ana has 20 euros. She buys a book for 8 euros. How many euros does she have left?",
+  "ar": "عند آنا 20 يورو. تشتري كتابًا بـ8 يورو. كم يورو بقي معها؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|290493",
+  "nl": "In de bus zitten 40 mensen. Bij de halte stappen er 10 uit. Hoeveel mensen zitten er nog in de bus?",
+  "en": "There are 40 people on the bus. At the stop, 10 get off. How many people are still on the bus?",
+  "ar": "في الحافلة 40 شخصًا. عند المحطة ينزل 10. كم شخصًا ما زال في الحافلة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|291021",
+  "nl": "De juf heeft 50 potloden. Ze geeft er 25 weg. Hoeveel potloden heeft ze over?",
+  "en": "The teacher has 50 pencils. She gives 25 away. How many pencils does she have left?",
+  "ar": "عند المعلمة 50 قلم رصاص. تعطي 25 منها. كم قلمًا بقي عندها؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|291609",
+  "nl": "Sara heeft 8 kaarten. Tim heeft 5 kaarten. Hoeveel kaarten heeft Sara meer dan Tim?",
+  "en": "Sara has 8 cards. Tim has 5 cards. How many more cards does Sara have than Tim?",
+  "ar": "عند سارة 8 بطاقات. عند تيم 5 بطاقات. كم بطاقة عند سارة أكثر من تيم؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|292122",
+  "nl": "Ahmed is 9 jaar. Zijn zus is 6 jaar. Hoeveel jaar is Ahmed ouder?",
+  "en": "Ahmed is 9 years old. His sister is 6. How many years older is Ahmed?",
+  "ar": "عمر أحمد 9 سنوات. عمر أخته 6 سنوات. كم سنة أحمد أكبر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|292740",
+  "nl": "Olena heeft 12 knikkers. Ana heeft 7 knikkers. Hoeveel knikkers heeft Ana minder dan Olena?",
+  "en": "Olena has 12 marbles. Ana has 7 marbles. How many fewer marbles does Ana have than Olena?",
+  "ar": "عند أولينا 12 كرة زجاجية. عند آنا 7. كم كرة عند آنا أقل من أولينا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|293238",
+  "nl": "Tim leest 20 bladzijden. Mehmet leest 14 bladzijden. Wat is het verschil?",
+  "en": "Tim reads 20 pages. Mehmet reads 14 pages. What is the difference?",
+  "ar": "يقرأ تيم 20 صفحة. يقرأ محمد 14 صفحة. ما الفرق؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|293825",
+  "nl": "Een pen kost 6 euro. Een schrift kost 2 euro. Hoeveel euro is de pen duurder?",
+  "en": "A pen costs 6 euros. A notebook costs 2 euros. How many euros more expensive is the pen?",
+  "ar": "ثمن القلم 6 يورو. ثمن الدفتر 2 يورو. بكم يورو القلم أغلى؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|294331",
+  "nl": "Sara heeft 4 appels. Ahmed heeft het dubbele. Hoeveel appels heeft Ahmed?",
+  "en": "Sara has 4 apples. Ahmed has double. How many apples does Ahmed have?",
+  "ar": "عند سارة 4 تفاحات. عند أحمد الضعف. كم تفاحة عند أحمد؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|294912",
+  "nl": "Tim heeft 10 koekjes. Hij geeft de helft aan Olena. Hoeveel koekjes krijgt Olena?",
+  "en": "Tim has 10 biscuits. He gives half to Olena. How many biscuits does Olena get?",
+  "ar": "عند تيم 10 بسكويتات. يعطي النصف لأولينا. كم بسكويتة تحصل أولينا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|295378",
+  "nl": "3 kinderen krijgen elk 2 snoepjes. Hoeveel snoepjes zijn het samen?",
+  "en": "3 children each get 2 sweets. How many sweets is that together?",
+  "ar": "3 أطفال يحصل كل واحد على 2 حلوى. كم حلوى معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|295805",
+  "nl": "4 kinderen hebben elk 5 kaarten. Hoeveel kaarten zijn het samen?",
+  "en": "4 children each have 5 cards. How many cards is that together?",
+  "ar": "4 أطفال مع كل واحد 5 بطاقات. كم بطاقة معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|296485",
+  "nl": "Mehmet heeft 16 knikkers. Hij verdeelt ze eerlijk over 2 zakjes. Hoeveel knikkers zitten er in elk zakje?",
+  "en": "Mehmet has 16 marbles. He shares them fairly between 2 bags. How many marbles are in each bag?",
+  "ar": "عند محمد 16 كرة زجاجية. يقسمها بالعدل على كيسين. كم كرة في كل كيس؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|296769",
+  "nl": "Komt er iets bij of gaat er iets af?",
+  "en": "Is something added or taken away?",
+  "ar": "هل يُضاف شيء أم يُطرح شيء؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|297102",
+  "nl": "Gaat er iets weg? Wat heb je dan nog?",
+  "en": "Does something go away? What do you still have then?",
+  "ar": "هل يذهب شيء؟ ماذا يبقى معك إذن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|297577",
+  "nl": "Hoeveel moet er bij het kleine getal, tot het grote getal?",
+  "en": "How much do you add to the small number to reach the big number?",
+  "ar": "كم يجب أن تضيف إلى العدد الصغير حتى تصل إلى العدد الكبير؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|298039",
+  "nl": "Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?",
+  "en": "Is it twice as much, or half? Or the same number each time?",
+  "ar": "هل هو الضعف أم النصف؟ أم نفس العدد كل مرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|1811",
+  "nl": "de tafel",
+  "en": "table",
+  "ar": "الطاولة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|1912",
+  "nl": "de stoel",
+  "en": "chair",
+  "ar": "الكرسي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2003",
+  "nl": "de deur",
+  "en": "door",
+  "ar": "الباب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2111",
+  "nl": "het raam",
+  "en": "window",
+  "ar": "النافذة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2210",
+  "nl": "het bord",
+  "en": "board",
+  "ar": "السبّورة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2305",
+  "nl": "de tas",
+  "en": "bag",
+  "ar": "الحقيبة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2399",
+  "nl": "de pen",
+  "en": "pen",
+  "ar": "القلم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2502",
+  "nl": "de schaar",
+  "en": "scissors",
+  "ar": "مقص"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2601",
+  "nl": "de lijm",
+  "en": "glue",
+  "ar": "صمغ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2699",
+  "nl": "het papier",
+  "en": "paper",
+  "ar": "ورق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2804",
+  "nl": "het schrift",
+  "en": "notebook",
+  "ar": "دفتر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|2901",
+  "nl": "het boek",
+  "en": "book",
+  "ar": "الكتاب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3006",
+  "nl": "de kwast",
+  "en": "paintbrush",
+  "ar": "فرشاة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3113",
+  "nl": "het etui",
+  "en": "pencil case",
+  "ar": "مقلمة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3232",
+  "nl": "de computer",
+  "en": "computer",
+  "ar": "حاسوب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3330",
+  "nl": "de klok",
+  "en": "clock",
+  "ar": "ساعة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3458",
+  "nl": "de juf",
+  "en": "female teacher",
+  "ar": "المعلّمة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3581",
+  "nl": "de meester",
+  "en": "male teacher",
+  "ar": "المعلّم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3684",
+  "nl": "de wc",
+  "en": "toilet",
+  "ar": "الحمام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3799",
+  "nl": "de melk",
+  "en": "milk",
+  "ar": "الحليب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3889",
+  "nl": "het water",
+  "en": "water",
+  "ar": "الماء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|3984",
+  "nl": "het brood",
+  "en": "bread",
+  "ar": "الخبز"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4083",
+  "nl": "de kaas",
+  "en": "cheese",
+  "ar": "الجبن"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4173",
+  "nl": "het ei",
+  "en": "egg",
+  "ar": "البيضة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4265",
+  "nl": "de rijst",
+  "en": "rice",
+  "ar": "الأرز"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4356",
+  "nl": "de soep",
+  "en": "soup",
+  "ar": "الحساء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4442",
+  "nl": "de thee",
+  "en": "tea",
+  "ar": "الشاي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4554",
+  "nl": "de boterham",
+  "en": "sandwich",
+  "ar": "شطيرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4648",
+  "nl": "de pizza",
+  "en": "pizza",
+  "ar": "بيتزا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4757",
+  "nl": "het koekje",
+  "en": "cookie",
+  "ar": "بسكويت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4849",
+  "nl": "de taart",
+  "en": "cake",
+  "ar": "كعكة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|4966",
+  "nl": "het ijsje",
+  "en": "ice cream",
+  "ar": "آيس كريم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5082",
+  "nl": "de chocola",
+  "en": "chocolate",
+  "ar": "شوكولاتة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5224",
+  "nl": "de patat",
+  "en": "fries",
+  "ar": "بطاطا مقلية"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5323",
+  "nl": "de lepel",
+  "en": "spoon",
+  "ar": "ملعقة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5423",
+  "nl": "de vork",
+  "en": "fork",
+  "ar": "شوكة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5513",
+  "nl": "het mes",
+  "en": "knife",
+  "ar": "سكين"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5604",
+  "nl": "de beker",
+  "en": "cup",
+  "ar": "كوب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5723",
+  "nl": "de appel",
+  "en": "apple",
+  "ar": "التفاحة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5821",
+  "nl": "de banaan",
+  "en": "banana",
+  "ar": "الموزة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|5939",
+  "nl": "de sinaasappel",
+  "en": "orange",
+  "ar": "برتقالة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6032",
+  "nl": "de peer",
+  "en": "pear",
+  "ar": "كمثرى"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6132",
+  "nl": "de druif",
+  "en": "grape",
+  "ar": "عنب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6241",
+  "nl": "de aardbei",
+  "en": "strawberry",
+  "ar": "فراولة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6340",
+  "nl": "de citroen",
+  "en": "lemon",
+  "ar": "ليمون"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6437",
+  "nl": "de kers",
+  "en": "cherry",
+  "ar": "كرز"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6543",
+  "nl": "de ananas",
+  "en": "pineapple",
+  "ar": "أناناس"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6643",
+  "nl": "de wortel",
+  "en": "carrot",
+  "ar": "جزرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6745",
+  "nl": "de tomaat",
+  "en": "tomato",
+  "ar": "طماطم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6862",
+  "nl": "de komkommer",
+  "en": "cucumber",
+  "ar": "خيار"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|6973",
+  "nl": "het hoofd",
+  "en": "head",
+  "ar": "الرأس"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7059",
+  "nl": "het oog",
+  "en": "eye",
+  "ar": "العين"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7150",
+  "nl": "het oor",
+  "en": "ear",
+  "ar": "الأذن"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7239",
+  "nl": "de mond",
+  "en": "mouth",
+  "ar": "الفم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7330",
+  "nl": "de tong",
+  "en": "tongue",
+  "ar": "لسان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7425",
+  "nl": "de buik",
+  "en": "belly",
+  "ar": "البطن"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7513",
+  "nl": "de arm",
+  "en": "arm",
+  "ar": "الذراع"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7600",
+  "nl": "de hand",
+  "en": "hand",
+  "ar": "اليد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7705",
+  "nl": "de voet",
+  "en": "foot",
+  "ar": "القدم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7810",
+  "nl": "de jas",
+  "en": "coat",
+  "ar": "المعطف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|7921",
+  "nl": "de broek",
+  "en": "trousers",
+  "ar": "البنطال"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8031",
+  "nl": "het T-shirt",
+  "en": "T-shirt",
+  "ar": "تي شيرت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8132",
+  "nl": "de trui",
+  "en": "jumper",
+  "ar": "الكنزة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8229",
+  "nl": "de jurk",
+  "en": "dress",
+  "ar": "فستان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8324",
+  "nl": "de rok",
+  "en": "skirt",
+  "ar": "تنورة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8445",
+  "nl": "de korte broek",
+  "en": "shorts",
+  "ar": "شورت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8558",
+  "nl": "de onderbroek",
+  "en": "underpants",
+  "ar": "سروال داخلي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8657",
+  "nl": "de sok",
+  "en": "sock",
+  "ar": "الجورب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8761",
+  "nl": "de schoen",
+  "en": "shoe",
+  "ar": "الحذاء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8855",
+  "nl": "de laars",
+  "en": "boot",
+  "ar": "جزمة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|8965",
+  "nl": "de muts",
+  "en": "woolly hat",
+  "ar": "القبعة الصوفية"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9057",
+  "nl": "de pet",
+  "en": "cap",
+  "ar": "قبعة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9148",
+  "nl": "de sjaal",
+  "en": "scarf",
+  "ar": "وشاح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9258",
+  "nl": "de handschoen",
+  "en": "glove",
+  "ar": "قفاز"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9362",
+  "nl": "het huis",
+  "en": "house",
+  "ar": "البيت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9462",
+  "nl": "de tuin",
+  "en": "garden",
+  "ar": "الحديقة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9565",
+  "nl": "het gezin",
+  "en": "family",
+  "ar": "عائلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9661",
+  "nl": "de baby",
+  "en": "baby",
+  "ar": "رضيع"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9753",
+  "nl": "het bed",
+  "en": "bed",
+  "ar": "السرير"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9849",
+  "nl": "de lamp",
+  "en": "lamp",
+  "ar": "المصباح"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersVertalingen.js|9947",
+  "nl": "de kast",
+  "en": "cupboard",
+  "ar": "الخزانة"
+ }
+]

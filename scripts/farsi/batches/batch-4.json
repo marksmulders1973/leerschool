@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|166539",
+  "nl": "Je krijgt er 2 bij. Tel 2 verder vanaf 3.",
+  "en": "You get 2 more. Count 2 further from 3.",
+  "ar": "تأخذ 2 زيادة. عُدّ 2 بعد 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|167004",
+  "nl": "Je hebt 6 appels. Je eet er 2 op. Hoeveel appels heb je over?",
+  "en": "You have 6 apples. You eat 2 of them. How many apples do you have left?",
+  "ar": "عندك 6 تفاحات. تأكل 2 منها. كم تفاحة بقيت عندك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|167574",
+  "nl": "Opeten = weg = min. Over = wat je nog hebt. 6 − 2.",
+  "en": "Eaten up = away = minus. Left = what you still have. 6 − 2.",
+  "ar": "أكل (opeten) = ذهب (weg) = طرح. باقٍ (over) = ما بقي عندك. 6 − 2."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|167977",
+  "nl": "Wat betekent het woord 'samen' bij een som?",
+  "en": "What does the word 'together' mean in a sum?",
+  "ar": "ماذا تعني كلمة 'samen' (معًا) في المسألة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|168270",
+  "nl": "Samen = alles bij elkaar.",
+  "en": "Together = everything combined.",
+  "ar": "معًا (samen) = كل شيء مع بعضه."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|168407",
+  "nl": "plus (+)",
+  "en": "plus (+)",
+  "ar": "جمع (+)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|168547",
+  "nl": "min (−)",
+  "en": "minus (−)",
+  "ar": "طرح (−)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|168687",
+  "nl": "keer (×)",
+  "en": "times (×)",
+  "ar": "ضرب (×)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|169070",
+  "nl": "Wat betekent het woord 'weg' bij een som?",
+  "en": "What does the word 'away' mean in a sum?",
+  "ar": "ماذا تعني كلمة 'weg' (ذهب) في المسألة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|169338",
+  "nl": "Weg = er gaat iets af.",
+  "en": "Away = something goes away.",
+  "ar": "ذهب (weg) = شيء ما ينقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|169885",
+  "nl": "Er zitten 8 vogels in een boom. Er vliegen 3 vogels weg. Hoeveel vogels zijn er over?",
+  "en": "There are 8 birds in a tree. 3 birds fly away. How many birds are left?",
+  "ar": "على الشجرة 8 عصافير. طارت 3 عصافير. كم عصفورًا بقي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|170280",
+  "nl": "Wegvliegen = weg = min. 8 − 3.",
+  "en": "Flying away = away = minus. 8 − 3.",
+  "ar": "طار (wegvliegen) = ذهب (weg) = طرح. 8 − 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|171592",
+  "nl": "**Keer** (×) = groepjes van hetzelfde. 3 keer 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** = iedereen krijgt evenveel.\n\n**De helft** = in twee gelijke stukken.",
+  "en": "**Keer** (Times) (×) = groups of the same thing. 3 times 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** (Sharing fairly) = everyone gets the same.\n\n**De helft** (Half) = in two equal parts.",
+  "ar": "**ضرب** (Keer) (×) = مجموعات متشابهة. 3 مرات 2 = 2 + 2 + 2.\n\n**التقسيم بالعدل** (Eerlijk verdelen) = كل واحد يأخذ نفس العدد.\n\n**النصف** (De helft) = قطعتان متساويتان."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|172005",
+  "nl": "3 groepjes van 2 kinderen. Hoeveel kinderen zijn het samen?",
+  "en": "3 groups of 2 children. How many children is that together?",
+  "ar": "3 مجموعات من 2 أطفال. كم طفلًا معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|172273",
+  "nl": "3 groepjes van 2 = 2 + 2 + 2.",
+  "en": "3 groups of 2 = 2 + 2 + 2.",
+  "ar": "3 مجموعات من 2 = 2 + 2 + 2."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|172398",
+  "nl": "Groepjes",
+  "en": "Groups",
+  "ar": "مجموعات"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|172990",
+  "nl": "**3 groepjes van 2** = 2 + 2 + 2 = 6. Dat is ook **3 keer 2** (3 × 2).",
+  "en": "**3 groepjes van 2** (3 groups of 2) = 2 + 2 + 2 = 6. That is also **3 keer 2** (3 times 2) (3 × 2).",
+  "ar": "**3 مجموعات من 2** = 2 + 2 + 2 = 6. هذا أيضًا **3 مرات 2** (3 × 2)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|173127",
+  "nl": "Verdelen",
+  "en": "Sharing",
+  "ar": "التقسيم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|173967",
+  "nl": "**Eerlijk verdelen**: iedereen krijgt **evenveel**. 8 snoepjes voor 2 kinderen: ieder 4.",
+  "en": "**Eerlijk verdelen** (Sharing fairly): everyone gets **evenveel** (the same). 8 candies for 2 children: each gets 4.",
+  "ar": "**التقسيم بالعدل** (Eerlijk verdelen): كل واحد يأخذ **نفس العدد** (evenveel). 8 حلويات لـ 2 أطفال: كل واحد 4."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|174097",
+  "nl": "De helft",
+  "en": "Half",
+  "ar": "النصف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|174623",
+  "nl": "**De helft** = in twee gelijke stukken. De helft van 10 is 5.",
+  "en": "**De helft** (Half) = in two equal parts. Half of 10 is 5.",
+  "ar": "**النصف** (De helft) = قطعتان متساويتان. نصف 10 هو 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|174730",
+  "nl": "keer",
+  "en": "times",
+  "ar": "ضرب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|175163",
+  "nl": "Steeds hetzelfde getal erbij. 3 keer 2 = 2 + 2 + 2.",
+  "en": "Adding the same number each time. 3 times 2 = 2 + 2 + 2.",
+  "ar": "نزيد نفس العدد كل مرة. 3 مرات 2 = 2 + 2 + 2."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|175301",
+  "nl": "verdelen",
+  "en": "to share out",
+  "ar": "يقسّم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|175673",
+  "nl": "Uitdelen, zodat iedereen evenveel krijgt.",
+  "en": "Handing out, so everyone gets the same.",
+  "ar": "نوزّع، حتى يأخذ كل واحد نفس العدد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|175811",
+  "nl": "de helft",
+  "en": "half",
+  "ar": "النصف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|176092",
+  "nl": "Een van de twee gelijke stukken.",
+  "en": "One of the two equal parts.",
+  "ar": "واحدة من قطعتين متساويتين."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|176644",
+  "nl": "Keer = groepjes van hetzelfde. Verdelen = eerlijk uitdelen.",
+  "en": "Times = groups of the same thing. Sharing = handing out fairly.",
+  "ar": "ضرب (keer) = مجموعات متشابهة. تقسيم (verdelen) = توزيع بالعدل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|176881",
+  "nl": "2 keer 5 = 5 + 5 = 10.",
+  "en": "2 times 5 = 5 + 5 = 10.",
+  "ar": "2 مرات 5 = 5 + 5 = 10."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|177210",
+  "nl": "6 koekjes voor 3 kinderen: ieder 2.",
+  "en": "6 cookies for 3 children: each gets 2.",
+  "ar": "6 بسكويتات لـ 3 أطفال: كل واحد 2."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|177659",
+  "nl": "Verdelen? Deel één voor één uit, zoals kaarten bij een spel.",
+  "en": "Sharing? Hand them out one by one, like cards in a game.",
+  "ar": "تقسيم؟ وزّع واحدًا واحدًا، مثل الأوراق في اللعبة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|177894",
+  "nl": "Tel de groepjes bij elkaar op.",
+  "en": "Add the groups together.",
+  "ar": "اجمع المجموعات معًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|178194",
+  "nl": "Wat betekent '2 keer 4'?",
+  "en": "What does '2 times 4' mean?",
+  "ar": "ماذا تعني '2 keer 4' (2 مرات 4)؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|178833",
+  "nl": "Keer = hetzelfde getal een paar keer bij elkaar. Kijk: welk getal, en hoe vaak?",
+  "en": "Times = the same number added together a few times. Look: which number, and how many times?",
+  "ar": "الضرب (keer) = نفس العدد يُجمع عدة مرات. انظر: أي عدد، وكم مرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|179377",
+  "nl": "Je verdeelt 8 snoepjes eerlijk over 2 kinderen. Hoeveel krijgt ieder kind?",
+  "en": "You share 8 candies fairly between 2 children. How many does each child get?",
+  "ar": "تقسم 8 حلويات بالعدل على 2 أطفال. كم يأخذ كل طفل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|179883",
+  "nl": "Eerlijk = iedereen krijgt evenveel. Deel één voor één uit.",
+  "en": "Fair = everyone gets the same. Hand them out one by one.",
+  "ar": "بالعدل (eerlijk) = كل واحد يأخذ نفس العدد. وزّع واحدًا واحدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|180116",
+  "nl": "Wat is de helft van 10?",
+  "en": "What is half of 10?",
+  "ar": "ما هو نصف 10؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|180465",
+  "nl": "De helft = in twee gelijke stukken.",
+  "en": "Half = in two equal parts.",
+  "ar": "النصف (de helft) = قطعتان متساويتان."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|181015",
+  "nl": "Je verdeelt 6 koekjes eerlijk over 3 kinderen. Hoeveel krijgt ieder kind?",
+  "en": "You share 6 cookies fairly between 3 children. How many does each child get?",
+  "ar": "تقسم 6 بسكويتات بالعدل على 3 أطفال. كم يأخذ كل طفل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|181576",
+  "nl": "Deel uit: één voor jou, één voor jou, één voor jou… tot alles op is.",
+  "en": "Hand them out: one for you, one for you, one for you… until it's all gone.",
+  "ar": "وزّع: واحدة لك، واحدة لك، واحدة لك… حتى ينتهي كل شيء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|182031",
+  "nl": "Hoe vraag ik iets aan de juf of meester?",
+  "en": "How do I ask the teacher something?",
+  "ar": "كيف أسأل المعلّم أو المعلّمة عن شيء؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|182267",
+  "nl": "Waar is alles op school?",
+  "en": "Where is everything at school?",
+  "ar": "أين يوجد كل شيء في المدرسة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|182559",
+  "nl": "Hoe speel ik mee met andere kinderen?",
+  "en": "How do I join in with other children?",
+  "ar": "كيف ألعب مع الأطفال الآخرين؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|182810",
+  "nl": "Hoe zeg ik hoe ik me voel?",
+  "en": "How do I say how I feel?",
+  "ar": "كيف أقول ما أشعر به؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|183081",
+  "nl": "Welke woorden hoor ik op school?",
+  "en": "Which words do I hear at school?",
+  "ar": "ما الكلمات التي أسمعها في المدرسة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|183420",
+  "nl": "Welke woorden hoor ik thuis en bij het eten?",
+  "en": "Which words do I hear at home and at meals?",
+  "ar": "ما الكلمات التي أسمعها في البيت وعند الأكل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|183760",
+  "nl": "Hoe heten mijn lichaam en de kleuren?",
+  "en": "What are the names of my body parts and the colours?",
+  "ar": "ما أسماء أجزاء جسمي والألوان؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|184023",
+  "nl": "Wat moet ik doen in de klas?",
+  "en": "What do I have to do in class?",
+  "ar": "ماذا يجب أن أفعل في الصف؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|184356",
+  "nl": "Wat betekent meer, minder en evenveel?",
+  "en": "What do more, less and the same mean?",
+  "ar": "ماذا تعني أكثر وأقل ومتساوٍ؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|184671",
+  "nl": "Wat betekent samen, weg en over?",
+  "en": "What do together, away and left over mean?",
+  "ar": "ماذا تعني معًا وذهب وبقي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|184943",
+  "nl": "Wat betekent keer en verdelen?",
+  "en": "What do times and sharing mean?",
+  "ar": "ماذا يعني الضرب والتقسيم؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|185150",
+  "nl": "Hoe tel ik tot 20?",
+  "en": "How do I count to 20?",
+  "ar": "كيف أعدّ حتى 20؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|185366",
+  "nl": "Hoe doe ik erbij tot 10?",
+  "en": "How do I add up to 10?",
+  "ar": "كيف أجمع حتى 10؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|185590",
+  "nl": "Hoe doe ik eraf tot 10?",
+  "en": "How do I take away up to 10?",
+  "ar": "كيف أطرح حتى 10؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|185832",
+  "nl": "Hoe reken ik over de 10 heen?",
+  "en": "How do I calculate past 10?",
+  "ar": "كيف أحسب بعد العدد 10؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|186116",
+  "nl": "Hoe maak ik een som uit de klas?",
+  "en": "How do I solve a sum from class?",
+  "ar": "كيف أحلّ مسألة من الصف؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|186371",
+  "nl": "Wat zijn tientallen en eenheden?",
+  "en": "What are tens and ones?",
+  "ar": "ما العشرات والآحاد؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|186594",
+  "nl": "Hoe doe ik erbij tot 100?",
+  "en": "How do I add up to 100?",
+  "ar": "كيف أجمع حتى 100؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|186825",
+  "nl": "Hoe doe ik eraf tot 100?",
+  "en": "How do I take away up to 100?",
+  "ar": "كيف أطرح حتى 100؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|187091",
+  "nl": "Hoe reken ik over het tiental heen?",
+  "en": "How do I calculate past a ten?",
+  "ar": "كيف أحسب بعد العشرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|187337",
+  "nl": "Hoe reken ik in de winkel?",
+  "en": "How do I calculate in the shop?",
+  "ar": "كيف أحسب في المتجر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|187908",
+  "nl": "In de klas 2 — zelf werken en fijne gevoelens (nieuwkomers)",
+  "en": "In class 2 — working on your own and good feelings (newcomers)",
+  "ar": "في الصف 2 — العمل بنفسك والمشاعر الجميلة (للقادمين الجدد)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|189001",
+  "nl": "Zelf aan het werk, wat je doet als je klaar bent, wat je doet als de juf bezig is, en hoe je zegt dat je je fijn voelt. Met steun in je eigen taal. ~10 min.",
+  "en": "Working on your own, what to do when you are finished, what to do when the teacher is busy, and how to say you feel good. With help in your own language. ~10 min.",
+  "ar": "العمل بنفسك، ماذا تفعل عندما تنتهي، ماذا تفعل عندما تكون المعلمة مشغولة، وكيف تقول إنك تشعر بشعور جميل. مع مساعدة بلغتك. ~10 دقائق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|189208",
+  "nl": "Hoe begin ik aan mijn werk?",
+  "en": "How do I start my work?",
+  "ar": "كيف أبدأ عملي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|189418",
+  "nl": "Ik ben klaar. Wat nu?",
+  "en": "I am finished. What now?",
+  "ar": "انتهيت. ماذا الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|189696",
+  "nl": "De juf is bezig. Wat doe ik?",
+  "en": "The teacher is busy. What do I do?",
+  "ar": "المعلمة مشغولة. ماذا أفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|189962",
+  "nl": "Hoe zeg ik dat ik me fijn voel?",
+  "en": "How do I say that I feel good?",
+  "ar": "كيف أقول إنني أشعر بشعور جميل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|190089",
+  "nl": "Aan het werk",
+  "en": "Getting to work",
+  "ar": "إلى العمل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|192078",
+  "nl": "De juf of meester zegt wat je gaat doen.\n\n**Pak je werkboek.** **Begin maar.** **Werk zachtjes.**\n\nWeet je iets niet? Vraag: **Welke bladzijde?** of **Mag ik je potlood lenen?**",
+  "en": "The teacher tells you what you are going to do.\n\n**Pak je werkboek.** (= Get your workbook.) **Begin maar.** (= You can start.) **Werk zachtjes.** (= Work quietly.)\n\nDon't know something? Ask: **Welke bladzijde?** (= Which page?) or **Mag ik je potlood lenen?** (= Can I borrow your pencil?)",
+  "ar": "المعلمة أو المعلم يقول لك ماذا ستفعل.\n\n**Pak je werkboek.** (= خذ كتاب التمارين.) **Begin maar.** (= ابدأ.) **Werk zachtjes.** (= اعمل بهدوء.)\n\nلا تعرف شيئًا؟ اسأل: **Welke bladzijde?** (= أي صفحة؟) أو **Mag ik je potlood lenen?** (= هل يمكنني استعارة قلمك؟)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|192483",
+  "nl": "De juf zegt: pak je werkboek. Wat doe je?",
+  "en": "The teacher says: get your workbook. What do you do?",
+  "ar": "المعلمة تقول: خذ كتاب التمارين. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|192700",
+  "nl": "Ik pak mijn werkboek.",
+  "en": "I get my workbook.",
+  "ar": "آخذ كتاب التمارين."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|192860",
+  "nl": "Ik pak mijn jas.",
+  "en": "I get my coat.",
+  "ar": "آخذ معطفي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|193015",
+  "nl": "Ik ga naar buiten.",
+  "en": "I go outside.",
+  "ar": "أخرج إلى الخارج."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|193166",
+  "nl": "Ik ga slapen.",
+  "en": "I go to sleep.",
+  "ar": "أذهب لأنام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|193491",
+  "nl": "Je weet niet welke bladzijde. Wat vraag je?",
+  "en": "You don't know which page. What do you ask?",
+  "ar": "لا تعرف أي صفحة. ماذا تسأل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|193630",
+  "nl": "Welke bladzijde?",
+  "en": "Which page?",
+  "ar": "أي صفحة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|193782",
+  "nl": "Is het pauze?",
+  "en": "Is it break time?",
+  "ar": "هل هي الاستراحة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|193926",
+  "nl": "Hoe heet je?",
+  "en": "What is your name?",
+  "ar": "ما اسمك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|194073",
+  "nl": "Waar is de bal?",
+  "en": "Where is the ball?",
+  "ar": "أين الكرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|194480",
+  "nl": "Je hebt geen potlood. Wat vraag je aan het kind naast je?",
+  "en": "You don't have a pencil. What do you ask the child next to you?",
+  "ar": "ليس معك قلم رصاص. ماذا تسأل الطفل الذي بجانبك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|194722",
+  "nl": "Mag ik je potlood lenen?",
+  "en": "Can I borrow your pencil?",
+  "ar": "هل يمكنني استعارة قلمك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|194842",
+  "nl": "Ga weg!",
+  "en": "Go away!",
+  "ar": "اذهب بعيدًا!"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|195207",
+  "nl": "De juf zegt: werk zachtjes. Wat doe je?",
+  "en": "The teacher says: work quietly. What do you do?",
+  "ar": "المعلمة تقول: اعمل بهدوء. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|195367",
+  "nl": "Ik praat zachtjes.",
+  "en": "I talk quietly.",
+  "ar": "أتكلم بهدوء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|195565",
+  "nl": "Ik roep heel hard.",
+  "en": "I shout very loudly.",
+  "ar": "أصرخ بصوت عالٍ جدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|195736",
+  "nl": "Ik ga zingen.",
+  "en": "I start singing.",
+  "ar": "أبدأ بالغناء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|195871",
+  "nl": "Ik loop weg.",
+  "en": "I walk away.",
+  "ar": "أمشي بعيدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|196214",
+  "nl": "De juf zegt: begin maar. Wat doe je?",
+  "en": "The teacher says: you can start. What do you do?",
+  "ar": "المعلمة تقول: ابدأ. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|196390",
+  "nl": "Ik begin met mijn werk.",
+  "en": "I start my work.",
+  "ar": "أبدأ عملي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|196548",
+  "nl": "Ik ga spelen.",
+  "en": "I go and play.",
+  "ar": "أذهب لألعب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|196707",
+  "nl": "Ik doe niets.",
+  "en": "I do nothing.",
+  "ar": "لا أفعل شيئًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|196832",
+  "nl": "Ik ben klaar",
+  "en": "I am finished",
+  "ar": "انتهيت"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|198646",
+  "nl": "Je werk is af. Wat nu?\n\nVraag: **Wat moet ik nu doen?**\nKijk op het **bord**: daar staat soms wat je mag doen.\nLeg je boek netjes in je **la**.\n\nAndere kinderen werken nog: wees **stil**.",
+  "en": "Your work is done. What now?\n\nAsk: **Wat moet ik nu doen?** (= What should I do now?)\nLook at the **bord** (= board): sometimes it says what you may do.\nPut your book neatly in your **la** (= drawer).\n\nOther children are still working: be **stil** (= quiet).",
+  "ar": "عملك انتهى. ماذا الآن؟\n\nاسأل: **Wat moet ik nu doen?** (= ماذا يجب أن أفعل الآن؟)\nانظر إلى **bord** (= السبورة): أحيانًا مكتوب ماذا يمكنك أن تفعل.\nضع كتابك بترتيب في **la** (= الدرج).\n\nالأطفال الآخرون ما زالوا يعملون: كن **stil** (= هادئًا)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|199018",
+  "nl": "Je bent klaar met je werk. Wat vraag je aan de juf?",
+  "en": "You finished your work. What do you ask the teacher?",
+  "ar": "أنهيت عملك. ماذا تسأل المعلمة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|199221",
+  "nl": "Wat moet ik nu doen?",
+  "en": "What should I do now?",
+  "ar": "ماذا يجب أن أفعل الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|199417",
+  "nl": "Mag ik naar huis?",
+  "en": "Can I go home?",
+  "ar": "هل يمكنني الذهاب إلى البيت؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|199937",
+  "nl": "Op het bord staat: klaar? Lees een boek. Je bent klaar. Wat doe je?",
+  "en": "The board says: finished? Read a book. You are finished. What do you do?",
+  "ar": "مكتوب على السبورة: انتهيت؟ اقرأ كتابًا. أنت انتهيت. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|200145",
+  "nl": "Ik pak een boek en lees.",
+  "en": "I get a book and read.",
+  "ar": "آخذ كتابًا وأقرأ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|200319",
+  "nl": "Ik ga praten.",
+  "en": "I start talking.",
+  "ar": "أبدأ بالكلام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|200658",
+  "nl": "Je bent klaar. Waar leg je je werkboek?",
+  "en": "You are finished. Where do you put your workbook?",
+  "ar": "انتهيت. أين تضع كتاب التمارين؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|200803",
+  "nl": "In mijn la.",
+  "en": "In my drawer.",
+  "ar": "في درجي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|200925",
+  "nl": "Op de grond.",
+  "en": "On the floor.",
+  "ar": "على الأرض."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|201076",
+  "nl": "In de prullenbak.",
+  "en": "In the bin.",
+  "ar": "في سلة المهملات."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|201186",
+  "nl": "Buiten.",
+  "en": "Outside.",
+  "ar": "في الخارج."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|201620",
+  "nl": "Je wilt dat de juf je werk nakijkt. Wat vraag je?",
+  "en": "You want the teacher to check your work. What do you ask?",
+  "ar": "تريد أن تصحح المعلمة عملك. ماذا تسأل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|201873",
+  "nl": "Wilt u mijn werk nakijken?",
+  "en": "Will you check my work?",
+  "ar": "هل يمكنك تصحيح عملي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|202064",
+  "nl": "Mag ik naar buiten?",
+  "en": "Can I go outside?",
+  "ar": "هل يمكنني الخروج؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|202468",
+  "nl": "Jij bent klaar. Een ander kind nog niet. Wat doe je?",
+  "en": "You are finished. Another child is not yet. What do you do?",
+  "ar": "أنت انتهيت. طفل آخر لم ينتهِ بعد. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|202669",
+  "nl": "Ik ben stil en wacht.",
+  "en": "I am quiet and wait.",
+  "ar": "أكون هادئًا وأنتظر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|202872",
+  "nl": "Ik praat heel hard.",
+  "en": "I talk very loudly.",
+  "ar": "أتكلم بصوت عالٍ جدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|203066",
+  "nl": "Ik pak zijn werk af.",
+  "en": "I take his work away.",
+  "ar": "آخذ عمله منه."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|203262",
+  "nl": "Ik loop door de klas.",
+  "en": "I walk around the classroom.",
+  "ar": "أتجول في الصف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|203444",
+  "nl": "De juf is bezig",
+  "en": "The teacher is busy",
+  "ar": "المعلمة مشغولة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|205813",
+  "nl": "Soms helpt de juf of meester een ander kind. Dan mag je even niet storen.\n\n1. **Kijk zelf** nog een keer.\n2. **Vraag een kind** naast je: **Kun je mij helpen?**\n3. **Wacht** rustig. Ga verder met de **volgende som**.\n\nDe juf komt straks bij je.",
+  "en": "Sometimes the teacher is helping another child. Then you should not disturb for a moment.\n\n1. **Kijk zelf** (= Look yourself) one more time.\n2. **Vraag een kind** (= Ask a child) next to you: **Kun je mij helpen?** (= Can you help me?)\n3. **Wacht** (= Wait) calmly. Go on with the **volgende som** (= next sum).\n\nThe teacher will come to you soon.",
+  "ar": "أحيانًا تساعد المعلمة أو المعلم طفلًا آخر. عندها لا تقاطع للحظة.\n\n1. **Kijk zelf** (= انظر بنفسك) مرة أخرى.\n2. **Vraag een kind** (= اسأل طفلًا) بجانبك: **Kun je mij helpen?** (= هل يمكنك مساعدتي؟)\n3. **Wacht** (= انتظر) بهدوء. أكمل **volgende som** (= المسألة التالية).\n\nالمعلمة ستأتي إليك بعد قليل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|206347",
+  "nl": "De juf helpt een ander kind. Je hebt een vraag. Wat doe je eerst?",
+  "en": "The teacher is helping another child. You have a question. What do you do first?",
+  "ar": "المعلمة تساعد طفلًا آخر. عندك سؤال. ماذا تفعل أولًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|206568",
+  "nl": "Ik kijk zelf nog een keer.",
+  "en": "I look again myself.",
+  "ar": "أنظر بنفسي مرة أخرى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|206803",
+  "nl": "Ik roep: juf, juf!",
+  "en": "I shout: teacher, teacher!",
+  "ar": "أصرخ: يا معلمة، يا معلمة!"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|206986",
+  "nl": "Ik stop met werken.",
+  "en": "I stop working.",
+  "ar": "أتوقف عن العمل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|207152",
+  "nl": "Ik ga huilen.",
+  "en": "I start crying.",
+  "ar": "أبدأ بالبكاء."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|207566",
+  "nl": "Je snapt het nog niet. De juf is bezig. Wat doe je?",
+  "en": "You still don't understand. The teacher is busy. What do you do?",
+  "ar": "ما زلت لا تفهم. المعلمة مشغولة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|207799",
+  "nl": "Ik vraag het aan een kind naast mij.",
+  "en": "I ask a child next to me.",
+  "ar": "أسأل طفلًا بجانبي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|207962",
+  "nl": "Ik loop naar buiten.",
+  "en": "I walk outside.",
+  "ar": "أمشي إلى الخارج."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|208145",
+  "nl": "Ik gooi mijn werk weg.",
+  "en": "I throw my work away.",
+  "ar": "أرمي عملي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|208480",
+  "nl": "Hoe vraag je hulp aan het kind naast je?",
+  "en": "How do you ask the child next to you for help?",
+  "ar": "كيف تطلب المساعدة من الطفل الذي بجانبك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|208673",
+  "nl": "Kun je mij helpen?",
+  "en": "Can you help me?",
+  "ar": "هل يمكنك مساعدتي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|209117",
+  "nl": "De juf heeft nu geen tijd. Wat doe je met je vraag?",
+  "en": "The teacher has no time right now. What do you do with your question?",
+  "ar": "المعلمة ليس لديها وقت الآن. ماذا تفعل بسؤالك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|209417",
+  "nl": "Ik wacht tot de juf tijd heeft.",
+  "en": "I wait until the teacher has time.",
+  "ar": "أنتظر حتى يكون لدى المعلمة وقت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|209589",
+  "nl": "Ik ga schreeuwen.",
+  "en": "I start screaming.",
+  "ar": "أبدأ بالصراخ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|209798",
+  "nl": "Ik doe niets meer.",
+  "en": "I don't do anything anymore.",
+  "ar": "لا أفعل شيئًا بعد ذلك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|210244",
+  "nl": "Je kunt niet verder met een som. Wat doe je terwijl je wacht?",
+  "en": "You can't go on with a sum. What do you do while you wait?",
+  "ar": "لا تستطيع إكمال مسألة. ماذا تفعل وأنت تنتظر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|210505",
+  "nl": "Ik ga verder met de volgende som.",
+  "en": "I go on with the next sum.",
+  "ar": "أكمل المسألة التالية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|210649",
+  "nl": "Ik pak een spel.",
+  "en": "I get a game.",
+  "ar": "آخذ لعبة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|210805",
+  "nl": "Fijne gevoelens",
+  "en": "Good feelings",
+  "ar": "مشاعر جميلة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|212593",
+  "nl": "Je kunt ook zeggen dat je je **fijn** voelt.\n\n**Ik ben blij.** **Ik ben trots.** **Ik voel me goed.**\n**Het gaat goed, dank u.**\n\nDe juf of meester vindt het fijn om dat te horen.",
+  "en": "You can also say that you feel **fijn** (= good).\n\n**Ik ben blij.** (= I am happy.) **Ik ben trots.** (= I am proud.) **Ik voel me goed.** (= I feel good.)\n**Het gaat goed, dank u.** (= I am fine, thank you.)\n\nThe teacher likes to hear that.",
+  "ar": "يمكنك أيضًا أن تقول إنك تشعر بشعور **fijn** (= جميل).\n\n**Ik ben blij.** (= أنا سعيد.) **Ik ben trots.** (= أنا فخور.) **Ik voel me goed.** (= أشعر أنني بخير.)\n**Het gaat goed, dank u.** (= أنا بخير، شكرًا.)\n\nالمعلمة أو المعلم يحب أن يسمع ذلك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|212942",
+  "nl": "Je hebt een mooie tekening gemaakt. Hoe voel je je?",
+  "en": "You made a beautiful drawing. How do you feel?",
+  "ar": "رسمت رسمة جميلة. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|213073",
+  "nl": "Ik ben trots.",
+  "en": "I am proud.",
+  "ar": "أنا فخور."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|213479",
+  "nl": "Je speelt met een vriend. Het is leuk. Hoe voel je je?",
+  "en": "You are playing with a friend. It is fun. How do you feel?",
+  "ar": "تلعب مع صديق. الأمر ممتع. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|213910",
+  "nl": "De juf vraagt: hoe gaat het? Het gaat goed. Wat zeg je?",
+  "en": "The teacher asks: how are you? You are fine. What do you say?",
+  "ar": "المعلمة تسأل: كيف حالك؟ أنت بخير. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|214113",
+  "nl": "Het gaat goed, dank u.",
+  "en": "I am fine, thank you.",
+  "ar": "أنا بخير، شكرًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|214240",
+  "nl": "Ik ben ziek.",
+  "en": "I am sick.",
+  "ar": "أنا مريض."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|214391",
+  "nl": "Ik snap het niet.",
+  "en": "I don't understand it.",
+  "ar": "لا أفهم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|214775",
+  "nl": "Het was een fijne dag op school. Wat zeg je thuis?",
+  "en": "It was a nice day at school. What do you say at home?",
+  "ar": "كان يومًا جميلًا في المدرسة. ماذا تقول في البيت؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|214968",
+  "nl": "Ik had een leuke dag.",
+  "en": "I had a nice day.",
+  "ar": "كان يومي جميلًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|215424",
+  "nl": "De som was moeilijk, maar nu snap je hem. Hoe voel je je?",
+  "en": "The sum was hard, but now you understand it. How do you feel?",
+  "ar": "كانت المسألة صعبة، لكنك الآن تفهمها. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|215590",
+  "nl": "Ik voel me goed.",
+  "en": "I feel good.",
+  "ar": "أشعر أنني بخير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|215722",
+  "nl": "Ik ben verdrietig.",
+  "en": "I am sad.",
+  "ar": "أنا حزين."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|216026",
+  "nl": "De juf wil dat je gaat werken.",
+  "en": "The teacher wants you to start working.",
+  "ar": "المعلمة تريد أن تبدأ العمل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|216345",
+  "nl": "Je zoekt de goede bladzijde in je boek.",
+  "en": "You are looking for the right page in your book.",
+  "ar": "تبحث عن الصفحة الصحيحة في كتابك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|216701",
+  "nl": "Je wilt even een potlood van een ander kind.",
+  "en": "You want to use another child's pencil for a moment.",
+  "ar": "تريد قلم رصاص من طفل آخر لفترة قصيرة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|216977",
+  "nl": "Zachtjes = niet hard.",
+  "en": "Zachtjes (= quietly) = not loud.",
+  "ar": "zachtjes (= بهدوء) = ليس بصوت عالٍ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|217325",
+  "nl": "Beginnen = nu gaan werken.",
+  "en": "Beginnen (= to start) = start working now.",
+  "ar": "beginnen (= يبدأ) = ابدأ العمل الآن."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|217733",
+  "nl": "Je werk is af. Je wilt weten wat je daarna doet.",
+  "en": "Your work is done. You want to know what to do next.",
+  "ar": "عملك انتهى. تريد أن تعرف ماذا تفعل بعد ذلك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|217992",
+  "nl": "Kijk wat er op het bord staat.",
+  "en": "Look at what is written on the board.",
+  "ar": "انظر ماذا مكتوب على السبورة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|218272",
+  "nl": "Je boek moet netjes weg.",
+  "en": "Your book has to be put away neatly.",
+  "ar": "يجب أن تضع كتابك بترتيب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|218648",
+  "nl": "Nakijken = kijken of het goed is.",
+  "en": "Nakijken (= to check) = look whether it is right.",
+  "ar": "nakijken (= يصحح) = يرى إن كان صحيحًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|218899",
+  "nl": "Het andere kind is nog aan het werk.",
+  "en": "The other child is still working.",
+  "ar": "الطفل الآخر ما زال يعمل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|219178",
+  "nl": "Misschien vind je het antwoord zelf.",
+  "en": "Maybe you can find the answer yourself.",
+  "ar": "ربما تجد الجواب بنفسك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|219463",
+  "nl": "Een ander kind kan je ook helpen.",
+  "en": "Another child can also help you.",
+  "ar": "طفل آخر يمكنه أيضًا مساعدتك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|219725",
+  "nl": "Je wilt hulp. Vraag het vriendelijk.",
+  "en": "You want help. Ask nicely.",
+  "ar": "تريد مساعدة. اطلبها بلطف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|220069",
+  "nl": "De juf komt straks. Even geduld.",
+  "en": "The teacher will come soon. Be patient for a moment.",
+  "ar": "المعلمة ستأتي بعد قليل. اصبر قليلًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|220339",
+  "nl": "Je kunt al wel iets anders doen.",
+  "en": "You can already do something else.",
+  "ar": "يمكنك أن تفعل شيئًا آخر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|220667",
+  "nl": "Je hebt iets moois gemaakt. Dat voelt goed.",
+  "en": "You made something beautiful. That feels good.",
+  "ar": "صنعت شيئًا جميلًا. هذا شعور جميل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|220893",
+  "nl": "Leuk spelen = je lacht.",
+  "en": "Playing nicely = you laugh.",
+  "ar": "اللعب الممتع = تضحك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|221116",
+  "nl": "Het gaat goed met je. Zeg dat.",
+  "en": "You are doing well. Say that.",
+  "ar": "أنت بخير. قل ذلك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|221390",
+  "nl": "Fijn = leuk.",
+  "en": "Fijn (= nice) = leuk (= fun).",
+  "ar": "fijn (= جميل) = leuk (= ممتع)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|221702",
+  "nl": "Eindelijk snap je het. Dat voelt fijn.",
+  "en": "Finally you understand it. That feels nice.",
+  "ar": "أخيرًا فهمته. هذا شعور جميل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|222247",
+  "nl": "Woorden 3 — kleuren, vormen, tijd en praten (nieuwkomers)",
+  "en": "Words 3 — colours, shapes, time and talking (newcomers)",
+  "ar": "كلمات 3 — الألوان والأشكال والوقت والكلام (للقادمين الجدد)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|223111",
+  "nl": "Kleuren, vormen, groot en klein, waar en wanneer, en woorden om te denken en te vertellen. Met steun in je eigen taal. ~15 min.",
+  "en": "Colours, shapes, big and small, where and when, and words for thinking and telling. With help in your own language. ~15 min.",
+  "ar": "الألوان، الأشكال، كبير وصغير، أين ومتى، وكلمات للتفكير والحكي. مع مساعدة بلغتك. ~15 دقيقة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|223268",
+  "nl": "Welke kleur is het?",
+  "en": "What colour is it?",
+  "ar": "ما لونه؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|223515",
+  "nl": "Welke vorm? Groot of klein?",
+  "en": "Which shape? Big or small?",
+  "ar": "أي شكل؟ كبير أم صغير؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|223687",
+  "nl": "Waar is het? Hoeveel?",
+  "en": "Where is it? How many?",
+  "ar": "أين هو؟ كم؟"
+ }
+]

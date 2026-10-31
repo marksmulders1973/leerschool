@@ -1,0 +1,63 @@
+[
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|4",
+  "oordeel": "verbeterd",
+  "was": "وقتی هوا سرد است، چه چیزی سرت می‌گذاری؟",
+  "nu": "وقتی هوا سرد است، چه چیزی روی سرت می‌گذاری؟",
+  "reden": "«روی» ontbrak; «سرت می‌گذاری» is spreektaal/onvolledig"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|5",
+  "oordeel": "verbeterd",
+  "was": "دانه‌های کوچک سفید. آن را گرم می‌خوری، اغلب با سبزی. چیست؟",
+  "nu": "دانه‌های کوچک و سفید. آن‌ها را گرم می‌خوری، اغلب با سبزیجات. چیست؟",
+  "reden": "meervoud dan «آن‌ها»; «سبزی» = kruiden, «سبزیجات» = groente"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|8",
+  "oordeel": "verbeterd",
+  "was": "چه چیزی را گرم در فنجان می‌نوشی؟",
+  "nu": "چه چیزی را گرم از فنجان می‌نوشی؟",
+  "reden": "'uit een kopje' = «از فنجان», niet «در»"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|9",
+  "oordeel": "verbeterd",
+  "was": "در خاک رشد می‌کند. با آن سیب‌زمینی سرخ‌کرده درست می‌کنی. چیست؟",
+  "nu": "در خاک رشد می‌کند. از آن فرنچ‌فرایز درست می‌کنی. چیست؟",
+  "reden": "«سیب‌زمینی سرخ‌کرده» verklapte het antwoord (سیب‌زمینی = aardappel)"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|15",
+  "oordeel": "verbeterd",
+  "was": "دو چرخ دارد. با پاهایت پا می‌زنی. چیست؟",
+  "nu": "دو چرخ دارد. با پاهایت رکاب می‌زنی. چیست؟",
+  "reden": "«با پاهایت پا می‌زنی» dubbel; «رکاب زدن» = trappen op de fiets"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|16",
+  "oordeel": "verbeterd",
+  "was": "یک ماشین بزرگ. خیلی از آدم‌ها با هم سوار می‌شوند. چیست؟",
+  "nu": "یک ماشین بزرگ. آدم‌های زیادی با هم سوارش می‌شوند. چیست؟",
+  "reden": "«سوار می‌شوند» zonder «ـش» liep niet; natuurlijker woordvolgorde"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|17",
+  "oordeel": "verbeterd",
+  "was": "ماشین‌ها کنار خانه‌ات کجا حرکت می‌کنند؟",
+  "nu": "ماشین‌ها کنار خانه‌ات از کجا رد می‌شوند؟",
+  "reden": "«کجا حرکت می‌کنند» onnatuurlijk; 'langs je huis rijden' = «رد شدن»"
+ },
+ {
+  "id": "P|src/learnPaths/woorden2Nieuwkomers.js|21",
+  "oordeel": "verbeterd",
+  "was": "با چه چیزی راه می‌روی و می‌دوی؟ دو تا از آن داری.",
+  "nu": "با چه چیزی راه می‌روی و می‌دوی؟ دو تا از آن‌ها داری.",
+  "reden": "«دو تا از آن» → «از آن‌ها» (meervoud)"
+ },
+ {
+  "id": "_telling",
+  "goed": 17,
+  "verbeterd": 8
+ }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|275389",
+    "oordeel": "verbeterd",
+    "was": "حساب را رونویسی می‌کنم.",
+    "nu": "مسئله را رونویسی می‌کنم.",
+    "reden": "som = مسئله (vast woord), niet حساب"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|296485",
+    "oordeel": "verbeterd",
+    "was": "مهمت 16 تیله دارد. آن‌ها را به طور مساوی در 2 کیسه تقسیم می‌کند. در هر کیسه چند تیله هست؟",
+    "nu": "مهمت 16 تیله دارد. آن‌ها را به‌طور مساوی در 2 کیسه تقسیم می‌کند. در هر کیسه چند تیله هست؟",
+    "reden": "halve spatie: به‌طور"
+  },
+  {
+    "id": "_telling",
+    "goed": 169,
+    "verbeterd": 2
+  }
+]

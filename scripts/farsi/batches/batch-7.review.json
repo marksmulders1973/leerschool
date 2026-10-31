@@ -1,0 +1,21 @@
+[
+  {
+    "id": "A|src/learnPaths/nieuwkomersZinnen.js|8995",
+    "oordeel": "verbeterd",
+    "was": "انگشتم را بالا می‌برم.",
+    "nu": "دستم را بالا می‌برم.",
+    "reden": "Perzisch idioom = hand opsteken; gelijk aan \"Steek je vinger op\" in pakket 5 (دستت را بالا ببر)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersVertalingen.js|21390",
+    "oordeel": "verbeterd",
+    "was": "نقاشی کشیدن",
+    "nu": "نقاشی کردن",
+    "reden": "standaardvorm (zoals نقاشی می‌کنم elders); \"نقاشی کشیدن\" minder gangbaar"
+  },
+  {
+    "id": "_telling",
+    "goed": 169,
+    "verbeterd": 2
+  }
+]

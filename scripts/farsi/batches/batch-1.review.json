@@ -1,0 +1,56 @@
+[
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|6077",
+  "oordeel": "verbeterd",
+  "was": "ساعت 10 است. زنگ می‌خورد. این یعنی چه؟",
+  "nu": "ساعت 10 است. زنگ به صدا درمی‌آید. این یعنی چه؟",
+  "reden": "'زنگ می‌خورد' is Iraanse spreektaal; 'به صدا درمی‌آید' is standaard en ook in Afghanistan gangbaar"
+ },
+ {
+  "id": "A|src/learnPaths/inDeKlasNieuwkomers.js|6426",
+  "oordeel": "verbeterd",
+  "was": "کاپشنت آویزان است روی…",
+  "nu": "کاپشنت به … آویزان است.",
+  "reden": "Woordvolgorde: in het Perzisch staat het werkwoord achteraan; 'آویزان است روی…' klonk onnatuurlijk"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|2362",
+  "oordeel": "verbeterd",
+  "was": "سؤال از معلم",
+  "nu": "سؤال از خانم معلم یا آقای معلم",
+  "reden": "Vaste woorden: juf = خانم معلم, meester = آقای معلم ('of meester' viel weg)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|6008",
+  "oordeel": "verbeterd",
+  "was": "**Mag ik naar de wc?** (= می‌توانم به توالت بروم؟) همین کافی است. معلم می‌گوید بله.",
+  "nu": "**Mag ik naar de wc?** (= می‌توانم به توالت بروم؟) همین کافی است. خانم معلم یا آقای معلم می‌گوید بله.",
+  "reden": "Vaste woorden: 'de juf of meester' = خانم معلم یا آقای معلم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|10074",
+  "oordeel": "verbeterd",
+  "was": "نمی‌فهمی. این را راست بگو.",
+  "nu": "نمی‌فهمی. این را صادقانه بگو.",
+  "reden": "'eerlijk zeggen' = صادقانه گفتن; 'راست بگو' klinkt als 'lieg niet'"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|24285",
+  "oordeel": "verbeterd",
+  "was": "نام داشتن",
+  "nu": "اسم داشتن",
+  "reden": "Gelijk aan de uitleg ernaast (اسم داشتن); eenvoudiger kinderwoord dan نام داشتن"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|38158",
+  "oordeel": "verbeterd",
+  "was": "**Thuis** (خانه) جایی است که زندگی می‌کنی. این **huis** (خانه) توست.",
+  "nu": "**Thuis** (خانه) جایی است که زندگی می‌کنی. این خانهٔ توست: **huis**.",
+  "reden": "'این **huis** (خانه) توست' miste de ezafe en was grammaticaal krom"
+ },
+ {
+  "id": "_telling",
+  "goed": 164,
+  "verbeterd": 7
+ }
+]

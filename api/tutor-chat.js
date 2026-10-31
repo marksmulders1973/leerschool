@@ -279,6 +279,7 @@ function buildSystemPrompt(ctx = {}) {
       tr: ["Turks", "(yatak = içinde uyursun.)"],
       ro: ["Roemeens", "(patul = dormi în el.)"],
       bg: ["Bulgaars", "(леглото = спиш в него.)"],
+      fa: ["Perzisch (Farsi)", "(تخت = در آن می‌خوابی.)"],
     };
     const [taal, vb] = TALEN[String(ctx.steunTaal || "")] || TALEN.en;
     // Kind koos zelf "Nederlands" (kliktest 26 sep 2026): dan géén vertaling erbij.
@@ -449,7 +450,7 @@ export default async function handler(req) {
 
   // 🌐 "In mijn taal" (Mark 30 sep 2026: het gewone start-kwartier had geen vertaalknop voor nieuwkomers):
   // alleen de vraag + antwoorden vertalen, niets uitleggen. Kort systeem, klein model.
-  const TALEN_VERTAAL = { en: "Engels", ar: "Arabisch", uk: "Oekraïens", tr: "Turks", ro: "Roemeens", bg: "Bulgaars" };
+  const TALEN_VERTAAL = { en: "Engels", ar: "Arabisch", uk: "Oekraïens", tr: "Turks", ro: "Roemeens", bg: "Bulgaars", fa: "Perzisch (Farsi)" };
   const vertaalNaar = TALEN_VERTAAL[String(context?.vertaalNaar || "")] ? String(context.vertaalNaar) : null;
   const system = vertaalNaar
     ? `Je vertaalt een oefenvraag voor een kind dat net Nederlands leert. Vertaal de tekst die de gebruiker stuurt (JSON met "q" en "options") woordelijk naar het ${TALEN_VERTAAL[vertaalNaar]}. Getallen, sommen en namen blijven staan. Geef ALLEEN geldige JSON terug in exact dezelfde vorm: {"q": "...", "options": ["...", ...]}. Geen uitleg, geen antwoord, geen andere tekst.`

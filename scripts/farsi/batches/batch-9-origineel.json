@@ -1,0 +1,668 @@
+[
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|1989",
+  "nl": null,
+  "en": "Which sound do you hear at the start of 'maan'?",
+  "ar": "ما الصوت الذي تسمعه في بداية 'maan'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|3280",
+  "nl": null,
+  "en": "Which sound do you hear at the start of 'vis'?",
+  "ar": "ما الصوت الذي تسمعه في بداية 'vis'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|3620",
+  "nl": null,
+  "en": "Which sound do you hear at the start of 'bus'?",
+  "ar": "ما الصوت الذي تسمعه في بداية 'bus'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|3913",
+  "nl": null,
+  "en": "Which word starts with the sound 'k'?",
+  "ar": "أي كلمة تبدأ بالصوت 'k'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|4212",
+  "nl": null,
+  "en": "Which word starts with the sound 'z'?",
+  "ar": "أي كلمة تبدأ بالصوت 'z'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|4613",
+  "nl": null,
+  "en": "Glue the sounds together: t - a - s. Which word is it?",
+  "ar": "اجمع الأصوات: t - a - s. ما هي الكلمة؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|5920",
+  "nl": null,
+  "en": "Glue the sounds together: p - e - n. Which word is it?",
+  "ar": "اجمع الأصوات: p - e - n. ما هي الكلمة؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|6324",
+  "nl": null,
+  "en": "Glue the sounds together: m - e - l - k. Which word is it?",
+  "ar": "اجمع الأصوات: m - e - l - k. ما هي الكلمة؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|6607",
+  "nl": null,
+  "en": "Chop the word 'kat' into sounds.",
+  "ar": "قسّم كلمة 'kat' إلى أصوات."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|6901",
+  "nl": null,
+  "en": "How many sounds do you hear in 'jas'?",
+  "ar": "كم صوتًا تسمع في 'jas'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|7181",
+  "nl": null,
+  "en": "Which word has the sound 'oo'?",
+  "ar": "أي كلمة فيها الصوت 'oo'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|8416",
+  "nl": null,
+  "en": "Which word has the sound 'aa'?",
+  "ar": "أي كلمة فيها الصوت 'aa'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|8678",
+  "nl": null,
+  "en": "Which word has the sound 'oe'?",
+  "ar": "أي كلمة فيها الصوت 'oe'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|8969",
+  "nl": null,
+  "en": "How many sounds do you hear in 'boom'?",
+  "ar": "كم صوتًا تسمع في 'boom'؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|9399",
+  "nl": null,
+  "en": "Glue the sounds together: v - oe - t. Which word is it?",
+  "ar": "اجمع الأصوات: v - oe - t. ما هي الكلمة؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|9839",
+  "nl": null,
+  "en": "Say the word very slowly. What do you hear first?",
+  "ar": "قل الكلمة ببطء شديد. ماذا تسمع أولًا؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|10213",
+  "nl": null,
+  "en": "Say the sounds quickly one after the other. Which word do you hear?",
+  "ar": "قل الأصوات بسرعة واحدًا بعد الآخر. أي كلمة تسمع؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|10528",
+  "nl": null,
+  "en": "Say the word slowly. Each sound is one piece.",
+  "ar": "قل الكلمة ببطء. كل صوت هو قطعة واحدة."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|10931",
+  "nl": null,
+  "en": "Two letters, one sound. Say the word slowly and listen to the middle.",
+  "ar": "حرفان، صوت واحد. قل الكلمة ببطء واستمع إلى الوسط."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|11326",
+  "nl": "Zeg het woord langzaam. De twee o's zijn samen één klank.",
+  "en": "Say the word slowly. The two o's together are one sound.",
+  "ar": "قل الكلمة ببطء. حرفا o معًا صوت واحد."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|11563",
+  "nl": "Welke klank hoor je vooraan?",
+  "en": "Which sound do you hear at the start?",
+  "ar": "ما الصوت الذي تسمعه في البداية؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|11809",
+  "nl": "Hoe hak en plak ik een woord?",
+  "en": "How do I chop and glue a word?",
+  "ar": "كيف أقسّم الكلمة وأجمعها؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|12071",
+  "nl": "Welke twee letters maken één klank?",
+  "en": "Which two letters make one sound?",
+  "ar": "أي حرفين يصنعان صوتًا واحدًا؟"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|12217",
+  "nl": "Letters en klanken",
+  "en": "Letters and sounds",
+  "ar": "الحروف والأصوات"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|12367",
+  "nl": "Klanken vooraan",
+  "en": "Sounds at the start",
+  "ar": "الأصوات في البداية"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|12531",
+  "nl": "Hakken en plakken",
+  "en": "Chopping and gluing",
+  "ar": "التقسيم والجمع"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|12704",
+  "nl": "Twee letters, één klank",
+  "en": "Two letters, one sound",
+  "ar": "حرفان، صوت واحد"
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|13933",
+  "nl": "Elk woord bestaat uit **klanken**. Zeg een woord heel langzaam: **mmm-aa-n**.\\n\\nDe eerste klank hoor je vooraan. Elke klank heeft een **letter**.\\n\\nDruk op **Lees voor** om het woord te horen.",
+  "en": "Every word is made of sounds. Say a word very slowly: mmm-aa-n.\\n\\nYou hear the first sound at the start. Every sound has a letter.\\n\\nPress 'Lees voor' to hear the word.",
+  "ar": "كل كلمة مكوّنة من أصوات. قل الكلمة ببطء شديد: mmm-aa-n.\\n\\nالصوت الأول تسمعه في البداية. لكل صوت حرف.\\n\\nاضغط 'Lees voor' لتسمع الكلمة."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|15042",
+  "nl": "**Hakken**: een woord in klanken zeggen. **tas** → **t - a - s**.\\n\\n**Plakken**: de klanken snel achter elkaar zeggen. **t - a - s** → **tas**.\\n\\nZo lees je een nieuw woord.",
+  "en": "Chopping: saying a word in sounds. tas → t - a - s.\\n\\nGluing: saying the sounds quickly one after the other. t - a - s → tas.\\n\\nThis is how you read a new word.",
+  "ar": "التقسيم: قول الكلمة أصواتًا. tas ← t - a - s.\\n\\nالجمع: قول الأصوات بسرعة واحدًا بعد الآخر. t - a - s ← tas.\\n\\nهكذا تقرأ كلمة جديدة."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|16031",
+  "nl": "Soms maken **twee letters samen één klank**: **aa**, **oo**, **ee** en **oe**.\\n\\n**boom** = b - **oo** - m: drie klanken.\\n**boek** = b - **oe** - k: ook drie klanken.",
+  "en": "Sometimes two letters together make one sound: aa, oo, ee and oe.\\n\\nboom = b - oo - m: three sounds.\\nboek = b - oe - k: also three sounds.",
+  "ar": "أحيانًا يصنع حرفان معًا صوتًا واحدًا: aa و oo و ee و oe.\\n\\nboom = b - oo - m: ثلاثة أصوات.\\nboek = b - oe - k: أيضًا ثلاثة أصوات."
+ },
+ {
+  "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|16504",
+  "nl": "Letters en klanken — lezen en schrijven in het Nederlands (nieuwkomers)",
+  "en": "Letters and sounds — reading and writing in Dutch (newcomers)",
+  "ar": "الحروف والأصوات — القراءة والكتابة بالهولندية (للقادمين الجدد)"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|1585",
+  "nl": "de broek",
+  "en": "the trousers",
+  "ar": "البنطال"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|1679",
+  "nl": "de trui",
+  "en": "the jumper / sweater",
+  "ar": "الكنزة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|1766",
+  "nl": "de schoen",
+  "en": "the shoe",
+  "ar": "الحذاء"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|1846",
+  "nl": "de sok",
+  "en": "the sock",
+  "ar": "الجورب"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|1937",
+  "nl": "de muts",
+  "en": "the woolly hat",
+  "ar": "القبعة الصوفية"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2012",
+  "nl": "de rijst",
+  "en": "the rice",
+  "ar": "الأرز"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2084",
+  "nl": "het ei",
+  "en": "the egg",
+  "ar": "البيضة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2156",
+  "nl": "de soep",
+  "en": "the soup",
+  "ar": "الحساء"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2224",
+  "nl": "de thee",
+  "en": "the tea",
+  "ar": "الشاي"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2317",
+  "nl": "de aardappel",
+  "en": "the potato",
+  "ar": "البطاطا"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2403",
+  "nl": "de keuken",
+  "en": "the kitchen",
+  "ar": "المطبخ"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2478",
+  "nl": "het bed",
+  "en": "the bed",
+  "ar": "السرير"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2570",
+  "nl": "de kast",
+  "en": "the cupboard / wardrobe",
+  "ar": "الخزانة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2647",
+  "nl": "de lamp",
+  "en": "the lamp",
+  "ar": "المصباح"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2738",
+  "nl": "de badkamer",
+  "en": "the bathroom",
+  "ar": "الحمّام"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2832",
+  "nl": "de fiets",
+  "en": "the bicycle",
+  "ar": "الدرّاجة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2916",
+  "nl": "de bus",
+  "en": "the bus",
+  "ar": "الحافلة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|2998",
+  "nl": "de straat",
+  "en": "the street",
+  "ar": "الشارع"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3085",
+  "nl": "de winkel",
+  "en": "the shop",
+  "ar": "المتجر"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3168",
+  "nl": "het park",
+  "en": "the park",
+  "ar": "الحديقة العامة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3263",
+  "nl": "de arm",
+  "en": "the arm",
+  "ar": "الذراع"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3339",
+  "nl": "het been",
+  "en": "the leg",
+  "ar": "الساق"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3423",
+  "nl": "de vinger",
+  "en": "the finger",
+  "ar": "الإصبع"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3495",
+  "nl": "de tand",
+  "en": "the tooth",
+  "ar": "السنّ"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|3570",
+  "nl": "het haar",
+  "en": "the hair",
+  "ar": "الشعر"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|18622",
+  "nl": null,
+  "en": "Read the question and choose the **Dutch** word that fits.\\n\\nLearn every word with **de** or **het** in front.\\n\\nDon't know a word? Tap the small button next to it to see it in your language.",
+  "ar": "اقرأ السؤال واختر الكلمة **الهولندية** المناسبة.\\n\\nتعلّم كل كلمة مع **de** أو **het** قبلها.\\n\\nلا تعرف كلمة؟ اضغط على الزر الصغير بجانبها لتراها بلغتك."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|18740",
+  "nl": "Meer woorden",
+  "en": "More words",
+  "ar": "كلمات أكثر"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19221",
+  "nl": "Meer woorden — kleding, eten, huis, buiten, lichaam (nieuwkomers)",
+  "en": "More words — clothes, food, home, outside, body (newcomers)",
+  "ar": "كلمات أكثر — الملابس، الطعام، البيت، الخارج، الجسم (للقادمين الجدد)"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19299",
+  "nl": "Kleding",
+  "en": "Clothes",
+  "ar": "الملابس"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19436",
+  "nl": "Eten en drinken",
+  "en": "Food and drink",
+  "ar": "الطعام والشراب"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19517",
+  "nl": "In huis",
+  "en": "In the house",
+  "ar": "في البيت"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19675",
+  "nl": "Buiten en onderweg",
+  "en": "Outside and on the way",
+  "ar": "في الخارج وفي الطريق"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19755",
+  "nl": "Buiten",
+  "en": "Outside",
+  "ar": "في الخارج"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19848",
+  "nl": "Je lichaam",
+  "en": "Your body",
+  "ar": "جسمك"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|19942",
+  "nl": "de en het",
+  "en": "de and het",
+  "ar": "de و het"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|20015",
+  "nl": "Truc",
+  "en": "Trick",
+  "ar": "حيلة"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|20138",
+  "nl": "Wat trek ik aan?",
+  "en": "What do I put on?",
+  "ar": "ماذا ألبس؟"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|20297",
+  "nl": "Wat eet en drink ik?",
+  "en": "What do I eat and drink?",
+  "ar": "ماذا آكل وأشرب؟"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|20446",
+  "nl": "Wat is er in huis?",
+  "en": "What is in the house?",
+  "ar": "ماذا يوجد في البيت؟"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|20608",
+  "nl": "Wat zie ik buiten?",
+  "en": "What do I see outside?",
+  "ar": "ماذا أرى في الخارج؟"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|20867",
+  "nl": "Hoe heten de delen van mijn lichaam?",
+  "en": "What are the parts of my body called?",
+  "ar": "ما أسماء أجزاء جسمي؟"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|21155",
+  "nl": "Woorden voor **kleren**: wat trek je aan?",
+  "en": "Words for **clothes**: what do you put on?",
+  "ar": "كلمات عن **الملابس**: ماذا تلبس؟"
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|21431",
+  "nl": "Woorden voor **eten** en **drinken**.",
+  "en": "Words for **food** and **drink**.",
+  "ar": "كلمات عن **الطعام** و**الشراب**."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|21786",
+  "nl": "Woorden voor de **kamers** en **spullen** in huis.",
+  "en": "Words for the **rooms** and **things** in the house.",
+  "ar": "كلمات عن **الغرف** و**الأشياء** في البيت."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|22076",
+  "nl": "Woorden voor **buiten** en **onderweg**.",
+  "en": "Words for **outside** and **on the way**.",
+  "ar": "كلمات عن **الخارج** و**الطريق**."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|22328",
+  "nl": "Nog meer woorden voor je **lichaam**.",
+  "en": "More words for your **body**.",
+  "ar": "كلمات أخرى عن **جسمك**."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|22606",
+  "nl": "Leer het woord altijd mét de of het.",
+  "en": "Always learn the word with de or het.",
+  "ar": "تعلّم الكلمة دائمًا مع de أو het."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|22894",
+  "nl": "Zeg het woord hardop en wijs het aan.",
+  "en": "Say the word out loud and point to it.",
+  "ar": "قل الكلمة بصوت عالٍ وأشر إليها."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|23099",
+  "nl": "Kies het Nederlandse woord.",
+  "en": "Choose the Dutch word.",
+  "ar": "اختر الكلمة الهولندية."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|23265",
+  "nl": "Ik trek mijn broek aan.",
+  "en": "I put on my trousers.",
+  "ar": "ألبس بنطالي."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|23456",
+  "nl": "Ik eet rijst met groente.",
+  "en": "I eat rice with vegetables.",
+  "ar": "آكل الأرز مع الخضار."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|23656",
+  "nl": "Mama kookt in de keuken.",
+  "en": "Mum cooks in the kitchen.",
+  "ar": "ماما تطبخ في المطبخ."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|23881",
+  "nl": "Ik ga met de fiets naar school.",
+  "en": "I go to school by bike.",
+  "ar": "أذهب إلى المدرسة بالدرّاجة."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|24023",
+  "nl": "Ik steek mijn arm op.",
+  "en": "I put up my arm.",
+  "ar": "أرفع ذراعي."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|25426",
+  "nl": "Meer woorden: kleding, eten en drinken, in huis, buiten en je lichaam. Vijfentwintig nieuwe woorden. Lees de vraag en kies het goede woord. Ken je een woord niet? Tik op het knopje ernaast. ~15 min.",
+  "en": "More words: clothes, food and drink, in the house, outside and your body. Twenty-five new words. Read the question and choose the right word. Don't know a word? Tap the small button next to it. ~15 min.",
+  "ar": "كلمات أكثر: الملابس، الطعام والشراب، في البيت، في الخارج وجسمك. خمس وعشرون كلمة جديدة. اقرأ السؤال واختر الكلمة الصحيحة. لا تعرف كلمة؟ اضغط على الزر الصغير بجانبها. ~15 دقيقة."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|26145",
+  "nl": null,
+  "en": "Learn every word with **de** or **het**: **${a}**, **${b}**.",
+  "ar": "تعلّم كل كلمة مع **de** أو **het**: **${a}**، **${b}**."
+ },
+ {
+  "id": "S|src/learnPaths/woorden2Nieuwkomers.js|26497",
+  "nl": null,
+  "en": "${woord} = ${t.en}",
+  "ar": "${woord} = ${t.ar}"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|26219",
+  "nl": "Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.",
+  "en": "Charley says a sentence. Then he says one word. You write that word.",
+  "ar": "تشارلي يقول جملة. ثم يقول كلمة واحدة. أنت تكتب تلك الكلمة."
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|26984",
+  "nl": "10 korte woorden. Luister goed. Elke letter is een klank: t-a-s. Tik op de zin: dan zie je hem in jouw taal.",
+  "en": "10 short words. Listen carefully. Every letter is a sound: t-a-s. Tap the sentence to see it in your language.",
+  "ar": "10 كلمات قصيرة. استمع جيدًا. كل حرف هو صوت: t-a-s. اضغط على الجملة لتراها بلغتك."
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|27053",
+  "nl": "Start",
+  "en": "Start",
+  "ar": "ابدأ"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|27120",
+  "nl": "Terug",
+  "en": "Back",
+  "ar": "رجوع"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|27182",
+  "nl": "Stop",
+  "en": "Stop",
+  "ar": "توقّف"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|27451",
+  "nl": "Hoi, ik ben Charley! Hoor je mij?",
+  "en": "Hi, I am Charley! Can you hear me?",
+  "ar": "مرحبًا، أنا تشارلي! هل تسمعني؟"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|28224",
+  "nl": "Zet je geluid aan en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.",
+  "en": "Turn on the sound and take the phone off silent. Charley will say a sentence and then the word you must write.",
+  "ar": "شغّل الصوت وأوقف الوضع الصامت. سيقول تشارلي جملة ثم الكلمة التي يجب أن تكتبها."
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|28417",
+  "nl": "Ik hoor Charley, start!",
+  "en": "I can hear Charley, start!",
+  "ar": "أسمع تشارلي، ابدأ!"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|28519",
+  "nl": "Nog een keer",
+  "en": "Once more",
+  "ar": "مرة أخرى"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|28783",
+  "nl": "Ik hoor niets → lees-dictee",
+  "en": "I hear nothing → reading dictation",
+  "ar": "لا أسمع شيئًا ← إملاء بالقراءة"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|28920",
+  "nl": "Luister goed…",
+  "en": "Listen carefully…",
+  "ar": "استمع جيدًا…"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29057",
+  "nl": "Charley komt eraan…",
+  "en": "Charley is coming…",
+  "ar": "تشارلي قادم…"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29282",
+  "nl": "Schrijf het woord op dat je hoorde.",
+  "en": "Write the word you heard.",
+  "ar": "اكتب الكلمة التي سمعتها."
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29368",
+  "nl": "Goed zo!",
+  "en": "Well done!",
+  "ar": "أحسنت!"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29457",
+  "nl": "Controleer",
+  "en": "Check",
+  "ar": "تحقّق"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29536",
+  "nl": "Volgende",
+  "en": "Next",
+  "ar": "التالي"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29606",
+  "nl": "Klaar",
+  "en": "Done",
+  "ar": "انتهيت"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29723",
+  "nl": "Nieuw dictee",
+  "en": "New dictation",
+  "ar": "إملاء جديد"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|29885",
+  "nl": "Fouten nog een keer",
+  "en": "Mistakes once more",
+  "ar": "الأخطاء مرة أخرى"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|30043",
+  "nl": "Nog even kijken:",
+  "en": "Let's look again:",
+  "ar": "لننظر مرة أخرى:"
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|30362",
+  "nl": null,
+  "en": "Listen to each sound: ${m1[1]}.",
+  "ar": "استمع إلى كل صوت: ${m1[1]}."
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|31036",
+  "nl": null,
+  "en": "Two letters, one sound: ${m2[1]}. You hear ${m2[2]}, you write ${m2[3].replace(\" en \", \" and \")}.",
+  "ar": "حرفان، صوت واحد: ${m2[1]}. تسمع ${m2[2]}، وتكتب ${m2[3].replace(\" en \", \" و \")}."
+ },
+ {
+  "id": "S|src/features/dictee/DicteePage.jsx|31629",
+  "nl": null,
+  "en": "Almost! It is ${it.woord}. ${r.en}",
+  "ar": "تقريبًا! إنها ${it.woord}. ${r.ar}"
+ }
+]

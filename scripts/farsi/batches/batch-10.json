@@ -1,0 +1,158 @@
+[
+ {
+  "id": "R|0",
+  "nl": "${X} staat al in de vraag. Wat komt erna?",
+  "en": "${X} is already in the question. What comes after it?",
+  "ar": "${X} موجود في السؤال. ماذا يأتي بعده؟"
+ },
+ {
+  "id": "R|1",
+  "nl": "${X} komt vóór ${N}, niet erna.",
+  "en": "${X} comes before ${N}, not after.",
+  "ar": "${X} يأتي قبل ${N}، لا بعده."
+ },
+ {
+  "id": "R|2",
+  "nl": "${X} is er één bij. Je moet er tien bij doen.",
+  "en": "${X} is one more. You need ten more.",
+  "ar": "${X} هو واحد زيادة. تحتاج عشرة زيادة."
+ },
+ {
+  "id": "R|3",
+  "nl": "je telde ${t} + ${e}. Maar ${t} tientallen is ${t * 10}.",
+  "en": "you added ${t} + ${e}. But ${t} tens is ${t * 10}.",
+  "ar": "جمعت ${t} + ${e}. لكن ${t} عشرات = ${t * 10}."
+ },
+ {
+  "id": "R|4",
+  "nl": "je draaide de cijfers om. Eerst de tientallen: ${t * 10}.",
+  "en": "you swapped the digits. Tens first: ${t * 10}.",
+  "ar": "قلبت الرقمين. العشرات أولًا: ${t * 10}."
+ },
+ {
+  "id": "R|5",
+  "nl": "${X} is ${groot} − ${klein}. Maar hier komt er iets bij (+).",
+  "en": "${X} is ${groot} − ${klein}. But here something is added (+).",
+  "ar": "${X} هو ${groot} − ${klein}. لكن هنا نضيف (+)."
+ },
+ {
+  "id": "R|6",
+  "nl": "${X} is ${a} + ${b}. Maar hier gaat er iets af (−).",
+  "en": "${X} is ${a} + ${b}. But here something is taken away (−).",
+  "ar": "${X} هو ${a} + ${b}. لكن هنا نطرح (−)."
+ },
+ {
+  "id": "R|7",
+  "nl": "${X} is ${a} + ${b}. Maar het zijn ${a} groepjes van ${b}.",
+  "en": "${X} is ${a} + ${b}. But it is ${a} groups of ${b}.",
+  "ar": "${X} هو ${a} + ${b}. لكنها ${a} مجموعات من ${b}."
+ },
+ {
+  "id": "R|8",
+  "nl": "${X} is ${som}. Maar je deelt ${a} eerlijk uit.",
+  "en": "${X} is ${som}. But you share ${a} fairly.",
+  "ar": "${X} هو ${som}. لكنك تقسم ${a} بالعدل."
+ },
+ {
+  "id": "R|9",
+  "nl": "${X} is het dubbele van ${nums[0]}. De helft is kleiner.",
+  "en": "${X} is double ${nums[0]}. Half is smaller.",
+  "ar": "${X} هو ضعف ${nums[0]}. النصف أصغر."
+ },
+ {
+  "id": "R|10",
+  "nl": "${X} staat al in de vraag. Je moet nog rekenen.",
+  "en": "${X} is already in the question. You still need to calculate.",
+  "ar": "${X} موجود في السؤال. ما زلت تحتاج أن تحسب."
+ },
+ {
+  "id": "R|11",
+  "nl": "${X} is tien te veel. Kijk goed naar de tientallen.",
+  "en": "${X} is ten too many. Look carefully at the tens.",
+  "ar": "${X} أكثر بعشرة. انظر جيدًا إلى العشرات."
+ },
+ {
+  "id": "R|12",
+  "nl": "${X} is tien te weinig. Kijk goed naar de tientallen.",
+  "en": "${X} is ten too few. Look carefully at the tens.",
+  "ar": "${X} أقل بعشرة. انظر جيدًا إلى العشرات."
+ },
+ {
+  "id": "R|13",
+  "nl": "${X} is één te veel. Tel nog eens precies.",
+  "en": "${X} is one too many. Count again carefully.",
+  "ar": "${X} أكثر بواحد. عُدّ مرة أخرى بدقة."
+ },
+ {
+  "id": "R|14",
+  "nl": "${X} is één te weinig. Tel nog eens precies.",
+  "en": "${X} is one too few. Count again carefully.",
+  "ar": "${X} أقل بواحد. عُدّ مرة أخرى بدقة."
+ },
+ {
+  "id": "R|15",
+  "nl": "${X} is te veel.",
+  "en": "${X} is too many.",
+  "ar": "${X} أكثر من اللازم."
+ },
+ {
+  "id": "R|16",
+  "nl": "${X} is te weinig.",
+  "en": "${X} is too few.",
+  "ar": "${X} أقل من اللازم."
+ },
+ {
+  "id": "R|17",
+  "nl": "plus is als er iets bij komt.",
+  "en": "plus is when something is added.",
+  "ar": "الجمع عندما يُضاف شيء."
+ },
+ {
+  "id": "R|18",
+  "nl": "min is als er iets weggaat.",
+  "en": "minus is when something goes away.",
+  "ar": "الطرح عندما يذهب شيء."
+ },
+ {
+  "id": "R|19",
+  "nl": "keer is hetzelfde getal een paar keer.",
+  "en": "times is the same number a few times.",
+  "ar": "الضرب هو نفس العدد عدة مرات."
+ },
+ {
+  "id": "R|20",
+  "nl": "2 + 4 is plus, geen keer.",
+  "en": "2 + 4 is plus, not times.",
+  "ar": "2 + 4 جمع، وليس ضربًا."
+ },
+ {
+  "id": "R|21",
+  "nl": "4 − 2 is min, geen keer.",
+  "en": "4 − 2 is minus, not times.",
+  "ar": "4 − 2 طرح، وليس ضربًا."
+ },
+ {
+  "id": "R|22",
+  "nl": "${a} en ${b} is niet evenveel.",
+  "en": "${a} and ${b} are not the same.",
+  "ar": "${a} و ${b} ليسا متساويين."
+ },
+ {
+  "id": "R|23",
+  "nl": "ze hebben allebei ${n}.",
+  "en": "they both have ${n}.",
+  "ar": "لدى كلٍّ منهما ${n}."
+ },
+ {
+  "id": "R|24",
+  "nl": "${p.naam} heeft ${p.n}. Dat is meer dan ${doel}.",
+  "en": "${p.naam} has ${p.n}. That is more than ${doel}.",
+  "ar": "عند ${p.naam} ${p.n}. هذا أكثر من ${doel}."
+ },
+ {
+  "id": "R|25",
+  "nl": "${p.naam} heeft ${p.n}. Dat is minder dan ${doel}.",
+  "en": "${p.naam} has ${p.n}. That is less than ${doel}.",
+  "ar": "عند ${p.naam} ${p.n}. هذا أقل من ${doel}."
+ }
+]

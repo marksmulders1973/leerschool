@@ -1,0 +1,63 @@
+[
+  {
+    "id": "S|src/features/dictee/DicteePage.jsx|26219",
+    "oordeel": "verbeterd",
+    "was": "Charley یک جمله می‌گوید. بعد یک کلمه می‌گوید. تو آن کلمه را می‌نویسی.",
+    "nu": "چارلی یک جمله می‌گوید. بعد یک کلمه می‌گوید. تو آن کلمه را می‌نویسی.",
+    "reden": "Mascottenaam Charley in Perzisch schrift (afspraak: چارلی)."
+  },
+  {
+    "id": "S|src/features/dictee/DicteePage.jsx|27451",
+    "oordeel": "verbeterd",
+    "was": "سلام، من Charley هستم! صدایم را می‌شنوی؟",
+    "nu": "سلام، من چارلی هستم! صدایم را می‌شنوی؟",
+    "reden": "Mascottenaam in Perzisch schrift (چارلی)."
+  },
+  {
+    "id": "S|src/features/dictee/DicteePage.jsx|28224",
+    "oordeel": "verbeterd",
+    "was": "صدا را روشن کن و گوشی را از حالت بی‌صدا دربیاور. Charley الان یک جمله می‌گوید و بعد کلمه‌ای را که باید بنویسی.",
+    "nu": "صدا را روشن کن و گوشی را از حالت بی‌صدا دربیاور. چارلی کمی بعد یک جمله می‌گوید و بعد کلمه‌ای را که باید بنویسی.",
+    "reden": "'straks' = zo meteen, niet 'nu' (الان → کمی بعد); mascottenaam چارلی."
+  },
+  {
+    "id": "S|src/features/dictee/DicteePage.jsx|28417",
+    "oordeel": "verbeterd",
+    "was": "صدای Charley را می‌شنوم، شروع!",
+    "nu": "صدای چارلی را می‌شنوم، شروع!",
+    "reden": "Mascottenaam in Perzisch schrift (چارلی)."
+  },
+  {
+    "id": "S|src/features/dictee/DicteePage.jsx|29057",
+    "oordeel": "verbeterd",
+    "was": "Charley دارد می‌آید…",
+    "nu": "چارلی دارد می‌آید…",
+    "reden": "Mascottenaam in Perzisch schrift (چارلی)."
+  },
+  {
+    "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|11326",
+    "oordeel": "verbeterd",
+    "was": "کلمه را آهسته بگو. دو تا 'o' با هم یک صدا هستند.",
+    "nu": "کلمه را آهسته بگو. دو حرف o با هم یک صدا هستند.",
+    "reden": "'دو تا' is Iraanse spreektaal; 'دو حرف o' is standaard en ook in Afghanistan duidelijk; geen extra aanhalingstekens (bron heeft er geen)."
+  },
+  {
+    "id": "S|src/learnPaths/lettersKlankenNieuwkomers.js|15042",
+    "oordeel": "verbeterd",
+    "was": "**تکه کردن**: یک کلمه را صدا به صدا گفتن. **tas** → **t - a - s**.\n\n**چسباندن**: صداها را تند پشت سر هم گفتن. **t - a - s** → **tas**.\n\nاین‌طوری یک کلمهٔ تازه را می‌خوانی.",
+    "nu": "**تکه کردن**: یک کلمه را صدا به صدا گفتن. **tas** → **t - a - s**.\n\n**چسباندن**: صداها را تند پشت سر هم گفتن. **t - a - s** → **tas**.\n\nاین‌طور یک کلمهٔ تازه را می‌خوانی.",
+    "reden": "'این‌طوری' is spreektaal → standaard 'این‌طور'."
+  },
+  {
+    "id": "S|src/features/dictee/DicteePage.jsx|28783",
+    "oordeel": "verbeterd",
+    "was": "چیزی نمی‌شنوم → دیکتهٔ خواندنی",
+    "nu": "چیزی نمی‌شنوم → دیکته با خواندن",
+    "reden": "'دیکتهٔ خواندنی' is onnatuurlijk; 'دیکته با خواندن' = dictee waarbij je het woord leest (zoals ar)."
+  },
+  {
+    "id": "_telling",
+    "goed": 103,
+    "verbeterd": 8
+  }
+]

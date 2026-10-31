@@ -23,7 +23,7 @@ const bestanden = fs.readdirSync(dir).filter((f) => /Nieuwkomers\.js$|^nieuwkome
 // Alleen Nederlandse tekst: neem strings uit de bronbestanden, sla vertaalvelden (en/ar/uk/tr/ro/bg) over.
 // De modules echt laden en alle tekst-waarden aflopen (ook vragen die met code worden gebouwd);
 // vertalingen (steun, steunOpties, steunTeksten en taalsleutels) overslaan.
-const VERTAAL = new Set(["en", "ar", "uk", "tr", "ro", "bg", "steun", "steunOpties", "steunTeksten", "vertaling", "vertalingen"]);
+const VERTAAL = new Set(["en", "ar", "uk", "tr", "ro", "bg", "fa", "steun", "steunOpties", "steunTeksten", "vertaling", "vertalingen"]);
 let tekst = "";
 const gezien = new WeakSet();
 function loop(v, sleutel = "") {
@@ -36,7 +36,7 @@ function loop(v, sleutel = "") {
 // Plus de "…"-strings uit de broncode zelf (vangt tekst in componenten-data die niet geëxporteerd is).
 for (const f of bestanden) {
   const src = fs.readFileSync(path.join(dir, f), "utf8");
-  for (const m of src.matchAll(/(?<!(?:en|ar|uk|tr|ro|bg)\s*:\s*)"((?:[^"\\]|\\.)*)"/g)) tekst += " " + m[1];
+  for (const m of src.matchAll(/(?<!(?:en|ar|uk|tr|ro|bg|fa)\s*:\s*)"((?:[^"\\]|\\.)*)"/g)) tekst += " " + m[1];
 }
 for (const f of bestanden) {
   if (f === "nieuwkomersSteun.js") continue;

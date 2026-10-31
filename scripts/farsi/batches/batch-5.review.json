@@ -1,0 +1,70 @@
+[
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|242990",
+    "oordeel": "verbeterd",
+    "was": "معلم می‌گوید: نوبت توست. این یعنی چه؟",
+    "nu": "خانم معلم می‌گوید: نوبت توست. این یعنی چه؟",
+    "reden": "\"de juf\" = خانم معلم (vast woord); alleen معلم is te algemeen"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|244459",
+    "oordeel": "verbeterd",
+    "was": "پیش معلم می‌روم.",
+    "nu": "پیش خانم معلم می‌روم.",
+    "reden": "\"de juf\" = خانم معلم (vast woord)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|247763",
+    "oordeel": "verbeterd",
+    "was": "می‌خواهی درباره‌ی آخر هفته‌ات چیزی به معلم بگویی. چه می‌گویی؟",
+    "nu": "می‌خواهی درباره‌ی آخر هفته‌ات چیزی به خانم معلم بگویی. چه می‌گویی؟",
+    "reden": "\"de juf\" = خانم معلم (vast woord)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|256032",
+    "oordeel": "verbeterd",
+    "was": "این‌طوری به معلم نشان می‌دهی که می‌خواهی چیزی بگویی.",
+    "nu": "این‌طوری به خانم معلم نشان می‌دهی که می‌خواهی چیزی بگویی.",
+    "reden": "\"de juf\" = خانم معلم (vast woord)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|266967",
+    "oordeel": "verbeterd",
+    "was": "معلم می‌گوید: اسمت را بالای آن بنویس. چه کار می‌کنی؟",
+    "nu": "خانم معلم می‌گوید: اسمت را بالای آن بنویس. چه کار می‌کنی؟",
+    "reden": "\"de juf\" = خانم معلم (vast woord)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|249167",
+    "oordeel": "verbeterd",
+    "was": "یک مسئله‌ی حساب سخت نیست. مسئله…",
+    "nu": "یک مسئله سخت نیست. مسئله…",
+    "reden": "som = مسئله (vast woord); \"مسئله‌ی حساب\" voegde iets toe"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|254564",
+    "oordeel": "verbeterd",
+    "was": "دوشنبه، سه‌شنبه، چهارشنبه، پنجشنبه، جمعه، شنبه، یکشنبه.",
+    "nu": "دوشنبه، سه‌شنبه، چهارشنبه، پنج‌شنبه، جمعه، شنبه، یکشنبه.",
+    "reden": "halve spatie in پنج‌شنبه (gelijk aan سه‌شنبه)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|266074",
+    "oordeel": "verbeterd",
+    "was": "آن جا را خالی می‌گذارم.",
+    "nu": "آنجا را خالی می‌گذارم.",
+    "reden": "spelling: \"آن جا\" → \"آنجا\""
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|266318",
+    "oordeel": "verbeterd",
+    "was": "در آن جا یک گل نقاشی می‌کنم.",
+    "nu": "آنجا یک گل نقاشی می‌کنم.",
+    "reden": "spelling: \"در آن جا\" → \"آنجا\" (korter, natuurlijker)"
+  },
+  {
+    "id": "_telling",
+    "goed": 162,
+    "verbeterd": 9
+  }
+]

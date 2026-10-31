@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|223884",
+  "nl": "Wanneer? Wie is aan de beurt?",
+  "en": "When? Whose turn is it?",
+  "ar": "متى؟ دور من؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|224073",
+  "nl": "Denken en vertellen",
+  "en": "Thinking and telling",
+  "ar": "التفكير والحكي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|225504",
+  "nl": "Alles om je heen heeft een **kleur**.\n\n**bruin** · **grijs** · **paars** · **roze** · **zwart**\n\nVraag: **Welke kleur is het?**",
+  "en": "Everything around you has a **kleur** (= colour).\n\n**bruin** (= brown) · **grijs** (= grey) · **paars** (= purple) · **roze** (= pink) · **zwart** (= black)\n\nAsk: **Welke kleur is het?** (= What colour is it?)",
+  "ar": "كل شيء حولك له **kleur** (= لون).\n\n**bruin** (= بني) · **grijs** (= رمادي) · **paars** (= بنفسجي) · **roze** (= وردي) · **zwart** (= أسود)\n\nاسأل: **Welke kleur is het?** (= ما لونه؟)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|225716",
+  "nl": "Welke kleur heeft chocola?",
+  "en": "What colour is chocolate?",
+  "ar": "ما لون الشوكولاتة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|225821",
+  "nl": "Bruin.",
+  "en": "Brown.",
+  "ar": "بني."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|225920",
+  "nl": "Groen.",
+  "en": "Green.",
+  "ar": "أخضر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226015",
+  "nl": "Roze.",
+  "en": "Pink.",
+  "ar": "وردي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226106",
+  "nl": "Wit.",
+  "en": "White.",
+  "ar": "أبيض."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226309",
+  "nl": "Welke kleur heeft een olifant?",
+  "en": "What colour is an elephant?",
+  "ar": "ما لون الفيل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226400",
+  "nl": "Grijs.",
+  "en": "Grey.",
+  "ar": "رمادي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226497",
+  "nl": "Geel.",
+  "en": "Yellow.",
+  "ar": "أصفر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226598",
+  "nl": "Paars.",
+  "en": "Purple.",
+  "ar": "بنفسجي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|226697",
+  "nl": "Rood.",
+  "en": "Red.",
+  "ar": "أحمر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|227059",
+  "nl": "Rood en blauw samen. Welke kleur krijg je?",
+  "en": "Red and blue together. What colour do you get?",
+  "ar": "الأحمر والأزرق معًا. ما اللون الذي تحصل عليه؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|227258",
+  "nl": "Welke kleur heeft een varken?",
+  "en": "What colour is a pig?",
+  "ar": "ما لون الخنزير؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|227354",
+  "nl": "Blauw.",
+  "en": "Blue.",
+  "ar": "أزرق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|227452",
+  "nl": "Zwart.",
+  "en": "Black.",
+  "ar": "أسود."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|227725",
+  "nl": "Het is nacht. Welke kleur heeft de lucht?",
+  "en": "It is night. What colour is the sky?",
+  "ar": "إنه الليل. ما لون السماء؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|227933",
+  "nl": "Vormen, groot en klein",
+  "en": "Shapes, big and small",
+  "ar": "الأشكال، كبير وصغير"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|229235",
+  "nl": "**Een cirkel** is rond. **Een driehoek** heeft drie hoeken.\n\n**groot** ↔ **klein** · **hoog** · **dik** ↔ **dun**",
+  "en": "**Een cirkel** (= a circle) is round. **Een driehoek** (= a triangle) has three corners.\n\n**groot** (= big) ↔ **klein** (= small) · **hoog** (= high/tall) · **dik** (= thick) ↔ **dun** (= thin)",
+  "ar": "**Een cirkel** (= دائرة) مستديرة. **Een driehoek** (= مثلث) له ثلاث زوايا.\n\n**groot** (= كبير) ↔ **klein** (= صغير) · **hoog** (= عالٍ) · **dik** (= سميك) ↔ **dun** (= رفيع)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|229439",
+  "nl": "Welke vorm heeft een bord?",
+  "en": "What shape is a plate?",
+  "ar": "ما شكل الصحن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|229549",
+  "nl": "Een cirkel.",
+  "en": "A circle.",
+  "ar": "دائرة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|229677",
+  "nl": "Een driehoek.",
+  "en": "A triangle.",
+  "ar": "مثلث."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|229782",
+  "nl": "Een lijn.",
+  "en": "A line.",
+  "ar": "خط."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|229900",
+  "nl": "Een vierkant.",
+  "en": "A square.",
+  "ar": "مربع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|230212",
+  "nl": "Een vorm met drie hoeken. Hoe heet die?",
+  "en": "A shape with three corners. What is it called?",
+  "ar": "شكل له ثلاث زوايا. ما اسمه؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|230447",
+  "nl": "Een olifant is groot. Een muis is…",
+  "en": "An elephant is big. A mouse is…",
+  "ar": "الفيل كبير. الفأر…"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|230545",
+  "nl": "Klein.",
+  "en": "Small.",
+  "ar": "صغير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|230641",
+  "nl": "Groot.",
+  "en": "Big.",
+  "ar": "كبير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|230739",
+  "nl": "Hoog.",
+  "en": "High.",
+  "ar": "عالٍ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|230835",
+  "nl": "Dik.",
+  "en": "Thick.",
+  "ar": "سميك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|231140",
+  "nl": "Een toren gaat tot in de lucht. De toren is…",
+  "en": "A tower goes up into the sky. The tower is…",
+  "ar": "البرج يصل إلى السماء. البرج…"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|231236",
+  "nl": "Dun.",
+  "en": "Thin.",
+  "ar": "رفيع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|231332",
+  "nl": "Kort.",
+  "en": "Short.",
+  "ar": "قصير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|231592",
+  "nl": "Welk boek heeft veel bladzijden?",
+  "en": "Which book has a lot of pages?",
+  "ar": "أي كتاب فيه صفحات كثيرة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|231747",
+  "nl": "Het dikke boek.",
+  "en": "The thick book.",
+  "ar": "الكتاب السميك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|231899",
+  "nl": "Het dunne boek.",
+  "en": "The thin book.",
+  "ar": "الكتاب الرفيع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|232054",
+  "nl": "Het kleine boek.",
+  "en": "The small book.",
+  "ar": "الكتاب الصغير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|232206",
+  "nl": "Het lege boek.",
+  "en": "The empty book.",
+  "ar": "الكتاب الفارغ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|232352",
+  "nl": "Waar? Hoeveel?",
+  "en": "Where? How many?",
+  "ar": "أين؟ كم؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|233703",
+  "nl": "**dichtbij** ↔ **ver weg**\n**erop** (op iets) · **eruit** (uit iets)\n**half** = de helft\n\nTellen: … vier, vijf, **zes**, **zeven** …",
+  "en": "**dichtbij** (= close by) ↔ **ver weg** (= far away)\n**erop** (= on it) · **eruit** (= out of it)\n**half** (= half) = de helft\n\nCounting: … vier, vijf, **zes** (= six), **zeven** (= seven) …",
+  "ar": "**dichtbij** (= قريب) ↔ **ver weg** (= بعيد)\n**erop** (= عليه) · **eruit** (= منه، إلى الخارج)\n**half** (= نصف) = de helft\n\nالعدّ: … vier، vijf، **zes** (= ستة)، **zeven** (= سبعة) …"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|234140",
+  "nl": "De school is naast je huis. Is de school ver weg of dichtbij?",
+  "en": "The school is next to your house. Is the school far away or close by?",
+  "ar": "المدرسة بجانب بيتك. هل المدرسة بعيدة أم قريبة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|234248",
+  "nl": "Dichtbij.",
+  "en": "Close by.",
+  "ar": "قريبة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|234353",
+  "nl": "Ver weg.",
+  "en": "Far away.",
+  "ar": "بعيدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|234449",
+  "nl": "Leeg.",
+  "en": "Empty.",
+  "ar": "فارغ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|234802",
+  "nl": "Leg het boek op de tafel. Waar is het boek nu?",
+  "en": "Put the book on the table. Where is the book now?",
+  "ar": "ضع الكتاب على الطاولة. أين الكتاب الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|235005",
+  "nl": "Het boek ligt erop.",
+  "en": "The book is lying on it.",
+  "ar": "الكتاب موضوع عليها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|235224",
+  "nl": "Het boek ligt eruit.",
+  "en": "The book is lying out of it.",
+  "ar": "الكتاب موضوع خارجها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|235429",
+  "nl": "Het boek ligt ver weg.",
+  "en": "The book is lying far away.",
+  "ar": "الكتاب موضوع بعيدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|235592",
+  "nl": "Het boek is weg.",
+  "en": "The book is gone.",
+  "ar": "الكتاب اختفى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|235986",
+  "nl": "Pak de pen uit je etui. Wat doe je met de pen?",
+  "en": "Take the pen out of your pencil case. What do you do with the pen?",
+  "ar": "أخرج القلم من المقلمة. ماذا تفعل بالقلم؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|236200",
+  "nl": "Ik haal de pen eruit.",
+  "en": "I take the pen out of it.",
+  "ar": "أُخرج القلم منها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|236402",
+  "nl": "Ik leg de pen erop.",
+  "en": "I put the pen on it.",
+  "ar": "أضع القلم عليها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|236573",
+  "nl": "Ik gooi de pen weg.",
+  "en": "I throw the pen away.",
+  "ar": "أرمي القلم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|236719",
+  "nl": "Ik eet de pen.",
+  "en": "I eat the pen.",
+  "ar": "آكل القلم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237072",
+  "nl": "Je eet de helft van je appel. Wat heb je nog?",
+  "en": "You eat half of your apple. What do you have left?",
+  "ar": "تأكل نصف تفاحتك. ماذا بقي معك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237228",
+  "nl": "Een halve appel.",
+  "en": "Half an apple.",
+  "ar": "نصف تفاحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237378",
+  "nl": "Een hele appel.",
+  "en": "A whole apple.",
+  "ar": "تفاحة كاملة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237506",
+  "nl": "Twee appels.",
+  "en": "Two apples.",
+  "ar": "تفاحتان."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237645",
+  "nl": "Geen appel.",
+  "en": "No apple.",
+  "ar": "لا تفاحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237879",
+  "nl": "Hoeveel dagen heeft een week?",
+  "en": "How many days does a week have?",
+  "ar": "كم يومًا في الأسبوع؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|237973",
+  "nl": "Zeven.",
+  "en": "Seven.",
+  "ar": "سبعة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|238062",
+  "nl": "Zes.",
+  "en": "Six.",
+  "ar": "ستة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|238153",
+  "nl": "Vijf.",
+  "en": "Five.",
+  "ar": "خمسة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|238244",
+  "nl": "Tien.",
+  "en": "Ten.",
+  "ar": "عشرة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|238580",
+  "nl": "Tel: vier, vijf, … Welk getal komt nu?",
+  "en": "Count: four, five, … Which number comes next?",
+  "ar": "عُدّ: أربعة، خمسة، … ما العدد التالي؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|238669",
+  "nl": "Drie.",
+  "en": "Three.",
+  "ar": "ثلاثة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|238811",
+  "nl": "Tijd en beurt",
+  "en": "Time and turns",
+  "ar": "الوقت والدور"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|240416",
+  "nl": "**gisteren** → **vandaag** → **morgen**\nNa 12 uur is het **middag**.\n\n**Aan de beurt** = nu mag jij.\nIets zeggen? **Steek je vinger op.**",
+  "en": "**gisteren** (= yesterday) → **vandaag** (= today) → **morgen** (= tomorrow)\nAfter 12 o'clock it is **middag** (= afternoon).\n\n**Aan de beurt** (= your turn) = now you may.\nWant to say something? **Steek je vinger op.** (= Put your finger up.)",
+  "ar": "**gisteren** (= أمس) → **vandaag** (= اليوم) → **morgen** (= غدًا)\nبعد الساعة 12 يكون **middag** (= بعد الظهر).\n\n**Aan de beurt** (= دورك) = الآن يمكنك.\nتريد أن تقول شيئًا؟ **Steek je vinger op.** (= ارفع إصبعك.)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|240836",
+  "nl": "Niet gisteren, niet morgen, maar nu. Hoe heet die dag?",
+  "en": "Not yesterday, not tomorrow, but now. What is that day called?",
+  "ar": "ليس أمس، ولا غدًا، بل الآن. ما اسم هذا اليوم؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|240936",
+  "nl": "Vandaag.",
+  "en": "Today.",
+  "ar": "اليوم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|241036",
+  "nl": "Gisteren.",
+  "en": "Yesterday.",
+  "ar": "أمس."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|241137",
+  "nl": "Morgen.",
+  "en": "Tomorrow.",
+  "ar": "غدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|241241",
+  "nl": "Week.",
+  "en": "Week.",
+  "ar": "أسبوع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|241537",
+  "nl": "De dag vóór vandaag. Hoe heet die?",
+  "en": "The day before today. What is it called?",
+  "ar": "اليوم الذي قبل اليوم. ما اسمه؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|241674",
+  "nl": "Middag.",
+  "en": "Afternoon.",
+  "ar": "بعد الظهر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|242114",
+  "nl": "Het is 12 uur. Je hebt gegeten. Welk deel van de dag begint nu?",
+  "en": "It is 12 o'clock. You have eaten. Which part of the day starts now?",
+  "ar": "الساعة 12. أكلت. أي جزء من اليوم يبدأ الآن؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|242260",
+  "nl": "De middag.",
+  "en": "The afternoon.",
+  "ar": "بعد الظهر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|242364",
+  "nl": "De nacht.",
+  "en": "The night.",
+  "ar": "الليل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|242481",
+  "nl": "De ochtend.",
+  "en": "The morning.",
+  "ar": "الصباح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|242596",
+  "nl": "De week.",
+  "en": "The week.",
+  "ar": "الأسبوع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|242990",
+  "nl": "De juf zegt: jij bent aan de beurt. Wat betekent dat?",
+  "en": "The teacher says: it is your turn. What does that mean?",
+  "ar": "المعلمة تقول: إنه دورك. ماذا يعني ذلك؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|243151",
+  "nl": "Nu mag jij.",
+  "en": "Now you may.",
+  "ar": "الآن يمكنك أنت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|243342",
+  "nl": "Je moet stil zijn.",
+  "en": "You have to be quiet.",
+  "ar": "يجب أن تكون هادئًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|243530",
+  "nl": "Je mag naar huis.",
+  "en": "You may go home.",
+  "ar": "يمكنك الذهاب إلى البيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|243670",
+  "nl": "Je bent klaar.",
+  "en": "You are finished.",
+  "ar": "أنت انتهيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|244076",
+  "nl": "Je wilt iets zeggen in de klas. Wat doe je eerst?",
+  "en": "You want to say something in class. What do you do first?",
+  "ar": "تريد أن تقول شيئًا في الصف. ماذا تفعل أولًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|244250",
+  "nl": "Ik steek mijn vinger op.",
+  "en": "I put my finger up.",
+  "ar": "أرفع إصبعي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|244459",
+  "nl": "Ik loop naar de juf.",
+  "en": "I walk to the teacher.",
+  "ar": "أمشي إلى المعلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|244598",
+  "nl": "Ik ga staan.",
+  "en": "I stand up.",
+  "ar": "أقف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|246432",
+  "nl": "**Ik denk even na.** **Ik wil iets vertellen.**\n**Waarom?** → **Omdat …**\n\n**makkelijk** ↔ **moeilijk**\n**Ik ben gelukkig.** **Ik durf het!**",
+  "en": "**Ik denk even na.** (= I think for a moment.) **Ik wil iets vertellen.** (= I want to tell something.)\n**Waarom?** (= Why?) → **Omdat …** (= Because …)\n\n**makkelijk** (= easy) ↔ **moeilijk** (= difficult)\n**Ik ben gelukkig.** (= I am happy.) **Ik durf het!** (= I dare to do it!)",
+  "ar": "**Ik denk even na.** (= أفكر قليلًا.) **Ik wil iets vertellen.** (= أريد أن أحكي شيئًا.)\n**Waarom?** (= لماذا؟) → **Omdat …** (= لأن …)\n\n**makkelijk** (= سهل) ↔ **moeilijk** (= صعب)\n**Ik ben gelukkig.** (= أنا سعيد جدًا.) **Ik durf het!** (= أتجرأ على ذلك!)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|246773",
+  "nl": "Je weet het antwoord niet meteen. Wat doe je?",
+  "en": "You don't know the answer right away. What do you do?",
+  "ar": "لا تعرف الجواب فورًا. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|246942",
+  "nl": "Ik denk even na.",
+  "en": "I think for a moment.",
+  "ar": "أفكر قليلًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|247056",
+  "nl": "Ik stop.",
+  "en": "I stop.",
+  "ar": "أتوقف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|247237",
+  "nl": "Ik roep: weet ik niet!",
+  "en": "I shout: don't know!",
+  "ar": "أصرخ: لا أعرف!"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|247763",
+  "nl": "Je wilt de juf iets over je weekend vertellen. Wat zeg je?",
+  "en": "You want to tell the teacher something about your weekend. What do you say?",
+  "ar": "تريد أن تحكي للمعلمة شيئًا عن عطلة نهاية الأسبوع. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|247981",
+  "nl": "Ik wil iets vertellen.",
+  "en": "I want to tell something.",
+  "ar": "أريد أن أحكي شيئًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|248179",
+  "nl": "Waarom heb je een jas aan?",
+  "en": "Why are you wearing a coat?",
+  "ar": "لماذا تلبس معطفًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|248353",
+  "nl": "Omdat het koud is.",
+  "en": "Because it is cold.",
+  "ar": "لأن الجو بارد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|248523",
+  "nl": "Omdat het warm is.",
+  "en": "Because it is warm.",
+  "ar": "لأن الجو دافئ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|248701",
+  "nl": "Omdat ik blij ben.",
+  "en": "Because I am happy.",
+  "ar": "لأنني سعيد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|248886",
+  "nl": "Omdat het pauze is.",
+  "en": "Because it is break time.",
+  "ar": "لأنها الاستراحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|249167",
+  "nl": "Een som is niet moeilijk. De som is…",
+  "en": "A sum is not difficult. The sum is…",
+  "ar": "المسألة ليست صعبة. المسألة…"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|249267",
+  "nl": "Makkelijk.",
+  "en": "Easy.",
+  "ar": "سهلة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|249370",
+  "nl": "Moeilijk.",
+  "en": "Difficult.",
+  "ar": "صعبة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|249480",
+  "nl": "Eng.",
+  "en": "Scary.",
+  "ar": "مخيفة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|249909",
+  "nl": "Je hebt een nieuwe vriend. Je bent heel blij. Hoe voel je je?",
+  "en": "You have a new friend. You are very happy. How do you feel?",
+  "ar": "عندك صديق جديد. أنت سعيد جدًا. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|250068",
+  "nl": "Ik ben gelukkig.",
+  "en": "I am happy (very happy).",
+  "ar": "أنا سعيد جدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|250503",
+  "nl": "Je bent een beetje bang, maar je doet het toch. Wat zeg je?",
+  "en": "You are a little scared, but you do it anyway. What do you say?",
+  "ar": "أنت خائف قليلًا، لكنك تفعلها رغم ذلك. ماذا تقول؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|250646",
+  "nl": "Ik durf het!",
+  "en": "I dare to do it!",
+  "ar": "أتجرأ على ذلك!"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|250831",
+  "nl": "Ik wil naar huis.",
+  "en": "I want to go home.",
+  "ar": "أريد أن أذهب إلى البيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|251067",
+  "nl": "Denk aan een reep chocola.",
+  "en": "Think of a chocolate bar.",
+  "ar": "فكّر في لوح شوكولاتة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|251333",
+  "nl": "Een olifant is niet vrolijk gekleurd.",
+  "en": "An elephant is not brightly coloured.",
+  "ar": "الفيل ليس ملوّنًا بألوان زاهية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|251551",
+  "nl": "Meng rood met blauw.",
+  "en": "Mix red with blue.",
+  "ar": "اخلط الأحمر مع الأزرق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|251761",
+  "nl": "Een varken is lichtrood.",
+  "en": "A pig is light red.",
+  "ar": "الخنزير أحمر فاتح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|251957",
+  "nl": "In de nacht is het donker.",
+  "en": "At night it is dark.",
+  "ar": "في الليل يكون الجو مظلمًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|252134",
+  "nl": "Een bord is rond.",
+  "en": "A plate is round.",
+  "ar": "الصحن مستدير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|252413",
+  "nl": "Drie hoeken = drie-hoek.",
+  "en": "Three corners = drie-hoek (triangle).",
+  "ar": "ثلاث زوايا = drie-hoek (مثلث)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|252672",
+  "nl": "Een muis is het tegenovergestelde van groot.",
+  "en": "A mouse is the opposite of big.",
+  "ar": "الفأر عكس الكبير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|252872",
+  "nl": "Hij gaat ver naar boven.",
+  "en": "It goes far up.",
+  "ar": "يرتفع كثيرًا إلى الأعلى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|253111",
+  "nl": "Veel bladzijden = dik.",
+  "en": "Many pages = dik (thick).",
+  "ar": "صفحات كثيرة = dik (سميك)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|253349",
+  "nl": "Naast je huis = niet ver.",
+  "en": "Next to your house = not far.",
+  "ar": "بجانب بيتك = ليست بعيدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|253588",
+  "nl": "Op de tafel = erop.",
+  "en": "On the table = erop (on it).",
+  "ar": "على الطاولة = erop (عليها)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|253853",
+  "nl": "Uit het etui = eruit.",
+  "en": "Out of the pencil case = eruit (out of it).",
+  "ar": "من المقلمة = eruit (منها)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|254085",
+  "nl": "De helft = half.",
+  "en": "De helft (the half) = half.",
+  "ar": "de helft (النصف) = half."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|254564",
+  "nl": "Maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.",
+  "en": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+  "ar": "الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|254812",
+  "nl": "Na vijf komt één meer.",
+  "en": "After five comes one more.",
+  "ar": "بعد خمسة يأتي واحد أكثر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|254959",
+  "nl": "De dag van nu.",
+  "en": "The day of now.",
+  "ar": "يوم الآن."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|255158",
+  "nl": "Die dag is al voorbij.",
+  "en": "That day is already over.",
+  "ar": "ذلك اليوم انتهى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|255339",
+  "nl": "Na 12 uur is het…",
+  "en": "After 12 o'clock it is…",
+  "ar": "بعد الساعة 12 يكون…"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|255630",
+  "nl": "Aan de beurt = nu jij.",
+  "en": "Aan de beurt (your turn) = now you.",
+  "ar": "aan de beurt (دورك) = الآن أنت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|256032",
+  "nl": "Zo laat je de juf zien dat je iets wilt zeggen.",
+  "en": "This way you show the teacher you want to say something.",
+  "ar": "هكذا تُظهر للمعلمة أنك تريد أن تقول شيئًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|256205",
+  "nl": "Neem even de tijd.",
+  "en": "Take your time for a moment.",
+  "ar": "خذ وقتك قليلًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|256635",
+  "nl": "Vertellen = iets zeggen over wat je deed.",
+  "en": "Vertellen (to tell) = say something about what you did.",
+  "ar": "vertellen (يحكي) = تقول شيئًا عما فعلت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|256830",
+  "nl": "Een jas houdt je warm.",
+  "en": "A coat keeps you warm.",
+  "ar": "المعطف يبقيك دافئًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|257094",
+  "nl": "Niet moeilijk = makkelijk.",
+  "en": "Not difficult = makkelijk (easy).",
+  "ar": "ليست صعبة = makkelijk (سهلة)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|257340",
+  "nl": "Heel blij = gelukkig.",
+  "en": "Very happy = gelukkig.",
+  "ar": "سعيد جدًا = gelukkig."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|257653",
+  "nl": "Durven = het toch doen.",
+  "en": "Durven (to dare) = do it anyway.",
+  "ar": "durven (يتجرأ) = تفعلها رغم ذلك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|258135",
+  "nl": "Op je blad staat: omcirkel de appel. Wat doe je?",
+  "en": "Your sheet says: circle the apple. What do you do?",
+  "ar": "مكتوب في ورقتك: ضع دائرة حول التفاحة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|258398",
+  "nl": "Ik zet een rondje om de appel.",
+  "en": "I draw a circle around the apple.",
+  "ar": "أرسم دائرة حول التفاحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|258640",
+  "nl": "Ik zet een kruisje op de appel.",
+  "en": "I put a cross on the apple.",
+  "ar": "أضع علامة إكس على التفاحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|258884",
+  "nl": "Ik kleur de appel rood.",
+  "en": "I colour the apple red.",
+  "ar": "ألوّن التفاحة باللون الأحمر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|259105",
+  "nl": "Ik schrijf het woord appel op.",
+  "en": "I write down the word apple.",
+  "ar": "أكتب كلمة تفاحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|259517",
+  "nl": "Op je blad staat: onderstreep het woord. Wat doe je?",
+  "en": "Your sheet says: underline the word. What do you do?",
+  "ar": "مكتوب في ورقتك: ضع خطًا تحت الكلمة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|259768",
+  "nl": "Ik zet een streep onder het woord.",
+  "en": "I draw a line under the word.",
+  "ar": "أرسم خطًا تحت الكلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|260032",
+  "nl": "Ik zet een rondje om het woord.",
+  "en": "I draw a circle around the word.",
+  "ar": "أرسم دائرة حول الكلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|260246",
+  "nl": "Ik gum het woord uit.",
+  "en": "I rub out the word.",
+  "ar": "أمسح الكلمة بالممحاة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|260466",
+  "nl": "Ik lees het woord hardop.",
+  "en": "I read the word out loud.",
+  "ar": "أقرأ الكلمة بصوت عالٍ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|260940",
+  "nl": "Op je blad staat: kruis het goede antwoord aan. Wat doe je?",
+  "en": "Your sheet says: tick the right answer. What do you do?",
+  "ar": "مكتوب في ورقتك: ضع علامة عند الجواب الصحيح. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|261254",
+  "nl": "Ik zet een kruisje bij het goede antwoord.",
+  "en": "I put a cross next to the right answer.",
+  "ar": "أضع علامة إكس بجانب الجواب الصحيح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|261562",
+  "nl": "Ik zet een kruisje bij alle antwoorden.",
+  "en": "I put a cross next to all the answers.",
+  "ar": "أضع علامة إكس بجانب كل الأجوبة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|261756",
+  "nl": "Ik schrijf het antwoord over.",
+  "en": "I copy the answer.",
+  "ar": "أنسخ الجواب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|261965",
+  "nl": "Ik kleur het hele blad.",
+  "en": "I colour the whole sheet.",
+  "ar": "ألوّن الورقة كلها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|262424",
+  "nl": "Op je blad staat: zet een streep door het foute woord. Wat doe je?",
+  "en": "Your sheet says: cross out the wrong word. What do you do?",
+  "ar": "مكتوب في ورقتك: اشطب الكلمة الخاطئة. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|262725",
+  "nl": "Ik zet een streep door het foute woord.",
+  "en": "I draw a line through the wrong word.",
+  "ar": "أرسم خطًا على الكلمة الخاطئة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|263013",
+  "nl": "Ik zet een streep onder het goede woord.",
+  "en": "I draw a line under the right word.",
+  "ar": "أرسم خطًا تحت الكلمة الصحيحة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|263300",
+  "nl": "Ik schrijf het foute woord nog een keer.",
+  "en": "I write the wrong word again.",
+  "ar": "أكتب الكلمة الخاطئة مرة أخرى."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|263617",
+  "nl": "Ik zet een rondje om het foute woord.",
+  "en": "I draw a circle around the wrong word.",
+  "ar": "أرسم دائرة حول الكلمة الخاطئة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|264140",
+  "nl": "Op je blad staat: trek een lijn van de hond naar het hok. Wat doe je?",
+  "en": "Your sheet says: draw a line from the dog to the kennel. What do you do?",
+  "ar": "مكتوب في ورقتك: ارسم خطًا من الكلب إلى بيته. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|264450",
+  "nl": "Ik trek een lijn van de hond naar het hok.",
+  "en": "I draw a line from the dog to the kennel.",
+  "ar": "أرسم خطًا من الكلب إلى بيته."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|264650",
+  "nl": "Ik teken een nieuwe hond.",
+  "en": "I draw a new dog.",
+  "ar": "أرسم كلبًا جديدًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|264830",
+  "nl": "Ik kleur het hok.",
+  "en": "I colour the kennel.",
+  "ar": "ألوّن بيت الكلب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|265067",
+  "nl": "Ik zet een kruisje op de hond.",
+  "en": "I put a cross on the dog.",
+  "ar": "أضع علامة إكس على الكلب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|265553",
+  "nl": "Op je blad staat: vul in. Er staat een lege plek. Wat doe je?",
+  "en": "Your sheet says: fill in. There is an empty space. What do you do?",
+  "ar": "مكتوب في ورقتك: املأ الفراغ. هناك مكان فارغ. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|265873",
+  "nl": "Ik schrijf het goede woord op de lege plek.",
+  "en": "I write the right word in the empty space.",
+  "ar": "أكتب الكلمة الصحيحة في المكان الفارغ."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|266074",
+  "nl": "Ik laat de plek leeg.",
+  "en": "I leave the space empty.",
+  "ar": "أترك المكان فارغًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|266318",
+  "nl": "Ik teken een bloem op de plek.",
+  "en": "I draw a flower in the space.",
+  "ar": "أرسم زهرة في المكان."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|266541",
+  "nl": "Ik gum de zin uit.",
+  "en": "I rub out the sentence.",
+  "ar": "أمسح الجملة بالممحاة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|266967",
+  "nl": "De juf zegt: schrijf je naam erboven. Wat doe je?",
+  "en": "The teacher says: write your name at the top. What do you do?",
+  "ar": "تقول المعلمة: اكتب اسمك في الأعلى. ماذا تفعل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|267262",
+  "nl": "Ik schrijf mijn naam bovenaan het blad.",
+  "en": "I write my name at the top of the sheet.",
+  "ar": "أكتب اسمي في أعلى الورقة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|267560",
+  "nl": "Ik schrijf mijn naam onderaan het blad.",
+  "en": "I write my name at the bottom of the sheet.",
+  "ar": "أكتب اسمي في أسفل الورقة."
+ }
+]

@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|101994",
+  "nl": "Grote sprongen eerst (10), dan kleine (1).",
+  "en": "Big jumps first (10), then small ones (1).",
+  "ar": "القفزات الكبيرة أولًا (10)، ثم الصغيرة (1)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|102276",
+  "nl": "Eerst tientallen, dan eenheden.",
+  "en": "First tens, then ones.",
+  "ar": "أولًا العشرات، ثم الآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|102515",
+  "nl": "Spring met 10, dan met 1.",
+  "en": "Jump by 10, then by 1.",
+  "ar": "اقفز 10، ثم 1."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|102705",
+  "nl": "Eerst 10 erbij.",
+  "en": "First add 10.",
+  "ar": "أضف 10 أولًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|103655",
+  "nl": "Eraf is **terug springen**.\n\nEerst met **10**: 56 − 20 = 36.\nDan met **1**: 36 − 4 = 32.\n\nHet getal wordt **kleiner**.",
+  "en": "Taking away is **jumping back**.\n\nFirst by **10**: 56 − 20 = 36.\nThen by **1**: 36 − 4 = 32.\n\nThe number gets **smaller**.",
+  "ar": "الطرح هو **القفز إلى الوراء**.\n\nأولًا بـ **10**: 56 − 20 = 36.\nثم بـ **1**: 36 − 4 = 32.\n\nالعدد يصبح **أصغر**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|104008",
+  "nl": "Eerst de tientallen eraf, dan de eenheden.",
+  "en": "First take away the tens, then the ones.",
+  "ar": "اطرح العشرات أولًا، ثم الآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|104194",
+  "nl": "Tientallen eraf",
+  "en": "Taking away tens",
+  "ar": "طرح العشرات"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|104690",
+  "nl": "56 − 20. Spring **terug met 10**: 56, 46, 36. Antwoord **36**.",
+  "en": "56 − 20. Jump **back by 10**: 56, 46, 36. Answer **36**.",
+  "ar": "56 − 20. اقفز **10 إلى الوراء**: 56, 46, 36. الجواب **36**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|104876",
+  "nl": "Eenheden eraf",
+  "en": "Taking away ones",
+  "ar": "طرح الآحاد"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|105380",
+  "nl": "56 − 4. Tel **terug met 1**: 55, 54, 53, 52. Antwoord **52**.",
+  "en": "56 − 4. Count **back by 1**: 55, 54, 53, 52. Answer **52**.",
+  "ar": "56 − 4. عُدّ **1 إلى الوراء**: 55, 54, 53, 52. الجواب **52**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|105548",
+  "nl": "Het wordt kleiner",
+  "en": "It gets smaller",
+  "ar": "يصبح أصغر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|106091",
+  "nl": "Bij eraf wordt het getal **kleiner**. Groter? Dan klopt het niet.",
+  "en": "When you take away, the number gets **smaller**. Bigger? Then it is wrong.",
+  "ar": "عند الطرح يصبح العدد **أصغر**. أكبر؟ إذن هو غير صحيح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|106267",
+  "nl": "terug springen",
+  "en": "jumping back",
+  "ar": "القفز إلى الوراء"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|106511",
+  "nl": "Tien eraf in één keer.",
+  "en": "Take away ten in one go.",
+  "ar": "طرح عشرة مرة واحدة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|106945",
+  "nl": "Eraf = terug springen. Eerst met 10, dan met 1.",
+  "en": "Taking away = jumping back. First by 10, then by 1.",
+  "ar": "الطرح = القفز إلى الوراء. أولًا بـ 10، ثم بـ 1."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|107241",
+  "nl": "Spring terug op de getallenlijn.",
+  "en": "Jump back on the number line.",
+  "ar": "اقفز إلى الوراء على خط الأعداد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|107576",
+  "nl": "Eerst tientallen eraf, dan eenheden.",
+  "en": "First take away tens, then ones.",
+  "ar": "اطرح العشرات أولًا، ثم الآحاد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|107867",
+  "nl": "Spring terug met 10, dan met 1.",
+  "en": "Jump back by 10, then by 1.",
+  "ar": "اقفز إلى الوراء بـ 10، ثم بـ 1."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|108065",
+  "nl": "Eerst 10 eraf.",
+  "en": "First take away 10.",
+  "ar": "اطرح 10 أولًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|109588",
+  "nl": "38 + 5 gaat over de 40 heen. Dat doen we in **twee stapjes**.\n\nStap 1: maak het tiental vol. 38 + 2 = 40.\nStap 2: de rest erbij. 40 + 3 = **43**.\n\nBij eraf: ga eerst naar het ronde getal, dan de rest eraf.",
+  "en": "38 + 5 goes past 40. We do that in **two small steps**.\n\nStep 1: fill up the ten. 38 + 2 = 40.\nStep 2: add the rest. 40 + 3 = **43**.\n\nWhen taking away: go to the round number first, then take away the rest.",
+  "ar": "38 + 5 يتجاوز الـ40. نحلّها في **خطوتين صغيرتين**.\n\nالخطوة 1: أكمل العشرة. 38 + 2 = 40.\nالخطوة 2: أضف الباقي. 40 + 3 = **43**.\n\nعند الطرح: اذهب أولًا إلى العدد المدوّر، ثم اطرح الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|110033",
+  "nl": "Maak eerst het tiental vol: 29 + 1 = 30. Dan nog 3 erbij.",
+  "en": "Fill up the ten first: 29 + 1 = 30. Then add 3 more.",
+  "ar": "أكمل العشرة أولًا: 29 + 1 = 30. ثم أضف 3 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|110262",
+  "nl": "Eerst het tiental vol",
+  "en": "First fill up the ten",
+  "ar": "أكمل العشرة أولًا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|111006",
+  "nl": "38 + 5. Maak eerst **40**: 38 + 2 = 40. Je had 5, je hebt 2 gebruikt. Er blijft 3 over. 40 + 3 = **43**.",
+  "en": "38 + 5. Make **40** first: 38 + 2 = 40. You had 5, you used 2. 3 are left. 40 + 3 = **43**.",
+  "ar": "38 + 5. اصنع **40** أولًا: 38 + 2 = 40. كان عندك 5، استعملت 2. يبقى 3. 40 + 3 = **43**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|111542",
+  "nl": "Knip het kleine getal in **twee stukjes**. Eén stukje maakt het tiental vol.",
+  "en": "Cut the small number into **two pieces**. One piece fills up the ten.",
+  "ar": "قسّم العدد الصغير إلى **قطعتين**. قطعة تكمل العشرة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|111763",
+  "nl": "Bij eraf net zo",
+  "en": "Taking away works the same",
+  "ar": "والطرح بنفس الطريقة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|112337",
+  "nl": "43 − 5. Ga eerst naar **40**: 43 − 3 = 40. Dan nog 2 eraf: **38**.",
+  "en": "43 − 5. Go to **40** first: 43 − 3 = 40. Then take away 2 more: **38**.",
+  "ar": "43 − 5. اذهب أولًا إلى **40**: 43 − 3 = 40. ثم اطرح 2 أيضًا: **38**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|112503",
+  "nl": "tiental vol",
+  "en": "ten full",
+  "ar": "إكمال العشرة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|112727",
+  "nl": "Naar 10, 20, 30, 40…",
+  "en": "To 10, 20, 30, 40…",
+  "ar": "إلى 10, 20, 30, 40…"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|113185",
+  "nl": "Over het tiental: eerst naar het ronde getal, dan de rest.",
+  "en": "Past the ten: first to the round number, then the rest.",
+  "ar": "تجاوز العشرة: أولًا إلى العدد المدوّر، ثم الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|113505",
+  "nl": "Het ronde getal is een tussenstop.",
+  "en": "The round number is a stop on the way.",
+  "ar": "العدد المدوّر محطة في الطريق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|113859",
+  "nl": "Eerst naar het ronde getal, dan de rest.",
+  "en": "First to the round number, then the rest.",
+  "ar": "أولًا إلى العدد المدوّر، ثم الباقي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|114133",
+  "nl": "Knip het getal in twee stukjes.",
+  "en": "Cut the number into two pieces.",
+  "ar": "قسّم العدد إلى قطعتين."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|114307",
+  "nl": "Eerst naar 40.",
+  "en": "First to 40.",
+  "ar": "أولًا إلى 40."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|114776",
+  "nl": "Ga eerst naar het tiental: 43 − 3 = 40. Dan nog 6 eraf.",
+  "en": "Go to the ten first: 43 − 3 = 40. Then take away 6 more.",
+  "ar": "اذهب أولًا إلى العشرة: 43 − 3 = 40. ثم اطرح 6 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|115210",
+  "nl": "Maak eerst het tiental vol: 42 + 8 = 50. Dan nog 0 erbij.",
+  "en": "Fill up the ten first: 42 + 8 = 50. Then add 0 more.",
+  "ar": "أكمل العشرة أولًا: 42 + 8 = 50. ثم أضف 0."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|115679",
+  "nl": "Ga eerst naar het tiental: 73 − 3 = 70. Dan nog 3 eraf.",
+  "en": "Go to the ten first: 73 − 3 = 70. Then take away 3 more.",
+  "ar": "اذهب أولًا إلى العشرة: 73 − 3 = 70. ثم اطرح 3 أيضًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|116113",
+  "nl": "Maak eerst het tiental vol: 21 + 9 = 30. Dan nog 0 erbij.",
+  "en": "Fill up the ten first: 21 + 9 = 30. Then add 0 more.",
+  "ar": "أكمل العشرة أولًا: 21 + 9 = 30. ثم أضف 0."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|117308",
+  "nl": "Sommen met **woorden** en **geld**.\n\n**Samen** = plus. **Uitgeven, weg, over** = min.\n\nSchrijf de som op. Reken in stapjes.",
+  "en": "Sums with **words** and **money**.\n\n**Samen** (together) = plus. **Uitgeven, weg, over** (spend, away, left) = minus.\n\nWrite the sum down. Work it out in small steps.",
+  "ar": "مسائل **بالكلمات** و**النقود**.\n\n**Samen** (= معًا) = زائد. **Uitgeven, weg, over** (= تصرف، ذهب، باقٍ) = ناقص.\n\nاكتب المسألة. احسب خطوة خطوة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|118049",
+  "nl": "Lees de som nog een keer. Samen = plus. Weg, uit, over = min.",
+  "en": "Read the sum one more time. \"Samen\" (together) = plus. \"Weg, uit, over\" (away, spend, left) = minus.",
+  "ar": "اقرأ المسألة مرة أخرى. «samen» = زائد. «weg، uit، over» = ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|118230",
+  "nl": "Plus of min?",
+  "en": "Plus or minus?",
+  "ar": "زائد أم ناقص؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|118820",
+  "nl": "**Samen** betekent **plus**. 12 euro en 15 euro samen: 12 + 15.",
+  "en": "**Samen** (together) means **plus**. 12 euros and 15 euros together: 12 + 15.",
+  "ar": "**Samen** (= معًا) يعني **زائد**. 12 يورو و15 يورو معًا: 12 + 15."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|119016",
+  "nl": "Reken in stapjes",
+  "en": "Work it out in steps",
+  "ar": "احسب خطوة خطوة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|119454",
+  "nl": "12 + 15: eerst 12 + 10 = 22. Dan 22 + 5 = **27**.",
+  "en": "12 + 15: first 12 + 10 = 22. Then 22 + 5 = **27**.",
+  "ar": "12 + 15: أولًا 12 + 10 = 22. ثم 22 + 5 = **27**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|119583",
+  "nl": "Check",
+  "en": "Check",
+  "ar": "تحقّق"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|120309",
+  "nl": "Samen moet **meer** zijn dan elk los getal. 27 is meer dan 12 en meer dan 15. Klopt.",
+  "en": "Together must be **more** than each number on its own. 27 is more than 12 and more than 15. Correct.",
+  "ar": "المجموع يجب أن يكون **أكثر** من كل عدد وحده. 27 أكثر من 12 وأكثر من 15. صحيح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|120508",
+  "nl": "Bij elkaar. Plus.",
+  "en": "All together. Plus.",
+  "ar": "مع بعض. زائد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|120630",
+  "nl": "over",
+  "en": "left",
+  "ar": "الباقي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|120871",
+  "nl": "Wat je nog hebt. Min.",
+  "en": "What you still have. Minus.",
+  "ar": "ما بقي معك. ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|121464",
+  "nl": "Samen = plus. Uitgeven, weg, over = min.",
+  "en": "\"Samen\" (together) = plus. \"Uitgeven, weg, over\" (spend, away, left) = minus.",
+  "ar": "«samen» = زائد. «uitgeven، weg، over» = ناقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|121884",
+  "nl": "Zoek het woord: samen of weg.",
+  "en": "Find the word: \"samen\" (together) or \"weg\" (away).",
+  "ar": "ابحث عن الكلمة: «samen» أو «weg»."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|122123",
+  "nl": "Samen = plus.",
+  "en": "\"Samen\" (together) = plus.",
+  "ar": "«samen» = زائد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|122382",
+  "nl": "Twee dingen bij elkaar = plus.",
+  "en": "Two things together = plus.",
+  "ar": "شيئان مع بعض = زائد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|122499",
+  "nl": "Plus.",
+  "en": "Plus.",
+  "ar": "زائد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|122687",
+  "nl": "Hoe voel je je?",
+  "en": "How do you feel?",
+  "ar": "كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|124542",
+  "nl": "Zeggen hoe je je **voelt** mag **altijd**.\n\n**Ik ben** blij · bang · boos · moe · verdrietig.\n**Ik heb** pijn · honger.\n**Ik voel me niet goed.**\n\nDe juf of meester wil het weten en helpt je.",
+  "en": "Saying how you **voelt** (feel) is **altijd** (always) okay.\n\n**Ik ben** (I am) happy · scared · angry · tired · sad.\n**Ik heb** (I have) pain · hunger.\n**Ik voel me niet goed.** (I don't feel good.)\n\nThe teacher wants to know and helps you.",
+  "ar": "يمكنك **دائمًا** أن تقول كيف **تشعر**.\n\n**أنا** (Ik ben) سعيد (blij) · خائف (bang) · غاضب (boos) · متعب (moe) · حزين (verdrietig).\n**عندي** (Ik heb) ألم (pijn) · جوع (honger).\n**لا أشعر أنني بخير (Ik voel me niet goed).**\n\nالمعلمة أو المعلم يريد أن يعرف ويساعدك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|124917",
+  "nl": "Je hoofd doet zeer. Wat zeg je tegen de juf?",
+  "en": "Your head hurts. What do you say to the teacher?",
+  "ar": "رأسك يؤلمك. ماذا تقول للمعلمة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|125356",
+  "nl": "Zeer doen = pijn. Zeg dat tegen de juf.",
+  "en": "Hurts = pain. Tell that to the teacher.",
+  "ar": "يؤلم (zeer doen) = ألم (pijn). قل ذلك للمعلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|125548",
+  "nl": "Het mag altijd",
+  "en": "It's always okay",
+  "ar": "يمكنك ذلك دائمًا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|126268",
+  "nl": "Zeggen hoe je je **voelt** mag altijd. De juf of meester wil het weten en helpt je.",
+  "en": "Saying how you **voelt** (feel) is always okay. The teacher wants to know and helps you.",
+  "ar": "يمكنك دائمًا أن تقول كيف **تشعر**. المعلمة أو المعلم يريد أن يعرف ويساعدك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|126445",
+  "nl": "Zo zeg je het",
+  "en": "This is how you say it",
+  "ar": "هكذا تقولها"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|127423",
+  "nl": "**Ik heb pijn.** **Ik voel me niet goed.** **Ik ben bang.** **Ik ben moe.**",
+  "en": "**Ik heb pijn.** (I have pain.) **Ik voel me niet goed.** (I don't feel good.) **Ik ben bang.** (I am scared.) **Ik ben moe.** (I am tired.)",
+  "ar": "**عندي ألم (Ik heb pijn).** **لا أشعر أنني بخير (Ik voel me niet goed).** **أنا خائف (Ik ben bang).** **أنا متعب (Ik ben moe).**"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|127587",
+  "nl": "Wijs het aan",
+  "en": "Point at it",
+  "ar": "أشِر إليه"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|128268",
+  "nl": "Weet je het woord niet? **Wijs** aan waar het zeer doet. Of tik op de zin voor jouw taal.",
+  "en": "Don't know the word? **Wijs** (Point) at where it hurts. Or tap the sentence for your language.",
+  "ar": "لا تعرف الكلمة؟ **أشِر** إلى المكان الذي يؤلمك. أو اضغط على الجملة لترى لغتك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|128380",
+  "nl": "pijn",
+  "en": "pain",
+  "ar": "ألم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|128519",
+  "nl": "Het doet zeer.",
+  "en": "It hurts.",
+  "ar": "إنه يؤلم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|128668",
+  "nl": "bang",
+  "en": "scared",
+  "ar": "خائف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|129102",
+  "nl": "Je bent ergens van geschrokken of je vindt iets eng.",
+  "en": "You got scared of something, or you think something is scary.",
+  "ar": "شيء ما أفزعك، أو تجد شيئًا مخيفًا."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|129222",
+  "nl": "verdrietig",
+  "en": "sad",
+  "ar": "حزين"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|129579",
+  "nl": "Je bent niet blij; misschien moet je huilen.",
+  "en": "You are not happy; maybe you want to cry.",
+  "ar": "لست سعيدًا؛ ربما تريد أن تبكي."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|130047",
+  "nl": "Ik ben + gevoel. Ik heb + pijn of honger.",
+  "en": "I am + feeling. I have + pain or hunger.",
+  "ar": "أنا (Ik ben) + شعور. عندي (Ik heb) + ألم أو جوع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|130204",
+  "nl": "Ik ben blij.",
+  "en": "I am happy.",
+  "ar": "أنا سعيد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|130418",
+  "nl": "Ik heb pijn in mijn buik.",
+  "en": "I have pain in my tummy.",
+  "ar": "عندي ألم في بطني."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|131035",
+  "nl": "Ik ben bang, blij, boos, moe. Ik heb pijn, honger.",
+  "en": "I am scared, happy, angry, tired. I have pain, hunger.",
+  "ar": "أنا (Ik ben) خائف، سعيد، غاضب، متعب. عندي (Ik heb) ألم، جوع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|131320",
+  "nl": "Zeg: Ik heb pijn.",
+  "en": "Say: Ik heb pijn (I have pain).",
+  "ar": "قل: عندي ألم (Ik heb pijn)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|131569",
+  "nl": "Zeer = pijn.",
+  "en": "Hurts = pain.",
+  "ar": "يؤلم (zeer) = ألم (pijn)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|131725",
+  "nl": "Ik heb pijn.",
+  "en": "I have pain.",
+  "ar": "عندي ألم."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|131887",
+  "nl": "Ik heb honger.",
+  "en": "I have hunger.",
+  "ar": "أنا جائع."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|132041",
+  "nl": "Ik ben klaar.",
+  "en": "I am done.",
+  "ar": "انتهيت."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|132379",
+  "nl": "Je bent ziek. Wat zeg je tegen de juf?",
+  "en": "You are sick. What do you say to the teacher?",
+  "ar": "أنت مريض. ماذا تقول للمعلمة؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|132742",
+  "nl": "Ziek zijn = je voelt je niet goed.",
+  "en": "Being sick = you don't feel good.",
+  "ar": "مريض (ziek zijn) = لا تشعر أنك بخير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|132956",
+  "nl": "Ik voel me niet goed.",
+  "en": "I don't feel good.",
+  "ar": "لا أشعر أنني بخير."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|133194",
+  "nl": "Mag ik meedoen?",
+  "en": "Can I join in?",
+  "ar": "هل يمكنني أن ألعب معكم؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|133377",
+  "nl": "Tot morgen!",
+  "en": "See you tomorrow!",
+  "ar": "إلى اللقاء غدًا!"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|133851",
+  "nl": "Een hond blaft heel hard. Je schrikt. Hoe voel je je?",
+  "en": "A dog barks very loud. You get scared. How do you feel?",
+  "ar": "كلب ينبح بصوت عالٍ جدًا. أنت تفزع. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|134225",
+  "nl": "Schrikken van iets engs = bang.",
+  "en": "Getting scared of something scary = scared.",
+  "ar": "الفزع من شيء مخيف = خائف (bang)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|134386",
+  "nl": "Ik ben bang.",
+  "en": "I am scared.",
+  "ar": "أنا خائف."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|134778",
+  "nl": "Iemand pakt steeds je bal af. Hoe voel je je?",
+  "en": "Someone keeps taking your ball. How do you feel?",
+  "ar": "شخص يأخذ كرتك كل مرة. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|135268",
+  "nl": "Iemand doet iets wat niet mag. Dan ben je niet blij, maar…",
+  "en": "Someone does something that's not allowed. Then you are not happy, but…",
+  "ar": "شخص يفعل شيئًا غير مسموح. عندها لست سعيدًا، بل…"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|135426",
+  "nl": "Ik ben boos.",
+  "en": "I am angry.",
+  "ar": "أنا غاضب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|135582",
+  "nl": "Ik ben moe.",
+  "en": "I am tired.",
+  "ar": "أنا متعب."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|135888",
+  "nl": "Je hebt slecht geslapen. Hoe voel je je?",
+  "en": "You slept badly. How do you feel?",
+  "ar": "نمت نومًا سيئًا. كيف تشعر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|136199",
+  "nl": "Weinig slaap = je wilt graag slapen.",
+  "en": "Little sleep = you really want to sleep.",
+  "ar": "نوم قليل = تريد أن تنام."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|136434",
+  "nl": "Doe-woorden in de klas",
+  "en": "Action words in class",
+  "ar": "كلمات الفعل في الصف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|138262",
+  "nl": "De juf of meester zegt vaak wat je moet **doen**.\n\n**Schrijf**, **knip**, **luister**, **ruim op**, **kleur**.\n\nDoe het woord meteen na: pak een pen als je **schrijven** hoort. Zo onthoud je het.",
+  "en": "The teacher often says what you need to **doen** (do).\n\n**Schrijf** (Write), **knip** (Cut), **luister** (Listen), **ruim op** (Tidy up), **kleur** (Colour).\n\nDo the word right away: pick up a pen when you hear **schrijven** (write). That way you remember it.",
+  "ar": "المعلمة أو المعلم يقول لك كثيرًا ماذا **تفعل**.\n\n**اكتب** (Schrijf)، **قُصّ** (knip)، **استمع** (luister)، **رتّب** (ruim op)، **لوّن** (kleur).\n\nقلّد الكلمة فورًا: خذ قلمًا عندما تسمع **يكتب** (schrijven). هكذا تتذكرها."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|138437",
+  "nl": "Doe-woorden",
+  "en": "Action words",
+  "ar": "كلمات الفعل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|139119",
+  "nl": "Een **doe-woord** zegt wat je **doet**: schrijven, knippen, luisteren.",
+  "en": "A **doe-woord** (action word) says what you **doet** (do): write, cut, listen.",
+  "ar": "**كلمة الفعل** (doe-woord) تقول ماذا **تفعل**: يكتب (schrijven)، يقصّ (knippen)، يستمع (luisteren)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|139273",
+  "nl": "Doe het na",
+  "en": "Do it too",
+  "ar": "قلّده"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|140098",
+  "nl": "Hoor je **schrijven**? Pak je pen. Hoor je **luisteren**? Wees stil en kijk naar de juf.",
+  "en": "Do you hear **schrijven** (write)? Pick up your pen. Do you hear **luisteren** (listen)? Be quiet and look at the teacher.",
+  "ar": "هل تسمع **يكتب** (schrijven)؟ خذ قلمك. هل تسمع **يستمع** (luisteren)؟ اسكت وانظر إلى المعلمة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|140233",
+  "nl": "In de klas",
+  "en": "In class",
+  "ar": "في الصف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|141071",
+  "nl": "De juf zegt vaak: **Schrijf** je naam. **Knip** het uit. **Ruim** je tafel **op**.",
+  "en": "The teacher often says: **Schrijf** (Write) your name. **Knip** (Cut) it out. **Ruim** your table **op** (tidy up).",
+  "ar": "المعلمة تقول كثيرًا: **اكتب** اسمك (Schrijf je naam). **قُصّه** (Knip het uit). **رتّب** طاولتك (**Ruim** je tafel **op**)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|141197",
+  "nl": "schrijven",
+  "en": "to write",
+  "ar": "يكتب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|141534",
+  "nl": "Letters maken met een pen of potlood.",
+  "en": "Making letters with a pen or pencil.",
+  "ar": "رسم الحروف بقلم حبر أو قلم رصاص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|141691",
+  "nl": "opruimen",
+  "en": "to tidy up",
+  "ar": "يرتّب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|141996",
+  "nl": "Alles terugleggen op zijn plek.",
+  "en": "Putting everything back in its place.",
+  "ar": "إرجاع كل شيء إلى مكانه."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|142333",
+  "nl": "Doe-woord = wat je doet.",
+  "en": "Action word = what you do.",
+  "ar": "كلمة الفعل (doe-woord) = ما تفعله."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|142535",
+  "nl": "Schrijf je naam.",
+  "en": "Write your name.",
+  "ar": "اكتب اسمك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|142697",
+  "nl": "Knip het uit.",
+  "en": "Cut it out.",
+  "ar": "قُصّه."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|142999",
+  "nl": "Doe het woord meteen na met je handen.",
+  "en": "Do the word right away with your hands.",
+  "ar": "قلّد الكلمة فورًا بيديك."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|143369",
+  "nl": "Letters maken met een pen = schrijven.",
+  "en": "Making letters with a pen = to write.",
+  "ar": "رسم الحروف بالقلم = يكتب (schrijven)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|143846",
+  "nl": "Rekentaal — de woorden achter de sommen (nieuwkomers)",
+  "en": "Math words — the words behind the sums (newcomers)",
+  "ar": "لغة الحساب — الكلمات وراء المسائل (للقادمين الجدد)"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|144955",
+  "nl": "Meer, minder, samen, weg, over, keer en verdelen: de woorden die in elke rekenles terugkomen. Met steun in je eigen taal. ~10 min.",
+  "en": "More, less, together, away, left over, times, and share: the words that come back in every math lesson. With help in your own language. ~10 min.",
+  "ar": "أكثر (meer)، أقل (minder)، معًا (samen)، ذهب (weg)، باقٍ (over)، ضرب (keer) وتقسيم (verdelen): كلمات تأتي في كل درس حساب. مع مساعدة بلغتك. ~10 دقائق."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|145226",
+  "nl": "Meer, minder, evenveel",
+  "en": "More, less, the same",
+  "ar": "أكثر، أقل، متساوٍ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|145472",
+  "nl": "Samen, weg, over",
+  "en": "Together, away, left over",
+  "ar": "معًا، ذهب، باقٍ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|145676",
+  "nl": "Keer en verdelen",
+  "en": "Times and share",
+  "ar": "الضرب والتقسيم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|147353",
+  "nl": "Welke groep is groter?\n\n**Meer**: een groter aantal. **Minder**: een kleiner aantal. **Evenveel**: hetzelfde aantal.\n\n**De meeste** = het allergrootste. **De minste** = het allerkleinste.",
+  "en": "Which group is bigger?\n\n**Meer** (More): a bigger number. **Minder** (Less): a smaller number. **Evenveel** (The same): the same number.\n\n**De meeste** (The most) = the biggest of all. **De minste** (The least) = the smallest of all.",
+  "ar": "أي مجموعة أكبر؟\n\n**أكثر** (Meer): عدد أكبر. **أقل** (Minder): عدد أصغر. **متساوٍ** (Evenveel): نفس العدد.\n\n**الأكثر** (De meeste) = الأكبر من الكل. **الأقل** (De minste) = الأصغر من الكل."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|147821",
+  "nl": "Ali heeft 5 knikkers. Sam heeft 3 knikkers. Wie heeft meer?",
+  "en": "Ali has 5 marbles. Sam has 3 marbles. Who has more?",
+  "ar": "علي عنده 5 كرات زجاجية. سام عنده 3 كرات زجاجية. من عنده أكثر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|148299",
+  "nl": "Meer = het grotere getal. Welk getal is groter: 5 of 3?",
+  "en": "More = the bigger number. Which number is bigger: 5 or 3?",
+  "ar": "أكثر (meer) = العدد الأكبر. أي عدد أكبر: 5 أو 3؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|148421",
+  "nl": "Meer",
+  "en": "More",
+  "ar": "أكثر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|148964",
+  "nl": "**Meer** betekent: een groter aantal. 5 is **meer** dan 3.",
+  "en": "**Meer** (More) means: a bigger number. 5 is **meer** (more) than 3.",
+  "ar": "**أكثر** (Meer) يعني: عدد أكبر. 5 **أكثر** من 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|149088",
+  "nl": "Minder",
+  "en": "Less",
+  "ar": "أقل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|149648",
+  "nl": "**Minder** betekent: een kleiner aantal. 3 is **minder** dan 5.",
+  "en": "**Minder** (Less) means: a smaller number. 3 is **minder** (less) than 5.",
+  "ar": "**أقل** (Minder) يعني: عدد أصغر. 3 **أقل** من 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|149784",
+  "nl": "Evenveel",
+  "en": "The same",
+  "ar": "متساوٍ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|150358",
+  "nl": "**Evenveel** betekent: hetzelfde aantal. 4 en 4 is **evenveel**.",
+  "en": "**Evenveel** (The same) means: the same number. 4 and 4 is **evenveel** (the same).",
+  "ar": "**متساوٍ** (Evenveel) يعني: نفس العدد. 4 و 4 **متساويان**."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|150480",
+  "nl": "meer",
+  "en": "more",
+  "ar": "أكثر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|150681",
+  "nl": "Een groter aantal.",
+  "en": "A bigger number.",
+  "ar": "عدد أكبر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|150805",
+  "nl": "minder",
+  "en": "less",
+  "ar": "أقل"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|151005",
+  "nl": "Een kleiner aantal.",
+  "en": "A smaller number.",
+  "ar": "عدد أصغر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|151148",
+  "nl": "evenveel",
+  "en": "the same amount",
+  "ar": "متساوٍ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|151334",
+  "nl": "Hetzelfde aantal.",
+  "en": "The same number.",
+  "ar": "نفس العدد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|152049",
+  "nl": "Meer = groter getal. Minder = kleiner getal. Evenveel = hetzelfde getal.",
+  "en": "More = bigger number. Less = smaller number. The same = the same number.",
+  "ar": "أكثر (meer) = عدد أكبر. أقل (minder) = عدد أصغر. متساوٍ (evenveel) = نفس العدد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|152255",
+  "nl": "7 is meer dan 2.",
+  "en": "7 is more than 2.",
+  "ar": "7 أكثر من 2."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|152463",
+  "nl": "1 is minder dan 6.",
+  "en": "1 is less than 6.",
+  "ar": "1 أقل من 6."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|153012",
+  "nl": "Tel allebei. Welk getal komt later bij het tellen? Dat is meer.",
+  "en": "Count both. Which number comes later when counting? That is more.",
+  "ar": "عُدّ الاثنين. أي عدد يأتي بعد الآخر عند العدّ؟ هذا هو الأكثر (meer)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|153292",
+  "nl": "Kijk welk getal groter is.",
+  "en": "Look at which number is bigger.",
+  "ar": "انظر أي عدد أكبر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|153577",
+  "nl": "5 of 3: welk getal is groter?",
+  "en": "5 or 3: which number is bigger?",
+  "ar": "5 أو 3: أي عدد أكبر؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|153783",
+  "nl": "5 is meer dan 3.",
+  "en": "5 is more than 3.",
+  "ar": "5 أكثر من 3."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|153886",
+  "nl": "Ali",
+  "en": "Ali",
+  "ar": "علي"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|153989",
+  "nl": "Sam",
+  "en": "Sam",
+  "ar": "سام"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|154189",
+  "nl": "Ze hebben evenveel.",
+  "en": "They have the same.",
+  "ar": "عندهما نفس العدد."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|154652",
+  "nl": "Lina heeft 2 appels. Tom heeft 6 appels. Wie heeft minder?",
+  "en": "Lina has 2 apples. Tom has 6 apples. Who has less?",
+  "ar": "لينا عندها 2 من التفاح. توم عنده 6 من التفاح. من عنده أقل؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|155135",
+  "nl": "Minder = het kleinere getal. Welk getal is kleiner: 2 of 6?",
+  "en": "Less = the smallest number. Which number is smaller: 2 or 6?",
+  "ar": "أقل (minder) = العدد الأصغر. أي عدد أصغر: 2 أو 6؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|155245",
+  "nl": "Lina",
+  "en": "Lina",
+  "ar": "لينا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|155348",
+  "nl": "Tom",
+  "en": "Tom",
+  "ar": "توم"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|155788",
+  "nl": "Noor heeft 4 pennen. Adam heeft 4 pennen. Wat is waar?",
+  "en": "Noor has 4 pens. Adam has 4 pens. What is true?",
+  "ar": "نور عندها 4 أقلام. آدم عنده 4 أقلام. ما الصحيح؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|156135",
+  "nl": "Kijk naar de twee getallen. Zijn ze hetzelfde?",
+  "en": "Look at the two numbers. Are they the same?",
+  "ar": "انظر إلى العددين. هل هما نفس العدد؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|156330",
+  "nl": "Noor heeft meer.",
+  "en": "Noor has more.",
+  "ar": "نور عندها أكثر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|156527",
+  "nl": "Adam heeft meer.",
+  "en": "Adam has more.",
+  "ar": "آدم عنده أكثر."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|157149",
+  "nl": "Eva heeft 3 boeken. Omar heeft 8 boeken. Mila heeft 5 boeken. Wie heeft de meeste boeken?",
+  "en": "Eva has 3 books. Omar has 8 books. Mila has 5 books. Who has the most books?",
+  "ar": "إيفا عندها 3 كتب. عمر عنده 8 كتب. ميلا عندها 5 كتب. من عنده أكثر عدد من الكتب؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|157570",
+  "nl": "De meeste = het allergrootste getal van de drie.",
+  "en": "The most = the biggest number of the three.",
+  "ar": "الأكثر (de meeste) = أكبر عدد من الثلاثة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|157679",
+  "nl": "Omar",
+  "en": "Omar",
+  "ar": "عمر"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|157783",
+  "nl": "Eva",
+  "en": "Eva",
+  "ar": "إيفا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|157893",
+  "nl": "Mila",
+  "en": "Mila",
+  "ar": "ميلا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|158597",
+  "nl": "Jan heeft 7 stickers. Sara heeft 2 stickers. Yusuf heeft 4 stickers. Wie heeft de minste stickers?",
+  "en": "Jan has 7 stickers. Sara has 2 stickers. Yusuf has 4 stickers. Who has the fewest stickers?",
+  "ar": "يان عنده 7 ملصقات. سارة عندها ملصقان. يوسف عنده 4 ملصقات. من عنده أقل عدد من الملصقات؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|159016",
+  "nl": "De minste = het allerkleinste getal van de drie.",
+  "en": "The fewest = the smallest number of the three.",
+  "ar": "الأقل (de minste) = أصغر عدد من الثلاثة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|159126",
+  "nl": "Sara",
+  "en": "Sara",
+  "ar": "سارة"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|159227",
+  "nl": "Jan",
+  "en": "Jan",
+  "ar": "يان"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|159341",
+  "nl": "Yusuf",
+  "en": "Yusuf",
+  "ar": "يوسف"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|160959",
+  "nl": "Rekenwoorden zeggen welke som je maakt.\n\n**Samen** en **erbij** = plus (+).\n**Weg**, **eraf** en **over** = min (−).\n\nZoek eerst het rekenwoord. Dan weet je de som.",
+  "en": "Math words tell you which sum to make.\n\n**Samen** (together) and **erbij** (added) = plus (+).\n**Weg** (away), **eraf** (taken off) and **over** (left) = minus (−).\n\nFirst find the math word. Then you know the sum.",
+  "ar": "كلمات الحساب تقول لك أي مسألة تحل.\n\n**معًا** (Samen) و**زيادة** (erbij) = جمع (+).\n**ذهب** (Weg) و**نقص** (eraf) و**باقٍ** (over) = طرح (−).\n\nابحث أولًا عن كلمة الحساب. عندها تعرف المسألة."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|161445",
+  "nl": "Je hebt 3 ballen. Je krijgt er 2 bij. Hoeveel ballen heb je samen?",
+  "en": "You have 3 balls. You get 2 more. How many balls do you have together?",
+  "ar": "عندك 3 كرات. تأخذ 2 زيادة. كم كرة عندك معًا؟"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|161819",
+  "nl": "Erbij en samen = plus. 3 + 2.",
+  "en": "Added and together = plus. 3 + 2.",
+  "ar": "زيادة (erbij) ومعًا (samen) = جمع. 3 + 2."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|161943",
+  "nl": "Samen",
+  "en": "Together",
+  "ar": "معًا"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|162575",
+  "nl": "**Samen** en **erbij** betekenen: **plus** (+). Alles bij elkaar.",
+  "en": "**Samen** (together) and **erbij** (added) mean: **plus** (+). Everything combined.",
+  "ar": "**معًا** (Samen) و**زيادة** (erbij) تعنيان: **جمع** (plus) (+). كل شيء مع بعضه."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|162689",
+  "nl": "Weg",
+  "en": "Away",
+  "ar": "ذهب"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|163433",
+  "nl": "**Weg**, **eraf** en **opeten** betekenen: **min** (−). Er gaat iets af.",
+  "en": "**Weg** (away), **eraf** (taken off) and **opeten** (eaten up) mean: **min** (minus) (−). Something goes away.",
+  "ar": "**ذهب** (Weg) و**نقص** (eraf) و**أكل** (opeten) تعني: **طرح** (min) (−). شيء ما ينقص."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|163553",
+  "nl": "Over",
+  "en": "Left",
+  "ar": "باقٍ"
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|164218",
+  "nl": "**Over** betekent: wat je nog hebt, als er iets weg is. Dat is ook **min**.",
+  "en": "**Over** (Left) means: what you still have, when something is gone. That is also **min** (minus).",
+  "ar": "**باقٍ** (Over) يعني: ما بقي عندك بعد أن ذهب شيء. هذا أيضًا **طرح** (min)."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|164460",
+  "nl": "Het is er niet meer. Min.",
+  "en": "It is not there anymore. Minus.",
+  "ar": "لم يعد موجودًا. طرح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|165081",
+  "nl": "Samen, erbij = plus. Weg, eraf, over = min.",
+  "en": "Together, added = plus. Away, taken off, left = minus.",
+  "ar": "معًا (samen)، زيادة (erbij) = جمع. ذهب (weg)، نقص (eraf)، باقٍ (over) = طرح."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|165336",
+  "nl": "3 en 2 samen: 3 + 2 = 5.",
+  "en": "3 and 2 together: 3 + 2 = 5.",
+  "ar": "3 و 2 معًا: 3 + 2 = 5."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|165663",
+  "nl": "6 appels, 2 weg: 6 − 2 = 4 over.",
+  "en": "6 apples, 2 away: 6 − 2 = 4 left.",
+  "ar": "6 تفاحات، 2 ذهبت: 6 − 2 = 4 باقية."
+ },
+ {
+  "id": "A|src/learnPaths/nieuwkomersSteun.js|166188",
+  "nl": "Zoek het rekenwoord in de zin. Dat zegt: plus of min.",
+  "en": "Find the math word in the sentence. That tells you: plus or minus.",
+  "ar": "ابحث عن كلمة الحساب في الجملة. هي تقول: جمع أو طرح."
+ }
+]

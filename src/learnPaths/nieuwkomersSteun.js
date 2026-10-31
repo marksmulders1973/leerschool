@@ -12,7 +12,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У класі — нідерландська для перших тижнів (новенькі)",
   "tr": "Sınıfta — ilk haftalar için Felemenkçe (yeni gelenler)",
   "ro": "În clasă — neerlandeză pentru primele săptămâni (nou-veniți)",
-  "bg": "В клас — нидерландски за първите седмици (новодошли)"
+  "bg": "В клас — нидерландски за първите седмици (новодошли)",
+  "fa": "در کلاس — هلندی برای هفته‌های اول (تازه‌واردها)"
  },
  "De zinnen die je de eerste weken op school nodig hebt: vragen, plekken, vrienden maken. Met steun in je eigen taal. ~10 min.": {
   "en": "The sentences you need in your first weeks at school: asking things, places, making friends. With help in your own language. ~10 min.",
@@ -20,7 +21,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Речення, які тобі потрібні в перші тижні в школі: питання, місця, як знайти друзів. З підтримкою твоєю мовою. ~10 хв.",
   "tr": "Okulda ilk haftalarda gereken cümleler: sorular, yerler, arkadaş edinmek. Kendi dilinde destekle. ~10 dk.",
   "ro": "Propozițiile de care ai nevoie în primele săptămâni la școală: întrebări, locuri, cum îți faci prieteni. Cu sprijin în limba ta. ~10 min.",
-  "bg": "Изреченията, които са ти нужни през първите седмици в училище: въпроси, места, как да намериш приятели. С помощ на твоя език. ~10 мин."
+  "bg": "Изреченията, които са ти нужни през първите седмици в училище: въпроси, места, как да намериш приятели. С помощ на твоя език. ~10 мин.",
+  "fa": "جمله‌هایی که در هفته‌های اول مدرسه لازم داری: سؤال پرسیدن، جاها، دوست پیدا کردن. با کمک به زبان خودت. ~10 دقیقه."
  },
  "Vragen aan de juf of meester": {
   "en": "Asking the teacher",
@@ -28,7 +30,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Питання до вчительки або вчителя",
   "tr": "Öğretmene sorular",
   "ro": "Întrebări pentru doamna sau domnul învățător",
-  "bg": "Въпроси към учителката или учителя"
+  "bg": "Въпроси към учителката или учителя",
+  "fa": "سؤال از خانم معلم یا آقای معلم"
  },
  "Op school": {
   "en": "At school",
@@ -36,7 +39,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У школі",
   "tr": "Okulda",
   "ro": "La școală",
-  "bg": "В училище"
+  "bg": "В училище",
+  "fa": "در مدرسه"
  },
  "Met andere kinderen": {
   "en": "With other children",
@@ -44,7 +48,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "З іншими дітьми",
   "tr": "Diğer çocuklarla",
   "ro": "Cu alți copii",
-  "bg": "С други деца"
+  "bg": "С други деца",
+  "fa": "با بچه‌های دیگر"
  },
  "Op school mag je **altijd** iets vragen.\n\nBegin met **Mag ik…?** of **Kunt u…?**\n\nSteek je hand op. Wacht. Zeg de zin. Dat is genoeg.": {
   "en": "At school you may **always** ask something.\n\nStart with **Mag ik…?** (= May I…?) or **Kunt u…?** (= Can you…?)\n\nPut your hand up. Wait. Say the sentence. That is enough.",
@@ -52,7 +57,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У школі **завжди** можна щось запитати.\n\nПочни з **Mag ik…?** (= Можна мені…?) або **Kunt u…?** (= Чи можете ви…?)\n\nПідніми руку. Зачекай. Скажи речення. Цього досить.",
   "tr": "Okulda **her zaman** bir şey sorabilirsin.\n\n**Mag ik…?** (= …yapabilir miyim?) veya **Kunt u…?** (= …yapabilir misiniz?) ile başla.\n\nElini kaldır. Bekle. Cümleyi söyle. Bu kadar yeter.",
   "ro": "La școală poți **întotdeauna** să întrebi ceva.\n\nÎncepe cu **Mag ik…?** (= Pot să…?) sau **Kunt u…?** (= Puteți să…?)\n\nRidică mâna. Așteaptă. Spune propoziția. Este de ajuns.",
-  "bg": "В училище **винаги** можеш да попиташ нещо.\n\nЗапочни с **Mag ik…?** (= Може ли да…?) или **Kunt u…?** (= Можете ли да…?)\n\nВдигни ръка. Изчакай. Кажи изречението. Това е достатъчно."
+  "bg": "В училище **винаги** можеш да попиташ нещо.\n\nЗапочни с **Mag ik…?** (= Може ли да…?) или **Kunt u…?** (= Можете ли да…?)\n\nВдигни ръка. Изчакай. Кажи изречението. Това е достатъчно.",
+  "fa": "در مدرسه **همیشه** می‌توانی چیزی بپرسی.\n\nبا **Mag ik…?** (= می‌توانم…؟) یا **Kunt u…?** (= می‌توانید…؟) شروع کن.\n\nدستت را بالا ببر. صبر کن. جمله را بگو. همین کافی است."
  },
  "Je wilt naar de wc. Vraag het.": {
   "en": "You want to go to the toilet. Ask.",
@@ -60,7 +66,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти хочеш у туалет. Запитай.",
   "tr": "Tuvalete gitmek istiyorsun. Sor.",
   "ro": "Vrei să mergi la toaletă. Întreabă.",
-  "bg": "Искаш да отидеш до тоалетната. Попитай."
+  "bg": "Искаш да отидеш до тоалетната. Попитай.",
+  "fa": "می‌خواهی به توالت بروی. بپرس."
  },
  "Vragen mag altijd": {
   "en": "You may always ask",
@@ -68,7 +75,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Питати можна завжди",
   "tr": "Sormak her zaman serbest",
   "ro": "Poți întreba întotdeauna",
-  "bg": "Винаги можеш да питаш"
+  "bg": "Винаги можеш да питаш",
+  "fa": "همیشه می‌توانی بپرسی"
  },
  "Op school mag je altijd iets **vragen**. Je begint met: **Mag ik…?**": {
   "en": "At school you may always **ask** something. You start with: **Mag ik…?** (= May I…?)",
@@ -76,7 +84,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У школі завжди можна щось **запитати**. Ти починаєш так: **Mag ik…?** (= Можна мені…?)",
   "tr": "Okulda her zaman bir şey **sorabilirsin**. Şöyle başlarsın: **Mag ik…?** (= …yapabilir miyim?)",
   "ro": "La școală poți întotdeauna să **întrebi** ceva. Începi cu: **Mag ik…?** (= Pot să…?)",
-  "bg": "В училище винаги можеш да **попиташ** нещо. Започваш с: **Mag ik…?** (= Може ли да…?)"
+  "bg": "В училище винаги можеш да **попиташ** нещо. Започваш с: **Mag ik…?** (= Може ли да…?)",
+  "fa": "در مدرسه همیشه می‌توانی چیزی **بپرسی**. این‌طوری شروع می‌کنی: **Mag ik…?** (= می‌توانم…؟)"
  },
  "De zin": {
   "en": "The sentence",
@@ -84,7 +93,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Речення",
   "tr": "Cümle",
   "ro": "Propoziția",
-  "bg": "Изречението"
+  "bg": "Изречението",
+  "fa": "جمله"
  },
  "**Mag ik naar de wc?** Dat is genoeg. De juf of meester zegt ja.": {
   "en": "**Mag ik naar de wc?** (= May I go to the toilet?) That is enough. The teacher says yes.",
@@ -92,7 +102,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Mag ik naar de wc?** (= Можна мені в туалет?) Цього досить. Вчителька або вчитель скаже «так».",
   "tr": "**Mag ik naar de wc?** (= Tuvalete gidebilir miyim?) Bu kadar yeter. Öğretmen evet der.",
   "ro": "**Mag ik naar de wc?** (= Pot să merg la toaletă?) Este de ajuns. Doamna sau domnul învățător spune da.",
-  "bg": "**Mag ik naar de wc?** (= Може ли да отида до тоалетната?) Това е достатъчно. Учителката или учителят казва „да“."
+  "bg": "**Mag ik naar de wc?** (= Може ли да отида до тоалетната?) Това е достатъчно. Учителката или учителят казва „да“.",
+  "fa": "**Mag ik naar de wc?** (= می‌توانم به توالت بروم؟) همین کافی است. خانم معلم یا آقای معلم می‌گوید بله."
  },
  "Zeg het rustig": {
   "en": "Say it calmly",
@@ -100,7 +111,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи спокійно",
   "tr": "Sakin söyle",
   "ro": "Spune-o calm",
-  "bg": "Кажи го спокойно"
+  "bg": "Кажи го спокойно",
+  "fa": "آرام بگو"
  },
  "Steek je hand op. Wacht even. Zeg de zin.": {
   "en": "Put your hand up. Wait a bit. Say the sentence.",
@@ -108,7 +120,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Підніми руку. Трохи зачекай. Скажи речення.",
   "tr": "Elini kaldır. Biraz bekle. Cümleyi söyle.",
   "ro": "Ridică mâna. Așteaptă puțin. Spune propoziția.",
-  "bg": "Вдигни ръка. Изчакай малко. Кажи изречението."
+  "bg": "Вдигни ръка. Изчакай малко. Кажи изречението.",
+  "fa": "دستت را بالا ببر. کمی صبر کن. جمله را بگو."
  },
  "mag ik": {
   "en": "may I",
@@ -116,7 +129,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "можна мені",
   "tr": "…yapabilir miyim",
   "ro": "pot să",
-  "bg": "може ли да"
+  "bg": "може ли да",
+  "fa": "می‌توانم"
  },
  "Zo begin je een vraag om iets te doen.": {
   "en": "This is how you start asking to do something.",
@@ -124,7 +138,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Так ти починаєш прохання щось зробити.",
   "tr": "Bir şey yapmak için soruya böyle başlarsın.",
   "ro": "Așa începi o întrebare ca să faci ceva.",
-  "bg": "Така започваш въпрос, за да направиш нещо."
+  "bg": "Така започваш въпрос, за да направиш нещо.",
+  "fa": "این‌طوری برای انجام دادن کاری اجازه می‌گیری."
  },
  "wc": {
   "en": "toilet",
@@ -132,7 +147,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "туалет",
   "tr": "tuvalet",
   "ro": "toaletă",
-  "bg": "тоалетна"
+  "bg": "тоалетна",
+  "fa": "توالت"
  },
  "Toilet.": {
   "en": "Toilet.",
@@ -140,7 +156,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Туалет.",
   "tr": "Tuvalet.",
   "ro": "Toaletă.",
-  "bg": "Тоалетна."
+  "bg": "Тоалетна.",
+  "fa": "توالت."
  },
  "Iets vragen = Mag ik…?": {
   "en": "Asking something = \"Mag ik…?\" (= May I…?)",
@@ -148,7 +165,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Щось попросити = «Mag ik…?» (= Можна мені…?)",
   "tr": "Bir şey istemek = \"Mag ik…?\" (…yapabilir miyim?)",
   "ro": "A cere ceva = „Mag ik…?” (= Pot să…?)",
-  "bg": "Да поискаш нещо = „Mag ik…?“ (= Може ли да…?)"
+  "bg": "Да поискаш нещо = „Mag ik…?“ (= Може ли да…?)",
+  "fa": "چیزی خواستن = «Mag ik…?» (= می‌توانم…؟)"
  },
  "Mag ik water drinken?": {
   "en": "\"Mag ik water drinken?\" (= May I drink water?)",
@@ -156,7 +174,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Можна мені попити води?",
   "tr": "Su içebilir miyim?",
   "ro": "Pot să beau apă?",
-  "bg": "Може ли да пия вода?"
+  "bg": "Може ли да пия вода?",
+  "fa": "«Mag ik water drinken?» (= می‌توانم آب بخورم؟)"
  },
  "Mag ik mijn jas pakken?": {
   "en": "\"Mag ik mijn jas pakken?\" (= May I get my coat?)",
@@ -164,7 +183,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Можна мені взяти куртку?",
   "tr": "Montumu alabilir miyim?",
   "ro": "Pot să îmi iau haina?",
-  "bg": "Може ли да си взема якето?"
+  "bg": "Може ли да си взема якето?",
+  "fa": "«Mag ik mijn jas pakken?» (= می‌توانم کاپشنم را بردارم؟)"
  },
  "Truc": {
   "en": "Trick",
@@ -172,7 +192,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Порада",
   "tr": "Püf noktası",
   "ro": "Truc",
-  "bg": "Трик"
+  "bg": "Трик",
+  "fa": "ترفند"
  },
  "Hand omhoog, dan de zin.": {
   "en": "Hand up, then the sentence.",
@@ -180,7 +201,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Рука вгору, потім речення.",
   "tr": "Önce el yukarı, sonra cümle.",
   "ro": "Mâna sus, apoi propoziția.",
-  "bg": "Ръката горе, после изречението."
+  "bg": "Ръката горе, после изречението.",
+  "fa": "دست بالا، بعد جمله."
  },
  "Zeg: Mag ik naar de wc?": {
   "en": "Say: \"Mag ik naar de wc?\" (= May I go to the toilet?)",
@@ -188,7 +210,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи: «Mag ik naar de wc?» (= Можна мені в туалет?)",
   "tr": "Söyle: \"Mag ik naar de wc?\" (Tuvalete gidebilir miyim?)",
   "ro": "Spune: „Mag ik naar de wc?” (= Pot să merg la toaletă?)",
-  "bg": "Кажи: „Mag ik naar de wc?“ (= Може ли да отида до тоалетната?)"
+  "bg": "Кажи: „Mag ik naar de wc?“ (= Може ли да отида до тоалетната?)",
+  "fa": "بگو: «Mag ik naar de wc?» (= می‌توانم به توالت بروم؟)"
  },
  "Begin met 'Mag ik'. Dan wat je wilt.": {
   "en": "Start with \"Mag ik\" (= May I). Then what you want.",
@@ -196,7 +219,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з «Mag ik» (= Можна мені). Потім те, що ти хочеш.",
   "tr": "\"Mag ik\" ile başla. Sonra ne istediğini söyle.",
   "ro": "Începe cu „Mag ik” (= Pot să). Apoi ce vrei.",
-  "bg": "Започни с „Mag ik“ (= Може ли да). После това, което искаш."
+  "bg": "Започни с „Mag ik“ (= Може ли да). После това, което искаш.",
+  "fa": "با «Mag ik» (= می‌توانم) شروع کن. بعد چیزی که می‌خواهی."
  },
  "Mag ik naar de wc?": {
   "en": "May I go to the toilet?",
@@ -204,7 +228,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Можна мені в туалет?",
   "tr": "Tuvalete gidebilir miyim?",
   "ro": "Pot să merg la toaletă?",
-  "bg": "Може ли да отида до тоалетната?"
+  "bg": "Може ли да отида до тоалетната?",
+  "fa": "می‌توانم به توالت بروم؟"
  },
  "Je begrijpt het niet. Zeg dat eerlijk.": {
   "en": "You don't understand. Say so honestly.",
@@ -212,7 +237,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти не розумієш. Скажи це чесно.",
   "tr": "Anlamıyorsun. Bunu dürüstçe söyle.",
   "ro": "Nu înțelegi. Spune asta sincer.",
-  "bg": "Не разбираш. Кажи го честно."
+  "bg": "Не разбираш. Кажи го честно.",
+  "fa": "نمی‌فهمی. این را صادقانه بگو."
  },
  "Je wilt het nog een keer horen.": {
   "en": "You want to hear it one more time.",
@@ -220,7 +246,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти хочеш почути це ще раз.",
   "tr": "Bir kez daha duymak istiyorsun.",
   "ro": "Vrei să auzi încă o dată.",
-  "bg": "Искаш да го чуеш още веднъж."
+  "bg": "Искаш да го чуеш още веднъж.",
+  "fa": "می‌خواهی آن را یک بار دیگر بشنوی."
  },
  "Je wilt weten wat het woord betekent.": {
   "en": "You want to know what the word is.",
@@ -228,7 +255,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти хочеш знати, що це за слово.",
   "tr": "Kelimenin ne olduğunu bilmek istiyorsun.",
   "ro": "Vrei să știi ce înseamnă cuvântul.",
-  "bg": "Искаш да знаеш какво означава думата."
+  "bg": "Искаш да знаеш какво означава думата.",
+  "fa": "می‌خواهی بدانی معنی کلمه چیست."
  },
  "Je werk is af.": {
   "en": "Your work is done.",
@@ -236,7 +264,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Твоя робота готова.",
   "tr": "İşin bitti.",
   "ro": "Ți-ai terminat treaba.",
-  "bg": "Работата ти е готова."
+  "bg": "Работата ти е готова.",
+  "fa": "کارت تمام شده."
  },
  "Op school zijn plekken en regels.\n\nDe **klas**: leren. De **gymzaal**: sport. Het **plein**: buiten spelen.\n\nDe **bel** zegt: nu begint iets, of nu is iets klaar.": {
   "en": "At school there are places and rules.\n\nThe **klas** (classroom): learning. The **gymzaal** (gym hall): sport. The **plein** (playground): playing outside.\n\nThe **bel** (bell) says: now something starts, or now something ends.",
@@ -244,7 +273,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У школі є місця і правила.\n\n**Клас** («klas»): вчитися. **Спортзал** («gymzaal»): спорт. **Шкільний двір** («plein»): гратися надворі.\n\n**Дзвоник** («bel») каже: зараз щось починається або зараз щось закінчується.",
   "tr": "Okulda yerler ve kurallar var.\n\n**Sınıf** (\"klas\"): öğrenmek. **Spor salonu** (\"gymzaal\"): spor. **Bahçe** (\"plein\"): dışarıda oynamak.\n\n**Zil** (\"bel\") der ki: şimdi bir şey başlıyor ya da bitiyor.",
   "ro": "La școală sunt locuri și reguli.\n\n**Clasa** („klas”): înveți. **Sala de sport** („gymzaal”): sport. **Curtea** („plein”): joacă afară.\n\n**Clopoțelul** („bel”) spune: acum începe ceva sau acum s-a terminat ceva.",
-  "bg": "В училище има места и правила.\n\n**Класната стая** („klas“): учене. **Физкултурният салон** („gymzaal“): спорт. **Дворът** („plein“): игра навън.\n\n**Звънецът** („bel“) казва: сега започва нещо или сега нещо свършва."
+  "bg": "В училище има места и правила.\n\n**Класната стая** („klas“): учене. **Физкултурният салон** („gymzaal“): спорт. **Дворът** („plein“): игра навън.\n\n**Звънецът** („bel“) казва: сега започва нещо или сега нещо свършва.",
+  "fa": "در مدرسه جاها و قانون‌هایی هست.\n\n**klas** (کلاس): یاد گرفتن. **gymzaal** (سالن ورزش): ورزش. **plein** (حیاط مدرسه): بازی در بیرون.\n\n**bel** (زنگ) می‌گوید: حالا چیزی شروع می‌شود، یا حالا چیزی تمام می‌شود."
  },
  "Gym doe je in de gymzaal.": {
   "en": "You do gym in the gym hall.",
@@ -252,7 +282,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Фізкультура («gym») — у спортзалі («gymzaal»).",
   "tr": "Beden eğitimini spor salonunda yaparsın.",
   "ro": "Sportul („gym”) îl faci în sala de sport („gymzaal”).",
-  "bg": "Физкултура („gym“) правиш във физкултурния салон („gymzaal“)."
+  "bg": "Физкултура („gym“) правиш във физкултурния салон („gymzaal“).",
+  "fa": "ورزش (gym) را در سالن ورزش (gymzaal) انجام می‌دهی."
  },
  "Plekken op school": {
   "en": "Places at school",
@@ -260,7 +291,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Місця в школі",
   "tr": "Okuldaki yerler",
   "ro": "Locuri la școală",
-  "bg": "Места в училище"
+  "bg": "Места в училище",
+  "fa": "جاها در مدرسه"
  },
  "De **klas** is waar je leert. De **gymzaal** is waar je sport. Het **plein** is buiten.": {
   "en": "The **klas** (classroom) is where you learn. The **gymzaal** (gym hall) is where you do sport. The **plein** (playground) is outside.",
@@ -268,7 +300,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Клас** («klas») — де ти вчишся. **Спортзал** («gymzaal») — де ти займаєшся спортом. **Шкільний двір** («plein») — надворі.",
   "tr": "**Sınıf** (\"klas\") öğrendiğin yerdir. **Spor salonu** (\"gymzaal\") spor yaptığın yerdir. **Bahçe** (\"plein\") dışarıdadır.",
   "ro": "**Clasa** („klas”) este locul unde înveți. **Sala de sport** („gymzaal”) este locul unde faci sport. **Curtea** („plein”) este afară.",
-  "bg": "**Класната стая** („klas“) е там, където учиш. **Физкултурният салон** („gymzaal“) е там, където спортуваш. **Дворът** („plein“) е навън."
+  "bg": "**Класната стая** („klas“) е там, където учиш. **Физкултурният салон** („gymzaal“) е там, където спортуваш. **Дворът** („plein“) е навън.",
+  "fa": "**klas** (کلاس) جایی است که یاد می‌گیری. **gymzaal** (سالن ورزش) جایی است که ورزش می‌کنی. **plein** (حیاط مدرسه) بیرون است."
  },
  "Gym": {
   "en": "Gym",
@@ -276,7 +309,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Фізкультура",
   "tr": "Beden eğitimi",
   "ro": "Ora de sport",
-  "bg": "Физкултура"
+  "bg": "Физкултура",
+  "fa": "ورزش"
  },
  "**Gym** is sport op school. Je doet gymkleren aan. Je gaat naar de **gymzaal**.": {
   "en": "**Gym** is sport at school. You put on gym clothes. You go to the **gymzaal** (gym hall).",
@@ -284,7 +318,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Фізкультура** («gym») — це спорт у школі. Ти вдягаєш спортивний одяг. Ти йдеш у **спортзал** («gymzaal»).",
   "tr": "**Beden eğitimi** (\"gym\") okulda spordur. Spor kıyafetlerini giyersin. **Spor salonuna** (\"gymzaal\") gidersin.",
   "ro": "**Ora de sport** („gym”) este sport la școală. Îți pui hainele de sport. Mergi în **sala de sport** („gymzaal”).",
-  "bg": "**Физкултура** („gym“) е спорт в училище. Обличаш спортни дрехи. Отиваш във **физкултурния салон** („gymzaal“)."
+  "bg": "**Физкултура** („gym“) е спорт в училище. Обличаш спортни дрехи. Отиваш във **физкултурния салон** („gymzaal“).",
+  "fa": "**Gym** ورزش در مدرسه است. لباس ورزشی می‌پوشی. به **gymzaal** (سالن ورزش) می‌روی."
  },
  "Onthoud": {
   "en": "Remember",
@@ -292,7 +327,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Запам'ятай",
   "tr": "Unutma",
   "ro": "Ține minte",
-  "bg": "Запомни"
+  "bg": "Запомни",
+  "fa": "یادت باشد"
  },
  "gym = sport · gymzaal = de zaal voor sport.": {
   "en": "gym = sport · gymzaal = the hall for sport.",
@@ -300,7 +336,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "gym = спорт · gymzaal = зал для спорту.",
   "tr": "gym = spor · gymzaal = spor salonu.",
   "ro": "gym = sport · gymzaal = sala pentru sport.",
-  "bg": "gym = спорт · gymzaal = салонът за спорт."
+  "bg": "gym = спорт · gymzaal = салонът за спорт.",
+  "fa": "gym = ورزش · gymzaal = سالن ورزش."
  },
  "gymzaal": {
   "en": "gym hall",
@@ -308,7 +345,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "спортзал",
   "tr": "spor salonu",
   "ro": "sala de sport",
-  "bg": "физкултурен салон"
+  "bg": "физкултурен салон",
+  "fa": "سالن ورزش"
  },
  "De zaal waar je sport.": {
   "en": "The hall where you do sport.",
@@ -316,7 +354,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Зал, де ти займаєшся спортом.",
   "tr": "Spor yaptığın salon.",
   "ro": "Sala unde faci sport.",
-  "bg": "Салонът, където спортуваш."
+  "bg": "Салонът, където спортуваш.",
+  "fa": "سالنی که در آن ورزش می‌کنی."
  },
  "plein": {
   "en": "playground",
@@ -324,7 +363,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "шкільний двір",
   "tr": "okul bahçesi",
   "ro": "curtea școlii",
-  "bg": "училищен двор"
+  "bg": "училищен двор",
+  "fa": "حیاط مدرسه"
  },
  "Buiten, waar je speelt in de pauze.": {
   "en": "Outside, where you play at break time.",
@@ -332,7 +372,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Надворі, де ти граєшся на перерві.",
   "tr": "Dışarısı, teneffüste oynadığın yer.",
   "ro": "Afară, unde te joci în pauză.",
-  "bg": "Навън, където играеш в междучасието."
+  "bg": "Навън, където играеш в междучасието.",
+  "fa": "بیرون، جایی که در وقت تفریح بازی می‌کنی."
  },
  "Elke les heeft een plek: klas, gymzaal, plein.": {
   "en": "Every lesson has a place: klas (classroom), gymzaal (gym hall), plein (playground).",
@@ -340,7 +381,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Кожен урок має своє місце: клас, спортзал, шкільний двір.",
   "tr": "Her dersin bir yeri var: sınıf, spor salonu, bahçe.",
   "ro": "Fiecare lecție are un loc: clasa, sala de sport, curtea.",
-  "bg": "Всеки урок си има място: класна стая, физкултурен салон, двор."
+  "bg": "Всеки урок си има място: класна стая, физкултурен салон, двор.",
+  "fa": "هر درس یک جا دارد: klas (کلاس)، gymzaal (سالن ورزش)، plein (حیاط مدرسه)."
  },
  "Pauze → plein.": {
   "en": "Break → playground.",
@@ -348,7 +390,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Перерва → шкільний двір.",
   "tr": "Teneffüs → bahçe.",
   "ro": "Pauză → curte.",
-  "bg": "Междучасие → двор."
+  "bg": "Междучасие → двор.",
+  "fa": "تفریح → حیاط مدرسه."
  },
  "Rekenen → klas.": {
   "en": "Maths → classroom.",
@@ -356,7 +399,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Математика → клас.",
   "tr": "Matematik → sınıf.",
   "ro": "Matematică → clasă.",
-  "bg": "Математика → класна стая."
+  "bg": "Математика → класна стая.",
+  "fa": "حساب → کلاس."
  },
  "Gym hoort bij gymzaal.": {
   "en": "Gym goes with the gym hall.",
@@ -364,7 +408,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Фізкультура — це спортзал.",
   "tr": "Beden eğitimi spor salonunda olur.",
   "ro": "Ora de sport merge cu sala de sport.",
-  "bg": "Физкултурата върви с физкултурния салон."
+  "bg": "Физкултурата върви с физкултурния салон.",
+  "fa": "ورزش با سالن ورزش جور است."
  },
  "Gym is in de gymzaal.": {
   "en": "Gym is in the gym hall.",
@@ -372,7 +417,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Фізкультура — у спортзалі.",
   "tr": "Beden eğitimi spor salonundadır.",
   "ro": "Ora de sport este în sala de sport.",
-  "bg": "Физкултурата е във физкултурния салон."
+  "bg": "Физкултурата е във физкултурния салон.",
+  "fa": "ورزش در سالن ورزش است."
  },
  "Sport op school = gymzaal.": {
   "en": "Sport at school = gym hall.",
@@ -380,7 +426,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спорт у школі = спортзал.",
   "tr": "Okulda spor = spor salonu.",
   "ro": "Sport la școală = sala de sport.",
-  "bg": "Спорт в училище = физкултурен салон."
+  "bg": "Спорт в училище = физкултурен салон.",
+  "fa": "ورزش در مدرسه = سالن ورزش."
  },
  "Gymzaal.": {
   "en": "Gym hall.",
@@ -388,7 +435,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спортзал.",
   "tr": "Spor salonu.",
   "ro": "Sala de sport.",
-  "bg": "Физкултурен салон."
+  "bg": "Физкултурен салон.",
+  "fa": "سالن ورزش."
  },
  "De bel zegt: nu begint of eindigt iets.": {
   "en": "The bell says: now something starts or ends.",
@@ -396,7 +444,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Дзвоник каже: зараз щось починається або закінчується.",
   "tr": "Zil der ki: şimdi bir şey başlıyor ya da bitiyor.",
   "ro": "Clopoțelul spune: acum începe sau se termină ceva.",
-  "bg": "Звънецът казва: сега нещо започва или свършва."
+  "bg": "Звънецът казва: сега нещо започва или свършва.",
+  "fa": "زنگ می‌گوید: حالا چیزی شروع یا تمام می‌شود."
  },
  "Jassen hangen aan een haak.": {
   "en": "Coats hang on a hook.",
@@ -404,7 +453,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Куртки висять на гачку.",
   "tr": "Montlar askıya asılır.",
   "ro": "Hainele stau agățate într-un cuier.",
-  "bg": "Якетата висят на закачалка."
+  "bg": "Якетата висят на закачалка.",
+  "fa": "کاپشن‌ها به قلاب آویزان‌اند."
  },
  "In de pauze ga je naar buiten.": {
   "en": "At break time you go outside.",
@@ -412,7 +462,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "На перерві ти йдеш надвір.",
   "tr": "Teneffüste dışarı çıkarsın.",
   "ro": "În pauză ieși afară.",
-  "bg": "В междучасието излизаш навън."
+  "bg": "В междучасието излизаш навън.",
+  "fa": "در وقت تفریح بیرون می‌روی."
  },
  "Zeg wat je vergeten bent.": {
   "en": "Say what you forgot.",
@@ -420,7 +471,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи, що ти забув.",
   "tr": "Neyi unuttuğunu söyle.",
   "ro": "Spune ce ai uitat.",
-  "bg": "Кажи какво си забравил."
+  "bg": "Кажи какво си забравил.",
+  "fa": "بگو چه چیزی را فراموش کرده‌ای."
  },
  "Zo maak je vrienden.\n\n**Hoe heet je?** → **Ik heet …**\n**Mag ik meedoen?** → dan speel je mee.\n**Dank je wel** als iemand je helpt.\n\nEn: **nee** zeggen mag altijd.": {
   "en": "This is how you make friends.\n\n**Hoe heet je?** (= What is your name?) → **Ik heet …** (= My name is …)\n**Mag ik meedoen?** (= Can I join?) → then you play along.\n**Dank je wel** (= Thank you) when someone helps you.\n\nAnd: saying **nee** (= no) is always okay.",
@@ -428,7 +480,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Так ти знаходиш друзів.\n\n**Hoe heet je?** (= Як тебе звати?) → **Ik heet …** (= Мене звати …)\n**Mag ik meedoen?** (= Можна мені з вами?) → тоді ти граєш разом.\n**Dank je wel** (= Дякую) — коли хтось тобі допомагає.\n\nІ ще: сказати **nee** (= ні) можна завжди.",
   "tr": "Böyle arkadaş edinirsin.\n\n**Hoe heet je?** (= Adın ne?) → **Ik heet …** (= Benim adım …)\n**Mag ik meedoen?** (= Katılabilir miyim?) → o zaman birlikte oynarsın.\n**Dank je wel** (= Teşekkür ederim) biri sana yardım edince.\n\nVe: **nee** (= hayır) demek her zaman serbest.",
   "ro": "Așa îți faci prieteni.\n\n**Hoe heet je?** (= Cum te cheamă?) → **Ik heet …** (= Mă cheamă …)\n**Mag ik meedoen?** (= Pot să mă joc și eu?) → apoi te joci împreună cu ei.\n**Dank je wel** (= Mulțumesc) când cineva te ajută.\n\nȘi: să spui **nee** (= nu) este întotdeauna voie.",
-  "bg": "Така си намираш приятели.\n\n**Hoe heet je?** (= Как се казваш?) → **Ik heet …** (= Казвам се …)\n**Mag ik meedoen?** (= Може ли да играя с вас?) → тогава играеш заедно с тях.\n**Dank je wel** (= Благодаря) когато някой ти помогне.\n\nИ още: да кажеш **nee** (= не) винаги може."
+  "bg": "Така си намираш приятели.\n\n**Hoe heet je?** (= Как се казваш?) → **Ik heet …** (= Казвам се …)\n**Mag ik meedoen?** (= Може ли да играя с вас?) → тогава играеш заедно с тях.\n**Dank je wel** (= Благодаря) когато някой ти помогне.\n\nИ още: да кажеш **nee** (= не) винаги може.",
+  "fa": "این‌طوری دوست پیدا می‌کنی.\n\n**Hoe heet je?** (= اسمت چیست؟) → **Ik heet …** (= اسم من … است)\n**Mag ik meedoen?** (= می‌توانم با شما بازی کنم؟) → بعد با آن‌ها بازی می‌کنی.\n**Dank je wel** (= ممنون) وقتی کسی به تو کمک می‌کند.\n\nو: **nee** (= نه) گفتن همیشه اشکالی ندارد."
  },
  "Zeg je naam.": {
   "en": "Say your name.",
@@ -436,7 +489,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи своє ім'я.",
   "tr": "Adını söyle.",
   "ro": "Spune-ți numele.",
-  "bg": "Кажи името си."
+  "bg": "Кажи името си.",
+  "fa": "اسمت را بگو."
  },
  "Jezelf voorstellen": {
   "en": "Saying who you are",
@@ -444,7 +498,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Знайомство",
   "tr": "Kendini tanıtmak",
   "ro": "Să te prezinți",
-  "bg": "Запознанство"
+  "bg": "Запознанство",
+  "fa": "خودت را معرفی کن"
  },
  "**Hoe heet je?** = wat is je naam. Je zegt: **Ik heet …** en dan je naam.": {
   "en": "**Hoe heet je?** = what is your name. You say: **Ik heet …** (= My name is …) and then your name.",
@@ -452,7 +507,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Hoe heet je?** (= Як тебе звати?) = яке твоє ім'я. Ти кажеш: **Ik heet …** (= Мене звати …) і потім своє ім'я.",
   "tr": "**Hoe heet je?** = adın ne. Şöyle dersin: **Ik heet …** (= Benim adım …) ve sonra adın.",
   "ro": "**Hoe heet je?** (= Cum te cheamă?) = care este numele tău. Tu spui: **Ik heet …** (= Mă cheamă …) și apoi numele tău.",
-  "bg": "**Hoe heet je?** (= Как се казваш?) = какво е името ти. Ти казваш: **Ik heet …** (= Казвам се …) и после името си."
+  "bg": "**Hoe heet je?** (= Как се казваш?) = какво е името ти. Ти казваш: **Ik heet …** (= Казвам се …) и после името си.",
+  "fa": "**Hoe heet je?** = اسمت چیست. تو می‌گویی: **Ik heet …** (= اسم من … است) و بعد اسمت."
  },
  "Meer vragen": {
   "en": "More questions",
@@ -460,7 +516,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ще питання",
   "tr": "Daha çok soru",
   "ro": "Mai multe întrebări",
-  "bg": "Още въпроси"
+  "bg": "Още въпроси",
+  "fa": "سؤال‌های بیشتر"
  },
  "**Hoe oud ben je?** → **Ik ben … jaar.** **Waar kom je vandaan?** → **Ik kom uit …**": {
   "en": "**Hoe oud ben je?** (= How old are you?) → **Ik ben … jaar.** (= I am … years old.) **Waar kom je vandaan?** (= Where are you from?) → **Ik kom uit …** (= I am from …)",
@@ -468,7 +525,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Hoe oud ben je?** (= Скільки тобі років?) → **Ik ben … jaar.** (= Мені … років.) **Waar kom je vandaan?** (= Звідки ти?) → **Ik kom uit …** (= Я з …)",
   "tr": "**Hoe oud ben je?** (= Kaç yaşındasın?) → **Ik ben … jaar.** (= … yaşındayım.) **Waar kom je vandaan?** (= Nerelisin?) → **Ik kom uit …** (= …'den geliyorum.)",
   "ro": "**Hoe oud ben je?** (= Câți ani ai?) → **Ik ben … jaar.** (= Am … ani.) **Waar kom je vandaan?** (= De unde ești?) → **Ik kom uit …** (= Sunt din …)",
-  "bg": "**Hoe oud ben je?** (= На колко години си?) → **Ik ben … jaar.** (= Аз съм на … години.) **Waar kom je vandaan?** (= Откъде си?) → **Ik kom uit …** (= Аз съм от …)"
+  "bg": "**Hoe oud ben je?** (= На колко години си?) → **Ik ben … jaar.** (= Аз съм на … години.) **Waar kom je vandaan?** (= Откъде си?) → **Ik kom uit …** (= Аз съм от …)",
+  "fa": "**Hoe oud ben je?** (= چند سالت است؟) → **Ik ben … jaar.** (= من … سال دارم.) **Waar kom je vandaan?** (= اهل کجایی؟) → **Ik kom uit …** (= من اهل … هستم)"
  },
  "Vriendelijk": {
   "en": "Friendly",
@@ -476,7 +534,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Привітно",
   "tr": "Nazik ol",
   "ro": "Prietenos",
-  "bg": "Приятелски"
+  "bg": "Приятелски",
+  "fa": "با مهربانی"
  },
  "Kijk het kind aan. Lach. Dat helpt meer dan woorden.": {
   "en": "Look at the child. Smile. That helps more than words.",
@@ -484,7 +543,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Подивися на дитину. Усміхнися. Це допомагає більше, ніж слова.",
   "tr": "Çocuğa bak. Gülümse. Bu, kelimelerden daha çok yardım eder.",
   "ro": "Uită-te la copil. Zâmbește. Asta ajută mai mult decât cuvintele.",
-  "bg": "Погледни детето. Усмихни се. Това помага повече от думите."
+  "bg": "Погледни детето. Усмихни се. Това помага повече от думите.",
+  "fa": "به بچه نگاه کن. لبخند بزن. این از کلمه‌ها بیشتر کمک می‌کند."
  },
  "heten": {
   "en": "to be called",
@@ -492,7 +552,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "зватися",
   "tr": "adı … olmak",
   "ro": "a se numi",
-  "bg": "казвам се"
+  "bg": "казвам се",
+  "fa": "اسم داشتن"
  },
  "Je naam hebben. Ik heet Sam.": {
   "en": "To have your name. \"Ik heet Sam.\" (= My name is Sam.)",
@@ -500,7 +561,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мати ім'я. Мене звати Сем.",
   "tr": "Bir adının olması. Benim adım Sam.",
   "ro": "Să ai numele tău. Mă cheamă Sam.",
-  "bg": "Да имаш име. Казвам се Сам."
+  "bg": "Да имаш име. Казвам се Сам.",
+  "fa": "اسم داشتن. «Ik heet Sam.» (= اسم من سام است.)"
  },
  "Hoe heet je? → Ik heet …": {
   "en": "\"Hoe heet je?\" (= What is your name?) → \"Ik heet …\" (= My name is …)",
@@ -508,7 +570,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "«Hoe heet je?» (= Як тебе звати?) → «Ik heet …» (= Мене звати …)",
   "tr": "\"Hoe heet je?\" (Adın ne?) → \"Ik heet …\" (Benim adım …)",
   "ro": "„Hoe heet je?” (= Cum te cheamă?) → „Ik heet …” (= Mă cheamă …)",
-  "bg": "„Hoe heet je?“ (= Как се казваш?) → „Ik heet …“ (= Казвам се …)"
+  "bg": "„Hoe heet je?“ (= Как се казваш?) → „Ik heet …“ (= Казвам се …)",
+  "fa": "«Hoe heet je?» (= اسمت چیست؟) → «Ik heet …» (= اسم من … است)"
  },
  "Hoe heet je? Ik heet Amira.": {
   "en": "\"Hoe heet je? Ik heet Amira.\" (= What is your name? My name is Amira.)",
@@ -516,7 +579,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Як тебе звати? Мене звати Аміра.",
   "tr": "Adın ne? Benim adım Amira.",
   "ro": "Cum te cheamă? Mă cheamă Amira.",
-  "bg": "Как се казваш? Казвам се Амира."
+  "bg": "Как се казваш? Казвам се Амира.",
+  "fa": "«Hoe heet je? Ik heet Amira.» (= اسمت چیست؟ اسم من امیرا است.)"
  },
  "Hoe oud ben je? Ik ben negen jaar.": {
   "en": "\"Hoe oud ben je? Ik ben negen jaar.\" (= How old are you? I am nine years old.)",
@@ -524,7 +588,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скільки тобі років? Мені дев'ять років.",
   "tr": "Kaç yaşındasın? Dokuz yaşındayım.",
   "ro": "Câți ani ai? Am nouă ani.",
-  "bg": "На колко години си? На девет години съм."
+  "bg": "На колко години си? На девет години съм.",
+  "fa": "«Hoe oud ben je? Ik ben negen jaar.» (= چند سالت است؟ من نه سال دارم.)"
  },
  "Ik heet + naam.": {
   "en": "\"Ik heet\" + name.",
@@ -532,7 +597,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "«Ik heet» (= Мене звати) + ім'я.",
   "tr": "\"Ik heet\" + ad.",
   "ro": "„Ik heet” (= Mă cheamă) + numele.",
-  "bg": "„Ik heet“ (= Казвам се) + име."
+  "bg": "„Ik heet“ (= Казвам се) + име.",
+  "fa": "«Ik heet» + اسم."
  },
  "Zeg: Ik heet … en je naam.": {
   "en": "Say: \"Ik heet …\" (= My name is …) and your name.",
@@ -540,7 +606,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи: «Ik heet …» (= Мене звати …) і своє ім'я.",
   "tr": "Söyle: \"Ik heet …\" (Benim adım …) ve adın.",
   "ro": "Spune: „Ik heet …” (= Mă cheamă …) și numele tău.",
-  "bg": "Кажи: „Ik heet …“ (= Казвам се …) и името си."
+  "bg": "Кажи: „Ik heet …“ (= Казвам се …) и името си.",
+  "fa": "بگو: «Ik heet …» (= اسم من … است) و اسمت."
  },
  "Ik heet Sam.": {
   "en": "My name is Sam.",
@@ -548,7 +615,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мене звати Сем.",
   "tr": "Benim adım Sam.",
   "ro": "Mă cheamă Sam.",
-  "bg": "Казвам се Сам."
+  "bg": "Казвам се Сам.",
+  "fa": "اسم من سام است."
  },
  "Ik heet …": {
   "en": "My name is …",
@@ -556,7 +624,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мене звати …",
   "tr": "Benim adım …",
   "ro": "Mă cheamă …",
-  "bg": "Казвам се …"
+  "bg": "Казвам се …",
+  "fa": "اسم من … است"
  },
  "Vraag of je mee mag doen.": {
   "en": "Ask if you can join in.",
@@ -564,7 +633,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Запитай, чи можна тобі гратися разом.",
   "tr": "Katılıp katılamayacağını sor.",
   "ro": "Întreabă dacă poți să te joci și tu.",
-  "bg": "Попитай дали може да играеш и ти."
+  "bg": "Попитай дали може да играеш и ти.",
+  "fa": "بپرس که آیا می‌توانی با آن‌ها بازی کنی."
  },
  "Je bedankt iemand.": {
   "en": "You thank someone.",
@@ -572,7 +642,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти дякуєш комусь.",
   "tr": "Birine teşekkür ediyorsun.",
   "ro": "Mulțumești cuiva.",
-  "bg": "Благодариш на някого."
+  "bg": "Благодариш на някого.",
+  "fa": "از کسی تشکر می‌کنی."
  },
  "Je mag altijd nee zeggen.": {
   "en": "You may always say no.",
@@ -580,7 +651,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти завжди можеш сказати «ні».",
   "tr": "Her zaman hayır diyebilirsin.",
   "ro": "Poți întotdeauna să spui „nu”.",
-  "bg": "Винаги можеш да кажеш „не“."
+  "bg": "Винаги можеш да кажеш „не“.",
+  "fa": "تو همیشه می‌توانی نه بگویی."
  },
  "Aan het eind van de dag zeg je dag.": {
   "en": "At the end of the day you say bye.",
@@ -588,7 +660,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Наприкінці дня ти кажеш «dag» (= бувай).",
   "tr": "Günün sonunda hoşça kal dersin.",
   "ro": "La sfârșitul zilei spui „dag” (= pa).",
-  "bg": "В края на деня казваш „dag“ (= чао)."
+  "bg": "В края на деня казваш „dag“ (= чао).",
+  "fa": "آخر روز «dag» (خداحافظ) می‌گویی."
  },
  "Woorden — je eerste Nederlandse woorden (nieuwkomers)": {
   "en": "Words — your first Dutch words (newcomers)",
@@ -596,7 +669,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова — твої перші нідерландські слова (новенькі)",
   "tr": "Kelimeler — ilk Felemenkçe kelimelerin (yeni gelenler)",
   "ro": "Cuvinte — primele tale cuvinte în neerlandeză (nou-veniți)",
-  "bg": "Думи — първите ти думи на нидерландски (новодошли)"
+  "bg": "Думи — първите ти думи на нидерландски (новодошли)",
+  "fa": "کلمه‌ها — اولین کلمه‌های هلندی تو (تازه‌واردها)"
  },
  "Twintig woorden voor school, thuis, eten, lichaam, kleuren en doe-woorden. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~12 min.": {
   "en": "Twenty words for school, home, food, body, colours and action words. The word is in your language; you pick the Dutch word. ~12 min.",
@@ -604,7 +678,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Двадцять слів про школу, дім, їжу, тіло, кольори і дії. Слово написане твоєю мовою; ти вибираєш нідерландське слово. ~12 хв.",
   "tr": "Okul, ev, yemek, vücut, renkler ve eylemler için yirmi kelime. Kelime senin dilinde yazar; sen Felemenkçe kelimeyi seçersin. ~12 dk.",
   "ro": "Douăzeci de cuvinte pentru școală, acasă, mâncare, corp, culori și cuvinte de acțiune. Cuvântul este în limba ta; tu alegi cuvântul în neerlandeză. ~12 min.",
-  "bg": "Двайсет думи за училище, дом, храна, тяло, цветове и думи за действия. Думата е на твоя език; ти избираш нидерландската дума. ~12 мин."
+  "bg": "Двайсет думи за училище, дом, храна, тяло, цветове и думи за действия. Думата е на твоя език; ти избираш нидерландската дума. ~12 мин.",
+  "fa": "بیست کلمه برای مدرسه، خانه، غذا، بدن، رنگ‌ها و فعل‌ها. کلمه به زبان تو نوشته شده؛ تو کلمه هلندی را انتخاب می‌کنی. ~12 دقیقه."
  },
  "Thuis en eten": {
   "en": "Home and food",
@@ -612,7 +687,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Дім і їжа",
   "tr": "Ev ve yemek",
   "ro": "Acasă și mâncare",
-  "bg": "Вкъщи и храна"
+  "bg": "Вкъщи и храна",
+  "fa": "خانه و غذا"
  },
  "Lichaam en kleuren": {
   "en": "Body and colours",
@@ -620,7 +696,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Тіло і кольори",
   "tr": "Vücut ve renkler",
   "ro": "Corp și culori",
-  "bg": "Тяло и цветове"
+  "bg": "Тяло и цветове",
+  "fa": "بدن و رنگ‌ها"
  },
  "Je ziet een woord in **jouw taal**. Kies het **Nederlandse** woord.\n\nLeer elk woord met **de** of **het** ervoor: de tafel, het boek.": {
   "en": "You see a word in **your language**. Pick the **Dutch** word.\n\nLearn each word with **de** or **het** in front: \"de tafel\" (the table), \"het boek\" (the book).",
@@ -628,7 +705,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти бачиш слово **твоєю мовою**. Вибери **нідерландське** слово.\n\nВчи кожне слово з **de** або **het** перед ним: «de tafel» (= стіл), «het boek» (= книжка).",
   "tr": "**Senin dilinde** bir kelime görürsün. **Felemenkçe** kelimeyi seç.\n\nHer kelimeyi önünde **de** veya **het** ile öğren: \"de tafel\" (masa), \"het boek\" (kitap).",
   "ro": "Vezi un cuvânt în **limba ta**. Alege cuvântul în **neerlandeză**.\n\nÎnvață fiecare cuvânt cu **de** sau **het** în față: „de tafel” (= masa), „het boek” (= cartea).",
-  "bg": "Виждаш дума на **твоя език**. Избери **нидерландската** дума.\n\nУчи всяка дума с **de** или **het** отпред: „de tafel“ (= масата), „het boek“ (= книгата)."
+  "bg": "Виждаш дума на **твоя език**. Избери **нидерландската** дума.\n\nУчи всяка дума с **de** или **het** отпред: „de tafel“ (= масата), „het boek“ (= книгата).",
+  "fa": "یک کلمه را به **زبان خودت** می‌بینی. کلمه **هلندی** را انتخاب کن.\n\nهر کلمه را با **de** یا **het** قبلش یاد بگیر: «de tafel» (میز)، «het boek» (کتاب)."
  },
  "Kijk naar het woord in jouw taal. Welk Nederlands woord past?": {
   "en": "Look at the word in your language. Which Dutch word fits?",
@@ -636,7 +714,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Подивися на слово твоєю мовою. Яке нідерландське слово підходить?",
   "tr": "Senin dilindeki kelimeye bak. Hangi Felemenkçe kelime uyuyor?",
   "ro": "Uită-te la cuvântul în limba ta. Care cuvânt în neerlandeză se potrivește?",
-  "bg": "Погледни думата на твоя език. Коя нидерландска дума подхожда?"
+  "bg": "Погледни думата на твоя език. Коя нидерландска дума подхожда?",
+  "fa": "به کلمه‌ای که به زبان خودت است نگاه کن. کدام کلمه هلندی جور است؟"
  },
  "Zo werkt dit": {
   "en": "How this works",
@@ -644,7 +723,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Як це працює",
   "tr": "Nasıl çalışır",
   "ro": "Așa funcționează",
-  "bg": "Така работи"
+  "bg": "Така работи",
+  "fa": "این‌طوری کار می‌کند"
  },
  "Je ziet een woord in **jouw taal**. Kies het **Nederlandse** woord dat hetzelfde betekent.": {
   "en": "You see a word in **your language**. Pick the **Dutch** word that means the same.",
@@ -652,7 +732,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти бачиш слово **твоєю мовою**. Вибери **нідерландське** слово, яке означає те саме.",
   "tr": "**Senin dilinde** bir kelime görürsün. Aynı anlama gelen **Felemenkçe** kelimeyi seç.",
   "ro": "Vezi un cuvânt în **limba ta**. Alege cuvântul în **neerlandeză** care înseamnă același lucru.",
-  "bg": "Виждаш дума на **твоя език**. Избери **нидерландската** дума, която означава същото."
+  "bg": "Виждаш дума на **твоя език**. Избери **нидерландската** дума, която означава същото.",
+  "fa": "یک کلمه را به **زبان خودت** می‌بینی. کلمه **هلندی** را انتخاب کن که همان معنی را دارد."
  },
  "De tafel": {
   "en": "The table",
@@ -660,7 +741,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стіл («de tafel»)",
   "tr": "Masa",
   "ro": "Masa („de tafel”)",
-  "bg": "Масата („de tafel“)"
+  "bg": "Масата („de tafel“)",
+  "fa": "میز"
  },
  "Aan een **tafel** zit je. Je werkt eraan. Je eet eraan.": {
   "en": "You sit at a **tafel** (table). You work at it. You eat at it.",
@@ -668,7 +750,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "За **столом** («tafel») ти сидиш. Ти за ним працюєш. Ти за ним їси.",
   "tr": "**Masada** (\"tafel\") oturursun. Orada çalışırsın. Orada yemek yersin.",
   "ro": "La **masă** („tafel”) stai. Lucrezi la ea. Mănânci la ea.",
-  "bg": "На **масата** („tafel“) седиш. Работиш на нея. Ядеш на нея."
+  "bg": "На **масата** („tafel“) седиш. Работиш на нея. Ядеш на нея.",
+  "fa": "پشت **tafel** (میز) می‌نشینی. پشت آن کار می‌کنی. سر آن غذا می‌خوری."
  },
  "de en het": {
   "en": "de and het",
@@ -676,7 +759,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "de і het",
   "tr": "\"de\" ve \"het\"",
   "ro": "de și het",
-  "bg": "de и het"
+  "bg": "de и het",
+  "fa": "«de» و «het»"
  },
  "In het Nederlands hoort **de** of **het** bij een woord. Leer ze samen: **de tafel**, **het raam**.": {
   "en": "In Dutch, **de** or **het** goes with a word. Learn them together: **de tafel** (the table), **het raam** (the window).",
@@ -684,7 +768,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У нідерландській мові до слова належить **de** або **het**. Вчи їх разом: **de tafel** (= стіл), **het raam** (= вікно).",
   "tr": "Felemenkçede bir kelimenin önüne **de** veya **het** gelir. Onları birlikte öğren: **de tafel** (masa), **het raam** (pencere).",
   "ro": "În neerlandeză, **de** sau **het** merge cu un cuvânt. Învață-le împreună: **de tafel** (= masa), **het raam** (= fereastra).",
-  "bg": "В нидерландския **de** или **het** върви с думата. Учи ги заедно: **de tafel** (= масата), **het raam** (= прозорецът)."
+  "bg": "В нидерландския **de** или **het** върви с думата. Учи ги заедно: **de tafel** (= масата), **het raam** (= прозорецът).",
+  "fa": "در زبان هلندی **de** یا **het** با هر کلمه می‌آید. آن‌ها را با هم یاد بگیر: **de tafel** (میز)، **het raam** (پنجره)."
  },
  "de tafel": {
   "en": "the table",
@@ -692,7 +777,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "стіл",
   "tr": "masa",
   "ro": "masa",
-  "bg": "масата"
+  "bg": "масата",
+  "fa": "میز"
  },
  "Daar zit je aan.": {
   "en": "You sit at it.",
@@ -700,7 +786,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "За ним ти сидиш.",
   "tr": "Onun başında oturursun.",
   "ro": "La ea stai.",
-  "bg": "На нея седиш."
+  "bg": "На нея седиш.",
+  "fa": "پشتش می‌نشینی."
  },
  "de stoel": {
   "en": "the chair",
@@ -708,7 +795,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "стілець",
   "tr": "sandalye",
   "ro": "scaunul",
-  "bg": "столът"
+  "bg": "столът",
+  "fa": "صندلی"
  },
  "Daar zit je op.": {
   "en": "You sit on it.",
@@ -716,7 +804,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "На ньому ти сидиш.",
   "tr": "Onun üstüne oturursun.",
   "ro": "Pe el stai.",
-  "bg": "На него седиш."
+  "bg": "На него седиш.",
+  "fa": "رویش می‌نشینی."
  },
  "Leer het woord altijd mét de of het.": {
   "en": "Always learn the word with \"de\" or \"het\".",
@@ -724,7 +813,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Завжди вчи слово разом з de або het.",
   "tr": "Kelimeyi her zaman \"de\" veya \"het\" ile öğren.",
   "ro": "Învață cuvântul întotdeauna cu de sau het.",
-  "bg": "Учи думата винаги с de или het."
+  "bg": "Учи думата винаги с de или het.",
+  "fa": "کلمه را همیشه با «de» یا «het» یاد بگیر."
  },
  "de tafel, de stoel, de deur": {
   "en": "the table, the chair, the door",
@@ -732,7 +822,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "de tafel, de stoel, de deur (= стіл, стілець, двері)",
   "tr": "de tafel (masa), de stoel (sandalye), de deur (kapı)",
   "ro": "de tafel, de stoel, de deur (= masa, scaunul, ușa)",
-  "bg": "de tafel, de stoel, de deur (= масата, столът, вратата)"
+  "bg": "de tafel, de stoel, de deur (= масата, столът, вратата)",
+  "fa": "میز، صندلی، در"
  },
  "het raam, het boek, het bord": {
   "en": "the window, the book, the board",
@@ -740,7 +831,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "het raam, het boek, het bord (= вікно, книжка, дошка)",
   "tr": "het raam (pencere), het boek (kitap), het bord (tahta)",
   "ro": "het raam, het boek, het bord (= fereastra, cartea, tabla)",
-  "bg": "het raam, het boek, het bord (= прозорецът, книгата, дъската)"
+  "bg": "het raam, het boek, het bord (= прозорецът, книгата, дъската)",
+  "fa": "پنجره، کتاب، تخته"
  },
  "Zeg het woord hardop met de of het ervoor.": {
   "en": "Say the word out loud with \"de\" or \"het\" in front.",
@@ -748,7 +840,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи слово вголос з de або het перед ним.",
   "tr": "Kelimeyi önünde \"de\" veya \"het\" ile yüksek sesle söyle.",
   "ro": "Spune cuvântul cu voce tare cu de sau het în față.",
-  "bg": "Кажи думата на глас с de или het отпред."
+  "bg": "Кажи думата на глас с de или het отпред.",
+  "fa": "کلمه را بلند بگو، با «de» یا «het» قبلش."
  },
  "Kies het Nederlandse woord.": {
   "en": "Pick the Dutch word.",
@@ -756,7 +849,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Вибери нідерландське слово.",
   "tr": "Felemenkçe kelimeyi seç.",
   "ro": "Alege cuvântul în neerlandeză.",
-  "bg": "Избери нидерландската дума."
+  "bg": "Избери нидерландската дума.",
+  "fa": "کلمه هلندی را انتخاب کن."
  },
  "Kijk naar jouw taal. Welk woord is dat in het Nederlands?": {
   "en": "Look at your language. What is that word in Dutch?",
@@ -764,7 +858,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Подивися на свою мову. Як це слово нідерландською?",
   "tr": "Kendi diline bak. Bu kelime Felemenkçede ne?",
   "ro": "Uită-te la limba ta. Cum este cuvântul acela în neerlandeză?",
-  "bg": "Погледни твоя език. Коя е тази дума на нидерландски?"
+  "bg": "Погледни твоя език. Коя е тази дума на нидерландски?",
+  "fa": "به زبان خودت نگاه کن. آن کلمه به هلندی چه می‌شود؟"
  },
  "Woorden voor **thuis** en **eten**.\n\nZeg ze hardop. Wijs ze aan in huis.": {
   "en": "Words for **home** and **food**.\n\nSay them out loud. Point at them in the house.",
@@ -772,7 +867,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова про **дім** і **їжу**.\n\nКажи їх уголос. Показуй їх удома.",
   "tr": "**Ev** ve **yemek** için kelimeler.\n\nOnları yüksek sesle söyle. Evde onları göster.",
   "ro": "Cuvinte pentru **acasă** și **mâncare**.\n\nSpune-le cu voce tare. Arată-le în casă.",
-  "bg": "Думи за **дома** и **храната**.\n\nКажи ги на глас. Посочи ги вкъщи."
+  "bg": "Думи за **дома** и **храната**.\n\nКажи ги на глас. Посочи ги вкъщи.",
+  "fa": "کلمه‌هایی برای **خانه** و **غذا**.\n\nآن‌ها را بلند بگو. در خانه به آن‌ها اشاره کن."
  },
  "Thuis": {
   "en": "Home",
@@ -780,7 +876,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Дім",
   "tr": "Ev",
   "ro": "Acasă",
-  "bg": "Вкъщи"
+  "bg": "Вкъщи",
+  "fa": "خانه"
  },
  "**Thuis** is waar je woont. Dat is je **huis**.": {
   "en": "**Thuis** (home) is where you live. That is your **huis** (house).",
@@ -788,7 +885,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Вдома** («thuis») — там, де ти живеш. Це твій **дім** («huis»).",
   "tr": "**Ev** (\"thuis\") yaşadığın yerdir. Orası senin **evin** (\"huis\").",
   "ro": "**Acasă** („thuis”) este locul unde locuiești. Aceea este **casa** ta („huis”).",
-  "bg": "**Вкъщи** („thuis“) е там, където живееш. Това е твоят **дом** („huis“)."
+  "bg": "**Вкъщи** („thuis“) е там, където живееш. Това е твоят **дом** („huis“).",
+  "fa": "**Thuis** (خانه) جایی است که زندگی می‌کنی. این خانهٔ توست: **huis**."
  },
  "In huis": {
   "en": "In the house",
@@ -796,7 +894,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У домі",
   "tr": "Evde",
   "ro": "În casă",
-  "bg": "В къщата"
+  "bg": "В къщата",
+  "fa": "در خانه"
  },
  "In huis zijn de **keuken** (koken), de **kamer** (zitten) en de **slaapkamer** (slapen).": {
   "en": "In the house there is the **keuken** (kitchen, for cooking), the **kamer** (room, for sitting) and the **slaapkamer** (bedroom, for sleeping).",
@@ -804,7 +903,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У домі є **кухня** («keuken», готувати), **кімната** («kamer», сидіти) і **спальня** («slaapkamer», спати).",
   "tr": "Evde **mutfak** (\"keuken\", yemek pişirmek), **oda** (\"kamer\", oturmak) ve **yatak odası** (\"slaapkamer\", uyumak) var.",
   "ro": "În casă sunt **bucătăria** („keuken”, gătit), **camera** („kamer”, stat) și **dormitorul** („slaapkamer”, dormit).",
-  "bg": "В къщата има **кухня** („keuken“, готвене), **стая** („kamer“, седене) и **спалня** („slaapkamer“, спане)."
+  "bg": "В къщата има **кухня** („keuken“, готвене), **стая** („kamer“, седене) и **спалня** („slaapkamer“, спане).",
+  "fa": "در خانه **keuken** (آشپزخانه، برای آشپزی)، **kamer** (اتاق، برای نشستن) و **slaapkamer** (اتاق خواب، برای خوابیدن) هست."
  },
  "Eten": {
   "en": "Food",
@@ -812,7 +912,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Їжа",
   "tr": "Yemek",
   "ro": "Mâncare",
-  "bg": "Храна"
+  "bg": "Храна",
+  "fa": "غذا"
  },
  "**Brood**, **water**, **melk**, **appel**: woorden die je elke dag hoort.": {
   "en": "**Brood** (bread), **water** (water), **melk** (milk), **appel** (apple): words you hear every day.",
@@ -820,7 +921,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Хліб** («brood»), **вода** («water»), **молоко** («melk»), **яблуко** («appel»): слова, які ти чуєш щодня.",
   "tr": "**Ekmek** (\"brood\"), **su** (\"water\"), **süt** (\"melk\"), **elma** (\"appel\"): her gün duyduğun kelimeler.",
   "ro": "**Pâine** („brood”), **apă** („water”), **lapte** („melk”), **măr** („appel”): cuvinte pe care le auzi în fiecare zi.",
-  "bg": "**Хляб** („brood“), **вода** („water“), **мляко** („melk“), **ябълка** („appel“): думи, които чуваш всеки ден."
+  "bg": "**Хляб** („brood“), **вода** („water“), **мляко** („melk“), **ябълка** („appel“): думи, които чуваш всеки ден.",
+  "fa": "**Brood** (نان)، **water** (آب)، **melk** (شیر)، **appel** (سیب): کلمه‌هایی که هر روز می‌شنوی."
  },
  "het huis": {
   "en": "the house",
@@ -828,7 +930,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "дім",
   "tr": "ev",
   "ro": "casa",
-  "bg": "къщата"
+  "bg": "къщата",
+  "fa": "خانه"
  },
  "Waar je woont.": {
   "en": "Where you live.",
@@ -836,7 +939,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Де ти живеш.",
   "tr": "Yaşadığın yer.",
   "ro": "Unde locuiești.",
-  "bg": "Където живееш."
+  "bg": "Където живееш.",
+  "fa": "جایی که زندگی می‌کنی."
  },
  "de keuken": {
   "en": "the kitchen",
@@ -844,7 +948,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "кухня",
   "tr": "mutfak",
   "ro": "bucătăria",
-  "bg": "кухнята"
+  "bg": "кухнята",
+  "fa": "آشپزخانه"
  },
  "Waar je kookt.": {
   "en": "Where you cook.",
@@ -852,7 +957,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Де ти готуєш їжу.",
   "tr": "Yemek pişirdiğin yer.",
   "ro": "Unde gătești.",
-  "bg": "Където готвиш."
+  "bg": "Където готвиш.",
+  "fa": "جایی که آشپزی می‌کنی."
  },
  "Huis = waar je woont.": {
   "en": "House = where you live.",
@@ -860,7 +966,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Дім («huis») = де ти живеш.",
   "tr": "Ev = yaşadığın yer.",
   "ro": "Casa („huis”) = unde locuiești.",
-  "bg": "Къща („huis“) = където живееш."
+  "bg": "Къща („huis“) = където живееш.",
+  "fa": "خانه = جایی که زندگی می‌کنی."
  },
  "Ik ga naar huis.": {
   "en": "I am going home.",
@@ -868,7 +975,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Я йду додому.",
   "tr": "Eve gidiyorum.",
   "ro": "Mă duc acasă.",
-  "bg": "Отивам си вкъщи."
+  "bg": "Отивам си вкъщи.",
+  "fa": "من به خانه می‌روم."
  },
  "Mama is in de keuken.": {
   "en": "Mum is in the kitchen.",
@@ -876,7 +984,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мама на кухні.",
   "tr": "Annem mutfakta.",
   "ro": "Mama este în bucătărie.",
-  "bg": "Мама е в кухнята."
+  "bg": "Мама е в кухнята.",
+  "fa": "مامان در آشپزخانه است."
  },
  "Zeg elke dag één woord hardop in huis.": {
   "en": "Say one word out loud at home every day.",
@@ -884,7 +993,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Щодня кажи вдома одне слово вголос.",
   "tr": "Her gün evde bir kelimeyi yüksek sesle söyle.",
   "ro": "Spune în fiecare zi un cuvânt cu voce tare în casă.",
-  "bg": "Казвай всеки ден по една дума на глас вкъщи."
+  "bg": "Казвай всеки ден по една дума на глас вкъщи.",
+  "fa": "هر روز یک کلمه را در خانه بلند بگو."
  },
  "Waar je woont = het huis.": {
   "en": "Where you live = \"het huis\" (the house).",
@@ -892,7 +1002,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Де ти живеш = дім («het huis»).",
   "tr": "Yaşadığın yer = ev (\"het huis\").",
   "ro": "Unde locuiești = casa („het huis”).",
-  "bg": "Където живееш = къщата („het huis“)."
+  "bg": "Където живееш = къщата („het huis“).",
+  "fa": "جایی که زندگی می‌کنی = \"het huis\" (خانه)."
  },
  "Woorden voor je **lichaam** en voor **kleuren**.\n\nWijs aan wat je zegt. Zo onthoud je het.": {
   "en": "Words for your **body** and for **colours**.\n\nPoint at what you say. That way you remember it.",
@@ -900,7 +1011,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова про твоє **тіло** і про **кольори**.\n\nПоказуй те, що кажеш. Так ти запам'ятаєш.",
   "tr": "**Vücudun** ve **renkler** için kelimeler.\n\nSöylediğin şeyi göster. Böyle aklında kalır.",
   "ro": "Cuvinte pentru **corpul** tău și pentru **culori**.\n\nArată ce spui. Așa ții minte.",
-  "bg": "Думи за твоето **тяло** и за **цветовете**.\n\nПосочвай това, което казваш. Така го запомняш."
+  "bg": "Думи за твоето **тяло** и за **цветовете**.\n\nПосочвай това, което казваш. Така го запомняш.",
+  "fa": "کلمه‌هایی برای **بدن** و برای **رنگ‌ها**.\n\nبه چیزی که می‌گویی اشاره کن. این‌طوری یادت می‌ماند."
  },
  "Je lichaam": {
   "en": "Your body",
@@ -908,7 +1020,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Твоє тіло",
   "tr": "Vücudun",
   "ro": "Corpul tău",
-  "bg": "Твоето тяло"
+  "bg": "Твоето тяло",
+  "fa": "بدن تو"
  },
  "**Hoofd** (boven), **buik** (midden), **voet** (onder). **Hand**: daar pak je mee.": {
   "en": "**Hoofd** (head, at the top), **buik** (tummy, in the middle), **voet** (foot, at the bottom). **Hand** (hand): you hold things with it.",
@@ -916,7 +1029,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Голова** («hoofd», вгорі), **живіт** («buik», посередині), **стопа** («voet», внизу). **Рука** («hand»): нею ти береш.",
   "tr": "**Baş** (\"hoofd\", yukarıda), **karın** (\"buik\", ortada), **ayak** (\"voet\", aşağıda). **El** (\"hand\"): onunla tutarsın.",
   "ro": "**Capul** („hoofd”, sus), **burta** („buik”, la mijloc), **piciorul** („voet”, jos). **Mâna** („hand”): cu ea apuci.",
-  "bg": "**Главата** („hoofd“, горе), **коремът** („buik“, в средата), **стъпалото** („voet“, долу). **Ръката** („hand“): с нея хващаш."
+  "bg": "**Главата** („hoofd“, горе), **коремът** („buik“, в средата), **стъпалото** („voet“, долу). **Ръката** („hand“): с нея хващаш.",
+  "fa": "**Hoofd** (سر، بالا)، **buik** (شکم، وسط)، **voet** (پا، پایین). **Hand** (دست): با آن چیزها را می‌گیری."
  },
  "Kleuren": {
   "en": "Colours",
@@ -924,7 +1038,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Кольори",
   "tr": "Renkler",
   "ro": "Culori",
-  "bg": "Цветове"
+  "bg": "Цветове",
+  "fa": "رنگ‌ها"
  },
  "**Rood**, **blauw**, **geel**, **groen**. Kijk om je heen: wat is rood?": {
   "en": "**Rood** (red), **blauw** (blue), **geel** (yellow), **groen** (green). Look around you: what is red?",
@@ -932,7 +1047,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Червоний** («rood»), **синій** («blauw»), **жовтий** («geel»), **зелений** («groen»). Подивися навколо: що червоне?",
   "tr": "**Kırmızı** (\"rood\"), **mavi** (\"blauw\"), **sarı** (\"geel\"), **yeşil** (\"groen\"). Etrafına bak: ne kırmızı?",
   "ro": "**Roșu** („rood”), **albastru** („blauw”), **galben** („geel”), **verde** („groen”). Uită-te în jur: ce este roșu?",
-  "bg": "**Червено** („rood“), **синьо** („blauw“), **жълто** („geel“), **зелено** („groen“). Огледай се: кое е червено?"
+  "bg": "**Червено** („rood“), **синьо** („blauw“), **жълто** („geel“), **зелено** („groen“). Огледай се: кое е червено?",
+  "fa": "**Rood** (قرمز)، **blauw** (آبی)، **geel** (زرد)، **groen** (سبز). به دور و برت نگاه کن: چه چیزی قرمز است؟"
  },
  "Wijs aan": {
   "en": "Point",
@@ -940,7 +1056,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Покажи",
   "tr": "Göster",
   "ro": "Arată",
-  "bg": "Посочи"
+  "bg": "Посочи",
+  "fa": "اشاره کن"
  },
  "Zeg het woord en **wijs** het aan. Zo onthoud je het sneller.": {
   "en": "Say the word and **point** at it. That way you remember it faster.",
@@ -948,7 +1065,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи слово і **покажи** його. Так ти запам'ятаєш швидше.",
   "tr": "Kelimeyi söyle ve onu **göster**. Böyle daha hızlı aklında kalır.",
   "ro": "Spune cuvântul și **arată-l**. Așa ții minte mai repede.",
-  "bg": "Кажи думата и я **посочи**. Така я запомняш по-бързо."
+  "bg": "Кажи думата и я **посочи**. Така я запомняш по-бързо.",
+  "fa": "کلمه را بگو و به آن **اشاره کن**. این‌طوری زودتر یادت می‌ماند."
  },
  "het hoofd": {
   "en": "the head",
@@ -956,7 +1074,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "голова",
   "tr": "baş",
   "ro": "capul",
-  "bg": "главата"
+  "bg": "главата",
+  "fa": "سر"
  },
  "Bovenaan je lichaam.": {
   "en": "At the top of your body.",
@@ -964,7 +1083,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Найвище на твоєму тілі.",
   "tr": "Vücudunun en üstü.",
   "ro": "În partea de sus a corpului tău.",
-  "bg": "Най-отгоре на тялото ти."
+  "bg": "Най-отгоре на тялото ти.",
+  "fa": "بالای بدنت."
  },
  "de hand": {
   "en": "the hand",
@@ -972,7 +1092,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "рука",
   "tr": "el",
   "ro": "mâna",
-  "bg": "ръката"
+  "bg": "ръката",
+  "fa": "دست"
  },
  "Daar pak je mee.": {
   "en": "You hold things with it.",
@@ -980,7 +1101,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Нею ти береш.",
   "tr": "Onunla tutarsın.",
   "ro": "Cu ea apuci.",
-  "bg": "С нея хващаш."
+  "bg": "С нея хващаш.",
+  "fa": "با آن چیزها را می‌گیری."
  },
  "Wijs aan wat je zegt.": {
   "en": "Point at what you say.",
@@ -988,7 +1110,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Показуй те, що кажеш.",
   "tr": "Söylediğin şeyi göster.",
   "ro": "Arată ce spui.",
-  "bg": "Посочвай това, което казваш."
+  "bg": "Посочвай това, което казваш.",
+  "fa": "به چیزی که می‌گویی اشاره کن."
  },
  "Dit is mijn hand.": {
   "en": "This is my hand.",
@@ -996,7 +1119,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Це моя рука.",
   "tr": "Bu benim elim.",
   "ro": "Aceasta este mâna mea.",
-  "bg": "Това е моята ръка."
+  "bg": "Това е моята ръка.",
+  "fa": "این دست من است."
  },
  "De appel is rood.": {
   "en": "The apple is red.",
@@ -1004,7 +1128,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Яблуко червоне.",
   "tr": "Elma kırmızı.",
   "ro": "Mărul este roșu.",
-  "bg": "Ябълката е червена."
+  "bg": "Ябълката е червена.",
+  "fa": "سیب قرمز است."
  },
  "Woord + aanwijzen.": {
   "en": "Word + pointing.",
@@ -1012,7 +1137,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слово + показати.",
   "tr": "Kelime + göstermek.",
   "ro": "Cuvânt + arătat.",
-  "bg": "Дума + посочване."
+  "bg": "Дума + посочване.",
+  "fa": "کلمه + اشاره کردن."
  },
  "Bovenaan je lichaam = het hoofd.": {
   "en": "At the top of your body = \"het hoofd\" (the head).",
@@ -1020,7 +1146,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Найвище на тілі = голова («het hoofd»).",
   "tr": "Vücudunun en üstü = baş (\"het hoofd\").",
   "ro": "În partea de sus a corpului = capul („het hoofd”).",
-  "bg": "Най-отгоре на тялото = главата („het hoofd“)."
+  "bg": "Най-отгоре на тялото = главата („het hoofd“).",
+  "fa": "بالای بدنت = \"het hoofd\" (سر)."
  },
  "Rekenen tot 20 (nieuwkomers, groep 3-4)": {
   "en": "Maths up to 20 (newcomers, year 1-2)",
@@ -1028,7 +1155,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічба до 20 (новенькі, група 3-4)",
   "tr": "20'ye kadar matematik (yeni gelenler, 3-4. sınıf)",
   "ro": "Matematică până la 20 (nou-veniți, groep 3-4)",
-  "bg": "Смятане до 20 (новодошли, група 3-4)"
+  "bg": "Смятане до 20 (новодошли, група 3-4)",
+  "fa": "حساب تا 20 (تازه‌واردها، گروه 3-4)"
  },
  "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.": {
   "en": "Counting to 20, adding and taking away up to 10, going past 10, and word sums. Short sentences, every sum explained. Also for children who are still learning Dutch. ~10 min.",
@@ -1036,7 +1164,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічба до 20, додавання й віднімання до 10, перехід через 10 і задачі зі словами. Короткі речення, кожен приклад з поясненням. Також для дітей, які ще вчать нідерландську. ~10 хв.",
   "tr": "20'ye kadar saymak, 10'a kadar ekleme ve çıkarma, 10'u geçmek ve sözlü problemler. Kısa cümleler, her işlem açıklamalı. Felemenkçe öğrenen çocuklar için de. ~10 dk.",
   "ro": "Numărat până la 20, adunat și scăzut până la 10, trecut peste 10 și probleme cu cuvinte. Propoziții scurte, fiecare exercițiu cu explicație. Și pentru copiii care încă învață neerlandeza. ~10 min.",
-  "bg": "Броене до 20, събиране и изваждане до 10, преминаване през 10 и задачи с думи. Кратки изречения, всяка задача с обяснение. Също за деца, които още учат нидерландски. ~10 мин."
+  "bg": "Броене до 20, събиране и изваждане до 10, преминаване през 10 и задачи с думи. Кратки изречения, всяка задача с обяснение. Също за деца, които още учат нидерландски. ~10 мин.",
+  "fa": "شمردن تا 20، اضافه کردن و کم کردن تا 10، رد شدن از 10، و مسئله‌هایی با کلمه‌ها. جمله‌های کوتاه، هر مسئله با توضیح. برای بچه‌هایی هم که هنوز هلندی یاد می‌گیرند. ~10 دقیقه."
  },
  "Tellen tot 20": {
   "en": "Counting to 20",
@@ -1044,7 +1173,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічба до 20",
   "tr": "20'ye kadar saymak",
   "ro": "Numărat până la 20",
-  "bg": "Броене до 20"
+  "bg": "Броене до 20",
+  "fa": "شمردن تا 20"
  },
  "Erbij tot 10": {
   "en": "Adding up to 10",
@@ -1052,7 +1182,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додавання до 10",
   "tr": "10'a kadar ekleme",
   "ro": "Adunare până la 10",
-  "bg": "Събиране до 10"
+  "bg": "Събиране до 10",
+  "fa": "اضافه کردن تا 10"
  },
  "Eraf tot 10": {
   "en": "Taking away up to 10",
@@ -1060,7 +1191,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Віднімання до 10",
   "tr": "10'a kadar çıkarma",
   "ro": "Scădere până la 10",
-  "bg": "Изваждане до 10"
+  "bg": "Изваждане до 10",
+  "fa": "کم کردن تا 10"
  },
  "Over de 10 heen": {
   "en": "Going past 10",
@@ -1068,7 +1200,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Через 10",
   "tr": "10'u geçmek",
   "ro": "Peste 10",
-  "bg": "През 10"
+  "bg": "През 10",
+  "fa": "رد شدن از 10"
  },
  "Sommen uit de klas": {
   "en": "Sums from class",
@@ -1076,7 +1209,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Задачі з класу",
   "tr": "Sınıftan problemler",
   "ro": "Probleme din clasă",
-  "bg": "Задачи от класа"
+  "bg": "Задачи от класа",
+  "fa": "مسئله‌هایی از کلاس"
  },
  "We tellen van **1 tot 20**.\n\nTellen is steeds **één erbij**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nZeg de rij hardop. Gebruik je vingers.": {
   "en": "We count from **1 to 20**.\n\nCounting is always **one more**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nSay the row out loud. Use your fingers.",
@@ -1084,7 +1218,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ми лічимо від **1 до 20**.\n\nЛічити — це щоразу **додати один** («één erbij»): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nСкажи ряд уголос. Використовуй пальці.",
   "tr": "**1'den 20'ye** kadar sayıyoruz.\n\nSaymak hep **bir eklemektir**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nSırayı yüksek sesle söyle. Parmaklarını kullan.",
   "ro": "Numărăm de la **1 la 20**.\n\nA număra înseamnă mereu **unu în plus** („één erbij”): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nSpune șirul cu voce tare. Folosește degetele.",
-  "bg": "Броим от **1 до 20**.\n\nДа броиш значи всеки път **едно в повече** („één erbij“): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nКажи редицата на глас. Използвай пръстите си."
+  "bg": "Броим от **1 до 20**.\n\nДа броиш значи всеки път **едно в повече** („één erbij“): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nКажи редицата на глас. Използвай пръстите си.",
+  "fa": "از **1 تا 20** می‌شمریم.\n\nشمردن یعنی همیشه **یکی بیشتر**: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n\nاین ردیف را بلند بگو. از انگشت‌هایت استفاده کن."
  },
  "Tel: 3, en dan één erbij.": {
   "en": "Count: 3, and then one more.",
@@ -1092,7 +1227,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи: 3, а потім ще один.",
   "tr": "Say: 3, sonra bir ekle.",
   "ro": "Numără: 3, și apoi unu în plus.",
-  "bg": "Брой: 3, и после едно в повече."
+  "bg": "Брой: 3, и после едно в повече.",
+  "fa": "بشمار: 3، و بعد یکی بیشتر."
  },
  "Tellen is één erbij": {
   "en": "Counting is one more",
@@ -1100,7 +1236,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічити — це додати один",
   "tr": "Saymak bir eklemektir",
   "ro": "A număra înseamnă unu în plus",
-  "bg": "Броенето е едно в повече"
+  "bg": "Броенето е едно в повече",
+  "fa": "شمردن یعنی یکی بیشتر"
  },
  "Als je telt, doe je steeds **één erbij**. Na 5 komt 6. Na 6 komt 7.": {
   "en": "When you count, you always add **one more**. After 5 comes 6. After 6 comes 7.",
@@ -1108,7 +1245,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Коли ти лічиш, ти щоразу **додаєш один**. Після 5 іде 6. Після 6 іде 7.",
   "tr": "Sayarken hep **bir eklersin**. 5'ten sonra 6 gelir. 6'dan sonra 7 gelir.",
   "ro": "Când numeri, adaugi mereu **unu în plus**. După 5 vine 6. După 6 vine 7.",
-  "bg": "Когато броиш, всеки път добавяш **едно в повече**. След 5 идва 6. След 6 идва 7."
+  "bg": "Когато броиш, всеки път добавяш **едно в повече**. След 5 идва 6. След 6 идва 7.",
+  "fa": "وقتی می‌شمری، همیشه **یکی اضافه** می‌کنی. بعد از 5، 6 می‌آید. بعد از 6، 7 می‌آید."
  },
  "Gebruik je vingers": {
   "en": "Use your fingers",
@@ -1116,7 +1254,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Використовуй пальці",
   "tr": "Parmaklarını kullan",
   "ro": "Folosește degetele",
-  "bg": "Използвай пръстите си"
+  "bg": "Използвай пръстите си",
+  "fa": "از انگشت‌هایت استفاده کن"
  },
  "Zeg het getal. Doe **één vinger** omhoog. Zeg het volgende getal.": {
   "en": "Say the number. Put **one finger** up. Say the next number.",
@@ -1124,7 +1263,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи число. Підніми **один палець**. Скажи наступне число.",
   "tr": "Sayıyı söyle. **Bir parmağını** kaldır. Sonraki sayıyı söyle.",
   "ro": "Spune numărul. Ridică **un deget**. Spune numărul următor.",
-  "bg": "Кажи числото. Вдигни **един пръст**. Кажи следващото число."
+  "bg": "Кажи числото. Вдигни **един пръст**. Кажи следващото число.",
+  "fa": "عدد را بگو. **یک انگشت** را بالا ببر. عدد بعدی را بگو."
  },
  "De rij tot 20": {
   "en": "The row to 20",
@@ -1132,7 +1272,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ряд до 20",
   "tr": "20'ye kadar sıra",
   "ro": "Șirul până la 20",
-  "bg": "Редицата до 20"
+  "bg": "Редицата до 20",
+  "fa": "ردیف تا 20"
  },
  "na": {
   "en": "after",
@@ -1140,7 +1281,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "після",
   "tr": "sonra",
   "ro": "după",
-  "bg": "след"
+  "bg": "след",
+  "fa": "بعد از"
  },
  "Wat erna komt. Na 3 komt 4.": {
   "en": "What comes next. After 3 comes 4.",
@@ -1148,7 +1290,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Те, що йде далі. Після 3 іде 4.",
   "tr": "Sonra gelen. 3'ten sonra 4 gelir.",
   "ro": "Ce vine după. După 3 vine 4.",
-  "bg": "Това, което идва после. След 3 идва 4."
+  "bg": "Това, което идва после. След 3 идва 4.",
+  "fa": "چیزی که بعدش می‌آید. بعد از 3، 4 می‌آید."
  },
  "tellen": {
   "en": "counting",
@@ -1156,7 +1299,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "лічити",
   "tr": "saymak",
   "ro": "a număra",
-  "bg": "броене"
+  "bg": "броене",
+  "fa": "شمردن"
  },
  "1, 2, 3, 4… steeds één erbij.": {
   "en": "1, 2, 3, 4… always one more.",
@@ -1164,7 +1308,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "1, 2, 3, 4… щоразу на один більше.",
   "tr": "1, 2, 3, 4… hep bir fazla.",
   "ro": "1, 2, 3, 4… mereu unu în plus.",
-  "bg": "1, 2, 3, 4… всеки път едно в повече."
+  "bg": "1, 2, 3, 4… всеки път едно в повече.",
+  "fa": "1, 2, 3, 4… همیشه یکی بیشتر."
  },
  "Tellen = steeds één erbij.": {
   "en": "Counting = always one more.",
@@ -1172,7 +1317,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічити = щоразу додати один.",
   "tr": "Saymak = hep bir eklemek.",
   "ro": "A număra = mereu unu în plus.",
-  "bg": "Броене = всеки път едно в повече."
+  "bg": "Броене = всеки път едно в повече.",
+  "fa": "شمردن = همیشه یکی بیشتر."
  },
  "Na 9 komt 10.": {
   "en": "After 9 comes 10.",
@@ -1180,7 +1326,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Після 9 іде 10.",
   "tr": "9'dan sonra 10 gelir.",
   "ro": "După 9 vine 10.",
-  "bg": "След 9 идва 10."
+  "bg": "След 9 идва 10.",
+  "fa": "بعد از 9، 10 می‌آید."
  },
  "Na 14 komt 15.": {
   "en": "After 14 comes 15.",
@@ -1188,7 +1335,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Після 14 іде 15.",
   "tr": "14'ten sonra 15 gelir.",
   "ro": "După 14 vine 15.",
-  "bg": "След 14 идва 15."
+  "bg": "След 14 идва 15.",
+  "fa": "بعد از 14، 15 می‌آید."
  },
  "Zeg de rij hardop. Het getal dat je daarna zegt, is het antwoord.": {
   "en": "Say the row out loud. The number you say next is the answer.",
@@ -1196,7 +1344,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи ряд уголос. Число, яке ти скажеш далі, — це відповідь.",
   "tr": "Sırayı yüksek sesle söyle. Sonra söylediğin sayı cevaptır.",
   "ro": "Spune șirul cu voce tare. Numărul pe care îl spui după aceea este răspunsul.",
-  "bg": "Кажи редицата на глас. Числото, което казваш след това, е отговорът."
+  "bg": "Кажи редицата на глас. Числото, което казваш след това, е отговорът.",
+  "fa": "ردیف را بلند بگو. عددی که بعد از آن می‌گویی، جواب است."
  },
  "Tel één verder.": {
   "en": "Count one further.",
@@ -1204,7 +1353,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи на один далі.",
   "tr": "Bir ileri say.",
   "ro": "Numără unu mai departe.",
-  "bg": "Брой едно по-нататък."
+  "bg": "Брой едно по-нататък.",
+  "fa": "یکی جلوتر بشمار."
  },
  "Zeg het getal en dan het volgende getal.": {
   "en": "Say the number and then the next number.",
@@ -1212,7 +1362,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи число, а потім наступне число.",
   "tr": "Sayıyı söyle, sonra sonraki sayıyı.",
   "ro": "Spune numărul și apoi numărul următor.",
-  "bg": "Кажи числото и после следващото число."
+  "bg": "Кажи числото и после следващото число.",
+  "fa": "عدد را بگو و بعد عدد بعدی را."
  },
  "Eén erbij.": {
   "en": "One more.",
@@ -1220,7 +1371,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ще один.",
   "tr": "Bir ekle.",
   "ro": "Unu în plus.",
-  "bg": "Едно в повече."
+  "bg": "Едно в повече.",
+  "fa": "یکی بیشتر."
  },
  "Tel: 15, en dan één erbij.": {
   "en": "Count: 15, and then one more.",
@@ -1228,7 +1380,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи: 15, а потім ще один.",
   "tr": "Say: 15, sonra bir ekle.",
   "ro": "Numără: 15, și apoi unu în plus.",
-  "bg": "Брой: 15, и после едно в повече."
+  "bg": "Брой: 15, и после едно в повече.",
+  "fa": "بشمار: 15، و بعد یکی بیشتر."
  },
  "Tel: 4, en dan één erbij.": {
   "en": "Count: 4, and then one more.",
@@ -1236,7 +1389,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи: 4, а потім ще один.",
   "tr": "Say: 4, sonra bir ekle.",
   "ro": "Numără: 4, și apoi unu în plus.",
-  "bg": "Брой: 4, и после едно в повече."
+  "bg": "Брой: 4, и после едно в повече.",
+  "fa": "بشمار: 4، و بعد یکی بیشتر."
  },
  "Tel: 10, en dan één erbij.": {
   "en": "Count: 10, and then one more.",
@@ -1244,7 +1398,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи: 10, а потім ще один.",
   "tr": "Say: 10, sonra bir ekle.",
   "ro": "Numără: 10, și apoi unu în plus.",
-  "bg": "Брой: 10, и после едно в повече."
+  "bg": "Брой: 10, и после едно в повече.",
+  "fa": "بشمار: 10، و بعد یکی بیشتر."
  },
  "**Plus** (+) is **erbij**.\n\n3 + 2: begin bij 3, tel 2 verder: 4, 5. Het antwoord is **5**.\n\nBegin bij het **grootste** getal. Dan tel je korter.": {
   "en": "**Plus** (+) is **erbij** (adding).\n\n3 + 2: start at 3, count 2 further: 4, 5. The answer is **5**.\n\nStart at the **biggest** number. Then you count less.",
@@ -1252,7 +1407,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Plus** (+) (= плюс) — це **erbij** (= додати).\n\n3 + 2: почни з 3, лічи ще 2: 4, 5. Відповідь — **5**.\n\nПочни з **більшого** числа. Тоді лічити коротше.",
   "tr": "**Artı** (+, \"plus\") **eklemek** (\"erbij\") demektir.\n\n3 + 2: 3'ten başla, 2 ileri say: 4, 5. Cevap **5**.\n\n**En büyük** sayıdan başla. O zaman daha kısa sayarsın.",
   "ro": "**Plus** (+) (= plus) înseamnă **erbij** (= a aduna).\n\n3 + 2: începe de la 3, numără 2 mai departe: 4, 5. Răspunsul este **5**.\n\nÎncepe de la numărul **cel mai mare**. Atunci numeri mai puțin.",
-  "bg": "**Plus** (+) (= плюс) е **erbij** (= прибавяне).\n\n3 + 2: започни от 3, брой 2 нататък: 4, 5. Отговорът е **5**.\n\nЗапочни от **най-голямото** число. Тогава броиш по-малко."
+  "bg": "**Plus** (+) (= плюс) е **erbij** (= прибавяне).\n\n3 + 2: започни от 3, брой 2 нататък: 4, 5. Отговорът е **5**.\n\nЗапочни от **най-голямото** число. Тогава броиш по-малко.",
+  "fa": "**Plus** (+) یعنی **erbij** (اضافه کردن).\n\n3 + 2: از 3 شروع کن، 2 تا جلوتر بشمار: 4, 5. جواب **5** است.\n\nاز عدد **بزرگ‌تر** شروع کن. این‌طوری کمتر می‌شمری."
  },
  "Begin bij 4. Tel er 3 bij.": {
   "en": "Start at 4. Add 3.",
@@ -1260,7 +1416,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 4. Додай 3.",
   "tr": "4'ten başla. 3 ekle.",
   "ro": "Începe de la 4. Adună 3.",
-  "bg": "Започни от 4. Прибави 3."
+  "bg": "Започни от 4. Прибави 3.",
+  "fa": "از 4 شروع کن. 3 تا اضافه کن."
  },
  "Erbij = tellen": {
   "en": "Adding = counting",
@@ -1268,7 +1425,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "«Erbij» (= додати) = лічити",
   "tr": "Eklemek = saymak",
   "ro": "„Erbij” (= a aduna) = a număra",
-  "bg": "„Erbij“ (= прибавяне) = броене"
+  "bg": "„Erbij“ (= прибавяне) = броене",
+  "fa": "اضافه کردن = شمردن"
  },
  "**Plus** (+) betekent **erbij**. 3 + 2: begin bij 3 en tel 2 verder: 4, 5. Het antwoord is 5.": {
   "en": "**Plus** (+) means **erbij** (adding). 3 + 2: start at 3 and count 2 further: 4, 5. The answer is 5.",
@@ -1276,7 +1434,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Plus** (+) (= плюс) означає **erbij** (= додати). 3 + 2: почни з 3 і лічи ще 2: 4, 5. Відповідь — 5.",
   "tr": "**Artı** (+, \"plus\") **eklemek** (\"erbij\") demektir. 3 + 2: 3'ten başla ve 2 ileri say: 4, 5. Cevap 5.",
   "ro": "**Plus** (+) (= plus) înseamnă **erbij** (= a aduna). 3 + 2: începe de la 3 și numără 2 mai departe: 4, 5. Răspunsul este 5.",
-  "bg": "**Plus** (+) (= плюс) означава **erbij** (= прибавяне). 3 + 2: започни от 3 и брой 2 нататък: 4, 5. Отговорът е 5."
+  "bg": "**Plus** (+) (= плюс) означава **erbij** (= прибавяне). 3 + 2: започни от 3 и брой 2 нататък: 4, 5. Отговорът е 5.",
+  "fa": "**Plus** (+) یعنی **erbij** (اضافه کردن). 3 + 2: از 3 شروع کن و 2 تا جلوتر بشمار: 4, 5. جواب 5 است."
  },
  "Met je vingers": {
   "en": "With your fingers",
@@ -1284,7 +1443,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Пальцями",
   "tr": "Parmaklarınla",
   "ro": "Cu degetele",
-  "bg": "С пръстите"
+  "bg": "С пръстите",
+  "fa": "با انگشت‌هایت"
  },
  "Doe 3 vingers omhoog. Doe er 2 bij. Tel alle vingers.": {
   "en": "Put 3 fingers up. Add 2 more. Count all the fingers.",
@@ -1292,7 +1452,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Підніми 3 пальці. Додай ще 2. Порахуй усі пальці.",
   "tr": "3 parmağını kaldır. 2 tane daha ekle. Bütün parmakları say.",
   "ro": "Ridică 3 degete. Mai ridică 2. Numără toate degetele.",
-  "bg": "Вдигни 3 пръста. Вдигни още 2. Преброй всички пръсти."
+  "bg": "Вдигни 3 пръста. Вдигни още 2. Преброй всички пръсти.",
+  "fa": "3 انگشت را بالا ببر. 2 تای دیگر هم بالا ببر. همهٔ انگشت‌ها را بشمار."
  },
  "Het grootste eerst": {
   "en": "The biggest first",
@@ -1300,7 +1461,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку більше",
   "tr": "Önce en büyüğü",
   "ro": "Cel mai mare mai întâi",
-  "bg": "Първо най-голямото"
+  "bg": "Първо най-голямото",
+  "fa": "اول عدد بزرگ‌تر"
  },
  "Begin altijd bij het **grootste** getal. Dat is korter tellen.": {
   "en": "Always start at the **biggest** number. Then you count less.",
@@ -1308,7 +1470,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Завжди починай з **більшого** числа. Так лічити коротше.",
   "tr": "Her zaman **en büyük** sayıdan başla. Böyle daha kısa sayarsın.",
   "ro": "Începe întotdeauna de la numărul **cel mai mare**. Așa numeri mai puțin.",
-  "bg": "Винаги започвай от **най-голямото** число. Така броиш по-малко."
+  "bg": "Винаги започвай от **най-голямото** число. Така броиш по-малко.",
+  "fa": "همیشه از عدد **بزرگ‌تر** شروع کن. این‌طوری کمتر می‌شمری."
  },
  "plus": {
   "en": "plus",
@@ -1316,7 +1479,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "плюс",
   "tr": "artı",
   "ro": "plus",
-  "bg": "плюс"
+  "bg": "плюс",
+  "fa": "به‌علاوه"
  },
  "Het teken +. Erbij.": {
   "en": "The sign +. Adding.",
@@ -1324,7 +1488,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Знак +. Додати.",
   "tr": "+ işareti. Eklemek.",
   "ro": "Semnul +. A aduna.",
-  "bg": "Знакът +. Прибавяне."
+  "bg": "Знакът +. Прибавяне.",
+  "fa": "علامت +. اضافه کردن."
  },
  "erbij": {
   "en": "adding",
@@ -1332,7 +1497,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "додати",
   "tr": "ekle",
   "ro": "a aduna",
-  "bg": "прибавяне"
+  "bg": "прибавяне",
+  "fa": "اضافه کردن"
  },
  "Meer maken.": {
   "en": "Making more.",
@@ -1340,7 +1506,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Зробити більше.",
   "tr": "Daha çok yapmak.",
   "ro": "A face mai mult.",
-  "bg": "Да станат повече."
+  "bg": "Да станат повече.",
+  "fa": "بیشتر کردن."
  },
  "Plus = erbij = verder tellen.": {
   "en": "\"Plus\" = \"erbij\" (adding) = counting on.",
@@ -1348,7 +1515,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Плюс («plus») = додати («erbij») = лічити далі.",
   "tr": "Artı = ekle = ileri say.",
   "ro": "Plus („plus”) = a aduna („erbij”) = a număra mai departe.",
-  "bg": "Плюс („plus“) = прибавяне („erbij“) = броене нататък."
+  "bg": "Плюс („plus“) = прибавяне („erbij“) = броене нататък.",
+  "fa": "\"Plus\" = \"erbij\" (اضافه کردن) = جلو شمردن."
  },
  "4 + 3: 5, 6, 7. Antwoord 7.": {
   "en": "4 + 3: 5, 6, 7. Answer 7.",
@@ -1356,7 +1524,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "4 + 3: 5, 6, 7. Відповідь 7.",
   "tr": "4 + 3: 5, 6, 7. Cevap 7.",
   "ro": "4 + 3: 5, 6, 7. Răspuns 7.",
-  "bg": "4 + 3: 5, 6, 7. Отговор 7."
+  "bg": "4 + 3: 5, 6, 7. Отговор 7.",
+  "fa": "4 + 3: 5, 6, 7. جواب 7."
  },
  "6 + 2: 7, 8. Antwoord 8.": {
   "en": "6 + 2: 7, 8. Answer 8.",
@@ -1364,7 +1533,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "6 + 2: 7, 8. Відповідь 8.",
   "tr": "6 + 2: 7, 8. Cevap 8.",
   "ro": "6 + 2: 7, 8. Răspuns 8.",
-  "bg": "6 + 2: 7, 8. Отговор 8."
+  "bg": "6 + 2: 7, 8. Отговор 8.",
+  "fa": "6 + 2: 7, 8. جواب 8."
  },
  "Begin bij het grootste getal en tel het kleinste erbij.": {
   "en": "Start at the biggest number and add the smallest.",
@@ -1372,7 +1542,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з більшого числа і додай менше.",
   "tr": "En büyük sayıdan başla ve küçüğü ekle.",
   "ro": "Începe de la numărul cel mai mare și adună-l pe cel mai mic.",
-  "bg": "Започни от най-голямото число и прибави най-малкото."
+  "bg": "Започни от най-голямото число и прибави най-малкото.",
+  "fa": "از عدد بزرگ‌تر شروع کن و عدد کوچک‌تر را اضافه کن."
  },
  "Tel het tweede getal erbij.": {
   "en": "Add the second number.",
@@ -1380,7 +1551,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додай друге число.",
   "tr": "İkinci sayıyı ekle.",
   "ro": "Adună al doilea număr.",
-  "bg": "Прибави второто число."
+  "bg": "Прибави второто число.",
+  "fa": "عدد دوم را اضافه کن."
  },
  "Begin bij het eerste getal. Tel verder.": {
   "en": "Start at the first number. Count on.",
@@ -1388,7 +1560,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з першого числа. Лічи далі.",
   "tr": "İlk sayıdan başla. İleri say.",
   "ro": "Începe de la primul număr. Numără mai departe.",
-  "bg": "Започни от първото число. Брой нататък."
+  "bg": "Започни от първото число. Брой нататък.",
+  "fa": "از عدد اول شروع کن. جلوتر بشمار."
  },
  "Erbij = verder tellen.": {
   "en": "Adding = counting on.",
@@ -1396,7 +1569,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додати («erbij») = лічити далі.",
   "tr": "Ekle = ileri say.",
   "ro": "A aduna („erbij”) = a număra mai departe.",
-  "bg": "Прибавяне („erbij“) = броене нататък."
+  "bg": "Прибавяне („erbij“) = броене нататък.",
+  "fa": "اضافه کردن = جلو شمردن."
  },
  "Begin bij 1. Tel er 1 bij.": {
   "en": "Start at 1. Add 1.",
@@ -1404,7 +1578,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 1. Додай 1.",
   "tr": "1'den başla. 1 ekle.",
   "ro": "Începe de la 1. Adună 1.",
-  "bg": "Започни от 1. Прибави 1."
+  "bg": "Започни от 1. Прибави 1.",
+  "fa": "از 1 شروع کن. 1 تا اضافه کن."
  },
  "Begin bij 2. Tel er 6 bij.": {
   "en": "Start at 2. Add 6.",
@@ -1412,7 +1587,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 2. Додай 6.",
   "tr": "2'den başla. 6 ekle.",
   "ro": "Începe de la 2. Adună 6.",
-  "bg": "Започни от 2. Прибави 6."
+  "bg": "Започни от 2. Прибави 6.",
+  "fa": "از 2 شروع کن. 6 تا اضافه کن."
  },
  "Begin bij 5. Tel er 3 bij.": {
   "en": "Start at 5. Add 3.",
@@ -1420,7 +1596,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 5. Додай 3.",
   "tr": "5'ten başla. 3 ekle.",
   "ro": "Începe de la 5. Adună 3.",
-  "bg": "Започни от 5. Прибави 3."
+  "bg": "Започни от 5. Прибави 3.",
+  "fa": "از 5 شروع کن. 3 تا اضافه کن."
  },
  "Begin bij 6. Tel er 4 bij.": {
   "en": "Start at 6. Add 4.",
@@ -1428,7 +1605,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 6. Додай 4.",
   "tr": "6'dan başla. 4 ekle.",
   "ro": "Începe de la 6. Adună 4.",
-  "bg": "Започни от 6. Прибави 4."
+  "bg": "Започни от 6. Прибави 4.",
+  "fa": "از 6 شروع کن. 4 تا اضافه کن."
  },
  "**Min** (−) is **eraf**.\n\n7 − 2: begin bij 7, tel 2 terug: 6, 5. Het antwoord is **5**.\n\nBij eraf wordt het getal **kleiner**.": {
   "en": "**Min** (−) is **eraf** (taking away).\n\n7 − 2: start at 7, count back 2: 6, 5. The answer is **5**.\n\nWhen you take away, the number gets **smaller**.",
@@ -1436,7 +1614,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Min** (−) (= мінус) — це **eraf** (= відняти).\n\n7 − 2: почни з 7, лічи 2 назад: 6, 5. Відповідь — **5**.\n\nКоли віднімаєш, число стає **меншим**.",
   "tr": "**Eksi** (−, \"min\") **çıkarmak** (\"eraf\") demektir.\n\n7 − 2: 7'den başla, 2 geri say: 6, 5. Cevap **5**.\n\nÇıkarınca sayı **küçülür**.",
   "ro": "**Min** (−) (= minus) înseamnă **eraf** (= a scădea).\n\n7 − 2: începe de la 7, numără 2 înapoi: 6, 5. Răspunsul este **5**.\n\nCând scazi, numărul devine **mai mic**.",
-  "bg": "**Min** (−) (= минус) е **eraf** (= изваждане).\n\n7 − 2: започни от 7, брой 2 назад: 6, 5. Отговорът е **5**.\n\nПри изваждане числото става **по-малко**."
+  "bg": "**Min** (−) (= минус) е **eraf** (= изваждане).\n\n7 − 2: започни от 7, брой 2 назад: 6, 5. Отговорът е **5**.\n\nПри изваждане числото става **по-малко**.",
+  "fa": "**Min** (−) یعنی **eraf** (کم کردن).\n\n7 − 2: از 7 شروع کن، 2 تا عقب بشمار: 6, 5. جواب **5** است.\n\nوقتی کم می‌کنی، عدد **کوچک‌تر** می‌شود."
  },
  "Begin bij 3. Tel 2 terug.": {
   "en": "Start at 3. Count back 2.",
@@ -1444,7 +1623,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 3. Лічи 2 назад.",
   "tr": "3'ten başla. 2 geri say.",
   "ro": "Începe de la 3. Numără 2 înapoi.",
-  "bg": "Започни от 3. Брой 2 назад."
+  "bg": "Започни от 3. Брой 2 назад.",
+  "fa": "از 3 شروع کن. 2 تا عقب بشمار."
  },
  "Eraf = terug tellen": {
   "en": "Taking away = counting back",
@@ -1452,7 +1632,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "«Eraf» (= відняти) = лічити назад",
   "tr": "Çıkarmak = geri saymak",
   "ro": "„Eraf” (= a scădea) = a număra înapoi",
-  "bg": "„Eraf“ (= изваждане) = броене назад"
+  "bg": "„Eraf“ (= изваждане) = броене назад",
+  "fa": "کم کردن = عقب شمردن"
  },
  "**Min** (−) betekent **eraf**. 7 − 2: begin bij 7 en tel 2 terug: 6, 5. Het antwoord is 5.": {
   "en": "**Min** (−) means **eraf** (taking away). 7 − 2: start at 7 and count back 2: 6, 5. The answer is 5.",
@@ -1460,7 +1641,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Min** (−) (= мінус) означає **eraf** (= відняти). 7 − 2: почни з 7 і лічи 2 назад: 6, 5. Відповідь — 5.",
   "tr": "**Eksi** (−, \"min\") **çıkarmak** (\"eraf\") demektir. 7 − 2: 7'den başla ve 2 geri say: 6, 5. Cevap 5.",
   "ro": "**Min** (−) (= minus) înseamnă **eraf** (= a scădea). 7 − 2: începe de la 7 și numără 2 înapoi: 6, 5. Răspunsul este 5.",
-  "bg": "**Min** (−) (= минус) означава **eraf** (= изваждане). 7 − 2: започни от 7 и брой 2 назад: 6, 5. Отговорът е 5."
+  "bg": "**Min** (−) (= минус) означава **eraf** (= изваждане). 7 − 2: започни от 7 и брой 2 назад: 6, 5. Отговорът е 5.",
+  "fa": "**Min** (−) یعنی **eraf** (کم کردن). 7 − 2: از 7 شروع کن و 2 تا عقب بشمار: 6, 5. جواب 5 است."
  },
  "Doe 7 vingers omhoog. Doe er 2 naar beneden. Tel de vingers die nog omhoog zijn.": {
   "en": "Put 7 fingers up. Put 2 down. Count the fingers that are still up.",
@@ -1468,7 +1650,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Підніми 7 пальців. Опусти 2. Порахуй пальці, які ще підняті.",
   "tr": "7 parmağını kaldır. 2 tanesini indir. Hâlâ yukarıda olan parmakları say.",
   "ro": "Ridică 7 degete. Lasă 2 în jos. Numără degetele care sunt încă sus.",
-  "bg": "Вдигни 7 пръста. Свали 2. Преброй пръстите, които още са вдигнати."
+  "bg": "Вдигни 7 пръста. Свали 2. Преброй пръстите, които още са вдигнати.",
+  "fa": "7 انگشت را بالا ببر. 2 تا را پایین بیاور. انگشت‌هایی را که هنوز بالا هستند بشمار."
  },
  "Het wordt minder": {
   "en": "It gets less",
@@ -1476,7 +1659,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стає менше",
   "tr": "Azalır",
   "ro": "Devine mai puțin",
-  "bg": "Става по-малко"
+  "bg": "Става по-малко",
+  "fa": "کمتر می‌شود"
  },
  "Bij eraf wordt het getal altijd **kleiner**. Is je antwoord groter? Dan klopt het niet.": {
   "en": "When you take away, the number always gets **smaller**. Is your answer bigger? Then it is wrong.",
@@ -1484,7 +1668,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Коли віднімаєш, число завжди стає **меншим**. Твоя відповідь більша? Тоді це неправильно.",
   "tr": "Çıkarınca sayı her zaman **küçülür**. Cevabın daha mı büyük? O zaman doğru değil.",
   "ro": "Când scazi, numărul devine întotdeauna **mai mic**. Răspunsul tău este mai mare? Atunci nu este corect.",
-  "bg": "При изваждане числото винаги става **по-малко**. Отговорът ти е по-голям? Тогава не е вярно."
+  "bg": "При изваждане числото винаги става **по-малко**. Отговорът ти е по-голям? Тогава не е вярно.",
+  "fa": "وقتی کم می‌کنی، عدد همیشه **کوچک‌تر** می‌شود. جوابت بزرگ‌تر است؟ پس درست نیست."
  },
  "min": {
   "en": "minus",
@@ -1492,7 +1677,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "мінус",
   "tr": "eksi",
   "ro": "minus",
-  "bg": "минус"
+  "bg": "минус",
+  "fa": "منها"
  },
  "Het teken −. Eraf.": {
   "en": "The sign −. Taking away.",
@@ -1500,7 +1686,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Знак −. Відняти.",
   "tr": "− işareti. Çıkarmak.",
   "ro": "Semnul −. A scădea.",
-  "bg": "Знакът −. Изваждане."
+  "bg": "Знакът −. Изваждане.",
+  "fa": "علامت −. کم کردن."
  },
  "eraf": {
   "en": "taking away",
@@ -1508,7 +1695,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "відняти",
   "tr": "çıkar",
   "ro": "a scădea",
-  "bg": "изваждане"
+  "bg": "изваждане",
+  "fa": "کم کردن"
  },
  "Minder maken.": {
   "en": "Making less.",
@@ -1516,7 +1704,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Зробити менше.",
   "tr": "Daha az yapmak.",
   "ro": "A face mai puțin.",
-  "bg": "Да станат по-малко."
+  "bg": "Да станат по-малко.",
+  "fa": "کمتر کردن."
  },
  "Min = eraf = terug tellen.": {
   "en": "\"Min\" (minus) = \"eraf\" (taking away) = counting back.",
@@ -1524,7 +1713,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мінус («min») = відняти («eraf») = лічити назад.",
   "tr": "Eksi = çıkar = geri say.",
   "ro": "Minus („min”) = a scădea („eraf”) = a număra înapoi.",
-  "bg": "Минус („min“) = изваждане („eraf“) = броене назад."
+  "bg": "Минус („min“) = изваждане („eraf“) = броене назад.",
+  "fa": "\"Min\" (منها) = \"eraf\" (کم کردن) = عقب شمردن."
  },
  "9 − 3: 8, 7, 6. Antwoord 6.": {
   "en": "9 − 3: 8, 7, 6. Answer 6.",
@@ -1532,7 +1722,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "9 − 3: 8, 7, 6. Відповідь 6.",
   "tr": "9 − 3: 8, 7, 6. Cevap 6.",
   "ro": "9 − 3: 8, 7, 6. Răspuns 6.",
-  "bg": "9 − 3: 8, 7, 6. Отговор 6."
+  "bg": "9 − 3: 8, 7, 6. Отговор 6.",
+  "fa": "9 − 3: 8, 7, 6. جواب 6."
  },
  "5 − 5 = 0. Alles eraf.": {
   "en": "5 − 5 = 0. All taken away.",
@@ -1540,7 +1731,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "5 − 5 = 0. Усе відняли.",
   "tr": "5 − 5 = 0. Hepsi gitti.",
   "ro": "5 − 5 = 0. Totul scăzut.",
-  "bg": "5 − 5 = 0. Всичко е извадено."
+  "bg": "5 − 5 = 0. Всичко е извадено.",
+  "fa": "5 − 5 = 0. همه کم شد."
  },
  "Tel terug op je vingers.": {
   "en": "Count back on your fingers.",
@@ -1548,7 +1740,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи назад на пальцях.",
   "tr": "Parmaklarınla geri say.",
   "ro": "Numără înapoi pe degete.",
-  "bg": "Брой назад на пръсти."
+  "bg": "Брой назад на пръсти.",
+  "fa": "روی انگشت‌هایت عقب بشمار."
  },
  "Tel het tweede getal terug.": {
   "en": "Count back the second number.",
@@ -1556,7 +1749,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи друге число назад.",
   "tr": "İkinci sayı kadar geri say.",
   "ro": "Numără al doilea număr înapoi.",
-  "bg": "Брой второто число назад."
+  "bg": "Брой второто число назад.",
+  "fa": "به اندازهٔ عدد دوم عقب بشمار."
  },
  "Begin bij het eerste getal. Tel terug.": {
   "en": "Start at the first number. Count back.",
@@ -1564,7 +1758,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з першого числа. Лічи назад.",
   "tr": "İlk sayıdan başla. Geri say.",
   "ro": "Începe de la primul număr. Numără înapoi.",
-  "bg": "Започни от първото число. Брой назад."
+  "bg": "Започни от първото число. Брой назад.",
+  "fa": "از عدد اول شروع کن. عقب بشمار."
  },
  "Eraf = terug tellen.": {
   "en": "Taking away = counting back.",
@@ -1572,7 +1767,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Відняти («eraf») = лічити назад.",
   "tr": "Çıkar = geri say.",
   "ro": "A scădea („eraf”) = a număra înapoi.",
-  "bg": "Изваждане („eraf“) = броене назад."
+  "bg": "Изваждане („eraf“) = броене назад.",
+  "fa": "کم کردن = عقب شمردن."
  },
  "Begin bij 6. Tel 3 terug.": {
   "en": "Start at 6. Count back 3.",
@@ -1580,7 +1776,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 6. Лічи 3 назад.",
   "tr": "6'dan başla. 3 geri say.",
   "ro": "Începe de la 6. Numără 3 înapoi.",
-  "bg": "Започни от 6. Брой 3 назад."
+  "bg": "Започни от 6. Брой 3 назад.",
+  "fa": "از 6 شروع کن. 3 تا عقب بشمار."
  },
  "Begin bij 2. Tel 1 terug.": {
   "en": "Start at 2. Count back 1.",
@@ -1588,7 +1785,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 2. Лічи 1 назад.",
   "tr": "2'den başla. 1 geri say.",
   "ro": "Începe de la 2. Numără 1 înapoi.",
-  "bg": "Започни от 2. Брой 1 назад."
+  "bg": "Започни от 2. Брой 1 назад.",
+  "fa": "از 2 شروع کن. 1 تا عقب بشمار."
  },
  "Begin bij 2. Tel 2 terug.": {
   "en": "Start at 2. Count back 2.",
@@ -1596,7 +1794,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 2. Лічи 2 назад.",
   "tr": "2'den başla. 2 geri say.",
   "ro": "Începe de la 2. Numără 2 înapoi.",
-  "bg": "Започни от 2. Брой 2 назад."
+  "bg": "Започни от 2. Брой 2 назад.",
+  "fa": "از 2 شروع کن. 2 تا عقب بشمار."
  },
  "Begin bij 5. Tel 1 terug.": {
   "en": "Start at 5. Count back 1.",
@@ -1604,7 +1803,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Почни з 5. Лічи 1 назад.",
   "tr": "5'ten başla. 1 geri say.",
   "ro": "Începe de la 5. Numără 1 înapoi.",
-  "bg": "Започни от 5. Брой 1 назад."
+  "bg": "Започни от 5. Брой 1 назад.",
+  "fa": "از 5 شروع کن. 1 تا عقب بشمار."
  },
  "8 + 5 is meer dan 10. Dat doen we in **twee stapjes**.\n\nStap 1: maak 10 vol. 8 + 2 = 10.\nStap 2: de rest erbij. 10 + 3 = **13**.\n\nBij eraf: ga eerst naar 10, dan de rest eraf.": {
   "en": "8 + 5 is more than 10. We do that in **two small steps**.\n\nStep 1: fill up 10. 8 + 2 = 10.\nStep 2: add the rest. 10 + 3 = **13**.\n\nWhen taking away: go to 10 first, then take away the rest.",
@@ -1612,7 +1812,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "8 + 5 — це більше, ніж 10. Це ми робимо у **два кроки**.\n\nКрок 1: доповни до 10. 8 + 2 = 10.\nКрок 2: додай решту. 10 + 3 = **13**.\n\nКоли віднімаєш: спочатку дійди до 10, потім відніми решту.",
   "tr": "8 + 5, 10'dan fazla. Bunu **iki küçük adımda** yaparız.\n\nAdım 1: 10'u tamamla. 8 + 2 = 10.\nAdım 2: kalanı ekle. 10 + 3 = **13**.\n\nÇıkarırken: önce 10'a git, sonra kalanı çıkar.",
   "ro": "8 + 5 este mai mult decât 10. Facem asta în **doi pași mici**.\n\nPasul 1: umple până la 10. 8 + 2 = 10.\nPasul 2: adună restul. 10 + 3 = **13**.\n\nLa scădere: mergi mai întâi la 10, apoi scade restul.",
-  "bg": "8 + 5 е повече от 10. Правим го на **две малки стъпки**.\n\nСтъпка 1: допълни до 10. 8 + 2 = 10.\nСтъпка 2: прибави остатъка. 10 + 3 = **13**.\n\nПри изваждане: първо стигни до 10, после извади остатъка."
+  "bg": "8 + 5 е повече от 10. Правим го на **две малки стъпки**.\n\nСтъпка 1: допълни до 10. 8 + 2 = 10.\nСтъпка 2: прибави остатъка. 10 + 3 = **13**.\n\nПри изваждане: първо стигни до 10, после извади остатъка.",
+  "fa": "8 + 5 بیشتر از 10 است. این را در **دو قدم کوچک** انجام می‌دهیم.\n\nقدم 1: 10 را پر کن. 8 + 2 = 10.\nقدم 2: بقیه را اضافه کن. 10 + 3 = **13**.\n\nدر کم کردن: اول به 10 برو، بعد بقیه را کم کن."
  },
  "Maak eerst 10: 5 + 5 = 10. Dan nog 3 erbij.": {
   "en": "Make 10 first: 5 + 5 = 10. Then add 3 more.",
@@ -1620,7 +1821,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку зроби 10: 5 + 5 = 10. Потім додай ще 3.",
   "tr": "Önce 10 yap: 5 + 5 = 10. Sonra 3 daha ekle.",
   "ro": "Fă mai întâi 10: 5 + 5 = 10. Apoi încă 3.",
-  "bg": "Първо направи 10: 5 + 5 = 10. После още 3."
+  "bg": "Първо направи 10: 5 + 5 = 10. После още 3.",
+  "fa": "اول 10 بساز: 5 + 5 = 10. بعد 3 تای دیگر اضافه کن."
  },
  "Eerst naar 10": {
   "en": "First to 10",
@@ -1628,7 +1830,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку до 10",
   "tr": "Önce 10'a",
   "ro": "Mai întâi la 10",
-  "bg": "Първо до 10"
+  "bg": "Първо до 10",
+  "fa": "اول تا 10"
  },
  "8 + 5. Maak eerst **10**: 8 + 2 = 10. Je had 5, je hebt 2 gebruikt. Er blijft 3 over. 10 + 3 = **13**.": {
   "en": "8 + 5. Make **10** first: 8 + 2 = 10. You had 5, you used 2. 3 are left. 10 + 3 = **13**.",
@@ -1636,7 +1839,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "8 + 5. Спочатку зроби **10**: 8 + 2 = 10. У тебе було 5, ти використав 2. Залишилося 3. 10 + 3 = **13**.",
   "tr": "8 + 5. Önce **10** yap: 8 + 2 = 10. 5'in vardı, 2'sini kullandın. 3 kaldı. 10 + 3 = **13**.",
   "ro": "8 + 5. Fă mai întâi **10**: 8 + 2 = 10. Aveai 5, ai folosit 2. Rămân 3. 10 + 3 = **13**.",
-  "bg": "8 + 5. Първо направи **10**: 8 + 2 = 10. Имаше 5, използва 2. Остават 3. 10 + 3 = **13**."
+  "bg": "8 + 5. Първо направи **10**: 8 + 2 = 10. Имаше 5, използва 2. Остават 3. 10 + 3 = **13**.",
+  "fa": "8 + 5. اول **10** بساز: 8 + 2 = 10. 5 تا داشتی، از 2 تا استفاده کردی. 3 تا مانده. 10 + 3 = **13**."
  },
  "In twee stukjes": {
   "en": "In two pieces",
@@ -1644,7 +1848,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "На дві частини",
   "tr": "İki parçada",
   "ro": "În două bucăți",
-  "bg": "На две части"
+  "bg": "На две части",
+  "fa": "در دو تکه"
  },
  "Knip het tweede getal in **twee stukjes**. Eén stukje maakt 10 vol. Het andere stukje komt erbij.": {
   "en": "Cut the second number into **two pieces**. One piece fills up 10. The other piece gets added.",
@@ -1652,7 +1857,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Розріж друге число на **дві частини**. Одна частина доповнює до 10. Другу частину ти додаєш.",
   "tr": "İkinci sayıyı **iki parçaya** böl. Bir parça 10'u tamamlar. Öbür parça eklenir.",
   "ro": "Taie al doilea număr în **două bucăți**. O bucată umple până la 10. Cealaltă bucată se adună.",
-  "bg": "Раздели второто число на **две части**. Едната част допълва до 10. Другата част се прибавя."
+  "bg": "Раздели второто число на **две части**. Едната част допълва до 10. Другата част се прибавя.",
+  "fa": "عدد دوم را **دو تکه** کن. یک تکه 10 را پر می‌کند. تکهٔ دیگر اضافه می‌شود."
  },
  "10 vingers vol? Dan begin je opnieuw en tel je verder: 11, 12, 13.": {
   "en": "10 fingers full? Then start again and count on: 11, 12, 13.",
@@ -1660,7 +1866,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Усі 10 пальців підняті? Тоді почни знову і лічи далі: 11, 12, 13.",
   "tr": "10 parmak doldu mu? O zaman yeniden başla ve saymaya devam et: 11, 12, 13.",
   "ro": "Toate cele 10 degete sus? Atunci începe din nou și numără mai departe: 11, 12, 13.",
-  "bg": "Всичките 10 пръста са вдигнати? Тогава започни отначало и брой нататък: 11, 12, 13."
+  "bg": "Всичките 10 пръста са вдигнати? Тогава започни отначало и брой нататък: 11, 12, 13.",
+  "fa": "10 انگشت تمام شد؟ پس دوباره شروع کن و جلوتر بشمار: 11, 12, 13."
  },
  "tien vol": {
   "en": "ten full",
@@ -1668,7 +1875,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "повний десяток",
   "tr": "10'u tamamla",
   "ro": "zece plin",
-  "bg": "пълна десетица"
+  "bg": "пълна десетица",
+  "fa": "ده تا کامل"
  },
  "Eerst tot 10 tellen. Dan verder.": {
   "en": "First count to 10. Then go on.",
@@ -1676,7 +1884,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку лічи до 10. Потім далі.",
   "tr": "Önce 10'a kadar say. Sonra devam et.",
   "ro": "Numără mai întâi până la 10. Apoi mai departe.",
-  "bg": "Първо брой до 10. После нататък."
+  "bg": "Първо брой до 10. После нататък.",
+  "fa": "اول تا 10 بشمار. بعد ادامه بده."
  },
  "Over de 10: eerst 10 vol maken, dan de rest erbij.": {
   "en": "Past 10: first fill up 10, then add the rest.",
@@ -1684,7 +1893,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Через 10: спочатку доповни до 10, потім додай решту.",
   "tr": "10'u geçmek: önce 10'u tamamla, sonra kalanı ekle.",
   "ro": "Peste 10: mai întâi umple până la 10, apoi adună restul.",
-  "bg": "През 10: първо допълни до 10, после прибави остатъка."
+  "bg": "През 10: първо допълни до 10, после прибави остатъка.",
+  "fa": "رد شدن از 10: اول 10 را پر کن، بعد بقیه را اضافه کن."
  },
  "7 + 6: 7 + 3 = 10, dan 10 + 3 = 13.": {
   "en": "7 + 6: 7 + 3 = 10, then 10 + 3 = 13.",
@@ -1692,7 +1902,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "7 + 6: 7 + 3 = 10, потім 10 + 3 = 13.",
   "tr": "7 + 6: 7 + 3 = 10, sonra 10 + 3 = 13.",
   "ro": "7 + 6: 7 + 3 = 10, apoi 10 + 3 = 13.",
-  "bg": "7 + 6: 7 + 3 = 10, после 10 + 3 = 13."
+  "bg": "7 + 6: 7 + 3 = 10, после 10 + 3 = 13.",
+  "fa": "7 + 6: 7 + 3 = 10، بعد 10 + 3 = 13."
  },
  "14 − 6: 14 − 4 = 10, dan 10 − 2 = 8.": {
   "en": "14 − 6: 14 − 4 = 10, then 10 − 2 = 8.",
@@ -1700,7 +1911,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "14 − 6: 14 − 4 = 10, потім 10 − 2 = 8.",
   "tr": "14 − 6: 14 − 4 = 10, sonra 10 − 2 = 8.",
   "ro": "14 − 6: 14 − 4 = 10, apoi 10 − 2 = 8.",
-  "bg": "14 − 6: 14 − 4 = 10, после 10 − 2 = 8."
+  "bg": "14 − 6: 14 − 4 = 10, после 10 − 2 = 8.",
+  "fa": "14 − 6: 14 − 4 = 10، بعد 10 − 2 = 8."
  },
  "10 is een tussenstop. Ga eerst naar 10.": {
   "en": "10 is a stop on the way. Go to 10 first.",
@@ -1708,7 +1920,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "10 — це зупинка посередині. Спочатку дійди до 10.",
   "tr": "10 bir ara duraktır. Önce 10'a git.",
   "ro": "10 este o oprire pe drum. Mergi mai întâi la 10.",
-  "bg": "10 е спирка по пътя. Първо стигни до 10."
+  "bg": "10 е спирка по пътя. Първо стигни до 10.",
+  "fa": "10 یک ایستگاه وسط راه است. اول به 10 برو."
  },
  "Maak eerst 10 vol, dan de rest.": {
   "en": "Fill up 10 first, then the rest.",
@@ -1716,7 +1929,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку доповни до 10, потім решта.",
   "tr": "Önce 10'u tamamla, sonra kalanı.",
   "ro": "Umple mai întâi până la 10, apoi restul.",
-  "bg": "Първо допълни до 10, после остатъка."
+  "bg": "Първо допълни до 10, после остатъка.",
+  "fa": "اول 10 را پر کن، بعد بقیه را."
  },
  "Knip het getal in twee stukjes. Eén stukje tot 10.": {
   "en": "Cut the number into two pieces. One piece up to 10.",
@@ -1724,7 +1938,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Розріж число на дві частини. Одна частина — до 10.",
   "tr": "Sayıyı iki parçaya böl. Bir parça 10'a kadar.",
   "ro": "Taie numărul în două bucăți. O bucată până la 10.",
-  "bg": "Раздели числото на две части. Едната част — до 10."
+  "bg": "Раздели числото на две части. Едната част — до 10.",
+  "fa": "عدد را دو تکه کن. یک تکه تا 10."
  },
  "Eerst naar 10.": {
   "en": "First to 10.",
@@ -1732,7 +1947,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку до 10.",
   "tr": "Önce 10'a.",
   "ro": "Mai întâi la 10.",
-  "bg": "Първо до 10."
+  "bg": "Първо до 10.",
+  "fa": "اول به 10."
  },
  "Ga eerst naar 10: 11 − 1 = 10. Dan nog 3 eraf.": {
   "en": "Go to 10 first: 11 − 1 = 10. Then take away 3 more.",
@@ -1740,7 +1956,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку дійди до 10: 11 − 1 = 10. Потім відніми ще 3.",
   "tr": "Önce 10'a git: 11 − 1 = 10. Sonra 3 daha çıkar.",
   "ro": "Mergi mai întâi la 10: 11 − 1 = 10. Apoi scade încă 3.",
-  "bg": "Първо стигни до 10: 11 − 1 = 10. После извади още 3."
+  "bg": "Първо стигни до 10: 11 − 1 = 10. После извади още 3.",
+  "fa": "اول به 10 برو: 11 − 1 = 10. بعد 3 تای دیگر کم کن."
  },
  "Maak eerst 10: 7 + 3 = 10. Dan nog 5 erbij.": {
   "en": "Make 10 first: 7 + 3 = 10. Then add 5 more.",
@@ -1748,7 +1965,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку зроби 10: 7 + 3 = 10. Потім додай ще 5.",
   "tr": "Önce 10 yap: 7 + 3 = 10. Sonra 5 daha ekle.",
   "ro": "Fă mai întâi 10: 7 + 3 = 10. Apoi încă 5.",
-  "bg": "Първо направи 10: 7 + 3 = 10. После още 5."
+  "bg": "Първо направи 10: 7 + 3 = 10. После още 5.",
+  "fa": "اول 10 بساز: 7 + 3 = 10. بعد 5 تای دیگر اضافه کن."
  },
  "Ga eerst naar 10: 18 − 8 = 10. Dan nog 1 eraf.": {
   "en": "Go to 10 first: 18 − 8 = 10. Then take away 1 more.",
@@ -1756,7 +1974,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку дійди до 10: 18 − 8 = 10. Потім відніми ще 1.",
   "tr": "Önce 10'a git: 18 − 8 = 10. Sonra 1 daha çıkar.",
   "ro": "Mergi mai întâi la 10: 18 − 8 = 10. Apoi scade încă 1.",
-  "bg": "Първо стигни до 10: 18 − 8 = 10. После извади още 1."
+  "bg": "Първо стигни до 10: 18 − 8 = 10. После извади още 1.",
+  "fa": "اول به 10 برو: 18 − 8 = 10. بعد 1 تای دیگر کم کن."
  },
  "Maak eerst 10: 6 + 4 = 10. Dan nog 4 erbij.": {
   "en": "Make 10 first: 6 + 4 = 10. Then add 4 more.",
@@ -1764,7 +1983,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку зроби 10: 6 + 4 = 10. Потім додай ще 4.",
   "tr": "Önce 10 yap: 6 + 4 = 10. Sonra 4 daha ekle.",
   "ro": "Fă mai întâi 10: 6 + 4 = 10. Apoi încă 4.",
-  "bg": "Първо направи 10: 6 + 4 = 10. После още 4."
+  "bg": "Първо направи 10: 6 + 4 = 10. После още 4.",
+  "fa": "اول 10 بساز: 6 + 4 = 10. بعد 4 تای دیگر اضافه کن."
  },
  "Nu sommen met **woorden**.\n\nLees goed. **Komen er dingen bij?** Dan plus. **Gaan er dingen weg?** Dan min.\n\nSchrijf de som op. Reken uit.": {
   "en": "Now sums with **words**.\n\nRead carefully. **Are things added?** Then plus. **Do things go away?** Then minus.\n\nWrite the sum down. Work it out.",
@@ -1772,7 +1992,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Тепер задачі зі **словами**.\n\nЧитай уважно. **Щось додається?** Тоді плюс. **Щось зникає?** Тоді мінус.\n\nЗапиши приклад. Порахуй.",
   "tr": "Şimdi **kelimelerle** işlemler.\n\nİyi oku. **Bir şeyler ekleniyor mu?** O zaman artı. **Bir şeyler gidiyor mu?** O zaman eksi.\n\nİşlemi yaz. Hesapla.",
   "ro": "Acum probleme cu **cuvinte**.\n\nCitește cu atenție. **Vin lucruri în plus?** Atunci plus. **Pleacă lucruri?** Atunci minus.\n\nScrie exercițiul. Calculează.",
-  "bg": "Сега задачи с **думи**.\n\nЧети внимателно. **Идват ли неща в повече?** Тогава плюс. **Отиват ли си неща?** Тогава минус.\n\nЗапиши задачата. Сметни."
+  "bg": "Сега задачи с **думи**.\n\nЧети внимателно. **Идват ли неща в повече?** Тогава плюс. **Отиват ли си неща?** Тогава минус.\n\nЗапиши задачата. Сметни.",
+  "fa": "حالا مسئله با **کلمه‌ها**.\n\nخوب بخوان. **چیزی اضافه می‌شود؟** پس جمع. **چیزهایی می‌روند؟** پس تفریق.\n\nمسئله را بنویس. حلش کن."
  },
  "Lees de som nog een keer. Is het erbij of eraf?": {
   "en": "Read the sum one more time. Is it adding or taking away?",
@@ -1780,7 +2001,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Прочитай задачу ще раз. Треба додати чи відняти?",
   "tr": "İşlemi bir kez daha oku. Ekleme mi, çıkarma mı?",
   "ro": "Citește problema încă o dată. Este adunare sau scădere?",
-  "bg": "Прочети задачата още веднъж. Прибавяне ли е или изваждане?"
+  "bg": "Прочети задачата още веднъж. Прибавяне ли е или изваждане?",
+  "fa": "مسئله را یک بار دیگر بخوان. اضافه کردن است یا کم کردن؟"
  },
  "Erbij of eraf?": {
   "en": "Adding or taking away?",
@@ -1788,7 +2010,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додати чи відняти?",
   "tr": "Ekleme mi, çıkarma mı?",
   "ro": "Adunare sau scădere?",
-  "bg": "Прибавяне или изваждане?"
+  "bg": "Прибавяне или изваждане?",
+  "fa": "اضافه کردن یا کم کردن؟"
  },
  "Lees de som. **Komen er kinderen bij?** Dan is het **plus**. **Gaan er weg?** Dan is het **min**.": {
   "en": "Read the sum. **Do more children come?** Then it is **plus**. **Do some go away?** Then it is **minus**.",
@@ -1796,7 +2019,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Прочитай задачу. **Діти приходять?** Тоді це **плюс**. **Діти йдуть?** Тоді це **мінус**.",
   "tr": "İşlemi oku. **Çocuklar geliyor mu?** O zaman **artı**. **Gidiyorlar mı?** O zaman **eksi**.",
   "ro": "Citește problema. **Vin copii în plus?** Atunci este **plus**. **Pleacă unii?** Atunci este **minus**.",
-  "bg": "Прочети задачата. **Идват ли още деца?** Тогава е **плюс**. **Отиват ли си някои?** Тогава е **минус**."
+  "bg": "Прочети задачата. **Идват ли още деца?** Тогава е **плюс**. **Отиват ли си някои?** Тогава е **минус**.",
+  "fa": "مسئله را بخوان. **بچه‌های بیشتری می‌آیند؟** پس **جمع** است. **چند تا می‌روند؟** پس **تفریق** است."
  },
  "Schrijf de som op": {
   "en": "Write the sum down",
@@ -1804,7 +2028,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Запиши приклад",
   "tr": "İşlemi yaz",
   "ro": "Scrie exercițiul",
-  "bg": "Запиши задачата"
+  "bg": "Запиши задачата",
+  "fa": "مسئله را بنویس"
  },
  "6 kinderen, 3 komen erbij: **6 + 3**. Dat is 9.": {
   "en": "6 children, 3 more come: **6 + 3**. That is 9.",
@@ -1812,7 +2037,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "6 дітей, приходять ще 3: **6 + 3**. Це 9.",
   "tr": "6 çocuk, 3 tane daha geliyor: **6 + 3**. Bu 9 eder.",
   "ro": "6 copii, mai vin 3: **6 + 3**. Asta este 9.",
-  "bg": "6 деца, идват още 3: **6 + 3**. Това е 9."
+  "bg": "6 деца, идват още 3: **6 + 3**. Това е 9.",
+  "fa": "6 بچه، 3 تای دیگر می‌آیند: **6 + 3**. می‌شود 9."
  },
  "Woorden die helpen": {
   "en": "Words that help",
@@ -1820,7 +2046,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова, які допомагають",
   "tr": "Yardım eden kelimeler",
   "ro": "Cuvinte care ajută",
-  "bg": "Думи, които помагат"
+  "bg": "Думи, които помагат",
+  "fa": "کلمه‌هایی که کمک می‌کنند"
  },
  "**Erbij, komen, samen** = plus. **Weg, eten, geven** = min.": {
   "en": "**Erbij, komen, samen** (more, come, together) = plus. **Weg, eten, geven** (away, eat, give) = minus.",
@@ -1828,7 +2055,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Erbij, komen, samen** (= ще, приходять, разом) = плюс. **Weg, eten, geven** (= геть, їсти, давати) = мінус.",
   "tr": "**Erbij, komen, samen** (= eklenmek, gelmek, birlikte) = artı. **Weg, eten, geven** (= gitmek, yemek, vermek) = eksi.",
   "ro": "**Erbij, komen, samen** (= în plus, vin, împreună) = plus. **Weg, eten, geven** (= pleacă, mănâncă, dă) = minus.",
-  "bg": "**Erbij, komen, samen** (= в повече, идват, заедно) = плюс. **Weg, eten, geven** (= няма го, ядат, дават) = минус."
+  "bg": "**Erbij, komen, samen** (= в повече, идват, заедно) = плюс. **Weg, eten, geven** (= няма го, ядат, дават) = минус.",
+  "fa": "**Erbij, komen, samen** (بیشتر، آمدن، با هم) = جمع. **Weg, eten, geven** (رفته، خوردن، دادن) = تفریق."
  },
  "samen": {
   "en": "together",
@@ -1836,7 +2064,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "разом",
   "tr": "birlikte",
   "ro": "împreună",
-  "bg": "заедно"
+  "bg": "заедно",
+  "fa": "با هم"
  },
  "Alles bij elkaar. Plus.": {
   "en": "All together. Plus.",
@@ -1844,7 +2073,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Усе разом. Плюс.",
   "tr": "Hepsi bir arada. Artı.",
   "ro": "Toate la un loc. Plus.",
-  "bg": "Всичко заедно. Плюс."
+  "bg": "Всичко заедно. Плюс.",
+  "fa": "همه با هم. جمع."
  },
  "weg": {
   "en": "away",
@@ -1852,7 +2082,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "геть",
   "tr": "gitti",
   "ro": "plecat",
-  "bg": "няма го"
+  "bg": "няма го",
+  "fa": "رفته"
  },
  "Niet meer. Min.": {
   "en": "Not there anymore. Minus.",
@@ -1860,7 +2091,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більше немає. Мінус.",
   "tr": "Artık yok. Eksi.",
   "ro": "Nu mai este. Minus.",
-  "bg": "Вече го няма. Минус."
+  "bg": "Вече го няма. Минус.",
+  "fa": "دیگر نیست. تفریق."
  },
  "Zoek het woord dat zegt: plus of min.": {
   "en": "Find the word that says: plus or minus.",
@@ -1868,7 +2100,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Знайди слово, яке каже: плюс чи мінус.",
   "tr": "Artı mı eksi mi diyen kelimeyi bul.",
   "ro": "Caută cuvântul care spune: plus sau minus.",
-  "bg": "Намери думата, която казва: плюс или минус."
+  "bg": "Намери думата, която казва: плюс или минус.",
+  "fa": "کلمه‌ای را پیدا کن که می‌گوید: جمع یا تفریق."
  },
  "3 komen erbij → +3.": {
   "en": "3 more come → +3.",
@@ -1876,7 +2109,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "3 приходять («erbij») → +3.",
   "tr": "3 tane geliyor → +3.",
   "ro": "Mai vin 3 („erbij”) → +3.",
-  "bg": "Идват още 3 („erbij“) → +3."
+  "bg": "Идват още 3 („erbij“) → +3.",
+  "fa": "3 تای دیگر می‌آیند → +3."
  },
  "4 geef je weg → −4.": {
   "en": "You give away 4 → −4.",
@@ -1884,7 +2118,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "4 ти віддаєш («weg») → −4.",
   "tr": "4 tane veriyorsun → −4.",
   "ro": "Dai 4 („weg”) → −4.",
-  "bg": "Даваш 4 („weg“) → −4."
+  "bg": "Даваш 4 („weg“) → −4.",
+  "fa": "4 تا را می‌دهی → −4."
  },
  "Onderstreep het woord: erbij of weg.": {
   "en": "Underline the word: \"erbij\" (more) or \"weg\" (away).",
@@ -1892,7 +2127,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Підкресли слово: «erbij» (= ще) чи «weg» (= геть).",
   "tr": "Kelimenin altını çiz: \"erbij\" (ekle) mi, \"weg\" (gitti) mi.",
   "ro": "Subliniază cuvântul: „erbij” (= în plus) sau „weg” (= plecat).",
-  "bg": "Подчертай думата: „erbij“ (= в повече) или „weg“ (= няма го)."
+  "bg": "Подчертай думата: „erbij“ (= в повече) или „weg“ (= няма го).",
+  "fa": "زیر کلمه خط بکش: \"erbij\" (بیشتر) یا \"weg\" (رفته)."
  },
  "Kijk of het plus of min is.": {
   "en": "Check if it is plus or minus.",
@@ -1900,7 +2136,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Подивися, це плюс чи мінус.",
   "tr": "Artı mı eksi mi, bak.",
   "ro": "Uită-te dacă este plus sau minus.",
-  "bg": "Виж дали е плюс или минус."
+  "bg": "Виж дали е плюс или минус.",
+  "fa": "ببین جمع است یا تفریق."
  },
  "Komen erbij = plus. Gaan weg = min.": {
   "en": "More come = plus. Go away = minus.",
@@ -1908,7 +2145,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Приходять = плюс. Ідуть геть = мінус.",
   "tr": "Geliyorlar = artı. Gidiyorlar = eksi.",
   "ro": "Vin în plus = plus. Pleacă = minus.",
-  "bg": "Идват = плюс. Отиват си = минус."
+  "bg": "Идват = плюс. Отиват си = минус.",
+  "fa": "بیشتر می‌آیند = جمع. می‌روند = تفریق."
  },
  "Erbij = plus.": {
   "en": "More = plus.",
@@ -1916,7 +2154,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ще («erbij») = плюс.",
   "tr": "Ekle = artı.",
   "ro": "În plus („erbij”) = plus.",
-  "bg": "В повече („erbij“) = плюс."
+  "bg": "В повече („erbij“) = плюс.",
+  "fa": "بیشتر = جمع."
  },
  "Rekenen tot 100 (nieuwkomers, groep 4)": {
   "en": "Maths up to 100 (newcomers, year 2)",
@@ -1924,7 +2163,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічба до 100 (новенькі, група 4)",
   "tr": "100'e kadar matematik (yeni gelenler, 4. sınıf)",
   "ro": "Matematică până la 100 (nou-veniți, groep 4)",
-  "bg": "Смятане до 100 (новодошли, група 4)"
+  "bg": "Смятане до 100 (новодошли, група 4)",
+  "fa": "حساب تا 100 (تازه‌واردها، گروه 4)"
  },
  "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.": {
   "en": "Tens and ones, adding and taking away in jumps, going past the ten, and sums with money. Short sentences, every sum explained. Also for children who are still learning Dutch. ~10 min.",
@@ -1932,7 +2172,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Десятки й одиниці, додавання і віднімання стрибками, перехід через десяток і задачі з грошима. Короткі речення, кожен приклад з поясненням. Також для дітей, які ще вчать нідерландську. ~10 хв.",
   "tr": "Onluklar ve birlikler, atlamalarla ekleme ve çıkarma, onluğu geçmek ve parayla işlemler. Kısa cümleler, her işlem açıklamalı. Felemenkçe öğrenen çocuklar için de. ~10 dk.",
   "ro": "Zeci și unități, adunare și scădere în sărituri, trecut peste zece și probleme cu bani. Propoziții scurte, fiecare exercițiu cu explicație. Și pentru copiii care încă învață neerlandeza. ~10 min.",
-  "bg": "Десетици и единици, събиране и изваждане със скокове, преминаване през десетицата и задачи с пари. Кратки изречения, всяка задача с обяснение. Също за деца, които още учат нидерландски. ~10 мин."
+  "bg": "Десетици и единици, събиране и изваждане със скокове, преминаване през десетицата и задачи с пари. Кратки изречения, всяка задача с обяснение. Също за деца, които още учат нидерландски. ~10 мин.",
+  "fa": "دهگان و یکان، اضافه کردن و کم کردن با پرش، رد شدن از دهگان، و مسئله با پول. جمله‌های کوتاه، هر مسئله با توضیح. برای بچه‌هایی هم که هنوز هلندی یاد می‌گیرند. ~10 دقیقه."
  },
  "Tientallen en eenheden": {
   "en": "Tens and ones",
@@ -1940,7 +2181,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Десятки й одиниці",
   "tr": "Onluklar ve birlikler",
   "ro": "Zeci și unități",
-  "bg": "Десетици и единици"
+  "bg": "Десетици и единици",
+  "fa": "دهگان و یکان"
  },
  "Erbij tot 100": {
   "en": "Adding up to 100",
@@ -1948,7 +2190,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додавання до 100",
   "tr": "100'e kadar ekleme",
   "ro": "Adunare până la 100",
-  "bg": "Събиране до 100"
+  "bg": "Събиране до 100",
+  "fa": "اضافه کردن تا 100"
  },
  "Eraf tot 100": {
   "en": "Taking away up to 100",
@@ -1956,7 +2199,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Віднімання до 100",
   "tr": "100'e kadar çıkarma",
   "ro": "Scădere până la 100",
-  "bg": "Изваждане до 100"
+  "bg": "Изваждане до 100",
+  "fa": "کم کردن تا 100"
  },
  "Over het tiental heen": {
   "en": "Going past the ten",
@@ -1964,7 +2208,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Через десяток",
   "tr": "Onluğu geçmek",
   "ro": "Peste zece",
-  "bg": "През десетицата"
+  "bg": "През десетицата",
+  "fa": "رد شدن از دهگان"
  },
  "Sommen uit de winkel": {
   "en": "Sums from the shop",
@@ -1972,7 +2217,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Задачі з магазину",
   "tr": "Dükkândan problemler",
   "ro": "Probleme de la magazin",
-  "bg": "Задачи от магазина"
+  "bg": "Задачи от магазина",
+  "fa": "مسئله‌هایی از مغازه"
  },
  "Een getal tot 100 heeft **twee cijfers**.\n\nHet eerste cijfer zijn de **tientallen** (groepjes van 10). Het tweede cijfer zijn de **eenheden** (losse).\n\n**34** = 3 tientallen en 4 eenheden = 30 + 4.": {
   "en": "A number up to 100 has **two digits**.\n\nThe first digit is the **tens** (groups of 10). The second digit is the **ones** (single ones).\n\n**34** = 3 tens and 4 ones = 30 + 4.",
@@ -1980,7 +2226,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Число до 100 має **дві цифри**.\n\nПерша цифра — це **десятки** (групки по 10). Друга цифра — це **одиниці** (окремі).\n\n**34** = 3 десятки і 4 одиниці = 30 + 4.",
   "tr": "100'e kadar bir sayının **iki rakamı** var.\n\nİlk rakam **onluklardır** (10'luk gruplar). İkinci rakam **birliklerdir** (tek tek).\n\n**34** = 3 onluk ve 4 birlik = 30 + 4.",
   "ro": "Un număr până la 100 are **două cifre**.\n\nPrima cifră sunt **zecile** (grupe de 10). A doua cifră sunt **unitățile** (cele singure).\n\n**34** = 3 zeci și 4 unități = 30 + 4.",
-  "bg": "Едно число до 100 има **две цифри**.\n\nПървата цифра са **десетиците** (групи по 10). Втората цифра са **единиците** (отделните).\n\n**34** = 3 десетици и 4 единици = 30 + 4."
+  "bg": "Едно число до 100 има **две цифри**.\n\nПървата цифра са **десетиците** (групи по 10). Втората цифра са **единиците** (отделните).\n\n**34** = 3 десетици и 4 единици = 30 + 4.",
+  "fa": "یک عدد تا 100 **دو رقم** دارد.\n\nرقم اول **دهگان** است (دسته‌های 10 تایی). رقم دوم **یکان** است (تکی‌ها).\n\n**34** = 3 دهگان و 4 یکان = 30 + 4."
  },
  "3 tientallen = 30. Dan 3 erbij.": {
   "en": "3 tens = 30. Then add 3.",
@@ -1988,7 +2235,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "3 десятки = 30. Потім додай 3.",
   "tr": "3 onluk = 30. Sonra 3 ekle.",
   "ro": "3 zeci = 30. Apoi încă 3.",
-  "bg": "3 десетици = 30. После още 3."
+  "bg": "3 десетици = 30. После още 3.",
+  "fa": "3 دهگان = 30. بعد 3 تا اضافه کن."
  },
  "Tientallen zijn groepjes van 10": {
   "en": "Tens are groups of 10",
@@ -1996,7 +2244,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Десятки — це групки по 10",
   "tr": "Onluklar 10'luk gruplardır",
   "ro": "Zecile sunt grupe de 10",
-  "bg": "Десетиците са групи по 10"
+  "bg": "Десетиците са групи по 10",
+  "fa": "دهگان یعنی دسته‌های 10 تایی"
  },
  "**Een tiental** is 10. **3 tientallen** is 10, 20, 30. Dus 30.": {
   "en": "**One ten** is 10. **3 tens** is 10, 20, 30. So 30.",
@@ -2004,7 +2253,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Один десяток** — це 10. **3 десятки** — це 10, 20, 30. Отже, 30.",
   "tr": "**Bir onluk** 10'dur. **3 onluk** 10, 20, 30'dur. Yani 30.",
   "ro": "**O zece** este 10. **3 zeci** sunt 10, 20, 30. Deci 30.",
-  "bg": "**Една десетица** е 10. **3 десетици** са 10, 20, 30. Значи 30."
+  "bg": "**Една десетица** е 10. **3 десетици** са 10, 20, 30. Значи 30.",
+  "fa": "**یک دهگان** یعنی 10. **3 دهگان** یعنی 10, 20, 30. پس 30."
  },
  "Eenheden zijn losse": {
   "en": "Ones are single",
@@ -2012,7 +2262,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Одиниці — окремі",
   "tr": "Birlikler tek tektir",
   "ro": "Unitățile sunt cele singure",
-  "bg": "Единиците са отделните"
+  "bg": "Единиците са отделните",
+  "fa": "یکان‌ها تکی هستند"
  },
  "**Eenheden** zijn losse. 3 tientallen en 4 eenheden: 30 en 4 = **34**.": {
   "en": "**Ones** are single. 3 tens and 4 ones: 30 and 4 = **34**.",
@@ -2020,7 +2271,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Одиниці** — окремі. 3 десятки і 4 одиниці: 30 і 4 = **34**.",
   "tr": "**Birlikler** tek tektir. 3 onluk ve 4 birlik: 30 ve 4 = **34**.",
   "ro": "**Unitățile** sunt cele singure. 3 zeci și 4 unități: 30 și 4 = **34**.",
-  "bg": "**Единиците** са отделните. 3 десетици и 4 единици: 30 и 4 = **34**."
+  "bg": "**Единиците** са отделните. 3 десетици и 4 единици: 30 и 4 = **34**.",
+  "fa": "**یکان‌ها** تکی هستند. 3 دهگان و 4 یکان: 30 و 4 = **34**."
  },
  "Zo schrijf je het": {
   "en": "This is how you write it",
@@ -2028,7 +2280,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Так це записують",
   "tr": "Böyle yazılır",
   "ro": "Așa se scrie",
-  "bg": "Така се записва"
+  "bg": "Така се записва",
+  "fa": "این‌طوری می‌نویسی"
  },
  "Het eerste cijfer = tientallen. Het tweede cijfer = eenheden. **34** = 3 tientallen, 4 eenheden.": {
   "en": "The first digit = tens. The second digit = ones. **34** = 3 tens, 4 ones.",
@@ -2036,7 +2289,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Перша цифра = десятки. Друга цифра = одиниці. **34** = 3 десятки, 4 одиниці.",
   "tr": "İlk rakam = onluklar. İkinci rakam = birlikler. **34** = 3 onluk, 4 birlik.",
   "ro": "Prima cifră = zeci. A doua cifră = unități. **34** = 3 zeci, 4 unități.",
-  "bg": "Първата цифра = десетици. Втората цифра = единици. **34** = 3 десетици, 4 единици."
+  "bg": "Първата цифра = десетици. Втората цифра = единици. **34** = 3 десетици, 4 единици.",
+  "fa": "رقم اول = دهگان. رقم دوم = یکان. **34** = 3 دهگان، 4 یکان."
  },
  "tiental": {
   "en": "ten",
@@ -2044,7 +2298,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "десяток",
   "tr": "onluk",
   "ro": "zece",
-  "bg": "десетица"
+  "bg": "десетица",
+  "fa": "دهگان"
  },
  "Een groepje van 10.": {
   "en": "A group of 10.",
@@ -2052,7 +2307,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Групка з 10.",
   "tr": "10'luk bir grup.",
   "ro": "O grupă de 10.",
-  "bg": "Група от 10."
+  "bg": "Група от 10.",
+  "fa": "یک دستهٔ 10 تایی."
  },
  "eenheid": {
   "en": "one",
@@ -2060,7 +2316,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "одиниця",
   "tr": "birlik",
   "ro": "unitate",
-  "bg": "единица"
+  "bg": "единица",
+  "fa": "یکان"
  },
  "Eén losse.": {
   "en": "One single.",
@@ -2068,7 +2325,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Одна окрема.",
   "tr": "Tek bir tane.",
   "ro": "Una singură.",
-  "bg": "Една отделна."
+  "bg": "Една отделна.",
+  "fa": "یکی تکی."
  },
  "Getal = tientallen en eenheden.": {
   "en": "Number = tens and ones.",
@@ -2076,7 +2334,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Число = десятки й одиниці.",
   "tr": "Sayı = onluklar ve birlikler.",
   "ro": "Număr = zeci și unități.",
-  "bg": "Число = десетици и единици."
+  "bg": "Число = десетици и единици.",
+  "fa": "عدد = دهگان و یکان."
  },
  "5 tientallen, 2 eenheden = 52.": {
   "en": "5 tens, 2 ones = 52.",
@@ -2084,7 +2343,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "5 десятків, 2 одиниці = 52.",
   "tr": "5 onluk, 2 birlik = 52.",
   "ro": "5 zeci, 2 unități = 52.",
-  "bg": "5 десетици, 2 единици = 52."
+  "bg": "5 десетици, 2 единици = 52.",
+  "fa": "5 دهگان، 2 یکان = 52."
  },
  "70 = 7 tientallen, 0 eenheden.": {
   "en": "70 = 7 tens, 0 ones.",
@@ -2092,7 +2352,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "70 = 7 десятків, 0 одиниць.",
   "tr": "70 = 7 onluk, 0 birlik.",
   "ro": "70 = 7 zeci, 0 unități.",
-  "bg": "70 = 7 десетици, 0 единици."
+  "bg": "70 = 7 десетици, 0 единици.",
+  "fa": "70 = 7 دهگان، 0 یکان."
  },
  "Tel de tientallen: 10, 20, 30… Dan de eenheden erbij.": {
   "en": "Count the tens: 10, 20, 30… Then add the ones.",
@@ -2100,7 +2361,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Лічи десятки: 10, 20, 30… Потім додай одиниці.",
   "tr": "Onlukları say: 10, 20, 30… Sonra birlikleri ekle.",
   "ro": "Numără zecile: 10, 20, 30… Apoi adună unitățile.",
-  "bg": "Брой десетиците: 10, 20, 30… После прибави единиците."
+  "bg": "Брой десетиците: 10, 20, 30… После прибави единиците.",
+  "fa": "دهگان را بشمار: 10, 20, 30… بعد یکان را اضافه کن."
  },
  "Tientallen × 10, dan eenheden erbij.": {
   "en": "Tens × 10, then add the ones.",
@@ -2108,7 +2370,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Десятки × 10, потім додай одиниці.",
   "tr": "Onluklar × 10, sonra birlikleri ekle.",
   "ro": "Zeci × 10, apoi adună unitățile.",
-  "bg": "Десетици × 10, после прибави единиците."
+  "bg": "Десетици × 10, после прибави единиците.",
+  "fa": "دهگان × 10، بعد یکان را اضافه کن."
  },
  "3 tientallen = 30. Dan 4 erbij = 34.": {
   "en": "3 tens = 30. Then add 4 = 34.",
@@ -2116,7 +2379,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "3 десятки = 30. Потім додай 4 = 34.",
   "tr": "3 onluk = 30. Sonra 4 ekle = 34.",
   "ro": "3 zeci = 30. Apoi adună 4 = 34.",
-  "bg": "3 десетици = 30. После прибави 4 = 34."
+  "bg": "3 десетици = 30. После прибави 4 = 34.",
+  "fa": "3 دهگان = 30. بعد 4 تا اضافه کن = 34."
  },
  "Eerst 30, dan 4.": {
   "en": "First 30, then 4.",
@@ -2124,7 +2388,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку 30, потім 4.",
   "tr": "Önce 30, sonra 4.",
   "ro": "Mai întâi 30, apoi 4.",
-  "bg": "Първо 30, после 4."
+  "bg": "Първо 30, после 4.",
+  "fa": "اول 30، بعد 4."
  },
  "Tien erbij: 40 + 10.": {
   "en": "Add ten: 40 + 10.",
@@ -2132,7 +2397,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додай десять: 40 + 10.",
   "tr": "On ekle: 40 + 10.",
   "ro": "Adună zece: 40 + 10.",
-  "bg": "Прибави десет: 40 + 10."
+  "bg": "Прибави десет: 40 + 10.",
+  "fa": "ده تا اضافه کن: 40 + 10."
  },
  "7 tientallen = 70. Dan 6 erbij.": {
   "en": "7 tens = 70. Then add 6.",
@@ -2140,7 +2406,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "7 десятків = 70. Потім додай 6.",
   "tr": "7 onluk = 70. Sonra 6 ekle.",
   "ro": "7 zeci = 70. Apoi adună 6.",
-  "bg": "7 десетици = 70. После прибави 6."
+  "bg": "7 десетици = 70. После прибави 6.",
+  "fa": "7 دهگان = 70. بعد 6 تا اضافه کن."
  },
  "Tien erbij: 60 + 10.": {
   "en": "Add ten: 60 + 10.",
@@ -2148,7 +2415,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додай десять: 60 + 10.",
   "tr": "On ekle: 60 + 10.",
   "ro": "Adună zece: 60 + 10.",
-  "bg": "Прибави десет: 60 + 10."
+  "bg": "Прибави десет: 60 + 10.",
+  "fa": "ده تا اضافه کن: 60 + 10."
  },
  "8 tientallen = 80. Dan 5 erbij.": {
   "en": "8 tens = 80. Then add 5.",
@@ -2156,7 +2424,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "8 десятків = 80. Потім додай 5.",
   "tr": "8 onluk = 80. Sonra 5 ekle.",
   "ro": "8 zeci = 80. Apoi adună 5.",
-  "bg": "8 десетици = 80. После прибави 5."
+  "bg": "8 десетици = 80. После прибави 5.",
+  "fa": "8 دهگان = 80. بعد 5 تا اضافه کن."
  },
  "Erbij doen we in **sprongen**.\n\nEerst sprongen van **10**: 34 + 20 = 54.\nDan sprongen van **1**: 54 + 3 = 57.": {
   "en": "We add in **jumps**.\n\nFirst jumps of **10**: 34 + 20 = 54.\nThen jumps of **1**: 54 + 3 = 57.",
@@ -2164,7 +2433,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додаємо **стрибками**.\n\nСпочатку стрибки по **10**: 34 + 20 = 54.\nПотім стрибки по **1**: 54 + 3 = 57.",
   "tr": "Eklemeyi **atlamalarla** yaparız.\n\nÖnce **10**'luk atlamalar: 34 + 20 = 54.\nSonra **1**'lik atlamalar: 54 + 3 = 57.",
   "ro": "Adunăm în **sărituri**.\n\nMai întâi sărituri de **10**: 34 + 20 = 54.\nApoi sărituri de **1**: 54 + 3 = 57.",
-  "bg": "Събираме със **скокове**.\n\nПърво скокове по **10**: 34 + 20 = 54.\nПосле скокове по **1**: 54 + 3 = 57."
+  "bg": "Събираме със **скокове**.\n\nПърво скокове по **10**: 34 + 20 = 54.\nПосле скокове по **1**: 54 + 3 = 57.",
+  "fa": "اضافه کردن را با **پرش** انجام می‌دهیم.\n\nاول پرش‌های **10** تایی: 34 + 20 = 54.\nبعد پرش‌های **1** تایی: 54 + 3 = 57."
  },
  "Eerst de tientallen, dan de eenheden.": {
   "en": "First the tens, then the ones.",
@@ -2172,7 +2442,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку десятки, потім одиниці.",
   "tr": "Önce onluklar, sonra birlikler.",
   "ro": "Mai întâi zecile, apoi unitățile.",
-  "bg": "Първо десетиците, после единиците."
+  "bg": "Първо десетиците, после единиците.",
+  "fa": "اول دهگان، بعد یکان."
  },
  "Eerst de tientallen": {
   "en": "First the tens",
@@ -2180,7 +2451,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку десятки",
   "tr": "Önce onluklar",
   "ro": "Mai întâi zecile",
-  "bg": "Първо десетиците"
+  "bg": "Първо десетиците",
+  "fa": "اول دهگان"
  },
  "34 + 20. Tel eerst de **tientallen**: 34 + 20 = **54**.": {
   "en": "34 + 20. First count the **tens**: 34 + 20 = **54**.",
@@ -2188,7 +2460,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "34 + 20. Спочатку додай **десятки**: 34 + 20 = **54**.",
   "tr": "34 + 20. Önce **onlukları** say: 34 + 20 = **54**.",
   "ro": "34 + 20. Numără mai întâi **zecile**: 34 + 20 = **54**.",
-  "bg": "34 + 20. Първо брой **десетиците**: 34 + 20 = **54**."
+  "bg": "34 + 20. Първо брой **десетиците**: 34 + 20 = **54**.",
+  "fa": "34 + 20. اول **دهگان** را بشمار: 34 + 20 = **54**."
  },
  "Dan de eenheden": {
   "en": "Then the ones",
@@ -2196,7 +2469,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Потім одиниці",
   "tr": "Sonra birlikler",
   "ro": "Apoi unitățile",
-  "bg": "После единиците"
+  "bg": "После единиците",
+  "fa": "بعد یکان"
  },
  "34 + 5. Tel de **eenheden** erbij: 34 + 5 = **39**. De 3 blijft staan.": {
   "en": "34 + 5. Add the **ones**: 34 + 5 = **39**. The 3 stays the same.",
@@ -2204,7 +2478,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "34 + 5. Додай **одиниці**: 34 + 5 = **39**. 3 не змінюється.",
   "tr": "34 + 5. **Birlikleri** ekle: 34 + 5 = **39**. 3 aynı kalır.",
   "ro": "34 + 5. Adună **unitățile**: 34 + 5 = **39**. Cifra 3 rămâne la fel.",
-  "bg": "34 + 5. Прибави **единиците**: 34 + 5 = **39**. Числото 3 си остава."
+  "bg": "34 + 5. Прибави **единиците**: 34 + 5 = **39**. Числото 3 си остава.",
+  "fa": "34 + 5. **یکان** را اضافه کن: 34 + 5 = **39**. 3 همان‌طور می‌ماند."
  },
  "Met sprongen": {
   "en": "With jumps",
@@ -2212,7 +2487,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стрибками",
   "tr": "Atlamalarla",
   "ro": "Cu sărituri",
-  "bg": "Със скокове"
+  "bg": "Със скокове",
+  "fa": "با پرش"
  },
  "Spring met 10: 34, 44, 54. Spring met 1: 54, 55, 56.": {
   "en": "Jump by 10: 34, 44, 54. Jump by 1: 54, 55, 56.",
@@ -2220,7 +2496,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стрибай по 10: 34, 44, 54. Стрибай по 1: 54, 55, 56.",
   "tr": "10'ar atla: 34, 44, 54. 1'er atla: 54, 55, 56.",
   "ro": "Sari cu 10: 34, 44, 54. Sari cu 1: 54, 55, 56.",
-  "bg": "Скачай по 10: 34, 44, 54. Скачай по 1: 54, 55, 56."
+  "bg": "Скачай по 10: 34, 44, 54. Скачай по 1: 54, 55, 56.",
+  "fa": "10 تایی بپر: 34, 44, 54. 1 تایی بپر: 54, 55, 56."
  },
  "sprong van 10": {
   "en": "jump of 10",
@@ -2228,7 +2505,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "стрибок на 10",
   "tr": "10'luk atlama",
   "ro": "săritură de 10",
-  "bg": "скок с 10"
+  "bg": "скок с 10",
+  "fa": "پرش 10 تایی"
  },
  "Tien erbij in één keer.": {
   "en": "Add ten in one go.",
@@ -2236,7 +2514,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Десять більше за один раз.",
   "tr": "Bir kerede on ekle.",
   "ro": "Zece în plus dintr-o dată.",
-  "bg": "Десет в повече наведнъж."
+  "bg": "Десет в повече наведнъж.",
+  "fa": "ده تا را یک‌جا اضافه کن."
  },
  "Tientallen erbij: het eerste cijfer wordt groter. Eenheden erbij: het tweede cijfer.": {
   "en": "Adding tens: the first digit gets bigger. Adding ones: the second digit.",
@@ -2244,7 +2523,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додаєш десятки: перша цифра стає більшою. Додаєш одиниці: друга цифра.",
   "tr": "Onluk eklersen: ilk rakam büyür. Birlik eklersen: ikinci rakam.",
   "ro": "Aduni zeci: prima cifră devine mai mare. Aduni unități: a doua cifră.",
-  "bg": "Прибавяш десетици: първата цифра става по-голяма. Прибавяш единици: втората цифра."
+  "bg": "Прибавяш десетици: първата цифра става по-голяма. Прибавяш единици: втората цифра.",
+  "fa": "اضافه کردن دهگان: رقم اول بزرگ‌تر می‌شود. اضافه کردن یکان: رقم دوم."
  },
  "Grote sprongen eerst (10), dan kleine (1).": {
   "en": "Big jumps first (10), then small ones (1).",
@@ -2252,7 +2532,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку великі стрибки (10), потім малі (1).",
   "tr": "Önce büyük atlamalar (10), sonra küçük (1).",
   "ro": "Mai întâi săriturile mari (10), apoi cele mici (1).",
-  "bg": "Първо големите скокове (10), после малките (1)."
+  "bg": "Първо големите скокове (10), после малките (1).",
+  "fa": "اول پرش‌های بزرگ (10)، بعد پرش‌های کوچک (1)."
  },
  "Eerst tientallen, dan eenheden.": {
   "en": "First tens, then ones.",
@@ -2260,7 +2541,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку десятки, потім одиниці.",
   "tr": "Önce onluklar, sonra birlikler.",
   "ro": "Mai întâi zeci, apoi unități.",
-  "bg": "Първо десетици, после единици."
+  "bg": "Първо десетици, после единици.",
+  "fa": "اول دهگان‌ها، بعد یکان‌ها."
  },
  "Spring met 10, dan met 1.": {
   "en": "Jump by 10, then by 1.",
@@ -2268,7 +2550,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стрибай по 10, потім по 1.",
   "tr": "10'ar atla, sonra 1'er.",
   "ro": "Sari cu 10, apoi cu 1.",
-  "bg": "Скачай по 10, после по 1."
+  "bg": "Скачай по 10, после по 1.",
+  "fa": "با 10 بپر، بعد با 1."
  },
  "Eerst 10 erbij.": {
   "en": "First add 10.",
@@ -2276,7 +2559,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку додай 10.",
   "tr": "Önce 10 ekle.",
   "ro": "Mai întâi adună 10.",
-  "bg": "Първо прибави 10."
+  "bg": "Първо прибави 10.",
+  "fa": "اول 10 تا اضافه کن."
  },
  "Eraf is **terug springen**.\n\nEerst met **10**: 56 − 20 = 36.\nDan met **1**: 36 − 4 = 32.\n\nHet getal wordt **kleiner**.": {
   "en": "Taking away is **jumping back**.\n\nFirst by **10**: 56 − 20 = 36.\nThen by **1**: 36 − 4 = 32.\n\nThe number gets **smaller**.",
@@ -2284,7 +2568,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Віднімати — це **стрибати назад**.\n\nСпочатку по **10**: 56 − 20 = 36.\nПотім по **1**: 36 − 4 = 32.\n\nЧисло стає **меншим**.",
   "tr": "Çıkarmak **geri atlamaktır**.\n\nÖnce **10** ile: 56 − 20 = 36.\nSonra **1** ile: 36 − 4 = 32.\n\nSayı **küçülür**.",
   "ro": "A scădea înseamnă **a sări înapoi**.\n\nMai întâi cu **10**: 56 − 20 = 36.\nApoi cu **1**: 36 − 4 = 32.\n\nNumărul devine **mai mic**.",
-  "bg": "Изваждането е **скачане назад**.\n\nПърво по **10**: 56 − 20 = 36.\nПосле по **1**: 36 − 4 = 32.\n\nЧислото става **по-малко**."
+  "bg": "Изваждането е **скачане назад**.\n\nПърво по **10**: 56 − 20 = 36.\nПосле по **1**: 36 − 4 = 32.\n\nЧислото става **по-малко**.",
+  "fa": "کم کردن یعنی **به عقب پریدن**.\n\nاول با **10**: 56 − 20 = 36.\nبعد با **1**: 36 − 4 = 32.\n\nعدد **کوچک‌تر** می‌شود."
  },
  "Eerst de tientallen eraf, dan de eenheden.": {
   "en": "First take away the tens, then the ones.",
@@ -2292,7 +2577,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку відніми десятки, потім одиниці.",
   "tr": "Önce onlukları çıkar, sonra birlikleri.",
   "ro": "Mai întâi scade zecile, apoi unitățile.",
-  "bg": "Първо извади десетиците, после единиците."
+  "bg": "Първо извади десетиците, после единиците.",
+  "fa": "اول دهگان‌ها را کم کن، بعد یکان‌ها را."
  },
  "Tientallen eraf": {
   "en": "Taking away tens",
@@ -2300,7 +2586,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Відняти десятки",
   "tr": "Onlukları çıkar",
   "ro": "Scădem zeci",
-  "bg": "Изваждане на десетици"
+  "bg": "Изваждане на десетици",
+  "fa": "کم کردن دهگان‌ها"
  },
  "56 − 20. Spring **terug met 10**: 56, 46, 36. Antwoord **36**.": {
   "en": "56 − 20. Jump **back by 10**: 56, 46, 36. Answer **36**.",
@@ -2308,7 +2595,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "56 − 20. Стрибай **назад по 10**: 56, 46, 36. Відповідь **36**.",
   "tr": "56 − 20. **10'ar geri** atla: 56, 46, 36. Cevap **36**.",
   "ro": "56 − 20. Sari **înapoi cu 10**: 56, 46, 36. Răspuns **36**.",
-  "bg": "56 − 20. Скачай **назад по 10**: 56, 46, 36. Отговор **36**."
+  "bg": "56 − 20. Скачай **назад по 10**: 56, 46, 36. Отговор **36**.",
+  "fa": "56 − 20. **با 10 به عقب** بپر: 56، 46، 36. جواب **36**."
  },
  "Eenheden eraf": {
   "en": "Taking away ones",
@@ -2316,7 +2604,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Відняти одиниці",
   "tr": "Birlikleri çıkar",
   "ro": "Scădem unități",
-  "bg": "Изваждане на единици"
+  "bg": "Изваждане на единици",
+  "fa": "کم کردن یکان‌ها"
  },
  "56 − 4. Tel **terug met 1**: 55, 54, 53, 52. Antwoord **52**.": {
   "en": "56 − 4. Count **back by 1**: 55, 54, 53, 52. Answer **52**.",
@@ -2324,7 +2613,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "56 − 4. Лічи **назад по 1**: 55, 54, 53, 52. Відповідь **52**.",
   "tr": "56 − 4. **1'er geri** say: 55, 54, 53, 52. Cevap **52**.",
   "ro": "56 − 4. Numără **înapoi cu 1**: 55, 54, 53, 52. Răspuns **52**.",
-  "bg": "56 − 4. Брой **назад по 1**: 55, 54, 53, 52. Отговор **52**."
+  "bg": "56 − 4. Брой **назад по 1**: 55, 54, 53, 52. Отговор **52**.",
+  "fa": "56 − 4. **با 1 به عقب** بشمار: 55، 54، 53، 52. جواب **52**."
  },
  "Het wordt kleiner": {
   "en": "It gets smaller",
@@ -2332,7 +2622,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стає менше",
   "tr": "Küçülür",
   "ro": "Devine mai mic",
-  "bg": "Става по-малко"
+  "bg": "Става по-малко",
+  "fa": "کوچک‌تر می‌شود"
  },
  "Bij eraf wordt het getal **kleiner**. Groter? Dan klopt het niet.": {
   "en": "When you take away, the number gets **smaller**. Bigger? Then it is wrong.",
@@ -2340,7 +2631,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Коли віднімаєш, число стає **меншим**. Більше? Тоді це неправильно.",
   "tr": "Çıkarınca sayı **küçülür**. Büyüdü mü? O zaman doğru değil.",
   "ro": "Când scazi, numărul devine **mai mic**. Mai mare? Atunci nu este corect.",
-  "bg": "При изваждане числото става **по-малко**. По-голямо? Тогава не е вярно."
+  "bg": "При изваждане числото става **по-малко**. По-голямо? Тогава не е вярно.",
+  "fa": "وقتی کم می‌کنی، عدد **کوچک‌تر** می‌شود. بزرگ‌تر شد؟ پس درست نیست."
  },
  "terug springen": {
   "en": "jumping back",
@@ -2348,7 +2640,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "стрибати назад",
   "tr": "geri atlamak",
   "ro": "a sări înapoi",
-  "bg": "скачане назад"
+  "bg": "скачане назад",
+  "fa": "به عقب پریدن"
  },
  "Tien eraf in één keer.": {
   "en": "Take away ten in one go.",
@@ -2356,7 +2649,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Десять менше за один раз.",
   "tr": "Bir kerede on çıkar.",
   "ro": "Zece mai puțin dintr-o dată.",
-  "bg": "Десет по-малко наведнъж."
+  "bg": "Десет по-малко наведнъж.",
+  "fa": "ده تا را یک‌جا کم کن."
  },
  "Eraf = terug springen. Eerst met 10, dan met 1.": {
   "en": "Taking away = jumping back. First by 10, then by 1.",
@@ -2364,7 +2658,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Відняти = стрибати назад. Спочатку по 10, потім по 1.",
   "tr": "Çıkarmak = geri atlamak. Önce 10 ile, sonra 1 ile.",
   "ro": "A scădea = a sări înapoi. Mai întâi cu 10, apoi cu 1.",
-  "bg": "Изваждане = скачане назад. Първо по 10, после по 1."
+  "bg": "Изваждане = скачане назад. Първо по 10, после по 1.",
+  "fa": "کم کردن = به عقب پریدن. اول با 10، بعد با 1."
  },
  "Spring terug op de getallenlijn.": {
   "en": "Jump back on the number line.",
@@ -2372,7 +2667,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стрибай назад на числовій прямій.",
   "tr": "Sayı doğrusunda geri atla.",
   "ro": "Sari înapoi pe linia numerelor.",
-  "bg": "Скачай назад по числовата линия."
+  "bg": "Скачай назад по числовата линия.",
+  "fa": "روی محور اعداد به عقب بپر."
  },
  "Eerst tientallen eraf, dan eenheden.": {
   "en": "First take away tens, then ones.",
@@ -2380,7 +2676,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку відніми десятки, потім одиниці.",
   "tr": "Önce onlukları çıkar, sonra birlikleri.",
   "ro": "Mai întâi scade zecile, apoi unitățile.",
-  "bg": "Първо извади десетици, после единици."
+  "bg": "Първо извади десетици, после единици.",
+  "fa": "اول دهگان‌ها را کم کن، بعد یکان‌ها را."
  },
  "Spring terug met 10, dan met 1.": {
   "en": "Jump back by 10, then by 1.",
@@ -2388,7 +2685,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Стрибай назад по 10, потім по 1.",
   "tr": "10'ar geri atla, sonra 1'er.",
   "ro": "Sari înapoi cu 10, apoi cu 1.",
-  "bg": "Скачай назад по 10, после по 1."
+  "bg": "Скачай назад по 10, после по 1.",
+  "fa": "با 10 به عقب بپر، بعد با 1."
  },
  "Eerst 10 eraf.": {
   "en": "First take away 10.",
@@ -2396,7 +2694,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку відніми 10.",
   "tr": "Önce 10 çıkar.",
   "ro": "Mai întâi scade 10.",
-  "bg": "Първо извади 10."
+  "bg": "Първо извади 10.",
+  "fa": "اول 10 تا کم کن."
  },
  "38 + 5 gaat over de 40 heen. Dat doen we in **twee stapjes**.\n\nStap 1: maak het tiental vol. 38 + 2 = 40.\nStap 2: de rest erbij. 40 + 3 = **43**.\n\nBij eraf: ga eerst naar het ronde getal, dan de rest eraf.": {
   "en": "38 + 5 goes past 40. We do that in **two small steps**.\n\nStep 1: fill up the ten. 38 + 2 = 40.\nStep 2: add the rest. 40 + 3 = **43**.\n\nWhen taking away: go to the round number first, then take away the rest.",
@@ -2404,7 +2703,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "38 + 5 переходить через 40. Це ми робимо у **два кроки**.\n\nКрок 1: доповни десяток. 38 + 2 = 40.\nКрок 2: додай решту. 40 + 3 = **43**.\n\nКоли віднімаєш: спочатку дійди до круглого числа, потім відніми решту.",
   "tr": "38 + 5, 40'ı geçer. Bunu **iki küçük adımda** yaparız.\n\nAdım 1: onluğu tamamla. 38 + 2 = 40.\nAdım 2: kalanı ekle. 40 + 3 = **43**.\n\nÇıkarırken: önce yuvarlak sayıya git, sonra kalanı çıkar.",
   "ro": "38 + 5 trece peste 40. Facem asta în **doi pași mici**.\n\nPasul 1: umple zecea. 38 + 2 = 40.\nPasul 2: adună restul. 40 + 3 = **43**.\n\nLa scădere: mergi mai întâi la numărul rotund, apoi scade restul.",
-  "bg": "38 + 5 минава през 40. Правим го на **две малки стъпки**.\n\nСтъпка 1: допълни десетицата. 38 + 2 = 40.\nСтъпка 2: прибави остатъка. 40 + 3 = **43**.\n\nПри изваждане: първо стигни до кръглото число, после извади остатъка."
+  "bg": "38 + 5 минава през 40. Правим го на **две малки стъпки**.\n\nСтъпка 1: допълни десетицата. 38 + 2 = 40.\nСтъпка 2: прибави остатъка. 40 + 3 = **43**.\n\nПри изваждане: първо стигни до кръглото число, после извади остатъка.",
+  "fa": "38 + 5 از 40 رد می‌شود. این را در **دو قدم کوچک** انجام می‌دهیم.\n\nقدم 1: دهگان را کامل کن. 38 + 2 = 40.\nقدم 2: باقی را اضافه کن. 40 + 3 = **43**.\n\nدر کم کردن: اول به عدد گرد برو، بعد باقی را کم کن."
  },
  "Maak eerst het tiental vol: 29 + 1 = 30. Dan nog 3 erbij.": {
   "en": "Fill up the ten first: 29 + 1 = 30. Then add 3 more.",
@@ -2412,7 +2712,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку доповни десяток: 29 + 1 = 30. Потім додай ще 3.",
   "tr": "Önce onluğu tamamla: 29 + 1 = 30. Sonra 3 daha ekle.",
   "ro": "Umple mai întâi zecea: 29 + 1 = 30. Apoi încă 3.",
-  "bg": "Първо допълни десетицата: 29 + 1 = 30. После още 3."
+  "bg": "Първо допълни десетицата: 29 + 1 = 30. После още 3.",
+  "fa": "اول دهگان را کامل کن: 29 + 1 = 30. بعد 3 تای دیگر اضافه کن."
  },
  "Eerst het tiental vol": {
   "en": "First fill up the ten",
@@ -2420,7 +2721,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку доповни десяток",
   "tr": "Önce onluğu tamamla",
   "ro": "Mai întâi umple zecea",
-  "bg": "Първо допълни десетицата"
+  "bg": "Първо допълни десетицата",
+  "fa": "اول دهگان را کامل کن"
  },
  "38 + 5. Maak eerst **40**: 38 + 2 = 40. Je had 5, je hebt 2 gebruikt. Er blijft 3 over. 40 + 3 = **43**.": {
   "en": "38 + 5. Make **40** first: 38 + 2 = 40. You had 5, you used 2. 3 are left. 40 + 3 = **43**.",
@@ -2428,7 +2730,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "38 + 5. Спочатку зроби **40**: 38 + 2 = 40. У тебе було 5, ти використав 2. Залишилося 3. 40 + 3 = **43**.",
   "tr": "38 + 5. Önce **40** yap: 38 + 2 = 40. 5'in vardı, 2'sini kullandın. 3 kaldı. 40 + 3 = **43**.",
   "ro": "38 + 5. Fă mai întâi **40**: 38 + 2 = 40. Aveai 5, ai folosit 2. Rămân 3. 40 + 3 = **43**.",
-  "bg": "38 + 5. Първо направи **40**: 38 + 2 = 40. Имаше 5, използва 2. Остават 3. 40 + 3 = **43**."
+  "bg": "38 + 5. Първо направи **40**: 38 + 2 = 40. Имаше 5, използва 2. Остават 3. 40 + 3 = **43**.",
+  "fa": "38 + 5. اول **40** بساز: 38 + 2 = 40. تو 5 تا داشتی، 2 تا را استفاده کردی. 3 تا باقی می‌ماند. 40 + 3 = **43**."
  },
  "Knip het kleine getal in **twee stukjes**. Eén stukje maakt het tiental vol.": {
   "en": "Cut the small number into **two pieces**. One piece fills up the ten.",
@@ -2436,7 +2739,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Розріж менше число на **дві частини**. Одна частина доповнює десяток.",
   "tr": "Küçük sayıyı **iki parçaya** böl. Bir parça onluğu tamamlar.",
   "ro": "Taie numărul mic în **două bucăți**. O bucată umple zecea.",
-  "bg": "Раздели малкото число на **две части**. Едната част допълва десетицата."
+  "bg": "Раздели малкото число на **две части**. Едната част допълва десетицата.",
+  "fa": "عدد کوچک را **دو تکه** کن. یک تکه دهگان را کامل می‌کند."
  },
  "Bij eraf net zo": {
   "en": "Taking away works the same",
@@ -2444,7 +2748,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "З відніманням так само",
   "tr": "Çıkarırken de aynı",
   "ro": "La scădere la fel",
-  "bg": "При изваждане е същото"
+  "bg": "При изваждане е същото",
+  "fa": "در کم کردن هم همین‌طور"
  },
  "43 − 5. Ga eerst naar **40**: 43 − 3 = 40. Dan nog 2 eraf: **38**.": {
   "en": "43 − 5. Go to **40** first: 43 − 3 = 40. Then take away 2 more: **38**.",
@@ -2452,7 +2757,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "43 − 5. Спочатку дійди до **40**: 43 − 3 = 40. Потім відніми ще 2: **38**.",
   "tr": "43 − 5. Önce **40**'a git: 43 − 3 = 40. Sonra 2 daha çıkar: **38**.",
   "ro": "43 − 5. Mergi mai întâi la **40**: 43 − 3 = 40. Apoi scade încă 2: **38**.",
-  "bg": "43 − 5. Първо стигни до **40**: 43 − 3 = 40. После извади още 2: **38**."
+  "bg": "43 − 5. Първо стигни до **40**: 43 − 3 = 40. После извади още 2: **38**.",
+  "fa": "43 − 5. اول به **40** برو: 43 − 3 = 40. بعد 2 تای دیگر کم کن: **38**."
  },
  "tiental vol": {
   "en": "ten full",
@@ -2460,7 +2766,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "повний десяток",
   "tr": "onluğu tamamla",
   "ro": "zecea plină",
-  "bg": "пълна десетица"
+  "bg": "пълна десетица",
+  "fa": "دهگان کامل"
  },
  "Naar 10, 20, 30, 40…": {
   "en": "To 10, 20, 30, 40…",
@@ -2468,7 +2775,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "До 10, 20, 30, 40…",
   "tr": "10, 20, 30, 40… sayısına kadar.",
   "ro": "La 10, 20, 30, 40…",
-  "bg": "До 10, 20, 30, 40…"
+  "bg": "До 10, 20, 30, 40…",
+  "fa": "تا 10، 20، 30، 40…"
  },
  "Over het tiental: eerst naar het ronde getal, dan de rest.": {
   "en": "Past the ten: first to the round number, then the rest.",
@@ -2476,7 +2784,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Через десяток: спочатку до круглого числа, потім решта.",
   "tr": "Onluğu geçmek: önce yuvarlak sayıya, sonra kalan.",
   "ro": "Peste zece: mai întâi la numărul rotund, apoi restul.",
-  "bg": "През десетицата: първо до кръглото число, после остатъка."
+  "bg": "През десетицата: първо до кръглото число, после остатъка.",
+  "fa": "رد شدن از دهگان: اول تا عدد گرد، بعد باقی."
  },
  "Het ronde getal is een tussenstop.": {
   "en": "The round number is a stop on the way.",
@@ -2484,7 +2793,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Кругле число — це зупинка посередині.",
   "tr": "Yuvarlak sayı bir ara duraktır.",
   "ro": "Numărul rotund este o oprire pe drum.",
-  "bg": "Кръглото число е спирка по пътя."
+  "bg": "Кръглото число е спирка по пътя.",
+  "fa": "عدد گرد یک ایستگاه وسط راه است."
  },
  "Eerst naar het ronde getal, dan de rest.": {
   "en": "First to the round number, then the rest.",
@@ -2492,7 +2802,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку до круглого числа, потім решта.",
   "tr": "Önce yuvarlak sayıya, sonra kalanı.",
   "ro": "Mai întâi la numărul rotund, apoi restul.",
-  "bg": "Първо до кръглото число, после остатъка."
+  "bg": "Първо до кръглото число, после остатъка.",
+  "fa": "اول تا عدد گرد، بعد باقی."
  },
  "Knip het getal in twee stukjes.": {
   "en": "Cut the number into two pieces.",
@@ -2500,7 +2811,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Розріж число на дві частини.",
   "tr": "Sayıyı iki parçaya böl.",
   "ro": "Taie numărul în două bucăți.",
-  "bg": "Раздели числото на две части."
+  "bg": "Раздели числото на две части.",
+  "fa": "عدد را دو تکه کن."
  },
  "Eerst naar 40.": {
   "en": "First to 40.",
@@ -2508,7 +2820,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку до 40.",
   "tr": "Önce 40'a.",
   "ro": "Mai întâi la 40.",
-  "bg": "Първо до 40."
+  "bg": "Първо до 40.",
+  "fa": "اول تا 40."
  },
  "Ga eerst naar het tiental: 43 − 3 = 40. Dan nog 6 eraf.": {
   "en": "Go to the ten first: 43 − 3 = 40. Then take away 6 more.",
@@ -2516,7 +2829,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку дійди до десятка: 43 − 3 = 40. Потім відніми ще 6.",
   "tr": "Önce onluğa git: 43 − 3 = 40. Sonra 6 daha çıkar.",
   "ro": "Mergi mai întâi la zece: 43 − 3 = 40. Apoi scade încă 6.",
-  "bg": "Първо стигни до десетицата: 43 − 3 = 40. После извади още 6."
+  "bg": "Първо стигни до десетицата: 43 − 3 = 40. После извади още 6.",
+  "fa": "اول تا دهگان برو: 43 − 3 = 40. بعد 6 تای دیگر کم کن."
  },
  "Maak eerst het tiental vol: 42 + 8 = 50. Dan nog 0 erbij.": {
   "en": "Fill up the ten first: 42 + 8 = 50. Then add 0 more.",
@@ -2524,7 +2838,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку доповни десяток: 42 + 8 = 50. Потім додай ще 0.",
   "tr": "Önce onluğu tamamla: 42 + 8 = 50. Sonra 0 ekle.",
   "ro": "Umple mai întâi zecea: 42 + 8 = 50. Apoi încă 0.",
-  "bg": "Първо допълни десетицата: 42 + 8 = 50. После още 0."
+  "bg": "Първо допълни десетицата: 42 + 8 = 50. После още 0.",
+  "fa": "اول دهگان را کامل کن: 42 + 8 = 50. بعد 0 تای دیگر اضافه کن."
  },
  "Ga eerst naar het tiental: 73 − 3 = 70. Dan nog 3 eraf.": {
   "en": "Go to the ten first: 73 − 3 = 70. Then take away 3 more.",
@@ -2532,7 +2847,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку дійди до десятка: 73 − 3 = 70. Потім відніми ще 3.",
   "tr": "Önce onluğa git: 73 − 3 = 70. Sonra 3 daha çıkar.",
   "ro": "Mergi mai întâi la zece: 73 − 3 = 70. Apoi scade încă 3.",
-  "bg": "Първо стигни до десетицата: 73 − 3 = 70. После извади още 3."
+  "bg": "Първо стигни до десетицата: 73 − 3 = 70. После извади още 3.",
+  "fa": "اول تا دهگان برو: 73 − 3 = 70. بعد 3 تای دیگر کم کن."
  },
  "Maak eerst het tiental vol: 21 + 9 = 30. Dan nog 0 erbij.": {
   "en": "Fill up the ten first: 21 + 9 = 30. Then add 0 more.",
@@ -2540,7 +2856,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Спочатку доповни десяток: 21 + 9 = 30. Потім додай ще 0.",
   "tr": "Önce onluğu tamamla: 21 + 9 = 30. Sonra 0 ekle.",
   "ro": "Umple mai întâi zecea: 21 + 9 = 30. Apoi încă 0.",
-  "bg": "Първо допълни десетицата: 21 + 9 = 30. После още 0."
+  "bg": "Първо допълни десетицата: 21 + 9 = 30. После още 0.",
+  "fa": "اول دهگان را کامل کن: 21 + 9 = 30. بعد 0 تای دیگر اضافه کن."
  },
  "Sommen met **woorden** en **geld**.\n\n**Samen** = plus. **Uitgeven, weg, over** = min.\n\nSchrijf de som op. Reken in stapjes.": {
   "en": "Sums with **words** and **money**.\n\n**Samen** (together) = plus. **Uitgeven, weg, over** (spend, away, left) = minus.\n\nWrite the sum down. Work it out in small steps.",
@@ -2548,7 +2865,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Задачі зі **словами** і **грошима**.\n\n**Samen** (= разом) = плюс. **Uitgeven, weg, over** (= витратити, геть, залишилося) = мінус.\n\nЗапиши приклад. Рахуй кроками.",
   "tr": "**Kelimelerle** ve **parayla** işlemler.\n\n**Samen** (= birlikte) = artı. **Uitgeven, weg, over** (= harcamak, gitti, kalan) = eksi.\n\nİşlemi yaz. Adım adım hesapla.",
   "ro": "Probleme cu **cuvinte** și **bani**.\n\n**Samen** (= împreună) = plus. **Uitgeven, weg, over** (= a cheltui, plecat, rămas) = minus.\n\nScrie exercițiul. Calculează în pași mici.",
-  "bg": "Задачи с **думи** и **пари**.\n\n**Samen** (= заедно) = плюс. **Uitgeven, weg, over** (= харча, няма го, остава) = минус.\n\nЗапиши задачата. Смятай на стъпки."
+  "bg": "Задачи с **думи** и **пари**.\n\n**Samen** (= заедно) = плюс. **Uitgeven, weg, over** (= харча, няма го, остава) = минус.\n\nЗапиши задачата. Смятай на стъпки.",
+  "fa": "مسئله با **کلمه‌ها** و **پول**.\n\n**Samen** (با هم) = جمع. **Uitgeven, weg, over** (خرج کردن، رفته، باقی‌مانده) = تفریق.\n\nمسئله را بنویس. قدم به قدم حساب کن."
  },
  "Lees de som nog een keer. Samen = plus. Weg, uit, over = min.": {
   "en": "Read the sum one more time. \"Samen\" (together) = plus. \"Weg, uit, over\" (away, spend, left) = minus.",
@@ -2556,7 +2874,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Прочитай задачу ще раз. «Samen» (= разом) = плюс. «Weg, uit, over» (= геть, витратити, залишилося) = мінус.",
   "tr": "İşlemi bir kez daha oku. \"Samen\" (birlikte) = artı. \"Weg, uit, over\" (gitti, harcadı, kalan) = eksi.",
   "ro": "Citește problema încă o dată. „Samen” (= împreună) = plus. „Weg, uit, over” (= plecat, cheltuit, rămas) = minus.",
-  "bg": "Прочети задачата още веднъж. „Samen“ (= заедно) = плюс. „Weg, uit, over“ (= няма го, харча, остава) = минус."
+  "bg": "Прочети задачата още веднъж. „Samen“ (= заедно) = плюс. „Weg, uit, over“ (= няма го, харча, остава) = минус.",
+  "fa": "مسئله را یک بار دیگر بخوان. \"Samen\" (با هم) = جمع. \"Weg, uit, over\" (رفته، خرج، باقی‌مانده) = تفریق."
  },
  "Plus of min?": {
   "en": "Plus or minus?",
@@ -2564,7 +2883,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Плюс чи мінус?",
   "tr": "Artı mı eksi mi?",
   "ro": "Plus sau minus?",
-  "bg": "Плюс или минус?"
+  "bg": "Плюс или минус?",
+  "fa": "جمع یا تفریق؟"
  },
  "**Samen** betekent **plus**. 12 euro en 15 euro samen: 12 + 15.": {
   "en": "**Samen** (together) means **plus**. 12 euros and 15 euros together: 12 + 15.",
@@ -2572,7 +2892,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Samen** (= разом) означає **плюс**. 12 євро і 15 євро разом: 12 + 15.",
   "tr": "**Samen** (= birlikte) **artı** demektir. 12 euro ve 15 euro birlikte: 12 + 15.",
   "ro": "**Samen** (= împreună) înseamnă **plus**. 12 euro și 15 euro împreună: 12 + 15.",
-  "bg": "**Samen** (= заедно) означава **плюс**. 12 евро и 15 евро заедно: 12 + 15."
+  "bg": "**Samen** (= заедно) означава **плюс**. 12 евро и 15 евро заедно: 12 + 15.",
+  "fa": "**Samen** (با هم) یعنی **جمع**. 12 یورو و 15 یورو با هم: 12 + 15."
  },
  "Reken in stapjes": {
   "en": "Work it out in steps",
@@ -2580,7 +2901,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Рахуй кроками",
   "tr": "Adım adım hesapla",
   "ro": "Calculează în pași",
-  "bg": "Смятай на стъпки"
+  "bg": "Смятай на стъпки",
+  "fa": "قدم به قدم حساب کن"
  },
  "12 + 15: eerst 12 + 10 = 22. Dan 22 + 5 = **27**.": {
   "en": "12 + 15: first 12 + 10 = 22. Then 22 + 5 = **27**.",
@@ -2588,7 +2910,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "12 + 15: спочатку 12 + 10 = 22. Потім 22 + 5 = **27**.",
   "tr": "12 + 15: önce 12 + 10 = 22. Sonra 22 + 5 = **27**.",
   "ro": "12 + 15: mai întâi 12 + 10 = 22. Apoi 22 + 5 = **27**.",
-  "bg": "12 + 15: първо 12 + 10 = 22. После 22 + 5 = **27**."
+  "bg": "12 + 15: първо 12 + 10 = 22. После 22 + 5 = **27**.",
+  "fa": "12 + 15: اول 12 + 10 = 22. بعد 22 + 5 = **27**."
  },
  "Check": {
   "en": "Check",
@@ -2596,7 +2919,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Перевір",
   "tr": "Kontrol et",
   "ro": "Verifică",
-  "bg": "Провери"
+  "bg": "Провери",
+  "fa": "بررسی"
  },
  "Samen moet **meer** zijn dan elk los getal. 27 is meer dan 12 en meer dan 15. Klopt.": {
   "en": "Together must be **more** than each number on its own. 27 is more than 12 and more than 15. Correct.",
@@ -2604,7 +2928,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Разом має бути **більше**, ніж кожне окреме число. 27 більше за 12 і більше за 15. Правильно.",
   "tr": "Birlikte, her bir sayıdan **daha çok** olmalı. 27, 12'den ve 15'ten çok. Doğru.",
   "ro": "Împreună trebuie să fie **mai mult** decât fiecare număr singur. 27 este mai mult decât 12 și mai mult decât 15. Corect.",
-  "bg": "Заедно трябва да е **повече** от всяко число само. 27 е повече от 12 и повече от 15. Вярно."
+  "bg": "Заедно трябва да е **повече** от всяко число само. 27 е повече от 12 и повече от 15. Вярно.",
+  "fa": "با هم باید **بیشتر** از هر عدد تنها باشد. 27 بیشتر از 12 و بیشتر از 15 است. درست است."
  },
  "Bij elkaar. Plus.": {
   "en": "All together. Plus.",
@@ -2612,7 +2937,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Усе разом. Плюс.",
   "tr": "Bir arada. Artı.",
   "ro": "La un loc. Plus.",
-  "bg": "Всичко заедно. Плюс."
+  "bg": "Всичко заедно. Плюс.",
+  "fa": "همه با هم. جمع."
  },
  "over": {
   "en": "left",
@@ -2620,7 +2946,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "залишилося",
   "tr": "kalan",
   "ro": "rămas",
-  "bg": "остава"
+  "bg": "остава",
+  "fa": "باقی‌مانده"
  },
  "Wat je nog hebt. Min.": {
   "en": "What you still have. Minus.",
@@ -2628,7 +2955,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Те, що в тебе ще є. Мінус.",
   "tr": "Hâlâ elinde olan. Eksi.",
   "ro": "Ce mai ai. Minus.",
-  "bg": "Това, което още имаш. Минус."
+  "bg": "Това, което още имаш. Минус.",
+  "fa": "چیزی که هنوز داری. تفریق."
  },
  "Samen = plus. Uitgeven, weg, over = min.": {
   "en": "\"Samen\" (together) = plus. \"Uitgeven, weg, over\" (spend, away, left) = minus.",
@@ -2636,7 +2964,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "«Samen» (= разом) = плюс. «Uitgeven, weg, over» (= витратити, геть, залишилося) = мінус.",
   "tr": "\"Samen\" (birlikte) = artı. \"Uitgeven, weg, over\" (harcamak, gitti, kalan) = eksi.",
   "ro": "„Samen” (= împreună) = plus. „Uitgeven, weg, over” (= a cheltui, plecat, rămas) = minus.",
-  "bg": "„Samen“ (= заедно) = плюс. „Uitgeven, weg, over“ (= харча, няма го, остава) = минус."
+  "bg": "„Samen“ (= заедно) = плюс. „Uitgeven, weg, over“ (= харча, няма го, остава) = минус.",
+  "fa": "\"Samen\" (با هم) = جمع. \"Uitgeven, weg, over\" (خرج کردن، رفته، باقی‌مانده) = تفریق."
  },
  "Zoek het woord: samen of weg.": {
   "en": "Find the word: \"samen\" (together) or \"weg\" (away).",
@@ -2644,7 +2973,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Знайди слово: «samen» (= разом) чи «weg» (= геть).",
   "tr": "Kelimeyi bul: \"samen\" (birlikte) mi, \"weg\" (gitti) mi.",
   "ro": "Caută cuvântul: „samen” (= împreună) sau „weg” (= plecat).",
-  "bg": "Намери думата: „samen“ (= заедно) или „weg“ (= няма го)."
+  "bg": "Намери думата: „samen“ (= заедно) или „weg“ (= няма го).",
+  "fa": "کلمه را پیدا کن: \"samen\" (با هم) یا \"weg\" (رفته)."
  },
  "Samen = plus.": {
   "en": "\"Samen\" (together) = plus.",
@@ -2652,7 +2982,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Разом («samen») = плюс.",
   "tr": "\"Samen\" (birlikte) = artı.",
   "ro": "Împreună („samen”) = plus.",
-  "bg": "Заедно („samen“) = плюс."
+  "bg": "Заедно („samen“) = плюс.",
+  "fa": "\"Samen\" (با هم) = جمع."
  },
  "Twee dingen bij elkaar = plus.": {
   "en": "Two things together = plus.",
@@ -2660,7 +2991,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Дві речі разом = плюс.",
   "tr": "İki şey bir arada = artı.",
   "ro": "Două lucruri la un loc = plus.",
-  "bg": "Две неща заедно = плюс."
+  "bg": "Две неща заедно = плюс.",
+  "fa": "دو چیز با هم = جمع."
  },
  "Plus.": {
   "en": "Plus.",
@@ -2668,7 +3000,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Плюс.",
   "tr": "Artı.",
   "ro": "Plus.",
-  "bg": "Плюс."
+  "bg": "Плюс.",
+  "fa": "جمع."
  },
  "Hoe voel je je?": {
   "en": "How do you feel?",
@@ -2676,7 +3009,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Як ти почуваєшся?",
   "tr": "Nasıl hissediyorsun?",
   "ro": "Cum te simți?",
-  "bg": "Как се чувстваш?"
+  "bg": "Как се чувстваш?",
+  "fa": "چه حسی داری؟"
  },
  "Zeggen hoe je je **voelt** mag **altijd**.\n\n**Ik ben** blij · bang · boos · moe · verdrietig.\n**Ik heb** pijn · honger.\n**Ik voel me niet goed.**\n\nDe juf of meester wil het weten en helpt je.": {
   "en": "Saying how you **voelt** (feel) is **altijd** (always) okay.\n\n**Ik ben** (I am) happy · scared · angry · tired · sad.\n**Ik heb** (I have) pain · hunger.\n**Ik voel me niet goed.** (I don't feel good.)\n\nThe teacher wants to know and helps you.",
@@ -2684,7 +3018,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Казати, як ти себе **почуваєш**, можна **завжди**.\n\n**Я** (Ik ben) радий · наляканий · сердитий · втомлений · сумний.\n**У мене** (Ik heb) біль · голод.\n**Мені погано.** (Ik voel me niet goed.)\n\nВчителька або вчитель хоче це знати і допоможе тобі.",
   "tr": "Nasıl **hissettiğini** söylemek **her zaman** serbest.\n\n**Ben** (Ik ben) mutluyum · korkuyorum · kızgınım · yorgunum · üzgünüm.\n**Benim** (Ik heb) ağrım var · karnım aç.\n**Kendimi iyi hissetmiyorum.** (Ik voel me niet goed.)\n\nÖğretmen bunu bilmek ister ve sana yardım eder.",
   "ro": "Să spui cum te **simți** este **întotdeauna** voie.\n\n**Ik ben** (= Eu sunt) fericit · speriat · supărat · obosit · trist.\n**Ik heb** (= Eu am) durere · foame.\n**Ik voel me niet goed.** (= Nu mă simt bine.)\n\nDoamna sau domnul învățător vrea să știe și te ajută.",
-  "bg": "Да кажеш как се **чувстваш** винаги **може**.\n\n**Ik ben** (= Аз съм) радостен · уплашен · ядосан · уморен · тъжен.\n**Ik heb** (= Аз имам) болка · глад.\n**Ik voel me niet goed.** (= Не се чувствам добре.)\n\nУчителката или учителят иска да знае и ще ти помогне."
+  "bg": "Да кажеш как се **чувстваш** винаги **може**.\n\n**Ik ben** (= Аз съм) радостен · уплашен · ядосан · уморен · тъжен.\n**Ik heb** (= Аз имам) болка · глад.\n**Ik voel me niet goed.** (= Не се чувствам добре.)\n\nУчителката или учителят иска да знае и ще ти помогне.",
+  "fa": "گفتن این‌که چه **حسی** داری **همیشه** اشکالی ندارد.\n\n**Ik ben** (من هستم) خوشحال · ترسیده · عصبانی · خسته · غمگین.\n**Ik heb** (من دارم) درد · گرسنگی.\n**Ik voel me niet goed.** (حالم خوب نیست.)\n\nخانم معلم یا آقای معلم می‌خواهند بداند و به تو کمک می‌کند."
  },
  "Je hoofd doet zeer. Wat zeg je tegen de juf?": {
   "en": "Your head hurts. What do you say to the teacher?",
@@ -2692,7 +3027,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У тебе болить голова. Що ти скажеш учительці?",
   "tr": "Başın ağrıyor. Öğretmene ne dersin?",
   "ro": "Te doare capul. Ce îi spui doamnei învățătoare?",
-  "bg": "Боли те главата. Какво казваш на учителката?"
+  "bg": "Боли те главата. Какво казваш на учителката?",
+  "fa": "سرت درد می‌کند. به خانم معلم چه می‌گویی؟"
  },
  "Zeer doen = pijn. Zeg dat tegen de juf.": {
   "en": "Hurts = pain. Tell that to the teacher.",
@@ -2700,7 +3036,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Боліти (zeer doen) = біль (pijn). Скажи це вчительці.",
   "tr": "Acımak (zeer doen) = ağrı (pijn). Bunu öğretmene söyle.",
   "ro": "A durea (zeer doen) = durere (pijn). Spune asta doamnei învățătoare.",
-  "bg": "Боли (zeer doen) = болка (pijn). Кажи това на учителката."
+  "bg": "Боли (zeer doen) = болка (pijn). Кажи това на учителката.",
+  "fa": "zeer doen = pijn (درد). این را به خانم معلم بگو."
  },
  "Het mag altijd": {
   "en": "It's always okay",
@@ -2708,7 +3045,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Це можна завжди",
   "tr": "Her zaman serbest",
   "ro": "Este întotdeauna voie",
-  "bg": "Винаги може"
+  "bg": "Винаги може",
+  "fa": "همیشه اشکالی ندارد"
  },
  "Zeggen hoe je je **voelt** mag altijd. De juf of meester wil het weten en helpt je.": {
   "en": "Saying how you **voelt** (feel) is always okay. The teacher wants to know and helps you.",
@@ -2716,7 +3054,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Казати, як ти себе **почуваєш**, можна завжди. Вчителька або вчитель хоче це знати і допоможе тобі.",
   "tr": "Nasıl **hissettiğini** söylemek her zaman serbest. Öğretmen bunu bilmek ister ve sana yardım eder.",
   "ro": "Să spui cum te **simți** este întotdeauna voie. Doamna sau domnul învățător vrea să știe și te ajută.",
-  "bg": "Да кажеш как се **чувстваш** винаги може. Учителката или учителят иска да знае и ще ти помогне."
+  "bg": "Да кажеш как се **чувстваш** винаги може. Учителката или учителят иска да знае и ще ти помогне.",
+  "fa": "گفتن این‌که چه **حسی** داری همیشه اشکالی ندارد. خانم معلم یا آقای معلم می‌خواهند بداند و به تو کمک می‌کند."
  },
  "Zo zeg je het": {
   "en": "This is how you say it",
@@ -2724,7 +3063,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Так це кажуть",
   "tr": "Böyle söylersin",
   "ro": "Așa spui",
-  "bg": "Така се казва"
+  "bg": "Така се казва",
+  "fa": "این‌طوری می‌گویی"
  },
  "**Ik heb pijn.** **Ik voel me niet goed.** **Ik ben bang.** **Ik ben moe.**": {
   "en": "**Ik heb pijn.** (I have pain.) **Ik voel me niet goed.** (I don't feel good.) **Ik ben bang.** (I am scared.) **Ik ben moe.** (I am tired.)",
@@ -2732,7 +3072,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**У мене болить.** (Ik heb pijn.) **Мені погано.** (Ik voel me niet goed.) **Мені страшно.** (Ik ben bang.) **Я втомився.** (Ik ben moe.)",
   "tr": "**Ağrım var.** (Ik heb pijn.) **Kendimi iyi hissetmiyorum.** (Ik voel me niet goed.) **Korkuyorum.** (Ik ben bang.) **Yorgunum.** (Ik ben moe.)",
   "ro": "**Mă doare.** (Ik heb pijn.) **Nu mă simt bine.** (Ik voel me niet goed.) **Mi-e frică.** (Ik ben bang.) **Sunt obosit.** (Ik ben moe.)",
-  "bg": "**Боли ме.** (Ik heb pijn.) **Не се чувствам добре.** (Ik voel me niet goed.) **Страх ме е.** (Ik ben bang.) **Уморен съм.** (Ik ben moe.)"
+  "bg": "**Боли ме.** (Ik heb pijn.) **Не се чувствам добре.** (Ik voel me niet goed.) **Страх ме е.** (Ik ben bang.) **Уморен съм.** (Ik ben moe.)",
+  "fa": "**Ik heb pijn.** (درد دارم.) **Ik voel me niet goed.** (حالم خوب نیست.) **Ik ben bang.** (می‌ترسم.) **Ik ben moe.** (خسته‌ام.)"
  },
  "Wijs het aan": {
   "en": "Point at it",
@@ -2740,7 +3081,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Покажи пальцем",
   "tr": "Göster",
   "ro": "Arată cu degetul",
-  "bg": "Посочи с пръст"
+  "bg": "Посочи с пръст",
+  "fa": "به آن اشاره کن"
  },
  "Weet je het woord niet? **Wijs** aan waar het zeer doet. Of tik op de zin voor jouw taal.": {
   "en": "Don't know the word? **Wijs** (Point) at where it hurts. Or tap the sentence for your language.",
@@ -2748,7 +3090,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Не знаєш слова? **Покажи**, де болить. Або натисни на речення, щоб почути свою мову.",
   "tr": "Kelimeyi bilmiyor musun? Nerenin acıdığını **göster**. Ya da kendi dilin için cümleye dokun.",
   "ro": "Nu știi cuvântul? **Arată** unde te doare. Sau apasă pe propoziție pentru limba ta.",
-  "bg": "Не знаеш думата? **Посочи** къде те боли. Или натисни изречението за твоя език."
+  "bg": "Не знаеш думата? **Посочи** къде те боли. Или натисни изречението за твоя език.",
+  "fa": "کلمه را نمی‌دانی؟ جایی را که درد می‌کند **نشان بده**. یا روی جمله بزن تا به زبان خودت ببینی."
  },
  "pijn": {
   "en": "pain",
@@ -2756,7 +3099,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "біль",
   "tr": "ağrı",
   "ro": "durere",
-  "bg": "болка"
+  "bg": "болка",
+  "fa": "درد"
  },
  "Het doet zeer.": {
   "en": "It hurts.",
@@ -2764,7 +3108,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Болить.",
   "tr": "Acıyor.",
   "ro": "Doare.",
-  "bg": "Боли."
+  "bg": "Боли.",
+  "fa": "درد می‌کند."
  },
  "bang": {
   "en": "scared",
@@ -2772,7 +3117,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "наляканий, страшно",
   "tr": "korkmuş",
   "ro": "speriat, frică",
-  "bg": "уплашен, страх"
+  "bg": "уплашен, страх",
+  "fa": "ترسیده"
  },
  "Je bent ergens van geschrokken of je vindt iets eng.": {
   "en": "You got scared of something, or you think something is scary.",
@@ -2780,7 +3126,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти чогось злякався, або щось тобі страшне.",
   "tr": "Bir şeyden irkildin ya da bir şeyi korkutucu buluyorsun.",
   "ro": "Te-ai speriat de ceva sau ceva ți se pare înfricoșător.",
-  "bg": "Уплашил си се от нещо или нещо ти се струва страшно."
+  "bg": "Уплашил си се от нещо или нещо ти се струва страшно.",
+  "fa": "از چیزی ترسیدی یا چیزی به نظرت ترسناک است."
  },
  "verdrietig": {
   "en": "sad",
@@ -2788,7 +3135,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "сумний",
   "tr": "üzgün",
   "ro": "trist",
-  "bg": "тъжен"
+  "bg": "тъжен",
+  "fa": "غمگین"
  },
  "Je bent niet blij; misschien moet je huilen.": {
   "en": "You are not happy; maybe you want to cry.",
@@ -2796,7 +3144,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти не радий; можливо, тобі хочеться плакати.",
   "tr": "Mutlu değilsin; belki ağlaman geliyor.",
   "ro": "Nu ești fericit; poate îți vine să plângi.",
-  "bg": "Не си радостен; може би ти се плаче."
+  "bg": "Не си радостен; може би ти се плаче.",
+  "fa": "خوشحال نیستی؛ شاید بخواهی گریه کنی."
  },
  "Ik ben + gevoel. Ik heb + pijn of honger.": {
   "en": "I am + feeling. I have + pain or hunger.",
@@ -2804,7 +3153,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ik ben (я) + почуття. Ik heb (у мене) + біль або голод.",
   "tr": "Ik ben (ben …im) + duygu. Ik heb (benim … var) + ağrı ya da açlık.",
   "ro": "Ik ben (= eu sunt) + un sentiment. Ik heb (= eu am) + durere sau foame.",
-  "bg": "Ik ben (= аз съм) + чувство. Ik heb (= аз имам) + болка или глад."
+  "bg": "Ik ben (= аз съм) + чувство. Ik heb (= аз имам) + болка или глад.",
+  "fa": "Ik ben (من هستم) + احساس. Ik heb (من دارم) + درد یا گرسنگی."
  },
  "Ik ben blij.": {
   "en": "I am happy.",
@@ -2812,7 +3162,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Я радий.",
   "tr": "Mutluyum.",
   "ro": "Sunt fericit.",
-  "bg": "Радостен съм."
+  "bg": "Радостен съм.",
+  "fa": "من خوشحالم."
  },
  "Ik heb pijn in mijn buik.": {
   "en": "I have pain in my tummy.",
@@ -2820,7 +3171,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У мене болить живіт.",
   "tr": "Karnım ağrıyor.",
   "ro": "Mă doare burta.",
-  "bg": "Боли ме коремът."
+  "bg": "Боли ме коремът.",
+  "fa": "شکمم درد می‌کند."
  },
  "Ik ben bang, blij, boos, moe. Ik heb pijn, honger.": {
   "en": "I am scared, happy, angry, tired. I have pain, hunger.",
@@ -2828,7 +3180,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ik ben (я): наляканий, радий, сердитий, втомлений. Ik heb (у мене): біль, голод.",
   "tr": "Korkuyorum, mutluyum, kızgınım, yorgunum. (Ik ben bang, blij, boos, moe.) Ağrım var, karnım aç. (Ik heb pijn, honger.)",
   "ro": "Ik ben (= eu sunt): speriat, fericit, supărat, obosit. Ik heb (= eu am): durere, foame.",
-  "bg": "Ik ben (= аз съм): уплашен, радостен, ядосан, уморен. Ik heb (= аз имам): болка, глад."
+  "bg": "Ik ben (= аз съм): уплашен, радостен, ядосан, уморен. Ik heb (= аз имам): болка, глад.",
+  "fa": "من ترسیده، خوشحال، عصبانی، خسته هستم. درد دارم، گرسنه‌ام."
  },
  "Zeg: Ik heb pijn.": {
   "en": "Say: Ik heb pijn (I have pain).",
@@ -2836,7 +3189,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скажи: У мене болить. (Ik heb pijn.)",
   "tr": "Söyle: Ağrım var. (Ik heb pijn.)",
   "ro": "Spune: Mă doare. (Ik heb pijn.)",
-  "bg": "Кажи: Боли ме. (Ik heb pijn.)"
+  "bg": "Кажи: Боли ме. (Ik heb pijn.)",
+  "fa": "بگو: Ik heb pijn (درد دارم)."
  },
  "Zeer = pijn.": {
   "en": "Hurts = pain.",
@@ -2844,7 +3198,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Zeer (боляче) = pijn (біль).",
   "tr": "Acı (zeer) = ağrı (pijn).",
   "ro": "Zeer (= doare) = pijn (= durere).",
-  "bg": "Zeer (= боли) = pijn (= болка)."
+  "bg": "Zeer (= боли) = pijn (= болка).",
+  "fa": "zeer = pijn (درد)."
  },
  "Ik heb pijn.": {
   "en": "I have pain.",
@@ -2852,7 +3207,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У мене болить.",
   "tr": "Ağrım var.",
   "ro": "Mă doare.",
-  "bg": "Боли ме."
+  "bg": "Боли ме.",
+  "fa": "درد دارم."
  },
  "Ik heb honger.": {
   "en": "I have hunger.",
@@ -2860,7 +3216,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Я голодний.",
   "tr": "Karnım aç.",
   "ro": "Mi-e foame.",
-  "bg": "Гладен съм."
+  "bg": "Гладен съм.",
+  "fa": "گرسنه‌ام."
  },
  "Ik ben klaar.": {
   "en": "I am done.",
@@ -2868,7 +3225,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Я закінчив.",
   "tr": "Bitirdim.",
   "ro": "Am terminat.",
-  "bg": "Готов съм."
+  "bg": "Готов съм.",
+  "fa": "کارم تمام شد."
  },
  "Je bent ziek. Wat zeg je tegen de juf?": {
   "en": "You are sick. What do you say to the teacher?",
@@ -2876,7 +3234,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти хворий. Що ти скажеш учительці?",
   "tr": "Hastasın. Öğretmene ne dersin?",
   "ro": "Ești bolnav. Ce îi spui doamnei învățătoare?",
-  "bg": "Болен си. Какво казваш на учителката?"
+  "bg": "Болен си. Какво казваш на учителката?",
+  "fa": "مریض هستی. به خانم معلم چه می‌گویی؟"
  },
  "Ziek zijn = je voelt je niet goed.": {
   "en": "Being sick = you don't feel good.",
@@ -2884,7 +3243,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Бути хворим (ziek zijn) = тобі погано.",
   "tr": "Hasta olmak (ziek zijn) = kendini iyi hissetmemek.",
   "ro": "A fi bolnav (ziek zijn) = nu te simți bine.",
-  "bg": "Да си болен (ziek zijn) = не се чувстваш добре."
+  "bg": "Да си болен (ziek zijn) = не се чувстваш добре.",
+  "fa": "مریض بودن = حالت خوب نیست."
  },
  "Ik voel me niet goed.": {
   "en": "I don't feel good.",
@@ -2892,7 +3252,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мені погано.",
   "tr": "Kendimi iyi hissetmiyorum.",
   "ro": "Nu mă simt bine.",
-  "bg": "Не се чувствам добре."
+  "bg": "Не се чувствам добре.",
+  "fa": "حالم خوب نیست."
  },
  "Mag ik meedoen?": {
   "en": "Can I join in?",
@@ -2900,7 +3261,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Можна мені з вами?",
   "tr": "Ben de oynayabilir miyim? (Mag ik meedoen?)",
   "ro": "Pot să mă joc și eu?",
-  "bg": "Може ли да играя с вас?"
+  "bg": "Може ли да играя с вас?",
+  "fa": "من هم می‌توانم شرکت کنم؟"
  },
  "Tot morgen!": {
   "en": "See you tomorrow!",
@@ -2908,7 +3270,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "До завтра!",
   "tr": "Yarın görüşürüz! (Tot morgen!)",
   "ro": "Pe mâine!",
-  "bg": "До утре!"
+  "bg": "До утре!",
+  "fa": "تا فردا!"
  },
  "Een hond blaft heel hard. Je schrikt. Hoe voel je je?": {
   "en": "A dog barks very loud. You get scared. How do you feel?",
@@ -2916,7 +3279,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Собака дуже голосно гавкає. Ти лякаєшся. Як ти почуваєшся?",
   "tr": "Bir köpek çok yüksek sesle havlıyor. İrkiliyorsun. Nasıl hissediyorsun?",
   "ro": "Un câine latră foarte tare. Te sperii. Cum te simți?",
-  "bg": "Едно куче лае много силно. Ти се стряскаш. Как се чувстваш?"
+  "bg": "Едно куче лае много силно. Ти се стряскаш. Как се чувстваш?",
+  "fa": "یک سگ خیلی بلند پارس می‌کند. از جا می‌پری. چه حسی داری؟"
  },
  "Schrikken van iets engs = bang.": {
   "en": "Getting scared of something scary = scared.",
@@ -2924,7 +3288,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Злякатися чогось страшного = страшно (bang).",
   "tr": "Korkutucu bir şeyden irkilmek = korkmuş (bang).",
   "ro": "Să te sperii de ceva înfricoșător = frică (bang).",
-  "bg": "Да се стреснеш от нещо страшно = страх (bang)."
+  "bg": "Да се стреснеш от нещо страшно = страх (bang).",
+  "fa": "از جا پریدن به خاطر چیزی ترسناک = ترسیده."
  },
  "Ik ben bang.": {
   "en": "I am scared.",
@@ -2932,7 +3297,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мені страшно.",
   "tr": "Korkuyorum.",
   "ro": "Mi-e frică.",
-  "bg": "Страх ме е."
+  "bg": "Страх ме е.",
+  "fa": "من می‌ترسم."
  },
  "Iemand pakt steeds je bal af. Hoe voel je je?": {
   "en": "Someone keeps taking your ball. How do you feel?",
@@ -2940,7 +3306,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Хтось весь час забирає в тебе м'яч. Як ти почуваєшся?",
   "tr": "Biri sürekli topunu alıyor. Nasıl hissediyorsun?",
   "ro": "Cineva îți ia mereu mingea. Cum te simți?",
-  "bg": "Някой все ти взема топката. Как се чувстваш?"
+  "bg": "Някой все ти взема топката. Как се чувстваш?",
+  "fa": "کسی مدام توپت را می‌گیرد. چه حسی داری؟"
  },
  "Iemand doet iets wat niet mag. Dan ben je niet blij, maar…": {
   "en": "Someone does something that's not allowed. Then you are not happy, but…",
@@ -2948,7 +3315,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Хтось робить те, що не можна. Тоді ти не радий, а…",
   "tr": "Biri yasak bir şey yapıyor. O zaman mutlu değilsin, ama…",
   "ro": "Cineva face ceva ce nu este voie. Atunci nu ești fericit, ci…",
-  "bg": "Някой прави нещо, което не е позволено. Тогава не си радостен, а…"
+  "bg": "Някой прави нещо, което не е позволено. Тогава не си радостен, а…",
+  "fa": "کسی کاری می‌کند که اجازه ندارد. آن وقت خوشحال نیستی، بلکه…"
  },
  "Ik ben boos.": {
   "en": "I am angry.",
@@ -2956,7 +3324,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Я сердитий.",
   "tr": "Kızgınım.",
   "ro": "Sunt supărat.",
-  "bg": "Ядосан съм."
+  "bg": "Ядосан съм.",
+  "fa": "من عصبانی‌ام."
  },
  "Ik ben moe.": {
   "en": "I am tired.",
@@ -2964,7 +3333,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Я втомився.",
   "tr": "Yorgunum.",
   "ro": "Sunt obosit.",
-  "bg": "Уморен съм."
+  "bg": "Уморен съм.",
+  "fa": "من خسته‌ام."
  },
  "Je hebt slecht geslapen. Hoe voel je je?": {
   "en": "You slept badly. How do you feel?",
@@ -2972,7 +3342,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти погано спав. Як ти почуваєшся?",
   "tr": "Kötü uyudun. Nasıl hissediyorsun?",
   "ro": "Ai dormit prost. Cum te simți?",
-  "bg": "Спал си зле. Как се чувстваш?"
+  "bg": "Спал си зле. Как се чувстваш?",
+  "fa": "بد خوابیدی. چه حسی داری؟"
  },
  "Weinig slaap = je wilt graag slapen.": {
   "en": "Little sleep = you really want to sleep.",
@@ -2980,7 +3351,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мало сну = тобі дуже хочеться спати.",
   "tr": "Az uyku = uyumak istiyorsun.",
   "ro": "Puțin somn = vrei tare mult să dormi.",
-  "bg": "Малко сън = много ти се спи."
+  "bg": "Малко сън = много ти се спи.",
+  "fa": "خواب کم = خیلی دلت می‌خواهد بخوابی."
  },
  "Doe-woorden in de klas": {
   "en": "Action words in class",
@@ -2988,7 +3360,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова-дії в класі",
   "tr": "Sınıfta eylem kelimeleri",
   "ro": "Cuvinte de acțiune în clasă",
-  "bg": "Думи за действия в клас"
+  "bg": "Думи за действия в клас",
+  "fa": "فعل‌ها در کلاس"
  },
  "De juf of meester zegt vaak wat je moet **doen**.\n\n**Schrijf**, **knip**, **luister**, **ruim op**, **kleur**.\n\nDoe het woord meteen na: pak een pen als je **schrijven** hoort. Zo onthoud je het.": {
   "en": "The teacher often says what you need to **doen** (do).\n\n**Schrijf** (Write), **knip** (Cut), **luister** (Listen), **ruim op** (Tidy up), **kleur** (Colour).\n\nDo the word right away: pick up a pen when you hear **schrijven** (write). That way you remember it.",
@@ -2996,7 +3369,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Вчителька або вчитель часто каже, що тобі треба **робити**.\n\n**Пиши** (schrijf), **виріж** (knip), **слухай** (luister), **прибери** (ruim op), **розфарбуй** (kleur).\n\nОдразу зроби цю дію: візьми ручку, коли чуєш **писати** (schrijven). Так ти це запам'ятаєш.",
   "tr": "Öğretmen sık sık ne **yapman** gerektiğini söyler.\n\n**Yaz** (schrijf), **kes** (knip), **dinle** (luister), **topla** (ruim op), **boya** (kleur).\n\nKelimeyi hemen yap: **yazmak** (schrijven) kelimesini duyunca bir kalem al. Böyle aklında kalır.",
   "ro": "Doamna sau domnul învățător spune des ce trebuie să **faci**.\n\n**Scrie** (schrijf), **taie** (knip), **ascultă** (luister), **fă ordine** (ruim op), **colorează** (kleur).\n\nFă imediat ce spune cuvântul: ia un pix când auzi **a scrie** (schrijven). Așa ții minte.",
-  "bg": "Учителката или учителят често казва какво трябва да **правиш**.\n\n**Пиши** (schrijf), **режи** (knip), **слушай** (luister), **разтреби** (ruim op), **оцвети** (kleur).\n\nВеднага направи това, което казва думата: вземи химикалка, когато чуеш **пиша** (schrijven). Така го запомняш."
+  "bg": "Учителката или учителят често казва какво трябва да **правиш**.\n\n**Пиши** (schrijf), **режи** (knip), **слушай** (luister), **разтреби** (ruim op), **оцвети** (kleur).\n\nВеднага направи това, което казва думата: вземи химикалка, когато чуеш **пиша** (schrijven). Така го запомняш.",
+  "fa": "خانم معلم یا آقای معلم اغلب می‌گویند چه کاری باید **انجام بدهی**.\n\n**Schrijf** (بنویس)، **knip** (قیچی کن)، **luister** (گوش کن)، **ruim op** (مرتب کن)، **kleur** (رنگ کن).\n\nکلمه را فوراً انجام بده: وقتی **schrijven** (نوشتن) را می‌شنوی، یک قلم بردار. این‌طوری یادت می‌ماند."
  },
  "Doe-woorden": {
   "en": "Action words",
@@ -3004,7 +3378,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова-дії",
   "tr": "Eylem kelimeleri",
   "ro": "Cuvinte de acțiune",
-  "bg": "Думи за действия"
+  "bg": "Думи за действия",
+  "fa": "فعل‌ها"
  },
  "Een **doe-woord** zegt wat je **doet**: schrijven, knippen, luisteren.": {
   "en": "A **doe-woord** (action word) says what you **doet** (do): write, cut, listen.",
@@ -3012,7 +3387,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Слово-дія** (doe-woord) каже, що ти **робиш**: писати, вирізати, слухати.",
   "tr": "Bir **eylem kelimesi** (doe-woord) ne **yaptığını** söyler: yazmak (schrijven), kesmek (knippen), dinlemek (luisteren).",
   "ro": "Un **cuvânt de acțiune** (doe-woord) spune ce **faci**: a scrie, a tăia, a asculta.",
-  "bg": "**Дума за действие** (doe-woord) казва какво **правиш**: пиша, режа, слушам."
+  "bg": "**Дума за действие** (doe-woord) казва какво **правиш**: пиша, режа, слушам.",
+  "fa": "یک **doe-woord** (فعل) می‌گوید تو چه کاری **انجام می‌دهی**: نوشتن، قیچی کردن، گوش دادن."
  },
  "Doe het na": {
   "en": "Do it too",
@@ -3020,7 +3396,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Зроби так само",
   "tr": "Sen de yap",
   "ro": "Fă la fel",
-  "bg": "Направи го и ти"
+  "bg": "Направи го и ти",
+  "fa": "تو هم انجامش بده"
  },
  "Hoor je **schrijven**? Pak je pen. Hoor je **luisteren**? Wees stil en kijk naar de juf.": {
   "en": "Do you hear **schrijven** (write)? Pick up your pen. Do you hear **luisteren** (listen)? Be quiet and look at the teacher.",
@@ -3028,7 +3405,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Чуєш **писати** (schrijven)? Візьми ручку. Чуєш **слухати** (luisteren)? Будь тихо і дивись на вчительку.",
   "tr": "**Yazmak** (schrijven) mı duydun? Kalemini al. **Dinlemek** (luisteren) mi duydun? Sessiz ol ve öğretmene bak.",
   "ro": "Auzi **a scrie** (schrijven)? Ia pixul. Auzi **a asculta** (luisteren)? Stai liniștit și uită-te la doamna învățătoare.",
-  "bg": "Чуваш **пиша** (schrijven)? Вземи химикалката. Чуваш **слушам** (luisteren)? Бъди тих и гледай учителката."
+  "bg": "Чуваш **пиша** (schrijven)? Вземи химикалката. Чуваш **слушам** (luisteren)? Бъди тих и гледай учителката.",
+  "fa": "**schrijven** (نوشتن) را می‌شنوی؟ قلمت را بردار. **luisteren** (گوش دادن) را می‌شنوی؟ ساکت باش و به خانم معلم نگاه کن."
  },
  "In de klas": {
   "en": "In class",
@@ -3036,7 +3414,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У класі",
   "tr": "Sınıfta",
   "ro": "În clasă",
-  "bg": "В клас"
+  "bg": "В клас",
+  "fa": "در کلاس"
  },
  "De juf zegt vaak: **Schrijf** je naam. **Knip** het uit. **Ruim** je tafel **op**.": {
   "en": "The teacher often says: **Schrijf** (Write) your name. **Knip** (Cut) it out. **Ruim** your table **op** (tidy up).",
@@ -3044,7 +3423,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Вчителька часто каже: **Напиши** (schrijf) своє ім'я. **Виріж** (knip) це. **Прибери** (ruim op) свою парту.",
   "tr": "Öğretmen sık sık der: Adını **yaz** (schrijf). Onu **kes** (knip). **Masanı** **topla** (ruim op).",
   "ro": "Doamna învățătoare spune des: **Scrie** (schrijf) numele tău. **Taie** (knip) asta. **Fă ordine** (ruim op) pe banca ta.",
-  "bg": "Учителката често казва: **Напиши** (schrijf) името си. **Изрежи** (knip) това. **Разтреби** (ruim op) чина си."
+  "bg": "Учителката често казва: **Напиши** (schrijf) името си. **Изрежи** (knip) това. **Разтреби** (ruim op) чина си.",
+  "fa": "خانم معلم اغلب می‌گوید: اسمت را **بنویس** (Schrijf). آن را **قیچی کن** (Knip). میزت را **مرتب کن** (Ruim op)."
  },
  "schrijven": {
   "en": "to write",
@@ -3052,7 +3432,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "писати",
   "tr": "yazmak",
   "ro": "a scrie",
-  "bg": "пиша"
+  "bg": "пиша",
+  "fa": "نوشتن"
  },
  "Letters maken met een pen of potlood.": {
   "en": "Making letters with a pen or pencil.",
@@ -3060,7 +3441,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Робити букви ручкою або олівцем.",
   "tr": "Kalemle ya da kurşun kalemle harf yapmak.",
   "ro": "A face litere cu un pix sau un creion.",
-  "bg": "Правене на букви с химикалка или молив."
+  "bg": "Правене на букви с химикалка или молив.",
+  "fa": "درست کردن حرف‌ها با قلم یا مداد."
  },
  "opruimen": {
   "en": "to tidy up",
@@ -3068,7 +3450,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "прибирати",
   "tr": "toplamak, toparlamak",
   "ro": "a face ordine",
-  "bg": "разтребвам"
+  "bg": "разтребвам",
+  "fa": "مرتب کردن"
  },
  "Alles terugleggen op zijn plek.": {
   "en": "Putting everything back in its place.",
@@ -3076,7 +3459,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Класти все назад на своє місце.",
   "tr": "Her şeyi yerine geri koymak.",
   "ro": "A pune totul înapoi la locul lui.",
-  "bg": "Слагане на всичко обратно на мястото му."
+  "bg": "Слагане на всичко обратно на мястото му.",
+  "fa": "هر چیزی را سر جایش گذاشتن."
  },
  "Doe-woord = wat je doet.": {
   "en": "Action word = what you do.",
@@ -3084,7 +3468,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слово-дія (doe-woord) = те, що ти робиш.",
   "tr": "Eylem kelimesi (doe-woord) = ne yaptığın.",
   "ro": "Cuvânt de acțiune (doe-woord) = ce faci.",
-  "bg": "Дума за действие (doe-woord) = това, което правиш."
+  "bg": "Дума за действие (doe-woord) = това, което правиш.",
+  "fa": "فعل = کاری که انجام می‌دهی."
  },
  "Schrijf je naam.": {
   "en": "Write your name.",
@@ -3092,7 +3477,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Напиши своє ім'я.",
   "tr": "Adını yaz. (Schrijf je naam.)",
   "ro": "Scrie-ți numele.",
-  "bg": "Напиши името си."
+  "bg": "Напиши името си.",
+  "fa": "اسمت را بنویس."
  },
  "Knip het uit.": {
   "en": "Cut it out.",
@@ -3100,7 +3486,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Виріж це.",
   "tr": "Onu kes. (Knip het uit.)",
   "ro": "Taie-l.",
-  "bg": "Изрежи го."
+  "bg": "Изрежи го.",
+  "fa": "آن را قیچی کن."
  },
  "Doe het woord meteen na met je handen.": {
   "en": "Do the word right away with your hands.",
@@ -3108,7 +3495,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Одразу покажи це слово руками.",
   "tr": "Kelimeyi hemen ellerinle yap.",
   "ro": "Fă imediat cuvântul cu mâinile.",
-  "bg": "Веднага покажи думата с ръце."
+  "bg": "Веднага покажи думата с ръце.",
+  "fa": "کلمه را فوراً با دست‌هایت انجام بده."
  },
  "Letters maken met een pen = schrijven.": {
   "en": "Making letters with a pen = to write.",
@@ -3116,7 +3504,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Робити букви ручкою = писати (schrijven).",
   "tr": "Kalemle harf yapmak = yazmak (schrijven).",
   "ro": "A face litere cu un pix = a scrie (schrijven).",
-  "bg": "Правене на букви с химикалка = пиша (schrijven)."
+  "bg": "Правене на букви с химикалка = пиша (schrijven).",
+  "fa": "درست کردن حرف‌ها با قلم = نوشتن."
  },
  "Rekentaal — de woorden achter de sommen (nieuwkomers)": {
   "en": "Math words — the words behind the sums (newcomers)",
@@ -3124,7 +3513,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Мова математики — слова в прикладах (для новеньких)",
   "tr": "Matematik dili — işlemlerin arkasındaki kelimeler (yeni gelenler)",
   "ro": "Limbajul matematicii — cuvintele din spatele exercițiilor (nou-veniți)",
-  "bg": "Езикът на математиката — думите зад задачите (новодошли)"
+  "bg": "Езикът на математиката — думите зад задачите (новодошли)",
+  "fa": "کلمه‌های ریاضی — کلمه‌های پشت مسئله‌ها (تازه‌واردها)"
  },
  "Meer, minder, samen, weg, over, keer en verdelen: de woorden die in elke rekenles terugkomen. Met steun in je eigen taal. ~10 min.": {
   "en": "More, less, together, away, left over, times, and share: the words that come back in every math lesson. With help in your own language. ~10 min.",
@@ -3132,7 +3522,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більше, менше, разом, геть, залишилось, рази і ділити: слова, які є на кожному уроці математики. З допомогою твоєю мовою. ~10 хв.",
   "tr": "Daha çok (meer), daha az (minder), toplam (samen), gitti (weg), kalan (over), kere (keer) ve paylaştırmak (verdelen): her matematik dersinde geçen kelimeler. Kendi dilinde yardımla. ~10 dk.",
   "ro": "Mai mult, mai puțin, împreună, plecat, rămas, ori și a împărți: cuvintele care apar la fiecare oră de matematică. Cu sprijin în limba ta. ~10 min.",
-  "bg": "Повече, по-малко, заедно, няма го, остава, по и делене: думите, които се връщат във всеки урок по математика. С помощ на твоя език. ~10 мин."
+  "bg": "Повече, по-малко, заедно, няма го, остава, по и делене: думите, които се връщат във всеки урок по математика. С помощ на твоя език. ~10 мин.",
+  "fa": "بیشتر، کمتر، با هم، رفته، باقی‌مانده، ضرب و تقسیم: کلمه‌هایی که در هر درس ریاضی دوباره می‌آیند. با کمک به زبان خودت. ~10 دقیقه."
  },
  "Meer, minder, evenveel": {
   "en": "More, less, the same",
@@ -3140,7 +3531,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більше, менше, порівну",
   "tr": "Daha çok, daha az, eşit (meer, minder, evenveel)",
   "ro": "Mai mult, mai puțin, la fel de mult",
-  "bg": "Повече, по-малко, поравно"
+  "bg": "Повече, по-малко, поравно",
+  "fa": "بیشتر، کمتر، به یک اندازه"
  },
  "Samen, weg, over": {
   "en": "Together, away, left over",
@@ -3148,7 +3540,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Разом, геть, залишилось",
   "tr": "Toplam, gitti, kalan (samen, weg, over)",
   "ro": "Împreună, plecat, rămas",
-  "bg": "Заедно, няма го, остава"
+  "bg": "Заедно, няма го, остава",
+  "fa": "با هم، رفته، باقی‌مانده"
  },
  "Keer en verdelen": {
   "en": "Times and share",
@@ -3156,7 +3549,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Рази і ділити",
   "tr": "Kere ve paylaştırmak (keer, verdelen)",
   "ro": "Ori și a împărți",
-  "bg": "По и делене"
+  "bg": "По и делене",
+  "fa": "ضرب و تقسیم"
  },
  "Welke groep is groter?\n\n**Meer**: een groter aantal. **Minder**: een kleiner aantal. **Evenveel**: hetzelfde aantal.\n\n**De meeste** = het allergrootste. **De minste** = het allerkleinste.": {
   "en": "Which group is bigger?\n\n**Meer** (More): a bigger number. **Minder** (Less): a smaller number. **Evenveel** (The same): the same number.\n\n**De meeste** (The most) = the biggest of all. **De minste** (The least) = the smallest of all.",
@@ -3164,7 +3558,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Яка група більша?\n\n**Більше** (meer): більша кількість. **Менше** (minder): менша кількість. **Порівну** (evenveel): однакова кількість.\n\n**Найбільше** (de meeste) = більше за всіх. **Найменше** (de minste) = менше за всіх.",
   "tr": "Hangi grup daha büyük?\n\n**Daha çok** (meer): daha büyük bir sayı. **Daha az** (minder): daha küçük bir sayı. **Eşit** (evenveel): aynı sayı.\n\n**En çok** (de meeste) = en büyüğü. **En az** (de minste) = en küçüğü.",
   "ro": "Care grup este mai mare?\n\n**Mai mult** (meer): un număr mai mare. **Mai puțin** (minder): un număr mai mic. **La fel de mult** (evenveel): același număr.\n\n**Cel mai mult** (de meeste) = cel mai mare dintre toate. **Cel mai puțin** (de minste) = cel mai mic dintre toate.",
-  "bg": "Коя група е по-голяма?\n\n**Повече** (meer): по-голямо количество. **По-малко** (minder): по-малко количество. **Поравно** (evenveel): същото количество.\n\n**Най-много** (de meeste) = най-голямото от всички. **Най-малко** (de minste) = най-малкото от всички."
+  "bg": "Коя група е по-голяма?\n\n**Повече** (meer): по-голямо количество. **По-малко** (minder): по-малко количество. **Поравно** (evenveel): същото количество.\n\n**Най-много** (de meeste) = най-голямото от всички. **Най-малко** (de minste) = най-малкото от всички.",
+  "fa": "کدام گروه بزرگ‌تر است؟\n\n**Meer** (بیشتر): تعداد بیشتر. **Minder** (کمتر): تعداد کمتر. **Evenveel** (به یک اندازه): همان تعداد.\n\n**De meeste** (بیشترین) = از همه بزرگ‌تر. **De minste** (کمترین) = از همه کوچک‌تر."
  },
  "Ali heeft 5 knikkers. Sam heeft 3 knikkers. Wie heeft meer?": {
   "en": "Ali has 5 marbles. Sam has 3 marbles. Who has more?",
@@ -3172,7 +3567,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "В Алі 5 кульок. У Сема 3 кульки. У кого більше?",
   "tr": "Ali'nin 5 bilyesi var. Sam'in 3 bilyesi var. Kimde daha çok var?",
   "ro": "Ali are 5 bile. Sam are 3 bile. Cine are mai multe?",
-  "bg": "Али има 5 топчета. Сам има 3 топчета. Кой има повече?"
+  "bg": "Али има 5 топчета. Сам има 3 топчета. Кой има повече?",
+  "fa": "علی 5 تیله دارد. سام 3 تیله دارد. چه کسی بیشتر دارد؟"
  },
  "Meer = het grotere getal. Welk getal is groter: 5 of 3?": {
   "en": "More = the bigger number. Which number is bigger: 5 or 3?",
@@ -3180,7 +3576,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більше = більше число. Яке число більше: 5 чи 3?",
   "tr": "Daha çok (meer) = en büyük sayı. Hangi sayı daha büyük: 5 mi 3 mü?",
   "ro": "Mai mult = numărul mai mare. Care număr este mai mare: 5 sau 3?",
-  "bg": "Повече = по-голямото число. Кое число е по-голямо: 5 или 3?"
+  "bg": "Повече = по-голямото число. Кое число е по-голямо: 5 или 3?",
+  "fa": "بیشتر = عدد بزرگ‌تر. کدام عدد بزرگ‌تر است: 5 یا 3؟"
  },
  "Meer": {
   "en": "More",
@@ -3188,7 +3585,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більше",
   "tr": "Daha çok",
   "ro": "Mai mult",
-  "bg": "Повече"
+  "bg": "Повече",
+  "fa": "بیشتر"
  },
  "**Meer** betekent: een groter aantal. 5 is **meer** dan 3.": {
   "en": "**Meer** (More) means: a bigger number. 5 is **meer** (more) than 3.",
@@ -3196,7 +3594,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Більше** (meer) означає: більша кількість. 5 — це **більше**, ніж 3.",
   "tr": "**Daha çok** (meer) demek: daha büyük bir sayı. 5, 3'ten **daha çok**.",
   "ro": "**Mai mult** (meer) înseamnă: un număr mai mare. 5 este **mai mult** decât 3.",
-  "bg": "**Повече** (meer) означава: по-голямо количество. 5 е **повече** от 3."
+  "bg": "**Повече** (meer) означава: по-голямо количество. 5 е **повече** от 3.",
+  "fa": "**Meer** (بیشتر) یعنی: تعداد بیشتر. 5 **بیشتر** از 3 است."
  },
  "Minder": {
   "en": "Less",
@@ -3204,7 +3603,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Менше",
   "tr": "Daha az",
   "ro": "Mai puțin",
-  "bg": "По-малко"
+  "bg": "По-малко",
+  "fa": "کمتر"
  },
  "**Minder** betekent: een kleiner aantal. 3 is **minder** dan 5.": {
   "en": "**Minder** (Less) means: a smaller number. 3 is **minder** (less) than 5.",
@@ -3212,7 +3612,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Менше** (minder) означає: менша кількість. 3 — це **менше**, ніж 5.",
   "tr": "**Daha az** (minder) demek: daha küçük bir sayı. 3, 5'ten **daha az**.",
   "ro": "**Mai puțin** (minder) înseamnă: un număr mai mic. 3 este **mai puțin** decât 5.",
-  "bg": "**По-малко** (minder) означава: по-малко количество. 3 е **по-малко** от 5."
+  "bg": "**По-малко** (minder) означава: по-малко количество. 3 е **по-малко** от 5.",
+  "fa": "**Minder** (کمتر) یعنی: تعداد کمتر. 3 **کمتر** از 5 است."
  },
  "Evenveel": {
   "en": "The same",
@@ -3220,7 +3621,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Порівну",
   "tr": "Eşit",
   "ro": "La fel de mult",
-  "bg": "Поравно"
+  "bg": "Поравно",
+  "fa": "به یک اندازه"
  },
  "**Evenveel** betekent: hetzelfde aantal. 4 en 4 is **evenveel**.": {
   "en": "**Evenveel** (The same) means: the same number. 4 and 4 is **evenveel** (the same).",
@@ -3228,7 +3630,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Порівну** (evenveel) означає: однакова кількість. 4 і 4 — це **порівну**.",
   "tr": "**Eşit** (evenveel) demek: aynı sayı. 4 ve 4 **eşit**.",
   "ro": "**La fel de mult** (evenveel) înseamnă: același număr. 4 și 4 este **la fel de mult**.",
-  "bg": "**Поравно** (evenveel) означава: същото количество. 4 и 4 е **поравно**."
+  "bg": "**Поравно** (evenveel) означава: същото количество. 4 и 4 е **поравно**.",
+  "fa": "**Evenveel** (به یک اندازه) یعنی: همان تعداد. 4 و 4 **به یک اندازه** هستند."
  },
  "meer": {
   "en": "more",
@@ -3236,7 +3639,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "більше",
   "tr": "daha çok",
   "ro": "mai mult",
-  "bg": "повече"
+  "bg": "повече",
+  "fa": "بیشتر"
  },
  "Een groter aantal.": {
   "en": "A bigger number.",
@@ -3244,7 +3648,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більша кількість.",
   "tr": "Daha büyük bir sayı.",
   "ro": "Un număr mai mare.",
-  "bg": "По-голямо количество."
+  "bg": "По-голямо количество.",
+  "fa": "تعداد بیشتر."
  },
  "minder": {
   "en": "less",
@@ -3252,7 +3657,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "менше",
   "tr": "daha az",
   "ro": "mai puțin",
-  "bg": "по-малко"
+  "bg": "по-малко",
+  "fa": "کمتر"
  },
  "Een kleiner aantal.": {
   "en": "A smaller number.",
@@ -3260,7 +3666,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Менша кількість.",
   "tr": "Daha küçük bir sayı.",
   "ro": "Un număr mai mic.",
-  "bg": "По-малко количество."
+  "bg": "По-малко количество.",
+  "fa": "تعداد کمتر."
  },
  "evenveel": {
   "en": "the same amount",
@@ -3268,7 +3675,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "порівну",
   "tr": "eşit",
   "ro": "la fel de mult",
-  "bg": "поравно"
+  "bg": "поравно",
+  "fa": "به یک اندازه"
  },
  "Hetzelfde aantal.": {
   "en": "The same number.",
@@ -3276,7 +3684,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Однакова кількість.",
   "tr": "Aynı sayı.",
   "ro": "Același număr.",
-  "bg": "Същото количество."
+  "bg": "Същото количество.",
+  "fa": "همان تعداد."
  },
  "Meer = groter getal. Minder = kleiner getal. Evenveel = hetzelfde getal.": {
   "en": "More = bigger number. Less = smaller number. The same = the same number.",
@@ -3284,7 +3693,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Більше (meer) = більше число. Менше (minder) = менше число. Порівну (evenveel) = однакове число.",
   "tr": "Daha çok (meer) = daha büyük sayı. Daha az (minder) = daha küçük sayı. Eşit (evenveel) = aynı sayı.",
   "ro": "Mai mult (meer) = număr mai mare. Mai puțin (minder) = număr mai mic. La fel de mult (evenveel) = același număr.",
-  "bg": "Повече (meer) = по-голямо число. По-малко (minder) = по-малко число. Поравно (evenveel) = същото число."
+  "bg": "Повече (meer) = по-голямо число. По-малко (minder) = по-малко число. Поравно (evenveel) = същото число.",
+  "fa": "بیشتر = عدد بزرگ‌تر. کمتر = عدد کوچک‌تر. به یک اندازه = همان عدد."
  },
  "7 is meer dan 2.": {
   "en": "7 is more than 2.",
@@ -3292,7 +3702,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "7 — це більше, ніж 2.",
   "tr": "7, 2'den daha çok.",
   "ro": "7 este mai mult decât 2.",
-  "bg": "7 е повече от 2."
+  "bg": "7 е повече от 2.",
+  "fa": "7 بیشتر از 2 است."
  },
  "1 is minder dan 6.": {
   "en": "1 is less than 6.",
@@ -3300,7 +3711,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "1 — це менше, ніж 6.",
   "tr": "1, 6'dan daha az.",
   "ro": "1 este mai puțin decât 6.",
-  "bg": "1 е по-малко от 6."
+  "bg": "1 е по-малко от 6.",
+  "fa": "1 کمتر از 6 است."
  },
  "Tel allebei. Welk getal komt later bij het tellen? Dat is meer.": {
   "en": "Count both. Which number comes later when counting? That is more.",
@@ -3308,7 +3720,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Порахуй обидва. Яке число йде далі, коли рахуєш? Це більше.",
   "tr": "İkisini de say. Sayarken hangi sayı daha sonra gelir? O daha çok.",
   "ro": "Numără-le pe amândouă. Care număr vine mai târziu la numărat? Acela este mai mult.",
-  "bg": "Преброй и двете. Кое число идва по-късно при броене? То е повече."
+  "bg": "Преброй и двете. Кое число идва по-късно при броене? То е повече.",
+  "fa": "هر دو را بشمار. کدام عدد موقع شمردن دیرتر می‌آید؟ همان بیشتر است."
  },
  "Kijk welk getal groter is.": {
   "en": "Look at which number is bigger.",
@@ -3316,7 +3729,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Подивись, яке число більше.",
   "tr": "Hangi sayının daha büyük olduğuna bak.",
   "ro": "Uită-te care număr este mai mare.",
-  "bg": "Виж кое число е по-голямо."
+  "bg": "Виж кое число е по-голямо.",
+  "fa": "ببین کدام عدد بزرگ‌تر است."
  },
  "5 of 3: welk getal is groter?": {
   "en": "5 or 3: which number is bigger?",
@@ -3324,7 +3738,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "5 чи 3: яке число більше?",
   "tr": "5 mi 3 mü: hangi sayı daha büyük?",
   "ro": "5 sau 3: care număr este mai mare?",
-  "bg": "5 или 3: кое число е по-голямо?"
+  "bg": "5 или 3: кое число е по-голямо?",
+  "fa": "5 یا 3: کدام عدد بزرگ‌تر است؟"
  },
  "5 is meer dan 3.": {
   "en": "5 is more than 3.",
@@ -3332,7 +3747,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "5 — це більше, ніж 3.",
   "tr": "5, 3'ten daha çok.",
   "ro": "5 este mai mult decât 3.",
-  "bg": "5 е повече от 3."
+  "bg": "5 е повече от 3.",
+  "fa": "5 بیشتر از 3 است."
  },
  "Ali": {
   "en": "Ali",
@@ -3340,7 +3756,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Алі",
   "tr": "Ali",
   "ro": "Ali",
-  "bg": "Али"
+  "bg": "Али",
+  "fa": "علی"
  },
  "Sam": {
   "en": "Sam",
@@ -3348,7 +3765,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Сем",
   "tr": "Sam",
   "ro": "Sam",
-  "bg": "Сам"
+  "bg": "Сам",
+  "fa": "سام"
  },
  "Ze hebben evenveel.": {
   "en": "They have the same.",
@@ -3356,7 +3774,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У них порівну.",
   "tr": "İkisinde eşit var.",
   "ro": "Au la fel de mult.",
-  "bg": "Имат поравно."
+  "bg": "Имат поравно.",
+  "fa": "آن‌ها به یک اندازه دارند."
  },
  "Lina heeft 2 appels. Tom heeft 6 appels. Wie heeft minder?": {
   "en": "Lina has 2 apples. Tom has 6 apples. Who has less?",
@@ -3364,7 +3783,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У Ліни 2 яблука. У Тома 6 яблук. У кого менше?",
   "tr": "Lina'nın 2 elması var. Tom'un 6 elması var. Kimde daha az var?",
   "ro": "Lina are 2 mere. Tom are 6 mere. Cine are mai puține?",
-  "bg": "Лина има 2 ябълки. Том има 6 ябълки. Кой има по-малко?"
+  "bg": "Лина има 2 ябълки. Том има 6 ябълки. Кой има по-малко?",
+  "fa": "لینا 2 سیب دارد. تام 6 سیب دارد. چه کسی کمتر دارد؟"
  },
  "Minder = het kleinere getal. Welk getal is kleiner: 2 of 6?": {
   "en": "Less = the smallest number. Which number is smaller: 2 or 6?",
@@ -3372,7 +3792,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Менше = менше число. Яке число менше: 2 чи 6?",
   "tr": "Daha az (minder) = en küçük sayı. Hangi sayı daha küçük: 2 mi 6 mı?",
   "ro": "Mai puțin = numărul mai mic. Care număr este mai mic: 2 sau 6?",
-  "bg": "По-малко = по-малкото число. Кое число е по-малко: 2 или 6?"
+  "bg": "По-малко = по-малкото число. Кое число е по-малко: 2 или 6?",
+  "fa": "کمتر = عدد کوچک‌تر. کدام عدد کوچک‌تر است: 2 یا 6؟"
  },
  "Lina": {
   "en": "Lina",
@@ -3380,7 +3801,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ліна",
   "tr": "Lina",
   "ro": "Lina",
-  "bg": "Лина"
+  "bg": "Лина",
+  "fa": "لینا"
  },
  "Tom": {
   "en": "Tom",
@@ -3388,7 +3810,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Том",
   "tr": "Tom",
   "ro": "Tom",
-  "bg": "Том"
+  "bg": "Том",
+  "fa": "تام"
  },
  "Noor heeft 4 pennen. Adam heeft 4 pennen. Wat is waar?": {
   "en": "Noor has 4 pens. Adam has 4 pens. What is true?",
@@ -3396,7 +3819,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У Нур 4 ручки. В Адама 4 ручки. Що правда?",
   "tr": "Noor'un 4 kalemi var. Adam'ın 4 kalemi var. Hangisi doğru?",
   "ro": "Noor are 4 pixuri. Adam are 4 pixuri. Ce este adevărat?",
-  "bg": "Нур има 4 химикалки. Адам има 4 химикалки. Кое е вярно?"
+  "bg": "Нур има 4 химикалки. Адам има 4 химикалки. Кое е вярно?",
+  "fa": "نور 4 قلم دارد. آدام 4 قلم دارد. کدام درست است؟"
  },
  "Kijk naar de twee getallen. Zijn ze hetzelfde?": {
   "en": "Look at the two numbers. Are they the same?",
@@ -3404,7 +3828,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Подивись на два числа. Вони однакові?",
   "tr": "İki sayıya bak. Aynılar mı?",
   "ro": "Uită-te la cele două numere. Sunt la fel?",
-  "bg": "Погледни двете числа. Еднакви ли са?"
+  "bg": "Погледни двете числа. Еднакви ли са?",
+  "fa": "به دو عدد نگاه کن. یکسان هستند؟"
  },
  "Noor heeft meer.": {
   "en": "Noor has more.",
@@ -3412,7 +3837,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У Нур більше.",
   "tr": "Noor'da daha çok var.",
   "ro": "Noor are mai multe.",
-  "bg": "Нур има повече."
+  "bg": "Нур има повече.",
+  "fa": "نور بیشتر دارد."
  },
  "Adam heeft meer.": {
   "en": "Adam has more.",
@@ -3420,16 +3846,18 @@ const NIEUWKOMERS_STEUN = {
   "uk": "В Адама більше.",
   "tr": "Adam'da daha çok var.",
   "ro": "Adam are mai multe.",
-  "bg": "Адам има повече."
+  "bg": "Адам има повече.",
+  "fa": "آدام بیشتر دارد."
  },
- "Eva heeft 3 boeken. Omar heeft 8 boeken. Mila heeft 5 boeken. Wie heeft de meeste boeken?": {"en":"Eva has 3 books. Omar has 8 books. Mila has 5 books. Who has the most books?","ar":"إيفا عندها 3 كتب. عمر عنده 8 كتب. ميلا عندها 5 كتب. من عنده أكثر عدد من الكتب؟","uk":"У Еви 3 книжки. В Омара 8 книжок. У Міли 5 книжок. У кого найбільше книжок?","tr":"Eva'nın 3 kitabı var. Omar'ın 8 kitabı var. Mila'nın 5 kitabı var. En çok kitap kimde?","ro":"Eva are 3 cărți. Omar are 8 cărți. Mila are 5 cărți. Cine are cele mai multe cărți?","bg":"Ева има 3 книги. Омар има 8 книги. Мила има 5 книги. Кой има най-много книги?"},
+ "Eva heeft 3 boeken. Omar heeft 8 boeken. Mila heeft 5 boeken. Wie heeft de meeste boeken?": {"en":"Eva has 3 books. Omar has 8 books. Mila has 5 books. Who has the most books?","ar":"إيفا عندها 3 كتب. عمر عنده 8 كتب. ميلا عندها 5 كتب. من عنده أكثر عدد من الكتب؟","uk":"У Еви 3 книжки. В Омара 8 книжок. У Міли 5 книжок. У кого найбільше книжок?","tr":"Eva'nın 3 kitabı var. Omar'ın 8 kitabı var. Mila'nın 5 kitabı var. En çok kitap kimde?","ro":"Eva are 3 cărți. Omar are 8 cărți. Mila are 5 cărți. Cine are cele mai multe cărți?","bg":"Ева има 3 книги. Омар има 8 книги. Мила има 5 книги. Кой има най-много книги?", "fa": "اوا 3 کتاب دارد. عمر 8 کتاب دارد. میلا 5 کتاب دارد. چه کسی بیشترین کتاب را دارد؟"},
  "De meeste = het allergrootste getal van de drie.": {
   "en": "The most = the biggest number of the three.",
   "ar": "الأكثر (de meeste) = أكبر عدد من الثلاثة.",
   "uk": "Найбільше (de meeste) = найбільше число з трьох.",
   "tr": "En çok (de meeste) = üçünün en büyük sayısı.",
   "ro": "Cele mai multe (de meeste) = cel mai mare număr dintre cele trei.",
-  "bg": "Най-много (de meeste) = най-голямото число от трите."
+  "bg": "Най-много (de meeste) = най-голямото число от трите.",
+  "fa": "بیشترین = بزرگ‌ترین عدد از این سه."
  },
  "Omar": {
   "en": "Omar",
@@ -3437,7 +3865,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Омар",
   "tr": "Omar",
   "ro": "Omar",
-  "bg": "Омар"
+  "bg": "Омар",
+  "fa": "عمر"
  },
  "Eva": {
   "en": "Eva",
@@ -3445,7 +3874,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Єва",
   "tr": "Eva",
   "ro": "Eva",
-  "bg": "Ева"
+  "bg": "Ева",
+  "fa": "اوا"
  },
  "Mila": {
   "en": "Mila",
@@ -3453,16 +3883,18 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Міла",
   "tr": "Mila",
   "ro": "Mila",
-  "bg": "Мила"
+  "bg": "Мила",
+  "fa": "میلا"
  },
- "Jan heeft 7 stickers. Sara heeft 2 stickers. Yusuf heeft 4 stickers. Wie heeft de minste stickers?": {"en":"Jan has 7 stickers. Sara has 2 stickers. Yusuf has 4 stickers. Who has the fewest stickers?","ar":"يان عنده 7 ملصقات. سارة عندها ملصقان. يوسف عنده 4 ملصقات. من عنده أقل عدد من الملصقات؟","uk":"У Яна 7 наліпок. У Сари 2 наліпки. У Юсуфа 4 наліпки. У кого найменше наліпок?","tr":"Jan'ın 7 çıkartması var. Sara'nın 2 çıkartması var. Yusuf'un 4 çıkartması var. En az çıkartma kimde?","ro":"Jan are 7 abțibilduri. Sara are 2 abțibilduri. Yusuf are 4 abțibilduri. Cine are cele mai puține abțibilduri?","bg":"Ян има 7 стикера. Сара има 2 стикера. Юсуф има 4 стикера. Кой има най-малко стикери?"},
+ "Jan heeft 7 stickers. Sara heeft 2 stickers. Yusuf heeft 4 stickers. Wie heeft de minste stickers?": {"en":"Jan has 7 stickers. Sara has 2 stickers. Yusuf has 4 stickers. Who has the fewest stickers?","ar":"يان عنده 7 ملصقات. سارة عندها ملصقان. يوسف عنده 4 ملصقات. من عنده أقل عدد من الملصقات؟","uk":"У Яна 7 наліпок. У Сари 2 наліпки. У Юсуфа 4 наліпки. У кого найменше наліпок?","tr":"Jan'ın 7 çıkartması var. Sara'nın 2 çıkartması var. Yusuf'un 4 çıkartması var. En az çıkartma kimde?","ro":"Jan are 7 abțibilduri. Sara are 2 abțibilduri. Yusuf are 4 abțibilduri. Cine are cele mai puține abțibilduri?","bg":"Ян има 7 стикера. Сара има 2 стикера. Юсуф има 4 стикера. Кой има най-малко стикери?", "fa": "یان 7 برچسب دارد. سارا 2 برچسب دارد. یوسف 4 برچسب دارد. چه کسی کمترین برچسب را دارد؟"},
  "De minste = het allerkleinste getal van de drie.": {
   "en": "The fewest = the smallest number of the three.",
   "ar": "الأقل (de minste) = أصغر عدد من الثلاثة.",
   "uk": "Найменше (de minste) = найменше число з трьох.",
   "tr": "En az (de minste) = üçünün en küçük sayısı.",
   "ro": "Cele mai puține (de minste) = cel mai mic număr dintre cele trei.",
-  "bg": "Най-малко (de minste) = най-малкото число от трите."
+  "bg": "Най-малко (de minste) = най-малкото число от трите.",
+  "fa": "کمترین = کوچک‌ترین عدد از این سه."
  },
  "Sara": {
   "en": "Sara",
@@ -3470,7 +3902,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Сара",
   "tr": "Sara",
   "ro": "Sara",
-  "bg": "Сара"
+  "bg": "Сара",
+  "fa": "سارا"
  },
  "Jan": {
   "en": "Jan",
@@ -3478,7 +3911,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ян",
   "tr": "Jan",
   "ro": "Jan",
-  "bg": "Ян"
+  "bg": "Ян",
+  "fa": "یان"
  },
  "Yusuf": {
   "en": "Yusuf",
@@ -3486,7 +3920,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Юсуф",
   "tr": "Yusuf",
   "ro": "Yusuf",
-  "bg": "Юсуф"
+  "bg": "Юсуф",
+  "fa": "یوسف"
  },
  "Rekenwoorden zeggen welke som je maakt.\n\n**Samen** en **erbij** = plus (+).\n**Weg**, **eraf** en **over** = min (−).\n\nZoek eerst het rekenwoord. Dan weet je de som.": {
   "en": "Math words tell you which sum to make.\n\n**Samen** (together) and **erbij** (added) = plus (+).\n**Weg** (away), **eraf** (taken off) and **over** (left) = minus (−).\n\nFirst find the math word. Then you know the sum.",
@@ -3494,7 +3929,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова з математики кажуть, який приклад ти робиш.\n\n**Разом** (samen) і **ще** (erbij) = плюс (+).\n**Геть** (weg), **забрати** (eraf) і **залишилось** (over) = мінус (−).\n\nСпочатку знайди це слово. Тоді ти знаєш приклад.",
   "tr": "Matematik kelimeleri hangi işlemi yapacağını söyler.\n\n**Toplam** (samen) ve **eklenince** (erbij) = artı (+).\n**Gitti** (weg), **çıkınca** (eraf) ve **kalan** (over) = eksi (−).\n\nÖnce matematik kelimesini bul. Sonra işlemi bilirsin.",
   "ro": "Cuvintele de la matematică îți spun ce exercițiu faci.\n\n**Împreună** (samen) și **în plus** (erbij) = plus (+).\n**Plecat** (weg), **scăzut** (eraf) și **rămas** (over) = minus (−).\n\nCaută mai întâi cuvântul de la matematică. Atunci știi exercițiul.",
-  "bg": "Думите от математиката казват коя задача правиш.\n\n**Заедно** (samen) и **в повече** (erbij) = плюс (+).\n**Няма го** (weg), **извадено** (eraf) и **остава** (over) = минус (−).\n\nПърво намери думата от математиката. Тогава знаеш задачата."
+  "bg": "Думите от математиката казват коя задача правиш.\n\n**Заедно** (samen) и **в повече** (erbij) = плюс (+).\n**Няма го** (weg), **извадено** (eraf) и **остава** (over) = минус (−).\n\nПърво намери думата от математиката. Тогава знаеш задачата.",
+  "fa": "کلمه‌های ریاضی می‌گویند کدام مسئله را باید حل کنی.\n\n**Samen** (با هم) و **erbij** (اضافه) = جمع (+).\n**Weg** (رفته)، **eraf** (کم شده) و **over** (باقی‌مانده) = تفریق (−).\n\nاول کلمه ریاضی را پیدا کن. بعد می‌دانی مسئله چیست."
  },
  "Je hebt 3 ballen. Je krijgt er 2 bij. Hoeveel ballen heb je samen?": {
   "en": "You have 3 balls. You get 2 more. How many balls do you have together?",
@@ -3502,7 +3938,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У тебе 3 м'ячі. Тобі дають ще 2. Скільки м'ячів у тебе разом?",
   "tr": "3 topun var. 2 tane daha alıyorsun. Toplam kaç topun var?",
   "ro": "Ai 3 mingi. Mai primești 2. Câte mingi ai împreună?",
-  "bg": "Имаш 3 топки. Получаваш още 2. Колко топки имаш заедно?"
+  "bg": "Имаш 3 топки. Получаваш още 2. Колко топки имаш заедно?",
+  "fa": "تو 3 توپ داری. 2 تای دیگر هم می‌گیری. روی هم چند توپ داری؟"
  },
  "Erbij en samen = plus. 3 + 2.": {
   "en": "Added and together = plus. 3 + 2.",
@@ -3510,7 +3947,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ще (erbij) і разом (samen) = плюс. 3 + 2.",
   "tr": "Eklenince (erbij) ve toplam (samen) = artı. 3 + 2.",
   "ro": "În plus (erbij) și împreună (samen) = plus. 3 + 2.",
-  "bg": "В повече (erbij) и заедно (samen) = плюс. 3 + 2."
+  "bg": "В повече (erbij) и заедно (samen) = плюс. 3 + 2.",
+  "fa": "اضافه شدن و با هم = جمع. 3 + 2."
  },
  "Samen": {
   "en": "Together",
@@ -3518,7 +3956,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Разом",
   "tr": "Toplam",
   "ro": "Împreună",
-  "bg": "Заедно"
+  "bg": "Заедно",
+  "fa": "با هم"
  },
  "**Samen** en **erbij** betekenen: **plus** (+). Alles bij elkaar.": {
   "en": "**Samen** (together) and **erbij** (added) mean: **plus** (+). Everything combined.",
@@ -3526,7 +3965,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Разом** (samen) і **ще** (erbij) означають: **плюс** (+). Усе докупи.",
   "tr": "**Toplam** (samen) ve **eklenince** (erbij) demek: **artı** (plus) (+). Hepsi bir arada.",
   "ro": "**Împreună** (samen) și **în plus** (erbij) înseamnă: **plus** (+). Totul la un loc.",
-  "bg": "**Заедно** (samen) и **в повече** (erbij) означават: **плюс** (+). Всичко накуп."
+  "bg": "**Заедно** (samen) и **в повече** (erbij) означават: **плюс** (+). Всичко накуп.",
+  "fa": "**Samen** (با هم) و **erbij** (اضافه) یعنی: **جمع** (+). همه با هم."
  },
  "Weg": {
   "en": "Away",
@@ -3534,7 +3974,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Геть",
   "tr": "Gitti",
   "ro": "Plecat",
-  "bg": "Няма го"
+  "bg": "Няма го",
+  "fa": "رفته"
  },
  "**Weg**, **eraf** en **opeten** betekenen: **min** (−). Er gaat iets af.": {
   "en": "**Weg** (away), **eraf** (taken off) and **opeten** (eaten up) mean: **min** (minus) (−). Something goes away.",
@@ -3542,7 +3983,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Геть** (weg), **забрати** (eraf) і **з'їсти** (opeten) означають: **мінус** (−). Щось забирають.",
   "tr": "**Gitti** (weg), **çıkınca** (eraf) ve **yemek** (opeten) demek: **eksi** (min) (−). Bir şey eksilir.",
   "ro": "**Plecat** (weg), **scăzut** (eraf) și **mâncat** (opeten) înseamnă: **minus** (−). Ceva se ia.",
-  "bg": "**Няма го** (weg), **извадено** (eraf) и **изядено** (opeten) означават: **минус** (−). Нещо се маха."
+  "bg": "**Няма го** (weg), **извадено** (eraf) и **изядено** (opeten) означават: **минус** (−). Нещо се маха.",
+  "fa": "**Weg** (رفته)، **eraf** (کم شده) و **opeten** (خوردن) یعنی: **تفریق** (−). چیزی کم می‌شود."
  },
  "Over": {
   "en": "Left",
@@ -3550,7 +3992,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Залишилось",
   "tr": "Kalan",
   "ro": "Rămas",
-  "bg": "Остава"
+  "bg": "Остава",
+  "fa": "باقی‌مانده"
  },
  "**Over** betekent: wat je nog hebt, als er iets weg is. Dat is ook **min**.": {
   "en": "**Over** (Left) means: what you still have, when something is gone. That is also **min** (minus).",
@@ -3558,7 +4001,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Залишилось** (over) означає: що в тебе ще є, коли щось забрали. Це теж **мінус**.",
   "tr": "**Kalan** (over) demek: bir şey gidince hâlâ elinde olan. Bu da **eksi** (min).",
   "ro": "**Rămas** (over) înseamnă: ce mai ai, când ceva a plecat. Asta este tot **minus**.",
-  "bg": "**Остава** (over) означава: това, което още имаш, когато нещо го няма. Това също е **минус**."
+  "bg": "**Остава** (over) означава: това, което още имаш, когато нещо го няма. Това също е **минус**.",
+  "fa": "**Over** (باقی‌مانده) یعنی: چیزی که هنوز داری، وقتی چیزی رفته است. این هم **تفریق** است."
  },
  "Het is er niet meer. Min.": {
   "en": "It is not there anymore. Minus.",
@@ -3566,7 +4010,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Цього вже немає. Мінус.",
   "tr": "Artık yok. Eksi.",
   "ro": "Nu mai este acolo. Minus.",
-  "bg": "Вече го няма. Минус."
+  "bg": "Вече го няма. Минус.",
+  "fa": "دیگر آنجا نیست. تفریق."
  },
  "Samen, erbij = plus. Weg, eraf, over = min.": {
   "en": "Together, added = plus. Away, taken off, left = minus.",
@@ -3574,7 +4019,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Разом (samen), ще (erbij) = плюс. Геть (weg), забрати (eraf), залишилось (over) = мінус.",
   "tr": "Toplam (samen), eklenince (erbij) = artı. Gitti (weg), çıkınca (eraf), kalan (over) = eksi.",
   "ro": "Împreună (samen), în plus (erbij) = plus. Plecat (weg), scăzut (eraf), rămas (over) = minus.",
-  "bg": "Заедно (samen), в повече (erbij) = плюс. Няма го (weg), извадено (eraf), остава (over) = минус."
+  "bg": "Заедно (samen), в повече (erbij) = плюс. Няма го (weg), извадено (eraf), остава (over) = минус.",
+  "fa": "با هم، اضافه = جمع. رفته، کم شده، باقی‌مانده = تفریق."
  },
  "3 en 2 samen: 3 + 2 = 5.": {
   "en": "3 and 2 together: 3 + 2 = 5.",
@@ -3582,7 +4028,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "3 і 2 разом: 3 + 2 = 5.",
   "tr": "3 ve 2 toplam: 3 + 2 = 5.",
   "ro": "3 și 2 împreună: 3 + 2 = 5.",
-  "bg": "3 и 2 заедно: 3 + 2 = 5."
+  "bg": "3 и 2 заедно: 3 + 2 = 5.",
+  "fa": "3 و 2 با هم: 3 + 2 = 5."
  },
  "6 appels, 2 weg: 6 − 2 = 4 over.": {
   "en": "6 apples, 2 away: 6 − 2 = 4 left.",
@@ -3590,7 +4037,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "6 яблук, 2 геть: 6 − 2 = 4 залишилось.",
   "tr": "6 elma, 2 gitti: 6 − 2 = 4 kalan.",
   "ro": "6 mere, 2 plecate: 6 − 2 = 4 rămase.",
-  "bg": "6 ябълки, 2 ги няма: 6 − 2 = 4 остават."
+  "bg": "6 ябълки, 2 ги няма: 6 − 2 = 4 остават.",
+  "fa": "6 سیب، 2 تا رفت: 6 − 2 = 4 تا باقی ماند."
  },
  "Zoek het rekenwoord in de zin. Dat zegt: plus of min.": {
   "en": "Find the math word in the sentence. That tells you: plus or minus.",
@@ -3598,7 +4046,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Знайди слово з математики в реченні. Воно каже: плюс чи мінус.",
   "tr": "Cümlede matematik kelimesini bul. O sana söyler: artı mı eksi mi.",
   "ro": "Caută cuvântul de la matematică în propoziție. El îți spune: plus sau minus.",
-  "bg": "Намери думата от математиката в изречението. Тя казва: плюс или минус."
+  "bg": "Намери думата от математиката в изречението. Тя казва: плюс или минус.",
+  "fa": "کلمه ریاضی را در جمله پیدا کن. آن می‌گوید: جمع یا تفریق."
  },
  "Je krijgt er 2 bij. Tel 2 verder vanaf 3.": {
   "en": "You get 2 more. Count 2 further from 3.",
@@ -3606,7 +4055,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Тобі дають ще 2. Рахуй далі на 2 від 3.",
   "tr": "2 tane daha alıyorsun. 3'ten 2 ileri say.",
   "ro": "Mai primești 2. Numără 2 mai departe de la 3.",
-  "bg": "Получаваш още 2. Брой 2 нататък от 3."
+  "bg": "Получаваш още 2. Брой 2 нататък от 3.",
+  "fa": "2 تا دیگر هم می‌گیری. از 3، 2 تا جلوتر بشمار."
  },
  "Je hebt 6 appels. Je eet er 2 op. Hoeveel appels heb je over?": {
   "en": "You have 6 apples. You eat 2 of them. How many apples do you have left?",
@@ -3614,7 +4064,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У тебе 6 яблук. Ти з'їдаєш 2. Скільки яблук у тебе залишилось?",
   "tr": "6 elman var. 2 tanesini yiyorsun. Kaç elman kaldı?",
   "ro": "Ai 6 mere. Mănânci 2. Câte mere îți rămân?",
-  "bg": "Имаш 6 ябълки. Изяждаш 2. Колко ябълки ти остават?"
+  "bg": "Имаш 6 ябълки. Изяждаш 2. Колко ябълки ти остават?",
+  "fa": "تو 6 سیب داری. 2 تا از آن‌ها را می‌خوری. چند سیب برایت مانده است؟"
  },
  "Opeten = weg = min. Over = wat je nog hebt. 6 − 2.": {
   "en": "Eaten up = away = minus. Left = what you still have. 6 − 2.",
@@ -3622,7 +4073,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "З'їсти (opeten) = геть (weg) = мінус. Залишилось (over) = що в тебе ще є. 6 − 2.",
   "tr": "Yemek (opeten) = gitti (weg) = eksi. Kalan (over) = hâlâ elinde olan. 6 − 2.",
   "ro": "Mâncat (opeten) = plecat (weg) = minus. Rămas (over) = ce mai ai. 6 − 2.",
-  "bg": "Изядено (opeten) = няма го (weg) = минус. Остава (over) = това, което още имаш. 6 − 2."
+  "bg": "Изядено (opeten) = няма го (weg) = минус. Остава (over) = това, което още имаш. 6 − 2.",
+  "fa": "خوردن (opeten) = رفته (weg) = تفریق. باقی‌مانده (over) = چیزی که هنوز داری. 6 − 2."
  },
  "Wat betekent het woord 'samen' bij een som?": {
   "en": "What does the word 'together' mean in a sum?",
@@ -3630,7 +4082,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Що означає слово 'samen' (разом) у прикладі?",
   "tr": "İşlemde 'samen' (toplam) kelimesi ne demek?",
   "ro": "Ce înseamnă cuvântul 'samen' (împreună) într-un exercițiu?",
-  "bg": "Какво означава думата 'samen' (заедно) в задача?"
+  "bg": "Какво означава думата 'samen' (заедно) в задача?",
+  "fa": "کلمهٔ 'samen' (با هم) در یک مسئله یعنی چه؟"
  },
  "Samen = alles bij elkaar.": {
   "en": "Together = everything combined.",
@@ -3638,7 +4091,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Разом (samen) = усе докупи.",
   "tr": "Toplam (samen) = hepsi bir arada.",
   "ro": "Împreună (samen) = totul la un loc.",
-  "bg": "Заедно (samen) = всичко накуп."
+  "bg": "Заедно (samen) = всичко накуп.",
+  "fa": "با هم (samen) = همه روی هم."
  },
  "plus (+)": {
   "en": "plus (+)",
@@ -3646,7 +4100,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "плюс (+)",
   "tr": "artı (+)",
   "ro": "plus (+)",
-  "bg": "плюс (+)"
+  "bg": "плюс (+)",
+  "fa": "جمع (+)"
  },
  "min (−)": {
   "en": "minus (−)",
@@ -3654,7 +4109,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "мінус (−)",
   "tr": "eksi (−)",
   "ro": "minus (−)",
-  "bg": "минус (−)"
+  "bg": "минус (−)",
+  "fa": "تفریق (−)"
  },
  "keer (×)": {
   "en": "times (×)",
@@ -3662,7 +4118,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "помножити (×)",
   "tr": "kere (×)",
   "ro": "ori (×)",
-  "bg": "по (×)"
+  "bg": "по (×)",
+  "fa": "ضرب (×)"
  },
  "Wat betekent het woord 'weg' bij een som?": {
   "en": "What does the word 'away' mean in a sum?",
@@ -3670,7 +4127,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Що означає слово 'weg' (геть) у прикладі?",
   "tr": "İşlemde 'weg' (gitti) kelimesi ne demek?",
   "ro": "Ce înseamnă cuvântul 'weg' (plecat) într-un exercițiu?",
-  "bg": "Какво означава думата 'weg' (няма го) в задача?"
+  "bg": "Какво означава думата 'weg' (няма го) в задача?",
+  "fa": "کلمهٔ 'weg' (رفته) در یک مسئله یعنی چه؟"
  },
  "Weg = er gaat iets af.": {
   "en": "Away = something goes away.",
@@ -3678,7 +4136,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Геть (weg) = щось забирають.",
   "tr": "Gitti (weg) = bir şey eksilir.",
   "ro": "Plecat (weg) = ceva se ia.",
-  "bg": "Няма го (weg) = нещо се маха."
+  "bg": "Няма го (weg) = нещо се маха.",
+  "fa": "رفته (weg) = چیزی کم می‌شود."
  },
  "Er zitten 8 vogels in een boom. Er vliegen 3 vogels weg. Hoeveel vogels zijn er over?": {
   "en": "There are 8 birds in a tree. 3 birds fly away. How many birds are left?",
@@ -3686,7 +4145,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "На дереві сидять 8 пташок. 3 пташки відлітають. Скільки пташок залишилось?",
   "tr": "Bir ağaçta 8 kuş var. 3 kuş uçup gidiyor. Kaç kuş kaldı?",
   "ro": "Într-un copac sunt 8 păsări. 3 păsări zboară. Câte păsări rămân?",
-  "bg": "На едно дърво има 8 птици. 3 птици отлитат. Колко птици остават?"
+  "bg": "На едно дърво има 8 птици. 3 птици отлитат. Колко птици остават?",
+  "fa": "8 پرنده روی یک درخت نشسته‌اند. 3 پرنده پرواز می‌کنند و می‌روند. چند پرنده مانده است؟"
  },
  "Wegvliegen = weg = min. 8 − 3.": {
   "en": "Flying away = away = minus. 8 − 3.",
@@ -3694,7 +4154,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Відлітати (wegvliegen) = геть (weg) = мінус. 8 − 3.",
   "tr": "Uçup gitmek (wegvliegen) = gitti (weg) = eksi. 8 − 3.",
   "ro": "A zbura (wegvliegen) = plecat (weg) = minus. 8 − 3.",
-  "bg": "Отлитат (wegvliegen) = няма го (weg) = минус. 8 − 3."
+  "bg": "Отлитат (wegvliegen) = няма го (weg) = минус. 8 − 3.",
+  "fa": "پرواز کردن و رفتن = رفته (weg) = تفریق. 8 − 3."
  },
  "**Keer** (×) = groepjes van hetzelfde. 3 keer 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** = iedereen krijgt evenveel.\n\n**De helft** = in twee gelijke stukken.": {
   "en": "**Keer** (Times) (×) = groups of the same thing. 3 times 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** (Sharing fairly) = everyone gets the same.\n\n**De helft** (Half) = in two equal parts.",
@@ -3702,7 +4163,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Рази** (keer) (×) = однакові групи. 3 рази по 2 = 2 + 2 + 2.\n\n**Чесно поділити** (eerlijk verdelen) = кожен отримує порівну.\n\n**Половина** (de helft) = на дві однакові частини.",
   "tr": "**Kere** (keer) (×) = aynı sayıda gruplar. 3 kere 2 = 2 + 2 + 2.\n\n**Eşit paylaştırmak** (eerlijk verdelen) = herkes eşit alır.\n\n**Yarım** (de helft) = iki eşit parçaya.",
   "ro": "**Ori** (keer) (×) = grupe de același lucru. 3 ori 2 = 2 + 2 + 2.\n\n**A împărți cinstit** (eerlijk verdelen) = fiecare primește la fel de mult.\n\n**Jumătate** (de helft) = în două bucăți egale.",
-  "bg": "**По** (keer) (×) = еднакви групи. 3 по 2 = 2 + 2 + 2.\n\n**Честно делене** (eerlijk verdelen) = всеки получава поравно.\n\n**Половината** (de helft) = на две еднакви части."
+  "bg": "**По** (keer) (×) = еднакви групи. 3 по 2 = 2 + 2 + 2.\n\n**Честно делене** (eerlijk verdelen) = всеки получава поравно.\n\n**Половината** (de helft) = на две еднакви части.",
+  "fa": "**Keer** (ضرب) (×) = گروه‌هایی از یک چیز یکسان. 3 بار 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** (منصفانه تقسیم کردن) = به همه به یک اندازه می‌رسد.\n\n**De helft** (نصف) = دو تکهٔ مساوی."
  },
  "3 groepjes van 2 kinderen. Hoeveel kinderen zijn het samen?": {
   "en": "3 groups of 2 children. How many children is that together?",
@@ -3710,7 +4172,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "3 групи по 2 дитини. Скільки всього дітей разом?",
   "tr": "2 çocuklu 3 grup. Toplam kaç çocuk var?",
   "ro": "3 grupe de câte 2 copii. Câți copii sunt împreună?",
-  "bg": "3 групи по 2 деца. Колко деца са заедно?"
+  "bg": "3 групи по 2 деца. Колко деца са заедно?",
+  "fa": "3 گروه 2 نفری از بچه‌ها. روی هم چند بچه می‌شوند؟"
  },
  "3 groepjes van 2 = 2 + 2 + 2.": {
   "en": "3 groups of 2 = 2 + 2 + 2.",
@@ -3718,7 +4181,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "3 групи по 2 = 2 + 2 + 2.",
   "tr": "2'li 3 grup = 2 + 2 + 2.",
   "ro": "3 grupe de câte 2 = 2 + 2 + 2.",
-  "bg": "3 групи по 2 = 2 + 2 + 2."
+  "bg": "3 групи по 2 = 2 + 2 + 2.",
+  "fa": "3 گروه 2 تایی = 2 + 2 + 2."
  },
  "Groepjes": {
   "en": "Groups",
@@ -3726,7 +4190,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Групи",
   "tr": "Gruplar",
   "ro": "Grupe",
-  "bg": "Групи"
+  "bg": "Групи",
+  "fa": "گروه‌ها"
  },
  "**3 groepjes van 2** = 2 + 2 + 2 = 6. Dat is ook **3 keer 2** (3 × 2).": {
   "en": "**3 groepjes van 2** (3 groups of 2) = 2 + 2 + 2 = 6. That is also **3 keer 2** (3 times 2) (3 × 2).",
@@ -3734,7 +4199,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**3 групи по 2** = 2 + 2 + 2 = 6. Це теж **3 рази по 2** (3 × 2).",
   "tr": "**2'li 3 grup** = 2 + 2 + 2 = 6. Bu da **3 kere 2** (3 keer 2) (3 × 2).",
   "ro": "**3 grupe de câte 2** = 2 + 2 + 2 = 6. Asta este și **3 ori 2** (3 × 2).",
-  "bg": "**3 групи по 2** = 2 + 2 + 2 = 6. Това е също **3 по 2** (3 × 2)."
+  "bg": "**3 групи по 2** = 2 + 2 + 2 = 6. Това е също **3 по 2** (3 × 2).",
+  "fa": "**3 groepjes van 2** (3 گروه 2 تایی) = 2 + 2 + 2 = 6. این همان **3 keer 2** (3 بار 2) است (3 × 2)."
  },
  "Verdelen": {
   "en": "Sharing",
@@ -3742,7 +4208,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ділити",
   "tr": "Paylaştırmak",
   "ro": "A împărți",
-  "bg": "Делене"
+  "bg": "Делене",
+  "fa": "تقسیم کردن"
  },
  "**Eerlijk verdelen**: iedereen krijgt **evenveel**. 8 snoepjes voor 2 kinderen: ieder 4.": {
   "en": "**Eerlijk verdelen** (Sharing fairly): everyone gets **evenveel** (the same). 8 candies for 2 children: each gets 4.",
@@ -3750,7 +4217,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Чесно поділити** (eerlijk verdelen): кожен отримує **порівну**. 8 цукерок для 2 дітей: кожному 4.",
   "tr": "**Eşit paylaştırmak** (eerlijk verdelen): herkes **eşit** (evenveel) alır. 2 çocuk için 8 şeker: her birine 4.",
   "ro": "**A împărți cinstit** (eerlijk verdelen): fiecare primește **la fel de mult** (evenveel). 8 bomboane pentru 2 copii: fiecare 4.",
-  "bg": "**Честно делене** (eerlijk verdelen): всеки получава **поравно** (evenveel). 8 бонбона за 2 деца: всеки по 4."
+  "bg": "**Честно делене** (eerlijk verdelen): всеки получава **поравно** (evenveel). 8 бонбона за 2 деца: всеки по 4.",
+  "fa": "**Eerlijk verdelen** (منصفانه تقسیم کردن): به همه **evenveel** (به یک اندازه) می‌رسد. 8 آب‌نبات برای 2 بچه: هر کدام 4 تا."
  },
  "De helft": {
   "en": "Half",
@@ -3758,7 +4226,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Половина",
   "tr": "Yarım",
   "ro": "Jumătate",
-  "bg": "Половината"
+  "bg": "Половината",
+  "fa": "نصف"
  },
  "**De helft** = in twee gelijke stukken. De helft van 10 is 5.": {
   "en": "**De helft** (Half) = in two equal parts. Half of 10 is 5.",
@@ -3766,7 +4235,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "**Половина** (de helft) = на дві однакові частини. Половина від 10 — це 5.",
   "tr": "**Yarım** (de helft) = iki eşit parçaya. 10'un yarısı 5.",
   "ro": "**Jumătate** (de helft) = în două bucăți egale. Jumătate din 10 este 5.",
-  "bg": "**Половината** (de helft) = на две еднакви части. Половината от 10 е 5."
+  "bg": "**Половината** (de helft) = на две еднакви части. Половината от 10 е 5.",
+  "fa": "**De helft** (نصف) = دو تکهٔ مساوی. نصفِ 10 می‌شود 5."
  },
  "keer": {
   "en": "times",
@@ -3774,7 +4244,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "рази",
   "tr": "kere",
   "ro": "ori",
-  "bg": "по"
+  "bg": "по",
+  "fa": "ضرب"
  },
  "Steeds hetzelfde getal erbij. 3 keer 2 = 2 + 2 + 2.": {
   "en": "Adding the same number each time. 3 times 2 = 2 + 2 + 2.",
@@ -3782,7 +4253,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Щоразу додаєш те саме число. 3 рази по 2 = 2 + 2 + 2.",
   "tr": "Hep aynı sayıyı eklemek. 3 kere 2 = 2 + 2 + 2.",
   "ro": "Mereu același număr în plus. 3 ori 2 = 2 + 2 + 2.",
-  "bg": "Всеки път същото число в повече. 3 по 2 = 2 + 2 + 2."
+  "bg": "Всеки път същото число в повече. 3 по 2 = 2 + 2 + 2.",
+  "fa": "هر بار همان عدد را اضافه می‌کنی. 3 بار 2 = 2 + 2 + 2."
  },
  "verdelen": {
   "en": "to share out",
@@ -3790,7 +4262,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "ділити",
   "tr": "paylaştırmak",
   "ro": "a împărți",
-  "bg": "деля"
+  "bg": "деля",
+  "fa": "تقسیم کردن"
  },
  "Uitdelen, zodat iedereen evenveel krijgt.": {
   "en": "Handing out, so everyone gets the same.",
@@ -3798,7 +4271,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Роздати так, щоб кожен отримав порівну.",
   "tr": "Herkes eşit alsın diye dağıtmak.",
   "ro": "A da fiecăruia, astfel încât toți să primească la fel de mult.",
-  "bg": "Раздаване, така че всеки да получи поравно."
+  "bg": "Раздаване, така че всеки да получи поравно.",
+  "fa": "پخش کردن، طوری که به همه به یک اندازه برسد."
  },
  "de helft": {
   "en": "half",
@@ -3806,7 +4280,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "половина",
   "tr": "yarım, yarısı",
   "ro": "jumătate",
-  "bg": "половината"
+  "bg": "половината",
+  "fa": "نصف"
  },
  "Een van de twee gelijke stukken.": {
   "en": "One of the two equal parts.",
@@ -3814,7 +4289,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Одна з двох однакових частин.",
   "tr": "İki eşit parçadan biri.",
   "ro": "Una dintre cele două bucăți egale.",
-  "bg": "Една от двете еднакви части."
+  "bg": "Една от двете еднакви части.",
+  "fa": "یکی از دو تکهٔ مساوی."
  },
  "Keer = groepjes van hetzelfde. Verdelen = eerlijk uitdelen.": {
   "en": "Times = groups of the same thing. Sharing = handing out fairly.",
@@ -3822,7 +4298,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Рази (keer) = однакові групи. Ділити (verdelen) = чесно роздати.",
   "tr": "Kere (keer) = aynı sayıda gruplar. Paylaştırmak (verdelen) = eşit dağıtmak.",
   "ro": "Ori (keer) = grupe de același lucru. A împărți (verdelen) = a da cinstit fiecăruia.",
-  "bg": "По (keer) = еднакви групи. Делене (verdelen) = честно раздаване."
+  "bg": "По (keer) = еднакви групи. Делене (verdelen) = честно раздаване.",
+  "fa": "ضرب = گروه‌هایی از یک چیز یکسان. تقسیم = منصفانه پخش کردن."
  },
  "2 keer 5 = 5 + 5 = 10.": {
   "en": "2 times 5 = 5 + 5 = 10.",
@@ -3830,7 +4307,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "2 рази по 5 = 5 + 5 = 10.",
   "tr": "2 kere 5 = 5 + 5 = 10.",
   "ro": "2 ori 5 = 5 + 5 = 10.",
-  "bg": "2 по 5 = 5 + 5 = 10."
+  "bg": "2 по 5 = 5 + 5 = 10.",
+  "fa": "2 بار 5 = 5 + 5 = 10."
  },
  "6 koekjes voor 3 kinderen: ieder 2.": {
   "en": "6 cookies for 3 children: each gets 2.",
@@ -3838,7 +4316,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "6 печивок для 3 дітей: кожному 2.",
   "tr": "3 çocuk için 6 kurabiye: her birine 2.",
   "ro": "6 biscuiți pentru 3 copii: fiecare 2.",
-  "bg": "6 бисквити за 3 деца: всеки по 2."
+  "bg": "6 бисквити за 3 деца: всеки по 2.",
+  "fa": "6 بیسکویت برای 3 بچه: هر کدام 2 تا."
  },
  "Verdelen? Deel één voor één uit, zoals kaarten bij een spel.": {
   "en": "Sharing? Hand them out one by one, like cards in a game.",
@@ -3846,7 +4325,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ділиш? Роздавай по одному, як карти в грі.",
   "tr": "Paylaştırmak mı? Bir oyunda kart dağıtır gibi tek tek dağıt.",
   "ro": "Împarți? Dă câte unul pe rând, ca la cărțile de joc.",
-  "bg": "Делиш? Раздавай едно по едно, като карти в игра."
+  "bg": "Делиш? Раздавай едно по едно, като карти в игра.",
+  "fa": "تقسیم کردن؟ یکی‌یکی پخش کن، مثل کارت‌ها در یک بازی."
  },
  "Tel de groepjes bij elkaar op.": {
   "en": "Add the groups together.",
@@ -3854,7 +4334,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Додай групи разом.",
   "tr": "Grupları topla.",
   "ro": "Adună grupele la un loc.",
-  "bg": "Събери групите заедно."
+  "bg": "Събери групите заедно.",
+  "fa": "گروه‌ها را با هم جمع کن."
  },
  "Wat betekent '2 keer 4'?": {
   "en": "What does '2 times 4' mean?",
@@ -3862,7 +4343,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Що означає '2 keer 4' (2 рази по 4)?",
   "tr": "'2 keer 4' (2 kere 4) ne demek?",
   "ro": "Ce înseamnă '2 keer 4' (2 ori 4)?",
-  "bg": "Какво означава '2 keer 4' (2 по 4)?"
+  "bg": "Какво означава '2 keer 4' (2 по 4)?",
+  "fa": "'2 keer 4' (2 بار 4) یعنی چه؟"
  },
  "Keer = hetzelfde getal een paar keer bij elkaar. Kijk: welk getal, en hoe vaak?": {
   "en": "Times = the same number added together a few times. Look: which number, and how many times?",
@@ -3870,7 +4352,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Множення (keer) = те саме число кілька разів разом. Подивись: яке число і скільки разів?",
   "tr": "Kere (keer) = aynı sayıyı birkaç kez toplamak. Bak: hangi sayı ve kaç kere?",
   "ro": "Ori (keer) = același număr de câteva ori la un loc. Uită-te: care număr și de câte ori?",
-  "bg": "По (keer) = същото число няколко пъти заедно. Виж: кое число и колко пъти?"
+  "bg": "По (keer) = същото число няколко пъти заедно. Виж: кое число и колко пъти?",
+  "fa": "ضرب = همان عدد را چند بار با هم جمع کنی. نگاه کن: کدام عدد، و چند بار؟"
  },
  "Je verdeelt 8 snoepjes eerlijk over 2 kinderen. Hoeveel krijgt ieder kind?": {
   "en": "You share 8 candies fairly between 2 children. How many does each child get?",
@@ -3878,7 +4361,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти чесно ділиш 8 цукерок між 2 дітьми. Скільки отримає кожна дитина?",
   "tr": "8 şekeri 2 çocuğa eşit paylaştırıyorsun. Her çocuk kaç tane alır?",
   "ro": "Împarți cinstit 8 bomboane la 2 copii. Câte primește fiecare copil?",
-  "bg": "Делиш честно 8 бонбона между 2 деца. Колко получава всяко дете?"
+  "bg": "Делиш честно 8 бонбона между 2 деца. Колко получава всяко дете?",
+  "fa": "8 آب‌نبات را منصفانه بین 2 بچه تقسیم می‌کنی. به هر بچه چند تا می‌رسد؟"
  },
  "Eerlijk = iedereen krijgt evenveel. Deel één voor één uit.": {
   "en": "Fair = everyone gets the same. Hand them out one by one.",
@@ -3886,7 +4370,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Чесно (eerlijk) = кожен отримує порівну. Роздавай по одному.",
   "tr": "Eşit (eerlijk) = herkes eşit alır. Tek tek dağıt.",
   "ro": "Cinstit (eerlijk) = fiecare primește la fel de mult. Dă câte unul pe rând.",
-  "bg": "Честно (eerlijk) = всеки получава поравно. Раздавай едно по едно."
+  "bg": "Честно (eerlijk) = всеки получава поравно. Раздавай едно по едно.",
+  "fa": "منصفانه = به همه به یک اندازه می‌رسد. یکی‌یکی پخش کن."
  },
  "Wat is de helft van 10?": {
   "en": "What is half of 10?",
@@ -3894,7 +4379,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Скільки буде половина від 10?",
   "tr": "10'un yarısı kaç?",
   "ro": "Cât este jumătate din 10?",
-  "bg": "Колко е половината от 10?"
+  "bg": "Колко е половината от 10?",
+  "fa": "نصفِ 10 چند است؟"
  },
  "De helft = in twee gelijke stukken.": {
   "en": "Half = in two equal parts.",
@@ -3902,7 +4388,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Половина (de helft) = на дві однакові частини.",
   "tr": "Yarım (de helft) = iki eşit parçaya.",
   "ro": "Jumătate (de helft) = în două bucăți egale.",
-  "bg": "Половината (de helft) = на две еднакви части."
+  "bg": "Половината (de helft) = на две еднакви части.",
+  "fa": "نصف = دو تکهٔ مساوی."
  },
  "Je verdeelt 6 koekjes eerlijk over 3 kinderen. Hoeveel krijgt ieder kind?": {
   "en": "You share 6 cookies fairly between 3 children. How many does each child get?",
@@ -3910,7 +4397,8 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти чесно ділиш 6 печивок між 3 дітьми. Скільки отримає кожна дитина?",
   "tr": "6 kurabiyeyi 3 çocuğa eşit paylaştırıyorsun. Her çocuk kaç tane alır?",
   "ro": "Împarți cinstit 6 biscuiți la 3 copii. Câți primește fiecare copil?",
-  "bg": "Делиш честно 6 бисквити между 3 деца. Колко получава всяко дете?"
+  "bg": "Делиш честно 6 бисквити между 3 деца. Колко получава всяко дете?",
+  "fa": "6 بیسکویت را منصفانه بین 3 بچه تقسیم می‌کنی. به هر بچه چند تا می‌رسد؟"
  },
  "Deel uit: één voor jou, één voor jou, één voor jou… tot alles op is.": {
   "en": "Hand them out: one for you, one for you, one for you… until it's all gone.",
@@ -3918,405 +4406,406 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Роздавай: одне тобі, одне тобі, одне тобі… поки все не закінчиться.",
   "tr": "Dağıt: biri sana, biri sana, biri sana… hepsi bitene kadar.",
   "ro": "Dă pe rând: unul pentru tine, unul pentru tine, unul pentru tine… până se termină totul.",
-  "bg": "Раздавай: едно за теб, едно за теб, едно за теб… докато свърши всичко."
+  "bg": "Раздавай: едно за теб, едно за теб, едно за теб… докато свърши всичко.",
+  "fa": "پخش کن: یکی برای تو، یکی برای تو، یکی برای تو… تا همه تمام شود."
  },
  // Hoofdstuktitels als vraag (Mark 25 sep 2026: "Hoofdstuk 1 — hoe stel ik vragen aan de juf of meester").
- "Hoe vraag ik iets aan de juf of meester?": {"en": "How do I ask the teacher something?", "ar": "كيف أسأل المعلّم أو المعلّمة عن شيء؟", "uk": "Як мені щось запитати в учителя чи вчительки?", "tr": "Öğretmene nasıl bir şey sorarım?", "ro": "Cum întreb ceva pe doamna sau domnul învățător?", "bg": "Как да попитам нещо учителката или учителя?"},
- "Waar is alles op school?": {"en": "Where is everything at school?", "ar": "أين يوجد كل شيء في المدرسة؟", "uk": "Де що є в школі?", "tr": "Okulda her şey nerede?", "ro": "Unde este totul la școală?", "bg": "Къде е всичко в училище?"},
- "Hoe speel ik mee met andere kinderen?": {"en": "How do I join in with other children?", "ar": "كيف ألعب مع الأطفال الآخرين؟", "uk": "Як мені гратися з іншими дітьми?", "tr": "Diğer çocuklarla nasıl oynarım?", "ro": "Cum mă joc împreună cu alți copii?", "bg": "Как да играя с други деца?"},
- "Hoe zeg ik hoe ik me voel?": {"en": "How do I say how I feel?", "ar": "كيف أقول ما أشعر به؟", "uk": "Як мені сказати, що я відчуваю?", "tr": "Nasıl hissettiğimi nasıl söylerim?", "ro": "Cum spun cum mă simt?", "bg": "Как да кажа как се чувствам?"},
- "Welke woorden hoor ik op school?": {"en": "Which words do I hear at school?", "ar": "ما الكلمات التي أسمعها في المدرسة؟", "uk": "Які слова я чую в школі?", "tr": "Okulda hangi kelimeleri duyarım?", "ro": "Ce cuvinte aud la școală?", "bg": "Кои думи чувам в училище?"},
- "Welke woorden hoor ik thuis en bij het eten?": {"en": "Which words do I hear at home and at meals?", "ar": "ما الكلمات التي أسمعها في البيت وعند الأكل؟", "uk": "Які слова я чую вдома і під час їжі?", "tr": "Evde ve yemekte hangi kelimeleri duyarım?", "ro": "Ce cuvinte aud acasă și la masă?", "bg": "Кои думи чувам вкъщи и на масата?"},
- "Hoe heten mijn lichaam en de kleuren?": {"en": "What are the names of my body parts and the colours?", "ar": "ما أسماء أجزاء جسمي والألوان؟", "uk": "Як називаються частини тіла і кольори?", "tr": "Vücudumun ve renklerin adları ne?", "ro": "Cum se numesc corpul meu și culorile?", "bg": "Как се казват частите на тялото ми и цветовете?"},
- "Wat moet ik doen in de klas?": {"en": "What do I have to do in class?", "ar": "ماذا يجب أن أفعل في الصف؟", "uk": "Що мені треба робити в класі?", "tr": "Sınıfta ne yapmam gerekiyor?", "ro": "Ce trebuie să fac în clasă?", "bg": "Какво трябва да правя в клас?"},
- "Wat betekent meer, minder en evenveel?": {"en": "What do more, less and the same mean?", "ar": "ماذا تعني أكثر وأقل ومتساوٍ؟", "uk": "Що означає більше, менше й однаково?", "tr": "Daha çok, daha az ve eşit ne demek?", "ro": "Ce înseamnă mai mult, mai puțin și la fel de mult?", "bg": "Какво означава повече, по-малко и поравно?"},
- "Wat betekent samen, weg en over?": {"en": "What do together, away and left over mean?", "ar": "ماذا تعني معًا وذهب وبقي؟", "uk": "Що означає разом, забрали й залишилося?", "tr": "Toplam, gitti ve kalan ne demek?", "ro": "Ce înseamnă împreună, plecat și rămas?", "bg": "Какво означава заедно, няма го и остава?"},
- "Wat betekent keer en verdelen?": {"en": "What do times and sharing mean?", "ar": "ماذا يعني الضرب والتقسيم؟", "uk": "Що означає помножити й поділити?", "tr": "Çarpı ve paylaştırmak ne demek?", "ro": "Ce înseamnă ori și a împărți?", "bg": "Какво означава по и делене?"},
- "Hoe tel ik tot 20?": {"en": "How do I count to 20?", "ar": "كيف أعدّ حتى 20؟", "uk": "Як мені рахувати до 20?", "tr": "20'ye kadar nasıl sayarım?", "ro": "Cum număr până la 20?", "bg": "Как броя до 20?"},
- "Hoe doe ik erbij tot 10?": {"en": "How do I add up to 10?", "ar": "كيف أجمع حتى 10؟", "uk": "Як мені додавати до 10?", "tr": "10'a kadar nasıl toplarım?", "ro": "Cum adun până la 10?", "bg": "Как събирам до 10?"},
- "Hoe doe ik eraf tot 10?": {"en": "How do I take away up to 10?", "ar": "كيف أطرح حتى 10؟", "uk": "Як мені віднімати до 10?", "tr": "10'a kadar nasıl çıkarırım?", "ro": "Cum scad până la 10?", "bg": "Как изваждам до 10?"},
- "Hoe reken ik over de 10 heen?": {"en": "How do I calculate past 10?", "ar": "كيف أحسب بعد العدد 10؟", "uk": "Як мені рахувати через 10?", "tr": "10'u geçerek nasıl hesaplarım?", "ro": "Cum calculez peste 10?", "bg": "Как смятам през 10?"},
- "Hoe maak ik een som uit de klas?": {"en": "How do I solve a sum from class?", "ar": "كيف أحلّ مسألة من الصف؟", "uk": "Як мені розв'язати задачу з класу?", "tr": "Sınıftan bir işlemi nasıl yaparım?", "ro": "Cum rezolv un exercițiu din clasă?", "bg": "Как решавам задача от класа?"},
- "Wat zijn tientallen en eenheden?": {"en": "What are tens and ones?", "ar": "ما العشرات والآحاد؟", "uk": "Що таке десятки й одиниці?", "tr": "Onluklar ve birlikler nedir?", "ro": "Ce sunt zecile și unitățile?", "bg": "Какво са десетиците и единиците?"},
- "Hoe doe ik erbij tot 100?": {"en": "How do I add up to 100?", "ar": "كيف أجمع حتى 100؟", "uk": "Як мені додавати до 100?", "tr": "100'e kadar nasıl toplarım?", "ro": "Cum adun până la 100?", "bg": "Как събирам до 100?"},
- "Hoe doe ik eraf tot 100?": {"en": "How do I take away up to 100?", "ar": "كيف أطرح حتى 100؟", "uk": "Як мені віднімати до 100?", "tr": "100'e kadar nasıl çıkarırım?", "ro": "Cum scad până la 100?", "bg": "Как изваждам до 100?"},
- "Hoe reken ik over het tiental heen?": {"en": "How do I calculate past a ten?", "ar": "كيف أحسب بعد العشرة؟", "uk": "Як мені рахувати через десяток?", "tr": "Onluğu geçerek nasıl hesaplarım?", "ro": "Cum calculez peste zece?", "bg": "Как смятам през десетицата?"},
- "Hoe reken ik in de winkel?": {"en": "How do I calculate in the shop?", "ar": "كيف أحسب في المتجر؟", "uk": "Як мені рахувати в магазині?", "tr": "Markette nasıl hesap yaparım?", "ro": "Cum calculez la magazin?", "bg": "Как смятам в магазина?"}
+ "Hoe vraag ik iets aan de juf of meester?": {"en": "How do I ask the teacher something?", "ar": "كيف أسأل المعلّم أو المعلّمة عن شيء؟", "uk": "Як мені щось запитати в учителя чи вчительки?", "tr": "Öğretmene nasıl bir şey sorarım?", "ro": "Cum întreb ceva pe doamna sau domnul învățător?", "bg": "Как да попитам нещо учителката или учителя?", "fa": "چطور از خانم معلم یا آقای معلم چیزی بپرسم؟"},
+ "Waar is alles op school?": {"en": "Where is everything at school?", "ar": "أين يوجد كل شيء في المدرسة؟", "uk": "Де що є в школі?", "tr": "Okulda her şey nerede?", "ro": "Unde este totul la școală?", "bg": "Къде е всичко в училище?", "fa": "همه‌چیز در مدرسه کجاست؟"},
+ "Hoe speel ik mee met andere kinderen?": {"en": "How do I join in with other children?", "ar": "كيف ألعب مع الأطفال الآخرين؟", "uk": "Як мені гратися з іншими дітьми?", "tr": "Diğer çocuklarla nasıl oynarım?", "ro": "Cum mă joc împreună cu alți copii?", "bg": "Как да играя с други деца?", "fa": "چطور با بچه‌های دیگر بازی کنم؟"},
+ "Hoe zeg ik hoe ik me voel?": {"en": "How do I say how I feel?", "ar": "كيف أقول ما أشعر به؟", "uk": "Як мені сказати, що я відчуваю?", "tr": "Nasıl hissettiğimi nasıl söylerim?", "ro": "Cum spun cum mă simt?", "bg": "Как да кажа как се чувствам?", "fa": "چطور بگویم چه حسی دارم؟"},
+ "Welke woorden hoor ik op school?": {"en": "Which words do I hear at school?", "ar": "ما الكلمات التي أسمعها في المدرسة؟", "uk": "Які слова я чую в школі?", "tr": "Okulda hangi kelimeleri duyarım?", "ro": "Ce cuvinte aud la școală?", "bg": "Кои думи чувам в училище?", "fa": "در مدرسه چه کلمه‌هایی می‌شنوم؟"},
+ "Welke woorden hoor ik thuis en bij het eten?": {"en": "Which words do I hear at home and at meals?", "ar": "ما الكلمات التي أسمعها في البيت وعند الأكل؟", "uk": "Які слова я чую вдома і під час їжі?", "tr": "Evde ve yemekte hangi kelimeleri duyarım?", "ro": "Ce cuvinte aud acasă și la masă?", "bg": "Кои думи чувам вкъщи и на масата?", "fa": "در خانه و سر غذا چه کلمه‌هایی می‌شنوم؟"},
+ "Hoe heten mijn lichaam en de kleuren?": {"en": "What are the names of my body parts and the colours?", "ar": "ما أسماء أجزاء جسمي والألوان؟", "uk": "Як називаються частини тіла і кольори?", "tr": "Vücudumun ve renklerin adları ne?", "ro": "Cum se numesc corpul meu și culorile?", "bg": "Как се казват частите на тялото ми и цветовете?", "fa": "اسم اعضای بدنم و رنگ‌ها چیست؟"},
+ "Wat moet ik doen in de klas?": {"en": "What do I have to do in class?", "ar": "ماذا يجب أن أفعل في الصف؟", "uk": "Що мені треба робити в класі?", "tr": "Sınıfta ne yapmam gerekiyor?", "ro": "Ce trebuie să fac în clasă?", "bg": "Какво трябва да правя в клас?", "fa": "در کلاس باید چه کار کنم؟"},
+ "Wat betekent meer, minder en evenveel?": {"en": "What do more, less and the same mean?", "ar": "ماذا تعني أكثر وأقل ومتساوٍ؟", "uk": "Що означає більше, менше й однаково?", "tr": "Daha çok, daha az ve eşit ne demek?", "ro": "Ce înseamnă mai mult, mai puțin și la fel de mult?", "bg": "Какво означава повече, по-малко и поравно?", "fa": "بیشتر، کمتر و به یک اندازه یعنی چه؟"},
+ "Wat betekent samen, weg en over?": {"en": "What do together, away and left over mean?", "ar": "ماذا تعني معًا وذهب وبقي؟", "uk": "Що означає разом, забрали й залишилося?", "tr": "Toplam, gitti ve kalan ne demek?", "ro": "Ce înseamnă împreună, plecat și rămas?", "bg": "Какво означава заедно, няма го и остава?", "fa": "با هم، رفته و باقی‌مانده یعنی چه؟"},
+ "Wat betekent keer en verdelen?": {"en": "What do times and sharing mean?", "ar": "ماذا يعني الضرب والتقسيم؟", "uk": "Що означає помножити й поділити?", "tr": "Çarpı ve paylaştırmak ne demek?", "ro": "Ce înseamnă ori și a împărți?", "bg": "Какво означава по и делене?", "fa": "ضرب و تقسیم یعنی چه؟"},
+ "Hoe tel ik tot 20?": {"en": "How do I count to 20?", "ar": "كيف أعدّ حتى 20؟", "uk": "Як мені рахувати до 20?", "tr": "20'ye kadar nasıl sayarım?", "ro": "Cum număr până la 20?", "bg": "Как броя до 20?", "fa": "چطور تا 20 بشمارم؟"},
+ "Hoe doe ik erbij tot 10?": {"en": "How do I add up to 10?", "ar": "كيف أجمع حتى 10؟", "uk": "Як мені додавати до 10?", "tr": "10'a kadar nasıl toplarım?", "ro": "Cum adun până la 10?", "bg": "Как събирам до 10?", "fa": "چطور تا 10 جمع کنم؟"},
+ "Hoe doe ik eraf tot 10?": {"en": "How do I take away up to 10?", "ar": "كيف أطرح حتى 10؟", "uk": "Як мені віднімати до 10?", "tr": "10'a kadar nasıl çıkarırım?", "ro": "Cum scad până la 10?", "bg": "Как изваждам до 10?", "fa": "چطور تا 10 کم کنم؟"},
+ "Hoe reken ik over de 10 heen?": {"en": "How do I calculate past 10?", "ar": "كيف أحسب بعد العدد 10؟", "uk": "Як мені рахувати через 10?", "tr": "10'u geçerek nasıl hesaplarım?", "ro": "Cum calculez peste 10?", "bg": "Как смятам през 10?", "fa": "چطور از 10 بگذرم و حساب کنم؟"},
+ "Hoe maak ik een som uit de klas?": {"en": "How do I solve a sum from class?", "ar": "كيف أحلّ مسألة من الصف؟", "uk": "Як мені розв'язати задачу з класу?", "tr": "Sınıftan bir işlemi nasıl yaparım?", "ro": "Cum rezolv un exercițiu din clasă?", "bg": "Как решавам задача от класа?", "fa": "چطور یک مسئلهٔ کلاس را حل کنم؟"},
+ "Wat zijn tientallen en eenheden?": {"en": "What are tens and ones?", "ar": "ما العشرات والآحاد؟", "uk": "Що таке десятки й одиниці?", "tr": "Onluklar ve birlikler nedir?", "ro": "Ce sunt zecile și unitățile?", "bg": "Какво са десетиците и единиците?", "fa": "دهگان و یکان چیست؟"},
+ "Hoe doe ik erbij tot 100?": {"en": "How do I add up to 100?", "ar": "كيف أجمع حتى 100؟", "uk": "Як мені додавати до 100?", "tr": "100'e kadar nasıl toplarım?", "ro": "Cum adun până la 100?", "bg": "Как събирам до 100?", "fa": "چطور تا 100 جمع کنم؟"},
+ "Hoe doe ik eraf tot 100?": {"en": "How do I take away up to 100?", "ar": "كيف أطرح حتى 100؟", "uk": "Як мені віднімати до 100?", "tr": "100'e kadar nasıl çıkarırım?", "ro": "Cum scad până la 100?", "bg": "Как изваждам до 100?", "fa": "چطور تا 100 کم کنم؟"},
+ "Hoe reken ik over het tiental heen?": {"en": "How do I calculate past a ten?", "ar": "كيف أحسب بعد العشرة؟", "uk": "Як мені рахувати через десяток?", "tr": "Onluğu geçerek nasıl hesaplarım?", "ro": "Cum calculez peste zece?", "bg": "Как смятам през десетицата?", "fa": "چطور از یک دهگان بگذرم و حساب کنم؟"},
+ "Hoe reken ik in de winkel?": {"en": "How do I calculate in the shop?", "ar": "كيف أحسب في المتجر؟", "uk": "Як мені рахувати в магазині?", "tr": "Markette nasıl hesap yaparım?", "ro": "Cum calculez la magazin?", "bg": "Как смятам в магазина?", "fa": "در مغازه چطور حساب کنم؟"}
 ,
  // In de klas 2 (2 okt 2026) — door Claude vertaald, nog door moedertaalsprekers laten nakijken.
- "In de klas 2 — zelf werken en fijne gevoelens (nieuwkomers)": {"en":"In class 2 — working on your own and good feelings (newcomers)","ar":"في الصف 2 — العمل بنفسك والمشاعر الجميلة (للقادمين الجدد)","uk":"У класі 2 — працюємо самостійно і приємні почуття (новенькі)","tr":"Sınıfta 2 — kendi başına çalışmak ve güzel duygular (yeni gelenler)","ro":"În clasă 2 — lucrul singur și sentimente plăcute (nou-veniți)","bg":"В клас 2 — работа сам и хубави чувства (новодошли)"},
- "Zelf aan het werk, wat je doet als je klaar bent, wat je doet als de juf bezig is, en hoe je zegt dat je je fijn voelt. Met steun in je eigen taal. ~10 min.": {"en":"Working on your own, what to do when you are finished, what to do when the teacher is busy, and how to say you feel good. With help in your own language. ~10 min.","ar":"العمل بنفسك، ماذا تفعل عندما تنتهي، ماذا تفعل عندما تكون المعلمة مشغولة، وكيف تقول إنك تشعر بشعور جميل. مع مساعدة بلغتك. ~10 دقائق.","uk":"Працюєш сам, що робити, коли ти закінчив, що робити, коли вчителька зайнята, і як сказати, що тобі добре. З підтримкою твоєю мовою. ~10 хв.","tr":"Kendi başına çalışmak, bitirince ne yapacağın, öğretmen meşgulken ne yapacağın ve kendini iyi hissettiğini nasıl söyleyeceğin. Kendi dilinde destekle. ~10 dk.","ro":"Lucrezi singur, ce faci când ai terminat, ce faci când doamna învățătoare e ocupată și cum spui că te simți bine. Cu sprijin în limba ta. ~10 min.","bg":"Работиш сам, какво правиш, когато си готов, какво правиш, когато учителката е заета, и как казваш, че ти е хубаво. С помощ на твоя език. ~10 мин."},
- "Hoe begin ik aan mijn werk?": {"en":"How do I start my work?","ar":"كيف أبدأ عملي؟","uk":"Як мені почати роботу?","tr":"İşime nasıl başlarım?","ro":"Cum încep lucrul?","bg":"Как да започна работата си?"},
- "Ik ben klaar. Wat nu?": {"en":"I am finished. What now?","ar":"انتهيت. ماذا الآن؟","uk":"Я закінчив. Що тепер?","tr":"Bitirdim. Şimdi ne yapayım?","ro":"Am terminat. Și acum?","bg":"Готов съм. Сега какво?"},
- "De juf is bezig. Wat doe ik?": {"en":"The teacher is busy. What do I do?","ar":"المعلمة مشغولة. ماذا أفعل؟","uk":"Учителька зайнята. Що мені робити?","tr":"Öğretmen meşgul. Ne yaparım?","ro":"Doamna învățătoare e ocupată. Ce fac?","bg":"Учителката е заета. Какво да правя?"},
- "Hoe zeg ik dat ik me fijn voel?": {"en":"How do I say that I feel good?","ar":"كيف أقول إنني أشعر بشعور جميل؟","uk":"Як сказати, що мені добре?","tr":"Kendimi iyi hissettiğimi nasıl söylerim?","ro":"Cum spun că mă simt bine?","bg":"Как да кажа, че ми е хубаво?"},
- "Aan het werk": {"en":"Getting to work","ar":"إلى العمل","uk":"До роботи","tr":"İşe başla","ro":"La lucru","bg":"На работа"},
- "De juf of meester zegt wat je gaat doen.\n\n**Pak je werkboek.** **Begin maar.** **Werk zachtjes.**\n\nWeet je iets niet? Vraag: **Welke bladzijde?** of **Mag ik je potlood lenen?**": {"en":"The teacher tells you what you are going to do.\n\n**Pak je werkboek.** (= Get your workbook.) **Begin maar.** (= You can start.) **Werk zachtjes.** (= Work quietly.)\n\nDon't know something? Ask: **Welke bladzijde?** (= Which page?) or **Mag ik je potlood lenen?** (= Can I borrow your pencil?)","ar":"المعلمة أو المعلم يقول لك ماذا ستفعل.\n\n**Pak je werkboek.** (= خذ كتاب التمارين.) **Begin maar.** (= ابدأ.) **Werk zachtjes.** (= اعمل بهدوء.)\n\nلا تعرف شيئًا؟ اسأل: **Welke bladzijde?** (= أي صفحة؟) أو **Mag ik je potlood lenen?** (= هل يمكنني استعارة قلمك؟)","uk":"Учителька або вчитель каже, що ти будеш робити.\n\n**Pak je werkboek.** (= Візьми робочий зошит.) **Begin maar.** (= Починай.) **Werk zachtjes.** (= Працюй тихо.)\n\nЧогось не знаєш? Запитай: **Welke bladzijde?** (= Яка сторінка?) або **Mag ik je potlood lenen?** (= Можна позичити твій олівець?)","tr":"Öğretmen ne yapacağını söyler.\n\n**Pak je werkboek.** (= Çalışma kitabını al.) **Begin maar.** (= Başlayabilirsin.) **Werk zachtjes.** (= Sessizce çalış.)\n\nBir şeyi bilmiyor musun? Sor: **Welke bladzijde?** (= Hangi sayfa?) ya da **Mag ik je potlood lenen?** (= Kalemini ödünç alabilir miyim?)","ro":"Doamna sau domnul învățător îți spune ce vei face.\n\n**Pak je werkboek.** (= Ia caietul de lucru.) **Begin maar.** (= Poți începe.) **Werk zachtjes.** (= Lucrează în liniște.)\n\nNu știi ceva? Întreabă: **Welke bladzijde?** (= Ce pagină?) sau **Mag ik je potlood lenen?** (= Pot să împrumut creionul tău?)","bg":"Учителката или учителят казва какво ще правиш.\n\n**Pak je werkboek.** (= Вземи работната тетрадка.) **Begin maar.** (= Започвай.) **Werk zachtjes.** (= Работи тихо.)\n\nНе знаеш нещо? Попитай: **Welke bladzijde?** (= Коя страница?) или **Mag ik je potlood lenen?** (= Може ли да взема молива ти?)"},
- "De juf zegt: pak je werkboek. Wat doe je?": {"en":"The teacher says: get your workbook. What do you do?","ar":"المعلمة تقول: خذ كتاب التمارين. ماذا تفعل؟","uk":"Учителька каже: візьми робочий зошит. Що ти робиш?","tr":"Öğretmen diyor ki: çalışma kitabını al. Ne yaparsın?","ro":"Doamna învățătoare spune: ia caietul de lucru. Ce faci?","bg":"Учителката казва: вземи работната тетрадка. Какво правиш?"},
- "Ik pak mijn werkboek.": {"en":"I get my workbook.","ar":"آخذ كتاب التمارين.","uk":"Я беру свій робочий зошит.","tr":"Çalışma kitabımı alırım.","ro":"Îmi iau caietul de lucru.","bg":"Вземам работната си тетрадка."},
- "Ik pak mijn jas.": {"en":"I get my coat.","ar":"آخذ معطفي.","uk":"Я беру свою куртку.","tr":"Montumu alırım.","ro":"Îmi iau geaca.","bg":"Вземам якето си."},
- "Ik ga naar buiten.": {"en":"I go outside.","ar":"أخرج إلى الخارج.","uk":"Я йду надвір.","tr":"Dışarı çıkarım.","ro":"Ies afară.","bg":"Излизам навън."},
- "Ik ga slapen.": {"en":"I go to sleep.","ar":"أذهب لأنام.","uk":"Я йду спати.","tr":"Uyumaya giderim.","ro":"Mă duc să dorm.","bg":"Отивам да спя."},
- "Je weet niet welke bladzijde. Wat vraag je?": {"en":"You don't know which page. What do you ask?","ar":"لا تعرف أي صفحة. ماذا تسأل؟","uk":"Ти не знаєш, яка сторінка. Що ти запитаєш?","tr":"Hangi sayfa olduğunu bilmiyorsun. Ne sorarsın?","ro":"Nu știi la ce pagină. Ce întrebi?","bg":"Не знаеш коя страница. Какво питаш?"},
- "Welke bladzijde?": {"en":"Which page?","ar":"أي صفحة؟","uk":"Яка сторінка?","tr":"Hangi sayfa?","ro":"Ce pagină?","bg":"Коя страница?"},
- "Is het pauze?": {"en":"Is it break time?","ar":"هل هي الاستراحة؟","uk":"Зараз перерва?","tr":"Teneffüs mü?","ro":"E pauză?","bg":"Междучасие ли е?"},
- "Hoe heet je?": {"en":"What is your name?","ar":"ما اسمك؟","uk":"Як тебе звати?","tr":"Adın ne?","ro":"Cum te cheamă?","bg":"Как се казваш?"},
- "Waar is de bal?": {"en":"Where is the ball?","ar":"أين الكرة؟","uk":"Де м'яч?","tr":"Top nerede?","ro":"Unde e mingea?","bg":"Къде е топката?"},
- "Je hebt geen potlood. Wat vraag je aan het kind naast je?": {"en":"You don't have a pencil. What do you ask the child next to you?","ar":"ليس معك قلم رصاص. ماذا تسأل الطفل الذي بجانبك؟","uk":"У тебе немає олівця. Що ти запитаєш у дитини поруч?","tr":"Kalemin yok. Yanındaki çocuğa ne sorarsın?","ro":"Nu ai creion. Ce îl întrebi pe copilul de lângă tine?","bg":"Нямаш молив. Какво питаш детето до теб?"},
- "Mag ik je potlood lenen?": {"en":"Can I borrow your pencil?","ar":"هل يمكنني استعارة قلمك؟","uk":"Можна позичити твій олівець?","tr":"Kalemini ödünç alabilir miyim?","ro":"Pot să împrumut creionul tău?","bg":"Може ли да взема молива ти?"},
- "Ga weg!": {"en":"Go away!","ar":"اذهب بعيدًا!","uk":"Іди геть!","tr":"Git buradan!","ro":"Pleacă!","bg":"Махай се!"},
- "De juf zegt: werk zachtjes. Wat doe je?": {"en":"The teacher says: work quietly. What do you do?","ar":"المعلمة تقول: اعمل بهدوء. ماذا تفعل؟","uk":"Учителька каже: працюй тихо. Що ти робиш?","tr":"Öğretmen diyor ki: sessizce çalış. Ne yaparsın?","ro":"Doamna învățătoare spune: lucrează în liniște. Ce faci?","bg":"Учителката казва: работи тихо. Какво правиш?"},
- "Ik praat zachtjes.": {"en":"I talk quietly.","ar":"أتكلم بهدوء.","uk":"Я говорю тихо.","tr":"Sessizce konuşurum.","ro":"Vorbesc încet.","bg":"Говоря тихо."},
- "Ik roep heel hard.": {"en":"I shout very loudly.","ar":"أصرخ بصوت عالٍ جدًا.","uk":"Я кричу дуже голосно.","tr":"Çok yüksek sesle bağırırım.","ro":"Strig foarte tare.","bg":"Викам много силно."},
- "Ik ga zingen.": {"en":"I start singing.","ar":"أبدأ بالغناء.","uk":"Я починаю співати.","tr":"Şarkı söylemeye başlarım.","ro":"Încep să cânt.","bg":"Започвам да пея."},
- "Ik loop weg.": {"en":"I walk away.","ar":"أمشي بعيدًا.","uk":"Я йду геть.","tr":"Yürüyüp giderim.","ro":"Plec.","bg":"Тръгвам си."},
- "De juf zegt: begin maar. Wat doe je?": {"en":"The teacher says: you can start. What do you do?","ar":"المعلمة تقول: ابدأ. ماذا تفعل؟","uk":"Учителька каже: починай. Що ти робиш?","tr":"Öğretmen diyor ki: başlayabilirsin. Ne yaparsın?","ro":"Doamna învățătoare spune: poți începe. Ce faci?","bg":"Учителката казва: започвай. Какво правиш?"},
- "Ik begin met mijn werk.": {"en":"I start my work.","ar":"أبدأ عملي.","uk":"Я починаю свою роботу.","tr":"İşime başlarım.","ro":"Încep lucrul.","bg":"Започвам работата си."},
- "Ik ga spelen.": {"en":"I go and play.","ar":"أذهب لألعب.","uk":"Я йду гратися.","tr":"Oynamaya giderim.","ro":"Mă duc să mă joc.","bg":"Отивам да играя."},
- "Ik doe niets.": {"en":"I do nothing.","ar":"لا أفعل شيئًا.","uk":"Я нічого не роблю.","tr":"Hiçbir şey yapmam.","ro":"Nu fac nimic.","bg":"Не правя нищо."},
- "Ik ben klaar": {"en":"I am finished","ar":"انتهيت","uk":"Я закінчив","tr":"Bitirdim","ro":"Am terminat","bg":"Готов съм"},
- "Je werk is af. Wat nu?\n\nVraag: **Wat moet ik nu doen?**\nKijk op het **bord**: daar staat soms wat je mag doen.\nLeg je boek netjes in je **la**.\n\nAndere kinderen werken nog: wees **stil**.": {"en":"Your work is done. What now?\n\nAsk: **Wat moet ik nu doen?** (= What should I do now?)\nLook at the **bord** (= board): sometimes it says what you may do.\nPut your book neatly in your **la** (= drawer).\n\nOther children are still working: be **stil** (= quiet).","ar":"عملك انتهى. ماذا الآن؟\n\nاسأل: **Wat moet ik nu doen?** (= ماذا يجب أن أفعل الآن؟)\nانظر إلى **bord** (= السبورة): أحيانًا مكتوب ماذا يمكنك أن تفعل.\nضع كتابك بترتيب في **la** (= الدرج).\n\nالأطفال الآخرون ما زالوا يعملون: كن **stil** (= هادئًا).","uk":"Твоя робота готова. Що тепер?\n\nЗапитай: **Wat moet ik nu doen?** (= Що мені тепер робити?)\nПодивись на **bord** (= дошку): там іноді написано, що можна робити.\nАкуратно поклади книжку в **la** (= шухляду).\n\nІнші діти ще працюють: будь **stil** (= тихо).","tr":"İşin bitti. Şimdi ne olacak?\n\nSor: **Wat moet ik nu doen?** (= Şimdi ne yapmalıyım?)\n**Bord**'a (= tahtaya) bak: bazen orada ne yapabileceğin yazar.\nKitabını düzgünce **la**'na (= çekmecene) koy.\n\nDiğer çocuklar hâlâ çalışıyor: **stil** (= sessiz) ol.","ro":"Ai terminat lucrul. Și acum?\n\nÎntreabă: **Wat moet ik nu doen?** (= Ce trebuie să fac acum?)\nUită-te la **bord** (= tablă): uneori scrie acolo ce ai voie să faci.\nPune cartea frumos în **la** (= sertar).\n\nAlți copii încă lucrează: fii **stil** (= liniștit).","bg":"Работата ти е готова. Сега какво?\n\nПопитай: **Wat moet ik nu doen?** (= Какво да правя сега?)\nПогледни **bord** (= дъската): понякога там пише какво можеш да правиш.\nПрибери книгата си спретнато в **la** (= чекмеджето).\n\nДругите деца още работят: бъди **stil** (= тих)."},
- "Je bent klaar met je werk. Wat vraag je aan de juf?": {"en":"You finished your work. What do you ask the teacher?","ar":"أنهيت عملك. ماذا تسأل المعلمة؟","uk":"Ти закінчив роботу. Що ти запитаєш у вчительки?","tr":"İşini bitirdin. Öğretmene ne sorarsın?","ro":"Ai terminat lucrul. Ce o întrebi pe doamna învățătoare?","bg":"Свърши работата си. Какво питаш учителката?"},
- "Wat moet ik nu doen?": {"en":"What should I do now?","ar":"ماذا يجب أن أفعل الآن؟","uk":"Що мені тепер робити?","tr":"Şimdi ne yapmalıyım?","ro":"Ce trebuie să fac acum?","bg":"Какво да правя сега?"},
- "Mag ik naar huis?": {"en":"Can I go home?","ar":"هل يمكنني الذهاب إلى البيت؟","uk":"Можна мені додому?","tr":"Eve gidebilir miyim?","ro":"Pot să merg acasă?","bg":"Може ли да си отида вкъщи?"},
- "Op het bord staat: klaar? Lees een boek. Je bent klaar. Wat doe je?": {"en":"The board says: finished? Read a book. You are finished. What do you do?","ar":"مكتوب على السبورة: انتهيت؟ اقرأ كتابًا. أنت انتهيت. ماذا تفعل؟","uk":"На дошці написано: закінчив? Читай книжку. Ти закінчив. Що ти робиш?","tr":"Tahtada yazıyor: bitirdin mi? Kitap oku. Bitirdin. Ne yaparsın?","ro":"Pe tablă scrie: ai terminat? Citește o carte. Ai terminat. Ce faci?","bg":"На дъската пише: готов ли си? Чети книга. Готов си. Какво правиш?"},
- "Ik pak een boek en lees.": {"en":"I get a book and read.","ar":"آخذ كتابًا وأقرأ.","uk":"Я беру книжку й читаю.","tr":"Bir kitap alır ve okurum.","ro":"Iau o carte și citesc.","bg":"Вземам книга и чета."},
- "Ik ga praten.": {"en":"I start talking.","ar":"أبدأ بالكلام.","uk":"Я починаю розмовляти.","tr":"Konuşmaya başlarım.","ro":"Încep să vorbesc.","bg":"Започвам да говоря."},
- "Je bent klaar. Waar leg je je werkboek?": {"en":"You are finished. Where do you put your workbook?","ar":"انتهيت. أين تضع كتاب التمارين؟","uk":"Ти закінчив. Куди ти кладеш робочий зошит?","tr":"Bitirdin. Çalışma kitabını nereye koyarsın?","ro":"Ai terminat. Unde pui caietul de lucru?","bg":"Готов си. Къде слагаш работната тетрадка?"},
- "In mijn la.": {"en":"In my drawer.","ar":"في درجي.","uk":"У свою шухляду.","tr":"Çekmeceme.","ro":"În sertarul meu.","bg":"В чекмеджето си."},
- "Op de grond.": {"en":"On the floor.","ar":"على الأرض.","uk":"На підлогу.","tr":"Yere.","ro":"Pe jos.","bg":"На пода."},
- "In de prullenbak.": {"en":"In the bin.","ar":"في سلة المهملات.","uk":"У смітник.","tr":"Çöp kutusuna.","ro":"În coșul de gunoi.","bg":"В кошчето."},
- "Buiten.": {"en":"Outside.","ar":"في الخارج.","uk":"Надворі.","tr":"Dışarıya.","ro":"Afară.","bg":"Навън."},
- "Je wilt dat de juf je werk nakijkt. Wat vraag je?": {"en":"You want the teacher to check your work. What do you ask?","ar":"تريد أن تصحح المعلمة عملك. ماذا تسأل؟","uk":"Ти хочеш, щоб учителька перевірила твою роботу. Що ти запитаєш?","tr":"Öğretmenin işini kontrol etmesini istiyorsun. Ne sorarsın?","ro":"Vrei ca doamna învățătoare să-ți verifice lucrul. Ce întrebi?","bg":"Искаш учителката да провери работата ти. Какво питаш?"},
- "Wilt u mijn werk nakijken?": {"en":"Will you check my work?","ar":"هل يمكنك تصحيح عملي؟","uk":"Перевірте, будь ласка, мою роботу?","tr":"İşimi kontrol eder misiniz?","ro":"Vă rog, puteți să-mi verificați lucrul?","bg":"Ще проверите ли работата ми?"},
- "Mag ik naar buiten?": {"en":"Can I go outside?","ar":"هل يمكنني الخروج؟","uk":"Можна мені надвір?","tr":"Dışarı çıkabilir miyim?","ro":"Pot să ies afară?","bg":"Може ли да изляза навън?"},
- "Jij bent klaar. Een ander kind nog niet. Wat doe je?": {"en":"You are finished. Another child is not yet. What do you do?","ar":"أنت انتهيت. طفل آخر لم ينتهِ بعد. ماذا تفعل؟","uk":"Ти закінчив. Інша дитина ще ні. Що ти робиш?","tr":"Sen bitirdin. Başka bir çocuk henüz bitirmedi. Ne yaparsın?","ro":"Tu ai terminat. Alt copil încă nu. Ce faci?","bg":"Ти си готов. Друго дете още не е. Какво правиш?"},
- "Ik ben stil en wacht.": {"en":"I am quiet and wait.","ar":"أكون هادئًا وأنتظر.","uk":"Я сиджу тихо й чекаю.","tr":"Sessiz olur ve beklerim.","ro":"Stau liniștit și aștept.","bg":"Тих съм и чакам."},
- "Ik praat heel hard.": {"en":"I talk very loudly.","ar":"أتكلم بصوت عالٍ جدًا.","uk":"Я говорю дуже голосно.","tr":"Çok yüksek sesle konuşurum.","ro":"Vorbesc foarte tare.","bg":"Говоря много силно."},
- "Ik pak zijn werk af.": {"en":"I take his work away.","ar":"آخذ عمله منه.","uk":"Я забираю в нього роботу.","tr":"Onun işini elinden alırım.","ro":"Îi iau lucrul.","bg":"Взимам му работата."},
- "Ik loop door de klas.": {"en":"I walk around the classroom.","ar":"أتجول في الصف.","uk":"Я ходжу по класу.","tr":"Sınıfta dolaşırım.","ro":"Mă plimb prin clasă.","bg":"Разхождам се из класа."},
- "De juf is bezig": {"en":"The teacher is busy","ar":"المعلمة مشغولة","uk":"Учителька зайнята","tr":"Öğretmen meşgul","ro":"Doamna învățătoare e ocupată","bg":"Учителката е заета"},
- "Soms helpt de juf of meester een ander kind. Dan mag je even niet storen.\n\n1. **Kijk zelf** nog een keer.\n2. **Vraag een kind** naast je: **Kun je mij helpen?**\n3. **Wacht** rustig. Ga verder met de **volgende som**.\n\nDe juf komt straks bij je.": {"en":"Sometimes the teacher is helping another child. Then you should not disturb for a moment.\n\n1. **Kijk zelf** (= Look yourself) one more time.\n2. **Vraag een kind** (= Ask a child) next to you: **Kun je mij helpen?** (= Can you help me?)\n3. **Wacht** (= Wait) calmly. Go on with the **volgende som** (= next sum).\n\nThe teacher will come to you soon.","ar":"أحيانًا تساعد المعلمة أو المعلم طفلًا آخر. عندها لا تقاطع للحظة.\n\n1. **Kijk zelf** (= انظر بنفسك) مرة أخرى.\n2. **Vraag een kind** (= اسأل طفلًا) بجانبك: **Kun je mij helpen?** (= هل يمكنك مساعدتي؟)\n3. **Wacht** (= انتظر) بهدوء. أكمل **volgende som** (= المسألة التالية).\n\nالمعلمة ستأتي إليك بعد قليل.","uk":"Іноді вчителька або вчитель допомагає іншій дитині. Тоді трохи не заважай.\n\n1. **Kijk zelf** (= Подивись сам) ще раз.\n2. **Vraag een kind** (= Запитай дитину) поруч: **Kun je mij helpen?** (= Можеш мені допомогти?)\n3. **Wacht** (= Чекай) спокійно. Роби далі **volgende som** (= наступний приклад).\n\nУчителька скоро підійде до тебе.","tr":"Bazen öğretmen başka bir çocuğa yardım eder. O zaman bir süre rahatsız etme.\n\n1. Bir kez daha **kijk zelf** (= kendin bak).\n2. Yanındaki bir **kind**'e sor (vraag een kind): **Kun je mij helpen?** (= Bana yardım edebilir misin?)\n3. Sakince **wacht** (= bekle). **Volgende som** (= sonraki işlem) ile devam et.\n\nÖğretmen birazdan yanına gelir.","ro":"Uneori doamna sau domnul învățător ajută alt copil. Atunci nu deranja un pic.\n\n1. **Kijk zelf** (= Uită-te singur) încă o dată.\n2. **Vraag een kind** (= Întreabă un copil) de lângă tine: **Kun je mij helpen?** (= Mă poți ajuta?)\n3. **Wacht** (= Așteaptă) liniștit. Continuă cu **volgende som** (= exercițiul următor).\n\nDoamna învățătoare vine la tine imediat.","bg":"Понякога учителката или учителят помага на друго дете. Тогава за малко не пречи.\n\n1. **Kijk zelf** (= Погледни сам) още веднъж.\n2. **Vraag een kind** (= Попитай дете) до теб: **Kun je mij helpen?** (= Можеш ли да ми помогнеш?)\n3. **Wacht** (= Чакай) спокойно. Продължи със **volgende som** (= следващата задача).\n\nУчителката скоро ще дойде при теб."},
- "De juf helpt een ander kind. Je hebt een vraag. Wat doe je eerst?": {"en":"The teacher is helping another child. You have a question. What do you do first?","ar":"المعلمة تساعد طفلًا آخر. عندك سؤال. ماذا تفعل أولًا؟","uk":"Учителька допомагає іншій дитині. У тебе є питання. Що ти робиш спочатку?","tr":"Öğretmen başka bir çocuğa yardım ediyor. Bir sorun var. Önce ne yaparsın?","ro":"Doamna învățătoare ajută alt copil. Ai o întrebare. Ce faci mai întâi?","bg":"Учителката помага на друго дете. Имаш въпрос. Какво правиш първо?"},
- "Ik kijk zelf nog een keer.": {"en":"I look again myself.","ar":"أنظر بنفسي مرة أخرى.","uk":"Я сам дивлюся ще раз.","tr":"Kendim bir kez daha bakarım.","ro":"Mă mai uit o dată singur.","bg":"Поглеждам сам още веднъж."},
- "Ik roep: juf, juf!": {"en":"I shout: teacher, teacher!","ar":"أصرخ: يا معلمة، يا معلمة!","uk":"Я кричу: вчителько, вчителько!","tr":"Bağırırım: öğretmenim, öğretmenim!","ro":"Strig: doamna, doamna!","bg":"Викам: госпожо, госпожо!"},
- "Ik stop met werken.": {"en":"I stop working.","ar":"أتوقف عن العمل.","uk":"Я перестаю працювати.","tr":"Çalışmayı bırakırım.","ro":"Mă opresc din lucru.","bg":"Спирам да работя."},
- "Ik ga huilen.": {"en":"I start crying.","ar":"أبدأ بالبكاء.","uk":"Я починаю плакати.","tr":"Ağlamaya başlarım.","ro":"Încep să plâng.","bg":"Започвам да плача."},
- "Je snapt het nog niet. De juf is bezig. Wat doe je?": {"en":"You still don't understand. The teacher is busy. What do you do?","ar":"ما زلت لا تفهم. المعلمة مشغولة. ماذا تفعل؟","uk":"Ти ще не розумієш. Учителька зайнята. Що ти робиш?","tr":"Hâlâ anlamadın. Öğretmen meşgul. Ne yaparsın?","ro":"Încă nu înțelegi. Doamna învățătoare e ocupată. Ce faci?","bg":"Още не разбираш. Учителката е заета. Какво правиш?"},
- "Ik vraag het aan een kind naast mij.": {"en":"I ask a child next to me.","ar":"أسأل طفلًا بجانبي.","uk":"Я питаю дитину поруч.","tr":"Yanımdaki bir çocuğa sorarım.","ro":"Întreb un copil de lângă mine.","bg":"Питам дете до мен."},
- "Ik loop naar buiten.": {"en":"I walk outside.","ar":"أمشي إلى الخارج.","uk":"Я виходжу надвір.","tr":"Dışarı yürürüm.","ro":"Ies afară.","bg":"Излизам навън."},
- "Ik gooi mijn werk weg.": {"en":"I throw my work away.","ar":"أرمي عملي.","uk":"Я викидаю свою роботу.","tr":"İşimi atarım.","ro":"Îmi arunc lucrul.","bg":"Изхвърлям работата си."},
- "Hoe vraag je hulp aan het kind naast je?": {"en":"How do you ask the child next to you for help?","ar":"كيف تطلب المساعدة من الطفل الذي بجانبك؟","uk":"Як попросити допомоги в дитини поруч?","tr":"Yanındaki çocuktan nasıl yardım istersin?","ro":"Cum îi ceri ajutor copilului de lângă tine?","bg":"Как молиш детето до теб за помощ?"},
- "Kun je mij helpen?": {"en":"Can you help me?","ar":"هل يمكنك مساعدتي؟","uk":"Можеш мені допомогти?","tr":"Bana yardım edebilir misin?","ro":"Mă poți ajuta?","bg":"Можеш ли да ми помогнеш?"},
- "De juf heeft nu geen tijd. Wat doe je met je vraag?": {"en":"The teacher has no time right now. What do you do with your question?","ar":"المعلمة ليس لديها وقت الآن. ماذا تفعل بسؤالك؟","uk":"Учителька зараз не має часу. Що ти робиш зі своїм питанням?","tr":"Öğretmenin şimdi vakti yok. Sorunla ne yaparsın?","ro":"Doamna învățătoare nu are timp acum. Ce faci cu întrebarea ta?","bg":"Учителката сега няма време. Какво правиш с въпроса си?"},
- "Ik wacht tot de juf tijd heeft.": {"en":"I wait until the teacher has time.","ar":"أنتظر حتى يكون لدى المعلمة وقت.","uk":"Я чекаю, поки вчителька матиме час.","tr":"Öğretmenin vakti olana kadar beklerim.","ro":"Aștept până are doamna învățătoare timp.","bg":"Чакам, докато учителката има време."},
- "Ik ga schreeuwen.": {"en":"I start screaming.","ar":"أبدأ بالصراخ.","uk":"Я починаю кричати.","tr":"Bağırmaya başlarım.","ro":"Încep să țip.","bg":"Започвам да крещя."},
- "Ik doe niets meer.": {"en":"I don't do anything anymore.","ar":"لا أفعل شيئًا بعد ذلك.","uk":"Я більше нічого не роблю.","tr":"Artık hiçbir şey yapmam.","ro":"Nu mai fac nimic.","bg":"Вече не правя нищо."},
- "Je kunt niet verder met een som. Wat doe je terwijl je wacht?": {"en":"You can't go on with a sum. What do you do while you wait?","ar":"لا تستطيع إكمال مسألة. ماذا تفعل وأنت تنتظر؟","uk":"Ти не можеш розв'язати приклад далі. Що ти робиш, поки чекаєш?","tr":"Bir işlemde ilerleyemiyorsun. Beklerken ne yaparsın?","ro":"Nu poți continua un exercițiu. Ce faci cât aștepți?","bg":"Не можеш да продължиш една задача. Какво правиш, докато чакаш?"},
- "Ik ga verder met de volgende som.": {"en":"I go on with the next sum.","ar":"أكمل المسألة التالية.","uk":"Я роблю далі наступний приклад.","tr":"Sonraki işlemle devam ederim.","ro":"Continui cu exercițiul următor.","bg":"Продължавам със следващата задача."},
- "Ik pak een spel.": {"en":"I get a game.","ar":"آخذ لعبة.","uk":"Я беру гру.","tr":"Bir oyun alırım.","ro":"Iau un joc.","bg":"Вземам игра."},
- "Fijne gevoelens": {"en":"Good feelings","ar":"مشاعر جميلة","uk":"Приємні почуття","tr":"Güzel duygular","ro":"Sentimente plăcute","bg":"Хубави чувства"},
- "Je kunt ook zeggen dat je je **fijn** voelt.\n\n**Ik ben blij.** **Ik ben trots.** **Ik voel me goed.**\n**Het gaat goed, dank u.**\n\nDe juf of meester vindt het fijn om dat te horen.": {"en":"You can also say that you feel **fijn** (= good).\n\n**Ik ben blij.** (= I am happy.) **Ik ben trots.** (= I am proud.) **Ik voel me goed.** (= I feel good.)\n**Het gaat goed, dank u.** (= I am fine, thank you.)\n\nThe teacher likes to hear that.","ar":"يمكنك أيضًا أن تقول إنك تشعر بشعور **fijn** (= جميل).\n\n**Ik ben blij.** (= أنا سعيد.) **Ik ben trots.** (= أنا فخور.) **Ik voel me goed.** (= أشعر أنني بخير.)\n**Het gaat goed, dank u.** (= أنا بخير، شكرًا.)\n\nالمعلمة أو المعلم يحب أن يسمع ذلك.","uk":"Ти можеш також сказати, що тобі **fijn** (= добре).\n\n**Ik ben blij.** (= Я радий.) **Ik ben trots.** (= Я пишаюся.) **Ik voel me goed.** (= Мені добре.)\n**Het gaat goed, dank u.** (= Усе добре, дякую.)\n\nУчительці або вчителю приємно це чути.","tr":"Kendini **fijn** (= iyi) hissettiğini de söyleyebilirsin.\n\n**Ik ben blij.** (= Mutluyum.) **Ik ben trots.** (= Gururluyum.) **Ik voel me goed.** (= Kendimi iyi hissediyorum.)\n**Het gaat goed, dank u.** (= İyiyim, teşekkür ederim.)\n\nÖğretmen bunu duymaktan hoşlanır.","ro":"Poți spune și că te simți **fijn** (= bine).\n\n**Ik ben blij.** (= Sunt fericit.) **Ik ben trots.** (= Sunt mândru.) **Ik voel me goed.** (= Mă simt bine.)\n**Het gaat goed, dank u.** (= Îmi merge bine, mulțumesc.)\n\nDoamnei sau domnului învățător îi place să audă asta.","bg":"Можеш да кажеш и че ти е **fijn** (= хубаво).\n\n**Ik ben blij.** (= Радостен съм.) **Ik ben trots.** (= Горд съм.) **Ik voel me goed.** (= Чувствам се добре.)\n**Het gaat goed, dank u.** (= Добре съм, благодаря.)\n\nНа учителката или учителя им е приятно да го чуят."},
- "Je hebt een mooie tekening gemaakt. Hoe voel je je?": {"en":"You made a beautiful drawing. How do you feel?","ar":"رسمت رسمة جميلة. كيف تشعر؟","uk":"Ти намалював гарний малюнок. Як ти почуваєшся?","tr":"Güzel bir resim yaptın. Nasıl hissediyorsun?","ro":"Ai făcut un desen frumos. Cum te simți?","bg":"Нарисува хубава рисунка. Как се чувстваш?"},
- "Ik ben trots.": {"en":"I am proud.","ar":"أنا فخور.","uk":"Я пишаюся.","tr":"Gururluyum.","ro":"Sunt mândru.","bg":"Горд съм."},
- "Je speelt met een vriend. Het is leuk. Hoe voel je je?": {"en":"You are playing with a friend. It is fun. How do you feel?","ar":"تلعب مع صديق. الأمر ممتع. كيف تشعر؟","uk":"Ти граєшся з другом. Це весело. Як ти почуваєшся?","tr":"Bir arkadaşınla oynuyorsun. Eğlenceli. Nasıl hissediyorsun?","ro":"Te joci cu un prieten. E distractiv. Cum te simți?","bg":"Играеш с приятел. Забавно е. Как се чувстваш?"},
- "De juf vraagt: hoe gaat het? Het gaat goed. Wat zeg je?": {"en":"The teacher asks: how are you? You are fine. What do you say?","ar":"المعلمة تسأل: كيف حالك؟ أنت بخير. ماذا تقول؟","uk":"Учителька питає: як справи? У тебе все добре. Що ти скажеш?","tr":"Öğretmen soruyor: nasılsın? İyisin. Ne dersin?","ro":"Doamna învățătoare întreabă: ce faci? Îți merge bine. Ce spui?","bg":"Учителката пита: как си? Добре си. Какво казваш?"},
- "Het gaat goed, dank u.": {"en":"I am fine, thank you.","ar":"أنا بخير، شكرًا.","uk":"Усе добре, дякую.","tr":"İyiyim, teşekkür ederim.","ro":"Îmi merge bine, mulțumesc.","bg":"Добре съм, благодаря."},
- "Ik ben ziek.": {"en":"I am sick.","ar":"أنا مريض.","uk":"Я хворий.","tr":"Hastayım.","ro":"Sunt bolnav.","bg":"Болен съм."},
- "Ik snap het niet.": {"en":"I don't understand it.","ar":"لا أفهم.","uk":"Я не розумію.","tr":"Anlamıyorum.","ro":"Nu înțeleg.","bg":"Не разбирам."},
- "Het was een fijne dag op school. Wat zeg je thuis?": {"en":"It was a nice day at school. What do you say at home?","ar":"كان يومًا جميلًا في المدرسة. ماذا تقول في البيت؟","uk":"Це був гарний день у школі. Що ти скажеш удома?","tr":"Okulda güzel bir gündü. Evde ne dersin?","ro":"A fost o zi frumoasă la școală. Ce spui acasă?","bg":"Беше хубав ден в училище. Какво казваш вкъщи?"},
- "Ik had een leuke dag.": {"en":"I had a nice day.","ar":"كان يومي جميلًا.","uk":"У мене був гарний день.","tr":"Güzel bir gün geçirdim.","ro":"Am avut o zi frumoasă.","bg":"Имах хубав ден."},
- "De som was moeilijk, maar nu snap je hem. Hoe voel je je?": {"en":"The sum was hard, but now you understand it. How do you feel?","ar":"كانت المسألة صعبة، لكنك الآن تفهمها. كيف تشعر؟","uk":"Приклад був важкий, але тепер ти його розумієш. Як ти почуваєшся?","tr":"İşlem zordu ama şimdi anlıyorsun. Nasıl hissediyorsun?","ro":"Exercițiul a fost greu, dar acum îl înțelegi. Cum te simți?","bg":"Задачата беше трудна, но сега я разбираш. Как се чувстваш?"},
- "Ik voel me goed.": {"en":"I feel good.","ar":"أشعر أنني بخير.","uk":"Мені добре.","tr":"Kendimi iyi hissediyorum.","ro":"Mă simt bine.","bg":"Чувствам се добре."},
- "Ik ben verdrietig.": {"en":"I am sad.","ar":"أنا حزين.","uk":"Мені сумно.","tr":"Üzgünüm.","ro":"Sunt trist.","bg":"Тъжен съм."},
- "De juf wil dat je gaat werken.": {"en":"The teacher wants you to start working.","ar":"المعلمة تريد أن تبدأ العمل.","uk":"Учителька хоче, щоб ти почав працювати.","tr":"Öğretmen çalışmaya başlamanı istiyor.","ro":"Doamna învățătoare vrea să începi lucrul.","bg":"Учителката иска да започнеш работа."},
- "Je zoekt de goede bladzijde in je boek.": {"en":"You are looking for the right page in your book.","ar":"تبحث عن الصفحة الصحيحة في كتابك.","uk":"Ти шукаєш правильну сторінку в книжці.","tr":"Kitabında doğru sayfayı arıyorsun.","ro":"Cauți pagina potrivită în carte.","bg":"Търсиш правилната страница в книгата си."},
- "Je wilt even een potlood van een ander kind.": {"en":"You want to use another child's pencil for a moment.","ar":"تريد قلم رصاص من طفل آخر لفترة قصيرة.","uk":"Ти хочеш ненадовго олівець іншої дитини.","tr":"Kısa bir süre başka bir çocuğun kalemini istiyorsun.","ro":"Vrei pentru puțin creionul altui copil.","bg":"Искаш за малко молива на друго дете."},
- "Zachtjes = niet hard.": {"en":"Zachtjes (= quietly) = not loud.","ar":"zachtjes (= بهدوء) = ليس بصوت عالٍ.","uk":"Zachtjes (= тихо) = не голосно.","tr":"Zachtjes (= sessizce) = yüksek sesle değil.","ro":"Zachtjes (= încet) = nu tare.","bg":"Zachtjes (= тихо) = не силно."},
- "Beginnen = nu gaan werken.": {"en":"Beginnen (= to start) = start working now.","ar":"beginnen (= يبدأ) = ابدأ العمل الآن.","uk":"Beginnen (= почати) = зараз почати працювати.","tr":"Beginnen (= başlamak) = şimdi çalışmaya başlamak.","ro":"Beginnen (= a începe) = să începi lucrul acum.","bg":"Beginnen (= започвам) = да започнеш работа сега."},
- "Je werk is af. Je wilt weten wat je daarna doet.": {"en":"Your work is done. You want to know what to do next.","ar":"عملك انتهى. تريد أن تعرف ماذا تفعل بعد ذلك.","uk":"Твоя робота готова. Ти хочеш знати, що робити далі.","tr":"İşin bitti. Sonra ne yapacağını bilmek istiyorsun.","ro":"Ai terminat lucrul. Vrei să știi ce faci după aceea.","bg":"Работата ти е готова. Искаш да знаеш какво правиш после."},
- "Kijk wat er op het bord staat.": {"en":"Look at what is written on the board.","ar":"انظر ماذا مكتوب على السبورة.","uk":"Подивись, що написано на дошці.","tr":"Tahtada ne yazdığına bak.","ro":"Uită-te ce scrie pe tablă.","bg":"Виж какво пише на дъската."},
- "Je boek moet netjes weg.": {"en":"Your book has to be put away neatly.","ar":"يجب أن تضع كتابك بترتيب.","uk":"Книжку треба акуратно прибрати.","tr":"Kitabını düzgünce kaldırman gerekir.","ro":"Cartea trebuie pusă frumos la loc.","bg":"Книгата трябва да се прибере спретнато."},
- "Nakijken = kijken of het goed is.": {"en":"Nakijken (= to check) = look whether it is right.","ar":"nakijken (= يصحح) = يرى إن كان صحيحًا.","uk":"Nakijken (= перевірити) = подивитися, чи правильно.","tr":"Nakijken (= kontrol etmek) = doğru mu diye bakmak.","ro":"Nakijken (= a verifica) = a vedea dacă e corect.","bg":"Nakijken (= проверявам) = да видиш дали е правилно."},
- "Het andere kind is nog aan het werk.": {"en":"The other child is still working.","ar":"الطفل الآخر ما زال يعمل.","uk":"Інша дитина ще працює.","tr":"Diğer çocuk hâlâ çalışıyor.","ro":"Celălalt copil încă lucrează.","bg":"Другото дете още работи."},
- "Misschien vind je het antwoord zelf.": {"en":"Maybe you can find the answer yourself.","ar":"ربما تجد الجواب بنفسك.","uk":"Можливо, ти сам знайдеш відповідь.","tr":"Belki cevabı kendin bulursun.","ro":"Poate găsești singur răspunsul.","bg":"Може би ще намериш отговора сам."},
- "Een ander kind kan je ook helpen.": {"en":"Another child can also help you.","ar":"طفل آخر يمكنه أيضًا مساعدتك.","uk":"Інша дитина теж може тобі допомогти.","tr":"Başka bir çocuk da sana yardım edebilir.","ro":"Și alt copil te poate ajuta.","bg":"И друго дете може да ти помогне."},
- "Je wilt hulp. Vraag het vriendelijk.": {"en":"You want help. Ask nicely.","ar":"تريد مساعدة. اطلبها بلطف.","uk":"Ти хочеш допомоги. Попроси ввічливо.","tr":"Yardım istiyorsun. Kibarca sor.","ro":"Vrei ajutor. Cere frumos.","bg":"Искаш помощ. Помоли учтиво."},
- "De juf komt straks. Even geduld.": {"en":"The teacher will come soon. Be patient for a moment.","ar":"المعلمة ستأتي بعد قليل. اصبر قليلًا.","uk":"Учителька скоро підійде. Трохи терпіння.","tr":"Öğretmen birazdan gelir. Biraz sabret.","ro":"Doamna învățătoare vine imediat. Puțină răbdare.","bg":"Учителката ще дойде скоро. Малко търпение."},
- "Je kunt al wel iets anders doen.": {"en":"You can already do something else.","ar":"يمكنك أن تفعل شيئًا آخر.","uk":"Ти вже можеш зробити щось інше.","tr":"Şimdiden başka bir şey yapabilirsin.","ro":"Poți face deja altceva.","bg":"Вече можеш да направиш нещо друго."},
- "Je hebt iets moois gemaakt. Dat voelt goed.": {"en":"You made something beautiful. That feels good.","ar":"صنعت شيئًا جميلًا. هذا شعور جميل.","uk":"Ти зробив щось гарне. Це приємно.","tr":"Güzel bir şey yaptın. Bu iyi hissettirir.","ro":"Ai făcut ceva frumos. E o senzație bună.","bg":"Направи нещо хубаво. Това е приятно."},
- "Leuk spelen = je lacht.": {"en":"Playing nicely = you laugh.","ar":"اللعب الممتع = تضحك.","uk":"Весело гратися = ти смієшся.","tr":"Eğlenceli oyun = gülersin.","ro":"Joc distractiv = râzi.","bg":"Забавна игра = смееш се."},
- "Het gaat goed met je. Zeg dat.": {"en":"You are doing well. Say that.","ar":"أنت بخير. قل ذلك.","uk":"У тебе все добре. Скажи це.","tr":"İyisin. Bunu söyle.","ro":"Îți merge bine. Spune asta.","bg":"Добре си. Кажи го."},
- "Fijn = leuk.": {"en":"Fijn (= nice) = leuk (= fun).","ar":"fijn (= جميل) = leuk (= ممتع).","uk":"Fijn (= приємний) = leuk (= веселий).","tr":"Fijn (= güzel) = leuk (= eğlenceli).","ro":"Fijn (= plăcut) = leuk (= distractiv).","bg":"Fijn (= приятен) = leuk (= забавен)."},
- "Eindelijk snap je het. Dat voelt fijn.": {"en":"Finally you understand it. That feels nice.","ar":"أخيرًا فهمته. هذا شعور جميل.","uk":"Нарешті ти зрозумів. Це приємно.","tr":"Sonunda anladın. Bu güzel hissettirir.","ro":"În sfârșit înțelegi. E o senzație plăcută.","bg":"Най-сетне разбираш. Това е приятно."},
+ "In de klas 2 — zelf werken en fijne gevoelens (nieuwkomers)": {"en":"In class 2 — working on your own and good feelings (newcomers)","ar":"في الصف 2 — العمل بنفسك والمشاعر الجميلة (للقادمين الجدد)","uk":"У класі 2 — працюємо самостійно і приємні почуття (новенькі)","tr":"Sınıfta 2 — kendi başına çalışmak ve güzel duygular (yeni gelenler)","ro":"În clasă 2 — lucrul singur și sentimente plăcute (nou-veniți)","bg":"В клас 2 — работа сам и хубави чувства (новодошли)", "fa": "در کلاس 2 — تنهایی کار کردن و حس‌های خوب (تازه‌واردها)"},
+ "Zelf aan het werk, wat je doet als je klaar bent, wat je doet als de juf bezig is, en hoe je zegt dat je je fijn voelt. Met steun in je eigen taal. ~10 min.": {"en":"Working on your own, what to do when you are finished, what to do when the teacher is busy, and how to say you feel good. With help in your own language. ~10 min.","ar":"العمل بنفسك، ماذا تفعل عندما تنتهي، ماذا تفعل عندما تكون المعلمة مشغولة، وكيف تقول إنك تشعر بشعور جميل. مع مساعدة بلغتك. ~10 دقائق.","uk":"Працюєш сам, що робити, коли ти закінчив, що робити, коли вчителька зайнята, і як сказати, що тобі добре. З підтримкою твоєю мовою. ~10 хв.","tr":"Kendi başına çalışmak, bitirince ne yapacağın, öğretmen meşgulken ne yapacağın ve kendini iyi hissettiğini nasıl söyleyeceğin. Kendi dilinde destekle. ~10 dk.","ro":"Lucrezi singur, ce faci când ai terminat, ce faci când doamna învățătoare e ocupată și cum spui că te simți bine. Cu sprijin în limba ta. ~10 min.","bg":"Работиш сам, какво правиш, когато си готов, какво правиш, когато учителката е заета, и как казваш, че ти е хубаво. С помощ на твоя език. ~10 мин.", "fa": "تنهایی کار کردن، وقتی کارت تمام شد چه کار کنی، وقتی خانم معلم مشغول است چه کار کنی، و چطور بگویی حالت خوب است. با کمک به زبان خودت. ~10 دقیقه."},
+ "Hoe begin ik aan mijn werk?": {"en":"How do I start my work?","ar":"كيف أبدأ عملي؟","uk":"Як мені почати роботу?","tr":"İşime nasıl başlarım?","ro":"Cum încep lucrul?","bg":"Как да започна работата си?", "fa": "چطور کارم را شروع کنم؟"},
+ "Ik ben klaar. Wat nu?": {"en":"I am finished. What now?","ar":"انتهيت. ماذا الآن؟","uk":"Я закінчив. Що тепер?","tr":"Bitirdim. Şimdi ne yapayım?","ro":"Am terminat. Și acum?","bg":"Готов съм. Сега какво?", "fa": "کارم تمام شد. حالا چه کار کنم؟"},
+ "De juf is bezig. Wat doe ik?": {"en":"The teacher is busy. What do I do?","ar":"المعلمة مشغولة. ماذا أفعل؟","uk":"Учителька зайнята. Що мені робити?","tr":"Öğretmen meşgul. Ne yaparım?","ro":"Doamna învățătoare e ocupată. Ce fac?","bg":"Учителката е заета. Какво да правя?", "fa": "خانم معلم مشغول است. چه کار کنم؟"},
+ "Hoe zeg ik dat ik me fijn voel?": {"en":"How do I say that I feel good?","ar":"كيف أقول إنني أشعر بشعور جميل؟","uk":"Як сказати, що мені добре?","tr":"Kendimi iyi hissettiğimi nasıl söylerim?","ro":"Cum spun că mă simt bine?","bg":"Как да кажа, че ми е хубаво?", "fa": "چطور بگویم که حالم خوب است؟"},
+ "Aan het werk": {"en":"Getting to work","ar":"إلى العمل","uk":"До роботи","tr":"İşe başla","ro":"La lucru","bg":"На работа", "fa": "شروع به کار"},
+ "De juf of meester zegt wat je gaat doen.\n\n**Pak je werkboek.** **Begin maar.** **Werk zachtjes.**\n\nWeet je iets niet? Vraag: **Welke bladzijde?** of **Mag ik je potlood lenen?**": {"en":"The teacher tells you what you are going to do.\n\n**Pak je werkboek.** (= Get your workbook.) **Begin maar.** (= You can start.) **Werk zachtjes.** (= Work quietly.)\n\nDon't know something? Ask: **Welke bladzijde?** (= Which page?) or **Mag ik je potlood lenen?** (= Can I borrow your pencil?)","ar":"المعلمة أو المعلم يقول لك ماذا ستفعل.\n\n**Pak je werkboek.** (= خذ كتاب التمارين.) **Begin maar.** (= ابدأ.) **Werk zachtjes.** (= اعمل بهدوء.)\n\nلا تعرف شيئًا؟ اسأل: **Welke bladzijde?** (= أي صفحة؟) أو **Mag ik je potlood lenen?** (= هل يمكنني استعارة قلمك؟)","uk":"Учителька або вчитель каже, що ти будеш робити.\n\n**Pak je werkboek.** (= Візьми робочий зошит.) **Begin maar.** (= Починай.) **Werk zachtjes.** (= Працюй тихо.)\n\nЧогось не знаєш? Запитай: **Welke bladzijde?** (= Яка сторінка?) або **Mag ik je potlood lenen?** (= Можна позичити твій олівець?)","tr":"Öğretmen ne yapacağını söyler.\n\n**Pak je werkboek.** (= Çalışma kitabını al.) **Begin maar.** (= Başlayabilirsin.) **Werk zachtjes.** (= Sessizce çalış.)\n\nBir şeyi bilmiyor musun? Sor: **Welke bladzijde?** (= Hangi sayfa?) ya da **Mag ik je potlood lenen?** (= Kalemini ödünç alabilir miyim?)","ro":"Doamna sau domnul învățător îți spune ce vei face.\n\n**Pak je werkboek.** (= Ia caietul de lucru.) **Begin maar.** (= Poți începe.) **Werk zachtjes.** (= Lucrează în liniște.)\n\nNu știi ceva? Întreabă: **Welke bladzijde?** (= Ce pagină?) sau **Mag ik je potlood lenen?** (= Pot să împrumut creionul tău?)","bg":"Учителката или учителят казва какво ще правиш.\n\n**Pak je werkboek.** (= Вземи работната тетрадка.) **Begin maar.** (= Започвай.) **Werk zachtjes.** (= Работи тихо.)\n\nНе знаеш нещо? Попитай: **Welke bladzijde?** (= Коя страница?) или **Mag ik je potlood lenen?** (= Може ли да взема молива ти?)", "fa": "خانم معلم یا آقای معلم می‌گویند چه کاری انجام بدهی.\n\n**Pak je werkboek.** (= کتاب کارت را بردار.) **Begin maar.** (= شروع کن.) **Werk zachtjes.** (= آرام کار کن.)\n\nچیزی را نمی‌دانی؟ بپرس: **Welke bladzijde?** (= کدام صفحه؟) یا **Mag ik je potlood lenen?** (= می‌توانم مدادت را قرض بگیرم؟)"},
+ "De juf zegt: pak je werkboek. Wat doe je?": {"en":"The teacher says: get your workbook. What do you do?","ar":"المعلمة تقول: خذ كتاب التمارين. ماذا تفعل؟","uk":"Учителька каже: візьми робочий зошит. Що ти робиш?","tr":"Öğretmen diyor ki: çalışma kitabını al. Ne yaparsın?","ro":"Doamna învățătoare spune: ia caietul de lucru. Ce faci?","bg":"Учителката казва: вземи работната тетрадка. Какво правиш?", "fa": "خانم معلم می‌گوید: کتاب کارت را بردار. چه کار می‌کنی؟"},
+ "Ik pak mijn werkboek.": {"en":"I get my workbook.","ar":"آخذ كتاب التمارين.","uk":"Я беру свій робочий зошит.","tr":"Çalışma kitabımı alırım.","ro":"Îmi iau caietul de lucru.","bg":"Вземам работната си тетрадка.", "fa": "کتاب کارم را برمی‌دارم."},
+ "Ik pak mijn jas.": {"en":"I get my coat.","ar":"آخذ معطفي.","uk":"Я беру свою куртку.","tr":"Montumu alırım.","ro":"Îmi iau geaca.","bg":"Вземам якето си.", "fa": "کاپشنم را برمی‌دارم."},
+ "Ik ga naar buiten.": {"en":"I go outside.","ar":"أخرج إلى الخارج.","uk":"Я йду надвір.","tr":"Dışarı çıkarım.","ro":"Ies afară.","bg":"Излизам навън.", "fa": "بیرون می‌روم."},
+ "Ik ga slapen.": {"en":"I go to sleep.","ar":"أذهب لأنام.","uk":"Я йду спати.","tr":"Uyumaya giderim.","ro":"Mă duc să dorm.","bg":"Отивам да спя.", "fa": "می‌روم بخوابم."},
+ "Je weet niet welke bladzijde. Wat vraag je?": {"en":"You don't know which page. What do you ask?","ar":"لا تعرف أي صفحة. ماذا تسأل؟","uk":"Ти не знаєш, яка сторінка. Що ти запитаєш?","tr":"Hangi sayfa olduğunu bilmiyorsun. Ne sorarsın?","ro":"Nu știi la ce pagină. Ce întrebi?","bg":"Не знаеш коя страница. Какво питаш?", "fa": "نمی‌دانی کدام صفحه. چه می‌پرسی؟"},
+ "Welke bladzijde?": {"en":"Which page?","ar":"أي صفحة؟","uk":"Яка сторінка?","tr":"Hangi sayfa?","ro":"Ce pagină?","bg":"Коя страница?", "fa": "کدام صفحه؟"},
+ "Is het pauze?": {"en":"Is it break time?","ar":"هل هي الاستراحة؟","uk":"Зараз перерва?","tr":"Teneffüs mü?","ro":"E pauză?","bg":"Междучасие ли е?", "fa": "وقت تفریح است؟"},
+ "Hoe heet je?": {"en":"What is your name?","ar":"ما اسمك؟","uk":"Як тебе звати?","tr":"Adın ne?","ro":"Cum te cheamă?","bg":"Как се казваш?", "fa": "اسمت چیست؟"},
+ "Waar is de bal?": {"en":"Where is the ball?","ar":"أين الكرة؟","uk":"Де м'яч?","tr":"Top nerede?","ro":"Unde e mingea?","bg":"Къде е топката?", "fa": "توپ کجاست؟"},
+ "Je hebt geen potlood. Wat vraag je aan het kind naast je?": {"en":"You don't have a pencil. What do you ask the child next to you?","ar":"ليس معك قلم رصاص. ماذا تسأل الطفل الذي بجانبك؟","uk":"У тебе немає олівця. Що ти запитаєш у дитини поруч?","tr":"Kalemin yok. Yanındaki çocuğa ne sorarsın?","ro":"Nu ai creion. Ce îl întrebi pe copilul de lângă tine?","bg":"Нямаш молив. Какво питаш детето до теб?", "fa": "مداد نداری. از بچه‌ای که کنارت نشسته چه می‌پرسی؟"},
+ "Mag ik je potlood lenen?": {"en":"Can I borrow your pencil?","ar":"هل يمكنني استعارة قلمك؟","uk":"Можна позичити твій олівець?","tr":"Kalemini ödünç alabilir miyim?","ro":"Pot să împrumut creionul tău?","bg":"Може ли да взема молива ти?", "fa": "می‌توانم مدادت را قرض بگیرم؟"},
+ "Ga weg!": {"en":"Go away!","ar":"اذهب بعيدًا!","uk":"Іди геть!","tr":"Git buradan!","ro":"Pleacă!","bg":"Махай се!", "fa": "از اینجا برو!"},
+ "De juf zegt: werk zachtjes. Wat doe je?": {"en":"The teacher says: work quietly. What do you do?","ar":"المعلمة تقول: اعمل بهدوء. ماذا تفعل؟","uk":"Учителька каже: працюй тихо. Що ти робиш?","tr":"Öğretmen diyor ki: sessizce çalış. Ne yaparsın?","ro":"Doamna învățătoare spune: lucrează în liniște. Ce faci?","bg":"Учителката казва: работи тихо. Какво правиш?", "fa": "خانم معلم می‌گوید: آرام کار کن. چه کار می‌کنی؟"},
+ "Ik praat zachtjes.": {"en":"I talk quietly.","ar":"أتكلم بهدوء.","uk":"Я говорю тихо.","tr":"Sessizce konuşurum.","ro":"Vorbesc încet.","bg":"Говоря тихо.", "fa": "آرام حرف می‌زنم."},
+ "Ik roep heel hard.": {"en":"I shout very loudly.","ar":"أصرخ بصوت عالٍ جدًا.","uk":"Я кричу дуже голосно.","tr":"Çok yüksek sesle bağırırım.","ro":"Strig foarte tare.","bg":"Викам много силно.", "fa": "خیلی بلند داد می‌زنم."},
+ "Ik ga zingen.": {"en":"I start singing.","ar":"أبدأ بالغناء.","uk":"Я починаю співати.","tr":"Şarkı söylemeye başlarım.","ro":"Încep să cânt.","bg":"Започвам да пея.", "fa": "آواز می‌خوانم."},
+ "Ik loop weg.": {"en":"I walk away.","ar":"أمشي بعيدًا.","uk":"Я йду геть.","tr":"Yürüyüp giderim.","ro":"Plec.","bg":"Тръгвам си.", "fa": "از آنجا می‌روم."},
+ "De juf zegt: begin maar. Wat doe je?": {"en":"The teacher says: you can start. What do you do?","ar":"المعلمة تقول: ابدأ. ماذا تفعل؟","uk":"Учителька каже: починай. Що ти робиш?","tr":"Öğretmen diyor ki: başlayabilirsin. Ne yaparsın?","ro":"Doamna învățătoare spune: poți începe. Ce faci?","bg":"Учителката казва: започвай. Какво правиш?", "fa": "خانم معلم می‌گوید: شروع کن. چه کار می‌کنی؟"},
+ "Ik begin met mijn werk.": {"en":"I start my work.","ar":"أبدأ عملي.","uk":"Я починаю свою роботу.","tr":"İşime başlarım.","ro":"Încep lucrul.","bg":"Започвам работата си.", "fa": "کارم را شروع می‌کنم."},
+ "Ik ga spelen.": {"en":"I go and play.","ar":"أذهب لألعب.","uk":"Я йду гратися.","tr":"Oynamaya giderim.","ro":"Mă duc să mă joc.","bg":"Отивам да играя.", "fa": "می‌روم بازی کنم."},
+ "Ik doe niets.": {"en":"I do nothing.","ar":"لا أفعل شيئًا.","uk":"Я нічого не роблю.","tr":"Hiçbir şey yapmam.","ro":"Nu fac nimic.","bg":"Не правя нищо.", "fa": "هیچ کاری نمی‌کنم."},
+ "Ik ben klaar": {"en":"I am finished","ar":"انتهيت","uk":"Я закінчив","tr":"Bitirdim","ro":"Am terminat","bg":"Готов съм", "fa": "کارم تمام شد"},
+ "Je werk is af. Wat nu?\n\nVraag: **Wat moet ik nu doen?**\nKijk op het **bord**: daar staat soms wat je mag doen.\nLeg je boek netjes in je **la**.\n\nAndere kinderen werken nog: wees **stil**.": {"en":"Your work is done. What now?\n\nAsk: **Wat moet ik nu doen?** (= What should I do now?)\nLook at the **bord** (= board): sometimes it says what you may do.\nPut your book neatly in your **la** (= drawer).\n\nOther children are still working: be **stil** (= quiet).","ar":"عملك انتهى. ماذا الآن؟\n\nاسأل: **Wat moet ik nu doen?** (= ماذا يجب أن أفعل الآن؟)\nانظر إلى **bord** (= السبورة): أحيانًا مكتوب ماذا يمكنك أن تفعل.\nضع كتابك بترتيب في **la** (= الدرج).\n\nالأطفال الآخرون ما زالوا يعملون: كن **stil** (= هادئًا).","uk":"Твоя робота готова. Що тепер?\n\nЗапитай: **Wat moet ik nu doen?** (= Що мені тепер робити?)\nПодивись на **bord** (= дошку): там іноді написано, що можна робити.\nАкуратно поклади книжку в **la** (= шухляду).\n\nІнші діти ще працюють: будь **stil** (= тихо).","tr":"İşin bitti. Şimdi ne olacak?\n\nSor: **Wat moet ik nu doen?** (= Şimdi ne yapmalıyım?)\n**Bord**'a (= tahtaya) bak: bazen orada ne yapabileceğin yazar.\nKitabını düzgünce **la**'na (= çekmecene) koy.\n\nDiğer çocuklar hâlâ çalışıyor: **stil** (= sessiz) ol.","ro":"Ai terminat lucrul. Și acum?\n\nÎntreabă: **Wat moet ik nu doen?** (= Ce trebuie să fac acum?)\nUită-te la **bord** (= tablă): uneori scrie acolo ce ai voie să faci.\nPune cartea frumos în **la** (= sertar).\n\nAlți copii încă lucrează: fii **stil** (= liniștit).","bg":"Работата ти е готова. Сега какво?\n\nПопитай: **Wat moet ik nu doen?** (= Какво да правя сега?)\nПогледни **bord** (= дъската): понякога там пише какво можеш да правиш.\nПрибери книгата си спретнато в **la** (= чекмеджето).\n\nДругите деца още работят: бъди **stil** (= тих).", "fa": "کارت تمام شد. حالا چه؟\n\nبپرس: **Wat moet ik nu doen?** (= حالا باید چه کار کنم؟)\nبه **bord** (= تخته) نگاه کن: گاهی آنجا نوشته که چه کاری می‌توانی بکنی.\nکتابت را مرتب در **la** (= کشو) بگذار.\n\nبچه‌های دیگر هنوز کار می‌کنند: **stil** (= ساکت) باش."},
+ "Je bent klaar met je werk. Wat vraag je aan de juf?": {"en":"You finished your work. What do you ask the teacher?","ar":"أنهيت عملك. ماذا تسأل المعلمة؟","uk":"Ти закінчив роботу. Що ти запитаєш у вчительки?","tr":"İşini bitirdin. Öğretmene ne sorarsın?","ro":"Ai terminat lucrul. Ce o întrebi pe doamna învățătoare?","bg":"Свърши работата си. Какво питаш учителката?", "fa": "کارت را تمام کرده‌ای. از خانم معلم چه می‌پرسی؟"},
+ "Wat moet ik nu doen?": {"en":"What should I do now?","ar":"ماذا يجب أن أفعل الآن؟","uk":"Що мені тепер робити?","tr":"Şimdi ne yapmalıyım?","ro":"Ce trebuie să fac acum?","bg":"Какво да правя сега?", "fa": "حالا باید چه کار کنم؟"},
+ "Mag ik naar huis?": {"en":"Can I go home?","ar":"هل يمكنني الذهاب إلى البيت؟","uk":"Можна мені додому?","tr":"Eve gidebilir miyim?","ro":"Pot să merg acasă?","bg":"Може ли да си отида вкъщи?", "fa": "می‌توانم به خانه بروم؟"},
+ "Op het bord staat: klaar? Lees een boek. Je bent klaar. Wat doe je?": {"en":"The board says: finished? Read a book. You are finished. What do you do?","ar":"مكتوب على السبورة: انتهيت؟ اقرأ كتابًا. أنت انتهيت. ماذا تفعل؟","uk":"На дошці написано: закінчив? Читай книжку. Ти закінчив. Що ти робиш?","tr":"Tahtada yazıyor: bitirdin mi? Kitap oku. Bitirdin. Ne yaparsın?","ro":"Pe tablă scrie: ai terminat? Citește o carte. Ai terminat. Ce faci?","bg":"На дъската пише: готов ли си? Чети книга. Готов си. Какво правиш?", "fa": "روی تخته نوشته: تمام شد؟ یک کتاب بخوان. کارت تمام شده. چه کار می‌کنی؟"},
+ "Ik pak een boek en lees.": {"en":"I get a book and read.","ar":"آخذ كتابًا وأقرأ.","uk":"Я беру книжку й читаю.","tr":"Bir kitap alır ve okurum.","ro":"Iau o carte și citesc.","bg":"Вземам книга и чета.", "fa": "یک کتاب برمی‌دارم و می‌خوانم."},
+ "Ik ga praten.": {"en":"I start talking.","ar":"أبدأ بالكلام.","uk":"Я починаю розмовляти.","tr":"Konuşmaya başlarım.","ro":"Încep să vorbesc.","bg":"Започвам да говоря.", "fa": "شروع به حرف زدن می‌کنم."},
+ "Je bent klaar. Waar leg je je werkboek?": {"en":"You are finished. Where do you put your workbook?","ar":"انتهيت. أين تضع كتاب التمارين؟","uk":"Ти закінчив. Куди ти кладеш робочий зошит?","tr":"Bitirdin. Çalışma kitabını nereye koyarsın?","ro":"Ai terminat. Unde pui caietul de lucru?","bg":"Готов си. Къде слагаш работната тетрадка?", "fa": "کارت تمام شده. کتاب کارت را کجا می‌گذاری؟"},
+ "In mijn la.": {"en":"In my drawer.","ar":"في درجي.","uk":"У свою шухляду.","tr":"Çekmeceme.","ro":"În sertarul meu.","bg":"В чекмеджето си.", "fa": "در کشوی خودم."},
+ "Op de grond.": {"en":"On the floor.","ar":"على الأرض.","uk":"На підлогу.","tr":"Yere.","ro":"Pe jos.","bg":"На пода.", "fa": "روی زمین."},
+ "In de prullenbak.": {"en":"In the bin.","ar":"في سلة المهملات.","uk":"У смітник.","tr":"Çöp kutusuna.","ro":"În coșul de gunoi.","bg":"В кошчето.", "fa": "در سطل زباله."},
+ "Buiten.": {"en":"Outside.","ar":"في الخارج.","uk":"Надворі.","tr":"Dışarıya.","ro":"Afară.","bg":"Навън.", "fa": "بیرون."},
+ "Je wilt dat de juf je werk nakijkt. Wat vraag je?": {"en":"You want the teacher to check your work. What do you ask?","ar":"تريد أن تصحح المعلمة عملك. ماذا تسأل؟","uk":"Ти хочеш, щоб учителька перевірила твою роботу. Що ти запитаєш?","tr":"Öğretmenin işini kontrol etmesini istiyorsun. Ne sorarsın?","ro":"Vrei ca doamna învățătoare să-ți verifice lucrul. Ce întrebi?","bg":"Искаш учителката да провери работата ти. Какво питаш?", "fa": "می‌خواهی خانم معلم کارت را تصحیح کند. چه می‌پرسی؟"},
+ "Wilt u mijn werk nakijken?": {"en":"Will you check my work?","ar":"هل يمكنك تصحيح عملي؟","uk":"Перевірте, будь ласка, мою роботу?","tr":"İşimi kontrol eder misiniz?","ro":"Vă rog, puteți să-mi verificați lucrul?","bg":"Ще проверите ли работата ми?", "fa": "می‌شود کارم را تصحیح کنید؟"},
+ "Mag ik naar buiten?": {"en":"Can I go outside?","ar":"هل يمكنني الخروج؟","uk":"Можна мені надвір?","tr":"Dışarı çıkabilir miyim?","ro":"Pot să ies afară?","bg":"Може ли да изляза навън?", "fa": "می‌توانم بیرون بروم؟"},
+ "Jij bent klaar. Een ander kind nog niet. Wat doe je?": {"en":"You are finished. Another child is not yet. What do you do?","ar":"أنت انتهيت. طفل آخر لم ينتهِ بعد. ماذا تفعل؟","uk":"Ти закінчив. Інша дитина ще ні. Що ти робиш?","tr":"Sen bitirdin. Başka bir çocuk henüz bitirmedi. Ne yaparsın?","ro":"Tu ai terminat. Alt copil încă nu. Ce faci?","bg":"Ти си готов. Друго дете още не е. Какво правиш?", "fa": "کار تو تمام شده. کار یک بچهٔ دیگر هنوز نه. چه کار می‌کنی؟"},
+ "Ik ben stil en wacht.": {"en":"I am quiet and wait.","ar":"أكون هادئًا وأنتظر.","uk":"Я сиджу тихо й чекаю.","tr":"Sessiz olur ve beklerim.","ro":"Stau liniștit și aștept.","bg":"Тих съм и чакам.", "fa": "ساکت هستم و صبر می‌کنم."},
+ "Ik praat heel hard.": {"en":"I talk very loudly.","ar":"أتكلم بصوت عالٍ جدًا.","uk":"Я говорю дуже голосно.","tr":"Çok yüksek sesle konuşurum.","ro":"Vorbesc foarte tare.","bg":"Говоря много силно.", "fa": "خیلی بلند حرف می‌زنم."},
+ "Ik pak zijn werk af.": {"en":"I take his work away.","ar":"آخذ عمله منه.","uk":"Я забираю в нього роботу.","tr":"Onun işini elinden alırım.","ro":"Îi iau lucrul.","bg":"Взимам му работата.", "fa": "کارش را از او می‌گیرم."},
+ "Ik loop door de klas.": {"en":"I walk around the classroom.","ar":"أتجول في الصف.","uk":"Я ходжу по класу.","tr":"Sınıfta dolaşırım.","ro":"Mă plimb prin clasă.","bg":"Разхождам се из класа.", "fa": "در کلاس این طرف و آن طرف راه می‌روم."},
+ "De juf is bezig": {"en":"The teacher is busy","ar":"المعلمة مشغولة","uk":"Учителька зайнята","tr":"Öğretmen meşgul","ro":"Doamna învățătoare e ocupată","bg":"Учителката е заета", "fa": "خانم معلم مشغول است"},
+ "Soms helpt de juf of meester een ander kind. Dan mag je even niet storen.\n\n1. **Kijk zelf** nog een keer.\n2. **Vraag een kind** naast je: **Kun je mij helpen?**\n3. **Wacht** rustig. Ga verder met de **volgende som**.\n\nDe juf komt straks bij je.": {"en":"Sometimes the teacher is helping another child. Then you should not disturb for a moment.\n\n1. **Kijk zelf** (= Look yourself) one more time.\n2. **Vraag een kind** (= Ask a child) next to you: **Kun je mij helpen?** (= Can you help me?)\n3. **Wacht** (= Wait) calmly. Go on with the **volgende som** (= next sum).\n\nThe teacher will come to you soon.","ar":"أحيانًا تساعد المعلمة أو المعلم طفلًا آخر. عندها لا تقاطع للحظة.\n\n1. **Kijk zelf** (= انظر بنفسك) مرة أخرى.\n2. **Vraag een kind** (= اسأل طفلًا) بجانبك: **Kun je mij helpen?** (= هل يمكنك مساعدتي؟)\n3. **Wacht** (= انتظر) بهدوء. أكمل **volgende som** (= المسألة التالية).\n\nالمعلمة ستأتي إليك بعد قليل.","uk":"Іноді вчителька або вчитель допомагає іншій дитині. Тоді трохи не заважай.\n\n1. **Kijk zelf** (= Подивись сам) ще раз.\n2. **Vraag een kind** (= Запитай дитину) поруч: **Kun je mij helpen?** (= Можеш мені допомогти?)\n3. **Wacht** (= Чекай) спокійно. Роби далі **volgende som** (= наступний приклад).\n\nУчителька скоро підійде до тебе.","tr":"Bazen öğretmen başka bir çocuğa yardım eder. O zaman bir süre rahatsız etme.\n\n1. Bir kez daha **kijk zelf** (= kendin bak).\n2. Yanındaki bir **kind**'e sor (vraag een kind): **Kun je mij helpen?** (= Bana yardım edebilir misin?)\n3. Sakince **wacht** (= bekle). **Volgende som** (= sonraki işlem) ile devam et.\n\nÖğretmen birazdan yanına gelir.","ro":"Uneori doamna sau domnul învățător ajută alt copil. Atunci nu deranja un pic.\n\n1. **Kijk zelf** (= Uită-te singur) încă o dată.\n2. **Vraag een kind** (= Întreabă un copil) de lângă tine: **Kun je mij helpen?** (= Mă poți ajuta?)\n3. **Wacht** (= Așteaptă) liniștit. Continuă cu **volgende som** (= exercițiul următor).\n\nDoamna învățătoare vine la tine imediat.","bg":"Понякога учителката или учителят помага на друго дете. Тогава за малко не пречи.\n\n1. **Kijk zelf** (= Погледни сам) още веднъж.\n2. **Vraag een kind** (= Попитай дете) до теб: **Kun je mij helpen?** (= Можеш ли да ми помогнеш?)\n3. **Wacht** (= Чакай) спокойно. Продължи със **volgende som** (= следващата задача).\n\nУчителката скоро ще дойде при теб.", "fa": "گاهی خانم معلم یا آقای معلم به بچهٔ دیگری کمک می‌کند. آن موقع نباید مزاحمش شوی.\n\n1. **Kijk zelf** (= خودت نگاه کن)، یک بار دیگر.\n2. **Vraag een kind** (= از یک بچه بپرس) که کنارت نشسته: **Kun je mij helpen?** (= می‌توانی به من کمک کنی؟)\n3. **Wacht** (= صبر کن)، آرام. برو سراغ **volgende som** (= مسئلهٔ بعدی).\n\nخانم معلم کمی بعد پیش تو می‌آید."},
+ "De juf helpt een ander kind. Je hebt een vraag. Wat doe je eerst?": {"en":"The teacher is helping another child. You have a question. What do you do first?","ar":"المعلمة تساعد طفلًا آخر. عندك سؤال. ماذا تفعل أولًا؟","uk":"Учителька допомагає іншій дитині. У тебе є питання. Що ти робиш спочатку?","tr":"Öğretmen başka bir çocuğa yardım ediyor. Bir sorun var. Önce ne yaparsın?","ro":"Doamna învățătoare ajută alt copil. Ai o întrebare. Ce faci mai întâi?","bg":"Учителката помага на друго дете. Имаш въпрос. Какво правиш първо?", "fa": "خانم معلم به یک بچهٔ دیگر کمک می‌کند. تو سؤالی داری. اول چه کار می‌کنی؟"},
+ "Ik kijk zelf nog een keer.": {"en":"I look again myself.","ar":"أنظر بنفسي مرة أخرى.","uk":"Я сам дивлюся ще раз.","tr":"Kendim bir kez daha bakarım.","ro":"Mă mai uit o dată singur.","bg":"Поглеждам сам още веднъж.", "fa": "خودم یک بار دیگر نگاه می‌کنم."},
+ "Ik roep: juf, juf!": {"en":"I shout: teacher, teacher!","ar":"أصرخ: يا معلمة، يا معلمة!","uk":"Я кричу: вчителько, вчителько!","tr":"Bağırırım: öğretmenim, öğretmenim!","ro":"Strig: doamna, doamna!","bg":"Викам: госпожо, госпожо!", "fa": "داد می‌زنم: خانم معلم، خانم معلم!"},
+ "Ik stop met werken.": {"en":"I stop working.","ar":"أتوقف عن العمل.","uk":"Я перестаю працювати.","tr":"Çalışmayı bırakırım.","ro":"Mă opresc din lucru.","bg":"Спирам да работя.", "fa": "دست از کار می‌کشم."},
+ "Ik ga huilen.": {"en":"I start crying.","ar":"أبدأ بالبكاء.","uk":"Я починаю плакати.","tr":"Ağlamaya başlarım.","ro":"Încep să plâng.","bg":"Започвам да плача.", "fa": "گریه می‌کنم."},
+ "Je snapt het nog niet. De juf is bezig. Wat doe je?": {"en":"You still don't understand. The teacher is busy. What do you do?","ar":"ما زلت لا تفهم. المعلمة مشغولة. ماذا تفعل؟","uk":"Ти ще не розумієш. Учителька зайнята. Що ти робиш?","tr":"Hâlâ anlamadın. Öğretmen meşgul. Ne yaparsın?","ro":"Încă nu înțelegi. Doamna învățătoare e ocupată. Ce faci?","bg":"Още не разбираш. Учителката е заета. Какво правиш?", "fa": "هنوز نفهمیده‌ای. خانم معلم مشغول است. چه کار می‌کنی؟"},
+ "Ik vraag het aan een kind naast mij.": {"en":"I ask a child next to me.","ar":"أسأل طفلًا بجانبي.","uk":"Я питаю дитину поруч.","tr":"Yanımdaki bir çocuğa sorarım.","ro":"Întreb un copil de lângă mine.","bg":"Питам дете до мен.", "fa": "از بچه‌ای که کنارم نشسته می‌پرسم."},
+ "Ik loop naar buiten.": {"en":"I walk outside.","ar":"أمشي إلى الخارج.","uk":"Я виходжу надвір.","tr":"Dışarı yürürüm.","ro":"Ies afară.","bg":"Излизам навън.", "fa": "بیرون می‌روم."},
+ "Ik gooi mijn werk weg.": {"en":"I throw my work away.","ar":"أرمي عملي.","uk":"Я викидаю свою роботу.","tr":"İşimi atarım.","ro":"Îmi arunc lucrul.","bg":"Изхвърлям работата си.", "fa": "کارم را دور می‌اندازم."},
+ "Hoe vraag je hulp aan het kind naast je?": {"en":"How do you ask the child next to you for help?","ar":"كيف تطلب المساعدة من الطفل الذي بجانبك؟","uk":"Як попросити допомоги в дитини поруч?","tr":"Yanındaki çocuktan nasıl yardım istersin?","ro":"Cum îi ceri ajutor copilului de lângă tine?","bg":"Как молиш детето до теб за помощ?", "fa": "چطور از بچهٔ کنارت کمک می‌خواهی؟"},
+ "Kun je mij helpen?": {"en":"Can you help me?","ar":"هل يمكنك مساعدتي؟","uk":"Можеш мені допомогти?","tr":"Bana yardım edebilir misin?","ro":"Mă poți ajuta?","bg":"Можеш ли да ми помогнеш?", "fa": "می‌توانی به من کمک کنی؟"},
+ "De juf heeft nu geen tijd. Wat doe je met je vraag?": {"en":"The teacher has no time right now. What do you do with your question?","ar":"المعلمة ليس لديها وقت الآن. ماذا تفعل بسؤالك؟","uk":"Учителька зараз не має часу. Що ти робиш зі своїм питанням?","tr":"Öğretmenin şimdi vakti yok. Sorunla ne yaparsın?","ro":"Doamna învățătoare nu are timp acum. Ce faci cu întrebarea ta?","bg":"Учителката сега няма време. Какво правиш с въпроса си?", "fa": "خانم معلم الان وقت ندارد. با سؤالت چه کار می‌کنی؟"},
+ "Ik wacht tot de juf tijd heeft.": {"en":"I wait until the teacher has time.","ar":"أنتظر حتى يكون لدى المعلمة وقت.","uk":"Я чекаю, поки вчителька матиме час.","tr":"Öğretmenin vakti olana kadar beklerim.","ro":"Aștept până are doamna învățătoare timp.","bg":"Чакам, докато учителката има време.", "fa": "صبر می‌کنم تا خانم معلم وقت داشته باشد."},
+ "Ik ga schreeuwen.": {"en":"I start screaming.","ar":"أبدأ بالصراخ.","uk":"Я починаю кричати.","tr":"Bağırmaya başlarım.","ro":"Încep să țip.","bg":"Започвам да крещя.", "fa": "جیغ می‌زنم."},
+ "Ik doe niets meer.": {"en":"I don't do anything anymore.","ar":"لا أفعل شيئًا بعد ذلك.","uk":"Я більше нічого не роблю.","tr":"Artık hiçbir şey yapmam.","ro":"Nu mai fac nimic.","bg":"Вече не правя нищо.", "fa": "دیگر هیچ کاری نمی‌کنم."},
+ "Je kunt niet verder met een som. Wat doe je terwijl je wacht?": {"en":"You can't go on with a sum. What do you do while you wait?","ar":"لا تستطيع إكمال مسألة. ماذا تفعل وأنت تنتظر؟","uk":"Ти не можеш розв'язати приклад далі. Що ти робиш, поки чекаєш?","tr":"Bir işlemde ilerleyemiyorsun. Beklerken ne yaparsın?","ro":"Nu poți continua un exercițiu. Ce faci cât aștepți?","bg":"Не можеш да продължиш една задача. Какво правиш, докато чакаш?", "fa": "نمی‌توانی یک مسئله را ادامه بدهی. وقتی صبر می‌کنی چه کار می‌کنی؟"},
+ "Ik ga verder met de volgende som.": {"en":"I go on with the next sum.","ar":"أكمل المسألة التالية.","uk":"Я роблю далі наступний приклад.","tr":"Sonraki işlemle devam ederim.","ro":"Continui cu exercițiul următor.","bg":"Продължавам със следващата задача.", "fa": "می‌روم سراغ مسئلهٔ بعدی."},
+ "Ik pak een spel.": {"en":"I get a game.","ar":"آخذ لعبة.","uk":"Я беру гру.","tr":"Bir oyun alırım.","ro":"Iau un joc.","bg":"Вземам игра.", "fa": "یک بازی برمی‌دارم."},
+ "Fijne gevoelens": {"en":"Good feelings","ar":"مشاعر جميلة","uk":"Приємні почуття","tr":"Güzel duygular","ro":"Sentimente plăcute","bg":"Хубави чувства", "fa": "حس‌های خوب"},
+ "Je kunt ook zeggen dat je je **fijn** voelt.\n\n**Ik ben blij.** **Ik ben trots.** **Ik voel me goed.**\n**Het gaat goed, dank u.**\n\nDe juf of meester vindt het fijn om dat te horen.": {"en":"You can also say that you feel **fijn** (= good).\n\n**Ik ben blij.** (= I am happy.) **Ik ben trots.** (= I am proud.) **Ik voel me goed.** (= I feel good.)\n**Het gaat goed, dank u.** (= I am fine, thank you.)\n\nThe teacher likes to hear that.","ar":"يمكنك أيضًا أن تقول إنك تشعر بشعور **fijn** (= جميل).\n\n**Ik ben blij.** (= أنا سعيد.) **Ik ben trots.** (= أنا فخور.) **Ik voel me goed.** (= أشعر أنني بخير.)\n**Het gaat goed, dank u.** (= أنا بخير، شكرًا.)\n\nالمعلمة أو المعلم يحب أن يسمع ذلك.","uk":"Ти можеш також сказати, що тобі **fijn** (= добре).\n\n**Ik ben blij.** (= Я радий.) **Ik ben trots.** (= Я пишаюся.) **Ik voel me goed.** (= Мені добре.)\n**Het gaat goed, dank u.** (= Усе добре, дякую.)\n\nУчительці або вчителю приємно це чути.","tr":"Kendini **fijn** (= iyi) hissettiğini de söyleyebilirsin.\n\n**Ik ben blij.** (= Mutluyum.) **Ik ben trots.** (= Gururluyum.) **Ik voel me goed.** (= Kendimi iyi hissediyorum.)\n**Het gaat goed, dank u.** (= İyiyim, teşekkür ederim.)\n\nÖğretmen bunu duymaktan hoşlanır.","ro":"Poți spune și că te simți **fijn** (= bine).\n\n**Ik ben blij.** (= Sunt fericit.) **Ik ben trots.** (= Sunt mândru.) **Ik voel me goed.** (= Mă simt bine.)\n**Het gaat goed, dank u.** (= Îmi merge bine, mulțumesc.)\n\nDoamnei sau domnului învățător îi place să audă asta.","bg":"Можеш да кажеш и че ти е **fijn** (= хубаво).\n\n**Ik ben blij.** (= Радостен съм.) **Ik ben trots.** (= Горд съм.) **Ik voel me goed.** (= Чувствам се добре.)\n**Het gaat goed, dank u.** (= Добре съм, благодаря.)\n\nНа учителката или учителя им е приятно да го чуят.", "fa": "همچنین می‌توانی بگویی که حالت **fijn** (= خوب) است.\n\n**Ik ben blij.** (= من خوشحالم.) **Ik ben trots.** (= به خودم افتخار می‌کنم.) **Ik voel me goed.** (= حالم خوب است.)\n**Het gaat goed, dank u.** (= خوبم، ممنون.)\n\nخانم معلم یا آقای معلم دوست دارد این را بشنود."},
+ "Je hebt een mooie tekening gemaakt. Hoe voel je je?": {"en":"You made a beautiful drawing. How do you feel?","ar":"رسمت رسمة جميلة. كيف تشعر؟","uk":"Ти намалював гарний малюнок. Як ти почуваєшся?","tr":"Güzel bir resim yaptın. Nasıl hissediyorsun?","ro":"Ai făcut un desen frumos. Cum te simți?","bg":"Нарисува хубава рисунка. Как се чувстваш?", "fa": "یک نقاشی قشنگ کشیده‌ای. چه حسی داری؟"},
+ "Ik ben trots.": {"en":"I am proud.","ar":"أنا فخور.","uk":"Я пишаюся.","tr":"Gururluyum.","ro":"Sunt mândru.","bg":"Горд съм.", "fa": "به خودم افتخار می‌کنم."},
+ "Je speelt met een vriend. Het is leuk. Hoe voel je je?": {"en":"You are playing with a friend. It is fun. How do you feel?","ar":"تلعب مع صديق. الأمر ممتع. كيف تشعر؟","uk":"Ти граєшся з другом. Це весело. Як ти почуваєшся?","tr":"Bir arkadaşınla oynuyorsun. Eğlenceli. Nasıl hissediyorsun?","ro":"Te joci cu un prieten. E distractiv. Cum te simți?","bg":"Играеш с приятел. Забавно е. Как се чувстваш?", "fa": "با یک دوست بازی می‌کنی. خوش می‌گذرد. چه حسی داری؟"},
+ "De juf vraagt: hoe gaat het? Het gaat goed. Wat zeg je?": {"en":"The teacher asks: how are you? You are fine. What do you say?","ar":"المعلمة تسأل: كيف حالك؟ أنت بخير. ماذا تقول؟","uk":"Учителька питає: як справи? У тебе все добре. Що ти скажеш?","tr":"Öğretmen soruyor: nasılsın? İyisin. Ne dersin?","ro":"Doamna învățătoare întreabă: ce faci? Îți merge bine. Ce spui?","bg":"Учителката пита: как си? Добре си. Какво казваш?", "fa": "خانم معلم می‌پرسد: حالت چطور است؟ حالت خوب است. چه می‌گویی؟"},
+ "Het gaat goed, dank u.": {"en":"I am fine, thank you.","ar":"أنا بخير، شكرًا.","uk":"Усе добре, дякую.","tr":"İyiyim, teşekkür ederim.","ro":"Îmi merge bine, mulțumesc.","bg":"Добре съм, благодаря.", "fa": "خوبم، ممنون."},
+ "Ik ben ziek.": {"en":"I am sick.","ar":"أنا مريض.","uk":"Я хворий.","tr":"Hastayım.","ro":"Sunt bolnav.","bg":"Болен съм.", "fa": "مریضم."},
+ "Ik snap het niet.": {"en":"I don't understand it.","ar":"لا أفهم.","uk":"Я не розумію.","tr":"Anlamıyorum.","ro":"Nu înțeleg.","bg":"Не разбирам.", "fa": "این را نمی‌فهمم."},
+ "Het was een fijne dag op school. Wat zeg je thuis?": {"en":"It was a nice day at school. What do you say at home?","ar":"كان يومًا جميلًا في المدرسة. ماذا تقول في البيت؟","uk":"Це був гарний день у школі. Що ти скажеш удома?","tr":"Okulda güzel bir gündü. Evde ne dersin?","ro":"A fost o zi frumoasă la școală. Ce spui acasă?","bg":"Беше хубав ден в училище. Какво казваш вкъщи?", "fa": "روز خوبی در مدرسه بود. در خانه چه می‌گویی؟"},
+ "Ik had een leuke dag.": {"en":"I had a nice day.","ar":"كان يومي جميلًا.","uk":"У мене був гарний день.","tr":"Güzel bir gün geçirdim.","ro":"Am avut o zi frumoasă.","bg":"Имах хубав ден.", "fa": "روز خوبی داشتم."},
+ "De som was moeilijk, maar nu snap je hem. Hoe voel je je?": {"en":"The sum was hard, but now you understand it. How do you feel?","ar":"كانت المسألة صعبة، لكنك الآن تفهمها. كيف تشعر؟","uk":"Приклад був важкий, але тепер ти його розумієш. Як ти почуваєшся?","tr":"İşlem zordu ama şimdi anlıyorsun. Nasıl hissediyorsun?","ro":"Exercițiul a fost greu, dar acum îl înțelegi. Cum te simți?","bg":"Задачата беше трудна, но сега я разбираш. Как се чувстваш?", "fa": "مسئله سخت بود، ولی حالا آن را می‌فهمی. چه حسی داری؟"},
+ "Ik voel me goed.": {"en":"I feel good.","ar":"أشعر أنني بخير.","uk":"Мені добре.","tr":"Kendimi iyi hissediyorum.","ro":"Mă simt bine.","bg":"Чувствам се добре.", "fa": "حالم خوب است."},
+ "Ik ben verdrietig.": {"en":"I am sad.","ar":"أنا حزين.","uk":"Мені сумно.","tr":"Üzgünüm.","ro":"Sunt trist.","bg":"Тъжен съм.", "fa": "غمگینم."},
+ "De juf wil dat je gaat werken.": {"en":"The teacher wants you to start working.","ar":"المعلمة تريد أن تبدأ العمل.","uk":"Учителька хоче, щоб ти почав працювати.","tr":"Öğretmen çalışmaya başlamanı istiyor.","ro":"Doamna învățătoare vrea să începi lucrul.","bg":"Учителката иска да започнеш работа.", "fa": "خانم معلم می‌خواهد که کار را شروع کنی."},
+ "Je zoekt de goede bladzijde in je boek.": {"en":"You are looking for the right page in your book.","ar":"تبحث عن الصفحة الصحيحة في كتابك.","uk":"Ти шукаєш правильну сторінку в книжці.","tr":"Kitabında doğru sayfayı arıyorsun.","ro":"Cauți pagina potrivită în carte.","bg":"Търсиш правилната страница в книгата си.", "fa": "دنبال صفحهٔ درست در کتابت می‌گردی."},
+ "Je wilt even een potlood van een ander kind.": {"en":"You want to use another child's pencil for a moment.","ar":"تريد قلم رصاص من طفل آخر لفترة قصيرة.","uk":"Ти хочеш ненадовго олівець іншої дитини.","tr":"Kısa bir süre başka bir çocuğun kalemini istiyorsun.","ro":"Vrei pentru puțin creionul altui copil.","bg":"Искаш за малко молива на друго дете.", "fa": "می‌خواهی کمی از مداد یک بچهٔ دیگر استفاده کنی."},
+ "Zachtjes = niet hard.": {"en":"Zachtjes (= quietly) = not loud.","ar":"zachtjes (= بهدوء) = ليس بصوت عالٍ.","uk":"Zachtjes (= тихо) = не голосно.","tr":"Zachtjes (= sessizce) = yüksek sesle değil.","ro":"Zachtjes (= încet) = nu tare.","bg":"Zachtjes (= тихо) = не силно.", "fa": "Zachtjes (= آرام) = نه بلند."},
+ "Beginnen = nu gaan werken.": {"en":"Beginnen (= to start) = start working now.","ar":"beginnen (= يبدأ) = ابدأ العمل الآن.","uk":"Beginnen (= почати) = зараз почати працювати.","tr":"Beginnen (= başlamak) = şimdi çalışmaya başlamak.","ro":"Beginnen (= a începe) = să începi lucrul acum.","bg":"Beginnen (= започвам) = да започнеш работа сега.", "fa": "Beginnen (= شروع کردن) = همین حالا دست به کار شدن."},
+ "Je werk is af. Je wilt weten wat je daarna doet.": {"en":"Your work is done. You want to know what to do next.","ar":"عملك انتهى. تريد أن تعرف ماذا تفعل بعد ذلك.","uk":"Твоя робота готова. Ти хочеш знати, що робити далі.","tr":"İşin bitti. Sonra ne yapacağını bilmek istiyorsun.","ro":"Ai terminat lucrul. Vrei să știi ce faci după aceea.","bg":"Работата ти е готова. Искаш да знаеш какво правиш после.", "fa": "کارت تمام شده. می‌خواهی بدانی بعدش چه کار کنی."},
+ "Kijk wat er op het bord staat.": {"en":"Look at what is written on the board.","ar":"انظر ماذا مكتوب على السبورة.","uk":"Подивись, що написано на дошці.","tr":"Tahtada ne yazdığına bak.","ro":"Uită-te ce scrie pe tablă.","bg":"Виж какво пише на дъската.", "fa": "ببین روی تخته چه نوشته شده."},
+ "Je boek moet netjes weg.": {"en":"Your book has to be put away neatly.","ar":"يجب أن تضع كتابك بترتيب.","uk":"Книжку треба акуратно прибрати.","tr":"Kitabını düzgünce kaldırman gerekir.","ro":"Cartea trebuie pusă frumos la loc.","bg":"Книгата трябва да се прибере спретнато.", "fa": "باید کتابت را مرتب سر جایش بگذاری."},
+ "Nakijken = kijken of het goed is.": {"en":"Nakijken (= to check) = look whether it is right.","ar":"nakijken (= يصحح) = يرى إن كان صحيحًا.","uk":"Nakijken (= перевірити) = подивитися, чи правильно.","tr":"Nakijken (= kontrol etmek) = doğru mu diye bakmak.","ro":"Nakijken (= a verifica) = a vedea dacă e corect.","bg":"Nakijken (= проверявам) = да видиш дали е правилно.", "fa": "Nakijken (= تصحیح کردن) = نگاه کردن که درست است یا نه."},
+ "Het andere kind is nog aan het werk.": {"en":"The other child is still working.","ar":"الطفل الآخر ما زال يعمل.","uk":"Інша дитина ще працює.","tr":"Diğer çocuk hâlâ çalışıyor.","ro":"Celălalt copil încă lucrează.","bg":"Другото дете още работи.", "fa": "آن بچهٔ دیگر هنوز مشغول کار است."},
+ "Misschien vind je het antwoord zelf.": {"en":"Maybe you can find the answer yourself.","ar":"ربما تجد الجواب بنفسك.","uk":"Можливо, ти сам знайдеш відповідь.","tr":"Belki cevabı kendin bulursun.","ro":"Poate găsești singur răspunsul.","bg":"Може би ще намериш отговора сам.", "fa": "شاید خودت جواب را پیدا کنی."},
+ "Een ander kind kan je ook helpen.": {"en":"Another child can also help you.","ar":"طفل آخر يمكنه أيضًا مساعدتك.","uk":"Інша дитина теж може тобі допомогти.","tr":"Başka bir çocuk da sana yardım edebilir.","ro":"Și alt copil te poate ajuta.","bg":"И друго дете може да ти помогне.", "fa": "یک بچهٔ دیگر هم می‌تواند به تو کمک کند."},
+ "Je wilt hulp. Vraag het vriendelijk.": {"en":"You want help. Ask nicely.","ar":"تريد مساعدة. اطلبها بلطف.","uk":"Ти хочеш допомоги. Попроси ввічливо.","tr":"Yardım istiyorsun. Kibarca sor.","ro":"Vrei ajutor. Cere frumos.","bg":"Искаш помощ. Помоли учтиво.", "fa": "کمک می‌خواهی. با مهربانی بپرس."},
+ "De juf komt straks. Even geduld.": {"en":"The teacher will come soon. Be patient for a moment.","ar":"المعلمة ستأتي بعد قليل. اصبر قليلًا.","uk":"Учителька скоро підійде. Трохи терпіння.","tr":"Öğretmen birazdan gelir. Biraz sabret.","ro":"Doamna învățătoare vine imediat. Puțină răbdare.","bg":"Учителката ще дойде скоро. Малко търпение.", "fa": "خانم معلم کمی بعد می‌آید. کمی صبر کن."},
+ "Je kunt al wel iets anders doen.": {"en":"You can already do something else.","ar":"يمكنك أن تفعل شيئًا آخر.","uk":"Ти вже можеш зробити щось інше.","tr":"Şimdiden başka bir şey yapabilirsin.","ro":"Poți face deja altceva.","bg":"Вече можеш да направиш нещо друго.", "fa": "همین حالا می‌توانی کار دیگری بکنی."},
+ "Je hebt iets moois gemaakt. Dat voelt goed.": {"en":"You made something beautiful. That feels good.","ar":"صنعت شيئًا جميلًا. هذا شعور جميل.","uk":"Ти зробив щось гарне. Це приємно.","tr":"Güzel bir şey yaptın. Bu iyi hissettirir.","ro":"Ai făcut ceva frumos. E o senzație bună.","bg":"Направи нещо хубаво. Това е приятно.", "fa": "یک چیز قشنگ درست کرده‌ای. این حس خوبی دارد."},
+ "Leuk spelen = je lacht.": {"en":"Playing nicely = you laugh.","ar":"اللعب الممتع = تضحك.","uk":"Весело гратися = ти смієшся.","tr":"Eğlenceli oyun = gülersin.","ro":"Joc distractiv = râzi.","bg":"Забавна игра = смееш се.", "fa": "بازی شاد = تو می‌خندی."},
+ "Het gaat goed met je. Zeg dat.": {"en":"You are doing well. Say that.","ar":"أنت بخير. قل ذلك.","uk":"У тебе все добре. Скажи це.","tr":"İyisin. Bunu söyle.","ro":"Îți merge bine. Spune asta.","bg":"Добре си. Кажи го.", "fa": "حالت خوب است. همین را بگو."},
+ "Fijn = leuk.": {"en":"Fijn (= nice) = leuk (= fun).","ar":"fijn (= جميل) = leuk (= ممتع).","uk":"Fijn (= приємний) = leuk (= веселий).","tr":"Fijn (= güzel) = leuk (= eğlenceli).","ro":"Fijn (= plăcut) = leuk (= distractiv).","bg":"Fijn (= приятен) = leuk (= забавен).", "fa": "Fijn (= خوب) = leuk (= خوشایند)."},
+ "Eindelijk snap je het. Dat voelt fijn.": {"en":"Finally you understand it. That feels nice.","ar":"أخيرًا فهمته. هذا شعور جميل.","uk":"Нарешті ти зрозумів. Це приємно.","tr":"Sonunda anladın. Bu güzel hissettirir.","ro":"În sfârșit înțelegi. E o senzație plăcută.","bg":"Най-сетне разбираш. Това е приятно.", "fa": "بالاخره آن را می‌فهمی. این حس خوبی دارد."},
  // Woorden 3 (2 okt 2026) — door Claude vertaald, nog door moedertaalsprekers laten nakijken.
- "Woorden 3 — kleuren, vormen, tijd en praten (nieuwkomers)": {"en":"Words 3 — colours, shapes, time and talking (newcomers)","ar":"كلمات 3 — الألوان والأشكال والوقت والكلام (للقادمين الجدد)","uk":"Слова 3 — кольори, фігури, час і розмова (новенькі)","tr":"Kelimeler 3 — renkler, şekiller, zaman ve konuşmak (yeni gelenler)","ro":"Cuvinte 3 — culori, forme, timp și vorbit (nou-veniți)","bg":"Думи 3 — цветове, форми, време и говорене (новодошли)"},
- "Kleuren, vormen, groot en klein, waar en wanneer, en woorden om te denken en te vertellen. Met steun in je eigen taal. ~15 min.": {"en":"Colours, shapes, big and small, where and when, and words for thinking and telling. With help in your own language. ~15 min.","ar":"الألوان، الأشكال، كبير وصغير، أين ومتى، وكلمات للتفكير والحكي. مع مساعدة بلغتك. ~15 دقيقة.","uk":"Кольори, фігури, великий і маленький, де і коли, і слова, щоб думати й розповідати. З підтримкою твоєю мовою. ~15 хв.","tr":"Renkler, şekiller, büyük ve küçük, nerede ve ne zaman, düşünmek ve anlatmak için kelimeler. Kendi dilinde destekle. ~15 dk.","ro":"Culori, forme, mare și mic, unde și când, și cuvinte ca să gândești și să povestești. Cu sprijin în limba ta. ~15 min.","bg":"Цветове, форми, голямо и малко, къде и кога, и думи, за да мислиш и разказваш. С помощ на твоя език. ~15 мин."},
- "Welke kleur is het?": {"en":"What colour is it?","ar":"ما لونه؟","uk":"Якого це кольору?","tr":"Hangi renk?","ro":"Ce culoare are?","bg":"Какъв цвят е?"},
- "Welke vorm? Groot of klein?": {"en":"Which shape? Big or small?","ar":"أي شكل؟ كبير أم صغير؟","uk":"Яка фігура? Великий чи маленький?","tr":"Hangi şekil? Büyük mü küçük mü?","ro":"Ce formă? Mare sau mic?","bg":"Каква форма? Голямо или малко?"},
- "Waar is het? Hoeveel?": {"en":"Where is it? How many?","ar":"أين هو؟ كم؟","uk":"Де це? Скільки?","tr":"Nerede? Kaç tane?","ro":"Unde este? Câte?","bg":"Къде е? Колко?"},
- "Wanneer? Wie is aan de beurt?": {"en":"When? Whose turn is it?","ar":"متى؟ دور من؟","uk":"Коли? Чия черга?","tr":"Ne zaman? Sıra kimde?","ro":"Când? Cine e la rând?","bg":"Кога? Кой е на ред?"},
- "Denken en vertellen": {"en":"Thinking and telling","ar":"التفكير والحكي","uk":"Думати й розповідати","tr":"Düşünmek ve anlatmak","ro":"A gândi și a povesti","bg":"Мислене и разказване"},
- "Alles om je heen heeft een **kleur**.\n\n**bruin** · **grijs** · **paars** · **roze** · **zwart**\n\nVraag: **Welke kleur is het?**": {"en":"Everything around you has a **kleur** (= colour).\n\n**bruin** (= brown) · **grijs** (= grey) · **paars** (= purple) · **roze** (= pink) · **zwart** (= black)\n\nAsk: **Welke kleur is het?** (= What colour is it?)","ar":"كل شيء حولك له **kleur** (= لون).\n\n**bruin** (= بني) · **grijs** (= رمادي) · **paars** (= بنفسجي) · **roze** (= وردي) · **zwart** (= أسود)\n\nاسأل: **Welke kleur is het?** (= ما لونه؟)","uk":"Усе навколо тебе має **kleur** (= колір).\n\n**bruin** (= коричневий) · **grijs** (= сірий) · **paars** (= фіолетовий) · **roze** (= рожевий) · **zwart** (= чорний)\n\nЗапитай: **Welke kleur is het?** (= Якого це кольору?)","tr":"Etrafındaki her şeyin bir **kleur**'u (= rengi) var.\n\n**bruin** (= kahverengi) · **grijs** (= gri) · **paars** (= mor) · **roze** (= pembe) · **zwart** (= siyah)\n\nSor: **Welke kleur is het?** (= Hangi renk?)","ro":"Tot ce e în jurul tău are o **kleur** (= culoare).\n\n**bruin** (= maro) · **grijs** (= gri) · **paars** (= mov) · **roze** (= roz) · **zwart** (= negru)\n\nÎntreabă: **Welke kleur is het?** (= Ce culoare are?)","bg":"Всичко около теб има **kleur** (= цвят).\n\n**bruin** (= кафяв) · **grijs** (= сив) · **paars** (= лилав) · **roze** (= розов) · **zwart** (= черен)\n\nПопитай: **Welke kleur is het?** (= Какъв цвят е?)"},
- "Welke kleur heeft chocola?": {"en":"What colour is chocolate?","ar":"ما لون الشوكولاتة؟","uk":"Якого кольору шоколад?","tr":"Çikolata ne renk?","ro":"Ce culoare are ciocolata?","bg":"Какъв цвят е шоколадът?"},
- "Bruin.": {"en":"Brown.","ar":"بني.","uk":"Коричневий.","tr":"Kahverengi.","ro":"Maro.","bg":"Кафяв."},
- "Groen.": {"en":"Green.","ar":"أخضر.","uk":"Зелений.","tr":"Yeşil.","ro":"Verde.","bg":"Зелен."},
- "Roze.": {"en":"Pink.","ar":"وردي.","uk":"Рожевий.","tr":"Pembe.","ro":"Roz.","bg":"Розов."},
- "Wit.": {"en":"White.","ar":"أبيض.","uk":"Білий.","tr":"Beyaz.","ro":"Alb.","bg":"Бял."},
- "Welke kleur heeft een olifant?": {"en":"What colour is an elephant?","ar":"ما لون الفيل؟","uk":"Якого кольору слон?","tr":"Fil ne renk?","ro":"Ce culoare are un elefant?","bg":"Какъв цвят е слонът?"},
- "Grijs.": {"en":"Grey.","ar":"رمادي.","uk":"Сірий.","tr":"Gri.","ro":"Gri.","bg":"Сив."},
- "Geel.": {"en":"Yellow.","ar":"أصفر.","uk":"Жовтий.","tr":"Sarı.","ro":"Galben.","bg":"Жълт."},
- "Paars.": {"en":"Purple.","ar":"بنفسجي.","uk":"Фіолетовий.","tr":"Mor.","ro":"Mov.","bg":"Лилав."},
- "Rood.": {"en":"Red.","ar":"أحمر.","uk":"Червоний.","tr":"Kırmızı.","ro":"Roșu.","bg":"Червен."},
- "Rood en blauw samen. Welke kleur krijg je?": {"en":"Red and blue together. What colour do you get?","ar":"الأحمر والأزرق معًا. ما اللون الذي تحصل عليه؟","uk":"Червоний і синій разом. Який колір вийде?","tr":"Kırmızı ve mavi birlikte. Hangi renk olur?","ro":"Roșu și albastru împreună. Ce culoare iese?","bg":"Червено и синьо заедно. Какъв цвят се получава?"},
- "Welke kleur heeft een varken?": {"en":"What colour is a pig?","ar":"ما لون الخنزير؟","uk":"Якого кольору свиня?","tr":"Domuz ne renk?","ro":"Ce culoare are un porc?","bg":"Какъв цвят е прасето?"},
- "Blauw.": {"en":"Blue.","ar":"أزرق.","uk":"Синій.","tr":"Mavi.","ro":"Albastru.","bg":"Син."},
- "Zwart.": {"en":"Black.","ar":"أسود.","uk":"Чорний.","tr":"Siyah.","ro":"Negru.","bg":"Черен."},
- "Het is nacht. Welke kleur heeft de lucht?": {"en":"It is night. What colour is the sky?","ar":"إنه الليل. ما لون السماء؟","uk":"Зараз ніч. Якого кольору небо?","tr":"Gece oldu. Gökyüzü ne renk?","ro":"E noapte. Ce culoare are cerul?","bg":"Нощ е. Какъв цвят е небето?"},
- "Vormen, groot en klein": {"en":"Shapes, big and small","ar":"الأشكال، كبير وصغير","uk":"Фігури, великий і маленький","tr":"Şekiller, büyük ve küçük","ro":"Forme, mare și mic","bg":"Форми, голямо и малко"},
- "**Een cirkel** is rond. **Een driehoek** heeft drie hoeken.\n\n**groot** ↔ **klein** · **hoog** · **dik** ↔ **dun**": {"en":"**Een cirkel** (= a circle) is round. **Een driehoek** (= a triangle) has three corners.\n\n**groot** (= big) ↔ **klein** (= small) · **hoog** (= high/tall) · **dik** (= thick) ↔ **dun** (= thin)","ar":"**Een cirkel** (= دائرة) مستديرة. **Een driehoek** (= مثلث) له ثلاث زوايا.\n\n**groot** (= كبير) ↔ **klein** (= صغير) · **hoog** (= عالٍ) · **dik** (= سميك) ↔ **dun** (= رفيع)","uk":"**Een cirkel** (= коло) кругле. **Een driehoek** (= трикутник) має три кути.\n\n**groot** (= великий) ↔ **klein** (= маленький) · **hoog** (= високий) · **dik** (= товстий) ↔ **dun** (= тонкий)","tr":"**Een cirkel** (= daire) yuvarlaktır. **Een driehoek**'in (= üçgen) üç köşesi var.\n\n**groot** (= büyük) ↔ **klein** (= küçük) · **hoog** (= yüksek) · **dik** (= kalın) ↔ **dun** (= ince)","ro":"**Een cirkel** (= un cerc) este rotund. **Een driehoek** (= un triunghi) are trei colțuri.\n\n**groot** (= mare) ↔ **klein** (= mic) · **hoog** (= înalt) · **dik** (= gros) ↔ **dun** (= subțire)","bg":"**Een cirkel** (= кръг) е кръгъл. **Een driehoek** (= триъгълник) има три ъгъла.\n\n**groot** (= голям) ↔ **klein** (= малък) · **hoog** (= висок) · **dik** (= дебел) ↔ **dun** (= тънък)"},
- "Welke vorm heeft een bord?": {"en":"What shape is a plate?","ar":"ما شكل الصحن؟","uk":"Якої форми тарілка?","tr":"Tabak hangi şekilde?","ro":"Ce formă are o farfurie?","bg":"Каква форма има чинията?"},
- "Een cirkel.": {"en":"A circle.","ar":"دائرة.","uk":"Коло.","tr":"Bir daire.","ro":"Un cerc.","bg":"Кръг."},
- "Een driehoek.": {"en":"A triangle.","ar":"مثلث.","uk":"Трикутник.","tr":"Bir üçgen.","ro":"Un triunghi.","bg":"Триъгълник."},
- "Een lijn.": {"en":"A line.","ar":"خط.","uk":"Лінія.","tr":"Bir çizgi.","ro":"O linie.","bg":"Линия."},
- "Een vierkant.": {"en":"A square.","ar":"مربع.","uk":"Квадрат.","tr":"Bir kare.","ro":"Un pătrat.","bg":"Квадрат."},
- "Een vorm met drie hoeken. Hoe heet die?": {"en":"A shape with three corners. What is it called?","ar":"شكل له ثلاث زوايا. ما اسمه؟","uk":"Фігура з трьома кутами. Як вона називається?","tr":"Üç köşeli bir şekil. Adı ne?","ro":"O formă cu trei colțuri. Cum se numește?","bg":"Форма с три ъгъла. Как се казва?"},
- "Een olifant is groot. Een muis is…": {"en":"An elephant is big. A mouse is…","ar":"الفيل كبير. الفأر…","uk":"Слон великий. Миша…","tr":"Fil büyüktür. Fare…","ro":"Un elefant e mare. Un șoarece e…","bg":"Слонът е голям. Мишката е…"},
- "Klein.": {"en":"Small.","ar":"صغير.","uk":"Маленька.","tr":"Küçük.","ro":"Mic.","bg":"Малка."},
- "Groot.": {"en":"Big.","ar":"كبير.","uk":"Великий.","tr":"Büyük.","ro":"Mare.","bg":"Голям."},
- "Hoog.": {"en":"High.","ar":"عالٍ.","uk":"Високий.","tr":"Yüksek.","ro":"Înalt.","bg":"Висок."},
- "Dik.": {"en":"Thick.","ar":"سميك.","uk":"Товстий.","tr":"Kalın.","ro":"Gros.","bg":"Дебел."},
- "Een toren gaat tot in de lucht. De toren is…": {"en":"A tower goes up into the sky. The tower is…","ar":"البرج يصل إلى السماء. البرج…","uk":"Вежа сягає неба. Вежа…","tr":"Bir kule gökyüzüne kadar çıkıyor. Kule…","ro":"Un turn ajunge până la cer. Turnul este…","bg":"Кулата стига до небето. Кулата е…"},
- "Dun.": {"en":"Thin.","ar":"رفيع.","uk":"Тонкий.","tr":"İnce.","ro":"Subțire.","bg":"Тънък."},
- "Kort.": {"en":"Short.","ar":"قصير.","uk":"Короткий.","tr":"Kısa.","ro":"Scurt.","bg":"Къс."},
- "Welk boek heeft veel bladzijden?": {"en":"Which book has a lot of pages?","ar":"أي كتاب فيه صفحات كثيرة؟","uk":"Яка книжка має багато сторінок?","tr":"Hangi kitabın çok sayfası var?","ro":"Care carte are multe pagini?","bg":"Коя книга има много страници?"},
- "Het dikke boek.": {"en":"The thick book.","ar":"الكتاب السميك.","uk":"Товста книжка.","tr":"Kalın kitap.","ro":"Cartea groasă.","bg":"Дебелата книга."},
- "Het dunne boek.": {"en":"The thin book.","ar":"الكتاب الرفيع.","uk":"Тонка книжка.","tr":"İnce kitap.","ro":"Cartea subțire.","bg":"Тънката книга."},
- "Het kleine boek.": {"en":"The small book.","ar":"الكتاب الصغير.","uk":"Маленька книжка.","tr":"Küçük kitap.","ro":"Cartea mică.","bg":"Малката книга."},
- "Het lege boek.": {"en":"The empty book.","ar":"الكتاب الفارغ.","uk":"Порожня книжка.","tr":"Boş kitap.","ro":"Cartea goală.","bg":"Празната книга."},
- "Waar? Hoeveel?": {"en":"Where? How many?","ar":"أين؟ كم؟","uk":"Де? Скільки?","tr":"Nerede? Kaç tane?","ro":"Unde? Câte?","bg":"Къде? Колко?"},
- "**dichtbij** ↔ **ver weg**\n**erop** (op iets) · **eruit** (uit iets)\n**half** = de helft\n\nTellen: … vier, vijf, **zes**, **zeven** …": {"en":"**dichtbij** (= close by) ↔ **ver weg** (= far away)\n**erop** (= on it) · **eruit** (= out of it)\n**half** (= half) = de helft\n\nCounting: … vier, vijf, **zes** (= six), **zeven** (= seven) …","ar":"**dichtbij** (= قريب) ↔ **ver weg** (= بعيد)\n**erop** (= عليه) · **eruit** (= منه، إلى الخارج)\n**half** (= نصف) = de helft\n\nالعدّ: … vier، vijf، **zes** (= ستة)، **zeven** (= سبعة) …","uk":"**dichtbij** (= близько) ↔ **ver weg** (= далеко)\n**erop** (= на це) · **eruit** (= з цього)\n**half** (= половина) = de helft\n\nЛічба: … vier, vijf, **zes** (= шість), **zeven** (= сім) …","tr":"**dichtbij** (= yakın) ↔ **ver weg** (= uzak)\n**erop** (= üstüne) · **eruit** (= içinden dışarı)\n**half** (= yarım) = de helft\n\nSayma: … vier, vijf, **zes** (= altı), **zeven** (= yedi) …","ro":"**dichtbij** (= aproape) ↔ **ver weg** (= departe)\n**erop** (= pe el) · **eruit** (= afară din el)\n**half** (= jumătate) = de helft\n\nNumărat: … vier, vijf, **zes** (= șase), **zeven** (= șapte) …","bg":"**dichtbij** (= близо) ↔ **ver weg** (= далеч)\n**erop** (= върху него) · **eruit** (= навън от него)\n**half** (= половин) = de helft\n\nБроене: … vier, vijf, **zes** (= шест), **zeven** (= седем) …"},
- "De school is naast je huis. Is de school ver weg of dichtbij?": {"en":"The school is next to your house. Is the school far away or close by?","ar":"المدرسة بجانب بيتك. هل المدرسة بعيدة أم قريبة؟","uk":"Школа поруч із твоїм домом. Школа далеко чи близько?","tr":"Okul evinin yanında. Okul uzak mı yakın mı?","ro":"Școala e lângă casa ta. Școala e departe sau aproape?","bg":"Училището е до къщата ти. Далеч ли е училището или близо?"},
- "Dichtbij.": {"en":"Close by.","ar":"قريبة.","uk":"Близько.","tr":"Yakın.","ro":"Aproape.","bg":"Близо."},
- "Ver weg.": {"en":"Far away.","ar":"بعيدة.","uk":"Далеко.","tr":"Uzak.","ro":"Departe.","bg":"Далеч."},
- "Leeg.": {"en":"Empty.","ar":"فارغ.","uk":"Порожній.","tr":"Boş.","ro":"Gol.","bg":"Празен."},
- "Leg het boek op de tafel. Waar is het boek nu?": {"en":"Put the book on the table. Where is the book now?","ar":"ضع الكتاب على الطاولة. أين الكتاب الآن؟","uk":"Поклади книжку на стіл. Де тепер книжка?","tr":"Kitabı masaya koy. Kitap şimdi nerede?","ro":"Pune cartea pe masă. Unde e cartea acum?","bg":"Сложи книгата на масата. Къде е книгата сега?"},
- "Het boek ligt erop.": {"en":"The book is lying on it.","ar":"الكتاب موضوع عليها.","uk":"Книжка лежить на ньому.","tr":"Kitap üstünde duruyor.","ro":"Cartea stă pe ea.","bg":"Книгата лежи върху нея."},
- "Het boek ligt eruit.": {"en":"The book is lying out of it.","ar":"الكتاب موضوع خارجها.","uk":"Книжка лежить поза ним.","tr":"Kitap dışında duruyor.","ro":"Cartea stă afară din ea.","bg":"Книгата лежи навън от нея."},
- "Het boek ligt ver weg.": {"en":"The book is lying far away.","ar":"الكتاب موضوع بعيدًا.","uk":"Книжка лежить далеко.","tr":"Kitap uzakta duruyor.","ro":"Cartea stă departe.","bg":"Книгата лежи далеч."},
- "Het boek is weg.": {"en":"The book is gone.","ar":"الكتاب اختفى.","uk":"Книжки немає.","tr":"Kitap kayboldu.","ro":"Cartea a dispărut.","bg":"Книгата я няма."},
- "Pak de pen uit je etui. Wat doe je met de pen?": {"en":"Take the pen out of your pencil case. What do you do with the pen?","ar":"أخرج القلم من المقلمة. ماذا تفعل بالقلم؟","uk":"Візьми ручку з пенала. Що ти робиш із ручкою?","tr":"Kalemi kalem kutundan al. Kalemle ne yaparsın?","ro":"Ia pixul din penar. Ce faci cu pixul?","bg":"Вземи химикалката от несесера. Какво правиш с химикалката?"},
- "Ik haal de pen eruit.": {"en":"I take the pen out of it.","ar":"أُخرج القلم منها.","uk":"Я виймаю ручку з нього.","tr":"Kalemi içinden çıkarırım.","ro":"Scot pixul din el.","bg":"Изваждам химикалката от него."},
- "Ik leg de pen erop.": {"en":"I put the pen on it.","ar":"أضع القلم عليها.","uk":"Я кладу ручку на нього.","tr":"Kalemi üstüne koyarım.","ro":"Pun pixul pe el.","bg":"Слагам химикалката върху него."},
- "Ik gooi de pen weg.": {"en":"I throw the pen away.","ar":"أرمي القلم.","uk":"Я викидаю ручку.","tr":"Kalemi atarım.","ro":"Arunc pixul.","bg":"Изхвърлям химикалката."},
- "Ik eet de pen.": {"en":"I eat the pen.","ar":"آكل القلم.","uk":"Я їм ручку.","tr":"Kalemi yerim.","ro":"Mănânc pixul.","bg":"Ям химикалката."},
- "Je eet de helft van je appel. Wat heb je nog?": {"en":"You eat half of your apple. What do you have left?","ar":"تأكل نصف تفاحتك. ماذا بقي معك؟","uk":"Ти з'їв половину яблука. Що в тебе залишилось?","tr":"Elmanın yarısını yiyorsun. Elinde ne kaldı?","ro":"Mănânci jumătate din măr. Ce ți-a rămas?","bg":"Изяждаш половината ябълка. Какво ти остава?"},
- "Een halve appel.": {"en":"Half an apple.","ar":"نصف تفاحة.","uk":"Половина яблука.","tr":"Yarım elma.","ro":"O jumătate de măr.","bg":"Половин ябълка."},
- "Een hele appel.": {"en":"A whole apple.","ar":"تفاحة كاملة.","uk":"Ціле яблуко.","tr":"Bütün bir elma.","ro":"Un măr întreg.","bg":"Цяла ябълка."},
- "Twee appels.": {"en":"Two apples.","ar":"تفاحتان.","uk":"Два яблука.","tr":"İki elma.","ro":"Două mere.","bg":"Две ябълки."},
- "Geen appel.": {"en":"No apple.","ar":"لا تفاحة.","uk":"Жодного яблука.","tr":"Hiç elma yok.","ro":"Niciun măr.","bg":"Никаква ябълка."},
- "Hoeveel dagen heeft een week?": {"en":"How many days does a week have?","ar":"كم يومًا في الأسبوع؟","uk":"Скільки днів у тижні?","tr":"Bir haftada kaç gün var?","ro":"Câte zile are o săptămână?","bg":"Колко дни има една седмица?"},
- "Zeven.": {"en":"Seven.","ar":"سبعة.","uk":"Сім.","tr":"Yedi.","ro":"Șapte.","bg":"Седем."},
- "Zes.": {"en":"Six.","ar":"ستة.","uk":"Шість.","tr":"Altı.","ro":"Șase.","bg":"Шест."},
- "Vijf.": {"en":"Five.","ar":"خمسة.","uk":"П'ять.","tr":"Beş.","ro":"Cinci.","bg":"Пет."},
- "Tien.": {"en":"Ten.","ar":"عشرة.","uk":"Десять.","tr":"On.","ro":"Zece.","bg":"Десет."},
- "Tel: vier, vijf, … Welk getal komt nu?": {"en":"Count: four, five, … Which number comes next?","ar":"عُدّ: أربعة، خمسة، … ما العدد التالي؟","uk":"Лічи: чотири, п'ять, … Яке число далі?","tr":"Say: dört, beş, … Sırada hangi sayı var?","ro":"Numără: patru, cinci, … Ce număr urmează?","bg":"Брой: четири, пет, … Кое число идва сега?"},
- "Drie.": {"en":"Three.","ar":"ثلاثة.","uk":"Три.","tr":"Üç.","ro":"Trei.","bg":"Три."},
- "Tijd en beurt": {"en":"Time and turns","ar":"الوقت والدور","uk":"Час і черга","tr":"Zaman ve sıra","ro":"Timp și rând","bg":"Време и ред"},
- "**gisteren** → **vandaag** → **morgen**\nNa 12 uur is het **middag**.\n\n**Aan de beurt** = nu mag jij.\nIets zeggen? **Steek je vinger op.**": {"en":"**gisteren** (= yesterday) → **vandaag** (= today) → **morgen** (= tomorrow)\nAfter 12 o'clock it is **middag** (= afternoon).\n\n**Aan de beurt** (= your turn) = now you may.\nWant to say something? **Steek je vinger op.** (= Put your finger up.)","ar":"**gisteren** (= أمس) → **vandaag** (= اليوم) → **morgen** (= غدًا)\nبعد الساعة 12 يكون **middag** (= بعد الظهر).\n\n**Aan de beurt** (= دورك) = الآن يمكنك.\nتريد أن تقول شيئًا؟ **Steek je vinger op.** (= ارفع إصبعك.)","uk":"**gisteren** (= учора) → **vandaag** (= сьогодні) → **morgen** (= завтра)\nПісля 12 години — **middag** (= день, після обіду).\n\n**Aan de beurt** (= твоя черга) = тепер можна тобі.\nХочеш щось сказати? **Steek je vinger op.** (= Підніми руку.)","tr":"**gisteren** (= dün) → **vandaag** (= bugün) → **morgen** (= yarın)\nSaat 12'den sonra **middag** (= öğleden sonra) olur.\n\n**Aan de beurt** (= sıra sende) = şimdi sen.\nBir şey mi söylemek istiyorsun? **Steek je vinger op.** (= Parmağını kaldır.)","ro":"**gisteren** (= ieri) → **vandaag** (= azi) → **morgen** (= mâine)\nDupă ora 12 este **middag** (= după-amiază).\n\n**Aan de beurt** (= e rândul tău) = acum poți tu.\nVrei să spui ceva? **Steek je vinger op.** (= Ridică degetul.)","bg":"**gisteren** (= вчера) → **vandaag** (= днес) → **morgen** (= утре)\nСлед 12 часа е **middag** (= следобед).\n\n**Aan de beurt** (= твой ред е) = сега можеш ти.\nИскаш да кажеш нещо? **Steek je vinger op.** (= Вдигни пръст.)"},
- "Niet gisteren, niet morgen, maar nu. Hoe heet die dag?": {"en":"Not yesterday, not tomorrow, but now. What is that day called?","ar":"ليس أمس، ولا غدًا، بل الآن. ما اسم هذا اليوم؟","uk":"Не вчора, не завтра, а зараз. Як називається цей день?","tr":"Dün değil, yarın değil, şimdi. O günün adı ne?","ro":"Nu ieri, nu mâine, ci acum. Cum se numește ziua aceea?","bg":"Не вчера, не утре, а сега. Как се казва този ден?"},
- "Vandaag.": {"en":"Today.","ar":"اليوم.","uk":"Сьогодні.","tr":"Bugün.","ro":"Azi.","bg":"Днес."},
- "Gisteren.": {"en":"Yesterday.","ar":"أمس.","uk":"Учора.","tr":"Dün.","ro":"Ieri.","bg":"Вчера."},
- "Morgen.": {"en":"Tomorrow.","ar":"غدًا.","uk":"Завтра.","tr":"Yarın.","ro":"Mâine.","bg":"Утре."},
- "Week.": {"en":"Week.","ar":"أسبوع.","uk":"Тиждень.","tr":"Hafta.","ro":"Săptămână.","bg":"Седмица."},
- "De dag vóór vandaag. Hoe heet die?": {"en":"The day before today. What is it called?","ar":"اليوم الذي قبل اليوم. ما اسمه؟","uk":"День перед сьогодні. Як він називається?","tr":"Bugünden önceki gün. Adı ne?","ro":"Ziua dinainte de azi. Cum se numește?","bg":"Денят преди днес. Как се казва?"},
- "Middag.": {"en":"Afternoon.","ar":"بعد الظهر.","uk":"День (після обіду).","tr":"Öğleden sonra.","ro":"După-amiază.","bg":"Следобед."},
- "Het is 12 uur. Je hebt gegeten. Welk deel van de dag begint nu?": {"en":"It is 12 o'clock. You have eaten. Which part of the day starts now?","ar":"الساعة 12. أكلت. أي جزء من اليوم يبدأ الآن؟","uk":"Зараз 12 година. Ти поїв. Яка частина дня починається?","tr":"Saat 12. Yemek yedin. Günün hangi bölümü başlıyor?","ro":"E ora 12. Ai mâncat. Ce parte a zilei începe acum?","bg":"12 часът е. Ти се нахрани. Коя част от деня започва сега?"},
- "De middag.": {"en":"The afternoon.","ar":"بعد الظهر.","uk":"Друга половина дня.","tr":"Öğleden sonra.","ro":"După-amiaza.","bg":"Следобедът."},
- "De nacht.": {"en":"The night.","ar":"الليل.","uk":"Ніч.","tr":"Gece.","ro":"Noaptea.","bg":"Нощта."},
- "De ochtend.": {"en":"The morning.","ar":"الصباح.","uk":"Ранок.","tr":"Sabah.","ro":"Dimineața.","bg":"Сутринта."},
- "De week.": {"en":"The week.","ar":"الأسبوع.","uk":"Тиждень.","tr":"Hafta.","ro":"Săptămâna.","bg":"Седмицата."},
- "De juf zegt: jij bent aan de beurt. Wat betekent dat?": {"en":"The teacher says: it is your turn. What does that mean?","ar":"المعلمة تقول: إنه دورك. ماذا يعني ذلك؟","uk":"Учителька каже: твоя черга. Що це означає?","tr":"Öğretmen diyor ki: sıra sende. Bu ne demek?","ro":"Doamna învățătoare spune: e rândul tău. Ce înseamnă asta?","bg":"Учителката казва: твой ред е. Какво означава това?"},
- "Nu mag jij.": {"en":"Now you may.","ar":"الآن يمكنك أنت.","uk":"Тепер можна тобі.","tr":"Şimdi sen yapabilirsin.","ro":"Acum poți tu.","bg":"Сега можеш ти."},
- "Je moet stil zijn.": {"en":"You have to be quiet.","ar":"يجب أن تكون هادئًا.","uk":"Ти маєш бути тихо.","tr":"Sessiz olmalısın.","ro":"Trebuie să stai liniștit.","bg":"Трябва да мълчиш."},
- "Je mag naar huis.": {"en":"You may go home.","ar":"يمكنك الذهاب إلى البيت.","uk":"Можеш іти додому.","tr":"Eve gidebilirsin.","ro":"Poți merge acasă.","bg":"Можеш да си отидеш вкъщи."},
- "Je bent klaar.": {"en":"You are finished.","ar":"أنت انتهيت.","uk":"Ти закінчив.","tr":"Bitirdin.","ro":"Ai terminat.","bg":"Готов си."},
- "Je wilt iets zeggen in de klas. Wat doe je eerst?": {"en":"You want to say something in class. What do you do first?","ar":"تريد أن تقول شيئًا في الصف. ماذا تفعل أولًا؟","uk":"Ти хочеш щось сказати в класі. Що ти робиш спочатку?","tr":"Sınıfta bir şey söylemek istiyorsun. Önce ne yaparsın?","ro":"Vrei să spui ceva în clasă. Ce faci mai întâi?","bg":"Искаш да кажеш нещо в класа. Какво правиш първо?"},
- "Ik steek mijn vinger op.": {"en":"I put my finger up.","ar":"أرفع إصبعي.","uk":"Я піднімаю руку.","tr":"Parmağımı kaldırırım.","ro":"Ridic degetul.","bg":"Вдигам пръст."},
- "Ik loop naar de juf.": {"en":"I walk to the teacher.","ar":"أمشي إلى المعلمة.","uk":"Я йду до вчительки.","tr":"Öğretmenin yanına yürürüm.","ro":"Merg la doamna învățătoare.","bg":"Отивам при учителката."},
- "Ik ga staan.": {"en":"I stand up.","ar":"أقف.","uk":"Я встаю.","tr":"Ayağa kalkarım.","ro":"Mă ridic în picioare.","bg":"Ставам прав."},
- "**Ik denk even na.** **Ik wil iets vertellen.**\n**Waarom?** → **Omdat …**\n\n**makkelijk** ↔ **moeilijk**\n**Ik ben gelukkig.** **Ik durf het!**": {"en":"**Ik denk even na.** (= I think for a moment.) **Ik wil iets vertellen.** (= I want to tell something.)\n**Waarom?** (= Why?) → **Omdat …** (= Because …)\n\n**makkelijk** (= easy) ↔ **moeilijk** (= difficult)\n**Ik ben gelukkig.** (= I am happy.) **Ik durf het!** (= I dare to do it!)","ar":"**Ik denk even na.** (= أفكر قليلًا.) **Ik wil iets vertellen.** (= أريد أن أحكي شيئًا.)\n**Waarom?** (= لماذا؟) → **Omdat …** (= لأن …)\n\n**makkelijk** (= سهل) ↔ **moeilijk** (= صعب)\n**Ik ben gelukkig.** (= أنا سعيد جدًا.) **Ik durf het!** (= أتجرأ على ذلك!)","uk":"**Ik denk even na.** (= Я трохи подумаю.) **Ik wil iets vertellen.** (= Я хочу щось розповісти.)\n**Waarom?** (= Чому?) → **Omdat …** (= Тому що …)\n\n**makkelijk** (= легко) ↔ **moeilijk** (= важко)\n**Ik ben gelukkig.** (= Я щасливий.) **Ik durf het!** (= Я наважуюсь!)","tr":"**Ik denk even na.** (= Biraz düşünüyorum.) **Ik wil iets vertellen.** (= Bir şey anlatmak istiyorum.)\n**Waarom?** (= Neden?) → **Omdat …** (= Çünkü …)\n\n**makkelijk** (= kolay) ↔ **moeilijk** (= zor)\n**Ik ben gelukkig.** (= Mutluyum.) **Ik durf het!** (= Cesaret ediyorum!)","ro":"**Ik denk even na.** (= Mă gândesc puțin.) **Ik wil iets vertellen.** (= Vreau să povestesc ceva.)\n**Waarom?** (= De ce?) → **Omdat …** (= Pentru că …)\n\n**makkelijk** (= ușor) ↔ **moeilijk** (= greu)\n**Ik ben gelukkig.** (= Sunt fericit.) **Ik durf het!** (= Îndrăznesc!)","bg":"**Ik denk even na.** (= Ще помисля малко.) **Ik wil iets vertellen.** (= Искам да разкажа нещо.)\n**Waarom?** (= Защо?) → **Omdat …** (= Защото …)\n\n**makkelijk** (= лесно) ↔ **moeilijk** (= трудно)\n**Ik ben gelukkig.** (= Щастлив съм.) **Ik durf het!** (= Смея!)"},
- "Je weet het antwoord niet meteen. Wat doe je?": {"en":"You don't know the answer right away. What do you do?","ar":"لا تعرف الجواب فورًا. ماذا تفعل؟","uk":"Ти не знаєш відповіді одразу. Що ти робиш?","tr":"Cevabı hemen bilmiyorsun. Ne yaparsın?","ro":"Nu știi imediat răspunsul. Ce faci?","bg":"Не знаеш отговора веднага. Какво правиш?"},
- "Ik denk even na.": {"en":"I think for a moment.","ar":"أفكر قليلًا.","uk":"Я трохи подумаю.","tr":"Biraz düşünürüm.","ro":"Mă gândesc puțin.","bg":"Помислям малко."},
- "Ik stop.": {"en":"I stop.","ar":"أتوقف.","uk":"Я зупиняюся.","tr":"Dururum.","ro":"Mă opresc.","bg":"Спирам."},
- "Ik roep: weet ik niet!": {"en":"I shout: don't know!","ar":"أصرخ: لا أعرف!","uk":"Я кричу: не знаю!","tr":"Bağırırım: bilmiyorum!","ro":"Strig: nu știu!","bg":"Викам: не знам!"},
- "Je wilt de juf iets over je weekend vertellen. Wat zeg je?": {"en":"You want to tell the teacher something about your weekend. What do you say?","ar":"تريد أن تحكي للمعلمة شيئًا عن عطلة نهاية الأسبوع. ماذا تقول؟","uk":"Ти хочеш розповісти вчительці щось про свої вихідні. Що ти скажеш?","tr":"Öğretmene hafta sonun hakkında bir şey anlatmak istiyorsun. Ne dersin?","ro":"Vrei să-i povestești doamnei învățătoare ceva despre weekendul tău. Ce spui?","bg":"Искаш да разкажеш на учителката нещо за уикенда си. Какво казваш?"},
- "Ik wil iets vertellen.": {"en":"I want to tell something.","ar":"أريد أن أحكي شيئًا.","uk":"Я хочу щось розповісти.","tr":"Bir şey anlatmak istiyorum.","ro":"Vreau să povestesc ceva.","bg":"Искам да разкажа нещо."},
- "Waarom heb je een jas aan?": {"en":"Why are you wearing a coat?","ar":"لماذا تلبس معطفًا؟","uk":"Чому ти в куртці?","tr":"Neden mont giyiyorsun?","ro":"De ce porți geacă?","bg":"Защо си с яке?"},
- "Omdat het koud is.": {"en":"Because it is cold.","ar":"لأن الجو بارد.","uk":"Тому що холодно.","tr":"Çünkü hava soğuk.","ro":"Pentru că e frig.","bg":"Защото е студено."},
- "Omdat het warm is.": {"en":"Because it is warm.","ar":"لأن الجو دافئ.","uk":"Тому що тепло.","tr":"Çünkü hava sıcak.","ro":"Pentru că e cald.","bg":"Защото е топло."},
- "Omdat ik blij ben.": {"en":"Because I am happy.","ar":"لأنني سعيد.","uk":"Тому що я радий.","tr":"Çünkü mutluyum.","ro":"Pentru că sunt fericit.","bg":"Защото съм радостен."},
- "Omdat het pauze is.": {"en":"Because it is break time.","ar":"لأنها الاستراحة.","uk":"Тому що перерва.","tr":"Çünkü teneffüs.","ro":"Pentru că e pauză.","bg":"Защото е междучасие."},
- "Een som is niet moeilijk. De som is…": {"en":"A sum is not difficult. The sum is…","ar":"المسألة ليست صعبة. المسألة…","uk":"Приклад не важкий. Приклад…","tr":"Bir işlem zor değil. İşlem…","ro":"Un exercițiu nu e greu. Exercițiul este…","bg":"Задачата не е трудна. Задачата е…"},
- "Makkelijk.": {"en":"Easy.","ar":"سهلة.","uk":"Легкий.","tr":"Kolay.","ro":"Ușor.","bg":"Лесна."},
- "Moeilijk.": {"en":"Difficult.","ar":"صعبة.","uk":"Важкий.","tr":"Zor.","ro":"Greu.","bg":"Трудна."},
- "Eng.": {"en":"Scary.","ar":"مخيفة.","uk":"Страшний.","tr":"Korkunç.","ro":"Înfricoșător.","bg":"Страшна."},
- "Je hebt een nieuwe vriend. Je bent heel blij. Hoe voel je je?": {"en":"You have a new friend. You are very happy. How do you feel?","ar":"عندك صديق جديد. أنت سعيد جدًا. كيف تشعر؟","uk":"У тебе новий друг. Ти дуже радий. Як ти почуваєшся?","tr":"Yeni bir arkadaşın var. Çok mutlusun. Nasıl hissediyorsun?","ro":"Ai un prieten nou. Ești foarte bucuros. Cum te simți?","bg":"Имаш нов приятел. Много се радваш. Как се чувстваш?"},
- "Ik ben gelukkig.": {"en":"I am happy (very happy).","ar":"أنا سعيد جدًا.","uk":"Я щасливий.","tr":"Çok mutluyum.","ro":"Sunt fericit.","bg":"Щастлив съм."},
- "Je bent een beetje bang, maar je doet het toch. Wat zeg je?": {"en":"You are a little scared, but you do it anyway. What do you say?","ar":"أنت خائف قليلًا، لكنك تفعلها رغم ذلك. ماذا تقول؟","uk":"Тобі трохи страшно, але ти все одно це робиш. Що ти скажеш?","tr":"Biraz korkuyorsun ama yine de yapıyorsun. Ne dersin?","ro":"Ți-e puțin frică, dar o faci totuși. Ce spui?","bg":"Малко те е страх, но все пак го правиш. Какво казваш?"},
- "Ik durf het!": {"en":"I dare to do it!","ar":"أتجرأ على ذلك!","uk":"Я наважуюсь!","tr":"Cesaret ediyorum!","ro":"Îndrăznesc!","bg":"Смея!"},
- "Ik wil naar huis.": {"en":"I want to go home.","ar":"أريد أن أذهب إلى البيت.","uk":"Я хочу додому.","tr":"Eve gitmek istiyorum.","ro":"Vreau acasă.","bg":"Искам да си отида вкъщи."},
- "Denk aan een reep chocola.": {"en":"Think of a chocolate bar.","ar":"فكّر في لوح شوكولاتة.","uk":"Згадай плитку шоколаду.","tr":"Bir çikolatayı düşün.","ro":"Gândește-te la o tabletă de ciocolată.","bg":"Помисли за блокче шоколад."},
- "Een olifant is niet vrolijk gekleurd.": {"en":"An elephant is not brightly coloured.","ar":"الفيل ليس ملوّنًا بألوان زاهية.","uk":"Слон не яскравого кольору.","tr":"Fil rengârenk değildir.","ro":"Un elefant nu are culori vesele.","bg":"Слонът не е с ярък цвят."},
- "Meng rood met blauw.": {"en":"Mix red with blue.","ar":"اخلط الأحمر مع الأزرق.","uk":"Змішай червоний із синім.","tr":"Kırmızıyı maviyle karıştır.","ro":"Amestecă roșu cu albastru.","bg":"Смеси червено със синьо."},
- "Een varken is lichtrood.": {"en":"A pig is light red.","ar":"الخنزير أحمر فاتح.","uk":"Свиня світло-червона.","tr":"Domuz açık kırmızıdır.","ro":"Un porc este roșu deschis.","bg":"Прасето е светлочервено."},
- "In de nacht is het donker.": {"en":"At night it is dark.","ar":"في الليل يكون الجو مظلمًا.","uk":"Уночі темно.","tr":"Gece karanlıktır.","ro":"Noaptea e întuneric.","bg":"През нощта е тъмно."},
- "Een bord is rond.": {"en":"A plate is round.","ar":"الصحن مستدير.","uk":"Тарілка кругла.","tr":"Tabak yuvarlaktır.","ro":"O farfurie este rotundă.","bg":"Чинията е кръгла."},
- "Drie hoeken = drie-hoek.": {"en":"Three corners = drie-hoek (triangle).","ar":"ثلاث زوايا = drie-hoek (مثلث).","uk":"Три кути = drie-hoek (трикутник).","tr":"Üç köşe = drie-hoek (üçgen).","ro":"Trei colțuri = drie-hoek (triunghi).","bg":"Три ъгъла = drie-hoek (триъгълник)."},
- "Een muis is het tegenovergestelde van groot.": {"en":"A mouse is the opposite of big.","ar":"الفأر عكس الكبير.","uk":"Миша — протилежність великого.","tr":"Fare büyüğün tersidir.","ro":"Un șoarece e opusul lui mare.","bg":"Мишката е обратното на голямо."},
- "Hij gaat ver naar boven.": {"en":"It goes far up.","ar":"يرتفع كثيرًا إلى الأعلى.","uk":"Вона йде високо вгору.","tr":"Çok yukarıya çıkar.","ro":"Merge mult în sus.","bg":"Тя стига много нагоре."},
- "Veel bladzijden = dik.": {"en":"Many pages = dik (thick).","ar":"صفحات كثيرة = dik (سميك).","uk":"Багато сторінок = dik (товста).","tr":"Çok sayfa = dik (kalın).","ro":"Multe pagini = dik (gros).","bg":"Много страници = dik (дебела)."},
- "Naast je huis = niet ver.": {"en":"Next to your house = not far.","ar":"بجانب بيتك = ليست بعيدة.","uk":"Поруч із домом = недалеко.","tr":"Evinin yanı = uzak değil.","ro":"Lângă casa ta = nu departe.","bg":"До къщата ти = не е далеч."},
- "Op de tafel = erop.": {"en":"On the table = erop (on it).","ar":"على الطاولة = erop (عليها).","uk":"На столі = erop (на ньому).","tr":"Masanın üstü = erop (üstünde).","ro":"Pe masă = erop (pe ea).","bg":"На масата = erop (върху нея)."},
- "Uit het etui = eruit.": {"en":"Out of the pencil case = eruit (out of it).","ar":"من المقلمة = eruit (منها).","uk":"З пенала = eruit (з нього).","tr":"Kalem kutusundan = eruit (içinden).","ro":"Din penar = eruit (din el).","bg":"От несесера = eruit (от него)."},
- "De helft = half.": {"en":"De helft (the half) = half.","ar":"de helft (النصف) = half.","uk":"De helft (половина) = half.","tr":"De helft (yarısı) = half.","ro":"De helft (jumătatea) = half.","bg":"De helft (половината) = half."},
- "Maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.": {"en":"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.","ar":"الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد.","uk":"Понеділок, вівторок, середа, четвер, п'ятниця, субота, неділя.","tr":"Pazartesi, salı, çarşamba, perşembe, cuma, cumartesi, pazar.","ro":"Luni, marți, miercuri, joi, vineri, sâmbătă, duminică.","bg":"Понеделник, вторник, сряда, четвъртък, петък, събота, неделя."},
- "Na vijf komt één meer.": {"en":"After five comes one more.","ar":"بعد خمسة يأتي واحد أكثر.","uk":"Після п'яти — на одне більше.","tr":"Beşten sonra bir fazlası gelir.","ro":"După cinci vine cu unu mai mult.","bg":"След пет идва с едно повече."},
- "De dag van nu.": {"en":"The day of now.","ar":"يوم الآن.","uk":"День, який зараз.","tr":"Şimdiki gün.","ro":"Ziua de acum.","bg":"Денят сега."},
- "Die dag is al voorbij.": {"en":"That day is already over.","ar":"ذلك اليوم انتهى.","uk":"Той день уже минув.","tr":"O gün geçti bile.","ro":"Ziua aceea a trecut deja.","bg":"Този ден вече мина."},
- "Na 12 uur is het…": {"en":"After 12 o'clock it is…","ar":"بعد الساعة 12 يكون…","uk":"Після 12 години…","tr":"Saat 12'den sonra…","ro":"După ora 12 este…","bg":"След 12 часа е…"},
- "Aan de beurt = nu jij.": {"en":"Aan de beurt (your turn) = now you.","ar":"aan de beurt (دورك) = الآن أنت.","uk":"Aan de beurt (твоя черга) = тепер ти.","tr":"Aan de beurt (sıra sende) = şimdi sen.","ro":"Aan de beurt (e rândul tău) = acum tu.","bg":"Aan de beurt (твой ред) = сега ти."},
- "Zo laat je de juf zien dat je iets wilt zeggen.": {"en":"This way you show the teacher you want to say something.","ar":"هكذا تُظهر للمعلمة أنك تريد أن تقول شيئًا.","uk":"Так ти показуєш учительці, що хочеш щось сказати.","tr":"Böylece öğretmene bir şey söylemek istediğini gösterirsin.","ro":"Așa îi arăți doamnei că vrei să spui ceva.","bg":"Така показваш на учителката, че искаш да кажеш нещо."},
- "Neem even de tijd.": {"en":"Take your time for a moment.","ar":"خذ وقتك قليلًا.","uk":"Не поспішай.","tr":"Biraz zaman ayır.","ro":"Ia-ți puțin timp.","bg":"Не бързай."},
- "Vertellen = iets zeggen over wat je deed.": {"en":"Vertellen (to tell) = say something about what you did.","ar":"vertellen (يحكي) = تقول شيئًا عما فعلت.","uk":"Vertellen (розповідати) = казати щось про те, що ти робив.","tr":"Vertellen (anlatmak) = yaptığın şey hakkında bir şey söylemek.","ro":"Vertellen (a povesti) = să spui ceva despre ce ai făcut.","bg":"Vertellen (разказвам) = да кажеш нещо за това, което си правил."},
- "Een jas houdt je warm.": {"en":"A coat keeps you warm.","ar":"المعطف يبقيك دافئًا.","uk":"Куртка зігріває.","tr":"Mont seni sıcak tutar.","ro":"Geaca te ține de cald.","bg":"Якето те топли."},
- "Niet moeilijk = makkelijk.": {"en":"Not difficult = makkelijk (easy).","ar":"ليست صعبة = makkelijk (سهلة).","uk":"Не важко = makkelijk (легко).","tr":"Zor değil = makkelijk (kolay).","ro":"Nu e greu = makkelijk (ușor).","bg":"Не е трудно = makkelijk (лесно)."},
- "Heel blij = gelukkig.": {"en":"Very happy = gelukkig.","ar":"سعيد جدًا = gelukkig.","uk":"Дуже радий = gelukkig (щасливий).","tr":"Çok mutlu = gelukkig.","ro":"Foarte bucuros = gelukkig (fericit).","bg":"Много радостен = gelukkig (щастлив)."},
- "Durven = het toch doen.": {"en":"Durven (to dare) = do it anyway.","ar":"durven (يتجرأ) = تفعلها رغم ذلك.","uk":"Durven (наважуватися) = все одно це зробити.","tr":"Durven (cesaret etmek) = yine de yapmak.","ro":"Durven (a îndrăzni) = să o faci totuși.","bg":"Durven (осмелявам се) = все пак да го направиш."},
+ "Woorden 3 — kleuren, vormen, tijd en praten (nieuwkomers)": {"en":"Words 3 — colours, shapes, time and talking (newcomers)","ar":"كلمات 3 — الألوان والأشكال والوقت والكلام (للقادمين الجدد)","uk":"Слова 3 — кольори, фігури, час і розмова (новенькі)","tr":"Kelimeler 3 — renkler, şekiller, zaman ve konuşmak (yeni gelenler)","ro":"Cuvinte 3 — culori, forme, timp și vorbit (nou-veniți)","bg":"Думи 3 — цветове, форми, време и говорене (новодошли)", "fa": "کلمه‌ها 3 — رنگ‌ها، شکل‌ها، زمان و حرف زدن (تازه‌واردها)"},
+ "Kleuren, vormen, groot en klein, waar en wanneer, en woorden om te denken en te vertellen. Met steun in je eigen taal. ~15 min.": {"en":"Colours, shapes, big and small, where and when, and words for thinking and telling. With help in your own language. ~15 min.","ar":"الألوان، الأشكال، كبير وصغير، أين ومتى، وكلمات للتفكير والحكي. مع مساعدة بلغتك. ~15 دقيقة.","uk":"Кольори, фігури, великий і маленький, де і коли, і слова, щоб думати й розповідати. З підтримкою твоєю мовою. ~15 хв.","tr":"Renkler, şekiller, büyük ve küçük, nerede ve ne zaman, düşünmek ve anlatmak için kelimeler. Kendi dilinde destekle. ~15 dk.","ro":"Culori, forme, mare și mic, unde și când, și cuvinte ca să gândești și să povestești. Cu sprijin în limba ta. ~15 min.","bg":"Цветове, форми, голямо и малко, къде и кога, и думи, за да мислиш и разказваш. С помощ на твоя език. ~15 мин.", "fa": "رنگ‌ها، شکل‌ها، بزرگ و کوچک، کجا و کی، و کلمه‌هایی برای فکر کردن و تعریف کردن. با کمک به زبان خودت. ~15 دقیقه."},
+ "Welke kleur is het?": {"en":"What colour is it?","ar":"ما لونه؟","uk":"Якого це кольору?","tr":"Hangi renk?","ro":"Ce culoare are?","bg":"Какъв цвят е?", "fa": "چه رنگی است؟"},
+ "Welke vorm? Groot of klein?": {"en":"Which shape? Big or small?","ar":"أي شكل؟ كبير أم صغير؟","uk":"Яка фігура? Великий чи маленький?","tr":"Hangi şekil? Büyük mü küçük mü?","ro":"Ce formă? Mare sau mic?","bg":"Каква форма? Голямо или малко?", "fa": "چه شکلی؟ بزرگ یا کوچک؟"},
+ "Waar is het? Hoeveel?": {"en":"Where is it? How many?","ar":"أين هو؟ كم؟","uk":"Де це? Скільки?","tr":"Nerede? Kaç tane?","ro":"Unde este? Câte?","bg":"Къде е? Колко?", "fa": "کجاست؟ چند تا؟"},
+ "Wanneer? Wie is aan de beurt?": {"en":"When? Whose turn is it?","ar":"متى؟ دور من؟","uk":"Коли? Чия черга?","tr":"Ne zaman? Sıra kimde?","ro":"Când? Cine e la rând?","bg":"Кога? Кой е на ред?", "fa": "چه وقت؟ نوبت کیست؟"},
+ "Denken en vertellen": {"en":"Thinking and telling","ar":"التفكير والحكي","uk":"Думати й розповідати","tr":"Düşünmek ve anlatmak","ro":"A gândi și a povesti","bg":"Мислене и разказване", "fa": "فکر کردن و تعریف کردن"},
+ "Alles om je heen heeft een **kleur**.\n\n**bruin** · **grijs** · **paars** · **roze** · **zwart**\n\nVraag: **Welke kleur is het?**": {"en":"Everything around you has a **kleur** (= colour).\n\n**bruin** (= brown) · **grijs** (= grey) · **paars** (= purple) · **roze** (= pink) · **zwart** (= black)\n\nAsk: **Welke kleur is het?** (= What colour is it?)","ar":"كل شيء حولك له **kleur** (= لون).\n\n**bruin** (= بني) · **grijs** (= رمادي) · **paars** (= بنفسجي) · **roze** (= وردي) · **zwart** (= أسود)\n\nاسأل: **Welke kleur is het?** (= ما لونه؟)","uk":"Усе навколо тебе має **kleur** (= колір).\n\n**bruin** (= коричневий) · **grijs** (= сірий) · **paars** (= фіолетовий) · **roze** (= рожевий) · **zwart** (= чорний)\n\nЗапитай: **Welke kleur is het?** (= Якого це кольору?)","tr":"Etrafındaki her şeyin bir **kleur**'u (= rengi) var.\n\n**bruin** (= kahverengi) · **grijs** (= gri) · **paars** (= mor) · **roze** (= pembe) · **zwart** (= siyah)\n\nSor: **Welke kleur is het?** (= Hangi renk?)","ro":"Tot ce e în jurul tău are o **kleur** (= culoare).\n\n**bruin** (= maro) · **grijs** (= gri) · **paars** (= mov) · **roze** (= roz) · **zwart** (= negru)\n\nÎntreabă: **Welke kleur is het?** (= Ce culoare are?)","bg":"Всичко около теб има **kleur** (= цвят).\n\n**bruin** (= кафяв) · **grijs** (= сив) · **paars** (= лилав) · **roze** (= розов) · **zwart** (= черен)\n\nПопитай: **Welke kleur is het?** (= Какъв цвят е?)", "fa": "همه‌چیز در اطراف تو یک **kleur** (= رنگ) دارد.\n\n**bruin** (= قهوه‌ای) · **grijs** (= خاکستری) · **paars** (= بنفش) · **roze** (= صورتی) · **zwart** (= سیاه)\n\nبپرس: **Welke kleur is het?** (= چه رنگی است؟)"},
+ "Welke kleur heeft chocola?": {"en":"What colour is chocolate?","ar":"ما لون الشوكولاتة؟","uk":"Якого кольору шоколад?","tr":"Çikolata ne renk?","ro":"Ce culoare are ciocolata?","bg":"Какъв цвят е шоколадът?", "fa": "شکلات چه رنگی است؟"},
+ "Bruin.": {"en":"Brown.","ar":"بني.","uk":"Коричневий.","tr":"Kahverengi.","ro":"Maro.","bg":"Кафяв.", "fa": "قهوه‌ای."},
+ "Groen.": {"en":"Green.","ar":"أخضر.","uk":"Зелений.","tr":"Yeşil.","ro":"Verde.","bg":"Зелен.", "fa": "سبز."},
+ "Roze.": {"en":"Pink.","ar":"وردي.","uk":"Рожевий.","tr":"Pembe.","ro":"Roz.","bg":"Розов.", "fa": "صورتی."},
+ "Wit.": {"en":"White.","ar":"أبيض.","uk":"Білий.","tr":"Beyaz.","ro":"Alb.","bg":"Бял.", "fa": "سفید."},
+ "Welke kleur heeft een olifant?": {"en":"What colour is an elephant?","ar":"ما لون الفيل؟","uk":"Якого кольору слон?","tr":"Fil ne renk?","ro":"Ce culoare are un elefant?","bg":"Какъв цвят е слонът?", "fa": "فیل چه رنگی است؟"},
+ "Grijs.": {"en":"Grey.","ar":"رمادي.","uk":"Сірий.","tr":"Gri.","ro":"Gri.","bg":"Сив.", "fa": "خاکستری."},
+ "Geel.": {"en":"Yellow.","ar":"أصفر.","uk":"Жовтий.","tr":"Sarı.","ro":"Galben.","bg":"Жълт.", "fa": "زرد."},
+ "Paars.": {"en":"Purple.","ar":"بنفسجي.","uk":"Фіолетовий.","tr":"Mor.","ro":"Mov.","bg":"Лилав.", "fa": "بنفش."},
+ "Rood.": {"en":"Red.","ar":"أحمر.","uk":"Червоний.","tr":"Kırmızı.","ro":"Roșu.","bg":"Червен.", "fa": "قرمز."},
+ "Rood en blauw samen. Welke kleur krijg je?": {"en":"Red and blue together. What colour do you get?","ar":"الأحمر والأزرق معًا. ما اللون الذي تحصل عليه؟","uk":"Червоний і синій разом. Який колір вийде?","tr":"Kırmızı ve mavi birlikte. Hangi renk olur?","ro":"Roșu și albastru împreună. Ce culoare iese?","bg":"Червено и синьо заедно. Какъв цвят се получава?", "fa": "قرمز و آبی با هم. چه رنگی درست می‌شود؟"},
+ "Welke kleur heeft een varken?": {"en":"What colour is a pig?","ar":"ما لون الخنزير؟","uk":"Якого кольору свиня?","tr":"Domuz ne renk?","ro":"Ce culoare are un porc?","bg":"Какъв цвят е прасето?", "fa": "خوک چه رنگی است؟"},
+ "Blauw.": {"en":"Blue.","ar":"أزرق.","uk":"Синій.","tr":"Mavi.","ro":"Albastru.","bg":"Син.", "fa": "آبی."},
+ "Zwart.": {"en":"Black.","ar":"أسود.","uk":"Чорний.","tr":"Siyah.","ro":"Negru.","bg":"Черен.", "fa": "سیاه."},
+ "Het is nacht. Welke kleur heeft de lucht?": {"en":"It is night. What colour is the sky?","ar":"إنه الليل. ما لون السماء؟","uk":"Зараз ніч. Якого кольору небо?","tr":"Gece oldu. Gökyüzü ne renk?","ro":"E noapte. Ce culoare are cerul?","bg":"Нощ е. Какъв цвят е небето?", "fa": "شب است. آسمان چه رنگی است؟"},
+ "Vormen, groot en klein": {"en":"Shapes, big and small","ar":"الأشكال، كبير وصغير","uk":"Фігури, великий і маленький","tr":"Şekiller, büyük ve küçük","ro":"Forme, mare și mic","bg":"Форми, голямо и малко", "fa": "شکل‌ها، بزرگ و کوچک"},
+ "**Een cirkel** is rond. **Een driehoek** heeft drie hoeken.\n\n**groot** ↔ **klein** · **hoog** · **dik** ↔ **dun**": {"en":"**Een cirkel** (= a circle) is round. **Een driehoek** (= a triangle) has three corners.\n\n**groot** (= big) ↔ **klein** (= small) · **hoog** (= high/tall) · **dik** (= thick) ↔ **dun** (= thin)","ar":"**Een cirkel** (= دائرة) مستديرة. **Een driehoek** (= مثلث) له ثلاث زوايا.\n\n**groot** (= كبير) ↔ **klein** (= صغير) · **hoog** (= عالٍ) · **dik** (= سميك) ↔ **dun** (= رفيع)","uk":"**Een cirkel** (= коло) кругле. **Een driehoek** (= трикутник) має три кути.\n\n**groot** (= великий) ↔ **klein** (= маленький) · **hoog** (= високий) · **dik** (= товстий) ↔ **dun** (= тонкий)","tr":"**Een cirkel** (= daire) yuvarlaktır. **Een driehoek**'in (= üçgen) üç köşesi var.\n\n**groot** (= büyük) ↔ **klein** (= küçük) · **hoog** (= yüksek) · **dik** (= kalın) ↔ **dun** (= ince)","ro":"**Een cirkel** (= un cerc) este rotund. **Een driehoek** (= un triunghi) are trei colțuri.\n\n**groot** (= mare) ↔ **klein** (= mic) · **hoog** (= înalt) · **dik** (= gros) ↔ **dun** (= subțire)","bg":"**Een cirkel** (= кръг) е кръгъл. **Een driehoek** (= триъгълник) има три ъгъла.\n\n**groot** (= голям) ↔ **klein** (= малък) · **hoog** (= висок) · **dik** (= дебел) ↔ **dun** (= тънък)", "fa": "**Een cirkel** (= دایره) گرد است. **Een driehoek** (= مثلث) سه گوشه دارد.\n\n**groot** (= بزرگ) ↔ **klein** (= کوچک) · **hoog** (= بلند) · **dik** (= کلفت) ↔ **dun** (= نازک)"},
+ "Welke vorm heeft een bord?": {"en":"What shape is a plate?","ar":"ما شكل الصحن؟","uk":"Якої форми тарілка?","tr":"Tabak hangi şekilde?","ro":"Ce formă are o farfurie?","bg":"Каква форма има чинията?", "fa": "بشقاب چه شکلی دارد؟"},
+ "Een cirkel.": {"en":"A circle.","ar":"دائرة.","uk":"Коло.","tr":"Bir daire.","ro":"Un cerc.","bg":"Кръг.", "fa": "دایره."},
+ "Een driehoek.": {"en":"A triangle.","ar":"مثلث.","uk":"Трикутник.","tr":"Bir üçgen.","ro":"Un triunghi.","bg":"Триъгълник.", "fa": "مثلث."},
+ "Een lijn.": {"en":"A line.","ar":"خط.","uk":"Лінія.","tr":"Bir çizgi.","ro":"O linie.","bg":"Линия.", "fa": "خط."},
+ "Een vierkant.": {"en":"A square.","ar":"مربع.","uk":"Квадрат.","tr":"Bir kare.","ro":"Un pătrat.","bg":"Квадрат.", "fa": "مربع."},
+ "Een vorm met drie hoeken. Hoe heet die?": {"en":"A shape with three corners. What is it called?","ar":"شكل له ثلاث زوايا. ما اسمه؟","uk":"Фігура з трьома кутами. Як вона називається?","tr":"Üç köşeli bir şekil. Adı ne?","ro":"O formă cu trei colțuri. Cum se numește?","bg":"Форма с три ъгъла. Как се казва?", "fa": "شکلی با سه گوشه. اسمش چیست؟"},
+ "Een olifant is groot. Een muis is…": {"en":"An elephant is big. A mouse is…","ar":"الفيل كبير. الفأر…","uk":"Слон великий. Миша…","tr":"Fil büyüktür. Fare…","ro":"Un elefant e mare. Un șoarece e…","bg":"Слонът е голям. Мишката е…", "fa": "فیل بزرگ است. موش…"},
+ "Klein.": {"en":"Small.","ar":"صغير.","uk":"Маленька.","tr":"Küçük.","ro":"Mic.","bg":"Малка.", "fa": "کوچک."},
+ "Groot.": {"en":"Big.","ar":"كبير.","uk":"Великий.","tr":"Büyük.","ro":"Mare.","bg":"Голям.", "fa": "بزرگ."},
+ "Hoog.": {"en":"High.","ar":"عالٍ.","uk":"Високий.","tr":"Yüksek.","ro":"Înalt.","bg":"Висок.", "fa": "بلند."},
+ "Dik.": {"en":"Thick.","ar":"سميك.","uk":"Товстий.","tr":"Kalın.","ro":"Gros.","bg":"Дебел.", "fa": "کلفت."},
+ "Een toren gaat tot in de lucht. De toren is…": {"en":"A tower goes up into the sky. The tower is…","ar":"البرج يصل إلى السماء. البرج…","uk":"Вежа сягає неба. Вежа…","tr":"Bir kule gökyüzüne kadar çıkıyor. Kule…","ro":"Un turn ajunge până la cer. Turnul este…","bg":"Кулата стига до небето. Кулата е…", "fa": "یک برج تا آسمان بالا می‌رود. برج…"},
+ "Dun.": {"en":"Thin.","ar":"رفيع.","uk":"Тонкий.","tr":"İnce.","ro":"Subțire.","bg":"Тънък.", "fa": "نازک."},
+ "Kort.": {"en":"Short.","ar":"قصير.","uk":"Короткий.","tr":"Kısa.","ro":"Scurt.","bg":"Къс.", "fa": "کوتاه."},
+ "Welk boek heeft veel bladzijden?": {"en":"Which book has a lot of pages?","ar":"أي كتاب فيه صفحات كثيرة؟","uk":"Яка книжка має багато сторінок?","tr":"Hangi kitabın çok sayfası var?","ro":"Care carte are multe pagini?","bg":"Коя книга има много страници?", "fa": "کدام کتاب صفحه‌های زیادی دارد؟"},
+ "Het dikke boek.": {"en":"The thick book.","ar":"الكتاب السميك.","uk":"Товста книжка.","tr":"Kalın kitap.","ro":"Cartea groasă.","bg":"Дебелата книга.", "fa": "کتاب کلفت."},
+ "Het dunne boek.": {"en":"The thin book.","ar":"الكتاب الرفيع.","uk":"Тонка книжка.","tr":"İnce kitap.","ro":"Cartea subțire.","bg":"Тънката книга.", "fa": "کتاب نازک."},
+ "Het kleine boek.": {"en":"The small book.","ar":"الكتاب الصغير.","uk":"Маленька книжка.","tr":"Küçük kitap.","ro":"Cartea mică.","bg":"Малката книга.", "fa": "کتاب کوچک."},
+ "Het lege boek.": {"en":"The empty book.","ar":"الكتاب الفارغ.","uk":"Порожня книжка.","tr":"Boş kitap.","ro":"Cartea goală.","bg":"Празната книга.", "fa": "کتاب خالی."},
+ "Waar? Hoeveel?": {"en":"Where? How many?","ar":"أين؟ كم؟","uk":"Де? Скільки?","tr":"Nerede? Kaç tane?","ro":"Unde? Câte?","bg":"Къде? Колко?", "fa": "کجا؟ چند تا؟"},
+ "**dichtbij** ↔ **ver weg**\n**erop** (op iets) · **eruit** (uit iets)\n**half** = de helft\n\nTellen: … vier, vijf, **zes**, **zeven** …": {"en":"**dichtbij** (= close by) ↔ **ver weg** (= far away)\n**erop** (= on it) · **eruit** (= out of it)\n**half** (= half) = de helft\n\nCounting: … vier, vijf, **zes** (= six), **zeven** (= seven) …","ar":"**dichtbij** (= قريب) ↔ **ver weg** (= بعيد)\n**erop** (= عليه) · **eruit** (= منه، إلى الخارج)\n**half** (= نصف) = de helft\n\nالعدّ: … vier، vijf، **zes** (= ستة)، **zeven** (= سبعة) …","uk":"**dichtbij** (= близько) ↔ **ver weg** (= далеко)\n**erop** (= на це) · **eruit** (= з цього)\n**half** (= половина) = de helft\n\nЛічба: … vier, vijf, **zes** (= шість), **zeven** (= сім) …","tr":"**dichtbij** (= yakın) ↔ **ver weg** (= uzak)\n**erop** (= üstüne) · **eruit** (= içinden dışarı)\n**half** (= yarım) = de helft\n\nSayma: … vier, vijf, **zes** (= altı), **zeven** (= yedi) …","ro":"**dichtbij** (= aproape) ↔ **ver weg** (= departe)\n**erop** (= pe el) · **eruit** (= afară din el)\n**half** (= jumătate) = de helft\n\nNumărat: … vier, vijf, **zes** (= șase), **zeven** (= șapte) …","bg":"**dichtbij** (= близо) ↔ **ver weg** (= далеч)\n**erop** (= върху него) · **eruit** (= навън от него)\n**half** (= половин) = de helft\n\nБроене: … vier, vijf, **zes** (= шест), **zeven** (= седем) …", "fa": "**dichtbij** (= نزدیک) ↔ **ver weg** (= دور)\n**erop** (= روی آن) · **eruit** (= از آن بیرون)\n**half** (= نصف) = de helft\n\nشمردن: … vier, vijf, **zes** (= شش), **zeven** (= هفت) …"},
+ "De school is naast je huis. Is de school ver weg of dichtbij?": {"en":"The school is next to your house. Is the school far away or close by?","ar":"المدرسة بجانب بيتك. هل المدرسة بعيدة أم قريبة؟","uk":"Школа поруч із твоїм домом. Школа далеко чи близько?","tr":"Okul evinin yanında. Okul uzak mı yakın mı?","ro":"Școala e lângă casa ta. Școala e departe sau aproape?","bg":"Училището е до къщата ти. Далеч ли е училището или близо?", "fa": "مدرسه کنار خانه‌ات است. مدرسه دور است یا نزدیک؟"},
+ "Dichtbij.": {"en":"Close by.","ar":"قريبة.","uk":"Близько.","tr":"Yakın.","ro":"Aproape.","bg":"Близо.", "fa": "نزدیک."},
+ "Ver weg.": {"en":"Far away.","ar":"بعيدة.","uk":"Далеко.","tr":"Uzak.","ro":"Departe.","bg":"Далеч.", "fa": "دور."},
+ "Leeg.": {"en":"Empty.","ar":"فارغ.","uk":"Порожній.","tr":"Boş.","ro":"Gol.","bg":"Празен.", "fa": "خالی."},
+ "Leg het boek op de tafel. Waar is het boek nu?": {"en":"Put the book on the table. Where is the book now?","ar":"ضع الكتاب على الطاولة. أين الكتاب الآن؟","uk":"Поклади книжку на стіл. Де тепер книжка?","tr":"Kitabı masaya koy. Kitap şimdi nerede?","ro":"Pune cartea pe masă. Unde e cartea acum?","bg":"Сложи книгата на масата. Къде е книгата сега?", "fa": "کتاب را روی میز بگذار. کتاب حالا کجاست؟"},
+ "Het boek ligt erop.": {"en":"The book is lying on it.","ar":"الكتاب موضوع عليها.","uk":"Книжка лежить на ньому.","tr":"Kitap üstünde duruyor.","ro":"Cartea stă pe ea.","bg":"Книгата лежи върху нея.", "fa": "کتاب روی آن است."},
+ "Het boek ligt eruit.": {"en":"The book is lying out of it.","ar":"الكتاب موضوع خارجها.","uk":"Книжка лежить поза ним.","tr":"Kitap dışında duruyor.","ro":"Cartea stă afară din ea.","bg":"Книгата лежи навън от нея.", "fa": "کتاب بیرون از آن است."},
+ "Het boek ligt ver weg.": {"en":"The book is lying far away.","ar":"الكتاب موضوع بعيدًا.","uk":"Книжка лежить далеко.","tr":"Kitap uzakta duruyor.","ro":"Cartea stă departe.","bg":"Книгата лежи далеч.", "fa": "کتاب دور است."},
+ "Het boek is weg.": {"en":"The book is gone.","ar":"الكتاب اختفى.","uk":"Книжки немає.","tr":"Kitap kayboldu.","ro":"Cartea a dispărut.","bg":"Книгата я няма.", "fa": "کتاب گم شده است."},
+ "Pak de pen uit je etui. Wat doe je met de pen?": {"en":"Take the pen out of your pencil case. What do you do with the pen?","ar":"أخرج القلم من المقلمة. ماذا تفعل بالقلم؟","uk":"Візьми ручку з пенала. Що ти робиш із ручкою?","tr":"Kalemi kalem kutundan al. Kalemle ne yaparsın?","ro":"Ia pixul din penar. Ce faci cu pixul?","bg":"Вземи химикалката от несесера. Какво правиш с химикалката?", "fa": "قلم را از جامدادی‌ات بیرون بیاور. با قلم چه کار می‌کنی؟"},
+ "Ik haal de pen eruit.": {"en":"I take the pen out of it.","ar":"أُخرج القلم منها.","uk":"Я виймаю ручку з нього.","tr":"Kalemi içinden çıkarırım.","ro":"Scot pixul din el.","bg":"Изваждам химикалката от него.", "fa": "قلم را از آن بیرون می‌آورم."},
+ "Ik leg de pen erop.": {"en":"I put the pen on it.","ar":"أضع القلم عليها.","uk":"Я кладу ручку на нього.","tr":"Kalemi üstüne koyarım.","ro":"Pun pixul pe el.","bg":"Слагам химикалката върху него.", "fa": "قلم را روی آن می‌گذارم."},
+ "Ik gooi de pen weg.": {"en":"I throw the pen away.","ar":"أرمي القلم.","uk":"Я викидаю ручку.","tr":"Kalemi atarım.","ro":"Arunc pixul.","bg":"Изхвърлям химикалката.", "fa": "قلم را دور می‌اندازم."},
+ "Ik eet de pen.": {"en":"I eat the pen.","ar":"آكل القلم.","uk":"Я їм ручку.","tr":"Kalemi yerim.","ro":"Mănânc pixul.","bg":"Ям химикалката.", "fa": "قلم را می‌خورم."},
+ "Je eet de helft van je appel. Wat heb je nog?": {"en":"You eat half of your apple. What do you have left?","ar":"تأكل نصف تفاحتك. ماذا بقي معك؟","uk":"Ти з'їв половину яблука. Що в тебе залишилось?","tr":"Elmanın yarısını yiyorsun. Elinde ne kaldı?","ro":"Mănânci jumătate din măr. Ce ți-a rămas?","bg":"Изяждаш половината ябълка. Какво ти остава?", "fa": "نصف سیبت را می‌خوری. چه چیزی برایت می‌ماند؟"},
+ "Een halve appel.": {"en":"Half an apple.","ar":"نصف تفاحة.","uk":"Половина яблука.","tr":"Yarım elma.","ro":"O jumătate de măr.","bg":"Половин ябълка.", "fa": "نصف سیب."},
+ "Een hele appel.": {"en":"A whole apple.","ar":"تفاحة كاملة.","uk":"Ціле яблуко.","tr":"Bütün bir elma.","ro":"Un măr întreg.","bg":"Цяла ябълка.", "fa": "یک سیب کامل."},
+ "Twee appels.": {"en":"Two apples.","ar":"تفاحتان.","uk":"Два яблука.","tr":"İki elma.","ro":"Două mere.","bg":"Две ябълки.", "fa": "دو سیب."},
+ "Geen appel.": {"en":"No apple.","ar":"لا تفاحة.","uk":"Жодного яблука.","tr":"Hiç elma yok.","ro":"Niciun măr.","bg":"Никаква ябълка.", "fa": "هیچ سیبی."},
+ "Hoeveel dagen heeft een week?": {"en":"How many days does a week have?","ar":"كم يومًا في الأسبوع؟","uk":"Скільки днів у тижні?","tr":"Bir haftada kaç gün var?","ro":"Câte zile are o săptămână?","bg":"Колко дни има една седмица?", "fa": "یک هفته چند روز دارد؟"},
+ "Zeven.": {"en":"Seven.","ar":"سبعة.","uk":"Сім.","tr":"Yedi.","ro":"Șapte.","bg":"Седем.", "fa": "هفت."},
+ "Zes.": {"en":"Six.","ar":"ستة.","uk":"Шість.","tr":"Altı.","ro":"Șase.","bg":"Шест.", "fa": "شش."},
+ "Vijf.": {"en":"Five.","ar":"خمسة.","uk":"П'ять.","tr":"Beş.","ro":"Cinci.","bg":"Пет.", "fa": "پنج."},
+ "Tien.": {"en":"Ten.","ar":"عشرة.","uk":"Десять.","tr":"On.","ro":"Zece.","bg":"Десет.", "fa": "ده."},
+ "Tel: vier, vijf, … Welk getal komt nu?": {"en":"Count: four, five, … Which number comes next?","ar":"عُدّ: أربعة، خمسة، … ما العدد التالي؟","uk":"Лічи: чотири, п'ять, … Яке число далі?","tr":"Say: dört, beş, … Sırada hangi sayı var?","ro":"Numără: patru, cinci, … Ce număr urmează?","bg":"Брой: четири, пет, … Кое число идва сега?", "fa": "بشمار: چهار، پنج، … حالا کدام عدد می‌آید؟"},
+ "Drie.": {"en":"Three.","ar":"ثلاثة.","uk":"Три.","tr":"Üç.","ro":"Trei.","bg":"Три.", "fa": "سه."},
+ "Tijd en beurt": {"en":"Time and turns","ar":"الوقت والدور","uk":"Час і черга","tr":"Zaman ve sıra","ro":"Timp și rând","bg":"Време и ред", "fa": "وقت و نوبت"},
+ "**gisteren** → **vandaag** → **morgen**\nNa 12 uur is het **middag**.\n\n**Aan de beurt** = nu mag jij.\nIets zeggen? **Steek je vinger op.**": {"en":"**gisteren** (= yesterday) → **vandaag** (= today) → **morgen** (= tomorrow)\nAfter 12 o'clock it is **middag** (= afternoon).\n\n**Aan de beurt** (= your turn) = now you may.\nWant to say something? **Steek je vinger op.** (= Put your finger up.)","ar":"**gisteren** (= أمس) → **vandaag** (= اليوم) → **morgen** (= غدًا)\nبعد الساعة 12 يكون **middag** (= بعد الظهر).\n\n**Aan de beurt** (= دورك) = الآن يمكنك.\nتريد أن تقول شيئًا؟ **Steek je vinger op.** (= ارفع إصبعك.)","uk":"**gisteren** (= учора) → **vandaag** (= сьогодні) → **morgen** (= завтра)\nПісля 12 години — **middag** (= день, після обіду).\n\n**Aan de beurt** (= твоя черга) = тепер можна тобі.\nХочеш щось сказати? **Steek je vinger op.** (= Підніми руку.)","tr":"**gisteren** (= dün) → **vandaag** (= bugün) → **morgen** (= yarın)\nSaat 12'den sonra **middag** (= öğleden sonra) olur.\n\n**Aan de beurt** (= sıra sende) = şimdi sen.\nBir şey mi söylemek istiyorsun? **Steek je vinger op.** (= Parmağını kaldır.)","ro":"**gisteren** (= ieri) → **vandaag** (= azi) → **morgen** (= mâine)\nDupă ora 12 este **middag** (= după-amiază).\n\n**Aan de beurt** (= e rândul tău) = acum poți tu.\nVrei să spui ceva? **Steek je vinger op.** (= Ridică degetul.)","bg":"**gisteren** (= вчера) → **vandaag** (= днес) → **morgen** (= утре)\nСлед 12 часа е **middag** (= следобед).\n\n**Aan de beurt** (= твой ред е) = сега можеш ти.\nИскаш да кажеш нещо? **Steek je vinger op.** (= Вдигни пръст.)", "fa": "**gisteren** (= دیروز) → **vandaag** (= امروز) → **morgen** (= فردا)\nبعد از ساعت 12 **middag** (= بعدازظهر) است.\n\n**Aan de beurt** (= نوبت تو) = حالا تو می‌توانی.\nمی‌خواهی چیزی بگویی؟ **Steek je vinger op.** (= دستت را بالا ببر.)"},
+ "Niet gisteren, niet morgen, maar nu. Hoe heet die dag?": {"en":"Not yesterday, not tomorrow, but now. What is that day called?","ar":"ليس أمس، ولا غدًا، بل الآن. ما اسم هذا اليوم؟","uk":"Не вчора, не завтра, а зараз. Як називається цей день?","tr":"Dün değil, yarın değil, şimdi. O günün adı ne?","ro":"Nu ieri, nu mâine, ci acum. Cum se numește ziua aceea?","bg":"Не вчера, не утре, а сега. Как се казва този ден?", "fa": "نه دیروز، نه فردا، بلکه حالا. اسم آن روز چیست؟"},
+ "Vandaag.": {"en":"Today.","ar":"اليوم.","uk":"Сьогодні.","tr":"Bugün.","ro":"Azi.","bg":"Днес.", "fa": "امروز."},
+ "Gisteren.": {"en":"Yesterday.","ar":"أمس.","uk":"Учора.","tr":"Dün.","ro":"Ieri.","bg":"Вчера.", "fa": "دیروز."},
+ "Morgen.": {"en":"Tomorrow.","ar":"غدًا.","uk":"Завтра.","tr":"Yarın.","ro":"Mâine.","bg":"Утре.", "fa": "فردا."},
+ "Week.": {"en":"Week.","ar":"أسبوع.","uk":"Тиждень.","tr":"Hafta.","ro":"Săptămână.","bg":"Седмица.", "fa": "هفته."},
+ "De dag vóór vandaag. Hoe heet die?": {"en":"The day before today. What is it called?","ar":"اليوم الذي قبل اليوم. ما اسمه؟","uk":"День перед сьогодні. Як він називається?","tr":"Bugünden önceki gün. Adı ne?","ro":"Ziua dinainte de azi. Cum se numește?","bg":"Денят преди днес. Как се казва?", "fa": "روزِ قبل از امروز. اسمش چیست؟"},
+ "Middag.": {"en":"Afternoon.","ar":"بعد الظهر.","uk":"День (після обіду).","tr":"Öğleden sonra.","ro":"După-amiază.","bg":"Следобед.", "fa": "بعدازظهر."},
+ "Het is 12 uur. Je hebt gegeten. Welk deel van de dag begint nu?": {"en":"It is 12 o'clock. You have eaten. Which part of the day starts now?","ar":"الساعة 12. أكلت. أي جزء من اليوم يبدأ الآن؟","uk":"Зараз 12 година. Ти поїв. Яка частина дня починається?","tr":"Saat 12. Yemek yedin. Günün hangi bölümü başlıyor?","ro":"E ora 12. Ai mâncat. Ce parte a zilei începe acum?","bg":"12 часът е. Ти се нахрани. Коя част от деня започва сега?", "fa": "ساعت 12 است. غذا خورده‌ای. کدام بخش روز حالا شروع می‌شود؟"},
+ "De middag.": {"en":"The afternoon.","ar":"بعد الظهر.","uk":"Друга половина дня.","tr":"Öğleden sonra.","ro":"După-amiaza.","bg":"Следобедът.", "fa": "بعدازظهر."},
+ "De nacht.": {"en":"The night.","ar":"الليل.","uk":"Ніч.","tr":"Gece.","ro":"Noaptea.","bg":"Нощта.", "fa": "شب."},
+ "De ochtend.": {"en":"The morning.","ar":"الصباح.","uk":"Ранок.","tr":"Sabah.","ro":"Dimineața.","bg":"Сутринта.", "fa": "صبح."},
+ "De week.": {"en":"The week.","ar":"الأسبوع.","uk":"Тиждень.","tr":"Hafta.","ro":"Săptămâna.","bg":"Седмицата.", "fa": "هفته."},
+ "De juf zegt: jij bent aan de beurt. Wat betekent dat?": {"en":"The teacher says: it is your turn. What does that mean?","ar":"المعلمة تقول: إنه دورك. ماذا يعني ذلك؟","uk":"Учителька каже: твоя черга. Що це означає?","tr":"Öğretmen diyor ki: sıra sende. Bu ne demek?","ro":"Doamna învățătoare spune: e rândul tău. Ce înseamnă asta?","bg":"Учителката казва: твой ред е. Какво означава това?", "fa": "خانم معلم می‌گوید: نوبت توست. این یعنی چه؟"},
+ "Nu mag jij.": {"en":"Now you may.","ar":"الآن يمكنك أنت.","uk":"Тепер можна тобі.","tr":"Şimdi sen yapabilirsin.","ro":"Acum poți tu.","bg":"Сега можеш ти.", "fa": "حالا تو می‌توانی."},
+ "Je moet stil zijn.": {"en":"You have to be quiet.","ar":"يجب أن تكون هادئًا.","uk":"Ти маєш бути тихо.","tr":"Sessiz olmalısın.","ro":"Trebuie să stai liniștit.","bg":"Трябва да мълчиш.", "fa": "باید ساکت باشی."},
+ "Je mag naar huis.": {"en":"You may go home.","ar":"يمكنك الذهاب إلى البيت.","uk":"Можеш іти додому.","tr":"Eve gidebilirsin.","ro":"Poți merge acasă.","bg":"Можеш да си отидеш вкъщи.", "fa": "می‌توانی به خانه بروی."},
+ "Je bent klaar.": {"en":"You are finished.","ar":"أنت انتهيت.","uk":"Ти закінчив.","tr":"Bitirdin.","ro":"Ai terminat.","bg":"Готов си.", "fa": "کارت تمام شده است."},
+ "Je wilt iets zeggen in de klas. Wat doe je eerst?": {"en":"You want to say something in class. What do you do first?","ar":"تريد أن تقول شيئًا في الصف. ماذا تفعل أولًا؟","uk":"Ти хочеш щось сказати в класі. Що ти робиш спочатку?","tr":"Sınıfta bir şey söylemek istiyorsun. Önce ne yaparsın?","ro":"Vrei să spui ceva în clasă. Ce faci mai întâi?","bg":"Искаш да кажеш нещо в класа. Какво правиш първо?", "fa": "می‌خواهی در کلاس چیزی بگویی. اول چه کار می‌کنی؟"},
+ "Ik steek mijn vinger op.": {"en":"I put my finger up.","ar":"أرفع إصبعي.","uk":"Я піднімаю руку.","tr":"Parmağımı kaldırırım.","ro":"Ridic degetul.","bg":"Вдигам пръст.", "fa": "دستم را بالا می‌برم."},
+ "Ik loop naar de juf.": {"en":"I walk to the teacher.","ar":"أمشي إلى المعلمة.","uk":"Я йду до вчительки.","tr":"Öğretmenin yanına yürürüm.","ro":"Merg la doamna învățătoare.","bg":"Отивам при учителката.", "fa": "پیش خانم معلم می‌روم."},
+ "Ik ga staan.": {"en":"I stand up.","ar":"أقف.","uk":"Я встаю.","tr":"Ayağa kalkarım.","ro":"Mă ridic în picioare.","bg":"Ставам прав.", "fa": "بلند می‌شوم."},
+ "**Ik denk even na.** **Ik wil iets vertellen.**\n**Waarom?** → **Omdat …**\n\n**makkelijk** ↔ **moeilijk**\n**Ik ben gelukkig.** **Ik durf het!**": {"en":"**Ik denk even na.** (= I think for a moment.) **Ik wil iets vertellen.** (= I want to tell something.)\n**Waarom?** (= Why?) → **Omdat …** (= Because …)\n\n**makkelijk** (= easy) ↔ **moeilijk** (= difficult)\n**Ik ben gelukkig.** (= I am happy.) **Ik durf het!** (= I dare to do it!)","ar":"**Ik denk even na.** (= أفكر قليلًا.) **Ik wil iets vertellen.** (= أريد أن أحكي شيئًا.)\n**Waarom?** (= لماذا؟) → **Omdat …** (= لأن …)\n\n**makkelijk** (= سهل) ↔ **moeilijk** (= صعب)\n**Ik ben gelukkig.** (= أنا سعيد جدًا.) **Ik durf het!** (= أتجرأ على ذلك!)","uk":"**Ik denk even na.** (= Я трохи подумаю.) **Ik wil iets vertellen.** (= Я хочу щось розповісти.)\n**Waarom?** (= Чому?) → **Omdat …** (= Тому що …)\n\n**makkelijk** (= легко) ↔ **moeilijk** (= важко)\n**Ik ben gelukkig.** (= Я щасливий.) **Ik durf het!** (= Я наважуюсь!)","tr":"**Ik denk even na.** (= Biraz düşünüyorum.) **Ik wil iets vertellen.** (= Bir şey anlatmak istiyorum.)\n**Waarom?** (= Neden?) → **Omdat …** (= Çünkü …)\n\n**makkelijk** (= kolay) ↔ **moeilijk** (= zor)\n**Ik ben gelukkig.** (= Mutluyum.) **Ik durf het!** (= Cesaret ediyorum!)","ro":"**Ik denk even na.** (= Mă gândesc puțin.) **Ik wil iets vertellen.** (= Vreau să povestesc ceva.)\n**Waarom?** (= De ce?) → **Omdat …** (= Pentru că …)\n\n**makkelijk** (= ușor) ↔ **moeilijk** (= greu)\n**Ik ben gelukkig.** (= Sunt fericit.) **Ik durf het!** (= Îndrăznesc!)","bg":"**Ik denk even na.** (= Ще помисля малко.) **Ik wil iets vertellen.** (= Искам да разкажа нещо.)\n**Waarom?** (= Защо?) → **Omdat …** (= Защото …)\n\n**makkelijk** (= лесно) ↔ **moeilijk** (= трудно)\n**Ik ben gelukkig.** (= Щастлив съм.) **Ik durf het!** (= Смея!)", "fa": "**Ik denk even na.** (= کمی فکر می‌کنم.) **Ik wil iets vertellen.** (= می‌خواهم چیزی تعریف کنم.)\n**Waarom?** (= چرا؟) → **Omdat …** (= چون …)\n\n**makkelijk** (= آسان) ↔ **moeilijk** (= سخت)\n**Ik ben gelukkig.** (= من خیلی خوشحالم.) **Ik durf het!** (= جرئتش را دارم!)"},
+ "Je weet het antwoord niet meteen. Wat doe je?": {"en":"You don't know the answer right away. What do you do?","ar":"لا تعرف الجواب فورًا. ماذا تفعل؟","uk":"Ти не знаєш відповіді одразу. Що ти робиш?","tr":"Cevabı hemen bilmiyorsun. Ne yaparsın?","ro":"Nu știi imediat răspunsul. Ce faci?","bg":"Не знаеш отговора веднага. Какво правиш?", "fa": "جواب را فوری نمی‌دانی. چه کار می‌کنی؟"},
+ "Ik denk even na.": {"en":"I think for a moment.","ar":"أفكر قليلًا.","uk":"Я трохи подумаю.","tr":"Biraz düşünürüm.","ro":"Mă gândesc puțin.","bg":"Помислям малко.", "fa": "کمی فکر می‌کنم."},
+ "Ik stop.": {"en":"I stop.","ar":"أتوقف.","uk":"Я зупиняюся.","tr":"Dururum.","ro":"Mă opresc.","bg":"Спирам.", "fa": "دست می‌کشم."},
+ "Ik roep: weet ik niet!": {"en":"I shout: don't know!","ar":"أصرخ: لا أعرف!","uk":"Я кричу: не знаю!","tr":"Bağırırım: bilmiyorum!","ro":"Strig: nu știu!","bg":"Викам: не знам!", "fa": "فریاد می‌زنم: نمی‌دانم!"},
+ "Je wilt de juf iets over je weekend vertellen. Wat zeg je?": {"en":"You want to tell the teacher something about your weekend. What do you say?","ar":"تريد أن تحكي للمعلمة شيئًا عن عطلة نهاية الأسبوع. ماذا تقول؟","uk":"Ти хочеш розповісти вчительці щось про свої вихідні. Що ти скажеш?","tr":"Öğretmene hafta sonun hakkında bir şey anlatmak istiyorsun. Ne dersin?","ro":"Vrei să-i povestești doamnei învățătoare ceva despre weekendul tău. Ce spui?","bg":"Искаш да разкажеш на учителката нещо за уикенда си. Какво казваш?", "fa": "می‌خواهی درباره‌ی آخر هفته‌ات چیزی به خانم معلم بگویی. چه می‌گویی؟"},
+ "Ik wil iets vertellen.": {"en":"I want to tell something.","ar":"أريد أن أحكي شيئًا.","uk":"Я хочу щось розповісти.","tr":"Bir şey anlatmak istiyorum.","ro":"Vreau să povestesc ceva.","bg":"Искам да разкажа нещо.", "fa": "می‌خواهم چیزی تعریف کنم."},
+ "Waarom heb je een jas aan?": {"en":"Why are you wearing a coat?","ar":"لماذا تلبس معطفًا؟","uk":"Чому ти в куртці?","tr":"Neden mont giyiyorsun?","ro":"De ce porți geacă?","bg":"Защо си с яке?", "fa": "چرا کاپشن پوشیده‌ای؟"},
+ "Omdat het koud is.": {"en":"Because it is cold.","ar":"لأن الجو بارد.","uk":"Тому що холодно.","tr":"Çünkü hava soğuk.","ro":"Pentru că e frig.","bg":"Защото е студено.", "fa": "چون هوا سرد است."},
+ "Omdat het warm is.": {"en":"Because it is warm.","ar":"لأن الجو دافئ.","uk":"Тому що тепло.","tr":"Çünkü hava sıcak.","ro":"Pentru că e cald.","bg":"Защото е топло.", "fa": "چون هوا گرم است."},
+ "Omdat ik blij ben.": {"en":"Because I am happy.","ar":"لأنني سعيد.","uk":"Тому що я радий.","tr":"Çünkü mutluyum.","ro":"Pentru că sunt fericit.","bg":"Защото съм радостен.", "fa": "چون خوشحالم."},
+ "Omdat het pauze is.": {"en":"Because it is break time.","ar":"لأنها الاستراحة.","uk":"Тому що перерва.","tr":"Çünkü teneffüs.","ro":"Pentru că e pauză.","bg":"Защото е междучасие.", "fa": "چون زنگ تفریح است."},
+ "Een som is niet moeilijk. De som is…": {"en":"A sum is not difficult. The sum is…","ar":"المسألة ليست صعبة. المسألة…","uk":"Приклад не важкий. Приклад…","tr":"Bir işlem zor değil. İşlem…","ro":"Un exercițiu nu e greu. Exercițiul este…","bg":"Задачата не е трудна. Задачата е…", "fa": "یک مسئله سخت نیست. مسئله…"},
+ "Makkelijk.": {"en":"Easy.","ar":"سهلة.","uk":"Легкий.","tr":"Kolay.","ro":"Ușor.","bg":"Лесна.", "fa": "آسان."},
+ "Moeilijk.": {"en":"Difficult.","ar":"صعبة.","uk":"Важкий.","tr":"Zor.","ro":"Greu.","bg":"Трудна.", "fa": "سخت."},
+ "Eng.": {"en":"Scary.","ar":"مخيفة.","uk":"Страшний.","tr":"Korkunç.","ro":"Înfricoșător.","bg":"Страшна.", "fa": "ترسناک."},
+ "Je hebt een nieuwe vriend. Je bent heel blij. Hoe voel je je?": {"en":"You have a new friend. You are very happy. How do you feel?","ar":"عندك صديق جديد. أنت سعيد جدًا. كيف تشعر؟","uk":"У тебе новий друг. Ти дуже радий. Як ти почуваєшся?","tr":"Yeni bir arkadaşın var. Çok mutlusun. Nasıl hissediyorsun?","ro":"Ai un prieten nou. Ești foarte bucuros. Cum te simți?","bg":"Имаш нов приятел. Много се радваш. Как се чувстваш?", "fa": "یک دوست تازه داری. خیلی خوشحالی. چه احساسی داری؟"},
+ "Ik ben gelukkig.": {"en":"I am happy (very happy).","ar":"أنا سعيد جدًا.","uk":"Я щасливий.","tr":"Çok mutluyum.","ro":"Sunt fericit.","bg":"Щастлив съм.", "fa": "من خیلی خوشحالم."},
+ "Je bent een beetje bang, maar je doet het toch. Wat zeg je?": {"en":"You are a little scared, but you do it anyway. What do you say?","ar":"أنت خائف قليلًا، لكنك تفعلها رغم ذلك. ماذا تقول؟","uk":"Тобі трохи страшно, але ти все одно це робиш. Що ти скажеш?","tr":"Biraz korkuyorsun ama yine de yapıyorsun. Ne dersin?","ro":"Ți-e puțin frică, dar o faci totuși. Ce spui?","bg":"Малко те е страх, но все пак го правиш. Какво казваш?", "fa": "کمی می‌ترسی، اما باز هم انجامش می‌دهی. چه می‌گویی؟"},
+ "Ik durf het!": {"en":"I dare to do it!","ar":"أتجرأ على ذلك!","uk":"Я наважуюсь!","tr":"Cesaret ediyorum!","ro":"Îndrăznesc!","bg":"Смея!", "fa": "جرئتش را دارم!"},
+ "Ik wil naar huis.": {"en":"I want to go home.","ar":"أريد أن أذهب إلى البيت.","uk":"Я хочу додому.","tr":"Eve gitmek istiyorum.","ro":"Vreau acasă.","bg":"Искам да си отида вкъщи.", "fa": "می‌خواهم به خانه بروم."},
+ "Denk aan een reep chocola.": {"en":"Think of a chocolate bar.","ar":"فكّر في لوح شوكولاتة.","uk":"Згадай плитку шоколаду.","tr":"Bir çikolatayı düşün.","ro":"Gândește-te la o tabletă de ciocolată.","bg":"Помисли за блокче шоколад.", "fa": "به یک تخته شکلات فکر کن."},
+ "Een olifant is niet vrolijk gekleurd.": {"en":"An elephant is not brightly coloured.","ar":"الفيل ليس ملوّنًا بألوان زاهية.","uk":"Слон не яскравого кольору.","tr":"Fil rengârenk değildir.","ro":"Un elefant nu are culori vesele.","bg":"Слонът не е с ярък цвят.", "fa": "فیل رنگ‌های شاد ندارد."},
+ "Meng rood met blauw.": {"en":"Mix red with blue.","ar":"اخلط الأحمر مع الأزرق.","uk":"Змішай червоний із синім.","tr":"Kırmızıyı maviyle karıştır.","ro":"Amestecă roșu cu albastru.","bg":"Смеси червено със синьо.", "fa": "قرمز را با آبی مخلوط کن."},
+ "Een varken is lichtrood.": {"en":"A pig is light red.","ar":"الخنزير أحمر فاتح.","uk":"Свиня світло-червона.","tr":"Domuz açık kırmızıdır.","ro":"Un porc este roșu deschis.","bg":"Прасето е светлочервено.", "fa": "خوک قرمزِ روشن است."},
+ "In de nacht is het donker.": {"en":"At night it is dark.","ar":"في الليل يكون الجو مظلمًا.","uk":"Уночі темно.","tr":"Gece karanlıktır.","ro":"Noaptea e întuneric.","bg":"През нощта е тъмно.", "fa": "در شب هوا تاریک است."},
+ "Een bord is rond.": {"en":"A plate is round.","ar":"الصحن مستدير.","uk":"Тарілка кругла.","tr":"Tabak yuvarlaktır.","ro":"O farfurie este rotundă.","bg":"Чинията е кръгла.", "fa": "بشقاب گرد است."},
+ "Drie hoeken = drie-hoek.": {"en":"Three corners = drie-hoek (triangle).","ar":"ثلاث زوايا = drie-hoek (مثلث).","uk":"Три кути = drie-hoek (трикутник).","tr":"Üç köşe = drie-hoek (üçgen).","ro":"Trei colțuri = drie-hoek (triunghi).","bg":"Три ъгъла = drie-hoek (триъгълник).", "fa": "سه گوشه = drie-hoek (مثلث)."},
+ "Een muis is het tegenovergestelde van groot.": {"en":"A mouse is the opposite of big.","ar":"الفأر عكس الكبير.","uk":"Миша — протилежність великого.","tr":"Fare büyüğün tersidir.","ro":"Un șoarece e opusul lui mare.","bg":"Мишката е обратното на голямо.", "fa": "موش برعکسِ بزرگ است."},
+ "Hij gaat ver naar boven.": {"en":"It goes far up.","ar":"يرتفع كثيرًا إلى الأعلى.","uk":"Вона йде високо вгору.","tr":"Çok yukarıya çıkar.","ro":"Merge mult în sus.","bg":"Тя стига много нагоре.", "fa": "خیلی بالا می‌رود."},
+ "Veel bladzijden = dik.": {"en":"Many pages = dik (thick).","ar":"صفحات كثيرة = dik (سميك).","uk":"Багато сторінок = dik (товста).","tr":"Çok sayfa = dik (kalın).","ro":"Multe pagini = dik (gros).","bg":"Много страници = dik (дебела).", "fa": "صفحه‌های زیاد = dik (کلفت)."},
+ "Naast je huis = niet ver.": {"en":"Next to your house = not far.","ar":"بجانب بيتك = ليست بعيدة.","uk":"Поруч із домом = недалеко.","tr":"Evinin yanı = uzak değil.","ro":"Lângă casa ta = nu departe.","bg":"До къщата ти = не е далеч.", "fa": "کنار خانه‌ات = دور نیست."},
+ "Op de tafel = erop.": {"en":"On the table = erop (on it).","ar":"على الطاولة = erop (عليها).","uk":"На столі = erop (на ньому).","tr":"Masanın üstü = erop (üstünde).","ro":"Pe masă = erop (pe ea).","bg":"На масата = erop (върху нея).", "fa": "روی میز = erop (روی آن)."},
+ "Uit het etui = eruit.": {"en":"Out of the pencil case = eruit (out of it).","ar":"من المقلمة = eruit (منها).","uk":"З пенала = eruit (з нього).","tr":"Kalem kutusundan = eruit (içinden).","ro":"Din penar = eruit (din el).","bg":"От несесера = eruit (от него).", "fa": "از جامدادی = eruit (از آن بیرون)."},
+ "De helft = half.": {"en":"De helft (the half) = half.","ar":"de helft (النصف) = half.","uk":"De helft (половина) = half.","tr":"De helft (yarısı) = half.","ro":"De helft (jumătatea) = half.","bg":"De helft (половината) = half.", "fa": "De helft (نصف) = half."},
+ "Maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag.": {"en":"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.","ar":"الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد.","uk":"Понеділок, вівторок, середа, четвер, п'ятниця, субота, неділя.","tr":"Pazartesi, salı, çarşamba, perşembe, cuma, cumartesi, pazar.","ro":"Luni, marți, miercuri, joi, vineri, sâmbătă, duminică.","bg":"Понеделник, вторник, сряда, четвъртък, петък, събота, неделя.", "fa": "دوشنبه، سه‌شنبه، چهارشنبه، پنج‌شنبه، جمعه، شنبه، یکشنبه."},
+ "Na vijf komt één meer.": {"en":"After five comes one more.","ar":"بعد خمسة يأتي واحد أكثر.","uk":"Після п'яти — на одне більше.","tr":"Beşten sonra bir fazlası gelir.","ro":"După cinci vine cu unu mai mult.","bg":"След пет идва с едно повече.", "fa": "بعد از پنج، یکی بیشتر می‌آید."},
+ "De dag van nu.": {"en":"The day of now.","ar":"يوم الآن.","uk":"День, який зараз.","tr":"Şimdiki gün.","ro":"Ziua de acum.","bg":"Денят сега.", "fa": "روزِ همین حالا."},
+ "Die dag is al voorbij.": {"en":"That day is already over.","ar":"ذلك اليوم انتهى.","uk":"Той день уже минув.","tr":"O gün geçti bile.","ro":"Ziua aceea a trecut deja.","bg":"Този ден вече мина.", "fa": "آن روز دیگر گذشته است."},
+ "Na 12 uur is het…": {"en":"After 12 o'clock it is…","ar":"بعد الساعة 12 يكون…","uk":"Після 12 години…","tr":"Saat 12'den sonra…","ro":"După ora 12 este…","bg":"След 12 часа е…", "fa": "بعد از ساعت 12 می‌شود…"},
+ "Aan de beurt = nu jij.": {"en":"Aan de beurt (your turn) = now you.","ar":"aan de beurt (دورك) = الآن أنت.","uk":"Aan de beurt (твоя черга) = тепер ти.","tr":"Aan de beurt (sıra sende) = şimdi sen.","ro":"Aan de beurt (e rândul tău) = acum tu.","bg":"Aan de beurt (твой ред) = сега ти.", "fa": "Aan de beurt (نوبت تو) = حالا تو."},
+ "Zo laat je de juf zien dat je iets wilt zeggen.": {"en":"This way you show the teacher you want to say something.","ar":"هكذا تُظهر للمعلمة أنك تريد أن تقول شيئًا.","uk":"Так ти показуєш учительці, що хочеш щось сказати.","tr":"Böylece öğretmene bir şey söylemek istediğini gösterirsin.","ro":"Așa îi arăți doamnei că vrei să spui ceva.","bg":"Така показваш на учителката, че искаш да кажеш нещо.", "fa": "این‌طوری به خانم معلم نشان می‌دهی که می‌خواهی چیزی بگویی."},
+ "Neem even de tijd.": {"en":"Take your time for a moment.","ar":"خذ وقتك قليلًا.","uk":"Не поспішай.","tr":"Biraz zaman ayır.","ro":"Ia-ți puțin timp.","bg":"Не бързай.", "fa": "کمی به خودت وقت بده."},
+ "Vertellen = iets zeggen over wat je deed.": {"en":"Vertellen (to tell) = say something about what you did.","ar":"vertellen (يحكي) = تقول شيئًا عما فعلت.","uk":"Vertellen (розповідати) = казати щось про те, що ти робив.","tr":"Vertellen (anlatmak) = yaptığın şey hakkında bir şey söylemek.","ro":"Vertellen (a povesti) = să spui ceva despre ce ai făcut.","bg":"Vertellen (разказвам) = да кажеш нещо за това, което си правил.", "fa": "Vertellen (تعریف کردن) = چیزی گفتن درباره‌ی کاری که کردی."},
+ "Een jas houdt je warm.": {"en":"A coat keeps you warm.","ar":"المعطف يبقيك دافئًا.","uk":"Куртка зігріває.","tr":"Mont seni sıcak tutar.","ro":"Geaca te ține de cald.","bg":"Якето те топли.", "fa": "کاپشن تو را گرم نگه می‌دارد."},
+ "Niet moeilijk = makkelijk.": {"en":"Not difficult = makkelijk (easy).","ar":"ليست صعبة = makkelijk (سهلة).","uk":"Не важко = makkelijk (легко).","tr":"Zor değil = makkelijk (kolay).","ro":"Nu e greu = makkelijk (ușor).","bg":"Не е трудно = makkelijk (лесно).", "fa": "سخت نیست = makkelijk (آسان)."},
+ "Heel blij = gelukkig.": {"en":"Very happy = gelukkig.","ar":"سعيد جدًا = gelukkig.","uk":"Дуже радий = gelukkig (щасливий).","tr":"Çok mutlu = gelukkig.","ro":"Foarte bucuros = gelukkig (fericit).","bg":"Много радостен = gelukkig (щастлив).", "fa": "خیلی خوشحال = gelukkig."},
+ "Durven = het toch doen.": {"en":"Durven (to dare) = do it anyway.","ar":"durven (يتجرأ) = تفعلها رغم ذلك.","uk":"Durven (наважуватися) = все одно це зробити.","tr":"Durven (cesaret etmek) = yine de yapmak.","ro":"Durven (a îndrăzni) = să o faci totuși.","bg":"Durven (осмелявам се) = все пак да го направиш.", "fa": "Durven (جرئت کردن) = باز هم انجامش دادن."},
  // 3 okt 2026: trede 3 "De brug" — Opdrachtwoorden + Rekenverhaaltjes.
- "Op je blad staat: omcirkel de appel. Wat doe je?": {"en":"Your sheet says: circle the apple. What do you do?","ar":"مكتوب في ورقتك: ضع دائرة حول التفاحة. ماذا تفعل؟","uk":"На твоєму аркуші написано: обведи яблуко. Що ти робиш?","tr":"Kâğıdında yazıyor: elmanın etrafına daire çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: încercuiește mărul. Ce faci?","bg":"На листа ти пише: огради ябълката. Какво правиш?"},
- "Ik zet een rondje om de appel.": {"en":"I draw a circle around the apple.","ar":"أرسم دائرة حول التفاحة.","uk":"Я обводжу яблуко колом.","tr":"Elmanın etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul mărului.","bg":"Рисувам кръгче около ябълката."},
- "Ik zet een kruisje op de appel.": {"en":"I put a cross on the apple.","ar":"أضع علامة إكس على التفاحة.","uk":"Я ставлю хрестик на яблуко.","tr":"Elmanın üstüne çarpı koyarım.","ro":"Pun un x pe măr.","bg":"Слагам кръстче върху ябълката."},
- "Ik kleur de appel rood.": {"en":"I colour the apple red.","ar":"ألوّن التفاحة باللون الأحمر.","uk":"Я розфарбовую яблуко в червоний колір.","tr":"Elmayı kırmızıya boyarım.","ro":"Colorez mărul cu roșu.","bg":"Оцветявам ябълката в червено."},
- "Ik schrijf het woord appel op.": {"en":"I write down the word apple.","ar":"أكتب كلمة تفاحة.","uk":"Я записую слово «яблуко».","tr":"Elma kelimesini yazarım.","ro":"Scriu cuvântul măr.","bg":"Записвам думата ябълка."},
- "Op je blad staat: onderstreep het woord. Wat doe je?": {"en":"Your sheet says: underline the word. What do you do?","ar":"مكتوب في ورقتك: ضع خطًا تحت الكلمة. ماذا تفعل؟","uk":"На твоєму аркуші написано: підкресли слово. Що ти робиш?","tr":"Kâğıdında yazıyor: kelimenin altını çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: subliniază cuvântul. Ce faci?","bg":"На листа ти пише: подчертай думата. Какво правиш?"},
- "Ik zet een streep onder het woord.": {"en":"I draw a line under the word.","ar":"أرسم خطًا تحت الكلمة.","uk":"Я проводжу лінію під словом.","tr":"Kelimenin altına bir çizgi çekerim.","ro":"Trag o linie sub cuvânt.","bg":"Чертая линия под думата."},
- "Ik zet een rondje om het woord.": {"en":"I draw a circle around the word.","ar":"أرسم دائرة حول الكلمة.","uk":"Я обводжу слово колом.","tr":"Kelimenin etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul cuvântului.","bg":"Рисувам кръгче около думата."},
- "Ik gum het woord uit.": {"en":"I rub out the word.","ar":"أمسح الكلمة بالممحاة.","uk":"Я стираю слово гумкою.","tr":"Kelimeyi silgiyle silerim.","ro":"Șterg cuvântul cu guma.","bg":"Изтривам думата с гумичка."},
- "Ik lees het woord hardop.": {"en":"I read the word out loud.","ar":"أقرأ الكلمة بصوت عالٍ.","uk":"Я читаю слово вголос.","tr":"Kelimeyi sesli okurum.","ro":"Citesc cuvântul cu voce tare.","bg":"Чета думата на глас."},
- "Op je blad staat: kruis het goede antwoord aan. Wat doe je?": {"en":"Your sheet says: tick the right answer. What do you do?","ar":"مكتوب في ورقتك: ضع علامة عند الجواب الصحيح. ماذا تفعل؟","uk":"На твоєму аркуші написано: познач хрестиком правильну відповідь. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru cevabı işaretle. Ne yaparsın?","ro":"Pe foaia ta scrie: bifează răspunsul corect. Ce faci?","bg":"На листа ти пише: отбележи верния отговор с кръстче. Какво правиш?"},
- "Ik zet een kruisje bij het goede antwoord.": {"en":"I put a cross next to the right answer.","ar":"أضع علامة إكس بجانب الجواب الصحيح.","uk":"Я ставлю хрестик біля правильної відповіді.","tr":"Doğru cevabın yanına çarpı koyarım.","ro":"Pun un x lângă răspunsul corect.","bg":"Слагам кръстче до верния отговор."},
- "Ik zet een kruisje bij alle antwoorden.": {"en":"I put a cross next to all the answers.","ar":"أضع علامة إكس بجانب كل الأجوبة.","uk":"Я ставлю хрестик біля всіх відповідей.","tr":"Bütün cevapların yanına çarpı koyarım.","ro":"Pun un x lângă toate răspunsurile.","bg":"Слагам кръстче до всички отговори."},
- "Ik schrijf het antwoord over.": {"en":"I copy the answer.","ar":"أنسخ الجواب.","uk":"Я переписую відповідь.","tr":"Cevabı aynen yazarım.","ro":"Copiez răspunsul.","bg":"Преписвам отговора."},
- "Ik kleur het hele blad.": {"en":"I colour the whole sheet.","ar":"ألوّن الورقة كلها.","uk":"Я розфарбовую весь аркуш.","tr":"Bütün kâğıdı boyarım.","ro":"Colorez toată foaia.","bg":"Оцветявам целия лист."},
- "Op je blad staat: zet een streep door het foute woord. Wat doe je?": {"en":"Your sheet says: cross out the wrong word. What do you do?","ar":"مكتوب في ورقتك: اشطب الكلمة الخاطئة. ماذا تفعل؟","uk":"На твоєму аркуші написано: закресли неправильне слово. Що ти робиш?","tr":"Kâğıdında yazıyor: yanlış kelimenin üstünü çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: tăie cuvântul greșit. Ce faci?","bg":"На листа ти пише: задраскай грешната дума. Какво правиш?"},
- "Ik zet een streep door het foute woord.": {"en":"I draw a line through the wrong word.","ar":"أرسم خطًا على الكلمة الخاطئة.","uk":"Я закреслюю неправильне слово.","tr":"Yanlış kelimenin üstüne bir çizgi çekerim.","ro":"Trag o linie peste cuvântul greșit.","bg":"Задрасквам грешната дума с линия."},
- "Ik zet een streep onder het goede woord.": {"en":"I draw a line under the right word.","ar":"أرسم خطًا تحت الكلمة الصحيحة.","uk":"Я підкреслюю правильне слово.","tr":"Doğru kelimenin altına bir çizgi çekerim.","ro":"Trag o linie sub cuvântul corect.","bg":"Подчертавам вярната дума."},
- "Ik schrijf het foute woord nog een keer.": {"en":"I write the wrong word again.","ar":"أكتب الكلمة الخاطئة مرة أخرى.","uk":"Я ще раз пишу неправильне слово.","tr":"Yanlış kelimeyi bir kez daha yazarım.","ro":"Scriu cuvântul greșit încă o dată.","bg":"Пиша грешната дума още веднъж."},
- "Ik zet een rondje om het foute woord.": {"en":"I draw a circle around the wrong word.","ar":"أرسم دائرة حول الكلمة الخاطئة.","uk":"Я обводжу неправильне слово колом.","tr":"Yanlış kelimenin etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul cuvântului greșit.","bg":"Рисувам кръгче около грешната дума."},
- "Op je blad staat: trek een lijn van de hond naar het hok. Wat doe je?": {"en":"Your sheet says: draw a line from the dog to the kennel. What do you do?","ar":"مكتوب في ورقتك: ارسم خطًا من الكلب إلى بيته. ماذا تفعل؟","uk":"На твоєму аркуші написано: проведи лінію від собаки до будки. Що ти робиш?","tr":"Kâğıdında yazıyor: köpekten kulübeye bir çizgi çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: trage o linie de la câine la cușcă. Ce faci?","bg":"На листа ти пише: начертай линия от кучето до колибката. Какво правиш?"},
- "Ik trek een lijn van de hond naar het hok.": {"en":"I draw a line from the dog to the kennel.","ar":"أرسم خطًا من الكلب إلى بيته.","uk":"Я проводжу лінію від собаки до будки.","tr":"Köpekten kulübeye bir çizgi çekerim.","ro":"Trag o linie de la câine la cușcă.","bg":"Чертая линия от кучето до колибката."},
- "Ik teken een nieuwe hond.": {"en":"I draw a new dog.","ar":"أرسم كلبًا جديدًا.","uk":"Я малюю нового собаку.","tr":"Yeni bir köpek çizerim.","ro":"Desenez un câine nou.","bg":"Рисувам ново куче."},
- "Ik kleur het hok.": {"en":"I colour the kennel.","ar":"ألوّن بيت الكلب.","uk":"Я розфарбовую будку.","tr":"Kulübeyi boyarım.","ro":"Colorez cușca.","bg":"Оцветявам колибката."},
- "Ik zet een kruisje op de hond.": {"en":"I put a cross on the dog.","ar":"أضع علامة إكس على الكلب.","uk":"Я ставлю хрестик на собаку.","tr":"Köpeğin üstüne çarpı koyarım.","ro":"Pun un x pe câine.","bg":"Слагам кръстче върху кучето."},
- "Op je blad staat: vul in. Er staat een lege plek. Wat doe je?": {"en":"Your sheet says: fill in. There is an empty space. What do you do?","ar":"مكتوب في ورقتك: املأ الفراغ. هناك مكان فارغ. ماذا تفعل؟","uk":"На твоєму аркуші написано: заповни. Там є порожнє місце. Що ти робиш?","tr":"Kâğıdında yazıyor: boşluğu doldur. Boş bir yer var. Ne yaparsın?","ro":"Pe foaia ta scrie: completează. Este un loc gol. Ce faci?","bg":"На листа ти пише: попълни. Има празно място. Какво правиш?"},
- "Ik schrijf het goede woord op de lege plek.": {"en":"I write the right word in the empty space.","ar":"أكتب الكلمة الصحيحة في المكان الفارغ.","uk":"Я пишу правильне слово в порожнє місце.","tr":"Doğru kelimeyi boş yere yazarım.","ro":"Scriu cuvântul corect în locul gol.","bg":"Пиша вярната дума на празното място."},
- "Ik laat de plek leeg.": {"en":"I leave the space empty.","ar":"أترك المكان فارغًا.","uk":"Я залишаю місце порожнім.","tr":"Yeri boş bırakırım.","ro":"Las locul gol.","bg":"Оставям мястото празно."},
- "Ik teken een bloem op de plek.": {"en":"I draw a flower in the space.","ar":"أرسم زهرة في المكان.","uk":"Я малюю квітку на цьому місці.","tr":"O yere bir çiçek çizerim.","ro":"Desenez o floare în acel loc.","bg":"Рисувам цвете на мястото."},
- "Ik gum de zin uit.": {"en":"I rub out the sentence.","ar":"أمسح الجملة بالممحاة.","uk":"Я стираю речення гумкою.","tr":"Cümleyi silgiyle silerim.","ro":"Șterg propoziția cu guma.","bg":"Изтривам изречението с гумичка."},
- "De juf zegt: schrijf je naam erboven. Wat doe je?": {"en":"The teacher says: write your name at the top. What do you do?","ar":"تقول المعلمة: اكتب اسمك في الأعلى. ماذا تفعل؟","uk":"Вчителька каже: напиши своє ім'я зверху. Що ти робиш?","tr":"Öğretmen diyor ki: adını en üste yaz. Ne yaparsın?","ro":"Doamna învățătoare spune: scrie-ți numele sus. Ce faci?","bg":"Учителката казва: напиши името си най-горе. Какво правиш?"},
- "Ik schrijf mijn naam bovenaan het blad.": {"en":"I write my name at the top of the sheet.","ar":"أكتب اسمي في أعلى الورقة.","uk":"Я пишу своє ім'я вгорі аркуша.","tr":"Adımı kâğıdın en üstüne yazarım.","ro":"Îmi scriu numele în partea de sus a foii.","bg":"Пиша името си най-горе на листа."},
- "Ik schrijf mijn naam onderaan het blad.": {"en":"I write my name at the bottom of the sheet.","ar":"أكتب اسمي في أسفل الورقة.","uk":"Я пишу своє ім'я внизу аркуша.","tr":"Adımı kâğıdın en altına yazarım.","ro":"Îmi scriu numele în partea de jos a foii.","bg":"Пиша името си най-долу на листа."},
- "Ik zeg mijn naam hardop.": {"en":"I say my name out loud.","ar":"أقول اسمي بصوت عالٍ.","uk":"Я кажу своє ім'я вголос.","tr":"Adımı sesli söylerim.","ro":"Îmi spun numele cu voce tare.","bg":"Казвам името си на глас."},
- "Ik schrijf de naam van de juf.": {"en":"I write the teacher's name.","ar":"أكتب اسم المعلمة.","uk":"Я пишу ім'я вчительки.","tr":"Öğretmenin adını yazarım.","ro":"Scriu numele doamnei învățătoare.","bg":"Пиша името на учителката."},
- "Op je blad staat: schrijf het antwoord op. Wat doe je?": {"en":"Your sheet says: write down the answer. What do you do?","ar":"مكتوب في ورقتك: اكتب الجواب. ماذا تفعل؟","uk":"На твоєму аркуші написано: запиши відповідь. Що ти робиш?","tr":"Kâğıdında yazıyor: cevabı yaz. Ne yaparsın?","ro":"Pe foaia ta scrie: scrie răspunsul. Ce faci?","bg":"На листа ти пише: запиши отговора. Какво правиш?"},
- "Ik schrijf het antwoord met mijn potlood.": {"en":"I write the answer with my pencil.","ar":"أكتب الجواب بقلم الرصاص.","uk":"Я пишу відповідь олівцем.","tr":"Cevabı kurşun kalemimle yazarım.","ro":"Scriu răspunsul cu creionul meu.","bg":"Пиша отговора с молива си."},
- "Ik zeg het antwoord tegen een vriend.": {"en":"I tell the answer to a friend.","ar":"أقول الجواب لصديق.","uk":"Я кажу відповідь другові.","tr":"Cevabı bir arkadaşıma söylerim.","ro":"Îi spun răspunsul unui prieten.","bg":"Казвам отговора на приятел."},
- "Ik denk aan het antwoord.": {"en":"I think about the answer.","ar":"أفكر في الجواب.","uk":"Я думаю про відповідь.","tr":"Cevabı düşünürüm.","ro":"Mă gândesc la răspuns.","bg":"Мисля за отговора."},
- "Ik wijs het antwoord aan.": {"en":"I point to the answer.","ar":"أشير إلى الجواب.","uk":"Я показую на відповідь пальцем.","tr":"Cevabı parmağımla gösteririm.","ro":"Arăt răspunsul cu degetul.","bg":"Посочвам отговора."},
- "Op je blad staat: maak de zin af. De zin is: Ik eet een … Wat doe je?": {"en":"Your sheet says: finish the sentence. The sentence is: I eat a … What do you do?","ar":"مكتوب في ورقتك: أكمل الجملة. الجملة هي: آكل … ماذا تفعل؟","uk":"На твоєму аркуші написано: закінчи речення. Речення таке: Я їм … Що ти робиш?","tr":"Kâğıdında yazıyor: cümleyi tamamla. Cümle şu: Ben bir … yiyorum. Ne yaparsın?","ro":"Pe foaia ta scrie: termină propoziția. Propoziția este: Eu mănânc un … Ce faci?","bg":"На листа ти пише: довърши изречението. Изречението е: Аз ям … Какво правиш?"},
- "Ik schrijf een woord aan het eind, bijvoorbeeld appel.": {"en":"I write a word at the end, for example apple.","ar":"أكتب كلمة في النهاية، مثلًا تفاحة.","uk":"Я пишу слово в кінці, наприклад «яблуко».","tr":"Sona bir kelime yazarım, örneğin elma.","ro":"Scriu un cuvânt la sfârșit, de exemplu măr.","bg":"Пиша дума накрая, например ябълка."},
- "Ik begin een nieuwe zin.": {"en":"I start a new sentence.","ar":"أبدأ جملة جديدة.","uk":"Я починаю нове речення.","tr":"Yeni bir cümleye başlarım.","ro":"Încep o propoziție nouă.","bg":"Започвам ново изречение."},
- "Ik lees de zin en ga verder.": {"en":"I read the sentence and carry on.","ar":"أقرأ الجملة وأكمل.","uk":"Я читаю речення і йду далі.","tr":"Cümleyi okurum ve devam ederim.","ro":"Citesc propoziția și merg mai departe.","bg":"Чета изречението и продължавам."},
- "De juf zegt: sla de bladzijde om. Wat doe je?": {"en":"The teacher says: turn the page. What do you do?","ar":"تقول المعلمة: اقلب الصفحة. ماذا تفعل؟","uk":"Вчителька каже: переверни сторінку. Що ти робиш?","tr":"Öğretmen diyor ki: sayfayı çevir. Ne yaparsın?","ro":"Doamna învățătoare spune: întoarce pagina. Ce faci?","bg":"Учителката казва: обърни страницата. Какво правиш?"},
- "Ik ga naar de volgende bladzijde.": {"en":"I go to the next page.","ar":"أنتقل إلى الصفحة التالية.","uk":"Я переходжу на наступну сторінку.","tr":"Bir sonraki sayfaya geçerim.","ro":"Merg la pagina următoare.","bg":"Отивам на следващата страница."},
- "Ik doe mijn boek dicht.": {"en":"I close my book.","ar":"أغلق كتابي.","uk":"Я закриваю свою книжку.","tr":"Kitabımı kapatırım.","ro":"Închid cartea.","bg":"Затварям книгата си."},
- "Ik scheur de bladzijde eruit.": {"en":"I tear the page out.","ar":"أمزّق الصفحة وأخرجها.","uk":"Я вириваю сторінку.","tr":"Sayfayı koparırım.","ro":"Rup pagina din carte.","bg":"Скъсвам страницата."},
- "Ik begin weer bij de eerste bladzijde.": {"en":"I start again at the first page.","ar":"أبدأ من جديد من الصفحة الأولى.","uk":"Я знову починаю з першої сторінки.","tr":"Yeniden ilk sayfadan başlarım.","ro":"Încep din nou de la prima pagină.","bg":"Започвам отново от първата страница."},
- "Op je blad staat: lees de zin. Wat doe je?": {"en":"Your sheet says: read the sentence. What do you do?","ar":"مكتوب في ورقتك: اقرأ الجملة. ماذا تفعل؟","uk":"На твоєму аркуші написано: прочитай речення. Що ти робиш?","tr":"Kâğıdında yazıyor: cümleyi oku. Ne yaparsın?","ro":"Pe foaia ta scrie: citește propoziția. Ce faci?","bg":"На листа ти пише: прочети изречението. Какво правиш?"},
- "Ik kijk naar de woorden en lees ze.": {"en":"I look at the words and read them.","ar":"أنظر إلى الكلمات وأقرأها.","uk":"Я дивлюся на слова і читаю їх.","tr":"Kelimelere bakarım ve okurum.","ro":"Mă uit la cuvinte și le citesc.","bg":"Гледам думите и ги чета."},
- "Ik schrijf de zin over.": {"en":"I copy the sentence.","ar":"أنسخ الجملة.","uk":"Я переписую речення.","tr":"Cümleyi aynen yazarım.","ro":"Copiez propoziția.","bg":"Преписвам изречението."},
- "Ik teken de zin.": {"en":"I draw the sentence.","ar":"أرسم الجملة.","uk":"Я малюю речення.","tr":"Cümleyi çizerim.","ro":"Desenez propoziția.","bg":"Рисувам изречението."},
- "Ik sla de zin over.": {"en":"I skip the sentence.","ar":"أتخطى الجملة.","uk":"Я пропускаю речення.","tr":"Cümleyi atlarım.","ro":"Sar peste propoziție.","bg":"Пропускам изречението."},
- "Op je blad staat: tel de ballen. Wat doe je?": {"en":"Your sheet says: count the balls. What do you do?","ar":"مكتوب في ورقتك: عُدّ الكرات. ماذا تفعل؟","uk":"На твоєму аркуші написано: порахуй м'ячі. Що ти робиш?","tr":"Kâğıdında yazıyor: topları say. Ne yaparsın?","ro":"Pe foaia ta scrie: numără mingile. Ce faci?","bg":"На листа ти пише: преброй топките. Какво правиш?"},
- "Ik tel hoeveel ballen er zijn.": {"en":"I count how many balls there are.","ar":"أعدّ كم كرة هناك.","uk":"Я рахую, скільки там м'ячів.","tr":"Kaç tane top olduğunu sayarım.","ro":"Număr câte mingi sunt.","bg":"Броя колко топки има."},
- "Ik kleur de ballen.": {"en":"I colour the balls.","ar":"ألوّن الكرات.","uk":"Я розфарбовую м'ячі.","tr":"Topları boyarım.","ro":"Colorez mingile.","bg":"Оцветявам топките."},
- "Ik teken een bal erbij.": {"en":"I draw one more ball.","ar":"أرسم كرة إضافية.","uk":"Я домальовую ще один м'яч.","tr":"Bir top daha çizerim.","ro":"Mai desenez o minge.","bg":"Дорисувам още една топка."},
- "Ik zet een kruisje op één bal.": {"en":"I put a cross on one ball.","ar":"أضع علامة إكس على كرة واحدة.","uk":"Я ставлю хрестик на один м'яч.","tr":"Bir topun üstüne çarpı koyarım.","ro":"Pun un x pe o minge.","bg":"Слагам кръстче върху една топка."},
- "Op je blad staat: reken uit. 4 + 3 = … Wat doe je?": {"en":"Your sheet says: work it out. 4 + 3 = … What do you do?","ar":"مكتوب في ورقتك: احسب. 4 + 3 = … ماذا تفعل؟","uk":"На твоєму аркуші написано: обчисли. 4 + 3 = … Що ти робиш?","tr":"Kâğıdında yazıyor: hesapla. 4 + 3 = … Ne yaparsın?","ro":"Pe foaia ta scrie: calculează. 4 + 3 = … Ce faci?","bg":"На листа ти пише: пресметни. 4 + 3 = … Какво правиш?"},
- "Ik reken het antwoord uit en schrijf 7.": {"en":"I work out the answer and write 7.","ar":"أحسب الجواب وأكتب 7.","uk":"Я рахую відповідь і пишу 7.","tr":"Cevabı hesaplarım ve 7 yazarım.","ro":"Calculez răspunsul și scriu 7.","bg":"Пресмятам отговора и пиша 7."},
- "Ik schrijf de som over.": {"en":"I copy the sum.","ar":"أنسخ العملية الحسابية.","uk":"Я переписую приклад.","tr":"İşlemi aynen yazarım.","ro":"Copiez exercițiul.","bg":"Преписвам задачата."},
- "Ik zet een rondje om de 4.": {"en":"I draw a circle around the 4.","ar":"أرسم دائرة حول الرقم 4.","uk":"Я обводжу колом цифру 4.","tr":"4'ün etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul lui 4.","bg":"Рисувам кръгче около 4."},
- "Ik laat het leeg.": {"en":"I leave it empty.","ar":"أتركه فارغًا.","uk":"Я залишаю це порожнім.","tr":"Boş bırakırım.","ro":"Îl las gol.","bg":"Оставям го празно."},
- "Op je blad staat: vergelijk. Welke toren is hoger? Wat doe je?": {"en":"Your sheet says: compare. Which tower is taller? What do you do?","ar":"مكتوب في ورقتك: قارن. أي برج أعلى؟ ماذا تفعل؟","uk":"На твоєму аркуші написано: порівняй. Яка вежа вища? Що ти робиш?","tr":"Kâğıdında yazıyor: karşılaştır. Hangi kule daha yüksek? Ne yaparsın?","ro":"Pe foaia ta scrie: compară. Care turn este mai înalt? Ce faci?","bg":"На листа ти пише: сравни. Коя кула е по-висока? Какво правиш?"},
- "Ik kijk naar allebei en zoek de hoogste.": {"en":"I look at both and find the tallest.","ar":"أنظر إلى الاثنين وأبحث عن الأعلى.","uk":"Я дивлюся на обидві і шукаю найвищу.","tr":"İkisine de bakarım ve en yüksek olanı bulurum.","ro":"Mă uit la amândouă și îl caut pe cel mai înalt.","bg":"Гледам и двете и търся най-високата."},
- "Ik kijk alleen naar de eerste toren.": {"en":"I only look at the first tower.","ar":"أنظر فقط إلى البرج الأول.","uk":"Я дивлюся тільки на першу вежу.","tr":"Sadece ilk kuleye bakarım.","ro":"Mă uit doar la primul turn.","bg":"Гледам само първата кула."},
- "Ik teken een nieuwe toren.": {"en":"I draw a new tower.","ar":"أرسم برجًا جديدًا.","uk":"Я малюю нову вежу.","tr":"Yeni bir kule çizerim.","ro":"Desenez un turn nou.","bg":"Рисувам нова кула."},
- "Ik tel de torens.": {"en":"I count the towers.","ar":"أعدّ الأبراج.","uk":"Я рахую вежі.","tr":"Kuleleri sayarım.","ro":"Număr turnurile.","bg":"Броя кулите."},
- "Op je blad staat: hoeveel meer? Tim heeft 5 knikkers. Sara heeft 3. Wat reken je uit?": {"en":"Your sheet says: how many more? Tim has 5 marbles. Sara has 3. What do you work out?","ar":"مكتوب في ورقتك: كم أكثر؟ عند تيم 5 كرات زجاجية. عند سارة 3. ماذا تحسب؟","uk":"На твоєму аркуші написано: на скільки більше? У Тіма 5 кульок. У Сари 3. Що ти рахуєш?","tr":"Kâğıdında yazıyor: kaç tane fazla? Tim'in 5 bilyesi var. Sara'nın 3. Neyi hesaplarsın?","ro":"Pe foaia ta scrie: cu cât mai multe? Tim are 5 bile. Sara are 3. Ce calculezi?","bg":"На листа ти пише: с колко повече? Тим има 5 топчета. Сара има 3. Какво пресмяташ?"},
- "Hoeveel Tim er meer heeft dan Sara.": {"en":"How many more Tim has than Sara.","ar":"كم عند تيم أكثر من سارة.","uk":"На скільки в Тіма більше, ніж у Сари.","tr":"Tim'in Sara'dan kaç tane fazlası olduğunu.","ro":"Cu câte are Tim mai multe decât Sara.","bg":"С колко Тим има повече от Сара."},
- "Hoeveel knikkers ze samen hebben.": {"en":"How many marbles they have together.","ar":"كم كرة عندهما معًا.","uk":"Скільки кульок у них разом.","tr":"Birlikte kaç bilyeleri olduğunu.","ro":"Câte bile au împreună.","bg":"Колко топчета имат заедно."},
- "Hoeveel knikkers Sara heeft.": {"en":"How many marbles Sara has.","ar":"كم كرة عند سارة.","uk":"Скільки кульок у Сари.","tr":"Sara'nın kaç bilyesi olduğunu.","ro":"Câte bile are Sara.","bg":"Колко топчета има Сара."},
- "Hoe oud Tim is.": {"en":"How old Tim is.","ar":"كم عمر تيم.","uk":"Скільки років Тімові.","tr":"Tim'in kaç yaşında olduğunu.","ro":"Câți ani are Tim.","bg":"На колко години е Тим."},
- "Op je blad staat: kies het goede woord. Wat doe je?": {"en":"Your sheet says: choose the right word. What do you do?","ar":"مكتوب في ورقتك: اختر الكلمة الصحيحة. ماذا تفعل؟","uk":"На твоєму аркуші написано: вибери правильне слово. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru kelimeyi seç. Ne yaparsın?","ro":"Pe foaia ta scrie: alege cuvântul corect. Ce faci?","bg":"На листа ти пише: избери вярната дума. Какво правиш?"},
- "Ik kies één woord dat past.": {"en":"I choose one word that fits.","ar":"أختار كلمة واحدة مناسبة.","uk":"Я вибираю одне слово, яке підходить.","tr":"Uyan bir kelime seçerim.","ro":"Aleg un cuvânt care se potrivește.","bg":"Избирам една дума, която пасва."},
- "Ik schrijf alle woorden op.": {"en":"I write down all the words.","ar":"أكتب كل الكلمات.","uk":"Я записую всі слова.","tr":"Bütün kelimeleri yazarım.","ro":"Scriu toate cuvintele.","bg":"Записвам всички думи."},
- "Ik kies geen woord.": {"en":"I don't choose a word.","ar":"لا أختار أي كلمة.","uk":"Я не вибираю жодного слова.","tr":"Hiçbir kelime seçmem.","ro":"Nu aleg niciun cuvânt.","bg":"Не избирам нито една дума."},
- "Ik verzin een nieuw woord.": {"en":"I make up a new word.","ar":"أخترع كلمة جديدة.","uk":"Я вигадую нове слово.","tr":"Yeni bir kelime uydururum.","ro":"Inventez un cuvânt nou.","bg":"Измислям нова дума."},
- "Op je blad staat: welke hoort er niet bij? Appel, peer, banaan, schoen. Wat zoek je?": {"en":"Your sheet says: which one does not belong? Apple, pear, banana, shoe. What are you looking for?","ar":"مكتوب في ورقتك: أيّها لا ينتمي إلى المجموعة؟ تفاحة، كمثرى، موزة، حذاء. عمّ تبحث؟","uk":"На твоєму аркуші написано: що тут зайве? Яблуко, груша, банан, черевик. Що ти шукаєш?","tr":"Kâğıdında yazıyor: hangisi gruba uymaz? Elma, armut, muz, ayakkabı. Ne ararsın?","ro":"Pe foaia ta scrie: care nu se potrivește? Măr, pară, banană, pantof. Ce cauți?","bg":"На листа ти пише: кое не е от групата? Ябълка, круша, банан, обувка. Какво търсиш?"},
- "Het ding dat anders is dan de rest.": {"en":"The thing that is different from the rest.","ar":"الشيء المختلف عن الباقي.","uk":"Те, що відрізняється від інших.","tr":"Diğerlerinden farklı olan şeyi.","ro":"Lucrul care este diferit de celelalte.","bg":"Нещото, което е различно от останалите."},
- "Het ding dat ik het lekkerst vind.": {"en":"The thing I like eating most.","ar":"الشيء الذي أحبه أكثر.","uk":"Те, що мені найсмачніше.","tr":"En sevdiğim şeyi.","ro":"Lucrul care mi se pare cel mai gustos.","bg":"Нещото, което ми е най-вкусно."},
- "Het eerste woord.": {"en":"The first word.","ar":"الكلمة الأولى.","uk":"Перше слово.","tr":"İlk kelimeyi.","ro":"Primul cuvânt.","bg":"Първата дума."},
- "Het langste woord.": {"en":"The longest word.","ar":"أطول كلمة.","uk":"Найдовше слово.","tr":"En uzun kelimeyi.","ro":"Cel mai lung cuvânt.","bg":"Най-дългата дума."},
- "Op je blad staat: is het goed of fout? 2 + 2 = 5. Wat doe je?": {"en":"Your sheet says: is it right or wrong? 2 + 2 = 5. What do you do?","ar":"مكتوب في ورقتك: هل هذا صحيح أم خطأ؟ 2 + 2 = 5. ماذا تفعل؟","uk":"На твоєму аркуші написано: правильно чи неправильно? 2 + 2 = 5. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru mu yanlış mı? 2 + 2 = 5. Ne yaparsın?","ro":"Pe foaia ta scrie: este corect sau greșit? 2 + 2 = 5. Ce faci?","bg":"На листа ти пише: вярно ли е или грешно? 2 + 2 = 5. Какво правиш?"},
- "Ik kijk of het klopt. Het is fout.": {"en":"I check if it is right. It is wrong.","ar":"أتحقق إن كان صحيحًا. إنه خطأ.","uk":"Я перевіряю, чи це правильно. Це неправильно.","tr":"Doğru mu diye bakarım. Yanlış.","ro":"Verific dacă este corect. Este greșit.","bg":"Проверявам дали е вярно. Грешно е."},
- "Ik schrijf 2 + 2 = 5 over.": {"en":"I copy 2 + 2 = 5.","ar":"أنسخ 2 + 2 = 5.","uk":"Я переписую 2 + 2 = 5.","tr":"2 + 2 = 5'i aynen yazarım.","ro":"Copiez 2 + 2 = 5.","bg":"Преписвам 2 + 2 = 5."},
- "Ik zeg dat het goed is.": {"en":"I say that it is right.","ar":"أقول إنه صحيح.","uk":"Я кажу, що це правильно.","tr":"Doğru olduğunu söylerim.","ro":"Spun că este corect.","bg":"Казвам, че е вярно."},
- "Ik sla de vraag over.": {"en":"I skip the question.","ar":"أتخطى السؤال.","uk":"Я пропускаю запитання.","tr":"Soruyu atlarım.","ro":"Sar peste întrebare.","bg":"Пропускам въпроса."},
- "Op je blad staat: zet in de goede volgorde. 3, 1, 2. Wat doe je?": {"en":"Your sheet says: put them in the right order. 3, 1, 2. What do you do?","ar":"مكتوب في ورقتك: رتّبها بالترتيب الصحيح. 3، 1، 2. ماذا تفعل؟","uk":"На твоєму аркуші написано: розстав у правильному порядку. 3, 1, 2. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru sıraya koy. 3, 1, 2. Ne yaparsın?","ro":"Pe foaia ta scrie: pune în ordinea corectă. 3, 1, 2. Ce faci?","bg":"На листа ти пише: подреди в правилния ред. 3, 1, 2. Какво правиш?"},
- "Ik zet ze zo neer: 1, 2, 3.": {"en":"I put them like this: 1, 2, 3.","ar":"أرتبها هكذا: 1، 2، 3.","uk":"Я ставлю їх так: 1, 2, 3.","tr":"Onları şöyle dizerim: 1, 2, 3.","ro":"Le pun așa: 1, 2, 3.","bg":"Подреждам ги така: 1, 2, 3."},
- "Ik laat ze zo staan.": {"en":"I leave them as they are.","ar":"أتركها كما هي.","uk":"Я залишаю їх так, як є.","tr":"Onları olduğu gibi bırakırım.","ro":"Le las așa cum sunt.","bg":"Оставям ги така, както са."},
- "Ik tel ze bij elkaar op.": {"en":"I add them together.","ar":"أجمعها معًا.","uk":"Я додаю їх разом.","tr":"Onları toplarım.","ro":"Le adun.","bg":"Събирам ги."},
- "Ik zet ze zo neer: 3, 2, 1.": {"en":"I put them like this: 3, 2, 1.","ar":"أرتبها هكذا: 3، 2، 1.","uk":"Я ставлю їх так: 3, 2, 1.","tr":"Onları şöyle dizerim: 3, 2, 1.","ro":"Le pun așa: 3, 2, 1.","bg":"Подреждам ги така: 3, 2, 1."},
- "De juf zegt: leg uit hoe je het weet. Wat doe je?": {"en":"The teacher says: explain how you know. What do you do?","ar":"تقول المعلمة: اشرح كيف عرفت. ماذا تفعل؟","uk":"Вчителька каже: поясни, як ти це знаєш. Що ти робиш?","tr":"Öğretmen diyor ki: nasıl bildiğini açıkla. Ne yaparsın?","ro":"Doamna învățătoare spune: explică de unde știi. Ce faci?","bg":"Учителката казва: обясни откъде знаеш. Какво правиш?"},
- "Ik vertel waarom mijn antwoord klopt.": {"en":"I say why my answer is right.","ar":"أقول لماذا جوابي صحيح.","uk":"Я розповідаю, чому моя відповідь правильна.","tr":"Cevabımın neden doğru olduğunu anlatırım.","ro":"Spun de ce răspunsul meu este corect.","bg":"Разказвам защо отговорът ми е верен."},
- "Ik zeg alleen het antwoord.": {"en":"I only say the answer.","ar":"أقول الجواب فقط.","uk":"Я кажу тільки відповідь.","tr":"Sadece cevabı söylerim.","ro":"Spun doar răspunsul.","bg":"Казвам само отговора."},
- "Ik zeg: ik weet het niet.": {"en":"I say: I don't know.","ar":"أقول: لا أعرف.","uk":"Я кажу: я не знаю.","tr":"Bilmiyorum derim.","ro":"Spun: nu știu.","bg":"Казвам: не знам."},
- "Ik ben stil.": {"en":"I stay quiet.","ar":"أبقى صامتًا.","uk":"Я мовчу.","tr":"Sessiz kalırım.","ro":"Tac.","bg":"Мълча."},
- "Tim heeft 5 knikkers. Hij krijgt er 3 bij. Hoeveel knikkers heeft hij nu?": {"en":"Tim has 5 marbles. He gets 3 more. How many marbles does he have now?","ar":"عند تيم 5 كرات زجاجية. يحصل على 3 أخرى. كم كرة عنده الآن؟","uk":"У Тіма 5 кульок. Він отримує ще 3. Скільки кульок у нього тепер?","tr":"Tim'in 5 bilyesi var. 3 tane daha alıyor. Şimdi kaç bilyesi var?","ro":"Tim are 5 bile. Mai primește 3. Câte bile are acum?","bg":"Тим има 5 топчета. Получава още 3. Колко топчета има сега?"},
- "Sara heeft 7 stiften. Ahmed heeft 6 stiften. Hoeveel stiften hebben ze samen?": {"en":"Sara has 7 markers. Ahmed has 6 markers. How many markers do they have together?","ar":"عند سارة 7 أقلام تلوين. عند أحمد 6 أقلام تلوين. كم قلمًا عندهما معًا؟","uk":"У Сари 7 фломастерів. В Ахмеда 6 фломастерів. Скільки фломастерів у них разом?","tr":"Sara'nın 7 keçeli kalemi var. Ahmed'in 6 keçeli kalemi var. Birlikte kaç kalemleri var?","ro":"Sara are 7 carioci. Ahmed are 6 carioci. Câte carioci au împreună?","bg":"Сара има 7 флумастера. Ахмед има 6 флумастера. Колко флумастера имат заедно?"},
- "In de klas zitten 12 meisjes en 11 jongens. Hoeveel kinderen zijn het samen?": {"en":"There are 12 girls and 11 boys in the class. How many children are there together?","ar":"في الصف 12 بنتًا و11 ولدًا. كم طفلًا معًا؟","uk":"У класі 12 дівчаток і 11 хлопчиків. Скільки дітей разом?","tr":"Sınıfta 12 kız ve 11 erkek var. Toplam kaç çocuk var?","ro":"În clasă sunt 12 fete și 11 băieți. Câți copii sunt împreună?","bg":"В класа има 12 момичета и 11 момчета. Колко деца са заедно?"},
- "Olena heeft 20 stickers. Ze krijgt er 15 bij. Hoeveel stickers heeft ze nu?": {"en":"Olena has 20 stickers. She gets 15 more. How many stickers does she have now?","ar":"عند أولينا 20 ملصقًا. تحصل على 15 أخرى. كم ملصقًا عندها الآن؟","uk":"В Олени 20 наліпок. Вона отримує ще 15. Скільки наліпок у неї тепер?","tr":"Olena'nın 20 çıkartması var. 15 tane daha alıyor. Şimdi kaç çıkartması var?","ro":"Olena are 20 de abțibilduri. Mai primește 15. Câte abțibilduri are acum?","bg":"Олена има 20 стикера. Получава още 15. Колко стикера има сега?"},
- "Er staan 30 stoelen in de zaal. De juf zet er 8 bij. Hoeveel stoelen staan er nu?": {"en":"There are 30 chairs in the hall. The teacher adds 8 more. How many chairs are there now?","ar":"في القاعة 30 كرسيًا. تضيف المعلمة 8 كراسٍ. كم كرسيًا هناك الآن؟","uk":"У залі стоїть 30 стільців. Вчителька ставить ще 8. Скільки стільців тепер?","tr":"Salonda 30 sandalye var. Öğretmen 8 tane daha koyuyor. Şimdi kaç sandalye var?","ro":"În sală sunt 30 de scaune. Doamna mai pune 8. Câte scaune sunt acum?","bg":"В залата има 30 стола. Учителката слага още 8. Колко стола има сега?"},
- "Mehmet heeft 9 snoepjes. Hij eet er 4 op. Hoeveel snoepjes heeft hij nog over?": {"en":"Mehmet has 9 sweets. He eats 4. How many sweets does he have left?","ar":"عند محمد 9 حلويات. يأكل 4 منها. كم حلوى بقيت عنده؟","uk":"У Мехмета 9 цукерок. Він з'їдає 4. Скільки цукерок у нього залишилося?","tr":"Mehmet'in 9 şekeri var. 4 tanesini yiyor. Kaç şekeri kaldı?","ro":"Mehmet are 9 bomboane. Mănâncă 4. Câte bomboane i-au mai rămas?","bg":"Мехмет има 9 бонбона. Изяжда 4. Колко бонбона му остават?"},
- "Er zitten 15 vogels op het dak. Er vliegen 6 vogels weg. Hoeveel vogels zijn er over?": {"en":"There are 15 birds on the roof. 6 birds fly away. How many birds are left?","ar":"على السطح 15 طائرًا. يطير 6 طيور بعيدًا. كم طائرًا بقي؟","uk":"На даху сидять 15 пташок. 6 пташок відлітають. Скільки пташок залишилося?","tr":"Çatıda 15 kuş var. 6 kuş uçup gidiyor. Kaç kuş kaldı?","ro":"Pe acoperiș sunt 15 păsări. Zboară 6 păsări. Câte păsări au rămas?","bg":"На покрива има 15 птици. 6 птици отлитат. Колко птици остават?"},
- "Ana heeft 20 euro. Ze koopt een boek van 8 euro. Hoeveel euro heeft ze over?": {"en":"Ana has 20 euros. She buys a book for 8 euros. How many euros does she have left?","ar":"عند آنا 20 يورو. تشتري كتابًا بـ8 يورو. كم يورو بقي معها؟","uk":"В Ани 20 євро. Вона купує книжку за 8 євро. Скільки євро в неї залишилося?","tr":"Ana'nın 20 eurosu var. 8 euroluk bir kitap alıyor. Kaç eurosu kaldı?","ro":"Ana are 20 de euro. Cumpără o carte de 8 euro. Câți euro i-au rămas?","bg":"Ана има 20 евро. Купува книга за 8 евро. Колко евро ѝ остават?"},
- "In de bus zitten 40 mensen. Bij de halte stappen er 10 uit. Hoeveel mensen zitten er nog in de bus?": {"en":"There are 40 people on the bus. At the stop, 10 get off. How many people are still on the bus?","ar":"في الحافلة 40 شخصًا. عند المحطة ينزل 10. كم شخصًا ما زال في الحافلة؟","uk":"В автобусі 40 людей. На зупинці виходять 10. Скільки людей ще в автобусі?","tr":"Otobüste 40 kişi var. Durakta 10 kişi iniyor. Otobüste hâlâ kaç kişi var?","ro":"În autobuz sunt 40 de oameni. La stație coboară 10. Câți oameni mai sunt în autobuz?","bg":"В автобуса има 40 души. На спирката слизат 10. Колко души са още в автобуса?"},
- "De juf heeft 50 potloden. Ze geeft er 25 weg. Hoeveel potloden heeft ze over?": {"en":"The teacher has 50 pencils. She gives 25 away. How many pencils does she have left?","ar":"عند المعلمة 50 قلم رصاص. تعطي 25 منها. كم قلمًا بقي عندها؟","uk":"У вчительки 50 олівців. Вона віддає 25. Скільки олівців у неї залишилося?","tr":"Öğretmenin 50 kalemi var. 25 tanesini veriyor. Kaç kalemi kaldı?","ro":"Doamna are 50 de creioane. Dă 25. Câte creioane i-au rămas?","bg":"Учителката има 50 молива. Дава 25. Колко молива ѝ остават?"},
- "Sara heeft 8 kaarten. Tim heeft 5 kaarten. Hoeveel kaarten heeft Sara meer dan Tim?": {"en":"Sara has 8 cards. Tim has 5 cards. How many more cards does Sara have than Tim?","ar":"عند سارة 8 بطاقات. عند تيم 5 بطاقات. كم بطاقة عند سارة أكثر من تيم؟","uk":"У Сари 8 карток. У Тіма 5 карток. На скільки карток у Сари більше, ніж у Тіма?","tr":"Sara'nın 8 kartı var. Tim'in 5 kartı var. Sara'nın Tim'den kaç kartı fazla?","ro":"Sara are 8 cărți de joc. Tim are 5. Cu câte cărți are Sara mai mult decât Tim?","bg":"Сара има 8 карти. Тим има 5 карти. С колко карти повече има Сара от Тим?"},
- "Ahmed is 9 jaar. Zijn zus is 6 jaar. Hoeveel jaar is Ahmed ouder?": {"en":"Ahmed is 9 years old. His sister is 6. How many years older is Ahmed?","ar":"عمر أحمد 9 سنوات. عمر أخته 6 سنوات. كم سنة أحمد أكبر؟","uk":"Ахмедові 9 років. Його сестрі 6 років. На скільки років Ахмед старший?","tr":"Ahmed 9 yaşında. Kız kardeşi 6 yaşında. Ahmed kaç yaş büyük?","ro":"Ahmed are 9 ani. Sora lui are 6 ani. Cu câți ani este Ahmed mai mare?","bg":"Ахмед е на 9 години. Сестра му е на 6. С колко години е по-голям Ахмед?"},
- "Olena heeft 12 knikkers. Ana heeft 7 knikkers. Hoeveel knikkers heeft Ana minder dan Olena?": {"en":"Olena has 12 marbles. Ana has 7 marbles. How many fewer marbles does Ana have than Olena?","ar":"عند أولينا 12 كرة زجاجية. عند آنا 7. كم كرة عند آنا أقل من أولينا؟","uk":"В Олени 12 кульок. В Ани 7 кульок. На скільки кульок в Ани менше, ніж в Олени?","tr":"Olena'nın 12 bilyesi var. Ana'nın 7 bilyesi var. Ana'nın Olena'dan kaç bilyesi eksik?","ro":"Olena are 12 bile. Ana are 7 bile. Cu câte bile are Ana mai puțin decât Olena?","bg":"Олена има 12 топчета. Ана има 7. С колко топчета по-малко има Ана от Олена?"},
- "Tim leest 20 bladzijden. Mehmet leest 14 bladzijden. Wat is het verschil?": {"en":"Tim reads 20 pages. Mehmet reads 14 pages. What is the difference?","ar":"يقرأ تيم 20 صفحة. يقرأ محمد 14 صفحة. ما الفرق؟","uk":"Тім читає 20 сторінок. Мехмет читає 14 сторінок. Яка різниця?","tr":"Tim 20 sayfa okuyor. Mehmet 14 sayfa okuyor. Fark ne kadar?","ro":"Tim citește 20 de pagini. Mehmet citește 14 pagini. Care este diferența?","bg":"Тим чете 20 страници. Мехмет чете 14 страници. Каква е разликата?"},
- "Een pen kost 6 euro. Een schrift kost 2 euro. Hoeveel euro is de pen duurder?": {"en":"A pen costs 6 euros. A notebook costs 2 euros. How many euros more expensive is the pen?","ar":"ثمن القلم 6 يورو. ثمن الدفتر 2 يورو. بكم يورو القلم أغلى؟","uk":"Ручка коштує 6 євро. Зошит коштує 2 євро. На скільки євро ручка дорожча?","tr":"Bir kalem 6 euro. Bir defter 2 euro. Kalem kaç euro daha pahalı?","ro":"Un pix costă 6 euro. Un caiet costă 2 euro. Cu câți euro este pixul mai scump?","bg":"Една химикалка струва 6 евро. Една тетрадка струва 2 евро. С колко евро е по-скъпа химикалката?"},
- "Sara heeft 4 appels. Ahmed heeft het dubbele. Hoeveel appels heeft Ahmed?": {"en":"Sara has 4 apples. Ahmed has double. How many apples does Ahmed have?","ar":"عند سارة 4 تفاحات. عند أحمد الضعف. كم تفاحة عند أحمد؟","uk":"У Сари 4 яблука. В Ахмеда вдвічі більше. Скільки яблук в Ахмеда?","tr":"Sara'nın 4 elması var. Ahmed'in iki katı var. Ahmed'in kaç elması var?","ro":"Sara are 4 mere. Ahmed are dublu. Câte mere are Ahmed?","bg":"Сара има 4 ябълки. Ахмед има двойно повече. Колко ябълки има Ахмед?"},
- "Tim heeft 10 koekjes. Hij geeft de helft aan Olena. Hoeveel koekjes krijgt Olena?": {"en":"Tim has 10 biscuits. He gives half to Olena. How many biscuits does Olena get?","ar":"عند تيم 10 بسكويتات. يعطي النصف لأولينا. كم بسكويتة تحصل أولينا؟","uk":"У Тіма 10 печивок. Він дає половину Олені. Скільки печивок отримує Олена?","tr":"Tim'in 10 kurabiyesi var. Yarısını Olena'ya veriyor. Olena kaç kurabiye alıyor?","ro":"Tim are 10 biscuiți. Îi dă jumătate Olenei. Câți biscuiți primește Olena?","bg":"Тим има 10 бисквити. Дава половината на Олена. Колко бисквити получава Олена?"},
- "3 kinderen krijgen elk 2 snoepjes. Hoeveel snoepjes zijn het samen?": {"en":"3 children each get 2 sweets. How many sweets is that together?","ar":"3 أطفال يحصل كل واحد على 2 حلوى. كم حلوى معًا؟","uk":"3 дитини отримують по 2 цукерки. Скільки цукерок разом?","tr":"3 çocuğun her biri 2 şeker alıyor. Toplam kaç şeker eder?","ro":"3 copii primesc fiecare câte 2 bomboane. Câte bomboane sunt în total?","bg":"3 деца получават по 2 бонбона. Колко бонбона са общо?"},
- "4 kinderen hebben elk 5 kaarten. Hoeveel kaarten zijn het samen?": {"en":"4 children each have 5 cards. How many cards is that together?","ar":"4 أطفال مع كل واحد 5 بطاقات. كم بطاقة معًا؟","uk":"У 4 дітей по 5 карток. Скільки карток разом?","tr":"4 çocuğun her birinin 5 kartı var. Toplam kaç kart eder?","ro":"4 copii au fiecare câte 5 cărți. Câte cărți sunt în total?","bg":"4 деца имат по 5 карти. Колко карти са общо?"},
- "Mehmet heeft 16 knikkers. Hij verdeelt ze eerlijk over 2 zakjes. Hoeveel knikkers zitten er in elk zakje?": {"en":"Mehmet has 16 marbles. He shares them fairly between 2 bags. How many marbles are in each bag?","ar":"عند محمد 16 كرة زجاجية. يقسمها بالعدل على كيسين. كم كرة في كل كيس؟","uk":"У Мехмета 16 кульок. Він ділить їх порівну на 2 мішечки. Скільки кульок у кожному мішечку?","tr":"Mehmet'in 16 bilyesi var. Onları 2 torbaya eşit paylaştırıyor. Her torbada kaç bilye var?","ro":"Mehmet are 16 bile. Le împarte în mod egal în 2 pungi. Câte bile sunt în fiecare pungă?","bg":"Мехмет има 16 топчета. Разделя ги поравно в 2 торбички. Колко топчета има във всяка торбичка?"},
- "Komt er iets bij of gaat er iets af?": {"en":"Is something added or taken away?","ar":"هل يُضاف شيء أم يُطرح شيء؟","uk":"Щось додається чи щось забирають?","tr":"Bir şey ekleniyor mu, çıkarılıyor mu?","ro":"Se adaugă ceva sau se ia ceva?","bg":"Добавя ли се нещо, или се отнема?"},
- "Gaat er iets weg? Wat heb je dan nog?": {"en":"Does something go away? What do you still have then?","ar":"هل يذهب شيء؟ ماذا يبقى معك إذن؟","uk":"Щось зникає? Що тоді в тебе залишається?","tr":"Bir şey gidiyor mu? O zaman elinde ne kalıyor?","ro":"Pleacă ceva? Ce mai ai atunci?","bg":"Отива ли си нещо? Какво ти остава тогава?"},
- "Hoeveel moet er bij het kleine getal, tot het grote getal?": {"en":"How much do you add to the small number to reach the big number?","ar":"كم يجب أن تضيف إلى العدد الصغير حتى تصل إلى العدد الكبير؟","uk":"Скільки треба додати до меншого числа, щоб дійти до більшого?","tr":"Küçük sayıya kaç eklersen büyük sayıya ulaşırsın?","ro":"Cât trebuie adăugat la numărul mic ca să ajungi la numărul mare?","bg":"Колко трябва да добавиш към малкото число, за да стигнеш голямото?"},
- "Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?": {"en":"Is it twice as much, or half? Or the same number each time?","ar":"هل هو الضعف أم النصف؟ أم نفس العدد كل مرة؟","uk":"Це вдвічі більше чи половина? Чи щоразу те саме число?","tr":"İki katı mı, yarısı mı? Yoksa her seferinde aynı sayı mı?","ro":"Este de două ori mai mult sau jumătate? Sau de fiecare dată același număr?","bg":"Двойно ли е, или половината? Или всеки път същото число?"},
+ "Op je blad staat: omcirkel de appel. Wat doe je?": {"en":"Your sheet says: circle the apple. What do you do?","ar":"مكتوب في ورقتك: ضع دائرة حول التفاحة. ماذا تفعل؟","uk":"На твоєму аркуші написано: обведи яблуко. Що ти робиш?","tr":"Kâğıdında yazıyor: elmanın etrafına daire çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: încercuiește mărul. Ce faci?","bg":"На листа ти пише: огради ябълката. Какво правиш?", "fa": "روی برگه‌ات نوشته: دور سیب دایره بکش. چه کار می‌کنی؟"},
+ "Ik zet een rondje om de appel.": {"en":"I draw a circle around the apple.","ar":"أرسم دائرة حول التفاحة.","uk":"Я обводжу яблуко колом.","tr":"Elmanın etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul mărului.","bg":"Рисувам кръгче около ябълката.", "fa": "دور سیب یک دایره می‌کشم."},
+ "Ik zet een kruisje op de appel.": {"en":"I put a cross on the apple.","ar":"أضع علامة إكس على التفاحة.","uk":"Я ставлю хрестик на яблуко.","tr":"Elmanın üstüne çarpı koyarım.","ro":"Pun un x pe măr.","bg":"Слагам кръстче върху ябълката.", "fa": "روی سیب یک ضربدر می‌گذارم."},
+ "Ik kleur de appel rood.": {"en":"I colour the apple red.","ar":"ألوّن التفاحة باللون الأحمر.","uk":"Я розфарбовую яблуко в червоний колір.","tr":"Elmayı kırmızıya boyarım.","ro":"Colorez mărul cu roșu.","bg":"Оцветявам ябълката в червено.", "fa": "سیب را قرمز رنگ می‌کنم."},
+ "Ik schrijf het woord appel op.": {"en":"I write down the word apple.","ar":"أكتب كلمة تفاحة.","uk":"Я записую слово «яблуко».","tr":"Elma kelimesini yazarım.","ro":"Scriu cuvântul măr.","bg":"Записвам думата ябълка.", "fa": "کلمه‌ی سیب را می‌نویسم."},
+ "Op je blad staat: onderstreep het woord. Wat doe je?": {"en":"Your sheet says: underline the word. What do you do?","ar":"مكتوب في ورقتك: ضع خطًا تحت الكلمة. ماذا تفعل؟","uk":"На твоєму аркуші написано: підкресли слово. Що ти робиш?","tr":"Kâğıdında yazıyor: kelimenin altını çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: subliniază cuvântul. Ce faci?","bg":"На листа ти пише: подчертай думата. Какво правиш?", "fa": "روی برگه‌ات نوشته: زیر کلمه خط بکش. چه کار می‌کنی؟"},
+ "Ik zet een streep onder het woord.": {"en":"I draw a line under the word.","ar":"أرسم خطًا تحت الكلمة.","uk":"Я проводжу лінію під словом.","tr":"Kelimenin altına bir çizgi çekerim.","ro":"Trag o linie sub cuvânt.","bg":"Чертая линия под думата.", "fa": "زیر کلمه یک خط می‌کشم."},
+ "Ik zet een rondje om het woord.": {"en":"I draw a circle around the word.","ar":"أرسم دائرة حول الكلمة.","uk":"Я обводжу слово колом.","tr":"Kelimenin etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul cuvântului.","bg":"Рисувам кръгче около думата.", "fa": "دور کلمه یک دایره می‌کشم."},
+ "Ik gum het woord uit.": {"en":"I rub out the word.","ar":"أمسح الكلمة بالممحاة.","uk":"Я стираю слово гумкою.","tr":"Kelimeyi silgiyle silerim.","ro":"Șterg cuvântul cu guma.","bg":"Изтривам думата с гумичка.", "fa": "کلمه را با پاک‌کن پاک می‌کنم."},
+ "Ik lees het woord hardop.": {"en":"I read the word out loud.","ar":"أقرأ الكلمة بصوت عالٍ.","uk":"Я читаю слово вголос.","tr":"Kelimeyi sesli okurum.","ro":"Citesc cuvântul cu voce tare.","bg":"Чета думата на глас.", "fa": "کلمه را بلند می‌خوانم."},
+ "Op je blad staat: kruis het goede antwoord aan. Wat doe je?": {"en":"Your sheet says: tick the right answer. What do you do?","ar":"مكتوب في ورقتك: ضع علامة عند الجواب الصحيح. ماذا تفعل؟","uk":"На твоєму аркуші написано: познач хрестиком правильну відповідь. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru cevabı işaretle. Ne yaparsın?","ro":"Pe foaia ta scrie: bifează răspunsul corect. Ce faci?","bg":"На листа ти пише: отбележи верния отговор с кръстче. Какво правиш?", "fa": "روی برگه‌ات نوشته: جواب درست را علامت بزن. چه کار می‌کنی؟"},
+ "Ik zet een kruisje bij het goede antwoord.": {"en":"I put a cross next to the right answer.","ar":"أضع علامة إكس بجانب الجواب الصحيح.","uk":"Я ставлю хрестик біля правильної відповіді.","tr":"Doğru cevabın yanına çarpı koyarım.","ro":"Pun un x lângă răspunsul corect.","bg":"Слагам кръстче до верния отговор.", "fa": "کنار جواب درست یک ضربدر می‌گذارم."},
+ "Ik zet een kruisje bij alle antwoorden.": {"en":"I put a cross next to all the answers.","ar":"أضع علامة إكس بجانب كل الأجوبة.","uk":"Я ставлю хрестик біля всіх відповідей.","tr":"Bütün cevapların yanına çarpı koyarım.","ro":"Pun un x lângă toate răspunsurile.","bg":"Слагам кръстче до всички отговори.", "fa": "کنار همه‌ی جواب‌ها یک ضربدر می‌گذارم."},
+ "Ik schrijf het antwoord over.": {"en":"I copy the answer.","ar":"أنسخ الجواب.","uk":"Я переписую відповідь.","tr":"Cevabı aynen yazarım.","ro":"Copiez răspunsul.","bg":"Преписвам отговора.", "fa": "جواب را از رویش می‌نویسم."},
+ "Ik kleur het hele blad.": {"en":"I colour the whole sheet.","ar":"ألوّن الورقة كلها.","uk":"Я розфарбовую весь аркуш.","tr":"Bütün kâğıdı boyarım.","ro":"Colorez toată foaia.","bg":"Оцветявам целия лист.", "fa": "همه‌ی برگه را رنگ می‌کنم."},
+ "Op je blad staat: zet een streep door het foute woord. Wat doe je?": {"en":"Your sheet says: cross out the wrong word. What do you do?","ar":"مكتوب في ورقتك: اشطب الكلمة الخاطئة. ماذا تفعل؟","uk":"На твоєму аркуші написано: закресли неправильне слово. Що ти робиш?","tr":"Kâğıdında yazıyor: yanlış kelimenin üstünü çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: tăie cuvântul greșit. Ce faci?","bg":"На листа ти пише: задраскай грешната дума. Какво правиш?", "fa": "روی برگه‌ات نوشته: روی کلمه‌ی غلط خط بکش. چه کار می‌کنی؟"},
+ "Ik zet een streep door het foute woord.": {"en":"I draw a line through the wrong word.","ar":"أرسم خطًا على الكلمة الخاطئة.","uk":"Я закреслюю неправильне слово.","tr":"Yanlış kelimenin üstüne bir çizgi çekerim.","ro":"Trag o linie peste cuvântul greșit.","bg":"Задрасквам грешната дума с линия.", "fa": "روی کلمه‌ی غلط یک خط می‌کشم."},
+ "Ik zet een streep onder het goede woord.": {"en":"I draw a line under the right word.","ar":"أرسم خطًا تحت الكلمة الصحيحة.","uk":"Я підкреслюю правильне слово.","tr":"Doğru kelimenin altına bir çizgi çekerim.","ro":"Trag o linie sub cuvântul corect.","bg":"Подчертавам вярната дума.", "fa": "زیر کلمه‌ی درست یک خط می‌کشم."},
+ "Ik schrijf het foute woord nog een keer.": {"en":"I write the wrong word again.","ar":"أكتب الكلمة الخاطئة مرة أخرى.","uk":"Я ще раз пишу неправильне слово.","tr":"Yanlış kelimeyi bir kez daha yazarım.","ro":"Scriu cuvântul greșit încă o dată.","bg":"Пиша грешната дума още веднъж.", "fa": "کلمه‌ی غلط را یک بار دیگر می‌نویسم."},
+ "Ik zet een rondje om het foute woord.": {"en":"I draw a circle around the wrong word.","ar":"أرسم دائرة حول الكلمة الخاطئة.","uk":"Я обводжу неправильне слово колом.","tr":"Yanlış kelimenin etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul cuvântului greșit.","bg":"Рисувам кръгче около грешната дума.", "fa": "دور کلمه‌ی غلط یک دایره می‌کشم."},
+ "Op je blad staat: trek een lijn van de hond naar het hok. Wat doe je?": {"en":"Your sheet says: draw a line from the dog to the kennel. What do you do?","ar":"مكتوب في ورقتك: ارسم خطًا من الكلب إلى بيته. ماذا تفعل؟","uk":"На твоєму аркуші написано: проведи лінію від собаки до будки. Що ти робиш?","tr":"Kâğıdında yazıyor: köpekten kulübeye bir çizgi çiz. Ne yaparsın?","ro":"Pe foaia ta scrie: trage o linie de la câine la cușcă. Ce faci?","bg":"На листа ти пише: начертай линия от кучето до колибката. Какво правиш?", "fa": "روی برگه‌ات نوشته: از سگ تا لانه‌اش یک خط بکش. چه کار می‌کنی؟"},
+ "Ik trek een lijn van de hond naar het hok.": {"en":"I draw a line from the dog to the kennel.","ar":"أرسم خطًا من الكلب إلى بيته.","uk":"Я проводжу лінію від собаки до будки.","tr":"Köpekten kulübeye bir çizgi çekerim.","ro":"Trag o linie de la câine la cușcă.","bg":"Чертая линия от кучето до колибката.", "fa": "از سگ تا لانه‌اش یک خط می‌کشم."},
+ "Ik teken een nieuwe hond.": {"en":"I draw a new dog.","ar":"أرسم كلبًا جديدًا.","uk":"Я малюю нового собаку.","tr":"Yeni bir köpek çizerim.","ro":"Desenez un câine nou.","bg":"Рисувам ново куче.", "fa": "یک سگ تازه نقاشی می‌کنم."},
+ "Ik kleur het hok.": {"en":"I colour the kennel.","ar":"ألوّن بيت الكلب.","uk":"Я розфарбовую будку.","tr":"Kulübeyi boyarım.","ro":"Colorez cușca.","bg":"Оцветявам колибката.", "fa": "لانه را رنگ می‌کنم."},
+ "Ik zet een kruisje op de hond.": {"en":"I put a cross on the dog.","ar":"أضع علامة إكس على الكلب.","uk":"Я ставлю хрестик на собаку.","tr":"Köpeğin üstüne çarpı koyarım.","ro":"Pun un x pe câine.","bg":"Слагам кръстче върху кучето.", "fa": "روی سگ یک ضربدر می‌گذارم."},
+ "Op je blad staat: vul in. Er staat een lege plek. Wat doe je?": {"en":"Your sheet says: fill in. There is an empty space. What do you do?","ar":"مكتوب في ورقتك: املأ الفراغ. هناك مكان فارغ. ماذا تفعل؟","uk":"На твоєму аркуші написано: заповни. Там є порожнє місце. Що ти робиш?","tr":"Kâğıdında yazıyor: boşluğu doldur. Boş bir yer var. Ne yaparsın?","ro":"Pe foaia ta scrie: completează. Este un loc gol. Ce faci?","bg":"На листа ти пише: попълни. Има празно място. Какво правиш?", "fa": "روی برگه‌ات نوشته: جای خالی را پر کن. یک جای خالی هست. چه کار می‌کنی؟"},
+ "Ik schrijf het goede woord op de lege plek.": {"en":"I write the right word in the empty space.","ar":"أكتب الكلمة الصحيحة في المكان الفارغ.","uk":"Я пишу правильне слово в порожнє місце.","tr":"Doğru kelimeyi boş yere yazarım.","ro":"Scriu cuvântul corect în locul gol.","bg":"Пиша вярната дума на празното място.", "fa": "کلمه‌ی درست را در جای خالی می‌نویسم."},
+ "Ik laat de plek leeg.": {"en":"I leave the space empty.","ar":"أترك المكان فارغًا.","uk":"Я залишаю місце порожнім.","tr":"Yeri boş bırakırım.","ro":"Las locul gol.","bg":"Оставям мястото празно.", "fa": "آنجا را خالی می‌گذارم."},
+ "Ik teken een bloem op de plek.": {"en":"I draw a flower in the space.","ar":"أرسم زهرة في المكان.","uk":"Я малюю квітку на цьому місці.","tr":"O yere bir çiçek çizerim.","ro":"Desenez o floare în acel loc.","bg":"Рисувам цвете на мястото.", "fa": "آنجا یک گل نقاشی می‌کنم."},
+ "Ik gum de zin uit.": {"en":"I rub out the sentence.","ar":"أمسح الجملة بالممحاة.","uk":"Я стираю речення гумкою.","tr":"Cümleyi silgiyle silerim.","ro":"Șterg propoziția cu guma.","bg":"Изтривам изречението с гумичка.", "fa": "جمله را با پاک‌کن پاک می‌کنم."},
+ "De juf zegt: schrijf je naam erboven. Wat doe je?": {"en":"The teacher says: write your name at the top. What do you do?","ar":"تقول المعلمة: اكتب اسمك في الأعلى. ماذا تفعل؟","uk":"Вчителька каже: напиши своє ім'я зверху. Що ти робиш?","tr":"Öğretmen diyor ki: adını en üste yaz. Ne yaparsın?","ro":"Doamna învățătoare spune: scrie-ți numele sus. Ce faci?","bg":"Учителката казва: напиши името си най-горе. Какво правиш?", "fa": "خانم معلم می‌گوید: اسمت را بالای آن بنویس. چه کار می‌کنی؟"},
+ "Ik schrijf mijn naam bovenaan het blad.": {"en":"I write my name at the top of the sheet.","ar":"أكتب اسمي في أعلى الورقة.","uk":"Я пишу своє ім'я вгорі аркуша.","tr":"Adımı kâğıdın en üstüne yazarım.","ro":"Îmi scriu numele în partea de sus a foii.","bg":"Пиша името си най-горе на листа.", "fa": "اسمم را بالای برگه می‌نویسم."},
+ "Ik schrijf mijn naam onderaan het blad.": {"en":"I write my name at the bottom of the sheet.","ar":"أكتب اسمي في أسفل الورقة.","uk":"Я пишу своє ім'я внизу аркуша.","tr":"Adımı kâğıdın en altına yazarım.","ro":"Îmi scriu numele în partea de jos a foii.","bg":"Пиша името си най-долу на листа.", "fa": "اسمم را پایین برگه می‌نویسم."},
+ "Ik zeg mijn naam hardop.": {"en":"I say my name out loud.","ar":"أقول اسمي بصوت عالٍ.","uk":"Я кажу своє ім'я вголос.","tr":"Adımı sesli söylerim.","ro":"Îmi spun numele cu voce tare.","bg":"Казвам името си на глас.", "fa": "اسمم را بلند می‌گویم."},
+ "Ik schrijf de naam van de juf.": {"en":"I write the teacher's name.","ar":"أكتب اسم المعلمة.","uk":"Я пишу ім'я вчительки.","tr":"Öğretmenin adını yazarım.","ro":"Scriu numele doamnei învățătoare.","bg":"Пиша името на учителката.", "fa": "اسم خانم معلم را می‌نویسم."},
+ "Op je blad staat: schrijf het antwoord op. Wat doe je?": {"en":"Your sheet says: write down the answer. What do you do?","ar":"مكتوب في ورقتك: اكتب الجواب. ماذا تفعل؟","uk":"На твоєму аркуші написано: запиши відповідь. Що ти робиш?","tr":"Kâğıdında yazıyor: cevabı yaz. Ne yaparsın?","ro":"Pe foaia ta scrie: scrie răspunsul. Ce faci?","bg":"На листа ти пише: запиши отговора. Какво правиш?", "fa": "روی برگه‌ات نوشته: جواب را بنویس. چه کار می‌کنی؟"},
+ "Ik schrijf het antwoord met mijn potlood.": {"en":"I write the answer with my pencil.","ar":"أكتب الجواب بقلم الرصاص.","uk":"Я пишу відповідь олівцем.","tr":"Cevabı kurşun kalemimle yazarım.","ro":"Scriu răspunsul cu creionul meu.","bg":"Пиша отговора с молива си.", "fa": "جواب را با مدادم می‌نویسم."},
+ "Ik zeg het antwoord tegen een vriend.": {"en":"I tell the answer to a friend.","ar":"أقول الجواب لصديق.","uk":"Я кажу відповідь другові.","tr":"Cevabı bir arkadaşıma söylerim.","ro":"Îi spun răspunsul unui prieten.","bg":"Казвам отговора на приятел.", "fa": "جواب را به یک دوست می‌گویم."},
+ "Ik denk aan het antwoord.": {"en":"I think about the answer.","ar":"أفكر في الجواب.","uk":"Я думаю про відповідь.","tr":"Cevabı düşünürüm.","ro":"Mă gândesc la răspuns.","bg":"Мисля за отговора.", "fa": "به جواب فکر می‌کنم."},
+ "Ik wijs het antwoord aan.": {"en":"I point to the answer.","ar":"أشير إلى الجواب.","uk":"Я показую на відповідь пальцем.","tr":"Cevabı parmağımla gösteririm.","ro":"Arăt răspunsul cu degetul.","bg":"Посочвам отговора.", "fa": "به جواب اشاره می‌کنم."},
+ "Op je blad staat: maak de zin af. De zin is: Ik eet een … Wat doe je?": {"en":"Your sheet says: finish the sentence. The sentence is: I eat a … What do you do?","ar":"مكتوب في ورقتك: أكمل الجملة. الجملة هي: آكل … ماذا تفعل؟","uk":"На твоєму аркуші написано: закінчи речення. Речення таке: Я їм … Що ти робиш?","tr":"Kâğıdında yazıyor: cümleyi tamamla. Cümle şu: Ben bir … yiyorum. Ne yaparsın?","ro":"Pe foaia ta scrie: termină propoziția. Propoziția este: Eu mănânc un … Ce faci?","bg":"На листа ти пише: довърши изречението. Изречението е: Аз ям … Какво правиш?", "fa": "روی برگه‌ات نوشته: جمله را کامل کن. جمله این است: من یک … می‌خورم. چه کار می‌کنی؟"},
+ "Ik schrijf een woord aan het eind, bijvoorbeeld appel.": {"en":"I write a word at the end, for example apple.","ar":"أكتب كلمة في النهاية، مثلًا تفاحة.","uk":"Я пишу слово в кінці, наприклад «яблуко».","tr":"Sona bir kelime yazarım, örneğin elma.","ro":"Scriu un cuvânt la sfârșit, de exemplu măr.","bg":"Пиша дума накрая, например ябълка.", "fa": "یک کلمه در آخر می‌نویسم، مثلاً سیب."},
+ "Ik begin een nieuwe zin.": {"en":"I start a new sentence.","ar":"أبدأ جملة جديدة.","uk":"Я починаю нове речення.","tr":"Yeni bir cümleye başlarım.","ro":"Încep o propoziție nouă.","bg":"Започвам ново изречение.", "fa": "یک جملهٔ جدید شروع می‌کنم."},
+ "Ik lees de zin en ga verder.": {"en":"I read the sentence and carry on.","ar":"أقرأ الجملة وأكمل.","uk":"Я читаю речення і йду далі.","tr":"Cümleyi okurum ve devam ederim.","ro":"Citesc propoziția și merg mai departe.","bg":"Чета изречението и продължавам.", "fa": "جمله را می‌خوانم و ادامه می‌دهم."},
+ "De juf zegt: sla de bladzijde om. Wat doe je?": {"en":"The teacher says: turn the page. What do you do?","ar":"تقول المعلمة: اقلب الصفحة. ماذا تفعل؟","uk":"Вчителька каже: переверни сторінку. Що ти робиш?","tr":"Öğretmen diyor ki: sayfayı çevir. Ne yaparsın?","ro":"Doamna învățătoare spune: întoarce pagina. Ce faci?","bg":"Учителката казва: обърни страницата. Какво правиш?", "fa": "خانم معلم می‌گوید: صفحه را ورق بزن. چه کار می‌کنی؟"},
+ "Ik ga naar de volgende bladzijde.": {"en":"I go to the next page.","ar":"أنتقل إلى الصفحة التالية.","uk":"Я переходжу на наступну сторінку.","tr":"Bir sonraki sayfaya geçerim.","ro":"Merg la pagina următoare.","bg":"Отивам на следващата страница.", "fa": "به صفحهٔ بعد می‌روم."},
+ "Ik doe mijn boek dicht.": {"en":"I close my book.","ar":"أغلق كتابي.","uk":"Я закриваю свою книжку.","tr":"Kitabımı kapatırım.","ro":"Închid cartea.","bg":"Затварям книгата си.", "fa": "کتابم را می‌بندم."},
+ "Ik scheur de bladzijde eruit.": {"en":"I tear the page out.","ar":"أمزّق الصفحة وأخرجها.","uk":"Я вириваю сторінку.","tr":"Sayfayı koparırım.","ro":"Rup pagina din carte.","bg":"Скъсвам страницата.", "fa": "صفحه را پاره می‌کنم و بیرون می‌آورم."},
+ "Ik begin weer bij de eerste bladzijde.": {"en":"I start again at the first page.","ar":"أبدأ من جديد من الصفحة الأولى.","uk":"Я знову починаю з першої сторінки.","tr":"Yeniden ilk sayfadan başlarım.","ro":"Încep din nou de la prima pagină.","bg":"Започвам отново от първата страница.", "fa": "دوباره از صفحهٔ اول شروع می‌کنم."},
+ "Op je blad staat: lees de zin. Wat doe je?": {"en":"Your sheet says: read the sentence. What do you do?","ar":"مكتوب في ورقتك: اقرأ الجملة. ماذا تفعل؟","uk":"На твоєму аркуші написано: прочитай речення. Що ти робиш?","tr":"Kâğıdında yazıyor: cümleyi oku. Ne yaparsın?","ro":"Pe foaia ta scrie: citește propoziția. Ce faci?","bg":"На листа ти пише: прочети изречението. Какво правиш?", "fa": "روی برگه‌ات نوشته: جمله را بخوان. چه کار می‌کنی؟"},
+ "Ik kijk naar de woorden en lees ze.": {"en":"I look at the words and read them.","ar":"أنظر إلى الكلمات وأقرأها.","uk":"Я дивлюся на слова і читаю їх.","tr":"Kelimelere bakarım ve okurum.","ro":"Mă uit la cuvinte și le citesc.","bg":"Гледам думите и ги чета.", "fa": "به کلمه‌ها نگاه می‌کنم و آن‌ها را می‌خوانم."},
+ "Ik schrijf de zin over.": {"en":"I copy the sentence.","ar":"أنسخ الجملة.","uk":"Я переписую речення.","tr":"Cümleyi aynen yazarım.","ro":"Copiez propoziția.","bg":"Преписвам изречението.", "fa": "جمله را رونویسی می‌کنم."},
+ "Ik teken de zin.": {"en":"I draw the sentence.","ar":"أرسم الجملة.","uk":"Я малюю речення.","tr":"Cümleyi çizerim.","ro":"Desenez propoziția.","bg":"Рисувам изречението.", "fa": "جمله را نقاشی می‌کنم."},
+ "Ik sla de zin over.": {"en":"I skip the sentence.","ar":"أتخطى الجملة.","uk":"Я пропускаю речення.","tr":"Cümleyi atlarım.","ro":"Sar peste propoziție.","bg":"Пропускам изречението.", "fa": "از جمله رد می‌شوم."},
+ "Op je blad staat: tel de ballen. Wat doe je?": {"en":"Your sheet says: count the balls. What do you do?","ar":"مكتوب في ورقتك: عُدّ الكرات. ماذا تفعل؟","uk":"На твоєму аркуші написано: порахуй м'ячі. Що ти робиш?","tr":"Kâğıdında yazıyor: topları say. Ne yaparsın?","ro":"Pe foaia ta scrie: numără mingile. Ce faci?","bg":"На листа ти пише: преброй топките. Какво правиш?", "fa": "روی برگه‌ات نوشته: توپ‌ها را بشمار. چه کار می‌کنی؟"},
+ "Ik tel hoeveel ballen er zijn.": {"en":"I count how many balls there are.","ar":"أعدّ كم كرة هناك.","uk":"Я рахую, скільки там м'ячів.","tr":"Kaç tane top olduğunu sayarım.","ro":"Număr câte mingi sunt.","bg":"Броя колко топки има.", "fa": "می‌شمارم چند توپ هست."},
+ "Ik kleur de ballen.": {"en":"I colour the balls.","ar":"ألوّن الكرات.","uk":"Я розфарбовую м'ячі.","tr":"Topları boyarım.","ro":"Colorez mingile.","bg":"Оцветявам топките.", "fa": "توپ‌ها را رنگ می‌کنم."},
+ "Ik teken een bal erbij.": {"en":"I draw one more ball.","ar":"أرسم كرة إضافية.","uk":"Я домальовую ще один м'яч.","tr":"Bir top daha çizerim.","ro":"Mai desenez o minge.","bg":"Дорисувам още една топка.", "fa": "یک توپ دیگر هم می‌کشم."},
+ "Ik zet een kruisje op één bal.": {"en":"I put a cross on one ball.","ar":"أضع علامة إكس على كرة واحدة.","uk":"Я ставлю хрестик на один м'яч.","tr":"Bir topun üstüne çarpı koyarım.","ro":"Pun un x pe o minge.","bg":"Слагам кръстче върху една топка.", "fa": "روی یک توپ ضربدر می‌زنم."},
+ "Op je blad staat: reken uit. 4 + 3 = … Wat doe je?": {"en":"Your sheet says: work it out. 4 + 3 = … What do you do?","ar":"مكتوب في ورقتك: احسب. 4 + 3 = … ماذا تفعل؟","uk":"На твоєму аркуші написано: обчисли. 4 + 3 = … Що ти робиш?","tr":"Kâğıdında yazıyor: hesapla. 4 + 3 = … Ne yaparsın?","ro":"Pe foaia ta scrie: calculează. 4 + 3 = … Ce faci?","bg":"На листа ти пише: пресметни. 4 + 3 = … Какво правиш?", "fa": "روی برگه‌ات نوشته: حساب کن. 4 + 3 = … چه کار می‌کنی؟"},
+ "Ik reken het antwoord uit en schrijf 7.": {"en":"I work out the answer and write 7.","ar":"أحسب الجواب وأكتب 7.","uk":"Я рахую відповідь і пишу 7.","tr":"Cevabı hesaplarım ve 7 yazarım.","ro":"Calculez răspunsul și scriu 7.","bg":"Пресмятам отговора и пиша 7.", "fa": "جواب را حساب می‌کنم و 7 می‌نویسم."},
+ "Ik schrijf de som over.": {"en":"I copy the sum.","ar":"أنسخ العملية الحسابية.","uk":"Я переписую приклад.","tr":"İşlemi aynen yazarım.","ro":"Copiez exercițiul.","bg":"Преписвам задачата.", "fa": "مسئله را رونویسی می‌کنم."},
+ "Ik zet een rondje om de 4.": {"en":"I draw a circle around the 4.","ar":"أرسم دائرة حول الرقم 4.","uk":"Я обводжу колом цифру 4.","tr":"4'ün etrafına bir daire çizerim.","ro":"Desenez un cerc în jurul lui 4.","bg":"Рисувам кръгче около 4.", "fa": "دور 4 یک دایره می‌کشم."},
+ "Ik laat het leeg.": {"en":"I leave it empty.","ar":"أتركه فارغًا.","uk":"Я залишаю це порожнім.","tr":"Boş bırakırım.","ro":"Îl las gol.","bg":"Оставям го празно.", "fa": "آن را خالی می‌گذارم."},
+ "Op je blad staat: vergelijk. Welke toren is hoger? Wat doe je?": {"en":"Your sheet says: compare. Which tower is taller? What do you do?","ar":"مكتوب في ورقتك: قارن. أي برج أعلى؟ ماذا تفعل؟","uk":"На твоєму аркуші написано: порівняй. Яка вежа вища? Що ти робиш?","tr":"Kâğıdında yazıyor: karşılaştır. Hangi kule daha yüksek? Ne yaparsın?","ro":"Pe foaia ta scrie: compară. Care turn este mai înalt? Ce faci?","bg":"На листа ти пише: сравни. Коя кула е по-висока? Какво правиш?", "fa": "روی برگه‌ات نوشته: مقایسه کن. کدام برج بلندتر است؟ چه کار می‌کنی؟"},
+ "Ik kijk naar allebei en zoek de hoogste.": {"en":"I look at both and find the tallest.","ar":"أنظر إلى الاثنين وأبحث عن الأعلى.","uk":"Я дивлюся на обидві і шукаю найвищу.","tr":"İkisine de bakarım ve en yüksek olanı bulurum.","ro":"Mă uit la amândouă și îl caut pe cel mai înalt.","bg":"Гледам и двете и търся най-високата.", "fa": "به هر دو نگاه می‌کنم و بلندتر را پیدا می‌کنم."},
+ "Ik kijk alleen naar de eerste toren.": {"en":"I only look at the first tower.","ar":"أنظر فقط إلى البرج الأول.","uk":"Я дивлюся тільки на першу вежу.","tr":"Sadece ilk kuleye bakarım.","ro":"Mă uit doar la primul turn.","bg":"Гледам само първата кула.", "fa": "فقط به برج اول نگاه می‌کنم."},
+ "Ik teken een nieuwe toren.": {"en":"I draw a new tower.","ar":"أرسم برجًا جديدًا.","uk":"Я малюю нову вежу.","tr":"Yeni bir kule çizerim.","ro":"Desenez un turn nou.","bg":"Рисувам нова кула.", "fa": "یک برج جدید می‌کشم."},
+ "Ik tel de torens.": {"en":"I count the towers.","ar":"أعدّ الأبراج.","uk":"Я рахую вежі.","tr":"Kuleleri sayarım.","ro":"Număr turnurile.","bg":"Броя кулите.", "fa": "برج‌ها را می‌شمارم."},
+ "Op je blad staat: hoeveel meer? Tim heeft 5 knikkers. Sara heeft 3. Wat reken je uit?": {"en":"Your sheet says: how many more? Tim has 5 marbles. Sara has 3. What do you work out?","ar":"مكتوب في ورقتك: كم أكثر؟ عند تيم 5 كرات زجاجية. عند سارة 3. ماذا تحسب؟","uk":"На твоєму аркуші написано: на скільки більше? У Тіма 5 кульок. У Сари 3. Що ти рахуєш?","tr":"Kâğıdında yazıyor: kaç tane fazla? Tim'in 5 bilyesi var. Sara'nın 3. Neyi hesaplarsın?","ro":"Pe foaia ta scrie: cu cât mai multe? Tim are 5 bile. Sara are 3. Ce calculezi?","bg":"На листа ти пише: с колко повече? Тим има 5 топчета. Сара има 3. Какво пресмяташ?", "fa": "روی برگه‌ات نوشته: چند تا بیشتر؟ تیم 5 تیله دارد. سارا 3 تا دارد. چه چیزی را حساب می‌کنی؟"},
+ "Hoeveel Tim er meer heeft dan Sara.": {"en":"How many more Tim has than Sara.","ar":"كم عند تيم أكثر من سارة.","uk":"На скільки в Тіма більше, ніж у Сари.","tr":"Tim'in Sara'dan kaç tane fazlası olduğunu.","ro":"Cu câte are Tim mai multe decât Sara.","bg":"С колко Тим има повече от Сара.", "fa": "این‌که تیم چند تا از سارا بیشتر دارد."},
+ "Hoeveel knikkers ze samen hebben.": {"en":"How many marbles they have together.","ar":"كم كرة عندهما معًا.","uk":"Скільки кульок у них разом.","tr":"Birlikte kaç bilyeleri olduğunu.","ro":"Câte bile au împreună.","bg":"Колко топчета имат заедно.", "fa": "این‌که با هم چند تیله دارند."},
+ "Hoeveel knikkers Sara heeft.": {"en":"How many marbles Sara has.","ar":"كم كرة عند سارة.","uk":"Скільки кульок у Сари.","tr":"Sara'nın kaç bilyesi olduğunu.","ro":"Câte bile are Sara.","bg":"Колко топчета има Сара.", "fa": "این‌که سارا چند تیله دارد."},
+ "Hoe oud Tim is.": {"en":"How old Tim is.","ar":"كم عمر تيم.","uk":"Скільки років Тімові.","tr":"Tim'in kaç yaşında olduğunu.","ro":"Câți ani are Tim.","bg":"На колко години е Тим.", "fa": "این‌که تیم چند سال دارد."},
+ "Op je blad staat: kies het goede woord. Wat doe je?": {"en":"Your sheet says: choose the right word. What do you do?","ar":"مكتوب في ورقتك: اختر الكلمة الصحيحة. ماذا تفعل؟","uk":"На твоєму аркуші написано: вибери правильне слово. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru kelimeyi seç. Ne yaparsın?","ro":"Pe foaia ta scrie: alege cuvântul corect. Ce faci?","bg":"На листа ти пише: избери вярната дума. Какво правиш?", "fa": "روی برگه‌ات نوشته: کلمهٔ درست را انتخاب کن. چه کار می‌کنی؟"},
+ "Ik kies één woord dat past.": {"en":"I choose one word that fits.","ar":"أختار كلمة واحدة مناسبة.","uk":"Я вибираю одне слово, яке підходить.","tr":"Uyan bir kelime seçerim.","ro":"Aleg un cuvânt care se potrivește.","bg":"Избирам една дума, която пасва.", "fa": "یک کلمهٔ مناسب انتخاب می‌کنم."},
+ "Ik schrijf alle woorden op.": {"en":"I write down all the words.","ar":"أكتب كل الكلمات.","uk":"Я записую всі слова.","tr":"Bütün kelimeleri yazarım.","ro":"Scriu toate cuvintele.","bg":"Записвам всички думи.", "fa": "همهٔ کلمه‌ها را می‌نویسم."},
+ "Ik kies geen woord.": {"en":"I don't choose a word.","ar":"لا أختار أي كلمة.","uk":"Я не вибираю жодного слова.","tr":"Hiçbir kelime seçmem.","ro":"Nu aleg niciun cuvânt.","bg":"Не избирам нито една дума.", "fa": "هیچ کلمه‌ای انتخاب نمی‌کنم."},
+ "Ik verzin een nieuw woord.": {"en":"I make up a new word.","ar":"أخترع كلمة جديدة.","uk":"Я вигадую нове слово.","tr":"Yeni bir kelime uydururum.","ro":"Inventez un cuvânt nou.","bg":"Измислям нова дума.", "fa": "یک کلمهٔ جدید از خودم می‌سازم."},
+ "Op je blad staat: welke hoort er niet bij? Appel, peer, banaan, schoen. Wat zoek je?": {"en":"Your sheet says: which one does not belong? Apple, pear, banana, shoe. What are you looking for?","ar":"مكتوب في ورقتك: أيّها لا ينتمي إلى المجموعة؟ تفاحة، كمثرى، موزة، حذاء. عمّ تبحث؟","uk":"На твоєму аркуші написано: що тут зайве? Яблуко, груша, банан, черевик. Що ти шукаєш?","tr":"Kâğıdında yazıyor: hangisi gruba uymaz? Elma, armut, muz, ayakkabı. Ne ararsın?","ro":"Pe foaia ta scrie: care nu se potrivește? Măr, pară, banană, pantof. Ce cauți?","bg":"На листа ти пише: кое не е от групата? Ябълка, круша, банан, обувка. Какво търсиш?", "fa": "روی برگه‌ات نوشته: کدام یکی با بقیه جور نیست؟ سیب، گلابی، موز، کفش. دنبال چه می‌گردی؟"},
+ "Het ding dat anders is dan de rest.": {"en":"The thing that is different from the rest.","ar":"الشيء المختلف عن الباقي.","uk":"Те, що відрізняється від інших.","tr":"Diğerlerinden farklı olan şeyi.","ro":"Lucrul care este diferit de celelalte.","bg":"Нещото, което е различно от останалите.", "fa": "چیزی که با بقیه فرق دارد."},
+ "Het ding dat ik het lekkerst vind.": {"en":"The thing I like eating most.","ar":"الشيء الذي أحبه أكثر.","uk":"Те, що мені найсмачніше.","tr":"En sevdiğim şeyi.","ro":"Lucrul care mi se pare cel mai gustos.","bg":"Нещото, което ми е най-вкусно.", "fa": "چیزی که به نظرم از همه خوشمزه‌تر است."},
+ "Het eerste woord.": {"en":"The first word.","ar":"الكلمة الأولى.","uk":"Перше слово.","tr":"İlk kelimeyi.","ro":"Primul cuvânt.","bg":"Първата дума.", "fa": "کلمهٔ اول."},
+ "Het langste woord.": {"en":"The longest word.","ar":"أطول كلمة.","uk":"Найдовше слово.","tr":"En uzun kelimeyi.","ro":"Cel mai lung cuvânt.","bg":"Най-дългата дума.", "fa": "بلندترین کلمه."},
+ "Op je blad staat: is het goed of fout? 2 + 2 = 5. Wat doe je?": {"en":"Your sheet says: is it right or wrong? 2 + 2 = 5. What do you do?","ar":"مكتوب في ورقتك: هل هذا صحيح أم خطأ؟ 2 + 2 = 5. ماذا تفعل؟","uk":"На твоєму аркуші написано: правильно чи неправильно? 2 + 2 = 5. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru mu yanlış mı? 2 + 2 = 5. Ne yaparsın?","ro":"Pe foaia ta scrie: este corect sau greșit? 2 + 2 = 5. Ce faci?","bg":"На листа ти пише: вярно ли е или грешно? 2 + 2 = 5. Какво правиш?", "fa": "روی برگه‌ات نوشته: درست است یا غلط؟ 2 + 2 = 5. چه کار می‌کنی؟"},
+ "Ik kijk of het klopt. Het is fout.": {"en":"I check if it is right. It is wrong.","ar":"أتحقق إن كان صحيحًا. إنه خطأ.","uk":"Я перевіряю, чи це правильно. Це неправильно.","tr":"Doğru mu diye bakarım. Yanlış.","ro":"Verific dacă este corect. Este greșit.","bg":"Проверявам дали е вярно. Грешно е.", "fa": "نگاه می‌کنم که درست است یا نه. غلط است."},
+ "Ik schrijf 2 + 2 = 5 over.": {"en":"I copy 2 + 2 = 5.","ar":"أنسخ 2 + 2 = 5.","uk":"Я переписую 2 + 2 = 5.","tr":"2 + 2 = 5'i aynen yazarım.","ro":"Copiez 2 + 2 = 5.","bg":"Преписвам 2 + 2 = 5.", "fa": "2 + 2 = 5 را رونویسی می‌کنم."},
+ "Ik zeg dat het goed is.": {"en":"I say that it is right.","ar":"أقول إنه صحيح.","uk":"Я кажу, що це правильно.","tr":"Doğru olduğunu söylerim.","ro":"Spun că este corect.","bg":"Казвам, че е вярно.", "fa": "می‌گویم که درست است."},
+ "Ik sla de vraag over.": {"en":"I skip the question.","ar":"أتخطى السؤال.","uk":"Я пропускаю запитання.","tr":"Soruyu atlarım.","ro":"Sar peste întrebare.","bg":"Пропускам въпроса.", "fa": "از سؤال رد می‌شوم."},
+ "Op je blad staat: zet in de goede volgorde. 3, 1, 2. Wat doe je?": {"en":"Your sheet says: put them in the right order. 3, 1, 2. What do you do?","ar":"مكتوب في ورقتك: رتّبها بالترتيب الصحيح. 3، 1، 2. ماذا تفعل؟","uk":"На твоєму аркуші написано: розстав у правильному порядку. 3, 1, 2. Що ти робиш?","tr":"Kâğıdında yazıyor: doğru sıraya koy. 3, 1, 2. Ne yaparsın?","ro":"Pe foaia ta scrie: pune în ordinea corectă. 3, 1, 2. Ce faci?","bg":"На листа ти пише: подреди в правилния ред. 3, 1, 2. Какво правиш?", "fa": "روی برگه‌ات نوشته: به ترتیب درست بچین. 3، 1، 2. چه کار می‌کنی؟"},
+ "Ik zet ze zo neer: 1, 2, 3.": {"en":"I put them like this: 1, 2, 3.","ar":"أرتبها هكذا: 1، 2، 3.","uk":"Я ставлю їх так: 1, 2, 3.","tr":"Onları şöyle dizerim: 1, 2, 3.","ro":"Le pun așa: 1, 2, 3.","bg":"Подреждам ги така: 1, 2, 3.", "fa": "آن‌ها را این‌طوری می‌چینم: 1، 2، 3."},
+ "Ik laat ze zo staan.": {"en":"I leave them as they are.","ar":"أتركها كما هي.","uk":"Я залишаю їх так, як є.","tr":"Onları olduğu gibi bırakırım.","ro":"Le las așa cum sunt.","bg":"Оставям ги така, както са.", "fa": "آن‌ها را همان‌طور که هستند می‌گذارم."},
+ "Ik tel ze bij elkaar op.": {"en":"I add them together.","ar":"أجمعها معًا.","uk":"Я додаю їх разом.","tr":"Onları toplarım.","ro":"Le adun.","bg":"Събирам ги.", "fa": "آن‌ها را با هم جمع می‌کنم."},
+ "Ik zet ze zo neer: 3, 2, 1.": {"en":"I put them like this: 3, 2, 1.","ar":"أرتبها هكذا: 3، 2، 1.","uk":"Я ставлю їх так: 3, 2, 1.","tr":"Onları şöyle dizerim: 3, 2, 1.","ro":"Le pun așa: 3, 2, 1.","bg":"Подреждам ги така: 3, 2, 1.", "fa": "آن‌ها را این‌طوری می‌چینم: 3، 2، 1."},
+ "De juf zegt: leg uit hoe je het weet. Wat doe je?": {"en":"The teacher says: explain how you know. What do you do?","ar":"تقول المعلمة: اشرح كيف عرفت. ماذا تفعل؟","uk":"Вчителька каже: поясни, як ти це знаєш. Що ти робиш?","tr":"Öğretmen diyor ki: nasıl bildiğini açıkla. Ne yaparsın?","ro":"Doamna învățătoare spune: explică de unde știi. Ce faci?","bg":"Учителката казва: обясни откъде знаеш. Какво правиш?", "fa": "خانم معلم می‌گوید: توضیح بده از کجا می‌دانی. چه کار می‌کنی؟"},
+ "Ik vertel waarom mijn antwoord klopt.": {"en":"I say why my answer is right.","ar":"أقول لماذا جوابي صحيح.","uk":"Я розповідаю, чому моя відповідь правильна.","tr":"Cevabımın neden doğru olduğunu anlatırım.","ro":"Spun de ce răspunsul meu este corect.","bg":"Разказвам защо отговорът ми е верен.", "fa": "می‌گویم چرا جوابم درست است."},
+ "Ik zeg alleen het antwoord.": {"en":"I only say the answer.","ar":"أقول الجواب فقط.","uk":"Я кажу тільки відповідь.","tr":"Sadece cevabı söylerim.","ro":"Spun doar răspunsul.","bg":"Казвам само отговора.", "fa": "فقط جواب را می‌گویم."},
+ "Ik zeg: ik weet het niet.": {"en":"I say: I don't know.","ar":"أقول: لا أعرف.","uk":"Я кажу: я не знаю.","tr":"Bilmiyorum derim.","ro":"Spun: nu știu.","bg":"Казвам: не знам.", "fa": "می‌گویم: نمی‌دانم."},
+ "Ik ben stil.": {"en":"I stay quiet.","ar":"أبقى صامتًا.","uk":"Я мовчу.","tr":"Sessiz kalırım.","ro":"Tac.","bg":"Мълча.", "fa": "ساکت می‌مانم."},
+ "Tim heeft 5 knikkers. Hij krijgt er 3 bij. Hoeveel knikkers heeft hij nu?": {"en":"Tim has 5 marbles. He gets 3 more. How many marbles does he have now?","ar":"عند تيم 5 كرات زجاجية. يحصل على 3 أخرى. كم كرة عنده الآن؟","uk":"У Тіма 5 кульок. Він отримує ще 3. Скільки кульок у нього тепер?","tr":"Tim'in 5 bilyesi var. 3 tane daha alıyor. Şimdi kaç bilyesi var?","ro":"Tim are 5 bile. Mai primește 3. Câte bile are acum?","bg":"Тим има 5 топчета. Получава още 3. Колко топчета има сега?", "fa": "تیم 5 تیله دارد. 3 تا دیگر هم می‌گیرد. حالا چند تیله دارد؟"},
+ "Sara heeft 7 stiften. Ahmed heeft 6 stiften. Hoeveel stiften hebben ze samen?": {"en":"Sara has 7 markers. Ahmed has 6 markers. How many markers do they have together?","ar":"عند سارة 7 أقلام تلوين. عند أحمد 6 أقلام تلوين. كم قلمًا عندهما معًا؟","uk":"У Сари 7 фломастерів. В Ахмеда 6 фломастерів. Скільки фломастерів у них разом?","tr":"Sara'nın 7 keçeli kalemi var. Ahmed'in 6 keçeli kalemi var. Birlikte kaç kalemleri var?","ro":"Sara are 7 carioci. Ahmed are 6 carioci. Câte carioci au împreună?","bg":"Сара има 7 флумастера. Ахмед има 6 флумастера. Колко флумастера имат заедно?", "fa": "سارا 7 ماژیک دارد. احمد 6 ماژیک دارد. با هم چند ماژیک دارند؟"},
+ "In de klas zitten 12 meisjes en 11 jongens. Hoeveel kinderen zijn het samen?": {"en":"There are 12 girls and 11 boys in the class. How many children are there together?","ar":"في الصف 12 بنتًا و11 ولدًا. كم طفلًا معًا؟","uk":"У класі 12 дівчаток і 11 хлопчиків. Скільки дітей разом?","tr":"Sınıfta 12 kız ve 11 erkek var. Toplam kaç çocuk var?","ro":"În clasă sunt 12 fete și 11 băieți. Câți copii sunt împreună?","bg":"В класа има 12 момичета и 11 момчета. Колко деца са заедно?", "fa": "در کلاس 12 دختر و 11 پسر هستند. با هم چند بچه می‌شوند؟"},
+ "Olena heeft 20 stickers. Ze krijgt er 15 bij. Hoeveel stickers heeft ze nu?": {"en":"Olena has 20 stickers. She gets 15 more. How many stickers does she have now?","ar":"عند أولينا 20 ملصقًا. تحصل على 15 أخرى. كم ملصقًا عندها الآن؟","uk":"В Олени 20 наліпок. Вона отримує ще 15. Скільки наліпок у неї тепер?","tr":"Olena'nın 20 çıkartması var. 15 tane daha alıyor. Şimdi kaç çıkartması var?","ro":"Olena are 20 de abțibilduri. Mai primește 15. Câte abțibilduri are acum?","bg":"Олена има 20 стикера. Получава още 15. Колко стикера има сега?", "fa": "اولنا 20 برچسب دارد. 15 تا دیگر هم می‌گیرد. حالا چند برچسب دارد؟"},
+ "Er staan 30 stoelen in de zaal. De juf zet er 8 bij. Hoeveel stoelen staan er nu?": {"en":"There are 30 chairs in the hall. The teacher adds 8 more. How many chairs are there now?","ar":"في القاعة 30 كرسيًا. تضيف المعلمة 8 كراسٍ. كم كرسيًا هناك الآن؟","uk":"У залі стоїть 30 стільців. Вчителька ставить ще 8. Скільки стільців тепер?","tr":"Salonda 30 sandalye var. Öğretmen 8 tane daha koyuyor. Şimdi kaç sandalye var?","ro":"În sală sunt 30 de scaune. Doamna mai pune 8. Câte scaune sunt acum?","bg":"В залата има 30 стола. Учителката слага още 8. Колко стола има сега?", "fa": "در سالن 30 صندلی هست. خانم معلم 8 تا دیگر هم می‌گذارد. حالا چند صندلی هست؟"},
+ "Mehmet heeft 9 snoepjes. Hij eet er 4 op. Hoeveel snoepjes heeft hij nog over?": {"en":"Mehmet has 9 sweets. He eats 4. How many sweets does he have left?","ar":"عند محمد 9 حلويات. يأكل 4 منها. كم حلوى بقيت عنده؟","uk":"У Мехмета 9 цукерок. Він з'їдає 4. Скільки цукерок у нього залишилося?","tr":"Mehmet'in 9 şekeri var. 4 tanesini yiyor. Kaç şekeri kaldı?","ro":"Mehmet are 9 bomboane. Mănâncă 4. Câte bomboane i-au mai rămas?","bg":"Мехмет има 9 бонбона. Изяжда 4. Колко бонбона му остават?", "fa": "مهمت 9 آب‌نبات دارد. 4 تا را می‌خورد. چند آب‌نبات برایش مانده است؟"},
+ "Er zitten 15 vogels op het dak. Er vliegen 6 vogels weg. Hoeveel vogels zijn er over?": {"en":"There are 15 birds on the roof. 6 birds fly away. How many birds are left?","ar":"على السطح 15 طائرًا. يطير 6 طيور بعيدًا. كم طائرًا بقي؟","uk":"На даху сидять 15 пташок. 6 пташок відлітають. Скільки пташок залишилося?","tr":"Çatıda 15 kuş var. 6 kuş uçup gidiyor. Kaç kuş kaldı?","ro":"Pe acoperiș sunt 15 păsări. Zboară 6 păsări. Câte păsări au rămas?","bg":"На покрива има 15 птици. 6 птици отлитат. Колко птици остават?", "fa": "روی پشت‌بام 15 پرنده نشسته‌اند. 6 پرنده پرواز می‌کنند و می‌روند. چند پرنده مانده است؟"},
+ "Ana heeft 20 euro. Ze koopt een boek van 8 euro. Hoeveel euro heeft ze over?": {"en":"Ana has 20 euros. She buys a book for 8 euros. How many euros does she have left?","ar":"عند آنا 20 يورو. تشتري كتابًا بـ8 يورو. كم يورو بقي معها؟","uk":"В Ани 20 євро. Вона купує книжку за 8 євро. Скільки євро в неї залишилося?","tr":"Ana'nın 20 eurosu var. 8 euroluk bir kitap alıyor. Kaç eurosu kaldı?","ro":"Ana are 20 de euro. Cumpără o carte de 8 euro. Câți euro i-au rămas?","bg":"Ана има 20 евро. Купува книга за 8 евро. Колко евро ѝ остават?", "fa": "آنا 20 یورو دارد. یک کتاب 8 یورویی می‌خرد. چند یورو برایش مانده است؟"},
+ "In de bus zitten 40 mensen. Bij de halte stappen er 10 uit. Hoeveel mensen zitten er nog in de bus?": {"en":"There are 40 people on the bus. At the stop, 10 get off. How many people are still on the bus?","ar":"في الحافلة 40 شخصًا. عند المحطة ينزل 10. كم شخصًا ما زال في الحافلة؟","uk":"В автобусі 40 людей. На зупинці виходять 10. Скільки людей ще в автобусі?","tr":"Otobüste 40 kişi var. Durakta 10 kişi iniyor. Otobüste hâlâ kaç kişi var?","ro":"În autobuz sunt 40 de oameni. La stație coboară 10. Câți oameni mai sunt în autobuz?","bg":"В автобуса има 40 души. На спирката слизат 10. Колко души са още в автобуса?", "fa": "در اتوبوس 40 نفر نشسته‌اند. در ایستگاه 10 نفر پیاده می‌شوند. چند نفر هنوز در اتوبوس هستند؟"},
+ "De juf heeft 50 potloden. Ze geeft er 25 weg. Hoeveel potloden heeft ze over?": {"en":"The teacher has 50 pencils. She gives 25 away. How many pencils does she have left?","ar":"عند المعلمة 50 قلم رصاص. تعطي 25 منها. كم قلمًا بقي عندها؟","uk":"У вчительки 50 олівців. Вона віддає 25. Скільки олівців у неї залишилося?","tr":"Öğretmenin 50 kalemi var. 25 tanesini veriyor. Kaç kalemi kaldı?","ro":"Doamna are 50 de creioane. Dă 25. Câte creioane i-au rămas?","bg":"Учителката има 50 молива. Дава 25. Колко молива ѝ остават?", "fa": "خانم معلم 50 مداد دارد. 25 تا را به دیگران می‌دهد. چند مداد برایش مانده است؟"},
+ "Sara heeft 8 kaarten. Tim heeft 5 kaarten. Hoeveel kaarten heeft Sara meer dan Tim?": {"en":"Sara has 8 cards. Tim has 5 cards. How many more cards does Sara have than Tim?","ar":"عند سارة 8 بطاقات. عند تيم 5 بطاقات. كم بطاقة عند سارة أكثر من تيم؟","uk":"У Сари 8 карток. У Тіма 5 карток. На скільки карток у Сари більше, ніж у Тіма?","tr":"Sara'nın 8 kartı var. Tim'in 5 kartı var. Sara'nın Tim'den kaç kartı fazla?","ro":"Sara are 8 cărți de joc. Tim are 5. Cu câte cărți are Sara mai mult decât Tim?","bg":"Сара има 8 карти. Тим има 5 карти. С колко карти повече има Сара от Тим?", "fa": "سارا 8 کارت دارد. تیم 5 کارت دارد. سارا چند کارت از تیم بیشتر دارد؟"},
+ "Ahmed is 9 jaar. Zijn zus is 6 jaar. Hoeveel jaar is Ahmed ouder?": {"en":"Ahmed is 9 years old. His sister is 6. How many years older is Ahmed?","ar":"عمر أحمد 9 سنوات. عمر أخته 6 سنوات. كم سنة أحمد أكبر؟","uk":"Ахмедові 9 років. Його сестрі 6 років. На скільки років Ахмед старший?","tr":"Ahmed 9 yaşında. Kız kardeşi 6 yaşında. Ahmed kaç yaş büyük?","ro":"Ahmed are 9 ani. Sora lui are 6 ani. Cu câți ani este Ahmed mai mare?","bg":"Ахмед е на 9 години. Сестра му е на 6. С колко години е по-голям Ахмед?", "fa": "احمد 9 سال دارد. خواهرش 6 سال دارد. احمد چند سال بزرگ‌تر است؟"},
+ "Olena heeft 12 knikkers. Ana heeft 7 knikkers. Hoeveel knikkers heeft Ana minder dan Olena?": {"en":"Olena has 12 marbles. Ana has 7 marbles. How many fewer marbles does Ana have than Olena?","ar":"عند أولينا 12 كرة زجاجية. عند آنا 7. كم كرة عند آنا أقل من أولينا؟","uk":"В Олени 12 кульок. В Ани 7 кульок. На скільки кульок в Ани менше, ніж в Олени?","tr":"Olena'nın 12 bilyesi var. Ana'nın 7 bilyesi var. Ana'nın Olena'dan kaç bilyesi eksik?","ro":"Olena are 12 bile. Ana are 7 bile. Cu câte bile are Ana mai puțin decât Olena?","bg":"Олена има 12 топчета. Ана има 7. С колко топчета по-малко има Ана от Олена?", "fa": "اولنا 12 تیله دارد. آنا 7 تیله دارد. آنا چند تیله از اولنا کمتر دارد؟"},
+ "Tim leest 20 bladzijden. Mehmet leest 14 bladzijden. Wat is het verschil?": {"en":"Tim reads 20 pages. Mehmet reads 14 pages. What is the difference?","ar":"يقرأ تيم 20 صفحة. يقرأ محمد 14 صفحة. ما الفرق؟","uk":"Тім читає 20 сторінок. Мехмет читає 14 сторінок. Яка різниця?","tr":"Tim 20 sayfa okuyor. Mehmet 14 sayfa okuyor. Fark ne kadar?","ro":"Tim citește 20 de pagini. Mehmet citește 14 pagini. Care este diferența?","bg":"Тим чете 20 страници. Мехмет чете 14 страници. Каква е разликата?", "fa": "تیم 20 صفحه می‌خواند. مهمت 14 صفحه می‌خواند. تفاوت چقدر است؟"},
+ "Een pen kost 6 euro. Een schrift kost 2 euro. Hoeveel euro is de pen duurder?": {"en":"A pen costs 6 euros. A notebook costs 2 euros. How many euros more expensive is the pen?","ar":"ثمن القلم 6 يورو. ثمن الدفتر 2 يورو. بكم يورو القلم أغلى؟","uk":"Ручка коштує 6 євро. Зошит коштує 2 євро. На скільки євро ручка дорожча?","tr":"Bir kalem 6 euro. Bir defter 2 euro. Kalem kaç euro daha pahalı?","ro":"Un pix costă 6 euro. Un caiet costă 2 euro. Cu câți euro este pixul mai scump?","bg":"Една химикалка струва 6 евро. Една тетрадка струва 2 евро. С колко евро е по-скъпа химикалката?", "fa": "یک قلم 6 یورو است. یک دفتر 2 یورو است. قلم چند یورو گران‌تر است؟"},
+ "Sara heeft 4 appels. Ahmed heeft het dubbele. Hoeveel appels heeft Ahmed?": {"en":"Sara has 4 apples. Ahmed has double. How many apples does Ahmed have?","ar":"عند سارة 4 تفاحات. عند أحمد الضعف. كم تفاحة عند أحمد؟","uk":"У Сари 4 яблука. В Ахмеда вдвічі більше. Скільки яблук в Ахмеда?","tr":"Sara'nın 4 elması var. Ahmed'in iki katı var. Ahmed'in kaç elması var?","ro":"Sara are 4 mere. Ahmed are dublu. Câte mere are Ahmed?","bg":"Сара има 4 ябълки. Ахмед има двойно повече. Колко ябълки има Ахмед?", "fa": "سارا 4 سیب دارد. احمد دو برابر دارد. احمد چند سیب دارد؟"},
+ "Tim heeft 10 koekjes. Hij geeft de helft aan Olena. Hoeveel koekjes krijgt Olena?": {"en":"Tim has 10 biscuits. He gives half to Olena. How many biscuits does Olena get?","ar":"عند تيم 10 بسكويتات. يعطي النصف لأولينا. كم بسكويتة تحصل أولينا؟","uk":"У Тіма 10 печивок. Він дає половину Олені. Скільки печивок отримує Олена?","tr":"Tim'in 10 kurabiyesi var. Yarısını Olena'ya veriyor. Olena kaç kurabiye alıyor?","ro":"Tim are 10 biscuiți. Îi dă jumătate Olenei. Câți biscuiți primește Olena?","bg":"Тим има 10 бисквити. Дава половината на Олена. Колко бисквити получава Олена?", "fa": "تیم 10 بیسکویت دارد. نصفش را به اولنا می‌دهد. اولنا چند بیسکویت می‌گیرد؟"},
+ "3 kinderen krijgen elk 2 snoepjes. Hoeveel snoepjes zijn het samen?": {"en":"3 children each get 2 sweets. How many sweets is that together?","ar":"3 أطفال يحصل كل واحد على 2 حلوى. كم حلوى معًا؟","uk":"3 дитини отримують по 2 цукерки. Скільки цукерок разом?","tr":"3 çocuğun her biri 2 şeker alıyor. Toplam kaç şeker eder?","ro":"3 copii primesc fiecare câte 2 bomboane. Câte bomboane sunt în total?","bg":"3 деца получават по 2 бонбона. Колко бонбона са общо?", "fa": "3 بچه هر کدام 2 آب‌نبات می‌گیرند. با هم چند آب‌نبات می‌شود؟"},
+ "4 kinderen hebben elk 5 kaarten. Hoeveel kaarten zijn het samen?": {"en":"4 children each have 5 cards. How many cards is that together?","ar":"4 أطفال مع كل واحد 5 بطاقات. كم بطاقة معًا؟","uk":"У 4 дітей по 5 карток. Скільки карток разом?","tr":"4 çocuğun her birinin 5 kartı var. Toplam kaç kart eder?","ro":"4 copii au fiecare câte 5 cărți. Câte cărți sunt în total?","bg":"4 деца имат по 5 карти. Колко карти са общо?", "fa": "4 بچه هر کدام 5 کارت دارند. با هم چند کارت می‌شود؟"},
+ "Mehmet heeft 16 knikkers. Hij verdeelt ze eerlijk over 2 zakjes. Hoeveel knikkers zitten er in elk zakje?": {"en":"Mehmet has 16 marbles. He shares them fairly between 2 bags. How many marbles are in each bag?","ar":"عند محمد 16 كرة زجاجية. يقسمها بالعدل على كيسين. كم كرة في كل كيس؟","uk":"У Мехмета 16 кульок. Він ділить їх порівну на 2 мішечки. Скільки кульок у кожному мішечку?","tr":"Mehmet'in 16 bilyesi var. Onları 2 torbaya eşit paylaştırıyor. Her torbada kaç bilye var?","ro":"Mehmet are 16 bile. Le împarte în mod egal în 2 pungi. Câte bile sunt în fiecare pungă?","bg":"Мехмет има 16 топчета. Разделя ги поравно в 2 торбички. Колко топчета има във всяка торбичка?", "fa": "مهمت 16 تیله دارد. آن‌ها را به‌طور مساوی در 2 کیسه تقسیم می‌کند. در هر کیسه چند تیله هست؟"},
+ "Komt er iets bij of gaat er iets af?": {"en":"Is something added or taken away?","ar":"هل يُضاف شيء أم يُطرح شيء؟","uk":"Щось додається чи щось забирають?","tr":"Bir şey ekleniyor mu, çıkarılıyor mu?","ro":"Se adaugă ceva sau se ia ceva?","bg":"Добавя ли се нещо, или се отнема?", "fa": "چیزی اضافه می‌شود یا چیزی کم می‌شود؟"},
+ "Gaat er iets weg? Wat heb je dan nog?": {"en":"Does something go away? What do you still have then?","ar":"هل يذهب شيء؟ ماذا يبقى معك إذن؟","uk":"Щось зникає? Що тоді в тебе залишається?","tr":"Bir şey gidiyor mu? O zaman elinde ne kalıyor?","ro":"Pleacă ceva? Ce mai ai atunci?","bg":"Отива ли си нещо? Какво ти остава тогава?", "fa": "چیزی می‌رود؟ پس چه چیزی برایت می‌ماند؟"},
+ "Hoeveel moet er bij het kleine getal, tot het grote getal?": {"en":"How much do you add to the small number to reach the big number?","ar":"كم يجب أن تضيف إلى العدد الصغير حتى تصل إلى العدد الكبير؟","uk":"Скільки треба додати до меншого числа, щоб дійти до більшого?","tr":"Küçük sayıya kaç eklersen büyük sayıya ulaşırsın?","ro":"Cât trebuie adăugat la numărul mic ca să ajungi la numărul mare?","bg":"Колко трябва да добавиш към малкото число, за да стигнеш голямото?", "fa": "به عدد کوچک چقدر باید اضافه کنی تا به عدد بزرگ برسی؟"},
+ "Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?": {"en":"Is it twice as much, or half? Or the same number each time?","ar":"هل هو الضعف أم النصف؟ أم نفس العدد كل مرة؟","uk":"Це вдвічі більше чи половина? Чи щоразу те саме число?","tr":"İki katı mı, yarısı mı? Yoksa her seferinde aynı sayı mı?","ro":"Este de două ori mai mult sau jumătate? Sau de fiecare dată același număr?","bg":"Двойно ли е, или половината? Или всеки път същото число?", "fa": "دو برابر است یا نصف؟ یا هر بار همان عدد؟"},
 };
 
 export default NIEUWKOMERS_STEUN;

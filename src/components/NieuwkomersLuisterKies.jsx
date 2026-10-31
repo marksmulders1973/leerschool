@@ -30,6 +30,7 @@ const KOP = {
   tr: { zinnen: "Cümleler", zinkaarten: "Cümle kartları", dictee: "Resimli dikte", kaarten: "Kelime kartları", kies: "Dinle ve seç", onderwerp: "Bir konu seç", terug: "Geri", nogEens: "Bir daha", klaar: "Bitti!" },
   ro: { zinnen: "Propoziții", zinkaarten: "Cartonașe cu propoziții", dictee: "Dictare cu imagini", kaarten: "Cartonașe cu cuvinte", kies: "Ascultă și alege", onderwerp: "Alege o temă", terug: "Înapoi", nogEens: "Încă o dată", klaar: "Gata!" },
   bg: { zinnen: "Изречения", zinkaarten: "Карти с изречения", dictee: "Диктовка с картинки", kaarten: "Карти с думи", kies: "Слушай и избери", onderwerp: "Избери тема", terug: "Назад", nogEens: "Още веднъж", klaar: "Готово!" },
+  fa: { zinnen: "جمله‌ها", zinkaarten: "کارت‌های جمله", dictee: "دیکتهٔ تصویری", kaarten: "کارت‌های کلمه", kies: "گوش کن و انتخاب کن", onderwerp: "یک موضوع انتخاب کن", terug: "برگشت", nogEens: "یک بار دیگر", klaar: "تمام شد!" },
 };
 
 const S = {
@@ -61,7 +62,7 @@ function Kop({ tekst, onTerug, terugLabel }) {
 // Woorden: tekst = het woord. Zinnen: tekst = de zin; `groep` = plaatjes die op elkaar lijken.
 const woordItems = (thema) => thema.woorden.filter((w) => plaatjeVan(w)).map((w) => ({ tekst: w, plaatje: plaatjeVan(w) }));
 const zinItems = (thema) => zinnenVan(thema.thema).map((z) => ({ tekst: z.zin, plaatje: z.plaatje, groep: z.groep, vertaling: z.vertaling }));
-const RTL = new Set(["ar"]);
+const RTL = new Set(["ar", "fa"]);
 
 // Heeft dit toestel een stem voor de thuistaal? De stemmen laden soms pas na een tel (voiceschanged).
 function useStem(taal) {

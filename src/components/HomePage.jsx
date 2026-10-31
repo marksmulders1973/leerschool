@@ -522,7 +522,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     zodat je het herkent zonder Nederlands te lezen. */}
                 <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 17 }}>Ik ben nieuw in Nederland</span>
                 <span style={{ display: "block", fontSize: 13, color: "rgba(255,255,255,0.85)", marginTop: 2 }}>I&apos;m new in the Netherlands → learn Dutch</span>
-                <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.62)", marginTop: 3 }}>English · العربية · Українська · Türkçe · Română · Български</span>
+                <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.62)", marginTop: 3 }}>English · العربية · Українська · Türkçe · Română · Български · فارسی</span>
               </span>
               <span aria-hidden="true" style={{ fontSize: 20, color: "#00d4ff" }}>→</span>
             </button>

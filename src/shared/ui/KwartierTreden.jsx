@@ -50,6 +50,7 @@ export default function KwartierTreden({ compact = false }) {
         tr: [`Çeyrek saatin · ${min} dk kaldı`, `⭐ 5 dakika tamam · ${min} dk kaldı`, `⭐⭐ 10 dakika tamam · ${min} dk kaldı`, "🏆 Çeyrek saat tamam — gerisi ekstra"],
         ro: [`Sfertul tău de oră · încă ${min} min`, `⭐ 5 minute făcute · încă ${min} min`, `⭐⭐ 10 minute făcute · încă ${min} min`, "🏆 Sfertul de oră e gata — restul e în plus"],
         bg: [`Твоят четвърт час · още ${min} мин`, `⭐ 5 минути готови · още ${min} мин`, `⭐⭐ 10 минути готови · още ${min} мин`, "🏆 Четвърт часът е готов — останалото е бонус"],
+        fa: [`یک ربع تو · ${min} دقیقه مانده`, `⭐ 5 دقیقه تمام شد · ${min} دقیقه مانده`, `⭐⭐ 10 دقیقه تمام شد · ${min} دقیقه مانده`, "🏆 یک ربع تمام شد — بقیه‌اش اضافی است"],
       }[taal];
       if (!T) return null;
       return t.klaar ? T[3] : T[Math.min(2, t.deel)];

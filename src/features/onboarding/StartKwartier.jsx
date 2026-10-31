@@ -17,7 +17,7 @@ import { leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
 // overstappen misten een vertaalknop. De vragen komen uit honderden paden zonder vaste vertaling, dus
 // Charley vertaalt vraag + antwoorden ter plekke (klein model, alleen JSON terug); per vraag één keer,
 // daarna uit sessionStorage.
-const VERTAAL_TAAL = { en: "English", ar: "العربية", uk: "Українська", tr: "Türkçe", ro: "Română", bg: "Български" };
+const VERTAAL_TAAL = { en: "English", ar: "العربية", uk: "Українська", tr: "Türkçe", ro: "Română", bg: "Български", fa: "فارسی" };
 async function vertaalVraag(vraag, taal) {
   const sleutel = "lk_vert:" + taal + ":" + String(vraag.q).slice(0, 80) + "|" + (vraag.options || []).join("|").slice(0, 120);
   try { const c = sessionStorage.getItem(sleutel); if (c) return JSON.parse(c); } catch { /* */ }
@@ -103,7 +103,7 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
   const taal = (() => { try { const t = localStorage.getItem("lk_nieuwkomer") === "1" && localStorage.getItem("lk_steuntaal") ? leesSteuntaal() : null; return t && t !== "nl" ? t : null; } catch { return null; } })();
   const [vert, setVert] = useState(null);     // { q, options } in de thuistaal
   const [vertBezig, setVertBezig] = useState(false);
-  const rtl = taal === "ar";
+  const rtl = taal === "ar" || taal === "fa";
   const goed = gekozen != null && gekozen === vraag.answer;
   const uitleg = uitlegVan(vraag);
   const hint = gekozen != null && !goed ? vraag.wrongHints?.[gekozen] : null;

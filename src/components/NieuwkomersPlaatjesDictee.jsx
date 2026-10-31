@@ -32,6 +32,7 @@ const KOP = {
   tr: { nl: "Hollandaca", eigen: "Benim dilim", typen: "Kendin yaz", tegels: "Harfler", welk: "de mi het mi?", nogEens: "Bir daha", klaar: "Bitti!", check: "Tamam", pt: "puan", uit: "{b} puanın {a} tanesini kazandın!", rec: "Rekorun: {r} puan", nieuw: "Yeni rekor!", lof: ["Harika!","Aferin!","İyi çalıştın! Bir daha dene."] },
   ro: { nl: "Olandeză", eigen: "Limba mea", typen: "Scrie singur", tegels: "Litere", welk: "de sau het?", nogEens: "Încă o dată", klaar: "Gata!", check: "Gata", pt: "puncte", uit: "Ai câștigat {a} din {b} puncte!", rec: "Recordul tău: {r} puncte", nieuw: "Record nou!", lof: ["Super!","Bravo!","Ai exersat bine! Mai încearcă o dată."] },
   bg: { nl: "Нидерландски", eigen: "Моят език", typen: "Напиши сам", tegels: "Букви", welk: "de или het?", nogEens: "Още веднъж", klaar: "Готово!", check: "Готово", pt: "точки", uit: "Спечели {a} от {b} точки!", rec: "Твоят рекорд: {r} точки", nieuw: "Нов рекорд!", lof: ["Супер!","Браво!","Добре се упражни! Опитай пак."] },
+  fa: { nl: "هلندی", eigen: "زبان من", typen: "خودت تایپ کن", tegels: "حرف‌ها", welk: "de یا het؟", nogEens: "یک بار دیگر", klaar: "تمام شد!", check: "تمام", pt: "امتیاز", uit: "تو {a} از {b} امتیاز گرفتی!", rec: "رکورد تو: {r} امتیاز", nieuw: "رکورد جدید!", lof: ["عالی بود!","آفرین!","خوب تمرین کردی! دوباره امتحان کن."] },
 };
 
 const S = {

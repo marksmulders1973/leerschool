@@ -14,6 +14,7 @@ export const PUNTEN_TEKST = {
   tr: { pt: "puan", uit: "{b} puanın {a} tanesini kazandın!", rec: "Rekorun: {r} puan", nieuw: "Yeni rekor!", lof: ["Harika!", "Aferin!", "İyi çalıştın! Bir daha dene."] },
   ro: { pt: "puncte", uit: "Ai câștigat {a} din {b} puncte!", rec: "Recordul tău: {r} puncte", nieuw: "Record nou!", lof: ["Super!", "Bravo!", "Ai exersat bine! Mai încearcă o dată."] },
   bg: { pt: "точки", uit: "Спечели {a} от {b} точки!", rec: "Твоят рекорд: {r} точки", nieuw: "Нов рекорд!", lof: ["Супер!", "Браво!", "Добре се упражни! Опитай пак."] },
+  fa: { pt: "امتیاز", uit: "تو {a} از {b} امتیاز گرفتی!", rec: "رکورد تو: {r} امتیاز", nieuw: "رکورد جدید!", lof: ["عالی بود!", "آفرین!", "خوب تمرین کردی! دوباره امتحان کن."] },
 };
 
 /** Getekende ster (geen emoji als icoon, Mark 11 sep 2026). */

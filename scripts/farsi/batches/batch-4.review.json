@@ -1,0 +1,98 @@
+[
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|192860",
+    "oordeel": "verbeterd",
+    "was": "کتم را برمی‌دارم.",
+    "nu": "کاپشنم را برمی‌دارم.",
+    "reden": "jas = کاپشن (vaste lijst), niet کت (colbert)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|182031",
+    "oordeel": "verbeterd",
+    "was": "چطور از خانم معلم یا آقا معلم چیزی بپرسم؟",
+    "nu": "چطور از خانم معلم یا آقای معلم چیزی بپرسم؟",
+    "reden": "آقا معلم → آقای معلم (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|192078",
+    "oordeel": "verbeterd",
+    "was": "خانم معلم یا آقا معلم می‌گوید چه کاری انجام بدهی.\n\n**Pak je werkboek.** (= کتاب کارت را بردار.) **Begin maar.** (= شروع کن.) **Werk zachtjes.** (= آرام کار کن.)\n\nچیزی را نمی‌دانی؟ بپرس: **Welke bladzijde?** (= کدام صفحه؟) یا **Mag ik je potlood lenen?** (= می‌توانم مدادت را قرض بگیرم؟)",
+    "nu": "خانم معلم یا آقای معلم می‌گویند چه کاری انجام بدهی.\n\n**Pak je werkboek.** (= کتاب کارت را بردار.) **Begin maar.** (= شروع کن.) **Werk zachtjes.** (= آرام کار کن.)\n\nچیزی را نمی‌دانی؟ بپرس: **Welke bladzijde?** (= کدام صفحه؟) یا **Mag ik je potlood lenen?** (= می‌توانم مدادت را قرض بگیرم؟)",
+    "reden": "آقای معلم (vaste lijst) + meervoud werkwoord bij twee personen"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|205813",
+    "oordeel": "verbeterd",
+    "was": "گاهی خانم معلم یا آقا معلم به بچهٔ دیگری کمک می‌کند. آن موقع نباید مزاحمش شوی.\n\n1. **Kijk zelf** (= خودت نگاه کن)، یک بار دیگر.\n2. **Vraag een kind** (= از یک بچه بپرس) که کنارت نشسته: **Kun je mij helpen?** (= می‌توانی به من کمک کنی؟)\n3. **Wacht** (= صبر کن)، آرام. برو سراغ **volgende som** (= مسئلهٔ بعدی).\n\nخانم معلم کمی بعد پیش تو می‌آید.",
+    "nu": "گاهی خانم معلم یا آقای معلم به بچهٔ دیگری کمک می‌کند. آن موقع نباید مزاحمش شوی.\n\n1. **Kijk zelf** (= خودت نگاه کن)، یک بار دیگر.\n2. **Vraag een kind** (= از یک بچه بپرس) که کنارت نشسته: **Kun je mij helpen?** (= می‌توانی به من کمک کنی؟)\n3. **Wacht** (= صبر کن)، آرام. برو سراغ **volgende som** (= مسئلهٔ بعدی).\n\nخانم معلم کمی بعد پیش تو می‌آید.",
+    "reden": "آقای معلم (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|212593",
+    "oordeel": "verbeterd",
+    "was": "همچنین می‌توانی بگویی که حالت **fijn** (= خوب) است.\n\n**Ik ben blij.** (= من خوشحالم.) **Ik ben trots.** (= به خودم افتخار می‌کنم.) **Ik voel me goed.** (= حالم خوب است.)\n**Het gaat goed, dank u.** (= خوبم، ممنون.)\n\nخانم معلم یا آقا معلم دوست دارد این را بشنود.",
+    "nu": "همچنین می‌توانی بگویی که حالت **fijn** (= خوب) است.\n\n**Ik ben blij.** (= من خوشحالم.) **Ik ben trots.** (= به خودم افتخار می‌کنم.) **Ik voel me goed.** (= حالم خوب است.)\n**Het gaat goed, dank u.** (= خوبم، ممنون.)\n\nخانم معلم یا آقای معلم دوست دارد این را بشنود.",
+    "reden": "آقای معلم (vaste lijst)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|206803",
+    "oordeel": "verbeterd",
+    "was": "داد می‌زنم: خانم، خانم!",
+    "nu": "داد می‌زنم: خانم معلم، خانم معلم!",
+    "reden": "juf = خانم معلم (vaste lijst); losse \"خانم\" kan ook \"mevrouw\" zijn"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|167574",
+    "oordeel": "verbeterd",
+    "was": "خوردن (opeten) = رفته (weg) = منها. باقی‌مانده (over) = چیزی که هنوز داری. 6 − 2.",
+    "nu": "خوردن (opeten) = رفته (weg) = تفریق. باقی‌مانده (over) = چیزی که هنوز داری. 6 − 2.",
+    "reden": "min = تفریق, gelijk aan de rest van de pakketten (جمع/تفریق/ضرب)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|168547",
+    "oordeel": "verbeterd",
+    "was": "منها (−)",
+    "nu": "تفریق (−)",
+    "reden": "min = تفریق, consistent met جمع (+) en ضرب (×)"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|170280",
+    "oordeel": "verbeterd",
+    "was": "پرواز کردن و رفتن = رفته (weg) = منها. 8 − 3.",
+    "nu": "پرواز کردن و رفتن = رفته (weg) = تفریق. 8 − 3.",
+    "reden": "min = تفریق, consistent"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|199417",
+    "oordeel": "verbeterd",
+    "was": "می‌توانم بروم خانه؟",
+    "nu": "می‌توانم به خانه بروم؟",
+    "reden": "standaard woordvolgorde i.p.v. spreektaal"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|202064",
+    "oordeel": "verbeterd",
+    "was": "می‌توانم بروم بیرون؟",
+    "nu": "می‌توانم بیرون بروم؟",
+    "reden": "standaard woordvolgorde i.p.v. spreektaal"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|207962",
+    "oordeel": "verbeterd",
+    "was": "راه می‌افتم و بیرون می‌روم.",
+    "nu": "بیرون می‌روم.",
+    "reden": "korter en natuurlijker, zoals het origineel"
+  },
+  {
+    "id": "A|src/learnPaths/nieuwkomersSteun.js|217325",
+    "oordeel": "verbeterd",
+    "was": "Beginnen (= شروع کردن) = الان کار را شروع کن.",
+    "nu": "Beginnen (= شروع کردن) = همین حالا دست به کار شدن.",
+    "reden": "definitie (geen bevel), zoals het Nederlands \"nu gaan werken\""
+  },
+  {
+    "id": "_telling",
+    "goed": 158,
+    "verbeterd": 13
+  }
+]
