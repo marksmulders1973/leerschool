@@ -66,6 +66,7 @@ export function maakKindGroep(level, schoolType = "") {
   return schoolType ? `klas${g}` : `groep${g}`;
 }
 export function zetKindGroep(level, schoolType = "") { _kindGroep = maakKindGroep(level, schoolType); }
+export function huidigeKindGroep() { return _kindGroep; }
 
 function _cleanProps(p) {
   if (!p || typeof p !== "object") return null;

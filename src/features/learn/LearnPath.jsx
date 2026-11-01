@@ -44,7 +44,16 @@ import BronTekstInteractief from "./BronTekstInteractief.jsx";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
-import { track } from "../../utils.js";
+import { track, huidigeKindGroep } from "../../utils.js";
+
+// 🎯 Groep-start-aanbod (Mark 1 nov 2026, "werkwoordspelling groep 8 moeilijker"): pad_feedback
+// 14 dagen liet zien dat groep 8 de eerste delen van werkwoordspelling "te makkelijk" vond
+// (deel 1 "Wat is een werkwoord?" en deel 2 de basisregel). Een aanbod, geen dwang: bovenaan het
+// overzicht een extra knop die meteen bij de lastige d/t begint; "Begin bij deel 1" blijft staan.
+// Meten: groep_start_toon → groep_start_kies (+ pad_feedback op die delen).
+const GROEP_START = {
+  "werkwoordsspelling-dt": { groep8: { stap: 2, tekst: "Groep 8? Sla de basis over" } },
+};
 import PadFeedback, { heeftPadFeedback } from "./PadFeedback.jsx";
 import { voortgangPct, beantwoordInDeel } from "./voortgang.js";
 import { meldAntwoord } from "../niveau/signalen.js";
@@ -2358,6 +2367,16 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
   const examStepIdx = path.steps.findIndex(s => /examen/i.test(s.title));
   const hasExamShortcut = examStepIdx >= 0;
   const examChecks = hasExamShortcut ? (path.steps[examStepIdx]?.checks?.length || 0) : 0;
+  // Groep-start-aanbod (zie GROEP_START): alleen bij een nieuw begin (nog niets af, geen bewaarde plek).
+  const groepStart = (() => {
+    const g = huidigeKindGroep();
+    const a = g && GROEP_START[path?.id]?.[g];
+    if (!a || hervat || completedSteps.size > 0 || !path.steps[a.stap]) return null;
+    return a;
+  })();
+  useEffect(() => {
+    if (groepStart) { try { track("groep_start_toon", { pad: path.id, stap: groepStart.stap }); } catch { /* */ } }
+  }, [!!groepStart, path?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div style={pageStyle()}>
@@ -2432,6 +2451,17 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
           </button>
         )}
 
+        {loaded && groepStart && (
+          <button
+            onClick={() => {
+              try { track("groep_start_kies", { pad: path.id, stap: groepStart.stap }); } catch { /* */ }
+              onPickStep(groepStart.stap);
+            }}
+            style={{ ...btnPrimary(), marginTop: 0, marginBottom: 10, padding: "14px 18px", fontSize: 15, background: "linear-gradient(135deg,#7e57c2,#5e35b1)" }}
+          >
+            {`🎯 ${groepStart.tekst} — begin bij deel ${groepStart.stap + 1}: ${path.steps[groepStart.stap]?.title || ""}`}
+          </button>
+        )}
         {loaded && firstUnfinishedIdx !== null && (
           <SteunTekst nl={startKnopEigen ? null : startKnopNl} knop><button
             onClick={() => (hervat ? onPickStep(hervat.stepIdx, hervat.checkIdx) : onPickStep(firstUnfinishedIdx))}
