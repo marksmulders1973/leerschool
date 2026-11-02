@@ -50,6 +50,19 @@ async function haalEditie(weekKey) {
   return Array.isArray(rows) && rows[0] ? rows[0] : null;
 }
 
+async function haalArchief() {
+  const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!base || !key) return [];
+  const r = await fetch(
+    `${base}/rest/v1/weekpakket_edities?gepubliceerd=eq.true&select=*&order=week_key.asc`,
+    { headers: { apikey: key, Authorization: `Bearer ${key}` } }
+  );
+  if (!r.ok) return [];
+  const rows = await r.json();
+  return Array.isArray(rows) ? rows : [];
+}
+
 export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).send("method");
 
@@ -85,7 +98,19 @@ export default async function handler(req, res) {
   let weekKey = check.weekKey;
   if (check.master && /^\d{4}-W\d{2}$/.test(String(req.query.week || ""))) weekKey = String(req.query.week);
 
-  const editie = await haalEditie(weekKey);
+  // 2 nov 2026 (melding Ellen, leerkracht groep 7/8): er stonden alleen edities voor W35-W38,
+  // dus sinds W39 gaf elke weekmail-code "Nog niet klaar". Vangnet: is er voor deze week (nog)
+  // geen editie, dan een editie uit het archief, om de beurt op weeknummer — nooit meer een dode link.
+  let editie = await haalEditie(weekKey);
+  let uitArchief = false;
+  if (!editie) {
+    const archief = await haalArchief();
+    if (archief.length) {
+      const nr = parseInt(String(weekKey).split("W")[1] || "0", 10) || 0;
+      editie = archief[nr % archief.length];
+      uitArchief = true;
+    }
+  }
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   res.setHeader("Cache-Control", "no-store");
   if (!editie) {
@@ -100,7 +125,7 @@ export default async function handler(req, res) {
 
   const kop = `
     <h1>📬 Weekpakket — ${esc(editie.titel)}</h1>
-    <div class="sub">Week ${esc(weekKey)} · alleen voor mail-abonnees van Leerkwartier · print dit vel en ga aan de slag${check.master ? " · <b>meesterscode</b>" : ""}</div>
+    <div class="sub">Week ${esc(weekKey)}${uitArchief ? ` · uit het archief (${esc(editie.week_key)})` : ""} · alleen voor mail-abonnees van Leerkwartier · print dit vel en ga aan de slag${check.master ? " · <b>meesterscode</b>" : ""}</div>
     <div class="maker"><b>Van de maker:</b> ${editie.maker_alinea}</div>`;
 
   if (wilAntwoorden) {
