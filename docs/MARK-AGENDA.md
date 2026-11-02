@@ -21,6 +21,7 @@
 
 - **za 17 okt (Claude + Mark)**: v963 "018" + v964 "019" uitrollen (meting moeilijkheid per vraag + herschreven topografievraag "laagste land" na 🚩-melding 16 okt, staan klaar) + verder met de ladder: (1) betere foute antwoorden Delen, (2) twee vragen per tree, (3) makkelijker deel overslaan pas na meting. Mark beslist welke mee gaan.
 - **wo 28 okt (Mark)**: Play Store dag 14 → productie-aanvraag; eerst Play-app geforceerd stoppen (groene balk weg door assetlinks-fix 27 okt). · **vr 30 okt (Claude)**: meetpunt startpagina 066 (foto's, code-veld, prijzen achter Meer). · **ma 2 nov (Claude)**: evaluatie startsets + Nu op school + vakscherm, eerste week.
+- **📬 Nog te doen — Weekpakketten (Claude, staande taak sinds 2 nov 2026)**: edities W45-W48 staan klaar. **Vóór ma 30 nov: W49 en verder maken** (zelfde vorm: 6 rekenen · 5 taal · leestekst + 4 vragen + antwoordblad, blind laten nakijken, bron in `docs/weekpakket/`). Daarna elke maand 4 weken vooruit vullen. Zonder nieuwe editie valt de weekmail terug op het archief.
 - **~13 nov (Mark)**: Play Store opnieuw aanvragen na 14 dagen gesloten testen met actieve testers (afwijzing 29 okt). · **za 31 okt (Claude)**: live-test Ooievaarspas-route op telefoon vóór zondag.
 - **za 1 nov (Claude)**: klikbare link toevoegen aan de Facebook-post "Hij vroeg wat ik dacht" (Meta-linklimiet weer vrij).
 
