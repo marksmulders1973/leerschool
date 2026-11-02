@@ -217,7 +217,7 @@ const steps = [
         },
       },
       {
-        q: "*\"De leeuw is de grootste kat van Afrika. Alleen de tijger is groter. Een leeuw kan wel 250 kilo wegen.\"* — Wat wil de schrijver?",
+        q: "*\"De leeuw is de grootste kat van Afrika. Alleen de tijger, die in Azië leeft, is nog groter. Een leeuw kan wel 250 kilo wegen.\"* — Wat wil de schrijver?",
         options: ["Informeren", "Overtuigen", "Amuseren", "Instrueren"],
         answer: 0,
         wrongHints: [
