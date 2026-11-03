@@ -97,7 +97,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "365 = gewoon. 366 = schrikkel. Verschil = 1 dag (29 februari)." }],
           niveaus: {
-            basis: "365 dagen.",
+            basis: "Denk aan een schrikkeljaar: dat heeft één dag extra in februari. Hoeveel dagen heeft een jaar zonder die extra dag?",
             simpeler: "Een gewoon jaar heeft 365 dagen. Een schrikkeljaar heeft 366.",
             nogSimpeler: "365",
           },
@@ -163,7 +163,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 dagen.",
+            basis: "Gebruik de knokkels-truc: maak een vuist en tel de maanden af tot november. Valt november op een knokkel of in een inham?",
             simpeler: "November is een korte maand. Hij heeft 30 dagen, net als april, juni en september.",
             nogSimpeler: "30 dagen",
           },
@@ -210,7 +210,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Juli en augustus.",
+            basis: "Gebruik de knokkels-truc en loop de maanden af. Waar komen twee knokkels direct na elkaar, zonder inham ertussen?",
             simpeler: "Juni, april en november hebben 30 dagen. Juli en augustus hebben allebei 31.",
             nogSimpeler: "Juli en augustus",
           },
@@ -256,7 +256,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "59 dagen.",
+            basis: "Hoeveel dagen heeft januari, en hoeveel heeft februari in een gewoon jaar? Tel die twee daarna bij elkaar op.",
             simpeler: "Januari = 31 dagen. Februari = 28 dagen. 31 + 28 = 59.",
             nogSimpeler: "59 dagen",
           },
@@ -298,7 +298,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5.",
+            basis: "Een week heeft 7 dagen. Welke dagen horen bij het weekend? Haal die van de 7 af.",
             simpeler: "Een week heeft 7 dagen. Zaterdag en zondag zijn weekend. 7 − 2 = 5.",
             nogSimpeler: "5",
           },
@@ -345,7 +345,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7.",
+            basis: "Gebruik de knokkels-truc: elke knokkel is een maand met 31 dagen. Tel hoeveel knokkels je raakt van januari tot en met december.",
             simpeler: "De lange maanden zijn januari, maart, mei, juli, augustus, oktober en december. Dat zijn er 7.",
             nogSimpeler: "7",
           },
@@ -893,7 +893,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 keer.",
+            basis: "Een schrikkeljaar kun je precies door 4 delen. Zoek welke jaren van 2025 tot en met 2032 je door 4 kunt delen.",
             simpeler: "Alleen in schrikkeljaren is er 29 februari. Dat zijn 2028 en 2032. Dus 2 keer.",
             nogSimpeler: "2 keer",
           },
@@ -936,7 +936,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Geboren 20 oktober 2013, vandaag 5 maart 2026 → leeftijd 12." }],
           basiskennis: [{ onderwerp: "Verjaardag-check", uitleg: "Altijd checken: heeft hij al verjaardag gehad dit jaar?" }],
           niveaus: {
-            basis: "12 jaar.",
+            basis: "Trek het geboortejaar af van het jaar van nu. Is Tom dit jaar nog niet jarig geweest, dan haal je er nog één jaar af.",
             simpeler: "2026 - 2013 = 13. Maar verjaardag (oktober) is nog niet geweest in maart. Dus 1 eraf = 12 jaar.",
             nogSimpeler: "12 jaar",
           },
@@ -989,7 +989,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 jaar.",
+            basis: "Trek het geboortejaar af van 2026. Kijk daarna: is haar verjaardag in juni op 1 maart al geweest, of nog niet?",
             simpeler: "2026 − 2015 = 11. Maar in maart is haar verjaardag (juni) nog niet geweest. Dus 10 jaar.",
             nogSimpeler: "10 jaar",
           },
@@ -1035,7 +1035,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "13 jaar.",
+            basis: "Trek het geboortejaar af van 2026. Is Daan op 30 september dit jaar al jarig geweest?",
             simpeler: "2026 − 2013 = 13. Zijn verjaardag in januari is al geweest. Dus 13 jaar.",
             nogSimpeler: "13 jaar",
           },
@@ -1077,7 +1077,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2035.",
+            basis: "Opa is 80 als er 80 jaar voorbij zijn sinds zijn geboortejaar. Tel die 80 jaar op bij het jaar waarin hij geboren is.",
             simpeler: "Tel 80 op bij 1955. 1955 + 80 = 2035.",
             nogSimpeler: "2035",
           },
@@ -1119,7 +1119,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 jaar.",
+            basis: "Ze zijn op dezelfde dag jarig. Dan is het verschil in leeftijd gewoon het verschil tussen hun geboortejaren.",
             simpeler: "Fleur is in 2011 geboren, Noor in 2016. 2016 − 2011 = 5. Fleur is 5 jaar ouder.",
             nogSimpeler: "5 jaar",
           },
@@ -1170,7 +1170,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2017.",
+            basis: "Bram is dit jaar al jarig geweest, dus hij is precies 9 jaar geleden geboren. Tel 9 jaar terug vanaf 2026.",
             simpeler: "Bram is dit jaar 9 geworden. 2026 − 9 = 2017.",
             nogSimpeler: "2017",
           },
@@ -1212,7 +1212,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 jaar.",
+            basis: "Op 20 december word je 11. Hoe oud ben je de dag ervoor, als je verjaardag nog net niet geweest is?",
             simpeler: "Pas op 20 december word je 11. Een dag eerder ben je nog 10.",
             nogSimpeler: "10 jaar",
           },
@@ -1259,7 +1259,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Iemand van 40 jaar in 2026 = geboren in 1986." }],
           basiskennis: [{ onderwerp: "Aftrekken", uitleg: "Hoe ouder, hoe eerder geboren." }],
           niveaus: {
-            basis: "1986.",
+            basis: "Ze wordt 40 in 2026. Tel 40 jaar terug vanaf dat jaar.",
             simpeler: "Wie 40 wordt in 2026 is geboren in 2026 - 40 = 1986.",
             nogSimpeler: "1986",
           },
@@ -1306,7 +1306,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 dagen.",
+            basis: "Tel eerst de dagen die nog in september vallen (september heeft 30 dagen) en tel daarna de dagen in oktober erbij. De eerste en de laatste dag tellen allebei mee.",
             simpeler: "In september: 28, 29, 30 (3 dagen). In oktober: 1 t/m 4 (4 dagen). Samen 7.",
             nogSimpeler: "7 dagen",
           },
@@ -1353,7 +1353,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vrijdag 10 april.",
+            basis: "Woensdag is de eerste dag van de reis. Tel vanaf daar door tot je drie dagen hebt, en houd dagnaam en datum allebei bij.",
             simpeler: "Woensdag is dag 1, donderdag dag 2, vrijdag dag 3. Dus vrijdag 10 april.",
             nogSimpeler: "Vrijdag 10 april",
           },
@@ -1395,7 +1395,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2019.",
+            basis: "Jonger betekent later geboren. Moet je die 4 jaar dan bij 2015 optellen of ervan aftrekken?",
             simpeler: "De broer is jonger, dus later geboren. 2015 + 4 = 2019.",
             nogSimpeler: "2019",
           },
@@ -1437,7 +1437,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "17 dagen.",
+            basis: "Hoeveel dagen zitten er in 2 weken? Tel daar de 3 losse dagen bij op.",
             simpeler: "2 weken is 14 dagen. Plus 3 dagen = 17 dagen.",
             nogSimpeler: "17 dagen",
           },
@@ -1483,7 +1483,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7.",
+            basis: "Tel eerst de nachtjes tot het einde van november (november heeft 30 dagen). Tel daarna verder in december tot de 5e.",
             simpeler: "Van 28 november naar 5 december is 7 dagen. Dus nog 7 nachtjes slapen.",
             nogSimpeler: "7",
           },
@@ -1540,7 +1540,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Zelfde dag-getal volgende maand = dagen van TUSSENMAAND. Juni = 30, juli = 31, februari = 28/29." },
           ],
           niveaus: {
-            basis: "30 dagen.",
+            basis: "Hoeveel dagen heeft juni? Van de 10e van de ene maand tot de 10e van de volgende maand is precies één hele maand.",
             simpeler: "Juni heeft 30 dagen. Van 10 juni naar 10 juli = 30 dagen later.",
             nogSimpeler: "30",
           },

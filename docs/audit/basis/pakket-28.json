@@ -1,0 +1,367 @@
+[
+ {
+  "file": "src/learnPaths/dierenklassenPo.js",
+  "items": [
+   {
+    "waar": "dierenklassen-po stap 1 vraag 1",
+    "antwoord": "Zoogdier",
+    "basis": "Vleermuis = zoogdier."
+   },
+   {
+    "waar": "dierenklassen-po stap 1 vraag 2",
+    "antwoord": "Zoogdier",
+    "basis": "Zoogdier."
+   },
+   {
+    "waar": "dierenklassen-po stap 1 vraag 3",
+    "antwoord": "Slang",
+    "basis": "Slang = reptiel = koudbloedig."
+   },
+   {
+    "waar": "dierenklassen-po stap 2 vraag 1",
+    "antwoord": "Veren",
+    "basis": "Alle vogels hebben veren."
+   },
+   {
+    "waar": "dierenklassen-po stap 2 vraag 4",
+    "antwoord": "Pinguïn",
+    "basis": "Een pinguïn is een vogel die niet kan vliegen."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/topografieEuropaPo.jsx",
+  "items": [
+   {
+    "waar": "topografie-europa-landen-po stap 1 vraag 1",
+    "antwoord": "Duitsland",
+    "basis": "Het oosterbuurland is Duitsland."
+   },
+   {
+    "waar": "topografie-europa-landen-po stap 2 vraag 1",
+    "antwoord": "België",
+    "basis": "De zuidbuur met Brussel is België."
+   },
+   {
+    "waar": "topografie-europa-landen-po stap 3 vraag 1",
+    "antwoord": "Parijs",
+    "basis": "De hoofdstad van Frankrijk is Parijs."
+   },
+   {
+    "waar": "topografie-europa-landen-po stap 4 vraag 1",
+    "antwoord": "Italië",
+    "basis": "Het laars-land is Italië."
+   },
+   {
+    "waar": "topografie-europa-landen-po stap 5 vraag 1",
+    "antwoord": "Madrid",
+    "basis": "De hoofdstad van Spanje is Madrid."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/topografieNederlandProvinciesPo.jsx",
+  "items": [
+   {
+    "waar": "topografie-nederland-provincies-po stap 1 vraag 1",
+    "antwoord": "Noord-Holland",
+    "basis": "Aan de zee, helemaal bovenin het westen: Noord-Holland."
+   },
+   {
+    "waar": "topografie-nederland-provincies-po stap 2 vraag 1",
+    "antwoord": "Den Haag",
+    "basis": "De hoofdstad van Zuid-Holland is Den Haag."
+   },
+   {
+    "waar": "topografie-nederland-provincies-po stap 3 vraag 1",
+    "antwoord": "Gelderland",
+    "basis": "De grootste provincie met de Veluwe is Gelderland."
+   },
+   {
+    "waar": "topografie-nederland-provincies-po stap 4 vraag 1",
+    "antwoord": "Leeuwarden",
+    "basis": "De hoofdstad van Fryslân is Leeuwarden."
+   },
+   {
+    "waar": "topografie-nederland-provincies-po stap 5 vraag 1",
+    "antwoord": "Limburg",
+    "basis": "De zuidelijke heuvel-provincie met Maastricht is Limburg."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/algoritmenProgrammerenPo.js",
+  "items": [
+   {
+    "waar": "algoritmen-programmeren-po stap 2 vraag 2",
+    "antwoord": "Een vierkant",
+    "basis": "4 kanten met elke keer een kwartslag draaien = een vierkant."
+   },
+   {
+    "waar": "algoritmen-programmeren-po stap 2 vraag 3",
+    "antwoord": "Doorlopen",
+    "basis": "Groen is niet rood, dus geldt het ANDERS-deel: doorlopen."
+   },
+   {
+    "waar": "algoritmen-programmeren-po stap 3 vraag 3",
+    "antwoord": "Een bug",
+    "basis": "Een fout in een programma heet een bug."
+   },
+   {
+    "waar": "algoritmen-programmeren-po stap 4 vraag 5",
+    "antwoord": "Probeer opnieuw",
+    "basis": "8 is minder dan 10, dus het ANDERS-deel: 'Probeer opnieuw'."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/bekendeNederlandersPo.js",
+  "items": [
+   {
+    "waar": "bekende-nederlanders-po stap 1 vraag 1",
+    "antwoord": "Filosoof",
+    "basis": "Erasmus = humanist + filosoof uit Rotterdam."
+   },
+   {
+    "waar": "bekende-nederlanders-po stap 1 vraag 3",
+    "antwoord": "Van Leeuwenhoek",
+    "basis": "Van Leeuwenhoek (Delft) zag als eerste bacteriën via zelfgebouwde microscoop."
+   },
+   {
+    "waar": "bekende-nederlanders-po stap 1 vraag 4",
+    "antwoord": "Hugo de Groot",
+    "basis": "Hugo de Groot."
+   },
+   {
+    "waar": "bekende-nederlanders-po stap 3 vraag 4",
+    "antwoord": "Boyan Slat",
+    "basis": "Boyan Slat."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/bekendeWetenschappersPo.js",
+  "items": [
+   {
+    "waar": "bekende-wetenschappers-po stap 1 vraag 1",
+    "antwoord": "Copernicus",
+    "basis": "Copernicus (1543) zei: zon staat in middelpunt."
+   },
+   {
+    "waar": "bekende-wetenschappers-po stap 2 vraag 1",
+    "antwoord": "Newton",
+    "basis": "Isaac Newton beschreef in 1687 als eerste de wet van de zwaartekracht."
+   },
+   {
+    "waar": "bekende-wetenschappers-po stap 3 vraag 1",
+    "antwoord": "Evolutietheorie",
+    "basis": "Darwin bedacht evolutietheorie + natuurlijke selectie."
+   },
+   {
+    "waar": "bekende-wetenschappers-po stap 4 vraag 1",
+    "antwoord": "Einstein",
+    "basis": "Einstein."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/belastingPo.js",
+  "items": [
+   {
+    "waar": "belasting-po stap 1 vraag 7",
+    "antwoord": "De regering en de Tweede Kamer",
+    "basis": "De regering en de Tweede Kamer beslissen waar het belastinggeld naartoe gaat."
+   },
+   {
+    "waar": "belasting-po stap 1 vraag 9",
+    "antwoord": "Belasting op loon en btw",
+    "basis": "Twee soorten belasting: belasting op loon en btw in de prijs."
+   },
+   {
+    "waar": "belasting-po stap 3 vraag 1",
+    "antwoord": "Belasting die al in de winkelprijs zit",
+    "basis": "Btw = belasting die al in de winkelprijs zit."
+   },
+   {
+    "waar": "belasting-po stap 3 vraag 10",
+    "antwoord": "De winkel",
+    "basis": "De winkel geeft de btw door aan de Belastingdienst."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/betrouwbaarheidBronnenPo.js",
+  "items": [
+   {
+    "waar": "betrouwbaarheid-bronnen-po stap 1 vraag 4",
+    "antwoord": "minder betrouwbaar",
+    "basis": "Geen auteur/bron → minder betrouwbaar."
+   },
+   {
+    "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 6",
+    "antwoord": "reclame",
+    "basis": "Een kortingsoproep om te kopen = reclame."
+   },
+   {
+    "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 7",
+    "antwoord": "Amsterdam is de hoofdstad van Nederland.",
+    "basis": "'Amsterdam is de hoofdstad van Nederland' kun je controleren: een feit."
+   },
+   {
+    "waar": "betrouwbaarheid-bronnen-po stap 2 vraag 8",
+    "antwoord": "wat iemand vindt",
+    "basis": "Een mening is wat iemand vindt."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "items": [
+   {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 3",
+    "antwoord": "2 km",
+    "basis": "4 × 50.000 = 200.000 cm = 2 km."
+   },
+   {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 12",
+    "antwoord": "Groter",
+    "basis": "Groter (kleiner schaalgetal = meer detail)."
+   },
+   {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 16",
+    "antwoord": "Stippellijn",
+    "basis": "Stippellijn op kaart = fiets/wandelroute."
+   },
+   {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 3",
+    "antwoord": "10%",
+    "basis": "100 − 50 − 25 − 15 = 10%."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/energiebronnenPo.js",
+  "items": [
+   {
+    "waar": "energiebronnen-po stap 1 vraag 2",
+    "antwoord": "Aardolie",
+    "basis": "Fossiel = aardolie, aardgas, steenkool. Duurzaam = zon, wind, water."
+   },
+   {
+    "waar": "energiebronnen-po stap 2 vraag 2",
+    "antwoord": "2024",
+    "basis": "In 2024 ging het Groningen-gasveld voorgoed dicht, omdat de gaswinning aardbevingen veroorzaakte."
+   },
+   {
+    "waar": "energiebronnen-po stap 3 vraag 3",
+    "antwoord": "Op zee",
+    "basis": "Op zee."
+   },
+   {
+    "waar": "energiebronnen-po stap 4 vraag 1",
+    "antwoord": "Splijten van uranium-atomen",
+    "basis": "Splijten van uranium-atomen."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/industrieleRevolutiePo.js",
+  "items": [
+   {
+    "waar": "industriele-revolutie-po stap 1 vraag 1",
+    "antwoord": "Engeland",
+    "basis": "Industriële Revolutie begon in Engeland (~1760)."
+   },
+   {
+    "waar": "industriele-revolutie-po stap 1 vraag 3",
+    "antwoord": "Tijd van burgers en stoommachines",
+    "basis": "Tijdvak 8: Tijd van burgers en stoommachines."
+   },
+   {
+    "waar": "industriele-revolutie-po stap 2 vraag 1",
+    "antwoord": "James Watt",
+    "basis": "James Watt verbeterde de stoommachine in 1769."
+   },
+   {
+    "waar": "industriele-revolutie-po stap 4 vraag 1",
+    "antwoord": "1874",
+    "basis": "1874 (kinderwetje Van Houten)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/lettergrepenKlemtoonPo.js",
+  "items": [
+   {
+    "waar": "lettergrepen-klemtoon-po stap 1 vraag 4",
+    "antwoord": "hond",
+    "basis": "'hond' = 1 lettergreep."
+   },
+   {
+    "waar": "lettergrepen-klemtoon-po stap 2 vraag 1",
+    "antwoord": "ta-fel",
+    "basis": "ta-fel: de f gaat naar de tweede klap."
+   },
+   {
+    "waar": "lettergrepen-klemtoon-po stap 2 vraag 2",
+    "antwoord": "kin-de-ren",
+    "basis": "kin-de-ren = 3 lettergrepen."
+   },
+   {
+    "waar": "lettergrepen-klemtoon-po stap 4 vraag 10",
+    "antwoord": "appel",
+    "basis": "In 'appel' ligt de klemtoon op 'ap' (de eerste lettergreep)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/lichaamGezondheidPo.js",
+  "items": [
+   {
+    "waar": "lichaam-gezondheid-po stap 1 vraag 1",
+    "antwoord": "Meer dan 200",
+    "basis": "Meer dan 200 botten (206 precies)."
+   },
+   {
+    "waar": "lichaam-gezondheid-po stap 1 vraag 2",
+    "antwoord": "Dijbeen",
+    "basis": "Dijbeen = grootste bot."
+   },
+   {
+    "waar": "lichaam-gezondheid-po stap 1 vraag 3",
+    "antwoord": "Hersenen",
+    "basis": "Schedel beschermt de hersenen."
+   },
+   {
+    "waar": "lichaam-gezondheid-po stap 1 vraag 4",
+    "antwoord": "Plek waar 2 botten elkaar ontmoeten",
+    "basis": "Gewricht = plek waar 2 botten elkaar ontmoeten."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/natuurSeizoenenDierenG4.js",
+  "items": [
+   {
+    "waar": "natuur-seizoenen-dieren-g4 stap 1 vraag 2",
+    "antwoord": "lente",
+    "basis": "lente."
+   },
+   {
+    "waar": "natuur-seizoenen-dieren-g4 stap 2 vraag 3",
+    "antwoord": "kuiken",
+    "basis": "kuiken."
+   },
+   {
+    "waar": "natuur-seizoenen-dieren-g4 stap 3 vraag 4",
+    "antwoord": "de eik",
+    "basis": "de eik."
+   },
+   {
+    "waar": "natuur-seizoenen-dieren-g4 stap 4 vraag 3",
+    "antwoord": "onder 0 graden",
+    "basis": "onder 0 graden."
+   }
+  ]
+ }
+]

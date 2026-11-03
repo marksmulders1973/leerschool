@@ -47,7 +47,7 @@ const steps = [
           theorie: "Levend = dier/plant/schimmel/bacterie. Niet levend = steen/water/lucht/plastic.",
           voorbeelden: [{ type: "tabel", tekst: "Levend: mier, boom, paddenstoel. Niet: steen, wolk, plastic." }],
           basiskennis: [{ onderwerp: "Schimmel = levend", uitleg: "Paddenstoel is schimmel — wel levend (groeit, plant zich voort met sporen)." }],
-          niveaus: { basis: "Steen.", simpeler: "Steen leeft niet (geen ademen/groeien). Mier/boom/paddenstoel zijn wel levend.", nogSimpeler: "Steen" },
+          niveaus: { basis: "Iets dat leeft, groeit en heeft eten of water nodig. Welke van de vier groeit nooit?", simpeler: "Steen leeft niet (geen ademen/groeien). Mier/boom/paddenstoel zijn wel levend.", nogSimpeler: "Steen" },
         },
       },
       {
@@ -92,7 +92,7 @@ const steps = [
           theorie: "Zoogdier-test: vacht/haren + warmbloedig + zoogt + longen.",
           voorbeelden: [{ type: "feit", tekst: "Walvis komt boven om te ademen — heeft longen, geen kieuwen." }],
           basiskennis: [{ onderwerp: "Strikvraag", uitleg: "Niet 'leeft in water' = vis. Walvis = zee + zoogdier." }],
-          niveaus: { basis: "De walvis is het zoogdier in dit rijtje.", simpeler: "Een walvis lijkt op een vis, maar hij zoogt zijn jongen en ademt met longen. Daarom is hij een zoogdier. De haai is een vis, de krokodil een reptiel en de kikker een amfibie.", nogSimpeler: "Walvis" },
+          niveaus: { basis: "Een zoogdier krijgt levende jongen en geeft ze melk. Let op: niet alles wat in het water leeft, is een vis.", simpeler: "Een walvis lijkt op een vis, maar hij zoogt zijn jongen en ademt met longen. Daarom is hij een zoogdier. De haai is een vis, de krokodil een reptiel en de kikker een amfibie.", nogSimpeler: "Walvis" },
         },
       },
       {
@@ -140,7 +140,7 @@ const steps = [
           theorie: "Vogel-test: heeft het veren? → vogel. Geen andere groep heeft veren.",
           voorbeelden: [{ type: "feit", tekst: "Vleermuis (zoogdier) heeft vacht, geen veren. Insect heeft pantser." }],
           basiskennis: [{ onderwerp: "Andere kenmerken niet uniek", uitleg: "Vleugels: ook insecten/vleermuis. Eieren: ook vissen/reptielen. Snavel: ook inktvis." }],
-          niveaus: { basis: "Veren.", simpeler: "Alleen vogels hebben veren (uniek!). Vleugels/eieren/snavel komen ook bij andere dieren voor.", nogSimpeler: "Veren" },
+          niveaus: { basis: "Kijk bij elk ding of een ander dier het ook heeft. Wat vind je alleen bij vogels en nergens anders?", simpeler: "Alleen vogels hebben veren (uniek!). Vleugels/eieren/snavel komen ook bij andere dieren voor.", nogSimpeler: "Veren" },
         },
       },
       {
@@ -154,7 +154,7 @@ const steps = [
           theorie: "Niet alle vogels vliegen: pinguïn, struisvogel, kiwi.",
           voorbeelden: [{ type: "feit", tekst: "Pinguïn-vleugels evolueerden tot flippers voor zwemmen." }],
           basiskennis: [{ onderwerp: "Wel vogel", uitleg: "Pinguïn heeft veren + snavel + legt eieren → echt vogel, ondanks niet-vliegen." }],
-          niveaus: { basis: "pinguïn.", simpeler: "Pinguïn is vogel maar kan niet vliegen — gebruikt vleugels om te zwemmen.", nogSimpeler: "Pinguïn" },
+          niveaus: { basis: "Denk aan een vogel die op koude plekken woont en zijn vleugels gebruikt om te zwemmen.", simpeler: "Pinguïn is vogel maar kan niet vliegen — gebruikt vleugels om te zwemmen.", nogSimpeler: "Pinguïn" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -191,7 +191,7 @@ const steps = [
           theorie: "6-poten-test: 6 = insect. 8 = spin. 10 = kreeftachtige.",
           voorbeelden: [{ type: "tabel", tekst: "Mier 6, vlinder 6, bij 6, kever 6. Spin 8 (geen insect). Krab 10." }],
           basiskennis: [{ onderwerp: "Snel-onderscheid", uitleg: "Tel poten — beste manier om insect te herkennen." }],
-          niveaus: { basis: "6.", simpeler: "Insecten hebben ALTIJD 6 poten (mier, vlinder, bij). Spin=8 (geen insect).", nogSimpeler: "6" },
+          niveaus: { basis: "Denk aan een mier: al zijn poten zitten aan het middelste stuk van zijn lijf. Tel ze aan één kant en dan aan beide kanten.", simpeler: "Insecten hebben ALTIJD 6 poten (mier, vlinder, bij). Spin=8 (geen insect).", nogSimpeler: "6" },
         },
       },
       {
@@ -205,7 +205,7 @@ const steps = [
           theorie: "Amfibie-kenmerken: 2 levens (water→land), glibberig, koud bloed, eieren in water.",
           voorbeelden: [{ type: "lijst", tekst: "Amfibieën: kikker, salamander, pad." }],
           basiskennis: [{ onderwerp: "Niet reptiel", uitleg: "Reptiel heeft schubben + droge huid. Amfibie glibberig." }],
-          niveaus: { basis: "amfibieën.", simpeler: "Kikker leeft in water (jong) + op land (volwassen). Glibberige huid = amfibie.", nogSimpeler: "Amfibie" },
+          niveaus: { basis: "Een kikker leeft eerst in het water en later ook op het land, en hij heeft een natte, gladde huid. Welke groep dieren leeft zo?", simpeler: "Kikker leeft in water (jong) + op land (volwassen). Glibberige huid = amfibie.", nogSimpeler: "Amfibie" },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
           theorie: "Vlinder: ei → rups → pop → vlinder. In de pop verandert de rups helemaal van vorm.",
           voorbeelden: [{ type: "stap", tekst: "Vlinder legt een ei → er komt een rups uit → de rups eet veel → hij verpopt zich → er komt een vlinder uit de pop." }],
           basiskennis: [{ onderwerp: "Pop of cocon?", uitleg: "Bij de meeste vlinders hangt de pop vrij aan een takje of blad. Alleen sommige nachtvlinders, zoals de zijderups, spinnen er een cocon van draad omheen." }],
-          niveaus: { basis: "pop.", simpeler: "Volgorde: ei → rups → POP → vlinder. In de pop verandert de rups in een vlinder.", nogSimpeler: "Pop" },
+          niveaus: { basis: "Een rups maakt een hard omhulsel om zich heen en verandert daarin. Hoe heet dat stadium?", simpeler: "Volgorde: ei → rups → POP → vlinder. In de pop verandert de rups in een vlinder.", nogSimpeler: "Pop" },
         },
       },
       {
@@ -351,7 +351,7 @@ const steps = [
           theorie: "Seizoen-toewijzing: lente=geboorte, zomer=groei, herfst=oogst/voorraad, winter=rust.",
           voorbeelden: [{ type: "tabel", tekst: "Lente: lammetjes, kuikens, paardenbloemen, trekvogels terug." }],
           basiskennis: [{ onderwerp: "Niet andere seizoenen", uitleg: "Bladval=herfst, sneeuw=winter, trekvogels vertrekken in de herfst." }],
-          niveaus: { basis: "Jonge dieren.", simpeler: "Lente = jonge dieren geboren (lammetjes, kuikens) + bloemen bloeien.", nogSimpeler: "Jong" },
+          niveaus: { basis: "In de lente wordt het warmer en is er weer veel eten. Wat zie je dan in de wei en in de nestjes?", simpeler: "Lente = jonge dieren geboren (lammetjes, kuikens) + bloemen bloeien.", nogSimpeler: "Jong" },
         },
       },
       {
@@ -406,7 +406,7 @@ const steps = [
           theorie: "Winterslaap-dieren: egel, vleermuis, hamster. Niet: ree, vos, kraai (blijven actief).",
           voorbeelden: [{ type: "feit", tekst: "Egel weegt vóór winter ~1 kg, in winterslaap zakt hartslag van 190 → 20." }],
           basiskennis: [{ onderwerp: "Vleermuis ook", uitleg: "Vleermuis houdt ook winterslaap (in grotten, kerken)." }],
-          niveaus: { basis: "egel.", simpeler: "Egel = klassiek winterslaap-dier. Slaapt hele winter in nest.", nogSimpeler: "Egel" },
+          niveaus: { basis: "Een dier met winterslaap eet zich in de herfst dik en slaapt de hele winter in een hoop bladeren. Welk van deze dieren zie je in de winter bijna nooit?", simpeler: "Egel = klassiek winterslaap-dier. Slaapt hele winter in nest.", nogSimpeler: "Egel" },
         },
       },
       {
@@ -528,7 +528,7 @@ const steps = [
           theorie: "Er zijn planteneters (alleen planten), vleeseters (vlees) en alleseters (planten én vlees).",
           voorbeelden: [{ type: "tabel", tekst: "Planteneter: koe, konijn, ree. Vleeseter: vos, uil, haai. Alleseter: mens, beer, varken." }],
           basiskennis: [{ onderwerp: "Moeilijk woord, voor wie wil", uitleg: "Een planteneter heet ook wel herbivoor. Een vleeseter heet carnivoor, een alleseter omnivoor." }],
-          niveaus: { basis: "konijn.", simpeler: "Een konijn eet gras en groente: alleen planten.", nogSimpeler: "Konijn" },
+          niveaus: { basis: "Een planteneter eet alleen gras, blaadjes of groente. Welk dier jaagt nooit op andere dieren?", simpeler: "Een konijn eet gras en groente: alleen planten.", nogSimpeler: "Konijn" },
         },
       },
       {
@@ -542,7 +542,7 @@ const steps = [
           theorie: "Voedselketen-volgorde: producent → consument → toppredator. Pijl wijst van prooi naar eter.",
           voorbeelden: [{ type: "stap", tekst: "Gras→konijn→vos. Gras=begin. Konijn=midden. Vos=top." }],
           basiskennis: [{ onderwerp: "Energie stroomt op", uitleg: "Energie van zon → gras → konijn → vos. Vos krijgt minste deel." }],
-          niveaus: { basis: "vos.", simpeler: "Vos eet konijn. In deze keten eet niemand de vos → vos staat bovenaan.", nogSimpeler: "Vos" },
+          niveaus: { basis: "De pijl betekent: wordt opgegeten door. Volg de pijlen: wie wordt door niemand meer opgegeten?", simpeler: "Vos eet konijn. In deze keten eet niemand de vos → vos staat bovenaan.", nogSimpeler: "Vos" },
         },
       },
       {
@@ -604,7 +604,7 @@ const steps = [
           theorie: "Zonder bestuivers (bij/hommel/vlinder) maken veel planten geen vruchten en zaden.",
           voorbeelden: [{ type: "feit", tekst: "Veel ons voedsel (appel, aardbei, tomaat) bestaat dankzij bijen." }],
           basiskennis: [{ onderwerp: "Bijen sterven", uitleg: "Wereldwijd dalen bijen-aantallen → groot probleem voor voedselproductie." }],
-          niveaus: { basis: "Bestuiven.", simpeler: "Bijen brengen stuifmeel van bloem naar bloem → bevruchting → vrucht/zaad → nieuwe planten.", nogSimpeler: "Bestuiven" },
+          niveaus: { basis: "Bijen vliegen van bloem naar bloem en nemen geel stuifmeel mee. Waar helpt dat de bloem mee?", simpeler: "Bijen brengen stuifmeel van bloem naar bloem → bevruchting → vrucht/zaad → nieuwe planten.", nogSimpeler: "Bestuiven" },
         },
       },
       {
@@ -618,7 +618,7 @@ const steps = [
           theorie: "Kikker doet metamorfose: water-baby met kieuwen → land-volwassen met longen.",
           voorbeelden: [{ type: "stap", tekst: "Eerst kikkervisje (vis-achtig met staart), dan poten, dan staart weg, dan klaar." }],
           basiskennis: [{ onderwerp: "Niet kikkerdril", uitleg: "Kikkerdril zijn de eitjes. Daaruit komt het kikkervisje: de baby van de kikker." }],
-          niveaus: { basis: "De baby van een kikker is een kikkervisje.", simpeler: "De baby van een kikker is een kikkervisje. Hij heeft een staart en leeft in het water. Later verandert hij in een kikker.", nogSimpeler: "Kikkervisje" },
+          niveaus: { basis: "Kikkerdril zijn de eitjes. Wat zwemt er uit die eitjes, met een staart en nog zonder poten?", simpeler: "De baby van een kikker is een kikkervisje. Hij heeft een staart en leeft in het water. Later verandert hij in een kikker.", nogSimpeler: "Kikkervisje" },
         },
       },
       {
@@ -632,7 +632,7 @@ const steps = [
           theorie: "Boom-cyclus: lente=blad uit, zomer=vol, herfst=val, winter=kaal.",
           voorbeelden: [{ type: "tabel", tekst: "Maart: knoppen zwellen. April: blaadjes uit. Mei: vol blad." }],
           basiskennis: [{ onderwerp: "Knoppen winter", uitleg: "Knoppen vormen al in herfst, wachten dichtgebonden de winter af." }],
-          niveaus: { basis: "In de lente.", simpeler: "In de lente wordt het warmer. Dan komen er nieuwe blaadjes uit de knoppen, na de kale winter.", nogSimpeler: "Lente" },
+          niveaus: { basis: "In de winter zijn de bomen kaal. In welk seizoen daarna wordt het warmer en gaan de knoppen open?", simpeler: "In de lente wordt het warmer. Dan komen er nieuwe blaadjes uit de knoppen, na de kale winter.", nogSimpeler: "Lente" },
         },
       },
       {

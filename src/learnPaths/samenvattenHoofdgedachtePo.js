@@ -104,7 +104,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Antwoord MOET uit de tekst komen. Niet vermeld in tekst = niet hoofdgedachte." }],
           niveaus: {
-            basis: "Honden zijn fijne huisdieren (rode draad: loyaal + beschermen + spelen).",
+            basis: "Lees alle drie de zinnen. Wat zeggen ze samen over honden, en niet maar één van de zinnen?",
             simpeler: "Alle 3 zinnen zeggen iets POSITIEFS over honden. Samen: fijne huisdieren.",
             nogSimpeler: "Fijne huisdieren",
           },
@@ -164,7 +164,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Onderwerp = regen.",
+            basis: "Het onderwerp zeg je in een paar woorden: waarover gaat de tekst? Een hele zin met een boodschap is al de hoofdgedachte.",
             simpeler: "Waarover gaat het? Over regen. Dat is het onderwerp.",
             nogSimpeler: "Regen",
           },
@@ -223,7 +223,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een konijn heeft veel zorg nodig.",
+            basis: "Hooi, water, een schoon hok en rondhuppelen: zoek de zin die al die dingen samen omvat.",
             simpeler: "Hooi, water, hok, rondhuppelen: allemaal zorg voor het konijn.",
             nogSimpeler: "Veel zorg",
           },
@@ -287,7 +287,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bomen zijn op veel manieren nuttig.",
+            basis: "Schaduw, nesten en hout zijn allemaal voorbeelden. Welke zin vat al die voorbeelden samen?",
             simpeler: "Schaduw, nesten, hout: allemaal nut van bomen.",
             nogSimpeler: "Bomen nuttig",
           },
@@ -352,7 +352,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Pinguïns in het water.",
+            basis: "Een goede titel past bij de hele tekst. Waar gaan de meeste zinnen over: over vliegen of over iets anders?",
             simpeler: "De tekst vertelt dat pinguïns goed zwemmen en onder water vis vangen.",
             nogSimpeler: "Pinguïns zwemmen",
           },
@@ -416,7 +416,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij noemt alleen het onderwerp.",
+            basis: "Het onderwerp zegt waarover de tekst gaat, de hoofdgedachte zegt wat de tekst erover vertelt. Welke van de twee geeft Lars?",
             simpeler: "'Honden' zegt waarover het gaat, maar niet wat de tekst over honden vertelt.",
             nogSimpeler: "Alleen het onderwerp",
           },
@@ -451,7 +451,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schrijvers willen lezers helpen. Daarom zetten ze hoofdgedachte vooraan + herhalen achteraan." }],
           niveaus: {
-            basis: "Hoofdgedachte vaak in titel of eerste zin (soms laatste alinea).",
+            basis: "Voorbeelden en plaatjes ondersteunen de boodschap. Waar zet een schrijver de boodschap zelf, zodat je die meteen leest?",
             simpeler: "Titel + eerste zin van elke alinea bekijken.",
             nogSimpeler: "Vooraan kijken!",
           },
@@ -479,7 +479,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Zin 1 vaak hoofdgedachte. Andere opties die in tekst staan = details. Opties die NIET in tekst staan = afleiders." }],
           niveaus: {
-            basis: "Ontbijt helpt bij leren (zin 1 = hoofdgedachte, zinnen 2-3 = bewijs).",
+            basis: "Zoek de zin die de boodschap geeft, en de zinnen die die boodschap bewijzen. De bewijs-zinnen zijn niet de hoofdgedachte.",
             simpeler: "Zin 1 zegt het: ontbijt → beter leren. Andere zinnen bewijzen dat met onderzoek.",
             nogSimpeler: "Ontbijt helpt",
           },
@@ -567,7 +567,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Slapen is belangrijk.",
+            basis: "Een titel vertelt vaak al waar de tekst om draait. Lees de titel goed: wat zegt hij over slapen?",
             simpeler: "De titel zegt het al: slapen is belangrijk.",
             nogSimpeler: "Titel lezen",
           },
@@ -622,7 +622,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Eten is belangrijk = te algemeen.",
+            basis: "De tekst gaat over één soort eten. Welke zin gaat over veel meer dan waar de tekst echt over gaat?",
             simpeler: "De tekst gaat over fruit. 'Eten' is veel breder.",
             nogSimpeler: "Eten = te breed",
           },
@@ -850,7 +850,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag jezelf: 'Als ik deze zin weghaal, mist de tekst dan iets belangrijks over het onderwerp?' Ja → hoofd. Nee → bij." }],
           niveaus: {
-            basis: "Hoofdzaak — feit gaat direct over winterslaap.",
+            basis: "Doe de schrap-test: als je deze zin weglaat, mis je dan iets over het onderwerp winterslaap?",
             simpeler: "De tekst gaat over winterslaap. 'Beren slapen 's winters' = beren houden winterslaap. Direct = hoofdzaak.",
             nogSimpeler: "Hoofdzaak = A. Direct over onderwerp.",
           },
@@ -1185,7 +1185,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een bijzaak.",
+            basis: "Doe de schrap-test: vertelt deze zin iets over waarom sporten gezond is, of kun je hem weglaten zonder iets te missen?",
             simpeler: "Hoe oud de sporthal is, zegt niets over waarom sporten gezond is. Je kunt het weglaten.",
             nogSimpeler: "Sporthal = bijzaak",
           },
@@ -1221,7 +1221,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag jezelf: 'staat dit IN de tekst, of is het MIJN mening?' Alleen wat in tekst staat → samenvatting." }],
           niveaus: {
-            basis: "Eigen mening hoort NIET in samenvatting.",
+            basis: "Een samenvatting vertelt kort wat de tekst zegt. Welke van deze dingen komt niet uit de tekst, maar uit jouw eigen hoofd?",
             simpeler: "Samenvatting = wat tekst zegt. Mening = wat JIJ vindt. Niet mixen.",
             nogSimpeler: "Je eigen mening hoort er niet in.",
           },

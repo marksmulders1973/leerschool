@@ -39,7 +39,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "CPU = de 'denker'. RAM = de 'aandacht/werktafel'. SSD = de 'kast met dossiers'." }],
           niveaus: {
-            basis: "CPU = brein/processor van computer.",
+            basis: "CPU staat voor 'Central Processing Unit': het onderdeel dat alle berekeningen doet. Welk antwoord past bij 'verwerken'?",
             simpeler: "CPU rekent + denkt. RAM is werkgeheugen.",
             nogSimpeler: "CPU = brein.",
           },
@@ -272,7 +272,7 @@ const steps = [
             { type: "feit", tekst: "Politie + Fraudehelpdesk (fraudehelpdesk.nl) helpen je als je toch ingetrapt bent." },
           ],
           basiskennis: [{ onderwerp: "Banken bellen niet", uitleg: "Echte bank, Belastingdienst, of Postnl vraagt NOOIT per mail/sms om je wachtwoord. ALTIJD nep als het wel gevraagd wordt." }],
-          niveaus: { basis: "Nep-mail", simpeler: "Phishing = nep-mail die doet alsof het van bank/Postnl is. Wil wachtwoord/bankgegevens stelen. Niet klikken.", nogSimpeler: "Oplichting-mail" },
+          niveaus: { basis: "Phishing klinkt als het Engelse 'fishing' (vissen). Waar zou een oplichter met een mail naar vissen?", simpeler: "Phishing = nep-mail die doet alsof het van bank/Postnl is. Wil wachtwoord/bankgegevens stelen. Niet klikken.", nogSimpeler: "Oplichting-mail" },
         },
       },
       {

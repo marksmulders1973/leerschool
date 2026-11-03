@@ -36,7 +36,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "X = 10", tekst: "De letter X staat voor 10." }],
           niveaus: {
-            basis: "X is het symbool voor 10.",
+            basis: "Denk aan de rij I, V, X: elk symbool hoort bij een vast getal. Weet je wat I en V waard zijn? Dan komt X daarna.",
             simpeler: "Denk aan X in de rij I-V-X: 1, 5, 10.",
             nogSimpeler: "Welke waarde hoort bij X?",
           },
@@ -188,7 +188,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1, 5, 10, 50 hoort bij I, V, X, L.",
+            basis: "Schrijf bij elk symbool welk getal het waard is. Kijk dan in welk rijtje de getallen steeds groter worden.",
             simpeler: "Het ezelsbruggetje begint zo: I Vond Xander Leuk.",
             nogSimpeler: "Zet 1, 5, 10 en 50 op volgorde.",
           },
@@ -439,7 +439,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "50 − 10", tekst: "40 = 50 − 10 = X vóór L = XL." }],
           niveaus: {
-            basis: "40 = XL (X vóór L = 50 − 10).",
+            basis: "Je mag niet vier keer hetzelfde symbool achter elkaar zetten. Welk symbool is net groter dan 40, en wat zet je ervóór om er iets af te halen?",
             simpeler: "Zet de kleine X links van de L om af te trekken.",
             nogSimpeler: "Welke heeft X vóór L?",
           },
@@ -453,7 +453,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "100 − 10", tekst: "X staat vóór C, dus aftrekken: 100 − 10 = 90." }],
           niveaus: {
-            basis: "X vóór C betekent 100 − 10 = 90.",
+            basis: "Staat een klein symbool vóór een groter symbool, dan trek je het kleine eraf. Zoek op wat X en C waard zijn.",
             simpeler: "Kleine X links van de C → eraf halen.",
             nogSimpeler: "100 − 10 = ?",
           },
@@ -467,7 +467,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "10 − 1", tekst: "9 = 10 − 1 = I vóór X = IX." }],
           niveaus: {
-            basis: "9 = IX (I vóór X = 10 − 1).",
+            basis: "Je mag niet vier I'tjes achter elkaar zetten. Welk symbool is net groter dan 9, en wat zet je ervóór om er iets af te halen?",
             simpeler: "Zet de kleine I links van de X om af te trekken.",
             nogSimpeler: "Welke heeft I vóór X?",
           },
@@ -481,7 +481,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "500 − 100", tekst: "C staat vóór D (C is kleiner dan D), dus aftrekken: 500 − 100 = 400." }],
           niveaus: {
-            basis: "C vóór D betekent 500 − 100 = 400.",
+            basis: "Staat een klein symbool vóór een groter symbool, dan trek je het kleine eraf. Zoek op wat C en D waard zijn.",
             simpeler: "Kleine C links van de D → eraf halen.",
             nogSimpeler: "500 − 100 = ?",
           },
@@ -506,7 +506,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "X = 10 en IX = 9, samen 19.",
+            basis: "Splits het getal in twee stukjes: X en IX. Reken elk stukje apart uit en tel ze daarna op.",
             simpeler: "Splits het in X en IX. Reken elk stukje uit.",
             nogSimpeler: "10 + 9 = ?",
           },
@@ -530,7 +530,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "XL (40) + IV (4) = XLIV.",
+            basis: "Splits 44 in 40 en 4. Schrijf elk stuk apart in Romeinse cijfers en zet ze achter elkaar.",
             simpeler: "Maak eerst 40 en dan 4, allebei met aftrekken.",
             nogSimpeler: "40 = XL en 4 = IV. Zet ze achter elkaar.",
           },
@@ -554,7 +554,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "LIV bevat IV (5 − 1), dus daar trek je af.",
+            basis: "Je trekt af als er een kleiner symbool vóór een groter symbool staat. In welk getal zie je dat gebeuren?",
             simpeler: "Zoek een kleine letter die links van een grotere letter staat.",
             nogSimpeler: "Staat de I vóór of ná de V?",
           },
@@ -581,7 +581,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1000 + 1000", tekst: "M = 1000. Twee M'en achter elkaar: 1000 + 1000 = 2000." }],
           niveaus: {
-            basis: "M = 1000, dus MM = 2000.",
+            basis: "Zoek op wat M waard is. Staan er twee dezelfde symbolen naast elkaar, dan tel je ze op.",
             simpeler: "Tel twee keer 1000 op.",
             nogSimpeler: "1000 + 1000 = ?",
           },
@@ -595,7 +595,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "10 + 4", tekst: "X = 10, IV = 4 (5 − 1). Samen 10 + 4 = 14." }],
           niveaus: {
-            basis: "XIV = X (10) + IV (4) = 14.",
+            basis: "Splits XIV in X en IV. Reken elk stukje apart uit en tel ze daarna op.",
             simpeler: "Eerst de X (10), dan IV (4). Tel op.",
             nogSimpeler: "10 + 4 = ?",
           },
@@ -609,7 +609,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "IV = 4", tekst: "IV betekent 5 − 1 = 4. De kleine wijzer wijst dus naar 4: het is 4 uur." }],
           niveaus: {
-            basis: "IV = 4, dus 4 uur.",
+            basis: "De kleine wijzer geeft het uur aan. Welk getal is IV: staat de I vóór of ná de V?",
             simpeler: "Kleine I links van V → 5 − 1.",
             nogSimpeler: "Hoeveel is 5 − 1?",
           },
@@ -623,7 +623,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "20 + 1", tekst: "21 = XX (20) + I (1) = XXI." }],
           niveaus: {
-            basis: "21 = XXI (twee keer X = 20, plus I = 1).",
+            basis: "Splits 21 in tientallen en enen. Hoeveel X'en en hoeveel I'tjes heb je nodig?",
             simpeler: "Eerst 20 (XX), dan 1 (I) erbij.",
             nogSimpeler: "Welke is XX gevolgd door I?",
           },
@@ -637,7 +637,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stukje voor stukje", tekst: "M (1000) + CM (900) + XC (90) + IX (9) = 1.999." }],
           niveaus: {
-            basis: "1000 + 900 + 90 + 9 = 1999.",
+            basis: "Splits het getal in stukjes: M, CM, XC en IX. Reken elk stukje apart uit en tel ze daarna op.",
             simpeler: "CM = 900, XC = 90, IX = 9. Tel op bij M (1000).",
             nogSimpeler: "1000 + 900 + 90 + 9 = ?",
           },
@@ -651,7 +651,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stukje voor stukje", tekst: "XL (40) + V (5) + II (2) = 47." }],
           niveaus: {
-            basis: "XL = 40, VII = 7. Samen 47.",
+            basis: "Splits het getal in XL en VII. Reken elk stukje apart uit en tel ze daarna op.",
             simpeler: "XL = 40 (aftrekken). Dan V (5) en II (2) optellen.",
             nogSimpeler: "40 + 5 + 2 = ?",
           },
@@ -665,7 +665,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "2000 + 20 + 4", tekst: "2024 = MM (2000) + XX (20) + IV (4) = MMXXIV." }],
           niveaus: {
-            basis: "MM = 2000, XX = 20, IV = 4. Samen MMXXIV.",
+            basis: "Splits 2024 in duizendtallen, tientallen en enen. Schrijf elk stuk in Romeinse cijfers en zet ze van groot naar klein achter elkaar.",
             simpeler: "Splits: 2000 (MM), 20 (XX), 4 (IV). Plak aan elkaar.",
             nogSimpeler: "Wat zijn de Romeinse symbolen voor 2000, 20 en 4?",
           },
@@ -685,7 +685,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "X (10) met I (1) erachter = XI = 11.",
+            basis: "Splits 11 in 10 en 1. Staat het kleine symbool vóór het grote, dan trek je af; staat het erachter, dan tel je op.",
             simpeler: "Optellen = de kleine letter staat rechts.",
             nogSimpeler: "10 en dan 1 erbij.",
           },

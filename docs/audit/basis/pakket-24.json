@@ -1,0 +1,282 @@
+[
+ {
+  "file": "src/learnPaths/citoStrategieenGroep8.js",
+  "items": [
+   {
+    "waar": "cito-strategieen-groep8 stap 1 vraag 6",
+    "antwoord": "De Eindtoets",
+    "basis": "Vroeger: de Eindtoets."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 1 vraag 7",
+    "antwoord": "Februari",
+    "basis": "In februari."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 1 vraag 8",
+    "antwoord": "Een rekenmachine",
+    "basis": "Geen rekenmachine."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 3 vraag 6",
+    "antwoord": "Ongeveer 5 minuten",
+    "basis": "Bewaar ongeveer 5 minuten."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 3 vraag 7",
+    "antwoord": "Om de 10 vragen",
+    "basis": "Om de 10 vragen."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 2",
+    "antwoord": "€30",
+    "basis": "25% van €40 = €10 korting → €30 betalen."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 4",
+    "antwoord": "3 km",
+    "basis": "6 × 0,5 km = 3 km."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 5",
+    "antwoord": "120 km/u",
+    "basis": "90 ÷ 0,75 = 120 km/u."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 6",
+    "antwoord": "€72",
+    "basis": "60 + 12 = €72."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 7",
+    "antwoord": "30 × 20 = 600",
+    "basis": "Rond af: 30 × 20 = 600."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 8",
+    "antwoord": "1,25 uur",
+    "basis": "15 min = 0,25 uur, dus 1,25 uur."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 9",
+    "antwoord": "25%",
+    "basis": "15/60 = 1/4 = 25%."
+   },
+   {
+    "waar": "cito-strategieen-groep8 stap 6 vraag 10",
+    "antwoord": "2.000 liter",
+    "basis": "2 × 1.000 = 2.000 liter."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/europeseUniePo.js",
+  "items": [
+   {
+    "waar": "europese-unie-po stap 1 vraag 2",
+    "antwoord": "1992",
+    "basis": "1992."
+   },
+   {
+    "waar": "europese-unie-po stap 1 vraag 3",
+    "antwoord": "Brussel (België)",
+    "basis": "Brussel."
+   },
+   {
+    "waar": "europese-unie-po stap 2 vraag 1",
+    "antwoord": "4 vrijheden",
+    "basis": "4 vrijheden."
+   },
+   {
+    "waar": "europese-unie-po stap 3 vraag 1",
+    "antwoord": "Europese Commissie",
+    "basis": "Commissie."
+   },
+   {
+    "waar": "europese-unie-po stap 3 vraag 3",
+    "antwoord": "Ursula von der Leyen",
+    "basis": "Von der Leyen."
+   },
+   {
+    "waar": "europese-unie-po stap 4 vraag 1",
+    "antwoord": "De regeringsleiders van alle 27 lidstaten",
+    "basis": "Regeringsleiders."
+   },
+   {
+    "waar": "europese-unie-po stap 4 vraag 2",
+    "antwoord": "de Raad van de Europese Unie",
+    "basis": "Raad van de EU."
+   },
+   {
+    "waar": "europese-unie-po stap 4 vraag 3",
+    "antwoord": "António Costa",
+    "basis": "António Costa."
+   },
+   {
+    "waar": "europese-unie-po stap 5 vraag 2",
+    "antwoord": "Polen",
+    "basis": "Polen heeft zloty."
+   },
+   {
+    "waar": "europese-unie-po stap 5 vraag 3",
+    "antwoord": "Frankfurt (Duitsland)",
+    "basis": "Frankfurt."
+   },
+   {
+    "waar": "europese-unie-po stap 6 vraag 1",
+    "antwoord": "12 sterren",
+    "basis": "12 sterren."
+   },
+   {
+    "waar": "europese-unie-po stap 6 vraag 2",
+    "antwoord": "Duitsland",
+    "basis": "Duitsland."
+   },
+   {
+    "waar": "europese-unie-po stap 6 vraag 3",
+    "antwoord": "9 mei (Schuman-verklaring 1950)",
+    "basis": "9 mei."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/inhoudsopgaveRegisterPo.js",
+  "items": [
+   {
+    "waar": "inhoudsopgave-register-po stap 1 vraag 1",
+    "antwoord": "vooraan",
+    "basis": "De inhoudsopgave staat vooraan."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 1 vraag 3",
+    "antwoord": "pagina 24",
+    "basis": "Hoofdstuk Dieren begint op pagina 24."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 1 vraag 5",
+    "antwoord": "pagina 40",
+    "basis": "Hoofdstuk 'Het weer' begint op pagina 40."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 1 vraag 6",
+    "antwoord": "hoofdstuk 1",
+    "basis": "Vóór hoofdstuk 2 komt hoofdstuk 1."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 1 vraag 8",
+    "antwoord": "De bergen",
+    "basis": "Pagina 40 ligt tussen 34 en 52 → De bergen."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 2 vraag 1",
+    "antwoord": "achteraan",
+    "basis": "Het register staat achteraan."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 2 vraag 4",
+    "antwoord": "op alfabet",
+    "basis": "Het register staat op alfabet."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 2 vraag 6",
+    "antwoord": "bij",
+    "basis": "'bij' (b) komt het eerst in het alfabet."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 2 vraag 7",
+    "antwoord": "pagina 27",
+    "basis": "Pagina 27 staat bij de eekhoorn én bij de ree."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 2 vraag 9",
+    "antwoord": "tussen egel en ree",
+    "basis": "h komt na e en vóór r → tussen egel en ree."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 2 vraag 10",
+    "antwoord": "de vos",
+    "basis": "Pagina 22 hoort bij de vos."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 3 vraag 4",
+    "antwoord": "het register",
+    "basis": "Een onderwerp als 'bijen' zoek je in het register."
+   },
+   {
+    "waar": "inhoudsopgave-register-po stap 4 vraag 7",
+    "antwoord": "de inhoudsopgave",
+    "basis": "Vooraan + op hoofdstuk-volgorde = de inhoudsopgave."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/samenvattenHoofdgedachtePo.js",
+  "items": [
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 3",
+    "antwoord": "Honden zijn fijne huisdieren",
+    "basis": "Honden zijn fijne huisdieren (rode draad: loyaal + beschermen + spelen)."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 4",
+    "antwoord": "Regen",
+    "basis": "Onderwerp = regen."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 5",
+    "antwoord": "Een konijn heeft veel zorg nodig",
+    "basis": "Een konijn heeft veel zorg nodig."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 6",
+    "antwoord": "Bomen zijn op veel manieren nuttig",
+    "basis": "Bomen zijn op veel manieren nuttig."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 7",
+    "antwoord": "Pinguïns in het water",
+    "basis": "Pinguïns in het water."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 8",
+    "antwoord": "Hij noemt alleen het onderwerp",
+    "basis": "Hij noemt alleen het onderwerp."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 1",
+    "antwoord": "Titel of eerste zin",
+    "basis": "Hoofdgedachte vaak in titel of eerste zin (soms laatste alinea)."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 2",
+    "antwoord": "Ontbijt helpt bij leren",
+    "basis": "Ontbijt helpt bij leren (zin 1 = hoofdgedachte, zinnen 2-3 = bewijs)."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 4",
+    "antwoord": "Slapen is belangrijk",
+    "basis": "Slapen is belangrijk."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 5",
+    "antwoord": "Eten is belangrijk",
+    "basis": "Eten is belangrijk = te algemeen."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 3 vraag 2",
+    "antwoord": "Hoofdzaak",
+    "basis": "Hoofdzaak — feit gaat direct over winterslaap."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 3 vraag 8",
+    "antwoord": "Een bijzaak",
+    "basis": "Een bijzaak."
+   },
+   {
+    "waar": "samenvatten-hoofdgedachte-po stap 4 vraag 1",
+    "antwoord": "Eigen mening",
+    "basis": "Eigen mening hoort NIET in samenvatting."
+   }
+  ]
+ }
+]

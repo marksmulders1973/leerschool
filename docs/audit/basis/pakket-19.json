@@ -1,0 +1,272 @@
+[
+ {
+  "file": "src/learnPaths/negatieveGetallenPo.js",
+  "items": [
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 1",
+    "antwoord": "−3",
+    "basis": "−3."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 3",
+    "antwoord": "−10",
+    "basis": "−10."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 4",
+    "antwoord": "−4 is groter dan −9",
+    "basis": "−4 is groter dan −9."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 5",
+    "antwoord": "−15",
+    "basis": "−15."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 6",
+    "antwoord": "Onder de grond",
+    "basis": "Onder de grond."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 8",
+    "antwoord": "+2",
+    "basis": "+2."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 1 vraag 9",
+    "antwoord": "−2",
+    "basis": "−2."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 1",
+    "antwoord": "−2",
+    "basis": "−2."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 2",
+    "antwoord": "+2",
+    "basis": "+2."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 3",
+    "antwoord": "−9",
+    "basis": "−9."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 4",
+    "antwoord": "−5",
+    "basis": "−5."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 5",
+    "antwoord": "−2",
+    "basis": "−2."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 6",
+    "antwoord": "−7",
+    "basis": "−7."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 7",
+    "antwoord": "+6",
+    "basis": "+6."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 8",
+    "antwoord": "−7",
+    "basis": "−7."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 2 vraag 10",
+    "antwoord": "1 − 4",
+    "basis": "1 − 4."
+   },
+   {
+    "waar": "negatieve-getallen-po stap 4 vraag 7",
+    "antwoord": "12 m",
+    "basis": "12 m."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/romeinseCijfersPo.js",
+  "items": [
+   {
+    "waar": "romeinse-cijfers-po stap 1 vraag 1",
+    "antwoord": "10",
+    "basis": "X is het symbool voor 10."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 1 vraag 10",
+    "antwoord": "I, V, X, L",
+    "basis": "1, 5, 10, 50 hoort bij I, V, X, L."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 3",
+    "antwoord": "XL",
+    "basis": "40 = XL (X vóór L = 50 − 10)."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 4",
+    "antwoord": "90",
+    "basis": "X vóór C betekent 100 − 10 = 90."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 5",
+    "antwoord": "IX",
+    "basis": "9 = IX (I vóór X = 10 − 1)."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 6",
+    "antwoord": "400",
+    "basis": "C vóór D betekent 500 − 100 = 400."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 7",
+    "antwoord": "19",
+    "basis": "X = 10 en IX = 9, samen 19."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 8",
+    "antwoord": "XLIV",
+    "basis": "XL (40) + IV (4) = XLIV."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 3 vraag 9",
+    "antwoord": "LIV",
+    "basis": "LIV bevat IV (5 − 1), dus daar trek je af."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 1",
+    "antwoord": "2000",
+    "basis": "M = 1000, dus MM = 2000."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 2",
+    "antwoord": "14",
+    "basis": "XIV = X (10) + IV (4) = 14."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 3",
+    "antwoord": "4 uur",
+    "basis": "IV = 4, dus 4 uur."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 4",
+    "antwoord": "XXI",
+    "basis": "21 = XXI (twee keer X = 20, plus I = 1)."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 5",
+    "antwoord": "1999",
+    "basis": "1000 + 900 + 90 + 9 = 1999."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 6",
+    "antwoord": "47",
+    "basis": "XL = 40, VII = 7. Samen 47."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 7",
+    "antwoord": "MMXXIV",
+    "basis": "MM = 2000, XX = 20, IV = 4. Samen MMXXIV."
+   },
+   {
+    "waar": "romeinse-cijfers-po stap 4 vraag 8",
+    "antwoord": "XI",
+    "basis": "X (10) met I (1) erachter = XI = 11."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/wereldorientatieMixPo.js",
+  "items": [
+   {
+    "waar": "wereldorientatie-mix-po stap 1 vraag 2",
+    "antwoord": "1953",
+    "basis": "1953."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 1 vraag 3",
+    "antwoord": "VOC",
+    "basis": "VOC."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 1 vraag 5",
+    "antwoord": "5 mei 1945",
+    "basis": "5 mei 1945."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 2 vraag 1",
+    "antwoord": "12",
+    "basis": "12."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 2 vraag 2",
+    "antwoord": "Amsterdam",
+    "basis": "Amsterdam."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 2 vraag 3",
+    "antwoord": "Azië",
+    "basis": "Azië."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 2 vraag 4",
+    "antwoord": "27",
+    "basis": "27."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 3 vraag 1",
+    "antwoord": "Walvis",
+    "basis": "Walvis."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 3 vraag 3",
+    "antwoord": "Ongeveer 206",
+    "basis": "206."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 3 vraag 5",
+    "antwoord": "Plant",
+    "basis": "Plant."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 4 vraag 1",
+    "antwoord": "Isaac Newton",
+    "basis": "Newton."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 4 vraag 3",
+    "antwoord": "Pluto",
+    "basis": "Pluto."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 4 vraag 4",
+    "antwoord": "Water",
+    "basis": "Water."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 4 vraag 5",
+    "antwoord": "Marie Curie",
+    "basis": "Curie."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 5 vraag 2",
+    "antwoord": "Europa",
+    "basis": "Europa."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 5 vraag 4",
+    "antwoord": "Vleeseter",
+    "basis": "Vleeseter."
+   },
+   {
+    "waar": "wereldorientatie-mix-po stap 5 vraag 5",
+    "antwoord": "27 april",
+    "basis": "27 april."
+   }
+  ]
+ }
+]

@@ -1,0 +1,257 @@
+[
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 1",
+  "hersteld": true,
+  "nieuw": "Hoe dichter een min-getal bij 0 ligt, hoe groter het is. Welk getal ligt het dichtst bij 0?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 3",
+  "hersteld": true,
+  "nieuw": "Het kleinste getal ligt het verst naar links op de getallenlijn. Welk getal ligt het verst onder nul?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 4",
+  "hersteld": true,
+  "nieuw": "Op de getallenlijn is het getal dat meer naar rechts ligt het grootst. Zet de twee getallen uit elke zin in gedachten op de lijn."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Bij het woord \"min\" hoort een min-teken vóór het getal. Hoe schrijf je eerst gewoon \"vijftien\" met cijfers?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 6",
+  "hersteld": true,
+  "nieuw": "De begane grond is verdieping 0. Liggen de verdiepingen met een min-teken boven of onder die 0?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 8",
+  "hersteld": true,
+  "nieuw": "Een negatief getal heeft een min-teken en ligt onder nul. Kijk bij elk getal welk teken ervoor staat."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 1 vraag 9",
+  "hersteld": true,
+  "nieuw": "Teken een stukje getallenlijn van −4 tot 0. Welk getal staat er tussen −3 en −1 in?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 1",
+  "hersteld": true,
+  "nieuw": "Min betekent naar links op de getallenlijn. Hoeveel stappen zet je vanaf 4 tot je bij 0 bent, en hoeveel moeten er dan nog?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "Plus betekent naar rechts op de getallenlijn. Na hoeveel stappen ben je vanaf −3 bij 0, en hoeveel stappen heb je dan nog over?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 3",
+  "hersteld": true,
+  "nieuw": "Min betekent naar links. Kom je vanaf −5 dan dichter bij 0 of verder van 0 af?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 4",
+  "hersteld": true,
+  "nieuw": "Begin op 2 en loop naar links. Tel eerst de stappen tot 0; hoeveel stappen moet je daarna nog onder nul zetten?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 5",
+  "hersteld": true,
+  "nieuw": "Plus betekent naar rechts. Begin op −6 en loop 4 stappen naar rechts: kom je dan al bij 0?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 6",
+  "hersteld": true,
+  "nieuw": "Je staat al onder nul en min betekent nog verder naar links. Tel vanaf −1 zes stappen naar links."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 7",
+  "hersteld": true,
+  "nieuw": "Plus betekent naar rechts. Na 2 stappen ben je vanaf −2 bij 0; hoeveel stappen van de 8 heb je dan nog over?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 8",
+  "hersteld": true,
+  "nieuw": "Naar links op de getallenlijn kom je verder onder nul. Tel vanaf −4 drie stappen verder van 0 af."
+ },
+ {
+  "waar": "negatieve-getallen-po stap 2 vraag 10",
+  "hersteld": true,
+  "nieuw": "Je begint op 1, dus de som begint met 1. Hoort naar links lopen bij een plus of bij een min?"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 4 vraag 7",
+  "hersteld": true,
+  "nieuw": "De zeespiegel is 0. Tel de meters van de meeuw tot 0 en daarna van 0 tot de vis, en tel die twee stukken op."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 1",
+  "hersteld": true,
+  "nieuw": "Denk aan de rij I, V, X: elk symbool hoort bij een vast getal. Weet je wat I en V waard zijn? Dan komt X daarna."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 1 vraag 10",
+  "hersteld": true,
+  "nieuw": "Schrijf bij elk symbool welk getal het waard is. Kijk dan in welk rijtje de getallen steeds groter worden."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 3",
+  "hersteld": true,
+  "nieuw": "Je mag niet vier keer hetzelfde symbool achter elkaar zetten. Welk symbool is net groter dan 40, en wat zet je ervóór om er iets af te halen?"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 4",
+  "hersteld": true,
+  "nieuw": "Staat een klein symbool vóór een groter symbool, dan trek je het kleine eraf. Zoek op wat X en C waard zijn."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 5",
+  "hersteld": true,
+  "nieuw": "Je mag niet vier I'tjes achter elkaar zetten. Welk symbool is net groter dan 9, en wat zet je ervóór om er iets af te halen?"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 6",
+  "hersteld": true,
+  "nieuw": "Staat een klein symbool vóór een groter symbool, dan trek je het kleine eraf. Zoek op wat C en D waard zijn."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 7",
+  "hersteld": true,
+  "nieuw": "Splits het getal in twee stukjes: X en IX. Reken elk stukje apart uit en tel ze daarna op."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 8",
+  "hersteld": true,
+  "nieuw": "Splits 44 in 40 en 4. Schrijf elk stuk apart in Romeinse cijfers en zet ze achter elkaar."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 3 vraag 9",
+  "hersteld": true,
+  "nieuw": "Je trekt af als er een kleiner symbool vóór een groter symbool staat. In welk getal zie je dat gebeuren?"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 1",
+  "hersteld": true,
+  "nieuw": "Zoek op wat M waard is. Staan er twee dezelfde symbolen naast elkaar, dan tel je ze op."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 2",
+  "hersteld": true,
+  "nieuw": "Splits XIV in X en IV. Reken elk stukje apart uit en tel ze daarna op."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 3",
+  "hersteld": true,
+  "nieuw": "De kleine wijzer geeft het uur aan. Welk getal is IV: staat de I vóór of ná de V?"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 4",
+  "hersteld": true,
+  "nieuw": "Splits 21 in tientallen en enen. Hoeveel X'en en hoeveel I'tjes heb je nodig?"
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 5",
+  "hersteld": true,
+  "nieuw": "Splits het getal in stukjes: M, CM, XC en IX. Reken elk stukje apart uit en tel ze daarna op."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 6",
+  "hersteld": true,
+  "nieuw": "Splits het getal in XL en VII. Reken elk stukje apart uit en tel ze daarna op."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 7",
+  "hersteld": true,
+  "nieuw": "Splits 2024 in duizendtallen, tientallen en enen. Schrijf elk stuk in Romeinse cijfers en zet ze van groot naar klein achter elkaar."
+ },
+ {
+  "waar": "romeinse-cijfers-po stap 4 vraag 8",
+  "hersteld": true,
+  "nieuw": "Splits 11 in 10 en 1. Staat het kleine symbool vóór het grote, dan trek je af; staat het erachter, dan tel je op."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 2",
+  "hersteld": true,
+  "nieuw": "De ramp gebeurde een paar jaar na de Tweede Wereldoorlog, en daarna bouwde Nederland de Deltawerken. Welk jaar past daarbij?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 3",
+  "hersteld": true,
+  "nieuw": "Rond 1600 voeren Nederlandse schepen naar Azië voor specerijen, en kleine handelsbedrijven gingen samen in één grote compagnie. Welke compagnie handelde met het oosten?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Denk aan de dag waarop we elk jaar Bevrijdingsdag vieren. In welk jaar eindigde de oorlog in Nederland?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 1",
+  "hersteld": true,
+  "nieuw": "Noem de provincies eens op, van Groningen in het noorden tot Limburg in het zuiden, en tel ze op je vingers."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "Let op: de regering en de koning werken in Den Haag, maar dat maakt een stad nog geen hoofdstad. Welke stad staat in de Grondwet als hoofdstad?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 3",
+  "hersteld": true,
+  "nieuw": "Denk aan de twee landen met de meeste inwoners ter wereld: India en China. In welk werelddeel liggen die?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 2 vraag 4",
+  "hersteld": true,
+  "nieuw": "In 2020 stapte het Verenigd Koninkrijk uit de Europese Unie. Weet je hoeveel landen er daarvóór lid waren?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 1",
+  "hersteld": true,
+  "nieuw": "Een zoogdier krijgt levende jongen en geeft ze melk. Welk van deze dieren doet dat, ook al leeft het in zee?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 3",
+  "hersteld": true,
+  "nieuw": "Een baby heeft ongeveer 300 botjes, en tijdens het groeien groeien sommige aan elkaar vast. Heeft een volwassene dan meer of minder botten dan een baby?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 3 vraag 5",
+  "hersteld": true,
+  "nieuw": "Een producent maakt zijn eigen voedsel met behulp van zonlicht. Welk levend wezen kan dat?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 1",
+  "hersteld": true,
+  "nieuw": "Denk aan het bekende verhaal over een vallende appel, die een Engelse wetenschapper aan het denken zette over zwaartekracht."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 3",
+  "hersteld": true,
+  "nieuw": "Sinds 2006 noemen sterrenkundigen één klein hemellichaam, heel ver weg in ons zonnestelsel, een dwergplaneet. Welke van de vier is het kleinst en ligt het verst weg?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 4",
+  "hersteld": true,
+  "nieuw": "H staat voor waterstof en O voor zuurstof. Welke stof van de vier bestaat uit allebei die stoffen samen?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 4 vraag 5",
+  "hersteld": true,
+  "nieuw": "Zoek iemand die een Nobelprijs kreeg voor natuurkunde én later nog een voor scheikunde, voor onderzoek naar straling."
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 2",
+  "hersteld": true,
+  "nieuw": "Zoek Nederland op een wereldkaart. Bij welk werelddeel horen ook de buurlanden België en Duitsland?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 4",
+  "hersteld": true,
+  "nieuw": "Leeuwen en wolven zijn carnivoren. Wat eten die dieren vooral?"
+ },
+ {
+  "waar": "wereldorientatie-mix-po stap 5 vraag 5",
+  "hersteld": true,
+  "nieuw": "Koningsdag valt op de verjaardag van koning Willem-Alexander. Weet je wanneer hij jarig is? Let op: 30 april was de oude Koninginnedag."
+ }
+]

@@ -143,7 +143,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: ". (punt)",
+            basis: "Een gewone zin vertelt iets: hij stelt geen vraag en roept niets. Welk teken past dan aan het eind?",
             simpeler: "Een gewone zin vertelt iets. Die sluit je af met een punt.",
             nogSimpeler: ".",
           },
@@ -191,7 +191,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Om te laten zien wat iemand zegt.",
+            basis: "Denk aan een zin uit een leesboek met aanhalingstekens. Welke woorden staan er precies tussen?",
             simpeler: "De woorden tussen aanhalingstekens zijn precies wat iemand zegt.",
             nogSimpeler: "Wat iemand zegt.",
           },
@@ -234,7 +234,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een korte pauze.",
+            basis: "Lees een zin met een komma hardop. Wat doe je met je stem op de plek van de komma?",
             simpeler: "Een komma staat midden in de zin en geeft een kleine pauze aan.",
             nogSimpeler: "Pauze.",
           },
@@ -286,7 +286,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ik ga morgen naar het strand",
+            basis: "Interpunctie betekent: hoofdletters en leestekens, zoals de punt en het vraagteken. Kijk bij elke zin naar het begin en het eind.",
             simpeler: "Die zin begint met een kleine letter en heeft geen punt aan het eind.",
             nogSimpeler: "Geen hoofdletter, geen punt.",
           },
@@ -365,7 +365,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik leer Frans op woensdag in januari.' (Frans WEL, woensdag NIET, januari NIET)." }],
           basiskennis: [{ onderwerp: "Tegenintuïtief", uitleg: "Dit verschilt soms van Engels — onthoud de regel goed." }],
           niveaus: {
-            basis: "Frans (taal).",
+            basis: "Dagen, maanden en seizoenen krijgen midden in een zin een kleine letter. Kijk welk woord iets anders is.",
             simpeler: "Talen krijgen hoofdletter in het Nederlands. Dagen/maanden/seizoenen niet. Frans is een taal, dus wél hoofdletter.",
             nogSimpeler: "Frans",
           },
@@ -414,7 +414,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wij en Kerkstraat.",
+            basis: "Een hoofdletter komt aan het begin van een zin en bij namen. Welk woord staat vooraan, en welk woord is een naam?",
             simpeler: "Wij staat vooraan, Kerkstraat is een straatnaam. Die twee krijgen een hoofdletter.",
             nogSimpeler: "Wij + Kerkstraat.",
           },
@@ -452,7 +452,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In, Tom en Spanje.",
+            basis: "Een hoofdletter komt aan het begin van de zin en bij namen van mensen en landen. Krijgt een maand ook een hoofdletter?",
             simpeler: "In (begin), Tom (naam) en Spanje (land). Juli is een maand: kleine letter.",
             nogSimpeler: "In + Tom + Spanje.",
           },
@@ -667,7 +667,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Komma's TUSSEN items. 'En' = de laatste verbinder, geen komma daarvoor. NL ≠ Engels." }],
           niveaus: {
-            basis: "'Ik kocht appels, peren en druiven.'",
+            basis: "In een opsomming zet je een komma tussen de dingen. Kijk goed bij elke zin: komt er ook een komma vóór het laatste 'en'?",
             simpeler: "Komma tussen items van opsomming. Voor laatste 'en' geen komma.",
             nogSimpeler: "Appels, peren en druiven.",
           },
@@ -687,7 +687,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik ga naar buiten, maar het regent.' = ondanks regen ga ik." }],
           basiskennis: [{ onderwerp: "Welk woord?", uitleg: "Maar = tegenstelling. Omdat = reden. Als = voorwaarde." }],
           niveaus: {
-            basis: ", maar.",
+            basis: "Naar buiten gaan terwijl het regent: past dat gewoon bij elkaar, of is het juist een tegenstelling? Kies het woord dat daarbij hoort.",
             simpeler: "Tegenstelling tussen 'naar buiten' en 'regen'. Gebruik 'maar' met komma ervoor.",
             nogSimpeler: ", maar",
           },

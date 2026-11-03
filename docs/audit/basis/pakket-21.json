@@ -1,0 +1,257 @@
+[
+ {
+  "file": "src/learnPaths/omzettenBreukProcentKommaPo.js",
+  "items": [
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 1",
+    "antwoord": "0,5",
+    "basis": "De helft schrijf je als kommagetal als 0,5."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 3",
+    "antwoord": "0,75",
+    "basis": "¾ = 0,75 (drie keer een kwart van 0,25)."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 4",
+    "antwoord": "0,1",
+    "basis": "1/10 = 0,1 (één tiende)."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 5",
+    "antwoord": "0,2",
+    "basis": "1/5 = 0,2 (één vijfde)."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 7",
+    "antwoord": "0,4",
+    "basis": "2/5 = 2 ÷ 5 = 0,4."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 8",
+    "antwoord": "3/10",
+    "basis": "0,3 = drie tienden = 3/10."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 9",
+    "antwoord": "0,7",
+    "basis": "7/10 = 7 ÷ 10 = 0,7."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 10",
+    "antwoord": "4/5",
+    "basis": "0,8 = 8/10 = 4/5."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 1",
+    "antwoord": "50%",
+    "basis": "0,5 × 100 = 50%."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 2",
+    "antwoord": "0,25",
+    "basis": "25 ÷ 100 = 0,25."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 1",
+    "antwoord": "25%",
+    "basis": "¼ = 25%."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 3",
+    "antwoord": "75%",
+    "basis": "¾ = 75%."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 5",
+    "antwoord": "groter",
+    "basis": "0,3 en ¼ = 0,25. 0,3 is groter."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 6",
+    "antwoord": "60%",
+    "basis": "0,6 × 100 = 60%."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 9",
+    "antwoord": "1/10",
+    "basis": "15%, 10% en 12%: 10% (= 1/10) is het kleinst."
+   },
+   {
+    "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 10",
+    "antwoord": "Noor",
+    "basis": "0,65 = 65%. 70% is meer dan 65%, dus Noor."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/schattenAfronden.js",
+  "items": [
+   {
+    "waar": "schatten-afronden stap 1 vraag 5",
+    "antwoord": "599",
+    "basis": "599 ligt dicht bij 600."
+   },
+   {
+    "waar": "schatten-afronden stap 1 vraag 6",
+    "antwoord": "200",
+    "basis": "4 × 50 = 200."
+   },
+   {
+    "waar": "schatten-afronden stap 1 vraag 7",
+    "antwoord": "€ 12",
+    "basis": "€ 10 + € 2 = € 12."
+   },
+   {
+    "waar": "schatten-afronden stap 1 vraag 9",
+    "antwoord": "70",
+    "basis": "20 + 20 + 30 = 70."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 2",
+    "antwoord": "400",
+    "basis": "Op 100 afronden: kijk tientallen. 358 → 400 (5 = omhoog)."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 3",
+    "antwoord": "5000",
+    "basis": "5 in de honderdtallen = omhoog. 4500 → 5000."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 4",
+    "antwoord": "80",
+    "basis": "3 = omlaag. 83 → 80."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 5",
+    "antwoord": "70",
+    "basis": "5 = omhoog. 65 → 70."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 6",
+    "antwoord": "600",
+    "basis": "4 in de tientallen = omlaag. 641 → 600."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 7",
+    "antwoord": "6000",
+    "basis": "2 in de honderdtallen = omlaag. 6280 → 6000."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 8",
+    "antwoord": "3000",
+    "basis": "4 in de honderdtallen = omlaag. 3499 → 3000."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 9",
+    "antwoord": "36",
+    "basis": "36 → 40."
+   },
+   {
+    "waar": "schatten-afronden stap 2 vraag 10",
+    "antwoord": "560",
+    "basis": "560 → 600, niet 500."
+   },
+   {
+    "waar": "schatten-afronden stap 3 vraag 1",
+    "antwoord": "600",
+    "basis": "Schatten op 100: rond af, dan optellen. 200 + 400 = 600."
+   },
+   {
+    "waar": "schatten-afronden stap 5 vraag 7",
+    "antwoord": "270",
+    "basis": "145+89+36 = 270."
+   },
+   {
+    "waar": "schatten-afronden stap 5 vraag 9",
+    "antwoord": "8.000",
+    "basis": "5.000 + 3.000 = 8.000."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/topografieEuropaPo.js",
+  "items": [
+   {
+    "waar": "topografie-europa-po stap 1 vraag 1",
+    "antwoord": "Oeral",
+    "basis": "Oeral."
+   },
+   {
+    "waar": "topografie-europa-po stap 1 vraag 2",
+    "antwoord": "7",
+    "basis": "7."
+   },
+   {
+    "waar": "topografie-europa-po stap 2 vraag 1",
+    "antwoord": "Berlijn",
+    "basis": "Berlijn."
+   },
+   {
+    "waar": "topografie-europa-po stap 2 vraag 2",
+    "antwoord": "Londen",
+    "basis": "Londen."
+   },
+   {
+    "waar": "topografie-europa-po stap 2 vraag 3",
+    "antwoord": "Brussel",
+    "basis": "Brussel."
+   },
+   {
+    "waar": "topografie-europa-po stap 3 vraag 1",
+    "antwoord": "Madrid",
+    "basis": "Madrid."
+   },
+   {
+    "waar": "topografie-europa-po stap 3 vraag 2",
+    "antwoord": "Rome",
+    "basis": "Rome."
+   },
+   {
+    "waar": "topografie-europa-po stap 3 vraag 3",
+    "antwoord": "Athene",
+    "basis": "Athene."
+   },
+   {
+    "waar": "topografie-europa-po stap 4 vraag 1",
+    "antwoord": "Oslo",
+    "basis": "Oslo."
+   },
+   {
+    "waar": "topografie-europa-po stap 4 vraag 2",
+    "antwoord": "Kopenhagen",
+    "basis": "Kopenhagen."
+   },
+   {
+    "waar": "topografie-europa-po stap 4 vraag 3",
+    "antwoord": "Noorwegen",
+    "basis": "Noorwegen."
+   },
+   {
+    "waar": "topografie-europa-po stap 5 vraag 1",
+    "antwoord": "Warschau",
+    "basis": "Warschau."
+   },
+   {
+    "waar": "topografie-europa-po stap 5 vraag 3",
+    "antwoord": "Kiev",
+    "basis": "Kiev."
+   },
+   {
+    "waar": "topografie-europa-po stap 6 vraag 1",
+    "antwoord": "Wolga",
+    "basis": "Wolga."
+   },
+   {
+    "waar": "topografie-europa-po stap 6 vraag 2",
+    "antwoord": "Pyreneeën",
+    "basis": "Pyreneeën."
+   },
+   {
+    "waar": "topografie-europa-po stap 6 vraag 3",
+    "antwoord": "Middellandse Zee",
+    "basis": "Middellandse Zee."
+   }
+  ]
+ }
+]

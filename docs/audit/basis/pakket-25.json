@@ -1,0 +1,312 @@
+[
+ {
+  "file": "src/learnPaths/schaalKaartRekenenPo.js",
+  "items": [
+   {
+    "waar": "schaal-kaart-rekenen-po stap 2 vraag 1",
+    "antwoord": "500 cm",
+    "basis": "5 × 100 = 500 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 2 vraag 2",
+    "antwoord": "30 m",
+    "basis": "3 × 1.000 = 3.000 cm = 30 m."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 2 vraag 9",
+    "antwoord": "180 m",
+    "basis": "1 cm = 20 m, dus 9 cm = 180 m."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 1",
+    "antwoord": "3 cm",
+    "basis": "300 ÷ 100 = 3 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 5",
+    "antwoord": "3 cm",
+    "basis": "600 ÷ 200 = 3 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 7",
+    "antwoord": "8 cm",
+    "basis": "4.000 ÷ 500 = 8 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 8",
+    "antwoord": "15 cm",
+    "basis": "1 cm = 2 km, dus 30 km = 15 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 9",
+    "antwoord": "6 cm",
+    "basis": "12.000 ÷ 2.000 = 6 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 10",
+    "antwoord": "12 cm",
+    "basis": "300.000 ÷ 25.000 = 12 cm."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 4 vraag 1",
+    "antwoord": "7 km",
+    "basis": "7 cm × (1 km per cm) = 7 km."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 4 vraag 2",
+    "antwoord": "12 m",
+    "basis": "6 × 200 = 1.200 cm = 12 m."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 4 vraag 8",
+    "antwoord": "3 m",
+    "basis": "30 × 10 = 300 cm = 3 m."
+   },
+   {
+    "waar": "schaal-kaart-rekenen-po stap 4 vraag 9",
+    "antwoord": "3 km",
+    "basis": "15 × 20.000 = 300.000 cm = 3 km."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/zinsontledingOnderwerpPersoonsvormPo.js",
+  "items": [
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 3",
+    "antwoord": "regende",
+    "basis": "Zoek het werkwoord: wat gebeurt er? Het regende."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 5",
+    "antwoord": "schrijft",
+    "basis": "'schrijft' is het werkwoord dat met de tijd verandert (schreef)."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 6",
+    "antwoord": "fietsen",
+    "basis": "'fietsen' verandert met de tijd (fietsten) → persoonsvorm."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 1 vraag 9",
+    "antwoord": "leest",
+    "basis": "De persoonsvorm verandert met de tijd: leest wordt las."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 2",
+    "antwoord": "twee meisjes",
+    "basis": "Vraag bij de persoonsvorm 'spelen': wie spelen er? Twee meisjes."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 3",
+    "antwoord": "oma",
+    "basis": "Vraag bij 'komt': wie komt er op bezoek? Oma."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 2",
+    "antwoord": "spelen",
+    "basis": "Twee personen met 'en' ertussen tellen als meervoud → 'spelen'."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 4 vraag 1",
+    "antwoord": "begonnen",
+    "basis": "Zoek het werkwoord dat met de tijd verandert: begonnen."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 4 vraag 2",
+    "antwoord": "veel kinderen",
+    "basis": "Vraag bij 'speelden': wie speelden er op het plein? Veel kinderen."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 4 vraag 4",
+    "antwoord": "Heeft",
+    "basis": "In een ja/nee-vraag is de persoonsvorm het eerste werkwoord: heeft."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 4 vraag 5",
+    "antwoord": "woonde",
+    "basis": "'woonde' verandert met de tijd (woont) → persoonsvorm."
+   },
+   {
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 4 vraag 6",
+    "antwoord": "drie vrienden",
+    "basis": "Vraag bij 'belden': wie belden er? Drie vrienden."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/informatiebronnenPo.js",
+  "items": [
+   {
+    "waar": "informatiebronnen-po stap 1 vraag 1",
+    "antwoord": "Woordenboek",
+    "basis": "Betekenis = woordenboek."
+   },
+   {
+    "waar": "informatiebronnen-po stap 1 vraag 2",
+    "antwoord": "Atlas",
+    "basis": "Waar ligt = atlas."
+   },
+   {
+    "waar": "informatiebronnen-po stap 1 vraag 6",
+    "antwoord": "Atlas",
+    "basis": "Heb je een kaart nodig, dan pak je een atlas."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 2",
+    "antwoord": "kok",
+    "basis": "Kok past tussen koers en komkommer."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 3",
+    "antwoord": "lopen",
+    "basis": "Liep → lopen."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 5",
+    "antwoord": "oliebol",
+    "basis": "Oliebol — zelfde start."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 6",
+    "antwoord": "tas",
+    "basis": "tas (taa < taf < tak < tas)."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 7",
+    "antwoord": "radio — rand",
+    "basis": "radio — rand (d < k < n)."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 8",
+    "antwoord": "boom",
+    "basis": "Enkelvoud van bomen = boom."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 9",
+    "antwoord": "berg, boek, brug",
+    "basis": "berg, boek, brug (e < o < r)."
+   },
+   {
+    "waar": "informatiebronnen-po stap 2 vraag 10",
+    "antwoord": "Bij de i",
+    "basis": "IJ zoek je bij de i."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/matenOmtrekOppervlaktePo.js",
+  "items": [
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 5",
+    "antwoord": "2 km",
+    "basis": "2 km."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 6",
+    "antwoord": "240 cm",
+    "basis": "2,4 × 100 = 240 cm."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 7",
+    "antwoord": "2,6 km",
+    "basis": "2600 ÷ 1000 = 2,6 km."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 1 vraag 9",
+    "antwoord": "1,6 km",
+    "basis": "800 + 800 = 1600 m = 1,6 km."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 1",
+    "antwoord": "30 cm²",
+    "basis": "½·10·6=30 cm²."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 4 vraag 1",
+    "antwoord": "125 cm³",
+    "basis": "5³=125 cm³."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 4 vraag 3",
+    "antwoord": "45 L",
+    "basis": "45 000/1000=45 L."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 4 vraag 6",
+    "antwoord": "300 cm³",
+    "basis": "10 × 6 × 5 = 300 cm³."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 4 vraag 7",
+    "antwoord": "4 L",
+    "basis": "4000 ÷ 1000 = 4 L."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 5 vraag 7",
+    "antwoord": "24 tegels",
+    "basis": "4 × 6 = 24 tegels."
+   },
+   {
+    "waar": "maten-omtrek-oppervlakte-po stap 5 vraag 8",
+    "antwoord": "4 m",
+    "basis": "4 × 4 = 16, dus de zijde is 4 m."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/begrijpendLezenTekstenPo.js",
+  "items": [
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 1 vraag 6",
+    "antwoord": "Duitsland",
+    "basis": "Tekst: 'de Duitse uitvinder Karl von Drais' → Duitsland."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 1 vraag 9",
+    "antwoord": "Een groot voorwiel",
+    "basis": "Door de ketting was een groot voorwiel niet meer nodig."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 1 vraag 10",
+    "antwoord": "Pedalen aan het voorwiel",
+    "basis": "Na 1817 (loopfiets) komt 1860: pedalen aan het voorwiel."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 2 vraag 5",
+    "antwoord": "Zo'n tien centimeter",
+    "basis": "Touw voor de sluiting: zo'n tien centimeter."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 2 vraag 7",
+    "antwoord": "Voordat je begint",
+    "basis": "Verven: 'voordat je begint'."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 2 vraag 8",
+    "antwoord": "Door de eerste én de laatste paperclip",
+    "basis": "Touw door de eerste én de laatste paperclip."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 3 vraag 6",
+    "antwoord": "Ten tweede",
+    "basis": "Alinea 3 begint met 'Ten tweede'."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 3 vraag 8",
+    "antwoord": "Thuis of in de tas",
+    "basis": "Laatste alinea: thuis of in de tas, maar niet in de klas."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 3 vraag 10",
+    "antwoord": "Mensen die het niet met de schrijver eens zijn",
+    "basis": "Tegenstanders = mensen die het niet met de schrijver eens zijn."
+   },
+   {
+    "waar": "begrijpend-lezen-teksten-po stap 4 vraag 7",
+    "antwoord": "Ze wilde geen medelijden",
+    "basis": "Zin na 'aarzelde': ze wilde geen medelijden."
+   }
+  ]
+ }
+]

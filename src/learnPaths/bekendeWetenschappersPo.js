@@ -41,7 +41,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Copernicus = naam van de man. Heliocentrisch = naam van het model. Hij stelde het VOOR, Galileo BEWEES het later." }],
           niveaus: {
-            basis: "Copernicus (1543) zei: zon staat in middelpunt.",
+            basis: "Kijk naar het jaartal 1543 en bedenk wanneer elk van deze geleerden leefde. Wie past bij die tijd?",
             simpeler: "Vroeger: aarde in midden. Copernicus zei: nee, zon!",
             nogSimpeler: "Copernicus = zon in midden.",
           },
@@ -94,7 +94,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Newton = appel + zwaartekracht (legende maar makkelijk te onthouden)." }],
           niveaus: {
-            basis: "Isaac Newton beschreef in 1687 als eerste de wet van de zwaartekracht.",
+            basis: "Denk aan het bekende verhaal van de appel die uit een boom viel. Welke geleerde ging daardoor nadenken over waarom dingen naar beneden vallen?",
             simpeler: "Het verhaal gaat dat Newton een appel zag vallen en zich afvroeg waarom. Zo kwam hij op de zwaartekracht.",
             nogSimpeler: "Newton.",
           },
@@ -147,7 +147,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Darwin = D van Diersoorten + Doorlopende verandering = evolutie." }],
           niveaus: {
-            basis: "Darwin bedacht evolutietheorie + natuurlijke selectie.",
+            basis: "Darwin reisde naar verre eilanden en bestudeerde daar vinken en schildpadden. Welk van deze ideeën gaat over dieren en planten?",
             simpeler: "Darwin: dieren veranderen langzaam over miljoenen jaren.",
             nogSimpeler: "Darwin = evolutie.",
           },
@@ -200,7 +200,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "E = mc² + relativiteit + 1905 = Einstein. Niet verwarren met andere groten — Einstein heeft de beroemdste formule." }],
           niveaus: {
-            basis: "Einstein.",
+            basis: "E = mc² gaat over energie, massa en de snelheid van het licht. Welke natuurkundige werd beroemd met ideeën over licht, ruimte en tijd?",
             simpeler: "Einstein bedacht de formule E=mc² in 1905. Energie = massa × lichtsnelheid².",
             nogSimpeler: "Einstein",
           },

@@ -30,7 +30,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "De delen botsen → tegenstelling", tekst: "Je wilde naar buiten, maar het tegenovergestelde gebeurt (het regent). Dat is een tegenstelling: 'maar'." }],
           niveaus: {
-            basis: "De twee delen zijn tegengesteld → gebruik een tegenstelling-woord: maar.",
+            basis: "Je wilde naar buiten en het regende: passen die twee delen bij elkaar of botsen ze? Kies het woord dat bij jouw antwoord hoort.",
             simpeler: "Het tweede deel gooit roet in het eten. Welk woord past daarbij?",
             nogSimpeler: "… ik wilde buiten spelen, … het regende. Welk woordje botst?",
           },
@@ -44,7 +44,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Opsomming = erbij", tekst: "'Bovendien' voegt iets toe aan wat er al stond. 'Maar/echter/hoewel' geven juist een tegenstelling." }],
           niveaus: {
-            basis: "'Bovendien' telt iets op bij de vorige zin = opsomming.",
+            basis: "Bij een opsomming komt er nog iets bij. Vraag je per woord af: voegt dit iets toe, of geeft het een botsing aan?",
             simpeler: "Welk woord betekent ongeveer 'en daar komt nog bij'?",
             nogSimpeler: "Welk woord voegt iets toe in plaats van iets tegenovergestelds?",
           },
@@ -179,7 +179,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Reden = omdat", tekst: "Waarom ging de wedstrijd niet door? Omdat het regende. 'Omdat' geeft de reden." }],
           niveaus: {
-            basis: "Het tweede deel is de reden van het eerste → 'omdat'.",
+            basis: "Waarom ging de wedstrijd niet door? Het tweede deel geeft de reden; zoek het woord dat een reden inleidt.",
             simpeler: "Welk woord geeft antwoord op 'waarom ging het niet door?'",
             nogSimpeler: "… niet door, … het regende. Welk woord betekent 'want'?",
           },
@@ -193,7 +193,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Gevolg = daardoor", tekst: "Het harde vriezen had een gevolg: de sloot vroor dicht. 'Daardoor' wijst op dat gevolg." }],
           niveaus: {
-            basis: "Het tweede deel is het gevolg van het eerste → 'daardoor'.",
+            basis: "Wat kwam eerst: de vorst of de dichte sloot? Zoek het woord dat zegt wat er door het eerste deel gebeurde.",
             simpeler: "Wat is het resultaat van het harde vriezen? Welk woord wijst daarop?",
             nogSimpeler: "Welk woord betekent 'en dat zorgde ervoor dat …'?",
           },
@@ -274,7 +274,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het tweede deel is wat er dán gebeurt → gevolg: zodat.",
+            basis: "Waarom zet je de wekker? Zoek het woord dat het doel aangeeft: wat je ermee wilt bereiken.",
             simpeler: "Wat gebeurt er doordat je de wekker zet?",
             nogSimpeler: "Wekker aan … en dan word ik op tijd wakker. Welk woord hoort bij 'en dan'?",
           },
@@ -524,7 +524,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Trainen → beter worden", tekst: "Het trainen had een gevolg: hij werd beter. 'Daardoor' wijst op oorzaak en gevolg." }],
           niveaus: {
-            basis: "Het een veroorzaakt het ander → oorzaak en gevolg.",
+            basis: "Waarom werd hij steeds beter? Kijk of het eerste deel de reden is voor wat er in het tweede deel gebeurt.",
             simpeler: "Leidt het trainen tot iets? Dan is het oorzaak-gevolg.",
             nogSimpeler: "Wat zorgde ervoor dat hij beter werd?",
           },
@@ -538,7 +538,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Spannend ↔ te lang", tekst: "Spannend (positief) en te lang (negatief) botsen. 'Maar' geeft een tegenstelling." }],
           niveaus: {
-            basis: "Twee dingen die botsen → tegenstelling.",
+            basis: "Spannend is iets goeds, veel te lang is iets minder goeds. Wat doen die twee delen met elkaar?",
             simpeler: "Zijn 'spannend' en 'te lang' positief én negatief? Dan botst het.",
             nogSimpeler: "Welk verband hoort bij het woord 'maar'?",
           },
@@ -566,7 +566,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eerst → vervolgens", tekst: "'Eerst' en 'vervolgens' geven de volgorde van stappen aan: dit is een tijd/volgorde-verband." }],
           niveaus: {
-            basis: "Stappen na elkaar in de tijd → tijd/volgorde.",
+            basis: "Let op de woorden 'eerst' en 'vervolgens'. Wat vertellen die woorden over het moment waarop je iets doet?",
             simpeler: "De woorden 'eerst' en 'vervolgens' horen bij welk verband?",
             nogSimpeler: "Gaat het hier over de volgorde van stappen?",
           },
@@ -580,7 +580,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Erbij = opsomming", tekst: "Bij het ijsje komt patat erbij. 'En ook' telt iets op: dat is een opsomming." }],
           niveaus: {
-            basis: "Er wordt iets toegevoegd → opsomming.",
+            basis: "Je wilt een ijsje, en daarna noem je nog iets. Wordt er iets tegengesproken, of komt er gewoon iets bij?",
             simpeler: "Komt patat erbij, of botst het met het ijsje? Het komt erbij.",
             nogSimpeler: "Welk verband hoort bij 'en ook'?",
           },
@@ -594,7 +594,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Regen ↔ toch wandelen", tekst: "Je zou bij regen binnen blijven, maar je gaat tóch. Dat botst: 'hoewel' geeft een tegenstelling." }],
           niveaus: {
-            basis: "Iets gebeurt tegen de verwachting in → tegenstelling.",
+            basis: "Ga je normaal wandelen als het regent? Kijk of het tweede deel past bij wat je zou verwachten.",
             simpeler: "Passen 'regen' en 'toch wandelen' bij elkaar of botst het?",
             nogSimpeler: "'Hoewel' lijkt op welk verband-woord: maar, of en?",
           },
@@ -608,7 +608,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen water → dood", tekst: "Het geen-water-krijgen is de oorzaak van het doodgaan. 'Doordat' wijst op oorzaak en gevolg." }],
           niveaus: {
-            basis: "Het een veroorzaakt het ander → oorzaak en gevolg.",
+            basis: "Waarom ging de plant dood? Kijk of het ene deel de reden is voor het andere deel.",
             simpeler: "Waaróm ging de plant dood? Dan is het oorzaak-gevolg.",
             nogSimpeler: "Wat zorgde ervoor dat de plant doodging?",
           },
@@ -633,7 +633,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Er komt iets bij → opsomming.",
+            basis: "Eerst lees je een goed punt van fietsen, daarna nog een. Komt er iets bij, of botst het tweede punt met het eerste?",
             simpeler: "Komt er een tweede goed punt bij, of botst het?",
             nogSimpeler: "Gezond … én goed voor het milieu. Is dat een rijtje?",
           },
@@ -657,7 +657,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Want' geeft een reden → oorzaak en gevolg.",
+            basis: "Waarom neem je een paraplu mee? Kijk wat het stukje na 'want' je vertelt.",
             simpeler: "Stel de vraag 'waarom?'. Geeft het tweede deel het antwoord?",
             nogSimpeler: "Waarom de paraplu? Het gaat regenen. Is dat een reden?",
           },
@@ -681,7 +681,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Toen' vertelt wanneer → tijd/volgorde.",
+            basis: "Eerst de pannenkoeken, toen de speeltuin. Waar vertelt 'toen' iets over: een reden, of wanneer iets gebeurt?",
             simpeler: "Vertelt 'toen' een reden, of wat er daarna gebeurde?",
             nogSimpeler: "Eerst pannenkoeken, toen de speeltuin. Gaat het om de volgorde?",
           },

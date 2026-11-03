@@ -59,7 +59,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Erasmus = boeken-denker uit Rotterdam, 1500. Niet verwarren met schilders (Rembrandt = 1600, Amsterdam) of moderne mensen." }],
           niveaus: {
-            basis: "Erasmus = humanist + filosoof uit Rotterdam.",
+            basis: "Erasmus schreef boeken vol ideeën over hoe je wijs en goed leeft. Hoe noem je iemand die vooral nadenkt over grote levensvragen?",
             simpeler: "Beroemde NL-denker (1466-1536) die het boek 'Lof der Zotheid' schreef.",
             nogSimpeler: "Filosoof uit Rotterdam",
           },
@@ -116,7 +116,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Van Leeuwenhoek + Delft + microscoop = de combinatie. Christiaan Huygens = klok + ringen Saturnus." }],
           niveaus: {
-            basis: "Van Leeuwenhoek (Delft) zag als eerste bacteriën via zelfgebouwde microscoop.",
+            basis: "Bacteriën zie je alleen met een microscoop. Wie van deze vier tuurde door zelfgemaakte lensjes naar een druppel water?",
             simpeler: "Lakenkoopman uit Delft = vader van microbiologie.",
             nogSimpeler: "Van Leeuwenhoek = microscoop + bacteriën.",
           },
@@ -144,7 +144,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Boekenkist + Slot Loevestein + 1621 = Hugo de Groot. Beroemd ontsnappingsverhaal." }],
           niveaus: {
-            basis: "Hugo de Groot.",
+            basis: "Slot Loevestein was een gevangenis. Welke geleerde zat daar vast en las zoveel dat er steeds kisten met boeken heen en weer gingen?",
             simpeler: "Hugo de Groot ontsnapte 1621 uit Slot Loevestein verborgen in een boekenkist die zijn vrouw stuurde.",
             nogSimpeler: "Hugo de Groot",
           },
@@ -251,7 +251,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Modern jong NL-held = Boyan Slat. Niet verwarren met politiek (Rutte) of sport (Verstappen/Cruijff). Slat = ocean + plastic." }],
           niveaus: {
-            basis: "Boyan Slat.",
+            basis: "The Ocean Cleanup haalt plastic uit de oceaan. Wie van deze vier is geen politicus of sporter, maar een jonge uitvinder?",
             simpeler: "Boyan Slat is een jonge Nederlandse uitvinder. Op zijn zestiende bedacht hij The Ocean Cleanup, om plastic uit de zee te halen.",
             nogSimpeler: "Boyan Slat",
           },

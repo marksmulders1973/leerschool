@@ -81,7 +81,7 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "fantasties ✗ → fantastisch ✓." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET klopt, niet wat wel klopt." }],
           niveaus: {
-            basis: "Fantasties = fout (moet fantastisch).",
+            basis: "Hoe schrijf je de 'ies'-klank aan het eind van een woord, zoals bij 'praktisch' en 'typisch'? Zoek het woord dat zich niet aan die regel houdt.",
             simpeler: "Iese-klank → altijd -isch. 'Fantasties' is verkeerd, moet 'fantastisch' zijn.",
             nogSimpeler: "Fantasties fout",
           },
@@ -101,7 +101,7 @@ const steps = [
           voorbeelden: [{ type: "lijk", tekst: "gevaarlijk, vrolijk, mogelijk, gemakkelijk." }],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "-lijk komt heel vaak voor in NL." }],
           niveaus: {
-            basis: "Uk-klank = -lijk → gevaarlijk.",
+            basis: "De 'luk'-klank aan het eind van een woord schrijf je bijna altijd op één vaste manier. Hoe schrijf je die klank in 'vrolijk'?",
             simpeler: "Klinkt als 'gevaar-luk', schrijf 'gevaar-lijk'. Standaard NL-regel.",
             nogSimpeler: "Lijk",
           },
@@ -140,7 +140,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Uk-klank → -lijk → waarschijnlijk.",
+            basis: "Hoe schrijf je de 'luk'-klank aan het eind van een woord? Spreek het woord daarna langzaam uit en kijk of er niet te veel of te weinig letters staan.",
             simpeler: "Zeg langzaam: waar-schijn-luk. Het eind schrijf je -lijk. Dus: waarschijnlijk.",
             nogSimpeler: "Uk = lijk",
           },
@@ -178,7 +178,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Gemakkelik = fout (moet gemakkelijk).",
+            basis: "Kijk bij elk woord naar het einde: hoe schrijf je de 'luk'-klank en de 'ies'-klank? Zoek het woord dat die regel breekt.",
             simpeler: "Vrolijk, gevaarlijk en logisch zijn goed. 'Gemakkelik' mist de ij: het moet gemakkelijk zijn.",
             nogSimpeler: "Gemakkelik fout",
           },
@@ -216,7 +216,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Komisch + e = komische.",
+            basis: "Hoe schrijf je de 'ies'-klank aan het eind, zoals in 'logisch'? Bedenk daarna welke letter erachter komt als het woord vóór 'film' staat.",
             simpeler: "Je hoort 'komiese'. Bij die klank hoort -isch. Met -e: komische.",
             nogSimpeler: "Komische",
           },
@@ -254,7 +254,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Fris = geen -isch.",
+            basis: "Niet elk woord dat op een s eindigt, krijgt -isch. Hoor je hier de 'ies'-klank, of een korte i zoals in 'vis'?",
             simpeler: "Zeg 'frisse': geen 'iese'. Dus gewoon fris.",
             nogSimpeler: "Fris",
           },
@@ -292,7 +292,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vrolijk + e = vrolijke.",
+            basis: "Hoe schrijf je de 'luk'-klank aan het eind van een woord? Bedenk ook welke letter erachter komt als het woord vóór 'hond' staat.",
             simpeler: "Je hoort 'vroluke'. Die 'uk' schrijf je -lijk. Met -e: vrolijke.",
             nogSimpeler: "Vrolijke",
           },
@@ -339,7 +339,7 @@ const steps = [
           voorbeelden: [{ type: "!", tekst: "Wauw! / Pas op! / Wat fijn! — allemaal !." }],
           basiskennis: [{ onderwerp: "Niet overdrijven", uitleg: "Niet ELKE zin met !, alleen sterke gevoelens." }],
           niveaus: {
-            basis: "Beide zinnen zijn uitroepen: van verbazing en van blijheid.",
+            basis: "Lees beide zinnen hardop: vraag je iets, vertel je gewoon iets, of roep je iets uit van verbazing of blijdschap? Welk leesteken hoort daarbij?",
             simpeler: "Wauw is een verbaasde uitroep — !. 'Wat een mooi cadeau' is ook een uitroep van blijheid — !. Dus ! en !.",
             nogSimpeler: "Twee uitroepen, dus twee keer een !",
           },
@@ -539,7 +539,7 @@ const steps = [
           voorbeelden: [{ type: "tussen-n", tekst: "pannenkoek, paddenstoel, boekenkast, hondenbak — allemaal tussen-n." }],
           basiskennis: [{ onderwerp: "Geen spatie", uitleg: "Samenstellingen aaneen geschreven, geen spatie of streepje." }],
           niveaus: {
-            basis: "Pan → pannen → pannenkoek.",
+            basis: "Kijk naar het eerste deel van de samenstelling: wat is het meervoud ervan? Heeft dat meervoud alleen -en, dan schrijf je de -n ook in de samenstelling.",
             simpeler: "Meervoud van pan = pannen. Bij samenstelling met -en-meervoud → tussen-n. Pannen + koek = pannenkoek.",
             nogSimpeler: "Pannenkoek",
           },
@@ -559,7 +559,7 @@ const steps = [
           voorbeelden: [{ type: "fout", tekst: "Voetbal schoen ✗ → voetbalschoen ✓. Net als tandarts en zonnebril." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET klopt." }],
           niveaus: {
-            basis: "'Voetbal schoen' met een spatie is fout.",
+            basis: "Een samenstelling is één woord dat je maakt van twee woorden. Kijk bij elke optie of de delen goed aan elkaar vastzitten.",
             simpeler: "In het Nederlands schrijf je samenstellingen aan elkaar. 'Voetbal schoen' met een spatie is fout; het moet 'voetbalschoen' zijn.",
             nogSimpeler: "Het woord met de spatie is fout.",
           },
@@ -638,7 +638,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kip → kippen → kippenhok.",
+            basis: "Wat is het meervoud van het eerste deel? Heeft dat meervoud alleen -en, dan schrijf je de -n ook in de samenstelling, en het geheel schrijf je als één woord.",
             simpeler: "Meervoud van kip = kippen. Daarom kippenhok, aan elkaar.",
             nogSimpeler: "Kippenhok",
           },
@@ -676,7 +676,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Eend → eenden → eendenvijver.",
+            basis: "Zoek eerst het meervoud van 'eend'. Denk dan aan de regel voor de tussen-n, en schrijf de samenstelling als één woord.",
             simpeler: "Meervoud van eend = eenden. Dus eendenvijver, aan elkaar.",
             nogSimpeler: "Eendenvijver",
           },
@@ -757,7 +757,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Schooltas = school + tas.",
+            basis: "Een samenstelling bestaat uit twee woorden die ook los kunnen bestaan. Probeer elk woord in twee stukjes te knippen: blijven er twee echte woorden over?",
             simpeler: "School is een woord. Tas is een woord. Samen: schooltas. Dat is een samenstelling.",
             nogSimpeler: "School + tas",
           },
@@ -795,7 +795,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hondehok = fout (moet hondenhok).",
+            basis: "Zoek bij elke samenstelling het meervoud van het eerste deel. Komt de -n uit dat meervoud ook echt in het woord terug?",
             simpeler: "Meervoud van hond = honden. Dus hondenhok. Bij 'hondehok' mist de n.",
             nogSimpeler: "Hondenhok",
           },
@@ -1024,7 +1024,7 @@ const steps = [
           voorbeelden: [{ type: "isch", tekst: "fantastisch, logisch, tropisch — allemaal -isch." }],
           basiskennis: [{ onderwerp: "Volgorde: s-c-h", uitleg: "Letters in volgorde: eerst s, dan c, dan h." }],
           niveaus: {
-            basis: "Iese = -isch → fantastisch.",
+            basis: "Hoe schrijf je de 'ies'-klank aan het eind van woorden als 'logisch' en 'komisch'?",
             simpeler: "Hoor je 'iese' op eind? Schrijf altijd -isch (s-c-h). Fantastisch klopt.",
             nogSimpeler: "Iese = isch",
           },
@@ -1084,7 +1084,7 @@ const steps = [
           voorbeelden: [{ type: "hoofd", tekst: "België, Nederland, Frankrijk = hoofd. dinsdag, mei, kerstboom = klein." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "In Engels: Tuesday, May. NL: dinsdag, mei." }],
           niveaus: {
-            basis: "Land = hoofd → België.",
+            basis: "Namen van mensen, steden en landen krijgen een hoofdletter, dagen en maanden niet. Welk woord is zo'n naam?",
             simpeler: "Welke is een land? België. Landen krijgen hoofdletter. De rest (dag, maand, feest) klein.",
             nogSimpeler: "Land = hoofd",
           },
@@ -1104,7 +1104,7 @@ const steps = [
           voorbeelden: [{ type: "combo", tekst: "Gemak + kelijk → gemakkelijk. Net als vrolijk, mogelijk." }],
           basiskennis: [{ onderwerp: "2 regels", uitleg: "Soms moet je 2 spelregels tegelijk toepassen." }],
           niveaus: {
-            basis: "Dubbele k + -lijk = gemakkelijk.",
+            basis: "Is de a in 'gemak' kort? Dan houd je die klank kort met een dubbele medeklinker. Hoe schrijf je daarna de 'luk'-klank aan het eind?",
             simpeler: "Korte a in 'gemak' → verdubbel k bij uitbreiding. Plus uk-klank = -lijk. Samen: gemakkelijk.",
             nogSimpeler: "Kk + lijk",
           },
@@ -1164,7 +1164,7 @@ const steps = [
           theorie: "Toets-hoofdletter-checklist:\n• Begin zin → HL\n• Eigennaam → HL\n• Taal-naam → HL (Nederlands, Engels)\n• Maand/dag/seizoen → klein\n• 'God' (christelijke God) → HL\n• Gewoon zelfstandig naamwoord → klein",
           voorbeelden: [{ type: "stap", tekst: "✓ 'Op maandag ga ik naar Amsterdam.' (HL voor Amsterdam, klein voor maandag)" }],
           basiskennis: [{ onderwerp: "Anders dan Engels", uitleg: "NL-maanden + dagen: klein. Engels: groot. Verwar niet." }],
-          niveaus: { basis: "Nederland.", simpeler: "Landnamen altijd hoofdletter: Nederland, Frankrijk, Duitsland.", nogSimpeler: "HL" },
+          niveaus: { basis: "Een land krijgt een hoofdletter, maar alleen op één plek in het woord. Welke letter is dat?", simpeler: "Landnamen altijd hoofdletter: Nederland, Frankrijk, Duitsland.", nogSimpeler: "HL" },
         },
       },
       {
@@ -1184,7 +1184,7 @@ const steps = [
           theorie: "Veel '-isch'-woorden zijn van **Latijnse/Griekse oorsprong**:\n• elektrisch (electricus)\n• magisch (magicus)\n• logisch (logicus)\n• fantastisch (fantasticus)\n• automatisch\n\nUitspraak NL: '-ies'. Schrijfwijze: altijd '-isch'.",
           voorbeelden: [{ type: "fout", tekst: "✗ 'elektries' → ✓ 'elektrisch'. ✗ 'logiesch' → ✓ 'logisch'." }],
           basiskennis: [{ onderwerp: "Niet horen, wel schrijven", uitleg: "Stille h = leerlingen vergeten vaak. Train: '-isch' altijd met h." }],
-          niveaus: { basis: "logisch.", simpeler: "Woorden eindigend op -isch (zoals fantastisch, elektrisch, logisch) hebben altijd een stille h: -ISCH, geen -ies.", nogSimpeler: "-isch" },
+          niveaus: { basis: "Hoe schrijf je de 'ies'-klank aan het eind van een woord, zoals in 'komisch' en 'fantastisch'?", simpeler: "Woorden eindigend op -isch (zoals fantastisch, elektrisch, logisch) hebben altijd een stille h: -ISCH, geen -ies.", nogSimpeler: "-isch" },
         },
       },
       {
@@ -1203,7 +1203,7 @@ const steps = [
           theorie: "Veel '-lijk'-woorden geven **eigenschap**:\n• vriendelijk (zoals vriend)\n• menselijk (zoals mens)\n• kinderlijk (zoals kind)\n• mannelijk (zoals man)\n• vrouwelijk (zoals vrouw)\n\nPas op variaties: -lijks (dagelijks), -lijkheid (mogelijkheid).",
           voorbeelden: [{ type: "fout", tekst: "✗ 'vrolik' → ✓ 'vrolijk'. ✗ 'lieflic' → ✓ 'lieflijk'." }],
           basiskennis: [{ onderwerp: "Niet -lik", uitleg: "Engels heeft 'like' (-like). NL = -lijk (met j)." }],
-          niveaus: { basis: "vriendelijk.", simpeler: "De uitgang -lijk schrijf je altijd met ij en k, ook al hoor je 'luk'. Dus: vriendelijk.", nogSimpeler: "-lijk" },
+          niveaus: { basis: "Hoe schrijf je de 'luk'-klank aan het eind, zoals in 'vrolijk'? Spreek het woord ook langzaam uit: staan alle klanken die je hoort erin?", simpeler: "De uitgang -lijk schrijf je altijd met ij en k, ook al hoor je 'luk'. Dus: vriendelijk.", nogSimpeler: "-lijk" },
         },
       },
       { q: "Welk woord is **goed** gespeld?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null, "Je hoort 'uk' aan het eind. Met welke letters schrijf je die klank?", "Eindigt het woord op een c of op een k?", "Het woord komt van 'natuur'. Zie je dat woord terug?"] },

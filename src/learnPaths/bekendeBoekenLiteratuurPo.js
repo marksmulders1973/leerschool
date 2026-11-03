@@ -38,7 +38,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Annie M.G. Schmidt = klassieke NL-kinderboeken. Roald Dahl = Britse klassieke." }],
           niveaus: {
-            basis: "Annie M.G. Schmidt schreef Jip en Janneke + Pluk + Minoes.",
+            basis: "Denk aan de schrijfster van Pluk van de Petteflet en Minoes. Zij schreef ook de korte verhaaltjes over deze jongen en dit meisje.",
             simpeler: "Beroemdste NL-kinderboekenschrijver, jaren 1950-1990.",
             nogSimpeler: "Schmidt = Jip en Janneke.",
           },
@@ -67,7 +67,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schmidt + Westendorp = team. Bruna = Nijntje. Pieck = Efteling." }],
           niveaus: {
-            basis: "Fiep Westendorp tekende Jip en Janneke (+ andere Schmidt-boeken).",
+            basis: "De tekeningen bij Jip en Janneke zijn zwarte silhouetten. Welke tekenares werkte jarenlang samen met deze schrijfster?",
             simpeler: "Schmidt schreef, Westendorp tekende — vast duo.",
             nogSimpeler: "Westendorp = tekeningen Schmidt.",
           },
@@ -149,7 +149,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: oktober + 2 weken + gratis boek bij €15 aankoop." }],
           niveaus: {
-            basis: "De Kinderboekenweek is elk jaar in oktober en duurt tien dagen.",
+            basis: "De Kinderboekenweek begint na de zomer, als de bladeren van de bomen vallen. In welk seizoen is dat, en welke maand past daarbij?",
             simpeler: "Oktober-evenement om lezen leuk te maken.",
             nogSimpeler: "Oktober!",
           },
@@ -191,7 +191,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Anne overleed 1945 (vlak vóór bevrijding). Niet 1944 (toen ontdekt) of later (heeft ze nooit beleefd). De zin 'bijna gered' = kern." }],
           niveaus: {
-            basis: "Februari/maart 1945, Bergen-Belsen.",
+            basis: "Anne Frank stierf in een concentratiekamp, een paar weken voordat dat kamp werd bevrijd. In welk jaar eindigde de Tweede Wereldoorlog?",
             simpeler: "Anne stierf eind winter 1945 aan tyfus in concentratiekamp Bergen-Belsen, vlak voor het kamp bevrijd werd.",
             nogSimpeler: "1945",
           },
@@ -220,7 +220,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Multatuli + 1860 + Max Havelaar + NL-Indië = de combinatie. Pseudoniem = schuilnaam, Latijn voor 'ik heb veel geleden'." }],
           niveaus: {
-            basis: "Multatuli.",
+            basis: "Max Havelaar is geschreven onder een schuilnaam, door Eduard Douwes Dekker. Welke naam bij de keuzes klinkt als een schuilnaam?",
             simpeler: "Multatuli (de schuilnaam van Eduard Douwes Dekker) schreef Max Havelaar in 1860. Het boek klaagt aan hoe Nederland de mensen in Indonesië behandelde.",
             nogSimpeler: "Multatuli",
           },

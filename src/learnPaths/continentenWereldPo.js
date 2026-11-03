@@ -89,7 +89,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Andere Europa-landen: Frankrijk, Duitsland, Spanje, Italië, Polen — allemaal vrij dichtbij Nederland." }],
           basiskennis: [{ onderwerp: "Vlucht", uitleg: "Vanaf Schiphol vlieg je ~1u naar buurland. Naar Azië (China) ~10u. Naar Australië ~24u." }],
           niveaus: {
-            basis: "Nederland ligt in Europa.",
+            basis: "Nederland grenst aan Duitsland en België. Op welk continent liggen die landen?",
             simpeler: "Europa = ons continent. Buren: Duitsland, België.",
             nogSimpeler: "Europa",
           },
@@ -111,7 +111,7 @@ const steps = [
           voorbeelden: [{ type: "schatten", tekst: "Azië heeft ~4,7 miljard mensen — meer dan de helft van de hele wereldbevolking (8 miljard)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste continent = Azië (oppervlakte + bevolking)." }],
           niveaus: {
-            basis: "Azië = grootst.",
+            basis: "Kijk op een wereldkaart of globe welk continent de meeste ruimte inneemt. Let op: een platte kaart laat landen bij de polen groter lijken dan ze zijn.",
             simpeler: "Top 3: Azië > Afrika > Noord-Amerika. Grootst = Azië.",
             nogSimpeler: "Azië",
           },
@@ -183,7 +183,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste oceaan = Stille = 1/3 van de aarde. Onthoud dit kerncijfer." }],
           niveaus: {
-            basis: "De Stille Oceaan is de grootste oceaan.",
+            basis: "Kijk op een globe welke oceaan tussen Amerika en Azië ligt. Die oceaan beslaat ongeveer een derde van de hele aarde.",
             simpeler: "Van groot naar klein: eerst de Stille Oceaan, dan de Atlantische, dan de Indische.",
             nogSimpeler: "De Stille Oceaan is de grootste.",
           },
@@ -273,7 +273,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "China grenst aan Rusland (noord), India (zuid), Vietnam." }],
           basiskennis: [{ onderwerp: "Azië is groot", uitleg: "Azië bevat veel grote landen — China, India, Indonesië, Japan." }],
           niveaus: {
-            basis: "Azië.",
+            basis: "China ligt in het oosten van de wereld, met India en Japan in de buurt. Bij welk continent hoort dat deel van de wereld?",
             simpeler: "China is een land in Oost-Azië. Dus continent = Azië.",
             nogSimpeler: "Azië",
           },
@@ -323,7 +323,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Westen (Amerika) = eerder = MIN. Oosten (Azië) = later = PLUS. Onthoud: zon gaat van oost naar west, dus oost = klok loopt voor." }],
           niveaus: {
-            basis: "12 − 6 = 06:00.",
+            basis: "Eerder betekent dat de klok daar nog niet zo ver is. Moet je de uren dan optellen of aftrekken?",
             simpeler: "New York is 6 uur eerder, dus je trekt 6 uur af. 12 − 6 = 6. = 06:00",
             nogSimpeler: "12 − 6 = 6 uur 's ochtends",
           },

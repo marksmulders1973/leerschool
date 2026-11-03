@@ -28,7 +28,7 @@ const steps = [
         wrongHints: [null, "Daar ligt iemand óp — maar wie?", "Dat is wat er gebeurt, niet wie het doet.", "Die staat niet in de zin."],
         uitlegPad: {
           stappen: [{ titel: "Wie-vraag", tekst: "Vraag: wie slaapt er? **De poes.** De zin gaat over de poes." }],
-          niveaus: { basis: "De zin gaat over de poes.", simpeler: "Wie slaapt er? De…", nogSimpeler: "de poes" },
+          niveaus: { basis: "Zoek in de zin wie er iets doet. Wie slaapt er?", simpeler: "Wie slaapt er? De…", nogSimpeler: "de poes" },
         },
       },
       {
@@ -38,7 +38,7 @@ const steps = [
         wrongHints: [null, "Lees de zin nog eens — staat dat er echt?", "Lees de zin nog eens — staat dat er echt?", "Er staat wel een winkel, maar welke?"],
         uitlegPad: {
           stappen: [{ titel: "Waar-vraag", tekst: "Er staat: *naar de bakker*. Dus daar gaat Noor naartoe. Het antwoord staat gewoon in de zin!" }],
-          niveaus: { basis: "Noor fietst naar de bakker.", simpeler: "Lees: Noor fietst naar de…", nogSimpeler: "naar de bakker" },
+          niveaus: { basis: "Waar vraagt naar een plek. Lees wat er achter het woord fietst staat.", simpeler: "Lees: Noor fietst naar de…", nogSimpeler: "naar de bakker" },
         },
       },
       {
@@ -49,7 +49,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wanneer-vraag", tekst: "De zin begint met: *In de winter*. Dat is het antwoord op de wanneer-vraag." }],
           woorden: [{ woord: "seizoen", uitleg: "Een deel van het jaar: lente, zomer, herfst of winter." }],
-          niveaus: { basis: "In de winter.", simpeler: "De zin begint ermee: In de…", nogSimpeler: "in de winter" },
+          niveaus: { basis: "Wanneer vraagt naar een tijd. Zoek in de zin een woord voor een tijd van het jaar.", simpeler: "De zin begint ermee: In de…", nogSimpeler: "in de winter" },
         },
       },
       {
@@ -95,7 +95,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De juf schrijft op het bord.",
+            basis: "Wie vraagt naar een persoon. Kijk wie er vóór het woord schrijft staat.",
             simpeler: "Wie schrijft er? De…",
             nogSimpeler: "de juf",
           },
@@ -139,7 +139,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bram geeft het cadeau.",
+            basis: "Lees de zin nog een keer. Wie geeft er iets, en wie krijgt het?",
             simpeler: "Wie geeft? Wie krijgt? Zijn zus krijgt het.",
             nogSimpeler: "Bram",
           },
@@ -158,7 +158,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Na school.",
+            basis: "Wanneer vraagt naar een tijd. Kijk goed naar het begin van de zin.",
             simpeler: "De zin begint ermee: Na…",
             nogSimpeler: "na school",
           },
@@ -177,7 +177,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De kat drinkt melk.",
+            basis: "Zoek het woord drinkt. Wat staat er direct achter?",
             simpeler: "De kat drinkt… uit een schaaltje.",
             nogSimpeler: "melk",
           },
@@ -199,7 +199,7 @@ const steps = [
         wrongHints: [null, "Lees de eerste zin nog eens.", "Daan is er wél — maar waar zijn ze samen?", "Bijna — maar het is groter dan een bad."],
         uitlegPad: {
           stappen: [{ titel: "Zoek in de tekst", tekst: "Eerste zin: *Jip gaat naar het zwembad.* Daar is hij dus." }],
-          niveaus: { basis: "Jip is in het zwembad.", simpeler: "Zin 1 zegt waar hij heen gaat.", nogSimpeler: "in het zwembad" },
+          niveaus: { basis: "Waar vraagt naar een plek. Lees de eerste zin nog eens.", simpeler: "Zin 1 zegt waar hij heen gaat.", nogSimpeler: "in het zwembad" },
         },
       },
       {
@@ -209,7 +209,7 @@ const steps = [
         wrongHints: [null, "Lees de laatste zin nog eens — welke naam staat er?", "Die staat niet in de tekst.", "Er staat wél iemand bij hem."],
         uitlegPad: {
           stappen: [{ titel: "Zoek de naam", tekst: "Laatste zin: *speelt hij met zijn vriend **Daan**.* Daar staat het antwoord." }],
-          niveaus: { basis: "Jip speelt met Daan.", simpeler: "Welke naam staat in de laatste zin?", nogSimpeler: "met Daan" },
+          niveaus: { basis: "Met wie vraagt naar een persoon. Zoek een naam in de laatste zin.", simpeler: "Welke naam staat in de laatste zin?", nogSimpeler: "met Daan" },
         },
       },
       {
@@ -220,7 +220,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Niet in de war raken", tekst: "Er staat *appel* in de tekst, maar oma bakt geen appeltaart. Zin 1 zegt het echte antwoord: **pannenkoeken** (met appel erin)." }],
           theorie: "Let op: een fout antwoord lijkt vaak op een woord uit de tekst. Lees daarom altijd de hele zin, niet één los woord.",
-          niveaus: { basis: "Oma bakt pannenkoeken met appel.", simpeler: "Zin 1: Oma bakt…", nogSimpeler: "pannenkoeken" },
+          niveaus: { basis: "Lees de eerste zin. Wat staat er achter Oma bakt?", simpeler: "Zin 1: Oma bakt…", nogSimpeler: "pannenkoeken" },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het konijn heet Snuf.",
+            basis: "Zoek de zin waarin het woord heet staat.",
             simpeler: "Zin 2: Het konijn heet…",
             nogSimpeler: "Snuf",
           },
@@ -273,7 +273,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Snuf eet graag wortels.",
+            basis: "Zoek de zin met eet graag. Wat staat er achter?",
             simpeler: "Zin 3: Snuf eet graag…",
             nogSimpeler: "wortels",
           },
@@ -292,7 +292,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ze bouwen een zandkasteel.",
+            basis: "Lees de laatste zin. Wat bouwen ze daar op het strand?",
             simpeler: "Zin 3: Daar bouwen ze een groot…",
             nogSimpeler: "een zandkasteel",
           },
@@ -311,7 +311,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Juf Anne leest voor.",
+            basis: "Wie is ze in de tweede zin? Kijk wie er in de eerste zin genoemd wordt.",
             simpeler: "'Ze' in zin 2 = de juf uit zin 1.",
             nogSimpeler: "juf Anne",
           },
@@ -358,7 +358,7 @@ const steps = [
         wrongHints: [null, "Dat is kort slapen op de dag — dit duurt véél langer.", "Dit duurt langer dan één nacht.", "Kijk goed: in welk seizoen slaapt hij?"],
         uitlegPad: {
           stappen: [{ titel: "Zoek het woord", tekst: "De vraag gaat over *de hele winter slapen*. Zin 2 zegt: *Dat heet een **winterslaap**.* Daar staat het antwoord letterlijk." }],
-          niveaus: { basis: "Het heet een winterslaap.", simpeler: "Zin 2 begint met: Dat heet een…", nogSimpeler: "winterslaap" },
+          niveaus: { basis: "Zoek de zin die begint met Dat heet.", simpeler: "Zin 2 begint met: Dat heet een…", nogSimpeler: "winterslaap" },
         },
       },
       {
@@ -378,7 +378,7 @@ const steps = [
         wrongHints: [null, "Kijk goed: weken of dagen?", "Lees het getal in de tekst nog eens.", "Er staat wél een tijd in de tekst."],
         uitlegPad: {
           stappen: [{ titel: "Zoek het getal", tekst: "In de tekst staat: *drie **weken** houden*. Let goed op: weken, geen dagen. Zulke woordjes zijn belangrijk!" }],
-          niveaus: { basis: "Drie weken.", simpeler: "Zoek de zin met 'houden' erin.", nogSimpeler: "drie weken" },
+          niveaus: { basis: "Zoek de zin met het woord houden.", simpeler: "Zoek de zin met 'houden' erin.", nogSimpeler: "drie weken" },
         },
       },
       {
@@ -446,7 +446,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een badpak en een handdoek.",
+            basis: "Zoek de zin met het woord meenemen. Lees die zin helemaal.",
             simpeler: "Zoek de zin met 'meenemen'.",
             nogSimpeler: "badpak en handdoek",
           },
@@ -466,7 +466,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'s Nachts.",
+            basis: "Wanneer vraagt naar een tijd. Zoek de zin met het woord jacht.",
             simpeler: "Zoek de zin met 'jacht'.",
             nogSimpeler: "'s nachts",
           },
@@ -485,7 +485,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Elke avond.",
+            basis: "Zoek de zin met het woord water. Welke tijd staat daarin?",
             simpeler: "Zoek de zin met 'water'.",
             nogSimpeler: "elke avond",
           },
@@ -504,7 +504,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Foto's maken.",
+            basis: "Sommige dingen mogen niet, één ding wel. Zoek de woorden mag wel.",
             simpeler: "Zoek de zin met 'mag wel'.",
             nogSimpeler: "foto's maken",
           },
@@ -526,7 +526,7 @@ const steps = [
         wrongHints: [null, "Die kwam ergens úít — waaruit?", "Die was er op het laatst.", "Die staat niet in de tekst."],
         uitlegPad: {
           stappen: [{ titel: "Zoek 'eerst'", tekst: "*Eerst was het ei.* Het woordje **eerst** zegt: dit was het begin." }],
-          niveaus: { basis: "Het ei was er het eerst.", simpeler: "Welke zin begint met 'Eerst'?", nogSimpeler: "het ei" },
+          niveaus: { basis: "Zoek het woord eerst in de tekst. Wat staat er in die zin?", simpeler: "Welke zin begint met 'Eerst'?", nogSimpeler: "het ei" },
         },
       },
       {
@@ -556,7 +556,7 @@ const steps = [
         wrongHints: [null, "Dat is juist het begin.", "Dat zegt wanneer, niet in welke volgorde.", "Dat zegt dat iets niet zeker is."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde-woorden", tekst: "**eerst** = begin, **daarna/dan** = midden, **ten slotte** = einde." }],
-          niveaus: { basis: "'Ten slotte' hoort bij het einde.", simpeler: "Eerst… daarna… ten slotte!", nogSimpeler: "ten slotte" },
+          niveaus: { basis: "Denk aan een rijtje: eerst, daarna, en dan? Welk woord zeg je als je bij het einde bent?", simpeler: "Eerst… daarna… ten slotte!", nogSimpeler: "ten slotte" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -716,7 +716,7 @@ const steps = [
         wrongHints: [null, "Lees zin 2 nog eens.", "Staat dat in de tekst?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [{ titel: "Zoek de plek", tekst: "Zin 2: *de bus rijdt naar de **dierentuin**.* Daar gaat de schoolreis heen." }],
-          niveaus: { basis: "Naar de dierentuin.", simpeler: "Waar rijdt de bus heen?", nogSimpeler: "de dierentuin" },
+          niveaus: { basis: "Waar vraagt naar een plek. Zoek de zin waarin staat waar de bus heen rijdt.", simpeler: "Waar rijdt de bus heen?", nogSimpeler: "de dierentuin" },
         },
       },
       {
@@ -765,7 +765,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Met de bus.",
+            basis: "Waarmee vraagt hoe ze reizen. Zoek in de tekst iets waar je in kunt rijden.",
             simpeler: "Zin 2: Eerst rijdt de… naar de dierentuin.",
             nogSimpeler: "de bus",
           },
@@ -792,7 +792,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lena vindt de apen het leukst.",
+            basis: "Zoek de zin met het leukst. Wie staat er vooraan in die zin?",
             simpeler: "Zoek de zin met 'het leukst'.",
             nogSimpeler: "Lena",
           },

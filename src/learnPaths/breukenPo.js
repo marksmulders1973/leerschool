@@ -61,7 +61,7 @@ const steps = [
           theorie: "Bij 'wat is over?': trek opgegeten af van geheel (noemer/noemer = 8/8 = 1).",
           voorbeelden: [{ type: "som", tekst: "8/8 - 3/8 = 5/8. Alleen tellers aftrekken, noemer blijft 8." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Vraag draait om 'NIET opgegeten' = wat over is." }],
-          niveaus: { basis: "5/8 is over.", simpeler: "Pizza heeft 8 stukken. Op = 3 stukken. Over = 8-3 = 5 stukken = 5/8.", nogSimpeler: "5/8" },
+          niveaus: { basis: "Een hele pizza is 8/8. Hoeveel achtsten blijven er over als je de opgegeten stukken eraf haalt?", simpeler: "Pizza heeft 8 stukken. Op = 3 stukken. Over = 8-3 = 5 stukken = 5/8.", nogSimpeler: "5/8" },
         },
       },
       {
@@ -75,7 +75,7 @@ const steps = [
           theorie: "Vergelijk teller met noemer: teller<noemer = <1, teller=noemer = 1, teller>noemer = >1.",
           voorbeelden: [{ type: "groter", tekst: "7/4 = 7÷4 = 1,75 (groter dan 1). 4/4 = 1 (precies). 3/4 = 0,75 (kleiner)." }],
           basiskennis: [{ onderwerp: "Snelle test", uitleg: "Bij elke breuk: vergelijk twee getallen. Teller>noemer? Dan >1." }],
-          niveaus: { basis: "7/4 > 1.", simpeler: "7/4: teller=7, noemer=4. 7 is groter dan 4 → breuk is groter dan 1.", nogSimpeler: "7>4" },
+          niveaus: { basis: "Een breuk is groter dan 1 als de teller (boven) groter is dan de noemer (onder). Bij welke breuk is dat zo?", simpeler: "7/4: teller=7, noemer=4. 7 is groter dan 4 → breuk is groter dan 1.", nogSimpeler: "7>4" },
         },
       },
       {
@@ -89,7 +89,7 @@ const steps = [
           theorie: "Breuk = aantal dat je hebt / totaal. Teller boven, noemer onder.",
           voorbeelden: [{ type: "test", tekst: "Pizza 6 stukken (=noemer 6). Eet 4 (=teller 4). Breuk = 4/6." }],
           basiskennis: [{ onderwerp: "2/3 is hetzelfde", uitleg: "4/6 kun je vereenvoudigen tot 2/3 — dezelfde hoeveelheid. De toets vraagt hier letterlijk 4 van de 6 stukken." }],
-          niveaus: { basis: "4/6.", simpeler: "Teller (boven) = wat je eet = 4. Noemer (onder) = totaal = 6. = 4/6", nogSimpeler: "4/6" },
+          niveaus: { basis: "De noemer (onder) is het totaal aantal stukken, de teller (boven) is wat je eet. Welk getal komt boven en welk onder?", simpeler: "Teller (boven) = wat je eet = 4. Noemer (onder) = totaal = 6. = 4/6", nogSimpeler: "4/6" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -178,7 +178,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De teller zegt hoeveel stukken je neemt.",
+            basis: "De teller staat boven de streep. Denk aan 3/4 pizza: wat vertelt die 3 je?",
             simpeler: "Bij 3/4 heb je 3 stukken. Die 3 is de teller.",
             nogSimpeler: "Hoeveel stukken je neemt",
           },
@@ -221,7 +221,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5/5 = 1 geheel.",
+            basis: "Een breuk is precies 1 geheel als je alle stukken neemt. Bij welke breuk zijn teller en noemer hetzelfde getal?",
             simpeler: "Een taart in 5 stukken. Heb je alle 5 stukken? Dan heb je de hele taart: 5/5.",
             nogSimpeler: "5/5",
           },
@@ -264,7 +264,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2/3 is een echte breuk.",
+            basis: "Een echte breuk is kleiner dan 1: de teller (boven) is dan kleiner dan de noemer (onder). Kijk bij elke breuk welk getal groter is.",
             simpeler: "2 stukken van de 3. Je hebt niet alles, dus minder dan 1.",
             nogSimpeler: "2/3",
           },
@@ -307,7 +307,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je eet 1/5 van de taart.",
+            basis: "De noemer vertelt in hoeveel gelijke stukken de taart is gesneden, de teller hoeveel stukken je eet. Welk getal komt boven en welk onder?",
             simpeler: "1 stuk van de 5 stukken = 1/5.",
             nogSimpeler: "1/5",
           },
@@ -505,7 +505,7 @@ const steps = [
           theorie: "Maximale vereenvoudiging: zoek grootste getal waar beide door deelbaar zijn. 12 én 16 → ÷4.",
           voorbeelden: [{ type: "stap", tekst: "12/16 → ÷2 = 6/8 → ÷2 = 3/4. Of in 1 stap ÷4." }],
           basiskennis: [{ onderwerp: "Beide moet", uitleg: "Altijd teller ÉN noemer delen door hetzelfde getal." }],
-          niveaus: { basis: "3/4.", simpeler: "12 en 16 zijn beide deelbaar door 4. 12÷4=3, 16÷4=4 → 3/4.", nogSimpeler: "3/4" },
+          niveaus: { basis: "Zoek het grootste getal waar 12 en 16 allebei door gedeeld kunnen worden. Deel teller en noemer daardoor.", simpeler: "12 en 16 zijn beide deelbaar door 4. 12÷4=3, 16÷4=4 → 3/4.", nogSimpeler: "3/4" },
         },
       },
       {
@@ -519,7 +519,7 @@ const steps = [
           theorie: "1/2-familie: 1/2 = 2/4 = 3/6 = 4/8 = 5/10 = 50/100. Allemaal de helft.",
           voorbeelden: [{ type: "lijst", tekst: "1/2 = 2/4 = 5/10 = 50/100 = 500/1000." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Deel teller door noemer = 0,5? Dan = 1/2." }],
-          niveaus: { basis: "50/100 = 1/2.", simpeler: "50 is de helft van 100, dus 50/100 = 1/2. (2/3 is meer dan helft, 100/50 is meer dan 1).", nogSimpeler: "50/100" },
+          niveaus: { basis: "Bij een halve is de teller precies de helft van de noemer. Bij welke breuk is dat zo?", simpeler: "50 is de helft van 100, dus 50/100 = 1/2. (2/3 is meer dan helft, 100/50 is meer dan 1).", nogSimpeler: "50/100" },
         },
       },
       {
@@ -808,7 +808,7 @@ const steps = [
           theorie: "Bij gelijke noemer: alleen tellers optellen, noemer blijft hetzelfde.",
           voorbeelden: [{ type: "som", tekst: "1/4 + 2/4: een kwart + twee kwart = drie kwart = 3/4." }],
           basiskennis: [{ onderwerp: "Geen noemer optellen", uitleg: "Foute aanpak: 1/4 + 2/4 = 3/8 ❌. Noemers NOOIT optellen!" }],
-          niveaus: { basis: "3/4.", simpeler: "Beide breuken hebben /4. Tel tellers: 1+2=3. → 3/4.", nogSimpeler: "3/4" },
+          niveaus: { basis: "De noemers zijn gelijk. Tel alleen de tellers bij elkaar op; de noemer blijft hetzelfde.", simpeler: "Beide breuken hebben /4. Tel tellers: 1+2=3. → 3/4.", nogSimpeler: "3/4" },
         },
       },
       {
@@ -822,7 +822,7 @@ const steps = [
           theorie: "Ongelijke noemers: zoek gemeenschappelijke. Voor 2 en 4 → 4. 1/2 → 2/4.",
           voorbeelden: [{ type: "stap", tekst: "1/2 keer 2 boven en onder = 2/4. Dan 2/4 + 1/4 = 3/4." }],
           basiskennis: [{ onderwerp: "Vergeet niet", uitleg: "Veranderen van noemer = teller MOET ook keer hetzelfde." }],
-          niveaus: { basis: "3/4.", simpeler: "1/2 wordt 2/4 (teller en noemer keer 2). Dan 2/4 + 1/4 = 3/4.", nogSimpeler: "3/4" },
+          niveaus: { basis: "Maak eerst gelijke noemers: hoeveel kwarten is een halve? Tel daarna de tellers op.", simpeler: "1/2 wordt 2/4 (teller en noemer keer 2). Dan 2/4 + 1/4 = 3/4.", nogSimpeler: "3/4" },
         },
       },
       {
@@ -1243,7 +1243,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15.",
+            basis: "Reken eerst 1/8 van 40 uit door 40 te delen door 8. Hoeveel van die stukken heb je nodig?",
             simpeler: "1/8 van 40 = 5. 3/8 = 5 + 5 + 5 = 15.",
             nogSimpeler: "15",
           },
@@ -1362,7 +1362,7 @@ const steps = [
           theorie: "Eerst eenheid omrekenen (L→mL via ×1000), dan breuk toepassen.",
           voorbeelden: [{ type: "stap", tekst: "1,5 L × 1000 = 1500 mL. ÷3 = 500 mL." }],
           basiskennis: [{ onderwerp: "1 L = 1000 mL", uitleg: "Onthoud altijd: liter naar milliliter = ×1000." }],
-          niveaus: { basis: "500 mL.", simpeler: "1,5 L = 1500 mL. 1/3 = 1500÷3 = 500 mL.", nogSimpeler: "500" },
+          niveaus: { basis: "Zet 1,5 liter eerst om naar milliliter (1 liter = 1000 mL). Verdeel dat daarna in 3 gelijke stukken.", simpeler: "1,5 L = 1500 mL. 1/3 = 1500÷3 = 500 mL.", nogSimpeler: "500" },
         },
       },
       {
@@ -1390,7 +1390,7 @@ const steps = [
           theorie: "Geld-breuken: ÷ noemer, × teller. Hier 60÷4 = 15, ×3 = 45.",
           voorbeelden: [{ type: "stap", tekst: "1/4 = €15. 2/4 = €30. 3/4 = €45. 4/4 = €60." }],
           basiskennis: [{ onderwerp: "Tafel 4 truc", uitleg: "60÷4 = 15 (uit tafel: 4×15=60)." }],
-          niveaus: { basis: "€45.", simpeler: "1/4 van €60 = €15. 3/4 = 3×€15 = €45.", nogSimpeler: "€45" },
+          niveaus: { basis: "Reken eerst 1/4 van € 60 uit door te delen door 4. Hoeveel van die stukken heeft Lisa gespaard?", simpeler: "1/4 van €60 = €15. 3/4 = 3×€15 = €45.", nogSimpeler: "€45" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1435,7 +1435,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "60 minuten.",
+            basis: "Als je 1/3 al gezien hebt, welk deel van de film moet je dan nog zien? Reken eerst uit hoeveel minuten 1/3 van 90 is.",
             simpeler: "1/3 van 90 = 30. Nog over: 90 − 30 = 60.",
             nogSimpeler: "60",
           },
@@ -1477,7 +1477,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18 leerlingen.",
+            basis: "Let op: de vraag gaat over wie níét lopend komt. Reken eerst 1/5 van 30 uit en bedenk hoeveel vijfden níét lopen.",
             simpeler: "12 lopen. 30 − 12 = 18 lopen niet.",
             nogSimpeler: "18",
           },
@@ -1524,7 +1524,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 60.",
+            basis: "Reken eerst uit hoeveel euro 1/4 van € 80 is. Is dat wat je betaalt, of gaat dat juist van de prijs af?",
             simpeler: "Korting € 20. € 80 − € 20 = € 60.",
             nogSimpeler: "€ 60",
           },
@@ -1548,7 +1548,7 @@ const steps = [
           theorie: "Bij gelijke teller: grootste noemer = kleinste breuk. 1/8 (8 stukken) is het kleinst.",
           voorbeelden: [{ type: "vergelijk", tekst: "Pizza in 8: stukje is klein. Pizza in 2: stukje is groot." }],
           basiskennis: [{ onderwerp: "3/4 niet 1", uitleg: "3/4 heeft teller 3 — niet 1. Vergelijk decimaal: 1/8=0,125; 3/4=0,75. 1/8 kleinst." }],
-          niveaus: { basis: "1/8.", simpeler: "Hoe meer stukken (grotere noemer), hoe kleiner elk stuk. 1/8 = klein stukje.", nogSimpeler: "1/8" },
+          niveaus: { basis: "Bij breuken met een 1 boven geldt: hoe groter de noemer, hoe kleiner elk stuk. Vergelijk ook de breuken met een grotere teller.", simpeler: "Hoe meer stukken (grotere noemer), hoe kleiner elk stuk. 1/8 = klein stukje.", nogSimpeler: "1/8" },
         },
       },
       {
@@ -1562,7 +1562,7 @@ const steps = [
           theorie: "Praktijk: 40÷5=8 (1/5). ×3 = 24 (3/5).",
           voorbeelden: [{ type: "stap", tekst: "1/5 = 8. 2/5 = 16. 3/5 = 24. 5/5 = 40." }],
           basiskennis: [{ onderwerp: "Tafel 5", uitleg: "40÷5 = 8 (uit tafel: 5×8=40)." }],
-          niveaus: { basis: "24 vragen.", simpeler: "1/5 van 40 = 8. 3/5 = 3×8 = 24 vragen goed.", nogSimpeler: "24" },
+          niveaus: { basis: "Reken eerst 1/5 van 40 uit door 40 te delen door 5. Hoeveel van die stukken had Sven goed?", simpeler: "1/5 van 40 = 8. 3/5 = 3×8 = 24 vragen goed.", nogSimpeler: "24" },
         },
       },
       {
@@ -1576,7 +1576,7 @@ const steps = [
           theorie: "Voor 2 en 3 als noemers: pak 2×3=6. 1/2 = 3/6, 1/3 = 2/6.",
           voorbeelden: [{ type: "stap", tekst: "1/2 = 3/6 (×3 boven en onder). 1/3 = 2/6 (×2 boven en onder). Som = 5/6." }],
           basiskennis: [{ onderwerp: "Trek na", uitleg: "Bij verschillende noemers: maak gelijk via product. Hier 2×3=6." }],
-          niveaus: { basis: "5/6.", simpeler: "Maak gelijke noemer: 1/2=3/6, 1/3=2/6. Som tellers: 3+2=5. → 5/6.", nogSimpeler: "5/6" },
+          niveaus: { basis: "Maak eerst gelijke noemers. Welk getal zit in de tafel van 2 én in de tafel van 3?", simpeler: "Maak gelijke noemer: 1/2=3/6, 1/3=2/6. Som tellers: 3+2=5. → 5/6.", nogSimpeler: "5/6" },
         },
       },
       {
@@ -1590,7 +1590,7 @@ const steps = [
           theorie: "Voor 2/3 van X: ÷3 dan ×2.",
           voorbeelden: [{ type: "stap", tekst: "1/3 van 300 = 100. 2/3 = 200. 3/3 = 300 (heel)." }],
           basiskennis: [{ onderwerp: "Tafel 3", uitleg: "300÷3 = 100 (uit tafel: 3×100=300)." }],
-          niveaus: { basis: "200 mL.", simpeler: "1/3 van 300 mL = 100 mL. 2/3 = 2×100 = 200 mL.", nogSimpeler: "200" },
+          niveaus: { basis: "Reken eerst 1/3 van 300 mL uit door 300 te delen door 3. Hoeveel van die stukken vul je?", simpeler: "1/3 van 300 mL = 100 mL. 2/3 = 2×100 = 200 mL.", nogSimpeler: "200" },
         },
       },
       {
@@ -1604,7 +1604,7 @@ const steps = [
           theorie: "Vereenvoudig zo ver mogelijk: 4 én 12 beide ÷4. Niet door 2 (dan blijft 2/6 nog te vereenvoudigen).",
           voorbeelden: [{ type: "stap", tekst: "4/12 ÷4 → 1/3. Of stap-voor-stap: ÷2 → 2/6, ÷2 → 1/3." }],
           basiskennis: [{ onderwerp: "Maximaal", uitleg: "1/3 kan niet meer kleiner — antwoord." }],
-          niveaus: { basis: "1/3.", simpeler: "4 en 12 beide ÷4: 4÷4=1, 12÷4=3 → 1/3.", nogSimpeler: "1/3" },
+          niveaus: { basis: "Zoek het grootste getal waar 4 en 12 allebei door gedeeld kunnen worden. Deel teller en noemer daardoor.", simpeler: "4 en 12 beide ÷4: 4÷4=1, 12÷4=3 → 1/3.", nogSimpeler: "1/3" },
         },
       },
       {
@@ -1618,7 +1618,7 @@ const steps = [
           theorie: "Klassieke breuk-vraag: teller (boven) = aantal dat je hebt/eet, noemer (onder) = totaal.",
           voorbeelden: [{ type: "stap", tekst: "5 op van 8 totaal = 5/8 op. 3/8 over." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "5+8=13 ❌. Noemer is alleen totaal-aantal stukken (8)." }],
-          niveaus: { basis: "5/8.", simpeler: "Op = 5 (boven). Totaal = 8 (onder). → 5/8 opgegeten.", nogSimpeler: "5/8" },
+          niveaus: { basis: "De noemer is het totaal aantal vakjes, de teller het aantal dat je opeet. Welk getal komt boven en welk onder de streep?", simpeler: "Op = 5 (boven). Totaal = 8 (onder). → 5/8 opgegeten.", nogSimpeler: "5/8" },
         },
       },
       { q: "½ + ¼ = ?", options: ["¾","⅙","⅔","¼"], answer: 0, wrongHints: [null, "Maak eerst gelijknamig — hoeveel kwarten is een half?", "Reken in kwarten — hoeveel kwarten is een halve?", "Je begint met ¼ en telt er ½ bij, dan wordt het méér dan je nu hebt."] },

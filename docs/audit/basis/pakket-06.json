@@ -1,0 +1,207 @@
+[
+ {
+  "file": "src/learnPaths/cijferendRekenen.js",
+  "items": [
+   {
+    "waar": "cijferend-rekenen stap 1 vraag 4",
+    "antwoord": "Delen",
+    "basis": "Delen = links beginnen."
+   },
+   {
+    "waar": "cijferend-rekenen stap 1 vraag 5",
+    "antwoord": "Onder de 2",
+    "basis": "7 onder de 2."
+   },
+   {
+    "waar": "cijferend-rekenen stap 1 vraag 6",
+    "antwoord": "Zodat je cijfers uit dezelfde kolom bij elkaar telt",
+    "basis": "Dezelfde kolom bij elkaar."
+   },
+   {
+    "waar": "cijferend-rekenen stap 2 vraag 1",
+    "antwoord": "603",
+    "basis": "347+256=603."
+   },
+   {
+    "waar": "cijferend-rekenen stap 2 vraag 2",
+    "antwoord": "1815",
+    "basis": "1248+567=1815."
+   },
+   {
+    "waar": "cijferend-rekenen stap 2 vraag 9",
+    "antwoord": "13",
+    "basis": "8 + 4 + 1 = 13."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 1",
+    "antwoord": "972",
+    "basis": "324×3=972."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 2",
+    "antwoord": "450",
+    "basis": "18×25=450."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 3",
+    "antwoord": "3192",
+    "basis": "456×7=3192."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 4",
+    "antwoord": "834",
+    "basis": "278 × 3 = 834."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 5",
+    "antwoord": "4872",
+    "basis": "609 × 8 = 4872."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 6",
+    "antwoord": "4940",
+    "basis": "1235 × 4 = 4940."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 7",
+    "antwoord": "322",
+    "basis": "23 × 14 = 322."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 8",
+    "antwoord": "756",
+    "basis": "36 × 21 = 756."
+   },
+   {
+    "waar": "cijferend-rekenen stap 4 vraag 9",
+    "antwoord": "340",
+    "basis": "68 × 5 = 340."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 1",
+    "antwoord": "21",
+    "basis": "168÷8=21."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 2",
+    "antwoord": "50",
+    "basis": "9×50=450 → 450÷9=50."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 3",
+    "antwoord": "13",
+    "basis": "78÷6=13."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 4",
+    "antwoord": "36",
+    "basis": "252 ÷ 7 = 36."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 5",
+    "antwoord": "64",
+    "basis": "384 ÷ 6 = 64."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 6",
+    "antwoord": "213",
+    "basis": "852 ÷ 4 = 213."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 7",
+    "antwoord": "8 rest 3",
+    "basis": "59 ÷ 7 = 8 rest 3."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 9",
+    "antwoord": "31",
+    "basis": "Begin met 31."
+   },
+   {
+    "waar": "cijferend-rekenen stap 5 vraag 10",
+    "antwoord": "29",
+    "basis": "145 ÷ 5 = 29."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 1",
+    "antwoord": "980",
+    "basis": "35×28=980 kg."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 2",
+    "antwoord": "15",
+    "basis": "180÷12=15."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 3",
+    "antwoord": "415",
+    "basis": "1245÷3=415."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 4",
+    "antwoord": "21",
+    "basis": "68−47=21."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 5",
+    "antwoord": "720",
+    "basis": "16 × 45 = 720."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 6",
+    "antwoord": "1565",
+    "basis": "2350 − 785 = 1565."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 7",
+    "antwoord": "26",
+    "basis": "234 ÷ 9 = 26."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 8",
+    "antwoord": "865",
+    "basis": "386 + 479 = 865."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 9",
+    "antwoord": "€ 486",
+    "basis": "27 × € 18 = € 486."
+   },
+   {
+    "waar": "cijferend-rekenen stap 6 vraag 10",
+    "antwoord": "25",
+    "basis": "150 ÷ 6 = 25."
+   },
+   {
+    "waar": "cijferend-rekenen stap 7 vraag 1",
+    "antwoord": "6245",
+    "basis": "3456+2789=6245."
+   },
+   {
+    "waar": "cijferend-rekenen stap 7 vraag 2",
+    "antwoord": "5453",
+    "basis": "8000−2547=5453."
+   },
+   {
+    "waar": "cijferend-rekenen stap 7 vraag 3",
+    "antwoord": "2592",
+    "basis": "432×6=2592."
+   },
+   {
+    "waar": "cijferend-rekenen stap 7 vraag 4",
+    "antwoord": "321",
+    "basis": "1284÷4=321."
+   },
+   {
+    "waar": "cijferend-rekenen stap 7 vraag 5",
+    "antwoord": "192",
+    "basis": "24×8=192."
+   },
+   {
+    "waar": "cijferend-rekenen stap 7 vraag 6",
+    "antwoord": "€ 195",
+    "basis": "7,80×25=€195."
+   }
+  ]
+ }
+]

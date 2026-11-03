@@ -1,0 +1,282 @@
+[
+ {
+  "file": "src/learnPaths/verwijswoordenPo.js",
+  "items": [
+   {
+    "waar": "verwijswoorden-po stap 1 vraag 1",
+    "antwoord": "Tom",
+    "basis": "'Hij' verwijst naar de persoon ervoor: Tom."
+   },
+   {
+    "waar": "verwijswoorden-po stap 1 vraag 3",
+    "antwoord": "Hij",
+    "basis": "'Hij' is het verwijswoord; het verwijst naar de hond."
+   },
+   {
+    "waar": "verwijswoorden-po stap 1 vraag 5",
+    "antwoord": "Sara",
+    "basis": "'Ze' verwijst naar de persoon ervoor: Sara."
+   },
+   {
+    "waar": "verwijswoorden-po stap 1 vraag 6",
+    "antwoord": "tafel",
+    "basis": "'Tafel' is een ding zelf, geen verwijswoord."
+   },
+   {
+    "waar": "verwijswoorden-po stap 1 vraag 8",
+    "antwoord": "Die",
+    "basis": "'Die' is het verwijswoord; het verwijst naar de pen."
+   },
+   {
+    "waar": "verwijswoorden-po stap 2 vraag 1",
+    "antwoord": "Lisa",
+    "basis": "'Zij' verwijst naar de persoon ervoor: Lisa."
+   },
+   {
+    "waar": "verwijswoorden-po stap 2 vraag 2",
+    "antwoord": "het boek",
+    "basis": "'Het' verwijst naar het boek."
+   },
+   {
+    "waar": "verwijswoorden-po stap 2 vraag 4",
+    "antwoord": "de fiets",
+    "basis": "'Hem' verwijst naar de fiets; 'hij' naar opa."
+   },
+   {
+    "waar": "verwijswoorden-po stap 3 vraag 1",
+    "antwoord": "de film",
+    "basis": "'Die' verwijst naar de film."
+   },
+   {
+    "waar": "verwijswoorden-po stap 3 vraag 2",
+    "antwoord": "het touw",
+    "basis": "'Dat' verwijst naar het touw."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 1",
+    "antwoord": "de kinderen",
+    "basis": "'Ze' verwijst naar de kinderen."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 3",
+    "antwoord": "het krijtje",
+    "basis": "'Daarmee' verwijst naar het krijtje (het middel)."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 4",
+    "antwoord": "de telefoon",
+    "basis": "'Er … mee' verwijst naar de telefoon."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 5",
+    "antwoord": "de meisjes",
+    "basis": "'Ze' verwijst naar de meisjes."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 6",
+    "antwoord": "het cadeau",
+    "basis": "'Het' verwijst naar het cadeau."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 7",
+    "antwoord": "het strand",
+    "basis": "'Daar' verwijst naar de plaats: het strand."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 8",
+    "antwoord": "de koeien",
+    "basis": "'Ze' verwijst naar de koeien."
+   },
+   {
+    "waar": "verwijswoorden-po stap 4 vraag 9",
+    "antwoord": "de brief",
+    "basis": "'Die' verwijst naar de brief."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/woordsoortenPo.js",
+  "items": [
+   {
+    "waar": "woordsoorten-po stap 1 vraag 1",
+    "antwoord": "fiets",
+    "basis": "fiets = zelfst nw."
+   },
+   {
+    "waar": "woordsoorten-po stap 1 vraag 2",
+    "antwoord": "ridder",
+    "basis": "ridder."
+   },
+   {
+    "waar": "woordsoorten-po stap 1 vraag 3",
+    "antwoord": "loopt",
+    "basis": "loopt = ww."
+   },
+   {
+    "waar": "woordsoorten-po stap 1 vraag 4",
+    "antwoord": "Lisa",
+    "basis": "Lisa is een eigennaam, en een eigennaam is een zelfstandig naamwoord."
+   },
+   {
+    "waar": "woordsoorten-po stap 1 vraag 5",
+    "antwoord": "park",
+    "basis": "Park is een zelfstandig naamwoord: je kunt er 'het' voor zetten."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 1",
+    "antwoord": "springen",
+    "basis": "springen."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 2",
+    "antwoord": "schopt",
+    "basis": "schopt = ww."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 3",
+    "antwoord": "lopen",
+    "basis": "lopen."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 4",
+    "antwoord": "heb",
+    "basis": "heb."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 5",
+    "antwoord": "is",
+    "basis": "is = werkwoord."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 6",
+    "antwoord": "kopen",
+    "basis": "kocht → kopen."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 7",
+    "antwoord": "lopen",
+    "basis": "Wij → lopen."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 8",
+    "antwoord": "zwemmen",
+    "basis": "zwemmen = werkwoord."
+   },
+   {
+    "waar": "woordsoorten-po stap 2 vraag 10",
+    "antwoord": "gewerkt",
+    "basis": "gewerkt = hoofdwerkwoord."
+   },
+   {
+    "waar": "woordsoorten-po stap 3 vraag 1",
+    "antwoord": "snel",
+    "basis": "snel."
+   },
+   {
+    "waar": "woordsoorten-po stap 3 vraag 2",
+    "antwoord": "slimme",
+    "basis": "slimme."
+   },
+   {
+    "waar": "woordsoorten-po stap 3 vraag 3",
+    "antwoord": "sneller",
+    "basis": "sneller."
+   },
+   {
+    "waar": "woordsoorten-po stap 4 vraag 1",
+    "antwoord": "het",
+    "basis": "het."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/folderBonAdvertentiePo.js",
+  "items": [
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 1",
+    "antwoord": "€3,60",
+    "basis": "3 broden × €1,20 = €3,60."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 2",
+    "antwoord": "€1,60",
+    "basis": "Wisselgeld = €10 − €8,40 = €1,60."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 5",
+    "antwoord": "€1,90",
+    "basis": "2 bekers × €0,95 = €1,90."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 6",
+    "antwoord": "€0,25",
+    "basis": "Wisselgeld = €7,00 − €6,75 = €0,25."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 7",
+    "antwoord": "€3,75",
+    "basis": "3 × €1,25 = €3,75."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 8",
+    "antwoord": "€6,35",
+    "basis": "Wisselgeld = €20,00 − €13,65 = €6,35."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 1 vraag 9",
+    "antwoord": "€7,26",
+    "basis": "Je betaalt het totaal: €7,26. De btw zit daar al in."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 2 vraag 2",
+    "antwoord": "€10",
+    "basis": "25% is een kwart. Een kwart van €40 is €10."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 2 vraag 5",
+    "antwoord": "€15",
+    "basis": "Helft van €30 = €15 korting."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 2 vraag 7",
+    "antwoord": "eieren",
+    "basis": "'2 halen, 1 betalen' = één gratis → eieren."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 3 vraag 2",
+    "antwoord": "dat je iets koopt",
+    "basis": "Een advertentie wil dat je iets koopt."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 4 vraag 1",
+    "antwoord": "€10",
+    "basis": "Helft van €20 = €10. Dat betaal je."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 4 vraag 2",
+    "antwoord": "€24",
+    "basis": "€16 (vol) + €8 (half) = €24."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 4 vraag 4",
+    "antwoord": "€29",
+    "basis": "€30 − €3 (10%) = €27, plus €2 verzending = €29."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 4 vraag 7",
+    "antwoord": "€27",
+    "basis": "€18 (vol) + €9 (half) = €27."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 4 vraag 8",
+    "antwoord": "€2,20",
+    "basis": "Je betaalt 2 × €1,10 = €2,20."
+   },
+   {
+    "waar": "folder-bon-advertentie-po stap 4 vraag 9",
+    "antwoord": "€14",
+    "basis": "€7 per rugzak × 2 = €14."
+   }
+  ]
+ }
+]

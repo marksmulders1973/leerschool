@@ -1,0 +1,267 @@
+[
+ {
+  "file": "src/learnPaths/matenEenheden.js",
+  "items": [
+   {
+    "waar": "maten-eenheden stap 1 vraag 1",
+    "antwoord": "cm",
+    "basis": "cm."
+   },
+   {
+    "waar": "maten-eenheden stap 1 vraag 4",
+    "antwoord": "L",
+    "basis": "L."
+   },
+   {
+    "waar": "maten-eenheden stap 1 vraag 5",
+    "antwoord": "Gewicht",
+    "basis": "Gewicht."
+   },
+   {
+    "waar": "maten-eenheden stap 1 vraag 6",
+    "antwoord": "mL",
+    "basis": "mL."
+   },
+   {
+    "waar": "maten-eenheden stap 1 vraag 7",
+    "antwoord": "minuut",
+    "basis": "minuut."
+   },
+   {
+    "waar": "maten-eenheden stap 1 vraag 8",
+    "antwoord": "km",
+    "basis": "km."
+   },
+   {
+    "waar": "maten-eenheden stap 1 vraag 9",
+    "antwoord": "ton",
+    "basis": "ton."
+   },
+   {
+    "waar": "maten-eenheden stap 2 vraag 1",
+    "antwoord": "300",
+    "basis": "300."
+   },
+   {
+    "waar": "maten-eenheden stap 2 vraag 2",
+    "antwoord": "2500",
+    "basis": "2500."
+   },
+   {
+    "waar": "maten-eenheden stap 2 vraag 4",
+    "antwoord": "7000",
+    "basis": "7000."
+   },
+   {
+    "waar": "maten-eenheden stap 3 vraag 4",
+    "antwoord": "7",
+    "basis": "7."
+   },
+   {
+    "waar": "maten-eenheden stap 3 vraag 5",
+    "antwoord": "3000",
+    "basis": "3000."
+   },
+   {
+    "waar": "maten-eenheden stap 3 vraag 6",
+    "antwoord": "2 kg",
+    "basis": "2 kg."
+   },
+   {
+    "waar": "maten-eenheden stap 3 vraag 7",
+    "antwoord": "12",
+    "basis": "12."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 1",
+    "antwoord": "1500",
+    "basis": "1500 mL."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 2",
+    "antwoord": "200",
+    "basis": "200 mL."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 3",
+    "antwoord": "0,5",
+    "basis": "0,5 cL."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 4",
+    "antwoord": "30",
+    "basis": "30."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 5",
+    "antwoord": "40",
+    "basis": "40."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 6",
+    "antwoord": "200",
+    "basis": "200."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 7",
+    "antwoord": "6",
+    "basis": "6."
+   },
+   {
+    "waar": "maten-eenheden stap 4 vraag 8",
+    "antwoord": "1 L",
+    "basis": "1 L."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 1",
+    "antwoord": "150",
+    "basis": "150 min."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 2",
+    "antwoord": "21:15",
+    "basis": "21:15."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 3",
+    "antwoord": "1 uur 45 min",
+    "basis": "1 uur 45 min."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 4",
+    "antwoord": "180",
+    "basis": "180."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 5",
+    "antwoord": "48",
+    "basis": "48."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 6",
+    "antwoord": "80",
+    "basis": "80."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 7",
+    "antwoord": "21",
+    "basis": "21."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 8",
+    "antwoord": "10:05",
+    "basis": "10:05."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 9",
+    "antwoord": "1 uur 30 min",
+    "basis": "1 uur 30 min."
+   },
+   {
+    "waar": "maten-eenheden stap 5 vraag 10",
+    "antwoord": "2 uur",
+    "basis": "2 uur."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 1",
+    "antwoord": "1,75",
+    "basis": "1,75 kg."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 2",
+    "antwoord": "800",
+    "basis": "800 mL."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 3",
+    "antwoord": "4,5 m",
+    "basis": "4,5 m."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 4",
+    "antwoord": "2,75",
+    "basis": "2,75."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 5",
+    "antwoord": "600",
+    "basis": "600."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 6",
+    "antwoord": "3250",
+    "basis": "3250."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 7",
+    "antwoord": "8,5",
+    "basis": "8,5."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 8",
+    "antwoord": "6400",
+    "basis": "6400."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 9",
+    "antwoord": "0,45",
+    "basis": "0,45."
+   },
+   {
+    "waar": "maten-eenheden stap 6 vraag 10",
+    "antwoord": "108",
+    "basis": "108."
+   },
+   {
+    "waar": "maten-eenheden stap 7 vraag 2",
+    "antwoord": "10",
+    "basis": "10 bekers."
+   },
+   {
+    "waar": "maten-eenheden stap 7 vraag 3",
+    "antwoord": "66,7",
+    "basis": "66,7 m/min."
+   },
+   {
+    "waar": "maten-eenheden stap 7 vraag 4",
+    "antwoord": "375.000",
+    "basis": "375.000 L."
+   },
+   {
+    "waar": "maten-eenheden stap 7 vraag 5",
+    "antwoord": "12",
+    "basis": "12."
+   },
+   {
+    "waar": "maten-eenheden stap 7 vraag 8",
+    "antwoord": "8",
+    "basis": "8."
+   },
+   {
+    "waar": "maten-eenheden stap 8 vraag 1",
+    "antwoord": "42.195",
+    "basis": "42.195 m."
+   },
+   {
+    "waar": "maten-eenheden stap 8 vraag 2",
+    "antwoord": "810",
+    "basis": "810 g."
+   },
+   {
+    "waar": "maten-eenheden stap 8 vraag 3",
+    "antwoord": "€ 0,0012",
+    "basis": "€0,0012."
+   },
+   {
+    "waar": "maten-eenheden stap 8 vraag 4",
+    "antwoord": "11:05",
+    "basis": "11:05."
+   },
+   {
+    "waar": "maten-eenheden stap 8 vraag 5",
+    "antwoord": "De hoogte van een voordeur",
+    "basis": "Voordeur."
+   }
+  ]
+ }
+]

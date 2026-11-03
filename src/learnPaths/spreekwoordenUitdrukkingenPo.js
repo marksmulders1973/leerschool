@@ -69,7 +69,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij uitdrukkingen: vraag jezelf 'kan dit letterlijk?'. Nee? → figuurlijk. Zoek bedoelde betekenis in context." }],
           niveaus: {
-            basis: "Het regent heel hard (uitdrukking).",
+            basis: "Pijpenstelen zijn lange, dikke stokjes. Hoe ziet regen eruit als de druppels zo dik en lang lijken?",
             simpeler: "Pijpenstelen-regen = dikke, lange regendruppels = hard regenen.",
             nogSimpeler: "Hard regenen",
           },
@@ -104,7 +104,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Test op 'als'. Met 'als' = vergelijking. Zonder = metafoor." }],
           niveaus: {
-            basis: "Metafoor = beeldspraak zonder 'als' (A IS B).",
+            basis: "Kijk of er 'als' of 'zoals' in de zin staat, of dat er gezegd wordt dat iemand iets ís. Dat bepaalt de soort beeldspraak.",
             simpeler: "Zonder 'als' = metafoor. Met 'als' = vergelijking.",
             nogSimpeler: "Geen 'als' = metafoor.",
           },
@@ -164,7 +164,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Ik drink een glas melk' is letterlijk: het gebeurt echt.",
+            basis: "Letterlijk betekent: het gebeurt echt precies zoals het er staat. Stel je elke zin voor: welke kan echt zo gebeuren?",
             simpeler: "Alleen bij de melk gebeurt echt wat er staat.",
             nogSimpeler: "Melk drinken = echt.",
           },
@@ -273,7 +273,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vergelijking: er staat 'zo ... als'.",
+            basis: "Kijk of er 'als' of 'zoals' in de zin staat. Welke soort beeldspraak gebruikt dat woordje?",
             simpeler: "'Zo wit als' heeft 'als', dus vergelijking.",
             nogSimpeler: "Vergelijking.",
           },
@@ -323,7 +323,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het wordt duur.",
+            basis: "Denk aan papieren met bedragen erop, zoals rekeningen. Wat betekent het als iets steeds verder 'in de papieren' loopt?",
             simpeler: "Het gaat veel geld kosten.",
             nogSimpeler: "Duur.",
           },
@@ -387,7 +387,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "ROOD = schuld (bank). ZWART = winst. Onthoud die kleur-koppeling." }],
           niveaus: {
-            basis: "Schulden hebben (negatief saldo).",
+            basis: "Op een bankafschrift wordt een bedrag soms in het rood gezet. Wanneer gebeurt dat: als je geld over hebt, of juist te weinig?",
             simpeler: "Je bankrekening staat onder nul = je hebt geld geleend = 'in het rood'.",
             nogSimpeler: "Schuld",
           },
@@ -463,7 +463,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Spreekwoord = LES = wijsheid voor de toekomst. Niet over Rome zelf, maar over GEDULD bij grote dingen." }],
           niveaus: {
-            basis: "Grote dingen kosten tijd.",
+            basis: "Rome is een enorme stad. Hoe lang duurde het om die te bouwen, en wat zegt dat over grote plannen?",
             simpeler: "Iets groots maken (project, studie, gebouw) duurt lang — heb geduld.",
             nogSimpeler: "Tijd nodig",
           },

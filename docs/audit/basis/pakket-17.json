@@ -1,0 +1,297 @@
+[
+ {
+  "file": "src/learnPaths/spellingOverigePo.js",
+  "items": [
+   {
+    "waar": "spelling-overige-po stap 1 vraag 3",
+    "antwoord": "fantasties",
+    "basis": "Fantasties = fout (moet fantastisch)."
+   },
+   {
+    "waar": "spelling-overige-po stap 1 vraag 4",
+    "antwoord": "gevaarlijk",
+    "basis": "Uk-klank = -lijk → gevaarlijk."
+   },
+   {
+    "waar": "spelling-overige-po stap 1 vraag 5",
+    "antwoord": "waarschijnlijk",
+    "basis": "Uk-klank → -lijk → waarschijnlijk."
+   },
+   {
+    "waar": "spelling-overige-po stap 1 vraag 6",
+    "antwoord": "gemakkelik",
+    "basis": "Gemakkelik = fout (moet gemakkelijk)."
+   },
+   {
+    "waar": "spelling-overige-po stap 1 vraag 7",
+    "antwoord": "komische",
+    "basis": "Komisch + e = komische."
+   },
+   {
+    "waar": "spelling-overige-po stap 1 vraag 8",
+    "antwoord": "fris",
+    "basis": "Fris = geen -isch."
+   },
+   {
+    "waar": "spelling-overige-po stap 1 vraag 9",
+    "antwoord": "vrolijke",
+    "basis": "Vrolijk + e = vrolijke."
+   },
+   {
+    "waar": "spelling-overige-po stap 2 vraag 2",
+    "antwoord": "! en !",
+    "basis": "Beide zinnen zijn uitroepen: van verbazing en van blijheid."
+   },
+   {
+    "waar": "spelling-overige-po stap 3 vraag 1",
+    "antwoord": "pannenkoek",
+    "basis": "Pan → pannen → pannenkoek."
+   },
+   {
+    "waar": "spelling-overige-po stap 3 vraag 2",
+    "antwoord": "voetbal schoen",
+    "basis": "'Voetbal schoen' met een spatie is fout."
+   },
+   {
+    "waar": "spelling-overige-po stap 3 vraag 5",
+    "antwoord": "kippenhok",
+    "basis": "Kip → kippen → kippenhok."
+   },
+   {
+    "waar": "spelling-overige-po stap 3 vraag 6",
+    "antwoord": "eendenvijver",
+    "basis": "Eend → eenden → eendenvijver."
+   },
+   {
+    "waar": "spelling-overige-po stap 3 vraag 8",
+    "antwoord": "schooltas",
+    "basis": "Schooltas = school + tas."
+   },
+   {
+    "waar": "spelling-overige-po stap 3 vraag 9",
+    "antwoord": "hondehok",
+    "basis": "Hondehok = fout (moet hondenhok)."
+   },
+   {
+    "waar": "spelling-overige-po stap 5 vraag 1",
+    "antwoord": "fantastisch",
+    "basis": "Iese = -isch → fantastisch."
+   },
+   {
+    "waar": "spelling-overige-po stap 5 vraag 4",
+    "antwoord": "belgië",
+    "basis": "Land = hoofd → België."
+   },
+   {
+    "waar": "spelling-overige-po stap 5 vraag 5",
+    "antwoord": "gemakkelijk",
+    "basis": "Dubbele k + -lijk = gemakkelijk."
+   },
+   {
+    "waar": "spelling-overige-po stap 5 vraag 8",
+    "antwoord": "Nederland",
+    "basis": "Nederland."
+   },
+   {
+    "waar": "spelling-overige-po stap 5 vraag 9",
+    "antwoord": "logisch",
+    "basis": "logisch."
+   },
+   {
+    "waar": "spelling-overige-po stap 5 vraag 10",
+    "antwoord": "vriendelijk",
+    "basis": "vriendelijk."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/kommagetallenPo.js",
+  "items": [
+   {
+    "waar": "kommagetallen-po stap 1 vraag 2",
+    "antwoord": "2 tienden",
+    "basis": "2 tienden = 0,2."
+   },
+   {
+    "waar": "kommagetallen-po stap 1 vraag 4",
+    "antwoord": "0,9",
+    "basis": "0,9 = 0,90 > 0,12."
+   },
+   {
+    "waar": "kommagetallen-po stap 1 vraag 6",
+    "antwoord": "zes-komma-nul-vier",
+    "basis": "6,04 = zes-komma-nul-vier."
+   },
+   {
+    "waar": "kommagetallen-po stap 1 vraag 7",
+    "antwoord": "4 en een tiende",
+    "basis": "4,1 = 4 en een tiende."
+   },
+   {
+    "waar": "kommagetallen-po stap 1 vraag 8",
+    "antwoord": "3,6",
+    "basis": "3,6 is het grootst."
+   },
+   {
+    "waar": "kommagetallen-po stap 1 vraag 9",
+    "antwoord": "50 + 2 + 0,3 + 0,06",
+    "basis": "52,36 = 50 + 2 + 0,3 + 0,06."
+   },
+   {
+    "waar": "kommagetallen-po stap 1 vraag 10",
+    "antwoord": "8,31",
+    "basis": "8,31 heeft een 3 op de tienden-plek."
+   },
+   {
+    "waar": "kommagetallen-po stap 2 vraag 2",
+    "antwoord": "4,55",
+    "basis": "7,80 - 3,25 = 4,55."
+   },
+   {
+    "waar": "kommagetallen-po stap 3 vraag 2",
+    "antwoord": "16",
+    "basis": "32 × 5 = 160 → 16."
+   },
+   {
+    "waar": "kommagetallen-po stap 3 vraag 8",
+    "antwoord": "0,375",
+    "basis": "375 met 3 decimalen = 0,375."
+   },
+   {
+    "waar": "kommagetallen-po stap 4 vraag 8",
+    "antwoord": "18 ÷ 6",
+    "basis": "1,8 ÷ 0,6 wordt 18 ÷ 6."
+   },
+   {
+    "waar": "kommagetallen-po stap 4 vraag 9",
+    "antwoord": "0,3 liter",
+    "basis": "1,2 ÷ 4 = 0,3 liter."
+   },
+   {
+    "waar": "kommagetallen-po stap 5 vraag 2",
+    "antwoord": "€ 14,25",
+    "basis": "3 × €4,75 = €14,25."
+   },
+   {
+    "waar": "kommagetallen-po stap 5 vraag 6",
+    "antwoord": "€ 2,65",
+    "basis": "€ 5,00 − € 2,35 = € 2,65."
+   },
+   {
+    "waar": "kommagetallen-po stap 5 vraag 7",
+    "antwoord": "250 mL",
+    "basis": "0,25 × 1000 = 250 mL."
+   },
+   {
+    "waar": "kommagetallen-po stap 5 vraag 8",
+    "antwoord": "€ 1,20",
+    "basis": "€ 2,40 ÷ 2 = € 1,20."
+   },
+   {
+    "waar": "kommagetallen-po stap 5 vraag 9",
+    "antwoord": "0,15 m",
+    "basis": "1,35 − 1,20 = 0,15 m."
+   },
+   {
+    "waar": "kommagetallen-po stap 6 vraag 6",
+    "antwoord": "240 cm",
+    "basis": "2,4 × 100 = 240 cm."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/trappenVanVergelijkingPo.js",
+  "items": [
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 2",
+    "antwoord": "groter",
+    "basis": "groot + -er = groter."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 3",
+    "antwoord": "mooist",
+    "basis": "mooi + -st = mooist."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 6",
+    "antwoord": "drie",
+    "basis": "Drie trappen: stellend, vergrotend, overtreffend."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 7",
+    "antwoord": "slimmer",
+    "basis": "slim + -mer = slimmer (dubbele m door korte klank)."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 8",
+    "antwoord": "lang",
+    "basis": "De stellende trap van 'langst' is 'lang'."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 9",
+    "antwoord": "goed",
+    "basis": "goed → beter → best is onregelmatig."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 10",
+    "antwoord": "de overtreffende trap",
+    "basis": "Een woord met -st staat in de overtreffende trap."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 2 vraag 1",
+    "antwoord": "langer",
+    "basis": "Bij 'dan' hoort de -er-vorm: langer."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 2 vraag 2",
+    "antwoord": "dan",
+    "basis": "Bij de vergrotende trap hoort 'dan'."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 3 vraag 1",
+    "antwoord": "hoogste",
+    "basis": "De hoogste berg = overtreffende trap met -ste."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 3 vraag 2",
+    "antwoord": "het snelst",
+    "basis": "'het snelst' is de overtreffende trap."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 1",
+    "antwoord": "dikker",
+    "basis": "dik + -er met dubbele k = dikker."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 2",
+    "antwoord": "groter",
+    "basis": "groter dan = vergrotende trap."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 3",
+    "antwoord": "minst",
+    "basis": "weinig → minder → minst."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 4",
+    "antwoord": "snelst",
+    "basis": "'het snelst' = overtreffende trap."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 5",
+    "antwoord": "natter",
+    "basis": "nat + -ter (dubbele t) = natter."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 7",
+    "antwoord": "best",
+    "basis": "goed → beter → best. Uit je hoofd leren."
+   },
+   {
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 8",
+    "antwoord": "jongste",
+    "basis": "de jongste = overtreffende trap, met -e."
+   }
+  ]
+ }
+]

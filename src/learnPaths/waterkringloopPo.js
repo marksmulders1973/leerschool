@@ -149,7 +149,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "IJzel = regen die WORDT ijs. Hagel = al ijs als het valt. Sneeuw = al ijs (zacht en wit) in wolk." }],
           niveaus: {
-            basis: "IJzel = regen die bevriest bij contact met koude grond.",
+            basis: "Denk aan hoe het water uit de lucht valt: als ijs of als water? En wat gebeurt er als het op een heel koude weg terechtkomt?",
             simpeler: "De regen valt als water, maar de grond is ijskoud. Zo wordt de regen meteen een laagje ijs.",
             nogSimpeler: "IJzel = glad ijs.",
           },

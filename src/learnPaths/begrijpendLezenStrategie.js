@@ -166,7 +166,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Van letters woorden maken en van woorden zinnen: dat is technisch lezen.",
+            basis: "Denk aan wat je doet als je net leert lezen: letters herkennen en aan elkaar plakken. Hoe heet dat soort lezen?",
             simpeler: "Als je letters aan elkaar plakt tot een woord, ben je technisch aan het lezen. Snappen wat het betekent komt daarna.",
             nogSimpeler: "Letters lezen = technisch",
           },
@@ -217,7 +217,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lezen om iets te onthouden voor een toets heet studerend lezen.",
+            basis: "Je leest hier om iets te leren en te onthouden, zoals bij huiswerk. Bij welk soort lezen hoort dat?",
             simpeler: "Lees je om iets te leren en te onthouden? Dan ben je aan het studeren. Dat heet studerend lezen.",
             nogSimpeler: "Onthouden = studerend",
           },
@@ -389,7 +389,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Moeilijke woorden en lange zinnen.",
+            basis: "Denk aan een tekst die jij lastig vond. Kwam dat door de plaatjes en kopjes, of door de woorden en zinnen zelf?",
             simpeler: "Een tekst wordt lastig als er woorden in staan die je niet kent, of zinnen die heel lang zijn. Dan moet je goed opletten.",
             nogSimpeler: "Moeilijke woorden",
           },
@@ -445,7 +445,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je kunt het leren met een slimme aanpak.",
+            basis: "Het goede nieuws moet iets zijn wat echt klopt en je helpt. Kun je beter worden in begrijpend lezen?",
             simpeler: "Begrijpend lezen is als fietsen: je leert het door te oefenen, niet doordat je extra slim bent.",
             nogSimpeler: "Oefenen helpt",
           },
@@ -477,7 +477,7 @@ const steps = [
           voorbeelden: [{ type: "betogen", tekst: "Opiniestuk in de krant 'Iedereen moet meer fruit eten omdat...' = betogend." }],
           basiskennis: [{ onderwerp: "Doel van tekst", uitleg: "Elke tekst heeft een doel — weten, overtuigen of vermaken." }],
           niveaus: {
-            basis: "Overtuigen = betogend.",
+            basis: "Er zijn drie hoofdsoorten: informatief, verhalend en betogend. Welke soort probeert jou van een mening te overtuigen?",
             simpeler: "Stel je voor: iemand wil je laten geloven dat zonnepanelen goed zijn. Hij schrijft een tekst MET argumenten. Dat heet betogen.",
             nogSimpeler: "Mening + overtuigen = betogend",
           },
@@ -586,7 +586,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De tekst geeft alleen feiten. Dan wil de schrijver je informatie geven.",
+            basis: "Kijk of de tekst een mening, een verhaal of alleen feiten geeft. Wat wil een schrijver bereiken met alleen feiten?",
             simpeler: "De tekst vertelt alleen hoe het zit met de giraf. Geen mening, geen verhaal. Dus: de schrijver geeft je informatie.",
             nogSimpeler: "Feiten = informatie",
           },
@@ -641,7 +641,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een mening met argumenten erbij: dat is een betogende tekst.",
+            basis: "Staan hier feiten, een verhaal of een mening met redenen erbij? Bij welke tekstsoort hoort dat?",
             simpeler: "De schrijver vindt dat scholen een moestuin moeten krijgen en geeft redenen. Hij wil jou overtuigen. Dat is betogend.",
             nogSimpeler: "Moeten! = betogend",
           },
@@ -748,7 +748,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een sprookje vertelt een verhaal, dus het is verhalend.",
+            basis: "Een verhalende tekst heeft personages en dingen die gebeuren. Welke tekst uit de rij vertelt zo'n verhaal?",
             simpeler: "Bij een sprookje hoor je een verhaal: er was eens... Dat is verhalend.",
             nogSimpeler: "Er was eens = verhaal",
           },
@@ -836,7 +836,7 @@ const steps = [
           voorbeelden: [{ type: "gevolg", tekst: "'Hij at te veel snoep, DAARDOOR werd hij ziek.' = oorzaak (snoep) → gevolg (ziek)." }],
           basiskennis: [{ onderwerp: "6 signaalgroepen", uitleg: "Tijd / Oorzaak/gevolg / Opsomming / Tegenstelling / Voorbeeld / Conclusie." }],
           niveaus: {
-            basis: "'Daardoor' = oorzaak/gevolg.",
+            basis: "Bij oorzaak en gevolg leidt het ene ding tot het andere. Welk woord zegt: en dat zorgde ervoor dat?",
             simpeler: "Stel: 'Het regende, DAARDOOR werd het modderig.' → regen = oorzaak, modder = gevolg. 'Daardoor' wijst dat verband aan.",
             nogSimpeler: "Daardoor = gevolg",
           },
@@ -860,7 +860,7 @@ const steps = [
           voorbeelden: [{ type: "tegenstelling", tekst: "'Hij studeerde hard. Hij zakte ECHTER voor de toets.' = onverwacht / tegenovergesteld." }],
           basiskennis: [{ onderwerp: "Synoniemen tegenstelling", uitleg: "'Maar' (informeel) = 'echter' (formeel). Beide signaleren tegenstelling." }],
           niveaus: {
-            basis: "'Echter' = tegenstelling.",
+            basis: "Bij een tegenstelling komt er iets wat anders is dan je verwacht, zoals bij 'maar'. Welk woord betekent ongeveer hetzelfde?",
             simpeler: "Stel: 'Het is koud. Ik ga ECHTER zwemmen.' Het tweede is ONVERWACHT (je verwacht dat ik niet ga). 'Echter' wijst dat aan.",
             nogSimpeler: "Echter = tegen",
           },
@@ -884,7 +884,7 @@ const steps = [
           voorbeelden: [{ type: "samenvatten", tekst: "'Argument 1, argument 2, argument 3. KORTOM: ik vind dat iedereen meer moet sporten.' = afsluiten + samenvatten." }],
           basiskennis: [{ onderwerp: "Slot van tekst", uitleg: "De laatste alinea heeft vaak 'kortom' of 'tot slot' om af te ronden." }],
           niveaus: {
-            basis: "'Kortom' = samenvatten.",
+            basis: "Samenvatten is in een paar woorden het belangrijkste nog eens zeggen. Welk woord zet je vóór zo'n korte samenvatting?",
             simpeler: "Stel: je vertelt 3 dingen aan een vriend en wilt ze samenvatten in 1 conclusie. 'KORTOM:...' Dat is samenvatten.",
             nogSimpeler: "Kortom = samenvatten",
           },
@@ -987,7 +987,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Zoals' = 'bijvoorbeeld'.",
+            basis: "Na 'bijvoorbeeld' komt een voorbeeld. Welk woord kun je op die plek ook zetten, zonder dat de zin anders gaat betekenen?",
             simpeler: "'Fruit, bijvoorbeeld appels' en 'fruit, zoals appels' betekenen hetzelfde.",
             nogSimpeler: "Zoals = bijvoorbeeld",
           },
@@ -1047,7 +1047,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Oorzaak = de bus was te laat.",
+            basis: "De oorzaak is wat er eerst gebeurt en iets anders veroorzaakt. Kijk welk deel van de zin na 'omdat' staat.",
             simpeler: "Waarom kwam Noor te laat? Omdat de bus te laat was. Het antwoord op 'waarom?' is de oorzaak.",
             nogSimpeler: "Waarom? = oorzaak",
           },
@@ -1565,7 +1565,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij een letterlijke vraag staat het antwoord gewoon in de tekst.",
+            basis: "Kun je het aantal inwoners gewoon in de tekst terugvinden, of moet je zelf iets bedenken?",
             simpeler: "Je zoekt één getal dat gewoon in de tekst staat. Dan is het een letterlijke vraag.",
             nogSimpeler: "Staat het antwoord in de tekst? Dan is het een letterlijke vraag.",
           },
@@ -1735,7 +1735,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lotte is boos.",
+            basis: "Kijk naar wat Lotte doet: ze smijt haar tas en slaat de deur hard dicht. Welk gevoel past bij zulke harde bewegingen?",
             simpeler: "Hard gooien en een deur dichtslaan: zo doe je als je boos bent. Dat staat er niet, maar je snapt het wel.",
             nogSimpeler: "Een deur hard dichtslaan doe je als je boos bent.",
           },
@@ -1765,7 +1765,7 @@ const steps = [
           voorbeelden: [{ type: "synoniem", tekst: "'De wedstrijd werd afgelast OMDAT het regende' = 'De wedstrijd werd afgelast DOORDAT het regende'." }],
           basiskennis: [{ onderwerp: "Synoniemen kennen", uitleg: "Verschillende woorden voor hetzelfde — handig om te herkennen." }],
           niveaus: {
-            basis: "'Doordat' is een ander woord voor 'omdat': het geeft de oorzaak aan.",
+            basis: "'Omdat' geeft de reden of oorzaak van iets. Welk woord uit de rij kun je in een zin op de plek van 'omdat' zetten?",
             simpeler: "'Omdat' en 'doordat' betekenen praktisch hetzelfde: ze geven de REDEN aan.",
             nogSimpeler: "'Doordat' betekent hetzelfde als 'omdat'.",
           },

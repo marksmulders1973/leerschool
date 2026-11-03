@@ -1,0 +1,62 @@
+[
+ {
+  "file": "src/learnPaths/basisGrammaticaEngelsPo.js",
+  "items": [
+   {
+    "waar": "basis-grammatica-engels-po stap 1 vraag 1",
+    "antwoord": "an",
+    "basis": "an."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/deelsommenMetRestPo.js",
+  "items": [
+   {
+    "waar": "deelsommen-met-rest-po stap 4 vraag 1",
+    "antwoord": "11",
+    "basis": "11 groepjes van 4 (44), 1 leerling over."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/inDeKlasNieuwkomers.js",
+  "items": [
+   {
+    "waar": "in-de-klas-nieuwkomers stap 1 vraag 1",
+    "antwoord": "Mag ik naar de wc?",
+    "basis": "Zeg: Mag ik naar de wc?"
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/kritischDenkenPo.js",
+  "items": [
+   {
+    "waar": "kritisch-denken-po stap 1 vraag 1",
+    "antwoord": "Goed nadenken voor je iets gelooft",
+    "basis": "Kritisch denken = goed nadenken voor je iets gelooft."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/schrijvenTekstenPo.js",
+  "items": [
+   {
+    "waar": "schrijven-teksten-po stap 3 vraag 4",
+    "antwoord": "20-30% van de tekst",
+    "basis": "Een goede samenvatting is ongeveer 20-30% van de tekst: ongeveer een kwart."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/waterkringloopPo.js",
+  "items": [
+   {
+    "waar": "waterkringloop-po stap 2 vraag 3",
+    "antwoord": "Regen die bevriest bij contact",
+    "basis": "IJzel = regen die bevriest bij contact met koude grond."
+   }
+  ]
+ }
+]

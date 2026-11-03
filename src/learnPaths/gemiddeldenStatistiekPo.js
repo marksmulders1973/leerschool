@@ -224,7 +224,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Over de hele klas samen.",
+            basis: "Denk eens na: tellen bij een gemiddelde de cijfers van één kind mee, of de cijfers van alle kinderen?",
             simpeler: "Alle cijfers tellen mee. Dus het gemiddelde zegt iets over de hele klas.",
             nogSimpeler: "De hele klas",
           },
@@ -276,7 +276,7 @@ const steps = [
           voorbeelden: [{ type: "schatten", tekst: "Snelle schatting: alle waarden liggen rond 20. Gemiddelde moet dan ook ~20 zijn." }],
           basiskennis: [{ onderwerp: "Eenheid meenemen", uitleg: "Het antwoord is een temperatuur, dus '°C' erbij." }],
           niveaus: {
-            basis: "(18+20+22+19+21) ÷ 5 = 100 ÷ 5 = 20 °C.",
+            basis: "Tel eerst alle vijf temperaturen bij elkaar op. Deel die som daarna door het aantal dagen.",
             simpeler: "Som 100, gedeeld door 5 dagen = 20 °C gemiddeld.",
             nogSimpeler: "20 °C",
           },
@@ -700,7 +700,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Voor kleuren werkt geen gemiddelde — alleen modus." }],
           basiskennis: [{ onderwerp: "Vaakst ≠ hoogst", uitleg: "Modus = vaakst voorkomend. Niet altijd het grootste getal." }],
           niveaus: {
-            basis: "Blauw (8 stemmen).",
+            basis: "De modus is wat het vaakst voorkomt. Welke kleur kreeg de meeste stemmen?",
             simpeler: "Tel hoe vaak elke kleur is gestemd. Blauw is 8×, meeste. Dus modus = blauw.",
             nogSimpeler: "Blauw",
           },
@@ -822,7 +822,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 en 8 (allebei 2×).",
+            basis: "Tel per getal hoe vaak het voorkomt. Let op: er kunnen ook twee getallen even vaak het meest voorkomen.",
             simpeler: "4 komt 2× voor en 8 ook 2×. De rest maar 1×. Dus twee modussen: 4 en 8.",
             nogSimpeler: "4 en 8",
           },
@@ -864,7 +864,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Appel (3× gekozen).",
+            basis: "Tel per soort fruit hoe vaak het gekozen is. Welk fruit komt het vaakst voor?",
             simpeler: "Tel per fruit: appel 3, banaan 2, peer 1, kiwi 1. Appel wint. Modus = appel.",
             nogSimpeler: "Appel",
           },
@@ -959,7 +959,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "38 (komt 3× voor).",
+            basis: "Tel per maat hoe vaak hij verkocht is. De maat die het vaakst voorkomt, is de modus.",
             simpeler: "Tel: 38 komt 3× voor, 36 maar 2×, de rest 1×. Modus = 38.",
             nogSimpeler: "38",
           },
@@ -1001,7 +1001,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Geen modus (alles komt 1× voor).",
+            basis: "Tel hoe vaak elk getal voorkomt. Is er een getal dat vaker voorkomt dan de andere?",
             simpeler: "Elk getal staat er maar één keer. Geen enkel getal komt het vaakst voor. Dus: geen modus.",
             nogSimpeler: "Geen",
           },
@@ -1113,7 +1113,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Op volgorde: 9, 11, 15, 18, 24. Mediaan = 15.",
+            basis: "Zet de getallen eerst op volgorde van klein naar groot. Welk getal staat dan precies in het midden?",
             simpeler: "Zet de getallen van klein naar groot: 9, 11, 15, 18, 24. Het middelste getal is 15.",
             nogSimpeler: "15",
           },
@@ -1310,7 +1310,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bij 6 getallen (even aantal).",
+            basis: "Bij een oneven aantal getallen staat er één getal in het midden. Bij wat voor aantal staan er twee getallen in het midden?",
             simpeler: "6 is even. Dan zijn er 2 getallen in het midden, en neem je daar het gemiddelde van.",
             nogSimpeler: "Bij 6",
           },
@@ -1358,7 +1358,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "11 seconden.",
+            basis: "Zet de zeven tijden eerst op volgorde van klein naar groot. Welke tijd staat dan precies in het midden?",
             simpeler: "Op volgorde: 9, 9, 10, 11, 12, 13, 14. Het middelste getal is 11.",
             nogSimpeler: "11",
           },

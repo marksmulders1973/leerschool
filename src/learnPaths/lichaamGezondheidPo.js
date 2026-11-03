@@ -110,7 +110,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud 206. Of in elk geval: 'meer dan 200, minder dan 300'." }],
           niveaus: {
-            basis: "Meer dan 200 botten (206 precies).",
+            basis: "In elke hand zitten al zo'n 27 botjes. Hoeveel zouden het er dan ongeveer in je hele lichaam zijn?",
             simpeler: "Volwassene = 206 botten. Baby = ~270. Antwoord 'meer dan 200' klopt.",
             nogSimpeler: "Meer dan 200",
           },
@@ -135,7 +135,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste bot = dijbeen (een kwart van je lengte!). Kleinste = stijgbeugel in oor." }],
           niveaus: {
-            basis: "Dijbeen = grootste bot.",
+            basis: "Denk aan het deel van je lichaam waar een heel lang en dik bot je hele gewicht draagt als je loopt. Welk bot is dat?",
             simpeler: "Het dijbeen in je bovenbeen is het langste en zwaarste bot: ongeveer 46 cm bij een volwassene.",
             nogSimpeler: "Dijbeen",
           },
@@ -162,7 +162,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "Schedel = hersenen. Ribben = hart + longen." }],
           niveaus: {
-            basis: "Schedel beschermt de hersenen.",
+            basis: "De schedel zit als een helm om je hoofd. Wat zit er binnenin je hoofd dat heel kwetsbaar is?",
             simpeler: "De schedel is een hard bot rond je hoofd — beschermt de zachte hersenen erbinnen.",
             nogSimpeler: "Hersenen",
           },
@@ -191,7 +191,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "Gewricht = waar 2 botten elkaar ontmoeten en bewegen. Geen bot, geen spier — een verbinding." }],
           niveaus: {
-            basis: "Gewricht = plek waar 2 botten elkaar ontmoeten.",
+            basis: "Buig je elleboog of je knie. Wat zit er op de plek waar je arm of been kan buigen?",
             simpeler: "Gewricht = verbinding tussen 2 botten waar beweging mogelijk is. Voorbeeld: knie, elleboog.",
             nogSimpeler: "Plek waar botten samenkomen.",
           },

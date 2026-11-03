@@ -42,7 +42,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Een reep chocola kost 1 euro. Je koopt ¼ reep — dat bedrag schrijf je als kommagetal via dezelfde deling: 1 ÷ 4." }],
           basiskennis: [{ onderwerp: "Teller en noemer", uitleg: "Bij een breuk staat het bovenste getal (teller) voor wat je hebt, en het onderste getal (noemer) voor het totaal aantal delen." }],
           niveaus: {
-            basis: "De helft schrijf je als kommagetal als 0,5.",
+            basis: "Een breukstreep betekent 'gedeeld door'. Wat krijg je als je 1 eerlijk verdeelt in 2 stukken?",
             simpeler: "1 ÷ 2 = ?",
             nogSimpeler: "Wat is de helft van 1?",
           },
@@ -84,7 +84,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Een training duurt 1 uur en je hebt ¾ van de training gedaan. Hoeveel dat als kommagetal is, reken je met dezelfde truc uit." }],
           basiskennis: [{ onderwerp: "Optellen met kommagetallen", uitleg: "0,25 + 0,25 = 0,50 en nog een keer 0,25 erbij geeft het antwoord voor drie kwart." }],
           niveaus: {
-            basis: "¾ = 0,75 (drie keer een kwart van 0,25).",
+            basis: "Weet je hoeveel één kwart is als kommagetal? Neem dat drie keer.",
             simpeler: "Een kwart is 0,25. Hoeveel is drie kwart?",
             nogSimpeler: "0,25 + 0,25 + 0,25 = ?",
           },
@@ -105,7 +105,7 @@ const steps = [
           voorbeelden: [{ type: "geld", tekst: "Een euro bestaat uit 10 dubbeltjes. Eén dubbeltje is dus 1/10 van een euro." }],
           basiskennis: [{ onderwerp: "Plaatswaarde na de komma", uitleg: "Het eerste cijfer na de komma zijn tienden, het tweede cijfer zijn honderdsten." }],
           niveaus: {
-            basis: "1/10 = 0,1 (één tiende).",
+            basis: "Het eerste cijfer achter de komma telt de tienden. Hoeveel tienden heb je hier?",
             simpeler: "Eén tiende: hoeveel achter de komma?",
             nogSimpeler: "1 gedeeld door 10 = ?",
           },
@@ -126,7 +126,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Bij een estafette van 5 lopers doet elke loper 1/5 van de afstand." }],
           basiskennis: [{ onderwerp: "Groter noemer = kleiner stukje", uitleg: "1/2 is groter dan 1/5, want bij 1/5 deel je het geheel in meer (dus kleinere) stukjes." }],
           niveaus: {
-            basis: "1/5 = 0,2 (één vijfde).",
+            basis: "Maak er eerst tienden van: hoeveel tienden zijn net zoveel als één vijfde?",
             simpeler: "Vijf stappen op een lijn van 0 tot 1: elk stukje is 0,2.",
             nogSimpeler: "1 ÷ 5 = ?",
           },
@@ -195,7 +195,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2/5 = 2 ÷ 5 = 0,4.",
+            basis: "Maak van de vijfden eerst tienden door boven en onder keer 2 te doen. Tienden schrijf je met één cijfer achter de komma.",
             simpeler: "Een vijfde is 0,2. Hoeveel is twee vijfde?",
             nogSimpeler: "0,2 + 0,2 = ?",
           },
@@ -242,7 +242,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,3 = drie tienden = 3/10.",
+            basis: "Het cijfer direct achter de komma telt de tienden. Schrijf dat aantal boven de streep en 10 eronder.",
             simpeler: "0,3 zeg je als 'drie tienden'. Hoe schrijf je dat als breuk?",
             nogSimpeler: "Drie van de tien = ?/10",
           },
@@ -289,7 +289,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7/10 = 7 ÷ 10 = 0,7.",
+            basis: "Tienden schrijf je met één cijfer achter de komma. Welk cijfer komt daar te staan?",
             simpeler: "Zeven tienden: zet de 7 op de eerste plek achter de komma.",
             nogSimpeler: "0,? = zeven tienden",
           },
@@ -336,7 +336,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,8 = 8/10 = 4/5.",
+            basis: "Schrijf het kommagetal eerst als tienden. Deel daarna boven en onder door hetzelfde getal tot het niet kleiner kan.",
             simpeler: "0,8 is 8/10. Deel boven en onder door 2.",
             nogSimpeler: "8 ÷ 2 = ? en 10 ÷ 2 = ?",
           },
@@ -371,7 +371,7 @@ const steps = [
           voorbeelden: [{ type: "winkel", tekst: "Een broek heeft 0,2 korting — wil je weten hoeveel procent dat is, dan schuif je de komma op dezelfde manier op." }],
           basiskennis: [{ onderwerp: "100% is het geheel", uitleg: "100% staat voor het hele bedrag of de hele hoeveelheid — net als het kommagetal 1,0." }],
           niveaus: {
-            basis: "0,5 × 100 = 50%.",
+            basis: "Van een kommagetal naar procent doe je keer 100. Wat krijg je als je dat met 0,5 doet?",
             simpeler: "Schuif de komma 2 plaatsen naar rechts: 0,5 wordt 50.",
             nogSimpeler: "De helft is hoeveel procent?",
           },
@@ -392,7 +392,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Een speler wint 60% van de wedstrijden. Als kommagetal schrijf je dat met dezelfde truc." }],
           basiskennis: [{ onderwerp: "Komma-plaatsen", uitleg: "Bij ×100 gaat de komma naar rechts, bij ÷100 gaat de komma naar links — precies het tegenovergestelde." }],
           niveaus: {
-            basis: "25 ÷ 100 = 0,25.",
+            basis: "Van procent naar kommagetal doe je gedeeld door 100: de komma schuift twee plaatsen naar links.",
             simpeler: "Schuif de komma 2 plaatsen naar links: 25 wordt 0,25.",
             nogSimpeler: "Een kwart als kommagetal is …",
           },
@@ -650,7 +650,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Een team wint 1/4 van de wedstrijden dit seizoen — hoeveel procent dat is, reken je met dezelfde truc uit." }],
           basiskennis: [{ onderwerp: "Delen van 100", uitleg: "100 ÷ 4, 100 ÷ 5 en 100 ÷ 10 zijn handig om uit je hoofd te kennen." }],
           niveaus: {
-            basis: "¼ = 25%.",
+            basis: "Verdeel 100% in 4 gelijke stukken. Hoeveel procent is één stuk?",
             simpeler: "Een kwart van 100 is hoeveel?",
             nogSimpeler: "100 ÷ 4 = ?",
           },
@@ -962,7 +962,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Bij een andere toets had een klasgenoot ⅘ van de vragen goed — om te vergelijken reken je ook dat om naar procent." }],
           basiskennis: [{ onderwerp: "Kwarten uit je hoofd", uitleg: "¼, ½ en ¾ als kommagetal en procent ken je het beste uit je hoofd." }],
           niveaus: {
-            basis: "¾ = 75%.",
+            basis: "Weet je hoeveel procent één kwart is? Jij had er drie van goed.",
             simpeler: "Een kwart is 25%, drie kwart is …",
             nogSimpeler: "25 + 25 + 25 = ?",
           },
@@ -1005,7 +1005,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Je broer heeft ⅓ van zijn zakgeld gespaard, jij hebt 0,4 gespaard — om te zien wie er meer heeft gespaard, zet je ⅓ eerst om naar een kommagetal." }],
           basiskennis: [{ onderwerp: "Cijfer voor cijfer vergelijken", uitleg: "Bij kommagetallen vergelijk je eerst het cijfer vóór de komma, dan het eerste cijfer erna, enzovoort." }],
           niveaus: {
-            basis: "0,3 en ¼ = 0,25. 0,3 is groter.",
+            basis: "Schrijf ¼ eerst als kommagetal. Vergelijk dan de cijfers achter de komma.",
             simpeler: "Schrijf ¼ als kommagetal (0,25) en vergelijk met 0,3.",
             nogSimpeler: "Is 0,3 groter of kleiner dan 0,25?",
           },
@@ -1026,7 +1026,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Van een sportclub traint 0,8 van de leden twee keer per week — hoeveel procent dat is, reken je met dezelfde truc uit." }],
           basiskennis: [{ onderwerp: "Komma twee plaatsen naar rechts", uitleg: "Bij ×100 schuift de komma altijd twee plaatsen naar rechts, ook als er een 0 in het getal staat." }],
           niveaus: {
-            basis: "0,6 × 100 = 60%.",
+            basis: "Van een kommagetal naar procent doe je keer 100. Schuif de komma in 0,6 twee plaatsen naar rechts.",
             simpeler: "Komma 2 naar rechts: 0,6 → 60.",
             nogSimpeler: "De helft (0,5) is 50%. Is 0,6 meer of minder dan 0,5?",
           },
@@ -1116,7 +1116,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15%, 10% en 12%: 10% (= 1/10) is het kleinst.",
+            basis: "Maak eerst van alle drie hetzelfde soort getal, bijvoorbeeld allemaal procenten. Dan kun je ze makkelijk vergelijken.",
             simpeler: "Schrijf ze alle drie als procent: 15%, ?%, 12%.",
             nogSimpeler: "Wat is het kleinst: 15, 10 of 12?",
           },
@@ -1163,7 +1163,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,65 = 65%. 70% is meer dan 65%, dus Noor.",
+            basis: "Schrijf het kommagetal van Daan eerst als procent. Vergelijk dat daarna met de 70% van Noor.",
             simpeler: "Schrijf 0,65 als procent en vergelijk met 70%.",
             nogSimpeler: "Wat is meer: 70 of 65?",
           },

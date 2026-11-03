@@ -89,7 +89,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen bron = voorzichtig", tekst: "Zonder auteur of bron weet je niet wie het zegt of hoe ze het weten. Dan is het minder betrouwbaar." }],
           niveaus: {
-            basis: "Geen auteur/bron → minder betrouwbaar.",
+            basis: "Vraag jezelf af: kun je nagaan wie dit schreef en waar de informatie vandaan komt? Als dat niet kan, hoeveel kun je er dan op vertrouwen?",
             simpeler: "Vertrouw je iets eerder mét of zónder bron?",
             nogSimpeler: "Is informatie zonder bron betrouwbaar?",
           },
@@ -302,7 +302,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verkopen = reclame", tekst: "'Koop snel!' met korting wil je iets laten kopen — dat is reclame, geen betrouwbare informatie." }],
           niveaus: {
-            basis: "Een kortingsoproep om te kopen = reclame.",
+            basis: "Kijk naar wat de tekst van je wil: geeft hij informatie, vertelt hij wat iemand vindt, of wil hij dat jij iets doet?",
             simpeler: "Wil deze tekst je informeren of iets verkopen?",
             nogSimpeler: "Is 'koop snel met korting' reclame?",
           },
@@ -327,7 +327,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Amsterdam is de hoofdstad van Nederland' kun je controleren: een feit.",
+            basis: "Een feit kun je controleren, bijvoorbeeld in een atlas. Welke zin kun je opzoeken, zonder dat het afhangt van wat iemand ervan vindt?",
             simpeler: "Welke zin kun je nakijken in een atlas?",
             nogSimpeler: "Is 'de hoofdstad' iets wat je kunt opzoeken?",
           },
@@ -351,7 +351,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een mening is wat iemand vindt.",
+            basis: "Denk aan de zin 'Spruitjes zijn vies.' Kun je dat controleren, of zegt het vooral iets over degene die het zegt?",
             simpeler: "Is 'ik vind dit mooi' iets wat je kunt bewijzen?",
             nogSimpeler: "Is een mening wat iemand vindt?",
           },

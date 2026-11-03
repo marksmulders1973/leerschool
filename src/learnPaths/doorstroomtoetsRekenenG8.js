@@ -337,7 +337,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst delen door noemer, dan keer teller. Of: keer breuk, dan delen — beide werken." }],
           niveaus: {
-            basis: "60 ÷ 2 = 30.",
+            basis: "1/2 van een getal is de helft. Verdeel 60 in twee gelijke stukken.",
             simpeler: "Helft van 60 = 60/2 = 30.",
             nogSimpeler: "60 : 2 = 30",
           },
@@ -370,7 +370,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1/4 + 1/2 = 1/4 + 2/4 = 3/4." }],
           basiskennis: [{ onderwerp: "KGV", uitleg: "Kleinste gemene veelvoud = kleinste getal waar beide noemers in passen. Voor 2 en 3 = 6. Voor 4 en 6 = 12." }],
           niveaus: {
-            basis: "5/6.",
+            basis: "Maak eerst gelijke noemers: zoek het kleinste getal waar 2 én 3 allebei in passen. Schrijf dan beide breuken met die noemer.",
             simpeler: "Gelijknamig maken: 3/6 + 2/6 = 5/6.",
             nogSimpeler: "3/6 + 2/6 = 5/6",
           },
@@ -408,7 +408,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "4 × 1/2 = 4/2 = 2 hele." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Als teller > noemer wordt: kun je het omzetten naar heel getal + breuk." }],
           niveaus: {
-            basis: "3/4.",
+            basis: "3 × 1/4 betekent drie keer een kwart. Tel de kwarten bij elkaar op; de noemer blijft hetzelfde.",
             simpeler: "Drie kwartjes = 3/4.",
             nogSimpeler: "3 × 1/4 = 3/4",
           },
@@ -472,7 +472,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1/3 × 1/2 = 1/6. 'helft van een derde'." }],
           basiskennis: [{ onderwerp: "Visueel", uitleg: "Een halve pizza, daarvan de helft = een kwart pizza." }],
           niveaus: {
-            basis: "1/4.",
+            basis: "Bij breuken keer breuken doe je teller keer teller en noemer keer noemer. Of denk: wat is de helft van een halve pizza?",
             simpeler: "(1×1)/(2×2) = 1/4.",
             nogSimpeler: "1/4",
           },
@@ -672,7 +672,7 @@ const steps = [
           theorie: "Twee stappen altijd: (1) korting in euro's uitrekenen, (2) van oude prijs aftrekken. Niet 'gewoon 25% nemen'.",
           voorbeelden: [{ type: "rekensom", tekst: "€40 × 25/100 = €10 korting. €40 - €10 = €30. Of sneller: 75% van €40 = €30." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen kiezen €10 — dat is de korting, niet de prijs. Lees vraag goed: 'wat betaal je?'" }],
-          niveaus: { basis: "€30 (€40 - €10 korting).", simpeler: "Korting = 25% × €40 = €10. Te betalen = €40 - €10 = €30.", nogSimpeler: "€30" },
+          niveaus: { basis: "25% is hetzelfde als een kwart. Reken eerst uit hoeveel euro een kwart van €40 is en haal die korting daarna van €40 af.", simpeler: "Korting = 25% × €40 = €10. Te betalen = €40 - €10 = €30.", nogSimpeler: "€30" },
         },
       },
       {
@@ -1003,7 +1003,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1% = / 100. 10% = / 10. 50% = / 2. 25% = / 4. 75% = 3/4." }],
           niveaus: {
-            basis: "10% is een tiende deel. Deel 250 door 10.",
+            basis: "10% is een tiende deel. Door welk getal deel je 250 om een tiende te krijgen?",
             simpeler: "250 / 10 = 25.",
             nogSimpeler: "Komma 1 links: 25",
           },
@@ -2067,7 +2067,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5 ijsjes voor €10 → per ijsje €2. 4 boeken €24 → per boek €6." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "€12 × 3 = €36 ✓. Realiteit-check helpt fouten vinden." }],
           niveaus: {
-            basis: "€12 (€36÷3).",
+            basis: "Eén boek is één van drie gelijke delen. Verdeel het totaalbedrag eerlijk over de 3 boeken.",
             simpeler: "Drie boeken samen €36 → één boek = €36÷3 = €12.",
             nogSimpeler: "€12",
           },

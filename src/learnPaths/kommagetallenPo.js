@@ -102,7 +102,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "4,2 = 4 hele + 2 tienden = 4 en 2/10." }],
           basiskennis: [{ onderwerp: "Kleiner ná komma", uitleg: "Hoe verder rechts ná de komma, hoe kleiner het stukje." }],
           niveaus: {
-            basis: "2 tienden = 0,2.",
+            basis: "Kijk waar de 2 staat: vóór of achter de komma? Hoe heet de eerste plek direct achter de komma?",
             simpeler: "Achter de komma staat 2 op de eerste plek. Dat is tienden. 2 tienden = 2/10 = 0,2.",
             nogSimpeler: "Tienden",
           },
@@ -128,7 +128,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "0,9 = 0,90. 0,90 vs 0,12 → 90 > 12. Dus 0,9 groter." }],
           basiskennis: [{ onderwerp: "Niet aantal cijfers tellen", uitleg: "Meer cijfers betekent niet automatisch groter — kijk per plek." }],
           niveaus: {
-            basis: "0,9 = 0,90 > 0,12.",
+            basis: "Maak de getallen even lang door er een nul achter te zetten. Vergelijk daarna de cijfers achter de komma.",
             simpeler: "Schrijf gelijk: 0,90 en 0,12. 90 honderdsten vs 12 honderdsten. 90 > 12. Dus 0,9 groter.",
             nogSimpeler: "0,9",
           },
@@ -227,7 +227,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6,04 = zes-komma-nul-vier.",
+            basis: "Lees eerst het getal vóór de komma en zeg dan 'komma'. Lees daarna de cijfers achter de komma één voor één, precies zoals ze er staan.",
             simpeler: "Eerst 'zes', dan 'komma', dan de cijfers ná de komma één voor één: 'nul-vier'.",
             nogSimpeler: "zes-komma-nul-vier",
           },
@@ -274,7 +274,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4,1 = 4 en een tiende.",
+            basis: "Op welke plek staat de 1 achter de komma? Hoe heet die plek?",
             simpeler: "Vóór de komma: 4 hele. Ná de komma op de eerste plek een 1: dat is 1 tiende. Samen: 4 en een tiende.",
             nogSimpeler: "4 en een tiende",
           },
@@ -321,7 +321,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3,6 is het grootst.",
+            basis: "Kijk eerst naar het getal vóór de komma. Is dat overal gelijk, vergelijk dan de tienden, en pas daarna de honderdsten.",
             simpeler: "Schrijf 3,6 als 3,60. Vergelijk dan: 3,60 is meer dan 3,58, 3,55 en 3,09.",
             nogSimpeler: "3,6",
           },
@@ -372,7 +372,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "52,36 = 50 + 2 + 0,3 + 0,06.",
+            basis: "Splits het getal per plek: tientallen, eenheden, tienden en honderdsten. Hoeveel is elk cijfer waard op zijn plek?",
             simpeler: "De 5 is 50, de 2 is 2, de 3 ná de komma is 0,3 en de 6 is 0,06. Tel op: 52,36.",
             nogSimpeler: "50 + 2 + 0,3 + 0,06",
           },
@@ -419,7 +419,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8,31 heeft een 3 op de tienden-plek.",
+            basis: "Zoek in elk getal eerst de komma. De tienden-plek is de eerste plek direct achter de komma.",
             simpeler: "Kijk bij elk getal naar het cijfer direct ná de komma. Alleen bij 8,31 is dat een 3.",
             nogSimpeler: "8,31",
           },
@@ -455,7 +455,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "7,80 - 3,25 = 4,55." }],
           basiskennis: [{ onderwerp: "Vul aan met nullen", uitleg: "Als getallen niet gelijk aantal decimalen hebben, vul aan met 0." }],
           niveaus: {
-            basis: "7,80 - 3,25 = 4,55.",
+            basis: "Zet de komma's precies onder elkaar en trek eerst de honderdsten af, dan de tienden en dan de eenheden. Moet je ergens lenen?",
             simpeler: "Schrijf onder elkaar met komma's uitgelijnd. Trek af: 80-25=55, 7-3=4. Dus 4,55.",
             nogSimpeler: "4,55",
           },
@@ -791,7 +791,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "3,2 × 5: 32 × 5 = 160. 1 decimaal → 16,0 = 16." }],
           basiskennis: [{ onderwerp: "Tellen decimalen", uitleg: "Tel decimaalplaatsen van beide getallen samen." }],
           niveaus: {
-            basis: "32 × 5 = 160 → 16.",
+            basis: "Reken eerst zonder komma: 32 × 5. Hoeveel cijfers stonden er achter de komma in de som? Zoveel cijfers zet je ook achter de komma in het antwoord.",
             simpeler: "Stap 1: zonder komma 32 × 5 = 160. Stap 2: 1 cijfer ná komma (in 3,2). Stap 3: komma 1 plaats van rechts → 16,0 = 16.",
             nogSimpeler: "16",
           },
@@ -1003,7 +1003,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "375 met 3 decimalen = 0,375.",
+            basis: "Tel hoeveel cijfers er samen achter de komma staan in 1,25 en 0,3. Zoveel cijfers moeten er ook achter de komma in het antwoord.",
             simpeler: "Stap 1: 125 × 3 = 375. Stap 2: 1,25 heeft 2 cijfers ná de komma en 0,3 heeft er 1, samen 3. Stap 3: komma 3 plaatsen van rechts → 0,375.",
             nogSimpeler: "0,375",
           },
@@ -1337,7 +1337,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1,8 ÷ 0,6 wordt 18 ÷ 6.",
+            basis: "Bij delen schuif je de komma in beide getallen even ver op, tot je door een heel getal deelt. Hoeveel plaatsen moet de komma in 0,6 opschuiven?",
             simpeler: "0,6 wordt een heel getal als je de komma 1 plaats schuift: 6. Doe dat ook bij 1,8: 18. Je rekent 18 ÷ 6.",
             nogSimpeler: "18 ÷ 6",
           },
@@ -1384,7 +1384,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1,2 ÷ 4 = 0,3 liter.",
+            basis: "Eerlijk verdelen over 4 glazen betekent delen door 4. Tip: reken eerst uit hoeveel deciliter 1,2 liter is.",
             simpeler: "12 ÷ 4 = 3. Zet de komma op dezelfde plek als in 1,2: 0,3 liter per glas.",
             nogSimpeler: "0,3 liter",
           },
@@ -1419,7 +1419,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "3 × €4,75 = 3 × €4 + 3 × €0,75 = €12 + €2,25 = €14,25." }],
           basiskennis: [{ onderwerp: "Eenheid", uitleg: "Schrijf altijd € bij geld-antwoord." }],
           niveaus: {
-            basis: "3 × €4,75 = €14,25.",
+            basis: "Drie keer hetzelfde bedrag is een keersom. Reken eerst de hele euro's keer 3 en daarna de centen keer 3, en tel die twee bij elkaar.",
             simpeler: "3 boeken × €4,75 per boek. 3 × 475 = 1425 cent = €14,25.",
             nogSimpeler: "€14,25",
           },
@@ -1485,7 +1485,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 5,00 − € 2,35 = € 2,65.",
+            basis: "Terugkrijgen is een minsom: wat je betaalt min wat het kost. Je kunt ook vanaf de prijs optellen tot je bij € 5 bent.",
             simpeler: "Schrijf € 5 als € 5,00. Trek af: 500 − 235 = 265 cent. Dat is € 2,65.",
             nogSimpeler: "€ 2,65",
           },
@@ -1532,7 +1532,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "0,25 × 1000 = 250 mL.",
+            basis: "Hoeveel milliliter zit er in 1 liter? Bedenk dan welk deel van een liter 0,25 is.",
             simpeler: "1 liter = 1000 mL. Een kwart liter is een kwart van 1000: 250 mL.",
             nogSimpeler: "250 mL",
           },
@@ -1579,7 +1579,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 2,40 ÷ 2 = € 1,20.",
+            basis: "Welk deel van 1 kg is 0,5 kg? Dan betaal je ook datzelfde deel van de prijs.",
             simpeler: "0,5 kg is een halve kilo. Een halve kilo kost de helft van € 2,40. Dat is € 1,20.",
             nogSimpeler: "€ 1,20",
           },
@@ -1626,7 +1626,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1,35 − 1,20 = 0,15 m.",
+            basis: "'Hoeveel verder' is een minsom. Schrijf 1,2 als 1,20, zodat beide getallen evenveel cijfers achter de komma hebben.",
             simpeler: "Schrijf 1,2 als 1,20. Trek af: 1,35 − 1,20 = 0,15 m. Dat is 15 cm.",
             nogSimpeler: "0,15 m",
           },
@@ -1685,7 +1685,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "2,4 m × 100 = 240 cm." }],
           basiskennis: [{ onderwerp: "Komma verschuift", uitleg: "× 100 = komma 2 plaatsen naar rechts." }],
           niveaus: {
-            basis: "2,4 × 100 = 240 cm.",
+            basis: "Hoeveel centimeter zit er in 1 meter? Van meter naar centimeter wordt het getal dus groter.",
             simpeler: "1 meter = 100 cm. 2,4 m = 2,4 × 100 = 240 cm.",
             nogSimpeler: "240 cm",
           },

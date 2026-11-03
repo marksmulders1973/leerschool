@@ -376,7 +376,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tekst: 'de Duitse uitvinder Karl von Drais' → Duitsland.",
+            basis: "Zoek in de tekst de zin waarin Karl von Drais genoemd wordt. Welk woord vóór zijn naam zegt waar hij vandaan komt?",
             simpeler: "Zoek de naam Karl von Drais. Ervoor staat 'de Duitse uitvinder'. Duits hoort bij Duitsland.",
             nogSimpeler: "Duits = Duitsland",
           },
@@ -558,7 +558,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Door de ketting was een groot voorwiel niet meer nodig.",
+            basis: "Zoek in de tekst de zin over de ketting. Wat schrijft de tekst dat daardoor kon verdwijnen?",
             simpeler: "Zoek 'niet meer nodig' in alinea 3. Daar staat: een groot voorwiel. 'Hierdoor' betekent: door de ketting.",
             nogSimpeler: "Ketting → geen groot voorwiel",
           },
@@ -622,7 +622,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Na 1817 (loopfiets) komt 1860: pedalen aan het voorwiel.",
+            basis: "Zet de jaartallen uit de tekst op volgorde. Welke verandering hoort bij het jaartal direct na de loopfiets?",
             simpeler: "Alinea 1 = loopfiets. Alinea 2 = de volgende stap: pedalen aan het voorwiel. Alinea 3 komt pas daarna.",
             nogSimpeler: "Na loopfiets = pedalen",
           },
@@ -848,7 +848,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Touw voor de sluiting: zo'n tien centimeter.",
+            basis: "Zoek in de tekst de stap over de sluiting. Welke lengte staat daar bij het touw?",
             simpeler: "Zoek in de laatste alinea het woord 'touw'. Daar staat: knip een stukje van zo'n tien centimeter af.",
             nogSimpeler: "Touw = tien centimeter",
           },
@@ -975,7 +975,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Verven: 'voordat je begint'.",
+            basis: "Zoek in de tekst het stukje over verven. Lees goed welk tijdwoord erbij staat.",
             simpeler: "De tip over verven staat aan het eind. Maar in die zin staat 'voordat je begint'. Je verft dus eerst, nog voor het haken.",
             nogSimpeler: "Verven = eerst",
           },
@@ -1039,7 +1039,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Touw door de eerste én de laatste paperclip.",
+            basis: "Lees de stap over de sluiting nog eens. Door welke paperclips gaat het touw daar?",
             simpeler: "Je wilt van de rij een rondje maken. Daarom steek je het touw door de eerste én de laatste paperclip en leg je een knoop.",
             nogSimpeler: "Eerste + laatste",
           },
@@ -1465,7 +1465,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Alinea 3 begint met 'Ten tweede'.",
+            basis: "Zoek de alinea met het tweede argument. Kijk naar de eerste woorden van die alinea.",
             simpeler: "Het eerste argument begint met 'De eerste reden'. Het volgende argument begint met 'Ten tweede'. Dat telt door: één, twee.",
             nogSimpeler: "Het eerste argument begint met 'De eerste reden'. Met welke woorden begint dan het volgende argument?",
           },
@@ -1593,7 +1593,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Laatste alinea: thuis of in de tas, maar niet in de klas.",
+            basis: "Lees alleen de laatste alinea nog eens. Welke plekken noemt de schrijver daar als het wel mag?",
             simpeler: "Zoek de alinea met 'Daarom'. De schrijver zegt: laat hem thuis, of in de tas. In de klas mag hij niet.",
             nogSimpeler: "Thuis of tas, niet klas",
           },
@@ -1725,7 +1725,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tegenstanders = mensen die het niet met de schrijver eens zijn.",
+            basis: "Denk aan het woord 'tegen'. Waar zijn tegenstanders tegen, als je kijkt naar wat de schrijver vindt?",
             simpeler: "Tegen-standers zijn er TEGEN. In alinea 4 zeggen zij iets anders dan de schrijver. Dus: mensen met een andere mening.",
             nogSimpeler: "Tegen = andere mening",
           },
@@ -2086,7 +2086,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zin na 'aarzelde': ze wilde geen medelijden.",
+            basis: "Zoek het woord 'aarzelde' in de tekst. Lees de zin die daarna komt: wat voelde Sara?",
             simpeler: "Sara twijfelde even. In de zin erna staat waarom: ze wilde niet dat Tom haar zielig vond.",
             nogSimpeler: "Aarzelen = geen medelijden",
           },

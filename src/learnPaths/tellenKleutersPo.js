@@ -70,7 +70,7 @@ const steps = [
         wrongHints: [null, "Dat getal had je al gehad — we tellen vooruit!", "Je slaat er eentje over — wat komt er meteen na 9?", "Dat is teruggeteld — we gaan juist verder omhoog."],
         uitlegPad: {
           stappen: [{ titel: "Tot tien!", tekst: "7, 8, 9, **10**! Na de 9 komt de 10. Dan heb je het hele liedje tot tien gezongen! 🎉" }],
-          niveaus: { basis: "Na 9 komt 10.", simpeler: "8, 9... 10!", nogSimpeler: "10" },
+          niveaus: { basis: "Tel hardop verder: 7, 8, 9 en dan?", simpeler: "8, 9... 10!", nogSimpeler: "10" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -226,7 +226,7 @@ const steps = [
         wrongHints: [null, "Je slaat er eentje over — wat komt er metéén na 10?", "Dat getal had je al gehad — we tellen vooruit!", "Dat komt pas helemaal aan het einde van het liedje."],
         uitlegPad: {
           stappen: [{ titel: "Verder dan tien", tekst: "Het liedje gaat gewoon door: 9, 10, **11**, 12, 13... helemaal tot 20! Na 10 komt 11." }],
-          niveaus: { basis: "Na 10 komt 11.", simpeler: "9, 10... 11!", nogSimpeler: "11" },
+          niveaus: { basis: "Tel hardop verder: 8, 9, 10 en dan?", simpeler: "9, 10... 11!", nogSimpeler: "11" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -318,7 +318,7 @@ const steps = [
         wrongHints: [null, "Voel maar met je vinger: zijn er rechte kanten of is hij helemaal rond?", "Tel de punten maar — heeft deze vorm wel punten?"],
         uitlegPad: {
           stappen: [{ titel: "Helemaal rond", tekst: "⚪ is helemaal rond, zonder hoeken. Dat heet een **cirkel** — net als een bal of een koekje. 🍪" }],
-          niveaus: { basis: "Rond zonder hoeken = cirkel.", simpeler: "Rond is een cirkel.", nogSimpeler: "cirkel" },
+          niveaus: { basis: "Ga met je vinger langs de rand. Is de vorm rond, of voel je hoeken?", simpeler: "Rond is een cirkel.", nogSimpeler: "cirkel" },
         },
       },
       {
@@ -328,7 +328,7 @@ const steps = [
         wrongHints: [null, "Kijk goed: deze vorm heeft punten — is hij dan rond?", "Tel de punten maar met je vinger: hoeveel zijn het er?"],
         uitlegPad: {
           stappen: [{ titel: "Drie punten", tekst: "🔺 heeft **drie** punten. Drie hoeken = **driehoek**! Het woord zegt het zelf: drie-hoek." }],
-          niveaus: { basis: "3 punten = driehoek.", simpeler: "Tel de punten: 1, 2, 3 — driehoek!", nogSimpeler: "driehoek" },
+          niveaus: { basis: "Tel de punten van de vorm. Welke vorm heeft zoveel punten?", simpeler: "Tel de punten: 1, 2, 3 — driehoek!", nogSimpeler: "driehoek" },
         },
       },
       {
@@ -348,7 +348,7 @@ const steps = [
         wrongHints: [null, "Heeft een bal punten? Kan hij dan wel rollen?", "Heeft een bal rechte kanten? Kan hij dan wel rollen?"],
         uitlegPad: {
           stappen: [{ titel: "Rond rolt", tekst: "Een bal is helemaal rond — dat is de vorm van een **cirkel** ⚪. Rond kan rollen; een vorm met hoeken blijft liggen!" }],
-          niveaus: { basis: "Rond = cirkel.", simpeler: "Een bal is rond, net als een cirkel.", nogSimpeler: "cirkel" },
+          niveaus: { basis: "Een bal is rond. Welke vorm is ook rond, zonder hoeken?", simpeler: "Een bal is rond, net als een cirkel.", nogSimpeler: "cirkel" },
         },
       },
       {
@@ -358,7 +358,7 @@ const steps = [
         wrongHints: [null, "Is een dak met een punt rond?", "Kijk naar de punt bovenaan — welke vorm heeft ook zo'n punt?"],
         uitlegPad: {
           stappen: [{ titel: "Puntdak", tekst: "Een dak met een punt lijkt op een **driehoek** 🔺: schuin omhoog, punt erop! Zoek maar eens driehoeken buiten — daken, vlaggetjes, een stuk pizza. 🍕" }],
-          niveaus: { basis: "Puntdak = driehoek.", simpeler: "Punt erop, net als 🔺.", nogSimpeler: "driehoek" },
+          niveaus: { basis: "Kijk naar de vormen. Welke vorm heeft bovenaan een punt, net als het dak?", simpeler: "Punt erop, net als 🔺.", nogSimpeler: "driehoek" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -380,7 +380,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 rechte kanten en 4 hoeken = vierkant.",
+            basis: "Tel de hoeken van de vorm. Welke vorm past bij zoveel hoeken?",
             simpeler: "Net als een blokje: vierkant!",
             nogSimpeler: "vierkant",
           },
@@ -428,7 +428,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een cirkel is rond, zonder hoeken.",
+            basis: "Kijk bij elke vorm of je punten of hoeken ziet. Bij welke vorm zie je er niet één?",
             simpeler: "Rond = geen hoeken = cirkel.",
             nogSimpeler: "cirkel",
           },
@@ -598,7 +598,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De grond is onder je voeten.",
+            basis: "Kijk eens naar beneden, naar je voeten. Waar sta je op?",
             simpeler: "Je staat óp de grond — die is onder je.",
             nogSimpeler: "de grond",
           },

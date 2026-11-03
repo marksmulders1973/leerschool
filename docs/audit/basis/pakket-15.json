@@ -1,0 +1,227 @@
+[
+ {
+  "file": "src/learnPaths/tabellenGrafieken.js",
+  "items": [
+   {
+    "waar": "tabellen-grafieken stap 4 vraag 4",
+    "antwoord": "Er verandert niets",
+    "basis": "Er verandert niets."
+   },
+   {
+    "waar": "tabellen-grafieken stap 4 vraag 5",
+    "antwoord": "De tijd",
+    "basis": "De tijd."
+   },
+   {
+    "waar": "tabellen-grafieken stap 4 vraag 7",
+    "antwoord": "dinsdag en woensdag",
+    "basis": "Dinsdag en woensdag."
+   },
+   {
+    "waar": "tabellen-grafieken stap 4 vraag 8",
+    "antwoord": "woensdag",
+    "basis": "Woensdag (3 graden)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 4 vraag 9",
+    "antwoord": "De waarde wordt kleiner",
+    "basis": "De waarde wordt kleiner."
+   },
+   {
+    "waar": "tabellen-grafieken stap 4 vraag 10",
+    "antwoord": "om 12 uur",
+    "basis": "Om 12 uur."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 1",
+    "antwoord": "10",
+    "basis": "10 (40÷4)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 2",
+    "antwoord": "50%",
+    "basis": "50% (20+30)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 4",
+    "antwoord": "75%",
+    "basis": "75%."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 5",
+    "antwoord": "25%",
+    "basis": "25%."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 6",
+    "antwoord": "30",
+    "basis": "30 kinderen."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 7",
+    "antwoord": "20",
+    "basis": "20 leerlingen."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 8",
+    "antwoord": "Gamen",
+    "basis": "Gamen (35%)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 5 vraag 9",
+    "antwoord": "Nee, er mist 10%",
+    "basis": "Nee, er mist 10%."
+   },
+   {
+    "waar": "tabellen-grafieken stap 6 vraag 1",
+    "antwoord": "26",
+    "basis": "26 (130÷5)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 6 vraag 2",
+    "antwoord": "45%",
+    "basis": "45% (18÷40×100)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 6 vraag 4",
+    "antwoord": "15",
+    "basis": "15."
+   },
+   {
+    "waar": "tabellen-grafieken stap 6 vraag 5",
+    "antwoord": "40%",
+    "basis": "40%."
+   },
+   {
+    "waar": "tabellen-grafieken stap 6 vraag 8",
+    "antwoord": "28",
+    "basis": "28 flessen."
+   },
+   {
+    "waar": "tabellen-grafieken stap 6 vraag 9",
+    "antwoord": "42",
+    "basis": "42 eieren."
+   },
+   {
+    "waar": "tabellen-grafieken stap 7 vraag 4",
+    "antwoord": "25,5",
+    "basis": "25,5 (102÷4)."
+   },
+   {
+    "waar": "tabellen-grafieken stap 7 vraag 5",
+    "antwoord": "Geel",
+    "basis": "Geel (15%)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/dienstregelingRoostersPo.js",
+  "items": [
+   {
+    "waar": "dienstregeling-roosters-po stap 1 vraag 10",
+    "antwoord": "13 minuten",
+    "basis": "8:05 → 8:18 = 13 minuten."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 1",
+    "antwoord": "taal",
+    "basis": "Dinsdag 1e uur = het eerste vak in de dinsdag-kolom: taal."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 2",
+    "antwoord": "woensdag",
+    "basis": "Kijk in het 1e uur: onder welke dag staat gym? Woensdag."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 4",
+    "antwoord": "taal",
+    "basis": "Gym = 3e uur. Het 2e uur (ervoor) is taal."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 5",
+    "antwoord": "2 keer",
+    "basis": "Gym staat op maandag en woensdag → 2 keer."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 6",
+    "antwoord": "wereld",
+    "basis": "Dinsdag 3e (laatste) uur = wereld."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 7",
+    "antwoord": "tekenen",
+    "basis": "Vrijdag 3e uur = tekenen."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 8",
+    "antwoord": "donderdag het 2e uur",
+    "basis": "Muziek staat op donderdag het 2e uur."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 9",
+    "antwoord": "taal",
+    "basis": "Taal staat op donderdag (3e uur) én op vrijdag (1e uur)."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 2 vraag 10",
+    "antwoord": "gym",
+    "basis": "Vrijdag: taal (1e uur), daarna gym (2e uur)."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 3 vraag 1",
+    "antwoord": "donderdag",
+    "basis": "Zoek de dag die het laatst open is: donderdag tot 20:00."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 3 vraag 2",
+    "antwoord": "7 uur",
+    "basis": "17:00 − 10:00 = 7 uur open."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 3 vraag 5",
+    "antwoord": "9 uur",
+    "basis": "21:00 − 12:00 = 9 uur open."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 3 vraag 8",
+    "antwoord": "dinsdag",
+    "basis": "Alleen op dinsdag valt 12:30 tussen openings- en sluitingstijd."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 3 vraag 9",
+    "antwoord": "45 minuten",
+    "basis": "12:00 − 11:15 = 45 minuten."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 3 vraag 10",
+    "antwoord": "zaterdag",
+    "basis": "Zaterdag opent om 8:30, en dat is vóór 9:00."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 4 vraag 4",
+    "antwoord": "14:45",
+    "basis": "Een kwartier (15 min) vóór 15:00 is 14:45."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 4 vraag 5",
+    "antwoord": "14:55",
+    "basis": "14:20 + 35 minuten = 14:55."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 4 vraag 6",
+    "antwoord": "13:10",
+    "basis": "Aankomen om 13:50, 40 min reizen → vertrek 13:10."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 4 vraag 7",
+    "antwoord": "45 minuten",
+    "basis": "13:15 → 14:00 = 45 minuten."
+   },
+   {
+    "waar": "dienstregeling-roosters-po stap 4 vraag 8",
+    "antwoord": "4 minuten",
+    "basis": "Aankomst 11:16, film om 11:20 → 4 minuten te vroeg."
+   }
+  ]
+ }
+]

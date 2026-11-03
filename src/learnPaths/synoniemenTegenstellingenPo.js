@@ -102,7 +102,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Zet elke optie in een zin: 'Ik ben blij met mijn cadeau.' Welk woord kun je in de plaats van 'blij' zetten zonder dat de zin iets anders betekent?" }],
           niveaus: {
-            basis: "Vrolijk = synoniem van blij.",
+            basis: "Een synoniem betekent (bijna) hetzelfde. Zet elk woord in de zin 'Ik ben ... met mijn cadeau.' Bij welk woord blijft de zin hetzelfde betekenen?",
             simpeler: "Blij en vrolijk zijn allebei een fijn gevoel. Daarom zijn het synoniemen.",
             nogSimpeler: "Vrolijk",
           },
@@ -130,7 +130,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Synoniem = zelfde betekenis. Vraag jezelf: 'Kan ik het ene woord vervangen door het andere zonder dat de zin van betekenis verandert?' Bij enorm ↔ reusachtig: ja. Bij enorm ↔ klein: nee, betekenis draait om." }],
           niveaus: {
-            basis: "Reusachtig = synoniem van enorm (allebei 'heel groot').",
+            basis: "Enorm betekent 'heel erg groot'. Welk woord zegt ook dat iets heel groot is, en niet zwaar of lang?",
             simpeler: "Enorm = heel groot. Reusachtig = even groot als een reus = heel groot. Hetzelfde.",
             nogSimpeler: "Reusachtig",
           },
@@ -181,7 +181,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Vlug' is een synoniem van 'gauw'.",
+            basis: "'Kom gauw!' betekent: kom zonder te wachten. Welk woord zegt ook dat iets snel gaat?",
             simpeler: "'Gauw' en 'vlug' betekenen bijna hetzelfde.",
             nogSimpeler: "Vlug",
           },
@@ -231,7 +231,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Prachtig' is een synoniem van 'schitterend'.",
+            basis: "Schitterend is iets dat je heel erg mooi vindt. Welk woord zegt ook dat iets heel mooi is?",
             simpeler: "'Schitterend' en 'prachtig' betekenen bijna hetzelfde.",
             nogSimpeler: "Prachtig",
           },
@@ -281,7 +281,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Rennen' is een synoniem van 'sprinten'.",
+            basis: "Sprinten is heel hard vooruitgaan op je benen, zoals bij een wedstrijd. Welk woord beschrijft ook snel lopen?",
             simpeler: "'Sprinten' en 'rennen' betekenen bijna hetzelfde.",
             nogSimpeler: "Rennen",
           },
@@ -340,7 +340,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zodat je niet steeds hetzelfde woord herhaalt.",
+            basis: "Stel je een verhaal voor waarin steeds 'leuk, leuk, leuk' staat. Hoe leest dat, en wat helpt een synoniem dan?",
             simpeler: "Afwisseling maakt je tekst leuker.",
             nogSimpeler: "Niet herhalen.",
           },
@@ -399,7 +399,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "blij – vrolijk – gelukkig",
+            basis: "Check elk woord in een rijtje: betekenen ze alle drie hetzelfde? Zit er één tegenovergesteld woord tussen, dan valt dat rijtje af.",
             simpeler: "Alle drie: een fijn gevoel.",
             nogSimpeler: "blij – vrolijk – gelukkig",
           },
@@ -434,7 +434,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Snel-synoniemen sorteren op stijl: vlug (alledaags), gauw (informeel), rap (informeel), kwiek (literair). Allemaal snelheid + positief." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Snel ↔ traag is een klassiek antoniem-paar. Twee andere klassieke paren: groot↔klein, mooi↔lelijk." }],
           niveaus: {
-            basis: "Vlug = synoniem van snel.",
+            basis: "Een synoniem betekent hetzelfde. Zet elk woord in de zin 'Hij rent heel ...' Bij welk woord blijft de zin hetzelfde betekenen?",
             simpeler: "Snel + vlug = beide hoge snelheid. Hetzelfde.",
             nogSimpeler: "Vlug",
           },
@@ -456,7 +456,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "*'De aardige man hielp mij.'* = *'De vriendelijke man hielp mij.'* Beide zinnen hetzelfde." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij karakter-vragen: pos vs neg sorteren. Aardig = positief. Vriendelijk ook positief = synoniem." }],
           niveaus: {
-            basis: "Vriendelijk = synoniem van aardig.",
+            basis: "Iemand die aardig is, doet lief en behulpzaam tegen anderen. Welk woord beschrijft ook hoe iemand met anderen omgaat?",
             simpeler: "Beide positief karakter.",
             nogSimpeler: "Vriendelijk",
           },
@@ -481,7 +481,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Synoniem-paren: blij+vrolijk, snel+vlug, klein+minuscuul. Antoniem-paren: dag+nacht, jong+oud." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij paren: 'kunnen ze elkaar vervangen in een zin?' Ja → synoniem. Nee, betekenis wordt omgekeerd → antoniem." }],
           niveaus: {
-            basis: "prachtig + mooi = beide aantrekkelijk = synoniem.",
+            basis: "Bij synoniemen betekenen beide woorden hetzelfde. Kijk per paar: zeggen ze hetzelfde, of juist het tegenovergestelde?",
             simpeler: "Andere paren zijn tegenstellingen. Alleen prachtig+mooi = hetzelfde.",
             nogSimpeler: "prachtig + mooi",
           },
@@ -560,7 +560,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Langzaam' is een synoniem van 'traag'.",
+            basis: "Een trage slak doet er lang over. Welk woord zegt ook dat iets niet snel gaat? Let op: laat of moe is iets anders.",
             simpeler: "'Traag' en 'langzaam' betekenen bijna hetzelfde.",
             nogSimpeler: "Langzaam",
           },
@@ -610,7 +610,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Huis' is een synoniem van 'woning'.",
+            basis: "Een woning is de plek waar je woont. Welk woord noem je ook de plek waar je woont, met deur, dak en kamers?",
             simpeler: "'Woning' en 'huis' betekenen bijna hetzelfde.",
             nogSimpeler: "Huis",
           },
@@ -660,7 +660,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Verrast' is een synoniem van 'verbaasd'.",
+            basis: "Je bent verbaasd als er iets gebeurt dat je niet had verwacht. Welk woord beschrijft ook dat gevoel?",
             simpeler: "'Verbaasd' en 'verrast' betekenen bijna hetzelfde.",
             nogSimpeler: "Verrast",
           },
@@ -710,7 +710,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Vals' is een synoniem van 'gemeen'.",
+            basis: "Iemand die gemeen doet, is niet aardig en doet anderen expres pijn. Welk woord betekent ook zoiets onaardigs?",
             simpeler: "'Gemeen' en 'vals' betekenen bijna hetzelfde.",
             nogSimpeler: "Vals",
           },

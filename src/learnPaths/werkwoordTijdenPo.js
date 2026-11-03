@@ -84,7 +84,7 @@ const steps = [
           theorie: "Hij/zij/het = stam + t in tegenwoordige tijd.",
           voorbeelden: [{ type: "tabel", tekst: "Ik speel (stam). Jij/hij speelt (stam+t). Wij spelen (heel ww)." }],
           basiskennis: [{ onderwerp: "Niet -de", uitleg: "Verleden tijd zou 'speelde' zijn. Hier vragen ze TT." }],
-          niveaus: { basis: "speelt.", simpeler: "Spelen → stam speel. Hij + stam + t = speelt.", nogSimpeler: "Speelt" },
+          niveaus: { basis: "Zoek eerst de stam: dat is de ik-vorm van 'spelen'. Bij 'hij' schrijf je stam + t.", simpeler: "Spelen → stam speel. Hij + stam + t = speelt.", nogSimpeler: "Speelt" },
         },
       },
       {
@@ -98,7 +98,7 @@ const steps = [
           theorie: "Regel: stam + t. Maar als stam al op t eindigt → geen extra t (geen 'praatt')." ,
           voorbeelden: [{ type: "tabel", tekst: "Praten → hij praat. Eten → hij eet. Zitten → hij zit. Stam eindigt op t = geen extra t." }],
           basiskennis: [{ onderwerp: "Verschil met d", uitleg: "Stam op d → wél extra t (vinden → vindt). Stam op t → niet (praten → praat)." }],
-          niveaus: { basis: "praat.", simpeler: "Praten → stam praat. Eindigt al op t → geen tweede t. → praat.", nogSimpeler: "Praat" },
+          niveaus: { basis: "Zoek eerst de stam van 'praten'. Bij 'hij' doe je stam + t, maar eindigt de stam al op een t, dan komt er geen tweede t bij.", simpeler: "Praten → stam praat. Eindigt al op t → geen tweede t. → praat.", nogSimpeler: "Praat" },
         },
       },
       {
@@ -112,7 +112,7 @@ const steps = [
           theorie: "Stam eindigend op d: wél extra t toevoegen. Vind + t = vindt. Klinkt als 'vint' maar D blijft.",
           voorbeelden: [{ type: "tabel", tekst: "Vinden → hij vindt. Worden → hij wordt. Houden → hij houdt." }],
           basiskennis: [{ onderwerp: "Klink-truc", uitleg: "Hoor 'vint' maar SCHRIJF 'vindt' (d behouden + t erbij)." }],
-          niveaus: { basis: "vindt.", simpeler: "Vinden → stam vind. Hij + stam + t = vindt (klinkt als vint, maar schrijven met d en t).", nogSimpeler: "Vindt" },
+          niveaus: { basis: "Zoek eerst de stam van 'vinden'. Bij 'hij' komt er altijd stam + t, ook als je niet alles hoort wat je schrijft.", simpeler: "Vinden → stam vind. Hij + stam + t = vindt (klinkt als vint, maar schrijven met d en t).", nogSimpeler: "Vindt" },
         },
       },
     ],
@@ -133,7 +133,7 @@ const steps = [
           theorie: "Zwakke werkwoorden: stam in kofschip → -te. Niet in kofschip → -de.",
           voorbeelden: [{ type: "tabel", tekst: "Stop+te (P=kofschip). Werk+te (K). Vis+te (S). Hoor+de (R, niet kofschip)." }],
           basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "'t Kofschip — neem letters t, k, f, s, ch, p uit het woord 'kofschip'." }],
-          niveaus: { basis: "stopte.", simpeler: "Stoppen → stam stop. P zit in kofschip → -te → stopte.", nogSimpeler: "Stopte" },
+          niveaus: { basis: "Zoek de stam van 'stoppen' en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; anders -de.", simpeler: "Stoppen → stam stop. P zit in kofschip → -te → stopte.", nogSimpeler: "Stopte" },
         },
       },
       {
@@ -147,7 +147,7 @@ const steps = [
           theorie: "Meervoud (wij/jullie/zij): stam + -den (zwak) of -ten (kofschip).",
           voorbeelden: [{ type: "tabel", tekst: "Wij hoorden (R, geen kofschip). Wij stopten (P, kofschip). Wij werkten (K, kofschip)." }],
           basiskennis: [{ onderwerp: "Enkel vs meervoud", uitleg: "Ik hoorde (-de). Wij hoorden (-den)." }],
-          niveaus: { basis: "hoorden.", simpeler: "Horen → R (geen kofschip) → -de. Meervoud (wij) = -den → hoorden.", nogSimpeler: "Hoorden" },
+          niveaus: { basis: "Kijk naar de laatste letter van de stam van 'horen': zit die in 't kofschip? Denk er ook aan dat 'wij' meervoud is.", simpeler: "Horen → R (geen kofschip) → -de. Meervoud (wij) = -den → hoorden.", nogSimpeler: "Hoorden" },
         },
       },
       {
@@ -161,7 +161,7 @@ const steps = [
           theorie: "Letter X = K+S klank → telt als kofschip. Faxen → faxte. Mixen → mixte.",
           voorbeelden: [{ type: "leenwoorden", tekst: "Faxen→faxte. Mixen→mixte. Fixen→fixte. Allemaal -te." }],
           basiskennis: [{ onderwerp: "Engelse leen-ww", uitleg: "Engelse werkwoorden volgen NL kofschip-regel: stam-eindigt-op-x → -te." }],
-          niveaus: { basis: "fixte.", simpeler: "Fixen → x (=ks, kofschip) → -te → fixte.", nogSimpeler: "Fixte" },
+          niveaus: { basis: "Kijk naar de laatste klank van de stam van 'fixen'. De x klinkt als 'ks': zit die klank in 't kofschip?", simpeler: "Fixen → x (=ks, kofschip) → -te → fixte.", nogSimpeler: "Fixte" },
         },
       },
     ],

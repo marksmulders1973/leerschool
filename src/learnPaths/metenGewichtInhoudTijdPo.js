@@ -73,7 +73,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "De helft berekenen", uitleg: "De helft van een getal krijg je door het door 2 te delen." }],
           niveaus: {
-            basis: "Een pond is een half kilo. Een halve kilo is 500 g.",
+            basis: "Een pond is een halve kilo. Hoeveel gram zit er in een hele kilo, en wat is daar de helft van?",
             simpeler: "1 kg = 1000 g. De helft daarvan is een pond.",
             nogSimpeler: "2 pond = 1 kilo = 1000 g. Hoeveel is dan 1 pond?",
           },
@@ -533,7 +533,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "1000 ml = 1 l", uitleg: "Dit basisgetal gebruik je om milliliters om te rekenen naar liters en andersom." }],
           niveaus: {
-            basis: "Deel door 1000: 750 ÷ 1000 = 0,75 l.",
+            basis: "In 1 liter zitten 1000 milliliter, dus van ml naar liter deel je door 1000. Is 750 ml meer of minder dan een liter?",
             simpeler: "1000 ml = 1 l. 750 ml is driekwart liter: 0,75 l.",
             nogSimpeler: "750 is driekwart van 1000. Hoe schrijf je driekwart als kommagetal?",
           },

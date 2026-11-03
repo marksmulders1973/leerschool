@@ -1,0 +1,212 @@
+[
+ {
+  "file": "src/learnPaths/oppervlakteOmtrekPo.js",
+  "items": [
+   {
+    "waar": "oppervlakte-omtrek-po stap 1 vraag 1",
+    "antwoord": "26 m",
+    "basis": "Omtrek = 2×(8+5) = 26 m."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 1 vraag 4",
+    "antwoord": "28 m",
+    "basis": "Omtrek 2(10+4) = 28 m."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 1 vraag 5",
+    "antwoord": "15 m²",
+    "basis": "5 × 3 = 15 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 1",
+    "antwoord": "34 cm",
+    "basis": "2(12+5) = 34 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 2",
+    "antwoord": "9 cm",
+    "basis": "36÷4 = 9 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 3",
+    "antwoord": "30 cm",
+    "basis": "4 × 7,5 = 30 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 4",
+    "antwoord": "8 cm",
+    "basis": "40÷2=20. 20−12=8 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 5",
+    "antwoord": "13 cm",
+    "basis": "52÷4 = 13 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 6",
+    "antwoord": "26 m",
+    "basis": "9 + 4 = 13. 2 × 13 = 26 m."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 7",
+    "antwoord": "32 cm",
+    "basis": "4 × 8 = 32 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 9",
+    "antwoord": "180 cm",
+    "basis": "4 × 45 = 180 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 1",
+    "antwoord": "54 m²",
+    "basis": "9 × 6 = 54 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 2",
+    "antwoord": "144 cm²",
+    "basis": "12 × 12 = 144 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 3",
+    "antwoord": "10.000 cm²",
+    "basis": "10.000."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 4",
+    "antwoord": "8 cm",
+    "basis": "8 cm (√64 = 8)."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 5",
+    "antwoord": "8 m",
+    "basis": "48 ÷ 6 = 8 m."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 6",
+    "antwoord": "56 cm²",
+    "basis": "8 × 7 = 56 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 7",
+    "antwoord": "81 m²",
+    "basis": "9 × 9 = 81 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 8",
+    "antwoord": "10.000 m²",
+    "basis": "100 × 100 = 10.000 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 2",
+    "antwoord": "30 cm²",
+    "basis": "(5×12)/2 = 30 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 3",
+    "antwoord": "6 cm",
+    "basis": "(2×24)÷8 = 6 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 4",
+    "antwoord": "12 cm²",
+    "basis": "(6×4)÷2 = 12 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 5",
+    "antwoord": "35 m²",
+    "basis": "14×5=70, /2 = 35 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 6",
+    "antwoord": "18 cm²",
+    "basis": "9 × 4 = 36. 36 ÷ 2 = 18 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 7",
+    "antwoord": "20 cm²",
+    "basis": "10 × 4 = 40. 40 ÷ 2 = 20 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 8",
+    "antwoord": "36 cm²",
+    "basis": "12 × 6 = 72. De helft = 36 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 9",
+    "antwoord": "12 m²",
+    "basis": "8 × 3 = 24. 24 ÷ 2 = 12 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 1",
+    "antwoord": "25,12 cm",
+    "basis": "2×3,14×4 = 25,12 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 2",
+    "antwoord": "0,785 m²",
+    "basis": "π × 0,25 = 0,785 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 3",
+    "antwoord": "3,14",
+    "basis": "3,14."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 4",
+    "antwoord": "18,84 cm",
+    "basis": "d = 6. 3,14 × 6 = 18,84 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 5",
+    "antwoord": "62,8 cm",
+    "basis": "3,14 × 20 = 62,8 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 6",
+    "antwoord": "314 cm²",
+    "basis": "10 × 10 = 100. 3,14 × 100 = 314 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 7",
+    "antwoord": "7 cm",
+    "basis": "14 ÷ 2 = 7 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 8",
+    "antwoord": "157 cm",
+    "basis": "3,14 × 50 = 157 cm."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 1",
+    "antwoord": "18 m",
+    "basis": "Omtrek 2(5+4) = 18 m."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 2",
+    "antwoord": "288 m²",
+    "basis": "300 − 12 = 288 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 3",
+    "antwoord": "706,5 cm²",
+    "basis": "π × 15² = 706,5 cm²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 4",
+    "antwoord": "10 m²",
+    "basis": "4 × 2,5 = 10 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 8",
+    "antwoord": "25 m²",
+    "basis": "20 ÷ 4 = 5. 5 × 5 = 25 m²."
+   },
+   {
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 9",
+    "antwoord": "125,6 m",
+    "basis": "d = 40. 3,14 × 40 = 125,6 m."
+   }
+  ]
+ }
+]

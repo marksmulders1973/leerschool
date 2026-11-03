@@ -59,7 +59,7 @@ const steps = [
         wrongHints: [null, "Iets meer — tel de laatste letters ook mee.", "Iets minder. Tel het rijtje van a tot z nog eens.", "Veel meer. Tel het hele rijtje van a tot z."],
         uitlegPad: {
           stappen: [{ titel: "Tellen", tekst: "Van a tot en met z zijn het **26** letters." }],
-          niveaus: { basis: "Het alfabet heeft 26 letters.", simpeler: "a tot z = 26.", nogSimpeler: "26" },
+          niveaus: { basis: "Zeg het alfabet langzaam op van a tot z en tel bij elke letter een vinger mee.", simpeler: "a tot z = 26.", nogSimpeler: "26" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -195,7 +195,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop — klinkt dat goed?", "Zeg 'twee stoeles' hardop. Klinkt dat goed?", "Bijna! Hoor je aan het eind nog een letter?"],
         uitlegPad: {
           stappen: [{ titel: "-en erachter", tekst: "één stoel → twee stoel + **en** = stoelen." }],
-          niveaus: { basis: "stoel → stoelen.", simpeler: "Doe -en erachter.", nogSimpeler: "stoelen" },
+          niveaus: { basis: "Zeg hardop: één stoel, twee ... Welk stukje plak je erachter: -s of -en?", simpeler: "Doe -en erachter.", nogSimpeler: "stoelen" },
         },
       },
       {
@@ -205,7 +205,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop — zeg je 'twee tafelen'?", "Zeg 'twee tafeles' hardop. Klinkt dat goed?", "Dat is er maar één."],
         uitlegPad: {
           stappen: [{ titel: "-s erachter", tekst: "één tafel → twee tafel + **s** = tafels. Bij woorden die eindigen op -el, -er of -en komt er vaak een -s." }],
-          niveaus: { basis: "tafel → tafels.", simpeler: "Doe -s erachter.", nogSimpeler: "tafels" },
+          niveaus: { basis: "Woorden die eindigen op -el krijgen vaak alleen een letter erbij. Zeg hardop: één tafel, twee ...", simpeler: "Doe -s erachter.", nogSimpeler: "tafels" },
         },
       },
       {
@@ -216,7 +216,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "De s wordt een z", tekst: "één huis → twee **huizen**. De s verandert in een z. Zo ook: muis → muizen." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "één muis → twee muizen. één neus → twee neuzen." }],
-          niveaus: { basis: "huis → huizen (s wordt z).", simpeler: "Zeg maar: twee hui-zen.", nogSimpeler: "huizen" },
+          niveaus: { basis: "Zeg hardop: één huis, twee ... Hoor je aan het eind nog een s, of verandert die klank?", simpeler: "Zeg maar: twee hui-zen.", nogSimpeler: "huizen" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Gek woord", tekst: "één kind → twee **kinderen**. Dit is een uitzondering: er komt -eren achter. Net als: één ei → twee eieren." }],
           woorden: [{ woord: "uitzondering", uitleg: "Een woord dat zich niet aan de gewone regel houdt." }],
-          niveaus: { basis: "kind → kinderen.", simpeler: "Dit woord doet gek: kind-eren.", nogSimpeler: "kinderen" },
+          niveaus: { basis: "Dit woord doet niet gewoon -s of -en. Zeg hardop: één kind, veel ... Wat hoor je?", simpeler: "Dit woord doet gek: kind-eren.", nogSimpeler: "kinderen" },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eén of meer?", tekst: "**appel** = er is er één. appels, boeken en fietsen = er zijn er meer (meervoud)." }],
           woorden: [{ woord: "enkelvoud", uitleg: "Er is er maar één." }, { woord: "meervoud", uitleg: "Er zijn er meer." }],
-          niveaus: { basis: "appel is er één, de rest is meer.", simpeler: "Waar staat géén -s of -en achter?", nogSimpeler: "appel" },
+          niveaus: { basis: "Enkelvoud betekent dat er maar één is. Kijk bij elk woord of er -s of -en achter staat.", simpeler: "Waar staat géén -s of -en achter?", nogSimpeler: "appel" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -260,7 +260,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "hond → honden.",
+            basis: "Zeg hardop: één hond, twee ... Welk stukje plak je erachter: -s of -en?",
             simpeler: "Doe -en erachter.",
             nogSimpeler: "honden",
           },
@@ -284,7 +284,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "jongen → jongens.",
+            basis: "Woorden die al op -en eindigen, krijgen meestal geen -en erbij. Zeg hardop: één jongen, twee ...",
             simpeler: "Doe -s erachter.",
             nogSimpeler: "jongens",
           },
@@ -308,7 +308,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "brief → brieven (f wordt v).",
+            basis: "Zeg hardop: één brief, twee ... Hoor je aan het eind nog een f, of verandert die klank?",
             simpeler: "Zeg maar: twee brie-ven.",
             nogSimpeler: "brieven",
           },
@@ -338,7 +338,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ei → eieren.",
+            basis: "Dit woord doet niet gewoon -s of -en. Zeg hardop: één ei, een doos vol ... Wat hoor je?",
             simpeler: "Dit woord doet gek: ei-e-ren.",
             nogSimpeler: "eieren",
           },
@@ -360,7 +360,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop — klinkt dat goed?", "-pje hoort bij woorden met een m.", "Daar zit iets te veel in."],
         uitlegPad: {
           stappen: [{ titel: "Zeg het hardop", tekst: "bal → **balletje**. Er komt zelfs een extra l en e bij, anders kun je het niet zeggen." }],
-          niveaus: { basis: "bal → balletje.", simpeler: "Zeg maar: bal-le-tje.", nogSimpeler: "balletje" },
+          niveaus: { basis: "Een verkleinwoord eindigt op -je, -tje of -pje. Zeg het hardop: welk stukje klinkt goed na bal?", simpeler: "Zeg maar: bal-le-tje.", nogSimpeler: "balletje" },
         },
       },
       {
@@ -370,7 +370,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop — klinkt dat goed?", "Bijna — na een m klinkt een andere letter beter.", "Zeg 'bometje' hardop. Hoor je 'boom' nog goed?"],
         uitlegPad: {
           stappen: [{ titel: "Na een m: -pje", tekst: "boom eindigt op een **m**. Dan komt er **-pje**: boompje. Zo ook: duim → duimpje, bezem → bezempje." }],
-          niveaus: { basis: "boom → boompje.", simpeler: "Na een m komt -pje.", nogSimpeler: "boompje" },
+          niveaus: { basis: "Kijk naar de laatste letter van boom. Welk stukje van -je, -tje of -pje klinkt daarna goed?", simpeler: "Na een m komt -pje.", nogSimpeler: "boompje" },
         },
       },
       {
@@ -380,7 +380,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop — klinkt dat goed?", "-pje hoort bij woorden met een m.", "Daar zit een letter te veel."],
         uitlegPad: {
           stappen: [{ titel: "Na een l: -tje", tekst: "stoel → **stoeltje**. Zo ook: paal → paaltje, wiel → wieltje. Zeg het hardop, dan hoor je het: stoel-tje klinkt goed." }],
-          niveaus: { basis: "stoel → stoeltje.", simpeler: "Zeg maar: stoel-tje.", nogSimpeler: "stoeltje" },
+          niveaus: { basis: "Een verkleinwoord eindigt op -je, -tje of -pje. Zeg het hardop: welk stukje klinkt goed na stoel?", simpeler: "Zeg maar: stoel-tje.", nogSimpeler: "stoeltje" },
         },
       },
       {
@@ -390,7 +390,7 @@ const steps = [
         wrongHints: [null, "Dat lijkt op meer dan één poes. Hoeveel zoeken we er?", "Dat zijn er meer — we zoeken er één.", "Zeg 'een poest' hardop. Klinkt dat goed?"],
         uitlegPad: {
           stappen: [{ titel: "Terugdenken", tekst: "poes**je** = poes + je. Het gewone woord is **poes**." }],
-          niveaus: { basis: "poesje komt van poes.", simpeler: "Haal -je weg: poes.", nogSimpeler: "poes" },
+          niveaus: { basis: "Een verkleinwoord heeft een stukje -je erachter. Wat blijft er over als je dat stukje weghaalt?", simpeler: "Haal -je weg: poes.", nogSimpeler: "poes" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -544,7 +544,7 @@ const steps = [
         wrongHints: [null, "Dat is juist nóg warmer.", "Dat zit er tussenin.", "Dat gaat over voelen, niet over warm of niet."],
         uitlegPad: {
           stappen: [{ titel: "Andersom denken", tekst: "warm ↔ **koud**. Denk maar: warme chocomel en koude limonade." }],
-          niveaus: { basis: "Warm en koud zijn tegenstellingen.", simpeler: "Wat is een ijsje? Niet warm maar…", nogSimpeler: "koud" },
+          niveaus: { basis: "Een tegenstelling betekent precies het omgekeerde. Denk aan hoe sneeuw voelt.", simpeler: "Wat is een ijsje? Niet warm maar…", nogSimpeler: "koud" },
         },
       },
       {
@@ -554,7 +554,7 @@ const steps = [
         wrongHints: [null, "Dat zit er tussenin.", "Dat gaat over hoe groot iets is.", "Dat gaat over hoe zwaar iets is."],
         uitlegPad: {
           stappen: [{ titel: "Andersom denken", tekst: "vol ↔ **leeg**. Een volle beker en een lege beker." }],
-          niveaus: { basis: "Vol en leeg zijn tegenstellingen.", simpeler: "Beker zonder drinken = …", nogSimpeler: "leeg" },
+          niveaus: { basis: "Een tegenstelling betekent precies het omgekeerde. Hoe is je beker als je alles hebt opgedronken?", simpeler: "Beker zonder drinken = …", nogSimpeler: "leeg" },
         },
       },
       {
@@ -564,7 +564,7 @@ const steps = [
         wrongHints: [null, "Dat betekent juist snel.", "Haastig betekent dat je haast hebt. Gaat een slak zo?", "Dat gaat over veel te doen hebben."],
         uitlegPad: {
           stappen: [{ titel: "Andersom denken", tekst: "snel ↔ **langzaam**. Een haas rent snel, een slak kruipt langzaam." }],
-          niveaus: { basis: "Snel en langzaam zijn tegenstellingen.", simpeler: "Een slak is niet snel maar…", nogSimpeler: "langzaam" },
+          niveaus: { basis: "Een slak is precies het omgekeerde van een haas. Hoe beweegt een slak?", simpeler: "Een slak is niet snel maar…", nogSimpeler: "langzaam" },
         },
       },
       {
@@ -574,7 +574,7 @@ const steps = [
         wrongHints: [null, "Die betekenen bijna hetzelfde.", "Die betekenen bijna hetzelfde.", "Die betekenen bijna hetzelfde."],
         uitlegPad: {
           stappen: [{ titel: "Zelfde of andersom?", tekst: "**dag ↔ nacht** = precies andersom, dus een tegenstelling. De andere paren lijken juist op elkaar (dat heet: ze betekenen bijna hetzelfde)." }],
-          niveaus: { basis: "Dag en nacht zijn precies andersom.", simpeler: "Wanneer is het licht? En wanneer donker?", nogSimpeler: "dag en nacht" },
+          niveaus: { basis: "Bij een tegenstelling betekenen de twee woorden precies het omgekeerde. Bij welk paar is dat zo, en niet bijna hetzelfde?", simpeler: "Wanneer is het licht? En wanneer donker?", nogSimpeler: "dag en nacht" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -591,7 +591,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Groot en klein zijn tegenstellingen.",
+            basis: "Een tegenstelling betekent precies het omgekeerde. Denk aan een olifant en een muis.",
             simpeler: "De olifant is groot, de muis is…",
             nogSimpeler: "klein",
           },
@@ -610,7 +610,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Blij en verdrietig zijn tegenstellingen.",
+            basis: "Een tegenstelling betekent precies het omgekeerde. Hoe voel je je als je moet huilen?",
             simpeler: "Je huilt. Je bent niet blij maar…",
             nogSimpeler: "verdrietig",
           },
@@ -629,7 +629,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Nat en droog zijn tegenstellingen.",
+            basis: "Een tegenstelling betekent precies het omgekeerde. Hoe is de was als de zon er lang op heeft geschenen?",
             simpeler: "Een handdoek maakt je niet nat maar…",
             nogSimpeler: "droog",
           },
@@ -648,7 +648,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Open en dicht zijn tegenstellingen.",
+            basis: "Een tegenstelling betekent precies het omgekeerde. Wat doe je met de deur als het tocht?",
             simpeler: "Je doet de deur niet open maar…",
             nogSimpeler: "dicht",
           },
@@ -667,7 +667,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hoog en laag zijn tegenstellingen.",
+            basis: "Een tegenstelling betekent precies het omgekeerde. Denk aan een flat en een klein tuinhekje.",
             simpeler: "Niet bovenin de lucht, maar onderaan bij de grond: …",
             nogSimpeler: "laag",
           },
@@ -700,7 +700,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vraag of niet?", tekst: "De zin begint met **Hoe** — er wordt iets gevraagd. Een vraag eindigt met een **vraagteken (?)**." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Waar woon jij? Hoe oud ben je? Wat eet je het liefst?" }],
-          niveaus: { basis: "Een vraag krijgt een vraagteken.", simpeler: "Je vraagt iets → ?", nogSimpeler: "?" },
+          niveaus: { basis: "Kijk naar het eerste woord: Hoe. Wordt hier iets verteld of iets gevraagd?", simpeler: "Je vraagt iets → ?", nogSimpeler: "?" },
         },
       },
       {

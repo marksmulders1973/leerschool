@@ -28,7 +28,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eerste letters vergelijken", tekst: "a, b, c, d — 'appel' begint met a, de vroegste letter. Dus appel komt eerst." }],
           niveaus: {
-            basis: "A komt vooraan in het alfabet, dus 'appel' eerst.",
+            basis: "Kijk naar de eerste letter van elk woord. Welke letter komt het eerst in het alfabet?",
             simpeler: "Welk woord begint met de vroegste letter?",
             nogSimpeler: "Welke letter komt eerst: a, b, c of d?",
           },
@@ -56,7 +56,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "a vóór k vóór m", tekst: "Eerste letters: a (aap), k (kat), m (muis), e (egel). A is de vroegste, dus 'aap' eerst." }],
           niveaus: {
-            basis: "'aap' begint met a → komt eerst.",
+            basis: "Kijk naar de eerste letter van elk woord: k, a, m en e. Welke komt het eerst als je het alfabet opzegt?",
             simpeler: "Welk woord begint met de vroegste letter?",
             nogSimpeler: "a, k, m of e — welke komt eerst?",
           },
@@ -70,7 +70,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "z is de laatste letter", tekst: "Eerste letters: m, s, w, z. Z komt het laatst in het alfabet, dus 'zon' komt het laatst." }],
           niveaus: {
-            basis: "'zon' begint met z, de laatste letter → komt laatst.",
+            basis: "Kijk naar de eerste letters: z, m, s en w. Welke van die letters zeg je als laatste als je het alfabet opzegt?",
             simpeler: "Welke letter komt het laatst: m, s, w of z?",
             nogSimpeler: "Welk woord begint met z?",
           },
@@ -98,7 +98,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "v komt het laatst", tekst: "Eerste letters: e, g, r, v. V staat het verst in het alfabet, dus 'vis' komt het laatst." }],
           niveaus: {
-            basis: "'vis' (v) staat het verst in het alfabet → komt laatst.",
+            basis: "Kijk naar de eerste letters: v, e, g en r. Welke van die letters komt het verst achterin het alfabet?",
             simpeler: "Welke beginletter komt het laatst: e, g, r of v?",
             nogSimpeler: "e, g, r of v — welke is de laatste?",
           },
@@ -118,7 +118,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De goede volgorde is D E F G.",
+            basis: "Zeg het alfabet hardop op vanaf de C. Welke rij klinkt precies zo?",
             simpeler: "Zeg het alfabet op vanaf de D: welke vier letters hoor je?",
             nogSimpeler: "Wat komt na D: E of F?",
           },
@@ -137,7 +137,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het alfabet heeft 26 letters, van A tot en met Z.",
+            basis: "Zeg het alfabet op van A tot Z en tel bij elke letter er één bij.",
             simpeler: "Tel de letters van A tot Z met je vingers mee.",
             nogSimpeler: "Hoeveel letters tel je van A tot Z?",
           },
@@ -161,7 +161,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Op volgorde: Daan, Femke, Pim, Yara. De derde is Pim.",
+            basis: "Zet eerst alle vier de namen op volgorde van hun eerste letter. Tel daarna tot de derde plek.",
             simpeler: "Zet eerst de beginletters D, F, P en Y op volgorde.",
             nogSimpeler: "Welke naam staat na Daan en Femke?",
           },
@@ -414,7 +414,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "s gelijk, dan c vóór t", tekst: "Alle vier beginnen met s. Tweede letters: c (school) en t (stoel, stip, stam). C komt eerst, dus 'school'." }],
           niveaus: {
-            basis: "Eerste letter s gelijk; tweede letter c < t → 'school' eerst.",
+            basis: "Alle woorden beginnen met een s. Kijk dan naar de tweede letter: welke komt het eerst in het alfabet?",
             simpeler: "De s'en zijn gelijk. Kijk naar de tweede letter: c of t?",
             nogSimpeler: "Wat komt eerst: c of t? Let op: de derde letter doet er hier nog niet toe.",
           },
@@ -442,7 +442,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "t gelijk, dan a < i < o", tekst: "Alle vier beginnen met t. Tweede letters: a, i, o, e. O komt het laatst, dus 'toren' het laatst." }],
           niveaus: {
-            basis: "Tweede letters a, e, i, o → 'toren' (o) komt het laatst.",
+            basis: "Alle woorden beginnen met een t. Vergelijk de tweede letters: welke komt het laatst in het alfabet?",
             simpeler: "De t's zijn gelijk. Welke tweede letter komt het laatst: a, i, o of e?",
             nogSimpeler: "Welke is de laatste: a, e, i of o?",
           },
@@ -470,7 +470,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "st gelijk, dan a vóór o", tekst: "Alle vier beginnen met 'st'. Derde letters: a (station), o (stoel), o (storm), u (stuur). A komt eerst, dus 'station'." }],
           niveaus: {
-            basis: "Derde letter a komt vóór o en u → 'station' eerst.",
+            basis: "De eerste twee letters zijn bij alle woorden 'st'. Vergelijk dus de derde letter van elk woord.",
             simpeler: "De 'st' is gelijk. Welke derde letter komt eerst: a, o of u?",
             nogSimpeler: "a, o of u — welke komt eerst?",
           },
@@ -514,7 +514,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tweede letters a, e, o, u → 'rups' komt het laatst.",
+            basis: "Alle woorden beginnen met een r. Vergelijk de tweede letters: welke komt het laatst in het alfabet?",
             simpeler: "De r is gelijk. Welke tweede letter komt het laatst: a, e, o of u?",
             nogSimpeler: "Wat komt later: o of u?",
           },
@@ -533,7 +533,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Derde letters a, e, o, u → 'trap' komt eerst.",
+            basis: "De eerste twee letters zijn bij alle woorden 'tr'. Vergelijk dus de derde letter van elk woord.",
             simpeler: "De 'tr' is gelijk. Welke derde letter komt eerst: e, a, u of o?",
             nogSimpeler: "Wat komt eerst: a, e, o of u?",
           },
@@ -552,7 +552,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vijfde letters g, l, m, n → 'kraag' komt eerst.",
+            basis: "De eerste vier letters zijn bij alle woorden 'kraa'. Vergelijk dus de vijfde letter van elk woord.",
             simpeler: "'kraa' is steeds gelijk. Welke laatste letter komt eerst: l, n, g of m?",
             nogSimpeler: "Wat komt eerst: g of l?",
           },
@@ -584,7 +584,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Trefwoord = het opgezochte woord", tekst: "Het trefwoord is het (vet gedrukte) woord dat je opzoekt; daarachter staat de betekenis." }],
           niveaus: {
-            basis: "Het trefwoord is het woord dat je opzoekt.",
+            basis: "Denk aan wat je doet met een woordenboek. Welk woord zoek je daarin op en vind je vetgedrukt terug?",
             simpeler: "Welk woord staat vet vooraan waar je de betekenis bij vindt?",
             nogSimpeler: "Is het trefwoord het woord dat je zoekt?",
           },
@@ -631,7 +631,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tussen de kopwoorden", tekst: "Op de pagina staan woorden tussen 'kraan' en 'kruik'. 'Krokus' (kro…) past daartussen; 'kaars' komt eerder, 'lamp' en 'kwartet' later." }],
           niveaus: {
-            basis: "'krokus' valt alfabetisch tussen 'kraan' en 'kruik'.",
+            basis: "Op deze pagina staan alleen woorden die in het alfabet tussen 'kraan' en 'kruik' liggen. Alle woorden beginnen met kr, dus vergelijk de derde letter.",
             simpeler: "Welk woord komt ná 'kraan' maar vóór 'kruik'?",
             nogSimpeler: "kraan – krokus – kruik: past 'krokus' ertussen?",
           },
@@ -645,7 +645,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tussen de kopwoorden", tekst: "Op de pagina staan woorden tussen 'appel' en 'arm'. 'Arend' (ar-e) past daartussen: ná 'appel' (ap-) en vóór 'arm' (ar-m)." }],
           niveaus: {
-            basis: "'arend' valt alfabetisch tussen 'appel' en 'arm'.",
+            basis: "Op deze pagina staan alleen woorden die in het alfabet tussen 'appel' en 'arm' liggen. Vergelijk de tweede en derde letter van elk woord.",
             simpeler: "Welk woord komt ná 'appel' maar vóór 'arm'?",
             nogSimpeler: "appel – arend – arm: past 'arend' ertussen?",
           },

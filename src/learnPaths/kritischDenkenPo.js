@@ -38,7 +38,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "5 W's: Wie zegt dit? Wat zegt hij? Waar staat het? Wanneer? Waarom?" }],
           niveaus: {
-            basis: "Kritisch denken = goed nadenken voor je iets gelooft.",
+            basis: "Kritisch betekent hier niet dat je kritiek geeft. Denk aan de vraag: geloof je iets meteen, of kijk je eerst of het klopt?",
             simpeler: "Vragen stellen voor je iets aanneemt.",
             nogSimpeler: "Eerst denken, dan geloven.",
           },

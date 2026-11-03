@@ -73,7 +73,7 @@ const steps = [
         wrongHints: [null, "Dat komt VOOR 14.", "Dat komt NA 16.", "Dat is het tweede getal zelf. Welk getal ligt ertussen?"],
         uitlegPad: {
           stappen: [{ titel: "Telrij hoge getallen", tekst: "...13, 14, **15**, 16, 17... Tussen 14 en 16 zit 15." }],
-          niveaus: { basis: "15 tussen 14 en 16.", simpeler: "14 → 15 → 16.", nogSimpeler: "15" },
+          niveaus: { basis: "Zeg de telrij hardop vanaf 14. Welk getal zeg je vlak voordat je bij 16 bent?", simpeler: "14 → 15 → 16.", nogSimpeler: "15" },
         },
       },
       {
@@ -84,7 +84,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tientallen + eenheden", tekst: "20 = 2 tientallen = 10 + 10. Twee tientallen samen = 20." }],
           theorie: "Toets-onthouden: 20 is bijzonder = 2 keer 10.",
-          niveaus: { basis: "10 + 10 = 20.", simpeler: "Twee tientallen = 20.", nogSimpeler: "10" },
+          niveaus: { basis: "Tel vanaf 10 verder tot je bij 20 bent. Hoeveel stappen zet je?", simpeler: "Twee tientallen = 20.", nogSimpeler: "10" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -101,7 +101,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12 komt voor 13.",
+            basis: "Tel hardop tot 13. Welk getal zeg je net daarvoor?",
             simpeler: "Tel: 11, 12, 13. Voor 13 komt 12.",
             nogSimpeler: "12",
           },
@@ -125,7 +125,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18 is het grootst.",
+            basis: "Het getal dat je het laatst zegt als je telt, is het grootst.",
             simpeler: "18 komt het laatst in de telrij.",
             nogSimpeler: "18",
           },
@@ -144,7 +144,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Na 19 komt 20.",
+            basis: "Er komt elke keer één bij. Welk getal zeg je na 19?",
             simpeler: "19 + 1 = 20.",
             nogSimpeler: "20",
           },
@@ -163,7 +163,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Twaalf = 12.",
+            basis: "Twaalf is één tiental en nog een paar losse. Het tiental schrijf je vooraan, de losse erachter.",
             simpeler: "10 en nog 2 = 12.",
             nogSimpeler: "12",
           },
@@ -207,7 +207,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "6 + 4 = 10. Onthoud: 10 = 6+4 (buurman-paar), 7+3, 8+2, 9+1, 5+5. Allemaal samen 10." }],
           theorie: "Toets-truc: 'Welke maakt 10?' kennis = essentieel voor groep 3-4. Oefen lijstje 'tientallen-paren'.",
-          niveaus: { basis: "6 + 4 = 10.", simpeler: "6 en 4 samen = 10.", nogSimpeler: "6+4" },
+          niveaus: { basis: "Reken elke som uit. Welke komt precies op 10 uit?", simpeler: "6 en 4 samen = 10.", nogSimpeler: "6+4" },
         },
       },
       {
@@ -247,7 +247,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 + 3 = 9, geen 10.",
+            basis: "Reken elke som uit. Welke komt níet op 10 uit?",
             simpeler: "De andere drie zijn samen 10.",
             nogSimpeler: "6 + 3",
           },
@@ -409,7 +409,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 - 4 = 6.",
+            basis: "Begin bij 10 en tel 4 stappen terug. Waar kom je uit?",
             simpeler: "6 + 4 = 10, dus 10 - 4 = 6.",
             nogSimpeler: "6",
           },
@@ -432,7 +432,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Maak eerst 10", tekst: "8 + 5 → splits 5 in 2 + 3. 8 + 2 = 10. 10 + 3 = **13**." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "8 + 5 = 8 + 2 + 3 = 10 + 3 = 13 ✓." }],
-          niveaus: { basis: "8+5 = 13.", simpeler: "8+2=10, 10+3=13.", nogSimpeler: "13" },
+          niveaus: { basis: "Maak eerst 10: hoeveel moet er bij 8 om 10 te krijgen? Tel daarna de rest van de 5 erbij.", simpeler: "8+2=10, 10+3=13.", nogSimpeler: "13" },
         },
       },
       {
@@ -491,7 +491,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 + 4 = 12.",
+            basis: "Maak eerst 10 met de 8. Hoeveel van de 4 heb je daarvoor nodig, en hoeveel blijft er over?",
             simpeler: "8 + 2 = 10, 10 + 2 = 12.",
             nogSimpeler: "12",
           },
@@ -510,7 +510,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "13 + 4 = 17.",
+            basis: "13 is 10 en 3. Reken eerst 3 + 4 uit en zet de 10 er weer bij.",
             simpeler: "3 + 4 = 7, en 10 + 7 = 17.",
             nogSimpeler: "17",
           },
@@ -529,7 +529,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 + 6 = 15 kinderen.",
+            basis: "Samen betekent: bij elkaar optellen. Maak eerst 10 met de 9 en tel dan de rest erbij.",
             simpeler: "9 + 1 = 10, 10 + 5 = 15.",
             nogSimpeler: "15",
           },
@@ -548,7 +548,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 + 6 = 8 + 2 + 4 = 14.",
+            basis: "Handig rekenen: maak eerst 10. Hoeveel moet er bij 8 om 10 te krijgen? Splits de 6 in dat stukje en de rest.",
             simpeler: "8 + 2 = 10, en dan nog 4 erbij.",
             nogSimpeler: "8 + 2 + 4",
           },
@@ -684,7 +684,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15 - 5 = 10.",
+            basis: "Reken elke som uit. Welke komt precies op 10 uit?",
             simpeler: "15 = 10 + 5. Haal je de 5 weg, dan blijft 10.",
             nogSimpeler: "15 - 5",
           },

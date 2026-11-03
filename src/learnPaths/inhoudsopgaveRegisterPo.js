@@ -32,7 +32,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vooraan", tekst: "De inhoudsopgave staat vooraan in het boek, vóór hoofdstuk 1." }],
           niveaus: {
-            basis: "De inhoudsopgave staat vooraan.",
+            basis: "De inhoudsopgave laat zien wat er in het boek komt. Wil je dat weten vóór je gaat lezen, of pas als je klaar bent?",
             simpeler: "Voor of achter in het boek staat de hoofdstukkenlijst?",
             nogSimpeler: "Staat de inhoudsopgave vooraan?",
           },
@@ -65,7 +65,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Het paginanummer", tekst: "Achter 'Dieren' staat 24: dat is de pagina waar het hoofdstuk begint." }],
           niveaus: {
-            basis: "Hoofdstuk Dieren begint op pagina 24.",
+            basis: "Achter 'Dieren' staan puntjes en een getal. Is dat getal het nummer van het hoofdstuk of van de pagina?",
             simpeler: "Welk getal achter 'Dieren' is de pagina?",
             nogSimpeler: "Op welke pagina begint het dieren-hoofdstuk?",
           },
@@ -93,7 +93,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Het getal achteraan", tekst: "Achter 'Het weer' staat 40: dat is de pagina waar het hoofdstuk begint." }],
           niveaus: {
-            basis: "Hoofdstuk 'Het weer' begint op pagina 40.",
+            basis: "Kijk naar het getal achter de puntjes. Dat getal vertelt waar je het boek moet openslaan.",
             simpeler: "Welk getal is de pagina: 3 of 40?",
             nogSimpeler: "Op welke pagina begint het weer-hoofdstuk?",
           },
@@ -107,7 +107,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Boekvolgorde", tekst: "De inhoudsopgave volgt 1, 2, 3… Vlak vóór hoofdstuk 2 staat dus hoofdstuk 1." }],
           niveaus: {
-            basis: "Vóór hoofdstuk 2 komt hoofdstuk 1.",
+            basis: "In de inhoudsopgave staan de hoofdstukken op nummervolgorde. Kijk welk nummer net boven de 2 staat.",
             simpeler: "Welk hoofdstuk komt net vóór 2?",
             nogSimpeler: "1, 2, 3 — wat komt vóór de 2?",
           },
@@ -146,7 +146,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Pagina 40 ligt tussen 34 en 52 → De bergen.",
+            basis: "Een hoofdstuk loopt door tot het volgende hoofdstuk begint. Tussen welke twee beginpagina's ligt pagina 40?",
             simpeler: "Welk hoofdstuk begint vóór pagina 40, terwijl het volgende pas ná 40 begint?",
             nogSimpeler: "Ligt 40 tussen 34 en 52?",
           },
@@ -200,7 +200,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Achteraan", tekst: "Het register staat achteraan in het boek." }],
           niveaus: {
-            basis: "Het register staat achteraan.",
+            basis: "De inhoudsopgave staat vooraan. Waar staat dan de andere zoeklijst, het register?",
             simpeler: "Voor of achter staat de alfabetische onderwerpenlijst?",
             nogSimpeler: "Staat het register achteraan?",
           },
@@ -242,7 +242,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Alfabetisch", tekst: "Het register staat op alfabet, zodat je een onderwerp snel kunt opzoeken." }],
           niveaus: {
-            basis: "Het register staat op alfabet.",
+            basis: "In een register zoek je snel een woord op, net als in een woordenboek. In welke volgorde staan de woorden in een woordenboek?",
             simpeler: "Volgt het register het alfabet of de hoofdstukken?",
             nogSimpeler: "Staan de onderwerpen van A naar Z?",
           },
@@ -270,7 +270,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Op alfabet: b, v, z", tekst: "Beginletters b (bij), v (vulkaan), z (zon). B komt het eerst, dus 'bij' staat vooraan." }],
           niveaus: {
-            basis: "'bij' (b) komt het eerst in het alfabet.",
+            basis: "Kijk naar de eerste letter van elk woord. Welke letter komt het eerst als je het alfabet opzegt?",
             simpeler: "Welke beginletter komt het vroegst: b, v of z?",
             nogSimpeler: "b, v of z — welke eerst?",
           },
@@ -290,7 +290,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Pagina 27 staat bij de eekhoorn én bij de ree.",
+            basis: "Lees de getallen achter 'eekhoorn' en achter 'ree'. Zoek het getal dat bij allebei staat.",
             simpeler: "Welk paginanummer zie je achter allebei de dieren?",
             nogSimpeler: "Staat 27 bij de eekhoorn? En bij de ree?",
           },
@@ -328,7 +328,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "h komt na e en vóór r → tussen egel en ree.",
+            basis: "Kijk naar de eerste letter van 'havik'. Zeg het alfabet op en zoek tussen welke twee woorden die letter past.",
             simpeler: "Zeg het alfabet op: komt de h na de e? En vóór de r?",
             nogSimpeler: "e … h … r: waar hoort de h?",
           },
@@ -347,7 +347,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Pagina 22 hoort bij de vos.",
+            basis: "Lees de getallen achter elk dier. Achter welk dier vind je het getal 22?",
             simpeler: "Bij welk woord staat het getal 22?",
             nogSimpeler: "Staat 22 achter 'vos'?",
           },
@@ -420,7 +420,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onderwerp → register", tekst: "'Bijen' is een onderwerp; in het register vind je alle pagina's waar bijen voorkomen." }],
           niveaus: {
-            basis: "Een onderwerp als 'bijen' zoek je in het register.",
+            basis: "Is 'bijen' een heel hoofdstuk, of een onderwerp dat op allerlei pagina's terugkomt? Welke lijst geeft per onderwerp alle pagina's?",
             simpeler: "Staat 'bijen' als los onderwerp in het register of als hoofdstuk?",
             nogSimpeler: "Waar vind je alle pagina's over bijen?",
           },
@@ -622,7 +622,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Voor + boekvolgorde", tekst: "De inhoudsopgave staat vooraan en volgt de volgorde van de hoofdstukken." }],
           niveaus: {
-            basis: "Vooraan + op hoofdstuk-volgorde = de inhoudsopgave.",
+            basis: "Er zijn twee zoeklijsten: één vooraan en één achteraan. Welke volgt de hoofdstukken, en welke het alfabet?",
             simpeler: "Welke lijst staat vooraan op boekvolgorde?",
             nogSimpeler: "Is de inhoudsopgave vooraan op boekvolgorde?",
           },

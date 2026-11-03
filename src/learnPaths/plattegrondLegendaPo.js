@@ -32,7 +32,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bovenaanzicht", tekst: "Een plattegrond is een tekening van bovenaf, waarop je ziet waar alles ligt." }],
           niveaus: {
-            basis: "Een plattegrond is een tekening van bovenaf van een gebouw/gebied.",
+            basis: "Op een plattegrond zie je de vorm van kamers en wegen, niet de muren aan de voorkant. Vanuit welke plek kun je zoiets zien?",
             simpeler: "Kijk je bij een plattegrond van voren of van boven?",
             nogSimpeler: "Is een plattegrond een tekening van bovenaf?",
           },
@@ -46,7 +46,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Van boven", tekst: "Je bekijkt een plattegrond van bovenaf, zodat je de indeling ziet." }],
           niveaus: {
-            basis: "Een plattegrond bekijk je van bovenaf.",
+            basis: "Op een plattegrond zie je alle kamers tegelijk, alsof het dak eraf is. Waar zou jij moeten zijn om het zo te zien?",
             simpeler: "Alsof je met een drone erboven hangt — welke kant is dat?",
             nogSimpeler: "Van boven of van de zijkant?",
           },
@@ -151,7 +151,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Helemaal rechts = het verst van links → de toiletten.",
+            basis: "Zoek eerst waar jij start: bij de stip. Welke plek ligt aan de andere kant van de plattegrond?",
             simpeler: "Je start links. Wat ligt helemaal aan de andere kant?",
             nogSimpeler: "Wat staat er helemaal rechts?",
           },
@@ -444,7 +444,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Van onder naar boven = naar het noorden.",
+            basis: "Op deze kaart is boven het noorden. Kijk waar de ingang ligt en waar het restaurant: loop je op de kaart naar boven of naar beneden?",
             simpeler: "Loop je op de kaart naar boven of naar beneden?",
             nogSimpeler: "Boven is het … ?",
           },
@@ -482,7 +482,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Linksaf + rechtsaf = 2 keer afslaan.",
+            basis: "Lees de route zin voor zin. Tel alleen de keren dat je een andere kant op gaat; rechtdoor lopen telt niet.",
             simpeler: "Hoe vaak staat er 'linksaf' of 'rechtsaf' in de route?",
             nogSimpeler: "1 + 1 = ?",
           },
@@ -647,7 +647,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De leeuwen liggen links van de stip → naar links.",
+            basis: "Zoek eerst de stip 'je bent hier'. Lees dan nog eens waar de leeuwen liggen ten opzichte van de ingang.",
             simpeler: "Waar staat de stip, en aan welke kant liggen de leeuwen?",
             nogSimpeler: "Liggen de leeuwen links of rechts?",
           },

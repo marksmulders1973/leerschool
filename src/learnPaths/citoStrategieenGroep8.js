@@ -319,7 +319,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vroeger: de Eindtoets.",
+            basis: "De toets kreeg in 2024 een nieuwe naam. Welke oude naam hoorde bij de grote toets in groep 8, en niet bij een toets in groep 7?",
             simpeler: "De Doorstroomtoets heette vroeger de Eindtoets. Je maakt hem aan het eind van groep 8.",
             nogSimpeler: "Eindtoets",
           },
@@ -361,7 +361,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In februari.",
+            basis: "Denk aan de volgorde: eind januari krijg je eerst je schooladvies. Komt de toets daarvóór of een paar weken daarna?",
             simpeler: "Eerst krijg je in januari je schooladvies. Een paar weken later, in februari, maak je de toets.",
             nogSimpeler: "Februari",
           },
@@ -404,7 +404,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Geen rekenmachine.",
+            basis: "Bij de toets laat je zien wat jij zelf kunt. Welk hulpmiddel zou het rekenwerk voor je doen?",
             simpeler: "Je rekent zelf: in je hoofd of op papier. Een rekenmachine mag niet mee.",
             nogSimpeler: "Geen rekenmachine",
           },
@@ -736,7 +736,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bewaar ongeveer 5 minuten.",
+            basis: "Je wilt tijd om je twijfelvragen na te kijken, maar de meeste tijd heb je nodig om de vragen te maken. Welke hoeveelheid past daarbij?",
             simpeler: "Zorg dat je aan het eind nog 5 minuten over hebt. Dan kijk je je twijfel-vragen nog eens na.",
             nogSimpeler: "5 minuten",
           },
@@ -778,7 +778,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Om de 10 vragen.",
+            basis: "Te vaak kijken kost tijd, en te weinig kijken laat je te laat merken dat je achterloopt. Kies een moment dat daar tussenin zit.",
             simpeler: "Kijk niet steeds op de klok, maar bij elke tiende vraag. Dan weet je of je op schema zit.",
             nogSimpeler: "Elke 10 vragen",
           },
@@ -1606,7 +1606,7 @@ const steps = [
           voorbeelden: [{ type: "korting", tekst: "€80 met 25% korting: ¼ van 80 = 20. Betaal: 80 − 20 = €60. Of 75% × 80 = 60." }],
           basiskennis: [{ onderwerp: "25% = kwart", uitleg: "Onthoud: 25% = ¼, 50% = ½, 75% = ¾." }],
           niveaus: {
-            basis: "25% van €40 = €10 korting → €30 betalen.",
+            basis: "Reken eerst uit hoeveel euro de korting is: 25% is een kwart. Haal die korting daarna van de prijs af.",
             simpeler: "Stel: rok €40. 25% korting. ¼ van €40 = €10 (€40 ÷ 4). Trek af: €40 − €10 = €30.",
             nogSimpeler: "€40 − €10 = €30",
           },
@@ -1676,7 +1676,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 × 0,5 km = 3 km.",
+            basis: "Bij schaal 1:50.000 is 1 cm op de kaart 50.000 cm in het echt. Reken eerst uit hoeveel km 1 cm is, en doe dat daarna keer 6.",
             simpeler: "Op deze kaart is elke cm een halve kilometer. 6 halve kilometers is 3 km.",
             nogSimpeler: "3 km",
           },
@@ -1718,7 +1718,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "90 ÷ 0,75 = 120 km/u.",
+            basis: "Km/u betekent: hoeveel km rijdt hij in één heel uur? Reken eerst uit hoeveel km hij in één kwartier rijdt.",
             simpeler: "In 45 minuten 90 km. Dat is 30 km per kwartier. Een uur heeft 4 kwartier: 4 × 30 = 120 km/u.",
             nogSimpeler: "120 km/u",
           },
@@ -1760,7 +1760,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "60 + 12 = €72.",
+            basis: "Reken eerst uit hoeveel euro 20% van €60 is. Tel dat daarna bij de oude prijs op, want de prijs gaat omhoog.",
             simpeler: "20% van €60 is €12. De prijs wordt hoger, dus €60 + €12 = €72.",
             nogSimpeler: "€72",
           },
@@ -1807,7 +1807,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Rond af: 30 × 20 = 600.",
+            basis: "Rond elk getal af naar het dichtstbijzijnde tiental. Welke schatting gebruikt precies die afgeronde getallen?",
             simpeler: "31 is bijna 30 en 19 is bijna 20. 30 × 20 = 600. Het antwoord ligt dus rond 600.",
             nogSimpeler: "Ongeveer 600",
           },
@@ -1849,7 +1849,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15 min = 0,25 uur, dus 1,25 uur.",
+            basis: "Het hele uur blijft 1. Welk deel van een uur is 15 minuten, en hoe schrijf je dat deel als kommagetal?",
             simpeler: "Een kwartier is een kwart van een uur. Een kwart is 0,25. Samen met 1 uur: 1,25 uur.",
             nogSimpeler: "1,25",
           },
@@ -1891,7 +1891,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15/60 = 1/4 = 25%.",
+            basis: "Zoek eerst welk deel van 60 de 15 kinderen zijn: hoe vaak past 15 in 60? Zet dat deel daarna om in procent.",
             simpeler: "15 past 4 keer in 60. Dus het is een kwart. Een kwart is 25%.",
             nogSimpeler: "25%",
           },
@@ -1934,7 +1934,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 × 1.000 = 2.000 liter.",
+            basis: "Weet je hoeveel liter er in 1 m³ past? Doe dat aantal daarna keer 2.",
             simpeler: "In 1 m³ past 1.000 liter. Je hebt er 2, dus 2.000 liter.",
             nogSimpeler: "2.000 liter",
           },

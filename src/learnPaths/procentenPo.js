@@ -106,7 +106,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "% = per 100. Onthoud dat en je begrijpt elke procent-vraag." }],
           niveaus: {
-            basis: "Procent (%) = per 100. 40% = 40 per 100.",
+            basis: "Procent betekent 'per honderd'. Wat zegt het getal vóór het %-teken dan?",
             simpeler: "Als je 100 dingen hebt en 40 zijn rood = 40%.",
             nogSimpeler: "% = per 100.",
           },
@@ -136,7 +136,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "100% = ALLES (zonder uitzondering). 0% = NIETS. 50% = HELFT. Onthoud deze 3." }],
           niveaus: {
-            basis: "100% = alles (het hele ding).",
+            basis: "Procent betekent 'per honderd'. Als je 100 van de 100 delen hebt, hoeveel heb je dan van het geheel?",
             simpeler: "100% van een pizza = de hele pizza. Niet 100 stuks.",
             nogSimpeler: "Alles",
           },
@@ -194,7 +194,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "% spreek je uit als 'procent'.",
+            basis: "Het %-teken hoort bij 'per honderd' (Latijn: per centum). Promille is per duizend; welk woord hoort bij honderd?",
             simpeler: "30% zeg je: dertig procent.",
             nogSimpeler: "% = procent.",
           },

@@ -137,7 +137,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Hoog = goed. 'Voorkomen' staat hoogst op de ladder. Recyclen pas op #3." }],
           niveaus: {
-            basis: "Beste = voorkomen (geen afval maken). Slechtste = storten.",
+            basis: "De Ladder van Lansink gaat van beste naar slechtste keuze. Wat is nog beter dan afval goed verwerken?",
             simpeler: "Niet maken > hergebruiken > recyclen > verbranden > storten.",
             nogSimpeler: "Voorkomen is best.",
           },
@@ -213,7 +213,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Plastic = ~450 jaar. Onthoud dit shock-cijfer. Helpt om bewust te kiezen voor minder plastic." }],
           niveaus: {
-            basis: "~450 jaar.",
+            basis: "Plastic vergaat heel langzaam, veel langer dan een mensenleven. Welk antwoord past bij 'een paar eeuwen'?",
             simpeler: "Een plastic fles in natuur duurt 450 jaar voor afgebroken — 4 eeuwen!",
             nogSimpeler: "450 jaar",
           },

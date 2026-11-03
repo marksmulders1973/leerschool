@@ -101,7 +101,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Een kwart = 1/4 = 25%. Onthoud dit getal — komt op aardrijkskunde-vragen vaak terug." }],
           niveaus: {
-            basis: "~25% (kwart).",
+            basis: "Vooral het westen met de polders ligt laag, het oosten en zuiden niet. Is dat dan een klein deel, een flink deel of bijna heel Nederland?",
             simpeler: "Ongeveer 1 op de 4 m² van NL ligt onder zeeniveau = 25%.",
             nogSimpeler: "25%",
           },
@@ -206,7 +206,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Maeslantkering = bij Rotterdam. Oosterscheldekering = in Zeeland." }],
           basiskennis: [{ onderwerp: "Niet permanent dicht", uitleg: "Schepen moeten door — kering moet open kunnen." }],
           niveaus: {
-            basis: "Maeslantkering.",
+            basis: "Een stormvloedkering heeft deuren die alleen dichtgaan bij storm. Welke van deze kan open en dicht, en welke zijn vaste dijken of dammen?",
             simpeler: "Maeslantkering is de stormvloedkering bij Rotterdam — sluit alleen bij storm.",
             nogSimpeler: "Maeslantkering",
           },
@@ -336,7 +336,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1953 = Watersnoodramp. 1932 = Afsluitdijk. Niet door elkaar halen — de Afsluitdijk was er al vóór de ramp." }],
           niveaus: {
-            basis: "1953.",
+            basis: "De Watersnoodramp gebeurde een paar jaar na de Tweede Wereldoorlog, die in 1945 eindigde. Welk jaartal past daarbij?",
             simpeler: "Watersnoodramp = 1953 (31 jan - 1 feb).",
             nogSimpeler: "1953",
           },
@@ -442,7 +442,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij 'welke is GEEN Deltawerk?' = Afsluitdijk. Onthoud: '32 = Afsluitdijk' / '53 = ramp' / '58+ = Deltawerken'." }],
           niveaus: {
-            basis: "Afsluitdijk (= 1932, niet Deltawerk).",
+            basis: "De Deltawerken zijn gebouwd na de ramp van 1953, in Zeeland en Zuid-Holland. Welke van deze ligt in het noorden van het land en is ouder?",
             simpeler: "Afsluitdijk = 1932 = noord. Deltawerken = 1958-1997 = zuid. Anders.",
             nogSimpeler: "Afsluitdijk",
           },

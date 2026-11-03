@@ -43,7 +43,7 @@ const steps = [
           theorie: "Toets-regel: voor woord-betekenis altijd woordenboek (Van Dale). Voor concept-uitleg encyclopedie (Wikipedia).",
           voorbeelden: [{ type: "controle", tekst: "Wat betekent 'oligarchie'? → woordenboek: 'regering door enkele personen'." }],
           basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "Woordenboek = wat het woord BETEKENT. Encyclopedie = wat het FENOMEEN is (geschiedenis, voorbeelden, etc.)." }],
-          niveaus: { basis: "Betekenis = woordenboek.", simpeler: "Voor wat een woord betekent → woordenboek.", nogSimpeler: "Woordenboek" },
+          niveaus: { basis: "Je zoekt wat een woord betekent. In welk boek staan woorden met hun uitleg?", simpeler: "Voor wat een woord betekent → woordenboek.", nogSimpeler: "Woordenboek" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
           woorden: [{ woord: "atlas", uitleg: "Kaartenboek met landen, steden, water, gebergte etc." }],
           theorie: "Voor topografie + ligging → atlas. Voor land-info (bevolking, taal) → encyclopedie.",
           voorbeelden: [{ type: "controle", tekst: "'Wat zijn de hoofdsteden van Europa?' → atlas-pagina Europa." }],
-          niveaus: { basis: "Waar ligt = atlas.", simpeler: "Voor kaarten en ligging → atlas.", nogSimpeler: "Atlas" },
+          niveaus: { basis: "Je wilt weten waar iets ligt. In welk boek staan kaarten?", simpeler: "Voor kaarten en ligging → atlas.", nogSimpeler: "Atlas" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Heb je een kaart nodig, dan pak je een atlas.",
+            basis: "Je wilt een rivier op een kaart volgen. Welke bron is een boek vol kaarten?",
             simpeler: "Wil je iets op een kaart zien, zoals een rivier door landen? Dan pak je de atlas.",
             nogSimpeler: "De atlas.",
           },
@@ -213,7 +213,7 @@ const steps = [
           theorie: "Toets-truc: vergelijk gezocht woord met trefwoorden. Eerste-trefwoord ≤ gezochte ≤ laatste-trefwoord → goede bladzijde.",
           voorbeelden: [{ type: "controle", tekst: "Trefwoorden 'app — auto'. Past 'aubergine'? 'au' = 'au', dan 'b' vs 't': b komt vóór t → aubergine < auto. Dus ja, 'aubergine' staat op deze bladzijde." }],
           basiskennis: [{ onderwerp: "Wat als woord trefwoord IS", uitleg: "Als gezochte woord exact = trefwoord, dan staat het op die bladzijde (vaak helemaal bovenaan of onderaan)." }],
-          niveaus: { basis: "Kok past tussen koers en komkommer.", simpeler: "koers < kok < komkommer = ja, kok zit ertussen.", nogSimpeler: "Kok" },
+          niveaus: { basis: "De trefwoorden bovenaan zijn het eerste en het laatste woord van de bladzijde. Welk woord past op alfabet tussen die twee?", simpeler: "koers < kok < komkommer = ja, kok zit ertussen.", nogSimpeler: "Kok" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
           theorie: "Vervoegde vorm → herleid naar hele werkwoord. Meervoud → herleid naar enkelvoud.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'gegeten' → eten. 'kinderen' → kind. 'aardigste' → aardig." }],
           basiskennis: [{ onderwerp: "Onregelmatig", uitleg: "'liep' = verleden tijd van 'lopen'. 'Was' = 'zijn'. 'Zag' = 'zien'." }],
-          niveaus: { basis: "Liep → lopen.", simpeler: "Vervoegd werkwoord → opzoeken onder hele werkwoord.", nogSimpeler: "Lopen" },
+          niveaus: { basis: "Een woordenboek geeft werkwoorden in de hele vorm (het hele werkwoord). Hoe heet het hele werkwoord bij 'liep'?", simpeler: "Vervoegd werkwoord → opzoeken onder hele werkwoord.", nogSimpeler: "Lopen" },
         },
       },
       {
@@ -247,7 +247,7 @@ const steps = [
         wrongHints: [null, "Niet — begint met 'm', andere bladzijde.", "Niet — begint met 'd'.", "Begint wel met 'o', maar de tweede letter is anders — verder weg."],
         uitlegPad: {
           stappen: [{ titel: "Eerste 3 letters vergelijken", tekst: "**'oli'** is de start. Op de bladzijde 'oliebol — olijfboom' zou 'oligarchie' staan. Andere woorden met 'mon-', 'dem-' staan op compleet andere bladzijden." }],
-          niveaus: { basis: "Oliebol — zelfde start.", simpeler: "'Oli'-woorden bij elkaar.", nogSimpeler: "Oliebol" },
+          niveaus: { basis: "Vergelijk letter voor letter met 'oligarchie'. Welk woord begint met de meeste dezelfde letters?", simpeler: "'Oli'-woorden bij elkaar.", nogSimpeler: "Oliebol" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -288,7 +288,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "tas (taa < taf < tak < tas).",
+            basis: "Begint elk woord hetzelfde? Kijk dan naar de eerste letter die verschilt: welke komt het laatst in het alfabet?",
             simpeler: "Alle ta-, dan 3e letter: a, f, k, s. S is de laatste → tas.",
             nogSimpeler: "Tas.",
           },
@@ -331,7 +331,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "radio — rand (d < k < n).",
+            basis: "'Raket' moet op alfabet tussen de twee trefwoorden vallen. Vergelijk letter voor letter: waar past 'rak'?",
             simpeler: "Rak... zit tussen rad... en ran...",
             nogSimpeler: "Radio — rand.",
           },
@@ -369,7 +369,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Enkelvoud van bomen = boom.",
+            basis: "Een woordenboek geeft zelfstandige naamwoorden in het enkelvoud. Hoe zeg je 'bomen' als het er maar één is?",
             simpeler: "Eén boom, twee bomen → zoek 'boom'.",
             nogSimpeler: "Boom.",
           },
@@ -412,7 +412,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "berg, boek, brug (e < o < r).",
+            basis: "Begint elk woord met dezelfde letter? Kijk dan naar de tweede letter en zet die op volgorde van het alfabet.",
             simpeler: "Kijk naar de 2e letter: e, o, r.",
             nogSimpeler: "Berg, boek, brug.",
           },
@@ -450,7 +450,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "IJ zoek je bij de i.",
+            basis: "In het woordenboek staat de 'ij' niet als aparte letter. Uit welke twee letters bestaat 'ij'?",
             simpeler: "ijsbeer = i + j + sbeer → bij de i.",
             nogSimpeler: "Bij de i.",
           },

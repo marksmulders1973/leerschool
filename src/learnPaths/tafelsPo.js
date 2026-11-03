@@ -203,7 +203,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 5 = 5 + 5 + 5 + 5.",
+            basis: "Het eerste getal zegt hoe vaak, het tweede getal hoe groot elk groepje is.",
             simpeler: "4 keer 5: schrijf vier keer een 5 en zet er + tussen.",
             nogSimpeler: "5 + 5 + 5 + 5",
           },
@@ -258,7 +258,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 2 (vier keer een 2).",
+            basis: "Tel hoe vaak de 2 in de plussom staat. Dat zegt hoeveel keer je de 2 neemt.",
             simpeler: "Er staan vier tweeën. Dus 4 keer 2.",
             nogSimpeler: "4 × 2",
           },
@@ -313,7 +313,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 × 6 = 18 blokjes.",
+            basis: "Elke rij heeft evenveel blokjes. Hoeveel rijen zijn er, en welke keersom hoort daarbij?",
             simpeler: "Rij 1: 6, rij 2: 12, rij 3: 18.",
             nogSimpeler: "18",
           },
@@ -364,7 +364,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 × 7 = 14 (wisselregel).",
+            basis: "Bij keersommen mag je de getallen omdraaien. Wat weet je dan eigenlijk al?",
             simpeler: "Omdraaien mag bij keer. Dus ook 14.",
             nogSimpeler: "14",
           },
@@ -419,7 +419,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3, 6, 9, 12 — steeds 3 erbij.",
+            basis: "Bij een tafel komt er steeds hetzelfde getal bij. Bij welk rijtje komt er steeds 3 bij?",
             simpeler: "Begin bij 3 en tel steeds 3 erbij.",
             nogSimpeler: "3, 6, 9, 12",
           },
@@ -451,7 +451,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Probeer ook andersom: 70 ÷ 10 = 7 (0 weghalen)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel van 10 is altijd makkelijkst — leer deze als eerste." }],
           niveaus: {
-            basis: "7 × 10 = 70 (0 erbij).",
+            basis: "Bij keer 10 zet je een 0 achter het getal.",
             simpeler: "7 keer 10 → schrijf 7 op + 0 erachter = 70.",
             nogSimpeler: "70",
           },
@@ -473,7 +473,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "8 × 5: 8 × 10 = 80, ÷ 2 = 40. Klopt: tel-stap 5, 10, 15, 20, 25, 30, 35, 40." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-5 ↔ tafel-10: 5 keer iets is altijd helft van 10 keer dat ding." }],
           niveaus: {
-            basis: "6 × 5 = 30.",
+            basis: "Keer 5 is de helft van keer 10. Reken eerst 6 × 10 uit en neem daar de helft van.",
             simpeler: "Tel 6 stappen van 5: 5,10,15,20,25,30.",
             nogSimpeler: "30",
           },
@@ -495,7 +495,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "9 × 2 = 9 + 9. Schrijf het op je vingers als nodig: 2-4-6-8-10-12-14-16-18 = 9 stapjes." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-2 leer je als eerste echte tafel — de basis voor alle andere." }],
           niveaus: {
-            basis: "9 × 2 = 18 (9 + 9).",
+            basis: "Keer 2 is hetzelfde als verdubbelen. Wat is het dubbele van 9?",
             simpeler: "9 + 9 = 18.",
             nogSimpeler: "18",
           },
@@ -553,7 +553,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 × 10 = 90 (0 erbij).",
+            basis: "Bij keer 10 zet je een 0 achter het getal.",
             simpeler: "Schrijf 9 op en zet een 0 erachter: 90.",
             nogSimpeler: "90",
           },
@@ -604,7 +604,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 × 5 = 35.",
+            basis: "Keer 5 is de helft van keer 10. Reken eerst 7 × 10 uit en neem daar de helft van.",
             simpeler: "Tel 7 stappen van 5: 5, 10, 15, 20, 25, 30, 35.",
             nogSimpeler: "35",
           },
@@ -655,7 +655,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 × 2 = 16 (8 + 8).",
+            basis: "Keer 2 is hetzelfde als verdubbelen. Wat is het dubbele van 8?",
             simpeler: "8 + 8 = 16.",
             nogSimpeler: "16",
           },
@@ -706,7 +706,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "23 — eindigt niet op 0 of 5.",
+            basis: "Kijk naar het laatste cijfer. Op welke cijfers eindigen de getallen uit de tafel van 5?",
             simpeler: "Kijk naar het laatste cijfer: alleen 23 eindigt op 3.",
             nogSimpeler: "23",
           },
@@ -748,7 +748,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "9 × 3 = 30 - 3 = 27." }],
           basiskennis: [{ onderwerp: "9-truc", uitleg: "Gebruik de 10-tafel + aftrekken voor 9-tafel." }],
           niveaus: {
-            basis: "27.",
+            basis: "Begin bij 9 × 2, die ken je misschien al. Tel er dan nog één 9 bij.",
             simpeler: "Tafel van 3 op: 3, 6, 9, 12, 15, 18, 21, 24, 27. Negende stap = 27. Of: 10×3=30, dan -3 = 27.",
             nogSimpeler: "27",
           },
@@ -806,7 +806,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 × 3 = 24.",
+            basis: "Reken eerst 8 × 2 uit. Tel er dan nog één 8 bij.",
             simpeler: "Tel 8 stappen van 3: 3, 6, 9, 12, 15, 18, 21, 24.",
             nogSimpeler: "24",
           },
@@ -852,7 +852,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "28 (= 7 × 4).",
+            basis: "Tel in sprongen van 4: 4, 8, 12, … Welk getal kom je onderweg tegen?",
             simpeler: "4, 8, 12, 16, 20, 24, 28 — 28 staat erin.",
             nogSimpeler: "28",
           },
@@ -903,7 +903,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 × 4 = 36 (dubbel van 18).",
+            basis: "Keer 4 is het dubbele van keer 2. Wat moet je dus met de 18 doen?",
             simpeler: "18 + 18 = 36.",
             nogSimpeler: "36",
           },
@@ -946,7 +946,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Top-3 lastige tafel-sommen: 7×8=56, 7×9=63, 8×9=72. Leer deze 3 expliciet — ze komen op de Doorstroomtoets vaak terug." }],
           niveaus: {
-            basis: "56.",
+            basis: "Begin bij een som die je al kent, zoals 8 × 5. Hoeveel keer 8 moet er dan nog bij?",
             simpeler: "8 × 7 = (8 × 10) − (8 × 3) = 80 − 24 = 56.",
             nogSimpeler: "56",
           },
@@ -1010,7 +1010,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 × 7 = 63.",
+            basis: "Reken eerst 10 × 7 uit. Haal er daarna één 7 af.",
             simpeler: "70 − 7 = 63.",
             nogSimpeler: "63",
           },
@@ -1061,7 +1061,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 × 6 = 36.",
+            basis: "Begin bij 5 × 6, die is makkelijk. Tel er dan nog één 6 bij.",
             simpeler: "30 + 6 = 36.",
             nogSimpeler: "36",
           },
@@ -1112,7 +1112,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "56 — want 5 + 6 = 11, geen 9.",
+            basis: "Tel de twee cijfers van elk getal bij elkaar op. Bij de tafel van 9 komt daar steeds 9 uit.",
             simpeler: "Tel de cijfers op: alleen bij 56 komt er geen 9 uit.",
             nogSimpeler: "56",
           },
@@ -1158,7 +1158,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 × 7 = 21 dagen.",
+            basis: "Elke week heeft 7 dagen. Welke keersom hoort bij 3 weken?",
             simpeler: "7, 14, 21 — drie weken.",
             nogSimpeler: "21",
           },
@@ -1213,7 +1213,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Splits het lastige getal in een **tien-deel** (× 10, 20, 30...) + een **rest-deel** (× 1, 2, 3, 5...). Tel apart, dan optellen." }],
           niveaus: {
-            basis: "150.",
+            basis: "Splits 25 in 20 en 5. Reken beide stukjes keer 6 en tel de uitkomsten op.",
             simpeler: "6 × 25 = 6 × 20 + 6 × 5 = 120 + 30 = 150.",
             nogSimpeler: "150",
           },
@@ -1265,7 +1265,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 × 13 = 60 + 18 = 78.",
+            basis: "Splits 13 in 10 en 3. Reken beide stukjes keer 6 en tel de uitkomsten op.",
             simpeler: "6 × 10 = 60, 6 × 3 = 18, samen 78.",
             nogSimpeler: "78",
           },
@@ -1316,7 +1316,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "11 × 7 = 70 + 7 = 77.",
+            basis: "11 is 10 en nog 1. Reken eerst 10 × 7 uit en tel er dan nog één 7 bij.",
             simpeler: "10 × 7 = 70, plus 7 = 77.",
             nogSimpeler: "77",
           },
@@ -1367,7 +1367,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 × 14 = 140 ÷ 2 = 70.",
+            basis: "Reken eerst 10 × 14 uit. Keer 5 is daar de helft van.",
             simpeler: "14 met 0 erachter = 140. De helft = 70.",
             nogSimpeler: "70",
           },
@@ -1418,7 +1418,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 15 = 60.",
+            basis: "Keer 4 is twee keer verdubbelen. Verdubbel 15 en verdubbel die uitkomst nog een keer.",
             simpeler: "15 + 15 = 30, 30 + 30 = 60.",
             nogSimpeler: "60",
           },
@@ -1464,7 +1464,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "(8 × 10) + (8 × 2) = 96.",
+            basis: "Bij splitsen knip je de 12 in een tiental en de rest. Let op: elk stuk moet je keer 8 doen.",
             simpeler: "80 + 16 = 96. Elk stuk keer 8.",
             nogSimpeler: "(8 × 10) + (8 × 2)",
           },

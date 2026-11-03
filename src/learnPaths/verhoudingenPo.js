@@ -71,7 +71,7 @@ const steps = [
           theorie: "GGD van 12 en 18 = 6. Beide ÷6 → 2:3.",
           voorbeelden: [{ type: "stap", tekst: "12:18 → ÷6 → 2:3. Of stap-voor-stap: ÷2 → 6:9, ÷3 → 2:3." }],
           basiskennis: [{ onderwerp: "Volgorde behouden", uitleg: "Jongens blijft eerst (12 → 2). Meisjes blijft tweede (18 → 3)." }],
-          niveaus: { basis: "De verhouding is 2 : 3.", simpeler: "Deel 12 en 18 allebei door 6: 12 ÷ 6 = 2 en 18 ÷ 6 = 3. Dus jongens : meisjes = 2 : 3.", nogSimpeler: "Jongens : meisjes = 2 : 3." },
+          niveaus: { basis: "Zoek een getal waar je 12 en 18 allebei door kunt delen. Neem het grootste getal dat bij allebei past.", simpeler: "Deel 12 en 18 allebei door 6: 12 ÷ 6 = 2 en 18 ÷ 6 = 3. Dus jongens : meisjes = 2 : 3.", nogSimpeler: "Jongens : meisjes = 2 : 3." },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
           theorie: "Verhouding-vereenvoudigen: zoek grootste deler waar beide door deelbaar zijn.",
           voorbeelden: [{ type: "stap", tekst: "6:9 → ÷3 → 2:3." }],
           basiskennis: [{ onderwerp: "Volgorde behouden", uitleg: "6 blijft eerste, 9 blijft tweede (verhouding behoudt richting)." }],
-          niveaus: { basis: "De verhouding is 2 : 3.", simpeler: "Deel 6 en 9 allebei door 3: 6 ÷ 3 = 2 en 9 ÷ 3 = 3. Dus 2 : 3.", nogSimpeler: "6 : 9 wordt 2 : 3." },
+          niveaus: { basis: "Door welk getal kun je 6 en 9 allebei delen? Deel dan allebei de getallen door dat getal.", simpeler: "Deel 6 en 9 allebei door 3: 6 ÷ 3 = 2 en 9 ÷ 3 = 3. Dus 2 : 3.", nogSimpeler: "6 : 9 wordt 2 : 3." },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "Vraag-volgorde bepaalt: 'fietsen:brommers' → 20:5 → 4:1.",
           voorbeelden: [{ type: "stap", tekst: "20:5 → ÷5 → 4:1." }],
           basiskennis: [{ onderwerp: "Niet omdraaien", uitleg: "1:4 zou brommers:fietsen zijn. Vraag = fietsen:brommers." }],
-          niveaus: { basis: "De verhouding is 4 : 1.", simpeler: "Fietsen : brommers = 20 : 5. Deel allebei door 5, dan krijg je 4 : 1. Op elke brommer staan 4 fietsen.", nogSimpeler: "Fietsen : brommers = 4 : 1." },
+          niveaus: { basis: "Schrijf eerst fietsen : brommers op met de getallen uit de vraag. Door welk getal kun je ze allebei delen?", simpeler: "Fietsen : brommers = 20 : 5. Deel allebei door 5, dan krijg je 4 : 1. Op elke brommer staan 4 fietsen.", nogSimpeler: "Fietsen : brommers = 4 : 1." },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -140,7 +140,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De verhouding is 1 : 2.",
+            basis: "Schrijf eerst rood : geel op. Deel daarna allebei de getallen door hetzelfde getal, zo groot als het kan.",
             simpeler: "4 rood en 8 geel. Deel allebei door 4: 1 rood op 2 geel, dus 1 : 2.",
             nogSimpeler: "Rood : geel = 1 : 2.",
           },
@@ -226,7 +226,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 : 5 kan niet eenvoudiger.",
+            basis: "Probeer bij elke verhouding of je beide getallen door hetzelfde getal kunt delen, zoals 2, 3 of 5. Bij welke lukt dat niet?",
             simpeler: "3 en 5 kun je niet allebei door 2, 3 of 5 delen. De andere wel.",
             nogSimpeler: "Alleen 3 : 5 kun je niet verder delen.",
           },
@@ -269,7 +269,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De jongens zijn 2/5 van de klas.",
+            basis: "Tel eerst hoeveel delen de hele klas samen is. Hoeveel van die delen zijn jongens?",
             simpeler: "2 + 3 = 5 delen. De jongens zijn 2 van die 5 delen, dus 2/5.",
             nogSimpeler: "2 van de 5 delen zijn jongens: 2/5.",
           },
@@ -312,7 +312,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De verhouding is 1 : 3.",
+            basis: "Let op de volgorde: eerst de busjes, dan de auto's. Deel daarna allebei de getallen door hetzelfde getal.",
             simpeler: "Busjes 10, auto's 30. Dat is 10 : 30. Deel allebei door 10, dan krijg je 1 : 3.",
             nogSimpeler: "Busjes : auto's = 1 : 3.",
           },
@@ -336,7 +336,7 @@ const steps = [
           theorie: "Verhoudingsdelen: A+B = aantal totaal-delen. Totaal ÷ delen = waarde per deel.",
           voorbeelden: [{ type: "stap", tekst: "1:3 in 400 mL: 1+3=4 delen. 400÷4=100 per deel. Siroop=100, water=300." }],
           basiskennis: [{ onderwerp: "Check: 100+300=400 ✓", uitleg: "Altijd checken: som delen = totaal." }],
-          niveaus: { basis: "100 mL.", simpeler: "1:3 = 4 delen. 400÷4=100 per deel. Siroop=1 deel=100 mL.", nogSimpeler: "100" },
+          niveaus: { basis: "Tel siroop en water bij elkaar op: hoeveel delen zijn het samen? Reken dan uit hoeveel mL één deel is.", simpeler: "1:3 = 4 delen. 400÷4=100 per deel. Siroop=1 deel=100 mL.", nogSimpeler: "100" },
         },
       },
       {
@@ -350,7 +350,7 @@ const steps = [
           theorie: "Stappen: 1) tel delen op. 2) deel totaal. 3) keer eigen aantal delen.",
           voorbeelden: [{ type: "stap", tekst: "2:5 in 28: 7 delen. 28÷7=4. Eerste=2×4=8. Tweede=5×4=20." }],
           basiskennis: [{ onderwerp: "Check 8+20=28 ✓", uitleg: "Som controleren." }],
-          niveaus: { basis: "8.", simpeler: "2+5=7 delen. 28÷7=4 per deel. Eerste groep = 2 × 4 = 8 leerlingen.", nogSimpeler: "8" },
+          niveaus: { basis: "Hoeveel delen zijn de twee groepen samen? Reken uit hoeveel leerlingen er in één deel zitten.", simpeler: "2+5=7 delen. 28÷7=4 per deel. Eerste groep = 2 × 4 = 8 leerlingen.", nogSimpeler: "8" },
         },
       },
       {
@@ -364,7 +364,7 @@ const steps = [
           theorie: "Verhouding 3:1 = 3 delen zand + 1 deel cement = 4 totaal.",
           voorbeelden: [{ type: "stap", tekst: "3:1 in 20kg: 4 delen. 20÷4=5 per deel. Zand=3×5=15. Cement=1×5=5." }],
           basiskennis: [{ onderwerp: "Check 15+5=20 ✓", uitleg: "Som controleren." }],
-          niveaus: { basis: "5 kg.", simpeler: "3+1=4 delen. 20÷4=5 per deel. Cement = 1 deel = 5 kg.", nogSimpeler: "5" },
+          niveaus: { basis: "Hoeveel delen zijn zand en cement samen? Reken uit hoeveel kg één deel weegt.", simpeler: "3+1=4 delen. 20÷4=5 per deel. Cement = 1 deel = 5 kg.", nogSimpeler: "5" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -405,7 +405,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "200 mL.",
+            basis: "Hoeveel delen heeft het hele glas? Reken uit hoeveel mL één deel is en kijk hoeveel delen water zijn.",
             simpeler: "5 delen. 250 ÷ 5 = 50. Water is 4 delen: 4 × 50 = 200 mL.",
             nogSimpeler: "200",
           },
@@ -448,7 +448,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16.",
+            basis: "Tel de delen van rood en groen bij elkaar op. Hoeveel snoepjes zitten er in één deel?",
             simpeler: "9 delen. 36 ÷ 9 = 4. Groen = 4 delen = 16.",
             nogSimpeler: "16",
           },
@@ -491,7 +491,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 18.",
+            basis: "Hoeveel delen is het geld samen? Reken uit hoeveel euro één deel is en kijk hoeveel delen Ali krijgt.",
             simpeler: "4 delen. € 24 ÷ 4 = € 6. Ali krijgt 3 delen: € 18.",
             nogSimpeler: "€ 18",
           },
@@ -534,7 +534,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5.",
+            basis: "Tel begeleiders en kinderen in delen bij elkaar op. Hoeveel mensen horen bij één deel?",
             simpeler: "7 delen. 35 ÷ 7 = 5. Begeleiders = 1 deel = 5.",
             nogSimpeler: "5",
           },
@@ -577,7 +577,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1/5.",
+            basis: "Hoeveel delen is alle verf samen? Hoeveel van die delen zijn blauw?",
             simpeler: "4 + 1 = 5 delen. Blauw is 1 van de 5 → 1/5.",
             nogSimpeler: "1/5",
           },
@@ -620,7 +620,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 kg.",
+            basis: "Hoeveel delen weegt het mengsel samen? Reken uit hoeveel kg één deel is en kijk hoeveel delen grind zijn.",
             simpeler: "5 delen. 50 ÷ 5 = 10. Grind = 3 delen = 30 kg.",
             nogSimpeler: "30",
           },
@@ -1066,7 +1066,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "300 g.",
+            basis: "Reken eerst uit hoeveel gram rijst één persoon krijgt. Neem dat daarna zo vaak als er mensen mee-eten.",
             simpeler: "Per persoon 50 g. 6 × 50 = 300 g.",
             nogSimpeler: "300",
           },
@@ -1109,7 +1109,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "150 g.",
+            basis: "Reken eerst uit hoeveel gram kaas er bij één persoon hoort.",
             simpeler: "Per persoon 50 g. 3 × 50 = 150 g.",
             nogSimpeler: "150",
           },
@@ -1152,7 +1152,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "50 g.",
+            basis: "Per persoon betekent: verdeel het gehakt eerlijk over alle personen. Welke som hoort daarbij?",
             simpeler: "300 g verdelen over 6 personen: 300 ÷ 6 = 50 g.",
             nogSimpeler: "50",
           },
@@ -1410,7 +1410,7 @@ const steps = [
           theorie: "Of via 100-stappen: 750 mL = 7,5 × 100 mL. €3,75 ÷ 7,5 = €0,50 per 100 mL.",
           voorbeelden: [{ type: "stap", tekst: "€3,75 ÷ 7,5 = €0,50 per 100 mL." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "€0,50 × 7,5 = €3,75 ✓." }],
-          niveaus: { basis: "€0,50.", simpeler: "750 mL = 7,5 × 100 mL. Prijs per 100 mL = €3,75 ÷ 7,5 = €0,50.", nogSimpeler: "€0,50" },
+          niveaus: { basis: "Hoe vaak past 100 mL in de hele fles? Deel de prijs door dat getal.", simpeler: "750 mL = 7,5 × 100 mL. Prijs per 100 mL = €3,75 ÷ 7,5 = €0,50.", nogSimpeler: "€0,50" },
         },
       },
       {
@@ -1424,7 +1424,7 @@ const steps = [
           theorie: "Verhoudingstabel: zelfde × aan beide kanten.",
           voorbeelden: [{ type: "tabel", tekst: "3:5. ×8 → 24:40. Beide ×8." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "24:40 ÷ 8 = 3:5 ✓." }],
-          niveaus: { basis: "40.", simpeler: "Rood: 3 → 24 = ×8 (24÷3). Blauw: 5×8=40.", nogSimpeler: "40" },
+          niveaus: { basis: "Met welk getal doe je 3 keer om bij 24 te komen? Doe hetzelfde met de 5.", simpeler: "Rood: 3 → 24 = ×8 (24÷3). Blauw: 5×8=40.", nogSimpeler: "40" },
         },
       },
       {
@@ -1438,7 +1438,7 @@ const steps = [
           theorie: "Recept omrekenen: ÷oude aantal × nieuwe aantal.",
           voorbeelden: [{ type: "stap", tekst: "4=300g. 1=75g. 10=750g." }],
           basiskennis: [{ onderwerp: "Niet ×2", uitleg: "10/4 = 2,5 (niet 2). Per-persoon-truc voorkomt dit." }],
-          niveaus: { basis: "750 g.", simpeler: "Per persoon: 300÷4 = 75g. 10 mensen: 10×75 = 750g.", nogSimpeler: "750" },
+          niveaus: { basis: "Reken eerst uit hoeveel gram meel één persoon nodig heeft.", simpeler: "Per persoon: 300÷4 = 75g. 10 mensen: 10×75 = 750g.", nogSimpeler: "750" },
         },
       },
       {
@@ -1452,7 +1452,7 @@ const steps = [
           theorie: "Kaart → werkelijk: × schaal-getal, dan eenheid omzetten.",
           voorbeelden: [{ type: "stap", tekst: "9 cm × 200 = 1800 cm. 1800÷100 = 18 m." }],
           basiskennis: [{ onderwerp: "cm → m", uitleg: "100 cm = 1 m. 1800 cm = 18 m." }],
-          niveaus: { basis: "18 m.", simpeler: "9 cm × 200 (schaal) = 1800 cm = 18 m werkelijk.", nogSimpeler: "18 m" },
+          niveaus: { basis: "Neem de lengte op de tekening keer 200. Reken de centimeters die je krijgt daarna om naar meters.", simpeler: "9 cm × 200 (schaal) = 1800 cm = 18 m werkelijk.", nogSimpeler: "18 m" },
         },
       },
       {
@@ -1490,7 +1490,7 @@ const steps = [
             { type: "stap", tekst: "Limonade voor 4 glazen: 100 ml siroop. Voor 10 glazen: 10÷4 = 2,5. 100 × 2,5 = 250 ml." },
           ],
           basiskennis: [{ onderwerp: "Alles aanpassen", uitleg: "Niet ALLEEN meel × 3. Ook ei + melk × 3. Anders verandert smaak/textuur." }],
-          niveaus: { basis: "600 g.", simpeler: "12 ÷ 4 = 3 (factor). Meel: 200 × 3 = 600 g.", nogSimpeler: "600 g" },
+          niveaus: { basis: "Hoe vaak passen 4 pannenkoeken in 12 pannenkoeken? Neem het meel net zo vaak.", simpeler: "12 ÷ 4 = 3 (factor). Meel: 200 × 3 = 600 g.", nogSimpeler: "600 g" },
         },
       },
       {
@@ -1514,7 +1514,7 @@ const steps = [
             { type: "stap", tekst: "Stad-kaart 1:10.000. Park 12 cm = 12×10.000 = 120.000 cm = 1,2 km." },
           ],
           basiskennis: [{ onderwerp: "Eenheid in antwoord", uitleg: "Veel Toets-fouten = vergeten cm naar m of km om te zetten. Antwoord 200.000 cm = 2 km — gewone weg-lengte." },],
-          niveaus: { basis: "2 km.", simpeler: "8 cm × 25.000 = 200.000 cm. ÷100 = 2.000 m. ÷1.000 = 2 km.", nogSimpeler: "2 km" },
+          niveaus: { basis: "Neem de 8 cm keer 25.000. Reken die centimeters daarna om naar meters en dan naar kilometers.", simpeler: "8 cm × 25.000 = 200.000 cm. ÷100 = 2.000 m. ÷1.000 = 2 km.", nogSimpeler: "2 km" },
         },
       },
       {
@@ -1538,7 +1538,7 @@ const steps = [
             { type: "stap", tekst: "3 boeken kosten €18. 1 boek = €6. 7 boeken = €42." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen vermenigvuldigen", uitleg: "Belangrijke stap: EERST prijs per eenheid berekenen, DAN vermenigvuldigen. Niet vergeten." }],
-          niveaus: { basis: "€30.", simpeler: "€12 voor 4 m² = €3/m². Voor 10 m²: 10 × €3 = €30.", nogSimpeler: "€30" },
+          niveaus: { basis: "Reken eerst uit wat de verf voor 1 m² kost.", simpeler: "€12 voor 4 m² = €3/m². Voor 10 m²: 10 × €3 = €30.", nogSimpeler: "€30" },
         },
       },
       { q: "In een klas van **28 leerlingen** zitten **12 jongens**. Wat is de verhouding jongens : meisjes?", options: ["12 : 16","16 : 12","12 : 28","28 : 12"], answer: 0, wrongHints: [null, "Kijk naar de volgorde in de vraag: wat komt eerst?", "Is 28 het aantal meisjes? Hoeveel meisjes zijn er?", "Is 28 het aantal meisjes? En welk getal hoort vooraan?"] },

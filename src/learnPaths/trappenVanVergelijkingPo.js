@@ -44,7 +44,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "-er erbij", tekst: "De vergrotende trap krijgt -er: groot → groter." }],
           niveaus: {
-            basis: "groot + -er = groter.",
+            basis: "De vergrotende trap gebruik je als je twee dingen met elkaar vergelijkt. Welke uitgang plak je dan achter het woord?",
             simpeler: "Welke vorm betekent 'meer groot dan iets anders'?",
             nogSimpeler: "groot + er = ?",
           },
@@ -58,7 +58,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "-st erbij", tekst: "De overtreffende trap krijgt -st: mooi → mooist (het meest mooi)." }],
           niveaus: {
-            basis: "mooi + -st = mooist.",
+            basis: "De overtreffende trap gebruik je als iets boven alle anderen uitsteekt. Welke uitgang hoort daarbij?",
             simpeler: "Welke vorm betekent 'het allermooist'?",
             nogSimpeler: "mooi + st = ?",
           },
@@ -100,7 +100,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Altijd drie trappen", tekst: "Er zijn altijd drie trappen: stellend (de gewone vorm), vergrotend (-er) en overtreffend (-st)." }],
           niveaus: {
-            basis: "Drie trappen: stellend, vergrotend, overtreffend.",
+            basis: "Neem één woord, zoals 'klein'. Hoe zeg je het gewoon, hoe als je twee dingen vergelijkt, en hoe als iets boven alles uitsteekt? Tel de vormen.",
             simpeler: "Tel ze: gewoon, meer, het meest. Dat zijn er …?",
             nogSimpeler: "Snel, sneller, snelst — hoeveel woorden?",
           },
@@ -114,7 +114,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "slim + -mer", tekst: "De vergrotende trap van 'slim' is 'slimmer'. De m verdubbelt omdat de klank kort is." }],
           niveaus: {
-            basis: "slim + -mer = slimmer (dubbele m door korte klank).",
+            basis: "Welke uitgang krijgt de vergrotende trap? Let op: 'slim' heeft een korte klank, dus wat gebeurt er met de laatste letter?",
             simpeler: "Welke vorm betekent 'slimmer dan iemand anders'?",
             nogSimpeler: "slim + mer = ?",
           },
@@ -134,7 +134,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De stellende trap van 'langst' is 'lang'.",
+            basis: "De stellende trap is de gewone vorm van het woord, zonder uitgang. Welke letters haal je van 'langst' af?",
             simpeler: "Haal de -st eraf: welke gewone vorm blijft er over?",
             nogSimpeler: "lang, langer, langst. Welke is de gewone vorm?",
           },
@@ -153,7 +153,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "goed → beter → best is onregelmatig.",
+            basis: "Maak bij elk woord de trappen met -er en -st. Bij welk woord klinkt dat raar en gebruik je heel andere woorden?",
             simpeler: "Bij welk woord zeg je niet 'woord + er', maar iets heel anders?",
             nogSimpeler: "Zeg je 'goeder' of 'beter'?",
           },
@@ -177,7 +177,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een woord met -st staat in de overtreffende trap.",
+            basis: "Kijk naar het einde van het woord: -er hoort bij de ene trap, -st bij een andere. Welke uitgang heeft 'zwaarst'?",
             simpeler: "Eindigt 'zwaarst' op -er of op -st?",
             nogSimpeler: "zwaar, zwaarder, zwaarst. Welke trap is de laatste?",
           },
@@ -206,7 +206,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vergelijken met 'dan' → -er", tekst: "Je vergelijkt Tom en Sara, met 'dan' erbij. Dan gebruik je de vergrotende trap: langer." }],
           niveaus: {
-            basis: "Bij 'dan' hoort de -er-vorm: langer.",
+            basis: "Je vergelijkt hier twee mensen en er staat 'dan' in de zin. Welke trap gebruik je dan, en welke uitgang hoort daarbij?",
             simpeler: "Twee mensen vergelijken met 'dan' → welke vorm?",
             nogSimpeler: "lang + er = ?",
           },
@@ -220,7 +220,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'groter dan'", tekst: "De vergrotende trap gaat samen met 'dan': groter dan, sneller dan." }],
           niveaus: {
-            basis: "Bij de vergrotende trap hoort 'dan'.",
+            basis: "Maak zelf een zin waarin je twee honden vergelijkt: 'Max is groter ... Bobbie.' Welk woordje zet je op de puntjes?",
             simpeler: "Zeg je 'groter dan' of 'groter als'? Het juiste is 'dan'.",
             nogSimpeler: "groter … die? (dan/als — het juiste is 'dan')",
           },
@@ -387,7 +387,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "het meest → -st(e)", tekst: "Eén berg is het hoogst van allemaal → overtreffende trap. Bij 'de berg' wordt het 'de hoogste berg'." }],
           niveaus: {
-            basis: "De hoogste berg = overtreffende trap met -ste.",
+            basis: "Deze berg is hoger dan alle andere bergen van Nederland. Welke trap gebruik je dan, en krijgt het woord na 'de' nog een extra letter?",
             simpeler: "Welke vorm betekent 'het allerhoogst'?",
             nogSimpeler: "hoog + ste = ?",
           },
@@ -401,7 +401,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'het …st'", tekst: "'Het snelst' betekent het meest snel van allemaal → overtreffende trap." }],
           niveaus: {
-            basis: "'het snelst' is de overtreffende trap.",
+            basis: "De overtreffende trap zeg je als iets alle anderen voorbijgaat. Welke uitgang heeft die trap, en welk woordje staat er vaak voor?",
             simpeler: "Welke betekent 'het allersnelst'?",
             nogSimpeler: "Welke heeft 'het' + -st?",
           },
@@ -551,7 +551,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Korte klank → dubbele letter", tekst: "'Dik' heeft een korte i-klank, dus de k verdubbelt: dik → dikker." }],
           niveaus: {
-            basis: "dik + -er met dubbele k = dikker.",
+            basis: "Welke uitgang krijgt de vergrotende trap? 'Dik' heeft een korte klank: wat doe je met de laatste medeklinker om die klank kort te houden?",
             simpeler: "Schrijf je 'diker' of 'dikker'? De korte klank vraagt dubbel.",
             nogSimpeler: "dik + ker = ?",
           },
@@ -565,7 +565,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vergelijken met 'dan'", tekst: "Je vergelijkt twee dieren met 'dan' → vergrotende trap: groter." }],
           niveaus: {
-            basis: "groter dan = vergrotende trap.",
+            basis: "Er staat 'dan' in de zin en je vergelijkt twee dieren. Welke trap hoort daarbij?",
             simpeler: "Welke vorm hoort bij 'dan'?",
             nogSimpeler: "groot + er = ?",
           },
@@ -579,7 +579,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: weinig → minder → minst", tekst: "'Weinig' is onregelmatig: minder (vergrotend), minst (overtreffend)." }],
           niveaus: {
-            basis: "weinig → minder → minst.",
+            basis: "'Weinig' is onregelmatig: de trappen lijken niet op het gewone woord. Kijk naar 'minder' en bedenk welke uitgang de overtreffende trap krijgt.",
             simpeler: "Wat is het minst van weinig: 'weinigst' of 'minst'?",
             nogSimpeler: "Na 'minder' komt …?",
           },
@@ -593,7 +593,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "het …st van alle", tekst: "Het jachtluipaard is het meest snel van alle landdieren → overtreffende trap: het snelst." }],
           niveaus: {
-            basis: "'het snelst' = overtreffende trap.",
+            basis: "Het jachtluipaard is sneller dan alle andere landdieren. Welke trap hoort daarbij, en welke uitgang krijgt die na 'het'?",
             simpeler: "Welke vorm betekent 'het allersnelst'?",
             nogSimpeler: "snel + st = ?",
           },
@@ -607,7 +607,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Korte klank → dubbele letter", tekst: "'Nat' heeft een korte a-klank, dus de t verdubbelt: nat → natter." }],
           niveaus: {
-            basis: "nat + -ter (dubbele t) = natter.",
+            basis: "Welke uitgang krijgt de vergrotende trap? 'Nat' heeft een korte klank: wat doe je met de laatste letter om die klank kort te houden?",
             simpeler: "Schrijf je 'nater' of 'natter'? De korte klank vraagt dubbel.",
             nogSimpeler: "nat + ter = ?",
           },
@@ -640,7 +640,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: goed → beter → best", tekst: "'Goed' is onregelmatig. De rij is: goed (stellend), beter (vergrotend), best (overtreffend)." }],
           niveaus: {
-            basis: "goed → beter → best. Uit je hoofd leren.",
+            basis: "'Goed' is onregelmatig: het rijtje leer je uit je hoofd. Kijk naar 'beter' en bedenk welke uitgang de overtreffende trap krijgt.",
             simpeler: "Na 'beter' komt …?",
             nogSimpeler: "goed, beter, …?",
           },
@@ -660,7 +660,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "de jongste = overtreffende trap, met -e.",
+            basis: "Eén broer is jonger dan de twee anderen. Welke trap is dat, en welke letter komt erbij omdat er 'de' voor staat?",
             simpeler: "Is Joep jonger dan één broer, of de jongste van allemaal?",
             nogSimpeler: "jong, jonger, …?",
           },

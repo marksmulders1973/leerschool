@@ -28,7 +28,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie heeft het koud?", tekst: "'Hij' is een persoon die het koud heeft. In de zin ervoor staat 'Tom'. 'Hij' verwijst dus naar Tom." }],
           niveaus: {
-            basis: "'Hij' verwijst naar de persoon ervoor: Tom.",
+            basis: "Zoek in de zin vóór 'Hij' een persoon. Wie heeft het koud?",
             simpeler: "Wie pakte er een jas omdat hij het koud had?",
             nogSimpeler: "Over wie gaat het: Tom of de jas?",
           },
@@ -56,7 +56,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Welk woord wijst terug?", tekst: "'Hij' is het korte woord dat terugwijst naar 'de hond'. Dat is het verwijswoord." }],
           niveaus: {
-            basis: "'Hij' is het verwijswoord; het verwijst naar de hond.",
+            basis: "Een verwijswoord is een kort woord dat terugwijst naar iets wat al genoemd is. Welk woord in de tweede zin doet dat?",
             simpeler: "Welk woord vervangt 'de hond' in de tweede zin?",
             nogSimpeler: "Welk woordje staat er in plaats van 'de hond'?",
           },
@@ -84,7 +84,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie is er laat?", tekst: "'Ze' is een persoon die fietst en laat is. In de zin ervoor staat 'Sara'." }],
           niveaus: {
-            basis: "'Ze' verwijst naar de persoon ervoor: Sara.",
+            basis: "Kijk in de eerste zin: wie fietst er naar school? 'Ze' wijst terug naar die persoon.",
             simpeler: "Wie fietst er naar school?",
             nogSimpeler: "Over wie gaat 'ze': Sara of de school?",
           },
@@ -98,7 +98,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zelfstandig naamwoord vs verwijswoord", tekst: "'Tafel' is een gewoon ding (zelfstandig naamwoord). 'Hij, die, het' wijzen terug naar iets — dat zijn verwijswoorden." }],
           niveaus: {
-            basis: "'Tafel' is een ding zelf, geen verwijswoord.",
+            basis: "Een verwijswoord wijst terug naar iets anders. Welk woord is zelf een ding en wijst nergens naar terug?",
             simpeler: "Welk woord noemt een ding, in plaats van ernaar terug te wijzen?",
             nogSimpeler: "Drie woorden wijzen terug; welk woord is gewoon een ding?",
           },
@@ -142,7 +142,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Die' is het verwijswoord; het verwijst naar de pen.",
+            basis: "Zoek het korte woord in de tweede zin dat in de plaats staat van een woord uit de eerste zin.",
             simpeler: "Welk woordje staat in de tweede zin in plaats van 'de pen'?",
             nogSimpeler: "Welk kort woordje vervangt 'de pen'?",
           },
@@ -194,7 +194,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie leest en vindt het spannend?", tekst: "'Zij' is een persoon. In de zin ervoor staat 'Lisa'. 'Zij' verwijst dus naar Lisa." }],
           niveaus: {
-            basis: "'Zij' verwijst naar de persoon ervoor: Lisa.",
+            basis: "Kijk in de eerste zin: wie leest er? 'Zij' wijst terug naar een persoon.",
             simpeler: "Wie is er aan het lezen?",
             nogSimpeler: "Over wie gaat 'zij': Lisa of het boek?",
           },
@@ -208,7 +208,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat vindt ze spannend?", tekst: "Ze vindt het boek spannend. 'Het' verwijst naar het boek (een 'het'-woord)." }],
           niveaus: {
-            basis: "'Het' verwijst naar het boek.",
+            basis: "Wat kan spannend zijn om te lezen? Zoek dat woord in de eerste zin.",
             simpeler: "Wat leest Lisa, dat ze spannend vindt?",
             nogSimpeler: "Waar gaat 'het' over: het boek of Lisa?",
           },
@@ -236,7 +236,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee verwijswoorden", tekst: "'Hij' = opa (die gebruikt). 'Hem' = de fiets (die gebruikt wórdt). 'Hem' verwijst dus naar de fiets." }],
           niveaus: {
-            basis: "'Hem' verwijst naar de fiets; 'hij' naar opa.",
+            basis: "'Hij' is opa. Wat gebruikt opa elke dag? Zoek dat woord in de eerste zin.",
             simpeler: "Wat gebruikt opa elke dag?",
             nogSimpeler: "Wat wordt er gebruikt: opa of de fiets?",
           },
@@ -369,7 +369,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat was er spannend?", tekst: "De film was spannend. 'Die' verwijst naar de film (een 'de'-woord)." }],
           niveaus: {
-            basis: "'Die' verwijst naar de film.",
+            basis: "Wat kan spannend zijn? Zoek in de eerste zin het ding dat je gezien hebt.",
             simpeler: "Wat heb je gezien dat spannend was?",
             nogSimpeler: "Waar gaat 'die' over: de film of gisteren?",
           },
@@ -383,7 +383,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat moet je vastbinden?", tekst: "Je bindt het touw vast. 'Dat' verwijst naar het touw (een 'het'-woord, dus 'dat')." }],
           niveaus: {
-            basis: "'Dat' verwijst naar het touw.",
+            basis: "Wat kun je goed vastbinden? Zoek dat ding in de eerste zin.",
             simpeler: "Wat moet er goed worden vastgebonden?",
             nogSimpeler: "Bind je het touw of de kast vast?",
           },
@@ -529,7 +529,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie hebben plezier?", tekst: "'Ze' (meervoud) verwijst naar de kinderen, die in het park spelen." }],
           niveaus: {
-            basis: "'Ze' verwijst naar de kinderen.",
+            basis: "'Ze' gaat hier over meer dan één. Wie spelen er in de eerste zin?",
             simpeler: "Wie zijn er aan het spelen met plezier?",
             nogSimpeler: "Over wie gaat 'ze': de kinderen of het park?",
           },
@@ -557,7 +557,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Waarmee schrijft hij?", tekst: "Hij schrijft met het krijtje. 'Daarmee' verwijst naar het krijtje." }],
           niveaus: {
-            basis: "'Daarmee' verwijst naar het krijtje (het middel).",
+            basis: "'Daarmee' betekent 'met dat ding'. Waarmee kun je op een bord schrijven?",
             simpeler: "Welk voorwerp gebruikt hij om te schrijven?",
             nogSimpeler: "Waarmee schrijf je op een bord: met het krijtje of met het bord?",
           },
@@ -571,7 +571,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Waar is ze blij mee?", tekst: "Ze is blij met de telefoon. 'Er … mee' verwijst naar de telefoon." }],
           niveaus: {
-            basis: "'Er … mee' verwijst naar de telefoon.",
+            basis: "'Er ... mee' betekent 'met dat ding'. Wat heeft de zus gekocht in de eerste zin?",
             simpeler: "Wat heeft ze gekocht waar ze blij mee is?",
             nogSimpeler: "Waar is je zus blij mee: de telefoon of het kopen?",
           },
@@ -585,7 +585,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie oefenen er?", tekst: "'Ze' (meervoud) verwijst naar de meisjes, die zingen en oefenen." }],
           niveaus: {
-            basis: "'Ze' verwijst naar de meisjes.",
+            basis: "'Ze' gaat hier over meer dan één persoon. Wie zingen er in de eerste zin?",
             simpeler: "Wie zingen er en oefenen elke week?",
             nogSimpeler: "Over wie gaat 'ze': de meisjes of het koor?",
           },
@@ -599,7 +599,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat is er ingepakt?", tekst: "Tom pakte het cadeau in. 'Het' verwijst naar het cadeau ('hij' = Tom)." }],
           niveaus: {
-            basis: "'Het' verwijst naar het cadeau.",
+            basis: "Wat kun je inpakken? Zoek dat ding in de eerste zin.",
             simpeler: "Wat heeft Tom ingepakt?",
             nogSimpeler: "Wat is er ingepakt: Tom of het cadeau?",
           },
@@ -613,7 +613,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Waar bouwden jullie?", tekst: "'Daar' wijst naar een plaats: het strand. Op het strand bouwden jullie het zandkasteel." }],
           niveaus: {
-            basis: "'Daar' verwijst naar de plaats: het strand.",
+            basis: "'Daar' wijst naar een plek. Naar welke plek gingen ze in de eerste zin?",
             simpeler: "Op welke plek bouwden jullie het zandkasteel?",
             nogSimpeler: "Waar gaat 'daar' over: het strand (plek) of het zandkasteel?",
           },
@@ -633,7 +633,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Ze' verwijst naar de koeien.",
+            basis: "Wie roept, en wie wordt er geroepen? 'Ze' gaat over meer dan één.",
             simpeler: "Wie worden er geroepen en komen naar de stal?",
             nogSimpeler: "Wie komen er: de koeien of de stal?",
           },
@@ -652,7 +652,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Die' verwijst naar de brief.",
+            basis: "Wat kun je drie keer lezen? Zoek dat ding in de eerste zin.",
             simpeler: "Wat kun je drie keer lezen?",
             nogSimpeler: "Lees je een brief of een tante?",
           },

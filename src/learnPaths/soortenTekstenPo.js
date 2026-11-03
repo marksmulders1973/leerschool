@@ -28,7 +28,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Informeren = laten weten", tekst: "Een informatieve tekst geeft je informatie: hij wil je iets laten weten of uitleggen." }],
           niveaus: {
-            basis: "Een tekst die uitlegt/informeert = informatieve tekst.",
+            basis: "Kijk naar wat de tekst wil doen: iets uitleggen, een verhaal vertellen, je overtuigen of je stappen laten volgen. Welk doel past bij 'iets laten weten'?",
             simpeler: "Lees je het om iets te wéten of om iets te dóén? Om te weten → informatief.",
             nogSimpeler: "Welk woord lijkt op 'informatie'?",
           },
@@ -89,7 +89,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Feiten over de natuur = informatief", tekst: "Een schoolboek-tekst legt uit hoe de wereld werkt. Je leert er iets van → informatieve tekst." }],
           niveaus: {
-            basis: "Uitleg over de natuur (feiten) = informatieve tekst.",
+            basis: "Vraag je af wat de tekst wil: een verhaal vertellen, je overtuigen, je iets laten doen, of je feiten uitleggen?",
             simpeler: "Leer je hier iets nieuws over de ruimte?",
             nogSimpeler: "Geeft de tekst je kennis, of vermaak?",
           },

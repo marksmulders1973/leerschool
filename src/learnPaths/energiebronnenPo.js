@@ -47,7 +47,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Fossiel = OUD (uit oude tijd). Duurzaam = NIEUW (kan elk moment weer komen)." }],
           niveaus: {
-            basis: "Fossiel = aardolie, aardgas, steenkool. Duurzaam = zon, wind, water.",
+            basis: "Fossiel betekent dat het heel lang geleden onder de grond is ontstaan uit resten van planten en dieren. Welke energiebron moet je uit de grond halen?",
             simpeler: "Olie/gas/kool = uit oude planten = fossiel.",
             nogSimpeler: "Olie/gas/kool = fossiel.",
           },
@@ -122,7 +122,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Groningen-gas: ontdekt 1959, gestopt 2024 wegens aardbevingen. Politiek en ethisch issue — 'energie vs. veiligheid bewoners'." }],
           niveaus: {
-            basis: "In 2024 ging het Groningen-gasveld voorgoed dicht, omdat de gaswinning aardbevingen veroorzaakte.",
+            basis: "Denk aan de aardbevingen in Groningen waar mensen lang over klaagden: ging het gasveld lang geleden dicht, pas in de toekomst, of nog maar kort geleden?",
             simpeler: "De gaskraan ging in oktober 2023 dicht. In 2024 besloot de regering dat het veld nooit meer opengaat.",
             nogSimpeler: "In 2024.",
           },
@@ -205,7 +205,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "OFFshore = OFF-kust = op zee. ON-shore = ON-land. Engelse termen, ook NL gebruikt." }],
           niveaus: {
-            basis: "Op zee.",
+            basis: "Het Engelse 'shore' betekent kust en 'off' betekent weg van. Waar ben je als je een eind van de kust af bent?",
             simpeler: "Windpark in zee (offshore = 'van de kust'), waar wind harder waait.",
             nogSimpeler: "Op zee",
           },
@@ -247,7 +247,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Kernenergie = URANIUM + SPLIJTEN + WARMTE. Niet verbranden (dat is fossiel). Niet weer-afhankelijk (zoals wind/zon)." }],
           niveaus: {
-            basis: "Splijten van uranium-atomen.",
+            basis: "Het woord 'kern' wijst naar het binnenste van een atoom, het kleinste deeltje van een stof. Welke optie gaat over atomen?",
             simpeler: "Uranium-atomen breken → veel warmte → water kookt → stoom → stroom.",
             nogSimpeler: "Uranium splijten",
           },

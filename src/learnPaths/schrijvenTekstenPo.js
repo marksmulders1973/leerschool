@@ -646,7 +646,7 @@ const steps = [
           theorie: "Toets-tip: tel woorden. Past je samenvatting niet in 20-30%? Schrap voorbeelden en details.",
           voorbeelden: [{ type: "controle", tekst: "300-woord tekst → ~75 woord samenvatting." }],
           basiskennis: [{ onderwerp: "Niet te kort", uitleg: "1 zin = geen samenvatting, maar slogan. Verlies van nuance." }],
-          niveaus: { basis: "Een goede samenvatting is ongeveer 20-30% van de tekst: ongeveer een kwart.", simpeler: "Een samenvatting is veel korter dan de tekst, maar de belangrijkste punten staan er nog in.", nogSimpeler: "De samenvatting is veel korter, maar niet zo kort dat je belangrijke punten mist." },
+          niveaus: { basis: "Een samenvatting is veel korter dan de tekst, maar alle hoofdpunten staan er nog in. Welk deel van de tekst past daarbij: bijna alles, een klein stuk of maar één zin?", simpeler: "Een samenvatting is veel korter dan de tekst, maar de belangrijkste punten staan er nog in.", nogSimpeler: "De samenvatting is veel korter, maar niet zo kort dat je belangrijke punten mist." },
         },
       },
       {

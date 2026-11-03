@@ -267,7 +267,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Een plattegrond van je slaapkamer met schaal 1 : 50 laat je bed als 4 cm zien — vermenigvuldig met 50 om de echte lengte te vinden." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigen bij kaart → echt", uitleg: "De richting 'van klein naar groot' hoort bij vermenigvuldigen, niet bij delen." }],
           niveaus: {
-            basis: "5 × 100 = 500 cm.",
+            basis: "Bij schaal 1 : 100 is alles in het echt 100 keer zo groot. Vermenigvuldig de kaartmaat dus met het getal na de dubbele punt.",
             simpeler: "Vermenigvuldig de kaart-afstand met 100.",
             nogSimpeler: "5 × 100 = ?",
           },
@@ -288,7 +288,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Op een plattegrond van het schoolplein met schaal 1 : 300 meet je een pad van 2 cm — na het vermenigvuldigen reken je de uitkomst nog om naar meter." }],
           basiskennis: [{ onderwerp: "cm naar m", uitleg: "100 centimeter is gelijk aan 1 meter." }],
           niveaus: {
-            basis: "3 × 1.000 = 3.000 cm = 30 m.",
+            basis: "Vermenigvuldig eerst de kaartmaat met het getal na de dubbele punt, dan heb je centimeters. Hoeveel cm gaan er in 1 meter?",
             simpeler: "3.000 cm omrekenen naar meter: deel door 100.",
             nogSimpeler: "3.000 ÷ 100 = ?",
           },
@@ -514,7 +514,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 cm = 20 m, dus 9 cm = 180 m.",
+            basis: "Zoek eerst uit hoeveel meter 1 cm op deze plattegrond is (100 cm = 1 m). Hoe vaak past dat in de lengte op de plattegrond?",
             simpeler: "Hoeveel meter is 1 cm? Doe dat 9 keer.",
             nogSimpeler: "9 × 20 m = ?",
           },
@@ -594,7 +594,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Wil je een tekening maken van je huis op schaal 1 : 100, dan deel je elke echte muurlengte door honderd om de lengte op papier te vinden." }],
           basiskennis: [{ onderwerp: "Echt → kaart is delen", uitleg: "Van groot naar klein ga je bij schaalsommen altijd delen door het schaalgetal." }],
           niveaus: {
-            basis: "300 ÷ 100 = 3 cm.",
+            basis: "Van echt naar kaart wordt alles kleiner, dus je deelt. Waardoor deel je de echte lengte?",
             simpeler: "Deel de echte lengte door 100.",
             nogSimpeler: "300 ÷ 100 = ?",
           },
@@ -678,7 +678,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Bij het tekenen van de tuin op schaal 1 : 200 deel je de echte lengte van elk hek door tweehonderd." }],
           basiskennis: [{ onderwerp: "Echt → kaart is delen", uitleg: "Deel de echte afstand in centimeter door het schaalgetal." }],
           niveaus: {
-            basis: "600 ÷ 200 = 3 cm.",
+            basis: "Van echt naar kaart deel je door het getal na de dubbele punt. Hoe vaak past 200 in de echte lengte?",
             simpeler: "Deel de echte lengte door 200.",
             nogSimpeler: "600 ÷ 200 = ?",
           },
@@ -747,7 +747,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4.000 ÷ 500 = 8 cm.",
+            basis: "Maak van de meters eerst centimeters (1 m = 100 cm). Deel daarna door het getal na de dubbele punt.",
             simpeler: "Maak van 40 m eerst cm, deel dan door 500.",
             nogSimpeler: "4.000 ÷ 500 = ?",
           },
@@ -794,7 +794,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 cm = 2 km, dus 30 km = 15 cm.",
+            basis: "Reken eerst uit hoeveel km 1 cm op deze kaart is (100.000 cm = 1 km). Hoe vaak past dat in de echte afstand?",
             simpeler: "Hoe vaak past 2 km in 30 km?",
             nogSimpeler: "30 ÷ 2 = ?",
           },
@@ -841,7 +841,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12.000 ÷ 2.000 = 6 cm.",
+            basis: "Maak van de meters eerst centimeters. Deel dan door het getal na de dubbele punt.",
             simpeler: "Maak van 120 m eerst cm, deel dan door 2.000.",
             nogSimpeler: "12.000 ÷ 2.000 = ?",
           },
@@ -888,7 +888,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "300.000 ÷ 25.000 = 12 cm.",
+            basis: "Maak van de kilometers eerst centimeters (1 km = 100.000 cm). Deel daarna door het getal na de dubbele punt.",
             simpeler: "Maak van 3 km eerst cm, deel dan door 25.000.",
             nogSimpeler: "300.000 ÷ 25.000 = ?",
           },
@@ -922,7 +922,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Op een fietskaart met schaal 1 : 100.000 tel je zo snel de kilometers van een tocht af aan de hand van de centimeters op de kaart." }],
           basiskennis: [{ onderwerp: "1 cm = 1 km bij 1 : 100.000", uitleg: "Dit klopt omdat honderdduizend centimeter precies gelijk is aan één kilometer." }],
           niveaus: {
-            basis: "7 cm × (1 km per cm) = 7 km.",
+            basis: "Hoeveel km is 1 cm bij schaal 1 : 100.000? Weet je dat, dan tel je dat voor elke cm van de route.",
             simpeler: "1 cm is 1 km. Hoeveel is 7 cm?",
             nogSimpeler: "1 cm = 1 km, 7 cm = … km?",
           },
@@ -943,7 +943,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Op een plattegrond van een schoolgebouw met schaal 1 : 200 reken je de lengte van een lokaal in twee stappen om naar de echte lengte in meter." }],
           basiskennis: [{ onderwerp: "Twee-stappen-regel", uitleg: "Kaart × schaalgetal = cm echt; daarna cm ÷ 100 = meter." }],
           niveaus: {
-            basis: "6 × 200 = 1.200 cm = 12 m.",
+            basis: "Vermenigvuldig de kaartmaat met het getal na de dubbele punt. Maak van de centimeters daarna meters.",
             simpeler: "Reken eerst de cm uit (1.200), dan naar meter.",
             nogSimpeler: "1.200 ÷ 100 = ?",
           },
@@ -1074,7 +1074,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Bij een techniekles bouwen leerlingen een maquette van hun eigen huis op schaal 1 : 20 en rekenen ze de echte hoogte van de voordeur uit." }],
           basiskennis: [{ onderwerp: "Maquette = 3D-schaal", uitleg: "Bij een maquette geldt dezelfde schaalregel als bij een platte kaart, maar dan in alle richtingen." }],
           niveaus: {
-            basis: "30 × 10 = 300 cm = 3 m.",
+            basis: "Bij schaal 1 : 10 is het echte huis 10 keer zo groot als de maquette. Reken daarna de centimeters om naar meters.",
             simpeler: "Vermenigvuldig de maquette-maat met 10 en reken cm naar m.",
             nogSimpeler: "300 ÷ 100 = ?",
           },
@@ -1122,7 +1122,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15 × 20.000 = 300.000 cm = 3 km.",
+            basis: "Vermenigvuldig de kaartmaat met het getal na de dubbele punt, dan heb je centimeters. Hoeveel cm gaan er in 1 km?",
             simpeler: "Reken 15 × 20.000 en deel dan door 100.000.",
             nogSimpeler: "300.000 ÷ 100.000 = ?",
           },

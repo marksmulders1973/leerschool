@@ -91,7 +91,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1492 = vaak het begin van moderne wereldgeschiedenis (vanuit Europees oogpunt)." }],
           niveaus: {
-            basis: "Columbus kwam in 1492 in Amerika (dacht: India).",
+            basis: "Columbus voer aan het einde van de Middeleeuwen, net vóór 1500. Welk jaartal past daarbij?",
             simpeler: "1492: westwaarts van Spanje → kwam in Caraïben aan.",
             nogSimpeler: "1492.",
           },
@@ -131,7 +131,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1863 = 1 juli = Keti Koti = afschaffing slavernij in NL-koloniën." }],
           niveaus: {
-            basis: "Nederland schafte de slavernij in zijn koloniën af op 1 juli 1863.",
+            basis: "Nederland schafte de slavernij laat af: later dan Engeland (1834), maar ruim vóór 1900. Welk jaartal past daarbij?",
             simpeler: "Die dag, 1 juli 1863, wordt nog elk jaar gevierd als Keti Koti: de dag dat de slaven in de Nederlandse koloniën vrij werden.",
             nogSimpeler: "1863.",
           },

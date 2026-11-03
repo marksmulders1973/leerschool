@@ -41,7 +41,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Noordwesten = Noord-Holland", tekst: "Noord-Holland is de provincie aan de Noordzee met Amsterdam en Haarlem." }],
           niveaus: {
-            basis: "Aan de zee, helemaal bovenin het westen: Noord-Holland.",
+            basis: "Kijk op de kaart links bovenaan Nederland, langs de Noordzee. Welke provincie heeft een windrichting in haar naam die bij 'boven' past?",
             simpeler: "Welke provincie heeft 'Noord' in de naam en ligt aan de zee?",
             nogSimpeler: "Amsterdam ligt in provincie Noord-…?",
           },
@@ -68,7 +68,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zuid-Holland → Den Haag", tekst: "In Den Haag zit het provinciebestuur én de landelijke regering." }],
           niveaus: {
-            basis: "De hoofdstad van Zuid-Holland is Den Haag.",
+            basis: "Let op: de grootste stad is niet altijd de hoofdstad. In welke stad van Zuid-Holland werken de regering en het provinciebestuur?",
             simpeler: "In welke stad zit de regering van Nederland? Dat is ook de provinciehoofdstad.",
             nogSimpeler: "Den H…?",
           },
@@ -93,7 +93,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Oosten + Veluwe = Gelderland", tekst: "Gelderland is de grootste provincie; de Veluwe ligt erin." }],
           niveaus: {
-            basis: "De grootste provincie met de Veluwe is Gelderland.",
+            basis: "Zoek de Veluwe op de kaart, in het midden-oosten van Nederland. Bij welke provincie hoort dat bosgebied?",
             simpeler: "Welke provincie aan de Duitse grens is het grootst?",
             nogSimpeler: "Begint met Gel…?",
           },
@@ -118,7 +118,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Fryslân → Leeuwarden", tekst: "Leeuwarden is de hoofdstad van Fryslân, de provincie met een eigen taal." }],
           niveaus: {
-            basis: "De hoofdstad van Fryslân is Leeuwarden.",
+            basis: "Groningen, Assen en Zwolle zijn hoofdsteden van andere provincies. Welke stad blijft dan over voor Fryslân?",
             simpeler: "De Friese hoofdstad begint met 'Leeuw…'.",
             nogSimpeler: "Leeuw…?",
           },
@@ -143,7 +143,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zuidpunt + heuvels = Limburg", tekst: "Limburg is de zuidelijkste provincie, met heuvels en hoofdstad Maastricht." }],
           niveaus: {
-            basis: "De zuidelijke heuvel-provincie met Maastricht is Limburg.",
+            basis: "Kijk op de kaart naar het smalle stukje helemaal onderaan Nederland. Welke provincie ligt daar, tussen België en Duitsland?",
             simpeler: "Welke provincie steekt als een punt naar het zuiden?",
             nogSimpeler: "Begint met Lim…?",
           },

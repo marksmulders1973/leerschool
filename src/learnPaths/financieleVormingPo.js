@@ -106,7 +106,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Eurozone is een KLEINERE groep BINNEN de EU." }],
           niveaus: {
-            basis: "21 EU-landen gebruiken de euro. Samen heten ze de eurozone.",
+            basis: "De EU heeft 27 landen, maar een paar daarvan houden hun eigen geld. Hoeveel landen blijven er dan over die met de euro betalen?",
             simpeler: "De EU heeft 27 landen. Daarvan gebruiken er 21 de euro.",
             nogSimpeler: "21 landen met de euro.",
           },
@@ -178,7 +178,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Prijzen vergelijken = rekeneenheid.",
+            basis: "Geld heeft verschillende functies. Koop je hier iets, bewaar je iets, of gebruik je de prijzen om te zien wat meer waard is?",
             simpeler: "Je kijkt welke fiets duurder is. Dan gebruik je geld om te rekenen.",
             nogSimpeler: "Vergelijken = rekenen.",
           },
@@ -232,7 +232,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Geld bewaren = spaarmiddel.",
+            basis: "Kijk wat Lisa met het geld doet: koopt ze er nu iets mee, of houdt ze het voor later? Bij welke functie past dat?",
             simpeler: "Lisa koopt niets. Ze bewaart het geld voor later.",
             nogSimpeler: "Bewaren = sparen.",
           },
@@ -292,7 +292,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De ander wil jouw spullen misschien niet.",
+            basis: "Stel dat jij een appel hebt en een boek wilt. Wat moet de ander dan ook willen, wil de ruil doorgaan?",
             simpeler: "Jij wilt iets van de ander, maar de ander wil niet wat jij hebt.",
             nogSimpeler: "Ander wil het niet.",
           },
@@ -346,7 +346,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een biljet van €25 bestaat niet.",
+            basis: "Noem de eurobiljetten die je kent, van klein naar groot. Welk bedrag past niet in dat rijtje?",
             simpeler: "Biljetten zijn €5, €10, €20, €50, €100, €200, €500. Geen €25.",
             nogSimpeler: "Geen €25-biljet.",
           },
@@ -455,7 +455,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zweden gebruikt de euro niet.",
+            basis: "Niet elk land in de EU betaalt met de euro. Bij welk land kun je op vakantie niet met euro's betalen, omdat het nog eigen geld heeft?",
             simpeler: "Zweden zit in de EU, maar heeft eigen geld.",
             nogSimpeler: "Zweden: geen euro.",
           },
@@ -1109,7 +1109,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Voor als er onverwacht iets stukgaat.",
+            basis: "Een noodgeval is iets wat je niet had zien aankomen. Welke uitgave kun je niet van tevoren plannen?",
             simpeler: "Noodgeld gebruik je als er iets kapotgaat wat je niet had verwacht.",
             nogSimpeler: "Iets kapot.",
           },

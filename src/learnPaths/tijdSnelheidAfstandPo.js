@@ -991,7 +991,7 @@ const steps = [
             { type: "thuis", tekst: "Een trein die om 12:00 vertrekt en 90 km met 90 km/h rijdt, komt na 1 uur aan." },
           ],
           basiskennis: [{ onderwerp: "Kommagetal naar minuten", uitleg: "0,1 uur is geen 10 minuten maar 6 minuten (0,1 × 60). Reken uren-met-komma altijd om door met 60 te vermenigvuldigen." }],
-          niveaus: { basis: "8:48.", simpeler: "48 min later dan 8:00.", nogSimpeler: "8:48" },
+          niveaus: { basis: "Reken eerst uit hoeveel minuten de bus over 10 km doet, als hij 50 km in een uur rijdt. Hoeveel stukjes van 10 km zitten er in de rit?", simpeler: "48 min later dan 8:00.", nogSimpeler: "8:48" },
         },
       },
       {
@@ -1031,7 +1031,7 @@ const steps = [
             { type: "thuis", tekst: "Twee treinen die 150 km uit elkaar op elkaar af rijden met 50 en 70 km/h, ontmoeten elkaar na 150 ÷ 120 uur." },
           ],
           basiskennis: [{ onderwerp: "T = S/V", uitleg: "Tijd is afstand gedeeld door snelheid — hier gebruik je de opgetelde snelheid van beide voertuigen." }],
-          niveaus: { basis: "1 uur.", simpeler: "Naar elkaar = + snelheden.", nogSimpeler: "1h" },
+          niveaus: { basis: "Ze rijden naar elkaar toe, dus de afstand ertussen wordt van twee kanten kleiner. Tel eerst de twee snelheden bij elkaar op.", simpeler: "Naar elkaar = + snelheden.", nogSimpeler: "1h" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1209,7 +1209,7 @@ const steps = [
             { type: "school", tekst: "Een schoolreisje met de bus van 120 km met 60 km/h en 15 minuten pauze werkt op dezelfde manier." },
           ],
           basiskennis: [{ onderwerp: "Pauze telt mee in de aankomsttijd", uitleg: "De aankomsttijd is vertrektijd + rij-tijd + pauzetijd, niet alleen vertrektijd + rij-tijd." }],
-          niveaus: { basis: "16:42.", simpeler: "2:12 rijden + 30 min = 2:42 later.", nogSimpeler: "16:42" },
+          niveaus: { basis: "Reken eerst uit hoe lang de auto echt rijdt: hoeveel uur en minuten doe je over 220 km bij 100 km/h? Tel daarna de pauze erbij.", simpeler: "2:12 rijden + 30 min = 2:42 later.", nogSimpeler: "16:42" },
         },
       },
       {
@@ -1254,7 +1254,7 @@ const steps = [
             { type: "sport", tekst: "Een fietstocht die om 9:15 begint en 1,5 uur duurt, eindigt om 10:45." },
           ],
           basiskennis: [{ onderwerp: "T = S/V", uitleg: "Tijd = afstand gedeeld door snelheid — de eerste stap bij elke 'wanneer kom je aan'-vraag." }],
-          niveaus: { basis: "17:00.", simpeler: "2,5 uur later.", nogSimpeler: "17:00" },
+          niveaus: { basis: "Reken eerst uit hoeveel uur de trein rijdt: hoe vaak past 100 km in 250 km? Tel die tijd daarna op bij de vertrektijd.", simpeler: "2,5 uur later.", nogSimpeler: "17:00" },
         },
       },
       {
@@ -1279,7 +1279,7 @@ const steps = [
             { type: "school", tekst: "Een fietser die 200 m in 20 s aflegt, gaat 10 m/s." },
           ],
           basiskennis: [{ onderwerp: "m/s × 3,6 = km/h", uitleg: "De omrekenfactor tussen meter-per-seconde en kilometer-per-uur." }],
-          niveaus: { basis: "10 m/s = 36 km/h.", simpeler: "100/10 + × 3,6.", nogSimpeler: "10/36" },
+          niveaus: { basis: "Snelheid in m/s is afstand gedeeld door tijd. Om m/s om te rekenen naar km/h vermenigvuldig je met 3,6.", simpeler: "100/10 + × 3,6.", nogSimpeler: "10/36" },
         },
       },
       {
@@ -1304,7 +1304,7 @@ const steps = [
             { type: "thuis", tekst: "Een auto en een bus die dezelfde 60 km rijden met 60 km/h en 40 km/h, komen op verschillende tijden aan." },
           ],
           basiskennis: [{ onderwerp: "T = S/V per voertuig", uitleg: "Elk voertuig heeft zijn eigen snelheid en dus zijn eigen reistijd over dezelfde afstand." }],
-          niveaus: { basis: "2 uur.", simpeler: "Auto 30 min, fiets 2,5 h. Verschil 2h.", nogSimpeler: "2h" },
+          niveaus: { basis: "Reken voor de auto en de fiets apart uit hoe lang ze over 40 km doen. Trek daarna de kortste tijd van de langste af.", simpeler: "Auto 30 min, fiets 2,5 h. Verschil 2h.", nogSimpeler: "2h" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.

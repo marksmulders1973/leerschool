@@ -46,7 +46,7 @@ const steps = [
         wrongHints: [null, "In 1916 overstroomde de Zuiderzee; daarna kwam de Afsluitdijk. Na welke ramp kwamen de Deltawerken?", "In 1995 stonden de rivieren heel hoog en moesten veel mensen weg, maar de dijken aan zee hielden het. Wanneer braken ze wél?", "In 2021 was er wateroverlast in Limburg door veel regen. Wanneer kwam de zee over de dijken in Zeeland?"],
         uitlegPad: {
           stappen: [{ titel: "1 februari 1953", tekst: "**Watersnoodramp 1 februari 1953**: zware storm + springtij → dijken breken in Zeeland + Zuid-Holland. **1836 doden** + tienduizenden dieren + ~47.000 huizen beschadigd of verwoest. Reactie: **Deltawerken** gebouwd 1958-1997 (Oosterscheldekering, Maeslantkering)." }],
-          niveaus: { basis: "1953.", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
+          niveaus: { basis: "De ramp gebeurde een paar jaar na de Tweede Wereldoorlog, en daarna bouwde Nederland de Deltawerken. Welk jaar past daarbij?", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "De WIC handelde op Amerika en West-Afrika, maar werd pas in 1621 opgericht, bijna twintig jaar later. Welk bedrijf staat in de uitleg bij 1602?", "De Noordse Compagnie ving walvissen in de zee bij de Noordpool. Welk bedrijf staat in de uitleg bij 1602?", "De Compagnie van Verre was een kleine compagnie: opgericht in 1594, in 1595 voeren haar schepen al naar Azië, nog vóór 1602. Welk bedrijf staat in de uitleg bij 1602?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste multinational", tekst: "**VOC** (Verenigde Oostindische Compagnie) opgericht in 1602; de grootste kamer zat in Amsterdam. **Eerste multinationale onderneming** wereldwijd. Handel met Azië (specerijen, thee, koffie). Bestond tot 1799. Donkere zijde: betrokken bij slavenhandel + koloniale onderdrukking Indonesië. Daarvóór voeren al kleine compagnieën naar Azië, zoals de Compagnie van Verre (1594); zij gingen op in de VOC. Kort daarna volgden de Amsterdamse Wisselbank (1609), de Noordse Compagnie (1614, walvisvangst) en de WIC (West-Indische Compagnie, 1621, handel op Amerika en West-Afrika)." }],
-          niveaus: { basis: "VOC.", simpeler: "1602 = VOC", nogSimpeler: "VOC" },
+          niveaus: { basis: "Rond 1600 voeren Nederlandse schepen naar Azië voor specerijen, en kleine handelsbedrijven gingen samen in één grote compagnie. Welke compagnie handelde met het oosten?", simpeler: "1602 = VOC", nogSimpeler: "VOC" },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "In mei 1940 begon de oorlog in Nederland juist: Rotterdam werd gebombardeerd.", "Op 8 mei 1945 vierde Europa het einde van de oorlog. Welke dag vieren wij elk jaar als Bevrijdingsdag?", "Op 6 juni 1944 landden de geallieerden in Frankrijk (D-Day). Was Nederland toen al vrij?"],
         uitlegPad: {
           stappen: [{ titel: "Bevrijdingsdag", tekst: "**5 mei 1945**: NL volledig bevrijd door geallieerden (Canadezen + Britten + Amerikanen). Bezet sinds 10 mei 1940. In hotel De Wereld in Wageningen spraken de Duitse en de Canadese generaal de overgave af. **Bevrijdingsdag NL** elke 5 mei sinds 1990 nationale feestdag. **4 mei** = Dodenherdenking." }],
-          niveaus: { basis: "5 mei 1945.", simpeler: "5-5-45", nogSimpeler: "5 mei." },
+          niveaus: { basis: "Denk aan de dag waarop we elk jaar Bevrijdingsdag vieren. In welk jaar eindigde de oorlog in Nederland?", simpeler: "5-5-45", nogSimpeler: "5 mei." },
         },
       },
     ],
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [null, "Tel nog eens — vergeet de jongste provincie niet.", "Tel de provincies in de uitleg nog eens na.", "Tel de provincies in de uitleg één voor één na."],
         uitlegPad: {
           stappen: [{ titel: "Inclusief Flevoland", tekst: "**12 provincies NL**: Noord-Holland, Zuid-Holland, Utrecht, Gelderland, Overijssel, Drenthe, Groningen, Friesland, **Flevoland** (sinds 1986!), Noord-Brabant, Limburg, Zeeland. **Flevoland = jongste provincie**, ingepolderd 1957-1968." }],
-          niveaus: { basis: "12.", simpeler: "NL = 12 prov", nogSimpeler: "12" },
+          niveaus: { basis: "Noem de provincies eens op, van Groningen in het noorden tot Limburg in het zuiden, en tel ze op je vingers.", simpeler: "NL = 12 prov", nogSimpeler: "12" },
         },
       },
       {
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Den Haag is de stad van de regering. Is dat ook de hoofdstad?", "Rotterdam heeft de grootste haven. Is het ook de hoofdstad?", "Utrecht ligt in het midden van het land. Is het ook de hoofdstad?"],
         uitlegPad: {
           stappen: [{ titel: "Amsterdam vs Den Haag", tekst: "**Amsterdam = hoofdstad NL** (Grondwet art 32). **Den Haag** = regerings-zetel (parlement + ministeries + koning). Internationaal Hof + ICC ook in Den Haag. Klassieke val: 'wat is hoofdstad?' = Amsterdam. 'Wat is regerings-zetel?' = Den Haag." }],
-          niveaus: { basis: "Amsterdam.", simpeler: "Hoofdstad = Amsterdam", nogSimpeler: "Amsterdam" },
+          niveaus: { basis: "Let op: de regering en de koning werken in Den Haag, maar dat maakt een stad nog geen hoofdstad. Welke stad staat in de Grondwet als hoofdstad?", simpeler: "Hoofdstad = Amsterdam", nogSimpeler: "Amsterdam" },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Afrika groeit het snelst. Maar in welk werelddeel liggen China en India?", "Europa heeft veel landen. Vergelijk de aantallen inwoners in de uitleg.", "Noord-Amerika is groot. Vergelijk de aantallen inwoners in de uitleg."],
         uitlegPad: {
           stappen: [{ titel: "Azië-dominantie", tekst: "**Azië** = grootste werelddeel qua bevolking: ~**4,7 miljard mensen** (~60% wereldbevolking). Inclusief China (1,4 mld) + India (1,44 mld) + Indonesië + Pakistan + Bangladesh + Japan + Filipijnen + etc. **Afrika** is op 2: ~1,4 mld + snelst groeiend." }],
-          niveaus: { basis: "Azië.", simpeler: "Grootste = Azië", nogSimpeler: "Azië." },
+          niveaus: { basis: "Denk aan de twee landen met de meeste inwoners ter wereld: India en China. In welk werelddeel liggen die?", simpeler: "Grootste = Azië", nogSimpeler: "Azië." },
         },
       },
       {
@@ -125,7 +125,7 @@ const steps = [
         wrongHints: [null, "Zoveel waren het er vroeger. Kijk in de uitleg hoeveel het er nu zijn.", "Tel de lidstaten in de uitleg bij 'EU + Europa' nog eens na.", "Zoveel landen betalen met de euro. Doen alle EU-landen dat?"],
         uitlegPad: {
           stappen: [{ titel: "Brexit 2020", tekst: "**27 EU-lidstaten** sinds Verenigd Koninkrijk uitgetreden 31 jan 2020 (Brexit). Voor Brexit: 28. **Eurozone**: 21 landen (sinds Bulgarije 2026). Brussel = hoofdstad EU. Andere instellingen in Straatsburg + Luxemburg + Frankfurt (ECB)." }],
-          niveaus: { basis: "27.", simpeler: "EU = 27", nogSimpeler: "27" },
+          niveaus: { basis: "In 2020 stapte het Verenigd Koninkrijk uit de Europese Unie. Weet je hoeveel landen er daarvóór lid waren?", simpeler: "EU = 27", nogSimpeler: "27" },
         },
       },
       {
@@ -154,7 +154,7 @@ const steps = [
         wrongHints: [null, "Een krokodil heeft schubben en legt eieren. Geeft hij zijn jongen melk?", "Een pinguïn heeft veren en legt eieren. Bij welke groep dieren hoort hij?", "Een haai ademt met kieuwen. Geeft een haai zijn jongen melk?"],
         uitlegPad: {
           stappen: [{ titel: "Voedt jongen met melk", tekst: "**Walvissen zijn zoogdieren** (niet vissen!). Leven in water maar: ademen lucht (komen boven), warmbloedig, voeden jongen met **melk**. **Definitie zoogdier**: voedt jongen via melkklieren. Vleermuizen = enige vliegende zoogdier. Vogelbekdier = legt eieren maar voedt melk → ook zoogdier." }],
-          niveaus: { basis: "Walvis.", simpeler: "Walvis = zoogdier", nogSimpeler: "Walvis." },
+          niveaus: { basis: "Een zoogdier krijgt levende jongen en geeft ze melk. Welk van deze dieren doet dat, ook al leeft het in zee?", simpeler: "Walvis = zoogdier", nogSimpeler: "Walvis." },
         },
       },
       {
@@ -174,7 +174,7 @@ const steps = [
         wrongHints: [null, "Zoveel botten heeft een baby ongeveer. Wat gebeurt er met sommige botten als je groeit?", "Zoveel spieren heb je ongeveer. Hoeveel botten zijn het?", "Het zijn er veel meer: je twee handen hebben samen al meer dan 50 botten."],
         uitlegPad: {
           stappen: [{ titel: "206 bij volwassene", tekst: "**Volwassene: ~206 botten**. Baby's hebben ~270 botten — sommige groeien vast tijdens leven (bv. schedelplaten + heupbotten). Grootste bot: dijbeen (femur, ~46 cm). Kleinste: stijgbeugel in oor (3 mm). Skelet houdt lichaamsvorm + beschermt organen + biedt aanhechting spieren." }],
-          niveaus: { basis: "206.", simpeler: "~206", nogSimpeler: "206" },
+          niveaus: { basis: "Een baby heeft ongeveer 300 botjes, en tijdens het groeien groeien sommige aan elkaar vast. Heeft een volwassene dan meer of minder botten dan een baby?", simpeler: "~206", nogSimpeler: "206" },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
         wrongHints: [null, "Een hond eet vlees of brokken. Maakt hij zelf zijn voedsel?", "Een schimmel breekt dode resten af. Maakt hij zelf voedsel?", "Een insect eet planten of andere diertjes. Maakt het zelf voedsel?"],
         uitlegPad: {
           stappen: [{ titel: "Maakt eigen voedsel", tekst: "**Producent** = maakt eigen voedsel via fotosynthese — **planten** + algen. **Consument** = eet anderen (dieren). **Reducent** = breekt dood materiaal af (schimmels + bacteriën). Voedselketen begint altijd bij producent (plant → herbivoor → carnivoor)." }],
-          niveaus: { basis: "Plant.", simpeler: "Producent = plant", nogSimpeler: "Plant." },
+          niveaus: { basis: "Een producent maakt zijn eigen voedsel met behulp van zonlicht. Welk levend wezen kan dat?", simpeler: "Producent = plant", nogSimpeler: "Plant." },
         },
       },
     ],
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [null, "Edison maakte de gloeilamp en de platenspeler. Wie schreef rond 1687 de wet van de zwaartekracht op?", "Galilei deed proeven met vallende voorwerpen en keek door een telescoop, maar schreef de zwaartekrachtwetten niet op. Wie wel?", "Huygens bouwde de slingerklok en ontdekte de ring van Saturnus. Wie schreef de wetten van de zwaartekracht op?"],
         uitlegPad: {
           stappen: [{ titel: "Appel-verhaal", tekst: "**Isaac Newton** (1643-1727 UK): zwaartekracht + 3 bewegingswetten. Volgens legende inspireerde vallende appel. *Philosophiæ Naturalis Principia Mathematica* (1687). Beschreef hoe maan om aarde + planeten om zon door zwaartekracht. **Einstein** verfijnde later met algemene relativiteit (1915) — ruimte-tijd-kromming." }],
-          niveaus: { basis: "Newton.", simpeler: "Zwaartekracht = Newton", nogSimpeler: "Newton." },
+          niveaus: { basis: "Denk aan het bekende verhaal over een vallende appel, die een Engelse wetenschapper aan het denken zette over zwaartekracht.", simpeler: "Zwaartekracht = Newton", nogSimpeler: "Newton." },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Zoek Mercurius op in het rijtje van acht planeten: M-V-A-M-J-S-U-N.", "Zoek Saturnus op in het rijtje van acht planeten: M-V-A-M-J-S-U-N.", "Zoek Neptunus op in het rijtje van acht planeten: M-V-A-M-J-S-U-N."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2006 dwergplaneet", tekst: "**Pluto** was van 1930-2006 9e planeet. Sinds 2006 'gedegradeerd' door **Internationale Astronomische Unie (IAU)** tot **dwergplaneet** — te klein + niet 'baan-vrij'. Echte 8 planeten: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus. Pluto vandaag samen met Eris, Makemake, Haumea = dwergplaneten." }],
-          niveaus: { basis: "Pluto.", simpeler: "Pluto = geen planeet", nogSimpeler: "Pluto." },
+          niveaus: { basis: "Sinds 2006 noemen sterrenkundigen één klein hemellichaam, heel ver weg in ons zonnestelsel, een dwergplaneet. Welke van de vier is het kleinst en ligt het verst weg?", simpeler: "Pluto = geen planeet", nogSimpeler: "Pluto." },
         },
       },
       {
@@ -243,7 +243,7 @@ const steps = [
         wrongHints: [null, "De formule van suiker is veel langer: C₆H₁₂O₆.", "Keukenzout heeft de formule NaCl.", "Zuurstofgas is O₂: alleen O-atomen. Welke atomen zitten er nog meer in H₂O?"],
         uitlegPad: {
           stappen: [{ titel: "Watermolecuul", tekst: "**H₂O = water**: 2 waterstof-atomen (H) + 1 zuurstof-atoom (O). De kleine 2 betekent '2 keer'. Cruciaal voor leven. Andere bekende formules:\n• **CO₂** = koolstofdioxide.\n• **NaCl** = natriumchloride (keukenzout).\n• **C₆H₁₂O₆** = glucose (suiker).\n• **O₂** = zuurstof (gas)." }],
-          niveaus: { basis: "Water.", simpeler: "H2O = water", nogSimpeler: "Water." },
+          niveaus: { basis: "H staat voor waterstof en O voor zuurstof. Welke stof van de vier bestaat uit allebei die stoffen samen?", simpeler: "H2O = water", nogSimpeler: "Water." },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         wrongHints: [null, "Kijk in de uitleg: hoe vaak won Einstein een Nobelprijs?", "Ben Feringa uit Groningen won in 2016 de Nobelprijs voor scheikunde. Ook nog een tweede?", "Andre Geim won in 2010 de Nobelprijs voor natuurkunde. Ook nog een tweede?"],
         uitlegPad: {
           stappen: [{ titel: "Unieke prestatie", tekst: "**Marie Curie** (1867-1934, Pools-Frans): **eerste vrouw + eerste persoon met 2 Nobelprijzen in verschillende vakken**:\n• Natuurkunde 1903 (met Pierre + Becquerel, radioactiviteit).\n• Scheikunde 1911 (radium + polonium isolatie).\n\nStierf aan straling-blootstelling — haar notitieboeken nog radioactief vandaag." }],
-          niveaus: { basis: "Curie.", simpeler: "2× Nobel = Curie", nogSimpeler: "Curie." },
+          niveaus: { basis: "Zoek iemand die een Nobelprijs kreeg voor natuurkunde én later nog een voor scheikunde, voor onderzoek naar straling.", simpeler: "2× Nobel = Curie", nogSimpeler: "Curie." },
         },
       },
     ],
@@ -281,7 +281,7 @@ const steps = [
         wrongHints: [null, "Azië ligt veel verder naar het oosten.", "Afrika ligt ten zuiden van ons, aan de andere kant van de Middellandse Zee.", "Noord-Amerika ligt aan de andere kant van de Atlantische Oceaan."],
         uitlegPad: {
           stappen: [{ titel: "EU-lid", tekst: "**Nederland ligt in Europa** (West-Europa specifiek). Onderdeel van **EU** sinds oprichting EEG 1957. NL = klein land (41.500 km²) maar grote economische rol door handel + havens. Buurlanden: België + Duitsland + Noordzee." }],
-          niveaus: { basis: "Europa.", simpeler: "NL = Europa", nogSimpeler: "Europa." },
+          niveaus: { basis: "Zoek Nederland op een wereldkaart. Bij welk werelddeel horen ook de buurlanden België en Duitsland?", simpeler: "NL = Europa", nogSimpeler: "Europa." },
         },
       },
       {
@@ -301,7 +301,7 @@ const steps = [
         wrongHints: [null, "Een planteneter heet met een moeilijk woord herbivoor, zoals een koe. Een leeuw is een carnivoor: wat eet een leeuw?", "Een alleseter heet met een moeilijk woord omnivoor, zoals de mens. Een leeuw is een carnivoor: wat eet een leeuw?", "Afbrekers zijn schimmels en bacteriën. Een carnivoor is een dier, zoals een leeuw: wat eet het?"],
         uitlegPad: {
           stappen: [{ titel: "Latijnse termen", tekst: "**Carnivoor** (Latijn 'caro' = vlees + 'vorare' = eten) = vleeseter. Voorbeelden: leeuw, tijger, haai, krokodil, gier. **Herbivoor** = planteneter (koe, paard, konijn). **Omnivoor** = alleseter (mens, varken, beer). Goed ezelsbruggetje: herb (Engels) = kruid = planten." }],
-          niveaus: { basis: "Vleeseter.", simpeler: "Carni = vlees", nogSimpeler: "Vlees." },
+          niveaus: { basis: "Leeuwen en wolven zijn carnivoren. Wat eten die dieren vooral?", simpeler: "Carni = vlees", nogSimpeler: "Vlees." },
         },
       },
       {
@@ -311,7 +311,7 @@ const steps = [
         wrongHints: [null, "Op 30 april vierden we vroeger Koninginnedag. Wanneer is koning Willem-Alexander jarig?", "Op 5 mei vieren we Bevrijdingsdag. Wanneer is de koning jarig?", "Op 31 januari is prinses Beatrix jarig. Wanneer is de koning jarig?"],
         uitlegPad: {
           stappen: [{ titel: "Verjaardag Willem-Alexander", tekst: "**Koningsdag = 27 april**, sinds 2014 (verjaardag koning Willem-Alexander, geboren 1967). Voor 2014: **Koninginnedag 30 april** (Juliana's geb-dag, later Beatrix). Beatrix' eigen geb-dag is 31 januari — koos voor 30 april ter ere van moeder Juliana. Valt 27 april op zondag, dan wordt het zaterdag 26 april." }],
-          niveaus: { basis: "27 april.", simpeler: "Koningsdag = 27-4", nogSimpeler: "27 april." },
+          niveaus: { basis: "Koningsdag valt op de verjaardag van koning Willem-Alexander. Weet je wanneer hij jarig is? Let op: 30 april was de oude Koninginnedag.", simpeler: "Koningsdag = 27-4", nogSimpeler: "27 april." },
         },
       },
     ],

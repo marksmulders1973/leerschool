@@ -73,7 +73,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 1 mm = 1 L/m². Per dag = die dag. Per jaar = totaal jaar." }],
           niveaus: {
-            basis: "Neerslag wordt gemeten in mm (millimeter).",
+            basis: "Neerslag meet je met een regenmeter: hoe hoog het water erin komt te staan. Welke eenheid past bij een heel kleine hoogte?",
             simpeler: "1 mm = 1 liter water per vierkante meter.",
             nogSimpeler: "Regen in mm.",
           },
@@ -143,7 +143,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Wind komt VANDAAN waar hij heet. Zuidwestenwind = van zuidwest komen. Veelvoorkomend in NL." }],
           niveaus: {
-            basis: "Zuidwesten.",
+            basis: "De meeste wind in Nederland komt van de oceaan. Aan welke kant van Nederland ligt de Atlantische Oceaan?",
             simpeler: "De meeste NL-wind komt uit het zuidwesten (Atlantische Oceaan + UK).",
             nogSimpeler: "Zuidwesten",
           },
@@ -190,7 +190,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "KNMI = NL-weer-officieel. De Bilt = hoofdkwartier. Sinds 1854." }],
           niveaus: {
-            basis: "KNMI = NL-weerinstituut (De Bilt, sinds 1854).",
+            basis: "Het KNMI maakt de weersverwachting die je op tv ziet. Welk antwoord gaat over het weer?",
             simpeler: "Officiële weer-organisatie van Nederland.",
             nogSimpeler: "KNMI = weer-NL.",
           },

@@ -727,7 +727,7 @@ const steps = [
             { titel: "Totale winst", tekst: "Winst per stuk × aantal = €1,50 × 7 = **€10,50**." },
           ],
           niveaus: {
-            basis: "€10,50 (€1,50 × 7).",
+            basis: "Je verdient op elk boekje evenveel. Reken dus de winst per stuk keer het aantal boekjes.",
             simpeler: "Elk van de 7 stuks levert €1,50 op. 7 × €1,50 = €10,50.",
             nogSimpeler: "€10,50",
           },
@@ -743,7 +743,7 @@ const steps = [
             { titel: "Winst per stuk", tekst: "Winst = verkoop − inkoop = €5,00 − €3,50 = **€1,50**." },
           ],
           niveaus: {
-            basis: "€1,50 (€5,00 − €3,50).",
+            basis: "Winst per stuk is wat je krijgt min wat je betaalde. Trek de inkoopprijs af van de verkoopprijs.",
             simpeler: "500 cent − 350 cent = 150 cent = €1,50.",
             nogSimpeler: "€1,50",
           },
@@ -760,7 +760,7 @@ const steps = [
             { titel: "Check", tekst: "€20 − €12 = €8 winst. Klopt!" },
           ],
           niveaus: {
-            basis: "€20 (€12 + €8).",
+            basis: "De verkoopprijs moet je inkoop terugverdienen én je winst opleveren. Tel die twee bedragen bij elkaar op.",
             simpeler: "Tel inkoop en gewenste winst op: €12 + €8 = €20.",
             nogSimpeler: "€20",
           },

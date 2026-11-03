@@ -35,7 +35,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Aantal × prijs", tekst: "3 × €1,20 = €3,60. Drie keer 1,20: 1,20 + 1,20 + 1,20." }],
           niveaus: {
-            basis: "3 broden × €1,20 = €3,60.",
+            basis: "Je koopt hetzelfde brood een paar keer. Vermenigvuldig de prijs van één brood met het aantal broden.",
             simpeler: "Tel drie keer €1,20 op.",
             nogSimpeler: "1,20 + 1,20 + 1,20 = ?",
           },
@@ -49,7 +49,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Betaald − totaal", tekst: "€10,00 − €8,40 = €1,60 wisselgeld." }],
           niveaus: {
-            basis: "Wisselgeld = €10 − €8,40 = €1,60.",
+            basis: "Wisselgeld is wat je geeft min wat het kost. Reken van het totaalbedrag omhoog naar €10.",
             simpeler: "Van €8,40 naar €10: hoeveel is dat erbij?",
             nogSimpeler: "€8,40 + … = €10,00?",
           },
@@ -91,7 +91,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Aantal × prijs", tekst: "2 × €0,95 = €1,90 (0,95 + 0,95)." }],
           niveaus: {
-            basis: "2 bekers × €0,95 = €1,90.",
+            basis: "Je koopt twee keer hetzelfde. Tel de prijs van één beker twee keer op.",
             simpeler: "Tel twee keer €0,95 op.",
             nogSimpeler: "0,95 + 0,95 = ?",
           },
@@ -105,7 +105,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Betaald − totaal", tekst: "€7,00 − €6,75 = €0,25 wisselgeld (van 6,75 naar 7,00 is 25 cent)." }],
           niveaus: {
-            basis: "Wisselgeld = €7,00 − €6,75 = €0,25.",
+            basis: "Wisselgeld is wat je geeft min wat het kost. Hoeveel moet er nog bij het totaal om op €7,00 te komen?",
             simpeler: "Van €6,75 naar €7,00: hoeveel cent erbij?",
             nogSimpeler: "€6,75 + … = €7,00?",
           },
@@ -130,7 +130,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 × €1,25 = €3,75.",
+            basis: "Er staan 3 dezelfde pennen op de bon. Tel de prijs van één pen drie keer bij elkaar op.",
             simpeler: "Drie keer €1 is €3, drie keer 25 cent is 75 cent.",
             nogSimpeler: "€3 + €0,75 = ?",
           },
@@ -149,7 +149,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wisselgeld = €20,00 − €13,65 = €6,35.",
+            basis: "Terug is wat je betaald hebt min het totaal. Reken van het totaal eerst omhoog naar een hele euro, en dan naar €20,00.",
             simpeler: "Van €13,65 naar €14,00 is €0,35. Van €14,00 naar €20,00 is €6,00.",
             nogSimpeler: "€0,35 + €6,00 = ?",
           },
@@ -173,7 +173,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je betaalt het totaal: €7,26. De btw zit daar al in.",
+            basis: "Kijk goed naar het woord 'waarvan'. Zit de btw al in het totaal, of komt die er nog bij?",
             simpeler: "Komt de btw er nog bij, of zit hij al in het totaal? Hij zit er al in.",
             nogSimpeler: "Welk bedrag staat bij 'Totaal'?",
           },
@@ -217,7 +217,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "25% = een kwart", tekst: "25% van €40 = €40 ÷ 4 = €10 korting." }],
           niveaus: {
-            basis: "25% is een kwart. Een kwart van €40 is €10.",
+            basis: "25% is een kwart. Deel de prijs door 4.",
             simpeler: "Verdeel €40 in 4 stukken; één stuk is de korting.",
             nogSimpeler: "€40 ÷ 4 = ?",
           },
@@ -259,7 +259,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "50% = de helft", tekst: "50% van €30 = de helft = €30 ÷ 2 = €15 korting." }],
           niveaus: {
-            basis: "Helft van €30 = €15 korting.",
+            basis: "50% is de helft. Hoeveel is de helft van de prijs?",
             simpeler: "Wat is de helft van €30?",
             nogSimpeler: "€30 ÷ 2 = ?",
           },
@@ -293,7 +293,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'2 halen, 1 betalen' = één gratis → eieren.",
+            basis: "Zoek de aanbieding waarbij je meer meeneemt dan je betaalt.",
             simpeler: "Bij welke aanbieding betaal je voor het tweede stuk helemaal niets?",
             nogSimpeler: "Welke tekst zegt '1 betalen'?",
           },
@@ -335,7 +335,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Reclame = verkopen", tekst: "Het doel van een advertentie is dat jij het product koopt. Daarom klinkt alles zo positief." }],
           niveaus: {
-            basis: "Een advertentie wil dat je iets koopt.",
+            basis: "Denk aan wie de advertentie maakt. Wat wil een winkel of maker dat jij doet?",
             simpeler: "Waarom maakt een winkel reclame?",
             nogSimpeler: "Wil reclame dat je koopt of dat je leert?",
           },
@@ -477,7 +477,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "50% = de helft", tekst: "50% korting betekent de helft eraf. De helft van €20 is €10, dus je betaalt €10." }],
           niveaus: {
-            basis: "Helft van €20 = €10. Dat betaal je.",
+            basis: "50% korting betekent: de helft eraf. Wat blijft er dan over van de prijs?",
             simpeler: "Wat is de helft van €20?",
             nogSimpeler: "€20 ÷ 2 = ?",
           },
@@ -491,7 +491,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vol + half", tekst: "Eerste shirt €16 (vol), tweede €8 (halve prijs). Samen €16 + €8 = €24." }],
           niveaus: {
-            basis: "€16 (vol) + €8 (half) = €24.",
+            basis: "Het eerste shirt kost de volle prijs. Reken uit wat het tweede kost bij halve prijs en tel ze op.",
             simpeler: "Eén shirt vol (€16), één voor de helft (€8). Tel op.",
             nogSimpeler: "16 + 8 = ?",
           },
@@ -519,7 +519,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Korting eraf, verzending erbij", tekst: "10% van €30 = €3 korting → €27. Dan €2 verzendkosten erbij: €27 + €2 = €29." }],
           niveaus: {
-            basis: "€30 − €3 (10%) = €27, plus €2 verzending = €29.",
+            basis: "Reken eerst uit hoeveel 10% van de prijs is en haal dat eraf. Tel daarna de verzendkosten erbij.",
             simpeler: "Eerst korting eraf (€3), dan verzendkosten erbij (€2).",
             nogSimpeler: "30 − 3 = 27, en 27 + 2 = ?",
           },
@@ -561,7 +561,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vol + half", tekst: "Eerste shirt €18 (vol), tweede €9 (halve prijs). Samen €18 + €9 = €27." }],
           niveaus: {
-            basis: "€18 (vol) + €9 (half) = €27.",
+            basis: "Het eerste shirt kost de volle prijs, het tweede de helft. Reken die helft uit en tel beide bedragen op.",
             simpeler: "Eén shirt vol (€18), één voor de helft (€9). Tel op.",
             nogSimpeler: "18 + 9 = ?",
           },
@@ -581,7 +581,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je betaalt 2 × €1,10 = €2,20.",
+            basis: "Bij '3 halen, 2 betalen' is één pak gratis. Voor hoeveel pakken betaal je, en wat kost dat samen?",
             simpeler: "Voor hoeveel van de 3 pakken betaal je?",
             nogSimpeler: "€1,10 + €1,10 = ?",
           },
@@ -600,7 +600,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€7 per rugzak × 2 = €14.",
+            basis: "Reken eerst uit hoeveel je bespaart op één rugzak. Hoe vaak krijg je die besparing?",
             simpeler: "Wat bespaar je op één rugzak? Doe dat dan keer 2.",
             nogSimpeler: "€7 + €7 = ?",
           },

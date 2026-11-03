@@ -91,7 +91,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vier zoogdier-kenmerken: haren, warm bloed, levende jongen, melk-zogen. Heeft een dier deze kenmerken? → zoogdier, hoe vreemd het ook lijkt." }],
           niveaus: {
-            basis: "Vleermuis = zoogdier.",
+            basis: "Kijk niet naar het vliegen, maar naar het lijf en de jongen: heeft een vleermuis veren of haren, en drinken de jongen melk?",
             simpeler: "Vleermuis heeft HAREN + zoogt jongen met MELK = zoogdier. Vliegen maakt geen verschil.",
             nogSimpeler: "Zoogdier",
           },
@@ -111,7 +111,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Walvis (zee), vleermuis (lucht), mol (grond) zijn allemaal zoogdieren." }],
           basiskennis: [{ onderwerp: "Niet plek-gebonden", uitleg: "Klasse hangt niet af van waar het dier woont, maar van eigenschappen." }],
           niveaus: {
-            basis: "Zoogdier.",
+            basis: "Een walvis leeft in zee, maar kijk naar hoe hij ademt en hoe de jongen eten: ademt hij lucht en drinken de jongen melk?",
             simpeler: "Een walvis ziet eruit als een vis maar is een zoogdier: ademt lucht en zoogt jongen met melk. Plek waar dier leeft (zee) bepaalt niet de klasse.",
             nogSimpeler: "Zoogdier",
           },
@@ -139,7 +139,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Snel-check", uitleg: "Zoogdier of vogel? → warmbloedig. Anders → koudbloedig." }],
           niveaus: {
-            basis: "Slang = reptiel = koudbloedig.",
+            basis: "Koudbloedige dieren worden pas warm in de zon. Welk dier heeft geen vacht of veren om zichzelf warm te houden?",
             simpeler: "Hond/mus/walvis = warmbloedig (vacht of veren). Slang = reptiel = koudbloedig.",
             nogSimpeler: "Slang. Kruipt op grond + schubben = koudbloedig.",
           },
@@ -204,7 +204,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Veren = vogel. Geen andere dieren hebben veren." }],
           niveaus: {
-            basis: "Alle vogels hebben veren.",
+            basis: "Denk aan een pinguïn of een struisvogel: die kunnen niet vliegen. Wat hebben ze wél op hun lijf, net als elke andere vogel?",
             simpeler: "Veren komen alleen bij vogels voor — uniek kenmerk.",
             nogSimpeler: "Veren = vogel.",
           },
@@ -285,7 +285,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Sla de vraag andersom op: van de 4 opties is er ÉÉN die niet vliegt. Welke ken je als zwem-dier of grond-dier? Pinguïn → zwemt." }],
           niveaus: {
-            basis: "Een pinguïn is een vogel die niet kan vliegen.",
+            basis: "Denk aan waar je elke vogel weleens ziet: welke vogel zie je nooit in de lucht, maar zwemt juist heel goed?",
             simpeler: "Pinguïns leven op het zuidelijk halfrond (onder andere op Antarctica) en duiken in zee om vis te vangen. Vleugels = flippers, niet vlieg-vleugels.",
             nogSimpeler: "Pinguïn",
           },

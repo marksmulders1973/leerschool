@@ -129,7 +129,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tertiair = grootste in NL. Vroeger (~1900) was PRIMAIR de grootste (50% boeren!), nu maar 2%." }],
           niveaus: {
-            basis: "Tertiaire sector = ~50% = grootste in NL (diensten).",
+            basis: "Denk aan waar de meeste mensen in Nederland werken: op een boerderij, in een fabriek, of in winkels, de zorg, scholen en kantoren?",
             simpeler: "Helft van NL werkt in diensten (winkel, horeca, IT, etc).",
             nogSimpeler: "Tertiair = grootste.",
           },
@@ -238,7 +238,7 @@ const steps = [
             { type: "feit", tekst: "Veel Nederlanders deden eerst vmbo/mbo en stapelden later door naar hbo of zelfs wo." },
           ],
           basiskennis: [{ onderwerp: "Niet 'lager = slechter'", uitleg: "mbo is NIET minder dan wo — verschillende beroepen + interesses. Stratenmaker (mbo) en arts (wo) zijn beide nodig." }],
-          niveaus: { basis: "mbo, hbo en wo zijn drie niveaus van vervolgonderwijs.", simpeler: "mbo = praktijk-beroep, hbo = hogeschool 4 jaar, wo = universiteit. Drie niveaus vervolgonderwijs in NL.", nogSimpeler: "3 niveaus" },
+          niveaus: { basis: "Kijk naar wanneer je naar het mbo, hbo of wo gaat: tijdens de middelbare school, of erna?", simpeler: "mbo = praktijk-beroep, hbo = hogeschool 4 jaar, wo = universiteit. Drie niveaus vervolgonderwijs in NL.", nogSimpeler: "3 niveaus" },
         },
       },
       {
@@ -289,7 +289,7 @@ const steps = [
             { type: "feit", tekst: "Je krijgt ook **vakantiegeld** (8% van salaris extra in mei) — telt op bij salaris." },
           ],
           basiskennis: [{ onderwerp: "Niet stiekem", uitleg: "Werken vóór 13 of zonder regels = werkgever in overtreding. Dan ligt de schuld bij de werkgever, niet bij jou." }],
-          niveaus: { basis: "13 jaar.", simpeler: "Vanaf 13 mag licht werk (klusjes, folders), vanaf 15 ook kranten, vanaf 16 bijbaan met regels (max uur, geen nacht).", nogSimpeler: "13+ licht werk" },
+          niveaus: { basis: "Helpen in de tuin is licht werk. Vanaf welke leeftijd mag je in Nederland licht werk doen voor geld?", simpeler: "Vanaf 13 mag licht werk (klusjes, folders), vanaf 15 ook kranten, vanaf 16 bijbaan met regels (max uur, geen nacht).", nogSimpeler: "13+ licht werk" },
         },
       },
       { q: "Wat is een **CV** (curriculum vitae)?", options: ["Overzicht van je opleidingen en werk", "Diploma van je laatste opleiding", "Contract met je loon en werktijden", "Strookje met wat je die maand verdient"], answer: 0, wrongHints: [null, "Een diploma krijg je voor één opleiding — is dat een overzicht?", "Een contract teken je pas als je aangenomen bent.", "Een loonstrook laat zien wat je verdient."] },

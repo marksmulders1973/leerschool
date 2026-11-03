@@ -64,7 +64,7 @@ const steps = [
           theorie: "Vierkant-formules: omtrek = 4 × zijde. Oppervlakte = zijde × zijde.",
           voorbeelden: [{ type: "stap", tekst: "Zijde 7m → omtrek = 4×7 = 28 m. Oppervlakte = 7×7 = 49 m²." }],
           basiskennis: [{ onderwerp: "Eenheid", uitleg: "Omtrek = m (lengte). Oppervlakte = m² (vlak)." }],
-          niveaus: { basis: "De omtrek is 28 m.", simpeler: "Een vierkant heeft 4 gelijke zijden. Omtrek = 4 × 7 = 28 m.", nogSimpeler: "De omtrek is 28 m: 7 + 7 + 7 + 7." },
+          niveaus: { basis: "De omtrek is de rand rondom. Een vierkant heeft vier even lange zijden: tel ze allemaal op.", simpeler: "Een vierkant heeft 4 gelijke zijden. Omtrek = 4 × 7 = 28 m.", nogSimpeler: "De omtrek is 28 m: 7 + 7 + 7 + 7." },
         },
       },
       {
@@ -78,7 +78,7 @@ const steps = [
           theorie: "Rechthoek-formules: omtrek = 2×(L+B). Oppervlakte = L×B.",
           voorbeelden: [{ type: "stap", tekst: "10×4 = 40. Eenheid m² (want 2 dimensies)." }],
           basiskennis: [{ onderwerp: "m² niet m", uitleg: "Oppervlakte ALTIJD m² (lengte × lengte). Niet zomaar m." }],
-          niveaus: { basis: "De oppervlakte is 40 m².", simpeler: "Oppervlakte = lengte × breedte = 10 × 4 = 40. De eenheid is m², want het is een vlak.", nogSimpeler: "De oppervlakte is 40 m²: 10 × 4." },
+          niveaus: { basis: "Oppervlakte is hoeveel ruimte het vlak inneemt. Bij een rechthoek reken je lengte keer breedte, en de eenheid krijgt een kleine 2 erbij.", simpeler: "Oppervlakte = lengte × breedte = 10 × 4 = 40. De eenheid is m², want het is een vlak.", nogSimpeler: "De oppervlakte is 40 m²: 10 × 4." },
         },
       },
       {
@@ -92,7 +92,7 @@ const steps = [
           theorie: "Omkeerformule vierkant: zijde = omtrek ÷ 4.",
           voorbeelden: [{ type: "stap", tekst: "Omtrek 20 → zijde = 20÷4 = 5 cm. Check: 4×5 = 20 ✓." }],
           basiskennis: [{ onderwerp: "Tafel van 4", tekst: "20÷4 = 5 (uit tafel: 4×5=20)." }],
-          niveaus: { basis: "Eén zijde is 5 cm.", simpeler: "Een vierkant heeft 4 gelijke zijden. Omtrek 20 ÷ 4 zijden = 5 cm per zijde.", nogSimpeler: "Eén zijde is 5 cm, want 4 × 5 = 20." },
+          niveaus: { basis: "De omtrek is alle vier de zijden samen, en die zijn bij een vierkant even lang. Door hoeveel moet je de omtrek dan delen?", simpeler: "Een vierkant heeft 4 gelijke zijden. Omtrek 20 ÷ 4 zijden = 5 cm per zijde.", nogSimpeler: "Eén zijde is 5 cm, want 4 × 5 = 20." },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -133,7 +133,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De oppervlakte is 64 cm².",
+            basis: "Bij een vierkant zijn alle zijden even lang. De oppervlakte is zijde keer zijde, met cm² als eenheid.",
             simpeler: "Vierkant: zijde × zijde = 8 × 8 = 64 cm².",
             nogSimpeler: "De oppervlakte is 64 cm²: 8 × 8.",
           },
@@ -176,7 +176,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De omtrek is 24 m.",
+            basis: "De omtrek is de rand: twee lange en twee korte zijden. Tel ze alle vier op.",
             simpeler: "Tel alle zijden op: 9 + 3 + 9 + 3 = 24 m.",
             nogSimpeler: "De omtrek is 24 m.",
           },
@@ -214,7 +214,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De oppervlakte is 14 cm².",
+            basis: "Oppervlakte van een rechthoek is lengte keer breedte. Vergeet de eenheid cm² niet.",
             simpeler: "Oppervlakte = lengte × breedte = 7 × 2 = 14 cm².",
             nogSimpeler: "De oppervlakte is 14 cm²: 7 × 2.",
           },
@@ -305,7 +305,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 × (lengte + breedte).",
+            basis: "Een rechthoek heeft twee lange en twee korte zijden. Welke som telt ze alle vier mee?",
             simpeler: "Tel lengte en breedte op en doe dat keer 2, want elke zijde komt 2 keer voor.",
             nogSimpeler: "Omtrek = 2 × (lengte + breedte).",
           },
@@ -348,7 +348,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ze hebben dezelfde omtrek, maar B heeft een grotere oppervlakte.",
+            basis: "Reken van allebei de figuren eerst de omtrek uit en daarna de oppervlakte. Vergelijk ze dan.",
             simpeler: "Allebei omtrek 16 m. Oppervlakte A = 7 m², B = 16 m².",
             nogSimpeler: "De omtrek is gelijk, maar B heeft meer oppervlakte.",
           },
@@ -676,7 +676,7 @@ const steps = [
           theorie: "Driehoek = halve rechthoek. Daarom ÷ 2.",
           voorbeelden: [{ type: "stap", tekst: "12 × 8 = 96. 96 ÷ 2 = 48 m²." }],
           basiskennis: [{ onderwerp: "Vergeet ÷2 niet", uitleg: "96 = oppervlakte rechthoek met dezelfde maten. Driehoek = helft." }],
-          niveaus: { basis: "48 m².", simpeler: "Driehoek = (basis × hoogte) ÷ 2 = (12×8)÷2 = 96÷2 = 48 m².", nogSimpeler: "48" },
+          niveaus: { basis: "Een driehoek is de helft van een rechthoek. Reken basis keer hoogte en neem daar de helft van.", simpeler: "Driehoek = (basis × hoogte) ÷ 2 = (12×8)÷2 = 96÷2 = 48 m².", nogSimpeler: "48" },
         },
       },
       {
@@ -690,7 +690,7 @@ const steps = [
           theorie: "Bij even getal: kun je eerst ÷2, dan vermenigvuldigen. 4÷2=2. 5×2=10.",
           voorbeelden: [{ type: "stap", tekst: "5×4÷2 = 5×2 = 10 cm²." }],
           basiskennis: [{ onderwerp: "Hoogte loodrecht", uitleg: "Hoogte = recht naar boven, niet schuine zijde." }],
-          niveaus: { basis: "10 cm².", simpeler: "(5×4)÷2 = 20÷2 = 10 cm².", nogSimpeler: "10" },
+          niveaus: { basis: "Reken eerst basis keer hoogte. Een driehoek is daar de helft van.", simpeler: "(5×4)÷2 = 20÷2 = 10 cm².", nogSimpeler: "10" },
         },
       },
       {
@@ -704,7 +704,7 @@ const steps = [
           theorie: "Driehoek-oppervlakte: ALTIJD ÷ 2 op het einde.",
           voorbeelden: [{ type: "stap", tekst: "6×9=54. 54÷2=27. Of: 6÷2=3, 3×9=27." }],
           basiskennis: [{ onderwerp: "Even getal eerst ÷2", uitleg: "6 is even → 6÷2=3 → 3×9=27. Voorkomt grote getallen." }],
-          niveaus: { basis: "27 m².", simpeler: "Driehoek = (6×9)÷2 = 54÷2 = 27 m² gras.", nogSimpeler: "27" },
+          niveaus: { basis: "Het gras bedekt de hele driehoek, dus je zoekt de oppervlakte. Reken basis keer hoogte en neem daar de helft van.", simpeler: "Driehoek = (6×9)÷2 = 54÷2 = 27 m² gras.", nogSimpeler: "27" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -745,7 +745,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 m².",
+            basis: "Reken eerst basis keer hoogte. Een driehoek is daar de helft van.",
             simpeler: "(4 × 3) ÷ 2 = 12 ÷ 2 = 6 m².",
             nogSimpeler: "6",
           },
@@ -783,7 +783,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 cm².",
+            basis: "Een driehoek is de helft van een rechthoek. Reken basis keer hoogte en deel dat door 2.",
             simpeler: "(7 × 2) ÷ 2 = 14 ÷ 2 = 7 cm².",
             nogSimpeler: "7",
           },
@@ -826,7 +826,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een driehoek is de helft van een rechthoek.",
+            basis: "Teken een rechthoek en trek een schuine lijn van hoek naar hoek. Wat zie je dan ontstaan?",
             simpeler: "Knip een rechthoek schuin door: twee driehoeken, elk de helft.",
             nogSimpeler: "Helft",
           },
@@ -864,7 +864,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "21 cm.",
+            basis: "De omtrek is de rand rondom. Tel de lengtes van alle drie de zijden bij elkaar op.",
             simpeler: "Tel de 3 zijden op: 6 + 7 + 8 = 21 cm.",
             nogSimpeler: "21",
           },
@@ -902,7 +902,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12 cm².",
+            basis: "Voor de oppervlakte heb je alleen de basis en de hoogte nodig; de schuine zijden doen niet mee. Reken basis keer hoogte en neem de helft.",
             simpeler: "(basis × hoogte) ÷ 2 = (8 × 3) ÷ 2 = 12 cm².",
             nogSimpeler: "12",
           },
@@ -940,7 +940,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "300 cm².",
+            basis: "Stof bedekt het hele vlaggetje, dus je zoekt de oppervlakte. Reken basis keer hoogte en neem daar de helft van.",
             simpeler: "(20 × 30) ÷ 2 = 600 ÷ 2 = 300 cm².",
             nogSimpeler: "300",
           },
@@ -964,7 +964,7 @@ const steps = [
           theorie: "2-stappen: 1) bereken omtrek. 2) keer prijs per meter.",
           voorbeelden: [{ type: "stap", tekst: "Omtrek 2×(15+12)=54m. ×€10 = €540." }],
           basiskennis: [{ onderwerp: "Niet ×oppervlakte", uitleg: "180 m² × €10 = €1800 (fout). Hek = lengte!" }],
-          niveaus: { basis: "€540.", simpeler: "Hek = omtrek = 2×(15+12) = 54m. Kosten = 54 × €10 = €540.", nogSimpeler: "€540" },
+          niveaus: { basis: "Een hek gaat om de tuin heen, dus reken eerst de omtrek uit. Doe die meters daarna keer de prijs per meter.", simpeler: "Hek = omtrek = 2×(15+12) = 54m. Kosten = 54 × €10 = €540.", nogSimpeler: "€540" },
         },
       },
       {
@@ -978,7 +978,7 @@ const steps = [
           theorie: "2-stappen: 1) oppervlakte (L×B). 2) keer prijs per m².",
           voorbeelden: [{ type: "stap", tekst: "8×6 = 48 m². ×€12 = €576." }],
           basiskennis: [{ onderwerp: "48 × 12", uitleg: "48×12 = 48×10 + 48×2 = 480+96 = 576." }],
-          niveaus: { basis: "€576.", simpeler: "Vloer = 8×6 = 48 m². Kosten = 48 × €12 = €576.", nogSimpeler: "€576" },
+          niveaus: { basis: "Tegels bedekken de hele vloer, dus reken eerst de oppervlakte in m² uit. Doe dat daarna keer de prijs per m².", simpeler: "Vloer = 8×6 = 48 m². Kosten = 48 × €12 = €576.", nogSimpeler: "€576" },
         },
       },
       {
@@ -992,7 +992,7 @@ const steps = [
           theorie: "Driehoek-oppervlakte = (B×H)÷2. Dan × prijs.",
           voorbeelden: [{ type: "stap", tekst: "(10×4)÷2 = 20 m². 20×€6 = €120." }],
           basiskennis: [{ onderwerp: "÷2 niet vergeten", uitleg: "Zonder ÷2 = 40 m² → €240 (fout)." }],
-          niveaus: { basis: "€120.", simpeler: "Driehoek = (10×4)÷2 = 20 m². Kosten = 20 × €6 = €120.", nogSimpeler: "€120" },
+          niveaus: { basis: "Reken eerst de oppervlakte van de driehoek uit: basis keer hoogte, en daarvan de helft. Doe dat daarna keer de prijs per m².", simpeler: "Driehoek = (10×4)÷2 = 20 m². Kosten = 20 × €6 = €120.", nogSimpeler: "€120" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1028,7 +1028,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 L.",
+            basis: "Reken eerst uit hoeveel m² de muur is. Kijk dan hoe vaak 6 m² daarin past.",
             simpeler: "Muur = 24 m². Elke liter doet 6 m². 24 ÷ 6 = 4 liter.",
             nogSimpeler: "4",
           },
@@ -1152,7 +1152,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 190.",
+            basis: "Reken het gras en het hek apart uit: voor gras de oppervlakte, voor het hek de omtrek. Tel de twee bedragen daarna op.",
             simpeler: "Gras € 100 + hek € 90 = € 190.",
             nogSimpeler: "€ 190",
           },
@@ -1382,7 +1382,7 @@ const steps = [
             { type: "stap", tekst: "Tuin 20 m × 15 m = 300 m² = 3.000.000 cm² = 0,03 ha." },
           ],
           basiskennis: [{ onderwerp: "De toets test omrekening", uitleg: "De toets test bijna altijd op eenheid bij oppervlakte-vragen. Lees of m² of cm² gevraagd." }],
-          niveaus: { basis: "0,96 m².", simpeler: "120 × 80 = 9.600 cm². 9.600 ÷ 10.000 = 0,96 m².", nogSimpeler: "0,96 m²" },
+          niveaus: { basis: "Maak eerst van de centimeters meters: 100 cm is 1 m. Reken daarna lengte keer breedte.", simpeler: "120 × 80 = 9.600 cm². 9.600 ÷ 10.000 = 0,96 m².", nogSimpeler: "0,96 m²" },
         },
       },
       {
@@ -1406,7 +1406,7 @@ const steps = [
             { type: "stap", tekst: "Rechthoek 10×5 met gat 3×2 = 50 − 6 = 44 m²." },
           ],
           basiskennis: [{ onderwerp: "Niet 1 grote vorm", uitleg: "Complexe vormen NIET als 1 grote rechthoek behandelen — splits altijd." }],
-          niveaus: { basis: "32 + 6 = 38 m².", simpeler: "Splits: groot stuk 8×4=32, uitstek 3×2=6. Samen 38 m².", nogSimpeler: "38 m²" },
+          niveaus: { basis: "Knip het L-vormige terras in twee rechthoeken. Reken van elk stuk de oppervlakte uit en tel ze op.", simpeler: "Splits: groot stuk 8×4=32, uitstek 3×2=6. Samen 38 m².", nogSimpeler: "38 m²" },
         },
       },
       {
@@ -1430,7 +1430,7 @@ const steps = [
             { type: "stap", tekst: "Vloer 6 × 4 m, tegels 50 cm: 12 × 8 = 96 tegels." },
           ],
           basiskennis: [{ onderwerp: "Eenheid uniform", uitleg: "Altijd alle afmetingen in zelfde eenheid (cm OF m), niet mixen." }],
-          niveaus: { basis: "10 × 8 = 80 tegels.", simpeler: "Vloer 3 m = 10 tegels, 2,4 m = 8 tegels. 10 × 8 = 80.", nogSimpeler: "80" },
+          niveaus: { basis: "Maak eerst van de meters centimeters. Reken uit hoeveel tegels er in de lengte passen en hoeveel in de breedte.", simpeler: "Vloer 3 m = 10 tegels, 2,4 m = 8 tegels. 10 × 8 = 80.", nogSimpeler: "80" },
         },
       },
       { q: "Een vierkant heeft zijden van 7 cm. Wat is de omtrek?", options: ["28 cm","14 cm","35 cm","21 cm"], answer: 0, wrongHints: [null, "Dat zijn maar twee zijden. Hoeveel zijden heeft een vierkant?", "Hoeveel zijden heeft een vierkant? Tel ze nog eens.", "Dat zijn maar drie zijden."] },

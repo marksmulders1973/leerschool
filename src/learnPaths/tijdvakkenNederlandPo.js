@@ -346,7 +346,7 @@ const steps = [
           theorie: "Anker-jaar 800 = kroning Karel. Onthoud als anker in de vroege middeleeuwen.",
           voorbeelden: [{ type: "feit", tekst: "Karel breidde zijn rijk uit over West-Europa. Hoofdstad Aken." }],
           basiskennis: [{ onderwerp: "Niet de andere drie", uitleg: "Floris V (1296), Willem v Oranje (1584), Napoleon (1804) — allemaal eeuwen later." }],
-          niveaus: { basis: "Karel de Grote.", simpeler: "Karel de Grote (Frankisch koning) werd in 800 keizer. Andere opties leefden eeuwen later.", nogSimpeler: "Karel" },
+          niveaus: { basis: "Het jaar 800 hoort bij het begin van de middeleeuwen. Welke van deze personen leefde in die tijd en had een groot rijk?", simpeler: "Karel de Grote (Frankisch koning) werd in 800 keizer. Andere opties leefden eeuwen later.", nogSimpeler: "Karel" },
         },
       },
       {
@@ -379,7 +379,7 @@ const steps = [
           theorie: "Floris hielp boeren tegen edelen. Edelen vermoordden hem in 1296 (kasteel Muiderslot/Muiderberg).",
           voorbeelden: [{ type: "context", tekst: "Floris was populair bij gewone volk maar gehaat bij rijke edelen." }],
           basiskennis: [{ onderwerp: "Andere vermoorden", uitleg: "Willem v Oranje OOK vermoord (1584), maar hij was geen middeleeuwse graaf." }],
-          niveaus: { basis: "Floris V.", simpeler: "Floris V (graaf Holland, 1254-1296) werd vermoord door edelen.", nogSimpeler: "Floris V" },
+          niveaus: { basis: "Let op het woord 'graaf': wie van deze personen was een graaf, en geen keizer, koning of prins?", simpeler: "Floris V (graaf Holland, 1254-1296) werd vermoord door edelen.", nogSimpeler: "Floris V" },
         },
       },
       {
@@ -393,7 +393,7 @@ const steps = [
           theorie: "Steden werkten samen voor: bescherming tegen rovers, gezamenlijke regels, betere prijzen.",
           voorbeelden: [{ type: "feit", tekst: "Hanzesteden bloei 1300-1500. Handel Oostzee + Noordzee." }],
           basiskennis: [{ onderwerp: "Stadsmacht", uitleg: "Steden werden machtig door handel — eerste vorm van burgerlijke macht." }],
-          niveaus: { basis: "Handelsverbond.", simpeler: "Hanze = verbond van middeleeuwse handelssteden (samen sterker = veiliger handel).", nogSimpeler: "Handel" },
+          niveaus: { basis: "Denk aan de koggeschepen die tussen steden voeren met graan, vis en hout. Waar ging de Hanze dus over?", simpeler: "Hanze = verbond van middeleeuwse handelssteden (samen sterker = veiliger handel).", nogSimpeler: "Handel" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -429,7 +429,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Trouw zijn en meevechten.",
+            basis: "Een ridder kreeg land van zijn heer. Wat had die heer vooral nodig in een tijd met veel oorlogen?",
             simpeler: "Grond krijgen = trouw zijn en meevechten.",
             nogSimpeler: "meevechten",
           },
@@ -472,7 +472,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In de stad.",
+            basis: "Een boer moest gehoorzamen aan de heer van het land. Waar kon je die heer ontlopen en eigen regels krijgen?",
             simpeler: "Stad = meer vrijheid.",
             nogSimpeler: "de stad",
           },
@@ -510,7 +510,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het Sticht was het bisdom Utrecht.",
+            basis: "Een 'bisdom' is een gebied waar een bisschop de baas is. Bij welke optie hoort een bisschop?",
             simpeler: "Sticht = bisdom Utrecht.",
             nogSimpeler: "Utrecht",
           },
@@ -548,7 +548,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ongeveer 1100.",
+            basis: "Handelssteden groeiden in de middeleeuwen. Welk jaartal uit de opties valt binnen de middeleeuwen (ongeveer 500-1500)?",
             simpeler: "Steden groeien vanaf 1100.",
             nogSimpeler: "1100",
           },
@@ -591,7 +591,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij stichtte een groot rijk.",
+            basis: "Karel de Grote werd in 800 keizer. Wat bestuurt een keizer: één stad, of een heel groot gebied?",
             simpeler: "Karel de Grote: groot rijk in West-Europa.",
             nogSimpeler: "groot rijk",
           },
@@ -629,7 +629,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ongeveer duizend jaar.",
+            basis: "Weet je nog in welke eeuw de middeleeuwen begonnen en eindigden? Tel hoeveel eeuwen daartussen zitten.",
             simpeler: "Van 500 tot 1500 = 1000 jaar.",
             nogSimpeler: "duizend jaar",
           },
@@ -653,7 +653,7 @@ const steps = [
           theorie: "Naam zegt het: tachtig + jaar. Reken: 1648 - 1568 = 80.",
           voorbeelden: [{ type: "ankers", tekst: "1568 = begin (Slag bij Heiligerlee). 1648 = einde (Vrede van Münster)." }],
           basiskennis: [{ onderwerp: "Niet 30-jarig", uitleg: "Dertigjarige Oorlog (1618-1648) was een Europese oorlog in Duitsland — ander conflict." }],
-          niveaus: { basis: "1568-1648 (80 jaar).", simpeler: "Tachtigjarige Oorlog = 80 jaar. Van 1568 tot 1648 (Vrede van Münster).", nogSimpeler: "1568-1648" },
+          niveaus: { basis: "De naam vertelt hoe lang de oorlog duurde. Reken per optie uit hoeveel jaar ertussen zit; let op dat de oorlog vóór 1700 was afgelopen.", simpeler: "Tachtigjarige Oorlog = 80 jaar. Van 1568 tot 1648 (Vrede van Münster).", nogSimpeler: "1568-1648" },
         },
       },
       {
@@ -668,7 +668,7 @@ const steps = [
           theorie: "Willem startte opstand. Filips II was juist de SPAANSE koning (=tegenstander).",
           voorbeelden: [{ type: "feit", tekst: "Willem stierf 1584 in Delft (vermoord door Balthasar Gerards). Frederik Hendrik kwam later." }],
           basiskennis: [{ onderwerp: "Wilhelmus", uitleg: "Volkslied 'Wilhelmus van Nassouwe' is over Willem v Oranje." }],
-          niveaus: { basis: "Willem van Oranje.", simpeler: "Willem van Oranje = leider NL opstand tegen Spanje. Filips II was juist de Spaanse koning.", nogSimpeler: "Willem" },
+          niveaus: { basis: "Filips II was de koning van Spanje, dus de tegenstander. Wie was de leider van de opstand aan de Nederlandse kant?", simpeler: "Willem van Oranje = leider NL opstand tegen Spanje. Filips II was juist de Spaanse koning.", nogSimpeler: "Willem" },
         },
       },
       {
@@ -682,7 +682,7 @@ const steps = [
           theorie: "Tijdlijn: 1568 begin → 1581 plakkaat (verklaring) → 1648 vrede (erkenning). Pas vrede = officieel onafhankelijk.",
           voorbeelden: [{ type: "stap", tekst: "Plakkaat 1581 = 'wij verklaren ons los'. Münster 1648 = Spanje accepteert dat." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Verklaring (eenzijdig) ≠ erkenning (door tegenpartij)." }],
-          niveaus: { basis: "1648.", simpeler: "Vrede van Münster (1648) = einde oorlog + officieel onafhankelijk. Plakkaat 1581 was de verklaring (door NL zelf).", nogSimpeler: "1648" },
+          niveaus: { basis: "De erkenning kwam pas bij het einde van de Tachtigjarige Oorlog, met een vrede. Wanneer eindigde die oorlog?", simpeler: "Vrede van Münster (1648) = einde oorlog + officieel onafhankelijk. Plakkaat 1581 was de verklaring (door NL zelf).", nogSimpeler: "1648" },
         },
       },
       {
@@ -957,7 +957,7 @@ const steps = [
           theorie: "Tijdlijn: stadhouders → Bataafse Republiek (1795) → Lodewijk Napoleon (1806) → Willem I koning (1815).",
           voorbeelden: [{ type: "feit", tekst: "Willem I was zoon van Willem V (laatste stadhouder). Verre nazaat van de familie van Willem v Oranje, maar een ander persoon." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Willem v Oranje (16e eeuw, stadhouder/leider) ≠ Willem I (19e eeuw, koning)." }],
-          niveaus: { basis: "Willem I.", simpeler: "Eerste echte koning NL = Willem I (1815). Lodewijk Napoleon was opgelegd door Napoleon (1806).", nogSimpeler: "Willem I" },
+          niveaus: { basis: "Na de Franse tijd, in 1815, kreeg Nederland zijn eerste koning. Welke koning uit de opties hoort bij dat begin?", simpeler: "Eerste echte koning NL = Willem I (1815). Lodewijk Napoleon was opgelegd door Napoleon (1806).", nogSimpeler: "Willem I" },
         },
       },
       {
@@ -986,7 +986,7 @@ const steps = [
           theorie: "Tijdlijn WO2 NL: 10 mei 1940 (binnenval) → 5 jaar bezetting → 5 mei 1945 (bevrijding).",
           voorbeelden: [{ type: "ankers", tekst: "10 mei 1940 = bezetting begint. 5 mei 1945 = bevrijding. Precies 5 jaar." }],
           basiskennis: [{ onderwerp: "Augustus = Japan", uitleg: "Aug 1945 = Japan capituleert (atoombom). NL werd al in mei bevrijd door Geallieerden." }],
-          niveaus: { basis: "Mei 1945.", simpeler: "5 mei 1945 = bevrijdingsdag NL. Mei 1940 was juist begin bezetting (5 jaar eerder).", nogSimpeler: "Mei 1945" },
+          niveaus: { basis: "Op 5 mei vieren we Bevrijdingsdag. In welk jaar eindigde de oorlog in Nederland?", simpeler: "5 mei 1945 = bevrijdingsdag NL. Mei 1940 was juist begin bezetting (5 jaar eerder).", nogSimpeler: "Mei 1945" },
         },
       },
       {

@@ -1,0 +1,237 @@
+[
+ {
+  "file": "src/learnPaths/breukenPo.js",
+  "items": [
+   {
+    "waar": "breuken-po stap 1 vraag 1",
+    "antwoord": "5/8",
+    "basis": "5/8 is over."
+   },
+   {
+    "waar": "breuken-po stap 1 vraag 2",
+    "antwoord": "7/4",
+    "basis": "7/4 > 1."
+   },
+   {
+    "waar": "breuken-po stap 1 vraag 3",
+    "antwoord": "4/6",
+    "basis": "4/6."
+   },
+   {
+    "waar": "breuken-po stap 1 vraag 5",
+    "antwoord": "Hoeveel stukken je neemt",
+    "basis": "De teller zegt hoeveel stukken je neemt."
+   },
+   {
+    "waar": "breuken-po stap 1 vraag 6",
+    "antwoord": "5/5",
+    "basis": "5/5 = 1 geheel."
+   },
+   {
+    "waar": "breuken-po stap 1 vraag 7",
+    "antwoord": "2/3",
+    "basis": "2/3 is een echte breuk."
+   },
+   {
+    "waar": "breuken-po stap 1 vraag 8",
+    "antwoord": "1/5",
+    "basis": "Je eet 1/5 van de taart."
+   },
+   {
+    "waar": "breuken-po stap 3 vraag 1",
+    "antwoord": "3/4",
+    "basis": "3/4."
+   },
+   {
+    "waar": "breuken-po stap 3 vraag 2",
+    "antwoord": "50/100",
+    "basis": "50/100 = 1/2."
+   },
+   {
+    "waar": "breuken-po stap 4 vraag 1",
+    "antwoord": "3/4",
+    "basis": "3/4."
+   },
+   {
+    "waar": "breuken-po stap 4 vraag 2",
+    "antwoord": "3/4",
+    "basis": "3/4."
+   },
+   {
+    "waar": "breuken-po stap 5 vraag 7",
+    "antwoord": "15",
+    "basis": "15."
+   },
+   {
+    "waar": "breuken-po stap 6 vraag 2",
+    "antwoord": "500",
+    "basis": "500 mL."
+   },
+   {
+    "waar": "breuken-po stap 6 vraag 4",
+    "antwoord": "€ 45",
+    "basis": "€45."
+   },
+   {
+    "waar": "breuken-po stap 6 vraag 5",
+    "antwoord": "60",
+    "basis": "60 minuten."
+   },
+   {
+    "waar": "breuken-po stap 6 vraag 6",
+    "antwoord": "18",
+    "basis": "18 leerlingen."
+   },
+   {
+    "waar": "breuken-po stap 6 vraag 7",
+    "antwoord": "€ 60",
+    "basis": "€ 60."
+   },
+   {
+    "waar": "breuken-po stap 7 vraag 1",
+    "antwoord": "1/8",
+    "basis": "1/8."
+   },
+   {
+    "waar": "breuken-po stap 7 vraag 2",
+    "antwoord": "24",
+    "basis": "24 vragen."
+   },
+   {
+    "waar": "breuken-po stap 7 vraag 3",
+    "antwoord": "5/6",
+    "basis": "5/6."
+   },
+   {
+    "waar": "breuken-po stap 7 vraag 4",
+    "antwoord": "200",
+    "basis": "200 mL."
+   },
+   {
+    "waar": "breuken-po stap 7 vraag 5",
+    "antwoord": "1/3",
+    "basis": "1/3."
+   },
+   {
+    "waar": "breuken-po stap 7 vraag 6",
+    "antwoord": "5/8",
+    "basis": "5/8."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/grafiekenLezenPo.js",
+  "items": [
+   {
+    "waar": "grafieken-lezen-po stap 1 vraag 2",
+    "antwoord": "Lijngrafiek",
+    "basis": "Een lijngrafiek laat zien hoe iets verandert door de tijd."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 1 vraag 3",
+    "antwoord": "Cirkeldiagram",
+    "basis": "Een cirkeldiagram laat zien welk deel van het totaal iets is."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 1 vraag 5",
+    "antwoord": "Temperatuur",
+    "basis": "°C is de eenheid voor temperatuur."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 1 vraag 6",
+    "antwoord": "Kilogram (kg)",
+    "basis": "Gewicht meet je in kilogram (kg)."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 1 vraag 8",
+    "antwoord": "Staafdiagram",
+    "basis": "Een grafiek met balkjes is een staafdiagram."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 2 vraag 1",
+    "antwoord": "40 mm",
+    "basis": "Maart-balk = 40 mm."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 2 vraag 2",
+    "antwoord": "12 kinderen",
+    "basis": "30 − 18 = 12 kinderen."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 4 vraag 1",
+    "antwoord": "Voetbal",
+    "basis": "Voetbal heeft 50% = grootste stuk"
+   },
+   {
+    "waar": "grafieken-lezen-po stap 4 vraag 2",
+    "antwoord": "10 kinderen",
+    "basis": "50% × 20 = 10 kinderen."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 4 vraag 3",
+    "antwoord": "5 kinderen",
+    "basis": "5 kinderen (20 ÷ 4 = 5)."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 4 vraag 4",
+    "antwoord": "100%",
+    "basis": "100% (hele taart = geheel)."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 4 vraag 6",
+    "antwoord": "25%",
+    "basis": "100 − 45 − 30 = 25%."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 4 vraag 8",
+    "antwoord": "25%",
+    "basis": "Een kwart = 25%."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 5 vraag 1",
+    "antwoord": "Dinsdag",
+    "basis": "Dinsdag (8) is het laagste."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 5 vraag 3",
+    "antwoord": "18 ijsjes",
+    "basis": "30 − 12 = 18 ijsjes."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 5 vraag 5",
+    "antwoord": "Daan en Joep",
+    "basis": "Daan en Joep (allebei 5)."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 5 vraag 7",
+    "antwoord": "In de tabel",
+    "basis": "In de tabel."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 6 vraag 1",
+    "antwoord": "230 mm",
+    "basis": "60 + 80 + 40 + 50 = 230 mm."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 6 vraag 2",
+    "antwoord": "3 kg",
+    "basis": "3 kg aangekomen (6 − 3 = 3)."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 6 vraag 3",
+    "antwoord": "20 kinderen",
+    "basis": "50% van 40 = 40÷2 = 20 kinderen."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 6 vraag 4",
+    "antwoord": "Vogel",
+    "basis": "Vogel (4) is het laagst."
+   },
+   {
+    "waar": "grafieken-lezen-po stap 6 vraag 6",
+    "antwoord": "Elke dag 2 meer",
+    "basis": "Elke dag 2 meer."
+   }
+  ]
+ }
+]

@@ -44,7 +44,7 @@ const steps = [
         explanation: "**1992 Verdrag van Maastricht** = oprichting Europese Unie. Was eerder EEG (Europese Economische Gemeenschap, 1957). Maastricht maakte de samenwerking breder: niet alleen economie, ook politiek + gemeenschappelijke munt (euro plan).",
         uitlegPad: compact(
           "Verdrag van Maastricht 1992 = officieel begin van de Europese Unie. NL-stad, ondertekend door 12 landen.",
-          { basis: "1992.", simpeler: "Maastricht 1992 = EU-geboorte.", nogSimpeler: "1992" },
+          { basis: "Het Verdrag van Maastricht kwam lang ná de start van de EEG (1957), maar een paar jaar vóór de euro (2002). Welk jaar ligt vlak voor de euro?", simpeler: "Maastricht 1992 = EU-geboorte.", nogSimpeler: "1992" },
           [{ woord: "Verdrag", uitleg: "Officiële afspraak tussen landen." }, { woord: "EEG", uitleg: "Europese Economische Gemeenschap — voorloper van EU (1957)." }],
         ),
       },
@@ -56,7 +56,7 @@ const steps = [
         explanation: "**Brussel** = de facto EU-hoofdstad. Europese Commissie, Raad van de EU, deel van het Parlement + NAVO zitten er. Straatsburg (FR) is 1 week per maand de vergaderplek van het Parlement (politiek compromis).",
         uitlegPad: compact(
           "Brussel = hart van de EU. Commissie + Raad + groot deel Parlement zitten hier.",
-          { basis: "Brussel.", simpeler: "België-Brussel = EU-stad.", nogSimpeler: "Brussel" },
+          { basis: "Denk aan de stad waar de Europese Commissie en de Raad hun kantoren hebben. In welk land ligt die stad?", simpeler: "België-Brussel = EU-stad.", nogSimpeler: "Brussel" },
           [{ woord: "Brussel", uitleg: "Hoofdstad België én feitelijke EU-hoofdstad." }],
         ),
       },
@@ -75,7 +75,7 @@ const steps = [
         explanation: "**4 vrijheden**: personen + goederen + diensten + kapitaal. Onthoud met 'PGDK' of '4 P+G+D+K'.",
         uitlegPad: compact(
           "4 vrijheden van de interne EU-markt: personen, goederen, diensten, kapitaal. Vorm sinds oprichting EEG 1957.",
-          { basis: "4 vrijheden.", simpeler: "PGDK = 4.", nogSimpeler: "4" },
+          { basis: "Wat mag er vrij over de grens? Begin met personen en goederen, bedenk wat er nog meer bij hoort en tel ze daarna.", simpeler: "PGDK = 4.", nogSimpeler: "4" },
           [{ woord: "interne markt", uitleg: "Gemeenschappelijk economisch gebied EU." }],
         ),
       },
@@ -118,7 +118,7 @@ const steps = [
         explanation: "**Commissie heeft monopolie op initiatief**: alleen zij stelt nieuwe wetten voor. Andere EU-organen stemmen + controleren. Vergelijking NL: zoals regering vaak wetsvoorstellen indient in Tweede Kamer.",
         uitlegPad: compact(
           "Commissie = motor van EU-wetgeving. Mag initiëren wat Parlement + Raad daarna goedkeuren.",
-          { basis: "Commissie.", simpeler: "Alleen Commissie kan nieuwe wet voorstellen.", nogSimpeler: "Commissie" },
+          { basis: "Bedenk per instelling wat ze doet: wie stemt, wie geeft richting, en wie schrijft een nieuwe wet als eerste op papier?", simpeler: "Alleen Commissie kan nieuwe wet voorstellen.", nogSimpeler: "Commissie" },
           [{ woord: "initiatiefrecht", uitleg: "Recht om als eerste een wetsvoorstel in te dienen." }],
         ),
       },
@@ -142,7 +142,7 @@ const steps = [
         explanation: "**Ursula von der Leyen** (Duitsland, CDU) is voorzitter van de Europese Commissie sinds december 2019. Herkozen 2024 voor 2e termijn.",
         uitlegPad: compact(
           "Voorzitters EU-instellingen (2024): Commissie = Von der Leyen. Parlement = Metsola. Europese Raad = António Costa (sinds dec 2024). NAVO = Rutte.",
-          { basis: "Von der Leyen.", simpeler: "Duitse vrouw, sinds 2019, Commissie-voorzitter.", nogSimpeler: "Von der Leyen" },
+          { basis: "Weet je bij elke naam welke baan die persoon heeft of had? Zoek de persoon die de Europese Commissie leidt, niet het Parlement of de Raad.", simpeler: "Duitse vrouw, sinds 2019, Commissie-voorzitter.", nogSimpeler: "Von der Leyen" },
           [{ woord: "Von der Leyen", uitleg: "Voorzitter Europese Commissie sinds 2019. Duits CDU-lid." }],
         ),
       },
@@ -161,7 +161,7 @@ const steps = [
         explanation: "**Europese Raad** = bijeenkomst regeringsleiders (premiers + presidenten). Voor NL: minister-president.",
         uitlegPad: compact(
           "Europese Raad = top-vergadering regeringsleiders. NIET hetzelfde als 'Raad van de EU' (ministers) of 'Europees Parlement' (MEPs).",
-          { basis: "Regeringsleiders.", simpeler: "De baas van elk EU-land.", nogSimpeler: "Regeringsleiders" },
+          { basis: "Let op het verschil: in de Europese Raad komen de hoogste bazen van elk land samen. Wie is de baas van de regering van een land?", simpeler: "De baas van elk EU-land.", nogSimpeler: "Regeringsleiders" },
           [{ woord: "regeringsleider", uitleg: "Premier of president van een land." }],
         ),
       },
@@ -173,7 +173,7 @@ const steps = [
         explanation: "**Raad van de Europese Unie** = vakministers per onderwerp. Klimaat-onderwerp = milieu-ministers. Wisselt onderwerp per vergadering (Landbouw-Raad, Financiën-Raad, etc.).",
         uitlegPad: compact(
           "Raad van de EU = ministers per vak (gewone ministers, niet premier). Verschilt per onderwerp.",
-          { basis: "Raad van de EU.", simpeler: "Vak-ministers samen = Raad van EU.", nogSimpeler: "Raad van EU" },
+          { basis: "Hier vergaderen geen premiers, maar ministers van hetzelfde vak uit alle landen. Welke instelling is de vergadering van ministers?", simpeler: "Vak-ministers samen = Raad van EU.", nogSimpeler: "Raad van EU" },
           [{ woord: "Raad van de EU", uitleg: "Bijeenkomst vakministers EU-lidstaten." }],
         ),
       },
@@ -185,7 +185,7 @@ const steps = [
         explanation: "**António Costa** (Portugal) is voorzitter van de Europese Raad sinds december 2024 — voor 2,5 jaar. Volgde Charles Michel (België) op.",
         uitlegPad: compact(
           "António Costa = voorzitter Europese Raad sinds dec 2024. Portugese sociaal-democraat, oud-premier Portugal.",
-          { basis: "António Costa.", simpeler: "Costa (PT) = Europese Raad-voorzitter sinds eind 2024.", nogSimpeler: "Costa" },
+          { basis: "De vorige voorzitter stopte in december 2024. Weet je welke baan de andere namen hebben? Dan blijft de nieuwe voorzitter over.", simpeler: "Costa (PT) = Europese Raad-voorzitter sinds eind 2024.", nogSimpeler: "Costa" },
           [{ woord: "António Costa", uitleg: "Voorzitter Europese Raad sinds 1 december 2024." }],
         ),
       },
@@ -216,7 +216,7 @@ const steps = [
         explanation: "**Polen** heeft de **zloty** (PLN). Polen besloot bewust euro NIET in te voeren. Andere EU-landen zonder euro: Zweden, Denemarken, Tsjechië, Hongarije, Roemenië.",
         uitlegPad: compact(
           "Polen = zloty. Andere EU-landen met eigen munt: Zweden + Denemarken (krona/krone), Tsjechië (kroon), Hongarije (forint), Roemenië (leu).",
-          { basis: "Polen heeft zloty.", simpeler: "Polen = niet-euro = zloty.", nogSimpeler: "Polen" },
+          { basis: "De landen die al lang in de EU zitten, betalen met de euro. Welk land kwam later bij de EU en heeft nog een eigen munt?", simpeler: "Polen = niet-euro = zloty.", nogSimpeler: "Polen" },
           [{ woord: "zloty", uitleg: "Munt van Polen (PLN)." }],
         ),
       },
@@ -228,7 +228,7 @@ const steps = [
         explanation: "**ECB zit in Frankfurt am Main** (Duitsland) — sinds oprichting 1998. Bepaalt rentestand voor eurozone + drukt eurogeld. President: **Christine Lagarde** (Frans, sinds 2019).",
         uitlegPad: compact(
           "ECB = Europese Centrale Bank in Frankfurt. Christine Lagarde voorzitter. Bepaalt rente voor euro.",
-          { basis: "Frankfurt.", simpeler: "ECB = Frankfurt Duitsland.", nogSimpeler: "Frankfurt" },
+          { basis: "De ECB zit niet bij de Commissie in Brussel. Denk aan een stad die bekend is om haar banken en de beurs.", simpeler: "ECB = Frankfurt Duitsland.", nogSimpeler: "Frankfurt" },
           [{ woord: "ECB", uitleg: "Europese Centrale Bank — bewaakt de euro." }, { woord: "Christine Lagarde", uitleg: "Voorzitter ECB sinds 2019, Frans." }],
         ),
       },
@@ -247,7 +247,7 @@ const steps = [
         explanation: "**12 sterren** op de EU-vlag — vast aantal sinds 1955 (eerst als vlag van de Raad van Europa). 12 staat voor perfectie/voltooidheid (12 maanden, 12 apostelen, 12 uren). VERANDERT NIET met aantal lidstaten.",
         uitlegPad: compact(
           "EU-vlag = 12 gele sterren op blauw. Vast getal — niet aantal landen. Symbool van eenheid + perfectie.",
-          { basis: "12 sterren.", simpeler: "Vlag heeft altijd 12 sterren, los van aantal landen.", nogSimpeler: "12" },
+          { basis: "Het aantal sterren verandert niet als er landen bijkomen. Stel je de vlag voor en tel de sterren in de cirkel.", simpeler: "Vlag heeft altijd 12 sterren, los van aantal landen.", nogSimpeler: "12" },
           [{ woord: "EU-vlag", uitleg: "Blauw + 12 gele sterren in cirkel. Sinds 1985 ook EU-symbool." }],
         ),
       },
@@ -259,7 +259,7 @@ const steps = [
         explanation: "**Duitsland** = grootste handelspartner NL (zowel import als export). Logisch: buurland, ~84 miljoen mensen, sterke industrie. ~25% van Nederlandse export gaat naar Duitsland.",
         uitlegPad: compact(
           "Duitsland = NL's grootste handelspartner. Buurland, sterke economie, ~84 mln inwoners.",
-          { basis: "Duitsland.", simpeler: "DE = grootste klant van NL.", nogSimpeler: "Duitsland" },
+          { basis: "Een land handelt het meest met grote landen die dichtbij liggen. Welk land uit de lijst is zowel een buurland als heel groot?", simpeler: "DE = grootste klant van NL.", nogSimpeler: "Duitsland" },
           [{ woord: "handelspartner", uitleg: "Land waar veel mee gehandeld wordt (im/export)." }],
         ),
       },
@@ -271,7 +271,7 @@ const steps = [
         explanation: "**9 mei** = Schuman-dag, naar Robert Schuman (Franse minister van Buitenlandse Zaken) die op 9 mei 1950 het plan voor de Europese samenwerking presenteerde (kolen + staal). Dat is officieel het begin van de EU-samenwerking.",
         uitlegPad: compact(
           "9 mei = Dag van Europa. Verwijst naar Schuman-verklaring 1950 — startpunt EU-samenwerking.",
-          { basis: "9 mei.", simpeler: "9 mei = Europa-dag. Schuman 1950.", nogSimpeler: "9 mei" },
+          { basis: "Dag van Europa viert het begin van de Europese samenwerking met een beroemde toespraak. Welke datum hoort bij dat begin, en niet bij werk, de euro of de Brexit?", simpeler: "9 mei = Europa-dag. Schuman 1950.", nogSimpeler: "9 mei" },
           [{ woord: "Schuman-verklaring", uitleg: "Speech 9 mei 1950 — Robert Schuman roept op tot Europese samenwerking." }],
         ),
       },

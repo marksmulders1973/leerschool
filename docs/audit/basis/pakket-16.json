@@ -1,0 +1,217 @@
+[
+ {
+  "file": "src/learnPaths/kalenderRekenenPo.js",
+  "items": [
+   {
+    "waar": "kalender-rekenen-po stap 1 vraag 1",
+    "antwoord": "365 dagen",
+    "basis": "365 dagen."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 1 vraag 5",
+    "antwoord": "30 dagen",
+    "basis": "30 dagen."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 1 vraag 6",
+    "antwoord": "Juli en augustus",
+    "basis": "Juli en augustus."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 1 vraag 7",
+    "antwoord": "59 dagen",
+    "basis": "59 dagen."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 1 vraag 8",
+    "antwoord": "5",
+    "basis": "5."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 1 vraag 9",
+    "antwoord": "7",
+    "basis": "7."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 3 vraag 8",
+    "antwoord": "2 keer",
+    "basis": "2 keer."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 3",
+    "antwoord": "12 jaar",
+    "basis": "12 jaar."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 5",
+    "antwoord": "10 jaar",
+    "basis": "10 jaar."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 6",
+    "antwoord": "13 jaar",
+    "basis": "13 jaar."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 7",
+    "antwoord": "2035",
+    "basis": "2035."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 8",
+    "antwoord": "5 jaar",
+    "basis": "5 jaar."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 9",
+    "antwoord": "2017",
+    "basis": "2017."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 4 vraag 10",
+    "antwoord": "10 jaar",
+    "basis": "10 jaar."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 5 vraag 4",
+    "antwoord": "1986",
+    "basis": "1986."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 5 vraag 5",
+    "antwoord": "7 dagen",
+    "basis": "7 dagen."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 5 vraag 6",
+    "antwoord": "Vrijdag 10 april",
+    "basis": "Vrijdag 10 april."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 5 vraag 7",
+    "antwoord": "2019",
+    "basis": "2019."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 5 vraag 8",
+    "antwoord": "17 dagen",
+    "basis": "17 dagen."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 5 vraag 9",
+    "antwoord": "7",
+    "basis": "7."
+   },
+   {
+    "waar": "kalender-rekenen-po stap 6 vraag 4",
+    "antwoord": "30 dagen",
+    "basis": "30 dagen."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/meetkundeBouwsels.js",
+  "items": [
+   {
+    "waar": "meetkunde-bouwsels stap 3 vraag 1",
+    "antwoord": "80 cm³",
+    "basis": "8 × 5 × 2 = 80 cm³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 3 vraag 5",
+    "antwoord": "72 cm³",
+    "basis": "6 × 4 × 3 = 72 cm³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 3 vraag 6",
+    "antwoord": "1050 cm³",
+    "basis": "21 × 10 × 5 = 1050 cm³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 3 vraag 7",
+    "antwoord": "120 cm³",
+    "basis": "12 × 5 × 2 = 120 cm³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 3 vraag 8",
+    "antwoord": "700 cm³",
+    "basis": "25 × 4 × 7 = 700 cm³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 2",
+    "antwoord": "3 liter",
+    "basis": "3 dm³ = 3 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 5",
+    "antwoord": "6000 mL",
+    "basis": "6 liter = 6000 mL."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 6",
+    "antwoord": "4,5 liter",
+    "basis": "4500 mL = 4,5 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 7",
+    "antwoord": "7 dm³",
+    "basis": "7000 cm³ = 7 dm³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 8",
+    "antwoord": "1500 liter",
+    "basis": "1,5 m³ = 1500 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 9",
+    "antwoord": "250 mL",
+    "basis": "250 cm³ = 250 mL."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 4 vraag 10",
+    "antwoord": "9 m³",
+    "basis": "9000 liter = 9 m³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 1",
+    "antwoord": "27 m³",
+    "basis": "6 × 3 × 1,5 = 27 m³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 4",
+    "antwoord": "60 liter",
+    "basis": "50 × 30 × 40 = 60.000 cm³ = 60 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 5",
+    "antwoord": "100 m³",
+    "basis": "10 × 5 × 2 = 100 m³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 6",
+    "antwoord": "96 liter",
+    "basis": "80 × 30 × 40 = 96.000 cm³ = 96 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 8",
+    "antwoord": "27 liter",
+    "basis": "30 × 30 × 30 = 27.000 cm³ = 27 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 9",
+    "antwoord": "2 m³",
+    "basis": "2 × 2 × 0,5 = 2 m³."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 5 vraag 10",
+    "antwoord": "30 liter",
+    "basis": "40 × 30 × 25 = 30.000 cm³ = 30 liter."
+   },
+   {
+    "waar": "meetkunde-bouwsels stap 6 vraag 6",
+    "antwoord": "1000 mL",
+    "basis": "20 × 10 × 5 = 1000 cm³ = 1000 mL."
+   }
+  ]
+ }
+]

@@ -1,0 +1,267 @@
+[
+ {
+  "file": "src/learnPaths/verhoudingenPo.js",
+  "items": [
+   {
+    "waar": "verhoudingen-po stap 1 vraag 1",
+    "antwoord": "2 : 3",
+    "basis": "De verhouding is 2 : 3."
+   },
+   {
+    "waar": "verhoudingen-po stap 1 vraag 2",
+    "antwoord": "2 : 3",
+    "basis": "De verhouding is 2 : 3."
+   },
+   {
+    "waar": "verhoudingen-po stap 1 vraag 3",
+    "antwoord": "4 : 1",
+    "basis": "De verhouding is 4 : 1."
+   },
+   {
+    "waar": "verhoudingen-po stap 1 vraag 4",
+    "antwoord": "1 : 2",
+    "basis": "De verhouding is 1 : 2."
+   },
+   {
+    "waar": "verhoudingen-po stap 1 vraag 6",
+    "antwoord": "3 : 5",
+    "basis": "3 : 5 kan niet eenvoudiger."
+   },
+   {
+    "waar": "verhoudingen-po stap 1 vraag 7",
+    "antwoord": "2/5",
+    "basis": "De jongens zijn 2/5 van de klas."
+   },
+   {
+    "waar": "verhoudingen-po stap 1 vraag 8",
+    "antwoord": "1 : 3",
+    "basis": "De verhouding is 1 : 3."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 1",
+    "antwoord": "100 mL",
+    "basis": "100 mL."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 2",
+    "antwoord": "8",
+    "basis": "8."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 3",
+    "antwoord": "5 kg",
+    "basis": "5 kg."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 4",
+    "antwoord": "200 mL",
+    "basis": "200 mL."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 5",
+    "antwoord": "16",
+    "basis": "16."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 6",
+    "antwoord": "€ 18",
+    "basis": "€ 18."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 7",
+    "antwoord": "5",
+    "basis": "5."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 8",
+    "antwoord": "1/5",
+    "basis": "1/5."
+   },
+   {
+    "waar": "verhoudingen-po stap 2 vraag 9",
+    "antwoord": "30 kg",
+    "basis": "30 kg."
+   },
+   {
+    "waar": "verhoudingen-po stap 4 vraag 5",
+    "antwoord": "300 g",
+    "basis": "300 g."
+   },
+   {
+    "waar": "verhoudingen-po stap 4 vraag 6",
+    "antwoord": "150 g",
+    "basis": "150 g."
+   },
+   {
+    "waar": "verhoudingen-po stap 4 vraag 7",
+    "antwoord": "50 g",
+    "basis": "50 g."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 1",
+    "antwoord": "€ 0,50",
+    "basis": "€0,50."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 2",
+    "antwoord": "40",
+    "basis": "40."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 3",
+    "antwoord": "750 g",
+    "basis": "750 g."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 4",
+    "antwoord": "18 m",
+    "basis": "18 m."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 6",
+    "antwoord": "600 g",
+    "basis": "600 g."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 7",
+    "antwoord": "2 km",
+    "basis": "2 km."
+   },
+   {
+    "waar": "verhoudingen-po stap 6 vraag 8",
+    "antwoord": "€ 30",
+    "basis": "€30."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/korteTekstenSnappenG4.js",
+  "items": [
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 1",
+    "antwoord": "de poes",
+    "basis": "De zin gaat over de poes."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 2",
+    "antwoord": "naar de bakker",
+    "basis": "Noor fietst naar de bakker."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 3",
+    "antwoord": "in de winter",
+    "basis": "In de winter."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 6",
+    "antwoord": "de juf",
+    "basis": "De juf schrijft op het bord."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 8",
+    "antwoord": "Bram",
+    "basis": "Bram geeft het cadeau."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 9",
+    "antwoord": "na school",
+    "basis": "Na school."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 10",
+    "antwoord": "melk",
+    "basis": "De kat drinkt melk."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 1",
+    "antwoord": "in het zwembad",
+    "basis": "Jip is in het zwembad."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 2",
+    "antwoord": "met Daan",
+    "basis": "Jip speelt met Daan."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 3",
+    "antwoord": "pannenkoeken",
+    "basis": "Oma bakt pannenkoeken met appel."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 5",
+    "antwoord": "Snuf",
+    "basis": "Het konijn heet Snuf."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 6",
+    "antwoord": "wortels",
+    "basis": "Snuf eet graag wortels."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 7",
+    "antwoord": "een zandkasteel",
+    "basis": "Ze bouwen een zandkasteel."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 2 vraag 8",
+    "antwoord": "juf Anne",
+    "basis": "Juf Anne leest voor."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 1",
+    "antwoord": "een winterslaap",
+    "basis": "Het heet een winterslaap."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 3",
+    "antwoord": "drie weken",
+    "basis": "Drie weken."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 6",
+    "antwoord": "een badpak en een handdoek",
+    "basis": "Een badpak en een handdoek."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 7",
+    "antwoord": "'s nachts",
+    "basis": "'s Nachts."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 8",
+    "antwoord": "elke avond",
+    "basis": "Elke avond."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 9",
+    "antwoord": "foto's maken",
+    "basis": "Foto's maken."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 4 vraag 1",
+    "antwoord": "het ei",
+    "basis": "Het ei was er het eerst."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 4 vraag 4",
+    "antwoord": "ten slotte",
+    "basis": "'Ten slotte' hoort bij het einde."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 5 vraag 1",
+    "antwoord": "naar de dierentuin",
+    "basis": "Naar de dierentuin."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 5 vraag 5",
+    "antwoord": "met de bus",
+    "basis": "Met de bus."
+   },
+   {
+    "waar": "korte-teksten-snappen-g4 stap 5 vraag 6",
+    "antwoord": "Lena",
+    "basis": "Lena vindt de apen het leukst."
+   }
+  ]
+ }
+]

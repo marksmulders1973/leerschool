@@ -127,7 +127,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Bij 1:100.000 is 1 cm op kaart = 1 km. Handig om te onthouden." }],
           basiskennis: [{ onderwerp: "100 cm = 1 m, 1000 m = 1 km", uitleg: "Centimeter, meter, kilometer — stappen van 100 en 1000." }],
           niveaus: {
-            basis: "4 × 50.000 = 200.000 cm = 2 km.",
+            basis: "Reken eerst uit hoeveel centimeter de 4 kaartcentimeters in het echt zijn. Zet dat daarna om: hoeveel centimeter gaan er in een kilometer?",
             simpeler: "Schaal 1:50.000 → 1 cm op kaart = 500 m = 0,5 km. 4 cm × 0,5 km = 2 km.",
             nogSimpeler: "2 km",
           },
@@ -281,7 +281,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1:1.000 = bouwtekening (1 cm = 10 m). 1:25.000 = wandelkaart. 1:1.000.000 = landkaart." }],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Hoe kleiner het getal achter ':' hoe meer je ziet per cm. Vice versa." }],
           niveaus: {
-            basis: "Groter (kleiner schaalgetal = meer detail).",
+            basis: "Bedenk bij elke schaal hoeveel centimeter in het echt 1 cm op de kaart is. Op welke kaart worden de dingen dan groter getekend?",
             simpeler: "1:10.000 = stadsplattegrond. 1:100.000 = streekkaart met minder detail. Eerste is 'groter'.",
             nogSimpeler: "Groter",
           },
@@ -371,7 +371,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Fietspad = vaak in plaatsen, niet zo druk → stippellijn. Snelweg = veel verkeer → dikke lijn." }],
           niveaus: {
-            basis: "Stippellijn op kaart = fiets/wandelroute.",
+            basis: "Kijk in de legenda van een kaart: hoe worden grote wegen getekend, en hoe de smalle paadjes waar je alleen loopt of fietst?",
             simpeler: "Stippeltjes - - - = fietspad. Doorgetrokken = auto.",
             nogSimpeler: "Stippels = fiets.",
           },
@@ -708,7 +708,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Drie groepen 30% + 40% + ? = 100 → derde groep = 30%." }],
           basiskennis: [{ onderwerp: "100% = alles", uitleg: "Een hele cirkel staat altijd voor alles samen = 100%." }],
           niveaus: {
-            basis: "100 − 50 − 25 − 15 = 10%.",
+            basis: "Een hele cirkel is samen 100 procent. Tel eerst de drie sporten bij elkaar op en kijk hoeveel er dan nog ontbreekt.",
             simpeler: "Totaal = 100%. Trek af wat we al hebben: 100 − (50+25+15) = 100 − 90 = 10%.",
             nogSimpeler: "10%",
           },

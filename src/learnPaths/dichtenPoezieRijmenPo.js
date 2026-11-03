@@ -41,7 +41,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Regels + rijm + emotie = poëzie. Doorlopend = proza. Allebei kunnen mooi zijn, maar verschillende vorm." }],
           niveaus: {
-            basis: "Tekst in korte regels, vaak met rijm.",
+            basis: "Denk aan hoe een gedicht op de bladzijde staat en hoe het klinkt als je het voorleest.",
             simpeler: "Gedicht = woorden in regels, vaak met rijm + gevoel.",
             nogSimpeler: "Korte tekst in regels",
           },
@@ -111,7 +111,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De lege ruimte tussen coupletten heet wit.",
+            basis: "Kijk naar de kleur van het papier tussen twee coupletten. Die lege plek heeft een naam die met die kleur te maken heeft.",
             simpeler: "Tussen twee groepjes regels staat niets. Dat heet wit.",
             nogSimpeler: "Lege ruimte = wit",
           },
@@ -222,7 +222,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een couplet van vier regels heet een kwatrijn.",
+            basis: "Het woord lijkt op 'kwart', en een kwart heeft te maken met het getal vier.",
             simpeler: "4 regels samen = kwatrijn.",
             nogSimpeler: "4 regels = kwatrijn",
           },
@@ -273,7 +273,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Herinnering aan Holland' is van Hendrik Marsman.",
+            basis: "Dit gedicht gaat over brede rivieren en wolken boven het lage land. Welke dichter uit de vorige eeuw schreef daarover?",
             simpeler: "Het gedicht 'Denkend aan Holland ...' is van Marsman.",
             nogSimpeler: "Marsman",
           },
@@ -329,7 +329,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vondel leefde in de Gouden Eeuw (1587-1679).",
+            basis: "Vondel is een heel oude, beroemde dichter, uit de tijd van Rembrandt en de grote handelsschepen. Hoe heet die tijd?",
             simpeler: "Vondel is een dichter van heel lang geleden: de Gouden Eeuw.",
             nogSimpeler: "Gouden Eeuw",
           },
@@ -393,7 +393,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Alliteratie = AAN het begin. Eindrijm = aan het einde. Vergeet dat niet." }],
           niveaus: {
-            basis: "Alliteratie = woorden BEGINNEN met zelfde letter.",
+            basis: "Bij rijm klinkt het eind van woorden hetzelfde. Waar zit bij alliteratie de gelijke klank?",
             simpeler: "Denk aan 'Mooie Mette mocht mee': alle woorden beginnen met een M. Dat is rijm aan het begin.",
             nogSimpeler: "Als de eerste letter van de woorden gelijk is, heet dat alliteratie.",
           },
@@ -422,7 +422,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Zelfde letter = die regels rijmen met elkaar. Verschillende letters = ze rijmen NIET met elkaar." }],
           niveaus: {
-            basis: "AABB = paarrijm (regel 1+2 rijmen, regel 3+4 rijmen).",
+            basis: "Bij AABB rijmen steeds twee regels die naast elkaar staan. Hoe noem je twee dingen die bij elkaar horen?",
             simpeler: "Twee regels direct na elkaar rijmen op elkaar. Dat heet paarrijm, met schema AABB.",
             nogSimpeler: "Bij AABB rijmen de regels per paar: dat is paarrijm.",
           },
@@ -489,7 +489,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Binnenrijm = rijm midden in een regel.",
+            basis: "Het woord zegt het zelf: 'binnen'. Waar in de regel zit dit rijm dan?",
             simpeler: "Twee woorden in dezelfde regel rijmen op elkaar.",
             nogSimpeler: "Rijm in het midden",
           },
@@ -544,7 +544,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "mat-kat rijmen (A), muis-huis rijmen (B): ABBA.",
+            basis: "Zoek welke eindwoorden op elkaar rijmen. Geef de eerste rijmklank de letter A en de tweede de letter B, en schrijf ze per regel op.",
             simpeler: "Regel 1 en 4 rijmen, regel 2 en 3 rijmen.",
             nogSimpeler: "ABBA",
           },
@@ -599,7 +599,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "boot-groot rijmen (A), zee-mee rijmen (B): ABAB.",
+            basis: "Zoek welke eindwoorden op elkaar rijmen. Geef de eerste rijmklank de letter A en de tweede de letter B, en schrijf ze per regel op.",
             simpeler: "Regel 1 en 3 rijmen, regel 2 en 4 rijmen.",
             nogSimpeler: "ABAB",
           },
@@ -645,7 +645,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Weer rijmt op beer (allebei -eer).",
+            basis: "Een rijmwoord eindigt op dezelfde klank als 'beer'. Welk woord past in de zin en eindigt ook zo?",
             simpeler: "beer ... weer: dezelfde eindklank.",
             nogSimpeler: "weer",
           },
@@ -705,7 +705,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kleine Kees kookt koffie: steeds de K.",
+            basis: "Bij alliteratie beginnen de woorden met dezelfde klank. Lees elke zin en kijk naar de eerste letter van elk woord.",
             simpeler: "Kijk naar de eerste letters: K, K, K, K.",
             nogSimpeler: "Zelfde beginletter",
           },
@@ -852,7 +852,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Haiku = 5-7-5. Onthoud die getallen: vijf-zeven-vijf. Drie regels totaal. Japans = denk natuur + moment." }],
           niveaus: {
-            basis: "Haiku = 5-7-5 lettergrepen, 3 regels.",
+            basis: "Een haiku komt uit Japan en is heel kort. Tel bij een haiku de regels en de lettergrepen per regel.",
             simpeler: "Japans gedicht: regel 1 = 5 lettergrepen, regel 2 = 7, regel 3 = 5.",
             nogSimpeler: "5-7-5",
           },
@@ -922,7 +922,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een ode is een gedicht ter ere van iemand of iets.",
+            basis: "Het is een kort woord van drie letters voor een lofzang op iemand of iets.",
             simpeler: "Ode = eerbetoon.",
             nogSimpeler: "Ode",
           },
@@ -977,7 +977,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een elegie is een droevig gedicht over verlies of dood.",
+            basis: "Een elegie hoort bij een verdrietig moment. Welk antwoord gaat over verdriet?",
             simpeler: "Droevig gedicht = elegie.",
             nogSimpeler: "Droevig gedicht",
           },
@@ -1144,7 +1144,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Het blad valt omlaag' heeft 5 lettergrepen.",
+            basis: "Klap elke regel in stukjes (lettergrepen) en tel ze. Welke regel komt precies op 5 uit?",
             simpeler: "Klap mee: het-blad-valt-om-laag = 5.",
             nogSimpeler: "5 klappen",
           },

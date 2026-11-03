@@ -30,7 +30,7 @@ const deel1 = [
       theorie: "Iets vragen = Mag ik…?",
       voorbeelden: [{ type: "stap", tekst: "Mag ik water drinken?" }, { type: "stap", tekst: "Mag ik mijn jas pakken?" }],
       basiskennis: [{ onderwerp: "Truc", uitleg: "Hand omhoog, dan de zin." }],
-      niveaus: { basis: "Zeg: Mag ik naar de wc?", simpeler: "Begin met 'Mag ik'. Dan wat je wilt.", nogSimpeler: "Mag ik naar de wc?" },
+      niveaus: { basis: "Je wilt iets vragen aan de juf. Welke zin is een vraag om iets te mogen doen?", simpeler: "Begin met 'Mag ik'. Dan wat je wilt.", nogSimpeler: "Mag ik naar de wc?" },
     } }),
   v("Je snapt de uitleg niet. Wat zeg je?", ["Ik snap het niet.", "Dank je wel.", "Tot morgen!", "Ik ben er."], 0, "Je begrijpt het niet. Zeg dat eerlijk.",
     { en: "You don't understand the explanation. What do you say?", ar: "لم تفهم الشرح. ماذا تقول؟", uk: "Ти не зрозумів пояснення. Що ти скажеш?", tr: "Açıklamayı anlamadın. Ne dersin?", ro: "Nu înțelegi explicația. Ce spui?", bg: "Не разбираш обяснението. Какво казваш?", fa: "توضیح را نمی‌فهمی. چه می‌گویی؟" }),

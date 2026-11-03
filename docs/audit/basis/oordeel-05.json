@@ -1,0 +1,207 @@
+[
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 1",
+  "hersteld": true,
+  "nieuw": "Omtrek is de lengte rondom: tel alle 4 de zijden bij elkaar op. Een rechthoek heeft 2 lange en 2 korte zijden."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 4",
+  "hersteld": true,
+  "nieuw": "Een hek gaat rondom de tuin, dus je zoekt de omtrek. Tel alle vier de zijden op: twee keer de lengte en twee keer de breedte."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Gras bedekt het hele vlak, dus je zoekt de oppervlakte. Bij een rechthoek doe je lengte keer breedte."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 1",
+  "hersteld": true,
+  "nieuw": "Omtrek is alle zijden bij elkaar opgeteld. Tel eerst de lengte en de breedte op en neem dat dan twee keer."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "Een vierkant heeft 4 even lange zijden. Verdeel de omtrek eerlijk over die 4 zijden."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 3",
+  "hersteld": true,
+  "nieuw": "Een vierkant heeft 4 zijden die allemaal even lang zijn. Hoeveel keer moet je de zijde dan optellen?"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 4",
+  "hersteld": true,
+  "nieuw": "De omtrek is twee keer de lengte plus de breedte. Neem eerst de helft van de omtrek: dan heb je lengte en breedte samen."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 5",
+  "hersteld": true,
+  "nieuw": "Een vierkant heeft 4 gelijke zijden. Deel de omtrek door het aantal zijden."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 6",
+  "hersteld": true,
+  "nieuw": "Tel de lengte en de breedte eerst bij elkaar op. Rondom kom je elke zijde twee keer tegen, dus neem die som twee keer."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 7",
+  "hersteld": true,
+  "nieuw": "Bij een vierkant zijn alle 4 de zijden even lang. Vermenigvuldig de zijde met het aantal zijden."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 2 vraag 9",
+  "hersteld": true,
+  "nieuw": "De lijst gaat rondom het schilderij, dus je zoekt de omtrek. Een vierkant heeft 4 even lange zijden."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 1",
+  "hersteld": true,
+  "nieuw": "De oppervlakte van een rechthoek is lengte keer breedte. Welke twee getallen moet je dus vermenigvuldigen?"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 2",
+  "hersteld": true,
+  "nieuw": "Bij een vierkant zijn de lengte en de breedte even lang. Vermenigvuldig de zijde dus met zichzelf."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 3",
+  "hersteld": true,
+  "nieuw": "Een vierkante meter is een vierkant met zijden van 1 meter. Zet die zijde eerst om naar centimeters en reken dan zijde keer zijde."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 4",
+  "hersteld": true,
+  "nieuw": "Bij een vierkant is de oppervlakte zijde keer zijde. Zoek het getal dat keer zichzelf de oppervlakte geeft."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 5",
+  "hersteld": true,
+  "nieuw": "Je kent de oppervlakte en de breedte. Reken terug: welk getal keer de breedte geeft de oppervlakte?"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 6",
+  "hersteld": true,
+  "nieuw": "De oppervlakte van een rechthoek reken je uit met lengte keer breedte."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 7",
+  "hersteld": true,
+  "nieuw": "Een vierkant is even lang als breed. Vermenigvuldig de zijde met zichzelf en vergeet de eenheid m² niet."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 3 vraag 8",
+  "hersteld": true,
+  "nieuw": "Een hectare is een vierkant veld. Weet je nog hoe lang één zijde daarvan is? Reken dan de oppervlakte uit met zijde keer zijde."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 2",
+  "hersteld": true,
+  "nieuw": "Bij een rechte hoek staan de twee zijden loodrecht op elkaar: de ene is de basis, de andere de hoogte. Een driehoek is de helft van een rechthoek."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 3",
+  "hersteld": true,
+  "nieuw": "Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte. Hoe groot is die hele rechthoek, en welke hoogte hoort daar bij deze basis?"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 4",
+  "hersteld": true,
+  "nieuw": "Een driehoek is precies de helft van een rechthoek. Reken eerst basis keer hoogte uit en neem daar de helft van."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 5",
+  "hersteld": true,
+  "nieuw": "De oppervlakte van een driehoek is basis keer hoogte, gedeeld door 2."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 6",
+  "hersteld": true,
+  "nieuw": "Denk een rechthoek om de driehoek heen met dezelfde basis en hoogte. De driehoek is daar precies de helft van."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 7",
+  "hersteld": true,
+  "nieuw": "Voor de oppervlakte heb je alleen de basis en de hoogte nodig; de schuine zijde doet niet mee. Doe basis keer hoogte en neem daar de helft van."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 8",
+  "hersteld": true,
+  "nieuw": "Je knipt de rechthoek in twee gelijke stukken. Reken eerst de oppervlakte van de hele rechthoek uit."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 9",
+  "hersteld": true,
+  "nieuw": "Bij een rechte hoek zijn de twee zijden de basis en de hoogte. Een driehoek is de helft van de rechthoek met die zijden."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 1",
+  "hersteld": true,
+  "nieuw": "De omtrek van een cirkel is π keer de diameter. De diameter is twee keer de straal, dus reken die eerst uit."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 2",
+  "hersteld": true,
+  "nieuw": "De oppervlakte van een cirkel is π keer straal keer straal. Maak eerst van de diameter de straal: dat is de helft."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 3",
+  "hersteld": true,
+  "nieuw": "Pi is het getal dat je bij cirkels gebruikt; het is iets meer dan 3. Twee decimalen betekent: twee cijfers achter de komma."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 4",
+  "hersteld": true,
+  "nieuw": "De omtrek van een cirkel is π keer de diameter. Maak van de straal eerst de diameter door hem te verdubbelen."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 5",
+  "hersteld": true,
+  "nieuw": "De omtrek van een cirkel is π keer de diameter. Hier is de diameter al gegeven, dus je kunt meteen vermenigvuldigen."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 6",
+  "hersteld": true,
+  "nieuw": "De oppervlakte van een cirkel is π keer straal keer straal. Reken eerst straal keer straal uit."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 7",
+  "hersteld": true,
+  "nieuw": "De diameter gaat dwars door het midden, van rand tot rand. De straal gaat van het midden naar de rand: welk deel van de diameter is dat?"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 8",
+  "hersteld": true,
+  "nieuw": "Bij één rondje rolt het wiel zijn hele rand af. Je zoekt dus de omtrek: π keer de diameter."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 6 vraag 1",
+  "hersteld": true,
+  "nieuw": "Plinten gaan langs alle muren rondom, dus je zoekt de omtrek. Tel alle vier de wanden bij elkaar op."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 6 vraag 2",
+  "hersteld": true,
+  "nieuw": "Reken eerst de oppervlakte van de hele tuin uit en daarna die van de vijver. Waar geen vijver ligt, ligt gras: wat doe je dus met die twee?"
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 6 vraag 3",
+  "hersteld": true,
+  "nieuw": "De oppervlakte van een cirkel is π keer straal keer straal. Let op: de 30 cm is de diameter, dus halveer eerst."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 6 vraag 4",
+  "hersteld": true,
+  "nieuw": "Verf komt op het hele vlak, dus je zoekt de oppervlakte: breedte keer hoogte. Tip: iets keer 2,5 is twee keer plus een halve keer."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 6 vraag 8",
+  "hersteld": true,
+  "nieuw": "Zoek eerst hoe lang één zijde is: een vierkant heeft 4 gelijke zijden. Daarna reken je de oppervlakte uit met zijde keer zijde."
+ },
+ {
+  "waar": "oppervlakte-omtrek-po stap 6 vraag 9",
+  "hersteld": true,
+  "nieuw": "Een rondje langs de rand is de omtrek: π keer de diameter. Maak van de straal eerst de diameter."
+ }
+]

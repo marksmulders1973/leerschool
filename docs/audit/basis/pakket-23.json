@@ -1,0 +1,302 @@
+[
+ {
+  "file": "src/learnPaths/signaalwoordenVerbandenPo.js",
+  "items": [
+   {
+    "waar": "signaalwoorden-verbanden-po stap 1 vraag 1",
+    "antwoord": "maar",
+    "basis": "De twee delen zijn tegengesteld → gebruik een tegenstelling-woord: maar."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 1 vraag 2",
+    "antwoord": "bovendien",
+    "basis": "'Bovendien' telt iets op bij de vorige zin = opsomming."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 2 vraag 1",
+    "antwoord": "omdat",
+    "basis": "Het tweede deel is de reden van het eerste → 'omdat'."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 2 vraag 2",
+    "antwoord": "daardoor",
+    "basis": "Het tweede deel is het gevolg van het eerste → 'daardoor'."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 2 vraag 7",
+    "antwoord": "zodat",
+    "basis": "Het tweede deel is wat er dán gebeurt → gevolg: zodat."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 1",
+    "antwoord": "oorzaak en gevolg",
+    "basis": "Het een veroorzaakt het ander → oorzaak en gevolg."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 2",
+    "antwoord": "tegenstelling",
+    "basis": "Twee dingen die botsen → tegenstelling."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 4",
+    "antwoord": "tijd/volgorde",
+    "basis": "Stappen na elkaar in de tijd → tijd/volgorde."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 5",
+    "antwoord": "opsomming",
+    "basis": "Er wordt iets toegevoegd → opsomming."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 6",
+    "antwoord": "tegenstelling",
+    "basis": "Iets gebeurt tegen de verwachting in → tegenstelling."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 7",
+    "antwoord": "oorzaak en gevolg",
+    "basis": "Het een veroorzaakt het ander → oorzaak en gevolg."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 8",
+    "antwoord": "opsomming",
+    "basis": "Er komt iets bij → opsomming."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 9",
+    "antwoord": "oorzaak en gevolg",
+    "basis": "'Want' geeft een reden → oorzaak en gevolg."
+   },
+   {
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 10",
+    "antwoord": "tijd/volgorde",
+    "basis": "'Toen' vertelt wanneer → tijd/volgorde."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/synoniemenTegenstellingenPo.js",
+  "items": [
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 2",
+    "antwoord": "Vrolijk",
+    "basis": "Vrolijk = synoniem van blij."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 3",
+    "antwoord": "Reusachtig",
+    "basis": "Reusachtig = synoniem van enorm (allebei 'heel groot')."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 4",
+    "antwoord": "Vlug",
+    "basis": "'Vlug' is een synoniem van 'gauw'."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 5",
+    "antwoord": "Prachtig",
+    "basis": "'Prachtig' is een synoniem van 'schitterend'."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 6",
+    "antwoord": "Rennen",
+    "basis": "'Rennen' is een synoniem van 'sprinten'."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 7",
+    "antwoord": "Zodat je niet steeds hetzelfde woord herhaalt",
+    "basis": "Zodat je niet steeds hetzelfde woord herhaalt."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 8",
+    "antwoord": "blij – vrolijk – gelukkig",
+    "basis": "blij – vrolijk – gelukkig"
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 1",
+    "antwoord": "Vlug",
+    "basis": "Vlug = synoniem van snel."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 2",
+    "antwoord": "Vriendelijk",
+    "basis": "Vriendelijk = synoniem van aardig."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 3",
+    "antwoord": "prachtig + mooi",
+    "basis": "prachtig + mooi = beide aantrekkelijk = synoniem."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 5",
+    "antwoord": "Langzaam",
+    "basis": "'Langzaam' is een synoniem van 'traag'."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 6",
+    "antwoord": "Huis",
+    "basis": "'Huis' is een synoniem van 'woning'."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 7",
+    "antwoord": "Verrast",
+    "basis": "'Verrast' is een synoniem van 'verbaasd'."
+   },
+   {
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 8",
+    "antwoord": "Vals",
+    "basis": "'Vals' is een synoniem van 'gemeen'."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/tijdvakkenNederlandPo.js",
+  "items": [
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 1",
+    "antwoord": "Karel de Grote",
+    "basis": "Karel de Grote."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 3",
+    "antwoord": "Floris V",
+    "basis": "Floris V."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 4",
+    "antwoord": "Een handelsverbond van steden",
+    "basis": "Handelsverbond."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 5",
+    "antwoord": "trouw zijn en meevechten",
+    "basis": "Trouw zijn en meevechten."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 6",
+    "antwoord": "in de stad",
+    "basis": "In de stad."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 7",
+    "antwoord": "het bisdom Utrecht",
+    "basis": "Het Sticht was het bisdom Utrecht."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 8",
+    "antwoord": "ongeveer 1100",
+    "basis": "Ongeveer 1100."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 9",
+    "antwoord": "Hij stichtte een groot rijk",
+    "basis": "Hij stichtte een groot rijk."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 2 vraag 10",
+    "antwoord": "duizend jaar",
+    "basis": "Ongeveer duizend jaar."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 3 vraag 1",
+    "antwoord": "1568-1648",
+    "basis": "1568-1648 (80 jaar)."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 3 vraag 2",
+    "antwoord": "Willem van Oranje",
+    "basis": "Willem van Oranje."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 3 vraag 3",
+    "antwoord": "1648 (Vrede van Münster)",
+    "basis": "1648."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 4 vraag 1",
+    "antwoord": "Willem I",
+    "basis": "Willem I."
+   },
+   {
+    "waar": "tijdvakken-nederland-po stap 4 vraag 3",
+    "antwoord": "Mei 1945",
+    "basis": "Mei 1945."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/woordenschatPo.js",
+  "items": [
+   {
+    "waar": "woordenschat-po stap 1 vraag 6",
+    "antwoord": "Veel lezen",
+    "basis": "Veel lezen."
+   },
+   {
+    "waar": "woordenschat-po stap 2 vraag 1",
+    "antwoord": "heel groot",
+    "basis": "Enorm = heel groot."
+   },
+   {
+    "waar": "woordenschat-po stap 2 vraag 2",
+    "antwoord": "vlug",
+    "basis": "Snel = vlug."
+   },
+   {
+    "waar": "woordenschat-po stap 2 vraag 3",
+    "antwoord": "griezelig",
+    "basis": "Eng = griezelig."
+   },
+   {
+    "waar": "woordenschat-po stap 2 vraag 4",
+    "antwoord": "ongerust",
+    "basis": "Bezorgd = ongerust."
+   },
+   {
+    "waar": "woordenschat-po stap 2 vraag 5",
+    "antwoord": "gelukkig",
+    "basis": "Blij = gelukkig."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 1",
+    "antwoord": "licht",
+    "basis": "Zwaar ↔ licht."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 2",
+    "antwoord": "eindigen",
+    "basis": "Beginnen ↔ eindigen."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 3",
+    "antwoord": "verkorten",
+    "basis": "Verlengen ↔ verkorten."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 5",
+    "antwoord": "koud",
+    "basis": "Warm ↔ koud."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 6",
+    "antwoord": "verkopen",
+    "basis": "Kopen ↔ verkopen."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 7",
+    "antwoord": "onder",
+    "basis": "Boven ↔ onder."
+   },
+   {
+    "waar": "woordenschat-po stap 3 vraag 8",
+    "antwoord": "buiten",
+    "basis": "Binnen ↔ buiten."
+   },
+   {
+    "waar": "woordenschat-po stap 4 vraag 2",
+    "antwoord": "heel erg",
+    "basis": "Belachelijk = heel erg."
+   }
+  ]
+ }
+]

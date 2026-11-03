@@ -1,0 +1,337 @@
+[
+ {
+  "file": "src/learnPaths/gemiddeldenStatistiekPo.js",
+  "items": [
+   {
+    "waar": "gemiddelden-statistiek-po stap 1 vraag 5",
+    "antwoord": "Over de hele klas samen",
+    "basis": "Over de hele klas samen."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 2 vraag 2",
+    "antwoord": "20 °C",
+    "basis": "(18+20+22+19+21) ÷ 5 = 100 ÷ 5 = 20 °C."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 3 vraag 2",
+    "antwoord": "Blauw",
+    "basis": "Blauw (8 stemmen)."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 3 vraag 6",
+    "antwoord": "4 en 8",
+    "basis": "4 en 8 (allebei 2×)."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 3 vraag 7",
+    "antwoord": "Appel",
+    "basis": "Appel (3× gekozen)."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 3 vraag 9",
+    "antwoord": "38",
+    "basis": "38 (komt 3× voor)."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 3 vraag 10",
+    "antwoord": "Geen modus",
+    "basis": "Geen modus (alles komt 1× voor)."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 4 vraag 5",
+    "antwoord": "15",
+    "basis": "Op volgorde: 9, 11, 15, 18, 24. Mediaan = 15."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 4 vraag 9",
+    "antwoord": "Bij 6 getallen",
+    "basis": "Bij 6 getallen (even aantal)."
+   },
+   {
+    "waar": "gemiddelden-statistiek-po stap 4 vraag 10",
+    "antwoord": "11 seconden",
+    "basis": "11 seconden."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/interpunctiePo.js",
+  "items": [
+   {
+    "waar": "interpunctie-po stap 1 vraag 4",
+    "antwoord": ". (punt)",
+    "basis": ". (punt)"
+   },
+   {
+    "waar": "interpunctie-po stap 1 vraag 5",
+    "antwoord": "Om te laten zien wat iemand zegt",
+    "basis": "Om te laten zien wat iemand zegt."
+   },
+   {
+    "waar": "interpunctie-po stap 1 vraag 6",
+    "antwoord": "Hij geeft een korte pauze aan",
+    "basis": "Een korte pauze."
+   },
+   {
+    "waar": "interpunctie-po stap 1 vraag 7",
+    "antwoord": "ik ga morgen naar het strand",
+    "basis": "ik ga morgen naar het strand"
+   },
+   {
+    "waar": "interpunctie-po stap 2 vraag 3",
+    "antwoord": "Frans",
+    "basis": "Frans (taal)."
+   },
+   {
+    "waar": "interpunctie-po stap 2 vraag 5",
+    "antwoord": "Wij en Kerkstraat",
+    "basis": "Wij en Kerkstraat."
+   },
+   {
+    "waar": "interpunctie-po stap 2 vraag 6",
+    "antwoord": "In, Tom en Spanje",
+    "basis": "In, Tom en Spanje."
+   },
+   {
+    "waar": "interpunctie-po stap 4 vraag 1",
+    "antwoord": "Ik kocht appels, peren en druiven.",
+    "basis": "'Ik kocht appels, peren en druiven.'"
+   },
+   {
+    "waar": "interpunctie-po stap 4 vraag 2",
+    "antwoord": ", maar",
+    "basis": ", maar."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/schemasStappenplannenPo.js",
+  "items": [
+   {
+    "waar": "schemas-stappenplannen-po stap 1 vraag 1",
+    "antwoord": "In welke volgorde je iets doet",
+    "basis": "Stappenplan zegt in welke VOLGORDE je iets doet."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 1 vraag 6",
+    "antwoord": "De titel",
+    "basis": "De titel zegt waar het schema over gaat."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 1 vraag 8",
+    "antwoord": "Een brief",
+    "basis": "Een brief is een tekst, geen schema."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 3 vraag 1",
+    "antwoord": "Drink water",
+    "basis": "Volg het pad: dorst = geen honger → 'Nee' → drink water."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 3 vraag 4",
+    "antwoord": "zwemmen",
+    "basis": "Niet in een team → nee-pijl. Wel water → ja-pijl → zwemmen."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 3 vraag 5",
+    "antwoord": "strip",
+    "basis": "Twee keer nee → strip."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 3 vraag 6",
+    "antwoord": "detective",
+    "basis": "Ja bij spanning, nee bij eng → detective."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 3 vraag 7",
+    "antwoord": "tikkertje",
+    "basis": "Ja bij zon, nee bij bal → tikkertje."
+   },
+   {
+    "waar": "schemas-stappenplannen-po stap 5 vraag 7",
+    "antwoord": "HAVO",
+    "basis": "HAVO."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/tellenKleutersPo.js",
+  "items": [
+   {
+    "waar": "tellen-kleuters-po stap 1 vraag 5",
+    "antwoord": "10",
+    "basis": "Na 9 komt 10."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 2 vraag 5",
+    "antwoord": "11",
+    "basis": "Na 10 komt 11."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 3 vraag 1",
+    "antwoord": "cirkel",
+    "basis": "Rond zonder hoeken = cirkel."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 3 vraag 2",
+    "antwoord": "driehoek",
+    "basis": "3 punten = driehoek."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 3 vraag 4",
+    "antwoord": "cirkel",
+    "basis": "Rond = cirkel."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 3 vraag 5",
+    "antwoord": "driehoek",
+    "basis": "Puntdak = driehoek."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 3 vraag 6",
+    "antwoord": "vierkant",
+    "basis": "4 rechte kanten en 4 hoeken = vierkant."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 3 vraag 8",
+    "antwoord": "cirkel",
+    "basis": "Een cirkel is rond, zonder hoeken."
+   },
+   {
+    "waar": "tellen-kleuters-po stap 4 vraag 10",
+    "antwoord": "de grond",
+    "basis": "De grond is onder je voeten."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/redactiesommen.js",
+  "items": [
+   {
+    "waar": "redactiesommen-pad stap 1 vraag 4",
+    "antwoord": "Een rekensom in een verhaal",
+    "basis": "Een redactiesom is een rekensom in een verhaal."
+   },
+   {
+    "waar": "redactiesommen-pad stap 1 vraag 6",
+    "antwoord": "Optellen",
+    "basis": "'In totaal' wijst op optellen."
+   },
+   {
+    "waar": "redactiesommen-pad stap 1 vraag 7",
+    "antwoord": "Aftrekken",
+    "basis": "'Meer dan' wijst hier op aftrekken."
+   },
+   {
+    "waar": "redactiesommen-pad stap 2 vraag 4",
+    "antwoord": "Rustig lezen en onderstrepen",
+    "basis": "Stap 1 = rustig lezen en onderstrepen."
+   },
+   {
+    "waar": "redactiesommen-pad stap 2 vraag 5",
+    "antwoord": "De som opschrijven",
+    "basis": "Stap 3 = de som opschrijven."
+   },
+   {
+    "waar": "redactiesommen-pad stap 2 vraag 6",
+    "antwoord": "27 mandarijnen",
+    "basis": "27 mandarijnen: getal én eenheid."
+   },
+   {
+    "waar": "redactiesommen-pad stap 2 vraag 7",
+    "antwoord": "45 − 12",
+    "basis": "45 − 12: de honden doen niet mee."
+   },
+   {
+    "waar": "redactiesommen-pad stap 5 vraag 7",
+    "antwoord": "€ 10,50",
+    "basis": "€42 ÷ 4 = €10,50."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/werelddelenLandenPo.js",
+  "items": [
+   {
+    "waar": "werelddelen-landen-po stap 2 vraag 1",
+    "antwoord": "Parijs",
+    "basis": "Parijs = hoofdstad Frankrijk."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 2 vraag 4",
+    "antwoord": "27",
+    "basis": "27 EU-landen."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 2 vraag 5",
+    "antwoord": "Volga",
+    "basis": "Volga (3.530 km)."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 2 vraag 7",
+    "antwoord": "2002",
+    "basis": "2002."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 3 vraag 2",
+    "antwoord": "Nijl",
+    "basis": "De Nijl geldt als de langste rivier ter wereld."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 3 vraag 4",
+    "antwoord": "Kangoeroe",
+    "basis": "Kangoeroe."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 4 vraag 7",
+    "antwoord": "Nijl",
+    "basis": "Nijl."
+   },
+   {
+    "waar": "werelddelen-landen-po stap 4 vraag 8",
+    "antwoord": "De Noordzee",
+    "basis": "Noordzee."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "items": [
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 22",
+    "antwoord": "30",
+    "basis": "60 ÷ 2 = 30."
+   },
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 25",
+    "antwoord": "5/6",
+    "basis": "5/6."
+   },
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 29",
+    "antwoord": "3/4",
+    "basis": "3/4."
+   },
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 35",
+    "antwoord": "1/4",
+    "basis": "1/4."
+   },
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 2",
+    "antwoord": "€30",
+    "basis": "€30 (€40 - €10 korting)."
+   },
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 27",
+    "antwoord": "25",
+    "basis": "10% is een tiende deel. Deel 250 door 10."
+   },
+   {
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 15",
+    "antwoord": "€12",
+    "basis": "€12 (€36÷3)."
+   }
+  ]
+ }
+]

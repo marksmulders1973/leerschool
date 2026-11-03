@@ -41,7 +41,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Engeland eerst, NL later. Industriële Revolutie zit in TIJDVAK 8 van NL-canon (Tijd van burgers en stoommachines)." }],
           niveaus: {
-            basis: "Industriële Revolutie begon in Engeland (~1760).",
+            basis: "Denk aan waar de eerste stoommachines, fabrieken en spoorlijnen kwamen. In welk land met veel steenkool begon dat?",
             simpeler: "Engeland had steenkool + geld → eerste fabrieken daar.",
             nogSimpeler: "Engeland eerst.",
           },
@@ -75,7 +75,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Volgorde tijdvakken op rijtje leren. Tijdvak 8 = 1800-1900 = burgers + stoom = Industriële Revolutie." }],
           niveaus: {
-            basis: "Tijdvak 8: Tijd van burgers en stoommachines.",
+            basis: "De Industriële Revolutie gaat over fabrieken die op stoom draaiden. Welke tijdvaknaam past bij die nieuwe machines?",
             simpeler: "Industriële Revolutie zit in NL-tijdvak 8 (1800-1900).",
             nogSimpeler: "Tijdvak 8",
           },
@@ -116,7 +116,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Watt klinkt als 'wat?' — wat is stoom? — antwoord = Watt." }],
           niveaus: {
-            basis: "James Watt verbeterde de stoommachine in 1769.",
+            basis: "Kijk naar wat elke uitvinder bedacht: lampen, de telefoon, auto's of stoom. Wie past bij de tijd van de eerste fabrieken?",
             simpeler: "James Watt maakte de stoommachine veel beter. Edison maakte de gloeilamp en Bell de telefoon.",
             nogSimpeler: "Watt hoort bij de stoommachine.",
           },
@@ -245,7 +245,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Kinderwetje 1874 = eerste sociale wet NL. Onthoud naam Van Houten + jaartal + verbod <12 jaar." }],
           niveaus: {
-            basis: "1874 (kinderwetje Van Houten).",
+            basis: "Het Kinderwetje kwam toen er al veel fabrieken en stoommachines in Nederland waren. Bedenk bij elk jaartal of dat toen al zo was.",
             simpeler: "Het Kinderwetje uit 1874 was de eerste NL-wet die kinderen jonger dan 12 verbood in fabrieken te werken.",
             nogSimpeler: "1874",
           },

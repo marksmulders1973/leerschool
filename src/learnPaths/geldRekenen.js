@@ -131,7 +131,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 6,08 = 608 cent.",
+            basis: "Eén euro is 100 cent. Reken eerst de hele euro's om naar cent en tel daarna de losse centen erbij.",
             simpeler: "6 euro = 600 cent. Plus 8 cent = 608 cent.",
             nogSimpeler: "608",
           },
@@ -174,7 +174,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "920 cent = € 9,20.",
+            basis: "Honderd cent is één euro. Hoe vaak past honderd in het bedrag, en hoeveel cent blijft er dan over?",
             simpeler: "900 cent = € 9. Plus 20 cent = € 9,20.",
             nogSimpeler: "€ 9,20",
           },
@@ -369,7 +369,7 @@ const steps = [
           theorie: "Truc: tel centen apart (40+75=115). 100 cent = 1 euro extra. Schrijf 15 cent + 1 euro extra erbij.",
           voorbeelden: [{ type: "stap", tekst: "€3,40 + €1,75: cent 40+75=115 (€1,15). Euro 3+1+1=5. = €5,15." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "Schat: 3+2=5. Antwoord rond €5. €5,15 past." }],
-          niveaus: { basis: "€3,40+€1,75=€5,15.", simpeler: "Cent eerst: 40+75=115 (= €1,15). Euro's: 3+1+1(onthoud)=5. Antwoord €5,15.", nogSimpeler: "€5,15" },
+          niveaus: { basis: "Tel eerst de centen bij elkaar op. Wordt dat meer dan 100 cent, dan gaat er een euro bij de euro's.", simpeler: "Cent eerst: 40+75=115 (= €1,15). Euro's: 3+1+1(onthoud)=5. Antwoord €5,15.", nogSimpeler: "€5,15" },
         },
       },
       {
@@ -386,7 +386,7 @@ const steps = [
           theorie: "Bij 'rond getal − iets' = vooruit-tellen vaak makkelijker dan cijferen.",
           voorbeelden: [{ type: "vooruit", tekst: "10 − 3,45: van 3,45 naar 4 = +0,55. Van 4 naar 10 = +6. Samen 6,55." }],
           basiskennis: [{ onderwerp: "Wisselgeld-truc", uitleg: "Vooruit-tellen werkt extra goed bij wisselgeld-vragen." }],
-          niveaus: { basis: "€10−€3,45=€6,55.", simpeler: "Vooruit-tellen vanaf 3,45: +0,55=4, +6=10. Totaal +6,55.", nogSimpeler: "€6,55" },
+          niveaus: { basis: "Tel vooruit vanaf € 3,45: hoeveel heb je nodig tot de volgende hele euro, en hoeveel daarna nog tot € 10?", simpeler: "Vooruit-tellen vanaf 3,45: +0,55=4, +6=10. Totaal +6,55.", nogSimpeler: "€6,55" },
         },
       },
       {
@@ -710,7 +710,7 @@ const steps = [
           theorie: "Wisselgeld = betaald − prijs. Vooruit-tellen vanaf prijs is vaak sneller dan cijferen.",
           voorbeelden: [{ type: "wisselgeld", tekst: "Prijs €24,50, biljet €50: 50−24,50 = 25,50. Of vooruit-tellen vanaf 24,50." }],
           basiskennis: [{ onderwerp: "Niet de prijs!", uitleg: "Verwar wisselgeld niet met de prijs zelf." }],
-          niveaus: { basis: "€50 − €24,50 = €25,50.", simpeler: "Vooruit-tellen: €24,50 → €25 = +€0,50. €25 → €50 = +€25. Totaal wisselgeld €25,50.", nogSimpeler: "€25,50" },
+          niveaus: { basis: "Wisselgeld is wat je betaalt min de prijs. Tel vooruit vanaf € 24,50: eerst naar de volgende hele euro, dan door naar € 50.", simpeler: "Vooruit-tellen: €24,50 → €25 = +€0,50. €25 → €50 = +€25. Totaal wisselgeld €25,50.", nogSimpeler: "€25,50" },
         },
       },
       {
@@ -1208,7 +1208,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€4,40 ÷ 4 = €1,10.",
+            basis: "Hoe vaak zit 100 gram in 400 gram? Verdeel de prijs van kaas B in zoveel gelijke stukjes.",
             simpeler: "400 g is 4 stukjes van 100 g. €4,40 verdelen in 4 stukjes = €1,10 per stukje.",
             nogSimpeler: "€1,10",
           },

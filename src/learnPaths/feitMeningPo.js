@@ -77,7 +77,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Te tellen = feit", tekst: "Je kunt de maanden tellen: het zijn er twaalf, voor iedereen. Dat is een feit." }],
           niveaus: {
-            basis: "Te tellen en voor iedereen waar → feit.",
+            basis: "Vraag je af: kun je dit tellen of controleren, en is het voor iedereen hetzelfde?",
             simpeler: "Kun je de maanden tellen? Dan is het een feit.",
             nogSimpeler: "Is het aantal maanden voor iedereen gelijk?",
           },
@@ -110,7 +110,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Opzoekbaar in de geschiedenis", tekst: "Wanneer de fiets is uitgevonden staat in boeken. Dat is te controleren, dus een feit." }],
           niveaus: {
-            basis: "Historische feiten kun je opzoeken → feit.",
+            basis: "Vraag je af: kun je dit opzoeken in een geschiedenisboek, of vindt iemand dit alleen maar?",
             simpeler: "Kun je de uitvinding van de fiets nakijken? Ja → feit.",
             nogSimpeler: "Is het voor iedereen hetzelfde wanneer de fiets is uitgevonden?",
           },
@@ -387,7 +387,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Prachtig' = oordeel", tekst: "'Prachtig' zegt wat iemand mooi vindt — een mening. Getallen, dagen en maten zijn feiten." }],
           niveaus: {
-            basis: "'Prachtig' is een oordeel → mening-signaalwoord.",
+            basis: "Welk woord zegt wat iemand ergens van vindt, en welke woorden kun je meten of tellen?",
             simpeler: "Welk woord gaat over mooi/lelijk vinden?",
             nogSimpeler: "Welk woord zegt dat iets mooi is?",
           },

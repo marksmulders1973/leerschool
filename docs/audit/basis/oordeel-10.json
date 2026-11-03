@@ -1,0 +1,287 @@
+[
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 1",
+  "hersteld": true,
+  "nieuw": "Kijk welk teken sterker is: × of +. Reken dat stukje eerst uit."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 2",
+  "hersteld": true,
+  "nieuw": "Denk aan het ezelsbruggetje HMVDOA. Welke van de twee bewerkingen staat daarin eerder?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 3",
+  "hersteld": true,
+  "nieuw": "Sanne vergat de volgorde-regel. Welk stukje van de som moet je eerst uitrekenen?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 4",
+  "hersteld": true,
+  "nieuw": "Kijk naar de twee tekens in de som. Welke van de twee is het sterkst?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Zoek eerst de deelsom en reken die uit. Pas daarna doe je de min."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 6",
+  "hersteld": true,
+  "nieuw": "Stel dat de een van links naar rechts rekent en de ander met de × begint. Wat gebeurt er dan met hun uitkomsten?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 1 vraag 7",
+  "hersteld": true,
+  "nieuw": "Delen is sterker dan plus. Reken eerst de deelsom uit en tel daarna op."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 1",
+  "hersteld": true,
+  "nieuw": "Wat tussen haakjes staat, reken je altijd als eerste uit. Doe daarna pas de keersom."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 3 vraag 2",
+  "hersteld": true,
+  "nieuw": "Begin met de haakjes. Doe daarna de keersom en als laatste de min."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 1",
+  "hersteld": true,
+  "nieuw": "Reken eerst de deelsom uit. Doe daarna de min en de plus van links naar rechts."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 2",
+  "hersteld": true,
+  "nieuw": "Eerst de haakjes, dan de macht, en als laatste de min."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 3",
+  "hersteld": true,
+  "nieuw": "Machten gaan vóór keer. Welk stukje reken je dus als eerste uit?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 4",
+  "hersteld": true,
+  "nieuw": "Schrijf het rijtje HMVDOA op. Haakjes is stap 1, machten stap 2. Wat komt daarna?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 5",
+  "hersteld": true,
+  "nieuw": "Begin met de macht. Doe daarna de keersom en tel pas als laatste op."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 6",
+  "hersteld": true,
+  "nieuw": "Reken eerst de haakjes uit. Deel dan, en trek als laatste af."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 7",
+  "hersteld": true,
+  "nieuw": "De haakjes heb je gehad. Welke stap komt in HMVDOA direct na de haakjes?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 8",
+  "hersteld": true,
+  "nieuw": "Werk het rijtje af: eerst haakjes, dan de macht, dan keer en als laatste plus."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 5 vraag 9",
+  "hersteld": true,
+  "nieuw": "Reken eerst de macht uit. Delen en keer zijn even sterk, die doe je daarna van links naar rechts."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 1",
+  "hersteld": true,
+  "nieuw": "Begin met de haakjes. Delen en keer zijn daarna even sterk, dus reken van links naar rechts."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 2",
+  "hersteld": true,
+  "nieuw": "Binnen de haakjes gaat de macht vóór de plus. Reken eerst de haakjes helemaal uit."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 3",
+  "hersteld": true,
+  "nieuw": "Doe eerst de haakjes met de macht, en daarna de keersom. Trek pas als laatste af."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 4",
+  "hersteld": true,
+  "nieuw": "Begin bij de binnenste haakjes en werk zo naar buiten."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 5",
+  "hersteld": true,
+  "nieuw": "Reken de macht en de haakjes apart uit. Doe daarna de keersom en als laatste de min."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 6",
+  "hersteld": true,
+  "nieuw": "Schat eerst: je begint bij 100 en er gaat iets af. Wat zegt dat over hoe groot de uitkomst kan zijn?"
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 6 vraag 7",
+  "hersteld": true,
+  "nieuw": "Reken de stukken links en rechts van de plus apart uit met de volgorde-regel. Tel ze daarna op."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 7 vraag 1",
+  "hersteld": true,
+  "nieuw": "Welk teken is sterker: + of ×? Reken dat stukje eerst uit."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 7 vraag 2",
+  "hersteld": true,
+  "nieuw": "Wat tussen haakjes staat, doe je eerst. Daarna pas de keersom."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 7 vraag 3",
+  "hersteld": true,
+  "nieuw": "Het kleine getal zegt hoe vaak de 5 in de keersom staat. Het is dus niet 5 × 2."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 7 vraag 4",
+  "hersteld": true,
+  "nieuw": "Reken de deelsom en de keersom eerst apart uit. Tel ze daarna bij elkaar op."
+ },
+ {
+  "waar": "volgorde-bewerkingen stap 7 vraag 5",
+  "hersteld": true,
+  "nieuw": "Denk aan HMVDOA. Welke bewerkingen komen daarin vóór optellen en aftrekken?"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Het eerste getal zegt hoe vaak, het tweede getal hoe groot elk groepje is."
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 6",
+  "hersteld": true,
+  "nieuw": "Tel hoe vaak de 2 in de plussom staat. Dat zegt hoeveel keer je de 2 neemt."
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 7",
+  "hersteld": true,
+  "nieuw": "Elke rij heeft evenveel blokjes. Hoeveel rijen zijn er, en welke keersom hoort daarbij?"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 8",
+  "hersteld": true,
+  "nieuw": "Bij keersommen mag je de getallen omdraaien. Wat weet je dan eigenlijk al?"
+ },
+ {
+  "waar": "tafels-po stap 1 vraag 9",
+  "hersteld": true,
+  "nieuw": "Bij een tafel komt er steeds hetzelfde getal bij. Bij welk rijtje komt er steeds 3 bij?"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 1",
+  "hersteld": true,
+  "nieuw": "Bij keer 10 zet je een 0 achter het getal."
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "Keer 5 is de helft van keer 10. Reken eerst 6 × 10 uit en neem daar de helft van."
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 3",
+  "hersteld": true,
+  "nieuw": "Keer 2 is hetzelfde als verdubbelen. Wat is het dubbele van 9?"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 5",
+  "hersteld": true,
+  "nieuw": "Bij keer 10 zet je een 0 achter het getal."
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 6",
+  "hersteld": true,
+  "nieuw": "Keer 5 is de helft van keer 10. Reken eerst 7 × 10 uit en neem daar de helft van."
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 7",
+  "hersteld": true,
+  "nieuw": "Keer 2 is hetzelfde als verdubbelen. Wat is het dubbele van 8?"
+ },
+ {
+  "waar": "tafels-po stap 2 vraag 8",
+  "hersteld": true,
+  "nieuw": "Kijk naar het laatste cijfer. Op welke cijfers eindigen de getallen uit de tafel van 5?"
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 3",
+  "hersteld": true,
+  "nieuw": "Begin bij 9 × 2, die ken je misschien al. Tel er dan nog één 9 bij."
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 5",
+  "hersteld": true,
+  "nieuw": "Reken eerst 8 × 2 uit. Tel er dan nog één 8 bij."
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 6",
+  "hersteld": true,
+  "nieuw": "Tel in sprongen van 4: 4, 8, 12, … Welk getal kom je onderweg tegen?"
+ },
+ {
+  "waar": "tafels-po stap 3 vraag 7",
+  "hersteld": true,
+  "nieuw": "Keer 4 is het dubbele van keer 2. Wat moet je dus met de 18 doen?"
+ },
+ {
+  "waar": "tafels-po stap 4 vraag 2",
+  "hersteld": true,
+  "nieuw": "Begin bij een som die je al kent, zoals 8 × 5. Hoeveel keer 8 moet er dan nog bij?"
+ },
+ {
+  "waar": "tafels-po stap 4 vraag 5",
+  "hersteld": true,
+  "nieuw": "Reken eerst 10 × 7 uit. Haal er daarna één 7 af."
+ },
+ {
+  "waar": "tafels-po stap 4 vraag 6",
+  "hersteld": true,
+  "nieuw": "Begin bij 5 × 6, die is makkelijk. Tel er dan nog één 6 bij."
+ },
+ {
+  "waar": "tafels-po stap 4 vraag 7",
+  "hersteld": true,
+  "nieuw": "Tel de twee cijfers van elk getal bij elkaar op. Bij de tafel van 9 komt daar steeds 9 uit."
+ },
+ {
+  "waar": "tafels-po stap 4 vraag 8",
+  "hersteld": true,
+  "nieuw": "Elke week heeft 7 dagen. Welke keersom hoort bij 3 weken?"
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 4",
+  "hersteld": true,
+  "nieuw": "Splits 25 in 20 en 5. Reken beide stukjes keer 6 en tel de uitkomsten op."
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 5",
+  "hersteld": true,
+  "nieuw": "Splits 13 in 10 en 3. Reken beide stukjes keer 6 en tel de uitkomsten op."
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 6",
+  "hersteld": true,
+  "nieuw": "11 is 10 en nog 1. Reken eerst 10 × 7 uit en tel er dan nog één 7 bij."
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 7",
+  "hersteld": true,
+  "nieuw": "Reken eerst 10 × 14 uit. Keer 5 is daar de helft van."
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 8",
+  "hersteld": true,
+  "nieuw": "Keer 4 is twee keer verdubbelen. Verdubbel 15 en verdubbel die uitkomst nog een keer."
+ },
+ {
+  "waar": "tafels-po stap 5 vraag 9",
+  "hersteld": true,
+  "nieuw": "Bij splitsen knip je de 12 in een tiental en de rest. Let op: elk stuk moet je keer 8 doen."
+ }
+]

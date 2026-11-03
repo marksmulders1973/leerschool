@@ -36,7 +36,7 @@ const steps = [
           theorie: "Tijd-van-de-dag-begroetingen zijn standaard in het Engels: ochtend/middag/avond/nacht. 'Hello' / 'Hi' is altijd OK.",
           voorbeelden: [{ type: "stap", tekst: "Op school 8:30: 'Good morning, teacher!'" }, { type: "stap", tekst: "Na schooltijd 16:00: 'Good afternoon!'" }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "'Good night' is voor naar bed gaan, niet om iemand te groeten in de avond." }],
-          niveaus: { basis: "Goedemorgen.", simpeler: "Morning = ochtend → goedemorgen.", nogSimpeler: "Ochtend = goedemorgen." },
+          niveaus: { basis: "Morning betekent 'ochtend'. Wat zeg je in het Nederlands als je iemand 's ochtends begroet?", simpeler: "Morning = ochtend → goedemorgen.", nogSimpeler: "Ochtend = goedemorgen." },
         },
       },
       { q: "Wat betekent **Goodbye**?", options: ["Tot ziens", "Hallo", "Hoe gaat het?", "Dank je"], answer: 0, wrongHints: [null, "Dat is 'Hello'.", "'Hoe gaat het?' is een vraag. Is 'goodbye' een vraag?", "Dat is 'Thanks'."] },
@@ -62,7 +62,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Op een klok: '12 o'clock' = twelve o'clock. December = the twelfth month (de twaalfde maand)." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Twelve (12) vs twenty (20) — let op de uitspraak: TWELVE vs TWENty (klemtoon vooraan)." }],
           niveaus: {
-            basis: "12 = twelve.",
+            basis: "De getallen 11 en 12 hebben in het Engels een eigen woord: ze eindigen niet op -teen en niet op -ty.",
             simpeler: "Engels voor 12 = twelve (niet -teen).",
             nogSimpeler: "twelve",
           },
@@ -80,7 +80,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Een kind van 17 = 'seventeen years old'. Een opa van 70 = 'seventy years old'." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Toets-strikvraag: zorg dat je 17 (seventeen) en 70 (seventy) niet verwart in geschrift én uitspraak." }],
           niveaus: {
-            basis: "17 = seventeen.",
+            basis: "De getallen 13 tot en met 19 eindigen in het Engels op -teen. Welk getal staat er in 17 na de tien?",
             simpeler: "seven + teen = seventeen.",
             nogSimpeler: "seventeen",
           },
@@ -98,7 +98,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Forty winks = een dutje. Forty days and forty nights = veertig dagen en nachten (Bijbel-uitdrukking)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Veel native speakers maken zelfs deze fout — jij doet het beter als je 'forty zonder u' onthoudt." }],
           niveaus: {
-            basis: "40 = forty (zonder u!).",
+            basis: "Tientallen eindigen in het Engels op -ty. Let op: bij dit tiental valt er een letter weg uit het woord voor 4.",
             simpeler: "40 in het Engels is forty. Pas op: NIET fourty.",
             nogSimpeler: "forty",
           },

@@ -47,7 +47,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Stappenplan = wat eerst, wat daarna. Niet kleur, niet wie." }],
           niveaus: {
-            basis: "Stappenplan zegt in welke VOLGORDE je iets doet.",
+            basis: "Denk aan een recept of een bouwbeschrijving: wat lees je bij stap 1, stap 2 en stap 3?",
             simpeler: "Lijstje 'eerst X, dan Y, daarna Z'.",
             nogSimpeler: "Volgorde-lijst.",
           },
@@ -259,7 +259,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De titel zegt waar het schema over gaat.",
+            basis: "Welk onderdeel staat meestal bovenaan, groot geschreven, en noemt het onderwerp?",
             simpeler: "Titel = onderwerp.",
             nogSimpeler: "Titel = waarover.",
           },
@@ -382,7 +382,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een brief is een tekst, geen schema.",
+            basis: "Een schema laat iets zien met vakjes, pijlen of lijnen. Welke van deze bestaat vooral uit gewone zinnen?",
             simpeler: "Brief = zinnen, geen vakjes.",
             nogSimpeler: "Brief = geen schema.",
           },
@@ -637,7 +637,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Beslisboom = stap voor stap. Bij elke vraag: alleen die vraag beantwoorden, dan volg pijl." }],
           niveaus: {
-            basis: "Volg het pad: dorst = geen honger → 'Nee' → drink water.",
+            basis: "Begin bovenaan bij de vraag 'Heb je honger?'. Wat antwoord jij, en welke pijl volg je dan?",
             simpeler: "Beantwoord 'heb je honger?' met nee → volg nee-pad.",
             nogSimpeler: "Je zegt nee, dus je drinkt water.",
           },
@@ -709,7 +709,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Niet in een team → nee-pijl. Wel water → ja-pijl → zwemmen.",
+            basis: "Begin bij de eerste vraag en kies jouw antwoord. Volg die pijl en beantwoord dan de volgende vraag.",
             simpeler: "Nee bij team, ja bij water: zwemmen.",
             nogSimpeler: "Nee bij team, ja bij water: dan kom je bij zwemmen uit.",
           },
@@ -768,7 +768,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Twee keer nee → strip.",
+            basis: "Begin bij de eerste vraag en volg steeds de pijl van jouw antwoord, tot je bij een eindvak komt.",
             simpeler: "Steeds de nee-pijl volgen: strip.",
             nogSimpeler: "Twee keer nee: dan kom je bij strip uit.",
           },
@@ -827,7 +827,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ja bij spanning, nee bij eng → detective.",
+            basis: "Beantwoord eerst 'Houd je van spanning?' en volg die pijl. Welke vraag krijg je daarna, en wat antwoord je?",
             simpeler: "Ja, dan nee = detective.",
             nogSimpeler: "Ja bij spanning, nee bij eng: dan kom je bij detective uit.",
           },
@@ -881,7 +881,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ja bij zon, nee bij bal → tikkertje.",
+            basis: "Beantwoord eerst 'Schijnt de zon?' en volg die pijl. Welke vraag krijg je daarna, en wat antwoord je?",
             simpeler: "Zon ja, bal nee = tikkertje.",
             nogSimpeler: "Ja bij zon, nee bij bal: dan kom je bij tikkertje uit.",
           },
@@ -1184,7 +1184,7 @@ const steps = [
             { type: "voorbeeld", tekst: "Beslisboom 'vis-naam': Heeft schubben? → Heeft tentakels? etc. → Zo kunnen biologen soorten onderscheiden." },
           ],
           basiskennis: [{ onderwerp: "Onthoud grenzen", uitleg: "Bij beslisboom-vragen op de Doorstroomtoets: kijk goed of grens INCLUSIEF is. '≥ 536' betekent 536 telt mee. '> 536' niet." }],
-          niveaus: { basis: "HAVO.", simpeler: "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535).", nogSimpeler: "HAVO" },
+          niveaus: { basis: "Zoek het rijtje waar de score 540 in past: ligt 540 tussen de twee getallen van dat rijtje?", simpeler: "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535).", nogSimpeler: "HAVO" },
         },
       },
       {

@@ -71,7 +71,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "150 = altijd. 76 = meerderheid. Onthoud deze cijfers — Toets-favoriet." }],
           niveaus: {
-            basis: "De Tweede Kamer heeft 150 zetels.",
+            basis: "Voor een meerderheid heb je 76 zetels nodig: net iets meer dan de helft. Hoeveel zetels zijn er dan in totaal?",
             simpeler: "De Tweede Kamer heeft 150 stoelen voor 150 Kamerleden.",
             nogSimpeler: "150",
           },
@@ -250,7 +250,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "12 provincies komt vaak voor in toetsvragen. Niet 11 (vóór 1986), niet 13. Sinds 1986 = 12." }],
           niveaus: {
-            basis: "12 provincies.",
+            basis: "Tel de provincies op een kaart van Nederland. Vergeet Flevoland niet: dat is de jongste provincie.",
             simpeler: "NL heeft sinds 1986 12 provincies (Flevoland was de laatste).",
             nogSimpeler: "12",
           },

@@ -96,7 +96,7 @@ const steps = [
           theorie: "3 wijzers: uurwijzer (klein), minutenwijzer (groot), secondewijzer (heel dun, snelste).",
           voorbeelden: [{ type: "groot", tekst: "Klein = klein aantal (12 uren). Groot = groot aantal (60 minuten)." }],
           basiskennis: [{ onderwerp: "Truc onthouden", uitleg: "Korte wijzer, kort woord: 'uur'. Lange wijzer, lang woord: 'minuten'." }],
-          niveaus: { basis: "De kleine wijzer is de uurwijzer.", simpeler: "De kleine wijzer is de korte wijzer. Die wijst naar het uur. De grote wijzer is lang en wijst naar de minuten.", nogSimpeler: "Klein = uur" },
+          niveaus: { basis: "Een klok heeft een korte en een lange wijzer. Welke van de twee beweegt het langzaamst over de klok?", simpeler: "De kleine wijzer is de korte wijzer. Die wijst naar het uur. De grote wijzer is lang en wijst naar de minuten.", nogSimpeler: "Klein = uur" },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
           theorie: "Tijd-eenheden: 1 uur = 60 min. 1 min = 60 sec. 1 dag = 24 uur.",
           voorbeelden: [{ type: "tabel", tekst: "Half uur = 30 min. Kwart = 15 min. 1 uur = 60 min. 2 uur = 120 min." }],
           basiskennis: [{ onderwerp: "Niet 100", uitleg: "Tijd is niet decimaal — geen 100 minuten in een uur." }],
-          niveaus: { basis: "60 minuten.", simpeler: "1 uur = 60 minuten (vaste regel). Niet 30 (=halfuur), niet 100, niet 24 (=uren per dag).", nogSimpeler: "60" },
+          niveaus: { basis: "Denk aan de minutenwijzer: hoeveel minuten-streepjes gaat hij langs in één heel rondje?", simpeler: "1 uur = 60 minuten (vaste regel). Niet 30 (=halfuur), niet 100, niet 24 (=uren per dag).", nogSimpeler: "60" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -151,7 +151,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De secondewijzer.",
+            basis: "Kijk welke wijzer de kleinste stapjes telt: uren, minuten of seconden. Hoe kleiner de stapjes, hoe sneller de wijzer gaat.",
             simpeler: "De dunne secondewijzer gaat in 1 minuut rond. De andere doen er veel langer over.",
             nogSimpeler: "Seconde=snelst",
           },
@@ -189,7 +189,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een analoge klok.",
+            basis: "Er zijn twee soorten klokken: één met cijfers op een schermpje en één met wijzers. Weet je nog hoe die tweede soort heet?",
             simpeler: "Met wijzers = analoog. Met alleen getallen = digitaal.",
             nogSimpeler: "Wijzers=analoog",
           },
@@ -232,7 +232,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wijzers.",
+            basis: "Een digitale klok laat de tijd zien als getallen op een schermpje, zoals 14:30. Wat zie je op een ronde klok wél, maar op zo'n schermpje niet?",
             simpeler: "Een digitale klok laat cijfers zien. Wijzers heeft alleen een analoge klok.",
             nogSimpeler: "Geen wijzers",
           },
@@ -275,7 +275,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12.",
+            basis: "Tel in gedachten de cijfers langs de rand: begin bij de 1 en ga rond tot je weer bovenaan bent. Bij welk cijfer stop je?",
             simpeler: "Tel de cijfers langs de rand: van 1 tot en met 12. Dat zijn er 12.",
             nogSimpeler: "12",
           },
@@ -318,7 +318,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 uur.",
+            basis: "De minutenwijzer telt de minuten. Hoeveel minuten gaan er voorbij als hij één keer rond is, en hoe noem je die tijd nog meer?",
             simpeler: "De grote wijzer gaat in 60 minuten rond. 60 minuten is 1 uur.",
             nogSimpeler: "1 uur",
           },
@@ -361,7 +361,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12 uur.",
+            basis: "De uurwijzer gaat langs alle cijfers op de klok, één cijfer per uur. Hoeveel cijfers staan er op de klok?",
             simpeler: "De kleine wijzer gaat elk uur 1 cijfer verder. 12 cijfers = 12 uur.",
             nogSimpeler: "12 uur",
           },
@@ -404,7 +404,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 minuut.",
+            basis: "De secondewijzer telt de seconden. Hoeveel seconden gaan er voorbij in één rondje, en hoe noem je die tijd nog meer?",
             simpeler: "De dunne wijzer gaat in 60 seconden rond. Dat is 1 minuut.",
             nogSimpeler: "1 minuut",
           },
@@ -429,7 +429,7 @@ const steps = [
           theorie: "Heel uur: grote wijzer op 12, kleine wijzer op het uurnummer.",
           voorbeelden: [{ type: "stand", tekst: "Klein op 9, groot op 12 → 9 uur. Klein op 4, groot op 12 → 4 uur." }],
           basiskennis: [{ onderwerp: "Eerst de grote", uitleg: "Zie je de grote wijzer op 12? Dan hoef je alleen de kleine af te lezen." }],
-          niveaus: { basis: "9 uur.", simpeler: "Grote wijzer op 12 = heel uur. Kleine wijzer op 9 → 9 uur.", nogSimpeler: "9 uur" },
+          niveaus: { basis: "Kijk eerst naar de grote wijzer: staat die op de 12, dan is het een heel uur. Lees daarna af naar welk cijfer de kleine wijzer wijst.", simpeler: "Grote wijzer op 12 = heel uur. Kleine wijzer op 9 → 9 uur.", nogSimpeler: "9 uur" },
         },
       },
       {
@@ -457,7 +457,7 @@ const steps = [
           theorie: "Avond-uren omrekenen: 1 PM = 13, 2 PM = 14 ... 9 PM = 21, 11 PM = 23.",
           voorbeelden: [{ type: "tabel", tekst: "5 uur 's avonds = 17:00. 9 uur 's avonds = 21:00. Middernacht = 00:00." }],
           basiskennis: [{ onderwerp: "+12 truc", uitleg: "Voor avond-tijden (na 12 uur 's middags): + 12." }],
-          niveaus: { basis: "21:00.", simpeler: "9 uur 's avonds = 9 + 12 = 21 uur → 21:00.", nogSimpeler: "21:00" },
+          niveaus: { basis: "'s Avonds tel je op een digitale klok 12 op bij het uur. Reken dat eerst uit en zet er dan :00 achter.", simpeler: "9 uur 's avonds = 9 + 12 = 21 uur → 21:00.", nogSimpeler: "21:00" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -498,7 +498,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 uur.",
+            basis: "De grote wijzer op de 12 betekent: een heel uur. De kleine wijzer vertelt dan welk uur het is.",
             simpeler: "De grote wijzer op 12 betekent: precies een uur. De kleine wijst naar 5. Dus 5 uur.",
             nogSimpeler: "5 uur",
           },
@@ -536,7 +536,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De 6.",
+            basis: "De kleine wijzer is de uurwijzer: bij een heel uur wijst hij precies naar het cijfer van dat uur.",
             simpeler: "Kleine wijzer zegt het uur. Het is 6 uur, dus de kleine wijst naar de 6.",
             nogSimpeler: "6",
           },
@@ -584,7 +584,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Allebei op de 12.",
+            basis: "Om 12 uur is het een heel uur. Waar staat de grote wijzer bij elk heel uur, en waar wijst de kleine wijzer om 12 uur?",
             simpeler: "Grote op 12 = heel uur. Kleine op 12 = 12 uur. Dus allebei op de 12.",
             nogSimpeler: "Beide op 12",
           },
@@ -609,7 +609,7 @@ const steps = [
           theorie: "Halve uren: grote wijzer op 6, kleine tussen twee cijfers. Nederlands kijkt vooruit: tussen 6 en 7 = half 7.",
           voorbeelden: [{ type: "stand", tekst: "Klein tussen 6 en 7 → half 7. Klein tussen 2 en 3 → half 3." }],
           basiskennis: [{ onderwerp: "Vooruit kijken", uitleg: "Bij 'half' noem je het uur dat kómt, niet het uur dat was." }],
-          niveaus: { basis: "Half 7.", simpeler: "Grote wijzer op 6 = half. Kleine wijzer op weg naar 7 → half 7 (6:30).", nogSimpeler: "Half 7" },
+          niveaus: { basis: "De grote wijzer op de 6 betekent 'half'. Half zeg je altijd met het uur dat nog komt: naar welk uur is de kleine wijzer onderweg?", simpeler: "Grote wijzer op 6 = half. Kleine wijzer op weg naar 7 → half 7 (6:30).", nogSimpeler: "Half 7" },
         },
       },
       {
@@ -623,7 +623,7 @@ const steps = [
           theorie: "Halftruc: half X = uur ervóór + 30 min. Half 5 = 4:30. 's Middags + 12 = 16:30.",
           voorbeelden: [{ type: "tabel", tekst: "Half 5 's morgens = 04:30. Half 5 's middags = 16:30." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "Engels 'half past four' = 4:30. Nederlands 'half 5' = 4:30." }],
-          niveaus: { basis: "16:30.", simpeler: "Half 5 = 30 min vóór 5 = uur 4 + 30 min = 04:30. 's Middags +12 = 16:30.", nogSimpeler: "16:30" },
+          niveaus: { basis: "Half 5 is een half uur vóór 5 uur. Welke tijd is dat in de ochtend, en wat tel je 's middags bij het uur op?", simpeler: "Half 5 = 30 min vóór 5 = uur 4 + 30 min = 04:30. 's Middags +12 = 16:30.", nogSimpeler: "16:30" },
         },
       },
       {
@@ -637,7 +637,7 @@ const steps = [
           theorie: "Bij elke 30 min schuift uurwijzer halverwege twee uurnummers.",
           voorbeelden: [{ type: "stand", tekst: "Half 8 (7:30): klein tussen 7 en 8. Half 9 (8:30): klein tussen 8 en 9." }],
           basiskennis: [{ onderwerp: "Voor het volgende", uitleg: "'Half 8' kijkt vooruit naar 8 — uurwijzer is op weg naar 8." }],
-          niveaus: { basis: "Tussen 7 en 8.", simpeler: "Half 8 = 7:30. De kleine wijzer staat halverwege tussen 7 en 8 (niet meer op 7, nog niet op 8).", nogSimpeler: "7-8" },
+          niveaus: { basis: "Half 8 betekent dat het al een half uur na 7 uur is. Staat de kleine wijzer dan precies op een cijfer, of ergens tussen twee cijfers?", simpeler: "Half 8 = 7:30. De kleine wijzer staat halverwege tussen 7 en 8 (niet meer op 7, nog niet op 8).", nogSimpeler: "7-8" },
         },
       },
       {
@@ -768,7 +768,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "09:30.",
+            basis: "Half 10 is een half uur vóór 10 uur. Welk uur staat er dan nog op de klok, en hoeveel minuten is een half uur?",
             simpeler: "Half 10 is een half uur vóór 10 uur. Dat is 9 uur en 30 minuten: 09:30.",
             nogSimpeler: "09:30",
           },
@@ -806,7 +806,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12:30.",
+            basis: "Half 1 is een half uur vóór 1 uur. Welk uur is het dan nog? Denk erom dat het middag is.",
             simpeler: "Half 1 is een half uur vóór 1 uur. Het uur ervóór is 12. Dus 12:30.",
             nogSimpeler: "12:30",
           },
@@ -831,7 +831,7 @@ const steps = [
           theorie: "Minutenwijzer-kompas: 12=heel uur, 3=kwart over, 6=half, 9=kwart voor.",
           voorbeelden: [{ type: "kompas", tekst: "Groot op 9 + klein bijna bij 5 → kwart voor 5. Groot op 3 + klein net na 4 → kwart over 4." }],
           basiskennis: [{ onderwerp: "Links = voor", uitleg: "Staat de grote wijzer links (op 9)? Dan is het 'kwart voor' het volgende uur." }],
-          niveaus: { basis: "Kwart voor 5.", simpeler: "Grote wijzer op 9 = kwart voor. Kleine wijzer bijna bij 5 → kwart voor 5 (4:45).", nogSimpeler: "Kwart voor 5" },
+          niveaus: { basis: "Kijk eerst waar de grote wijzer staat: op de 3 is het kwart over, op de 9 kwart voor. Naar welk uur is de kleine wijzer onderweg?", simpeler: "Grote wijzer op 9 = kwart voor. Kleine wijzer bijna bij 5 → kwart voor 5 (4:45).", nogSimpeler: "Kwart voor 5" },
         },
       },
       {
@@ -845,7 +845,7 @@ const steps = [
           theorie: "Vier kwartieren = 1 uur. 15 + 15 + 15 + 15 = 60 min.",
           voorbeelden: [{ type: "tabel", tekst: "1 kwartier = 15. 2 kwartieren = 30 (=half uur). 4 kwartieren = 60 (=1 uur)." }],
           basiskennis: [{ onderwerp: "Klok-positie", uitleg: "Kwart over: minutenwijzer op 3. Kwart voor: op 9." }],
-          niveaus: { basis: "15 min.", simpeler: "Kwart = 1/4 van 60 = 15 minuten. Vier kwartieren passen in 1 uur.", nogSimpeler: "15" },
+          niveaus: { basis: "Een kwartier is een kwart: een vierde deel van een uur. Verdeel de 60 minuten van een uur in vier gelijke stukken.", simpeler: "Kwart = 1/4 van 60 = 15 minuten. Vier kwartieren passen in 1 uur.", nogSimpeler: "15" },
         },
       },
       {
@@ -873,7 +873,7 @@ const steps = [
           theorie: "Kwart-voor-formule: kwart voor X = (X-1):45. Kwart voor 9 = 8:45.",
           voorbeelden: [{ type: "tabel", tekst: "Kwart voor 9 's avonds = 20:45. Kwart over 9 's avonds = 21:15." }],
           basiskennis: [{ onderwerp: "Avond + 12", uitleg: "Avond-uren in 24-uurs: + 12. 8 PM = 20:00." }],
-          niveaus: { basis: "20:45.", simpeler: "Kwart voor 9 = uur 8 + 45 min. 's Avonds: 8+12=20 → 20:45.", nogSimpeler: "20:45" },
+          niveaus: { basis: "Kwart voor 9 is 15 minuten vóór 9 uur. Welk uur is het dan nog, hoeveel minuten staan er, en wat tel je 's avonds bij het uur op?", simpeler: "Kwart voor 9 = uur 8 + 45 min. 's Avonds: 8+12=20 → 20:45.", nogSimpeler: "20:45" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -914,7 +914,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kwart voor.",
+            basis: "Op de 9 is de grote wijzer al drie kwart rond. Is er dan net een kwartier voorbij, of mist er nog een kwartier tot het hele uur?",
             simpeler: "Op de 9 staat de grote wijzer links. Nog een kwartier tot het hele uur: kwart voor.",
             nogSimpeler: "Kwart voor",
           },
@@ -957,7 +957,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4.",
+            basis: "Een kwartier is een kwart van een uur. In hoeveel gelijke stukken snijd je iets als je het in kwarten verdeelt?",
             simpeler: "1 kwartier = 15 minuten. 4 keer 15 = 60 = 1 uur.",
             nogSimpeler: "4",
           },
@@ -1000,7 +1000,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kwart over 7.",
+            basis: "De grote wijzer op de 3 staat een kwart rond na het hele uur. De kleine wijzer is net voorbij een cijfer: welk uur is dus net begonnen?",
             simpeler: "Grote wijzer rechts op de 3 = kwart over. De kleine is net voorbij de 7. Kwart over 7.",
             nogSimpeler: "Kwart over 7",
           },
@@ -1043,7 +1043,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kwart voor 11.",
+            basis: "Kijk naar de minuten: 45 minuten is drie kwartier, dus er mist nog één kwartier tot het volgende hele uur. Welk uur komt er na 10?",
             simpeler: "Na 10:45 duurt het nog 15 minuten tot 11 uur. Dus kwart voor 11.",
             nogSimpeler: "Kwart voor 11",
           },
@@ -1086,7 +1086,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Half 5.",
+            basis: "Een kwartier is 15 minuten. Tel bij kwart over 4 nog 15 minuten op: waar staat de grote wijzer dan?",
             simpeler: "Kwart over 4 = 4:15. Een kwartier erbij = 4:30. Dat is half 5.",
             nogSimpeler: "Half 5",
           },
@@ -1111,7 +1111,7 @@ const steps = [
           theorie: "Na het halve uur (grote wijzer voorbij de 6) tel je terug naar het volgende uur: 'zoveel voor'.",
           voorbeelden: [{ type: "stand", tekst: "Groot op 10 → 50 min → 10 voor. Groot op 11 → 55 min → 5 voor." }],
           basiskennis: [{ onderwerp: "Meer dan 30 = voor", uitleg: "Wijst de grote wijzer voorbij de 6? Dan zeg je 'voor' + het volgende uur." }],
-          niveaus: { basis: "10 voor 4.", simpeler: "Grote wijzer op 10 = 50 minuten. Nog 10 minuten tot 4 uur → 10 voor 4 (3:50).", nogSimpeler: "10 voor 4" },
+          niveaus: { basis: "Tel in stapjes van 5 hoeveel minuten de grote wijzer nog moet tot de 12. Kijk dan naar welk uur de kleine wijzer bijna is.", simpeler: "Grote wijzer op 10 = 50 minuten. Nog 10 minuten tot 4 uur → 10 voor 4 (3:50).", nogSimpeler: "10 voor 4" },
         },
       },
       {
@@ -1139,7 +1139,7 @@ const steps = [
           theorie: "Minutenwijzer: cijfer-nummer × 5 = aantal minuten over heel uur.",
           voorbeelden: [{ type: "tabel", tekst: "Op 1 = 5. Op 2 = 10. Op 3 = 15. Op 4 = 20. Op 6 = 30." }],
           basiskennis: [{ onderwerp: "Niet uur-positie", uitleg: "De grote wijzer wijst MINUTEN aan, niet uren — dus niet '2 minuten' of '2 uur'." }],
-          niveaus: { basis: "10 minuten.", simpeler: "Grote wijzer op 2: 2 × 5 minuten = 10 minuten over heel uur.", nogSimpeler: "10" },
+          niveaus: { basis: "Tussen twee cijfers op de klok zit steeds 5 minuten. Tel in stapjes van 5 vanaf de 12 tot aan de grote wijzer.", simpeler: "Grote wijzer op 2: 2 × 5 minuten = 10 minuten over heel uur.", nogSimpeler: "10" },
         },
       },
       {
@@ -1153,7 +1153,7 @@ const steps = [
           theorie: "Over-formule: X over Y = Y:0X (eerste 30 min).",
           voorbeelden: [{ type: "tabel", tekst: "5 over 7 = 7:05. 10 over 7 = 7:10. 25 over 7 = 7:25." }],
           basiskennis: [{ onderwerp: "Avond + 12", uitleg: "7 PM = 19. Dus 10 over 7 's avonds = 19:10." }],
-          niveaus: { basis: "19:10.", simpeler: "10 over 7 = 7:10. 's Avonds: 7+12=19 → 19:10.", nogSimpeler: "19:10" },
+          niveaus: { basis: "Het is 10 minuten na 7 uur. Wat tel je 's avonds bij het uur op, en hoe zet je de minuten erachter?", simpeler: "10 over 7 = 7:10. 's Avonds: 7+12=19 → 19:10.", nogSimpeler: "19:10" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1194,7 +1194,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5.",
+            basis: "Tussen twee cijfers zit 5 minuten. Hoeveel cijfers moet de grote wijzer nog langs tot hij bij de 12 is?",
             simpeler: "De 11 staat vlak voor de 12. Nog één stapje van 5 minuten. Dus nog 5 minuten.",
             nogSimpeler: "5",
           },
@@ -1232,7 +1232,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "09:05.",
+            basis: "5 over 9 is 5 minuten na 9 uur. Op een digitale klok komen eerst de uren en dan de minuten, allebei met twee cijfers.",
             simpeler: "5 over 9 is 5 minuten na 9 uur. 9 uur = 09:00, plus 5 = 09:05.",
             nogSimpeler: "09:05",
           },
@@ -1270,7 +1270,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 voor 7.",
+            basis: "Kijk naar de minuten: hoeveel minuten mist er nog van 50 tot een heel uur? En welk uur komt er na 6?",
             simpeler: "Bij 06:50 duurt het nog 10 minuten tot 7 uur. Dus 10 voor 7.",
             nogSimpeler: "10 voor 7",
           },
@@ -1313,7 +1313,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 over 11.",
+            basis: "Op de 1 heeft de grote wijzer één stapje van 5 minuten gezet na het hele uur. Welk uur is net begonnen volgens de kleine wijzer?",
             simpeler: "De grote wijzer op 1 = 5 minuten. De kleine is net voorbij de 11. Dus 5 over 11.",
             nogSimpeler: "5 over 11",
           },
@@ -1337,7 +1337,7 @@ const steps = [
           theorie: "24→12-uurs: na 12 uur trek je 12 af, voeg PM toe. 21:00 → 9 PM.",
           voorbeelden: [{ type: "tabel", tekst: "13:00 = 1 PM. 18:00 = 6 PM. 21:00 = 9 PM. 23:00 = 11 PM." }],
           basiskennis: [{ onderwerp: "Geen 21:00 PM", uitleg: "12-uurs gaat tot 12 — '21' bestaat niet in dat format." }],
-          niveaus: { basis: "9:00 PM.", simpeler: "21:00 = 21-12 = 9 's avonds = 9:00 PM.", nogSimpeler: "9 PM" },
+          niveaus: { basis: "Een 12-uursklok begint na 12 uur 's middags weer bij 1, dus haal je 12 van het uur af. Weet je nog: AM is de ochtend, PM is de middag en avond.", simpeler: "21:00 = 21-12 = 9 's avonds = 9:00 PM.", nogSimpeler: "9 PM" },
         },
       },
       {
@@ -1365,7 +1365,7 @@ const steps = [
           theorie: "24-uurs format: 00:00 (middernacht) tot 23:59. Na 23:59 → terug naar 00:00.",
           voorbeelden: [{ type: "tijdlijn", tekst: "23:59 → 00:00 (middernacht, dag wisselt) → 01:00 → ... → 23:59." }],
           basiskennis: [{ onderwerp: "12:00 = middag", uitleg: "12:00 = 12 uur 's middags (lunchtijd). 00:00 = 12 uur 's nachts." }],
-          niveaus: { basis: "00:00.", simpeler: "Middernacht = nieuwe dag begint = 00:00. (12:00 = middag, niet middernacht.)", nogSimpeler: "00:00" },
+          niveaus: { basis: "Middernacht is het moment dat een nieuwe dag begint. Bij welk getal begint een digitale klok dan weer te tellen?", simpeler: "Middernacht = nieuwe dag begint = 00:00. (12:00 = middag, niet middernacht.)", nogSimpeler: "00:00" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1401,7 +1401,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het uur.",
+            basis: "Op een digitale klok lees je van links naar rechts: eerst het grootste stuk tijd, dan het kleinere. Wat is groter: uren of minuten?",
             simpeler: "Vóór de dubbele punt staat het uur. Erachter de minuten.",
             nogSimpeler: "Uur",
           },
@@ -1425,7 +1425,7 @@ const steps = [
           theorie: "Hele uren aftrekken: eindtijd-uur min begintijd-uur. Hier: 14-8=6.",
           voorbeelden: [{ type: "som", tekst: "08:00 → 14:00 = 14-8 = 6 uur." }],
           basiskennis: [{ onderwerp: "Tellen vooruit", uitleg: "Of: 8→9→10→11→12→13→14 = 6 uur." }],
-          niveaus: { basis: "6 uur.", simpeler: "14 - 8 = 6 uur. Minuten zijn beide 00.", nogSimpeler: "6" },
+          niveaus: { basis: "De minuten zijn bij allebei 00, dus je hoeft alleen naar de uren te kijken. Tel van het eerste uur door tot het tweede uur.", simpeler: "14 - 8 = 6 uur. Minuten zijn beide 00.", nogSimpeler: "6" },
         },
       },
       {
@@ -1439,7 +1439,7 @@ const steps = [
           theorie: "Tel-truc: 15:30 → 17:30 = 2 uur. 17:30 → 17:45 = 15 min. Som = 2u15m.",
           voorbeelden: [{ type: "stap", tekst: "Uren: 17-15=2. Minuten: 45-30=15. → 2 uur 15 min." }],
           basiskennis: [{ onderwerp: "Geen overflow", uitleg: "45 > 30, dus minuten gaan gewoon af. Geen lenen nodig." }],
-          niveaus: { basis: "2 uur 15 min.", simpeler: "Uren: 17-15=2. Minuten: 45-30=15. Samen: 2 uur 15 minuten.", nogSimpeler: "2u15m" },
+          niveaus: { basis: "Reken eerst de hele uren uit van 15:30 tot 17:30. Kijk dan hoeveel minuten er nog bij komen tot 17:45.", simpeler: "Uren: 17-15=2. Minuten: 45-30=15. Samen: 2 uur 15 minuten.", nogSimpeler: "2u15m" },
         },
       },
       {
@@ -1453,7 +1453,7 @@ const steps = [
           theorie: "Bij dag-overgang: tot 00:00 (24-uur tijd berekenen) + vanaf 00:00.",
           voorbeelden: [{ type: "stap", tekst: "22→24 = 2 uur. 0→7 = 7 uur. Som = 9 uur." }],
           basiskennis: [{ onderwerp: "Niet aftrekken", uitleg: "7-22 = -15 (verkeerd). Splitsen bij middernacht is veiliger." }],
-          niveaus: { basis: "9 uur.", simpeler: "22→24=2u (tot middernacht). 0→7=7u (na). Samen: 2+7=9 uur.", nogSimpeler: "9" },
+          niveaus: { basis: "Reken in twee stukken: eerst van 22:00 tot middernacht, dan van middernacht tot 07:00. Tel die twee daarna bij elkaar op.", simpeler: "22→24=2u (tot middernacht). 0→7=7u (na). Samen: 2+7=9 uur.", nogSimpeler: "9" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1494,7 +1494,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 uur 30 min.",
+            basis: "Tel eerst de hele uren van 10:00 tot 12:00. Hoeveel minuten komen er daarna nog bij tot 12:30?",
             simpeler: "Van 10 naar 12 uur is 2 uur. Dan nog 30 minuten. Samen 2 uur 30 min.",
             nogSimpeler: "2u30",
           },
@@ -1532,7 +1532,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "45 min.",
+            basis: "Een heel uur heeft 60 minuten. Hoeveel minuten mist er nog tot 10 uur als het al 15 minuten over 9 is?",
             simpeler: "Van kwart over 9 tot 10 uur. Dat zijn 3 kwartieren = 45 minuten.",
             nogSimpeler: "45 min",
           },
@@ -1570,7 +1570,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "80.",
+            basis: "Maak eerst van het hele uur minuten: hoeveel minuten zitten er in 1 uur? Tel daar dan de 20 minuten bij op.",
             simpeler: "1 uur is 60 minuten. Daar 20 bij: 80 minuten.",
             nogSimpeler: "80",
           },
@@ -1613,7 +1613,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "09:10.",
+            basis: "Hoeveel minuten is het van 08:50 tot 09:00? Kijk dan hoeveel van de 20 minuten er daarna nog over zijn.",
             simpeler: "Van 08:50 naar 09:00 is 10 minuten. Nog 10 minuten erbij: 09:10.",
             nogSimpeler: "09:10",
           },
@@ -1638,7 +1638,7 @@ const steps = [
           theorie: "Minutenwijzer-kompas: 12=heel uur, 3=kwart over, 6=half, 9=kwart voor.",
           voorbeelden: [{ type: "stand", tekst: "Groot op 3 + klein net na 11 → kwart over 11." }],
           basiskennis: [{ onderwerp: "Rechts = over", uitleg: "Grote wijzer rechts (op 3)? Dan 'kwart over' het uur waar de kleine wijzer net voorbij is." }],
-          niveaus: { basis: "Kwart over 11.", simpeler: "Grote wijzer op 3 = kwart over. Kleine wijzer net na 11 → kwart over 11 (11:15).", nogSimpeler: "Kwart over 11" },
+          niveaus: { basis: "Kijk eerst naar de grote wijzer: op de 3 is het kwart over, op de 9 kwart voor. Welk uur is net begonnen volgens de kleine wijzer?", simpeler: "Grote wijzer op 3 = kwart over. Kleine wijzer net na 11 → kwart over 11 (11:15).", nogSimpeler: "Kwart over 11" },
         },
       },
       {
@@ -1653,7 +1653,7 @@ const steps = [
           theorie: "NL halftruc: kijk naar volgende cijfer. Klein tussen 7 en 8 → half 8 (NIET half 7).",
           voorbeelden: [{ type: "stand", tekst: "Half 8 = 7:30. Klein tussen 7 en 8. Half 9 = 8:30. Klein tussen 8 en 9." }],
           basiskennis: [{ onderwerp: "Verwarring", uitleg: "Klein staat NA 7 (op weg naar 8) — daarom 'half 8', niet 'half 7'." }],
-          niveaus: { basis: "Half 8.", simpeler: "Grote op 6 = halve uur. Klein tussen 7 en 8 → half 8 (= 7:30).", nogSimpeler: "Half 8" },
+          niveaus: { basis: "De grote wijzer op de 6 betekent 'half'. Half zeg je met het uur waar de kleine wijzer naartoe gaat.", simpeler: "Grote op 6 = halve uur. Klein tussen 7 en 8 → half 8 (= 7:30).", nogSimpeler: "Half 8" },
         },
       },
       {
@@ -1667,7 +1667,7 @@ const steps = [
           theorie: "Kwart-voor-formule: kwart voor X = (X-1):45.",
           voorbeelden: [{ type: "tabel", tekst: "Kwart voor 7 's avonds = 18:45. Kwart over 7 's avonds = 19:15." }],
           basiskennis: [{ onderwerp: "Avond +12", uitleg: "6 PM = 18:00. Dus kwart voor 7 's avonds = 18:45." }],
-          niveaus: { basis: "18:45.", simpeler: "Kwart voor 7 = 6:45. 's Avonds: 6+12=18 → 18:45.", nogSimpeler: "18:45" },
+          niveaus: { basis: "Kwart voor 7 is 15 minuten vóór 7 uur. Welk uur is het dan nog, hoeveel minuten staan er, en wat tel je 's avonds bij het uur op?", simpeler: "Kwart voor 7 = 6:45. 's Avonds: 6+12=18 → 18:45.", nogSimpeler: "18:45" },
         },
       },
       {
@@ -1681,7 +1681,7 @@ const steps = [
           theorie: "Stappen: begin → eerste heel uur (rest min). Hele uren tellen. Eind-minuten optellen.",
           voorbeelden: [{ type: "stap", tekst: "13:15→14:00 = 45 min. 14:00→15:00 = 1 uur. Som = 1u45m." }],
           basiskennis: [{ onderwerp: "Niet 2 uur", uitleg: "Geen volle 2 uur — 15 min korter (1u45m)." }],
-          niveaus: { basis: "1 uur 45 min.", simpeler: "13:15 → 15:00 = 13:15 → 14:00 (45m) + 14:00 → 15:00 (1u) = 1 uur 45 min.", nogSimpeler: "1u45m" },
+          niveaus: { basis: "Reken in twee stukken: eerst van 13:15 tot het volgende hele uur, dan van dat hele uur tot 15:00. Tel die twee daarna op.", simpeler: "13:15 → 15:00 = 13:15 → 14:00 (45m) + 14:00 → 15:00 (1u) = 1 uur 45 min.", nogSimpeler: "1u45m" },
         },
       },
       {

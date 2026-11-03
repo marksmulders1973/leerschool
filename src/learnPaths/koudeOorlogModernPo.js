@@ -68,7 +68,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Tegenhanger", uitleg: "Warschaupact (1955-1991) was de oosterse tegenhanger. Bestaat niet meer sinds USSR uit elkaar viel." }],
           niveaus: {
-            basis: "NAVO = westers militair bondgenootschap sinds 1949.",
+            basis: "NAVO staat voor Noord-Atlantische Verdragsorganisatie: landen rond de Atlantische Oceaan, zoals Amerika en West-Europa. Liggen die landen in het westen of in het oosten?",
             simpeler: "Een groep westerse landen die afspraken dat ze elkaar helpen als iemand wordt aangevallen.",
             nogSimpeler: "Westerse landen die samen verdedigen. De baas is nu Mark Rutte.",
           },
@@ -173,7 +173,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Les van Vietnam", uitleg: "Een grote militaire macht kan een oorlog verliezen tegen een kleinere tegenstander die volk + tijd + thuisvoordeel heeft." }],
           niveaus: {
-            basis: "De Vietnam-oorlog is gewonnen door Noord-Vietnam, het communistische noorden.",
+            basis: "De VS haalden in 1973 hun soldaten weg en in 1975 werd heel Vietnam communistisch. Welke kant was communistisch?",
             simpeler: "De VS verloor de Vietnam-oorlog. Noord-Vietnam veroverde Saigon in 1975 en verenigde het land.",
             nogSimpeler: "Noord-Vietnam won, VS trok zich terug.",
           },
@@ -200,7 +200,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Toets-context", uitleg: "Kennedy = jonge populaire VS-president (1961-1963). Vermoord 22 november 1963 — slechts 5 maanden na deze toespraak." }],
           niveaus: {
-            basis: "Kennedy zei in Berlijn: 'Ich bin ein Berliner' (1963).",
+            basis: "Kennedy sprak in Berlijn en wilde laten zien dat hij aan de kant van de Berlijners stond. Welke zin is in het Duits?",
             simpeler: "Beroemde toespraak: 'Ik ben een Berlijner' — solidariteit met West-Berlijn.",
             nogSimpeler: "'Ich bin ein Berliner'.",
           },

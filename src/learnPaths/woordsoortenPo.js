@@ -36,7 +36,7 @@ const steps = [
           theorie: "Zelfst. nw test: 'de' of 'het' ervoor + meervoud te maken.",
           voorbeelden: [{ type: "test", tekst: "De fiets ✓ (zelfst nw). De snel ✗. De mooi ✗." }],
           basiskennis: [{ onderwerp: "Fietst = ww", uitleg: "'Fietst' is een werkwoordsvorm (hij fietst). 'De fietst' kan niet." }],
-          niveaus: { basis: "fiets = zelfst nw.", simpeler: "Fiets = ding. 'De fiets' past ✓ → zelfst. naamwoord.", nogSimpeler: "Fiets" },
+          niveaus: { basis: "Een zelfstandig naamwoord is een persoon, dier of ding. Bij welk woord kun je 'de' of 'het' zetten?", simpeler: "Fiets = ding. 'De fiets' past ✓ → zelfst. naamwoord.", nogSimpeler: "Fiets" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           theorie: "Zelfst. nw = personen, dingen. In zin: het ding waar 't over gaat.",
           voorbeelden: [{ type: "ontleed", tekst: "De (lidwoord) dappere (bijv) ridder (zelfst) vocht (ww) fel (bijwoord)." }],
           basiskennis: [{ onderwerp: "Vraag wie/wat", uitleg: "Wie is dapper? De ridder. Wie vecht? De ridder. → ridder is zelfst nw." }],
-          niveaus: { basis: "ridder.", simpeler: "Wie vocht? De ridder. Ridder = persoon = zelfst nw.", nogSimpeler: "Ridder" },
+          niveaus: { basis: "Zoek een persoon, dier of ding in de zin. Bij welk woord past 'de' ervoor?", simpeler: "Wie vocht? De ridder. Ridder = persoon = zelfst nw.", nogSimpeler: "Ridder" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
           theorie: "Werkwoorden zoals 'loopt' kun je niet voorzien van 'de/het'. Zelfst nw wel.",
           voorbeelden: [{ type: "test", tekst: "De tafel ✓. Amsterdam (eigennaam) ✓. Het verdriet ✓. De loopt ✗." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag wat NIET hoort. Lees scherp." }],
-          niveaus: { basis: "loopt = ww.", simpeler: "Loopt = werkwoord (geen 'de loopt'). Andere drie = zelfst nw.", nogSimpeler: "Loopt" },
+          niveaus: { basis: "Een zelfstandig naamwoord is een persoon, ding, plaats of gevoel. Welk woord zegt juist wat iemand doet?", simpeler: "Loopt = werkwoord (geen 'de loopt'). Andere drie = zelfst nw.", nogSimpeler: "Loopt" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -100,7 +100,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lisa is een eigennaam, en een eigennaam is een zelfstandig naamwoord.",
+            basis: "Een zelfstandig naamwoord is een persoon, dier of ding, en ook de naam van iemand telt mee. Wie doet er iets in de zin?",
             simpeler: "Lisa is een persoon. Namen van personen zijn zelfstandige naamwoorden.",
             nogSimpeler: "Lisa",
           },
@@ -138,7 +138,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Park is een zelfstandig naamwoord: je kunt er 'het' voor zetten.",
+            basis: "Bij een zelfstandig naamwoord kun je 'de' of 'het' zetten. Bij welk woord klinkt dat goed?",
             simpeler: "Het park is een plaats. 'Het park' kan, dus zelfstandig naamwoord.",
             nogSimpeler: "Park",
           },
@@ -200,7 +200,7 @@ const steps = [
           theorie: "Werkwoord-test: 'ik' ervoor + vervoegbaar. Hele werkwoord eindigt op -en.",
           voorbeelden: [{ type: "vorm", tekst: "Springen, lopen, eten = hele werkwoorden. Springt, liep = vervoegingen." }],
           basiskennis: [{ onderwerp: "Sprong = ww-vorm", uitleg: "'Sprong' is verleden tijd (hij sprong) — wel werkwoord, maar niet 'het hele'." }],
-          niveaus: { basis: "springen.", simpeler: "Hele werkwoord eindigt op -en (springen). Sprong = vervoeging, springer = persoon (zelfst nw).", nogSimpeler: "Springen" },
+          niveaus: { basis: "Het hele werkwoord is de vorm die je in het woordenboek vindt. Die eindigt meestal op -en.", simpeler: "Hele werkwoord eindigt op -en (springen). Sprong = vervoeging, springer = persoon (zelfst nw).", nogSimpeler: "Springen" },
         },
       },
       {
@@ -214,7 +214,7 @@ const steps = [
           theorie: "Werkwoord = wat iemand doet. Vervang 'Tom' door 'ik' → 'ik schop' ✓.",
           voorbeelden: [{ type: "ontleed", tekst: "Tom (eigennaam) schopt (ww) de (lidw) bal (zelfst) weg (bijwoord)." }],
           basiskennis: [{ onderwerp: "Hele ww", uitleg: "Het hele werkwoord = schoppen. Vervoegd = schopt." }],
-          niveaus: { basis: "schopt = ww.", simpeler: "Wat doet Tom? Hij schopt. Schopt = werkwoord. Tom = eigennaam, bal = zelfst nw.", nogSimpeler: "Schopt" },
+          niveaus: { basis: "Een werkwoord zegt wat iemand doet. Wat doet Tom met de bal?", simpeler: "Wat doet Tom? Hij schopt. Schopt = werkwoord. Tom = eigennaam, bal = zelfst nw.", nogSimpeler: "Schopt" },
         },
       },
       {
@@ -228,7 +228,7 @@ const steps = [
           theorie: "Vervoegingen → hele werkwoord: liep/loopt/lopen → 'lopen'.",
           voorbeelden: [{ type: "tabel", tekst: "Liep → lopen. At → eten. Schreef → schrijven. Was → zijn." }],
           basiskennis: [{ onderwerp: "Onregelmatig", uitleg: "Sterke werkwoorden: stam verandert (lopen/liep, eten/at). Zwak: -de/-te (werkte)." }],
-          niveaus: { basis: "lopen.", simpeler: "Liep = verleden van lopen. Hele werkwoord = lopen (eindigt op -en).", nogSimpeler: "Lopen" },
+          niveaus: { basis: "'Liep' is de verleden tijd. Welke vorm zou je in het woordenboek opzoeken, zoals 'eten' bij 'at'?", simpeler: "Liep = verleden van lopen. Hele werkwoord = lopen (eindigt op -en).", nogSimpeler: "Lopen" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
           theorie: "Voltooide tijd: hulp-ww (heb/ben) + voltooid deelwoord (gelezen, geweest).",
           voorbeelden: [{ type: "vorm", tekst: "Ik heb gegeten. Ik ben geweest. Ik zal komen. Hulp + hoofd." }],
           basiskennis: [{ onderwerp: "Hebben vs zijn", uitleg: "Meeste ww met 'heb' (gelezen, gegeten). Beweging/staat met 'ben' (geweest, gegaan)." }],
-          niveaus: { basis: "heb.", simpeler: "Twee werkwoorden: heb (hulp) + gelezen (hoofd). 'Heb' helpt om voltooide tijd te maken.", nogSimpeler: "Heb" },
+          niveaus: { basis: "Er staan twee werkwoorden in de zin. Het hulpwerkwoord helpt het andere werkwoord en zegt zelf niet wat je deed.", simpeler: "Twee werkwoorden: heb (hulp) + gelezen (hoofd). 'Heb' helpt om voltooide tijd te maken.", nogSimpeler: "Heb" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -278,7 +278,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "is = werkwoord.",
+            basis: "Een werkwoord zegt wat iemand doet of is. Welk woord verandert als je 'ik' zegt in plaats van 'mijn broer'?",
             simpeler: "Is komt van zijn: ik ben, hij is. Dat is een werkwoord.",
             nogSimpeler: "Is",
           },
@@ -316,7 +316,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "kocht → kopen.",
+            basis: "'Kocht' is de verleden tijd. Zeg de zin eens over vandaag: welk hele werkwoord hoort daarbij?",
             simpeler: "Gisteren kocht ik, vandaag koop ik. Het hele werkwoord is kopen.",
             nogSimpeler: "Kopen",
           },
@@ -354,7 +354,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wij → lopen.",
+            basis: "Kijk naar het woord vóór de lege plek. Bij 'wij' heeft het werkwoord dezelfde vorm als het hele werkwoord.",
             simpeler: "Bij 'wij' hoort de vorm 'lopen': wij lopen naar school.",
             nogSimpeler: "Wij lopen",
           },
@@ -392,7 +392,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "zwemmen = werkwoord.",
+            basis: "Zet 'ik' voor elk woord. Bij welk woord klinkt dat als iets wat je doet?",
             simpeler: "'Ik zwem' kan. Zwemmen is iets wat je doet. Dus een werkwoord.",
             nogSimpeler: "Zwemmen",
           },
@@ -473,7 +473,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "gewerkt = hoofdwerkwoord.",
+            basis: "Het hoofdwerkwoord zegt wat er gedaan werd. Het hulpwerkwoord helpt alleen.",
             simpeler: "Hebben helpt alleen. Wat deden ze? Werken. Dus gewerkt is het hoofdwerkwoord.",
             nogSimpeler: "Gewerkt",
           },
@@ -497,7 +497,7 @@ const steps = [
           theorie: "Test: tussen 'de' en zelfst nw → bijvoeglijk. 'De snelle auto' ✓. 'De auto auto' ✗.",
           voorbeelden: [{ type: "test", tekst: "Snel: de snelle... ✓ → bijvoeglijk. Auto = ding (zelfst nw)." }],
           basiskennis: [{ onderwerp: "Test 'de ___ X'", uitleg: "Past tussen 'de' en zelfst nw? Dan bijvoeglijk." }],
-          niveaus: { basis: "snel.", simpeler: "Snel beschrijft hoe = eigenschap = bijvoeglijk. Auto=ding, rijden=ww, de=lidwoord.", nogSimpeler: "Snel" },
+          niveaus: { basis: "Een bijvoeglijk naamwoord vertelt hoe iets of iemand is. Welk woord is een eigenschap?", simpeler: "Snel beschrijft hoe = eigenschap = bijvoeglijk. Auto=ding, rijden=ww, de=lidwoord.", nogSimpeler: "Snel" },
         },
       },
       {
@@ -511,7 +511,7 @@ const steps = [
           theorie: "Vóór een zelfst nw + krijgt -e bij 'de' → bijvoeglijk.",
           voorbeelden: [{ type: "ontleed", tekst: "De (lidw) slimme (bijv) leerling (zelfst) maakte (ww) de toets (lidw + zelfst)." }],
           basiskennis: [{ onderwerp: "Buigings-e", uitleg: "'Een slim kind' (geen e) ↔ 'het slimme kind' (met e). Bij 'de': altijd -e." }],
-          niveaus: { basis: "slimme.", simpeler: "Slimme beschrijft hoe leerling is = eigenschap = bijvoeglijk.", nogSimpeler: "Slimme" },
+          niveaus: { basis: "Een bijvoeglijk naamwoord vertelt hoe iemand of iets is. Welk woord zegt iets over de leerling?", simpeler: "Slimme beschrijft hoe leerling is = eigenschap = bijvoeglijk.", nogSimpeler: "Slimme" },
         },
       },
       {
@@ -525,7 +525,7 @@ const steps = [
           theorie: "3 trappen: stellend (snel), vergrotend (sneller), overtreffend (snelst).",
           voorbeelden: [{ type: "tabel", tekst: "Mooi-mooier-mooist. Snel-sneller-snelst. Goed-beter-best (onregelmatig)." }],
           basiskennis: [{ onderwerp: "Snellere is verbogen", uitleg: "Snellere = sneller + e (vóór de auto). Maar trap-naam = sneller." }],
-          niveaus: { basis: "sneller.", simpeler: "Vergrotende trap = stam + -er. Snel + er = sneller. Snelste = overtreffend.", nogSimpeler: "Sneller" },
+          niveaus: { basis: "De vergrotende trap gebruik je als je twee dingen vergelijkt. Welke uitgang krijgt het woord dan?", simpeler: "Vergrotende trap = stam + -er. Snel + er = sneller. Snelste = overtreffend.", nogSimpeler: "Sneller" },
         },
       },
       {
@@ -675,7 +675,7 @@ const steps = [
           theorie: "3 lidwoorden: de (de-woorden), het (het-woorden), een (onbepaald).",
           voorbeelden: [{ type: "lijst", tekst: "In 'het boek, de fiets, een huis' zijn het, de en een lidwoorden." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Mij/mijn/wie zijn voornaamwoorden — verwijzen naar personen." }],
-          niveaus: { basis: "het.", simpeler: "Lidwoorden zijn alleen: de, het, een. 'Het' is er één. Mij/mijn/wie = voornaamwoord.", nogSimpeler: "Het" },
+          niveaus: { basis: "Er zijn maar drie lidwoorden. Welke kleine woordjes staan vaak vóór een zelfstandig naamwoord?", simpeler: "Lidwoorden zijn alleen: de, het, een. 'Het' is er één. Mij/mijn/wie = voornaamwoord.", nogSimpeler: "Het" },
         },
       },
       {

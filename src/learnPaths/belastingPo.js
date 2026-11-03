@@ -197,7 +197,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De regering en de Tweede Kamer beslissen waar het belastinggeld naartoe gaat.",
+            basis: "Belastinggeld is geld van ons allemaal. Wie kiezen we bij verkiezingen om zulke grote keuzes voor het land te maken?",
             simpeler: "De Belastingdienst haalt het geld op. De regering en de Tweede Kamer kiezen wat ermee gebeurt.",
             nogSimpeler: "Regering en Tweede Kamer kiezen.",
           },
@@ -320,7 +320,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Twee soorten belasting: belasting op loon en btw in de prijs.",
+            basis: "Denk aan twee dingen die volwassenen doen: geld verdienen met werk en spullen kopen in de winkel. Welke belasting hoort bij elk van die twee?",
             simpeler: "Werk je, dan betaal je belasting op je loon. Koop je iets, dan betaal je btw.",
             nogSimpeler: "Loon-belasting en btw.",
           },
@@ -665,7 +665,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Loonbelasting gaat van je loon áf. Btw zit ín de prijs van wat je koopt. Beide gaan naar de overheid." }],
           niveaus: {
-            basis: "Btw = belasting die al in de winkelprijs zit.",
+            basis: "Kijk op een kassabon: betaal je bij de kassa meer dan op het prijskaartje staat, of zit de belasting al in de prijs?",
             simpeler: "Als je iets koopt, betaal je belasting mee. Die zit in de prijs.",
             nogSimpeler: "Belasting in de prijs.",
           },
@@ -974,7 +974,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De winkel geeft de btw door aan de Belastingdienst.",
+            basis: "Jij betaalt de btw bij de kassa. Wie krijgt dat geld dan eerst in handen en moet het daarna doorsturen?",
             simpeler: "Jij betaalt de winkel. De winkel stuurt het stukje btw naar de Belastingdienst.",
             nogSimpeler: "De winkel geeft het door.",
           },

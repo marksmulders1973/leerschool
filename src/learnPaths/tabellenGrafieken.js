@@ -928,7 +928,7 @@ const steps = [
           theorie: "Voor 'wanneer warmst/koudst/meest/minst'-vragen op lijngrafiek: visueel hoogste/laagste punt zoeken. Niet alle getallen lezen — kijk welke lijn-knik bovenaan zit.",
           voorbeelden: [{ type: "tabel", tekst: "Week: ma=16, di=19, wo=22, do=18, vr=24, za=27, zo=23. Zaterdag (27) = warmst." }],
           basiskennis: [{ onderwerp: "Visueel zoeken", uitleg: "Lijngrafiek is snel: oog ziet hoogste/laagste punt direct, geen getallen lezen nodig." }],
-          niveaus: { basis: "Zaterdag (27).", simpeler: "Hoogste punt = zaterdag (27°C).", nogSimpeler: "Za" },
+          niveaus: { basis: "Warmst betekent de hoogste temperatuur. Zoek het hoogste punt van de lijn en lees daaronder op de x-as af welke dag dat is.", simpeler: "Hoogste punt = zaterdag (27°C).", nogSimpeler: "Za" },
         },
       },
       {
@@ -1014,7 +1014,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Er verandert niets.",
+            basis: "Een lijn die omhoog gaat, betekent: meer. Wat betekent het dan als de lijn niet omhoog en niet omlaag gaat?",
             simpeler: "Vlakke lijn = de waarde blijft gelijk.",
             nogSimpeler: "Gelijk",
           },
@@ -1060,7 +1060,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De tijd.",
+            basis: "De x-as is de liggende lijn onderaan de grafiek. Denk aan een temperatuurgrafiek: wat lees je daar onderaan van links naar rechts af?",
             simpeler: "Lijngrafiek: tijd van links naar rechts op de x-as.",
             nogSimpeler: "Tijd",
           },
@@ -1111,7 +1111,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 cm.",
+            basis: "Gegroeid is het verschil tussen begin en eind. Lees beide lengtes af en trek de kleinste van de grootste af.",
             simpeler: "12 − 4 = 8.",
             nogSimpeler: "8",
           },
@@ -1167,7 +1167,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Dinsdag en woensdag.",
+            basis: "Een vlakke lijn betekent dat het aantal gelijk blijft. Zoek twee dagen naast elkaar met hetzelfde aantal bezoekers.",
             simpeler: "45 en 45: gelijk, dus vlak.",
             nogSimpeler: "Di en wo",
           },
@@ -1209,7 +1209,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Woensdag (3 graden).",
+            basis: "Het koudst is de laagste temperatuur. Zoek het kleinste getal in het rijtje.",
             simpeler: "Laagste punt = 3 = woensdag.",
             nogSimpeler: "Woensdag",
           },
@@ -1261,7 +1261,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De waarde wordt kleiner.",
+            basis: "Denk aan een glijbaan: naar beneden kom je lager uit. Wat gebeurt er dan met het getal dat je op de staande as afleest?",
             simpeler: "Lijn omlaag = dalen = kleiner.",
             nogSimpeler: "Kleiner",
           },
@@ -1312,7 +1312,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Om 12 uur.",
+            basis: "Kijk wanneer het aantal zwemmers stopt met groeien. Bij welk tijdstip is het aantal het hoogst, vlak voordat het weer minder wordt?",
             simpeler: "Tot 12 uur omhoog, daarna omlaag.",
             nogSimpeler: "12 uur",
           },
@@ -1336,7 +1336,7 @@ const steps = [
           theorie: "% van aantal uitrekenen: deel door 'omgekeerde'. 25%=÷4 / 50%=÷2 / 20%=÷5 / 10%=÷10. Snel rekenen zonder rekenmachine.",
           voorbeelden: [{ type: "controle", tekst: "10 voetbal van 40 leerlingen. Klopt dat? 10/40 = 1/4 = 25% ✓." }],
           basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "Vraag is AANTAL leerlingen (in personen), niet percentage. 25% is geen 25 personen." }],
-          niveaus: { basis: "10 (40÷4).", simpeler: "25% van 40 = 1/4 × 40 = 10 leerlingen.", nogSimpeler: "10" },
+          niveaus: { basis: "25% is hetzelfde als een kwart. Verdeel de leerlingen in vier even grote groepjes.", simpeler: "25% van 40 = 1/4 × 40 = 10 leerlingen.", nogSimpeler: "10" },
         },
       },
       {
@@ -1350,7 +1350,7 @@ const steps = [
           theorie: "Cirkel = 100%. Alle taart-stukken samen = 100% (check altijd). Twee stukken samen = direct hun percentages optellen.",
           voorbeelden: [{ type: "check", tekst: "Rood 50% + Blauw 30% + Groen 20% = 100% ✓. Groen + Blauw = 50%, plus rood 50% = 100% ✓." }],
           basiskennis: [{ onderwerp: "Lees vraag", uitleg: "Vraag is alleen groen + blauw (zonder rood). Niet rood erbij rekenen." }],
-          niveaus: { basis: "50% (20+30).", simpeler: "Groen 20% + Blauw 30% = 50%.", nogSimpeler: "50%" },
+          niveaus: { basis: "Samen betekent optellen. Zoek de percentages van groen en blauw op en tel ze bij elkaar.", simpeler: "Groen 20% + Blauw 30% = 50%.", nogSimpeler: "50%" },
         },
       },
       {
@@ -1408,7 +1408,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "75%.",
+            basis: "Een hele cirkel is 100%. Hoeveel procent is één kwart, en hoeveel kwarten heb je hier?",
             simpeler: "3 × 25% = 75%.",
             nogSimpeler: "75%",
           },
@@ -1459,7 +1459,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "25%.",
+            basis: "Alle stukken samen zijn altijd 100%. Tel fiets en lopen bij elkaar op en kijk wat er dan nog over is tot 100%.",
             simpeler: "100% − 75% = 25%.",
             nogSimpeler: "25%",
           },
@@ -1510,7 +1510,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 kinderen.",
+            basis: "50% is de helft. Wat is de helft van het aantal kinderen op het feest?",
             simpeler: "50% van 60 = 60 ÷ 2 = 30.",
             nogSimpeler: "30",
           },
@@ -1561,7 +1561,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20 leerlingen.",
+            basis: "10% is een tiende deel. Deel het aantal leerlingen door 10.",
             simpeler: "10% van 200 = 200 ÷ 10 = 20.",
             nogSimpeler: "20",
           },
@@ -1608,7 +1608,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Gamen (35%).",
+            basis: "Het grootste taartstuk heeft het hoogste percentage. Vergelijk de vier percentages met elkaar.",
             simpeler: "Grootste percentage = 35% = gamen.",
             nogSimpeler: "Gamen",
           },
@@ -1655,7 +1655,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Nee, er mist 10%.",
+            basis: "Alle stukken van een cirkeldiagram samen moeten precies 100% zijn. Tel de drie percentages op en vergelijk dat met 100%.",
             simpeler: "Samen 90%, dus 10% te weinig.",
             nogSimpeler: "Mist 10%",
           },
@@ -1682,7 +1682,7 @@ const steps = [
           theorie: "Formule: gemiddelde = (a+b+c+...) ÷ n. n = aantal getallen. Belangrijk: alle dagen tellen, ook lage (anders schat je te hoog).",
           voorbeelden: [{ type: "check", tekst: "26 ligt tussen laagste (18) en hoogste (35). Past in het midden. Logisch." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen kiezen 1 dag (30) als 'lijkt gemiddeld'. Moet je echt uitrekenen." }],
-          niveaus: { basis: "26 (130÷5).", simpeler: "Som 130 ÷ 5 dagen = 26 gemiddeld.", nogSimpeler: "26" },
+          niveaus: { basis: "Gemiddeld betekent: eerst alle dagen bij elkaar optellen en dan delen door het aantal dagen.", simpeler: "Som 130 ÷ 5 dagen = 26 gemiddeld.", nogSimpeler: "26" },
         },
       },
       {
@@ -1698,7 +1698,7 @@ const steps = [
           theorie: "Standaardformule percentage berekenen: (deel ÷ geheel) × 100. Werkt altijd. Check: 12+18+6+4 = 40 ✓.",
           voorbeelden: [{ type: "rangschikken", tekst: "Kat 12/40=30%. Hond 18/40=45%. Vis 6/40=15%. Vogel 4/40=10%. Som = 100% ✓." }],
           basiskennis: [{ onderwerp: "Niet aantal", uitleg: "Vraag is PERCENTAGE, niet aantal. 18 is het aantal (al gegeven). 18% zou betekenen 'van elke 100'." }],
-          niveaus: { basis: "45% (18÷40×100).", simpeler: "Hond: 18 ÷ 40 = 0,45 = 45%.", nogSimpeler: "45%" },
+          niveaus: { basis: "Bereken eerst welk deel van de 40 kinderen voor hond koos. Reken dat daarna om naar 'van de 100', want dat is een percentage.", simpeler: "Hond: 18 ÷ 40 = 0,45 = 45%.", nogSimpeler: "45%" },
         },
       },
       {
@@ -1761,7 +1761,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15.",
+            basis: "Gemiddeld betekent: tel alle dagen bij elkaar op en deel dat door het aantal dagen.",
             simpeler: "60 ÷ 4 = 15.",
             nogSimpeler: "15",
           },
@@ -1812,7 +1812,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "40%.",
+            basis: "Procent betekent 'van de 100'. Hoe vaak past 50 in 100? Doe het aantal pizza-kinderen even zo vaak.",
             simpeler: "20 ÷ 50 × 100 = 40%.",
             nogSimpeler: "40%",
           },
@@ -1961,7 +1961,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "28 flessen.",
+            basis: "Tel eerst de flessen van alle weken bij elkaar op. Hoeveel moet er dan nog bij om op 100 te komen?",
             simpeler: "100 − 72 = 28.",
             nogSimpeler: "28",
           },
@@ -2012,7 +2012,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "42 eieren.",
+            basis: "Kijk alleen naar dinsdag: hoeveel dozen waren dat? Elke doos heeft evenveel eieren, dus je maakt een keersom.",
             simpeler: "7 × 6 = 42.",
             nogSimpeler: "42",
           },
@@ -2094,7 +2094,7 @@ const steps = [
           theorie: "Stap 1: som van ALLE waarden (alle 4 kinderen, niet 3). Stap 2: deel door aantal. Niet schatten.",
           voorbeelden: [{ type: "check", tekst: "25,5 ligt tussen laagste (Ali 18) en hoogste (Eva 32). Past in midden." }],
           basiskennis: [{ onderwerp: "Komma", uitleg: "Gemiddelde mag een komma-getal zijn (25,5). Niet afronden tenzij gevraagd." }],
-          niveaus: { basis: "25,5 (102÷4).", simpeler: "Som 102 ÷ 4 kinderen = 25,5 gemiddeld.", nogSimpeler: "25,5" },
+          niveaus: { basis: "Gemiddeld: tel eerst de rondjes van alle kinderen op en deel dat door het aantal kinderen.", simpeler: "Som 102 ÷ 4 kinderen = 25,5 gemiddeld.", nogSimpeler: "25,5" },
         },
       },
       {
@@ -2108,7 +2108,7 @@ const steps = [
           theorie: "Sleutel-percentages onthouden: halve=50%, kwart=25%, tien-procent=10%. Op cirkeldiagram visueel ook herkenbaar (halve cirkel, kwart cirkel).",
           voorbeelden: [{ type: "vergelijk", tekst: "60% > 25% (rood, niet). 25% = 25% (blauw, niet — gelijk). 15% < 25% (geel, ja)." }],
           basiskennis: [{ onderwerp: "Letten op '='", uitleg: "Blauw 25% = precies kwart, niet MINDER. Strikte ongelijkheid <." }],
-          niveaus: { basis: "Geel (15%).", simpeler: "Kwart = 25%. Geel 15% < 25%. Enige stuk MINDER dan kwart.", nogSimpeler: "Geel" },
+          niveaus: { basis: "Een kwart van de cirkel is 25%. Welk percentage is kleiner dan 25%?", simpeler: "Kwart = 25%. Geel 15% < 25%. Enige stuk MINDER dan kwart.", nogSimpeler: "Geel" },
         },
       },
       {

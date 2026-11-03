@@ -1,0 +1,257 @@
+[
+ {
+  "file": "src/learnPaths/alfabetWoordenboekPo.js",
+  "items": [
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 1",
+    "antwoord": "appel",
+    "basis": "A komt vooraan in het alfabet, dus 'appel' eerst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 3",
+    "antwoord": "aap",
+    "basis": "'aap' begint met a → komt eerst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 4",
+    "antwoord": "zon",
+    "basis": "'zon' begint met z, de laatste letter → komt laatst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 6",
+    "antwoord": "vis",
+    "basis": "'vis' (v) staat het verst in het alfabet → komt laatst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 7",
+    "antwoord": "D E F G",
+    "basis": "De goede volgorde is D E F G."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 8",
+    "antwoord": "26",
+    "basis": "Het alfabet heeft 26 letters, van A tot en met Z."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 1 vraag 9",
+    "antwoord": "Pim",
+    "basis": "Op volgorde: Daan, Femke, Pim, Yara. De derde is Pim."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 3 vraag 2",
+    "antwoord": "school",
+    "basis": "Eerste letter s gelijk; tweede letter c < t → 'school' eerst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 3 vraag 4",
+    "antwoord": "toren",
+    "basis": "Tweede letters a, e, i, o → 'toren' (o) komt het laatst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 3 vraag 6",
+    "antwoord": "station",
+    "basis": "Derde letter a komt vóór o en u → 'station' eerst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 3 vraag 8",
+    "antwoord": "rups",
+    "basis": "Tweede letters a, e, o, u → 'rups' komt het laatst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 3 vraag 9",
+    "antwoord": "trap",
+    "basis": "Derde letters a, e, o, u → 'trap' komt eerst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 3 vraag 10",
+    "antwoord": "kraag",
+    "basis": "Vijfde letters g, l, m, n → 'kraag' komt eerst."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 4 vraag 1",
+    "antwoord": "het woord dat je opzoekt",
+    "basis": "Het trefwoord is het woord dat je opzoekt."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 4 vraag 4",
+    "antwoord": "krokus",
+    "basis": "'krokus' valt alfabetisch tussen 'kraan' en 'kruik'."
+   },
+   {
+    "waar": "alfabet-woordenboek-po stap 4 vraag 5",
+    "antwoord": "arend",
+    "basis": "'arend' valt alfabetisch tussen 'appel' en 'arm'."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/begrijpendLezenStrategie.js",
+  "items": [
+   {
+    "waar": "begrijpend-lezen-strategie stap 1 vraag 3",
+    "antwoord": "Technisch lezen",
+    "basis": "Van letters woorden maken en van woorden zinnen: dat is technisch lezen."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 1 vraag 4",
+    "antwoord": "Studerend lezen",
+    "basis": "Lezen om iets te onthouden voor een toets heet studerend lezen."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 1 vraag 7",
+    "antwoord": "Moeilijke woorden en lange zinnen",
+    "basis": "Moeilijke woorden en lange zinnen."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 1 vraag 8",
+    "antwoord": "Je kunt het leren met een slimme aanpak",
+    "basis": "Je kunt het leren met een slimme aanpak."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 2 vraag 1",
+    "antwoord": "Betogend",
+    "basis": "Overtuigen = betogend."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 2 vraag 4",
+    "antwoord": "Je informatie geven",
+    "basis": "De tekst geeft alleen feiten. Dan wil de schrijver je informatie geven."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 2 vraag 5",
+    "antwoord": "Betogend",
+    "basis": "Een mening met argumenten erbij: dat is een betogende tekst."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 2 vraag 7",
+    "antwoord": "Een sprookje",
+    "basis": "Een sprookje vertelt een verhaal, dus het is verhalend."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 3 vraag 1",
+    "antwoord": "daardoor",
+    "basis": "'Daardoor' = oorzaak/gevolg."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 3 vraag 2",
+    "antwoord": "echter",
+    "basis": "'Echter' = tegenstelling."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 3 vraag 3",
+    "antwoord": "kortom",
+    "basis": "'Kortom' = samenvatten."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 3 vraag 5",
+    "antwoord": "zoals",
+    "basis": "'Zoals' = 'bijvoorbeeld'."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 3 vraag 6",
+    "antwoord": "De bus was te laat",
+    "basis": "Oorzaak = de bus was te laat."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 6 vraag 4",
+    "antwoord": "Een letterlijke vraag",
+    "basis": "Bij een letterlijke vraag staat het antwoord gewoon in de tekst."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 6 vraag 7",
+    "antwoord": "Boos",
+    "basis": "Lotte is boos."
+   },
+   {
+    "waar": "begrijpend-lezen-strategie stap 7 vraag 1",
+    "antwoord": "doordat",
+    "basis": "'Doordat' is een ander woord voor 'omdat': het geeft de oorzaak aan."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/dichtenPoezieRijmenPo.js",
+  "items": [
+   {
+    "waar": "dichten-poezie-rijmen-po stap 1 vraag 1",
+    "antwoord": "Tekst in korte regels, vaak met rijm",
+    "basis": "Tekst in korte regels, vaak met rijm."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 1 vraag 5",
+    "antwoord": "Wit",
+    "basis": "De lege ruimte tussen coupletten heet wit."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 1 vraag 7",
+    "antwoord": "Kwatrijn",
+    "basis": "Een couplet van vier regels heet een kwatrijn."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 1 vraag 8",
+    "antwoord": "Hendrik Marsman",
+    "basis": "'Herinnering aan Holland' is van Hendrik Marsman."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 1 vraag 9",
+    "antwoord": "In de Gouden Eeuw",
+    "basis": "Vondel leefde in de Gouden Eeuw (1587-1679)."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 2",
+    "antwoord": "Woorden beginnen met zelfde letter",
+    "basis": "Alliteratie = woorden BEGINNEN met zelfde letter."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 3",
+    "antwoord": "Paarrijm",
+    "basis": "AABB = paarrijm (regel 1+2 rijmen, regel 3+4 rijmen)."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 5",
+    "antwoord": "Rijm midden in een regel",
+    "basis": "Binnenrijm = rijm midden in een regel."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 6",
+    "antwoord": "ABBA",
+    "basis": "mat-kat rijmen (A), muis-huis rijmen (B): ABBA."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 7",
+    "antwoord": "ABAB",
+    "basis": "boot-groot rijmen (A), zee-mee rijmen (B): ABAB."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 8",
+    "antwoord": "weer",
+    "basis": "Weer rijmt op beer (allebei -eer)."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 2 vraag 9",
+    "antwoord": "Kleine Kees kookt koffie.",
+    "basis": "Kleine Kees kookt koffie: steeds de K."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 4 vraag 1",
+    "antwoord": "5-7-5 lettergrepen, 3 regels",
+    "basis": "Haiku = 5-7-5 lettergrepen, 3 regels."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 4 vraag 5",
+    "antwoord": "ode",
+    "basis": "Een ode is een gedicht ter ere van iemand of iets."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 4 vraag 6",
+    "antwoord": "Een droevig gedicht over verlies of dood",
+    "basis": "Een elegie is een droevig gedicht over verlies of dood."
+   },
+   {
+    "waar": "dichten-poezie-rijmen-po stap 4 vraag 9",
+    "antwoord": "Het blad valt omlaag",
+    "basis": "'Het blad valt omlaag' heeft 5 lettergrepen."
+   }
+  ]
+ }
+]

@@ -94,7 +94,7 @@ const steps = [
           theorie: "Stam = hele werkwoord (infinitief) MIN -en. Bij open lettergreep verleng je klinker (lopen → loop), bij gesloten blijft kort (werken → werk).",
           voorbeelden: [{ type: "stam", tekst: "werken → werk, lopen → loop, maken → maak." }],
           basiskennis: [{ onderwerp: "Open vs gesloten", uitleg: "Lopen (open) → loop (verlengen). Werken (gesloten) → werk (blijft)." }],
-          niveaus: { basis: "Werken − en = werk.", simpeler: "Haal -en weg van 'werken'. Wat blijft? Werk. Dat is de stam.", nogSimpeler: "Werk" },
+          niveaus: { basis: "Haal de uitgang -en van het hele werkwoord af. Wat blijft er over?", simpeler: "Haal -en weg van 'werken'. Wat blijft? Werk. Dat is de stam.", nogSimpeler: "Werk" },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
           theorie: "Stam-regel: open lettergreep (klinker lang) → bij stam dubbele klinker. Maken (ma-ken) → maak.",
           voorbeelden: [{ type: "verlengen", tekst: "maken → maak, lopen → loop, leven → leef, weten → weet." }],
           basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Open klank in 'ma-' = lang. Schrijf maak (dubbele a) niet mak." }],
-          niveaus: { basis: "Maken → maak.", simpeler: "Maken klinkt 'maa-ken' (lange a). Stam moet ook lange a hebben: maak.", nogSimpeler: "Maak" },
+          niveaus: { basis: "Haal -en weg en luister naar de a: is die lang of kort? Een lange klank in de stam schrijf je met twee letters.", simpeler: "Maken klinkt 'maa-ken' (lange a). Stam moet ook lange a hebben: maak.", nogSimpeler: "Maak" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -151,7 +151,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lopen → loop.",
+            basis: "Haal -en weg en luister naar de o: is die lang of kort? Een lange klank in de stam schrijf je met twee letters.",
             simpeler: "Haal -en weg: lop. Maar je hoort een lange o, dus schrijf je loop.",
             nogSimpeler: "Loop",
           },
@@ -194,7 +194,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Willen → wil.",
+            basis: "Haal -en weg. Twee dezelfde medeklinkers aan het eind van de stam schrijf je als één letter.",
             simpeler: "Haal -en weg en houd één l over: wil. Ik wil.",
             nogSimpeler: "Wil",
           },
@@ -232,7 +232,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hebben → heb.",
+            basis: "Haal -en weg. Aan het eind van een stam schrijf je nooit twee dezelfde medeklinkers.",
             simpeler: "Haal -en weg: hebb. Eén b is genoeg: heb. Ik heb.",
             nogSimpeler: "Heb",
           },
@@ -275,7 +275,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Gaan → ga.",
+            basis: "Gaan eindigt niet op -en. Zeg de ik-vorm hardop (ik ... naar school): die ik-vorm is de stam.",
             simpeler: "Zeg: ik ga. 'Ga' is de stam.",
             nogSimpeler: "Ga",
           },
@@ -313,7 +313,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Spelen → speel.",
+            basis: "Haal -en weg en luister naar de e: is die lang of kort? Een lange klank in de stam schrijf je met twee letters.",
             simpeler: "Haal -en weg: spel. Je hoort een lange e, dus: speel. Ik speel.",
             nogSimpeler: "Speel",
           },
@@ -356,7 +356,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Fietsen → fiets.",
+            basis: "Haal alleen de uitgang -en weg; de letters daarvoor blijven staan. Zeg ook eens 'ik ...'.",
             simpeler: "Haal -en weg van fietsen. Wat blijft er over? Fiets.",
             nogSimpeler: "Fiets",
           },
@@ -394,7 +394,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zwemmen → zwem.",
+            basis: "Haal -en weg. Twee dezelfde medeklinkers aan het eind van de stam schrijf je als één letter.",
             simpeler: "Haal -en weg: zwemm. Eén m is genoeg: zwem.",
             nogSimpeler: "Zwem",
           },
@@ -432,7 +432,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zwemmen is iets wat je doet.",
+            basis: "Een werkwoord is iets wat je kunt doen. Probeer bij elk woord: kun je zeggen 'ik ga ...'?",
             simpeler: "Kun je het doen? Ik zwem — ja! Ik tafel — nee.",
             nogSimpeler: "Zwemmen = doen",
           },
@@ -494,7 +494,7 @@ const steps = [
           theorie: "Meervoud-vorm = stam + en (= hele werkwoord). Niet stam + t.",
           voorbeelden: [{ type: "meervoud", tekst: "Wij lopen, jullie lopen, zij lopen — geen t maar -en." }],
           basiskennis: [{ onderwerp: "Verschil enkelvoud/meervoud", uitleg: "Hij loopt (1 persoon, +t). Zij lopen (meer personen, +en)." }],
-          niveaus: { basis: "Meervoud = +en. Lopen.", simpeler: "'Zij' kan enkelvoud (1 vrouw) of meervoud (zij allemaal) zijn. Hier meervoud. Bij meervoud: hele werkwoord (lopen).", nogSimpeler: "Meervoud = lopen" },
+          niveaus: { basis: "Zij is hier meervoud: meer mensen. Bij meervoud schrijf je de vorm die net zo klinkt als het hele werkwoord.", simpeler: "'Zij' kan enkelvoud (1 vrouw) of meervoud (zij allemaal) zijn. Hier meervoud. Bij meervoud: hele werkwoord (lopen).", nogSimpeler: "Meervoud = lopen" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -535,7 +535,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Jij fietst.",
+            basis: "Staat jij vóór het werkwoord? Dan komt er een t achter de stam.",
             simpeler: "Jij staat vooraan. Dan komt er een t achter de stam: fiets + t = fietst.",
             nogSimpeler: "Jij fietst",
           },
@@ -620,7 +620,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Opa = hij → kookt.",
+            basis: "Je kunt 'opa' vervangen door 'hij'. Wat komt er bij hij achter de stam?",
             simpeler: "Mijn opa is één persoon: hij. Bij hij komt er een t achter de stam: kook + t = kookt.",
             nogSimpeler: "Kookt",
           },
@@ -658,7 +658,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wat doet hij?",
+            basis: "Zoek eerst de stam van doen (de ik-vorm). Wat komt er bij hij achter de stam?",
             simpeler: "Bij 'hij' blijft de t er altijd. Ook als hij achter het werkwoord staat. Wat doet hij?",
             nogSimpeler: "Doet",
           },
@@ -696,7 +696,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Jullie bellen.",
+            basis: "Jullie is meer dan één persoon. Welke vorm van het werkwoord hoort bij meervoud?",
             simpeler: "Jullie zijn meer mensen. Dan gebruik je het hele werkwoord: bellen.",
             nogSimpeler: "Bellen",
           },
@@ -734,7 +734,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Heb jij? (geen t)",
+            basis: "Kijk waar jij staat: staat jij achter het werkwoord, dan komt er geen t achter de stam.",
             simpeler: "Jij staat achter het werkwoord. Dan geen t: Heb jij een hond?",
             nogSimpeler: "Heb jij",
           },
@@ -777,7 +777,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lach + t = lacht.",
+            basis: "Het meisje kun je vervangen door 'zij' (één persoon). Wat komt er bij hij of zij achter de stam?",
             simpeler: "Het meisje is één persoon (het). Dan komt er een t achter de stam.",
             nogSimpeler: "Lacht",
           },
@@ -809,7 +809,7 @@ const steps = [
           theorie: "Word (stam) + t (hij) = wordt. Niet 'wort' (mist d), niet 'wordd' (een woord eindigt nooit op dd).",
           voorbeelden: [{ type: "dt", tekst: "worden → hij wordt. Vinden → hij vindt. Houden → hij houdt." }],
           basiskennis: [{ onderwerp: "Lopen-test", uitleg: "Hij wordt = hij loopt. Beide eindigen op t. ✓" }],
-          niveaus: { basis: "Hij = stam + t = wordt.", simpeler: "Stam van worden = word. Bij hij +t. Word + t = wordt. Niet 'word' (mist t), niet 'wort' (mist d).", nogSimpeler: "Word + t = wordt" },
+          niveaus: { basis: "Zoek eerst de stam van worden. Wat komt er bij hij achter de stam?", simpeler: "Stam van worden = word. Bij hij +t. Word + t = wordt. Niet 'word' (mist t), niet 'wort' (mist d).", nogSimpeler: "Word + t = wordt" },
         },
       },
       {
@@ -823,7 +823,7 @@ const steps = [
           theorie: "Meervoud regel: stam + en. Geen losse t. Vinden, niet vindt-en.",
           voorbeelden: [{ type: "meervoud", tekst: "Zij vinden, wij vinden, jullie vinden — allemaal -en." }],
           basiskennis: [{ onderwerp: "Verschil enkelvoud/meervoud", uitleg: "Zij vindt (1 vrouw). Zij vinden (meer mensen)." }],
-          niveaus: { basis: "Meervoud = vinden.", simpeler: "'Zij' meervoud = meer personen → werkwoord op -en. Vinden.", nogSimpeler: "Meervoud = vinden" },
+          niveaus: { basis: "Gaat het om één persoon of om meer? Bij meervoud schrijf je de vorm die net zo klinkt als het hele werkwoord.", simpeler: "'Zij' meervoud = meer personen → werkwoord op -en. Vinden.", nogSimpeler: "Meervoud = vinden" },
         },
       },
       {
@@ -877,7 +877,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bind + t = bindt.",
+            basis: "Zoek eerst de stam van binden. De juf is één persoon: wat komt er dan achter de stam?",
             simpeler: "Stam van binden = bind. De juf is één persoon, dus + t: bindt.",
             nogSimpeler: "Bindt",
           },
@@ -920,7 +920,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vinden → vind.",
+            basis: "Haal -en weg van het hele werkwoord. Verander de laatste letter niet, ook al hoor je iets anders.",
             simpeler: "Haal -en weg van vinden. Er blijft over: vind. Met een d!",
             nogSimpeler: "Vind",
           },
@@ -1005,7 +1005,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Houd + t = houdt.",
+            basis: "Zoek eerst de stam van houden. Mijn broer = hij: wat komt er bij hij achter de stam?",
             simpeler: "Mijn broer is hij. Bij hij komt er een t achter de stam houd: houdt.",
             nogSimpeler: "Houdt",
           },
@@ -1048,7 +1048,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vind + t = vindt.",
+            basis: "Zoek eerst de stam van vinden. Mijn vriend = hij: wat komt er bij hij achter de stam?",
             simpeler: "Stam van vinden = vind. Mijn vriend is hij, dus + t: vindt.",
             nogSimpeler: "Vindt",
           },
@@ -1090,7 +1090,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Word + t = wordt.",
+            basis: "'Het' werkt net als 'hij'. Zoek de stam van worden en kijk wat er bij hij achter de stam komt.",
             simpeler: "Bij het komt er een t achter de stam word.",
             nogSimpeler: "Wordt",
           },
@@ -1178,7 +1178,7 @@ const steps = [
           theorie: "Meervoud = stam + en = hele werkwoord. Eten, lopen, werken — allemaal in meervoud.",
           voorbeelden: [{ type: "meervoud", tekst: "Zij eten, wij eten, jullie eten — allemaal 'eten'." }],
           basiskennis: [{ onderwerp: "1 vs meer", uitleg: "Zij (1 vrouw) = eet. Zij (meervoud) = eten." }],
-          niveaus: { basis: "Meervoud = eten.", simpeler: "Bij meervoud (zij = meer mensen) gebruik je hele werkwoord: eten.", nogSimpeler: "Meervoud = eten" },
+          niveaus: { basis: "Gaat het om één persoon of om meer? Bij meervoud schrijf je de vorm die net zo klinkt als het hele werkwoord.", simpeler: "Bij meervoud (zij = meer mensen) gebruik je hele werkwoord: eten.", nogSimpeler: "Meervoud = eten" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1218,7 +1218,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij wacht.",
+            basis: "Zoek de stam van wachten. Eindigt die al op een t? Dan komt er geen tweede t bij.",
             simpeler: "Stam wacht eindigt al op t. Er komt geen t meer bij: hij wacht.",
             nogSimpeler: "Wacht",
           },
@@ -1265,7 +1265,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij eet.",
+            basis: "Zoek de stam van eten; let op de lange e. Eindigt de stam al op een t, dan komt er geen tweede t bij.",
             simpeler: "Stam eet eindigt al op t. Geen t erbij: mijn vader eet.",
             nogSimpeler: "Eet",
           },
@@ -1307,7 +1307,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Jij moet.",
+            basis: "Zoek de stam van moeten. Eindigt die al op een t? Dan komt er geen tweede t bij.",
             simpeler: "Moet eindigt al op t. Er komt geen t meer bij: jij moet.",
             nogSimpeler: "Moet",
           },
@@ -1349,7 +1349,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Oma praat.",
+            basis: "Zoek de stam van praten; let op de lange a. Eindigt de stam al op een t, dan komt er geen tweede t bij.",
             simpeler: "Stam praat eindigt al op t. Geen t erbij: oma praat.",
             nogSimpeler: "Praat",
           },
@@ -1392,7 +1392,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vechten → vecht (t).",
+            basis: "Haal bij elk werkwoord -en weg. Op welke letter eindigt de stam dan?",
             simpeler: "Haal -en weg van vechten: vecht. Die eindigt op een t.",
             nogSimpeler: "Vecht",
           },
@@ -1477,7 +1477,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij gaat.",
+            basis: "Zoek eerst de stam van gaan (de ik-vorm). Wat komt er bij hij achter de stam?",
             simpeler: "Stam = ga. Bij hij komt er een t bij: gaat.",
             nogSimpeler: "Gaat",
           },
@@ -1520,7 +1520,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Hij zet (één t).",
+            basis: "Zoek de stam van zetten: twee dezelfde medeklinkers aan het eind worden er één. Eindigt de stam al op een t?",
             simpeler: "De stam zet eindigt al op t. Er komt geen t meer bij.",
             nogSimpeler: "Zet",
           },
@@ -1546,7 +1546,7 @@ const steps = [
           theorie: "'t kofschip = de medeklinkers t, k, f, s, ch en p waarop een werkwoordstam kan eindigen voor -te (verleden tijd). Anders -de.",
           voorbeelden: [{ type: "letters", tekst: "t (zetten → zette), k (werken → werkte), f (straffen → strafte), s (fietsen → fietste), ch (lachen → lachte), p (stoppen → stopte)." }],
           basiskennis: [{ onderwerp: "h verschijnt zelden", uitleg: "h aan einde van stam zeldzaam (lach is met ch, niet h alleen)." }],
-          niveaus: { basis: "'t kofschip = t, k, f, s, ch, p.", simpeler: "De medeklinkers in 't kofschip zijn: t, k, f, s, ch en p. Klinkers (o, i) doen niet mee.", nogSimpeler: "t k f s ch p" },
+          niveaus: { basis: "Zeg ''t kofschip' langzaam en schrijf alleen de medeklinkers op. Klinkers zoals de o en de i tellen niet mee.", simpeler: "De medeklinkers in 't kofschip zijn: t, k, f, s, ch en p. Klinkers (o, i) doen niet mee.", nogSimpeler: "t k f s ch p" },
         },
       },
       {
@@ -1563,7 +1563,7 @@ const steps = [
           theorie: "'t kofschip-letters → -te. Andere letters → -de.",
           voorbeelden: [{ type: "te", tekst: "werken → werkte, stoppen → stopte, fietsen → fietste." }],
           basiskennis: [{ onderwerp: "K = kofschip", uitleg: "K is een van de 7 letters waarbij -te wordt gebruikt." }],
-          niveaus: { basis: "k in kofschip → werkte.", simpeler: "Stam werk eindigt op k. K zit in 't kofschip. Dus verleden tijd met -te: werkte.", nogSimpeler: "K = -te = werkte" },
+          niveaus: { basis: "Zoek eerst de stam en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; zo niet, dan -de.", simpeler: "Stam werk eindigt op k. K zit in 't kofschip. Dus verleden tijd met -te: werkte.", nogSimpeler: "K = -te = werkte" },
         },
       },
       {
@@ -1580,7 +1580,7 @@ const steps = [
           theorie: "Niet-kofschip → -de. R zit niet in 't kofschip (alleen t, k, f, s, ch, p).",
           voorbeelden: [{ type: "de", tekst: "leren → leerde, spelen → speelde, dromen → droomde." }],
           basiskennis: [{ onderwerp: "R niet kofschip", uitleg: "R, L, M, N, klinkers — geen kofschip → -de." }],
-          niveaus: { basis: "r niet in kofschip → leerde.", simpeler: "Stam leer eindigt op r. R zit NIET in 't kofschip. Dus -de: leerde.", nogSimpeler: "Niet-kofschip = -de = leerde" },
+          niveaus: { basis: "Zoek eerst de stam en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; zo niet, dan -de.", simpeler: "Stam leer eindigt op r. R zit NIET in 't kofschip. Dus -de: leerde.", nogSimpeler: "Niet-kofschip = -de = leerde" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1625,7 +1625,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "p in kofschip → stopte.",
+            basis: "Zoek de stam van stoppen (één p aan het eind). Zit de laatste letter in 't kofschip, dan krijg je -te; zo niet, dan -de.",
             simpeler: "Stam stop eindigt op p. P zit in 't kofschip. Dus -te: stopte.",
             nogSimpeler: "Stopte",
           },
@@ -1672,7 +1672,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ch in kofschip → lachte.",
+            basis: "Zoek eerst de stam en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; zo niet, dan -de.",
             simpeler: "Stam lach eindigt op ch. Ch zit in 't kofschip. Dus -te: lachte.",
             nogSimpeler: "Lachte",
           },
@@ -1719,7 +1719,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "m niet in kofschip → droomde.",
+            basis: "Zoek eerst de stam en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; zo niet, dan -de.",
             simpeler: "Stam droom eindigt op m. M zit niet in 't kofschip. Dus -de: droomde.",
             nogSimpeler: "Droomde",
           },
@@ -1766,7 +1766,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "z niet in kofschip → reisden.",
+            basis: "Kijk bij 't kofschip naar de letter in het hele werkwoord (reizen), niet naar wat je hoort. En wij is meervoud: wat komt er dan nog achter?",
             simpeler: "Reizen heeft een z. Z zit niet in 't kofschip. Dus -de, en bij wij -den: reisden.",
             nogSimpeler: "Reisden",
           },
@@ -1899,7 +1899,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "f in kofschip → strafte.",
+            basis: "Zoek eerst de stam en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; zo niet, dan -de.",
             simpeler: "Stam straf eindigt op f. F zit in 't kofschip. Dus: strafte.",
             nogSimpeler: "Strafte",
           },
@@ -1925,7 +1925,7 @@ const steps = [
           theorie: "Voltooid deelwoord: ge-stam-t als stam op kofschip-letter, ge-stam-d anders. Zelfde regel als verleden tijd, andere uitgang.",
           voorbeelden: [{ type: "voltooid", tekst: "werken → gewerkt, stoppen → gestopt, fietsen → gefietst — allemaal -t." }],
           basiskennis: [{ onderwerp: "Hebben/zijn + voltooid", uitleg: "Voltooid deelwoord komt na 'heb', 'is', 'wordt' etc." }],
-          niveaus: { basis: "ge + werk + t = gewerkt.", simpeler: "Voltooid deelwoord: ge-...-t/d. Werk eindigt op k (kofschip) → t. Dus: ge + werk + t = gewerkt.", nogSimpeler: "Gewerkt" },
+          niveaus: { basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?", simpeler: "Voltooid deelwoord: ge-...-t/d. Werk eindigt op k (kofschip) → t. Dus: ge + werk + t = gewerkt.", nogSimpeler: "Gewerkt" },
         },
       },
       {
@@ -1941,7 +1941,7 @@ const steps = [
           theorie: "ge + stam + d (als niet-kofschip). Niet 'geleert' (zou kofschip impliceren).",
           voorbeelden: [{ type: "voltooid -d", tekst: "leren → geleerd, spelen → gespeeld, dromen → gedroomd." }],
           basiskennis: [{ onderwerp: "r-stam", uitleg: "Werkwoorden op -ren krijgen vaak ge-...-d." }],
-          niveaus: { basis: "r niet kofschip → geleerd.", simpeler: "Stam leer eindigt op r. R zit NIET in 't kofschip. Dus voltooid: ge + leer + d = geleerd.", nogSimpeler: "Geleerd" },
+          niveaus: { basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?", simpeler: "Stam leer eindigt op r. R zit NIET in 't kofschip. Dus voltooid: ge + leer + d = geleerd.", nogSimpeler: "Geleerd" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1982,7 +1982,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ge + stop + t = gestopt.",
+            basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?",
             simpeler: "Stop eindigt op p. P zit in 't kofschip. Dus ge-stop-t: gestopt.",
             nogSimpeler: "Gestopt",
           },
@@ -2025,7 +2025,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ge + droom + d = gedroomd.",
+            basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?",
             simpeler: "Droom eindigt op m. M zit niet in 't kofschip. Dus ge-droom-d: gedroomd.",
             nogSimpeler: "Gedroomd",
           },
@@ -2073,7 +2073,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Gefietst.",
+            basis: "Na 'hebben' komt een voltooid deelwoord: ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?",
             simpeler: "Fiets eindigt op s. S zit in 't kofschip. Dus ge-fiets-t: gefietst.",
             nogSimpeler: "Gefietst",
           },
@@ -2111,7 +2111,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ge + poets + t = gepoetst.",
+            basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?",
             simpeler: "Poets eindigt op s. S zit in 't kofschip. Dus ge-poets-t: gepoetst.",
             nogSimpeler: "Gepoetst",
           },
@@ -2149,7 +2149,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "ge + teken + d = getekend.",
+            basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?",
             simpeler: "Teken eindigt op n. N zit niet in 't kofschip. Dus ge-teken-d: getekend.",
             nogSimpeler: "Getekend",
           },
@@ -2187,7 +2187,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Gehoopt.",
+            basis: "Een voltooid deelwoord past achter 'ik heb ...' en begint vaak met ge-. Probeer elk woord achter 'ik heb'.",
             simpeler: "Je zegt: ik heb gehoopt. Het begint met ge-. Dat is een voltooid deelwoord.",
             nogSimpeler: "Gehoopt",
           },
@@ -2230,7 +2230,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Ge + kook + t = gekookt.",
+            basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?",
             simpeler: "De k zit in 't kofschip. Dus eindigt het op t.",
             nogSimpeler: "Gekookt",
           },
@@ -2262,7 +2262,7 @@ const steps = [
           theorie: "Bij vraag-vorm 'WW jij...': t valt weg. Hij/zij behouden t altijd ('Wordt hij...').",
           voorbeelden: [{ type: "jij-achter", tekst: "Word jij?, Heb jij?, Doe jij? — geen t. Wordt hij?, Heeft hij? — t blijft." }],
           basiskennis: [{ onderwerp: "Alleen jij", uitleg: "Deze regel geldt ALLEEN bij jij — niet bij hij/zij/u." }],
-          niveaus: { basis: "Jij achter = geen t. Word.", simpeler: "Vraag begint met werkwoord. Jij komt erachter. Bij deze inversie valt de t weg: 'Word jij' niet 'Wordt jij'.", nogSimpeler: "Jij achter = Word" },
+          niveaus: { basis: "Kijk waar jij staat: staat jij achter het werkwoord, dan komt er geen t achter de stam.", simpeler: "Vraag begint met werkwoord. Jij komt erachter. Bij deze inversie valt de t weg: 'Word jij' niet 'Wordt jij'.", nogSimpeler: "Jij achter = Word" },
         },
       },
       {
@@ -2276,7 +2276,7 @@ const steps = [
           theorie: "Klassieke valkuil: hij wordt (dt). Niet 'word' (mist t), niet 'wordd' (geen dubbele d).",
           voorbeelden: [{ type: "dt", tekst: "Hij wordt boos / Zij wordt blij — dt-eindigingen." }],
           basiskennis: [{ onderwerp: "Lopen-test", uitleg: "Hij wordt = hij loopt. Beide eindigen op t. ✓" }],
-          niveaus: { basis: "Hij wordt (dt).", simpeler: "Bij hij altijd stam + t. Stam = word. Word + t = wordt. Allebei letters apart schrijven.", nogSimpeler: "Wordt" },
+          niveaus: { basis: "Zoek de stam van worden. Bij hij komt er altijd een t achter de stam, ook als die al op een d eindigt.", simpeler: "Bij hij altijd stam + t. Stam = word. Word + t = wordt. Allebei letters apart schrijven.", nogSimpeler: "Wordt" },
         },
       },
       {
@@ -2290,7 +2290,7 @@ const steps = [
           theorie: "Ik = stam (geen t). Niet 'ik wordt' (dat is hij/zij), niet 'ik word t' (geen extra letter).",
           voorbeelden: [{ type: "ik", tekst: "Ik word, ik vind, ik houd, ik zit, ik werk — allemaal alleen stam." }],
           basiskennis: [{ onderwerp: "Klassieke fout", uitleg: "Veel mensen schrijven 'ik wordt' of 'ik vindt' — beide fout. Bij ik = ALLEEN stam." }],
-          niveaus: { basis: "Ik = stam alleen = word.", simpeler: "Bij 'ik' krijg je nooit een extra t. Alleen de stam. Stam van worden = word. Dus 'ik word'.", nogSimpeler: "Ik = stam = word" },
+          niveaus: { basis: "Bij ik schrijf je alleen de stam, zonder extra letter. Wat is de stam van worden?", simpeler: "Bij 'ik' krijg je nooit een extra t. Alleen de stam. Stam van worden = word. Dus 'ik word'.", nogSimpeler: "Ik = stam = word" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -2326,7 +2326,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Jij wordt.",
+            basis: "Jij staat hier vóór het werkwoord. Dan komt er een t achter de stam, ook als die op een d eindigt.",
             simpeler: "Jij staat vooraan. Dan komt er een t achter de stam word: wordt.",
             nogSimpeler: "Wordt",
           },
@@ -2364,7 +2364,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vind jij? (geen t)",
+            basis: "Kijk waar jij staat: staat jij achter het werkwoord, dan komt er geen t achter de stam.",
             simpeler: "Jij staat achter het werkwoord. Dan valt de t weg. Alleen de stam: vind.",
             nogSimpeler: "Vind jij",
           },
@@ -2402,7 +2402,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wij worden.",
+            basis: "Wij is meer dan één persoon. Welke vorm van het werkwoord hoort bij meervoud?",
             simpeler: "Wij zijn meer mensen. Dan het hele werkwoord: worden.",
             nogSimpeler: "Worden",
           },
@@ -2441,7 +2441,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Houd jij?",
+            basis: "Kijk waar jij staat: staat jij achter het werkwoord, dan komt er geen t achter de stam.",
             simpeler: "Jij staat achter het werkwoord. Dan alleen de stam: houd.",
             nogSimpeler: "Houd",
           },
@@ -2489,7 +2489,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Wordt het?",
+            basis: "'Het' werkt net als 'hij', ook in een vraag. Zoek de stam van worden en kijk wat er bij hij achter de stam komt.",
             simpeler: "De t valt alleen weg bij jij. Hier staat het.",
             nogSimpeler: "Wordt",
           },
@@ -2518,7 +2518,7 @@ const steps = [
           theorie: "Bij staan/gaan/zien is de stam kort (sta, ga, zie). Bij hij komt er een t achter: staat, gaat, ziet. Bij sta en ga schrijf je dan aa, omdat de lettergreep gesloten wordt; bij zie blijft ie gewoon ie.",
           voorbeelden: [{ type: "sterk", tekst: "ik sta, jij staat, hij staat, wij staan." }],
           basiskennis: [{ onderwerp: "Klinker-verleng", uitleg: "Lange a aan het eind van een lettergreep = één a (sta). Komt er een medeklinker achter (gesloten lettergreep), dan schrijf je aa (staat)." }],
-          niveaus: { basis: "Hij staat.", simpeler: "Stam van staan = sta. Bij hij + t = staat (met dubbele aa). Niet 'stat' (te kort) of 'stant' (geen n).", nogSimpeler: "Staat" },
+          niveaus: { basis: "Zoek eerst de stam van staan (de ik-vorm). Wat komt er bij hij achter de stam?", simpeler: "Stam van staan = sta. Bij hij + t = staat (met dubbele aa). Niet 'stat' (te kort) of 'stant' (geen n).", nogSimpeler: "Staat" },
         },
       },
       {
@@ -2532,7 +2532,7 @@ const steps = [
           theorie: "Verleden tijd: kofschip → -te. Fietsen, fietste, gefietst (allemaal -t).",
           voorbeelden: [{ type: "kofschip", tekst: "fietsen → fietste, lachen → lachte, stoppen → stopte." }],
           basiskennis: [{ onderwerp: "S = kofschip", uitleg: "S aan eind van stam = -te." }],
-          niveaus: { basis: "S kofschip → fietste.", simpeler: "Stam fiets eindigt op s. S zit in 't kofschip. Verleden tijd met -te: fietste.", nogSimpeler: "S = -te = fietste" },
+          niveaus: { basis: "Zoek eerst de stam en kijk naar de laatste letter. Zit die in 't kofschip, dan krijg je -te; zo niet, dan -de.", simpeler: "Stam fiets eindigt op s. S zit in 't kofschip. Verleden tijd met -te: fietste.", nogSimpeler: "S = -te = fietste" },
         },
       },
       {
@@ -2548,7 +2548,7 @@ const steps = [
           theorie: "Voltooid deelwoord: ge-stam-t/d. L is niet in kofschip → -d.",
           voorbeelden: [{ type: "voltooid -d", tekst: "wandelen → gewandeld, spelen → gespeeld, leren → geleerd." }],
           basiskennis: [{ onderwerp: "Ge- voorvoegsel", uitleg: "Voltooid deelwoord begint vrijwel altijd met 'ge-'." }],
-          niveaus: { basis: "L niet kofschip → gewandeld.", simpeler: "Wandelen, stam = wandel. L zit NIET in kofschip → -d. Voltooid: ge + wandel + d = gewandeld.", nogSimpeler: "Gewandeld" },
+          niveaus: { basis: "Een voltooid deelwoord is ge- + stam + t of d. Zit de laatste letter van de stam in 't kofschip?", simpeler: "Wandelen, stam = wandel. L zit NIET in kofschip → -d. Voltooid: ge + wandel + d = gewandeld.", nogSimpeler: "Gewandeld" },
         },
       },
       {
@@ -2564,7 +2564,7 @@ const steps = [
           theorie: "Werkwoord-vorm zonder t + onderwerp erna = jij. Met t = hij/zij/het.",
           voorbeelden: [{ type: "vergelijking", tekst: "Werk jij? (jij = geen t). Werkt hij? (hij = wel t). Werkt zij? (zij = wel t)." }],
           basiskennis: [{ onderwerp: "T-aanwezigheid signaal", uitleg: "Geen t in werkwoord = jij na werkwoord. Wel t = hij/zij/het." }],
-          niveaus: { basis: "Werk zonder t → jij.", simpeler: "'Werk' (geen t) = vorm bij 'jij' na werkwoord. Bij hij/zij zou er 'werkt' staan.", nogSimpeler: "Werk jij vandaag?" },
+          niveaus: { basis: "Achter 'Werk' staat geen t. Bij welk woord valt de t weg als het achter het werkwoord staat?", simpeler: "'Werk' (geen t) = vorm bij 'jij' na werkwoord. Bij hij/zij zou er 'werkt' staan.", nogSimpeler: "Werk jij vandaag?" },
         },
       },
       {

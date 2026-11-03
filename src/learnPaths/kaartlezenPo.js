@@ -36,7 +36,7 @@ const steps = [
           theorie: "Onderdelen van een kaart: titel, kompasroos, schaal, legenda, coördinaten. Een inhoudsopgave vind je voorin een boek.",
           voorbeelden: [{ type: "lijst", tekst: "Standaard: titel, schaal, kompasroos, legenda — geen inhoudsopgave." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag wat NIET hoort. Zoek het onderdeel dat niet in het rijtje van de uitleg staat." }],
-          niveaus: { basis: "Inhoudsopgave.", simpeler: "Een inhoudsopgave staat voorin een boek. Schaal/kompasroos/legenda horen WEL bij een kaart.", nogSimpeler: "Inhoudsopgave" },
+          niveaus: { basis: "Denk aan wat je echt op een kaart ziet staan. Welk van deze dingen hoort eigenlijk bij een boek?", simpeler: "Een inhoudsopgave staat voorin een boek. Schaal/kompasroos/legenda horen WEL bij een kaart.", nogSimpeler: "Inhoudsopgave" },
         },
       },
       {
@@ -50,7 +50,7 @@ const steps = [
           theorie: "Standaard kleuren: blauw=water, groen=laagland, geel/bruin=hoogland.",
           voorbeelden: [{ type: "tabel", tekst: "Blauw=water. Groen=bos/weiland. Bruin=bergen. Rood=hoofdwegen." }],
           basiskennis: [{ onderwerp: "Universeel", uitleg: "Werkt op bijna elke wereldkaart — wereldwijde conventie." }],
-          niveaus: { basis: "Water.", simpeler: "Blauw op kaart = water (zee, rivier, meer). Bergen=bruin, bos=groen.", nogSimpeler: "Water" },
+          niveaus: { basis: "Kaartmakers kiezen kleuren die lijken op het echte landschap. Welke kleur heeft een zee of een sloot als je ernaar kijkt?", simpeler: "Blauw op kaart = water (zee, rivier, meer). Bergen=bruin, bos=groen.", nogSimpeler: "Water" },
         },
       },
       {
@@ -64,7 +64,7 @@ const steps = [
           theorie: "Net als bij teksten: eerst titel + samenvatting (legenda) → dan details bekijken.",
           voorbeelden: [{ type: "stap", tekst: "1) Titel lezen. 2) Legenda checken. 3) Kaart-vraag aanpakken." }],
           basiskennis: [{ onderwerp: "Tijdwinst", uitleg: "Begrip vooraf bespaart tijd bij vragen." }],
-          niveaus: { basis: "Titel + legenda.", simpeler: "Eerst titel (=onderwerp) + legenda (=symbolen). Dan kun je kaart goed lezen.", nogSimpeler: "Titel+legenda" },
+          niveaus: { basis: "Stel dat je een kaart krijgt zonder uitleg: wat wil je eerst weten, waar de kaart over gaat of hoe ver iets is? Waar lees je dat?", simpeler: "Eerst titel (=onderwerp) + legenda (=symbolen). Dan kun je kaart goed lezen.", nogSimpeler: "Titel+legenda" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -105,7 +105,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Van bovenaf.",
+            basis: "Stel je voor dat je als een vogel boven je huis vliegt. Hoe zie je de straten en daken dan?",
             simpeler: "Een kaart is getekend alsof je erboven vliegt: van bovenaf, net als een vogel.",
             nogSimpeler: "Bovenaf",
           },
@@ -143,7 +143,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De titel.",
+            basis: "Bij een boek lees je eerst de naam op de voorkant om te weten waar het over gaat. Welk onderdeel van een kaart doet hetzelfde?",
             simpeler: "De titel is de kop van de kaart. Die zegt waar de kaart over gaat.",
             nogSimpeler: "Titel",
           },
@@ -181,7 +181,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De schaal.",
+            basis: "Je zoekt het onderdeel dat iets zegt over afstanden. Welk onderdeel heeft te maken met centimeters en kilometers?",
             simpeler: "Wil je weten hoe ver iets echt is? Dan kijk je naar de schaal.",
             nogSimpeler: "Schaal",
           },
@@ -219,7 +219,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Coördinaten.",
+            basis: "Je zoekt de naam voor een plek die je aanwijst met een letter en een cijfer, net als bij zeeslag. Welk woord hoort bij zo'n rooster?",
             simpeler: "B3 en C5 zijn coördinaten: een letter en een cijfer die samen een vakje aanwijzen.",
             nogSimpeler: "Coördinaten",
           },
@@ -257,7 +257,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Bergen of hoogland.",
+            basis: "Op veel kaarten kleurt het land donkerder naarmate het hoger ligt: groen is laag. Wat betekent een warmere kleur dan?",
             simpeler: "Geel of bruin op een kaart = hoog land, zoals bergen. Groen is juist laag land.",
             nogSimpeler: "Bergen",
           },
@@ -281,7 +281,7 @@ const steps = [
           theorie: "Conventie wereldkaarten: N altijd boven (tenzij draai-pijl iets anders zegt).",
           voorbeelden: [{ type: "kompas", tekst: "Boven=N, onder=Z, rechts=O, links=W." }],
           basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "'Nooit Op Zondag Werken' — N-O-Z-W met de klok mee vanaf boven." }],
-          niveaus: { basis: "Bovenkant.", simpeler: "Op een normale kaart staat N (Noord) boven. Staat er een N-pijl, volg dan die pijl.", nogSimpeler: "Boven" },
+          niveaus: { basis: "Kijk naar de kompasroos op een gewone kaart. Waar staat de N als de kaart recht voor je ligt?", simpeler: "Op een normale kaart staat N (Noord) boven. Staat er een N-pijl, volg dan die pijl.", nogSimpeler: "Boven" },
         },
       },
       {
@@ -295,7 +295,7 @@ const steps = [
           theorie: "Richting-aanduiding: hoger op kaart = noordelijker.",
           voorbeelden: [{ type: "feit", tekst: "Amsterdam (hoger op kaart) ligt ten noorden van Rotterdam (lager)." }],
           basiskennis: [{ onderwerp: "NL-feit", uitleg: "Amsterdam (provincie Noord-Holland) ligt boven Rotterdam (Zuid-Holland)." }],
-          niveaus: { basis: "Amsterdam ligt ten noorden van Rotterdam.", simpeler: "Boven op de kaart is noord. Amsterdam staat boven Rotterdam, dus Amsterdam ligt ten noorden van Rotterdam.", nogSimpeler: "Noord" },
+          niveaus: { basis: "Bedenk eerst welke windrichting bij de bovenkant van een kaart hoort. Boven betekent dan 'ten ... van'.", simpeler: "Boven op de kaart is noord. Amsterdam staat boven Rotterdam, dus Amsterdam ligt ten noorden van Rotterdam.", nogSimpeler: "Noord" },
         },
       },
       {
@@ -309,7 +309,7 @@ const steps = [
           theorie: "Diagonale hoeken: NO=rechts-boven, ZO=rechts-onder, ZW=links-onder, NW=links-boven.",
           voorbeelden: [{ type: "kompas", tekst: "NW | NO. ZW | ZO. (rechts-onder = ZO)." }],
           basiskennis: [{ onderwerp: "Volgorde", uitleg: "Verticaal eerst (Z/N), dan horizontaal (O/W). 'Zuid' + 'Oost' = ZuidOost." }],
-          niveaus: { basis: "Rechts-onder op de kaart is zuidoost.", simpeler: "Rechts is oost en onder is zuid. Samen is dat zuidoost (ZO).", nogSimpeler: "ZO" },
+          niveaus: { basis: "Zoek eerst welke richting rechts ligt en welke richting onder ligt. Plak die twee daarna aan elkaar.", simpeler: "Rechts is oost en onder is zuid. Samen is dat zuidoost (ZO).", nogSimpeler: "ZO" },
         },
       },
       {
@@ -323,7 +323,7 @@ const steps = [
           theorie: "8-richtingen-kompas: N - NO - O - ZO - Z - ZW - W - NW.",
           voorbeelden: [{ type: "kompas", tekst: "Tussen elke 2 hoofdrichtingen: tussenrichting met dubbele letter." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Tussenpunt heet naar beide hoofdrichtingen ernaast." }],
-          niveaus: { basis: "NO.", simpeler: "Tussen Noord en Oost = NoordOost (NO). Letterlijk de hoek ertussen.", nogSimpeler: "NO" },
+          niveaus: { basis: "Rechts-boven zit tussen twee hoofdrichtingen in. Welke richting is boven, en welke is rechts? Zet die twee letters achter elkaar.", simpeler: "Tussen Noord en Oost = NoordOost (NO). Letterlijk de hoek ertussen.", nogSimpeler: "NO" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -359,7 +359,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "West.",
+            basis: "Noord is boven en oost is rechts. Welke richting ligt dan recht tegenover oost?",
             simpeler: "Links op de kaart is West. Rechts is Oost.",
             nogSimpeler: "West",
           },
@@ -397,7 +397,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zuid.",
+            basis: "Engelse windrichtingen beginnen vaak met bijna dezelfde letter als in het Nederlands. Welke Nederlandse richting lijkt op het Engelse woord met een S?",
             simpeler: "S is de eerste letter van 'south'. Dat is Engels voor Zuid.",
             nogSimpeler: "Zuid",
           },
@@ -435,7 +435,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Naar het oosten.",
+            basis: "Op een gewone kaart hoort bij elke kant een windrichting. Welke windrichting hoort bij rechts?",
             simpeler: "Utrecht ligt rechts van Den Haag. Rechts = oost. Dus naar het oosten.",
             nogSimpeler: "Oost",
           },
@@ -478,7 +478,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "West.",
+            basis: "Zet je vinger op zuid op de kompasroos en beweeg hem een kwart rondje zoals de wijzers van een klok draaien. Waar kom je uit?",
             simpeler: "N-O-Z-W: na Z (Zondag) komt W (Werken) = West.",
             nogSimpeler: "West",
           },
@@ -516,7 +516,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Links-onder.",
+            basis: "Splits ZW in twee delen: waar ligt zuid op de kaart en waar ligt west? Combineer die twee kanten.",
             simpeler: "Z = onder en W = links. Samen: links-onder.",
             nogSimpeler: "Links-onder",
           },
@@ -540,7 +540,7 @@ const steps = [
           theorie: "Eenheidstruc: 100.000 cm = 1.000 m = 1 km. Bij 1:100.000: 1 cm op kaart = 1 km werkelijk.",
           voorbeelden: [{ type: "tabel", tekst: "1cm = 1km. 5cm = 5km. 12cm = 12km." }],
           basiskennis: [{ onderwerp: "cm→m→km", uitleg: "100 cm = 1 m. 1000 m = 1 km. Dus 100.000 cm = 1 km." }],
-          niveaus: { basis: "1 km.", simpeler: "Bij 1:100.000 schaal: 1 cm op kaart = 1 km werkelijk. Handig om te onthouden!", nogSimpeler: "1 km" },
+          niveaus: { basis: "De schaal zegt hoeveel centimeter in het echt bij 1 cm op de kaart hoort. Reken dat aantal centimeters om naar meters en daarna naar kilometers.", simpeler: "Bij 1:100.000 schaal: 1 cm op kaart = 1 km werkelijk. Handig om te onthouden!", nogSimpeler: "1 km" },
         },
       },
       {
@@ -554,7 +554,7 @@ const steps = [
           theorie: "5 cm × 100.000 = 500.000 cm = 5.000 m = 5 km.",
           voorbeelden: [{ type: "tabel", tekst: "1cm=1km. 5cm=5km. 10cm=10km." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigingstruc", uitleg: "Cm op kaart × 1 = km werkelijk (bij deze schaal)." }],
-          niveaus: { basis: "5 km.", simpeler: "1:100.000 → 1cm=1km. Dus 5cm op kaart = 5km werkelijk.", nogSimpeler: "5 km" },
+          niveaus: { basis: "Zoek eerst uit hoe ver 1 cm op deze kaart in het echt is. Doe dat daarna keer het aantal centimeters dat je meet.", simpeler: "1:100.000 → 1cm=1km. Dus 5cm op kaart = 5km werkelijk.", nogSimpeler: "5 km" },
         },
       },
       {
@@ -568,7 +568,7 @@ const steps = [
           theorie: "Bij 1:50.000: 1 cm = 500 m = 0,5 km. Dus 2 cm = 1 km.",
           voorbeelden: [{ type: "tabel", tekst: "1cm=0,5km. 2cm=1km. 4cm=2km." }],
           basiskennis: [{ onderwerp: "Vergelijking schalen", uitleg: "1:50k toont 2× kleiner gebied (gedetailleerder) dan 1:100k." }],
-          niveaus: { basis: "1 km.", simpeler: "Bij 1:50.000 is 1cm = 0,5km. Dus 2cm = 1km werkelijk.", nogSimpeler: "1 km" },
+          niveaus: { basis: "Reken eerst uit hoeveel meter 1 cm op deze kaart in het echt is. Doe dat daarna keer het aantal centimeters dat je meet.", simpeler: "Bij 1:50.000 is 1cm = 0,5km. Dus 2cm = 1km werkelijk.", nogSimpeler: "1 km" },
         },
       },
       {
@@ -582,7 +582,7 @@ const steps = [
           theorie: "Hoe groter het getal achter ':', hoe meer wereld op de kaart past.",
           voorbeelden: [{ type: "tabel", tekst: "Plattegrond: 1:50. Stadsplan: 1:10.000. Provinciekaart: 1:200.000. Wereld: 1:50.000.000." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Wereld passen op A4 = werkelijke afstand veel kleiner getekend." }],
-          niveaus: { basis: "1:50.000.000.", simpeler: "Wereld is heel groot → schaal-getal heel groot (50 miljoen).", nogSimpeler: "1:50.000.000" },
+          niveaus: { basis: "Hoe groter het gebied dat op één blad moet, hoe meer je moet verkleinen. Moet het getal achter de dubbele punt dan groot of klein zijn?", simpeler: "Wereld is heel groot → schaal-getal heel groot (50 miljoen).", nogSimpeler: "1:50.000.000" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -618,7 +618,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 km.",
+            basis: "Het getal achter de dubbele punt is het aantal centimeters in het echt. Haal er eerst twee nullen af voor meters en dan nog drie voor kilometers.",
             simpeler: "Bij 1:100.000 is 1 cm = 1 km. 1:1.000.000 is tien keer zo veel: 10 km.",
             nogSimpeler: "10 km",
           },
@@ -656,7 +656,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 km.",
+            basis: "Reken eerst uit hoeveel meter 1 cm op deze kaart in het echt is. Doe dat daarna keer het aantal centimeters dat je meet.",
             simpeler: "1 cm = 250 m. 4 keer 250 m = 1.000 m. Dat is 1 km.",
             nogSimpeler: "1 km",
           },
@@ -694,7 +694,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 km.",
+            basis: "Tel eerst hoeveel meter alle stukjes samen zijn. Weet je nog hoeveel meter er in 1 km gaan?",
             simpeler: "6 stukjes van 500 m = 3.000 m. Dat is 3 km.",
             nogSimpeler: "3 km",
           },
@@ -737,7 +737,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1:50.",
+            basis: "Een huis is klein, dus je hoeft het maar een beetje te verkleinen. Zoek je dan een groot of een klein getal achter de dubbele punt?",
             simpeler: "Een huis is klein, dus een klein getal: 1:50.",
             nogSimpeler: "1:50",
           },
@@ -761,7 +761,7 @@ const steps = [
           theorie: "Standaard: driehoekje (tent-vorm) = camping. Kerk = kruisje. Station/gebouw = rechthoek. Anker = haven.",
           voorbeelden: [{ type: "tabel", tekst: "🏕️ camping = driehoek. ⛪ kerk = kruis. 🚉 station = rechthoek. ⚓ haven = anker." }],
           basiskennis: [{ onderwerp: "Visuele logica", uitleg: "Symbolen zijn vereenvoudigde tekening van het ding." }],
-          niveaus: { basis: "Driehoekje.", simpeler: "Camping = driehoekje (tent-vorm). Kruisje is kerk, vierkantje is gebouw of station.", nogSimpeler: "Driehoekje" },
+          niveaus: { basis: "Kaartsymbolen lijken vaak op het ding zelf. Wat zet je op een camping neer om in te slapen, en welke vorm heeft dat?", simpeler: "Camping = driehoekje (tent-vorm). Kruisje is kerk, vierkantje is gebouw of station.", nogSimpeler: "Driehoekje" },
         },
       },
       {
@@ -775,7 +775,7 @@ const steps = [
           theorie: "Wegenkaart-conventie: rood (hoofdwegen), geel (provinciaal), zwart (lokaal).",
           voorbeelden: [{ type: "tabel", tekst: "Rood = snelweg. Blauw = water. Zwart-streep = spoor. Stippels = wandel/fietspad." }],
           basiskennis: [{ onderwerp: "Opvallendheid", uitleg: "Rood = signaalkleur, valt op = belangrijke wegen." }],
-          niveaus: { basis: "Een hoofdweg.", simpeler: "Op een wegenkaart is een rode lijn meestal een hoofdweg of snelweg. Een rivier is blauw, een spoorlijn zwart met streepjes.", nogSimpeler: "Hoofdweg" },
+          niveaus: { basis: "Op een wegenkaart hebben de belangrijkste wegen een opvallende kleur. Water is blauw, dus welke van deze dingen past bij een felle lijn op een wegenkaart?", simpeler: "Op een wegenkaart is een rode lijn meestal een hoofdweg of snelweg. Een rivier is blauw, een spoorlijn zwart met streepjes.", nogSimpeler: "Hoofdweg" },
         },
       },
       {
@@ -789,7 +789,7 @@ const steps = [
           theorie: "Atlas-symbolen: ster = hoofdstad. Punt = gewone stad. Lijn-stippen = grens.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Amsterdam ★ (NL hoofdstad). Berlijn ★ (Duitsland)." }],
           basiskennis: [{ onderwerp: "Hoofdstad in legenda", uitleg: "Atlas-legenda toont ster-symbool als 'hoofdstad'." }],
-          niveaus: { basis: "Hoofdstad.", simpeler: "Ster ★ op atlas = hoofdstad (belangrijkste stad).", nogSimpeler: "Hoofdstad" },
+          niveaus: { basis: "Een ster gebruik je voor iets dat extra belangrijk is. Welke plek in een land is het belangrijkst?", simpeler: "Ster ★ op atlas = hoofdstad (belangrijkste stad).", nogSimpeler: "Hoofdstad" },
         },
       },
       {
@@ -803,7 +803,7 @@ const steps = [
           theorie: "Legenda staat meestal in een hoek of langs de rand — eerste hulp bij onbekende tekens.",
           voorbeelden: [{ type: "stap", tekst: "Symbool zie je → naar legenda → 'Aha, dat is een molen'." }],
           basiskennis: [{ onderwerp: "Niet gokken", uitleg: "De toets wil precieze antwoorden. Gokken = punten verliezen." }],
-          niveaus: { basis: "Legenda.", simpeler: "Onbekend symbool? Kijk in de legenda (uitleg-vakje). Niet gokken.", nogSimpeler: "Legenda" },
+          niveaus: { basis: "Ieder onderdeel van een kaart heeft een eigen taak. Welk onderdeel legt uit wat de tekentjes en kleuren betekenen?", simpeler: "Onbekend symbool? Kijk in de legenda (uitleg-vakje). Niet gokken.", nogSimpeler: "Legenda" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -825,7 +825,7 @@ const steps = [
           theorie: "8 cm × 100.000 = 800.000 cm = 8.000 m = 8 km.",
           voorbeelden: [{ type: "stap", tekst: "8cm op kaart = 8km (bij 1:100k)." }],
           basiskennis: [{ onderwerp: "Vermenigvuldigingstruc", uitleg: "Cm op kaart × 1 = km werkelijk (alleen bij 1:100.000)." }],
-          niveaus: { basis: "8 km.", simpeler: "1:100.000 → 1cm = 1km. 8cm = 8km.", nogSimpeler: "8 km" },
+          niveaus: { basis: "Zoek eerst uit hoe ver 1 cm op deze kaart in het echt is. Doe dat daarna keer het aantal centimeters dat je meet.", simpeler: "1:100.000 → 1cm = 1km. 8cm = 8km.", nogSimpeler: "8 km" },
         },
       },
       {
@@ -853,7 +853,7 @@ const steps = [
           theorie: "Blauw = water (universeel). Vlek = oppervlakte (niet lijn).",
           voorbeelden: [{ type: "tabel", tekst: "Blauwe vlek = meer/zee. Blauwe lijn = rivier. Groene vlek = bos." }],
           basiskennis: [{ onderwerp: "Vlek vs lijn", uitleg: "Vlek = vlak (meer). Lijn = stroom (rivier)." }],
-          niveaus: { basis: "Een meer of zee.", simpeler: "Blauwe vlek = water-oppervlak (meer of zee). Een blauwe lijn is een rivier of beek.", nogSimpeler: "Water" },
+          niveaus: { basis: "Blauw is water. Denk na over de vorm: is een rivier een lange smalle lijn of een vlek?", simpeler: "Blauwe vlek = water-oppervlak (meer of zee). Een blauwe lijn is een rivier of beek.", nogSimpeler: "Water" },
         },
       },
       {
@@ -867,7 +867,7 @@ const steps = [
           theorie: "25.000 cm = 250 m. Bij 1:25.000 dus: 1cm = 250m.",
           voorbeelden: [{ type: "tabel", tekst: "1cm=250m. 4cm=1km. 8cm=2km." }],
           basiskennis: [{ onderwerp: "cm→m", uitleg: "100 cm = 1 m. 25.000 ÷ 100 = 250 m." }],
-          niveaus: { basis: "250 m.", simpeler: "Bij 1:25.000: 1cm op kaart = 25.000cm werkelijk = 250m.", nogSimpeler: "250" },
+          niveaus: { basis: "Het getal achter de dubbele punt is het aantal centimeters in het echt. Hoeveel nullen haal je eraf om centimeters om te rekenen naar meters?", simpeler: "Bij 1:25.000: 1cm op kaart = 25.000cm werkelijk = 250m.", nogSimpeler: "250" },
         },
       },
       {
@@ -894,7 +894,7 @@ const steps = [
           theorie: "Groot getal = elk cm staat voor meer werkelijke afstand = meer gebied past.",
           voorbeelden: [{ type: "tabel", tekst: "1:100 = kamer. 1:1.000 = gebouw. 1:10.000 = stad. 1:1.000.000 = land." }],
           basiskennis: [{ onderwerp: "Tegenintuïtief", uitleg: "Lijkt klein op kaart, maar getal hoog = groot gebied." }],
-          niveaus: { basis: "1:1.000.000.", simpeler: "Hoe groter het getal achter ':' hoe groter het gebied. 1.000.000 > 100.", nogSimpeler: "1:1.000.000" },
+          niveaus: { basis: "Het getal achter de dubbele punt zegt hoeveel keer alles verkleind is. Hoe meer je verkleint, hoe groter of kleiner is het gebied op je blad?", simpeler: "Hoe groter het getal achter ':' hoe groter het gebied. 1.000.000 > 100.", nogSimpeler: "1:1.000.000" },
         },
       },
       {
@@ -944,7 +944,7 @@ const steps = [
             { type: "stap", tekst: "Kaart van Friesland: bijna geen hoogtelijnen → super vlak." },
           ],
           basiskennis: [{ onderwerp: "Niet op alle kaarten", uitleg: "Niet elke kaart heeft hoogtelijnen — toeristische kaarten vaak niet. Topografische wel." }],
-          niveaus: { basis: "Steile helling.", simpeler: "Hoogtelijnen DICHT bij elkaar betekent: hoogte verandert snel = steile berg of helling. VER = vlak.", nogSimpeler: "Steil" },
+          niveaus: { basis: "Elke hoogtelijn betekent een stukje hoger. Wat zegt het als je in een heel kort stukje al veel hoogtelijnen tegenkomt?", simpeler: "Hoogtelijnen DICHT bij elkaar betekent: hoogte verandert snel = steile berg of helling. VER = vlak.", nogSimpeler: "Steil" },
         },
       },
       {
@@ -1006,7 +1006,7 @@ const steps = [
       { q: "Op een wandelkaart (schaal 1:25.000) staat een schaalbalk. **4 stukjes** zijn samen **1 km**. Hoe lang is één stukje in het echt?", options: ["250 m","4 km","25 m","2,5 km"], answer: 0, wrongHints: [null, "Vier stukjes zijn samen 1 km. Is één stukje dan meer of minder dan 1 km?", "Tel na: vier stukjes van 25 m, is dat samen 1 km?", "Dat is meer dan de hele balk van 1 km. Kan één stukje langer zijn dan alle vier samen?"] },
       { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","West"], answer: 0, wrongHints: [null, "Daar wijst de andere, witte kant van de naald heen.", "Een kompasnaald wijst nooit naar oost; hij wijst naar een pool.", "Een kompasnaald wijst nooit naar west; hij wijst naar een pool."] },
       { q: "Wat is een **plattegrond**?", options: ["Kaart van een klein gebied", "Kaart van de hele wereld", "Boek met heel veel kaarten", "Kaart van een heel land"], answer: 0, wrongHints: [null, "Een wereldkaart toont alle landen. Denk aan de plattegrond van je school: wat staat daarop?", "Dat is een atlas.", "Een landkaart toont de steden en wegen van een heel land. Wat staat er op de plattegrond van je school?"] },
-      { q: "Op een schaalbalk staat **0 — 1 — 2 km**. Hoeveel meter is 1 km?", options: ["1.000 m","100 m","10.000 m","10 m"], answer: 0, wrongHints: [null, "Een voetbalveld is al ongeveer 100 m lang. Is een kilometer net zo kort?", "Dat is tien keer te veel. Hoeveel meter past er in één kilometer?", "10 m is ongeveer de lengte van een bus. Is een kilometer zo kort?"], uitlegPad: { niveaus: { basis: "1.000 m.", simpeler: "Kilo betekent duizend. Een kilometer is duizend meter.", nogSimpeler: "1.000 m" } } },
+      { q: "Op een schaalbalk staat **0 — 1 — 2 km**. Hoeveel meter is 1 km?", options: ["1.000 m","100 m","10.000 m","10 m"], answer: 0, wrongHints: [null, "Een voetbalveld is al ongeveer 100 m lang. Is een kilometer net zo kort?", "Dat is tien keer te veel. Hoeveel meter past er in één kilometer?", "10 m is ongeveer de lengte van een bus. Is een kilometer zo kort?"], uitlegPad: { niveaus: { basis: "Denk aan het woordje 'kilo', zoals bij een kilogram. Hoeveel betekent kilo?", simpeler: "Kilo betekent duizend. Een kilometer is duizend meter.", nogSimpeler: "1.000 m" } } },
       { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Noordoost ligt rechts-boven. Ligt dat recht tegenover rechts-onder?", "Zuidwest ligt links-onder, naast zuidoost. Wat ligt er schuin tegenover rechts-onder?", "Tegenover een diagonaal ligt weer een diagonaal, geen rechte richting."] },
       { q: "Wat doe je met een **schaalbalk** op een kaart?", options: ["Afstanden op de kaart meten", "Aflezen hoe groot het hele gebied is", "Kijken welke kant het noorden is", "Tellen hoeveel steden erop staan"], answer: 0, wrongHints: [null, "De balk zegt hoe lang één stukje is, niet hoe groot de hele kaart is.", "Richting lees je af aan de kompasroos.", "Steden tel je op de kaart zelf. Waar gaan de streepjes en getallen van de balk over?"] },
       { q: "Welke schaal heeft een atlaskaart van **Nederland** meestal?", options: ["Ongeveer 1:1.000.000", "Ongeveer 1:50.000.000", "Ongeveer 1:10.000", "Ongeveer 1:50"], answer: 0, wrongHints: [null, "Bij die schaal is 1 cm wel 500 km. Hoe groot wordt Nederland dan op de bladzijde?", "Bij 1:10.000 is 1 cm maar 100 m. Past heel Nederland dan op één bladzijde?", "Bij 1:50 is 1 cm maar een halve meter. Hoeveel bladzijden heb je dan nodig voor Nederland?"] },

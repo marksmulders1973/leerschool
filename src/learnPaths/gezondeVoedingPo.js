@@ -137,7 +137,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 250 g groente + 2 stuks fruit per dag. Te onthouden cijfer voor de Doorstroomtoets." }],
           niveaus: {
-            basis: "Aanbeveling: 250 gram groente per dag.",
+            basis: "Een kind van 9-13 moet 150-200 gram groente per dag eten. Een volwassene iets meer: welk antwoord ligt daar net boven?",
             simpeler: "Ongeveer 2 grote stukken groente (= een half bord vol).",
             nogSimpeler: "250 g per dag.",
           },
@@ -231,7 +231,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "1 uur per dag bewegen. Kan opgeknipt: 20 min fietsen + 30 min sporten + 10 min buiten spelen = al genoeg." },
           ],
           niveaus: {
-            basis: "1 uur per dag bewegen.",
+            basis: "Kinderen moeten elke dag flink lang actief zijn, langer dan een halfuur gymles. Welk antwoord past daarbij?",
             simpeler: "Minstens 60 minuten matig tot intensief bewegen per dag (sport, fietsen, spelen).",
             nogSimpeler: "1 uur",
           },

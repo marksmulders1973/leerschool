@@ -574,7 +574,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Stap 1: 8 × 5 = 40. Stap 2: 40 × 2 = 80. Dus 80 cm³." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Volume = keer. Optellen geeft een veel te klein antwoord." }],
           niveaus: {
-            basis: "8 × 5 × 2 = 80 cm³.",
+            basis: "Volume van een doos = lengte × breedte × hoogte. Vermenigvuldig eerst twee getallen en doe de uitkomst daarna keer het derde.",
             simpeler: "Eerst 8 × 5 = 40. Dan 40 × 2 = 80. Dus 80 cm³.",
             nogSimpeler: "80 cm³",
           },
@@ -640,7 +640,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 × 4 × 3 = 72 cm³.",
+            basis: "Vermenigvuldig lengte, breedte en hoogte met elkaar. Begin met twee getallen en doe die uitkomst keer het laatste getal.",
             simpeler: "Eerst 6 × 4 = 24. Dan 24 × 3 = 72. Dus 72 cm³.",
             nogSimpeler: "72 cm³",
           },
@@ -687,7 +687,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "21 × 10 × 5 = 1050 cm³.",
+            basis: "Reken lengte × breedte × hoogte. Begin slim met de 10, want keer 10 is makkelijk.",
             simpeler: "Eerst 21 × 10 = 210. Dan 210 × 5 = 1050. Dus 1050 cm³.",
             nogSimpeler: "1050 cm³",
           },
@@ -734,7 +734,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12 × 5 × 2 = 120 cm³.",
+            basis: "Reken lengte × breedte × hoogte. Tip: 5 × 2 geeft een rond getal, begin daarmee.",
             simpeler: "Eerst 12 × 5 = 60. Dan 60 × 2 = 120. Dus 120 cm³.",
             nogSimpeler: "120 cm³",
           },
@@ -781,7 +781,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "25 × 4 × 7 = 700 cm³.",
+            basis: "Reken slim: zoek eerst twee getallen die samen een rond getal maken, zoals 25 en 4. Doe die uitkomst daarna keer het laatste getal.",
             simpeler: "Eerst 25 × 4 = 100. Dan 100 × 7 = 700. Dus 700 cm³.",
             nogSimpeler: "700 cm³",
           },
@@ -816,7 +816,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5 dm³ → 5 liter. 8 dm³ → 8 liter." }],
           basiskennis: [{ onderwerp: "Direct gelijk", uitleg: "dm³ en liter zijn 1-op-1. Geen rekenen." }],
           niveaus: {
-            basis: "3 dm³ = 3 liter.",
+            basis: "Hoeveel liter past er in een blokje van 1 dm³? Dan weet je ook wat er bij 3 dm³ hoort.",
             simpeler: "1 dm³ is precies 1 liter. Dus 3 dm³ = 3 liter.",
             nogSimpeler: "3 liter",
           },
@@ -876,7 +876,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 liter = 6000 mL.",
+            basis: "Hoeveel mL zitten er in 1 liter? Doe dat aantal keer 6.",
             simpeler: "In 1 liter zit 1000 mL. Dus in 6 liter zit 6 × 1000 = 6000 mL.",
             nogSimpeler: "6000 mL",
           },
@@ -923,7 +923,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4500 mL = 4,5 liter.",
+            basis: "Er zitten 1000 mL in 1 liter, dus je deelt door 1000. Let op het stuk dat achter de komma komt.",
             simpeler: "4500 ÷ 1000 = 4,5. Dus 4,5 liter.",
             nogSimpeler: "4,5 liter",
           },
@@ -970,7 +970,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7000 cm³ = 7 dm³.",
+            basis: "Hoeveel cm³ passen er in 1 dm³? Hoe vaak past dat getal in 7000?",
             simpeler: "In 1 dm³ zit 1000 cm³. 7000 ÷ 1000 = 7. Dus 7 dm³.",
             nogSimpeler: "7 dm³",
           },
@@ -1017,7 +1017,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1,5 m³ = 1500 liter.",
+            basis: "1 m³ is 1000 liter. Hoeveel is dan anderhalf keer zoveel?",
             simpeler: "1 m³ is 1000 liter. 1,5 × 1000 = 1500. Dus 1500 liter.",
             nogSimpeler: "1500 liter",
           },
@@ -1064,7 +1064,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "250 cm³ = 250 mL.",
+            basis: "Hoeveel mL past er in een blokje van 1 cm³? Dan kun je de 250 meteen omzetten.",
             simpeler: "cm³ en mL zijn precies even groot. Dus 250 cm³ = 250 mL.",
             nogSimpeler: "250 mL",
           },
@@ -1111,7 +1111,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9000 liter = 9 m³.",
+            basis: "1 m³ is 1000 liter. Hoe vaak past 1000 liter in 9000 liter?",
             simpeler: "In 1 m³ past 1000 liter. 9000 ÷ 1000 = 9. Dus 9 m³.",
             nogSimpeler: "9 m³",
           },
@@ -1140,7 +1140,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Stap 1: 6 × 3 = 18. Stap 2: 18 × 1,5 = 27. Dus 27 m³." }],
           basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Bij volume schrijf je altijd de eenheid (m³, cm³, L)." }],
           niveaus: {
-            basis: "6 × 3 × 1,5 = 27 m³.",
+            basis: "Volume = lengte × breedte × hoogte. Vermenigvuldig eerst de hele getallen; keer 1,5 is keer 1 en de helft erbij.",
             simpeler: "6 × 3 = 18. 18 × 1,5 = 27. Dus 27 m³ water in het zwembad.",
             nogSimpeler: "27 m³",
           },
@@ -1173,7 +1173,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Volume in cm³ → ÷ 1000 = liter." }],
           basiskennis: [{ onderwerp: "÷ 1000", uitleg: "Van cm³ naar liter altijd door 1000 delen." }],
           niveaus: {
-            basis: "50 × 30 × 40 = 60.000 cm³ = 60 liter.",
+            basis: "Reken eerst lengte × breedte × hoogte uit in cm³. Deel daarna door 1000, want 1000 cm³ is 1 liter.",
             simpeler: "Eerst volume: 50 × 30 × 40 = 60.000 cm³. Daarna omrekenen: 60.000 ÷ 1000 = 60 liter.",
             nogSimpeler: "60 liter",
           },
@@ -1221,7 +1221,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 × 5 × 2 = 100 m³.",
+            basis: "Volume = lengte × breedte × diepte. Alles is in meters, dus je uitkomst is meteen in m³.",
             simpeler: "10 × 5 = 50. 50 × 2 = 100. Dus 100 m³ water.",
             nogSimpeler: "100 m³",
           },
@@ -1268,7 +1268,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "80 × 30 × 40 = 96.000 cm³ = 96 liter.",
+            basis: "Reken eerst het volume uit in cm³ met lengte × breedte × hoogte. Hoe vaak past 1000 cm³ daarin? Zoveel liter is het.",
             simpeler: "Eerst volume: 96.000 cm³. Dan ÷ 1000 = 96 liter.",
             nogSimpeler: "96 liter",
           },
@@ -1320,7 +1320,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3000 cm³ is 1000 cm³ te weinig.",
+            basis: "Reken eerst de inhoud van de doos uit: lengte × breedte × hoogte. Vergelijk dat getal daarna met wat er nodig is. Is het meer of minder?",
             simpeler: "Doos: 25 × 12 × 10 = 3000 cm³. Nodig: 4000 cm³. 3000 is te weinig — 1000 cm³ tekort.",
             nogSimpeler: "Nee, 1000 cm³ te klein",
           },
@@ -1367,7 +1367,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 × 30 × 30 = 27.000 cm³ = 27 liter.",
+            basis: "Reken het volume uit in cm³: doe eerst de som zonder nullen en zet daarna de nullen erachter. Deel dan door 1000, want 1000 cm³ is 1 liter.",
             simpeler: "Volume: 27.000 cm³. Gedeeld door 1000 = 27 liter.",
             nogSimpeler: "27 liter",
           },
@@ -1414,7 +1414,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 × 2 × 0,5 = 2 m³.",
+            basis: "Volume = lengte × breedte × hoogte. Hoe hoog het zand ligt is de hoogte; keer 0,5 is hetzelfde als de helft nemen.",
             simpeler: "2 × 2 = 4. 4 × 0,5 is de helft van 4 = 2. Dus 2 m³.",
             nogSimpeler: "2 m³",
           },
@@ -1461,7 +1461,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "40 × 30 × 25 = 30.000 cm³ = 30 liter.",
+            basis: "Reken eerst lengte × breedte × hoogte uit in cm³. Elke 1000 cm³ is 1 liter.",
             simpeler: "Eerst 40 × 25 = 1000. Dan × 30 = 30.000 cm³. Gedeeld door 1000 = 30 liter.",
             nogSimpeler: "30 liter",
           },
@@ -1521,7 +1521,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Volume in cm³ = aantal mL water dat erin past." }],
           basiskennis: [{ onderwerp: "1:1", uitleg: "cm³ en mL zijn gelijk. Geen rekenen nodig." }],
           niveaus: {
-            basis: "20 × 10 × 5 = 1000 cm³ = 1000 mL.",
+            basis: "Reken eerst het volume in cm³ met lengte × breedte × hoogte. Hoeveel mL past er in 1 cm³?",
             simpeler: "Volume: 20 × 10 × 5 = 1000 cm³. En 1 cm³ = 1 mL. Dus 1000 mL water.",
             nogSimpeler: "1000 mL",
           },

@@ -103,7 +103,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "60 min = 1 uur. Klassiek getal, onthoud dit en alle tijd-vragen worden makkelijker." }],
           niveaus: {
-            basis: "1 uur = 60 minuten.",
+            basis: "Denk aan de grote wijzer van de klok: hoeveel minuten duurt het voordat hij één keer helemaal rond is?",
             simpeler: "Klok gaat in 60-stappen. 1 uur = 60 minuten.",
             nogSimpeler: "60",
           },
@@ -127,7 +127,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Werk met tafel-6 (3 × 6 = 18) + 0 eraan plakken. Snelle truc voor 'min naar sec'." }],
           niveaus: {
-            basis: "3 min × 60 = 180 sec.",
+            basis: "Eén minuut heeft 60 seconden. Hoe vaak moet je die 60 nemen voor 3 minuten?",
             simpeler: "3 × 60 = 180.",
             nogSimpeler: "180",
           },
@@ -174,7 +174,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1u 70 min → 1u + (60+10) min → (1+1)u + 10 min = 2u 10 min." }],
           basiskennis: [{ onderwerp: "Geen 100", uitleg: "Tijd gaat met 60, niet 100!" }],
           niveaus: {
-            basis: "2u 10 min.",
+            basis: "70 minuten is meer dan een uur. Hoeveel minuten blijven over als je er 60 afhaalt, en hoeveel uur heb je dan in totaal?",
             simpeler: "70 minuten is meer dan 1 uur. 70 min = 60 min + 10 min = 1 uur + 10 min. Plus de 1 uur die er al was = 2 uur 10 min.",
             nogSimpeler: "2u 10min",
           },
@@ -231,7 +231,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De les begint om 10:15 uur.",
+            basis: "Een tijdstip zegt hoe laat iets gebeurt, een tijdsduur zegt hoe lang iets duurt. Zoek de zin met een kloktijd erin.",
             simpeler: "'Om 10:15 uur' zegt wanneer. Dat is een tijdstip.",
             nogSimpeler: "Om 10:15",
           },
@@ -282,7 +282,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Seconden.",
+            basis: "Een knipoog is heel snel voorbij. Kies de kleinste tijdseenheid die je kent.",
             simpeler: "Een knipoog is heel kort. Dus seconden.",
             nogSimpeler: "seconden",
           },
@@ -333,7 +333,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3600 seconden.",
+            basis: "Een uur heeft 60 minuten en elke minuut heeft 60 seconden. Welke keersom hoort daarbij?",
             simpeler: "60 minuten, elk 60 seconden: 60 × 60 = 3600.",
             nogSimpeler: "3600",
           },
@@ -380,7 +380,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "48 uur.",
+            basis: "Hoeveel uur heeft één dag? Neem dat aantal twee keer.",
             simpeler: "24 + 24 = 48.",
             nogSimpeler: "48",
           },
@@ -427,7 +427,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "200 minuten.",
+            basis: "Reken eerst de 3 hele uren om naar minuten. Tel daarna de 20 minuten erbij.",
             simpeler: "3 × 60 = 180. 180 + 20 = 200.",
             nogSimpeler: "200",
           },
@@ -479,7 +479,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 minuten en 50 seconden.",
+            basis: "Haal er telkens 60 seconden af: zo vaak als dat lukt, zoveel hele minuten heb je. Wat overblijft, zijn de seconden.",
             simpeler: "2 × 60 = 120. 170 − 120 = 50. Dus 2 minuten en 50 seconden.",
             nogSimpeler: "2 min 50 s",
           },
@@ -865,7 +865,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "19:30 + 1u 50min = 21:20." }],
           basiskennis: [{ onderwerp: "60 niet 100", uitleg: "Tijd is niet tientallig." }],
           niveaus: {
-            basis: "19:30 + 1u 50min = 21:20.",
+            basis: "Tel eerst het hele uur bij 19:30 op. Tel daarna de 50 minuten erbij: eerst tot het volgende hele uur, dan de rest.",
             simpeler: "Voeg eerst 1 uur toe: 19:30 → 20:30. Voeg dan 50 min toe: 20:30 + 50 min = 21:20 (30 + 50 = 80 = 1u 20).",
             nogSimpeler: "21:20",
           },
@@ -920,7 +920,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15:15.",
+            basis: "Tel eerst het hele uur bij 13:50 op. Tel daarna de minuten erbij: eerst tot het volgende hele uur, dan de rest.",
             simpeler: "13:50 plus 1 uur is 14:50. Plus 25 minuten: 10 minuten tot 15:00 en nog 15 minuten. Dat is 15:15.",
             nogSimpeler: "15:15",
           },
@@ -962,7 +962,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 uur 35 min.",
+            basis: "Tel de minuten van beide dagen bij elkaar op. Komt er meer dan 60 uit? Maak er dan een uur en minuten van.",
             simpeler: "45 + 50 = 95 minuten. 95 − 60 = 35. Dus 1 uur en 35 minuten.",
             nogSimpeler: "1u 35m",
           },
@@ -1004,7 +1004,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18:35.",
+            basis: "Eerder betekent terugtellen. Tel eerst terug tot het hele uur 19:00 en kijk hoeveel minuten je dan nog terug moet.",
             simpeler: "19:15 − 15 minuten is 19:00. Nog 25 minuten terug: 18:35.",
             nogSimpeler: "18:35",
           },
@@ -1046,7 +1046,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "45 minuten.",
+            basis: "De hele reis min het stuk dat al gereden is, is wat er nog over is. Maak eerst van de uren minuten als dat makkelijker rekent.",
             simpeler: "2 uur 15 min is 135 minuten. 1 uur 30 min is 90 minuten. 135 − 90 = 45 minuten.",
             nogSimpeler: "45 min",
           },
@@ -1088,7 +1088,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16:35.",
+            basis: "Reken terug vanaf 18:00: eerst het hele uur terug, dan de minuten terug.",
             simpeler: "18:00 terug 1 uur is 17:00. Nog 25 minuten terug is 16:35.",
             nogSimpeler: "16:35",
           },
@@ -1139,7 +1139,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 uur 20 min.",
+            basis: "Tel eerst de uren bij elkaar op en daarna de minuten. Zijn het samen meer dan 60 minuten? Maak er dan een extra uur van.",
             simpeler: "Uren: 1 + 1 = 2. Minuten: 35 + 45 = 80 = 1 uur 20 min. Samen 3 uur 20 min.",
             nogSimpeler: "3u 20m",
           },
@@ -1187,7 +1187,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "23:45 + 40 min = 00:25." }],
           basiskennis: [{ onderwerp: "Volgende dag", uitleg: "Na 23:59 komt 00:00, geen 24:00 of 25:00." }],
           niveaus: {
-            basis: "00:25.",
+            basis: "Na 23:59 begint een nieuwe dag bij 00:00. Tel eerst van 23:45 door tot middernacht en daarna de minuten die nog over zijn.",
             simpeler: "23:45 + 15 min = 00:00 (middernacht). Nog 25 min: 00:00 + 25 min = 00:25.",
             nogSimpeler: "00:25",
           },
@@ -1239,7 +1239,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20:30.",
+            basis: "Half negen is een half uur vóór negen uur. Bij een tijd na 12 uur 's middags tel je 12 bij het uur op.",
             simpeler: "Half negen is 8:30. 's Avonds: 8 + 12 = 20. Dus 20:30.",
             nogSimpeler: "20:30",
           },
@@ -1281,7 +1281,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "02:15.",
+            basis: "Tel eerst door tot middernacht (00:00). Kijk hoeveel reistijd er dan nog over is en tel die erbij vanaf 00:00.",
             simpeler: "21:40 + 4 uur = 01:40 (na middernacht). Plus 35 minuten = 02:15.",
             nogSimpeler: "02:15",
           },
@@ -1331,7 +1331,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 uur 45 min.",
+            basis: "Het concert gaat over middernacht heen. Reken eerst van 20:30 tot 00:00 en tel daarna de minuten na middernacht erbij.",
             simpeler: "30 minuten tot 21:00, 3 uur tot middernacht, nog 15 minuten. Samen 3 uur 45 min.",
             nogSimpeler: "3u 45m",
           },
@@ -1373,7 +1373,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16:30.",
+            basis: "Schrijf kwart over vier 's middags eerst in 24-uurstijd. Zoek dan de tijd die daarna komt.",
             simpeler: "Kwart over vier 's middags is 16:15. 16:30 is een kwartier later.",
             nogSimpeler: "16:30",
           },
@@ -1423,7 +1423,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 uur 30 min.",
+            basis: "Klim op: eerst van 07:50 naar het hele uur, dan de hele uren tot 13:00 en dan de minuten tot 13:20.",
             simpeler: "10 minuten tot 08:00, 5 uur tot 13:00, nog 20 minuten. Samen 5 uur 30 min.",
             nogSimpeler: "5u 30m",
           },
@@ -1466,7 +1466,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "30 + 15 + 30 = 75 min = 1u 15 min. 15:00 + 1u 15min = 16:15." }],
           basiskennis: [{ onderwerp: "Niet vergeten pauze", uitleg: "Pauze telt mee in tijdsduur, niet in speelduur." }],
           niveaus: {
-            basis: "16:15.",
+            basis: "Tel alle stukken bij elkaar op: twee helften en de pauze. Tel die tijd daarna op bij 15:00.",
             simpeler: "15:00 + 30 = 15:30 (helft 1). 15:30 + 15 = 15:45 (na pauze). 15:45 + 30 = 16:15 (eind).",
             nogSimpeler: "16:15",
           },
@@ -1515,7 +1515,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 uur 40 min.",
+            basis: "Neem de 20 minuten zo vaak als er schooldagen zijn. Is het meer dan 60 minuten? Maak er dan uren en minuten van.",
             simpeler: "5 × 20 = 100 minuten. 100 − 60 = 40. Dus 1 uur en 40 minuten.",
             nogSimpeler: "1u 40m",
           },
@@ -1561,7 +1561,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 uur 30 min.",
+            basis: "Reken de ochtend en de middag apart uit. Tel die twee daarna bij elkaar op; de middagpauze telt niet mee.",
             simpeler: "Ochtend: 3 uur. Middag: 3 uur 30 min. Samen 6 uur 30 min.",
             nogSimpeler: "6u 30m",
           },
@@ -1616,7 +1616,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 uur 45 min.",
+            basis: "De nacht gaat over middernacht heen. Reken eerst van 20:15 tot 00:00 en tel daarna de uren tot 7:00 erbij.",
             simpeler: "45 minuten tot 21:00, 3 uur tot middernacht, 7 uur tot 7:00. Samen 10 uur 45 min.",
             nogSimpeler: "10u 45m",
           },

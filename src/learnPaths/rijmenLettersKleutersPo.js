@@ -677,7 +677,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tegendeel", tekst: "Groot en **klein** zijn elkaars **tegendeel** — net als warm ☀️ en koud ❄️. Een olifant 🐘 is heel groot, een muis 🐭 past in je hand: die is **klein**!" }],
           niveaus: {
-            basis: "Een muis is klein — het tegendeel van groot. 🐭",
+            basis: "Een muis is het tegenovergestelde van een olifant. Wat is het tegenovergestelde van groot? 🐭",
             simpeler: "Olifant = groot 🐘, muis = klein 🐭.",
             nogSimpeler: "klein",
           },
@@ -692,7 +692,7 @@ const steps = [
           stappen: [{ titel: "Kijk goed", tekst: "Dit groene dier is een **kikker** 🐸! Hij is groen, kan héél ver springen en zegt *kwaak kwaak*! 🎵" }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Doe maar na: kwaak kwaak! En spring er eens bij, net als een kikker! 🐸" }],
           niveaus: {
-            basis: "Dit is een kikker — groen, springt ver en zegt kwaak. 🐸",
+            basis: "Kijk goed: het dier is groen, springt ver en zegt kwaak. Hoe heet dat dier? 🐸",
             simpeler: "Groen en hij zegt kwaak: een kikker!",
             nogSimpeler: "kikker 🐸",
           },

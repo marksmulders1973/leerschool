@@ -156,7 +156,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 × 3 = 15.",
+            basis: "Delen is het omgekeerde van keer. Welke keersom gebruikt dezelfde drie getallen als de deelsom?",
             simpeler: "15 ÷ 3 = 5, dus 5 keer 3 is weer 15.",
             nogSimpeler: "De keersom is 5 × 3 = 15.",
           },
@@ -261,7 +261,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 ÷ 0 mag niet.",
+            basis: "Kijk door welk getal er gedeeld wordt. Door welk getal kun je niet delen, omdat je dan geen groepjes kunt maken?",
             simpeler: "Delen door 0 bestaat niet.",
             nogSimpeler: "6 ÷ 0",
           },
@@ -366,7 +366,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20 : 4 = 20 ÷ 4.",
+            basis: "Het teken : staat voor een rekenbewerking. Welke is dat: erbij, eraf, keer of delen?",
             simpeler: "Het teken : betekent delen.",
             nogSimpeler: "20 : 4 is dezelfde som als 20 ÷ 4.",
           },
@@ -400,7 +400,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Op deze leeftijd weet je tafel-2 al uit je hoofd. ÷ 2 is gewoon andersom: 12 × 2 = 24, dus 24 ÷ 2 = 12." }],
           niveaus: {
-            basis: "24 ÷ 2 = 12 (helft).",
+            basis: "Delen door 2 is iets in twee gelijke helften verdelen. Wat is de helft van 20, en wat de helft van 4?",
             simpeler: "Helft van 24 = 12.",
             nogSimpeler: "12",
           },
@@ -666,7 +666,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "250 ÷ 10 = 25.",
+            basis: "Bij delen door 10 wordt het getal tien keer zo klein. Wat gebeurt er dan met de nul aan het eind?",
             simpeler: "Haal de laatste 0 weg: 250 wordt 25.",
             nogSimpeler: "25",
           },

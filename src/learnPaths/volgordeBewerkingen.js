@@ -85,7 +85,7 @@ const steps = [
           theorie: "Wereldwijde regel: × en ÷ vóór + en −. Anders zou iedereen ander antwoord krijgen.",
           voorbeelden: [{ type: "stap", tekst: "2 + 3×4 = 2 + 12 = 14. (Niet 5×4=20 — dat zou (2+3)×4 zijn met haakjes)." }],
           basiskennis: [{ onderwerp: "Niet links→rechts", uitleg: "Bij rekenen niet zoals bij lezen. Volgorde-regel telt." }],
-          niveaus: { basis: "14.", simpeler: "× eerst: 3×4=12. Dan +: 2+12=14.", nogSimpeler: "14" },
+          niveaus: { basis: "Kijk welk teken sterker is: × of +. Reken dat stukje eerst uit.", simpeler: "× eerst: 3×4=12. Dan +: 2+12=14.", nogSimpeler: "14" },
         },
       },
       {
@@ -99,7 +99,7 @@ const steps = [
           theorie: "HMVDOA-volgorde: Haakjes → Machten → × en ÷ → + en −.",
           voorbeelden: [{ type: "tabel", tekst: "5+2×3 = 5+6=11. Niet 7×3=21." }],
           basiskennis: [{ onderwerp: "Wereldregel", uitleg: "Iedereen volgt zelfde volgorde — anders chaos." }],
-          niveaus: { basis: "Vermenigvuldigen.", simpeler: "× is sterker dan +. Doe altijd eerst de × in een som met beide.", nogSimpeler: "×" },
+          niveaus: { basis: "Denk aan het ezelsbruggetje HMVDOA. Welke van de twee bewerkingen staat daarin eerder?", simpeler: "× is sterker dan +. Doe altijd eerst de × in een som met beide.", nogSimpeler: "×" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -140,7 +140,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16.",
+            basis: "Sanne vergat de volgorde-regel. Welk stukje van de som moet je eerst uitrekenen?",
             simpeler: "× eerst: 2×5 = 10. Dan 6 + 10 = 16.",
             nogSimpeler: "16",
           },
@@ -183,7 +183,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9 ÷ 3.",
+            basis: "Kijk naar de twee tekens in de som. Welke van de twee is het sterkst?",
             simpeler: "Delen gaat vóór aftrekken. Dus eerst 9 ÷ 3.",
             nogSimpeler: "9 ÷ 3",
           },
@@ -226,7 +226,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18.",
+            basis: "Zoek eerst de deelsom en reken die uit. Pas daarna doe je de min.",
             simpeler: "÷ eerst: 8÷4 = 2. Dan 20 − 2 = 18.",
             nogSimpeler: "18",
           },
@@ -274,7 +274,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Anders krijgt iedereen een ander antwoord.",
+            basis: "Stel dat de een van links naar rechts rekent en de ander met de × begint. Wat gebeurt er dan met hun uitkomsten?",
             simpeler: "Zonder afspraak rekent iedereen anders. Dan krijg je verschillende antwoorden.",
             nogSimpeler: "Zelfde antwoord",
           },
@@ -317,7 +317,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10.",
+            basis: "Delen is sterker dan plus. Reken eerst de deelsom uit en tel daarna op.",
             simpeler: "÷ eerst: 12÷2 = 6. Dan 4 + 6 = 10.",
             nogSimpeler: "10",
           },
@@ -614,7 +614,7 @@ const steps = [
           theorie: "Haakjes = baas. Negeren volgorde-regel als nodig.",
           voorbeelden: [{ type: "vergelijk", tekst: "Zonder haakjes: 4+6×3 = 4+18 = 22. Met haakjes: (4+6)×3 = 30." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Haakjes maken altijd verschil. Lees zorgvuldig." }],
-          niveaus: { basis: "30.", simpeler: "Haakjes eerst: 4+6=10. Dan ×3=30.", nogSimpeler: "30" },
+          niveaus: { basis: "Wat tussen haakjes staat, reken je altijd als eerste uit. Doe daarna pas de keersom.", simpeler: "Haakjes eerst: 4+6=10. Dan ×3=30.", nogSimpeler: "30" },
         },
       },
       {
@@ -628,7 +628,7 @@ const steps = [
           theorie: "Volgorde: 1) haakjes, 2) ×, 3) − (gewoon van links naar rechts bij gelijke prioriteit).",
           voorbeelden: [{ type: "stap", tekst: "3×(4+2)-1 → 3×6-1 → 18-1 = 17." }],
           basiskennis: [{ onderwerp: "Niet 3×(4+2-1)", uitleg: "−1 hoort niet bij haakjes." }],
-          niveaus: { basis: "17.", simpeler: "(4+2)=6. 3×6=18. 18-1=17.", nogSimpeler: "17" },
+          niveaus: { basis: "Begin met de haakjes. Doe daarna de keersom en als laatste de min.", simpeler: "(4+2)=6. 3×6=18. 18-1=17.", nogSimpeler: "17" },
         },
       },
       {
@@ -1113,7 +1113,7 @@ const steps = [
           theorie: "Volgorde: ÷ vóór + en −. Daarna + en − op volgorde van links naar rechts.",
           voorbeelden: [{ type: "stap", tekst: "8 − 4÷2 + 1 = 8 − 2 + 1 = 6 + 1 = 7." }],
           basiskennis: [{ onderwerp: "Niet (8-4)÷2+1", uitleg: "Geen haakjes — ÷ eerst, dan rest." }],
-          niveaus: { basis: "7.", simpeler: "÷ eerst: 4÷2=2. Som = 8-2+1 = 7.", nogSimpeler: "7" },
+          niveaus: { basis: "Reken eerst de deelsom uit. Doe daarna de min en de plus van links naar rechts.", simpeler: "÷ eerst: 4÷2=2. Som = 8-2+1 = 7.", nogSimpeler: "7" },
         },
       },
       {
@@ -1127,7 +1127,7 @@ const steps = [
           theorie: "(a+b)² = bereken eerst (a+b), dan kwadraat. NIET a²+b²!",
           voorbeelden: [{ type: "stap", tekst: "(2+3)² = 5² = 25. NIET 4+9=13." }],
           basiskennis: [{ onderwerp: "Veelfout", uitleg: "Veel leerlingen denken (a+b)² = a²+b². Fout. Eerst haakjes." }],
-          niveaus: { basis: "20.", simpeler: "Haakjes 2+3=5. Macht 5²=25. -5 = 20.", nogSimpeler: "20" },
+          niveaus: { basis: "Eerst de haakjes, dan de macht, en als laatste de min.", simpeler: "Haakjes 2+3=5. Macht 5²=25. -5 = 20.", nogSimpeler: "20" },
         },
       },
       {
@@ -1141,7 +1141,7 @@ const steps = [
           theorie: "Macht heeft hogere prioriteit dan ×. Dus 3×2² = 3×(2²) = 3×4 = 12.",
           voorbeelden: [{ type: "stap", tekst: "3×2²+4 = 3×4+4 = 12+4 = 16." }],
           basiskennis: [{ onderwerp: "Niet (3×2)²", uitleg: "Geen haakjes om 3×2 — macht hangt alleen aan 2." }],
-          niveaus: { basis: "16.", simpeler: "2² eerst = 4. 3×4 = 12. +4 = 16.", nogSimpeler: "16" },
+          niveaus: { basis: "Machten gaan vóór keer. Welk stukje reken je dus als eerste uit?", simpeler: "2² eerst = 4. 3×4 = 12. +4 = 16.", nogSimpeler: "16" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1182,7 +1182,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "× en ÷.",
+            basis: "Schrijf het rijtje HMVDOA op. Haakjes is stap 1, machten stap 2. Wat komt daarna?",
             simpeler: "Haakjes, machten, dan × en ÷.",
             nogSimpeler: "× en ÷",
           },
@@ -1225,7 +1225,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "28.",
+            basis: "Begin met de macht. Doe daarna de keersom en tel pas als laatste op.",
             simpeler: "3² = 9. 2 × 9 = 18. 10 + 18 = 28.",
             nogSimpeler: "28",
           },
@@ -1268,7 +1268,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2.",
+            basis: "Reken eerst de haakjes uit. Deel dan, en trek als laatste af.",
             simpeler: "12 ÷ 4 = 3. 3 − 1 = 2.",
             nogSimpeler: "2",
           },
@@ -1311,7 +1311,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5² uitrekenen.",
+            basis: "De haakjes heb je gehad. Welke stap komt in HMVDOA direct na de haakjes?",
             simpeler: "Na de haakjes komt de macht: 5².",
             nogSimpeler: "5²",
           },
@@ -1354,7 +1354,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16.",
+            basis: "Werk het rijtje af: eerst haakjes, dan de macht, dan keer en als laatste plus.",
             simpeler: "(5 − 3) = 2. 2² = 4. 3 × 4 = 12. 4 + 12 = 16.",
             nogSimpeler: "16",
           },
@@ -1397,7 +1397,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8.",
+            basis: "Reken eerst de macht uit. Delen en keer zijn even sterk, die doe je daarna van links naar rechts.",
             simpeler: "3² = 9. 36 ÷ 9 = 4. 4 × 2 = 8.",
             nogSimpeler: "8",
           },
@@ -1426,7 +1426,7 @@ const steps = [
           theorie: "× en ÷ even sterk → links naar rechts. Niet eerst alle ÷ doen.",
           voorbeelden: [{ type: "stap", tekst: "18÷(1+2)×4 = 18÷3×4 = 6×4 = 24." }],
           basiskennis: [{ onderwerp: "Niet 18÷(3×4)", uitleg: "× komt LATER, niet eerst. Eerst ÷ links, dan ×." }],
-          niveaus: { basis: "24.", simpeler: "Haakjes:1+2=3. Dan 18÷3=6. Dan 6×4=24.", nogSimpeler: "24" },
+          niveaus: { basis: "Begin met de haakjes. Delen en keer zijn daarna even sterk, dus reken van links naar rechts.", simpeler: "Haakjes:1+2=3. Dan 18÷3=6. Dan 6×4=24.", nogSimpeler: "24" },
         },
       },
       {
@@ -1440,7 +1440,7 @@ const steps = [
           theorie: "Stap 1: binnen haakjes alle volgorde-regels toepassen. Stap 2: × eromheen.",
           voorbeelden: [{ type: "stap", tekst: "2×(4+3²) = 2×(4+9) = 2×13 = 26." }],
           basiskennis: [{ onderwerp: "Niet 2×4+3²", uitleg: "Haakjes om 4+3² — die hele groep wordt × 2." }],
-          niveaus: { basis: "26.", simpeler: "Binnen haakjes: 3²=9, 4+9=13. Dan 2×13=26.", nogSimpeler: "26" },
+          niveaus: { basis: "Binnen de haakjes gaat de macht vóór de plus. Reken eerst de haakjes helemaal uit.", simpeler: "Binnen haakjes: 3²=9, 4+9=13. Dan 2×13=26.", nogSimpeler: "26" },
         },
       },
       {
@@ -1454,7 +1454,7 @@ const steps = [
           theorie: "Strikte volgorde: H → M → × → −. Doe ze één voor één.",
           voorbeelden: [{ type: "stap", tekst: "(5+1)²-4×3 = 6²-12 = 36-12 = 24." }],
           basiskennis: [{ onderwerp: "Niet 6²-4×3 = 32×3", uitleg: "× heeft eigen niveau, niet aan haakjes/macht plakken." }],
-          niveaus: { basis: "24.", simpeler: "(5+1)²=36. 4×3=12. 36-12=24.", nogSimpeler: "24" },
+          niveaus: { basis: "Doe eerst de haakjes met de macht, en daarna de keersom. Trek pas als laatste af.", simpeler: "(5+1)²=36. 4×3=12. 36-12=24.", nogSimpeler: "24" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1495,7 +1495,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "18.",
+            basis: "Begin bij de binnenste haakjes en werk zo naar buiten.",
             simpeler: "5 − 1 = 4. 2 + 4 = 6. 3 × 6 = 18.",
             nogSimpeler: "18",
           },
@@ -1538,7 +1538,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "31.",
+            basis: "Reken de macht en de haakjes apart uit. Doe daarna de keersom en als laatste de min.",
             simpeler: "7² = 49. 3 × 6 = 18. 49 − 18 = 31.",
             nogSimpeler: "31",
           },
@@ -1586,7 +1586,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Fout, het moet minder dan 100 zijn.",
+            basis: "Schat eerst: je begint bij 100 en er gaat iets af. Wat zegt dat over hoe groot de uitkomst kan zijn?",
             simpeler: "100 min iets is altijd minder dan 100. Goed is 46.",
             nogSimpeler: "Fout",
           },
@@ -1629,7 +1629,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "21.",
+            basis: "Reken de stukken links en rechts van de plus apart uit met de volgorde-regel. Tel ze daarna op.",
             simpeler: "18 + 3 = 21.",
             nogSimpeler: "21",
           },
@@ -1653,7 +1653,7 @@ const steps = [
           theorie: "Klassieke valkuil-som. Antwoord 14 = (3+4)×2, maar er staan geen haakjes.",
           voorbeelden: [{ type: "stap", tekst: "3 + 4×2 = 3 + 8 = 11." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Twijfel? × heeft altijd voorrang op +." }],
-          niveaus: { basis: "11.", simpeler: "× eerst: 4×2=8. Dan 3+8=11.", nogSimpeler: "11" },
+          niveaus: { basis: "Welk teken is sterker: + of ×? Reken dat stukje eerst uit.", simpeler: "× eerst: 4×2=8. Dan 3+8=11.", nogSimpeler: "11" },
         },
       },
       {
@@ -1667,7 +1667,7 @@ const steps = [
           theorie: "Haakjes forceren: 6-2 wordt 4, dan ×5=20. Zonder haakjes zou ×5 eerst, dan -.",
           voorbeelden: [{ type: "stap", tekst: "(6-2)×5 = 4×5 = 20." }],
           basiskennis: [{ onderwerp: "Vergelijk", uitleg: "6-2×5 (geen haakjes) = 6-10 = -4. Wel haakjes = 20." }],
-          niveaus: { basis: "20.", simpeler: "(6-2)=4. 4×5=20.", nogSimpeler: "20" },
+          niveaus: { basis: "Wat tussen haakjes staat, doe je eerst. Daarna pas de keersom.", simpeler: "(6-2)=4. 4×5=20.", nogSimpeler: "20" },
         },
       },
       {
@@ -1681,7 +1681,7 @@ const steps = [
           theorie: "Macht: kleine 2 betekent vermenigvuldig 2 keer met zichzelf. NIET +5 of ×2.",
           voorbeelden: [{ type: "tabel", tekst: "5²=25. 6²=36. 7²=49. 10²=100." }],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "Kwadraten 1-10: 1,4,9,16,25,36,49,64,81,100." }],
-          niveaus: { basis: "25.", simpeler: "5² = 5×5 = 25. (Niet 5+5=10, niet 5×2=10).", nogSimpeler: "25" },
+          niveaus: { basis: "Het kleine getal zegt hoe vaak de 5 in de keersom staat. Het is dus niet 5 × 2.", simpeler: "5² = 5×5 = 25. (Niet 5+5=10, niet 5×2=10).", nogSimpeler: "25" },
         },
       },
       {
@@ -1695,7 +1695,7 @@ const steps = [
           theorie: "Bij meerdere × en ÷ in 1 som: doe ze ALLE eerst, dan + en −.",
           voorbeelden: [{ type: "stap", tekst: "12÷4 + 3×2 = 3 + 6 = 9." }],
           basiskennis: [{ onderwerp: "Niet 12÷7×2", uitleg: "+ scheidt de twee multiplicatieve groepen. Doe ze los." }],
-          niveaus: { basis: "9.", simpeler: "12÷4=3. 3×2=6. 3+6=9.", nogSimpeler: "9" },
+          niveaus: { basis: "Reken de deelsom en de keersom eerst apart uit. Tel ze daarna bij elkaar op.", simpeler: "12÷4=3. 3×2=6. 3+6=9.", nogSimpeler: "9" },
         },
       },
       {
@@ -1709,7 +1709,7 @@ const steps = [
           theorie: "HMVDOA-niveau: × en ÷ = niveau 3. + en − = niveau 4. Lager nummer = eerst.",
           voorbeelden: [{ type: "tabel", tekst: "× sterker dan + ja. − even sterk als +. + is zelf niet het sterkst." }],
           basiskennis: [{ onderwerp: "Eigenlijk allebei", uitleg: "× en ÷ zijn allebei sterker dan +. Hier staat alleen × tussen de keuzes." }],
-          niveaus: { basis: "× (vermenigvuldigen).", simpeler: "× en ÷ zijn sterker dan + en −. Dus × is het antwoord.", nogSimpeler: "×" },
+          niveaus: { basis: "Denk aan HMVDOA. Welke bewerkingen komen daarin vóór optellen en aftrekken?", simpeler: "× en ÷ zijn sterker dan + en −. Dus × is het antwoord.", nogSimpeler: "×" },
         },
       },
       { q: "Bereken: 2 + 3 × 4 = ?", options: ["14","20","24","9"], answer: 0, wrongHints: [null, "Rekende je eerst 2 + 3? Welke bewerking gaat vóór de +?", null, null] },

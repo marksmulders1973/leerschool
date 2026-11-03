@@ -72,7 +72,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Homo sapiens = 300.000 jaar. Aarde = 4,5 miljard. Verschil = 15.000x! Wij zijn een klein vlekje in aarde-geschiedenis." }],
           niveaus: {
-            basis: "~300.000 jaar.",
+            basis: "De moderne mens is jong vergeleken met de aarde, maar veel ouder dan de eerste steden en het schrift (zo'n 5000 jaar geleden). Welk antwoord past daarbij?",
             simpeler: "Moderne mens (Homo sapiens) is een vrij jonge soort, ~300.000 jaar.",
             nogSimpeler: "300.000 jaar",
           },
@@ -100,7 +100,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud cijfer: 66 mln jaar geleden = einde dino's. Niet door mens (kwam veel later), niet alleen vulkaan." }],
           niveaus: {
-            basis: "Dino's stierven 66 mln jaar geleden uit door planetoïde-inslag.",
+            basis: "Er gebeurde iets plotseling dat de hele wereld raakte, en de mens bestond toen nog lang niet. Kwam de oorzaak van de aarde zelf of van buiten de aarde?",
             simpeler: "Grote rotssteen uit ruimte stortte neer → stof → geen zon → uitsterving.",
             nogSimpeler: "Meteoriet uit ruimte!",
           },
@@ -211,7 +211,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Fossiel = STEEN in vorm van oud dier/plant. Niet levend, niet plastic. Vereist miljoenen jaren om te vormen." }],
           niveaus: {
-            basis: "Versteende resten van oude wezens.",
+            basis: "Fossielen vind je diep in gesteente en ze zijn miljoenen jaren oud. Gaat het om dieren van nu, of om iets van heel lang geleden?",
             simpeler: "Botten + schelpen van lang geleden, nu versteend in gesteente.",
             nogSimpeler: "Versteende botten",
           },

@@ -60,7 +60,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Welk woord is het werkwoord?", tekst: "'Regende' beschrijft wat er gebeurt en verandert met de tijd (regent/regende). Dat is de persoonsvorm." }],
           niveaus: {
-            basis: "Zoek het werkwoord: wat gebeurt er? Het regende.",
+            basis: "Zet de zin in een andere tijd (vandaag in plaats van gisteren). Welk woord verandert dan?",
             simpeler: "Welk woord vertelt wat er aan de hand was met het weer?",
             nogSimpeler: "Wat deed het buiten? Het … (werkwoord).",
           },
@@ -88,7 +88,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Maak een vraag", tekst: "Vraag: 'Schrijft de leraar iets op het bord?' → 'schrijft' springt vooraan. Dat is de persoonsvorm." }],
           niveaus: {
-            basis: "'schrijft' is het werkwoord dat met de tijd verandert (schreef).",
+            basis: "Zet de zin in de verleden tijd. Welk woord verandert dan?",
             simpeler: "Wat doet de leraar? Dat woord is de persoonsvorm.",
             nogSimpeler: "Welk woord beschrijft de handeling?",
           },
@@ -102,7 +102,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verleden tijd: fietsten", tekst: "Zet in de verleden tijd: 'Wij fietsten elke dag.' 'Fietsen' wordt 'fietsten' — dat verandert, dus het is de persoonsvorm." }],
           niveaus: {
-            basis: "'fietsen' verandert met de tijd (fietsten) → persoonsvorm.",
+            basis: "Zet de zin in de verleden tijd. Welk woord verandert dan?",
             simpeler: "Welk woord beschrijft wat wij doen?",
             nogSimpeler: "Wat doen wij elke dag? Dat woord is de persoonsvorm.",
           },
@@ -160,7 +160,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De persoonsvorm verandert met de tijd: leest wordt las.",
+            basis: "Zeg de zin hardop alsof het gisteren gebeurde. Welk woord klinkt dan anders?",
             simpeler: "Wat doet Lisa met het boek? Dat woord verandert.",
             nogSimpeler: "Wat doet Lisa? Dat woord wordt anders in de verleden tijd.",
           },
@@ -202,7 +202,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Onderwerp staat niet altijd vooraan", tekst: "Persoonsvorm = 'spelen'. Vraag: wie spelen? Antwoord: 'twee meisjes' — ook al staat het achteraan." }],
           niveaus: {
-            basis: "Vraag bij de persoonsvorm 'spelen': wie spelen er? Twee meisjes.",
+            basis: "Zoek eerst de persoonsvorm. Vraag dan: wie of wat doet dat?",
             simpeler: "Wie zijn er aan het spelen in de tuin?",
             nogSimpeler: "Wie doen er iets? Twee …",
           },
@@ -216,7 +216,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie komt er?", tekst: "Persoonsvorm = 'komt'. Vraag: wie komt? Antwoord: 'oma'. Dat is het onderwerp." }],
           niveaus: {
-            basis: "Vraag bij 'komt': wie komt er op bezoek? Oma.",
+            basis: "Zoek eerst de persoonsvorm. Vraag dan: wie of wat komt er op bezoek?",
             simpeler: "Wie komt er langs?",
             nogSimpeler: "Wie komt er? …",
           },
@@ -381,7 +381,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'A en B' is samen meervoud", tekst: "Het meisje én haar broer = twee personen = meervoud, dus 'spelen'." }],
           niveaus: {
-            basis: "Twee personen met 'en' ertussen tellen als meervoud → 'spelen'.",
+            basis: "Kijk wie het doen: is dat één persoon of zijn het er meer? Kies het werkwoord dat daarbij past.",
             simpeler: "Hoeveel personen spelen er? Twee. Dus meervoud.",
             nogSimpeler: "Meisje + broer = meer dan één → spelen.",
           },
@@ -542,7 +542,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Welk werkwoord verandert met de tijd?", tekst: "Tegenwoordige tijd: 'beginnen de lessen weer'. 'Begonnen/beginnen' verandert → persoonsvorm." }],
           niveaus: {
-            basis: "Zoek het werkwoord dat met de tijd verandert: begonnen.",
+            basis: "Zet de zin in de tegenwoordige tijd. Welk woord verandert dan?",
             simpeler: "Wat gebeurde er na de pauze? Dat werkwoord is de persoonsvorm.",
             nogSimpeler: "Welk woord betekent 'startten'?",
           },
@@ -556,7 +556,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie speelden?", tekst: "Persoonsvorm = 'speelden'. Vraag: wie speelden er? 'Veel kinderen' = onderwerp." }],
           niveaus: {
-            basis: "Vraag bij 'speelden': wie speelden er op het plein? Veel kinderen.",
+            basis: "Zoek eerst de persoonsvorm. Vraag dan: wie of wat deed dat op het plein?",
             simpeler: "Wie waren er aan het spelen?",
             nogSimpeler: "Wie speelden er? Veel …",
           },
@@ -589,7 +589,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bij een vraag staat de pv vooraan", tekst: "In een vraag springt de persoonsvorm naar voren: 'Heeft'. 'Gegeten' verandert niet met de tijd (had gegeten)." }],
           niveaus: {
-            basis: "In een ja/nee-vraag is de persoonsvorm het eerste werkwoord: heeft.",
+            basis: "In een ja/nee-vraag staat de persoonsvorm vooraan. Welk werkwoord staat het eerst?",
             simpeler: "Welk woord wordt 'had' in de verleden tijd?",
             nogSimpeler: "Welk werkwoord staat helemaal vooraan in de vraag?",
           },
@@ -603,7 +603,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Welk werkwoord verandert?", tekst: "Tegenwoordige tijd: 'woont'. 'woonde/woont' verandert met de tijd → persoonsvorm." }],
           niveaus: {
-            basis: "'woonde' verandert met de tijd (woont) → persoonsvorm.",
+            basis: "Zet de zin in de tegenwoordige tijd (nu in plaats van vroeger). Welk woord verandert dan?",
             simpeler: "Welk woord vertelt wat de familie deed?",
             nogSimpeler: "Wat deed de familie? Dat werkwoord is de persoonsvorm.",
           },
@@ -617,7 +617,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wie belden?", tekst: "Persoonsvorm = 'belden'. Vraag: wie belden er? Antwoord: 'drie vrienden' — ook al staat het niet vooraan." }],
           niveaus: {
-            basis: "Vraag bij 'belden': wie belden er? Drie vrienden.",
+            basis: "Zoek eerst de persoonsvorm. Vraag dan: wie of wat deed dat vanochtend?",
             simpeler: "Wie deden er iets in deze zin?",
             nogSimpeler: "Wie belden er tegelijk?",
           },

@@ -169,7 +169,7 @@ const steps = [
             { titel: "Wat zie je?", tekst: "4 even lange kanten met 4 rechte hoeken: een vierkant. Rob staat aan het eind weer waar hij begon." },
           ],
           niveaus: {
-            basis: "4 kanten met elke keer een kwartslag draaien = een vierkant.",
+            basis: "Teken het na op papier: een lijntje, een kwartslag draaien, en dat vier keer. Hoeveel kanten en hoeken krijg je, en zijn ze even lang?",
             simpeler: "Teken het op papier: streep, draaien, streep, draaien… Welke vorm heeft 4 kanten en 4 rechte hoeken?",
             nogSimpeler: "Welke vorm heeft 4 even lange kanten?",
           },
@@ -187,7 +187,7 @@ const steps = [
           ],
           woorden: [{ woord: "als-dan", uitleg: "Een keuze: als iets waar is, doe dit. Anders doe dat." }],
           niveaus: {
-            basis: "Groen is niet rood, dus geldt het ANDERS-deel: doorlopen.",
+            basis: "Kijk eerst of het ALS-deel klopt: is het stoplicht nu rood? Zo niet, dan geldt het andere deel van de regel.",
             simpeler: "Is het licht rood? Nee. Wat staat er na ANDERS?",
             nogSimpeler: "Wat doe jij zelf bij groen licht?",
           },
@@ -300,7 +300,7 @@ const steps = [
             { titel: "Een beestje in de machine", tekst: "Bug is Engels voor 'beestje'. Programmeurs noemen een fout zo, alsof er een beestje in het programma zit dat dingen verkeerd laat gaan." },
           ],
           niveaus: {
-            basis: "Een fout in een programma heet een bug.",
+            basis: "Een lus herhaalt iets, een algoritme is een stappenplan en een variabele onthoudt iets. Welk woord blijft dan over voor een fout?",
             simpeler: "Het Engelse woord voor 'beestje'.",
             nogSimpeler: "Begint met een b.",
           },
@@ -398,7 +398,7 @@ const steps = [
             { titel: "Dan ANDERS", tekst: "Het spel zegt wat na ANDERS staat: 'Probeer opnieuw'." },
           ],
           niveaus: {
-            basis: "8 is minder dan 10, dus het ANDERS-deel: 'Probeer opnieuw'.",
+            basis: "Vergelijk eerst je punten met de grens: heb je 10 punten of meer? Zo niet, dan geldt het ANDERS-deel.",
             simpeler: "Is 8 groter of kleiner dan 10?",
             nogSimpeler: "Heb je genoeg punten om te winnen?",
           },

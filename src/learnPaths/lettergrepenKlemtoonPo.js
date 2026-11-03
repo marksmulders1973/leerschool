@@ -71,7 +71,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eén klap", tekst: "'Hond' spreek je in één keer uit: 1 lettergreep. De andere woorden hebben er meer." }],
           niveaus: {
-            basis: "'hond' = 1 lettergreep.",
+            basis: "Klap elk woord in stukjes. Bij welk woord klap je maar één keer?",
             simpeler: "Bij welk woord hoor je maar één klap?",
             nogSimpeler: "Welk woord is het kortst om uit te spreken?",
           },
@@ -177,7 +177,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "ta-fel", tekst: "Eén medeklinker (f) tussen twee klinkers gaat naar de volgende lettergreep: ta-fel." }],
           niveaus: {
-            basis: "ta-fel: de f gaat naar de tweede klap.",
+            basis: "Zeg het woord langzaam en klap mee. Een lange klank staat aan het eind van een klap: hoort de f dan bij de eerste of bij de tweede klap?",
             simpeler: "Spreek 'tafel' rustig uit: ta … fel.",
             nogSimpeler: "Waar valt de tweede klap in 'tafel'?",
           },
@@ -191,7 +191,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "kin-de-ren", tekst: "Drie klappen: kin (1), de (2), ren (3). Bij twee medeklinkers (nd) splits je ertussen: kin-de-ren." }],
           niveaus: {
-            basis: "kin-de-ren = 3 lettergrepen.",
+            basis: "Zeg het woord langzaam en klap bij elk stukje. Hoeveel klappen hoor je, en welke letter gaat mee naar de volgende klap?",
             simpeler: "Klap mee: kin — de — ren.",
             nogSimpeler: "Hoeveel klappen in 'kinderen'? Verdeel zo.",
           },
@@ -694,7 +694,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In 'appel' ligt de klemtoon op 'ap' (de eerste lettergreep).",
+            basis: "Zeg elk woord hardop en luister welk stukje je het hardst zegt. Ligt dat stukje vooraan of verderop in het woord?",
             simpeler: "Zeg elk woord hardop: bij welk woord klinkt het eerste stukje het hardst?",
             nogSimpeler: "Zeg 'appel' — klinkt 'ap' of 'pel' harder?",
           },

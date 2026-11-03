@@ -122,7 +122,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Frankrijk → Eiffeltoren → Parijs. Beeldherkenning helpt." }],
           niveaus: {
-            basis: "Parijs = hoofdstad Frankrijk.",
+            basis: "De hoofdstad is de stad waar de regering van een land zit. Welke van deze steden is de grootste en bekendste van Frankrijk?",
             simpeler: "Parijs heeft de Eiffeltoren — Frankrijk.",
             nogSimpeler: "Parijs.",
           },
@@ -185,7 +185,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "27 = sinds Brexit (2020). Niet 28. Niet 50 (= Europa als werelddeel)." }],
           niveaus: {
-            basis: "27 EU-landen.",
+            basis: "In 2020 stapte één groot land uit de EU (de Brexit). Is het aantal landen daardoor groter of kleiner geworden dan eerst?",
             simpeler: "Sinds UK eruit ging (Brexit 2020) heeft de EU 27 landen.",
             nogSimpeler: "27",
           },
@@ -228,7 +228,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Volga (3.530 km).",
+            basis: "De langste rivier van Europa stroomt door het grootste land van Europa. Welk land is dat, en welke rivier stroomt daar?",
             simpeler: "De Volga in Rusland is de langste rivier van Europa.",
             nogSimpeler: "Volga.",
           },
@@ -321,7 +321,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2002.",
+            basis: "Vóór de euro betaalden we in Nederland met de gulden. De euro kwam er een paar jaar na het jaar 2000.",
             simpeler: "Sinds 2002 betalen we met euro's.",
             nogSimpeler: "2002.",
           },
@@ -363,7 +363,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Nijl = #1 lengte. Amazone = #1 water-volume. Allebei top, maar verschillende rangordes." }],
           niveaus: {
-            basis: "De Nijl geldt als de langste rivier ter wereld.",
+            basis: "Twee rivieren strijden om de titel: één in Zuid-Amerika en één in Afrika. Volgens de meeste metingen wint de rivier in Afrika.",
             simpeler: "De Nijl (Egypte/Afrika) is ~6.650 km lang: volgens de meeste metingen de langste rivier ter wereld.",
             nogSimpeler: "Nijl",
           },
@@ -398,7 +398,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Australië-trio: kangoeroe, koala, vogelbekdier. Allemaal uniek voor dit eiland-continent." }],
           niveaus: {
-            basis: "Kangoeroe.",
+            basis: "Leeuwen, tijgers en olifanten leven in Afrika of Azië. Welk dier leeft in het wild alleen in Australië?",
             simpeler: "Kangoeroes huppen rond in Australië en staan op het wapen en munten. Typisch dier.",
             nogSimpeler: "Kangoeroe",
           },
@@ -475,7 +475,7 @@ const steps = [
             { type: "feit", tekst: "De Nijl heeft 2 hoofdtakken: Blauwe Nijl (uit Ethiopië) + Witte Nijl (uit Oeganda)." },
           ],
           basiskennis: [{ onderwerp: "Niet Sahara-rivier", uitleg: "De Nijl loopt DOOR de Sahara maar komt niet uit de Sahara — bron ligt in regenrijk Oost-Afrika." }],
-          niveaus: { basis: "Nijl.", simpeler: "De Nijl is een lange rivier in Afrika die door Egypte stroomt. Belangrijk voor landbouw + oude beschaving.", nogSimpeler: "Nijl" },
+          niveaus: { basis: "Egypte ligt in het noordoosten van Afrika. Welke van deze rivieren stroomt door Afrika naar de Middellandse Zee?", simpeler: "De Nijl is een lange rivier in Afrika die door Egypte stroomt. Belangrijk voor landbouw + oude beschaving.", nogSimpeler: "Nijl" },
         },
       },
       {
@@ -500,7 +500,7 @@ const steps = [
             { type: "feit", tekst: "Caribische deel: Aruba, Curaçao, Sint Maarten zijn LANDEN binnen het Koninkrijk NL. Bonaire/Saba/Sint Eustatius zijn 'bijzondere gemeentes'." },
           ],
           basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Frankrijk grenst NIET aan NL — daar zit België tussen. Toets-instinker." }],
-          niveaus: { basis: "Noordzee.", simpeler: "Ten noorden van Nederland, boven de Waddeneilanden, ligt de Noordzee (water, geen land). Verder weg over zee liggen Schotland en Noorwegen.", nogSimpeler: "Noordzee" },
+          niveaus: { basis: "De Waddenzee ligt tussen de eilanden en het vaste land. Welk water ligt aan de andere kant, aan de noordkant van de eilanden?", simpeler: "Ten noorden van Nederland, boven de Waddeneilanden, ligt de Noordzee (water, geen land). Verder weg over zee liggen Schotland en Noorwegen.", nogSimpeler: "Noordzee" },
         },
       },
       {

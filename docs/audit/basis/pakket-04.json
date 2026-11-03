@@ -1,0 +1,247 @@
+[
+ {
+  "file": "src/learnPaths/klokkijken.js",
+  "items": [
+   {
+    "waar": "klokkijken stap 1 vraag 1",
+    "antwoord": "De uurwijzer",
+    "basis": "De kleine wijzer is de uurwijzer."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 2",
+    "antwoord": "60",
+    "basis": "60 minuten."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 3",
+    "antwoord": "De secondewijzer",
+    "basis": "De secondewijzer."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 4",
+    "antwoord": "Een analoge klok",
+    "basis": "Een analoge klok."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 5",
+    "antwoord": "Wijzers",
+    "basis": "Wijzers."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 6",
+    "antwoord": "12",
+    "basis": "12."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 7",
+    "antwoord": "1 uur",
+    "basis": "1 uur."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 8",
+    "antwoord": "12 uur",
+    "basis": "12 uur."
+   },
+   {
+    "waar": "klokkijken stap 1 vraag 9",
+    "antwoord": "1 minuut",
+    "basis": "1 minuut."
+   },
+   {
+    "waar": "klokkijken stap 2 vraag 1",
+    "antwoord": "9 uur",
+    "basis": "9 uur."
+   },
+   {
+    "waar": "klokkijken stap 2 vraag 3",
+    "antwoord": "21:00",
+    "basis": "21:00."
+   },
+   {
+    "waar": "klokkijken stap 2 vraag 4",
+    "antwoord": "5 uur",
+    "basis": "5 uur."
+   },
+   {
+    "waar": "klokkijken stap 2 vraag 5",
+    "antwoord": "De 6",
+    "basis": "De 6."
+   },
+   {
+    "waar": "klokkijken stap 2 vraag 6",
+    "antwoord": "Allebei op de 12",
+    "basis": "Allebei op de 12."
+   },
+   {
+    "waar": "klokkijken stap 3 vraag 1",
+    "antwoord": "Half 7",
+    "basis": "Half 7."
+   },
+   {
+    "waar": "klokkijken stap 3 vraag 2",
+    "antwoord": "16:30",
+    "basis": "16:30."
+   },
+   {
+    "waar": "klokkijken stap 3 vraag 3",
+    "antwoord": "Tussen 7 en 8",
+    "basis": "Tussen 7 en 8."
+   },
+   {
+    "waar": "klokkijken stap 3 vraag 7",
+    "antwoord": "09:30",
+    "basis": "09:30."
+   },
+   {
+    "waar": "klokkijken stap 3 vraag 8",
+    "antwoord": "12:30",
+    "basis": "12:30."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 1",
+    "antwoord": "Kwart voor 5",
+    "basis": "Kwart voor 5."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 2",
+    "antwoord": "15",
+    "basis": "15 min."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 4",
+    "antwoord": "20:45",
+    "basis": "20:45."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 5",
+    "antwoord": "Kwart voor",
+    "basis": "Kwart voor."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 6",
+    "antwoord": "4",
+    "basis": "4."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 7",
+    "antwoord": "Kwart over 7",
+    "basis": "Kwart over 7."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 8",
+    "antwoord": "Kwart voor 11",
+    "basis": "Kwart voor 11."
+   },
+   {
+    "waar": "klokkijken stap 4 vraag 9",
+    "antwoord": "Half 5",
+    "basis": "Half 5."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 1",
+    "antwoord": "10 voor 4",
+    "basis": "10 voor 4."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 3",
+    "antwoord": "10",
+    "basis": "10 minuten."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 4",
+    "antwoord": "19:10",
+    "basis": "19:10."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 5",
+    "antwoord": "5",
+    "basis": "5."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 6",
+    "antwoord": "09:05",
+    "basis": "09:05."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 7",
+    "antwoord": "10 voor 7",
+    "basis": "10 voor 7."
+   },
+   {
+    "waar": "klokkijken stap 5 vraag 8",
+    "antwoord": "5 over 11",
+    "basis": "5 over 11."
+   },
+   {
+    "waar": "klokkijken stap 6 vraag 1",
+    "antwoord": "9:00 PM",
+    "basis": "9:00 PM."
+   },
+   {
+    "waar": "klokkijken stap 6 vraag 3",
+    "antwoord": "00:00",
+    "basis": "00:00."
+   },
+   {
+    "waar": "klokkijken stap 6 vraag 4",
+    "antwoord": "Het uur",
+    "basis": "Het uur."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 1",
+    "antwoord": "6 uur",
+    "basis": "6 uur."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 2",
+    "antwoord": "2 uur 15 min",
+    "basis": "2 uur 15 min."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 3",
+    "antwoord": "9 uur",
+    "basis": "9 uur."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 4",
+    "antwoord": "2 uur 30 min",
+    "basis": "2 uur 30 min."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 5",
+    "antwoord": "45 min",
+    "basis": "45 min."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 6",
+    "antwoord": "80",
+    "basis": "80."
+   },
+   {
+    "waar": "klokkijken stap 7 vraag 7",
+    "antwoord": "09:10",
+    "basis": "09:10."
+   },
+   {
+    "waar": "klokkijken stap 8 vraag 1",
+    "antwoord": "Kwart over 11",
+    "basis": "Kwart over 11."
+   },
+   {
+    "waar": "klokkijken stap 8 vraag 2",
+    "antwoord": "Half 8",
+    "basis": "Half 8."
+   },
+   {
+    "waar": "klokkijken stap 8 vraag 3",
+    "antwoord": "18:45",
+    "basis": "18:45."
+   },
+   {
+    "waar": "klokkijken stap 8 vraag 4",
+    "antwoord": "1 uur 45 minuten",
+    "basis": "1 uur 45 min."
+   }
+  ]
+ }
+]

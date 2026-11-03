@@ -197,7 +197,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Lijngrafiek = de enige die tijd-verloop laat zien. Andere types tonen momentopname." }],
           niveaus: {
-            basis: "Een lijngrafiek laat zien hoe iets verandert door de tijd.",
+            basis: "Bij welke grafiek kun je met je vinger van links naar rechts volgen of iets stijgt of daalt?",
             simpeler: "Een lijn loopt van vroeg naar laat. Zo zie je hoe iets stijgt of daalt in de tijd.",
             nogSimpeler: "Het is de lijngrafiek.",
           },
@@ -227,7 +227,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag 'welk deel?' of 'welk percentage?' → cirkeldiagram is altijd de beste keuze." }],
           niveaus: {
-            basis: "Een cirkeldiagram laat zien welk deel van het totaal iets is.",
+            basis: "Welke grafiek is één geheel dat in stukken is verdeeld, net als een taart?",
             simpeler: "Een cirkeldiagram is als een taart: de hele taart is alles samen, en elk stuk is een deel van het geheel.",
             nogSimpeler: "Het is het cirkeldiagram.",
           },
@@ -339,7 +339,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "°C is de eenheid voor temperatuur.",
+            basis: "Waar zie je °C staan in het weerbericht? Wat meet je daarmee?",
             simpeler: "°C betekent graden Celsius. Daarmee meet je hoe warm het is.",
             nogSimpeler: "°C staat voor temperatuur.",
           },
@@ -389,7 +389,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Gewicht meet je in kilogram (kg).",
+            basis: "Waarmee meet je hoe zwaar iets is, bijvoorbeeld op de weegschaal? Welke eenheid zie je daar?",
             simpeler: "De grafiek gaat over hoe zwaar de puppy is. Gewicht meet je in kg.",
             nogSimpeler: "Gewicht meet je in kilogram (kg).",
           },
@@ -491,7 +491,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een grafiek met balkjes is een staafdiagram.",
+            basis: "Een cirkeldiagram is rond en een lijngrafiek heeft een lijn. Welke grafiek heeft rechthoekige blokken naast elkaar?",
             simpeler: "Een balkje heet ook een staaf. Een grafiek met balkjes is dus een staafdiagram.",
             nogSimpeler: "Balkjes heten staven, dus het is een staafdiagram.",
           },
@@ -541,7 +541,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tel de balken zorgvuldig. Als de vraag 'maart' zegt, tel niet de balk van februari per ongeluk mee." }],
           niveaus: {
-            basis: "Maart-balk = 40 mm.",
+            basis: "Zoek de balk van maart en volg de bovenkant met je vinger naar links, naar de getallen aan de zijkant.",
             simpeler: "Zoek 'mrt' onderaan. Kijk hoe hoog die balk komt → 40 mm.",
             nogSimpeler: "Maart = 40 mm",
           },
@@ -561,7 +561,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Donderdag = 30, dinsdag = 18. 30 − 18 = 12. Dus 12 kinderen meer." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft 'totaal'. Aftrekken geeft 'verschil'." }],
           niveaus: {
-            basis: "30 − 18 = 12 kinderen.",
+            basis: "Zoek eerst de getallen bij donderdag en dinsdag. 'Hoeveel meer' betekent: het verschil, dus aftrekken.",
             simpeler: "Vergelijk donderdag (30) met dinsdag (18). Verschil = 30 − 18 = 12.",
             nogSimpeler: "12 kinderen",
           },
@@ -1297,7 +1297,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Verwarring", uitleg: "Vraag is naar de NAAM, niet het getal! Antwoord 'voetbal' niet '50%'." }],
           niveaus: {
-            basis: "Voetbal heeft 50% = grootste stuk",
+            basis: "De meeste kinderen horen bij het grootste stuk van de taart. Welk percentage is het hoogst?",
             simpeler: "Welk percentage is het hoogst? 50% → dat hoort bij voetbal. Antwoord = naam: voetbal.",
             nogSimpeler: "Voetbal. Hoogste % wint.",
           },
@@ -1317,7 +1317,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "50% van 20 kinderen = 10 kinderen voetbal." }],
           basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Bij de Doorstroomtoets: schrijf 'kinderen' of de juiste eenheid bij het getal." }],
           niveaus: {
-            basis: "50% × 20 = 10 kinderen.",
+            basis: "50% is de helft. Hoeveel is de helft van de klas?",
             simpeler: "50% is de helft. De helft van 20 = 10. Dus 10 kinderen kiezen voetbal.",
             nogSimpeler: "10 kinderen",
           },
@@ -1346,7 +1346,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "25% = kwart = ÷ 4. Bij klas van 20 = 5. Bij klas van 24 = 6. Bij klas van 28 = 7." }],
           niveaus: {
-            basis: "5 kinderen (20 ÷ 4 = 5).",
+            basis: "25% is een kwart. Verdeel de klas in 4 gelijke groepjes: hoeveel kinderen zitten in één groepje?",
             simpeler: "25% = een kwart. 20 ÷ 4 = 5. Dus 5 kinderen kiezen hockey.",
             nogSimpeler: "5",
           },
@@ -1374,7 +1374,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Cirkel = ALTIJD 100%. Gebruik dit om ontbrekende stukken te berekenen via 100 − rest." }],
           niveaus: {
-            basis: "100% (hele taart = geheel).",
+            basis: "Alle stukken samen vormen de hele taart. Hoeveel procent hoort bij 'alles'?",
             simpeler: "Cirkel = hele iets. Alle stukken samen = hele iets = 100%.",
             nogSimpeler: "100%",
           },
@@ -1481,7 +1481,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "100 − 45 − 30 = 25%.",
+            basis: "Alle stukken samen zijn altijd 100%. Trek appel en banaan daarvan af.",
             simpeler: "Appel en banaan zijn samen 75%. Tot 100% mist nog 25%.",
             nogSimpeler: "25%",
           },
@@ -1582,7 +1582,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een kwart = 25%.",
+            basis: "Het hele diagram is 100%. Verdeel dat in 4 gelijke stukken: hoeveel procent is één stuk?",
             simpeler: "De cirkel in 4 gelijke stukken. 100 ÷ 4 = 25%.",
             nogSimpeler: "25%",
           },
@@ -1619,7 +1619,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag 'welke dag' → antwoord = dag-naam. Vraag 'hoeveel' → antwoord = getal. Tabel-vragen testen vaak die verwisseling." }],
           niveaus: {
-            basis: "Dinsdag (8) is het laagste.",
+            basis: "Zoek in de tabel het kleinste getal. Bij welke dag hoort dat?",
             simpeler: "Zoek het kleinste getal in de tabel: 8 → bij dinsdag.",
             nogSimpeler: "Dinsdag",
           },
@@ -1667,7 +1667,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "30 − 12 = 18. Dus 18 ijsjes meer op vrijdag." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft totaal. Aftrekken geeft verschil." }],
           niveaus: {
-            basis: "30 − 12 = 18 ijsjes.",
+            basis: "Zoek de getallen bij vrijdag en maandag. 'Hoeveel meer' betekent: trek het kleinste getal van het grootste af.",
             simpeler: "Vrijdag = 30. Maandag = 12. Verschil = 30 − 12 = 18 ijsjes meer.",
             nogSimpeler: "18 ijsjes",
           },
@@ -1761,7 +1761,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Daan en Joep (allebei 5).",
+            basis: "Even hoge balken betekenen hetzelfde getal. Welke twee kinderen hebben evenveel doelpunten?",
             simpeler: "Daan heeft 5 en Joep heeft 5. Die balken zijn even hoog.",
             nogSimpeler: "Daan en Joep",
           },
@@ -1864,7 +1864,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In de tabel.",
+            basis: "Waar staan de getallen precies uitgeschreven, en waar moet je ze schatten aan de hoogte van een lijn?",
             simpeler: "In een tabel staat het precieze getal van woensdag. Daar lees je het het makkelijkst.",
             nogSimpeler: "Tabel",
           },
@@ -1949,7 +1949,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij 4+ getallen: tel paren eerst (jan+feb, mrt+apr), dan paren samen. Veiliger dan alles in 1 keer." }],
           niveaus: {
-            basis: "60 + 80 + 40 + 50 = 230 mm.",
+            basis: "'Samen' betekent optellen. Tel de vier maanden één voor één bij elkaar op.",
             simpeler: "Tel alle 4 maanden: jan(60) + feb(80) + mrt(40) + apr(50) = 230 mm.",
             nogSimpeler: "230 mm",
           },
@@ -1977,7 +1977,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "'Aangekomen' = ERBIJ-gekomen = aftrekken (eind − begin)." }],
           niveaus: {
-            basis: "3 kg aangekomen (6 − 3 = 3).",
+            basis: "Aangekomen is het verschil tussen nu en bij de geboorte. Trek het oude gewicht af van het nieuwe.",
             simpeler: "Begin: 3 kg. Eind: 6 kg. Hoeveel ERBIJ gekomen? 6 − 3 = 3 kg.",
             nogSimpeler: "3 kg",
           },
@@ -2007,7 +2007,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "50% = helft = ÷ 2. 25% = kwart = ÷ 4. Onthoud deze 2, dan kun je veel toetsvragen snel oplossen." }],
           niveaus: {
-            basis: "50% van 40 = 40÷2 = 20 kinderen.",
+            basis: "50% is de helft. Hoeveel is de helft van 40 kinderen?",
             simpeler: "50% = de helft. Helft van 40 kinderen = 20.",
             nogSimpeler: "Helft van 40 = 20",
           },
@@ -2036,7 +2036,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Sorteer alle 4 in je hoofd of op kladpapier van klein naar groot. Eerste = minst, laatste = meest. Veiliger dan 'in je hoofd vergelijken'." }],
           niveaus: {
-            basis: "Vogel (4) is het laagst.",
+            basis: "Zoek het kleinste getal in het staafdiagram. Bij welk dier hoort dat?",
             simpeler: "Vergelijk: hond=12, kat=18, vogel=4, vis=6. Laagste = 4 = vogel.",
             nogSimpeler: "Vogel",
           },
@@ -2085,7 +2085,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5, 7, 9, 11, 13 — telkens +2." }],
           basiskennis: [{ onderwerp: "Vast verschil", uitleg: "Als telkens hetzelfde getal erbij komt, is dat het patroon." }],
           niveaus: {
-            basis: "Elke dag 2 meer.",
+            basis: "Kijk hoeveel er van maandag naar dinsdag bij komt. Komt er elke dag evenveel bij?",
             simpeler: "Verschil tussen elke 2 dagen = 2. Dus elke dag 2 koekjes meer.",
             nogSimpeler: "+2 per dag",
           },

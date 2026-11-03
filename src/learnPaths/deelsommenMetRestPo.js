@@ -797,7 +797,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Bij een voetbaltoernooi maakt een trainer teams van 5 uit 37 kinderen: hij rekent uit hoeveel volledige teams dat oplevert." }],
           basiskennis: [{ onderwerp: "Delen met rest", uitleg: "Eerst de rest uitrekenen, dan pas het aantal volledige groepjes bepalen." }],
           niveaus: {
-            basis: "11 groepjes van 4 (44), 1 leerling over.",
+            basis: "Zoek de grootste tafel van 4 die nog in 45 past. Alleen volle groepjes tellen, de leerlingen die overblijven niet.",
             simpeler: "Hoe vaak past 4 helemaal in 45?",
             nogSimpeler: "11 × 4 = 44. Is er een 12e vol groepje?",
           },

@@ -28,7 +28,7 @@ const steps = [
         wrongHints: [null, "Luister naar de laatste klank: t of d?", "Luister naar de middelste klank: a of e?", "Hoor je twee t's? Zeg het maar langzaam."],
         uitlegPad: {
           stappen: [{ titel: "Hakken en schrijven", tekst: "k... a... t... → drie klanken, drie letters: **kat**." }],
-          niveaus: { basis: "Je schrijft: kat.", simpeler: "k-a-t.", nogSimpeler: "kat" },
+          niveaus: { basis: "Zeg het woord heel langzaam en hak het in klanken. Welke klank hoor je eerst?", simpeler: "k-a-t.", nogSimpeler: "kat" },
         },
       },
       {
@@ -38,7 +38,7 @@ const steps = [
         wrongHints: [null, "Luister naar de eerste klank: v of f?", "Hoor je twee s'en? Zeg het maar langzaam.", "Luister naar de middelste klank: i of u?"],
         uitlegPad: {
           stappen: [{ titel: "Hakken en schrijven", tekst: "v... i... s... → **vis**. Drie klanken, drie letters." }],
-          niveaus: { basis: "Je schrijft: vis.", simpeler: "v-i-s.", nogSimpeler: "vis" },
+          niveaus: { basis: "Zeg het woord langzaam. Elke klank die je hoort, schrijf je met één letter.", simpeler: "v-i-s.", nogSimpeler: "vis" },
         },
       },
       {
@@ -48,7 +48,7 @@ const steps = [
         wrongHints: [null, "Hoor je twee s'en aan het einde?", "Luister naar de middelste klank: u of a?", "Luister naar de eerste klank: b of p?"],
         uitlegPad: {
           stappen: [{ titel: "Nalezen", tekst: "b... u... s... → **bus**. Elke klank één letter." }],
-          niveaus: { basis: "Je schrijft: bus.", simpeler: "b-u-s.", nogSimpeler: "bus" },
+          niveaus: { basis: "Hak het woord in drie klanken: wat hoor je eerst, in het midden en aan het einde?", simpeler: "b-u-s.", nogSimpeler: "bus" },
         },
       },
       {
@@ -58,7 +58,7 @@ const steps = [
         wrongHints: [null, "Luister naar de middelste klank: e of a?", "Luister naar de middelste klank: e of i?", "Dat is een lange ee — hoor je die hier?"],
         uitlegPad: {
           stappen: [{ titel: "Plakken en schrijven", tekst: "p... e... n... → **pen**. Daarmee schrijf je!" }],
-          niveaus: { basis: "Je schrijft: pen.", simpeler: "p-e-n.", nogSimpeler: "pen" },
+          niveaus: { basis: "Zeg de drie klanken achter elkaar. Voor elke klank schrijf je één letter.", simpeler: "p-e-n.", nogSimpeler: "pen" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -80,7 +80,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je schrijft: zon.",
+            basis: "Zeg het woord langzaam. Begint het met een s of met een z?",
             simpeler: "z-o-n.",
             nogSimpeler: "zon",
           },
@@ -99,7 +99,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je schrijft: mus.",
+            basis: "Zeg de klanken langzaam achter elkaar en schrijf voor elke klank één letter.",
             simpeler: "m-u-s.",
             nogSimpeler: "mus",
           },
@@ -123,7 +123,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je schrijft: kip.",
+            basis: "Hak het woord in klanken. Welke klank hoor je in het midden?",
             simpeler: "k-i-p.",
             nogSimpeler: "kip",
           },
@@ -147,7 +147,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je schrijft: jas.",
+            basis: "Zeg het woord langzaam en luister naar de eerste klank. Welke letter hoort daarbij?",
             simpeler: "j-a-s.",
             nogSimpeler: "jas",
           },
@@ -207,7 +207,7 @@ const steps = [
         wrongHints: [null, "Dat is de korte a — luister: is de klank kort of lang?", "Daar staan te veel letters.", "Luister nog eens naar de klank in het midden."],
         uitlegPad: {
           stappen: [{ titel: "Lange aa", tekst: "Je hoort een **lange aa**: m-aa-n. Lange klank = twee letters: **maan**." }],
-          niveaus: { basis: "Lange aa = 2 letters: maan.", simpeler: "maaaaan → aa!", nogSimpeler: "maan" },
+          niveaus: { basis: "Zeg het woord langzaam. Is de klank in het midden kort of lang? Een lange klank schrijf je met twee letters.", simpeler: "maaaaan → aa!", nogSimpeler: "maan" },
         },
       },
       {
@@ -217,7 +217,7 @@ const steps = [
         wrongHints: [null, "Dat is de korte o — een 💣! Luister: kort of lang?", "Zeg het woord — hoor je een e aan het einde?", "Luister: is het een oo of een uu?"],
         uitlegPad: {
           stappen: [{ titel: "Lange oo", tekst: "Je hoort een **lange oo**: b-oo-m. Dus twee o's: **boom**. Let op: *bom* met één o is iets heel anders!" }],
-          niveaus: { basis: "Lange oo = 2 letters: boom.", simpeler: "booooom → oo!", nogSimpeler: "boom" },
+          niveaus: { basis: "Rek de middelste klank uit. Hoor je een korte of een lange klank? Lang schrijf je met twee letters.", simpeler: "booooom → oo!", nogSimpeler: "boom" },
         },
       },
       {
@@ -227,7 +227,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop: b-e-l. Klinkt de e lang?", "Zeg het hardop: b-a-l. Klinkt de a lang?", "Zeg het hardop: b-u-s. Klinkt de u lang?"],
         uitlegPad: {
           stappen: [{ titel: "Kort of lang?", tekst: "b-**ee**-n heeft de lange ee (twee letters). bel, bal en bus hebben korte klanken (één letter)." }],
-          niveaus: { basis: "been heeft de lange ee.", simpeler: "beeeeen → lang!", nogSimpeler: "been" },
+          niveaus: { basis: "Zeg elk woord hardop en rek de middelste klank. Bij welk woord klinkt die klank lang?", simpeler: "beeeeen → lang!", nogSimpeler: "been" },
         },
       },
       {
@@ -259,7 +259,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lange oo = 2 letters: boot.",
+            basis: "Is de klank in het midden kort of lang? Een lange klank schrijf je met twee dezelfde letters.",
             simpeler: "booooot → oo!",
             nogSimpeler: "boot",
           },
@@ -283,7 +283,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lange aa = 2 letters: raam.",
+            basis: "Je hoort een lange klank in het midden. Hoeveel letters krijgt een lange klank?",
             simpeler: "raaaaam → aa!",
             nogSimpeler: "raam",
           },
@@ -307,7 +307,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lange aa = 2 letters: kaas.",
+            basis: "Zeg het woord langzaam. Hoor je een lange klank? Die schrijf je met twee letters.",
             simpeler: "kaaaaas → aa!",
             nogSimpeler: "kaas",
           },
@@ -326,7 +326,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lange ee = 2 letters: peer.",
+            basis: "Rek de klank in het midden uit. Een lange klank schrijf je met twee dezelfde letters.",
             simpeler: "peeeeer → ee!",
             nogSimpeler: "peer",
           },
@@ -348,7 +348,7 @@ const steps = [
         wrongHints: [null, "Luister naar de eerste klank: b of p?", "Daar mist een letter — de oe heeft er twee.", "Luister naar de laatste klank: k of c?"],
         uitlegPad: {
           stappen: [{ titel: "De oe-klank", tekst: "b... oe... k... → **boek**. De oe-klank = de letters o en e samen." }],
-          niveaus: { basis: "De oe schrijf je als o+e: boek.", simpeler: "b-oe-k.", nogSimpeler: "boek" },
+          niveaus: { basis: "Welke klank hoor je in het midden? Sommige klanken schrijf je met twee verschillende letters.", simpeler: "b-oe-k.", nogSimpeler: "boek" },
         },
       },
       {
@@ -358,7 +358,7 @@ const steps = [
         wrongHints: [null, "Daar mist een letter — de ie heeft er twee.", "Luister naar de eerste klank: f of v?", "Luister naar het einde: hoor je nog een s?"],
         uitlegPad: {
           stappen: [{ titel: "De ie-klank", tekst: "f... ie... t... s... → **fiets**. De ie-klank = de letters i en e samen." }],
-          niveaus: { basis: "De ie schrijf je als i+e: fiets.", simpeler: "f-ie-t-s.", nogSimpeler: "fiets" },
+          niveaus: { basis: "Hak het woord in klanken. De klank na de f schrijf je met twee letters.", simpeler: "f-ie-t-s.", nogSimpeler: "fiets" },
         },
       },
       {
@@ -368,7 +368,7 @@ const steps = [
         wrongHints: [null, "Dat is de klank van vuur.", "Dat is de klank van boek.", "Dat is de klank van ei."],
         uitlegPad: {
           stappen: [{ titel: "De ui-klank", tekst: "h-**ui**-s. De klank in het midden is de **ui** — de letters u en i samen." }],
-          niveaus: { basis: "In huis zit de ui-klank.", simpeler: "h-ui-s.", nogSimpeler: "ui" },
+          niveaus: { basis: "Zeg het woord langzaam en luister naar de klank tussen de h en de s. Welke twee letters horen bij die klank?", simpeler: "h-ui-s.", nogSimpeler: "ui" },
         },
       },
       {
@@ -378,7 +378,7 @@ const steps = [
         wrongHints: [null, "Daar mist een letter — luister naar de klank in het midden.", "Dat is de oe-klank — luister nog eens.", "Dat is de ui-klank — luister nog eens."],
         uitlegPad: {
           stappen: [{ titel: "De eu-klank", tekst: "r... eu... s... → **reus**. De eu-klank = de letters e en u samen." }],
-          niveaus: { basis: "De eu schrijf je als e+u: reus.", simpeler: "r-eu-s.", nogSimpeler: "reus" },
+          niveaus: { basis: "Luister naar de klank tussen de r en de s. Welk ander woord ken je met diezelfde klank?", simpeler: "r-eu-s.", nogSimpeler: "reus" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -400,7 +400,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De oe schrijf je als o+e: koe.",
+            basis: "Luister naar de klank na de k. Die klank hoor je ook in boek en voet.",
             simpeler: "k-oe.",
             nogSimpeler: "koe",
           },
@@ -424,7 +424,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De ui schrijf je als u+i: muis.",
+            basis: "De middelste klank schrijf je met twee letters. Die klank hoor je ook in huis.",
             simpeler: "m-ui-s.",
             nogSimpeler: "muis",
           },
@@ -443,7 +443,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In mier zit de ie-klank.",
+            basis: "Zeg elk woord hardop en luister naar de klank in het midden. Bij welk woord hoor je dezelfde klank als in fiets?",
             simpeler: "m-ie-r.",
             nogSimpeler: "mier",
           },
@@ -467,7 +467,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De eu schrijf je als e+u: neus.",
+            basis: "Hak het woord in klanken. De middelste klank hoor je ook in reus.",
             simpeler: "n-eu-s.",
             nogSimpeler: "neus",
           },
@@ -491,7 +491,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De oe schrijf je als o+e: voet.",
+            basis: "Luister naar de klank tussen de v en de t. Die klank hoor je ook in koe.",
             simpeler: "v-oe-t.",
             nogSimpeler: "voet",
           },
@@ -532,7 +532,7 @@ const steps = [
         wrongHints: [null, "Bijna — welke letters schrijf je aan het begin van dit woord?", "Er mist een letter aan het begin.", "Bijna — kijk nog eens naar de letters na de s."],
         uitlegPad: {
           stappen: [{ titel: "sch-woord", tekst: "**sch**-oo-l → school. Onthoud: s + c + h aan het begin." }],
-          niveaus: { basis: "School begint met sch.", simpeler: "s-c-h: school.", nogSimpeler: "school" },
+          niveaus: { basis: "Zeg het begin van het woord langzaam. Welke drie letters horen bij die beginklank?", simpeler: "s-c-h: school.", nogSimpeler: "school" },
         },
       },
       {
@@ -542,7 +542,7 @@ const steps = [
         wrongHints: [null, "Bijna — welke letters schrijf je aan het begin van dit woord?", "Luister naar de klank in het midden.", "Er missen letters aan het begin."],
         uitlegPad: {
           stappen: [{ titel: "sch-woord", tekst: "**sch**-oe-n → schoen. Weer s + c + h aan het begin." }],
-          niveaus: { basis: "Schoen begint met sch.", simpeler: "sch + oen.", nogSimpeler: "schoen" },
+          niveaus: { basis: "Luister naar het begin van het woord. Het begint net zo als school.", simpeler: "sch + oen.", nogSimpeler: "schoen" },
         },
       },
       {
@@ -552,7 +552,7 @@ const steps = [
         wrongHints: [null, "Luister naar het einde: hoor je een k?", "Er mist een letter aan het einde.", "Er mist een letter — zeg het langzaam en luister goed naar het einde."],
         uitlegPad: {
           stappen: [{ titel: "-ng aan het einde", tekst: "r-i-**ng** → ring. De eindklank schrijf je met n + g." }],
-          niveaus: { basis: "Ring eindigt op -ng.", simpeler: "ri + ng.", nogSimpeler: "ring" },
+          niveaus: { basis: "Luister goed naar het einde van het woord. Die eindklank schrijf je met twee letters.", simpeler: "ri + ng.", nogSimpeler: "ring" },
         },
       },
       {
@@ -562,7 +562,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop: hoor je aan het einde een d?", "Zeg het hardop: hoor je aan het einde een p?", "Zeg het hardop: hoor je aan het einde een ng-klank?"],
         uitlegPad: {
           stappen: [{ titel: "Luister naar het einde", tekst: "l-a-**ng**: daar hoor je de ng-klank. land, lamp en las eindigen anders." }],
-          niveaus: { basis: "Lang eindigt op -ng.", simpeler: "laaa-ng!", nogSimpeler: "lang" },
+          niveaus: { basis: "Zeg elk woord hardop en luister naar de laatste klank. Bij welk woord klinkt het einde zoals bij ring?", simpeler: "laaa-ng!", nogSimpeler: "lang" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -579,7 +579,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Slang eindigt op -ng.",
+            basis: "Luister naar het einde van het woord. Het eindigt net zo als ring.",
             simpeler: "sla + ng.",
             nogSimpeler: "slang",
           },
@@ -603,7 +603,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Schip begint met sch.",
+            basis: "Luister naar het begin van het woord. Het begint net zo als school.",
             simpeler: "sch + ip.",
             nogSimpeler: "schip",
           },
@@ -622,7 +622,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Schaar begint met sch.",
+            basis: "Zeg elk woord hardop. Bij welk woord begint het net zo als school?",
             simpeler: "sch + aar.",
             nogSimpeler: "schaar",
           },
@@ -646,7 +646,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Schommel begint met sch.",
+            basis: "Zeg het woord hardop. Hoor je aan het begin eerst een s en dan een g-klank? Die klank schrijf je met drie letters.",
             simpeler: "sch + ommel.",
             nogSimpeler: "schommel",
           },
@@ -668,7 +668,7 @@ const steps = [
         wrongHints: [null, "Bijna — welke letters schrijf je aan het begin van dit woord?", "Luister: is de a kort of lang?", "Er mist een letter aan het begin."],
         uitlegPad: {
           stappen: [{ titel: "Twee dingen tegelijk", tekst: "**sch** aan het begin + lange **aa** in het midden = schaap. 🐑" }],
-          niveaus: { basis: "sch + aa + p = schaap.", simpeler: "sch... aaa... p.", nogSimpeler: "schaap" },
+          niveaus: { basis: "Hak het woord in stukjes: begin, midden en einde. Het begin klinkt als school en in het midden hoor je een lange klank.", simpeler: "sch... aaa... p.", nogSimpeler: "schaap" },
         },
       },
       {
@@ -678,7 +678,7 @@ const steps = [
         wrongHints: [null, "Luister naar het einde: hoor je een lange ee?", "Daar staat een t te veel.", "Begint het met een c of een k?"],
         uitlegPad: {
           stappen: [{ titel: "Lang woord, zelfde trucje", tekst: "kas-teel: hak het in stukjes. k-a-s + t-ee-l. De lange **ee** krijgt twee letters: **kasteel**." }],
-          niveaus: { basis: "kas + teel = kasteel.", simpeler: "Zeg het in twee stukjes: kas-teel.", nogSimpeler: "kasteel" },
+          niveaus: { basis: "Zeg het woord in twee stukjes en schrijf elk stukje apart op.", simpeler: "Zeg het in twee stukjes: kas-teel.", nogSimpeler: "kasteel" },
         },
       },
       {
@@ -688,7 +688,7 @@ const steps = [
         wrongHints: [null, "Zeg het hardop en hak het: b-oo-t. Klopt elke letter?", "Zeg het hardop en hak het: b-a-n-k. Klopt elke letter?", "Zeg het hardop en hak het: b-l-oe-m. Klopt elke letter?"],
         uitlegPad: {
           stappen: [{ titel: "Zoek de fout", tekst: "*boec* moet zijn: **boek** — met een k aan het einde. De andere woorden kloppen." }],
-          niveaus: { basis: "boec is fout, het is boek.", simpeler: "Een boek eindigt op k.", nogSimpeler: "boec" },
+          niveaus: { basis: "Zeg elk woord hardop en hak het in klanken. Welke klank aan het einde schrijf je bijna altijd met een k?", simpeler: "Een boek eindigt op k.", nogSimpeler: "boec" },
         },
       },
       {
@@ -698,7 +698,7 @@ const steps = [
         wrongHints: [null, "De eu-klank heeft twee letters: e + u.", "Dat is de oe-klank — luister nog eens naar het begin.", "Dat is de ie-klank — luister nog eens naar het begin."],
         uitlegPad: {
           stappen: [{ titel: "De eu in een groot woord", tekst: "k-**eu**-k-e-n → keuken. Daar wordt gekookt! De eu = e + u samen." }],
-          niveaus: { basis: "k + eu + ken = keuken.", simpeler: "keu... ken.", nogSimpeler: "keuken" },
+          niveaus: { basis: "Zeg het woord in twee stukjes. De klank na de eerste k hoor je ook in neus.", simpeler: "keu... ken.", nogSimpeler: "keuken" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -715,7 +715,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Lange ee = 2 letters: beer.",
+            basis: "Is de klank in het midden kort of lang? Een lange klank schrijf je met twee letters.",
             simpeler: "beeeeer → ee!",
             nogSimpeler: "beer",
           },
@@ -739,7 +739,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "t + ui + n = tuin.",
+            basis: "Zeg de klanken één voor één. De middelste klank hoor je ook in huis.",
             simpeler: "t-ui-n.",
             nogSimpeler: "tuin",
           },
@@ -763,7 +763,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "st + oe + l = stoel.",
+            basis: "Hak het woord in klanken. Het begint met twee medeklinkers en in het midden hoor je dezelfde klank als in koe.",
             simpeler: "s-t-oe-l.",
             nogSimpeler: "stoel",
           },

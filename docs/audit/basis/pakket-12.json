@@ -1,0 +1,262 @@
+[
+ {
+  "file": "src/learnPaths/tijdsduurRekenenPo.js",
+  "items": [
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 1",
+    "antwoord": "60 minuten",
+    "basis": "1 uur = 60 minuten."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 2",
+    "antwoord": "180 sec",
+    "basis": "3 min × 60 = 180 sec."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 5",
+    "antwoord": "De les begint om 10:15 uur.",
+    "basis": "De les begint om 10:15 uur."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 6",
+    "antwoord": "seconden",
+    "basis": "Seconden."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 7",
+    "antwoord": "3600",
+    "basis": "3600 seconden."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 8",
+    "antwoord": "48",
+    "basis": "48 uur."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 9",
+    "antwoord": "200",
+    "basis": "200 minuten."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 10",
+    "antwoord": "2 minuten en 50 seconden",
+    "basis": "2 minuten en 50 seconden."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 2",
+    "antwoord": "21:20",
+    "basis": "19:30 + 1u 50min = 21:20."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 5",
+    "antwoord": "15:15",
+    "basis": "15:15."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 6",
+    "antwoord": "1 uur 35 min",
+    "basis": "1 uur 35 min."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 7",
+    "antwoord": "18:35",
+    "basis": "18:35."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 8",
+    "antwoord": "45 min",
+    "basis": "45 minuten."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 9",
+    "antwoord": "16:35",
+    "basis": "16:35."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 3 vraag 10",
+    "antwoord": "3 uur 20 min",
+    "basis": "3 uur 20 min."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 4",
+    "antwoord": "00:25",
+    "basis": "00:25."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 5",
+    "antwoord": "20:30",
+    "basis": "20:30."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 6",
+    "antwoord": "02:15",
+    "basis": "02:15."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 7",
+    "antwoord": "3 uur 45 min",
+    "basis": "3 uur 45 min."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 8",
+    "antwoord": "16:30",
+    "basis": "16:30."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 9",
+    "antwoord": "5 uur 30 min",
+    "basis": "5 uur 30 min."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 5 vraag 3",
+    "antwoord": "16:15",
+    "basis": "16:15."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 5 vraag 5",
+    "antwoord": "1 uur 40 min",
+    "basis": "1 uur 40 min."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 5 vraag 6",
+    "antwoord": "6 uur 30 min",
+    "basis": "6 uur 30 min."
+   },
+   {
+    "waar": "tijdsduur-rekenen-po stap 5 vraag 7",
+    "antwoord": "10 uur 45 min",
+    "basis": "10 uur 45 min."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/vlakkeFigurenPo.js",
+  "items": [
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 1",
+    "antwoord": "28 m",
+    "basis": "De omtrek is 28 m."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 2",
+    "antwoord": "40 m²",
+    "basis": "De oppervlakte is 40 m²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 3",
+    "antwoord": "5 cm",
+    "basis": "Eén zijde is 5 cm."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 4",
+    "antwoord": "64 cm²",
+    "basis": "De oppervlakte is 64 cm²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 5",
+    "antwoord": "24 m",
+    "basis": "De omtrek is 24 m."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 6",
+    "antwoord": "14 cm²",
+    "basis": "De oppervlakte is 14 cm²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 8",
+    "antwoord": "2 × (lengte + breedte)",
+    "basis": "2 × (lengte + breedte)."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 1 vraag 9",
+    "antwoord": "Ze hebben dezelfde omtrek, maar B heeft een grotere oppervlakte",
+    "basis": "Ze hebben dezelfde omtrek, maar B heeft een grotere oppervlakte."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 1",
+    "antwoord": "48 m²",
+    "basis": "48 m²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 2",
+    "antwoord": "10 cm²",
+    "basis": "10 cm²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 3",
+    "antwoord": "27 m²",
+    "basis": "27 m²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 4",
+    "antwoord": "6 m²",
+    "basis": "6 m²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 5",
+    "antwoord": "7 cm²",
+    "basis": "7 cm²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 6",
+    "antwoord": "Een driehoek is de helft van een rechthoek",
+    "basis": "Een driehoek is de helft van een rechthoek."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 7",
+    "antwoord": "21 cm",
+    "basis": "21 cm."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 8",
+    "antwoord": "12 cm²",
+    "basis": "12 cm²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 3 vraag 9",
+    "antwoord": "300 cm²",
+    "basis": "300 cm²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 4 vraag 1",
+    "antwoord": "€ 540",
+    "basis": "€540."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 4 vraag 2",
+    "antwoord": "€ 576",
+    "basis": "€576."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 4 vraag 3",
+    "antwoord": "€ 120",
+    "basis": "€120."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 4 vraag 4",
+    "antwoord": "4 L",
+    "basis": "4 L."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 4 vraag 7",
+    "antwoord": "€ 190",
+    "basis": "€ 190."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 5 vraag 6",
+    "antwoord": "0,96 m²",
+    "basis": "0,96 m²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 5 vraag 7",
+    "antwoord": "38 m²",
+    "basis": "32 + 6 = 38 m²."
+   },
+   {
+    "waar": "vlakke-figuren-po stap 5 vraag 8",
+    "antwoord": "80",
+    "basis": "10 × 8 = 80 tegels."
+   }
+  ]
+ }
+]

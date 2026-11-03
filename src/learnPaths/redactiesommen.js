@@ -121,7 +121,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een redactiesom is een rekensom in een verhaal.",
+            basis: "Een redactiesom lees je eerst, voordat je gaat rekenen. Waar staan de getallen dan in?",
             simpeler: "Eerst lees je het verhaal, dan maak je zelf de som.",
             nogSimpeler: "Som in een verhaal.",
           },
@@ -227,7 +227,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'In totaal' wijst op optellen.",
+            basis: "Komen er schelpen bij, of gaan er schelpen weg? Kies de bewerking die daarbij past.",
             simpeler: "Er komen schelpen bij: 15 + 6.",
             nogSimpeler: "Plus.",
           },
@@ -278,7 +278,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Meer dan' wijst hier op aftrekken.",
+            basis: "Je wilt weten hoeveel het verschil is tussen de kaarten van Daan en van Noor. Met welke bewerking reken je een verschil uit?",
             simpeler: "30 − 22 = 8 kaarten meer.",
             nogSimpeler: "Min.",
           },
@@ -506,7 +506,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Stap 1 = rustig lezen en onderstrepen.",
+            basis: "Kun je al rekenen of kiezen als je nog niet goed weet wat er staat? Bedenk wat je daarvóór moet doen.",
             simpeler: "Lees de getallen en de vraag, en zet er een streep onder.",
             nogSimpeler: "Eerst lezen.",
           },
@@ -562,7 +562,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Stap 3 = de som opschrijven.",
+            basis: "Denk aan de volgorde: eerst lezen, dan de bewerking kiezen. Wat moet er op papier staan voordat je kunt gaan rekenen?",
             simpeler: "Eerst kiezen, dan opschrijven, dan rekenen.",
             nogSimpeler: "Opschrijven.",
           },
@@ -613,7 +613,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "27 mandarijnen: getal én eenheid.",
+            basis: "Reken eerst uit hoeveel het er zijn. Kijk daarna waar de vraag over gaat: een antwoord is pas af met het goede woord erachter.",
             simpeler: "3 × 9 = 27, en de vraag gaat over mandarijnen.",
             nogSimpeler: "27 mandarijnen.",
           },
@@ -663,7 +663,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "45 − 12: de honden doen niet mee.",
+            basis: "Lees de vraag nog eens: over welke dieren gaat het? Gebruik alleen de getallen die over die dieren gaan.",
             simpeler: "Vraag = koeien. 45 koeien, 12 weg: 45 − 12.",
             nogSimpeler: "45 − 12",
           },
@@ -970,7 +970,7 @@ const steps = [
           theorie: "Twee-stap: eerst alles bij elkaar optellen, daarna delen door aantal personen.",
           voorbeelden: [{ type: "stap", tekst: "Boodschap €30 + statiegeld €2 = €32 ÷ 4 mensen = €8/persoon." }],
           basiskennis: [{ onderwerp: "Vergeet niets", uitleg: "Bezorgkosten, BTW, statiegeld — alles meetellen in stap 1." }],
-          niveaus: { basis: "€42 ÷ 4 = €10,50.", simpeler: "Eerst totaal: €38 + €4 = €42. Dan delen: €42 ÷ 4 = €10,50.", nogSimpeler: "€10,50" },
+          niveaus: { basis: "Reken eerst uit wat de vrienden samen moeten betalen, dus met de bezorgkosten erbij. Verdeel dat bedrag daarna eerlijk.", simpeler: "Eerst totaal: €38 + €4 = €42. Dan delen: €42 ÷ 4 = €10,50.", nogSimpeler: "€10,50" },
         },
       },
       {

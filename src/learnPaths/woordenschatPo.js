@@ -190,7 +190,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Veel lezen.",
+            basis: "Waar kom je de meeste nieuwe woorden tegen? Denk aan wat je doet als je een boek of tijdschrift openslaat.",
             simpeler: "Woorden leer je door ze tegen te komen. Dat gebeurt het meest als je veel leest.",
             nogSimpeler: "Lezen",
           },
@@ -214,7 +214,7 @@ const steps = [
           theorie: "Familie van 'groot'-woorden: groot, enorm, gigantisch, reusachtig, mega.",
           voorbeelden: [{ type: "enorm", tekst: "Een enorm huis = een heel groot huis." }],
           basiskennis: [{ onderwerp: "Niet klein", uitleg: "Klein = antoniem (tegenstelling), niet synoniem." }],
-          niveaus: { basis: "Enorm = heel groot.", simpeler: "Enorm betekent 'heel groot'. Niet klein, niet snel — alleen groot.", nogSimpeler: "Enorm=groot" },
+          niveaus: { basis: "Een synoniem betekent hetzelfde. Zet elke optie in 'een ... olifant'. Welke zegt hetzelfde als een enorme olifant?", simpeler: "Enorm betekent 'heel groot'. Niet klein, niet snel — alleen groot.", nogSimpeler: "Enorm=groot" },
         },
       },
       {
@@ -228,7 +228,7 @@ const steps = [
           theorie: "Snelheid-synoniemen: snel, vlug, rap, gauw, kwiek. Allemaal 'in korte tijd'.",
           voorbeelden: [{ type: "snel", tekst: "Hij liep snel = hij liep vlug = hij liep rap." }],
           basiskennis: [{ onderwerp: "Langzaam = antoniem", uitleg: "Langzaam = tegenstelling van snel, niet synoniem." }],
-          niveaus: { basis: "Snel = vlug.", simpeler: "Welk woord betekent ook 'snel'? Vlug. (Langzaam = tegengesteld).", nogSimpeler: "Vlug" },
+          niveaus: { basis: "Een synoniem betekent hetzelfde. Welk woord zegt ook dat iets weinig tijd kost?", simpeler: "Welk woord betekent ook 'snel'? Vlug. (Langzaam = tegengesteld).", nogSimpeler: "Vlug" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
           theorie: "Angst-makend-familie: eng, griezelig, akelig, beangstigend, scary (Engels).",
           voorbeelden: [{ type: "eng", tekst: "Een eng spook = een griezelig spook." }],
           basiskennis: [{ onderwerp: "Niet leuk", uitleg: "Eng is meestal niet leuk — kan tegenstellig of niet-verband zijn." }],
-          niveaus: { basis: "Eng = griezelig.", simpeler: "Iets dat je bang maakt = eng = griezelig. Niet leuk, niet slim, niet helder.", nogSimpeler: "Griezelig" },
+          niveaus: { basis: "Iets wat eng is, maakt je bang. Welk woord beschrijft ook iets waar je bang van wordt?", simpeler: "Iets dat je bang maakt = eng = griezelig. Niet leuk, niet slim, niet helder.", nogSimpeler: "Griezelig" },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
           theorie: "Synoniemen voor zorg: bezorgd, ongerust, bang, angstig, gespannen.",
           voorbeelden: [{ type: "bezorgd", tekst: "Hij was bezorgd over de toets = hij was ongerust over de toets." }],
           basiskennis: [{ onderwerp: "Vervang-test", uitleg: "Past 'ongerust' in plaats van 'bezorgd' in zin? Ja → synoniem." }],
-          niveaus: { basis: "Bezorgd = ongerust.", simpeler: "Bezorgd over toets = ongerust over toets. Hetzelfde gevoel, ander woord.", nogSimpeler: "Ongerust" },
+          niveaus: { basis: "Hoe voel je je als je bezorgd bent over een toets: rustig, of juist bang dat het misgaat? Zoek het woord bij dat gevoel.", simpeler: "Bezorgd over toets = ongerust over toets. Hetzelfde gevoel, ander woord.", nogSimpeler: "Ongerust" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -292,7 +292,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Blij = gelukkig.",
+            basis: "Zet elk woord op de plek van 'blij' in de zin. Bij welk woord blijft de zin hetzelfde betekenen?",
             simpeler: "Probeer elk woord in de zin. Alleen 'gelukkig' zegt hetzelfde als 'blij'.",
             nogSimpeler: "blij = gelukkig",
           },
@@ -316,7 +316,7 @@ const steps = [
           theorie: "Gewicht-paar: zwaar ↔ licht. Zelfde woord 'licht' kan ook ↔ donker zijn — context bepaalt.",
           voorbeelden: [{ type: "anti", tekst: "Een zware tas ↔ een lichte tas (gewicht). Het werd licht ↔ donker (helderheid)." }],
           basiskennis: [{ onderwerp: "Twee-betekenissen-woord", uitleg: "Licht heeft 2 betekenissen — kies de juiste tegenstelling per context." }],
-          niveaus: { basis: "Zwaar ↔ licht.", simpeler: "Wat is het tegenovergestelde van zwaar? Licht. Niet groot/klein (afmeting), niet donker (helderheid).", nogSimpeler: "Licht" },
+          niveaus: { basis: "Een tegenstelling betekent het omgekeerde. Een zware tas kun je bijna niet tillen; hoe noem je een tas die je makkelijk optilt?", simpeler: "Wat is het tegenovergestelde van zwaar? Licht. Niet groot/klein (afmeting), niet donker (helderheid).", nogSimpeler: "Licht" },
         },
       },
       {
@@ -330,7 +330,7 @@ const steps = [
           theorie: "Tijd-paar: beginnen ↔ eindigen (ook: stoppen, ophouden). Starten/openen = synoniem.",
           voorbeelden: [{ type: "anti", tekst: "De film begint om 8 ↔ de film eindigt om 10." }],
           basiskennis: [{ onderwerp: "Synoniem-val", uitleg: "Starten en openen lijken misschien op een antwoord, maar ze betekenen hetzelfde als beginnen — dus géén tegenstelling." }],
-          niveaus: { basis: "Beginnen ↔ eindigen.", simpeler: "Begin ↔ eind. Starten en openen zijn synoniemen — kun je niet kiezen. Vergeten heeft er niets mee te maken.", nogSimpeler: "Eindigen" },
+          niveaus: { basis: "Een antoniem is het omgekeerde. Beginnen is het eerste moment; welk woord hoort bij het laatste moment?", simpeler: "Begin ↔ eind. Starten en openen zijn synoniemen — kun je niet kiezen. Vergeten heeft er niets mee te maken.", nogSimpeler: "Eindigen" },
         },
       },
       {
@@ -344,7 +344,7 @@ const steps = [
           theorie: "Lengte-paar: verlengen ↔ verkorten. Vergroten = groter maken, geen tegenstelling.",
           voorbeelden: [{ type: "anti", tekst: "Vergadering verlengen ↔ vergadering verkorten. Touw verlengen ↔ touw verkorten." }],
           basiskennis: [{ onderwerp: "Voorvoegsel ver-", uitleg: "ver- + lang/kort verandert 'lang' en 'kort' in werkwoorden — tegenovergesteld blijft hetzelfde." }],
-          niveaus: { basis: "Verlengen ↔ verkorten.", simpeler: "Langer maken ↔ korter maken = verlengen ↔ verkorten. (Vergroten=groter maken, openen/stoppen=geen verband).", nogSimpeler: "Verkorten" },
+          niveaus: { basis: "Verlengen maakt iets langer. Welk woord maakt iets juist minder lang?", simpeler: "Langer maken ↔ korter maken = verlengen ↔ verkorten. (Vergroten=groter maken, openen/stoppen=geen verband).", nogSimpeler: "Verkorten" },
         },
       },
       {
@@ -394,7 +394,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Warm ↔ koud.",
+            basis: "Het woord 'maar' zegt dat vandaag anders is dan gisteren. Wat is het omgekeerde van warm weer?",
             simpeler: "Wat is het omgekeerde van warm? Koud.",
             nogSimpeler: "koud",
           },
@@ -432,7 +432,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kopen ↔ verkopen.",
+            basis: "Bij kopen geef je geld en krijg je iets. Hoe heet het als je het omgekeerde doet: je geeft iets en krijgt geld?",
             simpeler: "De klant koopt, de winkelier verkoopt. Dat is het omgekeerde.",
             nogSimpeler: "verkopen",
           },
@@ -470,7 +470,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Boven ↔ onder.",
+            basis: "Boven betekent hoger dan iets anders. Welk woord betekent juist lager dan iets anders?",
             simpeler: "Wat is het omgekeerde van boven? Onder.",
             nogSimpeler: "onder",
           },
@@ -508,7 +508,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Binnen ↔ buiten.",
+            basis: "Binnen ben je in het huis. Waar ben je als je juist niet in het huis bent?",
             simpeler: "Wat is het omgekeerde van binnen? Buiten.",
             nogSimpeler: "buiten",
           },
@@ -546,7 +546,7 @@ const steps = [
           theorie: "Sommige woorden hebben 2 betekenissen: letterlijk + versterkend. Context bepaalt.",
           voorbeelden: [{ type: "versterking", tekst: "Belachelijk duur = heel erg duur. Belachelijk klein = heel erg klein." }],
           basiskennis: [{ onderwerp: "Versterkers", uitleg: "Woorden zoals 'belachelijk', 'absurd', 'idioot' kunnen 'extreem' betekenen." }],
-          niveaus: { basis: "Belachelijk = heel erg.", simpeler: "'Belachelijk klein' = HEEL ERG klein. Belachelijk versterkt het bijvoeglijk woord.", nogSimpeler: "Heel erg" },
+          niveaus: { basis: "Kijk naar het woord direct na 'belachelijk': klein. Zegt belachelijk hier iets over grappig zijn, of over hoe klein het bekertje is?", simpeler: "'Belachelijk klein' = HEEL ERG klein. Belachelijk versterkt het bijvoeglijk woord.", nogSimpeler: "Heel erg" },
         },
       },
       {

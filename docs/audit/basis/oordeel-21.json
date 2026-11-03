@@ -1,0 +1,242 @@
+[
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 1",
+  "hersteld": true,
+  "nieuw": "Een breukstreep betekent 'gedeeld door'. Wat krijg je als je 1 eerlijk verdeelt in 2 stukken?"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 3",
+  "hersteld": true,
+  "nieuw": "Weet je hoeveel één kwart is als kommagetal? Neem dat drie keer."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 4",
+  "hersteld": true,
+  "nieuw": "Het eerste cijfer achter de komma telt de tienden. Hoeveel tienden heb je hier?"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Maak er eerst tienden van: hoeveel tienden zijn net zoveel als één vijfde?"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 7",
+  "hersteld": true,
+  "nieuw": "Maak van de vijfden eerst tienden door boven en onder keer 2 te doen. Tienden schrijf je met één cijfer achter de komma."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 8",
+  "hersteld": true,
+  "nieuw": "Het cijfer direct achter de komma telt de tienden. Schrijf dat aantal boven de streep en 10 eronder."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 9",
+  "hersteld": true,
+  "nieuw": "Tienden schrijf je met één cijfer achter de komma. Welk cijfer komt daar te staan?"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 10",
+  "hersteld": true,
+  "nieuw": "Schrijf het kommagetal eerst als tienden. Deel daarna boven en onder door hetzelfde getal tot het niet kleiner kan."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 1",
+  "hersteld": true,
+  "nieuw": "Van een kommagetal naar procent doe je keer 100. Wat krijg je als je dat met 0,5 doet?"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "Van procent naar kommagetal doe je gedeeld door 100: de komma schuift twee plaatsen naar links."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 1",
+  "hersteld": true,
+  "nieuw": "Verdeel 100% in 4 gelijke stukken. Hoeveel procent is één stuk?"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 3",
+  "hersteld": true,
+  "nieuw": "Weet je hoeveel procent één kwart is? Jij had er drie van goed."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 5",
+  "hersteld": true,
+  "nieuw": "Schrijf ¼ eerst als kommagetal. Vergelijk dan de cijfers achter de komma."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 6",
+  "hersteld": true,
+  "nieuw": "Van een kommagetal naar procent doe je keer 100. Schuif de komma in 0,6 twee plaatsen naar rechts."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 9",
+  "hersteld": true,
+  "nieuw": "Maak eerst van alle drie hetzelfde soort getal, bijvoorbeeld allemaal procenten. Dan kun je ze makkelijk vergelijken."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 10",
+  "hersteld": true,
+  "nieuw": "Schrijf het kommagetal van Daan eerst als procent. Vergelijk dat daarna met de 70% van Noor."
+ },
+ {
+  "waar": "schatten-afronden stap 1 vraag 5",
+  "hersteld": true,
+  "nieuw": "Sams schatting is 600. Welk antwoord ligt daar het dichtst bij?"
+ },
+ {
+  "waar": "schatten-afronden stap 1 vraag 6",
+  "hersteld": true,
+  "nieuw": "Rond 49 af naar het ronde getal dat er vlak naast ligt. Reken daarna 4 keer dat ronde getal."
+ },
+ {
+  "waar": "schatten-afronden stap 1 vraag 7",
+  "hersteld": true,
+  "nieuw": "Rond elk bedrag af op hele euro's en tel die ronde bedragen bij elkaar op."
+ },
+ {
+  "waar": "schatten-afronden stap 1 vraag 9",
+  "hersteld": true,
+  "nieuw": "Rond elk getal af op het dichtstbijzijnde tiental en tel daarna de ronde getallen op."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "Afronden op 100: kijk naar het cijfer van de tientallen. Is dat 5 of meer, dan ga je omhoog."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 3",
+  "hersteld": true,
+  "nieuw": "Afronden op 1000: kijk naar het cijfer van de honderdtallen. Bij 5 of meer ga je omhoog, bij 4 of minder omlaag."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 4",
+  "hersteld": true,
+  "nieuw": "Afronden op 10: kijk naar het laatste cijfer. Bij 5 of meer ga je omhoog, bij 4 of minder omlaag."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 5",
+  "hersteld": true,
+  "nieuw": "Afronden op 10: kijk naar het laatste cijfer. Wat doe je volgens de regel als dat precies een 5 is?"
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 6",
+  "hersteld": true,
+  "nieuw": "Afronden op 100: kijk naar het cijfer van de tientallen. Bij 5 of meer ga je omhoog, bij 4 of minder omlaag."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 7",
+  "hersteld": true,
+  "nieuw": "Afronden op 1000: kijk naar het cijfer van de honderdtallen. Is dat 5 of meer, of 4 of minder?"
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 8",
+  "hersteld": true,
+  "nieuw": "Afronden op 1000: kijk alleen naar het cijfer van de honderdtallen, de cijfers daarna tellen niet mee."
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 9",
+  "hersteld": true,
+  "nieuw": "Rond elk getal zelf af op 10 door naar het laatste cijfer te kijken. Welk getal komt dan op 40 uit?"
+ },
+ {
+  "waar": "schatten-afronden stap 2 vraag 10",
+  "hersteld": true,
+  "nieuw": "Rond elk getal zelf af op 100 door naar het cijfer van de tientallen te kijken. Welk getal komt dan niet op 500 uit?"
+ },
+ {
+  "waar": "schatten-afronden stap 3 vraag 1",
+  "hersteld": true,
+  "nieuw": "Schatten op 100: rond elk getal eerst af op honderdtallen en tel daarna de ronde getallen op."
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 7",
+  "hersteld": true,
+  "nieuw": "Tel eerst precies op, bijvoorbeeld eerst de eerste twee getallen en dan het derde erbij. Rond daarna de uitkomst af op 10."
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 9",
+  "hersteld": true,
+  "nieuw": "Rond beide getallen af op duizendtallen: kijk naar het cijfer van de honderdtallen. Tel daarna de ronde getallen op."
+ },
+ {
+  "waar": "topografie-europa-po stap 1 vraag 1",
+  "hersteld": true,
+  "nieuw": "Zoek op de kaart de grens tussen Europa en Azië. Welk gebergte loopt daar van noord naar zuid dwars door Rusland?"
+ },
+ {
+  "waar": "topografie-europa-po stap 1 vraag 2",
+  "hersteld": true,
+  "nieuw": "Noem ze op een rij: begin met Europa, Azië en Afrika en vergeet het koude zuidpoolgebied niet. Tel ze daarna."
+ },
+ {
+  "waar": "topografie-europa-po stap 2 vraag 1",
+  "hersteld": true,
+  "nieuw": "Een hoofdstad is niet altijd de bekendste stad. In welke Duitse stad stond de beroemde Muur die in 1989 viel?"
+ },
+ {
+  "waar": "topografie-europa-po stap 2 vraag 2",
+  "hersteld": true,
+  "nieuw": "De regering van het Verenigd Koninkrijk zit in Engeland. Welke grote stad ligt daar aan de rivier de Theems?"
+ },
+ {
+  "waar": "topografie-europa-po stap 2 vraag 3",
+  "hersteld": true,
+  "nieuw": "In de hoofdstad van België vergadert ook de Europese Unie (EU) vaak. Welke stad is dat?"
+ },
+ {
+  "waar": "topografie-europa-po stap 3 vraag 1",
+  "hersteld": true,
+  "nieuw": "De hoofdstad van Spanje ligt niet aan zee, maar precies in het midden van het land. Welke stad is dat?"
+ },
+ {
+  "waar": "topografie-europa-po stap 3 vraag 2",
+  "hersteld": true,
+  "nieuw": "Denk aan het oude Romeinse Rijk. Naar welke stad zijn de Romeinen genoemd?"
+ },
+ {
+  "waar": "topografie-europa-po stap 3 vraag 3",
+  "hersteld": true,
+  "nieuw": "De hoofdstad van Griekenland is al meer dan 2000 jaar beroemd om de tempels op een heuvel, de Akropolis. Welke stad is dat?"
+ },
+ {
+  "waar": "topografie-europa-po stap 4 vraag 1",
+  "hersteld": true,
+  "nieuw": "Streep eerst de keuzes weg die de hoofdstad van een ander land zijn. Welke stad ligt aan het eind van een fjord in het zuiden van Noorwegen?"
+ },
+ {
+  "waar": "topografie-europa-po stap 4 vraag 2",
+  "hersteld": true,
+  "nieuw": "Streep eerst de steden weg die de hoofdstad van een ander Scandinavisch land zijn. Denk dan aan de stad met het beeldje van de Kleine Zeemeermin."
+ },
+ {
+  "waar": "topografie-europa-po stap 4 vraag 3",
+  "hersteld": true,
+  "nieuw": "Welk land stemde zelf twee keer tegen lid worden van de EU, omdat het veel verdient aan olie en vis?"
+ },
+ {
+  "waar": "topografie-europa-po stap 5 vraag 1",
+  "hersteld": true,
+  "nieuw": "Twee keuzes zijn hoofdsteden van andere landen; streep die eerst weg. Welke Poolse stad aan de rivier de Wisła is de hoofdstad?"
+ },
+ {
+  "waar": "topografie-europa-po stap 5 vraag 3",
+  "hersteld": true,
+  "nieuw": "Streep eerst de hoofdsteden van andere landen weg, zoals die van Rusland en Wit-Rusland. Welke stad blijft over voor Oekraïne?"
+ },
+ {
+  "waar": "topografie-europa-po stap 6 vraag 1",
+  "hersteld": true,
+  "nieuw": "De langste rivier stroomt door het grootste land van Europa. Welke rivier stroomt door Rusland naar de Kaspische Zee?"
+ },
+ {
+  "waar": "topografie-europa-po stap 6 vraag 2",
+  "hersteld": true,
+  "nieuw": "Zoek op de kaart waar Frankrijk en Spanje aan elkaar grenzen. Welk gebergte ligt daar, vlak boven Spanje?"
+ },
+ {
+  "waar": "topografie-europa-po stap 6 vraag 3",
+  "hersteld": true,
+  "nieuw": "Kijk op de kaart naar het zuiden van Europa. Welke zee ligt tussen Europa en Afrika?"
+ }
+]

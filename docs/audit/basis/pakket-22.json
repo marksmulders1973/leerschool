@@ -1,0 +1,312 @@
+[
+ {
+  "file": "src/learnPaths/getallenTot20Po.js",
+  "items": [
+   {
+    "waar": "getallen-tot-20-po stap 1 vraag 4",
+    "antwoord": "15",
+    "basis": "15 tussen 14 en 16."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 1 vraag 5",
+    "antwoord": "10",
+    "basis": "10 + 10 = 20."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 1 vraag 6",
+    "antwoord": "12",
+    "basis": "12 komt voor 13."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 1 vraag 7",
+    "antwoord": "18",
+    "basis": "18 is het grootst."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 1 vraag 8",
+    "antwoord": "20",
+    "basis": "Na 19 komt 20."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 1 vraag 9",
+    "antwoord": "12",
+    "basis": "Twaalf = 12."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 2 vraag 3",
+    "antwoord": "6 + 4",
+    "basis": "6 + 4 = 10."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 2 vraag 6",
+    "antwoord": "6 + 3",
+    "basis": "6 + 3 = 9, geen 10."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 3 vraag 9",
+    "antwoord": "10 - 4 = 6",
+    "basis": "10 - 4 = 6."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 4 vraag 1",
+    "antwoord": "13",
+    "basis": "8+5 = 13."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 4 vraag 6",
+    "antwoord": "12",
+    "basis": "8 + 4 = 12."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 4 vraag 7",
+    "antwoord": "17",
+    "basis": "13 + 4 = 17."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 4 vraag 8",
+    "antwoord": "15",
+    "basis": "9 + 6 = 15 kinderen."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 4 vraag 9",
+    "antwoord": "8 + 2 + 4",
+    "basis": "8 + 6 = 8 + 2 + 4 = 14."
+   },
+   {
+    "waar": "getallen-tot-20-po stap 5 vraag 9",
+    "antwoord": "15 - 5",
+    "basis": "15 - 5 = 10."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/wereldreligiesPo.js",
+  "items": [
+   {
+    "waar": "wereldreligies-po stap 1 vraag 1",
+    "antwoord": "Christendom",
+    "basis": "Christendom."
+   },
+   {
+    "waar": "wereldreligies-po stap 1 vraag 2",
+    "antwoord": "Monotheïstisch",
+    "basis": "Monotheïstisch."
+   },
+   {
+    "waar": "wereldreligies-po stap 1 vraag 3",
+    "antwoord": "Hindoeïsme",
+    "basis": "Hindoeïsme oudste."
+   },
+   {
+    "waar": "wereldreligies-po stap 2 vraag 1",
+    "antwoord": "Bijbel",
+    "basis": "Bijbel."
+   },
+   {
+    "waar": "wereldreligies-po stap 2 vraag 2",
+    "antwoord": "Kerk",
+    "basis": "Kerk."
+   },
+   {
+    "waar": "wereldreligies-po stap 2 vraag 3",
+    "antwoord": "Maarten Luther",
+    "basis": "Maarten Luther."
+   },
+   {
+    "waar": "wereldreligies-po stap 3 vraag 1",
+    "antwoord": "Mohammed",
+    "basis": "Mohammed."
+   },
+   {
+    "waar": "wereldreligies-po stap 3 vraag 2",
+    "antwoord": "Koran",
+    "basis": "Koran."
+   },
+   {
+    "waar": "wereldreligies-po stap 4 vraag 1",
+    "antwoord": "India",
+    "basis": "India."
+   },
+   {
+    "waar": "wereldreligies-po stap 4 vraag 2",
+    "antwoord": "Prins die het boeddhisme stichtte",
+    "basis": "Prins die het boeddhisme stichtte."
+   },
+   {
+    "waar": "wereldreligies-po stap 5 vraag 1",
+    "antwoord": "Davidster",
+    "basis": "Davidster."
+   },
+   {
+    "waar": "wereldreligies-po stap 5 vraag 2",
+    "antwoord": "Jeruzalem",
+    "basis": "Jeruzalem."
+   },
+   {
+    "waar": "wereldreligies-po stap 5 vraag 3",
+    "antwoord": "Zaterdag",
+    "basis": "Zaterdag."
+   },
+   {
+    "waar": "wereldreligies-po stap 6 vraag 2",
+    "antwoord": "India",
+    "basis": "India."
+   },
+   {
+    "waar": "wereldreligies-po stap 6 vraag 3",
+    "antwoord": "Boeddhisme",
+    "basis": "Boeddhisme."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/dierenSeizoenenNatuur.js",
+  "items": [
+   {
+    "waar": "dieren-seizoenen-natuur stap 1 vraag 1",
+    "antwoord": "een steen",
+    "basis": "Steen."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 2 vraag 1",
+    "antwoord": "walvis",
+    "basis": "De walvis is het zoogdier in dit rijtje."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 3 vraag 1",
+    "antwoord": "Veren",
+    "basis": "Veren."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 3 vraag 2",
+    "antwoord": "pinguïn",
+    "basis": "pinguïn."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 4 vraag 1",
+    "antwoord": "6",
+    "basis": "6."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 4 vraag 2",
+    "antwoord": "amfibieën",
+    "basis": "amfibieën."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 6 vraag 1",
+    "antwoord": "pop",
+    "basis": "pop."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 7 vraag 1",
+    "antwoord": "Veel jonge dieren worden geboren",
+    "basis": "Jonge dieren."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 8 vraag 1",
+    "antwoord": "egel",
+    "basis": "egel."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 10 vraag 1",
+    "antwoord": "konijn",
+    "basis": "konijn."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 10 vraag 2",
+    "antwoord": "vos",
+    "basis": "vos."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 11 vraag 2",
+    "antwoord": "Ze bestuiven de bloemen",
+    "basis": "Bestuiven."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 11 vraag 3",
+    "antwoord": "kikkervisje",
+    "basis": "De baby van een kikker is een kikkervisje."
+   },
+   {
+    "waar": "dieren-seizoenen-natuur stap 11 vraag 4",
+    "antwoord": "lente",
+    "basis": "In de lente."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/geschiedenisVroegerEnNuG5.js",
+  "items": [
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 2",
+    "antwoord": "100 jaar",
+    "basis": "Een eeuw is 100 jaar."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 5",
+    "antwoord": "nu",
+    "basis": "Helemaal rechts staat nu."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 6",
+    "antwoord": "200 jaar",
+    "basis": "Twee eeuwen is 200 jaar."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 7",
+    "antwoord": "de ridders",
+    "basis": "De ridders staan meer naar links."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 9",
+    "antwoord": "haar geboorte",
+    "basis": "Haar geboorte staat links."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 1",
+    "antwoord": "op een lei met een griffel",
+    "basis": "Vroeger schreef je op een lei met een griffel."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 2",
+    "antwoord": "elektriciteit",
+    "basis": "Vroeger was er vaak geen elektriciteit."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 5",
+    "antwoord": "met de hand",
+    "basis": "Kleren werden met de hand gewassen."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 7",
+    "antwoord": "groot",
+    "basis": "De klassen waren groot."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 3 vraag 8",
+    "antwoord": "een kaars",
+    "basis": "Een kaars gaf licht."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 4",
+    "antwoord": "op een paard",
+    "basis": "Een ridder reed op een paard."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 5",
+    "antwoord": "een lans",
+    "basis": "Een ridder had een lans."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 7",
+    "antwoord": "een tablet",
+    "basis": "Een tablet hoort er niet bij."
+   },
+   {
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 8",
+    "antwoord": "een stoomtrein",
+    "basis": "Een stoomtrein hoort er niet bij."
+   }
+  ]
+ }
+]

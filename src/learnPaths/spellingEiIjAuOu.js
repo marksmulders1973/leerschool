@@ -75,7 +75,7 @@ const steps = [
           theorie: "Homofoon-test: spreek beide hardop uit. Klinken identiek = homofoon. Alleen schrijfwijze verschilt.",
           voorbeelden: [{ type: "paar", tekst: "Hij reist = hij gaat op reis. Hij eet rijst = hij eet voedsel. Klinkt hetzelfde, maar de betekenis is ANDERS." }],
           basiskennis: [{ onderwerp: "500 jaar geleden", uitleg: "Vroeger klonken ei en ij wél verschillend — nu uitspraak samengesmolten." }],
-          niveaus: { basis: "Ja, ze klinken precies hetzelfde.", simpeler: "Spreek hardop: r-ei-st en r-ij-st. Geen verschil in klank.", nogSimpeler: "Identiek" },
+          niveaus: { basis: "Zeg beide woorden hardop achter elkaar. Hoor je ergens een verschil in de klank?", simpeler: "Spreek hardop: r-ei-st en r-ij-st. Geen verschil in klank.", nogSimpeler: "Identiek" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -116,7 +116,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "au = ou in klank.",
+            basis: "Zeg elke optie hardop en vergelijk die met de klank aan het begin van 'auto'. Welke klinkt precies hetzelfde?",
             simpeler: "au en ou klinken gelijk. Bijvoorbeeld rauw en rouw.",
             nogSimpeler: "au = ou",
           },
@@ -164,7 +164,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kennen of opzoeken.",
+            basis: "Ei en ij klinken hetzelfde. Kun je het verschil dan horen, of moet je het op een andere manier te weten komen?",
             simpeler: "Je hoort het verschil niet. Dus: woord leren, of opzoeken in een woordenboek.",
             nogSimpeler: "Opzoeken",
           },
@@ -207,7 +207,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De lange ij.",
+            basis: "De ij heeft een bijnaam die zegt hoe hij eruitziet. Kijk naar de staart van de j: die steekt ver onder de regel uit.",
             simpeler: "De ei is de korte ei. De ij is de lange ij.",
             nogSimpeler: "Lange ij",
           },
@@ -249,7 +249,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "rauw en rouw.",
+            basis: "Zeg elk woordpaar hardop. Bij welk paar hoor je geen verschil, maar zie je wel andere letters?",
             simpeler: "au en ou klinken hetzelfde. Bij de andere paren hoor je wel verschil.",
             nogSimpeler: "rauw en rouw",
           },
@@ -301,7 +301,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Vroeger klonken ze verschillend.",
+            basis: "Onze spelling is heel lang geleden bedacht. Wat kan er sinds die tijd met de uitspraak van woorden gebeurd zijn?",
             simpeler: "Lang geleden hoorde je verschil. Nu niet meer, maar we schrijven ze nog steeds anders.",
             nogSimpeler: "Vroeger anders",
           },
@@ -325,7 +325,7 @@ const steps = [
           theorie: "ei-ezelsbrug: 'klein, plein, trein, rein, eind, brein' — onthoud als groep.",
           voorbeelden: [{ type: "rijm", tekst: "De trein staat klein op het plein." }],
           basiskennis: [{ onderwerp: "Geen 'tryn'", uitleg: "y wordt in het NL bijna nooit gebruikt voor deze klank." }],
-          niveaus: { basis: "trein = ei.", simpeler: "Trein hoort bij klein/plein/rein — allemaal met ei (korte ei).", nogSimpeler: "Ei" },
+          niveaus: { basis: "Denk aan woorden die hierop rijmen. Hoe schrijf je die?", simpeler: "Trein hoort bij klein/plein/rein — allemaal met ei (korte ei).", nogSimpeler: "Ei" },
         },
       },
       {
@@ -339,7 +339,7 @@ const steps = [
           theorie: "Klein-familie: klein, kleinkind, kleintje — allemaal met ei.",
           voorbeelden: [{ type: "rijm", tekst: "Een kleine jongen op een groot plein." }],
           basiskennis: [{ onderwerp: "klijn bestaat niet", uitleg: "'Klijn' is geen Nederlands woord. Wel een achternaam (Klijn)." }],
-          niveaus: { basis: "klein = ei.", simpeler: "Klein = ei (korte ei). Net als plein, trein, rein. 'Klijn' is geen woord.", nogSimpeler: "Ei" },
+          niveaus: { basis: "Weet je hoe dit woord in een boek staat? Denk ook aan woorden die erop rijmen.", simpeler: "Klein = ei (korte ei). Net als plein, trein, rein. 'Klijn' is geen woord.", nogSimpeler: "Ei" },
         },
       },
       {
@@ -353,7 +353,7 @@ const steps = [
           theorie: "ei-ezelsbrug 'klein-plein-trein-rein-brein-eind' — leer als geheel.",
           voorbeelden: [{ type: "rijm", tekst: "Op het plein staat een trein die klein is." }],
           basiskennis: [{ onderwerp: "Toets-strikvraag", uitleg: "Plein/plijn lijkt op rijm (klein/klijn). Beide ei!" }],
-          niveaus: { basis: "plein = ei.", simpeler: "Plein staat in ei-groep met klein/trein/rein. Allemaal ei.", nogSimpeler: "Ei" },
+          niveaus: { basis: "Welke woorden rijmen hierop? Die schrijf je vaak op dezelfde manier.", simpeler: "Plein staat in ei-groep met klein/trein/rein. Allemaal ei.", nogSimpeler: "Ei" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -394,7 +394,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "meisje = ei.",
+            basis: "Ei of ij hoor je niet. Zie je dit woord voor je, zoals het in je leesboek staat?",
             simpeler: "Meisje schrijf je met ei. Meer meisjes: meisjes, ook met ei.",
             nogSimpeler: "Ei",
           },
@@ -437,7 +437,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "eindigen = ei.",
+            basis: "Van welk korter woord komt dit werkwoord? Hoe schrijf je dat woord?",
             simpeler: "Eindigen komt van eind. Eind heeft ei, dus eindigen ook.",
             nogSimpeler: "Ei",
           },
@@ -475,7 +475,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "wei = ei.",
+            basis: "Pas op: er is ook een woordje dat net zo klinkt en 'jij en ik' betekent. Welke schrijfwijze hoort bij het grasland?",
             simpeler: "Het gras voor koeien is de wei, met ei. Niet hetzelfde als 'wij'.",
             nogSimpeler: "Ei",
           },
@@ -513,7 +513,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "leider = ei.",
+            basis: "Kijk eerst naar de woorden die je zeker kent. Welk woord is anders geschreven dan de rest?",
             simpeler: "Leider heeft ei. Lijst, krijgen en rijden hebben ij.",
             nogSimpeler: "Ei",
           },
@@ -537,7 +537,7 @@ const steps = [
           theorie: "Hoofdregel: de voornaamwoorden jij, hij, zij, wij en mij schrijf je altijd met ij (lange ij), nooit met ei.",
           voorbeelden: [{ type: "lijst", tekst: "mij, jij, hij, zij, wij — allemaal ij." }],
           basiskennis: [{ onderwerp: "wei vs wij", uitleg: "Een wei is een weiland: gras waar koeien staan. Wij is een persoonlijk voornaamwoord. Ze klinken hetzelfde, maar je schrijft ze anders." }],
-          niveaus: { basis: "wij = ij.", simpeler: "Voornaamwoorden zoals wij/jij/hij/mij hebben altijd ij. Wei en wijn zijn andere woorden.", nogSimpeler: "Voornaamwoord = ij" },
+          niveaus: { basis: "Denk aan andere korte woordjes voor personen, zoals hij en zij. Hoe schrijf je die?", simpeler: "Voornaamwoorden zoals wij/jij/hij/mij hebben altijd ij. Wei en wijn zijn andere woorden.", nogSimpeler: "Voornaamwoord = ij" },
         },
       },
       {
@@ -551,7 +551,7 @@ const steps = [
           theorie: "Klassieke homofoon: rijst (eten, ij) ≠ reist (op reis gaan, ei). Beide bestaan!",
           voorbeelden: [{ type: "context", tekst: "Hij eet rijst (ij). Hij reist naar Spanje (ei)." }],
           basiskennis: [{ onderwerp: "Truc voor rijst", uitleg: "Onthoud: 'r-ij-st' staat op verpakking — kijk maar naar pak rijst." }],
-          niveaus: { basis: "rijst (eten) = ij.", simpeler: "Witte korreltjes = rijst met ij. Reist met ei = werkwoord (op reis gaan).", nogSimpeler: "Ij" },
+          niveaus: { basis: "Let op: er is ook een woord dat precies zo klinkt en 'op reis gaan' betekent. Welke schrijfwijze hoort bij het eten?", simpeler: "Witte korreltjes = rijst met ij. Reist met ei = werkwoord (op reis gaan).", nogSimpeler: "Ij" },
         },
       },
       {
@@ -565,7 +565,7 @@ const steps = [
           theorie: "-tijd-regel: tijd, altijd, vrije tijd, werktijd, op tijd — allemaal met ij.",
           voorbeelden: [{ type: "lijst", tekst: "tijd, altijd, vroeg op tijd, vrije tijd, lange tijd." }],
           basiskennis: [{ onderwerp: "Truc tijd", uitleg: "T-IJ-D — i+j staat als de wijzers van een klok." }],
-          niveaus: { basis: "tijd = ij.", simpeler: "Tijd hoort in -tijd-groep: altijd, vrije tijd, werktijd. Allemaal met ij.", nogSimpeler: "Ij" },
+          niveaus: { basis: "Denk aan woorden waar dit woord in zit, zoals 'speeltijd'. Hoe schrijf je die, en met welke letter eindigt het?", simpeler: "Tijd hoort in -tijd-groep: altijd, vrije tijd, werktijd. Allemaal met ij.", nogSimpeler: "Ij" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -606,7 +606,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "schrijven = ij.",
+            basis: "Kijk naar twee plekken: de klank in het midden en de letter vlak voor -en. Hoe zie je dit woord in je schrift staan?",
             simpeler: "Schrijven heeft ij, de lange ij. Met sch aan het begin en v in het midden.",
             nogSimpeler: "Ij",
           },
@@ -649,7 +649,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "blijven = ij.",
+            basis: "Kijk naar twee plekken: de klank in het midden en de letter vlak voor -en. Hoe schrijf je de ik-vorm van dit werkwoord?",
             simpeler: "Blijven heeft ij. Met een v in het midden.",
             nogSimpeler: "Ij",
           },
@@ -692,7 +692,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "krijg = ij.",
+            basis: "Dit is de ik-vorm van een werkwoord. Hoe schrijf je het hele werkwoord, en welke letter staat er dan aan het eind?",
             simpeler: "Krijgen heeft ij, dus 'ik krijg' ook.",
             nogSimpeler: "Ij",
           },
@@ -730,7 +730,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "rijden = ij.",
+            basis: "Van welk werkwoord is dit, en hoe schrijf je de ik-vorm? Let ook op de letter vlak voor -en.",
             simpeler: "Rijden hoort bij het rij-rijtje: rij, rijles, rijbewijs. Allemaal ij.",
             nogSimpeler: "Ij",
           },
@@ -773,7 +773,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "lijst = ij.",
+            basis: "Zie je het woord voor je zoals het boven een boodschappenbriefje staat? Let ook goed op de laatste letters.",
             simpeler: "Lijst schrijf je met ij en eindigt op st.",
             nogSimpeler: "Ij",
           },
@@ -797,7 +797,7 @@ const steps = [
           theorie: "Samenstellingen met -tijd: altijd, op tijd, eindtijd, sluitingstijd. Allemaal ij.",
           voorbeelden: [{ type: "regel", tekst: "Tijd → altijd → bedtijd → vrije tijd. Allemaal ij." }],
           basiskennis: [{ onderwerp: "Geen tijdt", uitleg: "Tijdt bestaat niet. Tijden (meervoud) wel." }],
-          niveaus: { basis: "altijd = ij.", simpeler: "Altijd = al + tijd. Tijd heeft ij, dus altijd ook.", nogSimpeler: "Ij" },
+          niveaus: { basis: "Dit woord bestaat uit twee kleinere woorden. Welk woord voor 'hoeveel uur het is' zit erin, en hoe schrijf je dat?", simpeler: "Altijd = al + tijd. Tijd heeft ij, dus altijd ook.", nogSimpeler: "Ij" },
         },
       },
       {
@@ -811,7 +811,7 @@ const steps = [
           theorie: "Veel handels-woorden met ij: prijs, lijst, rij, prijskaartje.",
           voorbeelden: [{ type: "zin", tekst: "De prijs van rijst stijgt. Drie ij in één zin!" }],
           basiskennis: [{ onderwerp: "y is geen NL", uitleg: "y wordt in NL bijna nooit gebruikt voor de ei/ij-klank. Dus prys = fout." }],
-          niveaus: { basis: "prijs = ij.", simpeler: "Prijs (kosten) heeft ij. Komt vaak met -ij in handelswoorden voor.", nogSimpeler: "Ij" },
+          niveaus: { basis: "Zie je dit woord voor je, zoals het op een kaartje in de winkel staat? Let ook op de laatste letter: s of z?", simpeler: "Prijs (kosten) heeft ij. Komt vaak met -ij in handelswoorden voor.", nogSimpeler: "Ij" },
         },
       },
       {
@@ -825,7 +825,7 @@ const steps = [
           theorie: "ei-rijtje 'klein-plein-trein' — leer als geheel.",
           voorbeelden: [{ type: "trio", tekst: "klein, plein, trein — drie ei-broers." }],
           basiskennis: [{ onderwerp: "Schrap nep-woorden", uitleg: "Klijn, klain, kleen = bestaan niet als gewoon NL woord." }],
-          niveaus: { basis: "klein = ei.", simpeler: "Klein heeft ei. Andere opties zijn geen Nederlandse woorden.", nogSimpeler: "Ei" },
+          niveaus: { basis: "Twee opties kun je meteen wegstrepen: deze klank schrijf je in het Nederlands niet met ai of ee. Kies dan tussen de andere twee.", simpeler: "Klein heeft ei. Andere opties zijn geen Nederlandse woorden.", nogSimpeler: "Ei" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -904,7 +904,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "trein = ei.",
+            basis: "Lees het rijtje hardop. Welk woord rijmt erop én schrijf je met dezelfde letters?",
             simpeler: "Trein rijmt op klein en plein, en heeft ook ei.",
             nogSimpeler: "Ei",
           },
@@ -947,7 +947,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "eindelijk = ei + ij.",
+            basis: "Knip het woord in twee stukjes: het begin en het eind -lijk. Van welk woord komt het begin, en welke regel geldt voor -lijk?",
             simpeler: "Eerst eind (ei), dan -lijk (ij). Zo krijg je eindelijk.",
             nogSimpeler: "Ei, dan ij",
           },
@@ -990,7 +990,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "moeilijk = -lijk.",
+            basis: "Let op het stukje aan het eind van het woord. Er is een vaste regel voor hoe je die uitgang schrijft; weet je die nog?",
             simpeler: "Moeilijk eindigt op -lijk, en -lijk schrijf je met ij.",
             nogSimpeler: "-lijk",
           },
@@ -1034,7 +1034,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "eerlijk, vrolijk, duidelijk.",
+            basis: "Er is een vaste regel voor de uitgang -lijk. Controleer bij elk rijtje of alle drie de woorden die regel volgen.",
             simpeler: "In dat rijtje eindigt elk woord op -lijk met de lange ij.",
             nogSimpeler: "Alle drie -lijk",
           },
@@ -1058,7 +1058,7 @@ const steps = [
           theorie: "Au-woorden: auto, augustus, augurk — vaak vreemde woorden uit Latijn/Grieks.",
           voorbeelden: [{ type: "zin", tekst: "Mijn vader heeft een blauwe auto." }],
           basiskennis: [{ onderwerp: "Geen koppelteken", uitleg: "Auto = 1 woord, geen au-to. Geen extra t aan einde." }],
-          niveaus: { basis: "auto = au.", simpeler: "Auto begint met au (zoals augustus, augurk). Niet ou.", nogSimpeler: "Au" },
+          niveaus: { basis: "Au en ou hoor je niet. Denk aan andere woorden die met dezelfde klank beginnen, zoals de achtste maand. Hoe schrijf je die?", simpeler: "Auto begint met au (zoals augustus, augurk). Niet ou.", nogSimpeler: "Au" },
         },
       },
       {
@@ -1072,7 +1072,7 @@ const steps = [
           theorie: "Maandnamen uit Latijn: januari, februari, augustus — vaste spelling.",
           voorbeelden: [{ type: "zin", tekst: "In augustus is het meestal warm." }],
           basiskennis: [{ onderwerp: "Augustus regel", uitleg: "A-U-G in begin: au is vast. Net als augurk en auto." }],
-          niveaus: { basis: "augustus = au.", simpeler: "Augustus (keizer) heeft au-begin. Niet 'ougustus'.", nogSimpeler: "Au" },
+          niveaus: { basis: "Spreek de maand langzaam uit in stukjes. Denk aan een ander woord dat met dezelfde klank begint, zoals een voertuig op vier wielen.", simpeler: "Augustus (keizer) heeft au-begin. Niet 'ougustus'.", nogSimpeler: "Au" },
         },
       },
       {
@@ -1086,7 +1086,7 @@ const steps = [
           theorie: "-auw-rijtje: blauw, gauw, rauw, flauw, dauw, klauw — al deze met au.",
           voorbeelden: [{ type: "rijm", tekst: "Een flauwe gauwe blauwe rauwe smaak." }],
           basiskennis: [{ onderwerp: "Niet ou", uitleg: "'flouw' bestaat niet. -auw is altijd au, niet ou." }],
-          niveaus: { basis: "flauw = au.", simpeler: "Flauw hoort bij blauw/gauw/rauw — allemaal -auw met au.", nogSimpeler: "Au" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals de kleur van de lucht. Hoe schrijf je die? Let ook op de laatste letter.", simpeler: "Flauw hoort bij blauw/gauw/rauw — allemaal -auw met au.", nogSimpeler: "Au" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1127,7 +1127,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "pauze = au.",
+            basis: "Au of ou hoor je niet, dus je moet dit woord kennen. Let ook op de letter in het midden: hoor je een s of een z?",
             simpeler: "Pauze schrijf je met au en een z.",
             nogSimpeler: "Au",
           },
@@ -1170,7 +1170,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "klauw = au.",
+            basis: "Zeg het woord langzaam: hoor je aan het eind een w? Denk dan aan woorden die erop rijmen, zoals de kleur van de lucht.",
             simpeler: "Klauw hoort bij blauw en flauw: allemaal -auw.",
             nogSimpeler: "Au",
           },
@@ -1208,7 +1208,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "augurk = au.",
+            basis: "Denk aan andere woorden die met dezelfde klank beginnen, zoals de achtste maand. Let ook op het eind: hoor je een e of een u?",
             simpeler: "Augurk begint met au, net als augustus.",
             nogSimpeler: "Au",
           },
@@ -1246,7 +1246,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "kauwen = au.",
+            basis: "Zeg het woord langzaam. Hoor je een w? Denk aan een woord dat erop lijkt, zoals de poot van een kat met scherpe nagels.",
             simpeler: "Kauwen heeft au, net als kauwgom.",
             nogSimpeler: "Au",
           },
@@ -1270,7 +1270,7 @@ const steps = [
           theorie: "-oud-rijtje: oud, koud, goud, zout, vouw, schouder — ou-spellingen.",
           voorbeelden: [{ type: "rijm", tekst: "Het oude goud is koud." }],
           basiskennis: [{ onderwerp: "Engels gold", uitleg: "Engels heeft 'gold' (heel ander), Nederlands altijd goud." }],
-          niveaus: { basis: "goud = ou.", simpeler: "Goud hoort bij oud/koud/zout — allemaal -oud met ou.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals het tegenovergestelde van nieuw. Hoe schrijf je die, en eindigt het op een d of een t?", simpeler: "Goud hoort bij oud/koud/zout — allemaal -oud met ou.", nogSimpeler: "Ou" },
         },
       },
       {
@@ -1284,7 +1284,7 @@ const steps = [
           theorie: "jij/jou/jouw-regel: jij (onderwerp) → jou (lijdend voorwerp) → jouw (bezittelijk). Allemaal ou, alleen 'jouw' met w.",
           voorbeelden: [{ type: "context", tekst: "Jij gaat (onderwerp). Ik zie jou (lijdend). Is dat jouw boek? (bezittelijk)." }],
           basiskennis: [{ onderwerp: "Vervangtruc", uitleg: "Past 'mijn' in plaats van het lege woord? Dan = bezittelijk = jouw." }],
-          niveaus: { basis: "jouw boek (bezittelijk).", simpeler: "'Jouw boek' = boek van jou = bezittelijk = jouw met w. Niet 'jou'.", nogSimpeler: "Jouw + w" },
+          niveaus: { basis: "Het boek is van iemand. Welke vorm gebruik je als iets van iemand is: met of zonder w aan het eind?", simpeler: "'Jouw boek' = boek van jou = bezittelijk = jouw met w. Niet 'jou'.", nogSimpeler: "Jouw + w" },
         },
       },
       {
@@ -1298,7 +1298,7 @@ const steps = [
           theorie: "-ouw-woorden: mouw, vrouw, bouwen, trouwen, jouw — allemaal ou.",
           voorbeelden: [{ type: "rijm", tekst: "Mijn vrouw heeft een gat in haar mouw." }],
           basiskennis: [{ onderwerp: "Geen mauw", uitleg: "Mauw bestaat niet. Een kat zegt 'miauw' (met i)." }],
-          niveaus: { basis: "mouw = ou.", simpeler: "Mouw (van trui/jas) heeft ou. Hoort bij vrouw/jouw/bouwen — allemaal -ouw.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals een volwassen meisje. Hoe schrijf je die?", simpeler: "Mouw (van trui/jas) heeft ou. Hoort bij vrouw/jouw/bouwen — allemaal -ouw.", nogSimpeler: "Ou" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1334,7 +1334,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "hout = ou.",
+            basis: "Denk aan woorden die erop rijmen, zoals wat je op je patat strooit. Let ook op de laatste letter: d of t?",
             simpeler: "Hout heeft ou, net als oud en goud.",
             nogSimpeler: "Ou",
           },
@@ -1377,7 +1377,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "zout = ou.",
+            basis: "Denk aan woorden die erop rijmen, zoals het materiaal van een boomstam. Hoor je aan het eind een d of een t?",
             simpeler: "Zout heeft ou, net als hout en goud.",
             nogSimpeler: "Ou",
           },
@@ -1415,7 +1415,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "oud = ou.",
+            basis: "Denk aan woorden die erop rijmen, zoals het gele metaal. Hoe schrijf je die, en hoe eindigen ze?",
             simpeler: "Oud hoort bij koud en goud — allemaal ou.",
             nogSimpeler: "Ou",
           },
@@ -1453,7 +1453,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "bouwen = ou.",
+            basis: "Denk aan een woord dat erop lijkt, zoals het deel van je jas om je arm. Hoor je ook een w?",
             simpeler: "Bouwen hoort bij vrouw en mouw — allemaal -ouw.",
             nogSimpeler: "Ou",
           },
@@ -1477,7 +1477,7 @@ const steps = [
           theorie: "-oud: oud, koud, goud, zout — allemaal ou-spelling.",
           voorbeelden: [{ type: "rijm", tekst: "Het koude goud lag in zijn oude hand." }],
           basiskennis: [{ onderwerp: "Bijvoeglijk = geen t", uitleg: "Koud is bijvoeglijk naamwoord, geen werkwoord — geen t aan einde." }],
-          niveaus: { basis: "koud = ou.", simpeler: "Koud schrijf je met ou, net als oud, goud en zout. Er komt geen extra t achter, want het is geen werkwoord.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals het gele metaal. Hoe schrijf je die, en hoe eindigt het woord?", simpeler: "Koud schrijf je met ou, net als oud, goud en zout. Er komt geen extra t achter, want het is geen werkwoord.", nogSimpeler: "Ou" },
         },
       },
       {
@@ -1492,7 +1492,7 @@ const steps = [
           theorie: "Werkwoord-regel: ik = stam. Jij/hij/zij = stam + t. Wij/jullie/zij = stam + en.",
           voorbeelden: [{ type: "vervoeging", tekst: "Ik rijd. Jij rijdt. Hij rijdt. Wij rijden." }],
           basiskennis: [{ onderwerp: "Stam-eindigt-op-d", tekst: "Bij stam eindigend op -d (rijd, vind) toch + t = rijdt, vindt." }],
-          niveaus: { basis: "Hij rijdt.", simpeler: "Het werkwoord is rijden. De stam is rijd. Bij 'hij' zet je er een t achter: hij rijdt. Je hoort die t niet, maar je schrijft hem wel.", nogSimpeler: "Rijdt" },
+          niveaus: { basis: "Zoek eerst de stam van het werkwoord. Wat zet je achter de stam als het over 'hij' gaat?", simpeler: "Het werkwoord is rijden. De stam is rijd. Bij 'hij' zet je er een t achter: hij rijdt. Je hoort die t niet, maar je schrijft hem wel.", nogSimpeler: "Rijdt" },
         },
       },
       {
@@ -1542,7 +1542,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "tijd, jij, prijs.",
+            basis: "Kijk bij elk rijtje naar alle drie de woorden. Is er één woord met andere letters, dan valt dat rijtje af.",
             simpeler: "In dat rijtje heeft elk woord ij. De andere rijtjes hebben een ei-woord.",
             nogSimpeler: "Alle drie ij",
           },
@@ -1590,7 +1590,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "In augustus is het niet koud.",
+            basis: "Kijk naar de twee lastige woorden in de zin: de maand en het woord voor 'niet warm'. Hoe schrijf je die allebei?",
             simpeler: "Augustus met au, koud met ou.",
             nogSimpeler: "au en ou",
           },
@@ -1670,7 +1670,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "mouw.",
+            basis: "Kijk naar de twee klinkers in het midden van 'vrouw'. Welk woord heeft precies die twee letters, en niet de andere twee?",
             simpeler: "Vrouw en mouw schrijf je allebei met ou.",
             nogSimpeler: "Ou",
           },
@@ -1708,7 +1708,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "plijn is fout: het is plein.",
+            basis: "Lees elk woord en vraag je af: zie ik het zo in een boek staan? Denk ook aan woorden die erop rijmen.",
             simpeler: "Plein heeft de korte ei, net als klein.",
             nogSimpeler: "Plein = ei",
           },
@@ -1732,7 +1732,7 @@ const steps = [
           theorie: "ei-rijtje 'klein-plein-trein-rein' onthouden als groep.",
           voorbeelden: [{ type: "rijm", tekst: "De trein staat klein op het plein." }],
           basiskennis: [{ onderwerp: "Geen extra t", uitleg: "Trein = zelfstandig naamwoord, geen werkwoord. Geen extra t aan einde." }],
-          niveaus: { basis: "trein = ei.", simpeler: "Trein = ei (zoals klein, plein, rein). Geen extra t.", nogSimpeler: "Ei" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals 'klein' en 'plein'. Hoe schrijf je die?", simpeler: "Trein = ei (zoals klein, plein, rein). Geen extra t.", nogSimpeler: "Ei" },
         },
       },
       {
@@ -1774,7 +1774,7 @@ const steps = [
           theorie: "Klassieke ei/ij-homofoon: rijst (ij, eten) ≠ reist (ei, op reis).",
           voorbeelden: [{ type: "context", tekst: "Wij eten rijst (eten = ij). Hij reist naar Spanje (reizen = ei)." }],
           basiskennis: [{ onderwerp: "Truc voor rijst", uitleg: "Op rijstpak staat altijd 'rijst' = visualiseer dat voor ij." }],
-          niveaus: { basis: "rijst (eten) = ij.", simpeler: "Witte korreltjes = rijst met ij. Niet reist (= van reizen).", nogSimpeler: "Ij" },
+          niveaus: { basis: "Er is ook een woord dat net zo klinkt en 'op reis gaan' betekent. Welke schrijfwijze hoort bij het eten?", simpeler: "Witte korreltjes = rijst met ij. Niet reist (= van reizen).", nogSimpeler: "Ij" },
         },
       },
       {
@@ -1788,7 +1788,7 @@ const steps = [
           theorie: "-oud-rijtje: oud, koud, goud, zout — ou-spelling.",
           voorbeelden: [{ type: "rijm", tekst: "De oude koude winter is nu hier." }],
           basiskennis: [{ onderwerp: "Bijvoeglijk = geen t", uitleg: "Koud is bijvoeglijk naamwoord, geen werkwoord — geen extra t." }],
-          niveaus: { basis: "koud = ou.", simpeler: "Koud schrijf je met ou, net als oud en goud. Geen au en geen extra t.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals 'oud' en 'goud'. Hoe schrijf je die, en hoe eindigen ze?", simpeler: "Koud schrijf je met ou, net als oud en goud. Geen au en geen extra t.", nogSimpeler: "Ou" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1824,7 +1824,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "plein en tijd.",
+            basis: "Controleer elk woord apart: zie je het zo in een boek staan? Het goede paar heeft twee goede woorden.",
             simpeler: "Plein = ei, tijd = ij. Die zijn allebei goed.",
             nogSimpeler: "Plein + tijd",
           },
@@ -1863,7 +1863,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "reis = ei.",
+            basis: "Van welk werkwoord komt dit woord, en hoe schrijf je dat? Let ook op de laatste letter: s of z?",
             simpeler: "Op reis gaan komt van reizen: korte ei.",
             nogSimpeler: "Ei",
           },
@@ -1887,7 +1887,7 @@ const steps = [
           theorie: "Hoofdregel ij: de voornaamwoorden jij, hij, zij, wij en mij eindigen op -ij.",
           voorbeelden: [{ type: "lijst", tekst: "ik → mij. jij. hij. zij. wij. — vijf vormen, allemaal ij." }],
           basiskennis: [{ onderwerp: "Geen ai of eij", uitleg: "Jai en Jeij bestaan niet als Nederlandse voornaamwoorden." }],
-          niveaus: { basis: "Jij = ij.", simpeler: "Woordjes als jij, wij, hij, zij en mij schrijf je allemaal met ij.", nogSimpeler: "Jij" },
+          niveaus: { basis: "Denk aan andere korte woordjes voor personen, zoals hij, zij en wij. Hoe schrijf je die?", simpeler: "Woordjes als jij, wij, hij, zij en mij schrijf je allemaal met ij.", nogSimpeler: "Jij" },
         },
       },
       {
@@ -1915,7 +1915,7 @@ const steps = [
           theorie: "Au-woorden uit Latijn/Grieks: auto, augustus, augurk.",
           voorbeelden: [{ type: "zin", tekst: "Mijn vader rijdt in een auto. Onze blauwe auto staat voor het huis." }],
           basiskennis: [{ onderwerp: "Geen extra t", uitleg: "Auto eindigt op -o, geen extra t." }],
-          niveaus: { basis: "auto = au.", simpeler: "Auto schrijf je met au, net als augustus. Het heeft maar één t.", nogSimpeler: "Au" },
+          niveaus: { basis: "Denk aan een ander woord dat met dezelfde klank begint, zoals de maand na juli. Let ook op de t: één of twee?", simpeler: "Auto schrijf je met au, net als augustus. Het heeft maar één t.", nogSimpeler: "Au" },
         },
       },
       {
@@ -1929,7 +1929,7 @@ const steps = [
           theorie: "-ouw-woorden: vrouw, mouw, jouw, bouwen, trouwen, dauw — allemaal ou.",
           voorbeelden: [{ type: "rijm", tekst: "Mijn vrouw heeft een gat in haar mouw." }],
           basiskennis: [{ onderwerp: "V niet F", uitleg: "Vrouw begint met V (zoals vader, vis). Frouw bestaat niet." }],
-          niveaus: { basis: "vrouw = ou.", simpeler: "Vrouw schrijf je met ou, net als mouw en jouw. Het begint met een v en er komt geen t achter.", nogSimpeler: "Ou" },
+          niveaus: { basis: "Denk aan woorden die erop rijmen, zoals het deel van je jas om je arm. Hoe schrijf je die? Let ook op de eerste letter.", simpeler: "Vrouw schrijf je met ou, net als mouw en jouw. Het begint met een v en er komt geen t achter.", nogSimpeler: "Ou" },
         },
       },
       {

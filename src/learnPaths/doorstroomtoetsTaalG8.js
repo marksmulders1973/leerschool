@@ -400,7 +400,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap eerst de tegenstellingen (lelijk) en woorden uit andere categorieën (gezellig = sfeer)." }],
           niveaus: {
-            basis: "Mooi = prachtig (synoniem).",
+            basis: "Een synoniem betekent bijna hetzelfde. Welk woord kun je in de zin 'wat een mooie bloem' zetten zonder dat de betekenis verandert?",
             simpeler: "Beide betekenen ongeveer hetzelfde: iets positiefs.",
             nogSimpeler: "Mooi = prachtig.",
           },
@@ -1589,7 +1589,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Met ei: trein/reis/mei/zei/klein. Met ij: blij/wijn/lijden/pijn/krijgen." }],
           basiskennis: [{ onderwerp: "Tip", uitleg: "Leer woorden in groepjes. Met ij: krijgen, blijven, lijken. Met ei: trein, mei, zei, klein." }],
           niveaus: {
-            basis: "trein.",
+            basis: "De meeste woorden met deze klank schrijf je met 'ij'. Welk woord hoort bij de korte lijst met 'ei', zoals 'klein' en 'geit'?",
             simpeler: "Trein = ei. Vlijtig/lijden/blijven = ij.",
             nogSimpeler: "trein",
           },
@@ -2300,7 +2300,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vervangt het een naam of persoon? Dan is het een persoonlijk voornaamwoord." }],
           niveaus: {
-            basis: "Persoonlijk voornaamwoord = ik, jij, hij, zij, wij, jullie. Vervangt naam.",
+            basis: "Een persoonlijk voornaamwoord staat in de plaats van de naam van een persoon. Welk woord kun je gebruiken in plaats van een naam?",
             simpeler: "In plaats van 'Tom' kun je 'hij' zeggen. 'Hij' is een persoonlijk voornaamwoord.",
             nogSimpeler: "ik/jij/hij/zij = persoonlijk vnw.",
           },

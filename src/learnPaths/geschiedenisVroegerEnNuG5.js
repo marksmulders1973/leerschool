@@ -235,7 +235,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eeuw = 100", tekst: "Een **eeuw** duurt **100 jaar**. Van 1900 tot 2000 is precies één eeuw." }],
           woorden: [{ woord: "eeuw", uitleg: "Een tijd van honderd jaar." }],
-          niveaus: { basis: "Een eeuw is 100 jaar.", simpeler: "Eeuw = honderd.", nogSimpeler: "100" },
+          niveaus: { basis: "Als iemand een eeuw oud wordt, is hij heel, heel oud geworden. Hoeveel jaar is dat?", simpeler: "Eeuw = honderd.", nogSimpeler: "100" },
         },
       },
       {
@@ -279,7 +279,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Helemaal rechts staat nu.",
+            basis: "Op een tijdbalk staat links wat het langst geleden is. Wat staat dan aan de andere kant?",
             simpeler: "Rechts = nu.",
             nogSimpeler: "nu",
           },
@@ -304,7 +304,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Twee eeuwen is 200 jaar.",
+            basis: "Weet je hoeveel jaar één eeuw is? Neem dat dan twee keer.",
             simpeler: "100 + 100 = 200.",
             nogSimpeler: "200",
           },
@@ -329,7 +329,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De ridders staan meer naar links.",
+            basis: "Links op de tijdbalk staat wat het langst geleden is. Wie leefde er eerder: opa als kind of de ridders?",
             simpeler: "Langer geleden = meer naar links.",
             nogSimpeler: "de ridders",
           },
@@ -384,7 +384,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Haar geboorte staat links.",
+            basis: "Links staat wat het eerst gebeurde. Wat gebeurde er bij Mila als allereerste?",
             simpeler: "Het eerst gebeurd = links.",
             nogSimpeler: "geboorte",
           },
@@ -406,7 +406,7 @@ const steps = [
         wrongHints: [null, "Bestond er toen al een tablet?", "De balpen kwam pas veel later — waarop schreven ze toen?", "Whiteboards kwamen veel later."],
         uitlegPad: {
           stappen: [{ titel: "Lei en griffel", tekst: "Een **lei** is een zwart plankje, een **griffel** een schrijfstokje. Schrijven, uitvegen, opnieuw — een soort ouderwetse tablet zonder stroom!" }],
-          niveaus: { basis: "Vroeger schreef je op een lei met een griffel.", simpeler: "Een zwart plankje + schrijfstokje.", nogSimpeler: "lei en griffel" },
+          niveaus: { basis: "Honderd jaar geleden waren er nog geen computers en balpennen. Waarop schreven kinderen toen, iets wat je weer kon uitvegen?", simpeler: "Een zwart plankje + schrijfstokje.", nogSimpeler: "lei en griffel" },
         },
       },
       {
@@ -416,7 +416,7 @@ const steps = [
         wrongHints: [null, "Hoe werd het huis anders warm? Een kachel was er juist bijna altijd.", "Waar moest de rook van de kachel heen?", "Ramen bestaan al heel lang."],
         uitlegPad: {
           stappen: [{ titel: "Zonder stroom", tekst: "Veel huizen hadden **geen elektriciteit**. Dus: geen lampen aan de muur, geen koelkast, geen televisie. 's Avonds brandde een olielamp of kaars." }],
-          niveaus: { basis: "Vroeger was er vaak geen elektriciteit.", simpeler: "Geen stroom = geen lampje aanknippen.", nogSimpeler: "elektriciteit" },
+          niveaus: { basis: "Denk aan wat je thuis met een knopje aanzet, zoals een lamp. Kon dat honderd jaar geleden overal al?", simpeler: "Geen stroom = geen lampje aanknippen.", nogSimpeler: "elektriciteit" },
         },
       },
       {
@@ -453,7 +453,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Kleren werden met de hand gewassen.",
+            basis: "Honderd jaar geleden hadden de meeste mensen nog geen machines in huis. Hoe kreeg je je kleren dan schoon?",
             simpeler: "Wassen met je handen.",
             nogSimpeler: "met de hand",
           },
@@ -491,7 +491,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De klassen waren groot.",
+            basis: "Honderd jaar geleden waren er veel kinderen, maar minder juffen en meesters. Wat betekent dat voor een klas?",
             simpeler: "Veel kinderen in één klas.",
             nogSimpeler: "groot",
           },
@@ -510,7 +510,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een kaars gaf licht.",
+            basis: "Veel huizen hadden toen nog geen stroom. Welk ding werkt zonder stroom?",
             simpeler: "Veel huizen hadden nog geen stroom, dus brandde er een kaars of een olielamp.",
             nogSimpeler: "kaars",
           },
@@ -562,7 +562,7 @@ const steps = [
         wrongHints: [null, "Een ezel droeg spullen — een ridder had een sneller en sterker dier nodig.", "Een os trok de ploeg op het land — veel te langzaam voor de strijd.", "In een koets kun je niet vechten — waar zat een ridder in de strijd op?"],
         uitlegPad: {
           stappen: [{ titel: "Ridder te paard", tekst: "Ridders reden op een **paard** — sterk genoeg om een man in harnas te dragen. Een ezel of os was te langzaam, en in een koets kun je niet vechten." }],
-          niveaus: { basis: "Een ridder reed op een paard.", simpeler: "Klip klop — een paard!", nogSimpeler: "paard" },
+          niveaus: { basis: "Een ridder moest snel en sterk de strijd in. Welk dier was daar groot en snel genoeg voor?", simpeler: "Klip klop — een paard!", nogSimpeler: "paard" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -579,7 +579,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een ridder had een lans.",
+            basis: "Ridders leefden lang voordat er geweren waren. Welk wapen gebruikte een ridder als hij op zijn paard vocht?",
             simpeler: "Zwaard, schild en lans.",
             nogSimpeler: "lans",
           },
@@ -791,7 +791,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een tablet hoort er niet bij.",
+            basis: "Bedenk bij elk ding: bestond het honderd jaar geleden al? Zoek wat pas heel nieuw is.",
             simpeler: "Lei en griffel, geen tablet.",
             nogSimpeler: "tablet",
           },
@@ -816,7 +816,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een stoomtrein hoort er niet bij.",
+            basis: "De middeleeuwen waren de tijd van ridders en kastelen. Welk ding is pas veel later uitgevonden?",
             simpeler: "Ridders reden niet met de trein.",
             nogSimpeler: "stoomtrein",
           },

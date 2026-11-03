@@ -172,7 +172,7 @@ const steps = [
           theorie: "MVAMJSUN — Mijn Vader At Met Jonge Soldaten Uien-roomsoep.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Pluto is dwerg, niet meegerekend in 8" }],
           basiskennis: [{ onderwerp: "definitie planeet", uitleg: "groot + eigen baan + zuivert omgeving" }],
-          niveaus: { basis: "8.", simpeler: "Acht.", nogSimpeler: "Acht. → 8." },
+          niveaus: { basis: "Noem de planeten op volgorde vanaf de zon en tel mee. Let op: Pluto telt sinds 2006 niet meer mee als planeet.", simpeler: "Acht.", nogSimpeler: "Acht. → 8." },
         },
       },
       {
@@ -186,7 +186,7 @@ const steps = [
           theorie: "Volgorde: M-V-A-M-J-S-U-N (van zon naar buiten).",
           voorbeelden: [{ type: "voorbeeld", tekst: "1 jaar op Mercurius = 88 aardedagen (snelste baan)" }],
           basiskennis: [{ onderwerp: "kleinste planeet", uitleg: "kleinste van de 8" }],
-          niveaus: { basis: "Mercurius.", simpeler: "Eerste planeet.", nogSimpeler: "Mercurius." },
+          niveaus: { basis: "De Aarde is de derde planeet vanaf de zon. Welke planeet komt helemaal vooraan, nog vóór Venus?", simpeler: "Eerste planeet.", nogSimpeler: "Mercurius." },
         },
       },
       {

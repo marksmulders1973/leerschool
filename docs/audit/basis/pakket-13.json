@@ -1,0 +1,252 @@
+[
+ {
+  "file": "src/learnPaths/taalWoordenZinnenG4.js",
+  "items": [
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 1 vraag 4",
+    "antwoord": "26",
+    "basis": "Het alfabet heeft 26 letters."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 1",
+    "antwoord": "stoelen",
+    "basis": "stoel → stoelen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 2",
+    "antwoord": "tafels",
+    "basis": "tafel → tafels."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 3",
+    "antwoord": "huizen",
+    "basis": "huis → huizen (s wordt z)."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 4",
+    "antwoord": "kinderen",
+    "basis": "kind → kinderen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 5",
+    "antwoord": "appel",
+    "basis": "appel is er één, de rest is meer."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 6",
+    "antwoord": "honden",
+    "basis": "hond → honden."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 7",
+    "antwoord": "jongens",
+    "basis": "jongen → jongens."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 8",
+    "antwoord": "brieven",
+    "basis": "brief → brieven (f wordt v)."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 9",
+    "antwoord": "eieren",
+    "basis": "ei → eieren."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 3 vraag 1",
+    "antwoord": "balletje",
+    "basis": "bal → balletje."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 3 vraag 2",
+    "antwoord": "boompje",
+    "basis": "boom → boompje."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 3 vraag 3",
+    "antwoord": "stoeltje",
+    "basis": "stoel → stoeltje."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 3 vraag 4",
+    "antwoord": "poes",
+    "basis": "poesje komt van poes."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 1",
+    "antwoord": "koud",
+    "basis": "Warm en koud zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 2",
+    "antwoord": "leeg",
+    "basis": "Vol en leeg zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 3",
+    "antwoord": "langzaam",
+    "basis": "Snel en langzaam zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 4",
+    "antwoord": "dag en nacht",
+    "basis": "Dag en nacht zijn precies andersom."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 5",
+    "antwoord": "klein",
+    "basis": "Groot en klein zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 6",
+    "antwoord": "verdrietig",
+    "basis": "Blij en verdrietig zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 7",
+    "antwoord": "droog",
+    "basis": "Nat en droog zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 8",
+    "antwoord": "dicht",
+    "basis": "Open en dicht zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 4 vraag 9",
+    "antwoord": "laag",
+    "basis": "Hoog en laag zijn tegenstellingen."
+   },
+   {
+    "waar": "taal-woorden-zinnen-g4 stap 5 vraag 2",
+    "antwoord": "een vraagteken (?)",
+    "basis": "Een vraag krijgt een vraagteken."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/topografieNederland.js",
+  "items": [
+   {
+    "waar": "topografie-nederland stap 2 vraag 1",
+    "antwoord": "Flevoland",
+    "basis": "Flevoland (1986)."
+   },
+   {
+    "waar": "topografie-nederland stap 2 vraag 2",
+    "antwoord": "Limburg",
+    "basis": "Limburg."
+   },
+   {
+    "waar": "topografie-nederland stap 2 vraag 3",
+    "antwoord": "Friesland",
+    "basis": "Friesland (Fries)."
+   },
+   {
+    "waar": "topografie-nederland stap 2 vraag 7",
+    "antwoord": "Groningen, Friesland en Drenthe",
+    "basis": "Groningen, Friesland en Drenthe."
+   },
+   {
+    "waar": "topografie-nederland stap 2 vraag 8",
+    "antwoord": "Limburg",
+    "basis": "Limburg."
+   },
+   {
+    "waar": "topografie-nederland stap 2 vraag 9",
+    "antwoord": "Friesland",
+    "basis": "Friesland."
+   },
+   {
+    "waar": "topografie-nederland stap 3 vraag 1",
+    "antwoord": "Leeuwarden",
+    "basis": "Leeuwarden."
+   },
+   {
+    "waar": "topografie-nederland stap 3 vraag 2",
+    "antwoord": "Flevoland",
+    "basis": "Flevoland."
+   },
+   {
+    "waar": "topografie-nederland stap 3 vraag 3",
+    "antwoord": "Arnhem",
+    "basis": "Arnhem."
+   },
+   {
+    "waar": "topografie-nederland stap 3 vraag 4",
+    "antwoord": "Assen",
+    "basis": "Assen."
+   },
+   {
+    "waar": "topografie-nederland stap 3 vraag 5",
+    "antwoord": "Groningen en Utrecht",
+    "basis": "Groningen en Utrecht."
+   },
+   {
+    "waar": "topografie-nederland stap 4 vraag 1",
+    "antwoord": "Haarlem",
+    "basis": "Haarlem."
+   },
+   {
+    "waar": "topografie-nederland stap 4 vraag 2",
+    "antwoord": "Middelburg",
+    "basis": "Middelburg."
+   },
+   {
+    "waar": "topografie-nederland stap 4 vraag 3",
+    "antwoord": "Maastricht",
+    "basis": "Maastricht."
+   },
+   {
+    "waar": "topografie-nederland stap 4 vraag 4",
+    "antwoord": "Den Haag",
+    "basis": "Den Haag."
+   },
+   {
+    "waar": "topografie-nederland stap 4 vraag 5",
+    "antwoord": "'s-Hertogenbosch",
+    "basis": "'s-Hertogenbosch."
+   },
+   {
+    "waar": "topografie-nederland stap 4 vraag 6",
+    "antwoord": "Den Bosch",
+    "basis": "Den Bosch."
+   },
+   {
+    "waar": "topografie-nederland stap 5 vraag 1",
+    "antwoord": "Rijn, Maas, Schelde",
+    "basis": "Rijn, Maas, Schelde."
+   },
+   {
+    "waar": "topografie-nederland stap 5 vraag 2",
+    "antwoord": "Zuiderzee",
+    "basis": "Zuiderzee."
+   },
+   {
+    "waar": "topografie-nederland stap 5 vraag 4",
+    "antwoord": "Zwitserland",
+    "basis": "Zwitserland."
+   },
+   {
+    "waar": "topografie-nederland stap 6 vraag 1",
+    "antwoord": "Texel",
+    "basis": "Texel (westelijkst)."
+   },
+   {
+    "waar": "topografie-nederland stap 7 vraag 1",
+    "antwoord": "Rotterdam",
+    "basis": "Rotterdam."
+   },
+   {
+    "waar": "topografie-nederland stap 7 vraag 2",
+    "antwoord": "Randstad",
+    "basis": "Randstad."
+   },
+   {
+    "waar": "topografie-nederland stap 8 vraag 1",
+    "antwoord": "Kinderdijk",
+    "basis": "Kinderdijk."
+   }
+  ]
+ }
+]

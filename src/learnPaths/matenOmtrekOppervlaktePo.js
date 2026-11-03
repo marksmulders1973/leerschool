@@ -102,7 +102,7 @@ const steps = [
           theorie: "Een **schaal** zoals 1:50 000 vertelt hoeveel keer de werkelijkheid is verkleind op een kaart. Om een echte afstand te vinden, vermenigvuldig je de gemeten afstand op de kaart met het tweede getal van de schaal, en reken je daarna om naar een handige eenheid zoals kilometer.",
           voorbeelden: [{ type: "school", tekst: "Bij een schoolreisje bekijk je een wandelkaart met schaal 1:25 000 om te zien hoe ver de picknickplek écht is." }],
           basiskennis: [{ onderwerp: "Schaal-getal", uitleg: "Bij 1:50 000 is elke centimeter op de kaart in werkelijkheid 50 000 centimeter." }],
-          niveaus: { basis: "2 km.", simpeler: "4 × 50 000 cm = 2 km.", nogSimpeler: "Vermenigvuldig 4 met de schaalfactor — hoeveel kilometer is dat?" },
+          niveaus: { basis: "Vermenigvuldig de kaartafstand met het getal na de dubbele punt, dan heb je centimeters. Hoeveel cm gaan er in 1 km?", simpeler: "4 × 50 000 cm = 2 km.", nogSimpeler: "Vermenigvuldig 4 met de schaalfactor — hoeveel kilometer is dat?" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -147,7 +147,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2,4 × 100 = 240 cm.",
+            basis: "Van meter naar centimeter wordt het getal groter. Hoeveel cm gaan er in 1 meter?",
             simpeler: "2 m = 200 cm, en 0,4 m = 40 cm. Samen 240 cm.",
             nogSimpeler: "Eén meter is honderd centimeter. Hoeveel is twee meter en nog een stukje?",
           },
@@ -194,7 +194,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2600 ÷ 1000 = 2,6 km.",
+            basis: "Van meter naar kilometer wordt het getal kleiner. Hoeveel meter gaan er in 1 km?",
             simpeler: "2000 m is 2 km. De 600 m die over is, is 0,6 km. Samen 2,6 km.",
             nogSimpeler: "Duizend meter is één kilometer. Hoeveel keer duizend zit er in 2600?",
           },
@@ -283,7 +283,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "800 + 800 = 1600 m = 1,6 km.",
+            basis: "Tel eerst heen en terug bij elkaar op. Reken daarna de meters om naar kilometers (1000 m = 1 km).",
             simpeler: "1000 m is 1 km. Er blijft 600 m over, dat is 0,6 km. Samen 1,6 km.",
             nogSimpeler: "Twee keer 800 meter. Is dat meer of minder dan een kilometer?",
           },
@@ -639,7 +639,7 @@ const steps = [
           theorie: "De oppervlakte van een **driehoek** is altijd **de helft** van basis keer hoogte, omdat een driehoek precies de helft is van een rechthoek met dezelfde basis en hoogte. Let op: de hoogte staat loodrecht op de basis, niet schuin.",
           voorbeelden: [{ type: "school", tekst: "Een driehoekige vlag van 20 cm basis en 8 cm hoogte bereken je met dezelfde formule." }],
           basiskennis: [{ onderwerp: "Halve rechthoek", uitleg: "Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte." }],
-          niveaus: { basis: "½·10·6=30 cm².", simpeler: "Half van b×h = 30.", nogSimpeler: "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?" },
+          niveaus: { basis: "Een driehoek is de helft van een rechthoek. Reken basis keer hoogte uit en neem daar de helft van.", simpeler: "Half van b×h = 30.", nogSimpeler: "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?" },
         },
       },
       {
@@ -736,7 +736,7 @@ const steps = [
           theorie: "De inhoud van een **kubus** met zijde z bereken je met **z × z × z**. De uitkomst staat in kubieke eenheden, zoals cm³, omdat je drie lengtes met elkaar vermenigvuldigt.",
           voorbeelden: [{ type: "thuis", tekst: "Een kubusvormige opbergdoos met een zijde van 20 cm — de inhoud daarvan bereken je met dezelfde formule." }],
           basiskennis: [{ onderwerp: "Kubieke eenheid", uitleg: "Inhoud reken je altijd in kubieke eenheden zoals cm³ of m³, omdat het om drie dimensies gaat." }],
-          niveaus: { basis: "5³=125 cm³.", simpeler: "z×z×z = 125.", nogSimpeler: "Vermenigvuldig de zijde drie keer met zichzelf — wat kom je uit?" },
+          niveaus: { basis: "Inhoud = lengte × breedte × hoogte. Bij een kubus zijn die drie even lang.", simpeler: "z×z×z = 125.", nogSimpeler: "Vermenigvuldig de zijde drie keer met zichzelf — wat kom je uit?" },
         },
       },
       {
@@ -770,7 +770,7 @@ const steps = [
           theorie: "Er geldt een handige regel: **1 liter is precies 1000 kubieke centimeter**. Bereken je de inhoud van iets in cm³, dan hoef je alleen door duizend te delen om liters te krijgen.",
           voorbeelden: [{ type: "thuis", tekst: "Een emmer van 20 cm bij 20 cm bij 25 cm — hoeveel liter water past daarin?" }],
           basiskennis: [{ onderwerp: "1 L = 1000 cm³", uitleg: "Deze omrekening gebruik je vaak bij aquaria, emmers en badjes." }],
-          niveaus: { basis: "45 000/1000=45 L.", simpeler: "Cm³ delen door 1000 voor L.", nogSimpeler: "Deel de inhoud in cm³ door duizend — wat kom je uit in liter?" },
+          niveaus: { basis: "Reken eerst de inhoud uit in cm³ (lengte × breedte × hoogte). Hoeveel cm³ is 1 liter?", simpeler: "Cm³ delen door 1000 voor L.", nogSimpeler: "Deel de inhoud in cm³ door duizend — wat kom je uit in liter?" },
         },
       },
       {
@@ -849,7 +849,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 × 6 × 5 = 300 cm³.",
+            basis: "Inhoud vind je door lengte, breedte en hoogte met elkaar te vermenigvuldigen.",
             simpeler: "10 × 6 = 60. Daarna 60 × 5 = 300 cm³.",
             nogSimpeler: "Hoeveel is 10 keer 6? En dat nog eens keer 5?",
           },
@@ -891,7 +891,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4000 ÷ 1000 = 4 L.",
+            basis: "1 liter is evenveel als 1000 cm³. Hoe vaak past 1000 in dit getal?",
             simpeler: "1000 cm³ is 1 L. Hoe vaak past 1000 in 4000?",
             nogSimpeler: "Duizend cm³ is één liter. Hoeveel keer duizend is vierduizend?",
           },
@@ -1118,7 +1118,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 6 = 24 tegels.",
+            basis: "Reken eerst uit hoeveel tegels van 50 cm er in de lengte passen en hoeveel in de breedte. Vermenigvuldig die twee daarna.",
             simpeler: "In 2 m passen 4 tegels en in 3 m passen 6 tegels. 4 × 6 = 24.",
             nogSimpeler: "Hoeveel tegels leg je in één rij van 3 meter? En hoeveel rijen passen er in 2 meter?",
           },
@@ -1165,7 +1165,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 4 = 16, dus de zijde is 4 m.",
+            basis: "Bij een vierkant is de oppervlakte zijde × zijde. Welk getal keer zichzelf geeft 16?",
             simpeler: "Probeer: 2 × 2 = 4, 3 × 3 = 9, 4 × 4 = 16.",
             nogSimpeler: "Welk getal keer zichzelf is zestien?",
           },

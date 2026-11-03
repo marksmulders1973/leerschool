@@ -205,7 +205,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "pan → pannen → pannenkoek", tekst: "Het meervoud van 'pan' is 'pannen' (op -en). Daarom: pannenkoek, met tussen-n." }],
           niveaus: {
-            basis: "pan → pannen, dus pannenkoek (met -en-).",
+            basis: "Wat is het meervoud van 'pan'? Eindigt dat op -en, dan schrijf je ook -en- tussen de twee delen.",
             simpeler: "Wat is het meervoud van 'pan'? Dat -en- komt in het woord.",
             nogSimpeler: "pannen + koek = ?",
           },
@@ -219,7 +219,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "krant → kranten → krantenwijk", tekst: "Het meervoud van 'krant' is 'kranten'. Daarom krantenwijk, met tussen-n." }],
           niveaus: {
-            basis: "krant → kranten, dus krantenwijk.",
+            basis: "Wat is het meervoud van 'krant'? Eindigt dat op -en, dan schrijf je ook -en- tussen de twee delen.",
             simpeler: "Meervoud van 'krant'? Dat -en- komt erin.",
             nogSimpeler: "kranten + wijk = ?",
           },
@@ -365,7 +365,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hoor de -s-", tekst: "Zeg 'dorp...plein' hardop: je hoort een s. Daarom dorpsplein, met tussen-s." }],
           niveaus: {
-            basis: "Je hoort een -s-: dorpsplein.",
+            basis: "Zeg het woord hardop en luister goed naar het stukje tussen 'dorp' en 'plein'. Hoor je daar een extra klank?",
             simpeler: "Spreek het uit. Hoor je een s tussen dorp en plein?",
             nogSimpeler: "dorps + plein = ?",
           },
@@ -379,7 +379,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "verkeer + s + bord", tekst: "Zeg 'verkeer...bord': je hoort een s ertussen. Daarom verkeersbord." }],
           niveaus: {
-            basis: "Je hoort een -s-: verkeersbord.",
+            basis: "Zeg het woord langzaam en hardop. Welke klank hoor je tussen 'verkeer' en 'bord'?",
             simpeler: "Hoor je een s tussen verkeer en bord?",
             nogSimpeler: "verkeers + bord = ?",
           },
@@ -510,7 +510,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "speelgoed + winkel", tekst: "Speelgoedwinkel = speelgoed + winkel, dus een samenstelling." }],
           niveaus: {
-            basis: "speelgoedwinkel (speelgoed + winkel) is een samenstelling.",
+            basis: "Een samenstelling bestaat uit twee woorden die los ook al iets betekenen. Bij welk woord kun je dat doen?",
             simpeler: "Welk woord kun je in twee woorden knippen?",
             nogSimpeler: "In welk woord zitten twee woorden?",
           },
@@ -524,7 +524,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen tussenletter", tekst: "Bij 'voetbalveld' hoor je geen -s- of -en-: gewoon voetbal + veld aan elkaar." }],
           niveaus: {
-            basis: "voetbal + veld = voetbalveld, zonder tussenletter.",
+            basis: "Zeg het woord hardop: hoor je tussen de twee delen een extra klank, of plakken ze gewoon aan elkaar? Een samenstelling schrijf je altijd als één woord.",
             simpeler: "Hoor je een s of -en- tussen voetbal en veld? Nee.",
             nogSimpeler: "voetbal + veld = ?",
           },
@@ -538,7 +538,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "fiets → fietsen → fietsenstalling", tekst: "Het meervoud van 'fiets' is 'fietsen'. Daarom fietsenstalling, met tussen-n." }],
           niveaus: {
-            basis: "fiets → fietsen, dus fietsenstalling.",
+            basis: "Wat is het meervoud van 'fiets'? Eindigt dat op -en, dan schrijf je ook -en- in het midden, en het blijft één woord.",
             simpeler: "Meervoud van 'fiets'? Dat -en- komt erin.",
             nogSimpeler: "fietsen + stalling = ?",
           },

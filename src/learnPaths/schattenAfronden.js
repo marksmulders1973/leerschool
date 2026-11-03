@@ -183,7 +183,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "599 ligt dicht bij 600.",
+            basis: "Sams schatting is 600. Welk antwoord ligt daar het dichtst bij?",
             simpeler: "Schatting 600. Alleen 599 ligt daar dichtbij.",
             nogSimpeler: "599 ligt vlak bij 600.",
           },
@@ -242,7 +242,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 × 50 = 200.",
+            basis: "Rond 49 af naar het ronde getal dat er vlak naast ligt. Reken daarna 4 keer dat ronde getal.",
             simpeler: "49 is bijna 50. 4 × 50 = 200.",
             nogSimpeler: "Ongeveer 200.",
           },
@@ -301,7 +301,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€ 10 + € 2 = € 12.",
+            basis: "Rond elk bedrag af op hele euro's en tel die ronde bedragen bij elkaar op.",
             simpeler: "€ 9,95 ≈ € 10. € 2,10 ≈ € 2. Samen € 12.",
             nogSimpeler: "Ongeveer € 12.",
           },
@@ -424,7 +424,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20 + 20 + 30 = 70.",
+            basis: "Rond elk getal af op het dichtstbijzijnde tiental en tel daarna de ronde getallen op.",
             simpeler: "18 → 20, 23 → 20, 31 → 30. Samen 70.",
             nogSimpeler: "Ongeveer 70.",
           },
@@ -465,7 +465,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Op 100? Kijk naar tien. Dat cijfer beslist of je naar 200/300/400/... gaat." }],
           niveaus: {
-            basis: "Op 100 afronden: kijk tientallen. 358 → 400 (5 = omhoog).",
+            basis: "Afronden op 100: kijk naar het cijfer van de tientallen. Is dat 5 of meer, dan ga je omhoog.",
             simpeler: "Cijfer in tienen ≥ 5 → omhoog. <5 → omlaag.",
             nogSimpeler: "358 → 400.",
           },
@@ -482,7 +482,7 @@ const steps = [
             { titel: "Stap 2: regel toepassen", tekst: "Bij een **5** ga je naar **boven**. 4500 → **5000**." },
           ],
           niveaus: {
-            basis: "5 in de honderdtallen = omhoog. 4500 → 5000.",
+            basis: "Afronden op 1000: kijk naar het cijfer van de honderdtallen. Bij 5 of meer ga je omhoog, bij 4 of minder omlaag.",
             simpeler: "4500 ligt precies in het midden van 4000 en 5000. Bij een 5 ga je altijd naar boven.",
             nogSimpeler: "4500 → 5000.",
           },
@@ -542,7 +542,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "3 = omlaag. 83 → 80.",
+            basis: "Afronden op 10: kijk naar het laatste cijfer. Bij 5 of meer ga je omhoog, bij 4 of minder omlaag.",
             simpeler: "Laatste cijfer 3 is minder dan 5 → omlaag.",
             nogSimpeler: "83 → 80.",
           },
@@ -596,7 +596,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "5 = omhoog. 65 → 70.",
+            basis: "Afronden op 10: kijk naar het laatste cijfer. Wat doe je volgens de regel als dat precies een 5 is?",
             simpeler: "Laatste cijfer is 5 → naar boven.",
             nogSimpeler: "65 → 70.",
           },
@@ -655,7 +655,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 in de tientallen = omlaag. 641 → 600.",
+            basis: "Afronden op 100: kijk naar het cijfer van de tientallen. Bij 5 of meer ga je omhoog, bij 4 of minder omlaag.",
             simpeler: "Tientallen-cijfer 4 is minder dan 5 → omlaag.",
             nogSimpeler: "641 → 600.",
           },
@@ -714,7 +714,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2 in de honderdtallen = omlaag. 6280 → 6000.",
+            basis: "Afronden op 1000: kijk naar het cijfer van de honderdtallen. Is dat 5 of meer, of 4 of minder?",
             simpeler: "Honderdtallen-cijfer 2 is minder dan 5 → omlaag.",
             nogSimpeler: "6280 → 6000.",
           },
@@ -773,7 +773,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "4 in de honderdtallen = omlaag. 3499 → 3000.",
+            basis: "Afronden op 1000: kijk alleen naar het cijfer van de honderdtallen, de cijfers daarna tellen niet mee.",
             simpeler: "Alleen de 4 telt. 4 is minder dan 5 → omlaag.",
             nogSimpeler: "3499 → 3000.",
           },
@@ -832,7 +832,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "36 → 40.",
+            basis: "Rond elk getal zelf af op 10 door naar het laatste cijfer te kijken. Welk getal komt dan op 40 uit?",
             simpeler: "36 eindigt op 6 → omhoog → 40.",
             nogSimpeler: "36 wordt 40.",
           },
@@ -886,7 +886,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "560 → 600, niet 500.",
+            basis: "Rond elk getal zelf af op 100 door naar het cijfer van de tientallen te kijken. Welk getal komt dan niet op 500 uit?",
             simpeler: "Tientallen-cijfer 6 → omhoog → 600.",
             nogSimpeler: "560 wordt 600.",
           },
@@ -921,7 +921,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Afronden, dan rekenen. Veel sneller dan exact rekenen, en meestal dicht bij het echte antwoord." }],
           niveaus: {
-            basis: "Schatten op 100: rond af, dan optellen. 200 + 400 = 600.",
+            basis: "Schatten op 100: rond elk getal eerst af op honderdtallen en tel daarna de ronde getallen op.",
             simpeler: "198 → 200. 412 → 400. Som = 600.",
             nogSimpeler: "200 + 400 = 600.",
           },
@@ -1445,7 +1445,7 @@ const steps = [
           theorie: "Bij grote getallen: gebruik afronding om FOUT-ANTWOORDEN snel uit te sluiten. Een antwoord als 180 of 380 past niet bij schatting 280.",
           voorbeelden: [{ type: "stap", tekst: "234 + 167: schat 230+170=400. Echt 401. Past." }],
           basiskennis: [{ onderwerp: "Twee technieken combineren", uitleg: "Precies uitrekenen + ronde schatting als sanity-check = minste foutkans." }],
-          niveaus: { basis: "145+89+36 = 270.", simpeler: "Tel: 145+89=234. 234+36=270. Schat-check: 150+90+40=280 (klopt qua orde).", nogSimpeler: "270" },
+          niveaus: { basis: "Tel eerst precies op, bijvoorbeeld eerst de eerste twee getallen en dan het derde erbij. Rond daarna de uitkomst af op 10.", simpeler: "Tel: 145+89=234. 234+36=270. Schat-check: 150+90+40=280 (klopt qua orde).", nogSimpeler: "270" },
         },
       },
       {
@@ -1490,7 +1490,7 @@ const steps = [
             { type: "stap", tekst: "1.234 op 1000: 200 < 500 → 1.000." },
           ],
           basiskennis: [{ onderwerp: "Welk cijfer kijken", uitleg: "Bij afronding op X: kijk naar het cijfer DIRECT rechts van de afrondplaats." }],
-          niveaus: { basis: "5.000 + 3.000 = 8.000.", simpeler: "4.612 → 5.000 (6 ≥ 5). 3.298 → 3.000 (2 < 5). 5.000 + 3.000 = 8.000.", nogSimpeler: "~8.000" },
+          niveaus: { basis: "Rond beide getallen af op duizendtallen: kijk naar het cijfer van de honderdtallen. Tel daarna de ronde getallen op.", simpeler: "4.612 → 5.000 (6 ≥ 5). 3.298 → 3.000 (2 < 5). 5.000 + 3.000 = 8.000.", nogSimpeler: "~8.000" },
         },
       },
       {

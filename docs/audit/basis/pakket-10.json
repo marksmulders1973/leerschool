@@ -1,0 +1,297 @@
+[
+ {
+  "file": "src/learnPaths/volgordeBewerkingen.js",
+  "items": [
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 1",
+    "antwoord": "14",
+    "basis": "14."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 2",
+    "antwoord": "Vermenigvuldigen",
+    "basis": "Vermenigvuldigen."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 3",
+    "antwoord": "16",
+    "basis": "16."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 4",
+    "antwoord": "9 ÷ 3",
+    "basis": "9 ÷ 3."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 5",
+    "antwoord": "18",
+    "basis": "18."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 6",
+    "antwoord": "Anders krijgt iedereen een ander antwoord",
+    "basis": "Anders krijgt iedereen een ander antwoord."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 1 vraag 7",
+    "antwoord": "10",
+    "basis": "10."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 3 vraag 1",
+    "antwoord": "30",
+    "basis": "30."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 3 vraag 2",
+    "antwoord": "17",
+    "basis": "17."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 1",
+    "antwoord": "7",
+    "basis": "7."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 2",
+    "antwoord": "20",
+    "basis": "20."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 3",
+    "antwoord": "16",
+    "basis": "16."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 4",
+    "antwoord": "× en ÷",
+    "basis": "× en ÷."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 5",
+    "antwoord": "28",
+    "basis": "28."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 6",
+    "antwoord": "2",
+    "basis": "2."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 7",
+    "antwoord": "5² uitrekenen",
+    "basis": "5² uitrekenen."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 8",
+    "antwoord": "16",
+    "basis": "16."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 5 vraag 9",
+    "antwoord": "8",
+    "basis": "8."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 1",
+    "antwoord": "24",
+    "basis": "24."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 2",
+    "antwoord": "26",
+    "basis": "26."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 3",
+    "antwoord": "24",
+    "basis": "24."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 4",
+    "antwoord": "18",
+    "basis": "18."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 5",
+    "antwoord": "31",
+    "basis": "31."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 6",
+    "antwoord": "Fout: het moet minder dan 100 zijn",
+    "basis": "Fout, het moet minder dan 100 zijn."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 6 vraag 7",
+    "antwoord": "21",
+    "basis": "21."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 7 vraag 1",
+    "antwoord": "11",
+    "basis": "11."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 7 vraag 2",
+    "antwoord": "20",
+    "basis": "20."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 7 vraag 3",
+    "antwoord": "25",
+    "basis": "25."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 7 vraag 4",
+    "antwoord": "9",
+    "basis": "9."
+   },
+   {
+    "waar": "volgorde-bewerkingen stap 7 vraag 5",
+    "antwoord": "× (vermenigvuldigen)",
+    "basis": "× (vermenigvuldigen)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/tafelsPo.js",
+  "items": [
+   {
+    "waar": "tafels-po stap 1 vraag 5",
+    "antwoord": "5 + 5 + 5 + 5",
+    "basis": "4 × 5 = 5 + 5 + 5 + 5."
+   },
+   {
+    "waar": "tafels-po stap 1 vraag 6",
+    "antwoord": "4 × 2",
+    "basis": "4 × 2 (vier keer een 2)."
+   },
+   {
+    "waar": "tafels-po stap 1 vraag 7",
+    "antwoord": "18 blokjes",
+    "basis": "3 × 6 = 18 blokjes."
+   },
+   {
+    "waar": "tafels-po stap 1 vraag 8",
+    "antwoord": "14",
+    "basis": "2 × 7 = 14 (wisselregel)."
+   },
+   {
+    "waar": "tafels-po stap 1 vraag 9",
+    "antwoord": "3, 6, 9, 12",
+    "basis": "3, 6, 9, 12 — steeds 3 erbij."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 1",
+    "antwoord": "70",
+    "basis": "7 × 10 = 70 (0 erbij)."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 2",
+    "antwoord": "30",
+    "basis": "6 × 5 = 30."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 3",
+    "antwoord": "18",
+    "basis": "9 × 2 = 18 (9 + 9)."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 5",
+    "antwoord": "90",
+    "basis": "9 × 10 = 90 (0 erbij)."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 6",
+    "antwoord": "35",
+    "basis": "7 × 5 = 35."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 7",
+    "antwoord": "16",
+    "basis": "8 × 2 = 16 (8 + 8)."
+   },
+   {
+    "waar": "tafels-po stap 2 vraag 8",
+    "antwoord": "23",
+    "basis": "23 — eindigt niet op 0 of 5."
+   },
+   {
+    "waar": "tafels-po stap 3 vraag 3",
+    "antwoord": "27",
+    "basis": "27."
+   },
+   {
+    "waar": "tafels-po stap 3 vraag 5",
+    "antwoord": "24",
+    "basis": "8 × 3 = 24."
+   },
+   {
+    "waar": "tafels-po stap 3 vraag 6",
+    "antwoord": "28",
+    "basis": "28 (= 7 × 4)."
+   },
+   {
+    "waar": "tafels-po stap 3 vraag 7",
+    "antwoord": "36",
+    "basis": "9 × 4 = 36 (dubbel van 18)."
+   },
+   {
+    "waar": "tafels-po stap 4 vraag 2",
+    "antwoord": "56",
+    "basis": "56."
+   },
+   {
+    "waar": "tafels-po stap 4 vraag 5",
+    "antwoord": "63",
+    "basis": "9 × 7 = 63."
+   },
+   {
+    "waar": "tafels-po stap 4 vraag 6",
+    "antwoord": "36",
+    "basis": "6 × 6 = 36."
+   },
+   {
+    "waar": "tafels-po stap 4 vraag 7",
+    "antwoord": "56",
+    "basis": "56 — want 5 + 6 = 11, geen 9."
+   },
+   {
+    "waar": "tafels-po stap 4 vraag 8",
+    "antwoord": "21 dagen",
+    "basis": "3 × 7 = 21 dagen."
+   },
+   {
+    "waar": "tafels-po stap 5 vraag 4",
+    "antwoord": "150",
+    "basis": "150."
+   },
+   {
+    "waar": "tafels-po stap 5 vraag 5",
+    "antwoord": "78",
+    "basis": "6 × 13 = 60 + 18 = 78."
+   },
+   {
+    "waar": "tafels-po stap 5 vraag 6",
+    "antwoord": "77",
+    "basis": "11 × 7 = 70 + 7 = 77."
+   },
+   {
+    "waar": "tafels-po stap 5 vraag 7",
+    "antwoord": "70",
+    "basis": "5 × 14 = 140 ÷ 2 = 70."
+   },
+   {
+    "waar": "tafels-po stap 5 vraag 8",
+    "antwoord": "60",
+    "basis": "4 × 15 = 60."
+   },
+   {
+    "waar": "tafels-po stap 5 vraag 9",
+    "antwoord": "(8 × 10) + (8 × 2)",
+    "basis": "(8 × 10) + (8 × 2) = 96."
+   }
+  ]
+ }
+]

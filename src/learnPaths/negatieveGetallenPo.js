@@ -73,7 +73,7 @@ const steps = [
           theorie: "Getalslijn-regel: rechts = groter. −3 ligt rechts van −7.",
           voorbeelden: [{ type: "thermometer", tekst: "−3°C is warmer dan −7°C. Warmer = hoger = groter." }],
           basiskennis: [{ onderwerp: "Min-teken misleidt", uitleg: "7 > 3, maar −7 < −3 (omdat verder van 0 aan min-kant)." }],
-          niveaus: { basis: "−3.", simpeler: "Op een thermometer is −3 °C warmer dan −7 °C. Warmer betekent hier: een groter getal.", nogSimpeler: "−3" },
+          niveaus: { basis: "Hoe dichter een min-getal bij 0 ligt, hoe groter het is. Welk getal ligt het dichtst bij 0?", simpeler: "Op een thermometer is −3 °C warmer dan −7 °C. Warmer betekent hier: een groter getal.", nogSimpeler: "−3" },
         },
       },
       {
@@ -101,7 +101,7 @@ const steps = [
           theorie: "Volgorde groot→klein: +5 > 0 > −1 > −10.",
           voorbeelden: [{ type: "lijn", tekst: "−10 ← −1 ← 0 ← +5. Hoe verder links, hoe kleiner." }],
           basiskennis: [{ onderwerp: "Min-getallen omgekeerd", uitleg: "Bij positieven: groter getal = groter. Bij negatieven: groter cijfer = kleiner." }],
-          niveaus: { basis: "−10.", simpeler: "Op de getallenlijn staan ze zo: −10, −1, 0, +5. Het kleinste getal staat het verst naar links: −10.", nogSimpeler: "−10" },
+          niveaus: { basis: "Het kleinste getal ligt het verst naar links op de getallenlijn. Welk getal ligt het verst onder nul?", simpeler: "Op de getallenlijn staan ze zo: −10, −1, 0, +5. Het kleinste getal staat het verst naar links: −10.", nogSimpeler: "−10" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -142,7 +142,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−4 is groter dan −9.",
+            basis: "Op de getallenlijn is het getal dat meer naar rechts ligt het grootst. Zet de twee getallen uit elke zin in gedachten op de lijn.",
             simpeler: "Denk aan de thermometer: −4 °C is minder koud dan −9 °C. Dus −4 is groter.",
             nogSimpeler: "−4 is groter dan −9",
           },
@@ -180,7 +180,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−15.",
+            basis: "Bij het woord \"min\" hoort een min-teken vóór het getal. Hoe schrijf je eerst gewoon \"vijftien\" met cijfers?",
             simpeler: "Eerst het min-teken, dan 15. Dus −15.",
             nogSimpeler: "−15",
           },
@@ -218,7 +218,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Onder de grond.",
+            basis: "De begane grond is verdieping 0. Liggen de verdiepingen met een min-teken boven of onder die 0?",
             simpeler: "0 is de begane grond. −1 is één verdieping lager: onder de grond.",
             nogSimpeler: "Onder de grond",
           },
@@ -304,7 +304,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "+2.",
+            basis: "Een negatief getal heeft een min-teken en ligt onder nul. Kijk bij elk getal welk teken ervoor staat.",
             simpeler: "Alleen +2 heeft geen min-teken. Het ligt boven nul.",
             nogSimpeler: "+2",
           },
@@ -347,7 +347,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−2.",
+            basis: "Teken een stukje getallenlijn van −4 tot 0. Welk getal staat er tussen −3 en −1 in?",
             simpeler: "Tel van −3 naar −1: −3, −2, −1. In het midden staat −2.",
             nogSimpeler: "−2",
           },
@@ -372,7 +372,7 @@ const steps = [
           theorie: "Wanneer aftrekker > beginwaarde: ga onder nul (negatief antwoord).",
           voorbeelden: [{ type: "stap", tekst: "4 − 6 = 4 − 4 − 2 = 0 − 2 = −2." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Splits: 4−4=0, dan nog 2 verder naar links → −2." }],
-          niveaus: { basis: "−2.", simpeler: "4 − 6: vanaf 4 zes stappen links → −2 (onder nul).", nogSimpeler: "−2" },
+          niveaus: { basis: "Min betekent naar links op de getallenlijn. Hoeveel stappen zet je vanaf 4 tot je bij 0 bent, en hoeveel moeten er dan nog?", simpeler: "4 − 6: vanaf 4 zes stappen links → −2 (onder nul).", nogSimpeler: "−2" },
         },
       },
       {
@@ -386,7 +386,7 @@ const steps = [
           theorie: "−3+5: eerst 3 stappen tot 0 (gebruikt 3 van de 5), dan nog 2 → +2.",
           voorbeelden: [{ type: "stap", tekst: "−3 + 3 = 0. 0 + 2 = 2. Dus −3 + 5 = 2." }],
           basiskennis: [{ onderwerp: "Splits-truc", uitleg: "Splits 5 in 3+2. Eerst 3 om bij 0 te komen, dan rest." }],
-          niveaus: { basis: "+2.", simpeler: "−3 + 5: eerst 3 omhoog naar 0, dan 2 verder = +2.", nogSimpeler: "+2" },
+          niveaus: { basis: "Plus betekent naar rechts op de getallenlijn. Na hoeveel stappen ben je vanaf −3 bij 0, en hoeveel stappen heb je dan nog over?", simpeler: "−3 + 5: eerst 3 omhoog naar 0, dan 2 verder = +2.", nogSimpeler: "+2" },
         },
       },
       {
@@ -400,7 +400,7 @@ const steps = [
           theorie: "Vanaf een negatief getal aftrekken: tel op wat er afgaat. −5 − 4 = −(5+4) = −9.",
           voorbeelden: [{ type: "truc", tekst: "Beide negatief denken: −5 + (−4) = −9. Of: schuld 5 + schuld 4 = schuld 9." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Schuld €5 + schuld €4 = schuld €9 = saldo −€9." }],
-          niveaus: { basis: "−9.", simpeler: "−5 − 4: vanaf −5 vier stappen links = −9.", nogSimpeler: "−9" },
+          niveaus: { basis: "Min betekent naar links. Kom je vanaf −5 dan dichter bij 0 of verder van 0 af?", simpeler: "−5 − 4: vanaf −5 vier stappen links = −9.", nogSimpeler: "−9" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -441,7 +441,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−5.",
+            basis: "Begin op 2 en loop naar links. Tel eerst de stappen tot 0; hoeveel stappen moet je daarna nog onder nul zetten?",
             simpeler: "Van 2 naar 0 zijn 2 stappen. Nog 5 stappen verder: −5.",
             nogSimpeler: "−5",
           },
@@ -484,7 +484,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−2.",
+            basis: "Plus betekent naar rechts. Begin op −6 en loop 4 stappen naar rechts: kom je dan al bij 0?",
             simpeler: "Vanaf −6 vier stappen naar rechts: −5, −4, −3, −2.",
             nogSimpeler: "−2",
           },
@@ -527,7 +527,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−7.",
+            basis: "Je staat al onder nul en min betekent nog verder naar links. Tel vanaf −1 zes stappen naar links.",
             simpeler: "Vanaf −1 zes stappen naar links: je komt op −7.",
             nogSimpeler: "−7",
           },
@@ -565,7 +565,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "+6.",
+            basis: "Plus betekent naar rechts. Na 2 stappen ben je vanaf −2 bij 0; hoeveel stappen van de 8 heb je dan nog over?",
             simpeler: "Van −2 naar 0 zijn 2 stappen. Nog 6 stappen verder: +6.",
             nogSimpeler: "+6",
           },
@@ -608,7 +608,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "−7.",
+            basis: "Naar links op de getallenlijn kom je verder onder nul. Tel vanaf −4 drie stappen verder van 0 af.",
             simpeler: "Vanaf −4 tellen: −5, −6, −7.",
             nogSimpeler: "−7",
           },
@@ -689,7 +689,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 − 4.",
+            basis: "Je begint op 1, dus de som begint met 1. Hoort naar links lopen bij een plus of bij een min?",
             simpeler: "Je begint op 1 en gaat naar links. Naar links = min. Dus 1 − 4.",
             nogSimpeler: "1 − 4",
           },
@@ -1196,7 +1196,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12 m.",
+            basis: "De zeespiegel is 0. Tel de meters van de meeuw tot 0 en daarna van 0 tot de vis, en tel die twee stukken op.",
             simpeler: "7 m tot het water, en nog 5 m onder water. 7 + 5 = 12 m.",
             nogSimpeler: "12 m",
           },

@@ -226,7 +226,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Plas op straat verdampt sneller op een zonnige dag met wind." }],
           basiskennis: [{ onderwerp: "Oppervlak", uitleg: "Hoe meer oppervlak, hoe sneller verdamping." }],
           niveaus: {
-            basis: "Vlakke schaal.",
+            basis: "Water verdampt aan de bovenkant, waar het de lucht raakt. Bij welke vorm raakt het meeste water de lucht?",
             simpeler: "Verdampen gebeurt alleen bovenop, waar het water de lucht raakt. In een vlakke schaal raakt veel meer water de lucht dan in een diep glas. Daarom verdampt het daar sneller.",
             nogSimpeler: "Vlakke schaal",
           },
@@ -287,7 +287,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Mens-plant = elkaars tegenpolen in lucht-gebruik. Wij uit, plant in (CO₂). Plant uit, wij in (O₂). Win-win." }],
           niveaus: {
-            basis: "Koolstofdioxide (CO₂).",
+            basis: "Wij ademen zuurstof in en een ander gas uit. Planten doen het andersom: welk gas ademen wij uit?",
             simpeler: "Wij ademen CO₂ UIT. Planten ademen die CO₂ juist IN voor fotosynthese.",
             nogSimpeler: "CO₂",
           },
@@ -325,7 +325,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Smelten = WARMTE. Stollen = KOU. Beide gaan tussen vast/vloeibaar. Onthoud: warmte → vloeit, kou → bevriest." }],
           niveaus: {
-            basis: "Vast → vloeibaar.",
+            basis: "Denk aan een ijsblokje in de zon. Hoe is het voordat het smelt, en hoe is het daarna?",
             simpeler: "IJs (vast) wordt water (vloeibaar) = smelten. Vast → vloeibaar.",
             nogSimpeler: "Vast → vloeibaar",
           },

@@ -128,7 +128,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Delen = links beginnen.",
+            basis: "Bij optellen, aftrekken en keer begin je rechts. Bij welke bewerking is dat juist andersom?",
             simpeler: "Bij plus, min en keer begin je rechts bij de eenheden. Bij delen begin je links, bij het grootste cijfer.",
             nogSimpeler: "Delen: links",
           },
@@ -175,7 +175,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 onder de 2.",
+            basis: "De 7 is een eenheid. Welk cijfer van 352 staat op de plek van de eenheden?",
             simpeler: "47 heeft maar twee cijfers. Zet het rechts uitgelijnd: 7 (eenheden) onder 2 (eenheden), 4 (tientallen) onder 5 (tientallen).",
             nogSimpeler: "Onder de 2",
           },
@@ -227,7 +227,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Dezelfde kolom bij elkaar.",
+            basis: "Denk aan eenheden, tientallen en honderdtallen. Welke cijfers mag je bij het optellen bij elkaar nemen?",
             simpeler: "Je wilt eenheden bij eenheden optellen en tientallen bij tientallen. Dat lukt alleen als ze recht onder elkaar staan.",
             nogSimpeler: "Recht onder elkaar",
           },
@@ -256,7 +256,7 @@ const steps = [
           theorie: "Optellen kolom voor kolom (rechts→links). >9 = onthoudje meenemen.",
           voorbeelden: [{ type: "stap", tekst: "Schat eerst: 350+250=600. Antwoord moet rond 600 liggen. 603 ✓." }],
           basiskennis: [{ onderwerp: "Schat altijd", uitleg: "Schatting helpt om dom-foute antwoorden uit te sluiten." }],
-          niveaus: { basis: "347+256=603.", simpeler: "Doe het kolom voor kolom: 7+6=13 (3, +1). 4+5+1=10 (0, +1). 3+2+1=6. Antwoord 603.", nogSimpeler: "603" },
+          niveaus: { basis: "Zet de getallen onder elkaar en begin rechts bij de eenheden. Neem elk onthoudje mee naar de volgende kolom.", simpeler: "Doe het kolom voor kolom: 7+6=13 (3, +1). 4+5+1=10 (0, +1). 3+2+1=6. Antwoord 603.", nogSimpeler: "603" },
         },
       },
       {
@@ -272,7 +272,7 @@ const steps = [
           theorie: "Bij grote sommen extra zorgvuldig — vaak meerdere onthoudjes achter elkaar.",
           voorbeelden: [{ type: "schat", tekst: "Schat: 1250+570=1820. Antwoord rond 1820. 1815 ✓." }],
           basiskennis: [{ onderwerp: "Schrijf netjes", uitleg: "Kolommen recht onder elkaar = minder fouten." }],
-          niveaus: { basis: "1248+567=1815.", simpeler: "Kolom-truc: 8+7=15. 4+6+1=11. 2+5+1=8. 1. Lees omhoog: 1815.", nogSimpeler: "1815" },
+          niveaus: { basis: "Zet de getallen onder elkaar met de eenheden recht onder elkaar. Begin rechts en neem elk onthoudje mee.", simpeler: "Kolom-truc: 8+7=15. 4+6+1=11. 2+5+1=8. 1. Lees omhoog: 1815.", nogSimpeler: "1815" },
         },
       },
       {
@@ -598,7 +598,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 + 4 + 1 = 13.",
+            basis: "Tel de twee cijfers in de tientallen-kolom bij elkaar op. Kwam er bij de eenheden een onthoudje bij?",
             simpeler: "Eerst de eenheden: 9 + 5 = 14, dus 1 onthouden. Dan tientallen: 8 + 4 = 12, plus het onthoudje = 13.",
             nogSimpeler: "13",
           },
@@ -1091,7 +1091,7 @@ const steps = [
           theorie: "Schat: 300×3=900. Antwoord 972 past.",
           voorbeelden: [{ type: "stap", tekst: "324×3 = 4×3 (eenh) + 20×3 + 300×3 = 12+60+900 = 972." }],
           basiskennis: [{ onderwerp: "Onthoudje", uitleg: "Ook bij × werkt het onthoudje (als product >9)." }],
-          niveaus: { basis: "324×3=972.", simpeler: "Doe 4×3=12 (schrijf 2, onthoud 1). 2×3=6 +1=7. 3×3=9. Antwoord 972.", nogSimpeler: "972" },
+          niveaus: { basis: "Begin rechts: doe eerst de eenheden keer 3. Is de uitkomst 10 of meer, onthoud dan het tiental.", simpeler: "Doe 4×3=12 (schrijf 2, onthoud 1). 2×3=6 +1=7. 3×3=9. Antwoord 972.", nogSimpeler: "972" },
         },
       },
       {
@@ -1108,7 +1108,7 @@ const steps = [
           theorie: "×25 = ×100 ÷ 4. ×5 = ÷2 ×10. Trucs maken sommen sneller.",
           voorbeelden: [{ type: "truc", tekst: "84×25 = 8400÷4 = 2100. 36×25 = 3600÷4 = 900." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "20×25=500. Antwoord rond 500. 450 past." }],
-          niveaus: { basis: "18×25=450.", simpeler: "Truc: ×25 = (×100)÷4. 18×100=1800. 1800÷4=450. Sneller dan cijferen.", nogSimpeler: "450" },
+          niveaus: { basis: "Keer 25 kan slim: reken eerst keer 100 en deel dat daarna door 4.", simpeler: "Truc: ×25 = (×100)÷4. 18×100=1800. 1800÷4=450. Sneller dan cijferen.", nogSimpeler: "450" },
         },
       },
       {
@@ -1122,7 +1122,7 @@ const steps = [
           theorie: "Schat: 500×7=3500. Antwoord 3192 past in die buurt.",
           voorbeelden: [{ type: "stap", tekst: "456×7: 6×7=42, 5×7+4=39, 4×7+3=31. Lees omhoog: 3192." }],
           basiskennis: [{ onderwerp: "Tafels herkennen", uitleg: "Goede tafel-kennis (×7 etc.) maakt cijferen veel sneller." }],
-          niveaus: { basis: "456×7=3192.", simpeler: "Cijfer voor cijfer: 6×7=42 (schrijf 2, onthoud 4). 5×7=35+4=39 (9, onthoud 3). 4×7=28+3=31. Antwoord 3192.", nogSimpeler: "3192" },
+          niveaus: { basis: "Begin rechts bij de eenheden keer 7. Tel het onthoudje steeds op bij de volgende kolom.", simpeler: "Cijfer voor cijfer: 6×7=42 (schrijf 2, onthoud 4). 5×7=35+4=39 (9, onthoud 3). 4×7=28+3=31. Antwoord 3192.", nogSimpeler: "3192" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1171,7 +1171,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "278 × 3 = 834.",
+            basis: "Begin rechts: eenheden keer 3. Vergeet het onthoudje niet bij de tientallen.",
             simpeler: "3 × 8 = 24. Schrijf 4, onthoud 2. 3 × 7 = 21, plus 2 = 23. Schrijf 3, onthoud 2. 3 × 2 = 6, plus 2 = 8. Antwoord: 834.",
             nogSimpeler: "834",
           },
@@ -1222,7 +1222,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "609 × 8 = 4872.",
+            basis: "Begin rechts bij de eenheden keer 8. Let op de 0 in het midden: 0 keer 8 is 0, maar het onthoudje komt er nog bij.",
             simpeler: "8 × 9 = 72. Schrijf 2, onthoud 7. 8 × 0 = 0, plus 7 = 7. Schrijf 7. 8 × 6 = 48. Schrijf 48. Antwoord: 4872.",
             nogSimpeler: "4872",
           },
@@ -1277,7 +1277,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1235 × 4 = 4940.",
+            basis: "Vermenigvuldig elk cijfer van 1235 met 4, van rechts naar links. Neem elk onthoudje mee naar de volgende kolom.",
             simpeler: "4 × 5 = 20. Schrijf 0, onthoud 2. 4 × 3 = 12, plus 2 = 14. Schrijf 4, onthoud 1. 4 × 2 = 8, plus 1 = 9. Schrijf 9. 4 × 1 = 4. Antwoord: 4940.",
             nogSimpeler: "4940",
           },
@@ -1328,7 +1328,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "23 × 14 = 322.",
+            basis: "Splits 14 in 10 en 4. Reken 23 keer 10 en 23 keer 4 apart en tel die twee uitkomsten op.",
             simpeler: "23 × 4 = 92. 23 × 10 = 230 (nul-plaatshouder achteraan!). 92 + 230 = 322.",
             nogSimpeler: "322",
           },
@@ -1379,7 +1379,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "36 × 21 = 756.",
+            basis: "Splits 21 in 20 en 1. Reken 36 keer 20 en 36 keer 1 apart en tel ze daarna op.",
             simpeler: "36 × 1 = 36. 36 × 20 = 720 (nul-plaatshouder!). 36 + 720 = 756.",
             nogSimpeler: "756",
           },
@@ -1426,7 +1426,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "68 × 5 = 340.",
+            basis: "Keer 5 is hetzelfde als keer 10 en dan de helft. Wat is 68 keer 10?",
             simpeler: "68 : 2 = 34. 34 × 10 = 340.",
             nogSimpeler: "340",
           },
@@ -1505,7 +1505,7 @@ const steps = [
           theorie: "Cijferend delen: van links naar rechts. Pak telkens net genoeg cijfers tot deler erin past.",
           voorbeelden: [{ type: "stap", tekst: "168÷8: pak 16. 8 past 2× (16). Rest 0, pak 8. 8 past 1×. Antwoord 21." }],
           basiskennis: [{ onderwerp: "Controle", uitleg: "Antwoord × deler moet origineel geven. 21×8=168 ✓." }],
-          niveaus: { basis: "168÷8=21.", simpeler: "Hoe vaak past 8 in 168? Probeer: 20×8=160. 21×8=168 (precies!). Antwoord 21.", nogSimpeler: "21" },
+          niveaus: { basis: "Hoe vaak past 8 in 16? Kijk daarna hoe vaak 8 in het laatste cijfer past.", simpeler: "Hoe vaak past 8 in 168? Probeer: 20×8=160. 21×8=168 (precies!). Antwoord 21.", nogSimpeler: "21" },
         },
       },
       {
@@ -1519,7 +1519,7 @@ const steps = [
           theorie: "Bij delen: zoek welk getal × deler = origineel. ÷9 → zoek in 9-tafel.",
           voorbeelden: [{ type: "tafel", tekst: "9×5=45 → 9×50=450. Dus 450÷9=50." }],
           basiskennis: [{ onderwerp: "Tafels", uitleg: "9-tafel: 9, 18, 27, 36, 45, 54..." }],
-          niveaus: { basis: "9×50=450 → 450÷9=50.", simpeler: "Welk getal × 9 = 450? Probeer: 50×9=450 ✓.", nogSimpeler: "50" },
+          niveaus: { basis: "Denk aan de tafel van 9: welk getal keer 9 geeft 450? Begin met 9 keer 5 = 45.", simpeler: "Welk getal × 9 = 450? Probeer: 50×9=450 ✓.", nogSimpeler: "50" },
         },
       },
       {
@@ -1536,7 +1536,7 @@ const steps = [
           theorie: "Rest 6 zou betekenen 12×6=72, en 78-72=6 over. Maar dan kun je nog 1 keer 6 erbij delen → 13. Dus rest 6 is fout.",
           voorbeelden: [{ type: "controle", tekst: "13×6=78 ✓. Klopt precies, geen rest." }],
           basiskennis: [{ onderwerp: "Wanneer rest?", uitleg: "Alleen als deling NIET netjes uitkomt. 78÷6 komt netjes uit op 13." }],
-          niveaus: { basis: "78÷6=13.", simpeler: "Probeer 13×6: 13×6=78 (precies). Geen rest.", nogSimpeler: "13" },
+          niveaus: { basis: "Hoe vaak past 6 in 7? Neem de rest mee naar het volgende cijfer.", simpeler: "Probeer 13×6: 13×6=78 (precies). Geen rest.", nogSimpeler: "13" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -1585,7 +1585,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "252 ÷ 7 = 36.",
+            basis: "Hoe vaak past 7 in 25? Neem de rest mee naar het volgende cijfer.",
             simpeler: "7 past niet in 2. Pak 25. 7 past 3 keer in 25 (21). Rest 4. Haal de 2 erbij: 42. 7 past 6 keer in 42. Antwoord: 36.",
             nogSimpeler: "36",
           },
@@ -1636,7 +1636,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "384 ÷ 6 = 64.",
+            basis: "Hoe vaak past 6 in 38? Neem de rest mee naar het volgende cijfer.",
             simpeler: "6 past niet in 3. Pak 38. 6 past 6 keer in 38 (36). Rest 2. Haal de 4 erbij: 24. 6 past 4 keer in 24. Antwoord: 64.",
             nogSimpeler: "64",
           },
@@ -1687,7 +1687,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "852 ÷ 4 = 213.",
+            basis: "Begin links: hoe vaak past 4 in de 8? Doe daarna de 5 en de 2.",
             simpeler: "4 past 2 keer in 8. Rest 0. 4 past 1 keer in 5 (4). Rest 1. Haal de 2 erbij: 12. 4 past 3 keer in 12. Antwoord: 213.",
             nogSimpeler: "213",
           },
@@ -1734,7 +1734,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "59 ÷ 7 = 8 rest 3.",
+            basis: "Welk getal uit de tafel van 7 komt het dichtst onder de 59? Wat er overblijft is de rest.",
             simpeler: "7 past niet in 5. Pak 59. 7 past 8 keer (8 × 7 = 56). 59 − 56 = 3. Antwoord: 8 rest 3.",
             nogSimpeler: "8 rest 3",
           },
@@ -1832,7 +1832,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Begin met 31.",
+            basis: "Past 4 niet in het eerste cijfer? Neem dan de eerste twee cijfers samen.",
             simpeler: "Je werkt van links naar rechts. De 3 is te klein voor 4. Neem dan het volgende cijfer erbij: 31.",
             nogSimpeler: "31",
           },
@@ -1879,7 +1879,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "145 ÷ 5 = 29.",
+            basis: "Delen door 5 kan slim: reken eerst keer 2 en deel dan door 10.",
             simpeler: "145 × 2 = 290. 290 ÷ 10 = 29.",
             nogSimpeler: "29",
           },
@@ -1906,7 +1906,7 @@ const steps = [
           theorie: "**Signaal-woorden:** 'totaal/samen' = +. 'per/elke/×' = ×. 'verdeeld' = ÷. 'verschil' = −.",
           voorbeelden: [{ type: "redactie", tekst: "35 dozen × 28 kg/doos = totaal kg. Vermenigvuldigen." }],
           basiskennis: [{ onderwerp: "Lees vraag goed", uitleg: "Bewerking kiezen = belangrijkste stap bij redactiesommen." }],
-          niveaus: { basis: "35×28=980 kg.", simpeler: "Per doos 28 kg, 35 dozen. Vermenigvuldigen: 35×28. Snelle truc: 35×30=1050, min 35×2=70 → 980.", nogSimpeler: "35×28=980" },
+          niveaus: { basis: "Je hebt 35 dozen die elk 28 kg wegen. Is dit optellen, aftrekken, keer of delen?", simpeler: "Per doos 28 kg, 35 dozen. Vermenigvuldigen: 35×28. Snelle truc: 35×30=1050, min 35×2=70 → 980.", nogSimpeler: "35×28=980" },
         },
       },
       {
@@ -1923,7 +1923,7 @@ const steps = [
           theorie: "Signaalwoord 'verdeeld over' / 'gelijk per' / 'hoeveel ieder' = altijd delen.",
           voorbeelden: [{ type: "delen", tekst: "180 boeken ÷ 12 kasten = 15 boeken per kast." }],
           basiskennis: [{ onderwerp: "Tafels", uitleg: "12-tafel kennen helpt: 12×15=180." }],
-          niveaus: { basis: "180÷12=15.", simpeler: "Verdeeld = delen. 180÷12. Probeer: 12×15=180 ✓. Antwoord 15.", nogSimpeler: "15" },
+          niveaus: { basis: "Verdelen betekent delen. Welk getal keer 12 geeft 180?", simpeler: "Verdeeld = delen. 180÷12. Probeer: 12×15=180 ✓. Antwoord 15.", nogSimpeler: "15" },
         },
       },
       {
@@ -1940,7 +1940,7 @@ const steps = [
           theorie: "÷3 cijferend: ga van links naar rechts. 12÷3=4 schrijf, 4÷3=1 rest 1, 15÷3=5. Lees: 415.",
           voorbeelden: [{ type: "controle", tekst: "415×3=1245 ✓. Klopt." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "1200÷3=400. Antwoord moet rond 400 liggen. 415 past." }],
-          niveaus: { basis: "1245÷3=415.", simpeler: "Verdeeld = delen. 1245÷3. Cijferen: 12÷3=4, 4÷3=1 rest 1, 15÷3=5. Antwoord 415. Check: 415×3=1245 ✓.", nogSimpeler: "415" },
+          niveaus: { basis: "Gelijk verdelen betekent delen door 3. Begin links: hoe vaak past 3 in 12?", simpeler: "Verdeeld = delen. 1245÷3. Cijferen: 12÷3=4, 4÷3=1 rest 1, 15÷3=5. Antwoord 415. Check: 415×3=1245 ✓.", nogSimpeler: "415" },
         },
       },
       {
@@ -1957,7 +1957,7 @@ const steps = [
           theorie: "Signaalwoord 'verschil' / 'meer dan' / 'over' = aftrekken (−), grootste min kleinste.",
           voorbeelden: [{ type: "verschil", tekst: "68 − 47 = 21. Rij B heeft 21 meer fietsen dan A." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Bij 'verschil' niet samenvoegen (zou 115 zijn)." }],
-          niveaus: { basis: "68−47=21.", simpeler: "Verschil = aftrekken. Grootste min kleinste: 68 − 47 = 21.", nogSimpeler: "21" },
+          niveaus: { basis: "Een verschil vind je door af te trekken: het grootste getal min het kleinste.", simpeler: "Verschil = aftrekken. Grootste min kleinste: 68 − 47 = 21.", nogSimpeler: "21" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -2002,7 +2002,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16 × 45 = 720.",
+            basis: "Elke doos heeft evenveel potloden. Is dit keer of plus? Splits 16 in 10 en 6 om het makkelijker te maken.",
             simpeler: "Elke doos heeft 45 potloden en er zijn 16 dozen. Keer dus: 16 × 45 = 720.",
             nogSimpeler: "720",
           },
@@ -2049,7 +2049,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2350 − 785 = 1565.",
+            basis: "Er gaan boeken weg, dus je trekt af. Begin rechts bij de eenheden en let op het lenen.",
             simpeler: "Er gaan boeken weg, dus min. 2350 − 785 = 1565 boeken.",
             nogSimpeler: "1565",
           },
@@ -2096,7 +2096,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "234 ÷ 9 = 26.",
+            basis: "Verdelen over gelijke groepjes is delen. Hoe vaak past 9 in 23?",
             simpeler: "Even verdelen = delen. 234 ÷ 9 = 26. Controle: 26 × 9 = 234.",
             nogSimpeler: "26",
           },
@@ -2143,7 +2143,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "386 + 479 = 865.",
+            basis: "De broden van twee dagen samen: dat is optellen. Zet de getallen onder elkaar en begin rechts.",
             simpeler: "Totaal = optellen. 386 + 479 = 865 broden.",
             nogSimpeler: "865",
           },
@@ -2190,7 +2190,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "27 × € 18 = € 486.",
+            basis: "Elk kind kost hetzelfde, dus je vermenigvuldigt. Splits 27 in 20 en 7 en reken de stukjes apart uit.",
             simpeler: "Ieder kind kost € 18 en er zijn 27 kinderen. Keer: 18 × 27 = 486 euro.",
             nogSimpeler: "€ 486",
           },
@@ -2237,7 +2237,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "150 ÷ 6 = 25.",
+            basis: "Je verdeelt de eieren in groepjes van 6: dat is delen. Hoe vaak past 6 in 15?",
             simpeler: "Steeds 6 eieren in een doosje. Hoe vaak past 6 in 150? 25 keer. Controle: 25 × 6 = 150.",
             nogSimpeler: "25",
           },
@@ -2261,7 +2261,7 @@ const steps = [
           theorie: "Schat: 3500+2800=6300. Antwoord rond 6300. 6245 past.",
           voorbeelden: [{ type: "stap", tekst: "Cijferen rechts → links, onthoudje na elke kolom." }],
           basiskennis: [{ onderwerp: "Schrijf netjes", uitleg: "Bij grote sommen: schrijf onthoudjes klein boven volgende kolom." }],
-          niveaus: { basis: "3456+2789=6245.", simpeler: "Schat 6300. Cijferen kolommen: 6+9=15, 5+8+1=14, 4+7+1=12, 3+2+1=6. Antwoord 6245.", nogSimpeler: "6245" },
+          niveaus: { basis: "Zet de getallen onder elkaar en begin rechts. In bijna elke kolom krijg je een onthoudje.", simpeler: "Schat 6300. Cijferen kolommen: 6+9=15, 5+8+1=14, 4+7+1=12, 3+2+1=6. Antwoord 6245.", nogSimpeler: "6245" },
         },
       },
       {
@@ -2278,7 +2278,7 @@ const steps = [
           theorie: "Door nullen lenen is foutgevoelig. Truc: eerst 1 minder nemen, dan +1 erbij.",
           voorbeelden: [{ type: "truc", tekst: "8000−2547 = 7999−2547+1 = 5452+1 = 5453." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "8000−2500=5500. Antwoord rond 5500. 5453 past." }],
-          niveaus: { basis: "8000−2547=5453.", simpeler: "Truc: 7999−2547=5452 (geen lenen). Plus 1: 5453.", nogSimpeler: "5453" },
+          niveaus: { basis: "Door drie nullen heen lenen is lastig. Maak van 8000 eerst 7999 + 1.", simpeler: "Truc: 7999−2547=5452 (geen lenen). Plus 1: 5453.", nogSimpeler: "5453" },
         },
       },
       {
@@ -2292,7 +2292,7 @@ const steps = [
           theorie: "Schat: 432×6 ≈ 400×6=2400. Antwoord 2592 past in die buurt.",
           voorbeelden: [{ type: "stap", tekst: "432×6: 2×6=12 (2,+1). 3×6=18+1=19 (9,+1). 4×6=24+1=25." }],
           basiskennis: [{ onderwerp: "Tafel-kennis", uitleg: "6-tafel: 6, 12, 18, 24, 30, 36, 42, 48..." }],
-          niveaus: { basis: "432×6=2592.", simpeler: "Cijfer voor cijfer × 6: eenheden 2×6=12 (2 schrijf, 1 onthoud). 3×6+1=19 (9, +1). 4×6+1=25. Antwoord 2592.", nogSimpeler: "2592" },
+          niveaus: { basis: "Begin rechts: eenheden keer 6. Tel het onthoudje steeds op bij de volgende kolom.", simpeler: "Cijfer voor cijfer × 6: eenheden 2×6=12 (2 schrijf, 1 onthoud). 3×6+1=19 (9, +1). 4×6+1=25. Antwoord 2592.", nogSimpeler: "2592" },
         },
       },
       {
@@ -2309,7 +2309,7 @@ const steps = [
           theorie: "÷4 truc: kun je ook ÷2 ÷2 doen. 1284÷2=642, 642÷2=321.",
           voorbeelden: [{ type: "ook anders", tekst: "1284÷2=642. 642÷2=321. Zelfde antwoord." }],
           basiskennis: [{ onderwerp: "Tafel ×4", uitleg: "4×3=12, 4×8=32, 4×321=1284." }],
-          niveaus: { basis: "1284÷4=321.", simpeler: "Truc: ÷4 = ÷2 ÷2. 1284÷2=642. 642÷2=321.", nogSimpeler: "321" },
+          niveaus: { basis: "Delen door 4 is twee keer halveren. Wat is de helft van 1284?", simpeler: "Truc: ÷4 = ÷2 ÷2. 1284÷2=642. 642÷2=321.", nogSimpeler: "321" },
         },
       },
       {
@@ -2326,7 +2326,7 @@ const steps = [
           theorie: "'X per Y' + 'Y aantal' = ×. 24 producten × 8 uur = 192 producten.",
           voorbeelden: [{ type: "per", tekst: "24×8 = 192 producten per dag." }],
           basiskennis: [{ onderwerp: "Schat", uitleg: "25×8=200. Antwoord rond 200. 192 past." }],
-          niveaus: { basis: "24×8=192.", simpeler: "Per uur 24, 8 uur = 24×8. Reken: 24×8 = 192.", nogSimpeler: "192" },
+          niveaus: { basis: "Elk uur maakt de fabriek evenveel producten. Is dit keer of plus voor 8 uur?", simpeler: "Per uur 24, 8 uur = 24×8. Reken: 24×8 = 192.", nogSimpeler: "192" },
         },
       },
       {
@@ -2343,7 +2343,7 @@ const steps = [
           theorie: "Truc ×25: ×100 ÷4. Werkt ook met decimalen: 7,80×100=780, ÷4=195.",
           voorbeelden: [{ type: "truc", tekst: "7,80×25: 780÷4=195. Of: 7,80×25 = 7×25 + 0,80×25 = 175 + 20 = 195." }],
           basiskennis: [{ onderwerp: "Het getal '12' is afleider", uitleg: "'Pakjes van 12 chocoladerepen' is irrelevant — vraag gaat over prijs per pakje." }],
-          niveaus: { basis: "7,80×25=€195.", simpeler: "Truc: 7,80×25 = (7,80×100)÷4 = 780÷4 = 195. €195.", nogSimpeler: "€195" },
+          niveaus: { basis: "Keer 25 kan slim: reken eerst keer 100 en deel dat daarna door 4.", simpeler: "Truc: 7,80×25 = (7,80×100)÷4 = 780÷4 = 195. €195.", nogSimpeler: "€195" },
         },
       },
       { q: "**456 + 287** = ?", options: ["743","733","633","843"], answer: 0, wrongHints: [null, "Tel de tientallen nog eens na: 5 + 8, plus het onthoudje van de eenheden.", "Te weinig — heb je de onthoudjes bij de tientallen én de honderdtallen meegeteld?", "Schat eens: 450 + 300 is ongeveer 750. Past jouw antwoord daarbij?"] },

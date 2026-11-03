@@ -1,0 +1,412 @@
+[
+ {
+  "file": "src/learnPaths/topografieWereldWerelddelenPo.jsx",
+  "items": [
+   {
+    "waar": "topografie-wereld-werelddelen-po stap 2 vraag 1",
+    "antwoord": "Afrika",
+    "basis": "Het werelddeel onder Europa is Afrika."
+   },
+   {
+    "waar": "topografie-wereld-werelddelen-po stap 3 vraag 1",
+    "antwoord": "Europa",
+    "basis": "Nederland ligt in Europa."
+   },
+   {
+    "waar": "topografie-wereld-werelddelen-po stap 4 vraag 1",
+    "antwoord": "Azië",
+    "basis": "Het grootste werelddeel is Azië."
+   },
+   {
+    "waar": "topografie-wereld-werelddelen-po stap 5 vraag 1",
+    "antwoord": "Zuid-Amerika",
+    "basis": "Het Amazone-regenwoud ligt in Zuid-Amerika."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/waterErfgoedNederlandPo.js",
+  "items": [
+   {
+    "waar": "water-erfgoed-nederland-po stap 1 vraag 1",
+    "antwoord": "~25%",
+    "basis": "~25% (kwart)."
+   },
+   {
+    "waar": "water-erfgoed-nederland-po stap 2 vraag 4",
+    "antwoord": "Maeslantkering",
+    "basis": "Maeslantkering."
+   },
+   {
+    "waar": "water-erfgoed-nederland-po stap 4 vraag 1",
+    "antwoord": "1953",
+    "basis": "1953."
+   },
+   {
+    "waar": "water-erfgoed-nederland-po stap 5 vraag 2",
+    "antwoord": "Afsluitdijk",
+    "basis": "Afsluitdijk (= 1932, niet Deltawerk)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/woordenschatEngelsPo.js",
+  "items": [
+   {
+    "waar": "woordenschat-engels-po stap 1 vraag 1",
+    "antwoord": "Goedemorgen",
+    "basis": "Goedemorgen."
+   },
+   {
+    "waar": "woordenschat-engels-po stap 2 vraag 2",
+    "antwoord": "twelve",
+    "basis": "12 = twelve."
+   },
+   {
+    "waar": "woordenschat-engels-po stap 2 vraag 3",
+    "antwoord": "seventeen",
+    "basis": "17 = seventeen."
+   },
+   {
+    "waar": "woordenschat-engels-po stap 2 vraag 4",
+    "antwoord": "forty",
+    "basis": "40 = forty (zonder u!)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/beroepenWerkPo.js",
+  "items": [
+   {
+    "waar": "beroepen-werk-po stap 2 vraag 3",
+    "antwoord": "Tertiair",
+    "basis": "Tertiaire sector = ~50% = grootste in NL (diensten)."
+   },
+   {
+    "waar": "beroepen-werk-po stap 5 vraag 7",
+    "antwoord": "Drie niveaus van vervolgonderwijs",
+    "basis": "mbo, hbo en wo zijn drie niveaus van vervolgonderwijs."
+   },
+   {
+    "waar": "beroepen-werk-po stap 5 vraag 9",
+    "antwoord": "Vanaf 13 jaar",
+    "basis": "13 jaar."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "items": [
+   {
+    "waar": "doorstroomtoets-taal-g8 stap 1 vraag 17",
+    "antwoord": "Prachtig",
+    "basis": "Mooi = prachtig (synoniem)."
+   },
+   {
+    "waar": "doorstroomtoets-taal-g8 stap 3 vraag 5",
+    "antwoord": "trein",
+    "basis": "trein."
+   },
+   {
+    "waar": "doorstroomtoets-taal-g8 stap 4 vraag 17",
+    "antwoord": "ik",
+    "basis": "Persoonlijk voornaamwoord = ik, jij, hij, zij, wij, jullie. Vervangt naam."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/engelsEersteWoordenG5.js",
+  "items": [
+   {
+    "waar": "engels-eerste-woorden-g5 stap 1 vraag 2",
+    "antwoord": "Dank je wel",
+    "basis": "Dank je wel."
+   },
+   {
+    "waar": "engels-eerste-woorden-g5 stap 2 vraag 4",
+    "antwoord": "five",
+    "basis": "five."
+   },
+   {
+    "waar": "engels-eerste-woorden-g5 stap 4 vraag 5",
+    "antwoord": "window",
+    "basis": "window."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/evolutieMensPo.js",
+  "items": [
+   {
+    "waar": "evolutie-mens-po stap 1 vraag 3",
+    "antwoord": "~300.000 jaar",
+    "basis": "~300.000 jaar."
+   },
+   {
+    "waar": "evolutie-mens-po stap 1 vraag 4",
+    "antwoord": "Planetoïde-inslag",
+    "basis": "Dino's stierven 66 mln jaar geleden uit door planetoïde-inslag."
+   },
+   {
+    "waar": "evolutie-mens-po stap 3 vraag 1",
+    "antwoord": "Versteende resten van oude wezens",
+    "basis": "Versteende resten van oude wezens."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/feitMeningPo.js",
+  "items": [
+   {
+    "waar": "feit-mening-po stap 1 vraag 4",
+    "antwoord": "feit",
+    "basis": "Te tellen en voor iedereen waar → feit."
+   },
+   {
+    "waar": "feit-mening-po stap 1 vraag 6",
+    "antwoord": "feit",
+    "basis": "Historische feiten kun je opzoeken → feit."
+   },
+   {
+    "waar": "feit-mening-po stap 3 vraag 1",
+    "antwoord": "prachtig",
+    "basis": "'Prachtig' is een oordeel → mening-signaalwoord."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/koudeOorlogModernPo.js",
+  "items": [
+   {
+    "waar": "koude-oorlog-modern-po stap 1 vraag 2",
+    "antwoord": "Westers militair bondgenootschap",
+    "basis": "NAVO = westers militair bondgenootschap sinds 1949."
+   },
+   {
+    "waar": "koude-oorlog-modern-po stap 2 vraag 3",
+    "antwoord": "Noord-Vietnam",
+    "basis": "De Vietnam-oorlog is gewonnen door Noord-Vietnam, het communistische noorden."
+   },
+   {
+    "waar": "koude-oorlog-modern-po stap 2 vraag 4",
+    "antwoord": "'Ich bin ein Berliner'",
+    "basis": "Kennedy zei in Berlijn: 'Ich bin ein Berliner' (1963)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/procentenPo.js",
+  "items": [
+   {
+    "waar": "procenten-po stap 1 vraag 1",
+    "antwoord": "40 per 100",
+    "basis": "Procent (%) = per 100. 40% = 40 per 100."
+   },
+   {
+    "waar": "procenten-po stap 1 vraag 2",
+    "antwoord": "Alles",
+    "basis": "100% = alles (het hele ding)."
+   },
+   {
+    "waar": "procenten-po stap 1 vraag 4",
+    "antwoord": "procent",
+    "basis": "% spreek je uit als 'procent'."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/toestandStoffenPo.js",
+  "items": [
+   {
+    "waar": "toestand-stoffen-po stap 2 vraag 3",
+    "antwoord": "Vlakke schaal",
+    "basis": "Vlakke schaal."
+   },
+   {
+    "waar": "toestand-stoffen-po stap 3 vraag 4",
+    "antwoord": "Koolstofdioxide",
+    "basis": "Koolstofdioxide (CO₂)."
+   },
+   {
+    "waar": "toestand-stoffen-po stap 4 vraag 1",
+    "antwoord": "Vast → vloeibaar",
+    "basis": "Vast → vloeibaar."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/weersvoorspellingPo.js",
+  "items": [
+   {
+    "waar": "weersvoorspelling-po stap 1 vraag 3",
+    "antwoord": "mm",
+    "basis": "Neerslag wordt gemeten in mm (millimeter)."
+   },
+   {
+    "waar": "weersvoorspelling-po stap 2 vraag 2",
+    "antwoord": "Zuidwesten",
+    "basis": "Zuidwesten."
+   },
+   {
+    "waar": "weersvoorspelling-po stap 3 vraag 1",
+    "antwoord": "NL-weerinstituut (De Bilt)",
+    "basis": "KNMI = NL-weerinstituut (De Bilt, sinds 1854)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/winstRekenenPo.js",
+  "items": [
+   {
+    "waar": "winst-rekenen-po stap 3 vraag 9",
+    "antwoord": "€10,50",
+    "basis": "€10,50 (€1,50 × 7)."
+   },
+   {
+    "waar": "winst-rekenen-po stap 3 vraag 10",
+    "antwoord": "€1,50",
+    "basis": "€1,50 (€5,00 − €3,50)."
+   },
+   {
+    "waar": "winst-rekenen-po stap 3 vraag 11",
+    "antwoord": "€20",
+    "basis": "€20 (€12 + €8)."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/digitaleGeletterdheidPo.js",
+  "items": [
+   {
+    "waar": "digitale-geletterdheid-po stap 1 vraag 1",
+    "antwoord": "Processor",
+    "basis": "CPU = brein/processor van computer."
+   },
+   {
+    "waar": "digitale-geletterdheid-po stap 4 vraag 7",
+    "antwoord": "Nep-mail die gegevens probeert te stelen",
+    "basis": "Nep-mail"
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/gezondeVoedingPo.js",
+  "items": [
+   {
+    "waar": "gezonde-voeding-po stap 2 vraag 1",
+    "antwoord": "250 gram",
+    "basis": "Aanbeveling: 250 gram groente per dag."
+   },
+   {
+    "waar": "gezonde-voeding-po stap 3 vraag 4",
+    "antwoord": "1 uur",
+    "basis": "1 uur per dag bewegen."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/metenGewichtInhoudTijdPo.js",
+  "items": [
+   {
+    "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 2",
+    "antwoord": "500 g",
+    "basis": "Een pond is een half kilo. Een halve kilo is 500 g."
+   },
+   {
+    "waar": "meten-gewicht-inhoud-tijd-po stap 2 vraag 7",
+    "antwoord": "0,75 l",
+    "basis": "Deel door 1000: 750 ÷ 1000 = 0,75 l."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/ontdekkingsreizenPo.js",
+  "items": [
+   {
+    "waar": "ontdekkingsreizen-po stap 2 vraag 1",
+    "antwoord": "1492",
+    "basis": "Columbus kwam in 1492 in Amerika (dacht: India)."
+   },
+   {
+    "waar": "ontdekkingsreizen-po stap 2 vraag 4",
+    "antwoord": "1863",
+    "basis": "Nederland schafte de slavernij in zijn koloniën af op 1 juli 1863."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/politiekDemocratiePo.js",
+  "items": [
+   {
+    "waar": "politiek-democratie-po stap 1 vraag 2",
+    "antwoord": "150",
+    "basis": "De Tweede Kamer heeft 150 zetels."
+   },
+   {
+    "waar": "politiek-democratie-po stap 4 vraag 1",
+    "antwoord": "12",
+    "basis": "12 provincies."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/recyclenAfvalPo.js",
+  "items": [
+   {
+    "waar": "recyclen-afval-po stap 2 vraag 1",
+    "antwoord": "Voorkomen",
+    "basis": "Beste = voorkomen (geen afval maken). Slechtste = storten."
+   },
+   {
+    "waar": "recyclen-afval-po stap 3 vraag 1",
+    "antwoord": "~450 jaar",
+    "basis": "~450 jaar."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/rijmenLettersKleutersPo.js",
+  "items": [
+   {
+    "waar": "rijmen-letters-kleuters-po stap 4 vraag 2",
+    "antwoord": "klein",
+    "basis": "Een muis is klein — het tegendeel van groot. 🐭"
+   },
+   {
+    "waar": "rijmen-letters-kleuters-po stap 4 vraag 3",
+    "antwoord": "kikker",
+    "basis": "Dit is een kikker — groen, springt ver en zegt kwaak. 🐸"
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/soortenTekstenPo.js",
+  "items": [
+   {
+    "waar": "soorten-teksten-po stap 1 vraag 1",
+    "antwoord": "informatieve tekst",
+    "basis": "Een tekst die uitlegt/informeert = informatieve tekst."
+   },
+   {
+    "waar": "soorten-teksten-po stap 1 vraag 5",
+    "antwoord": "informatieve tekst",
+    "basis": "Uitleg over de natuur (feiten) = informatieve tekst."
+   }
+  ]
+ },
+ {
+  "file": "src/learnPaths/sterrenPlaneten.js",
+  "items": [
+   {
+    "waar": "sterren-planeten stap 2 vraag 1",
+    "antwoord": "8",
+    "basis": "8."
+   },
+   {
+    "waar": "sterren-planeten stap 2 vraag 2",
+    "antwoord": "Mercurius",
+    "basis": "Mercurius."
+   }
+  ]
+ }
+]

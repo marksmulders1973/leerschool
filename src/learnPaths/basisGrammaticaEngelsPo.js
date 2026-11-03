@@ -34,7 +34,7 @@ const steps = [
           theorie: "Truc: spreek het woord uit. Begint het met a/e/i/o/u-klank? → an. Anders → a.",
           voorbeelden: [{ type: "tabel", tekst: "an apple, an egg, an ice cream, an orange, an umbrella" }, { type: "tabel", tekst: "a book, a cat, a dog, a friend" }],
           basiskennis: [{ onderwerp: "Klank, niet letter", uitleg: "'an hour' (h stom) maar 'a university' (u = 'jou')." }],
-          niveaus: { basis: "an.", simpeler: "Apple begint met klinker → an apple.", nogSimpeler: "an = klinker." },
+          niveaus: { basis: "Kijk naar de eerste klank van apple. Begint het woord met een klinkerklank of een medeklinkerklank?", simpeler: "Apple begint met klinker → an apple.", nogSimpeler: "an = klinker." },
         },
       },
       { q: "Welk lidwoord zet je voor **één** book?", options: ["a", "an", "the", "any"], answer: 0, wrongHints: [null, "Zeg 'an book' eens hardop. Met welke klank begint 'book'?", "'The' betekent 'de' of 'het', niet 'een'.", "'Any' betekent 'enig' of 'wat'. Hier staat 'één' — welk woord betekent 'een'?"] },
