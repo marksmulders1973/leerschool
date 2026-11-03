@@ -1,0 +1,40 @@
+{
+ "pad": "doorstroomtoets-studievaardigheden-g8",
+ "file": "./doorstroomtoetsStudievaardighedenG8.js",
+ "totaal": 330,
+ "alGoedgekeurd": 68,
+ "uitgeschakeld": 10,
+ "open": 252,
+ "pakketten": [
+  {
+   "nr": 1,
+   "aantal": 55,
+   "van": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 1",
+   "tot": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 37"
+  },
+  {
+   "nr": 2,
+   "aantal": 55,
+   "van": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 1",
+   "tot": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 16"
+  },
+  {
+   "nr": 3,
+   "aantal": 55,
+   "van": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 17",
+   "tot": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 9"
+  },
+  {
+   "nr": 4,
+   "aantal": 55,
+   "van": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 10",
+   "tot": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16"
+  },
+  {
+   "nr": 5,
+   "aantal": 32,
+   "van": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 17",
+   "tot": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24"
+  }
+ ]
+}

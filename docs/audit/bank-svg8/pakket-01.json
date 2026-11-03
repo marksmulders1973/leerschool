@@ -1,0 +1,1445 @@
+[
+ {
+  "nr": 1,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Schaal **1:100.000**. **3 cm** op kaart = ... in werkelijkheid?",
+  "options": [
+   "3 km",
+   "300 m",
+   "30 m",
+   "30 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken eerst 3 × 100.000 cm uit en zet dat om naar meters. Kom je dan op 300 m?",
+   "30 m is nog geen half voetbalveld. Is 3 × 100.000 cm zo weinig?",
+   "30 km: tel de nullen nog eens. Hoeveel cm zit er in 1 km?"
+  ],
+  "niveaus": {
+   "basis": "3 km.",
+   "simpeler": "1:100.000 betekent 1 cm = 1 km. Dus 3 cm = 3 km.",
+   "nogSimpeler": "3"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 2,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat staat in de **legenda** van een kaart?",
+  "options": [
+   "Uitleg van symbolen en kleuren",
+   "De schaal en de afstanden",
+   "Het aantal plaatsen op de kaart",
+   "De naam van de kaartenmaker"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Schaal staat meestal apart.",
+   "Plaatsen tel je zelf op de kaart. Wat leg je uit in een legenda?",
+   "De maker staat soms klein in een hoekje. Wat leg je uit in een legenda?"
+  ],
+  "niveaus": {
+   "basis": "Uitleg van symbolen + kleuren.",
+   "simpeler": "Legenda = wat-betekent-wat-tabel naast de kaart.",
+   "nogSimpeler": "Symbolen-uitleg"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 3,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Schaal **1:50.000**. Op kaart **4 cm**. In het echt?",
+  "options": [
+   "2 km",
+   "200 m",
+   "200 km",
+   "20 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "4 × 50.000 = 200.000 cm. Hoeveel cm zit er in 1 m — is dat echt maar 200 m?",
+   "200 km: je hebt de cm gerekend alsof het meters waren. Hoeveel cm zit er in 1 km?",
+   "20 km: tel de nullen nog eens. 4 × 50.000 cm is hoeveel cm, en hoeveel km is dat?"
+  ],
+  "niveaus": {
+   "basis": "4 × 50.000 = 200.000 cm = 2 km.",
+   "simpeler": "Schaal 1:50.000 → 1 cm op kaart = 500 m = 0,5 km. 4 cm × 0,5 km = 2 km.",
+   "nogSimpeler": "2 km"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 4,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een windroos staat **N bovenaan**. Je kijkt schuin naar **linksonder**. Tussen welke twee hoofdrichtingen kijk je?",
+  "options": [
+   "Z en W",
+   "N en W",
+   "N en O",
+   "Z en O"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je koos N, maar N staat bovenaan en jij kijkt naar onder. Welke richting staat tegenover N?",
+   "N staat bovenaan en O staat rechts. Jij kijkt juist naar linksonder: welke twee richtingen staan daar?",
+   "O staat rechts, maar jij kijkt naar links. Welke richting staat tegenover O?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 5,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een windroos staat **N bovenaan**. Je kijkt schuin naar **rechtsboven**. Tussen welke twee hoofdrichtingen kijk je?",
+  "options": [
+   "N en O",
+   "Z en O",
+   "N en W",
+   "Z en W"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Z staat onderaan op de windroos, maar jij kijkt omhoog. Welke richting staat tegenover Z?",
+   "W staat links, maar jij kijkt naar rechts. Welke richting staat tegenover W?",
+   "Z staat onder en W staat links. Jij kijkt juist naar rechtsboven: welke twee richtingen staan daar?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 6,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een kaart wijst **N omhoog**. Een meer ligt schuin **linksboven** van het dorp. In welke richting ligt het meer?",
+  "options": [
+   "NW (noord-west)",
+   "ZW (zuid-west)",
+   "NO (noord-oost)",
+   "ZO (zuid-oost)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zuid staat onderaan als N boven is. Ligt het meer boven of onder het dorp?",
+   "Oost staat rechts als N boven is. Ligt het meer links of rechts van het dorp?",
+   "Zuid is onder en oost is rechts. Het meer ligt juist boven en links: welke twee richtingen zijn dat samen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 7,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk **windstreek-symbool** staat meestal **bovenaan** op een kaart?",
+  "options": [
+   "N (noord)",
+   "Z (zuid)",
+   "O (oost)",
+   "W (west)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Z staat op een kaart meestal onderaan. Welke letter hoort bij de pijl die omhoog wijst?",
+   "Op een kaart wijst één pijl naar boven. Welke letter hoort bij die pijl?",
+   "Welke letter staat bij de pijl die op de kaart omhoog wijst?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 8,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een boot vaart naar het **zuidwesten**. Welke richting ligt precies **tegenover** de vaarrichting?",
+  "options": [
+   "Noordoost (NO)",
+   "Noordwest (NW)",
+   "Zuidoost (ZO)",
+   "Oost (O)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Noordwest ligt tegenover zuidoost, niet tegenover zuidwest. Draai beide delen van de richting om.",
+   "Zuidoost heeft nog steeds 'zuid' in zich. Wat ligt er tegenover zuid?",
+   "Oost ligt tegenover west, dat klopt. Maar de boot vaart ook een stukje naar het zuiden: wat ligt daar tegenover?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 9,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 27",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat staat er meestal op een **topografische kaart** van Nederland?",
+  "options": [
+   "Steden, rivieren, snelwegen",
+   "Het weer van vandaag",
+   "Hoe warm het per maand is",
+   "Hoeveel mensen er wonen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het weer zie je op een weerkaart, niet op een topografische kaart.",
+   "Temperaturen per maand zie je op een klimaatkaart.",
+   "Het aantal inwoners zie je op een bevolkingskaart."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 10,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 37",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart + schaal lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt weten of een gebied in Oostenrijk **vlak of bergachtig** is. Welke kaart gebruik je?",
+  "options": [
+   "Een hoogtekaart",
+   "Een wegenkaart",
+   "Een plattegrond van Wenen",
+   "Een weerkaart"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een wegenkaart toont snelwegen, geen bergtoppen.",
+   "Een stadsplattegrond toont straten van één stad.",
+   "Een weerkaart toont temperatuur en regen van vandaag."
+  ],
+  "niveaus": null,
+  "explanation": "Een **hoogtekaart** gebruikt kleuren voor hoogte: groen = laag, bruin = hoog gebergte.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 11,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?",
+  "options": [
+   "donderdag",
+   "maandag",
+   "vrijdag",
+   "woensdag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Maandag heeft 10. Staat er in de tabel een dag met nog minder?",
+   "Vrijdag heeft juist het meest. De vraag is naar de dag met het minst.",
+   "Woensdag heeft 15. Staat er een dag met minder?"
+  ],
+  "niveaus": {
+   "basis": "Minst = laagste getal vinden in tabel.",
+   "simpeler": "Vergelijk: 10, 12, 15, 8, 20. Laagste = 8. Dat is donderdag.",
+   "nogSimpeler": "Zoek kleinste = donderdag."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 12,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "In een tabel staat: ma 12, di 8, wo 18, do 22, vr 30. Hoeveel is dat **samen**?",
+  "options": [
+   "90",
+   "70",
+   "100",
+   "60"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "70 is te weinig. Tel nog eens op en schrijf na elk getal de tussenstand op.",
+   "100 is te veel. Ben je ergens een tiental te veel gaan tellen?",
+   "60: heb je de 30 van vrijdag meegeteld?"
+  ],
+  "niveaus": {
+   "basis": "90 (alles optellen).",
+   "simpeler": "12+8=20, +18=38, +22=60, +30=90.",
+   "nogSimpeler": "90"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 13,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Cirkeldiagram: voetbal 50%, hockey 25%, zwemmen 15%, **rest** = ?",
+  "options": [
+   "10%",
+   "20%",
+   "5%",
+   "25%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel 50 + 25 + 15 eerst op. Hoeveel blijft er dan over van 100?",
+   "5%? Kijk of je goed hebt opgeteld: 50 + 25 + 15 = ?",
+   "25% is het stuk hockey. Hoeveel blijft er over na alle drie de sporten?"
+  ],
+  "niveaus": {
+   "basis": "100 − 50 − 25 − 15 = 10%.",
+   "simpeler": "Totaal = 100%. Trek af wat we al hebben: 100 − (50+25+15) = 100 − 90 = 10%.",
+   "nogSimpeler": "10%"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 14,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "In een tabel **'Temperatuur per maand'** staan in de eerste kolom de maanden en in de tweede kolom de temperaturen. Hoe vind je hoe warm het in **januari** was?",
+  "options": [
+   "Zoek januari op en lees in dezelfde rij de temperatuur af",
+   "Zoek het hoogste getal in de kolom met de temperaturen",
+   "Lees de titel boven de tabel nog eens goed door",
+   "Zoek januari op en lees het getal in de rij eronder af"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het hoogste getal hoort bij de warmste maand. Weet je zeker dat dat januari is?",
+   "De titel vertelt waar de tabel over gaat, niet hoe warm één maand was.",
+   "De rij eronder hoort bij een andere maand."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 15,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "In een tabel **'Leerlingen per klas'** staan de klassen onder elkaar. Wat vind je in één **rij** van die tabel?",
+  "options": [
+   "De gegevens van één klas",
+   "Eén soort gegeven van alle klassen",
+   "Alleen de titel van de tabel",
+   "Alleen de kolomkoppen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat staat in een kolom: die loopt van boven naar beneden. Hoe loopt een rij?",
+   "De titel staat boven de tabel.",
+   "De kolomkoppen staan in de bovenste rij."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 16,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 25",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **lijngrafiek** laat zien hoeveel ijsjes een ijssalon per maand verkoopt. Van september tot december gaat de lijn steeds **omlaag**. Wat betekent dat?",
+  "options": [
+   "Er werden steeds minder ijsjes verkocht",
+   "Er werden steeds meer ijsjes verkocht",
+   "Er werden elke maand evenveel ijsjes verkocht",
+   "Er werden eerst meer, daarna minder ijsjes verkocht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij meer verkochte ijsjes gaat de lijn omhoog. Welke kant gaat deze lijn op?",
+   "Bij evenveel ijsjes loopt de lijn vlak. Is deze lijn vlak?",
+   "Dan zou de lijn eerst omhoog gaan. Gaat deze lijn ergens omhoog?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 17,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Lesrooster:** op maandag, dinsdag, donderdag en vrijdag begint school om 8:30. Op woensdag begint school om 9:15. Hoeveel minuten **later** begin je op woensdag?",
+  "options": [
+   "45 minuten",
+   "15 minuten",
+   "1 uur en 15 minuten",
+   "30 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "15 minuten na 8:30 is het pas 8:45. Is het dan al 9:15?",
+   "Je trok 8 van 9 af en telde de 15 minuten erbij. Tel vanaf 8:30 in stapjes verder tot 9:15.",
+   "30 minuten na 8:30 is het 9:00. Ben je dan al bij 9:15?"
+  ],
+  "niveaus": null,
+  "explanation": "Van 8:30 tot 9:00 is 30 minuten, en van 9:00 tot 9:15 nog 15 minuten. Op woensdag begint school dus **45 minuten** later.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 18,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 36",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabel + grafiek lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Cirkeldiagram lievelingssport:** voetbal de helft, zwemmen een kwart, de rest hockey en tennis samen. Welk deel is voor **hockey en tennis samen**?",
+  "options": [
+   "Een kwart",
+   "De helft",
+   "Driekwart",
+   "Een achtste"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De helft is al bezet door voetbal.",
+   "Tel op: helft + kwart = driekwart. Wat blijft er over?",
+   "Een achtste is een klein stukje. De vraag gaat over hockey en tennis samen: hoeveel van de cirkel hebben voetbal en zwemmen nog niet?"
+  ],
+  "niveaus": null,
+  "explanation": "1/2 (voetbal) + 1/4 (zwemmen) = 3/4. De rest = 1 − 3/4 = **1/4** voor hockey en tennis samen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 19,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat het **eerst** in het woordenboek?",
+  "options": [
+   "appel",
+   "auto",
+   "arm",
+   "avond"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alle woorden beginnen met een a. Vergelijk daarom de tweede letter.",
+   "Kijk naar de tweede letter van elk woord. Welke komt het eerst in het alfabet?",
+   "De v staat ver achter in het alfabet. Vergelijk de tweede letters."
+  ],
+  "niveaus": {
+   "basis": "appel.",
+   "simpeler": "a-p (appel) komt vóór a-u (auto) in alfabet.",
+   "nogSimpeler": "appel"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 20,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Waar zoek je een **plaatsnaam** in een atlas?",
+  "options": [
+   "In de index",
+   "In de inhoudsopgave",
+   "Op de eerste kaart",
+   "In de legenda"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De inhoudsopgave noemt alleen de kaarten, niet elke plaats. Waar staan álle plaatsnamen?",
+   "Op de eerste kaart hoeft je plaats niet te staan.",
+   "De legenda legt symbolen uit, geen plaatsnamen."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 21,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat staat **voorin** een boek?",
+  "options": [
+   "Inhoudsopgave",
+   "Index",
+   "Nawoord",
+   "Woordenlijst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Index staat achterin.",
+   "Een nawoord staat juist aan het eind van een boek.",
+   "Een woordenlijst staat meestal achterin."
+  ],
+  "niveaus": {
+   "basis": "Voorin = inhoudsopgave (hoofdstukken). Achterin = index.",
+   "simpeler": "Hoofdstuk zoeken? Inhoudsopgave. Woord zoeken? Index.",
+   "nogSimpeler": "Voorin = inhoud!"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 22,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat het **eerst** in het woordenboek?",
+  "options": [
+   "kat",
+   "kater",
+   "katoen",
+   "kauw"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De eerste drie letters zijn gelijk — welke regel geldt dan voor het kortere woord?",
+   "Ook 'katoen' begint met k-a-t. Welk woord houdt daarna al op?",
+   "Vergelijk de derde letter van elk woord. Welke komt het eerst in het alfabet?"
+  ],
+  "niveaus": {
+   "basis": "kat.",
+   "simpeler": "kat is k-a-t (3 letters), kater is k-a-t-e-r (5 letters). Eerste 3 letters gelijk; bij gelijke prefix staat het kortere woord eerder.",
+   "nogSimpeler": "kat"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 23,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarvoor gebruik je de **inhoudsopgave**?",
+  "options": [
+   "Snel een hoofdstuk vinden",
+   "Eén bepaald woord opzoeken",
+   "De betekenis van woorden",
+   "Weten wie het boek schreef"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Voor één los woord gebruik je een lijst achterin het boek.",
+   "Betekenissen van woorden staan in een woordenboek of woordenlijst.",
+   "De schrijver staat op de kaft."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 24,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "In een **atlas** zoek je 'Amsterdam' in de **index**: 'Amsterdam ... 22 D5'. Waar kijk je?",
+  "options": [
+   "Bladzijde 22, vak D5",
+   "Bladzijde 5, vak D22",
+   "Vak 22 op pagina D5",
+   "Vak A22 op pagina D"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welk deel van '22 D5' ziet eruit als een vak: een letter met een cijfer?",
+   "Welk deel van '22 D5' is een gewoon getal, zoals een bladzijdenummer?",
+   "Er staat geen A in '22 D5'. Lees de code nog eens precies."
+  ],
+  "niveaus": {
+   "basis": "Bladzijde 22, vak D5.",
+   "simpeler": "Eerste getal = bladzijde (22). Daarna staat de vakcode (D5).",
+   "nogSimpeler": "blz 22, vak D5"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 25,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat het **eerst** in het woordenboek?",
+  "options": [
+   "piano",
+   "plant",
+   "pinda",
+   "pizza"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de tweede letter van elk woord.",
+   "Tot 'pi' zijn ze gelijk. Vergelijk de derde letter.",
+   "Tot 'pi' zijn ze gelijk. Welke derde letter komt het eerst in het alfabet?"
+  ],
+  "niveaus": {
+   "basis": "Alfabetisch sorteren letter voor letter.",
+   "simpeler": "P-I vs P-L: I komt vóór L → piano eerst.",
+   "nogSimpeler": "Eerste letter gelijk? Kijk naar tweede."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 26,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarvoor is een **register / index** achter in boek?",
+  "options": [
+   "Onderwerpen op alfabet met paginanummers",
+   "Hoofdstukken op volgorde met paginanummers",
+   "Namen van de schrijvers van het boek",
+   "Plaatjes en foto's met hun bijschrift"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de inhoudsopgave, en die staat voorin.",
+   "Auteurs staan op de kaft of titelpagina.",
+   "Plaatjes staan in het boek zelf. Waar zoek je een onderwerp mee op?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 27,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat het **eerst** in het woordenboek?",
+  "options": [
+   "school",
+   "sport",
+   "schuur",
+   "slang"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de tweede letter van elk woord.",
+   "Tot 'sch' zijn ze gelijk. Vergelijk de vierde letter.",
+   "Vergelijk de tweede letter: welke komt het eerst in het alfabet?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 28,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat zijn de **gidswoorden** bovenaan een bladzijde van het woordenboek?",
+  "options": [
+   "Eerste + laatste woord op die pagina",
+   "Alle woorden die op die pagina staan",
+   "De titel van het hele woordenboek",
+   "De moeilijkste woorden op die pagina"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bovenaan is maar weinig ruimte. Hoeveel woorden passen daar?",
+   "De titel staat op de kaft.",
+   "Moeilijk of makkelijk maakt niet uit. Hoe helpen die woorden je zoeken?"
+  ],
+  "niveaus": {
+   "basis": "Hoofdwoorden = eerste + laatste woord op die pagina.",
+   "simpeler": "Ligt jouw woord alfabetisch tussen de hoofdwoorden? Dan zit het op die pagina.",
+   "nogSimpeler": "Bovenste 2 dikke = pagina-grens."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 29,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **eerste letter** van het alfabet?",
+  "options": [
+   "A",
+   "B",
+   "Z",
+   "O"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "B is de tweede letter.",
+   "Z is de laatste letter.",
+   "Zeg het alfabet eens hardop: komt de O vooraan?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 30,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat het **eerst** in het woordenboek?",
+  "options": [
+   "paars",
+   "rood",
+   "pen",
+   "pop"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De r komt in het alfabet na de p.",
+   "Beginnen woorden met dezelfde letter? Kijk dan naar de tweede letter.",
+   "Vergelijk de tweede letter van de woorden met een p."
+  ],
+  "niveaus": {
+   "basis": "paars (p < r).",
+   "simpeler": "p komt voor r in alfabet. Dus 'paars' eerst.",
+   "nogSimpeler": "paars"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 31,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is een **woordenboek** voor?",
+  "options": [
+   "Betekenis + spelling van woorden",
+   "Geschiedenis van landen en volken",
+   "Kaarten van landen en steden",
+   "Recepten voor eten en drinken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geschiedenis staat in een geschiedenisboek of encyclopedie.",
+   "Kaarten vind je in een atlas.",
+   "Recepten staan in een kookboek."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 32,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat voor boek is de **Van Dale**?",
+  "options": [
+   "Woordenboek",
+   "Atlas",
+   "Encyclopedie",
+   "Roman"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een atlas staat vol kaarten. Zoek je in de Van Dale naar kaarten?",
+   "Een encyclopedie vertelt uitgebreid over onderwerpen. Is dat waar de Van Dale om bekend staat?",
+   "Een roman is een verzonnen verhaal."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 33,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat het **eerst** in het woordenboek?",
+  "options": [
+   "kaak",
+   "kabel",
+   "kaas",
+   "kachel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tot en met 'ka' zijn ze gelijk — vergelijk de derde letter.",
+   "Tot en met 'kaa' zijn ze gelijk. Vergelijk de vierde letter.",
+   "Tot 'ka' gelijk. Welke derde letter komt het eerst in het alfabet?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 34,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "In een **atlas-index** staat: 'Madrid ... 22 C4'. Wat betekent **C4**?",
+  "options": [
+   "Vak op de kaart",
+   "Bladzijde 4",
+   "Hoofdstuk C, deel 4",
+   "De schaal van de kaart"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 22, niet C4.",
+   "Een atlas-index verwijst niet naar hoofdstukken. Wat staat er langs de rand van een kaart?",
+   "Een schaal ziet eruit als 1:100.000. Lijkt C4 daarop?"
+  ],
+  "niveaus": {
+   "basis": "Vak op de kaart.",
+   "simpeler": "C4 = vak in kaart-raster.",
+   "nogSimpeler": "Vak"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk soort boek bevat **uitgebreide info per onderwerp** (zoals 'olifant', 'Einstein')?",
+  "options": [
+   "Encyclopedie",
+   "Woordenboek",
+   "Roman",
+   "Atlas"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een woordenboek geeft alleen een korte betekenis per woord. Waar vind je lange stukken over een onderwerp?",
+   "Een roman vertelt een verzonnen verhaal.",
+   "Een atlas bevat vooral kaarten."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Bij een **uitgebreide index** achterin een boek staat **'water 12, 45, 89'**. Wat betekent dit?",
+  "options": [
+   "Water staat op de bladzijden 12, 45 en 89",
+   "Water staat in de hoofdstukken 12, 45 en 89",
+   "Water staat op bladzijde 12 tot en met 89",
+   "Het woord water komt 146 keer voor"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een boek heeft zelden 89 hoofdstukken. Waar verwijst een index naar?",
+   "Er staan losse getallen met komma's, geen 'tot en met'.",
+   "Een index telt niet hoe vaak een woord voorkomt. Wat betekenen de losse getallen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zoekt **'Spanje'** in een atlas. Waar kijk je het **eerst**?",
+  "options": [
+   "Index",
+   "Schaalbalk",
+   "Eerste kaart",
+   "Legenda"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Met de schaalbalk meet je afstanden. Waar zoek je een naam op?",
+   "Op de eerste kaart hoeft Spanje niet te staan.",
+   "De legenda legt kleuren en tekens uit, geen landen."
+  ],
+  "niveaus": {
+   "basis": "Index.",
+   "simpeler": "Index achterin geeft direct de pagina.",
+   "nogSimpeler": "Index"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk boek is **op alfabet** geordend?",
+  "options": [
+   "Woordenboek",
+   "Roman",
+   "Kookboek",
+   "Stripboek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een roman lees je als verhaal van begin tot eind.",
+   "Een kookboek is meestal per soort gerecht ingedeeld.",
+   "Een stripboek vertelt een verhaal in plaatjes, van begin tot eind."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "In een **bibliotheek-catalogus** zoek je als je wilt weten...",
+  "options": [
+   "Of een boek aanwezig is en waar",
+   "Hoe het verhaal afloopt",
+   "Hoeveel het kost",
+   "Wie het gelezen heeft"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het einde van een verhaal staat niet in de catalogus.",
+   "Een bibliotheek verkoopt geen boeken. Wat wil je weten als je een boek wilt lenen?",
+   "Wie een boek gelezen heeft, staat niet in de catalogus. Wat zoek je er wel?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord komt het **eerst** in het woordenboek?",
+  "options": [
+   "water",
+   "wijn",
+   "wolk",
+   "worm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alle woorden beginnen met w — vergelijk de tweede letter.",
+   "Vergelijk de tweede letter van elk woord. Welke komt het eerst in het alfabet?",
+   "Tot 'wo' gelijk aan 'wolk', maar vergelijk ook met de andere woorden: welke tweede letter komt het eerst?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "**Wikipedia** is een ___?",
+  "options": [
+   "Online encyclopedie",
+   "Papieren lesboek",
+   "Online woordenboek",
+   "Online wereldatlas"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wikipedia lees je op internet, niet op papier.",
+   "Veel meer — onderwerpen, niet alleen woorden.",
+   "Wikipedia heeft wel kaartjes, maar gaat over veel meer dan plaatsen."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een **woordenboekpagina** zie je een **hoofdwoord** ('jachthond'). De **uitleg** staat...",
+  "options": [
+   "Achter het woord",
+   "Boven het woord",
+   "Achter in het woordenboek",
+   "Bovenaan de bladzijde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je zoekt eerst het woord op. Waar lees je daarna verder?",
+   "Een woordenboek heeft geen aparte uitlegbladzijden achterin.",
+   "Bovenaan staan de gidswoorden, geen uitleg."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 25",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Bij **digitaal zoeken** in een PDF gebruik je vaak **Ctrl+F**. Dat doet ___?",
+  "options": [
+   "Zoekfunctie voor woorden",
+   "Opslaan van het bestand",
+   "Printen van het bestand",
+   "Alles in kleine letters"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar is Ctrl+S voor.",
+   "Daar is Ctrl+P voor.",
+   "Ctrl+F verandert niets aan je tekst. Wat doet het dan wel?"
+  ],
+  "niveaus": {
+   "basis": "Zoekfunctie.",
+   "simpeler": "Ctrl+F = Find = zoek.",
+   "nogSimpeler": "Zoek"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk **boek** raadpleeg je voor **'wat is de hoofdstad van Frankrijk?'**?",
+  "options": [
+   "Atlas of encyclopedie",
+   "Roman of verhalenboek",
+   "Woordenboek of spellinggids",
+   "Rekenboek of tafelboek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een roman is een verzonnen verhaal. Zoek je daar feiten over landen?",
+   "Een woordenboek legt uit wat woorden betekenen. Vind je daar welke stad een hoofdstad is?",
+   "In een rekenboek staan sommen, geen landen."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 27",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **inhoudsopgave** staat ___ in een boek?",
+  "options": [
+   "Voorin",
+   "Achterin",
+   "In het midden",
+   "Op elke pagina"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de index (lijst van onderwerpen alfabetisch).",
+   "Het midden van een boek is voor de tekst zelf. Waar staat het overzicht van alle hoofdstukken?",
+   "Inhoudsopgave komt 1 keer voor in een boek."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 28",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat in het woordenboek **het eerst**?",
+  "options": [
+   "fietsband",
+   "fietsbel",
+   "fietser",
+   "fietspomp"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tot 'fietsb' zijn ze gelijk — vergelijk de letter erná: a of e?",
+   "'fietse...' komt na alle 'fietsb...'-woorden.",
+   "De p komt ver na de b."
+  ],
+  "niveaus": null,
+  "explanation": "Alfabetiseren letter voor letter: fietsb**a**nd komt vóór fietsb**e**l (a < e), daarna fietser, fietspomp.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 29",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Boven aan een woordenboek-pagina staan de **gidswoorden** 'kamer — kano'. Welk woord staat op deze pagina?",
+  "options": [
+   "kampvuur",
+   "kabel",
+   "kapot",
+   "katoen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'kabel' komt vóór 'kamer' — dus op een eerdere pagina.",
+   "'kapot' komt na 'kano' (p > n op de derde letter).",
+   "'katoen' komt ook na 'kano'."
+  ],
+  "niveaus": {
+   "basis": "kampvuur valt tussen kamer en kano.",
+   "simpeler": "kamer → kampvuur → kano staat in alfabetische volgorde.",
+   "nogSimpeler": "kampvuur"
+  },
+  "explanation": "Alles wat alfabetisch tussen 'kamer' en 'kano' valt staat op deze pagina: kam**p**vuur past ertussen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 30",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "In het woordenboek staat: **'fi-lo-so-FIE'**. Wat geven de streepjes en hoofdletters aan?",
+  "options": [
+   "De lettergrepen en de klemtoon",
+   "De spelling van het meervoud",
+   "Hoe oud het woord is",
+   "Dat het een leenwoord is"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het meervoud staat apart vermeld (vaak als '-ën' of 'mv.').",
+   "De leeftijd van woorden staat niet in een gewoon woordenboek.",
+   "Herkomst staat soms vermeld, maar niet met streepjes."
+  ],
+  "niveaus": null,
+  "explanation": "Streepjes = **lettergrepen** (fi-lo-so-fie), hoofdletters = de **klemtoon** (op FIE). Zo weet je hoe je het uitspreekt.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 31",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Achter een woord staat **'(mv. musea)'**. Wat betekent dat?",
+  "options": [
+   "Het meervoud van dit woord is 'musea'",
+   "Het woord komt uit een museum",
+   "Je spreekt het uit als 'musea'",
+   "Het is een afkorting van musea"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waar zou 'mv.' de afkorting van zijn?",
+   "De uitspraak staat tussen andere haakjes, met streepjes.",
+   "Andersom: 'musea' is geen afkorting maar een vorm van het woord."
+  ],
+  "niveaus": null,
+  "explanation": "**mv.** = meervoud. Bij 'museum' staat '(mv. musea)' omdat het meervoud onregelmatig is.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 50,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zoekt informatie over **vulkanen** in een studieboek van 200 bladzijden. Wat is de **snelste** route?",
+  "options": [
+   "Zoek 'vulkaan' in de index achterin",
+   "Lees het boek van voor naar achter",
+   "Lees de tekst op de achterkant",
+   "Blader door alle plaatjes heen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat werkt, maar kost uren — er is een sneller hulpmiddel.",
+   "De achterkant geeft een korte samenvatting, geen bladzijden per onderwerp.",
+   "Langs 200 bladzijden bladeren kost veel tijd. Is er een sneller hulpmiddel?"
+  ],
+  "niveaus": null,
+  "explanation": "De **index** (register) achterin is alfabetisch: 'vulkaan → blz. 87, 134'. Eén opzoekactie in plaats van 200 bladzijden.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 51,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 33",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat vind je in een **atlas**?",
+  "options": [
+   "Kaarten van landen en gebieden",
+   "De betekenis van woorden",
+   "Telefoonnummers van mensen",
+   "Recepten voor lekker eten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daarvoor gebruik je een woordenboek.",
+   "Daarvoor had je vroeger een telefoonboek.",
+   "Daarvoor heb je een kookboek."
+  ],
+  "niveaus": null,
+  "explanation": "Een **atlas** is een boek vol kaarten — met een register om plaatsen op te zoeken.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 52,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 34",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "In het register van de atlas staat: **'Parijs 45 C3'**. Wat betekent de '45'?",
+  "options": [
+   "Het bladzijdenummer van de kaart",
+   "Het kaartvak waarin Parijs ligt",
+   "De afstand naar Parijs in km",
+   "Het aantal inwoners (×100.000)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het kaartvak is het tweede deel: C3.",
+   "Afstanden staan niet in het register.",
+   "Inwonertallen staan in een tabel, niet in het register."
+  ],
+  "niveaus": null,
+  "explanation": "Register-notatie: **bladzijde 45**, vak **C3**. Eerst naar de goede pagina, dan naar het vak.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 53,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 35",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke bron gebruik je om te checken **hoe je 'cadeau' spelt**?",
+  "options": [
+   "Een woordenboek",
+   "Een atlas",
+   "Een telefoongids",
+   "Een encyclopedie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een atlas gaat over plaatsen, niet over spelling.",
+   "Daar staan nummers in, geen spelling.",
+   "Een encyclopedie vertelt over onderwerpen. Waar check je snel de spelling van een woord?"
+  ],
+  "niveaus": null,
+  "explanation": "Spelling en betekenis check je in het **woordenboek** (of de digitale variant).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 54,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 36",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Het woord **'bank'** heeft in het woordenboek twee nummers: bank¹ (meubel) en bank² (geldzaken). Waarom?",
+  "options": [
+   "Het woord heeft twee verschillende betekenissen",
+   "Het woord heeft twee verschillende uitspraken",
+   "Je mag kiezen welke spelling je gebruikt",
+   "Het tweede woord is ouderwets"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bank¹ en bank² spreek je hetzelfde uit. Kijk naar wat erachter staat: meubel en geldzaken.",
+   "De spelling is bij beide gelijk — wat verschilt is iets anders.",
+   "Beide betekenissen zijn springlevend."
+  ],
+  "niveaus": null,
+  "explanation": "Bank¹ en bank² zijn **homoniemen**: zelfde woord, totaal verschillende betekenis. Het woordenboek nummert ze apart.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 55,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 37",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Woordenboek, atlas + index — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt weten of het boek een hoofdstuk over **de Romeinen** heeft. Waar kijk je het **eerst**?",
+  "options": [
+   "In de inhoudsopgave",
+   "Op de achterkant",
+   "Op bladzijde 50",
+   "In de woordenlijst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De achterkant geeft een wervende samenvatting — geen hoofdstukkenlijst.",
+   "Waarom juist daar? Er is een overzicht dat je stuurt.",
+   "Een woordenlijst legt begrippen uit, maar toont geen hoofdstukken."
+  ],
+  "niveaus": null,
+  "explanation": "De **inhoudsopgave** voorin toont alle hoofdstukken met bladzijdenummers — dé plek om de opbouw te zien.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

@@ -1,0 +1,497 @@
+[
+ {
+  "nr": 56,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 1",
+  "eigenKeuze": "Een schema met stappen en pijlen",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "nr": 57,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 2",
+  "eigenKeuze": "Recept lezen",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "nr": 58,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 3",
+  "eigenKeuze": "C",
+  "oordeel": "goed",
+  "reden": "makkelijke opwarmer, verder in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 59,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 4",
+  "eigenKeuze": "Wat hetzelfde en wat anders is",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 60,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 5",
+  "eigenKeuze": "Onder Zoogdieren",
+  "oordeel": "twijfel",
+  "reden": "vraag 'wat is Hond?' paste niet bij opties 'Onder ...'",
+  "hersteld": true,
+  "wijziging": "q: 'Waar hoort Hond?'"
+ },
+ {
+  "nr": 61,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 6",
+  "eigenKeuze": "Keuze-vraag",
+  "oordeel": "goed",
+  "reden": "zelfde begrip als stap 4 vraag 17 (dubbel, wel correct)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 62,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 7",
+  "eigenKeuze": "Stap 1 en 2 zijn omgedraaid",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl ('1. Ingrediënten 2. Recept'), 'welke stap is fout' paste niet bij opties; simpeler gaf antwoord",
+  "hersteld": true,
+  "wijziging": "q uitgeschreven + simpeler tot hulpstap"
+ },
+ {
+  "nr": 63,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 8",
+  "eigenKeuze": "Bus",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 64,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 9",
+  "eigenKeuze": "Je doel halen in de goede volgorde",
+  "oordeel": "twijfel",
+  "reden": "goede optie herhaalde 'doel' uit de vraag (raadbaar)",
+  "hersteld": true,
+  "wijziging": "optie 0: 'Stap voor stap in de goede volgorde werken'"
+ },
+ {
+  "nr": 65,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 10",
+  "eigenKeuze": "Ruit",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 66,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 11",
+  "eigenKeuze": "Cirkel of ovaal",
+  "oordeel": "twijfel",
+  "reden": "hints lieten het kind een stroomdiagram bekijken dat er niet is",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 67,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 12",
+  "eigenKeuze": "Veel informatie kort en overzichtelijk",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 68,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 13",
+  "eigenKeuze": "Een stappenplan",
+  "oordeel": "goed",
+  "reden": "makkelijk, afleiders zwak maar correct",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 69,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 14",
+  "eigenKeuze": "Keuze-vraag",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 70,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 15",
+  "eigenKeuze": "Vluchten en 112 bellen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 71,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 16",
+  "eigenKeuze": "3",
+  "oordeel": "twijfel",
+  "reden": "telegramzin 'Hoeveel takken?'",
+  "hersteld": true,
+  "wijziging": "q aangevuld"
+ },
+ {
+  "nr": 72,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 17",
+  "eigenKeuze": "Je maakt daar een keuze",
+  "oordeel": "goed",
+  "reden": "dubbel met stap 4 vraag 6, wel correct",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 73,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 18",
+  "eigenKeuze": "Pasta op borstel",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 74,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 19",
+  "eigenKeuze": "De volgorde van stappen",
+  "oordeel": "twijfel",
+  "reden": "zin + opties grammaticaal krom; niveaus.basis = antwoord",
+  "hersteld": true,
+  "wijziging": "q herschreven + basis tot hulpstap"
+ },
+ {
+  "nr": 75,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 20",
+  "eigenKeuze": "Wat gelijk en wat verschillend is",
+  "oordeel": "goed",
+  "reden": "dubbel met stap 4 vraag 4, afleiders zwak",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 76,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 21",
+  "eigenKeuze": "1950 en 2000",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis = antwoord; 'tussen welke 2'",
+  "hersteld": true,
+  "wijziging": "q + basis herschreven"
+ },
+ {
+  "nr": 77,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 22",
+  "eigenKeuze": "Paraplu",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 78,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 23",
+  "eigenKeuze": "Het effect van iets bekijken",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 79,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 24",
+  "eigenKeuze": "Ideeën rond een thema verzamelen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 80,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 25",
+  "eigenKeuze": "Konijn",
+  "oordeel": "twijfel",
+  "reden": "hint bij 'Gras' wees het antwoord aan ('wat staat direct vóór de vos'); basis = antwoord",
+  "hersteld": true,
+  "wijziging": "hints idx1/2 + basis herschreven"
+ },
+ {
+  "nr": 81,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 26",
+  "eigenKeuze": "Staafdiagram (liggend)",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 82,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 27",
+  "eigenKeuze": "Brand",
+  "oordeel": "twijfel",
+  "reden": "telegramzin 'Wat is oorzaak?'",
+  "hersteld": true,
+  "wijziging": "'Wat is de oorzaak?'"
+ },
+ {
+  "nr": 83,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 28",
+  "eigenKeuze": "Boomdiagram",
+  "oordeel": "twijfel",
+  "reden": "'1 top en takken' verklapte boom; telegram-hints",
+  "hersteld": true,
+  "wijziging": "q + wrongHints herschreven"
+ },
+ {
+  "nr": 84,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 29",
+  "eigenKeuze": "Volgorde",
+  "oordeel": "goed",
+  "reden": "hints noemen signaalwoorden per foute categorie; leerzaam, geen directe weggave",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 85,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 30",
+  "eigenKeuze": "Wat je elke dag moet doen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 86,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 31",
+  "eigenKeuze": "Informatie ordenen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 87,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 32",
+  "eigenKeuze": "Zoogdieren zijn een groep binnen de gewervelden",
+  "oordeel": "fout",
+  "reden": "hint 'de bovenste groep omvat de onderste' sprak het goede antwoord uit; goede optie enige lange; ⊂ in uitleg",
+  "hersteld": true,
+  "wijziging": "hints, optie 1 verlengd, uitleg zonder ⊂"
+ },
+ {
+  "nr": 88,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 33",
+  "eigenKeuze": "Wassen op 30 graden",
+  "oordeel": "fout",
+  "reden": "hint zei al dat het antwoord 'nee' is (= de 30-tak)",
+  "hersteld": true,
+  "wijziging": "hint idx1 herschreven"
+ },
+ {
+  "nr": 89,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 34",
+  "eigenKeuze": "Een mindmap of schema maken",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 90,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 35",
+  "eigenKeuze": "40 minuten",
+  "oordeel": "fout",
+  "reden": "hint bij 35 rekende 'Beslag (15) + bakken (25)' voor = antwoord; basis gaf de som",
+  "hersteld": true,
+  "wijziging": "hint idx3 + basis herschreven"
+ },
+ {
+  "nr": 91,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 36",
+  "eigenKeuze": "Precies in het midden",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 92,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 37",
+  "eigenKeuze": "Noa",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 93,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 38",
+  "eigenKeuze": "Je slaat geen stappen over",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 94,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 39",
+  "eigenKeuze": "Bij regen neem je een paraplu mee",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 95,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 40",
+  "eigenKeuze": "Een mindmap",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 96,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 1",
+  "eigenKeuze": "2 km",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis = antwoord",
+  "hersteld": true,
+  "wijziging": "basis tot rekenstap"
+ },
+ {
+  "nr": 97,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 2",
+  "eigenKeuze": "bal",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis = antwoord (opties staan op alfabet, maar worden in de app geschud; niet herschikt)",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap"
+ },
+ {
+  "nr": 98,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 3",
+  "eigenKeuze": "10%",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis = antwoord",
+  "hersteld": true,
+  "wijziging": "basis tot hulpstap"
+ },
+ {
+  "nr": 99,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 4",
+  "eigenKeuze": "In de index",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 100,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 5",
+  "eigenKeuze": "50",
+  "oordeel": "twijfel",
+  "reden": "'Tel de tabel op' zonder tabel, kromme zin",
+  "hersteld": true,
+  "wijziging": "q herschreven"
+ },
+ {
+  "nr": 101,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 6",
+  "eigenKeuze": "Een vervolg-stap",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 102,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 7",
+  "eigenKeuze": "ZW (zuid-west)",
+  "oordeel": "fout",
+  "reden": "antwoord ZW stond letterlijk in de vraag ('tussen W en Z'); hints wezen naar die letters",
+  "hersteld": true,
+  "wijziging": "nieuwe q (gezicht naar zuiden, 45° naar rechts → ZW) + passende wrongHints"
+ },
+ {
+  "nr": 103,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 8",
+  "eigenKeuze": "50",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 104,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 9",
+  "eigenKeuze": "In de index kijken",
+  "oordeel": "goed",
+  "reden": "lijkt op stap 5 vraag 4",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 105,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 10",
+  "eigenKeuze": "zaterdag",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 106,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 11",
+  "eigenKeuze": "Afrika",
+  "oordeel": "twijfel",
+  "reden": "telegram-hints ('Te ver naar het noorden.'); niveaus.basis = antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints idx2/3 + basis herschreven"
+ },
+ {
+  "nr": 107,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 12",
+  "eigenKeuze": "3 km",
+  "oordeel": "twijfel",
+  "reden": "telegramzin; '(in km)' terwijl opties ook m zijn",
+  "hersteld": true,
+  "wijziging": "q herschreven"
+ },
+ {
+  "nr": 108,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 13",
+  "eigenKeuze": "In Europa en Azië",
+  "oordeel": "twijfel",
+  "reden": "hint 'Kijk op de kaart' terwijl er geen kaart is",
+  "hersteld": true,
+  "wijziging": "hint idx1 herschreven"
+ },
+ {
+  "nr": 109,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 15",
+  "eigenKeuze": "30 km",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 110,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 16",
+  "eigenKeuze": "40",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

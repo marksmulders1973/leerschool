@@ -1,0 +1,802 @@
+[
+ {
+  "nr": 221,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is de **hoofdzaak** van deze alinea: 'Amira traint elke dag. Ze doet oefeningen voor haar benen. Ze eet extra gezond. Zo bereidt ze zich voor op de marathon.'?",
+  "options": [
+   "Amira bereidt zich voor op de marathon",
+   "Amira doet beenoefeningen",
+   "Amira eet extra gezond",
+   "Amira heeft nieuwe sportschoenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is één van de vóórbeelden, niet het grote plaatje.",
+   "Ook dat is een voorbeeld van iets groters.",
+   "Dat staat niet eens in de alinea."
+  ],
+  "niveaus": null,
+  "explanation": "Alle zinnen wijzen naar één doel: de **marathon-voorbereiding**. De rest zijn voorbeelden (bijzaken).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 222,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat doe je **EERST** bij het maken van een woordweb over een tekst?",
+  "options": [
+   "Het onderwerp in het midden schrijven",
+   "Alle moeilijke woorden opzoeken",
+   "De blaadjes vast inkleuren",
+   "De tekst uit je hoofd leren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Opzoeken kan later — het web heeft eerst een middelpunt nodig.",
+   "Kleuren is voor de sier, niet de eerste stap.",
+   "Een woordweb helpt je juist zodat je níét alles uit je hoofd hoeft te leren."
+  ],
+  "niveaus": null,
+  "explanation": "Start met het **onderwerp in het midden** — daar hang je daarna alle takken aan.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 223,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Stroomschema zwembad:** 'Heb je een zwemdiploma? JA → naar het diepe bad. NEE → naar het ondiepe bad.' Sem heeft geen diploma. Waar mag Sem zwemmen?",
+  "options": [
+   "In het ondiepe bad",
+   "In het diepe bad",
+   "In allebei de baden",
+   "Nergens"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Volg de pijl bij het antwoord dat bij Sem past — wat antwoordt Sem op de vraag?",
+   "Voor allebei zou Sem een diploma nodig hebben.",
+   "Het schema geeft Sem wél een plek."
+  ],
+  "niveaus": null,
+  "explanation": "Sem antwoordt NEE → volg de NEE-pijl: **het ondiepe bad**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 224,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarom zet een schrijver **kopjes** boven de stukken van een tekst?",
+  "options": [
+   "Zodat je snel ziet waar elk stuk over gaat",
+   "Om de tekst moeilijker te maken",
+   "Omdat het verplicht is bij wet",
+   "Om lezers woordjes te laten oefenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kopjes maken een tekst juist mákkelijker.",
+   "Er bestaat geen kopjes-wet.",
+   "Kopjes zijn wegwijzers, geen oefening."
+  ],
+  "niveaus": null,
+  "explanation": "Kopjes zijn **wegwijzers**: je vindt snel het stuk dat jij nodig hebt, zonder alles te lezen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 225,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Instructie 'brief versturen' (door elkaar):** A) doe de brief in de envelop, B) schrijf de brief, C) plak een postzegel op de dichtgeplakte envelop, D) doe de envelop op de bus. Welke stap komt **direct vóór** het op de bus doen?",
+  "options": [
+   "C — postzegel plakken",
+   "B — de brief schrijven",
+   "A — de brief in de envelop doen",
+   "Er hoeft niets vóór"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Schrijven is juist de állereerste stap.",
+   "Daarna moet er nog iets óp de envelop voordat de post hem meeneemt.",
+   "Zonder de eerdere stappen bezorgt de post niets."
+  ],
+  "niveaus": null,
+  "explanation": "Volgorde: schrijven → in de envelop → **postzegel plakken** → op de bus. Zonder postzegel komt de brief niet aan.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 226,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Een tekst heeft het kopje **'Voordelen van fietsen'**. Welke zin verwacht je in die alinea?",
+  "options": [
+   "'Fietsen is gezond en goedkoop.'",
+   "'Een fiets heeft twee wielen.'",
+   "'De eerste fiets is heel lang geleden uitgevonden.'",
+   "'Sommige mensen vinden fietsen saai.'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een beschrijving, geen voordeel.",
+   "Dat is geschiedenis, geen voordeel.",
+   "Dat klinkt eerder als een nádeel of een mening."
+  ],
+  "niveaus": null,
+  "explanation": "Onder dit kopje horen **voordelen**: gezond en goedkoop. Kopje en inhoud moeten bij elkaar passen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 227,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Je moet een lange tekst leren voor een toets. Wat is de **slimste eerste stap**?",
+  "options": [
+   "De tekst eerst globaal doorkijken",
+   "De hele tekst meteen overschrijven",
+   "Beginnen bij de laatste bladzijde",
+   "Alleen de plaatjes bekijken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Overschrijven kost veel tijd en je onthoudt er weinig van.",
+   "De opbouw van een tekst loopt van voren naar achteren.",
+   "Plaatjes helpen, maar vertellen nooit het hele verhaal."
+  ],
+  "niveaus": null,
+  "explanation": "Eerst **globaal doorkijken** (kopjes, plaatjes, eerste zinnen): zo snap je de opbouw vóórdat je in de details duikt.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 228,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "In je samenvattings-schema staat: 'Hoofdstuk 2 → ???'. In hoofdstuk 2 las je over eb en vloed, springtij en de invloed van de maan. Welke korte **kern** schrijf je op?",
+  "options": [
+   "De zee: eb, vloed en de maan",
+   "De maan is wit",
+   "Springtij is een raar woord",
+   "Hoofdstuk 3 komt hierna"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een detail over een kleur, niet de kern.",
+   "Wat je van een wóórd vindt, hoort niet in een schema.",
+   "Dat zegt niets over de ínhoud van hoofdstuk 2."
+  ],
+  "niveaus": null,
+  "explanation": "De kern vat alle onderwerpen samen: **eb, vloed en de maan**. Kort, maar het dekt de lading.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 229,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord staat in het woordenboek **het eerst**: 'boot', 'bal' of 'bril'?",
+  "options": [
+   "bal",
+   "boot",
+   "bril",
+   "Ze staan alle drie op dezelfde plek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de twééde letter — er is een woord dat eerder komt.",
+   "Kijk naar de tweede letter: de r komt vrij laat in het alfabet.",
+   "Het alfabet geeft altijd een vaste volgorde — vergelijk letter voor letter."
+  ],
+  "niveaus": null,
+  "explanation": "Alle drie beginnen met een b, dus kijk naar de tweede letter: de a komt vóór de o en de r. **Bal** staat het eerst.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 230,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Zet op woordenboek-volgorde: 'kast', 'kat', 'kaas'. Welk woord komt het **laatst**?",
+  "options": [
+   "kat",
+   "kaas",
+   "kast",
+   "Ze komen tegelijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De dubbele a zorgt er juist voor dat dit woord vóóraan komt.",
+   "Vergelijk de derde letters — er komt nog een woord ná dit woord.",
+   "In het woordenboek staat elk woord op zijn eigen plek — vergelijk letter voor letter."
+  ],
+  "niveaus": null,
+  "explanation": "Vergelijk de derde letter: kaas (a), kast (s), kat (t). De t komt het laatst in het alfabet: **kat**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 231,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Bovenaan een woordenboek-bladzijde staan de **gidswoorden** 'melk' en 'mier'. Staat het woord 'mes' op deze bladzijde?",
+  "options": [
+   "Ja, 'mes' valt tussen 'melk' en 'mier'",
+   "Nee, want 'mes' komt vóór 'melk'",
+   "Nee, want 'mes' komt ná 'mier'",
+   "Dat kun je met gidswoorden niet weten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de derde letters van 'melk' en 'mes': welke komt eerder in het alfabet?",
+   "Vergelijk de tweede letters van 'mes' en 'mier'.",
+   "Je kúnt het weten: gidswoorden tonen het eerste en het laatste woord van de bladzijde."
+  ],
+  "niveaus": null,
+  "explanation": "Gidswoorden = het eerste en laatste woord van de bladzijde. 'Mes' valt daar alfabetisch tussen: **ja**, het staat op deze bladzijde.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 232,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "In het woordenboek staat bij **'bank'**: 1) meubel om op te zitten, 2) gebouw waar je geld bewaart, 3) ondiepe plek in zee (zandbank). Welke betekenis past in de zin: 'Het schip liep vast op een bank'?",
+  "options": [
+   "Betekenis 3",
+   "Betekenis 1",
+   "Betekenis 2",
+   "Geen enkele betekenis past"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een meubel midden in zee — kan een schip daarop vastlopen?",
+   "Een geldgebouw staat op het land.",
+   "Eén betekenis past juist precies — lees ze nog eens naast de zin."
+  ],
+  "niveaus": null,
+  "explanation": "Een schip loopt vast op een ondiepe plek: **betekenis 3** (zandbank). Kies altijd de betekenis die in de zín past.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 233,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Onderaan een brief staat 'z.o.z.'. In de afkortingenlijst staat: z.o.z. = zie ommezijde. Wat moet je doen?",
+  "options": [
+   "De achterkant van het blaadje lezen",
+   "De brief terugbrengen naar school",
+   "Zaterdag opnieuw naar de brief kijken",
+   "Zelf iets onder de brief schrijven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De afkorting gaat over het blaadje zelf. Wat staat er in de lijst?",
+   "Bedenk de betekenis niet zelf — de lijst geeft hem al.",
+   "Er hoeft niets geschreven te worden."
+  ],
+  "niveaus": null,
+  "explanation": "**Zie ommezijde** = kijk op de andere kant. Er staat dus nog iets op de achterkant van het blaadje.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 234,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt in de encyclopedie iets opzoeken over de **snelheid van cheeta's**. Onder welk **trefwoord** zoek je?",
+  "options": [
+   "cheeta",
+   "snelheid",
+   "hard",
+   "dier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Onder dat woord vind je van alles: auto's, treinen, geluid...",
+   "Dat woord is te vaag om op te zoeken.",
+   "Dat is véél te breed — er zijn duizenden soorten."
+  ],
+  "niveaus": null,
+  "explanation": "Zoek onder het **specifieke onderwerp** — daar staat ook de snelheid bij vermeld.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 235,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke lettervolgorde klopt met het alfabet?",
+  "options": [
+   "g — h — i — j",
+   "g — i — h — j",
+   "h — g — j — i",
+   "j — i — h — g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Twee letters in het midden zijn hier omgewisseld.",
+   "Hier zijn twee paren omgedraaid.",
+   "Dit rijtje staat precies achterstevoren."
+  ],
+  "niveaus": null,
+  "explanation": "Na de g komen **h, i, j** — handig om vlot te kennen bij woordenboek-werk.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 236,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je snapt het woord 'fietste' in een tekst niet. Onder welk trefwoord zoek je het op in het woordenboek?",
+  "options": [
+   "fietsen",
+   "fietste",
+   "gefietst",
+   "fietsje"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verleden-tijdsvormen staan meestal niet als eigen trefwoord in het woordenboek.",
+   "Ook die vorm heeft geen eigen trefwoord — zoek de basisvorm.",
+   "Dat is een verkleinwoord van iets anders."
+  ],
+  "niveaus": null,
+  "explanation": "Woordenboeken zetten werkwoorden onder het **hele werkwoord**. Vervoegingen zoek je dus op via de basisvorm.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 237,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "In het **register** van je aardrijkskundeboek staat: 'dijk 14, 27 — duin 8 — eb 31'. Op welke bladzijden lees je over **dijken**?",
+  "options": [
+   "Bladzijde 14 en 27",
+   "Alleen bladzijde 14",
+   "Bladzijde 8",
+   "Bladzijde 31"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Er staan twéé getallen achter dat trefwoord.",
+   "Dat is de bladzijde van 'duin'.",
+   "Dat is de bladzijde van 'eb'."
+  ],
+  "niveaus": null,
+  "explanation": "Achter 'dijk' staan twee nummers: het onderwerp komt op **blz. 14 én 27** voor.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 238,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke naam komt in een alfabetische **klassenlijst met voornamen** het eerst: Daan, Dana of Dani?",
+  "options": [
+   "Daan",
+   "Dana",
+   "Dani",
+   "Dat hangt van de achternaam af"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de derde letter met die van de andere namen.",
+   "Ook hier: kijk goed naar de derde letter van elke naam.",
+   "De lijst gaat hier alleen over deze voornamen."
+  ],
+  "niveaus": null,
+  "explanation": "Vergelijk de derde letter: één naam heeft daar een a, de andere twee een n. De a komt eerst: **Daan**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 239,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Het woordenboek geeft bij **'licht'**: 1) niet zwaar, 2) schijnsel van bijvoorbeeld een lamp. Welke betekenis past bij: 'Deze tas is lekker licht'?",
+  "options": [
+   "Betekenis 1",
+   "Betekenis 2",
+   "Allebei tegelijk",
+   "Geen van beide"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geeft een tas schijnsel?",
+   "Eén van de twee past duidelijk beter in deze zin.",
+   "Eén betekenis past wel degelijk — probeer ze allebei eens in de zin."
+  ],
+  "niveaus": null,
+  "explanation": "De tas weegt weinig: **betekenis 1** (niet zwaar).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 240,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Waar vind je de **betekenis** van een moeilijk woord uit je leesboek?",
+  "options": [
+   "Bij het trefwoord in het woordenboek",
+   "Op de kaft van je leesboek",
+   "In de inhoudsopgave van het woordenboek",
+   "Achterin je rekenschrift"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op de kaft staan alleen de titel en de schrijver.",
+   "Een woordenboek heeft geen hoofdstukken zoals een leesboek.",
+   "Je rekenschrift heeft hier niets mee te maken."
+  ],
+  "niveaus": null,
+  "explanation": "Zoek het woord **alfabetisch** op in het woordenboek — bij het trefwoord staan de uitspraak, de woordsoort en de betekenis(sen).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 241,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "De afkorting **'bijv.'** kom je vaak tegen in teksten. Wat betekent die volgens de afkortingenlijst?",
+  "options": [
+   "bijvoorbeeld",
+   "bijzonder",
+   "bijvangst",
+   "bij vier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou als 'bijz.' worden afgekort.",
+   "Dat woord wordt bijna nooit afgekort.",
+   "Getallen kort je niet zo af."
+  ],
+  "niveaus": null,
+  "explanation": "**bijv.** = bijvoorbeeld. Andere bekende: o.a. (onder andere), enz. (enzovoort).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 242,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zoekt 'schaats' op in het woordenboek. Welke **gidswoorden** bovenaan de bladzijde vertellen je dat je goed zit?",
+  "options": [
+   "'schaap' en 'schat'",
+   "'soep' en 'sok'",
+   "'appel' en 'auto'",
+   "'zon' en 'zuur'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die woorden beginnen met so- en jouw woord met sch-.",
+   "Die staan helemaal vóóraan in het woordenboek.",
+   "Die staan helemaal áchteraan in het woordenboek."
+  ],
+  "niveaus": null,
+  "explanation": "'Schaats' past alfabetisch precies tussen **schaap** en **schat** — dus die bladzijde is goed.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 243,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat betekent het als een woord in het woordenboek **twee genummerde betekenissen** heeft?",
+  "options": [
+   "Het woord kan meer dan één ding betekenen",
+   "Het woord is twee keer fout gedrukt",
+   "Je moet het woord twee keer opschrijven",
+   "Het woord bestaat niet echt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Drukfouten zetten ze er niet netjes met nummers in.",
+   "De nummers zijn geen opdracht voor jou.",
+   "Het staat juist in het woordenboek omdát het bestaat."
+  ],
+  "niveaus": null,
+  "explanation": "Nummers = **verschillende betekenissen**. Kies de betekenis die past bij de zin waarin je het woord tegenkwam.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 244,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zet deze woorden op alfabetische volgorde: 'boot', 'boom', 'boor', 'boon'. Welk woord komt dan **direct na** 'boom'?",
+  "options": [
+   "boon",
+   "boot",
+   "boor",
+   "boom"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar de vierde letter. De t komt in het alfabet pas ná een paar andere letters.",
+   "Kijk naar de vierde letter. Er zit alfabetisch nog een woord tussen 'boom' en dit woord.",
+   "Dat is het woord zélf. Welk woord komt erna?"
+  ],
+  "niveaus": null,
+  "explanation": "De eerste drie letters zijn bij alle woorden 'boo'. Vergelijk daarom de vierde letter: m → n → r → t. Op volgorde: boom, boon, boor, boot. Direct na boom komt dus **boon**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 245,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarvoor gebruik je het **register van een atlas**?",
+  "options": [
+   "Om te vinden op welke kaart en in welk vak een plaats ligt",
+   "Om te zien wat de tekens op een kaart betekenen",
+   "Om te zien hoe groot de afstanden in het echt zijn",
+   "Om te zien op welke bladzijde elk werelddeel begint"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De betekenis van de tekens staat in de legenda, bij de kaart zelf.",
+   "Afstanden reken je uit met de schaal van de kaart.",
+   "Dat staat in de inhoudsopgave voorin. Het register staat achterin en is anders opgebouwd."
+  ],
+  "niveaus": null,
+  "explanation": "Het atlas-register zegt bijvoorbeeld 'Zwolle 23 C4': **kaart 23, vak C4**. Zo vind je elke plaats snel.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 246,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je leest in de krant: 'De **AOW** gaat omhoog.' Je weet niet wat AOW betekent. Wat is de snelste goede aanpak?",
+  "options": [
+   "De afkorting opzoeken",
+   "Raden dat het een dier is",
+   "De hele krant maar weggooien",
+   "Doen alsof je het weet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Raden zonder controleren is riskant — er is een betere weg.",
+   "Dan leer je nooit wat het betekent.",
+   "Van doen-alsof word je niet wijzer."
+  ],
+  "niveaus": null,
+  "explanation": "Afkortingen zoek je gewoon op. (AOW = Algemene Ouderdomswet — het pensioen dat ouderen van de overheid krijgen.)",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 247,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "In welk naslagwerk zoek je de **betekenis van het woord 'fotosynthese'**?",
+  "options": [
+   "Een woordenboek of encyclopedie",
+   "Een stripboek of moppenboek",
+   "Een dienstregeling van de trein",
+   "Een liedjestekst of gedicht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Strips zijn verhalen, geen naslagwerk.",
+   "Daar staan vertrektijden in, geen woordbetekenissen.",
+   "Liedjes en gedichten leggen geen begrippen uit."
+  ],
+  "niveaus": null,
+  "explanation": "Betekenissen zoek je op in het **woordenboek** (kort) of de **encyclopedie** (uitgebreider).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 248,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarom staat een woordenboek op **alfabet**?",
+  "options": [
+   "Zodat iedereen elk woord snel kan vinden",
+   "Omdat de a de mooiste letter is",
+   "Omdat er anders te weinig bladzijden zijn",
+   "Dat is toeval"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mooi of lelijk speelt geen rol bij ordenen.",
+   "Het aantal bladzijden blijft precies gelijk, hoe je ook ordent.",
+   "Zo'n vaste volgorde is juist expres afgesproken."
+  ],
+  "niveaus": null,
+  "explanation": "Alfabetische volgorde is een **afspraak**: zo vind je elk woord snel, zonder het hele boek door te bladeren.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 249,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk rijtje staat **helemaal goed** op alfabetische volgorde?",
+  "options": [
+   "appel — banaan — citroen — druif",
+   "banaan — appel — citroen — druif",
+   "druif — citroen — banaan — appel",
+   "appel — citroen — banaan — druif"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De eerste twee woorden zijn hier omgewisseld.",
+   "Dit rijtje staat precies achterstevoren.",
+   "Kijk goed naar het tweede en het derde woord."
+  ],
+  "niveaus": null,
+  "explanation": "a — b — c — d: de vier vruchten volgen in **het eerste rijtje** netjes het alfabet.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 250,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Het woordenboek zegt bij 'kachel': **(de; -s)**. Wat betekent die '-s'?",
+  "options": [
+   "Het meervoud is 'kachels'",
+   "Het woord komt uit het Spaans",
+   "Je spreekt de s niet uit",
+   "Het woord heeft geen betekenis"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De herkomst van een woord staat er anders bij.",
+   "Over de uitspraak zegt dit stukje niets.",
+   "Elk trefwoord in het woordenboek heeft juist een betekenis."
+  ],
+  "niveaus": null,
+  "explanation": "Tussen haakjes staat woord-informatie: 'de' = het lidwoord, '-s' = zo maak je het **meervoud** (kachels).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 251,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt weten **hoeveel poten een spin heeft**. Welk trefwoord kies je in het register van je natuurboek?",
+  "options": [
+   "spin",
+   "poten",
+   "acht",
+   "hoeveel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zowat élk dier heeft poten — dat trefwoord is te breed.",
+   "Dat is misschien het antwoord, maar geen zoekwoord.",
+   "Vraagwoorden staan nooit in een register."
+  ],
+  "niveaus": null,
+  "explanation": "Kies het **onderwerp** als trefwoord. Daar vind je alle informatie, ook over de poten.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 252,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Naslag & alfabet — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat doe je **EERST** als je een woord in het woordenboek wilt opzoeken?",
+  "options": [
+   "Naar de eerste letter bladeren",
+   "Bij de a beginnen en alles doorlezen",
+   "Het woordenboek heen en weer schudden",
+   "De laatste bladzijde bekijken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alles doorlezen vanaf de a duurt uren — het kan veel sneller.",
+   "Schudden helpt een boek niet.",
+   "Achterin staan de laatste letters van het alfabet — begint jouw woord daarmee?"
+  ],
+  "niveaus": null,
+  "explanation": "Blader eerst grofweg naar de **eerste letter**, verfijn daarna met de tweede en derde letter en gebruik de gidswoorden.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

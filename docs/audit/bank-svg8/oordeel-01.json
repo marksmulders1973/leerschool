@@ -1,0 +1,497 @@
+[
+ {
+  "nr": 1,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 1",
+  "eigenKeuze": "3 km",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis gaf alleen '3 km.'",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot rekenstap"
+ },
+ {
+  "nr": 2,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 2",
+  "eigenKeuze": "Uitleg van symbolen en kleuren",
+  "oordeel": "twijfel",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot denkvraag"
+ },
+ {
+  "nr": 3,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 3",
+  "eigenKeuze": "2 km",
+  "oordeel": "twijfel",
+  "reden": "vraag is letterlijk het uitgewerkte voorbeeld in de stap-uitleg (1:50.000, 4 cm, 2 km)",
+  "hersteld": true,
+  "wijziging": "voorbeeld in stap-uitleg veranderd naar 6 cm = 3 km"
+ },
+ {
+  "nr": 4,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 10",
+  "eigenKeuze": "Z en W",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 5,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 11",
+  "eigenKeuze": "N en O",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 6,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 15",
+  "eigenKeuze": "NW (noord-west)",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 7,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "eigenKeuze": "N (noord)",
+  "oordeel": "twijfel",
+  "reden": "te makkelijk voor groep 8 en bijna dubbel met 'kompasroos: wat staat boven?' in dezelfde stap",
+  "hersteld": true,
+  "wijziging": "nieuwe vraag: naar het zuiden lopen en helemaal omdraaien → N; hints aangepast"
+ },
+ {
+  "nr": 8,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 26",
+  "eigenKeuze": "Noordoost (NO)",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 9,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 27",
+  "eigenKeuze": "Steden, rivieren, snelwegen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 10,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 37",
+  "eigenKeuze": "Een hoogtekaart",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 11,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 1",
+  "eigenKeuze": "donderdag",
+  "oordeel": "twijfel",
+  "reden": "telegramzin ('Op welke dag minst')",
+  "hersteld": true,
+  "wijziging": "vraagzin voluit geschreven"
+ },
+ {
+  "nr": 12,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 2",
+  "eigenKeuze": "90",
+  "oordeel": "twijfel",
+  "reden": "voorbeeldtabel in de stap-uitleg is precies deze tabel met totaal 90 voorgerekend; basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "tabel in stap-uitleg naar 14/9/21/16/25 (minst di, verschil 11, totaal 85, gemiddeld 17); basis herschreven"
+ },
+ {
+  "nr": 13,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 3",
+  "eigenKeuze": "10%",
+  "oordeel": "twijfel",
+  "reden": "telegramzin ('rest = ?')",
+  "hersteld": true,
+  "wijziging": "vraagzin voluit geschreven"
+ },
+ {
+  "nr": 14,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 20",
+  "eigenKeuze": "Zoek januari op en lees in dezelfde rij de temperatuur af",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 15,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 23",
+  "eigenKeuze": "De gegevens van één klas",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 16,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 25",
+  "eigenKeuze": "Er werden steeds minder ijsjes verkocht",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 17,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 32",
+  "eigenKeuze": "45 minuten",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 18,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 36",
+  "eigenKeuze": "Een kwart",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 19,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 1",
+  "eigenKeuze": "appel",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen 'appel.'; simpeler sloeg arm/avond over",
+  "hersteld": true,
+  "wijziging": "basis + simpeler herschreven"
+ },
+ {
+  "nr": 20,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 2",
+  "eigenKeuze": "In de index",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 21,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 3",
+  "eigenKeuze": "Inhoudsopgave",
+  "oordeel": "twijfel",
+  "reden": "basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot denkvraag"
+ },
+ {
+  "nr": 22,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 4",
+  "eigenKeuze": "kat",
+  "oordeel": "twijfel",
+  "reden": "kat/kater staat als voorbeeld in de stap-uitleg; hint bij katoen omschreef het antwoord; basis alleen antwoord; jargon 'prefix'",
+  "hersteld": true,
+  "wijziging": "uitleg-voorbeeld → bal/balkon; hint katoen, basis en simpeler herschreven"
+ },
+ {
+  "nr": 23,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 5",
+  "eigenKeuze": "Snel een hoofdstuk vinden",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 24,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 6",
+  "eigenKeuze": "Bladzijde 22, vak D5",
+  "oordeel": "twijfel",
+  "reden": "hints bij optie 2 en 3 vertelden precies welk deel vak en welk deel bladzijde is; basis alleen antwoord",
+  "hersteld": true,
+  "wijziging": "twee hints en basis herschreven"
+ },
+ {
+  "nr": 25,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 7",
+  "eigenKeuze": "piano",
+  "oordeel": "twijfel",
+  "reden": "simpeler sloeg pinda en pizza over",
+  "hersteld": true,
+  "wijziging": "simpeler herschreven"
+ },
+ {
+  "nr": 26,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 8",
+  "eigenKeuze": "Onderwerpen op alfabet met paginanummers",
+  "oordeel": "twijfel",
+  "reden": "telegramzin ('achter in boek')",
+  "hersteld": true,
+  "wijziging": "vraagzin hersteld"
+ },
+ {
+  "nr": 27,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 9",
+  "eigenKeuze": "school",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 28,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "eigenKeuze": "Eerste + laatste woord op die pagina",
+  "oordeel": "fout",
+  "reden": "uitlegPad en stap-uitleg noemen gidswoorden 'hoofdwoorden' (hoofdwoord = het opgezochte woord, zie vraag 'jachthond') → kind leert verkeerde term; basis alleen antwoord; telegram '+'",
+  "hersteld": true,
+  "wijziging": "overal hoofdwoorden → gidswoorden (10 regels + stap-uitleg), basis/nogSimpeler en optie herschreven"
+ },
+ {
+  "nr": 29,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 11",
+  "eigenKeuze": "A",
+  "oordeel": "twijfel",
+  "reden": "veel te makkelijk voor groep 8 (eerste letter van het alfabet)",
+  "hersteld": true,
+  "wijziging": "nieuwe vraag: van achter naar voren bladeren, welke letter als laatste → A; hints aangepast"
+ },
+ {
+  "nr": 30,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 12",
+  "eigenKeuze": "paars",
+  "oordeel": "twijfel",
+  "reden": "basis alleen antwoord; simpeler sloeg pen/pop over",
+  "hersteld": true,
+  "wijziging": "basis + simpeler herschreven"
+ },
+ {
+  "nr": 31,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 13",
+  "eigenKeuze": "Betekenis + spelling van woorden",
+  "oordeel": "twijfel",
+  "reden": "telegram '+' in de goede optie",
+  "hersteld": true,
+  "wijziging": "'Betekenis en spelling van woorden'"
+ },
+ {
+  "nr": 32,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 14",
+  "eigenKeuze": "Woordenboek",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 33,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 15",
+  "eigenKeuze": "kaak",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 34,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 16",
+  "eigenKeuze": "Vak op de kaart",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 17",
+  "eigenKeuze": "Encyclopedie",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 18",
+  "eigenKeuze": "Water staat op de bladzijden 12, 45 en 89",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 19",
+  "eigenKeuze": "Index",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen 'Index.' (vraag lijkt ook op stap 3 vraag 2, bewust gelaten)",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 20",
+  "eigenKeuze": "Woordenboek",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 21",
+  "eigenKeuze": "Of een boek aanwezig is en waar",
+  "oordeel": "twijfel",
+  "reden": "goede optie veel langer/specifieker dan korte afleiders; rommelige vraagzin",
+  "hersteld": true,
+  "wijziging": "vraagzin + drie afleiders langer gemaakt"
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 22",
+  "eigenKeuze": "water",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 23",
+  "eigenKeuze": "Online encyclopedie",
+  "oordeel": "twijfel",
+  "reden": "hint optie 3 telegramzin",
+  "hersteld": true,
+  "wijziging": "hint herschreven"
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 24",
+  "eigenKeuze": "Achter het woord",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 25",
+  "eigenKeuze": "Zoekfunctie voor woorden",
+  "oordeel": "fout",
+  "reden": "antwoord 'zoeken' stond al in de vraag ('Bij digitaal zoeken ... Ctrl+F'); basis alleen antwoord",
+  "hersteld": true,
+  "wijziging": "vraag: 'Je drukt in een PDF op Ctrl+F. Wat doet dat?'; basis herschreven"
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 26",
+  "eigenKeuze": "Atlas of encyclopedie",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 27",
+  "eigenKeuze": "Voorin",
+  "oordeel": "twijfel",
+  "reden": "hint optie 4 telegramzin",
+  "hersteld": true,
+  "wijziging": "hint herschreven"
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 28",
+  "eigenKeuze": "fietsband",
+  "oordeel": "twijfel",
+  "reden": "hint bij fietsbel voorspelde 'a of e' en daarmee het antwoord",
+  "hersteld": true,
+  "wijziging": "hint vager gemaakt"
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 29",
+  "eigenKeuze": "kampvuur",
+  "oordeel": "twijfel",
+  "reden": "basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot werkwijze"
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 30",
+  "eigenKeuze": "De lettergrepen en de klemtoon",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 31",
+  "eigenKeuze": "Het meervoud van dit woord is 'musea'",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 50,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 32",
+  "eigenKeuze": "Zoek 'vulkaan' in de index achterin",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 51,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 33",
+  "eigenKeuze": "Kaarten van landen en gebieden",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 52,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 34",
+  "eigenKeuze": "Het bladzijdenummer van de kaart",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 53,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 35",
+  "eigenKeuze": "Een woordenboek",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 54,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 36",
+  "eigenKeuze": "Het woord heeft twee verschillende betekenissen",
+  "oordeel": "fout",
+  "reden": "hint bij 'ouderwets' noemt het antwoord: 'Beide betekenissen zijn springlevend'",
+  "hersteld": true,
+  "wijziging": "hint herschreven zonder 'betekenissen'"
+ },
+ {
+  "nr": 55,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 37",
+  "eigenKeuze": "In de inhoudsopgave",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

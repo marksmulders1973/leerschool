@@ -6,36 +6,36 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 Vraag: Welk getal komt **na 7**?
 - ▫️ 6
 - ▫️ 10
-- ✅ 8
 - ▫️ 9
+- ✅ 8
 
 ## 2. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 1)
 Vraag: Hoeveel stippen zijn dit: **● ● ● ● ●**?
-- ✅ 5
-- ▫️ 10
-- ▫️ 4
 - ▫️ 6
+- ✅ 5
+- ▫️ 4
+- ▫️ 10
 
 ## 3. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 1)
 Vraag: Welk getal is het **kleinst**?
-- ▫️ 12
-- ▫️ 10
 - ▫️ 9
 - ✅ 8
+- ▫️ 12
+- ▫️ 10
 
 ## 4. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 1)
 Vraag: Welk getal komt **tussen 14 en 16**?
-- ▫️ 13
 - ▫️ 17
-- ✅ 15
+- ▫️ 13
 - ▫️ 16
+- ✅ 15
 
 ## 5. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 2)
 Vraag: **5 + 3** = ?
-- ✅ 8
+- ▫️ 7
 - ▫️ 6
 - ▫️ 9
-- ▫️ 7
+- ✅ 8
 
 ## 6. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 2)
 Vraag: 4 + 4 is een dubbele som. Hoeveel is **4 + 4**?
@@ -46,93 +46,93 @@ Vraag: 4 + 4 is een dubbele som. Hoeveel is **4 + 4**?
 
 ## 7. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 2)
 Vraag: Welke twee getallen zijn samen **10**?
-- ✅ 6 + 4
 - ▫️ 5 + 4
 - ▫️ 3 + 6
+- ✅ 6 + 4
 - ▫️ 7 + 4
 
 ## 8. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 2)
 Vraag: **7 + 0** = ?
-- ✅ 7
 - ▫️ 0
-- ▫️ 8
 - ▫️ 1
+- ✅ 7
+- ▫️ 8
 
 ## 9. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 3)
 Vraag: **6 - 2** = ?
-- ▫️ 3
-- ✅ 4
 - ▫️ 8
 - ▫️ 5
+- ✅ 4
+- ▫️ 3
 
 ## 10. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 3)
 Vraag: **10 - 7** = ?
-- ▫️ 4
-- ▫️ 5
 - ✅ 3
 - ▫️ 2
+- ▫️ 4
+- ▫️ 5
 
 ## 11. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 3)
 Vraag: Wat is het **verschil** tussen **8 en 3**?
-- ▫️ 6
-- ▫️ 11
-- ✅ 5
 - ▫️ 2
+- ▫️ 6
+- ✅ 5
+- ▫️ 11
 
 ## 12. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 3)
 Vraag: **9 - 9** = ?
-- ✅ 0
 - ▫️ 1
-- ▫️ 18
+- ✅ 0
 - ▫️ 9
+- ▫️ 18
 
 ## 13. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 4)
 Vraag: **8 + 5** = ?
-- ▫️ 14
-- ▫️ 12
 - ✅ 13
+- ▫️ 12
 - ▫️ 15
+- ▫️ 14
 
 ## 14. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 4)
 Vraag: **15 - 7** = ?
 - ✅ 8
 - ▫️ 7
-- ▫️ 6
 - ▫️ 9
+- ▫️ 6
 
 ## 15. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 4)
 Vraag: **14 + 5** = ?
 - ✅ 19
-- ▫️ 20
 - ▫️ 18
+- ▫️ 20
 - ▫️ 13
 
 ## 16. Getallen + sommen tot 20 (groep 3-4) (getallen-tot-20-po, stap 4)
 Vraag: Tom heeft 9 stickers. Hij krijgt er 4 bij. Hoeveel heeft hij nu?
-- ✅ 13
 - ▫️ 14
 - ▫️ 5
 - ▫️ 12
+- ✅ 13
 
 ## 17. Klokkijken — analoog + digitaal (klokkijken, stap 1) 🖼️ met plaatje
 Vraag: Wat is de **kleine wijzer** van een klok?
+- ▫️ De datumwijzer
 - ▫️ De minutenwijzer
 - ✅ De uurwijzer
-- ▫️ De datumwijzer
 - ▫️ De secondewijzer
 
 ## 18. Klokkijken — analoog + digitaal (klokkijken, stap 1)
 Vraag: Hoeveel minuten zitten er in 1 uur?
 - ▫️ 24
-- ▫️ 100
-- ✅ 60
 - ▫️ 30
+- ✅ 60
+- ▫️ 100
 
 ## 19. Klokkijken — analoog + digitaal (klokkijken, stap 2) 🖼️ met plaatje
 Vraag: Kijk goed naar deze klok. **Hoe laat is het?**
-- ▫️ 12 uur
-- ▫️ kwart voor 9
 - ▫️ 3 uur
+- ▫️ kwart voor 9
+- ▫️ 12 uur
 - ✅ 9 uur
 
 ## 20. Klokkijken — analoog + digitaal (klokkijken, stap 2)

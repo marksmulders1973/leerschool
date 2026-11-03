@@ -1,0 +1,188 @@
+[
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 20",
+  "oud": "options: [\"Zodat je snel ziet waar elk stuk over gaat\", \"Om de tekst moeilijker te maken\", \"Omdat het verplicht is bij wet\", \"Om lezers woordjes te laten oefenen\"],",
+  "nieuw": "options: [\"Zodat je snel ziet waar elk stuk over gaat\", \"Zodat de bladzijde er mooier uitziet\", \"Om te laten zien hoe lang elk stuk is\", \"Om te laten zien wat de schrijver ervan vindt\"],",
+  "reden": "absurde afleiders vervangen door aannemelijke"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 20",
+  "oud": "wrongHints: [null, \"Kopjes maken een tekst juist mákkelijker.\", \"Er bestaat geen kopjes-wet.\", \"Kopjes zijn wegwijzers, geen oefening.\"],",
+  "nieuw": "wrongHints: [null, \"Een kopje kan er mooi uitzien, maar waarom kijk je als lezer even naar een kopje?\", \"De lengte zie je al aan de tekst zelf. Wat vertellen de woorden van een kopje je?\", \"Een kopje is meestal maar een paar woorden. Staat daar een mening in, of iets anders?\"],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 21",
+  "oud": "options: [\"C — postzegel plakken\", \"B — de brief schrijven\", \"A — de brief in de envelop doen\", \"Er hoeft niets vóór\"],",
+  "nieuw": "options: [\"C — postzegel plakken\", \"B — de brief schrijven\", \"A — de brief in de envelop doen\", \"D — de envelop op de bus doen\"],",
+  "reden": "absurde afleider vervangen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 21",
+  "oud": "wrongHints: [null, \"Schrijven is juist de állereerste stap.\", \"Daarna moet er nog iets óp de envelop voordat de post hem meeneemt.\", \"Zonder de eerdere stappen bezorgt de post niets.\"],",
+  "nieuw": "wrongHints: [null, \"Schrijven is juist de állereerste stap.\", \"Zet alle vier de stappen eerst op volgorde. Komt deze stap echt vlak vóór de brievenbus?\", \"Dat is de stap zelf. Welke stap komt ervóór?\"],",
+  "reden": "hint bij A omschreef het goede antwoord (iets óp de envelop = postzegel)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 24",
+  "oud": "options: [\"De zee: eb, vloed en de maan\", \"De maan is wit\", \"Springtij is een raar woord\", \"Hoofdstuk 3 komt hierna\"],",
+  "nieuw": "options: [\"De zee: eb, vloed en de maan\", \"Springtij is extra hoog water\", \"De maan draait om de aarde\", \"Bij eb is het water laag\"],",
+  "reden": "absurde afleiders vervangen door losse details"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 24",
+  "oud": "wrongHints: [null, \"Dat is een detail over een kleur, niet de kern.\", \"Wat je van een wóórd vindt, hoort niet in een schema.\", \"Dat zegt niets over de ínhoud van hoofdstuk 2.\"],",
+  "nieuw": "wrongHints: [null, \"Dat is één onderdeel uit het hoofdstuk. Past de rest er ook onder?\", \"Dat gaat alleen over de maan. Waar gaat het hele hoofdstuk over?\", \"Dat is één detail. De kern moet álle onderwerpen samen dekken.\"],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 7",
+  "oud": "options: [\"g — h — i — j\", \"g — i — h — j\", \"h — g — j — i\", \"j — i — h — g\"],",
+  "nieuw": "options: [\"f — k — p — t\", \"f — p — k — t\", \"k — f — p — t\", \"f — k — t — p\"],",
+  "reden": "te makkelijk (opeenvolgende letters); nu letters met gaten"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 7",
+  "oud": "wrongHints: [null, \"Twee letters in het midden zijn hier omgewisseld.\", \"Hier zijn twee paren omgedraaid.\", \"Dit rijtje staat precies achterstevoren.\"],",
+  "nieuw": "wrongHints: [null, \"Vergelijk de tweede en de derde letter: welke komt eerder in het alfabet?\", \"Kijk naar de eerste twee letters.\", \"Kijk naar de laatste twee letters.\"],",
+  "reden": "hints bij nieuwe opties"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 7",
+  "oud": "explanation: \"Na de g komen **h, i, j** — handig om vlot te kennen bij woordenboek-werk.\",",
+  "nieuw": "explanation: \"Bij **f — k — p — t** komt elke letter verderop in het alfabet dan de letter ervoor. Twijfel je? Zeg het alfabet zacht op.\",",
+  "reden": "uitleg bij nieuwe opties"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 10",
+  "oud": "q: \"Welke naam komt in een alfabetische **klassenlijst met voornamen** het eerst: Daan, Dana of Dani?\",",
+  "nieuw": "q: \"Welke naam komt in een alfabetische **klassenlijst met voornamen** het eerst: Dani, Daan of Dana?\",",
+  "reden": "namen stonden in de vraag al op alfabet"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 12",
+  "oud": "options: [\"Bij het trefwoord in het woordenboek\", \"Op de kaft van je leesboek\", \"In de inhoudsopgave van het woordenboek\", \"Achterin je rekenschrift\"],",
+  "nieuw": "options: [\"Bij het trefwoord in het woordenboek\", \"Op de kaft van je leesboek\", \"In de inhoudsopgave van het woordenboek\", \"In een atlas\"],",
+  "reden": "absurde afleider vervangen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 12",
+  "oud": "wrongHints: [null, \"Op de kaft staan alleen de titel en de schrijver.\", \"Een woordenboek heeft geen hoofdstukken zoals een leesboek.\", \"Je rekenschrift heeft hier niets mee te maken.\"],",
+  "nieuw": "wrongHints: [null, \"Op de kaft staan alleen de titel en de schrijver.\", \"Een woordenboek heeft geen hoofdstukken zoals een leesboek.\", \"In een atlas staan kaarten, geen uitleg van woorden.\"],",
+  "reden": "hint bij nieuwe afleider"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 13",
+  "oud": "q: \"De afkorting **'bijv.'** kom je vaak tegen in teksten. Wat betekent die volgens de afkortingenlijst?\",",
+  "nieuw": "q: \"De afkorting **'bijv.'** kom je vaak tegen in teksten. Waar staat die afkorting voor?\",",
+  "reden": "verwees naar een afkortingenlijst die het kind niet ziet"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 13",
+  "oud": "options: [\"bijvoorbeeld\", \"bijzonder\", \"bijvangst\", \"bij vier\"],",
+  "nieuw": "options: [\"bijvoorbeeld\", \"bijzonder\", \"bijvangst\", \"bijvullen\"],",
+  "reden": "absurde afleider vervangen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 13",
+  "oud": "wrongHints: [null, \"Dat zou als 'bijz.' worden afgekort.\", \"Dat woord wordt bijna nooit afgekort.\", \"Getallen kort je niet zo af.\"],",
+  "nieuw": "wrongHints: [null, \"Dat zou als 'bijz.' worden afgekort.\", \"Dat woord wordt bijna nooit afgekort.\", \"Een werkwoord als dat kort je in een tekst bijna nooit af. Denk aan een zin waarin je 'bijv.' tegenkwam.\"],",
+  "reden": "hint bij nieuwe afleider"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 14",
+  "oud": "options: [\"'schaap' en 'schat'\", \"'soep' en 'sok'\", \"'appel' en 'auto'\", \"'zon' en 'zuur'\"],",
+  "nieuw": "options: [\"'schaap' en 'schat'\", \"'schaal' en 'schaap'\", \"'schaduw' en 'schakel'\", \"'schatkist' en 'scheef'\"],",
+  "reden": "te makkelijk: alleen het goede paar begon met sch-; nu alle paren sch-"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 14",
+  "oud": "wrongHints: [null, \"Die woorden beginnen met so- en jouw woord met sch-.\", \"Die staan helemaal vóóraan in het woordenboek.\", \"Die staan helemaal áchteraan in het woordenboek.\"],",
+  "nieuw": "wrongHints: [null, \"Vergelijk 'schaats' met het láátste gidswoord 'schaap': de eerste vijf letters zijn gelijk, kijk naar de zesde.\", \"Vergelijk de vijfde letter van 'schaats' en 'schaduw'.\", \"Vergelijk 'schaats' met het éérste gidswoord 'schatkist', letter voor letter.\"],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 15",
+  "oud": "options: [\"Het woord kan meer dan één ding betekenen\", \"Het woord is twee keer fout gedrukt\", \"Je moet het woord twee keer opschrijven\", \"Het woord bestaat niet echt\"],",
+  "nieuw": "options: [\"Het woord kan meer dan één ding betekenen\", \"Je mag het woord op twee manieren spellen\", \"Het woord heeft twee meervouden\", \"Het woord staat op twee bladzijden\"],",
+  "reden": "absurde afleiders vervangen door aannemelijke"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 15",
+  "oud": "wrongHints: [null, \"Drukfouten zetten ze er niet netjes met nummers in.\", \"De nummers zijn geen opdracht voor jou.\", \"Het staat juist in het woordenboek omdát het bestaat.\"],",
+  "nieuw": "wrongHints: [null, \"Kijk wat er achter elk nummer staat: is dat een andere spelling?\", \"Het meervoud staat tussen haakjes achter het woord, niet in genummerde stukjes.\", \"Het woord staat maar op één plek; de nummers staan daar samen onder.\"],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 18",
+  "oud": "options: [\"De afkorting opzoeken\", \"Raden dat het een dier is\", \"De hele krant maar weggooien\", \"Doen alsof je het weet\"],",
+  "nieuw": "options: [\"De afkorting opzoeken\", \"Raden wat het betekent en doorlezen\", \"De zin overslaan\", \"Wachten tot iemand het uitlegt\"],",
+  "reden": "absurde afleiders vervangen door aannemelijke"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 18",
+  "oud": "wrongHints: [null, \"Raden zonder controleren is riskant — er is een betere weg.\", \"Dan leer je nooit wat het betekent.\", \"Van doen-alsof word je niet wijzer.\"],",
+  "nieuw": "wrongHints: [null, \"Raden zonder controleren is riskant — er is een betere weg.\", \"Dan mis je misschien juist het belangrijkste van het bericht.\", \"Dat kan lang duren, en misschien is er niemand in de buurt.\"],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 19",
+  "oud": "options: ['Een woordenboek of encyclopedie', 'Een stripboek of moppenboek', 'Een dienstregeling van de trein', 'Een liedjestekst of gedicht'],",
+  "nieuw": "options: ['Een woordenboek of encyclopedie', 'Een atlas', 'Een dienstregeling van de trein', 'Een kookboek'],",
+  "reden": "absurde afleiders vervangen (atlas = echt naslagwerk)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 19",
+  "oud": "wrongHints: [null, 'Strips zijn verhalen, geen naslagwerk.', 'Daar staan vertrektijden in, geen woordbetekenissen.', 'Liedjes en gedichten leggen geen begrippen uit.'],",
+  "nieuw": "wrongHints: [null, 'In een atlas staan kaarten, geen uitleg van begrippen.', 'Daar staan vertrektijden in, geen woordbetekenissen.', 'Daar staan recepten in, geen uitleg van begrippen.'],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 20",
+  "oud": "options: [\"Zodat iedereen elk woord snel kan vinden\", \"Omdat de a de mooiste letter is\", \"Omdat er anders te weinig bladzijden zijn\", \"Dat is toeval\"],",
+  "nieuw": "options: [\"Zodat iedereen elk woord snel kan vinden\", \"Omdat de belangrijkste woorden dan vooraan staan\", \"Zodat woorden met een gelijke betekenis bij elkaar staan\", \"Zodat de korte woorden vooraan staan\"],",
+  "reden": "absurde afleiders vervangen door aannemelijke"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 20",
+  "oud": "wrongHints: [null, \"Mooi of lelijk speelt geen rol bij ordenen.\", \"Het aantal bladzijden blijft precies gelijk, hoe je ook ordent.\", \"Zo'n vaste volgorde is juist expres afgesproken.\"],",
+  "nieuw": "wrongHints: [null, \"Is 'aap' belangrijker dan 'zon'? Toch staat 'aap' vooraan.\", \"'Fiets' en 'auto' lijken op elkaar. Staan ze vlak bij elkaar in het woordenboek?\", \"'Aardappelpuree' staat ook bijna vooraan. Is dat een kort woord?\"],",
+  "reden": "hints bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 21",
+  "oud": "options: [\"appel — banaan — citroen — druif\", \"banaan — appel — citroen — druif\", \"druif — citroen — banaan — appel\", \"appel — citroen — banaan — druif\"],",
+  "nieuw": "options: [\"mandarijn — mango — meloen — mispel\", \"mango — mandarijn — meloen — mispel\", \"mispel — meloen — mango — mandarijn\", \"mandarijn — meloen — mango — mispel\"],",
+  "reden": "a-b-c-d was te makkelijk; nu zelfde beginletter"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 21",
+  "oud": "wrongHints: [null, \"De eerste twee woorden zijn hier omgewisseld.\", \"Dit rijtje staat precies achterstevoren.\", \"Kijk goed naar het tweede en het derde woord.\"],",
+  "nieuw": "wrongHints: [null, \"Vergelijk de eerste twee woorden letter voor letter: bij welke letter verschillen ze?\", \"Begint een alfabetisch rijtje aan de a-kant of aan de z-kant?\", \"Kijk goed naar het tweede en het derde woord: vergelijk hun tweede letter.\"],",
+  "reden": "hint 'eerste twee omgewisseld' gaf de oplossing; nu denkprikkels"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 21",
+  "oud": "explanation: \"a — b — c — d: de vier vruchten volgen in **het eerste rijtje** netjes het alfabet.\",",
+  "nieuw": "explanation: \"Alle vier beginnen met een m, dus kijk naar de tweede letter: a, a, e, i. Mandarijn en mango beginnen allebei met 'man'; daar beslist de vierde letter (d vóór g). Goed rijtje: **mandarijn — mango — meloen — mispel**.\",",
+  "reden": "'het eerste rijtje' klopt niet als opties geschud worden"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 23",
+  "oud": "wrongHints: [null, \"Zowat élk dier heeft poten — dat trefwoord is te breed.\",",
+  "nieuw": "wrongHints: [null, \"Bijna élk dier heeft poten — dat trefwoord is te breed.\",",
+  "reden": "taal: 'zowat' → 'bijna'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24",
+  "oud": "options: [\"Naar de eerste letter bladeren\", \"Bij de a beginnen en alles doorlezen\", \"Het woordenboek heen en weer schudden\", \"De laatste bladzijde bekijken\"],",
+  "nieuw": "options: [\"Naar de eerste letter bladeren\", \"Bij de a beginnen en alles doorlezen\", \"Het woord opzoeken in de inhoudsopgave\", \"De laatste bladzijde bekijken\"],",
+  "reden": "absurde afleider vervangen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24",
+  "oud": "wrongHints: [null, \"Alles doorlezen vanaf de a duurt uren — het kan veel sneller.\", \"Schudden helpt een boek niet.\",",
+  "nieuw": "wrongHints: [null, \"Alles doorlezen vanaf de a duurt uren — het kan veel sneller.\", \"Een woordenboek heeft voorin geen lijst met alle woorden: het hele boek ís die lijst.\",",
+  "reden": "hint bij nieuwe afleider"
+ }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 13",
+    "oud": "\"Bij 8 keer betaal je los precies évenveel als de kaart — nog niet goedkoper.\"",
+    "nieuw": "\"Reken uit: wat kost 8 keer los zwemmen? Is dat al minder dan € 40, of nog niet?\"",
+    "reden": "hint rekende voor en verklapte via uitsluiting dat 9 het antwoord is"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 18",
+    "oud": "\"Om 10:00 is de winkel op zondag nog niet eens ópen geweest — dus 'alweer' klopt niet.\"",
+    "nieuw": "\"Kijk in de zondag-rij: hoe laat gaat de winkel open en hoe laat dicht? Waar valt 10:00 dan?\"",
+    "reden": "hint noemde het goede antwoord (nog niet open)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 20",
+    "oud": "\"Het zijn afkortingen van dágen, niet van een maand.\", \"Een buslijn heeft een nummer als naam.\"",
+    "nieuw": "\"Er staat 'ma' én 'vr'. Welke maand begint met 'vr'? Waar kunnen die twee samen voor staan?\", \"Een buslijn heeft een nummer als naam.\"",
+    "reden": "hint noemde het antwoord (dagen)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 22",
+    "oud": "options: [\"2 retourkaartjes (€ 16,00)\", \"4 enkele reizen (€ 18,00)\", \"2 enkele reizen (€ 9,00)\", \"1 retourkaartje (€ 8,00)\"],",
+    "nieuw": "options: [\"2 retourkaartjes\", \"4 enkele reizen\", \"2 enkele reizen\", \"1 retourkaartje\"],",
+    "reden": "opties gaven de uitgerekende bedragen; nu moet het kind zelf rekenen"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 1",
+    "oud": "options: [\"De website van een zeeaquarium met echte dolfijnen-verzorgers\", \"Een grappig dolfijnen-filmpje op social media\", \"Een verhaaltje uit een stripboek\", \"Een oud forum-bericht van 'dolfijnfan123'\"],",
+    "nieuw": "options: [\"De website van een zeeaquarium met dolfijnen-verzorgers\", \"Een grappig dolfijnen-filmpje op social media\", \"Een folder van een bedrijf dat dolfijnen-boottochten verkoopt\", \"Een oud forum-bericht van 'dolfijnfan123'\"],",
+    "reden": "goede optie was langst/specifiekst en stripboek-afleider absurd"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 1",
+    "oud": "\"Een strip is verzonnen — leuk om te lezen, geen feitenbron.\"",
+    "nieuw": "\"Wat wil de maker van die folder eigenlijk? Is die neutraal?\"",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 3",
+    "oud": "options: [\"eiffeltoren bouwjaar\", \"toren\", \"frankrijk vakantie leuk\", \"hoe zit dat eigenlijk\"],",
+    "nieuw": "options: [\"eiffeltoren bouwjaar\", \"toren\", \"frankrijk vakantie leuk\", \"eiffeltoren hoogte\"],",
+    "reden": "absurde afleider vervangen door een echte valkuil"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 3",
+    "oud": "\"Zonder onderwerp weet de zoekmachine niet waar je het over hebt.\"],",
+    "nieuw": "\"Het onderwerp klopt, maar wil je weten hoe hoog hij is of hoe oud?\"],",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 8",
+    "oud": "\"Die plek bovenaan is gekócht, niet verdiend met kwaliteit.\"",
+    "nieuw": "\"Krijgt de beste site vanzelf zo'n label? Denk aan wat een sponsor doet.\"",
+    "reden": "hint noemde het antwoord (gekocht)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 9",
+    "oud": "options: [\"www.rijksoverheid.nl\", \"www.goedkopegames.shop\", \"www.piets-blog.net\", \"www.snelrijkworden.com\"],",
+    "nieuw": "options: [\"www.rijksoverheid.nl\", \"www.goedkopegames.shop\", \"www.piets-blog.net\", \"www.rijksoverheid-nieuws.com\"],",
+    "reden": "absurde afleider vervangen door een nep-lookalike (echte valkuil)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 9",
+    "oud": "\"Beloften over snel rijk worden zijn juist een waarschuwingssignaal.\"],",
+    "nieuw": "\"Lijkt officieel, maar lees het hele adres tot het eind. Hoe eindigen Nederlandse sites meestal?\"],",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 10",
+    "oud": "options: ['De buurman is geen deskundige', 'Buren vertellen altijd leugens', 'IJsberen bestaan helemaal niet', 'Paars is geen echte kleur'],",
+    "nieuw": "options: ['De buurman is geen deskundige', 'Buren vertellen altijd leugens', 'IJsberen bestaan helemaal niet', 'De zin is te kort voor een bron'],",
+    "reden": "absurde afleider vervangen"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 10",
+    "oud": "\"Ze bestaan echt — het gaat om wíé iets beweert.\", \"Het gaat niet om de kleur, maar om de onderbouwing.\"],",
+    "nieuw": "\"IJsberen bestaan echt. Lees nog eens wat er achter 'Bron:' staat.\", \"Een korte zin kan best kloppen. Lengte zegt niets over een bron.\"],",
+    "reden": "hint noemde het antwoord (wie iets beweert); hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 11",
+    "oud": "\"Met één extra woord los je dit gewoon op.\"],",
+    "nieuw": "\"Opgeven hoeft niet. Hoe laat je de zoekmachine weten wélke jaguar je bedoelt?\"],",
+    "reden": "hint verklapte het antwoord (één woord toevoegen)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 12",
+    "oud": "'Er is wél verschil. Kun je \\'pizza is lekker\\' nakijken?'],",
+    "nieuw": "'Er is wél verschil. Vergelijk \\'pizza is lekker\\' met \\'pizza komt uit Italië\\'.'],",
+    "reden": "hint omschreef het antwoord (nakijken = controleren)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 17",
+    "oud": "options: ['Inhoudsopgave op hoofdstuk, register op alfabet', 'Ze zijn hetzelfde, alleen met een andere naam', 'Register staat voorin, inhoudsopgave achterin', 'Inhoudsopgave is alleen voor juffen en meesters'],",
+    "nieuw": "options: ['De inhoudsopgave volgt de hoofdstukken, het register het alfabet', 'Ze zijn hetzelfde, alleen met een andere naam', 'Register staat voorin, inhoudsopgave achterin', 'Inhoudsopgave is alleen voor juffen en meesters'],",
+    "reden": "telegramstijl in goede optie"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 19",
+    "oud": "options: ['Het archief of museum van je dorp', 'Een wereldwijde game-site over oorlog', 'Een Amerikaanse oorlogsfilm', 'Een songtekst over de oorlog'],",
+    "nieuw": "options: ['Het archief of museum van je dorp', 'Een wereldwijde game-site over oorlog', 'Een Amerikaanse oorlogsfilm', 'Een algemeen boek over de Tweede Wereldoorlog'],",
+    "reden": "absurde afleider vervangen door een plausibele"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 19",
+    "oud": "\"Songteksten zijn kunst, geen geschiedenisles.\"],",
+    "nieuw": "\"Zo'n boek gaat over de hele oorlog. Staat jouw dorp daar ook in?\"],",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 1",
+    "oud": "options: [\"sneeuw\", \"voetbal\", \"banaan\", \"gitaar\"],",
+    "nieuw": "options: [\"sneeuw\", \"voetbal\", \"paraplu\", \"gitaar\"],",
+    "reden": "te makkelijk: alle afleiders absurd; paraplu is een echte valkuil"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 1",
+    "oud": "\"Kun je dat eten of valt het uit de lucht?\"",
+    "nieuw": "\"Die gebruik je bij regen. Maar is het zelf ook een soort weer?\"",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 3",
+    "oud": "\"Waar leg je het zaadje óp als de pot nog leeg is?\", \"Water geven in een leeg potje heeft weinig zin.\"",
+    "nieuw": "\"Kan dat al meteen aan het begin? Wat moet er dan al klaarstaan?\", \"Waar komt het water dan terecht? Wat heeft het zaadje nodig om in te liggen?\"",
+    "reden": "hints verklapten dat de pot eerst leeg is (antwoord B)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 5",
+    "oud": "options: [\"gezond eten\", \"tv-kijken tot middernacht\", \"elke dag snoepen\", \"de hele dag gamen\"],",
+    "nieuw": "options: [\"gezond eten\", \"tv-kijken tot middernacht\", \"een spannend boek lezen\", \"de hele dag gamen\"],",
+    "reden": "alle afleiders waren ongezond (raadbaar); neutrale afleider erbij"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 5",
+    "oud": "\"Hoort heel veel snoep bij dit thema?\"",
+    "nieuw": "\"Leuk om te doen, maar heeft het met je gezondheid te maken?\"",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 7",
+    "oud": "options: ['Om de hoofdzaken te ordenen', 'Om de tekst langer te maken', 'Om moeilijke woorden te verstoppen', 'Om sneller te kunnen gummen'],",
+    "nieuw": "options: ['Om de hoofdzaken te ordenen', 'Om de tekst langer te maken', 'Om moeilijke woorden te verstoppen', 'Om alle zinnen uit de tekst over te schrijven'],",
+    "reden": "absurde afleider vervangen"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 7",
+    "oud": "\"Gummen heeft er niets mee te maken.\"],",
+    "nieuw": "\"Dan schrijf je alles over. Zie je dan nog wat belangrijk is?\"],",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 12",
+    "oud": "options: [\"Die staat vaak in de eerste zin\", \"Die staat altijd tussen haakjes\", \"Dat is altijd het langste woord\", \"Die staat in een voetnoot onderaan\"],",
+    "nieuw": "options: [\"Die staat vaak in de eerste zin\", \"Die staat vaak in de middelste zin\", \"Dat is altijd het langste woord\", \"Die staat in een voetnoot onderaan\"],",
+    "reden": "raadbaar: goede optie was de enige met \"vaak\", afleiders met \"altijd\""
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 12",
+    "oud": "\"Tussen haakjes staat juist vaak éxtra (bij)informatie.\"",
+    "nieuw": "\"Halverwege een alinea staan meestal uitleg en voorbeelden. Waar vertelt de schrijver waar het over gaat?\"",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 14",
+    "oud": "options: [\"Ongeveer 1 bladzijde\", \"Precies 10 bladzijden\", \"Minstens 20 bladzijden\", \"Eén woord\"],",
+    "nieuw": "options: [\"Ongeveer 1 bladzijde\", \"Precies 10 bladzijden\", \"Minstens 20 bladzijden\", \"Ongeveer 5 bladzijden\"],",
+    "reden": "absurde afleider vervangen door een plausibele"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 14",
+    "oud": "\"In één woord passen geen hoofdzaken.\"],",
+    "nieuw": "\"Dat is nog de helft van de tekst. Laat je dan genoeg bijzaken weg?\"],",
+    "reden": "hint passend bij nieuwe afleider"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+    "oud": "q: \"**Vergelijk-tabel:** je vergelijkt hond en kat met de rijen 'vacht', 'geluid' en 'beweging'. Wat vul je in bij het vakje **kat × geluid**?\",",
+    "nieuw": "q: \"**Vergelijk-tabel:** je vergelijkt hond en kat in een tabel met de rijen 'vacht', 'geluid' en 'beweging'. In welk vakje schrijf je het woord **kwispelen**?\",",
+    "reden": "vraag toetste alleen een weetje (kat miauwt), geen rij-en-kolom-denken"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+    "oud": "options: [\"miauwen\", \"blaffen\", \"hinniken\", \"zwemmen\"],",
+    "nieuw": "options: [\"hond × beweging\", \"kat × beweging\", \"hond × geluid\", \"kat × vacht\"],",
+    "reden": "opties bij nieuwe vraag (antwoord blijft index 0)"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+    "oud": "wrongHints: [null, \"Dat is het geluid van de hond.\", \"Dat is het geluid van een paard.\", \"Dat is een beweging, geen geluid.\"],",
+    "nieuw": "wrongHints: [null, \"Welk dier kwispelt met zijn staart als het blij is?\", \"Kwispelen hoor je niet, je ziet het. In welke rij past het dan?\", \"Gaat kwispelen over hoe de vacht eruitziet?\"],",
+    "reden": "hints bij nieuwe vraag"
+  },
+  {
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+    "oud": "explanation: \"In het vakje kat + geluid hoort **miauwen** — combineer altijd de juiste rij met de juiste kolom.\",",
+    "nieuw": "explanation: \"Kwispelen doet een hond met zijn staart: dat is iets wat hij dóét, dus een **beweging**. Het hoort in het vakje **hond × beweging** — combineer altijd het juiste dier met de juiste rij.\",",
+    "reden": "uitleg bij nieuwe vraag"
+  }
+]

@@ -1,0 +1,1385 @@
+[
+ {
+  "nr": 111,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Bij een **cirkeldiagram** zijn alle delen samen altijd ___?",
+  "options": [
+   "100%",
+   "50%",
+   "10%",
+   "Hangt van het diagram af"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — een cirkel moet helemaal vol.",
+   "10% is maar een klein puntje van de cirkel.",
+   "De stukken verschillen per diagram, maar de hele cirkel is altijd evenveel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 112,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Welk woord komt **eerst** in het woordenboek: **'tabel'**, **'tafel'**, **'tak'** of **'taart'**?",
+  "options": [
+   "taart",
+   "tabel",
+   "tafel",
+   "tak"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar de derde letter: ta-**b**-. Is er een woord met een derde letter die nog eerder in het alfabet komt?",
+   "Kijk naar de derde letter: ta-**f**-. Komt f vooraan in het alfabet?",
+   "Kijk naar de derde letter: ta-**k**-. Komt k vooraan in het alfabet?"
+  ],
+  "niveaus": {
+   "basis": "taart eerst.",
+   "simpeler": "ta-a- vóór ta-b- vóór ta-f-.",
+   "nogSimpeler": "a vóór b vóór f. taart"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 113,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Lees dit recept: 'Schep **tot slot** alles op een bord. Je **begint** met het koken van de spaghetti. **Als de spaghetti klaar is**, maak je de saus warm.' Wat doe je als **tweede**?",
+  "options": [
+   "Saus warm maken",
+   "Opscheppen",
+   "Spaghetti koken",
+   "Tafel dekken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deze stap staat wel als eerste in de tekst, maar 'tot slot' betekent: als allerlaatste.",
+   "Bij deze stap staat 'je begint met'. Dat is de eerste stap. Welk woord vertelt wat daarna komt?",
+   "Tafel dekken staat niet in dit recept. Kijk alleen naar de stappen in de tekst en de volgordewoorden."
+  ],
+  "niveaus": null,
+  "explanation": "Let op de **volgordewoorden**, niet op de plek in de tekst: 'je begint met' = spaghetti koken, 'als de spaghetti klaar is' = **saus warm maken**, 'tot slot' = opscheppen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 114,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Tabel toont **scores 6, 7, 4, 9**. Wat is het **bereik** (verschil hoogste − laagste)?",
+  "options": [
+   "5",
+   "4",
+   "9",
+   "26"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "4 is de laagste score. Het bereik is het verschil tussen de hoogste en de laagste.",
+   "9 is de hoogste score. Trek daar de laagste nog van af.",
+   "26 is alles opgeteld. Het bereik is een verschil, geen som."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 115,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Op een **stadsplattegrond schaal 1:5.000**: 4 cm op kaart = **werkelijk**?",
+  "options": [
+   "200 m",
+   "20 m",
+   "2 km",
+   "20 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "20 m = 2.000 cm. Is 4 × 5.000 zo weinig?",
+   "2 km = 200.000 cm. Tel de nullen van 4 × 5.000 nog eens.",
+   "20 km: je hebt de cm als meters gerekend. Hoeveel cm zit er in 1 m?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 116,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Welke **kolom** in een tabel **'Naam, Leeftijd, Hobby'** bevat getallen?",
+  "options": [
+   "Leeftijd",
+   "Naam",
+   "Hobby",
+   "Alle drie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Schrijf je een naam met cijfers of met letters?",
+   "Is een hobby, zoals voetbal, een getal?",
+   "Kijk per kolom: staan er overal getallen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 117,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Een **legenda** legt uit wat de **kleuren** op een grafiek of kaart betekenen. Goed of fout?",
+  "options": [
+   "Goed",
+   "Fout",
+   "Soms goed",
+   "Soms fout"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waar kijk je als je wilt weten wat een kleur op een kaart betekent?",
+   "Bestaat er een legenda die géén uitleg geeft over kleuren of tekens?",
+   "Bestaat er een legenda die géén uitleg geeft over kleuren of tekens?"
+  ],
+  "niveaus": {
+   "basis": "Goed.",
+   "simpeler": "Legenda = uitleg van kleuren/symbolen.",
+   "nogSimpeler": "Goed"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 118,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Schema toont: **'a → b → c'**. Je nummert de stappen in de richting van de pijlen. Welke **nummering** past op a, b, c?",
+  "options": [
+   "1, 2, 3 (volgorde)",
+   "1, 3, 2 (door elkaar)",
+   "3, 2, 1 (omgekeerd)",
+   "2, 3, 1 (verschoven)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Volg de pijlen: welke letter komt na a?",
+   "Dan nummer je tegen de pijlen in. Waar begint de eerste pijl?",
+   "Bij welke letter begint de pijl? Die krijgt nummer 1."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 119,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 25",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Atlas-index** zoek je op **Berlijn**. Je krijgt **'Berlijn 14 B3'**. Wat is **14**?",
+  "options": [
+   "Paginanummer",
+   "Inwoners ×1000",
+   "Vak in raster",
+   "Hoeveelheid kaarten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Inwonertallen staan niet in een atlas-index.",
+   "Dat is B3.",
+   "Een index vertelt waar je moet kijken, niet hoeveel kaarten er zijn."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 120,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Schaal **1:25.000**, 4 cm op kaart = werkelijk in **m**?",
+  "options": [
+   "1.000 m",
+   "100 m",
+   "10.000 m",
+   "10 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "100 m = 10.000 cm. Is 4 × 25.000 zo weinig?",
+   "10.000 m is 10 km. Heb je bij cm → m wel door 100 gedeeld?",
+   "10 m is nog geen klaslokaal lang. Reken 4 × 25.000 cm uit."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 121,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 27",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Je sorteert een tabel op alfabet. Welk woord komt **eerst**?",
+  "options": [
+   "aap",
+   "boom",
+   "kat",
+   "muis"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de eerste letters: komt de b het eerst in het alfabet?",
+   "De k staat halverwege het alfabet. Welke eerste letter komt eerder?",
+   "De m staat midden in het alfabet. Welke eerste letter komt eerder?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 122,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 28",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Stappenplan brandweer**: 1) sirene 2) rijden 3) blussen. Welke stap komt **na rijden**?",
+  "options": [
+   "Blussen",
+   "Sirene",
+   "Terugrijden",
+   "Alarm krijgen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat was stap 1.",
+   "Terugrijden staat niet in dit stappenplan. Welke stap heeft nummer 3?",
+   "Alarm krijgen staat niet in het stappenplan. Kijk welk nummer na 'rijden' komt."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 123,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 29",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Bij **stappenschema 'taart bakken'** komt 'pan in oven zetten' ___ 'beslag mengen'?",
+  "options": [
+   "Erna",
+   "Ervoor",
+   "Tegelijk",
+   "Maakt niet uit"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kun je een pan in de oven zetten als er nog niets in zit?",
+   "Kun je mengen en in de oven zetten op hetzelfde moment?",
+   "Kan een lege pan in de oven? Dan maakt de volgorde wel uit."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 124,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 30",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Een **kaart van de wereld** is geprojecteerd op een **platte vorm**. Welke **vertekening** zie je vaak?",
+  "options": [
+   "Groenland lijkt veel te groot",
+   "Afrika lijkt veel te groot",
+   "Landen bij de evenaar lijken te groot",
+   "De oceanen lijken te klein"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Afrika lijkt op de meeste wereldkaarten juist kleiner dan het is. Kijk naar land ver van de evenaar.",
+   "Bij de evenaar klopt de grootte het best. Waar wordt het scheef?",
+   "Ook oceanen worden vertekend, maar dat valt weinig op. Bij welk land valt het juist op?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 125,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 31",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Je moet om **10:00 op school** zijn voor de toets. De fietstocht duurt 20 minuten en je wilt 10 minuten reserve. Hoe laat vertrek je uiterlijk?",
+  "options": [
+   "9:30",
+   "9:40",
+   "9:50",
+   "9:20"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan heb je géén reserve meer — alleen de fietstijd.",
+   "Dan kom je precies om 10:10 aan.",
+   "Eerder mag altijd, maar de vraag is 'uiterlijk'."
+  ],
+  "niveaus": null,
+  "explanation": "10:00 − 20 min fietsen − 10 min reserve = **9:30**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 126,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Bustabel + kaart combineren:** de bus doet 12 minuten over 6 km. Hoeveel minuten over **2 km** (zelfde snelheid)?",
+  "options": [
+   "4 minuten",
+   "6 minuten",
+   "2 minuten",
+   "8 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — reken eerst uit hoeveel minuten de bus over 1 km doet.",
+   "Bereken eerst hoe lang de bus per km doet en vermenigvuldig dat dan met het gevraagde aantal km.",
+   "Veel te veel — 2 km is maar een klein stuk van de 6 km."
+  ],
+  "niveaus": null,
+  "explanation": "12 min ÷ 6 km = 2 min per km → 2 km = **4 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 127,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 33",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Welke bron is het **betrouwbaarst** voor je werkstuk over gezonde voeding?",
+  "options": [
+   "De site van het Voedingscentrum",
+   "Een reclame voor snoeprepen",
+   "Een meme op social media",
+   "Een forum waar iedereen anoniem post"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wie betaalt deze boodschap — en wat wil die verkopen?",
+   "Grappig is niet hetzelfde als waar.",
+   "Anoniem = niet te controleren wie het zegt en of die er verstand van heeft."
+  ],
+  "niveaus": null,
+  "explanation": "Een **onafhankelijke organisatie met deskundigen** (Voedingscentrum) is betrouwbaarder dan reclame of anonieme bronnen. Vraag altijd: wie zegt het, en waarom?",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 128,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 34",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Toets-strategie:** je weet vraag 12 niet en de tijd dringt. Wat is slim?",
+  "options": [
+   "Sla 'm over en kom later terug",
+   "Blijf erop staren tot je het weet",
+   "Stop met de hele toets",
+   "Vul niets in en kijk niet meer terug"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staren kost tijd die je bij andere vragen wél punten oplevert.",
+   "Eén lastige vraag zegt niets over de rest.",
+   "Bijna goed — maar kom je nog wel even terug aan het eind?"
+  ],
+  "niveaus": null,
+  "explanation": "**Overslaan en terugkomen**: pak eerst de punten die je wél kunt halen. Vaak schiet het antwoord je later alsnog te binnen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 129,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 35",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Grafiek + rekenen:** de lijngrafiek toont 8 zwemmers om 9:00 en 24 om 11:00. Hoeveel keer zo druk werd het?",
+  "options": [
+   "3 keer",
+   "2 keer",
+   "16 keer",
+   "4 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk na: 'hoeveel keer zo druk' vraagt om een deling — welke twee getallen deel je door elkaar?",
+   "Je hebt het verschil berekend, maar 'hoeveel keer' vraagt om een andere bewerking.",
+   "4 keer zo druk zou 32 zwemmers zijn. Deel 24 door 8."
+  ],
+  "niveaus": null,
+  "explanation": "24 ÷ 8 = **3 keer** zo druk. 'Hoeveel keer' = delen; 'hoeveel meer' = aftrekken.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 130,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 37",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Je leest in twee bronnen iets **tegenstrijdigs** over hoeveel poten een duizendpoot heeft. Wat doe je?",
+  "options": [
+   "Een derde betrouwbare bron checken",
+   "De leukste kiezen",
+   "Allebei opschrijven als waar",
+   "Het onderwerp schrappen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Leuk is geen bewijs.",
+   "Twee tegenstrijdige 'waarheden' kunnen niet allebei kloppen.",
+   "Schrappen is zonde — er is een manier om erachter te komen wat klopt."
+  ],
+  "niveaus": null,
+  "explanation": "Bij tegenstrijdige informatie check je een **derde, betrouwbare bron** (encyclopedie, deskundige site). Meerdere bronnen = sterker werkstuk.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 131,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 38",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Inhoudsopgave:** 'Hoofdstuk 3: Het weer, blz. 24 — Hoofdstuk 4: Het klimaat, blz. 38'. Op welke bladzijde zoek je informatie over **hagel**?",
+  "options": [
+   "Tussen blz. 24 en 37",
+   "Vanaf blz. 38",
+   "Op blz. 1",
+   "Achterin het boek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vanaf 38 begint het klimaat-hoofdstuk — is hagel weer of klimaat?",
+   "Blz. 1 is het begin van het boek, vóór hoofdstuk 1.",
+   "Achterin staat de index — die kán helpen, maar de vraag is waar de informatie stáát."
+  ],
+  "niveaus": null,
+  "explanation": "Hagel is **weer** → hoofdstuk 3 = blz. 24 tot waar hoofdstuk 4 begint (blz. 38).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 132,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 39",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "Voor je spreekbeurt mag je **5 minuten** praten. Je oefenversie duurt 8 minuten. Wat is de beste aanpak?",
+  "options": [
+   "Bijzaken schrappen en hoofdpunten houden",
+   "Twee keer zo snel praten",
+   "De helft van de hoofdpunten weglaten",
+   "Gewoon 8 minuten praten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan verstaat niemand je meer.",
+   "Dan mist je verhaal de kern — er is iets beters om te schrappen.",
+   "De tijdslimiet is er niet voor niets."
+  ],
+  "niveaus": null,
+  "explanation": "Schrap **bijzaken** (extra voorbeelden, zijpaadjes) en houd de hoofdpunten — zo blijft je verhaal compleet én binnen de tijd.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 133,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 40",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Eind-opdracht — studievaardigheden mix",
+  "vanafGroep": null,
+  "q": "**Tabel lezen:** de toetsweek-tabel toont per dag het vak. Maandag: taal, dinsdag: rekenen, woensdag: niets, donderdag: wereldoriëntatie. Wanneer kun je het best je **rekenen-samenvatting** maken?",
+  "options": [
+   "Maandag",
+   "Donderdag",
+   "Woensdag",
+   "Na de toetsweek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Donderdag is de rekentoets al geweest.",
+   "Woensdag is ná de rekentoets van dinsdag.",
+   "Dan heb je er niets meer aan."
+  ],
+  "niveaus": null,
+  "explanation": "De rekentoets is dínsdag — dus uiterlijk **maandag** je samenvatting maken. Plan altijd terug vanaf de toetsdatum.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 134,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op de **plattegrond van de school** staat in de legenda: ✚ = EHBO-post (Eerste Hulp Bij Ongelukken), 🍎 = kantine, 📚 = bibliotheek. Je zoekt een pleister. Naar welk symbool loop je?",
+  "options": [
+   "✚",
+   "🍎",
+   "📚",
+   "Er is geen passend symbool"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar haal je eten, geen pleisters.",
+   "Daar lenen ze boeken uit.",
+   "Kijk nog eens in de legenda — één symbool gaat over hulp bij ongelukjes."
+  ],
+  "niveaus": null,
+  "explanation": "Een pleister hoort bij eerste hulp. In de legenda staat **✚ = EHBO-post**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 135,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "In de legenda van een dorpskaart betekent een **zwart vierkantje** 'gebouw' en een **zwart vierkantje met vlaggetje** 'school'. Op de kaart staan vier vierkantjes, waarvan één met vlaggetje. Hoeveel **scholen** zie je op de kaart?",
+  "options": [
+   "1",
+   "4",
+   "3",
+   "0"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je telde álle gebouwen mee — kijk alleen naar het vlaggetje.",
+   "Dat zijn juist de vierkantjes zónder vlaggetje.",
+   "Er staat wél een vierkantje met vlaggetje op de kaart."
+  ],
+  "niveaus": null,
+  "explanation": "Alleen het vierkantje **met vlaggetje** is volgens de legenda een school: **1** school.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 136,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op de dorpskaart wijst de noordpijl **omhoog**. Het zwembad staat op de kaart **onder** het station getekend. In welke windrichting ligt het zwembad ten opzichte van het station?",
+  "options": [
+   "Zuiden",
+   "Noorden",
+   "Oosten",
+   "Westen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Noord is de kant waar de pijl heen wijst — omhoog dus.",
+   "Oost is rechts als noord boven is.",
+   "West is links als noord boven is."
+  ],
+  "niveaus": null,
+  "explanation": "Noord = boven, dus onder op de kaart = het **zuiden**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 137,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je fietst 's ochtends van huis **naar het oosten** naar school. Na school fiets je dezelfde weg terug naar huis. In welke richting fiets je dan?",
+  "options": [
+   "Naar het westen",
+   "Naar het oosten",
+   "Naar het noorden",
+   "Naar het zuiden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat was de héénweg — terug ga je precies de andere kant op.",
+   "Noord staat haaks op jouw route.",
+   "Zuid staat ook haaks op jouw route."
+  ],
+  "niveaus": null,
+  "explanation": "Terug = tegenovergestelde richting. Tegenover oost ligt **west**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 138,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Plattegrond in woorden:** vanaf de hoofdingang van de school loop je rechtdoor de gang in. Links zie je eerst lokaal 1 en daarna lokaal 2. Rechts zit alleen de gymzaal. Waar vind je **lokaal 2**?",
+  "options": [
+   "De tweede deur links",
+   "De eerste deur links",
+   "De eerste deur rechts",
+   "Direct achter de hoofdingang"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Achter de eerste deur links zit een ánder lokaal — lees de volgorde nog eens.",
+   "Rechts zit volgens de beschrijving geen lokaal.",
+   "Je moet juist de gang in lopen, wég van de ingang."
+  ],
+  "niveaus": null,
+  "explanation": "Links komt eerst lokaal 1 en dáárna lokaal 2: de **tweede deur links**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 139,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een campingkaart staat in de legenda: driehoekje = tentplek, golfjes = water, 🚻 = toiletgebouw. Naast het tentenveld staan **golfjes** getekend. Wat betekent dat?",
+  "options": [
+   "Daar is water",
+   "Daar staan extra tenten",
+   "Daar zijn de toiletten",
+   "Daar is de ingang van de camping"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tentplekken hebben een ander symbool — het driehoekje.",
+   "Voor het toiletgebouw staat 🚻 in de legenda.",
+   "De ingang staat niet in dit rijtje — kijk wat de legenda wél noemt."
+  ],
+  "niveaus": null,
+  "explanation": "De legenda zegt: golfjes = **water**. Naast het tentenveld ligt dus een meertje of sloot.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 140,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt van de **bibliotheek naar het zwembad**. Route A: 2 kilometer langs een drukke autoweg. Route B: 3 kilometer door het park. Je moeder zegt: kies de **veiligste** route. Welke kies je?",
+  "options": [
+   "Route B, want daar rijden geen auto's",
+   "Route A, want die is korter",
+   "Route A, want druk is gezellig",
+   "Het maakt niet uit welke je kiest"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Korter is niet hetzelfde als veiliger — wat vroeg je moeder precies?",
+   "Druk autoverkeer is juist het gevaar.",
+   "Eén route heeft duidelijk minder verkeer — dat maakt wél uit."
+  ],
+  "niveaus": null,
+  "explanation": "Er werd om de **veiligste** route gevraagd, niet de kortste. Door het park rijden geen auto's: **route B**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 141,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op de kaart van het dorp staat een **witte P in een blauw vierkant**. Wat betekent dat bijna altijd?",
+  "options": [
+   "Parkeerplaats",
+   "Politiebureau",
+   "Park",
+   "Postkantoor"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk aan verkeersborden met een witte letter op blauw — wat betekenen die?",
+   "Een park is op een kaart een groene vlek, geen letter.",
+   "Voor post gebruikt een kaart een ander symbool."
+  ],
+  "niveaus": null,
+  "explanation": "De blauwe **P** ken je van verkeersborden: daar mag je **parkeren**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 142,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "De legenda van de school-plattegrond zegt: **1 hokje = 10 meter in het echt**. Het schoolplein is op de plattegrond 5 hokjes lang. Hoe lang is het schoolplein in werkelijkheid?",
+  "options": [
+   "50 meter",
+   "5 meter",
+   "15 meter",
+   "105 meter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je vergat om te rekenen — elk hokje is méér dan 1 meter.",
+   "Heb je 10 en 5 opgeteld? Hier moet je vermenigvuldigen.",
+   "Waar komt dat getal vandaan? Tel: hoeveel hokjes × hoeveel meter per hokje."
+  ],
+  "niveaus": null,
+  "explanation": "5 hokjes × 10 meter per hokje = **50 meter**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 143,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je staat op het schoolplein. De kerk ligt **tussen het noorden en het oosten** in. In welke windrichting ligt de kerk?",
+  "options": [
+   "Noordoosten",
+   "Zuidoosten",
+   "Noordwesten",
+   "Zuidwesten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zuid zit er niet bij — welke twee richtingen noemt de vraag?",
+   "West zit er niet bij — lees de vraag nog eens.",
+   "Geen van deze twee letters komt in de vraag voor."
+  ],
+  "niveaus": null,
+  "explanation": "Tussen noord en oost ligt het **noordoosten** (NO) — de naam combineert de twee richtingen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 144,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Plattegrond zwembad in woorden:** de ingang zit aan de zuidkant. Direct achter de ingang ligt het buitenbad, en daar weer achter, helemaal aan de noordkant, het binnenbad. Waar ligt het **binnenbad**?",
+  "options": [
+   "Het verst van de ingang vandaan",
+   "Direct naast de ingang",
+   "Aan de zuidkant",
+   "Buiten het zwembad-terrein"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Direct achter de ingang ligt het búítenbad.",
+   "Aan de zuidkant zit de ingang zelf.",
+   "Alles in de beschrijving ligt gewoon op het terrein."
+  ],
+  "niveaus": null,
+  "explanation": "Ingang (zuid) → buitenbad → binnenbad (noord): het binnenbad ligt dus **het verst van de ingang**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 145,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk kaart-onderdeel gebruik je om te weten wat het **rode kruisje** op de kaart betekent?",
+  "options": [
+   "De legenda",
+   "De schaal",
+   "De noordpijl",
+   "De titel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De schaal gaat over afstanden, niet over symbolen.",
+   "De noordpijl vertelt alleen welke kant noord is.",
+   "De titel zegt waar de kaart over gaat, niet wat elk tekentje betekent."
+  ],
+  "niveaus": null,
+  "explanation": "Symbolen zoek je op in de **legenda** — de verklaring van alle tekentjes en kleuren.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 146,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Route in woorden:** 'Loop vanaf het station rechtdoor, neem de tweede straat links en daarna de eerste straat rechts. Daar is de bibliotheek.' Hoe vaak sla je in totaal **af**?",
+  "options": [
+   "2 keer",
+   "1 keer",
+   "3 keer",
+   "0 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel élke keer dat er 'links' of 'rechts' in de route staat.",
+   "Rechtdoor lopen telt niet als afslaan — maar tel de rest wel.",
+   "Er staat wel degelijk 'links' en 'rechts' in de route."
+  ],
+  "niveaus": null,
+  "explanation": "Tweede straat **links** (1×) en eerste straat **rechts** (2×): je slaat **2 keer** af.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 147,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Twee kinderen beschrijven de route naar het park. Anna: 'neem de eerste straat rechts en loop rechtdoor'. Bo: 'sla bij de bakker rechtsaf en loop rechtdoor'. De bakker zit op de hoek van de eerste straat rechts. Wie beschrijft de route **goed**?",
+  "options": [
+   "Allebei",
+   "Alleen Anna",
+   "Alleen Bo",
+   "Geen van beiden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk waar de bakker zit. Waar slaat Bo dan precies af?",
+   "Vergelijk de routes stap voor stap — waar verschillen ze nou echt?",
+   "Loop beide beschrijvingen eens na op een kladje — komen ze echt allebei verkeerd uit?"
+  ],
+  "niveaus": null,
+  "explanation": "De bakker zit op de hoek van de eerste straat rechts — beide beschrijvingen zijn dus **dezelfde route** met andere woorden.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 148,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op de plattegrond van de dierentuin staat een **stippellijn met pijltjes** die rond loopt. In de legenda staat: 'stippellijn = wandelroute'. Wat vertellen de **pijltjes** je?",
+  "options": [
+   "In welke richting je moet lopen",
+   "Hoe lang de route duurt",
+   "Waar de uitgang is",
+   "Hoeveel dieren je onderweg ziet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Voor tijdsduur zou er een getal met minuten bij staan.",
+   "De uitgang heeft op een plattegrond een eigen symbool.",
+   "Pijltjes tellen niets — ze wijzen ergens heen."
+  ],
+  "niveaus": null,
+  "explanation": "Pijltjes op een route wijzen de **looprichting** aan: die kant op lopen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 149,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "De zon komt op in het **oosten**. Je ziet 's ochtends vroeg de zon precies vóór je opkomen. In welke windrichting kijk je?",
+  "options": [
+   "Naar het oosten",
+   "Naar het westen",
+   "Naar het noorden",
+   "Naar het zuiden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar gaat de zon 's avonds juist ónder.",
+   "In Nederland staat de zon nooit in die richting.",
+   "Denk aan waar de zon ópkomt — dat staat in de eerste zin."
+  ],
+  "niveaus": null,
+  "explanation": "De zon komt op in het oosten en jij kijkt er recht tegenaan: je kijkt **naar het oosten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 150,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "De plattegrond van het dorp heeft vakken: letters A t/m D van links naar rechts, cijfers 1 t/m 4 van boven naar beneden. De kerk staat in het vak **helemaal rechtsboven**. Welk vak is dat?",
+  "options": [
+   "D1",
+   "A1",
+   "D4",
+   "A4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De letter A hoort bij het vak helemaal línks.",
+   "Cijfer 4 is de onderste rij.",
+   "Dat vak zit linksonder — precies de verkeerde hoek."
+  ],
+  "niveaus": null,
+  "explanation": "Helemaal rechts = letter D, helemaal boven = cijfer 1: vak **D1**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 151,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarom zet een kaartenmaker **symbolen** op een kaart in plaats van overal woorden?",
+  "options": [
+   "Symbolen zijn klein en snel te herkennen",
+   "Woorden zijn verboden op kaarten",
+   "Symbolen zijn geheimtaal voor kaartenmakers",
+   "Zodat je de legenda niet nodig hebt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Woorden mógen best — plaatsnamen staan er ook. Waarom dan tóch tekentjes?",
+   "Iedereen mag de betekenis opzoeken — geheim is het niet.",
+   "Andersom: juist dóór de symbolen heb je de legenda nodig."
+  ],
+  "niveaus": null,
+  "explanation": "Een kaart vol woorden wordt onleesbaar. **Symbolen** zijn klein en herken je in één oogopslag.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 152,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Van school naar de sporthal kun je twee kanten op: linksom is het 800 meter, rechtsom 1,2 kilometer. Je bent laat. Welke route kies je?",
+  "options": [
+   "Linksom, want 800 meter is korter",
+   "Rechtsom, want 1,2 is een kleiner getal dan 800",
+   "Ze zijn allebei even lang",
+   "Rechtsom, want rechts is altijd sneller"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Let op de eenheden: meters en kilometers zijn niet hetzelfde.",
+   "Reken beide afstanden eerst om naar dezelfde eenheid.",
+   "De kant die je op slaat zegt niets over de afstand."
+  ],
+  "niveaus": null,
+  "explanation": "1,2 kilometer = 1.200 meter. 800 meter is dus korter: **linksom**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 153,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Op de kaart staat bij een pad het symbool '🚫 verboden voor fietsers'. Jij bent op de fiets. Wat betekent dit voor jouw **routekeuze**?",
+  "options": [
+   "Je zoekt een andere weg voor de fiets",
+   "Je fietst er toch doorheen, want het is korter",
+   "Het verbod geldt vast alleen 's nachts",
+   "Je mag er fietsen als je maar langzaam gaat"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Korter zijn maakt een verbod niet ongedaan.",
+   "Er staat geen tijd bij het verbod.",
+   "Langzaam of snel — het verbod blijft gelden."
+  ],
+  "niveaus": null,
+  "explanation": "Verboden voor fietsers = daar fiets je niet. Je zoekt op de kaart een **andere route**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 154,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "In de legenda staat: dikke rode lijn = snelweg, dunne gele lijn = fietspad, blauwe lijn = rivier. Je plant een **fietsroute**. Welke lijnen volg je op de kaart?",
+  "options": [
+   "De dunne gele lijnen",
+   "De dikke rode lijnen",
+   "De blauwe lijnen",
+   "Alle lijnen door elkaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op een snelweg mag je niet fietsen.",
+   "Over water fietsen wordt lastig zonder brug.",
+   "Elke lijnkleur betekent iets anders — kies wat bij fietsen hoort."
+  ],
+  "niveaus": null,
+  "explanation": "De legenda zegt: gele lijn = fietspad. Voor een fietsroute volg je dus de **dunne gele lijnen**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 155,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Het dorpsplein ligt **ten westen van** de kerk. Waar staat de kerk dan ten opzichte van het plein?",
+  "options": [
+   "Ten oosten van het plein",
+   "Ten westen van het plein",
+   "Ten noorden van het plein",
+   "Ten zuiden van het plein"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is dezelfde kant als in de vraag — draai het eens om.",
+   "Noord komt in de vraag helemaal niet voor.",
+   "Zuid komt in de vraag helemaal niet voor."
+  ],
+  "niveaus": null,
+  "explanation": "Ligt A ten westen van B, dan ligt B **ten oosten** van A — altijd precies de tegenovergestelde richting.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 156,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je vergelijkt twee plattegronden van hetzelfde pretpark. Op plattegrond 1 staan alleen de attracties. Op plattegrond 2 staan óók de toiletten, restaurants en de EHBO-post (Eerste Hulp Bij Ongelukken). Je zoekt **snel een toilet**. Welke plattegrond kies je?",
+  "options": [
+   "Plattegrond 2",
+   "Plattegrond 1",
+   "Allebei even handig",
+   "Geen van beide helpt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staan de toiletten daar eigenlijk wel op?",
+   "Eén van de twee mist precies wat jij zoekt.",
+   "Op één van de twee staat het toilet er wél op."
+  ],
+  "niveaus": null,
+  "explanation": "Kies de kaart die de informatie bevat die jíj nodig hebt: **plattegrond 2** toont de toiletten.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 157,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Kaart & legenda lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat doe je **EERST** als je bij een toets een onbekende kaart voor je krijgt?",
+  "options": [
+   "De titel en de legenda bekijken",
+   "Meteen een antwoord invullen",
+   "De kaart natekenen op je kladpapier",
+   "De vraag overslaan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zonder te weten waar de kaart over gaat, gok je maar wat.",
+   "Natekenen kost veel tijd en levert geen punten op.",
+   "Kaartvragen zijn juist goed te doen als je stap voor stap kijkt."
+  ],
+  "niveaus": null,
+  "explanation": "Eerst **titel + legenda** lezen: dan weet je waar de kaart over gaat en wat de symbolen betekenen. Daarna pas de vraag beantwoorden.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 158,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Treintabel:** vertrek 9:12, aankomst 9:48. Hoe lang duurt de treinreis?",
+  "options": [
+   "36 minuten",
+   "48 minuten",
+   "24 minuten",
+   "1 uur en 36 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je las alleen het getal van de aankomsttijd af — reken het verschíl uit.",
+   "Tel nog eens van 9:12 tot 9:48, bijvoorbeeld met sprongen van 10 minuten.",
+   "Vertrek en aankomst zijn allebei tussen 9 en 10 uur — kan de reis dan langer dan een uur duren?"
+  ],
+  "niveaus": null,
+  "explanation": "Van 9:12 tot 9:48 = 48 − 12 = **36 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 159,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Openingstijden zwembad:** ma-vr 7:00-21:00, za 9:00-17:00, zo gesloten. Je wilt **zaterdag om 18:00** zwemmen. Kan dat?",
+  "options": [
+   "Nee, op zaterdag sluit het bad om 17:00",
+   "Ja, het bad is open tot 21:00",
+   "Nee, het zwembad is op zaterdag helemaal dicht",
+   "Ja, het bad is altijd open"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die sluitingstijd geldt alleen doordeweeks — kijk in de rij van zaterdag.",
+   "Op zaterdag is het bad wél open, alleen niet de hele dag.",
+   "Er staat zelfs een dag 'gesloten' in de tabel — altijd open is het zeker niet."
+  ],
+  "niveaus": null,
+  "explanation": "Zaterdag: 9:00-17:00. Om 18:00 is het bad dus al een uur **dicht**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 160,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Prijzen pretpark:** kind (t/m 11 jaar) € 12, volwassene € 18, gezinskaart (2 volwassenen + 2 kinderen) € 50. Wat kosten **losse kaartjes** voor 2 volwassenen en 2 kinderen samen?",
+  "options": [
+   "€ 60",
+   "€ 50",
+   "€ 30",
+   "€ 48"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de prijs van de gezínskaart — de vraag gaat over losse kaartjes.",
+   "Je rekende maar één volwassene en één kind.",
+   "Controleer je som: twee keer de volwassen-prijs plus twee keer de kinderprijs."
+  ],
+  "niveaus": null,
+  "explanation": "2 × € 18 + 2 × € 12 = € 36 + € 24 = **€ 60**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 161,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Prijzen pretpark:** kind € 12, volwassene € 18, gezinskaart (2 volwassenen + 2 kinderen) € 50. Een gezin met 2 volwassenen en 2 kinderen wil zo **goedkoop mogelijk** naar binnen. Wat kiezen ze?",
+  "options": [
+   "De gezinskaart van € 50",
+   "Losse kaartjes, want dat is € 48",
+   "Losse kaartjes, want dat is € 60",
+   "Twee gezinskaarten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken de losse kaartjes nog eens na — kom je echt onder de vijftig uit?",
+   "Dat bedrag klopt, maar is het ook mínder dan de gezinskaart?",
+   "Eén gezinskaart is al precies genoeg voor dit gezin."
+  ],
+  "niveaus": null,
+  "explanation": "Losse kaartjes: 2 × € 18 + 2 × € 12 = € 60. De gezinskaart kost € 50 en is dus **€ 10 goedkoper**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 162,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Bus 4 — vertrek Dorpsplein → aankomst Zwembad:** 13:10 → 13:22, 13:40 → 13:52, 14:10 → 14:22. Je zwemles begint om **14:00**. Welke bus kun je **uiterlijk** nemen?",
+  "options": [
+   "De bus van 13:40",
+   "De bus van 14:10",
+   "De bus van 13:10",
+   "Geen enkele bus komt op tijd aan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die bus komt pas ná het begin van je les aan — lees de aankomstkolom.",
+   "Die bus kan ook, maar de vraag is welke je het láátst nog kunt nemen.",
+   "Er komen wel degelijk bussen vóór 14:00 aan."
+  ],
+  "niveaus": null,
+  "explanation": "De bus van 13:40 is om 13:52 bij het zwembad — nog net vóór 14:00. De bus erna komt te laat aan: **13:40** dus.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 163,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Treintabel:** de trein naar Zwolle vertrekt **elke 20 minuten**, de eerste om 6:15. Hoe laat vertrekt de **derde** trein?",
+  "options": [
+   "6:55",
+   "6:35",
+   "7:15",
+   "6:45"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de twééde trein.",
+   "Dan tel je een stap van 20 minuten te veel.",
+   "Dat zou de derde trein zijn als ze elk kwartíér reden — hier is het elke 20 minuten."
+  ],
+  "niveaus": null,
+  "explanation": "6:15 (eerste) → 6:35 (tweede) → **6:55** (derde).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 164,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Bibliotheek:** ma gesloten, di-vr 10:00-18:00, za 10:00-16:00. Jij kunt alleen **om 16:30 na school** (dinsdag) of **zaterdag om 15:00**. Op welke momenten kun je terecht?",
+  "options": [
+   "Op allebei de momenten",
+   "Alleen om 16:30 na school",
+   "Alleen op zaterdag om 15:00",
+   "Op geen van beide momenten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk ook naar zaterdag: is de bibliotheek om 15:00 nog open?",
+   "Kijk ook naar dinsdag: is 16:30 vóór sluitingstijd?",
+   "Vergelijk beide tijden met de tabel — minstens één past er wél."
+  ],
+  "niveaus": null,
+  "explanation": "Dinsdag sluit de bieb om 18:00 (16:30 kan dus) en zaterdag om 16:00 (15:00 kan ook): **allebei** kan.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 165,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Menukaart snackbar:** friet € 2,50 — snack € 2,00 — combideal friet + snack € 4,00. Hoeveel **bespaar** je met de combideal?",
+  "options": [
+   "€ 0,50",
+   "€ 4,50",
+   "€ 1,00",
+   "Niets"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is wat friet en snack lós samen kosten, niet wat je bespaart.",
+   "Vergelijk: los kost het € 2,50 + € 2,00 — hoeveel scheelt dat met de deal?",
+   "Reken het verschil tussen los kopen en de deal echt even uit."
+  ],
+  "niveaus": null,
+  "explanation": "Los: € 2,50 + € 2,00 = € 4,50. De deal kost € 4,00. Je bespaart dus **€ 0,50**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

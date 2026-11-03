@@ -1,0 +1,497 @@
+[
+ {
+  "nr": 111,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 17",
+  "eigenKeuze": "100%",
+  "oordeel": "twijfel",
+  "reden": "(d) wrongHints beschreven het antwoord ('helemaal vol', 'altijd evenveel').",
+  "hersteld": true,
+  "wijziging": "3 wrongHints herschreven tot denkprikkels."
+ },
+ {
+  "nr": 112,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 18",
+  "eigenKeuze": "taart",
+  "oordeel": "twijfel",
+  "reden": "niveaus basis/simpeler/nogSimpeler gaven alleen het antwoord of de volgorde. Opties staan op alfabet, maar worden in de app gehusseld (shuffleOptions).",
+  "hersteld": true,
+  "wijziging": "3 niveaus herschreven tot echte hulpstappen (derde letter vergelijken)."
+ },
+ {
+  "nr": 113,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 19",
+  "eigenKeuze": "Saus warm maken",
+  "oordeel": "goed",
+  "reden": "Volgordewoorden-vraag, hints zijn denkprikkels.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 114,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 20",
+  "eigenKeuze": "5",
+  "oordeel": "twijfel",
+  "reden": "(e) telegramzin 'Tabel toont scores'.",
+  "hersteld": true,
+  "wijziging": "q herschreven tot volzin."
+ },
+ {
+  "nr": 115,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 21",
+  "eigenKeuze": "200 m",
+  "oordeel": "twijfel",
+  "reden": "(e) telegramzin '4 cm op kaart = werkelijk?'.",
+  "hersteld": true,
+  "wijziging": "q herschreven tot volzin."
+ },
+ {
+  "nr": 116,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 22",
+  "eigenKeuze": "Leeftijd",
+  "oordeel": "goed",
+  "reden": "Erg makkelijk, maar bruikbaar als opwarmer in de mix.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 117,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "eigenKeuze": "Goed",
+  "oordeel": "twijfel",
+  "reden": "Opties 'Soms goed' en 'Soms fout' betekenen hetzelfde, dubbele hint, niveaus gaven alleen 'Goed'.",
+  "hersteld": true,
+  "wijziging": "q 'Klopt deze zin?', opties Ja/Nee/Alleen bij een kaart/Alleen bij een grafiek, hints + 3 niveaus herschreven."
+ },
+ {
+  "nr": 118,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 24",
+  "eigenKeuze": "1, 2, 3 (volgorde)",
+  "oordeel": "fout",
+  "reden": "(b)+(c) a→b→c nummeren = 1,2,3 doet de vraag zelf; labels '(volgorde)/(omgekeerd)' verklappen.",
+  "hersteld": true,
+  "wijziging": "Schema 'b → c → a', opties 'a = 3, b = 1, c = 2' enz. zonder labels, hints aangepast."
+ },
+ {
+  "nr": 119,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 25",
+  "eigenKeuze": "Paginanummer",
+  "oordeel": "twijfel",
+  "reden": "(e) telegramzin 'Atlas-index zoek je op Berlijn'.",
+  "hersteld": true,
+  "wijziging": "q herschreven ('register (de index) van een atlas')."
+ },
+ {
+  "nr": 120,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 26",
+  "eigenKeuze": "1.000 m",
+  "oordeel": "twijfel",
+  "reden": "(e) telegramzin; hint '10 m is nog geen klaslokaal lang' klopt niet.",
+  "hersteld": true,
+  "wijziging": "q tot volzin; hint 4 gecorrigeerd."
+ },
+ {
+  "nr": 121,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 27",
+  "eigenKeuze": "aap",
+  "oordeel": "twijfel",
+  "reden": "(f) te makkelijk voor groep 8: vier verschillende beginletters.",
+  "hersteld": true,
+  "wijziging": "Woorden kaart/kaas/kast/kat (vergelijken tot 3e/4e letter); hints aangepast."
+ },
+ {
+  "nr": 122,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 28",
+  "eigenKeuze": "Blussen",
+  "oordeel": "fout",
+  "reden": "(b) de vraag geeft 1) 2) 3) en vraagt wat na 2 komt: antwoord staat er letterlijk.",
+  "hersteld": true,
+  "wijziging": "Nieuw stappenplan met 4 stappen; kind moet afleiden waar de brandweer is ('net aangekomen'); opties + hints aangepast."
+ },
+ {
+  "nr": 123,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 29",
+  "eigenKeuze": "Erna",
+  "oordeel": "goed",
+  "reden": "Logisch volgorde-denken, hints zijn vragen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 124,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 30",
+  "eigenKeuze": "Groenland lijkt veel te groot",
+  "oordeel": "goed",
+  "reden": "Feitelijk juist (Mercator), hints geven richting.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 125,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 31",
+  "eigenKeuze": "9:30",
+  "oordeel": "goed",
+  "reden": "Terugrekenen klopt, hints kloppen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 126,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 32",
+  "eigenKeuze": "4 minuten",
+  "oordeel": "twijfel",
+  "reden": "(g) label 'Bustabel + kaart combineren' terwijl er geen tabel/kaart is; gegevens staan wel in de vraag.",
+  "hersteld": true,
+  "wijziging": "Label vervangen door 'Reistijd uitrekenen', zin afgemaakt."
+ },
+ {
+  "nr": 127,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 33",
+  "eigenKeuze": "De site van het Voedingscentrum",
+  "oordeel": "goed",
+  "reden": "Afleiders duidelijk zwak, maar passend bij bronnen-beoordelen.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 128,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 34",
+  "eigenKeuze": "Sla 'm over en kom later terug",
+  "oordeel": "goed",
+  "reden": "Prima strategievraag.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 129,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 35",
+  "eigenKeuze": "3 keer",
+  "oordeel": "twijfel",
+  "reden": "(g) 'de lijngrafiek toont' terwijl er geen grafiek is; (d) hint 'Deel 24 door 8' rekent voor.",
+  "hersteld": true,
+  "wijziging": "q herschreven ('in een lijngrafiek lees je af: ...'), hint 4 als denkprikkel."
+ },
+ {
+  "nr": 130,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 37",
+  "eigenKeuze": "Een derde betrouwbare bron checken",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 131,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 38",
+  "eigenKeuze": "Tussen blz. 24 en 37",
+  "oordeel": "goed",
+  "reden": "Inhoudsopgave-redeneren klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 132,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 39",
+  "eigenKeuze": "Bijzaken schrappen en hoofdpunten houden",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 133,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 40",
+  "eigenKeuze": "Maandag",
+  "oordeel": "goed",
+  "reden": "Gegevens staan in de vraag; terugplannen klopt.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 134,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 1",
+  "eigenKeuze": "✚",
+  "oordeel": "goed",
+  "reden": "Legenda in de vraag, één denkstap (pleister → EHBO).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 135,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 2",
+  "eigenKeuze": "1",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 136,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 3",
+  "eigenKeuze": "Zuiden",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 137,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 4",
+  "eigenKeuze": "Naar het westen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 138,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 5",
+  "eigenKeuze": "De tweede deur links",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 139,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 6",
+  "eigenKeuze": "Daar is water",
+  "oordeel": "fout",
+  "reden": "(b) legenda 'golfjes = water' en dan vragen wat golfjes betekenen: antwoord letterlijk in de vraag.",
+  "hersteld": true,
+  "wijziging": "Omgedraaid: tentplek vlak bij water zoeken → welk teken? Opties Golfjes/🚻/Nog een driehoekje/Een stippellijn; hints + uitleg aangepast."
+ },
+ {
+  "nr": 140,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 7",
+  "eigenKeuze": "Route B, want daar rijden geen auto's",
+  "oordeel": "goed",
+  "reden": "Eén afleider absurd ('druk is gezellig'), verder goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 141,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 8",
+  "eigenKeuze": "Parkeerplaats",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 142,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 9",
+  "eigenKeuze": "50 meter",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 143,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 10",
+  "eigenKeuze": "Noordoosten",
+  "oordeel": "fout",
+  "reden": "(b) 'tussen het noorden en het oosten' noemt het antwoord; hints wezen naar woorden in de vraag.",
+  "hersteld": true,
+  "wijziging": "Nu: noord boven, kerk rechtsboven → richting afleiden; hints + uitleg aangepast."
+ },
+ {
+  "nr": 144,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 11",
+  "eigenKeuze": "Het verst van de ingang vandaan",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 145,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 12",
+  "eigenKeuze": "De legenda",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 146,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 13",
+  "eigenKeuze": "2 keer",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 147,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 14",
+  "eigenKeuze": "Allebei",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 148,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 15",
+  "eigenKeuze": "In welke richting je moet lopen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 149,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "eigenKeuze": "Naar het oosten",
+  "oordeel": "fout",
+  "reden": "(b) 'zon komt op in het oosten' + 'je kijkt naar de opkomende zon' = antwoord in de vraag; hint zei 'dat staat in de eerste zin'.",
+  "hersteld": true,
+  "wijziging": "Nu: je draait je om → westen (optie 0 = 'Naar het westen', optie 1 = 'Naar het oosten'); hints + uitleg aangepast."
+ },
+ {
+  "nr": 150,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 17",
+  "eigenKeuze": "D1",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 151,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 18",
+  "eigenKeuze": "Symbolen zijn klein en snel te herkennen",
+  "oordeel": "goed",
+  "reden": "Afleiders zwak maar verdedigbaar.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 152,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 19",
+  "eigenKeuze": "Linksom, want 800 meter is korter",
+  "oordeel": "goed",
+  "reden": "Eenheden-valkuil, goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 153,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 20",
+  "eigenKeuze": "Je zoekt een andere weg voor de fiets",
+  "oordeel": "goed",
+  "reden": "Makkelijk, verdedigbaar.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 154,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 21",
+  "eigenKeuze": "De dunne gele lijnen",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 155,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 22",
+  "eigenKeuze": "Ten oosten van het plein",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 156,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 23",
+  "eigenKeuze": "Plattegrond 2",
+  "oordeel": "goed",
+  "reden": "Makkelijk, verdedigbaar.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 157,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 24",
+  "eigenKeuze": "De titel en de legenda bekijken",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 158,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 2",
+  "eigenKeuze": "36 minuten",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 159,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 3",
+  "eigenKeuze": "Nee, op zaterdag sluit het bad om 17:00",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 160,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 4",
+  "eigenKeuze": "€ 60",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 161,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 5",
+  "eigenKeuze": "De gezinskaart van € 50",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 162,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 6",
+  "eigenKeuze": "De bus van 13:40",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 163,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 7",
+  "eigenKeuze": "6:55",
+  "oordeel": "goed",
+  "reden": "Hints rekenen kloppen (7:15 = vierde, 6:45 = per kwartier).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 164,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 8",
+  "eigenKeuze": "Op allebei de momenten",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 165,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 9",
+  "eigenKeuze": "€ 0,50",
+  "oordeel": "goed",
+  "reden": "",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

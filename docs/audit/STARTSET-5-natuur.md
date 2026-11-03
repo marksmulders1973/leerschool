@@ -4,22 +4,22 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Dieren en seizoenen (dieren-seizoenen-natuur, stap 2)
 Vraag: Welke is een zoogdier?
+- ▫️ krokodil
+- ▫️ haai
 - ▫️ kikker
 - ✅ walvis
-- ▫️ haai
-- ▫️ krokodil
 
 ## 2. Dieren en seizoenen (dieren-seizoenen-natuur, stap 2)
 Vraag: Wat is **uniek** aan zoogdieren?
-- ✅ De moeder geeft melk
-- ▫️ Ze hebben koud bloed
 - ▫️ Ze leggen eieren
+- ▫️ Ze hebben koud bloed
+- ✅ De moeder geeft melk
 - ▫️ Ze ademen met longen
 
 ## 3. Dieren en seizoenen (dieren-seizoenen-natuur, stap 3)
 Vraag: Wat hebben **alleen vogels**?
-- ✅ Veren
 - ▫️ Snavel
+- ✅ Veren
 - ▫️ Vleugels
 - ▫️ Eieren
 
@@ -32,45 +32,45 @@ Vraag: Welke vogel kan **niet** vliegen?
 
 ## 5. Dieren en seizoenen (dieren-seizoenen-natuur, stap 6)
 Vraag: Welk **stadium** komt tussen rups en vlinder?
-- ▫️ ei
 - ✅ pop
 - ▫️ kleine vlinder
 - ▫️ grote rups
+- ▫️ ei
 
 ## 6. Dieren en seizoenen (dieren-seizoenen-natuur, stap 7)
 Vraag: Wat gebeurt vooral in de **lente**?
 - ▫️ Er ligt vaak sneeuw op straat
-- ✅ Veel jonge dieren worden geboren
 - ▫️ Trekvogels vliegen weg naar het zuiden
+- ✅ Veel jonge dieren worden geboren
 - ▫️ De bladeren vallen van de bomen
 
 ## 7. Dieren en seizoenen (dieren-seizoenen-natuur, stap 8)
 Vraag: Welk dier houdt **winterslaap**?
-- ✅ egel
 - ▫️ kraai
-- ▫️ ree
 - ▫️ merel
+- ✅ egel
+- ▫️ ree
 
 ## 8. Dieren en seizoenen (dieren-seizoenen-natuur, stap 8)
 Vraag: Waarom **vallen bladeren** in de herfst?
-- ✅ Zo spaart de boom energie voor de winter
+- ▫️ Nieuwe bladeren duwen de oude eraf
 - ▫️ De harde herfstwind blaast ze eraf
 - ▫️ De nachtvorst maakt de bladeren kapot
-- ▫️ Nieuwe bladeren duwen de oude eraf
+- ✅ Zo spaart de boom energie voor de winter
 
 ## 9. Dieren en seizoenen (dieren-seizoenen-natuur, stap 10)
 Vraag: Welk dier is een **planteneter**?
-- ✅ konijn
-- ▫️ vos
-- ▫️ uil
 - ▫️ haai
+- ✅ konijn
+- ▫️ uil
+- ▫️ vos
 
 ## 10. Dieren en seizoenen (dieren-seizoenen-natuur, stap 10)
 Vraag: Wie staat **bovenaan** in de keten *gras → konijn → vos*?
-- ▫️ zon
-- ▫️ gras
 - ✅ vos
 - ▫️ konijn
+- ▫️ zon
+- ▫️ gras
 
 ## 11. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 1)
 Vraag: Een **vleermuis** is een ... ?
@@ -81,63 +81,63 @@ Vraag: Een **vleermuis** is een ... ?
 
 ## 12. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 2)
 Vraag: Welk **kenmerk** hebben alle vogels?
-- ▫️ Vacht
+- ✅ Veren
 - ▫️ Schubben
 - ▫️ Ze kunnen vliegen
-- ✅ Veren
+- ▫️ Vacht
 
 ## 13. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 2)
 Vraag: Welke is een **zoogdier**?
-- ▫️ Vis
-- ✅ Olifant
 - ▫️ Slang
 - ▫️ Mus
+- ▫️ Vis
+- ✅ Olifant
 
 ## 14. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 3)
 Vraag: Hoe ademen **vissen**?
 - ▫️ Door de huid
+- ▫️ Met longen
 - ✅ Met kieuwen
 - ▫️ Via vinnen
-- ▫️ Met longen
 
 ## 15. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 3)
 Vraag: Een **kikkervisje** wordt later ... ?
-- ▫️ Salamander
 - ▫️ Hagedis
-- ✅ Kikker
 - ▫️ Vis
+- ✅ Kikker
+- ▫️ Salamander
 
 ## 16. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 4)
 Vraag: Hoeveel **poten** heeft een spin?
-- ▫️ 2
-- ✅ 8
-- ▫️ 6
 - ▫️ 4
+- ▫️ 2
+- ▫️ 6
+- ✅ 8
 
 ## 17. Dieren en seizoenen (dieren-seizoenen-natuur, stap 4)
 Vraag: Hoeveel poten heeft een **insect**?
-- ▫️ 10
-- ▫️ 4
 - ✅ 6
+- ▫️ 4
+- ▫️ 10
 - ▫️ 8
 
 ## 18. Dieren en seizoenen (dieren-seizoenen-natuur, stap 4)
 Vraag: Tot welke groep behoort een **kikker**?
+- ▫️ vissen
 - ▫️ zoogdieren
 - ▫️ reptielen
 - ✅ amfibieën
-- ▫️ vissen
 
 ## 19. Sterren en planeten — ons zonnestelsel (sterren-planeten, stap 2)
 Vraag: Hoeveel planeten heeft ons zonnestelsel?
-- ▫️ 9
-- ▫️ 12
-- ▫️ 7
 - ✅ 8
+- ▫️ 9
+- ▫️ 7
+- ▫️ 12
 
 ## 20. Sterren en planeten — ons zonnestelsel (sterren-planeten, stap 2)
 Vraag: Welke planeet is het **dichtst bij de zon**?
+- ▫️ Aarde
 - ✅ Mercurius
 - ▫️ Mars
-- ▫️ Aarde
 - ▫️ Venus

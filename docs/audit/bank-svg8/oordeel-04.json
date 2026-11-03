@@ -1,0 +1,497 @@
+[
+  {
+    "nr": 166,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 10",
+    "eigenKeuze": "Die van 19:00",
+    "oordeel": "goed",
+    "reden": "Klopt (19:00 is de enige na 18:50); hints wijzen richting.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 167,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 11",
+    "eigenKeuze": "Kijken wat elke kolom betekent",
+    "oordeel": "goed",
+    "reden": "Klopt; afleiders plausibel.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 168,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 12",
+    "eigenKeuze": "Die van 10:04",
+    "oordeel": "goed",
+    "reden": "10:04+51 = 10:55; klopt, hints laten rekenen.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 169,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 13",
+    "eigenKeuze": "Vanaf 9 keer",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij \"8 keer\" rekende voor en verklapte dat 9 het antwoord is (d).",
+    "hersteld": true,
+    "wijziging": "hint 1 herschreven tot rekenopdracht"
+  },
+  {
+    "nr": 170,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 14",
+    "eigenKeuze": "Die van 14:00",
+    "oordeel": "goed",
+    "reden": "14:00+2u+15 min = 16:15; klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 171,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 15",
+    "eigenKeuze": "€ 5",
+    "oordeel": "goed",
+    "reden": "Klopt (€ 5); hints goed.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 172,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 16",
+    "eigenKeuze": "5 minuten",
+    "oordeel": "goed",
+    "reden": "8:20 tot 8:25 = 5 min; klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 173,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 17",
+    "eigenKeuze": "Nee, want in schoolvakanties rijdt deze trein niet",
+    "oordeel": "goed",
+    "reden": "Voetnoot lezen is hier het doel; klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 174,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 18",
+    "eigenKeuze": "De winkel gaat zondag pas om 12:00 open",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij \"alweer gesloten\" noemde het antwoord (nog niet open) (d).",
+    "hersteld": true,
+    "wijziging": "hint 2 herschreven"
+  },
+  {
+    "nr": 175,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 19",
+    "eigenKeuze": "€ 12",
+    "oordeel": "goed",
+    "reden": "8+4 = € 12; klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 176,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 20",
+    "eigenKeuze": "Die tijden gelden alleen op maandag tot en met vrijdag",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij \"maart\" noemde het antwoord (dagen) (d).",
+    "hersteld": true,
+    "wijziging": "hint 1 herschreven"
+  },
+  {
+    "nr": 177,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 21",
+    "eigenKeuze": "Die van 9:30",
+    "oordeel": "goed",
+    "reden": "9:30+25 = 9:55, 5 min wachten; klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 178,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 22",
+    "eigenKeuze": "2 retourkaartjes (€ 16,00)",
+    "oordeel": "fout",
+    "reden": "Opties gaven de uitgerekende bedragen; vraag doet het werk al (b).",
+    "hersteld": true,
+    "wijziging": "bedragen uit de 4 opties gehaald"
+  },
+  {
+    "nr": 179,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 23",
+    "eigenKeuze": "7:10 — 7:40 — 8:10 — 8:40",
+    "oordeel": "goed",
+    "reden": "Klopt; hints beschrijven alleen de eigen foute optie.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 180,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 24",
+    "eigenKeuze": "Zwemschool B",
+    "oordeel": "goed",
+    "reden": "30/4 = € 7,50 < € 9; klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 181,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 1",
+    "eigenKeuze": "De website van een zeeaquarium met echte dolfijnen-verzorgers",
+    "oordeel": "twijfel",
+    "reden": "Goede optie langst/specifiekst, stripboek-afleider absurd (c).",
+    "hersteld": true,
+    "wijziging": "goede optie ingekort; stripboek vervangen door verkoopfolder + hint"
+  },
+  {
+    "nr": 182,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 2",
+    "eigenKeuze": "Reclame — de maker wil iets verkopen",
+    "oordeel": "goed",
+    "reden": "Klopt; goede optie iets langer, acceptabel.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 183,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 3",
+    "eigenKeuze": "eiffeltoren bouwjaar",
+    "oordeel": "twijfel",
+    "reden": "Afleider \"hoe zit dat eigenlijk\" absurd (c).",
+    "hersteld": true,
+    "wijziging": "vervangen door \"eiffeltoren hoogte\" + hint"
+  },
+  {
+    "nr": 184,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 4",
+    "eigenKeuze": "In het register achterin",
+    "oordeel": "goed",
+    "reden": "Klopt; register.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 185,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 5",
+    "eigenKeuze": "Artikel 2, want nieuws veroudert snel",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 186,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 6",
+    "eigenKeuze": "De maker verdient aan pil X en is dus niet neutraal",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 187,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 7",
+    "eigenKeuze": "Bedenken wat je precies wilt weten",
+    "oordeel": "goed",
+    "reden": "Klopt; basisvraag.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 188,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 8",
+    "eigenKeuze": "Iemand heeft betaald voor die plek",
+    "oordeel": "twijfel",
+    "reden": "wrongHint noemde het antwoord (\"gekocht\") (d).",
+    "hersteld": true,
+    "wijziging": "hint 1 herschreven"
+  },
+  {
+    "nr": 189,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 9",
+    "eigenKeuze": "www.rijksoverheid.nl",
+    "oordeel": "twijfel",
+    "reden": "Te makkelijk: afleiders absurd (c/f).",
+    "hersteld": true,
+    "wijziging": "\"snelrijkworden.com\" vervangen door nep-lookalike \"rijksoverheid-nieuws.com\" + hint"
+  },
+  {
+    "nr": 190,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 10",
+    "eigenKeuze": "De buurman is geen deskundige",
+    "oordeel": "twijfel",
+    "reden": "wrongHint \"het gaat om wíé iets beweert\" verklapt antwoord (d); afleider \"paars\" absurd (c).",
+    "hersteld": true,
+    "wijziging": "hint 2 herschreven; optie 3 + hint vervangen"
+  },
+  {
+    "nr": 191,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 11",
+    "eigenKeuze": "Zoek op 'jaguar dier snelheid'",
+    "oordeel": "twijfel",
+    "reden": "wrongHint \"met één extra woord los je dit op\" verklapt antwoord (d).",
+    "hersteld": true,
+    "wijziging": "hint 3 herschreven"
+  },
+  {
+    "nr": 192,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 12",
+    "eigenKeuze": "Een feit kun je controleren, een mening niet",
+    "oordeel": "twijfel",
+    "reden": "wrongHint \"kun je ... nakijken?\" omschrijft het antwoord (d).",
+    "hersteld": true,
+    "wijziging": "hint 3 herschreven tot vergelijking"
+  },
+  {
+    "nr": 193,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 13",
+    "eigenKeuze": "'Voetbal is de leukste sport die er is.'",
+    "oordeel": "goed",
+    "reden": "Klopt; hints noemen alleen dat de foute optie controleerbaar is.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 194,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 14",
+    "eigenKeuze": "Kijken of andere betrouwbare sites hetzelfde melden",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 195,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 15",
+    "eigenKeuze": "Op bladzijde 12",
+    "oordeel": "goed",
+    "reden": "Klopt; makkelijk maar basisvaardigheid.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 196,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 16",
+    "eigenKeuze": "Blz. 12 tot en met 19",
+    "oordeel": "goed",
+    "reden": "Klopt (12 t/m 19).",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 197,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 17",
+    "eigenKeuze": "Inhoudsopgave op hoofdstuk, register op alfabet",
+    "oordeel": "twijfel",
+    "reden": "Goede optie in telegramstijl (e).",
+    "hersteld": true,
+    "wijziging": "optietekst tot volzin herschreven"
+  },
+  {
+    "nr": 198,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 18",
+    "eigenKeuze": "Extra kritisch zijn en een andere bron erbij zoeken",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 199,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 19",
+    "eigenKeuze": "Het archief of museum van je dorp",
+    "oordeel": "twijfel",
+    "reden": "Afleider songtekst absurd (c).",
+    "hersteld": true,
+    "wijziging": "vervangen door algemeen WO2-boek + hint"
+  },
+  {
+    "nr": 200,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 20",
+    "eigenKeuze": "Opzoeken bij een betrouwbare bron",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 201,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 21",
+    "eigenKeuze": "bouw",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 202,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 22",
+    "eigenKeuze": "Zodat de lezer je informatie kan nagaan",
+    "oordeel": "goed",
+    "reden": "Klopt; hints sturen zonder antwoord.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 203,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 23",
+    "eigenKeuze": "Er staat 'advertentie' of 'gesponsord' bij",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 204,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 24",
+    "eigenKeuze": "Afzender en datum checken",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 205,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 1",
+    "eigenKeuze": "sneeuw",
+    "oordeel": "twijfel",
+    "reden": "Te makkelijk: alle afleiders absurd (c/f).",
+    "hersteld": true,
+    "wijziging": "\"banaan\" vervangen door valkuil \"paraplu\" + hint"
+  },
+  {
+    "nr": 206,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 2",
+    "eigenKeuze": "Winterslaap",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 207,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 3",
+    "eigenKeuze": "B — vul de pot met aarde",
+    "oordeel": "twijfel",
+    "reden": "wrongHints noemden dat de pot nog leeg is, wat B verklapt (d).",
+    "hersteld": true,
+    "wijziging": "hints 1 en 2 herschreven"
+  },
+  {
+    "nr": 208,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 4",
+    "eigenKeuze": "De brandweerauto is rood.",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 209,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 5",
+    "eigenKeuze": "gezond eten",
+    "oordeel": "twijfel",
+    "reden": "Alle afleiders ongezond, dus raadbaar (c).",
+    "hersteld": true,
+    "wijziging": "\"elke dag snoepen\" vervangen door neutrale optie + hint"
+  },
+  {
+    "nr": 210,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 6",
+    "eigenKeuze": "Poets twee minuten je tanden",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 211,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 7",
+    "eigenKeuze": "Om de hoofdzaken te ordenen",
+    "oordeel": "twijfel",
+    "reden": "Afleider \"gummen\" absurd (c).",
+    "hersteld": true,
+    "wijziging": "vervangen door \"alle zinnen overschrijven\" + hint"
+  },
+  {
+    "nr": 212,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 8",
+    "eigenKeuze": "Beroemde vulkanen",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 213,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 9",
+    "eigenKeuze": "De hoofdzaken, in je eigen woorden",
+    "oordeel": "goed",
+    "reden": "Klopt; afleiders zwak maar acceptabel.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 214,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 10",
+    "eigenKeuze": "B → A → C → D",
+    "oordeel": "goed",
+    "reden": "Klopt (B-A-C-D).",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 215,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 11",
+    "eigenKeuze": "Laat je regenjas thuis",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 216,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 12",
+    "eigenKeuze": "Die staat vaak in de eerste zin",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar: enige optie met \"vaak\", rest \"altijd\" (c).",
+    "hersteld": true,
+    "wijziging": "optie \"tussen haakjes\" vervangen door \"vaak in de middelste zin\" + hint"
+  },
+  {
+    "nr": 217,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 13",
+    "eigenKeuze": "spruitjes",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 218,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 14",
+    "eigenKeuze": "Ongeveer 1 bladzijde",
+    "oordeel": "twijfel",
+    "reden": "Afleider \"Eén woord\" absurd (c).",
+    "hersteld": true,
+    "wijziging": "vervangen door \"Ongeveer 5 bladzijden\" + hint"
+  },
+  {
+    "nr": 219,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 15",
+    "eigenKeuze": "De laatste stap",
+    "oordeel": "goed",
+    "reden": "Klopt.",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 220,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+    "eigenKeuze": "hond × beweging (na herschrijving; oud: miauwen)",
+    "oordeel": "twijfel",
+    "reden": "Toetste alleen een weetje (kat miauwt), geen rij-kolom-lezen (f).",
+    "hersteld": true,
+    "wijziging": "vraag omgebouwd: in welk vakje hoort \"kwispelen\"? opties = vakjes; hints + uitleg herschreven"
+  }
+]

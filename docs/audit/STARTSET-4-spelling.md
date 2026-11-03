@@ -6,15 +6,15 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 Vraag: Hoe schrijf je: het voertuig op rails?
 - ▫️ tren
 - ▫️ treijn
-- ✅ trein
 - ▫️ trijn
+- ✅ trein
 
 ## 2. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: niet groot?
-- ✅ klein
-- ▫️ klijn
 - ▫️ kleen
+- ▫️ klijn
 - ▫️ kleijn
+- ✅ klein
 
 ## 3. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: Hoe schrijf je: een open ruimte in een stad?
@@ -25,119 +25,119 @@ Vraag: Hoe schrijf je: een open ruimte in een stad?
 
 ## 4. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: 'Het ____ speelt met haar pop.' Welk woord is goed?
-- ▫️ maisje
-- ▫️ mijsje
 - ✅ meisje
 - ▫️ meissje
+- ▫️ mijsje
+- ▫️ maisje
 
 ## 5. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 2)
 Vraag: 'De les gaat om drie uur ____.' (= ophouden)
-- ▫️ eintigen
-- ✅ eindigen
-- ▫️ eindiegen
 - ▫️ ijndigen
+- ✅ eindigen
+- ▫️ eintigen
+- ▫️ eindiegen
 
 ## 6. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Jij en ik samen' — welk woordje is dat, goed geschreven?
-- ▫️ mei
 - ✅ wij
 - ▫️ zei
+- ▫️ mei
 - ▫️ wei
 
 ## 7. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: Hoe schrijf je: het voedsel uit Azië (witte korreltjes)?
-- ✅ rijst
-- ▫️ reijst
 - ▫️ reist
+- ▫️ reijst
+- ✅ rijst
 - ▫️ rijsd
 
 ## 8. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: Hoe schrijf je: hoeveel uur het is?
-- ▫️ tijt
 - ▫️ teit
-- ▫️ teid
 - ✅ tijd
+- ▫️ teid
+- ▫️ tijt
 
 ## 9. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Ik ga een brief ____ aan opa.' Welk woord is goed?
+- ▫️ schrijfen
 - ✅ schrijven
 - ▫️ sgrijven
-- ▫️ schrijfen
 - ▫️ schreiven
 
 ## 10. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 3)
 Vraag: 'Wij ____ vandaag lekker thuis.' Welk woord is goed?
-- ▫️ bleifen
 - ▫️ bleiven
+- ▫️ bleifen
 - ✅ blijven
 - ▫️ blijfen
 
 ## 11. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 4)
 Vraag: Hoe schrijf je: op elk moment, steeds?
-- ▫️ alteid
 - ▫️ altijt
-- ▫️ alteit
+- ▫️ alteid
 - ✅ altijd
+- ▫️ alteit
 
 ## 12. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 4)
 Vraag: Hoe schrijf je: wat iets kost?
-- ✅ prijs
 - ▫️ preis
-- ▫️ prijz
 - ▫️ preiz
+- ✅ prijs
+- ▫️ prijz
 
 ## 13. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: een **voertuig op vier wielen**?
 - ▫️ outoo
-- ▫️ outo
 - ✅ auto
+- ▫️ outo
 - ▫️ autoo
 
 ## 14. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: de **maand 8** van het jaar?
-- ▫️ augustes
 - ▫️ ougustus
-- ✅ augustus
 - ▫️ ougustes
+- ✅ augustus
+- ▫️ augustes
 
 ## 15. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: niet sterk gekruid eten?
 - ▫️ flouw
-- ▫️ flauwt
 - ▫️ flou
 - ✅ flauw
+- ▫️ flauwt
 
 ## 16. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 5)
 Vraag: Hoe schrijf je: even rust tussen de lessen?
-- ✅ pauze
-- ▫️ pause
-- ▫️ pouze
 - ▫️ pouse
+- ▫️ pause
+- ✅ pauze
+- ▫️ pouze
 
 ## 17. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het **gele metaal** voor sieraden?
-- ▫️ gaut
 - ✅ goud
-- ▫️ gaud
 - ▫️ gout
+- ▫️ gaud
+- ▫️ gaut
 
 ## 18. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: 'Is dat ___ boek?' (bezittelijk):
-- ▫️ jau
 - ▫️ jauw
 - ✅ jouw
 - ▫️ jou
+- ▫️ jau
 
 ## 19. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het deel van je jas om je arm?
-- ✅ mouw
-- ▫️ mauwe
 - ▫️ mauw
 - ▫️ mouwe
+- ▫️ mauwe
+- ✅ mouw
 
 ## 20. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 6)
 Vraag: Hoe schrijf je: het materiaal van een boomstam?
 - ▫️ hauwt
-- ▫️ haut
-- ✅ hout
 - ▫️ houd
+- ✅ hout
+- ▫️ haut

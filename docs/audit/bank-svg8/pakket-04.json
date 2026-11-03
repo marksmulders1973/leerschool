@@ -1,0 +1,1377 @@
+[
+ {
+  "nr": 166,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Pont-tijden:** de pont vaart elk kwartier: 18:15, 18:30, 18:45 en 19:00 (laatste). Je bent om **18:50** bij de steiger. Welke pont kun je nog halen?",
+  "options": [
+   "Die van 19:00",
+   "Die van 18:45",
+   "Geen enkele meer",
+   "Die van 18:30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die is al weg als jij om 18:50 aankomt.",
+   "Er staat ná 18:50 nog een vertrektijd in het rijtje.",
+   "Die is al twintig minuten weg."
+  ],
+  "niveaus": null,
+  "explanation": "Na 18:50 vertrekt er nog precies één pont — de **laatste** van het rijtje.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 167,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat doe je **EERST** als je op de toets een dienstregeling-vraag krijgt?",
+  "options": [
+   "Kijken wat elke kolom betekent",
+   "Meteen tijden bij elkaar optellen",
+   "De grootste tijd in de tabel kiezen",
+   "De eerste rij van de tabel overnemen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Optellen zonder te weten wát je optelt, gaat vaak mis.",
+   "Groot of klein zegt niets — het gaat om de juiste rij en kolom.",
+   "De eerste rij is lang niet altijd de rij die jíj nodig hebt."
+  ],
+  "niveaus": null,
+  "explanation": "Eerst snappen **wat elke kolom betekent** (vertrek of aankomst?) — dé valkuil bij dienstregelingen is de verkeerde kolom aflezen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 168,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Treintabel:** vertrek Amersfoort 10:04 of 10:34, reistijd naar Den Haag 51 minuten. Je moet er **om 11:00** zijn. Welke trein neem je?",
+  "options": [
+   "Die van 10:04",
+   "Die van 10:34",
+   "Allebei kan",
+   "Geen van beide haalt het"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken uit: 10:34 plus 51 minuten — ben je dan al binnen?",
+   "Eén van de twee komt pas ná 11:00 aan.",
+   "Reken beide aankomsttijden uit vóór je ze allebei afschrijft."
+  ],
+  "niveaus": null,
+  "explanation": "10:04 + 51 min = 10:55 — mooi op tijd. De trein van 10:34 komt pas om 11:25 aan: neem **die van 10:04**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 169,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Zwemkaartjes:** los kaartje € 5, tienbadenkaart € 40. Vanaf hoeveel keer zwemmen ben je met de tienbadenkaart **goedkoper** uit?",
+  "options": [
+   "Vanaf 9 keer",
+   "Vanaf 8 keer",
+   "Vanaf 10 keer",
+   "Vanaf 5 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij 8 keer betaal je los precies évenveel als de kaart — nog niet goedkoper.",
+   "Je hoeft de kaart niet vol te maken om al voordeel te hebben.",
+   "Bij 5 keer los betaal je pas € 25 — dan is de kaart nog duurder."
+  ],
+  "niveaus": null,
+  "explanation": "8 × € 5 = € 40: gelijkspel. Bij **9 keer** kost los € 45 en ben je met de kaart van € 40 dus goedkoper uit.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 170,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Bioscooprooster:** de film start om 14:00, 16:30 of 19:00 en duurt 2 uur. Na afloop fiets je 15 minuten naar huis. Je moet om **18:00 thuis** zijn. Welke voorstelling kun je kiezen?",
+  "options": [
+   "Die van 14:00",
+   "Die van 16:30",
+   "Die van 19:00",
+   "Alle drie kunnen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die film is pas om 18:30 afgelopen — en dan moet je nóg naar huis fietsen.",
+   "Die begint pas ná het tijdstip waarop je thuis moet zijn.",
+   "Reken per voorstelling: eindtijd + fietstijd — passen ze echt alle drie?"
+  ],
+  "niveaus": null,
+  "explanation": "14:00 + 2 uur film + 15 minuten fietsen = 16:15 thuis, ruim op tijd. De andere voorstellingen zijn te laat klaar: **14:00**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 171,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Kinderboerderij:** entree kind € 3, volwassene € 5. Op woensdag zijn kinderen **gratis**. Papa gaat op woensdag met 2 kinderen. Wat betaalt hij in totaal?",
+  "options": [
+   "€ 5",
+   "€ 11",
+   "€ 6",
+   "€ 0"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je telde de kinderen mee — maar welke dag is het?",
+   "Dat is de prijs van twee kinderen op een gewone dag, zonder papa.",
+   "Geldt de woensdag-actie ook voor volwassenen? Lees nog eens."
+  ],
+  "niveaus": null,
+  "explanation": "Kinderen zijn op woensdag gratis; papa betaalt alleen zichzelf: **€ 5**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 172,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Overstappen:** bus A vertrekt om 8:00 en komt om 8:20 op het station aan. De trein vertrekt om 8:25 van dat station. Hoeveel minuten heb je om **over te stappen**?",
+  "options": [
+   "5 minuten",
+   "25 minuten",
+   "20 minuten",
+   "45 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zijn de minuten uit de vertrektijd van de trein, niet je overstaptijd.",
+   "Dat is hoe lang de búsrit duurt.",
+   "Je telde de tijden op in plaats van het verschil te nemen."
+  ],
+  "niveaus": null,
+  "explanation": "Bus binnen om 8:20, trein weg om 8:25: je hebt **5 minuten** om over te stappen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 173,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "In de treintabel staat bij zaterdag een **sterretje (*)**. Onderaan de tabel staat: '* rijdt niet in schoolvakanties'. Het is zomervakantie en zaterdag. Rijdt deze trein?",
+  "options": [
+   "Nee, want in schoolvakanties rijdt deze trein niet",
+   "Ja, het sterretje betekent extra snel",
+   "Ja, sterretjes gelden alleen op zondag",
+   "Dat kun je niet weten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De betekenis van het sterretje staat onderaan de tabel — lees die voetnoot.",
+   "Het sterretje staat nou juist bij zaterdag.",
+   "Je kúnt het weten: de voetnoot legt het precies uit."
+  ],
+  "niveaus": null,
+  "explanation": "Een sterretje verwijst naar een **voetnoot**. Die zegt: niet in schoolvakanties — het is vakantie, dus de trein rijdt **niet**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 174,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Openingstijden supermarkt:** ma-za 8:00-20:00, zo 12:00-18:00. Oma zegt: 'Ik ga zondagochtend om 10:00 boodschappen doen.' Wat klopt er niet aan haar plan?",
+  "options": [
+   "De winkel gaat zondag pas om 12:00 open",
+   "De winkel is zondag de hele dag dicht",
+   "De winkel is om 10:00 alweer gesloten",
+   "Er klopt niets van de tabel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zondag staat wél in de tabel, met eigen tijden.",
+   "Om 10:00 is de winkel op zondag nog niet eens ópen geweest — dus 'alweer' klopt niet.",
+   "De tabel klopt prima — vergelijk oma's tijdstip met de zondag-rij."
+  ],
+  "niveaus": null,
+  "explanation": "Op zondag opent de winkel pas om **12:00** — om 10:00 staat oma voor een dichte deur.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 175,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Prijstabel schoolreisje:** bus € 8 per kind, museum € 6 per kind, groepskorting museum bij 20 of meer kinderen: € 4 per kind. De klas heeft 25 kinderen. Wat kost het reisje **per kind**?",
+  "options": [
+   "€ 12",
+   "€ 14",
+   "€ 10",
+   "€ 8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je gebruikte de museumprijs zónder groepskorting — hoeveel kinderen gaan er mee?",
+   "Je telde de twee museumprijzen op in plaats van bus + museum.",
+   "Dat is alleen de bus — het museum kost ook geld."
+  ],
+  "niveaus": null,
+  "explanation": "Met 25 kinderen geldt de groepskorting: museum € 4. Bus € 8 + museum € 4 = **€ 12** per kind.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 176,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarom staat er in een dienstregeling vaak **'ma-vr'** boven een kolom?",
+  "options": [
+   "Die tijden gelden alleen op maandag tot en met vrijdag",
+   "De bus rijdt alleen in de maand maart",
+   "Dat is de naam van de buslijn",
+   "Die kolom is alleen voor volwassenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het zijn afkortingen van dágen, niet van een maand.",
+   "Een buslijn heeft een nummer als naam.",
+   "Dienstregelingen maken geen verschil tussen kinderen en volwassenen."
+  ],
+  "niveaus": null,
+  "explanation": "**ma-vr** = maandag tot en met vrijdag. In het weekend gelden vaak andere tijden — check altijd de juiste kolom.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 177,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Tabellen combineren:** de bus doet 25 minuten over de rit naar het museum. Het museum opent om 10:00. Bussen vertrekken om 9:15, 9:30 en 9:45. Je wilt er vóór openingstijd zijn, maar **niet langer dan 10 minuten wachten**. Welke bus neem je?",
+  "options": [
+   "Die van 9:30",
+   "Die van 9:15",
+   "Die van 9:45",
+   "Ze komen allemaal even goed uit"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan sta je twintig minuten voor een dichte deur.",
+   "Reken na: die bus komt pas ná openingstijd aan.",
+   "Reken elke aankomsttijd uit — ze verschillen echt."
+  ],
+  "niveaus": null,
+  "explanation": "9:30 + 25 min = 9:55 aankomst: vijf minuten wachten, precies goed. De bus van 9:15 is er al om 9:40 (te lang wachten), die van 9:45 pas om 10:10 (te laat): **9:30**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 178,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Treinkaartjes:** enkele reis € 4,50, retour (heen én terug) € 8,00. Twee kinderen gaan samen heen en terug. Wat is de **goedkoopste** manier?",
+  "options": [
+   "2 retourkaartjes (€ 16,00)",
+   "4 enkele reizen (€ 18,00)",
+   "2 enkele reizen (€ 9,00)",
+   "1 retourkaartje (€ 8,00)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken na: 4 × € 4,50 — is dat minder dan twee retours?",
+   "Daarmee kunnen jullie wel héén, maar niet meer terug.",
+   "Eén kaartje is voor één persoon — jullie zijn met z'n tweeën."
+  ],
+  "niveaus": null,
+  "explanation": "Per kind is een retour van € 8,00 goedkoper dan 2 × € 4,50 = € 9,00. Voor twee kinderen: 2 × € 8,00 = **€ 16,00**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 179,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "In de bustabel staat: 'vertrek elk **half uur**, eerste bus 7:10'. Welk rijtje vertrektijden klopt daarbij?",
+  "options": [
+   "7:10 — 7:40 — 8:10 — 8:40",
+   "7:10 — 7:30 — 7:50 — 8:10",
+   "7:10 — 8:10 — 9:10 — 10:10",
+   "7:10 — 7:15 — 7:20 — 7:25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zijn stappen van twintig minuten.",
+   "Dat zijn stappen van een héél uur.",
+   "Dat zijn stappen van vijf minuten."
+  ],
+  "niveaus": null,
+  "explanation": "Elk half uur = steeds 30 minuten erbij: 7:10, 7:40, 8:10, 8:40. **Het eerste rijtje** klopt.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 180,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Tabellen & dienstregelingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**Zwemles vergelijken:** zwemschool A vraagt € 9 per les. Zwemschool B vraagt € 30 per maand voor 4 lessen. Welke school is **per les** goedkoper?",
+  "options": [
+   "Zwemschool B",
+   "Zwemschool A",
+   "Ze kosten per les evenveel",
+   "Dat kun je niet berekenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken de maandprijs van de ander eerst om naar de prijs per lés.",
+   "Reken na: € 30 gedeeld door 4 lessen — is dat echt hetzelfde als € 9?",
+   "Je kúnt het berekenen: deel de maandprijs door het aantal lessen."
+  ],
+  "niveaus": null,
+  "explanation": "B: € 30 ÷ 4 lessen = € 7,50 per les. Dat is minder dan € 9: **zwemschool B** is per les goedkoper.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 181,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Voor je werkstuk over **dolfijnen** vind je vier bronnen. Welke is het **betrouwbaarst**?",
+  "options": [
+   "De website van een zeeaquarium met echte dolfijnen-verzorgers",
+   "Een grappig dolfijnen-filmpje op social media",
+   "Een verhaaltje uit een stripboek",
+   "Een oud forum-bericht van 'dolfijnfan123'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Grappig wil niet zeggen dat de feiten kloppen.",
+   "Een strip is verzonnen — leuk om te lezen, geen feitenbron.",
+   "Wie is die persoon eigenlijk? Dat kun je niet controleren."
+  ],
+  "niveaus": null,
+  "explanation": "Kies een bron van **echte deskundigen** (de verzorgers van een zeeaquarium). Vraag altijd: wie schrijft dit en heeft die er verstand van?",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 182,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zoekt informatie over tandenpoetsen. Op een site staat: 'SuperWit tandpasta maakt je tanden 3× witter! Koop nu!' Wat voor soort tekst is dit?",
+  "options": [
+   "Reclame — de maker wil iets verkopen",
+   "Betrouwbare informatie van een tandarts",
+   "Een nieuwsbericht",
+   "Een tekst uit een schoolboek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een tandarts roept niet 'Koop nu!'",
+   "Een nieuwsbericht vertelt wat er gebeurd is, zonder verkooppraatje.",
+   "Schoolboeken proberen je niets te verkopen."
+  ],
+  "niveaus": null,
+  "explanation": "Woorden als 'Koop nu!' verraden **reclame**: de schrijver wil vooral iets verkopen, niet eerlijk informeren.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 183,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt weten **hoe oud de Eiffeltoren is**. Welke zoekwoorden werken het best?",
+  "options": [
+   "eiffeltoren bouwjaar",
+   "toren",
+   "frankrijk vakantie leuk",
+   "hoe zit dat eigenlijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat ene woord is veel te breed — je vindt duizenden torens.",
+   "Daarmee vind je vakantiesites, geen jaartal.",
+   "Zonder onderwerp weet de zoekmachine niet waar je het over hebt."
+  ],
+  "niveaus": null,
+  "explanation": "Goede zoekwoorden zijn **kort en precies**: het onderwerp plus wat je wilt weten.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 184,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je hebt een boek over de ruimte. Je wilt snel weten op welke bladzijde het woord **'Saturnus'** voorkomt. Waar kijk je?",
+  "options": [
+   "In het register achterin",
+   "In de inhoudsopgave voorin",
+   "Op de kaft van het boek",
+   "Op de eerste bladzijde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De inhoudsopgave toont alleen hoofdstuk-titels, geen losse woorden.",
+   "Op de kaft staan de titel en de schrijver.",
+   "Daar begint hooguit hoofdstuk 1."
+  ],
+  "niveaus": null,
+  "explanation": "Voor één specifiek woord gebruik je het **register**: de alfabetische lijst met bladzijnummers achterin.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 185,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je vindt twee artikelen over 'het nieuwste voetbal-EK'. Artikel 1 is uit 2012, artikel 2 uit dit jaar. Welke gebruik je?",
+  "options": [
+   "Artikel 2, want nieuws veroudert snel",
+   "Artikel 1, want ouder is betrouwbaarder",
+   "Allebei zijn even bruikbaar",
+   "Geen van beide"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij nieuws is oud juist een probleem — dat EK is allang voorbij.",
+   "Voor 'het nieuwste' maakt de datum juist álles uit.",
+   "Eén artikel past prima bij je vraag."
+  ],
+  "niveaus": null,
+  "explanation": "Check altijd de **datum** van een bron. Voor actueel nieuws kies je de **nieuwste**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 186,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Onderaan een website over medicijnen staat: 'Deze site is gemaakt door de fabrikant van pil X.' Waarom is dat belangrijk om te weten?",
+  "options": [
+   "De maker verdient aan pil X en is dus niet neutraal",
+   "Fabrikanten weten altijd alles het best",
+   "Het maakt nooit uit wie iets schrijft",
+   "Websites van bedrijven zijn altijd fout"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verstand hebben van iets is niet hetzelfde als éérlijk zijn over de nadelen.",
+   "De afzender bepaalt juist hóé je de informatie moet lezen.",
+   "Altijd fout is te sterk — maar je moet wel iets in de gaten houden. Wat?"
+  ],
+  "niveaus": null,
+  "explanation": "Kijk altijd naar de **afzender**: wie verdient hieraan? Een fabrikant vertelt vooral de vóórdelen van het eigen product.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 187,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat doe je **EERST** als je informatie gaat zoeken voor een werkstuk?",
+  "options": [
+   "Bedenken wat je precies wilt weten",
+   "Zomaar wat rondklikken op internet",
+   "De eerste de beste site helemaal overschrijven",
+   "Alvast plaatjes verzamelen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zonder doel klik je een uur rond zonder iets te vinden.",
+   "Overschrijven mag sowieso niet — en is die eerste site wel goed?",
+   "Plaatjes komen later — eerst weten waar je werkstuk over gaat."
+  ],
+  "niveaus": null,
+  "explanation": "Bedenk eerst je **onderzoeksvraag**: wat wil ik precies weten? Dan pas zoeken — dat scheelt veel tijd.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 188,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Bovenaan de zoekresultaten staat een blokje met het label **'Gesponsord'**. Wat betekent dat?",
+  "options": [
+   "Iemand heeft betaald voor die plek",
+   "Dit is het beste zoekresultaat",
+   "Deze site is door school goedgekeurd",
+   "Deze site is gratis te gebruiken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die plek bovenaan is gekócht, niet verdiend met kwaliteit.",
+   "Scholen keuren geen zoekresultaten goed.",
+   "Bijna alle sites zijn gratis te bekijken — daar gaat dat label niet over."
+  ],
+  "niveaus": null,
+  "explanation": "**Gesponsord** = betaalde reclame. De maker betaalde om bovenaan te staan; het zegt niets over hoe goed of betrouwbaar de site is.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 189,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk webadres hoort waarschijnlijk bij de **Nederlandse overheid**?",
+  "options": [
+   "www.rijksoverheid.nl",
+   "www.goedkopegames.shop",
+   "www.piets-blog.net",
+   "www.snelrijkworden.com"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een adres met 'shop' hoort bij een verkoper.",
+   "Een blog is de mening van één persoon.",
+   "Beloften over snel rijk worden zijn juist een waarschuwingssignaal."
+  ],
+  "niveaus": null,
+  "explanation": "**Rijksoverheid.nl** is de officiële site van de overheid — betrouwbaar voor regels en feiten over Nederland.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 190,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je leest op een site: 'IJsberen zijn paars. Bron: dat zei mijn buurman.' Waarom is dit **geen sterke bron**?",
+  "options": [
+   "De buurman is geen deskundige",
+   "Buren vertellen altijd leugens",
+   "IJsberen bestaan helemaal niet",
+   "Paars is geen echte kleur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Altijd liegen is te sterk — waar draait het écht om bij een bron?",
+   "Ze bestaan echt — het gaat om wíé iets beweert.",
+   "Het gaat niet om de kleur, maar om de onderbouwing."
+  ],
+  "niveaus": null,
+  "explanation": "Een sterke bron komt van een **deskundige die je kunt controleren**, niet van 'iemand zei het'.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 191,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zoekt met de woorden 'jaguar snelheid' en krijgt vooral auto-sites. Wat is de **beste aanpassing** van je zoekopdracht?",
+  "options": [
+   "Zoek op 'jaguar dier snelheid'",
+   "Zoek alleen nog op 'snelheid'",
+   "Zoek op 'auto'",
+   "Stop maar met zoeken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan weet de zoekmachine nog steeds niet wélke snelheid je bedoelt.",
+   "Dan krijg je juist nóg meer auto's.",
+   "Met één extra woord los je dit gewoon op."
+  ],
+  "niveaus": null,
+  "explanation": "Jaguar is een dier én een automerk. Voeg een woord toe dat vertelt wat jíj bedoelt — dan snapt de zoekmachine het.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 192,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het verschil tussen een **feit** en een **mening**?",
+  "options": [
+   "Een feit kun je controleren, een mening niet",
+   "Een feit is altijd langer opgeschreven",
+   "Een mening staat altijd bovenaan",
+   "Er is eigenlijk helemaal geen verschil"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lengte zegt niets — een kort zinnetje kan ook een feit zijn.",
+   "De plek op de pagina zegt niets over feit of mening.",
+   "Er is wél verschil. Kun je 'pizza is lekker' nakijken?"
+  ],
+  "niveaus": null,
+  "explanation": "Een **feit** kun je nakijken ('de Rijn stroomt door Nederland'), een **mening** is wat iemand vindt ('de Rijn is de mooiste rivier').",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 193,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is een **mening**?",
+  "options": [
+   "'Voetbal is de leukste sport die er is.'",
+   "'Een voetbalveld is ongeveer 100 meter lang.'",
+   "'Het WK voetbal is elke vier jaar.'",
+   "'Een voetbalwedstrijd duurt 2 × 45 minuten.'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat kun je gewoon nameten — dus controleerbaar.",
+   "Dat kun je opzoeken en controleren.",
+   "Dat staat vast in de spelregels."
+  ],
+  "niveaus": null,
+  "explanation": "'De **leukste** sport' — dat víndt iemand. Woorden als leukste, mooiste en beste wijzen op een **mening**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 194,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je wilt controleren of een spannend nieuwsbericht **echt waar** is. Wat is de beste check?",
+  "options": [
+   "Kijken of andere betrouwbare sites hetzelfde melden",
+   "Tellen hoeveel likes het bericht heeft",
+   "Kijken of er een mooi plaatje bij staat",
+   "Het bericht meteen doorsturen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel likes betekent populair, niet waar.",
+   "Plaatjes kun je tegenwoordig zo namaken.",
+   "Doorsturen vóór je checkt — zo verspreid je juist nepnieuws."
+  ],
+  "niveaus": null,
+  "explanation": "Echt nieuws vind je bij **meerdere betrouwbare bronnen** tegelijk. Staat het maar op één plek? Wees extra kritisch.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 195,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "**Inhoudsopgave:** '1. Vulkanen blz. 4 — 2. Aardbevingen blz. 12 — 3. Tsunami's blz. 20'. Op welke bladzijde **begint** het hoofdstuk over aardbevingen?",
+  "options": [
+   "Op bladzijde 12",
+   "Op bladzijde 4",
+   "Op bladzijde 20",
+   "Op bladzijde 2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar begint het hoofdstuk over vulkanen.",
+   "Daar begint het hoofdstuk over tsunami's.",
+   "Dat is het hóófdstuk-nummer, niet de bladzijde."
+  ],
+  "niveaus": null,
+  "explanation": "Achter elk hoofdstuk staat de beginbladzijde: aardbevingen begint op **blz. 12**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 196,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Zelfde inhoudsopgave: hoofdstuk 'Aardbevingen' begint op blz. 12 en het volgende hoofdstuk op blz. 20. Op welke bladzijden kun je over aardbevingen **lezen**?",
+  "options": [
+   "Blz. 12 tot en met 19",
+   "Blz. 12 tot en met 20",
+   "Alleen blz. 12",
+   "Blz. 20 en verder"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op blz. 20 begint al het vólgende hoofdstuk.",
+   "Een hoofdstuk is langer dan één bladzijde.",
+   "Daar begint juist het hoofdstuk over tsunami's."
+  ],
+  "niveaus": null,
+  "explanation": "Het volgende hoofdstuk start op blz. 20, dus aardbevingen loopt van **blz. 12 t/m 19**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 197,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het verschil tussen de **inhoudsopgave** en het **register** van een boek?",
+  "options": [
+   "Inhoudsopgave op hoofdstuk, register op alfabet",
+   "Ze zijn hetzelfde, alleen met een andere naam",
+   "Register staat voorin, inhoudsopgave achterin",
+   "Inhoudsopgave is alleen voor juffen en meesters"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Er is wél verschil — kijk wat er in elk lijstje stáát.",
+   "Meestal is het precies andersom.",
+   "Iedereen gebruikt de inhoudsopgave, niet alleen juffen en meesters."
+  ],
+  "niveaus": null,
+  "explanation": "**Inhoudsopgave** (voorin): hoofdstukken in boek-volgorde. **Register** (achterin): losse trefwoorden op alfabet met bladzijnummers.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 198,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Een site over huisdieren heeft géén naam van een schrijver, géén datum en heel veel opspringende reclame. Wat is verstandig?",
+  "options": [
+   "Extra kritisch zijn en een andere bron erbij zoeken",
+   "De site vertrouwen, want hij gaat tenminste over huisdieren",
+   "Alles overnemen in je werkstuk",
+   "Op de reclames klikken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het onderwerp zegt niets over de betrouwbaarheid.",
+   "Overnemen zonder check is riskant — je weet niet eens wie dit schreef.",
+   "Reclames aanklikken maakt de informatie niet beter."
+  ],
+  "niveaus": null,
+  "explanation": "Geen schrijver + geen datum + veel reclame = drie **waarschuwingssignalen**. Zoek een bron die wél laat zien wie erachter zit.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 199,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Voor je spreekbeurt wil je weten wat er in de Tweede Wereldoorlog in **jouw eigen dorp** gebeurde. Welke bron past het best?",
+  "options": [
+   "Het archief of museum van je dorp",
+   "Een wereldwijde game-site over oorlog",
+   "Een Amerikaanse oorlogsfilm",
+   "Een songtekst over de oorlog"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Games gaan over spelen, niet over jouw dorp van toen.",
+   "Een film is vaak deels verzonnen én gaat niet over jouw dorp.",
+   "Songteksten zijn kunst, geen geschiedenisles."
+  ],
+  "niveaus": null,
+  "explanation": "Voor lokale geschiedenis: het **plaatselijke museum of archief** — die bewaren juist informatie over jouw eigen omgeving.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 200,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "In een filmpje beweert iemand dat je van wortels eten 's nachts kunt zien. Hoe **check** je of dat klopt?",
+  "options": [
+   "Opzoeken bij een betrouwbare bron",
+   "Geloven, want het filmpje heeft veel views",
+   "Zelf een week lang veel wortels eten",
+   "Het filmpje nog een keer bekijken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Views tellen kijkers, geen waarheid.",
+   "Dat is geen handig of gezond onderzoek.",
+   "Nóg een keer kijken geeft je dezelfde bewering, geen bewijs."
+  ],
+  "niveaus": null,
+  "explanation": "Check beweringen bij een **onafhankelijke, deskundige bron**. Veel views maken iets niet waar.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 201,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Je zoekopdracht 'piramide egypte' geeft te veel resultaten. Je wilt specifiek weten hoe piramides **gebóúwd** werden. Welk zoekwoord voeg je toe?",
+  "options": [
+   "bouw",
+   "leuk",
+   "vakantie",
+   "piramide"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Leuk' vertelt de zoekmachine niets over jouw vraag.",
+   "Dan krijg je reissites.",
+   "Dat woord zit al in je zoekopdracht."
+  ],
+  "niveaus": null,
+  "explanation": "Voeg het woord toe dat bij je déélvraag hoort: hoe werden ze gebouwd → zoekwoord **'bouw'** erbij.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 202,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarom zet je onderaan je werkstuk een **bronnenlijst**?",
+  "options": [
+   "Zodat de lezer je informatie kan nagaan",
+   "Zodat de lezer ziet hoe lang je eraan werkte",
+   "Zodat de juf weet welke boeken terug moeten",
+   "Zodat je die teksten letterlijk mag overnemen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Aan een lijst met titels en websites zie je niet hoeveel tijd iemand aan een werkstuk besteedde. Wat kan een lezer wél met die titels en websites?",
+   "Een bronnenlijst is niet voor het terugbrengen van boeken. Hij is voor iedereen die je werkstuk leest. Wat heeft die lezer eraan?",
+   "Ook met een bronnenlijst schrijf je de informatie in je eigen woorden op. Letterlijk overnemen mag dus niet zomaar."
+  ],
+  "niveaus": null,
+  "explanation": "Met een **bronnenlijst** kan de lezer jouw informatie controleren — zo laat je zien dat je werk klopt.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 203,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Een advertentie is zó gemaakt dat hij op een **nieuwsbericht** lijkt. Waaraan herken je dat het tóch reclame is?",
+  "options": [
+   "Er staat 'advertentie' of 'gesponsord' bij",
+   "Het lettertype is anders dan anders",
+   "Nieuwsberichten hebben nooit foto's",
+   "Reclame is altijd langer dan nieuws"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lettertypes zeggen weinig — kijk naar woorden en bedoeling.",
+   "Echte nieuwsberichten hebben juist vaak foto's.",
+   "Lengte zegt niets over de bedoeling van een tekst."
+  ],
+  "niveaus": null,
+  "explanation": "Let op het label ('advertentie', 'gesponsord') en op de bedoeling: wordt er iets **aangeprezen of verkocht**? Dan is het reclame.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 204,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Bronnen & internet — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat doe je **EERST** bij het beoordelen van een onbekende website?",
+  "options": [
+   "Afzender en datum checken",
+   "De achtergrondkleur beoordelen",
+   "Alle links aanklikken",
+   "De tekst meteen kopiëren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kleur is smaak, geen betrouwbaarheid.",
+   "Zomaar overal op klikken kan je op rare sites brengen.",
+   "Kopiëren mag niet — en eerst check je of de informatie klopt."
+  ],
+  "niveaus": null,
+  "explanation": "Check **afzender + datum**: wie schreef dit, en is het nog actueel? Dat zijn de twee snelste betrouwbaarheids-checks.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 205,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Woordweb:** in het midden staat 'WEER'. Eromheen staan: regen, wind, zon en één leeg rondje. Welk woord past het best in het lege rondje?",
+  "options": [
+   "sneeuw",
+   "voetbal",
+   "banaan",
+   "gitaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heeft dat iets met het midden-woord te maken?",
+   "Kun je dat eten of valt het uit de lucht?",
+   "Dat hoort bij muziek, niet bij dit web."
+  ],
+  "niveaus": null,
+  "explanation": "Alle rondjes moeten bij het midden-woord horen: regen, wind, zon en... **sneeuw**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 206,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Een alinea gaat over: 'Egels slapen de hele winter. Hun hartslag wordt heel langzaam. Pas in de lente worden ze weer wakker.' Welk **kopje** past het best boven deze alinea?",
+  "options": [
+   "Winterslaap",
+   "Wat egels eten",
+   "Vijanden van de egel",
+   "Egels als huisdier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Over eten staat er niets in de alinea.",
+   "Er komt geen enkele vijand voorbij.",
+   "De alinea gaat over egels in de natuur, niet thuis."
+  ],
+  "niveaus": null,
+  "explanation": "Het kopje vat de **hoofdzaak** samen: de hele winter slapen = **winterslaap**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 207,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Instructie 'plantje zaaien' (door elkaar):** A) leg het zaadje op de aarde, B) vul de pot met aarde, C) geef een beetje water, D) zet de pot in het licht. Wat doe je **EERST**?",
+  "options": [
+   "B — vul de pot met aarde",
+   "A — leg het zaadje op de aarde",
+   "C — geef een beetje water",
+   "D — zet de pot in het licht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waar leg je het zaadje óp als de pot nog leeg is?",
+   "Water geven in een leeg potje heeft weinig zin.",
+   "In het licht zetten komt pas als alles in de pot zit."
+  ],
+  "niveaus": null,
+  "explanation": "Zonder aarde kan er geen zaadje liggen: **eerst de pot vullen** met aarde.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 208,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Tekst: 'De brandweer bluste gisteren een grote brand in de sporthal. De brandweerauto is rood. Niemand raakte gewond.' Welke zin is een **bijzaak**?",
+  "options": [
+   "De brandweerauto is rood.",
+   "De brandweer bluste een grote brand.",
+   "De brand was in de sporthal.",
+   "Niemand raakte gewond."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is juist waar het hele bericht om draait.",
+   "De plek van de brand is belangrijke informatie.",
+   "Of er gewonden zijn is juist heel belangrijk nieuws."
+  ],
+  "niveaus": null,
+  "explanation": "De kleur van de auto doet er voor het nieuws niet toe: **bijzaak**. Hoofdzaak = brand geblust, niemand gewond.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 209,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Mindmap 'Gezond leven':** de takken zijn 'bewegen', 'goed slapen' en één lege tak. Welke tak past er het best bij?",
+  "options": [
+   "gezond eten",
+   "tv-kijken tot middernacht",
+   "elke dag snoepen",
+   "de hele dag gamen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Past heel laat opblijven bij het midden-woord van deze mindmap?",
+   "Hoort heel veel snoep bij dit thema?",
+   "Uren stilzitten past niet echt bij dit thema."
+  ],
+  "niveaus": null,
+  "explanation": "Alle takken horen bij 'gezond leven': bewegen, goed slapen én **gezond eten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 210,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Instructie 'tanden poetsen':** 1) pak je tandenborstel, 2) doe er tandpasta op, 3) ???, 4) spoel je mond. Welke stap hoort op plek 3?",
+  "options": [
+   "Poets twee minuten je tanden",
+   "Ga naar bed",
+   "Draai de dop van de tandpasta",
+   "Koop een nieuwe borstel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat komt pas ná het hele poets-ritueel.",
+   "Dat hoort vóór stap 2 — anders krijg je er niets uit.",
+   "Dat doe je pas als de borstel versleten is."
+  ],
+  "niveaus": null,
+  "explanation": "Tussen tandpasta erop doen en je mond spoelen zit natuurlijk het **poetsen zelf**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 211,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Waarvoor gebruik je een **schema of woordweb** bij het leren?",
+  "options": [
+   "Om de hoofdzaken te ordenen",
+   "Om de tekst langer te maken",
+   "Om moeilijke woorden te verstoppen",
+   "Om sneller te kunnen gummen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een schema maakt je leerstof juist kórter en overzichtelijker.",
+   "Verstoppen helpt niet bij leren.",
+   "Gummen heeft er niets mee te maken."
+  ],
+  "niveaus": null,
+  "explanation": "Een schema **ordent de hoofdzaken**: je ziet in één oogopslag hoe de stof in elkaar zit.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 212,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Een tekst over vulkanen heeft vier kopjes: 'Wat is een vulkaan?', 'Beroemde vulkanen', 'Uitbarstingen' en 'Leven bij een vulkaan'. Onder welk kopje zoek je informatie over de **Vesuvius in Italië**?",
+  "options": [
+   "Beroemde vulkanen",
+   "Wat is een vulkaan?",
+   "Uitbarstingen",
+   "Leven bij een vulkaan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die alinea legt het begrip uit, zonder namen van echte bergen.",
+   "Daar lees je hóé een uitbarsting werkt.",
+   "Daar gaat het over de mensen die er wonen."
+  ],
+  "niveaus": null,
+  "explanation": "De Vesuvius is een bekende vulkaan met een naam — die vind je onder **'Beroemde vulkanen'**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 213,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat hoort **wél** in een goede samenvatting van een tekst?",
+  "options": [
+   "De hoofdzaken, in je eigen woorden",
+   "Elke zin van de tekst, letterlijk",
+   "Alleen de grapjes uit de tekst",
+   "De naam van de drukker van het boek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan is het geen samenvatting maar een kopie.",
+   "Grapjes zijn bijna altijd bijzaak.",
+   "Wie het boek drukte, zegt niets over de inhoud."
+  ],
+  "niveaus": null,
+  "explanation": "Samenvatten = de **hoofdzaken** kort opschrijven **in eigen woorden**. Bijzaken laat je weg.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 214,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Stappenplan werkstuk:** A) informatie zoeken, B) onderwerp kiezen, C) werkstuk schrijven, D) tekst nakijken. Wat is de juiste **volgorde**?",
+  "options": [
+   "B → A → C → D",
+   "A → B → C → D",
+   "C → B → A → D",
+   "B → C → A → D"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kun je al informatie zoeken als je nog geen onderwerp hebt?",
+   "Schrijven zonder informatie wordt lastig.",
+   "Informatie zoeken nádat je alles al schreef — welke stap zit daar verkeerd?"
+  ],
+  "niveaus": null,
+  "explanation": "Eerst kiezen waar het over gaat (B), dan informatie zoeken (A), dan schrijven (C) en nakijken (D).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 215,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "In een **stroomschema** staat: 'Regent het? → JA: neem je regenjas mee. → NEE: ...'. Wat past er logisch op de puntjes?",
+  "options": [
+   "Laat je regenjas thuis",
+   "Neem tóch je regenjas mee",
+   "Neem een paraplu én laarzen mee",
+   "Blijf de hele dag binnen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat was al het antwoord bij JA.",
+   "Bij droog weer nóg meer regenspullen meenemen?",
+   "Het schema gaat over wat je meeneemt, niet over binnenblijven."
+  ],
+  "niveaus": null,
+  "explanation": "Een stroomschema geeft per antwoord een andere route. Geen regen? Dan is er ook **geen regenjas nodig**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 216,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Waaraan herken je meestal de **hoofdzaak** van een alinea?",
+  "options": [
+   "Die staat vaak in de eerste zin",
+   "Die staat altijd tussen haakjes",
+   "Dat is altijd het langste woord",
+   "Die staat in een voetnoot onderaan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tussen haakjes staat juist vaak éxtra (bij)informatie.",
+   "Lange woorden zijn niet automatisch belangrijk.",
+   "Voetnoten zijn extraatjes onderaan de bladzijde."
+  ],
+  "niveaus": null,
+  "explanation": "De **kernzin** — meestal de eerste zin — vertelt waar de alinea over gaat. De rest legt uit of geeft voorbeelden.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 217,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Woordweb 'VERKEER':** het web heeft drie takken: *voertuigen*, *borden en lichten* en *oversteken*. Je wilt vier woorden een plek geven: *fiets*, *stoplicht*, *zebrapad* en *spruitjes*. Welk woord past aan **geen enkele** tak?",
+  "options": [
+   "spruitjes",
+   "fiets",
+   "stoplicht",
+   "zebrapad"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de namen van de drie takken nog eens. Kan dit woord echt nergens bij?",
+   "Ga de takken één voor één langs. Past dit woord echt bij geen enkele tak?",
+   "Kijk niet alleen of een woord met verkeer te maken heeft, maar zoek ook de tak waar het bij hoort."
+  ],
+  "niveaus": null,
+  "explanation": "Fiets hoort bij *voertuigen*, stoplicht bij *borden en lichten* en zebrapad bij *oversteken*. Voor **spruitjes** is er geen tak: dat woord hoort bij eten en valt buiten het web.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 218,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "Je maakt een samenvatting van een hoofdstuk van **10 bladzijden**. Hoe lang wordt een goede samenvatting ongeveer?",
+  "options": [
+   "Ongeveer 1 bladzijde",
+   "Precies 10 bladzijden",
+   "Minstens 20 bladzijden",
+   "Eén woord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Even lang als het origineel is geen samenvatting meer.",
+   "Langer dan het origineel is precies het omgekeerde van samenvatten.",
+   "In één woord passen geen hoofdzaken."
+  ],
+  "niveaus": null,
+  "explanation": "Een samenvatting is veel **korter** dan de tekst zelf — ongeveer een tiende is een mooie richtlijn.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 219,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "In een instructie staan de signaalwoorden 'eerst', 'daarna', 'vervolgens' en 'ten slotte'. Welke stap hoort bij **'ten slotte'**?",
+  "options": [
+   "De laatste stap",
+   "De eerste stap",
+   "De tweede stap",
+   "Een stap die je mag overslaan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daarvoor gebruik je het woord 'eerst'.",
+   "Daarvoor gebruik je 'daarna'.",
+   "Signaalwoorden geven volgorde aan, niet wat je mag overslaan."
+  ],
+  "niveaus": null,
+  "explanation": "**Ten slotte** = tot slot = de **laatste** stap. Signaalwoorden verklappen de volgorde.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 220,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "stapTitel": "Schema's & samenvatten — ~20 min",
+  "vanafGroep": null,
+  "q": "**Vergelijk-tabel:** je vergelijkt hond en kat met de rijen 'vacht', 'geluid' en 'beweging'. Wat vul je in bij het vakje **kat × geluid**?",
+  "options": [
+   "miauwen",
+   "blaffen",
+   "hinniken",
+   "zwemmen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het geluid van de hond.",
+   "Dat is het geluid van een paard.",
+   "Dat is een beweging, geen geluid."
+  ],
+  "niveaus": null,
+  "explanation": "In het vakje kat + geluid hoort **miauwen** — combineer altijd de juiste rij met de juiste kolom.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

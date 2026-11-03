@@ -1,0 +1,200 @@
+[
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 1",
+  "oud": "            basis: \"Stappen met pijlen.\",",
+  "nieuw": "            basis: \"Denk aan het woord 'stroom': iets loopt van het ene punt naar het volgende. Wat teken je dan tussen de vakjes?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 2",
+  "oud": "            basis: \"Recept lezen.\",",
+  "nieuw": "            basis: \"Vraag jezelf af: wat moet je weten voordat je iets kunt afwegen of mengen?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 5",
+  "oud": "q: \"In een **boomdiagram** met 'Dieren → Zoogdieren / Vogels' — wat is **Hond**?\",",
+  "nieuw": "q: \"In een **boomdiagram** staat 'Dieren → Zoogdieren / Vogels'. Waar hoort **Hond**?\",",
+  "reden": "vraag 'wat is Hond?' paste niet bij opties 'Onder ...'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 7",
+  "oud": "q: \"Stappenplan: 1. Ingrediënten 2. Recept 3. Mengen 4. Bakken. **Welke stap is fout**?\",",
+  "nieuw": "q: \"Stappenplan: 1. Ingrediënten pakken 2. Recept lezen 3. Mengen 4. Bakken. Wat is er **mis** met dit stappenplan?\",",
+  "reden": "telegramstijl; 'welke stap' paste niet bij de opties"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 7",
+  "oud": "            simpeler: \"Recept eerst lezen, anders weet je niet wat je nodig hebt.\",",
+  "nieuw": "            simpeler: \"Loop het plan na alsof je het zelf doet: weet je bij stap 1 al wélke ingrediënten je moet pakken?\",",
+  "reden": "hulpniveau gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 9",
+  "oud": "options: [\"Je doel halen in de goede volgorde\", ",
+  "nieuw": "options: [\"Stap voor stap in de goede volgorde werken\", ",
+  "reden": "goede optie herhaalde het woord 'doel' uit de vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 11",
+  "oud": "wrongHints: [null, \"Zoek in een stroomdiagram het allereerste vak op. Heeft dat de vorm van een ruit?\", \"Zoek het allereerste vak op. Heeft dat rechte hoeken?\", \"Een driehoek zie je bijna nooit in een stroomdiagram. Hoe ziet het allereerste vak eruit?\"],",
+  "nieuw": "wrongHints: [null, \"Een ruit gebruik je voor een keuze met ja en nee. Is het begin van een schema een keuze?\", \"Een rechthoek gebruik je voor een gewone stap. Start en einde krijgen een eigen vorm, zodat je ze meteen herkent.\", \"Een driehoek wordt in een stroomdiagram bijna nooit gebruikt. Welke vorm herken je van het begin en het eind?\"],",
+  "reden": "hints verwezen naar een stroomdiagram dat het kind niet ziet"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 16",
+  "oud": "q: \"Boomdiagram: 'Sport → Voetbal / Tennis / Hockey'. Hoeveel **takken**?\",",
+  "nieuw": "q: \"Boomdiagram: 'Sport → Voetbal / Tennis / Hockey'. Hoeveel **takken** hangen er onder Sport?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 19",
+  "oud": "q: \"In een **stappenplan-schema** wijzen de pijlen...\",",
+  "nieuw": "q: \"Wat laten de pijlen in een **stappenplan-schema** zien?\",",
+  "reden": "zin + opties liepen grammaticaal niet ('wijzen ... welke stap')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 19",
+  "oud": "            basis: \"Volgorde van stappen.\",",
+  "nieuw": "            basis: \"Kijk naar de richting van een pijl: van welke stap naar welke stap wijst hij?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 20",
+  "oud": "q: \"**Tijdlijn** met jaartallen: 1900-1950-2000. Tussen welke 2 ligt **1975**?\",",
+  "nieuw": "q: \"**Tijdlijn** met jaartallen: 1900-1950-2000. Tussen welke twee jaartallen ligt **1975**?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 20",
+  "oud": "            basis: \"1950 en 2000.\",",
+  "nieuw": "            basis: \"Vergelijk 1975 met elk jaartal op de tijdlijn: is het later of eerder dan 1950? En dan 2000?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 25",
+  "oud": "wrongHints: [null, \"Volg de pijl: wat staat er direct vóór de vos?\", \"Eet een vos gras? Kijk welke pijl direct naar de vos wijst.\",",
+  "nieuw": "wrongHints: [null, \"Gras staat aan het begin van de keten. Wijst de pijl vanaf gras naar de vos?\", \"Eet een vos ook gras? Kijk welke pijl precies naar de vos wijst.\",",
+  "reden": "hint wees het goede antwoord aan ('wat staat direct vóór de vos')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 25",
+  "oud": "            basis: \"Konijn.\",",
+  "nieuw": "            basis: \"In een voedselketen betekent de pijl: 'wordt opgegeten door'. Welke pijl wijst naar de vos?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 27",
+  "oud": "Wat is **oorzaak**?\",",
+  "nieuw": "Wat is de **oorzaak**?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 28",
+  "oud": "q: \"Een schema met **1 top en meerdere takken** eronder heet een...\",",
+  "nieuw": "q: \"Een schema met bovenaan één hoofdbegrip, dat zich steeds verder splitst in kleinere groepen, heet een...\",",
+  "reden": "'top + takken' verklapte 'boom'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 28",
+  "oud": "wrongHints: [null, \"Cirkel = verdeling van 1 geheel, niet vertakkend.\", \"Een lijn loopt door, zonder takken.\", \"Tabel = rijen + kolommen, geen vertakking.\"],",
+  "nieuw": "wrongHints: [null, \"Een cirkeldiagram verdeelt één geheel in stukken. Zie je daar groepen ónder groepen?\", \"Een lijngrafiek laat zien hoe iets verandert. Splitst een lijn zich in groepen?\", \"Een tabel heeft rijen en kolommen naast elkaar. Hangen daar groepen onder elkaar?\"],",
+  "reden": "telegram-hints, nu denkprikkels"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 32",
+  "oud": "\"Zoogdieren zijn belangrijker\", ",
+  "nieuw": "\"Zoogdieren zijn belangrijker dan de andere dieren\", ",
+  "reden": "goede optie viel op als enige lange/specifieke"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 32",
+  "oud": "wrongHints: [null, \"Lager in de boom = specifieker, niet minder belangrijk.\", \"Andersom: de bovenste groep omvat de onderste.\", ",
+  "nieuw": "wrongHints: [null, \"Hoger of lager in de boom zegt niets over hoe belangrijk iets is. Wat zegt het dan?\", \"Welke groep is groter: alle dieren met een ruggengraat, of alleen de zoogdieren? Welke staat dan bovenaan?\", ",
+  "reden": "hint sprak het goede antwoord uit ('bovenste groep omvat de onderste')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 32",
+  "oud": "zoogdieren ⊂ gewervelden.\",",
+  "nieuw": "zoogdieren horen bij de gewervelden.\",",
+  "reden": "teken ⊂ kent een kind van groep 8 niet"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 33",
+  "oud": "wrongHints: [null, \"Volg de pijl: het antwoord op de vraag is 'nee' — welke tak hoort daarbij?\",",
+  "nieuw": "wrongHints: [null, \"Lees de vraag in het schema nog eens. Staat er 60°C op jouw label?\",",
+  "reden": "hint gaf de uitkomst ('nee') al"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 35",
+  "oud": "\"Beslag (15) + bakken (25) — wat kun je tegelijk doen?\"],",
+  "nieuw": "\"35 is 10 + 25: je hebt het beslag overgeslagen. Kan de taart de oven in voordat het beslag klaar is?\"],",
+  "reden": "hint rekende 15 + 25 = antwoord voor"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 35",
+  "oud": "            basis: \"15 (beslag, oven warmt mee) + 25 (bakken) = 40 minuten.\",",
+  "nieuw": "            basis: \"Welke stappen gebeuren tegelijk en welke na elkaar? Tel alleen de stappen op die na elkaar moeten.\",",
+  "reden": "niveaus.basis gaf de som met antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 1",
+  "oud": "            basis: \"2 km.\",",
+  "nieuw": "            basis: \"Reken eerst 8 × 25.000 uit: zoveel centimeter is het in het echt. Hoeveel cm gaat er in 1 km?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 2",
+  "oud": "            basis: \"bal.\",",
+  "nieuw": "            basis: \"Alle vier beginnen met 'bal'. Vergelijk per woord wat er ná 'bal' komt.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 3",
+  "oud": "            basis: \"10% (100 − 90).\",",
+  "nieuw": "            basis: \"Een hele cirkel is samen 100%. Tel eerst de kleuren op die je al weet.\",",
+  "reden": "niveaus.basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 5",
+  "oud": "q: \"Tel de tabel op: 5 + 8 + 12 + 15 + 10 = ?\",",
+  "nieuw": "q: \"In een tabel staan de getallen 5, 8, 12, 15 en 10. Wat is het **totaal**?\",",
+  "reden": "vreemde zin; verwees naar een tabel die er niet is"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 7",
+  "oud": "q: \"Op een kompas: tussen **W en Z** ligt welke richting?\",",
+  "nieuw": "q: \"Je staat met je gezicht naar het **zuiden** en draait een achtste slag (45°) naar rechts. Welke kant kijk je nu op?\",",
+  "reden": "antwoord ZW stond letterlijk in de vraag (W en Z)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 7",
+  "oud": "wrongHints: [null, \"NW ligt tussen Noord en West. Welke twee letters noemt de vraag?\", \"NO ligt tussen Noord en Oost. Welke twee letters noemt de vraag?\", \"ZO ligt tussen Zuid en Oost. Welke twee letters noemt de vraag?\"],",
+  "nieuw": "wrongHints: [null, \"Voor noordwest moet je veel verder draaien dan een achtste slag. Hoe ver draai je hier?\", \"Noordoost ligt achter je als je naar het zuiden kijkt. Draai je zo ver?\", \"Zuidoost ligt links van het zuiden. Welke kant is rechts als je naar het zuiden kijkt?\"],",
+  "reden": "hints passend bij nieuwe vraag; oude wezen naar de letters in de vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 11",
+  "oud": "\"Te ver naar het noorden.\", \"Verkeerd continent — andere kant van de wereld.\"],",
+  "nieuw": "\"Europa ligt aan de noordkant van de Middellandse Zee. Aan welke kant ligt Egypte?\", \"Amerika ligt aan de andere kant van de Atlantische Oceaan. Ligt Egypte daar?\"],",
+  "reden": "telegram-hints, nu denkprikkels"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 11",
+  "oud": "            basis: \"Afrika.\",",
+  "nieuw": "            basis: \"Zoek Egypte op in de atlas: het ligt aan de Nijl en aan de Middellandse Zee. Aan welke kant van die zee ligt het?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 12",
+  "oud": "q: \"Schaal **1:75.000**. Op kaart **4 cm**. In het echt (in km)?\",",
+  "nieuw": "q: \"Schaal **1:75.000**. Op de kaart is het **4 cm**. Hoe ver is dat in werkelijkheid?\",",
+  "reden": "telegramzin; '(in km)' klopte niet met opties in m"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 13",
+  "oud": "\"Kijk op de kaart waar het Oeralgebergte ligt. Ligt heel Rusland aan één kant ervan?\"",
+  "nieuw": "\"Moskou ligt in Rusland, en Siberië ook. Liggen die twee in hetzelfde werelddeel?\"",
+  "reden": "hint verwees naar een kaart die het kind niet ziet"
+ }
+]

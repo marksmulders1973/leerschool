@@ -6021,6 +6021,28 @@
   "reden": "Hints samen wijzen de bus van 10:12 aan en de hint bij '7 minuten' zet het interval 9:55-10:12 al klaar; tellen blijft wel over."
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 1",
+  "hash": "9cfee05386b887ed",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen '3 km.'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 10",
+  "hash": "74236c82c07147cd",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 11",
+  "hash": "c860e6d469a4c2c4",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 12",
   "hash": "6869109770d1c5dd",
   "oordeel": "twijfel",
@@ -6041,6 +6063,13 @@
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 15",
+  "hash": "37282f40d84948d9",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 16",
@@ -6064,6 +6093,22 @@
   "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Telegramzin 'Werkelijk in meter?'; som en hints kloppen."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "hash": "d0c579a313289dc3",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "te makkelijk voor groep 8 en bijna dubbel met 'kompasroos: wat staat boven?' in dezelfde stap"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 2",
+  "hash": "3332c7598bfd6e81",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 20",
@@ -6112,6 +6157,20 @@
   "reden": "'De schaal heel klein is' is vakjargon (groot schaalgetal = kleine schaal), maar het staat zo in de stapuitleg en is groep 8-stof."
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 26",
+  "hash": "3dda406971be535b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 27",
+  "hash": "f4010104bbc1efdb",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 28",
   "hash": "923af7c96a64b79c",
   "oordeel": "twijfel",
@@ -6125,6 +6184,14 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 3",
+  "hash": "8101a035a7dcdf1e",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "vraag is letterlijk het uitgewerkte voorbeeld in de stap-uitleg (1:50.000, 4 cm, 2 km)"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 30",
@@ -6177,6 +6244,13 @@
   "oordeel": "goed",
   "bron": "vervolg B3 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 37",
+  "hash": "7777c6f920fa2c6b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 38",
@@ -6263,6 +6337,170 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 1",
+  "hash": "30ee06555e3dc2fa",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 11",
+  "hash": "f6bc8e3c19c00702",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 12",
+  "hash": "6504d6d845dd4d05",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) afleider \"Achterin je rekenschrift\" absurd."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 14",
+  "hash": "118913710d6053a4",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c)/(f) alleen het goede paar begon met sch-, de rest viel direct af."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 15",
+  "hash": "c42dabaacdc09b7c",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) absurde afleiders (fout gedrukt, bestaat niet)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 16",
+  "hash": "731568aff5f261ec",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 17",
+  "hash": "252d5ebf1b600e6b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 18",
+  "hash": "7cdc86f136df4df4",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) absurde afleiders (dier, krant weggooien, doen alsof)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 19",
+  "hash": "f46d485f4a2a5262",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) absurde afleiders (stripboek, liedjestekst)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 2",
+  "hash": "26bd9f50c68f0388",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 20",
+  "hash": "2c9c765430b1e9ab",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) absurde afleiders (a mooiste letter, toeval)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 22",
+  "hash": "79729045bcf43738",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 23",
+  "hash": "3b5eeaa3c8da1efe",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(e) 'Zowat' is geen standaardtaal."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24",
+  "hash": "e07b34ba1a58ae34",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) afleider \"woordenboek heen en weer schudden\" absurd."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 3",
+  "hash": "740a4eb7988cf15d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 4",
+  "hash": "82ef7746b64ea0e4",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 5",
+  "hash": "b1b7fff5f2aeded0",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 6",
+  "hash": "b1d5dcc64f130915",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 7",
+  "hash": "ff94cec797b66c64",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(f) te makkelijk voor groep 8: vier opeenvolgende letters."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 8",
+  "hash": "84edbefb0918407d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 9",
+  "hash": "fa9bb4b7a76c81a8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 1",
+  "hash": "454ae5e930ce1fbf",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin ('Op welke dag minst')"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 10",
   "hash": "a92795a5c188b7bf",
   "oordeel": "goed",
@@ -6339,6 +6577,21 @@
   "reden": "niveaus.basis gaf alleen het antwoord; optie \"Een geheel verdeeld\" telegramstijl"
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 2",
+  "hash": "d8bd9fc226e55b22",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "voorbeeldtabel in de stap-uitleg is precies deze tabel met totaal 90 voorgerekend; basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 20",
+  "hash": "d8e12c545f812294",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 21",
   "hash": "c69547fe2422cb4d",
   "oordeel": "goed",
@@ -6354,10 +6607,24 @@
   "reden": "telegramzin met \"___?\"; niveaus.basis gaf alleen het antwoord (\"20%.\")"
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 23",
+  "hash": "2f0969814c89bc63",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 24",
   "hash": "5704a5e674c14ff5",
   "oordeel": "goed",
   "bron": "vervolg B11",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 25",
+  "hash": "a2f49a1b2e4ae277",
+  "oordeel": "goed",
+  "bron": "bank svg8",
   "datum": "2026-11-03"
  },
  {
@@ -6392,6 +6659,14 @@
   "reden": "invulvorm \"zijn samen ___ %?\" vreemde zin"
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 3",
+  "hash": "2188c66b3229d3e0",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin ('rest = ?')"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 30",
   "hash": "41d415b69f46b820",
   "oordeel": "twijfel",
@@ -6404,6 +6679,13 @@
   "hash": "b9ea4336432a61d4",
   "oordeel": "goed",
   "bron": "vervolg B11",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 32",
+  "hash": "83174a622bbfb69c",
+  "oordeel": "goed",
+  "bron": "bank svg8",
   "datum": "2026-11-03"
  },
  {
@@ -6427,6 +6709,13 @@
   "bron": "vervolg B11",
   "datum": "2026-11-03",
   "reden": "telegramzin \"Hoe lang wachten?\"; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 36",
+  "hash": "411956530f97bb9b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 37",
@@ -6511,12 +6800,735 @@
   "reden": "100 − 85 = 15% klopt; telegramzin."
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 1",
+  "hash": "11474e0018e5f601",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen 'appel.'; simpeler sloeg arm/avond over"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 11",
+  "hash": "e8c7ab801a14c3d8",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "veel te makkelijk voor groep 8 (eerste letter van het alfabet)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 12",
+  "hash": "a04a26ec779416e8",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "basis alleen antwoord; simpeler sloeg pen/pop over"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 13",
+  "hash": "f94d43d3b85e9073",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegram '+' in de goede optie"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 14",
+  "hash": "0705419098bb2394",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 15",
+  "hash": "575fcf149c8bedc0",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 16",
+  "hash": "66de882e8520ec5f",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 17",
+  "hash": "89b28d79f2f73a70",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 18",
+  "hash": "5e48f212b9318f74",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 19",
+  "hash": "41ebd89960beff07",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen 'Index.' (vraag lijkt ook op stap 3 vraag 2, bewust gelaten)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 2",
+  "hash": "72c1aa7485f9bc4f",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 20",
+  "hash": "6d041c0ebae788b8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 21",
+  "hash": "b0f262ef6048fec5",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "goede optie veel langer/specifieker dan korte afleiders; rommelige vraagzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 22",
+  "hash": "a41a7a9ca919f520",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 23",
+  "hash": "24299aacfddfeeb9",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hint optie 3 telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 24",
+  "hash": "674f79d17d443b1d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 26",
+  "hash": "dd2c843bc17c63c8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 27",
+  "hash": "54802f034418c85e",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hint optie 4 telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 28",
+  "hash": "d65816584aa79244",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hint bij fietsbel voorspelde 'a of e' en daarmee het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 29",
+  "hash": "0ec6fab1fa8c3a9d",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 3",
+  "hash": "cd94d017b1e28705",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 30",
+  "hash": "372ded7f0cccbeb6",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 31",
+  "hash": "0ad01f41f2ef9f98",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 32",
+  "hash": "ffacdcb11f659a52",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 33",
+  "hash": "65383fa604e23a8b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 34",
+  "hash": "f24648ddae7b5475",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 35",
+  "hash": "664cc35bb6803159",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 37",
+  "hash": "579b4afe9b6a192d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 4",
+  "hash": "8438729be48d4bad",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "kat/kater staat als voorbeeld in de stap-uitleg; hint bij katoen omschreef het antwoord; basis alleen antwoord; jargon 'prefix'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 5",
+  "hash": "2485caaecf7120a8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 6",
+  "hash": "8414ff3c4d60001d",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hints bij optie 2 en 3 vertelden precies welk deel vak en welk deel bladzijde is; basis alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 7",
+  "hash": "d4861639b62244e8",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "simpeler sloeg pinda en pizza over"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 8",
+  "hash": "392b73b4d06ff6d2",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin ('achter in boek')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 9",
+  "hash": "a92fdc6f4df032b9",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 1",
+  "hash": "11ce3a5c8274112f",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 10",
+  "hash": "5e6030cc385f9832",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 11",
+  "hash": "b2d5f8d86d9ddfd5",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hints lieten het kind een stroomdiagram bekijken dat er niet is"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 12",
+  "hash": "b1d9fff2c266cd57",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 13",
+  "hash": "3ab2a4e9a3cc5847",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 14",
+  "hash": "221684e669187d30",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 15",
+  "hash": "d1dcba6d247fad9a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 16",
+  "hash": "efef75eba5178eb3",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin 'Hoeveel takken?'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 17",
+  "hash": "f9fbf3c7ef77515f",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 18",
+  "hash": "6dbc80e5a1665a27",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 19",
+  "hash": "f0908543c9bd4bf5",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "zin + opties grammaticaal krom; niveaus.basis = antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 2",
+  "hash": "d33445ef5277a822",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 20",
+  "hash": "29306ed6674c1179",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 21",
+  "hash": "7fb302ad6fc504c8",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis = antwoord; 'tussen welke 2'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 22",
+  "hash": "3c4b37a28ee933e5",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 23",
+  "hash": "461976ad9df2e64d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 24",
+  "hash": "f70aeaaeebdcedc5",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 25",
+  "hash": "896289f42a5db285",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hint bij 'Gras' wees het antwoord aan ('wat staat direct vóór de vos'); basis = antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 26",
+  "hash": "1aa41212b7db1f3a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 27",
+  "hash": "b0692a7ca9c146c9",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin 'Wat is oorzaak?'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 28",
+  "hash": "8045f6bfda2bf335",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "'1 top en takken' verklapte boom; telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 29",
+  "hash": "dfe62e829b54cae0",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 3",
+  "hash": "59b472bf5c8adb35",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 30",
+  "hash": "f63aea70fde1da95",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 31",
+  "hash": "2259d5b460001065",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 34",
+  "hash": "067d6aad12de5fea",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 36",
+  "hash": "10c7382e5ff066ca",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 37",
+  "hash": "44cec3b2d9b586a5",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 38",
+  "hash": "f25a87bd5f7e2ccf",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 39",
+  "hash": "dbbb2a8e8feca17c",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 4",
+  "hash": "2099e022837c62e1",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 40",
+  "hash": "393bc958684cc95a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 5",
+  "hash": "967a6abfdbe27838",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "vraag 'wat is Hond?' paste niet bij opties 'Onder ...'"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 6",
+  "hash": "9b340d6d7ee2b95e",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 7",
+  "hash": "3a4627a74b4b9d31",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl ('1. Ingrediënten 2. Recept'), 'welke stap is fout' paste niet bij opties; simpeler gaf antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 8",
+  "hash": "46d653a937e2a1af",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 9",
+  "hash": "3563c5e0c69b387c",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "goede optie herhaalde 'doel' uit de vraag (raadbaar)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 1",
+  "hash": "f072e382f653b36a",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis = antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 10",
+  "hash": "869b086fdee7bdea",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 11",
+  "hash": "1c06e1065de5156f",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegram-hints ('Te ver naar het noorden.'); niveaus.basis = antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 12",
+  "hash": "2d3e8459f2320eba",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin; '(in km)' terwijl opties ook m zijn"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 13",
+  "hash": "d08ad2b807435d8b",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "hint 'Kijk op de kaart' terwijl er geen kaart is"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 14",
   "hash": "225cdaaaa82aa5f0",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Vraag noemt zelf 'voorin of achterin' maar geeft 4 opties; 'in het midden' is een zwakke afleider; te weten uit algemene kennis."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 15",
+  "hash": "a12f56f5bf0e170e",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 16",
+  "hash": "db53ec963b807e31",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 17",
+  "hash": "22f7ffa76b4e28eb",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(d) wrongHints beschreven het antwoord ('helemaal vol', 'altijd evenveel')."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 18",
+  "hash": "683ce882c5e58a33",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus basis/simpeler/nogSimpeler gaven alleen het antwoord of de volgorde. Opties staan op alfabet, maar worden in de app gehusseld (shuffleOptions)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 19",
+  "hash": "9a9efd60d13a33c4",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 2",
+  "hash": "f01166eb289cd586",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis = antwoord (opties staan op alfabet, maar worden in de app geschud; niet herschikt)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 20",
+  "hash": "73b3f7daa5eeae9d",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(e) telegramzin 'Tabel toont scores'."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 21",
+  "hash": "04b8540c84f1f673",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(e) telegramzin '4 cm op kaart = werkelijk?'."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 22",
+  "hash": "393adb4c21754bf3",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "hash": "a87ce096f0384129",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Opties 'Soms goed' en 'Soms fout' betekenen hetzelfde, dubbele hint, niveaus gaven alleen 'Goed'."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 25",
+  "hash": "bf8cd8ec140ffff1",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(e) telegramzin 'Atlas-index zoek je op Berlijn'."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 26",
+  "hash": "2f62db734ebbb28d",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(e) telegramzin; hint '10 m is nog geen klaslokaal lang' klopt niet."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 27",
+  "hash": "3756b52fe1785054",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(f) te makkelijk voor groep 8: vier verschillende beginletters."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 29",
+  "hash": "6e88b2c05daf135b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 3",
+  "hash": "d58e99fcabe45995",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis = antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 30",
+  "hash": "5021334525388c66",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 31",
+  "hash": "845f3619af0d6445",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 32",
+  "hash": "e94af3acfc595405",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(g) label 'Bustabel + kaart combineren' terwijl er geen tabel/kaart is; gegevens staan wel in de vraag."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 33",
+  "hash": "1ba1a3466c55b08a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 34",
+  "hash": "164e4734b823ddd3",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 35",
+  "hash": "e639a4f0ba62e7d3",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(g) 'de lijngrafiek toont' terwijl er geen grafiek is; (d) hint 'Deel 24 door 8' rekent voor."
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 36",
@@ -6526,11 +7538,726 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 37",
+  "hash": "ec885fc5e32cf46e",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 38",
+  "hash": "ba4ab445fe1cd776",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 39",
+  "hash": "7d75d719cc08d8e3",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 4",
+  "hash": "40628fdfd12cb689",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 40",
+  "hash": "006820f44aa00732",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 5",
+  "hash": "ea4aae4d1c15fc2c",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "'Tel de tabel op' zonder tabel, kromme zin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 6",
+  "hash": "08e978c9a51dc59a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 8",
+  "hash": "31d93f8897a73efc",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 9",
+  "hash": "4ed4b1d2e7bd1c05",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 1",
+  "hash": "08b7b309f40113a8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 11",
+  "hash": "3445ebe511aa5172",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 12",
+  "hash": "9bdc60fc716691ba",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 13",
+  "hash": "59e545c7d845ce80",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 14",
+  "hash": "31a2cb527fbbc040",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 15",
+  "hash": "d7ea6cae1394aa97",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 17",
+  "hash": "81980896f1426702",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 18",
+  "hash": "c8829e9d01d2d8e2",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 19",
+  "hash": "da5015ab4b126c25",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 2",
+  "hash": "ad2f7b1216f3e56c",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 20",
+  "hash": "7c8d5bd6af7df000",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 21",
+  "hash": "197e031ede402802",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 22",
+  "hash": "9bf3f8bedb5d0cf5",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 23",
+  "hash": "6ac3085333c1c876",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 24",
+  "hash": "e5ae0eff2027dd9c",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 3",
+  "hash": "80d74a5c687adf6d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 4",
+  "hash": "587db82cc7742053",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 5",
+  "hash": "7c9c7cf7634d37c4",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 7",
+  "hash": "b72b179b199c80ca",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 8",
+  "hash": "9f511867b1ec8003",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 9",
+  "hash": "9127a3b07f6be1f2",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 1",
   "hash": "d90f6c9e0d28d56c",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 10",
+  "hash": "15ba605feb690e87",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 11",
+  "hash": "c622786368792425",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 12",
+  "hash": "b4f2b36c9119d2d6",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 13",
+  "hash": "5b8ad1f15d5ae582",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint bij \"8 keer\" rekende voor en verklapte dat 9 het antwoord is (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 14",
+  "hash": "a691c67c6c7b2279",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 15",
+  "hash": "82dcb69d4303afe1",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 16",
+  "hash": "9a8fcd4ef47529b7",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 17",
+  "hash": "74fa7c22982e2441",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 18",
+  "hash": "598979aa76d20012",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint bij \"alweer gesloten\" noemde het antwoord (nog niet open) (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 19",
+  "hash": "a08c4850f558c727",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 2",
+  "hash": "c9ad206d567191cf",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 20",
+  "hash": "2efe8083b9d8bd0f",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint bij \"maart\" noemde het antwoord (dagen) (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 21",
+  "hash": "5d9497a36fbbf1d8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 23",
+  "hash": "d7f723a257de6e06",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 24",
+  "hash": "1d49f87e07f10fa2",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 3",
+  "hash": "d442d5f18b6bb8cd",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 4",
+  "hash": "5cdd7225d5c71643",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 5",
+  "hash": "85555762d27614a7",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 6",
+  "hash": "4937ccdbbe488959",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 7",
+  "hash": "fcea7931c17541e7",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 8",
+  "hash": "3d54ee53db9a39c8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 9",
+  "hash": "de8af07147d3c83e",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 1",
+  "hash": "31a23cd7570fc431",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Goede optie langst/specifiekst, stripboek-afleider absurd (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 10",
+  "hash": "a98760ea2c7d95d8",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint \"het gaat om wíé iets beweert\" verklapt antwoord (d); afleider \"paars\" absurd (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 11",
+  "hash": "df0828fdb762ac8e",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint \"met één extra woord los je dit op\" verklapt antwoord (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 12",
+  "hash": "b4b69bd80d8523a0",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint \"kun je ... nakijken?\" omschrijft het antwoord (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 13",
+  "hash": "9a4b533e902ea33a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 14",
+  "hash": "993658ebcf6789e1",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 15",
+  "hash": "d60fd11c769b3773",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 16",
+  "hash": "6ddd79b01882fe8b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 17",
+  "hash": "2c72cbe836e8163b",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Goede optie in telegramstijl (e)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 18",
+  "hash": "736413d684c63c7b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 19",
+  "hash": "ca8023210edd4d36",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Afleider songtekst absurd (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 2",
+  "hash": "ea2c92b2c2bd3d63",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 20",
+  "hash": "ef93e9bf57e848c6",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 21",
+  "hash": "90ca948a06e86d36",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 22",
+  "hash": "37ff9d8bddc9566a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 23",
+  "hash": "788a358483775515",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 24",
+  "hash": "2694bdf31acb3975",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 3",
+  "hash": "fcdc163d224656ba",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Afleider \"hoe zit dat eigenlijk\" absurd (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 4",
+  "hash": "23c45d3468e3305d",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 5",
+  "hash": "2fbdbdfeb709861b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 6",
+  "hash": "606dbfcc32042e28",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 7",
+  "hash": "b7785a71cde3d423",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 8",
+  "hash": "92a7d6d03710277d",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint noemde het antwoord (\"gekocht\") (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 9",
+  "hash": "239e30f35987d049",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Te makkelijk: afleiders absurd (c/f)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 1",
+  "hash": "b041381fed6fdd40",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Te makkelijk: alle afleiders absurd (c/f)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 10",
+  "hash": "3eb6f0329870dd30",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 11",
+  "hash": "aa698f746f0e225a",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 12",
+  "hash": "190cd43fc8a1ba46",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Raadbaar: enige optie met \"vaak\", rest \"altijd\" (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 13",
+  "hash": "b897ef417c0faa7b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 14",
+  "hash": "ec04be39f8b5a33f",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Afleider \"Eén woord\" absurd (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 15",
+  "hash": "3fb367f10a71137b",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 16",
+  "hash": "a26c2bca3735e3a5",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Toetste alleen een weetje (kat miauwt), geen rij-kolom-lezen (f)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 17",
+  "hash": "7462364b9758ac89",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 18",
+  "hash": "754e79843fbb26ca",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 19",
+  "hash": "58fd4485530e0fec",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 2",
+  "hash": "628e6332c15ffa12",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 20",
+  "hash": "e65c5f1f2f2da965",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) absurde afleiders (moeilijker maken, verplicht bij wet, woordjes oefenen)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 22",
+  "hash": "1d1d666600c28059",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 23",
+  "hash": "9b33fd6afe006318",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 24",
+  "hash": "4f640f32efc54942",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "(c) afleiders absurd (maan is wit, raar woord, hoofdstuk 3 komt hierna)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 3",
+  "hash": "9286191bfc7a618e",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHints noemden dat de pot nog leeg is, wat B verklapt (d)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 4",
+  "hash": "83e2c1b7a00658fa",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 5",
+  "hash": "e578a48781d8e967",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Alle afleiders ongezond, dus raadbaar (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 6",
+  "hash": "9190d2401170d3f9",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 7",
+  "hash": "625890707ce6f04c",
+  "oordeel": "twijfel",
+  "bron": "bank svg8",
+  "datum": "2026-11-03",
+  "reden": "Afleider \"gummen\" absurd (c)."
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 8",
+  "hash": "6bd25ae70ce16aad",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 9",
+  "hash": "7d6ed4423fab38e8",
+  "oordeel": "goed",
+  "bron": "bank svg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 16",

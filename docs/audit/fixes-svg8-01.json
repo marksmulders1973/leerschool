@@ -1,0 +1,302 @@
+[
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 1",
+  "oud": "basis: \"3 km.\",",
+  "nieuw": "basis: \"Reken eerst uit hoeveel cm 3 cm op de kaart in het echt is (3 × 100.000 cm). Zet dat daarna om naar km.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 2",
+  "oud": "basis: \"Uitleg van symbolen + kleuren.\",",
+  "nieuw": "basis: \"Een legenda is een kader bij de kaart. Wat moet je weten om te snappen wat een blauwe lijn of een groen vlak betekent?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 uitleg (bij vraag 3)",
+  "oud": "*'Schaal 1:50.000. Op de kaart is een weg 4 cm. Hoeveel km in werkelijkheid?'*\\n• 4 × 50.000 = 200.000 cm = 2000 m = **2 km**.",
+  "nieuw": "*'Schaal 1:50.000. Op de kaart is een weg 6 cm. Hoeveel km in werkelijkheid?'*\\n• 6 × 50.000 = 300.000 cm = 3000 m = **3 km**.",
+  "reden": "voorbeeld in de uitleg was letterlijk vraag 3 (4 cm, 1:50.000, 2 km)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "oud": "q: \"Welk **windstreek-symbool** staat meestal **bovenaan** op een kaart?\",",
+  "nieuw": "q: \"Je loopt naar het **zuiden**. Dan draai je je **helemaal om**. In welke richting loop je nu?\",",
+  "reden": "te makkelijk + bijna dubbel met 'kompasroos boven' in dezelfde stap"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "oud": "wrongHints: [null, \"Z staat op een kaart meestal onderaan. Welke letter hoort bij de pijl die omhoog wijst?\", \"Op een kaart wijst één pijl naar boven. Welke letter hoort bij die pijl?\", \"Welke letter staat bij de pijl die op de kaart omhoog wijst?\"],",
+  "nieuw": "wrongHints: [null, \"Je draaide je helemaal om. Loop je dan nog dezelfde kant op als eerst?\", \"Oost krijg je na een kwartslag, niet na een hele draai. Wat staat op de windroos tegenover Z?\", \"West krijg je na een kwartslag, niet na een hele draai. Wat staat op de windroos tegenover Z?\"],",
+  "reden": "hints passend bij de nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 1",
+  "oud": "q: \"Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?\",",
+  "nieuw": "q: \"Een tabel laat zien hoeveel kinderen er per dag in de bibliotheek waren: ma 10, di 12, wo 15, do 8, vr 20. Op welke dag waren er de **minste** kinderen?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 uitleg (bij vraag 2)",
+  "oud": "| ma | 12 |\\n| di | 8 |\\n| wo | 18 |\\n| do | 22 |\\n| vr | 30 |\\n\\n**toetsvragen**:\\n*'Op welke dag het minst verkocht?'* → dinsdag (8).\\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 30 − 12 = **18 ijsjes**.\\n*'Totaal in deze 5 dagen?'* → 12+8+18+22+30 = **90 ijsjes**.\\n*'Gemiddeld per dag?'* → 90 ÷ 5 = **18 ijsjes**.",
+  "nieuw": "| ma | 14 |\\n| di | 9 |\\n| wo | 21 |\\n| do | 16 |\\n| vr | 25 |\\n\\n**toetsvragen**:\\n*'Op welke dag het minst verkocht?'* → dinsdag (9).\\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 25 − 14 = **11 ijsjes**.\\n*'Totaal in deze 5 dagen?'* → 14+9+21+16+25 = **85 ijsjes**.\\n*'Gemiddeld per dag?'* → 85 ÷ 5 = **17 ijsjes**.",
+  "reden": "voorbeeldtabel in de uitleg gaf al het totaal 90 van vraag 2 (en het gemiddelde 18 van een latere vraag)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 2",
+  "oud": "basis: \"90 (alles optellen).\",",
+  "nieuw": "basis: \"Tel alle vijf getallen op. Schrijf na elk getal de tussenstand op.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 3",
+  "oud": "q: \"Cirkeldiagram: voetbal 50%, hockey 25%, zwemmen 15%, **rest** = ?\",",
+  "nieuw": "q: \"In een cirkeldiagram is voetbal 50%, hockey 25% en zwemmen 15%. Hoeveel procent is de **rest**?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 1",
+  "oud": "basis: \"appel.\",",
+  "nieuw": "basis: \"Alle woorden beginnen met een a. Kijk dus naar de tweede letter van elk woord: welke komt het eerst in het alfabet?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 1",
+  "oud": "simpeler: \"a-p (appel) komt vóór a-u (auto) in alfabet.\",",
+  "nieuw": "simpeler: \"De tweede letters zijn: appel (p), arm (r), auto (u), avond (v). De p komt het eerst, dus appel staat vooraan.\",",
+  "reden": "simpeler sloeg 'arm' en 'avond' over"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 3",
+  "oud": "basis: \"Voorin = inhoudsopgave (hoofdstukken). Achterin = index.\",",
+  "nieuw": "basis: \"Sla een boek open bij de eerste bladzijden. Welk overzicht vertelt je daar welke hoofdstukken er zijn?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 uitleg (bij vraag 4)",
+  "oud": "**'kat'** staat vóór **'kater'** *(kortere komt eerst als begin gelijk)*",
+  "nieuw": "**'bal'** staat vóór **'balkon'** *(kortere komt eerst als begin gelijk)*",
+  "reden": "voorbeeld in de uitleg was letterlijk het antwoord van vraag 4 (kat/kater)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 4",
+  "oud": "wrongHints: [null, \"De eerste drie letters zijn gelijk — welke regel geldt dan voor het kortere woord?\", \"Ook 'katoen' begint met k-a-t. Welk woord houdt daarna al op?\", \"Vergelijk de derde letter van elk woord. Welke komt het eerst in het alfabet?\"],",
+  "nieuw": "wrongHints: [null, \"De eerste drie letters zijn gelijk — welke regel geldt dan voor het kortere woord?\", \"Ook 'katoen' begint met k-a-t. Kijk wat er bij elk woord ná 'kat' komt.\", \"Vergelijk de derde letter van elk woord. Welke komt het eerst in het alfabet?\"],",
+  "reden": "hint bij katoen omschreef het antwoord ('welk woord houdt al op?')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 4",
+  "oud": "basis: \"kat.\",",
+  "nieuw": "basis: \"Drie woorden beginnen met k-a-t. Wat doe je als één van die woorden daarna al ophoudt?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 4",
+  "oud": "simpeler: \"kat is k-a-t (3 letters), kater is k-a-t-e-r (5 letters). Eerste 3 letters gelijk; bij gelijke prefix staat het kortere woord eerder.\",",
+  "nieuw": "simpeler: \"kat, kater en katoen beginnen alle drie met k-a-t. Bij kat houdt het woord daar al op, dus kat komt eerst. kauw valt af: de u komt na de t.\",",
+  "reden": "jargon 'prefix' + katoen/kauw niet uitgelegd"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 6",
+  "oud": "wrongHints: [null, \"Welk deel van '22 D5' ziet eruit als een vak: een letter met een cijfer?\", \"Welk deel van '22 D5' is een gewoon getal, zoals een bladzijdenummer?\", \"Er staat geen A in '22 D5'. Lees de code nog eens precies.\"],",
+  "nieuw": "wrongHints: [null, \"Lees '22 D5' van links naar rechts. Wat zoek je in een atlas eerst op: de bladzijde of de plek op de kaart?\", \"Hebben bladzijden in een atlas letters? Kijk nog eens hoe '22 D5' is opgebouwd.\", \"Er staat geen A in '22 D5'. Lees de code nog eens precies.\"],",
+  "reden": "hints 1 en 2 omschreven precies welk deel vak en welk deel bladzijde is"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 6",
+  "oud": "basis: \"Bladzijde 22, vak D5.\",",
+  "nieuw": "basis: \"De code '22 D5' heeft twee delen. Het ene deel zegt waar je moet bladeren, het andere waar je op de kaart kijkt. Welk deel is welk?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 7",
+  "oud": "simpeler: \"P-I vs P-L: I komt vóór L → piano eerst.\",",
+  "nieuw": "simpeler: \"plant valt af: de l komt na de i. Bij piano, pinda en pizza is 'pi' gelijk: vergelijk de derde letters a, n en z.\",",
+  "reden": "simpeler sloeg pinda en pizza over"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 8",
+  "oud": "q: \"Waarvoor is een **register / index** achter in boek?\",",
+  "nieuw": "q: \"Waarvoor dient een **register** of **index** achterin een boek?\",",
+  "reden": "telegramzin ('achter in boek')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "options: ['Eerste + laatste woord op die pagina',",
+  "nieuw": "options: ['Het eerste en het laatste woord op die pagina',",
+  "reden": "telegram '+' in optie"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ titel: \"Hoofdwoorden = navigatie-hulp\", tekst: \"Boven elke woordenboek-pagina staan 2 dikke woorden: het EERSTE en het LAATSTE woord van die pagina. Die heten 'hoofdwoorden' of 'kopwoorden'.\" },",
+  "nieuw": "{ titel: \"Gidswoorden = navigatie-hulp\", tekst: \"Boven elke woordenboek-pagina staan 2 dikke woorden: het EERSTE en het LAATSTE woord van die pagina. Die heten 'gidswoorden' of 'kopwoorden'.\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ titel: \"Waarom? Snel zoeken\", tekst: \"Je hoeft niet hele pagina's te lezen. Kijk alleen naar de hoofdwoorden: ligt jouw woord (alfabetisch) tussen deze twee? Dan staat het op deze pagina.\" },",
+  "nieuw": "{ titel: \"Waarom? Snel zoeken\", tekst: \"Je hoeft niet hele pagina's te lezen. Kijk alleen naar de gidswoorden: ligt jouw woord (alfabetisch) tussen deze twee? Dan staat het op deze pagina.\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ titel: \"Voorbeeld\", tekst: \"Hoofdwoorden 'kat' en 'kop'. Zoek je 'klok'? K-L komt tussen K-A en K-O → ja, deze pagina!\" },",
+  "nieuw": "{ titel: \"Voorbeeld\", tekst: \"Gidswoorden 'kat' en 'kop'. Zoek je 'klok'? K-L komt tussen K-A en K-O → ja, deze pagina!\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ woord: \"hoofdwoorden\", uitleg: \"Eerste + laatste woord op de pagina (boven in dik).\" },",
+  "nieuw": "{ woord: \"gidswoorden\", uitleg: \"Eerste + laatste woord op de pagina (boven in dik).\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ woord: \"kopwoorden\", uitleg: \"Synoniem van hoofdwoorden.\" },",
+  "nieuw": "{ woord: \"kopwoorden\", uitleg: \"Synoniem van gidswoorden.\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "theorie: \"Toets-tip: gebruik altijd hoofdwoorden om snel een woord op te zoeken. Eerst pagina vinden via hoofdwoorden, dan in die pagina precies zoeken.\",",
+  "nieuw": "theorie: \"Toets-tip: gebruik altijd gidswoorden om snel een woord op te zoeken. Eerst pagina vinden via gidswoorden, dan in die pagina precies zoeken.\",",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ type: \"stap\", tekst: \"Hoofdwoorden 'auto' en 'avond'. Zoek je 'avocado'? A-V-O-C past tussen A-U-T en A-V-O-N → ja.\" },",
+  "nieuw": "{ type: \"stap\", tekst: \"Gidswoorden 'auto' en 'avond'. Zoek je 'avocado'? A-V-O-C past tussen A-U-T en A-V-O-N → ja.\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "{ type: \"stap\", tekst: \"Hoofdwoorden 'paard' en 'piano'. Zoek je 'plant'? P-L past niet tussen P-A en P-I → nee, andere pagina.\" },",
+  "nieuw": "{ type: \"stap\", tekst: \"Gidswoorden 'paard' en 'piano'. Zoek je 'plant'? P-L past niet tussen P-A en P-I → nee, andere pagina.\" },",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "basiskennis: [{ onderwerp: \"Truc\", uitleg: \"Bladeren wordt snel: kijk eerst naar hoofdwoorden, niet hele pagina's.\" }],",
+  "nieuw": "basiskennis: [{ onderwerp: \"Truc\", uitleg: \"Bladeren wordt snel: kijk eerst naar gidswoorden, niet hele pagina's.\" }],",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "simpeler: \"Ligt jouw woord alfabetisch tussen de hoofdwoorden? Dan zit het op die pagina.\",",
+  "nieuw": "simpeler: \"Ligt jouw woord alfabetisch tussen de gidswoorden? Dan zit het op die pagina.\",",
+  "reden": "'hoofdwoorden' → 'gidswoorden' (hoofdwoord = het opgezochte woord zelf; botst met vraag 24 en de vraag zelf)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "basis: \"Hoofdwoorden = eerste + laatste woord op die pagina.\",",
+  "nieuw": "basis: \"Kijk naar de twee vette woorden bovenaan een woordenboekpagina. Wat vertellen ze over de woorden die op die pagina staan?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord + verkeerde term"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 10",
+  "oud": "nogSimpeler: \"Bovenste 2 dikke = pagina-grens.\",",
+  "nieuw": "nogSimpeler: \"De twee vette woorden bovenaan zijn de grens van de pagina.\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 uitleg (bij vraag 10/11)",
+  "oud": "gebruik **hoofdwoord** boven aan de pagina:\\nLinker pagina-hoofdwoord = **eerste** woord op die pagina.\\nRechter pagina-hoofdwoord = **laatste** woord op die pagina.",
+  "nieuw": "gebruik de **gidswoorden** boven aan de pagina:\\nLinker gidswoord = **eerste** woord op die pagina.\\nRechter gidswoord = **laatste** woord op die pagina.",
+  "reden": "verkeerde term 'hoofdwoord' in de stap-uitleg"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 11",
+  "oud": "q: \"Wat is de **eerste letter** van het alfabet?\",",
+  "nieuw": "q: \"Je bladert in een woordenboek **van achter naar voren**. Bij welke letter kom je als **laatste** aan?\",",
+  "reden": "veel te makkelijk voor groep 8"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 11",
+  "oud": "wrongHints: [null, \"B is de tweede letter.\", \"Z is de laatste letter.\", \"Zeg het alfabet eens hardop: komt de O vooraan?\"],",
+  "nieuw": "wrongHints: [null, \"Je bent bijna bij het begin van het boek. Blader je na de B nog verder?\", \"Bij de Z begin je juist: je bladert van achter naar voren.\", \"De O zit ergens in het midden van het woordenboek. Je bladert nog verder.\"],",
+  "reden": "hints passend bij de nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 12",
+  "oud": "basis: \"paars (p < r).\",",
+  "nieuw": "basis: \"Kijk eerst naar de eerste letter: welk woord valt dan af? Vergelijk daarna bij de andere woorden de tweede letter.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 12",
+  "oud": "simpeler: \"p komt voor r in alfabet. Dus 'paars' eerst.\",",
+  "nieuw": "simpeler: \"rood valt af: de r komt na de p. Bij paars, pen en pop vergelijk je de tweede letters a, e en o. De a komt het eerst.\",",
+  "reden": "simpeler sloeg pen en pop over"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 13",
+  "oud": "options: ['Betekenis + spelling van woorden',",
+  "nieuw": "options: ['Betekenis en spelling van woorden',",
+  "reden": "telegram '+' in optie"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 16",
+  "oud": "basis: \"Vak op de kaart.\",",
+  "nieuw": "basis: \"Kijk naar de randen van een atlaskaart: daar staan letters en cijfers. Wat maak je met een letter en een cijfer samen?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 19",
+  "oud": "basis: \"Index.\",",
+  "nieuw": "basis: \"Je zoekt één naam in een dikke atlas. Welke lijst achterin zet alle namen op alfabet, met de bladzijde erbij?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 21",
+  "oud": "q: \"In een **bibliotheek-catalogus** zoek je als je wilt weten...\",",
+  "nieuw": "q: \"Je zoekt iets op in de **catalogus** van de bibliotheek. Wat kun je daar te weten komen?\",",
+  "reden": "rommelige zinsbouw"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 21",
+  "oud": "options: [\"Of een boek aanwezig is en waar\", \"Hoe het verhaal afloopt\", \"Hoeveel het kost\", \"Wie het gelezen heeft\"],",
+  "nieuw": "options: [\"Of een boek aanwezig is en waar\", \"Hoe het verhaal van een boek afloopt\", \"Hoeveel een boek in de winkel kost\", \"Wie een boek al eerder gelezen heeft\"],",
+  "reden": "goede optie was veel langer/specifieker dan de afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 23",
+  "oud": "'Veel meer — onderwerpen, niet alleen woorden.',",
+  "nieuw": "'Wikipedia gaat over veel meer dan de betekenis van woorden. Wat vind je er per onderwerp?',",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 25",
+  "oud": "q: \"Bij **digitaal zoeken** in een PDF gebruik je vaak **Ctrl+F**. Dat doet ___?\",",
+  "nieuw": "q: \"Je drukt in een PDF op **Ctrl+F**. Wat doet dat?\",",
+  "reden": "antwoord (zoeken) stond al in de vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 25",
+  "oud": "basis: \"Zoekfunctie.\",",
+  "nieuw": "basis: \"Probeer het eens op een computer: druk op Ctrl+F en kijk wat er in beeld verschijnt.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 27",
+  "oud": "\"Inhoudsopgave komt 1 keer voor in een boek.\"]",
+  "nieuw": "\"Een inhoudsopgave staat maar op één plek in een boek, niet op elke bladzijde.\"]",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 28",
+  "oud": "\"Tot 'fietsb' zijn ze gelijk — vergelijk de letter erná: a of e?\"",
+  "nieuw": "\"Tot 'fietsb' zijn 'fietsband' en 'fietsbel' gelijk. Vergelijk de letter die daarna komt.\"",
+  "reden": "hint voorspelde a/e en daarmee het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 29",
+  "oud": "basis: \"kampvuur valt tussen kamer en kano.\",",
+  "nieuw": "basis: \"Een woord staat op deze pagina als het alfabetisch ná 'kamer' en vóór 'kano' komt. Vergelijk letter voor letter.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 36",
+  "oud": "\"Beide betekenissen zijn springlevend.\"]",
+  "nieuw": "\"Allebei de woorden gebruik je nog elke dag. Kijk naar wat er tussen haakjes achter staat.\"]",
+  "reden": "hint noemde het antwoord ('betekenissen')"
+ }
+]

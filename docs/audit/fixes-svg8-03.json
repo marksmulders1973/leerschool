@@ -1,0 +1,224 @@
+[
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 17",
+  "oud": "wrongHints: [null, \"Te weinig — een cirkel moet helemaal vol.\", \"10% is maar een klein puntje van de cirkel.\", \"De stukken verschillen per diagram, maar de hele cirkel is altijd evenveel.\"],",
+  "nieuw": "wrongHints: [null, \"Kleur in gedachten 50% van een cirkel. Is dan de hele cirkel gekleurd?\", \"10% is maar een klein puntje van de cirkel. Hoeveel is de hele cirkel samen?\", \"De stukken verschillen per diagram. Maar wat krijg je als je álle stukken samen optelt?\"],",
+  "reden": "wrongHints beschreven het antwoord ('helemaal vol', 'altijd evenveel')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 18",
+  "oud": "basis: \"taart eerst.\",",
+  "nieuw": "basis: \"Alle vier de woorden beginnen met ta-. Vergelijk daarom de derde letter van elk woord.\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 18",
+  "oud": "simpeler: \"ta-a- vóór ta-b- vóór ta-f-.\",",
+  "nieuw": "simpeler: \"De derde letters zijn: ta-b-el, ta-f-el, ta-k en ta-a-rt. Welke van b, f, k en a komt het eerst in het alfabet?\",",
+  "reden": "niveaus.simpeler gaf de volgorde/het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 18",
+  "oud": "nogSimpeler: \"a vóór b vóór f. taart\",",
+  "nieuw": "nogSimpeler: \"Zeg het alfabet op: a, b, c … Welke letter hoor je het eerst: a, b, f of k?\",",
+  "reden": "niveaus.nogSimpeler noemde het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 20",
+  "oud": "q: \"Tabel toont **scores 6, 7, 4, 9**. Wat is het **bereik** (verschil hoogste − laagste)?\",",
+  "nieuw": "q: \"In een tabel staan de **scores 6, 7, 4 en 9**. Wat is het **bereik** (het verschil tussen de hoogste en de laagste score)?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 21",
+  "oud": "q: \"Op een **stadsplattegrond schaal 1:5.000**: 4 cm op kaart = **werkelijk**?\",",
+  "nieuw": "q: \"Een **stadsplattegrond** heeft **schaal 1:5.000**. Op de kaart meet je 4 cm. Hoe ver is dat in **werkelijkheid**?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "oud": "q: \"Een **legenda** legt uit wat de **kleuren** op een grafiek of kaart betekenen. Goed of fout?\",",
+  "nieuw": "q: \"Een **legenda** legt uit wat de **kleuren** op een grafiek of kaart betekenen. Klopt deze zin?\",",
+  "reden": "'Goed of fout' met opties 'Soms goed'/'Soms fout' die hetzelfde betekenen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "oud": "options: [\"Goed\", \"Fout\", \"Soms goed\", \"Soms fout\"],",
+  "nieuw": "options: [\"Ja, dat klopt\", \"Nee, dat klopt niet\", \"Alleen bij een kaart\", \"Alleen bij een grafiek\"],",
+  "reden": "opties 3 en 4 waren gelijk in betekenis; nu echte afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "oud": "wrongHints: [null, \"Waar kijk je als je wilt weten wat een kleur op een kaart betekent?\", \"Bestaat er een legenda die géén uitleg geeft over kleuren of tekens?\", \"Bestaat er een legenda die géén uitleg geeft over kleuren of tekens?\"],",
+  "nieuw": "wrongHints: [null, \"Waar kijk je als je wilt weten wat een kleur op een kaart betekent?\", \"Denk aan een grafiek met gekleurde lijnen of staven. Staat daar ook een uitleg van de kleuren bij?\", \"Denk aan een kaart met blauw water en groen bos. Waar lees je wat die kleuren betekenen?\"],",
+  "reden": "dubbele hint; passend gemaakt bij nieuwe afleiders"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "oud": "basis: \"Goed.\",",
+  "nieuw": "basis: \"Een legenda is de sleutel bij een kaart of grafiek. Wat lees je daarin af?\",",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "oud": "simpeler: \"Legenda = uitleg van kleuren/symbolen.\",",
+  "nieuw": "simpeler: \"Op een kaart is blauw vaak water en groen bos. Waar staat dat uitgelegd? Werkt dat bij een grafiek met gekleurde lijnen ook zo?\",",
+  "reden": "niveaus.simpeler: hulpstap i.p.v. definitie"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 23",
+  "oud": "nogSimpeler: \"Goed\",",
+  "nieuw": "nogSimpeler: \"Legenda = uitleg van de kleuren en tekens. Klopt de zin dan?\",",
+  "reden": "niveaus.nogSimpeler gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 24",
+  "oud": "q: \"Schema toont: **'a → b → c'**. Je nummert de stappen in de richting van de pijlen. Welke **nummering** past op a, b, c?\",",
+  "nieuw": "q: \"Een schema toont: **'b → c → a'**. Je nummert de stappen in de richting van de pijlen. Welk nummer krijgen **a, b en c**?\",",
+  "reden": "vraag deed het werk (a→b→c = 1,2,3) en opties droegen labels; nu echt schema volgen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 24",
+  "oud": "options: [\"1, 2, 3 (volgorde)\", \"1, 3, 2 (door elkaar)\", \"3, 2, 1 (omgekeerd)\", \"2, 3, 1 (verschoven)\"],",
+  "nieuw": "options: [\"a = 3, b = 1, c = 2\", \"a = 1, b = 2, c = 3\", \"a = 1, b = 3, c = 2\", \"a = 2, b = 3, c = 1\"],",
+  "reden": "opties zonder verklappende labels, passend bij nieuw schema"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 24",
+  "oud": "wrongHints: [null, \"Volg de pijlen: welke letter komt na a?\", \"Dan nummer je tegen de pijlen in. Waar begint de eerste pijl?\", \"Bij welke letter begint de pijl? Die krijgt nummer 1.\"],",
+  "nieuw": "wrongHints: [null, \"Dan nummer je op alfabet. Kijk in het schema: bij welke letter begint de eerste pijl?\", \"Dan nummer je tegen de pijlen in. Bij welke letter begint de eerste pijl?\", \"Wijs het schema met je vinger na, langs de pijlen. Welke letter tik je als eerste aan?\"],",
+  "reden": "hints passend bij nieuw schema"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 25",
+  "oud": "q: \"**Atlas-index** zoek je op **Berlijn**. Je krijgt **'Berlijn 14 B3'**. Wat is **14**?\",",
+  "nieuw": "q: \"Je zoekt **Berlijn** op in het **register** (de index) van een atlas. Daar staat: **'Berlijn 14 B3'**. Wat betekent **14**?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 26",
+  "oud": "q: \"Schaal **1:25.000**, 4 cm op kaart = werkelijk in **m**?\",",
+  "nieuw": "q: \"Een kaart heeft **schaal 1:25.000**. Op de kaart meet je 4 cm. Hoeveel **meter** is dat in werkelijkheid?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 26",
+  "oud": "wrongHints: [null, \"100 m = 10.000 cm. Is 4 × 25.000 zo weinig?\", \"10.000 m is 10 km. Heb je bij cm → m wel door 100 gedeeld?\", \"10 m is nog geen klaslokaal lang. Reken 4 × 25.000 cm uit.\"],",
+  "nieuw": "wrongHints: [null, \"100 m = 10.000 cm. Is 4 × 25.000 zo weinig?\", \"10.000 m is 10 km. Heb je bij cm → m wel door 100 gedeeld?\", \"10 m is ongeveer zo lang als een klaslokaal. Reken eerst 4 × 25.000 cm uit.\"],",
+  "reden": "'10 m is nog geen klaslokaal lang' klopt niet (lokaal ≈ 8-10 m)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 27",
+  "oud": "options: [\"aap\", \"boom\", \"kat\", \"muis\"],",
+  "nieuw": "options: [\"kaart\", \"kaas\", \"kast\", \"kat\"],",
+  "reden": "te makkelijk voor groep 8 (vier verschillende beginletters); nu vergelijken tot 3e/4e letter"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 27",
+  "oud": "wrongHints: [null, \"Vergelijk de eerste letters: komt de b het eerst in het alfabet?\", \"De k staat halverwege het alfabet. Welke eerste letter komt eerder?\", \"De m staat midden in het alfabet. Welke eerste letter komt eerder?\"],",
+  "nieuw": "wrongHints: [null, \"Kaas begint met kaa-, net als een ander woord. Vergelijk dan de vierde letter.\", \"Kijk naar de derde letter: ka-**s**-. Heeft een ander woord een derde letter die eerder in het alfabet komt?\", \"Kijk naar de derde letter: ka-**t**-. Heeft een ander woord een derde letter die eerder in het alfabet komt?\"],",
+  "reden": "hints passend bij nieuwe woorden"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 28",
+  "oud": "q: \"**Stappenplan brandweer**: 1) sirene 2) rijden 3) blussen. Welke stap komt **na rijden**?\",",
+  "nieuw": "q: \"**Stappenplan brandweer:** 1) melding komt binnen 2) uitrukken 3) ter plekke kijken wat er brandt 4) blussen. De brandweerwagen is net **aangekomen** bij de brand. Welke stap komt nu?\",",
+  "reden": "vraag deed het werk (stap 3 na stap 2 letterlijk gegeven); nu bepalen waar je in het plan bent"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 28",
+  "oud": "options: [\"Blussen\", \"Sirene\", \"Terugrijden\", \"Alarm krijgen\"],",
+  "nieuw": "options: [\"Kijken wat er brandt\", \"Blussen\", \"Uitrukken\", \"Melding komt binnen\"],",
+  "reden": "opties passend bij nieuw stappenplan"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 28",
+  "oud": "wrongHints: [null, \"Dat was stap 1.\", \"Terugrijden staat niet in dit stappenplan. Welke stap heeft nummer 3?\", \"Alarm krijgen staat niet in het stappenplan. Kijk welk nummer na 'rijden' komt.\"],",
+  "nieuw": "wrongHints: [null, \"Blussen is stap 4. Slaat de brandweer dan een stap over?\", \"Uitrukken = wegrijden van de kazerne. De wagen is al aangekomen.\", \"Dat is stap 1. Die gebeurde al voordat de wagen wegreed.\"],",
+  "reden": "hints passend bij nieuw stappenplan"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 32",
+  "oud": "q: \"**Bustabel + kaart combineren:** de bus doet 12 minuten over 6 km. Hoeveel minuten over **2 km** (zelfde snelheid)?\",",
+  "nieuw": "q: \"**Reistijd uitrekenen:** de bus doet 12 minuten over 6 km. Hoeveel minuten doet de bus over **2 km** (zelfde snelheid)?\",",
+  "reden": "label 'Bustabel + kaart' terwijl er geen tabel/kaart is"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 35",
+  "oud": "q: \"**Grafiek + rekenen:** de lijngrafiek toont 8 zwemmers om 9:00 en 24 om 11:00. Hoeveel keer zo druk werd het?\",",
+  "nieuw": "q: \"**Grafiek lezen + rekenen:** in een lijngrafiek over het zwembad lees je af: om 9:00 waren er 8 zwemmers, om 11:00 waren het er 24. Hoeveel keer zo druk werd het?\",",
+  "reden": "'de lijngrafiek toont' terwijl het kind geen grafiek ziet"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 35",
+  "oud": "wrongHints: [null, \"Denk na: 'hoeveel keer zo druk' vraagt om een deling — welke twee getallen deel je door elkaar?\", \"Je hebt het verschil berekend, maar 'hoeveel keer' vraagt om een andere bewerking.\", \"4 keer zo druk zou 32 zwemmers zijn. Deel 24 door 8.\"],",
+  "nieuw": "wrongHints: [null, \"Denk na: 'hoeveel keer zo druk' vraagt om een deling — welke twee getallen deel je door elkaar?\", \"Je hebt het verschil berekend, maar 'hoeveel keer' vraagt om een andere bewerking.\", \"4 keer zo druk zou 32 zwemmers zijn. Klopt dat met wat je afleest?\"],",
+  "reden": "hint rekende voor ('Deel 24 door 8')"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 6",
+  "oud": "q: \"Op een campingkaart staat in de legenda: driehoekje = tentplek, golfjes = water, 🚻 = toiletgebouw. Naast het tentenveld staan **golfjes** getekend. Wat betekent dat?\",",
+  "nieuw": "q: \"Op een campingkaart staat in de legenda: driehoekje = tentplek, golfjes = water, 🚻 = toiletgebouw. Je wilt een tentplek **vlak bij het water**. Welk teken zoek je dan naast een driehoekje?\",",
+  "reden": "antwoord stond letterlijk in de vraag (golfjes = water → wat betekenen golfjes?)"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 6",
+  "oud": "options: [\"Daar is water\", \"Daar staan extra tenten\", \"Daar zijn de toiletten\", \"Daar is de ingang van de camping\"],",
+  "nieuw": "options: [\"Golfjes\", \"🚻\", \"Nog een driehoekje\", \"Een stippellijn\"],",
+  "reden": "opties passend bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 6",
+  "oud": "wrongHints: [null, \"Tentplekken hebben een ander symbool — het driehoekje.\", \"Voor het toiletgebouw staat 🚻 in de legenda.\", \"De ingang staat niet in dit rijtje — kijk wat de legenda wél noemt.\"],",
+  "nieuw": "wrongHints: [null, \"Kijk in de legenda: wat betekent 🚻?\", \"Het driehoekje is zelf een tentplek. Welk teken hoort volgens de legenda bij water?\", \"Een stippellijn staat niet in deze legenda. Kijk alleen naar de tekens die er wél in staan.\"],",
+  "reden": "hints passend bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 6",
+  "oud": "explanation: \"De legenda zegt: golfjes = **water**. Naast het tentenveld ligt dus een meertje of sloot.\",",
+  "nieuw": "explanation: \"De legenda zegt: golfjes = **water**. Zoek dus een driehoekje (tentplek) met **golfjes** ernaast.\",",
+  "reden": "uitleg passend bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 10",
+  "oud": "q: \"Je staat op het schoolplein. De kerk ligt **tussen het noorden en het oosten** in. In welke windrichting ligt de kerk?\",",
+  "nieuw": "q: \"Op een kaart is het **noorden boven**. De kerk staat **rechtsboven** het schoolplein getekend. In welke windrichting ligt de kerk vanaf het schoolplein?\",",
+  "reden": "antwoord stond in de vraag ('tussen noorden en oosten' → noordoosten); nu kaartrichting afleiden"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 10",
+  "oud": "wrongHints: [null, \"Zuid zit er niet bij — welke twee richtingen noemt de vraag?\", \"West zit er niet bij — lees de vraag nog eens.\", \"Geen van deze twee letters komt in de vraag voor.\"],",
+  "nieuw": "wrongHints: [null, \"Op deze kaart is noord boven. Kan boven dan ook zuid zijn?\", \"Welke kant is oost op een kaart met noord boven: links of rechts?\", \"Waar liggen zuid en west op deze kaart? Is dat rechtsboven?\"],",
+  "reden": "hints wezen naar de woorden in de vraag; nu denkprikkels over de kaart"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 10",
+  "oud": "explanation: \"Tussen noord en oost ligt het **noordoosten** (NO) — de naam combineert de twee richtingen.\",",
+  "nieuw": "explanation: \"Noord is boven en oost is rechts. Rechtsboven ligt dus het **noordoosten** (NO) — de naam combineert de twee richtingen.\",",
+  "reden": "uitleg passend bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "oud": "q: \"De zon komt op in het **oosten**. Je ziet 's ochtends vroeg de zon precies vóór je opkomen. In welke windrichting kijk je?\",",
+  "nieuw": "q: \"De zon komt op in het **oosten**. Je kijkt 's ochtends vroeg recht naar de opkomende zon. Dan **draai je je om**. In welke windrichting kijk je nu?\",",
+  "reden": "antwoord stond in de vraag (zon komt op in oosten, je kijkt naar de opkomende zon); nu een denkstap"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "oud": "options: [\"Naar het oosten\", \"Naar het westen\", \"Naar het noorden\", \"Naar het zuiden\"],",
+  "nieuw": "options: [\"Naar het westen\", \"Naar het oosten\", \"Naar het noorden\", \"Naar het zuiden\"],",
+  "reden": "goede optie (index 0) wordt westen"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "oud": "wrongHints: [null, \"Daar gaat de zon 's avonds juist ónder.\", \"In Nederland staat de zon nooit in die richting.\", \"Denk aan waar de zon ópkomt — dat staat in de eerste zin.\"],",
+  "nieuw": "wrongHints: [null, \"Zo keek je vóórdat je je omdraaide. Omdraaien is een halve draai.\", \"Noord ligt opzij van je, niet achter je.\", \"Zuid ligt opzij van je, niet achter je.\"],",
+  "reden": "hints passend bij nieuwe vraag; oude hint 'staat in de eerste zin' verklapte"
+ },
+ {
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 16",
+  "oud": "explanation: \"De zon komt op in het oosten en jij kijkt er recht tegenaan: je kijkt **naar het oosten**.\",",
+  "nieuw": "explanation: \"Je keek naar het oosten. Na een halve draai kijk je precies de andere kant op: **naar het westen**. Daar gaat de zon 's avonds onder.\",",
+  "reden": "uitleg passend bij nieuwe vraag"
+ }
+]

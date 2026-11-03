@@ -5,65 +5,65 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 ## 1. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 2)
 Vraag: Welke vorm is **goed**?
 - ✅ Hij speelt
-- ▫️ Hij speelen
-- ▫️ Hij speel
 - ▫️ Hij speeld
+- ▫️ Hij speel
+- ▫️ Hij speelen
 
 ## 2. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 2)
 Vraag: Welke vraag is **goed** geschreven?
 - ▫️ Werkt jij hard?
-- ✅ Werk jij hard?
 - ▫️ Werken jij hard?
 - ▫️ Werkd jij hard?
+- ✅ Werk jij hard?
 
 ## 3. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 2)
 Vraag: Kies de goede vorm van **lopen**: '**Zij** (meervoud) ____ naar huis.'
-- ▫️ loop
 - ▫️ loopt
-- ✅ lopen
 - ▫️ loopen
+- ▫️ loop
+- ✅ lopen
 
 ## 4. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 3)
 Vraag: 'Hij ____ boos.' Welke vorm van **worden** past hier?
-- ▫️ wordd
-- ▫️ wort
 - ✅ wordt
+- ▫️ wort
+- ▫️ wordd
 - ▫️ word
 
 ## 5. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 3)
 Vraag: 'Zij (meervoud) ____ een schat.' Welke vorm van **vinden** past hier?
+- ▫️ vind
 - ▫️ vindt
 - ▫️ vint
-- ▫️ vind
 - ✅ vinden
 
 ## 6. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 3)
 Vraag: Welke zin is **goed**?
 - ▫️ Hij houden van pizza
 - ✅ Hij houdt van pizza
-- ▫️ Hij houd van pizza
 - ▫️ Hij hout van pizza
+- ▫️ Hij houd van pizza
 
 ## 7. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 4)
 Vraag: Welke zin is **goed**?
-- ▫️ Hij zitte op de stoel
 - ▫️ Hij zitten op de stoel
-- ▫️ Hij zitt op de stoel
+- ▫️ Hij zitte op de stoel
 - ✅ Hij zit op de stoel
+- ▫️ Hij zitt op de stoel
 
 ## 8. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 4)
 Vraag: 'Zij (meervoud) ____ pizza.' Welke vorm van **eten** past hier?
-- ▫️ eett
-- ▫️ eet
 - ▫️ etten
 - ✅ eten
+- ▫️ eett
+- ▫️ eet
 
 ## 9. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 4)
 Vraag: Kies de juiste vorm van **wachten**: 'Hij ____ op de bus.'
+- ▫️ wachten
+- ▫️ wachtt
 - ▫️ wachtd
 - ✅ wacht
-- ▫️ wachtt
-- ▫️ wachten
 
 ## 10. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 5)
 Vraag: Welke medeklinkers zitten in **'t kofschip**?
@@ -74,70 +74,70 @@ Vraag: Welke medeklinkers zitten in **'t kofschip**?
 
 ## 11. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 5)
 Vraag: Wat is de verleden tijd van **werken** (bij ik)?
-- ▫️ werkde
 - ✅ werkte
+- ▫️ werkde
 - ▫️ werkt
 - ▫️ werken
 
 ## 12. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 5)
 Vraag: Wat is de verleden tijd van **leren** (bij ik)?
 - ✅ leerde
-- ▫️ leren
-- ▫️ leert
 - ▫️ leerte
+- ▫️ leert
+- ▫️ leren
 
 ## 13. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 1)
 Vraag: *In het regenwoud is het ___ warm.* Welk woord is **goed** gespeld?
 - ▫️ tropich
 - ▫️ tropiesch
-- ✅ tropisch
 - ▫️ tropies
+- ✅ tropisch
 
 ## 14. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 1)
 Vraag: *Is het ___ dat je morgen komt?* Welk woord is **goed** gespeld?
-- ▫️ mogelik
-- ▫️ mogelijck
 - ▫️ mogeluk
 - ✅ mogelijk
+- ▫️ mogelijck
+- ▫️ mogelik
 
 ## 15. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 3)
 Vraag: Welke is **goed** geschreven?
-- ✅ pannenkoek
-- ▫️ panne koek
 - ▫️ pannekoek
+- ✅ pannenkoek
 - ▫️ panne-koek
+- ▫️ panne koek
 
 ## 16. Spelling overige — groep 5-8, Doorstroomtoets-stof (spelling-overige-po, stap 3)
 Vraag: Welke is **fout** geschreven?
-- ▫️ zonnebril
-- ▫️ voetbalschoen
 - ✅ voetbal schoen
+- ▫️ zonnebril
 - ▫️ tandarts
+- ▫️ voetbalschoen
 
 ## 17. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 7)
 Vraag: **'Het is heel ____ buiten'** (= zeer lage temperatuur):
-- ▫️ kaud
-- ▫️ koudt
-- ✅ koud
 - ▫️ kouwd
+- ▫️ koudt
+- ▫️ kaud
+- ✅ koud
 
 ## 18. Spelling — ei vs ij + au vs ou (spelling-ei-ij-au-ou, stap 7)
 Vraag: **'Hij ____ op zijn fiets.'** Welk woord is goed?
-- ▫️ rijden
 - ▫️ rijd
-- ▫️ reidt
 - ✅ rijdt
+- ▫️ reidt
+- ▫️ rijden
 
 ## 19. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 6)
 Vraag: Vul het voltooid deelwoord van **werken** in: 'Ik heb ____.'
-- ▫️ gewerkd
 - ▫️ gewerk
 - ▫️ gewerken
+- ▫️ gewerkd
 - ✅ gewerkt
 
 ## 20. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 6)
 Vraag: Vul het voltooid deelwoord van **leren** in: 'Hij heeft ____.'
+- ▫️ geleert
+- ✅ geleerd
 - ▫️ geleren
 - ▫️ gegelerd
-- ✅ geleerd
-- ▫️ geleert
