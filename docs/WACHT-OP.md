@@ -3,6 +3,7 @@
 *Alle open lussen: waar wachten we op een "ja", een antwoord of een levering. Dit is de single source of truth voor het prio-blok in elk dagrapport. Bijwerken bij elke mail-check: antwoord binnen → regel afvoeren + vervolgactie erbij zetten.*
 
 ## 🔴 Prio 1 — actie zodra antwoord binnenkomt
+- **🏫 Haagse scholen-golf (Den Haag/Rijswijk/Leidschendam-Voorburg, groep 7/8 + Doorstroomtoets + Ooievaarspas-alinea)** — dag 1 verstuurd di 3 nov ~10:40 (60/60 via Resend/hallo@), dag 2 wo 4 nov rij 61-118. Lijst + log: `docs/outreach/denhaag/SCHOLEN-DENHAAG-20261103.md`. **Wacht op:** antwoorden van leerkrachten/directies (check to:hallo@). Bij vraag of ja → eerst concept aan Mark; meten: weektaak_*-events + /klas vanuit Haagse postcodes. Geen nudge.
 - **Leergeld Den Haag** (info@leergelddenhaag.nl) — aanbod eigen code, Familie 3 jaar gratis t/m 2029, verstuurd di 3 nov 2026 (tip Esther/Ooievaarspas). Nudge: ~di 17 nov als stil.
 
 - **📱 Google Play — productietoegang AFGEWEZEN do 29 okt 21:12** ("More testing required"): Google wil nog **14 dagen gesloten testen met echte, actieve testers** (gebruik + feedback + liefst een update). **Wacht op:** Mark appt testers (gezin/vrienden/testerslijst) om echt te oefenen; Claude zet ~6 nov een kleine update klaar. Opnieuw aanvragen vanaf **~13 nov**.

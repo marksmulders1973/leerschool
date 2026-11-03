@@ -1,0 +1,43 @@
+vestigingscode	school	plaats	wijk	email	bron-url	opmerking
+04SR00	Basisschool Nieuw Vreugd en Rust	VOORBURG	overig	info@mnvr.nl	https://nieuwvreugdenrust.nl/	gevonden in footer homepage
+20UO00	IKEC De Waterlelie	LEIDSCHENDAM	overig	geen	https://www.ikecdewaterlelie.nl/contact/	geen e-mail op homepage zichtbaar; alleen contactpagina-link gevonden, inhoud niet opgehaald
+11JD00	MMiXX	LEIDSCHENDAM	overig	info@ikcmmixx.nl	https://www.ikcmmixx.nl/	gevonden op homepage ("Mail ons")
+08VR00	Protestants Christelijke Basisschool De Zonnewijzer	LEIDSCHENDAM	overig	mail@dezonnewijzer.nl	https://www.dezonnewijzer.nl/	gevonden in footer homepage
+12EX00	Basisschool 't Prisma	RIJSWIJK ZH	overig	directie@hetprisma.nl	https://www.hetprisma.nl/	gevonden op homepage (2x)
+13VQ00	CBS Melodie	RIJSWIJK ZH	overig	info@cbsmelodie.nl	https://cbsmelodie.nl/	gevonden in footer homepage
+30WX00	Kindcentrum Buitenrijck	RIJSWIJK ZH	overig	info@kcbuitenrijck.nl	https://www.kcbuitenrijck.nl/	gevonden in footer homepage; apart adres aanmelden@kcbuitenrijck.nl voor aanmeldingen
+13IL00	Prins Mauritsschool	RIJSWIJK ZH	overig	info@pms-rijswijk.nl	https://www.pms-rijswijk.nl/	gevonden op homepage
+08ZU00	Carolusschool	'S-GRAVENHAGE	Centrum/Stationsbuurt	geen	www.nldata.nl/carolus	site onbereikbaar (connection refused, meerdere keren + http geprobeerd)
+17PQ00	Protestants Christelijke Basisschool Prinsehaghe	'S-GRAVENHAGE	Centrum/Stationsbuurt	prinsehaghe@scoh.nl	https://prinsehaghe.nl/	gevonden onderaan homepage
+18PQ00	Anne Frank Wereldschool	'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	geen	https://www.obs-annefrank.nl/contact/	site redirect naar obs-annefrank.nl; geen e-mail op homepage, alleen telefoon + link naar contactpagina (niet opgehaald)
+19NZ00	Erasmusschool	'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	info@obs-erasmus.nl	https://obs-erasmus.nl/	meermaals op homepage gevonden
+19SG00	Nutsbasisschool Morgenstond	'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	directie@nutsschoolmorgenstond.nl	https://www.nutsschoolmorgenstond.nl/	gevonden in footer homepage
+05HD00	Rooms Katholieke Basisschool De Zuidwester	'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	dezuidwester@laurentiusstichting.nl	https://www.bsdezuidwester.nl/	gevonden in contactsectie homepage
+32DD00	Aida	'S-GRAVENHAGE	Laakkwartier	info@aidascholen.nl	https://www.aidascholen.nl/	gevonden in footer homepage
+16FS00	De Triangel	'S-GRAVENHAGE	Laakkwartier	geen	https://www.triangeldenhaag.nl/	geen e-mail zichtbaar op homepage; contactpagina kon niet worden opgehaald (herhaalde fout)
+17ZH00	Pr Ireneschool voor Christelijk Basisonderwijs	'S-GRAVENHAGE	Laakkwartier	school@irene.scoh.nl	https://prinsesireneschooldenhaag.nl/	gevonden onderaan homepage
+17TY00	P Oosterleeschool, school voor Christelijk Basisonderwijs	'S-GRAVENHAGE	Moerwijk/Morgenstond	oosterlee@scoh.nl	https://oosterleeschool.nl/	gevonden op homepage; apart adres peuterschooloosterlee@scoh.nl voor peuterschool
+17XC00	Ds Dj Karressch Christelijke Basisonderwijs	'S-GRAVENHAGE	Regentes/Valkenbos	karres@scoh.nl	https://www.karresschool.nl/	gevonden in footer homepage; apart adres peuterschoolkarres@scoh.nl voor peuterschool
+17YA00	Paul Krugersch voor Christelijk Basisonderwijs	'S-GRAVENHAGE	Regentes/Valkenbos	geen	www.nldata.nl/kruger	site onbereikbaar (zelfde nldata.nl-domein als Carolusschool, connection refused)
+15VU00	Basisschool 't Palet	'S-GRAVENHAGE	Schilderswijk/Transvaal	info@palet.lucasonderwijs.nl	https://www.paletnet.nl/contact	gevonden op contactpagina, geldt voor alle 3 locaties
+17UD00	Dr J A Gerth V Wijksch voor Christelijk Basis Onderwijs	'S-GRAVENHAGE	Schilderswijk/Transvaal	gvw@scoh.nl	https://www.gerthvanwijkschool.nl/	gevonden in footer homepage
+17FV00	Obs Dr Willem Drees	'S-GRAVENHAGE	Schilderswijk/Transvaal	info@wdrees.nl	https://wdrees.nl/	gevonden op homepage
+17PJ00	Startpunt International	'S-GRAVENHAGE	Schilderswijk/Transvaal	geen	www.obshetstartpunt.nl	site onbereikbaar (verlopen SSL-certificaat, herhaald geprobeerd)
+19LY01	Annie MG Schmidtschool	'S-GRAVENHAGE	overig	info@amgschmidtschool.nl	https://www.amgschmidtschool.nl/	gevonden op homepage
+17MC00	Basisschool Bohemen Kijkduin	'S-GRAVENHAGE	overig	secretariaat@bohemenkijkduinschool.nl	https://www.bohemenkijkduinschool.nl/	gevonden onderaan homepage
+17VA00	Christelijke Basisschool De Vliermeent	'S-GRAVENHAGE	overig	vliermeent@scoh.nl	https://vliermeent.nl/contact/	gevonden op contactpagina (niet op homepage)
+26AZ00	De Gantel	'S-GRAVENHAGE	overig	gantel@scoh.nl	https://www.degantel.nl/	gevonden in footer homepage
+19XU00	De Tweemaster	'S-GRAVENHAGE	overig	info@obs-tweemaster.nl	https://obs-tweemaster.nl/	gevonden in footer homepage
+26PX00	De Walvis	'S-GRAVENHAGE	overig	info@bsdewalvis.nl	https://www.bsdewalvis.nl/contact	niet op homepage, wel op contactpagina
+16ZP00	Ds W E Den Hertog School	'S-GRAVENHAGE	overig	wedenhertogschool@website.scoh.nl	https://www.wedenhertogschool.nl/	gevonden in footer homepage; ongebruikelijk domein-formaat, letterlijk zo overgenomen (controleren voor gebruik)
+17PY00	Galvani-School	'S-GRAVENHAGE	overig	info@galvani.nl	https://galvani.nl/	site redirect van galvanischool.nl naar galvani.nl; gevonden in contactsectie homepage
+13OW00	IC Basisschool Statenkwartier	'S-GRAVENHAGE	overig	geen	www.nldata.nl/statenkwartier	site onbereikbaar (zelfde nldata.nl-domein als Carolusschool, connection refused)
+19VA00	Kindcentrum Bezuidenhout	'S-GRAVENHAGE	overig	geen	www.kindcentrumbezuidenhout.nl	site onbereikbaar (verlopen SSL-certificaat)
+18AR00	Maria Montessorischool	'S-GRAVENHAGE	overig	info@mmdenhaag.nl	https://www.mmdenhaag.nl/	gevonden in contactsectie homepage (mailto-link)
+05VY00	Montessorischool Waalsdorp	'S-GRAVENHAGE	overig	administratie@waalsdorp.nl	https://www.waalsdorp.nl/	gevonden onderaan homepage
+17RV00	O G Heldringsch Christelijke Basis Onderwijs	'S-GRAVENHAGE	overig	heldring@scoh.nl	https://www.og-heldringschool.nl/	site redirect van ogheldringschool.nl; gevonden 2x op homepage
+17RI00	Oranje Nassauschool voor Christelijk Basisonderwijs	'S-GRAVENHAGE	overig	geen	www.scoh.nl/nassau-o	opgegeven pad geeft 404; juiste scoh.nl-pad niet teruggevonden via scoh.nl-navigatie
+19VH00	Protestants Christelijke Basisschool De Oranjeschool	'S-GRAVENHAGE	overig	oranje@scoh.nl	https://pcoranjeschool.nl/	gevonden in header homepage
+27PX00	RKBS De Bras	'S-GRAVENHAGE	overig	algemeen@basisschooldebras.nl	https://www.basisschooldebras.nl/	gevonden in contactsectie homepage
+05VV00	Schoolvereniging Wolters	'S-GRAVENHAGE	overig	administratie@schoolverenigingwolters.nl	https://schoolverenigingwolters.nl/	gevonden in footer homepage
+27PD00	Zonnestraal	'S-GRAVENHAGE	overig	info.zonnestraal@octant.nl	https://www.zonnestraal-octant.nl/	gevonden in footer homepage

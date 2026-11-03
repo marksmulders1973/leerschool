@@ -1,0 +1,43 @@
+vestigingscode	school	adres	postcode plaats	wijk	website
+03TQ00	Basisschool Essesteijn	Elzendreef 4	2272EB VOORBURG	overig	www.essesteijn.nl
+13AR00	De Parachute	van Lodensteijnstraat 6	2274TZ VOORBURG	overig	www.deparachute.nl
+07SP00	Kindcentrum Cascade	Delflandlaan 6	2273CS VOORBURG	overig	www.basisschoolcascade.nl
+12UO00	Professor Casimirschool	van Deventerlaan 16	2271TX VOORBURG	overig	www.profcasimirschool.nl
+20UU00	Roomskatholieke Basisschool Maria Bernadette	van Ruysdaellaan 91	2264TA LEIDSCHENDAM	overig	www.marberna.nl
+12WB00	Basisschool Steenvoorde	Dr Poelslaan 4	2285VD RIJSWIJK ZH	overig	www.steenvoordeschool.nl
+13ZE00	Het Kristal	Henri Dunantlaan 90	2286GE RIJSWIJK ZH	overig	www.bshetkristal.nl
+32LK00	Montessori Parkrijk	Parelmoervlinderlaan 102	2288HR RIJSWIJK ZH	overig	www.montessorischoolparkrijk.nl
+05VW00	Basisschool van de Stichting Haagsche School Vereniging	Nassaulaan 26	2514JT 'S-GRAVENHAGE	Centrum/Stationsbuurt	www.hsvdenhaag.nl
+19MU00	Openbare Basisschool Max Velthuijs	Da Costastraat 40	2513RP 'S-GRAVENHAGE	Centrum/Stationsbuurt	www.maxvelthuijs.nu
+19ZJ00	Zuidwalschool	Lepelstraat 6	2512CW 'S-GRAVENHAGE	Centrum/Stationsbuurt	www.obszuidwalschool.nl
+19NT00	De Drentse Hoek	Oosterhesselenstraat 586	2545SL 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	www.obsdedrentsehoek.nl
+13TA00	Kindcentrum Bamboe	Bentelostraat 53	2545NV 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	www.kindcentrumbamboe.nl
+16XN00	Prof Mr A Anema Basisschool	Eindstede 4	2543BL 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	www.anemaschool.nl
+17TN00	kindcentrum Leyenburg kindcentrum voor opvang en christelijk onderwijs (0-12)	Edamstraat 2	2547VR 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	www.kcleyenburg.nl
+19MP00	De Kameleon	Ketelstraat 101	2516VN 'S-GRAVENHAGE	Laakkwartier	www.obsdekameleon.nl
+31VB00	KC De Binck	St. Barbaraweg 4	2516BT 'S-GRAVENHAGE	Laakkwartier	https://www.kcdebinck.nl/
+17TT00	Ds D.A. van den Boschschool voor Christelijk Basisonderwijs	Erasmusweg 68	2532CR 'S-GRAVENHAGE	Moerwijk/Morgenstond	www.vdboschschool.nl
+19SI00	De La Reyschool	De la Reyweg 212	2571GH 'S-GRAVENHAGE	Regentes/Valkenbos	www.delareyschool.nl
+19NQ00	Openbare Basisschool De Gelderlandschool	Nijkerklaan 9	2573BA 'S-GRAVENHAGE	Regentes/Valkenbos	www.gelderlandschool.nl
+27PC00	Al Qoeba	Terwestenstraat 105	2525GG 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.alqoeba.nl
+13ZY00	De Regenboog	Linnaeusstraat 12	2522GR 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.nldata.nl/regenboog
+04ON00	Koningin Beatrixschool	Saenredamstraat 4	2525TN 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.beatrixschool.info
+22MH00	Shri Vishnu School	Abraham van Beyerenstr 56	2525TH 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.shrivishnu.nl
+19LY00	Annie MG Schmidtschool	Jacob de Graefflaan 10	2517JM 'S-GRAVENHAGE	overig	www.amgschmidtschool.nl
+07YO00	Basisschool Bavinck	Acaciastraat 141	2565JZ 'S-GRAVENHAGE	overig	www.scoh.nl/bavinck
+05OL00	Chr. Basisschool De Elout	Copernicusstraat 159	2561VT 'S-GRAVENHAGE	overig	www.scoh.nl/elout
+04ZT00	De Drie Linden	2e Braamstraat 5	2563HJ 'S-GRAVENHAGE	overig	www.lucasonderwijs.nl/drielinden
+19MH00	De Klimop	Cartesiusstraat 2-4	2562SK 'S-GRAVENHAGE	overig	www.deklimopschool.nl
+05WB00	De Vrije School	Abbenbroekweg 7	2597NT 'S-GRAVENHAGE	overig	www.devrijeschooldenhaag.nl
+17ZS00	Dr M M Den Hertogschool voor Christelijk Basis  Onderwijs	Amalia van Solmsstraat 5	2595TA 'S-GRAVENHAGE	overig	www.denhertogschool.nl
+27CF00	Fontein	Steenuillaan 2	2496PN 'S-GRAVENHAGE	overig	www.fontein-octant.nl
+19NN00	Houtrustschool	Nachtegaalplein 19-A	2566JP 'S-GRAVENHAGE	overig	www.houtrustschool.nl
+09WY00	KC Toermalijn	Weimarstraat 300	2562HS 'S-GRAVENHAGE	overig	https://kctoermalijn.nl/
+16DA00	Liduina	Amalia van Solmsstraat 157	2595TA 'S-GRAVENHAGE	overig	www.liduinabasisschool.nl
+26PZ00	Montessorischool Leidschenveen	Cicerostrook 1	2493ZL 'S-GRAVENHAGE	overig	www.montessorileidschenveen.nl
+19VL00	Nutsbasisschool Zorgvliet	Adriaan Goekooplaan 13	2517JX 'S-GRAVENHAGE	overig	www.nutsschoolzorgvliet.nl
+19MZ00	Openbare basisschool Houtwijk	Mari Andriessenstraat 42-44	2552KN 'S-GRAVENHAGE	overig	www.obshoutwijk.nl
+26AW00	Prot Chr Basisschool De Vlieger	Frits Diepenlaan 43	2497DN 'S-GRAVENHAGE	overig	www.nldata.nl/devlieger
+26AV00	RK Basisschool Christoffel	Madurolaan 25	2496RH 'S-GRAVENHAGE	overig	www.christoffel.nl
+06KA00	Rooms Katholieke Basisschool De Parkiet	Parkietlaan 1	2566XT 'S-GRAVENHAGE	overig	www.parkiet.org
+17QF00	Waalse Louise De Coligny School voor Christelijk Basisonderwijs	Ametisthorst 421	2592HN 'S-GRAVENHAGE	overig	www.dewlc.nl

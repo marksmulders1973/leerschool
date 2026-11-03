@@ -1,0 +1,43 @@
+vestigingscode	school	adres	postcode plaats	wijk	website
+08NI00	Basisschool De Lusthof	Lusthofstraat 11	2271XV VOORBURG	overig	www.lusthofschool.nl
+10NH00	Christelijke Basisschool De Vijverhof	de Oude Bleijk 4	2266CK LEIDSCHENDAM	overig	www.nldata.nl/vijverhof
+06LU00	KC de Telescoop	Heeswijkstraat 2	2275EE VOORBURG	overig	www.kcdetelescoop.nl
+12NO00	Openbare Dalton Basisschool de Tandem	Leenkamp 7-9	2264KW LEIDSCHENDAM	overig	www.detandem.nl
+07DP00	Rooms Katholieke Protestants Christelijke Samenwerkingsschool Emmaus	Leenkamp 15	2264KW LEIDSCHENDAM	overig	www.samenwerkingsschoolemmaus.nl
+30XM00	Basisschool Kronenburgh	Broekslootkade 95-97	2281TC RIJSWIJK ZH	overig	www.basisschoolkronenburgh.nl
+11LE00	Godfried Bomansschool	Wijnandt van Elststraat 1	2282HH RIJSWIJK ZH	overig	www.godfriedbomansschool.nl
+10XK00	Mariaschool voor Katholiek Basisonderwijs	van Vredenburchweg 75	2282SE RIJSWIJK ZH	overig	www.mariaschoolrijswijk.nl
+13HM00	Wethouder Brederodeschool	Goedendorplaan 3	2286MV RIJSWIJK ZH	overig	www.brederodeschool.nl
+17ZM00	Meester Schabergschool voor Christelijk Basisonderwijs	Sirtemastraat 400	2513XX 'S-GRAVENHAGE	Centrum/Stationsbuurt	www.schabergschool.nl
+31PG00	Yunus Emre	Van Damstraat 7	2512PG 'S-GRAVENHAGE	Centrum/Stationsbuurt	www.bsyunusemre.nl
+17FE00	Dalton KC Helen Parkhurst	Baambruggestraat 2-4	2546SK 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	https://www.daltonkc-helenparkhurst.nl/
+08NF00	Katholieke Basisschool De Jonge Wereld	Den Helderstraat 250	2547ST 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	www.nldata.nl/djwereld
+17NQ00	P.C. Hooft-School	Escamplaan 65	2547GA 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	www.pchooftschool.net
+32DU00	Tamarschool	Fluitenbergstraat 6	2545NL 'S-GRAVENHAGE	Escamp/Bouwlust/Zuidwest	https://tamarschool.nl/
+17NF00	De Baanbreker	Elboogstraat 68	2516PV 'S-GRAVENHAGE	Laakkwartier	www.baanbreker.info
+17YY00	Jan V Nassauschool voor Protestants Christelijk Basisonderwijs	Zaanstraat 25	2515TM 'S-GRAVENHAGE	Laakkwartier	www.janvannassauschool.nl
+19QD00	De Kleine Wereld	Van Ruysbroekstraat 7	2531TG 'S-GRAVENHAGE	Moerwijk/Morgenstond	www.kleine-wereld.nl
+17SU00	Chr Basisschool Comenius	Colensostraat 6	2572NR 'S-GRAVENHAGE	Regentes/Valkenbos	https://comeniusdenhaag.nl/
+13EK00	Onze Wereld	Brandtstraat 87	2572CC 'S-GRAVENHAGE	Regentes/Valkenbos	www.onzewereld.net
+19OQ00	Springbok International	Pretoriusstraat 123	2571VD 'S-GRAVENHAGE	Regentes/Valkenbos	www.obsdespringbok.nl
+17ZZ00	De Horizon Christelijke School voor Basisonderwijs	Paets van Troostwijkstr 93	2522DM 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.nldata.nl/horizon
+13WM00	Jeroen	Guido Gezellestraat 51	2524CK 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.nldata.nl/jeroen
+07AK00	Rooms Katholieke Basisschool De Buutplaats	Hoefkade 677	2525LE 'S-GRAVENHAGE	Schilderswijk/Transvaal	www.bsdebuutplaats.nl
+05VX00	1e Ned Montessorischool	Laan van Poot 353	2566DA 'S-GRAVENHAGE	overig	www.enms.nl
+17EU00	Basisschool Archipel	Atjehstraat 31	2585VG 'S-GRAVENHAGE	overig	www.archipelschool.nl
+17MR00	Benoordenhout	Dreibholtzstraat 2-4	2596XG 'S-GRAVENHAGE	overig	www.obsbenoordenhout.nl
+17TD00	Da Costa School Christelijke Basisonderwijs	Hollanderstraat 21	2517HH 'S-GRAVENHAGE	overig	www.scoh.nl/costa
+17EK01	De Kleine Keizer	Loosduinse Uitleg 10	2553AZ 'S-GRAVENHAGE	overig	www.dekleinekeizer.nl
+19YS00	De Vlierboom	Vlierboomstraat 366	2564JJ 'S-GRAVENHAGE	overig	www.devlierboom.nl
+15ZZ00	Diamant	Diamanthorst 181-A	2592GD 'S-GRAVENHAGE	overig	www.scolucas.nl/vuurvlinder
+06ES00	Eben Haezerschool	Paulus Buijsstraat 51	2582CH 'S-GRAVENHAGE	overig	www.ehsdh-mantum.nl
+19TO00	Het Volle Leven	Rijslag 17-23	2587BB 'S-GRAVENHAGE	overig	www.hetvolleleven.nl
+07CQ00	KC Koos Meinderts	C.A. van Beverenstraat 48	2552HW 'S-GRAVENHAGE	overig	https://kckoosmeinderts.nl/
+16WH00	Kindcentrum Vroondaal	Madepolderweg 76-78	2553EG 'S-GRAVENHAGE	overig	www.kindcentrumvroondaal.nl
+05HC00	Montessori Kindcentrum John F. Kennedy	Gradaland 5	2591HB 'S-GRAVENHAGE	overig	www.kennedymontessori.nl
+19TM00	Nutsbasisschool M.M. Boldingh	Verhulstplein 21	2517SC 'S-GRAVENHAGE	overig	www.nutsschoolboldingh.nl
+26PJ00	Openbare Dalton Basisschool Waterland	Eendenplein 1	2492NZ 'S-GRAVENHAGE	overig	www.obswaterland.nl
+27VA00	Prinses Catharina-Amaliaschool	Cicerostrook 9	2493ZL 'S-GRAVENHAGE	overig	www.obs-pca.nl
+06UW00	Protestants Christelijke Basisschool Willem de Zwijger	Gentsestraat 124	2587HZ 'S-GRAVENHAGE	overig	www.wdzscheveningen.nl
+27CH00	Rooms Katholieke Basisschool De Paradijsvogel	Weidevogellaan 201	2496MT 'S-GRAVENHAGE	overig	https://www.basisschooldeparadijsvogel.nl/
+24RU00	Vrijeschool Wonnebald	Mozartlaan 189	2555JK 'S-GRAVENHAGE	overig	www.wonnebald.nl
