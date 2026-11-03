@@ -856,7 +856,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "kg.",
+            basis: "Denk aan hoe zwaar een volle tas voelt: ongeveer zo zwaar als een paar pakken melk. Welke eenheid past bij zo'n gewicht?",
             simpeler: "Een volle tas weegt een paar kilo. Dus kg.",
             nogSimpeler: "kg",
           },

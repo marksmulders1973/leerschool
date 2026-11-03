@@ -677,7 +677,7 @@ const steps = [
           theorie: "Voor 'populairst/meeste'-vragen: zoek visueel de HOOGSTE balk. Lees x-as-label voor naam. Hoeft niet getallen te lezen — visueel is sneller.",
           voorbeelden: [{ type: "rangschikken", tekst: "Top-5: voetbal 28, zwemmen 22, tennis 15, hockey 12, judo 8. Voetbal duidelijk hoogst." }],
           basiskennis: [{ onderwerp: "Visueel zien", uitleg: "Bij staafdiagram hoef je niet altijd getallen te lezen — vergelijk visueel hoogte." }],
-          niveaus: { basis: "Voetbal (hoogst).", simpeler: "Hoogste balk = voetbal (28).", nogSimpeler: "Voetbal" },
+          niveaus: { basis: "Zoek de balk die het hoogst komt. Lees dan onderaan welke sport bij die balk hoort.", simpeler: "Leg je vinger op de top van elke balk. Welke balk is het hoogst? Dat is voetbal (28).", nogSimpeler: "Voetbal" },
         },
       },
       {
@@ -694,7 +694,7 @@ const steps = [
           theorie: "'Hoeveel meer/minder?'-vragen = ALTIJD AFTREKKEN. Niet optellen, niet één getal lezen.",
           voorbeelden: [{ type: "check", tekst: "28 - 8 = 20 ✓. Klopt: voetbal-balk is veel hoger dan judo-balk." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen lezen alleen voetbal (28) of judo (8) — vergeten vraag is VERSCHIL." }],
-          niveaus: { basis: "20 (28-8).", simpeler: "Voetbal 28, judo 8. Verschil = 28-8 = 20.", nogSimpeler: "20" },
+          niveaus: { basis: "Lees de balk van voetbal en de balk van judo af. Bij 'hoeveel meer' trek je het kleine getal van het grote af.", simpeler: "Voetbal 28, judo 8. Verschil = 28-8 = 20.", nogSimpeler: "20" },
         },
       },
       {
@@ -711,7 +711,7 @@ const steps = [
           theorie: "Twee methodes: (1) andere categorieën optellen, (2) totaal min uitgesloten. Beide werken. Check elkaar via beide methodes.",
           voorbeelden: [{ type: "check", tekst: "Methode A: 15+12+8 = 35. Methode B: 85-50 = 35. Beide kloppen ✓." }],
           basiskennis: [{ onderwerp: "Lees woord 'NIET'", uitleg: "Examen-val: 'NIET' makkelijk te missen. Onderstreep negatie-woorden bij lezen." }],
-          niveaus: { basis: "35 (andere balken).", simpeler: "NIET voet/zwem = tennis+hockey+judo = 15+12+8 = 35.", nogSimpeler: "35" },
+          niveaus: { basis: "Er zijn vijf sporten. Laat voetbal en zwemmen weg en tel de andere balken bij elkaar op.", simpeler: "Zonder voetbal en zwemmen houd je tennis, hockey en judo over: 15 + 12 + 8 = 35.", nogSimpeler: "35" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -747,7 +747,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Druif (6).",
+            basis: "Zoek de laagste balk. Dat fruit werd het minst gekozen.",
             simpeler: "Laagste balk = druif.",
             nogSimpeler: "Druif",
           },
@@ -793,7 +793,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "143 kg.",
+            basis: "'Samen' betekent optellen. Tel eerst twee getallen op en tel daar het derde getal bij.",
             simpeler: "45 + 60 + 38 = 143.",
             nogSimpeler: "143",
           },
@@ -844,7 +844,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "150.",
+            basis: "Het midden ligt even ver van 100 als van 200. Tel bij 100 de helft van een stap van 100 op.",
             simpeler: "Midden tussen 100 en 200 = 150.",
             nogSimpeler: "150",
           },
@@ -891,7 +891,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "14.",
+            basis: "Zoek de getallen van Jesse en Mees. Bij 'hoeveel meer' trek je het kleinste getal van het grootste af.",
             simpeler: "Jesse 31 − Mees 17 = 14.",
             nogSimpeler: "14",
           },

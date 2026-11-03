@@ -1166,20 +1166,22 @@ const steps = [
     explanation: "Een **schaal** is een **verhouding** tussen kaart-afstand en werkelijke afstand.\n\n**Voorbeeld**: schaal **1 : 100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt = **1 km**.\n\n**Belangrijke schalen** (schoolse kaarten):\n• 1 : 100 → 1 cm = 1 m (plattegrond kamer)\n• 1 : 1.000 → 1 cm = 10 m (school-plattegrond)\n• 1 : 10.000 → 1 cm = 100 m (klein gebied)\n• 1 : 100.000 → 1 cm = 1 km (regio-kaart)\n• 1 : 1.000.000 → 1 cm = 10 km (provincie-kaart)\n\n**Aanpak — twee soorten vragen**:\n\n**A. Kaart → werkelijk** *(meten naar werkelijkheid)*:\n• Op kaart staat 5 cm + schaal 1 : 100.000.\n• 5 × 100.000 = 500.000 cm = 5.000 m = **5 km**.\n\n**B. Werkelijk → kaart** *(plannen op kaart)*:\n• Werkelijke afstand 8 km = 800.000 cm.\n• Bij schaal 1 : 100.000: 800.000 ÷ 100.000 = **8 cm op kaart**.\n\n**Truc voor schaal 1 : 100.000** *(meest gebruikt)*:\n• 1 cm op kaart = 1 km in echt. Heel simpel.\n• Werkelijke km = direct cm op kaart.\n\n**Toets-tip**:\nLet op **eenheden**! Schaal-getallen werken in cm. Reken alles eerst naar cm voor je deelt of vermenigvuldigt.",
     checks: [
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
         q: "Een kaart heeft **schaal 1 : 100.000**. Op de kaart is een afstand **3 cm**. Hoe ver is dat in het echt?",
         options: ["3 km","30 km","300 m","30 m"],
         answer: 0,
-        wrongHints: [null,"Reken 3 × 100.000 cm uit. Hoeveel km is dat?","Hoeveel meter is 100.000 cm? En hoeveel km?","Hoeveel cm gaan er in 1 m? En in 1 km?"],
+        wrongHints: [null,"30 km is te ver. Hoeveel cm gaan er in 1 km? Tel de nullen goed.","Hoeveel meter is 100.000 cm? En hoeveel km?","Hoeveel cm gaan er in 1 m? En in 1 km?"],
         uitlegPad: {
           stappen: [{ titel: "1 cm = 1 km", tekst: "Bij 1:100.000 geldt: 1 cm op kaart = 1 km werkelijk. Dus 3 cm = 3 km." }],
           woorden: [{ woord: "1:100.000", uitleg: "Standaard kaart-schaal. 100.000 cm = 1000 m = 1 km." }],
           theorie: "Schaal 1:100.000: cm op kaart = km in werkelijkheid (handige truc).",
           voorbeelden: [{ type: "tabel", tekst: "1 cm = 1 km. 5 cm = 5 km. 12 cm = 12 km." }],
           basiskennis: [{ onderwerp: "Eenheidstruc", uitleg: "100.000 cm = 1000 m = 1 km. Bij 1:100k schaal valt het samen." }],
-          niveaus: { basis: "3 km.", simpeler: "Bij 1:100.000 is 1 cm op kaart = 1 km werkelijk. 3 cm op kaart = 3 km.", nogSimpeler: "3 km" },
+          niveaus: { basis: "Vermenigvuldig de kaartafstand met 100.000. Dan heb je centimeters; reken die om naar km.", simpeler: "Bij 1:100.000 is 1 cm op kaart = 1 km werkelijk. 3 cm op kaart = 3 km.", nogSimpeler: "3 km" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
         q: "Een tuin is **15 m breed**. Je tekent hem op een kaart met **schaal 1 : 100**. Hoeveel **cm** is hij op de kaart?",
         options: ["15 cm","1,5 cm","150 cm","1500 cm"],
         answer: 0,
@@ -1190,25 +1192,27 @@ const steps = [
           theorie: "Schaal 1:100 (plattegrond): meters in werkelijkheid = cm op kaart.",
           voorbeelden: [{ type: "tabel", tekst: "1 m = 1 cm. 5 m = 5 cm. 15 m = 15 cm. 100 m = 100 cm = 1 m papier." }],
           basiskennis: [{ onderwerp: "Plattegrond-truc", uitleg: "Bij 1:100 valt meter ↔ cm samen. Eenvoudige conversie." }],
-          niveaus: { basis: "15 cm.", simpeler: "Bij 1:100 schaal: 1 m werkelijk = 1 cm op kaart. 15 m = 15 cm.", nogSimpeler: "15" },
+          niveaus: { basis: "Reken 15 m om naar cm en deel dan door 100, want 100 cm echt is 1 cm op de kaart.", simpeler: "Bij 1:100 schaal: 1 m werkelijk = 1 cm op kaart. 15 m = 15 cm.", nogSimpeler: "15" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
         q: "Een tekening heeft **schaal 1 : 50**. Op de tekening is iets **8 cm**. Hoe lang is het **in het echt**?",
         options: ["4 m","400 m","80 m","8 m"],
         answer: 0,
-        wrongHints: [null,"Je rekende 8 × 50 = 400 uit. Is dat 400 m of 400 cm?","Hoeveel cm is 8 × 50? Hoeveel meter is dat?","Je deed 8 × 100. Waarmee moet je vermenigvuldigen bij schaal 1 : 50?"],
+        wrongHints: [null,"Je vergat dat een schaal in centimeters werkt. Reken je uitkomst nog om naar meters.","80 m is te lang. Vermenigvuldig met het schaalgetal en reken de centimeters daarna goed om naar meters.","Je deed 8 × 100. Waarmee moet je vermenigvuldigen bij schaal 1 : 50?"],
         uitlegPad: {
           stappen: [{ titel: "8 × 50", tekst: "Kaart × schaal = werkelijk. 8 cm × 50 = 400 cm = 4 m." }],
           woorden: [{ woord: "1:50", uitleg: "1 cm op kaart = 50 cm werkelijk = 0,5 m." }],
           theorie: "Kaart → werkelijk: cm × schaal-getal = werkelijke cm. Dan omrekenen naar m.",
           voorbeelden: [{ type: "stap", tekst: "8 cm × 50 = 400 cm = 4 m." }],
           basiskennis: [{ onderwerp: "cm → m", uitleg: "100 cm = 1 m. Dus 400 cm = 4 m." }],
-          niveaus: { basis: "4 m.", simpeler: "8 cm × 50 (schaal) = 400 cm = 4 m werkelijk.", nogSimpeler: "4 m" },
+          niveaus: { basis: "Vermenigvuldig 8 cm met 50. Dan weet je hoeveel cm het echt is; reken dat om naar meters.", simpeler: "8 cm × 50 (schaal) = 400 cm = 4 m werkelijk.", nogSimpeler: "4 m" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
         q: "Op een kaart met schaal **1 : 1.000.000** liggen twee steden **4 cm** uit elkaar. Hoe ver is dat **in het echt**?",
         options: ["40 km", "4 km", "400 km", "400 m"],
         answer: 0,
@@ -1245,14 +1249,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "40 km.",
+            basis: "Zoek eerst uit hoeveel km 1 cm op deze kaart is. Neem dat daarna 4 keer.",
             simpeler: "1 cm = 10 km. 4 cm = 4 × 10 = 40 km.",
             nogSimpeler: "40 km",
           },
         },
       },
       {
-        q: "Schaal **1 : 10.000**. Op de kaart is een park **3 cm** breed. Hoe breed is het park **in het echt**?",
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
+        q: "Een kaart heeft **schaal 1 : 10.000**. Op de kaart is een park **3 cm** breed. Hoe breed is het park **in het echt**?",
         options: ["300 m", "30 m", "3 km", "3 m"],
         answer: 0,
         wrongHints: [
@@ -1288,13 +1293,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "300 m.",
+            basis: "Zoek eerst uit hoeveel meter 1 cm op deze kaart is. Neem dat daarna 3 keer.",
             simpeler: "1 cm = 100 m. 3 cm = 300 m.",
             nogSimpeler: "300 m",
           },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
         q: "Wat betekent schaal **1 : 100**?",
         options: [
           "1 cm op de tekening is 1 m echt",
@@ -1307,7 +1313,7 @@ const steps = [
           null,
           "100 wat? Een schaalgetal werkt in centimeters.",
           "Kijk welke kant de tekening is en welke kant het echte ding.",
-          "Een schaalgetal werkt in centimeters. Hoeveel meter is 100 cm?",
+          "10 m is 1.000 cm. Staat er in de schaal 1 : 1.000?",
         ],
         uitlegPad: {
           stappen: [
@@ -1336,13 +1342,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1 cm = 1 m.",
+            basis: "Het eerste getal hoort bij de tekening, het tweede bij het echte ding, allebei in cm. Reken 100 cm om naar meter.",
             simpeler: "1 cm op papier = 100 cm echt. 100 cm = 1 m.",
             nogSimpeler: "1 cm = 1 m",
           },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): rekenen met schaal is geen groep-5-stof
         q: "Een kamer is **4 m** lang. Je tekent hem op schaal **1 : 50**. Hoe lang wordt hij op papier?",
         options: ["8 cm", "4 cm", "20 cm", "80 cm"],
         answer: 0,
@@ -1379,7 +1386,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 cm.",
+            basis: "Reken 4 m eerst om naar cm. Deel dat door 50, want 50 cm echt is 1 cm op papier.",
             simpeler: "400 cm ÷ 50 = 8 cm.",
             nogSimpeler: "8 cm",
           },

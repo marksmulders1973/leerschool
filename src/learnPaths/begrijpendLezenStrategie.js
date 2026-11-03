@@ -1818,7 +1818,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel tijd heb je ongeveer per tekst (met 3 tot 5 vragen) op de Doorstroomtoets?",
+        q: "Hoeveel tijd kun je bij het oefenen voor de Doorstroomtoets ongeveer per tekst (met 3 tot 5 vragen) nemen?",
         vanafGroep: 7, // nakijkronde B4 (30 okt 2026): toets-tijd van de Doorstroomtoets is groep 7/8-stof
         options: ["5 tot 7 minuten","1 tot 2 minuten","15 tot 20 minuten","30 tot 40 minuten"],
         answer: 0,
@@ -1831,11 +1831,11 @@ const steps = [
           woorden: [
             { woord: "tijdsdruk", uitleg: "Het gevoel dat je moet opschieten om alle vragen op tijd te beantwoorden." },
           ],
-          theorie: "De Doorstroomtoets heeft een tijdslimiet. Reken op ongeveer 1 tot 1,5 minuut per vraag — bij 4 à 5 vragen per tekst kom je zo op zo'n 5-7 minuten per tekst.",
+          theorie: "Bij de Doorstroomtoets werk je binnen een vaste tijd. Reken op ongeveer 1 tot 1,5 minuut per vraag — bij 4 à 5 vragen per tekst kom je zo op zo'n 5-7 minuten per tekst.",
           voorbeelden: [{ type: "verdeling", tekst: "Tekst met 4 vragen: 30s skim + 30s vragen + 4×1min scan = 5 min. Past." }],
           basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
           niveaus: {
-            basis: "Je hebt ongeveer 5 tot 7 minuten per tekst.",
+            basis: "Reken ongeveer 1 tot 1,5 minuut per vraag, plus een minuutje om de tekst te bekijken. Hoeveel minuten is dat bij 4 vragen?",
             simpeler: "Bij de Doorstroomtoets: ongeveer een minuut of 5-7 voor een tekst plus de vragen erover. Je moet dus strak op tijd werken.",
             nogSimpeler: "Ongeveer 5 tot 7 minuten per tekst.",
           },

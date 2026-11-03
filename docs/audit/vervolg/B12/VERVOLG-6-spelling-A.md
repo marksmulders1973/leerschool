@@ -1,0 +1,4 @@
+# Vervolgset Spelling · groep 6 — vraag 461 t/m 500 (deel A: blind, alleen vraag + opties)
+
+Gegenereerd door scripts/audit/vervolg-dump.mjs op 2026-11-03. Na de startset van 20 (STARTSET-6-spelling.md). Beschikbaar na de startset: 171 vragen in 3 paden; hier 0.
+

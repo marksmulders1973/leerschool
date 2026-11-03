@@ -458,7 +458,7 @@ const steps = [
         q: "Vul in: *Van alle renners is hij het ___.* (snel)",
         options: ["snelst", "sneller", "snel", "snels"],
         answer: 0,
-        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "'Snels' is geen woord. Denk aan een ander voorbeeld, zoals 'het mooist': welke letters komen achter het woord?"],
+        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "'Snels' bestaat niet als woord. Zeg de zin hardop: klinkt 'het snels' als goed Nederlands?"],
         uitlegPad: {
           stappen: [{ titel: "'het …st van alle'", tekst: "'Van alle renners' = hij is de allersnelste → overtreffende trap: het snelst." }],
           niveaus: {

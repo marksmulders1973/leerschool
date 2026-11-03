@@ -639,7 +639,7 @@ const steps = [
         q: "Een auto rijdt **3 uur met 90 km/h**. Hoe ver komt hij?",
         options: ["270 km", "30 km", "93 km", "180 km"],
         answer: 0,
-        wrongHints: [null, "Niet — je deelde in plaats van te vermenigvuldigen.", "Dat is 90 + 3. Moet je optellen of keer doen?", "Dat is 2 × 90. Hoeveel uur rijdt de auto?"],
+        wrongHints: [null, "Je deelde in plaats van keer te doen. Komt de auto in 3 uur minder ver dan in 1 uur?", "Dat is 90 + 3. Moet je optellen of keer doen?", "Dat is 2 × 90. Hoeveel uur rijdt de auto?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke formule?", tekst: "Je hebt de snelheid én de tijd, en zoekt de afstand. Welke van de drie formules (S=V×T, V=S/T, T=S/V) past daarbij?" },
@@ -652,7 +652,7 @@ const steps = [
             { type: "thuis", tekst: "Een vlucht van 4 uur met 800 km/h legt 800 × 4 km af." },
           ],
           basiskennis: [{ onderwerp: "Eenheden matchen", uitleg: "Snelheid in km/h hoort samen met tijd in uren om een afstand in km te krijgen." }],
-          niveaus: { basis: "90·3=270.", simpeler: "Snelheid × tijd.", nogSimpeler: "270" },
+          niveaus: { basis: "Afstand = snelheid × tijd. Elk uur rijdt de auto 90 km verder.", simpeler: "Reken 90 × 3 uit.", nogSimpeler: "270 km" },
         },
       },
       {
@@ -672,14 +672,14 @@ const steps = [
             { type: "thuis", tekst: "Een auto van 60 km/h die 10 minuten (1/6 uur) rijdt, legt 10 km af." },
           ],
           basiskennis: [{ onderwerp: "Minuten naar uren", uitleg: "Minuten ÷ 60 = uren. Bijvoorbeeld 15 min = 15/60 = 0,25 uur." }],
-          niveaus: { basis: "5 km.", simpeler: "15 min = 1/4 uur → 20/4=5.", nogSimpeler: "5" },
+          niveaus: { basis: "Reken eerst de 15 minuten om: welk deel van een uur is dat? Zo'n deel van 20 km fietst hij.", simpeler: "15 minuten is een kwart uur. Een kwart van 20 km is 20 ÷ 4.", nogSimpeler: "5 km" },
         },
       },
       {
         q: "Een loper start om 14:00 met **10 km/h** en komt aan om 14:30. Hoe ver heeft hij gelopen?",
         options: ["5 km", "10 km", "20 km", "2,5 km"],
         answer: 0,
-        wrongHints: [null, "Zo ver komt hij in een heel uur. Hoe lang loopt hij?", "Heb je × 2 gedaan in plaats van ÷ 2? Hij loopt korter dan een uur.", "Zo ver komt hij in een kwartier. Hoe lang is hij onderweg?"],
+        wrongHints: [null, "Zo ver komt hij in een heel uur. Hoe lang loopt hij?", "Hij loopt korter dan een uur. Kan hij dan verder komen dan in een heel uur?", "Zo ver komt hij in een kwartier. Hoe lang is hij onderweg?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken eerst de tijdsduur", tekst: "Reken uit hoeveel tijd er tussen 14:00 en 14:30 zit, en zet dat om in uren." },
@@ -692,27 +692,27 @@ const steps = [
             { type: "sport", tekst: "Een zwemmer die van 16:00 tot 16:45 met 3 km/h zwemt, gebruikt dezelfde aanpak." },
           ],
           basiskennis: [{ onderwerp: "Kloktijd vs tijdsduur", uitleg: "14:00 en 14:30 zijn tijdstippen; het verschil ertussen (30 minuten) is de tijdsduur waarmee je rekent." }],
-          niveaus: { basis: "5 km.", simpeler: "Half uur lopen × 10 km/h = 5 km.", nogSimpeler: "5" },
+          niveaus: { basis: "Hoe lang loopt hij van 14:00 tot 14:30? Welk deel van een uur is dat?", simpeler: "Hij loopt een half uur. In een heel uur komt hij 10 km ver; in een half uur de helft daarvan.", nogSimpeler: "5 km" },
         },
       },
       {
-        q: "In een **snelheid-tijdgrafiek**: wat betekent de oppervlakte onder de lijn?",
-        options: ["De afstand", "De snelheid", "De versnelling", "De tijd"],
+        q: "Een auto rijdt een tijdje steeds even snel. Je rekent **snelheid × tijd** uit. Wat weet je dan?",
+        options: ["Hoe ver de auto is gereden", "Hoe snel de auto rijdt", "Hoe snel de auto optrekt", "Hoe lang de auto rijdt"],
         answer: 0,
-        wrongHints: [null, "De snelheid lees je af op de verticale as. Wat krijg je als je snelheid × tijd doet?", "Versnelling zie je aan hoe steil de lijn loopt, niet aan de oppervlakte.", "De tijd lees je af op de horizontale as. Wat krijg je als je snelheid × tijd doet?"],
+        wrongHints: [null, "De snelheid weet je al: die gebruik je in de som. Wat komt er dan uit?", "Optrekken is steeds sneller gaan. Maar deze auto rijdt steeds even snel.", "De tijd weet je al: die gebruik je in de som. Wat komt er dan uit?"],
         uitlegPad: {
           stappen: [
-            { titel: "Wat staat er op de assen?", tekst: "Op een v-t-grafiek staat de snelheid op de verticale as en de tijd op de horizontale as. Wat gebeurt er als je snelheid met tijd vermenigvuldigt?" },
-            { titel: "Oppervlakte = lengte × breedte", tekst: "Een rechthoek onder de grafiek heeft als 'hoogte' de snelheid en als 'breedte' de tijd. Welke grootheid krijg je als je die twee vermenigvuldigt?" },
+            { titel: "Wat weet je al?", tekst: "Je kent de snelheid (bijvoorbeeld 50 km per uur) en de tijd (bijvoorbeeld 2 uur). Die twee gebruik je in de som, dus die zoek je niet meer." },
+            { titel: "Kijk naar de eenheid", tekst: "50 km per uur × 2 uur = 100 km. De uitkomst is in kilometers. Wat meet je in kilometers?" },
           ],
-          woorden: [{ woord: "v-t-grafiek", uitleg: "Een grafiek waarbij de snelheid (v) wordt uitgezet tegen de tijd (t)." }],
-          theorie: "In een v-t-grafiek staat snelheid verticaal en tijd horizontaal. Omdat **S = V × T**, komt het product van snelheid en tijd — de oppervlakte onder de grafieklijn — overeen met een belangrijke grootheid uit dezelfde formule. Dit werkt bij een rechte lijn (constante snelheid) én bij een kromme lijn.",
+          woorden: [{ woord: "km/h", uitleg: "Kilometer per uur: hoeveel kilometer je in één uur aflegt." }],
+          theorie: "De hoofdformule is **afstand = snelheid × tijd**. Ken je de snelheid en de tijd, dan vind je met deze som hoe ver iemand komt.",
           voorbeelden: [
-            { type: "school", tekst: "Bij een grafiek die 2 uur lang op 60 km/h blijft staan, is de rechthoek onder de lijn 60 hoog en 2 breed." },
-            { type: "sport", tekst: "Een hardloper die steeds sneller gaat, heeft een kromme lijn — de oppervlakte eronder tel je op in stukjes." },
+            { type: "school", tekst: "Je fietst 2 uur met 15 km/h. 15 × 2 = 30: je bent 30 km ver gekomen." },
+            { type: "sport", tekst: "Een wandelaar loopt 3 uur met 5 km/h. 5 × 3 = 15: hij loopt 15 km." },
           ],
-          basiskennis: [{ onderwerp: "S = V × T", uitleg: "Afstand is snelheid keer tijd — dezelfde vermenigvuldiging als lengte × breedte bij een oppervlakte." }],
-          niveaus: { basis: "Afstand.", simpeler: "Onder v-t = km.", nogSimpeler: "Afstand" },
+          basiskennis: [{ onderwerp: "S = V × T", uitleg: "Afstand is snelheid keer tijd." }],
+          niveaus: { basis: "Denk aan een voorbeeld: 2 uur rijden met 50 km/h. 50 × 2 = 100 km. Wat vertelt die 100 km je?", simpeler: "De uitkomst is in kilometers. Wat meet je in kilometers: hoe snel, hoe lang of hoe ver?", nogSimpeler: "Hoe ver de auto is gereden." },
         },
       },
       {
@@ -732,7 +732,7 @@ const steps = [
             { type: "thuis", tekst: "Een vakantierit van 3 uur op de snelweg en 1 uur door de stad werkt volgens hetzelfde principe." },
           ],
           basiskennis: [{ onderwerp: "S = V × T per stuk", uitleg: "Elke snelheid hoort bij zijn eigen tijd — je mag ze niet door elkaar husselen." }],
-          niveaus: { basis: "160+120=280.", simpeler: "Twee delen optellen.", nogSimpeler: "280" },
+          niveaus: { basis: "Reken elk stuk apart uit met snelheid × tijd en tel de twee afstanden op.", simpeler: "Eerste stuk: 2 × 80. Tweede stuk: 1 × 120. Tel die twee op.", nogSimpeler: "280 km" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
@@ -776,7 +776,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "70×2=140.",
+            basis: "Afstand = snelheid × tijd. Elk uur rijdt de bus 70 km verder.",
             simpeler: "Elk uur 70 km erbij.",
             nogSimpeler: "140 km",
           },

@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "schatten-afronden stap 5 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint D rekende 5 × € 8 voor",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap; hint D benoemt nu denkfout (€ 10 i.p.v. € 8)"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 11",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telegramzin \"op tiental\"",
+  "hersteld": true,
+  "wijziging": "vraag: \"op een tiental\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 12",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "hint bij optie 8 noemde het goede antwoord 7",
+  "hersteld": true,
+  "wijziging": "hint herschreven (\"8 ligt te ver weg ...\"); vraag \"op een heel getal\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 13",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "hint bij ~500 rekende 200 + 400 voor",
+  "hersteld": true,
+  "wijziging": "hint herschreven: denkfout afronden 198 naar beneden"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 14",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "telegramzin zonder lidwoord/punt",
+  "hersteld": true,
+  "wijziging": "vraag: \"op een honderdtal.\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 15",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "kommagetallen/tienden is pittig voor groep 5 (één groep vroeg); zin zonder punt",
+  "hersteld": true,
+  "wijziging": "vraag verduidelijkt \"(één cijfer achter de komma).\"; geen vanafGroep"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 16",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "hint B rekende 20 × 20 voor (voorrekenen)",
+  "hersteld": true,
+  "wijziging": "hints B en C noemen nu alleen de aanpak (afronden op tiental)"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 17",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "hints vroegen \"Hoeveel is 5 × 5?\" / \"reken 5 × 5\" (voorrekenen)",
+  "hersteld": true,
+  "wijziging": "drie hints herschreven zonder de afgeronde som"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 18",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telegramzin \"Rond af op duizendtal: 12.567\"",
+  "hersteld": true,
+  "wijziging": "vraag: \"Rond 12.567 af op een duizendtal.\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 19",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "hint noemde 3.000 (antwoord); vraag met ± was vreemd en antwoord stond bijna in de vraag",
+  "hersteld": true,
+  "wijziging": "vraag nu \"1.020 + 1.980 ongeveer\"; hints benoemen denkfouten zonder antwoord"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 21",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telegramzin \"af op euro\"",
+  "hersteld": true,
+  "wijziging": "vraag: \"af op hele euro's.\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 22",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "telegramzin met afkorting \"ipv\"",
+  "hersteld": true,
+  "wijziging": "vraag: \"Wanneer kun je beter schatten in plaats van precies uitrekenen?\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 23",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "vreemde zin \"10 × ~9 ≈ wat?\"; hint rekende 10 × 9 voor",
+  "hersteld": true,
+  "wijziging": "vraag: \"Schat: hoeveel is 10 × 9,2 ongeveer?\"; hints aangepast"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 24",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "hint bij ~1.500 noemde 2.000 (antwoord) en 1.000 + 1.000",
+  "hersteld": true,
+  "wijziging": "hints bij ~3.000 en ~1.500 herschreven zonder getallen"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt; \"Willekeurig\" is zwakke maar onschuldige afleider",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 26",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "hint bij ~10 rekende 11 + 9 voor; telegramzin",
+  "hersteld": true,
+  "wijziging": "vraag: \"Schat: hoeveel is 11,3 + 8,9 ongeveer?\"; hint herschreven"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 27",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "telegramvraag en optie met \"=\"",
+  "hersteld": true,
+  "wijziging": "vraag volledige zin; opties A en D als hele zinnen (gespiegeld gelijk gehouden)"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 28",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "telegramzin",
+  "hersteld": true,
+  "wijziging": "vraag: \"op een heel getal.\""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt met uitleg in het pad (vergelijking met als/zo ... als)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "hint D omschreef het antwoord (\"kogel die niet meer terug kan\" = definitief)",
+  "hersteld": true,
+  "wijziging": "hints C en D herschreven als denkprikkel zonder betekenis"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "hint D omschreef het antwoord (\"iemand alleen laten\")",
+  "hersteld": true,
+  "wijziging": "hint D: \"Een lot is hier geen prijs of wedstrijd. Denk figuurlijk.\""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 12",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 13",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "goede optie zonder lidwoord; hint \"Niet — ...\"",
+  "hersteld": true,
+  "wijziging": "optie: \"De laatste reden ...\"; hint C volledige zin"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 15",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 16",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 17",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "hint C omschreef het antwoord (\"iets slechts dat terugkomt\")",
+  "hersteld": true,
+  "wijziging": "hint C herschreven: denk figuurlijk, geen echt loon"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 18",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "hint C (\"het gaat om wat je zegt\") liet maar twee opties over",
+  "hersteld": true,
+  "wijziging": "hint C herschreven"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 19",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag volledige zin; basis = waarom-vraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag volledige zin; basis herschreven"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag volledige zin; basis herschreven"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven (denk aan een recept)"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag",
+  "hersteld": true,
+  "wijziging": "vraag \"Wat voor soort tekst is dit?\"; basis herschreven"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; eenvoudig voor groep 8 maar correct",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "soorten-teksten-po stap 3 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "schaal 1 : 100.000 met km is geen groep-5-stof; niveaus.basis gaf alleen het antwoord; hint B rekende bijna voor",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); basis en hint B herschreven"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "schaal is geen groep-5-stof; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); basis herschreven"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "hint B rekende 8 × 50 = 400 cm voor; schaal geen groep-5-stof; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); hints B en C en basis herschreven"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "schaal 1 : 1.000.000 geen groep-5-stof; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); basis herschreven"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "schaal geen groep-5-stof; telegramvraag; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); vraag \"Een kaart heeft schaal ...\"; basis herschreven"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "hint D rekende 100 cm = 1 m voor (= goede optie); schaal geen groep-5-stof",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); hint D en basis herschreven"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "schaal geen groep-5-stof; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet (schaal is groep 7-stof, zie B8-precedent); basis herschreven"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; \"20 × 5 m\" kort genoteerd",
+  "hersteld": true,
+  "wijziging": "vraag \"20 m lang en 5 m breed\"; basis herschreven"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "oppervlakte driehoek is groep 7/8-stof (B9-precedent); niveaus.basis gaf alleen het antwoord; hint \"vergeet ÷ 2\" telegram",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 7 gezet; basis en hint B herschreven"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; uitkomst 1,5 is pittig voor groep 5",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ }
+]

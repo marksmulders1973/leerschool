@@ -1,0 +1,410 @@
+[
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt (voetbal 28, plaatje van de stap aanwezig); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap; simpeler een hele zin"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord 20 klopt (28-8, plaatje aanwezig; mijn blinde keuze was een gok zonder plaatje); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord 35 klopt (85-28-22); niveaus.basis gaf alleen het antwoord en simpeler was telegramstijl",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap; simpeler een hele zin"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Druif klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "143 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "150 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "14 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "75% klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 4",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "20% klopt, maar twee wrongHints rekenden het antwoord voor (\"Hoeveel is 100 ÷ 5?\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints bij 15% en 5% benoemen nu de denkfout zonder de berekening; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "1/10 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "¾ klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "90% klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "1% klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "3/5 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "Antwoord stond in de vraag: 'bijvoorbeeld' -> 'het geeft een voorbeeld'",
+  "hersteld": true,
+  "wijziging": "Vraag gebruikt nu signaalwoord 'zoals' (Je hebt zonnebrand nodig als je lang buiten bent, zoals op het strand); uitlegstap en niveaus aangepast"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "tijd/volgorde klopt, hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "opsomming klopt, hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "oorzaak en gevolg klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "opsomming klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "want = reden, oorzaak en gevolg klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "tijd/volgorde klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "270 klopt; wrongHint \"Niet — je deelde...\" was een rare zin; basis \"90·3=270.\" en simpeler telegram",
+  "hersteld": true,
+  "wijziging": "wrongHint bij 30 km herschreven; niveaus.basis herschreven tot hulpstap; simpeler een hele zin"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "5 km klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap; simpeler een hele zin"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "5 km klopt, maar wrongHint bij 20 km rekende voor (\"÷ 2 ... korter dan een uur\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHint bij 20 km benoemt nu de denkfout zonder bewerking; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Afstand klopt, maar \"oppervlakte onder een snelheid-tijdgrafiek\" en \"versnelling\" zijn natuurkunde van de middelbare school, niet voor groep 6",
+  "hersteld": true,
+  "wijziging": "Vraag herschreven naar groep-6-niveau: \"Je rekent snelheid × tijd uit. Wat weet je dan?\" met opties hoe ver/hoe snel/hoe snel optrekken/hoe lang (zelfde volgorde, answer 0); hints, uitlegPad en niveaus meegezet"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "280 klopt; niveaus.basis gaf alleen het antwoord en simpeler telegram",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap; simpeler een hele zin"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "140 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "4 klopt, maar wrongHint bij 5 verraadde het antwoord (\"De 5e doos zou niet vol zijn (maar 2 eieren)\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints bij 5 en \"4 rest 2\" herschreven als denkprikkel; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt; basis was het antwoord in telegramstijl",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "3 klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "6 weken klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "5 klopt, maar wrongHint bij 6 verraadde het antwoord (\"Een 6e bakje heeft maar 8 potloden\"); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHint bij 6 herschreven; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "fietspad klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "Antwoord stond bijna letterlijk in de vraag (\"winkel waar je schoenen koopt\" -> schoenenwinkel)",
+  "hersteld": true,
+  "wijziging": "Vraag nu: \"Je plakt schoen en winkel aan elkaar. Hoe schrijf je dat woord?\" (kind moet zelf de -en- kiezen); niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "woorden + boek klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "sportcentrum klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "stadsrand klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "+3 klopt; wrongHints in telegramstijl (\"Niet optellen —\", \"Andersom —\"); niveaus.basis gaf alleen het antwoord; plus een negatief getal met haakjes is pittig voor groep 6",
+  "hersteld": true,
+  "wijziging": "twee wrongHints herschreven; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "8 klopt; min een minus met haakjes is geen groep-6-stof (dezelfde keuze als B5/B6/B10 in dit pad); niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 op de check gezet; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "−3 klopt, hints en niveaus ok; plus een negatief getal met haakjes is pittig voor groep 6, maar te doen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "448 klopt, hints passen bij de fouten",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "624 klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "2178 klopt, hints passen bij 2278/2188/2168",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "32 klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "€ 36 klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "maten-eenheden stap 3 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "kg klopt; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "procenten-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "30 klopt, hints ok",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "appel (AP-pel) klopt",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "5-7 minuten is een richtlijn, maar de vraag stelde het als vast feit (\"Hoeveel tijd heb je\"); tijden verschillen per toets; niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "Vraag verzacht naar \"Hoeveel tijd kun je bij het oefenen ... nemen?\"; theorie minder stellig; niveaus.basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 2 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "67 klopt (geel 38 + blauw 29 in de svg)",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "snelst klopt, maar wrongHint bij \"snels\" verraadde de uitgang via 'het mooist' (-st)",
+  "hersteld": true,
+  "wijziging": "wrongHint bij \"snels\" herschreven zonder de uitgang te noemen"
+ }
+]

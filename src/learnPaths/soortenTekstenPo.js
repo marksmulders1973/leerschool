@@ -565,42 +565,42 @@ const steps = [
       "Kijk naar kenmerken: stappen → instructief, 'er was eens' → verhalend, 'je moet… want…' → betogend, feiten → informatief.",
     checks: [
       {
-        q: "Een folder die je een nieuwe telefoon wil laten kopen — welk soort tekst?",
+        q: "Een folder wil dat je een nieuwe telefoon koopt. Wat voor soort tekst is dat?",
         options: ["betogend (overtuigen)", "informatief (laten weten)", "instructief (laten doen)", "verhalend (vermaken)"],
         answer: 0,
         wrongHints: [null, "Wil een folder je alleen iets laten weten, of wil hij nog iets anders van je?", "Er staan geen stappen in.", "Het is geen verhaal."],
         uitlegPad: {
           stappen: [{ titel: "Laten kopen = overtuigen", tekst: "Een folder wil je overhalen iets te kopen → betogende (overtuigende) tekst." }],
           niveaus: {
-            basis: "Reclame/folder = overtuigen → betogend.",
+            basis: "Vraag je af waarom de folder gemaakt is: om je iets te leren, iets te laten doen, je te vermaken of je over te halen?",
             simpeler: "Wil de folder je overhalen om te kopen?",
             nogSimpeler: "Is een folder bedoeld om je iets te laten kopen?",
           },
         },
       },
       {
-        q: "De gebruiksaanwijzing bij een nieuwe lamp — welk soort tekst?",
+        q: "Wat voor soort tekst is de gebruiksaanwijzing bij een nieuwe lamp?",
         options: ["instructief (laten doen)", "informatief (laten weten)", "betogend (overtuigen)", "verhalend (vermaken)"],
         answer: 0,
         wrongHints: [null, "Het geeft niet alleen kennis, maar stappen om te doen.", "Het wil je niet overtuigen van een mening.", "Het is geen verzonnen verhaal."],
         uitlegPad: {
           stappen: [{ titel: "Hoe-doe-je-dat = instructief", tekst: "Een gebruiksaanwijzing legt stap voor stap uit hoe je de lamp gebruikt → instructief." }],
           niveaus: {
-            basis: "Een gebruiksaanwijzing geeft stappen → instructief.",
+            basis: "Denk na over wat je met een gebruiksaanwijzing doet: lees je hem voor de lol, of volg je wat erin staat?",
             simpeler: "Moet je iets dóén met de lamp volgens de tekst?",
             nogSimpeler: "Legt het uit hóé je iets doet?",
           },
         },
       },
       {
-        q: "Een artikel met feiten over hoe een vulkaan werkt — welk soort tekst?",
+        q: "Een artikel geeft feiten over hoe een vulkaan werkt. Wat voor soort tekst is dat?",
         options: ["informatief (laten weten)", "instructief (laten doen)", "betogend (overtuigen)", "verhalend (vermaken)"],
         answer: 0,
         wrongHints: [null, "Je hoeft zelf niks te doen.", "Het geeft geen mening.", "Het is geen verzonnen verhaal."],
         uitlegPad: {
           stappen: [{ titel: "Feiten = informeren", tekst: "Een artikel met feiten over vulkanen wil je iets laten weten → informatief." }],
           niveaus: {
-            basis: "Feiten om iets te leren → informatief.",
+            basis: "Vraag je af waarom het artikel geschreven is: wil het je iets laten weten, laten doen, vermaken of overtuigen?",
             simpeler: "Leer je hier iets over vulkanen?",
             nogSimpeler: "Geeft de tekst kennis of een mening?",
           },
@@ -619,7 +619,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Stappen = instructief", tekst: "Een instructieve tekst herken je aan de stappen/opdrachten die je moet uitvoeren." }],
           niveaus: {
-            basis: "Stap-voor-stap wat je moet doen → instructief.",
+            basis: "Denk aan een recept of een bouwbeschrijving. Wat staat daar altijd in?",
             simpeler: "Welk kenmerk hoort bij instructie: stappen of een mening?",
             nogSimpeler: "Wat staat er in een recept: stappen of nieuws?",
           },
@@ -633,21 +633,21 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mening in de krant = betogend", tekst: "Een ingezonden brief geeft de mening van de schrijver en wil de lezer overtuigen → betogende tekst." }],
           niveaus: {
-            basis: "Mening van de schrijver + bedoeld om te overtuigen = betogende tekst.",
+            basis: "Kijk wat de schrijver met de brief wil bereiken. Geeft hij alleen feiten, of wil hij dat jij iets vindt?",
             simpeler: "Wil de schrijver dat jij zijn mening deelt?",
             nogSimpeler: "Probeert de brief je van iets te overtuigen?",
           },
         },
       },
       {
-        q: "Je leest: 'Koop nu onze nieuwe smoothie — gezond, lekker en goedkoop!' Welk soort tekst?",
+        q: "Je leest: 'Koop nu onze nieuwe smoothie — gezond, lekker en goedkoop!' Wat voor soort tekst is dit?",
         options: ["betogend (overtuigen)", "informatief (laten weten)", "verhalend (vermaken)", "instructief (laten doen)"],
         answer: 0,
         wrongHints: [null, "Er staan nauwelijks feiten in, alleen een aanprijzing.", "Het is geen verhaal.", "Er staan geen stappen in."],
         uitlegPad: {
           stappen: [{ titel: "Reclame = betogend", tekst: "Reclame wil je overtuigen iets te kopen → betogende tekst. 'Koop nu' is een aanprijzing, geen feit of stap." }],
           niveaus: {
-            basis: "Reclame die je aanzet tot kopen = betogende tekst.",
+            basis: "Vraag je af wat de schrijver van jou wil: dat je iets weet, stappen volgt, lacht, of dat je overgehaald wordt?",
             simpeler: "Wil de tekst dat jij iets gaat kopen?",
             nogSimpeler: "Is 'koop nu' een feit of een overtuigingspoging?",
           },
@@ -661,7 +661,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vraag: waarom?", tekst: "Stel jezelf altijd de vraag: 'Waarom is deze tekst geschreven?' Het antwoord verraadt het soort tekst: om te weten, om te doen, om te vermaken of om te overtuigen." }],
           niveaus: {
-            basis: "De waarom-vraag geeft het doel van de tekst → het soort tekst.",
+            basis: "Het soort tekst hangt af van het doel van de schrijver. Welke vraag gaat over dat doel?",
             simpeler: "Vraag: is de tekst er om je te informeren, te laten doen, te vermaken of te overtuigen?",
             nogSimpeler: "Waarom schreef iemand dit?",
           },
@@ -686,7 +686,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Opdrachten op het kaartje → instructief.",
+            basis: "Lees de zinnen op het kaartje nog eens. Vertellen ze je iets, of zeggen ze wat jij moet doen?",
             simpeler: "Moet je iets dóén met wat er op het kaartje staat?",
             nogSimpeler: "Staan er opdrachten zoals 'geef' en 'zet'?",
           },

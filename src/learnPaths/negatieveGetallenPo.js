@@ -736,18 +736,19 @@ const steps = [
         q: "**5 + (−2)** = ?",
         options: ["+3","+7","−3","−7"],
         answer: 0,
-        wrongHints: [null,"Niet optellen — er staat een min in de haakjes.","Andersom — 5 > 2, dus het antwoord is positief.","Je begint op 5, niet op −5."],
+        wrongHints: [null,"Je telde 5 en 2 op. Maar tussen de haakjes staat een negatief getal.","Begin op 5 op de getallenlijn. Kom je echt onder nul uit?","Je begint op 5, niet op −5."],
         uitlegPad: {
           stappen: [{ titel: "+− = −", tekst: "5 + (−2) → +(−) = − → 5 − 2 = 3." }],
           woorden: [{ woord: "plus een negatief", uitleg: "+(−X) = −X (gewoon aftrekken)." }],
           theorie: "Tekens-regel: +− = −.",
           voorbeelden: [{ type: "stap", tekst: "5 + (−2) = 5 − 2 = 3." }],
           basiskennis: [{ onderwerp: "Schuld erbij", uitleg: "Saldo €5 + schuld van €2 = €5 − €2 = €3 over." }],
-          niveaus: { basis: "+3.", simpeler: "5 + (−2) = 5 − 2 = 3 (plus een min wordt min).", nogSimpeler: "+3" },
+          niveaus: { basis: "Plus een negatief getal is hetzelfde als aftrekken. Begin op 5 en ga 2 stappen naar links.", simpeler: "5 + (−2) = 5 − 2 = 3 (plus een min wordt min).", nogSimpeler: "+3" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
+        vanafGroep: 8, // nakijkronde B12 (3 nov 2026): min een minus met haakjes is geen groep-6-stof
         q: "**6 − (−2)** = ?",
         options: ["8", "4", "−8", "−4"],
         answer: 0,
@@ -779,7 +780,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8.",
+            basis: "Min een negatief getal is hetzelfde als erbij optellen. Begin op 6 en ga naar rechts.",
             simpeler: "Twee minnen worden plus: 6 + 2 = 8.",
             nogSimpeler: "8",
           },

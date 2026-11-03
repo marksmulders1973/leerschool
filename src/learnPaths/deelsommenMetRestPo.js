@@ -648,7 +648,7 @@ const steps = [
         q: "Je hebt 26 eieren. In een doos passen er 6. Hoeveel volle dozen kun je maken?",
         options: ["4", "5", "6", "4 rest 2"],
         answer: 0,
-        wrongHints: [null, "De 5e doos zou niet vol zijn (maar 2 eieren).", "In 6 dozen passen 36 eieren. Heb je er zoveel?", "Een aantal dozen is een heel getal."],
+        wrongHints: [null, "Kijk naar de laatste doos: zou die helemaal vol zitten?", "In 6 dozen passen 36 eieren. Heb je er zoveel?", "De vraag is hoeveel vólle dozen. Hoort de rest dan in je antwoord?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'vol'?", tekst: "Een doos van 6 is pas vol als er precies 6 eieren in zitten — niet meer en niet minder." },
@@ -659,7 +659,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Je pakt een doos eieren van 6 in voor de bakker en hebt 20 eieren: je rekent uit hoeveel volle dozen dat oplevert en hoeveel eieren los overblijven." }],
           basiskennis: [{ onderwerp: "Delen met rest", uitleg: "Je moet eerst kunnen uitrekenen wat de rest is voordat je weet hoeveel er compleet is." }],
           niveaus: {
-            basis: "4 volle dozen (24 eieren), 2 over die geen volle doos vullen.",
+            basis: "Een doos telt alleen als hij helemaal vol is. Hoe vaak past 6 helemaal in 26?",
             simpeler: "Hoeveel keer kun je een doos van 6 helemaal vullen met 26 eieren?",
             nogSimpeler: "4 × 6 = 24. Is er een 5e volle doos? Nee.",
           },
@@ -680,7 +680,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Een juf pakt schriften in setjes van 5 voor de klas: een setje van maar 2 schriften telt niet als een volle set." }],
           basiskennis: [{ onderwerp: "Naar boven of naar beneden", uitleg: "'Hoeveel volle/hele' → naar beneden. 'Hoeveel nodig/genoeg' → naar boven." }],
           niveaus: {
-            basis: "Een niet-volle doos telt niet als vol → naar beneden.",
+            basis: "Denk aan de eieren die overblijven. Zit die laatste doos dan helemaal vol?",
             simpeler: "Is een doos met maar 2 eieren een volle doos? Nee.",
             nogSimpeler: "Telt een halfvolle doos als vol?",
           },
@@ -701,7 +701,7 @@ const steps = [
           voorbeelden: [{ type: "thuis", tekst: "Je knipt van 85 cm stof stukken van 20 cm voor een knutselwerkje: je rekent uit hoeveel hele stukken dat oplevert." }],
           basiskennis: [{ onderwerp: "Centimeters", uitleg: "Lengtes in centimeters kun je net als andere getallen delen met rest." }],
           niveaus: {
-            basis: "3 stukken van 30 = 90 cm, met 10 cm over (te kort).",
+            basis: "Tel in stappen van 30 tot je bijna bij 100 bent. Hoeveel stappen passen er helemaal in?",
             simpeler: "Hoe vaak past 30 helemaal in 100?",
             nogSimpeler: "30, 60, 90 — past 30 er nog een 4e keer in 100?",
           },
@@ -722,7 +722,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Een zwemschool telt hoeveel hele trainingsweken er in 60 dagen zitten: de laatste, niet-volle week telt niet mee." }],
           basiskennis: [{ onderwerp: "Week = 7 dagen", uitleg: "Een week heeft altijd 7 dagen — dat getal gebruik je als deler." }],
           niveaus: {
-            basis: "6 hele weken (42 dagen), 3 dagen over.",
+            basis: "Tel in stappen van 7 tot je bijna bij 45 bent. Alleen hele weken tellen mee.",
             simpeler: "Hoe vaak past 7 helemaal in 45?",
             nogSimpeler: "6 × 7 = 42. Is er nog een hele week in de laatste 3 dagen?",
           },
@@ -732,7 +732,7 @@ const steps = [
         q: "Je hebt 58 kleurpotloden. In een bakje passen 10. Hoeveel volle bakjes kun je vullen?",
         options: ["5", "6", "5 rest 8", "10"],
         answer: 0,
-        wrongHints: [null, "Een 6e bakje heeft maar 8 potloden — niet vol.", "De vraag is hoeveel vólle bakjes. Wat doe je met wat overblijft?", "Dat is het aantal per bakje."],
+        wrongHints: [null, "Kijk naar het laatste bakje: zou dat helemaal vol zitten?", "De vraag is hoeveel vólle bakjes. Wat doe je met wat overblijft?", "Dat is het aantal per bakje."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent een 'vol' bakje?", tekst: "Een bakje van tien is pas vol als er precies tien potloden in zitten." },
@@ -743,7 +743,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Een klas verdeelt 43 stiften over bakjes van 8: het laatste bakje is niet vol en telt dus niet mee." }],
           basiskennis: [{ onderwerp: "Delen met rest", uitleg: "Eerst de rest uitrekenen, dan pas bepalen hoeveel er compleet is." }],
           niveaus: {
-            basis: "5 volle bakjes (50 potloden), 8 over die geen vol bakje zijn.",
+            basis: "Alleen volle bakjes tellen mee. Hoe vaak past 10 helemaal in 58?",
             simpeler: "Hoe vaak past 10 helemaal in 58?",
             nogSimpeler: "5 × 10 = 50. Is er een 6e vol bakje? Nee.",
           },

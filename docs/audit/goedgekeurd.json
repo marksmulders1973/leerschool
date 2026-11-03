@@ -884,6 +884,14 @@
   "reden": "Klopt; 'skimmen' wordt eerder in het pad uitgelegd (stap 5) dus toegestaan; niveaus telegramstijl."
  },
  {
+  "waar": "begrijpend-lezen-strategie stap 7 vraag 4",
+  "hash": "8f701e1d8914ae12",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "5-7 minuten is een richtlijn, maar de vraag stelde het als vast feit (\"Hoeveel tijd heb je\"); tijden verschillen per toets; niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "begrijpend-lezen-strategie stap 7 vraag 5",
   "hash": "02b3c4df2c6f00d9",
   "oordeel": "twijfel",
@@ -3300,12 +3308,33 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "cijferend-rekenen stap 3 vraag 1",
+  "hash": "35dc1d9f3d461cb2",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "cijferend-rekenen stap 3 vraag 10",
   "hash": "32c371119ee46189",
   "oordeel": "twijfel",
   "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "2999-1475+1 klopt (1525); niveaus.basis = antwoord."
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 2",
+  "hash": "7b26813ded1fe84b",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "cijferend-rekenen stap 3 vraag 3",
+  "hash": "df632dfb2627f3b5",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
  },
  {
   "waar": "cijferend-rekenen stap 3 vraag 4",
@@ -3989,6 +4018,30 @@
   "bron": "vervolg B7 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt (40:6 = 6 rest 4, dus 7). Basis = antwoord."
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 2",
+  "hash": "180a31c35fa569e2",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "Antwoord klopt; basis was het antwoord in telegramstijl"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 3",
+  "hash": "599b4e5a07d647ee",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "3 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "deelsommen-met-rest-po stap 3 vraag 4",
+  "hash": "8f3e12b6155507f5",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "6 weken klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "delen-po stap 1 vraag 1",
@@ -10169,6 +10222,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "grafieken-lezen-po stap 2 vraag 8",
+  "hash": "c2047ae3416dfe77",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "grafieken-lezen-po stap 2 vraag 9",
   "hash": "4d7f9bf1e2052d94",
   "oordeel": "twijfel",
@@ -13740,6 +13800,13 @@
   "datum": "2026-11-03"
  },
  {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 10",
+  "hash": "663328ed6ed91e35",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "lettergrepen-klemtoon-po stap 4 vraag 2",
   "hash": "2e5332d6da00f4f9",
   "oordeel": "twijfel",
@@ -14187,6 +14254,14 @@
   "oordeel": "goed",
   "bron": "vervolg B11",
   "datum": "2026-11-03"
+ },
+ {
+  "waar": "maten-eenheden stap 3 vraag 8",
+  "hash": "f51add29ff627cc7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "kg klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "maten-eenheden stap 8 vraag 3",
@@ -14914,6 +14989,30 @@
   "reden": "Het rekenwerk klopt (−10), maar het is geen groep-5-stof. De hint bij −2 schreef de som al om tot '−4 − 6' (deels voorrekenen); basis gaf alleen '−10.'"
  },
  {
+  "waar": "negatieve-getallen-po stap 3 vraag 3",
+  "hash": "c9def74fc1257d25",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "+3 klopt; wrongHints in telegramstijl (\"Niet optellen —\", \"Andersom —\"); niveaus.basis gaf alleen het antwoord; plus een negatief getal met haakjes is pittig voor groep 6"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 4",
+  "hash": "047c027431dccc12",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "8 klopt; min een minus met haakjes is geen groep-6-stof (dezelfde keuze als B5/B6/B10 in dit pad); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 3 vraag 5",
+  "hash": "88979f11dbdbdb09",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "−3 klopt, hints en niveaus ok; plus een negatief getal met haakjes is pittig voor groep 6, maar te doen"
+ },
+ {
   "waar": "negatieve-getallen-po stap 3 vraag 6",
   "hash": "62ce88b1d200e8ca",
   "oordeel": "twijfel",
@@ -15624,6 +15723,54 @@
   "bron": "vervolg B6 pakket 06 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord; wrongHint bij 0,12% ontbrak (null)."
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 3",
+  "hash": "eb01b684c028c678",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "75% klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 5",
+  "hash": "33492f0858ac6b41",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "1/10 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 6",
+  "hash": "f941d989229f6106",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "¾ klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 7",
+  "hash": "0e331e6f3f6d4e0b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "90% klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 8",
+  "hash": "7b576708a054f246",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "1% klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 9",
+  "hash": "34da49dac929eb80",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "3/5 klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 1",
@@ -16924,6 +17071,13 @@
   "reden": "Procenten in set groep 5 (groep-6-stof); basis gaf het antwoord; hint B rekende bijna voor."
  },
  {
+  "waar": "procenten-po stap 3 vraag 4",
+  "hash": "bcc022e4a1303e67",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "procenten-po stap 3 vraag 5",
   "hash": "8d96bffe322c681f",
   "oordeel": "twijfel",
@@ -17590,6 +17744,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "redactiesommen-pad stap 3 vraag 2",
+  "hash": "74444b85f53fd10f",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "redactiesommen-pad stap 3 vraag 3",
   "hash": "b43a8cf89188f7cd",
   "oordeel": "goed",
@@ -17623,6 +17784,13 @@
   "oordeel": "goed",
   "bron": "vervolg B6 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "redactiesommen-pad stap 3 vraag 8",
+  "hash": "0a88998e50701707",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
  },
  {
   "waar": "redactiesommen-pad stap 3 vraag 9",
@@ -18322,6 +18490,38 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 4",
+  "hash": "3a99091e73c4d605",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "fietspad klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 6",
+  "hash": "136b2fb1da5d1c8a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "woorden + boek klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 7",
+  "hash": "f2c217f78ed7a259",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "sportcentrum klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 8",
+  "hash": "eed6a6a7dede038f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "stadsrand klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "samenvatten-hoofdgedachte-po stap 1 vraag 1",
@@ -19079,6 +19279,100 @@
   "oordeel": "goed",
   "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 10",
+  "hash": "e992ca8f736dae17",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; hint D rekende 5 × € 8 voor"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 11",
+  "hash": "084f9e67f0c9311b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramzin \"op tiental\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 14",
+  "hash": "db999d91dec240ae",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramzin zonder lidwoord/punt"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 15",
+  "hash": "abe7e27df7eb202c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "kommagetallen/tienden is pittig voor groep 5 (één groep vroeg); zin zonder punt"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 18",
+  "hash": "ca74f13968ccea7c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramzin \"Rond af op duizendtal: 12.567\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 20",
+  "hash": "ca960179c67df0c4",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 21",
+  "hash": "92dd3c8f846eefb4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramzin \"af op euro\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 22",
+  "hash": "1476946b96c3846a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramzin met afkorting \"ipv\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 23",
+  "hash": "1c8d9cff491e3000",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "vreemde zin \"10 × ~9 ≈ wat?\"; hint rekende 10 × 9 voor"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 25",
+  "hash": "fcda8b656463fd3f",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 27",
+  "hash": "ababe32252be2dba",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramvraag en optie met \"=\""
+ },
+ {
+  "waar": "schatten-afronden stap 5 vraag 28",
+  "hash": "a6f4e31b24c6d70b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "telegramzin"
  },
  {
   "waar": "schema-tekst-combi-po stap 1 vraag 3",
@@ -20269,11 +20563,53 @@
   "reden": "Klopt; basis gaf het antwoord."
  },
  {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 10",
+  "hash": "083fc35fa8d6cebf",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 4",
+  "hash": "0542b0de880fa78c",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 5",
+  "hash": "ce222cf8bd399089",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "signaalwoorden-verbanden-po stap 4 vraag 6",
   "hash": "a5f01d642da189d0",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 7",
+  "hash": "6ed1d310bbea3744",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 8",
+  "hash": "5995207015463b3d",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "signaalwoorden-verbanden-po stap 4 vraag 9",
+  "hash": "640c26a732eaacd8",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
  },
  {
   "waar": "soorten-teksten-po stap 1 vraag 1",
@@ -20426,6 +20762,13 @@
   "reden": "niveaus.basis gaf het antwoord (telegramstijl)"
  },
  {
+  "waar": "soorten-teksten-po stap 3 vraag 1",
+  "hash": "9136818dc6d5723d",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "soorten-teksten-po stap 3 vraag 2",
   "hash": "7c2a273b2627c4ec",
   "oordeel": "twijfel",
@@ -20458,6 +20801,13 @@
   "reden": "Klopt; basis = antwoord."
  },
  {
+  "waar": "soorten-teksten-po stap 3 vraag 6",
+  "hash": "b46a9dbc8e31393c",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "soorten-teksten-po stap 3 vraag 7",
   "hash": "92cafa8a27ef496b",
   "oordeel": "twijfel",
@@ -20480,6 +20830,70 @@
   "bron": "vervolg B9 pakket 04 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Klopt; basis = antwoord."
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 1",
+  "hash": "b0527333ee495eab",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 2",
+  "hash": "2016acb8d5886d5f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 3",
+  "hash": "940f9cd7cedc85f6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 4",
+  "hash": "a224ac49124f4a28",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 5",
+  "hash": "cc6574bf87ff2df9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 6",
+  "hash": "e27055b56ed14b74",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; telegramvraag"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 7",
+  "hash": "bf71c503faf3f440",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "soorten-teksten-po stap 4 vraag 8",
+  "hash": "3f6e40a32484a9ec",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "spelling-eerste-woorden-g3 stap 5 vraag 5",
@@ -21290,6 +21704,35 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 10",
+  "hash": "3ac2c654821c1e59",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 11",
+  "hash": "461b5d2801e21241",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 12",
+  "hash": "f4889b2f5acdfac5",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 13",
+  "hash": "c2d9b0952cb0e648",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "goede optie zonder lidwoord; hint \"Niet — ...\""
+ },
+ {
   "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 14",
   "hash": "ed629910481b189b",
   "oordeel": "twijfel",
@@ -21298,12 +21741,48 @@
   "reden": "Twee letterlijke/kinderachtige afleiders ('Een echte kat kopen', 'Een cadeau voor een huisdier kopen'); wrongHint bij D ('het gaat erom dat je niet goed keek wat je kocht') geeft de betekenis vrijwel "
  },
  {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 15",
+  "hash": "b47d5207fac37897",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 16",
+  "hash": "1dcecb911dec4a78",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 18",
+  "hash": "b014f246cb3e503d",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "hint C (\"het gaat om wat je zegt\") liet maar twee opties over"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 19",
+  "hash": "26292bae1a6486c9",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 2",
   "hash": "34fde59f5c700cb9",
   "oordeel": "twijfel",
   "bron": "vervolg B11",
   "datum": "2026-11-03",
   "reden": "Hint B was een telegramzin (\"Niet — ...\")."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 20",
+  "hash": "c6fb1dfd4ed3ab37",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
  },
  {
   "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 4",
@@ -21318,6 +21797,20 @@
   "hash": "5001278bd9de7319",
   "oordeel": "goed",
   "bron": "vervolg B11",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 6",
+  "hash": "4a8585d947f49103",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 8",
+  "hash": "5e9c940d3c0c7646",
+  "oordeel": "goed",
+  "bron": "vervolg B12",
   "datum": "2026-11-03"
  },
  {
@@ -22334,10 +22827,59 @@
  },
  {
   "waar": "tabellen-grafieken stap 3 vraag 1",
-  "hash": "102e500a11420fdb",
-  "oordeel": "goed",
-  "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
-  "datum": "2026-10-27"
+  "hash": "dc2fbc7490aeac2e",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "Antwoord klopt (voetbal 28, plaatje van de stap aanwezig); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 2",
+  "hash": "a18961e5f7807a5b",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "Antwoord 20 klopt (28-8, plaatje aanwezig; mijn blinde keuze was een gok zonder plaatje); niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 3",
+  "hash": "6cc9dbae334bedc3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "Antwoord 35 klopt (85-28-22); niveaus.basis gaf alleen het antwoord en simpeler was telegramstijl"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 4",
+  "hash": "37a42783b9274928",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "Druif klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 5",
+  "hash": "3803b35d5a86d70f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "143 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 6",
+  "hash": "9ea3a563eb5c8ec6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "150 klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tabellen-grafieken stap 3 vraag 7",
+  "hash": "4cd93db398315a79",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "14 klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "tabellen-grafieken stap 5 vraag 7",
@@ -23224,6 +23766,46 @@
   "bron": "vervolg B8 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 1",
+  "hash": "a32961c983382a19",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "270 klopt; wrongHint \"Niet — je deelde...\" was een rare zin; basis \"90·3=270.\" en simpeler telegram"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 2",
+  "hash": "ffe7e832c9b912d4",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "5 km klopt; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 4",
+  "hash": "39cc2c95a09cbd29",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "Afstand klopt, maar \"oppervlakte onder een snelheid-tijdgrafiek\" en \"versnelling\" zijn natuurkunde van de middelbare school, niet voor groep 6"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 5",
+  "hash": "72caf4165043e99f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "280 klopt; niveaus.basis gaf alleen het antwoord en simpeler telegram"
+ },
+ {
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 6",
+  "hash": "523e876a3d600eb3",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "140 klopt; niveaus.basis gaf alleen het antwoord"
  },
  {
   "waar": "tijd-snelheid-afstand-po stap 5 vraag 6",
@@ -25095,6 +25677,46 @@
   "reden": "vraag zonder werkwoord (\"Hoeveel water voor 2 personen?\"); basis = antwoord"
  },
  {
+  "waar": "verhoudingen-po stap 5 vraag 1",
+  "hash": "a4b33670b5ecce22",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "schaal 1 : 100.000 met km is geen groep-5-stof; niveaus.basis gaf alleen het antwoord; hint B rekende bijna voor"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 2",
+  "hash": "f43dca07ce95d39f",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "schaal is geen groep-5-stof; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 4",
+  "hash": "b71416b2ecf301c9",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "schaal 1 : 1.000.000 geen groep-5-stof; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 5",
+  "hash": "31f78412c1fba14a",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "schaal geen groep-5-stof; telegramvraag; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "verhoudingen-po stap 5 vraag 7",
+  "hash": "52bd5e646ae7b0e7",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "schaal geen groep-5-stof; niveaus.basis gaf alleen het antwoord"
+ },
+ {
   "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 3",
   "hash": "03ea8efd42685bd0",
   "oordeel": "goed",
@@ -25674,12 +26296,52 @@
   "reden": "Basis = antwoord."
  },
  {
+  "waar": "vlakke-figuren-po stap 5 vraag 1",
+  "hash": "e7b5c7b2019ad94c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 2",
+  "hash": "357b6171353c2cb6",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; \"20 × 5 m\" kort genoteerd"
+ },
+ {
   "waar": "vlakke-figuren-po stap 5 vraag 25",
   "hash": "184ac298f31c1d02",
   "oordeel": "twijfel",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "wrongHints bij 90° ('Dat is maar één rechte hoek. Er zijn er vier.') en 270° (rechthoek: graden per hoek × aantal) rekenen 4 × 90 = 360 vrijwel voor; didactisch bedoeld."
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 3",
+  "hash": "4c4540170618ba34",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "oppervlakte driehoek is groep 7/8-stof (B9-precedent); niveaus.basis gaf alleen het antwoord; hint \"vergeet ÷ 2\" telegram"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 4",
+  "hash": "41bad7f74c47a01c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "vlakke-figuren-po stap 5 vraag 5",
+  "hash": "a828aa0fdaf70d1c",
+  "oordeel": "twijfel",
+  "bron": "vervolg B12",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen het antwoord; uitkomst 1,5 is pittig voor groep 5"
  },
  {
   "waar": "volgorde-bewerkingen stap 1 vraag 1",

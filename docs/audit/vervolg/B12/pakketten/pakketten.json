@@ -1,0 +1,48 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/schattenAfronden.js",
+   "src/learnPaths/spreekwoordenUitdrukkingenPo.js",
+   "src/learnPaths/soortenTekstenPo.js",
+   "src/learnPaths/verhoudingenPo.js",
+   "src/learnPaths/vlakkeFigurenPo.js"
+  ],
+  "sets": [
+   "5|rekenen",
+   "6|taal",
+   "7|taal",
+   "8|taal"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 51,
+  "files": [
+   "src/learnPaths/tabellenGrafieken.js",
+   "src/learnPaths/omzettenBreukProcentKommaPo.js",
+   "src/learnPaths/signaalwoordenVerbandenPo.js",
+   "src/learnPaths/tijdSnelheidAfstandPo.js",
+   "src/learnPaths/deelsommenMetRestPo.js",
+   "src/learnPaths/samenstellingenTussenlettersPo.js",
+   "src/learnPaths/negatieveGetallenPo.js",
+   "src/learnPaths/cijferendRekenen.js",
+   "src/learnPaths/redactiesommen.js",
+   "src/learnPaths/matenEenheden.js",
+   "src/learnPaths/procentenPo.js",
+   "src/learnPaths/lettergrepenKlemtoonPo.js",
+   "src/learnPaths/begrijpendLezenStrategie.js",
+   "src/learnPaths/grafiekenLezenPo.js",
+   "src/learnPaths/trappenVanVergelijkingPo.js"
+  ],
+  "sets": [
+   "6|rekenen",
+   "7|rekenen",
+   "7|taal",
+   "7|begrijpend-lezen",
+   "8|rekenen",
+   "8|taal"
+  ]
+ }
+]

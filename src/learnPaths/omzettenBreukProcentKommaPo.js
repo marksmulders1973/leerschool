@@ -692,7 +692,7 @@ const steps = [
           voorbeelden: [{ type: "recept", tekst: "Een taartrecept gebruikt ¾ van een zak suiker — hoeveel procent van de zak dat is, reken je met dezelfde opbouw." }],
           basiskennis: [{ onderwerp: "Eenheidsbreuk eerst", uitleg: "Reken altijd eerst het kleinste deel uit (zoals ¼), en vermenigvuldig dat met het aantal delen dat je nodig hebt." }],
           niveaus: {
-            basis: "¾ = 75% (drie keer 25%).",
+            basis: "Een kwart is 25%. Drie kwart is drie keer zoveel.",
             simpeler: "Een kwart is 25%. Hoeveel is drie kwart?",
             nogSimpeler: "25 + 25 + 25 = ?",
           },
@@ -702,7 +702,7 @@ const steps = [
         q: "Wat is 1/5 in procent?",
         options: ["20%", "15%", "5%", "50%"],
         answer: 0,
-        wrongHints: [null, "Je zette de cijfers 1 en 5 naast elkaar. Hoeveel is 100 ÷ 5?", "Heb je alleen de 5 overgenomen? Hoeveel is 100 ÷ 5?", "Dat is ½."],
+        wrongHints: [null, "Je zette de cijfers 1 en 5 naast elkaar. Zo reken je een breuk niet om naar procent.", "Je nam alleen de 5 over. Is één vijfde van een taart echt zo'n klein stukje?", "Dat is ½."],
         uitlegPad: {
           stappen: [
             { titel: "Deel 100 door de noemer", tekst: "Om een eenheidsbreuk (teller 1) om te zetten naar procent, deel je 100 door de noemer." },
@@ -713,7 +713,7 @@ const steps = [
           voorbeelden: [{ type: "geld", tekst: "Een spaardoos verdeel je in vier gelijke vakjes voor verschillende doelen — met dezelfde deling reken je uit hoeveel procent elk vakje is." }],
           basiskennis: [{ onderwerp: "100 delen door de noemer", uitleg: "Bij 1/2, 1/4, 1/5, 1/10 kun je steeds 100 delen door de noemer om het percentage te vinden." }],
           niveaus: {
-            basis: "1/5 = 20%.",
+            basis: "Verdeel 100% in 5 gelijke stukken. Hoeveel procent is één stuk?",
             simpeler: "Een vijfde van 100 is hoeveel?",
             nogSimpeler: "100 ÷ 5 = ?",
           },
@@ -734,7 +734,7 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Een toets heeft 100 vragen en 30% ging fout. Schrijf dat eerst als 30/100 en maak het daarna zo klein mogelijk." }],
           basiskennis: [{ onderwerp: "Delen door dezelfde factor", uitleg: "10/100, 20/100 en 50/100 kun je allemaal vereenvoudigen door teller en noemer door hetzelfde getal te delen." }],
           niveaus: {
-            basis: "10% = 1/10.",
+            basis: "Procent betekent 'van de 100'. Schrijf 10% als breuk met 100 eronder en maak hem zo klein mogelijk.",
             simpeler: "10 van de 100 → 10/100 → vereenvoudigd?",
             nogSimpeler: "10 ÷ 10 = 1 en 100 ÷ 10 = 10 → welke breuk?",
           },
@@ -755,7 +755,7 @@ const steps = [
           voorbeelden: [{ type: "sport", tekst: "Een speler scoort bij 50% van de pogingen. Schrijf dat als 50/100 en maak het net zo klein mogelijk als bij elke andere breuk." }],
           basiskennis: [{ onderwerp: "Grote getallen delen", uitleg: "75 en 100 zijn allebei deelbaar door 5 en door 25 — probeer steeds het grootste getal waar beide door deelbaar zijn." }],
           niveaus: {
-            basis: "75% = ¾ (drie kwart).",
+            basis: "Een kwart is 25%. Hoeveel keer past 25% in 75%?",
             simpeler: "¼ = 25%. Hoeveel kwarten zijn 75%?",
             nogSimpeler: "25 + 25 + 25 = 75 → hoeveel kwarten?",
           },
@@ -798,7 +798,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "9/10 = 0,9 = 90%.",
+            basis: "Een tiende is 10%. Hier heb je negen tienden.",
             simpeler: "1/10 is 10%. Hoeveel is 9/10?",
             nogSimpeler: "9 × 10% = ?",
           },
@@ -840,7 +840,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "1/100 = 1%.",
+            basis: "Procent betekent 'van de 100'. Hoeveel van de 100 is 1/100?",
             simpeler: "1 van de 100. Hoeveel procent is dat?",
             nogSimpeler: "? van de 100 = ?%",
           },
@@ -887,7 +887,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "60% = 60/100 = 6/10 = 3/5.",
+            basis: "Schrijf 60% als 60/100. Deel boven en onder steeds door hetzelfde getal tot het niet kleiner kan.",
             simpeler: "1/5 is 20%. Hoeveel vijfden is 60%?",
             nogSimpeler: "60 ÷ 20 = ?, dus ?/5",
           },

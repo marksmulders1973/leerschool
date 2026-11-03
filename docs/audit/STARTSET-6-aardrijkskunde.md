@@ -4,66 +4,66 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 1)
 Vraag: Wat is de hoofdstad van Nederland?
-- ✅ Amsterdam
 - ▫️ Den Haag
 - ▫️ Rotterdam
 - ▫️ Utrecht
+- ✅ Amsterdam
 
 ## 2. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 1)
 Vraag: Hoeveel provincies heeft Nederland?
+- ▫️ 16
+- ✅ 12
 - ▫️ 11
 - ▫️ 13
-- ✅ 12
-- ▫️ 16
 
 ## 3. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 2)
 Vraag: Welke provincie is **het nieuwst** (gewonnen uit de zee)?
 - ▫️ Drenthe
-- ▫️ Zeeland
 - ✅ Flevoland
+- ▫️ Zeeland
 - ▫️ Friesland
 
 ## 4. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 2)
 Vraag: In welke provincie ligt de **Vaalserberg** (hoogste punt van NL)?
-- ▫️ Friesland
 - ✅ Limburg
-- ▫️ Gelderland
 - ▫️ Drenthe
+- ▫️ Friesland
+- ▫️ Gelderland
 
 ## 5. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 2)
 Vraag: Welke provincie heeft naast Nederlands een **tweede officiële taal**?
-- ▫️ Zeeland
 - ▫️ Utrecht
+- ▫️ Zeeland
 - ▫️ Limburg
 - ✅ Friesland
 
 ## 6. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 2)
 Vraag: In welke provincie vind je veel **hunebedden**?
-- ▫️ Flevoland
-- ▫️ Noord-Holland
 - ✅ Drenthe
+- ▫️ Noord-Holland
 - ▫️ Zeeland
+- ▫️ Flevoland
 
 ## 7. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 3)
 Vraag: Wat is de hoofdstad van **Friesland**?
-- ▫️ Assen
 - ▫️ Zwolle
+- ▫️ Assen
 - ▫️ Groningen
 - ✅ Leeuwarden
 
 ## 8. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 3)
 Vraag: **Lelystad** is de hoofdstad van welke provincie?
-- ✅ Flevoland
-- ▫️ Gelderland
-- ▫️ Noord-Holland
 - ▫️ Drenthe
+- ▫️ Gelderland
+- ✅ Flevoland
+- ▫️ Noord-Holland
 
 ## 9. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 4)
 Vraag: Wat is de hoofdstad van **Noord-Holland**?
-- ▫️ Amsterdam
-- ▫️ Alkmaar
 - ✅ Haarlem
+- ▫️ Alkmaar
 - ▫️ Hoorn
+- ▫️ Amsterdam
 
 ## 10. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 5)
 Vraag: Welke 3 grote rivieren stromen door Nederland?
@@ -74,70 +74,70 @@ Vraag: Welke 3 grote rivieren stromen door Nederland?
 
 ## 11. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 5)
 Vraag: Wat heette het IJsselmeer **vroeger**?
-- ▫️ Markermeer
-- ✅ Zuiderzee
 - ▫️ Waddenzee
+- ✅ Zuiderzee
+- ▫️ Markermeer
 - ▫️ Noordzee
 
 ## 12. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 6)
 Vraag: Wat is het **westelijkste** Waddeneiland?
-- ▫️ Terschelling
 - ✅ Texel
-- ▫️ Schiermonnikoog
 - ▫️ Ameland
+- ▫️ Schiermonnikoog
+- ▫️ Terschelling
 
 ## 13. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 3)
 Vraag: Een kaart heeft schaal **1:100.000**. Hoe ver is 1 cm op de kaart in het echt?
 - ▫️ 100 m
+- ▫️ 10 km
 - ▫️ 100 km
 - ✅ 1 km
-- ▫️ 10 km
 
 ## 14. Kaartlezen — groep 5-8, Doorstroomtoets-stof (kaartlezen-po, stap 3)
 Vraag: Een kaart heeft schaal 1:100.000. Je meet **5 cm** op de kaart. Hoe ver is dat in het echt?
-- ▫️ 500 m
-- ▫️ 500 km
-- ▫️ 50 km
 - ✅ 5 km
+- ▫️ 500 m
+- ▫️ 50 km
+- ▫️ 500 km
 
 ## 15. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 7)
 Vraag: Wat is de **2e grootste** stad van NL?
 - ▫️ Eindhoven
+- ▫️ Den Haag
 - ✅ Rotterdam
 - ▫️ Utrecht
-- ▫️ Den Haag
 
 ## 16. Topografie Nederland — provincies, hoofdsteden, water (topografie-nederland, stap 7)
 Vraag: Wat heet het gebied **Amsterdam-Rotterdam-Den Haag-Utrecht**?
-- ▫️ Vechtstreek
-- ▫️ Zuiderzee
 - ▫️ Noord-Holland
 - ✅ Randstad
+- ▫️ Vechtstreek
+- ▫️ Zuiderzee
 
 ## 17. Nederland en water (groep 6-8) (water-erfgoed-nederland-po, stap 1)
 Vraag: Hoeveel **procent** van Nederland ligt **onder zeeniveau**?
 - ▫️ ~100%
+- ▫️ ~5%
 - ✅ ~25%
 - ▫️ ~75%
-- ▫️ ~5%
 
 ## 18. Nederland en water (groep 6-8) (water-erfgoed-nederland-po, stap 1)
 Vraag: Wat is **NAP**?
+- ▫️ Naam van een polder
 - ✅ Normaal Amsterdams Peil
 - ▫️ Een Nederlandse rivier
-- ▫️ Naam van een polder
 - ▫️ Een dijk
 
 ## 19. Nederland en water (groep 6-8) (water-erfgoed-nederland-po, stap 2)
 Vraag: Wat is het verschil tussen een **dijk** en een **duin**?
-- ▫️ Duin door mensen, dijk door natuur
 - ▫️ Dijk hoger dan duin altijd
-- ▫️ Geen verschil
+- ▫️ Duin door mensen, dijk door natuur
 - ✅ Dijk door mensen, duin door natuur
+- ▫️ Geen verschil
 
 ## 20. Nederland en water (groep 6-8) (water-erfgoed-nederland-po, stap 2)
 Vraag: Hoe lang is de **Afsluitdijk**?
 - ▫️ ~10 km
-- ▫️ ~100 km
 - ▫️ ~5 km
 - ✅ ~32 km
+- ▫️ ~100 km

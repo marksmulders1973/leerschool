@@ -545,16 +545,16 @@ const steps = [
         },
       },
       {
-        q: "*Je hebt zonnebrand nodig, bijvoorbeeld op het strand.* Wat doet 'bijvoorbeeld' hier?",
+        q: "*Je hebt zonnebrand nodig als je lang buiten bent, zoals op het strand.* Wat doet 'zoals' hier?",
         options: ["het geeft een voorbeeld", "het geeft een tegenstelling", "het geeft een oorzaak", "het geeft een volgorde"],
         answer: 0,
         wrongHints: [null, "Er botst niets.", "Er wordt geen reden gegeven.", "Er is geen sprake van stappen in de tijd."],
         uitlegPad: {
-          stappen: [{ titel: "Bijvoorbeeld = voorbeeld", tekst: "'Bijvoorbeeld' kondigt een voorbeeld aan: het strand is een voorbeeld van waar je zonnebrand nodig hebt." }],
+          stappen: [{ titel: "Zoals = bijvoorbeeld", tekst: "'Zoals' betekent hier 'bijvoorbeeld': het strand is een voorbeeld van een plek waar je lang buiten bent." }],
           niveaus: {
-            basis: "'Bijvoorbeeld' geeft altijd een voorbeeld.",
-            simpeler: "Wordt er een voorbeeld genoemd na dit woord?",
-            nogSimpeler: "Wat betekent 'bijvoorbeeld'?",
+            basis: "Kijk wat er na 'zoals' komt: 'op het strand'. Is dat een reden, een botsing, een stap in de tijd, of één geval van 'lang buiten zijn'?",
+            simpeler: "Is het strand één van de plekken waar je lang buiten bent?",
+            nogSimpeler: "'Zoals' betekent hier 'bijvoorbeeld'. Wat geeft het woord dus?",
           },
         },
       },

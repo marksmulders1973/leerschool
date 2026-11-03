@@ -1301,11 +1301,11 @@ const steps = [
           theorie: "Vierkant: alle zijden gelijk → opp = zijde². 9² = 81.",
           voorbeelden: [{ type: "stap", tekst: "9×9 = 81 m²." }],
           basiskennis: [{ onderwerp: "Tafels", uitleg: "9×9 = 81 (uit tafels)." }],
-          niveaus: { basis: "81 m².", simpeler: "Vierkant: opp = zijde × zijde = 9×9 = 81 m².", nogSimpeler: "81" },
+          niveaus: { basis: "Bij een vierkant zijn alle zijden even lang. De oppervlakte is zijde keer zijde.", simpeler: "Vierkant: opp = zijde × zijde = 9×9 = 81 m².", nogSimpeler: "81" },
         },
       },
       {
-        q: "Een rechthoek is **20 × 5 m**. Wat is de omtrek?",
+        q: "Een rechthoek is **20 m lang** en **5 m breed**. Wat is de omtrek?",
         options: ["50 m","100 m","25 m","40 m"],
         answer: 0,
         wrongHints: [null,"Dat is 20 × 5 — het vlak, niet de rand.","Dat zijn maar twee zijden: 20 + 5. Hoeveel zijden heeft een rechthoek?","Te weinig — tel je de korte zijden ook mee?"],
@@ -1315,21 +1315,22 @@ const steps = [
           theorie: "Rechthoek: 2 lange + 2 korte zijden. Som = 2(L+B).",
           voorbeelden: [{ type: "stap", tekst: "2(20+5) = 2×25 = 50 m." }],
           basiskennis: [{ onderwerp: "Niet 100", uitleg: "100 = oppervlakte (20×5). Omtrek = 50." }],
-          niveaus: { basis: "50 m.", simpeler: "Rechthoek-omtrek = 2×(20+5) = 2×25 = 50 m.", nogSimpeler: "50" },
+          niveaus: { basis: "De omtrek is de rand. Een rechthoek heeft twee lange en twee korte zijden: tel ze alle vier op.", simpeler: "Rechthoek-omtrek = 2×(20+5) = 2×25 = 50 m.", nogSimpeler: "50" },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B12 (3 nov 2026): oppervlakte van een driehoek is groep 7/8-stof, niet groep 5
         q: "Een driehoek heeft een **basis van 14 cm** en een **hoogte van 6 cm**. Wat is de oppervlakte?",
         options: ["42 cm²","84 cm²","20 cm²","21 cm²"],
         answer: 0,
-        wrongHints: [null,"Te veel — vergeet ÷ 2.","Dat is 14 + 6. Bij oppervlakte tel je niet op.","Heb je twee keer door 2 gedeeld?"],
+        wrongHints: [null,"Te veel — je bent het delen door 2 vergeten.","Dat is 14 + 6. Bij oppervlakte tel je niet op.","Heb je twee keer door 2 gedeeld?"],
         uitlegPad: {
           stappen: [{ titel: "B × H ÷ 2", tekst: "14 × 6 = 84. ÷2 = 42 cm²." }],
           woorden: [{ woord: "driehoek", uitleg: "(basis × hoogte) ÷ 2." }],
           theorie: "Tip: bij even getal eerst ÷2. 6÷2 = 3. 14×3 = 42.",
           voorbeelden: [{ type: "stap", tekst: "14×6÷2 = 14×3 = 42 cm²." }],
           basiskennis: [{ onderwerp: "Vergeet ÷2 niet", uitleg: "Zonder ÷2: 84 (fout). Driehoek = halve rechthoek." }],
-          niveaus: { basis: "42 cm².", simpeler: "Driehoek = (14×6)÷2 = 84÷2 = 42 cm².", nogSimpeler: "42" },
+          niveaus: { basis: "Een driehoek is de helft van een rechthoek. Reken basis keer hoogte en neem daar de helft van.", simpeler: "Driehoek = (14×6)÷2 = 84÷2 = 42 cm².", nogSimpeler: "42" },
         },
       },
       {
@@ -1343,7 +1344,7 @@ const steps = [
           theorie: "Rondom = omtrek = 2(L+B). 40 × 25 = 1000 is de oppervlakte (verkeerd voor de rand).",
           voorbeelden: [{ type: "stap", tekst: "40+25=65 (halve omtrek). ×2 = 130 m." }],
           basiskennis: [{ onderwerp: "Eenheid m niet m²", uitleg: "Lengte = m. Vlak = m²." }],
-          niveaus: { basis: "130 m.", simpeler: "Rondom = omtrek = 2×(40+25) = 130 m.", nogSimpeler: "130" },
+          niveaus: { basis: "Rondom lopen is de omtrek. Tel alle vier de zijden van het veld op.", simpeler: "Rondom = omtrek = 2×(40+25) = 130 m.", nogSimpeler: "130" },
         },
       },
       {
@@ -1357,7 +1358,7 @@ const steps = [
           theorie: "2-stappen: 1) oppervlakte. 2) ÷ dekking per liter.",
           voorbeelden: [{ type: "stap", tekst: "6×5 = 30 m². 30÷20 = 1,5 L verf." }],
           basiskennis: [{ onderwerp: "Decimaal antwoord", uitleg: "30÷20 = 1,5 (niet rond getal — kun je gewoon 1,5L kopen)." }],
-          niveaus: { basis: "1,5 L.", simpeler: "Vloer 6×5 = 30 m². 30 m² ÷ 20 m²/L = 1,5 L verf.", nogSimpeler: "1,5" },
+          niveaus: { basis: "Reken eerst uit hoeveel m² de vloer is. Kijk dan hoe vaak 20 m² daarin past.", simpeler: "Vloer 6×5 = 30 m². 30 m² ÷ 20 m²/L = 1,5 L verf.", nogSimpeler: "1,5" },
         },
       },
       {

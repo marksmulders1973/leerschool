@@ -552,21 +552,21 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen tussenletter", tekst: "Bij 'fietspad' hoor je geen -en- of extra -s-: gewoon fiets + pad. (Vergelijk: bij fietsenstalling hoor je wél -en-.)" }],
           niveaus: {
-            basis: "fiets + pad = fietspad, zonder tussenletter.",
+            basis: "Zeg het woord hardop. Hoor je een extra letter tussen fiets en pad?",
             simpeler: "Hoor je een -en- tussen fiets en pad? Nee.",
             nogSimpeler: "fiets + pad = ?",
           },
         },
       },
       {
-        q: "Hoe schrijf je: een winkel waar je schoenen koopt?",
+        q: "Je plakt **schoen** en **winkel** aan elkaar. Hoe schrijf je dat woord?",
         options: ["schoenenwinkel", "schoenewinkel", "schoeneswinkel", "schoenenswinkels"],
         answer: 0,
         wrongHints: [null, "Het is -en-, niet alleen -e-.", "Er hoort geen -s- in.", "Dat is het meervoud, en er hoort geen -s- in."],
         uitlegPad: {
           stappen: [{ titel: "schoen → schoenen → schoenenwinkel", tekst: "Het meervoud van 'schoen' is 'schoenen'. Daarom schoenenwinkel, met tussen-n." }],
           niveaus: {
-            basis: "schoen → schoenen, dus schoenenwinkel.",
+            basis: "Het meervoud van het eerste woord zit vaak in de samenstelling. Wat is het meervoud van 'schoen'?",
             simpeler: "Meervoud van 'schoen'? Dat -en- komt erin.",
             nogSimpeler: "schoenen + winkel = ?",
           },
@@ -580,7 +580,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "woorden + boek", tekst: "Woordenboek = woord + boek, met -en- ertussen (woord → woorden). Dus woorden + boek." }],
           niveaus: {
-            basis: "woord → woorden + boek = woordenboek.",
+            basis: "Zoek in het woord twee stukken die allebei los als woord kunnen bestaan.",
             simpeler: "Meervoud van 'woord'? Dat -en- zit ertussen.",
             nogSimpeler: "woorden + boek = ?",
           },
@@ -594,7 +594,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen tussenletter", tekst: "Bij 'sportcentrum' hoor je geen extra -en- of -s-: gewoon sport + centrum aan elkaar." }],
           niveaus: {
-            basis: "sport + centrum = sportcentrum, zonder tussenletter.",
+            basis: "Zeg het woord hardop. Hoor je een extra letter tussen sport en centrum?",
             simpeler: "Hoor je een extra letter tussen sport en centrum? Nee.",
             nogSimpeler: "sport + centrum = ?",
           },
@@ -608,7 +608,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "stad + s + rand = stadsrand", tekst: "Zeg 'stad...rand': je hoort een s. Dus stadsrand, met tussen-s." }],
           niveaus: {
-            basis: "Je hoort een -s-: stadsrand.",
+            basis: "Zeg het woord hardop. Hoor je een extra klank tussen stad en rand?",
             simpeler: "Hoor je een s tussen stad en rand?",
             nogSimpeler: "stads + rand = ?",
           },
