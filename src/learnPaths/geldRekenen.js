@@ -27,7 +27,7 @@ const steps = [
     explanation: "**1 euro = 100 cent**. Net zoals 1 meter = 100 cm.\n\nGeld schrijf je met een **komma** tussen euro's en centen:\n• € 1,50 = 1 euro 50 cent\n• € 0,75 = 75 cent\n• € 12,05 = 12 euro 5 cent *(let op: nul-cent niet vergeten!)*\n• € 100,00 = honderd euro precies\n\n**Belangrijk**: na de komma altijd **2 cijfers** voor de centen.\n• € 3,5 schrijven we als € 3,50.\n• € 0,5 = € 0,50.\n• € 10 = € 10,00.\n\n**Munten en biljetten in Nederland**:\n• Munten: 1, 2, 5, 10, 20, 50 cent + 1 en 2 euro.\n• Biljetten: 5, 10, 20, 50, 100, 200, 500 euro.\n\n**Cent → euro** *(omrekenen)*:\n• 250 cent = € 2,50.\n• 1000 cent = € 10,00.\n• 75 cent = € 0,75.\n\n**Euro → cent**:\n• € 3,40 = 340 cent.\n• € 0,80 = 80 cent.\n• € 1,05 = 105 cent.",
     checks: [
       {
-        q: "**€ 2,75** — hoeveel **cent**?",
+        q: "**€ 2,75** — hoeveel **cent** is dat **in totaal**?",
         options: ["275","2750","27,5","27"],
         answer: 0,
         wrongHints: [null,"Te veel — heb je per ongeluk × 1000 in plaats van × 100 gedaan?","Past niet — cent zijn hele getallen, geen kommagetallen.","Te weinig — ben je de komma vergeten?"],
@@ -95,7 +95,7 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**€ 6,08** — hoeveel **cent**?",
+        q: "**€ 6,08** — hoeveel **cent** is dat **in totaal**?",
         options: ["608", "680", "68", "6080"],
         answer: 0,
         wrongHints: [

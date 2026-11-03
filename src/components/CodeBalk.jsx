@@ -193,7 +193,9 @@ function EerScherm({ code, onVerder }) {
         <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
           <div style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
             {isOP
-              ? <>Onze afspraak met de gemeente Den Haag: heeft jouw gezin een Ooievaarspas? Dan is het {famKnop("Familie-pakket")} van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
+              ? <>Onze afspraak met de gemeente Den Haag: heeft jouw gezin een Ooievaarspas? Dan is het {famKnop("Familie-pakket")} van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.
+                  {/* Idee 45 (3 nov 2026): ooievaarspas.nl zegt "maak een gratis account aan" — één zin die daarbij aansluit, zodat de ouder niet twijfelt. */}
+                  <span style={{ display: "block", marginTop: 8, fontWeight: 500, opacity: 0.92 }}>Oefenen kan meteen, zonder account. Wil je het Familie-pakket ook op een ander apparaat of een gratis account maken? De code gaat vanzelf mee.</span></>
               : isEN
                 ? <>Thanks to them, the {famKnop("Family package")} is <strong style={{ color: "#3f7015" }}>free for your family {partnerFamilieTotLabel(partnerFamilieTot(), true)}</strong>.</>
                 : blijvend

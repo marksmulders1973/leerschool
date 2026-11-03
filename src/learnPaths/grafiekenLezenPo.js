@@ -517,7 +517,9 @@ const steps = [
     ),
     checks: [
       {
-        q: "Een staafdiagram laat de regen in mm zien: jan 60, feb 50, mrt 40, apr 70. Hoeveel mm viel er in **maart**?",
+        // Melding 2 nov 2026 ("diagram hoort niet bij de vraag"): de stap toonde het overblijf-diagram bij deze regenvraag → eigen regen-diagram per vraag.
+        q: "Bekijk het staafdiagram 'Regen per maand' (in mm). Hoeveel mm regen viel er in **maart**?",
+        svg: staafSvg([{ l: "jan", v: 60, c: COLORS.bar }, { l: "feb", v: 50, c: COLORS.bar2 }, { l: "mrt", v: 40, c: COLORS.bar3 }, { l: "apr", v: 70, c: COLORS.bar4 }], "Regen per maand (mm)"),
         options: ["40 mm", "60 mm", "50 mm", "70 mm"],
         answer: 0,
         wrongHints: [null, "Dat is januari — kijk goed naar de maart-balk.", "Dat is februari.", "Dat is april."],
@@ -546,7 +548,7 @@ const steps = [
         },
       },
       {
-        q: "Een staafdiagram laat zien hoeveel kinderen er per dag naar de leesclub kwamen: ma 22, di 18, wo 26, do 30, vr 24. Hoeveel kinderen **meer** waren er op **donderdag** dan op **dinsdag**?",
+        q: "Bekijk het staafdiagram 'Aantal kinderen op overblijf' (ma 22, di 18, wo 26, do 30, vr 24). Hoeveel kinderen **meer** waren er op **donderdag** dan op **dinsdag**?",
         options: ["12 kinderen", "6 kinderen", "8 kinderen", "48 kinderen"],
         answer: 0,
         wrongHints: [null, "Te weinig — dat is donderdag min vrijdag. Welke twee dagen noemt de vraag?", "Te weinig — dat is donderdag min maandag. Welke twee dagen noemt de vraag?", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
