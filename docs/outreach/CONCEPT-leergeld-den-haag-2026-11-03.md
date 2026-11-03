@@ -1,6 +1,6 @@
 # Concept — Leergeld Den Haag (3 nov 2026, tip van Esther Versluis / bureau Ooievaarspas)
 
-Status: CONCEPT, wacht op "stuur maar" van Mark. Eerder benaderd 9 jul 2026 (Leergeld-batch 1, info@leergelddenhaag.nl), geen antwoord.
+Status: ✅ VERSTUURD di 3 nov 2026 ~10:10 via hallo@ (Resend id 01a1a06d-ff08-7829-a224-ec7e23aba453), Mark "stuur maar". Definitieve tekst = script scripts/outreach/stuur-leergeld-denhaag-20261103.mjs (zonder code, 3 jaar t/m 31-12-2029 bij ja). Eerder benaderd 9 jul 2026 (Leergeld-batch 1, info@leergelddenhaag.nl), geen antwoord.
 Versturen: via hallo@leerkwartier.app (Resend) of als Gmail; beeld `Leerkwartier-dossiers\Ooievaarspas\Leerkwartier-Ooievaarspas-600x400.png` als bijlage.
 
 Aan: info@leergelddenhaag.nl
