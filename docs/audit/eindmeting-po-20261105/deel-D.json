@@ -1,0 +1,1296 @@
+[
+ {
+  "nr": 151,
+  "bron": "leerpaden",
+  "waar": "spelling-ei-ij-au-ou stap 4 vraag 4",
+  "file": "./spellingEiIjAuOu.js",
+  "level": "groep4-6",
+  "q": "Je twijfelt bij het woord **bedtijd**. Welk trucje helpt je?",
+  "options": [
+   "Het eindigt op -tijd, dus ij",
+   "Het is een voornaamwoord, dus ij",
+   "Het rijmt op klein, dus ei",
+   "Het komt van 'eind', dus ei"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is bedtijd een woord als jij, hij of wij?",
+   "Rijmt bedtijd echt op klein? Zeg ze allebei hardop.",
+   "Zit het woord 'eind' in bedtijd?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "-tijd = ij.",
+   "simpeler": "Bedtijd eindigt op tijd. Tijd heeft ij, dus bedtijd ook.",
+   "nogSimpeler": "Tijd = ij"
+  }
+ },
+ {
+  "nr": 152,
+  "bron": "leerpaden",
+  "waar": "spelling-overige-po stap 4 vraag 5",
+  "file": "./spellingOverigePo.js",
+  "level": "groep5-8",
+  "q": "*'onze kat pip slaapt op de bank.'* — welke twee woorden moeten een hoofdletter krijgen?",
+  "options": [
+   "onze en pip",
+   "kat en pip",
+   "onze en kat",
+   "pip en bank"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is 'kat' een naam, of een gewoon woord?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Onze + Pip met hoofdletter.",
+   "simpeler": "Begin van de zin: Onze. Naam van de kat: Pip. De rest klein.",
+   "nogSimpeler": "Het eerste woord en de naam: Onze en Pip."
+  }
+ },
+ {
+  "nr": 153,
+  "bron": "leerpaden",
+  "waar": "sterren-planeten stap 1 vraag 2",
+  "file": "./sterrenPlaneten.js",
+  "level": "groep5-8",
+  "q": "Hoe lang doet **licht van de zon** erover om bij ons te komen?",
+  "options": [
+   "~8 minuten",
+   "~1 seconde",
+   "~24 uur",
+   "~1 jaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zo snel gaat het niet: de zon staat 150 miljoen kilometer van ons af.",
+   "Een hele dag is veel te lang; licht is het snelste wat er bestaat.",
+   "Een jaar reizen hoort bij het licht van andere sterren, die veel verder weg staan."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De zon staat ongeveer 150 miljoen kilometer van ons af. Licht is heel snel, maar heeft toch even nodig voor die reis.",
+   "simpeler": "Licht reist 300.000 kilometer per seconde. Toch duurt de reis van de zon naar de aarde een paar minuten, geen uren.",
+   "nogSimpeler": "Het zonlicht is ongeveer 8 minuten onderweg."
+  }
+ },
+ {
+  "nr": 154,
+  "bron": "leerpaden",
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 1",
+  "file": "./synoniemenTegenstellingenPo.js",
+  "level": "groep5-7",
+  "q": "Wat is een **synoniem**?",
+  "options": [
+   "Een woord met bijna dezelfde betekenis",
+   "Een woord met tegengestelde betekenis",
+   "Een woord met dezelfde uitspraak",
+   "Een woord uit een vreemde taal"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een tegenstelling (antoniem) — precies omgekeerd.",
+   "Dat is een homoniem — bv. 'bank' (zit) en 'bank' (geld).",
+   "Dat is een leenwoord — bv. 'computer' (Engels) of 'paraplu' (Frans)."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Synoniem = woord met bijna dezelfde betekenis.",
+   "simpeler": "Twee woorden die hetzelfde betekenen, bv. blij en vrolijk. Dat zijn synoniemen.",
+   "nogSimpeler": "Synoniem = twee woorden die hetzelfde zeggen."
+  }
+ },
+ {
+  "nr": 155,
+  "bron": "leerpaden",
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 3",
+  "file": "./synoniemenTegenstellingenPo.js",
+  "level": "groep5-7",
+  "q": "Welk woord betekent hetzelfde als **'enorm'**?",
+  "options": [
+   "Reusachtig",
+   "Minuscuul",
+   "Gewichtig",
+   "Langgerekt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Minuscuul betekent piepklein. Is dat hetzelfde als enorm?",
+   "Gewichtig gaat over zwaar of belangrijk zijn. Betekent het hetzelfde als enorm?",
+   "Langgerekt is lang en smal. Is dat hetzelfde als enorm?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Reusachtig = synoniem van enorm (allebei 'heel groot').",
+   "simpeler": "Enorm = heel groot. Reusachtig = even groot als een reus = heel groot. Hetzelfde.",
+   "nogSimpeler": "Reusachtig"
+  }
+ },
+ {
+  "nr": 156,
+  "bron": "leerpaden",
+  "waar": "synoniemen-tegenstellingen-po stap 2 vraag 6",
+  "file": "./synoniemenTegenstellingenPo.js",
+  "level": "groep5-7",
+  "q": "Welk woord betekent hetzelfde als **'woning'**?",
+  "options": [
+   "Huis",
+   "Tuin",
+   "Straat",
+   "Winkel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een tuin hoort bij een huis. Woon je ín de tuin?",
+   "Aan een straat staan huizen. Woon je óp de straat?",
+   "In een winkel koop je iets. Woon je er ook?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'Huis' is een synoniem van 'woning'.",
+   "simpeler": "'Woning' en 'huis' betekenen bijna hetzelfde.",
+   "nogSimpeler": "Huis"
+  }
+ },
+ {
+  "nr": 157,
+  "bron": "leerpaden",
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 25",
+  "file": "./synoniemenTegenstellingenPo.js",
+  "level": "groep5-7",
+  "q": "Welk woord is een synoniem van **stil**?",
+  "options": [
+   "rustig",
+   "luid",
+   "moe",
+   "langzaam"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Luid is juist het omgekeerde.",
+   "Als je moe bent, ben je misschien stil. Betekent moe hetzelfde?",
+   "Langzaam gaat over hoe snel iets gaat, niet over geluid."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 158,
+  "bron": "leerpaden",
+  "waar": "taal-woorden-zinnen-g4 stap 2 vraag 9",
+  "file": "./taalWoordenZinnenG4.js",
+  "level": "groep4-5",
+  "q": "Wat is het meervoud van **ei**?",
+  "options": [
+   "eieren",
+   "eien",
+   "eiens",
+   "eiers"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het hardop — zeg je 'twee eien'?",
+   "Zeg 'twee eiens' hardop. Klinkt dat goed?",
+   "Dit woord doet gek — er komt iets anders achter."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "ei → eieren.",
+   "simpeler": "Dit woord doet gek: ei-e-ren.",
+   "nogSimpeler": "eieren"
+  }
+ },
+ {
+  "nr": 159,
+  "bron": "leerpaden",
+  "waar": "taal-woorden-zinnen-g4 stap 3 vraag 4",
+  "file": "./taalWoordenZinnenG4.js",
+  "level": "groep4-5",
+  "q": "Van welk woord is **poesje** het verkleinwoord?",
+  "options": [
+   "poes",
+   "poesen",
+   "poezen",
+   "poest"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat lijkt op meer dan één poes. Hoeveel zoeken we er?",
+   "Dat zijn er meer — we zoeken er één.",
+   "Zeg 'een poest' hardop. Klinkt dat goed?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "poesje komt van poes.",
+   "simpeler": "Haal -je weg: poes.",
+   "nogSimpeler": "poes"
+  }
+ },
+ {
+  "nr": 160,
+  "bron": "leerpaden",
+  "waar": "tabellen-grafieken stap 5 vraag 5",
+  "file": "./tabellenGrafieken.js",
+  "level": "groep6-8",
+  "q": "Cirkeldiagram 'zo komen we naar school': fiets 45%, lopen 30%, de rest komt met de auto. Welk percentage komt met de **auto**?",
+  "options": [
+   "25%",
+   "75%",
+   "15%",
+   "35%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zijn fiets en lopen samen. Hoeveel blijft er over?",
+   null,
+   "Reken na: 100% − 45% − 30%."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "25%.",
+   "simpeler": "100% − 75% = 25%.",
+   "nogSimpeler": "25%"
+  }
+ },
+ {
+  "nr": 161,
+  "bron": "leerpaden",
+  "waar": "tafels-po stap 1 vraag 9",
+  "file": "./tafelsPo.js",
+  "level": "groep4-5",
+  "q": "Welk rijtje is het begin van de **tafel van 3**?",
+  "options": [
+   "3, 6, 9, 12",
+   "3, 4, 5, 6",
+   "3, 5, 7, 9",
+   "3, 6, 12, 24"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hier komt er steeds 1 bij. Hoeveel komt er bij de tafel van 3 steeds bij?",
+   "Hier komt er steeds 2 bij. Hoeveel komt er bij de tafel van 3 steeds bij?",
+   "Hier wordt het getal steeds dubbel. Komt er steeds hetzelfde bij?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "3, 6, 9, 12 — steeds 3 erbij.",
+   "simpeler": "Begin bij 3 en tel steeds 3 erbij.",
+   "nogSimpeler": "3, 6, 9, 12"
+  }
+ },
+ {
+  "nr": 162,
+  "bron": "leerpaden",
+  "waar": "tafels-po stap 3 vraag 1",
+  "file": "./tafelsPo.js",
+  "level": "groep4-5",
+  "q": "**4 × 3** = ?",
+  "options": [
+   "12",
+   "7",
+   "43",
+   "9"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 4 + 3. Bij × tel je 4 keer 3 op.",
+   "Je zette 4 en 3 achter elkaar. Het is een keersom.",
+   "Dat is 3 × 3."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 163,
+  "bron": "leerpaden",
+  "waar": "tafels-po stap 6 vraag 17",
+  "file": "./tafelsPo.js",
+  "level": "groep4-5",
+  "q": "Welke truc helpt bij de **tafel van 9**?",
+  "options": [
+   "Elke stap: tientallen +1, eenheden −1",
+   "Elke stap: tientallen −1, eenheden +1",
+   "Elke stap: tientallen +1, eenheden +1",
+   "Elke stap: alleen eenheden −1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar 9 en 18. Gaat het tiental omhoog of omlaag?",
+   "Kijk naar 9 en 18. Wat gebeurt er met het laatste cijfer?",
+   "Van 9 naar 18 verandert ook het eerste cijfer."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 164,
+  "bron": "leerpaden",
+  "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 8",
+  "file": "./tekstdoelSchrijversdoelPo.js",
+  "level": "groep6-8",
+  "q": "Welke zin uit de tekst laat zien dat de schrijver óók iets van de lezer WIL?",
+  "options": [
+   "\"Laat in een hoekje van de tuin bladeren en takken liggen.\"",
+   "\"'s Nachts scharrelt een egel wel drie kilometer door tuinen en parken.\"",
+   "\"Tijdens die winterslaap daalt zijn hartslag.\"",
+   "\"In november zoekt de egel een warme plek om te overwinteren.\""
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit is een feit over wat de egel doet — moet jíj hier iets?",
+   "Ook dit gaat over het lichaam van de egel, niet over jou.",
+   "Wie is er in deze zin aan het werk: de lezer of de egel?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Drie zinnen vertellen over de egel. Eén zin begint met een opdracht die jíj kunt uitvoeren in de tuin. Welke?",
+   "simpeler": "Lees elke optie en vraag: kan ik dit vanmiddag zelf gaan doen? Drie kilometer scharrelen en een winterslaap houden lukt je niet — wat wel?",
+   "nogSimpeler": "Zoek de zin waarin jij aan de beurt bent, niet de egel."
+  }
+ },
+ {
+  "nr": 165,
+  "bron": "leerpaden",
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 7",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "level": "groep6-8",
+  "q": "Wat is een oorzaak?",
+  "options": [
+   "Iets waardoor iets anders gebeurt",
+   "Iets wat er helemaal als laatste gebeurt",
+   "Iets wat de schrijver ervan vindt",
+   "Een moeilijk woord in de tekst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk aan de bananenschil en de uitglijder: lag de schil er aan het begin of aan het eind?",
+   "Een mening herken je aan woorden als 'ik vind'. Gaat een oorzaak over vinden, of over gebeuren?",
+   "Een oorzaak is geen woord, maar iets wat gebeurt. Denk aan de bananenschil."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Denk aan de dominostenen: welke steen is de oorzaak — de steen die je aantikt, of de steen die valt?",
+   "simpeler": "De oorzaak beantwoordt de vraag 'waardoor kwam dit?'. Gebeurt zoiets aan het begin of aan het eind?",
+   "nogSimpeler": "Wat was er bij Joep éérst: de schil op de stoep, of het uitglijden?"
+  }
+ },
+ {
+  "nr": 166,
+  "bron": "leerpaden",
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 2 vraag 3",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "level": "groep6-8",
+  "q": "Wat was het gevolg van het lopen naar school?",
+  "options": [
+   "Milan kwam tien minuten te laat de klas binnen",
+   "De achterband van zijn fiets liep leeg",
+   "Milan reed onderweg over een scherpe spijker",
+   "De juf had thuis zelf banden geplakt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat was al gebeurd vóórdat Milan ging lopen. Een gevolg komt erná — wat gebeurde er ná het lopen?",
+   "Gebeurde dat vóór of ná het lopen? Een gevolg komt erná.",
+   "Dat gaat over vroeger, over de juf thuis. Wat gebeurde er met Mílan door al dat lopen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een gevolg komt ná de oorzaak. Wat gebeurde er in de tekst direct ná het lopen?",
+   "simpeler": "Lopen duurt langer dan fietsen. Wat gebeurt er dan met de tijd waarop je aankomt?",
+   "nogSimpeler": "Zoek de zin die begint met 'Zo kwam hij...' — wat staat daar?"
+  }
+ },
+ {
+  "nr": 167,
+  "bron": "leerpaden",
+  "waar": "tellen-kleuters-po stap 4 vraag 10",
+  "file": "./tellenKleutersPo.js",
+  "level": "groep1-2",
+  "q": "Je staat buiten. Wat is er ónder je voeten?",
+  "options": [
+   "de grond",
+   "de zon",
+   "de wolken",
+   "de maan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk eens omhoog: die zie je juist bóven je, in de lucht.",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De grond is onder je voeten.",
+   "simpeler": "Je staat óp de grond — die is onder je.",
+   "nogSimpeler": "de grond"
+  }
+ },
+ {
+  "nr": 168,
+  "bron": "leerpaden",
+  "waar": "tijdsduur-rekenen-po stap 1 vraag 6",
+  "file": "./tijdsduurRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Welke eenheid gebruik je om te zeggen hoe lang **een knipoog** duurt?",
+  "options": [
+   "seconden",
+   "minuten",
+   "uren",
+   "dagen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Duurt een knipoog lang of heel kort?",
+   "Duurt een knipoog lang of heel kort?",
+   "Duurt een knipoog lang of heel kort?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Seconden.",
+   "simpeler": "Een knipoog is heel kort. Dus seconden.",
+   "nogSimpeler": "seconden"
+  }
+ },
+ {
+  "nr": 169,
+  "bron": "leerpaden",
+  "waar": "tijdsduur-rekenen-po stap 4 vraag 2",
+  "file": "./tijdsduurRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Een vlucht vertrekt om **10:40** en duurt **3 uur 25 min**. Hoe laat is de **aankomst**?",
+  "options": [
+   "14:05",
+   "13:65",
+   "13:05",
+   "14:25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij tijd bestaat geen :65 — over de 60 = uur erbij. Reken opnieuw vanaf 13:40.",
+   "Te weinig — heb je het laatste stukje minuten vergeten?",
+   "Je telde 3 uur 45 min op. Kijk nog eens naar de minuten."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 170,
+  "bron": "leerpaden",
+  "waar": "tijdsduur-rekenen-po stap 5 vraag 5",
+  "file": "./tijdsduurRekenenPo.js",
+  "level": "groep6-8",
+  "q": "De juf leest elke schooldag **20 minuten** voor. Hoeveel tijd is dat in een week met **5 schooldagen**?",
+  "options": [
+   "1 uur 40 min",
+   "1 uur",
+   "2 uur 40 min",
+   "1 uur 20 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heeft een uur 100 minuten?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1 uur 40 min.",
+   "simpeler": "5 × 20 = 100 minuten. 100 − 60 = 40. Dus 1 uur en 40 minuten.",
+   "nogSimpeler": "1u 40m"
+  }
+ },
+ {
+  "nr": 171,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 2 vraag 5",
+  "file": "./topografieNederland.js",
+  "level": "groep6-8",
+  "q": "Welke provincie is bekend om **carnaval** en de stad **Eindhoven**?",
+  "options": [
+   "Noord-Brabant",
+   "Friesland",
+   "Drenthe",
+   "Flevoland"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deze provincie ligt in het noorden. Waar ligt Eindhoven?",
+   "Drenthe ligt in het noorden en is bekend om hunebedden. Waar ligt Eindhoven?",
+   "Flevoland is de jonge provincie in het midden. Waar wordt carnaval het meest gevierd?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Eindhoven ligt in het zuiden van Nederland. Welke provincie ligt daar?",
+   "simpeler": "In het zuiden liggen Noord-Brabant en Limburg. In welke van die twee ligt Eindhoven?",
+   "nogSimpeler": "Eindhoven ligt in Noord-Brabant, de provincie die bekend is om carnaval."
+  }
+ },
+ {
+  "nr": 172,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 9 vraag 17",
+  "file": "./topografieNederland.js",
+  "level": "groep6-8",
+  "q": "Welke provincie ligt het **meest noordelijk**?",
+  "options": [
+   "Groningen",
+   "Limburg",
+   "Zeeland",
+   "Drenthe"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Limburg ligt in het zuiden.",
+   "Zeeland ligt zuidwest.",
+   "Drenthe ligt noord, maar er ligt nog een provincie boven."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 173,
+  "bron": "leerpaden",
+  "waar": "trappen-van-vergelijking-po stap 4 vraag 2",
+  "file": "./trappenVanVergelijkingPo.js",
+  "level": "groep7-8",
+  "q": "Vul in: *Een olifant is ___ dan een muis.* (groot)",
+  "options": [
+   "groter",
+   "grootst",
+   "groot",
+   "grote"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij 'dan' hoort de vergrotende trap (-er).",
+   "Dat is de gewone vorm.",
+   "Dat is 'groot' met een -e."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "groter dan = vergrotende trap.",
+   "simpeler": "Welke vorm hoort bij 'dan'?",
+   "nogSimpeler": "groot + er = ?"
+  }
+ },
+ {
+  "nr": 174,
+  "bron": "leerpaden",
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 2",
+  "file": "./verhaalDiepteLezenPo.js",
+  "level": "groep7-8",
+  "q": "*\"Zijn vingers trilden toen hij het deksel optilde.\"* — Wat voelt Ties op dit moment?",
+  "options": [
+   "Hij is gespannen of de vaas nog heel is",
+   "Hij heeft het koud in de klas",
+   "Hij is boos op Fleur om wat ze riep",
+   "Hij vindt het deksel veel te zwaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staat er ergens iets over de temperatuur? Denk aan wat er in die doos zit en hoe belangrijk dat is.",
+   "Heeft Fleur iets verkeerd gedaan dan? Lees terug wat zij bij het hek riep.",
+   "Was de doos zwaar? Ties droeg hem helemaal naar school. Wat zou hij in de doos kunnen vinden?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Waarom trillen iemands vingers bij het openen van een doos met iets kostbaars erin?",
+   "simpeler": "Ties droeg de doos 'alsof er een baby'tje in zat'. Wat zegt dat over hoe belangrijk de vaas voor hem is — en wat doet dat met hem bij het openmaken?",
+   "nogSimpeler": "Wat voel jij vlak voordat je kijkt of iets kostbaars nog heel is?"
+  }
+ },
+ {
+  "nr": 175,
+  "bron": "leerpaden",
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 7",
+  "file": "./verhaalDiepteLezenPo.js",
+  "level": "groep7-8",
+  "q": "*\"'Voorzichtig!' riep ze, terwijl ze op en neer sprong.\"* — Hoe voelt Fleur zich bij het hek?",
+  "options": [
+   "Opgewonden over het cadeau",
+   "Boos op Ties",
+   "Verdrietig om de kapotte vaas",
+   "Verveeld van het wachten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Fleur roept 'Voorzichtig!' en springt op en neer. Klinkt dat boos?",
+   "Weet Fleur bij het hek al dat de vaas kapot is? Lees terug wanneer de scherven gevonden worden.",
+   "Wie zich verveelt, staat stil of hangt rond. Wat doet Fleur?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek de zin bij het hek op. Fleur springt op en neer en roept 'Voorzichtig!'. Wat weet ze op dat moment, en hoe voelt ze zich?",
+   "simpeler": "Wanneer spring jij op en neer? Als je je ergens heel erg op verheugt, of als je je verveelt?",
+   "nogSimpeler": "Weet Fleur bij het hek al dat er iets mis is met de vaas?"
+  }
+ },
+ {
+  "nr": 176,
+  "bron": "leerpaden",
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 3",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "level": "groep6-8",
+  "q": "*\"De hond blafte hard. Hij rende naar de deur.\"* — Naar wie of wat verwijst 'hij'?",
+  "options": [
+   "De hond",
+   "De deur",
+   "De buurman",
+   "Het geluid"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kan een deur ergens naartoe rennen? Zoek wie of wat er in de zin ervóór wordt genoemd.",
+   "Er wordt geen buurman genoemd. Zoek terug in de zin ervoor.",
+   "Kan een geluid naar de deur rennen? Zoek wie of wat er blafte."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Kijk in de zin ervoor: wat wordt daar als enige genoemd?",
+   "simpeler": "Er staat maar één dier in de zin ervoor. Wie rende er naar de deur?",
+   "nogSimpeler": "Welk dier blafte er vlak voor 'hij rende'?"
+  }
+ },
+ {
+  "nr": 177,
+  "bron": "leerpaden",
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 6",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "level": "groep6-8",
+  "q": "*\"De kinderen spelen buiten. ___ hebben veel plezier.\"* — Welk verwijswoord past op de lege plek?",
+  "options": [
+   "Ze",
+   "Hij",
+   "Het",
+   "Hun"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Hij' past bij één persoon. Over hoeveel kinderen gaat de eerste zin?",
+   "Past 'het' bij een groep spelende kinderen? Kijk naar het werkwoord 'hebben'.",
+   "'Hun hebben' hoor je weleens, maar zo schrijf je het niet. Welk woord gebruik je als een groep iets doet?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'De kinderen' is meervoud en 'hebben' is meervoud — welk verwijswoord past daarbij?",
+   "simpeler": "Lees de opties één voor één in de zin: '... hebben veel plezier.' Streep weg wat gek klinkt of niet naar de kinderen wijst.",
+   "nogSimpeler": "Zoek het woordje dat bij een hele groep kinderen past."
+  }
+ },
+ {
+  "nr": 178,
+  "bron": "leerpaden",
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 5",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "level": "groep6-8",
+  "q": "*\"Meester Ruben was tevreden. Volgend jaar wil hij weer zo'n uitje plannen.\"* — Naar wie verwijst 'hij'?",
+  "options": [
+   "Meester Ruben",
+   "Boerin Els",
+   "Sem",
+   "Balthasar de ezel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Boerin Els is een vrouw — past 'hij' daarbij?",
+   "Sem wordt niet in de laatste alinea genoemd. Zoek wie er wél vlak vóór 'hij' staat.",
+   "Balthasar is de ezel — kan een ezel een uitje plannen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees de zin ervóór: wie wordt daar als enige genoemd?",
+   "simpeler": "'Hij' past bij een man. Welke man staat vlak voor 'hij' in dezelfde alinea?",
+   "nogSimpeler": "Wie regelde het uitje aan het begin van het verhaal? En wie wil het volgend jaar weer doen?"
+  }
+ },
+ {
+  "nr": 179,
+  "bron": "leerpaden",
+  "waar": "verwijswoorden-po stap 1 vraag 1",
+  "file": "./verwijswoordenPo.js",
+  "level": "groep7-8",
+  "q": "*Tom pakt zijn jas. Hij heeft het koud.* Naar wie verwijst 'Hij'?",
+  "options": [
+   "Tom",
+   "de jas",
+   "het weer",
+   "iemand anders"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een jas heeft het niet koud — wie wel?",
+   "Kan het weer het koud hébben? Wie voelt de kou?",
+   "Kijk in de zin ervóór: welke persoon wordt daar al genoemd?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'Hij' verwijst naar de persoon ervoor: Tom.",
+   "simpeler": "Wie pakte er een jas omdat hij het koud had?",
+   "nogSimpeler": "Over wie gaat het: Tom of de jas?"
+  }
+ },
+ {
+  "nr": 180,
+  "bron": "leerpaden",
+  "waar": "vlakke-figuren-po stap 3 vraag 6",
+  "file": "./vlakkeFigurenPo.js",
+  "level": "groep5-8",
+  "q": "Waarom deel je bij de **oppervlakte van een driehoek** door 2?",
+  "options": [
+   "Een driehoek is de helft van een rechthoek",
+   "Een driehoek heeft twee schuine zijden",
+   "Een driehoek heeft drie hoeken",
+   "De basis van een driehoek telt maar half mee"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk aan een rechthoek die je van hoek tot hoek doorknipt.",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een driehoek is de helft van een rechthoek.",
+   "simpeler": "Knip een rechthoek schuin door: twee driehoeken, elk de helft.",
+   "nogSimpeler": "Helft"
+  }
+ },
+ {
+  "nr": 181,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 3 vraag 6",
+  "file": "./volgordeBewerkingen.js",
+  "level": "groep5-7",
+  "q": "**20 − (2 × (3 + 4))** = ?",
+  "options": [
+   "6",
+   "10",
+   "13",
+   "14"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Begon je met 2 × 3? Welke haakjes zitten het diepst?",
+   "Waar is de × 2 gebleven?",
+   "Je bent nog niet klaar — de 20 doet ook mee."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Begin bij de haakjes die het diepst zitten en werk daarna naar buiten.",
+   "simpeler": "3 + 4 = 7. 2 × 7 = 14. 20 − 14 = 6.",
+   "nogSimpeler": "6"
+  }
+ },
+ {
+  "nr": 182,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 6 vraag 7",
+  "file": "./volgordeBewerkingen.js",
+  "level": "groep5-7",
+  "q": "**2 × 3² + (10 − 4) ÷ 2** = ?",
+  "options": [
+   "21",
+   "24",
+   "39",
+   "15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent de ÷ 2 aan het eind vergeten.",
+   "Hoort de ² bij 2 × 3 of alleen bij de 3?",
+   "Is 3² hetzelfde als 3 × 2?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "21.",
+   "simpeler": "18 + 3 = 21.",
+   "nogSimpeler": "21"
+  }
+ },
+ {
+  "nr": 183,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 7 vraag 1",
+  "file": "./volgordeBewerkingen.js",
+  "level": "groep5-7",
+  "q": "**3 + 4 × 2** = ?",
+  "options": [
+   "11",
+   "14",
+   "9",
+   "24"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "(3+4)×2 zou zijn — maar er staan geen haakjes.",
+   "Welke bewerking is sterker, × of +?",
+   "Welke bewerking is sterker, × of +?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "11.",
+   "simpeler": "× eerst: 4×2=8. Dan 3+8=11.",
+   "nogSimpeler": "11"
+  }
+ },
+ {
+  "nr": 184,
+  "bron": "leerpaden",
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+  "file": "./waterErfgoedNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Wat doet de **Afsluitdijk** sinds 1932?",
+  "options": [
+   "Hij scheidt de Waddenzee van het IJsselmeer",
+   "Hij scheidt de Noordzee van de Waddenzee",
+   "Hij verbindt Lelystad met Enkhuizen",
+   "Hij verbindt de Zeeuwse eilanden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tussen de Noordzee en de Waddenzee liggen de Waddeneilanden, geen dijk. Bedenk welk water aan de binnenkant van de dijk ligt.",
+   "Dat doet de Houtribdijk, bij Lelystad. De Afsluitdijk ligt verder naar het noorden, tussen Noord-Holland en Friesland.",
+   "De Zeeuwse eilanden zijn verbonden door de Deltawerken, in het zuiden. De Afsluitdijk ligt in het noorden, tussen Noord-Holland en Friesland."
+  ],
+  "explanation": "De **Afsluitdijk** (1932) loopt van Noord-Holland naar Friesland. Hij sloot de Zuiderzee af van de zee: aan de ene kant ligt nu de Waddenzee, aan de andere kant het **IJsselmeer**.",
+  "niveaus": null
+ },
+ {
+  "nr": 185,
+  "bron": "leerpaden",
+  "waar": "waterkringloop-po stap 4 vraag 10",
+  "file": "./waterkringloopPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **verdamping**?",
+  "options": [
+   "Water wordt waterdamp",
+   "Water wordt ijs",
+   "Water valt naar beneden",
+   "IJs wordt water"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is bevriezen.",
+   "Dat is neerslag.",
+   "Dat is smelten."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 186,
+  "bron": "leerpaden",
+  "waar": "weersvoorspelling-po stap 4 vraag 25",
+  "file": "./weersvoorspellingPo.js",
+  "level": "groep6-8",
+  "q": "Welk weer krijg je vaak bij **lage luchtdruk**?",
+  "options": [
+   "Bewolkt weer met regen",
+   "Zonnig en droog weer",
+   "Heldere, droge vrieskou",
+   "Weinig of geen wind"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zonnig en droog weer hoort juist bij hoge druk.",
+   "Heldere, droge vrieskou krijg je in de winter juist bij hoge druk.",
+   "Bij lage druk waait het juist vaak."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 187,
+  "bron": "leerpaden",
+  "waar": "werelddelen-landen-po stap 3 vraag 10",
+  "file": "./werelddelenLandenPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel **hoofdsteden** heeft Zuid-Afrika?",
+  "options": [
+   "3",
+   "1",
+   "2",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De meeste landen hebben er één, maar Zuid-Afrika is anders.",
+   "Zuid-Afrika verdeelt het werk van de regering over meer steden. Kijk in de uitleg bij Zuid-Afrika.",
+   "Zoveel zijn het er niet. Kijk in de uitleg bij Zuid-Afrika."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 188,
+  "bron": "leerpaden",
+  "waar": "wereldorientatie-mix-po stap 5 vraag 2",
+  "file": "./wereldorientatieMixPo.js",
+  "level": "groep7-8",
+  "q": "In welk **werelddeel** ligt Nederland?",
+  "options": [
+   "Europa",
+   "Azië",
+   "Afrika",
+   "Noord-Amerika"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Azië ligt veel verder naar het oosten.",
+   "Afrika ligt ten zuiden van ons, aan de andere kant van de Middellandse Zee.",
+   "Noord-Amerika ligt aan de andere kant van de Atlantische Oceaan."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Europa.",
+   "simpeler": "NL = Europa",
+   "nogSimpeler": "Europa."
+  }
+ },
+ {
+  "nr": 189,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 3 vraag 3",
+  "file": "./werkwoordTijdenPo.js",
+  "level": "groep5-8",
+  "q": "**'Lisa ____ haar fiets'** met 'fixen' in verleden tijd:",
+  "options": [
+   "fixte",
+   "fixde",
+   "fixen",
+   "fixt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op welke klank eindigt de stam? Een x klinkt als k+s — zit die in 't kofschip?",
+   "Dat is het hele werkwoord. Lisa deed het al: welke vorm hoort daarbij?",
+   "Dat is tegenwoordige tijd."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "fixte.",
+   "simpeler": "Fixen → x (=ks, kofschip) → -te → fixte.",
+   "nogSimpeler": "Fixte"
+  }
+ },
+ {
+  "nr": 190,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 6 vraag 8",
+  "file": "./werkwoordsspellingDT.js",
+  "level": "groep5-8",
+  "q": "Welk woord is een **voltooid deelwoord**?",
+  "options": [
+   "gehoopt",
+   "hoopte",
+   "hoopt",
+   "hopen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welk woord past na 'ik heb ...'?",
+   "Dat is de tegenwoordige tijd (hij hoopt). Past het na 'ik heb ...'?",
+   "Dat is het hele werkwoord. Past het na 'ik heb ...'?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Gehoopt.",
+   "simpeler": "Je zegt: ik heb gehoopt. Het begint met ge-. Dat is een voltooid deelwoord.",
+   "nogSimpeler": "Gehoopt"
+  }
+ },
+ {
+  "nr": 191,
+  "bron": "leerpaden",
+  "waar": "winst-rekenen-po stap 3 vraag 3",
+  "file": "./winstRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Inkoop **€2**, je wilt **€3 winst**. Voor hoeveel moet je het **verkopen**?",
+  "options": [
+   "€5",
+   "€1",
+   "€6",
+   "€3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Aftrekken klopt niet — je wilt méér dan je inkoop.",
+   "Niet vermenigvuldigen; reken inkoop + winst.",
+   "Dat is alleen de winst; de inkoop moet erbij."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 192,
+  "bron": "leerpaden",
+  "waar": "winst-rekenen-po stap 3 vraag 11",
+  "file": "./winstRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Inkoop **€12**, gewenste winst **€8**. Wat moet de **verkoopprijs** zijn?",
+  "options": [
+   "€20",
+   "€4",
+   "€12",
+   "€8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan verkoop je voor minder dan de inkoop — verlies!",
+   "Dat is de inkoopprijs zonder winst.",
+   "Dat is alleen de gewenste winst, de inkoop moet erbij."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€20 (€12 + €8).",
+   "simpeler": "Tel inkoop en gewenste winst op: €12 + €8 = €20.",
+   "nogSimpeler": "€20"
+  }
+ },
+ {
+  "nr": 193,
+  "bron": "leerpaden",
+  "waar": "winst-rekenen-po stap 3 vraag 12",
+  "file": "./winstRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Je koopt **5 pakken kaarten** in voor **€2** per pak en verkoopt elk pak voor **€3**. Wat is de **totale winst**?",
+  "options": [
+   "€5",
+   "€15",
+   "€10",
+   "€2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de totale opbrengst (5 × €3) — de inkoop moet er nog af.",
+   "Dat is de totale inkoop (5 × €2), niet de winst.",
+   "Dat is de winst per pak, niet de totale winst."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€5 (€1 winst per pak × 5 pakken).",
+   "simpeler": "Elk pak levert €1 op. 5 pakken = €5 totaal.",
+   "nogSimpeler": "€5"
+  }
+ },
+ {
+  "nr": 194,
+  "bron": "leerpaden",
+  "waar": "woorden-3-nieuwkomers stap 4 vraag 2",
+  "file": "./woorden3Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "De dag vóór vandaag. Hoe heet die?",
+  "options": [
+   "Gisteren.",
+   "Morgen.",
+   "Vandaag.",
+   "Middag."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die dag is al voorbij.",
+   "Die dag is al voorbij.",
+   "Die dag is al voorbij."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 195,
+  "bron": "leerpaden",
+  "waar": "woordenschat-engels-po stap 4 vraag 2",
+  "file": "./woordenschatEngelsPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **Wednesday** in het Nederlands?",
+  "options": [
+   "woensdag",
+   "dinsdag",
+   "donderdag",
+   "maandag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tuesday = dinsdag.",
+   "Thursday = donderdag.",
+   "Monday = maandag."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 196,
+  "bron": "leerpaden",
+  "waar": "woordenschat-po stap 5 vraag 12",
+  "file": "./woordenschatPo.js",
+  "level": "groep5-8",
+  "q": "Wat is een **synoniem**?",
+  "options": [
+   "Een woord met dezelfde betekenis",
+   "Een woord met de tegengestelde betekenis",
+   "Een woord dat hetzelfde klinkt",
+   "Een woord uit een andere taal"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een antoniem.",
+   "Het gaat niet om hoe een woord klinkt, maar om wat het betekent.",
+   "Een synoniem kan gewoon een Nederlands woord zijn."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 197,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 2 vraag 6",
+  "file": "./woordsoortenPo.js",
+  "level": "groep5-8",
+  "q": "*'Gisteren kocht ik een ijsje.'* — van welk **hele werkwoord** komt 'kocht'?",
+  "options": [
+   "kopen",
+   "kochten",
+   "koopt",
+   "koken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Zij kochten' is ook verleden tijd. Welke vorm zoek je in het woordenboek?",
+   "'Hij koopt' is nu. Welke vorm zou je in het woordenboek vinden?",
+   "Dat is een ander werkwoord. Wat doe je in een winkel?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "kocht → kopen.",
+   "simpeler": "Gisteren kocht ik, vandaag koop ik. Het hele werkwoord is kopen.",
+   "nogSimpeler": "Kopen"
+  }
+ },
+ {
+  "nr": 198,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 5 vraag 10",
+  "file": "./woordsoortenPo.js",
+  "level": "groep5-8",
+  "q": "*'**Mijn** boek ligt hier.'* — welke woordsoort is 'mijn'?",
+  "options": [
+   "Bezittelijk voornaamwoord",
+   "Aanwijzend voornaamwoord",
+   "Bijvoeglijk naamwoord",
+   "Persoonlijk voornaamwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wijst 'mijn' iets aan, zoals 'deze' of 'die'?",
+   "Zegt 'mijn' hoe het boek eruitziet?",
+   "'Ik' en 'hij' zijn persoonlijk. Wat doet 'mijn' bij 'boek'?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 199,
+  "bron": "leerpaden",
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 5",
+  "file": "./zinsontledingOnderwerpPersoonsvormPo.js",
+  "level": "groep7-8",
+  "q": "Wat is het onderwerp? *De kat slaapt op de bank.*",
+  "options": [
+   "De kat",
+   "de bank",
+   "slaapt",
+   "op"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de plek, niet wie de handeling doet.",
+   "Dat is de persoonsvorm.",
+   "Dat is een voorzetsel."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek eerst de persoonsvorm (slaapt). Vraag dan: wie of wat slaapt er?",
+   "simpeler": "Wie is er aan het slapen?",
+   "nogSimpeler": "Wie slaapt er? De …"
+  }
+ },
+ {
+  "nr": 200,
+  "bron": "leerpaden",
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 3",
+  "file": "./zinsontledingOnderwerpPersoonsvormPo.js",
+  "level": "groep7-8",
+  "q": "Wat is het onderwerp én de persoonsvorm? *De buurman wast zijn auto.*",
+  "options": [
+   "onderwerp: De buurman — persoonsvorm: wast",
+   "onderwerp: zijn auto — persoonsvorm: wast",
+   "onderwerp: De buurman — persoonsvorm: auto",
+   "onderwerp: wast — persoonsvorm: De buurman"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De auto wordt gewassen, maar wie dóét het?",
+   "'auto' is geen werkwoord.",
+   "Onderwerp en persoonsvorm staan hier omgedraaid."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Persoonsvorm 'wast'; vraag wie wast → de buurman.",
+   "simpeler": "Welk woord is het werkwoord, en wie doet dat?",
+   "nogSimpeler": "Wie wast de auto? En welk woord is 'wast'?"
+  }
+ }
+]

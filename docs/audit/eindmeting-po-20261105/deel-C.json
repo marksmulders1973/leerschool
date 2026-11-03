@@ -1,0 +1,1268 @@
+[
+ {
+  "nr": 101,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 4",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "Een film duurt **1 uur en 45 minuten**. Hoeveel minuten is dat in totaal?",
+  "options": [
+   "105 min",
+   "145 min",
+   "175 min",
+   "60 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet de getallen aan elkaar plakken — reken het uur eerst om.",
+   "Reken het uur om naar minuten en tel er 45 bij.",
+   "Dat is maar het uur, de 45 min mist nog."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Maak het uur eerst minuten: 60. Tel daar de 45 minuten bij op.",
+   "simpeler": "60 + 45 = ?",
+   "nogSimpeler": "Eén uur is 60 minuten. Hoeveel is 60 plus 45?"
+  }
+ },
+ {
+  "nr": 102,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 1",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "Een recept voor **4 personen** vraagt **500 ml** melk. Hoeveel melk heb je nodig voor **6 personen**?",
+  "options": [
+   "750 ml",
+   "600 ml",
+   "500 ml",
+   "1000 ml"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je voegt 2 personen toe, niet 1 — reken per persoon.",
+   "Voor meer personen heb je niet evenveel nodig.",
+   "1000 ml hoort bij 8 personen. Hoeveel ml is het per 2 personen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Reken eerst hoeveel melk 1 persoon krijgt: 500 ÷ 4 = 125 ml. Daarna × 6 personen.",
+   "simpeler": "4 personen → 500 ml, dus 2 personen → 250 ml. Zes personen is 4 + 2.",
+   "nogSimpeler": "500 ml voor 4, plus de helft daarvan (250 ml) voor 2 personen extra."
+  }
+ },
+ {
+  "nr": 103,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 3",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "Vier kinderen drinken elk **3 dl** limonade. Hoeveel **liter** drinken ze samen?",
+  "options": [
+   "1,2 l",
+   "12 l",
+   "0,12 l",
+   "1,12 l"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12 liter is meer dan een emmer — kan dat voor 4 glazen?",
+   "4 × 3 dl = 12 dl. Hoeveel dl zit er in 1 liter?",
+   "Hoeveel dl is 4 × 3 dl? Zet dat daarna om naar liter."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Tel eerst alle deciliters: 4 × 3 = 12 dl. Tien dl is een liter, dus 12 dl = 1,2 l.",
+   "simpeler": "12 dl. Deel door 10 om liters te krijgen: 12 → 1,2.",
+   "nogSimpeler": "10 dl = 1 liter. Hoeveel liter is 12 dl dan — iets méér of iets minder dan 1 liter, en hoeveel?"
+  }
+ },
+ {
+  "nr": 104,
+  "bron": "leerpaden",
+  "waar": "natuur-seizoenen-dieren-g4 stap 2 vraag 5",
+  "file": "./natuurSeizoenenDierenG4.js",
+  "level": "groep4",
+  "q": "Welk dier eet **andere dieren** (bijvoorbeeld muizen)?",
+  "options": [
+   "uil",
+   "konijn",
+   "koe",
+   "schaap"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een konijn eet gras en groente.",
+   "Een koe eet gras en hooi.",
+   "Een schaap eet gras."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 105,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 1 vraag 2",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "Wat betekent **−12 °C**?",
+  "options": [
+   "12 graden onder nul",
+   "12 graden boven nul",
+   "12 graden kouder dan gisteren",
+   "12 graden warmer dan gisteren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Andersom — het min-teken betekent onder nul.",
+   "Een temperatuur zegt hoe warm het nú is, niet hoeveel het veranderd is.",
+   "Het min-teken zegt niets over gisteren. Wat betekent min op een thermometer?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "12 graden onder nul.",
+   "simpeler": "Het min-teken voor de 12 betekent: onder nul. Dus −12 °C is 12 graden onder het vriespunt.",
+   "nogSimpeler": "Onder nul"
+  }
+ },
+ {
+  "nr": 106,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 3 vraag 2",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "**−4 + (−6)** = ?",
+  "options": [
+   "−10",
+   "+10",
+   "−2",
+   "+2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet plus — kijk hoe de twee tekens samen werken.",
+   "Je hebt het eerste minteken overgeslagen. Allebei de getallen zijn onder nul: kom je dan dicht bij nul uit?",
+   "Kijk naar de tekens: kan het antwoord boven nul uitkomen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Je hebt al een schuld en er komt nog een schuld bij. Wordt je schuld groter of kleiner?",
+   "simpeler": "+(−6) wordt −6. Dus −4 − 6 = −10.",
+   "nogSimpeler": "−10"
+  }
+ },
+ {
+  "nr": 107,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 4 vraag 3",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "Anna staat **€ 30 rood** (saldo −€ 30). Ze krijgt **€ 80 zakgeld**. Wat is haar saldo nu?",
+  "options": [
+   "+€ 50",
+   "+€ 110",
+   "−€ 50",
+   "−€ 110"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — heb je rood vergeten?",
+   "Ze krijgt geld erbij. Tel vanaf −€ 30 eerst omhoog tot € 0, en kijk wat er dan nog over is.",
+   "Ze krijgt geld erbij. Kan haar schuld dan groter worden?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Met het zakgeld betaalt Anna eerst haar schuld van € 30 terug. Hoeveel blijft er dan over?",
+   "simpeler": "Schuld €30 + zakgeld €80 = €30 schuld weg + €50 over = +€50.",
+   "nogSimpeler": "+€50"
+  }
+ },
+ {
+  "nr": 108,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 5 vraag 1",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "**−8 + 5** = ?",
+  "options": [
+   "−3",
+   "+3",
+   "−13",
+   "+13"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar het teken: met 5 stappen naar rechts vanaf −8, kom je dan al boven nul?",
+   "Je liep naar links. Bij + loop je naar rechts op de getallenlijn.",
+   "Je telde 8 en 5 op. Maar je begint op −8."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Begin op −8 op de getallenlijn en loop 5 stappen naar rechts. Kom je al bij 0?",
+   "simpeler": "−8 + 5: 5 stappen rechts vanaf −8 → −3 (nog onder nul).",
+   "nogSimpeler": "−3"
+  }
+ },
+ {
+  "nr": 109,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 5 vraag 26",
+  "file": "./negatieveGetallenPo.js",
+  "level": "groep5-8",
+  "q": "Wat is het **verschil** tussen −4 en 6?",
+  "options": [
+   "10",
+   "2",
+   "−10",
+   "−2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je trok 4 af van 6. Maar −4 ligt onder nul: tel beide stukken.",
+   "Een verschil is een afstand — die is nooit negatief.",
+   "Een verschil kan niet negatief zijn. En tel je het stuk onder nul mee?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 110,
+  "bron": "leerpaden",
+  "waar": "nieuwsbericht-lezen-po stap 2 vraag 8",
+  "file": "./nieuwsberichtLezenPo.js",
+  "level": "groep6-8",
+  "q": "Wie mogen er na schooltijd op de nieuwe speeltoren spelen?",
+  "options": [
+   "Kinderen uit de hele buurt",
+   "De leerlingen van groep 6",
+   "De kinderen die de sponsorloop liepen",
+   "De leerlingen van De Klimboom"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Milan zit in groep 6, maar zegt de tekst dat de toren voor zijn groep is?",
+   "Zegt de tekst dat je mee moest lopen om te mogen spelen?",
+   "Lees de laatste alinea: zijn het alleen de eigen leerlingen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees de laatste alinea. Wie mogen er op de toren komen spelen?",
+   "simpeler": "Is de toren na schooltijd open? En voor wie staat erbij?",
+   "nogSimpeler": "De laatste zin noemt wie er mogen komen spelen. Welke optie zegt hetzelfde?"
+  }
+ },
+ {
+  "nr": 111,
+  "bron": "leerpaden",
+  "waar": "olympische-spelen-po stap 4 vraag 1",
+  "file": "./olympischeSpelenPo.js",
+  "level": "groep6-8",
+  "q": "Waar en wanneer waren de **eerste moderne Olympische Spelen**?",
+  "options": [
+   "Athene 1896",
+   "Olympia 776 v.Chr.",
+   "Parijs 1900",
+   "Rome 1960"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "776 v.Chr. is de start van de óúde Spelen. De vraag gaat over de moderne.",
+   "Parijs kreeg de tweede moderne Spelen. Waar waren de eerste?",
+   "Rome 1960 was veel later."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 112,
+  "bron": "leerpaden",
+  "waar": "olympische-spelen-po stap 4 vraag 4",
+  "file": "./olympischeSpelenPo.js",
+  "level": "groep6-8",
+  "q": "Welke Nederlander won de **meeste olympische medailles**?",
+  "options": [
+   "Ireen Wüst",
+   "Sven Kramer",
+   "Inge de Bruijn",
+   "Femke Bol"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Sven Kramer won 9 medailles — knap, maar niet het Nederlandse record.",
+   "Inge de Bruijn won 8 medailles met zwemmen — knap, maar niet het Nederlandse record.",
+   "Femke Bol is nog jong en heeft nog maar een paar olympische medailles."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 113,
+  "bron": "leerpaden",
+  "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 1",
+  "file": "./omzettenBreukProcentKommaPo.js",
+  "level": "groep7-8",
+  "q": "Wat is ½ als kommagetal?",
+  "options": [
+   "0,5",
+   "0,2",
+   "1,2",
+   "0,12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 1/5, niet de helft.",
+   "Dat is meer dan 1 — een halve is minder.",
+   "Je zette 1 en 2 achter de komma. Hoeveel is 1 ÷ 2?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De helft schrijf je als kommagetal als 0,5.",
+   "simpeler": "1 ÷ 2 = ?",
+   "nogSimpeler": "Wat is de helft van 1?"
+  }
+ },
+ {
+  "nr": 114,
+  "bron": "leerpaden",
+  "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 1",
+  "file": "./omzettenBreukProcentKommaPo.js",
+  "level": "groep7-8",
+  "q": "Wat is ¼ in procent?",
+  "options": [
+   "25%",
+   "14%",
+   "40%",
+   "4%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je zette de cijfers 1 en 4 naast elkaar. Hoeveel is ¼ van 100?",
+   "Dat is 2/5.",
+   "Heb je alleen de 4 overgenomen? Hoeveel is ¼ van 100?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "¼ = 25%.",
+   "simpeler": "Een kwart van 100 is hoeveel?",
+   "nogSimpeler": "100 ÷ 4 = ?"
+  }
+ },
+ {
+  "nr": 115,
+  "bron": "leerpaden",
+  "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 10",
+  "file": "./omzettenBreukProcentKommaPo.js",
+  "level": "groep7-8",
+  "q": "Noor en Daan maakten dezelfde toets. Noor had 70% goed, Daan had 0,65 van de vragen goed. Wie had meer vragen goed?",
+  "options": [
+   "Noor",
+   "Daan",
+   "ze hadden evenveel goed",
+   "dat kun je niet weten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken 0,65 om naar procent en vergelijk met 70%.",
+   null,
+   "Het is dezelfde toets, dus je kunt het wel vergelijken: maak ze dezelfde soort."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "0,65 = 65%. 70% is meer dan 65%, dus Noor.",
+   "simpeler": "Schrijf 0,65 als procent en vergelijk met 70%.",
+   "nogSimpeler": "Wat is meer: 70 of 65?"
+  }
+ },
+ {
+  "nr": 116,
+  "bron": "leerpaden",
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 8",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "level": "groep8",
+  "q": "Welke van deze is een **richting** die je op het vmbo kunt kiezen?",
+  "options": [
+   "Techniek",
+   "Mavo",
+   "Wiskunde",
+   "Universiteit"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mavo is een andere naam voor een leerweg (de tl), niet voor een richting. Welke richtingen noemt de uitleg?",
+   "Wiskunde is een gewoon vak dat iedereen krijgt, geen richting die je kiest. Welke richtingen noemt de uitleg?",
+   "Hoort de universiteit bij de middelbare school?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 117,
+  "bron": "leerpaden",
+  "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 4",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "level": "groep8",
+  "q": "Mila gaat van de havo naar het vmbo-tl, omdat ze daar beter kan leren. Hoe noem je dat het best?",
+  "options": [
+   "Een verstandige keuze",
+   "Een grote mislukking",
+   "Een straf van school",
+   "Iets wat niet mag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is een schoen die knelt houden slimmer dan een maat wisselen die wél past?",
+   "Mila kiest dit zelf. Een straf krijg je, die kies je niet.",
+   "Wisselen mag gewoon: scholen helpen er zelfs bij."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 118,
+  "bron": "leerpaden",
+  "waar": "opdrachtwoorden-nieuwkomers stap 1 vraag 2",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Op je blad staat: onderstreep het woord. Wat doe je?",
+  "options": [
+   "Ik zet een streep onder het woord.",
+   "Ik zet een rondje om het woord.",
+   "Ik gum het woord uit.",
+   "Ik lees het woord hardop."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Onder-streep: kijk naar het begin van het woord.",
+   "Onder-streep: kijk naar het begin van het woord.",
+   "Onder-streep: kijk naar het begin van het woord."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 119,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 4 vraag 9",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Een tuintje heeft de vorm van een driehoek met een **rechte hoek**. De twee zijden bij de rechte hoek zijn **8 m** en **3 m**. Hoeveel m² is het tuintje?",
+  "options": [
+   "12 m²",
+   "24 m²",
+   "11 m²",
+   "12 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Ben je de ÷ 2 vergeten?",
+   "Je telde op. Hoe reken je de oppervlakte van een driehoek uit?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "8 × 3 = 24. 24 ÷ 2 = 12 m².",
+   "simpeler": "Keer, en dan de helft.",
+   "nogSimpeler": "12"
+  }
+ },
+ {
+  "nr": 120,
+  "bron": "leerpaden",
+  "waar": "oppervlakte-omtrek-po stap 5 vraag 7",
+  "file": "./oppervlakteOmtrekPo.js",
+  "level": "po",
+  "q": "Een cirkel heeft een **diameter van 14 cm**. Hoe lang is de **straal**?",
+  "options": [
+   "7 cm",
+   "28 cm",
+   "14 cm",
+   "3,5 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is de straal groter of kleiner dan de diameter?",
+   null,
+   "Je deelde twee keer door 2. Hoe vaak past de straal in de diameter?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "14 ÷ 2 = 7 cm.",
+   "simpeler": "De straal gaat van het midden naar de rand: half zo lang.",
+   "nogSimpeler": "7"
+  }
+ },
+ {
+  "nr": 121,
+  "bron": "leerpaden",
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 7",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "level": "groep6-8",
+  "q": "Wat waren **hiërogliefen**?",
+  "options": [
+   "Schrift met plaatjes",
+   "Graven voor farao's",
+   "Rollen van papyrus",
+   "Egyptische goden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Graven voor farao's zijn bijvoorbeeld piramides. Wat stond er op de muren in die graven?",
+   "Papyrus is het 'papier' van Egypte. Wat schreven ze erop?",
+   "Ra en Osiris zijn goden. Wat stond er op de Steen van Rosetta?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Egyptisch plaatjes-schrift.",
+   "simpeler": "Hiërogliefen waren het schrift van oude Egyptenaren. Plaatjes die letters/klanken/woorden voorstelden. ~3000 v.Chr. tot 400 n.Chr.",
+   "nogSimpeler": "Schrift Egypte"
+  }
+ },
+ {
+  "nr": 122,
+  "bron": "leerpaden",
+  "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 16",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "level": "groep6-8",
+  "q": "Bij welk volk hoorden de **hiërogliefen**?",
+  "options": [
+   "Bij de Egyptenaren",
+   "Bij de Grieken",
+   "Bij de Romeinen",
+   "Bij de Perzen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De Grieken schreven met letters zoals alfa en bèta, niet met plaatjes.",
+   "De Romeinen schreven met het Latijnse alfabet en cijfers als I, V en X.",
+   "In het oosten schreven ze vooral spijkerschrift, met wigvormige tekens in klei."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 123,
+  "bron": "leerpaden",
+  "waar": "politiek-democratie-po stap 6 vraag 14",
+  "file": "./politiekDemocratiePo.js",
+  "level": "groep6-8",
+  "q": "Wat is een **grondrecht**?",
+  "options": [
+   "Een recht uit de Grondwet",
+   "Een belasting die je betaalt",
+   "Een recht om grond te kopen",
+   "Een regel die op school geldt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is een belasting iets wat je mag, of iets wat je moet?",
+   "'Grond' betekent hier niet een stuk land. Het gaat om iets veel belangrijkers.",
+   "Een schoolregel geldt alleen op school. Voor wie geldt een grondrecht?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 124,
+  "bron": "leerpaden",
+  "waar": "procenten-po stap 4 vraag 7",
+  "file": "./procentenPo.js",
+  "level": "groep5-8",
+  "q": "Een pet kost **€ 16**. Er is **50% korting**. Wat **betaal** je?",
+  "options": [
+   "€ 8",
+   "€ 16",
+   "€ 4",
+   "€ 12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dan heb je geen korting gehad.",
+   "Dat is een kwart van de prijs. Wat is de helft?",
+   "Je haalde € 4 eraf, maar dat is een kwart. Hoeveel is 50%?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Bij 50% korting gaat de helft van de prijs eraf.",
+   "simpeler": "De helft van € 16 = € 8.",
+   "nogSimpeler": "€ 8"
+  }
+ },
+ {
+  "nr": 125,
+  "bron": "leerpaden",
+  "waar": "pubertijd-groei-po stap 2 vraag 1",
+  "file": "./pubertijdGroeiPo.js",
+  "level": "groep7-8",
+  "q": "Wat is **menstruatie**?",
+  "options": [
+   "Maandelijkse bloeding uit de baarmoeder",
+   "Buikpijn die je elke maand krijgt",
+   "Hormoon dat de puberteit start",
+   "Ziekte die alleen meisjes krijgen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het kan pijn doen, maar wat is het zelf?",
+   "Hormonen sturen het, maar het is zelf geen hormoon.",
+   "Het is juist een gezond, normaal deel van opgroeien."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 126,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 2 vraag 2",
+  "file": "./recyclenAfvalPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **circulaire economie**?",
+  "options": [
+   "Alles steeds opnieuw gebruiken",
+   "Een bedrijf met een rond gebouw",
+   "Handel tussen alle landen",
+   "Alles na één keer weggooien"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het gaat niet om de vorm van een gebouw.",
+   "Dat heet wereldhandel.",
+   "Dat is juist lineair: het tegenovergestelde."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 127,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 3 vraag 2",
+  "file": "./recyclenAfvalPo.js",
+  "level": "groep6-8",
+  "q": "Wie startte **Ocean Cleanup**?",
+  "options": [
+   "Boyan Slat",
+   "Max Verstappen",
+   "Johan Cruijff",
+   "Mark Rutte"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Max Verstappen racet in de Formule 1.",
+   "Johan Cruijff was voetballer.",
+   "Mark Rutte was politicus, geen uitvinder."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 128,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 4 vraag 13",
+  "file": "./recyclenAfvalPo.js",
+  "level": "groep6-8",
+  "q": "Wanneer krijg je **statiegeld** terug?",
+  "options": [
+   "Als je de fles inlevert in de winkel",
+   "Als je een fles koopt in de winkel",
+   "Als je de fles in de glasbak gooit",
+   "Als je thuis de fles openmaakt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij het kopen betaal je statiegeld juist extra.",
+   "Krijg je geld als je de fles weggooit?",
+   "Krijg je geld als je de fles openmaakt?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 129,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 4 vraag 24",
+  "file": "./recyclenAfvalPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel van het **huishoudelijk afval** in Nederland wordt ongeveer gescheiden om te recyclen?",
+  "options": [
+   "Ongeveer 60 procent",
+   "Ongeveer 20 procent",
+   "Ongeveer 95 procent",
+   "Ongeveer 35 procent"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nederlanders scheiden juist veel afval. Is een vijfde dan niet te weinig?",
+   "Er blijft nog veel restafval over dat verbrand wordt. Kan het dan bijna alles zijn?",
+   "Nederland hoort bij de landen in Europa die het meeste afval scheiden. Is een derde dan genoeg?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 130,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 3 vraag 10",
+  "file": "./redactiesommen.js",
+  "level": "groep5-8",
+  "q": "*'In de zaal staan 36 stoelen in 4 even lange rijen. Hoeveel stoelen staan er in elke rij?'*",
+  "options": [
+   "9",
+   "32",
+   "40",
+   "8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je haalde 4 eraf. Je moet de stoelen verdelen over de rijen.",
+   null,
+   "Reken na: hoeveel stoelen zijn 4 rijen van 8?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 131,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 5 vraag 27",
+  "file": "./redactiesommen.js",
+  "level": "groep5-8",
+  "q": "Een boek heeft 240 bladzijden. Anna heeft er al 150 gelezen. Hoeveel bladzijden moet ze nog lezen?",
+  "options": [
+   "90",
+   "150",
+   "110",
+   "390"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die bladzijden heeft Anna al gelezen. Hoeveel blijven er over?",
+   "Kijk bij de tientallen: 4 − 5 gaat niet zomaar. Moet je een honderdtal lenen?",
+   "Dat is 240 + 150. Zoek je hoeveel er samen zijn, of hoeveel er nog over zijn?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 132,
+  "bron": "leerpaden",
+  "waar": "rekentaal-nieuwkomers stap 2 vraag 2",
+  "file": "./rekentaalNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Je hebt 6 appels. Je eet er 2 op. Hoeveel appels heb je over?",
+  "options": [
+   "4",
+   "8",
+   "2",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 8 is 6 + 2. Maar hier gaat er iets af (−). Opeten = weg = min. Over = wat je nog hebt. 6 − 2.",
+   "Nee, 2 staat al in de vraag. Je moet nog rekenen. Opeten = weg = min. Over = wat je nog hebt. 6 − 2.",
+   "Nee, 6 staat al in de vraag. Je moet nog rekenen. Opeten = weg = min. Over = wat je nog hebt. 6 − 2."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 133,
+  "bron": "leerpaden",
+  "waar": "rijmen-letters-kleuters-po stap 1 vraag 4",
+  "file": "./rijmenLettersKleutersPo.js",
+  "level": "groep1-2",
+  "q": "Wat rijmt op **maan** 🌙?",
+  "options": [
+   "banaan 🍌",
+   "ster ⭐",
+   "zon ☀️",
+   "boek 📖"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die staat ook in de lucht — maar luister: klinkt het einde als *aan*?",
+   "Zeg ze hardop: maan... zon... Hoor je hetzelfde einde?",
+   "Luister goed — welk woord eindigt op *aan*?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Maan en banaan rijmen — allebei *aan*. 🌙🍌",
+   "simpeler": "Zeg hardop: maan... banaan... Hetzelfde einde!",
+   "nogSimpeler": "banaan 🍌"
+  }
+ },
+ {
+  "nr": 134,
+  "bron": "leerpaden",
+  "waar": "rijmen-letters-kleuters-po stap 2 vraag 2",
+  "file": "./rijmenLettersKleutersPo.js",
+  "level": "groep1-2",
+  "q": "Met welke klank begint **slang** 🐍?",
+  "options": [
+   "s",
+   "k",
+   "b",
+   "o"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het heel langzaam — hoor je een *k* aan het begin?",
+   "Zeg *slang* hardop — hoor je een *b* aan het begin?",
+   "Zeg het nog eens langzaam — begint het met *o*?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Slang begint met de klank *s* — sssss! 🐍",
+   "simpeler": "Zeg langzaam: sss-lang. De *s* komt eerst!",
+   "nogSimpeler": "s"
+  }
+ },
+ {
+  "nr": 135,
+  "bron": "leerpaden",
+  "waar": "rijmen-letters-kleuters-po stap 5 vraag 4",
+  "file": "./rijmenLettersKleutersPo.js",
+  "level": "groep1-2",
+  "q": "👏 Klap mee: **kro-ko-dil** 🐊 — hoeveel stukjes?",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Klap nog eens mee: kro... ko... en er komt nog een stukje!",
+   "Klap nog eens rustig mee en tel goed: bij elk stukje één klap.",
+   "Eén klap maar? Zeg het woord heel langzaam en klap bij elk stukje."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Kro-ko-dil = 3 stukjes: kro 👏 ko 👏 dil 👏.",
+   "simpeler": "Klap mee: kro 👏 ko 👏 dil 👏. Drie klappen!",
+   "nogSimpeler": "3"
+  }
+ },
+ {
+  "nr": 136,
+  "bron": "leerpaden",
+  "waar": "romeinse-cijfers-po stap 1 vraag 5",
+  "file": "./romeinseCijfersPo.js",
+  "level": "groep7-8",
+  "q": "Welk getal is **M**?",
+  "options": [
+   "1000",
+   "500",
+   "100",
+   "2000"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "500 schrijf je met de letter D, niet met M.",
+   "100 schrijf je met de letter C, niet met M.",
+   "Zo'n groot getal schrijf je met meer dan één symbool."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "M komt van het Latijnse woord 'mille'. Weet je wat dat betekent?",
+   "simpeler": "Denk aan het woord 'millennium': een periode van duizend jaar. Welk getal is M dan?",
+   "nogSimpeler": "M = 1.000."
+  }
+ },
+ {
+  "nr": 137,
+  "bron": "leerpaden",
+  "waar": "ruimtevaart-po stap 3 vraag 3",
+  "file": "./ruimtevaartPo.js",
+  "level": "groep6-8",
+  "q": "Welk **bedrijf** wil met de raket Starship mensen naar Mars brengen?",
+  "options": [
+   "SpaceX",
+   "Virgin Galactic",
+   "Rocket Lab",
+   "Blue Origin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat bedrijf doet korte toeristenvluchten.",
+   "Dat bedrijf maakt kleine raketten.",
+   "Blue Origin bouwt ook raketten, maar Starship is niet van hen."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 138,
+  "bron": "leerpaden",
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
+  "file": "./samenstellingenTussenlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welk woord is een samenstelling?",
+  "options": [
+   "speelgoedwinkel",
+   "verschrikkelijk",
+   "temperatuur",
+   "bibliotheek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kun je 'verschrikkelijk' knippen in twee echte woorden?",
+   "Kun je 'temperatuur' knippen in twee echte woorden?",
+   "Kun je 'bibliotheek' knippen in twee echte woorden?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "speelgoedwinkel (speelgoed + winkel) is een samenstelling.",
+   "simpeler": "Welk woord kun je in twee woorden knippen?",
+   "nogSimpeler": "In welk woord zitten twee woorden?"
+  }
+ },
+ {
+  "nr": 139,
+  "bron": "leerpaden",
+  "waar": "samenvatten-hoofdgedachte-po stap 4 vraag 6",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "level": "groep5-8",
+  "q": "Tekst: 'Een museum laat oude en bijzondere dingen zien. Zo leer je veel over vroeger.'\n\nWelke zin hoort **NIET** in een samenvatting van deze tekst?",
+  "options": [
+   "Ik vind musea saai.",
+   "Een museum laat bijzondere dingen zien.",
+   "In een museum leer je over vroeger.",
+   "Een museum toont oude dingen."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zegt de tekst dit, of vindt iemand dit?",
+   "Staat dit in de tekst? Dan mag het in de samenvatting.",
+   "Zegt de tekst dit ook? Dan mag het erin."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een samenvatting zegt alleen wat er in de tekst staat. Welke zin staat niet in de tekst, maar is wat iemand vindt?",
+   "simpeler": "Dat is een mening. De tekst zegt dat niet.",
+   "nogSimpeler": "De mening 'Ik vind musea saai' hoort er niet in."
+  }
+ },
+ {
+  "nr": 140,
+  "bron": "leerpaden",
+  "waar": "schaal-kaart-rekenen-po stap 2 vraag 2",
+  "file": "./schaalKaartRekenenPo.js",
+  "level": "groep7-8",
+  "q": "Schaal 1 : 1.000. Op de kaart 3 cm. Hoeveel meter in het echt?",
+  "options": [
+   "30 m",
+   "3 m",
+   "300 m",
+   "3.000 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — controleer de omrekening van cm naar m.",
+   "Te veel — hoeveel cm gaan er in 1 m?",
+   "Je vergat cm naar m om te rekenen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "3 × 1.000 = 3.000 cm = 30 m.",
+   "simpeler": "3.000 cm omrekenen naar meter: deel door 100.",
+   "nogSimpeler": "3.000 ÷ 100 = ?"
+  }
+ },
+ {
+  "nr": 141,
+  "bron": "leerpaden",
+  "waar": "schaal-kaart-rekenen-po stap 3 vraag 10",
+  "file": "./schaalKaartRekenenPo.js",
+  "level": "groep7-8",
+  "q": "Schaal 1 : 25.000. Een wandelroute is in het echt 3 km lang. Hoe lang is de route op de kaart?",
+  "options": [
+   "12 cm",
+   "120 cm",
+   "1,2 cm",
+   "3 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — vergeet niet door het schaalgetal te delen.",
+   null,
+   "Dat zou kloppen bij schaal 1 : 100.000."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "300.000 ÷ 25.000 = 12 cm.",
+   "simpeler": "Maak van 3 km eerst cm, deel dan door 25.000.",
+   "nogSimpeler": "300.000 ÷ 25.000 = ?"
+  }
+ },
+ {
+  "nr": 142,
+  "bron": "leerpaden",
+  "waar": "schaal-kaart-rekenen-po stap 4 vraag 5",
+  "file": "./schaalKaartRekenenPo.js",
+  "level": "groep7-8",
+  "q": "Op een kaart (schaal 1 : 100.000) is een rivier 3,5 cm lang. Hoe lang is de rivier echt?",
+  "options": [
+   "3,5 km",
+   "35 km",
+   "0,35 km",
+   "350 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — hoeveel km hoort bij 1 cm op deze kaart?",
+   "Te weinig — reken de schaalfactor goed.",
+   "Hoeveel km hoort bij 1 cm op deze kaart? Kom je met 3,5 cm dan op honderden km?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1 : 100.000 → 1 cm = 1 km. 3,5 cm = 3,5 km.",
+   "simpeler": "Hoeveel km hoort bij 1 cm? En bij 3,5 cm?",
+   "nogSimpeler": "1 cm = 1 km, 3,5 cm = … km?"
+  }
+ },
+ {
+  "nr": 143,
+  "bron": "leerpaden",
+  "waar": "schatten-afronden stap 3 vraag 2",
+  "file": "./schattenAfronden.js",
+  "level": "groep5-8",
+  "q": "**Schat 39 × 21**: rond eerst allebei de getallen af op tientallen en reken dan uit.",
+  "options": [
+   "800",
+   "600",
+   "1000",
+   "900"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — rond 39 en 21 af op tientallen en vermenigvuldig die.",
+   "1000 = 50 × 20. Rond je 39 af naar 50 of naar 40?",
+   "Te veel — heb je 30 ipv 20 gerekend?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 144,
+  "bron": "leerpaden",
+  "waar": "schatten-afronden stap 3 vraag 9",
+  "file": "./schattenAfronden.js",
+  "level": "groep5-8",
+  "q": "**Schat 2.870 + 1.940** (afgerond op 1000):",
+  "options": [
+   "5.000",
+   "4.000",
+   "6.000",
+   "3.000"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — 2.870 ligt dichter bij 3.000 dan bij 2.000.",
+   null,
+   "Te weinig — rond beide getallen af en tel ze allebei op."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Rond beide getallen af op duizendtallen: kijk naar het cijfer van de honderdtallen. Tel daarna op.",
+   "simpeler": "2.870 → 3.000. 1.940 → 2.000. Samen 5.000.",
+   "nogSimpeler": "Ongeveer 5.000."
+  }
+ },
+ {
+  "nr": 145,
+  "bron": "leerpaden",
+  "waar": "schatten-afronden stap 5 vraag 17",
+  "file": "./schattenAfronden.js",
+  "level": "groep5-8",
+  "q": "Schat: 4,9 × 5,1 ≈ ?",
+  "options": [
+   "~25",
+   "~9",
+   "~10",
+   "~50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat lijkt op 4 + 5, maar er staat kéér. Rond beide getallen af op een heel getal en vermenigvuldig.",
+   "Dat is ongeveer 4,9 + 5,1, maar er staat kéér, niet plus!",
+   "Te veel. Je rekende alsof een van de getallen 10 was. Rond allebei af op een heel getal."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 146,
+  "bron": "leerpaden",
+  "waar": "schema-tekst-combi-po stap 3 vraag 1",
+  "file": "./schemaTekstCombiPo.js",
+  "level": "groep6-8",
+  "q": "Wat kost één ponyritje bij 't Hoefje?",
+  "options": [
+   "€ 2,00",
+   "€ 7,50",
+   "€ 3,00",
+   "€ 10,00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de regel nog eens precies: is dat het rítje of de lés? De woorden lijken op elkaar.",
+   "Dat is het bedrag om binnen te komen, niet om op een pony te zitten.",
+   "Dat bedrag hoort bij de speurtocht. Zoek de regel die met 'Ponyritje' begint."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Er staan twee pony-regels in de lijst. De vraag gaat over een ritje — welke regel hoort daarbij?",
+   "simpeler": "Zoek de regel waar 'ritje' in staat (niet 'les'). Lees dan het bedrag achter de dubbele punt.",
+   "nogSimpeler": "Zoek de regel met 'één rondje door de wei' tussen de haakjes en kijk wat dat kost."
+  }
+ },
+ {
+  "nr": 147,
+  "bron": "leerpaden",
+  "waar": "schemas-stappenplannen-po stap 5 vraag 15",
+  "file": "./schemasStappenplannenPo.js",
+  "level": "groep5-8",
+  "q": "Welk symbool gebruik je voor **begin en eind** in een stroomdiagram?",
+  "options": [
+   "Cirkel of ovaal",
+   "Ruit",
+   "Rechthoek",
+   "Pijl"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij de ruit kies je tussen ja en nee. Is dat begin of eind?",
+   "In de rechthoek staat wat je doet. Is dat begin of eind?",
+   "Een pijl verbindt de vakjes. Is dat zelf een begin of eind?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 148,
+  "bron": "leerpaden",
+  "waar": "soorten-teksten-po stap 1 vraag 8",
+  "file": "./soortenTekstenPo.js",
+  "level": "groep7-8",
+  "q": "Je wilt weten hoeveel poten een spin heeft. Welk soort tekst zoek je dan op?",
+  "options": [
+   "een informatieve tekst",
+   "een instructieve tekst",
+   "een verhalende tekst",
+   "een betogende tekst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Moet je iets dóén, of wil je iets te weten komen?",
+   "Zoek je een verzonnen verhaal, of wil je iets te weten komen?",
+   "Zoek je een mening, of wil je iets te weten komen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Iets opzoeken om het te weten → informatieve tekst.",
+   "simpeler": "Wil je hier iets wéten of iets dóén?",
+   "nogSimpeler": "Welk soort tekst geeft je informatie?"
+  }
+ },
+ {
+  "nr": 149,
+  "bron": "leerpaden",
+  "waar": "spelling-eerste-woorden-g3 stap 2 vraag 4",
+  "file": "./spellingEersteWoordenG3.js",
+  "level": "groep3",
+  "q": "Zeg langzaam: **v - uu - r**. Welk woord schrijf je?",
+  "options": [
+   "vuur",
+   "vur",
+   "voer",
+   "vier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De uu is lang — hoeveel letters heeft een lange klank?",
+   "Dat is de oe-klank — luister nog eens.",
+   "Dat is de ie-klank — luister nog eens."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lange uu = 2 letters: vuur.",
+   "simpeler": "vuuuuur → uu!",
+   "nogSimpeler": "vuur"
+  }
+ },
+ {
+  "nr": 150,
+  "bron": "leerpaden",
+  "waar": "spelling-eerste-woorden-g3 stap 3 vraag 3",
+  "file": "./spellingEersteWoordenG3.js",
+  "level": "groep3",
+  "q": "Welke **twee letters** samen maken de klank die je hoort in **huis**?",
+  "options": [
+   "ui",
+   "uu",
+   "oe",
+   "ei"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de klank van vuur.",
+   "Dat is de klank van boek.",
+   "Dat is de klank van ei."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "In huis zit de ui-klank.",
+   "simpeler": "h-ui-s.",
+   "nogSimpeler": "ui"
+  }
+ }
+]

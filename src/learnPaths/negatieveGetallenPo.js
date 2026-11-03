@@ -80,14 +80,14 @@ const steps = [
         q: "Wat betekent **−12 °C**?",
         options: ["12 graden onder nul","12 graden boven nul","12 graden kouder dan gisteren","12 graden warmer dan gisteren"],
         answer: 0,
-        wrongHints: [null,"Andersom — het min-teken betekent onder nul.","Een temperatuur zegt hoe warm het nú is, niet hoeveel het veranderd is.","Het min-teken zegt niets over gisteren. Wat betekent min op een thermometer?"],
+        wrongHints: [null,"Kijk naar het teken vóór de 12. Staat daar een plus of een min, en welke kant op de thermometer hoort daarbij?","Een temperatuur zegt hoe warm het nú is, niet hoeveel het veranderd is.","Het min-teken zegt niets over gisteren. Wat betekent min op een thermometer?"],
         uitlegPad: {
           stappen: [{ titel: "Min = onder nul", tekst: "−12 °C = 12 graden ONDER nul. Min-teken = onder/min." }],
           woorden: [{ woord: "−X °C", uitleg: "X graden onder nul (vriespunt)." }],
           theorie: "Temperatuur: positief = boven 0 (warm). Negatief = onder 0 (vries).",
           voorbeelden: [{ type: "tabel", tekst: "+20°C zomer. 0°C vriespunt. −5°C lichte vorst. −12°C strenge vorst." }],
           basiskennis: [{ onderwerp: "Bestaat zeker", uitleg: "Bij ons in de winter, en op de Noordpool of in Siberië nog veel kouder (−40°C)." }],
-          niveaus: { basis: "12 graden onder nul.", simpeler: "Het min-teken voor de 12 betekent: onder nul. Dus −12 °C is 12 graden onder het vriespunt.", nogSimpeler: "Onder nul" },
+          niveaus: { basis: "Op een thermometer staat 0 in het midden. Waar staan de getallen met een min-teken: erboven of eronder?", simpeler: "Het min-teken voor de 12 betekent: onder nul. Dus −12 °C is 12 graden onder het vriespunt.", nogSimpeler: "Onder nul" },
         },
       },
       {

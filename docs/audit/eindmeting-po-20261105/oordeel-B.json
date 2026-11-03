@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 51,
+    "waar": "doorstroomtoets-taal-g8 stap 3 vraag 46",
+    "eigenKeuze": "Heb je je huiswerk gedaan?",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 52,
+    "waar": "doorstroomtoets-taal-g8 stap 4 vraag 11",
+    "eigenKeuze": "amsterdam",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 53,
+    "waar": "doorstroomtoets-taal-g8 stap 4 vraag 49",
+    "eigenKeuze": "Weet jij hoe laat de bus komt?",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 54,
+    "waar": "emoties-sociaal-po stap 4 vraag 10",
+    "eigenKeuze": "Diep ademen + praten met iemand",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar: drie afleiders absurd/duidelijk negatief; '+' in optie is telegramstijl."
+  },
+  {
+    "nr": 55,
+    "waar": "energiebronnen-po stap 6 vraag 6",
+    "eigenKeuze": "Nee, je kunt energie alleen omzetten",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar: afleiders ('uit het niets', 'een computer maakt energie') zijn absurd."
+  },
+  {
+    "nr": 56,
+    "waar": "energiebronnen-po stap 6 vraag 7",
+    "eigenKeuze": "Zon",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 57,
+    "waar": "europese-unie-po stap 5 vraag 2",
+    "eigenKeuze": "Polen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Polen heeft zloty.'); uitleg 'Polen besloot bewust euro NIET in te voeren' is te stellig (Polen is verplicht op termijn, zonder datum)."
+  },
+  {
+    "nr": 58,
+    "waar": "evolutie-mens-po stap 4 vraag 6",
+    "eigenKeuze": "98,8%",
+    "oordeel": "twijfel",
+    "reden": "WrongHint bij 70%: 'zelfs met een muis delen we meer dan dat' is wetenschappelijk omstreden (hangt af van meetwijze)."
+  },
+  {
+    "nr": 59,
+    "waar": "feit-mening-po stap 3 vraag 10",
+    "eigenKeuze": "De bus vertrekt om tien over acht.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 60,
+    "waar": "feiten-details-opzoeken-po stap 1 vraag 1",
+    "eigenKeuze": "De vraag lezen en het zoekwoord onderstrepen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 61,
+    "waar": "feiten-details-opzoeken-po stap 2 vraag 3",
+    "eigenKeuze": "Nieuwe planten voor de bloemenstrook",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 62,
+    "waar": "feiten-details-opzoeken-po stap 3 vraag 6",
+    "eigenKeuze": "212",
+    "oordeel": "twijfel",
+    "reden": "Antwoord (212) staat letterlijk in de vraag; bedoeld als scan-oefening, maar erg makkelijk voor groep 6-8."
+  },
+  {
+    "nr": 63,
+    "waar": "financiele-vorming-po stap 1 vraag 8",
+    "eigenKeuze": "€25",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Een biljet van €25 bestaat niet.')."
+  },
+  {
+    "nr": 64,
+    "waar": "financiele-vorming-po stap 2 vraag 2",
+    "eigenKeuze": "Geld terug bij flessen inleveren",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 65,
+    "waar": "folder-bon-advertentie-po stap 1 vraag 3",
+    "eigenKeuze": "belasting die in de prijs zit",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('BTW is belasting die al in de prijs verwerkt zit')."
+  },
+  {
+    "nr": 66,
+    "waar": "folder-bon-advertentie-po stap 1 vraag 6",
+    "eigenKeuze": "€0,25",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (rekent €0,25 voor); niveau laag voor groep 7-8."
+  },
+  {
+    "nr": 67,
+    "waar": "folder-bon-advertentie-po stap 2 vraag 2",
+    "eigenKeuze": "€10",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Een kwart van €40 is €10')."
+  },
+  {
+    "nr": 68,
+    "waar": "getallen-tot-20-po stap 3 vraag 9",
+    "eigenKeuze": "10 - 4 = 6",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('10 - 4 = 6.')."
+  },
+  {
+    "nr": 69,
+    "waar": "gezonde-voeding-po stap 4 vraag 3",
+    "eigenKeuze": "Groente en fruit",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 70,
+    "waar": "godsdiensten-culturen-po stap 2 vraag 3",
+    "eigenKeuze": "Paus",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 71,
+    "waar": "grafieken-lezen-po stap 2 vraag 8",
+    "eigenKeuze": "67 punten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 72,
+    "waar": "grafieken-lezen-po stap 6 vraag 8",
+    "eigenKeuze": "Aantallen van groepen vergelijken",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 73,
+    "waar": "in-de-klas-2-nieuwkomers stap 2 vraag 2",
+    "eigenKeuze": "Ik pak een boek en lees.",
+    "oordeel": "twijfel",
+    "reden": "Antwoord staat bijna letterlijk in de vraag ('Lees een boek'); als leesbegrip-oefening voor nieuwkomers verdedigbaar."
+  },
+  {
+    "nr": 74,
+    "waar": "in-de-klas-2-nieuwkomers stap 3 vraag 3",
+    "eigenKeuze": "Kun je mij helpen?",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 75,
+    "waar": "in-de-klas-2-nieuwkomers stap 4 vraag 2",
+    "eigenKeuze": "Ik ben blij.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 76,
+    "waar": "in-de-klas-nieuwkomers stap 1 vraag 2",
+    "eigenKeuze": "Ik snap het niet.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 77,
+    "waar": "in-de-klas-nieuwkomers stap 3 vraag 3",
+    "eigenKeuze": "Dank je wel.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 78,
+    "waar": "industriele-revolutie-po stap 3 vraag 4",
+    "eigenKeuze": "Arbeiders in de fabrieken",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 79,
+    "waar": "industriele-revolutie-po stap 6 vraag 12",
+    "eigenKeuze": "Enschede en Almelo",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 80,
+    "waar": "informatiebronnen-po stap 2 vraag 5",
+    "eigenKeuze": "oliebol",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Oliebol — zelfde start.'); wrongHints telegramstijl ('Niet — begint met m')."
+  },
+  {
+    "nr": 81,
+    "waar": "informatiebronnen-po stap 5 vraag 4",
+    "eigenKeuze": "Index achteraan",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 82,
+    "waar": "inhoudsopgave-register-po stap 2 vraag 10",
+    "eigenKeuze": "de vos",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Pagina 22 hoort bij de vos.')."
+  },
+  {
+    "nr": 83,
+    "waar": "inhoudsopgave-register-po stap 4 vraag 8",
+    "eigenKeuze": "pagina 26 tot en met 40",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Pagina 26 t/m 40')."
+  },
+  {
+    "nr": 84,
+    "waar": "interpunctie-po stap 5 vraag 5",
+    "eigenKeuze": "Noor zei: 'Ik ben klaar.'",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 85,
+    "waar": "kaartlezen-po stap 5 vraag 3",
+    "eigenKeuze": "Een meer of zee",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Een meer of zee.')."
+  },
+  {
+    "nr": 86,
+    "waar": "kaartlezen-po stap 5 vraag 22",
+    "eigenKeuze": "1.000 m",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('1.000 m.'); schaalbalk-context doet niets, vraag is erg makkelijk voor groep 5-8."
+  },
+  {
+    "nr": 87,
+    "waar": "kalender-rekenen-po stap 2 vraag 6",
+    "eigenKeuze": "Donderdag",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 88,
+    "waar": "kalender-rekenen-po stap 5 vraag 5",
+    "eigenKeuze": "7 dagen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('7 dagen.')."
+  },
+  {
+    "nr": 89,
+    "waar": "kalender-rekenen-po stap 6 vraag 15",
+    "eigenKeuze": "5 mei",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 90,
+    "waar": "klokkijken stap 2 vraag 2",
+    "eigenKeuze": "Grote op 12, kleine op 3",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Groot op 12, klein op 3.'); nogSimpeler '12+3' onduidelijk."
+  },
+  {
+    "nr": 91,
+    "waar": "kommagetallen-po stap 1 vraag 9",
+    "eigenKeuze": "50 + 2 + 0,3 + 0,06",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('52,36 = 50 + 2 + 0,3 + 0,06.')."
+  },
+  {
+    "nr": 92,
+    "waar": "kommagetallen-po stap 2 vraag 8",
+    "eigenKeuze": "€ 3,75",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 93,
+    "waar": "koude-oorlog-modern-po stap 2 vraag 4",
+    "eigenKeuze": "'Ich bin ein Berliner'",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Kennedy zei in Berlijn: Ich bin ein Berliner')."
+  },
+  {
+    "nr": 94,
+    "waar": "kritisch-denken-po stap 4 vraag 25",
+    "eigenKeuze": "Een standpunt met bewijs of een goede reden",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar: goede optie is de langste en de enige positieve formulering."
+  },
+  {
+    "nr": 95,
+    "waar": "leestekens-hoofdletters-po stap 2 vraag 2",
+    "eigenKeuze": "Wat is dat een enorme hond",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 96,
+    "waar": "maten-eenheden stap 1 vraag 6",
+    "eigenKeuze": "mL",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('mL.')."
+  },
+  {
+    "nr": 97,
+    "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 4",
+    "eigenKeuze": "6",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 98,
+    "waar": "maten-omtrek-oppervlakte-po stap 5 vraag 8",
+    "eigenKeuze": "4 m",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('4 × 4 = 16, dus de zijde is 4 m.')."
+  },
+  {
+    "nr": 99,
+    "waar": "meetkunde-bouwsels stap 1 vraag 1",
+    "eigenKeuze": "Hoeveel ruimte iets inneemt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 100,
+    "waar": "meetkunde-bouwsels stap 6 vraag 16",
+    "eigenKeuze": "1000 cm³",
+    "oordeel": "twijfel",
+    "reden": "Telegramzin: 'Een doos 10 × 10 × 10 cm. Volume?'"
+  }
+]

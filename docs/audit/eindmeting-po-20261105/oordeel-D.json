@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 151,
+    "waar": "spelling-ei-ij-au-ou stap 4 vraag 4",
+    "eigenKeuze": "Het eindigt op -tijd, dus ij",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('-tijd = ij'); afleider 'voornaamwoord' is absurd"
+  },
+  {
+    "nr": 152,
+    "waar": "spelling-overige-po stap 4 vraag 5",
+    "eigenKeuze": "onze en pip",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('Onze + Pip met hoofdletter')"
+  },
+  {
+    "nr": 153,
+    "waar": "sterren-planeten stap 1 vraag 2",
+    "eigenKeuze": "~8 minuten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 154,
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 1",
+    "eigenKeuze": "Een woord met bijna dezelfde betekenis",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord (definitie letterlijk)"
+  },
+  {
+    "nr": 155,
+    "waar": "synoniemen-tegenstellingen-po stap 1 vraag 3",
+    "eigenKeuze": "Reusachtig",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('Reusachtig = synoniem van enorm')"
+  },
+  {
+    "nr": 156,
+    "waar": "synoniemen-tegenstellingen-po stap 2 vraag 6",
+    "eigenKeuze": "Huis",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('Huis'); erg makkelijk voor groep 5-7"
+  },
+  {
+    "nr": 157,
+    "waar": "synoniemen-tegenstellingen-po stap 5 vraag 25",
+    "eigenKeuze": "rustig",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 158,
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 9",
+    "eigenKeuze": "eieren",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('ei -> eieren')"
+  },
+  {
+    "nr": 159,
+    "waar": "taal-woorden-zinnen-g4 stap 3 vraag 4",
+    "eigenKeuze": "poes",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('poesje komt van poes')"
+  },
+  {
+    "nr": 160,
+    "waar": "tabellen-grafieken stap 5 vraag 5",
+    "eigenKeuze": "25%",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('25%')"
+  },
+  {
+    "nr": 161,
+    "waar": "tafels-po stap 1 vraag 9",
+    "eigenKeuze": "3, 6, 9, 12",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('3, 6, 9, 12')"
+  },
+  {
+    "nr": 162,
+    "waar": "tafels-po stap 3 vraag 1",
+    "eigenKeuze": "12",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 163,
+    "waar": "tafels-po stap 6 vraag 17",
+    "eigenKeuze": "Elke stap: tientallen +1, eenheden −1",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 164,
+    "waar": "tekstdoel-schrijversdoel-po stap 4 vraag 8",
+    "eigenKeuze": "\"Laat in een hoekje van de tuin bladeren en takken liggen.\"",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 165,
+    "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 7",
+    "eigenKeuze": "Iets waardoor iets anders gebeurt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 166,
+    "waar": "tekstverbanden-oorzaak-gevolg-po stap 2 vraag 3",
+    "eigenKeuze": "Milan kwam tien minuten te laat de klas binnen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 167,
+    "waar": "tellen-kleuters-po stap 4 vraag 10",
+    "eigenKeuze": "de grond",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 168,
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 6",
+    "eigenKeuze": "seconden",
+    "oordeel": "twijfel",
+    "reden": "niveau te laag voor groep 6-8; hulpstap niveaus.basis geeft alleen het antwoord ('Seconden'); drie identieke wrongHints"
+  },
+  {
+    "nr": 169,
+    "waar": "tijdsduur-rekenen-po stap 4 vraag 2",
+    "eigenKeuze": "14:05",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij 13:65 ('over de 60 = uur erbij, reken vanaf 13:40') rekent het antwoord 14:05 vrijwel voor"
+  },
+  {
+    "nr": 170,
+    "waar": "tijdsduur-rekenen-po stap 5 vraag 5",
+    "eigenKeuze": "1 uur 40 min",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('1 uur 40 min')"
+  },
+  {
+    "nr": 171,
+    "waar": "topografie-nederland stap 2 vraag 5",
+    "eigenKeuze": "Noord-Brabant",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 172,
+    "waar": "topografie-nederland stap 9 vraag 17",
+    "eigenKeuze": "Groningen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 173,
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 2",
+    "eigenKeuze": "groter",
+    "oordeel": "twijfel",
+    "reden": "basis 'groter dan = vergrotende trap' noemt het antwoordwoord; wrongHint '-er' + nogSimpeler 'groot + er' rekenen het voor"
+  },
+  {
+    "nr": 174,
+    "waar": "verhaal-diepte-lezen-po stap 4 vraag 2",
+    "eigenKeuze": "Hij is gespannen of de vaas nog heel is",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 175,
+    "waar": "verhaal-diepte-lezen-po stap 4 vraag 7",
+    "eigenKeuze": "Opgewonden over het cadeau",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 176,
+    "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 3",
+    "eigenKeuze": "De hond",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 177,
+    "waar": "verwijswoorden-begrijpend-lezen-po stap 1 vraag 6",
+    "eigenKeuze": "Ze",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 178,
+    "waar": "verwijswoorden-begrijpend-lezen-po stap 4 vraag 5",
+    "eigenKeuze": "Meester Ruben",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 179,
+    "waar": "verwijswoorden-po stap 1 vraag 1",
+    "eigenKeuze": "Tom",
+    "oordeel": "twijfel",
+    "reden": "niveau te laag voor groep 7-8; hulpstap niveaus.basis geeft alleen het antwoord ('Tom')"
+  },
+  {
+    "nr": 180,
+    "waar": "vlakke-figuren-po stap 3 vraag 6",
+    "eigenKeuze": "Een driehoek is de helft van een rechthoek",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord (letterlijk optie 0)"
+  },
+  {
+    "nr": 181,
+    "waar": "volgorde-bewerkingen stap 3 vraag 6",
+    "eigenKeuze": "6",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 182,
+    "waar": "volgorde-bewerkingen stap 6 vraag 7",
+    "eigenKeuze": "21",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('21'); kwadraat is aan de hoge kant voor groep 5"
+  },
+  {
+    "nr": 183,
+    "waar": "volgorde-bewerkingen stap 7 vraag 1",
+    "eigenKeuze": "11",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('11'); wrongHint '(3+4)x2 zou zijn' is een telegramzin"
+  },
+  {
+    "nr": 184,
+    "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+    "eigenKeuze": "Hij scheidt de Waddenzee van het IJsselmeer",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 185,
+    "waar": "waterkringloop-po stap 4 vraag 10",
+    "eigenKeuze": "Water wordt waterdamp",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 186,
+    "waar": "weersvoorspelling-po stap 4 vraag 25",
+    "eigenKeuze": "Bewolkt weer met regen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 187,
+    "waar": "werelddelen-landen-po stap 3 vraag 10",
+    "eigenKeuze": "3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 188,
+    "waar": "wereldorientatie-mix-po stap 5 vraag 2",
+    "eigenKeuze": "Europa",
+    "oordeel": "twijfel",
+    "reden": "niveau veel te laag voor groep 7-8; hulpstap niveaus.basis geeft alleen het antwoord ('Europa')"
+  },
+  {
+    "nr": 189,
+    "waar": "werkwoord-tijden-po stap 3 vraag 3",
+    "eigenKeuze": "fixte",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('fixte'); leenwoord 'fixen' wat vreemd als oefenwerkwoord"
+  },
+  {
+    "nr": 190,
+    "waar": "werkwoordsspelling-dt stap 6 vraag 8",
+    "eigenKeuze": "gehoopt",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('Gehoopt')"
+  },
+  {
+    "nr": 191,
+    "waar": "winst-rekenen-po stap 3 vraag 3",
+    "eigenKeuze": "€5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 192,
+    "waar": "winst-rekenen-po stap 3 vraag 11",
+    "eigenKeuze": "€20",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('EUR20 (EUR12 + EUR8)')"
+  },
+  {
+    "nr": 193,
+    "waar": "winst-rekenen-po stap 3 vraag 12",
+    "eigenKeuze": "€5",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('EUR5 (EUR1 winst per pak x 5)')"
+  },
+  {
+    "nr": 194,
+    "waar": "woorden-3-nieuwkomers stap 4 vraag 2",
+    "eigenKeuze": "Gisteren.",
+    "oordeel": "fout",
+    "reden": "wrongHints feitelijk onjuist: bij 'Morgen' en 'Vandaag' (en 'Middag') staat 'Die dag is al voorbij' - morgen is juist nog niet geweest, vandaag is nu"
+  },
+  {
+    "nr": 195,
+    "waar": "woordenschat-engels-po stap 4 vraag 2",
+    "eigenKeuze": "woensdag",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 196,
+    "waar": "woordenschat-po stap 5 vraag 12",
+    "eigenKeuze": "Een woord met dezelfde betekenis",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 197,
+    "waar": "woordsoorten-po stap 2 vraag 6",
+    "eigenKeuze": "kopen",
+    "oordeel": "twijfel",
+    "reden": "hulpstap niveaus.basis geeft alleen het antwoord ('kocht -> kopen')"
+  },
+  {
+    "nr": 198,
+    "waar": "woordsoorten-po stap 5 vraag 10",
+    "eigenKeuze": "Bezittelijk voornaamwoord",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 199,
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 5",
+    "eigenKeuze": "De kat",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 200,
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 3",
+    "eigenKeuze": "onderwerp: De buurman — persoonsvorm: wast",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij optie 3 'Onderwerp en persoonsvorm staan hier omgedraaid' geeft per omkering direct optie 0"
+  }
+]

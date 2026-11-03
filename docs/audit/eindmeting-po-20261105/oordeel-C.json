@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 101,
+    "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 4",
+    "eigenKeuze": "105 min",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 102,
+    "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 1",
+    "eigenKeuze": "750 ml",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 103,
+    "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 3",
+    "eigenKeuze": "1,2 l",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent alles voor en geeft het antwoord (12 dl = 1,2 l); wrongHint bij 0,12 l rekent 4 × 3 = 12 dl al voor."
+  },
+  {
+    "nr": 104,
+    "waar": "natuur-seizoenen-dieren-g4 stap 2 vraag 5",
+    "eigenKeuze": "uil",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 105,
+    "waar": "negatieve-getallen-po stap 1 vraag 2",
+    "eigenKeuze": "12 graden onder nul",
+    "oordeel": "fout",
+    "reden": "wrongHint bij '12 graden boven nul' zegt letterlijk 'het min-teken betekent onder nul' = het goede antwoord; ook niveaus.basis is alleen het antwoord."
+  },
+  {
+    "nr": 106,
+    "waar": "negatieve-getallen-po stap 3 vraag 2",
+    "eigenKeuze": "−10",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 107,
+    "waar": "negatieve-getallen-po stap 4 vraag 3",
+    "eigenKeuze": "+€ 50",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 108,
+    "waar": "negatieve-getallen-po stap 5 vraag 1",
+    "eigenKeuze": "−3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 109,
+    "waar": "negatieve-getallen-po stap 5 vraag 26",
+    "eigenKeuze": "10",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 110,
+    "waar": "nieuwsbericht-lezen-po stap 2 vraag 8",
+    "eigenKeuze": "Kinderen uit de hele buurt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 111,
+    "waar": "olympische-spelen-po stap 4 vraag 1",
+    "eigenKeuze": "Athene 1896",
+    "oordeel": "twijfel",
+    "reden": "Taalfout in wrongHint: 'óúde' (dubbel accent)."
+  },
+  {
+    "nr": 112,
+    "waar": "olympische-spelen-po stap 4 vraag 4",
+    "eigenKeuze": "Ireen Wüst",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 113,
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 1",
+    "eigenKeuze": "0,5",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('… als 0,5')."
+  },
+  {
+    "nr": 114,
+    "waar": "omzetten-breuk-procent-komma-po stap 3 vraag 1",
+    "eigenKeuze": "25%",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('¼ = 25%')."
+  },
+  {
+    "nr": 115,
+    "waar": "omzetten-breuk-procent-komma-po stap 4 vraag 10",
+    "eigenKeuze": "Noor",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft het antwoord ('… dus Noor')."
+  },
+  {
+    "nr": 116,
+    "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 2 vraag 8",
+    "eigenKeuze": "Techniek",
+    "oordeel": "twijfel",
+    "reden": "'Techniek' is de oude sectornaam; sinds 2016 heeft het vmbo profielen (bv. PIE, BWI). 'Mavo' als 'richting' is in de spreektaal ook verdedigbaar; hangt af van de uitleg in het pad."
+  },
+  {
+    "nr": 117,
+    "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 5 vraag 4",
+    "eigenKeuze": "Een verstandige keuze",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar door de vorm: drie afleiders zijn duidelijk negatief/absurd (mislukking, straf, mag niet); waardeoordeel i.p.v. kennis."
+  },
+  {
+    "nr": 118,
+    "waar": "opdrachtwoorden-nieuwkomers stap 1 vraag 2",
+    "eigenKeuze": "Ik zet een streep onder het woord.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 119,
+    "waar": "oppervlakte-omtrek-po stap 4 vraag 9",
+    "eigenKeuze": "12 m²",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent alles voor inclusief antwoord (24 ÷ 2 = 12 m²)."
+  },
+  {
+    "nr": 120,
+    "waar": "oppervlakte-omtrek-po stap 5 vraag 7",
+    "eigenKeuze": "7 cm",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft de som met antwoord (14 ÷ 2 = 7 cm)."
+  },
+  {
+    "nr": 121,
+    "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 7",
+    "eigenKeuze": "Schrift met plaatjes",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is alleen het antwoord ('Egyptisch plaatjes-schrift'); niveaus.simpeler is een telegramzin."
+  },
+  {
+    "nr": 122,
+    "waar": "oudheid-egyptenaren-grieken-romeinen-po stap 4 vraag 16",
+    "eigenKeuze": "Bij de Egyptenaren",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 123,
+    "waar": "politiek-democratie-po stap 6 vraag 14",
+    "eigenKeuze": "Een recht uit de Grondwet",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar: 'grondrecht' ↔ 'Grondwet' – het antwoord zit bijna in het vraagwoord."
+  },
+  {
+    "nr": 124,
+    "waar": "procenten-po stap 4 vraag 7",
+    "eigenKeuze": "€ 8",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 125,
+    "waar": "pubertijd-groei-po stap 2 vraag 1",
+    "eigenKeuze": "Maandelijkse bloeding uit de baarmoeder",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 126,
+    "waar": "recyclen-afval-po stap 2 vraag 2",
+    "eigenKeuze": "Alles steeds opnieuw gebruiken",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 127,
+    "waar": "recyclen-afval-po stap 3 vraag 2",
+    "eigenKeuze": "Boyan Slat",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 128,
+    "waar": "recyclen-afval-po stap 4 vraag 13",
+    "eigenKeuze": "Als je de fles inlevert in de winkel",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 129,
+    "waar": "recyclen-afval-po stap 4 vraag 24",
+    "eigenKeuze": "Ongeveer 60 procent",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 130,
+    "waar": "redactiesommen-pad stap 3 vraag 10",
+    "eigenKeuze": "9",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 131,
+    "waar": "redactiesommen-pad stap 5 vraag 27",
+    "eigenKeuze": "90",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 132,
+    "waar": "rekentaal-nieuwkomers stap 2 vraag 2",
+    "eigenKeuze": "4",
+    "oordeel": "twijfel",
+    "reden": "Alle wrongHints eindigen met '6 − 2.' – rekent de som voor; voor groep 3-4 is dat bijna het antwoord."
+  },
+  {
+    "nr": 133,
+    "waar": "rijmen-letters-kleuters-po stap 1 vraag 4",
+    "eigenKeuze": "banaan 🍌",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 134,
+    "waar": "rijmen-letters-kleuters-po stap 2 vraag 2",
+    "eigenKeuze": "s",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 135,
+    "waar": "rijmen-letters-kleuters-po stap 5 vraag 4",
+    "eigenKeuze": "3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 136,
+    "waar": "romeinse-cijfers-po stap 1 vraag 5",
+    "eigenKeuze": "1000",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 137,
+    "waar": "ruimtevaart-po stap 3 vraag 3",
+    "eigenKeuze": "SpaceX",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 138,
+    "waar": "samenstellingen-tussenletters-po stap 4 vraag 1",
+    "eigenKeuze": "speelgoedwinkel",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis noemt het antwoord ('speelgoedwinkel … is een samenstelling')."
+  },
+  {
+    "nr": 139,
+    "waar": "samenvatten-hoofdgedachte-po stap 4 vraag 6",
+    "eigenKeuze": "Ik vind musea saai.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 140,
+    "waar": "schaal-kaart-rekenen-po stap 2 vraag 2",
+    "eigenKeuze": "30 m",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent voor met antwoord (3.000 cm = 30 m)."
+  },
+  {
+    "nr": 141,
+    "waar": "schaal-kaart-rekenen-po stap 3 vraag 10",
+    "eigenKeuze": "12 cm",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent voor met antwoord (= 12 cm)."
+  },
+  {
+    "nr": 142,
+    "waar": "schaal-kaart-rekenen-po stap 4 vraag 5",
+    "eigenKeuze": "3,5 km",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent voor met antwoord (3,5 cm = 3,5 km)."
+  },
+  {
+    "nr": 143,
+    "waar": "schatten-afronden stap 3 vraag 2",
+    "eigenKeuze": "800",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 144,
+    "waar": "schatten-afronden stap 3 vraag 9",
+    "eigenKeuze": "5.000",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 145,
+    "waar": "schatten-afronden stap 5 vraag 17",
+    "eigenKeuze": "~25",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 146,
+    "waar": "schema-tekst-combi-po stap 3 vraag 1",
+    "eigenKeuze": "€ 2,00",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 147,
+    "waar": "schemas-stappenplannen-po stap 5 vraag 15",
+    "eigenKeuze": "Cirkel of ovaal",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 148,
+    "waar": "soorten-teksten-po stap 1 vraag 8",
+    "eigenKeuze": "een informatieve tekst",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 149,
+    "waar": "spelling-eerste-woorden-g3 stap 2 vraag 4",
+    "eigenKeuze": "vuur",
+    "oordeel": "fout",
+    "reden": "Antwoord staat letterlijk in de vraag: 'v - uu - r' aan elkaar geschreven is 'vuur'; de enige moeilijkheid (uu = 2 letters) wordt al getoond."
+  },
+  {
+    "nr": 150,
+    "waar": "spelling-eerste-woorden-g3 stap 3 vraag 3",
+    "eigenKeuze": "ui",
+    "oordeel": "twijfel",
+    "reden": "Het geschreven woord 'huis' bevat 'ui' zichtbaar; als klankherkenning in groep 3 verdedigbaar, maar zonder voorlezen is het aflezen."
+  }
+]

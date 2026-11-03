@@ -44,7 +44,7 @@ const deel3 = [
 
 const deel4 = [
   vg("Niet gisteren, niet morgen, maar nu. Hoe heet die dag?", ["Vandaag.", "Gisteren.", "Morgen.", "Week."], "De dag van nu."),
-  vg("De dag vóór vandaag. Hoe heet die?", ["Gisteren.", "Morgen.", "Vandaag.", "Middag."], "Die dag is al voorbij."),
+  vg("De dag vóór vandaag. Hoe heet die?", ["Gisteren.", "Morgen.", "Vandaag.", "Middag."], "Denk aan de volgorde van de dagen: welke dag is al geweest, welke is nu, en welke komt nog?"),
   vg("Het is 12 uur. Je hebt gegeten. Welk deel van de dag begint nu?", ["De middag.", "De nacht.", "De ochtend.", "De week."], "Na 12 uur is het…"),
   vg("De juf zegt: jij bent aan de beurt. Wat betekent dat?", ["Nu mag jij.", "Je moet stil zijn.", "Je mag naar huis.", "Je bent klaar."], "Aan de beurt = nu jij."),
   vg("Je wilt iets zeggen in de klas. Wat doe je eerst?", ["Ik steek mijn vinger op.", "Ik roep heel hard.", "Ik loop naar de juf.", "Ik ga staan."], "Zo laat je de juf zien dat je iets wilt zeggen."),

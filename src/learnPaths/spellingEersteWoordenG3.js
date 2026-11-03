@@ -231,13 +231,13 @@ const steps = [
         },
       },
       {
-        q: "Zeg langzaam: **v - uu - r**. Welk woord schrijf je?",
+        q: "Het is heet en het brandt in de open haard. Welk woord is goed geschreven?",
         options: ["vuur", "vur", "voer", "vier"],
         answer: 0,
-        wrongHints: [null, "De uu is lang — hoeveel letters heeft een lange klank?", "Dat is de oe-klank — luister nog eens.", "Dat is de ie-klank — luister nog eens."],
+        wrongHints: [null, "Zeg het woord langzaam. Hoor je een lange of een korte klank in het midden? Hoeveel letters krijgt een lange klank?", "Zeg het woord hardop. Hoor je in het midden een oe?", "Zeg het woord hardop. Hoor je in het midden een ie?"],
         uitlegPad: {
           stappen: [{ titel: "Lange uu", tekst: "v... uu... r... → **vuur**. De lange uu schrijf je met twee letters." }],
-          niveaus: { basis: "Lange uu = 2 letters: vuur.", simpeler: "vuuuuur → uu!", nogSimpeler: "vuur" },
+          niveaus: { basis: "Hak het woord in klanken: welke klank hoor je eerst, welke in het midden en welke aan het einde? Is de middelste klank kort of lang?", simpeler: "De middelste klank is een lange uu. Een lange klank schrijf je met twee letters.", nogSimpeler: "vuur" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.

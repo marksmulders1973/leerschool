@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 1,
+    "waar": "alfabet-woordenboek-po stap 3 vraag 4",
+    "eigenKeuze": "toren",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis noemt alleen het antwoord (toren); niveau (alfabet op 2e letter) laag voor groep 7-8."
+  },
+  {
+    "nr": 2,
+    "waar": "alfabet-woordenboek-po stap 4 vraag 10",
+    "eigenKeuze": "het staat vet vooraan",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 3,
+    "waar": "alinea-functies-tussenkopjes-po stap 2 vraag 8",
+    "eigenKeuze": "ik vind",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 4,
+    "waar": "basis-grammatica-engels-po stap 2 vraag 5",
+    "eigenKeuze": "fish",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 5,
+    "waar": "begrijpend-lezen-strategie stap 7 vraag 1",
+    "eigenKeuze": "doordat",
+    "oordeel": "twijfel",
+    "reden": "Vraag labelt OMDAT als oorzaak en basis zegt doordat = ander woord voor omdat; in schoolgrammatica is omdat reden, doordat oorzaak. Basis geeft bovendien het antwoord."
+  },
+  {
+    "nr": 6,
+    "waar": "begrijpend-lezen-strategie stap 7 vraag 23",
+    "eigenKeuze": "Een stukje tekst over één onderwerp",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 7,
+    "waar": "bekende-boeken-literatuur-po stap 4 vraag 20",
+    "eigenKeuze": "Dick Bruna",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 8,
+    "waar": "bekende-boeken-literatuur-po stap 4 vraag 26",
+    "eigenKeuze": "Groep mensen die samen lezen en bespreken",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 9,
+    "waar": "bekende-nederlanders-po stap 3 vraag 2",
+    "eigenKeuze": "2013",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 10,
+    "waar": "bekende-wetenschappers-po stap 2 vraag 2",
+    "eigenKeuze": "Traagheid",
+    "oordeel": "twijfel",
+    "reden": "Niveau hoog voor groep 6 (Newtonwetten, F = m x a); \"Traagheid\" is een begrip, geen formulering van de wet."
+  },
+  {
+    "nr": 11,
+    "waar": "belasting-po stap 1 vraag 5",
+    "eigenKeuze": "Je eigen ijsje",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar door de vorm: ijsje is de enige persoonlijke optie; nogSimpeler noemt letterlijk het antwoord."
+  },
+  {
+    "nr": 12,
+    "waar": "belasting-po stap 2 vraag 4",
+    "eigenKeuze": "Je werkgever, vóórdat je het loon krijgt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 13,
+    "waar": "belasting-po stap 4 vraag 6",
+    "eigenKeuze": "De Belastingdienst",
+    "oordeel": "twijfel",
+    "reden": "Antwoord zit bijna letterlijk in de vraag (dienst + belasting -> Belastingdienst)."
+  },
+  {
+    "nr": 14,
+    "waar": "beroepen-werk-po stap 1 vraag 4",
+    "eigenKeuze": "Geld van de staat vanaf je 67ste",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord (staatspensioen vanaf 67). Let op: AOW-leeftijd gaat in 2028 naar 67 jaar en 3 maanden."
+  },
+  {
+    "nr": 15,
+    "waar": "beroepen-werk-po stap 2 vraag 1",
+    "eigenKeuze": "Werk in de natuur, zoals landbouw",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 16,
+    "waar": "beroepen-werk-po stap 4 vraag 1",
+    "eigenKeuze": "Je loon vóór de belasting eraf gaat",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 17,
+    "waar": "breuken-po stap 7 vraag 4",
+    "eigenKeuze": "200",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis is alleen het antwoord (\"200 mL.\")."
+  },
+  {
+    "nr": 18,
+    "waar": "breuken-po stap 7 vraag 8",
+    "eigenKeuze": "⅔",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 19,
+    "waar": "breuken-po stap 7 vraag 20",
+    "eigenKeuze": "3/5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 20,
+    "waar": "brief-email-lezen-po stap 3 vraag 8",
+    "eigenKeuze": "Mira uitnodigen voor het feestje",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 21,
+    "waar": "brief-email-lezen-po stap 4 vraag 5",
+    "eigenKeuze": "Vrijdag 12 juni",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 22,
+    "waar": "brugklas-orientatie stap 1 vraag 6",
+    "eigenKeuze": "1-2 uur",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 23,
+    "waar": "brugklas-orientatie stap 4 vraag 4",
+    "eigenKeuze": "Ja, dat hebben veel brugklassers",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 24,
+    "waar": "cijferend-rekenen stap 4 vraag 6",
+    "eigenKeuze": "4940",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis is alleen het antwoord (1235 x 4 = 4940)."
+  },
+  {
+    "nr": 25,
+    "waar": "cijferend-rekenen stap 5 vraag 5",
+    "eigenKeuze": "64",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis is alleen het antwoord (384 : 6 = 64)."
+  },
+  {
+    "nr": 26,
+    "waar": "cito-strategieen-groep8 stap 5 vraag 1",
+    "eigenKeuze": "Snel de tekst overzien en dan de vragen lezen",
+    "oordeel": "twijfel",
+    "reden": "Basis is telegramstijl en geeft het antwoord (\"Skim + vragen lezen eerst\"), en zegt vragen eerst terwijl de optie tekst eerst zegt."
+  },
+  {
+    "nr": 27,
+    "waar": "cito-strategieen-groep8 stap 7 vraag 7",
+    "eigenKeuze": "Schatten, een antwoord kiezen en de vraag markeren",
+    "oordeel": "twijfel",
+    "reden": "Basis telegramstijl, geeft het antwoord (\"Schatten + markeren.\"); goede optie is de langste/meest uitgewerkte."
+  },
+  {
+    "nr": 28,
+    "waar": "cito-strategieen-groep8 stap 7 vraag 13",
+    "eigenKeuze": "Antwoorden vergelijken met je buurman",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 29,
+    "waar": "cito-strategieen-groep8 stap 7 vraag 22",
+    "eigenKeuze": "De som anders narekenen en de vraag herlezen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 30,
+    "waar": "continenten-wereld-po stap 6 vraag 6",
+    "eigenKeuze": "IJs en pinguïns",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 31,
+    "waar": "dichten-poezie-rijmen-po stap 1 vraag 9",
+    "eigenKeuze": "In de Gouden Eeuw",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord (Gouden Eeuw)."
+  },
+  {
+    "nr": 32,
+    "waar": "dichten-poezie-rijmen-po stap 4 vraag 4",
+    "eigenKeuze": "Geen vast rijm en geen vaste maat",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 33,
+    "waar": "dichten-poezie-rijmen-po stap 5 vraag 13",
+    "eigenKeuze": "Personificatie",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 34,
+    "waar": "dierenklassen-po stap 6 vraag 4",
+    "eigenKeuze": "6",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 35,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 46",
+    "eigenKeuze": "1/4",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 36,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 16",
+    "eigenKeuze": "15",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 37,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 7",
+    "eigenKeuze": "1000 cm³",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 38,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 4",
+    "eigenKeuze": "30 km",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 39,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 7",
+    "eigenKeuze": "4 potten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 40,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 37",
+    "eigenKeuze": "In de inhoudsopgave",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 41,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 14",
+    "eigenKeuze": "Keuze-vraag",
+    "oordeel": "twijfel",
+    "reden": "Schema in telegram-notatie zonder plaatje (\"A -> ja -> B / A -> nee -> C\"); optie Pijl is een absurde afleider."
+  },
+  {
+    "nr": 42,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 37",
+    "eigenKeuze": "Noa",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 43,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 32",
+    "eigenKeuze": "4 minuten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 44,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 14",
+    "eigenKeuze": "Allebei",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 45,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 18",
+    "eigenKeuze": "De winkel gaat zondag pas om 12:00 open",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 46,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 19",
+    "eigenKeuze": "Het archief of museum van je dorp",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 47,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 21",
+    "eigenKeuze": "bouw",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar: afleiders leuk/vakantie/piramide zijn duidelijk onzinnig, alleen bouw past."
+  },
+  {
+    "nr": 48,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 9",
+    "eigenKeuze": "Bladzijde 14 en 27",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 49,
+    "waar": "doorstroomtoets-taal-g8 stap 1 vraag 1",
+    "eigenKeuze": "Zo hard gerend dat je nauwelijks kunt ademen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 50,
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 26",
+    "eigenKeuze": "Zoals",
+    "oordeel": "goed",
+    "reden": ""
+  }
+]
