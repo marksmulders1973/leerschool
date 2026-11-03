@@ -30,3 +30,9 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 | 3 | de Stadspas Amsterdam | stadspas Amsterdam, Diemen, Weesp · AMSTERDAMPAS2027 | stadspas@amsterdam.nl |
 
 ## Log
+
+- **28-10-2026, 07:55:01** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 1 · de Stadjerspas · stadjerspas@groningen.nl · OK · 01a1814a-7326-72e2-aa72-590f90125f5d
+  - 2 · het Jeugdtegoed van Meedoen in Rotterdam · info@meedoeninrotterdam.nl · OK · 01a1814a-78ea-7b65-a5d8-064877911b96
+  - 3 · de Stadspas Amsterdam · stadspas@amsterdam.nl · OK · 01a1814a-7ea3-7408-a5b8-68b2431e8d9e
+- **28-10-2026, 07:55:05** — klaar: 3/3 verstuurd (OK-regels staan hierboven).

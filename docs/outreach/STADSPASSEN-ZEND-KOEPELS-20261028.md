@@ -29,3 +29,8 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 | 2 | Stichting Leergeld Nederland | koepel 113 stichtingen (Wendy Yu-Tjemmes) | w.tjemmes@leergeld.nl |
 
 ## Log
+
+- **28-10-2026, 07:55:06** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 1 · het Jeugdeducatiefonds · info@jeugdeducatiefonds.nl · OK · 01a1814a-8523-7cca-a2c4-0491847d1d3b
+  - 2 · Stichting Leergeld Nederland · w.tjemmes@leergeld.nl · OK · 01a1814a-8ae3-799f-8a70-0c0ee77deefd
+- **28-10-2026, 07:55:09** — klaar: 2/2 verstuurd (OK-regels staan hierboven).
