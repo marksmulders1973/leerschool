@@ -1,0 +1,1276 @@
+[
+ {
+  "nr": 51,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 4",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welke antwoorden zijn op **de toets** vaak **fout**?",
+  "options": [
+   "Met 'altijd' of 'nooit'",
+   "Met jaartallen en cijfers",
+   "Met namen van personen",
+   "Heel korte antwoorden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Cijfers zijn vaak juiste feiten.",
+   "Namen kunnen kloppen.",
+   "Lengte zegt niets over juistheid."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 52,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welke zin staat **goed** geschreven (directe rede)?",
+  "options": [
+   "Mama zei: 'Kom eten.'",
+   "Mama zei kom eten.",
+   "Mama: zei 'kom eten'.",
+   "'Mama zei kom eten.'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen aanhalingstekens om wat ze zegt.",
+   "Dubbele punt verkeerd geplaatst.",
+   "Hele zin tussen aanhalingstekens, dat klopt niet."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Mama zei: 'Kom eten.'",
+   "simpeler": "Zei + dubbele punt + 'Kom eten.'",
+   "nogSimpeler": "Aanhalingstekens om citaat"
+  }
+ },
+ {
+  "nr": 53,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 27",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "*'Ik vind ___ ijs lekker.'* Welk **bepaald lidwoord** past?",
+  "options": [
+   "het",
+   "de",
+   "een",
+   "die"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het hardop: klinkt 'de ijs' goed?",
+   "'Een' is een onbepaald lidwoord — de vraag zoekt een bepaald lidwoord.",
+   "Aanwijzend, geen lidwoord."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 54,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 45",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "*'Lisa zei **...** ik kom morgen langs.'* Welke leestekens horen op de puntjes?",
+  "options": [
+   "Dubbele punt en aanhalingstekens (: “…”)",
+   "Alleen een komma, geen aanhalingstekens (,)",
+   "Puntkomma en aanhalingstekens (; “…”)",
+   "Geen leestekens, alleen een punt aan het eind"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij iemand die létterlijk iets zegt, is een komma alleen niet genoeg.",
+   "Een puntkomma verbindt twee zinnen — hier kondig je gesproken woorden aan.",
+   "Zonder leestekens zie je niet waar het citaat begint."
+  ],
+  "explanation": "Voor een **citaat** (letterlijke woorden) gebruik je een dubbele punt + aanhalingstekens: Lisa zei: “Ik kom morgen langs.”",
+  "niveaus": null
+ },
+ {
+  "nr": 55,
+  "bron": "leerpaden",
+  "waar": "eetcultuur-nederland-po stap 4 vraag 4",
+  "file": "./eetcultuurNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Naar welke plaats is **Goudse kaas** genoemd?",
+  "options": [
+   "Gouda",
+   "Edam",
+   "Leerdam",
+   "Alkmaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Edam heeft zijn eigen kaas: de Edammer met het rode laagje.",
+   "Leerdam hoort bij de Leerdammer met de gaten.",
+   "Alkmaar heeft een beroemde kaasmarkt, maar er is geen kaas naar de stad genoemd."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 56,
+  "bron": "leerpaden",
+  "waar": "eetcultuur-nederland-po stap 4 vraag 9",
+  "file": "./eetcultuurNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Welke **drank** drinken NL-kinderen vaak bij ontbijt?",
+  "options": [
+   "Melk of jus d'orange",
+   "Cola of energiedrank",
+   "Zwarte koffie of espresso",
+   "Warme soep of bouillon"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel suiker en soms cafeïne — geven ouders dat bij het ontbijt?",
+   "Koffie is niet voor kinderen.",
+   "Soep eet je in Nederland meestal bij het avondeten."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 57,
+  "bron": "leerpaden",
+  "waar": "emoties-sociaal-po stap 1 vraag 2",
+  "file": "./emotiesSocialePo.js",
+  "level": "groep6-8",
+  "q": "Wat te doen bij **boosheid**?",
+  "options": [
+   "Stop, tel tot 10, diep ademen",
+   "Direct heel hard schreeuwen",
+   "Slaan of iets kapot gooien",
+   "Het wegstoppen en niets doen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Word je daar rustiger van, of juist bozer?",
+   "Daarmee doe je iemand of iets pijn.",
+   "Wegstoppen helpt niet. Wat kun je wél doen?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 58,
+  "bron": "leerpaden",
+  "waar": "emoties-sociaal-po stap 4 vraag 6",
+  "file": "./emotiesSocialePo.js",
+  "level": "groep6-8",
+  "q": "Wat doe je als **getuige van pesten**?",
+  "options": [
+   "Spreek uit + help + vertel volwassene",
+   "Kijk weg en loop gewoon door",
+   "Lach mee met de rest van de klas",
+   "Doe mee, dan ben jij veilig"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Als iedereen wegkijkt, gaat het pesten gewoon door. Wat kun jij doen?",
+   "Hoe voelt het gepeste kind als iedereen lacht?",
+   "Dan maak je het voor het andere kind erger."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 59,
+  "bron": "leerpaden",
+  "waar": "evolutie-mens-po stap 4 vraag 5",
+  "file": "./evolutieMensPo.js",
+  "level": "groep6-8",
+  "q": "Wat bedoelen wetenschappers met de **vijfde massa-uitsterving**?",
+  "options": [
+   "Het einde van de dino's",
+   "De uitsterving door de mens nu",
+   "Het einde van de mammoeten",
+   "Eén vulkaanuitbarsting"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die noemen wetenschappers de 6e.",
+   "Mammoeten stierven veel later uit, niet in één wereldramp.",
+   "Eén vulkaan is te klein voor zo'n wereldramp."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 60,
+  "bron": "leerpaden",
+  "waar": "evolutie-mens-po stap 4 vraag 6",
+  "file": "./evolutieMensPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel procent van ons **DNA** delen we ongeveer met de chimpansee?",
+  "options": [
+   "98,8%",
+   "10%",
+   "70%",
+   "50%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel meer — de chimpansee is onze dichtste verwant.",
+   "Meer — zelfs met een muis delen we meer dan dat.",
+   "Meer — met de meeste zoogdieren delen we al méér dan de helft."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 61,
+  "bron": "leerpaden",
+  "waar": "feit-mening-po stap 2 vraag 8",
+  "file": "./feitMeningPo.js",
+  "level": "groep7-8",
+  "q": "Welke zin over de dierentuin is een mening?",
+  "options": [
+   "De dierentuin is het fijnste uitje.",
+   "In een dierentuin wonen dieren.",
+   "Een giraf heeft een lange nek.",
+   "Een olifant heeft een slurf."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat kun je zien als je er bent.",
+   "Kun je dat nakijken door naar een giraf te kijken?",
+   "Dat kun je zien en nakijken."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek de zin waarover mensen het oneens kunnen zijn. De andere zinnen kun je zien en nakijken.",
+   "simpeler": "Welke zin zegt wat iemand van een uitje vindt?",
+   "nogSimpeler": "Vindt iedereen de dierentuin het fijnst?"
+  }
+ },
+ {
+  "nr": 62,
+  "bron": "leerpaden",
+  "waar": "feiten-details-opzoeken-po stap 4 vraag 3",
+  "file": "./feitenDetailsOpzoekenPo.js",
+  "level": "groep6-8",
+  "q": "Hoe lang duurt de speurtocht ongeveer?",
+  "options": [
+   "45 minuten",
+   "30 minuten",
+   "Drie uur",
+   "Een kwartier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees het woord achter 'drie' precies: drie wát? Hoeveel minuten is dat?",
+   "In de folder staat het woord 'drie' — maar drie wát? Lees het hele woord dat erachter staat.",
+   "Eén kwartier is 15 minuten. Hoeveel kwartieren noemt de folder?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek in de folder hoe lang de speurtocht duurt. Weet je hoeveel minuten één kwartier is?",
+   "simpeler": "De folder noemt een aantal kwartieren. Eén kwartier is 15 minuten — reken uit hoeveel minuten dat samen is.",
+   "nogSimpeler": "Lees onder het kopje 'Speurtocht' hoeveel kwartieren de tocht duurt en tel per kwartier 15 minuten."
+  }
+ },
+ {
+  "nr": 63,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 5 vraag 9",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Je krijgt een mail: **'Speciaal voor jou!'** Wat is meestal waar?",
+  "options": [
+   "Heel veel mensen krijgen dezelfde mail",
+   "Alleen jij krijgt deze mail",
+   "Je krijgt echt een extra lage prijs",
+   "Je hebt een prijs gewonnen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoeveel klanten heeft een winkel?",
+   "Hoeveel mensen krijgen die 'speciale' prijs, denk je?",
+   "Heb je ergens aan meegedaan? Waarom zou je dan gewonnen hebben?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 64,
+  "bron": "leerpaden",
+  "waar": "folder-bon-advertentie-po stap 1 vraag 9",
+  "file": "./folderBonAdvertentiePo.js",
+  "level": "groep7-8",
+  "q": "Onderaan een kassabon staat:\n• Totaal: €7,26\n• Waarvan btw: €1,26\n\nHoeveel heb je in totaal betaald?",
+  "options": [
+   "€7,26",
+   "€8,52",
+   "€6,00",
+   "€1,26"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees in de uitleg nog eens na waar de btw zit.",
+   null,
+   "Dat is maar een deel van het bedrag."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Je betaalt het totaal: €7,26. De btw zit daar al in.",
+   "simpeler": "Komt de btw er nog bij, of zit hij al in het totaal? Hij zit er al in.",
+   "nogSimpeler": "Welk bedrag staat bij 'Totaal'?"
+  }
+ },
+ {
+  "nr": 65,
+  "bron": "leerpaden",
+  "waar": "geld-rekenen stap 3 vraag 3",
+  "file": "./geldRekenen.js",
+  "level": "groep5-8",
+  "q": "Een stuk speelgoed kost **€ 17,40**. Je betaalt met **twee biljetten van € 10**. Hoeveel **wisselgeld** krijg je?",
+  "options": [
+   "€ 2,60",
+   "€ 2,40",
+   "€ 3,60",
+   "€ 7,60"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig. Tel nog eens vooruit vanaf € 17,40 tot het bedrag dat je betaalt.",
+   "Tel vooruit vanaf € 17,40 naar € 18. Hoeveel cent is dat?",
+   "Te veel. Tel je antwoord op bij € 17,40: kom je dan uit op wat je betaalde?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Hoeveel geld geef je in totaal? Tel daarna vooruit vanaf € 17,40.",
+   "simpeler": "Twee biljetten van € 10 is € 20. Tel vooruit: van € 17,40 naar € 18, en dan naar € 20.",
+   "nogSimpeler": "€ 2,60"
+  }
+ },
+ {
+  "nr": 66,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 2",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "level": "groep7-8",
+  "q": "In een rij getallen is **5** het kleinste en **9** het grootste getal. Welk getal kan **nooit** het gemiddelde van die rij zijn?",
+  "options": [
+   "3",
+   "6",
+   "7",
+   "8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kun je twee getallen tussen 5 en 9 bedenken met 6 als gemiddelde?",
+   "Kun je getallen tussen 5 en 9 bedenken met 7 als gemiddelde?",
+   "Kun je twee getallen tussen 5 en 9 bedenken met 8 als gemiddelde?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een gemiddelde ligt altijd tussen het kleinste en het grootste getal van de rij.",
+   "simpeler": "Het gemiddelde ligt dus tussen 5 en 9. Welk getal ligt daar niet tussen?",
+   "nogSimpeler": "3 is kleiner dan 5, dus 3 kan nooit het gemiddelde zijn."
+  }
+ },
+ {
+  "nr": 67,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 5",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "level": "groep7-8",
+  "q": "Over wie zegt het **gemiddelde** rapportcijfer van een klas iets?",
+  "options": [
+   "Over de hele klas samen",
+   "Over het kind met het hoogste cijfer",
+   "Over het kind met het laagste cijfer",
+   "Over het kind met het middelste cijfer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Telt alleen dat ene kind mee als je een gemiddelde uitrekent?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Over de hele klas samen.",
+   "simpeler": "Alle cijfers tellen mee. Dus het gemiddelde zegt iets over de hele klas.",
+   "nogSimpeler": "De hele klas"
+  }
+ },
+ {
+  "nr": 68,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 3",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "level": "groep5-6",
+  "q": "Wat is een **gracht** bij een kasteel?",
+  "options": [
+   "water rondom het kasteel",
+   "de grote eetzaal",
+   "de hoogste toren",
+   "de stal voor de paarden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar werd gegeten — dat is binnen.",
+   "Die stak de lucht in — een gracht ligt juist laag.",
+   "Daar stonden de paarden."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een gracht is water om het kasteel.",
+   "simpeler": "Een sloot rondom, tegen vijanden.",
+   "nogSimpeler": "water rondom"
+  }
+ },
+ {
+  "nr": 69,
+  "bron": "leerpaden",
+  "waar": "grafieken-lezen-po stap 6 vraag 16",
+  "file": "./grafiekenLezenPo.js",
+  "level": "groep6-8",
+  "q": "Welke grafiek past het best bij **'temperatuur per uur'**?",
+  "options": [
+   "Lijngrafiek",
+   "Taartdiagram",
+   "Staafdiagram",
+   "Tijdlijn"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zijn de temperaturen delen van één geheel?",
+   "Dat kan, maar wat laat beter zien hoe het van uur tot uur verandert?",
+   "Een tijdlijn zet gebeurtenissen op volgorde. Zie je daarop ook hoe warm het was?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 70,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-2-nieuwkomers stap 3 vraag 1",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "De juf helpt een ander kind. Je hebt een vraag. Wat doe je eerst?",
+  "options": [
+   "Ik kijk zelf nog een keer.",
+   "Ik roep: juf, juf!",
+   "Ik stop met werken.",
+   "Ik ga huilen."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Misschien vind je het antwoord zelf.",
+   "Misschien vind je het antwoord zelf.",
+   "Misschien vind je het antwoord zelf."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 71,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-nieuwkomers stap 2 vraag 2",
+  "file": "./inDeKlasNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Het is 10 uur. De bel gaat. Wat betekent dat?",
+  "options": [
+   "De pauze begint of is klaar.",
+   "Je moet naar huis.",
+   "Er is brand.",
+   "Je krijgt eten."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, naar huis ga je pas als de school uit is. De bel zegt: nu begint of eindigt iets.",
+   "Nee, bij brand gaat er een alarm. Dat klinkt anders. De bel zegt: nu begint of eindigt iets.",
+   "Nee, de bel zegt niet dat je eten krijgt. De bel zegt: nu begint of eindigt iets."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 72,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-nieuwkomers stap 2 vraag 3",
+  "file": "./inDeKlasNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Je jas hangt aan de…",
+  "options": [
+   "kapstok",
+   "tafel",
+   "raam",
+   "bord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, aan een tafel zit je. Daar hang je geen jas aan. Jassen hangen aan een haak.",
+   "Nee, door een raam kijk je naar buiten. Jassen hangen aan een haak.",
+   "Nee, op het bord schrijft de juf. Jassen hangen aan een haak."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 73,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 1 vraag 2",
+  "file": "./industrieleRevolutiePo.js",
+  "level": "groep6-8",
+  "q": "Hoe werkten de meeste mensen **vóór** de Industriële Revolutie?",
+  "options": [
+   "Als boer of als ambachtsman thuis",
+   "In een grote fabriek",
+   "Als zeeman op een schip",
+   "Op een kantoor in de stad"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Fabrieken kwamen pas mét de Industriële Revolutie.",
+   "Dat deden sommige mensen, maar de meesten werkten ergens anders.",
+   "Kantoorbanen kwamen pas veel later."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 74,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 3 vraag 1",
+  "file": "./industrieleRevolutiePo.js",
+  "level": "groep6-8",
+  "q": "Hoe lang duurde een werkdag in een **vroege fabriek**?",
+  "options": [
+   "12 tot 16 uur",
+   "6 tot 8 uur",
+   "8 tot 10 uur",
+   "18 tot 20 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zo werken veel mensen nu — hoe zwaar was het toen?",
+   "Kijk in de les: hoeveel uur stonden arbeiders aan de machine?",
+   "Dan bleef er bijna geen tijd over om te slapen — kijk in de les."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Vroege fabriek: 12-16 uur per dag werken.",
+   "simpeler": "Veel langer dan nu: tweemaal zo lang als jouw schooldag.",
+   "nogSimpeler": "12-16 uur per dag."
+  }
+ },
+ {
+  "nr": 75,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 1 vraag 2",
+  "file": "./informatiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Je zoekt **waar Kazachstan ligt** op de wereldkaart. Welke bron?",
+  "options": [
+   "Atlas",
+   "Woordenboek",
+   "Encyclopedie",
+   "Krant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Woordenboek heeft geen kaarten.",
+   "Een encyclopedie vertelt óver het land. Waar vind je een kaart?",
+   "Krant heeft geen wereldkaarten."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Waar ligt = atlas.",
+   "simpeler": "Voor kaarten en ligging → atlas.",
+   "nogSimpeler": "Atlas"
+  }
+ },
+ {
+  "nr": 76,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 1 vraag 7",
+  "file": "./informatiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Je snapt de uitleg over **breuken** niet goed en wilt het nog eens **op jouw niveau** lezen. Welke bron past het best?",
+  "options": [
+   "Je rekenboek van school",
+   "Atlas",
+   "Krant",
+   "Wetenschappelijk artikel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staat er rekenuitleg in een boek met kaarten?",
+   "Is breuken nieuws van vandaag?",
+   "Zo'n artikel is vaak moeilijk om te lezen. Is dat op jouw niveau?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Uitleg over schoolstof op jouw niveau vind je in je eigen schoolboek.",
+   "simpeler": "Snap je iets van rekenen niet? Kijk dan in je rekenboek, dat is geschreven voor jouw groep.",
+   "nogSimpeler": "Je rekenboek."
+  }
+ },
+ {
+  "nr": 77,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 1 vraag 7",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Welke zin heeft **geen** interpunctie?",
+  "options": [
+   "ik ga morgen naar het strand",
+   "Ik ga morgen naar het strand.",
+   "Ga jij morgen naar het strand?",
+   "Morgen ga ik naar het strand."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar de eerste letter en naar het eind van de zin.",
+   null,
+   "Begint deze zin met een hoofdletter? Staat er een teken aan het eind?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "ik ga morgen naar het strand",
+   "simpeler": "Die zin begint met een kleine letter en heeft geen punt aan het eind.",
+   "nogSimpeler": "Geen hoofdletter, geen punt."
+  }
+ },
+ {
+  "nr": 78,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 4 vraag 7",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Waar hoort de komma in: *'Als de bel gaat ruimen we op.'*?",
+  "options": [
+   "Na 'gaat'",
+   "Na 'Als'",
+   "Na 'bel'",
+   "Na 'ruimen'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin hardop. Waar stop je even?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De zin heeft twee delen. De komma komt waar het eerste deel stopt.",
+   "simpeler": "Het eerste deel begint met 'Als'. Na welk woord is dat deel klaar?",
+   "nogSimpeler": "De komma komt na 'gaat': Als de bel gaat, ruimen we op."
+  }
+ },
+ {
+  "nr": 79,
+  "bron": "leerpaden",
+  "waar": "kaartlezen-po stap 3 vraag 5",
+  "file": "./kaartlezenPo.js",
+  "level": "groep5-8",
+  "q": "Een kaart heeft schaal **1:1.000.000**. Hoe ver is 1 cm op de kaart in het echt?",
+  "options": [
+   "10 km",
+   "1 km",
+   "100 km",
+   "1.000 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat klopt bij schaal 1:100.000. Hier staat een getal dat tien keer zo groot is.",
+   "Dat is tien keer te veel. 1.000.000 cm: deel door 100 voor meters, dan door 1.000 voor kilometers.",
+   "Dat is honderd keer te veel. Reken 1.000.000 cm stap voor stap om."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "10 km.",
+   "simpeler": "Bij 1:100.000 is 1 cm = 1 km. 1:1.000.000 is tien keer zo veel: 10 km.",
+   "nogSimpeler": "10 km"
+  }
+ },
+ {
+  "nr": 80,
+  "bron": "leerpaden",
+  "waar": "kaartlezen-po stap 5 vraag 20",
+  "file": "./kaartlezenPo.js",
+  "level": "groep5-8",
+  "q": "Welke richting wijst de **rode kant** van een kompasnaald?",
+  "options": [
+   "Noord",
+   "Zuid",
+   "Oost",
+   "West"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar wijst de andere, witte kant van de naald heen.",
+   "Een kompasnaald wijst nooit naar oost; hij wijst naar een pool.",
+   "Een kompasnaald wijst nooit naar west; hij wijst naar een pool."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 81,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 3 vraag 5",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is het **eerstvolgende schrikkeljaar** na 2028?",
+  "options": [
+   "2032",
+   "2030",
+   "2029",
+   "2034"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is dit jaartal deelbaar door 4?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een schrikkeljaar is een jaartal dat je precies door 4 kunt delen. Probeer de jaren na 2028 een voor een.",
+   "simpeler": "Elke 4 jaar is er een schrikkeljaar. 2028 + 4 = 2032.",
+   "nogSimpeler": "2032"
+  }
+ },
+ {
+  "nr": 82,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 6 vraag 5",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Op welke datum is **Bevrijdingsdag**?",
+  "options": [
+   "5 mei",
+   "4 mei",
+   "27 april",
+   "8 mei"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is Dodenherdenking.",
+   "Dat is Koningsdag.",
+   "Op 8 mei vieren andere Europese landen de bevrijding. Nederland heeft een eigen datum."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 83,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 3 vraag 2",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "Wat is **half 5** in 24-uurs format ('s middags)?",
+  "options": [
+   "16:30",
+   "17:30",
+   "04:30",
+   "15:30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is half 6.",
+   "04:30 is 's nachts, niet 's middags.",
+   "Dat is half 4."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "16:30.",
+   "simpeler": "Half 5 = 30 min vóór 5 = uur 4 + 30 min = 04:30. 's Middags +12 = 16:30.",
+   "nogSimpeler": "16:30"
+  }
+ },
+ {
+  "nr": 84,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 8 vraag 3",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "Hoe schrijf je **kwart voor 7** 's avonds in cijfers op een 24-uursklok?",
+  "options": [
+   "18:45",
+   "06:45",
+   "19:15",
+   "18:15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "06:45 is 's ochtends.",
+   "Dat is kwart over 7.",
+   "Dat is kwart over 6."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "18:45.",
+   "simpeler": "Kwart voor 7 = 6:45. 's Avonds: 6+12=18 → 18:45.",
+   "nogSimpeler": "18:45"
+  }
+ },
+ {
+  "nr": 85,
+  "bron": "leerpaden",
+  "waar": "korte-teksten-snappen-g4 stap 1 vraag 6",
+  "file": "./korteTekstenSnappenG4.js",
+  "level": "groep4-5",
+  "q": "*De juf schrijft een woord op het bord.*\n\n**Wie** schrijft er op het bord?",
+  "options": [
+   "de juf",
+   "de meester",
+   "een kind",
+   "het bord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin nog eens: staat er juf of meester?",
+   "Staat die in de zin?",
+   "Daar schrijft iemand óp — maar wie schrijft?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De juf schrijft op het bord.",
+   "simpeler": "Wie schrijft er? De…",
+   "nogSimpeler": "de juf"
+  }
+ },
+ {
+  "nr": 86,
+  "bron": "leerpaden",
+  "waar": "korte-teksten-snappen-g4 stap 4 vraag 9",
+  "file": "./korteTekstenSnappenG4.js",
+  "level": "groep4-5",
+  "q": "*Eerst doet Tom zijn sokken aan. Daarna doet hij zijn schoenen aan. Ten slotte strikt hij zijn veters.*\n\nWat doet Tom **vóór** hij zijn schoenen aandoet?",
+  "options": [
+   "zijn sokken aandoen",
+   "zijn veters strikken",
+   "zijn jas aandoen",
+   "zijn tas pakken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat doet hij juist ná de schoenen.",
+   "Staat dat in de tekst?",
+   "Staat dat in de tekst?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Vóór de schoenen: sokken aan.",
+   "simpeler": "… → schoenen → veters. Wat staat vooraan?",
+   "nogSimpeler": "sokken"
+  }
+ },
+ {
+  "nr": 87,
+  "bron": "leerpaden",
+  "waar": "kritisch-denken-po stap 4 vraag 2",
+  "file": "./kritischDenkenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **bevestigingsbias**?",
+  "options": [
+   "Vooral info zoeken die jou gelijk geeft",
+   "Steeds twijfelen aan je eigen idee",
+   "Iets geloven omdat een bekend iemand het zegt",
+   "Iets doen omdat iedereen het doet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij deze denkfout twijfel je juist weinig aan jezelf.",
+   "Dat is een andere denkfout: daar gaat het om wie iets zegt.",
+   "Dat is een andere denkfout: daar gaat het om wat de groep doet."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 88,
+  "bron": "leerpaden",
+  "waar": "lange-toets-teksten-g8-po stap 2 vraag 10",
+  "file": "./langeToetsTekstenG8Po.js",
+  "level": "groep8",
+  "q": "Wat klopt volgens de alinea over het vrijlaten?",
+  "options": [
+   "Honderden mensen komen kijken hoe de zeehonden teruggaan",
+   "Alle zeehonden kijken nog één keer om",
+   "De zeehonden worden met een boot ver de zee op gebracht",
+   "Het vrijlaten gebeurt stil, zonder publiek"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de laatste zin van die alinea precies: staat daar 'alle' of iets anders?",
+   "Hoe komen de zeehonden in de tekst bij de golven? Met een boot, of op een andere manier?",
+   "Lees de eerste zin van die alinea: is het stil, of is het een feest met publiek?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Ga naar de alinea over het vrijlaten en check elke optie.",
+   "simpeler": "Wie komen er kijken bij het vrijlaten? En staat er 'alle' of 'sommige' bij het omkijken?",
+   "nogSimpeler": "In de tekst komen honderden mensen kijken."
+  }
+ },
+ {
+  "nr": 89,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 5",
+  "file": "./leestekensHoofdlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welk leesteken hoort hier? *Hoe laat begint de film___*",
+  "options": [
+   "?",
+   ".",
+   "!",
+   ","
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin hardop. Vertel je iets, of wil je iets weten?",
+   "Het is geen uitroep.",
+   "Een komma sluit geen zin af."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Begint de zin met wie, wat, waar, wanneer, hoe of waarom? Wat voor soort zin is het dan?",
+   "simpeler": "Iemand wil iets weten (hoe laat). Welk teken hoort bij een vraag?",
+   "nogSimpeler": "Wat zet je achter een vraag?"
+  }
+ },
+ {
+  "nr": 90,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 2 vraag 2",
+  "file": "./matenEenheden.js",
+  "level": "groep6-8",
+  "q": "Een afstand van **2,5 km** is hoeveel **m**?",
+  "options": [
+   "2500",
+   "250",
+   "25",
+   "25000"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — hoeveel meter zitten er in 1 km, en hoe gebruik je dat voor 2,5 km?",
+   "Dat zou maar 25 m zijn — veel te kort voor 2,5 km. Hoeveel meter is 1 km?",
+   "Te veel — heb je per ongeluk × 10.000 gedaan?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "2500.",
+   "simpeler": "1 km = 1000 m. 2,5 × 1000 = 2500 m.",
+   "nogSimpeler": "2500"
+  }
+ },
+ {
+  "nr": 91,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 3 vraag 5",
+  "file": "./matenEenheden.js",
+  "level": "groep6-8",
+  "q": "**3 g** is hoeveel **mg**?",
+  "options": [
+   "3000",
+   "300",
+   "30",
+   "30.000"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — bij gewicht is de stap g → mg × 1000.",
+   null,
+   "Te veel — heb je een nul te veel?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "3000.",
+   "simpeler": "1 g = 1000 mg. 3 × 1000 = 3000 mg.",
+   "nogSimpeler": "3000"
+  }
+ },
+ {
+  "nr": 92,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 7 vraag 6",
+  "file": "./matenEenheden.js",
+  "level": "groep6-8",
+  "q": "Oma gebruikt **250 g** boter, **0,3 kg** suiker en **450 g** meel. Hoeveel **kg** is dat samen?",
+  "options": [
+   "1",
+   "0,7",
+   "1,7",
+   "3,7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — heb je de suiker meegeteld?",
+   null,
+   "Te veel — hoeveel g is 0,3 kg precies?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1 kg.",
+   "simpeler": "0,3 kg = 300 g. 250 + 300 + 450 = 1000 g. Dat is 1 kg.",
+   "nogSimpeler": "1"
+  }
+ },
+ {
+  "nr": 93,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 7 vraag 7",
+  "file": "./matenEenheden.js",
+  "level": "groep6-8",
+  "q": "Noor loopt elke dag **800 m** naar school en **800 m** terug. Hoeveel **km** loopt ze in **5 schooldagen**?",
+  "options": [
+   "8",
+   "4",
+   "1,6",
+   "80"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — loopt ze ook terug naar huis?",
+   "Dat is maar 1 dag.",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "8 km.",
+   "simpeler": "1600 m per dag × 5 = 8000 m. Dat is 8 km.",
+   "nogSimpeler": "8"
+  }
+ },
+ {
+  "nr": 94,
+  "bron": "leerpaden",
+  "waar": "maten-omtrek-oppervlakte-po stap 4 vraag 6",
+  "file": "./matenOmtrekOppervlaktePo.js",
+  "level": "groep6-8",
+  "q": "Een doos is **10 cm lang**, **6 cm breed** en **5 cm hoog**. Wat is de **inhoud**?",
+  "options": [
+   "300 cm³",
+   "21 cm³",
+   "60 cm³",
+   "3000 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Moet je de maten optellen of vermenigvuldigen?",
+   "Heb je alle drie de maten gebruikt?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "10 × 6 × 5 = 300 cm³.",
+   "simpeler": "10 × 6 = 60. Daarna 60 × 5 = 300 cm³.",
+   "nogSimpeler": "Hoeveel is 10 keer 6? En dat nog eens keer 5?"
+  }
+ },
+ {
+  "nr": 95,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 1 vraag 6",
+  "file": "./meetkundeBouwsels.js",
+  "level": "groep6-8",
+  "q": "Welke van deze is het **grootst**?",
+  "options": [
+   "1 m³",
+   "900 liter",
+   "500 dm³",
+   "800.000 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken alles om naar liters. Hoeveel liter past er in een kubus van 1 m bij 1 m bij 1 m?",
+   "1 dm³ is 1 liter, dus 500 dm³ is 500 liter. Hoeveel liter is 1 m³?",
+   "Een groot getal is nog geen grote inhoud. Hoeveel cm³ gaan er in 1 liter?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Reken alles om naar liters. 1 dm³ is 1 liter en 1000 cm³ is ook 1 liter.",
+   "simpeler": "500 dm³ = 500 liter en 800.000 cm³ = 800 liter. Hoeveel liter is 1 m³? Vergelijk dan alle vier.",
+   "nogSimpeler": "1 m³"
+  }
+ },
+ {
+  "nr": 96,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 4 vraag 7",
+  "file": "./meetkundeBouwsels.js",
+  "level": "groep6-8",
+  "q": "**7000 cm³** = ... dm³?",
+  "options": [
+   "7 dm³",
+   "70 dm³",
+   "700 dm³",
+   "0,7 dm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — hoeveel cm³ zit er in 1 dm³? Deel daardoor.",
+   "Te veel — heb je wel genoeg gedeeld?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "7000 cm³ = 7 dm³.",
+   "simpeler": "In 1 dm³ zit 1000 cm³. 7000 ÷ 1000 = 7. Dus 7 dm³.",
+   "nogSimpeler": "7 dm³"
+  }
+ },
+ {
+  "nr": 97,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 5 vraag 9",
+  "file": "./meetkundeBouwsels.js",
+  "level": "groep6-8",
+  "q": "Een **zandbak** is **2 m** lang, **2 m** breed en wordt **0,5 m** hoog gevuld met zand. Hoeveel **m³** zand is dat?",
+  "options": [
+   "2 m³",
+   "4,5 m³",
+   "4 m³",
+   "1 m³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — heb je opgeteld? Volume is keer.",
+   "Is de hoogte van 0,5 m meegeteld?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "2 × 2 × 0,5 = 2 m³.",
+   "simpeler": "2 × 2 = 4. 4 × 0,5 is de helft van 4 = 2. Dus 2 m³.",
+   "nogSimpeler": "2 m³"
+  }
+ },
+ {
+  "nr": 98,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 6 vraag 16",
+  "file": "./meetkundeBouwsels.js",
+  "level": "groep6-8",
+  "q": "Een **doos** 10 × 10 × 10 cm. Volume?",
+  "options": [
+   "1000 cm³",
+   "100 cm³",
+   "10 cm³",
+   "10.000 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10 × 10 = 100 is één vlak. Welke maat mis je nog?",
+   "10 cm is de lengte van één ribbe. Wat moet je met de drie maten doen?",
+   "Heb je één keer te vaak met 10 vermenigvuldigd? Hoeveel maten heeft de doos?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 99,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 7",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "Een wedstrijd duurt **1,5 uur**. Hoeveel minuten is dat?",
+  "options": [
+   "90 min",
+   "150 min",
+   "60 min",
+   "100 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Let op: je rekent hier alsof een uur 100 minuten heeft — het zijn er maar 60.",
+   "Dat is maar 1 uur — het halve uur telt nog mee.",
+   "Tijd rekent met 60, niet met 100."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1,5 uur = 1 uur en een half uur = 60 + 30 = 90 min.",
+   "simpeler": "Een half uur is 30 minuten. 60 + 30 = 90.",
+   "nogSimpeler": "60 minuten voor het hele uur, plus 30 minuten voor het halve uur — tel ze op."
+  }
+ },
+ {
+  "nr": 100,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 7",
+  "file": "./metenGewichtInhoudTijdPo.js",
+  "level": "groep7-8",
+  "q": "In een kan zit **2 liter** water. Je schenkt **6 bekers van 25 cl** vol. Hoeveel water zit er nog in de kan?",
+  "options": [
+   "50 cl",
+   "150 cl",
+   "175 cl",
+   "194 cl"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is wat je hebt ingeschonken, niet wat er over is.",
+   "Je trok maar 25 cl af. Hoeveel cl zit er in 6 bekers?",
+   "Kun je liters en centiliters zomaar van elkaar aftrekken?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "2 l = 200 cl. 6 × 25 cl = 150 cl. 200 − 150 = ?",
+   "simpeler": "Je schenkt 150 cl in uit een kan van 200 cl.",
+   "nogSimpeler": "200 − 150 = ?"
+  }
+ }
+]

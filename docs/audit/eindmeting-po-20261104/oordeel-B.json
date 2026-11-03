@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 51,
+    "waar": "doorstroomtoets-taal-g8 stap 2 vraag 4",
+    "eigenKeuze": "Met 'altijd' of 'nooit'",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 52,
+    "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+    "eigenKeuze": "Mama zei: 'Kom eten.'",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (\"Mama zei: 'Kom eten.'\")"
+  },
+  {
+    "nr": 53,
+    "waar": "doorstroomtoets-taal-g8 stap 4 vraag 27",
+    "eigenKeuze": "het",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 54,
+    "waar": "doorstroomtoets-taal-g8 stap 4 vraag 45",
+    "eigenKeuze": "Dubbele punt en aanhalingstekens (: “…”)",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 55,
+    "waar": "eetcultuur-nederland-po stap 4 vraag 4",
+    "eigenKeuze": "Gouda",
+    "oordeel": "fout",
+    "reden": "Antwoord staat bijna letterlijk in de vraag: 'Goudse kaas' -> Gouda"
+  },
+  {
+    "nr": 56,
+    "waar": "eetcultuur-nederland-po stap 4 vraag 9",
+    "eigenKeuze": "Melk of jus d'orange",
+    "oordeel": "twijfel",
+    "reden": "Telegramstijl ('NL-kinderen'); afleiders (cola/energiedrank, espresso) absurd, dus raadbaar"
+  },
+  {
+    "nr": 57,
+    "waar": "emoties-sociaal-po stap 1 vraag 2",
+    "eigenKeuze": "Stop, tel tot 10, diep ademen",
+    "oordeel": "twijfel",
+    "reden": "Telegramzin 'Wat te doen bij boosheid?'; afleiders absurd, raadbaar"
+  },
+  {
+    "nr": 58,
+    "waar": "emoties-sociaal-po stap 4 vraag 6",
+    "eigenKeuze": "Spreek uit + help + vertel volwassene",
+    "oordeel": "twijfel",
+    "reden": "Goede optie in telegramstijl met '+' en duidelijk de enige 'nette' keuze; raadbaar"
+  },
+  {
+    "nr": 59,
+    "waar": "evolutie-mens-po stap 4 vraag 5",
+    "eigenKeuze": "Het einde van de dino's",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 60,
+    "waar": "evolutie-mens-po stap 4 vraag 6",
+    "eigenKeuze": "98,8%",
+    "oordeel": "twijfel",
+    "reden": "Enige optie met decimaal (98,8%) valt op; hint '70%: zelfs met een muis delen we meer' is wetenschappelijk wankel"
+  },
+  {
+    "nr": 61,
+    "waar": "feit-mening-po stap 2 vraag 8",
+    "eigenKeuze": "De dierentuin is het fijnste uitje.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 62,
+    "waar": "feiten-details-opzoeken-po stap 4 vraag 3",
+    "eigenKeuze": "45 minuten",
+    "oordeel": "twijfel",
+    "reden": "Folder/tekst niet in de vraag of meting aanwezig (niet te controleren); hints sturen sterk ('drie wát?')"
+  },
+  {
+    "nr": 63,
+    "waar": "financiele-vorming-po stap 5 vraag 9",
+    "eigenKeuze": "Heel veel mensen krijgen dezelfde mail",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 64,
+    "waar": "folder-bon-advertentie-po stap 1 vraag 9",
+    "eigenKeuze": "€7,26",
+    "oordeel": "twijfel",
+    "reden": "Antwoord staat letterlijk in de vraag (Totaal: €7,26 / 'in totaal betaald') - bedoeld als btw-valkuil; niveaus.basis geeft alleen het antwoord; wrongHint bij €6,00 ontbreekt"
+  },
+  {
+    "nr": 65,
+    "waar": "geld-rekenen stap 3 vraag 3",
+    "eigenKeuze": "€ 2,60",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 66,
+    "waar": "gemiddelden-statistiek-po stap 1 vraag 2",
+    "eigenKeuze": "3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 67,
+    "waar": "gemiddelden-statistiek-po stap 1 vraag 5",
+    "eigenKeuze": "Over de hele klas samen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Over de hele klas samen')"
+  },
+  {
+    "nr": 68,
+    "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 3",
+    "eigenKeuze": "water rondom het kasteel",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Een gracht is water om het kasteel')"
+  },
+  {
+    "nr": 69,
+    "waar": "grafieken-lezen-po stap 6 vraag 16",
+    "eigenKeuze": "Lijngrafiek",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 70,
+    "waar": "in-de-klas-2-nieuwkomers stap 3 vraag 1",
+    "eigenKeuze": "Ik kijk zelf nog een keer.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 71,
+    "waar": "in-de-klas-nieuwkomers stap 2 vraag 2",
+    "eigenKeuze": "De pauze begint of is klaar.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 72,
+    "waar": "in-de-klas-nieuwkomers stap 2 vraag 3",
+    "eigenKeuze": "kapstok",
+    "oordeel": "twijfel",
+    "reden": "Alleen 'kapstok' en 'tafel' passen bij 'de' (het bord, het raam) - grammaticaal raadbaar; hints 'jassen hangen aan een haak' omschrijven het antwoord"
+  },
+  {
+    "nr": 73,
+    "waar": "industriele-revolutie-po stap 1 vraag 2",
+    "eigenKeuze": "Als boer of als ambachtsman thuis",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 74,
+    "waar": "industriele-revolutie-po stap 3 vraag 1",
+    "eigenKeuze": "12 tot 16 uur",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('12-16 uur per dag')"
+  },
+  {
+    "nr": 75,
+    "waar": "informatiebronnen-po stap 1 vraag 2",
+    "eigenKeuze": "Atlas",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('Waar ligt = atlas')"
+  },
+  {
+    "nr": 76,
+    "waar": "informatiebronnen-po stap 1 vraag 7",
+    "eigenKeuze": "Je rekenboek van school",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('in je eigen schoolboek')"
+  },
+  {
+    "nr": 77,
+    "waar": "interpunctie-po stap 1 vraag 7",
+    "eigenKeuze": "ik ga morgen naar het strand",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord; strikt genomen is een hoofdletter geen interpunctie"
+  },
+  {
+    "nr": 78,
+    "waar": "interpunctie-po stap 4 vraag 7",
+    "eigenKeuze": "Na 'gaat'",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 79,
+    "waar": "kaartlezen-po stap 3 vraag 5",
+    "eigenKeuze": "10 km",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('10 km.')"
+  },
+  {
+    "nr": 80,
+    "waar": "kaartlezen-po stap 5 vraag 20",
+    "eigenKeuze": "Noord",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 81,
+    "waar": "kalender-rekenen-po stap 3 vraag 5",
+    "eigenKeuze": "2032",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 82,
+    "waar": "kalender-rekenen-po stap 6 vraag 5",
+    "eigenKeuze": "5 mei",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 83,
+    "waar": "klokkijken stap 3 vraag 2",
+    "eigenKeuze": "16:30",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('16:30.'); anglicisme '24-uurs format' (beter: notatie)"
+  },
+  {
+    "nr": 84,
+    "waar": "klokkijken stap 8 vraag 3",
+    "eigenKeuze": "18:45",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('18:45.')"
+  },
+  {
+    "nr": 85,
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 6",
+    "eigenKeuze": "de juf",
+    "oordeel": "twijfel",
+    "reden": "Antwoord staat letterlijk in de vraagtekst; past als allereerste leesbegripvraag maar is erg makkelijk voor groep 4-5"
+  },
+  {
+    "nr": 86,
+    "waar": "korte-teksten-snappen-g4 stap 4 vraag 9",
+    "eigenKeuze": "zijn sokken aandoen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 87,
+    "waar": "kritisch-denken-po stap 4 vraag 2",
+    "eigenKeuze": "Vooral info zoeken die jou gelijk geeft",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 88,
+    "waar": "lange-toets-teksten-g8-po stap 2 vraag 10",
+    "eigenKeuze": "Honderden mensen komen kijken hoe de zeehonden teruggaan",
+    "oordeel": "twijfel",
+    "reden": "Verwijst naar een alinea die niet in de meting staat - niet te controleren"
+  },
+  {
+    "nr": 89,
+    "waar": "leestekens-hoofdletters-po stap 2 vraag 5",
+    "eigenKeuze": "?",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 90,
+    "waar": "maten-eenheden stap 2 vraag 2",
+    "eigenKeuze": "2500",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('2500.')"
+  },
+  {
+    "nr": 91,
+    "waar": "maten-eenheden stap 3 vraag 5",
+    "eigenKeuze": "3000",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('3000.'); notatie inconsistent (3000 vs 30.000)"
+  },
+  {
+    "nr": 92,
+    "waar": "maten-eenheden stap 7 vraag 6",
+    "eigenKeuze": "1",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('1 kg.')"
+  },
+  {
+    "nr": 93,
+    "waar": "maten-eenheden stap 7 vraag 7",
+    "eigenKeuze": "8",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('8 km.')"
+  },
+  {
+    "nr": 94,
+    "waar": "maten-omtrek-oppervlakte-po stap 4 vraag 6",
+    "eigenKeuze": "300 cm³",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent het antwoord voor ('10 × 6 × 5 = 300 cm³')"
+  },
+  {
+    "nr": 95,
+    "waar": "meetkunde-bouwsels stap 1 vraag 6",
+    "eigenKeuze": "1 m³",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 96,
+    "waar": "meetkunde-bouwsels stap 4 vraag 7",
+    "eigenKeuze": "7 dm³",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord ('7000 cm³ = 7 dm³')"
+  },
+  {
+    "nr": 97,
+    "waar": "meetkunde-bouwsels stap 5 vraag 9",
+    "eigenKeuze": "2 m³",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent het antwoord voor ('2 × 2 × 0,5 = 2 m³')"
+  },
+  {
+    "nr": 98,
+    "waar": "meetkunde-bouwsels stap 6 vraag 16",
+    "eigenKeuze": "1000 cm³",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 99,
+    "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 7",
+    "eigenKeuze": "90 min",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent het antwoord voor ('60 + 30 = 90 min')"
+  },
+  {
+    "nr": 100,
+    "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 7",
+    "eigenKeuze": "50 cl",
+    "oordeel": "goed",
+    "reden": ""
+  }
+]

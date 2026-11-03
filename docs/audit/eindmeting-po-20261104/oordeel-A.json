@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 1,
+    "waar": "alfabet-woordenboek-po stap 2 vraag 9",
+    "eigenKeuze": "verder naar achteren",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 2,
+    "waar": "algoritmen-programmeren-po stap 2 vraag 5",
+    "eigenKeuze": "3",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis '0 + 1 + 1 + 1 = 3 punten' geeft alleen het antwoord; wrongHint spreekt van 'doosje' dat niet in de vraag staat"
+  },
+  {
+    "nr": 3,
+    "waar": "basis-grammatica-engels-po stap 3 vraag 4",
+    "eigenKeuze": "that car",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 4,
+    "waar": "begrijpend-lezen-strategie stap 1 vraag 3",
+    "eigenKeuze": "Technisch lezen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis noemt letterlijk 'technisch lezen'; wrongHint verwijst naar 'het rijtje van drie' dat het kind niet ziet"
+  },
+  {
+    "nr": 5,
+    "waar": "begrijpend-lezen-strategie stap 2 vraag 1",
+    "eigenKeuze": "Betogend",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'Overtuigen = betogend.' geeft alleen het antwoord (let op: answer-index is 1, niet 0; antwoord zelf klopt)"
+  },
+  {
+    "nr": 6,
+    "waar": "begrijpend-lezen-strategie stap 6 vraag 4",
+    "eigenKeuze": "Een letterlijke vraag",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 7,
+    "waar": "bekende-boeken-literatuur-po stap 4 vraag 7",
+    "eigenKeuze": "Een jongen reist terug naar de middeleeuwen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis ('kruistocht = middeleeuwen, hoofdpersoon uit onze tijd') wijst de enige passende optie direct aan"
+  },
+  {
+    "nr": 8,
+    "waar": "bekende-boeken-literatuur-po stap 4 vraag 18",
+    "eigenKeuze": "Gewone tekst, zoals een verhaal",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 9,
+    "waar": "bekende-nederlanders-po stap 4 vraag 15",
+    "eigenKeuze": "Argentinië",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 10,
+    "waar": "bekende-wetenschappers-po stap 5 vraag 13",
+    "eigenKeuze": "Thomas Edison",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 11,
+    "waar": "belasting-po stap 3 vraag 3",
+    "eigenKeuze": "€8,26",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 12,
+    "waar": "beroepen-werk-po stap 5 vraag 7",
+    "eigenKeuze": "Drie niveaus van vervolgonderwijs",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is letterlijk de optietekst van het goede antwoord"
+  },
+  {
+    "nr": 13,
+    "waar": "betrouwbaarheid-bronnen-po stap 3 vraag 2",
+    "eigenKeuze": "de informatie is verouderd",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'Oude info kan verouderd zijn' geeft het antwoord, telegramstijl met pijl"
+  },
+  {
+    "nr": 14,
+    "waar": "breuken-po stap 3 vraag 3",
+    "eigenKeuze": "3/4",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 15,
+    "waar": "breuken-po stap 7 vraag 1",
+    "eigenKeuze": "1/8",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is alleen '1/8.'"
+  },
+  {
+    "nr": 16,
+    "waar": "breuken-po stap 7 vraag 13",
+    "eigenKeuze": "⅔",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 17,
+    "waar": "breuken-po stap 7 vraag 16",
+    "eigenKeuze": "4",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 18,
+    "waar": "breuken-po stap 7 vraag 18",
+    "eigenKeuze": "0,75",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 19,
+    "waar": "brief-email-lezen-po stap 1 vraag 1",
+    "eigenKeuze": "Onderaan, bij de naam onder de groet",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 20,
+    "waar": "brief-email-lezen-po stap 1 vraag 6",
+    "eigenKeuze": "Een e-mail heeft bovenaan regels zoals 'Van:' en 'Aan:'",
+    "oordeel": "twijfel",
+    "reden": "goede optie is de langste/meest specifieke; drie wrongHints sturen naar 'boven de aanhef', wat het goede antwoord omschrijft"
+  },
+  {
+    "nr": 21,
+    "waar": "brugklas-orientatie stap 3 vraag 3",
+    "eigenKeuze": "Huiswerk met telefoon en muziek aan",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 22,
+    "waar": "cijferend-rekenen stap 5 vraag 2",
+    "eigenKeuze": "50",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis '9×50=450 → 450÷9=50' rekent het antwoord voor"
+  },
+  {
+    "nr": 23,
+    "waar": "cijferend-rekenen stap 7 vraag 21",
+    "eigenKeuze": "5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 24,
+    "waar": "cito-strategieen-groep8 stap 1 vraag 3",
+    "eigenKeuze": "Het schooladvies heroverwegen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'De school moet het advies opnieuw bekijken' is het antwoord"
+  },
+  {
+    "nr": 25,
+    "waar": "cito-strategieen-groep8 stap 2 vraag 9",
+    "eigenKeuze": "De provincies van Nederland",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 26,
+    "waar": "conclusies-trekken-po stap 3 vraag 5",
+    "eigenKeuze": "Ze wil hem spreken, maar hij reageert niet",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 27,
+    "waar": "continenten-wereld-po stap 4 vraag 8",
+    "eigenKeuze": "14:00",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 28,
+    "waar": "continenten-wereld-po stap 6 vraag 19",
+    "eigenKeuze": "+8 tot +10 uur",
+    "oordeel": "twijfel",
+    "reden": "goede optie is de enige met een bereik (+8 tot +10), raadbaar door vorm; tijdzone Sydney paraat kennen is pittig voor groep 6"
+  },
+  {
+    "nr": 29,
+    "waar": "delen-po stap 4 vraag 8",
+    "eigenKeuze": "5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 30,
+    "waar": "dichten-poezie-rijmen-po stap 4 vraag 4",
+    "eigenKeuze": "Geen vast rijm en geen vaste maat",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 31,
+    "waar": "dienstregeling-roosters-po stap 1 vraag 2",
+    "eigenKeuze": "10 minuten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 32,
+    "waar": "dienstregeling-roosters-po stap 2 vraag 3",
+    "eigenKeuze": "3 keer",
+    "oordeel": "twijfel",
+    "reden": "te makkelijk voor groep 7-8 (drie dagen tellen); onduidelijk of de rest van de week ook in het rooster staat"
+  },
+  {
+    "nr": 33,
+    "waar": "dierenklassen-po stap 5 vraag 1",
+    "eigenKeuze": "Muis",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 34,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 19",
+    "eigenKeuze": "1",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 35,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 39",
+    "eigenKeuze": "7/8",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 36,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 21",
+    "eigenKeuze": "3000 mL",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 37,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 28",
+    "eigenKeuze": "60 cm³",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is alleen '60 cm³.'"
+  },
+  {
+    "nr": 38,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 2",
+    "eigenKeuze": "7,25",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is alleen '7,25.'; wrongHint bij 7 ('zou betekenen alle cijfers waren 7') klopt inhoudelijk niet"
+  },
+  {
+    "nr": 39,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 10",
+    "eigenKeuze": "11:00",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 40,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 30",
+    "eigenKeuze": "€19",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 41,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 14",
+    "eigenKeuze": "46",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 42,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 18",
+    "eigenKeuze": "500 m",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 43,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 9",
+    "eigenKeuze": "15%",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 44,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 12",
+    "eigenKeuze": "Veel informatie kort en overzichtelijk",
+    "oordeel": "twijfel",
+    "reden": "goede optie is telegramzin zonder werkwoord; wrongHint 'laat de hoofdzaken zien' omschrijft het goede antwoord"
+  },
+  {
+    "nr": 45,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 14",
+    "eigenKeuze": "Voorin",
+    "oordeel": "twijfel",
+    "reden": "vraag noemt zelf 'voorin of achterin'; veel te makkelijk voor groep 8 doorstroom-studievaardigheden"
+  },
+  {
+    "nr": 46,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 19",
+    "eigenKeuze": "Saus warm maken",
+    "oordeel": "fout",
+    "reden": "antwoord staat letterlijk in de vraag ('2 = saus warm maken'); wrongHint 'Dat is stap 3, niet 2' wijst bovendien stap 2 aan"
+  },
+  {
+    "nr": 47,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 2",
+    "eigenKeuze": "1",
+    "oordeel": "twijfel",
+    "reden": "vraag zegt al 'waarvan één met vlaggetje' — antwoord bijna letterlijk in de vraag, weinig kaartlezen nodig"
+  },
+  {
+    "nr": 48,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 6",
+    "eigenKeuze": "De maker verdient aan pil X en is dus niet neutraal",
+    "oordeel": "twijfel",
+    "reden": "afleiders absurd/absoluut ('nooit', 'altijd'); goede optie de enige genuanceerde, raadbaar door vorm"
+  },
+  {
+    "nr": 49,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 22",
+    "eigenKeuze": "Zodat je informatie te controleren is",
+    "oordeel": "fout",
+    "reden": "wrongHint bij 'langer lijkt' noemt het goede antwoord: 'controleerbaarheid wel'; afleiders bovendien absurd"
+  },
+  {
+    "nr": 50,
+    "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 16",
+    "eigenKeuze": "boon",
+    "oordeel": "fout",
+    "reden": "het rijtje staat al alfabetisch, dus 'direct na boom' is gewoon het volgende woord in de vraag: antwoord staat in de vraag, alfabetiseren wordt niet getoetst"
+  }
+]

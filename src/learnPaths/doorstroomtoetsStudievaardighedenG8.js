@@ -2272,10 +2272,11 @@ const steps = [
         },
       },
       {
-        q: "Stappenplan **eten klaarmaken**: 1 = spaghetti koken, 2 = saus warm maken, 3 = opscheppen. Welke stap komt **na** spaghetti koken?",
+        q: "Lees dit recept: 'Schep **tot slot** alles op een bord. Je **begint** met het koken van de spaghetti. **Als de spaghetti klaar is**, maak je de saus warm.' Wat doe je als **tweede**?",
         options: ["Saus warm maken", "Opscheppen", "Spaghetti koken", "Tafel dekken"],
         answer: 0,
-        wrongHints: [null, "Dat is stap 3, niet 2.", "Dat is stap 1 zelf. Wat komt erna?", "Tafel dekken staat niet in dit stappenplan. Kijk naar de nummers."],
+        wrongHints: [null, "Deze stap staat wel als eerste in de tekst, maar 'tot slot' betekent: als allerlaatste.", "Bij deze stap staat 'je begint met'. Dat is de eerste stap. Welk woord vertelt wat daarna komt?", "Tafel dekken staat niet in dit recept. Kijk alleen naar de stappen in de tekst en de volgordewoorden."],
+        explanation: "Let op de **volgordewoorden**, niet op de plek in de tekst: 'je begint met' = spaghetti koken, 'als de spaghetti klaar is' = **saus warm maken**, 'tot slot' = opscheppen.",
       },
       {
         q: "Tabel toont **scores 6, 7, 4, 9**. Wat is het **bereik** (verschil hoogste − laagste)?",
@@ -3026,9 +3027,9 @@ const steps = [
       {
         q: "Waarom zet je onderaan je werkstuk een **bronnenlijst**?",
         ref: "1F",
-        options: ['Zodat je informatie te controleren is', 'Omdat het werkstuk dan langer lijkt', 'Omdat de plaatjes dan mooier worden', 'Het is eigenlijk nergens voor nodig'],
+        options: ['Zodat de lezer je informatie kan nagaan', 'Zodat de lezer ziet hoe lang je eraan werkte', 'Zodat de juf weet welke boeken terug moeten', 'Zodat je die teksten letterlijk mag overnemen'],
         answer: 0,
-        wrongHints: [null, "Lengte is niet het doel — controleerbaarheid wel.", "Een bronnenlijst verandert niets aan plaatjes.", "Het is juist een teken van goed onderzoek."],
+        wrongHints: [null, "Aan een lijst met titels en websites zie je niet hoeveel tijd iemand aan een werkstuk besteedde. Wat kan een lezer wél met die titels en websites?", "Een bronnenlijst is niet voor het terugbrengen van boeken. Hij is voor iedereen die je werkstuk leest. Wat heeft die lezer eraan?", "Ook met een bronnenlijst schrijf je de informatie in je eigen woorden op. Letterlijk overnemen mag dus niet zomaar."],
         explanation: "Met een **bronnenlijst** kan de lezer jouw informatie controleren — zo laat je zien dat je werk klopt.",
       },
       {
@@ -3380,12 +3381,12 @@ const steps = [
         explanation: "Nummers = **verschillende betekenissen**. Kies de betekenis die past bij de zin waarin je het woord tegenkwam.",
       },
       {
-        q: "Welk woord komt **direct na** 'boom' in dit alfabetische rijtje: 'boom', 'boon', 'boor', 'boot'?",
+        q: "Je zet deze woorden op alfabetische volgorde: 'boot', 'boom', 'boor', 'boon'. Welk woord komt dan **direct na** 'boom'?",
         ref: "1F",
         options: ["boon", "boot", "boor", "boom"],
         answer: 0,
-        wrongHints: [null, "De t komt pas ná een paar andere letters.", "Er zit alfabetisch nog een woord tussen.", "Dat is het woord zélf."],
-        explanation: "Vergelijk de vierde letter: m → n → r → t. Direct na boom komt **boon**.",
+        wrongHints: [null, "Kijk naar de vierde letter. De t komt in het alfabet pas ná een paar andere letters.", "Kijk naar de vierde letter. Er zit alfabetisch nog een woord tussen 'boom' en dit woord.", "Dat is het woord zélf. Welk woord komt erna?"],
+        explanation: "De eerste drie letters zijn bij alle woorden 'boo'. Vergelijk daarom de vierde letter: m → n → r → t. Op volgorde: boom, boon, boor, boot. Direct na boom komt dus **boon**.",
       },
       {
         q: "Waarvoor gebruik je het **register van een atlas**?",

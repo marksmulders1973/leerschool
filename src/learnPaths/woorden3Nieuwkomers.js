@@ -21,7 +21,7 @@ const deel1 = [
   vg("Welke kleur heeft chocola?", ["Bruin.", "Groen.", "Roze.", "Wit."], "Denk aan een reep chocola."),
   vg("Welke kleur heeft een olifant?", ["Grijs.", "Geel.", "Paars.", "Rood."], "Een olifant is niet vrolijk gekleurd."),
   vg("Rood en blauw samen. Welke kleur krijg je?", ["Paars.", "Groen.", "Bruin.", "Wit."], "Meng rood met blauw."),
-  vg("Welke kleur heeft een varken?", ["Roze.", "Blauw.", "Zwart.", "Groen."], "Een varken is lichtrood."),
+  vg("Welke kleur heeft een varken?", ["Roze.", "Blauw.", "Zwart.", "Groen."], "Denk aan de kleur van een varken. Welke kleur is dat?"),
   vg("Het is nacht. Welke kleur heeft de lucht?", ["Zwart.", "Geel.", "Roze.", "Wit."], "In de nacht is het donker."),
 ];
 
@@ -35,8 +35,8 @@ const deel2 = [
 
 const deel3 = [
   vg("De school is naast je huis. Is de school ver weg of dichtbij?", ["Dichtbij.", "Ver weg.", "Hoog.", "Leeg."], "Naast je huis = niet ver."),
-  vg("Leg het boek op de tafel. Waar is het boek nu?", ["Het boek ligt erop.", "Het boek ligt eruit.", "Het boek ligt ver weg.", "Het boek is weg."], "Op de tafel = erop."),
-  vg("Pak de pen uit je etui. Wat doe je met de pen?", ["Ik haal de pen eruit.", "Ik leg de pen erop.", "Ik gooi de pen weg.", "Ik eet de pen."], "Uit het etui = eruit."),
+  vg("Leg het boek op de tafel. Waar is het boek nu?", ["Het boek ligt erop.", "Het boek ligt eruit.", "Het boek ligt ver weg.", "Het boek is weg."], "Het boek ligt op de tafel. Welk woord zegt: op iets?"),
+  vg("Pak de pen uit je etui. Wat doe je met de pen?", ["Ik haal de pen eruit.", "Ik leg de pen erop.", "Ik gooi de pen weg.", "Ik eet de pen."], "Je pakt de pen uit het etui. Welk woord zegt: uit iets?"),
   vg("Je eet de helft van je appel. Wat heb je nog?", ["Een halve appel.", "Een hele appel.", "Twee appels.", "Geen appel."], "De helft = half."),
   vg("Hoeveel dagen heeft een week?", ["Zeven.", "Zes.", "Vijf.", "Tien."], "Maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag."),
   vg("Tel: vier, vijf, … Welk getal komt nu?", ["Zes.", "Zeven.", "Drie.", "Tien."], "Na vijf komt één meer."),
@@ -51,11 +51,11 @@ const deel4 = [
 ];
 
 const deel5 = [
-  vg("Je weet het antwoord niet meteen. Wat doe je?", ["Ik denk even na.", "Ik ga huilen.", "Ik stop.", "Ik roep: weet ik niet!"], "Neem even de tijd."),
-  vg("Je wilt de juf iets over je weekend vertellen. Wat zeg je?", ["Ik wil iets vertellen.", "Ik ben klaar.", "Mag ik naar buiten?", "Tot morgen!"], "Vertellen = iets zeggen over wat je deed."),
+  vg("Je weet het antwoord niet meteen. Wat doe je?", ["Ik denk even na.", "Ik ga huilen.", "Ik stop.", "Ik roep: weet ik niet!"], "Je weet het nog niet. Wat doe je eerst, voordat je antwoord geeft?"),
+  vg("Je wilt de juf iets over je weekend vertellen. Wat zeg je?", ["Ik wil iets vertellen.", "Ik ben klaar.", "Mag ik naar buiten?", "Tot morgen!"], "Je wilt iets zeggen over je weekend. Welke zin past daarbij?"),
   vg("Waarom heb je een jas aan?", ["Omdat het koud is.", "Omdat het warm is.", "Omdat ik blij ben.", "Omdat het pauze is."], "Een jas houdt je warm."),
-  vg("Een som is niet moeilijk. De som is…", ["Makkelijk.", "Moeilijk.", "Groot.", "Eng."], "Niet moeilijk = makkelijk."),
-  vg("Je hebt een nieuwe vriend. Je bent heel blij. Hoe voel je je?", ["Ik ben gelukkig.", "Ik ben ziek.", "Ik ben bang.", "Ik ben moe."], "Heel blij = gelukkig."),
+  vg("Een som is niet moeilijk. De som is…", ["Makkelijk.", "Moeilijk.", "Groot.", "Eng."], "De som is niet moeilijk. Welk woord is het tegenovergestelde van moeilijk?"),
+  vg("Je hebt een nieuwe vriend. Je bent heel blij. Hoe voel je je?", ["Ik ben gelukkig.", "Ik ben ziek.", "Ik ben bang.", "Ik ben moe."], "Je bent heel blij. Welk woord betekent ook heel blij?"),
   vg("Je bent een beetje bang, maar je doet het toch. Wat zeg je?", ["Ik durf het!", "Ik wil naar huis.", "Ik ben klaar.", "Ik heb honger."], "Durven = het toch doen."),
 ];
 

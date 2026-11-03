@@ -4,78 +4,78 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Dieren en seizoenen (dieren-seizoenen-natuur, stap 2)
 Vraag: Welke is een zoogdier?
-- ▫️ krokodil
 - ▫️ kikker
 - ✅ walvis
 - ▫️ haai
+- ▫️ krokodil
 
 ## 2. Dieren en seizoenen (dieren-seizoenen-natuur, stap 2)
 Vraag: Wat is **uniek** aan zoogdieren?
-- ▫️ Ze ademen met longen
-- ▫️ Ze hebben koud bloed
 - ✅ De moeder geeft melk
+- ▫️ Ze hebben koud bloed
 - ▫️ Ze leggen eieren
+- ▫️ Ze ademen met longen
 
 ## 3. Dieren en seizoenen (dieren-seizoenen-natuur, stap 3)
 Vraag: Wat hebben **alleen vogels**?
-- ▫️ Snavel
 - ✅ Veren
-- ▫️ Eieren
+- ▫️ Snavel
 - ▫️ Vleugels
+- ▫️ Eieren
 
 ## 4. Dieren en seizoenen (dieren-seizoenen-natuur, stap 3)
 Vraag: Welke vogel kan **niet** vliegen?
 - ▫️ havik
 - ✅ pinguïn
-- ▫️ mus
 - ▫️ ooievaar
+- ▫️ mus
 
 ## 5. Dieren en seizoenen (dieren-seizoenen-natuur, stap 6)
 Vraag: Welk **stadium** komt tussen rups en vlinder?
 - ▫️ ei
-- ▫️ grote rups
-- ▫️ kleine vlinder
 - ✅ pop
+- ▫️ kleine vlinder
+- ▫️ grote rups
 
 ## 6. Dieren en seizoenen (dieren-seizoenen-natuur, stap 7)
 Vraag: Wat gebeurt vooral in de **lente**?
-- ▫️ De bladeren vallen van de bomen
-- ✅ Veel jonge dieren worden geboren
 - ▫️ Er ligt vaak sneeuw op straat
+- ✅ Veel jonge dieren worden geboren
 - ▫️ Trekvogels vliegen weg naar het zuiden
+- ▫️ De bladeren vallen van de bomen
 
 ## 7. Dieren en seizoenen (dieren-seizoenen-natuur, stap 8)
 Vraag: Welk dier houdt **winterslaap**?
-- ▫️ merel
-- ▫️ ree
 - ✅ egel
 - ▫️ kraai
+- ▫️ ree
+- ▫️ merel
 
 ## 8. Dieren en seizoenen (dieren-seizoenen-natuur, stap 8)
 Vraag: Waarom **vallen bladeren** in de herfst?
-- ▫️ De nachtvorst maakt de bladeren kapot
 - ✅ Zo spaart de boom energie voor de winter
-- ▫️ Nieuwe bladeren duwen de oude eraf
 - ▫️ De harde herfstwind blaast ze eraf
+- ▫️ De nachtvorst maakt de bladeren kapot
+- ▫️ Nieuwe bladeren duwen de oude eraf
 
 ## 9. Dieren en seizoenen (dieren-seizoenen-natuur, stap 10)
 Vraag: Welk dier is een **planteneter**?
 - ✅ konijn
 - ▫️ vos
-- ▫️ haai
 - ▫️ uil
+- ▫️ haai
 
 ## 10. Dieren en seizoenen (dieren-seizoenen-natuur, stap 10)
 Vraag: Wie staat **bovenaan** in de keten *gras → konijn → vos*?
-- ▫️ konijn
 - ▫️ zon
-- ✅ vos
 - ▫️ gras
+- ✅ vos
+- ▫️ konijn
 
 ## 11. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 1)
 Vraag: Een **vleermuis** is een ... ?
-- ▫️ Insect
 - ▫️ Vogel
+- ▫️ Insect
 - ▫️ Reptiel
 - ✅ Zoogdier
 
@@ -83,61 +83,61 @@ Vraag: Een **vleermuis** is een ... ?
 Vraag: Welk **kenmerk** hebben alle vogels?
 - ▫️ Vacht
 - ▫️ Schubben
-- ✅ Veren
 - ▫️ Ze kunnen vliegen
+- ✅ Veren
 
 ## 13. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 2)
 Vraag: Welke is een **zoogdier**?
 - ▫️ Vis
-- ▫️ Mus
 - ✅ Olifant
 - ▫️ Slang
+- ▫️ Mus
 
 ## 14. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 3)
 Vraag: Hoe ademen **vissen**?
-- ▫️ Met longen
-- ▫️ Via vinnen
 - ▫️ Door de huid
 - ✅ Met kieuwen
+- ▫️ Via vinnen
+- ▫️ Met longen
 
 ## 15. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 3)
 Vraag: Een **kikkervisje** wordt later ... ?
 - ▫️ Salamander
+- ▫️ Hagedis
 - ✅ Kikker
 - ▫️ Vis
-- ▫️ Hagedis
 
 ## 16. Dierenklassen + voedselketen (groep 5-8) (dierenklassen-po, stap 4)
 Vraag: Hoeveel **poten** heeft een spin?
-- ▫️ 4
+- ▫️ 2
 - ✅ 8
 - ▫️ 6
-- ▫️ 2
+- ▫️ 4
 
 ## 17. Dieren en seizoenen (dieren-seizoenen-natuur, stap 4)
 Vraag: Hoeveel poten heeft een **insect**?
-- ▫️ 8
-- ✅ 6
 - ▫️ 10
 - ▫️ 4
+- ✅ 6
+- ▫️ 8
 
 ## 18. Dieren en seizoenen (dieren-seizoenen-natuur, stap 4)
 Vraag: Tot welke groep behoort een **kikker**?
-- ▫️ reptielen
 - ▫️ zoogdieren
+- ▫️ reptielen
 - ✅ amfibieën
 - ▫️ vissen
 
 ## 19. Sterren en planeten — ons zonnestelsel (sterren-planeten, stap 2)
 Vraag: Hoeveel planeten heeft ons zonnestelsel?
 - ▫️ 9
-- ▫️ 7
 - ▫️ 12
+- ▫️ 7
 - ✅ 8
 
 ## 20. Sterren en planeten — ons zonnestelsel (sterren-planeten, stap 2)
 Vraag: Welke planeet is het **dichtst bij de zon**?
-- ▫️ Aarde
 - ✅ Mercurius
-- ▫️ Venus
 - ▫️ Mars
+- ▫️ Aarde
+- ▫️ Venus

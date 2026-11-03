@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 101,
+    "waar": "natuur-seizoenen-dieren-g4 stap 4 vraag 2",
+    "eigenKeuze": "als de zon schijnt terwijl het regent",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 102,
+    "waar": "nederlandse-kunstenaars-po stap 3 vraag 3",
+    "eigenKeuze": "Een kunstbeweging",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 103,
+    "waar": "nederlandse-kunstenaars-po stap 4 vraag 3",
+    "eigenKeuze": "Een jaarkaart voor honderden musea",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 104,
+    "waar": "negatieve-getallen-po stap 2 vraag 8",
+    "eigenKeuze": "−7",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is alleen '−7.' — hulpstap geeft het antwoord, geen denkstap."
+  },
+  {
+    "nr": 105,
+    "waar": "negatieve-getallen-po stap 3 vraag 3",
+    "eigenKeuze": "+3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 106,
+    "waar": "negatieve-getallen-po stap 5 vraag 20",
+    "eigenKeuze": "−5, −2, 0, 3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 107,
+    "waar": "negatieve-getallen-po stap 5 vraag 24",
+    "eigenKeuze": "6",
+    "oordeel": "twijfel",
+    "reden": "Min keer min hoort niet bij de PO-leerlijn (onderbouw vo); niveau te hoog voor groep5-8."
+  },
+  {
+    "nr": 108,
+    "waar": "nieuwsbericht-lezen-po stap 3 vraag 7",
+    "eigenKeuze": "Een feit — je kunt nameten hoe lang de baan is",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 109,
+    "waar": "omzetten-breuk-procent-komma-po stap 1 vraag 3",
+    "eigenKeuze": "0,75",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis begint met '¾ = 0,75' — hulpstap geeft het antwoord."
+  },
+  {
+    "nr": 110,
+    "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 1 vraag 1",
+    "eigenKeuze": "6 jaar",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 111,
+    "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 3 vraag 3",
+    "eigenKeuze": "Een vast pakket vakken dat bij je past",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 112,
+    "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 4",
+    "eigenKeuze": "Ja — als het bij jou past",
+    "oordeel": "twijfel",
+    "reden": "Raadbaar door de vorm: drie afleiders zijn alle 'Nee, alleen met …' en duidelijk absurd; mening-achtige vraag."
+  },
+  {
+    "nr": 113,
+    "waar": "opdrachtwoorden-nieuwkomers stap 1 vraag 3",
+    "eigenKeuze": "Ik zet een kruisje bij het goede antwoord.",
+    "oordeel": "twijfel",
+    "reden": "Goed antwoord herhaalt bijna letterlijk de opdracht ('het goede antwoord'); wrongHints zijn drie keer dezelfde zin. Voor nieuwkomers verdedigbaar, maar raadbaar."
+  },
+  {
+    "nr": 114,
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 7",
+    "eigenKeuze": "32 cm",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis '4 × 8 = 32 cm.' rekent het antwoord voor."
+  },
+  {
+    "nr": 115,
+    "waar": "oppervlakte-omtrek-po stap 6 vraag 6",
+    "eigenKeuze": "71 m",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent de hele som voor tot 71 m."
+  },
+  {
+    "nr": 116,
+    "waar": "politiek-democratie-po stap 6 vraag 17",
+    "eigenKeuze": "Een stemming waarbij je ja of nee zegt over één plan",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 117,
+    "waar": "procenten-po stap 2 vraag 3",
+    "eigenKeuze": "0,6",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 118,
+    "waar": "procenten-po stap 3 vraag 7",
+    "eigenKeuze": "15",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 119,
+    "waar": "procenten-po stap 4 vraag 5",
+    "eigenKeuze": "€ 10",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 120,
+    "waar": "procenten-po stap 5 vraag 9",
+    "eigenKeuze": "25%",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij 75% ('Dat deel heb je nog níét gezien') geeft per uitsluiting het antwoord (100 − 75 = 25)."
+  },
+  {
+    "nr": 121,
+    "waar": "procenten-po stap 7 vraag 3",
+    "eigenKeuze": "40 leerlingen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 122,
+    "waar": "procenten-po stap 7 vraag 11",
+    "eigenKeuze": "10",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 123,
+    "waar": "pubertijd-groei-po stap 4 vraag 7",
+    "eigenKeuze": "Een periode waarin je snel langer wordt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 124,
+    "waar": "redactiesommen-pad stap 1 vraag 1",
+    "eigenKeuze": "keer",
+    "oordeel": "twijfel",
+    "reden": "Zeer raadbaar ('keer' = vermenigvuldigen) en niveaus.basis noemt 'keer' meteen als antwoord."
+  },
+  {
+    "nr": 125,
+    "waar": "redactiesommen-pad stap 5 vraag 7",
+    "eigenKeuze": "€ 10,50",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis '€42 ÷ 4 = €10,50.' geeft het antwoord."
+  },
+  {
+    "nr": 126,
+    "waar": "rekenen-tot-100-nieuwkomers stap 5 vraag 3",
+    "eigenKeuze": "65",
+    "oordeel": "goed",
+    "reden": "(opm.: answer staat op index 2 i.p.v. 0, maar wijst correct naar 65)"
+  },
+  {
+    "nr": 127,
+    "waar": "rijmen-letters-kleuters-po stap 1 vraag 5",
+    "eigenKeuze": "boot ⛵ en poot 🐾",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis noemt het antwoord direct (boot en poot rijmen)."
+  },
+  {
+    "nr": 128,
+    "waar": "rijmen-letters-kleuters-po stap 5 vraag 6",
+    "eigenKeuze": "tas 👜",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis noemt het antwoord direct (jas en tas rijmen)."
+  },
+  {
+    "nr": 129,
+    "waar": "romeinse-cijfers-po stap 1 vraag 7",
+    "eigenKeuze": "1",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'I is het symbool voor 1.' = antwoord; vraag erg makkelijk voor groep7-8."
+  },
+  {
+    "nr": 130,
+    "waar": "romeinse-cijfers-po stap 4 vraag 9",
+    "eigenKeuze": "1750",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekent volledig voor: = 1750."
+  },
+  {
+    "nr": 131,
+    "waar": "ruimtevaart-po stap 4 vraag 4",
+    "eigenKeuze": "1969",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 132,
+    "waar": "samenstellingen-tussenletters-po stap 1 vraag 7",
+    "eigenKeuze": "zand + kasteel",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 133,
+    "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 14",
+    "eigenKeuze": "De zin met de hoofdgedachte van een alinea",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 134,
+    "waar": "schaal-kaart-rekenen-po stap 2 vraag 6",
+    "eigenKeuze": "12 m",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 135,
+    "waar": "schatten-afronden stap 1 vraag 1",
+    "eigenKeuze": "1200",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 136,
+    "waar": "schema-tekst-combi-po stap 2 vraag 2",
+    "eigenKeuze": "€ 2,25",
+    "oordeel": "twijfel",
+    "reden": "Vraag hangt af van een prijslijst/schema dat niet in de vraag staat en er is geen svg-veld; zonder die lijst niet op te lossen (controleren of de stap-uitleg hem toont)."
+  },
+  {
+    "nr": 137,
+    "waar": "schema-tekst-combi-po stap 3 vraag 7",
+    "eigenKeuze": "€ 6,00",
+    "oordeel": "twijfel",
+    "reden": "Vraag hangt af van een prijslijst van 't Hoefje die niet in de vraag staat en geen svg-veld heeft; zonder lijst niet op te lossen."
+  },
+  {
+    "nr": 138,
+    "waar": "schemas-stappenplannen-po stap 1 vraag 2",
+    "eigenKeuze": "Verband of volgorde",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 139,
+    "waar": "schemas-stappenplannen-po stap 2 vraag 7",
+    "eigenKeuze": "De appel opeten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 140,
+    "waar": "schrijven-teksten-po stap 2 vraag 9",
+    "eigenKeuze": "Kunt u mij het huiswerk sturen?",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 141,
+    "waar": "schrijven-teksten-po stap 3 vraag 6",
+    "eigenKeuze": "Mijn hond Bobby haalt bijvoorbeeld de krant.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 142,
+    "waar": "schrijven-teksten-po stap 4 vraag 1",
+    "eigenKeuze": "Feit",
+    "oordeel": "twijfel",
+    "reden": "Licht dubbelzinnig: de zin begint met 'Ik vind…' (mening/gevoel); 'het houdt je gezond' als feit-argument is verdedigbaar maar niet scherp."
+  },
+  {
+    "nr": 143,
+    "waar": "signaalwoorden-verbanden-po stap 4 vraag 5",
+    "eigenKeuze": "opsomming",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'Er wordt iets toegevoegd → opsomming.' geeft het antwoord."
+  },
+  {
+    "nr": 144,
+    "waar": "spelling-eerste-woorden-g3 stap 5 vraag 1",
+    "eigenKeuze": "schaap",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'sch + aa + p = schaap.' geeft het antwoord."
+  },
+  {
+    "nr": 145,
+    "waar": "spelling-ei-ij-au-ou stap 3 vraag 6",
+    "eigenKeuze": "krijg",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis 'krijg = ij.' geeft het antwoord."
+  },
+  {
+    "nr": 146,
+    "waar": "spelling-ei-ij-au-ou stap 7 vraag 7",
+    "eigenKeuze": "mouw",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis is alleen 'mouw.'; wrongHints 3× identiek; 'twee klinkers' voor ou is wat onhandig geformuleerd."
+  },
+  {
+    "nr": 147,
+    "waar": "spelling-overige-po stap 1 vraag 1",
+    "eigenKeuze": "tropisch",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 148,
+    "waar": "spelling-overige-po stap 1 vraag 6",
+    "eigenKeuze": "gemakkelik",
+    "oordeel": "twijfel",
+    "reden": "Geen enkele wrongHint (alle null); niveaus.basis 'Gemakkelik = fout' geeft het antwoord."
+  },
+  {
+    "nr": 149,
+    "waar": "spelling-overige-po stap 5 vraag 14",
+    "eigenKeuze": "Nederland",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 150,
+    "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 2",
+    "eigenKeuze": "Het regent heel hard",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis noemt het antwoord letterlijk."
+  }
+]

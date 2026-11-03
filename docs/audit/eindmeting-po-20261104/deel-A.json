@@ -1,0 +1,1240 @@
+[
+ {
+  "nr": 1,
+  "bron": "leerpaden",
+  "waar": "alfabet-woordenboek-po stap 2 vraag 9",
+  "file": "./alfabetWoordenboekPo.js",
+  "level": "groep7-8",
+  "q": "Je slaat het woordenboek open bij woorden met een M. Je zoekt het woord 'vork'. Welke kant blader je op?",
+  "options": [
+   "verder naar achteren",
+   "terug naar voren",
+   "blijven zoeken bij de M",
+   "eerst terug naar de A"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Komt de V in het alfabet vóór of ná de M?",
+   "Begint 'vork' met een m?",
+   "Moet je echt helemaal opnieuw beginnen? Komt de V vóór of ná de M?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zeg het alfabet op vanaf de M. Kom je de V dan vóór of ná de M tegen?",
+   "simpeler": "Staat de V verder in het alfabet dan de M, of eerder?",
+   "nogSimpeler": "De V komt ná de M, dus je bladert verder naar achteren."
+  }
+ },
+ {
+  "nr": 2,
+  "bron": "leerpaden",
+  "waar": "algoritmen-programmeren-po stap 2 vraag 5",
+  "file": "./algoritmenProgrammerenPo.js",
+  "level": "groep6-8",
+  "q": "In een spel staat:\n**punten = 0**\nRob pakt 3 munten. Bij elke munt: **punten = punten + 1**\n\nHoeveel punten heeft Rob nu?",
+  "options": [
+   "3",
+   "0",
+   "1",
+   "4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Blijft het doosje leeg als Rob munten pakt?",
+   "Krijgt Rob alleen bij de eerste munt een punt?",
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "0 + 1 + 1 + 1 = 3 punten.",
+   "simpeler": "Begin bij 0 en tel bij elke munt er 1 bij.",
+   "nogSimpeler": "3 munten, elke munt 1 punt. Hoeveel?"
+  }
+ },
+ {
+  "nr": 3,
+  "bron": "leerpaden",
+  "waar": "basis-grammatica-engels-po stap 3 vraag 4",
+  "file": "./basisGrammaticaEngelsPo.js",
+  "level": "groep6-8",
+  "q": "Hoe zeg je **die auto** (verderop) in het Engels?",
+  "options": [
+   "that car",
+   "this car",
+   "those car",
+   "these car"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'This' is voor dichtbij. Staat de auto dichtbij of verderop?",
+   "'Those' is meervoud. Om hoeveel auto's gaat het?",
+   "'These' is meervoud én dichtbij. Hoeveel auto's, en waar?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 4,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-strategie stap 1 vraag 3",
+  "file": "./begrijpendLezenStrategie.js",
+  "level": "groep5-8",
+  "q": "Bij welk soort lezen maak je van letters woorden, en van woorden zinnen?",
+  "options": [
+   "Technisch lezen",
+   "Begrijpend lezen",
+   "Studerend lezen",
+   "Snel lezen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gaat begrijpend lezen over letters aan elkaar plakken, of over snappen wat er bedoeld wordt?",
+   "Gaat studerend lezen over letters, of over onthouden wat je leest?",
+   "Snel lezen gaat over tempo, en hoort niet bij het rijtje van drie. Welk soort lezen plakt letters aan elkaar?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Van letters woorden maken en van woorden zinnen: dat is technisch lezen.",
+   "simpeler": "Als je letters aan elkaar plakt tot een woord, ben je technisch aan het lezen. Snappen wat het betekent komt daarna.",
+   "nogSimpeler": "Letters lezen = technisch"
+  }
+ },
+ {
+  "nr": 5,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-strategie stap 2 vraag 1",
+  "file": "./begrijpendLezenStrategie.js",
+  "level": "groep5-8",
+  "q": "Welke tekstsoort wil je **overtuigen**?",
+  "options": [
+   "Informatief",
+   "Betogend",
+   "Verhalend",
+   "Beschrijvend"
+  ],
+  "answer": 1,
+  "wrongHints": [
+   "Wil een tekst met alleen feiten je iets laten geloven, of vooral iets weten?",
+   null,
+   "Probeert een verhaal je te overtuigen, of wil het je vooral meenemen in een gebeurtenis?",
+   "Geeft 'beschrijven' een mening, of vooral details?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Overtuigen = betogend.",
+   "simpeler": "Stel je voor: iemand wil je laten geloven dat zonnepanelen goed zijn. Hij schrijft een tekst MET argumenten. Dat heet betogen.",
+   "nogSimpeler": "Mening + overtuigen = betogend"
+  }
+ },
+ {
+  "nr": 6,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-strategie stap 6 vraag 4",
+  "file": "./begrijpendLezenStrategie.js",
+  "level": "groep5-8",
+  "q": "Vraag bij een tekst: *'Hoeveel inwoners heeft het dorp?'*\n\nWat voor soort vraag is dit?",
+  "options": [
+   "Een letterlijke vraag",
+   "Een hoofdgedachte-vraag",
+   "Een woordbetekenis-vraag",
+   "Een tekstopbouw-vraag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vraagt dit naar de boodschap van de hele tekst?",
+   "Vraagt dit wat een woord betekent, of vraagt het een getal uit de tekst?",
+   "Gaat dit over hoe de alinea's na elkaar komen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Bij een letterlijke vraag staat het antwoord gewoon in de tekst.",
+   "simpeler": "Je zoekt één getal dat gewoon in de tekst staat. Dan is het een letterlijke vraag.",
+   "nogSimpeler": "Staat het antwoord in de tekst? Dan is het een letterlijke vraag."
+  }
+ },
+ {
+  "nr": 7,
+  "bron": "leerpaden",
+  "waar": "bekende-boeken-literatuur-po stap 4 vraag 7",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "level": "groep6-8",
+  "q": "Waar gaat **Kruistocht in Spijkerbroek** van Thea Beckman over?",
+  "options": [
+   "Een jongen reist terug naar de middeleeuwen",
+   "Een ridder brengt een geheime brief weg",
+   "Een soldaat vecht in de Eerste Wereldoorlog",
+   "Een meisje duikt onder in de oorlog"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is De brief voor de koning, van een andere schrijfster.",
+   "Kijk naar het woord kruistocht — welke tijd hoort daarbij?",
+   "Dat lijkt op het verhaal van Anne Frank — dat is geen boek van Thea Beckman."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Het woord kruistocht hoort bij de middeleeuwen, maar de hoofdpersoon komt uit onze tijd.",
+   "simpeler": "In dit boek van Thea Beckman reist een jongen uit onze tijd terug naar het jaar 1212 en gaat hij mee met de kinderkruistocht.",
+   "nogSimpeler": "Een jongen reist terug in de tijd naar de middeleeuwen."
+  }
+ },
+ {
+  "nr": 8,
+  "bron": "leerpaden",
+  "waar": "bekende-boeken-literatuur-po stap 4 vraag 18",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **proza**?",
+  "options": [
+   "Gewone tekst, zoals een verhaal",
+   "Tekst op rijm in versregels",
+   "Tekst om op toneel te spelen",
+   "Een tekst met alleen plaatjes"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tekst op rijm in versregels heet poëzie.",
+   "Tekst om te spelen heet een toneelstuk.",
+   "Proza bestaat juist uit woorden."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 9,
+  "bron": "leerpaden",
+  "waar": "bekende-nederlanders-po stap 4 vraag 15",
+  "file": "./bekendeNederlandersPo.js",
+  "level": "groep6-8",
+  "q": "Waar is **koningin Máxima** geboren?",
+  "options": [
+   "Argentinië",
+   "Nederland",
+   "Duitsland",
+   "België"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In Nederland woont ze nú, maar waar is ze geboren?",
+   "Uit Duitsland kwam Willem van Oranje (Dillenburg), niet Máxima.",
+   "België is dichtbij; Máxima komt van veel verder weg."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 10,
+  "bron": "leerpaden",
+  "waar": "bekende-wetenschappers-po stap 5 vraag 13",
+  "file": "./bekendeWetenschappersPo.js",
+  "level": "groep6-8",
+  "q": "Welke uitvinder werd wereldberoemd door de **gloeilamp**?",
+  "options": [
+   "Thomas Edison",
+   "Nikola Tesla",
+   "Alexander Graham Bell",
+   "Albert Einstein"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tesla werkte aan wisselstroom, niet aan de lamp.",
+   "Bell is bekend van de telefoon.",
+   "Einstein was natuurkundige en bedacht vooral theorieën."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 11,
+  "bron": "leerpaden",
+  "waar": "belasting-po stap 3 vraag 3",
+  "file": "./belastingPo.js",
+  "level": "groep6-8",
+  "q": "Een knuffel kost **€10**. Daarvan is **€1,74** btw. Hoeveel is voor de **knuffel zelf**?",
+  "options": [
+   "€8,26",
+   "€11,74",
+   "€1,74",
+   "€10"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De btw zit er al in — je telt hem er niet nóg eens bij.",
+   "Dat is alleen de btw, niet de knuffel.",
+   "Daar zit de btw nog in; haal die er eerst af."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De btw zit al in de € 10. Haal de btw van de prijs af, dan houd je over wat de knuffel zelf kost.",
+   "simpeler": "Haal de btw eraf: €10 − €1,74 = €8,26.",
+   "nogSimpeler": "€8,26"
+  }
+ },
+ {
+  "nr": 12,
+  "bron": "leerpaden",
+  "waar": "beroepen-werk-po stap 5 vraag 7",
+  "file": "./beroepenWerkPo.js",
+  "level": "groep6-8",
+  "q": "Wat zijn **mbo, hbo en wo**?",
+  "options": [
+   "Drie niveaus van vervolgonderwijs",
+   "Drie soorten middelbare school",
+   "Drie profielen die je kiest in klas 3",
+   "Drie soorten toetsen in groep 8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De middelbare school heeft vmbo, havo en vwo. Zijn mbo, hbo en wo dezelfde scholen?",
+   "Profielen heten bijvoorbeeld techniek of zorg en welzijn. Wanneer ga je naar het mbo?",
+   "In groep 8 maak je de Doorstroomtoets. Gaat mbo/hbo/wo over een toets of over een school?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "mbo, hbo en wo zijn drie niveaus van vervolgonderwijs.",
+   "simpeler": "mbo = praktijk-beroep, hbo = hogeschool 4 jaar, wo = universiteit. Drie niveaus vervolgonderwijs in NL.",
+   "nogSimpeler": "3 niveaus"
+  }
+ },
+ {
+  "nr": 13,
+  "bron": "leerpaden",
+  "waar": "betrouwbaarheid-bronnen-po stap 3 vraag 2",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "level": "groep7-8",
+  "q": "Je vindt informatie uit 1995 over 'de snelste computer'. Wat is het probleem?",
+  "options": [
+   "de informatie is verouderd",
+   "er is niets mis mee",
+   "het is reclame",
+   "het is een mening"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Computers zijn sindsdien veel sneller — dus wél een probleem.",
+   "Het is niet per se reclame.",
+   "'De snelste' kon je toen gewoon meten, dus het is geen mening. Kijk naar het jaartal."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Oude info kan verouderd zijn → check de datum.",
+   "simpeler": "Is informatie over snelle computers uit 1995 nog actueel?",
+   "nogSimpeler": "Is 30 jaar oude techniek-info nog up-to-date?"
+  }
+ },
+ {
+  "nr": 14,
+  "bron": "leerpaden",
+  "waar": "breuken-po stap 3 vraag 3",
+  "file": "./breukenPo.js",
+  "level": "groep5-8",
+  "q": "Wat is **9/12** zo ver mogelijk vereenvoudigd?",
+  "options": [
+   "3/4",
+   "9/12",
+   "6/8",
+   "1/2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit is dezelfde breuk als in de vraag. Door welk getal kun je 9 en 12 allebei delen?",
+   "Je hebt hem kleiner gemaakt, maar het kan nog verder. Kun je teller en noemer nog door hetzelfde getal delen?",
+   "Dat is een andere waarde: 9/12 is meer dan de helft. Heb je teller en noemer door hetzelfde getal gedeeld?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek een getal waar 9 en 12 allebei door gedeeld kunnen worden.",
+   "simpeler": "9 en 12 zitten allebei in de tafel van 3. Deel ze allebei door 3.",
+   "nogSimpeler": "3/4"
+  }
+ },
+ {
+  "nr": 15,
+  "bron": "leerpaden",
+  "waar": "breuken-po stap 7 vraag 1",
+  "file": "./breukenPo.js",
+  "level": "groep5-8",
+  "q": "Welke breuk is **het kleinst**?",
+  "options": [
+   "1/8",
+   "1/2",
+   "3/4",
+   "1/4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te groot — dat is de helft.",
+   "3/4 is meer dan de helft.",
+   "Te groot — een kwart is groter dan een achtste."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "1/8.",
+   "simpeler": "Hoe meer stukken (grotere noemer), hoe kleiner elk stuk. 1/8 = klein stukje.",
+   "nogSimpeler": "1/8"
+  }
+ },
+ {
+  "nr": 16,
+  "bron": "leerpaden",
+  "waar": "breuken-po stap 7 vraag 13",
+  "file": "./breukenPo.js",
+  "level": "groep5-8",
+  "q": "⅓ + ⅓ = ?",
+  "options": [
+   "⅔",
+   "⅙",
+   "⅓",
+   "1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet de noemers optellen — de noemer blijft 3.",
+   "Je deed er nog een ⅓ bij. Kan het dan evenveel blijven?",
+   "1 is ³⁄₃. Hoeveel derden heb je hier samen?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 17,
+  "bron": "leerpaden",
+  "waar": "breuken-po stap 7 vraag 16",
+  "file": "./breukenPo.js",
+  "level": "groep5-8",
+  "q": "Hoeveel **kwarten** gaan er in 1 geheel?",
+  "options": [
+   "4",
+   "2",
+   "8",
+   "3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "2 gelijke stukken zijn halven. Een kwart is kleiner.",
+   "8 gelijke stukken zijn achtsten. Een kwart is groter.",
+   "3 gelijke stukken zijn derden."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 18,
+  "bron": "leerpaden",
+  "waar": "breuken-po stap 7 vraag 18",
+  "file": "./breukenPo.js",
+  "level": "groep5-8",
+  "q": "Hoe schrijf je ¾ als kommagetal?",
+  "options": [
+   "0,75",
+   "0,34",
+   "0,7",
+   "0,8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je zette de 3 en de 4 achter de komma. Hoeveel honderdsten is ¾?",
+   "0,7 is 7 tienden. Is ¾ precies 7 tienden?",
+   "0,8 is 8 tienden, net als 4/5. Is ¾ evenveel als 4/5?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 19,
+  "bron": "leerpaden",
+  "waar": "brief-email-lezen-po stap 1 vraag 1",
+  "file": "./briefEmailLezenPo.js",
+  "level": "groep6-8",
+  "q": "Je krijgt een brief en wilt weten wie hem geschreven heeft. Waar kijk je het eerst?",
+  "options": [
+   "Onderaan, bij de naam onder de groet",
+   "In het midden, waar het verhaal staat",
+   "Bovenaan, bij de plaats en de datum",
+   "Bovenaan, bij de aanhef met 'Beste'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In het midden staat het verhaal zelf. Denk eens aan hoe jij een brief afsluit — wat zet je daar neer?",
+   "Een datum vertelt wannéér iets is. Kan een datum ook vertellen wíé er schreef?",
+   "In de aanhef begroet de schrijver de lezer. Staat daar de naam van de schrijver?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Waar zet jij je eigen naam als je zelf een brief schrijft: aan het begin, in het midden of aan het eind?",
+   "simpeler": "Een brief eindigt altijd met een groet. Wat staat er meestal direct ónder die groet?",
+   "nogSimpeler": "Zoek de plek waar de naam van de schrijver staat."
+  }
+ },
+ {
+  "nr": 20,
+  "bron": "leerpaden",
+  "waar": "brief-email-lezen-po stap 1 vraag 6",
+  "file": "./briefEmailLezenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is een verschil tussen een e-mail en een papieren brief?",
+  "options": [
+   "Een e-mail heeft bovenaan regels zoals 'Van:' en 'Aan:'",
+   "Een e-mail begint zonder aanhef, meteen met de kern",
+   "Een e-mail heeft een datum, een brief meestal niet",
+   "Een brief eindigt met een groet, een e-mail meestal niet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een e-mail begint ook gewoon met 'Beste...'. Kijk eens naar de structuur boven de aanhef.",
+   "Een papieren brief heeft een datum helemaal bovenaan, naast de plaatsnaam. Welk verschil is er dan wél?",
+   "Ook een e-mail sluit je af met een groet en je naam. Wat staat er bij een e-mail boven de aanhef?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Denk aan een e-mail op een computer of telefoon: welke vier regels staan er alléén bij een e-mail, niet bij een papieren brief?",
+   "simpeler": "Een papieren brief begint meteen met de datum en de aanhef. Wat staat er bij een e-mail daarbóven nog meer?",
+   "nogSimpeler": "Zoek het antwoord dat vier vaste regels noemt die je alleen bij een e-mail ziet."
+  }
+ },
+ {
+  "nr": 21,
+  "bron": "leerpaden",
+  "waar": "brugklas-orientatie stap 3 vraag 3",
+  "file": "./brugklasOrientatie.js",
+  "level": "groep8",
+  "q": "Welke manier van leren werkt **niet** goed?",
+  "options": [
+   "Huiswerk met telefoon en muziek aan",
+   "Een mindmap maken van de stof",
+   "Jezelf vragen stellen over de stof",
+   "Herhalen verspreid over dagen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een mindmap laat verbanden zien. Is dat goed of slecht voor leren?",
+   "Jezelf overhoren werkt juist bewezen goed. Zoek de optie die níét helpt.",
+   "Gespreid herhalen is juist een toptechniek. Zoek de optie die níét helpt."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 22,
+  "bron": "leerpaden",
+  "waar": "cijferend-rekenen stap 5 vraag 2",
+  "file": "./cijferendRekenen.js",
+  "level": "groep6-8",
+  "q": "**450 ÷ 9** = ?",
+  "options": [
+   "50",
+   "45",
+   "55",
+   "60"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — doe een proef: jouw antwoord keer 9 geeft niet 450. Welk getal keer 9 geeft precies 450?",
+   "Te veel — jouw antwoord keer 9 gaat al voorbij 450.",
+   "Te veel — dit antwoord keer 9 gaat ver over de 450 heen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "9×50=450 → 450÷9=50.",
+   "simpeler": "Welk getal × 9 = 450? Probeer: 50×9=450 ✓.",
+   "nogSimpeler": "50"
+  }
+ },
+ {
+  "nr": 23,
+  "bron": "leerpaden",
+  "waar": "cijferend-rekenen stap 7 vraag 21",
+  "file": "./cijferendRekenen.js",
+  "level": "groep6-8",
+  "q": "Welk **cijfer** staat op de plek van de **honderdtallen** in 4.567?",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel vanaf rechts: eenheden, tientallen, honderdtallen. Op welke plek staat de 4?",
+   "Begin rechts met tellen. Is dit de derde plek van rechts?",
+   "Welke plek heeft het allerlaatste cijfer van een getal?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 24,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 1 vraag 3",
+  "file": "./citoStrategieenGroep8.js",
+  "level": "groep8",
+  "q": "Je schooladvies is **havo**. Je toetsadvies is **vwo**. Wat moet de school doen?",
+  "options": [
+   "Het schooladvies heroverwegen",
+   "Je advies meteen veranderen in vwo",
+   "Niets, want het toetsadvies telt niet",
+   "Je de toets opnieuw laten maken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verandert het advies vanzelf, of beslist de school daar zelf over?",
+   "Telt een hoger toetsadvies echt helemaal niet mee?",
+   "Maak je de Doorstroomtoets één keer of vaker?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De school moet het advies opnieuw bekijken.",
+   "simpeler": "Je toets ging beter dan je advies. Dan moet de school nog eens goed nadenken over jouw advies.",
+   "nogSimpeler": "Opnieuw bekijken"
+  }
+ },
+ {
+  "nr": 25,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 2 vraag 9",
+  "file": "./citoStrategieenGroep8.js",
+  "level": "groep8",
+  "q": "Wat hoort bij **wereldoriëntatie**?",
+  "options": [
+   "De provincies van Nederland",
+   "Procenten uitrekenen",
+   "De d/t-regels",
+   "Een register gebruiken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   null,
+   null,
+   "Bij welk extra onderdeel hoort zoeken in een register?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 26,
+  "bron": "leerpaden",
+  "waar": "conclusies-trekken-po stap 3 vraag 5",
+  "file": "./conclusiesTrekkenPo.js",
+  "level": "groep7-8",
+  "q": "In een verhaal staat: 'Ze had hem al drie keer gebeld, maar hij nam niet op.' Wat kun je onderbouwd concluderen?",
+  "options": [
+   "Ze wil hem spreken, maar hij reageert niet",
+   "Ze is boos op hem omdat hij niet opneemt",
+   "Hij heeft zijn telefoon verloren",
+   "Er is een storing bij het telefoonbedrijf"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zie je ergens het woord 'boos' of een aanwijzing voor boosheid? Kijk wat er letterlijk staat.",
+   "Staat er in de zin iets over een kwijtgeraakte telefoon? Of ga je dan te ver?",
+   "Staat er iets over een storing? Of verzin je dat erbij?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Wat weet je zeker uit deze ene zin — en wat verzin je erbij?",
+   "simpeler": "Als je drie keer iemand belt en hij neemt niet op, wéét je dan zeker waaróm niet?",
+   "nogSimpeler": "Wat doe je als je iemand wilt spreken die de telefoon niet opneemt?"
+  }
+ },
+ {
+  "nr": 27,
+  "bron": "leerpaden",
+  "waar": "continenten-wereld-po stap 4 vraag 8",
+  "file": "./continentenWereldPo.js",
+  "level": "groep6-8",
+  "q": "Je oma in **New York** (6 uur eerder) belt jou om **08:00** haar tijd. Hoe laat is het dan bij jou in Nederland?",
+  "options": [
+   "14:00",
+   "02:00",
+   "08:00",
+   "12:00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij jou is het later dan bij oma, niet eerder.",
+   "Het is bij jou niet even laat als bij oma — er zit 6 uur tussen.",
+   "Je hebt te weinig uren opgeteld. Hoeveel uur zit er tussen oma en jou? Tel die uur voor uur bij 08:00 op."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 28,
+  "bron": "leerpaden",
+  "waar": "continenten-wereld-po stap 6 vraag 19",
+  "file": "./continentenWereldPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel uur verschil is er tussen **Nederland en Sydney**?",
+  "options": [
+   "+8 tot +10 uur",
+   "+5 uur",
+   "Geen verschil",
+   "−8 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "+5 uur hoort ongeveer bij Thailand in onze zomer. Australië ligt nog veel verder naar het oosten.",
+   "Sydney ligt bijna aan de andere kant van de wereld — dan is er zeker verschil.",
+   "Sydney ligt ten óósten van ons. Loopt de klok daar dan voor of achter?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 29,
+  "bron": "leerpaden",
+  "waar": "delen-po stap 4 vraag 8",
+  "file": "./delenPo.js",
+  "level": "groep5-6",
+  "q": "Wat is de **rest** bij **29 ÷ 6**?",
+  "options": [
+   "5",
+   "4",
+   "3",
+   "1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is hoe vaak 6 in 29 past. Maar wat blijft er over?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek eerst hoe vaak 6 in 29 past. De rest is wat er daarna overblijft.",
+   "simpeler": "4 × 6 = 24. Hoeveel is het nog van 24 tot 29?",
+   "nogSimpeler": "5"
+  }
+ },
+ {
+  "nr": 30,
+  "bron": "leerpaden",
+  "waar": "dichten-poezie-rijmen-po stap 4 vraag 4",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "level": "groep5-8",
+  "q": "Wat heeft een **vrij vers**?",
+  "options": [
+   "Geen vast rijm en geen vaste maat",
+   "Rijm aan het eind van elke regel",
+   "Een vast aantal van 14 regels",
+   "Een vast ritme in elke regel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de naam: 'vrij'. Moet een vrij vers dan rijmen?",
+   "Lees de naam: 'vrij'. Moet het dan precies 14 regels zijn?",
+   "Lees de naam: 'vrij'. Moet het dan een vast ritme hebben?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 31,
+  "bron": "leerpaden",
+  "waar": "dienstregeling-roosters-po stap 1 vraag 2",
+  "file": "./dienstregelingRoostersPo.js",
+  "level": "groep7-8",
+  "q": "Je staat om 9:30 op het station Utrecht. De treinen vertrekken om 9:10, 9:40 en 10:10. Hoe lang moet je wachten op de volgende trein?",
+  "options": [
+   "10 minuten",
+   "30 minuten",
+   "20 minuten",
+   "40 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken van 9:30 tot de eerstvolgende vertrektijd — zo lang is dat niet.",
+   "Kijk welke trein als eerste ná 9:30 komt.",
+   "Te lang — er komt al eerder een trein."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "De eerstvolgende trein ná 9:30 is die van 9:40. 9:40 − 9:30 = 10 min.",
+   "simpeler": "Welke vertrektijd komt net ná 9:30? En hoeveel minuten is dat nog?",
+   "nogSimpeler": "Van 9:30 tot 9:40 is hoeveel minuten?"
+  }
+ },
+ {
+  "nr": 32,
+  "bron": "leerpaden",
+  "waar": "dienstregeling-roosters-po stap 2 vraag 3",
+  "file": "./dienstregelingRoostersPo.js",
+  "level": "groep7-8",
+  "q": "Rekenen staat op: maandag 1e uur, dinsdag 2e uur, woensdag 3e uur. Hoe vaak heb je deze week rekenen?",
+  "options": [
+   "3 keer",
+   "2 keer",
+   "4 keer",
+   "1 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel nog eens alle dagen.",
+   "Je telt er eentje te veel.",
+   "Er zijn meer dagen met rekenen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Tel de dagen met rekenen: maandag, dinsdag, woensdag = 3.",
+   "simpeler": "Op hoeveel dagen staat rekenen? Tel ze.",
+   "nogSimpeler": "1 + 1 + 1 = ?"
+  }
+ },
+ {
+  "nr": 33,
+  "bron": "leerpaden",
+  "waar": "dierenklassen-po stap 5 vraag 1",
+  "file": "./dierenklassenPo.js",
+  "level": "groep5-8",
+  "q": "In de keten *'gras → muis → uil'*: wat eet de **uil**?",
+  "options": [
+   "Muis",
+   "Gras",
+   "Muis en gras",
+   "Niets, de uil staat bovenaan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Uilen eten geen gras. Wie eet het gras in deze keten?",
+   "Eet een uil zelf gras? Kijk naar de pijl die naar de uil wijst.",
+   "Bovenaan staan betekent dat niemand de uil eet. Maar wat eet de uil zelf?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 34,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 19",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "Hoeveel is **4 × 0,25**?",
+  "options": [
+   "1",
+   "0,1",
+   "10",
+   "4,25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10x te weinig.",
+   "10x te veel.",
+   "Je telde 4 en 0,25 op — hier moet je vermenigvuldigen."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 35,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 39",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "**3/4 + 1/8** = ?",
+  "options": [
+   "7/8",
+   "4/12",
+   "4/8",
+   "1/2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tellers en noemers zomaar optellen mag niet — maak ze eerst gelijknamig.",
+   "Hoeveel achtsten is 3/4? Dan pas optellen.",
+   "Dat is mínder dan waar je mee begon — kan dat bij optellen?"
+  ],
+  "explanation": "Gelijknamig maken: 3/4 = 6/8. Dan 6/8 + 1/8 = **7/8**.",
+  "niveaus": null
+ },
+ {
+  "nr": 36,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 21",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "Hoeveel milliliter is **3 liter**?",
+  "options": [
+   "3000 mL",
+   "300 mL",
+   "30 mL",
+   "30.000 mL"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10× te weinig.",
+   "100× te weinig.",
+   "10× te veel."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 37,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 28",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "Wat is het **volume** van een doos van **3 cm × 4 cm × 5 cm**?",
+  "options": [
+   "60 cm³",
+   "12 cm³",
+   "15 cm³",
+   "47 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12 is 3 × 4 — de hoogte van 5 cm doet ook mee.",
+   "15 is 3 × 5 — de 4 cm doet ook mee.",
+   "Dat zijn drie zijvlakken opgeteld (12 + 15 + 20) — voor inhoud vermenigvuldig je alle drie de maten."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "60 cm³.",
+   "simpeler": "3 × 4 × 5 = 60.",
+   "nogSimpeler": "60"
+  }
+ },
+ {
+  "nr": 38,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 2",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "Lisa heeft toets-cijfers **6,5 / 7 / 7,5 / 8**. Wat is haar **gemiddelde**?",
+  "options": [
+   "7,25",
+   "7",
+   "7,5",
+   "29"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "7 zou betekenen alle cijfers waren 7. Klopt niet.",
+   "Niet alle cijfers zijn 7,5 of hoger — tel eerst alles op en deel door 4.",
+   "29 = som, niet gemiddelde."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "7,25.",
+   "simpeler": "Totaal=29. ÷ 4 cijfers = 7,25.",
+   "nogSimpeler": "7,25"
+  }
+ },
+ {
+  "nr": 39,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 10",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "Een trein vertrekt om **08:45** en rijdt **2 uur en 15 minuten**. Hoe laat komt hij aan?",
+  "options": [
+   "11:00",
+   "10:45",
+   "11:30",
+   "10:00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10:45 is precies 2 uur na het vertrek. Ben je een deel van de reistijd vergeten?",
+   "Tel eerst 2 uur op en dan 15 minuten: kom je dan op 11:30?",
+   "10:00 is maar 1 uur en 15 minuten later."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 40,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 30",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "**Boekjes** kosten **€3 per stuk**. Tom koopt er **8**. Wie 5 of meer boekjes koopt, krijgt in totaal **€5 korting**. Wat **betaalt** Tom?",
+  "options": [
+   "€19",
+   "€24",
+   "€15",
+   "€20"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€24 is de prijs zonder korting — de korting moet er nog af.",
+   "€15 is 5 × €3 — heb je alle 8 boekjes geteld?",
+   "Dan haalde je €4 eraf — de korting is €5."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 41,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 14",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "level": "groep8",
+  "q": "Wat is **100 × 0,46**?",
+  "options": [
+   "46",
+   "4,6",
+   "460",
+   "0,0046"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is × 10 — bij × 100 schuift de komma 2 plekken.",
+   "Dat is × 1000. Tel de nullen: 100 heeft er 2.",
+   "× 100 maakt het getal groter, niet kleiner."
+  ],
+  "explanation": "× 100 = komma 2 plekken naar rechts: 0,46 → 4,6 → **46**.",
+  "niveaus": null
+ },
+ {
+  "nr": 42,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 18",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Op een kaart met **schaal 1:10.000** is een park **5 cm** lang. Hoe lang is het park **in werkelijkheid, in meters**?",
+  "options": [
+   "500 m",
+   "50 m",
+   "5 km",
+   "50 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "50 m = 5.000 cm. Is 5 × 10.000 zo weinig?",
+   "5 km = 500.000 cm. Is 5 × 10.000 zo veel? Tel de nullen.",
+   "50 km = 5.000.000 cm. Is 5 × 10.000 zo veel?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 43,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 9",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "In een cirkeldiagram is blauw 35%, rood 25% en groen 25%. Hoeveel procent is de **rest**?",
+  "options": [
+   "15%",
+   "20%",
+   "10%",
+   "25%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel 35 + 25 + 25 nog eens op. Hoeveel blijft er over van 100?",
+   "10%? Kijk of je goed hebt opgeteld: 35 + 25 + 25 = ?",
+   "25% is het stuk van rood of groen. Wat blijft er over?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Rest = 100 − (alles wat al bekend is).",
+   "simpeler": "35+25+25 = 85. 100−85 = 15%.",
+   "nogSimpeler": "Bekend optellen, dan van 100 aftrekken."
+  }
+ },
+ {
+  "nr": 44,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 12",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Wat is het **voordeel** van schema's?",
+  "options": [
+   "Veel informatie kort en overzichtelijk",
+   "Je hoeft de tekst niet meer te lezen",
+   "Er past meer tekst in dan in een verhaal",
+   "Je ziet in één keer alle details"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt de tekst juist nodig om het schema te maken. Wat maakt een schema handig?",
+   "Een schema heeft juist wéinig tekst.",
+   "Een schema laat de hoofdzaken zien, niet alle details."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 45,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 14",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Staat de **inhoudsopgave** voorin of achterin een boek?",
+  "options": [
+   "Voorin",
+   "Achterin",
+   "In het midden",
+   "Op de achterkant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Achterin staat meestal de index.",
+   "In het midden staat de tekst zelf. Waar vind je het overzicht van alle hoofdstukken?",
+   "Op de achterkant staat een korte tekst over het boek."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 46,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 19",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Stappenplan **eten klaarmaken**: 1 = spaghetti koken, 2 = saus warm maken, 3 = opscheppen. Welke stap komt **na** spaghetti koken?",
+  "options": [
+   "Saus warm maken",
+   "Opscheppen",
+   "Spaghetti koken",
+   "Tafel dekken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is stap 3, niet 2.",
+   "Dat is stap 1 zelf. Wat komt erna?",
+   "Tafel dekken staat niet in dit stappenplan. Kijk naar de nummers."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 47,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 6 vraag 2",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "In de legenda van een dorpskaart betekent een **zwart vierkantje** 'gebouw' en een **zwart vierkantje met vlaggetje** 'school'. Op de kaart staan vier vierkantjes, waarvan één met vlaggetje. Hoeveel **scholen** zie je op de kaart?",
+  "options": [
+   "1",
+   "4",
+   "3",
+   "0"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je telde álle gebouwen mee — kijk alleen naar het vlaggetje.",
+   "Dat zijn juist de vierkantjes zónder vlaggetje.",
+   "Er staat wél een vierkantje met vlaggetje op de kaart."
+  ],
+  "explanation": "Alleen het vierkantje **met vlaggetje** is volgens de legenda een school: **1** school.",
+  "niveaus": null
+ },
+ {
+  "nr": 48,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 6",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Onderaan een website over medicijnen staat: 'Deze site is gemaakt door de fabrikant van pil X.' Waarom is dat belangrijk om te weten?",
+  "options": [
+   "De maker verdient aan pil X en is dus niet neutraal",
+   "Fabrikanten weten altijd alles het best",
+   "Het maakt nooit uit wie iets schrijft",
+   "Websites van bedrijven zijn altijd fout"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verstand hebben van iets is niet hetzelfde als éérlijk zijn over de nadelen.",
+   "De afzender bepaalt juist hóé je de informatie moet lezen.",
+   "Altijd fout is te sterk — maar je moet wel iets in de gaten houden. Wat?"
+  ],
+  "explanation": "Kijk altijd naar de **afzender**: wie verdient hieraan? Een fabrikant vertelt vooral de vóórdelen van het eigen product.",
+  "niveaus": null
+ },
+ {
+  "nr": 49,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 8 vraag 22",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Waarom zet je onderaan je werkstuk een **bronnenlijst**?",
+  "options": [
+   "Zodat je informatie te controleren is",
+   "Omdat het werkstuk dan langer lijkt",
+   "Omdat de plaatjes dan mooier worden",
+   "Het is eigenlijk nergens voor nodig"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lengte is niet het doel — controleerbaarheid wel.",
+   "Een bronnenlijst verandert niets aan plaatjes.",
+   "Het is juist een teken van goed onderzoek."
+  ],
+  "explanation": "Met een **bronnenlijst** kan de lezer jouw informatie controleren — zo laat je zien dat je werk klopt.",
+  "niveaus": null
+ },
+ {
+  "nr": 50,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 16",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "level": "groep8",
+  "q": "Welk woord komt **direct na** 'boom' in dit alfabetische rijtje: 'boom', 'boon', 'boor', 'boot'?",
+  "options": [
+   "boon",
+   "boot",
+   "boor",
+   "boom"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De t komt pas ná een paar andere letters.",
+   "Er zit alfabetisch nog een woord tussen.",
+   "Dat is het woord zélf."
+  ],
+  "explanation": "Vergelijk de vierde letter: m → n → r → t. Direct na boom komt **boon**.",
+  "niveaus": null
+ }
+]

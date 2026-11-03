@@ -4,128 +4,128 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 2)
 Vraag: Wat is **5** in het Engels?
-- ✅ five
 - ▫️ fifteen
+- ✅ five
 - ▫️ four
 - ▫️ six
 
 ## 2. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 2)
 Vraag: Wat is **12** in het Engels?
-- ▫️ ten
 - ▫️ two
+- ▫️ ten
 - ✅ twelve
 - ▫️ twenty
 
 ## 3. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 4)
 Vraag: Wat is **Friday** in het Nederlands?
 - ✅ vrijdag
-- ▫️ zaterdag
-- ▫️ donderdag
 - ▫️ maandag
+- ▫️ donderdag
+- ▫️ zaterdag
 
 ## 4. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 4)
 Vraag: Wat is **Wednesday** in het Nederlands?
-- ▫️ dinsdag
 - ▫️ donderdag
-- ▫️ maandag
 - ✅ woensdag
+- ▫️ dinsdag
+- ▫️ maandag
 
 ## 5. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 5)
 Vraag: Wat betekent **brother**?
 - ▫️ zus
-- ▫️ oom
 - ▫️ neef
+- ▫️ oom
 - ✅ broer
 
 ## 6. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 5)
 Vraag: Wat betekent **grandma**?
+- ✅ oma
 - ▫️ moeder
 - ▫️ tante
 - ▫️ zus
-- ✅ oma
 
 ## 7. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 6)
 Vraag: Wat betekent **bread**?
-- ▫️ vlees
 - ▫️ kaas
+- ▫️ vlees
 - ▫️ ei
 - ✅ brood
 
 ## 8. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 6)
 Vraag: Wat betekent **milk**?
-- ▫️ water
+- ✅ melk
 - ▫️ sap
 - ▫️ koffie
-- ✅ melk
+- ▫️ water
 
 ## 9. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 7)
 Vraag: Wat betekent **eye**?
-- ▫️ oor
-- ✅ oog
-- ▫️ neus
 - ▫️ mond
+- ▫️ oor
+- ▫️ neus
+- ✅ oog
 
 ## 10. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **red**?
-- ✅ rood
-- ▫️ blauw
 - ▫️ geel
+- ▫️ blauw
 - ▫️ groen
+- ✅ rood
 
 ## 11. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 3)
 Vraag: Vul in: *'__ is my book.'* Het gaat om het boek dat ik vasthoud.
-- ▫️ These
 - ▫️ Those
 - ▫️ That
+- ▫️ These
 - ✅ This
 
 ## 12. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 3)
 Vraag: Vul in: *'Look at __ birds in the tree.'* Het gaat om meerdere vogels ver weg.
-- ▫️ this
 - ▫️ that
-- ▫️ these
 - ✅ those
+- ▫️ these
+- ▫️ this
 
 ## 13. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 4)
 Vraag: Vul in: 'I __ a student.'
-- ▫️ are
 - ▫️ is
+- ▫️ are
 - ✅ am
 - ▫️ be
 
 ## 14. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 4)
 Vraag: Vul in: 'She __ my sister.'
+- ▫️ are
 - ▫️ am
 - ✅ is
-- ▫️ are
 - ▫️ be
 
 ## 15. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'I __ books.' (read)
-- ✅ read
 - ▫️ readed
 - ▫️ reading
 - ▫️ reads
+- ✅ read
 
 ## 16. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'She __ the piano.' (play)
-- ✅ plays
-- ▫️ playing
 - ▫️ play
 - ▫️ played
+- ✅ plays
+- ▫️ playing
 
 ## 17. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'We __ to school.' (go)
-- ▫️ gone
 - ▫️ goes
-- ▫️ going
 - ✅ go
+- ▫️ gone
+- ▫️ going
 
 ## 18. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de vraag af: *'__ you like apples?'*
+- ▫️ Are
 - ✅ Do
 - ▫️ Is
-- ▫️ Are
 - ▫️ Does
 
 ## 19. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
@@ -137,7 +137,7 @@ Vraag: Maak de vraag af: *'__ she play tennis?'*
 
 ## 20. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de ontkenning af: *'I __ like fish.'*
-- ▫️ doesn't
 - ▫️ am not
+- ▫️ doesn't
 - ▫️ isn't
 - ✅ don't

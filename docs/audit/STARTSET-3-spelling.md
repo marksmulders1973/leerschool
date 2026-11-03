@@ -4,115 +4,115 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐱?
-- ✅ kat
-- ▫️ katt
 - ▫️ kad
 - ▫️ ket
+- ▫️ katt
+- ✅ kat
 
 ## 2. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐟?
-- ▫️ vus
 - ✅ vis
-- ▫️ viss
 - ▫️ fis
+- ▫️ vus
+- ▫️ viss
 
 ## 3. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit voertuig: 🚌?
 - ▫️ bas
+- ✅ bus
 - ▫️ buss
 - ▫️ pus
-- ✅ bus
 
 ## 4. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Zeg langzaam: **p - e - n**. Welk woord schrijf je?
-- ▫️ pin
 - ▫️ pan
-- ▫️ peen
 - ✅ pen
+- ▫️ peen
+- ▫️ pin
 
 ## 5. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit ding aan de hemel: ☀️?
 - ▫️ zin
 - ▫️ zan
-- ✅ zon
 - ▫️ zonn
+- ✅ zon
 
 ## 6. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Hoe schrijf je het woord voor dit ding aan de hemel: 🌙?
-- ▫️ men
-- ▫️ maann
-- ✅ maan
 - ▫️ man
+- ▫️ men
+- ✅ maan
+- ▫️ maann
 
 ## 7. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Hoe schrijf je het woord voor dit ding: 🌳?
-- ▫️ bom
-- ▫️ bome
 - ▫️ buum
 - ✅ boom
+- ▫️ bome
+- ▫️ bom
 
 ## 8. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Welk woord heeft een **lange klank**?
 - ▫️ bal
+- ▫️ bus
 - ▫️ bel
 - ✅ been
-- ▫️ bus
 
 ## 9. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Zeg langzaam: **v - uu - r**. Welk woord schrijf je?
-- ▫️ vier
 - ✅ vuur
 - ▫️ vur
 - ▫️ voer
+- ▫️ vier
 
 ## 10. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Hoe schrijf je het woord voor dit ding: 📖?
-- ▫️ buk
-- ✅ boek
 - ▫️ poek
 - ▫️ boec
+- ✅ boek
+- ▫️ buk
 
 ## 11. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Hoe schrijf je het woord voor dit ding: 🚲?
-- ▫️ fits
-- ▫️ fiet
 - ▫️ viets
+- ▫️ fiet
 - ✅ fiets
+- ▫️ fits
 
 ## 12. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Welke **twee letters** samen maken de klank die je hoort in **huis**?
 - ▫️ oe
-- ▫️ uu
 - ✅ ui
 - ▫️ ei
+- ▫️ uu
 
 ## 13. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Hoe schrijf je het woord voor een **heel grote man uit een sprookje**?
 - ▫️ rus
-- ▫️ ruis
 - ▫️ roes
+- ▫️ ruis
 - ✅ reus
 
 ## 14. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐄?
-- ✅ koe
 - ▫️ ko
 - ▫️ kue
 - ▫️ kie
+- ✅ koe
 
 ## 15. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 4)
 Vraag: Hoe schrijf je de plek waar je elke dag leert?
-- ▫️ sgool
-- ✅ school
-- ▫️ chool
 - ▫️ skool
+- ✅ school
+- ▫️ sgool
+- ▫️ chool
 
 ## 16. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 4)
 Vraag: Hoe schrijf je het woord voor wat je aan je voet draagt: 👟?
+- ✅ schoen
+- ▫️ soen
 - ▫️ schun
 - ▫️ sgoen
-- ▫️ soen
-- ✅ schoen
 
 ## 17. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 4)
 Vraag: Hoe schrijf je het woord voor dit sieraad om je vinger: 💍?
@@ -123,10 +123,10 @@ Vraag: Hoe schrijf je het woord voor dit sieraad om je vinger: 💍?
 
 ## 18. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 5)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐑?
-- ✅ schaap
 - ▫️ sgaap
-- ▫️ scaap
 - ▫️ schap
+- ▫️ scaap
+- ✅ schaap
 
 ## 19. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 5)
 Vraag: Hoe schrijf je het woord voor het huis van een koning: 🏰?

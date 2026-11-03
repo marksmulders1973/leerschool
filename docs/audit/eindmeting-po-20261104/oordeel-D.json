@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 151,
+    "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 8",
+    "eigenKeuze": "Het wordt duur",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord; wrongHint noemt \"oplopen\" (staat niet in de uitdrukking) en omschrijft deels \"steeds meer kosten\""
+  },
+  {
+    "nr": 152,
+    "waar": "spreekwoorden-uitdrukkingen-po stap 5 vraag 1",
+    "eigenKeuze": "Een paar vragen",
+    "oordeel": "twijfel",
+    "reden": "metavraag over toetssamenstelling: niet leerzaam en feitelijk lastig te controleren"
+  },
+  {
+    "nr": 153,
+    "waar": "sterren-planeten stap 9 vraag 10",
+    "eigenKeuze": "1",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 154,
+    "waar": "synoniemen-tegenstellingen-po stap 4 vraag 5",
+    "eigenKeuze": "stil",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 155,
+    "waar": "taal-leren-lezen-g3 stap 3 vraag 3",
+    "eigenKeuze": "b - u - s",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord"
+  },
+  {
+    "nr": 156,
+    "waar": "taal-leren-lezen-g3 stap 4 vraag 2",
+    "eigenKeuze": "rood",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord"
+  },
+  {
+    "nr": 157,
+    "waar": "taal-leren-lezen-g3 stap 5 vraag 1",
+    "eigenKeuze": "de kat",
+    "oordeel": "twijfel",
+    "reden": "antwoord staat letterlijk in de leeszin (bewust voor groep 3); niveaus.basis geeft alleen het antwoord"
+  },
+  {
+    "nr": 158,
+    "waar": "tabellen-grafieken stap 3 vraag 5",
+    "eigenKeuze": "143",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 159,
+    "waar": "tabellen-grafieken stap 3 vraag 6",
+    "eigenKeuze": "150",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 160,
+    "waar": "tabellen-grafieken stap 6 vraag 4",
+    "eigenKeuze": "15",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord"
+  },
+  {
+    "nr": 161,
+    "waar": "tabellen-grafieken stap 7 vraag 21",
+    "eigenKeuze": "Twee kolommen optellen en vergelijken",
+    "oordeel": "twijfel",
+    "reden": "metavraag; goede optie is de enige met twee handelingen, raadbaar door de vorm"
+  },
+  {
+    "nr": 162,
+    "waar": "tafels-po stap 1 vraag 8",
+    "eigenKeuze": "14",
+    "oordeel": "twijfel",
+    "reden": "antwoord staat vrijwel in de vraag (wisselregel, bedoeld); niveaus.basis geeft alleen het antwoord"
+  },
+  {
+    "nr": 163,
+    "waar": "tafels-po stap 5 vraag 5",
+    "eigenKeuze": "78",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (60 + 18 = 78)"
+  },
+  {
+    "nr": 164,
+    "waar": "tekstdoel-schrijversdoel-po stap 2 vraag 3",
+    "eigenKeuze": "Voor iedereen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 165,
+    "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 2",
+    "eigenKeuze": "\"Op = op, dus wees er snel bij.\"",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 166,
+    "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 6",
+    "eigenKeuze": "De supermarkt, die verdient aan elk verkocht pak",
+    "oordeel": "twijfel",
+    "reden": "verwijst naar folder \"Ochtendkracht\" die niet in de vraag staat; enige commerciele optie, raadbaar"
+  },
+  {
+    "nr": 167,
+    "waar": "tijd-snelheid-afstand-po stap 1 vraag 2",
+    "eigenKeuze": "2 h 35 min",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (volledig voorgerekend); notatie \"h\" voor uur is ongebruikelijk in PO"
+  },
+  {
+    "nr": 168,
+    "waar": "tijd-snelheid-afstand-po stap 3 vraag 8",
+    "eigenKeuze": "10 km",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (4×2,5=10)"
+  },
+  {
+    "nr": 169,
+    "waar": "tijdsduur-rekenen-po stap 1 vraag 8",
+    "eigenKeuze": "48",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (48 uur)"
+  },
+  {
+    "nr": 170,
+    "waar": "tijdsduur-rekenen-po stap 6 vraag 10",
+    "eigenKeuze": "1 uur 10 min",
+    "oordeel": "twijfel",
+    "reden": "wrongHints rekenen de oplossing bijna voor (\"Reken 70 − 60\", \"Haal 60 minuten van de 70 af\")"
+  },
+  {
+    "nr": 171,
+    "waar": "tijdvakken-nederland-po stap 3 vraag 10",
+    "eigenKeuze": "de slavenhandel door de WIC",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 172,
+    "waar": "topografie-nederland stap 6 vraag 3",
+    "eigenKeuze": "Vaalserberg",
+    "oordeel": "twijfel",
+    "reden": "\"hoogste punt van Nederland in Europa\" is lastig te snappen voor een kind (bedoeld: zonder Caribisch Nederland); uitleg ontbreekt"
+  },
+  {
+    "nr": 173,
+    "waar": "trappen-van-vergelijking-po stap 4 vraag 1",
+    "eigenKeuze": "dikker",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 174,
+    "waar": "verhaal-diepte-lezen-po stap 4 vraag 8",
+    "eigenKeuze": "Opgelucht en warm",
+    "oordeel": "twijfel",
+    "reden": "alleen de slotzin staat in de vraag; afleider \"nog steeds geschrokken\" en hulpstap \"simpeler\" verwijzen naar verhaal dat niet getoond wordt"
+  },
+  {
+    "nr": 175,
+    "waar": "verhoudingen-po stap 2 vraag 2",
+    "eigenKeuze": "8",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (\"8.\")"
+  },
+  {
+    "nr": 176,
+    "waar": "verhoudingen-po stap 5 vraag 7",
+    "eigenKeuze": "8 cm",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 177,
+    "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 4",
+    "eigenKeuze": "Daan",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 178,
+    "waar": "verwijswoorden-po stap 3 vraag 3",
+    "eigenKeuze": "het huis",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 179,
+    "waar": "vlakke-figuren-po stap 2 vraag 8",
+    "eigenKeuze": "16",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 180,
+    "waar": "vlakke-figuren-po stap 5 vraag 28",
+    "eigenKeuze": "4 assen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 181,
+    "waar": "volgorde-bewerkingen stap 4 vraag 6",
+    "eigenKeuze": "14",
+    "oordeel": "twijfel",
+    "reden": "machten (4²) passen niet bij groep 5; eerder groep 7-8"
+  },
+  {
+    "nr": 182,
+    "waar": "volgorde-bewerkingen stap 6 vraag 2",
+    "eigenKeuze": "26",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (\"26.\"); machten passen niet bij groep 5"
+  },
+  {
+    "nr": 183,
+    "waar": "water-erfgoed-nederland-po stap 3 vraag 1",
+    "eigenKeuze": "Drooggemalen land achter een dijk",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 184,
+    "waar": "water-erfgoed-nederland-po stap 6 vraag 2",
+    "eigenKeuze": "Flevoland",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 185,
+    "waar": "water-erfgoed-nederland-po stap 6 vraag 9",
+    "eigenKeuze": "Een lange dijk",
+    "oordeel": "fout",
+    "reden": "antwoord staat in de vraag: \"Afsluitdijk\" → \"Een lange dijk\"; wrongHints zeggen zelfs \"kijk naar de naam\""
+  },
+  {
+    "nr": 186,
+    "waar": "water-erfgoed-nederland-po stap 6 vraag 15",
+    "eigenKeuze": "Noord-Holland",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 187,
+    "waar": "waterkringloop-po stap 4 vraag 12",
+    "eigenKeuze": "Cumulonimbus",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 188,
+    "waar": "werelddelen-landen-po stap 4 vraag 6",
+    "eigenKeuze": "Stille Oceaan",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 189,
+    "waar": "werelddelen-landen-po stap 4 vraag 9",
+    "eigenKeuze": "Een heel groot stuk vasteland",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 190,
+    "waar": "werkwoord-tijden-po stap 5 vraag 24",
+    "eigenKeuze": "Het krijgt in de verleden tijd stam + te of stam + de",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 191,
+    "waar": "werkwoordsspelling-dt stap 1 vraag 8",
+    "eigenKeuze": "fiets",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord"
+  },
+  {
+    "nr": 192,
+    "waar": "werkwoordsspelling-dt stap 7 vraag 1",
+    "eigenKeuze": "Word",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (\"Word.\")"
+  },
+  {
+    "nr": 193,
+    "waar": "werkwoordsspelling-dt stap 7 vraag 7",
+    "eigenKeuze": "Houd",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (\"Houd jij?\")"
+  },
+  {
+    "nr": 194,
+    "waar": "winst-rekenen-po stap 2 vraag 2",
+    "eigenKeuze": "€5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 195,
+    "waar": "woorden-2-nieuwkomers stap 3 vraag 3",
+    "eigenKeuze": "de kast",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 196,
+    "waar": "woorden-3-nieuwkomers stap 1 vraag 4",
+    "eigenKeuze": "Roze.",
+    "oordeel": "fout",
+    "reden": "alle drie wrongHints omschrijven het goede antwoord: \"Een varken is lichtrood\" = roze"
+  },
+  {
+    "nr": 197,
+    "waar": "woorden-3-nieuwkomers stap 3 vraag 3",
+    "eigenKeuze": "Ik haal de pen eruit.",
+    "oordeel": "fout",
+    "reden": "alle wrongHints geven het antwoord: \"Uit het etui = eruit\" → \"Ik haal de pen eruit\"; antwoord herhaalt ook de opdracht, afleiders absurd (\"Ik eet de pen\")"
+  },
+  {
+    "nr": 198,
+    "waar": "woordenschat-engels-po stap 5 vraag 3",
+    "eigenKeuze": "dochter",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 199,
+    "waar": "woordenschat-po stap 5 vraag 26",
+    "eigenKeuze": "Veel willen weten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 200,
+    "waar": "woordsoorten-po stap 5 vraag 16",
+    "eigenKeuze": "Woord dat een persoon vervangt, zoals ik of hij",
+    "oordeel": "goed",
+    "reden": ""
+  }
+]
