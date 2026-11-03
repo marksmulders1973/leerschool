@@ -620,7 +620,7 @@ const steps = [
           theorie: "Gewicht-stappen: ton→kg=×1000, kg→g=×1000, g→mg=×1000.",
           voorbeelden: [{ type: "tabel", tekst: "1 kg = 1000 g. 5 kg = 5000 g. 0,5 kg = 500 g." }],
           basiskennis: [{ onderwerp: "Niet × 100", uitleg: "Bij gewicht is kg→g een sprong van 3 (× 1000), niet × 100 zoals bij m→cm." }],
-          niveaus: { basis: "5000.", simpeler: "1 kg = 1000 g. 5 × 1000 = 5000 g.", nogSimpeler: "5000" },
+          niveaus: { basis: "In 1 kg zitten 1000 g. Hoeveel gram zit er dan in 5 kg?", simpeler: "1 kg = 1000 g. 5 × 1000 = 5000 g.", nogSimpeler: "5000" },
         },
       },
       {
@@ -634,11 +634,11 @@ const steps = [
           theorie: "Ton → kg = × 1000.",
           voorbeelden: [{ type: "tabel", tekst: "1 ton = 1000 kg. 3 ton = 3000 kg. 1,5 ton = 1500 kg." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Vrachtwagen ~3 ton = 3000 kg. Klopt." }],
-          niveaus: { basis: "3000 kg.", simpeler: "1 ton = 1000 kg. 3 ton = 3000 kg.", nogSimpeler: "3000" },
+          niveaus: { basis: "In 1 ton zit 1000 kg. Hoeveel kilo is 3 ton dan?", simpeler: "1 ton = 1000 kg. 3 ton = 3000 kg.", nogSimpeler: "3000" },
         },
       },
       {
-        q: "Een paracetamol-tablet is **500 mg**. Hoeveel **g** is dat?",
+        q: "Een paracetamoltablet weegt **500 mg**. Hoeveel **g** is dat?",
         options: ["0,5","5","50","0,05"],
         answer: 0,
         wrongHints: [null,"Te veel — 500 mg is minder dan 1 g, dus de uitkomst moet kleiner dan 1 zijn.","Heb je ÷ 10 gedaan? Van mg naar g deel je door 1000.","Te weinig — heb je per ongeluk ÷ 10.000 gedaan?"],
@@ -648,7 +648,7 @@ const steps = [
           theorie: "Naar grotere eenheid: getal wordt KLEINER. 500 mg < 1 g.",
           voorbeelden: [{ type: "stap", tekst: "500 mg ÷ 1000 = 0,5 g. Komma 3 naar links: 500 → 0,500." }],
           basiskennis: [{ onderwerp: "Logica-check", uitleg: "G is groter dan mg → minder van die grotere = kleiner getal." }],
-          niveaus: { basis: "0,5 g.", simpeler: "1000 mg = 1 g. 500 mg = halve g = 0,5 g.", nogSimpeler: "0,5" },
+          niveaus: { basis: "1000 mg is samen 1 g. Is 500 mg meer of minder dan 1 g, en hoeveel deel ervan?", simpeler: "1000 mg = 1 g. 500 mg = halve g = 0,5 g.", nogSimpeler: "0,5" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.

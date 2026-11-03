@@ -1,89 +1,89 @@
 # Startset Spelling · groep 3 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐱?
 - ▫️ ket
-- ▫️ kad
-- ▫️ katt
 - ✅ kat
+- ▫️ katt
+- ▫️ kad
 
 ## 2. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐟?
-- ▫️ viss
-- ▫️ vus
 - ▫️ fis
 - ✅ vis
+- ▫️ viss
+- ▫️ vus
 
 ## 3. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit voertuig: 🚌?
+- ▫️ bas
+- ▫️ pus
 - ✅ bus
 - ▫️ buss
-- ▫️ pus
-- ▫️ bas
 
 ## 4. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Zeg langzaam: **p - e - n**. Welk woord schrijf je?
-- ▫️ peen
 - ▫️ pin
 - ✅ pen
 - ▫️ pan
+- ▫️ peen
 
 ## 5. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 1)
 Vraag: Hoe schrijf je het woord voor dit ding aan de hemel: ☀️?
+- ▫️ zonn
+- ▫️ zan
 - ✅ zon
 - ▫️ zin
-- ▫️ zan
-- ▫️ zonn
 
 ## 6. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Hoe schrijf je het woord voor dit ding aan de hemel: 🌙?
-- ▫️ man
 - ▫️ maann
 - ▫️ men
 - ✅ maan
+- ▫️ man
 
 ## 7. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Hoe schrijf je het woord voor dit ding: 🌳?
-- ▫️ bome
 - ▫️ buum
 - ▫️ bom
 - ✅ boom
+- ▫️ bome
 
 ## 8. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Welk woord heeft een **lange klank**?
-- ▫️ bel
-- ✅ been
 - ▫️ bal
+- ✅ been
 - ▫️ bus
+- ▫️ bel
 
 ## 9. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 2)
 Vraag: Zeg langzaam: **v - uu - r**. Welk woord schrijf je?
 - ▫️ voer
-- ✅ vuur
 - ▫️ vur
+- ✅ vuur
 - ▫️ vier
 
 ## 10. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Hoe schrijf je het woord voor dit ding: 📖?
-- ✅ boek
 - ▫️ poek
+- ✅ boek
 - ▫️ buk
 - ▫️ boec
 
 ## 11. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Hoe schrijf je het woord voor dit ding: 🚲?
 - ✅ fiets
-- ▫️ viets
 - ▫️ fiet
 - ▫️ fits
+- ▫️ viets
 
 ## 12. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
 Vraag: Welke **twee letters** samen maken de klank die je hoort in **huis**?
 - ▫️ uu
-- ▫️ oe
 - ✅ ui
+- ▫️ oe
 - ▫️ ei
 
 ## 13. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 3)
@@ -97,47 +97,47 @@ Vraag: Hoe schrijf je het woord voor een **heel grote man uit een sprookje**?
 Vraag: Hoe schrijf je het woord voor dit dier: 🐄?
 - ✅ koe
 - ▫️ ko
-- ▫️ kie
 - ▫️ kue
+- ▫️ kie
 
 ## 15. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 4)
 Vraag: Hoe schrijf je de plek waar je elke dag leert?
-- ▫️ chool
-- ✅ school
-- ▫️ skool
 - ▫️ sgool
+- ▫️ chool
+- ▫️ skool
+- ✅ school
 
 ## 16. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 4)
 Vraag: Hoe schrijf je het woord voor wat je aan je voet draagt: 👟?
 - ▫️ sgoen
-- ▫️ schun
 - ▫️ soen
+- ▫️ schun
 - ✅ schoen
 
 ## 17. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 4)
 Vraag: Hoe schrijf je het woord voor dit sieraad om je vinger: 💍?
-- ▫️ rig
 - ▫️ rin
-- ✅ ring
 - ▫️ rink
+- ✅ ring
+- ▫️ rig
 
 ## 18. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 5)
 Vraag: Hoe schrijf je het woord voor dit dier: 🐑?
-- ▫️ scaap
 - ▫️ schap
-- ▫️ sgaap
 - ✅ schaap
+- ▫️ scaap
+- ▫️ sgaap
 
 ## 19. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 5)
 Vraag: Hoe schrijf je het woord voor het huis van een koning: 🏰?
 - ▫️ casteel
-- ✅ kasteel
 - ▫️ kastel
 - ▫️ kastteel
+- ✅ kasteel
 
 ## 20. Spelling — je eerste woorden schrijven (groep 3) (spelling-eerste-woorden-g3, stap 5)
 Vraag: Welk woord is **fout** geschreven?
 - ▫️ bank
+- ▫️ boot
 - ▫️ bloem
 - ✅ boec
-- ▫️ boot

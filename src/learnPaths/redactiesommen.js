@@ -943,7 +943,7 @@ const steps = [
         q: "*'In de klas zitten 28 kinderen. **3/4 deel** gaat naar gym. Hoeveel kinderen gaan **niet** naar gym?'*",
         options: ["7","21","4","14"],
         answer: 0,
-        wrongHints: [null, "Dat is wel naar gym (3/4 van 28).", "Deelde je 28 door 7 in plaats van door 4?", "Dat is de helft, niet 1/4."],
+        wrongHints: [null, "Dat is wel naar gym (3/4 van 28).", "Deelde je 28 door 7 in plaats van door 4?", "Dat is de helft van de klas. Gaat de helft niet naar gym?"],
         uitlegPad: {
           stappen: [
             { titel: "Breuk-vraag in verhaal", tekst: "3/4 zijn weg → blijven 1/4 over. Twee manieren: bereken 1/4 van 28 OF bereken 3/4 en trek dat af van 28." },
@@ -953,7 +953,7 @@ const steps = [
           theorie: "Bij '3/4 doet X — hoeveel doet niet?' → reken 1/4 (de rest), niet 3/4.",
           voorbeelden: [{ type: "stap", tekst: "20 leerlingen, 2/5 vegetarisch → 3/5 niet → 20÷5×3 = 12." }],
           basiskennis: [{ onderwerp: "Lees vraag goed", uitleg: "'Hoeveel niet' is anders dan 'hoeveel wel'. Verwissel niet." }],
-          niveaus: { basis: "1/4 van 28 = 7.", simpeler: "28 ÷ 4 = 7 kinderen niet naar gym.", nogSimpeler: "7" },
+          niveaus: { basis: "Als 3 van de 4 stukken naar gym gaan, hoeveel stukken blijven er dan over?", simpeler: "Er blijft 1/4 deel over. Verdeel 28 kinderen in 4 gelijke groepjes en tel één groepje.", nogSimpeler: "28 ÷ 4 = 7 kinderen gaan niet naar gym." },
         },
       },
       {
@@ -974,6 +974,7 @@ const steps = [
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B11 (3 nov 2026): procenten zijn groep-7-stof, niet voor groep 5
         q: "*'Een doos snoep weegt **2 kg**. **40%** wordt opgegeten. Hoeveel **gram blijft er over**?'*",
         options: ["1200 g","800 g","1600 g","1960 g"],
         answer: 0,
@@ -990,14 +991,15 @@ const steps = [
           theorie: "Drie-stap-vraag:\n1. Eenheid omrekenen (kg → g)\n2. Bereken rest-percentage (100 − % weg)\n3. Pas dat percentage toe op totaal",
           voorbeelden: [{ type: "stap", tekst: "1 kg, 25% op = 75% over = 750 gram." }],
           basiskennis: [{ onderwerp: "Vraag-eenheid", uitleg: "Antwoord in gevraagde eenheid — let goed op gram vs kg." }],
-          niveaus: { basis: "60% van 2000 g = 1200 g.", simpeler: "2 kg = 2000 g. 40% op = 60% over. 60% van 2000 = 1200 g.", nogSimpeler: "1200 g" },
+          niveaus: { basis: "Reken eerst 2 kg om naar gram. Welk percentage van de doos blijft er over als 40% op is?", simpeler: "2 kg = 2000 g. Er blijft 60% over. Reken 10% van 2000 g uit en doe dat keer 6.", nogSimpeler: "60% van 2000 g = 1200 g." },
         },
       },
       {
+        vanafGroep: 7, // nakijkronde B11 (3 nov 2026): procenten zijn groep-7-stof, niet voor groep 5
         q: "*'Een sportclub heeft **120 leden**. Volgend jaar zijn het er **10% meer**. Hoeveel leden zijn het **dan**?'*",
         options: ["132","130","108","12"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 10% van 120 is 12, niet 10.", "Dat is 10% minder. Komen er leden bij of gaan er weg?", "Dat is alleen de toename, niet het totaal."],
+        wrongHints: [null, "Je telde er 10 leden bij. Maar 10% is niet hetzelfde als 10 leden. Hoe reken je 10% van 120 uit?", "Dat is 10% minder. Komen er leden bij of gaan er weg?", "Dat is alleen de toename, niet het totaal."],
         uitlegPad: {
           stappen: [
             { titel: "10% van 120", tekst: "10% = 1/10. 120 ÷ 10 = **12** leden erbij." },
@@ -1010,19 +1012,19 @@ const steps = [
             { type: "stap", tekst: "80 boeken, 25% minder: 25% van 80 = 20. Over: 60." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen toename", uitleg: "Vraag 'hoeveel dan' = nieuw totaal, niet alleen de toename." }],
-          niveaus: { basis: "120 + 12 = 132.", simpeler: "10% van 120 = 12 leden erbij. 120 + 12 = 132.", nogSimpeler: "132" },
+          niveaus: { basis: "Reken eerst uit hoeveel leden 10% van 120 is. Tel dat daarna bij de 120 op.", simpeler: "10% is 1/10 deel. Deel 120 door 10: zoveel leden komen erbij.", nogSimpeler: "10% van 120 = 12. 120 + 12 = 132 leden." },
         },
       },
       {
-        q: "*'In groep 8 zitten **27 leerlingen**. **2/3** gaat naar VMBO, de rest naar HAVO/VWO. Hoeveel naar **HAVO/VWO**?'*",
+        q: "*'In de klas zitten **27 kinderen**. **2/3 deel** gaat op schoolreis naar de dierentuin, de rest gaat naar het museum. Hoeveel kinderen gaan naar het **museum**?'*",
         options: ["9","18","13","6"],
         answer: 0,
-        wrongHints: [null, "Dat is naar VMBO (2/3), niet de rest.", "Klopt niet — welk deel van de klas gaat naar HAVO/VWO?", "Te weinig — hoeveel gaan er naar VMBO, en hoeveel blijven er dan over?"],
+        wrongHints: [null, "Dat zijn de kinderen die naar de dierentuin gaan (2/3), niet de rest.", "Klopt niet — welk deel van de klas gaat naar het museum?", "Te weinig — hoeveel kinderen gaan naar de dierentuin, en hoeveel blijven er dan over?"],
         uitlegPad: {
           stappen: [
-            { titel: "Wie zijn 'de rest'?", tekst: "2/3 naar VMBO → **1/3** naar HAVO/VWO. (Want 2/3 + 1/3 = 3/3 = alles.)" },
-            { titel: "Reken 1/3 van 27", tekst: "27 ÷ 3 = **9 leerlingen** naar HAVO/VWO." },
-            { titel: "Check", tekst: "VMBO: 27 × 2/3 = 18. HAVO/VWO: 9. Samen: 18 + 9 = 27 ✓ klopt." },
+            { titel: "Wie zijn 'de rest'?", tekst: "2/3 naar de dierentuin → **1/3** naar het museum. (Want 2/3 + 1/3 = 3/3 = alles.)" },
+            { titel: "Reken 1/3 van 27", tekst: "27 ÷ 3 = **9 kinderen** naar het museum." },
+            { titel: "Check", tekst: "Dierentuin: 2/3 van 27 = 18. Museum: 9. Samen: 18 + 9 = 27 ✓ klopt." },
           ],
           woorden: [
             { woord: "2/3", uitleg: "Twee derde van iets = 2 van de 3 gelijke stukken." },
@@ -1030,12 +1032,12 @@ const steps = [
           ],
           theorie: "Bij 'X-deel doet A, rest doet B' → reken (1 − X-deel) voor de rest. Of: trek 'A-aantal' af van totaal.",
           voorbeelden: [{ type: "stap", tekst: "30 kinderen, 3/5 buiten spelen → 2/5 binnen = 12 kinderen." }],
-          basiskennis: [{ onderwerp: "Schooladvies-vraag", uitleg: "Toetsstof: de Doorstroomtoets gebruikt dit soort verdelingen vaak." }],
-          niveaus: { basis: "1/3 van 27 = 9.", simpeler: "Rest = 1/3. 27 ÷ 3 = 9 naar HAVO/VWO.", nogSimpeler: "9" },
+          basiskennis: [{ onderwerp: "Verdeel-vraag", uitleg: "In rekentoetsen komen dit soort verdelingen vaak voor: eerst het deel van de rest bepalen, dan uitrekenen." }],
+          niveaus: { basis: "Als 2 van de 3 stukken naar de dierentuin gaan, hoeveel stukken blijven er dan over?", simpeler: "Er blijft 1/3 deel over. Verdeel 27 kinderen in 3 gelijke groepjes en tel één groepje.", nogSimpeler: "27 ÷ 3 = 9 kinderen gaan naar het museum." },
         },
       },
       { q: "Lisa heeft 36 stickers. Ze geeft 1/4 weg. Hoeveel houdt ze over?", options: ["27","9","32","12"], answer: 0, wrongHints: [null, "Dat is wat ze WEG geeft.", "Te veel — niet alleen 4 weg.", "Dat is 1/3 van 36. Welk deel geeft ze weg?"] },
-      { q: "Een rugzak kost €40. Je krijgt 15% korting. Hoeveel betaal je?", options: ["€34","€25","€55","€38"], answer: 0, wrongHints: [null, "Te laag — je trok €15 af in plaats van 15%.", "Niet — korting trekt af, telt niet op.", "Dan krijg je maar € 2 korting. Hoeveel is 10% van € 40, en hoeveel dan 15%?"] },
+      { vanafGroep: 7, /* nakijkronde B11 (3 nov 2026): procenten zijn groep-7-stof */ q: "Een rugzak kost €40. Je krijgt 15% korting. Hoeveel betaal je?", options: ["€34","€25","€55","€38"], answer: 0, wrongHints: [null, "Te laag — je trok €15 af in plaats van 15%.", "Niet — korting trekt af, telt niet op.", "Dan krijg je maar € 2 korting. Hoeveel is 10% van € 40, en hoeveel dan 15%?"] },
       { q: "Tom fietst 12 km in 1 uur. Hoeveel km in 30 minuten?", options: ["6 km","12 km","24 km","18 km"], answer: 0, wrongHints: [null, "Dat is in 1 uur.", "Dat is 2 uur.", "Zo ver fiets je in anderhalf uur. Is 30 minuten meer of minder dan 1 uur?"] },
       { q: "5 vrienden verdelen 20 koeken eerlijk. Hoeveel koeken krijgt ieder?", options: ["4","5","15","2"], answer: 0, wrongHints: [null, "Dat is het aantal vrienden. Hoeveel koeken krijgt ieder?", "Dat is 20 − 5. Moet je aftrekken of verdelen?", "Reken na: 5 × 2 = 10. Is dat 20?"] },
       { q: "Anna had €25. Ze kocht een boek van €12 en een pen van €3. Hoeveel heeft ze nog over?", options: ["€10","€15","€40","€13"], answer: 0, wrongHints: [null, "Dat heeft ze uitgegeven. Hoeveel heeft ze nog over?", "Dat is 25 + 12 + 3. Krijg je geld bij als je iets koopt?", "Dat is 25 − 12. Vergat je de pen?"] },

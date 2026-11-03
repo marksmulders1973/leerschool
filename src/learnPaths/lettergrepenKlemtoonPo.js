@@ -551,7 +551,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "ba-NAAN", tekst: "Je zegt 'baNAAN', met de nadruk op 'naan'. Daar ligt de klemtoon." }],
           niveaus: {
-            basis: "De klemtoon ligt op 'naan' (de tweede lettergreep).",
+            basis: "Zeg het woord een paar keer hardop, alsof je het iemand toeroept. De klemtoon is het stukje dat harder en langer klinkt.",
             simpeler: "Welk stukje klinkt harder: ba of naan?",
             nogSimpeler: "Zeg 'banaan' — welk stukje springt eruit?",
           },
@@ -565,7 +565,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "to-MAAT", tekst: "Je zegt 'toMAAT', met de nadruk op 'maat'." }],
           niveaus: {
-            basis: "De klemtoon ligt op 'maat'.",
+            basis: "Zeg het woord een paar keer hardop, alsof je het iemand toeroept. De klemtoon is het stukje dat harder en langer klinkt.",
             simpeler: "Welk stukje klinkt harder: to of maat?",
             nogSimpeler: "Zeg 'tomaat' — welk stukje springt eruit?",
           },
@@ -584,8 +584,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Harder en langer", tekst: "De lettergreep met de klemtoon spreek je harder en langer uit — die springt eruit." }],
           niveaus: {
-            basis: "De klemtoon-lettergreep klinkt harder en langer.",
-            simpeler: "Hoe valt de nadruk op: door harder te spreken.",
+            basis: "Zeg 'banaan' een paar keer hardop. Let op wat je stem doet bij het stukje dat eruit springt.",
+            simpeler: "Zeg 'ba-NAAN'. Wat doet je stem bij 'naan'?",
             nogSimpeler: "Klinkt de klemtoon zachter of harder?",
           },
         },
@@ -598,7 +598,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "TÁ-fel", tekst: "Je zegt 'TÁfel', met de nadruk op 'ta'. Daar ligt de klemtoon." }],
           niveaus: {
-            basis: "De klemtoon ligt op 'ta' (de eerste lettergreep).",
+            basis: "Zeg het woord een paar keer hardop, alsof je het iemand toeroept. De klemtoon is het stukje dat harder en langer klinkt.",
             simpeler: "Welk stukje klinkt harder: ta of fel?",
             nogSimpeler: "Zeg 'tafel' — welk stukje springt eruit?",
           },
@@ -612,7 +612,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "com-PU-ter", tekst: "Je zegt 'comPUter', met de nadruk op 'pu'. Dat is de tweede lettergreep." }],
           niveaus: {
-            basis: "De klemtoon ligt op 'pu' (de tweede lettergreep).",
+            basis: "Zeg het woord een paar keer hardop, alsof je het iemand toeroept. De klemtoon is het stukje dat harder en langer klinkt.",
             simpeler: "Welk stukje klinkt harder: com, pu of ter?",
             nogSimpeler: "Zeg 'computer' — welk stukje springt eruit?",
           },
@@ -622,11 +622,11 @@ const steps = [
         q: "Hoeveel lettergrepen heeft 'ziekenhuis'?",
         options: ["3", "2", "4", "1"],
         answer: 0,
-        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        wrongHints: [null, "Klap het woord langzaam mee: tel je elke klap?", "Klap het woord langzaam mee en tel opnieuw.", "Klap het woord mee: hoor je echt maar één klap?"],
         uitlegPad: {
           stappen: [{ titel: "zie-ken-huis", tekst: "Zie (1), ken (2), huis (3): drie klappen, dus 3 lettergrepen." }],
           niveaus: {
-            basis: "zie-ken-huis = 3 lettergrepen.",
+            basis: "Klap bij elk stukje van het woord één keer in je handen en tel de klappen.",
             simpeler: "Klap mee bij 'ziekenhuis'.",
             nogSimpeler: "zie — ken — huis: hoeveel klappen?",
           },
@@ -640,7 +640,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "va-KÁN-tie", tekst: "Je zegt 'vaKÁNtie', met de nadruk op 'kan'. Dat is de tweede lettergreep." }],
           niveaus: {
-            basis: "De klemtoon ligt op 'kan' (de tweede lettergreep).",
+            basis: "Zeg het woord een paar keer hardop, alsof je het iemand toeroept. De klemtoon is het stukje dat harder en langer klinkt.",
             simpeler: "Welk stukje klinkt harder: va, kan of tie?",
             nogSimpeler: "Zeg 'vakantie' — welk stukje springt eruit?",
           },
@@ -670,7 +670,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De klemtoon ligt op 'o' (de eerste lettergreep).",
+            basis: "Zeg het woord een paar keer hardop, alsof je het iemand toeroept. De klemtoon is het stukje dat harder en langer klinkt.",
             simpeler: "Welk stukje klinkt harder: o, li of fant?",
             nogSimpeler: "Zeg 'olifant' — welk stukje springt eruit?",
           },

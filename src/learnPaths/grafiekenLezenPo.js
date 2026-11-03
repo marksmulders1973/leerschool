@@ -909,7 +909,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Warmst/hoogste/meest = hoogste punt. Koudst/laagste/minst = laagste punt. Vraag 'wanneer?' → tijd antwoorden, niet de waarde." }],
           niveaus: {
-            basis: "14u (22°C is hoogste).",
+            basis: "'Warmst' betekent: de hoogste temperatuur. Zoek het hoogste punt van de lijn en kijk welke tijd eronder staat.",
             simpeler: "Zoek het hoogste getal: 22°C. Dat hoort bij 14u. Dus om 14u is het 't warmst.",
             nogSimpeler: "14u",
           },
@@ -929,7 +929,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "22 °C − 12 °C = 10 °C warmer." }],
           basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Schrijf °C bij het antwoord." }],
           niveaus: {
-            basis: "22 − 12 = 10 °C.",
+            basis: "Lees eerst de temperatuur om 8u en om 14u af. Trek daarna het kleine getal van het grote af.",
             simpeler: "Om 14u is het 22 °C, om 8u is het 12 °C. 22 − 12 = 10 °C warmer.",
             nogSimpeler: "10 °C",
           },
@@ -958,7 +958,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vlakke lijn = 'er verandert niets'. Niet 'fout' of 'leeg' — gewoon stabiel." }],
           niveaus: {
-            basis: "Er verandert niets (vlak = constant).",
+            basis: "Kijk naar de richting van de lijn: omhoog, omlaag of vlak. Wat betekent elke richting?",
             simpeler: "Lijn omhoog = stijgt. Lijn omlaag = daalt. Lijn vlak = blijft hetzelfde.",
             nogSimpeler: "Vlak = niets verandert",
           },
@@ -987,7 +987,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Y = waarde (omhoog). X = categorie/tijd (langs). Recht omhoog vanaf x naar top → links naar y → lees getal." }],
           niveaus: {
-            basis: "Y-as = waarde / hoeveelheid.",
+            basis: "De x-as loopt onderaan, de y-as loopt langs de zijkant omhoog. Welke getallen staan langs de zijkant?",
             simpeler: "Y-as = zijkant = HOE VEEL. X-as = onderkant = WANNEER / WIE / WAT.",
             nogSimpeler: "Y = waarde",
           },
@@ -995,7 +995,8 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Lijngrafiek bezoekers in de speeltuin: 10 uur 15, 12 uur 40, 14 uur 55, 16 uur 30. Om hoe laat waren er de **minste** bezoekers?",
+        q: "Kijk naar de lijngrafiek van het aantal bezoekers in de speeltuin. Om hoe laat waren er de **minste** bezoekers?",
+        svg: lijnSvg([{ x: "10 uur", y: 15 }, { x: "12 uur", y: 40 }, { x: "14 uur", y: 55 }, { x: "16 uur", y: 30 }], "Bezoekers in de speeltuin"),
         options: ["Om 10 uur", "Om 16 uur", "Om 12 uur", "Om 14 uur"],
         answer: 0,
         wrongHints: [null, "Er is een tijd met nog minder bezoekers.", null, "Dat is juist het hoogste punt."],
@@ -1034,14 +1035,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Om 10 uur (15 bezoekers).",
+            basis: "'Minste' betekent: het laagste punt van de lijn. Vergelijk alle getallen en zoek het kleinste.",
             simpeler: "Het kleinste getal is 15. Dat hoort bij 10 uur.",
             nogSimpeler: "10 uur",
           },
         },
       },
       {
-        q: "Lijngrafiek water in een regenton: ma 20 cm, di 35 cm, wo 35 cm, do 25 cm. Wat gebeurde er tussen **woensdag en donderdag**?",
+        q: "Kijk naar de lijngrafiek van het water in een regenton. Wat gebeurde er tussen **woensdag en donderdag**?",
+        svg: lijnSvg([{ x: "ma", y: 20 }, { x: "di", y: 35 }, { x: "wo", y: 35 }, { x: "do", y: 25 }], "Water in de regenton (cm)"),
         options: [
           "Het water daalde",
           "Het water steeg",
@@ -1089,14 +1091,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "35 → 25 = daalde.",
+            basis: "Lees af hoeveel water er op woensdag en op donderdag in de ton stond. Werd het meer of minder?",
             simpeler: "Woensdag 35 cm, donderdag 25 cm. Dat is minder, dus het water daalde.",
             nogSimpeler: "Daalde",
           },
         },
       },
       {
-        q: "Lijngrafiek lengte van een plant: week 1 4 cm, week 2 7 cm, week 3 15 cm, week 4 18 cm. Tussen welke weken groeide de plant het **meest**?",
+        q: "Kijk naar de lijngrafiek van de lengte van een plant. Tussen welke weken groeide de plant het **meest**?",
+        svg: lijnSvg([{ x: "week 1", y: 4 }, { x: "week 2", y: 7 }, { x: "week 3", y: 15 }, { x: "week 4", y: 18 }], "Lengte van de plant (cm)"),
         options: [
           "Tussen week 2 en 3",
           "Tussen week 1 en 2",
@@ -1149,14 +1152,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Tussen week 2 en 3 (8 cm).",
+            basis: "Reken per week uit hoeveel centimeter erbij kwam. Kijk dan waar het verschil het grootst is.",
             simpeler: "Bereken wat er elke week bij kwam: 3, 8, 3. De 8 cm is het meest.",
             nogSimpeler: "Week 2 en 3",
           },
         },
       },
       {
-        q: "Lijngrafiek prijs van een bakje aardbeien: april €5, mei €4, juni €3, juli €3. Hoeveel euro **goedkoper** was het in juni dan in april?",
+        q: "Kijk naar de lijngrafiek van de prijs van een bakje aardbeien. Hoeveel euro **goedkoper** was het in juni dan in april?",
+        svg: lijnSvg([{ x: "april", y: 5 }, { x: "mei", y: 4 }, { x: "juni", y: 3 }, { x: "juli", y: 3 }], "Prijs bakje aardbeien (€)"),
         options: ["€2", "€1", "€8", "€3"],
         answer: 0,
         wrongHints: [
@@ -1196,14 +1200,15 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "€5 − €3 = €2.",
+            basis: "Lees de prijs in april en in juni af. Trek daarna de lage prijs van de hoge af.",
             simpeler: "In april €5, in juni €3. Verschil: 5 − 3 = €2.",
             nogSimpeler: "€2",
           },
         },
       },
       {
-        q: "Lijngrafiek temperatuur in de klas: 9 uur 18 °C, 11 uur 20 °C, 13 uur 23 °C, 15 uur 21 °C. **Hoe warm** was het om 13 uur?",
+        q: "Kijk naar de lijngrafiek van de temperatuur in de klas. **Hoe warm** was het om 13 uur?",
+        svg: lijnSvg([{ x: "9 uur", y: 18 }, { x: "11 uur", y: 20 }, { x: "13 uur", y: 23 }, { x: "15 uur", y: 21 }], "Temperatuur in de klas (°C)"),
         options: ["23 °C", "21 °C", "20 °C", "18 °C"],
         answer: 0,
         wrongHints: [null, "Dat hoort bij 15 uur.", null, "Zoek op de x-as eerst 13 uur."],
@@ -1246,7 +1251,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Om 13 uur: 23 °C.",
+            basis: "Zoek onderaan 13 uur. Ga recht omhoog naar de lijn en lees het getal bij dat punt af.",
             simpeler: "Zoek 13 uur en lees het getal ernaast: 23 °C.",
             nogSimpeler: "23 °C",
           },

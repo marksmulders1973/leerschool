@@ -702,8 +702,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Deel door 4 = schrikkel. Niet deelbaar = gewoon. Heel snelle test." }],
           niveaus: {
-            basis: "Ja, 2024 is schrikkeljaar.",
-            simpeler: "2024 ÷ 4 = 506 (rond) → schrikkeljaar.",
+            basis: "Deel het jaartal door 4. Blijft er niets over, dan is het een schrikkeljaar.",
+            simpeler: "Kijk naar de laatste twee cijfers: 24. Staat 24 in de tafel van 4?",
             nogSimpeler: "Ja",
           },
         },
@@ -715,16 +715,16 @@ const steps = [
         wrongHints: [null, "Deel de laatste twee cijfers door 4: gaat 25 ÷ 4 precies op?", "Staat 26 in de tafel van 4?", "Is 27 een even getal? Een schrikkeljaar is altijd even."],
       },
       {
-        q: "Op welke datum is **Koningsdag**?",
+        q: "Op welke datum vieren we meestal **Koningsdag**?",
         options: ["27 april", "30 april", "5 mei", "30 maart"],
         answer: 0,
-        wrongHints: [null, "Oude Koninginnedag — niet meer.", "Dat is Bevrijdingsdag.", "Dan is het nog maart. Koningsdag valt later in het voorjaar."],
+        wrongHints: [null, "Op die datum was vroeger Koninginnedag.", "Dat is Bevrijdingsdag.", "Dan is het nog maart. Koningsdag valt later in het voorjaar."],
       },
       {
-        q: "Hoeveel dagen in **februari 2027** *(gewoon jaar)*?",
+        q: "Hoeveel dagen heeft **februari** in **2027**? *(2027 is geen schrikkeljaar.)*",
         options: ["28 dagen", "29 dagen", "30 dagen", "31 dagen"],
         answer: 0,
-        wrongHints: [null, "Dat is schrikkeljaar.", "Februari heeft nooit 30.", "Februari heeft nooit 31."],
+        wrongHints: [null, "Zoveel dagen heeft februari alleen in een schrikkeljaar.", "Is februari een lange of een korte maand? Denk aan de knokkeltruc.", "31 dagen hebben alleen de maanden op een knokkel. Hoort februari daarbij?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -763,7 +763,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "2032.",
+            basis: "Een schrikkeljaar is een jaartal dat je precies door 4 kunt delen. Probeer de jaren na 2028 een voor een.",
             simpeler: "Elke 4 jaar is er een schrikkeljaar. 2028 + 4 = 2032.",
             nogSimpeler: "2032",
           },
@@ -805,7 +805,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "26 december.",
+            basis: "Eerste kerstdag is op 25 december. Tweede kerstdag komt direct daarna.",
             simpeler: "Eerste kerstdag is 25 december. Tweede kerstdag is de dag erna: 26 december.",
             nogSimpeler: "26 december",
           },
@@ -847,7 +847,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Nieuwjaarsdag.",
+            basis: "1 januari is de allereerste dag van het jaar. Welke naam past daarbij?",
             simpeler: "Op 1 januari begint het nieuwe jaar. Daarom heet die dag Nieuwjaarsdag.",
             nogSimpeler: "Nieuwjaarsdag",
           },

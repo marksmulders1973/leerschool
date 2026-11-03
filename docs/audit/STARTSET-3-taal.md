@@ -1,143 +1,143 @@
 # Startset Taal & lezen · groep 3 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-10-30. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 1)
 Vraag: Met welke letter begint **maan**?
-- ✅ m
-- ▫️ n
 - ▫️ s
+- ✅ m
 - ▫️ a
+- ▫️ n
 
 ## 2. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 1)
 Vraag: Met welke letter begint **vis**?
-- ▫️ f
-- ✅ v
-- ▫️ i
 - ▫️ s
+- ✅ v
+- ▫️ f
+- ▫️ i
 
 ## 3. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 1)
 Vraag: Welke klank hoor je **achteraan** bij **roos**?
-- ▫️ oo
 - ▫️ r
-- ✅ s
 - ▫️ t
+- ▫️ oo
+- ✅ s
 
 ## 4. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 1)
 Vraag: Welk woord begint met dezelfde letter als **boom**?
-- ✅ bal
 - ▫️ sok
-- ▫️ map
 - ▫️ vis
+- ✅ bal
+- ▫️ map
 
 ## 5. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 2)
 Vraag: Welk woord rijmt op **kat**?
-- ▫️ kip
-- ✅ mat
 - ▫️ kap
+- ✅ mat
 - ▫️ boom
+- ▫️ kip
 
 ## 6. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 2)
 Vraag: Welk woord rijmt op **maan**?
 - ▫️ man
-- ▫️ mier
 - ✅ baan
 - ▫️ boom
+- ▫️ mier
 
 ## 7. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 2)
 Vraag: Welk woord rijmt **niet** op **vis**?
-- ✅ vos
 - ▫️ mis
+- ✅ vos
 - ▫️ gis
 - ▫️ lis
 
 ## 8. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 2)
 Vraag: Maak het rijmpje af: *Ik zie een beer, hij valt steeds …*
+- ▫️ om
 - ✅ neer
 - ▫️ hard
-- ▫️ om
 - ▫️ weg
 
 ## 9. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 3)
 Vraag: Plak de klanken aan elkaar: **s - o - k**. Welk woord is het?
-- ▫️ kos
+- ✅ sok
 - ▫️ sik
 - ▫️ kok
-- ✅ sok
+- ▫️ kos
 
 ## 10. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 3)
 Vraag: Plak de klanken aan elkaar: **m - aa - n**. Welk woord is het?
-- ▫️ man
-- ▫️ naam
-- ▫️ mand
 - ✅ maan
+- ▫️ mand
+- ▫️ naam
+- ▫️ man
 
 ## 11. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 3)
 Vraag: Hak het woord **bus** in stukjes. Wat hoor je?
 - ✅ b - u - s
+- ▫️ p - u - s
 - ▫️ b - u - k
 - ▫️ b - a - s
-- ▫️ p - u - s
 
 ## 12. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 3)
 Vraag: Hoeveel klanken hoor je in **vis**?
-- ▫️ 1
 - ▫️ 2
 - ✅ 3
 - ▫️ 4
+- ▫️ 1
 
 ## 13. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 4)
 Vraag: Welk woord hoort bij een dier dat **miauw** zegt?
 - ▫️ boek
-- ▫️ stoel
 - ▫️ fiets
 - ✅ poes
+- ▫️ stoel
 
 ## 14. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 4)
 Vraag: Welk woord is een **kleur**?
-- ✅ rood
-- ▫️ rok
-- ▫️ raam
 - ▫️ roos
+- ✅ rood
+- ▫️ raam
+- ▫️ rok
 
 ## 15. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 4)
 Vraag: Wat kun je **eten**?
+- ✅ soep
+- ▫️ steen
 - ▫️ sok
 - ▫️ stoep
-- ▫️ steen
-- ✅ soep
 
 ## 16. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 4)
 Vraag: Welk woord past bij het plaatje in je hoofd: *hij schijnt in de nacht aan de hemel*?
-- ▫️ muur
 - ▫️ mand
+- ▫️ muur
 - ▫️ man
 - ✅ maan
 
 ## 17. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 5)
 Vraag: Lees: *de kat zit op de mat.* — **Wie** zit op de mat?
-- ▫️ de vis
-- ▫️ papa
-- ▫️ de hond
 - ✅ de kat
+- ▫️ papa
+- ▫️ de vis
+- ▫️ de hond
 
 ## 18. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 5)
 Vraag: Lees: *ik eet een appel.* — **Wat** eet ik?
-- ▫️ een koek
-- ✅ een appel
 - ▫️ soep
+- ▫️ een koek
 - ▫️ een peer
+- ✅ een appel
 
 ## 19. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 5)
 Vraag: Lees: *de bal is rood.* — Welke **kleur** heeft de bal?
-- ▫️ geel
-- ▫️ blauw
-- ▫️ groen
 - ✅ rood
+- ▫️ geel
+- ▫️ groen
+- ▫️ blauw
 
 ## 20. Taal — leren lezen (groep 3) (taal-leren-lezen-g3, stap 5)
 Vraag: Lees: *mam en ik gaan naar het bos.* — **Waar** gaan we naartoe?
 - ✅ naar het bos
-- ▫️ naar huis
 - ▫️ naar school
+- ▫️ naar huis
 - ▫️ naar oma

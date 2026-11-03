@@ -860,7 +860,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Temperatuur over week = lijn. Aantal kinderen per klas = staaf. Hobby-verdeling % = cirkel." }],
           basiskennis: [{ onderwerp: "X-as = onafhankelijk", uitleg: "Tijd, leeftijd, dagen — daar zet je op X-as. Wat je meet komt op Y-as." }],
           niveaus: {
-            basis: "Lijngrafiek.",
+            basis: "Denk aan iets dat elke dag een beetje verandert. Welke grafiek verbindt de punten met een lijn van links naar rechts?",
             simpeler: "Verandering over tijd = lijngrafiek.",
             nogSimpeler: "Lijn",
           },
@@ -895,7 +895,7 @@ const steps = [
         },
       },
       {
-        q: "Cirkeldiagram: blauw 25%, geel 25%. Hoeveel procent is de **rest**?",
+        q: "In een cirkeldiagram is blauw 25% en geel ook 25%. Hoeveel procent is de **rest**?",
         options: ["50%", "25%", "100%", "75%"],
         answer: 0,
         wrongHints: [null, "Je hebt maar één stuk genomen — tel eerst alle bekende stukken op en trek dat van 100 af.", "100% is de hele cirkel. Er zijn al stukken blauw en geel.", "75%: je hebt maar één stuk van 100 afgehaald. Tel blauw en geel eerst samen."],
@@ -923,7 +923,7 @@ const steps = [
       },
       {
         q: "Wat laat de **hoogste staaf** in een staafdiagram zien?",
-        options: ["Grootste waarde", "Kleinste waarde", "Het meest recente jaar", "Gemiddelde"],
+        options: ["De grootste waarde", "De kleinste waarde", "Het meest recente jaar", "Het gemiddelde"],
         answer: 0,
         wrongHints: [null, "Kijk naar de getallen langs de as: hoort bij een hoge staaf een klein of een groot getal?", "De hoogte van een staaf hangt niet af van het jaar. Kijk naar de as met getallen.", "Het gemiddelde is geen staaf. Waar staat de hoogte van één staaf voor?"],
         uitlegPad: {
@@ -943,7 +943,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Volg met je oog van de top van de staaf naar de y-as. Daar lees je het getal." }],
           niveaus: {
-            basis: "Hoogste staaf = grootste getal in het diagram.",
+            basis: "Volg de bovenkant van de hoogste staaf naar de as met getallen. Staat daar een groot of een klein getal?",
             simpeler: "Hoe hoger, hoe meer. Dus hoogste = grootste waarde.",
             nogSimpeler: "Hoog = veel.",
           },
@@ -992,9 +992,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Som 1+2+3+4+5 = (1+5)+(2+4)+3 = 6+6+3 = 15." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Som groter dan grootste term (50) — klopt." }],
           niveaus: {
-            basis: "€150.",
+            basis: "Tel de bedragen één voor één bij elkaar op: eerst €10 + €20, dan de andere bedragen erbij.",
             simpeler: "10+20+30+40+50 = 150.",
-            nogSimpeler: "150",
+            nogSimpeler: "De som is €150.",
           },
         },
       },
@@ -1020,7 +1020,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Drie gelijke stukken zou eigenlijk 33,33% per stuk zijn, geen 33%." }],
           niveaus: {
-            basis: "Som van cirkeldiagram-stukjes = 100%. 3 × 33% = 99%, bijna.",
+            basis: "Een hele cirkel is samen 100%. Tel de drie stukken van 33% bij elkaar op en vergelijk dat met 100.",
             simpeler: "33 + 33 + 33 = 99. Niet 100. Dus 'bijna'.",
             nogSimpeler: "3 × 33 = 99, mist 1.",
           },
@@ -1034,7 +1034,7 @@ const steps = [
       },
       {
         q: "Een **lijngrafiek** toont vooral...",
-        options: ["Verandering in de tijd", "Een vergelijking van producten", "Een geheel verdeeld", "Het gemiddelde van een groep"],
+        options: ["Verandering in de tijd", "Een vergelijking van producten", "Een geheel dat in delen is verdeeld", "Het gemiddelde van een groep"],
         answer: 0,
         wrongHints: [null, "Producten vergelijken kan, maar daar is een ander soort grafiek beter voor. Wat laat een lijn zien die van links naar rechts loopt?", "Een geheel verdeeld zie je beter in een ander soort grafiek. Wat laat een lijn zien die van links naar rechts loopt?", "Een gemiddelde is één getal; daar heb je geen lijn voor nodig."],
         uitlegPad: {
@@ -1047,17 +1047,17 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Grafiek 'Temperatuur per uur' = lijn die op- en neergaat over 24 uur." }],
           basiskennis: [{ onderwerp: "Andere typen", uitleg: "Staaf = vergelijken groepen. Cirkel = verdeling geheel. Lijn = verloop tijd." }],
           niveaus: {
-            basis: "Verandering door tijd.",
+            basis: "Bij een lijngrafiek staat vaak de tijd op de x-as. Wat zie je als de lijn omhoog of omlaag gaat?",
             simpeler: "Lijn die op- en neergaat = tijd-verloop.",
             nogSimpeler: "Tijd",
           },
         },
       },
       {
-        q: "In een tabel **'Temperatuur per maand'**: in welke kolom staat **'januari'**?",
-        options: ["In de kolom met de maanden", "In de kolom met de temperaturen", "In de titel", "In de legenda"],
+        q: "In een tabel **'Temperatuur per maand'** staan in de eerste kolom de maanden en in de tweede kolom de temperaturen. Hoe vind je hoe warm het in **januari** was?",
+        options: ["Zoek januari op en lees in dezelfde rij de temperatuur af", "Zoek het hoogste getal in de kolom met de temperaturen", "Lees de titel boven de tabel nog eens goed door", "Zoek januari op en lees het getal in de rij eronder af"],
         answer: 0,
-        wrongHints: [null, "Dat is de waarde, niet de maand.", "Titel beschrijft de tabel, geen maand.", "Een tabel heeft meestal geen legenda."],
+        wrongHints: [null, "Het hoogste getal hoort bij de warmste maand. Weet je zeker dat dat januari is?", "De titel vertelt waar de tabel over gaat, niet hoe warm één maand was.", "De rij eronder hoort bij een andere maand."],
       },
       {
         q: "Bij een **staafdiagram** is de **hoogste staaf**...",
@@ -1066,7 +1066,7 @@ const steps = [
         wrongHints: [null, "Kijk naar de getallen langs de as: hoort bij een hoge staaf een klein of een groot getal?", "Het gemiddelde lees je niet af aan één staaf. Waar staat de hoogte van één staaf voor?", "Een verschil zie je tussen twee staven, niet aan één staaf."],
       },
       {
-        q: "**Cirkeldiagram**: appels=50%, peren=30%, rest=druiven. Druiven is ___?",
+        q: "In een **cirkeldiagram** is appels 50% en peren 30%. De rest is druiven. Hoeveel procent is druiven?",
         options: ["20%", "10%", "30%", "100%"],
         answer: 0,
         wrongHints: [null, "Alle stukken van een cirkeldiagram tellen op tot 100 — trek de bekende percentages er maar van af.", "Dat zou geen rest zijn — kijk of dat klopt als je alle percentages optelt.", "100% is de hele cirkel, niet één stuk."],
@@ -1080,17 +1080,17 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Vier delen: 25% + 35% + 25% + x. x = 100 − 85 = 15%." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Tel alle delen op: moeten 100% zijn." }],
           niveaus: {
-            basis: "20%.",
+            basis: "Een hele cirkel is samen 100%. Tel appels en peren op en kijk hoeveel er dan nog overblijft.",
             simpeler: "100 − 50 − 30 = 20.",
             nogSimpeler: "Rest = 100 − 80 = 20%",
           },
         },
       },
       {
-        q: "In een tabel **'Leerlingen per klas'** staat elke klas op een eigen **rij**. Wat staat er in één rij?",
-        options: ["De gegevens van één klas", "De gegevens van alle klassen samen", "Alleen de titel van de tabel", "Alleen de kolomkoppen"],
+        q: "In een tabel **'Leerlingen per klas'** staan de klassen onder elkaar. Wat vind je in één **rij** van die tabel?",
+        options: ["De gegevens van één klas", "Eén soort gegeven van alle klassen", "Alleen de titel van de tabel", "Alleen de kolomkoppen"],
         answer: 0,
-        wrongHints: [null, "Een totaal van alle klassen staat hooguit in een aparte laatste rij.", "De titel staat boven de tabel.", "De kolomkoppen staan in de bovenste rij."],
+        wrongHints: [null, "Dat staat in een kolom: die loopt van boven naar beneden. Hoe loopt een rij?", "De titel staat boven de tabel.", "De kolomkoppen staan in de bovenste rij."],
       },
       {
         q: "Twee staven in een staafdiagram verschillen **veel in hoogte**. Wat betekent dat?",
@@ -1099,13 +1099,13 @@ const steps = [
         wrongHints: [null, "Bijna gelijke getallen geven bijna even hoge staven.", "De hoogte van een staaf zegt iets over de grootte van het getal.", "De hoogte van een staaf hoort bij een getal op de as — kijk ernaar."],
       },
       {
-        q: "Wat laat een **lijngrafiek** met een **dalende lijn** zien?",
-        options: ["daling / afname", "groei / toename", "geen verandering", "eerst stijgen, dan dalen"],
+        q: "Een **lijngrafiek** laat zien hoeveel ijsjes een ijssalon per maand verkoopt. Van september tot december gaat de lijn steeds **omlaag**. Wat betekent dat?",
+        options: ["Er werden steeds minder ijsjes verkocht", "Er werden steeds meer ijsjes verkocht", "Er werden elke maand evenveel ijsjes verkocht", "Er werden eerst meer, daarna minder ijsjes verkocht"],
         answer: 0,
-        wrongHints: [null, "Bij groei gaat een lijn omhoog. Hoe loopt deze lijn?", "Geen verandering geeft een vlakke lijn. Is een dalende lijn vlak?", "Dan zou de lijn eerst omhoog gaan."],
+        wrongHints: [null, "Bij meer verkochte ijsjes gaat de lijn omhoog. Welke kant gaat deze lijn op?", "Bij evenveel ijsjes loopt de lijn vlak. Is deze lijn vlak?", "Dan zou de lijn eerst omhoog gaan. Gaat deze lijn ergens omhoog?"],
       },
       {
-        q: "Tabel **'Leerlingen per klas'**: groep 5 = 24, groep 6 = 26, groep 7 = 25. **Totaal**?",
+        q: "Tabel **'Leerlingen per klas'**: groep 5 = 24, groep 6 = 26, groep 7 = 25. Hoeveel leerlingen zijn dat **samen**?",
         options: ["75", "74", "65", "100"],
         answer: 0,
         wrongHints: [null, "74: controleer het laatste stukje van je optelling nog eens.", "65: ben je bij het optellen een tiental kwijtgeraakt?", "100 is te veel. Tel de drie groepen nog eens rustig op."],
@@ -1131,21 +1131,21 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1 t/m 5: 1, 2, 3, 4, 5 = 5 getallen." }],
           basiskennis: [{ onderwerp: "Exclusief", uitleg: "Bij 'tussen 10 en 20' (exclusief): 11, 12, ..., 19 = 9 getallen." }],
           niveaus: {
-            basis: "11.",
+            basis: "Tel de getallen op de as één voor één: 10, 11, 12 … tot en met 20.",
             simpeler: "20 − 10 + 1 = 11.",
             nogSimpeler: "11",
           },
         },
       },
       {
-        q: "De percentages in een **cirkeldiagram** zijn samen ___ %?",
-        options: ["100", "50", "75", "200"],
+        q: "Hoeveel procent zijn alle stukken van een **cirkeldiagram** samen?",
+        options: ["100%", "50%", "75%", "200%"],
         answer: 0,
         wrongHints: [null, "50% is een halve cirkel. Hoeveel is de hele cirkel?", "75% is driekwart cirkel. Dan mist er nog een stuk.", "Te veel — de hele cirkel is alles samen."],
       },
       {
-        q: "Een **histogram** is een ___?",
-        options: ['Staafdiagram met staven tegen elkaar', 'Lijngrafiek die punten verbindt', 'Cirkeldiagram in gekleurde stukken', 'Tabel met getallen in rijen en kolommen'],
+        q: "Wat is een **histogram**?",
+        options: ['Een staafdiagram met staven tegen elkaar', 'Een lijngrafiek die punten verbindt', 'Een cirkeldiagram in gekleurde stukken', 'Een tabel met getallen in rijen en kolommen'],
         answer: 0,
         wrongHints: [null, 'Een histogram verbindt geen punten met een lijn. Hoe ziet het er dan uit?', 'Een cirkeldiagram gebruik je voor delen van een geheel.', 'Een histogram is een soort diagram, geen tabel.'],
       },
@@ -1156,11 +1156,11 @@ const steps = [
         wrongHints: [null, "Reken het verschil uit. Is er ergens een groter verschil?", "Reken het verschil uit. Is er ergens een groter verschil?", "Reken de verschillen eens uit: zijn ze echt gelijk?"],
       },
       {
-        q: "**Lesrooster:** ma t/m vr begint school om 8:30, behalve op woensdag (9:15). Welke dag begin je **later**?",
-        options: ["Woensdag", "Maandag", "Vrijdag", "Elke dag even laat"],
+        q: "**Lesrooster:** op maandag, dinsdag, donderdag en vrijdag begint school om 8:30. Op woensdag begint school om 9:15. Hoeveel minuten **later** begin je op woensdag?",
+        options: ["45 minuten", "15 minuten", "1 uur en 15 minuten", "30 minuten"],
         answer: 0,
-        wrongHints: [null, "Maandag staat op de gewone tijd.", "Lees het rooster: geldt voor vrijdag de gewone tijd of de uitzondering?", "Lees het rooster nog eens — er is één uitzondering."],
-        explanation: "Het woord 'behalve' wijst de uitzondering aan: **woensdag** begint om 9:15 — 45 minuten later.",
+        wrongHints: [null, "15 minuten na 8:30 is het pas 8:45. Is het dan al 9:15?", "Je trok 8 van 9 af en telde de 15 minuten erbij. Tel vanaf 8:30 in stapjes verder tot 9:15.", "30 minuten na 8:30 is het 9:00. Ben je dan al bij 9:15?"],
+        explanation: "Van 8:30 tot 9:00 is 30 minuten, en van 9:00 tot 9:15 nog 15 minuten. Op woensdag begint school dus **45 minuten** later.",
       },
       {
         q: "**Staafgrafiek 'huisdieren in de klas':** hond 8, kat 6, vis 4, konijn 2. Hoeveel kinderen kozen een **hond of kat**?",
@@ -1177,7 +1177,7 @@ const steps = [
         explanation: "Dalende lijn = waarde wordt lager = **kouder**. De richting van de lijn vertelt het verhaal.",
       },
       {
-        q: "**Bustabel:** de bus vertrekt om 9:12, 9:32, 9:52... Je bent om **9:40** bij de halte. Hoe lang wachten?",
+        q: "**Bustabel:** de bus vertrekt om 9:12, 9:32, 9:52... Je bent om **9:40** bij de halte. Hoe lang moet je wachten?",
         options: ["12 minuten", "8 minuten", "20 minuten", "32 minuten"],
         answer: 0,
         wrongHints: [null, "De bus van 9:32 is al weg — welke komt hierna?", "Kijk naar de éérstvolgende bus na 9:40.", "Je hoeft niet op de bus dáárna te wachten."],
@@ -1191,7 +1191,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Tijden 10:05, 10:25, 10:45 — jij komt 10:30 → eerstvolgende = 10:45 → 15 min wachten." }],
           basiskennis: [{ onderwerp: "Valkuil", uitleg: "De toets zet er graag een vertrektijd vlak vóór jouw aankomst in — die mis je net." }],
           niveaus: {
-            basis: "Volgende bus 9:52, dus 12 minuten.",
+            basis: "Welke bus is al weg als je om 9:40 bij de halte bent? Zoek de eerstvolgende vertrektijd ná 9:40.",
             simpeler: "9:32 ben je net gemist. 9:52 − 9:40 = 12 minuten.",
             nogSimpeler: "12 minuten",
           },
@@ -1201,7 +1201,7 @@ const steps = [
         q: "**Cirkeldiagram lievelingssport:** voetbal de helft, zwemmen een kwart, de rest hockey en tennis samen. Welk deel is voor **hockey en tennis samen**?",
         options: ["Een kwart", "De helft", "Driekwart", "Een achtste"],
         answer: 0,
-        wrongHints: [null, "De helft is al bezet door voetbal.", "Tel op: helft + kwart = driekwart. Wat blijft er over?", "Een achtste + een achtste zou kunnen, maar de vraag is wat ze sámen hebben."],
+        wrongHints: [null, "De helft is al bezet door voetbal.", "Tel op: helft + kwart = driekwart. Wat blijft er over?", "Een achtste is een klein stukje. De vraag gaat over hockey en tennis samen: hoeveel van de cirkel hebben voetbal en zwemmen nog niet?"],
         explanation: "1/2 (voetbal) + 1/4 (zwemmen) = 3/4. De rest = 1 − 3/4 = **1/4** voor hockey en tennis samen.",
       },
       {

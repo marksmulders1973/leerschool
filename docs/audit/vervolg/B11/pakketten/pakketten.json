@@ -1,0 +1,56 @@
+[
+ {
+  "pakket": "01",
+  "n": 55,
+  "files": [
+   "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+   "src/learnPaths/redactiesommen.js",
+   "src/learnPaths/financieleVormingPo.js"
+  ],
+  "sets": [
+   "8|rekenen",
+   "5|rekenen",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "02",
+  "n": 55,
+  "files": [
+   "src/learnPaths/lettergrepenKlemtoonPo.js",
+   "src/learnPaths/procentenPo.js",
+   "src/learnPaths/negatieveGetallenPo.js",
+   "src/learnPaths/grafiekenLezenPo.js",
+   "src/learnPaths/feitMeningPo.js",
+   "src/learnPaths/kalenderRekenenPo.js"
+  ],
+  "sets": [
+   "7|taal",
+   "8|taal",
+   "5|rekenen",
+   "6|rekenen"
+  ]
+ },
+ {
+  "pakket": "03",
+  "n": 43,
+  "files": [
+   "src/learnPaths/leestekensHoofdlettersPo.js",
+   "src/learnPaths/kommagetallenPo.js",
+   "src/learnPaths/meetkundeBouwsels.js",
+   "src/learnPaths/interpunctiePo.js",
+   "src/learnPaths/spreekwoordenUitdrukkingenPo.js",
+   "src/learnPaths/matenOmtrekOppervlaktePo.js",
+   "src/learnPaths/matenEenheden.js",
+   "src/learnPaths/woordsoortenPo.js",
+   "src/learnPaths/samenstellingenTussenlettersPo.js"
+  ],
+  "sets": [
+   "7|taal",
+   "6|rekenen",
+   "7|rekenen",
+   "6|taal",
+   "8|taal"
+  ]
+ }
+]

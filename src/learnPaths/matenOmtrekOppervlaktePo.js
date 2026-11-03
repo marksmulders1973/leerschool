@@ -643,6 +643,7 @@ const steps = [
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B11 (3 nov 2026): cirkel met π is groep 8-stof, niet groep 6
         q: "Een cirkel heeft een **diameter van 14 cm**. Wat is de omtrek? (π = 3,14)",
         options: ["43,96 cm", "21,98 cm", "87,92 cm", "153,86 cm"],
         answer: 0,
@@ -656,10 +657,11 @@ const steps = [
           theorie: "De omtrek van een **cirkel** bereken je met **π × diameter** (of hetzelfde: 2 × π × straal). Op de toets gebruik je meestal π ≈ 3,14.",
           voorbeelden: [{ type: "sport", tekst: "Een rond zwembad met een diameter van 6 meter — de omtrek daarvan reken je uit met dezelfde formule." }],
           basiskennis: [{ onderwerp: "Diameter versus straal", uitleg: "De diameter is twee keer zo lang als de straal — let op welke van de twee gegeven is." }],
-          niveaus: { basis: "π·d=43,96.", simpeler: "π × 14 = 44.", nogSimpeler: "Vermenigvuldig 3,14 met de diameter — wat kom je uit?" },
+          niveaus: { basis: "De omtrek van een cirkel is π keer de diameter. Welk getal is hier de diameter?", simpeler: "Reken 3,14 × 14. Doe eerst 3 × 14 en tel daar 0,14 × 14 bij op.", nogSimpeler: "Vermenigvuldig 3,14 met de diameter — wat kom je uit?" },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B11 (3 nov 2026): cirkel met π is groep 8-stof, niet groep 6
         q: "Een cirkel heeft een **straal van 10 m**. Wat is de oppervlakte? (π = 3,14)",
         options: ["314 m²", "31,4 m²", "62,8 m²", "100 m²"],
         answer: 0,
@@ -673,7 +675,7 @@ const steps = [
           theorie: "De oppervlakte van een **cirkel** bereken je met **π × straal²**. Vergeet niet eerst de straal te kwadrateren (met zichzelf te vermenigvuldigen) vóórdat je met π vermenigvuldigt.",
           voorbeelden: [{ type: "buiten", tekst: "Een rond terras met een straal van 3 meter — de oppervlakte daarvan bereken je met dezelfde formule." }],
           basiskennis: [{ onderwerp: "Kwadraat", uitleg: "Straal² betekent de straal keer zichzelf, niet de straal keer 2." }],
-          niveaus: { basis: "π·100=314.", simpeler: "π × straal² = 314 m².", nogSimpeler: "Vermenigvuldig de straal met zichzelf, en dan met 3,14 — wat kom je uit?" },
+          niveaus: { basis: "De oppervlakte van een cirkel is π keer de straal keer de straal. Hoe groot is de straal hier?", simpeler: "Reken eerst 10 × 10. Vermenigvuldig die uitkomst daarna met 3,14.", nogSimpeler: "Vermenigvuldig de straal met zichzelf, en dan met 3,14 — wat kom je uit?" },
         },
       },
       {
@@ -690,10 +692,11 @@ const steps = [
           theorie: "Bij een driehoek gebruik je voor de oppervlakte altijd **basis en hoogte** — extra gegeven zijden, zoals een schuine zijde, zijn voor deze berekening niet nodig. Ze kunnen wel gebruikt worden om iets anders te controleren, zoals met de stelling van Pythagoras.",
           voorbeelden: [{ type: "school", tekst: "Bij een driehoekig dak krijg je soms ook de lengte van de dakrand (schuine zijde) erbij, terwijl je voor de oppervlakte alleen basis en hoogte nodig hebt." }],
           basiskennis: [{ onderwerp: "Niet alle info is nodig", uitleg: "Een som kan meer maten geven dan je nodig hebt — kies alleen wat bij de formule hoort." }],
-          niveaus: { basis: "½·4·3=6.", simpeler: "Half van basis×hoogte = 6.", nogSimpeler: "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?" },
+          niveaus: { basis: "Voor de oppervlakte van een driehoek heb je alleen de basis en de hoogte nodig. De schuine zijde laat je weg.", simpeler: "Reken basis keer hoogte: 4 × 3. Neem daarna de helft, want een driehoek is een halve rechthoek.", nogSimpeler: "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?" },
         },
       },
       {
+        vanafGroep: 8, // nakijkronde B11 (3 nov 2026): cirkel met π is groep 8-stof, niet groep 6
         q: "Een **halve cirkel** heeft een straal van 4 cm. Wat is de oppervlakte? (π = 3,14)",
         options: ["25,12 cm²", "50,24 cm²", "12,56 cm²", "8 cm²"],
         answer: 0,
@@ -707,7 +710,7 @@ const steps = [
           theorie: "Voor een **halve cirkel** bereken je eerst de oppervlakte van de hele cirkel, en deel je die uitkomst door twee. Dit werkt ook voor een kwart cirkel — dan deel je door vier.",
           voorbeelden: [{ type: "thuis", tekst: "Een halfrond raam boven de voordeur met een straal van 50 cm bereken je op dezelfde manier." }],
           basiskennis: [{ onderwerp: "Deel-cirkels", uitleg: "Bij een deel van een cirkel bereken je eerst de hele cirkel, en deel je daarna door het juiste aantal delen." }],
-          niveaus: { basis: "½ · π · 16 = 25,12.", simpeler: "Hele cirkel ÷ 2.", nogSimpeler: "Bereken eerst de hele cirkel, en deel dat door twee — wat kom je uit?" },
+          niveaus: { basis: "Reken eerst de oppervlakte van de hele cirkel uit: π keer de straal keer de straal. Een halve cirkel is daar de helft van.", simpeler: "Reken 4 × 4 en vermenigvuldig dat met 3,14. Deel die uitkomst daarna door 2.", nogSimpeler: "Bereken eerst de hele cirkel, en deel dat door twee — wat kom je uit?" },
         },
       },
     ],

@@ -1,0 +1,346 @@
+[
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord en hints kloppen; vrijwel gelijk aan vraag 3 en 5 (stijl, geen fout).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Uitroepteken past bij een dringende waarschuwing; een punt is randje verdedigbaar maar hint legt het verschil goed uit.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 9",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 10",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "1,44 klopt; hints in orde (kommagetal × kommagetal is pittig voor groep 6, maar wordt in de stap uitgelegd).",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "Kommagetal × kommagetal en het woord decimalen zijn pittig voor groep 6; hint B had een taalfout (\"niet maar naar één\").",
+  "hersteld": true,
+  "wijziging": "Vraag uitgelegd: \"decimalen (cijfers ná de komma) van beide getallen bij elkaar op\"; hint B herschreven tot nette zin."
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen de som met het antwoord (7 × 3 = 21 → 0,21).",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (eerst zonder komma, dan cijfers ná de komma tellen)."
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen de som met het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord."
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen de som met het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord."
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen de som met het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord."
+ },
+ {
+  "waar": "kommagetallen-po stap 3 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen de som met het antwoord.",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap zonder antwoord."
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 6",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "meetkunde-bouwsels stap 2 vraag 7",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 11",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 17",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "interpunctie-po stap 6 vraag 18",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "Hoofdletterfout in A; B mist alleen een punt, hint benoemt dat goed.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 1",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "wrongHint bij \"Iets heel snel doen\" omschreef het goede antwoord (\"twee dingen met één actie\"); hint C was een telegramzin.",
+  "hersteld": true,
+  "wijziging": "Hints C en D herschreven tot denkprikkels zonder het antwoord."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Hint B was een telegramzin (\"Niet — ...\").",
+  "hersteld": true,
+  "wijziging": "Hint B herschreven tot volledige zin."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 3",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "Hints C en D zeiden allebei \"het gaat om betekenis\": alleen het goede antwoord noemt betekenis, dus de hint wees het antwoord aan.",
+  "hersteld": true,
+  "wijziging": "Hints B, C en D herschreven: benoemen de denkfout zonder het woord betekenis."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "Hint D was een telegramzin.",
+  "hersteld": true,
+  "wijziging": "Hint D herschreven tot volledige zin."
+ },
+ {
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Cirkelomtrek met π is groep 8-stof (twee groepen te hoog voor groep 6); basis was telegram met antwoord, simpeler gaf 44 i.p.v. 43,96.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 gezet; basis en simpeler herschreven tot kloppende hulpstappen."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "Cirkeloppervlakte met π is groep 8-stof; basis/simpeler waren telegrammen met het antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 gezet; basis en simpeler herschreven."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt; driehoek-oppervlakte is pittig voor groep 6 (geen vanafGroep, één groep vroeg); basis was telegram met antwoord.",
+  "hersteld": true,
+  "wijziging": "basis en simpeler herschreven tot hulpstappen zonder antwoord."
+ },
+ {
+  "waar": "maten-omtrek-oppervlakte-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "Halve-cirkeloppervlakte met π is groep 8-stof; basis was telegram met antwoord.",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 8 gezet; basis en simpeler herschreven."
+ },
+ {
+  "waar": "maten-eenheden stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"5000.\").",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "maten-eenheden stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord (\"3000 kg.\").",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap."
+ },
+ {
+  "waar": "maten-eenheden stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; spelling paracetamol-tablet.",
+  "hersteld": true,
+  "wijziging": "basis herschreven; vraag: \"Een paracetamoltablet weegt 500 mg\"."
+ },
+ {
+  "waar": "maten-eenheden stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 13",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "woordsoorten-po stap 5 vraag 14",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "Antwoord klopt, hints en hulpstappen in orde.",
+  "hersteld": false,
+  "wijziging": ""
+ }
+]

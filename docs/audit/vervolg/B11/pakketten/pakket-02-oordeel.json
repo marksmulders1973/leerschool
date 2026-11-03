@@ -1,0 +1,442 @@
+[
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 1",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "klopt; hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (hardop zeggen, harder/langer)"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler was telegramzin met het antwoord",
+  "hersteld": true,
+  "wijziging": "basis en simpeler herschreven (banaan hardop, wat doet je stem)"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "niveaus.basis gaf alleen het antwoord; hints gaven samen richting meer/minder",
+  "hersteld": true,
+  "wijziging": "basis = klap-en-tel-hulpstap; wrongHints neutraal (opnieuw langzaam klappen en tellen)"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 3",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 4",
+  "oordeel": "goed",
+  "eigenKeuze": "B",
+  "reden": "va-kan-tie klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "lettergrepen-klemtoon-po stap 3 vraag 5",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "procenten in set groep 5 (groep-6-stof, zoals rest van het bestand); basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven tot breuk-hulpstappen"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 2",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 10% rekende voor: \"1 op 25 zou 4% zijn, hier 5 op 25\" = 5×4 = antwoord; ook groep-6-stof",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven (welk deel van de klas, dan omzetten); vanafGroep: 6"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "klopt, maar procenten in set groep 5",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "procenten in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "procenten in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "procenten in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "procenten in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 8",
+  "oordeel": "twijfel",
+  "eigenKeuze": "B",
+  "reden": "procenten in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "procenten in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven"
+ },
+ {
+  "waar": "procenten-po stap 5 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "kommagetal+procent in groep 5; basis/simpeler gaven antwoord",
+  "hersteld": true,
+  "wijziging": "vanafGroep: 6; basis+simpeler herschreven (keer 100, komma schuiven)"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 20",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 21",
+  "oordeel": "goed",
+  "eigenKeuze": "A",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 22",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 23",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "wrongHint bij 6: \"Het getal klopt. Welk teken bij min keer plus?\" verraadt −6; vermenigvuldigen met negatieve getallen is geen groep-5-stof",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven (sprongen van −3 op getallenlijn); vanafGroep: 8 (zoals eerdere rondes in dit bestand)"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 24",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHints noemden 2 × 3 = 6 en \"min keer min wordt plus\" = antwoord voorgerekend; min-keer-min geen groep-5-stof",
+  "hersteld": true,
+  "wijziging": "drie wrongHints herschreven zonder uitkomst/regel; vanafGroep: 8"
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 25",
+  "oordeel": "goed",
+  "eigenKeuze": "C",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 26",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; hints benoemen denkfout",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 27",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "negatieve-getallen-po stap 5 vraag 28",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "wrongHint bij −3 rekende voor (twee mintekens = plus, naar rechts vanaf −1, boven nul) = antwoord; min-min geen groep-5-stof",
+  "hersteld": true,
+  "wijziging": "wrongHint herschreven (let op teken, welke kant bij − (−4)); vanafGroep: 8"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord (telegramzin)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap (hoogste punt, tijd eronder)"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 2",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord (telegramzin)",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 5",
+  "oordeel": "fout",
+  "eigenKeuze": "B",
+  "reden": "vraag noemt lijngrafiek, check had geen svg -> kind kreeg de temperatuurgrafiek van de stap (past niet); telegramzin",
+  "hersteld": true,
+  "wijziging": "eigen lijnSvg (bezoekers 10-16 uur) toegevoegd, vraag als volledige zin zonder getallen; basis herschreven"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 6",
+  "oordeel": "fout",
+  "eigenKeuze": "A",
+  "reden": "lijngrafiek genoemd zonder eigen svg -> verkeerd plaatje; telegramzin",
+  "hersteld": true,
+  "wijziging": "eigen lijnSvg (regenton ma-do) toegevoegd, vraag herschreven; basis herschreven"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 7",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "lijngrafiek genoemd zonder eigen svg -> verkeerd plaatje; telegramzin",
+  "hersteld": true,
+  "wijziging": "eigen lijnSvg (plant week 1-4) toegevoegd, vraag herschreven; basis herschreven"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 8",
+  "oordeel": "fout",
+  "eigenKeuze": "C",
+  "reden": "lijngrafiek genoemd zonder eigen svg -> verkeerd plaatje; telegramzin",
+  "hersteld": true,
+  "wijziging": "eigen lijnSvg (aardbeien april-juli) toegevoegd, vraag herschreven; basis herschreven"
+ },
+ {
+  "waar": "grafieken-lezen-po stap 3 vraag 9",
+  "oordeel": "fout",
+  "eigenKeuze": "D",
+  "reden": "lijngrafiek genoemd zonder eigen svg -> verkeerd plaatje; antwoord stond letterlijk in de vraag",
+  "hersteld": true,
+  "wijziging": "eigen lijnSvg (klas 9-15 uur) toegevoegd, getallen uit de vraag gehaald (nu echt aflezen); basis herschreven"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler gaf ook antwoord",
+  "hersteld": true,
+  "wijziging": "basis+simpeler herschreven"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler gaf ook antwoord",
+  "hersteld": true,
+  "wijziging": "basis+simpeler herschreven"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler gaf ook antwoord",
+  "hersteld": true,
+  "wijziging": "basis+simpeler herschreven"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 8",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; basis is al een hulpstap",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 9",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "feit-mening-po stap 4 vraag 10",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 1",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord; simpeler \"506 (rond)\" vaag",
+  "hersteld": true,
+  "wijziging": "basis+simpeler herschreven (deel door 4, tafel van 4)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 2",
+  "oordeel": "goed",
+  "eigenKeuze": "D",
+  "reden": "klopt; hints goed",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 3",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "te stellig: Koningsdag is 26 april als 27 april op zondag valt; hint was telegramzin",
+  "hersteld": true,
+  "wijziging": "vraag: \"Op welke datum vieren we meestal Koningsdag?\"; hint 30 april als volledige zin"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 4",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "telegramzin zonder werkwoord; hints telegramstijl en per uitsluiting",
+  "hersteld": true,
+  "wijziging": "vraag als volledige zin; drie wrongHints herschreven (knokkeltruc)"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 5",
+  "oordeel": "twijfel",
+  "eigenKeuze": "D",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 6",
+  "oordeel": "twijfel",
+  "eigenKeuze": "C",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ },
+ {
+  "waar": "kalender-rekenen-po stap 3 vraag 7",
+  "oordeel": "twijfel",
+  "eigenKeuze": "A",
+  "reden": "niveaus.basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven tot hulpstap"
+ }
+]

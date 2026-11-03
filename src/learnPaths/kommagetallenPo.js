@@ -804,10 +804,10 @@ const steps = [
         wrongHints: [null, "Net niet — hoeveel decimalen krijg je bij 1,2 × 1,2 samen?", "Te weinig — vergeet de decimalen niet.", "Dat is een optelling (1,2 + 1,2), geen vermenigvuldiging."],
       },
       {
-        q: "Bij **0,5 × 0,2** tel je hoeveel **decimalen** op om de komma in het antwoord te plaatsen?",
+        q: "Bij **0,5 × 0,2** tel je de **decimalen** (cijfers ná de komma) van beide getallen bij elkaar op. Hoeveel zijn dat er samen?",
         options: ["2", "1", "0", "3"],
         answer: 0,
-        wrongHints: [null, "Te weinig — kijk naar beide getallen, niet maar naar één.", "Allebei wél een komma — niet 0.", "Te veel — tel per getal hoeveel cijfers er ná de komma staan."],
+        wrongHints: [null, "Te weinig — je keek maar naar één getal. Kijk naar allebei.", "Allebei wél een komma — niet 0.", "Te veel — tel per getal hoeveel cijfers er ná de komma staan."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -855,7 +855,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "7 × 3 = 21 → 0,21.",
+            basis: "Reken eerst zonder komma: 7 × 3. Tel daarna hoeveel cijfers er samen ná de komma staan in 0,7 en 0,3.",
             simpeler: "Stap 1: zonder komma 7 × 3 = 21. Stap 2: samen 2 cijfers ná de komma. Stap 3: komma 2 plaatsen van rechts → 0,21.",
             nogSimpeler: "0,21",
           },
@@ -901,7 +901,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "16 × 4 = 64 → 6,4.",
+            basis: "Reken eerst zonder komma: 16 × 4. Hoeveel cijfers staan er ná de komma in 1,6? Zoveel krijgt het antwoord er ook.",
             simpeler: "Stap 1: zonder komma 16 × 4 = 64. Stap 2: 1 cijfer ná de komma (in 1,6). Stap 3: komma 1 plaats van rechts → 6,4.",
             nogSimpeler: "6,4",
           },
@@ -952,7 +952,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "25 × 4 = 100 → 1,00 = 1.",
+            basis: "Reken eerst zonder komma: 25 × 4. Tel daarna hoeveel cijfers er samen ná de komma staan in 2,5 en 0,4.",
             simpeler: "Stap 1: zonder komma 25 × 4 = 100. Stap 2: samen 2 cijfers ná de komma. Stap 3: komma 2 plaatsen van rechts → 1,00. Dat is 1.",
             nogSimpeler: "1",
           },
@@ -1049,7 +1049,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "39 × 5 = 195 → 19,5.",
+            basis: "Reken eerst zonder komma: 39 × 5. Hoeveel cijfers staan er ná de komma in 3,9? Zoveel krijgt het antwoord er ook.",
             simpeler: "Stap 1: zonder komma 39 × 5 = 195. Stap 2: 1 cijfer ná de komma. Stap 3: komma 1 plaats van rechts → 19,5. Schat: 4 × 5 = 20, dat klopt.",
             nogSimpeler: "19,5",
           },
@@ -1100,7 +1100,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "13 × 11 = 143 → 1,43.",
+            basis: "Reken eerst zonder komma: 13 × 11. Tel daarna hoeveel cijfers er samen ná de komma staan in 1,3 en 1,1.",
             simpeler: "Stap 1: zonder komma 13 × 11 = 143. Stap 2: samen 2 cijfers ná de komma. Stap 3: komma 2 plaatsen van rechts → 1,43.",
             nogSimpeler: "1,43",
           },

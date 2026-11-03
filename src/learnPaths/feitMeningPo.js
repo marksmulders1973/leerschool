@@ -613,7 +613,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tel vs. oordeel", tekst: "4.000 inwoners kun je tellen (feit). 'Het gezelligste dorp' is wat iemand vindt (mening)." }],
           niveaus: {
-            basis: "Het inwoneraantal = feit; 'het gezelligste' = mening.",
+            basis: "Een feit kun je tellen of nakijken. Een mening zegt wat iemand ergens van vindt. Bekijk de twee zinnen een voor een.",
             simpeler: "Welk deel zegt wat iemand vindt?",
             nogSimpeler: "Welke zin heeft 'gezelligste' erin?",
           },
@@ -627,8 +627,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mensen denken er verschillend over", tekst: "De een vindt voetbal saai, de ander spannend. Omdat het per persoon verschilt, is het een mening." }],
           niveaus: {
-            basis: "Niet iedereen vindt voetbal saai → mening.",
-            simpeler: "Kunnen mensen het hier oneens over zijn? Ja → mening.",
+            basis: "Een mening is iets waar mensen het over oneens kunnen zijn. Een feit kun je nakijken.",
+            simpeler: "Kunnen twee kinderen hier anders over denken?",
             nogSimpeler: "Vindt iedereen voetbal saai? Nee — dus mening.",
           },
         },
@@ -646,7 +646,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tellen vs. oordelen", tekst: "18 miljoen inwoners kun je tellen (feit). 'Het fijnste land' is een oordeel — niet iedereen is het daarmee eens (mening)." }],
           niveaus: {
-            basis: "Inwoneraantal = feit; 'fijnste' = mening.",
+            basis: "Een feit kun je controleren, bijvoorbeeld in een boek of op internet. Welke zin kun je zo nakijken?",
             simpeler: "Welk deel is te controleren?",
             nogSimpeler: "Welke zin heeft een getal erin dat je kunt tellen?",
           },
@@ -660,8 +660,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Datum is te controleren", tekst: "Wanneer de oorlog eindigde staat in boeken. Dat is voor iedereen hetzelfde — een feit." }],
           niveaus: {
-            basis: "Een historische datum kun je nakijken → feit.",
-            simpeler: "Kun je het jaar opzoeken in een boek? Ja → feit.",
+            basis: "Een feit kun je nakijken in een boek. Een mening hangt af van wie je het vraagt. Wat past bij deze zin?",
+            simpeler: "Kun je het jaar opzoeken in een geschiedenisboek?",
             nogSimpeler: "Is het voor iedereen waar dat de oorlog in 1945 eindigde?",
           },
         },
@@ -674,8 +674,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Te moeilijk' = oordeel", tekst: "Of een boek te moeilijk is, vindt niet iedereen hetzelfde. 'Te moeilijk' is een beoordeling — dat is een mening." }],
           niveaus: {
-            basis: "'Te moeilijk' is een oordeel → mening.",
-            simpeler: "Kunnen twee mensen hier anders over denken? Ja → mening.",
+            basis: "Kijk naar de woorden 'veel te moeilijk'. Kun je dat meten, of vindt iemand dat?",
+            simpeler: "Kunnen twee kinderen uit groep 7 hier anders over denken?",
             nogSimpeler: "Welk woord laat zien dat iemand iets vindt?",
           },
         },
@@ -713,7 +713,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "'Het leukste' is een oordeel → mening. De rest kun je tellen of nakijken.",
+            basis: "Vraag bij elke zin: kan ik dit tellen of nakijken? Bij één zin lukt dat niet.",
             simpeler: "Welke zin kun je niet tellen of nakijken?",
             nogSimpeler: "Welke zin heeft 'het leukste' erin?",
           },
@@ -737,7 +737,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Zin 1 = feit, zin 2 = mening ('het mooiste').",
+            basis: "Kijk naar het woord 'mooiste' in de tweede zin. Kun je dat nameten of nakijken?",
             simpeler: "Welk woord in de tweede zin zegt wat de schrijver vindt?",
             nogSimpeler: "Vindt iedereen de Waddenzee het mooiste natuurgebied?",
           },

@@ -944,7 +944,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je moet het eerst via de bank halen.",
+            basis: "Denk aan het verschil met geld in je portemonnee. Wat moet je eerst doen voordat je geld van je spaarrekening kunt uitgeven?",
             simpeler: "Het geld zit niet in je zak. Daardoor geef je het minder snel uit.",
             nogSimpeler: "Eerst via de bank.",
           },
@@ -999,7 +999,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het kan gestolen worden of kwijtraken.",
+            basis: "Denk aan wat er thuis met een spaarpot kan gebeuren, bijvoorbeeld bij een inbraak of als je gaat verhuizen.",
             simpeler: "Geld thuis is minder veilig dan op de bank.",
             nogSimpeler: "Kwijt of gestolen.",
           },
@@ -1054,7 +1054,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "De bank leent jouw geld uit.",
+            basis: "Jouw spaargeld ligt niet stil in een kluis. Wat doet de bank ermee, en wie betaalt de bank daarvoor?",
             simpeler: "De bank gebruikt jouw geld voor leningen. Daarom krijg jij rente.",
             nogSimpeler: "Uitlenen.",
           },
@@ -1159,7 +1159,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Een impulsaankoop.",
+            basis: "Je kocht het snoep opeens, zonder plan en zonder nadenken. Welk woord betekent 'opeens, zonder nadenken'?",
             simpeler: "Iets kopen zonder nadenken heet een impulsaankoop.",
             nogSimpeler: "Impuls.",
           },
@@ -1209,7 +1209,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "12 weken.",
+            basis: "Je spaart elke week hetzelfde bedrag. Hoe vaak past €4 in €48? Moet je daarvoor optellen, aftrekken of delen?",
             simpeler: "€48 ÷ €4 = 12.",
             nogSimpeler: "12.",
           },

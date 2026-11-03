@@ -1313,6 +1313,7 @@ const steps = [
     explanation: "De omgekeerde toetsvraag: *'X van Y — welk percentage is dat?'*\n\nVoorbeeld: *'In een klas van 25 leerlingen zijn 5 meisjes. Welk percentage meisjes is dat?'*\n\n**Aanpak — de gouden regel**:\n• % = (deel ÷ totaal) × 100\n• Hier: 5 ÷ 25 = 0,20 → × 100 = **20%**\n\n**Slimme aanpak voor kleine breuken** *(sneller)*:\n• 5 op 25 = 1 op 5 *(beide ÷ 5)* = 1/5 = **20%**\n• Hoofd: 1/5 = 20%, 1/4 = 25%, 1/2 = 50%, 1/10 = 10%.\n\n**Voorbeelden uit de toets**:\n*'Op een toets van 40 vragen heeft Tim 30 goed. Welk percentage is dat?'*\n• 30/40 = 3/4 = **75%**.\n\n*'Van de 200 leerlingen op school spelen er 40 voetbal. Welk percentage?'*\n• 40/200 = 1/5 = **20%**.\n\n**Truc**: probeer eerst te delen tot je een 'mooie' breuk krijgt (1/2, 1/4, 1/5, 1/10).\n\n**Veel-voorkomende fout**:\nVergeten te × 100. Dan krijg je 0,2 ipv 20%. Beide kloppen wiskundig, maar de vraag vraagt een **percentage**.",
     checks: [
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Op een toets van **20 vragen** heeft Sven **15 goed**. Welk **percentage** heeft hij goed?",
         options: ["75%","15%","85%","60%"],
         answer: 0,
@@ -1335,19 +1336,21 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vereenvoudig je breuk eerst naar 1/2, 1/4, 3/4, 1/5, etc. Dan ken je het % zo." }],
           niveaus: {
-            basis: "75% (15/20 = 3/4 = 75%).",
-            simpeler: "15 van 20 = 3 van 4 = 3/4 = 75%.",
+            basis: "Schrijf 15 van de 20 als breuk: 15/20. Maak die breuk zo klein mogelijk en zet hem om in procenten.",
+            simpeler: "Deel 15 en 20 allebei door 5. Welke bekende breuk krijg je, en hoeveel procent is die?",
             nogSimpeler: "75%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "In een klas van **25 leerlingen** spelen **5** kinderen voetbal. Welk **percentage** is dat?",
         options: ["20%","5%","25%","10%"],
         answer: 0,
-        wrongHints: [null,"5 is het aantal voetballers, nog geen percentage.","Te veel — 5 op 25 is niet 1 op 4.","Te weinig — 1 op 25 zou 4% zijn, hier 5 op 25."],
+        wrongHints: [null,"5 is het aantal voetballers, nog geen percentage.","Te veel — 5 op 25 is niet 1 op 4.","Te weinig. Reken eerst uit welk deel van de klas die 5 kinderen zijn, en zet dat deel om in procenten."],
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Van **50 vogels** zijn **30 mussen**. Welk **percentage** is geen mus?",
         options: ["40%","60%","30%","20%"],
         answer: 0,
@@ -1355,6 +1358,7 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "In een klas van **20 kinderen** hebben **10** een fiets. Welk **percentage** is dat?",
         options: ["50%", "10%", "20%", "5%"],
         answer: 0,
@@ -1403,13 +1407,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 van 20 = 50%.",
-            simpeler: "10/20 = de helft = 50%.",
+            basis: "Welk deel van de 20 kinderen is 10? Zet dat deel daarna om in procenten.",
+            simpeler: "Is 10 van de 20 een kwart, de helft of drie kwart?",
             nogSimpeler: "50%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Van de **40 kinderen** spelen er **10** hockey. Welk **percentage** is dat?",
         options: ["25%", "10%", "40%", "4%"],
         answer: 0,
@@ -1454,13 +1459,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "10 van 40 = 25%.",
-            simpeler: "10/40 = ¼ = 25%.",
+            basis: "Schrijf 10 van de 40 als breuk: 10/40. Maak die breuk zo klein mogelijk en zet hem om in procenten.",
+            simpeler: "Hoe vaak past 10 in 40? Welke breuk hoort daarbij?",
             nogSimpeler: "25%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Je hebt **8 van de 10** sommen goed. Welk **percentage** heb je **goed**?",
         options: ["80%", "8%", "20%", "10%"],
         answer: 0,
@@ -1505,13 +1511,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "8 van 10 = 80%.",
-            simpeler: "8/10 = 80/100 = 80%.",
+            basis: "Procent betekent 'van de 100'. Hoeveel goed zou je hebben als er 100 sommen waren?",
+            simpeler: "Maak van 8/10 een breuk met 100 onderaan: doe boven en onder × 10.",
             nogSimpeler: "80%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Op een school zijn **300 leerlingen**. **30** komen lopend. Welk **percentage** is dat?",
         options: ["10%", "30%", "3%", "33%"],
         answer: 0,
@@ -1556,13 +1563,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "30 van 300 = 10%.",
-            simpeler: "30/300 = 1/10 = 10%.",
+            basis: "Schrijf 30 van de 300 als breuk: 30/300. Maak die breuk zo klein mogelijk en zet hem om in procenten.",
+            simpeler: "Hoe vaak past 30 in 300? Welke breuk hoort daarbij?",
             nogSimpeler: "10%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Van **50 ballonnen** zijn er **20 rood**. Welk **percentage** is **rood**?",
         options: ["40%", "20%", "60%", "50%"],
         answer: 0,
@@ -1607,13 +1615,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "20 van 50 = 40%.",
-            simpeler: "20/50 = 40/100 = 40%.",
+            basis: "Procent betekent 'van de 100'. Hoeveel rode ballonnen zouden er zijn als er 100 ballonnen waren?",
+            simpeler: "Maak van 20/50 een breuk met 100 onderaan: doe boven en onder × 2.",
             nogSimpeler: "40%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Een film duurt **60 minuten**. Je hebt **15 minuten** gezien. Welk **percentage** heb je **gezien**?",
         options: ["25%", "15%", "75%", "4%"],
         answer: 0,
@@ -1658,13 +1667,14 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "15 van 60 = 25%.",
-            simpeler: "15/60 = ¼ = 25%.",
+            basis: "Schrijf 15 van de 60 minuten als breuk: 15/60. Maak die breuk zo klein mogelijk en zet hem om in procenten.",
+            simpeler: "Hoe vaak past 15 in 60? Welke breuk hoort daarbij?",
             nogSimpeler: "25%",
           },
         },
       },
       {
+        vanafGroep: 6, // nakijkronde B11 (3 nov 2026): procenten zijn groep-6-stof
         q: "Lotte rekent: **6 van de 30** = 6 ÷ 30 = **0,2**. Welk **percentage** is dat?",
         options: ["20%", "2%", "0,2%", "6%"],
         answer: 0,
@@ -1704,8 +1714,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "6 van 30 = 0,2 = 20%.",
-            simpeler: "0,2 × 100 = 20%.",
+            basis: "Een kommagetal maak je een percentage door het keer 100 te doen.",
+            simpeler: "Bij keer 100 schuift de komma twee plekken naar rechts. Waar komt de komma van 0,2 dan te staan?",
             nogSimpeler: "20%",
           },
         },
